@@ -1,11 +1,4 @@
-import React from "react";
-import { Button } from "@/components/ui/button";
-interface NotificationHeaderProps {
-  unreadCount: number;
-  onMarkAllAsRead: () => Promise<void>;
-}
 
-export const NotificationHeader: React.FC<NotificationHeaderProps> = ({
 import React from 'react',;
 import { Button } from '@/components/ui/button',;
 interface NotificationHeaderProps {;
@@ -128,4 +121,5 @@ export const NotificationHeader: React.FC < NotificationHeaderProps> = ({
 pr-12325
         </Button>;
     </div>"
+
 

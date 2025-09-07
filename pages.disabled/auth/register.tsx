@@ -1,5 +1,4 @@
 
-
 import React, { useEffect } from 'react',;
 import Head from 'next/head',;
 import Link from 'next/link',;
@@ -376,3 +375,4 @@ export default RegisterPage,
 };
 export default RegisterPage;
 origin/cursor/automate-test-improve-and-merge-code-2533
+

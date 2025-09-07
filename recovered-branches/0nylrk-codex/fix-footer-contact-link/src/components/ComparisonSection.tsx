@@ -1,6 +1,4 @@
-import { GradientHeading } from "./GradientHeading",
-import { Button } from "./ui/button",
-import { CheckCircle2 } from "lucide-react";
+
 import {
   Table
   TableBody
@@ -297,6 +295,7 @@ service: "24/7 Support"
                   },                      {item.service}
                     </TableCell>;
                     <TableCell className="text - center text - zion - slate-light">;
+
                       {item.traditional}
                     </TableCell>;
                     <TableCell className="text - center text - zion - cyan font-semibold">;
@@ -307,7 +306,6 @@ service: "24/7 Support"
 
 
 
-            
 
             <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white whitespace-nowrap">
               Calculate Your Savings
@@ -655,8 +653,6 @@ export function ComparisonSection() {
                   <TableHead className="text-white text-center">Traditional Providers""
                   <TableHead className="text-white text-center">With Zion""
                   <TableHead className="text-white text-center">Savings"
-                
-              
               <TableBody>
     <section className="py - 20 bg - zion - blue - dark">;"
       <div className="container mx - auto px - 4 sm:px - 6 lg:px - 8">;"
@@ -691,7 +687,6 @@ export function ComparisonSection() {
                     <TableCell className="text - center text - green - 400 font - bold">;"
             <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white whitespace-nowrap">"
 
-            
     <section className="py-20 bg-zion-blue-dark">;"
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">;"
         <div className="text-center mb-12">;"

@@ -248,6 +248,7 @@ const PricingPage: React.FC = () => {
 }
 export default PricingPage;
 
+
 import {
   Check,
   Star,
@@ -1558,8 +1559,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     },
   ];
 
-main
-origin/cursor/automate-test-improve-and-merge-code-2533
+
+
   return (
     <UltraFuturisticBackground variant="quantum" intensity="high">
       <Head>
@@ -2716,7 +2717,6 @@ main
                     <div className="text-cyan-400 font-semibold">{category.startingPrice}</div>
                   </div>
                 </div>
-                
 <ul className='space-y-2 mb-4'>
                 <ul className='space-y-2 mb-4'>
                     {category.icon}
@@ -2752,7 +2752,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </li>
                   ))}
                 </ul>
-                
                 <Button
                   href="/services"
                   variant="secondary"
@@ -2763,7 +2762,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </Button>
 
                 </ul>
-                
                 <Button
                   href="/services"
                   variant="secondary"
@@ -2884,7 +2882,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <div className="text-2xl font-bold text-cyan-400 mb-2">{service.price}</div>
                   <div className="text-sm text-gray-400">{service.category}</div>
                 </div>
-                
 <div className='mb-4'>
                 <div className='mb-4'>
                   <div className='text-xs text-gray-400 mb-2'>
@@ -2950,7 +2947,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </UltraFuturisticCard>;
 
 
-                
                 <Button
                   href={service.link}
                   variant="primary"
@@ -3142,17 +3138,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <p className="text-gray-300">All plans include a generous free trial period with full access to the selected services. No credit card required to start your trial.</p>
 
             </UltraFuturisticCard>
-            
             <UltraFuturisticCard variant="holographic" className="p-6">
               <h3 className="text-lg font-bold text-white mb-3">Can I change my plan later?</h3>
               <p className="text-gray-300">Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately, and we'll prorate any billing adjustments.</p>
             </UltraFuturisticCard>
-            
             <UltraFuturisticCard variant="neural" className="p-6">
               <h3 className="text-lg font-bold text-white mb-3">What support is included?</h3>
               <p className="text-gray-300">All plans include 24/7 support. Professional and Enterprise plans include priority support with dedicated account managers.</p>
             </UltraFuturisticCard>
-            
             <UltraFuturisticCard variant="quantum" className="p-6">
               <h3 className="text-lg font-bold text-white mb-3">Is there a setup fee?</h3>
               <p className="text-gray-300">No setup fees for any plan. All services are designed for instant deployment with our AI-powered setup wizards.</p>
@@ -3199,17 +3192,14 @@ variant='primary'
               <h3 className="text-lg font-bold text-white mb-3">What's included in the free trial?</h3>
               <p className="text-gray-300">All plans include a generous free trial period with full access to the selected services. No credit card required to start your trial.</p>
             </UltraFuturisticCard>
-            
             <UltraFuturisticCard variant="holographic" className="p-6">
               <h3 className="text-lg font-bold text-white mb-3">Can I change my plan later?</h3>
               <p className="text-gray-300">Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately, and we'll prorate any billing adjustments.</p>
             </UltraFuturisticCard>
-            
             <UltraFuturisticCard variant="neural" className="p-6">
               <h3 className="text-lg font-bold text-white mb-3">What support is included?</h3>
               <p className="text-gray-300">All plans include 24/7 support. Professional and Enterprise plans include priority support with dedicated account managers.</p>
             </UltraFuturisticCard>
-            
             <UltraFuturisticCard variant="quantum" className="p-6">
               <h3 className="text-lg font-bold text-white mb-3">Is there a setup fee?</h3>
               <p className="text-gray-300">No setup fees for any plan. All services are designed for instant deployment with our AI-powered setup wizards.</p>
@@ -3564,186 +3554,7 @@ main
           </UltraFuturisticCard>
         </div>
       </div>
-    </UltraFuturisticBackground>
 
-
-                className='text-lg px-8 py-4'>;
-                Contact Sales;
-                <MessageSquare className='ml-2 w-5 h-5' />;
-              </Button>;
-            </div>;
-
-            <div className='text-sm text-gray-400'>;
-              <p>;
-                ✓ 30-90 Day Free Trials • ✓ No Credit Card Required • ✓ Instant;
-                Setup;
-              </p>;
-              <p className='mt-2'>;
-                ✓ 24/7 Support • ✓ 99 && 99.99% Uptime SLA • ✓ Global Infrastructure;
-
-)
-  )
-            <div className='flex flex - col sm:flex - row gap - 4 justify - center mb - 8'>;
-  );
-
-    </UltraFuturisticBackground>
-  )
-  )
-        <div className="mb-20">;
-          <h2 className="text-3xl font-bold text-white mb-12 text-center">Frequently Asked Questions</h2>;
-          <div className="max-w-4xl mx-auto space-y-4">;
-            <UltraFuturisticCard variant="quantum" className="p-6">;
-              <h3 className="text-lg font-bold text-white mb-3">What's included in the free trial?</h3>;
-              <p className="text-gray-300">All plans include a generous free trial period with full access to the selected services. No credit card required to start your trial.</p>;
-            </UltraFuturisticCard>;
-            <UltraFuturisticCard variant="holographic" className="p-6">;
-              <h3 className="text-lg font-bold text-white mb-3">Can I change my plan later?</h3>;
-              <p className="text-gray-300">Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately, and we'll prorate any billing adjustments.</p>;
-            </UltraFuturisticCard>;
-            <UltraFuturisticCard variant="neural" className="p-6">;
-              <h3 className="text-lg font-bold text-white mb-3">What support is included?</h3>;
-              <p className="text-gray-300">All plans include 24/7 support. Professional and Enterprise plans include priority support with dedicated account managers.</p>;
-            </UltraFuturisticCard>;
-            <UltraFuturisticCard variant="quantum" className="p-6">;
-              <h3 className="text-lg font-bold text-white mb-3">Is there a setup fee?</h3>;
-              <p className="text-gray-300">No setup fees for any plan. All services are designed for instant deployment with our AI-powered setup wizards.</p>;
-            </UltraFuturisticCard>;
-          </div>;
-        </div>;
-        {/* Contact Information */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-        <div className="mb-16">;
-          <h2 className="text-3xl font-bold text-white mb-8 text-center">Get In Touch</h2>;
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">;
-            <UltraFuturisticCard variant="quantum" className="text-center p-6">;
-              <Phone className="w-12 h-12 text-cyan-400 mx-auto mb-4" />;
-              <h3 className="text-xl font-bold text-white mb-3">Phone</h3>;
-              <p className="text-cyan-400 text-lg font-semibold">{contactInfo.mobile}</p>;
-              <p className="text-gray-400 text-sm mt-2">Available 24/7</p>;
-            </UltraFuturisticCard>;
-            <UltraFuturisticCard variant="holographic" className="text-center p-6">;
-              <Mail className="w-12 h-12 text-purple-400 mx-auto mb-4" />;
-              <h3 className="text-xl font-bold text-white mb-3">Email</h3>;
-              <p className="text-purple-400 text-lg font-semibold">{contactInfo.email}</p>;
-              <p className="text-gray-400 text-sm mt-2">Quick response guaranteed</p>;
-            </UltraFuturisticCard>;
-            <UltraFuturisticCard variant="neural" className="text-center p-6">;
-              <MapPin className="w-12 h-12 text-green-400 mx-auto mb-4" />;
-              <h3 className="text-xl font-bold text-white mb-3">Address</h3>;
-              <p className="text-green-400 text-sm font-semibold leading-relaxed">{contactInfo.address}</p>;
-              <p className="text-gray-400 text-sm mt-2">Global operations</p>;
-            </UltraFuturisticCard>;
-          </div>;
-        </div>;
-        {/* CTA Section */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-        <div className="text-center">;
-          <UltraFuturisticCard variant="quantum-holographic-advanced" className="p-12">;
-            <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">;
-              Ready to Get Started?;
-            </h2>;
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">;
-              Start your free trial today and experience the power of revolutionary AI & quantum computing services.;
-              No credit card required, instant setup, and full support included.;
-            </p>;
-            <div className="flex flex-col sm: flex-row gap-4 justify-center mb-8">;
-
-                className='text-lg px-8 py-4'>;
-                Contact Sales;
-                <MessageSquare className='ml-2 w-5 h-5' />;
-              </Button>;
-            </div>;
-)
-            <div className='flex flex - col sm:flex - row gap - 4 justify - center mb - 8'>;
-              <Button;
-                href='/services';
-                variant='primary';
-                size='lg';
-                className='text - lg px - 8 py - 4';
-              >;
-                Start Free Trial;
-                <Play className='ml - 2 w - 5 h - 5' />;
-              </Button>;
-              <Button;
-                href='/contact';
-                variant='secondary';
-                size='lg';
-                className='text - lg px - 8 py - 4';
-              >;
-                Contact Sales;
-                <MessageSquare className='ml - 2 w - 5 h - 5' />;
-              </Button>;
-            </div>;
-            <div className='text - sm text - gray - 400'>;
-              <p>;
-                ✓ 30 - 90 Day Free Trials • ✓ No Credit Card Required • ✓ Instant;
-                Setup;
-              </p>;
-              <p className='mt - 2'>;
-                ✓ 24 / 7 Support • ✓ 99.99% Uptime SLA • ✓ Global Infrastructure;
-
-
-              </p>            </div>;
-          </UltraFuturisticCard>;
-        </div>;
-      </div>;
-
-</UltraFuturisticBackground>;
-  );
-}
-
-
-
-    </UltraFuturisticBackground>
-
-
-
-    </UltraFuturisticBackground>;
-  );
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-  );
-main
-  );
-}
-
-}
-    </UltraFuturisticBackground>
-
-}
-
-    </UltraFuturisticBackground>
-  )
-
-}
-origin/main
-ursor/fix-website-loading-errors-and-merge-6662
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-origin/automation-improvements-final
-  );
-}
-  )
-}
-    </UltraFuturisticBackground>);
-}
-)
-origin/cursor/integrate-build-improve-and-re-verify-2156
-    </UltraFuturisticBackground>);
-}
-origin/cursor/automate-test-improve-and-merge-code-20a4
-  )
-
-  )
-
-}
 
     </UltraFuturisticBackground>
   )

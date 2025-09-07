@@ -1,13 +1,4 @@
-<Head>
-        <title>Post a Job - Zion</title>
-      </Head>
-      <h1 className='text-2xl font-semibold'>Post a Job</h1>
-      <div className='grid md:grid-cols-2 gap-6'>
-        <form className='space-y-4'>
-import type { NextPage } from 'next',
-import Head from 'next/head',
-import { useState } from 'react',
-import EnhancedButton from '../../components/ui/EnhancedButton',
+
 
       <Head>
         <title>Post a Job - Zion</title>
@@ -397,3 +388,4 @@ export default PostJob;
 export default PostJob;
 export default PostJob;
 origin/cursor/automate-test-improve-and-merge-code-2533
+

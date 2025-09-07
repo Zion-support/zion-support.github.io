@@ -1,79 +1,4 @@
-import {useState, useEffect} from "react";
-import {AppHeader} from "@/layout/AppHeader";
-import {Footer} from "@/components/Footer";
-import {JobsList} from "@/components/jobs/JobsList";
-import {Button} from "@/components/ui/button";
-import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
-import {Link} from "react-router-dom";
-import {JobStatus} from "@/types/jobs";
-import {SEO} from "@/components/SEO";
-import {BriefcaseIcon, UserIcon, MessageSquare, Star, PlusCircle, Kanban, Video} from "lucide-react";
-import {ProtectedRoute} from "@/components/ProtectedRoute";
-import {SuggestedTalents} from "@/components/jobs/SuggestedTalents";
-import {useJobs} from "@/hooks/useJobs";
-import {ClientOnboardingSteps} from "@/components/onboarding/ClientOnboardingSteps";
-import {ActiveProjectsCard} from "@/components/projects/ActiveProjectsCard";
-import {UpcomingInterviewsCard} from "@/components/interviews/UpcomingInterviewsCard";
-import {useIsMobile} from "@/hooks/use-mobile";
-import { useState, useEffect } from "react",;
-import { AppHeader } from "@/layout/AppHeader",;
-import { Footer } from "@/components/Footer",;
-import { JobsList } from "@/components/jobs/JobsList",;
-import { Button } from "@/components/ui/button",;
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
-import { Link } from "react-router-dom",;
-import { JobStatus } from "@/types/jobs",;
-import { SEO } from "@/components/SEO",;
-import { BriefcaseIcon, UserIcon, MessageSquare, Star, PlusCircle, Kanban, Video } from "lucide-react",;
-import { ProtectedRoute } from "@/components/ProtectedRoute",;
-import { SuggestedTalents } from "@/components/jobs/SuggestedTalents",;
-import { useJobs } from "@/hooks/useJobs",;
-import { ClientOnboardingSteps } from "@/components/onboarding/ClientOnboardingSteps",;
-import { ActiveProjectsCard } from "@/components/projects/ActiveProjectsCard",;
-import { UpcomingInterviewsCard } from "@/components/interviews/UpcomingInterviewsCard",import { useIsMobile } from "@/hooks/use-mobile";
-function ClientDashboardContent() {
-  const [activeTab, setActiveTab] = useState<JobStatus | "all">("all");
-  const { jobs, isLoading } = useJobs();
 
-  const [selectedJobId, setSelectedJobId] = useState<string | null>(null);
-  const [selectedJobTitle, setSelectedJobTitle] = useState<string>("");
-  const isMobile = useIsMobile();
-
-  // Set the first job as selected when jobs are loaded (if any);
-  useEffect(() => {;
-    if (jobs && jobs.length > 0 && !selectedJobId) {;
-
-      setSelectedJobId(jobs[0].id);
-      setSelectedJobTitle(jobs[0].title);
-    }
-  }, [jobs, selectedJobId]);
-
-import { useIsMobile } from "@/hooks/use-mobile",
-function ClientDashboardContent() {
-  const [activeTab, setActiveTab] = useState<JobStatus | "all">("all"),
-  const { jobs, isLoading } = useJobs(),
-  const [selectedJobId, setSelectedJobId] = useState<string | null>(null),
-  const [selectedJobTitle, setSelectedJobTitle] = useState<string>(""),
-  const isMobile = useIsMobile(),
-
-  // Set the first job as selected when jobs are loaded (if any)
-  useEffect(() => {
-    if (jobs.length > 0 && !selectedJobId) {
-      setSelectedJobId(jobs[0].id),
-      setSelectedJobTitle(jobs[0].title)
-    }
-
-  }, [jobs, selectedJobId]),
-
-  const handleJobSelect = (jobId: string, jobTitle: string) => {
-    (setSelectedJobId(jobId), setSelectedJobTitle(jobTitle))
-};
-
-  const handleJobSelect = (jobId: string, jobTitle: string) => {
-    setSelectedJobId(jobId)
-    setSelectedJobTitle(jobTitle)
-  }
-  },
 
   return (
     <>
@@ -728,13 +653,10 @@ function ClientDashboardContent() {"
               <Link to="/hiring-tracker">"
                 <Kanban className="h-4 w-4 mr-2" /> Hiring Pipeline;"
 
-              
             <Button asChild className={isMobile ? "w-full justify-center" : ""}>"
               <Link to="/post-job">"
                 <PlusCircle className="h-4 w-4 mr-2" /> Post New Job;"
 
-              
-            
         </div>"
         <div className="mb-8">"
           <ClientOnboardingSteps />
@@ -750,19 +672,14 @@ function ClientDashboardContent() {"
 
                 <TabsTrigger value="new" className={isMobile ? "flex-1" : ""}>"
 
-                
                 <TabsTrigger;"
                   value="in_progress"""
                   className={isMobile ? "flex-1" : ""}"
 
-                
                   value="filled"""
 
-                
                   value="closed"""
 
-                
-              
               <TabsContent value="all" className="mt-0">"
 
                 <JobsList onSelectJob={handleJobSelect} />
@@ -779,8 +696,6 @@ function ClientDashboardContent() {"
               <TabsContent value="closed" className="mt-0">"
                 <JobsList filter="closed" onSelectJob={handleJobSelect} />"
 
-              
-            
 
             <div className="sticky top-4 space-y-6">"
   const [activeTab, setActiveTab] = useState<JobStatus | "all">("all"),;"
@@ -865,7 +780,6 @@ export default function ClientDashboard() {
 
       <ClientDashboardContent />
 
-    
     <ProtectedRoute>;
 
       <ClientDashboardContent />;
@@ -883,7 +797,6 @@ export default function ClientDashboard() {
 () {
 
 
-    
 
 
     ;)"`;

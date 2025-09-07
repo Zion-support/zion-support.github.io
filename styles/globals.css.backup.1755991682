@@ -23,7 +23,6 @@
   --ring: #3b82f6;
   --radius: 0.75rem;
   --shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-  
   /* Futuristic color palette */
   --neon-blue: #00d4ff;
   --neon-purple: #8b5cf6;
@@ -33,7 +32,6 @@
   --neon-cyan: #06b6d4;
   --neon-yellow: #eab308;
   --neon-red: #ef4444;
-  
   /* Gradient backgrounds */
   --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   --gradient-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
@@ -569,7 +567,6 @@ h3 {
   .card {
     @apply p-4;
   }
-  
   .button {
     @apply px-4 py-2 text-sm;
   }
@@ -586,7 +583,6 @@ h3 {
   .floating-orbs,
   .matrix-rain {
   }
-  
   .quantum-particles::before {
     animation-duration: 30s;
   }
@@ -605,7 +601,6 @@ h3 {
   .futuristic-card {
     border-width: 2px;
   }
-  
   .neon-glow {
     text-shadow: 
       0 0 10px currentColor,
@@ -622,7 +617,6 @@ h3 {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
-  
   .futuristic-card:hover {
     transform: none;
   }
@@ -636,7 +630,6 @@ h3 {
 
     background: none !important;
   }
-  
 .cyber-grid {
 
     background-size: 15px 15px;
@@ -644,7 +637,6 @@ h3 {
   }
   .matrix-rain {    background: none !important;
   }
-  
   .quantum-particles::before {
     animation-duration: 30s;
   }
@@ -663,7 +655,6 @@ h3 {
   .futuristic-card {
     border-width: 2px;
   }
-  
   .neon-glow {
     text-shadow: 
       0 0 10px currentColor,
@@ -680,7 +671,6 @@ h3 {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
-  
   .futuristic-card:hover {
     transform: none;
   }
@@ -694,26 +684,14 @@ h3 {
 
     background: none !important;
   }
-  
   .cyber-grid {
-    background-size: 15px 15px;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-    background-size: 15px 15px;
-=======
-=======
-  .cyber-grid {
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     background-size: 15px 15px;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
     background-size: 15px 15px;
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+  .cyber-grid {
+
   .futuristic-card {
     box-shadow: none !important;
     border: 1px solid #000 !important;

@@ -44,6 +44,7 @@ import { Card, CardContent } from "@/components/ui/card",;
 import { Avatar as AvatarPrimitive } from "@/components/ui/avatar", // Renamed to avoid conflict
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
+
 import { MessageSquare, User, FileText, MoreVertical, Calendar, AlertTriangle, BriefcaseIcon } from 'lucide-react'
 import {
   DropdownMenu;
@@ -65,7 +66,7 @@ export function CandidateCard({ application, index }: CandidateCardProps) {
   const [avatarError, setAvatarError] = useState(false);
   // Check if application is stalled (no activity for 7 days)
   const isStalled = null;
-origin/cursor/automate-test-improve-and-merge-code-2533
+
   return (
     <>
       <Draggable draggableId={application.id} index={index}>
@@ -123,7 +124,6 @@ export function CandidateCard({ application, index }: CandidateCardProps) {
   const isStalled = application.updated_at && 
     new Date(application.updated_at).getTime() < 
     (Date.now() - 7 * 24 * 60 * 60 * 1000),
-  
   const handleSaveNotes = () => {
     // Here you would save the notes to the database
     // For now, we'll just show a toast
@@ -133,7 +133,6 @@ export function CandidateCard({ application, index }: CandidateCardProps) {
     }),
     setShowNotes(false)
   },
-  
   const handleHireConfirmed = () => {
     // Hiring process completed via the modal
     toast({
@@ -143,7 +142,6 @@ export function CandidateCard({ application, index }: CandidateCardProps) {
   },
 
   const candidateName = application.talent_profile?.full_name || "Candidate",
-  
   return (
     <>
       <Draggable draggableId={application.id} index={index}>
@@ -170,7 +168,6 @@ import { useState } from 'react';
       description: "Your notes have been saved"")
     }),
   },
-  
 
 
           <Card;"
@@ -378,6 +375,7 @@ pr-12325
                     </p>
                   </div>
                 </div>
+
                 <DropdownMenu>
                   <DropdownMenuTrigger asChild>
                     <Button variant='ghost' className='h-8 w-8 p-0'>'
@@ -431,7 +429,6 @@ pr-12325
                     </p>
                   </div>
                 </div>
-                
                 <DropdownMenu>
                   <DropdownMenuTrigger asChild>
                     <Button variant="ghost" className="h-8 w-8 p-0">
@@ -517,10 +514,7 @@ pr-12325
                     <MessageSquare className='h-3 w-3 mr-1' /> Message'
                   </Link>
                 </Button>
-                <Button
-                  variant="outline" "
-                  size="sm" "
-                  className="flex-1""
+
                   asChild
                 >
                   {application.resume?.file_url ? (
@@ -555,61 +549,7 @@ pr-12325
 }/> </>)
 }'"};
 ;
-                <Button
-                  variant="default" "
-                  size="sm" "
-                  className="flex-1""
-              {application.match_score !== null && application.match_score !== undefined && (;
-                <div className="mb-2">;
-                  <ScoreBadge application={application} />;
-                </div>;
-              )}
-;
-              {/* Notes Section */}
-              {showNotes && (
-                <div className="mt-2">
-                  <Textarea 
-                    placeholder="Add private notes about this candidate..." 
-                    className="text-xs min-h-[60px]"
-                    value={notes}
-                    onChange={(e) => setNotes(e.target.value)}
-                  />
-                  <div className="flex justify-end mt-2">
-                    <Button size="sm" onClick={handleSaveNotes}>Save Notes</Button>
-                  </div>
-                </div>
-              )}
-;
-              {/* Action Buttons */}
-              <div className="flex justify-between mt-2 gap-1">
-                <Button 
-                  variant="outline" 
-                  size="sm" 
-                  className="flex-1"
-                  asChild
-                >
-                  <Link href={`/messages?talentId=${application.talent_id}`}>
-                    <MessageSquare className="h-3 w-3 mr-1" /> Message
-                  </Link>
-                </Button>
-                
-                <Button 
-                  variant="outline" 
-                  size="sm" 
-                  className="flex-1"
-                  asChild
-                >
-                  {application.resume?.file_url ? (
-                    <a href={application.resume.file_url} target="_blank" rel="noopener noreferrer">
-                      <FileText className="h-3 w-3 mr-1" /> Resume
-                    </Link>
-                  ) : (
-                    <span>
-                      <FileText className="h-3 w-3 mr-1" /> No Resume
-                    </span>
-                  )}
-                </Button>
-                
+
                 <Button 
                   variant="default" 
                   size="sm" 
@@ -733,7 +673,6 @@ function CandidateCard() {
                     <p className="text-xs text-muted-foreground">"
 </p>
                   </div>
-                
 
                 <DropdownMenu>
 
@@ -742,8 +681,6 @@ function CandidateCard() {
 
                       <MoreVertical className='h-4 w-4' />
 
-                    
-                  
                   <DropdownMenuContent align='end'>
 
                     <DropdownMenuItem onClick={() => setShowNotes(!showNotes)}>
@@ -815,11 +752,8 @@ function CandidateCard() {
                   <Link href={`/messages?talentId=${application.talent_id}`}>
                     <MessageSquare className='h-3 w-3 mr-1' /> Message;
 
-                  
-                
 
 
-                
                 <Button;
               <div className='flex justify-between mt-2 gap-1'>;
                 <Button variant='outline' size='sm' className='flex-1' asChild>;
@@ -841,11 +775,9 @@ function CandidateCard() {
 
                   <BriefcaseIcon className='h-3 w-3 mr-1' /> Hire;
 
-                
 }/> </>) 
 }'"};"
 
-                
                   variant="default"""
                   onClick={() => setShowHireModal(true)}
                   <BriefcaseIcon className="h-3 w-3 mr-1" /> Hire;"

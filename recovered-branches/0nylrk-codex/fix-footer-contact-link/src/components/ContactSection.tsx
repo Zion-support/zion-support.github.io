@@ -1,6 +1,7 @@
-import { GradientHeading } from "@/components/GradientHeading",
+
 
 import { GradientHeading } from "@/components/GradientHeading",;
+
 import { Button } from "@/components/ui/button";
 import { Mail } from "lucide-react";
 import { Button } from "@/components/ui/button",;
@@ -763,10 +764,8 @@ function ContactSection() {
 
                 <p className="text-white font-semibold">Email Us</p>""
                 <a href="mailto:commercial@ziontechgroup.com" className="text-zion-cyan hover:text-zion-purple transition-colors">"
-                
             <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">"
 
-            
           <div className="relative">"
             <div className="absolute inset-0 bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20 rounded-lg filter blur-3xl opacity-30"></div>""
             <div className="relative bg-zion-blue-light border border-zion-purple/20 rounded-lg p-8">"
@@ -826,7 +825,6 @@ function ContactSection() {
                   ></textarea>
                   <Button className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">"
 
-                  
               </form>
     <section className="py-20 bg-zion-blue" id="contact">;"
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">;"

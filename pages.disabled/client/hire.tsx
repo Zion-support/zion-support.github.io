@@ -1,8 +1,6 @@
 
-
 import {useState} from 'react';
 
-import {useState} from 'react';
 
 
   const [hourlyRateUsd, setHourlyRateUsd] = useState(120);
@@ -15,132 +13,7 @@ import {useState} from 'react';
   async function sendOffer() {;
     setLoading(true);
     setResult(null);
-    const paymentTerms =;
-      termsType === 'hourly';
 
-        ? { type: 'hourly', hourlyRateUsd }
-        : termsType === 'fixed';
-          ? { type: 'fixed', fixedAmountUsd }
-
-          : { type: 'milestone', milestones: [] };
-
-    const res = await fetch('/api/marketplace/offers', {;
-      method: 'POST',;
-      headers: {;
-        'Content-Type': 'application/json',;
-        'x-demo-user-role': 'client',;
-        'x-demo-user-id': 'client-1',;
-      },;
-      body: JSON && JSON.stringify({;
-        talentSlug,;
-        startDateIso,;
-        scopeSummary,;
-        paymentTerms,;
-        agreementUrl,;
-      }),;
-
-    });
-    const json = await res && res.json();
-    setLoading(false);
-
-    if (!json && json.ok) {;
-      alert(json && json.error || 'Failed to send offer');
-    } else {;
-      setResult(json && json.offer);
-
-      setShowFeedback(true);    }
-      termsType === "hourly"
-        ? { type: "hourly", hourlyRateUsd }
-        : termsType === "fixed"
-        ? { type: "fixed", fixedAmountUsd }
-import { useState } from "react",
-import FeedbackModal from "../../components/ui/FeedbackModal",
-  const [showFeedback, setShowFeedback] = useState(false);
-
-import { useState } from "react",
-import FeedbackModal from "../../components/ui/FeedbackModal",
-export default function ClientHirePage() {
-  const [talentSlug, setTalentSlug] = useState("ava-chen");
-  const [startDateIso, setStartDateIso] = useState<string>(new Date().toISOString().slice(0, 10)),
-  const [scopeSummary, setScopeSummary] = useState("Build AI-enabled reporting module");
-  const [termsType, setTermsType] = useState("hourly");
-  const [hourlyRateUsd, setHourlyRateUsd] = useState(120);
-  const [fixedAmountUsd, setFixedAmountUsd] = useState(5000);
-  const [agreementUrl, setAgreementUrl] = useState("");
-import { useState } from "react",;
-import FeedbackModal from "../../components/ui/FeedbackModal",;
-import { useState } from 'react';
-import FeedbackModal from '../../components/ui/FeedbackModal';
-
-origin/cursor/automate-test-improve-and-merge-code-2533
-export default function ClientHirePage() {
-  const [talentSlug, setTalentSlug] = useState('ava-chen');
-  const [startDateIso, setStartDateIso] = useState<string>(
-    new Date().toISOString().slice(0, 10)
-  );
-  const [scopeSummary, setScopeSummary] = useState(
-    'Build AI-enabled reporting module'
-  );
-  const [termsType, setTermsType] = useState('hourly');
-  const [hourlyRateUsd, setHourlyRateUsd] = useState(120);
-  const [fixedAmountUsd, setFixedAmountUsd] = useState(5000);
-  const [agreementUrl, setAgreementUrl] = useState('');
-  const [loading, setLoading] = useState(false);
-  const [result, setResult] = useState<any | null>(null),
-  const [showFeedback, setShowFeedback] = useState(false);
-  async function sendOffer() {
-    setLoading(true);
-    setResult(null);
-
-  const [scopeSummary, setScopeSummary] = useState("Build AI-enabled reporting module"),
-  const [termsType, setTermsType] = useState("hourly"),
-  const [hourlyRateUsd, setHourlyRateUsd] = useState(120),
-  const [fixedAmountUsd, setFixedAmountUsd] = useState(5000),
-  const [agreementUrl, setAgreementUrl] = useState(""),
-  const [loading, setLoading] = useState(false),
-  const [result, setResult] = useState<any | null>(null),
-  const [showFeedback, setShowFeedback] = useState(false),
-  async function sendOffer() {
-    setLoading(true),
-    setResult(null),
-    const paymentTerms =
-      termsType === "hourly"
-        ? { type: "hourly", hourlyRateUsd   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-        : termsType === "fixed";
-        ? { type: "fixed", fixedAmountUsd   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-        : { type: "milestone", milestones: [] },
-    const res = await fetch("/api/marketplace/offers", {
-      method: "POST",
-    const paymentTerms = null;
-      setShowFeedback(true)
-    }
-        ? { type: 'hourly', hourlyRateUsd }
-        : termsType === 'fixed'
-          ? { type: 'fixed', fixedAmountUsd }
-          : { type: 'milestone', milestones: [] }
-    const res = await fetch('/api/marketplace/offers', {
-      method: 'POST'
-origin/cursor/automate-test-improve-and-merge-code-2533
-      headers: {
-       "Content-Type": "application/json", "x-demo-user-role": "client", "x-demo-user-id": "client-1" 
-    },
-    body: JSON.stringify({ talentSlug, startDateIso, scopeSummary, paymentTerms, agreementUrl })});
-    const json = await res.json();
-    setLoading(false);
-    if (!json.ok) {
-      alert(json.error || "Failed to send offer")
-    } else {
-      setResult(json.offer);
-      setShowFeedback(true)
-    }
   }
 
   }

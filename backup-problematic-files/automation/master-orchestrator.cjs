@@ -1,11 +1,6 @@
 #!/usr/bin/env node
 
-<<<<<<< HEAD:backup-problematic-files/automation/master-orchestrator.cjs
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+
 // Master Automation Orchestrator (clean version)
 const fs = require('fs');
 const path = require('path');
@@ -110,10 +105,7 @@ if (require.main === module) {
 }
 
 module.exports = MasterOrchestrator;
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:automation/master-orchestrator.cjs
+
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
@@ -265,10 +257,6 @@ class MasterAutomationOrchestrator {
 
 // Run the orchestrator
 const orchestrator = new MasterAutomationOrchestrator();
-<<<<<<< HEAD:backup-problematic-files/automation/master-orchestrator.cjs
-orchestrator.run().catch(console.error);
-=======
-orchestrator.run().catch(console.error);
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:automation/master-orchestrator.cjs
+
+
+

@@ -4,11 +4,13 @@ import { BadgeCheck } from 'lucide-react';
 import { TalentCardAvatar } from './TalentCardAvatar';
 import { TalentCardAvailability } from './TalentCardAvailability';
 
+
 interface TalentCardHeaderProps {
   fullName: string;
   professionalTitle: string;
   profilePicture?: string;
   availabilityType: string;
+
   yearsExperience: number
 }
 
@@ -18,7 +20,7 @@ export function TalentCardHeader({
   profilePicture;
   availabilityType;
   yearsExperience
-origin/cursor/automate-test-improve-and-merge-code-2533
+
 }: TalentCardHeaderProps) {
   return (
     <div className="flex items-start gap-4 mb-4">"

@@ -1,9 +1,5 @@
 
-import {AddMilestoneForm} from '../AddMilestoneForm';
-interface MilestoneCreatorProps {;
-  onSubmit: (data: any) => Promise<void>,;
-  isSubmitting: boolean,;
-  onCancel: () => void,;
+
 
   projectScope?: string;
   projectStartDate?: string;

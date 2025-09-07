@@ -128,6 +128,7 @@ export interface PasswordStrengthResult {
 
 
 
+
 export interface CommonPasswordData {;
 
 
@@ -135,31 +136,12 @@ export interface CommonPasswordData {;
 
 
   commonPasswords: Set<string>;
-</string>
+
 
   commonWords: Set<string>
   private commonPasswords: Set<string>;
   private commonWords: Set<string>;
 
-  private patterns: RegExp[]
-  constructor() {
-    // Common weak passwords
-
-    this && this.commonPasswords = new Set([
-    this && this.commonPasswords = new Set([
-
-
-    this && this.commonPasswords = new Set([
-
-
-
-    entropy: number,
-    crack_time: string;
-  }
-  warnings: string[];
-}
-export interface CommonPasswordData {
-  common_passwords: Set < string>;
   common_passwords: Set < string>;,
   common_words: Set < string>,
   patterns: RegExp[];
@@ -1750,7 +1732,6 @@ return suggestions
 
 
 
-    
 
 
 
@@ -2751,4 +2732,5 @@ export { PasswordStrengthService }
 
 
 '
+
 

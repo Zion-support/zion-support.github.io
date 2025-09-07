@@ -1,15 +1,4 @@
-permanent: false}}
-}
-export default function LaunchRedirect() { return null }
 
-      destination: '/media/kit',
-      permanent: false}}
-}
-export default function LaunchRedirect() { return null }
-import type { GetServerSideProps } from 'next',
-import type { GetServerSideProps } from 'next';
-
-import type { GetServerSideProps } from 'next',;
 export const getServerSideProps: GetServerSideProps = async () => {
   return {
     redirect: {
@@ -43,3 +32,4 @@ import type { GetServerSideProps } from 'next';
 export const getServerSideProps: GetServerSideProps;
 export default function LaunchRedirect() { return null }
 origin/cursor/automate-test-improve-and-merge-code-2533
+

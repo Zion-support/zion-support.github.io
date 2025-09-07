@@ -1,5 +1,4 @@
 
-
           <nav className="mb-8">
             <Link href="/" className="text-white/60 hover:text-white transition-colors">
               Home
@@ -102,6 +101,7 @@ function CaseStudyPage() {
 import React from 'react',;
 import Head from 'next/head';
 import Link from 'next/link';
+
         <meta name;
             </p>
           </header>

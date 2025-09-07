@@ -1,25 +1,5 @@
 
-import {useState, useEffect} from 'react';
-pr-12325
-import {use_auth} from '@/hooks / use_auth';
-import {use_resume} from '@/hooks / use_resume';
-import {Tabs} from '@/components / ui / tabs';
-import {Card, CardContent} from '@/components / ui / card';
-import {Alert, AlertDescription, AlertTitle} from '@/components / ui / alert';
-import {AlertCircle, FilePlus, Loader2} from 'lucide-react';
 
-import {Button} from '@/components / ui / button';
-import {Resume} from '@/types / resume';
-
-// Import components;
-
-// Import components;import { useState, useEffect  } from 'react';
-import {Button} from '@/components / ui / button';
-import {Resume} from '@/types / resume';
-// Import components;
-
-
-// Import components;
 
 import { useState, useEffect  } from 'react';
 pr-12325
@@ -42,33 +22,7 @@ import { ResumeStepContent  } from './ResumeStepContent';
 import { useResumeProgress  } from './useResumeProgress';
 import { ResumeVersionSelector  } from './ResumeVersionSelector';
 import { RESUME_STEPS } from './constants';
-export function ResumeWizard() {
-import {useState, useEffect} from 'react';
-import {use_auth} from '@/hooks / use_auth';
-import {use_resume} from '@/hooks / use_resume';
-import {Tabs} from '@/components / ui / tabs';
-import {Card, CardContent} from '@/components / ui / card';
-import {Alert, AlertDescription, AlertTitle} from '@/components / ui / alert';
-import {AlertCircle, FilePlus, Loader2} from 'lucide-react';
-import {Button} from '@/components/ui/button';
-import {Resume} from '@/types/resume';
-// Import components
-import {Button} from '@/components/ui/button';
-import {Resume} from '@/types/resume';
-// Import components;
-import {ResumeProgress} from './ResumeProgress';
-pr-12325
-import {EmptyResumeState} from './EmptyResumeState';
-import {CreateResumeForm} from './CreateResumeForm';
-import {ResumeSteps} from './ResumeSteps';
-import {ResumeStepContent} from './ResumeStepContent';
-import {useResumeProgress} from './useResumeProgress';
-import {ResumeVersionSelector} from './ResumeVersionSelector';
-import {RESUME_STEPS} from './constants';  // Use the extracted hook for progress calculation
 
-  }
-  const handleResumeChange = (resumeId: string) => {
-    fetchResume(resumeId)
   }
 
 import {useState, useEffect} from 'react';''
@@ -320,7 +274,6 @@ if (error) {;
 
   },
   },
-  
   if (isLoading) {
     return (
       <div className="flex justify-center items-center h-64">
@@ -530,7 +483,6 @@ if (!resume && !showNewResumeForm) {;
 />
     )
   }
-  
   return (
     <div className="space-y-6">
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">

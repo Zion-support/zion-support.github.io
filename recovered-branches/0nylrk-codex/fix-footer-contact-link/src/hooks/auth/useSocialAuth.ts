@@ -1,32 +1,5 @@
 
-import { supabase } from "@/integrations/supabase/client",
-import { toast } from "@/hooks/use-toast",
 
-import {supabase} from "@/integrations/supabase/client";
-import {toast} from "@/hooks/use-toast";
-import { supabase } from "@/integrations/supabase/client",
-import { toast } from "@/hooks/use-toast",
-import {supabase} from "@/integrations/supabase/client";
-import {toast} from "@/hooks/use-toast";
-export const useSocialAuth = () => {
-  const loginWithGoogle = async () => {
-    try {
-
-          description: error && error.message,
-
-const { error } = await supabase.auth.signInWithOAuth({;
-        provider: "google"});
-import { supabase } from "@/integrations/supabase/client",
-import { toast } from "@/hooks/use-toast",
-      const { error } = await supabase.auth.signInWithOAuth({;
-        provider: "google"});
-      const { error } = await supabase.auth.signInWithOAuth({;
-        provider: "google"});
-import { supabase } from "@/integrations/supabase/client",
-import { toast } from "@/hooks/use-toast",
-import { supabase } from "@/integrations/supabase/client",
-import { toast } from "@/hooks/use-toast",
-export const useSocialAuth = () => {
 import {supabase} from "@/integrations/supabase/client";
 import {toast} from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client",;
@@ -668,4 +641,5 @@ pr-12325
   return { loginWithGoogle, loginWithFacebook, loginWithTwitter }
 };
 "
+
 

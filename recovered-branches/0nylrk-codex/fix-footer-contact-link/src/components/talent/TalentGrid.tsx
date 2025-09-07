@@ -1,132 +1,17 @@
 
-import {TalentCard} from "@/components/talent/TalentCard";
-import {TalentProfile} from "@/types/talent";
-import {TalentCard} from "@/components/talent/TalentCard";""
-import {TalentProfile} from "@/types/talent";"
-pr-12325
 
-import {TalentCard} from "@/components/talent/TalentCard";""
-import {TalentProfile} from "@/types/talent";"
-
-export interface TalentGridProps {;
-  talents: TalentProfile[],;
-  isLoading: boolean,;
-  onTalentClick: (id: string) => void,;
-  savedTalentIds: string[],;
-  onToggleSave: (id: string, isSaved: boolean) => void,;
-  isAuthenticated: boolean,;
-
-  viewProfile?: (id: string) => void,;
-
-  clearFilters?: () => void;
-  handleRequestHire?: (talent: TalentProfile) => void;
-clearFilters?: () => void;
-  handleRequestHire?: (talent: TalentProfile) => void;
-import { TalentCard } from "@/components/talent/TalentCard";
-import { TalentProfile } from "@/types/talent";
-export interface TalentGridProps {
-
-  clearFilters?: () => void;
-import { TalentCard } from "@/components/talent/TalentCard",
-import { TalentProfile } from "@/types/talent",
-import {TalentCard} from "@/components/talent/TalentCard";
-import {TalentProfile} from "@/types/talent";
-import { TalentCard } from "@/components/talent/TalentCard",
-import { TalentProfile } from "@/types/talent",
-
-  handleRequestHire?: (talent: TalentProfile) => void;import { TalentCard } from "@/components/talent/TalentCard";
-import { TalentProfile } from "@/types/talent";
-export interface TalentGridProps {
-
-  clearFilters?: () => void;export interface TalentGridProps {
-  handleRequestHire?: (talent: TalentProfile) => void;"
-import { TalentCard } from "@/components/talent/TalentCard";""
-import { TalentProfile } from "@/types/talent";"
-export interface TalentGridProps {
-  // TODO: Implement
-}
-  clearFilters?: () => void;"
-import { TalentCard } from "@/components/talent/TalentCard",""
-import { TalentProfile } from "@/types/talent",""
-import {TalentProfile} from "@/types/talent";""
-import { TalentProfile } from "@/types/talent","
-  // TODO: Implement
-pr-12325
-}
-
-  talents: TalentProfile[],
-  isLoading: boolean,
-  onTalentClick: (id: string) => void,
-  savedTalentIds: string[],
-  onToggleSave: (id: string, isSaved: boolean) => void,
-  isAuthenticated: boolean,
   handleRequestHire?: (talent: TalentProfile) => void
   clearFilters?: () => void;
   handleRequestHire?: (talent: TalentProfile) => void;  handleRequestHire?: (talent: TalentProfile) => void
 
 
-  viewProfile?: (id: string) => void,
-  clearFilters?: () => void,
-
-  handleRequestHire?: (talent: TalentProfile) => void
-viewProfile?: (id: string) => void,
-  handleRequestHire?: (talent: TalentProfile) => void;
-  viewProfile?: (id: string) => void,
-  clearFilters?: () => void,
-
-  handleRequestHire?: (talent: TalentProfile) => void;
-  viewProfile?: (id: string) => void,;
-  clearFilters?: () => void;
-  viewProfile?: (id: string) => void,
-  clearFilters?: () => void,
-  handleRequestHire?: (talent: TalentProfile) => void
-  handleRequestHire?: (talent: TalentProfile) => void
-  clearFilters?: () => void;
-  handleRequestHire?: (talent: TalentProfile) => void;
-  handleRequestHire?: (talent: TalentProfile) => void;
-  handleRequestHire?: (talent: TalentProfile) => void;
-  clearFilters?: () => void;
-
-  handleRequestHire?: (talent: TalentProfile) => void;
-clearFilters?: () => void;
-  handleRequestHire?: (talent: TalentProfile) => void;  handleRequestHire?: (talent: TalentProfile) => void;
-clearFilters?: () => void;}
-  handleRequestHire?: (talent: TalentProfile) => void;}
-}
-export function TalentGrid({
-  talents
-  isLoading
-  onTalentClick
-  savedTalentIds
-  onToggleSave
-
-isAuthenticated;
-  viewProfile;
-  clearFilters;
-
-  viewProfile?: (id: string) => void,
-  clearFilters?: () => void,
-
-  handleRequestHire?: (talent: TalentProfile) => void;
-
-export function TalentGrid({
   talents;
 
   isLoading;
   onTalentClick;
   savedTalentIds;
   onToggleSave;
-pr-12325
-export function TalentGrid({ 
-  talents, 
-  isLoading, 
-  onTalentClick, 
-  savedTalentIds, 
 
-onToggleSave, ;
-  handleRequestHire
-
-  onToggleSave, ;
   isAuthenticated;
   viewProfile;
   clearFilters;
@@ -140,193 +25,7 @@ onToggleSave, ;
 pr-12325
 
 }: TalentGridProps) {
-  const handleRequestHireInternal = (
-    if (handleRequestHire) {
-      handleRequestHire(talent)
-import { TalentCard } from '@/components / talent / TalentCard';
-import { TalentProfile } from '@/types / talent';
-      handleRequestHire(talent);
-  const handleViewProfile = (id: string) =>: any {
-    // Check condition
-if ( {) {
-  $2
-}
-      view_profile (id);
-      // Default implementation
 
-  };
-
-      // // // console.log("Request to hire:", talent.id)
-import { TalentCard } from "@/components/talent/TalentCard",;
-import { TalentProfile } from "@/types/talent",;
-
-      handleRequestHire(talent)"
-import { TalentCard } from '@/components / talent / TalentCard';''
-import { TalentProfile } from '@/types / talent';'
-export interface TalentGridProps {
-  // TODO: Implement
-}
-  talents: TalentProfile[],
-  is_loading: boolean,
-  onTalentClick: (id: string) => void,
-  savedTalentIds: string[],
-  onToggleSave: (id: string, is_saved: boolean) => void,
-  is_authenticated: boolean,
-  view_profile?: (id: string) => void,
-  clear_filters?: () => void;
-  handleRequestHire?: (talent: TalentProfile) => void;
-}
-export /**
- * TalentGrid - Function description;
- */
-function TalentGrid() {
-  const handleRequestHireInternal = (talent: TalentProfile) =>: any {
-  // TODO: Implement
-}
-    // Check condition;
-if ( {) {
-  $2;
-}
-      handleRequestHire (talent);
-} else {
-
-      // Default implementation;
-      console.log ("Request to hire:", talent.id);
-    }
-  }
-    } else {
-    } else {
-  // TODO: Implement
-}
-    } else {
-  // TODO: Implement
-}
-;
-  const handleViewProfile = (id: string) =>: any {
-  // TODO: Implement
-}
-    // Check condition;
-if ( {) {
-  $2;
-}
-      view_profile (id);
-
-    } else {
-  // TODO: Implement
-}
-      onTalentClick (id);
-    }
-
-} else {
-      // Default implementation
-
-  };
-
-      // // // console.log("Request to hire:", talent.id)
-import { TalentCard } from "@/components/talent/TalentCard",;
-import { TalentProfile } from "@/types/talent",;
-      // Default implementation;
-  };
-
-'
-      // // // console.log("Request to hire:", talent.id)""
-import { TalentCard } from "@/components/talent/TalentCard",;""
-import { TalentProfile } from "@/types/talent",;"
-
-export interface TalentGridProps {;
-  talents: TalentProfile[],;
-  isLoading: boolean,;
-  onTalentClick: (id: string) => void,;
-  savedTalentIds: string[],;
-  onToggleSave: (id: string, isSaved: boolean) => void,;
-  isAuthenticated: boolean,;
-  viewProfile?: (id: string) => void,;
-  clearFilters?: () => void,;}
-  handleRequestHire?: (talent: TalentProfile) => void;}
-}
-;
-      handleRequestHire(talent)"
-import { TalentCard } from '@/components / talent / TalentCard';
-import { TalentProfile } from '@/types / talent';
-  // TODO: Implement
-  is_loading: boolean,
-  onToggleSave: (id: string, is_saved: boolean) => void,
-  is_authenticated: boolean,
-  view_profile?: (id: string) => void,
-  clear_filters?: () => void;
-export /**
- * TalentGrid - Function description;
- */
-function TalentGrid() {
-  const handleRequestHireInternal = (talent: TalentProfile) =>: any {
-  // TODO: Implement
-    // Check condition;
-if ( {) {
-  $2;
-      handleRequestHire (talent);
-    } else {
-  // TODO: Implement
-  // TODO: Implement
-;
-  const handleViewProfile = (id: string) =>: any {
-  // TODO: Implement
-    // Check condition;
-      view_profile (id);
-
-  // TODO: Implement
-      onTalentClick (id);
-
-      // Default implementation;
-  };
-
-
-      // // // console.log("Request to hire:", talent.id)""
-import { TalentCard } from "@/components/talent/TalentCard",;""
-import { TalentProfile } from "@/types/talent",;"
-  clearFilters?: () => void,;
-pr-12325
-export function TalentGrid({;
-  talents,;
-  isLoading,;
-  onTalentClick,;
-  savedTalentIds,;
-  onToggleSave,;
-  isAuthenticated,;
-  viewProfile,;
-
-  clearFilters,;
-  handleRequestHire;
-pr-12325
-  handleRequestHire;)
-
-}: TalentGridProps) {;
-  const handleRequestHireInternal = (;
-    if (handleRequestHire) {;
-      handleRequestHire(talent);) => {
-  return $3;}
-}
-    } else {;
-      // Default implementation;
-      // // // console.log("Request to hire:", talent.id);
-
-      // Default implementation;"
-      // // // console.log("Request to hire:", talent.id);"
-
-    }
-  };
-  const handleViewProfile = (;
-    if (viewProfile) {;
-      viewProfile(id);) => {
-  return $3;}
-}
-    } else {;}
-      onTalentClick(id);}
-    }
-  },
-
-
-  if (isLoading) {
-    if (isLoading) {
     return <div className="py-8 text-center">
       <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-zion-cyan mx-auto mb-4"></div>
       <p className="text-zion-cyan">Loading talent profiles...</p>
@@ -494,13 +193,8 @@ if ( {) {
 
 
 
-  
 
 
-  
-  
-  
-  
   if (isLoading) {"
     return <div className="py-8 text-center">"
 </div>"
@@ -579,7 +273,6 @@ const handleViewProfile = (id: string) => {
 }
 };
 if (isLoading) {
-  
 }if (!talents || talents.length === 0) {
   return <div className="py-8 text-center bg-zion-blue-dark rounded-lg border border-zion-blue-light p-6" > <p className="text-zion-slate-light mb-4" >No talents found matching your criteria</p> clearFilters && (<button onClick= {
   clearFilters 
@@ -646,13 +339,8 @@ if (isLoading) {
 
 
 
-  
 
 
-  
-  
-  
-  
   if (isLoading) {"
     return <div className="py-8 text-center">"
 </div>"

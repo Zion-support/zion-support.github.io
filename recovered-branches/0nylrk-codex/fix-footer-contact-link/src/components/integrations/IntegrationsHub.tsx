@@ -34,48 +34,6 @@ import { IntegrationCards } from "./IntegrationCards";
 import { ZapierIntegration } from "./ZapierIntegration";
 import { Badge } from "@/components/ui/badge";
 
-export function IntegrationsHub() {
-  const [activeTab, setActiveTab] = useState("marketplace");
-import { WebhookManager } from "./WebhookManager";
-import { IntegrationsSyncLog } from "./IntegrationsSyncLog";
-export function IntegrationsHub() {;
-  const [activeTab, setActiveTab] = useState("marketplace");
-
-export function IntegrationsHub() {
-  const [activeTab, setActiveTab] = useState("marketplace");
-
-return (
-    <div className="space-y-6">
-      <div className="flex justify-between items-center">
-        <div>
-          <h1 className="text-3xl font-bold">Integrations Hub</h1>
-          <p className="text-muted-foreground mt-1">
-            Connect your platform with the tools and services you use every day
-          </p>
-        </div>
-export function IntegrationsHub() {
-  const [activeTab, setActiveTab] = useState("marketplace");
-  return (
-    <div className="space-y-6">
-      <div className="flex justify-between items-center">
-        <div>
-          <h1 className="text-3xl font-bold">Integrations Hub</h1>
-          <p className="text-muted-foreground mt-1">
-            Connect your platform with the tools and services you use every day
-          </p>
-        </div>
-
-import React, { useState } from "react",
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { IntegrationCards } from "./IntegrationCards",
-import { ZapierIntegration } from "./ZapierIntegration",
-import { Badge } from "@/components/ui/badge",
-import { WebhookManager } from "./WebhookManager",
-import { IntegrationsSyncLog } from "./IntegrationsSyncLog",
-export function IntegrationsHub() {
-  const [activeTab, setActiveTab] = useState("marketplace"),
         <div className="flex gap-2">
           <Button variant="outline">View Documentation</Button>
           <Button>Connect New Integration</Button>
@@ -170,10 +128,8 @@ export function IntegrationsHub() {"
       </div>
 
 
-      
 
 
-      
       "
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">"
 </div>
@@ -282,7 +238,6 @@ export function IntegrationsHub() {"
           <TabsContent value="zapier" className="m-0">
             <ZapierIntegration />
           </TabsContent>
-          
 <TabsContent value="zapier" className="m-0">
             <ZapierIntegration />
           </TabsContent>
@@ -326,10 +281,8 @@ View the history of synchronization events between integrations.
 
 
 
-        
 
 
-        
         "
         <Card className="md:col-span-2">"
 </Card>"
@@ -383,7 +336,6 @@ View the history of synchronization events between integrations.
       </div>
 
 
-      
 
 "
             <Button variant="outline" className="w-full">View All Activity</Button>"
@@ -401,10 +353,8 @@ View the history of synchronization events between integrations.
         </TabsList>
 
 
-        
 
 
-        
         "
         <div className="mt-6">"
 </div>"
@@ -421,7 +371,6 @@ View the history of synchronization events between integrations.
             <ZapierIntegration />
 </ZapierIntegration>
           </TabsContent>
-          
 
 "
           <TabsContent value="webhooks" className="m-0">"
@@ -445,10 +394,8 @@ View the history of synchronization events between integrations.
             </Card>
 
 
-            
 
 
-            
             "
             <Card className="mt-6">"
 </Card>
@@ -969,10 +916,8 @@ export function IntegrationsHub() {"
           <Button>Connect New Integration
 
 
-      
 
 
-      
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">"
         <Card>
           <CardHeader className="pb-2">"
@@ -980,7 +925,6 @@ export function IntegrationsHub() {"
               <Badge variant="outline" className="bg-green-100 text-green-800">"
 
               <Badge variant="outline" className="bg-green-100 text-green-800">Healthy"
-          
           <CardContent>
             <div className="space-y-2">"
               <div className="flex justify-between text-sm">"
@@ -993,14 +937,10 @@ export function IntegrationsHub() {"
                 <span className="font-medium">2 mins ago</span>"
                 <span className="text-muted-foreground">Pending Webhooks</span>""
                 <span className="font-medium">0</span>"
-          
-        
 
 
-        
 
 
-        
         <Card className="md:col-span-2">"
             <CardTitle className="text-lg">Recent Activity"
           <CardContent className="pb-0">"
@@ -1025,42 +965,30 @@ export function IntegrationsHub() {"
           <CardFooter className="pt-4">"
             <Button variant="outline" className="w-full">"
 
-            
-          
-        
 
 
-      
 
             <Button variant="outline" className="w-full">View All Activity"
-          
-        
       <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">"
         <TabsList className="grid grid-cols-3 md: w-[400px]">"
           <TabsTrigger value="marketplace">Marketplace""
           <TabsTrigger value="zapier">Zapier""
           <TabsTrigger value="webhooks">Webhooks"
-        
 
 
-        
 
 
-        
         <div className="mt-6">"
           <TabsContent value="marketplace" className="m-0">"
 
             <IntegrationCards />
 
-          
 
 
           <TabsContent value="zapier" className="m-0">"
 
             <ZapierIntegration />
 
-          
-          
 
           <TabsContent value="webhooks" className="m-0">"
 
@@ -1070,33 +998,21 @@ export function IntegrationsHub() {"
                 <CardTitle>Webhook Management
                 <CardDescription>
 
-                
-              
 
                 <WebhookManager />
 
-              
-            
 
 
-            
 
 
-            
             <Card className="mt-6">"
 
 
                 <CardTitle>Synchronization Log
 
-                
-              
 
                 <IntegrationsSyncLog />
 
-              
-            
-          
-      
     <div className="space-y-6">;"
       <div className="flex justify-between items-center">;"
         <div>;

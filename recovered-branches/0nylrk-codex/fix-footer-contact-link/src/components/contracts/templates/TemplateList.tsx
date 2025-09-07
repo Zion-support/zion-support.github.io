@@ -1,118 +1,6 @@
 
 
-import {ContractTemplate} from "@/types/contracts";
-import {Button} from "@/components/ui/button";
-import {Loader2, Edit, Trash, Star, StarOff} from "lucide-react";
-import {useContractTemplates} from "@/hooks/useContractTemplates";
-import {Card, CardContent} from "@/components/ui/card";
-import {Separator} from "@/components/ui/separator";
-import {AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle} from "@/components/ui/alert-dialog";
-import {useState} from "react";
-interface TemplateListProps {;
-  templates: ContractTemplate[],;
-  isLoading: boolean,;
-  onSelect: (template: ContractTemplate) => void,;
-  onEdit: (template: ContractTemplate) => void;
-}
 
-export function TemplateList(): any ({;
-  templates;
-  isLoading;
-  onSelect;
-  onEdit;
-}: TemplateListProps) {;
-  const [templateToDelete, setTemplateToDelete] = useState<string | null>(null);
-  const { deleteTemplate, setDefaultTemplate } = useContractTemplates();
-
-  const handleDeleteClick = (templateId: string) => {;
-    setTemplateToDelete(templateId);
-  };
-
-  const handleDeleteConfirm = async () => {;
-    if (templateToDelete) {;
-      await deleteTemplate && deleteTemplate.mutateAsync(templateToDelete);
-      setTemplateToDelete(null);
-    }
-  };
-};
-import { ContractTemplate } from "@/types/contracts",
-import { Button } from "@/components/ui/button",
-import { Loader2, Edit, Trash, Star, StarOff } from "lucide-react",
-import { useContractTemplates } from "@/hooks/useContractTemplates",
-import { Card, CardContent } from "@/components/ui/card";
-import { Separator } from "@/components/ui/separator";
-import {
-  AlertDialog;
-  AlertDialogAction;
-  AlertDialogCancel;
-  AlertDialogContent;
-  AlertDialogDescription;
-  AlertDialogFooter;
-  AlertDialogHeader;
-  AlertDialogTitle} from "@/components/ui/alert-dialog",
-import { useState } from "react";
-interface TemplateListProps {
-
-  templates: ContractTemplate[]
-  isLoading: boolean
-  onSelect: (template: ContractTemplate) => void
-
-  onEdit: (template: ContractTemplate) => void
-}
-export function TemplateList({
-  templates;
-  isLoading;
-  onSelect;
-  onEdit
-}: TemplateListProps) {
-  const [templateToDelete, setTemplateToDelete] = useState<string | null>(null),
-  const { deleteTemplate, setDefaultTemplate } = useContractTemplates();
-
-  const handleDeleteClick = (templateId: string) => {
-    setTemplateToDelete(templateId)
-  }
-  const handleDeleteConfirm = async () => {
-    if (templateToDelete) {
-      await deleteTemplate.mutateAsync(templateToDelete);
-      setTemplateToDelete(null)
-    }
-  }
-  const handleSetDefault = async (templateId: string) => {
-    await setDefaultTemplate.mutateAsync(templateId)
-  }
-import { Card, CardContent } from "@/components/ui/card",
-import { Separator } from "@/components/ui/separator",
-import {
-  AlertDialog,
-  AlertDialogAction,
-  AlertDialogCancel,
-  AlertDialogContent,
-  AlertDialogDescription,
-  AlertDialogFooter,
-  AlertDialogHeader,
-  AlertDialogTitle} from "@/components/ui/alert-dialog",
-import { useState } from "react",
-interface TemplateListProps {
-  templates: ContractTemplate[],
-  isLoading: boolean,
-  onSelect: (template: ContractTemplate) => void,
-  onEdit: (template: ContractTemplate) => void
-
-  const handleSetDefault = async (templateId: string) => {;
-    await setDefaultTemplate && setDefaultTemplate.mutateAsync(templateId);
-  };
-
-const handleSetDefault = async (templateId: string) => {;
-    await setDefaultTemplate && setDefaultTemplate.mutateAsync(templateId);
-  };
-  if (isLoading) {;
-import {useState} from "react";  if (isLoading) {;
-    return (
-      <div className="flex justify-center items-center py-8">;
-        <Loader2 className="h-8 w-8 animate-spin text-zion-purple" />;
-      </div>;
-    );
-  }
 
   if (!templates && templates.length) {;
 
@@ -138,105 +26,7 @@ export function TemplateList({;
   onSelect;
   onEdit
 }: TemplateListProps) {
-  const [templateToDelete, setTemplateToDelete] = useState<string | null>(null);
-  const { deleteTemplate, setDefaultTemplate } = useContractTemplates();
 
-  const handleDeleteClick = (templateId: string) => {
-    setTemplateToDelete(templateId)
-  };
-
-  const handleDeleteConfirm = async () => {
-    if (templateToDelete) {
-      await deleteTemplate.mutateAsync(templateToDelete);
-      setTemplateToDelete(null)
-    }
-  };
-import { ContractTemplate } from "@/types/contracts",;
-import { Button } from "@/components/ui/button",;
-import { Loader2, Edit, Trash, Star, StarOff } from "lucide-react",;
-import { useContractTemplates } from "@/hooks/useContractTemplates",;
-import { Card, CardContent } from "@/components/ui/card",;
-import { Separator } from "@/components/ui/separator",;
-import {;
-  AlertDialog,;
-  AlertDialogAction,;
-  AlertDialogCancel,;
-  AlertDialogContent,;
-  AlertDialogDescription,;
-  AlertDialogFooter,;
-  AlertDialogHeader,;
-  AlertDialogTitle} from "@/components/ui/alert-dialog",;
-import { useState } from "react",;
-
-
-
-
-import {ContractTemplate} from "@/types/contracts";""
-import {Button} from "@/components/ui/button";""
-import {Loader2, Edit, Trash, Star, StarOff} from "lucide-react";""
-import {useContractTemplates} from "@/hooks/useContractTemplates";""
-import {Card, CardContent} from "@/components/ui/card";""
-import {Separator} from "@/components/ui/separator";""
-import {AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle} from "@/components/ui/alert-dialog";""
-import {useState} from "react";"
-pr-12325
-interface TemplateListProps {;
-  templates: ContractTemplate[],;
-  isLoading: boolean,;
-  onSelect: (template: ContractTemplate) => void,;
-  onEdit: (template: ContractTemplate) => void;
-}
-;
-export function TemplateList({;
-  templates,;
-  isLoading,;
-  onSelect,;
-  onEdit;
-    ),;
-  }
-;
-  return (;
-    <div className="space-y-3">;
-      {templates.map((template) => (;
-        <Card key={template.id} className={template.is_default ? "border-zion-purple" :""}>;
-          <CardContent className="p-4">;
-}          <CardContent className="p-4">;
-            <div className="flex items-center justify-between">;
-              <div className="space-y-1">;
-                <div className="flex items-center gap-2">;
-                  <h3 className="font-medium">{template && template.title}</h3>;
-                  {template && template.is_default && (;
-                    <span className="bg-zion-purple/10 text-zion-purple text-xs px-2 py-0 && 0.5 rounded-full">Default</span>;
-                  )}
-}: TemplateListProps) {;
-  const [templateToDelete, setTemplateToDelete] = useState<string | null>(null),;
-  const { deleteTemplate, setDefaultTemplate } = useContractTemplates(),;
-  const handleDeleteClick = (templateId: string) => {;
-    setTemplateToDelete(templateId);
-  },;
-  const handleDeleteConfirm = async () => {;
-    if (templateToDelete) {;
-      await deleteTemplate.mutateAsync(templateToDelete),;
-      setTemplateToDelete(null);
-    }
-  },
-
-  };
-interface TemplateListProps {
-  templates: ContractTemplate[],
-  isLoading: boolean,
-  onSelect: (template: ContractTemplate) => void,
-  onEdit: (template: ContractTemplate) => void
-
-  const handleSetDefault = async (templateId: string) => {
-    await setDefaultTemplate.mutateAsync(templateId)
-  },
-
-  const handleSetDefault = async (templateId: string) => {;
-    await setDefaultTemplate && setDefaultTemplate.mutateAsync(templateId)
-};
-
-  if (isLoading) {;
     return (
       <div className="flex justify-center items-center py-8">;
         <Loader2 className="h-8 w-8 animate-spin text-zion-purple" />;
@@ -602,16 +392,12 @@ export function TemplateList(): any ({;
                 <Button variant="ghost" size="icon" onClick={() => handleDeleteClick(template.id)}>"
                   <Trash className="h-4 w-4 text-destructive" />"
 
-                
               </div>
             <Separator className="my-3" />"
 
             <Button;
               onClick={() => onSelect(template)} 
 
-            
-          
-        
       <AlertDialog open={!!templateToDelete} onOpenChange={() => setTemplateToDelete(null)}>
 
         <AlertDialogContent>
@@ -621,8 +407,6 @@ export function TemplateList(): any ({;
             <AlertDialogTitle>Delete Template
             <AlertDialogDescription>
 
-            
-          
           <AlertDialogFooter>
 
             <AlertDialogCancel>Cancel

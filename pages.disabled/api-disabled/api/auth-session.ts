@@ -1,6 +1,4 @@
-import type { NextApiRequest, NextApiResponse } from 'next',;
-import { getSessionFromReq, isInternalAgentRequest } from '@/utils/adminAuth';
-pr-12243
+
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { getSessionFromReq, isInternalAgentRequest } from '@/utils/adminAuth'
 ;
@@ -37,11 +35,14 @@ export default function handler(req, res) {
 };
 import { getSessionFromReq, isInternalAgentRequest } from '../../utils/auth';
 
+
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'GET') {
     return res.status(405).json({ error: 'Method not allowed' });
   }
+
   res.status(200).json({ message: 'OK' });
 
 }
-origin/cursor/automate-test-improve-and-merge-code-2533
+
+

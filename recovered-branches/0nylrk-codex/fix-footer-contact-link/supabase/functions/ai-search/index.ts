@@ -1,5 +1,5 @@
 
-import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server && server.ts",
+
 import {Configuration, OpenAIApi} from "npm: openai@4 ;
 
 const corsHeaders = {
@@ -319,3 +319,4 @@ serve(async (req) => {;"
       JSON.stringify({ error: error.message }),;"
 "`;
 pr-12325
+

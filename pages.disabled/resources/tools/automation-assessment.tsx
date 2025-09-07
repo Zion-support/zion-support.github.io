@@ -1,8 +1,8 @@
 
-
 import React, { useState } from 'react',;
 import Head from 'next/head',;
 import Link from 'next/link',;
+
 export default function ToolPage() {
   const [currentQuestion, setCurrentQuestion] = useState(0),
   const [answers, setAnswers] = useState<{ [key: string]: number }>({}),
@@ -438,7 +438,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
             <div className=&quot;bg-gradient-to-r from-cyan-500/10 to-fuchsia-500/10 rounded-2xl p-8 border border-cyan-500/20&quot;>
               <h2 className=&quot;text-2xl font-bold mb-6 text-white&quot;>{currentQ.question}</h2>
-              
               <div className=&quot;space-y-4 mb-8&quot;>
                 {currentQ.options.map((option, index) => (
                   <label key={index} className=&quot;flex items-center p-4 bg-white/10 rounded-lg border border-white/20 hover:border-cyan-400/50 transition-all duration-300 cursor-pointer&quot;>

@@ -1,5 +1,4 @@
 
-
           <nav className="mb-8">
             <Link href="/" className="text-white/60 hover:text-white transition-colors">
               Home
@@ -113,6 +112,7 @@ function CaseStudyPage() {
 import React from 'react',;
 import Head from 'next/head';
 import Link from 'next/link';
+
         <meta name;
             </p>
           </header>
@@ -1090,7 +1090,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </div>;
     </>);
       </Head>
-      
       <div className=&quot;min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900&quot;>
         <main className=&quot;container mx-auto px-6 py-12&quot;>
           {/* Breadcrumb */}

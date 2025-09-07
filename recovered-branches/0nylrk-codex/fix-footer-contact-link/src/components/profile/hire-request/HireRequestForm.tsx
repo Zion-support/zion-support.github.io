@@ -1,48 +1,4 @@
-import React from "react";
-import {useHireRequestForm, FormValues} from "./useHireRequestForm";
-import {Button} from "@/components/ui/button";
-import {DialogFooter} from "@/components/ui/dialog";
-import {Form} from "@/components/ui/form";
-import {Loader2} from "lucide-react";
-import {TalentProfile} from "@/types/talent";
-import {PersonalInfoFields} from "./PersonalInfoFields";
-import {ProjectDetailsField} from "./ProjectDetailsField";
-import {TimelineField} from "./TimelineField";
-import {BudgetFields} from "./BudgetFields";
-export interface HireRequestFormProps {;
-  talent: TalentProfile,;
-  onClose: () => void,;
 
-  initialJobTitle?: string;
-  userDetails?: {;
-    name?: string;
-    email?: string;
-
-export interface HireRequestFormProps {
-  talent: TalentProfile,
-  onClose: () => void,;
-  initialJobTitle?: string;
-import React from "react",
-import { useHireRequestForm, FormValues } from "./useHireRequestForm",
-import { Button } from "@/components/ui/button",
-import { DialogFooter } from "@/components/ui/dialog",
-import { Form } from "@/components/ui/form",
-import { Loader2 } from "lucide-react",
-import { TalentProfile } from "@/types/talent",
-import { PersonalInfoFields } from "./PersonalInfoFields",
-import { ProjectDetailsField } from "./ProjectDetailsField",
-import React from "react",;
-import { useHireRequestForm, FormValues } from "./useHireRequestForm",;
-import { Button } from "@/components/ui/button",;
-import { DialogFooter } from "@/components/ui/dialog",;
-import { Form } from "@/components/ui/form",;
-import { Loader2 } from "lucide-react",;
-import { TalentProfile } from "@/types/talent",;
-import { PersonalInfoFields } from "./PersonalInfoFields",;
-import { ProjectDetailsField } from "./ProjectDetailsField",;
-import { TimelineField } from "./TimelineField";
-import { BudgetFields } from "./BudgetFields";
-export interface HireRequestFormProps {
 
   talent: TalentProfile
   onClose: () => void
@@ -93,7 +49,6 @@ export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails,
     initialJobTitle,
     userDetails 
   }),
-  
     initialJobTitle;
   initialJobTitle?: string;  onSubmitSuccess?: () => void
 }
@@ -104,6 +59,7 @@ export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails,
   });    initialJobTitle;
     userDetails
   });
+
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
@@ -244,7 +200,6 @@ export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails,
             disabled={isSubmitting}
           >
 
-          
 
             type="submit"""
             className="bg-zion-purple hover:bg-zion-purple-dark text-white""
@@ -521,13 +476,10 @@ return (<Form {
 }/> </div> <DialogFooter className="pt-4" > <Button > Cancel  <Button > {"
   isSubmitting ? (<> <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Submitting... </>) : ('Submit Request')
 }  </form> ) 
-          
-        
       </form>
     </Form>
   )
 }
-    
 pr-12325
     </Form>'
 

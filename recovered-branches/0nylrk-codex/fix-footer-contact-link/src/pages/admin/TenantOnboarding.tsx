@@ -1,121 +1,6 @@
 const [formData, setFormData] = useState({
 
-  const [formData, setFormData] = useState({
 
-    brand_name: ""
-    subdomain: ""
-    logo_url: ""
-    primary_color: "#9b87f5"
-    theme_preset: "light"
-    company_size: ""
-    industry: ""
-    custom_domain: ""
-    is_co_branded: true
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-
-import React, { useState } from "react";
-import {Header} from "@/components/Header";
-import {Footer} from "@/components/Footer";
-import {SEO} from "@/components/SEO";
-import {useAuth} from "@/hooks/useAuth";
-import {Navigate} from "react-router-dom";
-import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
-import {Input} from "@/components/ui/input";
-import {Label} from "@/components/ui/label";
-import {Button} from "@/components/ui/button";
-import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
-import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
-import {toast} from "sonner";
-import {supabase} from "@/integrations/supabase/client";
-import {Switch} from "@/components/ui/switch";
-export default function TenantOnboarding() {;
-  const { user } = useAuth();
-  const [activeTab, setActiveTab] = useState("company");
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [formData, setFormData] = useState({;
-    brand_name: "",;
-    subdomain: "",;
-    logo_url: "",;
-    primary_color: "#9b87f5",;
-    theme_preset: "light",;
-    company_size: "",;
-    industry: "",;
-    custom_domain: "",;
-    is_co_branded: true;
-  });
-
-  // Check if user has admin role;
-  const isAdmin = user?.role === "admin";
-
-  if (!isAdmin) {;
-    return <Navigate to="/unauthorized" />;
-  }
-
-  const handleInputChange = (e: React && React.ChangeEvent<HTMLInputElement>) => {;
-    const { name, value } = e && e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
-  };
-
-  const handleSelectChange = (name: string, value: string) => {;
-    setFormData(prev => ({ ...prev, [name]: value }));
-  };
-
-  const handleSwitchChange = (name: string, checked: boolean) => {;
-    setFormData(prev => ({ ...prev, [name]: checked }));
-  };
-
-  const handleSubmit = async (e: React && React.FormEvent) => {;
-    e && e.preventDefault();
-    setIsSubmitting(true),;
-
-    try {;
-      // Generate subdomain if not provided;
-      const subdomain = formData && formData.subdomain || formData && formData.brand_name.toLowerCase().replace(/[^a-z0-9]/g, '');
-
-      // Create landing page copy;
-      const landingPageCopy = {;
-        headline: "AI Hiring Assistant",;
-        subtitle: `Find the best talent for your ${formData && formData.industry || "company"}`,;
-        cta: "Get Started";
-      };
-
-import React, { useState } from "react",;
-import { Header } from "@/components/Header",;
-import { Footer } from "@/components/Footer",;
-import { SEO } from "@/components/SEO",;
-import { useAuth } from "@/hooks/useAuth",;
-import { Navigate } from "react-router-dom",;
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
-import { Input } from "@/components/ui/input",;
-import { Label } from "@/components/ui/label",;
-import { Button } from "@/components/ui/button",;
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",;
-import { toast } from "sonner",;
-import { supabase } from "@/integrations/supabase/client";
-import { Switch } from "@/components/ui/switch";
 export default function TenantOnboarding() {
   const { user } = useAuth();
   const [activeTab, setActiveTab] = useState("company");
@@ -262,140 +147,7 @@ export default function TenantOnboarding() {
     is_co_branded: true
   });
 
-  // Check if user has admin role;
-  const isAdmin = user?.role === "admin";
-  }),
-  
-  // Check if user has admin role
-  const isAdmin = user?.role === "admin",
 
-
-  if (!isAdmin) {
-    return <Navigate to="/unauthorized" />
-  }
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target,
-    setFormData(prev => ({ ...prev, [name]: value }))
-
-}
-  const handleSelectChange = (name: string, value: string) => {
-    setFormData(prev => ({ ...prev, [name]: value }))
-  }
-  const handleSwitchChange = (name: string, checked: boolean) => {
-    setFormData(prev => ({ ...prev, [name]: checked }))
-  }
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true)
-    try {
-      // Generate subdomain if not provided
-      const subdomain = formData.subdomain |formData.brand_name.toLowerCase().replace(/[^a-z0-9]/g, '');
-  },
-  
-  const handleSelectChange = (name: string, value: string) => {
-    setFormData(prev => ({ ...prev, [name]: value }))
-  },
-  
-  const handleSwitchChange = (name: string, checked: boolean) => {
-    setFormData(prev => ({ ...prev, [name]: checked }))
-  },
-  
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault(),
-    setIsSubmitting(true),
-    
-    try {
-      // Generate subdomain if not provided
-      const subdomain = formData.subdomain || formData.brand_name.toLowerCase().replace(/[^a-z0-9]/g, ''),
-
-
-      // Create landing page copy
-      const landingPageCopy = {
-        headline: "AI Hiring Assistant"
-        subtitle: `Find the best talent for your ${formData.industry |"company"}`
-        cta: "Get Started"
-
-      },
-
-},
-
-      }
-      },
-      // Submit to Supabase
-  
-  // Check if user has admin role
-  const isAdmin = user?.role === "admin",
-  
-  if (!isAdmin) {
-    return <Navigate to="/unauthorized" />
-  }
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {      // Submit to Supabase
-      const { data, error } = await supabase
-        .from('whitelabel_tenants')
-        .insert({
-          brand_name: formData.brand_name
-          subdomain: subdomain
-          custom_domain: formData.custom_domain |null
-          primary_color: formData.primary_color
-          logo_url: formData.logo_url |null
-          theme_preset: formData.theme_preset
-          landing_page_copy: landingPageCopy
-          is_active: true
-          account_manager_id: user.id
-          dns_verified: false
-          email_template_override: null
-        })
-        .select('id, brand_name, subdomain')
-
-.single();
-      if (error) throw error;
-      toast.success("Tenant created successfully!", {
-        description: `${data.brand_name} is now available at ${data.subdomain}.ziontechmarketplace.com`
-      });
-        .single(),
-      
-      if (error) throw error,
-      
-      toast.success("Tenant created successfully!", {
-        description: `${data.brand_name} is now available at ${data.subdomain}.ziontechmarketplace.com`
-      }),
-
-
-      // Reset form
-        .select('id, brand_name, subdomain')      // Reset form
-      setFormData({
-        brand_name: ""
-        subdomain: ""
-        logo_url: ""
-        primary_color: "#9b87f5"
-        theme_preset: "light"
-        company_size: ""
-        industry: ""
-        custom_domain: ""
-        is_co_branded: true
-      })
-    } catch (error: any) {
-
-      console.error("Error creating tenant:", error),
-      toast.error("Failed to create tenant", { 
-        description: error.message 
-
-console.error("Error creating tenant:", error),
-      toast.error("Failed to create tenant", { 
-        description: error.message 
-      console.error("Error creating tenant:", error);
-      toast.error("Failed to create tenant", {
-        description: error.message
-      console.error("Error creating tenant:", error),
-      toast.error("Failed to create tenant", { 
-        description: error.message
-      })
-    } catch (error: any) {      })
-    } finally {
-      setIsSubmitting(false)
-    }
-
-  },
 
   return (
 
@@ -1272,15 +1024,12 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {"
     console.error('Error caught by boundary:', error, errorInfo);'
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;'
@@ -2155,13 +1904,10 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
-  
   componentDidCatch(error, errorInfo) {"
     console.error('Error caught by boundary:', error, errorInfo);
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
@@ -2291,7 +2037,6 @@ class ErrorBoundary extends React.Component {
                         <SelectTrigger>
                           <SelectValue placeholder="Select industry" />"
 
-                        
                         <SelectContent>
                           <SelectItem value="technology">Technology""
                           <SelectItem value="healthcare">Healthcare""
@@ -2301,8 +2046,6 @@ class ErrorBoundary extends React.Component {
                           <SelectItem value="manufacturing">Manufacturing""
                           <SelectItem value="services">Professional Services""
                           <SelectItem value="other">Other"
-                        
-                      
                       <Label htmlFor="company_size">Company Size"
                         name="company_size""
                         value={formData.company_size}"
@@ -2310,15 +2053,12 @@ class ErrorBoundary extends React.Component {
 
                           <SelectValue placeholder="Select company size" />"
 
-                        
                           <SelectItem value="1-10">1-10 employees""
                           <SelectItem value="11-50">11-50 employees""
                           <SelectItem value="51-200">51-200 employees""
                           <SelectItem value="201-500">201-500 employees""
                           <SelectItem value="501-1000">501-1000 employees""
                           <SelectItem value="1000+">1000+ employees"
-                        
-                      
                   <TabsContent value="branding" className="space-y-4">"
                       <Label htmlFor="logo_url">Logo URL"
 

@@ -1,21 +1,4 @@
 
-  courseId,
-  userId = "demo-user",
-}: {;
-
-
-import React from 'react';
-
-export default function CertificatePreview({ courseId, userId;
-
-export default function CertificatePreview({
-  courseId;}
-userId = \"demo-user\"}
-}: {
-origin/cursor/automate-test-improve-and-merge-code-2533
-  courseId: string;
-  userId?: string;
-}) {;
   const url = `/api/learn/certificates/${courseId}?userId=${encodeURIComponent(userId)}`;
   return (
     <div className="border rounded p-4">

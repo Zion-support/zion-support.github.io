@@ -1,33 +1,4 @@
-};
-) ) 
-}</ul> </section> <section>) ) 
-}</ul> </section> </div>)
-export default function KnowledgeGraph({ report }: Props) {
-};
-) ) 
-}</ul> </section> <section>) ) 
-}</ul> </section> </div>) 
-export default function KnowledgeGraph({ report }: Props) {
-  if (!report) return <div>No knowledge graph yet.</div>;
 
-import fs from 'fs';
-
-
-import fs from 'fs';;
-import path from 'path';
-import type { GetStaticProps } from 'next';
-
-interface Node { id: string;, tokens: string[];}
-}
-
-interface Edge { source: string;, target: string;, weight: number;, terms: string[];}
-}
-
-interface Report { generatedAt: string;, nodes: Node[];, edges: Edge[];, topTerms: { term: string;, count: number ;}[]
-}
-
-type Props = any;
-origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <div className=\"space-y-6\" />;
 "

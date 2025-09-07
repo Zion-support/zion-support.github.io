@@ -1,5 +1,4 @@
 
-
 import React, { useState } from 'react',;
 import Head from 'next/head',;
 import { motion, AnimatePresence } from 'framer-motion',;
@@ -18,6 +17,7 @@ import { enterpriseIT2026ServicesV2 } from '../data/enterprise-it-2026-services-
 import { innovative2026AIServicesV3 } from '../data/innovative-2026-ai-services-v3',;
 import { emergingTech2026ServicesV3 } from '../data/emerging-tech-2026-services-v3',;
 import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-v3',;
+
 export default function PricingEnhanced2026Page() {
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly'),
   const [selectedPlan, setSelectedPlan] = useState<string | null>(null),
@@ -30,7 +30,6 @@ export default function PricingEnhanced2026Page() {
   },
 
   const popularServices = getPopularServices(),
-  
   // Combine all services for comprehensive pricing
   const allServices = [
     ...enhancedRealMicroSaasServices,
@@ -1136,7 +1135,6 @@ className='relative'
 
 
 
-                    
 
                     )  } catch (error) {
     console.error("Error:", error);

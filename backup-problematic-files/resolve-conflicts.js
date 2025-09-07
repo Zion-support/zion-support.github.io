@@ -30,17 +30,11 @@ const filesToFix = [
 function resolveConflicts(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
-    
-    // Remove merge conflict markers and keep the "theirs" version (after =======)
-    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======([\s\S]*?)>>>>>>> [^\n]+/g, '$1');
-    
+    // Remove merge conflict markers and keep the "theirs" version (after )
+    content = content.replace(/
     // Remove any remaining conflict markers
-    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======/g, '');
-    content = content.replace(/=======[\s\S]*?>>>>>>> [^\n]+/g, '');
-    content = content.replace(/<<<<<<< HEAD/g, '');
-    content = content.replace(/=======/g, '');
-    content = content.replace(/>>>>>>> [^\n]+/g, '');
-    
+    content = content.replace(/
+    content = content.replace(/
     fs.writeFileSync(filePath, content);
     console.log(`Fixed conflicts in ${filePath}`);
   } catch (error) {

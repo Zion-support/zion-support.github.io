@@ -29,11 +29,7 @@ export default function Blockchain({ }: BlockchainProps) {
 
 }
 
-<<<<<<<< HEAD:pages.disabled_full/services/blockchain.tsx
-
-
-
->>>>>>>> main:corrupted_backup/blockchain.tsx
+<
 
 
 

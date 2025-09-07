@@ -1,27 +1,9 @@
 
-    id: 'ai-automation-manufacturing',
-    title: 'AI-Powered Manufacturing Automation',
-import React from 'react',
-import Head from 'next / head',
-import Link from 'next / link',
-export default /**
- * CaseStudyPage - Function description
- */
-function CaseStudyPage() {
-  const case_study = {
-    id: 'ai - automation - manufacturing',
-    title: 'AI - Powered Manufacturing Automation',
-
-    company: 'Global Manufacturing Corp',
-    industry: 'Manufacturing',
-    challenge: 'Inefficient production processes, high downtime, and quality control issues',
-    solution: 'Implemented autonomous AI systems for predictive maintenance, quality control, and production optimization',
-
-  },
 
   };
 
 origin/cursor/automate-test-improve-and-merge-code-2533
+
   return (
     <>
       <Head>

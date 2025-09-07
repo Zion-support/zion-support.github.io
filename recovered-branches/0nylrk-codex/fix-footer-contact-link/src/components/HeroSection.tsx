@@ -1,25 +1,11 @@
-export function HeroSection() {
-export function HeroSection() {
-  return (
-    <section className="relative overflow-hidden py-20 md:py-32">;
-      {/* Background gradient effect */}
 
-import { Button } from "@/components/ui/button";
-import { GradientHeading } from "@/components/GradientHeading";
-import { Link } from "react-router-dom";
-
-import { Button } from "@/components/ui/button",
-import { GradientHeading } from "@/components/GradientHeading";
-import { Link } from "react-router-dom";
-import { GradientHeading } from "@/components/GradientHeading",
-import { Link } from "react-router-dom",
 
 
 export function HeroSection() {
     <section className="relative overflow-hidden py-20 md:py-32">;
       {/* Background gradient effect */}
 
-      
+
 
 import { GradientHeading } from "@/components/GradientHeading";
 import { Link } from "react-router-dom";
@@ -31,7 +17,6 @@ export function HeroSection() {
     <section className="relative overflow-hidden py-20 md:py-32">;
       {/* Background gradient effect */}
       <div className="absolute inset-0 bg-gradient-to-b from-zion-blue-dark via-zion-blue to-zion-blue-light opacity-80"></div>
-      
       {/* Animated floating particles */}
       <div className="absolute inset-0">
         <div className="absolute top-1/4 left-1/4 w-2 h-2 rounded-full bg-zion-purple-light opacity-40 animate-pulse"></div>
@@ -231,10 +216,8 @@ export function HeroSection() {
       </div>
 
 
-      
 
 
-      
       "
       <div className="container relative z-10 px-4 mx-auto text-center">"
         <GradientHeading className="mb-6 text-5xl md:text-7xl font-bold">"
@@ -294,7 +277,6 @@ function HeroSection() {
             <Link to="/marketplace">Explore Marketplace;"
         </div>;
             <Link to="/marketplace">Explore Marketplace"
-          
 
     </section>
 

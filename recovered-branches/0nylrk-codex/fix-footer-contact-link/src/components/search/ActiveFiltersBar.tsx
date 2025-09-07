@@ -8,52 +8,7 @@ import { ClickableBadge } from "@/components/ui/clickable-badge",
 import { X } from "lucide-react",
 
 
-import React from "react",;
-import { ClickableBadge } from "@/components/ui/clickable-badge";
-import { X } from "lucide-react";
-import { ClickableBadge } from "@/components/ui/clickable-badge",;
-import { X } from "lucide-react",export function ActiveFiltersBar({;
 
-
-
-import React from "react";""
-import {ClickableBadge} from "@/components/ui/clickable-badge";""
-import {X} from "lucide-react";""
-import React from "react",""
-import { ClickableBadge } from "@/components/ui/clickable-badge";""
-import { X } from "lucide-react";""
-import { ClickableBadge } from "@/components/ui/clickable-badge",""
-import { X } from "lucide-react","
-interface ActiveFiltersBarProps {
-  // TODO: Implement
-}
-
-import React from "react";
-import {ClickableBadge} from "@/components/ui/clickable-badge";
-import {X} from "lucide-react";
-  selectedProductTypes: string[],
-  selectedLocations: string[]
-  selectedAvailability: string[],
-  selectedRating: number | null;
-  searchQuery: string;,
-  onRemoveFilter: (filterType: string, value: string) => void;,
-  onRemoveRating: () => void;
-  onClearSearch: () => void;
-"
-import {X} from "lucide-react";"
-interface ActiveFiltersBarProps {;
-  selectedProductTypes: string[],;
-  selectedLocations: string[],;
-  selectedAvailability: string[],;
-  selectedRating: number | null,;
-  searchQuery: string,;
-  onRemoveFilter: (filterType: string, value: string) => void,;
-  onRemoveRating: () => void,;
-
-export function ActiveFiltersBar(): any ({;
-
-export function ActiveFiltersBar({;
-pr-12325
 
   selectedProductTypes;
   selectedLocations;
@@ -105,7 +60,6 @@ pr-12325
     !!searchQuery,
   if (!hasActiveFilters) return null,
 
-  
   return (
     <div className="flex flex-wrap gap-2 items-center mb-4">
       <span className="text-sm text-zion-slate-light">Active filters:</span>
@@ -246,14 +200,8 @@ export function ActiveFiltersBar(): any ({;
   onClearSearch
 }: ActiveFiltersBarProps) {
 
-  const hasActiveFilters = 
-    selectedProductTypes.length > 0 || 
-    selectedLocations.length > 0 || 
-    selectedAvailability.length > 0 || 
-    selectedRating !== null ||
-    !!searchQuery,
-    
-  if (!hasActiveFilters) return null,
+
+
 
   return (
     <div className="flex flex-wrap gap-2 items-center mb-4">
@@ -508,10 +456,8 @@ return (<div className="flex flex-wrap gap-2 items-center mb-4" > <span classNam
 }</div>) "
           <X className="h-3 w-3" />"
 
-        
           onClick={onRemoveRating}
 
-        
     </div>"`;
 pr-12325
         >

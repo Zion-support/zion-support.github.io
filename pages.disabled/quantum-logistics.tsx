@@ -2,56 +2,7 @@ const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/quantu
   if (!service) return null;
 
 
-  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/quantum-logistics'));
-  if (!service) return null;
 
-
-import React from 'react',;
-import Head from 'next/head',;
-import { Phone, Mail, MapPin, Check, ArrowRight, Truck, Star } from 'lucide-react',;
-import Layout from '../components/layout/Layout',;
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services',;
-import React from 'react'
-import Head from 'next/head'
-import { Phone, Mail, MapPin, Check, ArrowRight, Truck, Star } from 'lucide-react',
-import Layout from '../components/layout/Layout'
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services'
-
-import React from 'react';
-import Head from 'next/head';
-import { Phone, Mail, MapPin, Check, ArrowRight, Truck, Star } from 'lucide-react';
-import Layout from '../components/layout/Layout';
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
-export default function QuantumLogisticsPage() {
-  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/quantum-logistics'))
-  if (!service) return null
-
-import React from 'react',;
-import Head from 'next/head',;
-import { Phone, Mail, MapPin, Check, ArrowRight, Truck, Star } from 'lucide-react',;
-import Layout from '../components/layout/Layout',;
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services',;
-
-import React from 'react'
-import Head from 'next/head'
-import { Phone, Mail, MapPin, Check, ArrowRight, Truck, Star } from 'lucide-react',
-import Layout from '../components/layout/Layout'
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services'
-export default function QuantumLogisticsPage() {
-  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/quantum-logistics'))
-  if (!service) return null,
-export default function QuantumLogisticsPage() {
-  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/quantum-logistics'))
-  if (!service) return null,
-export default function QuantumLogisticsPage() {
-  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/quantum-logistics'))
-  if (!service) return null,
-export default function QuantumLogisticsPage() {
-  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/quantum-logistics'))
-  if (!service) return null,
-import { Phone, Mail, MapPin, Check, ArrowRight, Truck, Star } from 'lucide-react',;
-import Layout from '../components/layout/Layout'
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services'
 export default function QuantumLogisticsPage() {
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/quantum-logistics'))
   if (!service) return null,

@@ -23,7 +23,6 @@
   --ring: #3b82f6;
   --radius: 0.75rem;
   --shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-  
   /* Futuristic color palette */
   --neon-blue: #00d4ff;
   --neon-purple: #8b5cf6;
@@ -33,7 +32,6 @@
   --neon-cyan: #06b6d4;
   --neon-yellow: #eab308;
   --neon-red: #ef4444;
-  
   /* Gradient backgrounds */
   --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   --gradient-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
@@ -498,22 +496,16 @@ a:hover {
 }
 
 .btn-futuristic::before {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
 .btn-futuristic::before {
   content: '';
 .btn-futuristic::before {  content: '';
 
 .btn-futuristic::before {
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
 .particles-bg::before {
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
   content: '';
 .btn-futuristic::before {
   content: '';
@@ -632,7 +624,6 @@ a:hover {
   }
     display: none;  }
     display: none;  }
-  
   .cyber-grid {
     background-size: 15px 15px;
   }

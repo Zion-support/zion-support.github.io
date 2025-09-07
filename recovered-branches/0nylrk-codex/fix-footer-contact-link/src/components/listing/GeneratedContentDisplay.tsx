@@ -1,74 +1,4 @@
 
-import React from "react";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-
-import { ArrowRight } from "lucide-react";
-
-
-
-import React from "react";""
-import { Button } from "@/components/ui/button";""
-import { Badge } from "@/components/ui/badge";""
-import { ArrowRight } from "lucide-react";"
-import {;
-  Card,;
-  CardContent,;
-  CardFooter,;
-  CardHeader,;
-  CardTitle,;
-
-} from "@/components/ui/card";
-
-"
-} from "@/components/ui/card";"
-interface GeneratedContent {;
-  description: string;,
-  tags: string[];
-  suggestedPrice: {;"
-import React from './react';
-import { Button  } from '@/components / ui / button';
-import { Badge  } from '@/components / ui / badge';
-import { ArrowRight  } from './lucide-react';
-import {
-
-import React from "react",
-import { Button } from "@/components/ui/button",
-import { Badge } from "@/components/ui/badge",
-import React from "react";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { ArrowRight } from "lucide-react";
-
-import {
-  Card
-  CardContent
-  CardFooter
-  CardHeader
-  CardTitle
-  // TODO: Implement
-}
-import React from "react",""
-import { Button } from "@/components/ui/button",""
-import { Badge } from "@/components/ui/badge",""
-  // TODO: Implement
-  Card;
-  CardContent;
-  CardFooter;
-  CardHeader;
-  CardTitle;
-pr-12325
-  Card,
-  CardContent,
-  CardFooter,
-  CardHeader,
-
-  key_points: string[];
-
-CardTitle,
-    min: number;
-  CardTitle,
-} from '@/components / ui / card';
 interface GeneratedContent {
   description: string;
   tags: string[];
@@ -77,23 +7,10 @@ interface GeneratedContent {
   key_points: string[];
     min: number;
 
+
 }
 interface GeneratedContentDisplayProps {
-interface GeneratedContentDisplayProps {;
-  CardTitle,;
 
-} from "@/components/ui/card";
-
-  CardTitle,;
-} from "@/components/ui/card";
-CardTitle,;
-} from "@/components/ui/card";
-
-import React from "react",
-import { Button } from "@/components/ui/button",
-import { Badge } from "@/components/ui/badge",
-import { ArrowRight } from "lucide-react",
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 
 
 } from "@/components/ui/card";
@@ -229,7 +146,6 @@ export function GeneratedContentDisplay({ content, onApply } GeneratedContentDis
             ))}
           </div>
         </div>
-        
                 className="bg-zion-purple/20 text-zion-purple hover:bg-zion-purple/30">;                {tag}
               </Badge>;
             ))}        
@@ -358,7 +274,6 @@ function GeneratedContentDisplay() {
 <h3 className="text-sm font-medium text-zion-slate-light mb-2">Description</h3>
           <p className="text-white">{content.description}</p>
         </div>
-        
         <div>
           <h3 className="text-sm font-medium text-zion-slate-light mb-2">Tags</h3>
           <div className="flex flex-wrap gap-2">
@@ -373,14 +288,12 @@ function GeneratedContentDisplay() {
             ))}
           </div>
         </div>
-        
         <div>
           <h3 className="text-sm font-medium text-zion-slate-light mb-2">Suggested Price Range</h3>
           <p className="text-white">
             ${content.suggestedPrice.min.toFixed(2)} - ${content.suggestedPrice.max.toFixed(2)}
           </p>
         </div>
-        
         <div>
           <h3 className="text-sm font-medium text-zion-slate-light mb-2">Key Selling Points</h3>
           <ul className="list-disc pl-5 text-white space-y-1">
@@ -528,7 +441,6 @@ export function GeneratedContentDisplay({
         </div>
 
 
-        
 
 
           <div className="flex flex-wrap gap-2">"
@@ -550,7 +462,6 @@ export function GeneratedContentDisplay({
                 className="bg-zion-purple/20 text-zion-purple hover:bg-zion-purple/30">;"
 
 
-        
           <p className="text-white">"
 </p>
           <ul className="list-disc pl-5 text-white space-y-1">"
@@ -582,10 +493,8 @@ export function GeneratedContentDisplay({
       <CardFooter>;
           <ArrowRight className="ml-2 h-4 w-4" />"
 
-        
           <ArrowRight className="ml-2 h-4 w-4" />;"
 
-    
 
 
         <Button;

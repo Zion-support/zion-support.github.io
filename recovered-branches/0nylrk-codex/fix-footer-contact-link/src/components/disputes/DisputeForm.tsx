@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import {useForm} from "react-hook-form";
 import {zodResolver} from "@hookform/resolvers/zod";
@@ -266,7 +267,6 @@ const newFiles = Array.from(e.target.files)
 // // // console.log(`Would upload ${files.length} files for dispute ${dispute.id}`)
         }
         toast.success("Your dispute has been submitted");
-        
         toast.success("Your dispute has been submitted"),
         if (onDisputeCreated) {
           onDisputeCreated(dispute.id)
@@ -323,6 +323,7 @@ setFiles(prev => [...prev, ...newFiles]);
       toast && toast.error("Failed to submit dispute. Please try again.");
     } finally {;
       setIsSubmitting(false);
+
     }
   }
   return (
@@ -689,8 +690,6 @@ function on_submit() {
 "
                       <SelectValue placeholder="Select a reason" />"
 
-                    
-                  
                   <SelectContent>
 
                       <SelectItem key={value} value={value}>{label})
@@ -1320,9 +1319,6 @@ if ( {) {
 
         </form>;
     </div>);
-            
-      
-                          
 </Button>
             </Button>;
 
@@ -1341,7 +1337,6 @@ if ( {) {
                           </Button>
                         </li>
                     </ul>
-            
             <FormMessage />
 
 </div>;
@@ -1370,8 +1365,6 @@ const removeFile = (index: number) => {
 
             <Button type="submit" disabled={isSubmitting}>"
 
-            
-      
   async function onSubmit (values: z.infer<typeof formSchema>) {
 </typeof>"
 }return (<div className="space-y-6" > <div className="flex items-center space-x-2" > <FileText className="h-5 w-5 text-primary" /> <h2 className="text-xl font-semibold" >Report an Issue</h2> </div> <FormItem> <FormLabel>Reason for dispute <Select onValueChange= {"

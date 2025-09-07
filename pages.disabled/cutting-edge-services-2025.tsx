@@ -1,5 +1,4 @@
 
-
 import React from 'react',;
 import Head from 'next/head',;
 import Link from 'next/link',;
@@ -400,6 +399,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               >
                 <Phone className='mr-2 w-5 h-5' />
 origin/cursor/automate-test-improve-and-merge-code-2533
+
               quantum computing, enterprise IT, and innovative micro SAAS solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">

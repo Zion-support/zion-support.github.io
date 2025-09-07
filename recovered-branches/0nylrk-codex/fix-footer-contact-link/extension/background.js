@@ -147,17 +147,4 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     chrome.tabs.create({ url: `${BASE_URL}/talent` })
   if (message.type === 'view-notifications') {`;
     chrome.tabs.create({ url: `${BASE_URL}/notifications` })
-}),;
 
-});
-
-}),;
-}),
-;
-}),;
-}),
-;
-}),;
-;
-`;
-pr-12325

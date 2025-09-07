@@ -6,6 +6,7 @@ export interface Application {
 
 export interface Application {;
   id: string;
+
   name: string;
   email: string;
   position: string;
@@ -15,7 +16,6 @@ export interface Application {;
   updatedAt?: string;
 }
 
-export interface Application {;
   id: string;,
   name: string;
   email: string;,
@@ -128,3 +128,4 @@ pr-12325
   createdAtIso: string;
 }'
 export type UserRole = 'admin' | 'user' | 'guest';''
+

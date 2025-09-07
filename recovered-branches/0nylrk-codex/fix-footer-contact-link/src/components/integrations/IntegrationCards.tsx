@@ -1,79 +1,6 @@
 
 
-import React from "react";
-import {Button} from "@/components/ui/button";
-import {Card, CardContent, CardFooter, CardHeader} from "@/components/ui/card";
-import {Badge} from "@/components/ui/badge";
-import {ArrowRight, Check, ExternalLink} from "lucide-react";
 
-interface IntegrationCardProps {;
-  title: string,;
-  description: string,;
-  icon: React && React.ReactNode,;
-
-  status?: "connected" | "disconnected" | "pending";
-  href?: string;
-  onConnect?: () => void;
-}
-
-export function IntegrationCard(): any ({;
-  title;
-  description;
-  icon;
-import React from "react",
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",
-import { Badge } from "@/components/ui/badge";
-import { ArrowRight, Check, ExternalLink } from "lucide-react";
-interface IntegrationCardProps {
-
-interface IntegrationCardProps {;
-  title: string,;
-  description: string,;
-  icon: React && React.ReactNode,;
-
-  status?: "connected" | "disconnected" | "pending";
-  href?: string;
-import { Badge } from "@/components/ui/badge",
-import { ArrowRight, Check, ExternalLink } from "lucide-react",
-
-export function IntegrationCard(): any ({;
-  title;
-  description;
-  icon;
-interface IntegrationCardProps {
-  title: string,
-  description: string,
-  icon: React.ReactNode,
-  status?: "connected" | "disconnected" | "pending",
-  href?: string,
-
-  onConnect?: () => void
-}
-
-onConnect?: () => void
-}
-export function IntegrationCard({;
-import {ArrowRight, Check, ExternalLink} from "lucide-react";export function IntegrationCard({;
-  title;
-  description;
-  icon;
-  status = "disconnected";
-
-
-
-
-import React from "react";""
-import {Button} from "@/components/ui/button";""
-import {Card, CardContent, CardFooter, CardHeader} from "@/components/ui/card";""
-import {Badge} from "@/components/ui/badge";""
-import {ArrowRight, Check, ExternalLink} from "lucide-react";"
-interface IntegrationCardProps {;
-  title: string,;
-  description: string,;
-  icon: React && React.ReactNode,;
-"
-  status?: "connected" | "disconnected" | "pending";"
   href?: string;
   onConnect?: () => void;
 }
@@ -133,12 +60,7 @@ export function IntegrationCard({
   title;
   description;
   icon;
-  status;
-  title,
-  description,
-  icon,
-  status = "disconnected",
-  href,
+
 
   onConnect}: IntegrationCardProps) {
   return (
@@ -516,7 +438,6 @@ export function IntegrationCard({
               <span>Manage</span>"
               <ExternalLink className="h-3.5 w-3.5" />"
 
-            
           <Button variant="default" className="w-full" onClick={onConnect}>"
 
             <span>Connect</span>"
@@ -584,7 +505,6 @@ export function IntegrationCard({
 }</div>) "
             <ArrowRight className="ml-1.5 h-3.5 w-3.5" />;"
 
-      
     <div className="grid md:grid-cols-3 gap-6">"
 pr-12325
 </div>

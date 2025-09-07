@@ -1,5 +1,4 @@
 
-
 import React from 'react',;
 import Head from 'next/head',;
 import Link from 'next/link',;
@@ -383,6 +382,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   className='inline-flex items-center px-8 py-4 border-2 border-purple-500 text-purple-400 font-semibold rounded-full hover:bg-purple-500 hover:text-white transition-all duration-300'
                 >
 origin/cursor/automate-test-improve-and-merge-code-2533
+
                 emerging tech breakthroughs, and practical business solutions that will transform your business.
               </p>
               <div className="flex flex-wrap justify-center gap-4">

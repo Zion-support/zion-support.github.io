@@ -1,151 +1,10 @@
-import { useState, useEffect } from 'react';
-import { Button } from '@/components/ui/button';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import Link from 'next/link';
-import { SEO } from '@/components/SEO';
-import {;
-  BriefcaseIcon,;
-  UserIcon,;
-  MessageSquare,;
-  Star,;
-  PlusCircle,;
-  FileText,;
-  Inbox,;
-  Video,;
-} from 'lucide-react';
-import { ProtectedRoute } from '@/components/ProtectedRoute';
-import { SuggestedJobs } from '@/components/jobs/SuggestedJobs';
-import { useAuth } from '@/hooks/useAuth';
-import {;
-  Card,;
-  CardContent,;
-  CardDescription,;
-  CardHeader,;
-  CardTitle,;
-} from '@/components/ui/card';
-import { Avatar } from '@/components/ui/avatar';
-import { Badge } from '@/components/ui/badge';
-import { TalentOnboardingSteps } from '@/components/onboarding/TalentOnboardingSteps';
-import { AdvancedOnboardingSteps } from '@/components/onboarding/AdvancedOnboardingSteps';
-import { useOnboardingStatus } from '@/hooks/useOnboardingStatus';
-import { MyApplications } from '@/components/jobs/MyApplications';
-import { ProjectOfferBanner } from '@/components/projects/ProjectOfferBanner';
-import { UpcomingInterviewsCard } from '@/components/interviews/UpcomingInterviewsCard';
-function TalentDashboardContent() {;
-  const { user } = useAuth();
-  const [activeTab, setActiveTab] = useState('job-matches');
-  const onboardingStatus = useOnboardingStatus();
-  const showAdvanced =;
-    onboardingStatus && onboardingStatus.profileCompleted &&;
-    onboardingStatus && onboardingStatus.skillsAdded &&;
-    onboardingStatus && onboardingStatus.availabilitySet &&;
-    onboardingStatus && onboardingStatus.matchReceived;
-  return (
-    <>;
-      <SEO
-        title='Talent Dashboard | Zion AI Marketplace''
-        description='Your personalized talent dashboard with job matches and professional opportunities.''
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">"
-          <div>
-            <Card className="mb-8">"
-              <CardHeader className="pb-2">"
-                <div className="flex items-center justify-between">"
-                  <div className="flex items-center gap-3">"
-                    <Avatar className="h-12 w-12 border">"
-                      {user?.avatarUrl ? (
-                        <img src={user.avatarUrl} alt={user.displayName || "User"} loading="lazy" />"
-                      ) : (
-                        <div className="flex h-full w-full items-center justify-center bg-muted text-lg font-medium uppercase">"
-                          {user?.displayName?.charAt(0) || "U"}"
 
-import { useState, useEffect } from "react",
-import { Button } from "@/components/ui/button",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import Link from "next/link",
-import { SEO } from "@/components/SEO",
-import { BriefcaseIcon, UserIcon, MessageSquare, Star, PlusCircle, FileText, Inbox, Video } from 'lucide-react'
-import { ProtectedRoute } from "@/components/ProtectedRoute",
-import { SuggestedJobs } from "@/components/jobs/SuggestedJobs",
-import { useAuth } from "@/hooks/useAuth",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { Avatar } from "@/components/ui/avatar",
-import { Badge } from "@/components/ui/badge",
-import { TalentOnboardingSteps } from "@/components/onboarding/TalentOnboardingSteps",
-import { AdvancedOnboardingSteps } from "@/components/onboarding/AdvancedOnboardingSteps",
-import { useOnboardingStatus } from "@/hooks/useOnboardingStatus",
-import { MyApplications } from "@/components/jobs/MyApplications",
-import { ProjectOfferBanner } from "@/components/projects/ProjectOfferBanner",
-import { UpcomingInterviewsCard } from "@/components/interviews/UpcomingInterviewsCard",
-  const [activeTab, setActiveTab] = useState("job-matches");
-  const onboardingStatus = null;
-origin/cursor/automate-test-improve-and-merge-code-2533
 
 function TalentDashboardContent() {
   const { user } = useAuth();
   const [activeTab, setActiveTab] = useState("job-matches");
   const onboardingStatus = null;
-import { useState, useEffect } from "react",;
-import { Button } from "@/components/ui/button",;
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
-import Link from "next/link",;
-import { SEO } from "@/components/SEO",;
-import { BriefcaseIcon, UserIcon, MessageSquare, Star, PlusCircle, FileText, Inbox, Video } from 'lucide-react'
-import { ProtectedRoute } from "@/components/ProtectedRoute",;
-import { SuggestedJobs } from "@/components/jobs/SuggestedJobs",;
-import { useAuth } from "@/hooks/useAuth",;
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
-import { Avatar } from "@/components/ui/avatar",;
-import { Badge } from "@/components/ui/badge",;
-import { TalentOnboardingSteps } from "@/components/onboarding/TalentOnboardingSteps",;
-import { AdvancedOnboardingSteps } from "@/components/onboarding/AdvancedOnboardingSteps",;
-import { useOnboardingStatus } from "@/hooks/useOnboardingStatus",;
-import { MyApplications } from "@/components/jobs/MyApplications",;
-import { ProjectOfferBanner } from "@/components/projects/ProjectOfferBanner",;
-import { UpcomingInterviewsCard } from "@/components/interviews/UpcomingInterviewsCard",;
-import { ProjectOfferBanner } from "@/components/projects/ProjectOfferBanner";
-import { UpcomingInterviewsCard } from "@/components/interviews/UpcomingInterviewsCard";
-import { useState, useEffect } from 'react'
-import { Button } from '@/components/ui/button'
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
-import Link from 'next/link'
-import { SEO } from '@/components/SEO'
-import {
-  BriefcaseIcon
-  UserIcon
-  MessageSquare
-  Star
-  PlusCircle
-  FileText
-  Inbox
-  Video
-} from 'lucide-react'
-import { ProtectedRoute } from '@/components/ProtectedRoute'
-import { SuggestedJobs } from '@/components/jobs/SuggestedJobs'
-import { useAuth } from '@/hooks/useAuth'
-  Card
-  CardContent
-  CardDescription
-  CardHeader
-  CardTitle
-} from '@/components/ui/card'
-import { Avatar } from '@/components/ui/avatar'
-import { Badge } from '@/components/ui/badge'
-import { TalentOnboardingSteps } from '@/components/onboarding/TalentOnboardingSteps'
-import { AdvancedOnboardingSteps } from '@/components/onboarding/AdvancedOnboardingSteps'
-import { useOnboardingStatus } from '@/hooks/useOnboardingStatus'
-import { MyApplications } from '@/components/jobs/MyApplications'
-import { ProjectOfferBanner } from '@/components/projects/ProjectOfferBanner'
-import { UpcomingInterviewsCard } from '@/components/interviews/UpcomingInterviewsCard'
-origin/cursor/automate-test-improve-and-merge-code-2533
-function TalentDashboardContent() {
-  const { user } = useAuth(),
-  const [activeTab, setActiveTab] = useState("job-matches"),
-  const onboardingStatus = useOnboardingStatus(),
-  const showAdvanced =
-    onboardingStatus.profileCompleted &&
-    onboardingStatus.skillsAdded &&
-    onboardingStatus.availabilitySet &&
-    onboardingStatus.matchReceived,
+
 
   return (
     <>
@@ -250,7 +109,6 @@ function TalentDashboardContent() {
                     <span className="text-xs text-muted-foreground">Projects</span>
                   </div>
                 </div>
-                
                 <div className="mt-4">
                   <Button className="w-full" asChild>
                     <Link href="/messages">
@@ -291,7 +149,6 @@ function TalentDashboardContent() {
             <TalentOnboardingSteps />
             {showAdvanced && (
               <div className="mt-6">"
-            
             {/* New Onboarding Progress Tracker */}
             <TalentOnboardingSteps />
             {showAdvanced && (
@@ -555,7 +412,6 @@ function TalentDashboardContent() {
             <div className="mt-8">
               <UpcomingInterviewsCard />
             </div>
-            
             <Card className="mt-8">
               <CardHeader>
                 <CardTitle className="text-lg">Quick Stats</CardTitle>
@@ -625,7 +481,6 @@ function TalentDashboardContent() {
                   <Button variant="outline" asChild>"
                     <Link href="/dashboard/talent/applications" />"
                       <Inbox className="h-4 w-4 mr-2" /> View Full Application Tracker"
-          
           <div className="lg:col-span-2">
             <Tabs defaultValue="job-matches" onValueChange={setActiveTab}>
               <TabsList className="mb-6">
@@ -636,11 +491,9 @@ function TalentDashboardContent() {
                 <TabsTrigger value="applications">My Applications</TabsTrigger>
                 <TabsTrigger value="saved">Saved Jobs</TabsTrigger>
               </TabsList>
-              
               <TabsContent value="job-matches" className="mt-0">
                 <SuggestedJobs />
               </TabsContent>
-              
               <TabsContent value="applications" className="mt-0">
                 <MyApplications />
                 <div className="mt-4 flex justify-center">
@@ -674,7 +527,6 @@ function TalentDashboardContent() {
                     </p>
                     <Button className="mt-4" asChild>"
                       <Link href="/jobs" />Browse Jobs</Link>"
-              
               <TabsContent value="saved" className="mt-0">
                 <Card className="bg-muted/30">
                   <CardContent className="pt-6 text-center">

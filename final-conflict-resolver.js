@@ -7,27 +7,13 @@ console.log('🚀 Final comprehensive merge conflict resolution...');
 function cleanFile(filePath) {
     try {
         let content = fs.readFileSync(filePath, 'utf8');
-        
-        if (!content.includes('<<<<<<< HEAD')) {
-            return false;
-        }
-        
-        console.log(`Cleaning: ${filePath}`);
-        
-        // Create backup
-        fs.writeFileSync(`${filePath}.backup`, content);
-        
-        // Remove all conflict markers
-        content = content.replace(/<<<<<<< HEAD\n([\s\S]*?)\n=======\n([\s\S]*?)\n>>>>>>> [^\n]+\n?/g, '$1');
+        if (!content.includes('
         content = content.replace(/<<<<<<< [^\n]+\n?/g, '');
-        content = content.replace(/=======\n?/g, '');
-        content = content.replace(/>>>>>>> [^\n]+\n?/g, '');
-        
+        content = content.replace(/
         // Clean up duplicate lines
         const lines = content.split('\n');
         const seen = new Set();
         const cleaned = [];
-        
         for (const line of lines) {
             const trimmed = line.trim();
             if (trimmed && !seen.has(trimmed)) {
@@ -37,15 +23,11 @@ function cleanFile(filePath) {
                 cleaned.push(line);
             }
         }
-        
         content = cleaned.join('\n');
-        
         // Remove excessive empty lines
         content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
-        
         fs.writeFileSync(filePath, content);
         return true;
-        
     } catch (error) {
         console.error(`Error cleaning ${filePath}:`, error.message);
         return false;
@@ -55,15 +37,12 @@ function cleanFile(filePath) {
 // Find all files with conflicts
 function findConflicts(dir) {
     const conflicts = [];
-    
     function scan(currentDir) {
         try {
             const items = fs.readdirSync(currentDir);
-            
             for (const item of items) {
                 const itemPath = path.join(currentDir, item);
                 const stat = fs.statSync(itemPath);
-                
                 if (stat.isDirectory()) {
                     if (!['node_modules', '.git', 'dist', 'build', '.next', 'temp_exclude', 'backup-problematic-files'].includes(item)) {
                         scan(itemPath);
@@ -71,7 +50,7 @@ function findConflicts(dir) {
                 } else if (stat.isFile()) {
                     try {
                         const content = fs.readFileSync(itemPath, 'utf8');
-                        if (content.includes('<<<<<<< HEAD')) {
+                        if (content.includes('')) {
                             conflicts.push(itemPath);
                         }
                     } catch (error) {
@@ -83,7 +62,6 @@ function findConflicts(dir) {
             // Skip directories that can't be read
         }
     }
-    
     scan(dir);
     return conflicts;
 }

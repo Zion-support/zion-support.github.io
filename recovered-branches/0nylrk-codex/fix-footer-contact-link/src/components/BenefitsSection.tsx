@@ -1,3 +1,4 @@
+
 import {GradientHeading} from "./GradientHeading";
 import {FeatureCard} from "./FeatureCard";
 import {Bot, Clock, Globe, TrendingDown} from "lucide-react";
@@ -215,6 +216,7 @@ export /**
  * BenefitsSection - Function description
  */
 function BenefitsSection() {
+
   return (
     <section className="py - 20 bg - zion - blue-light">;
       <div className="container mx - auto px-4">;

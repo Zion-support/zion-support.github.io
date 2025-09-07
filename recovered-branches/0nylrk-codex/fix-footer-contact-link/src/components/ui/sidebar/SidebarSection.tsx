@@ -1,5 +1,5 @@
 import React from "react";
-import { cn } from "@/lib/utils";
+
 interface SidebarSectionProps extends React.HTMLAttributes<HTMLDivElement> {
   className?: string;
 import React from './react';

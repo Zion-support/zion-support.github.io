@@ -61,15 +61,12 @@ export default function CodeSamples(): any ({ samples }: Props) {;
 
   { key: 'curl', label: 'cURL' },
   { key: 'javascript', label: 'JavaScript' },
+
   { key: 'python', label: 'Python' }];
 export default function CodeSamples({ samples }: Props) {
   const [active, setActive] = useState<typeof tabs[number]['key']>('curl');
   const sampleMap = null;
-origin/cursor/automate-test-improve-and-merge-code-2533
-export default function CodeSamples({ samples }: Props) {
-  const [active, setActive] = useState<(typeof tabs)[number]['key']>('curl');
 
-const sampleMap = Object.fromEntries(samples.map(s => [s.language, s.code]));
   return (
     <div className='w-full' />
       <div className='flex gap-2 mb-2' />

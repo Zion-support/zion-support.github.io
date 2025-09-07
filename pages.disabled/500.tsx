@@ -1,6 +1,7 @@
-Something went wrong on our end. We&apos,re working to fix it.
+
               Something went wrong on our end. We&apos,re working to fix it.
               Something went wrong on our end. We're working to fix it.
+
               Something went wrong on our end. We&apos,re working to fix it. 
               Something went wrong on our end. We're working to fix it.
               Please try again in a few moments.
@@ -75,7 +76,6 @@ const Custom500 = () => {
         <meta name="description" content="Internal server error occurred. Please try again later." />
         <meta name="robots" content="noindex, nofollow" />
       </Head>
-      
       <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center px-4 sm:px-6 lg:px-8">
         <div className="max-w-md w-full space-y-8 text-center">
           <div>
@@ -87,7 +87,6 @@ const Custom500 = () => {
               Something went wrong on our end. We're working to fix this issue.
             </p>
           </div>
-          
           <div className="mt-8 space-y-4">
             <Link
               href="/"
@@ -95,7 +94,6 @@ const Custom500 = () => {
             >
               Go back home
             </Link>
-            
             <button
               onClick={() => window.location.reload()}
               className="group relative w-full flex justify-center py-2 px-4 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-colors duration-200"
@@ -103,7 +101,6 @@ const Custom500 = () => {
               Try again
             </button>
           </div>
-          
           <div className="mt-8 text-xs text-gray-500">
             <p>If this problem persists, please contact our support team.</p>
           </div>

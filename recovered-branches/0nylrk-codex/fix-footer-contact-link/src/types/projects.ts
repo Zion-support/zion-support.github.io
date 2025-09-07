@@ -1,5 +1,5 @@
 
-| 'completed';
+
 export type ProjectStatus =
 export type ProjectStatus = 
 export type ProjectStatus = 
@@ -74,6 +74,7 @@ export interface ProjectNote {export interface ProjectNote {
   content: string;
   created_at: string;
   created_by_profile?: {
+
   }
 }
 export type ProjectStatus =

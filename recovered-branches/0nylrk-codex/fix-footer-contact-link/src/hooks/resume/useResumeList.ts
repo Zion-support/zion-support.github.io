@@ -1,18 +1,11 @@
 
 
-pr-12325
+
 import { useState, useEffect  } from 'react';
 import { supabase  } from '@/integrations/supabase/client';
 import { Resume  } from '@/types/resume';
 import { useAuth } from '@/hooks/useAuth';
-export function useResumeList() {
-import {useState, useEffect} from 'react';
-import {supabase} from '@/integrations/supabase/client';
-import {Resume} from '@/types/resume';
-import {useAuth} from '@/hooks/useAuth';
-export function useResumeList() {;
 
-  const { user } = useAuth();
 export function useResumeList() {  const { user } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
 
@@ -151,6 +144,7 @@ const transformedResumes: Resume[] = resumeData.map(resume => ({
     is_loading;
     error;
     resumes;
+
   }
 }
 

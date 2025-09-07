@@ -78,12 +78,7 @@ export function AdminHeader() {
 
 :recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/enterprise/admin/AdminHeader.tsx
 
-export function AdminHeader() {
 
-export function AdminHeader() {;
-
-  const { user } = useAuth();
-  const { company } = useCompanyWorkspace();
   return (
 
 }
@@ -266,7 +261,6 @@ export function AdminHeader() {
 
             <Download className="h-4 w-4" />"
 
-          
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">"
         <div className="bg-card rounded-lg p-4 border border-border">"
           <div className="text-sm text-muted-foreground">Subscription Plan</div>""

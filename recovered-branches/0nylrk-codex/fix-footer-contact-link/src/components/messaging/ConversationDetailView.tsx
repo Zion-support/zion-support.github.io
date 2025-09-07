@@ -1,8 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 
 
-
-pr-12325
 import { format  } from 'date-fns';
 import { MessageSquare  } from 'lucide-react';
 import { useMessaging  } from '@/context/MessagingContext';
@@ -12,19 +10,7 @@ import { AspectRatio  } from '@/components/ui/aspect-ratio';
 import { useAuth  } from '@/hooks/useAuth';
 import { MessageBubble  } from './MessageBubble';
 import { DateDivider } from './DateDivider';
-export function ConversationDetailView() {
-import {format} from 'date-fns';
-import {MessageSquare} from 'lucide-react';
-import {useMessaging} from '@/context/MessagingContext';
-import {Button} from '@/components/ui/button';
-import {Avatar, AvatarFallback, AvatarImage} from '@/components/ui/avatar';
-import {AspectRatio} from '@/components/ui/aspect-ratio';
-import {useAuth} from '@/hooks/useAuth';
-import {MessageBubble} from './MessageBubble';
-import {DateDivider} from './DateDivider';
-export function ConversationDetailView() {;
 
-  const { user } = useAuth();
 export function ConversationDetailView() {  const { user } = useAuth();
   const {
     activeConversation;
@@ -103,16 +89,13 @@ import {DateDivider} from './DateDivider';
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
   },
-  
   const handleSendMessage = async (e: React.FormEvent) => {
     e.preventDefault(),
     if (!messageText.trim() || !activeConversation) return,
-    
     await sendMessage(activeConversation.id, messageText),
     setMessageText('')
   },
   useEffect(() => {;
-  
   if (!activeConversation) {  useEffect(() => {;
     scrollToBottom();
   }, [activeMessages]);
@@ -131,7 +114,6 @@ import {DateDivider} from './DateDivider';
 
   if (!activeConversation) {;
 if (!activeConversation) {
-  
   if (!activeConversation) {
     return (
       <div className="flex-1 flex flex-col items-center justify-center p-8">;
@@ -155,7 +137,6 @@ if (!activeConversation) {
       </div>
     )
   }
-  
 
   // Group messages by date
   const groupedMessages: { date: string, messages: any[] }[] = []
@@ -220,13 +201,11 @@ const hasContextData = activeConversation.context_data &&
     }
 
   }),
-  
   const hasContextData = activeConversation.context_data && 
     (activeConversation.context_data.title || activeConversation.context_data.description),
   return (
     <div className="flex-1 flex flex-col h-full">;
       {/* Header */}
-  
   const hasContextData = activeConversation.context_data && 
     (activeConversation.context_data.title || activeConversation.context_data.description),
 
@@ -774,6 +753,7 @@ import {DateDivider} from './DateDivider';'
 export function ConversationDetailView() {;
 
 
+
   const { user } = useAuth();
 
   const {
@@ -786,34 +766,10 @@ export function ConversationDetailView() {;
     sendMessage;
     loadMessages;
   } = useMessaging();
-  const [messageText, setMessageText] = useState();
-  const messagesEndRef = useRef<HTMLDivElement>(null);
 
-  const messagesEndRef = useRef<HTMLDivElement>(null),;
-
-      <div className="flex-1 flex flex-col items-center justify-center p-8">;"
-</div>"
-        <MessageSquare className="h-16 w-16 text-zion-purple/40 mb-4" />;"
-"
-        <h3 className="text-xl font-medium text-white mb-2">No Conversation Selected</h3>;""
-        <p className="text-zion-slate text-center max-w-md">;"
-</p>
-        </p>;
-      </div>;"
-    <div className="flex-1 flex flex-col h-full">;"
-    <div className="flex-1 flex flex-col h-full">"
-      <div className="p-4 border-b border-zion-purple/20 bg-zion-blue-dark/30">"
-        <div className="flex items-center gap-3">"
-          <Avatar className="h-10 w-10 border border-zion-purple/20">"
-
-            <AvatarImage;
-              src={activeConversation.other_user.avatar_url}
-              alt={activeConversation.other_user.name}
             />
             <AvatarFallback className="bg-zion-blue-dark text-white">"
 
-            
-          
           <div>
             <div className="font-medium text-white">"
 </div>

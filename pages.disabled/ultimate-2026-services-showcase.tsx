@@ -1,5 +1,4 @@
 
-
 import React, { useState, useMemo } from 'react',;
 import Head from 'next/head',;
 import Link from 'next/link',;
@@ -11,6 +10,7 @@ import {
 } from 'lucide-react',;
 import { ultimate2026Services } from '../data/ultimate-2026-services',;
 import { revolutionary2026Innovations } from '../data/revolutionary-2026-innovations',;
+
 export default function Ultimate2026ServicesShowcase() {
   const [searchTerm, setSearchTerm] = useState(''),
   const [selectedCategory, setSelectedCategory] = useState<string>('all'),

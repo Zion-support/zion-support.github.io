@@ -47,19 +47,7 @@ log(message) {
         "errors": {}","
       // Run all prevention checks;
 ;      results.checks.linting = await this.checkLinting();
-<<<<<<<< HEAD:automation/error-prevention-automation.js
-
-
-
-
-
-
-
-
-
-
-
->>>>>>>> main:corrupted_backup/error-prevention-automation.js
+<
 
 
 
@@ -136,19 +124,7 @@ class ErrorPreventionAutomation {
     const logMessage = `[${timestamp}] ${message}\;n;`;
     console.log(logMessage.trim(););
     fs.appendFileSync(this.logFile, logMessage)}
-<<<<<<<< HEAD:automation/error-prevention-automation.js
-
-
-
-
-
-
-
-
-
-
-
->>>>>>>> main:corrupted_backup/error-prevention-automation.js
+<
 
 
 
@@ -213,19 +189,7 @@ ursor/migrate-github-actions-to-pm2-and-clean-up-5599;
         fixes: {},
         errors: {}
      ; ;};
-<<<<<<<< HEAD:automation/error-prevention-automation.js
-
-
-
-
-
-
-
-
-
-
-
->>>>>>>> main:corrupted_backup/error-prevention-automation.js
+<
 
 
 
@@ -525,19 +489,7 @@ automation.start().catch(error => {}),
   _console.error('Failed to start error prevention "automation": ', error);',
   process.exit(1)});,
 ;
-<<<<<<<< HEAD:automation/error-prevention-automation.js
-
-
-
-
-
-
-
-
-
-
-
->>>>>>>> main:corrupted_backup/error-prevention-automation.js
+<
 
 
 
@@ -600,365 +552,7 @@ automation.start().catch(error => {}),
         timeout: 30000;)
       ;};);
       };);
-<<<<<<<< HEAD:automation/error-prevention-automation.js
-
-
-
-
-
-
-
-<:automation/error-prevention-automation.js
-
-=
-
-        "cwd": this.projectRoot,
-        "encoding": 'utf8',
-        "timeout": 30000
-        "cwd": this.projectRoot,
-        "encoding": 'utf8',
-        "timeout": 30000
-        "cwd": this.projectRoot,
-        "encoding": 'utf8',
-        "timeout": 30000
-
-
-
-
-
-        "cwd": this.projectRoot,
-        "encoding": 'utf8',
-        "timeout": 30000
-        "cwd": this.projectRoot,
-        "encoding": 'utf8',
-        "timeout": 30000
-});ursor/migrate-github-actions-to-pm2-and-clean-up-5599
-
->});ursor/migrate-github-actions-to-pm2-and-clean-up-5599
-
-      return {
-        "success": true,
-        "output": result,
-        "errors": 0,
-        "warnings": 0
-      };
-    } catch (error) {
-      const output = error.stdout || error.stderr || '';
-
-
-        "timeout": 30000;""
-});ursor/migrate-github-actions-to-pm2-and-clean-up-5599;
-  // TODO: Implement
-        "success": true,""
-        "output": result,""
-        "errors": 0,""
-        "warnings": 0;"
-    } catch (error) {"
-      const output = error.stdout || error.stderr || ;
-      const errorCount = (output.match(/error/g) || []).length;
-      const warningCount = (output.match(/warning/g) || []).length;
-  // TODO: Implement
-        "success": false,""
-        "output": output,""
-        "errors": errorCount,""
-        "warnings": warningCount,""
-        "needsFix": true;"
-  async checkTypes() {
-  // TODO: Implement
-      this.log('Checking types...');
-      const result = execSync('npm run type-check', { 
-
-
-<:automation/error-prevention-automation.js
-
-        "cwd": this.projectRoot,
-        "encoding": 'utf8',
-        "timeout": 30000
-=
->        "cwd": this.projectRoot,
-        "encoding": 'utf8',
-        "timeout": 30000
-
-
-
-
-
-        "cwd": this.projectRoot,
-        "encoding": 'utf8',
-        "timeout": 30000
-        cwd: this.projectRoot,
-        encoding: 'utf8',
-        timeout: 30000
-      ;};);
-        "cwd": this.projectRoot,
-        "encoding": 'utf8',
-        "timeout": 30000
-      };);
-<<<<<<<< HEAD:automation/error-prevention-automation.js
-
-
-
-
-
-
-
-<:automation/error-prevention-automation.js
-
-=
-
-        "cwd": this.projectRoot,
-        "encoding": 'utf8',
-        "timeout": 30000
-        "cwd": this.projectRoot,
-        "encoding": 'utf8',
-        "timeout": 30000
-        "cwd": this.projectRoot,
-        "encoding": 'utf8',
-        "timeout": 30000
-
-
-
-
-
-        "cwd": this.projectRoot,
-        "encoding": 'utf8',
-        "timeout": 30000
-        "cwd": this.projectRoot,
-        "encoding": 'utf8',
-        "timeout": 30000
-});ursor/migrate-github-actions-to-pm2-and-clean-up-5599
-
->});ursor/migrate-github-actions-to-pm2-and-clean-up-5599
-
-      return {
-        "success": true,
-        "output": result,
-        "errors": 0
-      };
-    } catch (error) {
-      const output = error.stdout || error.stderr || '';
-      const errorCount = (output.match(/error/g) || []).length;
-      return {
-        "success": false,
-        "output": output,
-        "errors": errorCount,
-        "needsFix": true
-      };
-    }
-  }
-      const result = execSync('npm run type-check', {
-
-
-
-  // TODO: Implement
-        "errors": 0;"
-  // TODO: Implement
-  async checkBuild() {
-  // TODO: Implement
-      this.log('Checking build...');
-      const result = execSync('npm run build', { 
-
-
-<:automation/error-prevention-automation.js
-
-        "cwd": this.projectRoot,
-        "encoding": 'utf8',
-        "timeout": 300000
-=
->        "cwd": this.projectRoot,
-        "encoding": 'utf8',
-        "timeout": 300000
-
-
-
-
-
-        "cwd": this.projectRoot,
-        "encoding": 'utf8',
-        "timeout": 300000
-        cwd: this.projectRoot,
-        encoding: 'utf8',
-        timeout: 300000
-      ;};);
-        "cwd": this.projectRoot,
-        "encoding": 'utf8',
-        "timeout": 300000
-      };);
-<<<<<<<< HEAD:automation/error-prevention-automation.js
-
-
-
-
-
-
-
-<:automation/error-prevention-automation.js
-
-=
-
-        "cwd": this.projectRoot,
-        "encoding": 'utf8',
-        "timeout": 300000
-        "cwd": this.projectRoot,
-        "encoding": 'utf8',
-        "timeout": 300000
-        "cwd": this.projectRoot,
-        "encoding": 'utf8',
-        "timeout": 300000
-
-
-
-
-
-        "cwd": this.projectRoot,
-        "encoding": 'utf8',
-        "timeout": 300000
-        "cwd": this.projectRoot,
-        "encoding": 'utf8',
-        "timeout": 300000
-});ursor/migrate-github-actions-to-pm2-and-clean-up-5599
-
->});ursor/migrate-github-actions-to-pm2-and-clean-up-5599
-
-      return {
-        "success": true,
-        "output": result,
-        "errors": 0
-      };
-    } catch (error) {
-      const output = error.stdout || error.stderr || '';
-      const errorCount = (output.match(/error/g) || []).length;
-      return {
-        "success": false,
-        "output": output,
-        "errors": errorCount,
-        "needsFix": true
-      };
-    }
-  }
-      const result = execSync('npm run build', {
-
-        "timeout": 300000;"
-        timeout: 300000;)
-
-
-        "timeout": 300000;""
-  // TODO: Implement
-  // TODO: Implement
-  async checkDependencies() {
-  // TODO: Implement
-      this.log('Checking dependencies...');
-      const result = execSync('npm outdated', { 
-
-
-<:automation/error-prevention-automation.js
-
-        "cwd": this.projectRoot,
-        "encoding": 'utf8',
-        "timeout": 30000
-=
->        "cwd": this.projectRoot,
-        "encoding": 'utf8',
-        "timeout": 30000
-
-      const result = execSync('npm outdated', {
-
-
-
-  // TODO: Implement
-        "outdated": 0;"
->      }} catch (error) {
-
-        "cwd": this.projectRoot,
-        "encoding": 'utf8',
-        "timeout": 30000
-        cwd: this.projectRoot,
-        encoding: 'utf8',
-        timeout: 30000
-      ;};);
-        "cwd": this.projectRoot,
-        "encoding": 'utf8',
-        "timeout": 30000
-      };);
-<<<<<<<< HEAD:automation/error-prevention-automation.js
-
-
-
-
-
-
-
-<:automation/error-prevention-automation.js
-
-=
-
-        "cwd": this.projectRoot,
-        "encoding": 'utf8',
-        "timeout": 30000
-        "cwd": this.projectRoot,
-        "encoding": 'utf8',
-        "timeout": 30000
-        "cwd": this.projectRoot,
-        "encoding": 'utf8',
-        "timeout": 30000
-
-
-
-
-
-        "cwd": this.projectRoot,
-        "encoding": 'utf8',
-        "timeout": 30000
-        "cwd": this.projectRoot,
-        "encoding": 'utf8',
-        "timeout": 30000
-});ursor/migrate-github-actions-to-pm2-and-clean-up-5599
-
->});ursor/migrate-github-actions-to-pm2-and-clean-up-5599
-
-      return {
-        "success": true,
-        "output": result,
-        "outdated": 0
-
-
-
-
-
-
-
-
-
-
-      }} catch (error) {
-
-<:automation/error-prevention-automation.js
-
-=
->      }} catch (error) {
-
-      if ( {
-      }} catch (error) {
-
-      if ( {)
-        // npm outdated returns 1 when there are outdated packages) {
-     {
-        // npm outdated returns 1 when there are outdated packages;
-        const output = error.stdout || ;';';
-        const outdatedCount = (output.match(/\n/g) || []).length -;1; // Subtract header line
-<<<<<<<< HEAD:automation/error-prevention-automation.js
-
-
-
-
-
-
-
-
-
-
-
->>>>>>>> main:corrupted_backup/error-prevention-automation.js
+<
 
 
 
@@ -1027,100 +621,7 @@ automation.start().catch(error => {}),
         "encoding": 'utf8',
         "timeout": 120000
       };);
-<<<<<<<< HEAD:automation/error-prevention-automation.js
-
-
-
-
-
-
-
-<:automation/error-prevention-automation.js
-
-=
-
-        "cwd": this.projectRoot,
-        "encoding": 'utf8',
-        "timeout": 120000
-        "cwd": this.projectRoot,
-        "encoding": 'utf8',
-        "timeout": 120000
-        "cwd": this.projectRoot,
-        "encoding": 'utf8',
-        "timeout": 120000
-
-
-
-
-
-        "cwd": this.projectRoot,
-        "encoding": 'utf8',
-        "timeout": 120000
-        "cwd": this.projectRoot,
-        "encoding": 'utf8',
-        "timeout": 120000
-});ursor/migrate-github-actions-to-pm2-and-clean-up-5599
-
->});ursor/migrate-github-actions-to-pm2-and-clean-up-5599
-
-      return {
-        "success": true,
-        "output": result,
-        "vulnerabilities": 0
-      };
-    } catch (error) {
-      const output = error.stdout || error.stderr || '';
-      const result = execSync('npm audit --audit-level=moderate', {
-
-        "timeout": 120000;"
-        timeout: 120000;)
-
-
-        "timeout": 120000;""
-  // TODO: Implement
-        "vulnerabilities": 0;"
-      const vulnerabilities = this.parseVulnerabilities(output);
-  // TODO: Implement
-        "vulnerabilities": vulnerabilities,""
-  async checkPerformance() {
-  // TODO: Implement
-      this.log('Checking performance...');
-      // Check build size;
-      const buildDir = path.join(this.projectRoot, '.next');
-      let buildSize = 0;
-      if (fs.existsSync(buildDir)) {
-        buildSize = this.getDirectorySize(buildDir);
-      }
-      // Check memory usage
-      const memoryUsage = process.memoryUsage();
-      const memoryUsagePercent = (memoryUsage.heapUsed / memoryUsage.heapTotal) * 100;
-
-
-
-
-
-
-
-
-
-
-      // Check memory usage
-
-<:automation/error-prevention-automation.js
-
-=
->      // Check memory usage
-
-      const memoryUsage = process.memoryUsage(;
-  });
-      const memoryUsagePercent = (memoryUsage.heapUsed / memoryUsage.heapTotal) * 1;0;0;
-      return {;
-<<<<<<<< HEAD:automation/error-prevention-automation.js
-
-
-
-
->>>>>>>> main:corrupted_backup/error-prevention-automation.js
+<
 
 
 
@@ -1210,19 +711,7 @@ return {ursor/migrate-github-actions-to-pm2-and-clean-up-5599;
       moderate: 0,
       low: 0
    ; ;};
-<<<<<<<< HEAD:automation/error-prevention-automation.js
-
-
-
-
-
-
-
-
-
-
-
->>>>>>>> main:corrupted_backup/error-prevention-automation.js
+<
 
 
 
@@ -1351,20 +840,7 @@ return {ursor/migrate-github-actions-to-pm2-and-clean-up-5599;
 
   async applyFixes(checks) {
     const fixes = ;{;};
-<<<<<<<< HEAD:automation/error-prevention-automation.js
-
-
-
->    return totalSize}}
-
-
-
-
-
-
-
-
->>>>>>>> main:corrupted_backup/error-prevention-automation.js
+<
 
 
 
@@ -1457,19 +933,7 @@ return {ursor/migrate-github-actions-to-pm2-and-clean-up-5599;
       nodeVersion: process.version,
       platform: process.platform
    ; ;};
-<<<<<<<< HEAD:automation/error-prevention-automation.js
-
-
-
-
-
-
-
-
-
-
-
->>>>>>>> main:corrupted_backup/error-prevention-automation.js
+<
 
 
 
@@ -1523,19 +987,7 @@ return {ursor/migrate-github-actions-to-pm2-and-clean-up-5599;
       stack: error.stack,
       projectRoot: this.projectRoot
    ; ;};
-<<<<<<<< HEAD:automation/error-prevention-automation.js
-
-
-
-
-
-
-
-
-
-
-
->>>>>>>> main:corrupted_backup/error-prevention-automation.js
+<
 
 
 

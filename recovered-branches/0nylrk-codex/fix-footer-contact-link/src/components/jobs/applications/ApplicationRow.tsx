@@ -7,72 +7,7 @@ interface ApplicationRowProps {
 
   onViewScore: (application: JobApplication) => void
 
-import {formatDistanceToNow} from "date-fns";
-import {Link} from "react-router-dom";
-import {Calendar, User, FileText, BarChart} from "lucide-react";
-import {Button} from "@/components/ui/button";
-import {Avatar} from "@/components/ui/avatar";
-import {TableRow, TableCell} from "@/components/ui/table";
-import {JobApplication, ApplicationStatus} from "@/types/jobs";
-import {StatusBadge} from "./StatusBadge";
-import {ScoreBadge} from "./ScoreBadge";
-import {ApplicationActions} from "./ApplicationActions";
-import { formatDistanceToNow } from "date-fns",
-import { Link } from "react-router-dom",
-import { Calendar, User, FileText, BarChart } from "lucide-react",
-import { Button } from "@/components/ui/button",
-import { Avatar } from "@/components/ui/avatar",
-import { TableRow, TableCell } from "@/components/ui/table",
-import { JobApplication, ApplicationStatus } from "@/types/jobs",
-import { StatusBadge } from "./StatusBadge",
-interface ApplicationRowProps {
 
-  application: JobApplication
-  processingId: string | null
-  onViewApplication: (applicationId: string) => Promise<void>
-  onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise<void>
-
-  onViewScore: (application: JobApplication) => void
-import { formatDistanceToNow } from "date-fns",
-import { Link } from "react-router-dom",
-import { Calendar, User, FileText, BarChart } from "lucide-react",
-import { Button } from "@/components/ui/button",
-import { Avatar } from "@/components/ui/avatar",
-import { TableRow, TableCell } from "@/components/ui/table",
-import { JobApplication, ApplicationStatus } from "@/types/jobs",
-import { StatusBadge } from "./StatusBadge",
-interface ApplicationRowProps {
-
-  application: JobApplication
-  processingId: string | null
-  onViewApplication: (applicationId: string) => Promise<void>
-  onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise<void>
-
-  onViewScore: (application: JobApplication) => void
-}
-import { formatDistanceToNow } from "date-fns",
-import { Link } from "react-router-dom",
-import { Calendar, User, FileText, BarChart } from "lucide-react",
-import { Button } from "@/components/ui/button",
-import { Avatar } from "@/components/ui/avatar",
-import { TableRow, TableCell } from "@/components/ui/table",
-import { JobApplication, ApplicationStatus } from "@/types/jobs",
-import { StatusBadge } from "./StatusBadge",
-interface ApplicationRowProps {
-
-  application: JobApplication
-  processingId: string | null
-  onViewApplication: (applicationId: string) => Promise<void>
-  onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise<void>
-
-  onViewScore: (application: JobApplication) => void
-}
-interface ApplicationRowProps {;
-  application: JobApplication,;
-  processingId: string | null,;
-  onViewApplication: (applicationId: string) => Promise<void>,;
-  onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise<void>,;
-  onViewScore: (application: JobApplication) => void;
 }
 
 export function ApplicationRow(): any ({;
@@ -514,22 +449,18 @@ return (
 </img>"
               <User className="h-5 w-5 text-gray-400" />"
 
-          
           <div>
             <div className="font-medium">"
 </div>
             <div className="text-xs text-muted-foreground">"
-      
 "
         <div className="flex items-center gap-1">"
           <Calendar className="h-4 w-4 text-muted-foreground" />"
 
           <span>{formatDistanceToNow(new Date(application.created_at), { addSuffix: true })}</span>
-      
 
         <StatusBadge status={application.status} />
 
-      
 
 </TableCell>
 
@@ -547,14 +478,11 @@ return (
 
           <ScoreBadge application={application} />
 
-        
-      
           <Button variant="ghost" size="sm" asChild>"
             <a href={application.resume.file_url |"#"} target="_blank" rel="noopener noreferrer">"
 </a>"
               <FileText className="h-4 w-4 mr-1" /> View;"
 
-            
           <span className="text-muted-foreground text-sm">No resume</span>"
 
       <TableCell className="text-right">"
@@ -874,7 +802,6 @@ onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise
 } <TableCell className="text-right" > <ApplicationActions application= {"
 
 }/>  ) 
-      
 pr-12325
 }/> </TableCell> <TableCell> <Button </Button>) : (<span className="text-muted-foreground text-sm" >No resume</span>)"
 </TableCell>"

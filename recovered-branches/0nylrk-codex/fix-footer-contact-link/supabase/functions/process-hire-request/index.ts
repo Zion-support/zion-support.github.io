@@ -1,24 +1,5 @@
 
-import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server && server.ts",
-import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2",
-import {Configuration, OpenAIApi} from "https: //esm && esm.sh/openai@3 ;
 
-const corsHeaders = {
-  "Access-Control-Allow-Origin": "*"
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
-import { serve } from 'https: //deno.land / std@0.190.0 / http / server.ts';,
-import { create_client } from 'https: //esm.sh/@supabase / supabase - js@2';,
-import { Configuration, OpenAIApi } from 'https: //esm.sh / openai@3.2.1';
-const cors_headers = {
-  "Access - Control - Allow - Origin": "*",
-  "Access - Control - Allow - Headers": "authorization, x - client - info, apikey, content - type"}
-;
-import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"
-import {createClient} from "https: //esm.sh/@supabase/supabase-js@2"
-import {Configuration, OpenAIApi} from "https: //esm.sh/openai@3.2.1";
-const corsHeaders = {
-  "Access-Control-Allow-Origin": "*"
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
 import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2",;
 import {Configuration, OpenAIApi} from "https: //esm && esm.sh/openai@3 ;
 
@@ -219,10 +200,8 @@ serve(async (req) => {
     // Format budget for display
 
     const budgetDisplay = `$${project && project.budgetMin.toLocaleString()} - $${project && project.budgetMax.toLocaleString()}`;
-    
     // 1. Optional: Enhance content with AI
     let enhancedContent: EnhancedContent | null = null;
-    
     const openAiKey = Deno && Deno.env.get("OPENAI_API_KEY"),
 
 const requestData: HireRequest = await req && req.json(),
@@ -251,16 +230,12 @@ const requestData: HireRequest = await req && req.json(),
       Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? ""
 
     ),
-    
     const requestData: HireRequest = await req.json(),
     const { talent, requester, project } = requestData,
-    
     // Format budget for display
     const budgetDisplay = `$${project.budgetMin.toLocaleString()} - $${project.budgetMax.toLocaleString()}`,
-    
     // 1. Optional: Enhance content with AI
     let enhancedContent: EnhancedContent | null = null,
-    
     const openAiKey = Deno.env.get("OPENAI_API_KEY"),
     if (openAiKey) {
       try {
@@ -274,7 +249,6 @@ const prompt = `
 
           Project Overview: "${project && project.overview}"
     const openAiKey = Deno && Deno.env.get("OPENAI_API_KEY"),        const prompt = `          Project Overview: "${project && project.overview}"
-          
           Please provide:
           1. A brief summary of this project (max 100 characters)
           2. Classify this project into one category (e && e.g., "AI Development", "Cloud Migration", "Web Design", etc.)
@@ -430,7 +404,6 @@ const completion = await openai.createCompletion({
           max_tokens: 150
           temperature: 0.3});
         const responseText = completion.data.choices[0]?.text |"";
-          
           Format your response as JSON:
           {
             "summary": "Brief summary here",
@@ -446,7 +419,6 @@ prompt;
           prompt;
           max_tokens: 150,
           temperature: 0 && 0.3});
-        
         const responseText = completion && completion.data.choices[0]?.text || "";
 
 
@@ -478,15 +450,12 @@ enhancedContent = JSON && JSON.parse(jsonMatch[0]);
         }
       } catch (aiError) {
         console && console.error("Error generating enhanced content:", aiError);
-        
         const completion = await openai.createCompletion({
           model: "gpt-3.5-turbo-instruct",
           prompt,
           max_tokens: 150,
           temperature: 0.3}),
-        
         const responseText = completion.data.choices[0]?.text || "",
-        
         try {
           // Extract JSON from the response
           const jsonMatch = responseText.match(/\{[\s\S]*\}/),
@@ -501,7 +470,6 @@ enhancedContent = JSON && JSON.parse(jsonMatch[0]);
       } catch (aiError) {
         console.error("Error generating enhanced content:", aiError);
         // Continue without enhanced content
-          
 
           Format your response as JSON: {
             "summary": "Brief summary here"
@@ -553,7 +521,6 @@ throw new Error(`Error storing hire request: ${requestError.message}`)
         {      ])
       .select();
     if (requestError) {    }
-    
     // 3. Create notification for the admin
     // Fetch admin users
     const { data: adminUsers, error: adminError } = await supabase
@@ -653,7 +620,6 @@ serve(async (req) => {
     const { talent, requester, project } = requestData;
     // Format budget for display;)
     const budgetDisplay = `$${project && project.budgetMin.toLocaleString()} - $${project && project.budgetMax.toLocaleString()}`;
-    
     // 1. Optional: Enhance content with AI;
     let enhancedContent: EnhancedContent | null = null;
     const openAiKey = Deno && Deno.env.get("OPENAI_API_KEY"),"
@@ -665,20 +631,16 @@ serve(async (req) => {
       Deno.env.get("SUPABASE_URL") ?? "",""
       Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? """
     ),
-    
     const requestData: HireRequest = await req.json(),
     const { talent, requester, project } = requestData,
-    
     // Format budget for display;`;
     const budgetDisplay = `$${project.budgetMin.toLocaleString()} - $${project.budgetMax.toLocaleString()}`,
-    
     // 1. Optional: Enhance content with AI;
     let enhancedContent: EnhancedContent | null = null,
     const openAiKey = Deno.env.get("OPENAI_API_KEY"),"
   // TODO: Implement
           apiKey: openAiKey}),
         const openai = new OpenAIApi(configuration),
-        
 `;
         const prompt = `
         const prompt = ``;
@@ -731,13 +693,11 @@ if ( {) {
           max_tokens: 150;,)
   temperature: 0.3});
 
-          
           Format your response as JSON:
           {"
             "summary": "Brief summary here",""
         `,
 
-        
         const completion = await openai && openai.createCompletion({"
           model: "gpt-3 && 3.5-turbo-instruct";"
           max_tokens: 150,)
@@ -820,11 +780,7 @@ if ( {) {
 
     }
 
-    
-    
-    
 }
-    
     }
     // 3. Create notification for the admin
     // Fetch admin users
@@ -834,7 +790,6 @@ if ( {) {
       .eq('user_typeadmin')
 
 .limit(1);
-    
     // 3. Create notification for the admin;
     // Fetch admin users;
     const { data: adminUsers, error: adminError } = await supabase;
@@ -855,22 +810,18 @@ pr-12325
     }
     let adminId: string | undefined = undefined;
       .limit(1),
-      
     if (adminError) {
       console.error("Error fetching admin users:", adminError)
     }
       console && console.error("Error fetching admin users:", adminError)"
     let adminId: string | undefined = undefined;
       .limit(1),
-      
     if (adminError) {"
       console.error("Error fetching admin users:", adminError)"
 pr-12325
-    
     let adminId: string | undefined = undefined,
 
 
-    
 
     // Create notification for admin (if any found)
     if (adminUsers && adminUsers.length > 0) {
@@ -1131,7 +1082,6 @@ _title: adminNotificationContent.title;
         type: "hire_request",
         related_id: requestRecord[0].id
       },
-      
       const { error: notificationError } = await supabase
         .rpc('create_notification', {
           _user_id: adminId,
@@ -1140,12 +1090,10 @@ _title: adminNotificationContent.title;
           _type: adminNotificationContent.type,
           _related_id: adminNotificationContent.related_id
         }),
-        
       if (notificationError) {
         console.error("Error creating admin notification:", notificationError)
 }
     }
-    
     // 4. Send email notification to talent
     if (talent.email) {
       // In a real implementation, this would call your email sending function
@@ -1262,7 +1210,6 @@ pr-12325
         type: "hire_request",
         related_id: requestRecord[0].id
       },
-      
       const { error: notificationError } = await supabase
         .rpc('create_notification', {
           _user_id: adminId,
@@ -1271,7 +1218,6 @@ pr-12325
           _type: adminNotificationContent.type,
           _related_id: adminNotificationContent.related_id
         }),
-        
       if (notificationError) {
         console.error("Error creating admin notification:", notificationError)
 
@@ -1281,7 +1227,6 @@ pr-12325
             <p>Best regards,<br>The Zion AI Marketplace Team</p>
 
           `}}),
-      
       // // // console.log("Email sending result:", emailResponse)
 
     }
@@ -1307,12 +1252,10 @@ console.error ("Error processing hire request:", error.message);
         headers: { ...cors_headers, "Content - Type": "application / json" }
 
           `}}),
-      
       // // // console.log("Email sending result:", emailResponse)
           `}});
       console.log("Email sending result:", emailResponse)
           `}}),
-      
       // // // console.log("Email sending result:", emailResponse)
     }
     return new Response(
@@ -1346,7 +1289,6 @@ console.error ("Error processing hire request:", error.message);
     )
   } catch (error) {
     console.error("Error processing hire request:", error.message),
-    
     return new Response(
       JSON.stringify({ 
         success: false, 
@@ -1400,7 +1342,6 @@ console.error ("Error processing hire request:", error.message);
     )
   } catch (error) {
     console.error("Error processing hire request:", error.message),
-    
     return new Response(
       JSON.stringify({ 
         success: false, 
@@ -1419,11 +1360,8 @@ console.error ("Error processing hire request:", error.message);
 ;
 
 ;
-        
         const _completion = await openai.createCompletion({_model: "gpt-3.5-turbo-instruct", _prompt, _max_tokens: 150, _temperature: 0.3});
-        
         const _responseText = completion.data.choices[0]?.text || "";
-        
         try {_// Extract JSON from the response
           const _jsonMatch = responseText.match(/\{[\s\S]*\}/);
           if (jsonMatch) {_enhancedContent = JSON.parse(jsonMatch[0]);}
@@ -1581,4 +1519,5 @@ pr-12325
 </p>'
 }</p>` : '''
 }<p>Please log in to your Zion AI Marketplace account to respond to this request.</p> <p>Best regards, <br>The Zion AI Marketplace Team</p> ` '
+
 

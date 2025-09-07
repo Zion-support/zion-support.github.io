@@ -1,16 +1,4 @@
 
-const AIAssistant: React.FC = () => {
-import React from 'react',
-import Head from 'next/head';
-
-import React from 'react',;
-import Head from 'next/head';
-
-import Button from '../components/ui/Button';
-export default function AIAssistantPage() {
-import Layout from '../components/layout/Layout';
-const AIAssistant: React.FC = () => {
-origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <Layout>;
       <Head>;

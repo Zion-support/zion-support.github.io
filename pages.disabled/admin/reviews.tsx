@@ -1,20 +1,4 @@
-import React, { useEffect, useState } from 'react',;
-import type { NextPage } from 'next',;
-import type { Review } from '../../types/reviews',;
-const ADMIN_KEY = typeof window === 'undefined' ? '' : (localStorage.getItem('ADMIN_KEY') || 'dev-admin-key'),
 
-const AdminReviewsPage: NextPage = () => {
-  const [pending, setPending] = useState<Review[]>([]),
-  const [all, setAll] = useState<Review[]>([]),
-  const [adminKey, setAdminKey] = useState(''),
-
-  async function refresh() {
-    const res = await fetch('/api/admin/debug/reviews'),
-    const data = await res.json(),
-    if (res.ok) {
-      setAll(data.reviews),
-      setPending(data.reviews.filter((r: Review) => !r.approved && !r.removed))
-    }
 import React, { useEffect, useState } from 'react';
 import type { NextPage } from 'next';
 import type { Review } from '../../types/reviews';
@@ -271,3 +255,4 @@ export default AdminReviewsPage,
 
 export default AdminReviewsPage;
 origin/cursor/automate-test-improve-and-merge-code-2533
+

@@ -1,48 +1,11 @@
-import React from "react",
+
 import { Button } from "@/components/ui/button";
 import { Eye, Info, AlertTriangle, Ban } from "lucide-react";
 interface ActionButtonsProps {
   flagId: string;
   status: string;
 
-  onAction: (
-    flagId: string
-    action: "warning" | "suspension" | "ban" | "ignore"
-  ) => void;
 
-}
-export const ActionButtons: React.FC<ActionButtonsProps> = ({
-  flagId
-  status
-  onAction
-}) => {
-import React from "react";
-import { Button } from "@/components/ui/button";
-import { Eye, Info, AlertTriangle, Ban } from "lucide-react";
-
-import React from "react",
-import { Button } from "@/components/ui/button",
-import { Eye, Info, AlertTriangle, Ban } from "lucide-react",
-import React from './react';
-import { Button  } from '@/components / ui / button';
-import { Eye, Info, AlertTriangle, Ban  } from './lucide-react';
-
-interface ActionButtonsProps {
-  flag_id: string;
-  status: string;
-interface ActionButtonsProps {
-  flagId: string,
-  status: string,
-  onAction: (flagId: string, action: 'warning' | 'suspension' | 'ban' | 'ignore') => void
-}
-
-export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, onAction }) => {
-
-  return (
-
-    <div className="flex space-x-2">
-
-  return (
 
 import React from './react';
 import { Button  } from '@/components / ui / button';
@@ -463,7 +426,6 @@ export const ActionButtons:React.FC<ActionButtonsProps> = ({ flagId, status, onA
         <Info className="h-4 w-4" />;"
 
 
-      
         title="Suspend User"""
         onClick={() => onAction(flagId, 'suspension')}
 
@@ -473,18 +435,15 @@ export const ActionButtons:React.FC<ActionButtonsProps> = ({ flagId, status, onA
         <AlertTriangle className="h-4 w-4" />;"
 
 
-      
         title="Ban User"""
         disabled={status === "actioned" || status === "ignored"}""
         onClick={() => onAction(flagId, 'ban')}
 
         <Ban className="h-4 w-4" />"
 
-      
           size="sm""
     </div>;
 
-        
 export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, onAction }) => {;
 
         title="Send Warning";""
@@ -531,10 +490,10 @@ export const ActionButtons: React.FC < ActionButtonsProps> = ({
 }> <Eye className=" h-4 w-4"/>  <Button > <Info className=" h-4 w-4"/>  <Button > <AlertTriangle className=" h-4 w-4"/>  <Button > <Ban className=" h-4 w-4" />  > Ignore )"
 
 }</div>) 
-        
 pr-12325
         </Button>
 </div>"
+
 
   );
 };

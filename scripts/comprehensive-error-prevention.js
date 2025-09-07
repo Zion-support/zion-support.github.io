@@ -58,36 +58,19 @@ const __dirname = path.dirname (__filename);
         'src.corrupted',
         'src.broken',
         'solutions.disabled',
-        'scripts.disabled',
-        'automation_backup',
-        'data_backup]
+
       ];
 
       this && this.errorCount++;`;
       this && this.log(`Error cleaning corrupted files: ${error && error.message}`, 'ERROR');
   async runLintFix() {
-  // TODO: Implement
-      this && this.log('Running lint fix...');
-      const result = execSync('npm run lint:fix', {
-        encoding: 'utf8',')
-        cwd: process && process.cwd(),
-        stdio: 'pipe
+
       });
       this && this.fixedCount++;
       this && this.log('Lint fix completed successfully.');
       this && this.log(`Lint fix failed: ${error && error.message}`, 'ERROR');
   async runBuild() {
-  // TODO: Implement
-      this && this.log('Running build...');
-      const result = execSync('npm run build', {
-      this && this.log('Build completed successfully.');
-      this && this.log(`Build failed: ${error && error.message}`, 'ERROR');
-  async checkTypeScript() {
-  // TODO: Implement
-      this && this.log('Checking TypeScript...');
-      const result = execSync('npx tsc --noEmit', {
-      this && this.log('TypeScript check passed.');
-      this && this.log(`TypeScript check failed: ${error && error.message}`, 'ERROR');
+
   async runComprehensiveCheck() {
   // TODO: Implement
       this && this.log('Starting comprehensive error prevention...');

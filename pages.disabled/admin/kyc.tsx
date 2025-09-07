@@ -1,5 +1,4 @@
 
-
 import React, { useEffect, useState } from 'react';
 import Head from 'next/head';
 import type { KycProfile } from '../../utils/kyc';
@@ -48,6 +47,7 @@ export default function AdminKycPage() {
 import React, { useEffect, useState } from 'react',;
 import Head from 'next/head',;
 import type { KycProfile } from '../../utils/kyc';
+
 export default function AdminKycPage() {
   const [queue, setQueue] = useState<KycProfile[]>([]);
   const [reason, setReason] = useState<string>('');

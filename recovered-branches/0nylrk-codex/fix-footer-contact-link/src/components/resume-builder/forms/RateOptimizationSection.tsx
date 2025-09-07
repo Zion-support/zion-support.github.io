@@ -43,32 +43,7 @@ pr-12325
   FormDescription;
   FormMessage
 } from "@/components/ui/form",
-import { Input } from "@/components/ui/input",
 
-import {Control} from "react-hook-form";
-import {FormField, FormItem, FormLabel, FormControl, FormDescription, FormMessage} from "@/components/ui/form";
-import {Input} from "@/components/ui/input";
-import {TalentRateRecommender} from "@/components/pricing/TalentRateRecommender";
-import {Card, CardContent} from "@/components/ui/card";
-
-import { TalentRateRecommender } from "@/components/pricing/TalentRateRecommender",
-import { Card, CardContent } from "@/components/ui/card",
-
-import { TalentRateRecommender } from "@/components/pricing/TalentRateRecommender",
-import { Card, CardContent } from "@/components/ui/card",
-
-import { TalentRateRecommender } from "@/components/pricing/TalentRateRecommender";
-import { Card, CardContent } from "@/components/ui/card";
-interface RateOptimizationSectionProps {
-
-  control: Control<any>
-  setValue: (name: string, value: any) => void
-  skills: string[]
-  yearsExperience: number
-
-  location?: string;
-import { TalentRateRecommender } from "@/components/pricing/TalentRateRecommender",
-import { Card, CardContent } from "@/components/ui/card",
 import { Input } from "@/components/ui/input",;
 
 interface RateOptimizationSectionProps {
@@ -502,4 +477,5 @@ return (<div className="space-y-4" > <FormField control= {"
 pr-12325
 </Card>
 }/> </CardContent> </Card> </div>) "
+
 

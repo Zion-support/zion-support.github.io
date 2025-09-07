@@ -1,7 +1,6 @@
 
 
 
-pr-12325
 import { useForm  } from 'react-hook-form';
 import { zodResolver  } from '@hookform/resolvers/zod';
 import { z  } from 'zod';
@@ -376,104 +375,7 @@ function EducationFormFields() {
       description: '',
       location: ''}}),
 import { Education } from '@/types/resume';
-import {useForm} from 'react-hook-form';
-import {zodResolver} from '@hookform/resolvers/zod';
-import {z} from 'zod';
-import {format} from 'date-fns';
-import {Loader2} from 'lucide-react';
-import {Button} from '@/components/ui/button';
-import {Textarea} from '@/components/ui/textarea';
-import {Input} from '@/components/ui/input';
-import {Checkbox} from '@/components/ui/checkbox';
-import {Alert, AlertDescription} from '@/components/ui/alert';
-import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from '@/components/ui/form';
-import {useState} from 'react';
-import {EducationFormFieldsProps} from './types';
-import {Education} from '@/types/resume';
-// Define schema for form validation;
-const educationSchema = z.object({)
-  institution: z.string().min(1, 'Institution is required');
-  degree: z.string().min(1, 'Degree is required');
-  field_of_study: z.string().optional(),
-  start_date: z.string().min(1, 'Start date is required');
-  end_date: z.string().optional(),
-  is_current: z.boolean().default(false)
-  description: z.string().optional(),
-  location: z.string().optional()})
-type EducationFormValues = z.infer<typeof educationSchema>;
-</typeof>
-  const [error, setError] = useState<string | null>(null);
-</string>
-  const form = useForm<EducationFormValues>({
 
-type EducationFormValues = z && z.infer<typeof educationSchema>;
-</typeof>)
-
-  const form = useForm<EducationFormValues>({;
-
-    <Form {...form}>;
-)
-      <form onSubmit={form && form.handleSubmit(handleSubmit)} className="space-y-4">;"
-</form>"
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;"
-</div>
-          <FormField;
-            control={form && form.control}"
-            name="institution""
-            render={({ field }) => (;
-
-              <FormItem>;
-
-                <FormLabel>Institution;
-type EducationFormValues = z.infer < typeof education_schema>;
-;
-export /**
- * EducationFormFields - Function description;
- */)
-function EducationFormFields() {
-  const [is_loading, setIsLoading] = useState (false);
-  const [error, set_error] = useState < string | null>(null);
-  const form = use_form < EducationFormValues>({)
-    resolver: zod_resolver (education_schema),
-
-    default_values: {,"
-  institution: ,
-      degree: ,
-      field_of_study: ,
-      start_date: format (new Date (), 'yyyy - MM - dd');
-      is_current: false,
-      description: ,
-      location: }}),
-pr-12325
-  institution: '',''
-      degree: '',''
-      field_of_study: '',''
-      start_date: format (new Date (), 'yyyy - MM - dd');'
-      is_current: false,'
-      description: '',''
-      location: ''}}),'
-  const handle_submit = async (data: EducationFormValues) => {
-    setIsLoading (true);
-    set_error (null),
-    try {
-  // TODO: Implement
-}
-pr-12325
-      await on_submit (data);
-    } catch (err: any) {
-      set_error (err.message || 'An error occurred');
-    } finally {
-      await on_submit (data);
-    } catch (err: any) {'
-      set_error (err.message || 'An error occurred');'
-    } finally {
-  // TODO: Implement
-}
-      setIsLoading (false);
-
-    }
-  }
-;
   return (
 
     <Form {...form}>;
@@ -1462,10 +1364,8 @@ type EducationFormValues = z.infer<typeof educationSchema>,;
                     value={field.value |}
                   />
 
-                
                 <FormMessage />
 
-              
           <div className="space-y-4">"
 
                 <FormLabel>Start Date;

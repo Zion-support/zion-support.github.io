@@ -3,15 +3,7 @@ import { ArrowRightIcon } from '@heroicons/react/24/outline';
 
 // eslint-disable-next-line react-refresh/only-export-components
 export const metadata = {
-<<<<<<< HEAD
-  title: "AI Code Reviewer | Zion Tech Group",
-  description:
-"Automated code review and quality analysis powered by AI. Improve code quality, catch bugs early, and maintain coding standards.",
 
-=======
-  title: 'Ai Code Reviewer - Zion Tech Group',
-  description: 'Advanced ai code reviewer solutions for modern businesses.',
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-c074
 };
 
 export default function ServicePage() {
@@ -114,8 +106,8 @@ Automated code review and quality analysis powered by advanced AI.
               View All Services
             </Link>
           </div>
-<<<<<<< HEAD
 
+<<<<<<< HEAD
         <div>
 <h2 className="text-2xl font-bold text-gray-900 mb-6">Pricing</h2>
           <div className="space-y-6">
@@ -257,6 +249,8 @@ Automated code review and quality analysis powered by advanced AI.
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-c074
 >>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
+=======
+>>>>>>> 96a1f382319a97880a21e7ceb65ec0821c9ac17f
         </div>
       </div>
     </div>

@@ -1,23 +1,17 @@
-import React from "react";
-import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { Download } from "lucide-react";
-import { Resume } from "@/types/resume";
-import React from 'react',
-import { Card, CardContent } from "@/components/ui/card",
-import { Badge } from "@/components/ui/badge",
+
+
 
 import React from 'react',;
 import { Card, CardContent } from "@/components/ui/card",;
 import { Badge } from "@/components/ui/badge",;
 import { Button } from "@/components/ui/button";
 import { Download  } from 'lucide-react';
+
 import { Resume } from "@/types/resume";
 interface ResumePreviewCardProps {
   resume: Resume;
   onDownload: () => void;
-  isLoading: boolean
+
 }
 export function ResumePreviewCard({
   resume
@@ -145,7 +139,6 @@ export function ResumePreviewCard({ resume, onDownload, isLoading }: ResumePrevi
         </div>
         {resume.basic_info.summary && (
           <p className="text-xs text-zion-slate line-clamp-2 mb-2">
-        
         {resume.basic_info.summary && (
           <p className="text-xs text-zion-slate line-clamp-2 mb-2">
 import React from 'react',;
@@ -224,7 +217,6 @@ export function ResumePreviewCard({ resume, onDownload, isLoading }: ResumePrevi
                 className="bg-zion-blue-dark/50 text-zion-cyan border-zion-purple/20 text-xs""
               >
 
-              
               <Badge;"
                 className="bg-zion-blue-dark/50 text-zion-slate border-zion-purple/20 text-xs""
 
@@ -257,7 +249,6 @@ function ResumePreviewCard() {
             {resume.basic_info.headline && (
               <p className="text - sm text - zion - cyan">;
                 {resume.basic_info.headline}
-              
     <Card className="mt - 3 bg - zion - blue - dark / 30 border - zion - purple / 20">;"
       <CardContent className="p - 4">;"
         <div className="flex justify - between items - start mb - 2">;"
@@ -428,8 +419,6 @@ isLoading: boolean
         </div>;"
           <p className="text - xs text - zion - slate line - clamp - 2 mb - 2">;"
           <p className="text-xs text-zion-slate line-clamp-2 mb-2">;"
-      
-    
           </p>;"
           <div className="flex flex-wrap gap-1 mt-2">;"
                 key={index}"

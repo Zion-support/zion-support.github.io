@@ -1,72 +1,4 @@
-onViewDetails, }
-  )
-}
 
-  )
-}
-
-
-
-import { use_router } from 'next / router';
-import { Button  } from '@/components / ui / button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/components / ui / card';
-import { Input  } from '@/components / ui / input';
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow  } from '@/components / ui / table';
-import { Badge  } from '@/components / ui / badge';
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger  } from '@/components / ui / dialog';
-import { Tabs, TabsContent, TabsList, TabsTrigger  } from '@/components / ui / tabs';
-import { Alert, AlertDescription, AlertTitle  } from '@/components / ui / alert';
-import { toast  } from '@/hooks / use - toast';
-import { Check, Flag, Search, Settings, X, Users } from 'lucide-react'import { supabase  } from '@/integrations / supabase / client';
-import { logErrorToProduction } from '@/utils / production_logger';
-import { EmptyState  } from '@/components / ui / empty - state';
-interface PartnerProfile {
-  id: string,
-  user_id: string,
-  name: string,
-  status: 'pending' | 'approved' | 'rejected','
-  status: 'pending' | 'approved' | 'rejected',
-  created_at: string,
-  niche: string,
-  audience_size: string,
-  social_media?: Record < string, string>;
-import { useState, useEffect } from 'react';
-import { useAuth } from '@/hooks/useAuth';
-import { useRouter } from 'next/router';
-import { Button } from '@/components/ui/button';
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,;
-} from '@/components/ui/card';
-import { Input } from '@/components/ui/input';
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,;
-} from '@/components/ui/table';
-import { Badge } from '@/components/ui/badge';
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogFooter,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,;
-} from '@/components/ui/dialog';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
-import { toast } from '@/hooks/use-toast';
-import { Check, Flag, Search, Settings, X, Users } from 'lucide-react';
-import { supabase } from '@/integrations/supabase/client';
-import { logErrorToProduction } from '@/utils/productionLogger';
-import { EmptyState } from '@/components/ui/empty-state';
 
 interface PartnerProfile {
   id: string;
@@ -77,7 +9,7 @@ interface PartnerProfile {
   niche: string;
   audience_size: string;
   social_media?: Record<string, string>,
-origin/cursor/automate-test-improve-and-merge-code-2533
+
   website?: string;
   bio?: string;
   payout_method?: string;
@@ -836,7 +768,6 @@ export default function PartnerManager() {;
 
   const filterPartners = (partners: PartnerProfile[], status: string, query: string) => {
     let filtered = partners,
-    
     // Filter by status
     if (status !== "all") {
       filtered = filtered.filter(p => p.status === status)
@@ -867,7 +798,6 @@ export default function PartnerManager() {;
         p.website?.toLowerCase().includes(lowerQuery);
       );
     }
-    
     setFilteredPartners(filtered)
   },
 
@@ -898,18 +828,15 @@ export default function PartnerManager() {;
       setPartners(partners.map(p => 
         p.id === partnerId ? { ...p, status } : p
       )),
-      
       filterPartners(
         partners.map(p => p.id === partnerId ? { ...p, status } : p),
         activeTab,
         searchQuery
       ),
-      
       toast({
         title: status === 'approved' ? "Partner Approved" : "Partner Rejected",
         description: `The partner has been ${status}.`,
         variant: status === 'approved' ? "default" : "destructive"}),
-      
       // Close the dialog if open
       if (isDetailsOpen && selectedPartner?.id === partnerId) {
         setIsDetailsOpen(false)
@@ -925,24 +852,20 @@ export default function PartnerManager() {;
 
   const handleSaveSettings = async () => {
     if (!selectedPartner) return,
-    
     try {
       // Update commission rate
       setPartners(partners.map(p => 
         p.id === selectedPartner.id ? { ...p, commission_rate: commissionRate } : p
       )),
-      
       filterPartners(
         partners.map(p => p.id === selectedPartner.id ? { ...p, commission_rate: commissionRate } : p),
         activeTab,
         searchQuery
       ),
-      
       toast({
         title: "Settings Updated",
         description: "Partner settings have been updated successfully.",
         variant: "default"}),
-      
       setIsSettingsOpen(false)
     } catch (error) {
       logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error updating partner settings' }),
@@ -1048,7 +971,6 @@ export default function PartnerManager() {;
 
   const getFraudFlagBadge = (flags: number = 0) => {
     if (flags === 0) return null,
-    
     return (
       <Badge variant="outline" className="bg-red-900/30 text-red-500 border-red-600 flex items-center gap-1">
         <Flag className="h-3 w-3" />
@@ -1163,7 +1085,6 @@ export default function PartnerManager() {;
               <TabsTrigger value="rejected">Rejected</TabsTrigger>
               <TabsTrigger value="all">All</TabsTrigger>
             </TabsList>
-            
             <TabsContent value="pending" className="space-y-4">
               <PartnerTable 
                 partners={filteredPartners} 
@@ -1175,7 +1096,6 @@ export default function PartnerManager() {;
                 getFraudFlagBadge={getFraudFlagBadge}
               />
             </TabsContent>
-            
             <TabsContent value="approved" className="space-y-4">
               <PartnerTable 
                 partners={filteredPartners} 
@@ -1187,7 +1107,6 @@ export default function PartnerManager() {;
                 getFraudFlagBadge={getFraudFlagBadge}
               />
             </TabsContent>
-            
             <TabsContent value="rejected" className="space-y-4">
               <PartnerTable 
                 partners={filteredPartners} 
@@ -1199,7 +1118,6 @@ export default function PartnerManager() {;
                 getFraudFlagBadge={getFraudFlagBadge}
               />
             </TabsContent>
-            
             <TabsContent value="all" className="space-y-4">
               <PartnerTable 
                 partners={filteredPartners} 
@@ -1223,7 +1141,6 @@ export default function PartnerManager() {;
               Review the details of the partner application
             </DialogDescription>
           </DialogHeader>
-          
           {selectedPartner && (
             <div className="space-y-4">
               <div className="grid grid-cols-2 gap-2">
@@ -1236,12 +1153,10 @@ export default function PartnerManager() {;
                   <div>{getStatusBadge(selectedPartner.status)}</div>
                 </div>
               </div>
-              
               <div>
                 <p className="text-xs text-zion-slate-light">Bio</p>
                 <p className="text-white">{selectedPartner.bio || "No bio provided"}</p>
               </div>
-              
               <div className="grid grid-cols-2 gap-2">
                 <div>
                   <p className="text-xs text-zion-slate-light">Niche</p>
@@ -1252,7 +1167,6 @@ export default function PartnerManager() {;
                   <p className="text-white">{getAudienceSizeLabel(selectedPartner.audience_size)}</p>
                 </div>
               </div>
-              
               {selectedPartner.website && (
                 <div>
                   <p className="text-xs text-zion-slate-light">Website</p>
@@ -1273,7 +1187,6 @@ export default function PartnerManager() {;
                   </div>;
                 </div>;
               )}
-              
               <div className="grid grid-cols-2 gap-2">
                 <div>
                   <p className="text-xs text-zion-slate-light">Payout Method</p>
@@ -1284,7 +1197,6 @@ export default function PartnerManager() {;
                   <p className="text-white">{selectedPartner.commission_rate || 25}%</p>
                 </div>
               </div>
-              
               {selectedPartner.fraud_flags && selectedPartner.fraud_flags > 0 && (
                 <Alert className="bg-red-900/20 border-red-900/50 text-red-500">
                   <AlertTitle className="flex items-center gap-2">
@@ -1296,7 +1208,6 @@ export default function PartnerManager() {;
                   </AlertDescription>
                 </Alert>
               )}
-              
               {selectedPartner.status === 'pending' && (
                 <div className="flex justify-end gap-2 mt-4">
                   <Button 
@@ -1328,14 +1239,12 @@ export default function PartnerManager() {;
               Configure commission rates and other settings
             </DialogDescription>
           </DialogHeader>
-          
           {selectedPartner && (
             <div className="space-y-4">
               <div>
                 <label className="text-sm font-medium text-white">Partner Name</label>
                 <p className="text-zion-slate-light">{selectedPartner.name}</p>
               </div>
-              
               <div>
                 <label className="text-sm font-medium text-white" htmlFor="commission-rate">
                   Commission Rate (%)
@@ -1352,7 +1261,6 @@ export default function PartnerManager() {;
                   Percentage of reward granted to this partner for successful referrals
                 </p>
               </div>
-              
               <DialogFooter>
                 <Button variant="outline" onClick={() => setIsSettingsOpen(false)}>
                   Cancel
@@ -1389,43 +1297,7 @@ export default function PartnerManager() {;
 }
 
 
-;
-interface PartnerTableProps {;
-  partners: PartnerProfile[],;
-  isLoading: boolean,;
-  onViewDetails: (partner: PartnerProfile) => void,;
-  onUpdateStatus: (partnerId: string, status: 'approved' | 'rejected') => void,;
-  onOpenSettings: (partner: PartnerProfile) => void,;
-  getStatusBadge: (status: string) => JSX.Element,;
-  getFraudFlagBadge: (flags?: number) => JSX.Element | null;
-}
-;
-function PartnerTable({;
-  partners,;
-  isLoading,;
-  onViewDetails,;
-  onUpdateStatus,;
-  onOpenSettings;
-  getStatusBadge;
-  getFraudFlagBadge;
-}:,  PartnerTableProps) {;
-}: PartnerTableProps) {;
-  if (isLoading) {;
-    return (;
-      <div className="text-center py-8">;
-        <p className="text-zion-slate-light">Loading partner data...</p>;
-      </div>;
-    );
-  }
-  if (partners.length === 0) {
-    return (
-      <div className="py-8">"
-        <EmptyState
-          icon={<Users className="h-8 w-8" />}"
-          title="No Partners Found""
-          description="There are no partner applications to display.""
-          className="border-none bg-transparent text-center""
-  
+
   if (partners.length === 0) {
     return (
       <div className="py-8">
@@ -1529,7 +1401,6 @@ function PartnerTable({;
                     </Button>
                   </>
                 )}
-                
                 <Button 
                   variant="ghost" 
                   size="sm"
@@ -1539,7 +1410,6 @@ function PartnerTable({;
                   <Settings className="h-4 w-4" />
                   <span className="sr-only">Settings</span>
                 </Button>
-                
                 <Button 
                   variant="outline" 
                   size="sm"
@@ -1551,9 +1421,7 @@ function PartnerTable({;
             </TableCell>;
           </TableRow>;
         ))}
-      </TableBody>;
-    </Table>;
-  );
+
 }
 ;)
 ;

@@ -39,10 +39,7 @@ interface ContractHeaderProps {
   );
 
 
-export function ContractHeader(): any ({ onCreateClick }: ContractHeaderProps) {;
-  return (  );
-}
-  )
+
 import { Button } from "@/components/ui/button";
 interface ContractHeaderProps {;
   onCreateClick: () => void;

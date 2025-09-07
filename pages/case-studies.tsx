@@ -1,232 +1,4 @@
-import React from 'react';
-import MainLayout from '../components/layout/MainLayout';
 
-const Page = () => {
-  return (
-    <MainLayout
-      title="Case Studies - Zion Tech Group"
-      description="Success stories and case studies from our clients"
-    >
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-4 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">Case Studies</h1>
-          <p className="text-xl text-gray-600">Coming soon...</p>
-        </div>
-      </div>
-    </MainLayout>
-  );
-};
-
-export default Page;
-
-
-import MainLayout from '../src/components/layout/MainLayout';
-import { motion } from 'framer-motion';
-  ArrowRight
-  Phone
-  Mail
-  MapPin
-  TrendingUp
-  CheckCircle
-  Users
-  Building
-  Globe
-  Award
-  Clock
-  BarChart3
-  Cloud
-  Shield
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
-
-import React from 'react';
-
-import React from 'react';
-
-import MainLayout from '../src/components/layout/MainLayout';
-import { motion } from 'framer-motion';
-  ArrowRight,
-  Phone,
-  Mail,
-  MapPin,
-  TrendingUp,
-  CheckCircle,
-  Users,
-  Building,
-  Globe,
-  Award,
-  Clock,
-  BarChart3,
-  Cloud,
-  Shield;
-
-} from 'lucide-react';
-const caseStudies = [
-  {
-    id: 1
-    title: "AI-Powered Customer Service Transformation"
-    client: "Global E-commerce Retailer"
-    industry: "E-commerce"
-    challenge: "High customer service costs and inconsistent response quality"
-    solution: "Implemented AI-powered chatbot and intelligent routing system"
-    results: [
-      "60% reduction in support costs"
-      "40% faster response times"
-      "95% customer satisfaction rate"
-      "$2M annual savings"
-    ]
-    duration: "3 months"
-    team: "8 experts"
-    technologies: ["AI/ML", "NLP", "Cloud", "Analytics"]
-    image: "/images/case-studies/ecommerce-ai.jpg"
-  }
-  {
-    id: 2
-    title: "Cloud Migration for Financial Services"
-    client: "Regional Bank"
-    industry: "Financial Services"
-    challenge: "Legacy systems limiting scalability and innovation"
-    solution: "Complete cloud migration with microservices architecture"
-    results: [
-      "99.9% uptime achieved"
-      "50% faster application deployment"
-      "30% reduction in infrastructure costs"
-      "Enhanced security compliance"
-    ]
-    duration: "6 months"
-    team: "12 experts"
-    technologies: ["AWS", "Kubernetes", "Microservices", "DevOps"]
-    image: "/images/case-studies/cloud-migration.jpg"
-  }
-  {
-    id: 3
-    title: "Cybersecurity Enhancement for Healthcare"
-    client: "Healthcare Network"
-    industry: "Healthcare"
-    challenge: "Increasing cyber threats and compliance requirements"
-    solution: "Comprehensive security framework and threat detection system"
-    results: [
-      "Zero security breaches"
-      "100% compliance with HIPAA"
-      "24/7 threat monitoring"
-      "50% faster incident response"
-    ]
-    duration: "4 months"
-    team: "6 experts"
-    technologies: ["Cybersecurity", "SIEM", "Compliance", "Monitoring"]
-    image: "/images/case-studies/healthcare-security.jpg"
-  }
-];
-const stats = [
-  { number: "500+", label: "Projects Completed" }
-  { number: "50+", label: "Happy Clients" }
-  { number: "99.9%", label: "Success Rate" }
-ArrowRight,
-  Phone,
-  Mail,
-  MapPin,
-  TrendingUp,
-  CheckCircle,
-  Users,
-  Building,
-  Globe,
-  Award,
-  Clock,
-  BarChart3,
-  Cloud,
-  Shield;
-} from 'lucide-react';
-const caseStudies = [;
-  {;
-    id: 1,;
-    title: "AI-Powered Customer Service Transformation",;
-    client: "Global E-commerce Retailer",;
-    industry: "E-commerce",;
-    challenge: "High customer service costs and inconsistent response quality",;
-    solution: "Implemented AI-powered chatbot and intelligent routing system",;
-    results: [;
-      "60% reduction in support costs",;
-      "40% faster response times",;
-      "95% customer satisfaction rate",;
-      "$2M annual savings";
-    ],;
-    duration: "3 months",;
-    team: "8 experts",;
-    technologies: ["AI/ML", "NLP", "Cloud", "Analytics"],;
-    image: "/images/case-studies/ecommerce-ai && ai.jpg";
-  },;
-  {;
-    id: 2,;
-    title: "Cloud Migration for Financial Services",;
-    client: "Regional Bank",;
-    industry: "Financial Services",;
-    challenge: "Legacy systems limiting scalability and innovation",;
-    solution: "Complete cloud migration with microservices architecture",;
-    results: [;
-      "99 && 99.9% uptime achieved",;
-      "50% faster application deployment",;
-      "30% reduction in infrastructure costs",;
-      "Enhanced security compliance";
-    ],;
-    duration: "6 months",;
-    team: "12 experts",;
-    technologies: ["AWS", "Kubernetes", "Microservices", "DevOps"],;
-    image: "/images/case-studies/cloud-migration && migration.jpg";
-  },;
-  {;
-    id: 3,;
-    title: "Cybersecurity Enhancement for Healthcare",;
-    client: "Healthcare Network",;
-    industry: "Healthcare",;
-    challenge: "Increasing cyber threats and compliance requirements",;
-    solution: "Comprehensive security framework and threat detection system",;
-    results: [;
-      "Zero security breaches",;
-      "100% compliance with HIPAA",;
-      "24/7 threat monitoring",;
-      "50% faster incident response";
-    ],;
-    duration: "4 months",;
-    team: "6 experts",;
-    technologies: ["Cybersecurity", "SIEM", "Compliance", "Monitoring"],;
-    image: "/images/case-studies/healthcare-security && security.jpg";
-  }
-];
-const stats = [;
-  { number: "500+", label: "Projects Completed" },;
-  { number: "50+", label: "Happy Clients" },;
-  { number: "99 && 99.9%", label: "Success Rate" },;
-  { number: "24/7", label: "Support Available" }
-];
-
-        <section className="relative bg-gradient-to-br from-green-900 via-teal-900 to-blue-900 text-white py-20 overflow-hidden">;
-          <div className="absolute inset-0">;
-            <div className="absolute top-20 left-10 w-72 h-72 bg-green-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>;
-            <div className="absolute top-40 right-10 w-72 h-72 bg-teal-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>;
-          </div>;
-
-          <div className="container mx-auto px-4 relative z-10">;
-            <motion&& motion.div
-
-import React from 'react',;
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
 export default function CaseStudiesPage() {
   return (
     <MainLayout
@@ -806,7 +578,6 @@ export default function CaseStudies() {
         <meta name="description" content="Explore our successful client projects and case studies. See how Zion Tech Group delivers results across industries." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-      
       <main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
         {/* Hero Section */}
         <section className="relative overflow-hidden bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600">
@@ -843,11 +614,7 @@ import Head from 'next/head';
 import Head from 'next/head';
   );
 
- </Head> </section> </Layout>
-export default function CaseStudiesPage() {
-import Layout from '../components/layout/Layout';
-export default function CaseStudiesPage() {
-	return (
+
 		<Layout>
 			<Head>
 				<title>Case Studies | Zion Tech Group</title>
@@ -1008,7 +775,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 Real results from real clients
               </p>
             </div>
-            
             <div className="space-y-16">
               {caseStudies.map((study, index) => (
                 <div key={index} className={`flex flex-col lg: flex-row gap-8 ${index % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}>
@@ -1030,14 +796,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </div>
                     <h3 className="text-3xl font-bold text-gray-900 mb-4">{study.title}</h3>
                     <p className="text-lg text-gray-600 mb-6 font-semibold">{study.client}</p>
-                    
                     <div className="mb-6">
                       <h4 className="text-lg font-semibold text-gray-900 mb-2">Challenge:</h4>
                       <p className="text-gray-600 mb-4">{study.challenge}</p>
                       <h4 className="text-lg font-semibold text-gray-900 mb-2">Solution:</h4>
                       <p className="text-gray-600 mb-4">{study.solution}</p>
                     </div>
-                    
                     <div className="mb-6">
                       <h4 className="text-lg font-semibold text-gray-900 mb-3">Results:</h4>
                       <ul className="space-y-2">
@@ -1049,7 +813,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         ))}
                       </ul>
                     </div>
-                    
                     <div className="flex items-center space-x-6 text-sm text-gray-500 mb-6">
                       <div className="flex items-center">
                         <Clock className="w-4 h-4 mr-1" />
@@ -1060,7 +823,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         {study.team}
                       </div>
                     </div>
-                    
                     <Link href="/contact">
                       <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover: from-blue-700 hover:to-purple-700 transition-all duration-300">
                         Start Similar Project
@@ -1085,7 +847,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 What our clients say about working with us
               </p>
             </div>
-            
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {testimonials.map((testimonial, index) => (
                 <div key={index} className="bg-white rounded-xl shadow-lg p-8">

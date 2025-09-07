@@ -1,30 +1,10 @@
-import React from "react";
-import { WorkspaceHeader } from "./WorkspaceHeader";
-import { SharedInbox } from "./SharedInbox";
-import { TeamStats } from "./TeamStats";
-import { QuickActions } from "./QuickActions";
-import { RecentActivity } from "./RecentActivity";
-import { TalentPool } from "./TalentPool";
-export interface Company {;
-  id: string;
-  name: string;
-  logoUrl?: string;
-  theme?: {
-    primaryColor: string;
-    backgroundColor: string;
-    textColor: string;
-  };
-  plan: string;
-  teamSize: number;
+
 import React from "react",
 import { WorkspaceHeader } from "./WorkspaceHeader",
 import { SharedInbox } from "./SharedInbox",
 import { TeamStats } from "./TeamStats",
 import { QuickActions } from "./QuickActions",
-import { RecentActivity } from "./RecentActivity";
-import { TalentPool } from "./TalentPool";
-import { RecentActivity } from "./RecentActivity",
-import { TalentPool } from "./TalentPool",
+
 
 
 import React from "react",;
@@ -32,6 +12,7 @@ import { WorkspaceHeader } from "./WorkspaceHeader",;
 import { SharedInbox } from "./SharedInbox",;
 import { TeamStats } from "./TeamStats",;
 import { QuickActions } from "./QuickActions",;
+
 import { RecentActivity } from "./RecentActivity";
 import { TalentPool } from "./TalentPool";
 import { RecentActivity } from "./RecentActivity",;
@@ -100,15 +81,11 @@ export interface Company {;
     primaryColor: string;
     backgroundColor: string;
 
-    textColor: string;
-  },;
-  plan: string,;
-  teamSize: number,;
 
-  teamLimit: number;
     textColor: string;  teamLimit: number;
   billingCycle: string;
   workspaceUrl: string
+
 }
 
   company: Company;
@@ -290,10 +267,8 @@ export function CompanyDashboard({ company }: CompanyDashboardProps) {
 
 
 
-      
 
 
-      
       "
       <div className="mt-8 grid grid-cols-1 lg: grid-cols-3 gap-6">"
 </div>"
@@ -309,10 +284,8 @@ export function CompanyDashboard({ company }: CompanyDashboardProps) {
 
 
 
-        
 
 
-        
         <div className="space-y-6">"
 </div>
 

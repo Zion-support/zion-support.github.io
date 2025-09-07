@@ -1,15 +1,4 @@
-import {useState} from "react";
-import {useQuery, useMutation, useQueryClient} from "@tanstack/react-query";
-import {supabase} from "@/integrations/supabase/client";
-import {useToast} from "@/hooks/use-toast";
-import {useAuth} from "@/hooks/useAuth";
-import {ContractTemplate} from "@/types/contracts";
-import {ContractFormValues} from "@/components/contracts/components/ContractForm";
-export function useContractTemplates() {;
-  const { user, isAuthenticated } = useAuth();
-  const queryClient = useQueryClient();
-  const { toast } = useToast();
-  const [isLoading, setIsLoading] = useState(false);
+
 import { useState } from "react",
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query",
 import { supabase } from "@/integrations/supabase/client",
@@ -21,37 +10,6 @@ import { ContractFormValues } from "@/components/contracts/components/ContractFo
 export function useContractTemplates() {
   const { user, isAuthenticated } = useAuth();
 
-  const queryClient = useQueryClient();
-  const { toast } = useToast();
-  const [isLoading, setIsLoading] = useState(false);
-import { ContractTemplate } from "@/types/contracts",
-import { ContractFormValues } from "@/components/contracts/components/ContractForm",
-export function useContractTemplates() {
-  const { user, isAuthenticated } = useAuth(),
-  const queryClient = useQueryClient(),
-  const { toast } = useToast(),
-  const [isLoading, setIsLoading] = useState(false),
-
-  // Fetch templates for the current user
-  const {
-    data: templates = []
-    isLoading: isLoadingTemplates
-    error: templatesError
-  } = useQuery({
-    queryKey: ['contractTemplates', user?.id];
-    queryFn: async () => {
-      if (!isAuthenticated |!user) {
-        return []
-
-    queryKey: ['contractTemplates', user?.id],
-    queryFn: async () => {
-      if (!isAuthenticated |!user) {
-        return []
-      }
-      return data as ContractTemplate[]
-    }
-    enabled: isAuthenticated && !!user
-  });
 import { useState } from "react",;
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query",;
 import { supabase } from "@/integrations/supabase/client",;
@@ -161,7 +119,6 @@ title: string;
       isDefault?: boolean
     }) => {
       if (!user) throw new Error("User not authenticated"),
-      
       setIsLoading(true),
 
 
@@ -302,7 +259,6 @@ export function useContractTemplates() {;
     }) => {
       if (!user) throw new Error("User not authenticated"),"
       setIsLoading(true),
-      
 
 
       try {
@@ -586,7 +542,6 @@ if ( {) {
       isDefault?: boolean
     }) => {
       if (!user) throw new Error("User not authenticated"),
-      
       setIsLoading(true),
 
 
@@ -716,7 +671,6 @@ if ( {) {
       templateData,
       templateId: string,
     }) => {"
-      
 
 
   // TODO: Implement
@@ -878,11 +832,9 @@ if (throw error) {
   const deleteTemplate = useMutation({
     mutationFn: async (templateId: string) => {
       if (!user) throw new Error("User not authenticated"),
-      
       setIsLoading(true),
 
 
-      
 
       try {
         const { error } = await supabase
@@ -988,7 +940,6 @@ if (throw error) {
     mutationFn: async (templateId: string) => {"
       if (!user) throw new Error("User not authenticated"),"
       setIsLoading(true),
-      
 
 
       try {
@@ -1268,7 +1219,6 @@ if (throw error) {
   const setDefaultTemplate = useMutation({
     mutationFn: async (templateId: string) => {
       if (!user) throw new Error("User not authenticated"),
-      
       setIsLoading(true),
 
 
@@ -1280,7 +1230,6 @@ if (throw error) {
 
           .eq('user_id', user.id)
 
-      
 
           .eq('is_default', true),
 
@@ -1290,7 +1239,6 @@ if (throw error) {
           .eq('user_id', user.id)
           .eq('is_default', true);
           .eq('is_default', true),
-        
         // Then set the new default
         const { error } = await supabase
           .from('contract_templates')
@@ -1502,7 +1450,6 @@ if (throw error) {
   }
 }
   }
-        
         if (error) throw error  }
 }  }
 }
@@ -1576,7 +1523,6 @@ if (throw error) {
     mutationFn: async (templateId: string) => {"
       if (!user) throw new Error("User not authenticated"),"
       setIsLoading(true),
-      
 
 
       try {
@@ -1714,6 +1660,7 @@ if (throw error) {
 
 
 
+
   }
 }
   }
@@ -1773,7 +1720,6 @@ if (throw error) {
         description: "There was an error updating your contract template.",""
 
   // Delete a template;
-      
 
 
   // TODO: Implement
@@ -1847,7 +1793,6 @@ if (throw error) {
         description: "There was an error deleting your contract template.",")"
 
   // Set a template as default;
-      
 
 
   // TODO: Implement

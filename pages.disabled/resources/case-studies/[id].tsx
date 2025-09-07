@@ -1,7 +1,4 @@
-import React from 'react',;
-import Head from 'next/head',;
-import Link from 'next/link',;
-import { useRouter } from 'next/router',;
+
 export default function CaseStudyResourcePage() {
   const router = useRouter(),
   const { id } = router.query,
@@ -19,7 +16,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <p>Global Manufacturing Corp was facing significant challenges with their traditional manufacturing processes.
         High downtime, inefficient production scheduling, and quality control issues were impacting their bottom line
         and preventing them from meeting growing customer demands.</p>
-        
         <h2>Challenge</h2>
 
         <h2>Challenge</h2>

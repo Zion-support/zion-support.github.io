@@ -29,23 +29,11 @@ interface MessageBubbleProps {;
 
 
 
-  message: Message,
-  isUserMessage: boolean
-  message: Message
-
   isUserMessage: boolean
 }
 export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {
   return (
 
-isUserMessage ? "justify-end" : "justify-start"
-    )}>
-      <div className={cn(
-
-    <div className={cn(;
-      "flex";
-    <div className={cn(
-      "flex",
     <div className={cn(
       "flex",
 
@@ -63,6 +51,7 @@ isUserMessage ? "justify-end" : "justify-start"
           ? "bg-zion-purple text-white"
 
         "max-w-[75%] rounded-lg px-4 py-2",
+
         isUserMessage 
           ? "bg-zion-purple text-white" 
 

@@ -2,56 +2,7 @@ const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/api-ob
   if (!service) return null;
 
 
-  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/api-observability-starter'));
-  if (!service) return null;
 
-
-import React from 'react',;
-import Head from 'next/head',;
-import { Phone, Mail, MapPin, Check, ArrowRight, Activity, Star } from 'lucide-react',;
-import Layout from '../components/layout/Layout',;
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services',;
-import React from 'react'
-import Head from 'next/head'
-import { Phone, Mail, MapPin, Check, ArrowRight, Activity, Star } from 'lucide-react',
-import Layout from '../components/layout/Layout'
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services'
-
-import React from 'react';
-import Head from 'next/head';
-import { Phone, Mail, MapPin, Check, ArrowRight, Activity, Star } from 'lucide-react';
-import Layout from '../components/layout/Layout';
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
-export default function ApiObservabilityStarterPage() {
-  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/api-observability-starter'))
-  if (!service) return null
-
-import React from 'react',;
-import Head from 'next/head',;
-import { Phone, Mail, MapPin, Check, ArrowRight, Activity, Star } from 'lucide-react',;
-import Layout from '../components/layout/Layout',;
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services',;
-
-import React from 'react'
-import Head from 'next/head'
-import { Phone, Mail, MapPin, Check, ArrowRight, Activity, Star } from 'lucide-react',
-import Layout from '../components/layout/Layout'
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services'
-export default function ApiObservabilityStarterPage() {
-  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/api-observability-starter'))
-  if (!service) return null,
-export default function ApiObservabilityStarterPage() {
-  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/api-observability-starter'))
-  if (!service) return null,
-export default function ApiObservabilityStarterPage() {
-  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/api-observability-starter'))
-  if (!service) return null,
-export default function ApiObservabilityStarterPage() {
-  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/api-observability-starter'))
-  if (!service) return null,
-import { Phone, Mail, MapPin, Check, ArrowRight, Activity, Star } from 'lucide-react',;
-import Layout from '../components/layout/Layout'
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services'
 export default function ApiObservabilityStarterPage() {
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/api-observability-starter'))
   if (!service) return null,

@@ -19,10 +19,7 @@ class $1 {}
       "ai-code-quality-enhancer.log";"
     );
     this.improvementsLog = path.join(;)"
-<<<<<<< HEAD
-=======
-      this.projectRoot,logs",
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
       "ai-improvements.json";"
     );"
     this.patternsLog = path.join(this.projectRoot, "logs", "ai-patterns.json");"
@@ -34,110 +31,7 @@ class $1 {}
           "improvement": "useCallback optimization",
           "priority": "HIGH"},"
         {}"
-<<<<<<< HEAD
-  "pattern": /useMemo\([^)]*\)/g,""
-          "improvement": "useMemo optimization",""
-  "pattern": /React\.memo\(/g,)""
-          "improvement": "React.memo optimization",""
-          "priority": "MEDIUM"},"
-  "pattern": /\.map\(["^)]*\)\.filter\(/g", ""improvement": "Combine map and filter operations"", ""priority": "HIGH"", "}", "{})""
-  "pattern": /for\s*\(\s*let\s+i\s*=\s*0/g", ""improvement": Use forEach or for...of instead of traditional for loop"", ""priority": "MEDIUM"", "}", ""],)""
-      "accessibility": ["{}]""
-  pattern: /<div\s+onClick=/g", ""improvement": "Add role and tabIndex for accessibility"", ""priority": "HIGH"", "}", "{}""
-  "pattern": /<img\s+(?!.*alt=)/g", ""improvement": "Missing alt attribute for images"", ""priority": "CRITICAL"", "}", "{}""
-  "pattern": /<button\s+(?!.*aria-label=)/g", ""improvement": "Add aria-label for button accessibility"", ""priority": "MEDIUM"", "}", ""],""
-      "security": ["{}]""
-  pattern: /""dangerouslySetInnerHTML/g""", ""improvement": "Security risk - sanitize HTML content"", ""priority": "CRITICAL"", "}", "{}""
-  "pattern": /eval\(/g", ""improvement": "Security risk - avoid eval()"", ""priority": "CRITICAL"", "}", "{}""
-  "pattern": /innerHTML\s*=/g", ""improvement": "Security risk - use textContent instead"", ""priority": "HIGH"", "}", ""],""
-      "maintainability": ["{}]""
-  pattern: /console\.log\(/g", ""improvement": "Remove console.log statements in production"", ""priority": "MEDIUM"", "}", "{})""
-  "pattern": /TODO:/g", ""improvement": "Address TODO comments"", ""priority": "LOW"", "}", "{}""
-  "pattern": /FIXME:/g", ""improvement": "Address FIXME comments"", ""priority": "HIGH"", "}", "{}""
-  "pattern": /[a-zA-Z_$"]["a-zA-Z0-9_$]*\s*=\s*function\s*\(/g", ""improvement": "Use arrow function syntax"", ""priority": "MEDIUM"", "}", ""],)""
-      "typescript": ["{}]""
-  pattern: /any\s*:/g", ""improvement": "Replace any with proper types"", ""priority": "HIGH"", "}", "{}""
-  "pattern": /:\s*string\s*\|\s*""undefined/g""", ""improvement": Use optional properties (?) instead of union with undefined"", ""priority": "MEDIUM"", "}", "{}""
-  "pattern": /as\s+""any/g""", ""improvement": "Avoid type assertions to any"", ""priority": "HIGH"", "}", ""],"
-    // AI Pattern Recognition Rules;
-  "pattern": /\.map\(["^)]*\)\.filter\(/g", ""improvement": "Combine map and filter operations", ""priority": "HIGH", "}", "{})""
-  "pattern": /for\s*\(\s*let\s+i\s*=\s*0/g", ""improvement": Use forEach or for...of instead of traditional for loop", ""priority": "MEDIUM", "}", "],)""
-  pattern: /<div\s+onClick=/g", ""improvement": "Add role and tabIndex for accessibility", ""priority": "HIGH", "}", "{}""
-  "pattern": /<img\s+(?!.*alt=)/g", ""improvement": "Missing alt attribute for images", ""priority": "CRITICAL", "}", "{}""
-  "pattern": /<button\s+(?!.*aria-label=)/g", ""improvement": "Add aria-label for button accessibility", ""priority": "MEDIUM", "}", "],""
-  pattern: /"dangerouslySetInnerHTML/g"", ""improvement": "Security risk - sanitize HTML content", ""priority": "CRITICAL", "}", "{}""
-  "pattern": /eval\(/g", ""improvement": "Security risk - avoid eval()", ""priority": "CRITICAL", "}", "{}""
-  "pattern": /innerHTML\s*=/g", ""improvement": "Security risk - use textContent instead", ""priority": "HIGH", "}", "],""
-  pattern: /console\.log\(/g", ""improvement": "Remove console.log statements in production", ""priority": "MEDIUM", "}", "{})""
-  "pattern": /TODO:/g", ""improvement": "Address TODO comments", ""priority": "LOW", "}", "{}""
-  "pattern": /FIXME:/g", ""improvement": "Address FIXME comments", ""priority": "HIGH", "}", "{}""
-  "pattern": /[a-zA-Z_$"]["a-zA-Z0-9_$]*\s*=\s*function\s*\(/g", ""improvement": "Use arrow function syntax", ""priority": "MEDIUM", "}", "],)""
-  pattern: /any\s*:/g", ""improvement": "Replace any with proper types", ""priority": "HIGH", "}", "{}""
-  "pattern": /:\s*string\s*\|\s*"undefined/g"", ""improvement": Use optional properties (?) instead of union with undefined", ""priority": "MEDIUM", "}", "{}""
-  "pattern": /as\s+"any/g"", ""improvement": "Avoid type assertions to any", ""priority": "HIGH", "}", "]};"
-=======
-  "pattern": /useMemo\([^)]*\)/g,
-          "improvement": "useMemo optimization",
-          "priority": "HIGH"},"
-        {}"
-  "pattern": /React\.memo\(/g)
-          "improvement": "React.memo optimization",
-          "priority": "MEDIUM"},"
-        {}"
-  "pattern": /\.map\(["^)]*\)\.filter\(/g", improvement": "Combine map and filter operations, priority": "HIGH, "}", "{})
-  "pattern": /for\s*\(\s*let\s+i\s*=\s*0/g", improvement": Use forEach or for...of instead of traditional for loop, priority": "MEDIUM, "}", ])
-      "accessibility": ["{}]
-  pattern: /<div\s+onClick=/g", improvement": "Add role and tabIndex for accessibility, priority": "HIGH, "}", "{}
-  "pattern": /<img\s+(?!.*alt=)/g", improvement": "Missing alt attribute for images, priority": "CRITICAL, "}", "{}
-  "pattern": /<button\s+(?!.*aria-label=)/g", improvement": "Add aria-label for button accessibility, priority": "MEDIUM, "}", ],
-      "security": ["{}]
-  pattern: /dangerouslySetInnerHTML/g", improvement": "Security risk - sanitize HTML content, priority": "CRITICAL, "}", "{}
-  "pattern": /eval\(/g", improvement": "Security risk - avoid eval(), priority": "CRITICAL, "}", "{}
-  "pattern": /innerHTML\s*=/g", improvement": "Security risk - use textContent instead, priority": "HIGH, "}", ],
-      "maintainability": ["{}]
-  pattern: /console\.log\(/g", improvement": "Remove console.log statements in production, priority": "MEDIUM, "}", "{})
-  "pattern": /TODO:/g", improvement": "Address TODO comments, priority": "LOW, "}", "{}
-  "pattern": /FIXME:/g", improvement": "Address FIXME comments, priority": "HIGH, "}", "{}
-  "pattern": /[a-zA-Z_$"]["a-zA-Z0-9_$]*\s*=\s*function\s*\(/g", improvement": "Use arrow function syntax, priority": "MEDIUM, "}", ])
-      "typescript": ["{}]
-  pattern: /any\s*:/g", improvement": "Replace any with proper types, priority": "HIGH, "}", "{}
-  "pattern": /:\s*string\s*\|\s*undefined/g", improvement": Use optional properties (?) instead of union with undefined, priority": "MEDIUM, "}", "{}
-  "pattern": /as\s+any/g", improvement": "Avoid type assertions to any, priority": "HIGH, "}", ],"
-    // AI Pattern Recognition Rules;
-    this.qualityPatterns = {}"
-  "performance": [{}]"
-  pattern: /useCallback\([^)]*\)/g,"
-          "improvement": "useCallback optimization",
-          "priority": "HIGH"},"
-        {}"
-  "pattern": /useMemo\([^)]*\)/g,
-          "improvement": "useMemo optimization",
-          "priority": "HIGH"},"
-        {}"
-  "pattern": /React\.memo\(/g)
-          "improvement": "React.memo optimization",
-          "priority": "MEDIUM"},"
-        {}"
-  "pattern": /\.map\(["^)]*\)\.filter\(/g", improvement": "Combine map and filter operations", priority": "HIGH", "}", "{})
-  "pattern": /for\s*\(\s*let\s+i\s*=\s*0/g", improvement": Use forEach or for...of instead of traditional for loop", priority": "MEDIUM", "}", "])
-      "accessibility": ["{}]
-  pattern: /<div\s+onClick=/g", improvement": "Add role and tabIndex for accessibility", priority": "HIGH", "}", "{}
-  "pattern": /<img\s+(?!.*alt=)/g", improvement": "Missing alt attribute for images", priority": "CRITICAL", "}", "{}
-  "pattern": /<button\s+(?!.*aria-label=)/g", improvement": "Add aria-label for button accessibility", priority": "MEDIUM", "}", "],
-      "security": ["{}]
-  pattern: /"dangerouslySetInnerHTML/g, improvement": "Security risk - sanitize HTML content", priority": "CRITICAL", "}", "{}
-  "pattern": /eval\(/g", improvement": "Security risk - avoid eval()", priority": "CRITICAL", "}", "{}
-  "pattern": /innerHTML\s*=/g", improvement": "Security risk - use textContent instead", priority": "HIGH", "}", "],
-      "maintainability": ["{}]
-  pattern: /console\.log\(/g", improvement": "Remove console.log statements in production", priority": "MEDIUM", "}", "{})
-  "pattern": /TODO:/g", improvement": "Address TODO comments", priority": "LOW", "}", "{}
-  "pattern": /FIXME:/g", improvement": "Address FIXME comments", priority": "HIGH", "}", "{}
-  "pattern": /[a-zA-Z_$"]["a-zA-Z0-9_$]*\s*=\s*function\s*\(/g", improvement": "Use arrow function syntax", priority": "MEDIUM", "}", "])
-      "typescript": ["{}]
-  pattern: /any\s*:/g", improvement": "Replace any with proper types", priority": "HIGH", "}", "{}
-  "pattern": /:\s*string\s*\|\s*"undefined/g, improvement": Use optional properties (?) instead of union with undefined", priority": "MEDIUM", "}", "{}
-  "pattern": /as\s+"any/g, improvement": "Avoid type assertions to any", priority": "HIGH", "}", "]};"
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
   };
 ;
   ensureLogsDirectory() {}
@@ -150,19 +44,7 @@ class $1 {}
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;`
 
 
-<<<<<<< HEAD
-`;
-    fs.appendFileSync(this.logFile, logEntry);console.log(`[${level}] ${message}`)};
-=======
 
-    fs.appendFileSync(this.logFile, logEntry);console.log(`[${level}] ${message})};
-;
-  async analyzeCodeQuality() {}"
-  this.log("🤖 Starting AI-powered code quality analysis...");"
-    const improvements = [];
-    const patterns = [];
-    try {}
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
   async analyzeCodeQuality() {}"
   this.log("🤖 Starting AI-powered code quality analysis...");"
     const improvements = [];
@@ -203,12 +85,7 @@ class $1 {}
   findUnusedImports(content, filePath) {}"
   // This is a simplified check - in a real implementation, you"d use TypeScript compiler API;"
     const importMatches = content.match(;)"
-<<<<<<< HEAD
-      /import\s+{([^}]+)}\s+from\s+[""][^"]+["]/g;"
-=======
-      /import\s+{([^}]+)}\s+from\s+[][^"]+["]/g;"
-    );
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
     if (!importMatches) return [];
     const imports = importMatches;
       .map(match => {})
@@ -216,19 +93,7 @@ class $1 {}
         return importContent;"
           ? importContent[1].split(",").map(i => i.trim());"
   // This is a simplified check - in a real implementation, you"d use TypeScript compiler API;"
-<<<<<<< HEAD
-      /import\s+{([^}]+)}\s+from\s+["][^"]+[""]/g;"
-=======
-    const importMatches = content.match(;)"
-      /import\s+{([^}]+)}\s+from\s+["][^"]+[]/g;"
-    );
-    if (!importMatches) return [];
-    const imports = importMatches;
-      .map(match => {})
-  const importContent = match.match(/import\s+{([^}]+)}\s+from/);
-        return importContent;"
-          ? importContent[1].split(",").map(i => i.trim());"
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
           : []}
 });
       .flat();
@@ -272,30 +137,7 @@ class $1 {}
           !content.includes("export default") &&;
           !content.includes("export const");"
         ) {}
-<<<<<<< HEAD
-            "category": "structure",""
-            "pattern": "component-export",""
-            "improvement": "Component should have proper export statement",""
-            "priority": "MEDIUM",""
-            "timestamp": new Date().toISOString()})};""`;
-      } catch (error) {  this.log(`Error analyzing component ${file  }: ${error.message}`, "WARN")};"
-=======
-  improvements.push({})
-  file,"
-            "category": "structure",
-            "pattern": "component-export",
-            "improvement": "Component should have proper export statement",
-            "priority": "MEDIUM",
-            "matches": 1,
-            "lineNumbers": [1],
-            "timestamp": new Date().toISOString()})};
-      } catch (error) {  this.log(`Error analyzing component ${file  }: ${error.message}, "WARN")};"
-    };
-;
-    return { improvements };
-  };
-;
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
   async analyzePerformancePatterns() {}
     const sourceDir = path.join(this.projectRoot, "src");"
     if (!fs.existsSync(sourceDir)) {}"
@@ -303,48 +145,12 @@ class $1 {}
     const files = this.getAllFiles(sourceDir, [".tsx", ".ts", ".jsx", ".js"]);"
     for (const file of files) {}
         // Check for expensive operations in render;
-<<<<<<< HEAD
-          content.includes("useEffect") &&;""
-          content.includes("Math.random()");"
-            "category": "performance",""
-            "pattern": "expensive-render",""
-            "improvement": Avoid expensive operations in render - move to useEffect or useMemo",""
-            "priority": "HIGH",""
-=======
-        if (;)"
-          content.includes("useEffect") &&;
-          content.includes("Math.random()");"
-        ) {}
-  improvements.push({})
-  file,"
-            "category": "performance",
-            "pattern": "expensive-render",
-            "improvement": Avoid expensive operations in render - move to useEffect or useMemo",
-            "priority": "HIGH",
-            "matches": 1,
-            "lineNumbers": [1],
-            "timestamp": new Date().toISOString()})};"
-;
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
         // Check for missing dependency arrays in useEffect;
         const useEffectMatches = content.match(;)
           /useEffect\s*\(\s*\(\)\s*=>\s*{[^}]*}\s*\)/g;
         if (useEffectMatches) {}
-<<<<<<< HEAD
-            "pattern": "missing-dependencies",""
-            "improvement": useEffect missing dependency array - may cause infinite re-renders",""
-            "matches": useEffectMatches.length,""
-=======
-  improvements.push({})
-  file,"
-            "category": "performance",
-            "pattern": "missing-dependencies",
-            "improvement": useEffect missing dependency array - may cause infinite re-renders",
-            "priority": "HIGH",
-            "matches": useEffectMatches.length,
-            "lineNumbers": [1],
-            "timestamp": new Date().toISOString()})};"
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
       } catch (error) {}"
   this.log(Error analyzing performance in ${file  }: ${error.message}")
           "WARN";"
@@ -352,47 +158,7 @@ class $1 {}
   async analyzeAccessibilityPatterns() {}
         // Check for clickable divs without proper accessibility;"
         if (content.includes("onClick") && content.includes("<div")) {}"
-<<<<<<< HEAD
-            "category": "accessibility",""
-            "pattern": "clickable-div",""
-            "improvement": Clickable div should have role="button" and tabIndex for accessibility",""
-        // Check for form inputs without labels;"
-        if (content.includes("<input") && !content.includes("<label")) {}"
-            "pattern": "input-without-label",""
-            "improvement": Form inputs should have associated labels for accessibility",""
-  this.log(Error analyzing accessibility in ${file  }: ${error.message}",)""
-=======
-  improvements.push({})
-  file,"
-            "category": "accessibility",
-            "pattern": "clickable-div",
-            "improvement": Clickable div should have role="button" and tabIndex for accessibility",
-            "priority": "HIGH",
-            "matches": 1,
-            "lineNumbers": [1],
-            "timestamp": new Date().toISOString()})};"
-;
-        // Check for form inputs without labels;"
-        if (content.includes("<input") && !content.includes("<label")) {}"
-  improvements.push({})
-  file,"
-            "category": "accessibility",
-            "pattern": "input-without-label",
-            "improvement": Form inputs should have associated labels for accessibility",
-            "priority": "HIGH",
-            "matches": 1,
-            "lineNumbers": [1],
-            "timestamp": new Date().toISOString()})};"
-      } catch (error) {}"
-  this.log(Error analyzing accessibility in ${file  }: ${error.message}")
-          "WARN";"
-        )};
-    };
-;
-    return { improvements };
-  };
-;
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
   async generateIntelligentRecommendations(improvements) {}
   const recommendations = [];
     // Group improvements by category and priority;

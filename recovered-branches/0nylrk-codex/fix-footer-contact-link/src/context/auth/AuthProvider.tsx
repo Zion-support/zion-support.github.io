@@ -1,3 +1,4 @@
+
 import React, { useEffect } from "react";
 import {supabase, getFromProfiles} from "../../integrations/supabase/client";
 import {useAuthOperations} from "../../hooks/useAuthOperations";
@@ -128,7 +129,6 @@ onboardingStep, setOnboardingStep ;
 pr-12325
     onboardingStep, setOnboardingStep;
   } = useAuthState(),
-  
 
   const navigate = useNavigate(),
   const location = useLocation(),
@@ -233,8 +233,6 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {;
   useEffect(() => {
     // Clean up any potential stale auth state before setting up listeners;
     cleanupAuthState(),
-    
-    
     const { data: { subscription } } = supabase.auth.onAuthStateChange()
       async (event, session) => {
         if (session?.user) {
@@ -248,7 +246,6 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {;
             if (profile) {
               const mappedUser = mapProfileToUser(session.user, profile),
               setUser(mappedUser),
-              
 
               // Show welcome toast when user logs in;
               if (event === 'SIGNED_IN') {
@@ -711,14 +708,12 @@ if ( {) {
             handleSignedOut(),;          }
             if (profile) {const mappedUser = mapProfileToUser(session.user, profile);
               setUser(mappedUser);
-              
               // Show welcome toast when user logs in,
 if (event === 'SIGNEDIN') {
                 handleSignedIn(mappedUser)}
             } else if (error) {setUser(null)}
           } catch (error) {setUser(null)}
         } else {setUser(null);
-          
           // Show logout toast when user logs out,
 if (event === 'SIGNEDOUT') {
             handleSignedOut()}
@@ -817,4 +812,5 @@ pr-12325
   );
 };
 '
+
 

@@ -8,9 +8,6 @@ import { motion, AnimatePresence } from 'framer-motion','
 import { ArrowUp, Filter, SortAsc, Users, TrendingUp, Star, Verified, MapPin } from 'lucide-react''
 import { useInfiniteScrollPagination  } from '@/hooks/useInfiniteScroll';
 
-import { useRouter } from 'next/router',;
-import { useState, useEffect, useCallback, useMemo } from 'react',;
-import { motion, AnimatePresence } from 'framer-motion',;
 
 import { ArrowUp, Filter, SortAsc, Users, TrendingUp, Star, Verified, MapPin } from 'lucide-react'
 import { generateAITalents, getTalentMarketStats, getRecommendedTalents  } from '@/utils/talentAutoFeedAlgorithm';
@@ -1143,47 +1140,4 @@ const TalentMarketInsights: React.FC<{ stats: any }> = ({ stats }) => (
   {;
   opacity: 1, scale: 1 ;
 
-}exit= {;
-  {;
-  opacity: 0, scale: 0.9 ;
 
-}transition= {;
-  {;
-  delay: Math.min (index * 0.03, 0.5) ;
-
-}whileHover= {;
-  {;
-  scale: 1.02 ;
-
-}> <TalentCard talent= {;
-  talent ;
-}onHire= {;
-  () => router.push (`/hire/$ {;
-  talent.id ;
-}`) ;
-}/> </motion.div>) ) ;
-}</AnimatePresence> </motion.div> {;
-  /* Loading More Indicator */ ;
-}{;
-  (isFetching || loading) && (<motion.div > <TalentLoadingGrid count= {;
-  4 ;
-}/> </motion.div>) ;
-}{";
-  isFetching ? (<Spinner className=" mx-auto h-6 w-6"/>) : (<Button onClick={;
-  loadMore ;
-}>Load More</Button>) ;
-}</p>) ;
-}</div>) ;
-}{;
-  /* End of Results */ ;
-}{'";
-  !hasMore && talents.length > 0 && (<motion.div > <div className=" text-muted-foreground text-lg mb-2"> 🎉 You've explored all available talents! </div> </div> </motion.div>) ;
-}{;
-  /* Scroll to Top Button */ ;
-}<AnimatePresence> {;
-  showScrollTop && (<motion.button onClick={;
-  scrollToTop ";
-}> <ArrowUp className=" h-5 w-5 text-primary-foreground" /> </motion.button>) ;
-}</AnimatePresence> </div>) ;
-}'"
-origin/cursor/automate-test-improve-and-merge-code-2533

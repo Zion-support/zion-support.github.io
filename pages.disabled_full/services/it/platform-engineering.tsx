@@ -55,10 +55,7 @@ export default function Platformengineering({ }: PlatformengineeringProps) {
 
 }
 
-<<<<<<<< HEAD:pages.disabled_full/services/it/platform-engineering.tsx
-
-
->>>>>>>> main:corrupted_backup/platform-engineering.tsx
+<
 
 
 

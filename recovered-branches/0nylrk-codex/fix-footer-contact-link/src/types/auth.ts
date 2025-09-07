@@ -11,28 +11,7 @@ pr-12325
   headline?: string;
   profileComplete?: boolean;
   role?: string;
-  permissions?: string[];
-  companyId?: string;
-  bio?: string;
-  createdAt?: string;
-  updatedAt?: string;
-}
 
-  permissions?: string[];
-  company_id?: string;
-
-export interface UserDetails {
-export interface UserDetails {;
-  id?: string;
-  name?: string;
-  email?: string;
-  userType?: string;
-  displayName?: string;
-  avatarUrl?: string;
-  headline?: string;
-  profileComplete?: boolean;
-  role?: string;
-  permissions?: string[],
   companyId?: string;
   bio?: string;
   createdAt?: string;
@@ -58,8 +37,7 @@ export interface UserDetails {;
   avatar_url?: string;
   headline?: string;
   role?: string;
-  permissions?: string[];
-  companyId?: string;
+
 }
 
   permissions?: string[],
@@ -182,20 +160,7 @@ export interface AuthContextType {;
   user: UserDetails | null;,
   isLoading: boolean;
 
-  isAuthenticated: boolean;,
-  login: (email: string, password: string) => Promise<{ data?: any, error?: any }>;
-  signup: (email: string, password: string, userData?: any) => Promise<{ error?: any }>;
-  logout: () => Promise<void>
-</void>
-  resetPassword: (email: string) => Promise<{ error?: any }>;
-  updateProfile: (data: Partial<UserDetails>) => Promise<{ error?: any }>;
 
-  loginWithGoogle: () => Promise<void>;
-  loginWithFacebook: () => Promise<void>;
-  loginWithTwitter: () => Promise<void>;
-  loginWithWeb3: () => Promise<void>
-  signIn?: (email: string, password: string) => Promise<{ error: any }>;
-  signOut?: () => Promise<void>;
 
   signUp?: (email: string, password: string, userData?: Partial<UserDetails>) => Promise<{ error: any }>
 

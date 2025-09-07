@@ -1,5 +1,4 @@
-return (
-    <div className='flex items-center justify-end gap-2'>;
+
 
 import Link from "next/link";
 import { 
@@ -19,10 +18,12 @@ import {
 import { Button } from '@/components/ui/button'
 import { Eye, ChevronDown, Loader2 } from 'lucide-react'
 import { JobApplication, ApplicationStatus } from "@/types/jobs";
+
 interface ApplicationActionsProps {
   application: JobApplication;
   processingId: string | null;
   onViewApplication: (applicationId: string) => Promise<void>;
+
   onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise<void>
 }
 
@@ -31,6 +32,7 @@ export function ApplicationActions({
   processingId;
   onViewApplication;
   onStatusChange
+
 }: ApplicationActionsProps) {
   return (
     <div className='flex items-center justify-end gap-2'>
@@ -173,7 +175,6 @@ export function ApplicationActions({
       >
         <Eye className="h-4 w-4" />
       </Button>
-      
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
           <Button 
@@ -250,17 +251,13 @@ return (
 
               </>
             )}
-          
-        
         <DropdownMenuContent align='end'>
 
           <DropdownMenuItem;
             onClick={() => onStatusChange(application.id, 'shortlisted')}
 
-          
             onClick={() => onStatusChange(application.id, 'interview')}
 
-          
             onClick={() => onStatusChange(application.id, 'rejected')}
 
   onViewApplication: (applicationId: string) => Promise<void>,
@@ -270,8 +267,6 @@ return (
         onClick={() => onViewApplication(application.id)}
         <Eye className="h-4 w-4" />"
 
-      
-      
       <DropdownMenu>
 
         <DropdownMenuTrigger asChild>
@@ -282,30 +277,20 @@ return (
 </Loader2>"
               <>Status <ChevronDown className="h-4 w-4 ml-1" /></>"
 
-          
         <DropdownMenuContent align="end">"
 
           <DropdownMenuItem;"
             onClick={() => onStatusChange(application.id, "shortlisted")}"
 
-          
             onClick={() => onStatusChange(application.id, "interview")}"
 
-          
             onClick={() => onStatusChange(application.id, "hired")}"
 
-          
             onClick={() => onStatusChange(application.id, "rejected")}"
 
-          
-        
-      
 
 pr-12325
-      
 
-      
-      
 
 
       <Button 

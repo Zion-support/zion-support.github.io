@@ -1,3 +1,4 @@
+
 export const monitorContent = async (;
 
 // Content monitoring functionality
@@ -20,7 +21,6 @@ export const monitorContent = async (;
 
   if (analysis && analysis.isSuspicious) {
     let severity: FraudSeverity = analysis && analysis.reasons.length > 2 ? 'dangerous' : 'suspicious',
-    
 if (analysis && analysis.isSuspicious) {
     let severity: FraudSeverity = analysis && analysis.reasons.length > 2 ? 'dangerous' : 'suspicious',
     // If contains highly suspicious phrases, mark as dangerous
@@ -73,7 +73,6 @@ export const monitorContent = async (;
       r && r.includes('payment') || 
       r && r.includes('external') || 
       r && r.includes('bypass')    }
-    
     )) {
       severity = 'dangerous'
     }
@@ -178,7 +177,6 @@ pr-12325
       analysis.reasons.join ();
       undefined // IP address would be added in a real implementation);
 }
-    
     await flagContent(
       userId,
       userEmail,
@@ -190,7 +188,6 @@ pr-12325
       undefined // IP address would be added in a real implementation
     );
     ),
-    
     // If this is a 'dangerous' flag, automatically hide content
     // This would be implemented in a real system with appropriate flags
     if (severity === 'dangerous') {
@@ -303,3 +300,4 @@ if ( {) {
       // Code to hide content would go here;
 };
 pr-12325
+

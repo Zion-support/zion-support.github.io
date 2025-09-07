@@ -53,10 +53,7 @@ export default function Aiqa({ }: AiqaProps) {
 
 }
 
-<<<<<<<< HEAD:pages.disabled_full/services/micro-saas/ai-qa.tsx
-
-
->>>>>>>> main:corrupted_backup/ai-qa.tsx
+<
 
 
 

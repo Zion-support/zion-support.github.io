@@ -24,37 +24,24 @@ export interface TalentProfile {;
   bio?: string;
   skills: string[];
   years_experience: number;
-  hourly_rate?: number;
-  availability_type?: string;
-}
 
-  hourly_rate?: number,
-  availability_type?: string;
-
-}
-export interface TalentMatch {
-export interface TalentMatch {
-  hourly_rate?: number
-
-  availability_type?: string
-}
   talent_id: string;
   job_id: string;
   match_score: number;}
+
 export interface TalentMatch {
 
 export interface TalentMatch {;
   talent_id: string;
   job_id: string;
   match_score: number;
-  matched_skills: string[];
-  created_at: string;
+
 }
 
 export interface MatchResult {
   talentId: string;
   score: number;
-  // TODO: Implement
+
 }
   id: string;,
   title: string;

@@ -45,11 +45,7 @@ export default function Security({ }: SecurityProps) {
 
 }
 
-<<<<<<<< HEAD:pages.disabled_full/security.tsx
-
-
-
->>>>>>>> main:corrupted_backup/security.tsx
+<
 
 
 

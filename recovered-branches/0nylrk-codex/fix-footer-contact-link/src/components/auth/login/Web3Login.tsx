@@ -1,119 +1,3 @@
-import {useState} from "react";
-import {Button} from "@/components/ui/button";
-import {useAuth} from "@/hooks/useAuth";
-import {Wallet} from "@/components/icons";
-import {toast} from "sonner";
-import {useState} from "react";""
-import {Button} from "@/components/ui/button";""
-import {useAuth} from "@/hooks/useAuth";""
-import {Wallet} from "@/components/icons";""
-import {toast} from "sonner";"
-pr-12325
-export function Web3Login() {;
-
-  const { loginWithWeb3 } = useAuth();
-  const [isLoading, setIsLoading] = useState(false);
-
-  const handleWeb3Login = async () => {;
-    try {;
-      setIsLoading(true);
-
-export function Web3Login() {
-  const { loginWithWeb3 } = useAuth(),
-  const [isLoading, setIsLoading] = useState(false),
-const { loginWithWeb3 } = useAuth();
-  const [isLoading, setIsLoading] = useState(false);
-  const handleWeb3Login = async () => {;
-    try {;
-      setIsLoading(true);
-
-
-pr-12325
-export function Web3Login() {
-  const { loginWithWeb3 } = useAuth(),
-  const [isLoading, setIsLoading] = useState(false),
-
-  const handleWeb3Login = async () => {
-    try {
-
-      setIsLoading(true),
-
-      // Check if wallet is available
-      const ethereum = (window as any).ethereum;
-const { loginWithWeb3 } = useAuth();
-  const [isLoading, setIsLoading] = useState(false);
-
-  const { loginWithWeb3 } = useAuth();
-  const [isLoading, setIsLoading] = useState(false);
-import { useState } from "react",
-import { Button } from "@/components/ui/button",
-import { useAuth } from "@/hooks/useAuth",
-import { Wallet } from "@/components/icons";
-import { toast } from "sonner";
-import { Wallet } from "@/components/icons",
-import { toast } from "sonner",
-
-  const handleWeb3Login = async () => {;
-    try {;
-      setIsLoading(true);
-
-export function Web3Login() {
-  const { loginWithWeb3 } = useAuth(),
-  const [isLoading, setIsLoading] = useState(false),
-      // Check if wallet is available
-      const ethereum = (window as any).ethereum,
-      if (!ethereum) {
-        toast("Web3 wallet not found", {
-      const ethereum = (window as any).ethereum;        toast("Web3 wallet not found", {
-          description: "Please install MetaMask or another compatible wallet"})
-        return
-      }
-      await loginWithWeb3()
-    } catch (error: any) {
-      toast("Login failed", {
-        description: error.message |"Failed to connect wallet"})
-      console.error("Web3 login error:", error)
-    } finally {
-      setIsLoading(false)
-
-      // Check if wallet is available;
-      const ethereum = (window as any).ethereum;
-      if (!ethereum) {;
-        toast("Web3 wallet not found", {,
-  description: "Please install MetaMask or another compatible wallet"}),;
-        return;
-      }
-
-      await loginWithWeb3();
-
-    } catch (error: any) {;
-      toast("Login failed", {,
-  description: error && error.message || "Failed to connect wallet"}),;
-      console && console.error("Web3 login error:", error);
-    } finally {;
-      setIsLoading(false);
-
-    }
-  }
-}
-  }
-    }
-
-  },
-
-}
-  }
-  },
-  return (
-    <Button
-      type="button"
-      variant="outline"
-      className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
-      onClick={handleWeb3Login}
-
-  }    }
-
-  },
 
       disabled={isLoading}
     >
@@ -262,7 +146,6 @@ function Web3Login() {
   // TODO: Implement
 }
       setIsLoading(true),
-      
 
       // Check if wallet is available;
       const ethereum = (window as any).ethereum;"
@@ -340,7 +223,6 @@ import { toast } from "sonner","
 
 )
       )}
-    
       type="button";""
       variant="outline";""
       className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan";"

@@ -4,12 +4,13 @@ interface Contract {
 import { Button } from "@/components/ui/button";
 interface Contract {
 
+
   id: string;
   title: string;
   client: string;
   talent: string;
   date: string;
-  isSmartContract: boolean
+
 }
 
 interface RecentContractsTableProps {;import { Button } from "@/components/ui/button",;
@@ -33,10 +34,7 @@ interface Contract {
 interface RecentContractsTableProps {;
 
 interface RecentContractsTableProps {
-  // TODO: Implement
-import { Button } from "@/components/ui/button","
-  // TODO: Implement
-pr-12325
+
 
 import { Button } from "@/components/ui/button",
 interface Contract {

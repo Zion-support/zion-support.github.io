@@ -1,6 +1,4 @@
-}}
-import React, { useState, useEffect } from 'react';
-import { useRouter } from 'next/router'; // Changed from useNavigate
+
 import Link from 'next/link';
 import { useAuth  } from '@/hooks/useAuth';
 import { useRouterReady, useRouteChange  } from '@/hooks/useRouterReady';
@@ -179,7 +177,6 @@ export default function TalentDirectory() {;
     }
     if (sortOption !== 'relevance') query.sort = sortOption,
     if (currentPage > 1) query.page = String(currentPage),
-    
     router.replace({ pathname: router.pathname, query }, undefined, {
       shallow: true})
   }, [
@@ -441,58 +438,4 @@ export default function TalentDirectory() {;
         </div>
       </div>
     </div>
-  );
 
-}/> <PaginationContent> <PaginationItem> <PaginationPrevious href= {;
-  `?page=$ {;
-  currentPage - 1 ;
-}` ;
-}/> </PaginationItem> {;
-  Array.from ({;
-  length: totalPages ;
-}, (, i) => i + 1) .map ( (page) => (<PaginationItem key= {;
-  page ;
-}> <PaginationButton /> </PaginationItem>) ) ;
-}<PaginationItem> <PaginationNext /> </PaginationItem> </PaginationContent> </Pagination> </div>) ";
-}</ErrorBoundary> </div> <Button variant="ghost" size="sm" onClick={;
-  () => setIsMobileFilterOpen (false) ";
-}className="text-zion-slate-light h-8 w-8 p-0" > <X className="h-4 w-4" /> <span className="sr-only" >Close</span> </Button> </div> <FilterSidebar searchTerm= {;
-  searchTerm ;
-}setSearchTerm= {;
-  setSearchTerm ;
-}selectedSkills= {;
-  selectedSkills ;
-}toggleSkill= {;
-  toggleSkill ;
-}selectedAvailability= {;
-  selectedAvailability ;
-}toggleAvailability= {;
-  toggleAvailability ;
-}selectedRegions= {;
-  selectedRegions ;
-}toggleRegion= {;
-  toggleRegion ;
-}priceRange= {;
-  priceRange ;
-}setPriceRange= {;
-  setPriceRange ;
-}experienceRange= {;
-  experienceRange ;
-}setExperienceRange= {;
-  setExperienceRange ;
-}expandedSections= {;
-  expandedSections ;
-}toggleSection= {;
-  toggleSection ;
-}sortOption= {;
-  sortOption ;
-}setSortOption= {;
-  setSortOption ;
-}clearFilters= {;
-  clearFilters ;
-}isMobileFilterOpen= {;
-  isMobileFilterOpen ;
-}/> </div> </div>) ;
-}</div> </div> </div>) ;
-}"
-origin/cursor/automate-test-improve-and-merge-code-2533

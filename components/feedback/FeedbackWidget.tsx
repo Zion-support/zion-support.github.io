@@ -11,72 +11,6 @@ import React, { useMemo, useState } from 'react';
 
 import { v4 as uuidv4 } from 'uuid';
 
-  responseId
-  aiModel
-}: FeedbackWidgetProps) {  const [rating, setRating] = useState<null | 'up' | 'down'>(null);export type FeedbackWidgetProps = {
-  responseId?: string;
-  aiModel?: string
-}
-export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetProps) {
-  responseId,
-  aiModel,;
-}: FeedbackWidgetProps) {  const [rating, setRating] = useState<null | 'up' | 'down'>(null);export type FeedbackWidgetProps = {;
-  responseId?: string;
-  aiModel?: string
-};
-
-export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetProps) {;
-export type FeedbackWidgetProps = any;
-origin/cursor/automate-test-improve-and-merge-code-2533
-  const [rating, setRating] = useState<null | 'up' | 'down'>(null);
-  const [comment, setComment] = useState('');
-  const [submitting, setSubmitting] = useState(false);
-  const [submitted, setSubmitted] = useState(false);
-  const [error, setError] = useState<string | null>(null);
-export type FeedbackWidgetProps = any;
-
-const [rating, setRating] = useState<null | 'up' | 'down' />(null);
-
-const [comment, setComment] = useState('');
-
-const [submitting, setSubmitting] = useState(false);
-
-const [submitted, setSubmitted] = useState(false);
-
-const [error, setError] = useState<string | null />(null);
-
-const effectiveResponseId = useMemo(
-    () => responseId || uuidv4(),
-    [responseId]
- ;
-  const [rating, setRating] = useState<null | 'up' | 'down' />(null);
-
-const [comment, setComment] = useState('');
-
-const [submitting, setSubmitting] = useState(false);
-
-const [submitted, setSubmitted] = useState(false);
-
-const [error, setError] = useState<string | null />(null);
-
-const effectiveResponseId = useMemo(;
-    () => responseId || uuidv4(),;
-    [responseId];
-  );
-  const submit = async () => {;
-    if (!rating) {;
-      setError('Please choose 👍 or 👎');
-          aiModel})});
-      if (!res.ok) throw new Error('Failed to submit feedback');
-      setSubmitted(true)
-    } catch (e: any) {
-      setError(e?.message |'Something went wrong')
-    } finally {
-      setSubmitting(false)
-    }
-  }
-  };
-
   return (
 
     <div className="mt-6 rounded-lg border p-4 bg-white/60 dark:bg-neutral-900/60">
@@ -108,7 +42,6 @@ rating,
               : undefined;}
 aiModel}
         })
-     
 });
       if (!res.ok) throw new Error('Failed to submit feedback');
       setSubmitted(true);
@@ -194,12 +127,10 @@ if ( {) {$2;}
               : undefined,ai_model})})if (throw new Error ('Failed to submit feedback')) {$2;}
 }
       set_submitted (true)} catch (e: any) {set_error (e?.message || 'Something went wrong')} finally {set_submitting (false)}
- 
 }return (<div className='mt - 6 rounded - lg border p - 4 bg - white / 60 dark:bg - neutral - 900 / 60' />;
       <div className='text - sm font - medium mb - 2' />Was this answer useful?</div>          comment: comment.trim (),page_path: typeof window !== 'undefined' ? window.location.pathname : undefined,ai_model})})if (throw new Error ('Failed to submit feedback')) {$2;}
 }
       set_submitted (true)} catch (e: any) {set_error (e?.message || 'Something went wrong')} finally {set_submitting (false)}
- 
 }return (<div className='mt - 6 rounded - lg border p - 4 bg - white / 60 dark:bg - neutral - 900 / 60' />;
       <div className='text - sm font - medium mb - 2' />Was this answer useful?</div>;
       {submitted ? (<div className='text - sm text - emerald - 700 dark:text - emerald - 300' />;
@@ -261,7 +192,6 @@ if ( {) {$2;}
     setError(null),setSubmitting(true),try {const res = await fetch('/api/feedback/submit', {method: 'POST'}
   headers: { 'Content-Type': 'application/json'}
 },body: JSON.stringify({responseId: effectiveResponseId,rating,comment: comment.trim(),pagePath: typeof window !== 'undefined' ? window.location.pathname : undefined,aiModel})}),if (!res.ok) throw new Error('Failed to submit feedback'),setSubmitted(true)} catch (e: any) {setError(e?.message || 'Something went wrong')} finally {setSubmitting(false)}
- 
 };"
   return (<div className=\"mt-6 rounded-lg border p-4 bg-white/60 dark:bg-neutral-900/60\" />;"
       <div className=\"text-sm font-medium mb-2\" />Was this answer useful?</div>;"

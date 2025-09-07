@@ -1,101 +1,5 @@
 
-  FormField,
-  FormItem,
-  FormLabel,
-  FormControl,
-  FormMessage,
-} from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-import { Control } from "react-hook-form";
-import { BasicInfoFormData } from "./schema";
-interface PersonalInfoFieldsProps {
-  control: Control<BasicInfoFormData>;
-}
 
-import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",
-import { Input } from "@/components/ui/input",
-import { Control } from "react-hook-form",
-import { BasicInfoFormData } from "./schema",
-
-import {
-  FormField,
-  FormItem,
-  FormLabel,
-  FormControl,
-  FormMessage,
-} from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-import { Control } from "react-hook-form";
-import { BasicInfoFormData } from "./schema";
-interface PersonalInfoFieldsProps {
-  control: Control<BasicInfoFormData>;
-}
-
-interface PersonalInfoFieldsProps {
-} from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-import { Control } from "react-hook-form";
-import { BasicInfoFormData } from "./schema";
-
-interface PersonalInfoFieldsProps {
-  control: Control<BasicInfoFormData>;
-}
-export function PersonalInfoFields({ control }: PersonalInfoFieldsProps) {
-  return (
-interface PersonalInfoFieldsProps {;
-  control: Control<BasicInfoFormData>;
-}
-
-export function PersonalInfoFields(): any ({ control }: PersonalInfoFieldsProps) {;
-  return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
-      <FormField
-        control={control}
-        name="fullName"
-export /**
- * PersonalInfoFields - Function description
- */
-function PersonalInfoFields() {
-  return (
-    <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 6">;
-      <FormField;
-        control={control}
-        name="full_name";
-        render={({ field }) => (
-          <FormItem>;
-            <FormLabel > Full Name</FormLabel>;
-
-import {FormField, FormItem, FormLabel, FormControl, FormMessage} from "@/components/ui/form";
-import {Input} from "@/components/ui/input";
-import {Control} from "react-hook-form";
-import {BasicInfoFormData} from "./schema";
-import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",;
-import { Input } from "@/components/ui/input",;
-import { Control } from "react-hook-form",;
-import { BasicInfoFormData } from "./schema";
-interface PersonalInfoFieldsProps {;
-import { BasicInfoFormData } from "./schema",import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",;
-import { Input } from "@/components/ui/input",;
-import { Control } from "react-hook-form",;
-import { BasicInfoFormData } from "./schema",;
-
-import {
-import {
-  // TODO: Implement
-}
-pr-12325
-import {
-  // TODO: Implement
-}
-  FormField,
-  FormItem,
-  FormLabel,
-  FormControl,
-  FormMessage,
-} from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-import { Control } from "react-hook-form";
-import { BasicInfoFormData } from "./schema";
 interface PersonalInfoFieldsProps {
   control: Control<BasicInfoFormData>;
 }
@@ -377,10 +281,8 @@ function PersonalInfoFields() {
             <FormControl>
               <Input placeholder="John Doe" {...field} />"
 
-            
             <FormMessage />
 
-          
         name="title"")
 
 
@@ -407,25 +309,19 @@ function PersonalInfoFields() {
             <FormLabel>Professional Title
               <Input placeholder="Senior Software Engineer" {...field} />"
 
-            
 
-          
 
 
             <FormLabel>Email
               <Input type="email" placeholder="john@example.com" {...field} />"
 
-            
 
-          
 
 
             <FormLabel>Phone
               <Input placeholder="+1 234 567 8900" {...field} />"
 
-            
 
-          
 </Input>
 
             </FormControl>

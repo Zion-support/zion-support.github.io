@@ -30,84 +30,6 @@ import React from 'react';
 import { Handshake, MessageSquare, Star } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
-import { Handshake, MessageSquare, Star } from 'lucide-react
-import { Button } from "@/components/ui/button",""
-import { HireNowCTA } from "./HireNowCTA",""
-import { ProfileHero } from "./ProfileHero",""
-import { ProfileSkills } from "./ProfileSkills",""
-import { ProfileExperience } from "./ProfileExperience",""
-import { ProfileProjects } from "./ProfileProjects",""
-import { ProfileAvailability } from "./ProfileAvailability",""
-import { ProfileContact } from "./ProfileContact",""
-import { ProfileRatings } from "./ProfileRatings",""
-import { TalentProfile as TalentProfileType } from "@/types/talent",""
-import React from 'react';
-import { Handshake, MessageSquare, Star } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-pr-12325
-import { HireNowCTA } from './HireNowCTA';
-import { ProfileHero } from './ProfileHero';
-import { ProfileSkills } from './ProfileSkills';
-import { ProfileExperience } from './ProfileExperience';
-import { ProfileProjects } from './ProfileProjects';
-import { ProfileAvailability } from './ProfileAvailability';
-import { ProfileContact } from './ProfileContact';
-import { ProfileRatings } from './ProfileRatings';
-import { TalentProfile as TalentProfileType } from '@/types/talent';
-import { useAuth } from '@/hooks/useAuth';
-import { Availability } from '@/types/profile';
-interface TalentProfileProps {;
-  profile: TalentProfileType;,
-  onRequestHire: () => void;,
-  onMessageTalent?: () => void
-export function TalentProfile(): any ({;
-  profile,;
-  onRequestHire,;
-  onMessageTalent,;
-}:,  TalentProfileProps) {;
-interface TalentProfileProps {;
-  profile: TalentProfileType;,
-  onRequestHire: () => void;
-  onMessageTalent?: () => void;
-export function TalentProfile(): any ({;
-  profile,;
-  onRequestHire,;
-  onMessageTalent,;)
-pr-12325
-}: TalentProfileProps) {;
-  const { isAuthenticated } = useAuth();
-  // Create proper availability object from talent profile;
-  const availability: Availability = {;,
-    status:;,
-  const availability: Availability = {;
-    status:;
-  const availability: Availability = {;,
-  status:;
-pr-12325
-      profile && profile.availability_type === 'full_time';
-        ? 'available';
-        : profile && profile.availability_type === 'part_time';
-          ? 'limited';
-          : 'unavailable',;
-    message: `${profile && profile.professional_title} with ${profile && profile.years_experience} years of experience`,;`
-  };
-  // Create proper skills array for ProfileSkills component;
-  const skillsArray =;
-    profile && profile.skills?.map(skill => ({;
-      name: skill,;
-      level: 3, // Default level since we don't have this data;,
-      level: 3, // Default level since we don't have this data;
-      level: 3, // Default level since we don't have this data;')
-pr-12325
-    })) || [];
-  // Create proper projects array for ProfileProjects component;
-  const projectsArray =;
-    profile && profile.key_projects?.map((proj, i) => ({;
-      id: `project-${i}`,;`
-      title: proj && proj.title,;
-      description: proj && proj.description,;
-      date: new Date().toISOString(), // Default date since we don't have this data;,
-    })) || [];
 
 
 interface TalentProfileProps {
@@ -124,7 +46,7 @@ export function TalentProfile({
   const { isAuthenticated } = useAuth();
   // Create proper availability object from talent profile
   const availability: Availability;
-origin/cursor/automate-test-improve-and-merge-code-2533
+
   return (
     <div className='container mx-auto px-4 py-8'>'
       {/* Profile Header */}
@@ -219,7 +141,6 @@ export function TalentProfile({
   onMessageTalent
 }: TalentProfileProps) {
   const { isAuthenticated } = useAuth(),
-  
   // Create proper availability object from talent profile
   const availability: Availability = {
     status:;
@@ -250,13 +171,11 @@ export function TalentProfile({
             profile.availability_type === 'part_time' ? 'limited' : 'unavailable',
     message: `${profile.professional_title} with ${profile.years_experience} years of experience`
   },
-  
   // Create proper skills array for ProfileSkills component
   const skillsArray = profile.skills?.map(skill => ({
     name: skill,
     level: 3 // Default level since we don't have this data
   })) || [],
-  
   // Create proper projects array for ProfileProjects component
   const projectsArray = profile.key_projects?.map((proj, i) => ({
     id: `project-${i}`,
@@ -264,7 +183,6 @@ export function TalentProfile({
     description: proj.description,
     date: new Date().toISOString() // Default date since we don't have this data
   })) || [],
-  
   return (
     <div className="container mx-auto px-4 py-8">
 import React from "react",;
@@ -504,7 +422,6 @@ export function TalentProfile({
             profileType="talent"
           />
         </div>
-        
         {/* Right Column - Bio & Projects */}
         <div className="lg:col-span-2 space-y-8">
           {/* Bio Section */}
@@ -514,7 +431,6 @@ export function TalentProfile({
               <p className="text-zion-slate whitespace-pre-wrap">{profile.bio}</p>
             </div>
           </div>
-          
           {/* Projects Section */}
           <ProfileProjects projects={projectsArray} />;
           {/* Ratings Section */}
@@ -568,7 +484,7 @@ export function TalentProfile({
                   Connect with {profile.full_name} for your next project and get started right away.
                   {profile.hourly_rate && ` Rate starts at $${profile.hourly_rate}/hour.`}
                 </p>
-                
+
                 <div className="flex flex-wrap gap-4 justify-center">
                   <Button 
                     size="lg" 
@@ -578,7 +494,6 @@ export function TalentProfile({
                     <Handshake className="mr-2 h-5 w-5" />
                     Hire Now
                   </Button>
-                  
                   {onMessageTalent && (
                     <Button 
                       size="lg" 
@@ -765,13 +680,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   >
                     <Handshake className="mr-2 h-5 w-5" />"
 
-                  
                       variant="outline"""
                       className="border-zion-purple text-zion-purple hover:bg-zion-purple/10""
                       onClick={onMessageTalent}
                       <MessageSquare className="mr-2 h-5 w-5" />"
 
-                    
                 </p>;"
                 <div className='flex flex - wrap gap - 4 justify - center'>;
                     size='lg';

@@ -1,8 +1,4 @@
-import Link from 'next / link';
-export default /**
- * Placeholder - Function description
- */
-function Placeholder() {
+
   return (
     <main className="min - h-screen p - 8">;
       <Head>;

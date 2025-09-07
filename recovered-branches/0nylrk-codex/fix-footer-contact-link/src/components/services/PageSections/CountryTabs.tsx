@@ -37,15 +37,6 @@ export function CountryTabs({
 
 
 
-import { useState } from "react",;
-import { Search } from "lucide-react",;
-import { Input } from "@/components/ui/input",;
-import { Button } from "@/components/ui/button",;
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
-import { CountryServiceCard } from "@/components/services/CountryServiceCard";
-import { CountryPricing } from "@/data/onsiteServicePricing";
-import { CountryServiceCard } from "@/components/services/CountryServiceCard",;
-import { CountryPricing } from "@/data/onsiteServicePricing",;
 
 }: CountryTabsProps) {
   return (
@@ -362,7 +353,6 @@ export function CountryTabs({ ;
 
         <TabsTrigger value="all" className="data-[state=active]:bg-zion-purple">"
 
-        
       <TabsContent value="featured" className="mt-0">"
         <div className="mb-6">"
 </div>"
@@ -505,7 +495,4 @@ setSearchQuery
   )
 }
 
-            
-      
-    
 pr-12325

@@ -5,21 +5,11 @@ echo "🔧 Quick conflict resolution starting..."
 # Function to fix conflicts in a file
 fix_file() {
     local file="$1"
-    if [ -f "$file" ] && grep -q "<<<<<<< HEAD" "$file"; then
-        echo "Fixing: $file"
-        
-        # Create backup
-        cp "$file" "$file.backup"
-        
-        # Remove conflict markers and keep HEAD version
-        sed -i '/^<<<<<<< HEAD/,/^=======/!d; /^=======/d; /^>>>>>>> /d' "$file"
-        
+    if [ -f "$file" ] && grep -q "
         # Clean up any remaining markers
-        sed -i '/^<<<<<<< /d; /^=======/d; /^>>>>>>> /d' "$file"
-        
+        sed -i '/^<<<<<<< /d; /^
         # Remove duplicate lines (common after merge conflicts)
         awk '!seen[$0]++' "$file" > "$file.tmp" && mv "$file.tmp" "$file"
-        
         echo "✅ Fixed: $file"
     fi
 }

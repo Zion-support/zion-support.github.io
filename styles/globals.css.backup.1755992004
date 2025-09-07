@@ -23,7 +23,6 @@
   --ring: #3b82f6;
   --radius: 0.75rem;
   --shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-  
   /* Futuristic color palette */
   --neon-blue: #00d4ff;
   --neon-purple: #8b5cf6;
@@ -690,7 +689,6 @@ body::after {
     background: #ffffff !important;
     animation: none !important;
   }
-  
   .futuristic-card {
     background: #ffffff !important;
     border: 1px solid #000000 !important;
@@ -1206,11 +1204,9 @@ body::after {
   .futuristic-heading {
     font-size: clamp(1.5rem, 8vw, 2.5rem);
   }
-  
   .particle-bg::before {
     background-size: 100px 100px;
   }
-  
   .grid-bg {
     background-size: 25px 25px;
   }
@@ -1241,49 +1237,30 @@ body::after {
   .grid-bg {
     display: none;
   }
-  
   body {
     background: white;
     color: black;
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
 }
 }
 
 }
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
   .particle-quantum,
   .particle-holographic,
   .loading-quantum {
     display: none;
   }
-  
   .text-gradient-rainbow,
   .text-gradient-quantum {
     color: #000 !important;
     background: none !important;
   }
 }
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-fcf3
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
 }
 }
 }

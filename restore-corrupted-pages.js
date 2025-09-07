@@ -1,10 +1,4 @@
 
-
-
-
-
-
-
 #!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
@@ -90,6 +84,7 @@ function restorePage(pagePath) {;
 
 
 ),
+
       if (parts.length > 1) {
         // Take the content after the conflict resolution;
     // Clean up the content;
@@ -110,7 +105,6 @@ function restorePage(pagePath) {;
 
 
 
-    
 
 
 
@@ -120,7 +114,6 @@ function restorePage(pagePath) {;
 
 
 
-    
 
 
 
@@ -243,7 +236,6 @@ function restoreAllCorruptedPages() {
 
       } else if (entry.name.endsWith('.tsx') || entry.name.endsWith('.jsx')) {
         results.total++,
-        
         console.log(`\n🔍 Checking: ${fullPath}`),
 
 
@@ -405,7 +397,6 @@ const result = restorePage(fullPath),
   // // // console.log('🚀 Starting page restoration process...'),
   scanDirectory(pagesDir),
   // Generate summary
-  
   console.log('🚀 Starting page restoration process...'),
   // // // console.log('🚀 Starting page restoration process...'),
 
@@ -425,12 +416,10 @@ const result = restorePage(fullPath),
   console.log(`   Restored: ${results.restored}`),
   console.log(`   Failed: ${results.failed}`),
   console.log(`   Success rate: ${((results.restored / results.total) * 100).toFixed(1)}%`),
-  
   // Save detailed report
   const reportPath = path.join(process.cwd(), 'page-restoration-report.json'),
   fs.writeFileSync(reportPath, JSON.stringify(results, null, 2)),
   console.log(`\n📄 Detailed report saved to: ${reportPath}`),
-  
   return results
 
   scanDirectory(pagesDir),
@@ -630,20 +619,5 @@ module.exports = {
 
 
 module.exports = {
-  restore_page,
-  restoreAllCorruptedPages,
 
 
-
-
-
-
-
-main;
-  restorePage,
-
-};
-main
-
-
-main;`;

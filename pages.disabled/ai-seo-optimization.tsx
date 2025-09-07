@@ -2,53 +2,7 @@ const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/ai-seo
   if (!service) return null;
 
 
-  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/ai-seo-optimization'));
-  if (!service) return null;
 
-
-import React from 'react',;
-import Head from 'next/head',;
-import { Phone, Mail, MapPin, Check, ArrowRight, Star, Rocket } from 'lucide-react',;
-import Layout from '../components/layout/Layout',;
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services',;
-
-import React from 'react';
-import Layout from '../components/layout/Layout';
-export default function AISEOOptimization() {
-  return (
-    <Layout title="AI SEO Optimization - Zion Tech Group">
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-6 py-20">
-          <h1 className="text-4xl font-bold text-center mb-8">
-            AI SEO Optimization
-          </h1>
-          <p className="text-center text-gray-600">
-            Optimize your website's SEO with AI-powered tools and strategies.
-          </p>
-        </div>
-      </div>
-    </Layout>
-  );
-import React from 'react'
-import Head from 'next/head'
-import { Phone, Mail, MapPin, Check, ArrowRight, Star, Rocket } from 'lucide-react',
-import Layout from '../components/layout/Layout'
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services'
-
-export default function AISEOOptimizationPage() {
-  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/ai-seo-optimization'))
-  if (!service) return null,
-
-import React from 'react';
-import Layout from '../components/layout/Layout';
-export default function AISEOOptimizationPage() {
-  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/ai-seo-optimization'))
-  if (!service) return null,
-export default function AISEOOptimizationPage() {
-  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/ai-seo-optimization'))
-  if (!service) return null,
-import React from 'react';
-import Layout from '../components/layout/Layout';
 export default function AISEOOptimizationPage() {
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/ai-seo-optimization'))
   if (!service) return null,

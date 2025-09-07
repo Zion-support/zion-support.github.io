@@ -1,20 +1,4 @@
-import { useState } from "react";
-import { Draggable } from "react-beautiful-dnd";
-import { formatDistanceToNow } from "date-fns";
-import { Link } from "react-router-dom";
-import { JobApplication } from "@/types/jobs";
-import { Card, CardContent } from "@/components/ui/card";
-import { Avatar } from "@/components/ui/avatar";
-import { Button } from "@/components/ui/button";
-import { Textarea } from "@/components/ui/textarea";
-import {
-import { useState } from "react",
-import { Draggable } from "react-beautiful-dnd",
-import { formatDistanceToNow } from "date-fns",
-import { Link } from "react-router-dom",
-import { JobApplication } from "@/types/jobs",
-import { Card, CardContent } from "@/components/ui/card",
-import { Avatar } from "@/components/ui/avatar",
+
 
 
 import { useState } from "react",;
@@ -27,7 +11,6 @@ import { Avatar } from "@/components/ui/avatar",  DropdownMenuTrigger} from "@/c
 import { ScoreBadge } from "@/components/jobs/applications/ScoreBadge",;
 import { toast } from "@/hooks/use-toast",;
 import { HireConfirmationModal } from "./HireConfirmationModal",;
-  
 
   const handleSaveNotes = () => {
     // Here you would save the notes to the database
@@ -143,160 +126,7 @@ import { HireConfirmationModal } from "./HireConfirmationModal";
 DropdownMenu;
   DropdownMenuContent;
   DropdownMenuItem;
-  DropdownMenuTrigger;"
-} from "@/components/ui/dropdown-menu";""
-import { ScoreBadge } from "@/components/jobs/applications/ScoreBadge";""
-import { toast } from "@/hooks/use-toast";""
-import { HireConfirmationModal } from "./HireConfirmationModal";"
-interface CandidateCardProps {
-  // TODO: Implement
-  application: JobApplication;"
-import { Button } from "@/components/ui/button",""
-import { Textarea } from "@/components/ui/textarea","
-  // TODO: Implement
-  MessageSquare,
-  User, 
-  FileText, 
-  MoreVertical, 
-  Calendar,
-  AlertTriangle,
-  // TODO: Implement
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-DropdownMenuTrigger,;
-DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
-import { ScoreBadge } from "@/components/jobs/applications/ScoreBadge";
 
-import { toast } from "@/hooks/use-toast";
-import { HireConfirmationModal } from "./HireConfirmationModal";
-interface CandidateCardProps {;
-DropdownMenuTrigger,;"
-interface CandidateCardProps {;"
-import { useState  } from './react';
-import { Draggable  } from './react - beautiful - dnd';
-import { formatDistanceToNow  } from './date - fns';
-import { Link  } from './react-router-dom';
-import { JobApplication  } from '@/types / jobs';
-import { Card, CardContent  } from '@/components / ui / card';
-import { Avatar  } from '@/components / ui / avatar';
-import { Button  } from '@/components / ui / button';
-import { Textarea  } from '@/components / ui / textarea';
-  // TODO: Implement
-  // TODO: Implement
-import { useState  } from './react';''
-import { Draggable  } from './react - beautiful - dnd';''
-import { formatDistanceToNow  } from './date - fns';''
-import { Link  } from './react-router-dom';''
-import { JobApplication  } from '@/types / jobs';''
-import { Card, CardContent  } from '@/components / ui / card';''
-import { Avatar  } from '@/components / ui / avatar';''
-import { Button  } from '@/components / ui / button';''
-import { Textarea  } from '@/components / ui / textarea';'
-
-import {
-  // TODO: Implement
-}
-  MessageSquare,
-  User,
-  FileText,
-  MoreVertical,
-  Calendar,
-  AlertTriangle,}
-  BriefcaseIcon,}
-} from \"lucide-react\";
-import {
-  // TODO: Implement
-}
-  DropdownMenu,
-  DropdownMenuContent,
-
-  DropdownMenuItem,
-
-} from "@/components/ui/dropdown-menu";
-import { ScoreBadge } from "@/components/jobs/applications/ScoreBadge";
-import { toast } from "@/hooks/use-toast";
-import { HireConfirmationModal } from "./HireConfirmationModal";
-  DropdownMenuTrigger} from "@/components/ui/dropdown-menu",
-import { ScoreBadge } from "@/components/jobs/applications/ScoreBadge",
-import { toast } from "@/hooks/use-toast",
-import { HireConfirmationModal } from "./HireConfirmationModal",
-interface CandidateCardProps {
-  application: JobApplication;
-  index: number
-}
-
-
-
-
-
-  DropdownMenuTrigger} from "@/components/ui/dropdown-menu",""
-import { ScoreBadge } from "@/components/jobs/applications/ScoreBadge",""
-import { toast } from "@/hooks/use-toast",""
-import { HireConfirmationModal } from "./HireConfirmationModal","
-  // TODO: Implement
-  application: JobApplication;,
-  index: number;
-
-
-
-
-
-  
-
-  const handleSaveNotes = () => {
-    // Here you would save the notes to the database;"
-    // For now, we'll just show a toast;
-    toast({
-
-)
-export function CandidateCard(): any ({ application, index }: CandidateCardProps) {;
-  const [showNotes, setShowNotes] = useState(false);
-  const [notes, setNotes] = useState(application && application.notes || "");"
-  const [showHireModal, setShowHireModal] = useState(false);
-
-title: "Notes saved"
-      description: "Your notes have been saved"
-    });
-    setShowNotes(false);
-  }
-  const handleHireConfirmed = () => {
-    // Hiring process completed via the modal
-    toast({
-      title: "Hiring process initiated"
-      description: "Offer has been sent to the talent."
-    });
-  }
-      title: "Notes saved",
-      description: "Your notes have been saved"
-      title: "Notes saved",""
-      description: "Your notes have been saved""
-pr-12325
-    }),
-    setShowNotes(false)
-  },
-  
-  const handleHireConfirmed = () => {
-    // Hiring process completed via the modal
-    toast({
-      title: "Hiring process initiated",
-      description: "Offer has been sent to the talent."
-    })
-  },
-title: "Notes saved"
-      description: "Your notes have been saved"
-    });
-    setShowNotes(false);
-  }
-  const handleHireConfirmed = () => {
-    // Hiring process completed via the modal
-    toast({
-      title: "Hiring process initiated"
-      description: "Offer has been sent to the talent."
-    });
-  }
-  
   return (
     <>
       <Draggable draggableId={application.id} index={index}>
@@ -343,7 +173,6 @@ import { Textarea } from "@/components/ui/textarea",;
       description: "Offer has been sent to the talent."")
     })
   },
-  
 
   return (
     <>
@@ -602,7 +431,6 @@ application: JobApplication;
                     </p>
                   </div>
                 </div>
-                
                 <DropdownMenu>
                   <DropdownMenuTrigger asChild>
                     <Button variant="ghost" className="h-8 w-8 p-0">
@@ -845,7 +673,6 @@ application: JobApplication;
                 </Button>
 
                 <Button variant="outline" size="sm" className="flex-1" asChild>
-                
                 <Button 
                   variant="outline" 
                   size="sm" 
@@ -932,7 +759,6 @@ application: JobApplication;
                 <Button
                   variant="default"
                   size="sm"
-                
                 <Button 
                   variant="default" 
                   size="sm" 
@@ -1363,7 +1189,6 @@ function CandidateCard() {
                 <Button
                   variant="default"
                   size="sm"
-                
                 <Button 
                   variant="default" 
                   size="sm" 
@@ -1432,7 +1257,6 @@ function CandidateCard() {
       title: "Hiring process initiated",""
       description: "Offer has been sent to the talent."")
     })
-  
 
   return (
     <>
@@ -1492,7 +1316,6 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
 </img>"
                       <User className="h-4 w-4" />;"
 
-                  
                   <div>
                     <h4 className="font-medium text-sm">"
 </h4>
@@ -1506,14 +1329,12 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
 
                     </p>
                   </div>
-                
                 <DropdownMenu>
 
                   <DropdownMenuTrigger asChild>
                     <Button variant="ghost" className="h-8 w-8 p-0">"
                       <MoreVertical className="h-4 w-4" />"
 
-                    
                   <DropdownMenuContent align="end">"
 
                     <DropdownMenuItem onClick={() => setShowNotes(!showNotes)}>
@@ -1584,8 +1405,6 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
                   <Link to={`/messages?talentId=${application.talent_id}`}>
                     <MessageSquare className="h-3 w-3 mr-1" /> Message;"
 
-                  
-                
 
 
               <div className="flex justify-between mt-2 gap-1">;"
@@ -1602,7 +1421,6 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
                     </span>;
                   variant="default"""
                   size="sm""
-                
 
                   onClick={() => setShowHireModal(true)}
                   <BriefcaseIcon className="h-3 w-3 mr-1" /> Hire;"
@@ -1709,16 +1527,10 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
       <HireConfirmationModal;"
                     <a href={application.resume.file_url} target="_blank" rel="noopener noreferrer">"
 
-                    
                     <span>
 
                     </span>
-                
 
-                
-            
-          
-      
         isOpen={showHireModal}
         onClose={() => setShowHireModal(false)}
 

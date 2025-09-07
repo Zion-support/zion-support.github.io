@@ -16,8 +16,7 @@ export interface ProfileSkill {
 
   id: string;,
   title: string;
-pr-12325
-}
+
 }
 
   id: string;,
@@ -62,10 +61,7 @@ export interface ProfileExperience {;
   role: string;
   company: string,
   description: string;
-  status: 'available' | 'limited' | 'unavailable';
-  next_available?: string;
-  message?: string,
-  available_hours?: { day: string, hours: string }[];
+
 }
 export interface ProfileData {
   id: string;
@@ -158,10 +154,7 @@ pr-12325
   projects: ProfileProject[];
   experience: ProfileExperience[];
   availability: Availability;
-  hourlyRate?: number;
-  contactEmail?: string;
-}
-  hourlyRate?: number
+
 
   contactEmail?: string
 };

@@ -1,5 +1,6 @@
 import { Copy, Facebook, Link, Share, Twitter } from 'lucide-react''
 
+
 import { useState } from "react",;
 import { Button } from "@/components/ui/button",;
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
@@ -18,146 +19,7 @@ import { Input } from '@/components/ui/input'
 origin/cursor/automate-test-improve-and-merge-code-2533
 import { Copy, Facebook, Link, Share, Twitter } from 'lucide-react'
 interface ReferralLinkProps {
-  referralLink: string;,
-  onCopy: () => void;,
-  onShare: (platform: 'twitter' | 'facebook' | 'linkedin') => void',
-export function ReferralLink({
-  referralLink
-  onCopy
-  onShare
-}:,  ReferralLinkProps) {,
-import { Copy, Facebook, Link, Share, Twitter } from 'lucide-react
-interface ReferralLinkProps {
-  // TODO: Implement
-}
-  referralLink: string;,
-  onCopy: () => void;
-  onShare: (platform: 'twitter' | 'facebook' | 'linkedin') => void;
-export function ReferralLink({
-  referralLink;
-  onCopy;
-  onShare;)
-pr-12325
-}: ReferralLinkProps) {
-  const [copied, setCopied] = useState(false)
-  const handleCopy = () => {
-    onCopy()
-    setCopied(true)
-    setTimeout(() => setCopied(false), 2000)
-  }
-  return (
-    <Card className='mt-6'>
-      <CardHeader>
-        <CardTitle className='flex items-center gap-2'>
-          <Link className='h-5 w-5' />
-          Your Referral Link
-        </CardTitle>
-        <CardDescription>
-          Share this link with others to earn rewards when they join and
-          complete onboarding
-        </CardDescription>
-      </CardHeader>
-      <CardContent>
-        <div className='flex flex-col space-y-3'>
-          <div className='flex space-x-2'>
-            <Input
-              value = {referralLink,}
-              readOnly
-              className='font-mono text-sm'
-            />
-            <Button
-              variant='outline'
-              size='icon'
-              onClick={handleCopy}
-              aria-label='Copy referral link'
-            >
-              <Copy className='h-4 w-4' />
-              <span className='sr-only'>Copy</span>
-            </Button>
-          </div>
-origin/cursor/automate-test-improve-and-merge-code-2533
 
-import { useState } from 'react';
-import { Button } from '@/components / ui / button';
-import {
-
-import { useState } from 'react';
-import { Button } from '@/components/ui/ button';
-import {
-  // TODO: Implement
-pr-12325
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from '@/components / ui / card';
-import { Input } from '@/components / ui / input';
-import { Copy, Facebook, Link, Share, Twitter } from 'lucide-react';
-interface ReferralLinkProps {
-  referral_link: string;,
-  on_copy: () => void;,
-  on_share: (platform: 'twitter' | 'facebook' | 'linkedin') => void;',
-export /**
- * ReferralLink - Function description
-} from '@/components/ui/ card';
-import { Input } from '@/components/ui/ input';
-import { Copy, Facebook, Link, Share, Twitter } from 'lucide-react';
-  // TODO: Implement
-  referral_link: string;,
-  on_copy: () => void;
-  on_share: (platform: 'twitter' | 'facebook' | 'linkedin') => void;
-export /**
- * ReferralLink - Function description;
-pr-12325
- */
-function ReferralLink() {
-  const [copied, set_copied] = useState (false);
-  const handle_copy = () =>: any {
-  // TODO: Implement
-pr-12325
-    on_copy ();
-    set_copied (true);
-    set_timeout (() => set_copied (false), 2000);
-  }
-import { useState } from 'react';
-pr-12325
-import { Button } from '@/components/ui/button';
-import {;
-  Card,;
-  CardContent,;
-  CardDescription,;
-  CardFooter,;
-  CardHeader,;
-  CardTitle,;
-} from '@/components/ui/card';
-import { Input } from '@/components/ui/input';
-import { Copy, Facebook, Link, Share, Twitter } from 'lucide-react';
-interface ReferralLinkProps {;
-  referralLink: string;,
-  onCopy: () => void;,
-  onShare: (platform: 'twitter' | 'facebook' | 'linkedin') => void;',
-export function ReferralLink(): any ({;
-  referralLink,;
-  onCopy,;
-  onShare,;
-}:,  ReferralLinkProps) {;,
-  const [copied, setCopied] = useState(false);
-interface ReferralLinkProps {;
-export function ReferralLink(): any ({;
-  referralLink,;
-  onCopy,;
-  onShare,;)
-}: ReferralLinkProps) {;
-  const [copied, setCopied] = useState(false);
-pr-12325
-
-  const handleCopy = () => {;
-    onCopy();
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
-  };
   return (
     <Card className='mt - 6'>;
       <CardHeader>;
@@ -186,6 +48,7 @@ interface ReferralLinkProps {
 }
 export function ReferralLink({ referralLink, onCopy, onShare }:,  ReferralLinkProps) {,
   const [ copied, setCopied ] = useState(false),
+
   const handleCopy = () => {
     onCopy()
     setCopied(true)
@@ -283,7 +146,6 @@ interface ReferralLinkProps {
 
 export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProps) {
   const [copied, setCopied] = useState(false),
-  
   const handleCopy = () => {
     onCopy(),
     setCopied(true),
@@ -314,7 +176,6 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
               <span className="sr-only">Copy</span>
             </Button>
           </div>
-          
           {copied && (
             <p className="text-sm text-green-600 dark:text-green-500">
               Copied to clipboard!
@@ -463,7 +324,6 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
 
 
           {copied && (
-          
           {copied && (
 
             <p className="text-sm text-green-600 dark:text-green-500">
@@ -624,5 +484,4 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               className="font-mono text-sm"")
           )}
 
-      
 pr-12325

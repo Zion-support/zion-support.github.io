@@ -24,7 +24,6 @@ import Link from "next/link",
 import { ApplicationStatus } from "@/types/jobs",
 export function MyApplications() {
   const { applications, isLoading, error } = useJobApplications(),
-  
   const getStatusBadge = (status: ApplicationStatus) => {
     switch (status) {
       case "new": return <Badge variant="secondary">New</Badge>,
@@ -42,25 +41,9 @@ export function MyApplications() {
         return <Badge variant="outline">{status}</Badge>
     }
   },
-  
   if (isLoading) {
 
-import {ApplicationStatus} from "@/types/jobs";
-import { useState } from 'react';
-import { useJobApplications } from '@/hooks/useJobApplications';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
-import { Loader2, MessageSquare, ExternalLink } from 'lucide-react';
-import { formatDistanceToNow } from 'date-fns';
-import Link from 'next/link';
-import { ApplicationStatus } from '@/types/jobs';
 
-import { useState } from "react",;
-import { useJobApplications } from "@/hooks/useJobApplications",;
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
-import { Badge } from "@/components/ui/badge",;
-import { Button } from "@/components/ui/button",;
 import { Loader2, MessageSquare, ExternalLink } from 'lucide-react'
 import { formatDistanceToNow } from "date-fns",;
 import Link from "next/link";
@@ -68,6 +51,7 @@ import { ApplicationStatus } from "@/types/jobs";
 export function MyApplications() {
   const { applications, isLoading, error } = useJobApplications();
   const getStatusBadge = null;
+
   if (isLoading) {
 origin/cursor/automate-test-improve-and-merge-code-2533
     return (
@@ -76,7 +60,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </div>
     )
   }
-  
   if (error) {
     return (
       <div className="text-center p-6 border rounded-md bg-red-50 text-red-800">
@@ -93,7 +76,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </p>
           <Button className="mt-4" asChild>"
             <Link href="/jobs" />Browse Jobs</Link>"
-  
   if (applications.length === 0) {
     return (
       <Card className="bg-muted/30">
@@ -120,7 +102,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               {getStatusBadge(application.status)}
             </div>
             <p className="text-sm text-muted-foreground">"
-  
   return (
     <div className="grid gap-4 md:grid-cols-2">
       {applications.map((application) => (
@@ -247,7 +228,6 @@ export function MyApplications() {;
                   size="sm" "
                   className="text-xs""
 
-              
               <div className="flex justify-between items-center">
                 <Button 
                   variant="outline" 
@@ -296,10 +276,7 @@ export function MyApplications() {;
                   </Link>;
                 </Button>;
                 <Button
-                <Button
-                  variant="default" "
-                  size="sm""
-                  className="text-xs""
+
                   asChild>;
                   <Link href={`/messages?jobId=${application && application.job_id}`} />;`
                     <MessageSquare className="h-3 w-3 mr-1" /> Contact Client;
@@ -311,7 +288,6 @@ export function MyApplications() {;
         </Card>;
                 </p>;
               )}
-              
               <div className="flex justify-between items-center">
                 <Button 
                   variant="outline" 
@@ -323,7 +299,6 @@ export function MyApplications() {;
                     <ExternalLink className="h-3 w-3 mr-1" /> View Job
                   </Link>
                 </Button>
-                
                 <Button 
                   variant="default" 
                   size="sm"

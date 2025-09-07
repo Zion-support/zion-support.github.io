@@ -1,15 +1,4 @@
-import { useEffect  } from 'react';
-import { useLocation } from 'react-router-dom';
-import { useEffect } from 'react',;
-import { useLocation } from 'react-router-dom',;
-import {useEffect} from 'react';
-import {useLocation} from 'react-router-dom';
-import { useEffect } from 'react',;
-import { useLocation } from 'react-router-dom',;
-import {useEffect} from 'react';
-import {useLocation} from 'react-router-dom';
-import { useEffect } from 'react',;
-import { useLocation } from 'react-router-dom',;
+
 /**
  * Custom hook to track page views for analytics purposes
  * Attaches event listeners to track route changes and logs page views
@@ -17,7 +6,6 @@ import { useLocation } from 'react-router-dom',;
 
 export function usePageViewTracking() {
 
-export function usePageViewTracking() {
 
 import { useEffect } from "react";""
 import { useLocation } from "react-router-dom";"
@@ -54,6 +42,7 @@ export function usePageViewTracking() {;
   useEffect(() => {"
     console.log("Page view:", location.pathname);"
   }, [location.pathname]);
+
 }
 
 console && console.log('Page view:', location && location.pathname)
@@ -100,12 +89,10 @@ import { useLocation } from 'react-router-dom',;
     // Initial page load;
       // // // console.log('Page view:', window.location.pathname)
     },
-    
     // Listen for route changes;
     window.addEventListener('popstate', handleRouteChange),
     // Initial page load;
     handleRouteChange(),
-    
       window.removeEventListener('popstate', handleRouteChange)
   }, []),
 

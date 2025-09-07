@@ -31,26 +31,12 @@ interface ConversationItemProps {;
   isActive: boolean
 
 
-  conversation: Conversation,
-conversation: Conversation,
-  isActive: boolean,
-
   onClick: () => void
 }
 export function ConversationItem({ conversation, isActive, onClick }: ConversationItemProps) {
   return (
     <div 
-      className={cn(;
-        "flex items-start gap-3 p-3 cursor-pointer rounded-md transition-colors";
-        isActive ? "bg-zion-purple/10 border-l-2 border-zion-purple" : "hover: bg-zion-blue-dark/30",
-      className={cn(
-        "flex items-start gap-3 p-3 cursor-pointer rounded-md transition-colors";
-        isActive ? "bg-zion-purple/10 border-l-2 border-zion-purple" : "hover: bg-zion-blue-dark/30"
 
-        "flex items-start gap-3 p-3 cursor-pointer rounded-md transition-colors",
-        isActive ? "bg-zion-purple/10 border-l-2 border-zion-purple" : "hover:bg-zion-blue-dark/30",
-
-    <div 
 
         conversation.unread_count > 0 && "bg-zion-blue-dark/20"
       )}
@@ -206,7 +192,6 @@ export function ConversationItem({ conversation, isActive, onClick }: Conversati
 "
         <AvatarFallback className="bg-zion-blue-dark text-white">"
 
-        
       <div className="flex-1 min-w-0">"
         <div className="flex justify-between items-start">"
           <div className="font-medium text-white truncate">{conversation.other_user.name}</div>""

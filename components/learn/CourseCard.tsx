@@ -3,24 +3,7 @@
 import Link from 'next/link';
 
 export type Course = any;
-origin/cursor/automate-test-improve-and-merge-code-2533
 
-export type Course = {
-
-  id: string;
-
-  title: string;
-  duration_minutes: number;
-  level: string;
-  is_free: boolean;
-
-  category: string;
-  certification_badge: string,
-  description?: string;
-export default /**
- * CourseCard - Function description
- */
-function CourseCard() {
   return (
     <div className='border rounded - lg p - 4 hover:shadow - md transition'>;
       <div className='flex items - center justify - between'>;

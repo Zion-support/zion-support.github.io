@@ -1,5 +1,4 @@
 
-
 import React, { useState } from 'react',;
 import Head from 'next/head',;
 import Link from 'next/link',;
@@ -373,6 +372,7 @@ return `$${numericPrice.toLocaleString()}/month`;
     }
   }
 origin/cursor/automate-test-improve-and-merge-code-2533
+
   return (
 <div className='min-h-screen bg-black text-white relative'>
       <FuturisticAnimatedBackground2029 />

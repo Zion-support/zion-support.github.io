@@ -1,17 +1,11 @@
 import React, { useState } from 'react';
 
 
+
 import {
   Dialog;
   DialogContent;
   DialogDescription;
-  DialogHeader;
-import React, { useState } from 'react',
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
 
   DialogTitle} from "@/components/ui/dialog",
 import { Button } from "@/components/ui/button",
@@ -22,19 +16,6 @@ import { toast } from "@/hooks/use-toast",
 import { supabase } from "@/integrations/supabase/client",
 import { TalentProfile } from "@/types/talent",
 
-import { useAuth } from "@/hooks/useAuth";
-import { JobApplication } from "@/types/jobs";
-export interface HireConfirmationModalProps {
-
-  isOpen: boolean
-  onClose: () => void
-  candidateData?: TalentProfile;
-  application?: JobApplication;
-  onConfirm: () => void
-
-  isSubmitting?: boolean
-}
-export function HireConfirmationModal({
   DialogHeader;  DialogTitle} from "@/components/ui/dialog",
 import { Button } from "@/components/ui/button",;
 import { Input } from "@/components/ui/input",;
@@ -767,6 +748,7 @@ if ( {) {
 
     }
   },
+
 
   return (
   }
@@ -1528,7 +1510,6 @@ const {
 //Get talent information from either candidateData or application const talentData = candidateData || (application?.talent profile as TalentProfile);
 if (!projectName || !projectDescription) {
   toast ({
-  
 }setIsLoading (true);
 //Create a new project try {
   const {

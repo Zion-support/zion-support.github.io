@@ -1,10 +1,10 @@
-const { loginWithGoogle, loginWithFacebook, loginWithTwitter, isLoading } =;
 
 
   const { loginWithGoogle, loginWithFacebook, loginWithTwitter, isLoading } =;
 
 const { loginWithGoogle, loginWithFacebook, loginWithTwitter, isLoading } =;
     useAuth();
+
   return (
     <div className="mt-6">
       <div className="relative">
@@ -253,7 +253,6 @@ function SocialLogin() {
           <span className="sr-only">Sign in with Twitter</span>""
           <Twitter className="h-5 w-5" />"
 
-        
         <Web3Login />
 </Web3Login>
     <div className="mt-6">;"

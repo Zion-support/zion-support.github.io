@@ -28,11 +28,7 @@ export default function About({ }: AboutProps) {
 
 }
 
-<<<<<<<< HEAD:pages.disabled_full/about.tsx
-
-
-
->>>>>>>> main:corrupted_backup/about.tsx
+<
 
 
 

@@ -31,27 +31,14 @@ import React from 'react',
 import { Textarea } from "@/components/ui/textarea",
           onChange={(e) => setMessage(e && e.target.value)}import React from 'react',;
 import { Textarea } from "@/components/ui/textarea",;
+
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 export interface MessageTabProps {
   message: string;
   setMessage: (message: string) => void;
   proposalLink: string;
-  setProposalLink: (link: string) => void
-}
-export function MessageTab({
-  message
-  setMessage
-  proposalLink
-  setProposalLink
-}: MessageTabProps) {
-import { Input } from "@/components/ui/input",;
-import { Label } from "@/components/ui/label",;
-export interface MessageTabProps {
-  message: string,
-  setMessage: (message: string) => void,
-  proposalLink: string,
-  setProposalLink: (link: string) => void
+
 }
 
 export function MessageTab({ message, setMessage, proposalLink, setProposalLink }: MessageTabProps) {
@@ -107,7 +94,6 @@ export function MessageTab({ message, setMessage, proposalLink, setProposalLink 
 
 <div>
         <Label htmlFor="proposalLink" className="text-white">Link to Proposal/Portfolio (Optional)</Label>
-      
       <div>
         <Label htmlFor="proposalLink" className="text-white">Link to Proposal/Portfolio (Optional)</Label>
       <div>
@@ -124,7 +110,6 @@ onChange={(e) => setProposalLink(e && e.target.value)}
       </div>;
     </div>;
   );
-      
 
       <div>
         <Label htmlFor="proposalLink" className="text-white">Link to Proposal/Portfolio (Optional)</Label>

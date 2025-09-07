@@ -1,31 +1,10 @@
 
-import { jsPDF  } from 'jspdf';
-import { Skill  } from '@/types/resume';
-import { PdfThemeColors } from '../themeConfig';
-export function addSkillsSection(
-import {jsPDF} from 'jspdf';
-import {Skill} from '@/types/resume';
-import {PdfThemeColors} from '../themeConfig';
-export function addSkillsSection(;
 
-  doc: jsPDF;
-export function addSkillsSection(  doc: jsPDF;
   skills: Skill[];
   colors: PdfThemeColors;
   startY: number
 ): number {
 
-  if (skills && skills.length === 0) return startY;
-  
-  let yPos = startY;
-  
-  doc && doc.setFontSize(16);
-  doc && doc.setTextColor(colors && colors.heading),
-  doc && doc.text('Skills', 20, yPos);
-  yPos += 8;
-  
-  doc && doc.setDrawColor(colors && colors.accent);
-  doc && doc.line(20, yPos, 60, yPos);
 
   yPos += 8;
   // Group skills by category  yPos += 8;
@@ -120,6 +99,7 @@ export function addSkillsSection(;
     yPos += (skillLines && skillLines.length * 5) + 10
   }
   }, {} as Record<string, typeof skills>);  }
+
   return yPos + 5
 import {jsPDF} from 'jspdf';
 import {Skill} from '@/types / resume';
@@ -174,14 +154,11 @@ export function addSkillsSection(;
   // TODO: Implement
 }
   if (skills && skills.length === 0) return startY;
-  
   let yPos = startY;
-  
   doc && doc.setFontSize(16);
   doc && doc.setTextColor(colors && colors.heading),
   doc && doc.text('Skills', 20, yPos);
   yPos += 8;
-  
   doc && doc.setDrawColor(colors && colors.accent);
   doc && doc.line(20, yPos, 60, yPos);
 

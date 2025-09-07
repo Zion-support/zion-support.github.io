@@ -15,34 +15,10 @@ export interface PerformanceMetrics {;
   cumulativeLayoutShift: number;
   firstInputDelay: number;
   timeToInteractive: number;
-  totalBlockingTime: number;
 
-
-
-
-
-
-
-
-  speed_index: number;
-  performance_score: number;
-  accessibility_score: number;
-  bestPracticesScore: number,
-  seo_score: number;
-
-
-
-
-}
-export interface PerformanceAlert {
-}
-export interface PerformanceAlert {
-
-
-
-  id: string;
   totalBlockingTime: number;}
 export interface PerformanceAlert {}
+
 export interface PerformanceAlert {
   url: string;
   type: 'critical' | 'warning' | 'info';
@@ -50,201 +26,19 @@ export interface PerformanceAlert {
   metric: string;
   threshold: number;
 
-
-
-
-
-
-  current_value: number;
-  timestamp: Date,
-  resolved: boolean;
-
-current_value: number;
-  timestamp: Date,
-  resolved: boolean;
-
-
-
-
-
-  current_value: number;
-  timestamp: Date,
-  resolved: boolean;
-
-}
-export interface MonitoringConfig {
-  urls: string[];
-  frequency: '1min' | '5min' | '15min' | '1hour' | '6hours' | 'daily';
-  thresholds: {
-    load_time: number;
-    firstContentfulPaint: number;
-
-
-
-
-
-
-  constructor(apiKey: string, baseUrl: string = 'https://api && api.ziontech.ai') {
-    this && this.apiKey = apiKey,
-    this && this.baseUrl = baseUrl
-
-
-  currentValue: number;
-
-  timestamp: Date
-
-  resolved: boolean
-}
-export interface MonitoringConfig {
-
-export interface MonitoringConfig {;
   urls: string[];
   frequency: '1min' | '5min' | '15min' | '1hour' | '6hours' | 'daily';
   thresholds: {
     loadTime: number;
     firstContentfulPaint: number;
 
-    largestContentfulPaint: number
 
-    cumulativeLayoutShift: number
-  }
-  notifications: {
-    email: boolean;
-
-    slack: boolean
 
     webhook: boolean
   }
 }
 
 
-
-
-
-export class PerformanceMonitorService {
-
-  private apiKey: string;
-
-  private baseUrl: string
-  constructor(apiKey: string, baseUrl: string = 'https://api.ziontech.ai') {
-    this.apiKey = apiKey
-    this.baseUrl = baseUrl
-  constructor(apiKey: string, baseUrl: string = 'https://api && api.ziontech.ai') {
-    this && this.apiKey = apiKey,
-    this && this.baseUrl = baseUrl
-
-
-
-
-
-
-
-  }
-  async monitorWebsite(url: string): Promise<PerformanceMetrics> {
-    try {
-      // In a real implementation, this would use Lighthouse, WebPageTest, or similar
-
-      const response = await fetch(`${this.baseUrl}/performance/monitor`, {
-        method: 'POST'
-        headers: {
-          'Authorization': `Bearer ${this.apiKey}`;
-          'Content-Type': 'application/json'}
-        body: JSON.stringify({ url })});
-      if (!response.ok) {
-        throw new Error(`Performance monitoring failed: ${response.statusText}`)
-
-
-
-
-
-export interface PerformanceMetrics {;
-  url: string,;
-  timestamp: Date,;
-  loadTime: number,;
-  firstContentfulPaint: number,;
-  largestContentfulPaint: number,;
-  cumulativeLayoutShift: number,;
-  firstInputDelay: number,;
-  timeToInteractive: number,;
-  totalBlockingTime: number,;
-  speedIndex: number,;
-  performanceScore: number,;
-  accessibilityScore: number,;
-  bestPracticesScore: number,;
-  seoScore: number;
-}
-;
-export interface PerformanceAlert {;
-  id: string,;
-  url: string,;
-  type: 'critical' | 'warning' | 'info',;
-  message: string,;
-  metric: string,;
-  threshold: number,;
-  currentValue: number,;
-  timestamp: Date,;
-  resolved: boolean;
-}
-;
-export interface MonitoringConfig {;
-  urls: string[],;
-  frequency: '1min' | '5min' | '15min' | '1hour' | '6hours' | 'daily',;
-  thresholds: {;
-    loadTime: number,;
-    firstContentfulPaint: number,;
-    largestContentfulPaint: number,;
-    cumulativeLayoutShift: number;
-  },;
-  notifications: {;
-    email: boolean,;
-    slack: boolean,;
-    webhook: boolean;
-  }
-}
-;
-export class PerformanceMonitorService {;
-  private apiKey: string,;
-  private baseUrl: string,;
-  constructor(apiKey: string, baseUrl: string = 'https://api.ziontech.ai') {;
-    this.apiKey = apiKey,;
-    this.baseUrl = baseUrl;
-  }
-;
-  async monitorWebsite(url: string): Promise<PerformanceMetrics> {;
-    try {;
-      // In a real implementation, this would use Lighthouse, WebPageTest, or similar;
-      const response = await fetch(`${this.baseUrl}/performance/monitor`, {;
-        method: 'POST',;
-        headers: {;
-          'Authorization': `Bearer ${this.apiKey}`,;
-          'Content-Type': 'application/json'},;
-        body: JSON.stringify({ url })}),;
-      if (!response.ok) {;
-        throw new Error(`Performance monitoring failed: ${response.statusText}`);
-
-
-
-
-
-
-
-
-
-export interface PerformanceMetrics {;
-
-      }
-      return await response.json()
-
-
-
-
-
-
-
-
-
-
-      const response = await fetch(`${this && this.baseUrl}/performance/monitor`, {
 }
 export interface MonitoringConfig {  }
   async monitorWebsite(url: string): Promise<PerformanceMetrics> {
@@ -501,7 +295,6 @@ export interface PerformanceMetrics {;
 
 
     const historicalData = await this && this.getHistoricalData(url, timeframe === 'day' ? 1 : timeframe === 'week' ? 7 : 30);
-    
     const loadTimes = historicalData && historicalData.map(d => d && d.loadTime);
     const performanceScores = historicalData && historicalData.map(d => d && d.performanceScore);
     const dates = historicalData && historicalData.map(d => d && d.timestamp.toISOString().split('T')[0]);
@@ -719,11 +512,9 @@ export class PerformanceMonitorService {
 
 
       date && date.setDate(date && date.getDate() - i);
-      
       date && date.setDate(date && date.getDate() - i);
 
       date && date.setDate(date && date.getDate() - i);
-      
 date && date.setDate(date && date.getDate() - i);
 
 
@@ -916,9 +707,7 @@ export class PerformanceMonitorService {
       const date = new Date(now);
 
       date && date.setDate(date && date.getDate() - i);
-      
 
-      
       data && data.push({
         timestamp: date;,)
         url;
@@ -1959,4 +1748,5 @@ export const PERFORMANCE_MONITOR_PRICING = {;
 </void>`;
 pr-12325
 </void>'
+
 

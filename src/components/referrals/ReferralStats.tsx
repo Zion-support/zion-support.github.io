@@ -7,110 +7,14 @@ import { Award, Share, Star, TrendingUp } from 'lucide-react''
   stats: ReferralStatsType
   isLoading: boolean
 
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
-import { ReferralStats as ReferralStatsType } from "@/types/referrals",;
-import { Award, Share, Star, TrendingUp } from 'lucide-react'
 
-interface ReferralStatsProps {
-  stats: ReferralStatsType,
-  isLoading: boolean,
-import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
-import { ReferralStats as ReferralStatsType } from '@/types / referrals';
-import { Award, Share, Star, TrendingUp } from 'lucide-react';
-interface ReferralStatsProps {
-  stats: ReferralStatsType;,
-  is_loading: boolean;,
-export /**
- * ReferralStats - Function description
-interface ReferralStatsProps {
-  // TODO: Implement
-}
-  stats: ReferralStatsType;,
-  isLoading: boolean;
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",""
-import { ReferralStats as ReferralStatsType } from "@/types/referrals",""
-import { Award, Share, Star, TrendingUp } from 'lucide-react
-  // TODO: Implement
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/ card';
-import { ReferralStats as ReferralStatsType } from '@/types/ referrals';
-import { Award, Share, Star, TrendingUp } from 'lucide-react';
-  // TODO: Implement
-  is_loading: boolean;
-export /**
- * ReferralStats - Function description;
-pr-12325
- */
-function ReferralStats() {
-  const stat_cards = [;,
-    {
-      title: 'Total Referrals','
-import { Card, CardContent, CardHeader, CardTitle  } from '@/components / ui / card';
-import { ReferralStats as ReferralStatsType  } from '@/types / referrals';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components / ui / card';
+
 import { Star } from 'lucide-react';
 interface ReferralStatsProps {
   stats: ReferralStatsType,
   is_loading: boolean;
 }
-export function ReferralStats({ stats, isLoading }:,  ReferralStatsProps) {,
-  const statCards = [
-    {
-interface ReferralStatsProps {;
-  stats: ReferralStatsType;,
-  isLoading: boolean;,
-export function ReferralStats(): any ({ stats, isLoading }:,  ReferralStatsProps) {;,
-  stats: ReferralStatsType;
-  isLoading: boolean;
-import { Card, CardContent, CardHeader, CardTitle  } from '@/components/ui/ card';
-import { ReferralStats as ReferralStatsType  } from '@/types/ referrals';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/ card';
-import { Star } from 'lucide-react';
-  // TODO: Implement
-  stats: ReferralStatsType,
-export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {
-  const statCards = [
 
-interface ReferralStatsProps {;
-pr-12325
-export function ReferralStats(): any ({ stats, isLoading }: ReferralStatsProps) {;
-  const statCards = [;
-    {;
-      title: 'Total Referrals',;
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { ReferralStats as ReferralStatsType } from "@/types/referrals";
-import { Award, Share, Star, TrendingUp } from 'lucide-react';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
-import { Star } from 'lucide-react';
-interface ReferralStatsProps {;
-  stats: ReferralStatsType,;
-  isLoading: boolean;
-}
-export function ReferralStats(): any ({ stats, isLoading }:,  ReferralStatsProps) {;,
-  const statCards = [;
-    {;
-      title: 'Total Referrals',;
-      icon: <Share className='h-5 w-5 text-muted-foreground' />,,
-  description: "People you've invited",;
-    },;
-    {;
-      title: 'Completed',;
-      value: stats && stats.completedReferrals,;
-      icon: <Star className='h-5 w-5 text-muted-foreground' />,,
-  description: 'Signed up & completed onboarding',;
-    },;
-    {;
-      title: 'Pending',;
-      value: stats && stats.pendingReferrals,;
-      icon: <TrendingUp className='h-5 w-5 text-muted-foreground' />,,
-  description: 'Not yet completed onboarding',;
-    },;
-    {;
-      title: 'Total Rewards',;
-      value: stats && stats.totalRewards > 0 ? `$${stats && stats.totalRewards.toFixed(2)}` : '-',;
-      icon: <Award className='h-5 w-5 text-muted-foreground' />,,
-  description: 'Credits earned from referrals',;
-    },;
-  ];
 
   return (
     <div className='grid gap-4 md:grid-cols-2 lg:grid-cols-4'>;
@@ -402,7 +306,6 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter }
         <Card key={i}>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">"
             <CardTitle className="text-sm font-medium">{card.title}"
-          
           <CardContent>
               <div className="h-6 w-20 bg-muted animate-pulse rounded" />"
               <>"

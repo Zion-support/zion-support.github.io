@@ -2,53 +2,7 @@ const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/ai-sal
   if (!service) return null;
 
 
-  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/ai-sales-automation'));
-  if (!service) return null;
 
-
-import React from 'react',;
-import Head from 'next/head',;
-import { Phone, Mail, MapPin, Check, ArrowRight, Star, ChartBar } from 'lucide-react',;
-import Layout from '../components/layout/Layout',;
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services',;
-
-import React from 'react';
-import Layout from '../components/layout/Layout';
-export default function AISalesAutomation() {
-  return (
-    <Layout title="AI Sales Automation - Zion Tech Group">
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-6 py-20">
-          <h1 className="text-4xl font-bold text-center mb-8">
-            AI Sales Automation
-          </h1>
-          <p className="text-center text-gray-600">
-            Automate your sales processes with AI-powered solutions.
-          </p>
-        </div>
-      </div>
-    </Layout>
-  );
-import React from 'react'
-import Head from 'next/head'
-import { Phone, Mail, MapPin, Check, ArrowRight, Star, ChartBar } from 'lucide-react',
-import Layout from '../components/layout/Layout'
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services'
-
-export default function AISalesAutomationPage() {
-  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/ai-sales-automation'))
-  if (!service) return null,
-
-import React from 'react';
-import Layout from '../components/layout/Layout';
-export default function AISalesAutomationPage() {
-  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/ai-sales-automation'))
-  if (!service) return null,
-export default function AISalesAutomationPage() {
-  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/ai-sales-automation'))
-  if (!service) return null,
-import React from 'react';
-import Layout from '../components/layout/Layout';
 export default function AISalesAutomationPage() {
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/ai-sales-automation'))
   if (!service) return null,

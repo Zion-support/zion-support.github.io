@@ -123,7 +123,6 @@ export function JobMatchesCard({
   if (!job) return null;
 export function JobMatchesCard({ match, onApply, onDecline, showApplied = false }: JobMatchCardProps) {
   const job = match.job,
-  
   if (!job) return null,
 return (
   if (!job) return null;
@@ -199,13 +198,13 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
         {match.matched_skills?.length > 0 && (
   if (!job) return null;export function JobMatchesCard({ match, onApply, onDecline, showApplied = false }: JobMatchCardProps) {
   const job = match.job,
-  
   if (!job) return null,
     return (  return (
     <Card className="overflow-hidden border-l-4 border-l-blue-500">;
       <CardHeader className="p-4 pb-2">;
         <div className="flex justify-between items-start">;
           <div>;        {match.matched_skills?.length > 0 && (
+
           <div className="mb-3">
             <p className="text-xs text-muted-foreground mb-1">
               Matched skills:
@@ -531,7 +530,6 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
   const job = match.job,
   if (!job) return null,
 
-  
 
   return ()
   return (
@@ -590,7 +588,6 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
 
                 <Badge variant="secondary" className="text-xs">"
 
-                
 
 
         <div className="grid grid-cols-2 gap-2 mb-2 mt-3">"
@@ -630,7 +627,6 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
               className="flex-1""
               onClick={() => onApply(match.id, job.id)}
 
-            
 
               variant="outline"""
               onClick={() => onDecline(match && match.id)}

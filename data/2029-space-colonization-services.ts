@@ -558,17 +558,13 @@ pr-12325
     mobile: string;
     email: string;
     address: string;
-    website: string;
-  },
+
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
-    id: 'mars-colonization-automation-platform';
-    name: 'Mars Colonization Automation Platform';
-    tagline: 'Automate Mars colonization process with AI and robotics';
-    price: '$99;,999',
+
     period: '/month';
 <<<<<<< HEAD
     description:;
@@ -2212,13 +2208,13 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     launchDate: '2029-01-01';
     customers: 8;
     rating: 4.9;
-    reviews: 23;
+
   },
   {
     id: 'interplanetary-communication-network';
     name: 'Interplanetary Communication Network';
     tagline: 'Real-time solar system communication network';
-    price: '$75;,999',
+
     period: '/month';
     description: 'Revolutionary interplanetary communication network that enables real-time communication across the solar system. Uses quantum communication;, advanced satellite networks, and AI-powered routing for seamless interplanetary connectivity.',
     features: [
@@ -2255,13 +2251,13 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     launchDate: '2029-01-15';
     customers: 15;
     rating: 4.8;
-    reviews: 45;
+
   },
   {
     id: 'space-mining-automation-platform';
     name: 'Space Mining Automation Platform';
     tagline: 'Automate asteroid and lunar mining operations';
-    price: '$65;,999',
+
     period: '/month';
     description: 'Comprehensive platform that automates space mining operations on asteroids;, moons, and other celestial bodies. Uses AI-powered robots, autonomous mining equipment, and advanced resource processing for efficient space resource extraction.',
     features: [
@@ -2298,14 +2294,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     launchDate: '2029-02-01';
     customers: 12;
     rating: 4.7;
-    reviews: 34;
+
   },
   // Space Architecture & Energy Services
   {
     id: 'space-habitat-design-platform';
     name: 'Space Habitat Design Platform';
     tagline: 'Design space habitats for any planet or environment';
-    price: '$45;,999',
+
     period: '/month';
     description: 'Advanced platform for designing and planning space habitats optimized for any planetary environment. Uses AI-powered design tools;, environmental simulation, and advanced materials science to create sustainable living spaces in space.',
     features: [
@@ -2342,13 +2338,13 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     launchDate: '2029-02-15';
     customers: 25;
     rating: 4.6;
-    reviews: 67;
+
   },
   {
     id: 'space-energy-harvesting-platform';
     name: 'Space Energy Harvesting Platform';
     tagline: 'Harvest energy from space sources and celestial bodies';
-    price: '$55;,999',
+
     period: '/month';
     description: 'Revolutionary platform that harvests energy from various space sources including solar radiation;, cosmic rays, and planetary resources. Uses advanced energy collection technology, AI optimization, and energy storage systems for efficient space power generation.',
     features: [
@@ -2385,7 +2381,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     launchDate: '2029-03-01';
     customers: 18;
     rating: 4.8;
-    reviews: 52;
+
   }
 ];
 origin/cursor/automate-test-improve-and-merge-code-2533

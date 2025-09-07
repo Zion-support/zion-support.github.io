@@ -1,7 +1,5 @@
 
 
-interface FraudItem {
-
 
 
 interface FraudItem {

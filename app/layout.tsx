@@ -268,10 +268,8 @@ export default function RootLayout({
 >>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
 =======
     <html lang="en">
-<<<<<<< HEAD
-}
-}
 
+<<<<<<< HEAD
       <body className="min-h-screen bg-gray-50">
         <Header />
         <main>{children}</main>
@@ -292,3 +290,5 @@ export default function RootLayout({
   );
 }
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-c074
+=======
+>>>>>>> 96a1f382319a97880a21e7ceb65ec0821c9ac17f

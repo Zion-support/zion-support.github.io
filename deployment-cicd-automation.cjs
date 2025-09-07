@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-#!/usr/bin/env node;
-=======
-#!/usr/bin/env node
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
@@ -13,75 +9,16 @@ class DeploymentCICDAutomation {
     this.projectRoot = process.cwd();
     this.deploymentSteps = [];
     this.errors = [];
-<<<<<<< HEAD
 
-  log(message, type = 'INFO') {
-    const timestamp = new Date().toISOString();
-    const prefix = {
-      'INFO': 'ℹ️',
-      'SUCCESS': '✅',
-      'ERROR': '❌',
-      'WARNING': '⚠️',
-      'PROGRESS': '🔄
-    }[type] || 'ℹ️';
-    console.log(`${prefix} [${timestamp}] ${message}`);
-
-  async runCommand(command, description, options = {}) {`;
-    this.log(`Running: ${description}`, 'PROGRESS');
-=======
-  }
-'
-  log(message, type = 'INFO') {
-    const timestamp = new Date().toISOString();
-    const prefix = {
-      'INFO: ℹ️,SUCCESS: ✅,ERROR: ❌,WARNING: ⚠️,PROGRESS: 🔄}[type] ||ℹ️';
-    console.log(`${prefix} [${timestamp}] ${message});
-  }
-
-  async runCommand(command, description, options = {}) {
-    this.log(`Running: ${description},PROGRESS');
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
     try {
   // TODO: Implement
       const result = execSync(command, {
         cwd: this.projectRoot,
-<<<<<<< HEAD
-        stdio: 'pipe',
-        encoding: 'utf8',
-        timeout: 300000,
-        maxBuffer: 1024 * 1024 * 10,
-        ...options,)
-      });`;
-      this.log(`${description} completed successfully`, 'SUCCESS');
-      this.deploymentSteps.push({ step: description, status: 'success', timestamp: new Date().toISOString() });
-      return { success: true, output: result };
-    } catch (error) {`;
-      this.log(`${description} failed: ${error.message}`, 'ERROR');
-      this.errors.push({ command, description, error: error.message });
-      this.deploymentSteps.push({ step: description, status: 'failed', timestamp: new Date().toISOString() });
-=======
-        stdio: pipe,
-        encoding: utf8,
-        timeout: 300000,
-        maxBuffer: 1024 * 1024 * 10,
-        ...options)
-      });
-      this.log(`${description} completed successfully`,SUCCESS');
-      this.deploymentSteps.push({ step: description, status: success, timestamp: new Date().toISOString() });
-      return { success: true, output: result };
-    } catch (error) {
-      this.log(`${description} failed: ${error.message},ERROR');
-      this.errors.push({ command, description, error: error.message });
-      this.deploymentSteps.push({ step: description, status: failed, timestamp: new Date().toISOString() });
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
       return { success: false, error: error.message };
 
   async createGitHubActionsWorkflow() {
-<<<<<<< HEAD
-    this.log('🔧 Creating GitHub Actions workflow...');`;
-=======
-    this.log('🔧 Creating GitHub Actions workflow...);
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
     const workflow = `name: CI/CD Pipeline;,
   on:
   push:
@@ -93,13 +30,7 @@ class DeploymentCICDAutomation {
     - uses: actions/checkout@v4;
     - name: Setup Node.js;,
   uses: actions/setup-node@v4;
-<<<<<<< HEAD
-      with: node-version: '18,
-  cache: 'npm
-=======
-      with: node-version: 18,
-  cache: npm
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
     - name: Install dependencies;,
   run: npm ci;
     - name: Run linting;,
@@ -116,49 +47,7 @@ class DeploymentCICDAutomation {
     needs: test;
     runs-on: ubuntu-latest;,
   if: github.ref == 'refs/heads/main
-<<<<<<< HEAD
-    - name: Deploy to production;,
-  run: echo "Deploying to production...""
-      # Add your deployment commands here;`;
-`;
-"
-    const workflowsDir = path.join(this.projectRoot, '.github', 'workflows');
-    if (!fs.existsSync(workflowsDir)) {
-      fs.mkdirSync(workflowsDir, { recursive: true });
-    
-    fs.writeFileSync(path.join(workflowsDir, 'ci-cd.yml'), workflow);
-    this.log('✅ GitHub Actions workflow created', 'SUCCESS');
 
-  async createDockerConfiguration() {
-    this.log('🐳 Creating Docker configuration...');`;
-=======
-    steps:
-    - uses: actions/checkout@v4;
-    - name: Setup Node.js;,
-  uses: actions/setup-node@v4;
-      with: node-version: 18,
-  cache: npm
-    - name: Install dependencies;,
-  run: npm ci;
-    - name: Build application;,
-  run: npm run build;
-    - name: Deploy to production;,
-  run: echo "Deploying to production...
-      # Add your deployment commands here;
-`;
-"
-    const workflowsDir = path.join(this.projectRoot,.github,workflows');
-    if (!fs.existsSync(workflowsDir)) {
-      fs.mkdirSync(workflowsDir, { recursive: true });
-    }
-    '
-    fs.writeFileSync(path.join(workflowsDir,ci-cd.yml'), workflow);
-    this.log('✅ GitHub Actions workflow created,SUCCESS');
-  }
-
-  async createDockerConfiguration() {
-    this.log('🐳 Creating Docker configuration...);
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
     const dockerfile = `# Use Node.js 18 as base image;
 FROM node:18-alpine;
 # Set working directory;
@@ -176,24 +65,7 @@ RUN npm run build;
 # Expose port;
 EXPOSE 3000;
 # Start the application;
-<<<<<<< HEAD
-CMD ["npm", "start"]"`;
-"`;
-    const dockerCompose = `version: '3.8,
-  services:
-  app: build: .,
-  ports:
-      - "3000: 3000"",
-=======
-CMD ["npm", "start"]"
-`;
-"
-    const dockerCompose = `version: 3.8,
-  services:
-  app: build: .,
-  ports: 
-      - "3000: 3000,
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
   environment:
       - NODE_ENV=production;
     restart: unless-stopped;,
@@ -228,42 +100,7 @@ http {
             proxy_set_header X-Real-IP $remote_addr;
             proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
             proxy_set_header X-Forwarded-Proto $scheme;
-<<<<<<< HEAD
-}`;
-    fs.writeFileSync('Dockerfile', dockerfile);
-    fs.writeFileSync('docker-compose.yml', dockerCompose);
-    fs.writeFileSync('nginx.conf', nginxConfig);
-    this.log('✅ Docker configuration created', 'SUCCESS');
 
-  async createDeploymentScripts() {
-    this.log('📜 Creating deployment scripts...');`;
-    const deployScript = `#!/bin/bash;
-echo "🚀 Starting deployment process..."""
-# Check if we're on the main branch;
-CURRENT_BRANCH=$(git branch --show-current)
-if [ "$CURRENT_BRANCH" != "main" ]; then;""
-    echo "❌ Not on main branch. Current branch: $CURRENT_BRANCH""
-=======
-        }
-    }
-}
-`;
-"
-    fs.writeFileSync('Dockerfile, dockerfile);
-    fs.writeFileSync('docker-compose.yml, dockerCompose);
-    fs.writeFileSync('nginx.conf, nginxConfig);
-    this.log('✅ Docker configuration created,SUCCESS');
-  }
-
-  async createDeploymentScripts() {
-    this.log('📜 Creating deployment scripts...);
-    const deployScript = `#!/bin/bash;
-echo "🚀 Starting deployment process..."
-# Check if we're on the main branch;
-CURRENT_BRANCH=$(git branch --show-current)
-if [ "$CURRENT_BRANCH" != "main" ]; then;
-    echo "❌ Not on main branch. Current branch: $CURRENT_BRANCH
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
     exit 1;
 fi;
 # Pull latest changes;"
@@ -281,52 +118,19 @@ npm run build;
 # Deploy to production;"
 echo "🚀 Deploying to production...
 # Add your deployment commands here;"
-<<<<<<< HEAD
-echo "✅ Deployment completed successfully!""`;
-=======
-echo "✅ Deployment completed successfully!
-`;
 
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
     const rollbackScript = `#!/bin/bash;"
 echo "🔄 Starting rollback process...
 # Get the previous commit;"
 PREVIOUS_COMMIT=$(git log --oneline -2 | tail -1 | cut -d' ' -f1)
-<<<<<<< HEAD
-echo "📝 Rolling back to commit: $PREVIOUS_COMMIT""
-=======
-echo "📝 Rolling back to commit: $PREVIOUS_COMMIT
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
 # Reset to previous commit;
 git reset --hard $PREVIOUS_COMMIT;
 # Pull the changes;
 git push origin main --force;
 # Rebuild and redeploy;
 npm run build;"
-<<<<<<< HEAD
-echo "✅ Rollback completed successfully!""`;
-    fs.writeFileSync('deploy.sh', deployScript);
-    fs.writeFileSync('rollback.sh', rollbackScript);
-    fs.chmodSync('deploy.sh', '755');
-    fs.chmodSync('rollback.sh', '755');
-    this.log('✅ Deployment scripts created', 'SUCCESS');
 
-  async createEnvironmentConfiguration() {
-    this.log('⚙️ Creating environment configuration...');`;
-=======
-echo "✅ Rollback completed successfully!
-`;
-"
-    fs.writeFileSync('deploy.sh, deployScript);
-    fs.writeFileSync('rollback.sh, rollbackScript);
-    fs.chmodSync('deploy.sh,755);
-    fs.chmodSync('rollback.sh,755);
-    this.log('✅ Deployment scripts created,SUCCESS');
-  }
-
-  async createEnvironmentConfiguration() {
-    this.log('⚙️ Creating environment configuration...);
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
     const envExample = `# Environment Configuration;
 NODE_ENV=production;
 PORT=3000;
@@ -343,59 +147,21 @@ SENDGRID_API_KEY=your_sendgrid_api_key_here;
 # Monitoring;
 SENTRY_DSN=your_sentry_dsn_here;`;
     const envProduction = `# Production Environment;
-<<<<<<< HEAD
-# Add your production environment variables here;`;
 
-    fs.writeFileSync('.env.example', envExample);
-    fs.writeFileSync('.env.production', envProduction);
-    this.log('✅ Environment configuration created', 'SUCCESS');
-
-  async createMonitoringConfiguration() {
-    this.log('📊 Creating monitoring configuration...');`;
-    const monitoringScript = `#!/usr/bin/env node;
-=======
-NODE_ENV=production;
-PORT=3000;
-# Add your production environment variables here;
-`;
-'
-    fs.writeFileSync('.env.example, envExample);
-    fs.writeFileSync('.env.production, envProduction);
-    this.log('✅ Environment configuration created,SUCCESS');
-  }
-
-  async createMonitoringConfiguration() {
-    this.log('📊 Creating monitoring configuration...);
-    const monitoringScript = `#!/usr/bin/env node'
-const fs = require('fs');
-const path = require('path');
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
 class DeploymentMonitor {
   // TODO: Implement
 
   async checkHealth() {
-<<<<<<< HEAD
-    console.log('🏥 Checking application health...');
-=======
-    console.log('🏥 Checking application health...);
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
     // Add health check logic here;
     return true;
 
   async checkPerformance() {
-<<<<<<< HEAD
-    console.log('⚡ Checking performance metrics...');
-=======
-    console.log('⚡ Checking performance metrics...);
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
     // Add performance check logic here;
 
   async checkErrors() {
-<<<<<<< HEAD
-    console.log('🐛 Checking for errors...');
-=======
-    console.log('🐛 Checking for errors...);
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
     // Add error check logic here;
 
   async generateReport() {
@@ -405,84 +171,13 @@ class DeploymentMonitor {
       performance: await this.checkPerformance(),
       errors: await this.checkErrors()
     };
-<<<<<<< HEAD
 
-    fs.writeFileSync('deployment-health-report.json', JSON.stringify(report, null, 2));
-    console.log('📊 Health report generated');
-=======
-'
-    fs.writeFileSync('deployment-health-report.json, JSON.stringify(report, null, 2));
-    console.log('📊 Health report generated');
-  }
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
 
   async run() {
     await this.generateReport();
 
 const monitor = new DeploymentMonitor();
-<<<<<<< HEAD
-monitor.run().catch(console.error);`;
 
-    fs.writeFileSync('deployment-monitor.cjs', monitoringScript);
-    fs.chmodSync('deployment-monitor.cjs', '755');
-    this.log('✅ Monitoring configuration created', 'SUCCESS');
-
-  async generateDeploymentReport() {
-    this.log('📊 Generating deployment report...');
-      deploymentSteps: this.deploymentSteps,
-      errors: this.errors,
-      configurations: [
-        'GitHub Actions workflow',
-        'Docker configuration',
-        'Deployment scripts',
-        'Environment configuration',
-        'Monitoring configuration]
-      ],
-      nextSteps: [
-        'Configure your deployment environment',
-        'Set up environment variables',
-        'Test the deployment pipeline',
-        'Configure monitoring alerts',
-        'Set up automated backups]
-      ]
-
-    fs.writeFileSync('deployment-setup-report.json', JSON.stringify(report, null, 2));
-    this.log('📊 Deployment report saved to deployment-setup-report.json', 'SUCCESS');
-
-    this.log('🚀 Starting Deployment & CI/CD Automation');
-    this.log('='.repeat(60));
-=======
-monitor.run().catch(console.error);
-`;
-'
-    fs.writeFileSync('deployment-monitor.cjs, monitoringScript);
-    fs.chmodSync('deployment-monitor.cjs,755);
-    this.log('✅ Monitoring configuration created,SUCCESS');
-  }
-
-  async generateDeploymentReport() {
-    this.log('📊 Generating deployment report...);
-    const report = {
-      timestamp: new Date().toISOString(),
-      deploymentSteps: this.deploymentSteps,
-      errors: this.errors,
-      configurations: [
-        'GitHub Actions workflow,Docker configuration,Deployment scripts,Environment configuration,Monitoring configuration]
-      ],
-      nextSteps: [
-        'Configure your deployment environment,Set up environment variables,Test the deployment pipeline,Configure monitoring alerts,Set up automated backups]
-      ]
-    };
-'
-    fs.writeFileSync('deployment-setup-report.json, JSON.stringify(report, null, 2));
-    this.log('📊 Deployment report saved to deployment-setup-report.json,SUCCESS');
-  }
-
-  async run() {
-    this.log('🚀 Starting Deployment & CI/CD Automation');
-    this.log('='.repeat(60));
-    try {
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
   // TODO: Implement
       await this.createGitHubActionsWorkflow();
       await this.createDockerConfiguration();
@@ -490,26 +185,10 @@ monitor.run().catch(console.error);
       await this.createEnvironmentConfiguration();
       await this.createMonitoringConfiguration();
       await this.generateDeploymentReport();
-<<<<<<< HEAD
 
-      this.log('✅ Deployment & CI/CD Automation completed successfully!');
-      this.log('📊 Created comprehensive deployment setup');
-      this.log(`❌ Deployment & CI/CD Automation failed: ${error.message}`, 'ERROR');
-=======
-'
-      this.log('✅ Deployment & CI/CD Automation completed successfully!);
-      this.log('📊 Created comprehensive deployment setup');
-    } catch (error) {
-      this.log(`❌ Deployment & CI/CD Automation failed: ${error.message},ERROR');
-      await this.generateDeploymentReport();
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
       process.exit(1);
 
 const deployment = new DeploymentCICDAutomation();
 deployment.run().catch(console.error);
 
-<<<<<<< HEAD
-module.exports = DeploymentCICDAutomation;`;
-=======
-module.exports = DeploymentCICDAutomation;
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+

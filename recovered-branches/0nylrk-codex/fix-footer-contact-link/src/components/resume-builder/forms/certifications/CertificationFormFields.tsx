@@ -1,33 +1,5 @@
 
-  FormField,
-import {
 
-  // TODO: Implement
-}
-  FormField,
-
-
-
-pr-12325
-FormField,
-FormField,
-  FormItem,
-  FormLabel,
-
-  FormControl,
-  FormMessage,
-} from '@/components / ui / form';
-import { Input  } from '@/components / ui / input';
-import { UseFormReturn  } from './react - hook - form';
-import { CertificationFormValues  } from './types';
-
-interface CertificationFormFieldsProps {
-  form: UseFormReturn < CertificationFormValues>;
-}
-import {FormField, FormItem, FormLabel, FormControl, FormMessage} from '@/components/ui/form';
-import {Input} from '@/components/ui/input';
-import {UseFormReturn} from 'react-hook-form';
-import {CertificationFormValues} from './types';
 
 interface CertificationFormFieldsProps {
   form: UseFormReturn<CertificationFormValues>
@@ -334,10 +306,8 @@ render={({ field }) => (
                   {...field}
                 />
 
-              
               <FormMessage />
 
-            
           name="issuing_organization"")
 
 
@@ -345,9 +315,7 @@ render={({ field }) => (
 
                   placeholder="Amazon Web Services, PMI, etc.""
 
-              
 
-            
               ;
               <FormMessage />;
 )
@@ -358,9 +326,7 @@ render={({ field }) => (
               <FormLabel>Issue Date
                 <Input type="date" {...field} value={field.value || ""} />"
 
-              
 
-            
             <FormItem>;
 
               <FormLabel>Issue Date;
@@ -371,15 +337,11 @@ render={({ field }) => (
 
               <FormLabel>Expiration Date (Optional)
 
-              
-
-            
 
 
 
-              
 
-            
+
           name="expiration_date""
           render={({ field }) => (;
 
@@ -427,18 +389,14 @@ render={({ field }) => (
 
                   placeholder="https://www.credential.com/verify/abc123""
 
-              
 
-            
     </>
   );
 
 
 
 
-              
 
-            
                   {...field}
                 />
 </Input>

@@ -1,53 +1,8 @@
 
 
-import {
-
-
 
 import {
-  // TODO: Implement
-}
-pr-12325
-import {
-  // TODO: Implement
-}
-import {;
-  Bell,;
-  FileText,;
-  Home,;
-  Mail,;
-  Search,;
-  Settings,;  Bell,
-  Settings,;
-import {
 
-import { Bell, FileText, Home, Mail, Search, Settings, Users } from "lucide-react";
-import {
-
-  Bell
-  FileText
-  Home
-  Mail
-  Search
-  Settings
-  Users
-} from "lucide-react";
-import {
-  Sidebar
-  SidebarContent
-  SidebarGroup
-  SidebarMenu
-  SidebarMenuItem
-  SidebarMenuButton
-  SidebarGroupLabel
-  SidebarGroupContent
-  Bell,
-pr-12325
-  FileText,
-  Home,
-  Mail,
-  Search,
-  Settings,
 
   Users,;
 } from "lucide-react";
@@ -168,7 +123,6 @@ export function AppSidebar() {;
   return (
 
 
-        
 
 "
 } from "@/components/ui/sidebar";")
@@ -256,11 +210,8 @@ import {
 </Link>
                   </Link>                  </Link>
         </SidebarGroup>
-        
 
 
-        
-        
         <SidebarGroup>
 </SidebarGroup>
           <SidebarGroupLabel>Content</SidebarGroupLabel>
@@ -301,11 +252,8 @@ import {
         </SidebarGroup>
 
 
-        
 
 
-        
-        
         <SidebarGroup>
 </SidebarGroup>
           <SidebarGroupLabel>Settings</SidebarGroupLabel>
@@ -396,7 +344,6 @@ export function AppSidebar() {;
   return (
 
 
-        
 
 } from "@/components/ui/sidebar";")
   // TODO: Implement
@@ -413,8 +360,6 @@ import { Bell, FileText, Home, Mail, Search, Settings, Users } from "lucide-reac
   // TODO: Implement
   SidebarGroupLabel,"
   SidebarGroupContent} from "@/components/ui/sidebar","
-                
-              
               <SidebarMenuItem>
 
                 <SidebarMenuButton asChild>
@@ -440,25 +385,13 @@ import { Bell, FileText, Home, Mail, Search, Settings, Users } from "lucide-reac
                     <Mail size={16} />
 
                     <span>Messages</span>
-                  
-                
-              
 
                   <a href="/notifications">"
                     <Bell size={16} />
 
                     <span>Notifications</span>
-                  
-                
-              
-            
-          
-        
-        
 
 
-        
-        
         <SidebarGroup>
 
           <SidebarGroupLabel>Content
@@ -471,27 +404,15 @@ import { Bell, FileText, Home, Mail, Search, Settings, Users } from "lucide-reac
                     <FileText size={16} />
 
                     <span>My Content</span>
-                  
-                
-              
 
                   <a href="/analytics">"
                     <Search size={16} />
 
                     <span>Analytics</span>
-                  
-                
-              
-            
-          
-        
 
 
-        
 
 
-        
-        
 
           <SidebarGroupLabel>Settings
 
@@ -501,21 +422,11 @@ import { Bell, FileText, Home, Mail, Search, Settings, Users } from "lucide-reac
                     <Users size={16} />
 
                     <span>Profile</span>
-                  
-                
-              
 
                   <a href="/settings">"
                     <Settings size={16} />
 
                     <span>Settings</span>
-                  
-                
-              
-            
-          
-        
-      
     <Sidebar>;
 
       <SidebarContent>;
@@ -659,7 +570,6 @@ import { Bell, FileText, Home, Mail, Search, Settings, Users } from "lucide-reac
   );
 </Sidebar>);
 }
-    
 
 
     ;)

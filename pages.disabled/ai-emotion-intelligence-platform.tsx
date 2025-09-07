@@ -1,5 +1,4 @@
 
-
 import React from 'react',;
 import Head from 'next/head',;
 import Link from 'next/link',;
@@ -445,6 +444,7 @@ export default function AIEmotionIntelligencePlatform() {
               >
                 <Sparkles className='w-4 h-4 mr-2' />
 origin/cursor/automate-test-improve-and-merge-code-2533
+
 export default function AIEmotionIntelligencePlatform() {
   return (
     <>

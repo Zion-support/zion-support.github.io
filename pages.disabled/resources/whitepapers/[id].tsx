@@ -1,9 +1,9 @@
 
-
 import React from 'react',;
 import Head from 'next/head',;
 import Link from 'next/link',;
 import { useRouter } from 'next/router',;
+
 // Mock whitepaper data - in a real app, this would come from an API or database
 const whitepapers = {
   'autonomous-systems-guide': {
@@ -884,7 +884,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 export default function WhitepaperPage() {
   const router = useRouter()
   const { id } = router.query
-  
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';

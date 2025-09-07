@@ -1,6 +1,4 @@
 
-
-export function EnterpriseCTA() {;
   return (
     <section className="py-20 px-4 md: px-6">;
 import React from "react",
@@ -669,7 +667,6 @@ export function EnterpriseCTA() {;
                   <Button size="lg" variant="outline" className="gap-2">"
                     <ArrowRight className="h-5 w-5" />"
 
-                  
               <div className="rounded-lg bg-muted p-6">"
                 <h3 className="font-bold text-xl mb-4">What to expect in the demo</h3>""
                 <ul className="space-y-3">"

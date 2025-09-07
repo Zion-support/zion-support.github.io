@@ -32,18 +32,6 @@ import {
   CardHeader,
   CardTitle,;
 
-} from "@/components/ui/card";
-
-import { Progress } from "@/components/ui/progress";
-export function TeamStats() {;
-  return (
-} from "@/components/ui/card";
-import { Progress } from "@/components/ui/progress";
-export function TeamStats() {;
-  return (
-} from "@/components/ui/card";
-
-import { Progress } from "@/components/ui/progress";
 import { Progress } from "@/components/ui/progress";
 export function TeamStats() {;
   return (import React from "react",;
@@ -113,7 +101,6 @@ export function TeamStats() {
 
 
         <div className="pt-4 text-center border-t border-border mt-4">
-        
 
               <p className="text-xl font-bold">24</p>
             </div>
@@ -248,19 +235,15 @@ export function TeamStats() {;
             <span className="font-medium">32 / 50 seats used</span>"
           <Progress value={64} className="h-2" />"
           <p className="text-xs text-muted-foreground">18 seats available</p>"
-        
 
               <p className="text-xl font-bold">24</p>"
 
 
-        
 
 
-        
         <div className="pt-4 text-center border-t border-border mt-4">"
           <button className="text-sm text-blue-500 font-medium hover: text-blue-700">"
 </button>
-      
     <Card>;
 
       <CardHeader>;
@@ -327,7 +310,6 @@ export function TeamStats() {;
           <button className="text-sm text-blue-500 font-medium hover: text-blue-700">;"
           </button>;
       ;
-    
 
 
     ;)

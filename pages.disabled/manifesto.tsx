@@ -1,13 +1,9 @@
 
-import Head from 'next/head';
-import React from 'react';
 export default function ManifestoPage(): JSX.Element {
   return (
     <>
       <Head>
         <title>Zion Manifesto</title>
-
-        <meta name="description" content="Zion Manifesto: Our purpose, philosophy, and decentralized future." />
 
         <meta name="description" content="Zion Manifesto: Our purpose, philosophy, and decentralized future." />
       </Head>
@@ -43,6 +39,7 @@ export default function ManifestoPage(): JSX.Element {
 
 import Head from 'next/head';
 import React from 'react';
+
         <meta name;
 origin/cursor/automate-test-improve-and-merge-code-2533
               scoping, verification, and reputation signals are assisted by models, yet decisions remain human-sovereign. We prioritize

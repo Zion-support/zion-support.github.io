@@ -6,23 +6,19 @@ echo "Starting merge conflict resolution..."
 resolve_conflicts() {
     local file="$1"
     echo "Resolving conflicts in: $file"
-    
     # Create a backup
     cp "$file" "$file.backup"
-    
     # Use sed to resolve conflicts by keeping HEAD version
     # Remove conflict markers and keep only the HEAD version
-    sed -i '/^<<<<<<< HEAD/,/^=======/!d; /^=======/d; /^>>>>>>> /d' "$file"
-    
+    sed -i '/^
     # Remove any remaining conflict markers
-    sed -i '/^<<<<<<< /d; /^=======/d; /^>>>>>>> /d' "$file"
-    
+    sed -i '/^<<<<<<< /d; /^
     echo "Resolved conflicts in: $file"
 }
 
 # Find all files with merge conflicts
 echo "Finding files with merge conflicts..."
-conflict_files=$(grep -r "<<<<<<< HEAD" . --include="*.tsx" --include="*.ts" --include="*.js" --include="*.jsx" --include="*.json" --include="*.css" --include="*.md" -l | head -50)
+conflict_files=$(grep -r "" . --include="*.tsx" --include="*.ts" --include="*.js" --include="*.jsx" --include="*.json" --include="*.css" --include="*.md" -l | head -50)
 
 echo "Found $(echo "$conflict_files" | wc -l) files with conflicts"
 

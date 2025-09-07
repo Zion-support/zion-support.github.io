@@ -1,6 +1,5 @@
 
-import React from 'react';
-import {useState, useEffect} from "react";
+
 import React from 'react';import {useState, useEffect} from "react";
 import {useNavigate} from "react-router-dom";
 import {GradientHeading} from "@/components/GradientHeading";
@@ -741,7 +740,6 @@ pr-12325
                   </div>
                 </div>
               </div>
-              
               <div className="mb-6">
                 <label className="text-sm font-medium text-zion-slate-light block mb-2">
                   Minimum Rating
@@ -813,11 +811,8 @@ pr-12325
       listing.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
       listing.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
       (listing.tags && listing.tags.some((tag: string) => tag.toLowerCase().includes(searchQuery.toLowerCase()))),
-    
     const matchesCategory = selectedCategory === "all" || listing.category === selectedCategory,      (listing.tags && listing.tags.some((tag: string) => tag.toLowerCase().includes(searchQuery.toLowerCase())));
-    
     const matchesCategory = selectedCategory === "all" || listing.category === selectedCategory;
-    
     const matchesPrice = listing.price === null || (
       listing.price >= currentPriceFilter[0] && 
       listing.price <= currentPriceFilter[1]
@@ -838,7 +833,6 @@ pr-12325
       selectedRating === null || 
 
       (listing.rating !== undefined && listing.rating >= selectedRating),
-    
     return matchesSearch && matchesCategory && matchesPrice && matchesRating
   }),
 
@@ -850,10 +844,8 @@ pr-12325
     const matchesCategory = selectedCategory === "all" || listing.category === selectedCategory,      (listing.tags && listing.tags.some((tag: string) => tag.toLowerCase().includes(searchQuery.toLowerCase())));""
     const matchesCategory = selectedCategory === "all" || listing.category === selectedCategory;"
     ),
-    
       selectedRating === null || 
       (listing.rating !== undefined && listing.rating >= selectedRating),
-    
   }),
 
 pr-12325
@@ -871,7 +863,6 @@ pr-12325
           title: &quot;Quote Requested&quot;,
           description: `Your quote request for ${listing.title} has been sent.`
         }),
-        
         navigate(&quot;/request-quote", {
           state: { 
             serviceType: categorySlug,
@@ -914,7 +905,6 @@ pr-12325
               <h3 className="text-lg font-medium text-white mb-4 flex items-center">
                 <Filter className="mr-2 h-5 w-5" /> Filters
               </h3>
-              
               <div className="mb-6">
                 <label className="text-sm font-medium text-zion-slate-light block mb-2&quot;>
                   Category
@@ -926,7 +916,6 @@ value={selectedCategory}
                     setSelectedCategory(value)                  }}
                   value={selectedCategory} 
                   onValueChange={_(value: string) => {
-                    
                     setSelectedCategory(value)}}
                 >
                   <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white&quot;>
@@ -941,7 +930,6 @@ value={selectedCategory}
                   </SelectContent>
                 </Select>
               </div>
-              
               <div className="mb-6">
                 <label className="text-sm font-medium text-zion-slate-light block mb-2">
                   Minimum Rating
@@ -2174,11 +2162,7 @@ listing={listing}
                     setCurrentPriceFilter([priceRange.min, priceRange.max]);
                     setSelectedRating(null);
 
-on_click={() => {
-                    setSearchQuery ("");
-                    setSelectedCategory ("all");
-                    setCurrentPriceFilter ([price_range.min, price_range.max]);
-                    setSelectedRating (null);
+
                   }}
                   className="border - zion - purple text - zion - purple hover:bg - zion-purple / 10";
                 >;
@@ -2216,8 +2200,6 @@ on_click={() => {
                     <SelectItem value=&quot;all" className="text-white">All Categories""
 
                         {filter.label}                      
-                  
-                
                     onValueChange={handleSliderChange}
 
                 <div className="flex flex-wrap gap-2">"
@@ -2279,7 +2261,6 @@ on_click={() => {
                       )}
                 className="w-full border-zion-purple text-zion-purple hover: bg-zion-purple/10""
 
-              
           <div className="lg:col-span-3">"
             <div className="bg-zion-blue-dark rounded-lg p-4 mb-6 border border-zion-blue-light">"
               <div className="flex flex-col md:flex-row gap-4">"
@@ -2295,11 +2276,9 @@ on_click={() => {
                     onClick={() => setView("grid")}"
                     <LayoutGrid className="h-4 w-4" />"
 
-                  
                     onClick={() => setView("list")}"
                     <List className="h-4 w-4" />"
 
-                  
               <p className="text-zion-slate-light">"
             </div>"`;
               <div className={`grid gap-6 ${view === "grid" ? "grid-cols-1 md:grid-cols-2" : "grid-cols-1"}`}>"
@@ -2451,7 +2430,6 @@ return (<div className="min-h-screen bg-zion-blue py-12 px-4"> <div className="c
 
 }</div> 
 }</div> </div> </div> </div>) 
-                
 pr-12325
                 </Button>
               </div>

@@ -15,49 +15,14 @@ function resolveMergeConflicts(filePath) {
     }
 
     const content = fs.readFileSync(filePath, 'utf8');
-    
     // Check if file has merge conflicts
-    if (!content.includes('<<<<<<< HEAD') && !content.includes('=======') && !content.includes('>>>>>>>')) {
-      console.log(`✅ No conflicts in: ${filePath}`);
-      return true;
-    }
-
-    console.log(`🔧 Resolving conflicts in: ${filePath}`);
-
-    let resolvedContent = content;
-
-    // Strategy 1: For deleted files, keep the current version
-    if (content.includes('deleted by them:')) {
-      console.log(`📁 File was deleted by them, keeping current version: ${filePath}`);
-      return true;
-    }
-
-    // Strategy 2: For both added files, keep the current version
-    if (content.includes('both added:')) {
-      console.log(`➕ Both added file, keeping current version: ${filePath}`);
-      return true;
-    }
-
-    // Strategy 3: For both modified files, use a smart merge strategy
-    if (content.includes('both modified:')) {
-      console.log(`🔄 Both modified file, applying smart merge: ${filePath}`);
-      
-      // Remove merge conflict markers and keep both versions where possible
-      resolvedContent = content
-        .replace(/<<<<<<< HEAD\n/g, '')
-        .replace(/=======\n/g, '\n')
-        .replace(/>>>>>>> [a-f0-9]+\n/g, '\n')
-        .replace(/<<<<<<< HEAD/g, '')
-        .replace(/=======/g, '')
-        .replace(/>>>>>>> [a-f0-9]+/g, '');
+    if (!content.includes('
+        .replace(/
     }
 
     // Strategy 4: Clean up any remaining conflict markers
     resolvedContent = resolvedContent
-      .replace(/<<<<<<< HEAD.*?>>>>>>> [a-f0-9]+/gs, '')
-      .replace(/<<<<<<< HEAD/g, '')
-      .replace(/=======/g, '')
-      .replace(/>>>>>>> [a-f0-9]+/g, '');
+      .replace(/
 
     // Strategy 5: For specific file types, apply specialized resolution
     if (filePath.endsWith('.json')) {
@@ -75,7 +40,6 @@ function resolveMergeConflicts(filePath) {
       const lines = resolvedContent.split('\n');
       const imports = new Set();
       const otherLines = [];
-      
       for (const line of lines) {
         if (line.trim().startsWith('import ') || line.trim().startsWith('export ')) {
           if (!imports.has(line.trim())) {
@@ -86,7 +50,6 @@ function resolveMergeConflicts(filePath) {
           otherLines.push(line);
         }
       }
-      
       resolvedContent = otherLines.join('\n');
     }
 

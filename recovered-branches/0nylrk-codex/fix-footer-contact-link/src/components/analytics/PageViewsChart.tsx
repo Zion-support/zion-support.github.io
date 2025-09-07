@@ -1,49 +1,4 @@
-import React from "react";
-import {
 
-import React from "react";"
-
-import {
-  // TODO: Implement
-}
-pr-12325
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-
-  CardTitle,;
-
-} from "@/components/ui/card";
-import { AnalyticsChart } from "@/components/analytics/AnalyticsChart";
-
-interface PageViewsChartProps {
-  data: Array<{ date: string, views: number }>,
-  timeRange: string,
-  onTimeRangeChange: (range: string) => void
-"
-} from "@/components/ui/card";""
-import { AnalyticsChart } from "@/components/analytics/AnalyticsChart";"
-import {;
-  Card,;
-  CardContent,;
-  CardDescription,;
-  CardHeader,;
-  CardTitle,;
-"
-} from "@/components/ui/card";""
-import { AnalyticsChart } from "@/components/analytics/AnalyticsChart";"
-  timeRange: string;,
-  onTimeRangeChange: (range: string) => void;
-
-}
-} from \"@/components/ui/card\";
-import { AnalyticsChart } from \"@/components/analytics/AnalyticsChart\";
-
-
-
-interface PageViewsChartProps {
-  // TODO: Implement
 }
 
 import React from "react";
@@ -317,8 +272,6 @@ export function PageViewsChart(): any ({;
           onTimeRangeChange={onTimeRangeChange}
         />
 
-      
-    
   data: Array<{ date: string, views: number }>,;
   timeRange: string;,)
 export function PageViewsChart({ data, timeRange, onTimeRangeChange }: PageViewsChartProps) {;

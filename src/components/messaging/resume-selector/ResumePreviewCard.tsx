@@ -4,25 +4,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Download } from 'lucide-react';
-interface Resume {
-  id: string;,
-  title: string;,
-  description: string;,
-  lastModified: string;,
-  fileSize: string;,
-  url: string;,
-  status?: 'draft' | 'published' | 'archived';
-}
-import { Resume } from '@/types/resume';
-origin/cursor/automate-test-improve-and-merge-code-2533
 
-interface ResumePreviewCardProps {
-  resume: Resume;,
-  isSelected: boolean;,
-  onSelect: (resume:,  Resume) => void;,
-  onDownload: (resume:,  Resume) => void;
-}
-export const ResumePreviewCard: React.FC<ResumePreviewCardProps> = ({,
   resume,
   isSelected,
   onSelect,
@@ -76,7 +58,6 @@ export const ResumePreviewCard: React.FC<ResumePreviewCardProps> = ({,
                 key={index}
                 variant='outline'
                 className='bg-zion-blue-dark/50 text-zion-cyan border-zion-purple/20 text-xs'              >          <div className="flex flex-wrap gap-1 mt-2">
-        
         {resume.skills && resume.skills.length > 0 && (
           <div className="flex flex-wrap gap-1 mt-2">
             {resume.skills.slice(0, 5).map((skill, index) => (
@@ -193,7 +174,6 @@ export function ResumePreviewCard({ resume, onDownload, isLoading }: ResumePrevi
             <span className="sr-only">Download Resume</span>
           </Button>
         </div>
-        
         {resume.basic_info.summary && (
           <p className="text-xs text-zion-slate line-clamp-2 mb-2">
 import React from 'react',;
@@ -235,7 +215,6 @@ export function ResumePreviewCard({ resume, onDownload, isLoading }: ResumePrevi
             {resume.basic_info.summary}
           </p>;
         )}
-        
         {resume.skills && resume.skills.length > 0 && (
           <div className="flex flex-wrap gap-1 mt-2">
             {resume.skills.slice(0, 5).map((skill, index) => (

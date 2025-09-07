@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import {
@@ -1068,7 +1068,6 @@ AI solutions, quantum technologies, and revolutionary IT services.;
         <meta property=&quot;og:description&quot; content=&quot;Explore our comprehensive pricing for innovative micro SAAS services, AI solutions, quantum technologies, and cutting-edge IT services.&quot; />
         <meta name=&quot;keywords&quot; content=&quot;pricing, micro SAAS, AI services, quantum computing, cybersecurity, edge computing, space technology, neural interfaces, Zion Tech Group&quot; />
         <link rel=&quot;canonical&quot; href=&quot;https://ziontechgroup.com/pricing-2025&quot; />
-      
         <script type=&quot;application/ld+json&quot;>{&quot;@context&quot;:&quot;https://schema.org&quot;,&quot;@type&quot;:&quot;WebPage&quot;,&quot;headline&quot;:&quot;2025 Pricing & Services — Zion Tech Group&quot;,&quot;url&quot;:&quot;https://ziontechgroup.com/pricing-2025&quot;,&quot;isPartOf&quot;:{&quot;@type&quot;:&quot;WebSite&quot;,&quot;name&quot;:&quot;Zion Tech Group&quot;,&quot;url&quot;:&quot;https://ziontechgroup.com&quot;}}</script></Head>
 
       <EnhancedNavigation />
@@ -1088,7 +1087,6 @@ AI solutions, quantum technologies, and revolutionary IT services.;
               Transparent pricing for our comprehensive collection of innovative micro SAAS services, 
               AI solutions, quantum technologies, and revolutionary IT services.
             </p>
-            
             {/* Billing Toggle */}
             <div className=&quot;flex items-center justify-center gap-4 mb-12&quot;>
   }
@@ -1707,6 +1705,7 @@ import { ArrowRight, Check, Star, Users, Zap, Shield, Globe;
 import EnhancedNavigation from '../components/EnhancedNavigation',;
 import EnhancedFooter from '../components/EnhancedFooter';
 import { innovative2025MicroSaasExpansionV3 } from '../data/2025-innovative-micro-saas-expansion-v3';
+
 export default function Pricing2025() {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'annual'>('monthly'),

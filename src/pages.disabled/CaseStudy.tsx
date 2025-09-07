@@ -106,6 +106,7 @@ export default function CaseStudy() {
   const breadcrumbs = getBreadcrumbsForPath(`/case-studies/${slug}`)
 
 import Link from 'next/link';
+
 import { useRouter  } from 'next/router';
 import { CASE_STUDIES  } from '@/data/case-studies';
 import { SEO  } from '@/components/SEO';
@@ -118,9 +119,7 @@ import { Breadcrumb;
 import BreadcrumbJsonLd from '@/components/BreadcrumbJsonLd';
 import { getBreadcrumbsForPath } from '@/utils/routeUtils';
 export default function CaseStudy() {
-  const router = useRouter();
-  const slug = router.query.slug as string;
-  const study = CASE_STUDIES.find(s => s.slug === slug);
+
   const breadcrumbs = getBreadcrumbsForPath(`/case-studies/${slug}`);
 
   if (!study) {

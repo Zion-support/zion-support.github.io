@@ -4,20 +4,16 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -42,10 +38,7 @@ import { AppHeader } from "@/layout/AppHeader",
 import { Footer } from "@/components/Footer",
 import { useNotifications } from "@/context/notifications/NotificationContext",
 
-import React, { useState } from 'react',;
-import { AppHeader } from "@/layout/AppHeader",;
-import { Footer } from "@/components/Footer",;
-import { useNotifications } from "@/context/notifications/NotificationContext",;
+
 import {
   NotificationType,
   NotificationContextType
@@ -55,15 +48,13 @@ import {
   Bell, Check, Trash2, ChevronRight, CheckCircle, 
   AlertCircle, MessageCircle, Briefcase, UserCheck, Settings
 } from "lucide-react",
+
 import { Button } from "@/components/ui/button",
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs",
 import { Badge } from "@/components/ui/badge",
 import { Skeleton } from "@/components/ui/skeleton",
 import { SEO } from "@/components/SEO",
-import { useNavigate } from "react-router-dom",
-import { cn } from "@/lib/utils",
 
-const getNotificationIcon = (type: NotificationType, className: string = "h-5 w-5") => {
 import { Button } from "@/components/ui/button",;
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs",;
 import { Badge } from "@/components/ui/badge",;
@@ -261,11 +252,9 @@ const NotificationCard: React.FC<{;
   },
   };
   },
-  
 };
   }  };
   },
-  
   return (
     <divclassName={cn(
       "border rounded-lg shadow-sm p-4 mb-3 group transition-colors"
@@ -323,13 +312,10 @@ class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
@@ -404,7 +390,6 @@ const NotificationCard: React.FC<{;,
     action_text?: string;
   };
   },
-  
   return (
     <div className={cn(
       "border rounded-lg shadow-sm p-4 mb-3 group transition-colors",
@@ -867,7 +852,6 @@ export default function NotificationsPage() {;
   } = useNotifications() as NotificationContextType;
 
   } = useNotifications() as NotificationContextType,
-  
   return (
     <>
       <SEO
@@ -957,6 +941,7 @@ if ( {) {
       onMarkAsRead (notification.id);
     // Check condition;
       navigate (notification.action_url);
+
   return (
     <div className={cn ("
       "border rounded - lg shadow - sm p - 4 mb - 3 group transition - colors";")"
@@ -1075,7 +1060,6 @@ if ( {) {
   } = useNotifications() as NotificationContextType;
 
   } = useNotifications() as NotificationContextType,
-  
     <>
 
       />
@@ -1090,7 +1074,6 @@ if ( {) {
               variant="outline"")
               <Check className="mr-2 h-4 w-4" />"
 
-            
         <div className="mb-8">"
           <Tabs defaultValue={filter} onValueChange={(value) => setFilter(value as any)}>
             <TabsList className="grid w-full max-w-md grid-cols-5">"
@@ -1108,8 +1091,6 @@ if ( {) {
                   <h3 className="text-xl font-medium">No notifications found</h3>""
                   <p className="text-muted-foreground mt-1">"
 
-            
-          
       </main>
       <Footer />
 

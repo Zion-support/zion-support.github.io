@@ -13,56 +13,13 @@ import { TalentProfile } from "@/types/talent";
 import { useHireRequest } from "@/hooks/useHireRequest",
 import { TalentProfile } from "@/types/talent",
 
-import { useState } from "react",;
-import { useForm } from "react-hook-form",;
-import { zodResolver } from "@hookform/resolvers/zod",;
-import { z } from "zod",;
-import { useState } from "react",""
-import { useForm } from "react-hook-form",""
-import { zodResolver } from "@hookform/resolvers/zod",""
-import { z } from "zod",""
-import { useHireRequest } from "@/hooks/useHireRequest";""
-import { TalentProfile } from "@/types/talent";""
-import { useHireRequest } from "@/hooks/useHireRequest",""
-import { TalentProfile } from "@/types/talent",""
-pr-12325
-import { useState } from './react';
-import { use_form } from './react - hook - form';
-import { zod_resolver } from '@hookform / resolvers / zod';
-import { z } from './zod';
-import { useHireRequest } from '@/hooks / useHireRequest';
-import { TalentProfile } from '@/types / talent';
+
 
 interface UseHireRequestFormProps {
   talent: TalentProfile;
   on_close: () => void;
   initialJobTitle?: string;
-  user_details?: {
-    name?: string;
 
-import { useHireRequest } from "@/hooks/useHireRequest";
-import { TalentProfile } from "@/types/talent";
-import { useHireRequest } from "@/hooks/useHireRequest",
-import { TalentProfile } from "@/types/talent",
-interface UseHireRequestFormProps {
-  talent: TalentProfile,
-  onClose: () => void,
-  initialJobTitle?: string,
-  userDetails?: {
-name?: string;
-
-    email?: string
-
-    id?: string
-  }
-}
-export interface FormValues {
-  }
-    name?: string;interface UseHireRequestFormProps {
-  talent: TalentProfile,
-  onClose: () => void,
-  initialJobTitle?: string,
-  userDetails?: {  }
 }
 
 export interface FormValues {;
@@ -70,93 +27,7 @@ export interface FormValues {;
   requesterEmail: string;
   projectOverview: string;
   timeline: string;
-  budgetMin: number,
-  budgetMax: number
-}
 
-import { useState } from "react",;
-import { useForm } from "react-hook-form",;
-import { zodResolver } from "@hookform/resolvers/zod",;
-import { z } from "zod",;
-import { useHireRequest } from "@/hooks/useHireRequest",;
-import { TalentProfile } from "@/types/talent",;
-
-import { useState } from "react",""
-import { useForm } from "react-hook-form",""
-import { zodResolver } from "@hookform/resolvers/zod",""
-import { z } from "zod",""
-import { useHireRequest } from "@/hooks/useHireRequest";""
-import { TalentProfile } from "@/types/talent";""
-import { useHireRequest } from "@/hooks/useHireRequest",""
-import { TalentProfile } from "@/types/talent",""
-import { useState } from './react';''
-import { use_form } from './react - hook - form';''
-import { zod_resolver } from '@hookform / resolvers / zod';''
-import { z } from './zod';''
-import { useHireRequest } from '@/hooks / useHireRequest';''
-import { TalentProfile } from '@/types / talent';'
-
-interface UseHireRequestFormProps {
-  // TODO: Implement
-}
-  talent: TalentProfile;,
-  on_close: () => void;
-  initialJobTitle?: string;
-  user_details?: {
-
-    name?: string;
-
-
-
-
-  // TODO: Implement
-  talent: TalentProfile,
-  onClose: () => void,
-  initialJobTitle?: string,
-  userDetails?: {
-
-    email?: string;
-    id?: string;
-export interface FormValues {
-  // TODO: Implement
-
-
-export interface FormValues {;
-  requesterName: string;,
-  requesterEmail: string;
-  projectOverview: string;,
-  timeline: string;
-
-  budgetMin: number,
-  budgetMax: number;
-
-import { useState } from "react",;""
-import { useForm } from "react-hook-form",;""
-import { zodResolver } from "@hookform/resolvers/zod",;""
-import { z } from "zod",;""
-import { useHireRequest } from "@/hooks/useHireRequest",;""
-import { TalentProfile } from "@/types/talent",;"
-pr-12325
-
-interface UseHireRequestFormProps {;
-  talent: TalentProfile,;
-  onClose: () => void,;
-  initialJobTitle?: string,;
-  userDetails?: {;
-    name?: string,;
-    email?: string,;
-
-    email?: string,
-    id?: string;
-
-    email?: string,}
-    id?: string;}
-  }
-}
-}
-}
-    id?: string;
-}    id?: string;
   }
 }
 ;
@@ -750,7 +621,6 @@ budgetMax: talent.hourly rate ? talent.hourly rate * 1.5 : 50
 // Handle form submission try {
   const requestData = {
   talent: {
-  
 }finally {
   setIsSubmitting (false) 
 }

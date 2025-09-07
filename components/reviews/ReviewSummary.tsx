@@ -1,4 +1,4 @@
-return (
+
 
   return (
     <div className='enhanced-card flex items-center justify-between'>import React from 'react';
@@ -149,3 +149,4 @@ origin/cursor/automate-test-improve-and-merge-code-20a4
 export default ReviewSummary;
 origin/cursor/automate-test-improve-and-merge-code-2533
 pr-12243
+

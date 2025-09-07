@@ -1,39 +1,5 @@
 
 
-  return (
-    <Layout>
-export default function EnterpriseITPage() {
-  const features = [
-    'Cloud migration and landing zones with cost governanceDevOps automation, CI/CD, and platform engineeringData platforms, lineage, and quality monitoringObservability, SLOs, and incident automation'],
-  const solutions = [
-    { name: 'Cloud Landing Zone', href: '/cloud-landing-zone' },
-    { name: 'Cloud Cost Optimizer', href: '/cloud-cost-optimizer' },
-    { name: 'Data Pipeline Observability', href: '/data-pipeline-observability' },
-    { name: 'Uptime & SLO Monitor', href: '/uptime-slo-monitor' }],
-
-  const solutions = [
-    { name: 'Cloud Landing Zone', href: '/cloud-landing-zone' },
-    { name: 'Cloud Cost Optimizer', href: '/cloud-cost-optimizer' },
-{
-      name: 'Data Pipeline Observability',
-      href: '/data-pipeline-observability',
-    },
-    { name: 'Uptime & SLO Monitor', href: '/uptime-slo-monitor' },
-  ];
-origin/cursor/automate-test-improve-and-merge-code-2533
-  return (
-    <Layout>
-import React from 'react',;
-import Head from 'next/head',;
-import Layout from '../components/layout/Layout',;
-import { Server, CheckCircle, Database, Cloud } from 'lucide-react',;
-;
-import React from 'react'
-import Head from 'next/head'
-import Layout from '../components/layout/Layout'
-import { Server, CheckCircle, Database, Cloud } from 'lucide-react',
-import { Server, CheckCircle, Database, Cloud } from 'lucide-react',;
-
 
 export default function EnterpriseITPage() {
   const features = [

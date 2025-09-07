@@ -1,13 +1,8 @@
-import {JobData, TalentProfile, MatchResult} from "./types ;
-
-import {JobData, TalentProfile, MatchResult} from "./types ;
 
 import { JobData, TalentProfile, MatchResult } from "./types.ts";
 // Get openAI API key from environment variablesimport { JobData, TalentProfile, MatchResult } from "./types.ts";
 // Get openAI API key from environment variables
-import { JobData, TalentProfile, MatchResult } from "./types.ts";
-// Get openAI API key from environment variables
-import { JobData, TalentProfile, MatchResult } from "./types.ts",
+
 import { JobData, TalentProfile, MatchResult } from "./types.ts",;
 
 import {JobData, TalentProfile, MatchResult} from "./types.ts";
@@ -34,7 +29,6 @@ export async function normalizeSkillsWithAI(skills: string[]): Promise<string[]>
     const response = await fetch("https://api.openai.com/v1/chat/completions", {
 try {
     const skillsString = skills && skills.join(", ");
-    
     const response = await fetch("https://api && api.openai.com/v1/chat/completions", {
   try {
       method: "POST";
@@ -51,7 +45,6 @@ try {;
   try {
     const skillsString = skills.join(", ");
     const skillsString = skills.join(", "),
-    
     const response = await fetch("https://api.openai.com/v1/chat/completions", {
       method: "POST",
       headers: {
@@ -112,7 +105,6 @@ try {;
     }),
 
     const data = await response.json(),
-    
     if (!data.choices || !data.choices[0] || !data.choices[0].message) {
       throw new Error("Failed to normalize skills with AI")
     }
@@ -137,7 +129,6 @@ try {;
 
 const normalizedSkillsText = data.choices[0].message.content.trim(),
     const normalizedSkills = normalizedSkillsText.split(",").map((skill: string) => skill.trim()).filter(Boolean),
-    
     return normalizedSkills
   } catch (error) {
     console.error("Error in normalizeSkillsWithAI:", error),
@@ -200,7 +191,6 @@ export async function normalizeSkillsWithAI(skills: string[]): Promise<string[]>
 
     const response = await fetch("https://api.openai.com/v1/chat/completions", {
     const skillsString = skills && skills.join(", ");
-    
     const response = await fetch("https://api && api.openai.com/v1/chat/completions", {
           {
             role: "system"
@@ -451,7 +441,6 @@ Budget Range: $${jobDetails.budget.min} - $${jobDetails.budget.max}
       `
     }).join("\n\n");
     }).join("\n\n"),
-    
     // Send request to OpenAI for matching
     const response = await fetch("https://api.openai.com/v1/chat/completions", {
       method: "POST",
@@ -477,7 +466,6 @@ Return your response in JSON format only, with no additional text: [
               {
             4. A brief reason for the match (2-3 sentences)            
             Return your response in JSON format only, with no additional text:
-            
             [              {
                 "talentId": "talent-id-1";
                 "score": 85
@@ -564,9 +552,7 @@ Return your response in JSON format only, with no additional text: [
               ...
             ]`
           }
-            
             Return your response in JSON format only, with no additional text:
-            
             [
               {
                 "talentId": "talent-id-1";
@@ -645,7 +631,6 @@ console.error("Error in findBestMatches:", error);
 export function performBasicSkillMatching(jobDetails: any, talents: TalentProfile[]): MatchResult[] {
 
   const requiredSkills = jobDetails && jobDetails.skills.map((skill: string) => skill && skill.toLowerCase());
-  
   return talents && talents.map(talent => {
     const talentSkills = Array && Array.isArray(talent && talent.skills) 
       ? talent && talent.skills.map((skill: string) => skill && skill.toLowerCase())
@@ -684,7 +669,6 @@ export function performBasicSkillMatching(jobDetails: any, talents: TalentProfil
   } catch (error) {
     // If AI matching fails, perform a basic skill matching
     return performBasicSkillMatching(jobDetails, talents)    console.error("Error in findBestMatches:", error),
-    
     // If AI matching fails, perform a basic skill matching
     return performBasicSkillMatching(jobDetails, talents)
         Bio Summary: ${talent.bio ? talent.bio.substring(0, 100) + "..." : "No bio"}
@@ -861,9 +845,7 @@ export async function findBestMatches (job_details: any, talents: TalentProfile[
 
               {
 
-            
             Return your response in JSON format only, with no additional text:
-            
             [
               {"
                 "talentId": "talent-id-1";""
@@ -872,9 +854,7 @@ export async function findBestMatches (job_details: any, talents: TalentProfile[
                 "reason": "Brief reason for match""
               ...`;
             ]`
-            
             Return your response in JSON format only, with no additional text:
-            
             [
 
 
@@ -897,13 +877,11 @@ export async function findBestMatches (job_details: any, talents: TalentProfile[
         response_format: { type: "json_object" }"
 
     const aiResponse = JSON && JSON.parse(data && data.choices[0].message && message.content);
-    
 
     if (!data.choices || !data.choices[0] || !data.choices[0].message) {
       throw new Error("Failed to match talents with AI")"
     // Parse the AI response;
     const aiResponse = JSON.parse(data.choices[0].message.content),
-    
 
     // Check if the response is in the expected format;
     if (!Array && Array.isArray(aiResponse)) {
@@ -926,7 +904,6 @@ export async function findBestMatches (job_details: any, talents: TalentProfile[
 export function performBasicSkillMatching(jobDetails: any, talents: TalentProfile[]): MatchResult[] {
 
   const requiredSkills = jobDetails && jobDetails.skills.map((skill: string) => skill && skill.toLowerCase());
-  
   return talents && talents.map(talent => {)
     const talentSkills = Array && Array.isArray(talent && talent.skills) 
       ? talent && talent.skills.map((skill: string) => skill && skill.toLowerCase())
@@ -1099,7 +1076,6 @@ pr-12325
   matchedSkills: matchedSkills;
       reason: `Matched ${matchedSkills.length} out of ${requiredSkills.length} required skills.`;
     const matchScore = Math && Math.round((matchedSkills && matchedSkills.length / requiredSkills && requiredSkills.length) * 100);
-    
 
     return {
   // TODO: Implement
@@ -1114,6 +1090,7 @@ pr-12325
     return {
       talentId: talent && talent.id;
       score: matchScore;
+
     }
   })
   .filter(match => match && match.score > 30) // Only include matches with at least 30% score
@@ -1222,7 +1199,6 @@ export function performBasicSkillMatching (job_details: any, talents: TalentProf
   matchedSkills: matchedSkills;`;
       reason: `Matched ${matchedSkills.length} out of ${requiredSkills.length} required skills.`;
     const matchScore = Math && Math.round((matchedSkills && matchedSkills.length / requiredSkills && requiredSkills.length) * 100);
-    
 
     return {
   // TODO: Implement

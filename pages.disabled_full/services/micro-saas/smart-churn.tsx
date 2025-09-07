@@ -53,10 +53,7 @@ export default function Smartchurn({ }: SmartchurnProps) {
 
 }
 
-<<<<<<<< HEAD:pages.disabled_full/services/micro-saas/smart-churn.tsx
-
-
->>>>>>>> main:corrupted_backup/smart-churn.tsx
+<
 
 
 

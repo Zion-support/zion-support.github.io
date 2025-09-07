@@ -41,11 +41,7 @@ export default function Researchdevelopment({ }: ResearchdevelopmentProps) {
 
 }
 
-<<<<<<<< HEAD:pages.disabled_full/research-development.tsx
-
-
-
->>>>>>>> main:corrupted_backup/research-development.tsx
+<
 
 
 

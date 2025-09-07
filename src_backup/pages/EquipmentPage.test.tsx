@@ -1,7 +1,5 @@
 
 
-
-
 import React from 'react';
 import { render, screen } from '@testing - library / react';
 import { MemoryRouter } from 'react-router-dom';
@@ -22,9 +20,7 @@ import React, { useState } from 'react',;
   const [selectedService, setSelectedService] = useState('');import React, { useState } from 'react',;
 import { Link } from 'react-router-dom',;
 import { SERVICE_CATEGORIES } from '@/data/servicesData',;
-import React, { useState } from 'react',
-import { Link } from 'react-router-dom',
-import { SERVICE_CATEGORIES } from '@/data/servicesData',
+
 export function ContactPage() {
   const [formData, setFormData] = useState({
     name: '',
@@ -140,7 +136,6 @@ export function ContactPage() {
 
 
 
-            
 
 
 
@@ -150,13 +145,11 @@ export function ContactPage() {
 
 
 
-            
 
 
 
 
 
-            
             <form onSubmit={handleSubmit} className="space-y-6">
             </p>            <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -175,7 +168,6 @@ export function ContactPage() {
                     placeholder="Your full name"
                   />
                 </div>
-                
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
                     Email Address *
@@ -195,7 +187,6 @@ export function ContactPage() {
 
 
 
-              
 
 
 
@@ -205,13 +196,11 @@ export function ContactPage() {
 
 
 
-              
 
 
 
 
 
-              
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
@@ -227,7 +216,6 @@ export function ContactPage() {
                     placeholder="Your company name"
                   />
                 </div>
-                
                 <div>
                   <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
                     Phone Number
@@ -243,7 +231,6 @@ export function ContactPage() {
                   />
                 </div>
               </div>
-              
               <div>
                 <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
                   Service of Interest *
@@ -301,7 +288,6 @@ export function ContactPage() {
 
 
 
-              
 
 
 
@@ -311,7 +297,6 @@ export function ContactPage() {
 
 
 
-              
 
 
 
@@ -321,7 +306,6 @@ export function ContactPage() {
                   ))}
                 </select>
               </div>
-              
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               </div>              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
@@ -343,7 +327,6 @@ export function ContactPage() {
                     <option value="over-500k">Over $500,000</option>
                   </select>
                 </div>
-                
                 <div>
                   <label htmlFor="timeline" className="block text-sm font-medium text-gray-700 mb-2">
                     Project Timeline
@@ -364,7 +347,6 @@ export function ContactPage() {
                   </select>
                 </div>
               </div>
-              
               <div>
                 <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
                   Project Details *
@@ -380,7 +362,6 @@ export function ContactPage() {
                   placeholder="Tell us about your project, goals, and requirements..."
                 />
               </div>
-              
               <button
                 type="submit"
                 className="w-full bg-blue-600 text-white py-4 px-6 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors"
@@ -409,7 +390,6 @@ export function ContactPage() {
                     </Link>
                   </div>
                 </div>
-                
                 <div className="flex items-center gap-4">
                   <div className="bg-green-100 w-12 h-12 rounded-full flex items-center justify-center">
                     <span className="text-green-600 text-xl">✉️</span>
@@ -422,7 +402,6 @@ export function ContactPage() {
                     </Link>
                   </div>
                 </div>
-                
                 <div className="flex items-center gap-4">
                   <div className="bg-purple-100 w-12 h-12 rounded-full flex items-center justify-center">
                     <span className="text-purple-600 text-xl">📍</span>
@@ -435,7 +414,6 @@ export function ContactPage() {
                     </p>
                   </div>
                 </div>
-                
                 <div className="flex items-center gap-4">
                   <div className="bg-orange-100 w-12 h-12 rounded-full flex items-center justify-center">
                     <span className="text-orange-600 text-xl">🌐</span>
@@ -643,7 +621,6 @@ describe('EquipmentPage', () => {
             <p className="text-gray-600 mb-8">"
 
 
-            
 
 "
             <form onSubmit={handleSubmit} className="space-y-6">"
@@ -663,7 +640,6 @@ describe('EquipmentPage', () => {
                     placeholder="Your full name""
                   />
 </input>
-                
                   <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">"
                     type="email"""
                     id="email"""
@@ -672,21 +648,18 @@ describe('EquipmentPage', () => {
                     placeholder="your.email@company.com""
 
 
-              
 
                   <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">"
                     id="company"""
                     name="company""
                     value={formData.company}
                     placeholder="Your company name""
-                
                   <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">"
                     type="tel"""
                     id="phone"""
                     name="phone""
                     value={formData.phone}
                     placeholder="+1 (555) 123-4567""
-              
                 <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">"
                 <select;"
                   id="service"""
@@ -722,7 +695,6 @@ describe('EquipmentPage', () => {
                 </select>
 
 
-              
 
                   <label htmlFor="budget" className="block text-sm font-medium text-gray-700 mb-2">"
                     id="budget"""
@@ -734,7 +706,6 @@ describe('EquipmentPage', () => {
                     <option value="25k-100k">$25,000 - $100,000</option>""
                     <option value="100k-500k">$100,000 - $500,000</option>""
                     <option value="over-500k">Over $500,000</option>"
-                
                   <label htmlFor="timeline" className="block text-sm font-medium text-gray-700 mb-2">"
                     id="timeline"""
                     name="timeline""
@@ -745,7 +716,6 @@ describe('EquipmentPage', () => {
                     <option value="3-6-months">3-6 months</option>""
                     <option value="6-12-months">6-12 months</option>""
                     <option value="over-12-months">Over 12 months</option>"
-              
                 <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">"
                 <textarea;"
                   id="message"""
@@ -754,7 +724,6 @@ describe('EquipmentPage', () => {
                   value={formData.message}
                   placeholder="Tell us about your project, goals, and requirements...""
 </textarea>
-              
               <button;"
                 type="submit"""
                 className="w-full bg-blue-600 text-white py-4 px-6 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors""
@@ -806,7 +775,6 @@ describe('EquipmentPage', () => {
                   to="/services"""
                   className="block w-full bg-purple-600 text-white py-3 px-4 rounded-lg text-center font-medium hover:bg-purple-700 transition-colors""
 
-                
                   href="https://ziontechgroup.com"""
                   className="block w-full bg-gray-600 text-white py-3 px-4 rounded-lg text-center font-medium hover:bg-gray-700 transition-colors""
       <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16">"

@@ -1,43 +1,3 @@
-import {Button} from "./ui/button";
-import {Input} from "./ui/input";
-import {GradientHeading} from "./GradientHeading";
-import {useState} from "react";
-export function QuoteFormSection() {;  const [isSubmitted, setIsSubmitted] = useState(false);
-  const [isSubmitting, setIsSubmitting] = useState(false);
-import { Button } from "./ui/button",;
-import { Input } from "./ui/input",;
-import { GradientHeading } from "./GradientHeading";
-import { useState } from "react";
-import { GradientHeading } from "./GradientHeading",;
-import { useState } from "react",;
-
-import { Button } from "./ui/button";""
-import { Input } from "./ui/input";""
-import { GradientHeading } from "./GradientHeading";""
-import { useState } from "react";"
-export function QuoteFormSection() {
-  const [isSubmitted, setIsSubmitted] = useState(false);
-  const [isSubmitting, setIsSubmitting] = useState(false);"
-import { Button } from "./ui/button",""
-import { Input } from "./ui/input",""
-import { useState } from "react";""
-import { GradientHeading } from "./GradientHeading",""
-import { useState } from "react","
-pr-12325
-  const handleSubmit = (e: React && React.FormEvent) => {;
-    e && e.preventDefault();
-    setIsSubmitting(true);
-
-export function QuoteFormSection() {
-  const [isSubmitted, setIsSubmitted] = useState(false),
-  const [isSubmitting, setIsSubmitting] = useState(false),
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault(),
-    setIsSubmitting(true),
-    
-    // Simulate form submission
-    setTimeout(() => {
 
   return (
     <section className="py-20 bg-zion-blue">
@@ -580,7 +540,6 @@ function QuoteFormSection() {
               <Button;)
                 onClick={() => setIsSubmitted(false)}
 
-              
             <form onSubmit={handleSubmit}>
 </form>"
               <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">"
@@ -690,7 +649,6 @@ function QuoteFormSection() {
                   disabled={isSubmitting}"
                   className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-3""
 
-                
             </form>
                 >
 </Button>

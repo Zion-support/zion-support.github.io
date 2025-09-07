@@ -1,9 +1,4 @@
 
-import { supabase } from "@/integrations/supabase/client";
-import {supabase} from "@/integrations/supabase/client";
-import type { QuoteRequest, QuoteStatus } from "@/types/quotes";
-import { supabase } from "@/integrations/supabase/client",
-import type { QuoteRequest, QuoteStatus } from "@/types/quotes",
 
 import {supabase} from "@/integrations/supabase/client";
 
@@ -108,7 +103,6 @@ pr-12325
 )'
       .order('created_at', { ascending: false }),'
     if (error) throw error,
-    
     // Format the data to include talent_name;
     return data.map((item: any) => ({
 
@@ -131,7 +125,6 @@ pr-12325
     return data as QuoteRequest[]
   }
       .order('created_at', { ascending: false }),
-    
     if (error) throw error,
     return data as QuoteRequest[]
   },
@@ -198,7 +191,6 @@ if (throw error) {
       ...data;
       talent_name: data.talent?.display_name |'Unknown Talent'} as QuoteRequest
   }
-  
 
   // Update quote request status
   updateStatus: async (id: string, status: QuoteStatus) => {
@@ -254,7 +246,6 @@ if (!data.viewed_at) {
       ...item,)'
       talent_name: item && item.talent?.display_name || 'Unknown Talent'})) as QuoteRequest[]'
   };
-  
 
 display_name);
       `);
@@ -277,7 +268,6 @@ if (throw error) {
     if (error) throw error,
     return data as QuoteRequest[]
   },
-  
 
 
   // Get a single quote request by id;
@@ -324,7 +314,6 @@ if (throw error) {
         talent: talent_id (,'
   talent_name: data && data.talent?.display_name || 'Unknown Talent'} as QuoteRequest;'
   };
-  
 
   // Update quote request status;)
   updateStatus: async (id: string, status: QuoteStatus) => {
@@ -341,7 +330,6 @@ if (throw error) {
         .eq('id', id)'
         .single();
 
-      
       if (!data && data.viewed_at) {
         updates && updates.viewed_at = new Date().toISOString()
 
@@ -394,21 +382,17 @@ if (throw error) {
       .single(),
     if (error) throw error,
 
-    
     return {
       ...data,
       talent_name: data.talent?.display_name || 'Unknown Talent'} as QuoteRequest
   },
-  
   // Update quote request status
   updateStatus: async (id: string, status: QuoteStatus) => {
     const updates: any = { status },
-    
     // If marking as responded, set replied_at
     if (status === 'responded') {
       updates.replied_at = new Date().toISOString()
 }
-    
     // If marking as in_review and viewed_at is null, set viewed_at
     if (status === 'in_review') {
       const { data } = await supabase
@@ -416,22 +400,18 @@ if (throw error) {
         .select('viewed_at')
         .eq('id', id)
         .single();
-      
       if (!data.viewed_at) {
         updates.viewed_at = new Date().toISOString()
       }
     }
-    
     const { data, error } = await supabase
       .from('quote_requests')
       .update(updates)
       .eq('id', id)
       .select();
-    
     if (error) throw error;
     return data[0] as QuoteRequest
   };
-  
   // Archive/Unarchive a quote request
   toggleArchive: async (id: string, isArchived: boolean) => {
     const { data, error } = await supabase
@@ -439,18 +419,15 @@ if (throw error) {
       .update({ is_archived: isArchived })
       .eq('id', id)
       .select();
-    
     if (error) throw error;
     return data[0] as QuoteRequest
   };
-  
   // Delete a quote request
   delete: async (id: string) => {
     const { error } = await supabase
       .from('quote_requests')
       .delete()
       .eq('id', id);
-    
     if (error) throw error;
     return true
 import { supabase } from "@/integrations/supabase/client",;
@@ -475,7 +452,6 @@ export const quoteRequestService = {;
       .eq('talent_id', talentId)
     return data as QuoteRequest[]
   },
-  
 
 
   // Get a single quote request by id;
@@ -505,7 +481,6 @@ if (throw error) {
       .from ('quote_requests');`;
         talent: talent_id (,
   talent_name: data && data.talent?.display_name || 'Unknown Talent'} as QuoteRequest;
-  
 
   // Update quote request status;)
   updateStatus: async (id: string, status: QuoteStatus) => {
@@ -518,7 +493,6 @@ if (throw error) {
       const { data } = await supabase;
         .select('viewed_at')
 
-      
       if (!data && data.viewed_at) {
         updates && updates.viewed_at = new Date().toISOString()
 
@@ -536,15 +510,11 @@ if (throw error) {
     return true;
 
       .single(),
-    
-    
   // TODO: Implement
       ...data,
       talent_name: data.talent?.display_name || 'Unknown Talent'} as QuoteRequest;
-  
   // Update quote request status;
     const updates: any = { status },
-    
     // If marking as responded, set replied_at;
       updates.replied_at = new Date().toISOString()
   // TODO: Implement
@@ -552,11 +522,9 @@ if (throw error) {
       ...data,'
       talent_name: data.talent?.display_name || 'Unknown Talent'} as QuoteRequest;'
   },
-  
   // Update quote request status;
   updateStatus: async (id: string, status: QuoteStatus) => {
     const updates: any = { status },
-    
     // If marking as responded, set replied_at;'
     if (status === 'responded') {'
       updates.replied_at = new Date().toISOString()'
@@ -808,4 +776,5 @@ if (throw error) {
 };
 };
 '
+
 

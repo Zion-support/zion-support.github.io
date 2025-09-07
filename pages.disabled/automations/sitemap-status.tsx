@@ -1,12 +1,3 @@
-import type { NextPage, GetServerSideProps } from 'next';
-import fs from 'fs';
-import path from 'path';
-
-type Props = { urlCount: number }
-import type { NextPage, GetServerSideProps } from 'next',
-import fs from 'fs',
-import path from 'path',
-type Props = { urlCount: number },
 
 const SitemapStatus: NextPage<Props> = ({ urlCount }) => {
   return (
@@ -92,17 +83,8 @@ export default SitemapStatus,;
 };
 export default SitemapStatus;
 
-    const raw = fs.readFileSync(p, 'utf8'),
-    urlCount = (raw.match(/<url>/g) || []).length
-    const raw = fs.readFileSync(p, 'utf8'),
-urlCount = (raw.match(/<url>/g) || []).length
-
-    const raw = fs.readFileSync(p, 'utf8'),
-    urlCount = (raw.match(/<url>/g) || []).length
-    const raw = fs.readFileSync(p, 'utf8'),
-    urlCount = (raw.match(/<url>/g) || []).length
 import type { NextPage, GetServerSideProps } from 'next';
 import fs from 'fs';
 import path from 'path';
 type Props = any;
-origin/cursor/automate-test-improve-and-merge-code-2533
+

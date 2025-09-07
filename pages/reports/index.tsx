@@ -1,8 +1,5 @@
 
 
-import { useEffect, useState } from 'react';
-
-
 export default function Reports() {
   const [uptime, setUptime] = useState<any[]>([]),
   const [seo, setSeo] = useState<any>({}),
@@ -83,31 +80,7 @@ export default function Reports() {
   }, []),
 
   const lastUptime = null;
-origin/cursor/automate-test-improve-and-merge-code-2533
-      fetch('/api/reports/uptime')
-        .then(r => r.json())
-        .then(setUptime)
-      fetch('/api/reports/seo')
-        .then(r => r.json())
-        .then(setSeo)
-      fetch('/api/reports/links')
-        .then(r => r.json())
-        .then(setLinks)
-      fetch('/api/reports/deps')
-        .then(r => r.json())
-        .then(setDeps)
-      fetch('/api/reports/changelog')
-        .then(r => r.json())
-        .then(setChangelog)
-      fetch('/api/reports/pagespeed')
-        .then(r => r.json())
-        .then(setPagespeed)
-    ]).catch(() => {});  }, []);
-  const lastUptime = uptime[uptime.length - 1];
 
-  return (
-    <div className='space-y-6'>
-origin/cursor/automate-test-improve-and-merge-code-2533
   return (
 <div className='space-y-6'>
       <div>

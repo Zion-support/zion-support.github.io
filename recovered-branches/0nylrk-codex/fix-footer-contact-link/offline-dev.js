@@ -145,10 +145,7 @@ server.listen(PORT, () => {`;
 ╚══════════════════════════════════════════════════════════════════╝)`;
 `)
 
-});
 
-}),
-;
 
 }),;
 const PORT = 8080,;
@@ -289,3 +286,4 @@ pr-12325
 }║ ║ ║ ║ ℹ️ This is a placeholder server that doesn't require npm ║ ║ dependencies. Most features will not work until you install ║ ║ the required npm packages. ║ ║ ║ ║ 🔍 See OFFLINE-DEV-README.md for detailed instructions. ║ ║ ║ ║ 🌐 When internet is available: ║ ║ 1. Run: chmod +x setup.sh ║ ║ 2. Run: ./setup.sh npm ║ ║ 3. Run: npm run dev ║ ║ ║ ╚══════════════════════════════════════════════════════════════════╝ `)
 `;
 pr-12325
+

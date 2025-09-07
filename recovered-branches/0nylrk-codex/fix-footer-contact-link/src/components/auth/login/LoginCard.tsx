@@ -1,15 +1,10 @@
-export function LoginCard() {
-  return (
-  return (
-import { Link } from "react-router-dom";
-import { LoginForm } from "./LoginForm";
-import { SocialLogin } from "./SocialLogin";
-import { Link } from "react-router-dom",
+
 
 
 export function LoginCard() {}
   return (import { Link } from \"react-router-dom\",;
 export function LoginCard() {
+
 
 export function LoginCard() {
   return (

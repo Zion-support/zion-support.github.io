@@ -6,16 +6,19 @@ import { ResumeOption } from '../resume-selector/types';
 import { ResumePreviewCard } from './ResumePreviewCard';
 import { Resume } from '@/types/resume';
 
+
 import React from 'react';
 import { FileText } from 'lucide-react'
 import { ResumeOption  } from '../resume-selector/types';
 import { ResumePreviewCard  } from './ResumePreviewCard';
 import { Resume } from '@/types/resume';
+
 interface SelectResumeSectionProps {
   resumeOptions: ResumeOption[];
   selectedResume: ResumeOption | null;
   handleResumeSelect: (resumeId: string) => void;
   handleDownloadResume: () => void;
+
   isLoading: boolean
 export function SelectResumeSection({
   resumeOptions;
@@ -24,6 +27,7 @@ export function SelectResumeSection({
   handleDownloadResume;
 origin/cursor/automate-test-improve-and-merge-code-2533
   isLoading
+
 }: SelectResumeSectionProps) {
   return (
     <div className="space-y-2">
@@ -41,14 +45,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </div>
             </button>
           ))}
-          
-
-          
 
 
-          
 
-          
+
 
           {resumeOptions.map((option) => (
             <button

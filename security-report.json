@@ -1,12 +1,6 @@
 {
 
 
-
-
-
-
-
-
 ursor/automate-test-improve-and-merge-code-646c
 
   "timestamp": "2025-09-04T21:58:25.812Z",
@@ -50,9 +44,6 @@ ursor/automate-test-improve-and-merge-code-646c
     "fixesApplied": 0
   }
   "timestamp": "2025-09-06T04:56:16.606Z",
-
-  "timestamp": "2025-09-06T20:18:51.985Z",
-  "duration": "3s",
 
   "vulnerabilities": [
     "Found 0 dependency vulnerabilities",

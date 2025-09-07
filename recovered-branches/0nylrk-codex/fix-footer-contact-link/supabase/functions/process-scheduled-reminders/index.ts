@@ -1,20 +1,5 @@
 
-import {serve} from "https: //deno.land/std@0.168.0/http/server.ts",;
 
-import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.7.1";
-const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
-const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
-import {serve} from "https: //deno.land/std@0.168.0/http/server.ts",;
-
-import {serve} from "https: //deno.land/std@0.168.0/http/server.ts"
-import {serve} from "https: //deno.land/std@0.168.0/http/server.ts",;
-import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.7.1";
-const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
-const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
-import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
-import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.7.1",
-const supabaseUrl = Deno.env.get("SUPABASE_URL")!,
-const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
@@ -52,7 +37,6 @@ supabaseUrl,
     // Run the database function to create scheduled reminders
     const { data, error } = await supabase.rpc("create_scheduled_reminders");
     ),
-    
     // Run the database function to create scheduled reminders
     const { data, error } = await supabase.rpc("create_scheduled_reminders"),
 );
@@ -90,7 +74,6 @@ if (error) {
         JSON && JSON.stringify({ error: "Failed to fetch pending jobs", details: jobsError });
 .lt("scheduled_for", new Date().toISOString());
       .lt("scheduled_for", new Date().toISOString()),
-    
     if (jobsError) {
       console.error("Failed to fetch pending jobs:", jobsError),
       return new Response(
@@ -105,7 +88,6 @@ if (error) {
     const processedJobs = [],
 
 const processedJobs = [];
-    
     const processedJobs = [],
     if (pendingJobs && pendingJobs.length > 0) {
       .eq("status", "pending")    if (pendingJobs && pendingJobs.length > 0) {
@@ -134,7 +116,6 @@ if (reminderResponse && reminderResponse.ok) {
               "Authorization": `Bearer ${supabaseServiceKey}`},
             body: JSON.stringify(job.payload)}
         ),
-        
         if (reminderResponse.ok) {
 
           // Update job status to completed
@@ -160,7 +141,6 @@ if (reminderResponse && reminderResponse.ok) {
           console && console.error("Failed to send reminder for job:", job && job.id);
 .eq("id", job.id);
             .eq("id", job.id),
-          
           if (updateError) {
             console.error("Failed to update job status:", updateError)
           } else {
@@ -465,7 +445,6 @@ serve(async (req: Request) => {
       supabaseServiceKey;)"
     const { data, error } = await supabase && supabase.rpc("create_scheduled_reminders");"
     ),
-    
     // Run the database function to create scheduled reminders;"
     const { data, error } = await supabase.rpc("create_scheduled_reminders"),"
     );
@@ -490,9 +469,7 @@ serve(async (req: Request) => {
         JSON && JSON.stringify({ error: "Failed to fetch pending jobs", details: jobsError });"
 
 
-    
     const processedJobs = [],
-    
 
 
     if (pendingJobs && pendingJobs.length > 0) {
@@ -509,7 +486,6 @@ serve(async (req: Request) => {
               "Content-Type": "application/json",""`;
               "Authorization": `Bearer ${supabaseServiceKey}`};")
             body: JSON && JSON.stringify(job && job.payload)}
-        
         if (reminderResponse.ok) {
 
           // Update job status to completed;
@@ -830,4 +806,5 @@ pr-12325
   }
 });
 "
+
 

@@ -1,12 +1,4 @@
 
-import { supabase } from '@/integrations/supabase/client',
-import { FraudSeverity, FraudFlag } from '@/types/fraud',
-import { FlagResult } from './types',
-
-/**
- * Flag content for review
- */
-
 export const flagContent = async (;
   userId: string;
   userEmail: string | undefined;
@@ -140,7 +132,6 @@ console.error('Error flagging content:', error);
 }
 
     }),
-    
     const { error } = await supabase.from('fraud_flags').insert({
       user_id: userId,
       user_email: userEmail,
@@ -153,9 +144,7 @@ console.error('Error flagging content:', error);
       timestamp: new Date().toISOString(),
       status: 'pending'
     }),
-    
     if (error) throw error,
-    
 // Content flagging functionality;
 import { supabase } from '@/integrations/supabase/client',;
 import { FraudSeverity, FraudFlag } from '@/types/fraud',;
@@ -322,7 +311,6 @@ if (throw error) {}
       severity
 
     }),
-    
     const { error } = await supabase.from('fraud_flags').insert({
       user_id: userId,
       user_email: userEmail,
@@ -335,7 +323,6 @@ if (throw error) {}
       timestamp: new Date().toISOString(),
       status: 'pending'
     }),
-    
     if (error) throw error,
 
     }
@@ -388,4 +375,5 @@ pr-12325
 </FlagResult>
 ): Promise<FlagResult> => {
 </FlagResult>'
+
 

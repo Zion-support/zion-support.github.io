@@ -1,3 +1,4 @@
+
 import Head from 'next/head';
 
 import { useRouter  } from 'next/router';
@@ -7,41 +8,6 @@ import Button from '../../components/ui/Button';
 
 export default function ServiceDetailPage() {
 
-export default function ServiceDetailPage() {;
-
-export default function ServiceDetailPage() {
-  const router = useRouter();
-  const { id } = router.query;
-
-import {ArrowLeft, ExternalLink} from 'lucide-react';
-export default function ServiceDetailPage() {
-
-  if (!id || typeof id !== 'string') {;
-
-    return (
-      <div className='min-h-screen bg-black flex items-center justify-center'>;
-        <div className='text-center'>;
-          <h1 className='text-2xl font-bold text-white mb-4'>;
-            Service Not Found;
-          </h1>;
-          <p className='text-gray-400 mb-6'>;
-            The requested service could not be found.;
-          </p>;
-          <Button href='/services' variant='primary'>;
-            <ArrowLeft className='w-4 h-4 mr-2' />            Back to Services      <div className="min-h-screen bg-black flex items-center justify-center">;
-        <div className="text-center">;
-          <h1 className="text-2xl font-bold text-white mb-4">Service Not Found</h1>;
-          <p className="text-gray-400 mb-6">The requested service could not be found.</p>;
-          <Button href="/services" variant="primary">;
-            <ArrowLeft className="w-4 h-4 mr-2" />;
-          </Button>;
-        </div>;
-      </div>;
-    );
-  }
-  const service = getServiceById(id);
-
-  if (!service) {;
     return (
 
 if (!id || typeof id !== 'string') {

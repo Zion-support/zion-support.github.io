@@ -18,34 +18,10 @@ const publicRoutes = [
   "/privacy",
   "/terms",
   "/cookies",
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
-<<<<<<< HEAD
-  "/accessibility",
-  "/compliance",
-  "/gdpr",
-  "/security",
-  "/support",
-  "/help",
-  "/faq",
-  "/guides",
-  "/tutorials",
-  "/webinars",
-  "/white-papers",
-  "/case-studies",
-  "/press",
-  "/events",
-  "/newsletter",
-=======
-<<<<<<< HEAD
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
-<<<<<<< HEAD
-=======
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
+
+
+
+
   "/sitemap",
   "/api-docs",
   "/docs",
@@ -60,46 +36,8 @@ const publicRoutes = [
   "/search",
   "/micro-saas",
   "/it-services",
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  "/micro-saas"];
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
-<<<<<<< HEAD
-=======
-  "/micro-saas"
-=======
-  "/accessibility",
-  "/compliance",
-  "/gdpr",
-  "/security",
-  "/support",
-  "/help",
-  "/faq",
-  "/guides",
-  "/tutorials",
-  "/webinars",
-  "/white-papers",
-  "/case-studies",
-  "/press",
-  "/events",
-  "/newsletter",
-  "/sitemap",
-  "/api-docs",
-  "/docs",
-  "/api",
-  "/login",
-  "/register",
-  "/forgot-password",
-  "/pricing",
-  "/company",
-  "/community",
-  "/status",
-  "/search",
-  "/micro-saas",
-  "/it-services",
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+
+
   "/ai-services",
   "/services-overview",
   "/solutions/cloud-migration",
@@ -125,94 +63,43 @@ const publicRoutes = [
   "/industries/healthcare",
   "/industries/manufacturing",
   "/industries/retail"
-<<<<<<< HEAD
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+
+
 ];
-<<<<<<< HEAD
-=======
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
+
+
 
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
-  
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  // Check if the route is public
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
-<<<<<<< HEAD
-  // Check if the route is public
-=======
-<<<<<<< HEAD
-=======
-  // Check if the route is public
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
-<<<<<<< HEAD
-=======
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
+
+
+
+
+
   if (publicRoutes.includes(pathname)) {
     return NextResponse.next();
   }
-  
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
-<<<<<<< HEAD
-  // For protected routes, you can add authentication logic here
-  // For now, we'll just allow all requests
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
+
+
+
   const authCookie = request.cookies.get("auth-token");
   if (!authCookie) {
     return NextResponse.redirect(new URL("/auth/login", request.url));
   }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    return NextResponse.next();
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
-  
-=======
-  // For protected routes, you can add authentication logic here
-  // For now, we'll just allow all requests
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+
+
+
   return NextResponse.next();
-<<<<<<< HEAD
-=======
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
+
+
 }
 
 export const config = {
   matcher: [
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
-<<<<<<< HEAD
-=======
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
+
+
+
+
     /*
      * Match all request paths except for the ones starting with:
      * - api (API routes)
@@ -220,19 +107,11 @@ export const config = {
      * - _next/image (image optimization files)
      * - favicon.ico (favicon file)
      */
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
-<<<<<<< HEAD
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
-<<<<<<< HEAD
-=======
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
+
+
+
+
+
     "/((?!api|_next/static|_next/image|favicon.ico).*)",
   ],
 };

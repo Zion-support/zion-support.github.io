@@ -3,10 +3,6 @@ export interface CountryPricing {
   { country: "Zimbabwe", pricePerIncident: 60.50 }
 
 
-export interface CountryPricing {
-
-  { country: "Zimbabwe", pricePerIncident: 60.50 }
-origin/cursor/automate-test-improve-and-merge-code-20a4
 
 export interface CountryPricing {
   country: string;
@@ -15,6 +11,7 @@ export interface CountryPricing {
 ursor/fix-website-loading-errors-and-merge-6662
   pricePerIncident: number
 }
+
 
 origin/cursor/automate-test-improve-and-merge-code-2533
 

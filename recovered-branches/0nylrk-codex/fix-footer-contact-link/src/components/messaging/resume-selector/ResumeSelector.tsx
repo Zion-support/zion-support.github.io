@@ -1,5 +1,6 @@
 
 
+
 import React, { useState, useEffect } from './react';
 import { Button  } from '@/components / ui / button';
 import { RadioGroup, RadioGroupItem  } from '@/components / ui / radio - group';
@@ -42,9 +43,7 @@ import { toast  } from '@/components / ui / use - toast';  );
 
   const [customFile, setCustomFile] = useState<File | null>(null);
   const [isLoading, setIsLoading] = useState(false);
-  const { resume, fetchResume } = useResume();
 
-import React, { useState, useEffect } from "react";
   const { resume, fetchResume } = useResume();import React, { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
@@ -101,9 +100,7 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
   const [resumeOptions, setResumeOptions] = useState<ResumeOption[]>([]),
   const [customFile, setCustomFile] = useState<File | null>(null),
   const [isLoading, setIsLoading] = useState(false),
-  
   const { resume, fetchResume } = useResume(),
-  
   // Fetch resume data when component mounts
   useEffect(() => {
 
@@ -562,7 +559,6 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {;
   const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files && e.target.files[0]) {
       const file = e.target.files[0],
-      
       // Check if it's a PDF file
       if (file.type !== "application/pdf") {
         toast({
@@ -702,7 +698,6 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {;
     try {
       setIsLoading(true),
       const pdfBlob = await exportResumeToPDF(selectedResume.resume),
-      
       // Create download link
       const url = URL.createObjectURL(pdfBlob),
       const link = document.createElement('a'),
@@ -710,11 +705,9 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {;
       link.download = `${selectedResume.title || 'Resume'}.pdf`,
       document.body.appendChild(link),
       link.click(),
-      
       // Clean up
       document.body.removeChild(link),
       URL.revokeObjectURL(url),
-      
       toast({
         title: "Success!",
         description: "Your resume has been downloaded."})
@@ -781,6 +774,7 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {;
     window.open("/dashboard/talent/portfolio_blank");
   }
 
+
   return (
     <div className="space-y-4">;
       <h3 className="text-lg font-medium text-white">Attach Resume</h3>;
@@ -795,12 +789,10 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {;
           handleOptionChange(value as "recent" | "select" | "upload")
         }
   },
-  
   // Handle "Generate Resume Now" button
   const handleGenerateResume = () => {
     window.open('/dashboard/talent/portfolio_blank')
   },
-  
   return (
     <div className="space-y-4">
       <h3 className="text-lg font-medium text-white">Attach Resume</h3>
@@ -810,7 +802,6 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {;
         onValueChange={(value) =>
           handleOptionChange(value as "recent" | "select" | "upload")
         }
-      
       <RadioGroup 
         value={selectedOption} 
         onValueChange={(value) => handleOptionChange(value as 'recent' | 'select' | 'upload')}
@@ -846,12 +837,10 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {;
 
 <Label htmlFor="recent" className="text-white">Use most recent AI Resume</Label>
         </div>
-        
         <div className="flex items-center space-x-2">
           <RadioGroupItem value="select" id="select" />
           <Label htmlFor="select" className="text-white">Select from saved versions</Label>
         </div>
-        
         <div className="flex items-center space-x-2">
           <RadioGroupItem value="upload" id="upload" />
           <Label htmlFor="upload" className="text-white">Upload a custom resume (PDF)</Label>
@@ -860,7 +849,6 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {;
       {/* Resume selection options based on radio selection */}
       {selectedOption === "recent" && resume && (
         <ResumePreviewCard
-      
 ;
     try {;
       setIsLoading(true),;
@@ -1181,24 +1169,19 @@ export function ResumeSelector({ onResumeSelected } ResumeSelectorProps) {;'
           <RadioGroupItem value="recent" id="recent" />"
           <Label htmlFor="recent" className="text-white">"
 
-          
         </div>
 
 
-        
 
           <RadioGroupItem value="select" id="select" />"
           <Label htmlFor="select" className="text-white">"
 
-          
 
 
-        
 
           <RadioGroupItem value="upload" id="upload" />"
           <Label htmlFor="upload" className="text-white">"
 
-          
         value={selectedOption} ;"
 
         <div className="flex items-center space-x-2">;"
@@ -1414,7 +1397,6 @@ const {
 try {
   await fetchResume () 
 }catch (error) {
-  
 }finally {
   setIsLoading (false) 
 }
@@ -1439,7 +1421,6 @@ onResumeSelected (customOption)
 }catch (error) {
   console.error ('Error downloading PDF:', error);
 toast ({
-  
 }finally {
   setIsLoading (false) 
 }
@@ -1527,7 +1508,6 @@ return (<div className="space-y-4" > <h3 className="text-lg font-medium text-whi
     </div>);"
           <Plus className="h-4 w-4 mr-2" />"
 
-        
   const [selectedOption, setSelectedOption] = useState<'recent' | 'select' | 'upload'> ('recent');
 const [selectedResume, setSelectedResume] = useState<ResumeOption | null> (null);
 

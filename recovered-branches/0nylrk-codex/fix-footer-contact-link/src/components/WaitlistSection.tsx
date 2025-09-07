@@ -1,30 +1,11 @@
-import {useState} from "react";
-import {Button} from "@/components/ui/button";
-import {GradientHeading} from "@/components/GradientHeading";
-import {Input} from "@/components/ui/input";
-import {Label} from "@/components/ui/label";
-import {useToast} from "@/hooks/use-toast";
-import {Checkbox} from "@/components/ui/checkbox";
-export function WaitlistSection() {;
+
 
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [role, setRole] = useState("");
   const [agreeTerms, setAgreeTerms] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const { toast } = useToast();
 
-import { useState } from "react",
-import { Button } from "@/components/ui/button",
-import { GradientHeading } from "@/components/GradientHeading",
-import { Input } from "@/components/ui/input",
-import { Label } from "@/components/ui/label",
-import { useToast } from "@/hooks/use-toast";
-import { Checkbox } from "@/components/ui/checkbox";
-import { useToast } from "@/hooks/use-toast",
-import { Checkbox } from "@/components/ui/checkbox",
-export function WaitlistSection() {
-  const [email, setEmail] = useState(""),
   const { toast } = useToast();  const [email, setEmail] = useState(""),
   const [name, setName] = useState(""),
   const [role, setRole] = useState(""),
@@ -64,13 +45,10 @@ pr-12325
 
 const handleSubmit = async (e: React.FormEvent) => {
 
-    
     setIsSubmitting(true),
-    
     try {
       // Simulating an API call
       await new Promise(resolve => setTimeout(resolve, 1000)),
-      
 
       toast({
         title: "Success!"
@@ -96,6 +74,7 @@ const handleSubmit = async (e: React.FormEvent) => {
 
 
 
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     if (!email |!name |!role |!agreeTerms) {
@@ -112,9 +91,7 @@ const handleSubmit = async (e: React.FormEvent) => {
       // Simulating an API call;
       await new Promise(resolve => setTimeout(resolve, 1000));
 
-    
     setIsSubmitting(true),
-    
 
 
 
@@ -161,7 +138,6 @@ setEmail(""),
       // Simulating an API call;
       await new Promise(resolve => setTimeout(resolve, 1000));
 
-    
 
     setIsSubmitting(true),
     try {
@@ -169,7 +145,6 @@ setEmail(""),
   // TODO: Implement
       // Simulating an API call;
       await new Promise(resolve => setTimeout(resolve, 1000)),
-      
 
 
         title: "Success!"",)"
@@ -357,7 +332,6 @@ export function WaitlistSection() {;
   }
 
   },
-  
   return (
     <section id="waitlist" className="py-20 bg-zion-blue-dark relative overflow-hidden">
       {/* Background elements */}
@@ -836,7 +810,6 @@ onChange={(e) => setRole(e.target.value)}
               className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple""
             >
 
-            
           </form>
             </div>;
               disabled={isSubmitting} "

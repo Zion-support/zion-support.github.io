@@ -1,3 +1,4 @@
+
 import Head from 'next/head';
 import { motion  } from 'framer-motion';
 import { quantumCybersecurityServices  } from '../data/2026-quantum-cybersecurity-services';
@@ -24,7 +25,6 @@ export default function QuantumCybersecurityServices() {
         <meta name="keywords" content="quantum cybersecurity, quantum encryption, quantum threat detection, quantum identity verification, quantum network security, ZionTech Group" />
         <meta name="author" content="ZionTech Group" />
         <meta name="robots" content="index, follow" />
-        
         {/* Open Graph */}
         {/* Open Graph */  } catch (error) {
     console.error("Error:", error);
@@ -36,7 +36,6 @@ export default function QuantumCybersecurityServices() {
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ziontechgroup.com/quantum-cybersecurity-services" />
         <meta property="og:site_name" content="ZionTech Group" />
-        
         {/* Contact Information */}
         {/* Contact Information */  } catch (error) {
     console.error("Error:", error);
@@ -59,23 +58,7 @@ export default function QuantumCybersecurityServices() {
 }
         <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-16">
           <div className="text-center z-10 max-w-6xl mx-auto">
-            <motion.h1
-              initial={{ opacity: 0, y: 30 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              animate={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              transition={{ duration: 0.8 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6"
+
 
             <motion.h1
               initial={{ opacity: 0, y: 30 }}
@@ -1204,7 +1187,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <p className=&quot;text-xl text-gray-300 mb-8&quot;>
                 Don't wait for quantum computers to break your security. Contact us now to implement quantum-resistant protection.
               </p>
-              
               <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-8 mb-12&quot;>
                 <div className=&quot;bg-black/40 backdrop-blur-xl border border-indigo-400/30 rounded-2xl p-6&quot;>
                   <div className=&quot;text-3xl mb-4&quot;>📱</div>

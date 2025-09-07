@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 
+
 import {
 
 import {
@@ -32,20 +33,7 @@ import {
 
   DialogFooter;
   DialogHeader;
-  DialogTitle;
-import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
-import {Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger} from "@/components/ui/dialog";
-import {Button} from "@/components/ui/button";
-import {Input} from "@/components/ui/input";
-import {Label} from "@/components/ui/label";
-import {Badge} from "@/components/ui/badge";
-import {PlusCircle, Trash, Mail, UserPlus} from "lucide-react";
-import {toast} from "@/hooks/use-toast";
-export function TeamManagement() {;
-  const [isAddingMember, setIsAddingMember] = useState(false);
-  const [newMemberEmail, setNewMemberEmail] = useState("");
 
-import React, { useState } from "react",
   DialogTitle;import React, { useState } from "react",;
 import {
   DialogTitle;"
@@ -348,6 +336,7 @@ if ( {) {
       description: `A new invitation has been sent to ${member_email}`});
   }
 ;
+
   return (
     <div className="space-y-6">;
       <div className="flex items - center justify-between">;
@@ -1478,7 +1467,6 @@ export function TeamManagement() {
                     <div>
                       <div className="font-medium">{member.name}</div>""
                       <div className="text-sm text-muted-foreground">"
-                
                 <TableCell>{member.role}
                 <TableCell>
 
@@ -1486,8 +1474,6 @@ export function TeamManagement() {
                     variant={member.status === "active" ? "default" : "outline"}"
                   >
 
-                  
-                
                 <TableCell>{member.lastActive}"
                 <TableCell className="text-right">"
                   <div className="flex justify-end gap-2">"
@@ -1503,7 +1489,6 @@ export function TeamManagement() {
                         onClick={() => handleResendInvite(member.email)}
                         <Mail className="h-4 w-4 mr-1" />"
 
-                      
                         size="sm"""
                         className="text-destructive hover:text-destructive"""
 import React, { useState } from "react",;"
@@ -1612,11 +1597,6 @@ import { toast } from "@/hooks/use-toast",;"
                         onClick={() => handleRemoveMember(member.id)}
                         <Trash className="h-4 w-4" />"
 
-                      
-                
-              
-          
-        
                 <TableCell>{member.lastActive};"
                 <TableCell className="text-right">;"
                   <div className="flex justify-end gap-2">;"

@@ -15,6 +15,7 @@ import { UseFormReturn } from "react-hook-form",
 import { UseFormReturn } from "react-hook-form",
 import { UseFormReturn } from "react-hook-form",
 
+
 import { 
 
 
@@ -42,46 +43,6 @@ pr-12325
   FormMessage 
 } from "@/components/ui/form",
 
-import { Input } from "@/components/ui/input",
-
-import { Input } from "@/components/ui/input",
-
-import { Input } from "@/components/ui/input";
-import { Input } from "@/components/ui/input",
-import { 
-  Select;
-  SelectContent;
-  SelectItem;
-  SelectTrigger;
-  SelectValue 
-} from "@/components/ui/select",
-import { MilestoneSuggestions } from "@/components/projects/milestones/MilestoneSuggestions",
-import { TalentProfile } from "@/types/talent",
-
-import { GeneratedMilestone } from "@/hooks/useMilestoneGenerator",
-import { ContractFormValues } from "./ContractForm",
-
-import { GeneratedMilestone } from "@/hooks/useMilestoneGenerator";
-import { ContractFormValues } from "./ContractForm";
-import { GeneratedMilestone } from "@/hooks/useMilestoneGenerator",
-import { ContractFormValues } from "./ContractForm",
-interface PaymentTermsFieldsProps {
-import { Input } from "@/components/ui/input",interface PaymentTermsFieldsProps {
-
-  form: UseFormReturn<ContractFormValues>
-  talent: TalentProfile
-
-  handleMilestonesGenerated: (milestones: GeneratedMilestone[]) => void
-}
-
-import {UseFormReturn} from "react-hook-form";
-import {FormField, FormItem, FormLabel, FormControl, FormDescription, FormMessage} from "@/components/ui/form";
-import {Input} from "@/components/ui/input";
-import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
-import {MilestoneSuggestions} from "@/components/projects/milestones/MilestoneSuggestions";
-import {TalentProfile} from "@/types/talent";
-import {GeneratedMilestone} from "@/hooks/useMilestoneGenerator";
-import {ContractFormValues} from "./ContractForm";
 
 export function PaymentTermsFields({
   form;
@@ -257,17 +218,12 @@ interface PaymentTermsFieldsProps {
 "
                     <SelectValue placeholder="Select payment terms" />"
 
-                  
-                
                 <SelectContent>
                   <SelectItem value="hourly">Hourly Rate""
                   <SelectItem value="fixed">Fixed Price""
                   <SelectItem value="milestone">Milestone Payments"
-                
-              
               <FormMessage />
 
-            
 </SelectContent>"
                   <SelectItem value="hourly">Hourly Rate</SelectItem>""
                   <SelectItem value="fixed">Fixed Price</SelectItem>""
@@ -349,12 +305,7 @@ function PaymentTermsFields() {
 
 
 
-                  
-                
-                
-              
 
-            
           name="paymentAmount""
                 <FormControl>;
 

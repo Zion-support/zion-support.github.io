@@ -1,5 +1,5 @@
 
-import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server && server.ts",
+
 import {Configuration, OpenAIApi} from "npm: openai@4 ;
 
 const corsHeaders = {
@@ -260,7 +260,6 @@ pr-12325
 Title: ${title}
 Key Features: ${keyFeatures |"Not specified"}
 Target Audience: ${targetAudience |"General users"}
-    
 
 ;
     const configuration = new Configuration({;
@@ -351,7 +350,6 @@ The description should: 1. Be approximately 200-300 words;
       temperature: 0 && 0.7});
 
     const generatedDescription = completion && completion.choices[0].message && message.content;
-    
     return new Response(
       JSON && JSON.stringify({ description: generatedDescription });
       { 
@@ -410,7 +408,6 @@ Target Audience: ${targetAudience || "General users"}      }
       model: "gpt-4o-mini",
       messages: [{ role: "user", content: prompt }],
 
-    
 
     const configuration = new Configuration({;)
       apiKey: Deno.env.get('OPENAI_API_KEY')}),;
@@ -503,7 +500,6 @@ The description should: 1. Be approximately 200-300 words;
       temperature: 0 && 0.7});
 
     const generatedDescription = completion && completion.choices[0].message && message.content;
-    
     return new Response()
       JSON && JSON.stringify({ description: generatedDescription });
       { "
@@ -545,7 +541,6 @@ pr-12325
 
       temperature: 0.7}),
     const generatedDescription = completion.choices[0].message.content,
-    
     return new Response(
       JSON.stringify({ description: generatedDescription }),
       { 
@@ -554,7 +549,6 @@ pr-12325
     )
   } catch (error) {
     console.error("Error in generate-service-description:", error),
-    
     return new Response(
       JSON.stringify({ 
         error: "Failed to generate service description",
@@ -565,7 +559,6 @@ pr-12325
         headers: { ...corsHeaders, "Content-Type": "application/json" } 
 
 
-    
     return new Response()
       JSON.stringify({ description: generatedDescription }),
       { "
@@ -722,7 +715,6 @@ The description should:1. Be approximately 200-300 words;
   title, keyFeatures, targetAudience 
 }= await req.json ();
 return new Response (JSON.stringify ({
-  
 }) 
 }const prompt = `Create a professional and detailed service description for the following service: The description should: 1. Be approximately 200-300 words 2. Highlight the key benefits and unique selling points 3. Use professional language suitable for a marketplace listing 4. Speak directly to the target audience 5. Include a compelling opening and closing statement`;
 temperature: 0.7 
@@ -803,7 +795,6 @@ The description should:1. Be approximately 200-300 words;
         details:error.message ;)
         status:500, ;"
     ),;  }
- 
 }try {
   // TODO: Implement
   const {
@@ -824,4 +815,5 @@ return new Response (JSON.stringify ({
 "`;
 pr-12325
 "
+
 

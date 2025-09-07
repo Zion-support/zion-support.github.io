@@ -1,75 +1,8 @@
 
-type Props = {;
-  room: Room | null;
-  onLeave: () => void;
-
 import React from 'react';
 import type { Room } from 'livekit-client';
 
 type Props = any;
-origin/cursor/automate-test-improve-and-merge-code-2533
-
-export default function Controls({ room, onLeave, accent = 'cyan' }: Props) {
- ;
-  const [micEnabled, setMicEnabled] = React.useState(true);
-  const [camEnabled, setCamEnabled] = React.useState(true);
-  const [sharing, setSharing] = React.useState(false);
-  const accentClass = accent === 'blue' ? 'bg-blue-600' : 'bg-cyan-600';
-  const toggleMic = async () => {
-    if (!room) return;
-  accent?: 'blue' | 'cyan';};type Props = {;
-  room: Room | null,;
-  onLeave: () => void,;
-  accent?: 'blue' | 'cyan';
-
-const [camEnabled, setCamEnabled] = React.useState(true);
-
-const [sharing, setSharing] = React.useState(false);
-
-const accentClass = accent === 'blue' ? 'bg-blue-600' : 'bg-cyan-600';
-
-const toggleMic = async () => {
-    if (!room);
-  return;
-
-  const toggleScreenShare = async () => {;
-    if (!room) return;
-    try {;
-      const enabled =;
-        await room && room.localParticipant.setScreenShareEnabled(!sharing);
-      setSharing(enabled);
-
-    } catch (e) {;
-      console && console.warn('Screen share failed', e);    }
-    try {
-      const enabled = await room.localParticipant.setScreenShareEnabled(!sharing);
-      setSharing(enabled)
-    } catch (e) {
-      console.warn('Screen share failed', e)
-const enabled =
-      await room.localParticipant.setMicrophoneEnabled(!micEnabled);}
-    setMicEnabled(enabled)}
-};
-
-const toggleCam = async () => {
-    if (!room);
-  return;
-
-const enabled = await room.localParticipant.setCameraEnabled(!camEnabled);}
-setCamEnabled(enabled)}
-};
-
-const toggleScreenShare = async () => {
-    if (!room);
-  return;
-    try {
-const enabled =
-        await room.localParticipant.setScreenShareEnabled(!sharing);}
-      setSharing(enabled);}
-    } catch (e) {}
-      console.warn('Screen share failed', e);}
-    }
-  };
 
   return (
 <div className='flex items-center gap-3'>

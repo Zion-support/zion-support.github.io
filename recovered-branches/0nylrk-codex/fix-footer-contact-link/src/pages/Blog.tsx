@@ -22,39 +22,13 @@ import { Input } from "@/components/ui/input",
 import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select",
 
 
-import { useState } from "react",;
-import { Link } from "react-router-dom",;
-import { Header } from "@/components/Header",;
-import { Footer } from "@/components/Footer",;
-import { GradientHeading } from "@/components/GradientHeading",;
-import { SEO } from "@/components/SEO",;
-import { Card, CardContent, CardFooter } from "@/components/ui/card",;
-import { Button } from "@/components/ui/button",;
-import { Input } from "@/components/ui/input",;
-import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select",;
+
 import { BlogPost } from "@/types/blog";
 import { Search } from "lucide-react";
 // Sample blog data - in a real app this would come from an API or CMS
 const BLOG_POSTS: BlogPost[] = [
   {
-import { BlogPost } from "@/types/blog",
-import { Search } from "lucide-react",
-// Sample blog data - in a real app this would come from an API or CMS
-const BLOG_POSTS: BlogPost[] = [
-  {
-    id: "ai-trends-2025",
-    title: "10 Emerging AI Trends to Watch in 2025",
-    slug: "ai-trends-2025",
-    excerpt: "From multimodal AI to neuromorphic computing, discover the technologies that will shape the artificial intelligence landscape in 2025.",
-    content: `<p>As we move further into 2025, artificial intelligence continues to evolve at an unprecedented pace. This article explores the most significant trends that are reshaping the AI landscape this year.</p>
 
-id: "ai-trends-2025"
-    title: "10 Emerging AI Trends to Watch in 2025"
-    slug: "ai-trends-2025"
-    excerpt: "From multimodal AI to neuromorphic computing, discover the technologies that will shape the artificial intelligence landscape in 2025.";
-
-    content: `<p>As we move further into 2025, artificial intelligence continues to evolve at an unprecedented pace. This article explores the most significant trends that are reshaping the AI landscape this year.</p>
-<h2>1. Multimodal AI Systems</h2>
 import { BlogPost } from "@/types/blog",;
 import { Search } from "lucide-react",<h2>1. Multimodal AI Systems</h2>
 <p>Unlike traditional AI models that process single data types (text, images, or audio), multimodal systems can handle and interpret multiple data formats simultaneously. This creates more human-like understanding capabilities and enables more sophisticated applications across industries.</p>
@@ -83,6 +57,7 @@ import { Search } from "lucide-react","
     title: "10 Emerging AI Trends to Watch in 2025",""
     slug: "ai-trends-2025",""
     excerpt: "From multimodal AI to neuromorphic computing, discover the technologies that will shape the artificial intelligence landscape in 2025.","
+
     content: `<p>As we move further into 2025, artificial intelligence continues to evolve at an unprecedented pace. This article explores the most significant trends that are reshaping the AI landscape this year.</p>
 
 
@@ -107,9 +82,7 @@ pr-12325
 <p>AI systems designed specifically to address climate challenges are gaining traction. From optimizing energy networks to modeling climate scenarios, these specialized tools are becoming essential in sustainability efforts.</p>`;
     author: {
 
-<p>AI systems designed specifically to address climate challenges are gaining traction. From optimizing energy networks to modeling climate scenarios, these specialized tools are becoming essential in sustainability efforts.</p>`,
-    author: {
-      name: "Dr. Alicia Zhang",
+
       title: "AI Research Director",
       avatarUrl: "https://images.unsplash.com/photo-1589386417686-0d34b5903d23?auto=format&fit=crop&w=200&h=200"
     },
@@ -868,19 +841,15 @@ export default function Blog() {;
 export default function Blog() {
   const [searchQuery, setSearchQuery] = useState(""),
   const [selectedCategory, setSelectedCategory] = useState("All Categories"),
-  
   // Filter blog posts based on search and category
   const filteredPosts = BLOG_POSTS.filter(post => {
     const matchesSearch = 
       post.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
       post.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||
       post.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase())),
-      
     const matchesCategory = selectedCategory === "All Categories" || post.category === selectedCategory,
-    
     return matchesSearch && matchesCategory
   }),
-  
   // Get featured posts
   const featuredPosts = BLOG_POSTS.filter(post => post.isFeatured),
 
@@ -2294,6 +2263,7 @@ variant="outline"
                   type="text"
                   placeholder="Search articles..."
                   value={searchQuery}          )}
+
         </div>
       </div>
       <Footer />
@@ -3016,7 +2986,6 @@ const BLOG_POSTS: BlogPost[] = [;
                 className="border-zion-purple text-zion-purple hover:bg-zion-purple/10""
               >
 
-              
       <Footer />
 
     </>

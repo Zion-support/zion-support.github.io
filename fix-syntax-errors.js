@@ -320,6 +320,7 @@ if (&&) {$2;}
 
 console.log(`\nTotal files fixed: ${totalFixed}`);
   }
+
 }},
 ,
 // Run all fixes,
@@ -330,13 +331,6 @@ fixApiDocs();
 fixCareers();
 ,
 console.log('🎉 Syntax error fixes completed');
-
-
-
-}},
-
-
-
 
 // Run all fixes,
 fixFooter(),
@@ -467,11 +461,9 @@ function fixSyntaxErrors(filePath) {
 
 function walkDirectory(dir) {
   const files = fs.readdirSync(dir);
-  
   for (const file of files) {
     const filePath = path.join(dir, file);
     const stat = fs.statSync(filePath);
-    
     if (stat.isDirectory()) {
       walkDirectory(filePath);
     } else if (file.endsWith('.ts') || file.endsWith('.tsx')) {
@@ -493,7 +485,6 @@ console.log('🔧 Fixing syntax errors in API files...');
 const fixFile = (
   try {
     let content = fs.readFileSync(filePath, 'utf8');
-    
     // Fix common syntax issues;
 content = content.replace(/,\s*$/gm, ''); // Remove trailing commas;) => {
   return $3;}
@@ -503,10 +494,8 @@ content = content.replace(/,\s*]/g, ']'); // Remove trailing commas before closi
 content = content.replace(/,\s*\)/g, ')'); // Remove trailing commas before closing parentheses;
     // Fix missing semicolons;
 content = content.replace(/([^;}])\n(\s*[a-zA-Z])/g, '$1;\n$2');
-    
     // Fix import statements;
 content = content.replace(/import\s+([^;]+),\s*;/g, 'import $1;');
-    
     // Fix function declarations;
 content = content.replace(/export default function\s+(\w+)\s*\([^)]*\)\s*{/g, 'export default function $1($2) {');
     }
@@ -522,7 +511,6 @@ content = content.replace(/export default function\s+(\w+)\s*\([^)]*\)\s*{/g, 'e
 const main = (
   const apiDir = 'pages/api';
   const files = [];
-  
   const walkDir = (dir) => {
     const items = fs.readdirSync(dir);
     for (const item of items) {
@@ -564,9 +552,9 @@ const fs = require('fs')const path  = require('path')console.log('🔧 Fixing sy
     }
 
   });
-  
   console.log(`\n🎉 Fixed ${fixed}/${files.length} files`);
 };
 
 main();
+
 

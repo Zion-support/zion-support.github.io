@@ -1,3 +1,4 @@
+
 import {useState} from "react";
 import {z} from "zod";
 import {useForm} from "react-hook-form";
@@ -604,6 +605,7 @@ console.error('Error submitting partner application:', error),
     } catch (error: any) {      toast({
         title: "Submission failed"
         description: error.message |"There was a problem submitting your application."
+
 
         variant: "destructive"})
     } finally {
@@ -1596,7 +1598,6 @@ export function PartnerRegistrationForm() {;
 "
                       <Input placeholder="Your name or brand name" {...field} />"
 
-                    
                     <FormMessage />
 
     <Card className="bg - zion - blue - dark border - zion - blue - light">;"
@@ -1790,11 +1791,7 @@ export function PartnerRegistrationForm() {;
 
           </form>;
     );
-            
           </form>
-        
-      
-    
               type="submit""
               disabled={isSubmitting}
             >
@@ -1851,10 +1848,6 @@ data: existingCode
 }defaultValue= {
   field.value 
 }> <FormControl> <SelectTrigger> <SelectValue placeholder=" Select audience size"/> </SelectTrigger> </FormControl> <SelectContent> <SelectItem value=" under1k">Under 1, 000</SelectItem> <SelectItem value=" 1k-10k">1, 000 - 10, 000</SelectItem> <SelectItem value=" 10k-50k">10, 000 - 50, 000</SelectItem> <SelectItem value=" 50k-100k">50, 000 - 100, 000</SelectItem> <SelectItem value=" over100k">Over 100, 000</SelectItem> </SelectContent> </Select> <FormMessage /> </FormItem>) 
-            
-        
-      
-    
 }return (<Card className=" bg-zion-blue-dark border-zion-blue-light"> <CardHeader> <CardTitle>Partner Registration <CardDescription>Register to become a Zion AI partner and start earning rewards  <CardContent>  <FormMessage /> )"
 
 }/> <FormField  <FormMessage /> ) 

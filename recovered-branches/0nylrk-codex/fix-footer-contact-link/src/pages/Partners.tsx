@@ -1,56 +1,4 @@
-import {Button} from "@/components/ui/button";
-import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
-import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
-import {CheckCircle, FileDown, FileText, PieChart, Users} from "lucide-react";
-import {useState} from "react";
-import {PartnerRegistrationForm} from "@/components/partners/PartnerRegistrationForm";
-import {PartnerReferralLinks} from "@/components/partners/PartnerReferralLinks";
-import {PartnerDashboard} from "@/components/partners/PartnerDashboard";
-import {PartnerLeaderboard} from "@/components/partners/PartnerLeaderboard";
-import {PartnerResources} from "@/components/partners/PartnerResources";
-import {useAuth} from "@/hooks/useAuth";
-import {useNavigate} from "react-router-dom";
-export default function Partners() {;
-import { Button } from "@/components/ui/button",;
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
-import { CheckCircle, FileDown, FileText, PieChart, Users } from "lucide-react",;
-import { useState } from "react",;
-import { PartnerRegistrationForm } from "@/components/partners/PartnerRegistrationForm",;
-import { PartnerReferralLinks } from "@/components/partners/PartnerReferralLinks",;
-import { PartnerDashboard } from "@/components/partners/PartnerDashboard",;
-import { PartnerLeaderboard } from "@/components/partners/PartnerLeaderboard",;
-import { PartnerResources } from "@/components/partners/PartnerResources",import { useAuth } from "@/hooks/useAuth";
-import { useNavigate } from "react-router-dom";
-export default function Partners() {
-  const [activeTab, setActiveTab] = useState("overview");
 
-import { Button } from "@/components/ui/button";"
-import {
-  // TODO: Implement
-}
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,"
-} from "@/components/ui/card";""
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";""
-import { CheckCircle, FileDown, FileText, PieChart, Users } from "lucide-react";""
-import { useState } from "react";""
-import { PartnerRegistrationForm } from "@/components/partners/PartnerRegistrationForm";""
-import { PartnerReferralLinks } from "@/components/partners/PartnerReferralLinks";""
-import { PartnerDashboard } from "@/components/partners/PartnerDashboard";""
-import { PartnerLeaderboard } from "@/components/partners/PartnerLeaderboard";""
-import { PartnerResources } from "@/components/partners/PartnerResources";""
-import { useAuth } from "@/hooks/useAuth";""
-import { useNavigate } from "react-router-dom";"
-export default function Partners() {"
-  const [activeTab, setActiveTab] = useState("overview");"
-pr-12325
-
-  const { user, isAuthenticated } = useAuth();
-  const navigate = useNavigate();
 
   // If not authenticated, display partner program info and signup CTA
   if (!isAuthenticated) {
@@ -1238,8 +1186,6 @@ export default function Partners() {;
                   <p className="font-medium text-white">Exclusive insights</p>""
 
                   <p className="font-medium text-white">Marketing resources</p>""
-            
-          
 
               <CardTitle className="text-white">For AI Organizations"
               <CardDescription>Strategic partnerships
@@ -1248,8 +1194,6 @@ export default function Partners() {;
 
 
                   <p className="font-medium text-white">Custom tracking</p>""
-            
-          
         <div className="text-center mb-12">"
           <h2 className="text-2xl font-bold text-white mb-4">How It Works</h2>""
           <div className="grid md:grid-cols-3 gap-6">"
@@ -1259,38 +1203,27 @@ export default function Partners() {;
 
                 <CardTitle className="text-lg text-white">"
 
-                
               <CardContent className="text-center text-sm text-zion-slate-light">"
 
                 <p>
-              
-            
                   <FileText className="h-6 w-6 text-zion-cyan" />"
 
 
-                
 
-              
-            
                   <PieChart className="h-6 w-6 text-zion-cyan" />"
 
 
-                
 
-              
-            
         <div className="flex justify-center gap-4">"
           <Button;"
             size="lg"""
             className="bg-zion-purple hover:bg-zion-purple-dark"")"
             onClick={() => navigate("/signup")}"
 
-          
             variant="outline"""
             className="text-zion-cyan border-zion-cyan"""
             onClick={() => navigate("/login")}"
 
-          
     <div className="container max-w-7xl py-10">"
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">"
           <h1 className="text-3xl font-bold tracking-tight text-white">"
@@ -1300,7 +1233,6 @@ export default function Partners() {;
             onClick={() => window.print()}
             <FileDown className="h-4 w-4" />"
 
-          
 
       <Tabs;
         value={activeTab}
@@ -1313,17 +1245,14 @@ export default function Partners() {;
           <TabsTrigger value="earnings">Earnings""
           <TabsTrigger value="leaderboard">Leaderboard""
           <TabsTrigger value="resources">Resources"
-        
         <TabsContent value="overview" className="space-y-4">"
 
           <PartnerDashboard />
 
-        
         <TabsContent value="referrals" className="space-y-4">"
 
           <PartnerReferralLinks />
 
-        
         <TabsContent value="earnings" className="space-y-4">"
 
           <Card>
@@ -1332,23 +1261,15 @@ export default function Partners() {;
               <CardTitle>Earnings & Payouts
               <CardDescription>
 
-              
-            
             <CardContent>
-            
-          
-        
         <TabsContent value="leaderboard" className="space-y-4">"
 
           <PartnerLeaderboard />
 
-        
         <TabsContent value="resources" className="space-y-4">"
 
           <PartnerResources />
 
-        
-      
       <div className="container max - w-6xl py - 10">;"
         <div className="text - center mb - 8">;"
           <h1 className="text - 4xl font - bold tracking - tight text - white mb - 2">Zion AI Partner Program</h1>;""

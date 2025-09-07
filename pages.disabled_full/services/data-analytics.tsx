@@ -41,11 +41,7 @@ export default function Dataanalytics({ }: DataanalyticsProps) {
 
 }
 
-<<<<<<<< HEAD:pages.disabled_full/services/data-analytics.tsx
-
-
-
->>>>>>>> main:corrupted_backup/data-analytics.tsx
+<
 
 
 

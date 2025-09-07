@@ -1,95 +1,4 @@
 
-
-import React from "react";
-import { useTranslation } from "react-i18next";
-import { Button } from "@/components/ui/button";
-import { Globe } from "lucide-react";
-
-
-
-import React from "react";""
-import { useTranslation } from "react-i18next";""
-import { Button } from "@/components/ui/button";""
-import { Globe } from "lucide-react";"
-pr-12325
-import {;
-  DropdownMenu,;
-  DropdownMenuContent,;
-  DropdownMenuItem,;
-  DropdownMenuTrigger,;
-
-import {
-DropdownMenu
-import {
-  DropdownMenu
-  DropdownMenuContent
-  DropdownMenuItem
-  DropdownMenuTrigger
-} from "@/components/ui/dropdown-menu";
-import { useLanguage, SupportedLanguage } from "@/context/LanguageContext";
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from '@/components / ui / dropdown - menu';
-import { use_language, SupportedLanguage  } from '@/context / LanguageContext';
-export /**
- * LanguageSelector - Function description
- */
-function LanguageSelector() {
-  const { t } = use_translation ();
-  const { current_language, change_language, supported_languages } = use_language ();
-;
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-DropdownMenuTrigger,;
-} from "@/components/ui/dropdown-menu";
-import { useLanguage, SupportedLanguage } from "@/context/LanguageContext";
-
-export function LanguageSelector() {;
-  const { t } = useTranslation();
-  const { currentLanguage, changeLanguage, supportedLanguages } = useLanguage();
-} from "@/components/ui/dropdown-menu";
-import { useLanguage, SupportedLanguage } from "@/context/LanguageContext";
-import React from 'react',
-import { useTranslation } from 'react-i18next',
-import { Button } from '@/components/ui/button',
-import { Globe } from 'lucide-react',
-
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-DropdownMenuTrigger,;"
-} from "@/components/ui/dropdown-menu";""
-import { useLanguage, SupportedLanguage } from "@/context/LanguageContext";"
-export function LanguageSelector() {;
-  const { t } = useTranslation();
-  const { currentLanguage, changeLanguage, supportedLanguages } = useLanguage();"
-import React from 'react',;
-pr-12325
-import { useTranslation } from 'react-i18next',;
-import { Button } from '@/components/ui/button',;
-import { Globe } from 'lucide-react',;
-import React from 'react',''
-import { useTranslation } from 'react-i18next',''
-import { Button } from '@/components/ui/button',''
-import { Globe } from 'lucide-react','
-
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger} from '@/components/ui/dropdown-menu',
-import { useLanguage, SupportedLanguage } from '@/context/LanguageContext',;
-
-
-  DropdownMenuItem,'
-  DropdownMenuTrigger} from '@/components/ui/dropdown-menu',''
-import { useLanguage, SupportedLanguage } from '@/context/LanguageContext','
-export function LanguageSelector() {
-  const { t } = useTranslation();
-  const { currentLanguage, changeLanguage, supportedLanguages } = useLanguage();
   return (
     <DropdownMenu>;
       <DropdownMenuTrigger asChild>;
@@ -348,7 +257,6 @@ export function LanguageSelector() {
               <span className="text-lg">{lang.flag}</span>"`;
               <span>{t(`language.${lang.code}`)}</span>
             </div>
-          
  return (<DropdownMenu> <DropdownMenuTrigger asChild> key= {
 )
 }> </div> ) ) 

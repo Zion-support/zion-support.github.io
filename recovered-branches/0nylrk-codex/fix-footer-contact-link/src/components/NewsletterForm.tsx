@@ -1,31 +1,3 @@
-import {Button} from "@/components/ui/button";
-import {Input} from "@/components/ui/input";
-import {useState} from "react";
-export function NewsletterForm() {;  const [email, setEmail] = useState("");
-
-import { Button } from "@/components/ui/button";""
-import { Input } from "@/components/ui/input";""
-import { useState } from "react";"
-export function NewsletterForm() {"
-  const [email, setEmail] = useState("");"
-pr-12325
-
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
-
-  const handleSubmit = (
-    e.preventDefault();
-    setIsSubmitting(true);
-export function NewsletterForm() {
-  const [email, setEmail] = useState(""),
-  const [isSubmitting, setIsSubmitting] = useState(false),
-  const [isSubmitted, setIsSubmitted] = useState(false),
-
-    e.preventDefault(),
-    setIsSubmitting(true),
-    
-    // Simulate API call
-    setTimeout(() => {
 
   return (
     <div className="w-full max-w-md mx-auto">
@@ -185,7 +157,6 @@ function NewsletterForm() {
             disabled={isSubmitting}"
             className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white hover:from-zion-purple-light hover:to-zion-purple""
 
-          
         </form>"
     <div className="w-full max-w-md mx-auto">;"
         <div className="text-center p-4 rounded-lg bg-zion-purple/20 border border-zion-purple/40">;"

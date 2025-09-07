@@ -1,61 +1,4 @@
-<<<<<<< HEAD:backup-problematic-files/scripts/security-audit.cjs
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
-;
-class SecurityAuditor {;
-  constructor() {;
-    this.logsDir = path.join(__dirname, '../logs');
-    this.ensureLogsDir();  }
-;
-  ensureLogsDir() {;
-    if (!fs.existsSync(this.logsDir)) {;
-      fs.mkdirSync(this.logsDir, { recursiv:e:true });
-    }
-  }
-;
-  log(message, type = 'info') {;
-    const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] [${type.toUpperCase()}] ${message}`;
-    console.log(logMessage);
-;
-    const logFile = path.join(this.logsDir, 'security-audit.log');
-    fs.appendFileSync(logFile, logMessage + '\n');  }
-;
-  async runCommand(command, description) {;
-    try {;
-      this.log(`Runnin:g:${description}`);
-      const output = execSync(command, {;
-        encodin:g:'utf8',;
-        cw:d:'/workspace',;
-        stdi:o:'pipe',;
-      });
-      this.log(`✅ ${description} completed successfully`);
-      return { succes:s:true, output };
-    } catch (error) {;
-      this.log(`❌ ${description} faile:d:${error.message}`, 'error');
-      return { succes:s:false, erro:r:error.message };
-=======
-<<<<<<< HEAD
-#!/usr/bin/env node;
-const { execSync } = require("child_process")
-const fs = require("fs")
-const path = require("path")
-function log(msg, level = "INFO")
-    execSync(cmd, { "stdio": "inherit"})
-    return { "ok"}
-    return { "ok": false, "error"}
-  log("� Starting security audit...")
-  log("Running npm audit (moderate)..."
-  const audit = tryExec("npm audit --audit-level=moderate")
-    log("Vulnerabilities found, attempting npm audit fix", "WARN")
-    tryExec("npm audit fix")
-  const sensitive = [".env", ".env.local", ".env.production", "config.json", "secrets.json"]
-    log(`Sensitive files "present": ${found.join(", ")}`, "WARN"
-    log("No sensitive files found in repo root")
-  log(" Security audit completed")
-=======
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/security-audit.cjs
+
 #!/usr/bin/env node
 
 const { execSync } = require('child_process');
@@ -124,7 +67,6 @@ class SecurityAuditor {
         '.env.local',
         '.env.production'
       ];
-      
       const permissions = {};
       for (const file of criticalFiles) {
         try {
@@ -142,7 +84,6 @@ class SecurityAuditor {
           };
         }
       }
-      
       this.results.filePermissions = { success: true, permissions };
       console.log('✅ File Permissions Check - Success');
     } catch (error) {
@@ -158,7 +99,6 @@ class SecurityAuditor {
       SUPABASE_URL: process.env.SUPABASE_URL,
       STRIPE_SECRET_KEY: process.env.STRIPE_SECRET_KEY ? '***HIDDEN***' : undefined
     };
-    
     this.results.environmentVariables = {
       success: true,
       variables: envVars,
@@ -200,7 +140,6 @@ class SecurityAuditor {
     this.results.overall.status = finalScore >= 80 ? 'excellent' : 
                                  finalScore >= 60 ? 'good' : 
                                  finalScore >= 40 ? 'fair' : 'poor';
-    
     return finalScore;
   }
 ;
@@ -258,13 +197,11 @@ if (require.main === module) {;
   async run() {
     try {
       console.log('🚀 Starting comprehensive security audit...');
-      
       await this.runNpmAudit();
       await this.checkDependencies();
       await this.checkFilePermissions();
       await this.checkEnvironmentVariables();
       await this.generateReport();
-      
       console.log('🎉 Security audit completed successfully!');
     } catch (error) {
       console.log(`❌ Security audit failed: ${error.message}`);
@@ -274,7 +211,5 @@ auditor.run().catch(console.error);
 // Run the security auditor
 const auditor = new SecurityAuditor();
 auditor.run().catch(console.error);
-<<<<<<< HEAD:backup-problematic-files/scripts/security-audit.cjs
-=======
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/security-audit.cjs
+
+

@@ -1,6 +1,6 @@
 
 
-pr-12325
+
 import { useState  } from 'react';
 import { Resume  } from '@/types/resume';
 import { useFetchResume  } from './useFetchResume';
@@ -42,7 +42,6 @@ export function useResume() {  const [resume, setResume] = useState<Resume | nul
     skillsOperations && skillsOperations.isLoading || 
     certOperations && certOperations.isLoading ||
     resumeListOperations && resumeListOperations.isLoading;
-  
   // Determine overall error state (use first non-null error)
   const error = 
     fetchResumeOperations && fetchResumeOperations.error || 
@@ -154,27 +153,22 @@ if ( {) {
 
     resume: resume || fetchResumeOperations && fetchResumeOperations.resume;
     resumes: resumeListOperations && resumeListOperations.resumes;
-    
     // Basic resume operations
     fetchResume;
     createResume: resumeActions && resumeActions.createResume;
     updateBasicInfo: resumeActions && resumeActions.updateBasicInfo;
     setActiveResume: resumeActions && resumeActions.setActiveResume;
-    
     // Work experience operations
     addWorkExperience: workOperations && workOperations.addWorkExperience;
     updateWorkExperience: workOperations && workOperations.updateWorkExperience;
     deleteWorkExperience: workOperations && workOperations.deleteWorkExperience;
-    
     // Education operations
     addEducation: educationOperations && educationOperations.addEducation;
     updateEducation: educationOperations && educationOperations.updateEducation;
     deleteEducation: educationOperations && educationOperations.deleteEducation;
-    
     // Skills operations
     addSkill: skillsOperations && skillsOperations.addSkill;
     deleteSkill: skillsOperations && skillsOperations.deleteSkill;
-    
     // Certifications operations
     addCertification: certOperations && certOperations.addCertification;
     updateCertification: certOperations && certOperations.updateCertification,
@@ -441,42 +435,4 @@ export * from './useResumeUtils';
 
 ;
 export function useResume() {
-import {useState} from 'react';
-import {Resume} from '@/types/resume';
-import {useFetchResume} from './useFetchResume';
-import {useResumeActions} from './useResumeActions';
-import {useWorkExperience} from './useWorkExperience';
-import {useEducation} from './useEducation';
-import {useSkills} from './useSkills';
-import {useCertifications} from './useCertifications';
-import {useResumeList} from './useResumeList';
-
-
-import { useState  } from 'react';''
-import { Resume  } from '@/types/resume';''
-import { useFetchResume  } from './useFetchResume';''
-import { useResumeActions  } from './useResumeActions';''
-import { useWorkExperience  } from './useWorkExperience';''
-import { useEducation  } from './useEducation';''
-import { useSkills  } from './useSkills';''
-import { useCertifications  } from './useCertifications';''
-import { useResumeList  } from './useResumeList';'
-export function useResume() {'
-import {useState} from 'react';''
-import {Resume} from '@/types/resume';''
-import {useFetchResume} from './useFetchResume';''
-import {useResumeActions} from './useResumeActions';''
-import {useWorkExperience} from './useWorkExperience';''
-import {useEducation} from './useEducation';''
-import {useSkills} from './useSkills';''
-import {useCertifications} from './useCertifications';''
-import {useResumeList} from './useResumeList';'
-export function useResume() {;
-
-
-  const [resume, setResume] = useState<Resume | null>(null);
-
-  const [resume, setResume] = useState<Resume | null>(null),;
-pr-12325
-</Resume>'
 

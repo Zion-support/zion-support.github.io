@@ -418,6 +418,7 @@ export const useApiErrorHandler = () => {;
 
 };
 import React, { Component, ReactNode } from 'react';
+
 import { QueryClient  } from '@tanstack/react-query';
 import * as Sentry from '@sentry/nextjs';
 import { Button  } from '@/components/ui/button';
@@ -429,12 +430,4 @@ interface ApiErrorBoundaryProps {
   queryClient?: QueryClient;
   fallback?: ReactNode
 }
-      scope.setTag('source', 'useApiErrorHandler');
-      scope.setLevel('error');
-      Sentry.captureException(error);
-    });
-  };
 
-  return { handleApiError };
-};
-origin/cursor/automate-test-improve-and-merge-code-2533

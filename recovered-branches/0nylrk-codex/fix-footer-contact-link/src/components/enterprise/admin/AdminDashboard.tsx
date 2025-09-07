@@ -1,13 +1,15 @@
+
 import React from "react",
 import { AdminHeader } from "./AdminHeader",
 import { TeamManagement } from "./TeamManagement",
 import { UsageStats } from "./UsageStats",
-import React from "react";
+
 
 
 import { AdminHeader } from "./AdminHeader";
 import { TeamManagement } from "./TeamManagement";
 import { UsageStats } from "./UsageStats";
+
 
 import { RoleManagement } from "./RoleManagement";
 import { TeamActivity } from "./TeamActivity";
@@ -47,15 +49,12 @@ import {
         <TabsContent value="usage" className="space-y-8">
           <UsageStats />
         </TabsContent>
-        
         <TabsContent value="team" className="space-y-8">
           <TeamManagement />
         </TabsContent>
-        
         <TabsContent value="roles" className="space-y-8">
           <RoleManagement />
         </TabsContent>
-        
         <TabsContent value="usage" className="space-y-8">
           <UsageStats />
         </TabsContent>
@@ -146,15 +145,12 @@ import {
         <TabsContent value="team" className="space-y-8">
           <TeamManagement />
         </TabsContent>
-        
         <TabsContent value="roles" className="space-y-8">
           <RoleManagement />
         </TabsContent>
-        
         <TabsContent value="usage" className="space-y-8">
           <UsageStats />
         </TabsContent>
-        
 
         <TabsContent value="activity" className="space-y-8">
           <TeamActivity />
@@ -223,7 +219,6 @@ import {
           <TabsTrigger value="roles">Role Assignment""
           <TabsTrigger value="usage">Usage Limits""
           <TabsTrigger value="activity">Team Activity"
-        
 
         <TabsContent value="team" className="space-y-8">"
 
@@ -237,24 +232,17 @@ import {
 
           <UsageStats />
 
-        
 
 
-        
 
 
-        
 
 
-        
-        
 
         <TabsContent value="activity" className="space-y-8">"
 
           <TeamActivity />
 
-        
-      
     <div className="container mx-auto max-w-7xl py-8 px-4 md: px-6">;"
 </div>
       <AdminHeader />;

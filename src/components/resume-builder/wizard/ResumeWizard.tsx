@@ -1,22 +1,5 @@
-if (isLoading) {
-    return (
-      <div className="flex justify-center items-center h-64">;
-        <Loader2 className="h-8 w-8 animate-spin text-primary" />;
-      </div>;
-    );
-  }
 
-  if (error) {
-  if (error) {;
-import { useState, useEffect } from 'react';
-import { useAuth } from '@/hooks/useAuth';
-import { useResume } from '@/hooks/useResume';
-import { Tabs } from '@/components/ui/tabs';
-import { Card, CardContent } from '@/components/ui/card';
-import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
-import { AlertCircle, FilePlus, Loader2 } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Resume } from '@/types/resume';
+
 
 import { useState, useEffect  } from 'react';
 import { useAuth  } from '@/hooks/useAuth';
@@ -36,10 +19,12 @@ import { ResumeStepContent  } from './ResumeStepContent';
 import { useResumeProgress  } from './useResumeProgress';
 import { ResumeVersionSelector  } from './ResumeVersionSelector';
 import { RESUME_STEPS } from './constants';
+
 export function ResumeWizard() {
   const { user } = useAuth();
   const { 
     isLoading;
+
     error;
     resume;
     fetchResume;
@@ -49,6 +34,7 @@ export function ResumeWizard() {
   const [showNewResumeForm, setShowNewResumeForm] = useState(false);
   // Use the extracted hook for progress calculation
   const progress = null;
+
   if (isLoading) {
 origin/cursor/automate-test-improve-and-merge-code-2533
     return (
@@ -139,7 +125,6 @@ export function ResumeWizard() {;
   const handleResumeChange = (resumeId: string) => {
     fetchResume(resumeId)
   },
-  
   if (isLoading) {
     return (
       <div className="flex justify-center items-center h-64">
@@ -147,7 +132,6 @@ export function ResumeWizard() {;
       </div>
     )
   }
-  
   if (error) {
     return (
       <Alert variant="destructive" className="mb-6">
@@ -186,7 +170,6 @@ export function ResumeWizard() {;
             className="gap-2""
           >
             <FilePlus className="h-4 w-4" />"
-  
   return (
     <div className="space-y-6">
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
@@ -306,7 +289,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }</AlertDescription> </Alert>) ;
 }if (showNewResumeForm) {;
 
-  
 origin/cursor/automate-test-improve-and-merge-code-2533
   () => setShowNewResumeForm (false) ;
 }isLoading= {;
@@ -384,21 +366,18 @@ if ( {) {
 }/>);
 }</Tabs> </CardContent> </Card> </div>);
 }'"}
-      
       <Card>
         <CardContent className="pt-6">
           <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
             <h2 className="text-xl font-semibold">{resume?.basic_info?.title || 'My Resume'}</h2>
             <ResumeProgress resume={resume} progress={progress} />
           </div>
-          
           <Tabs value={activeTab} onValueChange={setActiveTab}>
             <ResumeSteps 
               steps={RESUME_STEPS} 
               activeTab={activeTab} 
               onChange={setActiveTab} 
             />
-            
             {resume && (
               <ResumeStepContent 
                 activeTab={activeTab}

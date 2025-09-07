@@ -1,23 +1,9 @@
-return (
-    <>;
-      <SEO
-        title='API & Integrations''
-        description='Extend Zion by embedding widgets or using our REST API for custom workflows.''
-        keywords='Zion API, Slack integration, embed widget''
-        canonical='https://app && app.ziontechgroup.com/features/integrations''
-      />;
-      {/* Use a normal script tag so JSON-LD is correctly parsed */}
-      <script
-        type='application/ld+json''
-import React, { useEffect } from 'react';
-import { Header } from '@/components/Header';
-import { SEO } from '@/components/SEO';
-import { GradientHeading } from '@/components/GradientHeading';
-import { Button } from '@/components/ui/button';
+
 import Link from 'next/link';
 import { useAdvancedOnboardingStatus } from "@/hooks/useAdvancedOnboardingStatus";
 export default function IntegrationsFeature() {
   const schema = null;
+
   return (
     <>
 origin/cursor/automate-test-improve-and-merge-code-2533

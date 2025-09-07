@@ -1,17 +1,10 @@
 
 
-import { 
-  ArrowRight, Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star, 
   Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server;
   ChevronRight, ExternalLink, TrendingUp, BarChart3, Cloud, Network;
   Search, Filter, Grid, List, Star as StarIcon, Eye, Heart, Share2;
   DollarSign, Calendar, Users as UsersIcon, Zap as ZapIcon
 
-} from 'lucide-react',;
-import EnhancedNavigation from '../components/EnhancedNavigation',;
-import EnhancedFooter from '../components/EnhancedFooter',;
-import { advancedInnovativeServices } from '../data/2025-advanced-innovative-services-expansion',;
-import { emergingTechInnovations } from '../data/2025-emerging-tech-innovations',;
 export default function AdvancedServicesShowcase2025() {
   const [searchTerm, setSearchTerm] = useState(''),
   const [selectedCategory, setSelectedCategory] = useState('all'),

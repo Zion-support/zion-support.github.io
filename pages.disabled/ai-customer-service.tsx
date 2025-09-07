@@ -1,13 +1,4 @@
-}
 
-}
-import React from 'react',
-import Head from 'next / head',
-export default /**
- * AICustomerService - Function description
- */
-function AICustomerService() {
-  return (
     <>;
       <Head>;
         <title > AI Customer Service | Zion Tech Group</title>;
@@ -21,6 +12,7 @@ function AICustomerService() {
         </section>;
       </div>;
     </>);
+
 }
 </Head>
       <div className=&quot;min-h-screen bg-black text-white&quot;>

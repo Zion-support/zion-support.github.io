@@ -49,37 +49,7 @@ export function FilterSidebar({
         </h3>
 
 
-import React from "react",;
-import { Button } from "@/components/ui/button",;
-import { Checkbox } from "@/components/ui/checkbox",;
-import { Filter, X, Star } from "lucide-react";
-import { FilterOptions } from "@/types/search";
-import { Filter, X, Star } from "lucide-react",;
-import { FilterOptions } from "@/types/search",;
-import React from "react";
-import {Button} from "@/components/ui/button";
-import {Checkbox} from "@/components/ui/checkbox";
-import {Filter, X, Star} from "lucide-react";
-import {FilterOptions} from "@/types/search";
-interface FilterSidebarProps {;
-  filters: {;
-    selectedProductTypes: string[],;
-    selectedLocations: string[],;
-    selectedAvailability: string[],;
-    selectedRating: number | null;
-  };
-},;
-  };
-import { FilterOptions } from "@/types/search",  filters: {;
-    selectedProductTypes: string[],;
-    selectedLocations: string[],;
-    selectedAvailability: string[],;
-    selectedRating: number | null
-};  };
-  filterOptions: FilterOptions,;
-  onFilterChange: (filterType: string, value: string) => void,;
-  onRatingChange: (rating: number | null) => void,;
-  onClearFilters: () => void;
+
 }
 
 export function FilterSidebar(): any ({;
@@ -533,7 +503,6 @@ export function FilterSidebar({
           <Filter className="mr-2 h-5 w-5" /> Filters;"
 
         </h3>
-        
       <div className="mb-6">"
         <label className="text-sm font-medium text-zion-slate-light block mb-2">"
 </label>
@@ -745,6 +714,5 @@ export function FilterSidebar(_{_filters, _filterOptions, _onFilterChange, _onRa
                 <div className="flex items-center">"
                     <Star key={i} className="h-3 w-3 fill-zion-cyan text-zion-cyan" />"
                   <span className="ml-1">& Up</span>"
-            
     </div>"`;
 pr-12325

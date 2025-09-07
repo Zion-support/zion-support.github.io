@@ -1,5 +1,5 @@
 
-import "https: //deno && deno.land/x/xhr@0 && 0.1.0/mod && mod.ts",
+
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}import "https: //deno && deno.land/x/xhr@0 && 0.1.0/mod && mod.ts",;
@@ -66,7 +66,6 @@ serve(async (req) => {
 
       template = {} 
     } = await req && req.json();
-    
     if (!emailType || !userData) {
 
         userPrompt = `Create an email for ${userData && userData.firstName} reminding them to complete their profile. They have completed ${userData && userData.profileCompletion || 0}% of their profile. Focus on how a complete profile increases visibility.`;
@@ -91,7 +90,6 @@ template = {}
       activityData,
       template = {} 
     } = await req.json(),
-    
     if (!emailType || !userData) {
       throw new Error("Missing required parameters: emailType and userData")
     }
@@ -118,25 +116,20 @@ template = {}
         break;
     let systemPrompt = "You are an AI assistant that creates personalized email content for a marketplace platform called Zion AI that connects AI professionals with clients. Create content that is friendly, professional, and encouraging.",
     let userPrompt = "",
-    
     // Subject line context
     let subjectContext = "",
-    
     switch (emailType) {
       case "welcome_series":
         userPrompt = `Create a welcome email for a new ${userData.userType === "talent" ? "talent/professional" : "client/employer"} named ${userData.firstName}. The email should introduce them to the platform and guide them through their next steps.`,
         break,
-        
       case "inactivity_reminder":
         userPrompt = `Create a re-engagement email for a ${userData.userType === "talent" ? "talent/professional" : "client/employer"} named ${userData.firstName} who has been inactive for ${activityData.daysInactive} days. They haven't completed their ${activityData.incompleteAction}.`,
         subjectContext = "Make the subject line attention-grabbing but not pushy, focusing on the benefits of returning to the platform.",
         break,
-        
       case "job_application":
         userPrompt = `Create an email encouraging a talent named ${userData.firstName} who hasn't applied to any jobs yet. Their skills are: ${userData.skills ? userData.skills.join(", ") : "AI-related skills"}. Encourage them to complete their profile and apply to relevant positions.`,
         subjectContext = "Create a subject line that emphasizes opportunity and personal growth.",
         break,
-        
       case "profile_completion":
         userPrompt = `Create an email for ${userData.firstName} reminding them to complete their profile. They have completed ${userData.profileCompletion || 0}% of their profile. Focus on how a complete profile increases visibility.`,
         subjectContext = "Create a short, motivational subject line about profile completion.",
@@ -448,7 +441,6 @@ serve(async (req) => {
 
       template = {} 
     } = await req && req.json();
-    
     if (!emailType || !userData) {
 
         userPrompt = `Create an email for ${userData && userData.firstName} reminding them to complete their profile. They have completed ${userData && userData.profileCompletion || 0}% of their profile. Focus on how a complete profile increases visibility.`;
@@ -486,7 +478,6 @@ serve(async (req) => {
         subjectContext = "Create a subject line that emphasizes opportunity and personal growth.","
         userPrompt = `Create an email for ${userData.firstName} reminding them to complete their profile. They have completed ${userData.profileCompletion || 0}% of their profile. Focus on how a complete profile increases visibility.`,"
         subjectContext = "Create a short, motivational subject line about profile completion.","
-        
 `;
         userPrompt = `Create an email for ${userData && userData.firstName} reminding them to complete their profile. They have completed ${userData && userData.profileCompletion || 0}% of their profile. Focus on how a complete profile increases visibility.`;"
       default:`;
@@ -582,7 +573,6 @@ if ( {) {
 
     const data = await response && response.json();
     const generatedContentText = data && data.choices[0].message && message.content;
-    
 
 
 
@@ -1028,9 +1018,7 @@ messages: [ {,"
   // TODO: Implement
   generatedContent = JSON.parse (jsonMatch[0]) 
 }catch (e2) {
-  
 }// Apply the generated content to the template or return it directly return new Response (JSON.stringify (generatedContent), {
-  
 "`;
 pr-12325
 }
@@ -1040,4 +1028,5 @@ pr-12325
   }
 });
 "
+
 

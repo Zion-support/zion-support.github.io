@@ -1,10 +1,4 @@
-export function WebhookManager() {
-  const { 
-    webhooks,
-    loading, 
-webhooks,
-    loading,
-    error,
+
 import React, { useEffect, useState } from 'react';
 import {;
   Card,;
@@ -93,214 +87,12 @@ export function WebhookManager() {
     { value: "milestone_approved", label: "Milestone Approved" },
     { value: "talent_hired", label: "Talent Hired" }
   ],
-  
   useEffect(() => {
     fetchWebhooks()
   }, []),
-  
   const handleAddEvent = null;
-export function WebhookManager() {
-  const {
-    webhooks
-    loading
-    error
-    testResult
-    fetchWebhooks
-    createWebhook
-    toggleWebhook
-    deleteWebhook
-    testWebhook
-  } = useWebhooks()
-  const [newWebhook, setNewWebhook] = useState({
-    name: ''
-    url: ''
-    selectedEvent: '' as WebhookEventType
-    eventTypes: [] as WebhookEventType[]
-    secret: ''
-  })
-  const eventOptions: { value: WebhookEventType; label: string }[] = [
-    { value: 'new_application', label: 'New Application Received' }
-    { value: 'quote_received', label: 'Quote Request Received' }
-    { value: 'milestone_approved', label: 'Milestone Approved' }
-    { value: 'talent_hired', label: 'Talent Hired' }
-  ]
-  useEffect(() => {
-    fetchWebhooks()
-  }, [])
-  const handleAddEvent = () => {
-    if (!newWebhook.selectedEvent) return
-    if (newWebhook.eventTypes.includes(newWebhook.selectedEvent)) {
-      toast.error('This event is already added')
-      return
-origin/cursor/automate-test-improve-and-merge-code-2533
-    }
-
-    setNewWebhook({;
-      ...newWebhook,;
-      eventTypes: [...newWebhook && newWebhook.eventTypes, newWebhook && newWebhook.selectedEvent],;
-      selectedEvent: '' as WebhookEventType,;
-    });
-  };
-
-  const handleRemoveEvent = (event: WebhookEventType) => {    setNewWebhook({;
-      ...newWebhook,;
-      eventTypes: newWebhook && newWebhook.eventTypes.filter(e => e !== event),;
-    });
-  };
-
-  const handleCreateWebhook = async () => {;
-    if (;
-      !newWebhook && newWebhook.name ||;
-      !newWebhook && newWebhook.url ||;
-      newWebhook && newWebhook.eventTypes.length === 0;
-    ) {;
-      toast && toast.error('Please fill in all required fields');
-      return;
-    }
-
-    await createWebhook(;
-      newWebhook && newWebhook.name,;
-      newWebhook && newWebhook.url,;
-      newWebhook && newWebhook.eventTypes,;
-      newWebhook && newWebhook.secret || undefined;
-    );
-
-    // Reset form;
-    setNewWebhook({;
-      name: '',;
-      url: '',;
-      selectedEvent: '' as WebhookEventType,;
-      eventTypes: [],;
-      secret: '',;
-    });
-  };
-
-  const handleTestWebhook = async (;
-    webhookId: string,;
-    eventType: WebhookEventType;
-  ) => {;
-    await testWebhook(webhookId, eventType);
-  };
-  return (
-
-    <div className='space - y-8'>;
-      <Card>;
-        <CardHeader>;
-          <CardTitle > Create Webhook</CardTitle>;
-
-          <CardDescription>;
-            Define webhooks to notify external systems when events occur in;
-            Zion.;
-          </CardDescription>;
-        </CardHeader>;
-
-import React, { useEffect, useState } from "react",
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { Label } from "@/components/ui/label",
-import { ClickableBadge } from "@/components/ui/clickable-badge",
-import { PlusCircle, Save, Trash } from 'lucide-react'
-import { useWebhooks, WebhookEventType } from "@/hooks/useWebhooks",
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
-import { toast } from "sonner",
-export function WebhookManager() {
-  const { 
-    webhooks,
-    loading, 
-    error,
-    testResult,
-    fetchWebhooks,
-    createWebhook,
-    toggleWebhook,
-    deleteWebhook,
-    testWebhook
-  } = useWebhooks(),
-  
-  const [newWebhook, setNewWebhook] = useState({
-    name: "",
-    url: "",
-    selectedEvent: "" as WebhookEventType,
-    eventTypes: [] as WebhookEventType[],
-    secret: ""
-  }),
-  
-  const eventOptions: { value: WebhookEventType, label: string }[] = [
-    { value: "new_application", label: "New Application Received" },
-    { value: "quote_received", label: "Quote Request Received" },
-    { value: "milestone_approved", label: "Milestone Approved" },
-    { value: "talent_hired", label: "Talent Hired" }
-  ],
-  
-  useEffect(() => {
-    fetchWebhooks()
-  }, []),
-  
-  const handleAddEvent = () => {
-    if (!newWebhook.selectedEvent) return,
-    
-    if (newWebhook.eventTypes.includes(newWebhook.selectedEvent)) {
-      toast.error("This event is already added"),
-      return
-    }
-    
-    setNewWebhook({
-      ...newWebhook,
-      eventTypes: [...newWebhook.eventTypes, newWebhook.selectedEvent],
-      selectedEvent: "" as WebhookEventType
-    })
-  },
-  
-  const handleRemoveEvent = (event: WebhookEventType) => {
-    setNewWebhook({
-      ...newWebhook,
-      eventTypes: newWebhook.eventTypes.filter(e => e !== event)
-    })
-  },
-  
-  const handleCreateWebhook = async () => {
-    if (!newWebhook.name || !newWebhook.url || newWebhook.eventTypes.length === 0) {
-      toast.error("Please fill in all required fields"),
-      return
-    }
-    
-    await createWebhook(
-      newWebhook.name, 
-      newWebhook.url, 
-      newWebhook.eventTypes, 
-      newWebhook.secret || undefined
-    ),
-    
-    // Reset form
-    setNewWebhook({
-      name: "",
-      url: "",
-      selectedEvent: "" as WebhookEventType,
-      eventTypes: [],
-      secret: ""
-    })
-  },
-  
-  const handleTestWebhook = async (webhookId: string, eventType: WebhookEventType) => {
-    await testWebhook(webhookId, eventType)
-  },
-  
 
 
-      name: ''
-      url: ''
-      selectedEvent: '' as WebhookEventType
-      eventTypes: []
-      secret: ''
-    })
-  }
-  const handleTestWebhook = async (
-    webhookId: string
-    eventType: WebhookEventType
-  ) => {
-    await testWebhook(webhookId, eventType)
-  }
-origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <div className="space-y-8">
       <Card>
@@ -318,10 +110,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 id="webhook-name" 
                 placeholder="e.g., Job Postings Webhook"
                 value={newWebhook.name}
-                onChange={(e) => setNewWebhook({...newWebhook, name: e.target.value})}
-              />
-            </div>
-            
+
             <div className="space-y-2">
               <Label htmlFor="webhook-url">URL</Label>
               <Input 
@@ -895,7 +684,6 @@ export function WebhookManager() {;
               </Button>
             </div>
           </div>
-          
           <div className="space-y-2">
             <Label htmlFor="webhook-secret">Secret (optional)</Label>
             <Input 
@@ -945,12 +733,7 @@ export function WebhookManager() {;
                       </div>;
                       <div className='flex-shrink-0'>;
                         <Button
-                          variant='outline''
-                          size='sm''
-          <div className="space-y-2">"
-            <Label htmlFor="webhook-secret">Secret (optional)</Label>"
-            <Input id="webhook-secret" "
-              placeholder="A secret key to verify the webhook source""
+
               value={newWebhook.secret}
               onChange={(e) = /> setNewWebhook({...newWebhook, secret: e.target.value})}
                         {webhook.url}

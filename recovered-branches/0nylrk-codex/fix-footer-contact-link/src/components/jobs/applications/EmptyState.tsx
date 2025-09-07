@@ -1,6 +1,7 @@
-import { Button } from "@/components/ui/button",
+
 
 import { Button } from "@/components/ui/button",;
+
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { Card, CardContent } from "@/components/ui/card",;
@@ -132,10 +133,6 @@ function EmptyState() {
         </p>"
         <Button className="mt-4" asChild>"
           <Link to="/jobs">Browse Jobs"
-        
-        
-      
-    
     ;"
 pr-12325
 </Button>"

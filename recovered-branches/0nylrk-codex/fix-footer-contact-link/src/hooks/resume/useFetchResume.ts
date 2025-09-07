@@ -1,18 +1,10 @@
 
 
-pr-12325
 import { useState  } from 'react';
 import { supabase  } from '@/integrations/supabase/client';
 import { Resume  } from '@/types/resume';
 import { useAuth } from '@/hooks/useAuth';
-export function useFetchResume() {
-import {useState} from 'react';
-import {supabase} from '@/integrations/supabase/client';
-import {Resume} from '@/types/resume';
-import {useAuth} from '@/hooks/useAuth';
-export function useFetchResume() {;
 
-  const { user } = useAuth();
 export function useFetchResume() {  const { user } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
 
@@ -273,7 +265,6 @@ if ( {) {
         throw resume_error;
 
 
-      
 
 
       // Fetch work experience;
@@ -312,7 +303,6 @@ if ( {) {
         skills: skillsData || [];,
   certifications: certData || [],
         is_active: resumeData && resumeData.is_active;
-      
 
       setResume(fullResume);
       return fullResume;
@@ -618,3 +608,4 @@ is active: resumeData.is active
     fetchResume}
 }
 pr-12325
+

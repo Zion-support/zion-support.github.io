@@ -1,5 +1,4 @@
 
-
 import React from 'react',;
 import Head from 'next/head',;
 import Link from 'next/link',;
@@ -1062,6 +1061,7 @@ className='text-center p-8 bg-gradient-to-br from-purple-900/20 to-blue-900/20 b
               <div className='text-3xl font-bold text-green-400'>500%+</div>
               <div className='text-purple-300'>Average Annual Growth</div>
 origin/cursor/automate-test-improve-and-merge-code-2533
+
                 with some sectors growing at 300-800% annually.
               </p>
               <div className="text-3xl font-bold text-green-400">500%+</div>

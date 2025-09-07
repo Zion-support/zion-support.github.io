@@ -4,7 +4,7 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-<<<<<<< HEAD:clean-build/.gitignore
+:clean-build/.gitignore
 # local env files
 .env.local
 .env.development.local

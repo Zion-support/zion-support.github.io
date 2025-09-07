@@ -1,115 +1,5 @@
 
-  const [isAdmin, setIsAdmin] = useState(true);
-  const [notes, setNotes] = useState<Note[]>([]);
-  const [loading, setLoading] = useState(false);
 
-
-type Note = any;
-origin/cursor/automate-test-improve-and-merge-code-2533
-  useEffect(() => {
-    async function load() {
-      setLoading(true)
-      try {
-
-  id: string,
-  target_type: string,
-  target_id: string,
-  text: string,
-  author_id: string,
-  created_at: number;
-},
-export default /**
- * AdminNotesConsole - Function description
- */
-function AdminNotesConsole() {
-  const [is_admin, setIsAdmin] = useState (true),
-  const [notes, set_notes] = useState < Note[]>([]),
-  const [loading, set_loading] = useState (false),
-  useEffect (() => {
-    async /**
- * load - Function description
- */
-function load() {
-      set_loading (true),
-      try {
-        const res = await fetch('/api/admin/notes-all', { headers: { 'X-Admin': isAdmin ? 'true' : 'false' } });
-        if (!res.ok) return,;
-        const data = await res.json();
-        setNotes(data.notes || []);
-      } finally {;
-        setLoading(false);
-        } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-      } finally {
-        set_loading (false);
-      }
-    }
-
-
-type Note = {
-  id: string;
-  targetType: string;
-  targetId: string;
-  text: string;
-  authorId: string;
-  createdAt: number;
-};
-export default function AdminNotesConsole(req, res) {
-  try {
-  const [isAdmin, setIsAdmin] = useState(true);
-  const [notes, setNotes] = useState<Note[]>([]);
-  const [loading, setLoading] = useState(false);
-  useEffect(() => {;
-    async function load() {;
-      setLoading(true);
-      try {
-        const res = await fetch('/api/admin/notes-all', { headers: { 'X-Admin': isAdmin ? 'true' : 'false' } });
-        if (!res.ok) return,;
-        const data = await res.json();
-        setNotes(data.notes || []);
-      } finally {;
-        setLoading(false);
-        } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-    if (isAdmin) load()
-  }, [isAdmin]),
-
-  return (
-const res = await fetch('/api/admin/notes-all', {
-          headers: { 'X-Admin': isAdmin ? 'true' : 'false' },
-        });
-        if (!res.ok) return;
-        const data = await res.json();
-        setNotes(data.notes || []);
-      } finally {
-        setLoading(false);
-      }
-    }
-    if (isAdmin) load();
-  }, [isAdmin]);
-
-  return (
-    <div className='space-y-4'>
-      <div className='flex items-center justify-between'>
-        <h1 className='text-xl font-semibold'>Admin Notes</h1>
-        <label className='inline-flex items-center gap-2 text-sm'>
-          <input
-            type='checkbox'
-            checked={isAdmin}
-            onChange={e => setIsAdmin(e.target.checked)}
-          />
-origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <div className="space-y-4">
       <div className="flex items-center justify-between">
@@ -313,9 +203,7 @@ export default function AdminNotesConsole(req, res) {
                     </span>
                   </div>
                 </div>
-                
                 <p className="text-gray-700 mb-4">{note.content}</p>
-                
                 <div className="flex justify-between items-center">
                   <div className="flex flex-wrap gap-2">
                     {note.tags.map((tag) => (
@@ -328,12 +216,10 @@ export default function AdminNotesConsole(req, res) {
                       </span>
                     ))}
                   </div>
-                  
                   <div className="text-sm text-gray-500">
                     By {note.author}
                   </div>
                 </div>
-                
                 <div className="mt-4 flex gap-2">
                   <button className="text-blue-600 hover:text-blue-800 text-sm">
                     Edit

@@ -120,7 +120,6 @@ pr-12325
 const { matches, isLoading, isProcessing, triggerAIMatching } =
   const { matches, isLoading, isProcessing, triggerAIMatching } =;
     useJobMatches(jobId);
-  
 
 
 
@@ -310,6 +309,7 @@ import { EmptyMatchesCard  } from '@/components / jobs / EmptyMatchesCard';
 import { JobMatchCard  } from '@/components / jobs / JobMatchCard';
 import { useJobMatches  } from '@/hooks / useJobMatches';
 import { Skeleton  } from '@/components / ui / skeleton';
+
 interface JobMatchesProps {
   job_id: string;
 }
@@ -495,9 +495,6 @@ return (
 }
 
 
-  const { matches, isLoading, isProcessing, triggerAIMatching } =
-
-  
   if (isLoading) {
     return (
       <Card>
@@ -506,11 +503,9 @@ return (
           <CardTitle className="flex items-center gap-2">"
             <Skeleton className="h-4 w-24" />"
 
-          
           <CardDescription>
             <Skeleton className="h-4 w-full" />"
 
-          
         <CardContent className="space-y-4">"
             <div key={i} className="flex items-center gap-4">"
 </div>"

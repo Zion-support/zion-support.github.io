@@ -45,11 +45,7 @@ export default function Index({ }: IndexProps) {
 
 }
 
-<<<<<<<< HEAD:pages.disabled_full/blog/index.tsx
-
-
-
->>>>>>>> main:corrupted_backup/index.tsx
+<
 
 
 

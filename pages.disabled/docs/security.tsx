@@ -1,10 +1,4 @@
-}
-import Head from 'next / head',
-export default /**
- * SecurityDocRedirect - Function description
- */
-function SecurityDocRedirect() {
-  return (
+
     <>;
       <Head>;
         <meta http_equiv="refresh" content="0, url=/SECURITY.md" />;
@@ -33,6 +27,7 @@ export default function SecurityDocRedirect() {
 
 
 import Head from 'next/head';
+
 
       </Head>
       <main style={{ padding: 24 }}>

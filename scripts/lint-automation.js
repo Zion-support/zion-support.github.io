@@ -18,9 +18,7 @@ class LintAutomation {
     } catch (error) {
       console && console.error('Failed to write to log file:', error && error.message);
   async runLintFix() {
-  // TODO: Implement
-      this && this.errorCount++;`;
-      this && this.log(`Lint fix failed: ${error && error.message}`, 'ERROR');
+
   async run() {
     // Create logs directory if it doesn't exist;
     const logsDir = path && path.join(process && process.cwd(), 'logs');

@@ -3,94 +3,18 @@
 export function AIEnhancementPanel({;
 
 import React, { useState } from 'react';
-import {Card, CardContent, CardHeader, CardTitle, CardFooter} from '@/components/ui/card';
-import {Textarea} from '@/components/ui/textarea';
-import {Button} from '@/components/ui/button';
-import {Input} from '@/components/ui/input';
-import {Sparkles, Loader2, Copy, Check} from '@/components/icons';
-import {useAIContentEnhancer, AIEnhancementOptions} from '@/hooks/useAIContentEnhancer';
-import {Card, CardContent, CardHeader, CardTitle, CardFooter} from '@/components/ui/card';''
-import {Textarea} from '@/components/ui/textarea';''
-import {Button} from '@/components/ui/button';''
-import {Input} from '@/components/ui/input';''
-import {Sparkles, Loader2, Copy, Check} from '@/components/icons';''
-import {useAIContentEnhancer, AIEnhancementOptions} from '@/hooks/useAIContentEnhancer';'
-interface AIEnhancementPanelProps {;
-  title: string,;
-  defaultOptions: AIEnhancementOptions,;
-  onApply: (content: string) => void,;
 
-pr-12325
   onClose?: () => void;
   showInstructions?: boolean;
   initialContent?: string;
 }
 
-export function AIEnhancementPanel(): any ({;
 
-onClose?: () => void;
-  showInstructions?: boolean;
-  initialContent?: string;
-}
-
-export function AIEnhancementPanel({;
-
-export function AIEnhancementPanel(): any ({;
-import React, { useState } from 'react';
-  onClose?: () => void;
-  showInstructions?: boolean;
-  initialContent?: string;
-}
-
-export function AIEnhancementPanel({;
   title;
   defaultOptions;
   onApply;
   onClose;
-content: initialContent || defaultOptions && defaultOptions.content}),;
-  const [generatedContent, setGeneratedContent] = useState<string>('');
-  const [copied, setCopied] = useState(false);
-  const { enhanceContent, isEnhancing } = useAIContentEnhancer();
 
-  showInstructions = true;
-  initialContent = '';
-}: AIEnhancementPanelProps) {;
-  const [options, setOptions] = useState<AIEnhancementOptions>({;
-    ...defaultOptions;
-
-    content: initialContent || defaultOptions && defaultOptions.content}),;
-  const [generatedContent, setGeneratedContent] = useState<string>('');
-  const [copied, setCopied] = useState(false);
-  const { enhanceContent, isEnhancing } = useAIContentEnhancer();
-
-content: initialContent || defaultOptions && defaultOptions.content}),;
-  const [generatedContent, setGeneratedContent] = useState<string>('');
-  const [copied, setCopied] = useState(false);
-  const { enhanceContent, isEnhancing } = useAIContentEnhancer();
-
-  showInstructions = true;
-  initialContent = ''
-}: AIEnhancementPanelProps) {
-  const [options, setOptions] = useState<AIEnhancementOptions>({
-    ...defaultOptions;
-    content: initialContent |defaultOptions.content})
-  const [generatedContent, setGeneratedContent] = useState<string>('');
-  const [copied, setCopied] = useState(false);
-  const { enhanceContent, isEnhancing } = useAIContentEnhancer();
-  const handleGenerate = async () => {
-    const result = await enhanceContent(options);
-    if (result) {
-      setGeneratedContent(result)
-    }
-
-  };
-
-  };
-
-}
-  };
-
-  };
 export function AIEnhancementPanel({;    const result = await enhanceContent(options);
     if (result) {
       setGeneratedContent(result)
@@ -256,6 +180,7 @@ export function AIEnhancementPanel({;
   return (      <CardHeader>;
         <CardTitle className="flex items-center gap-2">;
           <Sparkles className="h-5 w-5 text-primary" />;
+
           {title}
         </CardTitle>;
       </CardHeader>;
@@ -758,18 +683,14 @@ if ( {) {
                   <><Check className="h-4 w-4 mr-1" /> Copied</>"
                   <><Copy className="h-4 w-4 mr-1" /> Copy</>"
 
-              
             <div className="relative">"
                 onChange={(e) => setGeneratedContent(e.target.value)}
 
         <CardFooter className="flex justify-between">"
             <Button variant="outline" onClick={onClose}>"
 
-            
           <Button onClick={handleApply}>
 
-          
-        
 pr-12325
 </Button>
           </Button>

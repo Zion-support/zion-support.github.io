@@ -1,42 +1,6 @@
 
 
-import React from "react";
-import {useNavigate} from "react-router-dom";
-import {ChevronLeft, Bell, Settings} from "lucide-react";
-import {cn} from "@/lib/utils";
-import {Button} from "@/components/ui/button";
-interface MobileHeaderProps {;
-  title: string,;
-import React from "react",
-import { useNavigate } from "react-router-dom",
-import { ChevronLeft, Bell, Settings } from "lucide-react",
-import { cn } from "@/lib/utils";
-import { Button } from "@/components/ui/button";
-interface MobileHeaderProps {
 
-  title: string
-
-import {Button} from "@/components/ui/button";  showBack?: boolean;
-
-
-
-
-import React from "react";""
-import {useNavigate} from "react-router-dom";""
-import {ChevronLeft, Bell, Settings} from "lucide-react";""
-import {cn} from "@/lib/utils";""
-import {Button} from "@/components/ui/button";"
-interface MobileHeaderProps {;
-  title: string,;"
-import React from "react",""
-import { useNavigate } from "react-router-dom",""
-import { ChevronLeft, Bell, Settings } from "lucide-react",""
-import { cn } from "@/lib/utils";""
-import { Button } from "@/components/ui/button";"
-interface MobileHeaderProps {
-  // TODO: Implement
-}
-  title: string;
   showBack?: boolean;
 pr-12325
 
@@ -64,108 +28,7 @@ pr-12325
   onSettingsClick?: () => void;
 }
   title;
-  showBack = false;
-  showNotifications = false;
-  showSettings = false;
-  className;
-  onNotificationsClick;
-  onSettingsClick}: MobileHeaderProps) {;
-  const navigate = useNavigate();
-  return (
 
-import { cn } from "@/lib/utils",
-import { Button } from "@/components/ui/button",
-import { cn } from "@/lib/utils",
-import { Button } from "@/components/ui/button",
-interface MobileHeaderProps {
-  return (interface MobileHeaderProps {
-
-  return (
-
-  // TODO: Implement
-pr-12325
-}
-
-  title: string,
-  showBack?: boolean,
-  showNotifications?: boolean,
-  showSettings?: boolean,
-  className?: string,
-  onNotificationsClick?: () => void,export function MobileHeader({;
-
-  className?: string,)
-  onNotificationsClick?: () => void,
-
-  onSettingsClick?: () => void;
-}
-
-onSettingsClick?: () => void
-}
-
-  onSettingsClick?: () => void
-
-
-  onSettingsClick?: () => void;
-}
-
-  onSettingsClick?: () => void;
-}
-export function MobileHeader({;
-
-  title;
-  showBack = false;
-  showNotifications = false;
-  showSettings = false;
-  className;
-  onNotificationsClick;
-export function MobileHeader({
-  title;
-  className?: string,)
-  onNotificationsClick?: () => void,
-
-
-
-
-
-export function MobileHeader({;
-export function MobileHeader({
-
-
-pr-12325
-
-  title,
-  showBack = false,
-  showNotifications = false,
-  showSettings = false,
-
-  className,
-  onNotificationsClick,
-  onNotificationsClick,)
-  onSettingsClick}: MobileHeaderProps) {
-  const navigate = useNavigate(),
-
-  return (
-    <header className={cn(
-      "sticky top-0 z-40 bg-background/80 backdrop-blur-sm border-b border-border",
-
-      className
-    )}>
-      <div className="flex items-center justify-between h-14 px-4">
-        <div className="flex items-center">
-          {showBack && (
-            <Button
-              variant="ghost"
-              size="icon"
-              className="mr-2"
-
-    <headerclassName={cn(
-      "sticky top-0 z-40 bg-background/80 backdrop-blur-sm border-b border-border"
-      className
-<headerclassName={cn(
-      "sticky top-0 z-40 bg-background/80 backdrop-blur-sm border-b border-border"
-      className
-              onClick={() => navigate(-1)}
-      "sticky top-0 z-40 bg-background/80 backdrop-blur-sm border-b border-border",              onClick={() => navigate(-1)}
             >
               <ChevronLeft className="h-5 w-5" />
               <span className="sr-only">Back</span>
@@ -276,11 +139,9 @@ export function MobileHeader({;
             >
               <Bell className="h-5 w-5" />"
               <span className="sr-only">Notifications</span>"
-            
               onClick={onSettingsClick}
               <Settings className="h-5 w-5" />"
               <span className="sr-only">Settings</span>"
-            
     <header className={cn(;"
       "sticky top-0 z-40 bg-background/80 backdrop-blur-sm border-b border-border";"
 pr-12325

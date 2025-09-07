@@ -10,7 +10,7 @@
 >
 
 
-<<<<<<<< HEAD:corrupted_backup/automated-test-framework.js
+<:corrupted_backup/automated-test-framework.js
 
 
 

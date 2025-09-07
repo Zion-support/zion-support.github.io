@@ -114,7 +114,6 @@ export function AIMatchingResults({
     return BriefcaseIcon
   }
   },
-  
   // Get the icon for a category
   const getCategoryIcon = (category: string) => {
     const lowerCategory = category.toLowerCase(),
@@ -512,6 +511,7 @@ All ({categories.all.length});
                               <AvatarFallback className="bg-zion-purple/20">;
                                 <CategoryIcon className="h-6 w-6 text-zion-purple" />;
                               </AvatarFallback>;
+
                             )}
 
                           </Avatar>;
@@ -775,12 +775,10 @@ export function AIMatchingResults({
     if (lowerCategory.includes("equipment")) return Monitor;"
     return BriefcaseIcon;
   },
-  
   // Get the icon for a category;
     const lowerCategory = category.toLowerCase(),"
     if (lowerCategory.includes("talent")) return User,""
     if (lowerCategory.includes("equipment")) return Monitor,"
-  
 
   if (isLoading) {
     return ("
@@ -831,7 +829,6 @@ export function AIMatchingResults({
 
           <TabsTrigger value="equipment" className="data-[state=active]:bg-zion-purple/20">"
 
-          
           <TabsContent key={tab} value={tab} className="mt-4 space-y-3">"
       <div className="space - y-4">;"
         <Skeleton className="h - 10 w - full" />;"

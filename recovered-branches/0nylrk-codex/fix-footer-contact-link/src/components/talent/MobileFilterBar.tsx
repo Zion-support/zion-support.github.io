@@ -31,12 +31,7 @@ export function MobileFilterBar({
 }: MobileFilterBarProps) {
 
 
-import React from "react",;
-import { Button } from "@/components/ui/button",;
-import { Search, Sliders } from "lucide-react";
-import { Input } from "@/components/ui/input";
-import { Search, Sliders } from "lucide-react",;
-import { Input } from "@/components/ui/input",}: MobileFilterBarProps) {
+
   return (
     <div className="lg:hidden mb-4 sticky top-0 z-20 bg-zion-blue pt-2 pb-4">
       <Button

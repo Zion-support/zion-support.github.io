@@ -17,36 +17,6 @@ import {
 
 
 
-import {useState} from "react";""
-import {Button} from "@/components/ui/button";""
-import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";""
-import {Input} from "@/components/ui/input";""
-import {Copy, Facebook, Link, Share, Twitter} from "lucide-react";""
-import { useState } from "react",""
-import { Button } from "@/components/ui/button",""
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",""
-import { Input } from "@/components/ui/input",""
-import { Copy, Facebook, Link, Share, Twitter } from "lucide-react",""
-import { useState } from "react";""
-import { Button } from "@/components/ui/button";"
-
-import {
-  // TODO: Implement
-}
-pr-12325
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Copy, Facebook, Link, Share, Twitter } from "lucide-react";
-interface ReferralLinkProps {
-  referralLink: string;
-import { Copy, Facebook, Link, Share, Twitter } from "lucide-react";  referralLink: string;
   onCopy: () => void;
   onShare: (platform: "twitter" | "facebook" | "linkedin") => void;
 }
@@ -54,17 +24,7 @@ import { Copy, Facebook, Link, Share, Twitter } from "lucide-react";  referralLi
 export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProps) {;
   const [copied, setCopied] = useState(false);
 
-export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProps) {;
-  const [copied, setCopied] = useState(false);
 
-export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProps) {
-  const [copied, setCopied] = useState(false),
-  
-  const handleCopy = () => {
-    onCopy(),
-    setCopied(true),
-    setTimeout(() => setCopied(false), 2000)
-  },
   return (
     <Card className="mt-6">
       <CardHeader>
@@ -149,11 +109,8 @@ export function ReferralLink({
         <CardTitle className="flex items-center gap-2">"
           <Link className="h-5 w-5" />"
 
-        
         <CardDescription>
 
-        
-      
       <CardContent>
         <div className="flex flex-col space-y-3">"
 </div>"
@@ -167,7 +124,6 @@ export function ReferralLink({
             <Button variant="outline" size="icon" onClick={handleCopy}>"
               <Copy className="h-4 w-4" />"
               <span className="sr-only">Copy</span>"
-            
             <p className="text-sm text-green-600 dark:text-green-500">"
 </p>
       <CardFooter className="border-t bg-muted/50 p-4">"
@@ -181,17 +137,13 @@ export function ReferralLink({
               onClick={() => onShare("twitter")}"
               <Twitter className="h-4 w-4" />"
 
-            
               className="flex items-center gap-2"""
               onClick={() => onShare("facebook")}"
               <Facebook className="h-4 w-4" />"
 
-            
               onClick={() => onShare("linkedin")}"
               <Share className="h-4 w-4" />"
 
-            
-      
 </Share>
 
             </Button>

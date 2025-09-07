@@ -1,97 +1,11 @@
-import dynamic from 'next/dynamic';
 
-
-import dynamic from 'next/dynamic';;
 import React, { useEffect, useState } from 'react';
 import { useWallet  } from '../../hooks/useWallet';
 import { fetchDepinActivities, calculateRewards, DepinReward  } from '../../utils/depins';
 import { CHAINS } from '../../utils/chains';
 
 const ClientOnlyBridge = null;
-import { useWallet } from '../../hooks/useWallet';
-import {
-  fetchDepinActivities
-  calculateRewards
-  DepinReward;
-origin/cursor/automate-test-improve-and-merge-code-2533
-  fetchDepinActivities;
-calculateRewards}
-DepinReward;}
-} from '../../utils/depins';
 
-const ClientOnlyBridge = dynamic(
-  () => import('../../components/ui/BridgeForm')
-  { ssr: false ;}
-);import { fetchDepinActivities, calculateRewards, DepinReward } from '../../utils/depins';
-
-
-
-const ClientOnlyBridge = dynamic(() => import('../../components/ui/BridgeForm'), { ssr: false ;}),;
-export default function TokenIntegrationsPage() {;
-
-);
-export default function TokenIntegrationsPage() {
-origin/cursor/automate-test-improve-and-merge-code-2533
-  const { account, connect } = useWallet();
-  const [region, setRegion] = useState('');
-  const [stake, setStake] = useState('');
-  const [suggestion, setSuggestion] = useState<any>(null);
-  const [rewards, setRewards] = useState<DepinReward[] | null>(null);
-  const [depinsSyncing, setDepinsSyncing] = useState(false);
-  async function syncDepin() {
-    if (!account) {
-      await connect();
-return;
-origin/cursor/automate-test-improve-and-merge-code-2533
-  { ssr: false;}
-}
-
-);
-
-export default function TokenIntegrationsPage() {}
-  const { account, connect } = useWallet();
-
-const [region, setRegion] = useState('');
-
-const [stake, setStake] = useState('');
-
-const [suggestion, setSuggestion] = useState<any />(null);
-
-const [rewards, setRewards] = useState<DepinReward[] | null />(null);
-
-const [depinsSyncing, setDepinsSyncing] = useState(false);
-
-  async function syncDepin() {
-    if (!account) {
-      await connect();}
-return;}
-    }
-    setDepinsSyncing(true);
-
-const acts = await fetchDepinActivities(account);
-
-const r = calculateRewards(acts);
-    setRewards(r);
-
-setDepinsSyncing(false);
-  }
-  async function runOperator() {
-    const res = await fetch('/api/operator/suggest-chain', {
-      method: 'POST';}
-  headers: { 'Content-Type': 'application/json';}
-},
-body: JSON.stringify({ region;, stakeUsd: stake;}
-})
-    });
-origin/cursor/automate-test-improve-and-merge-code-2533
-    const data = await res.json();
-
-const data = await res.json();
-    setSuggestion(data);
-  }
-
-const data = await res.json();
-    setSuggestion(data);
   }
 
 const data = await res && res.json();

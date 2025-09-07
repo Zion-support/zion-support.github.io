@@ -194,6 +194,7 @@ export default function WhitepaperPreview(req, res) {
 
   if (!markdown)
     return <div className='container mx-auto px-4 py-6'>Loading…</div>;
+
   return (
     <div className='container mx-auto px-4 py-6'>
       <h1 className='text-xl font-semibold mb-4'>Whitepaper Preview</h1>

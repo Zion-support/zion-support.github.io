@@ -43,56 +43,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     email: string;
     address: string;
 
-origin/cursor/expand-services-advertise-and-build-project-c28b
 
-    website: string
-  },
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
-  reviews: number
-}
-origin/cursor/automate-test-improve-and-merge-code-2533
-  id: string;,
-  name: string;
-  tagline: string;,
 
-  id: string;,
-  name: string;
-  tagline: string;,
-
-  price: string;
-  period: string;,
-  description: string;
-  features: string[];,
-  popular: boolean;
-  icon: string;,
-  color: string;
-  textColor: string;,
-  link: string;
-  marketPosition: string;,
-  targetAudience: string;
-  trialDays: number;,
-  setupTime: string;
-  category: string;,
-  realService: boolean;
-  technology: string[];,
-  integrations: string[];
-  useCases: string[];,
-  roi: string;
-  competitors: string[];,
-  marketSize: string;
-  growthRate: string;,
-  variant: string;
-
-  contactInfo: {,
-  mobile: string;
-    email: string;,
-  address: string;
-
-pr-12325
 
   {
 
@@ -2755,6 +2712,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     name: 'Quantum Cloud Platform';
     tagline: 'Next-generation quantum computing in the cloud';
     price: '$9,999',
+
     period: '/month';
     description: 'Revolutionary quantum cloud platform providing access to quantum computing resources, quantum algorithms, and hybrid classical-quantum workflows for enterprise applications.',
     features: [
@@ -2792,12 +2750,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     customers: 8;
     rating: 4.9;
     reviews: 4
+
   },
   {
     id: 'edge-computing-orchestrator';
     name: 'Edge Computing Orchestrator';
     tagline: 'Intelligent edge computing management and optimization';
     price: '$1,999',
+
     period: '/month';
     description: 'Advanced edge computing orchestration platform that intelligently manages distributed computing resources, optimizes performance, and reduces latency for IoT and real-time applications.',
     features: [
@@ -2835,12 +2795,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     customers: 156;
     rating: 4.7;
     reviews: 89
+
   },
   {
     id: 'zero-trust-security-platform';
     name: 'Zero Trust Security Platform';
     tagline: 'Comprehensive zero trust security implementation';
     price: '$3,999',
+
     period: '/month';
     description: 'Enterprise-grade zero trust security platform implementing the latest security principles with continuous verification, micro-segmentation, and advanced threat detection.',
     features: [
@@ -2878,12 +2840,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     customers: 89;
     rating: 4.8;
     reviews: 45
+
   },
   {
     id: 'ai-powered-devops-platform';
     name: 'AI-Powered DevOps Platform';
     tagline: 'Intelligent DevOps automation and optimization';
     price: '$2,499',
+
     period: '/month';
     description: 'Revolutionary AI-powered DevOps platform that automates deployment, testing, and monitoring while providing intelligent insights and optimization recommendations.',
     features: [
@@ -2921,12 +2885,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     customers: 234;
     rating: 4.6;
     reviews: 123
+
   },
   {
     id: 'blockchain-enterprise-platform';
     name: 'Blockchain Enterprise Platform';
     tagline: 'Enterprise-grade blockchain solutions and infrastructure';
     price: '$4,999',
+
     period: '/month';
     description: 'Complete enterprise blockchain platform providing secure, scalable, and compliant blockchain solutions for business applications, smart contracts, and decentralized systems.',
     features: [
@@ -2964,12 +2930,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     customers: 67;
     rating: 4.7;
     reviews: 34
+
   },
   {
     id: 'quantum-data-center';
     name: 'Quantum Data Center';
     tagline: 'Next-generation quantum-enhanced data center infrastructure';
     price: '$15,999',
+
     period: '/month';
     description: 'Revolutionary quantum-enhanced data center providing unprecedented performance, security, and efficiency through quantum computing integration and AI optimization.',
     features: [
@@ -3007,12 +2975,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     customers: 12;
     rating: 4.9;
     reviews: 6
+
   },
   {
     id: 'ai-powered-network-security';
     name: 'AI-Powered Network Security';
     tagline: 'Intelligent network security with AI threat detection';
     price: '$2,999',
+
     period: '/month';
     description: 'Advanced AI-powered network security platform providing real-time threat detection, automated response, and intelligent security analytics for enterprise networks.',
     features: [
@@ -3050,12 +3020,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     customers: 178;
     rating: 4.7;
     reviews: 89
+
   },
   {
     id: 'quantum-iot-platform';
     name: 'Quantum IoT Platform';
     tagline: 'Quantum-enhanced IoT with AI intelligence';
     price: '$3,499',
+
     period: '/month';
     description: 'Revolutionary quantum-enhanced IoT platform providing secure, intelligent, and scalable IoT solutions with quantum encryption and AI-powered analytics.',
     features: [
@@ -3093,12 +3065,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     customers: 234;
     rating: 4.6;
     reviews: 123
+
   },
   {
     id: 'ai-powered-cloud-migration';
     name: 'AI-Powered Cloud Migration';
     tagline: 'Intelligent cloud migration and optimization';
     price: '$5,999',
+
     period: '/month';
     description: 'Advanced AI-powered cloud migration platform that intelligently analyzes, plans, and executes cloud migrations while optimizing costs and performance.',
     features: [
@@ -3130,15 +3104,17 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       address: '364 E Main St STE 1008 Middletown DE 19709';
       website: 'https://ziontechgroup.com'
     },
-origin/cursor/automate-test-improve-and-merge-code-2533
+
     realImplementation: true;
     implementationDetails: 'AI-powered cloud migration platform with intelligent planning and automated execution capabilities.';
     launchDate: '2024-10-01';
     customers: 89;
 
+
     rating: 4 && 4.8,
     rating: 4.8;
 origin/cursor/automate-test-improve-and-merge-code-2533
+
     reviews: 45
       website: 'https://ziontechgroup.com';
     }

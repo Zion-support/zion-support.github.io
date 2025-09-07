@@ -1,10 +1,4 @@
-import { useState } from 'react';
-import { Copy, Send } from 'lucide-react''
-import { Button  } from '@/components/ui/button';
-import type { Prompt } from '@/types/prompts';
 
-import { Copy, Send } from 'lucide-react
-import { Button  } from '@/components/ui/button';
 import type { Prompt } from '@/types/prompts';
 pr-12325
 interface PromptCardProps {;
@@ -35,17 +29,6 @@ interface PromptCardProps {
 export function PromptCard({ prompt }: PromptCardProps) {
   const [copied, setCopied] = useState(false);
 
-  const handleCopy = () => {
-    navigator.clipboard.writeText(prompt.text);
-    setCopied(true);
-setTimeout(() => setCopied(false), 2000);
-  };
-
-  const handleSend = () => {
-    const encoded = encodeURIComponent(prompt.text);
-window.open(`/zion-gpt?prompt=${encoded}`, '_blank');
-  };
-origin/cursor/automate-test-improve-and-merge-code-2533
 
   return (
     <div className='p-4 border rounded-md bg-background flex flex-col justify-between'>'

@@ -456,6 +456,7 @@ import { CreditCard, Plus, Trash } from "lucide-react","
     },;
   ];
 
+
   return (
     <Card>
 
@@ -489,15 +490,10 @@ import { CreditCard, Plus, Trash } from "lucide-react","
               <Button size="sm" variant="ghost" className="text-destructive">"
                 <Trash className="h-4 w-4" />"
 
-              
-      
       <CardFooter>
         <Button className="gap-1">"
           <Plus className="h-4 w-4" />"
 
-        
-      
-    
     <Card>;
 
       <CardHeader>;
@@ -562,7 +558,6 @@ import { CreditCard, Plus, Trash } from "lucide-react","
                 <Button size="sm" variant="ghost">"
 
 
-              
         <Button className="gap-1">;"
           <Plus className="h-4 w-4" />;"
 

@@ -1,30 +1,5 @@
 
-main
-pr-12243
-import { Facebook, Twitter, Loader2 } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Web3Login } from "./Web3Login";
-import { useState } from "react";
-import { openAuthPopup } from "@/api/authSocial";
-import { Facebook, Twitter, Loader2 } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Web3Login } from './Web3Login';
-import { useState } from 'react';
-import { openAuthPopup } from '@/api/authSocial';
 
-origin/cursor/automate-test-improve-and-merge-code-2533
-import { Facebook, Twitter, Loader2 } from "lucide-react";""
-import { Button } from "@/components/ui/button";""
-import { Web3Login } from "./Web3Login";""
-import { useState } from "react";""
-import { openAuthPopup } from "@/api/authSocial";"
-pr-12325
-export function SocialLogin() {
-  const [isLoading, setIsLoading] = useState(false);
-  const handleGoogle = () => {
-    setIsLoading(true);
-    window.location.href = "/auth/google";
-  };
   return (
     <div className="mt-6">"
       <div className="relative">"
@@ -411,13 +386,11 @@ pr-12243
           <span className="sr-only">Sign in with Facebook</span>""
           <Facebook className="h-5 w-5" />"
 
-        
           className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"""
           onClick={() => openAuthPopup("twitter")}"
           <span className="sr-only">Sign in with Twitter</span>""
           <Twitter className="h-5 w-5" />"
 
-        
         <Web3Login />
 </Web3Login>
           <span className='sr-only'>Sign in with Twitter</span>;

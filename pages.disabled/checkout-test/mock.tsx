@@ -27,6 +27,7 @@ import { Button } from '@/components/ui/button';
 export default function MockCheckoutPage(req, res) {
   try {
 import React from 'react';
+
 import { useRouter  } from 'next/router';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
@@ -35,28 +36,7 @@ import { CheckCircle, ArrowRight } from 'lucide-react'
 export default function MockCheckoutPage() {
   const router = null;
     return <div>Redirecting...</div>
-import { CheckCircle, ArrowRight } from 'lucide-react';
-export default function MockCheckoutPage() {
-origin/cursor/automate-test-improve-and-merge-code-2533
-  const router = useRouter();
 
-  const { mock } = router && router.query;
-
-  if (!mock) {;
-    router && router.push('/checkout');
-
-    return <div>Redirecting...</div>;
-
-  }
-  return (
-  if (!mock) {;
-    router.push('/checkout');
-    return <div>Redirecting...</div>;
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-return <div>Redirecting...</div>;
-origin/cursor/automate-test-improve-and-merge-code-2533
   }
     router.push('/checkout');
     return <div>Redirecting...</div>;
@@ -106,11 +86,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <div className=&quot;container mx-auto max-w-2xl&quot;>
         <div className=&quot;bg-zion-blue-light/80 backdrop-blur-md rounded-lg border border-zion-cyan/20 p-8 text-center&quot;>
           <CheckCircle className=&quot;h-16 w-16 text-green-400 mx-auto mb-4&quot; />
-          
           <h1 className=&quot;text-3xl font-bold text-white mb-4&quot;>
             Mock Checkout Complete!
           </h1>
-          
           <div className=&quot;bg-yellow-500/10 border border-yellow-500/30 rounded-lg p-4 mb-6&quot;>
             <p className=&quot;text-yellow-400 text-sm&quot;>
 

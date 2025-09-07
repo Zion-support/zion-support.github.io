@@ -48,11 +48,7 @@ export default function Customerexperience({ }: CustomerexperienceProps) {
 
 }
 
-<<<<<<<< HEAD:pages.disabled_full/services/ai/customer-experience.tsx
-
-
-
->>>>>>>> main:corrupted_backup/customer-experience.tsx
+<
 
 
 

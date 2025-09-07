@@ -1,10 +1,4 @@
-import { Filter } from 'lucide-react''
-import { SearchFilter } from "./filters/SearchFilter","
-import { SortFilter } from "./filters/SortFilter","
-import { SkillsFilter } from "./filters/SkillsFilter","
-import { AvailabilityFilter } from "./filters/AvailabilityFilter","
-import { RegionFilter } from "./filters/RegionFilter","
-import { ExperienceFilter } from "./filters/ExperienceFilter","
+
 import { Filter } from 'lucide-react'
 import { SearchFilter } from "./filters/SearchFilter",;
 import { SortFilter } from "./filters/SortFilter",;
@@ -78,151 +72,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   sortOption;
   setSortOption;
   clearFilters;
-  return (
-    <>
-      {/* Filter header */}
-      <div className="flex items-center justify-between mb-6">"
-        <h3 className="text-lg font-semibold text-white flex items-center">"
-          <Filter className="h-4 w-4 mr-2 text-zion-purple" />"
-          Filters
-        </h3>
-        <Button
-          variant="ghost""
-          size="sm""
-import { PriceFilter } from "./filters/PriceFilter","
-import { FilterSidebarProps } from "@/types/filters","
-          variant="ghost"
-          size="sm"
 
-import { PriceFilter } from "./filters/PriceFilter",;
-import { FilterSidebarProps } from "@/types/filters",;
-
-  clearFilters,;)
-  isMobileFilterOpen,}: FilterSidebarProps) {;
-  return (
-    <>
-      {/* Filter header */}
-
-      <div className='flex items-center justify-between mb-6'>;
-</div>
-        <h3 className='text-lg font-semibold text-white flex items-center'>;
-</h3>
-          <Filter className='h-4 w-4 mr-2 text-zion-purple' />  searchTerm;
-
-
-      <div className="flex items-center justify-between mb-6">"
-</div>"
-        <h3 className="text-lg font-semibold text-white flex items-center">"
-</h3>"
-          <Filter className="h-4 w-4 mr-2 text-zion-purple" />"
-
-        <Button;"
-          variant="ghost"""
-          size="sm"""
-import { PriceFilter } from "./filters/PriceFilter",""
-import { FilterSidebarProps } from "@/types/filters","
-pr-12325
-export function FilterSidebar({
-  searchTerm,
-  setSearchTerm,
-  selectedSkills,
-  toggleSkill,
-  selectedAvailability,
-  toggleAvailability,
-  selectedRegions,
-  toggleRegion,
-  priceRange,
-  setPriceRange,
-  experienceRange,
-  setExperienceRange,
-  expandedSections,
-  toggleSection,
-  sortOption,
-  setSortOption,
-  clearFilters,
-import { PriceFilter } from "./filters/PriceFilter","
-import { FilterSidebarProps } from "@/types/filters","
-
-import React from "react",
-import { Button } from "@/components/ui/button",
-import { Filter } from 'lucide-react'
-import { SearchFilter } from "./filters/SearchFilter",
-import { SortFilter } from "./filters/SortFilter",
-import { SkillsFilter } from "./filters/SkillsFilter",
-import { AvailabilityFilter } from "./filters/AvailabilityFilter",
-import { RegionFilter } from "./filters/RegionFilter",
-import { ExperienceFilter } from "./filters/ExperienceFilter",
-import { PriceFilter } from "./filters/PriceFilter",
-import { FilterSidebarProps } from "@/types/filters",
-import { PriceFilter } from "./filters/PriceFilter",;
-import { FilterSidebarProps } from "@/types/filters",;
-export function FilterSidebar({
-  searchTerm,
-  setSearchTerm,
-  selectedSkills,
-  toggleSkill,
-  selectedAvailability,
-  toggleAvailability,
-  selectedRegions,
-  toggleRegion,
-  priceRange,
-  setPriceRange,
-  experienceRange,
-  setExperienceRange,
-  expandedSections,
-  toggleSection,
-  sortOption,
-  setSortOption,
-  clearFilters,
-  isMobileFilterOpen
-}:,  FilterSidebarProps) {
-  return (
-    <>
-      {/* Filter header */}
-      <div className="flex items-center justify-between mb-6">"
-        <h3 className="text-lg font-semibold text-white flex items-center">"
-          <Filter className="h-4 w-4 mr-2 text-zion-purple" />"
-          Filters
-        </h3>
-        <Button
-          variant="ghost" "
-          size="sm" "
-          onClick={clearFilters}
-          className="h-7 text-xs text-zion-purple hover:text-zion-purple-light hover:bg-transparent""
-}: FilterSidebarProps) {
-  return (
-    <>
-      {/* Filter header */}
-      <div className="flex items-center justify-between mb-6">
-        <h3 className="text-lg font-semibold text-white flex items-center">
-          <Filter className="h-4 w-4 mr-2 text-zion-purple" />
-          Filters
-        </h3>
-        <Button 
-          variant="ghost" 
-          size="sm" 
-          onClick={clearFilters}
-          className="h-7 text-xs text-zion-purple hover:text-zion-purple-light hover:bg-transparent"
-  isMobileFilterOpen
-}: FilterSidebarProps) {
-  searchTerm
-  setSearchTerm
-  selectedSkills
-  toggleSkill
-  selectedAvailability
-  toggleAvailability
-  selectedRegions
-  toggleRegion
-  priceRange
-  setPriceRange
-  experienceRange
-  setExperienceRange
-  expandedSections
-  toggleSection
-  sortOption
-  setSortOption
-  clearFilters
-  isMobileFilterOpen,}: FilterSidebarProps) {
   return (
     <>
       {/* Filter header */}
@@ -264,7 +114,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           Clear All
         </Button>
       </div>
-      
+
 import React from "react",;
 import { Button } from "@/components/ui/button",;
 import { Filter } from 'lucide-react';
@@ -358,7 +208,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           className="h-7 text-xs text-zion-purple hover:text-zion-purple-light hover:bg-transparent""
         >
 
-        
     <>;
       {/* Filter header */}"
       <div className="flex items-center justify-between mb-6">;"
@@ -556,7 +405,7 @@ pr-12325
       <PriceFilter
         priceRange={priceRange}
         setPriceRange={setPriceRange}
-        <Button
+
         expanded={expanded_sections.price}
         toggle_section={() => toggle_section ('price')}'
         isMobileFilterOpen={isMobileFilterOpen}      />;
@@ -628,7 +477,6 @@ pr-12325
         toggle_section={() => toggle_section ('experience')}
 
 
-      
 
         expanded={expanded_sections.price}
         toggle_section={() => toggle_section ('price')}
@@ -744,7 +592,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
 
-        
           onClick = {(,) => window && window.dispatchEvent(new CustomEvent('closeMobileFilter')),}
 
 

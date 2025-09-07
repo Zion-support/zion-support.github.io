@@ -1,35 +1,5 @@
 
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
-import React from 'react';
-
-import Layout from '../components/layout/Layout';
-
-import { advancedAIAutomationServices2025 } from '../data/2025-advanced-ai-automation-services';
-const contactInfo = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
-};
-
 const contactInfo = {
   mobile: '+1 302 464 0950'
   email: 'kleber@ziontechgroup.com'
@@ -570,6 +540,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               everything with intelligent AI that learns and adapts to your
               needs.
 origin/cursor/automate-test-improve-and-merge-code-2533
+
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>
               <Link href='#services' className='group'>
@@ -589,20 +560,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <meta name="keywords" content="AI automation, code generation, DevOps automation, customer support AI, marketing automation, sales intelligence, Zion Tech Group" />
         <meta name="author" content="Zion Tech Group" />
         <meta name="robots" content="index, follow" />
-        
         {/* Open Graph */}
         <meta property="og:title" content="AI Automation Services - Zion Tech Group" />
         <meta property="og:description" content="Advanced AI-powered automation solutions for modern businesses." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ziontechgroup.com/ai-automation-services" />
         <meta property="og:image" content="https://ziontechgroup.com/og-image.jpg" />
-        
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="AI Automation Services - Zion Tech Group" />
         <meta name="twitter:description" content="Advanced AI-powered automation solutions for modern businesses." />
         <meta name="twitter:image" content="https://ziontechgroup.com/twitter-image.jpg" />
-        
         {/* Contact Information */}
         <meta name="contact:mobile" content="+1 302 464 0950" />
         <meta name="contact:email" content="kleber@ziontechgroup.com" />
@@ -613,7 +581,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden futuristic-bg">
         <div className="absolute inset-0 bg-gradient-to-br from-black/50 via-black/30 to-transparent"></div>
-        
         <div className="relative z-10 container mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -666,7 +633,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               Transform your business operations with cutting-edge AI automation. From code generation to customer support,
               automate everything with intelligent AI that learns and adapts to your needs.
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link href="#services" className="group">
                 <button className="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center space-x-2">
@@ -1035,7 +1001,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
                 <ul className="space-y-2">
 
-                
                 <ul className="space-y-2">
 
 
@@ -1362,7 +1327,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               Join thousands of companies already transforming their operations with AI automation. 
               Get started today and see the difference intelligent automation can make.
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link href="/contact" className="group">
                 <button className="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center space-x-2">
@@ -1377,7 +1341,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <button className='border-2 border-emerald-500/50 hover:border-emerald-400 text-emerald-400 hover:text-emerald-300 px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:bg-emerald-500/10 flex items-center space-x-2'>
               <Link href="/comprehensive-services-showcase-2025" className="group">
                 <button className="border-2 border-emerald-500/50 hover:border-emerald-400 text-emerald-400 hover:text-emerald-300 px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:bg-emerald-500/10 flex items-center space-x-2">
-              
               <Link href="/comprehensive-services-showcase-2025" className="group">
                 <button className="border-2 border-emerald-500/50 hover:border-emerald-400 text-emerald-400 hover:text-emerald-300 px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:bg-emerald-500/10 flex items-center space-x-2">
 

@@ -26,25 +26,7 @@ export interface PdfThemeColors {
   background: string;
   text: string;
   heading: string;
-    ? {
-        background: '#ffffff';
-        text: '#000000';
-        heading: '#222222';
-        subheading: '#444444'
-        accent: '#9b87f5'
-      }
-    : {
-        background: '#1A1F2C';
-        text: '#ffffff';
-        heading: '#ffffff';
 
-        subheading: '#cccccc',
-        accent: '#9b87f5';
-
-subheading: '#cccccc'
-
-        accent: '#9b87f5'
-        heading: '#222222';      }
 }
   return theme === 'light
     ? { ;

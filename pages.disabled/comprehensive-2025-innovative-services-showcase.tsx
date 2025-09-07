@@ -1,5 +1,4 @@
 
-
 import { 
   ArrowRight, CheckCircle, Globe;
   Search, Grid, List, Star as StarIcon;
@@ -10,6 +9,7 @@ import EnhancedNavigation from '../components/EnhancedNavigation',;
 import EnhancedFooter from '../components/EnhancedFooter',;
 import { comprehensiveInnovativeServices } from '../data/comprehensive-2025-innovative-services-expansion',;
 import { specializedEnterpriseServices } from '../data/specialized-2025-enterprise-services',;
+
 export default function Comprehensive2025InnovativeServicesShowcase() {
   const [searchTerm, setSearchTerm] = useState(''),
   const [selectedCategory, setSelectedCategory] = useState('all'),

@@ -1,13 +1,5 @@
 
-// Signup checking functionality;
-import {supabase} from '@/integrations / supabase / client';
-import {analyze_email} from './analyze_email';
-import {SignupCheckResult} from './types';
-/**;
-* Check for suspicious signup patterns;
-*/;
 
-export const checkSignupPatterns = async (
 
 export const checkSignupPatterns = async (;
 export const checkSignupPatterns = async (
@@ -220,5 +212,6 @@ export const checkSignupPatterns = async (;
 `;
 pr-12325
 </SignupCheckResult>'
+
 
 };

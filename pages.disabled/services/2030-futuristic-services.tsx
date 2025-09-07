@@ -1,5 +1,4 @@
 
-
 import React from 'react',;
 import Head from 'next/head',;
 import { motion } from 'framer-motion',;
@@ -13,6 +12,7 @@ import { enterpriseITSolutions2030 } from '../../data/2030-enterprise-it-solutio
 import { spaceMetaverseTechServices2030 } from '../../data/2030-space-metaverse-tech',;
 import { innovativeMicroSaasServices2030 } from '../../data/2030-innovative-micro-saas',;
 import { researchDevelopmentServices2030 } from '../../data/2030-research-development',;
+
 export default function FuturisticServices2030Page() {
   const contactInfo = {
     mobile: '+1 302 464 0950',

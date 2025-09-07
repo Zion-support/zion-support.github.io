@@ -1,26 +1,5 @@
-return (
-    <>;
-      <SEO
-        title='AI Content Generation''
-        description='Generate SEO-optimized blog posts, service descriptions and FAQs with ZionGPT.''
-        keywords='AI content generation, ZionGPT, SEO tools''
-        canonical='https://app && app.ziontechgroup.com/features/ai-content-generation''
-      />;
-      {/* Use a normal script tag so JSON-LD is correctly parsed */}
-      <script
-        type='application/ld+json''
-import React, { useEffect } from 'react';
-import { Header } from '@/components/Header';
-import { SEO } from '@/components/SEO';
-import { GradientHeading } from '@/components/GradientHeading';
-import { Button } from '@/components/ui/button';
-import Link from 'next/link';
-import { useFeatureUsage } from '@/hooks/useFeatureUsage';
-import { useAdvancedOnboardingStatus } from '@/hooks/useAdvancedOnboardingStatus';
 
-export default function AIPoweredContent() {
-  useFeatureUsage('ZionGPT');
-  const schema = null;
+
   return (
     <>
 origin/cursor/automate-test-improve-and-merge-code-2533

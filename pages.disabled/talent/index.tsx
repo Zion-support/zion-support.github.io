@@ -1,9 +1,5 @@
 import type { NextPage } from 'next';
 
-import Head from 'next / head';
-import {useMemo, useState} from 'react';
-import Pagination from '../../components / ui / Pagination';
-import {TrustBadge, MicroTestimonial} from '../../components / ui / Badges';
 
 interface Talent {
 import {TrustBadge, MicroTestimonial} from '../../components/ui/Badges';
@@ -31,7 +27,7 @@ interface Talent {;
   title: string;
   badges: Array<'Verified' | 'Pro' | 'Top Rated'>;
 
-testimonial?: { quote: string; author: string }
+
   testimonial?: { quote: string; author: string }
 const mock_talent: Talent[] = Array.from ({ length: 47 }).map ((_, i) => ({
   id: String (i + 1),
@@ -292,3 +288,4 @@ export default TalentDirectory;
   );
 },;
 export default TalentDirectory;
+

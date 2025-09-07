@@ -1,43 +1,4 @@
-return (
-    <>;
-      <SEO
-        title='Hiring Tracker | Zion AI Marketplace''
-        description='Manage your candidate pipeline in the Zion AI Marketplace.''
-            <p className="text-muted-foreground mt-1">"
-        title='Hiring Tracker | Zion AI Marketplace'
-        description='Manage your candidate pipeline in the Zion AI Marketplace.'
-import { useState } from 'react';
-import { useRouter } from 'next/router';
-import { KanbanBoard } from '@/components/hiring-tracker/KanbanBoard';
-import { HiringAnalytics } from '@/components/hiring-tracker/HiringAnalytics';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { SEO } from '@/components/SEO';
-import { ProtectedRoute } from '@/components/ProtectedRoute';
-import { Briefcase } from 'lucide-react';
-origin/cursor/automate-test-improve-and-merge-code-2533
 
-import { useState } from "react",
-import { useRouter } from "next/router",
-import { KanbanBoard } from "@/components/hiring-tracker/KanbanBoard",
-import { HiringAnalytics } from "@/components/hiring-tracker/HiringAnalytics",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { SEO } from "@/components/SEO",
-import { ProtectedRoute } from "@/components/ProtectedRoute",
-import { Briefcase } from 'lucide-react'
-
-function HiringTrackerContent() {
-  const router = useRouter(),
-  const jobId = router.query.jobId as string,
-  const [activeTab, setActiveTab] = useState<string>("kanban"),
-
-import { useState } from "react",;
-import { useRouter } from "next/router",;
-import { KanbanBoard } from "@/components/hiring-tracker/KanbanBoard",;
-import { HiringAnalytics } from "@/components/hiring-tracker/HiringAnalytics",;
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
-import { SEO } from "@/components/SEO";
-import { ProtectedRoute } from "@/components/ProtectedRoute";
-import { Briefcase } from 'lucide-react'
   return (
     <>
       <SEO 
@@ -99,11 +60,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <TabsTrigger value="kanban">Kanban Board</TabsTrigger>
             <TabsTrigger value="analytics">Analytics</TabsTrigger>
           </TabsList>
-          
-          <TabsContent value="kanban" className="mt-6">
-            <KanbanBoard jobId={jobId} />
-          </TabsContent>
-          
+
           <TabsContent value="analytics" className="mt-6">
           <TabsContent value='kanban' className='mt-6'>
             <KanbanBoard jobId={jobId} />

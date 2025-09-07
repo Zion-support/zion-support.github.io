@@ -24,10 +24,7 @@
     ],
     "strictNullChecks": true
   },
-<<<<<<< HEAD:backup-problematic-files/temp-exclude/zion-os/tsconfig.json
 
-=======
->>>>>>> 505950bb5f65df61118ac41ff4bde74d3caba4f4:tsconfig.json.disabled
   "include": [
     "next-env.d.ts",
     "**/*.ts",
@@ -37,11 +34,5 @@
   "exclude": [
     "node_modules"
   ]
-<<<<<<< HEAD:backup-problematic-files/temp-exclude/zion-os/tsconfig.json
 
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules"]
-
-=======
->>>>>>> 505950bb5f65df61118ac41ff4bde74d3caba4f4:tsconfig.json.disabled
 }

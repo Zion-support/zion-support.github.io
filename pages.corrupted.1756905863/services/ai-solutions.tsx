@@ -1,4 +1,4 @@
-<<<<<<<< HEAD:pages.corrupted.1756905863/services/ai-solutions.tsx
+<:pages.corrupted.1756905863/services/ai-solutions.tsx
 
 
 

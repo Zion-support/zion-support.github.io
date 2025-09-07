@@ -1,4 +1,3 @@
-  
   const statusReport = {
     "timestamp": new Date().toISOString(),
     "pm2Processes": [],
@@ -8,7 +7,6 @@
 
   try {
     // Check PM2 processes
-    
     try {
       const pm2List = execSync('pm2 jlist', { "encoding": 'utf8' });
       const pm2Data = JSON.parse(pm2List);
@@ -17,14 +15,11 @@
       const runningProcesses = pm2Data.filter(
         proc => proc.pm2_env && proc.pm2_env.status === 'online'
       );
-      
     } catch (error) {
-      
       statusReport.pm2Processes = [];
     }
 
     // Check automation scripts
-    
     const automationScripts = ['scripts/comprehensive-automation-suite.cjs',
       'scripts/automation-orchestrator.cjs',
       'scripts/start-all-automations.sh',
@@ -49,7 +44,6 @@
     }
 
     // Check system health
-    
     const systemHealth = {
       "memoryUsage": process.memoryUsage(),
       "uptime": process.uptime(),
@@ -80,11 +74,6 @@
     );
     fs.writeFileSync(reportPath, JSON.stringify(statusReport, null, 2));
 
-    
-    
-    
-    
-    
 
     return statusReport;
   } catch (error) {
@@ -108,21 +97,11 @@ if (require.main === module) {
 }
 
 module.exports = { checkAutomationStatus };
-<<<<<<< HEAD:backup-problematic-files/temp_broken_files/automation/check_automation_status.cjs
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-=======
-=======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:automation/check_automation_status.cjs
+
+
+
+
+
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')

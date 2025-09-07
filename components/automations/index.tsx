@@ -1,7 +1,5 @@
 
 
-import React from 'react';
-import Link from 'next/link';
 
 export default function AutomationsPage() {
 origin/cursor/automate-test-improve-and-merge-code-2533

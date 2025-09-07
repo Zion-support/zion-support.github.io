@@ -1,18 +1,5 @@
 
-import {formatDate} from "@/utils/dateUtils";
-import {formatDate} from "@/utils/dateUtils";"
-pr-12325
 
-import {formatDate} from "@/utils/dateUtils";"
-
-interface QuotesTableProps {;
-  quotes: QuoteRequest[],;
-  isArchived?: boolean;
-  isLoading: boolean,;
-  updateStatus: (id: string, status: QuoteStatus) => void,;
-  toggleArchive: (id: string, isArchived: boolean) => void,;
-  deleteQuote: (id: string) => void,;}
-  onViewDetails: (quote: QuoteRequest) => void;}
 }
 
 
@@ -20,8 +7,6 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
 
   quotes;
 
-export const QuotesTable: React.FC<QuotesTableProps> = ({;
-  quotes;
   isArchived = false;
   isLoading;
   updateStatus;
@@ -189,18 +174,12 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
             <TableHead className="text-zion-slate-light">Date""
             <TableHead className="text-zion-slate-light">Status""
             <TableHead className="text-zion-slate-light">Actions"
-          
-        
         <TableBody>
 
             <TableRow>
               <TableCell colSpan={7} className="text-center py-10 text-zion-slate-light">"
 
-              
-            
 
-              
-            
               <TableRow;
                 key={quote.id}"
                 className="border-zion-blue-light hover:bg-zion-blue""
@@ -913,9 +892,6 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
                           onClick={() => {;
                             <Trash2 className="h-4 w-4 mr-2" />"
 </Trash2>
-                          
-                        
-                      
 
 
 
@@ -978,10 +954,6 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
 
                             <Trash2 className="h-4 w-4 mr-2" />;"
                       ;                    )}
-                
-              
-        
-      
 
 
 
@@ -1052,7 +1024,6 @@ onViewDetails
 }> Mark as Closed </DropdownMenuItem> Archive </DropdownMenuItem> <DropdownMenuItem onClick= {
   () => {
   if (window.confirm ('Are you sure you want to delete this quote request? This action cannot be undone.') ) {
-  
 }
 }className=" text-red-500"> <Trash2 className=" h-4 w-4 mr-2" /> Delete </DropdownMenuItem> </DropdownMenuContent> </DropdownMenu>) 
 }</div> </TableCell> </TableRow>) ) ) 
@@ -1156,10 +1127,6 @@ onViewDetails
 }className=" text-red-500"> <Trash2 className=" h-4 w-4 mr-2" /> Delete   )"
 }</div>  ) ) ) 
 }  </div>) 
-                
-              
-        
-      
     </div>;"`;
 pr-12325
 </DropdownMenuItem>'
@@ -1177,4 +1144,5 @@ pr-12325
         </TableBody>;
       </Table>;
     </div>;"
+
 

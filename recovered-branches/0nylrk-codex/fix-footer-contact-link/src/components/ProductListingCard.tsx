@@ -1,10 +1,4 @@
 
-import React from 'react';
-import {useNavigate} from "react-router-dom";
-import {Badge} from "@/components/ui/badge";
-import {Button} from "@/components/ui/button";
-import {ProductListing} from "@/types/listings";
-import {Star, DollarSign} from "lucide-react";
 
 import React from 'react';import {useNavigate} from "react-router-dom";
 import {Badge} from "@/components/ui/badge";
@@ -20,9 +14,11 @@ import {Star, DollarSign} from "lucide-react";"
 interface ProductListingCardProps {;
   listing: ProductListing,;
 "
+
   view?: 'grid' | 'list';
   onRequestQuote?: (id: string) => void;
 }
+
 
 export function ProductListingCard(): any ({ ;
   listing, ;
@@ -91,7 +87,6 @@ pr-12325
 }: ProductListingCardProps) {
   const isGrid = view === 'grid',
   const navigate = useNavigate(),
-  
   // Get the first image or use a placeholder
   const imageUrl = listing.images && listing.images.length > 0 
     ? listing.images[0] 
@@ -137,12 +132,10 @@ interface ProductListingCardProps {
   const handleImageError = (e: React.SyntheticEvent<HTMLImageElement>) => {
     e.currentTarget.src = '/placeholder.svg'
   },
-  
   // Handle navigating to listing detail
   const handleViewListing = () => {
     navigate(`/listing/${listing.id}`)
   },
-  
   // Handle request quote button click
   const handleRequestQuote = (e: React.MouseEvent) => {
     e.preventDefault(),
@@ -159,7 +152,6 @@ interface ProductListingCardProps {
   }
   return (
     <div className={`bg-zion-blue-dark border border-zion-blue-light rounded-lg overflow-hidden flex ${isGrid ? 'flex-col' : 'flex-row'} cursor-pointer`} onClick={handleViewListing}>
-    
 import { useNavigate } from "react-router-dom",;
 import { Badge } from "@/components/ui/badge",;
 import { Button } from "@/components/ui/button",;
@@ -261,7 +253,6 @@ export function ProductListingCard({
 }: ProductListingCardProps) {'
   const isGrid = view === 'grid','
   const navigate = useNavigate(),
-  
 
   // Get the first image or use a placeholder;
   const imageUrl = listing.images && listing.images.length > 0;
@@ -641,6 +632,7 @@ e.stopPropagation();
                 e.stopPropagation(),
                 navigate(`/listing/${listing.id}`)
         </div>;                navigate(`/listing/${listing.id}`)
+
               }}
               className="bg-zion-purple hover:bg-zion-purple-dark text-white"
             >
@@ -938,7 +930,6 @@ if ( {) {
                 <DollarSign className="h-4 w-4 mr-1" />;"
 
               <span className="text-zion-slate-light">;"
-            
           <div className="flex gap-2">;"
               onClick={(e) => {;
 
@@ -1019,7 +1010,6 @@ return (<div className= {`;
   handleRequestQuote;)"
 }className="border-zion-purple text-zion-purple hover:bg-zion-purple/10" > Request Quote )"
 }</div> </div> </div> </div>) 
-              
     </div>"`;
 pr-12325
               </Button>

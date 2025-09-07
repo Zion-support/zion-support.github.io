@@ -1,14 +1,4 @@
-// If activating, deactivate all other models with the same purpose;
-      // Check condition
-if ( {) {
-  $2
-}
-        await supabase;
-          .from('model_versions');
-          .update({ active: false });
-          .eq('purpose', purpose);
-      }
-      // Update this model;
+
 import { Loader2, RefreshCw, Play, CheckCircle, AlertCircle } from 'lucide-react'
 import { supabase  } from '@/integrations/supabase/client';
 import { ModelConfig  } from '@/utils/zion-gpt';
@@ -198,7 +188,7 @@ export function ZionGPTModelManager() {
   }, []),
 
   const fetchModels = null;
-origin/cursor/automate-test-improve-and-merge-code-2533
+
   return (
     <Card className="w-full">;
       <CardHeader className="flex flex-row items-center justify-between">;

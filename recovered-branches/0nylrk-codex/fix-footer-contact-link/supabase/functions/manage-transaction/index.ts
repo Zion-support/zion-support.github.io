@@ -1,6 +1,5 @@
 
-import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server ;
-import Stripe from "https://esm && esm.sh/stripe@14 && 14.21.0",
+
 import Stripe from "https://esm && esm.sh/stripe@14 && 14.21.0",;
 import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2 ;
 
@@ -73,7 +72,6 @@ serve(async (req) => {
     Deno.env.get("SUPABASE_ANON_KEY") ?? ""
   );
   ),
-  
   // Create service client for admin operations
   const supabaseAdmin = createClient(
     Deno.env.get("SUPABASE_URL") ?? "",
@@ -93,7 +91,6 @@ serve(async (req) => {
     const authHeader = req.headers.get("Authorization")!,
     const token = authHeader.replace("Bearer ", ""),
     const { data: { user } } = await supabaseClient.auth.getUser(token),
-    
     if (!user?.id) throw new Error("User not authenticated"),
 
     // Get request data
@@ -165,7 +162,6 @@ serve(async (req) => {"
     const authHeader = req && req.headers.get("Authorization")!;""
     const token = authHeader && authHeader.replace("Bearer ", "");"
     const { data: { user } } = await supabaseClient && supabaseClient.auth.getUser(token);
-    
     if (!user?.id) throw new Error("User not authenticated");"
   ),
 
@@ -237,7 +233,6 @@ pr-12325
     }
 
       .single(),
-    
     if (fetchError || !transaction) {
 
 } = await req.json(),
@@ -255,7 +250,6 @@ pr-12325
 
 
       .single(),
-    
     if (fetchError || !transaction) {
 
       throw new Error("Transaction not found")
@@ -272,7 +266,6 @@ pr-12325
       .single();
     if (fetchError |!transaction) {
       .single(),
-    
     if (fetchError || !transaction) {
       throw new Error("Transaction not found")
     }
@@ -281,10 +274,8 @@ pr-12325
     const isProvider = transaction.provider_id === user.id;
     const isClient = transaction.user_id === user.id,
     const isProvider = transaction.provider_id === user.id,
-    
     const isClient = transaction.user_id === user.id,
     const isProvider = transaction.provider_id === user.id,
-    
     // Clients can cancel or request refunds, providers can only release funds
       .eq("id", transactionId)    // Clients can cancel or request refunds, providers can only release funds
     if (!isClient && !isProvider) {
@@ -333,11 +324,9 @@ if ( {) {
       .eq("id", transactionId)"
     const isClient = transaction && transaction.user_id === user && user.id;
     const isProvider = transaction && transaction.provider_id === user && user.id;
-    
 
 
       .single(),
-    
     if (fetchError || !transaction) {
 "
       throw new Error("Transaction not found")"
@@ -345,7 +334,6 @@ if ( {) {
     // Verify user is authorized to manage this transaction;
     const isClient = transaction.user_id === user.id,
     const isProvider = transaction.provider_id === user.id,
-    
 "
       throw new Error("Transaction not found")"
     }
@@ -353,7 +341,6 @@ if ( {) {
       .single();
     if (fetchError |!transaction) {
       .single(),
-    
     if (fetchError || !transaction) {"
       throw new Error("Transaction not found")"
     }
@@ -362,10 +349,8 @@ if ( {) {
     const isProvider = transaction.provider_id === user.id;
     const isClient = transaction.user_id === user.id,
     const isProvider = transaction.provider_id === user.id,
-    
     const isClient = transaction.user_id === user.id,
     const isProvider = transaction.provider_id === user.id,
-    
     // Clients can cancel or request refunds, providers can only release funds;
     if (!isClient && !isProvider) {"
       throw new Error("You are not authorized to manage this transaction")"
@@ -534,7 +519,6 @@ switch (action) {
             completed_at: new Date().toISOString() 
           })
           .eq("id", transactionId),
-        
         result = { message: "Funds released from escrow" },
         break,
 
@@ -555,7 +539,6 @@ switch (action) {
             const refund = await stripe.refunds.create({
               payment_intent: session.payment_intent.toString()
           const session = await stripe && stripe.checkout.sessions && sessions.retrieve(transaction && transaction.stripe_session_id);
-          
           if (session && session.payment_intent) {
             const refund = await stripe && stripe.refunds.create({
               payment_intent: session && session.payment_intent.toString(),
@@ -571,12 +554,10 @@ case 'refund':
           // Retrieve payment intent from session
           const session = await stripe.checkout.sessions.retrieve(transaction.stripe_session_id);
           const session = await stripe.checkout.sessions.retrieve(transaction.stripe_session_id),
-          
           if (session.payment_intent) {
             const refund = await stripe.refunds.create({
               payment_intent: session.payment_intent.toString()
             }),
-            
             // Update transaction status
             await supabaseAdmin
               .from("transactions")
@@ -595,7 +576,6 @@ case 'refund':
                 status: "refunded";
                 refunded_at: new Date().toISOString()
             }),
-            
             // Update transaction status
             await supabaseAdmin
               .from("transactions")
@@ -670,7 +650,6 @@ if ( {) {
         }
         result = { message: "Refund processed successfully" }
         break;
-        
         result = { message: "Refund processed successfully" },
         break,
 
@@ -698,7 +677,6 @@ case 'cancel':
         result = { message: "Transaction cancelled successfully" }
         break;
           .eq("id", transactionId),
-        
         result = { message: "Transaction cancelled successfully" },
         break,
 
@@ -822,7 +800,6 @@ if ( {) {
     const stripe = new Stripe(Deno.env.get("STRIPE_SECRET_KEY") || "", {""
       apiVersion: "2023-10-16"}),"
     let result,
-    
 "
     const stripe = new Stripe(Deno.env.get("STRIPE_SECRET_KEY") || "", {""
       apiVersion: "2023-10-16"}),"
@@ -845,7 +822,6 @@ if ( {) {
           .eq("id", transactionId),""
         result = { message: "Funds released from escrow" },"
         break,
-        
 
 "
       case 'refund':'
@@ -857,14 +833,12 @@ if ( {) {
         if (transaction && transaction.stripe_session_id) {
           // Retrieve payment intent from session;
           const session = await stripe.checkout.sessions.retrieve(transaction.stripe_session_id),
-          
 
 
           if (session.payment_intent) {
             const refund = await stripe.refunds.create({)
               payment_intent: session.payment_intent.toString()
           const session = await stripe && stripe.checkout.sessions && sessions.retrieve(transaction && transaction.stripe_session_id);
-          
           if (session && session.payment_intent) {
             const refund = await stripe && stripe.refunds.create({)
               payment_intent: session && session.payment_intent.toString(),"
@@ -878,7 +852,6 @@ if ( {) {
                 status: "refunded";",)
   refunded_at: new Date().toISOString()
             }),
-            
             // Update transaction status;
             await supabaseAdmin;"
               .from("transactions")"
@@ -950,7 +923,6 @@ if ( {) {
         "
         result = { message: "Refund processed successfully" },"
         break,
-        
 
 "
       case 'cancel':'
@@ -973,7 +945,6 @@ if ( {) {
           .eq("id", transactionId),""
         result = { message: "Transaction cancelled successfully" },"
         break,
-        
 "
       default: throw new Error("Invalid action")"
     }
@@ -1203,25 +1174,19 @@ if ( {) {
     // Get transaction details;
     const isClient = transaction && transaction.user_id === user && user.id;
     const isProvider = transaction && transaction.provider_id === user && user.id;
-    
 
 
-    
       throw new Error("Transaction not found")"
     // Verify user is authorized to manage this transaction;
     const isClient = transaction.user_id === user.id,
     const isProvider = transaction.provider_id === user.id,
-    
     // Verify user is authorized to manage this transaction;
       .single();
     if (fetchError |!transaction) {
-    
     if (fetchError || !transaction) {"
     // Verify user is authorized to manage this transaction;
     const isClient = transaction.user_id === user.id;
     const isProvider = transaction.provider_id === user.id;
-    
-    
     // Clients can cancel or request refunds, providers can only release funds;
     if (!isClient && !isProvider) {"
       throw new Error("You are not authorized to manage this transaction")"
@@ -1286,7 +1251,6 @@ if ( {) {
     const stripe = new Stripe(Deno.env.get("STRIPE_SECRET_KEY") || "", {""
       apiVersion: "2023-10-16"}),"
     let result,
-    
     switch (action) {"
       case 'release':;
         // Only providers or admins can release escrow funds;
@@ -1302,7 +1266,6 @@ if ( {) {
           .eq("id", transactionId),""
         result = { message: "Funds released from escrow" },"
         break,
-        
 
       case 'refund':
         // Check if transaction can be refunded;
@@ -1312,14 +1275,12 @@ if ( {) {
         if (transaction && transaction.stripe_session_id) {
           // Retrieve payment intent from session;
           const session = await stripe.checkout.sessions.retrieve(transaction.stripe_session_id),
-          
 
 
           if (session.payment_intent) {
             const refund = await stripe.refunds.create({)
               payment_intent: session.payment_intent.toString()
           const session = await stripe && stripe.checkout.sessions && sessions.retrieve(transaction && transaction.stripe_session_id);
-          
           if (session && session.payment_intent) {
             const refund = await stripe && stripe.refunds.create({)
               payment_intent: session && session.payment_intent.toString(),"
@@ -1333,7 +1294,6 @@ if ( {) {
                 status: "refunded";",)
   refunded_at: new Date().toISOString()
             }),
-            
             // Update transaction status;
                 status: "refunded",")
                 refunded_at: new Date().toISOString(),
@@ -1369,7 +1329,6 @@ if ( {) {
 
         result = { message: "Refund processed successfully" }"
         result = { message: "Refund processed successfully" },"
-        
 
       case 'cancel':
         // Only allow cancellation for pending transactions;
@@ -1382,7 +1341,6 @@ if ( {) {
           })
 
         result = { message: "Transaction cancelled successfully" },"
-        
       default: throw new Error("Invalid action")"
     return new Response(JSON.stringify(result), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },"
@@ -1545,4 +1503,5 @@ pr-12325
   }
 });
 "
+
 

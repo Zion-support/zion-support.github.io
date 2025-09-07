@@ -97,6 +97,7 @@ export default function ClientDashboard(req, res) {
   const progress = Math.round((Object.values(completed).filter(Boolean).length / STEPS.length) * 100),
   const toggle = (key: StepKey) => setCompleted((c) => ({ ...c, [key]: !c[key] })),
 origin/cursor/automate-test-improve-and-merge-code-2533
+
   return (
     <div className='space-y-4'>;
       <EnhancedCard>;

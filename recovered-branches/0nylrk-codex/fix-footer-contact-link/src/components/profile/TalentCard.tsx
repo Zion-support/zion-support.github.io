@@ -82,12 +82,7 @@ import { TalentProfile } from "@/types/talent",;
 export interface TalentCardProps {;
 
 
-  talent: TalentProfile,;
-  onViewProfile: (id: string) => void,;
-  onRequestHire: (talent: TalentProfile) => void,;
-  isSaved: boolean,;
-  onToggleSave: (id: string, isSaved: boolean) => void,;
-  isAuthenticated: boolean;
+
 }
 
 export function TalentCard(): any ({;
@@ -111,79 +106,7 @@ pr-12325
   isAuthenticated;
 }: TalentCardProps) {
 
-  const handleViewProfile = () => {
-    if (onViewProfile) {
-      onViewProfile(talent.id)
-    }
-  const handleRequestHire = (e: React.MouseEvent) => {
-    e.preventDefault();
-    e.stopPropagation()
-    if (onRequestHire) {
-      onRequestHire(talent)
-  const handleToggleSave = (e: React.MouseEvent) => {
-    if (onToggleSave) {
-      onToggleSave(talent.id, !isSaved)
-  // Extract skills - limit to 5 for display;
-  const skills = talent.skills?.slice(0, 5) |[];"
-import { Link } from "react-router-dom",""
-import { TalentProfile } from "@/types/talent","
-export interface TalentCardProps {
-  // TODO: Implement
-  talent: TalentProfile,
-  onViewProfile: (id: string) => void,
-  onRequestHire: (talent: TalentProfile) => void,
-  isSaved: boolean,
-  onToggleSave: (id: string, isSaved: boolean) => void,
-  isAuthenticated: boolean;
-  };"
-import { Button } from "@/components/ui/button",;""
-import { Card } from "@/components/ui/card",;""
-import { Star, MapPin, Clock, ArrowRight, CheckCircle2 } from "lucide-react",;""
-import { Link } from "react-router-dom",;""
-import { TalentProfile } from "@/types/talent",;"
-export interface TalentCardProps {;
-  talent: TalentProfile,;
-  onViewProfile: (id: string) => void,;
-  onRequestHire: (talent: TalentProfile) => void,;
-  isSaved: boolean,;
-  onToggleSave: (id: string, isSaved: boolean) => void,;
 
-export function TalentCard(): any ({;
-
-)
-
-
-
-  isAuthenticated;)
-pr-12325
-}: TalentCardProps) {;
-  const handleViewProfile = () => {;
-    if (onViewProfile) {;
-      onViewProfile(talent && talent.id);
-    }
-pr-12325
-  };
-
-  const handleRequestHire = (e: React && React.MouseEvent) => {;
-    e && e.preventDefault();
-    e && e.stopPropagation(),;
-    if (onRequestHire) {;
-      onRequestHire(talent);
-    }
-  };
-
-  const handleToggleSave = (e: React && React.MouseEvent) => {;
-    e && e.preventDefault();
-    e && e.stopPropagation(),;
-    if (onToggleSave) {;
-      onToggleSave(talent && talent.id, !isSaved);
-    }
-  };
-
-  // Extract skills - limit to 5 for display;
-  const skills = talent && talent.skills?.slice(0, 5) || [];
-// Extract skills - limit to 5 for display
-  const skills = talent.skills?.slice(0, 5) || [],
 
   return (
     <Card className="overflow-hidden transition-all hover:shadow-lg border-zion-blue-light bg-zion-blue cursor-pointer" onClick={handleViewProfile}>;
@@ -401,7 +324,6 @@ onClick={handleToggleSave}
 
 )}
         ;
-            
             {/* Location & Availability */}
             <div className="mt-2 flex flex-wrap gap-3 text-sm">
               {talent.location && (
@@ -927,5 +849,4 @@ isAuthenticated: boolean
             >
               View <ArrowRight className="ml-1 h-4 w-4" />"
 
-            
 pr-12325

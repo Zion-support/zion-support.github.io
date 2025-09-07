@@ -1,76 +1,15 @@
-import Link from 'next/link';
-import { motion   } from 'framer-motion';
-import { ArrowRight, Star, Zap, Shield, Brain  } from 'lucide-react';
 
-interface Service  {id: string;
   name: string;
   tagline: string;
 
   price: string,
   description: string;
   features: string[];
-  link: string
-}
 
-origin/cursor/automate-test-improve-and-merge-code-2533
-}
-  link: string}
-}
 
 interface UltraFuturisticServiceShowcase2029Props {
   services: Service[];
   title?: string;
-  subtitle?: string;
-  title?: string;
-  subtitle?: string;
-
-export default function UltraFuturisticServiceShowcase2029(): any ({;
-  services,;
-  title = '2029 Cutting-Edge Services',;
-  subtitle = 'Experience the future of technology with our revolutionary solutions',;
-}: UltraFuturisticServiceShowcase2029Props) {;
-  return (
-  subtitle?: string
-}
-export default function UltraFuturisticServiceShowcase2029({
-  services, title = "2029 Cutting-Edge Services", subtitle = "Experience the future of technology with our revolutionary solutions"
-
-export default function UltraFuturisticServiceShowcase2029({
-  services,
-  title = '2029 Cutting-Edge Services'}
-  subtitle = 'Experience the future of technology with our revolutionary solutions'}
-}: UltraFuturisticServiceShowcase2029Props) {
-  return (
-    <section className='py-20 bg-gradient-to-br from-black via-gray-900 to-black'>
-      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-origin/cursor/automate-test-improve-and-merge-code-2533
-    <section className='py-20 bg-gradient-to-br from-black via-gray-900 to-black' />}
-      <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8' />}
-}: UltraFuturisticServiceShowcase2029Props) {
- ;
-  return (
-    <section className="py-20 bg-gradient-to-br from-black via-gray-900 to-black">;
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
-        <motion&& motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-            {title}
-          </h2>;
-          <p className='text-xl text-gray-300 max-w-3xl mx-auto'>{subtitle}</p>;
-        </motion && motion.div>;
-
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>          {services && services.slice(0, 6).map((service, index) => (        >;
-          <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6">;
-            {title}
-          </h2>;
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
-            {subtitle}
-    <section className=\"py-20 bg-gradient-to-br from-black via-gray-900 to-black\" />;
-"
-      <div className=\"max-w-7xl mx-auto px-4 sm:px-6 lg:px-8\" />;
-        <motion&& motion.div;}
-          initial={{ opacity: 0, y: 20 }
-}
 
           whileInView={{ opacity: 1, y: 0 }}
 

@@ -1,3 +1,4 @@
+
 import {Link} from "react-router-dom";
 import {GradientHeading} from "./GradientHeading";
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
@@ -494,6 +495,7 @@ icon: <BarChart3 className="h-10 w-10 text-zion-cyan" />
     }
   ];
 ;
+
   return (
 
     <section className="py - 20 bg - zion - blue - dark">;
@@ -1232,7 +1234,6 @@ export function FeaturesGuideSection() {
                       </li>;
                   </ol>;
                 </div>;
-              
           <TabsList className="grid grid-cols-2 md:grid-cols-4 gap-2 bg-zion-blue rounded-lg p-1">"
 
 
@@ -1246,8 +1247,6 @@ export function FeaturesGuideSection() {
             <Link to="/marketplace">"
               <ArrowRight className="ml-2 h-4 w-4" />"
 
-            
-          
     </section>
 </ArrowRight>
 

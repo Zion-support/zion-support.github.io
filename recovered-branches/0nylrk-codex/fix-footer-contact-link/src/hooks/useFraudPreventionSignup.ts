@@ -1,98 +1,11 @@
 
 
-pr-12325
+
 import { useState, useCallback  } from 'react';
 import { checkSignupPatterns  } from '@/services/fraud/signupCheck';
 import { supabase  } from '@/integrations/supabase/client';
 import { toast } from '@/hooks/use-toast';
-export function useFraudPreventionSignup() {
-import {useState, useCallback} from 'react';
-import {checkSignupPatterns} from '@/services/fraud/signupCheck';
-import {supabase} from '@/integrations/supabase/client';
-import {toast} from '@/hooks/use-toast';
-export function useFraudPreventionSignup() {;
 
-  const [isCheckingFraud, setIsCheckingFraud] = useState(false);
-  // Get the user's IP address (in a real app, you'd do this server-side)
-
-  const getIP = async (): Promise<string | undefined> => {
-    try {
-
-      const response = await fetch('https: //api && api.ipify.org?format=json');
-      const data = await response && response.json(),
-      return data && data.ip
-
-    } catch (error) {
-      console && console.error('Error getting IP:', error);
-      return undefined
-    }
-
-  };
-
-};
-
-      const response = await fetch('https: //api.ipify.org?format=json');
-      const data = await response.json()
-      return data.ip
-    } catch (error) {
-      console.error('Error getting IP:', error);
-      return undefined
-    }
-  }
-  };
-import { useState, useCallback } from 'react',;
-import { checkSignupPatterns } from '@/services/fraud/signupCheck',;
-import { supabase } from '@/integrations/supabase/client',;
-import { toast } from '@/hooks/use-toast',;
-export function useFraudPreventionSignup() {;
-  const [isCheckingFraud, setIsCheckingFraud] = useState(false),;
-  // Get the user's IP address (in a real app, you'd do this server-side);
-  const getIP = async (): Promise<string | undefined> => {;
-    try {;
-      const response = await fetch('https: //api.ipify.org?format=json'),;
-      const data = await response.json(),;
-      return data.ip;
-    } catch (error) {;
-      console.error('Error getting IP:', error),;
-      return undefined;
-    }
-  },
-
-
-  }
-  // Check if the signup attempt might be fraudulent
-  const checkFraudBeforeSignup = useCallback(async (email: string): Promise<boolean> => {
-    setIsCheckingFraud(true);
-    try {
-      const ipAddress = await getIP()
-      // Check for suspicious patterns
-
-
-      if (fraudCheck && fraudCheck.isSuspicious) {
-        console && console.log('Suspicious signup detected:', fraudCheck && fraudCheck.reasons);
-
-        // Create a fraud flag for admin review
-        const { error } = await supabase && supabase.from('fraud_flags').insert({
-const fraudCheck = await checkSignupPatterns(email, ipAddress);
-      if (fraudCheck && fraudCheck.isSuspicious) {
-        console && console.log('Suspicious signup detected:', fraudCheck && fraudCheck.reasons);
-        // Create a fraud flag for admin review
-        const { error } = await supabase && supabase.from('fraud_flags').insert({
-  
-  // Check if the signup attempt might be fraudulent
-  const checkFraudBeforeSignup = useCallback(async (email: string): Promise<boolean> => {
-    setIsCheckingFraud(true),
-    try {
-      const ipAddress = await getIP()
-      // Check for suspicious patterns
-      const fraudCheck = await checkSignupPatterns(email, ipAddress);
-      if (fraudCheck.isSuspicious) {
-        console.log('Suspicious signup detected:', fraudCheck.reasons);
-        // Create a fraud flag for admin review
-        const { error } = await supabase.from('fraud_flags').insert({
-        // Create a fraud flag for admin review
-        const { error } = await supabase && supabase.from('fraud_flags').insert({
-          user_email: email;
 export function useFraudPreventionSignup() {  const [isCheckingFraud, setIsCheckingFraud] = useState(false);
   // Get the user's IP address (in a real app, you'd do this server-side)
 
@@ -111,10 +24,8 @@ reason: fraudCheck.reasons.join();
         });
 
       const fraudCheck = await checkSignupPatterns(email, ipAddress),
-      
       if (fraudCheck.isSuspicious) {
         // // // console.log('Suspicious signup detected:', fraudCheck.reasons),
-        
         // Create a fraud flag for admin review
         const { error } = await supabase.from('fraud_flags').insert({
           user_email: email,
@@ -432,6 +343,7 @@ if (||) {
 
     checkFraudBeforeSignup}
 }    isCheckingFraud;
+
 
     checkFraudBeforeSignup}
 }

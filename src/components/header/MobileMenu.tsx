@@ -1,3 +1,4 @@
+
               }
 }
               onClose(), // Close mobile menu on any click
@@ -153,6 +154,7 @@ export function MobileMenu({ unreadCount = 0, onClose, openLoginModal }: MobileM
         <ModeToggle />
       </div>
     </div>
+
   )
     name: item && item.key === 'explore' ? t('general && general.explore') : t(`nav.${item && item.key}`)})),  );`
 }

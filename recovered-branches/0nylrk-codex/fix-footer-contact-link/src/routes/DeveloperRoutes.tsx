@@ -12,7 +12,6 @@ class ErrorBoundary extends React.Component {
     return { hasError: true };
   }
 
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
@@ -21,14 +20,11 @@ class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
 pr-12325
-  
     console.error('Error caught by boundary:', error, errorInfo);'
 
   }
@@ -37,7 +33,6 @@ pr-12325
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -76,6 +71,7 @@ import ApiDocsHub from "../pages/ApiDocsHub",;
 import ApiReference from "../pages/ApiReference",;
 import ApiGettingStarted from "../pages/ApiGettingStarted",;
 import ApiWebhooks from "../pages/ApiWebhooks",;
+
 import ApiSampleCode from "../pages/ApiSampleCode";
 import ApiErrorCodes from "../pages/ApiErrorCodes";
 import ApiSampleCode from "../pages/ApiSampleCode",;

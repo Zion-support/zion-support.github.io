@@ -1,7 +1,4 @@
-import { QuoteFormData } from "@/types/quotes";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Textarea } from "@/components/ui/textarea";
+
 interface ProjectDetailsStepProps {
   formData: QuoteFormData;
   updateFormData: (data: Partial<QuoteFormData>) => void;
@@ -503,7 +500,6 @@ interface ProjectDetailsStepProps {
         <div className="space-y-4">"
             <Label htmlFor="projectName" className="text-zion-slate-light">"
 
-            
             <Input;"
               id="projectName"""
               placeholder="Enter a name for your project""
@@ -516,7 +512,6 @@ interface ProjectDetailsStepProps {
               className="text-zion-slate-light""
             >
 
-            
             <Textarea;"
               id="projectDescription"""
               placeholder="Describe your project in detail...""
@@ -529,7 +524,6 @@ interface ProjectDetailsStepProps {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">"
             <Label htmlFor="name" className="text-zion-slate-light">"
 
-            
               id="name"""
               placeholder="Your name"""
 import { QuoteFormData } from "@/types/quotes",;""
@@ -561,7 +555,6 @@ value={formData.contactInfo.name}
 
             <Label htmlFor="company" className="text-zion-slate-light">"
 
-            
               id="company"""
               placeholder="Your company name""
               value={formData.contactInfo.company}
@@ -569,7 +562,6 @@ value={formData.contactInfo.name}
 
             <Label htmlFor="email" className="text-zion-slate-light">"
 
-            
               id="email"""
               type="email"""
               placeholder="Your email address""
@@ -578,7 +570,6 @@ value={formData.contactInfo.name}
 
             <Label htmlFor="phone" className="text-zion-slate-light">"
 
-            
               id="phone"""
               placeholder="Your phone number""
               value={formData.contactInfo.phone}

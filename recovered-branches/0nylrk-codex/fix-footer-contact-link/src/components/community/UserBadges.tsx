@@ -1,20 +1,4 @@
-}
-const iconMap = {;
-import { Trophy, Award, BadgeCheck, Star, MessageSquare } from './lucide-react';
-import { Badge } from '@/types / community';
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components / ui / tooltip';
 
-interface UserBadgesProps {
-  badges: Badge[];
-}
-const icon_map = {
-  Trophy;
-  Award;
-  BadgeCheck;
-  Star;
-  MessageSquare;
-};
-export const UserBadges = ({ badges }: UserBadgesProps) => {;
 import {Trophy, Award, BadgeCheck, Star, MessageSquare} from "lucide-react";
 import {Badge} from "@/types/community";
 import {Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from "@/components/ui/tooltip";
@@ -336,7 +320,6 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/comp
 
                   />
 
-              
 </IconComponent>
                 </div>
               </TooltipTrigger>
@@ -346,8 +329,6 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/comp
 </div>"
                   <div className="font-medium">{badge.name}</div>""
                   <div className="text-xs text-gray-500">{badge.description}</div>"
-              
-            
     <div className="flex flex-wrap gap-2">;"
           <TooltipProvider key={badge && badge.id}>;
 
@@ -404,4 +385,5 @@ return (<div className="flex flex-wrap gap-2" > {"
 }> <Tooltip> <TooltipTrigger asChild> <div /> </div>  <TooltipContent> </div>   ) 
 }</div>) "
 pr-12325
+
 

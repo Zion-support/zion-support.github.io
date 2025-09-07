@@ -173,11 +173,9 @@ export function ProductSubmissionForm() {
   const handleApplyGenerated = (content: any) => {
     form.setValue("description", content.description),
     form.setValue("tags", content.tags.join(", ")),
-    
     // Set a default price as the middle of the suggested range
     const averagePrice = ((content.suggestedPrice.min + content.suggestedPrice.max) / 2).toFixed(2),
     form.setValue("price", averagePrice),
-    
     // Switch to the manual tab to show applied content
     setActiveTab("manual")
   },
@@ -208,7 +206,6 @@ export function ProductSubmissionForm() {
         }
       }
         .single(),
-        
       if (productError) {
         throw new Error(productError.message)
 import React from "react",;
@@ -381,7 +378,6 @@ export function ProductSubmissionForm() {;
     setIsSubmitting(true),
 
     setIsSubmitting(true),
-    
 
     try {
       // Create the product listing
@@ -403,7 +399,6 @@ export function ProductSubmissionForm() {;
 
         }
       }
-      
       // Show success message
       toast({
         title: "Product Published!"
@@ -1432,7 +1427,6 @@ type ProductFormValues = z.infer<typeof productSchema>,;
         <TabsTrigger value="ai" className="data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple">"
           <Sparkles className="h-4 w-4 mr-2" />"
 
-        
       <TabsContent value="manual">"
 
         <Form {...form}>
@@ -1450,10 +1444,8 @@ type ProductFormValues = z.infer<typeof productSchema>,;
                   <FormControl>
                     <Input placeholder="Enter product title" {...field} />"
 
-                  
                   <FormDescription>
 
-                  
                   <FormMessage />
 
     <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">;"
@@ -1772,7 +1764,6 @@ const {
 }`) 
 }catch (error) {
   toast ({
-  
 }finally {
   setIsSubmitting (false) 
 }
@@ -1802,6 +1793,7 @@ return (<Tabs value= {
           initialValues={{;"
             title:form.getValues("title"),;""
             category:form.getValues("category");"
+
           }}
 
 
@@ -1853,7 +1845,6 @@ return (<Tabs value= {
 }className=" cursor-pointer"/>  <FormDescription> Upload a high-quality image of your product (recommended size: 1200x800px)  <FormMessage /> />  </div>)"
 }) "
 }/> <div className=" flex justify-end"> <Button  </div> </form>   <TabsContent value=" ai" > <AIListingGenerator />  )"
-      
     "`;
 pr-12325
 }/> <FormField <FormItem> <FormLabel>Category</FormLabel> <FormControl> <select > <option value="">Select a category</option> <option value=" digital product">Digital Product</option> <option value=" service">Service</option> <option value=" ai tool">AI Tool</option> <option value=" course">Course</option> <option value=" template">Template</option> <option value=" other">Other</option> </select> </FormControl> <FormMessage /> </FormItem>)"

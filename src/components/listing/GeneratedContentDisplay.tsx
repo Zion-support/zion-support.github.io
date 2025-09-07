@@ -1,4 +1,4 @@
-import { ArrowRight } from 'lucide-react'
+
 
 import {
   Card
@@ -84,6 +84,7 @@ export function GeneratedContentDisplay({ content, onApply }:,  GeneratedContent
           <h3 className="text-sm font-medium text-zion-slate-light mb-2">Description</h3>"
           <p className="text-white">{content.description}</p>"
         </div>
+
         <div>
           <h3 className="text-sm font-medium text-zion-slate-light mb-2">Tags</h3>"
           <div className="flex flex-wrap gap-2">"
@@ -120,10 +121,7 @@ interface GeneratedContent {
 interface GeneratedContentDisplayProps {
   content: GeneratedContent;
   onApply: () => void
-export function GeneratedContentDisplay({
-  content
-  onApply
-}: GeneratedContentDisplayProps) {
+
   return (
     <Card className='border border-zion-blue-light bg-zion-blue-dark'>
       <CardHeader>
@@ -150,6 +148,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 {tag}
               </Badge>;
             ))}
+
         <div>
           <h3 className="text-sm font-medium text-zion-slate-light mb-2">Suggested Price Range</h3>"
           <p className="text-white">"
@@ -171,11 +170,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             {content.suggestedPrice.max.toFixed(2)}
           </p>
         </div>
-        
           </p>
         </div>
 
-        
         <div>
 
           <h3 className="text-sm font-medium text-zion-slate-light mb-2">Suggested Price Range</h3>
@@ -327,7 +324,6 @@ export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDi
           <h3 className="text-sm font-medium text-zion-slate-light mb-2">Description</h3>
           <p className="text-white">{content.description}</p>
         </div>
-        
         <div>
           <h3 className="text-sm font-medium text-zion-slate-light mb-2">Tags</h3>
           <div className="flex flex-wrap gap-2">
@@ -338,14 +334,12 @@ export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDi
             ))}
           </div>
         </div>
-        
         <div>
           <h3 className="text-sm font-medium text-zion-slate-light mb-2">Suggested Price Range</h3>
           <p className="text-white">
             ${content.suggestedPrice.min.toFixed(2)} - ${content.suggestedPrice.max.toFixed(2)}
           </p>
         </div>
-        
         <div>
           <h3 className="text-sm font-medium text-zion-slate-light mb-2">Key Selling Points</h3>
           <ul className="list-disc pl-5 text-white space-y-1">
@@ -435,7 +429,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
 
 
-        
 
           <h3 className="text-sm font-medium text-zion-slate-light mb-2">Tags</h3>""
           <div className="flex flex-wrap gap-2">"
@@ -446,7 +439,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <p className="text-white">"
 </p>
 
-        
           <h3 className="text-sm font-medium text-zion-slate-light mb-2">Key Selling Points</h3>""
           <ul className="list-disc pl-5 text-white space-y-1">"
 </ul>
@@ -493,8 +485,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <CardFooter>;
           <ArrowRight className="ml-2 h-4 w-4" />"
 
-        
-      
           <ArrowRight className="ml-2 h-4 w-4" />;"
 
         <Button;

@@ -1,10 +1,4 @@
-}
-import Head from 'next / head',
-export default /**
- * PerformanceDocRedirect - Function description
- */
-function PerformanceDocRedirect() {
-  return (
+
     <>;
       <Head>;
         <meta http_equiv="refresh" content="0, url=/PERFORMANCE.md" />;
@@ -33,6 +27,7 @@ export default function PerformanceDocRedirect() {
 
 
 import Head from 'next/head';
+
 
       </Head>
       <main style={{ padding: 24 }}>

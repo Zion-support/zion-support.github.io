@@ -1,10 +1,4 @@
-}
-import Head from 'next / head',
-export default /**
- * TestingDocRedirect - Function description
- */
-function TestingDocRedirect() {
-  return (
+
     <>;
       <Head>;
         <meta http_equiv="refresh" content="0, url=/TESTING.md" />;
@@ -33,6 +27,7 @@ export default function TestingDocRedirect() {
 
 
 import Head from 'next/head';
+
 
       </Head>
       <main style={{ padding: 24 }}>

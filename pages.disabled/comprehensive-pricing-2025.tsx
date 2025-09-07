@@ -81,6 +81,7 @@ import { comprehensiveMicroSaasServices } from '../data/comprehensive-2025-micro
 import { specializedEmergingTechServices } from '../data/specialized-emerging-tech-services-2025';
 
 origin/cursor/automate-test-improve-and-merge-code-2533
+
 export default function ComprehensivePricingPage() {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>(

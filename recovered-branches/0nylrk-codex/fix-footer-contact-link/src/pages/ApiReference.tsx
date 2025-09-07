@@ -8,36 +8,11 @@ import React, { useState } from "react",
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout",
 
 
-import React, { useState } from "react",;
-import ApiDocsLayout from "@/components/developers/ApiDocsLayout",;
+
 import { CodeBlock } from "@/components/developers/CodeBlock";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 export function ApiReference() {
   const [activeEndpoint, setActiveEndpoint] = useState("get-jobs");
-import { CodeBlock } from "@/components/developers/CodeBlock",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-
-export function ApiReference() {
-  const [activeEndpoint, setActiveEndpoint] = useState("get-jobs"),
-
-  // Sample endpoint data
-
-  const endpoints = [
-    {
-      id: "get-jobs"
-      method: "GET"
-      path: "/api/jobs"
-      description: "Retrieve a list of job postings with optional filtering"
-      parameters: [
-
-{ name: "status", type: "string", description: "Filter by job status (open, closed, draft)" }
-        { name: "category", type: "string", description: "Filter by job category" }
-        { name: "limit", type: "integer", description: "Number of results per page (default: 20, max: 100)" }
-        { name: "offset", type: "integer", description: "Pagination offset (default: 0)" }]
-        { name: "status", type: "string", description: "Filter by job status (open, closed, draft)" },
-        { name: "category", type: "string", description: "Filter by job category" },
-        { name: "limit", type: "integer", description: "Number of results per page (default: 20, max: 100)" },
-        { name: "offset", type: "integer", description: "Pagination offset (default: 0)" }],
 
 import { CodeBlock } from "@/components/developers/CodeBlock",;
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
@@ -56,11 +31,9 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
@@ -105,14 +78,11 @@ class ErrorBoundary extends React.Component {
     super(props);
 
     this.state = { hasError: false };
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
-  
   componentDidCatch(error, errorInfo) {"
     console.error('Error caught by boundary:', error, errorInfo);
 pr-12325
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
@@ -121,7 +91,6 @@ pr-12325
     return { hasError: true };
   }
 
-  
   componentDidCatch(error, errorInfo) {"
     console.error('Error caught by boundary:', error, errorInfo);'
 
@@ -1450,7 +1419,6 @@ language="json"
                           code={response.example} ;
                           language="json";
                         <CodeBlock 
-                        
 
                         <CodeBlock 
                           code={response.example} 
@@ -1698,7 +1666,6 @@ export default ApiReference;
                           code={response && response.example} 
 
 
-                        
 
                           code={response.example} "
                           language="json"""
@@ -1759,15 +1726,12 @@ export default ApiReference;
                           </span>"
                           <span className="text-white">{response.description}</span>"
                           code={response.example}
-                        
 
                 <TabsContent value="try">"
                   <div className="p-8 border border-zinc-800 rounded-lg flex items-center justify-center">"
                     <div className="text-center">"
                       <p className="text-zinc-400 mb-3">Interactive API tester coming soon</p>""
                       <p className="text-zinc-600 text-sm">Try the Postman collection in the meantime</p>"
-                
-              
             <div className="p-8 border border-zinc-800 rounded-lg text-center">"
               <p className="text-zinc-400">Select an endpoint from the list to view details</p>"
     "`;
@@ -1783,3 +1747,4 @@ pr-12325
 export default ApiReference;
 ;
 export default ApiReference;
+

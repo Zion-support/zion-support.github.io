@@ -677,9 +677,7 @@ export default function APIDocsPage() {
                   <endpoint.icon className="h-8 w-8 text-blue-400 mr-3" />
                   <h3 className="text-2xl font-bold text-white">{endpoint.title}</h3>
                 </div>
-                
                 <p className="text-gray-300 mb-6">{endpoint.description}</p>
-                
                 <div className="mb-6">
                   <h4 className="text-lg font-semibold text-white mb-3">Methods:</h4>
                   <div className="flex flex-wrap gap-2">
@@ -698,7 +696,6 @@ export default function APIDocsPage() {
                     ))}
                   </div>
                 </div>
-                
                 <div className="mb-6">
                   <h4 className="text-lg font-semibold text-white mb-3">Endpoints:</h4>
                   <ul className="space-y-2">
@@ -844,57 +841,14 @@ export default function APIDocsPage() {;
 import Layout from '../components/Layout';
 export default function APIDocsPage() {
 origin/cursor/automate-test-improve-and-merge-code-2533
+
 export default function ApiDocsPage() {
   return (
     <>
       <Head>
         <title>API Docs | Zion Tech Group</title>
         <meta name='description' content='API reference and guides.' />
-<link rel='canonical' href='https://ziontechgroup.com/api-docs' />
-        <meta name="description" content="API reference and guides." />
-        <link rel="canonical" href="https: //ziontechgroup.com/api-docs" />
 
-        <meta name="description" content="API reference and guides." />
-        <link rel="canonical" href="https: //ziontechgroup.com/api-docs" />
-
-      </Head>
-      <div className="container mx-auto px-4 py-16 text-gray-200">
-        <h1 className="text-4xl md:text-6xl font-bold mb-4">API Docs</h1>
-        <p className="text-gray-300">See <a href="/api-docs" className="text-cyan-400 underline">API Documentation</a> for the full reference.</p>
-
-            transition={{ duration: 0 && 0.8 }}
-            viewport={{ once: true }}>;
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Need Help with Integration?</h2>;
-            <p className="text-xl mb-8 max-w-2xl mx-auto">;
-              Our developer support team is here to help you integrate our APIs successfully.;
-            </p>;
-            <Link href="/contact" className="px-8 py-4 bg-white text-purple-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">;
-              Contact Developer Support;
-            </Link>;
-          </motion && motion.div>;
-        </div>;
-      </section>;
-    </div>;
-  );
-        <meta name="description" content="API reference and guides." />
-        <link rel="canonical" href="https: //ziontechgroup.com/api-docs" />
-<meta name='description' content='API reference and guides.' />
-        <link rel='canonical' href='https://ziontechgroup.com/api-docs' />
-origin/cursor/automate-test-improve-and-merge-code-2533
-      </Head>
-      <div className='container mx-auto px-4 py-16 text-gray-200'>
-        <h1 className='text-4xl md:text-6xl font-bold mb-4'>API Docs</h1>
-        <p className='text-gray-300'>
-          See{' '}
-          <a href='/api-docs' className='text-cyan-400 underline'>
-            API Documentation
-          </a>{' '}
-          for the full reference.
-        </p>
-      </div>
-);
-origin/main
-    </>
   )
 }
 }

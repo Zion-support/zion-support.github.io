@@ -4,20 +4,16 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -44,6 +40,7 @@ export default function UNBridge() {
     regionalScope: 'Global South';
     budgetOrResolution: 'USD 3M over 24 months';
     supportingMultiverses: 'Digital Labor, AI Ethics',
+
     promptAssist: 'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.',
     language: 'en'});
   const [loading, setLoading] = useState(false);
@@ -53,233 +50,7 @@ export default function UNBridge() {
   const onChange = null;
       setResult((r: any) => ({ ...r, meta: data.meta }))
     } finally { setLoading(false) }
-    title: 'Zion DAO x Digital Labor Initiative'
-    targetInstitution: 'UN Development Programme'
-    type: 'Workforce Dev'
-    regionalScope: 'Global South'
-    budgetOrResolution: 'USD 3M over 24 months'
-    supportingMultiverses: 'Digital Labor, AI Ethics'
-    promptAssist:
-      'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.'
-    language: 'en'
-origin/cursor/automate-test-improve-and-merge-code-2533
-  });  const [loading, setLoading] = useState(false);
-  const [result, setResult] = useState<any>(null);
-  const [translated, setTranslated] = useState<string>('');
 
-const onChange = (
-    e: React.ChangeEvent<
-      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
-    >
-  ) => {
-    const { name, value } = e.target;
-    setForm(f => ({ ...f, [name]: value }));  }
-    setForm(f => ({ ...f, [name]: value }));
-  };
-
-  async function generate() {
-    setLoading(true);
-    try {
-      const res = await fetch('/api/proposals/generate', {
-        method: 'POST'
-        headers: { 'Content-Type': 'application/json' }
-        body: JSON.stringify({
-export default function UNBridge(req, res) {
-  try {
-
-          ...form;
-          supportingMultiverses: form.supportingMultiverses.split().map((s) => s.trim()).filter(Boolean)})}),
-      const data = await res.json();
-
-  const [form, setForm] = useState({;
-    title: 'Zion DAO x Digital Labor Initiative',;
-          ...form
-          ...form;
-          supportingMultiverses: form.supportingMultiverses.split().map((s) => s.trim()).filter(Boolean)})}),
-...form,
-          supportingMultiverses: form.supportingMultiverses
-            .split(',')
-            .map(s => s.trim())
-            .filter(Boolean)
-        })
-      });
-      const data = await res.json();
-      setResult(data);
-    } finally {
-      setLoading(false);
-    }  }
-  async function translate(targetLanguage: string) {
-    if (!result?.markdown) return;
-    setLoading(true)
-    try {
-      const res = await fetch('/api/proposals/translate', {
-        method: 'POST'
-        headers: { 'Content-Type': 'application/json' }
-        body: JSON.stringify({ markdown: result.markdown, targetLanguage })
-      });
-      const data = await res.json();
-      setTranslated(data.translated);
-    } finally {
-      setLoading(false);
-    }  }
-  async function exportArtifacts() {
-    if (!result?.meta?.id) return;
-    setLoading(true);
-    try {
-      await fetch('/api/proposals/export', {
-        method: 'POST'
-        headers: { 'Content-Type': 'application/json' }
-        body: JSON.stringify({ id: result.meta.id })
-      });
-      // Refresh meta
-      const list = await fetch('/api/proposals/list');
-      const { proposals } = await list.json();
-      const updated = proposals.find((p: any) => p.id === result.meta.id)
-      setResult((r: any) => ({ ...r, meta: updated }));
-    } finally {
-      setLoading(false);
-    }  }
-  async function submit(channels: string[]) {
-    if (!result?.meta?.id) return;
-    setLoading(true)
-    try {
-      const res = await fetch('/api/proposals/submit', {
-        method: 'POST'
-        headers: { 'Content-Type': 'application/json' }
-        body: JSON.stringify({ id: result.meta.id, channels })
-      });
-      const data = await res.json();
-      setResult((r: any) => ({ ...r, meta: data.meta }));
-    } finally {
-      setLoading(false);
-    }
-
-  }
-export default function UNBridge(req, res) {
-  try {
-  const [form, setForm] = useState({;
-    title: 'Zion DAO x Digital Labor Initiative';
-origin/cursor/automate-test-improve-and-merge-code-2533
-      const data = await res.json();
-
-  const [form, setForm] = useState({;
-    title: 'Zion DAO x Digital Labor Initiative',;
-    targetInstitution: 'UN Development Programme',;
-    type: 'Workforce Dev',;
-    regionalScope: 'Global South',;
-    budgetOrResolution: 'USD 3M over 24 months',;
-    supportingMultiverses: 'Digital Labor, AI Ethics',;
-    promptAssist:;
-      'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.',;
-    language: 'en',;
-  });  const [loading, setLoading] = useState(false);
-  const [result, setResult] = useState<any>(null);
-  const [translated, setTranslated] = useState<string>('');
-  const onChange = (;
-    e: React && React.ChangeEvent<;
-      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement;
-    >;
-  ) => {;
-    const { name, value } = e && e.target;
-    setForm(f => ({ ...f, [name]: value }));  };
-  async function generate() {;
-    setLoading(true);
-    try {;
-      const res = await fetch('/api/proposals/generate', {;
-        method: 'POST',;
-        headers: { 'Content-Type': 'application/json' },;
-        body: JSON && JSON.stringify({;
-          ...form,;
-          supportingMultiverses: form && form.supportingMultiverses;
-            .split(',');
-            .map(s => s && s.trim());
-            .filter(Boolean),;
-        }),;
-      });
-      const data = await res && res.json();
-      setResult(data);
-    } finally {;
-      setLoading(false);
-    }  }
-
-
-    try {;
-      const res = await fetch('/api/proposals/translate', {;
-        method: 'POST',;
-        headers: { 'Content-Type': 'application/json' },;
-        body: JSON && JSON.stringify({ markdown: result && result.markdown, targetLanguage }),;
-    }
-  }
-
-  async function translate(targetLanguage: string) {
-    if (!result?.markdown) return;
-    setLoading(true)
-    try {
-      const res = await fetch('/api/proposals/translate', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-body: JSON.stringify({ markdown: result.markdown, targetLanguage }),
-origin/cursor/automate-test-improve-and-merge-code-2533
-      });
-      const data = await res && res.json();
-      setTranslated(data && data.translated);
-    } finally {;
-      setLoading(false);
-    }  }
-
-
-    }
-  }
-
-  async function exportArtifacts() {
-    if (!result?.meta?.id) return;
-    setLoading(true);
-    try {
-      await fetch('/api/proposals/export', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-body: JSON.stringify({ id: result.meta.id }),
-origin/cursor/automate-test-improve-and-merge-code-2533
-      });
-      // Refresh meta;
-      const list = await fetch('/api/proposals/list');
-
-      const { proposals } = await list && list.json();
-      const updated = proposals && proposals.find((p: any) => p && p.id === result && result.meta.id),;
-
-      setResult((r: any) => ({ ...r, meta: updated }));
-    } finally {;
-      setLoading(false);
-    }  }
-
-
-
-  async function submit(): any (channels: string[]) {;
-    if (!result?.meta?.id) return;
-    setLoading(true),;
-    try {;
-      const res = await fetch('/api/proposals/submit', {;
-        method: 'POST',;
-        headers: { 'Content-Type': 'application/json' },;
-        body: JSON && JSON.stringify({ id: result && result.meta.id, channels }),;
-    }
-  }
-
-  async function submit(channels: string[]) {
-    if (!result?.meta?.id) return;
-    setLoading(true)
-    try {
-      const res = await fetch('/api/proposals/submit', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-body: JSON.stringify({ id: result.meta.id, channels }),
-origin/cursor/automate-test-improve-and-merge-code-2533
-      });
-      const data = await res && res.json();
-      setResult((r: any) => ({ ...r, meta: data && data.meta }));
-    } finally {;
-      setLoading(false);
-    }
 
 origin/cursor/automate-test-improve-and-merge-code-2533
   }

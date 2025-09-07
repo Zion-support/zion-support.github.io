@@ -31,6 +31,7 @@ interface LazyComponentProps {
   children: ReactNode;
   fallback?: ReactNode;
 
+
   return (
     <Suspense fallback={fallback}>
       {children}
@@ -39,6 +40,8 @@ interface LazyComponentProps {
 };
 
 export default LazyComponent;
-export default LazyComponent;
+
+
 
 pr-12243
+

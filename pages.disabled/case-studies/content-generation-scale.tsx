@@ -1,28 +1,9 @@
 
-    id: 'content-generation-scale',
-import React from 'react',
-import Head from 'next / head',
-import Link from 'next / link',
-export default /**
- * CaseStudyPage - Function description
- */
-function CaseStudyPage() {
-  const case_study = {
-    id: 'content - generation - scale',
-
-    title: 'Scaling Content Generation 10x',
-    company: 'Digital Marketing Agency',
-    industry: 'Marketing',
-
-    challenge: 'Unable to meet client demand for high - quality content at scale',
-
-    solution: 'Deployed autonomous content generation systems with human oversight and quality control',
-
-  },
 
   };
 
 origin/cursor/automate-test-improve-and-merge-code-2533
+
   return (
     <>
       <Head>

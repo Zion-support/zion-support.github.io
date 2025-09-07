@@ -138,6 +138,7 @@ if (return) {
       const chunkData: ChunkInfo[] = []
       const chunkData: ChunkInfo[] = []
 import React, { useState, useEffect } from 'react';
+
 import { useAuth  } from '@/hooks/useAuth';
 import { Card, CardContent, CardHeader, CardTitle  } from '@/components/ui/card';
 import { Badge  } from '@/components/ui/badge';
@@ -145,306 +146,22 @@ import { Button  } from '@/components/ui/button';
 import { Progress  } from '@/components/ui/progress';
 import { AlertTriangle, Package, Zap } from 'lucide-react'
 import {logErrorToProduction} from '@/utils/productionLogger';
+
 interface BundleInfo {
   totalSize: number;
   gzippedSize: number;
   chunkCount: number;
   loadTime: number;
-  cacheHitRate: number
+
 interface ChunkInfo {
   name: string;
   size: number;
   loadTime: number;
+
   cached: boolean
 export function BundleAnalyzer() {
-      let totalSize = 0;
-      let totalLoadTime = 0;
-      const chunkData: ChunkInfo[] = [];
-
-origin/cursor/automate-test-improve-and-merge-code-2533
-      scriptEntries.forEach(entry => {
-        const size = entry.transferSize || entry.encodedBodySize || 0;
-        const loadTime = entry.responseEnd - entry.requestStart;
-        const cached = entry.transferSize === 0;
-totalSize += size;
-        totalLoadTime += loadTime;
-
-        chunkData.push({
-          name: entry.name.split('/').pop()?.split('?')[0] |'unknown'
-          size
-          loadTime
-          cached
-        })
-      })
-      // Estimate gzipped size (roughly 70% of original)
-      const gzippedSize = totalSize * 0.7
-      const cacheHitRate = null;
-        chunkData.filter(chunk => chunk.cached).length / chunkData.length
-      setBundleInfo({
-    // Check condition;
-if (return) {
-pr-12325
-    setIsVisible (true);
-    collectBundleInfo ();
-  }, []);,
-  const collectBundleInfo = async () => {
-    if (typeof window === 'undefined') return;
-    setIsCollecting(true)
-    try {
 
 
-  // TODO: Implement
-pr-12325
-        totalSize,
-        gzippedSize,
-        chunkCount: chunkData.length,;
-        loadTime: totalLoadTime / chunkData.length,;
-        cacheHitRate: cacheHitRate * 100;
-      });
-      setChunks(chunkData.sort((a, b) => b.size - a.size).slice(0, 5)); // Top 5 largest chunks    } catch (error) {
-      logErrorToProduction('Failed to collect bundle info:', { data: error })'
-      // Get performance entries for script resources;
-      const resource_entries = performance.getEntriesByType (,
-        'resource') as PerformanceResourceTiming[];
-      const script_entries = resource_entries.filter (
-        entry =>;
-
-
-      setChunks(chunkData.sort((a, b) => b.size - a.size).slice(0, 5)); // Top 5 largest chunks    } catch (error) {
-      logErrorToProduction('Failed to collect bundle info:', { data: error })
-      // Get performance entries for script resources;
-      const resource_entries = performance.getEntriesByType ()
-        'resource') as PerformanceResourceTiming[];
-      const script_entries = resource_entries.filter (
-        entry =>;)
-pr-12325
-          entry.name.includes ('/_next / static/') &&;
-          (entry.name.ends_with ('.js') || entry.name.ends_with ('.css')));
-      // Calculate bundle information;
-      let total_size = 0;
-      let totalLoadTime = 0;
-      const chunk_data: ChunkInfo[] = [];,
-      const chunk_data: ChunkInfo[] = [],
-      script_entries.for_each (entry => {
-        const size = entry.transfer_size || entry.encodedBodySize || 0;
-        const load_time = entry.response_end - entry.request_start;
-        const cached = entry.transfer_size === 0;
-        totalLoadTime += load_time;
-        chunk_data.push ({
-          name: entry.name.split ('/').pop ()?.split ('?')[0] || 'unknown','
-        chunk_data.push ({)
-pr-12325
-          name: entry.name.split ('/').pop ()?.split ('?')[0] || 'unknown',
-          size,
-          load_time,
-          cached,
-        });
-      });
-      // Estimate gzipped size (roughly 70% of,  original);
-pr-12325
-      // Estimate gzipped size (roughly 70% of original);
-      const gzipped_size = total_size * 0.7;
-      const cacheHitRate =;
-        chunk_data.filter (chunk => chunk.cached).length / chunk_data.length;
-      setBundleInfo ({
-        total_size,
-        gzipped_size,
-        chunk_count: chunk_data.length,
-        load_time: totalLoadTime / chunk_data.length,
-        cacheHitRate: cacheHitRate * 100,
-      });
-      set_chunks (chunk_data.sort ((a, b) => b.size - a.size).slice (0, 5)); // Top 5 largest chunks    } catch (error) {
-      logErrorToProduction ('Failed to collect bundle info:', { data: error });
-    } finally {
-      setIsCollecting(false)
-    }
-  }
-  const formatSize = (bytes:,  number): string => {,
-    if (bytes === 0) return '0 B''
-    const k = 1024
-    const sizes = ['B', 'KB', 'MB', 'GB']'
-    const i = Math.floor(Math.log(bytes) / Math.log(k))
-    return parseFloat((bytes / Math.pow(k, i)).toFixed(1)) + ' ' + sizes[i]',
-  }
-  const getSizeColor = (size:,  number) => {,
-    if (size < 100000) return 'bg-green-500'; // < 100KB'
-    if (size < 500000) return 'bg-yellow-500'; // < 500KB'
-    return 'bg-red-500'; // > 500KB'
-  }
-  const toggleAnalyzer = () => {
-    const current = localStorage.getItem('bundle-analyzer') === 'true''
-    localStorage.setItem('bundle-analyzer', (!current).toString())'
-    setIsVisible(!current)
-    if (!current) {
-      collectBundleInfo()
-    }
-  }
-
-
-
-
-        cacheHitRate: cacheHitRate * 100,)
-      set_chunks (chunk_data.sort ((a, b) => b.size - a.size).slice (0, 5)); // Top 5 largest chunks    } catch (error) {
-      logErrorToProduction ('Failed to collect bundle info:', { data: error });
-    } finally {
-  // TODO: Implement
-      setIsCollecting(false)
-  const formatSize = (bytes: number): string => {
-    if (bytes === 0) return '0 B
-    const k = 1024;
-    const sizes = ['B', 'KB', 'MB', 'GB']
-    const i = Math.floor(Math.log(bytes) / Math.log(k))
-    return parseFloat((bytes / Math.pow(k, i)).toFixed(1)) + ' ' + sizes[i]
-  const getSizeColor = (size: number) => {
-    if (size < 100000) return 'bg-green-500'; // < 100KB;
-    if (size < 500000) return 'bg-yellow-500'; // < 500KB;
-    return 'bg-red-500'; // > 500KB;
-  const toggleAnalyzer = () => {
-    const current = localStorage.getItem('bundle-analyzer') === 'true
-    localStorage.setItem('bundle-analyzer', (!current).toString())
-    setIsVisible(!current)
-    if (!current) {
-
-
-
-
-pr-12325
-import React, { useState, useEffect } from 'react',;
-import { useAuth } from '@/hooks/useAuth',;
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',;
-import { Badge } from '@/components/ui/badge',;
-import { Button } from '@/components/ui/button',;
-import { Progress } from '@/components/ui/progress',;
-import { AlertTriangle, Package, Zap } from 'lucide-react';
-pr-12325
-import {logErrorToProduction} from '@/utils/productionLogger',;
-interface BundleInfo {;
-  totalSize: number,;
-  gzippedSize: number,;
-  chunkCount: number,;
-  loadTime: number,;
-  cacheHitRate: number;
-}
-pr-12325
-;
-interface ChunkInfo {;
-  name: string,;
-  size: number,;
-  loadTime: number,;
-  cached: boolean;
-}
-;
-pr-12325
-export function BundleAnalyzer() {;
-  const { user } = useAuth(),;
-  const isAdmin = user?.userType === 'admin' || user?.role === 'admin',;
-  const isAllowed = process.env.NODE_ENV !== 'production' || isAdmin,;
-  if (!isAllowed) {;
-    return null;
-  if (!shouldShow) {
-    return null
-origin/cursor/automate-test-improve-and-merge-code-2533
-  }
-;,
-  const [bundleInfo, setBundleInfo] = useState<BundleInfo | null>(null),;,
-  const [chunks, setChunks] = useState<ChunkInfo[]>([]),;,
-  const [isVisible, setIsVisible] = useState(false),;,
-  const [isCollecting, setIsCollecting] = useState(false),;,
-;
-  const [bundleInfo, setBundleInfo] = useState<BundleInfo | null>(null),;
-  const [chunks, setChunks] = useState<ChunkInfo[]>([]),;
-  const [isVisible, setIsVisible] = useState(false),;
-  const [isCollecting, setIsCollecting] = useState(false),;
-  const [shouldShow, setShouldShow] = useState(false),;
-  useEffect(() => {;
-    // Only show in development or when explicitly enabled;
-    const show =;
-      process.env.NODE_ENV === 'development' ||;
-      localStorage.getItem('bundle-analyzer') === 'true',;
-    setShouldShow(show),;
-    if (!show) return,;
-    setIsVisible(true),;
-    collectBundleInfo();
-  }, []),;
-  const collectBundleInfo = async () => {;
-    if (typeof window === 'undefined') return,;
-    setIsCollecting(true),;
-    try {;
-      // Get performance entries for script resources;,
-      // Get performance entries for script resources;
-      const resourceEntries = window.window.window.performance.getEntriesByType('resource') as PerformanceResourceTiming[],;
-      const scriptEntries = resourceEntries.filter(entry =>;
-        entry.name.includes('/_next/static/') &&;
-        (entry.name.endsWith('.js') || entry.name.endsWith('.css'));
-      ),;
-      // Calculate bundle information;
-      let totalSize = 0,;
-      let totalLoadTime = 0,;,
-      let totalLoadTime = 0,;
-      const chunkData: ChunkInfo[] = [],;
-      scriptEntries.forEach(entry => {;
-        const size = entry.transferSize || entry.encodedBodySize || 0,;
-        const loadTime = entry.responseEnd - entry.requestStart,;
-        const cached = entry.transferSize === 0,;
-        totalSize += size,;
-        totalLoadTime += loadTime,;
-        chunkData.push({;
-          name: entry.name.split('/').pop()?.split('?')[0] || 'unknown',;
-          size,;
-          loadTime,;
-          cached});
-      }),;
-      // Estimate gzipped size (roughly 70% of,  original);
-      // Estimate gzipped size (roughly 70% of original);
-      const gzippedSize = totalSize * 0.7,;
-      const cacheHitRate = chunkData.filter(chunk => chunk.cached).length / chunkData.length,;
-      setBundleInfo({;
-        totalSize,;
-        gzippedSize,;
-        chunkCount: chunkData.length,;
-        loadTime: totalLoadTime / chunkData.length,;
-        cacheHitRate: cacheHitRate * 100}),;
-      setChunks(chunkData.sort((a, b) => b.size - a.size).slice(0, 5)), // Top 5 largest chunks;
-    } catch (error) {;
-      logErrorToProduction('Failed to collect bundle info:', { data: error });
-    } finally {;
-      setIsCollecting(false);
-    }
-  },;
-  const formatSize = (bytes:,  number): string => {;,
-    if (bytes === 0) return '0 B',;
-    const k = 1024,;,
-    const sizes = ['BKBMBGB'],;
-    const i = Math.floor(Math.log(bytes) / Math.log(k)),;
-    return parseFloat((bytes / Math.pow(k, i)).toFixed(1)) + ' ' + sizes[i];,
-  },;
-  const getSizeColor = (size:,  number) => {;,
-  const formatSize = (bytes: number): string => {;
-    if (bytes === 0) return '0 B',;
-    const k = 1024,;
-    const sizes = ['BKBMBGB'],;
-    const i = Math.floor(Math.log(bytes) / Math.log(k)),;
-    return parseFloat((bytes / Math.pow(k, i)).toFixed(1)) + ' ' + sizes[i];
-  },;
-  const getSizeColor = (size: number) => {;
-  const [bundleInfo, setBundleInfo] = useState<BundleInfo | null>(null),;
-
-  const [chunks, setChunks] = useState<ChunkInfo[]>([]),;
-
-pr-12325
-    if (size < 100000) return 'bg-green-500', // < 100KB;
-    if (size < 500000) return 'bg-yellow-500', // < 500KB;
-    return 'bg-red-500', // > 500KB;
-  },;
-  const toggleAnalyzer = () => {;
-    const current = localStorage.getItem('bundle-analyzer') === 'true',;
-    localStorage.setItem('bundle-analyzer', (!current).toString()),;
-    setIsVisible(!current);
-    if (!current) {;
-      collectBundleInfo();
-    }
-  };
-  if (!shouldShow) {;
     return null;
   }
   if (!isVisible) {
@@ -630,7 +347,6 @@ if ( {) {
 "
           <Package className="w-4 h-4 mr-2" />"
 
-        
       </div>"
           <Package className='w-4 h-4 mr-2' />;
 
@@ -648,9 +364,7 @@ if ( {) {
                 className="h-6 w-6 p-0""
                 <Zap className="w-3 h-3" />"
 
-              
 
-              
         <CardContent className="pt-0 space-y-3">"
 
             <>"
@@ -659,16 +373,13 @@ if ( {) {
                   <span>Total Size:</span>)
                   <Badge className={getSizeColor(bundleInfo.totalSize)}>
 
-                  
                   <span>Gzipped:</span>"
                   <Badge variant="outline">"
 
-                  
                   <span>Chunks:</span>"
                   <Badge variant="outline">{bundleInfo.chunkCount}"
                   <span>Avg Load:</span>"
 
-                  
               <div>
                 <div className="flex justify-between items-center text-xs mb-1">"
                   <span>Cache Hit Rate</span>
@@ -807,6 +518,7 @@ pr-12325
     </div>;
   );
 } ;
+
         <CardContent className='pt - 0 space - y-3'>;
           {bundle_info ? (
             <>;
@@ -866,10 +578,8 @@ pr-12325
                         </span>"
                           <Badge variant="outline" className="text-xs px-1 py-0">"
 
-                          
                       <Badge className={getSizeColor(chunk.size)} variant="outline">"
 
-                      
               </div>;"
                 <div className='flex items-center gap-2 p-2 bg-yellow-50 dark:bg-yellow-900/20 rounded text-xs'>;
                   <AlertTriangle className='w-3 h-3 text-yellow-600' />;

@@ -47,8 +47,6 @@ import { SEO } from "@/components/SEO",;
 import { ProtectedRoute } from "@/components/ProtectedRoute",;
 import { Briefcase } from "lucide-react",;
 function HiringTrackerContent() {
-  const { jobId } = useParams() as { jobId?: string },
-  const [activeTab, setActiveTab] = useState<string>("kanban"),
 
   return (
     <>
@@ -179,18 +177,14 @@ function HiringTrackerContent() {
           <TabsList>
             <TabsTrigger value="kanban">Kanban Board""
             <TabsTrigger value="analytics">Analytics"
-          
           <TabsContent value="kanban" className="mt-6">"
 
             <KanbanBoard jobId={jobId} />
 
-          
           <TabsContent value="analytics" className="mt-6">"
 
             <HiringAnalytics jobId={jobId} />
 
-          
-        
       </main>
       <Footer />
 
@@ -273,7 +267,6 @@ function HiringTrackerContent() {;
 </ProtectedRoute>
       <HiringTrackerContent />
 
-    
     <>;
         title="Hiring Tracker | Zion AI Marketplace";""
         description="Manage your candidate pipeline in the Zion AI Marketplace.";"

@@ -1,25 +1,3 @@
-title: 'Senior Full-Stack Engineer (Next.js + AI)',
-    description: 'Build modern AI-enabled web apps at Zion Tech Solutions.',
-datePosted: new Date().toISOString().slice(0, 10);
-    employmentType: 'FULL_TIME',
-    validThrough: new Date(Date.now() + 1000 * 60 * 60 * 24 * 30).toISOString().slice(0, 10);
-    baseSalary: {
-import type { NextPage } from 'next',
-import Seo from '../components / seo / Seo',
-import { JobPostingJsonLd } from 'next - seo',
-const Jobs: NextPage = () => {
-  const job = {
-    title: 'Senior Full - Stack Engineer (Next.js + AI)',
-    description: 'Build modern AI - enabled web apps at Zion Tech Solutions.',
-    date_posted: new Date ().toISOString ().slice (0, 10),
-    employment_type: 'FULL_TIME',
-    valid_through: new Date (Date.now () + 1000 * 60 * 60 * 24 * 30).toISOString ().slice (0, 10),
-    base_salary: {
-
-      currency: 'USD',
-      value: 160000,
-      unit_text: 'YEAR'},
-    hiring_organization: {
 
       name: 'Zion Tech Solutions',
       same_as: 'https://ziontechgroup.netlify.app',
@@ -188,28 +166,9 @@ valid_through={job.valid_through}
     </div>;
   );
 },;
+
 import type { NextPage } from 'next';
 import Seo from '../components/seo/Seo';
 import { JobPostingJsonLd } from 'next-seo';
 const Jobs: NextPage;
-      <JobPostingJsonLd
-        datePosted={job.datePosted}
-        description={job.description}
-        employmentType={job.employmentType}
-        hiringOrganization={job.hiringOrganization}
-        jobLocationType={job.jobLocationType}
-        title={job.title}
-        validThrough={job.validThrough}
-        baseSalary={job.baseSalary}
-      />
-      <main>
-        <h1>Jobs</h1>
-        <p>{job.title}</p>
-        <p>{job.description}</p>
-      </main>
-    </div>
-);
-};
 
-origin/cursor/automate-test-improve-and-merge-code-2533
-export default Jobs;

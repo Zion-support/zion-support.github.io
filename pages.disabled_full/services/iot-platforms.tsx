@@ -48,10 +48,7 @@ export default function Iotplatforms({ }: IotplatformsProps) {
 
 }
 
-<<<<<<<< HEAD:pages.disabled_full/services/iot-platforms.tsx
-
-
->>>>>>>> main:corrupted_backup/iot-platforms.tsx
+<
 
 
 

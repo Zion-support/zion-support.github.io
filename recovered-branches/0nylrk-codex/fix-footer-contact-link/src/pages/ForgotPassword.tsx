@@ -61,7 +61,6 @@ export default function ForgotPassword() {;
 export default function ForgotPassword() {
   const { resetPassword, isLoading } = useAuth(),
   const [submitted, setSubmitted] = useState(false),
-  
   // Initialize react-hook-form
   const form = useForm({
     resolver: zodResolver(forgotPasswordSchema)
@@ -138,13 +137,7 @@ export default function ForgotPassword() {;
   return (
 
 
-import { useState } from "react",;
-import { Link } from "react-router-dom",;
-import { useForm, type UseFormReturn } from "react-hook-form",;
-import { zodResolver } from "@hookform/resolvers/zod",;
-import { z } from "zod",;
-import { Mail } from "lucide-react",;
-import { useAuth } from "@/hooks/useAuth",;
+
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import {
@@ -240,30 +233,6 @@ export default function ForgotPassword() {;
             <div className="bg-zion-blue-dark rounded-lg p-6">;
 // Form validation schema
 
-const forgotPasswordSchema = z.object({
-
-const forgotPasswordSchema = z.object({
-  email: z.string().email("Please enter a valid email")})
-type ForgotPasswordFormValues = z.infer<typeof forgotPasswordSchema>;
-export default function ForgotPassword() {
-  const { resetPassword, isLoading } = useAuth();
-  const [submitted, setSubmitted] = useState(false);export default function ForgotPassword() {;
-  const { resetPassword, isLoading } = useAuth();
-  const [submitted, setSubmitted] = useState(false);
-export default function ForgotPassword() {
-  const { resetPassword, isLoading } = useAuth(),
-  const [submitted, setSubmitted] = useState(false),
-              <div className="bg-zion-blue-dark rounded-lg p-6">;
-              {submitted ? (;
-                <div className="text-center py-8">;
-                  <div className="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-zion-purple/20 mb-4">;
-                    <Mail className="h-6 w-6 text-zion-purple" />;
-                  </div>;
-                  <h3 className="text-lg font-medium text-white">Check your email</h3>;
-                  <p className="mt-2 text-sm text-zion-slate-light">;
-                    We've sent a password reset link to your email address.;
-                  </p>;
-                  <div className="mt-6">;
                     <Link
                       to="/login"
                       className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-4 py-2 rounded inline-flex items-center justify-center">;
@@ -1010,8 +979,6 @@ type ForgotPasswordFormValues = z.infer < typeof forgotPasswordSchema>;
                         className="text-sm font-medium text-zion-cyan hover:text-zion-cyan-light""
                       >
                         Back to login;
-                      
-                
 type ForgotPasswordFormValues = z.infer<typeof forgotPasswordSchema>,;
       email: ""}}) as UseFormReturn<ForgotPasswordFormValues>,;"
 

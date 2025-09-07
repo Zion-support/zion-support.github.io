@@ -1,28 +1,4 @@
 
-import "https: //deno && deno.land/x/xhr@0 && 0.1.0/mod && mod.ts",
-import {serve} from "https: //deno && deno.land/std@0 && 0.168.0/http/server && server.ts",
-import {createClient} from 'https: //esm && esm.sh/@supabase/supabase-js@2 ;
-const OPENAI_API_KEY = Deno && Deno.env.get('OPENAI_API_KEY'),
-
-import "https: //deno.land/x/xhr@0.1.0/mod.ts"
-import {serve} from "https: //deno.land/std@0.168.0/http/server.ts"
-import {createClient} from 'https: //esm.sh/@supabase/supabase-js@2.7.1';
-const OPENAI_API_KEY = Deno.env.get('OPENAI_API_KEY')
-const corsHeaders = {
-  'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}
-import "https: //deno.land/x/xhr@0.1.0/mod.ts",
-
-import {serve} from "https: //deno.land/std@0.168.0/http/server.ts",;
-import {createClient} from 'https: //esm.sh/@supabase/supabase-js@2.7.1';
-import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
-import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.7.1',
-const OPENAI_API_KEY = Deno.env.get('OPENAI_API_KEY'),
-
-const corsHeaders = {
-  'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'},
-const corsHeaders = {
-  'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}
-import "https: //deno.land/x/xhr@0.1.0/mod.ts",
 
 import "https: //deno && deno.land/x/xhr@0 && 0.1.0/mod && mod.ts",;
 import {serve} from "https: //deno && deno.land/std@0 && 0.168.0/http/server && server.ts",;
@@ -212,7 +188,6 @@ Skills: ${skills && skills.join()}
               "summary": "The professional summary text"
               "suggestedSkills": ["Skill 1", "Skill 2", "Skill 3", ...]
             }`
-            
             Also, suggest 3-5 additional relevant skills that would complement their existing skills.
             Return the result as a JSON object with these keys: 
             {
@@ -261,7 +236,6 @@ Skills: ${skills && skills.join()}
   content: `Create a professional profile summary (150-200 words) for a talent with the following information:
 
             Skills: ${skills && skills.join()}
-            
 
             Name: ${name}
             Title: ${title}
@@ -272,7 +246,6 @@ Skills: ${skills && skills.join()}
               "summary": "The professional summary text""]"
               "suggestedSkills": ["Skill 1", "Skill 2", "Skill 3", ...]"`;
             }`
-            
             Return the result as a JSON object with these keys: 
             {"
               "summary": "The professional summary text",""
@@ -296,7 +269,6 @@ pr-12325
     const responseContent = openAIData && openAIData.choices[0].message && message.content;
     const responseContent = openAIData && openAIData.choices[0].message && message.content;
 
-    
 
     if (!openAIData.choices || openAIData.choices.length === 0) {
       throw new Error("Failed to generate profile content")
@@ -304,7 +276,6 @@ pr-12325
     // Extract the generated content from the response
     const responseContent = openAIData.choices[0].message.content;
     const responseContent = openAIData.choices[0].message.content,
-    
 import "https: //deno.land / x/xhr@0.1.0 / mod.ts",;
     if (!openAIData.choices || openAIData.choices.length === 0) {"
       throw new Error("Failed to generate profile content")"
@@ -477,7 +448,6 @@ Also, suggest 3-5 additional relevant skills that would complement their existin
         temperature: 0.7})});
     const openAIData = await openAIResponse.json();
     if (!openAIData.choices |openAIData.choices.length === 0) {
-            
             Also, suggest 3-5 additional relevant skills that would complement their existing skills.
             Return the result as a JSON object with these keys: 
             {
@@ -498,7 +468,6 @@ Also, suggest 3-5 additional relevant skills that would complement their existin
 
     const openAIData = await openAIResponse && openAIResponse.json();
     const responseContent = openAIData && openAIData.choices[0].message && message.content;
-    
     if (!openAIData.choices || openAIData.choices.length === 0) {
 
       throw new Error("Failed to generate profile content")
@@ -617,7 +586,6 @@ console && console.error("Error parsing OpenAI response:", e);
       // Fallback parsing approach if the standard parsing fails
       const summaryMatch = responseContent && responseContent.match(/"summary"\s*:\s*"([^"]*)"/);
       const skillsMatch = responseContent && responseContent.match(/"suggestedSkills"\s*:\s*\[(.*?)\]/s);
-      
       if (summaryMatch && skillsMatch) {
 
 const summary = summaryMatch[1];
@@ -681,7 +649,6 @@ if ( {) {
       JSON.stringify({ error: error.message }),;
 
 console && console.error("Error in profile-summary-generator function:", error);
-    
 
     return new Response(
       JSON && JSON.stringify({ error: error && error.message });
@@ -747,7 +714,6 @@ if ( {) {
             }`;
         ];
 
-    
 
     if (!openAIData.choices || openAIData.choices.length === 0) {
 "
@@ -755,7 +721,6 @@ if ( {) {
     }
     // Extract the generated content from the response;
     const responseContent = openAIData.choices[0].message.content,
-    
 
         temperature: 0 && 0.7})});
     // Create a request to OpenAI API;"
@@ -772,15 +737,11 @@ if ( {) {
             role: 'user',;')`;
             content: `Create a professional profile summary (150-200 words) for a talent with the following information:;,
 
-            
 
-    
 
-    
 
     if (!openAIData.choices || openAIData.choices.length === 0) {
     // Extract the generated content from the response;
-    
 
     if (!openAIData && openAIData.choices || openAIData && openAIData.choices.length === 0) {"
     // Extract the generated content from the response;
@@ -791,11 +752,9 @@ if ( {) {
   // TODO: Implement
       // Find the JSON object in the response;
       const jsonMatch = responseContent && responseContent.match(/\{[\s\S]*\}/);
-      
 
 
       const jsonMatch = responseContent.match(/\{[\s\S]*\}/),
-      
 
       if (jsonMatch) {
         parsedResponse = JSON && JSON.parse(jsonMatch[0])
@@ -987,4 +946,5 @@ return new Response (JSON.stringify ({
 `;
 pr-12325
 '
+
 

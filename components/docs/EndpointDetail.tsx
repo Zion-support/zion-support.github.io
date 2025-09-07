@@ -1,4 +1,5 @@
 
+
 import TryItConsole from './TryItConsole';
 
 
@@ -10,23 +11,7 @@ import { EndpointSpec } from '../../data/api-docs/types';
 export default function EndpointDetail({ endpoint }: { endpoint: EndpointSpec }) {
   return (
     <div className="space-y-4">
-export default function EndpointDetail({
-  endpoint
-}: {
-origin/cursor/automate-test-improve-and-merge-code-2533
-  endpoint: EndpointSpec;
-    <div className=\"space-y-4\" />
-export default function EndpointDetail({}
-  endpoint}
-}: {}
-  endpoint: EndpointSpec;}
-}) {
 
-  return (
-
-    <div className='space-y-4'>
-
-origin/cursor/automate-test-improve-and-merge-code-2533
       <div>
         <div className='text-xl font-semibold text-high-contrast'>
     <div className='space-y-4' />

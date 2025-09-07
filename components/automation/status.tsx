@@ -1,4 +1,4 @@
-</div>) : (<div className="text-sm text-gray-500" >No status available yet.</div>) 
+
 pr-12243
 
 
@@ -27,9 +27,11 @@ export default function AutomationStatusPage() {;
 }</div>) import { useEffect, useState } from 'react';
 
 export default function AutomationStatusPage() {;
+
   const [status, setStatus] = useState<{ runAt?: string, ok?: boolean } | null>(null);
 
   }, []);
+
   return (
 
 

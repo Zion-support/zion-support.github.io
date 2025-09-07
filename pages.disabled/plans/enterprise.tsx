@@ -1,4 +1,4 @@
-{ key: 'private_portal', label: 'Private hiring portal' },
+
   { key: 'private_portal', label: 'Private hiring portal' },
   { key: 'dedicated_talent_pool', label: 'Dedicated talent pool' },
   { key: 'custom_sla', label: 'Custom SLA' },
@@ -69,6 +69,7 @@ const tiers = [
 import Link from 'next/link';
 const features = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
+
 export default function EnterprisePlans() {
   return (
     <main style={{ padding: '3rem', maxWidth: 1100, margin: '0 auto' }}>

@@ -1,13 +1,5 @@
 
-import { useRouter } from 'next/router';
-import CertificatePreview from '../../../components/learn/CertificatePreview';
-export default function CertificatePage() {
-  const router = useRouter()
-  const { courseId } = router.query as { courseId: string }
-  if (!courseId) return null
 
-import { useRouter  } from 'next/router';
-import CertificatePreview from '../../../components/learn/CertificatePreview';
 export default function CertificatePage() {
   const router = null;
 origin/cursor/automate-test-improve-and-merge-code-2533

@@ -1,7 +1,4 @@
-import React from 'react',;
-import Head from 'next/head',;
-import Link from 'next/link',;
-import { useRouter } from 'next/router',;
+
 export default function CaseStudyPage() {
   const router = useRouter(),
   const { id } = router.query,
@@ -73,12 +70,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <h2>Background</h2>
         <p>Global Manufacturing Corp was facing significant challenges with their traditional manufacturing processes. 
         High downtime, _inefficient production scheduling, _and quality control issues were impacting their bottom line.</p>
-        
         <h2>Challenge</h2>
         <p>The company needed to modernize their manufacturing operations while maintaining high quality standards 
         and reducing operational costs. They required a solution that could adapt to changing production demands 
         and minimize human intervention.</p>
-        
 import React from 'react',;
 import Head from 'next/head',;
 import Link from 'next/link',;
@@ -122,7 +117,6 @@ export default function CaseStudyPage() {
           <li>Automated quality control systems</li>
           <li>Intelligent scheduling and resource allocation</li>
         </ul>
-        
         <h2>Results</h2>
         <p>The implementation delivered exceptional results:</p>
         <ul>
@@ -130,7 +124,6 @@ export default function CaseStudyPage() {
           <li><strong>60% reduction in downtime</strong> - Predictive maintenance prevented equipment failures</li>
           <li><strong>25% improvement in quality control</strong> - AI-powered inspection systems caught defects early</li>
         </ul>
-        
         <h2>Implementation Timeline</h2>
         <p>The project was completed in 6 months with minimal disruption to ongoing operations. 
         The system was deployed in phases, allowing for gradual adoption and optimization.</p>

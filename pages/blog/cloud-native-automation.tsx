@@ -1,12 +1,5 @@
 
-import Head from 'next/head';
 
-import Head from 'next/head';
-
-import Head from 'next/head',;
-origin/cursor/automate-test-improve-and-merge-code-2533
-import Link from 'next/link';
-import React from 'react';
 export default function CloudNativeAutomation() {
   return (
     <>

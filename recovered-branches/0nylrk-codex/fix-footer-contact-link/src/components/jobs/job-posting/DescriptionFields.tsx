@@ -1,4 +1,4 @@
-FormField
+
   FormItem
   FormLabel
   FormControl
@@ -283,6 +283,7 @@ function DescriptionFields() {
           <FormItem>;
             <FormLabel>Qualifications (Optional)</FormLabel>;
             <FormControl>;
+
               <Textarea
                 placeholder="List the required qualifications for this job"
                 className="resize-none min-h-[100px]"
@@ -902,13 +903,10 @@ function DescriptionFields() {
 
 
 
-            
             <FormDescription>
 
-            
             <FormMessage />
 
-          
     </>;
 
 

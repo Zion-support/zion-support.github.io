@@ -1,22 +1,4 @@
 
-// Define form schema
-
-const talentProfileSchema = z.object({
-  name: z.string().min(2, "Name must be at least 2 characters long"),
-  title: z.string().min(5, "Professional title is required"),
-  bio: z.string().min(50, "Bio must be at least 50 characters long").max(1000, "Bio cannot exceed 1000 characters"),
-  location: z.string().min(2, "Location is required"),
-  skills: z.string().min(2, "Enter at least one skill"),
-  hourlyRate: z.string().refine((val) => !isNaN(Number(val)), {
-
-    message: "Hourly rate must be a number"}),
-  availability: z.enum(["available", "limited", "unavailable"]),
-  enhancedProfile: z.boolean().default(true)}),
-
-type TalentFormValues = z.infer<typeof talentProfileSchema>,
-
-type CategoryType = 'programming' | 'devops' | 'platforms' | 'softSkills' | 'other',
-
 interface CategorizedSkills {
   programming: string[]
   devops: string[]
@@ -424,7 +406,6 @@ export function TalentRegistrationForm() {
   const [isGenerating, setIsGenerating] = useState(false),
   const [generatedContent, setGeneratedContent] = useState<EnhancedProfile | null>(null),
   const [uploadedAvatar, setUploadedAvatar] = useState<string | null>(null),
-  
   // Initialize form with default values
   const form = useForm<TalentFormValues>({
 import { useAuth } from "@/hooks/useAuth",;  const form = useForm<TalentFormValues>({
@@ -616,7 +597,6 @@ const skillInput = form.getValues("skills"),;
       }
 
       setGeneratedContent(data as EnhancedProfile),
-      
       toast({
         title: "Enhanced Profile Generated"
         description: "AI has created a professional bio and suggested additional skills for your profile."})
@@ -643,11 +623,9 @@ const skillInput = form.getValues("skills"),;
   const applyGeneratedContent = () => {
     if (generatedContent) {
       form.setValue("bio", generatedContent.summary),
-      
       // Extract all skills from categorized skills and properly type cast them
       const allCategorizedSkills = generatedContent.categorizedSkills,
       const newSkills: string[] = [],
-      
       // Safely extract and flatten skills from each category
       Object.values(allCategorizedSkills).forEach(categorySkills => {
         if (Array.isArray(categorySkills)) {
@@ -1209,7 +1187,6 @@ pr-12325
       let finalSkills = skillTags;
       let finalSummary = "",
       let finalSkills = skillTags,
-      
       if (values.enhancedProfile && !generatedContent) {
         try {
           const { data: aiData } = await supabase.functions.invoke('talent-profile-enhancer', {
@@ -1914,10 +1891,7 @@ user_id:user.id,;
           <form onSubmit={form && form.handleSubmit(onSubmit)}>;
             <CardContent className="space-y-8">;
 
-;
-        <Form {...form}>;
-          <form onSubmit={form.handleSubmit(onSubmit)}>;
-            <CardContent className="space-y-8">;
+
               {/* Basic Information */}
               <div className="space-y-4">;
                 <h3 className="text-lg font-medium text-white">Basic Information</h3>;
@@ -3401,7 +3375,6 @@ type CategoryType = 'programming' | 'devops' | 'platforms' | 'softSkills' | 'oth
   setSkillTags (skillTags.filter ( (s) => s !== skill) ) 
 };
 //Handle key press in skills input (add on enter) const handleSkillKeyPress = (e: React.KeyboardEvent) => {
-  
 }
 };
                     />;

@@ -1,5 +1,4 @@
 
-
 import React, { useCallback, useEffect, useMemo, useState } from 'react',;
 import Head from 'next/head',;
 import EnhancedLayout from '../../components/layout/EnhancedLayout',;
@@ -198,6 +197,7 @@ setFunnel(json.funnel || []);
   useEffect(() => {
     refresh();
   }, []);
+
 
   return (
     <>

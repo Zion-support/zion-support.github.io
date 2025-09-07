@@ -1,38 +1,4 @@
-export default function ClientDashboard() {;
-  const { data, error, mutate } = useSWR('/api/jobs', fetcher);
 
-  if (error) return <div className='text-red-600'>Failed to load</div>;  if (!data) return <div>Loading…</div>;
-
-import useSWR from 'swr';
-import Link from 'next/link';
-const fetcher = null;
-    mutate()
-origin/cursor/automate-test-improve-and-merge-code-2533
-  const jobs = data.jobs as any[];
-
-import useSWR from 'swr'
-import Link from 'next/link'
-const fetcher = (url: string) => fetch(url).then((r) => r.json())
-export default function ClientDashboard() {
-  const { data, error, mutate } = useSWR('/api/jobs', fetcher),
-  if (error) return <div className="text-red-600">Failed to load</div>,
-  if (!data) return <div>Loading…</div>,
-  if (error) return <div className="text-red-600">Failed to load</div>,
-  if (!data) return <div>Loading…</div>,
-  const jobs = data.jobs as any[]
-  async function closeJob(id: string) {
-    await fetch(`/api/jobs/${id}`, {
-      method: 'PATCH',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ status: 'Closed' })}),
-    mutate()
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-body: JSON.stringify({ status: 'Closed' }),
-    });
-    mutate();
-origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
   return (

@@ -40,46 +40,7 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
     {
 
 
-import { useState } from "react",;
-import { Briefcase, Star, User } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Briefcase, Star, User } from "lucide-react",;
-import { Button } from "@/components/ui/button",    {
 
-      id: "talent"
-      name: "Talent"
-      description: "I want to showcase my skills and find opportunities"
-
-      icon: Star
-      icon: Star          const Icon = type.icon;
-          const is_selected = selected_type === type.id,
-
-          const Icon = type.icon,
-          const isSelected = selectedType === type.id,
-          
-
-          return (
-            <Button;
-              key={type.id}          return (
-            <Button;
-              key={type.id}
-
-          return (
-
-},
-
-    }
-    },
-
-
-import {useState} from "react";""
-import {Briefcase, Star, User} from "lucide-react";""
-import {Button} from "@/components/ui/button";""
-import { useState } from "react",""
-import { Briefcase, Star, User } from "lucide-react";""
-import { Button } from "@/components/ui/button";""
-import { Briefcase, Star, User } from "lucide-react",""
-import { Button } from "@/components/ui/button","
 interface UserTypeOption {
   // TODO: Implement
 }"
@@ -187,12 +148,6 @@ export function UserTypeSelection(): any ({ onSelect, selectedType }: UserTypeSe
 
   return (
 
-}
-  ];
-  return (
-import { useState } from './react';
-import { Briefcase, Star, User } from './lucide-react';
-import { Button } from '@/components / ui / button';
 "
 import { useState } from './react';''
 import { Briefcase, Star, User } from './lucide-react';''
@@ -264,7 +219,6 @@ const Icon = type.icon;
 
           const Icon = type.icon,
           const isSelected = selectedType === type.id,
-          
           return (
             <Button
               key={type.id}
@@ -278,6 +232,7 @@ const Icon = type.icon;
             <Button;
               key={type.id}
             <Button;
+
               key={type.id}
               }`}
 

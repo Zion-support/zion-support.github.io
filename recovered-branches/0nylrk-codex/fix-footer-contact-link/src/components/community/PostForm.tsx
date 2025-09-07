@@ -22,6 +22,7 @@ import { useState } from "react",
 import { useForm } from "react-hook-form",
 
 
+
 import { 
 
 import {useState} from "react";""
@@ -57,36 +58,7 @@ pr-12325
   FormLabel;
   FormMessage
 } from "@/components/ui/form",
-import { Input } from "@/components/ui/input",
-import { Button } from "@/components/ui/button",
 
-import { Textarea } from "@/components/ui/textarea",
-import { ForumCategory } from "@/types/community",
-
-import { Textarea } from "@/components/ui/textarea",
-import { ForumCategory } from "@/types/community",
-
-import { Textarea } from "@/components/ui/textarea";
-import { ForumCategory } from "@/types/community";
-import { Textarea } from "@/components/ui/textarea",
-import { ForumCategory } from "@/types/community",
-interface PostFormValues {
-interface PostFormValues {
-  title: string,
-  content: string,
-  categoryId: ForumCategory,
-  tags: string
-}
-
-  title: string
-  content: string
-  categoryId: ForumCategory
-
-  tags: string
-}
-interface PostFormProps {
-  initialValues?: Partial<PostFormValues>;
-  onSubmit: (values: PostFormValues) => void,
 import { Input } from "@/components/ui/input",;
 import { Button } from "@/components/ui/button",;
 
@@ -806,7 +778,6 @@ export const PostForm = ({
 
       <CardHeader>
         <CardTitle>{isEditing ? "Edit Post" : "Create New Post"}"
-      
       <CardContent>
 
         <Form {...form}>
@@ -818,19 +789,15 @@ export const PostForm = ({
                   <FormControl>
                     <Input placeholder="Enter post title..." {...field} />"
 
-                  
                   <FormMessage />
 
-                
 
 
                   <FormLabel>Content
 
                     />
 
-                  
 
-                
 
 
                   <FormLabel>Category
@@ -841,22 +808,15 @@ export const PostForm = ({
                       <option value="ai-tools">AI Tools Discussion</option>""
                       <option value="feedback">Feedback & Feature Requests</option>"
                     </select>
-                  
 
-                
 
                   <FormLabel>Tags (comma-separated)
 
                       placeholder="e.g. resume, hiring, flutter""
 
-                  
 
             <Button type="submit" disabled={isSubmitting}>"
 
-            
-        
-      
-    
                 )}
               name="content";"
 
@@ -935,3 +895,4 @@ export default PostForm,
 
 }/>  </form>   ) "
 pr-12325
+

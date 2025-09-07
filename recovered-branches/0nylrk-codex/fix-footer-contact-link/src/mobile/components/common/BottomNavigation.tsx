@@ -1,3 +1,4 @@
+
 import React from "react";
 import {Link, useLocation} from "react-router-dom";
 import {Home, Search, Briefcase, MessageSquare, User} from "lucide-react";
@@ -23,7 +24,6 @@ import { Home, Search, Briefcase, MessageSquare, User } from "lucide-react",;
 import { cn } from "@/lib/utils",;
 export function BottomNavigation() {
   const location = useLocation(),
-  
   const navItems = [
     { path: "/mobile", icon: <Home />, label: "Home" },
     { path: "/mobile/browse", icon: <Search />, label: "Browse" },
@@ -132,6 +132,7 @@ export function BottomNavigation() {;
           <Link;"
               "flex flex-col items-center justify-center flex-1 py-1 px-2",""
               isActive ? "text-primary" : "text-muted-foreground""
+
             )}
           >
             <div className="h-5 w-5">"

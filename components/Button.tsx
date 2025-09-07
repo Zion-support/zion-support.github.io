@@ -76,6 +76,7 @@ function Button() {
   const classes = `${base_classes} ${variant_classes[variant]} ${size_classes[size]} ${disabled_classes} ${class_name}`;
 ;
 import React from 'react';
+
 interface ButtonProps {
   variant?: 'primary' | 'secondary' | 'outline';
   size?: 'sm' | 'md' | 'lg';
@@ -88,7 +89,7 @@ interface ButtonProps {
 export default function Button({ 
   children;
   variant;
-origin/cursor/automate-test-improve-and-merge-code-2533
+
   return (
     <button;
       type={type}
@@ -106,7 +107,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   );
 
     </button>);
-  
   return (
     <button
       type={_type}

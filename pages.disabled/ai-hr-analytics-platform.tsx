@@ -1,8 +1,8 @@
 
-import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]',
-;
+export default function AiHrAnalyticsPlatform() {
+	return (
+		<ServiceLanding
 
-import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]',
 
 export default function AiHrAnalyticsPlatform() {
 	return (

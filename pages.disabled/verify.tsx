@@ -1,19 +1,4 @@
 
-
-import React, { useEffect, useMemo, useState } from 'react';
-import Head from 'next/head';
-import { getBadgeLabels } from '../utils/kyc';
-import type { KycProfile, KycRole, KycDocumentMeta } from '../utils/kyc';
-
-import { VerifiedBadge } from '../components/ui/VerifiedBadge';
-
-export default function VerifyPage() {
-  const [userId, setUserId] = useState<string>('demo-user');
-  const [role, setRole] = useState<KycRole>('client');
-  const [profile, setProfile] = useState<KycProfile | null>(null);
-
-  const [requiredDocs, setRequiredDocs] = useState<KycDocumentMeta['kind'][]>([]);
-  const [optionalDocs, setOptionalDocs] = useState<KycDocumentMeta['kind'][]>([]);
   const [requiredDocs, setRequiredDocs] = useState<KycDocumentMeta['kind'][]>([]);
   const [optionalDocs, setOptionalDocs] = useState<KycDocumentMeta['kind'][]>([]);
 import React, { useEffect, useMemo, useState } from 'react',;
@@ -23,19 +8,11 @@ import type { KycProfile, KycRole, KycDocumentMeta } from '../utils/kyc';
 import { VerifiedBadge } from '../components/ui/VerifiedBadge';
 
 origin/cursor/automate-test-improve-and-merge-code-2533
+
   const [fullLegalName, setFullLegalName] = useState('');
   const [businessName, setBusinessName] = useState('');
   const [businessReg, setBusinessReg] = useState('');
   const [busy, setBusy] = useState(false);
-
-    const uploaded = new Set((profile.documents || []).map((d) => d.kind));
-    const required = requiredDocs.length;
-    const have = Array.from(uploaded).filter((k) => requiredDocs.includes(k as any)).length;
-    const base = required > 0 ? Math.round((have / required) * 80) : 0, // up to 80%
-    const submitted = profile.status === 'submitted' ? 90 : 0;
-    const approved = profile.status === 'approved' ? 100 : 0;
-    return Math.max(base, submitted, approved)
-  }, [profile, requiredDocs]);
 
 const uploaded = new Set((profile.documents || []).map(d => d.kind));
     const required = requiredDocs.length;
@@ -676,6 +653,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       d => d.kind === k
                     );
                       >
+
                         <div>
                           <div className='text-sm font-medium'>{k}</div>
                           <div className='text-xs text-gray-500'>

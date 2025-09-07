@@ -35,6 +35,7 @@ function RegionFilter() {
           <ChevronUp className='h - 4 w - 4 text - zion - slate - light' />) : ('
           <ChevronDown className='h - 4 w - 4 text - zion - slate - light' />)}'
       </button>;
+
       {expanded && (
         <div className='mt - 4 space - y-2'>;
           {REGION_OPTIONS.map (region => (
@@ -141,8 +142,7 @@ export function RegionFilter({
       {expanded && (
         <div className='mt-4 space-y-2'>
           {REGION_OPTIONS.map(region => (
-            <div key={region.id} className='flex items-center'>
-origin/cursor/automate-test-improve-and-merge-code-2533
+
 export function RegionFilter({ selectedRegions, toggleRegion, expanded, toggleSection, isMobileFilterOpen }: RegionFilterProps) {
   return (
     <div className="mb-6 border-b border-zion-blue-light pb-6">
@@ -157,7 +157,6 @@ export function RegionFilter({ selectedRegions, toggleRegion, expanded, toggleSe
           <ChevronDown className="h-4 w-4 text-zion-slate-light" />
         )}
       </button>
-      
       {expanded && (
         <div className="mt-4 space-y-2">
           {REGION_OPTIONS.map(region => (

@@ -14,10 +14,8 @@ run_with_log() {
     local name="$1"
     local command="$2"
     local log_file="$LOG_DIR/${name}-${TIMESTAMP}.log"
-    
     echo "📋 Running: $name"
     echo "   Command: $command"
-    
     if eval "$command" > "$log_file" 2>&1; then
         echo "✅ $name completed successfully"
         return 0
@@ -32,10 +30,8 @@ run_optional() {
     local name="$1"
     local command="$2"
     local log_file="$LOG_DIR/${name}-${TIMESTAMP}.log"
-    
     echo "📋 Running: $name (optional)"
     echo "   Command: $command"
-    
     if eval "$command" > "$log_file" 2>&1; then
         echo "✅ $name completed successfully"
     else
@@ -72,7 +68,7 @@ echo "====="
 
 # Security scan
 
-<<<<<<< HEAD:backup-problematic-files/run-complete-automation.sh
+:backup-problematic-files/run-complete-automation.sh
 run_with_log "Security Scanner" "node scripts/security-audit.cjs"
 run_optional "Enhanced Security Scanner" "node automation/enhanced-security-scanner.cjs"
 
@@ -143,16 +139,12 @@ echo "====="
 # Check if PM2 is available
 if command -v pm2 &> /dev/null; then
     echo "📋 Setting up PM2 processes..."
-    
     # Create logs directory for PM2
     mkdir -p logs
-    
     # Start PM2 processes
     run_optional "PM2 Process Start" "pm2 start ecosystem.config.cjs || echo 'PM2 start failed'"
-    
     # Show PM2 status
     run_optional "PM2 Status Check" "pm2 status"
-    
     echo "📋 PM2 processes configured"
 else
     echo "⚠️  PM2 not available, skipping process management"

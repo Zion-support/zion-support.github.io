@@ -47,7 +47,6 @@ export function PartnerReferralLinks() {
   const [selectedCampaign, setSelectedCampaign] = useState<string>("default"),
   const [customParam, setCustomParam] = useState<string>(""),
   const [generatedLinks, setGeneratedLinks] = useState<{name: string, link: string}[]>([]),
-  
   // Get the base referral link
   const baseLink = getReferralLink(),
 
@@ -92,12 +91,9 @@ export function PartnerReferralLinks() {;
   const [customParam, setCustomParam] = useState<string>("");"
 </string>
   const [generatedLinks, setGeneratedLinks] = useState<{name: string, link: string}[]>([]),
-  
   // Get the base referral link;
   const baseLink = getReferralLink(),
-  
 
-  
   const handleCopyLink = (link: string) => {
     navigator.clipboard.writeText(link)
     toast({"
@@ -116,7 +112,6 @@ pr-12325
 
 
 
-      
 
       // Add custom campaign parameter if selected
       if (selectedCampaign !== "default") {
@@ -175,7 +170,6 @@ pr-12325
     }
   }
       },
-      
       setGeneratedLinks(prev => [...prev, newLink]),
       setIsDialogOpen(false),
       setCustomParam("")
@@ -212,7 +206,6 @@ pr-12325
 const csvContent = [;
     ];
     ],
-    
     const csvContent = [
       "Name,Link",
       ...allLinks.map(l => `${l.name},${l.link}`)
@@ -228,7 +221,6 @@ const csvContent = [;
     document.body.removeChild(link)
   }
     ].join("\n"),
-    
     const blob = new Blob([csvContent], { type: 'text/csv,charset=utf-8,' }),
     const url = URL.createObjectURL(blob),
     const link = document.createElement("a"),
@@ -428,6 +420,7 @@ return (
               variant="outline" 
               size="sm" 
 
+
             <Button 
               variant="outline" 
               size="sm" 
@@ -508,13 +501,11 @@ return (
 
 
       },
-      
       setGeneratedLinks(prev => [...prev, newLink]),
       setIsDialogOpen(false),"
       setCustomParam("")"
     }
   },
-  
 
 
   const handleDownloadLinks = () => {
@@ -535,7 +526,6 @@ return (
       ...allLinks && allLinks.map(l => `${l && l.name},${l && l.link}`);]"
     ].join("\n");"
     ],
-    
 
     const csvContent = ["
       "Name,Link","
@@ -1185,11 +1175,9 @@ if ( {) {
       setCustomParam("");"
 
 
-      
       setGeneratedLinks(prev => [...prev, newLink]),
       setIsDialogOpen(false),"
       setCustomParam("")"
-  
 
 
   const handleDownloadLinks = () => {
@@ -1208,7 +1196,6 @@ if ( {) {
       ...allLinks && allLinks.map(l => `${l && l.name},${l && l.link}`);]"
     ].join("\n");"
     ],
-    
 
     const csvContent = ["
       "Name,Link","`;
@@ -1482,7 +1469,6 @@ if ( {) {
 const [isDialogOpen, setIsDialogOpen] = useState (false);
 };
 }//Add custom parameter if provided if (customParam) {
-  
 }const newLink = {
   name: `$ {
   selectedCampaign 
@@ -1527,9 +1513,6 @@ document.body.removeChild (link);
 }</div> </div>) 
                 <Plus className="h-4 w-4" />"
 
-              
-            
-          
     </div>"`;
 pr-12325
 </Plus>

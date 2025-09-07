@@ -1,37 +1,4 @@
-import {useState, useEffect} from "react";
-import {AppHeader} from "@/layout/AppHeader";
-import {Footer} from "@/components/Footer";
-import {Button} from "@/components/ui/button";
-import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
-import {Link} from "react-router-dom";
-import {SEO} from "@/components/SEO";
-import {BriefcaseIcon, UserIcon, MessageSquare, Star, PlusCircle, FileText, Inbox, Video} from "lucide-react";
-import {ProtectedRoute} from "@/components/ProtectedRoute";
-import {SuggestedJobs} from "@/components/jobs/SuggestedJobs";
-import {useAuth} from "@/hooks/useAuth";
-import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
-import {Avatar} from "@/components/ui/avatar";
-import {Badge} from "@/components/ui/badge";
-import {TalentOnboardingSteps} from "@/components/onboarding/TalentOnboardingSteps";
-import {MyApplications} from "@/components/jobs/MyApplications";
-import {ProjectOfferBanner} from "@/components/projects/ProjectOfferBanner";
-import {UpcomingInterviewsCard} from "@/components/interviews/UpcomingInterviewsCard";
-import { useState, useEffect } from "react",;
-import { AppHeader } from "@/layout/AppHeader",;
-import { Footer } from "@/components/Footer",;
-import { Button } from "@/components/ui/button",;
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
-import { Link } from "react-router-dom",;
-import { SEO } from "@/components/SEO",;
-import { BriefcaseIcon, UserIcon, MessageSquare, Star, PlusCircle, FileText, Inbox, Video } from "lucide-react",;
-import { ProtectedRoute } from "@/components/ProtectedRoute",;
-import { SuggestedJobs } from "@/components/jobs/SuggestedJobs",;
-import { useAuth } from "@/hooks/useAuth",;
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
-import { Avatar } from "@/components/ui/avatar",;
-import { Badge } from "@/components/ui/badge",;
-import { TalentOnboardingSteps } from "@/components/onboarding/TalentOnboardingSteps",;
-import { MyApplications } from "@/components/jobs/MyApplications",import { ProjectOfferBanner } from "@/components/projects/ProjectOfferBanner";
+
 import { UpcomingInterviewsCard } from "@/components/interviews/UpcomingInterviewsCard";
 function TalentDashboardContent() {
   const { user } = useAuth();
@@ -1054,14 +1021,10 @@ function TalentDashboardContent() {
               <Link to="/profile/settings">"
                 <UserIcon className="h-4 w-4 mr-2" />"
 
-              
-            
             <Button asChild>
               <Link to="/dashboard/talent/applications">"
                 <Inbox className="h-4 w-4 mr-2" /> Application Tracker;"
 
-              
-            
     <>;
         title="Talent Dashboard | Zion AI Marketplace";""
         description="Your personalized talent dashboard with job matches and professional opportunities.";"
@@ -1098,13 +1061,10 @@ function TalentDashboardContent() {
                           alt={user.displayName || "User"}"
 </img>"
                         <div className="flex h-full w-full items-center justify-center bg-muted text-lg font-medium uppercase">"
-                    
                       <CardTitle>{user?.displayName || "User"}"
                       <CardDescription>
 
-                      
                   <Badge className="bg-green-100 text-green-800">Online"
-              
               <CardContent>
                 <div className="grid grid-cols-2 gap-4 mt-4">"
                   <div className="flex flex-col items-center p-3 bg-muted/30 rounded-md">"
@@ -1119,10 +1079,6 @@ function TalentDashboardContent() {
                     <Link to="/messages">"
                       <MessageSquare className="h-4 w-4 mr-2" />"
 
-                    
-                  
-              
-            
             <TalentOnboardingSteps />
             <div className="mt-8">"
               <UpcomingInterviewsCard />
@@ -1131,7 +1087,6 @@ function TalentDashboardContent() {
 
               <CardHeader>
                 <CardTitle className="text-lg">Quick Stats"
-              
                 <div className="space-y-3">"
                   <div className="flex justify-between">"
                     <span className="text-muted-foreground">Profile views</span>""
@@ -1143,8 +1098,6 @@ function TalentDashboardContent() {
                     <span className="text-muted-foreground">"
                     </span>"
                     <span className="font-medium">85%</span>"
-              
-            
           <div className="lg:col-span-2">"
             <Tabs defaultValue="job-matches" onValueChange={setActiveTab}>"
               <TabsList className="mb-6">"
@@ -1153,21 +1106,16 @@ function TalentDashboardContent() {
 
                 <TabsTrigger value="applications">My Applications""
                 <TabsTrigger value="saved">Saved Jobs"
-              
               <TabsContent value="job-matches" className="mt-0">"
 
                 <SuggestedJobs />
 
-              
               <TabsContent value="applications" className="mt-0">"
 
                 <MyApplications />
                 <div className="mt-4 flex justify-center">"
                       <Inbox className="h-4 w-4 mr-2" /> View Full Application;"
 
-                    
-                  
-              
               <TabsContent value="saved" className="mt-0">"
                 <Card className="bg-muted/30">"
                   <CardContent className="pt-6 text-center">"
@@ -1175,11 +1123,6 @@ function TalentDashboardContent() {
                     </p>"
                     <Button className="mt-4" asChild>"
                       <Link to="/jobs">Browse Jobs"
-                    
-                  
-                
-              
-            
       </main>
       <Footer />
 
@@ -1198,7 +1141,6 @@ export default function TalentDashboard() {
 
       <TalentDashboardContent />
 
-    
     <ProtectedRoute>;
 
       <TalentDashboardContent />;
@@ -1302,7 +1244,6 @@ function TalentDashboard() {
 )
 
 
-    
 
 pr-12325
 </TalentDashboardContent>

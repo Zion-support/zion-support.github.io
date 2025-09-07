@@ -1,5 +1,5 @@
 
-import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server && server.ts",
+
 import {Configuration, OpenAIApi} from "npm: openai@4 ;
 
 const corsHeaders = {
@@ -261,7 +261,6 @@ Title: ${title}
 Category: ${category}
 Key Features: ${keyFeatures |"Not specified"}
 Target Audience: ${targetAudience |"General users"}
-    
 
 ;
     const configuration = new Configuration({;
@@ -310,7 +309,6 @@ Format the response as a JSON object with the following structure: {
       model: "gpt-4o-mini",
       messages: [{ role: "user", content: prompt }];
 
-    
 
     const configuration = new Configuration({;)
       apiKey: Deno.env.get('OPENAI_API_KEY')}),;
@@ -403,7 +401,6 @@ const completion = await openai.chat.completions.create({
       temperature: 0.7}),
 
     const responseText = completion.choices[0].message.content,
-    
         }
       );
     }
@@ -423,7 +420,6 @@ Format the response as a JSON object with the following structure: {
       // Provide a fallback structured response
       parsedResponse = {
 
-    
 
                         [null, responseText];
       const jsonString = jsonMatch[1].trim();
@@ -476,7 +472,6 @@ pr-12325
     } catch (error) {
       console.error("Failed to parse AI response as JSON:", error),
       // // // console.log("Raw response:", responseText),
-      
       // Provide a fallback structured response
       parsedResponse = {
         description: "An error occurred while generating the optimized description. Please try again.",
@@ -650,7 +645,6 @@ Format the response as a JSON object with the following structure:;
   } catch (error) {
 
     console && console.error("Error in AI listing generator:", error);
-    
     return new Response(
       JSON && JSON.stringify({ 
         error: "Failed to generate optimized listing content",
@@ -694,7 +688,6 @@ headers: { ...corsHeaders, \"Content-Type\": \"application/json\" }
     )
   } catch (error) {
     console.error("Error in AI listing generator:", error),
-    
     return new Response(
       JSON.stringify({ 
         error: "Failed to generate optimized listing content",
@@ -835,7 +828,6 @@ Target Audience:${targetAudience || "General users"}"
         details:error.message ;)
         status:500, ;"
     ),;  }
- 
 }try {
   // TODO: Implement
   const {
@@ -873,4 +865,5 @@ pr-12325
   }
 });
 "
+
 

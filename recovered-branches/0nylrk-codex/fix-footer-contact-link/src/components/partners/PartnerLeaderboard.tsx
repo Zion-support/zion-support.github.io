@@ -3,41 +3,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 import { Badge } from "@/components/ui/badge";
 import { Crown, Medal, Trophy } from "lucide-react";
 
-pr-12325
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components / ui / card';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components / ui / avatar';
-import { Badge } from '@/components / ui / badge';
-import { Crown, Medal, Trophy } from './lucide-react';
 
-interface LeaderboardEntry {
-
-import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
-import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
-import {Badge} from "@/components/ui/badge";
-import {Crown, Medal, Trophy} from "lucide-react";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
-import { Badge } from "@/components/ui/badge";
-import { Crown, Medal, Trophy } from "lucide-react";
-interface LeaderboardEntry {
-
-  id: string
-  rank: number
-  name: string
-  avatar?: string;
-referrals: number
-  earnings: number
-
-import { Badge } from "@/components/ui/badge",
-import { Crown, Medal, Trophy } from "lucide-react",
-
-interface LeaderboardEntry {
-  id: string,
-  rank: number,
-  name: string,
-  avatar?: string,
-  referrals: number,
-  earnings: number,
 
   badges: string[]
 }
@@ -175,6 +141,7 @@ export function PartnerLeaderboard() {
     }
   ];
   // Function to render rank badge
+
 
   return (
     <div className="space-y-6">
@@ -1062,7 +1029,6 @@ export function PartnerLeaderboard() {
             <Crown className="h-5 w-5 text-yellow-500" />"
 
           <CardDescription>This month's top-performing partners
-        
         <CardContent>
 
           <div className="space-y-4">"
@@ -1161,8 +1127,6 @@ export function PartnerLeaderboard() {;
                       <AvatarImage src={entry.avatar} />
                       <AvatarFallback className="bg-zion-blue text-zion-cyan">"
 
-                      
-                    
                     <div>
                       <div className="font-medium text-white">{entry.name}</div>""
                       <div className="text-xs text-zion-slate-light">{entry.referrals} referrals</div>"
@@ -1209,7 +1173,6 @@ export function PartnerLeaderboard() {;
 
                         <Badge variant="outline" className="bg-blue-500/20 border-blue-500 text-blue-400">"
 
-                        
               <div className="text-center p-12 border border-dashed border-zion-blue-light rounded-lg">"
                 <Trophy className="h-16 w-16 mx-auto text-zion-slate-light mb-4" />"
                 <p className="text-zion-slate-light mb-2">Leaderboard will appear here</p>""
@@ -1220,18 +1183,14 @@ export function PartnerLeaderboard() {;
                 <p className="text-zion-slate-light mb-2">Leaderboard will appear here</p>;""
                 <p className="text-xs text-zion-slate-light">;"
                 </p>;
-        
 
 
           <CardTitle>Your Ranking
           <CardDescription>How you compare to other partners
-        
             <p className="text-zion-slate-light mb-4">"
             </p>"
             <Badge variant="outline" className="bg-zion-purple/20 border-zion-purple text-zion-purple">"
 
-            
-        
 
 
           <CardTitle>Rewards Program
@@ -1385,8 +1344,6 @@ leaderboard.map (entry => (
               <li>Increased commission rate (30%)</li>
               <li>Custom landing page for your referrals</li>
               <li>Co-marketing opportunities</li>
-        
-      
 
 
           <CardTitle>Your Ranking;

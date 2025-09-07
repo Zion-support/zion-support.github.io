@@ -29,11 +29,7 @@ export default function News({ }: NewsProps) {
 
 }
 
-<<<<<<<< HEAD:pages.disabled_full/news.tsx
-
-
-
->>>>>>>> main:corrupted_backup/news.tsx
+<
 
 
 

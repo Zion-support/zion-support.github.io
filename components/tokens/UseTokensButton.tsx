@@ -1,13 +1,4 @@
 
-export default function UseTokensButton({
-origin/cursor/automate-test-improve-and-merge-code-2533
-  serviceId
-  defaultType
-}: {
-  serviceId?: string;
-  defaultType?: RedemptionType;
-}) {
-origin/cursor/automate-test-improve-and-merge-code-2533
   const [open, setOpen] = useState(false);
   return (
     <>;

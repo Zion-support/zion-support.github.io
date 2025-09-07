@@ -1,10 +1,4 @@
-import React, { useState } from "react",;
-import { Button } from "@/components/ui/button",;
-import { useTheme } from "@/hooks/useTheme",;
-import { Moon, Sun, Check } from "lucide-react";
-import { Card, CardContent } from "@/components/ui/card";
-import { Moon, Sun, Check } from "lucide-react",;
-import { Card, CardContent } from "@/components/ui/card",;
+
 
 interface Language {
 
@@ -46,12 +40,7 @@ const languages: Language[] = [  { code: "en", name: "English", flag: "🇺🇸"
 export function LanguageThemeSelector() {
   const { theme, setTheme } = useTheme();
 
-  const [selectedLanguage, setSelectedLanguage] = useState<string>("en");
-  const { theme, setTheme } = useTheme(),
-  const [selectedLanguage, setSelectedLanguage] = useState<string>("en"),
-  const { theme, setTheme } = useTheme();
 
-  const [selectedLanguage, setSelectedLanguage] = useState<string>("en");
 
   return (
                   : "border-border hover:border-primary/40"
@@ -367,8 +356,6 @@ export function LanguageThemeSelector() {;
               <span>Light</span>"
                 <Check className="h-4 w-4 text-primary mt-2" />"
 
-            
-          
 
               theme === "dark"""
           ;
@@ -378,8 +365,6 @@ export function LanguageThemeSelector() {;
 
               <span>Dark</span>"
 
-            
-          
   const [selected_language, setSelectedLanguage] = useState < string>("en");"
   return ("
     <div className="space - y-8 px - 4">;"
@@ -424,8 +409,6 @@ export function LanguageThemeSelector() {;
               <span > Dark</span>;"
 
 
-            
-          
     </div>);
                 <Check className="h - 4 w - 4 text - primary mt - 2" />)}"
 </Check>"

@@ -12,7 +12,6 @@ class ErrorBoundary extends React.Component {
     return { hasError: true };
   }
 
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
@@ -21,14 +20,11 @@ class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
 pr-12325
-  
     console.error('Error caught by boundary:', error, errorInfo);'
 
   }
@@ -37,7 +33,6 @@ pr-12325
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -143,9 +138,7 @@ name: z.string().min(2, "Name must be at least 2 characters");
         subject: z.string().min(2, "Subject must be at least 2 characters"),
         message: z.string().min(10, "Message must be at least 10 characters")
       }),
-      
       schema.parse(formData),
-      
       // Simulate form submission
       setIsSubmitting(true),
 
@@ -232,7 +225,6 @@ import {AppLayout} from "@/layout/AppLayout";    message: ""
 =======
 
 
-      
 
 >>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
       if (!response.ok) {
@@ -2239,7 +2231,6 @@ if ( {) {
           on_close={() => setIsChatOpen (false)}
 
     );
-    
     ;"`;
 pr-12325
 </ChatAssistant>

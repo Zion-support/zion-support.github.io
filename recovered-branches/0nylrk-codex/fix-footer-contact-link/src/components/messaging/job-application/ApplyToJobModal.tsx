@@ -1,22 +1,4 @@
-import React from "react";
-import {
 
-import React from "react";
-import {
-  Dialog
-  DialogContent
-  DialogDescription
-  DialogHeader
-  DialogTitle
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-DialogTitle,;
-
-DialogTitle,;
-  DialogTitle,
-} from "@/components/ui/dialog";
 
 
 import React from "react";
@@ -34,6 +16,7 @@ export function ApplyToJobModal({
   onClose
   onApplySuccess
 }: ApplyToJobModalProps) {
+
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
@@ -144,8 +127,6 @@ export function ApplyToJobModal({
           <DialogTitle>Apply to Job: {job.title}
           <DialogDescription>
 
-          
-        
     <Dialog open={isOpen} onOpenChange={onClose}>;
       <DialogContent className="sm:max-w-[600px]">;"
 
@@ -201,7 +182,6 @@ export function ApplyToJobModal({
           onClose={onClose}
         />
 
-      
 
     );"
 pr-12325

@@ -19,7 +19,6 @@
   --ring: #3b82f6;
   --radius: 0.75rem;
   --shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-  
   /* Futuristic color palette */
   --neon-blue: #00d4ff;
   --neon-purple: #8b5cf6;
@@ -357,18 +356,12 @@ body::after {
   }
   75% {
     transform: translateY(-15px) rotate(0.5deg);
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
     transform: translateY(-15px) rotate(0.5deg);
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
     transform: translate(-10px, -10px) rotate(1deg);
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
   }
     transform: translateY(-15px) rotate(0.5deg);
   }
@@ -656,7 +649,6 @@ body::after {
   .text-gradient-quantum {
     background-size: 200% 200%;
   }
-  
   .particle-quantum,
   .particle-holographic {
     display: none;
@@ -1183,24 +1175,16 @@ body::after {
   .futuristic-heading {
     font-size: clamp(1.5rem, 8vw, 2.5rem);
   }
-  
   .particle-bg::before {
     background-size: 100px 100px;
   }
-  
   .grid-bg {
     background-size: 25px 25px;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
     background-size: 25px 25px;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
   }
     background-size: 25px 25px;
   }
@@ -1233,7 +1217,6 @@ body::after {
   .loading-quantum {
     display: none;
   }
-  
   .text-gradient-rainbow,
   .text-gradient-quantum {
     color: #000 !important;
@@ -1327,7 +1310,6 @@ body::after {
   .neon-text {
     animation: neonPulse 3s ease-in-out infinite;
   }
-  
   .quantum-float {
     animation: quantumFloat 6s ease-in-out infinite;
   }
@@ -1337,7 +1319,6 @@ body::after {
   .neon-glow {
     animation: neonGlow 4s ease-in-out infinite;
   }
-  
   .holographic {
     animation: hologram 5s ease-in-out infinite;
   }

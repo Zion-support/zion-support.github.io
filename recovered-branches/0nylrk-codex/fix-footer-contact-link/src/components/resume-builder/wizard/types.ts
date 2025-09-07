@@ -1,4 +1,4 @@
-import { Resume } from "@/types/resume";
+
 export interface StepProps {
   id: string;
   label: string;
@@ -26,7 +26,7 @@ export interface ResumeProgressProps {
 }
 export interface CreateResumeFormProps {
   onCreateResume: (title: string) => Promise<void>;
-  onCancel: () => void;
+
   isLoading: boolean
 }
 ;

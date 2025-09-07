@@ -1,20 +1,12 @@
 
 
-pr-12325
+
 import { useState  } from 'react';
 import { supabase  } from '@/integrations/supabase/client';
 import { WorkExperience  } from '@/types/resume';
 import { useAuth  } from '@/hooks/useAuth';
 import { formatDateForDB, handleResumeError, showSuccessToast } from './useResumeUtils';
-export function useWorkExperience() {
-import {useState} from 'react';
-import {supabase} from '@/integrations/supabase/client';
-import {WorkExperience} from '@/types/resume';
-import {useAuth} from '@/hooks/useAuth';
-import {formatDateForDB, handleResumeError, showSuccessToast} from './useResumeUtils';
-export function useWorkExperience() {;
 
-  const { user } = useAuth();
 export function useWorkExperience() {  const { user } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
 
@@ -42,7 +34,6 @@ export function useWorkExperience() {;
       return false;
 
     }
-    
     setIsLoading(true),
     setError(null),
 
@@ -121,7 +112,6 @@ resume_id: resumeId;
           company_logo_url: work.company_logo_url,
           location: work.location
         }),
-      
       if (error) throw error,
 
 
@@ -185,7 +175,6 @@ if (throw error) {
       return false;
 
     }
-    
     setIsLoading(true),
     setError(null),
 
@@ -251,7 +240,6 @@ company_name: work.company_name;
           location: work.location
         })
         .eq('id', workId),
-      
       if (error) throw error,
 
 
@@ -318,7 +306,6 @@ if (throw error) {
       return false;
 
     }
-    
     setIsLoading(true),
     setError(null),
 
@@ -329,7 +316,6 @@ if (throw error) {
 .eq('id', workId);
       if (error) throw error;
         .eq('id', workId),
-      
       if (error) throw error,
 
       return showSuccessToast("Work experience deleted", "Your work experience has been removed from your resume")
@@ -340,7 +326,6 @@ if (throw error) {
       setIsLoading(false)
 
         .eq('id', workId),
-      
       if (error) throw error,
 
 
@@ -413,9 +398,7 @@ if ( {) {
           location: work.location;
         }),
 pr-12325
-      
       if (error) throw error,
-      
 
       return showSuccessToast("Work experience deleted", "Your work experience has been removed from your resume");
   const deleteWorkExperience = async (work_id: string): Promise < boolean> => {
@@ -487,7 +470,6 @@ if (throw error) {
         })
         .eq('id', workId);
         .eq('id', workId),
-      
 
       return showSuccessToast("Work experience updated", "Your work experience has been updated")"
         });"
@@ -550,19 +532,6 @@ deleteWorkExperience
     updateWorkExperience;
     deleteWorkExperience;
 
-}
-}
-  }
-}
-  }
-}
-;
-  }
-}
-;
-  }
-}
-;
   }
 }
 ;  }

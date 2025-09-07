@@ -7,29 +7,13 @@ console.log('Starting automatic merge conflict resolution...');
 function resolveConflicts(filePath) {
     try {
         let content = fs.readFileSync(filePath, 'utf8');
-        
         // Check if file has conflicts
-        if (!content.includes('<<<<<<< HEAD')) {
-            return false;
-        }
-        
-        console.log(`Resolving conflicts in: ${filePath}`);
-        
-        // Create backup
-        fs.writeFileSync(`${filePath}.backup`, content);
-        
-        // Resolve conflicts by keeping HEAD version
-        // Remove conflict markers and keep only HEAD content
-        content = content.replace(/<<<<<<< HEAD\n([\s\S]*?)\n=======\n([\s\S]*?)\n>>>>>>> [^\n]+\n?/g, '$1');
-        
+        if (!content.includes('
         // Remove any remaining conflict markers
         content = content.replace(/<<<<<<< [^\n]+\n?/g, '');
-        content = content.replace(/=======\n?/g, '');
-        content = content.replace(/>>>>>>> [^\n]+\n?/g, '');
-        
+        content = content.replace(/
         // Clean up multiple empty lines
         content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
-        
         fs.writeFileSync(filePath, content);
         console.log(`✓ Resolved conflicts in: ${filePath}`);
         return true;
@@ -42,14 +26,11 @@ function resolveConflicts(filePath) {
 // Function to find all files with conflicts
 function findConflictFiles(dir) {
     const conflictFiles = [];
-    
     function scanDirectory(currentDir) {
         const files = fs.readdirSync(currentDir);
-        
         for (const file of files) {
             const filePath = path.join(currentDir, file);
             const stat = fs.statSync(filePath);
-            
             if (stat.isDirectory()) {
                 // Skip node_modules, .git, and other common directories
                 if (!['node_modules', '.git', 'dist', 'build', '.next'].includes(file)) {
@@ -59,7 +40,7 @@ function findConflictFiles(dir) {
                 // Check if file has conflicts
                 try {
                     const content = fs.readFileSync(filePath, 'utf8');
-                    if (content.includes('<<<<<<< HEAD')) {
+                    if (content.includes('')) {
                         conflictFiles.push(filePath);
                     }
                 } catch (error) {
@@ -68,7 +49,6 @@ function findConflictFiles(dir) {
             }
         }
     }
-    
     scanDirectory(dir);
     return conflictFiles;
 }

@@ -55,10 +55,7 @@ export default function Cloudfinops({ }: CloudfinopsProps) {
 
 }
 
-<<<<<<<< HEAD:pages.disabled_full/services/it/cloud-finops.tsx
-
-
->>>>>>>> main:corrupted_backup/cloud-finops.tsx
+<
 
 
 

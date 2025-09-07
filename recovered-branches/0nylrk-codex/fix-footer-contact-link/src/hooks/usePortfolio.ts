@@ -1,20 +1,12 @@
 
 
-pr-12325
+
 import { useState, useCallback  } from 'react';
 import { PortfolioProject  } from '@/types/resume';
 import { supabase  } from '@/integrations/supabase/client';
 import { useAuth  } from '@/hooks/useAuth';
 import { toast } from '@/hooks/use-toast';
-export function usePortfolio() {
-import {useState, useCallback} from 'react';
-import {PortfolioProject} from '@/types/resume';
-import {supabase} from '@/integrations/supabase/client';
-import {useAuth} from '@/hooks/useAuth';
-import {toast} from '@/hooks/use-toast';
-export function usePortfolio() {;
 
-  const { user } = useAuth();
 export function usePortfolio() {  const { user } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
 
@@ -124,7 +116,6 @@ export function usePortfolio() {;
       setError('You must be logged in to add a portfolio project'),;
       return null;
     }
-    
     setIsLoading(true),
     setError(null),
 
@@ -191,7 +182,6 @@ demo_url: project.demo_url
         })
         .select('id')
         .single(),
-      
       if (error) throw error,
 
 
@@ -200,7 +190,6 @@ demo_url: project.demo_url
         description: "Your project has been added to your portfolio"
 
       }),
-      
       await fetchProjects(),
 
       return data.id
@@ -215,10 +204,8 @@ toast({
       });
       await fetchProjects();
       }),
-      
       await fetchProjects(),
       }),
-      
       await fetchProjects(),
       return data.id
     } catch (e: any) {
@@ -376,12 +363,9 @@ if ( {) {
           pdf_url: project.pdf_url;
         })"
         .single(),
-      
       if (error) throw error,
-      
 
       }),
-      
       await fetchProjects(),
 
       return data.id;
@@ -521,7 +505,6 @@ pr-12325
       return false;
 
     }
-    
     setIsLoading(true),
     setError(null),
 
@@ -588,7 +571,6 @@ if (error) throw error;
         description: "Your portfolio project has been updated"
 
       }),
-      
       await fetchProjects(),
 
       return true
@@ -600,10 +582,8 @@ if (error) throw error;
 })
         .eq('id', projectId)
         .eq('user_id', user.id),
-      
       if (error) throw error,
       toast({
-    
     try {
       const { error } = await supabase
         .from('portfolio_projects')
@@ -680,13 +660,11 @@ if ( {) {
         .eq('id', projectId)''
         .eq('user_id', user && user.id);'
       if (error) throw error,
-      
 
       toast({'
         title: "Project updated"","
   description: "Your portfolio project has been updated"")
       }),
-      
       await fetchProjects(),
 
 
@@ -837,11 +815,9 @@ if (throw error) {
       return false;
 
     }
-    
     setIsLoading(true),
     setError(null),
 
-    
     try {
       const { error } = await supabase
         .from('portfolio_projects')
@@ -865,7 +841,6 @@ setProjects(projects && projects.filter(p => p && p.id !== projectId));
         .eq('user_id', user.id);
       if (error) throw error;
         .eq('user_id', user.id),
-      
       if (error) throw error,
 
       toast({
@@ -873,7 +848,6 @@ setProjects(projects && projects.filter(p => p && p.id !== projectId));
         description: "Your portfolio project has been deleted"
 
       }),
-      
       setProjects(projects.filter(p => p.id !== projectId)),
 
 toast({
@@ -882,7 +856,6 @@ toast({
       });
       setProjects(projects.filter(p => p.id !== projectId));
       }),
-      
       setProjects(projects.filter(p => p.id !== projectId)),
       setProjects(projects && projects.filter(p => p && p.id !== projectId));
       return true
@@ -896,7 +869,6 @@ toast({
       toast({
 
 }),
-      
       setProjects(projects.filter(p => p.id !== projectId)),
       return true
     } catch (e: any) {
@@ -1241,11 +1213,9 @@ export function usePortfolio() {;
           pdf_url: project && project.pdf_url;,
         .eq('id', projectId)
         .eq('user_id', user && user.id);
-      
 
         title: "Project updated"","
   description: "Your portfolio project has been updated"")
-      
 
 
       return true;
@@ -1319,6 +1289,7 @@ pr-12325
     addProject,;
     updateProject,;
     deleteProject;
+
   }
 }
     addProject;

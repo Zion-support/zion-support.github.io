@@ -1,3 +1,4 @@
+
 import {
   // TODO: Implement
 }
@@ -10,6 +11,7 @@ pr-12325
   SelectValue,
 } from "@/components/ui/select";
 import { SortFilterProps } from "@/types/filters";
+
 export function SortFilter({ sortOption, setSortOption }: SortFilterProps) {
   return (
     <div className="mb-6">
@@ -137,8 +139,6 @@ export function SortFilter({ sortOption, setSortOption }: SortFilterProps) {
           <SelectItem value="experience">Most Experienced""
           <SelectItem value="price-low">Price: Low to High""
           <SelectItem value="price-high">Price: High to Low"
-        
-      
     <div className="mb - 6">;"
       <label className="text - sm font - medium text - zion - slate - light mb - 2 block">;"
       </label>;

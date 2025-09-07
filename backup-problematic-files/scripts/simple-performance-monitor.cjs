@@ -7,47 +7,4 @@
 const fs = require('fs')
 fs.writeFileSync('performance-metrics.json')
 console.log(' Performance metrics collected and saved to performance-metrics.json')const fs = require('fs')
-<<<<<<< HEAD
-console.log(' Performance metrics collected and saved to performance-metrics.json')
-const fs = require('fs');
-const metrics = {
-  "timestamp": new Date().toISOString(),""
-  "memory": process.memoryUsage(),""
-  "uptime": process.uptime(),""
-  "platform": process.platform,""
-  "nodeVersion": process.version;"
-};
-// Save metrics to file;"
-fs.writeFileSync('performance-metrics.json', JSON.stringify(metrics, null, 2));
-// Display summary;`;
-}MB`);`;
-}s`);
-console.log(' Performance metrics collected and saved to performance-metrics.json')`;
-=======
-fs.writeFileSync('performance-metrics.json')
-console.log(' Performance metrics collected and saved to performance-metrics.json')
-const fs = require('fs')
-fs.writeFileSync('performance-metrics.json')
-console.log(' Performance metrics collected and saved to performance-metrics.json')const fs = require('fs')
-fs.writeFileSync('performance-metrics.json')
-console.log(' Performance metrics collected and saved to performance-metrics.json')
-const fs = require('fs');
-const metrics = {
-  "timestamp": new Date().toISOString(),
-  "memory": process.memoryUsage(),
-  "uptime": process.uptime(),
-  "platform": process.platform,
-  "nodeVersion": process.version;"
-};
-// Save metrics to file;"
-fs.writeFileSync('performance-metrics.json, JSON.stringify(metrics, null, 2));
-// Display summary;
-}MB`);
-}s`);
-const fs = require('fs')
-fs.writeFileSync('performance-metrics.json')
-console.log(' Performance metrics collected and saved to performance-metrics.json')
-const fs = require('fs')
-fs.writeFileSync('performance-metrics.json')
-console.log(' Performance metrics collected and saved to performance-metrics.json')
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+

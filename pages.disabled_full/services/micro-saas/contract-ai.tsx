@@ -53,10 +53,7 @@ export default function Contractai({ }: ContractaiProps) {
 
 }
 
-<<<<<<<< HEAD:pages.disabled_full/services/micro-saas/contract-ai.tsx
-
-
->>>>>>>> main:corrupted_backup/contract-ai.tsx
+<
 
 
 

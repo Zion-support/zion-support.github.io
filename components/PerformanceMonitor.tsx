@@ -159,9 +159,9 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceDa
 // Only run on client side
     if (typeof window === 'undefined' |typeof window.performance === 'undefined') return;
     const measurePerformance = () => {
+
       const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       const paint = window.performance.getEntriesByType('paint');
-      
       const performanceData = null;
         // Memory usage (if available)
         memory: (window.performance as unknown as { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number ;} }).memory ? {
@@ -171,32 +171,12 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceDa
         } : null
       };
 
-      const navigationEntries = window.performance.getEntriesByType('navigation');
-      const navigation = navigationEntries[0] as PerformanceNavigationTiming;
-      const paintEntries = window.performance.getEntriesByType('paint');
-      const performanceData = {
-        // Navigation timing
-        domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart
-        loadComplete: navigation.loadEventEnd - navigation.loadEventStart
-        totalLoadTime: navigation.loadEventEnd - navigation.fetchStart
-        // Paint timing
-        firstPaint: paintEntries.find(entry => entry.name === 'first-paint')?.startTime |0
-        firstContentfulPaint: paintEntries.find(entry => entry.name === 'first-contentful-paint')?.startTime |0
-        // Resource timing
-        resourceCount: window.performance.getEntriesByType('resource').length
-// Memory usage (if available)
-ursor/fix-syntax-push-and-merge-to-main-7db5
-        memory: (window.performance as Performance & { memory?: { usedJSHeapSize: number;, totalJSHeapSize: number;, jsHeapSizeLimit: number ;} }).memory ? {
-          used: (window.performance as Performance & { memory: { usedJSHeapSize: number;, totalJSHeapSize: number;, jsHeapSizeLimit: number ;} }).memory.usedJSHeapSize
-          total: (window.performance as Performance & { memory: { usedJSHeapSize: number;, totalJSHeapSize: number;, jsHeapSizeLimit: number ;} }).memory.totalJSHeapSize
-          limit: (window.performance as Performance & { memory: { usedJSHeapSize: number;, totalJSHeapSize: number;, jsHeapSizeLimit: number ;} }).memory.jsHeapSizeLimit
-      }
+
       if (onPerformanceData) {
         onPerformanceData(performanceData);
       }
       // Log performance data in development
       if (process.env.NODE_ENV === 'development') {
-         
         console.log('Performance Metrics: ';, performanceData);
       }
     }
@@ -313,20 +293,16 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceDa
     const measurePerformance = () => {
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       const paint = performance.getEntriesByType('paint');
-      
       const performanceData = {
         // Navigation timing
         domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
         loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
         totalLoadTime: navigation.loadEventEnd - navigation.fetchStart,
-        
         // Paint timing
         firstPaint: paint.find(entry => entry.name === 'first-paint')?.startTime || 0,
         firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0,
-        
         // Resource timing
         resourceCount: performance.getEntriesByType('resource').length,
-        
         // Memory usage (if available)
         memory: (performance as any).memory ? {
           used: (performance as any).memory.usedJSHeapSize,
@@ -424,7 +400,6 @@ const PerformanceMonitor: React.FC = () => {
       const observer = new PerformanceObserver((list) => {
         const entries = list.getEntries();
         const navigationEntry = entries.find(entry => entry.entryType === 'navigation');
-        
         if (navigationEntry) {
           setMetrics({
             loadTime: navigationEntry.loadEventEnd - navigationEntry.loadEventStart;,
@@ -449,7 +424,6 @@ const PerformanceMonitor: React.FC = () => {
           }
         }
       });
-      
       try {
         lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] ;});
       } catch (e) {
@@ -554,7 +528,6 @@ observer.observe({ entryTypes: [
   return (
     <div className="fixed bottom-4 left-4 bg-white shadow-lg rounded-lg p-4 border z-50 max-w-xs">
       <h3 className="text-sm font-semibold mb-3 text-gray-900">Performance Metrics</h3>
-      
       <div className="space-y-2 text-xs">
         {metrics.fcp && (
           <div className="flex justify-between">
@@ -564,7 +537,6 @@ observer.observe({ entryTypes: [
             </span>
           </div>
         )}
-        
         {metrics.lcp && (
           <div className="flex justify-between">
             <span className="text-gray-600">LCP: </span>
@@ -573,7 +545,6 @@ observer.observe({ entryTypes: [
             </span>
           </div>
         )}
-        
         {metrics.fid && (
           <div className="flex justify-between">
             <span className="text-gray-600">FID: </span>
@@ -582,7 +553,6 @@ observer.observe({ entryTypes: [
             </span>
           </div>
         )}
-        
         {metrics.cls && (
           <div className="flex justify-between">
             <span className="text-gray-600">CLS: </span>
@@ -591,7 +561,6 @@ observer.observe({ entryTypes: [
             </span>
           </div>
         )}
-        
         {metrics.ttfb && (
           <div className="flex justify-between">
             <span className="text-gray-600">TTFB: </span>
@@ -601,7 +570,6 @@ observer.observe({ entryTypes: [
           </div>
         )}
       </div>
-      
       <div className="mt-3 pt-2 border-t border-gray-200">
         <button
           onClick={() => setIsVisible(false)}
@@ -613,7 +581,6 @@ observer.observe({ entryTypes: [
     </div>
   const getScoreColor = (value: number;, thresholds: { good: number poor: number ;}) => {
 if (value <= thresholds.good) return 'text-green-600'
-  
    if (value <= thresholds.poor) return
   'text-yellow-600'
    return

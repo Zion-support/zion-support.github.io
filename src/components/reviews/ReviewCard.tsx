@@ -1,8 +1,4 @@
-return (
-      <div className='flex'>;
-        {[1, 2, 3, 4, 5].map(star => (;
-import { Review } from "@/types/reviews",;
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
+
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import {
@@ -24,201 +20,7 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {
   const [isReporting, setIsReporting] = useState(false);
   const [isReportDialogOpen, setIsReportDialogOpen] = useState(false);
   const handleReport = null;
-import { Review } from '@/types/reviews'
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
-import { Button } from '@/components/ui/button'
-import { Badge } from '@/components/ui/badge'
-import {  Dialog,  Dialog
-  DialogContent
-  DialogDescription
-  DialogFooter
-  DialogHeader
-  DialogTitle
-  DialogTrigger
-} from '@/components/ui/dialog'
-import { Textarea } from '@/components/ui/textarea'
-interface ReviewCardProps {
-  review: Review
-onReport: (reviewId: string, reason: string) => Promise<boolean>
-}export function ReviewCard ({
-  review, onReport
-}: ReviewCardProps) {
-  const handleReport = async () => {
-  if (!reportReason.trim () ) return
-setIsReporting (true)
-const success = await onReport (review.id, reportReason)
-setIsReporting (false)
-if (success) {
-export function ReviewCard({ review, onReport }: ReviewCardProps) {
-  const [reportReason, setReportReason] = useState('')
-  const [isReporting, setIsReporting] = useState(false)
-  const [isReportDialogOpen, setIsReportDialogOpen] = useState(false)
-  const handleReport = async () => {
-    if (!reportReason.trim()) return
-    setIsReporting(true)
-    const success = await onReport(review.id, reportReason)
-    setIsReporting(false)
-    if (success) {
-      setReportReason('')
-      setIsReportDialogOpen(false)
-    }
-  }
-  const renderStars = (rating?: number) => {
-    if (!rating) return null
-    return (
-      <div className='flex'>
-        {[1, 2, 3, 4, 5].map(star => (
-origin/cursor/automate-test-improve-and-merge-code-2533
-          <Star
-return (
-      <div className='flex'>;
-</div>
-          <Star;
-pr-12325
-            key={star}
-            className={`h-4 w-4 ${star <= rating ? 'fill-yellow-400 text-yellow-400' : 'text-gray-300'}`}`
-          />;
-import {  Dialog,  Dialog,
-import { useState } from "react","
-import { formatDistanceToNow } from "date-fns","
-import { Star, Flag, User } from 'lucide-react''
-import { Review } from "@/types/reviews","
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar","
-import { Button } from "@/components/ui/button","
-import { Badge } from "@/components/ui/badge","
 
-import {  Dialog,  Dialog,;
-
-import { useState } from "react",;
-import { formatDistanceToNow } from "date-fns",;
-import { Star, Flag, User } from 'lucide-react'
-import { Review } from "@/types/reviews",;
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
-import { Button } from "@/components/ui/button",;
-import { Badge } from "@/components/ui/badge",;
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogFooter,
-  DialogHeader,
-  DialogTitle,
-import { useState } from "react","
-import { formatDistanceToNow } from "date-fns","
-import { Star, Flag, User } from 'lucide-react''
-import { Review } from "@/types/reviews","
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar","
-import { Button } from "@/components/ui/button","
-import { Badge } from "@/components/ui/badge","
-
-
-import { useState } from "react",;
-import { formatDistanceToNow } from "date-fns",;
-import { Star, Flag, User } from 'lucide-react'
-import { Review } from "@/types/reviews",;
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
-import { Button } from "@/components/ui/button",;
-import { Badge } from "@/components/ui/badge",;
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogFooter,
-  DialogHeader,
-  DialogTitle,
-          />
-        ))}
-              <AvatarFallback className="bg-muted">"
-                <User className="h-4 w-4" />"
-
-import { useState } from "react",
-import { formatDistanceToNow } from "date-fns",
-import { Star, Flag, User } from 'lucide-react'
-import { Review } from "@/types/reviews",
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
-import { Button } from "@/components/ui/button",
-import { Badge } from "@/components/ui/badge",
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogFooter,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger} from "@/components/ui/dialog",
-import { Textarea } from "@/components/ui/textarea",
-interface ReviewCardProps {
-  review: Review,
-  onReport: (reviewId: string, reason: string) => Promise<boolean>
-}
-
-export function ReviewCard({ review, onReport }: ReviewCardProps) {
-  const [reportReason, setReportReason] = useState(""),
-  const [isReporting, setIsReporting] = useState(false),
-  const [isReportDialogOpen, setIsReportDialogOpen] = useState(false),
-  
-  const handleReport = async () => {
-    if (!reportReason.trim()) return,
-    
-    setIsReporting(true),
-    const success = await onReport(review.id, reportReason),
-    setIsReporting(false),
-    
-    if (success) {
-      setReportReason(""),
-      setIsReportDialogOpen(false)
-    }
-  },
-  
-  const renderStars = (rating?: number) => {
-    if (!rating) return null,
-    
-    return (
-      <div className="flex">
-        {[1, 2, 3, 4, 5].map((star) => (
-          <Star
-            key={star}
-            className={`h-4 w-4 ${star <= rating ? "fill-yellow-400 text-yellow-400" : "text-gray-300"}`}
-      </div>
-    )
-  }
-  const getInitials = (name: string) => {
-    return name
-      .split(' ')
-      .map(n => n[0])
-      .join('')            className={`h-4 w-4 ${star <= rating ? "fill-yellow-400 text-yellow-400" : "text-gray-300"}`}
-          />
-        ))}
-      </div>
-    )
-  },
-  
-  const getInitials = (name: string) => {
-    return name
-      .split(" ")
-      .map((n) => n[0])
-      .join("")
-      .toUpperCase()
-      .substring(0, 2)
-  },
-  
-  }
-  const getInitials = (name: string,) => {
-    return name
-      .split(" ")
-      .map((n,) => n[0])
-      .join("")
-      .toUpperCase()
-      .substring(0, 2)
-  }
-  return (
-    <div className='border rounded-lg p-4 bg-card'>
-      <div className='flex justify-between items-start mb-3'>
-        <div className='flex items-center gap-3'>
-          {review.is_anonymous ? (
-            <Avatar>
-              <AvatarFallback className='bg-muted'>
-                <User className='h-4 w-4' />
   return (
     <div className="border rounded-lg p-4 bg-card">
       <div className="flex justify-between items-start mb-3">
@@ -262,8 +64,6 @@ on_report: (review_id: string, reason:,  string) => Promise < boolean>;
 "
                 <User className="h-4 w-4" />"
 
-              
-            
             <Avatar>
 
                 <AvatarImage src={review.reviewer_profile.avatar_url} alt={review.reviewer_profile.display_name} />
@@ -425,6 +225,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <div className='border-t pt-3 mt-3'>'
           <div className='flex flex-wrap gap-2'>'
             {review.communication_rating && (
+
               </Badge>
             )}
             {review.quality_rating && (
@@ -474,9 +275,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 variant={review.would_work_again ? 'default' : 'secondary'}'
                 className={`${review.would_work_again ? 'bg-green-100 text-green-800 hover:bg-green-200' : 'bg-gray-100 text-gray-800 hover:bg-gray-200'}`}              >`
                 {review.would_work_again
-                  ? 'Would work again''
-                  : 'Would not work again'}              </Badge>'
-                {review.would_work_again ? "Would work again" : "Would not work again"}"
+
             </div>
             <div className="text-sm text-muted-foreground">"
               {formatDistanceToNow(new Date(review.created_at), { addSuffix: true })}
@@ -662,9 +461,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <div className='mt-3 flex justify-end'>'
         <Dialog open={isReportDialogOpen} onOpenChange={setIsReportDialogOpen}>
           <DialogTrigger asChild>
-            <Button variant='ghost' size='sm' className='text-muted-foreground'>'
-              <Flag className='h-3 w-3 mr-1' />              Report'
-      <div className="mt-3 flex justify-end">"
+
         <Dialog open={isReportDialogOpen} onOpenChange={setIsReportDialogOpen}>
           <DialogTrigger asChild>
             <Button variant="ghost" size="sm" className="text-muted-foreground">"
@@ -925,7 +722,6 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
               )}
             </Avatar>;
           )}
-          
           <div>
             <div className="font-medium">
               {review.is_anonymous ? "Anonymous" : review.reviewer_profile?.display_name || "User"}
@@ -939,11 +735,9 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
           {renderStars(review.rating)}
         </div>
       </div>
-      
       <div className="mb-4">
         <p className="text-sm whitespace-pre-wrap">{review.review_text}</p>
       </div>
-      
       {(review.communication_rating || review.quality_rating || review.timeliness_rating || review.would_work_again !== undefined) && (
         <div className="border-t pt-3 mt-3">
           <div className="flex flex-wrap gap-2">
@@ -953,21 +747,18 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
                 <span className="ml-1 text-yellow-500">{review.communication_rating}/5</span>
               </Badge>
             )}
-            
             {review.quality_rating && (
               <Badge variant="outline" className="flex gap-1 items-center">
                 Quality
                 <span className="ml-1 text-yellow-500">{review.quality_rating}/5</span>
               </Badge>
             )}
-            
             {review.timeliness_rating && (
               <Badge variant="outline" className="flex gap-1 items-center">
                 Timeliness
                 <span className="ml-1 text-yellow-500">{review.timeliness_rating}/5</span>
               </Badge>
             )}
-            
             {review.would_work_again !== undefined && (
               <Badge 
                 variant={review.would_work_again ? "default" : "secondary"}
@@ -979,7 +770,6 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
           </div>;
         </div>;
       )}
-      
       <div className="mt-3 flex justify-end">
         <Dialog open={isReportDialogOpen} onOpenChange={setIsReportDialogOpen}>
           <DialogTrigger asChild>
@@ -995,14 +785,12 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
                 If you believe this review violates our community guidelines, please provide details below.
               </DialogDescription>
             </DialogHeader>
-            
             <Textarea
               placeholder="Why are you reporting this review?"
               value={reportReason}
               onChange={(e) => setReportReason(e.target.value)}
               className="min-h-[100px]"
             />
-            
             <DialogFooter>
               <Button variant="outline" onClick={() => setIsReportDialogOpen(false)}>
                 Cancel
@@ -1108,17 +896,13 @@ if (return null) {
 
                 <AvatarFallback>;
 
-                
         <div className='border-t pt-3 mt-3'>
           <div className='flex flex-wrap gap-2'>
-              
               <Badge variant='outline' className='flex gap-1 items-center'>
 
                 <span className='ml-1 text-yellow-500'>
 </span>
-              
 
-              
               <Badge variant='outline' className='flex gap - 1 items - center'>;
 
                 <span className='ml - 1 text - yellow - 500'>;
@@ -1157,7 +941,6 @@ if (return null) {
 
                 <span className="ml-1 text-yellow-500">{review.quality_rating}/5</span>"
                 <span className="ml-1 text-yellow-500">{review.timeliness_rating}/5</span>"
-              
               <Badge;"
                 variant={review.would_work_again ? "default" : "secondary"}""`;
                 className={`${review.would_work_again ? "bg-green-100 text-green-800 hover:bg-green-200" : "bg-gray-100 text-gray-800 hover:bg-gray-200"}`}"
@@ -1207,8 +990,6 @@ if (return null) {
             <Button variant="ghost" size="sm" className="text-muted-foreground">"
               <Flag className="h-3 w-3 mr-1" />"
 
-            
-          
           <DialogContent>
 
             <DialogHeader>
@@ -1216,8 +997,6 @@ if (return null) {
               <DialogTitle>Report Review
               <DialogDescription>
 
-              
-            
       <div className='mt-3 flex justify-end'>;
         <Dialog open={isReportDialogOpen} onOpenChange={setIsReportDialogOpen}>;
 
@@ -1262,9 +1041,6 @@ if (return null) {
 
               onChange = {(e,) => setReportReason(e.target.value),}
 
-              
-            
-            
             <Textarea;
               placeholder="Why are you reporting this review?""
               value={reportReason}
@@ -1273,15 +1049,11 @@ if (return null) {
             <DialogFooter>
               <Button variant="outline" onClick={() => setIsReportDialogOpen(false)}>"
 
-              
 
 
 
                 disabled={!reportReason.trim() || isReporting}
 
-              
-            
-          
                 {isReporting ? 'Submitting...' : 'Submit Report'}                              {isReporting ? "Submitting..." : "Submit Report"}"
               <DialogTitle > Report Review;
               <DialogDescription>;

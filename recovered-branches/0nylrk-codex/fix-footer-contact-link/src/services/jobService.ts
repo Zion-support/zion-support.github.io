@@ -1,32 +1,10 @@
-import { supabase } from "@/integrations/supabase/client";
-import { toast } from "sonner";
-export async function createJob(jobData: any) {
-  try {
-    const { data, error } = await supabase
-      .from("jobs")
-      .insert([jobData])
 
-.select();
-      .single();
-import { supabase } from "@/integrations/supabase/client",;
-import { toast } from "sonner",;
-import {supabase} from "@/integrations/supabase/client";
-import {toast} from "sonner";
-import { supabase } from "@/integrations/supabase/client",;
-import { toast } from "sonner",;
-import {supabase} from "@/integrations/supabase/client";
-import {toast} from "sonner";
-import { supabase } from "@/integrations/supabase/client",;
-import { toast } from "sonner",;
-      .select()
-      .single();
     if (error) throw error;
     return data
   } catch (error: any) {
     console.error("Error creating job:", error);
     throw new Error(error.message |"Failed to create job")
       .single(),
-      
     if (error) throw error,
     return data
   } catch (error: any) {
@@ -67,6 +45,7 @@ export async function updateJob(jobId: string, jobData: any) {
       .select()
       .single();
 
+
     if (error) throw error;
     return data;
   } catch (error: any) {
@@ -79,6 +58,7 @@ export async function getJobById(jobId: string) {
     const { data, error } = await supabase
       .from('jobs')
       .select('*')
+
     return data
   } catch (error: any) {
     console && console.error("Error fetching job:", error);

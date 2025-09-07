@@ -1,10 +1,11 @@
+
 import { useState } from "react",
 import { useJobApplications } from "@/hooks/useJobApplications",
 import { ApplicationCard } from "./ApplicationCard",
 import { LoadingState } from "./LoadingState",
 import { EmptyState } from "./EmptyState",
 import { ErrorState } from "./ErrorState",
-import { useState } from "react";
+
 
 
 import { useJobApplications } from "@/hooks/useJobApplications";
@@ -13,6 +14,7 @@ import { LoadingState } from "./LoadingState";
 import { EmptyState } from "./EmptyState";
 import { ErrorState } from "./ErrorState";
 
+
 import { Button } from "@/components/ui/button";
 import { ApplicationStatus } from "@/types/jobs";
 
@@ -20,40 +22,7 @@ export function ApplicationsTracker() {
 
   const { applications, isLoading, error } = useJobApplications();
 
-  const [statusFilter, setStatusFilter] = useState<ApplicationStatus | "all">(;
-    "all",;
 
-  );
-
-import { Button } from "@/components/ui/button";
-import { ApplicationStatus } from "@/types/jobs";
-export function ApplicationsTracker() {;
-export function ApplicationsTracker() {
-  const { applications, isLoading, error } = useJobApplications();
-
-  const [statusFilter, setStatusFilter] = useState<ApplicationStatus | "all">(
-    "all"
-  );
-import { useState } from "react",
-import { useJobApplications } from "@/hooks/useJobApplications",
-import { ApplicationCard } from "./ApplicationCard",
-import { LoadingState } from "./LoadingState",
-import { EmptyState } from "./EmptyState",
-import { ErrorState } from "./ErrorState",
-import { Button } from "@/components/ui/button",
-import { ApplicationStatus } from "@/types/jobs",
-import { useState } from "react",;
-import { useJobApplications } from "@/hooks/useJobApplications",;
-import { ApplicationCard } from "./ApplicationCard",;
-import { LoadingState } from "./LoadingState",;
-import { EmptyState } from "./EmptyState",;
-import { ErrorState } from "./ErrorState",;
-import { Button } from "@/components/ui/button",;
-import { ApplicationStatus } from "@/types/jobs",;
-export function ApplicationsTracker() {
-  const { applications, isLoading, error } = useJobApplications(),
-  const [statusFilter, setStatusFilter] = useState<ApplicationStatus | 'all'>('all'),
-  
   if (isLoading) {
 
 return <LoadingState />;
@@ -86,38 +55,7 @@ export function ApplicationsTracker() {;
   }
 ;
 
-  if (error) {;
-    return <ErrorState error={error} />;
-  }
 
-  if (applications && applications.length === 0) {;
-    return <EmptyState />;
-  }
-
-if (error) {;
-    return <ErrorState error={error} />;
-  }
-;
-  if (applications.length === 0) {;
-    return <EmptyState />;
-  }
-  if (isLoading) {;
-    return <LoadingState />;
-  }
-
-const filteredApplications = statusFilter === 'all' 
-    ? applications
-    : applications.filter(app => app.status === statusFilter),
-
-  }  
-  const filteredApplications = statusFilter === 'all' 
-    ? applications
-    : applications.filter(app => app.status === statusFilter),
-  
-  const filteredApplications =;
-    statusFilter === "all";
-      ? applications;
-      : applications && applications.filter((app) => app && app.status === statusFilter);
   return (
     <div className="space-y-6">;
       <div className="flex flex-wrap gap-2">;
@@ -222,7 +160,6 @@ return (
           onClick={() => setStatusFilter("rejected")}
           onClick={() => setStatusFilter("rejected")}
 
-      
 
       <div className="grid gap-4 md:grid-cols-1 lg:grid-cols-2">
         {filteredApplications.map((application) => (
@@ -585,7 +522,6 @@ if (isLoading) {
 }const filteredApplications = statusFilter === 'all' > All </Button> <Button > Submitted </Button> <Button > Viewed </Button> <Button > Shortlisted </Button> <Button > Interview </Button> <Button > Hired </Button> <Button > Not Selected </Button> </div> </div>) 
 }</div>) 
 }
-      
       {filteredApplications.length === 0 && (
         <div className="text-center p-8">
           <p className="text-muted-foreground">No applications with this status.</p>

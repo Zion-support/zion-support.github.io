@@ -7,15 +7,6 @@ import { Notification } from '@/context/notifications';
 interface NotificationListProps {
 
 
-
-pr-12325
-  loading: boolean,
-loading: boolean,
-  error: string | null,
-  notifications: Notification[],
-
-  onMarkAsRead: (id: string) => Promise<void>,
-  onDismiss: (id: string) => Promise<void>,
   onRetry: () => void
 }
 
@@ -103,7 +94,7 @@ export const NotificationList: React.FC < NotificationListProps> = ({
   notifications;
   onMarkAsRead;
 
-onDismiss
+
 
   loading,
   error,
@@ -291,7 +282,6 @@ export const NotificationList:React.FC<NotificationListProps> = ({;
             onClick={onRetry}
           >
 
-          
         <div className="p-4 space-y-4">"
           <Skeleton className="h-12 w-full bg-zion-blue-dark/50" />"
 
@@ -299,7 +289,6 @@ export const NotificationList:React.FC<NotificationListProps> = ({;
           <p>No notifications yet</p>
           />
 
-    
 pr-12325
 </NotificationItem>
     </ScrollArea>
@@ -309,4 +298,5 @@ pr-12325
   );
 };
     </ScrollArea>;"
+
 

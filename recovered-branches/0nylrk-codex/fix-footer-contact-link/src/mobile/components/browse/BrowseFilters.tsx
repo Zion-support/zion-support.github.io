@@ -1,12 +1,4 @@
-import React, { useState } from "react",;
-import { Button } from "@/components/ui/button",;
-import { Slider } from "@/components/ui/slider",;
-import { Switch } from "@/components/ui/switch",;
-import { Input } from "@/components/ui/input",;
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",;
-import { X, Filter } from "lucide-react",;
-import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetFooter, SheetTrigger } from "@/components/ui/sheet",;
-import { Badge } from "@/components/ui/badge",import { Label } from "@/components/ui/label";
+
 interface BrowseFiltersProps {
   type: "jobs" | "talents";
 }
@@ -14,36 +6,7 @@ interface BrowseFiltersProps {
 export function BrowseFilters({ type }: BrowseFiltersProps) {
   const [activeFilters, setActiveFilters] = useState<string[]>([]);
 
-  const addFilter = (filter: string) => {
-    if (!activeFilters.includes(filter)) {
-      setActiveFilters([...activeFilters, filter]);
-    }
-  };
 
-  const removeFilter = (filter: string) => {
-    setActiveFilters(activeFilters.filter(f => f !== filter))
-  }
-
-import React, { useState } from './react';
-import { Button } from '@/components / ui / button';
-import { Slider } from '@/components / ui / slider';
-import { Switch } from '@/components / ui / switch';
-import { Input } from '@/components / ui / input';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components / ui / select';
-import { X, Filter } from './lucide-react';
-import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetFooter, SheetTrigger } from '@/components / ui / sheet';
-import { Badge } from '@/components / ui / badge';
-import { Label } from '@/components / ui / label';
-
-import { Label } from "@/components/ui/label",;
-interface BrowseFiltersProps {
-  type: "jobs" | "talents";
-}
-  
-  const removeFilter = (filter: string) => {
-    setActiveFilters(activeFilters.filter(f => f !== filter))
-  },
-    return (
     <div className="space-y-3">
       <div className="flex justify-between items-center px-4">
         <div className="flex items-center gap-2 overflow-x-auto py-1 hide-scrollbar">
@@ -607,15 +570,12 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {
               <Button variant="outline" size="sm" className="gap-1">"
                 <Filter className="h-3.5 w-3.5" />"
 
-              
             <SheetContent side="bottom" className="h-[85vh] rounded-t-xl">"
 
               <SheetHeader>
 
                 <SheetTitle>
 
-                
-              
               <div className="py-6 space-y-6">"
                   <>"
                     <div className="space-y-2">"
@@ -626,31 +586,20 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {
                           className="cursor-pointer hover:bg-primary/5""
                         >
 
-                        
 
-                        
 
-                        
 
-                        
                       <Label>Experience Level"
 
-                        
 
-                        
 
-                        
                   </>
                 ) : (
                       <Label>Specialization"
 
-                        
 
-                        
 
-                        
 
-                        
 </div>)
                       <Label>Experience (years)
                       <Slider;
@@ -671,14 +620,11 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {
                     <SelectTrigger>
                       <SelectValue placeholder="Select location" />"
 
-                    
                     <SelectContent>
                       <SelectItem value="remote">Remote""
                       <SelectItem value="us">United States""
                       <SelectItem value="europe">Europe""
                       <SelectItem value="asia">Asia"
-                    
-                  
                   <Label>Salary Range"
                   <div className="flex gap-4 items-center">"
                     <Input placeholder="Min" type="number" className="w-full" />"
@@ -690,17 +636,11 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {
                   <div className="grid grid-cols-2 gap-2">"
                       className="cursor-pointer hover:bg-primary/5 justify-start""
 
-                    
 
-                    
 
-                    
 
-                    
 
-                    
 
-                    
                 <div className="flex items-center justify-between">"
                   <Label>Only show verified profiles
                   <Switch />
@@ -709,25 +649,17 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {
               <SheetFooter>
                 <Button variant="outline" className="w-full">"
 
-                
                 <Button;"
                   className="w-full"""
                   onClick={() => addFilter("Experience: 3+ years")}"
 
-                
-              
-            
-          
 
             <SelectTrigger className="w-[120px] h-8">"
               <SelectValue placeholder="Sort By" />"
 
-            
               <SelectItem value="newest">Newest""
               <SelectItem value="relevance">Best Match""
               <SelectItem value="salary">Highest Pay"
-            
-          
             <Badge;
               key={filter}"
               variant="secondary"""
@@ -737,7 +669,6 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {
                 className="h-3 w-3 cursor-pointer""
                 onClick={() => removeFilter(filter)}
 
-            
     <div className="space - y-3">;"
       <div className="flex justify - between items - center px - 4">;"
         <div className="flex items - center gap - 2 overflow - x-auto py - 1 hide - scrollbar">;"
@@ -830,7 +761,6 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {
     </div>);
 }
   ),;}
- 
 }export function BrowseFilters ({
   type 
 }: BrowseFiltersProps) {
@@ -926,9 +856,6 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {
                 )}"
 
 
-                    
-                    
-                  
 
 
                     <Badge variant="outline" className="cursor-pointer hover:bg-primary/5 justify-start">JavaScript""
@@ -940,14 +867,7 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {
 
                 <Button variant="outline" className="w-full">Reset""
                 <Button className="w-full" onClick={() => addFilter("Experience: 3+ years")}>Apply Filters"
-              
-            
-          
-
-            
-            
-          
 
 
-            
+
 pr-12325

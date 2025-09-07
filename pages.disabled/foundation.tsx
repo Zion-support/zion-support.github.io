@@ -1,4 +1,4 @@
-import Head from 'next/head';
+
 import Link from 'next/link';
 import CharterGenerator from '../components/foundation/CharterGenerator';
 import Head from 'next/head',
@@ -39,7 +39,6 @@ export default function FoundationPage() {
         </section>
 
 
-origin/cursor/automate-test-improve-and-merge-code-2533
               </div>
             ))}
           </div>

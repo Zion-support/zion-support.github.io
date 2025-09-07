@@ -6,47 +6,4 @@
 const fs = require('fs')
 const path = require('path')
   log(message, type = 'INFO')
-<<<<<<< HEAD
-      'INFO': 'ℹ
-      'SUCCESS': 
-      'ERROR': 
-      'WARNING': '⚠
-      'PROGRESS': '�
-    const healthCheck = """
-    "message"""
-    "version"""
-    const metrics = """
-    const alerting = """
-      "service"""
-      console.error('Failed to send "alert")""
-        "type"""
-        "severity"""
-                console.error('Failed to load "metrics")""
-    console.error('Monitoring automation "failed")""
-=======
-      'INFO: ℹ'
-      'SUCCESS: ERROR: WARNING: ⚠'
-      'PROGRESS: �'
-    const healthCheck = "
-    "message"
-    "version"
-    const metrics = "
-    const alerting = "
-      "service"
-      console.error('Failed to send "alert")
-        "type"
-        "severity"
-        "type"
-        "severity"
-        "type"
-        "severity"
-        "type"
-        "severity"
-        "type"
-        "severity"
-        "type"
-        "severity"
-                console.error('Failed to load "metrics")
-    console.error('Monitoring automation "failed")
-    console.error('Monitoring automation "failed")
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+

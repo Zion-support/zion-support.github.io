@@ -19,6 +19,7 @@ import EnhancedLayout from '../../components/layout/EnhancedLayout',;
 import data from '../../data/github-pulse.json',;
 
 
+
 export default function GithubPulsePage() {
 
   const repo = data?.repo |{}

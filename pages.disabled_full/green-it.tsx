@@ -41,11 +41,7 @@ export default function Greenit({ }: GreenitProps) {
 
 }
 
-<<<<<<<< HEAD:pages.disabled_full/green-it.tsx
-
-
-
->>>>>>>> main:corrupted_backup/green-it.tsx
+<
 
 
 

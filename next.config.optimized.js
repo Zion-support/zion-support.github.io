@@ -1,21 +1,4 @@
-<<<<<<<< HEAD:corrupted_backup/next.config.optimized.js
-
-<<<<<<<< HEAD:next.config.optimized.js
-
-<:next.config.optimized.js
-
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-const withBundleAnalyzer = require('@next/bundle-analyzer')({
-  enabled: process.env.ANALYZE === 'true',')
-});
-
-module.exports = withBundleAnalyzer({
-
-
-
-
->>>>>>>> main:corrupted_backup/next.config.optimized.js
+<
 
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
 
@@ -26,10 +9,7 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 });
 
 module.exports = withBundleAnalyzer({
-<<<<<<<< HEAD:next.config.optimized.js
-
-
->>>>>>>> main:corrupted_backup/next.config.optimized.js
+<
 /** @type {import('next').NextConfig} */
 const nextConfig = {
 
@@ -47,11 +27,7 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 });
 
 module.exports = withBundleAnalyzer({
-<<<<<<<< HEAD:corrupted_backup/next.config.optimized.js
-
-
-
->>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6:next.config.optimized.js
+<
 /** @type {import('next').NextConfig} */
 const nextConfig = {
 
@@ -93,7 +69,6 @@ const nextConfig = {
   eslint: { ignoreDuringBuilds: false },
   typescript: { ignoreBuildErrors: false },
   pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
-  
 
 
   eslint: { ignoreDuringBuilds: false },
@@ -121,7 +96,6 @@ eslint: { ignoreDuringBuilds: false },
 
 
 
-  
   // Image optimization
   images: {
   // Image optimization
@@ -139,7 +113,6 @@ eslint: { ignoreDuringBuilds: false },
   },
   // Image optimization;
   images: {
-  
   // Image optimization;
   // Image optimization;
   images: {,
@@ -153,16 +126,13 @@ eslint: { ignoreDuringBuilds: false },
   },
 
 
-  
 
 
 
 
-  
 
   // Security headers
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;""
-  
   // Security headers;
   async headers() {
     return [{"
@@ -179,15 +149,12 @@ eslint: { ignoreDuringBuilds: false },
   },
 
 
-  
 
 
 
 
-  
 
   // Bundle analyzer
-  
   // Bundle analyzer;
   webpack: (config, { isServer }) => {
     if (!isServer) {
@@ -222,25 +189,7 @@ module.exports = withBundleAnalyzer({
 
     domains: ['images.unsplash.com', 'via.placeholder.com'],
 
-<<<<<<<< HEAD:corrupted_backup/next.config.optimized.js
-
-<<<<<<<< HEAD:next.config.optimized.js
-  "images": {    domains: ['images.unsplash.com', 'via.placeholder.com'],
-
-
-<:next.config.optimized.js
-  "images": {    domains: ['images.unsplash.com', 'via.placeholder.com'],
-=
-
-  "images": {
-  generateEtags: false,
-  images: {
-    domains: ['images.unsplash.com', 'via.placeholder.com'],
-"images": {    domains: ['images.unsplash.com', 'via.placeholder.com'],
->
-
-
->>>>>>>> main:corrupted_backup/next.config.optimized.js
+<
 
   "images": {
 
@@ -284,14 +233,7 @@ module.exports = withBundleAnalyzer({
         cacheGroups: {,
   vendor: {
             test: /[\\/]node_modules[\\/]/,
-<<<<<<<< HEAD:corrupted_backup/next.config.optimized.js
-            name: 'vendors',
->
-
-
-<<<<<<<< HEAD:next.config.optimized.js
-            name: 'vendors',
->>>>>>>> main:corrupted_backup/next.config.optimized.js
+<
 
             name: 'vendors',
 
@@ -306,14 +248,7 @@ module.exports = withBundleAnalyzer({
           },
           common: {
             name: 'common',
-<<<<<<<< HEAD:corrupted_backup/next.config.optimized.js
-
-<<<<<<<< HEAD:next.config.optimized.js
-
->
-
-
->>>>>>>> main:corrupted_backup/next.config.optimized.js
+<
 
 <:next.config.optimized.js
 =
@@ -335,21 +270,7 @@ module.exports = withBundleAnalyzer({
       }}
     return config},
 });
-<<<<<<<< HEAD:corrupted_backup/next.config.optimized.js
-
-      }}
-    return config},
-});
-<<<<<<<< HEAD:next.config.optimized.js
-
-
-
-
-
->
-
-
->>>>>>>> main:corrupted_backup/next.config.optimized.js
+<
 
 
 
@@ -371,32 +292,7 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({ enabled: process.e
 
 
 const withBundleAnalyzer = require('@next/bundle-analyzer')({ enabled: process.env.ANALYZE === 'true',}); module.exports = withBundleAnalyzer({ reactStrictMode: true,swcMinify: true,compress: true,poweredByHeader: false,generateEtags: false,images: { domains: ['images.unsplash.com','via.placeholder.com'],formats: ['image/webp','image/avif'],},experimental: { optimizeCss: true,optimizePackageImports: ['@mui/material','@mui/icons-material'],},webpack: (config,{ dev,isServer }) => { if (!dev && !isServer) { config.optimization.splitChunks = { chunks: 'all',cacheGroups: { vendor: { test: /[\\/]node_modules[\\/]/,name: 'vendors',chunks: 'all',},common: { name: 'common',minChunks: 2,chunks: 'all',enforce: true,},},}} return config},});
-<<<<<<<< HEAD:corrupted_backup/next.config.optimized.js
-
-const withBundleAnalyzer = require('@next/bundle-analyzer')({ enabled: process.env.ANALYZE === 'true',}); module.exports = withBundleAnalyzer({ reactStrictMode: true,swcMinify: true,compress: true,poweredByHeader: false,generateEtags: false,images: { domains: ['images.unsplash.com','via.placeholder.com'],formats: ['image/webp','image/avif'],},experimental: { optimizeCss: true,optimizePackageImports: ['@mui/material','@mui/icons-material'],},webpack: (config,{ dev,isServer }) => { if (!dev && !isServer) { config.optimization.splitChunks = { chunks: 'all',cacheGroups: { vendor: { test: /[\\/]node_modules[\\/]/,name: 'vendors',chunks: 'all',},common: { name: 'common',minChunks: 2,chunks: 'all',enforce: true,},},}} return config},});
-<<<<<<<< HEAD:next.config.optimized.js
-
-const withBundleAnalyzer = require('@next/bundle-analyzer')({ enabled: process.env.ANALYZE === 'true',}); module.exports = withBundleAnalyzer({ reactStrictMode: true,swcMinify: true,compress: true,poweredByHeader: false,generateEtags: false,images: { domains: ['images.unsplash.com','via.placeholder.com'],formats: ['image/webp','image/avif'],},experimental: { optimizeCss: true,optimizePackageImports: ['@mui/material','@mui/icons-material'],},webpack: (config,{ dev,isServer }) => { if (!dev && !isServer) { config.optimization.splitChunks = { chunks: 'all',cacheGroups: { vendor: { test: /[\\/]node_modules[\\/]/,name: 'vendors',chunks: 'all',},common: { name: 'common',minChunks: 2,chunks: 'all',enforce: true,},},}} return config},});
-
-
-
-
-
-const withBundleAnalyzer = require('@next/bundle-analyzer')({ enabled: process.env.ANALYZE === 'true',}); module.exports = withBundleAnalyzer({ reactStrictMode: true,swcMinify: true,compress: true,poweredByHeader: false,generateEtags: false,images: { domains: ['images.unsplash.com','via.placeholder.com'],formats: ['image/webp','image/avif'],},experimental: { optimizeCss: true,optimizePackageImports: ['@mui/material','@mui/icons-material'],},webpack: (config,{ dev,isServer }) => { if (!dev && !isServer) { config.optimization.splitChunks = { chunks: 'all',cacheGroups: { vendor: { test: /[\\/]node_modules[\\/]/,name: 'vendors',chunks: 'all',},common: { name: 'common',minChunks: 2,chunks: 'all',enforce: true,},},}} return config},});
-<:next.config.optimized.js
-=
-const withBundleAnalyzer = require('@next/bundle-analyzer')({ enabled: process.env.ANALYZE === 'true',}); module.exports = withBundleAnalyzer({ reactStrictMode: true,swcMinify: true,compress: true,poweredByHeader: false,generateEtags: false,images: { domains: ['images.unsplash.com','via.placeholder.com'],formats: ['image/webp','image/avif'],},experimental: { optimizeCss: true,optimizePackageImports: ['@mui/material','@mui/icons-material'],},webpack: (config,{ dev,isServer }) => { if (!dev && !isServer) { config.optimization.splitChunks = { chunks: 'all',cacheGroups: { vendor: { test: /[\\/]node_modules[\\/]/,name: 'vendors',chunks: 'all',},common: { name: 'common',minChunks: 2,chunks: 'all',enforce: true,},},}} return config},});
-
-      };
-    }
-    return config;
-  },
-});
-
-
-
-
->>>>>>>> main:corrupted_backup/next.config.optimized.js
+<
 
 
 
@@ -410,7 +306,7 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({ enabled: process.e
 
 
 
->>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6:next.config.optimized.js
+>
 
 
 

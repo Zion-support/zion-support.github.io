@@ -1,26 +1,4 @@
-<<<<<<< HEAD
-#!/usr/bin/env node;
-const fs = require('fs');
-const path = require('path');
-console.log('🔧 Fixing Corrupted Pages');
-console.log('====');
-// List of corrupted pages that need to be recreated;
-const corruptedPages = [
-  'pages/about.tsx',
-  'pages/compliance.tsx',
-  'pages/index.tsx',
-  'pages/micro-saas.tsx',
-  'pages/newsletter.tsx]
-=======
-#!/usr/bin/env node
-const fs = require('fs');
-const path = require('path');
-console.log('🔧 Fixing Corrupted Pages');
-console.log('===);
-// List of corrupted pages that need to be recreated;
-const corruptedPages = [
-  'pages/about.tsx,pages/compliance.tsx,pages/index.tsx,pages/micro-saas.tsx,pages/newsletter.tsx]
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
 ];
 
 // Template for a basic React page;
@@ -39,7 +17,6 @@ export default function ${pageName}() {
 </meta>)"
         <meta name="keywords" content="${pageName.toLowerCase()},zion tech group,technology solutions" />"
 </meta>
-      
       "
       <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">"
 </section>"
@@ -63,40 +40,13 @@ export default function ${pageName}() {
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <Link;"
-<<<<<<< HEAD
-                href="/contact"""
-                className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold""
 
-              
-                href="/services"""
-                className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold""
-
-              
-=======
-                href="/contact"
-                className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold
-              >
-</Link>
-              </Link>
-              <Link;"
-                href="/services"
-                className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold
-              >
-</Link>
-              </Link>
-            </div>
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
           </motion.div>
       </section>
       <section className="py-20 bg-gray-50">"
         <div className="container mx-auto px-4">"
           <motion.div;"
-<<<<<<< HEAD
-            className="text-center mb-16""
-=======
-            className="text-center mb-16
-            initial={{ opacity: 0, y: 30 }} 
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
             whileInView={{ opacity: 1, y: 0 }} 
             transition={{ duration: 0.8 }} 
             viewport={{ once: true }}

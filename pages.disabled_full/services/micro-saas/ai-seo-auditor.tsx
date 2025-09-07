@@ -53,10 +53,7 @@ export default function Aiseoauditor({ }: AiseoauditorProps) {
 
 }
 
-<<<<<<<< HEAD:pages.disabled_full/services/micro-saas/ai-seo-auditor.tsx
-
-
->>>>>>>> main:corrupted_backup/ai-seo-auditor.tsx
+<
 
 
 

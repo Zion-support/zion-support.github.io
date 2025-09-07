@@ -41,11 +41,7 @@ export default function Cloudservices({ }: CloudservicesProps) {
 
 }
 
-<<<<<<<< HEAD:pages.disabled_full/services/cloud-services.tsx
-
-
-
->>>>>>>> main:corrupted_backup/cloud-services.tsx
+<
 
 
 

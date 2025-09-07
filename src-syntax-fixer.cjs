@@ -26,7 +26,6 @@ class SrcSyntaxFixer {
 
   async findSrcFilesWithErrors() {
     this.log('🔍 Finding src files with syntax errors...', 'PROGRESS');
-    
     try {
       const result = execSync('npx eslint src --max-warnings 0 --format json', {
         cwd: this.projectRoot,
@@ -43,14 +42,12 @@ class SrcSyntaxFixer {
         // If not JSON, extract file paths from text output
         const lines = output.split('\n');
         const files = new Set();
-        
         lines.forEach(line => {
           const match = line.match(/^\.\/([^:]+):/);
           if (match) {
             files.add(match[1]);
           }
         });
-        
         return Array.from(files).map(file => ({
           filePath: file,
           messages: [{ severity: 2, message: 'Syntax error detected' }]
@@ -72,7 +69,6 @@ class SrcSyntaxFixer {
       let fixed = false;
 
       // Fix common syntax errors
-      
       // 1. Fix unterminated string literals
       const unterminatedStringRegex = /(['"`])([^'"`]*?)(?=\n|$)/g;
       content = content.replace(unterminatedStringRegex, (match, quote, str) => {
@@ -104,11 +100,11 @@ class SrcSyntaxFixer {
       });
 
       // 4. Fix merge conflict markers
-      const mergeConflictRegex = /<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g;
+      const mergeConflictRegex = /
       content = content.replace(mergeConflictRegex, (match) => {
         fixed = true;
         // Keep the HEAD version (first part)
-        const parts = match.split('=======')[0].replace('<<<<<<< HEAD', '').trim();
+        const parts = match.split('')[0].replace('', '').trim();
         return parts;
       });
 
@@ -239,7 +235,6 @@ class SrcSyntaxFixer {
 
   async fixAllSrcFiles() {
     this.log('🚀 Starting src directory syntax fixing...', 'PROGRESS');
-    
     const filesWithErrors = await this.findSrcFilesWithErrors();
     this.log(`Found ${filesWithErrors.length} files with errors`, 'INFO');
 
@@ -257,7 +252,6 @@ class SrcSyntaxFixer {
 
   async runLinting() {
     this.log('🔍 Running linting after fixes...', 'PROGRESS');
-    
     try {
       const result = execSync('npx eslint src --max-warnings 1000 --fix', {
         cwd: this.projectRoot,
@@ -274,7 +268,6 @@ class SrcSyntaxFixer {
 
   async runTypeCheck() {
     this.log('🔍 Running TypeScript type check...', 'PROGRESS');
-    
     try {
       const result = execSync('npx tsc --noEmit --skipLibCheck', {
         cwd: this.projectRoot,
@@ -291,7 +284,6 @@ class SrcSyntaxFixer {
 
   async runBuild() {
     this.log('🏗️ Running build after fixes...', 'PROGRESS');
-    
     try {
       const result = execSync('npm run build', {
         cwd: this.projectRoot,
@@ -322,7 +314,6 @@ class SrcSyntaxFixer {
 
     const reportPath = path.join(this.projectRoot, 'src-syntax-fix-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    
     this.log('📊 Src Syntax Fix Report Generated', 'SUCCESS');
     this.log(`✅ Files Fixed: ${report.summary.totalFixed}`);
     this.log(`❌ Errors: ${report.summary.totalErrors}`);

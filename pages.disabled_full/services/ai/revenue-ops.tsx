@@ -48,11 +48,7 @@ export default function Revenueops({ }: RevenueopsProps) {
 
 }
 
-<<<<<<<< HEAD:pages.disabled_full/services/ai/revenue-ops.tsx
-
-
-
->>>>>>>> main:corrupted_backup/revenue-ops.tsx
+<
 
 
 

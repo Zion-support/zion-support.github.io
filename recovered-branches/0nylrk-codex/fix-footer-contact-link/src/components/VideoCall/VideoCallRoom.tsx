@@ -1,19 +1,4 @@
-import React from 'react';
-import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
-import {Button} from "@/components/ui/button";
-import React from 'react',;
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
-import { Button } from "@/components/ui/button",;
-import React from 'react';
-import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
-import {Button} from "@/components/ui/button";
-interface VideoCallRoomProps {;
 
-import React from "react";""
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";""
-import { Button } from "@/components/ui/button";"
 interface VideoCallRoomProps {
   // TODO: Implement
 }
@@ -237,7 +222,6 @@ export function VideoCallRoom({
         <div className="flex gap-2">"
 </div>
           <Button onClick={onDisconnect}>Close
-      
     <Card className={className || "w-full max-w-3xl mx-auto"}>;"
 
       <CardHeader>;

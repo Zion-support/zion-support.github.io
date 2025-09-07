@@ -1,17 +1,4 @@
-</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </Layout>
-  )
 
-}
-
-import React from 'react';
-
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
 export default function BiotechAIResearchPlatformPage() {
   return (
     <Layout>
@@ -37,13 +24,13 @@ export default function BiotechAIResearchPlatformPage() {
               <div className="mt-6 flex gap-3">
                 <a href="/contact" className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white">Contact Sales</a>
                 <a href="/services" className="flex-1 border border-gray-600 text-gray-200">Explore Services</a>
-                <a href="/contact" className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white">Contact Sales</Link>
-                <a href="/services" className="flex-1 border border-gray-600 text-gray-200">Explore Services</Link>
+
 import React from 'react',;
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
 
 origin/cursor/automate-test-improve-and-merge-code-2533
+
               </div>
             </div>
           </div>

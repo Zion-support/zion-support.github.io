@@ -1,40 +1,4 @@
-}
-) )
-}</ul> </section> <section>) )
-}</ul> </section> </div>)
- 
-};
-) ) 
-}</ul> </section> <section>) ) 
-}</ul> </section> </div>) 
-export default function ContentMap({ report }: Props) {
-  if (!report) return <div>No content map yet. Check back later.</div>;
-  const sections = Object.entries(report.bySection).sort((a, b) => b[1] - a[1])
-};
-) ) 
-}</ul> </section> <section>) ) 
-}</ul> </section> </div>)
-export default function ContentMap({ report }: Props) {
-};
-) ) 
-}</ul> </section> <section>) ) 
-}</ul> </section> </div>) 
-export default function ContentMap({ report }: Props) {
-  if (!report) return <div>No content map yet. Check back later.</div>;
-  const sections = Object.entries(report.bySection).sort((a, b) => b[1] - a[1])
-};
-) ) 
-}</ul> </section> <section>) ) 
-}</ul> </section> </div>) 
 
-
-import fs from 'fs';
-import fs from 'fs';;
-import path from 'path';
-import type { GetStaticProps } from 'next';
-
-type Entry = any;
-origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <div className=\"space-y-6\" />"
       <header className=\"space-y-1\" />"

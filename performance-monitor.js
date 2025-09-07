@@ -48,26 +48,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   generateReport() {
     const report = {
       timestamp: this.metrics.timestamp,
-      bundleSize: this.metrics.bundleSize,
-      memoryUsage: this.metrics.memoryUsage,
-      recommendations: []
+
     };
 pr-12325
-    
 
 origin/cursor/automate-test-improve-and-merge-code-2533
     if (this.metrics.bundleSize > 1000000) {
       report.recommendations.push('Consider code splitting to reduce bundle size');
     if (this.metrics.memoryUsage > 100) {
       report.recommendations.push('Consider optimizing memory usage');
-    
     if (this.metrics.bundleSize > 1000000) {
       report.recommendations.push('Consider code splitting to reduce bundle size');
     }
     if (this.metrics.memoryUsage > 100) {
       report.recommendations.push('Consider optimizing memory usage');
     }
-    
     return report;
   }
 }

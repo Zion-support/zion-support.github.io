@@ -8,6 +8,7 @@ interface CertificationsSectionProps {
 import {Certification} from '@/types / resume';
 import {format} from 'date - fns';
 
+
 interface CertificationsSectionProps {
   certifications: Certification[];
 }
@@ -50,13 +51,11 @@ export function CertificationsSection({ certifications }: CertificationsSectionP
   },
 
 if (certifications.length === 0) return null,
-  
     return format(date, 'MMM yyyy');
   };
     return format(date, 'MMM yyyy')
   },
   if (certifications.length === 0) return null,
-  
   return (
     <div>
       <h2 className="text-lg font-semibold border-b mb-3">Certifications</h2>
@@ -227,58 +226,6 @@ if (return null) {
 }
 
 
-import {Certification} from '@/types/resume';''
-import {format} from 'date-fns';'
-interface CertificationsSectionProps {
-  // TODO: Implement
-}
-  certifications: Certification[]'
-import {Certification} from '@/types / resume';''
-import {format} from 'date - fns';'
-interface CertificationsSectionProps {
-  // TODO: Implement
-}
-  certifications: Certification[];
-}
-
-
-'
-import {Certification} from '@/types/resume';''
-import {format} from 'date-fns';'
-interface CertificationsSectionProps {
-  // TODO: Implement
-}
-  certifications: Certification[]
-'
-import { Certification } from '@/types/resume',;''
-import { format } from 'date-fns',;'
-interface CertificationsSectionProps {;
-  certifications: Certification[];
-
-
-
-}
-;
-export function CertificationsSection({ certifications }: CertificationsSectionProps) {;
-  const formatDate = (date: Date | string | undefined) => {;'
-    if (!date) return '',;''
-    if (typeof date === 'string') {;''
-      return format(new Date(date), 'MMM yyyy');'
-    }
-'
-    return format(date, 'MMM yyyy')'
-  },
-
-
-  if (certifications.length === 0) return null,
-  '
-    return format(date, 'MMM yyyy');'
-  };'
-    return format(date, 'MMM yyyy')'
-  },
-
-  if (certifications.length === 0) return null,
-  
   return (
     <div>
 </div>'
@@ -413,11 +360,9 @@ export function CertificationsSection({ certifications }: CertificationsSectionP
 
 
   if (certifications.length === 0) return null,
-  
     return format(date, 'MMM yyyy');
   };
 
-  
   return (
     <div>
 </div>
@@ -472,7 +417,6 @@ export function CertificationsSection({ certifications }: CertificationsSectionP
             <p className="text-sm">{cert.issuing_organization}</p>""
               <p className="text-sm">"
                 <a href={cert.credential_url} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">"
-                
               </p>
 pr-12325
 </a>

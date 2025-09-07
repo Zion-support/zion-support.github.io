@@ -1,37 +1,9 @@
-  Phone,
-  Mail,
-  MapPin,
-  Check,
-  ArrowRight,
-  Shield,;
-  Star,;
-import React from 'react';
-import Head from 'next/head';
-import { Phone, Mail, MapPin, Check, ArrowRight, Shield, Star  } from 'lucide-react';
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+
 import Button from '../components/ui/Button';
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
 export default function QuantumInternetSecurityPage() {
   const service = null;
-import {
-  Phone
-  Mail
-  MapPin
-  Check
-  ArrowRight
-  Shield
-  Star;
-origin/cursor/automate-test-improve-and-merge-code-2533
-} from 'lucide-react';
 
-export default function QuantumInternetSecurityPage() {
-export default function QuantumInternetSecurityPage() {
-  );  if (!service) return null;import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
-export default function QuantumInternetSecurityPage() {;
-  const service = enhancedRealMicroSaasServices.find(s =>
-    s.link.endsWith('/quantum-internet-security-platform')
-  );
-  if (!service) return null;
   return (
     <UltraAdvancedFuturisticBackground>
       <Head>

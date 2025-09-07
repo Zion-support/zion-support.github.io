@@ -1,17 +1,4 @@
 
-import {useState} from 'react';
-import {useQuery, useMutation, useQueryClient} from '@tanstack/react-query';
-import {quoteRequestService} from '@/services/quoteRequestService';
-
-import type { QuoteRequest, QuoteStatus } from '@/types/quotes';
-import { useToast } from '@/components/ui/use-toast';
-import type { DateRange } from '@/types/dateRange';
-
-export const useAdminQuotes = () => {;
-
-import { useState  } from 'react';
-import { useQuery, useMutation, useQueryClient  } from '@tanstack/react-query';
-import { quoteRequestService  } from '@/services/quoteRequestService';
 
 
 pr-12325
@@ -102,7 +89,6 @@ export const useAdminQuotes = () => {;
     if (archiveFilter === 'archived' && !quote.is_archived) {
       return false
     }
-    
     // Search filter
     if (searchQuery) {
       const query = searchQuery.toLowerCase();
@@ -205,7 +191,6 @@ export const useAdminQuotes = () => {;
     }
 
 
-    
 
 ;
     // Search filter;
@@ -244,7 +229,6 @@ export const useAdminQuotes = () => {;
   // Update quote status mutation
   const updateStatusMutation = useMutation({
 mutationFn: ({ id, status }: { id: string, status: QuoteStatus }) => 
-    
 
 
 
@@ -631,7 +615,6 @@ export const useAdminQuotes = () => {
       if (createdAt > endDate) {
 
 
-    
 
 ;
     // Search filter;
@@ -651,7 +634,6 @@ export const useAdminQuotes = () => {
       const endDate = new Date(dateRange.to),;
       endDate.setHours(23, 59, 59, 999), // End of day;
       if (createdAt > endDate) {;
-    
 
 
 
@@ -1041,15 +1023,14 @@ import type { DateRange } from '@/types/dateRange',;
  //Filter quotes based on selected filters const filteredQuotes = allQuotes.filter ( (quote) => {"
   //Status filter if (statusFilter !== 'all' && quote.status !== statusFilter) {
   if (!quote.requester name.toLowerCase () .includes (query) && !quote.project name.toLowerCase () .includes (query) && !quote.project summary.toLowerCase () .includes (query) && ! (quote.talent name && quote.talent name.toLowerCase () .includes (query) ) ) {
-  
 }return true;
 //Update quote status mutation;
 //Archive/Unarchive mutation;
 // Delete mutation const deleteMutation = useMutation ({)
   mutationFn: (id: string) => quoteRequestService.delete (id), onSuccess: () => {
-  
 pr-12325
 })
 });
 '
+
 

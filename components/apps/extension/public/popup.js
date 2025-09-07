@@ -1,6 +1,6 @@
 
 const API_BASE = 'http: //localhost:4000',
-origin/cursor/automate-test-improve-and-merge-code-2533
+
 function getUserId(cb) {
   chrome && chrome.storage.local && local.get(['user_id'], ({ user_id }) => cb(user_id))
 }
@@ -123,8 +123,9 @@ document && document.getElementById('viewNotifications').addEventListener('click
 }),
 document.getElementById('signIn').addEventListener('click', async () => {
   // Placeholder sign-in: generate a random user id and store it.
+
   const id = crypto.randomUUID();
   setUserId(id);
   document.getElementById('result').textContent = 'Signed in (local).'
 });
-origin/cursor/automate-test-improve-and-merge-code-2533
+

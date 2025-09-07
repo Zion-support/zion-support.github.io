@@ -10,24 +10,7 @@ import { Badge } from "@/components/ui/badge",
 import { useJobSuggestions } from "@/hooks/useJobSuggestions",
 
 
-import { useAuth } from "@/hooks/useAuth",;
-import { Loader2 } from "lucide-react",;
-import { Badge } from "@/components/ui/badge",;
-import { useJobSuggestions } from "@/hooks/useJobSuggestions",;
-import { JobMatchesCard } from "./JobMatchesCard";
-import { NoJobsCard } from "./NoJobsCard";
-import { JobMatchesCard } from "./JobMatchesCard",;
-import { NoJobsCard } from "./NoJobsCard",    isLoading,;
 
-
-import { useAuth } from "@/hooks/useAuth",""
-import { Loader2 } from "lucide-react",""
-import { Badge } from "@/components/ui/badge",""
-import { useJobSuggestions } from "@/hooks/useJobSuggestions",""
-import { JobMatchesCard } from "./JobMatchesCard";""
-import { NoJobsCard } from "./NoJobsCard";""
-import { JobMatchesCard } from "./JobMatchesCard",""
-import { NoJobsCard } from "./NoJobsCard","
 interface SuggestedJobsProps {
   talentId?: string
 }
@@ -52,164 +35,7 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
   const currentTalentId = talentId || user?.id,
   const { 
   const { user } = useAuth();
-  const {
-  // TODO: Implement
-    isLoading,
-pr-12325
-    updateJobMatchStatus, 
-    categorizedMatches: { 
-      newMatches, 
-      viewedMatches, 
-      appliedMatches 
-    } 
-  } = useJobSuggestions(currentTalentId),
 
-  const currentTalentId = talentId |user?.id;
-  const {
-    isLoading;
-    updateJobMatchStatus
-    categorizedMatches: {
-      newMatches
-      viewedMatches
-      appliedMatches
-    }
-  } = useJobSuggestions(currentTalentId);
-  const handleApply = (matchId: string, jobId: string) => {
-    updateJobMatchStatus(matchId, 'applied');
-    // In a real app, this might redirect to application form or open a modal
-
-import {useAuth} from "@/hooks/useAuth";
-import {Loader2} from "lucide-react";
-import {Badge} from "@/components/ui/badge";
-import {useJobSuggestions} from "@/hooks/useJobSuggestions";
-import {JobMatchesCard} from "./JobMatchesCard";
-import {NoJobsCard} from "./NoJobsCard";
-updateJobMatchStatus(matchId, 'applied'),
-    // In a real app, this might redirect to application form or open a modal
-  }
-  const handleDecline = (matchId: string) => {
-    updateJobMatchStatus(matchId, 'declined')
-  }
-  },
-
-  const handleDecline = (matchId: string) => {
-    updateJobMatchStatus(matchId, 'declined')
-  },
-
-  if (isLoading) {
-    return (
-      <div className="flex items-center justify-center p-6">
-        <Loader2 className="w-6 h-6 animate-spin text-primary" />
-      </div>
-    )
-
-import { useAuth } from "@/hooks/useAuth",;
-import { Loader2 } from "lucide-react",;
-import { Badge } from "@/components/ui/badge",;
-import { useJobSuggestions } from "@/hooks/useJobSuggestions",;
-import { JobMatchesCard } from "./JobMatchesCard",;
-import { NoJobsCard } from "./NoJobsCard",;
-
-interface SuggestedJobsProps {;
-  talentId?: string;
-}
-
-export function SuggestedJobs(): any ({ talentId }: SuggestedJobsProps) {;
-  const { user } = useAuth();
-  const currentTalentId = talentId || user?.id;
-  const { ;
-    isLoading;
-    updateJobMatchStatus, ;
-    categorizedMatches: { ;
-import { useAuth } from "@/hooks/useAuth",;
-import { Loader2 } from "lucide-react",;
-import { Badge } from "@/components/ui/badge",;
-import { useJobSuggestions } from "@/hooks/useJobSuggestions",;
-import { JobMatchesCard } from "./JobMatchesCard",;
-import { NoJobsCard } from "./NoJobsCard",;
-;
-interface SuggestedJobsProps {;
-  talentId?:string,;
-}
-;
-export function SuggestedJobs({ talentId } SuggestedJobsProps) {;
-  const { user } = useAuth(),;
-  const currentTalentId = talentId || user?.id,;
-  const { ;
-    isLoading,;
-    updateJobMatchStatus, ;
-    categorizedMatches:{ ;
-      newMatches, ;
-      viewedMatches, ;
-      appliedMatches ;
-    } ;
-  } = useJobSuggestions(currentTalentId);
-
-  const handleApply = (matchId: string, jobId: string) => {;
-    updateJobMatchStatus(matchId, 'applied');
-interface SuggestedJobsProps {;
-  talentId?: string;
-}
-;
-export function SuggestedJobs({ talentId }: SuggestedJobsProps) {;
-  const { user } = useAuth(),;
-  const currentTalentId = talentId || user?.id,;
-  const {;
-    isLoading,;
-    updateJobMatchStatus,;
-    categorizedMatches: {;
-      newMatches,;
-      viewedMatches,;
-      appliedMatches;
-    } ;
-  } = useJobSuggestions(currentTalentId),;
-  const handleApply = (matchId: string, jobId: string) => {;
-    updateJobMatchStatus(matchId, 'applied'),;
-    // In a real app, this might redirect to application form or open a modal;
-  };
-
-  const handleDecline = (matchId: string) => {;
-    updateJobMatchStatus(matchId, 'declined');
-  };
-if (isLoading) {;
-    return (
-
-  return (
-    <div className="space-y-6">;
-      {/* New Matches Section */}
-
-  if (newMatches && newMatches.length === 0 && viewedMatches && viewedMatches.length === 0 && appliedMatches && appliedMatches.length === 0) {;
-    return <NoJobsCard />;
-  }
-  return (
-    <div className="space-y-6">;
-      {/* New Matches Section */}
-      {newMatches && newMatches.length > 0 && (;
-  } = useJobSuggestions(currentTalentId),;
-;
-  const handleApply = (matchId:string, jobId:string) => {;
-    updateJobMatchStatus(matchId, 'applied'),;
-    // In a real app, this might redirect to application form or open a modal;
-  },;
-;
-  const handleDecline = (matchId:string) => {;
-    updateJobMatchStatus(matchId, 'declined'),;
-  },;
-;
-  if (isLoading) {;
-    return (;
-
-  if (isLoading) {;
-    return (
-      <div className="flex items-center justify-center p-6">;
-        <Loader2 className="w-6 h-6 animate-spin text-primary" />;
-      </div>;
-    );
-
-  }
-
-  if (newMatches && newMatches.length === 0 && viewedMatches && viewedMatches.length === 0 && appliedMatches && appliedMatches.length === 0) {;
-    return <NoJobsCard />;
   }
 
   return (
@@ -232,7 +58,6 @@ if (isLoading) {;
   if (newMatches.length === 0 && viewedMatches.length === 0 && appliedMatches.length === 0) {
     return <NoJobsCard />
   }
-  
   return (
     <div className="space-y-6">
       {/* New Matches Section */}

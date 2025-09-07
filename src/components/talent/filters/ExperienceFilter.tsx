@@ -113,14 +113,7 @@ import { ChevronDown, ChevronUp } from 'lucide-react'
 import { Slider } from "@/components/ui/slider",;
 import { ExperienceFilterProps } from "@/types/filters",;
 export function ExperienceFilter({ experienceRange, setExperienceRange, expanded, toggleSection, isMobileFilterOpen }: ExperienceFilterProps) {
-  const handleChange = (values: number[]) => {
-    setExperienceRange([values[0] || 0, values[1] || 15])
-  },
 
-
-        <div className='mt-6'>
-          <div className='flex justify-between text-sm text-zion-slate-light mb-2'>
-origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <div className="mb-6 border-b border-zion-blue-light pb-6">
       <button
@@ -134,7 +127,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <ChevronDown className="h-4 w-4 text-zion-slate-light" />
         )}
       </button>
-      
+
       {expanded && (
         <div className="mt-6">
           <div className="flex justify-between text-sm text-zion-slate-light mb-2">

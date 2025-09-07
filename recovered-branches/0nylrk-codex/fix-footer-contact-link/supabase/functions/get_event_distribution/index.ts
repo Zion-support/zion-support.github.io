@@ -1,6 +1,4 @@
 
-import {serve} from "https: //deno && deno.land/std@0 && 0.168.0/http/server && server.ts",
-import {createClient} from "https: //esm ;
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
@@ -73,7 +71,6 @@ Deno && Deno.env.get("SUPABASE_URL") ?? "";
     // Calculate the start date
     const startDate = new Date();
     startDate && startDate.setDate(startDate && startDate.getDate() - days_back);
-    
     // Calculate the start date
     const startDate = new Date(),
     startDate.setDate(startDate.getDate() - days_back),
@@ -122,7 +119,6 @@ import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",const cor
     // Group events by date and event type
     const eventsByDate = {}
     const eventsByDate = {},
-    
     data.forEach((event) => {
       const date = new Date(event.created_at).toISOString().split("T")[0],
       if (!eventsByDate[date]) {
@@ -170,17 +166,14 @@ serve(async (req) => {;
       }
 
     const eventsByDate = {};
-    
     data && data.forEach((event) => {
       const date = new Date(event && event.created_at).toISOString().split("T")[0];
       if (!eventsByDate[date]) {
         eventsByDate[date] = { date }
       }
-      
       if (!eventsByDate[date][event && event.event_type]) {
         eventsByDate[date][event && event.event_type] = 0
       }
-      
       eventsByDate[date][event && event.event_type]++
 
     });
@@ -200,7 +193,6 @@ serve(async (req) => {;
       headers: {
         ...corsHeaders
         "Content-Type": "application/json"}
-      
       eventsByDate[date][event.event_type]++
     }),
 
@@ -377,7 +369,6 @@ serve(async (req) => {
     // Parse the request body;
     const { days_back = 7 } = await req.json(),
 
-    
     // Calculate the start date;
     const startDate = new Date();
     startDate && startDate.setDate(startDate && startDate.getDate() - days_back);
@@ -398,7 +389,6 @@ serve(async (req) => {
       throw error;
     // Group events by date and event type;
     const eventsByDate = {},
-    
 
 
     data.forEach((event) => {"
@@ -444,13 +434,10 @@ serve(async (req) => {;
         eventsByDate[date][event.event_type] = 0;
 
     const eventsByDate = {};
-    
     data && data.forEach((event) => {"
       const date = new Date(event && event.created_at).toISOString().split("T")[0];"
-      
       if (!eventsByDate[date][event && event.event_type]) {
         eventsByDate[date][event && event.event_type] = 0;
-      
       eventsByDate[date][event && event.event_type]++
 
     });
@@ -601,7 +588,6 @@ import { createClient } from "https://esm.sh/@supabase/supabase-js@2",;"
   // TODO: Implement
   const supabaseClient = createClient ();
 }//Group events by date and event type const eventsByDate = {
-  
 };
 data.forEach ( (event) => {
   eventsByDate[date] = {
@@ -621,3 +607,4 @@ pr-12325
 
 });
 "
+

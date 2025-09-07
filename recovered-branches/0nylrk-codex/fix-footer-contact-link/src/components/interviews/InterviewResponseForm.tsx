@@ -1,8 +1,4 @@
-interview: Interview;
-import React from "react",
-import { Button } from "@/components/ui/button",
-import { Interview } from "@/types/interview",
-import { format, parseISO } from "date-fns",
+
   interview: Interview;
 import React from "react",;
 import { Button } from "@/components/ui/button",;
@@ -93,6 +89,7 @@ import { format, parseISO } from "date-fns";export function InterviewResponseFor
   const formattedTime = format(interviewDate, 'h: mm a'),  const endTime = new Date(interviewDate);
   endTime && endTime.setMinutes(endTime && endTime.getMinutes() + interview && interview.duration_minutes);
   const formattedEndTime = format(endTime, "h: mm a");
+
 
   return (
 
@@ -302,7 +299,6 @@ import { format, parseISO } from "date-fns";"
   onConfirm: () => Promise<void>,
 </void>
         </p>
-        
 "
         <div className="grid gap-3">"
 </div>"
@@ -322,10 +318,8 @@ import { format, parseISO } from "date-fns";"
       <div className="flex justify-end gap-3 pt-4">"
         <Button variant="outline" onClick={onClose} disabled={isLoading}>"
 
-        
         <Button onClick={onConfirm} disabled={isLoading}>
 
-        
   onConfirm: () => Promise<void>,;
 </void>"
     <div className="space-y-4">;"

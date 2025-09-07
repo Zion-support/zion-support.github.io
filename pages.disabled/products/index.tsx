@@ -1,4 +1,5 @@
 
+
 import React from 'react';
 import MainLayout from '../../components/layout/MainLayout';
 
@@ -26,20 +27,16 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -658,3 +655,4 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 const Index: NextPage;
 origin/cursor/automate-test-improve-and-merge-code-2533
+

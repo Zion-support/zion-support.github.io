@@ -1,29 +1,4 @@
 
-
-
-
-
-
-import fetch from 'node - fetch';
-dotenv.config (),
-const api_base = process.env.API_ORIGIN || 'http: //localhost:4000';
-const app = new App ({
-  token: process.env.SLACK_BOT_TOKEN,
-  signing_secret: process.env.SLACK_SIGNING_SECRET,
-  app_token: process.env.SLACK_APP_LEVEL_TOKEN,
-  socket_mode: true;
-}),
-function help_text (): string {
-  return [;
-    '*Zion Assistant Commands*`/zion post - job [role]` – generate a job post`/zion suggest - talent [query]` – AI match talent`/zion track - project [name]` – milestone status`/zion help` – command list';
-  ].join ('\n');
-
-
-
-
-
-
-
 }
 app.command ('/zion', async ({ command, ack, respond }) => {
   await ack (),
@@ -956,3 +931,4 @@ import dotenv from 'dotenv';
   console.log(`⚡️ Zion Slack bot running on port ${port}`);
 })();
 (async () => {}
+

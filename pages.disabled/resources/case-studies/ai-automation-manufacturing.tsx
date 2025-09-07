@@ -1,13 +1,4 @@
 
-    id: 'ai-automation-manufacturing',
-    title: 'AI-Powered Manufacturing Automation',
-    company: 'Global Manufacturing Corp',
-    industry: 'Manufacturing',
-    results: '40% increase in production efficiency, 60% reduction in downtime',
-    description: 'How we implemented autonomous AI systems to revolutionize manufacturing processes.'
-  };
-
-  },
 
   };
 
@@ -128,6 +119,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     quality control, and production optimization. Each system was designed to work independently while
 
                     Our approach involved deploying autonomous AI systems across three key areas: predictive maintenance, 
+
                     quality control, and production optimization. Each system was designed to work independently while 
                     Our approach involved deploying autonomous AI systems across three key areas: predictive maintenance,
                     quality control, and production optimization. Each system was designed to work independently while

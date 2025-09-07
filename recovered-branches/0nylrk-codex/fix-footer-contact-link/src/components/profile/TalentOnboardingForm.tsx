@@ -1,5 +1,5 @@
 
-// Define the form schema with validation
+
 
 const talentSchema = z.object({
   // Step 1: Basic Info
@@ -75,7 +75,6 @@ const talentSchema = z.object({
     fullName: z.string().min(2, "Name must be at least 2 characters"),
     professionalTitle: z.string().min(2, "Professional title is required"),
     profilePicture: z.any().optional()}),
-  
   // Step 2: Experience
   experience: z.object({
     bio: z.string().min(50, "Bio must be at least 50 characters"),
@@ -111,7 +110,6 @@ const talentSchema = z.object({
     fullName: z.string().min(2, "Name must be at least 2 characters"),""
     professionalTitle: z.string().min(2, "Professional title is required"),"
     profilePicture: z.any().optional()}),
-  
 
 
   // Step 2: Experience;,
@@ -153,7 +151,6 @@ const talentSchema = z.object({
     fullName: z.string().min(2, "Name must be at least 2 characters");""
     professionalTitle: z.string().min(2, "Professional title is required");"
     profilePicture: z.any().optional()})"
-  
   // Step 2: Experience;,
     bio: z.string().min(50, "Bio must be at least 50 characters"),"
         title: z.string().min(2, "Project title is required"),""
@@ -228,7 +225,6 @@ const talentSchema = z.object({
   const totalSteps = 4;
     ).min(1, "Add at least one key project"),
     yearsOfExperience: z.string().min(1, "Years of experience is required")}),
-  
   // Step 3: Skills & Tech Stack
   skills: z.object({
     skillsList: z.string().min(2, "Add at least one skill");
@@ -257,7 +253,6 @@ const { enhanceProfile, isGenerating } = useTalentProfileEnhancer();
   const totalSteps = 4;
     ).min(1, "Add at least one key project"),
     yearsOfExperience: z.string().min(1, "Years of experience is required")}),
-  
   // Step 3: Skills & Tech Stack
   skills: z.object({
     skillsList: z.string().min(2, "Add at least one skill");
@@ -291,9 +286,7 @@ export function TalentOnboardingForm() {
   const [cvFileName, setCvFileName] = useState<string | null>(null),
   const [isSubmitting, setIsSubmitting] = useState(false),
   const [showSuccessScreen, setShowSuccessScreen] = useState(false),
-  
   const { enhanceProfile, isGenerating } = useTalentProfileEnhancer(),
-  
   const totalSteps = 4,
   const form = useForm<TalentFormValues>({
         url: z.string().url("Must be a valid URL").min(5, "URL is required")})  const form = useForm<TalentFormValues>({
@@ -347,7 +340,6 @@ const file = e.target.files?.[0];
   }
     },
     reader.readAsDataURL(file),
-    
     // Store the file in the form data
     form.setValue("basicInfo.profilePicture", file)
   },
@@ -381,7 +373,6 @@ const file = e.target.files?.[0];
       .from('resumes')
       .upload(fileName, file);
       .upload(fileName, file),
-      
     if (cvError) {
       console.error("Error uploading CV:", cvError),
       throw new Error("Failed to upload CV")
@@ -1123,4 +1114,5 @@ return publicUrl;
 "`;
 pr-12325
 </HTMLInputElement>"
+
 

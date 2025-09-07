@@ -16,42 +16,6 @@ pr-12325
   CertificationsSection,
 } from "./preview";
 
-import {Resume} from '@/types/resume';
-import {PreviewHeader, ResumeBasicInfoSection, WorkExperienceSection, EducationSection, SkillsSection, CertificationsSection} from './preview';
-
-import { Resume } from '@/types/resume',;
-import {;
-  PreviewHeader,;
-  ResumeBasicInfoSection,;
-  WorkExperienceSection,;
-  EducationSection,;
-  SkillsSection,;
-  CertificationsSection;
-} from './preview',;
-interface PreviewResumeProps {;
-  resume: Resume;
-  onBack: () => void;import { Resume } from "@/types/resume";
-import {
-  CertificationsSection,"
-} from "./preview";"
-interface PreviewResumeProps {
-  // TODO: Implement
-}
-  resume: Resume;,
-  onBack: () => void;
-}
-"
-import { Resume } from "@/types/resume";"
-import {
-  // TODO: Implement
-}
-  PreviewHeader,
-  ResumeBasicInfoSection,
-  WorkExperienceSection,
-  EducationSection,
-  SkillsSection,
-  CertificationsSection,
-} from "./preview";
 
 interface PreviewResumeProps {
   resume: Resume;

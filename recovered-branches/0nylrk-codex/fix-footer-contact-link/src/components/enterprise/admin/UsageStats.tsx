@@ -1,14 +1,8 @@
+
 import React from "react",
 import { Slider } from "@/components/ui/slider",
 import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",
-import React from "react";
-import { Slider } from "@/components/ui/slider";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { toast } from "@/hooks/use-toast";
-import {
 
   Card
   CardContent
@@ -155,6 +149,7 @@ export function UsageStats() {
         </Card>
         <Card>
   CardTitle        <Card>
+
           <CardHeader>
             <CardTitle>Candidate Contacts</CardTitle>
             <CardDescription>
@@ -570,10 +565,8 @@ export function UsageStats() {
             <Button size="sm" onClick={handleSaveChanges}>Save Changes</Button>"
           </CardFooter>
         </Card>
-        
 
 
-        
         <Card>
 </Card>
           <CardHeader>
@@ -623,13 +616,11 @@ export function UsageStats() {
         <Card />
 
 
-        
 
 "
             <Button size="sm" onClick={handleSaveChanges}>Save Changes</Button>"
           </CardFooter>
         </Card>
-        
         <Card>
 </Card>
           <CardHeader>
@@ -677,13 +668,11 @@ export function UsageStats() {
 
 
 
-        
 
 "
             <Button size="sm" onClick={handleSaveChanges}>Save Changes</Button>"
           </CardFooter>
         </Card>
-        
         <Card>
 </Card>
           <CardHeader>
@@ -746,10 +735,8 @@ export function UsageStats() {
 
 
 
-      
 
 
-      
 
 
       "
@@ -1320,7 +1307,6 @@ import { Progress } from "@/components/ui/progress",")
             <CardTitle>Job Postings
             <CardDescription>
 
-            
           <CardContent className="space-y-4">"
 
             <div>
@@ -1335,20 +1321,14 @@ import { Progress } from "@/components/ui/progress",")
                 <div className="col-span-2">"
                   <Input type="number" min="1" defaultValue="50" />"
 
-          
           <CardFooter>
             <Button size="sm" onClick={handleSaveChanges}>Save Changes"
-          
-        
-        
 
 
-        
 
 
             <CardTitle>Candidate Contacts
 
-            
 
                 <div className="text-sm font-medium">"
                 <div className="text-sm font-medium">Monthly contact credits</div>""
@@ -1357,24 +1337,15 @@ import { Progress } from "@/components/ui/progress",")
 
                   <Input type="number" min="1" defaultValue="500" />"
 
-          
             <Button size="sm" onClick={handleSaveChanges}>"
 
-            
-          
-        
 
 
-        
 
-          
-        
-        
 
 
             <CardTitle>AI Features
 
-            
 
                 <div className="text-sm font-medium">AI matching credits</div>""
                 <Badge variant="outline">435 / 1000"
@@ -1382,23 +1353,14 @@ import { Progress } from "@/components/ui/progress",")
 
                   <Input type="number" min="1" defaultValue="1000" />"
 
-          
-
-            
-          
-        
 
 
-        
 
-          
-        
-        
+
 
 
             <CardTitle>Budget Controls
 
-            
 
                 <div className="text-sm font-medium">Monthly budget</div>""
                 <Badge variant="outline">$1,250 / $5,000"
@@ -1415,21 +1377,13 @@ import { Progress } from "@/components/ui/progress",")
                     <option value="90">90% of limit</option>""
                     <option value="95">95% of limit</option>"
                   </select>
-          
-
-            
-          
-        
 
 
-      
 
 
-      
 
 
-          
-        
+
       <div className="bg-muted/50 rounded-lg p-6 flex items-center justify-between">"
         <div className="flex items-center gap-4">"
           <div className="h-10 w-10 rounded-full bg-primary/20 flex items-center justify-center">"

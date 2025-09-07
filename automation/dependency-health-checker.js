@@ -11,7 +11,7 @@
 
 #!/usr/bin/env node
 
-<<<<<<<< HEAD:corrupted_backup/dependency-health-checker.js
+<:corrupted_backup/dependency-health-checker.js
 
 
 #!/usr/bin/env node
@@ -115,7 +115,7 @@ class DependencyHealthChecker {
     }
   }
 }
-<<<<<<<< HEAD:automation/dependency-health-checker.js
+<:automation/dependency-health-checker.js
 
 <:automation/dependency-health-checker.js
 
@@ -132,7 +132,7 @@ class DependencyHealthChecker {
 
 #!/usr/bin/env node
 
-<<<<<<<< HEAD:corrupted_backup/dependency-health-checker.js
+<:corrupted_backup/dependency-health-checker.js
 
 #!/usr/bin/env node
 
@@ -204,9 +204,9 @@ const {
 if (require.main === module) {
   const checker = new DependencyHealthChecker();
   checker.run().catch(console.error);
-<<<<<<<< HEAD:corrupted_backup/dependency-health-checker.js
+<:corrupted_backup/dependency-health-checker.js
 }
-<<<<<<<< HEAD:automation/dependency-health-checker.js
+<:automation/dependency-health-checker.js
 
 <:automation/dependency-health-checker.js
 

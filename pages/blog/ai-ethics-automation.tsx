@@ -1,10 +1,11 @@
+
 import Link from 'next/link';
 
 import React from 'react',
 
 import React from 'react',;
 import React from 'react';
-origin/cursor/automate-test-improve-and-merge-code-2533
+
 export default function AIEthicsAutomation() {
   return (
     <>

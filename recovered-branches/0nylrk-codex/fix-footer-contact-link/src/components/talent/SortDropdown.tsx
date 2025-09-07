@@ -1,13 +1,4 @@
-import React from "react";
-import { Button } from "@/components/ui/button";
-import { SORT_OPTIONS } from "@/data/sortOptions";
-import { SortDesc, ChevronDown } from "lucide-react";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
+
 
 import React from './react';
 import { Button  } from '@/components / ui / button';
@@ -160,8 +151,6 @@ interface SortDropdownProps {;
 
           <ChevronDown className="h-4 w-4 ml-2 opacity-50" />"
 
-        
-      
 </ChevronDown>
 
         </Button>
@@ -176,11 +165,6 @@ interface SortDropdownProps {;
             key={option.value})
             onClick={() => setSortOption(option.value)}
 
-          
-      
-    
-          
-      
 pr-12325
 </DropdownMenuItem>
 

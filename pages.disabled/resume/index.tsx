@@ -1,15 +1,4 @@
-permanent: false}}
-}
-export default function ResumeIndex() { return null }
 
-      destination: '/resume/preview',
-      permanent: false}}
-}
-export default function ResumeIndex() { return null }
-import { GetServerSideProps } from 'next',
-import { GetServerSideProps } from 'next';
-
-import { GetServerSideProps } from 'next',;
 export const getServerSideProps: GetServerSideProps = async () => {
   return {
     redirect: {
@@ -43,3 +32,4 @@ import { GetServerSideProps } from 'next';
 export const getServerSideProps: GetServerSideProps;
 export default function ResumeIndex() { return null }
 origin/cursor/automate-test-improve-and-merge-code-2533
+

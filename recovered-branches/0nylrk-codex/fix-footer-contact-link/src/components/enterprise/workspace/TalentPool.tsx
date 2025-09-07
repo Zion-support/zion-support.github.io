@@ -88,12 +88,7 @@ id: "talent-1",
   },
 
 
-import React from "react",;
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge",;
-import { Button } from "@/components/ui/button",;
+
   return (
     <Card>
       <CardHeader>
@@ -512,7 +507,6 @@ import {Button} from "@/components/ui/button";"
                 <div className="flex items-center gap-2">"
                   <Badge variant="outline" className="bg-purple-100 text-purple-800 border-purple-200">"
 
-                  
               <div className="mt-2 flex flex-wrap gap-1">"
                   <Badge key={index} variant="secondary" className="text-xs">"
       case "available": return <Badge className="bg-green-500">Available;""
@@ -540,7 +534,6 @@ import {Button} from "@/components/ui/button";"
         </div>;
       ;"
 
-                  
 
                   ;
               <div className="mt-3 flex gap-2">;"
@@ -595,14 +588,10 @@ return (<Card> <CardHeader> <div className="flex items-center justify-between" >
 }</div> <div className="mt-3 flex gap-2" > <Button size="sm" variant="outline" >View Profile <Button size="sm" >Contact </div> </div>) )"
 }</div>  ) "
 
-                  
 
-                  
               <div className="mt-3 flex gap-2">"
                 <Button size="sm" variant="outline">View Profile""
                 <Button size="sm">Contact"
-      
-    
     ;]"
 pr-12325
 </div>"

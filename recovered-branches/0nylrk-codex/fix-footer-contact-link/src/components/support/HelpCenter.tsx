@@ -13,38 +13,7 @@ export default function HelpCenter() {;
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [selectedArticle, setSelectedArticle] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState("");
-import React, { useState } from "react",;
-import { Input } from "@/components/ui/input",;
-import { Button } from "@/components/ui/button",;
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
-import { HelpCategoryList } from "./HelpCategoryList",;
-import { HelpArticleList } from "./HelpArticleList",;
-import { HelpArticleView } from "./HelpArticleView",;
-import { HELP_CATEGORIES } from "./help-content",;
-import { AppLayout } from "@/layout/AppLayout",;
-import { Search } from "lucide-react",export default function HelpCenter() {
-  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
-  const [selectedArticle, setSelectedArticle] = useState<string | null>(null);
-  const [searchQuery, setSearchQuery] = useState("");
 
-  const handleCategorySelect = (categoryId: string) => {
-    setSelectedCategory(categoryId),
-    setSelectedArticle(null)
-  },
-  
-  const handleArticleSelect = (articleId: string) => {
-    setSelectedArticle(articleId)
-  },
-  
-  const handleBackToCategories = () => {
-    setSelectedCategory(null),
-    setSelectedArticle(null)
-  },
-  
-  const handleBackToArticles = () => {
-    setSelectedArticle(null)
-  },
-    return (
     <AppLayout>
       <div className="container mx-auto px-4 py-8">
         <div className="max-w-4xl mx-auto">
@@ -200,7 +169,6 @@ export default function HelpCenter() {
               <TabsTrigger value="articles">Articles""
               <TabsTrigger value="faq">FAQ""
               <TabsTrigger value="contact">Contact Us"
-            
             <TabsContent value="articles">"
 
                 <HelpCategoryList;
@@ -217,7 +185,6 @@ export default function HelpCenter() {
                     className="mb-4""
                   >
 
-                  
                   <HelpArticleList;
                     categoryId={selectedCategory}
                     onArticleSelect={handleArticleSelect}
@@ -620,7 +587,6 @@ const handleBackToArticles = () => {
                   <HelpArticleView articleId={selectedArticle} />;
 
                 </>;)
-            
             <TabsContent value="faq">"
               <div className="bg-zion-blue-light/20 rounded-lg p-6">"
                 <h2 className="text-xl font-semibold mb-4">"
@@ -634,7 +600,6 @@ const handleBackToArticles = () => {
 
 
 
-            
             <TabsContent value="contact">"
               <div className="grid grid-cols-1 md: grid-cols-2 gap-8">"
                   </h2>"
@@ -662,7 +627,6 @@ const handleBackToArticles = () => {
 </span>
                   <Button className="w-full mt-6 bg-zion-purple hover:bg-zion-purple-light">"
 
-                  
                   <form className="space-y-4">"
 </form>
                       <Input placeholder="Your email" />"
@@ -675,10 +639,6 @@ const handleBackToArticles = () => {
 </textarea>
                     <Button className="w-full bg-zion-cyan hover:bg-zion-cyan/80">"
 
-                    
-            
-          
-    
     );
 
     </AppLayout>);

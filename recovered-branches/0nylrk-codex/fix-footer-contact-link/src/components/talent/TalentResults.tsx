@@ -12,28 +12,7 @@ import { ResultsHeader } from "@/components/talent/ResultsHeader",
 import { TalentGrid } from "@/components/talent/TalentGrid",
 
 
-import React from "react",;
-import { TalentProfile } from "@/types/talent",;
-import { ActiveFilters } from "@/components/talent/ActiveFilters",;
-import { ResultsHeader } from "@/components/talent/ResultsHeader";
-import { TalentGrid } from "@/components/talent/TalentGrid";
-import { ResultsHeader } from "@/components/talent/ResultsHeader",;
-import { TalentGrid } from "@/components/talent/TalentGrid",    selectedSkills: string[],;
 
-
-
-import React from "react";""
-import {TalentProfile} from "@/types/talent";""
-import {ActiveFilters} from "@/components/talent/ActiveFilters";""
-import {ResultsHeader} from "@/components/talent/ResultsHeader";""
-import {TalentGrid} from "@/components/talent/TalentGrid";""
-import React from "react",""
-import { TalentProfile } from "@/types/talent",""
-import { ActiveFilters } from "@/components/talent/ActiveFilters",""
-import { ResultsHeader } from "@/components/talent/ResultsHeader";""
-import { TalentGrid } from "@/components/talent/TalentGrid";""
-import { ResultsHeader } from "@/components/talent/ResultsHeader",""
-import { TalentGrid } from "@/components/talent/TalentGrid","
 interface TalentResultsProps {
   // TODO: Implement
 }
@@ -46,22 +25,6 @@ interface TalentResultsProps {
   isAuthenticated: boolean;
   activeFiltersProps: {
 
-import React from "react";
-import {TalentProfile} from "@/types/talent";
-import {ActiveFilters} from "@/components/talent/ActiveFilters";
-import {ResultsHeader} from "@/components/talent/ResultsHeader";
-import {TalentGrid} from "@/components/talent/TalentGrid";
-selectedSkills: string[]
-    toggleSkill: (skill: string) => void
-    selectedAvailability: string[]
-    toggleAvailability: (availability: string) => void
-    selectedRegions: string[]
-    toggleRegion: (region: string) => void
-    priceRange: [number, number];
-
-    setPriceRange: (range: [number, number]) => void;
-    experienceRange: [number, number],
-    setExperienceRange: (range: [number, number]) => void;
 "
 import {TalentGrid} from "@/components/talent/TalentGrid";"
     selectedSkills: string[],
@@ -76,6 +39,7 @@ pr-12325
     setPriceRange: (range: [number, number]) => void,
     experienceRange: [number, number],
     setExperienceRange: (range: [number, number]) => void,
+
 
 
     clearFilters: () => void;
@@ -373,13 +337,11 @@ export function TalentResults(_{_filteredTalents, _isLoading, _viewProfile, _han
     <div className="flex-1">
       {/* Active filters */}
       <ActiveFilters {_...activeFiltersProps} />
-      
       {_/* Results count */}
       <ResultsHeader 
         isLoading={_isLoading} 
         resultCount={_filteredTalents.length} 
       />
-      
       {_/* Talents grid */}
       <TalentGrid 
         talents={_filteredTalents}

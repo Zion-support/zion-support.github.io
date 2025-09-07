@@ -15,12 +15,10 @@ interface SummaryStepProps {
 export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {;
   const [isMatching, setIsMatching] = useState(false);
   const [matches, setMatches] = useState<MatchResult[]>([]);
-  
   // Run AI matching when the component mounts
   useEffect(() => {
     const runMatching = async () => {
       if (!formData.projectDescription) return;
-      
       setIsMatching(true);
       try {
         // Create a query string from the form data
@@ -121,7 +119,6 @@ import {toast} from "@/hooks/use-toast";  formData: QuoteFormData,;
         // Get AI matches;
         const results = await findMatches(;
 
-        
 ;
 export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {;
   const [isMatching, setIsMatching] = useState(false),;
@@ -140,7 +137,6 @@ export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {;
           ${formData.budget.type === 'fixed' ? `budget ${formData.budget.amount}` : ''}
           ${formData.timeline}
         `,
-        
         // Get AI matches
         const results = await findMatches(
           queryString,
@@ -298,7 +294,6 @@ pr-12325
         setIsMatching (false);
       }
     runMatching()
-    
   }, [formData]);
   const handleSelectMatch = (match: MatchResult) => {
     // Update the form with the selected match
@@ -314,15 +309,12 @@ pr-12325
   // Extract just the items from each MatchResult for the AIMatchingResults component
   const matchItems = matches.map(match => match.item);
   },
-  
   // Extract just the items from each MatchResult for the AIMatchingResults component
   const matchItems = matches.map(match => match.item),
 
 
-  
   // Extract just the items from each MatchResult for the AIMatchingResults component
   const matchItems = matches.map(match => match.item),
-  
 
   // Map the onSelectMatch handler to work with the item directly
   const handleItemSelect = (item: any) => {
@@ -338,7 +330,6 @@ pr-12325
     }
     },
 
-    
 
 
       } finally {
@@ -358,10 +349,8 @@ pr-12325
       title: "Match Selected"",)"
   description: `You've selected ${match.item.title}`})'
   },
-  
   // Extract just the items from each MatchResult for the AIMatchingResults component;
   const matchItems = matches.map(match => match.item),
-  
 
 
   // Map the onSelectMatch handler to work with the item directly;
@@ -379,7 +368,7 @@ pr-12325
       <h3 className="text-xl font-semibold text-white mb-4">Review Your Request</h3>
   }
   },
-  
+
   return (
     <div className="space-y-6">
       <h3 className="text-xl font-semibold text-white mb-4">Review Your Request</h3>
@@ -453,7 +442,6 @@ pr-12325
 
 
     },
-    
 
 
   // TODO: Implement
@@ -468,10 +456,8 @@ pr-12325
     toast({"
       title: "Match Selected"",)"`;
   description: `You've selected ${match.item.title}`})
-  
   // Extract just the items from each MatchResult for the AIMatchingResults component;
   const matchItems = matches.map(match => match.item),
-  
 
 
   // Map the onSelectMatch handler to work with the item directly;
@@ -482,7 +468,6 @@ pr-12325
       handleSelectMatch(matchResult)
 
 
-  
   return (
     <div className="space-y-6">"
 </div>"
@@ -801,7 +786,6 @@ export function SummaryStep({ formData, updateFormData } SummaryStepProps) {;
 }, [formData]);
 const handleSelectMatch = (match: MatchResult) => {
   //Update the form with the selected match updateFormData ({
-  
   // Run AI matching when the component mounts,
 useEffect(() => {
     const runMatching = async () => {
@@ -812,12 +796,10 @@ interface SummaryStepProps {formData: QuoteFormData,
 
 export function SummaryStep(_{formData, updateFormData}: SummaryStepProps) {const [isMatching, setIsMatching] = useState(false);
   const [matches, setMatches] = useState<MatchResult[]>([]);
-  
   // Run AI matching when the component mounts,
 useEffect_(() => {
     const runMatching = async () => {
       if (!formData.projectDescription) return;
-      
       setIsMatching(true),
       try {
         // Create a query string from the form data,
@@ -834,7 +816,6 @@ const results = await findMatches(
           formData.serviceType,
           3
         ),
-        
         setMatches(results)
       } catch (error) {
         console.error("Error during AI matching:", error),
@@ -850,24 +831,19 @@ const results = await findMatches(
           title: "Matching Error", description: "We couldn't find matches for your request. Please try again.", variant: "destructive"})
       } finally {setIsMatching(false)}
     };
-    
     runMatching()
   }, [formData]),
-  
   const handleSelectMatch = (match: MatchResult) => {_// Update the form with the selected match,
 updateFormData({
       specificItem: match.item,
       serviceCategory: match.item.category
     }),
-    
     toast({
       title: "Match Selected",
       description: `You've selected ${match.item.title}`})
   }  };
-  
   // Extract just the items from each MatchResult for the AIMatchingResults component,
 const matchItems = matches.map(match => match.item),
-  
   // Map the onSelectMatch handler to work with the item directly,
 const handleItemSelect = (item: any) => {
     // Find the original MatchResult that contains this item,
@@ -879,7 +855,6 @@ const matchResult = matches.find(match => match.item.id === item.id),
   return (
     <div className=&quot;space-y-6&quot;>
       <h3 className=&quot;text-xl font-semibold text-white mb-4&quot;>Review Your Request</h3>
-      
       {_/* AI Matching Results */}
       <AIMatchingResults,
 serviceType={formData.serviceType}
@@ -1154,30 +1129,22 @@ if ( {) {
                 <div className="text-white">{formData.serviceType}</div>"
                   <Label className="text-zion-slate-light">Selected Item""
                   <div className="text-white">{formData.specificItem.title}</div>"
-          
-        
         <h4 className="text-lg font-medium text-white mb-2">Project Details</h4>""
             <div className="space-y-4">"
                 <Label className="text-zion-slate-light">Project Name""
                 <div className="text-white">{formData.projectName}</div>"
                 <Label className="text-zion-slate-light">Project Description""
                 <div className="text-white whitespace-pre-wrap">{formData.projectDescription}</div>"
-          
-        
         <h4 className="text-lg font-medium text-white mb-2">Timeline</h4>""
                 <Label className="text-zion-slate-light">Timeline Type""
                 <div className="text-white capitalize">{formData.timeline}</div>"
                   <Label className="text-zion-slate-light">Start Date""
                   <div className="text-white">"
                   <Label className="text-zion-slate-light">End Date""
-          
-        
         <h4 className="text-lg font-medium text-white mb-2">Budget</h4>""
                 <Label className="text-zion-slate-light">Budget Type""
                 <div className="text-white capitalize">{formData.budget.type}</div>"
                 <Label className="text-zion-slate-light">Amount""
-          
-        
         <h4 className="text-lg font-medium text-white mb-2">Contact Information</h4>""
                 <Label className="text-zion-slate-light">Name""
                 <div className="text-white">{formData.contactInfo.name}</div>"
@@ -1187,8 +1154,6 @@ if ( {) {
                 <div className="text-white">{formData.contactInfo.email}</div>"
                 <Label className="text-zion-slate-light">Phone""
                 <div className="text-white">{formData.contactInfo.phone |"N/A"}</div>"
-          
-        
         serviceType={formData && formData.serviceType}
         projectDescription={formData && formData.projectDescription}
       />;

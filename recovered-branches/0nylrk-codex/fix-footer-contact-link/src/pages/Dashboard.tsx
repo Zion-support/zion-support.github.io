@@ -1,87 +1,9 @@
-import {useAuth} from "@/hooks/useAuth";
-import {Button} from "@/components/ui/button";
-import {Header} from "@/components/Header";
-import {Footer} from "@/components/Footer";
-import {CommunityDiscussion} from "@/components/CommunityDiscussion";
-import {Badge} from "@/components/ui/badge";
-import {UserCheck, Bell, MessageSquare, LogOut, Send, Settings} from "lucide-react";
-import {createTestNotification, createOnboardingNotification, createSystemNotification} from "@/utils/notifications";
-import {NotificationCenter} from "@/components/NotificationCenter";
-import {useToast} from "@/hooks/use-toast";
-import {Link} from "react-router-dom";
-export default function Dashboard() {;
 
-  const { user, logout } = useAuth();
-  const { toast } = useToast();
-import { useAuth } from "@/hooks/useAuth",;
-import { Button } from "@/components/ui/button",;
-import { Header } from "@/components/Header",;
-import { Footer } from "@/components/Footer",;
-import { CommunityDiscussion } from "@/components/CommunityDiscussion",;
-import { Badge } from "@/components/ui/badge",;
-import { UserCheck, Bell, MessageSquare, LogOut, Send, Settings } from "lucide-react",;
-import { createTestNotification, createOnboardingNotification, createSystemNotification } from "@/utils/notifications",;
-import { NotificationCenter } from "@/components/NotificationCenter",;
-import { useToast } from "@/hooks/use-toast";
-import { Link } from "react-router-dom";
-import { useAuth } from "@/hooks/useAuth";""
-import { Button } from "@/components/ui/button";""
-import { Header } from "@/components/Header";""
-import { Footer } from "@/components/Footer";""
-import { CommunityDiscussion } from "@/components/CommunityDiscussion";""
-import { Badge } from "@/components/ui/badge";"
-import {
-  // TODO: Implement
-}
-  UserCheck,
-  Bell,
-  MessageSquare,
-  LogOut,
-  Send,
-  Settings,"
-} from "lucide-react";"
-  // TODO: Implement
-  createTestNotification,
-  createOnboardingNotification,
-  createSystemNotification,"
-} from "@/utils/notifications";""
-import { NotificationCenter } from "@/components/NotificationCenter";""
-import { useToast } from "@/hooks/use-toast";""
-import { Link } from "react-router-dom";"
-pr-12325
 export default function Dashboard() {
   const { user, logout } = useAuth();
   const { toast } = useToast();
   if (!user) return null;
 
-  const { user, logout } = useAuth();
-  const { toast } = useToast();
-import { useAuth } from "@/hooks/useAuth",
-import { Button } from "@/components/ui/button",
-import { Header } from "@/components/Header",
-import { Footer } from "@/components/Footer",
-import { CommunityDiscussion } from "@/components/CommunityDiscussion",
-import { Badge } from "@/components/ui/badge",
-import { UserCheck, Bell, MessageSquare, LogOut, Send, Settings } from "lucide-react",
-import { createTestNotification, createOnboardingNotification, createSystemNotification } from "@/utils/notifications",
-import { NotificationCenter } from "@/components/NotificationCenter",
-import { useToast } from "@/hooks/use-toast";
-import { Link } from "react-router-dom";
-export default function Dashboard() {
-  const { user, logout } = useAuth();
-  const { toast } = useToast();
-  if (!user) return null;
-  const { user, logout } = useAuth();
-  const { toast } = useToast();
-  if (!user) return null;
-import { useToast } from "@/hooks/use-toast",
-import { Link } from "react-router-dom",
-export default function Dashboard() {
-  const { user, logout } = useAuth(),
-  const { toast } = useToast(),
-
-  if (!user) return null,
-  const handleTestNotification = async () => {;
   const { user, logout } = useAuth();
   const { toast } = useToast();
   if (!user) return null;
@@ -660,6 +582,7 @@ if ( {) {
       <Footer />;
 
     </>);
+
 }
 ursor/fix-website-loading-errors-and-merge-6662
 "
@@ -679,7 +602,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                   <Badge className="bg-zion-purple text-white mb-4">"
 
 ;
-                  
 
                   <Button;"
                     className="w-full flex items-center gap-2 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"")"
@@ -687,7 +609,6 @@ ursor/fix-website-loading-errors-and-merge-6662
 
                     <UserCheck size={16} />
 
-                  
                 <h3 className="text-lg font-bold text-white mb-4">"
 </h3>
                 </h3>"
@@ -716,16 +637,13 @@ ursor/fix-website-loading-errors-and-merge-6662
                     >
                       <Send size={16} className="text-zion-cyan" />"
 
-                    
 
                       onClick={async () => {
                       <Settings size={16} className="text-zion-purple" />"
 
-                    
 
                       <Bell size={16} className="text-yellow-500" />"
 
-                    
               <div className="bg-zion-blue-dark rounded-xl p-6">"
                 <h3 className="text-lg font-bold text-white mb-4 flex items-center">"
                   <Bell size={18} className="mr-2 text-zion-cyan" />"
@@ -734,8 +652,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                     <Button variant="outline" className="w-full">"
                       <Bell className="mr-2 h-4 w-4" />"
 
-                    
-                  
             <div className="lg:col-span-2">"
                 <div className="flex items-center justify-between mb-6">"
                   <h2 className="text-2xl font-bold text-white">Dashboard</h2>""
@@ -747,7 +663,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                       onClick={logout}
                       <LogOut size={16} className="mr-2" />"
 
-                    
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4 mb-6">"
                   <div className="p-4 rounded-lg bg-gradient-to-br from-zion-blue to-zion-purple/30 border border-zion-blue-light">"
                     <h3 className="text-lg font-medium text-white">"

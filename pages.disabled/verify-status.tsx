@@ -1,5 +1,4 @@
 
-
 import { useState, useEffect } from 'react',;
 import { useRouter } from 'next/router',;
 import { Input } from '@/components/ui/input',;
@@ -41,6 +40,7 @@ import { supabase } from '@/integrations/supabase/client', // Import Supabase cl
 import { useAuth } from '@/hooks/useAuth', // Import useAuth to access user state
 import { logWarn, logErrorToProduction } from '@/utils/productionLogger',;
 ;
+
 export default function VerifyStatus() {
 
   const router = useRouter(),

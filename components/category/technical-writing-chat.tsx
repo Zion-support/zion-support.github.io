@@ -1,3 +1,4 @@
+
 import type { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
@@ -81,7 +82,6 @@ pr-12243
         <title>TechnicalWritingChat - Zion Tech Solutions</title>
         <meta name=&quot;description&quot; content=&quot;TechnicalWritingChat blog post&quot; />
       </Head>
-      
       <main>
         <h1>TechnicalWritingChat</h1>
         <p>Blog content coming soon...</p>
@@ -125,3 +125,4 @@ export default TechnicalWritingChat;
         <title>TechnicalWritingChat - Zion Tech Solutions</title>
 origin/cursor/automate-test-improve-and-merge-code-2533
 pr-12243
+

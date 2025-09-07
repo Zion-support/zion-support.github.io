@@ -41,11 +41,7 @@ export default function Aidevelopment({ }: AidevelopmentProps) {
 
 }
 
-<<<<<<<< HEAD:pages.disabled_full/services/ai-development.tsx
-
-
-
->>>>>>>> main:corrupted_backup/ai-development.tsx
+<
 
 
 

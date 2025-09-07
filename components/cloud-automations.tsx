@@ -18,9 +18,7 @@ export default function CloudAutomationsPage() {
       .catch(() => setData({ ok: false }))
   }, []);
 
-  const items = data?.data ? Object && Object.entries(data && data.data) : [];
 
-  const items = null;
   return (
     <div className='space-y-6'>
       <h1 className='text-3xl font-bold'>Cloud Automations</h1>

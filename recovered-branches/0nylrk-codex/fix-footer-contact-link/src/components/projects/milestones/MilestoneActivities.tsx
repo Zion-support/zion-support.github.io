@@ -1,216 +1,6 @@
 
-import {supabase} from '@/integrations / supabase / client';
-import {Card, CardContent, CardHeader, CardTitle} from '@/components / ui / card';
-import {Avatar, AvatarFallback, AvatarImage} from '@/components / ui / avatar';
-import {format} from 'date - fns';
-import {Skeleton} from '@/components / ui / skeleton';
-
-interface MilestoneActivitiesProps {
-  project_id: string;
-}
-interface Activity {
-
-import React, { useState, useEffect } from 'react';
-import { supabase  } from '@/integrations/supabase/client';
-import { Card, CardContent, CardHeader, CardTitle  } from '@/components/ui/card';
-import { Avatar, AvatarFallback, AvatarImage  } from '@/components/ui/avatar';
-import { format  } from 'date-fns';
-import { Skeleton } from '@/components/ui/skeleton';
-interface MilestoneActivitiesProps {
-  projectId: string
-}
-interface Activity {
-  id: string
-  milestone_id: string
-  user_id: string
-  action: string
-  previous_status: string | null
-  new_status: string
-  comment: string | null
-  created_at: string
-
-  milestone: {
-
-export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {;
-  const [activities, setActivities] = useState<Activity[]>([]);
-
-title: string
-  }
-  created_by_profile: {
-
-    display_name: string
-
-    avatar_url: string | null
-  }
-}
-export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {
-  const [activities, setActivities] = useState<Activity[]>([]),
-
-export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {;
-  const [activities, setActivities] = useState<Activity[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
-  useEffect(() => {
-    async function fetchActivities() {
-      try {
-        setIsLoading(true);
-        const { data, error } = await supabase
-          .from('milestone_activities')
-          .select(`
-
-            *;
-            milestone: milestone_id(title)
-            created_by_profile:profiles!user_id(display_name, avatar_url)
-          `)
-          .eq('project_id', projectId)
-          .order('created_at', { ascending: false })
-        if (error) throw error;
-        setActivities(data |[])
-
-} catch (err) {
-        console.error ('Error fetching milestone activities:', err);
-      } finally {
-        setIsLoading(false)
-import React, { useState, useEffect } from 'react',;
-import { supabase } from '@/integrations/supabase/client',;
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',;
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar',;
-import { format } from 'date-fns',;
-import { Skeleton } from '@/components/ui/skeleton',;
-    title: string;
-  }
-  milestone: {  }
-  created_by_profile: {
-    display_name: string,
-    avatar_url: string | null;
-  }
-}
-export /**
- * MilestoneActivities - Function description
- */
-function MilestoneActivities() {
-
-import {supabase} from '@/integrations / supabase / client';''
-import {Card, CardContent, CardHeader, CardTitle} from '@/components / ui / card';''
-import {Avatar, AvatarFallback, AvatarImage} from '@/components / ui / avatar';''
-import {format} from 'date - fns';''
-import {Skeleton} from '@/components / ui / skeleton';'
-interface MilestoneActivitiesProps {
-  // TODO: Implement
-}
-  project_id: string;
-interface Activity {
-  // TODO: Implement
-  id: string;,
-  milestone_id: string;
-  user_id: string;,
-  action: string;
-  previous_status: string | null;,
-  new_status: string;
-  comment: string | null;,
-  created_at: string;
-  milestone: {
 
 
-
-
-export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {;
-  const [activities, setActivities] = useState<Activity[]>([]);
-
-pr-12325
-</Activity>
-
-  const [activities, set_activities] = useState < Activity[]>([]);
-  const [is_loading, setIsLoading] = useState (true);
-;
-  useEffect (() => {
-    async /**
- * fetch_activities - Function description
- */
-function fetch_activities() {
-      try {
-        setIsLoading (true);
-;
-        const { data, error } = await supabase;
-          .from ('milestone_activities');
-          .select (`;
-            *;
-            milestone: milestone_id (title),
-            created_by_profile:profiles ! user_id (display_name, avatar_url);
-          `);
-          .eq ('project_id', project_id);
-          .order ('created_at', { ascending: false }),
-        // Check condition
-if (throw error) {
-  $2
-}
- * fetch_activities - Function description;
- */
-function fetch_activities() {
-      try {
-  // TODO: Implement
-        setIsLoading (true);
-        const { data, error } = await supabase;
-          .from ('milestone_activities');
-          .select (`;
-            *;)
-            milestone: milestone_id (title),
-            created_by_profile:profiles ! user_id (display_name, avatar_url);`;
-          `);
-          .eq ('project_id', project_id);
-          .order ('created_at', { ascending: false }),
-        // Check condition;
-if (throw error) {
-  $2;
-pr-12325
-        set_activities (data || []);
-      } catch (err) {
-        console.error ('Error fetching milestone activities:', err);
-      } finally {
-        setIsLoading (false);
-      }
-    }
-  // TODO: Implement
-
-  // TODO: Implement
-}
-        setIsLoading (true);
-;
-        const { data, error } = await supabase;'
-          .from ('milestone_activities');'
-
-          .select (`;
-            *;)
-            milestone: milestone_id (title),
-            created_by_profile:profiles ! user_id (display_name, avatar_url);
-
-          `);'
-          .eq ('project_id', project_id);''
-          .order ('created_at', { ascending: false }),'
-        // Check condition;
-if (throw error) {
-  $2;
-}
-        set_activities (data || []);
-      } catch (err) {'
-        console.error ('Error fetching milestone activities:', err);'
-      } finally {
-  // TODO: Implement
-}
-        setIsLoading (false);
-
-import {supabase} from '@/integrations/supabase/client';
-import {Card, CardContent, CardHeader, CardTitle} from '@/components/ui/card';
-import {Avatar, AvatarFallback, AvatarImage} from '@/components/ui/avatar';
-import {format} from 'date-fns';
-import {Skeleton} from '@/components/ui/skeleton';
-interface MilestoneActivitiesProps {;
-  projectId: string;
-}
-
-interface MilestoneActivitiesProps {;
-  projectId: string;
-}
-;
 
 pr-12325
 
@@ -244,39 +34,6 @@ interface Activity {;
 
 export function MilestoneActivities(): any ({ projectId }: MilestoneActivitiesProps) {;
 
-  const [activities, setActivities] = useState<Activity[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {;
-    async function fetchActivities() {;
-      try {;
-        setIsLoading(true);
-
-;
-export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {;
-  const [activities, setActivities] = useState<Activity[]>([]),;
-  const [isLoading, setIsLoading] = useState(true),;
-  useEffect(() => {;
-    async function fetchActivities() {;
-      try {;
-        setIsLoading(true),;
-        const { data, error } = await supabase;
-          .from('milestone_activities');
-          .select(`;
-            *,;
-            milestone:milestone_id(title),;
-            created_by_profile:profiles!user_id(display_name, avatar_url);
-          `);
-          .eq('project_id', projectId);
-          .order('created_at', { ascending: false }),;
-
-        if (error) throw error;
-
-        setActivities(data || []);
-      } catch (err) {;
-        console && console.error('Error fetching milestone activities:', err);
-      } finally {;
-        setIsLoading(false);
 
       }
     }
@@ -315,6 +72,7 @@ if (projectId) {;
       fetchActivities()
     }
   }, [projectId]);
+
   function getActivityDescription(activity: Activity): string {
     switch (activity.action) {
       case 'created':
@@ -789,10 +547,7 @@ export function MilestoneActivities(): any ({ projectId }: MilestoneActivitiesPr
                   <Skeleton className="h-4 w-40" />"
                   <Skeleton className="h-4 w-60" />"
 
-            
 
-            
-          
   const [activities, setActivities] = useState<Activity[]>([]),;
       <div className="space-y-4">;"
           <Card key={i}>;

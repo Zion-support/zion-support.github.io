@@ -1,93 +1,5 @@
 
 
-import React, { useState } from "react";""
-import { Button } from "@/components/ui/button";""
-import { Card, CardContent } from "@/components/ui/card";""
-import { Briefcase, Users, Check } from "lucide-react";""
-pr-12325
-import React, { useState } from './react';
-import { Button } from '@/components / ui / button';
-import { Card, CardContent } from '@/components / ui / card';
-import { Briefcase, Users, Check } from './lucide-react';
-;
-type UserRole = "talent" | "client" | null;
-;
-
-type UserRole = "talent" | "client" | null;
-import React, { useState } from "react",
-import { Button } from "@/components/ui/button",
-import { Card, CardContent } from "@/components/ui/card",
-import { Briefcase, Users, Check } from "lucide-react",
-
-type UserRole = "talent" | "client" | null,
-import React, { useState } from "react",;
-import { Button } from "@/components/ui/button",;
-import { Card, CardContent } from "@/components/ui/card",;
-import { Briefcase, Users, Check } from "lucide-react",;
-type UserRole = "talent" | "client" | null;"
-
-"
-import React, { useState } from "react",""
-import { Button } from "@/components/ui/button",""
-import { Card, CardContent } from "@/components/ui/card",""
-import { Briefcase, Users, Check } from "lucide-react",""
-type UserRole = "talent" | "client" | null,"
-interface RolePickerProps {
-  // TODO: Implement
-}
-  onSelect: (role: UserRole) => void;
-
-type UserRole = "talent" | "client" | null,
-
-
-
-  const handleSelect = (role: UserRole) => {
-    (setSelectedRole(role), onSelect(role));
-  };
-
-  return (
-    <div className="space-y-4 px-4">
-      <h2 className="text-xl font-medium">What brings you to Zion?</h2>
-      <p className="text-muted-foreground">
-        Choose how you want to use our platform
-      </p>
-
-      <div className="space-y-3 mt-6">
-        <Card
-          className={`cursor-pointer transition-all ${
-            selectedRole === "talent"
-              ? "border-primary bg-primary/5"
-              : "border-border hover:border-primary/40"
-
-import React, { useState } from "react",;
-import { Button } from "@/components/ui/button",;
-import { Card, CardContent } from "@/components/ui/card",;
-import { Briefcase, Users, Check } from "lucide-react",;
-;
-type UserRole = "talent" | "client" | null,;
-;
-interface RolePickerProps {;
-  return ("
-    <div className="space-y-4 px-4">"
-</div>"
-      <h2 className="text-xl font-medium">What brings you to Zion?</h2>""
-      <p className="text-muted-foreground">"
-</p>
-      <div className="space-y-3 mt-6">"
-</div>
-        <Card;
-          className={`cursor-pointer transition-all ${"
-            selectedRole === "talent"""
-              ? "border-primary bg-primary/5"""
-              : "border-border hover:border-primary/40"""
-import React, { useState } from "react",;""
-import { Button } from "@/components/ui/button",;""
-import { Card, CardContent } from "@/components/ui/card",;""
-import { Briefcase, Users, Check } from "lucide-react",;"
-;"
-type UserRole = "talent" | "client" | null,;"
-interface RolePickerProps {;)
-  onSelect:(role:UserRole) => void;
 
   const [selectedRole, setSelectedRole] = useState<UserRole>(null),;
     <div className="space-y-4 px-4">;"
@@ -159,8 +71,6 @@ interface RolePickerProps {;)
 }
                 <h3 className="font-medium">I'm hiring</h3>
 
-          
-        
     <div className="space - y-4 px - 4">;"
       <h2 className="text - xl font - medium">What brings you to Zion?</h2>;""
       <p className="text - muted - foreground">Choose how you want to use our platform</p>;""

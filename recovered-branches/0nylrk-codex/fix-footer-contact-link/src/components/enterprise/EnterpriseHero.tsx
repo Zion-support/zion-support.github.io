@@ -1,18 +1,9 @@
-export function EnterpriseHero() {
-  return (
-  return (
-import React from "react";
-import { Button } from "@/components/ui/button";
-import { GradientHeading } from "@/components/GradientHeading";
-import React from "react",
-import { Button } from "@/components/ui/button";
-import { GradientHeading } from "@/components/GradientHeading";
-import { Button } from "@/components/ui/button",
-import { GradientHeading } from "@/components/GradientHeading",
+
 
 
 export function EnterpriseHero() {
   return (import React from "react",;
+
 import { Button } from "@/components/ui/button";
 import { GradientHeading } from "@/components/GradientHeading";
 import { Button } from "@/components/ui/button",;
@@ -587,7 +578,6 @@ import { GradientHeading } from "@/components/GradientHeading",")
               "
               <Button size="lg" variant="outline" className="w-full sm:w-auto">"
 
-              
             <div className="mt-10 flex items-center gap-4">"
               <p className="text-sm text-muted-foreground">"
 </p>

@@ -4,8 +4,7 @@ export interface ResumeBasicInfo {
 pr-12325
   id?: string;
   title: string;
-  headline?: string;
-  summary?: string;
+
 }
 
 }
@@ -13,7 +12,7 @@ export interface WorkExperience {
 export interface ResumeBasicInfo {
 export interface ResumeBasicInfo {;
   id?: string;
-  title: string;
+
 
 }
 export interface WorkExperience {
@@ -62,8 +61,7 @@ pr-12325
   end_date?: Date | string;
   is_current: boolean;
   description?: string;
-  institution_logo_url?: string;
-  location?: string;
+
 }
 
   institution_logo_url?: string,
@@ -95,12 +93,7 @@ export interface Skill {
 pr-12325
   name: string;
   proficiency?: number;
-  category?: string;
-  years_experience?: number;
-}
 
-  category?: string,
-  years_experience?: number;
 
 }
 export interface Certification {
@@ -120,8 +113,7 @@ export interface Certification {;
   name: string;
 export interface Certification {  id?: string;
   name: string;
-  proficiency?: number;
-}  id?: string;
+
   user_id?: string;
   basic_info: ResumeBasicInfo;
   work_experience: WorkExperience[];
@@ -179,19 +171,7 @@ export interface Resume {;
 pr-12325
   skills: Skill[];
   certifications: Certification[];
-  portfolio_projects?: PortfolioProject[];
-  is_active: boolean;
-}
-  portfolio_projects?: PortfolioProject[]
 
-  is_active: boolean
-}
-export interface ResumeBasicInfo {;
-  id?: string,;
-}  id?: string,;
-  title: string,;
-  headline?: string,;
-  summary?: string;
 }
 ;
 export interface WorkExperience {;

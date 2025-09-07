@@ -1,40 +1,4 @@
 
-const fetcher = (url: string) => fetch(url).then(r => r.json()),
-export const getServerSideProps: GetServerSideProps = async ({ req }) => {
-  const cookies = (req.headers.cookie || '').split().reduce((acc: any, part: string) => {
-    const [k, v] = part.trim().split('=');
-    if (k) acc[k] = decodeURIComponent(v || '');
-    return acc
-  }, {} as Record<string, string>);
-  let role = 'guest';
-  try {
-    const user = cookies['x-user'] ? JSON.parse(cookies['x-user']) : null;
-    role = user?.role || 'guest'
-
-  } catch {}
-  if (role !== 'admin') {
-    return { redirect: { destination: '/', permanent: false } }
-  }
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
-
 import useSWR from 'swr',;
 import React, { useMemo, useState } from 'react',;
 import EnhancedLayout from '../../../components/layout/EnhancedLayout',;
@@ -128,6 +92,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 return list.filter((d: any) => d.status === statusFilter);
   }, [data, statusFilter]);
+
 
   return (
     <EnhancedLayout>

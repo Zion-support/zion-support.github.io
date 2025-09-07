@@ -1,12 +1,11 @@
-rank: number,
-  name: string,
+
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Award } from 'lucide-react'
 interface LeaderboardEntry {
   rank: number;
   name: string;
-origin/cursor/automate-test-improve-and-merge-code-2533
+
   referrals: number
 }
 export function ReferralLeaderboard() {

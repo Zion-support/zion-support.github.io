@@ -1,5 +1,4 @@
-import {Education} from '@/types/resume';
-import {EducationItem} from './EducationItem';
+
 
 interface EducationListProps {
   educationEntries: Education[];

@@ -579,7 +579,7 @@ export default function About() {;
     </motion.div>
 import React from 'react';
 
-const About: React.FC = () => {
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
@@ -662,7 +662,6 @@ const About: React.FC = () => {
                   transform industries and create lasting impact.
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white pt-20">
           <h1 className="text-5xl font-extrabold mb-8 text-center">About Zion Tech Group</h1>
-          
           <Card className="mb-8">
             <h2 className="text-3xl font-bold mb-6">Our Mission</h2>
             <p className="text-lg text-gray-300 mb-6">
@@ -672,9 +671,7 @@ const About: React.FC = () => {
             <p className="text-lg text-gray-300">
               Through our comprehensive suite of AI, cybersecurity, cloud infrastructure, and digital 
               transformation services, we help companies stay ahead of the curve and achieve their goals.
-          
             <h2 className="text-3xl font-bold mb-6">Our Vision</h2>""
-          
             <h2 className="text-3xl font-bold mb-6">Our Values</h2>""
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">"
               <div>
@@ -683,7 +680,6 @@ const About: React.FC = () => {
                 <h3 className="text-xl font-semibold mb-3 text-blue-400">Excellence</h3>""
                 <h3 className="text-xl font-semibold mb-3 text-blue-400">Integrity</h3>""
                 <h3 className="text-xl font-semibold mb-3 text-blue-400">Collaboration</h3>""
-          
 
           <Card>
             <h2 className="text-3xl font-bold mb-6">Why Choose Us?</h2>""
@@ -695,7 +691,6 @@ const About: React.FC = () => {
                 <h3 className="text-xl font-semibold mb-3">Secure & Reliable</h3>""
                 <div className="text-4xl mb-4">💡</div>""
                 <h3 className="text-xl font-semibold mb-3">Innovative Solutions</h3>""
-          
 ursor/fix-syntax-push-and-merge-to-main-f9ca
     </div>)"
 pr-12325

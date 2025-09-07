@@ -37,20 +37,16 @@ import React, { useState } from 'react';
 import { MapPin } from 'lucide-react';
 import { TalentCardSkills } from './TalentCardSkills';
 
+
 interface TalentCardContentProps {
   summary: string | undefined;
   bio: string;
   timezone: string | undefined;
+
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
 
 
-export function TalentCardContent(): any ({;
-  summary,;
-  bio,;
-  timezone,;
-  skills,;
-}: TalentCardContentProps) {;
   const [isHovering, setIsHovering] = useState(false);
 
 origin/cursor/automate-test-improve-and-merge-code-2533

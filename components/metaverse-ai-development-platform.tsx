@@ -1,37 +1,9 @@
-  Phone,
-  Mail,
-  MapPin,
-  Check,
-  ArrowRight,
-  Sparkles,;
-  Star,;
-import React from 'react';
-import Head from 'next/head';
-import { Phone, Mail, MapPin, Check, ArrowRight, Sparkles, Star  } from 'lucide-react';
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+
 import Button from '../components/ui/Button';
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
 export default function MetaverseAIPlatformPage() {
   const service = null;
-import {
-  Phone
-  Mail
-  MapPin
-  Check
-  ArrowRight
-  Sparkles
-  Star;
-origin/cursor/automate-test-improve-and-merge-code-2533
-} from 'lucide-react';
 
-export default function MetaverseAIPlatformPage() {
-export default function MetaverseAIPlatformPage() {
-  );  if (!service) return null;import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
-export default function MetaverseAIPlatformPage() {;
-  const service = enhancedRealMicroSaasServices.find(s =>
-    s.link.endsWith('/metaverse-ai-development-platform')
-  );
-  if (!service) return null;
   return (
     <UltraAdvancedFuturisticBackground>
       <Head>

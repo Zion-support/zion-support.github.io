@@ -1,7 +1,9 @@
+
 import React from 'react',
 import Head from 'next/head',
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground',
 import Button from '../components/ui/Button',
+
 import React, { useMemo } from 'react';
 import Head from 'next/head';
 import {GetStaticPaths, GetStaticProps} from 'next';
@@ -112,20 +114,16 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -539,6 +537,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 				/>;			</Head>
 				/>;
 			</Head>
+
 
 			<div className="container mx-auto px-4 py-16">
 				<div className="text-center mb-10">

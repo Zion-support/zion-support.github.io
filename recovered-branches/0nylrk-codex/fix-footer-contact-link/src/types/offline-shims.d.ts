@@ -1,24 +1,4 @@
-declare module 'react' {
-  const React: any;
 
-  export default React
-  // Basic overloads for useRef to handle common cases
-  export function useRef<T>(initialValue: T): { current: T }
-  export function useRef<T>(initialValue: T | null): { current: T | null }
-  export function useRef<T = undefined>(initialValue?: T): { current: T | undefined }
-  export default React,
-  // Basic overloads for useRef to handle common cases;
-  export function useRef<T>(initialValue: T): { current: T };
-  export function useRef<T>(initialValue: T | null): { current: T | null };
-  export function useRef<T = undefined>(initialValue?: T): { current: T | undefined };
-
-  export const useEffect: any;
-  export type Dispatch<A> = (value: A) => void;
-  export type SetStateAction<S> = S | ((prevState: S) => S)
-  export function useState<S>(
-    initialState: S | (() => S)
-    initialState: S | (() => S);
-initialState: S | (() => S);
 
   export type Dispatch<A> = (value: A) => void;
   export type SetStateAction<S> = S | ((prevState: S) => S)
@@ -91,11 +71,9 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
@@ -107,19 +85,15 @@ class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
 pr-12325
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -359,7 +333,6 @@ declare module 'react-dom' {;
 declare module 'react-dom' {;
   export * from 'react-dom/index';
 }
- 
 }
 }
 
@@ -370,3 +343,4 @@ declare module 'react/jsx-runtime' {;
   export const Fragment: any;
 }
 pr-12325
+

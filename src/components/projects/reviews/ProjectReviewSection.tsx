@@ -1,17 +1,9 @@
-export function ProjectReviewSection({ project }:,  ProjectReviewSectionProps) {
-  const { user } = useAuth(),
-  const { reviews, userReview, isLoading, reportReview } = useReviews(project.id),
-  const [isReviewModalOpen, setIsReviewModalOpen] = useState(false),
-  const isCompleted = project.status === "completed","
-pr-12325
+
 export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
   const { user } = useAuth(),
   const { reviews, userReview, isLoading, reportReview } = useReviews(project.id),
   const [isReviewModalOpen, setIsReviewModalOpen] = useState(false),
-  
   const isCompleted = project.status === "completed",
-  const isCompleted = project.status === "completed","
-pr-12325
   const isClient = user?.id === project.client_id,
   const isTalent = user?.id === project.talent_id,
   const clientProfile = project?.talent_profile,
@@ -62,28 +54,6 @@ interface ProjectReviewSectionProps {
 
   const canLeaveReview = isCompleted && (isClient || isTalent) && !userReview,
   const hasLeftReview = userReview != null,
-
-export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
-  const { user } = useAuth(),
-  const { reviews, userReview, isLoading, reportReview } = useReviews(project.id),
-  const [isReviewModalOpen, setIsReviewModalOpen] = useState(false),
-  
-  const isCompleted = project.status === "completed",
-  const isClient = user?.id === project.client_id,
-  const isTalent = user?.id === project.talent_id,
-  
-  const clientProfile = project?.talent_profile,
-  const talentProfile = project.talent_profile,
-
-  // Determine who the current user needs to review
-  const revieweeId = isClient ? project.talent_id : project.client_id,
-  const revieweeName = isClient 
-    ? talentProfile?.full_name || "Talent" 
-    : clientProfile?.full_name || "Client",
-
-  const canLeaveReview = isCompleted && (isClient || isTalent) && !userReview,
-  const hasLeftReview = userReview != null,
-  
 import { Button } from "@/components/ui/button",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { ReviewsList } from "@/components/reviews/ReviewsList",;
@@ -94,42 +64,7 @@ interface ProjectReviewSectionProps {
   project: Project
 export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
   const { user } = useAuth();
-  const { reviews, userReview, isLoading, reportReview } = useReviews(project.id);
-  const [isReviewModalOpen, setIsReviewModalOpen] = useState(false);
-  const isCompleted = null;
-import { Button } from '@/components/ui/button'
-import {
-  Card
-  CardContent
-  CardDescription
-  CardHeader
-  CardTitle
-} from '@/components/ui/card'
-import { ReviewsList } from '@/components/reviews/ReviewsList'
-import { LeaveReviewModal } from '@/components/reviews/LeaveReviewModal'
-import { useReviews } from '@/hooks/useReviews'
-import { useAuth } from '@/hooks/useAuth'
-interface ProjectReviewSectionProps {
-  project: Project
-export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
-  const { user } = useAuth()
-  const { reviews, userReview, isLoading, reportReview } = useReviews(
-    project.id
-  )
-  const [isReviewModalOpen, setIsReviewModalOpen] = useState(false)
-  const isCompleted = project.status === 'completed'
-  const isClient = user?.id === project.client_id
-  const isTalent = user?.id === project.talent_id
-  const clientProfile = project?.talent_profile
-  const talentProfile = project.talent_profile
-  // Determine who the current user needs to review
-  const revieweeId = isClient ? project.talent_id : project.client_id
-  const revieweeName = isClient
-    ? talentProfile?.full_name |'Talent'
-    : clientProfile?.full_name |'Client'
-  const canLeaveReview = isCompleted && (isClient |isTalent) && !userReview
-  const hasLeftReview = userReview != null
-origin/cursor/automate-test-improve-and-merge-code-2533
+
   return (
     <Card className='mt-6'>
       <CardHeader>
@@ -151,7 +86,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <div className="bg-muted/20 rounded-lg p-4 text-center">"
                     <h3 className="font-medium mb-2">Share your experience</h3>"
                     <p className="text-sm text-muted-foreground mb-3">"
-      
 
       <CardContent>
         {isCompleted ? (
@@ -281,14 +215,11 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {;
     : clientProfile?.full_name || "Client","
   const canLeaveReview = isCompleted && (isClient || isTalent) && !userReview,
   const hasLeftReview = userReview != null,
-  
 
 
   "
-  
 
   // Determine who the current user needs to review;
-  
   return ("
     <Card className="mt-6">"
 
@@ -296,15 +227,11 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {;
         <CardTitle className="flex items-center gap-2">"
           <Star className="h-5 w-5 text-yellow-400" />"
 
-        
         <CardDescription>
 
-        
-      
 
 
 
-      
 
       <CardContent>
           <div className="space-y-6">"
@@ -317,7 +244,6 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {;
                     </p>)
                     <Button onClick={() => setIsReviewModalOpen(true)}>
 
-                    
                     <h3 className="font-medium mb-2">Thank you for your review!</h3>""
                     </p>"
                       <Button variant="outline" onClick={() => setIsReviewModalOpen(true)}>"

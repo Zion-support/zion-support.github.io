@@ -1,28 +1,4 @@
-import { useState } from "react",;
-import { QuoteFormData, ListingItem, ServiceType } from "@/types/quotes",;
-import { Input } from "@/components/ui/input",;
-import { Card } from "@/components/ui/card",  const handleItemSelect = (item: ListingItem) => {
-    updateFormData({
-      specificItem: item,
-      serviceCategory: item.category,
-      serviceType: item.category.toLowerCase() as ServiceType,
-    })
-};
 
-  const filteredListings = SAMPLE_LISTINGS.filter((item) => {
-    // Filter by category only when a service type has been selected
-    if (formData.serviceType !== "") {
-      const categoryMatch =
-        item.category.toLowerCase() === formData.serviceType.toLowerCase();
-      if (!categoryMatch) return false;
-    }
-
-    if (searchQuery.trim() === "") return true;
-    return (
-      item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      item.category.toLowerCase().includes(searchQuery.toLowerCase())
-    );
-  });
 
   return (
     <div className="space-y-6">
@@ -380,18 +356,15 @@ interface ServiceTypeStepProps {
             <h4 className="font-medium text-white">Services</h4>""
             <p className="text-sm text-zion-slate-light">"
 </p>
-          
 
           <Card;`;
               formData.serviceType === "talent"""
             onClick={() => handleTypeSelect("talent")}"
             <h4 className="font-medium text-white">Talent</h4>""
-          
 
               formData.serviceType === "equipment"""
             onClick={() => handleTypeSelect("equipment")}"
             <h4 className="font-medium text-white">Equipment</h4>""
-          
         <div className="space-y-4">"
           <h3 className="text-xl font-semibold text-white">"
           <h3 className="text-xl font-semibold text-white">Select a specific {formData.serviceType}</h3>""

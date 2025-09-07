@@ -1,5 +1,4 @@
 
-
 import React, { useState } from 'react',;
 import Head from 'next/head',;
 import Link from 'next/link',;
@@ -55,7 +54,6 @@ export default function InnovativeMicroSaasShowcase() {
     const matchesCategory = selectedCategory === 'all' || 
       service.category.toLowerCase().includes(selectedCategory) ||
       service.name.toLowerCase().includes(selectedCategory),
-    
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
       service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
       service.tagline.toLowerCase().includes(searchTerm.toLowerCase()),
@@ -279,6 +277,7 @@ return (
     }
   })
 origin/cursor/automate-test-improve-and-merge-code-2533
+
   return (
     <Layout>
       <Head>

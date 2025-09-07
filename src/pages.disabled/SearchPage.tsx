@@ -1,46 +1,11 @@
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
-import React from 'react';
-  const pageKey = `search-${routeKey}-${router && router.asPath}`;`
-import { useRouter } from 'next/router';
-import { useRouterReady, useRouteChange } from '@/hooks/useRouterReady';
-import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput";
-import { generateSearchSuggestions } from "@/data/marketplaceData";
-import { SearchSuggestion } from "@/types/search";
-import {logErrorToProduction} from '@/utils/productionLogger';
-import {
-  Tabs;
-  TabsContent;
-  TabsList;
-  const pageKey = `search-${routeKey}-${router.asPath}``
-import { useRouter } from 'next/router''
-import { useRouterReady, useRouteChange } from '@/hooks/useRouterReady''
-import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput""
-import { generateSearchSuggestions } from "@/data/marketplaceData""
-import { SearchSuggestion } from "@/types/search""
-import {logErrorToProduction} from '@/utils/productionLogger''
+
 import { SearchSuggestion } from "@/types/search";
 import {logErrorToProduction} from '@/utils/productionLogger';
 import {;
   Tabs;
   TabsContent;
   TabsList;
+
 import { Loader2 } from 'lucide-react'
 
 
@@ -692,7 +657,6 @@ export default function SearchPage() {
   // Sync query with URL parameter changes
   useEffect(() => {
     if (!router.isReady) return,
-    
     const urlQuery = (router.query.q as string) || "",
     if (urlQuery !== query) {
       setQuery(urlQuery)
@@ -818,9 +782,7 @@ interface SearchResult {
   description: string
 }
 function highlight(text: string, term: string) {
-  if (!term) return text;
-  const escaped = null;
-              router.push(`/search?q=${encodeURIComponent(searchTerm)}`)
+
             }}
             searchSuggestions = {suggestions,}
 origin/cursor/automate-test-improve-and-merge-code-2533

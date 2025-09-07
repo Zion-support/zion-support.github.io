@@ -12,7 +12,7 @@ res: NextApiResponse;
 ) {
 origin/cursor/automate-test-improve-and-merge-code-2533
   try {
-    const raw = null;}
+
 }
     res.status(200).json({ items })
   } catch {

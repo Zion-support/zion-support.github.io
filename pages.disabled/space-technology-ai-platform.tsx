@@ -1,7 +1,7 @@
-import React from 'react',
-import Head from 'next/head',
+
 import React from 'react',;
 import Head from 'next/head',;
+
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Satellite, ArrowRight, CheckCircle, Star, TrendingUp;
@@ -31,20 +31,16 @@ export default function SpaceTechnologyAIPlatform() {
     address: '364 E Main St STE 1008 Middletown DE 19709'
     website: 'https://ziontechgroup.com'
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -66,137 +62,7 @@ import React from 'react';
       enableHolographic={true}
       enableQuantumEffects={true}
       enableNeuralNetwork={true}
-  const features = [
-    'AI-powered satellite operations'
-    'Autonomous space exploration'
-    'Space data analytics'
-    'Satellite constellation management'
-    'Space debris tracking'
-    'Real-time monitoring'
-    'Predictive maintenance'
-    'Mission planning tools'
-    'API access'
-    'Expert consultation'
-origin/cursor/automate-test-improve-and-merge-code-2533
-  ];
 
-    'Maxar ($5000-50000/month)Planet Labs ($1000-10000/month)Airbus Defence ($10000-100000/month)Lockheed MartinBoeingNorthrop Grumman'
-  ],
-  return (
-    <UltraAdvancedFuturisticBackground
-      intensity="extreme"
-      colorScheme="neural-network"
-      particleCount={500  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-      animationSpeed={2.5  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-      enableHolographic={true  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-      enableQuantumEffects={true  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-      enableNeuralNetwork={true  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  const features = [;
-    'AI-powered satellite operations',;
-    'Autonomous space exploration',;
-    'Space data analytics',;
-    'Satellite constellation management',;
-    'Space debris tracking',;
-    'Real-time monitoring',;
-    'Predictive maintenance',;
-    'Mission planning tools',;
-    'API access',;
-    'Expert consultation',;
-  ];
-
-  const useCases = [;
-    'Satellite operations',;
-    'Space exploration',;
-    'Earth observation',;
-    'Space debris monitoring',;
-    'Mission planning',;
-    'Space research',;
-  ];
-
-  const integrations = [;
-    'NASA APIs',;
-    'ESA APIs',;
-    'Satellite ground stations',;
-    'GIS systems',;
-    'Slack',;
-    'Microsoft Teams',;
-    'Custom applications',;
-  ];
-
-  const competitors = [;
-    'Maxar ($5000-50000/month)',;
-    'Planet Labs ($1000-10000/month)',;
-    'Airbus Defence ($10000-100000/month)',;
-    'Lockheed Martin',;
-    'Boeing',;
-    'Northrop Grumman',;
-  ];
-
-
-    >;
-      <div className='min-h-screen'>;
-        <Head>;
-          <title>Space Technology AI Platform - Zion Tech Group</title>;
-
-          <meta
-            name='description'
-            content='Revolutionary AI platform that combines space technology with artificial intelligence to enable autonomous space exploration, satellite operations, and space data analysis.'
-          />;
-          <meta
-            name='keywords'
-            content='space technology, AI space exploration, satellite operations, space data analytics, autonomous space systems'
-          />;
-          <meta name='author' content='Zion Tech Group' />;
-          <meta
-            property='og:title'
-            content='Space Technology AI Platform - Zion Tech Group'
-          />;
-          <meta
-            property='og:description'
-            content='AI-powered space exploration and satellite operations'
-          />;
-          <meta
-            property='og:url'
-            content='https://ziontechgroup && ziontechgroup.com/space-technology-ai-platform'
-          />;
-          <link
-            rel='canonical'
-
-            href='https://ziontechgroup && ziontechgroup.com/space-technology-ai-platform'
-          />        </Head>;
-
-        <EnhancedNavigation2026 />;
-
-
-        {/* Hero Section */}
-        <section className='pt-32 pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden'>;
-          <div className='absolute inset-0 bg-gradient-to-r from-blue-900/30 via-transparent to-indigo-900/30'></div>;
-          <div className='max-w-7xl mx-auto relative z-10'>            <motion&& motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-
-
-origin/cursor/automate-test-improve-and-merge-code-2533
     >
       <div className="min-h-screen">
         <Head>
@@ -1107,7 +973,6 @@ className='flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-blue-600 
                   <span>Call {contactInfo.mobile}</span>
                 </motion.a>
                 <motion.a
-                
                 <motion.a
                   href={`mailto:${contactInfo.email}`}
                   whileHover={{ scale: 1.05 }}

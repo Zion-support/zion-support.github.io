@@ -1,5 +1,4 @@
 
-
 import React, { useState } from 'react',;
 import Head from 'next/head',;
 import Link from 'next/link',;
@@ -1421,6 +1420,7 @@ import { revolutionary2025Services  } from '../data/revolutionary-2025-innovativ
 import { revolutionary2025ITServices } from '../data/revolutionary-2025-it-infrastructure';
 const allServices = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
+
                     setSelectedCategory('all')
                   className="bg-purple-500 hover:bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
                 >

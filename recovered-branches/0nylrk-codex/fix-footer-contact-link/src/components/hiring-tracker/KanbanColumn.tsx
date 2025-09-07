@@ -13,18 +13,7 @@ import { CandidateCard } from "./CandidateCard",
 interface KanbanColumnProps {
 
 
-import { Droppable } from "react-beautiful-dnd",;
-import { JobApplication } from "@/types/jobs",;
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
-import { Badge } from "@/components/ui/badge";
-import { CandidateCard } from "./CandidateCard";
-import { Badge } from "@/components/ui/badge",;
-import { CandidateCard } from "./CandidateCard",export function KanbanColumn({
-  id,
-  title,
-  description,
-  applications,}: KanbanColumnProps) {
-  // Add color based on column type
+
 
   const getBadgeVariant = (columnId: string) => {
     switch (columnId) {import { Droppable } from './react - beautiful - dnd';
@@ -98,138 +87,7 @@ export function KanbanColumn({
 
   count;)
 }: KanbanColumnProps) {
-  // Add color based on column type;
-  const getBadgeVariant = (columnId: string) => {
-    switch (columnId) {
 
-  count;
-}: KanbanColumnProps) {;
-  // Add color based on column type;
-  const getBadgeVariant = (columnId: string) => {;
-    switch (columnId) {;
-
-import { Droppable } from './react - beautiful - dnd';
-pr-12325
-import { JobApplication } from '@/types / jobs';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
-import { Badge } from '@/components / ui / badge';
-import { CandidateCard } from './CandidateCard';
-interface KanbanColumnProps {
-  // TODO: Implement
-pr-12325
-  id: string,
-  title: string,
-  description: string,
-  applications: JobApplication[],
-  count: number;
-}
-export /**
- * KanbanColumn - Function description
-export /**
- * KanbanColumn - Function description;
-pr-12325
- */
-function KanbanColumn() {
-  // Add color based on column type;
-  const getBadgeVariant = (column_id: string) =>: any {
-    switch (column_id) {
-      case "new": return "secondary";
-      case "shortlisted":;
-        return "outline";
-      case "interview":;
-        return "default";
-      case "hired":;
-        return "success";
-
-      case "new": return "secondary",
-      case "shortlisted":
-        return "outline",
-      case "interview":
-        return "default",
-      case "hired":
-        return "success",
-
-      case "rejected":
-        return "destructive"
-      default:
-        return "outline"
-    }
-
-  },
-
-  const getColumnBgColor = (columnId: string) => {
-    switch (columnId) {
-      case "hired": return "bg-green-50",
-
-}
-  },
-  
-  const getColumnBgColor = (columnId: string) => {
-    switch (columnId) {
-      case "hired": return "bg-green-50",
-      case "rejected":
-        return "bg-red-50"
-      default:
-        return "bg-muted/30"
-    }
-
-      case "rejected":;
-        return "destructive",;
-      default:;
-        return "outline";
-    }
-  };
-
-  const getColumnBgColor = (columnId: string) => {;
-    switch (columnId) {;
-      case "hired": return "bg-green-50";
-import { Droppable } from "react-beautiful-dnd",;
-import { JobApplication } from "@/types/jobs",;
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
-import { Badge } from "@/components/ui/badge",;
-import { CandidateCard } from "./CandidateCard",;
-;
-interface KanbanColumnProps {;
-  id:string,;
-  title:string,;
-  description:string,;
-  applications:JobApplication[],;
-  count:number;
-}
-;
-export function KanbanColumn({;
-  id,;
-  title,;
-  description,;
-  applications,;
-  count;
-} KanbanColumnProps) {;
-  // Add color based on column type;
-  const getBadgeVariant = (columnId:string) => {;
-    switch (columnId) {;
-      case "new":return "secondary",;
-      case "shortlisted":;
-        return "outline",;
-      case "interview":;
-        return "default",;
-      case "hired":;
-        return "success",;
-      case "rejected":;
-        return "destructive",;
-      default:;
-        return "outline";
-    }
-  },;
-  ;
-  const getColumnBgColor = (columnId:string) => {;
-    switch (columnId) {;
-      case "hired":return "bg-green-50",;
-      case "rejected":;
-        return "bg-red-50",;
-      default:;
-        return "bg-muted/30";
-    }
-  };
 
   return (
     <Card className={`${getColumnBgColor(id)} flex flex-col h-[calc(100vh-300px)] min-h-[500px]`}>;
@@ -558,7 +416,6 @@ return (<Card className= {
 
 
   },
-  
 
   const getColumnBgColor = (columnId: string) => {
     switch (columnId) {"
@@ -593,7 +450,6 @@ return (<Card className= {
         <Droppable droppableId={id}>;
 
             <div;
-  
 
   return ()`;
     <Card className={`${getColumnBgColor(id)} flex flex-col h-[calc(100vh-300px)] min-h-[500px]`}>

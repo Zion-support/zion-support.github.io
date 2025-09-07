@@ -1,11 +1,4 @@
-import { AppLayout } from "@/layout/AppLayout",;
-import { SEO } from "@/components/SEO",;
-import { ApplicationsTracker } from "@/components/jobs/applications",;
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",;
-import { Briefcase, Inbox } from "lucide-react",import { ProtectedRoute } from "@/components/ProtectedRoute";
-import { useIsMobile } from "@/hooks/use-mobile";
-function ApplicationStatusTrackerContent() {
-  const isMobile = useIsMobile();
+
 
 import { ProtectedRoute } from "@/components/ProtectedRoute",;
 import { useIsMobile } from "@/hooks/use-mobile",;
@@ -209,14 +202,11 @@ function ApplicationStatusTrackerContent() {
               <CardTitle className="flex items-center text-lg">"
                 <Inbox className="mr-2 h-5 w-5" /> Your Applications;"
 
-              
             "`;
             <CardContent className={`p-${isMobile ? "3" : "6"}`}>"
 
               <ApplicationsTracker />
 
-            
-          
     </>)
   );
 }
@@ -234,13 +224,9 @@ export default function ApplicationStatusTracker() {
 
         <ApplicationStatusTrackerContent />
 
-      
-    
 
 
 
-      
-    
 </AppLayout>
 
         <ApplicationStatusTrackerContent />
@@ -281,7 +267,6 @@ Application Status Tracker | Zion AI Marketplace"description=" Track the status 
 
 
 
-      
     )
     );`;
 pr-12325

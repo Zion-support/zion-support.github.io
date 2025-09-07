@@ -48,11 +48,7 @@ export default function Devopsautopilot({ }: DevopsautopilotProps) {
 
 }
 
-<<<<<<<< HEAD:pages.disabled_full/services/ai/devops-autopilot.tsx
-
-
-
->>>>>>>> main:corrupted_backup/devops-autopilot.tsx
+<
 
 
 

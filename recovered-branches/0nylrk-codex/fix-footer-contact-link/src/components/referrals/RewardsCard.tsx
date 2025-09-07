@@ -12,15 +12,6 @@ import {
 
 
 
-
-import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";""
-import {ReferralReward} from "@/types/referrals";""
-import {formatDate} from "@/utils/referralUtils";""
-import {BadgeDollarSign, Badge} from "lucide-react";""
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",""
-import { ReferralReward } from "@/types/referrals",""
-import { formatDate } from "@/utils/referralUtils",""
-import { BadgeDollarSign, Badge } from "lucide-react","
 interface RewardsCardProps {
   // TODO: Implement
 }
@@ -518,11 +509,8 @@ if ( {) {
 "
             <BadgeDollarSign className="h-5 w-5" />"
 
-          
           <CardDescription>
 
-          
-        
         <CardContent>
           <div className="flex items-center justify-center p-4">"
 </CardContent>"
@@ -530,26 +518,16 @@ if ( {) {
 </div>"
             <div className="h-8 w-8 animate-spin rounded-full border-4 border-primary border-t-transparent" />"
 </div>
-        
-      
 
 
-          
 
-          
-        
           <div className="flex flex-col items-center justify-center p-4 text-center">"
             <p className="text-muted-foreground">No rewards yet</p>""
             <p className="text-sm text-muted-foreground mt-1">"
 </p>
-        
-      
 
 
-        
 
-        
-      
         <div className="space-y-4">"
             <div;
               key={reward.id}
@@ -565,8 +543,6 @@ if ( {) {
                 <p className="text-xs text-muted-foreground mt-1">"
                 </p>"
                   <p className="text-xs text-muted-foreground">"
-      
-    
       <Card>;
 
         <CardHeader>;
