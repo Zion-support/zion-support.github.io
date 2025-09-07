@@ -131,7 +131,7 @@ export default function ContactPage() {
               </button>
               {submitStatus === 'success' && (
                 <div className="text-green-400 text-center">
-                  Message sent successfully! We'll get back to you soon.
+                  Message sent successfully! We&apos;ll get back to you soon.
                 </div>
               )}
             </form>

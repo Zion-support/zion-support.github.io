@@ -29,7 +29,7 @@ export default function ContactForm() {
         },
         body: JSON.stringify(formData),
       })
-  if($2) {
+      if (response.ok) {
         setSubmitStatus('success')
         setFormData({
           name: '',
@@ -41,10 +41,12 @@ export default function ContactForm() {
         })
       } else {
         setSubmitStatus('error')
+      }
     } catch (error) {
       setSubmitStatus('error')
     } finally {
       setIsSubmitting(false)
+    }
   }
   return (
     <div className="max-w-4xl mx-auto">

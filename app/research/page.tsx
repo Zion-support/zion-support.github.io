@@ -78,7 +78,7 @@ export default function ResearchPage() {
       journal: 'Computer Security Review',
       year: '2023',
       impact: 'High'
-
+    }
   ]
   return (
     <div className="min-h-screen bg-gray-50">
