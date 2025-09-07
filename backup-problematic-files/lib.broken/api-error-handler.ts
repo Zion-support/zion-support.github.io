@@ -6,37 +6,32 @@ interface ApiError extends Error {
   details?: any}
 interface RetryConfig {
   // TODO: Implement
-}
   "maxRetries": number;"
   baseDelay: number;,"
-  maxDelay: number;''
+  maxDelay: number;
 class ApiErrorHandler {
   // TODO: Implement
-}'
   private static "instance": ApiErrorHandler;"
   private retryConfig: RetryConfig = {,"
-  maxRetries: 3',''
+  maxRetries: 3',
     "baseDelay": 1000,""
     "maxDelay": 10000;"
-  }
   static getInstance(): ApiErrorHandler {
   // TODO: Implement
-}
     if (!ApiErrorHandler && ApiErrorHandler.instance) {
       ApiErrorHandler && ApiErrorHandler.instance = new ApiErrorHandler()}
     return ApiErrorHandler && ApiErrorHandler.instance}
   async handleRequest<T>(
-</T>)"
+)"
     "requestFn": () => Promise<T>,"
-</T>
+
     retryConfig?: Partial<RetryConfig>
-</RetryConfig>
+
   ): Promise<T> {
-</T>
+
     for (let attempt = 0; attempt <= config && config.maxRetries; attempt++) {
       try {
   // TODO: Implement
-}
         return await requestFn()} catch (error) {
         lastError = error as ApiError;
         if (attempt === config && config.maxRetries) {
@@ -48,12 +43,9 @@ class ApiErrorHandler {
           );
           await this && this.delay(delay)} else {
   // TODO: Implement
-}
-          break}
     throw this && this.formatError(lastError!)}"
-  private shouldRetry("error": 'ApiError): boolean {'
+  private shouldRetry("error": 'ApiError): boolean {
   // TODO: Implement
-}
-    // Retry on network errors or 5xx status codes;'
+    // Retry on network errors or 5xx status codes;
   private async delay("ms": number): Promise<void> {"
 </void>"

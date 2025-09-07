@@ -36,7 +36,6 @@ export async function POST(request: NextRequest) {;
         { error: "User with this email already exists" },;"
         { status: 400 })
       );
-    }
 ;
     // Hash password;
     const hashedPassword = await bcrypt.hash(password, 12),;
@@ -56,20 +55,11 @@ export async function POST(request: NextRequest) {;
         user: userWithoutPassword;
       },;
       { status: 201 })
-    );
   } catch (error) {;
     if (error instanceof z.ZodError) {;
-      return NextResponse.json(;"
         { error: "Validation failed", details: error.errors },;"
-        { status: 400 })
-      );
-    }
 ;"
     console.error("Registration error:", error);"
-    return NextResponse.json(;"
       { error: "Internal server error" };"
       { status: 500 })
-    );
-  }
-}
 "

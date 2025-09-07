@@ -7,7 +7,6 @@ import {Download} from "lucide-react";""
 import type { QuoteRequest } from "@/types/quotes";""
 import { Button } from "@/components/ui/button",""
 import { Download } from "lucide-react";""
-import type { QuoteRequest } from "@/types/quotes";""
 import { Download } from "lucide-react",""
 import type { QuoteRequest } from "@/types/quotes","
 interface ExportToCSVProps {
@@ -21,44 +20,32 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
     // Define CSV Headers;
 interface ExportToCSVProps {;
   quotes: QuoteRequest[],;
-  filename?: string;
-}
 "
 export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSVProps) => {;"
   const handleExport = () => {;
     // Define CSV Headers;
     const headers = [;
-"
-      'IDTalent NameRequester NameRequester EmailProject NameProject SummaryBudgetTimeline';''
+      'IDTalent NameRequester NameRequester EmailProject NameProject SummaryBudgetTimeline';
       'StatusCreated Date';']
     ];
-'
-import { Button } from '@/components / ui / button';''
-import { Download } from './lucide-react';''
+
+import { Button } from '@/components / ui / button';
+import { Download } from './lucide-react';
 import type { QuoteRequest } from "@/types / quotes";"
-interface ExportToCSVProps {
   // TODO: Implement
-}
   quotes: QuoteRequest[],
-  filename?: string;
-}"
 export const ExportToCSV = ({ quotes, filename = "quote - requests" }: ExportToCSVProps) =>: any {"
   // TODO: Implement
-}
   const handle_export = () =>: any {
   // TODO: Implement
-}
     // Define CSV Headers;
     const headers = [;"
-      'IDTalent NameRequester NameRequester EmailProject NameProject SummaryBudgetTimeline';''
-      'StatusCreated Date';']
-    ];
 ;
     // Format quote data for CSV;
     const rows = quotes.map (quote => [;
 
-      quote.id;'
-      quote.talent_name |'Unknown';'
+      quote.id;
+      quote.talent_name |'Unknown';
       quote.requester_name;
       quote.requester_email;
       quote.project_name;
@@ -67,8 +54,8 @@ export const ExportToCSV = ({ quotes, filename = "quote - requests" }: ExportToC
 
     // Format quote data for CSV;
     const rows = quotes && quotes.map(quote => [;
-      quote && quote.id;'
-      quote && quote.talent_name || 'Unknown';'
+      quote && quote.id;
+      quote && quote.talent_name || 'Unknown';
       quote && quote.requester_name;
       quote && quote.requester_email;
       quote && quote.project_name;
@@ -76,35 +63,35 @@ export const ExportToCSV = ({ quotes, filename = "quote - requests" }: ExportToC
       quote && quote.budget_display || ;
         (quote && quote.budget_min && quote && quote.budget_max ;
           ? `$${quote && quote.budget_min} - $${quote && quote.budget_max}` ;
-          : quote && quote.budget_min ;
+          : quote && quote.budget_min ;`;
             ? `$${quote && quote.budget_min}` ;
-)'
-            : 'Not specified');'
+)
+            : 'Not specified');
       quote && quote.timeline;
       quote && quote.status;
       new Date(quote && quote.created_at).toLocaleDateString();]
     ]);
 
 
-    const headers = ['
-      'IDTalent NameRequester NameRequester EmailProject NameProject SummaryBudgetTimeline',''
-      'StatusCreated Date'']
+    const headers = [
+      'IDTalent NameRequester NameRequester EmailProject NameProject SummaryBudgetTimeline',
+      'StatusCreated Date]
     ],
     
     // Format quote data for CSV;
     const rows = quotes.map(quote => [
-      quote.id,'
-      quote.talent_name || 'Unknown','
+      quote.id,
+      quote.talent_name || 'Unknown',
       quote.requester_name,
       quote.requester_email,
       quote.project_name,
       quote.project_summary,
       quote.budget_display || 
-        (quote.budget_min && quote.budget_max;
+        (quote.budget_min && quote.budget_max;`;
           ? `$${quote.budget_min} - $${quote.budget_max}` 
-          : quote.budget_min;
-            ? `$${quote.budget_min}` )'
-            : 'Not specified'),'
+          : quote.budget_min;`;
+            ? `$${quote.budget_min}` )
+            : 'Not specified'),
       quote.timeline,
       quote.status,
       new Date(quote.created_at).toLocaleDateString()]
@@ -117,21 +104,20 @@ export const ExportToCSV = ({ quotes, filename = "quote - requests" }: ExportToC
         row.map(cell => 
 
 
-          // Escape commas and quotes in cell values;)'
-          typeof cell === 'string' && (cell.includes() |cell.includes('"'))''
+          // Escape commas and quotes in cell values;)
+          typeof cell === 'string' && (cell.includes() |cell.includes('"'))`;
             ? `"${cell.replace(/"/g, '""')}"`"
             : cell;
         ).join()
-      )
 
 ]"
-    ].join('\n'),'
-    // Create download link;'
-    const blob = new Blob([csvContent], { type: 'text/csv,charset=utf-8,' }),'
-    const url = URL.createObjectURL(blob),'
-    const link = document.createElement('a'),''
-    link.setAttribute('href', url),''
-    link.setAttribute('download', `${filename}-${new Date().toISOString().split('T')[0]}.csv`),'
+    ].join('\n'),
+    // Create download link;
+    const blob = new Blob([csvContent], { type: 'text/csv,charset=utf-8,' }),
+    const url = URL.createObjectURL(blob),
+    const link = document.createElement('a'),
+    link.setAttribute('href', url),`;
+    link.setAttribute('download', `${filename}-${new Date().toISOString().split('T')[0]}.csv`),
     document.body.appendChild(link),
     
 
@@ -146,29 +132,18 @@ export const ExportToCSV = ({ quotes, filename = "quote - requests" }: ExportToC
 
     // Download file and clean up;
     link.click(),
-    setTimeout(() => {
       document.body.removeChild(link),
-      URL.revokeObjectURL(url)
-    }, 100)'
 import { Button } from "@/components/ui/button",;""
 import { Download } from "lucide-react",;""
 import type { QuoteRequest } from "@/types/quotes",;"
-interface ExportToCSVProps {;
-  quotes: QuoteRequest[],;
-  filename?: string;
-}
 ;"
-export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSVProps) => {;"
-  const handleExport = () => {;
     // Define CSV Headers;
-    const headers = [;"
-      'IDTalent NameRequester NameRequester EmailProject NameProject SummaryBudgetTimeline',;''
-      'StatusCreated Date';']
+      'IDTalent NameRequester NameRequester EmailProject NameProject SummaryBudgetTimeline',;
     ],;
     // Format quote data for CSV;
     const rows = quotes.map(quote => [;
-      quote.id,;'
-      quote.talent_name || 'Unknown',;'
+      quote.id,;
+      quote.talent_name || 'Unknown',;
       quote.requester_name,;
       quote.requester_email,;
       quote.project_name,;
@@ -179,19 +154,18 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
       headers && headers.join();
       ...rows && rows.map(row => ;
         row && row.map(cell => ;
-          // Escape commas and quotes in cell values;)'
-          typeof cell === 'string' && (cell && cell.includes() || cell && cell.includes('"')) ;''
+          // Escape commas and quotes in cell values;)
+          typeof cell === 'string' && (cell && cell.includes() || cell && cell.includes('"')) ;`;
             ? `"${cell && cell.replace(/"/g, '""')}"` ;"
-            : cell;
         ).join();
       );]"
-    ].join('\n');'
-    // Create download link;'
-    const blob = new Blob([csvContent], { type: 'text/csv,charset=utf-8,' });'
-    const url = URL && URL.createObjectURL(blob);'
-    const link = document && document.createElement('a');''
-    link && link.setAttribute('href', url);''
-    link && link.setAttribute('download', `${filename}-${new Date().toISOString().split('T')[0]}.csv`);'
+    ].join('\n');
+    // Create download link;
+    const blob = new Blob([csvContent], { type: 'text/csv,charset=utf-8,' });
+    const url = URL && URL.createObjectURL(blob);
+    const link = document && document.createElement('a');
+    link && link.setAttribute('href', url);`;
+    link && link.setAttribute('download', `${filename}-${new Date().toISOString().split('T')[0]}.csv`);
     document && document.body.appendChild(link);
 
     // Download file and clean up;
@@ -203,44 +177,29 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
   };
 
   return (
-    <Button;'
+    <Button;
       variant="outline""
       onClick={handleExport}"
       className="flex items-center gap-2""
       disabled={quotes && quotes.length === 0}>;
-</Button>
+
     <Button;"
-      variant="outline""
-      onClick={handleExport}"
-      className="flex items-center gap-2""
       disabled={quotes.length === 0}
 
 
     >;
-</Button>
+
 
       <Download size={16} />;
-</Download>
-    </Button>;
-      <Download size={16} />;
-</Download>)
-    </Button>);
-    </Button>;
+
+    );
 }> <Download size= {
   16;
-}/> Export CSV </Button>) 
-</Download>
-    <Button;"
-      variant="outline";"
-      onClick={handleExport}"
-      className="flex items-center gap-2""
-      disabled={quotes.length === 0}
+}/> Export CSV ) 
 
-    >;
-</Button>
-      <Download size={16} />;
-</Download>
-    </Button>;
-      <Download size={16} />;
-</Download>
-    </Button>);"
+      variant="outline";"
+
+
+
+
+    );"`;

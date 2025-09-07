@@ -10,18 +10,15 @@ export const CreateResumeForm = ({ ;
   onCancel,;
   isLoading ;)
 } CreateResumeFormProps) => {;"
-  const [newResumeTitle, setNewResumeTitle] = useState(''),;'
-;
+  const [newResumeTitle, setNewResumeTitle] = useState(),;
   const handleSubmit = async () => {;
     if (!newResumeTitle.trim()) return,;
     await onCreateResume(newResumeTitle),;
   },;
-;
-  return (;'
+  return (;
     <Card className="w-full max-w-2xl mx-auto">;"
-</Card>"
+"
       <CardContent className="py-8">;"
-</CardContent>"
         <div className="text-center">;"
 </div>"
           <h2 className="text-2xl font-bold mb-2">Create New Resume</h2>;""
@@ -39,18 +36,12 @@ export const CreateResumeForm = ({ ;
               onClick={handleSubmit}
               disabled={!newResumeTitle.trim() || isLoading}
             >;
-</Button>"
               {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}"
 </Loader2>
-            </Button>;
           </div>;
           <Button;"
             variant="ghost";"
             onClick={onCancel}"
             className="mt-4";"
-          >;
-</Button>
-          </Button>;
-        </div>;
-      </CardContent>;
-    </Card>;"
+
+    ;"

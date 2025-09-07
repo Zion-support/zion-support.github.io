@@ -7,31 +7,21 @@ const BenefitsSection = () => {
       title: 'Faster Implementation',
       description: 'Get your solutions up and running quickly with our streamlined processes.',
     },
-    {
       icon: '💰',
       title: 'Cost Effective',
       description: 'Reduce operational costs while improving efficiency and productivity.',
-    },
-    {
       icon: '🔒',
       title: 'Secure & Reliable',
       description: 'Enterprise-grade security and 99.9% uptime guarantee for all services.',
-    },
-    {
       icon: '📈',
       title: 'Scalable Solutions',
       description: 'Grow your business with solutions that scale with your needs.',
-    },
-    {
       icon: '🎯',
       title: 'Customized Approach',
       description: 'Tailored solutions designed specifically for your business requirements.',
-    },
-    {
       icon: '🛠️',
       title: 'Expert Support',
       description: '24/7 technical support from our team of experienced professionals.',
-    },
   ];
 
   return (
@@ -58,11 +48,7 @@ const BenefitsSection = () => {
               </h3>
               <p className="text-gray-600 dark:text-gray-300">
                 {benefit.description}
-              </p>
-            </div>
           ))}
-        </div>
-      </div>
     </section>
   );
 };

@@ -21,9 +21,9 @@ export default function QuantumInternetSecurityPage() {
 
   return (
     <UltraAdvancedFuturisticBackground>
-</UltraAdvancedFuturisticBackground>
+
       <Head>
-</Head>
+
         <title>{service.name} - Zion Tech Group</title>"
         <meta name="description" content={service.description} />"
 </meta>
@@ -32,26 +32,19 @@ export default function QuantumInternetSecurityPage() {
           href="https://ziontechgroup.com/quantum-internet-security-platform""
         />
 </link>
-      </Head>"
+      "
       <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">"
 </div>"
         <div className="max-w-6xl mx-auto">"
-</div>"
           <div className="text-center mb-10">"
-</div>"
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-emerald-400 via-green-400 to-cyan-400 bg-clip-text text-transparent flex items-center justify-center gap-3">"
 </h1>"
               <Shield className="w-10 h-10" />"
-</Shield>
-            </h1>"
+
             <p className="mt-4 text-xl text-slate-300 max-w-3xl mx-auto">"
 </p>
-            </p>
-          </div>"
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12">"
-</div>"
             <div className="lg:col-span-2 bg-black/30 rounded-2xl border border-emerald-500/30 p-6">"
-</div>"
               <h2 className="text-2xl font-semibold mb-4">"
 </h2>
               </h2>"
@@ -64,66 +57,35 @@ export default function QuantumInternetSecurityPage() {
                   >
 </li>"
                     <Check className="w-5 h-5 text-emerald-400 mt-0.5" />"
-</Check>
+
                     <span>{feat}</span>
                   </li>
-              </ul>
-            </div>"
             <div className="bg-black/30 rounded-2xl border border-emerald-500/30 p-6 h-fit">"
-</div>"
               <div className="flex items-end justify-between mb-3">"
 </div>
                 <div>
-</div>"
                   <div className="text-3xl font-bold text-white">"
-</div>"
                     <span className="text-slate-400 text-base">"
 </span>
-                    </span>
-                  </div>"
                   <div className="text-slate-400">"
-</div>
-                  </div>
-                </div>"
                 <div className="flex items-center text-yellow-400">"
-</div>"
                   <Star className="w-4 h-4 mr-1" />"
-</Star>
-                </div>
-              </div>
+
               <Button;"
                 href="/contact"""
                 variant="quantum"""
                 size="lg"""
                 className="w-full""
-              >
-</Button>"
                 <ArrowRight className="w-5 h-5 ml-2" />"
-</ArrowRight>
-              </Button>"
+
               <div className="mt-6 space-y-3 text-sm text-slate-300">"
-</div>"
                 <div className="flex items-center space-x-2">"
-</div>"
                   <Phone className="w-4 h-4 text-cyan-400" />"
-</Phone>
+
                   <span>{service.contactInfo.mobile}</span>
-                </div>"
-                <div className="flex items-center space-x-2">"
-</div>"
                   <Mail className="w-4 h-4 text-purple-400" />"
-</Mail>
+
                   <span>{service.contactInfo.email}</span>
-                </div>"
-                <div className="flex items-center space-x-2">"
-</div>"
                   <MapPin className="w-4 h-4 text-green-400" />"
-</MapPin>"
                   <span className="text-xs">{service.contactInfo.address}</span>"
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </UltraAdvancedFuturisticBackground>)"
+    )"

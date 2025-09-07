@@ -33,13 +33,11 @@ const { execSync } = require("child_process")""
         "files"""
         "type": "code-complexity"""
         priority: "medium"""
-        "files"""
       recommendations.push({"type": "code-standards","priority": "high"})""
         message: "ESLint configuration not found. Consider adding ESLint for code quality."""
       recommendations.push({"type": "code-standards","priority": "medium"})""
         message: "Prettier configuration not found. Consider adding Prettier for code formatting."""
         "type": "dependencies"""
-        priority: "medium"""
         "packages"""
       recommendations.push({"type": "security","priority": "high"})""
         message: "Security vulnerabilities found. Run npm audit fix to resolve them."""
@@ -47,10 +45,10 @@ const { execSync } = require("child_process")""
     const results = {"timestamp"}""
     const reportFile = path.join(this.reportsDir, "code-quality-report.json")""
     this.log(` Code quality report "generated"`)""
-// console.log("\n� Code Quality "Summary": ")""
-    console.log(`� Total lines of "code"`)""
-// console.log(` Average lines per "file"`)""
-    console.log(`⚠  Large "files"`)""
-// console.log(`� Complex "files"`)""
+// console.log("\n� Code Quality "Summary": ")""`;
+    console.log(`� Total lines of "code"`)""`;
+// console.log(` Average lines per "file"`)""`;
+    console.log(`⚠  Large "files"`)""`;
+// console.log(`� Complex "files"`)""`;
     console.log(` "Recommendations"`)""
-    const highPriority = recommendations.filter(r => r.priority === "high")""
+    const highPriority = recommendations.filter(r => r.priority === "high")""`;

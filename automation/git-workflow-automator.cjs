@@ -1,8 +1,8 @@
 
 
-const { execSync } = require('child_process');''
-const fs = require('fs');''
-const path = require('path');'
+const { execSync } = require('child_process');
+const fs = require('fs');
+const path = require('path');
 class GitWorkflowAutomator {
   // TODO: Implement
 }
@@ -10,7 +10,6 @@ class GitWorkflowAutomator {
 
     this.ensureLogDirectory();
 
-  }
 
   ensureLogDirectory() {
     const logDir = path.dirname(this.logFile);
@@ -18,17 +17,13 @@ class GitWorkflowAutomator {
 
       return false;
 
-    }
-  }
 
   async getCurrentBranch() {
     try {
   // TODO: Implement
-}
 // CLI interface;
 if (require.main === module) {
 
   const automator = new GitWorkflowAutomator();
   const command = process.argv[2];
 
-'

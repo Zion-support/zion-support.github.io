@@ -10,9 +10,9 @@ const path = require("path")""
     this.log(` "Starting"`)""
         "cwd"""
         "encoding": "utf8"""
-        "timeout"""
+        "timeout"""`;
       this.log(` "Completed"`)""
-      return { "success": true, "output"}""
+      return { "success": true, "output"}""`;
       this.log(` "Failed"`)""
       return { "success": false, "error"}""
     this.log("� Installing dependencies...")""
@@ -41,7 +41,7 @@ const path = require("path")""
     this.log(" Running quality checks...")""
       "scripts/performance-monitor.js"""
       "scripts/security-audit.js"""
-      "scripts/code-quality-analyzer.js"""
+      "scripts/code-quality-analyzer.js"""`;
           `Quality "Check"""
     this.log(" Generating CI report...")""
       "timestamp"""
@@ -51,7 +51,7 @@ const path = require("path")""
       "results"""
       "recommendations"""
     const reportPath = path.join(this.reportsDir, "ci-pipeline-report.json")""
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2), "utf8"""
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2), "utf8"""`;
     this.log(` CI report "generated"`)""
         "type": "error"""
         "message"""
@@ -72,8 +72,8 @@ const path = require("path")""
         "message": "Security audit failed"""
         "action": "Address security vulnerabilities"""
     this.log(" Starting Continuous Integration Pipeline")""
-      this.log("� Continuous Integration Pipeline Completed")""
-        ` "Summary"""
+      this.log("� Continuous Integration Pipeline Completed")""`;
+        ` "Summary"""`;
       this.log(` Fatal error in CI "pipeline"`)""
-    console.log(" Continuous Integration Pipeline completed successfully!")""
-      ` Final "Summary"""
+    console.log(" Continuous Integration Pipeline completed successfully!")""`;
+      ` Final "Summary"""`;

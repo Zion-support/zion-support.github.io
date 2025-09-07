@@ -4,15 +4,14 @@ module.exports = {
   roots: ['<rootDir>/src'],
   testMatch: [
     '**/__tests__/**/*.smoke.+(ts|tsx|js)',
-    '**/*.smoke.(test|spec).+(ts|tsx|js)'
+    '**/*.smoke.(test|spec).+(ts|tsx|js)
   ],
   transform: {
-    '^.+\\.(ts|tsx)$': 'ts-jest'
+    '^.+\\.(ts|tsx)$': 'ts-jest
   },
   setupFilesAfterEnv: ['<rootDir>/src/setupTests.ts'],
   moduleNameMapping: {
-    '^@/(.*)$': '<rootDir>/src/$1'
-  },
+    '^@/(.*)$': '<rootDir>/src/$1
 =======
   coverageThreshold: {
     global: {
@@ -20,15 +19,12 @@ module.exports = {
       functions: 70,
       lines: 70,
       statements: 70,
-    },
-  },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
   modulePathIgnorePatterns: [
     '<rootDir>/backup-problematic-files/',
     '<rootDir>/backup*/',
     '<rootDir>/temp*/',
-    '<rootDir>/corrupted*/'
-  ],
+    '<rootDir>/corrupted*/
   verbose: true,
   collectCoverage: false,
   testTimeout: 30000,

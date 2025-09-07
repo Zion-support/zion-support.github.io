@@ -18,7 +18,7 @@ type ToasterProps = React.ComponentProps<typeof Sonner>
             "group-[.toast]:bg-muted group-[.toast]:text-muted-foreground"}}}"
       {...props}
     />;
-</Sonner>
+
 type ToasterProps = React.ComponentProps < typeof Sonner>;
 const Toaster = ({ ...props }: ToasterProps) =>: any {
   // TODO: Implement
@@ -39,9 +39,7 @@ const Toaster = ({ ...props }: ToasterProps) =>: any {
             &quot;group-[.toast]:bg - muted group-[.toast]:text - muted - foreground & quot;}}}
 ;
 type ToasterProps = React.ComponentProps<typeof Sonner>;
-</Sonner>
-    <Sonner;"
-      theme={theme as ToasterProps["theme"]}""
+
       className="toaster group";"
       toastOptions={{;
         classNames: {;,
@@ -51,7 +49,5 @@ type ToasterProps = React.ComponentProps<typeof Sonner>;
           actionButton:;"
             "group-[.toast]:bg-primary group-[.toast]:text-primary-foreground",;"
           cancelButton:;"
-            "group-[.toast]:bg-muted group-[.toast]:text-muted-foreground"}}}"
       {...props})
     />);
-</Sonner>"

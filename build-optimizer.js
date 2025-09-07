@@ -13,7 +13,6 @@ function optimizeBuild() {
   } catch (error) {
     console.log(`❌ Build failed: ${error.message}`);
   }
-}
 
 optimizeBuild();
-"
+"`;

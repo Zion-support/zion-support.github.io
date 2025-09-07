@@ -19,10 +19,9 @@ class UltimateMergeConflictResolver {
       'SUCCESS': '✅',
       'ERROR': '❌',
       'WARNING': '⚠️',
-      'PROGRESS': '🔄'
+      'PROGRESS': '🔄
     }[type] || 'ℹ️';
     console.log(`${prefix} [${timestamp}] ${message}`);
-  }
 
   async getConflictedFiles() {
     this.log('🔍 Finding files with merge conflicts...');
@@ -37,31 +36,26 @@ class UltimateMergeConflictResolver {
         .filter(line => line.includes('UU') || line.includes('AA') || line.includes('DD'))
         .map(line => line.substring(3).trim())
         .filter(file => file.length > 0);
-
+`;
       this.log(`📊 Found ${conflictedFiles.length} conflicted files`);
       return conflictedFiles;
-    } catch (error) {
+    } catch (error) {`;
       this.log(`❌ Error finding conflicted files: ${error.message}`, 'ERROR');
       return [];
-    }
-  }
 
-  async resolveConflict(filePath) {
+  async resolveConflict(filePath) {`;
     this.log(`🔧 Resolving conflicts in ${filePath}...`);
     
-    try {
-      if (!fs.existsSync(filePath)) {
+      if (!fs.existsSync(filePath)) {`;
         this.log(`⚠️ File ${filePath} does not exist, skipping`, 'WARNING');
         return false;
-      }
 
       const content = fs.readFileSync(filePath, 'utf8');
       
       // Check if file has merge conflict markers
-      if (!content.includes('<<<<<<<') || !content.includes('=======') || !content.includes('>>>>>>>')) {
+      if (!content.includes('<<<<<<<') || !content.includes('=======') || !content.includes('>>>>>>>')) {`;
         this.log(`✅ No conflicts found in ${filePath}`, 'SUCCESS');
         return true;
-      }
 
       let resolvedContent = content;
       let conflictCount = 0;
@@ -70,56 +64,37 @@ class UltimateMergeConflictResolver {
       if (filePath.includes('automation/') || filePath.includes('scripts/')) {
         resolvedContent = this.resolveWithOurs(content);
         conflictCount = (content.match(/<<<<<<< HEAD/g) || []).length;
-      }
       // Strategy 2: Use "theirs" version for configuration files
       else if (filePath.includes('.config.') || filePath.includes('eslint') || filePath.includes('jest')) {
         resolvedContent = this.resolveWithTheirs(content);
-        conflictCount = (content.match(/<<<<<<< HEAD/g) || []).length;
-      }
       // Strategy 3: Smart merge for component files
       else if (filePath.includes('components/') || filePath.includes('App.tsx')) {
         resolvedContent = this.smartMerge(content);
-        conflictCount = (content.match(/<<<<<<< HEAD/g) || []).length;
-      }
       // Strategy 4: Default to ours for other files
       else {
-        resolvedContent = this.resolveWithOurs(content);
-        conflictCount = (content.match(/<<<<<<< HEAD/g) || []).length;
-      }
 
       // Write resolved content
       fs.writeFileSync(filePath, resolvedContent);
       
-      // Add to git
+      // Add to git`;
       execSync(`git add "${filePath}"`, { cwd: this.projectRoot });
       
       this.resolvedFiles.push({
         file: filePath,
         conflicts: conflictCount,
         strategy: this.getStrategy(filePath)
-      });
-      
       this.log(`✅ Resolved ${conflictCount} conflicts in ${filePath}`, 'SUCCESS');
-      return true;
       
-    } catch (error) {
-      this.log(`❌ Error resolving ${filePath}: ${error.message}`, 'ERROR');
+      this.log(`❌ Error resolving ${filePath}: ${error.message}`, 'ERROR');`;
       this.errors.push(`${filePath}: ${error.message}`);
-      return false;
-    }
-  }
 
   resolveWithOurs(content) {
     return content
       .replace(/<<<<<<< HEAD\n([\s\S]*?)\n=======\n([\s\S]*?)\n>>>>>>> [^\n]+/g, '$1')
       .replace(/<<<<<<< [^\n]+\n([\s\S]*?)\n=======\n([\s\S]*?)\n>>>>>>> HEAD/g, '$1');
-  }
 
   resolveWithTheirs(content) {
-    return content
       .replace(/<<<<<<< HEAD\n([\s\S]*?)\n=======\n([\s\S]*?)\n>>>>>>> [^\n]+/g, '$2')
-      .replace(/<<<<<<< [^\n]+\n([\s\S]*?)\n=======\n([\s\S]*?)\n>>>>>>> HEAD/g, '$1');
-  }
 
   smartMerge(content) {
     // For components, prefer the more complete version
@@ -135,22 +110,17 @@ class UltimateMergeConflictResolver {
         return this.resolveWithTheirs(content);
       } else {
         return this.resolveWithOurs(content);
-      }
-    }
     
-    return this.resolveWithOurs(content);
-  }
 
   getStrategy(filePath) {
     if (filePath.includes('automation/') || filePath.includes('scripts/')) return 'ours';
     if (filePath.includes('.config.') || filePath.includes('eslint') || filePath.includes('jest')) return 'theirs';
     if (filePath.includes('components/') || filePath.includes('App.tsx')) return 'smart';
     return 'ours';
-  }
 
   async commitMerge() {
     this.log('💾 Committing merge resolution...');
-    try {
+    try {`;
       const commitMessage = `feat: resolve merge conflicts automatically
 
 - Resolved conflicts in ${this.resolvedFiles.length} files
@@ -158,24 +128,17 @@ class UltimateMergeConflictResolver {
 - Preserved automation scripts and configurations
 - Maintained code quality and functionality
 
-Files resolved:
+Files resolved:`;
 ${this.resolvedFiles.map(f => `- ${f.file} (${f.conflicts} conflicts, ${f.strategy} strategy)`).join('\n')}
-
 Total conflicts resolved: ${this.resolvedFiles.reduce((sum, f) => sum + f.conflicts, 0)}`;
-
       execSync(`git commit -m "${commitMessage}"`, { cwd: this.projectRoot });
       this.log('✅ Merge conflicts committed successfully', 'SUCCESS');
-      return true;
-    } catch (error) {
       this.log(`❌ Error committing merge: ${error.message}`, 'ERROR');
-      return false;
-    }
-  }
 
   async generateReport() {
     const duration = Date.now() - this.startTime;
     const report = {
-      timestamp: new Date().toISOString(),
+      timestamp: new Date().toISOString(),`;
       duration: `${Math.round(duration / 1000)}s`,
       summary: {
         totalFiles: this.resolvedFiles.length,
@@ -185,39 +148,34 @@ Total conflicts resolved: ${this.resolvedFiles.reduce((sum, f) => sum + f.confli
           ours: this.resolvedFiles.filter(f => f.strategy === 'ours').length,
           theirs: this.resolvedFiles.filter(f => f.strategy === 'theirs').length,
           smart: this.resolvedFiles.filter(f => f.strategy === 'smart').length
-        }
       },
       resolvedFiles: this.resolvedFiles,
       errors: this.errors,
       recommendations: [
         'Review resolved files for any manual adjustments needed',
         'Run tests to ensure functionality is preserved',
-        'Consider setting up automated conflict resolution for future merges'
+        'Consider setting up automated conflict resolution for future merges
       ]
     };
 
     const reportPath = path.join(this.projectRoot, 'merge-conflict-resolution-report.json');
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));`;
     this.log(`📊 Report saved to ${reportPath}`, 'INFO');
     return report;
-  }
 
   async run() {
     this.log('🚀 Starting Ultimate Merge Conflict Resolution...');
     
-    try {
       // Get conflicted files
       const conflictedFiles = await this.getConflictedFiles();
       
       if (conflictedFiles.length === 0) {
         this.log('✅ No merge conflicts found', 'SUCCESS');
         return;
-      }
 
       // Resolve each conflict
       for (const file of conflictedFiles) {
         await this.resolveConflict(file);
-      }
 
       // Commit the merge
       await this.commitMerge();
@@ -225,24 +183,18 @@ Total conflicts resolved: ${this.resolvedFiles.reduce((sum, f) => sum + f.confli
       // Generate report
       const report = await this.generateReport();
       
-      this.log('🎉 Merge conflict resolution completed successfully!', 'SUCCESS');
+      this.log('🎉 Merge conflict resolution completed successfully!', 'SUCCESS');`;
       this.log(`📊 Summary: ${report.summary.totalFiles} files, ${report.summary.totalConflicts} conflicts resolved`);
       
-      if (this.errors.length > 0) {
-        this.log(`⚠️ ${this.errors.length} errors encountered:`, 'WARNING');
+      if (this.errors.length > 0) {`;
+        this.log(`⚠️ ${this.errors.length} errors encountered:`, 'WARNING');`;
         this.errors.forEach(error => this.log(`   - ${error}`, 'WARNING'));
-      }
 
-    } catch (error) {
       this.log(`💥 Merge conflict resolution failed: ${error.message}`, 'ERROR');
       throw error;
-    }
-  }
-}
 
 if (require.main === module) {
   const resolver = new UltimateMergeConflictResolver();
   resolver.run().catch(console.error);
-}
 
-module.exports = UltimateMergeConflictResolver;
+module.exports = UltimateMergeConflictResolver;`;

@@ -18,7 +18,6 @@ interface GeneratedContent {;
   },;
   keyPoints:string[];
 }
-;
 interface AIListingGeneratorProps {;
   onApplyGenerated?:(content:GeneratedContent) => void,;
   initialValues?:{;
@@ -26,9 +25,6 @@ interface AIListingGeneratorProps {;
     category?:string,;
     keyFeatures?:string,;
     targetAudience?:string;
-  },;
-}
-;
 export function AIListingGenerator({ onApplyGenerated, initialValues = {} } AIListingGeneratorProps) {;
   const { toast } = useToast(),;"
   const [title, setTitle] = useState(initialValues.title || ""),;""
@@ -37,99 +33,67 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} } AILi
   const [targetAudience, setTargetAudience] = useState(initialValues.targetAudience || ""),;"
   const [isLoading, setIsLoading] = useState(false),;
   const [generatedContent, setGeneratedContent] = useState(null as GeneratedContent | null),;
-;
   const handleInputChange = (e:{ target:{ value:string } }, field:string) => {;
     switch(field) {;"
-      case 'title':;'
+      case 'title':;
         setTitle(e.target.value),;
-        break,;'
-      case 'category':;'
+        break,;
+      case 'category':;
         setCategory(e.target.value),;
-        break,;'
-      case 'keyFeatures':;'
+      case 'keyFeatures':;
         setKeyFeatures(e.target.value),;
-        break,;'
-      case 'targetAudience':;'
+      case 'targetAudience':;
         setTargetAudience(e.target.value),;
         break;
-    }
-  },;
-;
   const handleGenerate = async () => {;
     if (!title || !category) {;
-      toast({;'
+      toast({;
         title:"Missing required fields",;""
         description:"Please provide at least a title and category.",;""
         variant:"destructive";")
       }),;
       return,;
-    }
-;
     setIsLoading(true),;
-    ;
     try {;"
-      const { data, error } = await supabase.functions.invoke('ai-listing-generator', {;'
+      const { data, error } = await supabase.functions.invoke('ai-listing-generator', {;
         body:{ title, category, keyFeatures, targetAudience })
-      }),;
-;
       if (error) {;
         throw new Error(error.message),;
-      }
-      ;
       if (data.error) {;
         throw new Error(data.error),;
-      }
-;
       setGeneratedContent(data.generated),;
-      toast({;'
         title:"Content Generated",;""
         description:"AI has created optimized listing content for you.";")
-      }),;
     } catch (error) {;"
       console.error("Error generating content:", error),;"
       toast({;"
         title:"Generation Failed",;""
         description:error instanceof Error ? error.message :"Failed to generate content. Please try again.",;""
-        variant:"destructive";")
-      }),;
     } finally {;
       setIsLoading(false),;
-    }
-  },;
-;
   const handleApply = () => {;
     if (generatedContent && onApplyGenerated) {;
       onApplyGenerated(generatedContent),;
-      toast({;"
         title:"Content Applied",;""
         description:"The generated content has been applied to your listing.";")
-      }),;
-    }
-  },;
-;
   return (;"
     <div className="space-y-6">;"
 </div>"
       <Card className="border border-zion-blue-light bg-zion-blue-dark">;"
-</Card>
+
         <CardHeader>;
-</CardHeader>"
+"
           <CardTitle className="flex items-center text-white">;"
-</CardTitle>"
             <Sparkles className="h-5 w-5 mr-2 text-zion-cyan" />;"
-</Sparkles>
-          </CardTitle>;"
+
+          ;"
           <p className="text-sm text-zion-slate-light">;"
 </p>
           </p>;
-        </CardHeader>;"
         <CardContent className="space-y-4">;"
-</CardContent>"
           <div className="space-y-2">;"
-</div>"
             <label htmlFor="title" className="text-sm font-medium text-zion-slate-light">Title</label>;"
             <Input;"
               id="title";"
               value={title})"
-              onChange={(e) => handleInputChange(e, 'title')}'
-</Input>'
+              onChange={(e) => handleInputChange(e, 'title')}

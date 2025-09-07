@@ -10,18 +10,15 @@ class ErrorBoundary extends React.Component {
     return { hasError: true };
 
   componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);'
+    console.error('Error caught by boundary:', error, errorInfo);
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
   return <NotificationCenter />;
-</NotificationCenter>'
-  return <NotificationCenter />;const NotificationCenter = dynamic(() => import('../components/notifications/NotificationCenter'), {;'
-</NotificationCenter>
-  return <NotificationCenter />;
-</NotificationCenter>'
-  return <NotificationCenter />;const NotificationCenter = dynamic (() => import ('../components / notifications / NotificationCenter'), {'
-</NotificationCenter>
-  return <NotificationCenter />;
-</NotificationCenter>
-'
+
+  return <NotificationCenter />;const NotificationCenter = dynamic(() => import('../components/notifications/NotificationCenter'), {;
+
+
+  return <NotificationCenter />;const NotificationCenter = dynamic (() => import ('../components / notifications / NotificationCenter'), {
+
+

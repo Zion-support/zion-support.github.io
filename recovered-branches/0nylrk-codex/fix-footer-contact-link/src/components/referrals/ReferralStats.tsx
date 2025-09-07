@@ -7,7 +7,6 @@ interface ReferralStatsProps {
 }
   stats: ReferralStatsType;,
   isLoading: boolean;
-}
 export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {
 
   const statCards = [
@@ -15,70 +14,46 @@ export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {
       title: "Total Referrals"",
   value: stats.totalReferrals;"
       icon: <Share className="h-5 w-5 text-muted-foreground" />"
-</Share>"
+"
       icon: <Star className="h-5 w-5 text-muted-foreground" />"
-</Star>"
       icon: <TrendingUp className="h-5 w-5 text-muted-foreground" />"
-</TrendingUp>"
       icon: <Award className="h-5 w-5 text-muted-foreground" />"
-</Award>"
       icon: <Share className="h - 5 w - 5 text - muted - foreground" />,"
-</Share>"
       icon: <Star className="h - 5 w - 5 text - muted - foreground" />,"
-</Star>"
       icon: <TrendingUp className="h - 5 w - 5 text - muted - foreground" />,"
-</TrendingUp>"
       icon: <Award className="h - 5 w - 5 text - muted - foreground" />,"
-</Award>"
     <div className="grid gap - 4 md:grid - cols - 2 lg:grid - cols - 4">;"
 </div>
         <Card key={i}>;
-</Card>"
           <CardHeader className="flex flex - row items - center justify - between space - y-0 pb - 2">;"
-</CardHeader>"
-            <CardTitle className="text - sm font - medium">{card.title}</CardTitle>;"
-          </CardHeader>;
+            <CardTitle className="text - sm font - medium">{card.title};"
+          ;
           <CardContent>;
-</CardContent>"
               <div className="h - 6 w - 20 bg - muted animate - pulse rounded" />) : ("
-</div>
               <>;"
                 <div className="text - 2xl font - bold">{card.value}</div>;""
                 <p className="text - xs text - muted - foreground">;"
 </p>"
       icon: <Share className="h-5 w-5 text-muted-foreground" />,"
-</Share>"
       icon: <Star className="h-5 w-5 text-muted-foreground" />,"
-</Star>"
       icon: <TrendingUp className="h-5 w-5 text-muted-foreground" />,"
-</TrendingUp>"
       icon: <Award className="h-5 w-5 text-muted-foreground" />,"
-</Award>"
     <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">"
-</div>
         <Card key={i}>
-</Card>"
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">"
-</CardHeader>"
-            <CardTitle className="text-sm font-medium">{card.title}</CardTitle>"
-          </CardHeader>
+            <CardTitle className="text-sm font-medium">{card.title}"
+          
           <CardContent>
-</CardContent>"
               <div className="h-6 w-20 bg-muted animate-pulse rounded" />"
-</div>
               <>"
                 <div className="text-2xl font-bold">{card.value}</div>""
                 <p className="text-xs text-muted-foreground">"
 </p>
-                </p>
               </>)
             )}
-          </CardContent>;
-        </Card>;
     </div>;
                 </p>;
               </>)}
-          </CardContent>;
-        </Card>))}
+        ))}
     </div>);
     </div>]"

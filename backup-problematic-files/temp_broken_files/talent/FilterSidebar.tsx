@@ -1,7 +1,7 @@
 
 import React from "react",;""
 import { Button } from "@/components/ui/button",;""
-import { Filter } from 'lucide-react';''
+import { Filter } from 'lucide-react';
 import { SearchFilter } from "./filters/SearchFilter",;""
 import { SortFilter } from "./filters/SortFilter",;""
 import { SkillsFilter } from "./filters/SkillsFilter",;""
@@ -39,7 +39,7 @@ export function FilterSidebar({;
         <h3 className="text-lg font-semibold text-white flex items-center">;"
 </h3>"
           <Filter className="h-4 w-4 mr-2 text-zion-purple" />;"
-</Filter>
+
         </h3>;
         <Button ;"
           variant="ghost" ;""
@@ -47,47 +47,45 @@ export function FilterSidebar({;
           onClick={clearFilters}"
           className="h-7 text-xs text-zion-purple hover:text-zion-purple-light hover:bg-transparent";"
         >;
-</Button>
-        </Button>;
+
       </div>;
       <SearchFilter searchTerm={searchTerm} setSearchTerm={setSearchTerm} />;
-</SearchFilter>
+
       <SortFilter sortOption={sortOption} setSortOption={setSortOption} />;
-</SortFilter>
+
       <SkillsFilter ;
         selectedSkills={selectedSkills} ;
         toggleSkill={toggleSkill} ;
         expanded={expandedSections.skills} ;)"
-        toggleSection={() => toggleSection('skills')}'
-</SkillsFilter>
+        toggleSection={() => toggleSection('skills')}
+
       <AvailabilityFilter ;
         selectedAvailability={selectedAvailability} ;
         toggleAvailability={toggleAvailability} ;
-        expanded={expandedSections.availability} ;'
-        toggleSection={() => toggleSection('availability')}'
-</AvailabilityFilter>
+        expanded={expandedSections.availability} ;
+        toggleSection={() => toggleSection('availability')}
+
       <RegionFilter ;
         selectedRegions={selectedRegions} ;
         toggleRegion={toggleRegion} ;
-        expanded={expandedSections.region} ;'
-        toggleSection={() => toggleSection('region')}'
-</RegionFilter>
+        expanded={expandedSections.region} ;
+        toggleSection={() => toggleSection('region')}
+
       <ExperienceFilter ;
         experienceRange={experienceRange} ;
         setExperienceRange={setExperienceRange} ;
-        expanded={expandedSections.experience} ;'
-        toggleSection={() => toggleSection('experience')}'
-</ExperienceFilter>
+        expanded={expandedSections.experience} ;
+        toggleSection={() => toggleSection('experience')}
+
       <PriceFilter ;
         priceRange={priceRange} ;
         setPriceRange={setPriceRange} ;
-        expanded={expandedSections.price} ;'
-        toggleSection={() => toggleSection('price')}'
-</PriceFilter>
-        <Button ;'
-          onClick={() => window.dispatchEvent(new CustomEvent('closeMobileFilter'))}'
-</Button>
-        </Button>;
+        expanded={expandedSections.price} ;
+        toggleSection={() => toggleSection('price')}
+
+        <Button ;
+          onClick={() => window.dispatchEvent(new CustomEvent('closeMobileFilter'))}
+
     </>;
   ),;}
  export function FilterSidebar ({;
@@ -110,20 +108,19 @@ setSortOption;
 clearFilters;
 isMobileFilterOpen ;)
 }: FilterSidebarProps) {;
-  return (<> /* Filter header */ ;'
-}<div className="flex items-center justify-between mb-6" > <h3 className="text-lg font-semibold text-white flex items-center" > <Filter className="h-4 w-4 mr-2 text-zion-purple" /> Filters </h3> <Button > Clear All </Button> </div> {;"
+  return (<> /* Filter header */ ;
+}<div className="flex items-center justify-between mb-6" > <h3 className="text-lg font-semibold text-white flex items-center" > <Filter className="h-4 w-4 mr-2 text-zion-purple" /> Filters </h3> <Button > Clear All  </div> {;"
 }<SearchFilter searchTerm= {;
   searchTerm ;
 }setSearchTerm= {;
   setSearchTerm ;
 }/> {;
-</SearchFilter>
+
 }<SortFilter sortOption= {;
   sortOption ;
 }setSortOption= {;
   setSortOption ;
-}/> {;
-</SortFilter>
+
 }<SkillsFilter selectedSkills= {;
   selectedSkills ;
 }toggleSkill= {;
@@ -131,50 +128,43 @@ isMobileFilterOpen ;)
 }expanded= {;
   expandedSections.skills ;
 }toggleSection= {;)"
-  () => toggleSection ('skills') ;'
-</SkillsFilter>
+  () => toggleSection ('skills') ;
+
 }<AvailabilityFilter selectedAvailability= {;
   selectedAvailability ;
 }toggleAvailability= {;
   toggleAvailability ;
-}expanded= {;
-  expandedSections.availability ;'
-}toggleSection= {';''
-  () => toggleSection ('availability') ;'
-</AvailabilityFilter>
+  expandedSections.availability ;
+}toggleSection= {';
+  () => toggleSection ('availability') ;
+
 }<RegionFilter selectedRegions= {;
   selectedRegions ;
 }toggleRegion= {;
   toggleRegion ;
-}expanded= {;
-  expandedSections.region ;'
-}toggleSection= {';''
-  () => toggleSection ('region') ;'
-</RegionFilter>
+  expandedSections.region ;
+  () => toggleSection ('region') ;
+
 }<ExperienceFilter experienceRange= {;
   experienceRange ;
 }setExperienceRange= {;
   setExperienceRange ;
-}expanded= {;
-  expandedSections.experience ;'
-}toggleSection= {';''
-  () => toggleSection ('experience') ;'
-</ExperienceFilter>
+  expandedSections.experience ;
+  () => toggleSection ('experience') ;
+
 }<PriceFilter priceRange= {;
   priceRange ;
 }setPriceRange= {;
   setPriceRange ;
-}expanded= {;
-  expandedSections.price ;'
-}toggleSection= {';''
-  () => toggleSection ('price') ;'
-</PriceFilter>'
-  isMobileFilterOpen && (<Button onClick={';"  () => window.dispatchEvent (new CustomEvent ('closeMobileFilter') ) ";"}className="w-full bg-zion-purple hover:bg-zion-purple-dark text-white mt-4" > Apply Filters </Button>) ;""
+  expandedSections.price ;
+  () => toggleSection ('price') ;
+
+  isMobileFilterOpen && (<Button onClick={';"  () => window.dispatchEvent (new CustomEvent ('closeMobileFilter') ) ";"}className="w-full bg-zion-purple hover:bg-zion-purple-dark text-white mt-4" > Apply Filters ) ;""
 }</>) ;"}'"""
-  isMobileFilterOpen && (<Button onClick={';')'
+  isMobileFilterOpen && (<Button onClick={';')
   () => window.dispatchEvent (new CustomEvent ('closeMobileFilter') ) ";"
-</Button>"
-}className="w-full bg-zion-purple hover:bg-zion-purple-dark text-white mt-4" > Apply Filters </Button>) ;"
+"
+}className="w-full bg-zion-purple hover:bg-zion-purple-dark text-white mt-4" > Apply Filters ) ;"
 }</>) ;"
 }'""
 ursor/fix-lint-push-and-merge-to-main-e10e:src/components/talent/FilterSidebar.tsx;"

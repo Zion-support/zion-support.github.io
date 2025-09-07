@@ -1,17 +1,16 @@
 
-import { format } from 'date-fns',;''
-import { Edit, Trash2 } from 'lucide-react',;''
-import { Button } from '@/components/ui/button',;''
-import { Card, CardContent } from '@/components/ui/card',;''
-import { Education } from '@/types/resume',;''
-import { EducationItemProps } from './types',;'
+import { format } from 'date-fns',;
+import { Edit, Trash2 } from 'lucide-react',;
+import { Button } from '@/components/ui/button',;
+import { Card, CardContent } from '@/components/ui/card',;
+import { Education } from '@/types/resume',;
+import { EducationItemProps } from './types',;
 ;
 export function EducationItem({ education, onEdit, onDelete } EducationItemProps) {;
-  return (;'
+  return (;
     <Card className="bg-muted/40">;"
-</Card>"
+"
       <CardContent className="pt-6">;"
-</CardContent>"
         <div className="flex justify-between">;"
 </div>
           <div>;
@@ -25,25 +24,16 @@ export function EducationItem({ education, onEdit, onDelete } EducationItemProps
               <p className="text-xs text-muted-foreground">{education.location}</p>;"
           </div>;"
           <div className="flex gap-2">;"
-</div>
             <Button;"
               variant="ghost";""
               size="icon";")
               onClick={() => onEdit(education)}
-</Button>"
               <Edit className="h-4 w-4" />;"
-</Edit>
-            </Button>;
-            <Button;"
-              variant="ghost";""
+
               size="icon";"
               onClick={() => onDelete(education.id!)}
-</Button>"
               <Trash2 className="h-4 w-4" />;"
 </Trash2>
-            </Button>;
           </div>;
-        </div>;"
           <p className="text-sm mt-3 line-clamp-2">{education.description}</p>;"
-      </CardContent>;
-    </Card>;"
+    ;"

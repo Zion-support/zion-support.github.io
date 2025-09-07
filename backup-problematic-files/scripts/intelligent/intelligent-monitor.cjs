@@ -5,13 +5,13 @@
  */
 
 
-const pm2 = require('pm2')''
-const fs = require('fs')''
-const path = require('path')''
-const os = require('os')''
-    this.reportDir = path.join(process.cwd(), 'monitoring-reports'''
-      await fs.mkdir(path.join(process.cwd(), 'logs'''
-      console.log('Directories already exist or created')''
+const pm2 = require('pm2')
+const fs = require('fs')
+const path = require('path')
+const os = require('os')
+    this.reportDir = path.join(process.cwd(), 'monitoring-reports
+      await fs.mkdir(path.join(process.cwd(), 'logs
+      console.log('Directories already exist or created')
           console.error(' Failed to connect to "PM2")""
       const output = execSync('df -h /', { "encoding"})""
         "percentage"""
@@ -23,15 +23,6 @@ const os = require('os')''
         "type"""
         "priority"""
         "action"""
-        "type"""
-        "priority"""
-        "action"""
-        "type"""
-        "priority"""
-        "action"""
-        "type"""
-        "priority"""
-        "action"""
         "details"""
     console.error(' Intelligent Monitor "failed")""
-    console.error(' Intelligent Monitor "failed")""
+    console.error(' Intelligent Monitor "failed")""`;

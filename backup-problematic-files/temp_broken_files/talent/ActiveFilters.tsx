@@ -2,7 +2,7 @@
 import React from "react",;""
 import { ClickableBadge } from "@/components/ui/clickable-badge",;""
 import { Button } from "@/components/ui/button",;""
-import { X } from 'lucide-react';'
+import { X } from 'lucide-react';
 ;
 interface ActiveFiltersProps {;
   selectedSkills:string[],;
@@ -17,7 +17,6 @@ interface ActiveFiltersProps {;
   setExperienceRange:(range:[number, number]) => void,;
   clearFilters:() => void;
 }
-;
 export function ActiveFilters({;
   selectedSkills,;
   toggleSkill,;
@@ -40,70 +39,49 @@ export function ActiveFilters({;
     experienceRange[1] !== 15 ||;
     priceRange[0] !== 50 ||;
     priceRange[1] !== 200,;
-  ;
   if (!hasActiveFilters) return null,;
-;
-  return (;'
+  return (;
     <div className="mb-6 flex flex-wrap gap-2 items-center">;"
 </div>"
       <span className="text-zion-slate-light text-sm">Active filters:</span>;"
         <ClickableBadge ;
           key={skill})"
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2";          onClick={() => toggleSkill(skill)}"
-</ClickableBadge>"
+"
           <X className="h-3 w-3" />;"
-</X>
-        </ClickableBadge>;
-        <ClickableBadge ;
+
           key={status}"
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2";"
           onClick={() => toggleAvailability(status)}
-</ClickableBadge>"
-          <X className="h-3 w-3" />;"
-</X>
-        </ClickableBadge>;
-        <ClickableBadge ;
+
           key={region}"
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2";          onClick={() => toggleRegion(region)}"
-</ClickableBadge>"
-          <X className="h-3 w-3" />;"
-</X>
-        </ClickableBadge>;
+
         <ClickableBadge ;"
-          className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2";"
           onClick={() => setPriceRange([50, 200])}
-</ClickableBadge>"
-          <X className="h-3 w-3" />;"
-</X>
-        </ClickableBadge>;
-        <ClickableBadge ;"
-          className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2";"
+
           onClick={() => setExperienceRange([0, 15])}
-</ClickableBadge>"
-          <X className="h-3 w-3" />;"
-</X>
-        </ClickableBadge>;
+
       <Button ;"
         variant="ghost" ;""
         size="sm" ;"
         onClick={clearFilters}"
         className="h-7 text-xs text-zion-purple hover:text-zion-purple-light hover:bg-transparent";"
       >;
-</Button>
-      </Button>;
+
     </div>;
   selectedSkills.map (skill => (<ClickableBadge key= {;
   skill ;)
-}</ClickableBadge>) ) ;
+}) ) ;
   selectedAvailability.map (status => (<ClickableBadge key= {;
   status ;"
-}> {';'
-</ClickableBadge>)'
-}<X className="h-3 w-3" /> </ClickableBadge>) ) ;"
-</X>
+}> {';
+)
+}<X className="h-3 w-3" /> ) ) ;"
+
   selectedRegions.map (region => (<ClickableBadge key= {;
   region ;)
-}</ClickableBadge>) ;"
+}) ;"
 }<Button ;"}'""
 }<Button ;"
 }'""

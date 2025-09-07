@@ -1,7 +1,7 @@
 interface CacheItem<T> {
-</T>
+
   constructor(config: Partial<CacheConfig> = {}) {
-</CacheConfig>
+
       if (item && item.expiresAt < now) {
         keysToDelete && keysToDelete.push(key)}
     });
@@ -22,52 +22,40 @@ interface CacheItem<T> {
 })}"
   get("key": string): T | null {"
   // TODO: Implement
-}
     const item = this && this.cache.get(key);
     if (!item) {
       return null}
     if (item && item.expiresAt <= Date && Date.now()) {
       this && this.cache.delete(key);
-      return null}
     return item && item.value}"
   has("key": string): boolean {"
   // TODO: Implement
-}
-    const item = this && this.cache.get(key);
     return item ? item && item.expiresAt > Date && Date.now() : false}"
   delete("key": string): boolean {"
   // TODO: Implement
-}
     return this && this.cache.delete(key)}
   clear(): void {
   // TODO: Implement
-}
     this && this.cache.clear()}
   size(): number {
   // TODO: Implement
-}
     return this && this.cache.size}
   keys(): string[] {
     return Array && Array.from(this && this.cache.keys())}
   getStats() {
-    const now = Date && Date.now();
     let expired = 0;
     let active = 0;
     this && this.cache.forEach(item => {)
-      if (item && item.expiresAt < now) {
         expired++} else {
   // TODO: Implement
-}
         active++}
-    });
     return {
   // TODO: Implement
 }"
-      "total": 'this && this.cache.size','
+      "total": 'this && this.cache.size',
       active,
-      expired,'
+      expired,
       "hitRate": 0 // This would need to be tracked separately;"
-    }
   destroy() {
     if (this && this.cleanupTimer) {
       clearInterval(this && this.cleanupTimer);
@@ -75,16 +63,13 @@ interface CacheItem<T> {
     this && this.clear()}
 // Create cache instances for different purposes;
 export const apiCache = new CacheManager({"
-  "defaultTTL": '5 * 60 * 1000', // 5 minutes;''
+  "defaultTTL": '5 * 60 * 1000', // 5 minutes;
   "maxSize": 500;")
-});
 export const userCache = new CacheManager({"
-  "defaultTTL": '15 * 60 * 1000', // 15 minutes;''
+  "defaultTTL": '15 * 60 * 1000', // 15 minutes;
   "maxSize": 100;")
-});
 export const staticCache = new CacheManager({"
-  "defaultTTL": '60 * 60 * 1000', // 1 hour;''
+  "defaultTTL": '60 * 60 * 1000', // 1 hour;
   "maxSize": 200;")
-});
 export default CacheManager;
 "

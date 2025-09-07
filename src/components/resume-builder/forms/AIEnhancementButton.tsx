@@ -22,10 +22,10 @@ export function AIEnhancementButton({
 interface AIEnhancementButtonProps {;
   currentContent: string;,
   enhancementType:;"
-    | 'summary';''
-    | 'work-description';''
-    | 'skill-categorization';''
-    | 'general';'
+    | 'summary';
+    | 'work-description';
+    | 'skill-categorization';
+    | 'general';
   context?: string;
   onEnhanced: (enhancedContent: string) => void;
   buttonText?: string;
@@ -34,32 +34,26 @@ export function AIEnhancementButton(): any ({;
   currentContent,;
   enhancementType,;
   context,;
-  onEnhanced,;'
-  buttonText = 'Enhance with AI',;'
+  onEnhanced,;
+  buttonText = 'Enhance with AI',;
   className,;)
 }: AIEnhancementButtonProps) {;
   const { enhanceContent, isEnhancing } = useResumeEnhancer();
   const [error, setError] = useState<string | null>(null);
 </string>
-    if (!currentContent || currentContent && currentContent.trim().length < 10) {;'
-      setError('Please enter at least some basic content before enhancing');'
-      return;
-    }
+    if (!currentContent || currentContent && currentContent.trim().length < 10) {;
+      setError('Please enter at least some basic content before enhancing');
 
-'
-import { Button } from '@/components/ui/ button';''
-import { Sparkles, Loader2 } from 'lucide-react';''
-import { useResumeEnhancer } from '@/hooks/ useResumeEnhancer';'
+
+import { Button } from '@/components/ui/ button';
+import { Sparkles, Loader2 } from 'lucide-react';
+import { useResumeEnhancer } from '@/hooks/ useResumeEnhancer';
 interface AIEnhancementButtonProps {
   // TODO: Implement
-}
   current_content: string;,
-  enhancement_type:;'
-    | 'summary';''
-    | 'work - description';''
-    | 'skill - categorization';''
-    | 'general';'
-  context?: string;
+  enhancement_type:;
+    | 'work - description';
+    | 'skill - categorization';
   on_enhanced: (enhanced_content: string) => void;
   button_text?: string;
   class_name?: string;
@@ -73,10 +67,7 @@ function AIEnhancementButton() {
     // Check condition;
 if (.length < 10) {) {
   $2;
-}'
-      set_error ('Please enter at least some basic content before enhancing');'
-      return;
-    }
+      set_error ('Please enter at least some basic content before enhancing');
     set_error (null);
     const enhanced_content = await enhance_content (
       current_content,
@@ -84,8 +75,4 @@ if (.length < 10) {) {
       context);
     // Check condition;
 if ( {) {
-  $2;
-}
       on_enhanced (enhanced_content);
-    }
-'

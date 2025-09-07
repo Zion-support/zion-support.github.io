@@ -19,5 +19,4 @@ if (require.main === module) {}
   const detector = new ErrorDetector();
   detector.detect().catch(console.error)};
 module.exports = ErrorDetector;
-module.exports = ErrorDetector;
-"
+"`;

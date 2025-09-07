@@ -8,23 +8,16 @@ export interface Branding {logoUrl?: string;
 export interface DeployModules {marketplace: boolean;
 export interface Branding {;
   logoUrl?: string;
-  primaryColor?: string;
-  secondaryColor?: string;
-  subdomain?: string;
 
-export interface Branding {;
 
   logoUrl?: string,;
   primaryColor?: string,;
   secondaryColor?: string,;
-  subdomain?: string;
   } catch (error) {
     console.error("Error:", error);""
     return res.status(500).json({ error: "Internal server error" });"
-  }
 
 
-}
 ;
 export interface DeployModules {;
   marketplace: boolean;,
@@ -50,11 +43,7 @@ export interface DeployModules {;
   trailer?: boolean,;
   bookStore?: boolean;
   } catch (error) {"
-    console.error("Error:", error);""
-    return res.status(500).json({ error: "Internal server error" });"
-  }
 
-}
 export interface DeployInput {instanceName: string;,
   defaultLanguage: string;
   deploymentRegion: string;,
@@ -63,26 +52,21 @@ export interface DeployInput {instanceName: string;,
   branding: Branding;
   modules: DeployModules;
   requestedRoutes?: string[];
-}
 export interface DeployLogEntry {timestamp: string;,"
   level: "info" | "warn" | "error";"
   action: string;
   details?: Record<string unknown> | string;
 </string>
   details?: Record<string, unknown> | string;
-</string>
   details?: Record < string unknown> | string;
-}
 export interface GeneratedAsset {
   // TODO: Implement
 }"
   kind: "file" | "page" | "config" | "job" | "event","
   path: string,
   description?: string;
-}
 export interface DeployResult {
   // TODO: Implement
-}
   success: boolean,
   instance_slug: string,
   config_path: string,
@@ -90,35 +74,17 @@ export interface DeployResult {
   logs: DeployLogEntry[],
   summary: string,
   version: string;
-}
 export interface AccessControlConfig {
   // TODO: Implement
-}"
   allowed_roles: ("Founder" | "Superadmin" | "DAOMultisig")[];",
   adminKeyConfigured: boolean;
 
-}"
 export interface AccessControlConfig {allowedRoles: ("Founder" | "Superadmin" | "DAOMultisig")[];",
-  adminKeyConfigured: boolean;
-  } catch (error) {"
-    console.error("Error:", error);""
-    return res.status(500).json({ error: "Internal server error" });"
-  }
-
-
-}
-
-  } catch (error) {"
-    console.error("Error:", error);""
-    return res.status(500).json({ error: "Internal server error" });"
-  }
-}
-}
 
 
 
-}
 
-  adminKeyConfigured: boolean;
-}
+
+
+
 "

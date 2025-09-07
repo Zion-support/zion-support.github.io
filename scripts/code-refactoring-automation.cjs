@@ -1,12 +1,6 @@
 
 
-console.log(' Starting Code Refactoring Automation...')''
-    "file"""
-    "issues"""
-    "file"""
-    "issues"""
-    "file"""
-    "issues"""
+console.log(' Starting Code Refactoring Automation...')
     "file"""
     "issues"""
   const serviceCardComponent = """
@@ -14,4 +8,4 @@ console.log(' Starting Code Refactoring Automation...')''
       "recommendations"""
     "extractedComponents"""
     "nextSteps"""
-  console.log('� Next "steps")""
+  console.log('� Next "steps")""');

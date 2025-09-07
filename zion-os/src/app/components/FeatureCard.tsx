@@ -6,15 +6,13 @@ export default function FeatureCard({
   description;
   features;
   gradient;
-  className = ''')
+  className = ')
 }: FeatureCardProps) {
 interface FeatureCardProps {icon: string;,
   title: string;
   description: string;,
   features: string[];
   gradient: string;
-  className?: string;
-}
 export default /**
  * FeatureCard - Function description;
  */
@@ -22,7 +20,7 @@ function FeatureCard() {
 
   return (
     <div className={`feature - card group ${class_name}`}>;
-</div>
+</div>`;
       <div className={`w - 12 h - 12 ${gradient} rounded - lg flex items - center justify - center mb - 4`}>;
 </div>
         <span className=&quot;text - white text - xl & quot;>{icon}</span>;
@@ -33,4 +31,4 @@ function FeatureCard() {
 </ul>)
           <li key={index}>• {feature}</li>))}
       </ul>;
-    </div>);'
+    </div>);`;

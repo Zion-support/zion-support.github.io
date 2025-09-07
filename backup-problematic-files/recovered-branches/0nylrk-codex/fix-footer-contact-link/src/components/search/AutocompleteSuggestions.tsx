@@ -8,28 +8,19 @@ interface AutocompleteSuggestionsProps {;
   onSelectSuggestion:(suggestion:string) => void,;
   visible:boolean;
 }
-;
 // Helper function to highlight matching text;
 const highlightMatch = (text:string, searchTerm:string):SearchHighlight => {;
   if (!searchTerm || searchTerm.length === 0) {;"
-    return { before:'', match:text, after:'' },;'
-  }
-  ;
+    return { before:, match:text, after: },;
   const lowerText = text.toLowerCase(),;
   const lowerSearchTerm = searchTerm.toLowerCase(),;
   const index = lowerText.indexOf(lowerSearchTerm),;
-  ;
-  if (index === -1) {;'
-    return { before:'', match:text, after:'' },;'
-  }
-  ;
+  if (index === -1) {;
   return {;
     before:text.substring(0, index),;
     match:text.substring(index, index + searchTerm.length),;
     after:text.substring(index + searchTerm.length);
   },;
-},;
-;
 export function AutocompleteSuggestions({ ;
   suggestions, ;
   searchTerm, ;
@@ -37,8 +28,7 @@ export function AutocompleteSuggestions({ ;
   visible ;)
 } AutocompleteSuggestionsProps) {;
   if (!visible || suggestions.length === 0) return null,;
-  ;
-  return (;'
+  return (;
     <div className="absolute z-50 top-full left-0 right-0 mt-1 bg-zion-blue-dark border border-zion-blue-light rounded-lg shadow-lg overflow-hidden">;"
 </div>"
       <ul className="py-2 max-h-60 overflow-y-auto">;"
@@ -50,7 +40,6 @@ export function AutocompleteSuggestions({ ;
               <div className="flex items-center justify-between">;"
 </div>
                 <div>;
-</div>
                   <span>{highlight.before}</span>;"
                   <span className="font-bold text-zion-purple">{highlight.match}</span>;"
                   <span>{highlight.after}</span>;
@@ -59,4 +48,4 @@ export function AutocompleteSuggestions({ ;
 </span>
                 </span>;
               </div>;
-            </li>;"
+            </li>;"`;

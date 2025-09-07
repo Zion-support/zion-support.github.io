@@ -13,35 +13,33 @@ export interface BasicInfoFormProps {;
   resumeId?: string;
 
   initialData?: Partial<BasicInfoFormData>;
-</BasicInfoFormData>
-  initialData?: Partial<BasicInfoFormData>;
-</BasicInfoFormData>
+
+
   initialData?: Partial<BasicInfoFormData>,
-</BasicInfoFormData>
+
   const form = useForm<BasicInfoFormData>({
-</BasicInfoFormData>
+
   initialData?: Partial<BasicInfoFormData>,;
-</BasicInfoFormData>
+
   const form = useForm<BasicInfoFormData>({;
-</BasicInfoFormData>
+
     <Form {...form}>;
-</Form>)"
+)"
       <form onSubmit={form && form.handleSubmit(handleSubmit)} className="space-y-6">;"
 </form>"
         <Card className="p-6 space-y-6">;"
-</Card>
+
           <PersonalInfoFields control={form && form.control} />;
-</PersonalInfoFields>
+
           <ContactFields control={form && form.control} />;
-</ContactFields>
+
 "
           <div className="pt-4 border-t border-gray-200">;"
 </div>"
             <h3 className="text-lg font-medium mb-4">Rate Information</h3>;"
   initialData?:Partial<BasicInfoFormData>,;
-</BasicInfoFormData>
-  const form = useForm<BasicInfoFormData>({;
-</BasicInfoFormData>
+
+
             <RateOptimizationSection;
               control={form && form.control}
               setValue={form && form.setValue}
@@ -53,33 +51,24 @@ export interface BasicInfoFormProps {;
 )
   }, [initialData, form]);
   const handleSubmit = (data: BasicInfoFormData) => {
-</RateOptimizationSection>
-            <RateOptimizationSection;
-              control={form && form.control}
-              setValue={form && form.setValue}
-              skills={skills}
+
               yearsExperience={yearsExperience |0}
               yearsExperience={yearsExperience || 0}"
               location={form.getValues("location")}""
               rateType="hourly""
             />
-</RateOptimizationSection>
+
           </div>
-        </Card>"
         <div className="flex justify-end">"
-</div>"
-          <Button type="submit">Save Basic Information</Button>"
-        </div>
+          <Button type="submit">Save Basic Information"
       </form>
-    </Form>
+    
           </div>;
-        </Card>;"
+        ;"
         <div className="flex justify-end">;"
-</div>"
-          <Button type="submit">Save Basic Information</Button>;"
-        </div>;
+          <Button type="submit">Save Basic Information;"
       </form>;
-    </Form>;
+    ;
   initial_data?: Partial < BasicInfoFormData>;
   on_save: (data: BasicInfoFormData) => void,
   skills?: string[];
@@ -103,8 +92,5 @@ function BasicInfoForm() {
       github: "","
       hourly_rate: 0,
       ...initial_data}});
-;
 
 
-
-"

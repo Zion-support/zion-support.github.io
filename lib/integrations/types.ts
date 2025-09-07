@@ -7,10 +7,10 @@ export type IntegrationProviderId =
   | 'greenhouse' 
   | 'lever' 
   | 'workable' 
-  | 'bamboohr'
-  | 'mailchimp'
-  | 'sendgrid'
-  | 'google_analytics'
+  | 'bamboohr
+  | 'mailchimp
+  | 'sendgrid
+  | 'google_analytics
   | 'mixpanel';
 
 export type SyncStatus = 'connected' | 'warning' | 'disconnected';
@@ -27,16 +27,13 @@ export interface IntegrationProviderMeta {
 export interface ProviderConnection {
   id: string;
   providerId: IntegrationProviderId;
-  name: string;
   status: SyncStatus;
   lastSync?: string;
   config: Record<string, any>;
   createdAt: string;
   updatedAt: string;
-}
 
 export interface SyncLogEntry {
-  id: string;
   timestamp: string;
   connectionId: string;
   action: string;
@@ -44,23 +41,18 @@ export interface SyncLogEntry {
   details?: string;
   result?: string;
   error?: string;
-}
 
 export interface IntegrationsState {
   connections: ProviderConnection[];
   syncLogs: SyncLogEntry[];
   lastSync: string | null;
-}
 
 export interface SyncResult {
   success: boolean;
   logs: SyncLogEntry[];
-  error?: string;
-}
 
 export interface IntegrationConfig {
   apiKey?: string;
   secretKey?: string;
   webhookUrl?: string;
   customFields?: Record<string, any>;
-}

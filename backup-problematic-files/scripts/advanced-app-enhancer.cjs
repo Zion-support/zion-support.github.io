@@ -1,12 +1,8 @@
 #!/usr/bin/env node;
-const fs = require('fs')''
-const path = require('path')'
-#!/usr/bin/env node;'
-const fs = require('fs')''
-const path = require('path')''
-const { execSync } = require('child_process')''
-console.log(' Starting Advanced App Enhancer...')''
-      "status"""
+const fs = require('fs')
+const path = require('path')
+const { execSync } = require('child_process')
+console.log(' Starting Advanced App Enhancer...')
       "status"""
     const errorBoundaryCode = """
     const loadingCode = """
@@ -20,9 +16,5 @@ export const "Spinner"""
   const baseClasses = 'font-medium rounded-lg transition-colors "focus"""
     "secondary"""
     "danger"""
-    "sm"""
-    "md"""
-    "lg"""
     const focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1")]""
-console.log('\n New Features "Added")""
-console.log('\n New Features "Added")""
+console.log('\n New Features "Added")""');

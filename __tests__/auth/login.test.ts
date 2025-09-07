@@ -1,38 +1,17 @@
 
 
-import { describe, it, expect } from 'vitest';''
-describe('Login', () => {''
-  it('should work', () => {'
+import { describe, it, expect } from 'vitest';
+describe('Login', () => {
+  it('should work', () => {
     expect(true).toBe(true);
   });
-});'
-const { describe,it,expect } from "vitest"; describe("Login",() => { it("should work",() => { expect(true).toBe(true)})});''"""
-import { describe,it,expect } from 'vitest'; describe('Login',() => { it('should work',() => { expect(true).toBe(true)})}''
-});''''
-});''''
-import { describe, it, expect } from 'vitest'''
-describe('Login'''
-  it('should work'')'
+const { describe,it,expect } from "vitest"; describe("Login",() => { it("should work",() => { expect(true).toBe(true)})});"""
+import { describe,it,expect } from 'vitest'; describe('Login',() => { it('should work',() => { expect(true).toBe(true)})}
+import { describe, it, expect } from 'vitest
+describe('Login
+  it('should work)
 const { describe,it,expect } from "vitest"; describe('Login', () => { it("should work"""
-import { describe, it, expect } from 'vitest'''
-describe('Login'''
-  it('should work'')'
-const { describe,it,expect } from "vitest"; describe('Login', () => { it("should work"""
-import { describe, it, expect } from 'vitest';')'
-describe('Login', () => {''
-  it('should work', () => {'
-    expect(true).toBe(true);
-  });
-});'
-const { describe,it,expect } from "vitest"; describe("Login",() => { it("should work",() => { expect(true).toBe(true)})});''"""
-import { describe,it,expect } from 'vitest'; describe('Login',() => { it('should work',() => { expect(true).toBe(true)})}''
-});''''
-});'''
+import { describe, it, expect } from 'vitest';')
 ursor/add-new-services-and-deploy-updates-0462;
-ursor/integrate-build-improve-and-re-verify-8f7d;'
-import { describe, it, expect } from 'vitest'''
-describe('Login'''
-  it('should work'')'
+ursor/integrate-build-improve-and-re-verify-8f7d;
 const { describe,it,expect } from "vitest"; describe('Login', () => { it("should work"")"
-});''''
-});''''

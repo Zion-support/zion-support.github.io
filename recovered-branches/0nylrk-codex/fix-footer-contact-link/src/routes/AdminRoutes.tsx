@@ -14,179 +14,98 @@ import IntegrationsPage from "@/pages/admin/IntegrationsPage","
 const AdminRoutes = () => {
   return (
     <Routes>;
-</Routes>
+
       <Route;"
         path="/admin/quotes""
         element={
           <ProtectedRoute adminOnly={true}>;
-</Route>
+
             <QuoteManager />;
-</QuoteManager>
-          </ProtectedRoute>;
-      <Route;"
+
+          ;
         path="/admin/reviews";"
         element={;
-          <ProtectedRoute adminOnly={true}>;
-</Route>
-            <ReviewsModeration />;
-</ReviewsModeration>
-          </ProtectedRoute>;
-      <Route;"
-        path="/admin/whitelabel";"
-        element={;
-          <ProtectedRoute adminOnly={true}>;
-</Route>
-            <WhitelabelManager />;
-</WhitelabelManager>
-          </ProtectedRoute>;
-      <Route;"
-        path="/admin/partners";"
-        element={;
-          <ProtectedRoute adminOnly={true}>;
-</Route>
-            <PartnerManager />;
-</PartnerManager>
-          </ProtectedRoute>;
-      <Route;"
-        path="/admin/app-metadata";"
-        element={;
-          <ProtectedRoute adminOnly={true}>;
-</Route>
-            <AppMetadataManager />;
-</AppMetadataManager>
-          </ProtectedRoute>;
-      <Route;"
-        path="/admin/support-requests";"
-        element={;
-          <ProtectedRoute adminOnly={true}>;
-</Route>
-            <SupportRequests />;
-</SupportRequests>
-          </ProtectedRoute>;
-      <Route;"
-        path="/admin/fraud-detection";"
-        element={;
-          <ProtectedRoute adminOnly={true}>;
-</Route>
-            <FraudDetection />;
-</FraudDetection>
-          </ProtectedRoute>;
-      <Route;"
-        path="/admin/tokens";"
-        element={;
-          <ProtectedRoute adminOnly={true}>;
-</Route>
-            <TokenManager />;
-</TokenManager>
-          </ProtectedRoute>;
-      <Route;"
-        path="/admin/integrations";"
-        element={;
-          <ProtectedRoute adminOnly={true}>;
-</Route>
-            <IntegrationsPage />;
-</IntegrationsPage>
-          </ProtectedRoute>;
-    </Routes>;
-      <Route;"
-        path="/admin/reviews""
-        element={
-          <ProtectedRoute adminOnly={true}>;
-</Route>
-            <ReviewsModeration />;
-</ReviewsModeration>
-          </ProtectedRoute>;
-      <Route;"
-        path="/admin/whitelabel""
-        element={
-          <ProtectedRoute adminOnly={true}>;
-</Route>
-            <WhitelabelManager />;
-</WhitelabelManager>
-          </ProtectedRoute>;
-      <Route;"
-        path="/admin/partners""
-        element={
-          <ProtectedRoute adminOnly={true}>;
-</Route>
-            <PartnerManager />;
-</PartnerManager>
-          </ProtectedRoute>;
-      <Route;"
-        path="/admin/app-metadata""
-        element={
-          <ProtectedRoute adminOnly={true}>;
-</Route>
-            <AppMetadataManager />;
-</AppMetadataManager>
-          </ProtectedRoute>;
-      <Route;"
-        path="/admin/support-requests""
-        element={
-          <ProtectedRoute adminOnly={true}>;
-</Route>
-            <SupportRequests />;
-</SupportRequests>
-          </ProtectedRoute>;
-      <Route;"
-        path="/admin/fraud-detection""
-        element={
-          <ProtectedRoute adminOnly={true}>;
-</Route>
-            <FraudDetection />;
-</FraudDetection>
-          </ProtectedRoute>;
-      <Route;"
-        path="/admin/tokens""
-        element={
-          <ProtectedRoute adminOnly={true}>;
-</Route>
-            <TokenManager />;
-</TokenManager>
-          </ProtectedRoute>;
-      <Route;"
-        path="/admin/integrations""
-        element={
 
-      <Route;"
-        path="/admin/integrations""
-        element={
-          <ProtectedRoute adminOnly={true}>;
-</Route>
+            <ReviewsModeration />;
+
+        path="/admin/whitelabel";"
+
+            <WhitelabelManager />;
+
+        path="/admin/partners";"
+
+            <PartnerManager />;
+
+        path="/admin/app-metadata";"
+
+            <AppMetadataManager />;
+
+        path="/admin/support-requests";"
+
+            <SupportRequests />;
+
+        path="/admin/fraud-detection";"
+
+            <FraudDetection />;
+
+        path="/admin/tokens";"
+
+            <TokenManager />;
+
+        path="/admin/integrations";"
+
             <IntegrationsPage />;
-</IntegrationsPage>
-          </ProtectedRoute>;
-    </Routes>;
-    <Routes>;
-</Routes>
-      <Route;"
+
+        path="/admin/reviews""
+
+
+        path="/admin/whitelabel""
+
+
+        path="/admin/partners""
+
+
+        path="/admin/app-metadata""
+
+
+        path="/admin/support-requests""
+
+
+        path="/admin/fraud-detection""
+
+
+        path="/admin/tokens""
+
+
+        path="/admin/integrations""
+
+
+
+
         path="/admin / quotes";"
-        element={
           <ProtectedRoute admin_only={true}>;
-</Route>
-            <QuoteManager />;
-</QuoteManager>
-          </ProtectedRoute>;
-    </Routes>"
+
+
+    "
 <Routes> <Route path="/admin/quotes" element= {"
-</Routes>
+
   <ProtectedRoute adminOnly= {
   true;
-}> <QuoteManager /> </ProtectedRoute> 
-}/> <Route <ReviewsModeration /> </ProtectedRoute> 
-</Route>
-}/> <Route <WhitelabelManager /> </ProtectedRoute> 
-</Route>
-}/> <Route <PartnerManager /> </ProtectedRoute> 
-</Route>
-}/> <Route <AppMetadataManager /> </ProtectedRoute> 
-</Route>
-}/> <Route <SupportRequests /> </ProtectedRoute> 
-</Route>
-}/> <Route <FraudDetection /> </ProtectedRoute> 
-</Route>
-}/> <Route <TokenManager /> </ProtectedRoute> 
-</Route>
-}/> <Route <IntegrationsPage /> </ProtectedRoute> 
-</Route>)
-}/> </Routes>) "
+}> <QuoteManager />  
+}/> <Route <ReviewsModeration />  
+
+}/> <Route <WhitelabelManager />  
+
+}/> <Route <PartnerManager />  
+
+}/> <Route <AppMetadataManager />  
+
+}/> <Route <SupportRequests />  
+
+}/> <Route <FraudDetection />  
+
+}/> <Route <TokenManager />  
+
+}/> <Route <IntegrationsPage />  
+)
+}/> ) "

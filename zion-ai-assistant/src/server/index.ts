@@ -1,13 +1,13 @@
 
 
 import "dotenv / config",""
-import express from './express';,''
-import cors from './cors';,''
-import { z  } from './zod';,''
-import { MilestoneSuggestionInput, MilestoneSuggestionResponse  } from '../shared / types.js';,''
-import { generate_milestones  } from './milestone_generator.js';,'
+import express from './express';,
+import cors from './cors';,
+import { z  } from './zod';,
+import { MilestoneSuggestionInput, MilestoneSuggestionResponse  } from '../shared / types.js';,
+import { generate_milestones  } from './milestone_generator.js';,
 const app = express (),
-app.use (cors ()),'
+app.use (cors ()),
 app.use (express.json ({ limit: "1mb" })),"
 const input_schema = z.object ({)
   scopeOfWork: z.string ().min (10),
@@ -51,10 +51,8 @@ app.post("/api/ai/milestones", async (req, res) => {;"
   } catch (error) {;
     if (error instanceof z.ZodError) {;"
       return res.status(400).json({ error: "Invalid input", details: error.issues });"
-    }
     console.error (error),"
     res.status (500).json ({ error: "Failed to generate milestones" });"
-  }
 
 }),;
 const port = process.env.PORT ? Number(process.env.PORT) : 4321,;
@@ -63,8 +61,6 @@ app.listen(port, () => {;
 
 
 });
-});
 
 
-});
-"
+"`;

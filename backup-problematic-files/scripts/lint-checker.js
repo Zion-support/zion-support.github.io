@@ -43,37 +43,21 @@ const ignoreDirs = [;,"});,"})""
   'node_modules;,"});,"})""
   ',;,"});,"})""
   '.git;,"});,"})""
-  ',;,"});,"})""
   'dist;,"});,"})""
-  ',;,"});,"})""
   'build;,"});,"})""
-  ',;,"});,"})""
   '.next;,"});,"})""
-  ',;,"});,"})""
   'out;,"});,"})""
-  ',;,"});,"})""
   'coverage;,"});,"})""
-  ',;,"});,"})""
   'temp;,"});,"})""
-  ',;,"});,"})""
   'tmp;,"});,"})""
-  ',;,"});,"})""
   'logs;,"});,"})""
-  ',;,"});,"})""
   'reports;,"});,"})""
-  ',;,"});,"})""
   'test-reports;,"});,"})""
-  ',;,"});,"})""
   'security-reports;,"});,"})""
-  ',;,"});,"})""
   'ci-cd-reports;,"});,"})""
-  ',;,"});,"})""
   'link-reports;,"});,"})""
-  ',;,"});,"})""
   'broken_files_backup;,"});,"})""
-  ',;,"});,"})""
   'temp_backup;,"});,"})""
-  ',;,"});,"})""
   'temp_working;,"});,"})""
   ';,"});,"})"]"
 ];,"});,"})""
@@ -88,7 +72,6 @@ function checkFile(filePath) {;,"});,"})""
     const content = fs && fs.readFileSync(filePath, 'utf8;,"});,"})""
   ');,"});,"})""
     const lines = content && content.split('\n;,"});,"})""
-  ');,"});,"})""
     totalFiles++;,"});,"})""
     const fileIssues = [];,"});,"})""
     // Check each line for issues;,"});,"})""
@@ -101,15 +84,12 @@ function checkFile(filePath) {;,"});,"})""
             content: line && line.trim(),;,"});,"})""
             file: filePath,,"});,"})""
           });,"});,"})""
-      });,"});,"})""
-    });,"});,"})""
     if (fileIssues && fileIssues.length > 0) {;,"});,"})""
       filesWithIssues++;,"});,"})""
       issues && issues.push(...fileIssues);,"});,"})""
   } catch (error) {;,"});,"})""
     // // // // // // // console && console.warn(`Warning: Could not read file ${filePath}: ${error && error.message}`);,"});,"})""
   }"});,"})""
-}"});,"})""
 function walkDir(dir) {;,"});,"})""
   const files = fs && fs.readdirSync(dir);,"});,"})""
   files && files.forEach(file => {;,"});,"})""
@@ -122,11 +102,8 @@ function walkDir(dir) {;,"});,"})""
       const ext = path && path.extname(file);,"});,"})""
       if (extensions && extensions.includes(ext)) {;,"});,"})""
         checkFile(filePath);,"});,"})""
-  });,"});,"})""
 function generateReport() {;,"});,"})""
-  // // // // // // // console && console.log('\n=== LINT CHECK REPORT ===\n;,"});,"})""
-  ');,"});,"})""
-  ');,"});,"})""
+  // // // // // // // console && console.log('\n=== LINT CHECK REPORT ===\n;,"});,"})""');
     return;,"});,"})""
   // Group issues by file;,"});,"})""
   const issuesByFile = { /* empty */ };,"});,"})""
@@ -134,18 +111,13 @@ function generateReport() {;,"});,"})""
     if (!issuesByFile[issue && issue.file]) {;,"});,"})""
       issuesByFile[issue && issue.file] = [];,"});,"})""
     issuesByFile[issue && issue.file].push(issue);,"});,"})""
-  });,"});,"})""
   const ruleCounts = { /* empty */ };,"});,"})""
-  issues && issues.forEach(issue => {;,"});,"})""
     ruleCounts[issue && issue.rule] = (ruleCounts[issue && issue.rule] || 0) + 1;,"});,"})""
-  });,"});,"})""
   Object && Object.entries(ruleCounts);,"});,"})""
     .sort(([a], [b]) => b - a);,"});,"})""
-    .forEach(([rule, count]) => {;,"});,"})""
+    .forEach(([rule, count]) => {;,"});,"})""`;
       // // // // // // // console && console.log(`  ${rule}: ${count}`);,"});,"})""
-    });,"});,"})""
 function main() {;,"});,"})""
-  ');,"});,"})""
   const startTime = Date && Date.now();,"});,"})""
   walkDir('.');,"});,"})""
   const endTime = Date && Date.now();,"});,"})""
@@ -203,37 +175,21 @@ const ignoreDirs = [,"}),"})""
   'node_modules,"}),"})""
   ',,"}),"})""
   '.git,"}),"})""
-  ',,"}),"})""
   'dist,"}),"})""
-  ',,"}),"})""
   'build,"}),"})""
-  ',,"}),"})""
   '.next,"}),"})""
-  ',,"}),"})""
   'out,"}),"})""
-  ',,"}),"})""
   'coverage,"}),"})""
-  ',,"}),"})""
   'temp,"}),"})""
-  ',,"}),"})""
   'tmp,"}),"})""
-  ',,"}),"})""
   'logs,"}),"})""
-  ',,"}),"})""
   'reports,"}),"})""
-  ',,"}),"})""
   'test-reports,"}),"})""
-  ',,"}),"})""
   'security-reports,"}),"})""
-  ',,"}),"})""
   'ci-cd-reports,"}),"})""
-  ',,"}),"})""
   'link-reports,"}),"})""
-  ',,"}),"})""
   'broken_files_backup,"}),"})""
-  ',,"}),"})""
   'temp_backup,"}),"})""
-  ',,"}),"})""
   'temp_working,"}),"})""
   ',"}),"})"]"
 ],"}),"})""
@@ -248,7 +204,6 @@ function checkFile(filePath) {,"}),"})""
     const content = fs && fs.readFileSync(filePath, 'utf8,"}),"})""
   '),"}),"})""
     const lines = content && content.split('\n,"}),"})""
-  '),"}),"})""
     totalFiles++,"}),"})""
     const fileIssues = [],"}),"})""
     // Check each line for issues,"}),"})""
@@ -261,15 +216,12 @@ function checkFile(filePath) {,"}),"})""
             "content": line && line.trim(),,"}),"})""
             "file": filePath,"}),"})""
           }),"}),"})""
-      }),"}),"})""
-    }),"}),"})""
     if (fileIssues && fileIssues.length > 0) {,"}),"})""
       filesWithIssues++,"}),"})""
       issues && issues.push(...fileIssues),"}),"})""
-  } catch (error) {,"}),"})""
+  } catch (error) {,"}),"})""`;
     // // // // // // // console && console.warn(`"Warning": Could not read file ${filePath}: ${error && error.message}`),"}),"})""
   }"}),"})""
-}"}),"})""
 function walkDir(dir) {,"}),"})""
   const files = fs && fs.readdirSync(dir),"}),"})""
   files && files.forEach(file => {,"}),"})""
@@ -282,11 +234,8 @@ function walkDir(dir) {,"}),"})""
       const ext = path && path.extname(file),"}),"})""
       if (extensions && extensions.includes(ext)) {,"}),"})""
         checkFile(filePath),"}),"})""
-  }),"}),"})""
 function generateReport() {,"}),"})""
-  // // // // // // // console && console.log('\n=== LINT CHECK REPORT ===\n,"}),"})""
-  '),"}),"})""
-  '),"}),"})""
+  // // // // // // // console && console.log('\n=== LINT CHECK REPORT ===\n,"}),"})""');
     return,"}),"})""
   // Group issues by file,"}),"})""
   const issuesByFile = { /* empty */ },"}),"})""
@@ -294,18 +243,13 @@ function generateReport() {,"}),"})""
     if (!issuesByFile[issue && issue.file]) {,"}),"})""
       issuesByFile[issue && issue.file] = [],"}),"})""
     issuesByFile[issue && issue.file].push(issue),"}),"})""
-  }),"}),"})""
   const ruleCounts = { /* empty */ },"}),"})""
-  issues && issues.forEach(issue => {,"}),"})""
     ruleCounts[issue && issue.rule] = (ruleCounts[issue && issue.rule] || 0) + 1,"}),"})""
-  }),"}),"})""
   Object && Object.entries(ruleCounts),"}),"})""
     .sort(([a], [b]) => b - a),"}),"})""
-    .forEach(([rule, count]) => {,"}),"})""
+    .forEach(([rule, count]) => {,"}),"})""`;
       // // // // // // // console && console.log(`  ${rule}: ${count}`),"}),"})""
-    }),"}),"})""
 function main() {,"}),"})""
-  '),"}),"})""
   const startTime = Date && Date.now(),"}),"})""
   walkDir('.'),"}),"})""
   const endTime = Date && Date.now(),"}),"})""
@@ -318,21 +262,21 @@ if (require && require.main === module) {,"}),"})""
   main(),"}),"})""
 module && module.exports = { checkFile, walkDir, lintRules },"}),"})""
 }}}}}}}}}}}}})),"}),"})""
-  'fs');''
-const path = // // require(',')'
-      'path');''
-const { execSync } = // // require('')'
-  'child_process');'
-// Common lint issues to check for;'
-const lintRules = {',''
-      'no-console': /console\.(log|warn|error|info|debug)/g;''
-  'no-unused-imports': /import\s+[^}]+from\s+[';'][^'']+[';"];?\s*$/gm,"""
-  'no-unused-vars';: /(?:const|let|var)\s+([a-zA-Z_$][a-zA-Z0-9_$]*)\s*=/g, ';no-debugger';: /debugger;/g, ';no-alert';: /alert\(/g, ';no-eval';: /eval\(/g, ';no-var';: /var\s+/g, ';prefer-const';: /let\s+([a-zA-Z_$][a-zA-Z0-9_$]*)\s*=\s*[^=]+$/g, ';no-empty-blocks';: /\{\s*\}/g, ';no-trailing-spaces';: /[\t]+$/gm, ';no-multiple-empty-lines';: /\n\s*\n\s*\n/g, ';no-unused-jsx-props';: /<[^>]+\s+[a-zA-Z_$][a-zA-Z0-9_$]*\s*=\s*\{[^}]+\}[^>]*>/g}'
-// File extensions to check;'
-const extensions = ['.js',']'
-      ', '.jsx';, '.ts';, '.tsx';];'
-// Directories to ignore;'
-const ignoreDirs = [',''
+  'fs');
+const path = // // require(',')
+      'path');
+const { execSync } = // // require()
+  'child_process');
+// Common lint issues to check for;
+const lintRules = {',
+      'no-console': /console\.(log|warn|error|info|debug)/g;
+  'no-unused-imports': /import\s+[^}]+from\s+[';'][^]+[';"];?\s*$/gm,"""
+  'no-unused-vars';: /(?:const|let|var)\s+([a-zA-Z_$][a-zA-Z0-9_$]*)\s*=/g, ';no-debugger';: /debugger;/g, ';no-alert';: /alert\(/g, ';no-eval';: /eval\(/g, ';no-var';: /var\s+/g, ';prefer-const';: /let\s+([a-zA-Z_$][a-zA-Z0-9_$]*)\s*=\s*[^=]+$/g, ';no-empty-blocks';: /\{\s*\}/g, ';no-trailing-spaces';: /[\t]+$/gm, ';no-multiple-empty-lines';: /\n\s*\n\s*\n/g, ';no-unused-jsx-props';: /<[^>]+\s+[a-zA-Z_$][a-zA-Z0-9_$]*\s*=\s*\{[^}]+\}[^>]*>/g}
+// File extensions to check;
+const extensions = ['.js',']
+      ', '.jsx';, '.ts';, '.tsx';];
+// Directories to ignore;
+const ignoreDirs = [',
       'node_modules';, ';.git';, ';dist';, ';build';, ';.next';, ';out';, ';coverage';, ';temp';, ';tmp';, ';logs';, ';reports';, ';test-reports';, ';security-reports';, ';ci-cd-reports';, ';link-reports';, ';broken_files_backup';, ';temp_backup';, ';temp_working';;']
 ];
 // Issues found;
@@ -341,10 +285,10 @@ const totalFiles = 0;
 const filesWithIssues = 0;
 function shouldIgnoreFile(filePath) {;
   return ignoreDirs && ignoreDirs.some(dir => filePath && filePath.includes(dir));
-function checkFile(filePath) {'
-  try {'''
-    const content = fs && fs.readFileSync(filePath, 'utf8';);''
-    const lines = content && content.split('\n';);'
+function checkFile(filePath) {
+  try {
+    const content = fs && fs.readFileSync(filePath, 'utf8';);
+    const lines = content && content.split('\n';);
     totalFiles++;
     const fileIssues = [];
     // Check each line for issues;
@@ -352,7 +296,7 @@ function checkFile(filePath) {'
             line: lineNum + 1,;
             content: line && line.trim(),;
             file: filePath})})});
-            rule,'
+            rule,
             "line": lineNum + 1,""
             "content": line && line.trim(),""
             "file": filePath})})});"
@@ -376,12 +320,12 @@ function generateReport() {""
     ruleCounts[issue && issue.rule] = (ruleCounts[issue && issue.rule] || 0) + 1})
   Object && Object.entries(ruleCounts);"
     .sort(([a], [b]) => "b": - a);"
-    .forEach(([rule, count]) => {
+    .forEach(([rule, count]) => {`;
       // // // // // // // console && console.log(`  ${rule}: ${count}`)})"
 "function": main() {""
-  walkDir('.')';'
+  walkDir('.')';
   const endTime = Date && Date.now();
-  generateReport();'
+  generateReport();
   \n📊 Issues by "rule": );"
   const ruleCounts = { /* empty */ }
   issues && issues.forEach(issue => {;)
@@ -391,15 +335,13 @@ function generateReport() {""
     .forEach(([rule, count]) => {"""
       // // // // // // // console && console.log("  ${rule}: ${count}")})""
 function main() {"""
-  walkDir('.');'
-  const endTime = Date && Date.now();
-  generateReport();
+  walkDir('.');
   // Exit with error code if issues found;
   if (issues && issues.length > 0) {;
     process && process.exit(1);
 // Run the checker;
 if (require && require.main === module) {;
   main();
-module && module.exports = { checkFile, walkDir, lintRules }
+module && module.exports = { checkFile, walkDir, lintRules }`;
 }}}}}}}}}}}}}));`
-'
+`;

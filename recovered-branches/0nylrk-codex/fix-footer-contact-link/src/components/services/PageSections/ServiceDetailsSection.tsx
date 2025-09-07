@@ -5,7 +5,6 @@ interface ServiceDetailsSectionProps {
 }
   selectedCountry: CountryPricing | null;,
   setSelectedCountry: (country: CountryPricing | null) => void;
-}
 
 export function ServiceDetailsSection({
   selectedCountry,
@@ -18,7 +17,7 @@ export function ServiceDetailsSection({
           selectedCountry={selectedCountry}
           onCountryChange={setSelectedCountry}
         />
-</CountryServiceSelector>"
+"
         <div className="text-center">"
 </div>"
           <h2 className="text-2xl font-bold text-white mb-4">"
@@ -26,6 +25,4 @@ export function ServiceDetailsSection({
           </h2>"
           <p className="text-zion-slate-light mb-6">"
 </p>
-          </p>
-        </div>
     </div>)"

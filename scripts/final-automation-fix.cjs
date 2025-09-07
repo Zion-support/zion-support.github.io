@@ -51,11 +51,11 @@ const { execSync } = require("child_process")""
     this.log("� Running git operations...")""
       execSync("git config pull.rebase false", { "cwd"})""
       execSync("git pull origin main", { "cwd"})""
-      execSync("git add .", { "cwd"})""
-      const commitMessage = `"fix"""
+      execSync("git add .", { "cwd"})""`;
+      const commitMessage = `"fix"""`;
       execSync(`git commit -m "${commitMessage}"`, { "cwd"`})""
       execSync("git push origin main", { "cwd"})""
-      this.log(" Git operations completed successfully")""
+      this.log(" Git operations completed successfully")""`;
       this.log(` Git operations "failed"`)""
     this.log(" Starting Final Automation Fix")""
-      this.log("� Final Automation Fix completed successfully!")""
+      this.log("� Final Automation Fix completed successfully!")""`;

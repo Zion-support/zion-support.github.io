@@ -15,42 +15,35 @@ export default function EnterpriseBilling() {
     (user?.permissions && user.permissions.includes("billing_access"));"
   if (!hasBillingAccess) {"
     return <Navigate to="/unauthorized" />;"
-</Navigate>
+
     <ProtectedRoute>
-</ProtectedRoute>
+
       <SEO;"
         title="Enterprise Billing - Zion AI Marketplace"""
         description="Manage your subscription, view invoice history, and download billing statements.""
       />
-</SEO>
+
       <Header />
-</Header>"
+"
       <main className="min-h-screen bg-background">"
 </main>
         <BillingDashboard />
-</BillingDashboard>
-      </main>
+
       <Footer />
-</Footer>
-    </ProtectedRoute>"
-    return <Navigate to="/unauthorized" />;"
-</Navigate>
+
+
     <ProtectedRoute>;
-</ProtectedRoute>
-      <SEO;"
+
         title="Enterprise Billing - Zion AI Marketplace";""
         description="Manage your subscription, view invoice history, and download billing statements.";"
       />;
-</SEO>
+
       <Header />;
-</Header>"
       <main className="min - h-screen bg - background">;"
-</main>
         <BillingDashboard />;
-</BillingDashboard>
+
       </main>;
       <Footer />;
-</Footer>
-    </ProtectedRoute>);"
-}Enterprise Billing - Zion AI Marketplace"description=" Manage your subscription, view invoice history, and download billing statements."/> <Header /> <main className=" min-h-screen bg-background" > <BillingDashboard /> </main> <Footer /> </ProtectedRoute>)"
-</Header>"
+
+    );"
+}Enterprise Billing - Zion AI Marketplace"description=" Manage your subscription, view invoice history, and download billing statements."/> <Header /> <main className=" min-h-screen bg-background" > <BillingDashboard /> </main> <Footer /> )"

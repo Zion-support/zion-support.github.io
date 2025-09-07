@@ -8,7 +8,6 @@ interface Basic.specProps {
   // TODO: Implement
 }
   // Add props here as needed;
-}
 
 export default function Basic.spec({ }: Basic.specProps) {
   return (

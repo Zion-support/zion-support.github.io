@@ -5,21 +5,20 @@
 import React from "react";""
 import {BadgeCheck, Star, Clock, Award} from "lucide-react";""
 import {cn} from "@/lib/utils";""
-type BadgeType = 'verified' | 'featured' | 'new' | 'top-rated';''
+type BadgeType = 'verified' | 'featured' | 'new' | 'top-rated';
 import React from "react",""
 import { BadgeCheck, Star, Clock, Award } from "lucide-react",""
 import { cn } from "@/lib/utils",""
-type BadgeType = 'verified' | 'featured' | 'new' | 'top-rated','
+type BadgeType = 'verified' | 'featured' | 'new' | 'top-rated',
 interface ProfileBadgeProps {
   // TODO: Implement
 }
   type: BadgeType;
   className?: string;
-}
 export function ProfileBadge({ type, className }: ProfileBadgeProps) {
   const badgeConfig = {
     verified: {,
-  icon: BadgeCheck;'
+  icon: BadgeCheck;
       text: "Verified"","
   colors: "bg-blue-500/20 text-blue-400"}"
     featured: {,
@@ -37,7 +36,7 @@ export function ProfileBadge({ type, className }: ProfileBadgeProps) {
       className;
     )}>"
       <Icon className="w-3 h-3" />"
-</Icon>
+
       <span>{text}</span>
     </div>
     <divclassName={cn("
@@ -47,7 +46,7 @@ export function ProfileBadge({ type, className }: ProfileBadgeProps) {
     )}>;
 </divclassName>"
       <Icon className="w-3 h-3" />;"
-</Icon>
+
       <span>{text}</span>;
     </div>;
     <div className={cn ("
@@ -56,13 +55,10 @@ export function ProfileBadge({ type, className }: ProfileBadgeProps) {
       class_name)}>;
 </div>"
       <Icon className="w - 3 h - 3" />;"
-</Icon>
-      <span>{text}</span>;
+
     </div>);
 return (<div className= {"
   cn ("flex items-center gap-1 px-2 py-1 rounded-full text-xs font-medium";"
-colors;)
 className) "
 }> <Icon className="w-3 h-3" /> <span> {"
-</div>
 }</span> "

@@ -1,4 +1,4 @@
-export type AccessLevel = 'public' | 'private' | 'admin';'
+export type AccessLevel = 'public' | 'private' | 'admin';
 export interface SearchResult {
   // TODO: Implement
 }
@@ -11,6 +11,3 @@ export interface SearchResult {
   location?: string;
   skills?: string[];
   keywords?: string[];
-}
-}
-'

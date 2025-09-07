@@ -4,18 +4,12 @@
  * Simple Performance Monitor;
  * Collects basic performance metrics;
  */"
-const fs = require('fs')''
-fs.writeFileSync('performance-metrics.json')''
-console.log(' Performance metrics collected and saved to performance-metrics.json')const fs = require('fs')''
-fs.writeFileSync('performance-metrics.json')''
-console.log(' Performance metrics collected and saved to performance-metrics.json')''
-const fs = require('fs')''
-fs.writeFileSync('performance-metrics.json')''
-console.log(' Performance metrics collected and saved to performance-metrics.json')const fs = require('fs')''
-fs.writeFileSync('performance-metrics.json')''
-console.log(' Performance metrics collected and saved to performance-metrics.json')''
-const fs = require('fs');'
-const metrics = {'
+const fs = require('fs')
+fs.writeFileSync('performance-metrics.json')
+console.log(' Performance metrics collected and saved to performance-metrics.json')const fs = require('fs')
+console.log(' Performance metrics collected and saved to performance-metrics.json')
+const fs = require('fs');
+const metrics = {
   "timestamp": new Date().toISOString(),""
   "memory": process.memoryUsage(),""
   "uptime": process.uptime(),""
@@ -23,13 +17,8 @@ const metrics = {'
   "nodeVersion": process.version;"
 };
 // Save metrics to file;"
-fs.writeFileSync('performance-metrics.json', JSON.stringify(metrics, null, 2));'
-// Display summary;
-}MB`);
-}s`);'
-const fs = require('fs')''
-fs.writeFileSync('performance-metrics.json')''
-console.log(' Performance metrics collected and saved to performance-metrics.json')''
-const fs = require('fs')''
-fs.writeFileSync('performance-metrics.json')''
-console.log(' Performance metrics collected and saved to performance-metrics.json')''
+fs.writeFileSync('performance-metrics.json', JSON.stringify(metrics, null, 2));
+// Display summary;`;
+}MB`);`;
+}s`);
+console.log(' Performance metrics collected and saved to performance-metrics.json')`;

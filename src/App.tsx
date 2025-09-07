@@ -44,17 +44,17 @@ function App() {
                       <Route path="/register" element={<Register />} />
                       <Route path="/dashboard" element={<Dashboard />} />
                       <Route path="*" element={<Navigate to="/" replace />} />
-                    </Routes>
-                  </Suspense>
+                    
+                  
                 </main>
                 <Footer />
                 <PerformanceMonitor />
               </div>
-            </Router>
-          </ToastProvider>
-        </AuthProvider>
-      </ThemeProvider>
-    </ErrorBoundary>
+            
+          
+        
+      
+    
   );
 }
 

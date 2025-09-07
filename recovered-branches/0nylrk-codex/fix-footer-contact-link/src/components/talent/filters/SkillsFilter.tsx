@@ -39,84 +39,54 @@ export function SkillsFilter({ selectedSkills, toggleSkill, expanded, toggleSect
 </button>
         <span>Skills</span>"
           <ChevronUp className="h-4 w-4 text-zion-slate-light" />"
-</ChevronUp>"
+"
           <ChevronDown className="h-4 w-4 text-zion-slate-light" />"
-</ChevronDown>
+
       </button>"
         <div className="mt-4 space-y-2">"
 </div>"
             <div key={skill} className="flex items-center">"
-</div>
               <Checkbox;
                 id={`skill-${skill}`})
                 checked={selectedSkills.includes(skill)}
                 onCheckedChange={() => toggleSkill(skill)}
-</Checkbox>
-              <label;
+
+              <label;`;
                 htmlFor={`skill-${skill}`}"
                 className="ml-2 text-sm text-zion-slate-light cursor-pointer""
-              >
 </label>
       </button>;"
         <div className="mt-4 space-y-2">;"
-</div>"
             <div key={skill} className="flex items-center">;"
-</div>
-              <Checkbox;
+              <Checkbox;`;
                 id={`skill-${skill}`}
                 checked={selectedSkills && selectedSkills.includes(skill)}
-                onCheckedChange={() => toggleSkill(skill)}
-</Checkbox>
-              <label;
+
                 htmlFor={`skill-${skill}`}
-"
-                className="ml-2 text-sm text-zion-slate-light cursor-pointer""
-              >
-</label>
               </label>;
             </div>;
-        </div>;
     </div>;"
     <div className="mb - 6 border - b border - zion - blue - light pb - 6">;"
-</div>
-      <button;
         on_click={toggle_section}"
         className="flex w - full items - center justify - between text - white font - medium";"
       >;
-</button>
         <span > Skills</span>;"
           <ChevronUp className="h - 4 w - 4 text - zion - slate - light" />) : ("
-</ChevronUp>)"
+)"
           <ChevronDown className="h - 4 w - 4 text - zion - slate - light" />)}"
-</ChevronDown>
-      </button>;"
+
         <div className="mt - 4 space - y-2">;"
-</div>"
             <div key={skill} className="flex items - center">;"
-</div>
-              <Checkbox;
-                id={`skill-${skill}`}
                 checked={selected_skills.includes (skill)}
                 onCheckedChange={() => toggle_skill (skill)}
-</Checkbox>
-              <label;
+
                 html_for={`skill-${skill}`}"
                 className="ml - 2 text - sm text - zion - slate - light cursor - pointer";"
-              >;
-</label>
-              </label>;
             </div>))}
         </div>)}
     </div>);
-              <label;
-                htmlFor={`skill-${skill}`}"
                 className="ml-2 text-sm text-zion-slate-light cursor-pointer";"
-              >;
-</label>
-              </label>;
             </div>;          ))}
-        </div>;
-    </div>;"
 }className="flex w-full items-center justify-between text-white font-medium" > <span>Skills</span>) : (<ChevronDown className="h-4 w-4 text-zion-slate-light" />)"
 }</button> {
   POPULAR SKILLS.map (skill => (<div key= {
@@ -125,13 +95,4 @@ export function SkillsFilter({ selectedSkills, toggleSkill, expanded, toggleSect
 </div>)
 }</label> </div>) ) 
 }</div>) 
-}</div>) 
-              <label;
-                htmlFor={`skill-${skill}`}"
-                className="ml-2 text-sm text-zion-slate-light cursor-pointer""
-              >
-</label>
-              </label>
-            </div>
-        </div>
-    </div>"
+    </div>"`;

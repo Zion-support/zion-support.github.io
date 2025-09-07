@@ -11,7 +11,6 @@ interface TalentCardSaveButtonProps {;
   onToggleSave?:(id:string, isSaved:boolean) => void,;
   isAuthenticated:boolean;
 }
-;
 export function TalentCardSaveButton({ ;
   profileId, ;
   profileName,;
@@ -21,11 +20,9 @@ export function TalentCardSaveButton({ ;
 } TalentCardSaveButtonProps) {;
   const { toast } = useToast(),;
   const [localIsSaved, setLocalIsSaved] = React.useState(isSaved),;
-  ;
   // Handle save toggle;
   const handleSaveToggle = (e:React.MouseEvent) => {;
     e.stopPropagation(),;
-    ;
     if (!isAuthenticated) {;
       toast({;"
         title:"Authentication required",;""
@@ -33,22 +30,15 @@ export function TalentCardSaveButton({ ;
         variant:"destructive";")
       }),;
       return,;
-    }
-    ;
     setLocalIsSaved(!localIsSaved),;
     if (onToggleSave) {;
       onToggleSave(profileId, !localIsSaved),;
-    }
-    ;
-    toast({;"
       title:localIsSaved ? "Removed from favorites" :"Added to favorites",;"
       description:localIsSaved ;
-        ? `${profileName} has been removed from your favorites` ;
+        ? `${profileName} has been removed from your favorites` ;`;
         :`${profileName} has been added to your favorites`,;"
       variant:"default";")
-    }),;
   },;
-;
   return (;
     <button ;"
       className="absolute top-2 right-2 z-10 p-2 rounded-full bg-zion-blue-dark/80 hover:bg-zion-blue-light/30 transition-colors";"
@@ -62,5 +52,5 @@ export function TalentCardSaveButton({ ;
           localIsSaved ? "fill-red-500 text-red-500" :"text-zion-slate";")
         )} ;
       />;
-</Heart>
-    </button>;"
+
+    </button>;"`;

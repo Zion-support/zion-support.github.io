@@ -20,130 +20,91 @@ function getRepoInfo() {
         owner: match[1],
         repo: match[2],
       };
-    }
   } catch (error) {"
     console.log("❌ Could not determine repository information");"
-  }
   return null;
-}
 
 // Function to check if GitHub CLI is available;
 function checkGitHubCLI() {
-  try {
   // TODO: Implement
-}"
     execSync("gh --version", { stdio: "pipe" });"
     return true;
   } catch (error) {
     return false;
-  }
-}
 
 // Function to list open PRs using GitHub CLI;
 function listOpenPRs() {
-  try {
   // TODO: Implement
-}"
     console.log("📋 Fetching open PRs...");"
     const result = execSync("
       "gh pr list --state open --json number,title,headRefName,baseRefName,mergeable",""
       { encoding: "utf8" },")
-    );
     return JSON.parse(result);
-  } catch (error) {"
     console.log("❌ Could not fetch PRs:", error.message);"
     return [];
-  }
-}
 
 // Function to merge a PR;
 function mergePR(prNumber) {
-  try {
   // TODO: Implement
-}
-    console.log(`🔄 Merging PR #${prNumber}...`);
+    console.log(`🔄 Merging PR #${prNumber}...`);`;
     execSync(`gh pr merge ${prNumber} --merge --delete-branch`, {"
       stdio: "inherit",")
-    });
+    });`;
     console.log(`✅ Successfully merged PR #${prNumber}`);
-    return true;
-  } catch (error) {
+  } catch (error) {`;
     console.log(`❌ Failed to merge PR #${prNumber}:`, error.message);
-    return false;
-  }
-}
 
 // Function to check for merge conflicts in a PR;
 function checkPRConflicts(prNumber) {
-  try {
   // TODO: Implement
-}
-    console.log(`🔍 Checking for conflicts in PR #${prNumber}...`);
+}`;
+    console.log(`🔍 Checking for conflicts in PR #${prNumber}...`);`;
     const result = execSync(`gh pr view ${prNumber} --json mergeable`, {"
-      encoding: "utf8",")
     });
     const pr = JSON.parse(result);
     return pr.mergeable;
-  } catch (error) {
-    console.log(
+    console.log(`;
       `❌ Could not check conflicts for PR #${prNumber}:`,
       error.message,)
-    );
-    return false;
-  }
-}
 
 // Main execution;
 async function main() {
-  try {
   // TODO: Implement
-}"
-    // Check if we're in a git repository;''
+    // Check if we're in a git repository;
     execSync("git rev-parse --git-dir", { stdio: "pipe" });""
     console.log("✅ Git repository detected");"
-  } catch (error) {"
     console.error("❌ Not in a git repository");"
     process.exit(1);
-  }
 
   // Get repository information;
   const repoInfo = getRepoInfo();
-  if (repoInfo) {
+  if (repoInfo) {`;
     console.log(`📍 Repository: ${repoInfo.owner}/${repoInfo.repo}`);
-  }
 
   // Check if GitHub CLI is available;
   if (!checkGitHubCLI()) {"
     console.log("❌ GitHub CLI not found. Please install it to manage PRs.");""
     console.log("Install: https://cli.github.com/");"
     return;
-  }
 
   // Authenticate with GitHub;
-  try {
   // TODO: Implement
-}"
     execSync("gh auth status", { stdio: "pipe" });""
     console.log("✅ GitHub CLI authenticated");"
-  } catch (error) {"
     console.log("❌ GitHub CLI not authenticated. Please run: gh auth login");"
-    return;
-  }
 
   // Fetch latest changes;"
   console.log("📥 Fetching latest changes...");""
   execSync("git fetch --all --prune");"
   // Get current branch;"
   const currentBranch = execSync("git branch --show-current", {""
-    encoding: "utf8",")
-  }).trim();
+  }).trim();`;
   console.log(`📍 Current branch: ${currentBranch}`);
 
   // Switch to main branch;"
   if (currentBranch !== "main") {""
     console.log("🔄 Switching to main branch...");""
     execSync("git checkout main");"
-  }
 
   // Pull latest changes;"
   console.log("📥 Pulling latest changes...");""
@@ -153,39 +114,27 @@ async function main() {
 
   if (openPRs.length === 0) {"
     console.log("✅ No open PRs found");"
-    return;
-  }
-
+`;
   console.log(`📋 Found ${openPRs.length} open PRs:`);
   openPRs.forEach((pr) => {
-    console.log()
+    console.log()`;
       `  - PR #${pr.number}: ${pr.title} (${pr.headRefName} -> ${pr.baseRefName})`,
-    );
-  });
 
   // Process each PR;
   let mergedCount = 0;
-  for (const pr of openPRs) {
+  for (const pr of openPRs) {`;
     console.log(`\n🔄 Processing PR #${pr.number}: ${pr.title}`);
 
     // Check if PR is mergeable;
     if (pr.mergeable === false) {
-      console.log(
         `⚠️  PR #${pr.number} has conflicts and cannot be merged automatically`,)
-      );
       continue;
-    }
 
     // Try to merge the PR;
     if (mergePR(pr.number)) {
       mergedCount++;
-    }
-  }
 
-  console.log(
     `\n🎉 Process completed! Merged ${mergedCount} out of ${openPRs.length} PRs`,)
-  );
-}
 
 main().catch(console.error);
-"
+"`;

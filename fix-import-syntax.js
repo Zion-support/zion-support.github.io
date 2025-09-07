@@ -35,7 +35,6 @@ function fixImportSyntax(filePath) {
       }
     );
       modified = true;
-    }
     return modified;
   } catch (error) {
     for (const item of items) {
@@ -49,20 +48,13 @@ function fixImportSyntax(filePath) {
           ].includes(item)
         ) {
           continue;
-        }
         traverse(fullPath);
       } else if (stat.isFile()) {
         const ext = path.extname(item);"
         if ([".js", ".jsx", ".ts", ".tsx"].includes(ext)) {"
           files.push(fullPath);
-        }
-      }
-    }
-  }
 for (const file of files) {
   if (fixImportSyntax(file)) {
     fixedCount++;
     console.log(`Fixed syntax in: ${file}`);
-  }
-}
-"
+"`;

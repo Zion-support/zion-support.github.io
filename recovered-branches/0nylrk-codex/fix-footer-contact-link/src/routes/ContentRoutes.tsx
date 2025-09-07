@@ -16,131 +16,69 @@ const ContentRoutes = () => {
 const ContentRoutes = () => {;
   return (
     <Routes>;
-</Routes>"
+"
       <Route path="/" element={<Home />} />"
-</Route>"
       <Route path="/home" element={<Home />} />"
-</Route>"
       <Route path="/about" element={<About />} />"
-</Route>"
       <Route path="/help" element={<HelpCenterPage />} />"
-</Route>"
       <Route path="/support" element={<HelpCenterPage />} />"
-</Route>"
       <Route path="/blog" element={<Blog />} />"
-</Route>"
       <Route path="/blog/:slug" element={<BlogPost />} />"
-</Route>"
       <Route path="/green-it" element={<GreenIT />} />"
-</Route>"
       <Route path="/careers" element={<Careers />} />;"
-</Route>"
       <Route path="/settings/account" element={<AccountSettings />} />"
-</Route>"
       <Route path="/project-room/:projectId" element={<ProjectRoom />} />"
-</Route>"
       <Route path="/video-call/:roomId" element={<VideoCall />} />;"
-</Route>"
       <Route path="/search" element={<SearchPage />} />"
-</Route>"
       <Route path="/sitemap-page" element={<SitemapPage />} />"
-</Route>
-    </Routes>
-    <Routes>;
-</Routes>"
+
+    
       <Route path="/" element={<Home />} />;"
-</Route>"
       <Route path="/home" element={<Home />} />;"
-</Route>"
       <Route path="/about" element={<About />} />;"
-</Route>"
       <Route path="/help" element={<HelpCenterPage />} />;"
-</Route>"
       <Route path="/support" element={<HelpCenterPage />} />;"
-</Route>"
       <Route path="/blog" element={<Blog />} />;"
-</Route>"
       <Route path="/blog/:slug" element={<BlogPost />} />;"
-</Route>"
       <Route path="/green - it" element={<GreenIT />} />;"
-</Route>"
-      <Route path="/careers" element={<Careers />} />;"
-</Route>"
       <Route path="/settings / account" element={<AccountSettings />} />;"
-</Route>"
       <Route path="/project - room/:project_id" element={<ProjectRoom />} />;"
-</Route>"
       <Route path="/video - call/:room_id" element={<VideoCall />} />;"
-</Route>"
       <Route path="/search" element={<SearchPage />} />;"
-</Route>"
       <Route path="/sitemap - page" element={<SitemapPage />} />;"
-</Route>)
-    </Routes>);"
-      <Route path="/help" element={<HelpCenterPage />} />;"
-</Route>"
-      <Route path="/support" element={<HelpCenterPage />} />;"
-</Route>"
-      <Route path="/blog" element={<Blog />} />;"
-</Route>"
-      <Route path="/blog/:slug" element={<BlogPost />} />;"
-</Route>"
+)
+    );"
       <Route path="/green-it" element={<GreenIT />} />;"
-</Route>"
-      <Route path="/careers" element={<Careers />} />;"
-</Route>"
       <Route path="/settings/account" element={<AccountSettings />} />;"
-</Route>"
       <Route path="/project-room/:projectId" element={<ProjectRoom />} />;"
-</Route>"
-      <Route path="/video-call/:roomId" element={<VideoCall />} />;"
-</Route>"
-      <Route path="/search" element={<SearchPage />} />;"
-</Route>"
       <Route path="/sitemap-page" element={<SitemapPage />} />;"
-</Route>
-    </Routes>;
+
+    ;
   return (<Routes> {
-</Routes>"
 }<Route path="/" element= {"
   <Home /> 
-</Route>"
 }/> <Route path="/home" element= {"
-  <Home /> 
-</Route>"
 }/> <Route path="/about" element= {"
   <About /> 
-</Route>"
 }<Route path="/help" element= {"
   <HelpCenterPage /> 
-</Route>"
 }/> <Route path="/support" element= {"
-  <HelpCenterPage /> 
-</Route>"
 }<Route path="/blog" element= {"
   <Blog /> 
-</Route>"
 }/> <Route path="/blog/:slug" element= {"
   <BlogPost /> 
-</Route>"
 }<Route path="/green-it" element= {"
   <GreenIT /> 
-</Route>"
 }<Route path="/careers" element= {"
   <Careers /> 
-</Route>"
 }<Route path="/settings/account" element= {"
   <AccountSettings /> 
-</Route>"
 }<Route path="/project-room/:projectId" element= {"
   <ProjectRoom /> 
-</Route>"
 }<Route path="/video-call/:roomId" element= {"
   <VideoCall /> 
-</Route>"
 }<Route path="/search" element= {"
   <SearchPage /> 
-</Route>"
 }<Route path="/sitemap-page" element= {"
   <SitemapPage /> 
-</Route>)"
+)"

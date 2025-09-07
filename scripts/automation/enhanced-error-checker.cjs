@@ -24,7 +24,6 @@ class EnhancedErrorChecker {}
   };
   async checkTypeScriptErrors() {}"
     this.log("Checking TypeScript errors...");"
-    try {}"
       const result = execSync("npx tsc --noEmit --pretty", {})""
         "cwd": this.projectRoot,""
         "encoding": "utf8",""
@@ -32,10 +31,9 @@ class EnhancedErrorChecker {}
       }
 });"
       this.log("No TypeScript errors found");""
-      return { "errors": 0, "output": result }} catch(error) {}""
+      return { "errors": 0, "output": result }} catch(error) {}""`;
       this.log(`TypeScript errors "found": ${error.message}`, "ERROR");""
       return { "errors": 1, "output": error.stdout || error.message }};"
-  };
   async run() {}"
     this.log("Starting Enhanced Error Checker...");"
     const results = {}"
@@ -44,9 +42,8 @@ class EnhancedErrorChecker {}
     };"
     this.log("Enhanced Error Checker completed");"
     return results};
-};
 if (require.main === module) {}
   const checker = new EnhancedErrorChecker();
   checker.run().catch(console.error)};
 
-"
+"`;

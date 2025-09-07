@@ -18,132 +18,60 @@ export async function createJob(jobData: any) {
   } catch (error: any) {"
     console.error("Error creating job:", error);""
     throw new Error(error.message || "Failed to create job");"
-  }
-}
 export async function updateJob(jobId: string, jobData: any) {
-  try {
   // TODO: Implement
-}
-    const { data, error } = await supabase;"
-      .from("jobs")"
       .update(jobData)"
       .eq("id", jobId)"
-      .select()
-      .single();
 
-    if (error) throw error;
-    return data;
-  } catch (error: any) {"
     console.error("Error updating job:", error);""
     throw new Error(error.message || "Failed to update job");"
-  }
-}
 export async function getJobById(jobId: string) {
-  try {
   // TODO: Implement
-}
-    const { data, error } = await supabase;"
       .from("jobs")""
       .select("*")""
-      .eq("id", jobId)"
-      .single();
 
-    if (error) throw error;
-    return data;
-  } catch (error: any) {"
     console.error("Error fetching job:", error);""
     toast.error("Failed to load job details");"
     return null;
-  }
-}
 export async /**
  * update_job - Function description;
  */
 function update_job() {
-  try {
   // TODO: Implement
-}
-    const { data, error } = await supabase;"
-      .from ('jobs');'
-      .update (job_data);'
-      .eq ('id', job_id);'
+      .from ('jobs');
+      .update (job_data);
+      .eq ('id', job_id);
       .select ();
       .single ();
 ;
     // Check condition;
 if (throw error) {
   $2;
-}
-    return data;
-  } catch (error: any) {'
+  } catch (error: any) {
     console.error ("Error updating job:", error);""
     throw new Error (error.message || "Failed to update job");"
-  }
-}
-export async /**
  * getJobById - Function description;
- */
 function getJobById() {
-  try {
   // TODO: Implement
-}
-    const { data, error } = await supabase;"
-      .from ('jobs');''
-      .select ('*');''
-      .eq ('id', job_id);'
-      .single ();
-;
+      .select ('*');
     // Check condition;
-if (throw error) {
-  $2;
-}
-    return data;
-  } catch (error: any) {'
     console.error ("Error fetching job:", error);""
     toast.error ("Failed to load job details");"
-    return null;
-  }
 
-}
-;
 
 
   const {
   // TODO: Implement
-}
   data, error;
 }= await supabase;
-}
 }export async function updateJob (jobId: string, jobData: unknown) {
-  try {
   // TODO: Implement
-}
-  const {
   // TODO: Implement
-}
   data, error;"
-}= await supabase .from ('jobs') .update (jobData) .eq ('id', jobId) .select () .single ();'
-}
+}= await supabase .from ('jobs') .update (jobData) .eq ('id', jobId) .select () .single ();
 }export async function getJobById (jobId: string) {
-  try {
   // TODO: Implement
-}
-  const {
   // TODO: Implement
-}
-  data, error;'
-}= await supabase .from ('jobs') .select ('*') .eq ('id', jobId) .single ();'
-}
-}
+}= await supabase .from ('jobs') .select ('*') .eq ('id', jobId) .single ();
     if (error) throw error,;
-    return data;
-  } catch (error: any) {;'
-    console.error("Error fetching job:", error);""
-    toast.error("Failed to load job details");"
-    return null;
-  }
-}
-;
-  }
-}
-"
+  } catch (error: any) {;

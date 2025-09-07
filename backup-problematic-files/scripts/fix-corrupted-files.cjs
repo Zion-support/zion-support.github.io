@@ -1,8 +1,8 @@
 #!/usr/bin/env node;
-const fs = require('fs')''
-const path = require('path')''
-// console.log(' Fixing Corrupted Files...')''
-console.log('')''
+const fs = require('fs')
+const path = require('path')
+// console.log(' Fixing Corrupted Files...')
+console.log()
     "phone"""
     "email"""
     "address"""
@@ -11,6 +11,4 @@ console.log('')''
 {\"}""
   "method"""
 const filesToFix = [{ "path"}]""
-  { "path"}""
-  { "path"}""
   { "path"}""

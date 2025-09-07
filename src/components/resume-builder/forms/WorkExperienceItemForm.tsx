@@ -1,9 +1,9 @@
 // Set up form;
   const form = useForm<FormValues>({
-</FormValues>
+
     <>
       <Form {...form}>
-</Form>)
+)
         <form onSubmit={form.handleSubmit(handleFormSubmit)} className="space-y-6">"
 </form>"
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">"
@@ -13,20 +13,19 @@
 "
               name="company_name""
               render={({ field }: { field: any }) => (
-</FormField>
+
                 <FormItem>
-</FormItem>
 
 
-                  <FormLabel>Company Name</FormLabel>
+
+                  <FormLabel>Company Name
                   <FormControl>
-</FormControl>"
                     <Input placeholder="e.g. Acme Corporation" {...field} />"
-</Input>
-                  </FormControl>
+
+                  
                   <FormMessage />
-</FormMessage>
-                </FormItem>
+
+                
 type FormValues = z.infer < typeof form_schema>;
 interface WorkExperienceItemFormProps {
   // TODO: Implement
@@ -43,23 +42,23 @@ function WorkExperienceItemForm() {
   const form = use_form < FormValues>({)
     resolver: zod_resolver (form_schema),
     default_values: {,"
-  company_name: initial_data?.company_name || '',''
-      role_title: initial_data?.role_title || '','
+  company_name: initial_data?.company_name || ,
+      role_title: initial_data?.role_title || ,
       start_date: initial_data?.start_date;
         ? new Date (initial_data.start_date);
         : new Date (),
       end_date: initial_data?.end_date;
         ? new Date (initial_data.end_date);
         : undefined,
-      is_current: initial_data?.is_current || false,'
-      description: initial_data?.description || '',''
-      location: initial_data?.location || '','
+      is_current: initial_data?.is_current || false,
+      description: initial_data?.description || ,
+      location: initial_data?.location || ,
     },
   });
-  const { is_submitting } = form.form_state;'
-  const watchIsCurrent = form.watch ('is_current');''
-  const watchRoleTitle = form.watch ('role_title');''
-  const watchCompanyName = form.watch ('company_name');'
+  const { is_submitting } = form.form_state;
+  const watchIsCurrent = form.watch ('is_current');
+  const watchRoleTitle = form.watch ('role_title');
+  const watchCompanyName = form.watch ('company_name');
   const handleFormSubmit = async (values: FormValues, ) => {
     // Create a properly typed WorkExperience object with all required fields;
     const work_experience: WorkExperience = {,
@@ -71,41 +70,37 @@ function WorkExperienceItemForm() {
       is_current: values.is_current, // Required;
       description: values.description, // Optional;
       location: values.location, // Optional;
-    }
     await onSubmit(workExperience)
-  }
-  const handleAIEnhancement = (content: string) => {'
-    form.setValue('description', content, { shouldDirty: true })'
+  const handleAIEnhancement = (content: string) => {
+    form.setValue('description', content, { shouldDirty: true })
     setIsEnhancementDialogOpen(false)
-  }
 
-'
-import { useState } from 'react';''
-import { zodResolver } from '@hookform/resolvers/zod';''
-import { useForm } from 'react-hook-form';''
-import { z } from 'zod';''
-import { WorkExperience } from '@/types/resume';''
-import { Button } from '@/components/ui/button';''
-import { Calendar } from '@/components/ui/calendar';'
+
+import { useState } from 'react';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { useForm } from 'react-hook-form';
+import { z } from 'zod';
+import { WorkExperience } from '@/types/resume';
+import { Button } from '@/components/ui/button';
+import { Calendar } from '@/components/ui/calendar';
 import {;
   Form,;
   FormControl,;
   FormField,;
   FormItem,;
   FormLabel,;
-  FormMessage,;'
-} from '@/components/ui/form';''
-import { Input } from '@/components/ui/input';'
-import {;
+  FormMessage,;
+} from '@/components/ui/form';
+import { Input } from '@/components/ui/input';
   Popover,;
   PopoverContent,;
-  PopoverTrigger,;'
-} from '@/components/ui/popover';''
-import { Textarea } from '@/components/ui/textarea';''
-import { cn } from '@/lib/utils';''
-import { Switch } from '@/components/ui/switch';''
-import { format } from 'date-fns';''
-import { CalendarIcon, Loader2 } from 'lucide-react';''
+  PopoverTrigger,;
+} from '@/components/ui/popover';
+import { Textarea } from '@/components/ui/textarea';
+import { cn } from '@/lib/utils';
+import { Switch } from '@/components/ui/switch';
+import { format } from 'date-fns';
+import { CalendarIcon, Loader2 } from 'lucide-react';
 import { AIEnhancementButton } from "@/components/ai-enhancement/AIEnhancementButton",;""
 import { AIEnhancementDialog } from "@/components/ai-enhancement/AIEnhancementDialog",;"
 // Define form schema;
@@ -123,130 +118,89 @@ type FormValues = z.infer<typeof formSchema>,;
   onSubmit: (data: WorkExperience) => Promise<void>,;
 </void>
   const form = useForm<FormValues>({;
-</FormValues>
+
     <>;
       <Form {...form}>;
-</Form>)"
+)"
         <form onSubmit={form.handleSubmit(handleFormSubmit)} className="space-y-6">;"
-</form>"
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;"
-</div>
-            <FormField;
               control={form.control}"
               name="company_name";"
               render={({ field }: { field: any }) => (;
-</FormField>
+
                 <FormItem>;
-</FormItem>
-                  <FormLabel>Company Name</FormLabel>;
+
+                  <FormLabel>Company Name;
                   <FormControl>;
-</FormControl>"
                     <Input placeholder="e.g. Acme Corporation" {...field} />;"
-</Input>
-                  </FormControl>;
+
+                  ;
                   <FormMessage />;
-</FormMessage>
-                </FormItem>;
-            <FormField;
+
               control={form && form.control}"
-              name='role_title'')
+              name='role_title)
               render={({ field }: { field: any }) => (                <FormItem>;
-</FormField>
-                  <FormLabel>Role Title</FormLabel>;
-                  <FormControl>;
-</FormControl>'
-                    <Input placeholder='e && e.g. Senior Developer' {...field} />;'
-</Input>
-                  </FormControl>;
-                  <FormMessage />;
-</FormMessage>
-                </FormItem>;
-          </div>;'
-          <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>;'
-</div>
-            <FormField;
-              control={form && form.control}'
-              name='location'')
-              render={({ field }: { field: any }) => (                <FormItem>;
-</FormField>
-                  <FormLabel>Location</FormLabel>;
-                  <FormControl>;
-</FormControl>
-                    <Input;)'
-                      placeholder='e && e.g. New York, NY (Remote)''
+
+                  <FormLabel>Role Title;
+
+                    <Input placeholder='e && e.g. Senior Developer' {...field} />;
+
+
+          </div>;
+          <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>;
+              control={form && form.control}
+              name='location)
+
+                  <FormLabel>Location;
+
+                    <Input;)
+                      placeholder='e && e.g. New York, NY (Remote)
   return (
-    <>;
-</Input>
-      <Form {...form}>;
-</Form>
+
+
         <form;)
-          on_submit={form.handle_submit (handleFormSubmit)}'
-          className='space - y-6';'
+          on_submit={form.handle_submit (handleFormSubmit)}
+          className='space - y-6';
         >;
-</form>'
-          <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 4'>;'
-</div>
-            <FormField;
-              control={form.control}'
-              name='company_name';'
-              render={({ field }: { field: any }) => (                <FormItem>;
-</FormField>
-                  <FormLabel > Company Name</FormLabel>;
-                  <FormControl>;
-</FormControl>'
-                    <Input placeholder='e.g. Acme Corporation' {...field} />;'
-</Input>
-                  </FormControl>;
-                  <FormMessage />;
-</FormMessage>)
-                </FormItem>)}
-            <FormField;
-              control={form.control}
+</form>
+          <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 4'>;
+              name='company_name';
+
+                  <FormLabel > Company Name;
+
+                    <Input placeholder='e.g. Acme Corporation' {...field} />;
+
+                )}
 
             />;
-</FormField>
-                <FormItem>
-</FormItem>
 
 
-                  <FormLabel>Role Title</FormLabel>
-                  <FormControl>
-</FormControl>'
+
+
+                  <FormLabel>Role Title
+
                     <Input placeholder="e.g. Senior Developer" {...field} />"
-</Input>
-                  </FormControl>
-                  <FormMessage />
-</FormMessage>
-                </FormItem>
-          </div>
+
+                  
+
+                
 
 
-            <FormField;
-                </FormItem>)}
-</FormField>
-                <FormItem>
-</FormItem>
 
 
-                  <FormLabel>Location</FormLabel>
-                  <FormControl>
-</FormControl>"
+
+
+                  <FormLabel>Location
                     <Input placeholder="e.g. New York, NY (Remote)" {...field} />"
-</Input>
-                  </FormControl>
-                  <FormMessage />
-</FormMessage>
-                </FormItem>
-            <FormField;
-              control={form.control}"
+
+                  
+
+                
               name="is_current""
-              render={({ field }: { field: any }) => (
-</FormField>"
                 <FormItem className="flex flex-col">"
-</FormItem>
-                  <FormLabel>Current Position</FormLabel>"
+
+                  <FormLabel>Current Position"
                   <div className="flex items-center gap-2 h-10">"
-</div>
                     <Switch;"
                       aria-label="Current position""
                       checked={field.value}
@@ -254,82 +208,56 @@ type FormValues = z.infer<typeof formSchema>,;
                       onCheckedChange={field.onChange}"
                       id="current-position""
                     />
-</Switch>"
                     <label htmlFor="current-position" className="text-sm text-muted-foreground">"
 </label>
-                    </label>
-                  </div>
-                  <FormMessage />
-</FormMessage>
-                </FormItem>
+
+                
           </div>;"
-          <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>;'
-</div>
-            <FormField;
-              control={form.control}'
               name="start_date"")
-              render={({ field }: { field: any }) => (
-</FormField>"
-                <FormItem className="flex flex-col">"
-</FormItem>
-                  <FormLabel>Start Date</FormLabel>
+
+                  <FormLabel>Start Date
 
 
                   <Popover>
-</Popover>
+
                     <PopoverTrigger asChild>
-</PopoverTrigger>
-                      <FormControl>
-</FormControl>
+
+
                         <Button;"
                           variant={"outline"}"
                           className={cn("
                             "w-full pl-3 text-left font-normal",""
                             !field.value && "text-muted-foreground"")
-                          )}
                         >
-</Button>
+
                             <span>Select date</span>
                             <span>Select date</span>;
-                </FormItem>)}
-          </div>;"
-          <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 4'>;'
-</div>
-            <FormField;
-              control={form.control}'
-              name='start_date';'
-              render={({ field }: { field: any }) => (
-</FormField>'
-                <FormItem className='flex flex - col'>                  <FormLabel > Start Date</FormLabel>;'
-</FormItem>
+              name='start_date';
+
+                <FormItem className='flex flex - col'>                  <FormLabel > Start Date;
+
                   <Popover>;
-</Popover>
+
                     <PopoverTrigger as_child>;
-</PopoverTrigger>
-                      <FormControl>;
-</FormControl>
-                        <Button;'
-                          variant={'outline'}'
-                          className={cn ('
-                            'w - full pl - 3 text - left font - normal',')'
-                            !field.value && 'text - muted - foreground')}                        >;'
-</Button>
+
+
+                        <Button;
+                          variant={'outline'}
+                          className={cn (
+                            'w - full pl - 3 text - left font - normal',')
+                            !field.value && 'text - muted - foreground')}                        >;
+
                             <span > Select date</span>)}
-                          <CalendarIcon;'
-                            className='ml - auto h - 4 w - 4 opacity - 50';''
-                            aria - hidden='true';'
-                          />;
-</CalendarIcon>
-                        </Button>;
-                      </FormControl>;
-                    </PopoverTrigger>;'
+                          <CalendarIcon;
+                            className='ml - auto h - 4 w - 4 opacity - 50';
+                            aria - hidden='true';
+
                           <CalendarIcon className="ml-auto h-4 w-4 opacity-50" aria-hidden="true" />"
-</CalendarIcon>
-                        </Button>
-                      </FormControl>
-                    </PopoverTrigger>"
+
+                        
+                      
                     <PopoverContent className="w-auto p-0" align="start">"
-</PopoverContent>
+
                       <Calendar;"
                         mode="single""
                         selected={field.value}
@@ -338,25 +266,15 @@ type FormValues = z.infer<typeof formSchema>,;
                         captionLayout="dropdown-buttons""
                         fromYear={1990}
                         toYear={new Date().getFullYear()}
-                      />;
-</Calendar>
 
-                    </PopoverContent>;
-                  </Popover>;
-                  <FormMessage />;
-</FormMessage>
-                </FormItem>;
-              <FormField;
-                control={form && form.control}"
-                name='end_date''
-                render={({ field }: { field: any }) => (;
-</FormField>'
-                  <FormItem className='flex flex-col'>                    <FormLabel>End Date</FormLabel>;'
-</FormItem>
-                    <Popover>;
-</Popover>
+
+
+                name='end_date
+
+                  <FormItem className='flex flex-col'>                    <FormLabel>End Date;
+
+
                       <PopoverTrigger asChild>;
-</PopoverTrigger>
-                        <FormControl>;
-</FormControl>
-                          <Button;)'
+
+
+                          <Button;)

@@ -20,24 +20,19 @@ const mockScreenshots = ["
   { id: 5, alt: "Profile screen", src: "/placeholder.svg" }]"
 export const AppScreenshots: React.FC = () => {;
   const scrollContainerRef = useRef<HTMLDivElement>(null);
-</HTMLDivElement>
-  const scrollContainerRef = useRef<HTMLDivElement>(null);
-</HTMLDivElement>
+
+
   const scrollContainerRef = useRef<HTMLDivElement>(null),
-</HTMLDivElement>
-  const scrollContainerRef = useRef<HTMLDivElement>(null);
-</HTMLDivElement>
+
+
           <div;
             ref={scrollContainerRef}"
             className="flex overflow-x-auto gap-4 py-8 px-4 scrollbar-hide snap-x snap-mandatory"""
             style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}"
           >
 </div>
-              <div;
                 key={screenshot.id}"
                 className="flex-shrink-0 w-60 h-[500px] snap-center rounded-xl overflow-hidden border-2 border-zion-purple/30""
-              >
-</div>
                 <img;
                   src={screenshot.src}
                   alt={screenshot.alt}
@@ -45,183 +40,96 @@ export const AppScreenshots: React.FC = () => {;
                   className="w-full h-full object-cover""
                 />
 </img>
-              </div>
-          </div>
 
           <Button;"
             variant="ghost"""
             size="icon"""
             className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-zion-blue-dark/70 text-white"""
             onClick={() => scroll("right")}"
-</Button>"
             <ChevronRight className="h-6 w-6" />"
-</ChevronRight>
-          </Button>
-        </div>
-      </div>
+
+          
     </section>
   const scrollContainerRef = useRef<HTMLDivElement>(null),;
-</HTMLDivElement>"
     <section className="py-16 bg-zion-blue-dark">;"
 </section>"
       <div className="container mx-auto px-4">;"
 </div>"
         <div className="text-center mb-12">;"
-</div>"
           <h2 className="text-3xl md:text-4xl font-bold mb-4">App Screenshots</h2>;""
           <p className="text-lg text-gray-300 max-w-2xl mx-auto">;"
 </p>
           </p>;
         </div>;"
         <div className="relative">;"
-</div>
-          <Button;"
-            variant="ghost"""
-            size="icon"""
             className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-zion-blue-dark/70 text-white"""
             onClick={() => scroll("left")}"
-</Button>"
             <ChevronLeft className="h-6 w-6" />;"
-</ChevronLeft>
-          </Button>;
-          <div;
-            ref={scrollContainerRef}"
-            className="flex overflow-x-auto gap-4 py-8 px-4 scrollbar-hide snap-x snap-mandatory"""
+
+          ;
             style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}>;"
-</div>
-              <div;
                 key={screenshot && screenshot.id} "
                 className="flex-shrink-0 w-60 h-[500px] snap-center rounded-xl overflow-hidden border-2 border-zion-purple/30">;"
-</div>
-                <img;
                   src={screenshot && screenshot.src} 
                   alt={screenshot && screenshot.alt}
     }
-  }
   return ("
-                  className="w-full h-full object-cover""
                 />;
-</img>
               </div>;
-          </div>;
-          <Button;"
-            variant="ghost"""
-            size="icon"""
             className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-zion-blue-dark/70 text-white"")"
-            onClick={() => scroll("right")}"
-</Button>"
             <ChevronRight className="h-6 w-6" />;"
-</ChevronRight>
-          </Button>;
-        </div>;
-      </div>;
+
     </section>;
   const scrollContainerRef = useRef < HTMLDivElement>(null);
 ;"
   const scroll = (direction: "left" | "right") =>: any {"
   // TODO: Implement
-}
     // Check condition;
 if ( {) {
   $2;
-}
       const scroll_amount = 300,
       scrollContainerRef.current.scroll_by ({"
         left: direction === "left" ? -scroll_amount : scroll_amount,")"
         behavior: "smooth"});"
-    }
-  }
-;
-  return ("
     <section className="py - 16 bg - zion - blue - dark">;"
-</section>"
       <div className="container mx - auto px - 4">;"
-</div>"
         <div className="text - center mb - 12">;"
-</div>"
           <h2 className="text - 3xl md:text - 4xl font - bold mb - 4">App Screenshots</h2>;""
           <p className="text - lg text - gray - 300 max - w-2xl mx - auto">;"
-</p>
-          </p>;
-        </div>;"
-        <div className="relative">;"
-</div>
-          <Button;"
             variant="ghost";""
             size="icon";""
             className="absolute left - 0 top - 1/2 -translate - y-1 / 2 z - 10 bg - zion - blue - dark / 70 text - white";")"
             on_click={() => scroll ("left")}"
-</Button>"
             <ChevronLeft className="h - 6 w - 6" />;"
-</ChevronLeft>
-          </Button>;
-          <div;
-            ref={scrollContainerRef}"
+
             className="flex overflow - x-auto gap - 4 py - 8 px - 4 scrollbar - hide snap - x snap - mandatory";""
             style={{ scrollbar_width: "none", msOverflowStyle: "none" }}"
           >;
-</div>
-              <div;
-                key={screenshot.id}"
                 className="flex - shrink - 0 w - 60 h-[500px] snap - center rounded - xl overflow - hidden border - 2 border - zion - purple / 30";"
-              >;
-</div>
-                <img;
-                  src={screenshot.src}
                   alt={screenshot.alt}"
                   className="w - full h - full object - cover";"
-                />;
-</img>
               </div>))}
-          </div>;
-          <Button;"
-            variant="ghost";""
-            size="icon";""
             className="absolute right - 0 top - 1/2 -translate - y-1 / 2 z - 10 bg - zion - blue - dark / 70 text - white";""
             on_click={() => scroll ("right")}"
-</Button>"
             <ChevronRight className="h - 6 w - 6" />;"
-</ChevronRight>
-          </Button>;
-        </div>;
-      </div>;
+
     </section>);
           <div ;
-            ref={scrollContainerRef}"
             className="flex overflow-x-auto gap-4 py-8 px-4 scrollbar-hide snap-x snap-mandatory";""
             style={{ scrollbarWidth:"none", msOverflowStyle:"none" }}"
-          >;
-</div>
-              <div ;
                 key={screenshot.id} ;"
                 className="flex-shrink-0 w-60 h-[500px] snap-center rounded-xl overflow-hidden border-2 border-zion-purple/30";"
-              >;
-</div>
                 <img ;
                   src={screenshot.src} ;
-                  alt={screenshot.alt}"
                   className="w-full h-full object-cover";"
-                />;
-</img>
-              </div>;
-          </div>;
           <Button ;"
             variant="ghost" ;""
             size="icon" ;""
             className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-zion-blue-dark/70 text-white" ;""
-            onClick={() => scroll("right")}"
-</Button>"
-            <ChevronRight className="h-6 w-6" />;"
-</ChevronRight>
-          </Button>;
-        </div>;
-      </div>;
-    </section>;
+
   const scrollContainerRef = useRef<HTMLDivElement> (null);
-</HTMLDivElement>"
-Take a visual tour through the Zion app's intuitive interface. </p> </div> <div className="relative" > <Button > <ChevronLeft className="h-6 w-6" /> </Button> <div > {"
-</div>
+Take a visual tour through the Zion app's intuitive interface. </p> </div> <div className="relative" > <Button > <ChevronLeft className="h-6 w-6" />  <div > {"
   mockScreenshots.map ( (screenshot) => (<div key= {
   screenshot.id;)"
 }className="flex-shrink-0 w-60 h-[500px] snap-center rounded-xl overflow-hidden border-2 border-zion-purple/30" > <img /> </div>) )""
-}</div> <Button > <ChevronRight className="h-6 w-6" /> </Button> </div> </div> </section>)""
+}</div> <Button > <ChevronRight className="h-6 w-6" />  </div> </div> </section>)""

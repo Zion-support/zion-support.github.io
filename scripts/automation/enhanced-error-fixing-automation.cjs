@@ -14,7 +14,6 @@
             } else if (!inConflict) {
               newLines.push(line);
             }
-          }
           "
           fs.writeFileSync(file, newLines.join("\n"));"
           this.fixesApplied.push({"
@@ -22,12 +21,8 @@
             file: file,"
             description: "Resolved merge conflicts"")
           });
-        }
-      } catch (error) {"
+      } catch (error) {"`;
         this.log(`Could not fix merge conflicts in ${file}: ${error.message}`, "error");"
-      }
-    }
-  }
 
   getTypeScriptFiles() {
     const files = [];"
@@ -42,57 +37,43 @@
           walkDir(fullPath);"
         } else if (item.endsWith(".ts") || item.endsWith(".tsx")) {"
           files.push(fullPath);
-        }
-      }
-    }
     
     walkDir(srcDir);
     return files;
-  }
 
   async generateReport() {
     const duration = Date.now() - this.startTime;
     const report = {
-      timestamp: new Date().toISOString(),
+      timestamp: new Date().toISOString(),`;
       duration: `${duration}ms`,
       fixesApplied: this.fixesApplied,
       summary: {,
   totalFixes: this.fixesApplied.length,"
         mergeConflictFixes: this.fixesApplied.filter(f => f.type === "merge_conflict").length;"
-      }
     };
-    "
     const reportPath = path.join(this.projectRoot, "error-fixing-report.json");"
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));`;
     this.log(`Error fixing report saved to: ${reportPath}`);
     return report;
-  }
 
   async run() {"
     this.log("Starting Enhanced Error Fixing Automation...");"
     try {
   // TODO: Implement
-}
       // Run all fix operations;
       await this.fixMergeConflicts();
       
       // Generate report;
-      const report = await this.generateReport();
+      const report = await this.generateReport();`;
       this.log(`Error fixing completed! Applied ${report.summary.totalFixes} fixes.`);
       
-      return report;
-    } catch (error) {"
       this.log(`Error fixing automation failed: ${error.message}`, "error");"
       throw error;
-    }
-  }
-}
 
 // Run the automation if called directly;
 if (require.main === module) {
   const automation = new EnhancedErrorFixingAutomation();
   automation.run().catch(console.error);
-}
 
 module.exports = EnhancedErrorFixingAutomation;
 
@@ -107,7 +88,7 @@ console.log("" Starting Enhanced Error Fixing Automation System...")""
   "ENABLE_TYPE_CHECK": process.env.ENABLE_TYPE_CHECK !== "false"""
   "ENABLE_LINT_FIX": process.env.ENABLE_LINT_FIX !== "false"""
   console.log("� Starting error fixing cycle at ${this.startTime.toISOString()}"""
-      // Create logs directory if it doesn""
+      // Create logs directory if it doesn""`;
       console.log(` Enhanced error fixing completed successfully! Applied ${this.fixesApplied} fixes.``)"
   console.error(" Enhanced error fixing "failed": ")""
   const logsDir = path.join(process.cwd(), "automation", "logs"""
@@ -132,13 +113,12 @@ console.log("" Starting Enhanced Error Fixing Automation System...")""
         error.message.includes("Parameter")""
         error.message.includes("implicitly has an")""
       if (content !== fs.readFileSync(error.file, "utf8")""
-  "file"""
           "error"""
           "fix": "TypeScript error fix"""
   console.warn(⚠  Could not fix TypeScript error in ${error.file}:")""
     const moduleName = error.message.match(/Cannot find module "([^"]+)"""
         new RegExp(import.*from\\s+[""]${moduleName}[""], "g"),import {   } from "${moduleName}"""
-const { execSync, spawn } = require("child_process")"
+const { execSync, spawn } = require("child_process")"`;
 const glob = require(`glob``)"
     this.logFile = path.join(this.projectRoot, "error-reports", "error-fixer-report-${Date.now()}.json"""
     if (!fs.existsSync(path.join(this.projectRoot, "error-reports")""
@@ -147,7 +127,6 @@ const glob = require(`glob``)"
     const logMessage = "[${timestamp}] [${type.toUpperCase()}] ${message}"""
     fs.appendFileSync(this.logFile.replace(".json", ".log"), logMessage + "\n"""
   "cwd"""
-        "encoding": "utf8"""
         "stdio": options.silent ? "pipe" : "inherit"""
       return { "success": true, "output"}""
   return { "success": false, "error": error.message, "output"}""
@@ -155,7 +134,6 @@ const glob = require(`glob``)"
     const oldConfigs = [".eslintrc.js", ".eslintrc.cjs", ".eslintrc.json"]""
         this.log("Removed old ESLint "config": ${config}")""
   "type": "eslint_config"""
-          "file"""
           "description": "Removed old ESLint configuration file"""
     const flatConfigPath = path.join(this.projectRoot, "eslint.config.js")""
   this.log("Creating ESLint flat config...")""
@@ -173,25 +151,21 @@ export default function"""
   let content = fs.readFileSync(file, "utf8")""
           """
   console.warn(⚠  Could not fix unused variables in ${file}:")""
-    const lines = content.split("\n")""
   if (line.trim().startsWith("import ")""
             .split(",")""
   const itemName = item.replace(/\s+as\s+.*/, ")""
     return newLines.join("\n")""
   console.log(" Fixing console statements...")""
-  let content = fs.readFileSync(file, "utf8")""
         if (process.env.NODE_ENV === "production")""
-            /console\.(log|warn|error|info|debug)\(/g,// console.$1(")""
+            /console\.(log|warn|error|info|debug)\(/g,// console.$1(")""`;
   console.log(`" Fixing React hooks errors..."`)""
-  let content = fs.readFileSync(file, "utf8")""
           /useEffect\(\s*\(\)\s*=>\s*\{/g,useEffect(() => {"}""
         content = content.replace(/useState\s*<\s*any\s*>/g, "useState<any>")"
 </any>"
           /<([A-Z][a-zA-Z]*)\s+([^>]*)\/>/g,<$1 $2 />"""
         content = content.replace(/className=/g, "className=")""
-        content = content.replace(/onClick=/g, "onClick=")""
+        content = content.replace(/onClick=/g, "onClick=")""`;
   console.log(`" Fixing type annotations..."`)""
-  let content = fs.readFileSync(file, "utf8")""
         content = content.replace(/:\s*any"/g, ": any")""
         content = content.replace(/:\s*string"/g, ": string")""
         content = content.replace(/:\s*number"/g, ": number")""
@@ -201,10 +175,9 @@ export default function"""
           "($"1": any): Promise"""
   console.warn(⚠  Could not fix type annotations in ${file}:")""
   console.log(" Fixing interface errors...")""
-  let content = fs.readFileSync(file, "utf8")""
           /interface\s+([^{]+)\s*{\s*;/g,interface $1 {"}""
         content = content.replace(/:\s*{\s*;/g, ": {"})""
-        content = content.replace(/;\s*}/g, "}")""
+        content = content.replace(/;\s*}/g, "}")""`;
   console.log(`" Fixing build errors..."`)""
       execSync("npm run build", { "stdio": "pipe"})""
       console.log(" Build successful"")""
@@ -219,7 +192,6 @@ export default function"""
     const srcDir = path.join(process.cwd(), "src"""
   walkDir(fullPath)} else if (item.endsWith(".ts") || item.endsWith(".tsx")""
       const content = fs.readFileSync(filePath, "utf8")""
-      const lines = content.split("\n")""
       if (message.includes("no-unused-vars")""
         const varMatch = message.match(/"(.+)"""
           lines[line - 1] = lines[line - 1].replace(new RegExp("\\b${varName}\\b"), "_${varName}"""
@@ -228,7 +200,6 @@ export default function"""
         lines[line - 1] = lines[line - 1].replace(/\blet\b/g, "const")""
       fs.writeFileSync(filePath, lines.join("\n")""
   "type": "eslint_error"""
-        "file"""
         "description": "Fixed ESLint error: ${message}"""
   this.log("Failed to fix ESLint error in ${filePath  }: ${error.message}", "error")""
   this.log("Fixing dependency issues...")""
@@ -245,24 +216,16 @@ export default function"""
       "status": "completed"""
       "config"""
       process.cwd(),enhanced-error-fixing-report.json"""
-  "timestamp"""
-      "duration"""
-      "fixesApplied"""
-      "errorsFixed"""
-      "error"""
       "stack"""
       "summary": "Enhanced error fixing automation failed"""
       "status": "failed"""
-      "config"""
-      process.cwd(),enhanced-error-fixing-error-report.json""
+      process.cwd(),enhanced-error-fixing-error-report.json""`;
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));console.log( Error report saved to ${reportPath}```)"
   this.log("Installing missing "dependencies": ${missingDeps.join(", ")}"""
       await this.runCommand("npm install --save-dev ${missingDeps.join(" ")}"""
   "type": "dependency_install"""
         "description": "Installed missing dependencies: ${missingDeps.join(", ")}"""
-  "timestamp"""
       "duration": "${duration}ms"""
-      "fixesApplied"""
       "summary"""
         "typescriptFixes": this.fixesApplied.filter(f => f.type === "typescript_error")""
-        "eslintFixes": this.fixesApplied.filter(f => f.type === "eslint_error" || f.type === "eslint_auto_fix")""
+        "eslintFixes": this.fixesApplied.filter(f => f.type === "eslint_error" || f.type === "eslint_auto_fix")""`;

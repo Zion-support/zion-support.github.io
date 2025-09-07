@@ -14,13 +14,11 @@ export const useTheme = () => {
   const context = useContext(ThemeContext);
   if (context === undefined) {
     throw new Error('useTheme must be used within a ThemeProvider');
-  }
   return context;
 };
 
 interface ThemeProviderProps {
   children: React.ReactNode;
-}
 
 export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
   const [theme, setTheme] = useState<Theme>('system');
@@ -30,10 +28,8 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
     const savedTheme = localStorage.getItem('theme') as Theme;
     if (savedTheme) {
       setTheme(savedTheme);
-    }
   }, []);
 
-  useEffect(() => {
     const root = window.document.documentElement;
     
     if (theme === 'system') {
@@ -43,19 +39,15 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
       root.classList.add(systemTheme);
     } else {
       setActualTheme(theme);
-      root.classList.remove('light', 'dark');
       root.classList.add(theme);
-    }
   }, [theme]);
 
   const handleSetTheme = (newTheme: Theme) => {
     setTheme(newTheme);
     localStorage.setItem('theme', newTheme);
-  };
 
   return (
     <ThemeContext.Provider value={{ theme, setTheme: handleSetTheme, actualTheme }}>
       {children}
     </ThemeContext.Provider>
   );
-};

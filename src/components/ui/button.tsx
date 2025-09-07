@@ -9,7 +9,6 @@ interface ButtonProps {
   onClick?: () => void;"
   type?: "button" | "submit" | "reset";"
   disabled?: boolean;
-}
 
 export function Button({ "
   className = "",""
@@ -23,13 +22,11 @@ export function Button({ "
     sm: "h-9 px-3 text-sm",""
     md: "h-10 px-4 py-2",""
     lg: "h-11 px-8 text-lg""
-  }
   
   const variantClasses = {"
     default: "bg-blue-600 text-white hover:bg-blue-700",""
     outline: "border border-gray-300 bg-white hover:bg-gray-50",""
     ghost: "hover:bg-gray-100""
-  }
   
   return (
     <button;
@@ -37,32 +34,24 @@ export function Button({ "
       {...props}
     >
 </button>
-    </button>
       return <div>Something went wrong.</div>;
 const Button: React.FC<ButtonProps> = ({
-</ButtonProps>
+
   const content = <>{children}</>;
 )
   if (href) {;
 
-    return (
       <Link href={href} className={classes} style={style}>;
-</Link>
-      </Link>;
-  const content = <>{children}</>;
+
+      ;
   // Check condition;)
 if ( {) {
   $2;
-}
-    return (
-      <Link href={href} className={classes} style={style}>;
-</Link>)
-      </Link>);
-    <button;
+      );
       type={type}
       className={classes}
       onClick={onClick}
       disabled={disabled}
 
     </button>;
-    </button>"
+    </button>"`;

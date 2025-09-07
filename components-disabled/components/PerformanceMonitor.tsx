@@ -1,11 +1,11 @@
-import React, { useEffect } from 'react';'
+import React, { useEffect } from 'react';
 interface PerformanceMonitorProps {
   // TODO: Implement
 }
   onPerformanceData?: (data: any) => void;
 
 const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceData }) => {
-</PerformanceMonitorProps>'
+
     <div className="fixed bottom-4 right-4 bg-black bg-opacity-75 text-white p-2 rounded text-xs">"
 </div>
       <div>Load: {metrics.loadTime.toFixed(2)}ms</div>

@@ -17,20 +17,16 @@ export function TalentOnboardingSteps() {;
       link: "/profile",""
       action: "Update","
     },
-    {"
       id: "skills",""
       label: "Add your top skills","
       completed: onboardingStatus.skillsAdded,"
       link: "/profile/skills",""
       action: "Add Skills","
-    },
-    {"
       id: "availability",""
       label: "Set your availability","
       completed: onboardingStatus.availabilitySet,"
       link: "/profile/availability",""
       action: "Set","
-    },
     {
 
 "
@@ -47,21 +43,15 @@ id: "match"","
       completed: onboardingStatus.matchReceived,"
       link: "/talent-dashboard",""
       action: "View Matches","
-    },
   ];
 
   return <OnboardingTracker steps={steps} />;
-</OnboardingTracker>
-  return <OnboardingTracker steps={steps} />;
-</OnboardingTracker>
+
+
   return <OnboardingTracker steps={steps} />,;}
-</OnboardingTracker>
+
 return <OnboardingTracker steps= {
   steps;
 }/> 
-</OnboardingTracker>
-  return <OnboardingTracker steps={steps} />;
-</OnboardingTracker>
 
-  return <OnboardingTracker steps={steps} />;
-</OnboardingTracker>"
+

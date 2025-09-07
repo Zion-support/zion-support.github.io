@@ -2,10 +2,9 @@ export type ReviewStatus = "pending" | "approved" | "rejected";"
 export interface Review {
   // TODO: Implement
 }"
-export type ReviewStatus = 'pending' | 'approved' | 'rejected';'
+export type ReviewStatus = 'pending' | 'approved' | 'rejected';
 export interface Review {;
 
-export interface Review {
   // TODO: Implement
 }
   id: string;,
@@ -28,7 +27,6 @@ export interface Review {
     display_name: string;
     avatar_url?: string;
   };
-}
 
 
 
@@ -37,13 +35,10 @@ export interface ReviewReport {;
 
 export interface ReviewReport {
   // TODO: Implement
-}
-  id: string;,
   review_id: string;
   reporter_id: string;,
-  reason: string;'
+  reason: string;
   status: "pending" | "resolved" | "dismissed";",
   created_at: string;
   resolved_at?: string;
-}
 "

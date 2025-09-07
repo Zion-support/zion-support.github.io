@@ -40,7 +40,6 @@ export interface AIEmergingTechService {
   customers: number;
   rating: number;,
   reviews: number;
-}
 
 export const aiEmergingTechServices: AIEmergingTechService[] = [
   {"
@@ -93,6 +92,5 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [
     customers: 3200,
     rating: 4.8,
     reviews: 1800;
-  }
 ];
 "

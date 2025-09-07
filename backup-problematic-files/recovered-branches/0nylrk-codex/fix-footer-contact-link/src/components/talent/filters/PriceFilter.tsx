@@ -7,7 +7,6 @@ export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection
   const handleChange = (values:number[]) => {;
     setPriceRange([values[0], values[1]]),;
   },;
-;
   return (;"
     <div className="mb-6 border-b border-zion-blue-light pb-6">;"
 </div>
@@ -18,14 +17,13 @@ export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection
 </button>
         <span>Hourly Rate</span>;"
           <ChevronUp className="h-4 w-4 text-zion-slate-light" />;"
-</ChevronUp>"
+"
           <ChevronDown className="h-4 w-4 text-zion-slate-light" />;"
-</ChevronDown>
+
       </button>;"
         <div className="mt-6">;"
 </div>"
           <div className="flex justify-between text-sm text-zion-slate-light mb-2">;"
-</div>
             <span>${priceRange[0]}/hr</span>;
             <span>${priceRange[1]}/hr</span>;
           </div>;
@@ -36,6 +34,5 @@ export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection
             onValueChange={handleChange}"
             className="mt-6";"
           />;
-</Slider>
-        </div>;
+
     </div>;)"

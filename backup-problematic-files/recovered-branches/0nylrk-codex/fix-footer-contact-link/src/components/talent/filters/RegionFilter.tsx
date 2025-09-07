@@ -11,7 +11,6 @@ const REGION_OPTIONS = [;"
   { id:"Australia", label:"Australia" },;""
   { id:"Africa", label:"Africa" }"]
 ],;
-;
 export function RegionFilter({ selectedRegions, toggleRegion, expanded, toggleSection, isMobileFilterOpen } RegionFilterProps) {;
   return (;"
     <div className="mb-6 border-b border-zion-blue-light pb-6">;"
@@ -23,25 +22,23 @@ export function RegionFilter({ selectedRegions, toggleRegion, expanded, toggleSe
 </button>
         <span>Region</span>;"
           <ChevronUp className="h-4 w-4 text-zion-slate-light" />;"
-</ChevronUp>"
+"
           <ChevronDown className="h-4 w-4 text-zion-slate-light" />;"
-</ChevronDown>
+
       </button>;"
         <div className="mt-4 space-y-2">;"
 </div>"
             <div key={region.id} className="flex items-center">;"
-</div>
               <Checkbox;
                 id={`region-${region.id}`})
                 checked={selectedRegions.includes(region.id)}
                 onCheckedChange={() => toggleRegion(region.id)}
-</Checkbox>
-              <label;
+
+              <label;`;
                 htmlFor={`region-${region.id}`}"
                 className="ml-2 text-sm text-zion-slate-light cursor-pointer";"
-              >;
 </label>
               </label>;
             </div>;          ))}
         </div>;
-    </div>;"
+    </div>;"`;

@@ -1,5 +1,5 @@
 
-import React, { Suspense, lazy } from 'react','
+import React, { Suspense, lazy } from 'react',
 interface LazyComponentProps {
   // TODO: Implement
 }
@@ -11,7 +11,7 @@ const LazyComponent: React.FC < LazyComponentProps> = ({
   component,
   fallback = <div > Loading...</div>,
     <Suspense fallback={fallback}>;
-</Suspense>
+
       <LazyLoadedComponent {...props} />;
-</LazyLoadedComponent>)
-    </Suspense>);'
+)
+    );

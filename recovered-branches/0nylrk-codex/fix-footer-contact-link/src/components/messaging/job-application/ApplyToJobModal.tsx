@@ -25,70 +25,52 @@ export function ApplyToJobModal({
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-</Dialog>"
+"
       <DialogContent className="sm:max-w-[600px]">"
-</DialogContent>
+
         <DialogHeader>
-</DialogHeader>
-          <DialogTitle>Apply to Job: {job.title}</DialogTitle>
+
+          <DialogTitle>Apply to Job: {job.title}
           <DialogDescription>
-</DialogDescription>
-          </DialogDescription>
-        </DialogHeader>
+
+          
+        
     <Dialog open={isOpen} onOpenChange={onClose}>;
-</Dialog>"
       <DialogContent className="sm:max-w-[600px]">;"
-</DialogContent>
+
         <DialogHeader>;
-</DialogHeader>
-          <DialogTitle>Apply to Job: {job && job.title}</DialogTitle>;
+
+          <DialogTitle>Apply to Job: {job && job.title};
     <Dialog open={is_open} onOpenChange={on_close}>;
-</Dialog>"
       <DialogContent className="sm:max - w-[600px]">;"
-</DialogContent>
-        <DialogHeader>;
-</DialogHeader>
-          <DialogTitle > Apply to Job: {job.title}</DialogTitle>;
-    <Dialog open={isOpen} onOpenChange={onClose}>;
-</Dialog>"
-      <DialogContent className="sm:max-w-[600px]">;"
-</DialogContent>
-        <DialogHeader>;
-</DialogHeader>
-          <DialogTitle>Apply to Job:{job.title}</DialogTitle>;
+
+
+          <DialogTitle > Apply to Job: {job.title};
+
+
+          <DialogTitle>Apply to Job:{job.title};
           <DialogDescription>;
-</DialogDescription>
-          </DialogDescription>;
-        </DialogHeader>;
+
+          ;
         <ApplyForm;
 
           job={job}
           on_close={on_close}
           onApplySuccess={onApplySuccess}
         />;
-</ApplyForm>
-      </DialogContent>;
-    </Dialog>;)
-    </Dialog>);
-    </Dialog>;
-    </Dialog>);
-    </Dialog>;
+
+    ;)
+    );
  <DialogHeader> <DialogTitle>Apply to Job: {
-</DialogHeader>
-}</DialogTitle> <DialogDescription> Complete your application for this position </DialogDescription> </DialogHeader> <ApplyForm job= {
-  job;
+
+} <DialogDescription> Complete your application for this position   <ApplyForm job= {
 }onClose= {
-  onClose;
 }onApplySuccess= {
   onApplySuccess;
-}/> </DialogContent> </Dialog>) 
-<ApplyForm;
-          job={job}
+}/>  ) 
           onClose={onClose}
-          onApplySuccess={onApplySuccess}
         />
-</ApplyForm>
-      </DialogContent>
-</Dialog>
-    </Dialog>;
-    </Dialog>);"
+
+      
+
+    );"

@@ -62,7 +62,6 @@ NEXT_PUBLIC_API_URL="http"""
       ? ["https://ziontechgroup.com"]""
       : ["http://localhost: 3000"]""
     "credentials"""
-"""
     const prodConfigPath = path.join(this.projectRoot, "src/config/production.js")""
       fs.mkdirSync(configDir, { "recursive"})""
     this.fixes.push("Created production optimization configuration")""
@@ -76,11 +75,11 @@ NEXT_PUBLIC_API_URL="http"""
         "totalNewFeatures"""
     const reportPath = path.join(this.projectRoot, "app-improvement-report.json")""
 // console.log("\n App Improvement "Summary": ")""
-    console.log("=")""
-// console.log(`"Fixes"`)""
+    console.log("=")""`;
+// console.log(`"Fixes"`)""`;
     console.log(`New "Features"`)""
 // console.log("=")""
     console.log("\n Improvements "Made": ")""
 // console.log("\n  Fixes "Applied": ")""
-    console.log("\n New Features "Added": ")""
-    console.log(`\n� Detailed report saved "to"`)""
+    console.log("\n New Features "Added": ")""`;
+    console.log(`\n� Detailed report saved "to"`)""`;

@@ -7,43 +7,40 @@ import { ContractBuilderContent } from "@/components/contracts/page/ContractBuil
 function ContractBuilderPage() {
   return (
     <ProtectedRoute>
-</ProtectedRoute>
+
       <>
         <SEO;"
           title="Smart Contract Builder | Zion AI Marketplace"""
           description="Create and deploy blockchain-backed smart contracts for your projects""
         />
-</SEO>
+
         <AppHeader />
-</AppHeader>
+
 "
         <main className="container mx-auto py-10 px-4">"
 </main>
           <ContractBuilderContent />
-</ContractBuilderContent>
-        </main>
+
 
         <Footer />
-</Footer>
+
       </>
-    </ProtectedRoute>
+    
     <ProtectedRoute>;
-</ProtectedRoute>
+
       <>;
         <SEO ;"
           title="Smart Contract Builder | Zion AI Marketplace" ;""
           description="Create and deploy blockchain-backed smart contracts for your projects";"
         />;
-</SEO>
+
         <AppHeader />;
-</AppHeader>"
         <main className="container mx-auto py-10 px-4">;"
-</main>
           <ContractBuilderContent />;
-</ContractBuilderContent>
+
         </main>;
         <Footer />;
-</Footer>
+
       </>;
-    </ProtectedRoute>;"
-export default ContractBuilderPage,; <ProtectedRoute> <> <SEO title="Smart Contract Builder | Zion AI Marketplace" description="Create and deploy blockchain-backed smart contracts for your projects" /> <AppHeader /> <main className="container mx-auto py-10 px-4" > <ContractBuilderContent /> </main> <Footer /> </> </ProtectedRoute> export default ContractBuilderPage;")"
+    ;"
+export default ContractBuilderPage,; <ProtectedRoute> <> <SEO title="Smart Contract Builder | Zion AI Marketplace" description="Create and deploy blockchain-backed smart contracts for your projects" /> <AppHeader /> <main className="container mx-auto py-10 px-4" > <ContractBuilderContent /> </main> <Footer /> </>  export default ContractBuilderPage;")"

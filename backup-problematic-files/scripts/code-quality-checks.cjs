@@ -30,9 +30,8 @@ const fs = require("fs")""
     const reportPath = "code-quality-report.json"""
 // console.log("\n Code Quality "Results": ")""
     console.log("=")""
-// console.log(`"Passed"`)""
-    console.log(`"Failed"`)""
+// console.log(`"Passed"`)""`;
+    console.log(`"Failed"`)""`;
 // console.log(`"Warnings"`)""
-    console.log("=")""
-    console.log(`� Report saved "to"`)""
-    console.log(`� Report saved "to"`)""
+    console.log("=")""`;
+    console.log(`� Report saved "to"`)""`;

@@ -5,6 +5,4 @@ export default function GovernancePrivacy() {
       <h1 className=&quot;text-2xl font-semibold&quot;>Zion OS  Privacy-preserving Governance</h1>)
       <p className=&quot;opacity-80&quot;>        Vote anonymously using zero-knowledge proofs (Semaphore). Your vote is verified on-chain;
 </p>
-      </p>
       <a href=&quot;/dao/zkvote&quot; className=&quot;inline-block px-4 py-2 rounded bg-black text-white&quot;>Open ZK Vote</a>
-    </div>

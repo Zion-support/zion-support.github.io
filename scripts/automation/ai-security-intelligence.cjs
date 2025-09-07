@@ -15,12 +15,9 @@ class AISecurityIntelligence {
     const logDir = path.dirname(this.reportFile);
     if (!fs.existsSync(logDir)) {
       fs.mkdirSync(logDir, { recursive: true });
-    }
-  }
 
   log(message) {
     console.log(`[AI Security Intelligence] ${message}`);
-  }
 
   async runSecurityAnalysis() {
     this.log('Starting AI-powered security analysis...');
@@ -31,7 +28,7 @@ class AISecurityIntelligence {
       securityIssues: [],
       recommendations: [],
       riskScore: 0,
-      status: 'safe'
+      status: 'safe
     };
 
     try {
@@ -59,27 +56,23 @@ class AISecurityIntelligence {
       
       // Save report
       fs.writeFileSync(this.reportFile, JSON.stringify(analysis, null, 2));
-      
-      this.log(`Security analysis complete. Risk score: ${analysis.riskScore}/100`);
-      this.log(`Security status: ${analysis.status}`);
+      `;
+      this.log(`Security analysis complete. Risk score: ${analysis.riskScore}/100`);`;
+      this.log(`Security status: ${analysis.status}`);`;
       this.log(`Report saved to: ${this.reportFile}`);
       
       return analysis;
-    } catch (error) {
+    } catch (error) {`;
       this.log(`Error during security analysis: ${error.message}`);
       analysis.error = error.message;
-      return analysis;
-    }
-  }
 
   async runNpmAudit(analysis) {
     this.log('Running npm audit...');
     
-    try {
       const auditResult = execSync('npm audit --json', { 
         encoding: 'utf8', 
         cwd: this.workspaceRoot,
-        stdio: 'pipe'
+        stdio: 'pipe
       });
       
       const auditData = JSON.parse(auditResult);
@@ -92,9 +85,6 @@ class AISecurityIntelligence {
             title: vuln.title,
             description: vuln.description,
             recommendation: vuln.recommendation
-          });
-        });
-      }
       
       analysis.metrics = {
         totalVulnerabilities: auditData.metadata?.vulnerabilities?.total || 0,
@@ -102,13 +92,10 @@ class AISecurityIntelligence {
         moderate: auditData.metadata?.vulnerabilities?.moderate || 0,
         low: auditData.metadata?.vulnerabilities?.low || 0,
         info: auditData.metadata?.vulnerabilities?.info || 0
-      };
       
     } catch (error) {
       this.log('npm audit failed or no vulnerabilities found');
       analysis.metrics = { totalVulnerabilities: 0, high: 0, moderate: 0, low: 0, info: 0 };
-    }
-  }
 
   async analyzeEnvironmentVariables(analysis) {
     this.log('Analyzing environment variables...');
@@ -129,25 +116,13 @@ class AISecurityIntelligence {
                 file: envFile,
                 line: index + 1,
                 issue: 'Potential hardcoded secret',
-                severity: 'high'
-              });
-            }
-          }
+                severity: 'high
           
           if (line.includes('NODE_ENV=development') && envFile.includes('production')) {
-            envIssues.push({
-              file: envFile,
-              line: index + 1,
               issue: 'Development environment in production file',
-              severity: 'medium'
-            });
-          }
-        });
-      }
-    });
+              severity: 'medium
     
     analysis.securityIssues = analysis.securityIssues.concat(envIssues);
-  }
 
   async analyzeDependencies(analysis) {
     this.log('Analyzing dependencies...');
@@ -155,14 +130,13 @@ class AISecurityIntelligence {
     const packageJsonPath = path.join(this.workspaceRoot, 'package.json');
     if (!fs.existsSync(packageJsonPath)) {
       return;
-    }
     
     const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
     const dependencies = { ...packageJson.dependencies, ...packageJson.devDependencies };
     
     const suspiciousPackages = [];
     const knownVulnerablePackages = [
-      'lodash', 'moment', 'jquery', 'express', 'request'
+      'lodash', 'moment', 'jquery', 'express', 'request
     ];
     
     Object.keys(dependencies).forEach(dep => {
@@ -171,31 +145,19 @@ class AISecurityIntelligence {
           package: dep,
           version: dependencies[dep],
           issue: 'Known vulnerable package',
-          severity: 'medium'
-        });
-      }
       
       // Check for packages with suspicious names
       if (dep.includes('crypto') || dep.includes('hash') || dep.includes('encrypt')) {
-        suspiciousPackages.push({
-          package: dep,
-          version: dependencies[dep],
           issue: 'Crypto-related package - verify authenticity',
-          severity: 'low'
-        });
-      }
-    });
+          severity: 'low
     
     analysis.securityIssues = analysis.securityIssues.concat(suspiciousPackages);
-  }
 
   async analyzeCodeSecurity(analysis) {
     this.log('Analyzing code for security issues...');
     
     const srcDir = path.join(this.workspaceRoot, 'src');
     if (!fs.existsSync(srcDir)) {
-      return;
-    }
     
     const codeFiles = this.findFiles(srcDir, ['.ts', '.tsx', '.js', '.jsx']);
     const codeIssues = [];
@@ -209,40 +171,22 @@ class AISecurityIntelligence {
           file: path.relative(this.workspaceRoot, file),
           issue: 'Use of eval() or Function() constructor',
           severity: 'high',
-          recommendation: 'Avoid dynamic code execution'
-        });
-      }
+          recommendation: 'Avoid dynamic code execution
       
       if (content.includes('innerHTML') && !content.includes('textContent')) {
-        codeIssues.push({
-          file: path.relative(this.workspaceRoot, file),
           issue: 'Potential XSS vulnerability with innerHTML',
           severity: 'medium',
-          recommendation: 'Use textContent or sanitize HTML'
-        });
-      }
+          recommendation: 'Use textContent or sanitize HTML
       
       if (content.includes('localStorage') && content.includes('password')) {
-        codeIssues.push({
-          file: path.relative(this.workspaceRoot, file),
           issue: 'Potential password storage in localStorage',
-          severity: 'high',
-          recommendation: 'Use secure storage methods'
-        });
-      }
+          recommendation: 'Use secure storage methods
       
       if (content.includes('http://') && !content.includes('localhost')) {
-        codeIssues.push({
-          file: path.relative(this.workspaceRoot, file),
           issue: 'Insecure HTTP protocol usage',
-          severity: 'medium',
-          recommendation: 'Use HTTPS for production'
-        });
-      }
-    });
+          recommendation: 'Use HTTPS for production
     
     analysis.securityIssues = analysis.securityIssues.concat(codeIssues);
-  }
 
   async analyzeConfigurationFiles(analysis) {
     this.log('Analyzing configuration files...');
@@ -252,8 +196,7 @@ class AISecurityIntelligence {
       'vite.config.ts',
       'tsconfig.json',
       'eslint.config.js',
-      'netlify.toml'
-    ];
+      'netlify.toml
     
     const configIssues = [];
     
@@ -267,24 +210,13 @@ class AISecurityIntelligence {
           configIssues.push({
             file: configFile,
             issue: 'CORS configuration may be too permissive',
-            severity: 'medium',
-            recommendation: 'Specify allowed origins'
-          });
-        }
+            recommendation: 'Specify allowed origins
         
         if (content.includes('helmet') && !content.includes('contentSecurityPolicy')) {
-          configIssues.push({
-            file: configFile,
             issue: 'Missing Content Security Policy',
-            severity: 'medium',
-            recommendation: 'Implement CSP headers'
-          });
-        }
-      }
-    });
+            recommendation: 'Implement CSP headers
     
     analysis.securityIssues = analysis.securityIssues.concat(configIssues);
-  }
 
   findFiles(dir, extensions) {
     let files = [];
@@ -298,11 +230,8 @@ class AISecurityIntelligence {
         files = files.concat(this.findFiles(fullPath, extensions));
       } else if (extensions.some(ext => item.endsWith(ext))) {
         files.push(fullPath);
-      }
-    });
     
     return files;
-  }
 
   calculateRiskScore(analysis) {
     let score = 0;
@@ -315,33 +244,20 @@ class AISecurityIntelligence {
           break;
         case 'moderate':
           score += 10;
-          break;
         case 'low':
           score += 5;
-          break;
         case 'info':
           score += 1;
-          break;
-      }
-    });
     
     // Add points for security issues
     analysis.securityIssues.forEach(issue => {
       switch (issue.severity) {
-        case 'high':
           score += 15;
-          break;
         case 'medium':
           score += 8;
-          break;
-        case 'low':
           score += 3;
-          break;
-      }
-    });
     
     return Math.min(100, score);
-  }
 
   determineSecurityStatus(riskScore) {
     if (riskScore >= 70) return 'critical';
@@ -349,52 +265,34 @@ class AISecurityIntelligence {
     if (riskScore >= 20) return 'medium';
     if (riskScore >= 5) return 'low';
     return 'safe';
-  }
 
   generateSecurityRecommendations(analysis) {
     if (analysis.metrics?.high > 0) {
       analysis.recommendations.push({
         priority: 'critical',
         category: 'vulnerabilities',
-        message: 'Address high-severity vulnerabilities immediately'
-      });
-    }
+        message: 'Address high-severity vulnerabilities immediately
     
     if (analysis.metrics?.moderate > 0) {
-      analysis.recommendations.push({
         priority: 'high',
-        category: 'vulnerabilities',
-        message: 'Update packages with moderate vulnerabilities'
-      });
-    }
+        message: 'Update packages with moderate vulnerabilities
     
     const highSeverityIssues = analysis.securityIssues.filter(issue => issue.severity === 'high');
     if (highSeverityIssues.length > 0) {
-      analysis.recommendations.push({
-        priority: 'high',
         category: 'code',
-        message: 'Fix high-severity security issues in code'
-      });
-    }
+        message: 'Fix high-severity security issues in code
     
-    analysis.recommendations.push({
       priority: 'medium',
       category: 'general',
-      message: 'Implement security headers and CSP'
-    });
+      message: 'Implement security headers and CSP
     
-    analysis.recommendations.push({
       priority: 'low',
       category: 'monitoring',
-      message: 'Set up automated security monitoring'
-    });
-  }
-}
+      message: 'Set up automated security monitoring
 
 // CLI interface
 if (require.main === module) {
   const security = new AISecurityIntelligence();
   security.runSecurityAnalysis().catch(console.error);
-}
 
-module.exports = AISecurityIntelligence;
+module.exports = AISecurityIntelligence;`;

@@ -8,7 +8,7 @@ const AiModelDevelopmentChat: NextPage = () => {;
     <div>;
 </div>
       <Head>;
-</Head>
+
         <title>AiModelDevelopmentChat - Zion Tech Solutions</title>;
         <meta;"
           name="description"""
@@ -20,78 +20,33 @@ const AiModelDevelopmentChat: NextPage = () => {;
         <h1>AiModelDevelopmentChat</h1>
         <p>Service details coming soon...</p>"
         <a href="/services">Back to Services</a>"
-      </main>
-    </div>
-      </Head>;
+      ;
       <main>;
-</main>
         <h1>AiModelDevelopmentChat</h1>;
         <p>Service details coming soon...</p>;"
         <a href="/services">Back to Services</a>;"
       </main>;
     </div>;
     <div>
-</div>
       <Head>
-</Head>
+
 
         <title>AiModelDevelopmentChat - Zion Tech Solutions</title>
-        <title>AiModelDevelopmentChat - Zion Tech Solutions</title>
-        <title>AiModelDevelopmentChat - Zion Tech Solutions</title>
 
-        <title>AiModelDevelopmentChat - Zion Tech Solutions</title>
-    <div>;
-</div>
-      <Head>;
-</Head>
+
         <title > AiModelDevelopmentChat - Zion Tech Solutions</title>;
-        <meta;"
           name="description";""
           content="AiModelDevelopmentChat service";""
-        />{" "}"
-</meta>
-      </Head>;
-      <main>;
-</main>
         <h1 > AiModelDevelopmentChat</h1>;
         <p > Service details coming soon...</p>;"
-        <a href="/services">Back to Services</a>;"
       </main>;)
     </div>);
-    <div>
-</div>
-      <Head>
-</Head>
-        <title>AiModelDevelopmentChat - Zion Tech Solutions</title>
+
         <meta name=&quot;description&quot; content=&quot;AiModelDevelopmentChat service&quot; />
-</meta>
-      </Head>
       
-      <main>
-</main>
-        <h1>AiModelDevelopmentChat</h1>
+      
         <p>Service details coming soon...</p>
         <a href=&quot;/services&quot;>Back to Services</a>
-      </main>
-    </div>
-    <div>
-</div>
-      <Head>
-</Head>
-        <title>AiModelDevelopmentChat - Zion Tech Solutions</title>
-        <meta;"
-          name="description"""
-          content="AiModelDevelopmentChat service"""
-        />{" "}"
-</meta>
-      </Head>
-      <main>
-</main>
-        <h1>AiModelDevelopmentChat</h1>
-        <p>Service details coming soon...</p>"
-        <a href="/services">Back to Services</a>"
-      </main>
-    </div>
-        <title>AiModelDevelopmentChat - Zion Tech Solutions</title>
-        <title>AiModelDevelopmentChat - Zion Tech Solutions</title>
+
+      
 "

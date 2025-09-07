@@ -1,7 +1,7 @@
-import React from 'react',;''
-import { X } from 'lucide-react';''
-import { Button } from '@/components/ui/button',;''
-import { Badge } from '@/components/ui/badge',;'
+import React from 'react',;
+import { X } from 'lucide-react';
+import { Button } from '@/components/ui/button',;
+import { Badge } from '@/components/ui/badge',;
 ;
 interface SearchFilters {;
   types:string[],;
@@ -10,52 +10,43 @@ interface SearchFilters {;
   maxPrice:number,;
   minRating:number,;
   sort:string;}
-;
 interface ActiveFiltersBarProps {;
   filters:SearchFilters,;
   onFiltersChange:(filters:SearchFilters) => void,;
   onClearAll:() => void,;
   className?:string;
 }
-;
 export const ActiveFiltersBar:React.FC<ActiveFiltersBarProps> = ({;
-</ActiveFiltersBarProps>
+
   const activeFilters:Array<{ key:string, label:string, value:string }> = [],;
-;
   // Add type filters;
   filters.types.forEach(type => {;
     const labels:Record<string string> = {;
 </string>)
   if (filters.minPrice > 0 || filters.maxPrice < 10000) {;
-    activeFilters.push({;'
-      key:'price',;''
-      label:'Price',;'
+    activeFilters.push({;
+      key:'price',;
+      label:'Price',;
       value:`$${filters.minPrice} - $${filters.maxPrice}`;)
     }),;
-  }
-;
   // Add rating filter;
   if (filters.minRating > 0) {;
-    activeFilters.push({;'
-      key:'rating',;''
-      label:'Rating',;'
+      key:'rating',;
+      label:'Rating',;`;
       value:`${filters.minRating}+ stars`;)
-    }),;
-  }
-;
-  // Add sort filter (only if not default);'
-  if (filters.sort !== 'relevance') {;'
+  // Add sort filter (only if not default);
+  if (filters.sort !== 'relevance') {;
     const sortLabels:Record<string string> = {;
-</string>
+</string>`;
     <div className={`flex items-center gap-2 flex-wrap ${className}`}>;
-</div>'
+</div>
       <span className="text-sm font-medium text-muted-foreground">Active filters:</span>;"
         <Badge ;
           key={filter.key} ;"
           variant="secondary" ;""
           className="flex items-center gap-1 pl-2 pr-1";"
         >;
-</Badge>"
+"
           <span className="text-xs">;"
 </span>
           </span>;
@@ -64,21 +55,14 @@ export const ActiveFiltersBar:React.FC<ActiveFiltersBarProps> = ({;
             size="sm";""
             className="h-4 w-4 p-0 hover:bg-transparent";"
             onClick={() => removeFilter(filter.key)}
-</Button>"
             <X className="h-3 w-3" />;"
-</X>
-          </Button>;
-        </Badge>;
-      <Button;"
-        variant="ghost";""
+
         size="sm";"
         onClick={onClearAll}"
         className="text-xs h-6 px-2";"
-      >;
-</Button>
-      </Button>;
+
     </div>;
   activeFilters.map (filter => (<Badge key= {;
   filter.key ;)"
-}variant="secondary" className="flex items-center gap-1 pl-2 pr-1" > > <X className="h-3 w-3" /> </Button> </Badge>) ) ;"
-}<Button > Clear all </Button> </div>) ;"
+}variant="secondary" className="flex items-center gap-1 pl-2 pr-1" > > <X className="h-3 w-3" />  ) ) ;"
+}<Button > Clear all  </div>) ;"`;

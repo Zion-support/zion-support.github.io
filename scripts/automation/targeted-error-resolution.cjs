@@ -4,14 +4,14 @@
  * Focuses on specific error patterns and provides targeted error fixing;
  */
 
-const fs = require('fs')''
-const path = require('path')''
-const { execSync } = require('child_process')''
-    this.logFile = path.join(this.projectRoot, 'logs', 'targeted-error-resolution.log')''
-    this.reportFile = path.join(this.projectRoot, 'enhanced-reports', 'targeted-error-resolution-report.json')''
-    this.log(' Starting targeted error resolution automation...')''
-      // Create reports directory if it doesn'''
-      const reportsDir = path.join(this.projectRoot, 'enhanced-reports')''
+const fs = require('fs')
+const path = require('path')
+const { execSync } = require('child_process')
+    this.logFile = path.join(this.projectRoot, 'logs', 'targeted-error-resolution.log')
+    this.reportFile = path.join(this.projectRoot, 'enhanced-reports', 'targeted-error-resolution-report.json')
+    this.log(' Starting targeted error resolution automation...')
+      // Create reports directory if it doesn
+      const reportsDir = path.join(this.projectRoot, 'enhanced-reports')
         "status"""
       const result = execSync('npm run type-check 2>&1', { "encoding"})""
       execSync('npm run lint -- --fix', { "encoding"})""

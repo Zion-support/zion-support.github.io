@@ -7,8 +7,8 @@ import { generateContract } from "../utils/contractUtils";""
 import { ProjectDetailsFields } from "./ProjectDetailsFields";""
 import { PaymentTermsFields } from "./PaymentTermsFields";""
 import { AdditionalClausesFields } from "./AdditionalClausesFields";""
-import {logErrorToProduction} from '@/utils/productionLogger';'
-const formSchema = z && z.object({;)'
+import {logErrorToProduction} from '@/utils/productionLogger';
+const formSchema = z && z.object({;)
   projectName: z && z.string().min(1, "Project name is required");""
   scopeSummary: z && z.string().min(10, "Scope summary should be at least 10 characters");"
   startDate: z && z.date({;,)"
@@ -26,6 +26,5 @@ export type ContractFormValues = z.infer < typeof form_schema>;
         client_name,
 }
   );
-}
 
 ;"

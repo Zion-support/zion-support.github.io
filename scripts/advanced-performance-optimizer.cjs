@@ -1,30 +1,12 @@
 
 
-const { execSync } = require('child_process')''
+const { execSync } = require('child_process')
       "status"""
-        "status"""
         "message"""
-        "status"""
       return { "status"}""
       return { "status": 'skipped', "message"}""
       return { status: 'skipped', "message"}""
-      return { "status": 'skipped', "message"}""
-      return { status: 'skipped', "message"}""
-      "status"""
         "stdio"""
-            "status"""
       return { "status": 'success', "message"}""
-      return { "status"}""
-      return { "status": 'skipped', "message"}""
-      return { status: 'skipped', "message"}""
-      "status"""
-      return { "status": 'skipped', "message"}""
-      return { "status": 'skipped', "message"}""
-      "status"""
-      "message"""
-      return { "status": 'skipped', "message"}""
-      return { status: 'skipped', "message"}""
           "missing"""
-          "missing"""
-      "status"""
-    console.log('\n Performance Optimization "Summary")""
+    console.log('\n Performance Optimization "Summary")""');

@@ -1,14 +1,6 @@
 
 
-console.log(' Starting Security Validation...')''
-    "issue"""
-    "severity"""
-    "issue"""
-    "severity"""
-    "issue"""
-    "severity"""
-    "issue"""
-    "severity"""
+console.log(' Starting Security Validation...')
     "issue"""
     "severity"""
     "high"""

@@ -1,30 +1,24 @@
 #!/usr/bin/env node;
-const fs = require('fs');''
-const path = require('path');'
+const fs = require('fs');
+const path = require('path');
 class DeploymentMonitor {
   // TODO: Implement
 }
   constructor() {
     this.projectRoot = process.cwd();
-  }
 
-  async checkHealth() {'
-    console.log('🏥 Checking application health...');'
+  async checkHealth() {
+    console.log('🏥 Checking application health...');
     // Add health check logic here;
     return true;
-  }
 
-  async checkPerformance() {'
-    console.log('⚡ Checking performance metrics...');'
+  async checkPerformance() {
+    console.log('⚡ Checking performance metrics...');
     // Add performance check logic here;
-    return true;
-  }
 
-  async checkErrors() {'
-    console.log('🐛 Checking for errors...');'
+  async checkErrors() {
+    console.log('🐛 Checking for errors...');
     // Add error check logic here;
-    return true;
-  }
 
   async generateReport() {
     const report = {
@@ -33,16 +27,12 @@ class DeploymentMonitor {
       performance: await this.checkPerformance(),
       errors: await this.checkErrors()
     };
-'
-    fs.writeFileSync('deployment-health-report.json', JSON.stringify(report, null, 2));''
-    console.log('📊 Health report generated');'
-  }
+
+    fs.writeFileSync('deployment-health-report.json', JSON.stringify(report, null, 2));
+    console.log('📊 Health report generated');
 
   async run() {
     await this.generateReport();
-  }
-}
 
 const monitor = new DeploymentMonitor();
 monitor.run().catch(console.error);
-'

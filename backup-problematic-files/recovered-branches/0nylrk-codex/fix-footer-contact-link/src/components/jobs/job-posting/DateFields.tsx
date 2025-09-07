@@ -1,6 +1,6 @@
 
-import React from 'react',;''
-import { format } from 'date-fns',;''
+import React from 'react',;
+import { format } from 'date-fns',;
 import { Label } from "@/components/ui/label",;""
 import { Button } from "@/components/ui/button",;""
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover",;""
@@ -14,20 +14,19 @@ interface DateFieldsProps {;
   endDate:Date | undefined,;
   setEndDate:(date:Date | undefined) => void;
 }
-;
 export function DateFields({ startDate, setStartDate, endDate, setEndDate } DateFieldsProps) {;
   return (;"
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;"
 </div>
       <div>;
 </div>)"
-        <Label htmlFor="publishedDate">Published Date (Optional)</Label>;"
+        <Label htmlFor="publishedDate">Published Date (Optional);"
         <Popover>;
-</Popover>
+
           <PopoverTrigger asChild>;
-</PopoverTrigger>
+
             <FormControl>;
-</FormControl>
+
               <Button;"
                 variant={"outline"}"
                 className={cn(;"
@@ -35,69 +34,34 @@ export function DateFields({ startDate, setStartDate, endDate, setEndDate } Date
                   !startDate && "text-muted-foreground";")
                 )}
               >;
-</Button>
+
                   <span>Pick a date</span>;
-              <Button;"
-                variant={"outline"}"
-                className={cn(;"
-                  "w-full md:w-[240px] pl-3 text-left font-normal",;""
-                  !startDate && "text-muted-foreground";")
-                )}
-              >;
-</Button>
-                  <span>Pick a date</span>;
-              </Button>;
-            </FormControl>;
-          </PopoverTrigger>;"
+
+          ;"
           <PopoverContent className="w-auto p-0" align="start">;"
-</PopoverContent>
+
             <Calendar;"
               mode="single";"
               selected={startDate}
               onSelect={setStartDate}
               disabled={(date) =>;
-</Calendar>
-          </PopoverContent>;
-        </Popover>;
+
       </div>;
-      <div>;
 </div>"
-        <Label htmlFor="expiryDate">Expiry Date (Optional)</Label>;"
-        <Popover>;
-</Popover>
-          <PopoverTrigger asChild>;
-</PopoverTrigger>
-            <FormControl>;
-</FormControl>
-              <Button;"
-                variant={"outline"}"
-                className={cn(;"
-                  "w-full md:w-[240px] pl-3 text-left font-normal",;""
+        <Label htmlFor="expiryDate">Expiry Date (Optional);"
+
+
+
                   !endDate && "text-muted-foreground";")
-                )}
-              >;
-</Button>
-                  <span>Pick a date</span>;
-              </Button>;
-            </FormControl>;
-          </PopoverTrigger>;"
-          <PopoverContent className="w-auto p-0" align="start">;"
-</PopoverContent>
-            <Calendar;"
-              mode="single";"
+
+
               selected={endDate}
               onSelect={setEndDate}
-              disabled={(date) =>;
-</Calendar>
+
                 date < new Date();
-              }
               initialFocus;
             />;
-          </PopoverContent>;
-        </Popover>;
-      </div>;
     </div>;"
-  return (<div className="grid grid-cols-1 md:grid-cols-2 gap-4" > publishedDate">Published Date (Optional) </Label> <Popover> <PopoverTrigger asChild> <FormControl> <Button) : (<span>Pick a date</span>)"
-</div>"
-}</Button> </FormControl> </PopoverTrigger> <PopoverContent className=" w-auto p-0"align=" start"> <Calendar initialFocus /> </PopoverContent> </Popover> </div> <div> <Label htmlFor=" expiryDate">Expiry Date (Optional) </Label> <Popover> <PopoverTrigger asChild> <FormControl> <Button) : (<span>Pick a date</span>)""
-}</Button> </FormControl> </PopoverTrigger> <PopoverContent className=" w-auto p-0"align=" start" > <Calendar initialFocus /> </PopoverContent> </Popover> </div> </div>)""
+  return (<div className="grid grid-cols-1 md:grid-cols-2 gap-4" > publishedDate">Published Date (Optional)  <Popover> <PopoverTrigger asChild> <FormControl> <Button) : (<span>Pick a date</span>)"
+}   <PopoverContent className=" w-auto p-0"align=" start"> <Calendar initialFocus />   </div> <div> <Label htmlFor=" expiryDate">Expiry Date (Optional)  <Popover> <PopoverTrigger asChild> <FormControl> <Button) : (<span>Pick a date</span>)""
+}   <PopoverContent className=" w-auto p-0"align=" start" > <Calendar initialFocus />   </div> </div>)""

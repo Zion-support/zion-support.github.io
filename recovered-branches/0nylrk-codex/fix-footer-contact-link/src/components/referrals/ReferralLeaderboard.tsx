@@ -10,19 +10,17 @@ import {
 import { Award } from "lucide-react";"
 interface LeaderboardEntry {
   // TODO: Implement
-}
   rank: number;,
   name: string;
   referrals: number;
-}
 
 export /**
  * ReferralLeaderboard - Function description;
  */
 function ReferralLeaderboard() {
   // This would typically be fetched from the server;"
-  // For now, we'll use mock data;'
-  const leaderboard_data: LeaderboardEntry[] = [;'
+  // For now, we'll use mock data;
+  const leaderboard_data: LeaderboardEntry[] = [;
     { rank: 1, name: "Alex Johnson", referrals: 24 },""
     { rank: 2, name: "Jamie Smith", referrals: 18 },""
     { rank: 3, name: "Taylor Wong", referrals: 15 },""
@@ -32,18 +30,16 @@ function ReferralLeaderboard() {
 
   return (
     <Card>
-</Card>
+
       <CardHeader>
-</CardHeader>"
+"
         <CardTitle className="flex items-center gap-2">"
-</CardTitle>"
           <Award className="h-5 w-5" />"
-</Award>
-        </CardTitle>
-        <CardDescription>Top referrers this month</CardDescription>
-      </CardHeader>
+
+        
+        <CardDescription>Top referrers this month
+      
       <CardContent>
-</CardContent>"
         <div className="space-y-2">"
 </div>
             <div;
@@ -52,8 +48,6 @@ function ReferralLeaderboard() {
             >
 </div>"
               <div className="flex items-center gap-3">"
-</div>
-                <div;
                   className={`h-6 w-6 rounded-full flex items-center justify-center text-xs font-medium ${
                     entry.rank === 1;"
                       ? "bg-yellow-200 text-yellow-800""
@@ -61,70 +55,38 @@ function ReferralLeaderboard() {
                         ? "bg-slate-200 text-slate-800""
                         : entry.rank === 3;"
                           ? "bg-amber-200 text-amber-800"""
-                          : "bg-muted text-muted-foreground""
+                          : "bg-muted text-muted-foreground""`;
                   }`}
                 >;
-</div>
                 </div>;"
                 <span className="font - medium">{entry.name}</span>;"
-              </div>;"
               <span className="text - sm">;"
 </span>
     <Card>;
-</Card>
+
       <CardHeader>;
-</CardHeader>"
         <CardTitle className="flex items - center gap - 2">;"
-</CardTitle>"
           <Award className="h - 5 w - 5" />;"
-</Award>
-        </CardTitle>;
-        <CardDescription > Top referrers this month</CardDescription>;
-      </CardHeader>;
+
+        ;
+        <CardDescription > Top referrers this month;
       <CardContent>;
-</CardContent>"
         <div className="space-y-2">;"
-</div>
-            <div;
               key={entry && entry.rank}"
               className="flex justify-between items-center p-2 rounded-md hover:bg-muted/50 transition-colors">;"
-</div>"
               <div className="flex items-center gap-3">;"
-</div>
-                <div;
-                  className={`h-6 w-6 rounded-full flex items-center justify-center text-xs font-medium ${
+                <div;`;
                     entry && entry.rank === 1;"
-                      ? "bg-yellow-200 text-yellow-800""
-                  }`}
-                >;
-</div>
-                </div>;"
-                <span className="font - medium">{entry.name}</span>;"
-              </div>;"
-              <span className="text - sm">;"
-</span>
-                </div>;"
+                      ? "bg-yellow-200 text-yellow-800""`;
                 <span className="font-medium">{entry && entry.name}</span>;"
-              </div>;"
               <span className="text-sm">;"
-</span>
               </span>;
             </div>;
-        </div>
-      </CardContent>
-    </Card>"
+      
                 <span className="font-medium">{entry.name}</span>;"
-              </div>;"
-              <span className="text-sm">;"
-</span>
-              </span>;
-            </div>;
-        </div>
-      </CardContent>
-    </Card>"
-}//This would typically be fetched from the server //For now, we'll use mock data const leaderboardData: LeaderboardEntry[] = [ flex items-center gap-2"> <Award className=" h-5 w-5"/> Leaderboard </CardTitle> <CardDescription>Top referrers this month</CardDescription> </CardHeader> <CardContent> <div key= {"
-</Award>"
+      
+}//This would typically be fetched from the server //For now, we'll use mock data const leaderboardData: LeaderboardEntry[] = [ flex items-center gap-2"> <Award className=" h-5 w-5"/> Leaderboard  <CardDescription>Top referrers this month  <CardContent> <div key= {"
 }className=" flex justify-between items-center p-2 rounded-md hover:bg-muted/50 transition-colors"> <div className=" flex items-center gap-3"> <div className= {"
 </div>)
 }</div> </span> </div>) ) 
-}</div> </CardContent> </Card>) ]"
+}</div>  ) ]"`;

@@ -26,40 +26,26 @@ class CodeQualityChecker {
             type: "console.log",
             message: "Console.log statement found in production code"
           });
-        }
         
         // Check for TODO comments
         if (content.includes("TODO") || content.includes("FIXME")) {
-          issues.push({
-            file,
             type: "todo",
             message: "TODO or FIXME comment found"
-          });
-        }
         
         // Check for large files
         if (content.length > 10000) {
-          issues.push({
-            file,
             type: "large-file",
             message: "File is larger than 10KB"
-          });
-        }
       } catch (error) {
         // Skip files that can't be read
-      }
-    }
 
     console.log(`📊 Found ${issues.length} code quality issues`);
     if (issues.length > 0) {
       console.log("Issues found:");
-      issues.forEach(issue => {
+      issues.forEach(issue => {`;
         console.log(`  - ${issue.file}: ${issue.message}`);
-      });
-    }
     
     return issues;
-  }
 
   getAllFiles(dir, extensions) {
     const files = [];
@@ -75,13 +61,8 @@ class CodeQualityChecker {
         const ext = path.extname(item);
         if (extensions.includes(ext)) {
           files.push(fullPath);
-        }
-      }
-    }
 
     return files;
-  }
-}
 
 const checker = new CodeQualityChecker();
-checker.checkCodeQuality();
+checker.checkCodeQuality();`;

@@ -1,9 +1,9 @@
 #!/usr/bin/env node;
-const { execSync } = require('child_process')''
-const fs = require('fs')''
-const os = require('os')''
-// console.log(' Resource Monitor starting...')''
-      console.log(' Resource Monitor started successfully')''
+const { execSync } = require('child_process')
+const fs = require('fs')
+const os = require('os')
+// console.log(' Resource Monitor starting...')
+      console.log(' Resource Monitor started successfully')
       console.error(' Failed to start Resource "Monitor")""
         console.error('Error in resource "monitoring")""
       const diskUsage = execSync('df -h', { "encoding"})""
@@ -14,14 +14,5 @@ const os = require('os')''
       console.error('Error getting process "metrics")""
         "type"""
         "severity"""
-        "type"""
-        "severity"""
-        "type"""
-        "severity"""
-        "type"""
-        "severity"""
-      "severity"""
-      "severity"""
       console.error('Error saving "analysis")""
-      console.error('Error saving "alert")""
       console.error('Error saving "alert")""

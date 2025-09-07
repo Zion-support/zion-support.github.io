@@ -1,13 +1,13 @@
 
 
-import { UserProfile, UserDetails  } from '@/types/auth';''
-import { supabase  } from '@/integrations/supabase/client';''
-import { Message, Conversation  } from '@/types/messaging';''
-import { toast } from '@/hooks/use-toast';''
-import {UserProfile, UserDetails} from '@/types/auth';''
-import {supabase} from '@/integrations/supabase/client';''
-import {Message, Conversation} from '@/types/messaging';''
-import {toast} from '@/hooks/use-toast';'
+import { UserProfile, UserDetails  } from '@/types/auth';
+import { supabase  } from '@/integrations/supabase/client';
+import { Message, Conversation  } from '@/types/messaging';
+import { toast } from '@/hooks/use-toast';
+import {UserProfile, UserDetails} from '@/types/auth';
+import {supabase} from '@/integrations/supabase/client';
+import {Message, Conversation} from '@/types/messaging';
+import {toast} from '@/hooks/use-toast';
 // Allow either UserProfile or UserDetails;
 type UserWithProfile = UserProfile | UserDetails | null;
 /**
@@ -28,8 +28,8 @@ export function useMessages(
 
         await markAsRead(conversationId)
       }
-    } catch (error) {'
-      console && console.error('Error fetching messages:', error)'
+    } catch (error) {
+      console && console.error('Error fetching messages:', error)
   fetch_conversations: () => Promise < void>) {
   /**;
   * Fetch messages for a conversation;
@@ -38,54 +38,38 @@ export function useMessages(
     // Check condition;
 if (return) {
   $2;
-}
     setIsLoading (true),
     try {
   // TODO: Implement
-}
-      const { data, error } = await supabase;'
-        .from ('messages');''
-        .select ('*');''
-        .eq ('conversation_id', conversation_id);''
-        .order ('created_at', { ascending: true });'
+      const { data, error } = await supabase;
+        .from ('messages');
+        .select ('*');
+        .eq ('conversation_id', conversation_id);
+        .order ('created_at', { ascending: true });
 ;
       // Check condition;
 if (throw error) {
-  $2;
-}
       // Use updater function for setActiveMessages;
       setActiveMessages (() => data as Message[]);
-;
       // Mark messages as read;
       const unread_messages = data.filter ()
         msg => !msg.read && msg.recipient_id === user.id);
-;
       // Check condition;
 if ( {) {
-  $2;
-}
         await markAsRead (conversation_id);
-      }
-    } catch (error) {'
-      console.error ('Error fetching messages:', error);'
+      console.error ('Error fetching messages:', error);
     } finally {
   // TODO: Implement
-}
       setIsLoading (false);
-    }
-  }
 
       if (unreadMessages.length > 0) {
-        await markAsRead(conversationId)'
-import { UserProfile, UserDetails } from '@/types/auth',;''
-import { supabase } from '@/integrations/supabase/client',;''
-import { Message, Conversation } from '@/types/messaging',;''
-import { toast } from '@/hooks/use-toast',;'
+import { UserProfile, UserDetails } from '@/types/auth',;
+import { supabase } from '@/integrations/supabase/client',;
+import { Message, Conversation } from '@/types/messaging',;
+import { toast } from '@/hooks/use-toast',;
 // Allow either UserProfile or UserDetails;
 type UserWithProfile = UserProfile | UserDetails | null,;
 /**;
- * Hook to handle message operations;
- */;
 export function useMessages(;
   user: UserWithProfile,;
   activeConversation: Conversation | null,;
@@ -98,6 +82,4 @@ export function useMessages(;
   fetchConversations: () => Promise<void>;
 </void>
   fetchConversations:() => Promise<void>;
-</void>
 fetchConversations: () => Promise<void>) {
-</void>'

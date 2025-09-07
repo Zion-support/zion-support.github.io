@@ -33,12 +33,11 @@ const path = require("path")""
       console.log(" Unit tests passed")""
       this.addTestResult("Unit Tests", "failed")""
       console.log(" Unit tests failed")""
-      "timestamp"""
     const reportPath = path.join(this.projectRoot, "test-results.json")""
 // console.log("\n Test Results "Summary": ")""
     console.log("=")""
-// console.log(`"Passed"`)""
-    console.log(`"Failed"`)""
+// console.log(`"Passed"`)""`;
+    console.log(`"Failed"`)""`;
 // console.log(`"Skipped"`)""
-    console.log("=")""
-    console.log(`\n� Detailed report saved "to"`)""
+    console.log("=")""`;
+    console.log(`\n� Detailed report saved "to"`)""`;

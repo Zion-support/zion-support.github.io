@@ -9,41 +9,31 @@ export default function PaymentCanceled() {
     <div className="min-h-screen bg-zion-blue flex flex-col items-center justify-center p-4">"
 </div>"
       <div className="max-w-md w-full bg-zion-blue-dark rounded-xl p-8 border border-zion-blue-light shadow-lg text-center">"
-</div>"
         <div className="inline-flex h-12 w-12 rounded-full bg-red-100 mb-4 items-center justify-center">"
-</div>"
           <XCircle className="h-6 w-6 text-red-600" />"
-</XCircle>
+
         </div>
 "
         <h1 className="text-2xl font-bold text-white mb-2">Payment Canceled</h1>""
         <p className="text-zion-slate-light mb-6">"
 </p>
-        </p>
-"
         <div className="flex flex-col space-y-3">"
-</div>
           <Button;)"
             onClick={() => navigate("/payments")}"
-</Button>
-          </Button>
+
+          
 
           <Button;"
             variant="outline"""
             onClick={() => navigate("/dashboard")}"
-</Button>
-          </Button>
-        </div>
-      </div>
-    </div>
-    </div>);
-    </div>);
+
+          
     </div>);
     </div>;"
  </div> <h1 className="text-2xl font-bold text-white mb-2" >Payment Canceled</h1> <p className="text-zion-slate-light mb-6" > Your payment process was canceled. No charges have been made to your account. </p> <div className="flex flex-col space-y-3" > <Button onClick= {""
-  () => navigate ('/payments')''
-}className="bg-zion-purple hover:bg-zion-purple-dark text-white" > Try Again </Button> <Button;"
+  () => navigate ('/payments')
+}className="bg-zion-purple hover:bg-zion-purple-dark text-white" > Try Again  <Button;"
 }
     </div>;
-</Button>
+
     </div>);"

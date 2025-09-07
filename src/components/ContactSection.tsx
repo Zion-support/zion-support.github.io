@@ -3,10 +3,10 @@ import { Mail, Phone, MapPin, Send } from 'lucide-react';
 
 const ContactSection: React.FC = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    company: '',
-    message: '',
+    name: ,
+    email: ,
+    company: ,
+    message: ,
   });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -21,7 +21,6 @@ const ContactSection: React.FC = () => {
     e.preventDefault();
     // Handle form submission
     console.log('Form submitted:', formData);
-  };
 
   return (
     <section className="py-16 px-4 bg-white">
@@ -42,33 +41,20 @@ const ContactSection: React.FC = () => {
                 <div className="flex items-center space-x-3">
                   <Mail className="h-6 w-6 text-blue-600" />
                   <span>info@ziontechgroup.com</span>
-                </div>
-                <div className="flex items-center space-x-3">
                   <Phone className="h-6 w-6 text-blue-600" />
                   <span>+1 (555) 123-4567</span>
-                </div>
-                <div className="flex items-center space-x-3">
                   <MapPin className="h-6 w-6 text-blue-600" />
                   <span>123 Tech Street, Innovation City, IC 12345</span>
-                </div>
-              </div>
-            </div>
 
-            <div>
               <h4 className="text-lg font-semibold mb-4">Business Hours</h4>
               <div className="space-y-2 text-gray-600">
                 <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
                 <p>Saturday: 10:00 AM - 4:00 PM</p>
                 <p>Sunday: Closed</p>
-              </div>
-            </div>
-          </div>
 
           {/* Contact Form */}
-          <div>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
                     Full Name *
                   </label>
@@ -82,54 +68,29 @@ const ContactSection: React.FC = () => {
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     placeholder="Your full name"
                   />
-                </div>
-                <div>
                   <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
                     Email Address *
-                  </label>
-                  <input
                     type="email"
                     id="email"
                     name="email"
                     value={formData.email}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     placeholder="your.email@example.com"
-                  />
-                </div>
-              </div>
 
-              <div>
                 <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
                   Company
-                </label>
-                <input
-                  type="text"
                   id="company"
                   name="company"
                   value={formData.company}
-                  onChange={handleChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   placeholder="Your company name"
-                />
-              </div>
 
-              <div>
                 <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
                   Message *
-                </label>
                 <textarea
                   id="message"
                   name="message"
                   value={formData.message}
-                  onChange={handleChange}
-                  required
                   rows={6}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   placeholder="Tell us about your project..."
-                />
-              </div>
 
               <button
                 type="submit"
@@ -139,11 +100,7 @@ const ContactSection: React.FC = () => {
                 <span>Send Message</span>
               </button>
             </form>
-          </div>
-        </div>
-      </div>
     </section>
   );
-};
 
 export default ContactSection;

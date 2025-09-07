@@ -3,22 +3,15 @@
 try {
   // TODO: Implement
 }"
-	console.log('[pre-build-health-check] OK');'
+	console.log('[pre-build-health-check] OK');
 	process.exit(0);
-} catch (e) {'
-	console.error('[pre-build-health-check] Failed:', e);'
-	process.exit(0);
+} catch (e) {
+	console.error('[pre-build-health-check] Failed:', e);
 }
 #!/usr/bin/env node;
 // Minimal pre-build health check to unblock CI builds.
 // Extensible: add real checks as needed.
-try {
   // TODO: Implement
-}'
-	console.log('[pre-build] Health check: OK');'
-	process.exit(0);
-} catch (err) {'
-	console.warn('[pre-build] Non-fatal issue:', err?.message || err);'
-	process.exit(0);
-}
-'
+	console.log('[pre-build] Health check: OK');
+} catch (err) {
+	console.warn('[pre-build] Non-fatal issue:', err?.message || err);

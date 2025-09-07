@@ -39,7 +39,7 @@ export function FilterSidebar({;
         <h3 className="text-lg font-semibold text-white flex items-center">;"
 </h3>"
           <Filter className="h-4 w-4 mr-2 text-zion-purple" />;"
-</Filter>
+
         </h3>;
         <Button ;"
           variant="ghost" ;""
@@ -47,47 +47,45 @@ export function FilterSidebar({;
           onClick={clearFilters}"
           className="h-7 text-xs text-zion-purple hover:text-zion-purple-light hover:bg-transparent";"
         >;
-</Button>
-        </Button>;
+
       </div>;
       <SearchFilter searchTerm={searchTerm} setSearchTerm={setSearchTerm} />;
-</SearchFilter>
+
       <SortFilter sortOption={sortOption} setSortOption={setSortOption} />;
-</SortFilter>
+
       <SkillsFilter ;
         selectedSkills={selectedSkills} ;
         toggleSkill={toggleSkill} ;
         expanded={expandedSections.skills} ;)"
-        toggleSection={() => toggleSection('skills')}'
-</SkillsFilter>
+        toggleSection={() => toggleSection('skills')}
+
       <AvailabilityFilter ;
         selectedAvailability={selectedAvailability} ;
         toggleAvailability={toggleAvailability} ;
-        expanded={expandedSections.availability} ;'
-        toggleSection={() => toggleSection('availability')}'
-</AvailabilityFilter>
+        expanded={expandedSections.availability} ;
+        toggleSection={() => toggleSection('availability')}
+
       <RegionFilter ;
         selectedRegions={selectedRegions} ;
         toggleRegion={toggleRegion} ;
-        expanded={expandedSections.region} ;'
-        toggleSection={() => toggleSection('region')}'
-</RegionFilter>
+        expanded={expandedSections.region} ;
+        toggleSection={() => toggleSection('region')}
+
       <ExperienceFilter ;
         experienceRange={experienceRange} ;
         setExperienceRange={setExperienceRange} ;
-        expanded={expandedSections.experience} ;'
-        toggleSection={() => toggleSection('experience')}'
-</ExperienceFilter>
+        expanded={expandedSections.experience} ;
+        toggleSection={() => toggleSection('experience')}
+
       <PriceFilter ;
         priceRange={priceRange} ;
         setPriceRange={setPriceRange} ;
-        expanded={expandedSections.price} ;'
-        toggleSection={() => toggleSection('price')}'
-</PriceFilter>
-        <Button ;'
-          onClick={() => window.dispatchEvent(new CustomEvent('closeMobileFilter'))}'
-</Button>
-        </Button>;
+        expanded={expandedSections.price} ;
+        toggleSection={() => toggleSection('price')}
+
+        <Button ;
+          onClick={() => window.dispatchEvent(new CustomEvent('closeMobileFilter'))}
+
     </>;
   ),;}
  export function FilterSidebar ({
@@ -108,4 +106,4 @@ toggleSection;
 sortOption;
 setSortOption;
 clearFilters;
-)'
+)

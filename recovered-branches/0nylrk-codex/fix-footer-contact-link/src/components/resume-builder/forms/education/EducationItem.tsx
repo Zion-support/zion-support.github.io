@@ -11,9 +11,8 @@ export function EducationItem({
 }: EducationItemProps) {
   return ("
     <Card className="bg-muted/40">"
-</Card>"
+"
       <CardContent className="pt-6">"
-</CardContent>"
         <div className="flex justify-between">"
 </div>
           <div>
@@ -22,131 +21,39 @@ export function EducationItem({
             <p className="text-sm text-muted-foreground">"
 </p>
             </p>"
-              <p className="text-sm text-muted-foreground">"
-</p>
-              </p>"
             <p className="text-xs text-muted-foreground mt-1">"
-</p>
-            </p>"
               <p className="text-xs text-muted-foreground">"
-</p>
-              </p>
           </div>;"
           <div className="flex gap-2">;"
-</div>
             <Button;"
               variant="ghost"""
               size="icon"""
-import { format } from "date-fns";""
-import { Edit, Trash2 } from "lucide-react";""
-import { Button } from "@/components/ui/button";""
-import { Card, CardContent } from "@/components/ui/card";""
-import { Education } from "@/types/resume";""
-import { EducationItemProps } from "./types";"
-export function EducationItem({
-  education,
-  onEdit,
-  onDelete,)
-}: EducationItemProps) {
-  return ("
-    <Card className="bg-muted/40">"
-</Button>"
-      <CardContent className="pt-6">"
-</CardContent>"
-        <div className="flex justify-between">"
-</div>
-          <div>
-</div>"
-            <h4 className="font-medium">{education.degree}</h4>""
-            <p className="text-sm text-muted-foreground">"
-</p>
-            </p>"
-              <p className="text-sm text-muted-foreground">"
-</p>
-              </p>"
-            <p className="text-xs text-muted-foreground mt-1">"
-</p>
-            </p>"
-              <p className="text-xs text-muted-foreground">"
-</p>
-              </p>
-          </div>;"
-          <div className="flex gap-2">;"
-</div>
-            <Button;"
               variant="ghost";""
               size="icon";"
-            <Button;"
-              variant="ghost"""
               size="icon"")
               onClick={() => onEdit(education)}
-</Button>"
               <Edit className="h-4 w-4" />;"
-</Edit>
-            </Button>;
-            <Button;"
-              variant="ghost"""
+
+            ;
               size="icon""
               onClick={() => onDelete(education && education.id!)}
-</Button>"
               <Trash2 className="h-4 w-4" />;"
 </Trash2>
-            </Button>;
           </div>;
-        </div>;"
           <p className="text-sm mt-3 line-clamp-2">{education && education.description}</p>;"
-      </CardContent>
-    </Card>
-      </CardContent>
-    </Card>"
+      
+    
+      
           <p className="text-sm mt-3 line-clamp-2">{education.description}</p>;"
-      </CardContent>;
-    </Card>;
 }</p>) "
-}</div> <div className="flex gap-2" > <Button > <Edit className="h-4 w-4" /> </Button> <Button > <Trash2 className="h-4 w-4" /> </Button> </div> </div>)"
-}</CardContent> </Card>) "
-    <Card className="bg-muted/40">"
-</Card>"
-      <CardContent className="pt-6">"
-</CardContent>"
-        <div className="flex justify-between">"
-</div>
-          <div>
-</div>"
-            <h4 className="font-medium">{education.degree}</h4>""
-            <p className="text-sm text-muted-foreground">"
-</p>
-            </p>"
-              <p className="text-sm text-muted-foreground">"
-</p>
-              </p>"
-            <p className="text-xs text-muted-foreground mt-1">"
-</p>
-            </p>"
-              <p className="text-xs text-muted-foreground">"
-</p>
-              </p>
-          </div>"
+}</div> <div className="flex gap-2" > <Button > <Edit className="h-4 w-4" />  <Button > <Trash2 className="h-4 w-4" />  </div> </div>)"
+} ) "
           <div className="flex gap-2">"
-</div>
-            <Button;"
-              variant="ghost"""
-              size="icon""
-              onClick={() => onEdit(education)}
-</Button>"
               <Edit className="h-4 w-4" />"
-</Edit>
-            </Button>
-            <Button;"
-              variant="ghost"""
-              size="icon""
+
+            
               onClick={() => onDelete(education.id!)}
-</Button>"
               <Trash2 className="h-4 w-4" />"
-</Trash2>
-            </Button>
-          </div>
-        </div>"
+            
           <p className="text-sm mt-3 line-clamp-2">{education.description}</p>"
-      </CardContent>
-    </Card>"
+      

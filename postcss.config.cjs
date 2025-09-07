@@ -9,23 +9,16 @@ module.exports = {
   },
 }
 
-    tailwindcss: {},
-    autoprefixer: {},
-  },
 
 
-}
 
 
 };
 
 
-};
 
 
-}
 
-};
 
 
 

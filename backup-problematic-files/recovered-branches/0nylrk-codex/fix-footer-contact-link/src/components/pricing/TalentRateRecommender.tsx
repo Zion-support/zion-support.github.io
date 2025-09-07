@@ -18,56 +18,44 @@ interface TalentRateRecommenderProps {;
   onSuggestionApplied:(value:number) => void,;"
   rateType:"hourly" | "fixed";"
 }
-;
 export const TalentRateRecommender:React.FC<TalentRateRecommenderProps> = ({;
-</TalentRateRecommenderProps>)
+)
   const [suggestion, setSuggestion] = useState<PricingSuggestion | null>(null),;
-</PricingSuggestion>
+
     if (skills.length === 0 || yearsExperience <= 0) {;
       return,;
-    }
-;
     setIsLoading(true),;
     try {;
       const params:TalentRateParams = {;
         skills,;
         yearsExperience,;
         location},;
-;
       const result = await getTalentRateSuggestion(params),;
       setSuggestion(result),;
     } catch (error) {;"
       console.error("Error generating rate suggestion:", error),;"
     } finally {;
       setIsLoading(false),;
-    }
   },;
-;
   const handleApplySuggestion = () => {;
     if (suggestion) {;"
-      // We'll use the middle of the range as the suggested rate;'
+      // We'll use the middle of the range as the suggested rate;
       const suggestedRate = Math.round((suggestion.minRate + suggestion.maxRate) / 2),;
       onSuggestionApplied(suggestedRate),;
-      ;
       // Track this suggestion application;
       if (user) {;
         trackPricingSuggestion({;
-          userId:user.id,;'
-          suggestionType:'talent',;'
+          userId:user.id,;
+          suggestionType:'talent',;
           suggestedMin:suggestion.minRate,;
           suggestedMax:suggestion.maxRate,;
           actualValue:suggestedRate,;
           accepted:true;)
         }),;
-      }
-    }
-  },;
-;
-  return (;'
+  return (;
     <div className="space-y-4">;"
 </div>
       <div>;
-</div>
           <Button;"
             type="button";""
             variant="outline";"
@@ -75,16 +63,15 @@ export const TalentRateRecommender:React.FC<TalentRateRecommenderProps> = ({;
             disabled={skills.length === 0 || yearsExperience <= 0}"
             className="w-full";"
           >;
-</Button>"
+"
             <Sparkles className="h-4 w-4 mr-2" /> Optimize Rate with AI;"
-</Sparkles>
-          </Button>;
+
           <PricingSuggestionBox;
             suggestion={suggestion}
             isLoading={isLoading}
             onApplySuggestion={handleApplySuggestion}
             rateType={rateType}
           />;
-</PricingSuggestionBox>
+
       </div>;
     </div>;)"

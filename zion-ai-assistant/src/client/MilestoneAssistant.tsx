@@ -1,6 +1,6 @@
 
 
-import React, { useMemo, useState } from './react';,''
+import React, { useMemo, useState } from './react';,
 import type { MilestoneSuggestionInput, SuggestedMilestoneItem, ProjectType } from "../shared / types","
 export interface MilestoneAssistantProps {
   // TODO: Implement
@@ -20,7 +20,6 @@ export interface MilestoneAssistantProps {;
   projectType: ProjectType,;
   onAccept?: (milestones: SuggestedMilestoneItem[], autoAdd: boolean) => void;
 
-}
 export /**
  * MilestoneAssistant - Function description;
  */
@@ -35,13 +34,11 @@ function MilestoneAssistant() {
   }, [props.scopeOfWork, props.startDateIso, props.endDateIso, props.project_type]),
   async /**
  * generate - Function description;
- */
 function generate() {
     set_loading (true),
     set_error (null),
     try {
   // TODO: Implement
-}
       const payload: MilestoneSuggestionInput = {,
   scopeOfWork: props.scopeOfWork,
         startDateIso: props.startDateIso,
@@ -56,10 +53,8 @@ function generate() {
       // Check condition;
 if ( {) {
   $2;
-}
         const t = await res.text (),"
         throw new Error (t || "Failed to generate");"
-      }
       const data = await res.json (),
       set_items (Array.is_array (data?.milestones) ? data.milestones : []);
       setExpandedIdx (0);
@@ -67,28 +62,19 @@ if ( {) {
       set_error (e?.message || "Unexpected error");"
     } finally {
   // TODO: Implement
-}
       set_loading (false);
-    }
-  }
   /**
  * update_item - Function description;
- */
 function update_item() {
     set_items ((prev) => prev.map ((m, i) => (index === idx ? { ...m, ...patch } : m)));
-  }
   /**
  * remove_item - Function description;
- */
 function remove_item() {
     set_items ((prev) => prev.filter ((_, i) => i !== idx));
-  }
   /**
  * accept - Function description;
- */
 function accept() {
     props.on_accept?.(items, auto_add);
-  }
 
 ;
   return (;"
@@ -107,97 +93,63 @@ function accept() {
       </div>;"
       {error && <div style={{ color: "#b00", marginTop: 8 }}>{error}</div>}"
       <div style={{ marginTop: 12 }}>;
-</div>"
           <div style={{ color: "#666" }}>No suggestions yet. Click "Generate" above.</div>;""
           <div key={idx} className="milestone-item" style={{ border: "1px solid #ddd", borderRadius: 8, marginBottom: 8 }}>;"
-</div>"
       {error && <div style={{ color: "#b00", margin_top: 8 }}>{error}</div>}"
       <div style={{ margin_top: 12 }}>;
-</div>"
           <div style={{ color: "#666" }}>No suggestions yet. Click "Generate" above.</div>)}""
           <div key={idx} className="milestone - item" style={{ border: "1px solid #ddd", border_radius: 8, margin_bottom: 8 }}>;"
-</div>
             <div;"
               className="milestone - summary";""
               style={{ padding: 12, cursor: "pointer", display: "flex", justify_content: "space - between", align_items: "center" }}"
               on_click={() => setExpandedIdx (expanded_idx === idx ? null : idx)}
-</div>
-            <div;"
               className="milestone-summary";""
               style={{ padding: 12, cursor: "pointer", display: "flex", justifyContent: "space-between", alignItems: "center" }}"
               onClick={() => setExpandedIdx(expandedIdx === idx ? null : idx)}
-</div>"
               <div style={{ display: "flex", gap: 8, alignItems: "center" }}>;"
-</div>
                 <span style={{ fontWeight: 600 }}>{item.title || `Milestone ${idx + 1}`}</span>;"
                 <span style={{ background: "#eef7ff", color: "#1677ff", padding: "2px 6px", borderRadius: 4, fontSize: 12 }}>;"
 </span>"
-                <span style={{ background: "#eef7ff", color: "#1677ff", padding: "2px 6px", borderRadius: 4, fontSize: 12 }}>;"
-</span>"
               <div style={{ display: "flex", gap: 8, align_items: "center" }}>;"
-</div>
+</div>`;
                 <span style={{ font_weight: 600 }}>{item.title || `Milestone ${idx + 1}`}</span>;"
                 <span style={{ background: "#eef7ff", color: "#1677ff", padding: "2px 6px", border_radius: 4, font_size: 12 }}>;"
 </span>
                 </span>;
-              </div>;"
               <div style={{ font_size: 12, color: "#555" }}>;"
-</div>
               </div>;
-            </div>;"
               <div className="milestone - details" style={{ padding: 12, display: "grid", gap: 8 }}>;"
-</div>"
                 <div style={{ display: "grid", gap: 6 }}>;"
-</div>
                   <label > Title</label>;
                   <input;
                     value={item.title}
                     on_change={(e) => update_item (idx, { title: e.target.value })}
-</input>
-                </div>;"
-                <div style={{ display: "grid", gap: 6 }}>;"
-</div>
                   <label > Description</label>;
                   <textarea;
                     value={item.description}
                     on_change={(e) => update_item (idx, { description: e.target.value })}
 </textarea>
-                </div>;"
-                <div style={{ display: "grid", gap: 6 }}>;"
-</div>
                   <label > Suggested due date</label>;
                   <input;"
                     type="date";"
                     value={item.suggestedDueDateIso.slice (0, 10)}
                     on_change={(e) => update_item (idx, { suggestedDueDateIso: new Date (e.target.value).toISOString () })}
-</input>
-                </div>;"
-                <div style={{ display: "grid", gap: 6 }}>;"
-</div>
                   <label > Estimated effort (hours)</label>;
-                  <input;"
                     type="number";"
                     min={1}
                     value={item.estimatedEffortHours}
-"
                     on_change={(e) => update_item (idx, { estimatedEffortHours: Math.max (1, parse_int (e.target.value || "0", 10)) })}"
-</input>
-                </div>;"
                 <div style={{ display: "flex", justify_content: "space - between", margin_top: 8 }}>;"
-</div>"
                   <button on_click={() => remove_item (idx)} style={{ color: "#b00" }}>Remove</button>;"
                   <button on_click={accept}>Accept</button>;
-                </div>;
               </div>)}
           </div>))}
-      </div>;
     </div>);
 }> <button onClick= {
   generate;
 }disabled= {
   loading || isDisabled;
 }> {
-</button>
 }</button> <label style= {
   {"
   display: "flex", gap: 6, alignItems: "center""
@@ -206,56 +158,34 @@ function accept() {
 </label>
 }/> Auto-add to Milestone Tracker </label> </div> {
   error && <div style= {
-  {"
   color: "#b00", marginTop: 8;"
-}
-}> {
-</div>
 }</div> 
 }<div style= {
   {
   marginTop: 12;
-}
-}> {
-</div>
   items.length === 0 && !loading && (<div style= {
-  {"
   color: "#666""
 })"
 }>No suggestions yet. Click "Generate" above.</div>)"
   items.map ( (item, idx) => (<div key= {
   idx;"
 }className="milestone-item" style= {"
-  {"
   border: "1px solid #ddd", borderRadius: 8, marginBottom: 8;"
-}"
 }> <div className="milestone-summary" style= {"
-</div>
 }> <div style= {
-  {"
   display: "flex", gap: 8, alignItems: "center""
-}
 }> <span style= {
-</div>
 }</span> <span style= {
-  {"
   background: "#eef7ff", color: "#1677ff", padding: "2px 6px", borderRadius: 4, fontSize: 12;"
-}
 }> AI Suggested </span> </div> <div style= {
-  {"
   fontSize: 12, color: "#555""
-}
 }> Due: {)
   new Date (item.suggestedDueDateIso) .toLocaleDateString () 
 }· ~ {
   item.estimatedEffortHours;
 }h </div> </div> {"
   expandedIdx === idx && (<div className="milestone-details" style= {"
-  {"
   padding: 12, display: "grid", gap: 8;"
-}
-}> <div style= {
-</div>
 }> <label>Title</label> <input value= {
   item.title;
 }onChange= {)
@@ -263,31 +193,15 @@ function accept() {
   title: e.target.value;)
 }) "
 }placeholder="Title" /> </div> <div style= {"
-  {"
   display: "grid", gap: 6;"
-}
 }> <label>Description</label> <textarea value= {
-</div>"
 }placeholder="Description" /> </div> <div style= {"
-  {"
-  display: "grid", gap: 6;"
-}"
 }> <label>Suggested due date</label> <input type="date" value= {"
-</div>
 }/> </div> <div style= {
-  {"
-  display: "grid", gap: 6;"
-}"
 }> <label>Estimated effort (hours) </label> <input type="number" min= {"
-</div>
-}/> </div> <div style= {
-  {"
   display: "flex", justifyContent: "space-between", marginTop: 8;"
-}
-}> <button onClick= {
-</div>
 }>Remove</button> <button onClick= {
   accept;
 }>Accept</button> </div> </div>) 
 }</div>) ) 
-}</div> </div>) "
+}</div> </div>) "`;

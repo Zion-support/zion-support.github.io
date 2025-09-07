@@ -17,19 +17,19 @@ interface RateOptimizationSectionProps {;
   control:Control<any>,;
 </any>
 export const RateOptimizationSection:React.FC<RateOptimizationSectionProps> = ({;
-</RateOptimizationSectionProps>"
+"
     <div className="space-y-4">;"
 </div>
       <FormField;
         control={control}"
         name="hourlyRate";")
         render={({ field }) => (;
-</FormField>
+
           <FormItem>;
-</FormItem>)"
-            <FormLabel>Your {rateType === "hourly" ? "Hourly Rate" :"Fixed Rate"} ($USD)</FormLabel>;"
+)"
+            <FormLabel>Your {rateType === "hourly" ? "Hourly Rate" :"Fixed Rate"} ($USD);"
             <FormControl>;
-</FormControl>
+
               <Input;"
                 type="number";""
                 min="1";""
@@ -37,27 +37,20 @@ export const RateOptimizationSection:React.FC<RateOptimizationSectionProps> = ({
                 placeholder={rateType === "hourly" ? "e.g. 45" :"e.g. 1000"}"
                 {...field}
               />;
-</Input>
-            </FormControl>;
+
             <FormDescription>;
-</FormDescription>
-            </FormDescription>;
+
             <FormMessage />;
-</FormMessage>
-          </FormItem>;
+
       <Card>;
-</Card>"
         <CardContent className="pt-4">;"
-</CardContent>
+
           <TalentRateRecommender;
             skills={skills}            yearsExperience={yearsExperience}
             location={location}
             onSuggestionApplied={handleSuggestionApplied}
             rateType={rateType}
-          />;
-</TalentRateRecommender>
-        </CardContent>;
-      </Card>;
+
     </div>;
   control: Control<any>;
 </any>"

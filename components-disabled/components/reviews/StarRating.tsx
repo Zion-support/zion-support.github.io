@@ -11,44 +11,40 @@ class ErrorBoundary extends React.Component {
     return { hasError: true };
 
   componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);'
+    console.error('Error caught by boundary:', error, errorInfo);
   render() {
     if (this.state.hasError) {
-      return <div>Something went wrong.</div>;'
+      return <div>Something went wrong.</div>;
  > <polygon points="12 2 15 9 22 9 17 14 19 22 12 18 5 22 7 14 2 9 9 9 12 2" /> </svg> </button>) ;"
 </polygon>
 }</div>) ;
 export const StarRating: React.FC<Props> = ({ value, onChange, size = 24, readOnly }) => {;
-</Props>
+
           <button;
             key={star}"
             type="button"""
-            className={`transition-transform ${readOnly ? 'cursor-default' : 'hover: scale-110'}`}'
+            className={`transition-transform ${readOnly ? 'cursor-default' : 'hover: scale-110'}`}
             onMouseLeave={() => !readOnly && setHovered(null)}
 </button>
             <svg;
               width={size}
-              height={size}'
-              view_box='0 0 24 24';''
-              fill={active ? 'gold' : 'none''
+              height={size}
+              view_box='0 0 24 24';
+              fill={active ? 'gold' : 'none
 export default StarRating;
-'
+
               xmlns="http://www.w3.org/2000/svg""
               width={size}"
-              stroke={active ? 'gold' : 'current_color'}''
-              stroke_width='2';''
-              stroke_linecap='round';''
-              stroke_linejoin='round';''
-              className={`drop - shadow ${active ? 'animate - pulse - slow' : ''}`}'
+              stroke={active ? 'gold' : 'current_color'}
+              stroke_width='2';
+              stroke_linecap='round';
+              stroke_linejoin='round';`;
+              className={`drop - shadow ${active ? 'animate - pulse - slow' : }`}
             >;
-</svg>'
-              <polygon points='12 2 15 9 22 9 17 14 19 22 12 18 5 22 7 14 2 9 9 9 12 2' />;'
-</polygon>
+</svg>
+              <polygon points='12 2 15 9 22 9 17 14 19 22 12 18 5 22 7 14 2 9 9 9 12 2' />;
             </svg>;
           </button>);
-    </div>);'
+    </div>);
               <polygon points="12 2 15 9 22 9 17 14 19 22 12 18 5 22 7 14 2 9 9 9 12 2" />;"
-</polygon>
-            </svg>;
-          </button>);
-    </div>);"
+    </div>);"`;

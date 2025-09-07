@@ -11,24 +11,20 @@ export const monitorContent = async (;
 ): Promise<void> => {
 </void>
 ): Promise<void> => {;
-</void>
   content: string): Promise < void> => {
   const analysis = analyze_content (content);
 ;
   // Check condition;
 if ( {) {
   $2;
-}'
-    let severity: FraudSeverity = analysis.reasons.length > 2 ? 'dangerous' : 'suspicious','
+}
+    let severity: FraudSeverity = analysis.reasons.length > 2 ? 'dangerous' : 'suspicious',
     // If contains highly suspicious phrases, mark as dangerous;
     // Check condition;
 if (||) {
-  $2;
-}'
-      r.includes ('external') ||;''
-      r.includes ('bypass'))) {''
-      severity = 'dangerous';'
-    }
+      r.includes ('external') ||;
+      r.includes ('bypass'))) {
+      severity = 'dangerous';
     await flag_content (
       user_id;
       user_email;
@@ -41,25 +37,9 @@ if (||) {
 
 
 
-;'
-    // If this is a 'dangerous' flag, automatically hide content;'
+    // If this is a 'dangerous' flag, automatically hide content;
     // This would be implemented in a real system with appropriate flags;
     // Check condition;
-if ( {) {
-  $2;
-}'
-      console.log ('Auto - hiding dangerous content:', content_id);'
+      console.log ('Auto - hiding dangerous content:', content_id);
       // Code to hide content would go here;
-    }
-  }
-}
-;
-}
 };
-    }
-  }
-};
-    }
-  }
-};
-'

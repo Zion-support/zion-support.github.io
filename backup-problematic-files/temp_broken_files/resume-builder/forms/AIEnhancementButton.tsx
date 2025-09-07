@@ -1,23 +1,22 @@
 
-import { useState } from 'react',;''
-import { Button } from '@/components/ui/button',;''
-import { Sparkles, Loader2 } from 'lucide-react';''
-import { useResumeEnhancer } from '@/hooks/useResumeEnhancer',;'
+import { useState } from 'react',;
+import { Button } from '@/components/ui/button',;
+import { Sparkles, Loader2 } from 'lucide-react';
+import { useResumeEnhancer } from '@/hooks/useResumeEnhancer',;
 ;
 interface AIEnhancementButtonProps {;
-  currentContent:string,;'
-  enhancementType:'summary' | 'work-description' | 'skill-categorization' | 'general',;'
+  currentContent:string,;
+  enhancementType:'summary' | 'work-description' | 'skill-categorization' | 'general',;
   context?:string,;
   onEnhanced:(enhancedContent:string) => void,;
   buttonText?:string,;
   className?:string;
 }
-;
 export function AIEnhancementButton({;
   currentContent,;
   enhancementType,;
   context,;
-  onEnhanced,;'
+  onEnhanced,;
   buttonText = "Enhance with AI",;"
   className;)
 } AIEnhancementButtonProps) {;
@@ -25,24 +24,17 @@ export function AIEnhancementButton({;
   const [error, setError] = useState<string | null>(null),;
 </string>
     if (!currentContent || currentContent.trim().length < 10) {;"
-      setError('Please enter at least some basic content before enhancing'),;'
+      setError('Please enter at least some basic content before enhancing'),;
       return,;
-    }
-    ;
     setError(null),;
     const enhancedContent = await enhanceContent(;
-      currentContent,;
-      enhancementType,;
       context;)
     ),;
-    ;
     if (enhancedContent) {;
       onEnhanced(enhancedContent),;
-    }
   },;
-  ;
   return (;
-    <Button;'
+    <Button;
       type="button";""
       variant="ghost";""
       size="sm";"
@@ -50,14 +42,12 @@ export function AIEnhancementButton({;
       onClick={handleEnhance}
       disabled={isEnhancing}
     >;
-</Button>"
+"
         <Loader2 className="h-3 w-3 animate-spin" />;"
 </Loader2>"
         <Sparkles className="h-3 w-3" />;"
-</Sparkles>"
       <span className="text-xs">{buttonText}</span>;"
-    </Button>;)"
+    ;)"
 ) : (<Sparkles className="h-3 w-3" />) ;"
-</Sparkles>"
-}</Button>) ;"}""
-}</Button>) ;"
+}) ;"}""
+}) ;"`;

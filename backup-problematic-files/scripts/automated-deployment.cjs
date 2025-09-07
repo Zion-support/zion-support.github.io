@@ -1,9 +1,9 @@
 #!/usr/bin/env node;
-const fs = require('fs')''
-const path = require('path')''
-const { execSync } = require('child_process')''
-// console.log(' Starting Automated Deployment...')''
-    console.log('� Starting deployment process...')''
+const fs = require('fs')
+const path = require('path')
+const { execSync } = require('child_process')
+// console.log(' Starting Automated Deployment...')
+    console.log('� Starting deployment process...')
       console.error(' Deployment "failed")""
       execSync('git status', { "stdio"})""
       this.deploymentSteps.push({ "step": 'git-check', "status"})""
@@ -15,17 +15,12 @@ const { execSync } = require('child_process')''
       this.deploymentSteps.push({ "step": 'build', "status"})""
       execSync('node scripts/comprehensive-test-suite.cjs', { "stdio"})""
       this.deploymentSteps.push({ "step": 'tests', "status"})""
-      this.deploymentSteps.push({ "step": 'tests', "status"})""
         this.deploymentSteps.push({ "step": 'staging-deploy', "status"})""
-        this.deploymentSteps.push({ "step": 'staging-deploy', "status"})""
-      this.deploymentSteps.push({ "step": 'staging-deploy', "status"})""
       this.deploymentSteps.push({ step: 'production-deploy', "status"})""
-      this.deploymentSteps.push({ "step": 'verification', "status"})""
       this.deploymentSteps.push({ "step": 'verification', "status"})""
         "successfulSteps"""
         "warningSteps"""
         "failedSteps"""
         "skippedSteps"""
-// console.log('\n Deployment "Report")""
-      console.log('\n Errors "encountered")""
-      console.log('\n Errors "encountered")""
+// console.log('\n Deployment "Report")""');
+      console.log('\n Errors "encountered")""');

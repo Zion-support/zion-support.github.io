@@ -7,12 +7,12 @@ import { useHireRequest } from "@/hooks/useHireRequest";""
 import { TalentProfile } from "@/types/talent";""
 import { useHireRequest } from "@/hooks/useHireRequest",""
 import { TalentProfile } from "@/types/talent",""
-import { useState } from './react';''
-import { use_form } from './react - hook - form';''
-import { zod_resolver } from '@hookform / resolvers / zod';''
-import { z } from './zod';''
-import { useHireRequest } from '@/hooks / useHireRequest';''
-import { TalentProfile } from '@/types / talent';'
+import { useState } from './react';
+import { use_form } from './react - hook - form';
+import { zod_resolver } from '@hookform / resolvers / zod';
+import { z } from './zod';
+import { useHireRequest } from '@/hooks / useHireRequest';
+import { TalentProfile } from '@/types / talent';
 interface UseHireRequestFormProps {
   // TODO: Implement
 }
@@ -25,24 +25,16 @@ interface UseHireRequestFormProps {
 
 
 
-interface UseHireRequestFormProps {
   // TODO: Implement
-}
   talent: TalentProfile,
   onClose: () => void,
   initialJobTitle?: string,
   userDetails?: {
-    name?: string;
 
     email?: string;
     id?: string;
-  }
-}
 export interface FormValues {
   // TODO: Implement
-}
-  }
-}
 
 export interface FormValues {;
   requesterName: string;,
@@ -51,8 +43,7 @@ export interface FormValues {;
   timeline: string;
   budgetMin: number,
   budgetMax: number;
-}
-'
+
 import { useState } from "react",;""
 import { useForm } from "react-hook-form",;""
 import { zodResolver } from "@hookform/resolvers/zod",;""
@@ -70,41 +61,23 @@ interface UseHireRequestFormProps {;
 
 
     email?: string,
-    id?: string;
 
-  }
-}
-    id?: string;
-  }
-}
 ;
-export interface FormValues {;
   requesterName: string,;
   requesterEmail: string,;
   projectOverview: string,;
   timeline: string,;
   budgetMin: number,;
-  budgetMax: number;
-}
 
-    email?: string,
-    id?: string;
 
-  }
-}
-export interface FormValues {
   // TODO: Implement
-}
   requester_name: string;,
   requester_email: string;
   project_overview: string;,
-  timeline: string;
 
 
 
   budgetMin: number;,
-  budgetMax: number;
-}
 export function useHireRequestForm({ talent, onClose, initialJobTitle, userDetails }: UseHireRequestFormProps) {
 
 
@@ -134,13 +107,12 @@ export function useHireRequestForm({ talent, onClose, initialJobTitle, userDetai
     budgetMax: z.number().min(1, "Budget maximum is required")"
   }).refine(data => data.budgetMax >= data.budgetMin, {"
     message: "Maximum budget must be greater than or equal to minimum budget"","
-  path: ["budgetMax"]")
   }),
 
 
   // Initialize the form;
   const form = useForm<FormValues>({
-</FormValues>
+
   const form = use_form < FormValues>({)
     resolver: zod_resolver (form_schema);,
   default_values: {"
@@ -150,15 +122,11 @@ export function useHireRequestForm({ talent, onClose, initialJobTitle, userDetai
       timeline: "";",
   budget_min: talent.hourly_rate || 25,
       budget_max: talent.hourly_rate ? talent.hourly_rate * 1.5 : 50;
-    }
-  });
-;
   // Handle form submission;
   const on_submit = async (values: FormValues) => {
     setIsSubmitting (true);
     try {
   // TODO: Implement
-}
       const request_data = {
         talent: {,
   requester: {
@@ -166,20 +134,14 @@ export function useHireRequestForm({ talent, onClose, initialJobTitle, userDetai
   email: values && values.requesterEmail,
 
           id: userDetails?.id;
-        }
         project: {,
   overview: values && values.projectOverview;
           timeline: values && values.timeline;,
   budgetMin: values && values.budgetMin,
           budgetMax: values && values.budgetMax;
-        }
-      }
       const result = await submitHireRequest(requestData);
       if (result && result.success) {
         onClose()
-        }
-      }
-      const result = await submitHireRequest(requestData);
       if (result.success) {
         onClose()"
           id: talent.id || "","
@@ -188,14 +150,11 @@ export function useHireRequestForm({ talent, onClose, initialJobTitle, userDetai
         requester: {,
   name: values.requesterName,
           email: values.requesterEmail,
-          id: userDetails?.id;
         },
-        project: {,
   overview: values.projectOverview,
           timeline: values.timeline,
           budgetMin: values.budgetMin,
           budgetMax: values.budgetMax;
-;
 export function useHireRequestForm({ talent, onClose, initialJobTitle, userDetails }: UseHireRequestFormProps) {;
   const [isSubmitting, setIsSubmitting] = useState(false),;
   const { submitHireRequest } = useHireRequest(),;
@@ -213,4 +172,4 @@ export function useHireRequestForm({ talent, onClose, initialJobTitle, userDetai
   }),;
   // Initialize the form;
   const form = useForm<FormValues>({;
-</FormValues>)"
+)"`;

@@ -3,155 +3,92 @@ export function BillingHeader() {
     <div className="space-y-2">"
 </div>"
       <div className="flex items-center justify-between">"
-</div>"
         <h1 className="text-3xl font-bold tracking-tight">Billing & Invoices</h1>""
         <div className="flex gap-2">"
-</div>"
           <Button variant="outline" size="sm" className="gap-1">"
-</Button>"
-            <Download className="h-4 w-4" />"
-</Download>
-          </Button>"
-          <Button variant="outline" size="sm" className="gap-1">"
-</Button>"
-            <Mail className="h-4 w-4" />"
-</Mail>
-          </Button>
-
-
-
 "
+            <Download className="h-4 w-4" />"
+
+            <Mail className="h-4 w-4" />"
+
+          
+
+
+
           <Button variant="outline" size="sm" className="gap-1" asChild>"
-</Button>"
             <Link href="/dashboard/client/analytics">"
-</Link>"
               <BarChart3 className="h-4 w-4" />"
 </BarChart3>
-            </Link>
-          </Button>
+            
+          
         </div>
-      </div>
-"
       <p className="text-muted-foreground">"
 </p>
-      </p>
-    </div>"
-    <div className='space-y-2'>;'
-</div>'
-      <div className='flex items-center justify-between'>;'
-</div>'
-        <h1 className='text-3xl font-bold tracking-tight'>;'
+    <div className='space-y-2'>;
+      <div className='flex items-center justify-between'>;
+        <h1 className='text-3xl font-bold tracking-tight'>;
 </h1>
-        </h1>;'
-        <div className='flex gap-2'>;'
-</div>'
-          <Button variant='outline' size='sm' className='gap-1'>;'
-</Button>'
-            <Download className='h-4 w-4' />;'
-</Download>
-          </Button>;'
-          <Button variant='outline' size='sm' className='gap-1'>;'
-</Button>'
-            <Mail className='h-4 w-4' />;'
-</Mail>
-          </Button>;'
-          <Button variant='outline' size='sm' className='gap-1' asChild>;'
-</Button>'
-            <Link href='/dashboard/client/analytics'>;'
-</Link>'
-              <BarChart3 className='h-4 w-4' />              Analytics;'
-</BarChart3>'
+        </h1>;
+        <div className='flex gap-2'>;
+          <Button variant='outline' size='sm' className='gap-1'>;
+
+            <Download className='h-4 w-4' />;
+
+          ;
+
+            <Mail className='h-4 w-4' />;
+
+          <Button variant='outline' size='sm' className='gap-1' asChild>;
+
+            <Link href='/dashboard/client/analytics'>;
+
+              <BarChart3 className='h-4 w-4' />              Analytics;
           <Button variant="outline" size="sm" className="gap-1" asChild>;"
-</Button>"
             <Link href="/dashboard/client/analytics">;"
-</Link>"
               <BarChart3 className="h-4 w-4" />;"
 </BarChart3>"
     <div className="space-y-2">;"
-</div>"
       <div className="flex items-center justify-between">;"
-</div>"
         <h1 className="text-3xl font-bold tracking-tight">Billing & Invoices</h1>;""
         <div className="flex gap-2">;"
-</div>"
           <Button variant="outline" size="sm" className="gap-1">;"
-</Button>"
             <Download className="h-4 w-4" />;"
-</Download>
-          </Button>;"
-          <Button variant="outline" size="sm" className="gap-1">;"
-</Button>"
+
+          ;"
             <Mail className="h-4 w-4" />;"
-</Mail>
-          </Button>;"
-          <Button variant="outline" size="sm" className="gap-1" asChild>;"
-</Button>"
-            <Link href="/dashboard/client/analytics">;"
-</Link>"
-              <BarChart3 className="h-4 w-4" />;"
-</BarChart3>"
-    <div className='space - y-2'>;'
-</div>'
-      <div className='flex items - center justify - between'>;'
-</div>'
-        <h1 className='text - 3xl font - bold tracking - tight'>;'
-</h1>
-        </h1>;'
-        <div className='flex gap - 2'>;'
-</div>'
-          <Button variant='outline' size='sm' className='gap - 1'>;'
-</Button>'
-            <Download className='h - 4 w - 4' />;'
-</Download>
-          </Button>;'
-          <Button variant='outline' size='sm' className='gap - 1'>;'
-</Button>'
-            <Mail className='h - 4 w - 4' />;'
-</Mail>
-          </Button>;'
-          <Button variant='outline' size='sm' className='gap - 1' as_child>;'
-</Button>'
-            <Link href='/dashboard / client / analytics'>;'
-</Link>'
-              <BarChart3 className='h - 4 w - 4' />              Analytics;'
-</BarChart3>'
+
+    <div className='space - y-2'>;
+      <div className='flex items - center justify - between'>;
+        <h1 className='text - 3xl font - bold tracking - tight'>;
+        <div className='flex gap - 2'>;
+          <Button variant='outline' size='sm' className='gap - 1'>;
+
+            <Download className='h - 4 w - 4' />;
+
+
+            <Mail className='h - 4 w - 4' />;
+
+          <Button variant='outline' size='sm' className='gap - 1' as_child>;
+
+            <Link href='/dashboard / client / analytics'>;
+
+              <BarChart3 className='h - 4 w - 4' />              Analytics;
           <Button variant="outline" size="sm" className="gap - 1" as_child>;"
-</Button>"
             <Link href="/dashboard / client / analytics">;"
-</Link>"
               <BarChart3 className="h - 4 w - 4" />;"
-</BarChart3>"
     <div className="space - y-2">;"
-</div>"
       <div className="flex items - center justify - between">;"
-</div>"
         <h1 className="text - 3xl font - bold tracking - tight">Billing & Invoices</h1>;""
         <div className="flex gap - 2">;"
-</div>"
           <Button variant="outline" size="sm" className="gap - 1">;"
-</Button>"
             <Download className="h - 4 w - 4" />;"
-</Download>
-          </Button>;"
-          <Button variant="outline" size="sm" className="gap - 1">;"
-</Button>"
+
             <Mail className="h - 4 w - 4" />;"
-</Mail>
-          </Button>;"
-          <Button variant="outline" size="sm" className="gap - 1" as_child>;"
-</Button>"
-            <Link href="/dashboard / client / analytics">;"
-</Link>"
-              <BarChart3 className="h - 4 w - 4" />;"
-</BarChart3>
-            </Link>;
-          </Button>;
+
         </div>;
       </div>;"
-      <p className='text - muted - foreground'>;'
-</p>
-      </p>;)'
+      <p className='text - muted - foreground'>;
+      </p>;)
     </div>) <p className="text - muted - foreground">;"
-</p>
       </p>;
     </div>);"

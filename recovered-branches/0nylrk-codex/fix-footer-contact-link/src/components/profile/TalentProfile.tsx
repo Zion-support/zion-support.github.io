@@ -21,8 +21,6 @@ import {Availability} from "@/types/profile";"
 interface TalentProfileProps {;
   profile: TalentProfileType,;
   onRequestHire: () => void,;
-  onMessageTalent?: () => void;
-}
 
 export function TalentProfile(): any ({ ;
 
@@ -32,7 +30,6 @@ export function TalentProfile(): any ({ ;
 }: TalentProfileProps) {;
   const { isAuthenticated } = useAuth();
 
-}
 
 
 
@@ -49,34 +46,19 @@ import { ProfileAvailability } from "./ProfileAvailability",""
 import { ProfileContact } from "./ProfileContact",""
 import { ProfileRatings } from "./ProfileRatings",""
 import { TalentProfile as TalentProfileType } from "@/types/talent","
-interface TalentProfileProps {
   // TODO: Implement
-}
-  profile: TalentProfileType;,
-  onRequestHire: () => void;
-  onMessageTalent?: () => void;
-}
 export function TalentProfile({
-  profile;
-  onRequestHire;
-  onMessageTalent;)
 }: TalentProfileProps) {
-  const { isAuthenticated } = useAuth();
 
 export function TalentProfile({ ;
-  profile;
-  onRequestHire;
-export function TalentProfile({ 
   profile,
   onRequestHire,
-  onMessageTalent;)
-}: TalentProfileProps) {
   const { isAuthenticated } = useAuth(),
   
   // Create proper availability object from talent profile;
   const availability: Availability = {,"
-  status: profile.availability_type === 'full_time' ? 'available' :''
-            profile.availability_type === 'part_time' ? 'limited' : 'unavailable''
+  status: profile.availability_type === 'full_time' ? 'available' :
+            profile.availability_type === 'part_time' ? 'limited' : 'unavailable
     message: `${profile.professional_title} with ${profile.years_experience} years of experience`
 
 
@@ -86,27 +68,20 @@ export function TalentProfile({
 
   // Create proper skills array for ProfileSkills component;
   const skillsArray = profile.skills?.map(skill => ({
-    name: skill;,'
+    name: skill;,
   level: 3 // Default level since we don't have this data;')
   })) || [],
   
 
 
   // Create proper projects array for ProfileProjects component;
-  const projectsArray = profile.key_projects?.map((proj, i) => ({
+  const projectsArray = profile.key_projects?.map((proj, i) => ({`;
     id: `project-${i}`
     title: proj.title;,
-  description: proj.description;)'
-    date: new Date().toISOString() // Default date since we don't have this data;'
-  })) || [],
+  description: proj.description;)
+    date: new Date().toISOString() // Default date since we don't have this data;
   
-  return ('
-    <div className="container mx-auto px-4 py-8">"
-</div>"
-    <div className="container mx-auto px-4 py-8">;"
-</div>"
-    <div className="container mx-auto px-4 py-8">;"
-</div>"
+  return (
     <div className="container mx-auto px-4 py-8">"
 </div>"
     <div className="container mx-auto px-4 py-8">;"
@@ -119,231 +94,134 @@ export function TalentProfile({
         rating={profile && profile.average_rating}
         reviewCount={profile && profile.rating_count}
       />;
-</ProfileHero>"
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-8">;"
-</div>"
         <div className="space-y-8">;"
-</div>
           <ProfileSkills skills={skillsArray} />;
-</ProfileSkills>
+
           <ProfileAvailability availability={availability} />;
-</ProfileAvailability>
+
           <ProfileContact;
             email={profile && profile.user_id}
             profileName={profile && profile.full_name}"
-            profileType="talent""
-          />;
-</ProfileContact>
+
         </div>;"
         <div className="lg:col-span-2 space-y-8">;"
-</div>"
           <div className="bg-zion-purple/10 border border-zion-purple/30 rounded-lg p-6">"
-</div>"
             <h2 className="text-xl font-bold text-white mb-4">About {profile.full_name}</h2>""
             <div className="prose prose-invert max-w-none">"
-</div>"
               <p className="text-zion-slate whitespace-pre-wrap">{profile.bio}</p>"
-            </div>
-          </div>
           <ProfileProjects projects={projectsArray} />
-</ProfileProjects>"
-          <div className="bg-zion-purple/10 border border-zion-purple/30 rounded-lg p-6">"
-</div>"
             <h2 className="text-xl font-bold text-white mb-4 flex items-center">"
 </h2>"
               <Star className="mr-2 h-5 w-5 text-yellow-400" />"
-</Star>
+
             </h2>
-          </div>"
     <div className="container mx - auto px - 4 py - 8">;"
-</div>
-      <ProfileHero;
         name={profile.full_name}
         title={profile.professional_title}
         avatar_url={profile.profile_picture_url}"
         profile_type="talent";"
         rating={profile.average_rating}
         review_count={profile.rating_count}
-      />;
-</ProfileHero>"
       <div className="grid grid - cols - 1 lg:grid - cols - 3 gap - 8 mt - 8">;"
-</div>"
         <div className="space - y-8">;"
-</div>
           <ProfileSkills skills={skills_array} />;
-</ProfileSkills>
-          <ProfileAvailability availability={availability} />;
-</ProfileAvailability>
-          <ProfileContact;
+
+
             email={profile.user_id}
             profile_name={profile.full_name}"
-            profile_type="talent";"
-          />;
-</ProfileContact>
-        </div>;"
+
         <div className="lg:col - span - 2 space - y-8">;"
-</div>"
           <div className="bg - zion - purple / 10 border border - zion - purple / 30 rounded - lg p - 6">;"
-</div>"
             <h2 className="text - xl font - bold text - white mb - 4">About {profile.full_name}</h2>;""
             <div className="prose prose - invert max - w-none">;"
-</div>"
               <p className="text - zion - slate whitespace - pre - wrap">{profile.bio}</p>;"
             </div>;
-          </div>;
           <ProfileProjects projects={projects_array} />;
-</ProfileProjects>"
-          <div className="bg - zion - purple / 10 border border - zion - purple / 30 rounded - lg p - 6">;"
-</div>"
             <h2 className="text - xl font - bold text - white mb - 4 flex items - center">;"
-</h2>"
               <Star className="mr - 2 h - 5 w - 5 text - yellow - 400" />;"
-</Star>
+
             </h2>;
             <ProfileRatings;
               user_id={profile.id}
               average_rating={profile.average_rating}
               rating_count={profile.rating_count}
-            />;
-</ProfileRatings>
-          </div>;"
+
             <div className="bg - zion - purple / 10 border border - zion - purple / 30 rounded - lg p - 6 mb - 8">;"
-</div>"
               <div className="flex flex - col items - center text - center">;"
-</div>"
                 <h3 className="text - xl font - bold text - white mb - 2">Ready to collaborate?</h3>;""
                 <p className="text - zion - slate mb - 6 max - w-md">;"
 </p>"
           <div className="bg-zion-purple/10 border border-zion-purple/30 rounded-lg p-6">;"
-</div>"
             <h2 className="text-xl font-bold text-white mb-4">About {profile && profile.full_name}</h2>;""
             <div className="prose prose-invert max-w-none">;"
-</div>"
               <p className="text-zion-slate whitespace-pre-wrap">{profile && profile.bio}</p>;"
-            </div>;
-          </div>;
           <ProfileProjects projects={projectsArray} />;
-</ProfileProjects>"
-          <div className="bg-zion-purple/10 border border-zion-purple/30 rounded-lg p-6">;"
-</div>"
             <h2 className="text-xl font-bold text-white mb-4 flex items-center">;"
-</h2>"
               <Star className="mr-2 h-5 w-5 text-yellow-400" />;"
-</Star>
-            </h2>;
-            <ProfileRatings;
+
               userId={profile && profile.id}
               averageRating={profile && profile.average_rating}
               ratingCount={profile && profile.rating_count}
-            />;
-</ProfileRatings>
-          </div>;"
+
             <div className="bg-zion-purple/10 border border-zion-purple/30 rounded-lg p-6 mb-8">;"
-</div>"
               <div className="flex flex-col items-center text-center">;"
-</div>"
                 <h3 className="text-xl font-bold text-white mb-2">Ready to collaborate?</h3>;""
                 <p className="text-zion-slate mb-6 max-w-md">;"
 </p>
                 </p>;"
                 <div className="flex flex-wrap gap-4 justify-center">;"
-</div>
                   <Button;"
                     size="lg"""
                     className="bg-zion-purple text-white hover:bg-zion-purple-dark""
                     onClick={onRequestHire}>;
-</Button>"
                     <Handshake className="mr-2 h-5 w-5" />;"
-</Handshake>
-                  </Button>;
-                    <Button;"
-                      size="lg"""
+
+                  ;
                       variant="outline"""
                       className="border-zion-purple text-zion-purple hover:bg-zion-purple/10""
                       onClick={onMessageTalent}>;
-</Button>"
                       <MessageSquare className="mr-2 h-5 w-5" />;"
-</MessageSquare>
-                    </Button>;
-                </div>;
-              </div>;
-            </div>;
-        </div>;
-      </div>;
-    </div>;
-                </p>;"
+
                 <div className="flex flex - wrap gap - 4 justify - center">;"
-</div>
-                  <Button;"
                     size="lg";""
                     className="bg - zion - purple text - white hover:bg - zion - purple - dark";"
                     on_click={onRequestHire}
                   >;
-</Button>"
                     <Handshake className="mr - 2 h - 5 w - 5" />;"
-</Handshake>
-                  </Button>;
-                    <Button;"
-                      size="lg";""
+
                       variant="outline";""
                       className="border - zion - purple text - zion - purple hover:bg - zion - purple / 10";"
                       on_click={onMessageTalent}
-                    >;
-</Button>"
                       <MessageSquare className="mr - 2 h - 5 w - 5" />;"
-</MessageSquare>)
-                    </Button>)}
-                </div>;
-              </div>;
+)
+                    )}
             </div>)}
-        </div>;
-      </div>;
     </div>);
 return (</div> </div> {
 }<ProfileProjects projects= {
   projectsArray;
 }/> Reviews & Ratings </h2> <ProfileRatings userId= {
-</ProfileProjects>
+
 }/> </div> Connect with {"
-}</p> <div className="flex flex-wrap gap-4 justify-center" > <Button > <Handshake className="mr-2 h-5 w-5" /> Hire Now </Button> {"
-</div>"
+}</p> <div className="flex flex-wrap gap-4 justify-center" > <Button > <Handshake className="mr-2 h-5 w-5" /> Hire Now  {"
   onMessageTalent && (<Button size="lg" variant="outline" className="border-zion-purple text-zion-purple hover:bg-zion-purple/10" onClick= {"
   onMessageTalent;)"
-}> <MessageSquare className="mr-2 h-5 w-5" /> Message </Button>)"
+}> <MessageSquare className="mr-2 h-5 w-5" /> Message )"
 }</div> </div> </div>) 
 }</div> </div> </div>) "
             <div className="bg-zion-purple/10 border border-zion-purple/30 rounded-lg p-6 mb-8">"
-</div>"
               <div className="flex flex-col items-center text-center">"
-</div>"
                 <h3 className="text-xl font-bold text-white mb-2">Ready to collaborate?</h3>""
                 <p className="text-zion-slate mb-6 max-w-md">"
-</p>
-                </p>"
                 <div className="flex flex-wrap gap-4 justify-center">"
-</div>
-                  <Button;"
-                    size="lg"""
-                    className="bg-zion-purple text-white hover:bg-zion-purple-dark""
                     onClick={onRequestHire}
                   >
-</Button>"
                     <Handshake className="mr-2 h-5 w-5" />"
-</Handshake>
-                  </Button>
-                    <Button;"
-                      size="lg"""
-                      variant="outline"""
-                      className="border-zion-purple text-zion-purple hover:bg-zion-purple/10""
+
+                  
                       onClick={onMessageTalent}
-                    >
-</Button>"
                       <MessageSquare className="mr-2 h-5 w-5" />"
-</MessageSquare>
-                    </Button>
-                </div>
-              </div>
-            </div>
-        </div>
-      </div>
-    </div>"
+
+                    
+    </div>"`;

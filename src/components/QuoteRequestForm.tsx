@@ -1,7 +1,7 @@
 import {useState} from "react"""
-import {logDebug, logErrorToProduction} from '@/utils/productionLogger'''
+import {logDebug, logErrorToProduction} from '@/utils/productionLogger
 import {useToast} from "@/hooks/use-toast"""
-import {useRouter} from 'next/router'''
+import {useRouter} from 'next/router
 import {Button} from "@/components/ui/button"""
 import {Card, CardContent} from "@/components/ui/card"""
 import {GradientHeading} from "@/components/GradientHeading"""
@@ -13,7 +13,7 @@ import {BudgetStep} from "@/components/QuoteRequestForm/BudgetStep"""
 import {SummaryStep} from "@/components/QuoteRequestForm/SummaryStep"""
 import {AutoFillModal} from "@/components/QuoteRequestForm/AutoFillModal"""
 import {QuoteFormData} from "@/types/quotes"""
-import {Sparkles, Loader2} from 'lucide-react'''
+import {Sparkles, Loader2} from 'lucide-react
 import {z} from "zod"""
 export type QuoteRequestSteps = "service" | "details" | "timeline" | "budget" | "summary""
 const serviceStepSchema = z.object({
@@ -24,13 +24,12 @@ const serviceStepSchema = z.object({
 
 
   const [formData, setFormData] = useState<QuoteFormData>({
-</QuoteFormData>)"
+)"
   const [currentStep, setCurrentStep] = useState<QuoteRequestSteps>("service");"
-</QuoteRequestSteps>
+
   const [formData, setFormData] = useState<QuoteFormData>({;
-</QuoteFormData>)
   const updateFormData = (data: Partial<QuoteFormData>,) => {;
-</QuoteFormData>"
+"
   const [current_step, setCurrentStep] = useState < QuoteRequestSteps>("service");"
   const [is_submitting, setIsSubmitting] = useState (false);
   const [autoFillLoading, setAutoFillLoading] = useState (false);
@@ -57,11 +56,8 @@ const serviceStepSchema = z.object({
   });
   const updateFormData = (data: Partial < QuoteFormData>, ) =>: any {
   // TODO: Implement
-}
     setFormData (prev => ({
       ...prev;
-})
   );
-}
 
 ;"

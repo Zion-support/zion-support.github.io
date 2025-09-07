@@ -15,13 +15,11 @@ interface Conversation {;
   timestamp:string,;
   unreadCount:number,;
   isTyping?:boolean;}
-;
 interface MobileConversationListProps {;
   conversations:Conversation[],;
   activeConversation?:string,;
   onSelectConversation:(id:string) => void;
 }
-;
 export function MobileConversationList({;
   conversations,;
   activeConversation,;
@@ -31,28 +29,22 @@ export function MobileConversationList({;
     <div className="space-y-4">;"
 </div>"
       <div className="px-4 mb-2">;"
-</div>"
         <div className="relative">;"
-</div>"
           <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />;"
-</Search>
+
           <Input;"
             placeholder="Search messages...";""
             className="pl-9";"
           />;
-</Input>
+
         </div>;
       </div>;"
       <div className="px-4 pb-4 space-y-2">;"
-</div>"
         <div className="flex space-x-2">;"
-</div>"
-          <Badge variant="secondary" className="rounded-full px-3">All</Badge>;""
-          <Badge variant="outline" className="rounded-full px-3">Unread</Badge>;""
-          <Badge variant="outline" className="rounded-full px-3">Interviews</Badge>;""
-          <Badge variant="outline" className="rounded-full px-3">Projects</Badge>;"
-        </div>;
-      </div>;"
+          <Badge variant="secondary" className="rounded-full px-3">All;""
+          <Badge variant="outline" className="rounded-full px-3">Unread;""
+          <Badge variant="outline" className="rounded-full px-3">Interviews;""
+          <Badge variant="outline" className="rounded-full px-3">Projects;"
       <div className="space-y-2 pb-24">;"
 </div>
           <div;
@@ -62,39 +54,25 @@ export function MobileConversationList({;
               activeConversation === conversation.id && "bg-primary/5";")
             )}
             onClick={() => onSelectConversation(conversation.id)}
-</div>"
             <div className="flex items-center gap-3 py-3 cursor-pointer">;"
-</div>
               <Avatar>;
-</Avatar>
+
                 <AvatarImage src={conversation.avatar} />;
-</AvatarImage>
+
                 <AvatarFallback>;
-</AvatarFallback>
-                </AvatarFallback>;
-              </Avatar>;"
+
+              ;"
               <div className="flex-1 min-w-0">;"
-</div>"
                 <div className="flex justify-between items-baseline">;"
-</div>"
                   <h3 className="font-medium truncate">{conversation.name}</h3>;""
                   <span className="text-xs text-muted-foreground whitespace-nowrap ml-2">;"
 </span>
                   </span>;
-                </div>;"
                 <div className="flex justify-between items-center">;"
-</div>"
                   <p className="text-sm text-muted-foreground truncate">;"
 </p>
                       ? <em>Typing...</em> ;
                   </p>;"
                     <Badge className="ml-2 h-5 w-5 p-0 flex items-center justify-center rounded-full">;"
-</Badge>
-                    </Badge>;
-                </div>;
-              </div>;
-            </div>;"
+
             <div className="border-t border-border ml-12"></div>;"
-          </div>;
-      </div>;
-    </div>;"

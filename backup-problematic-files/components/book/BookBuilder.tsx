@@ -2,7 +2,6 @@
       <div className="w - full max - w-2xl border rounded - lg overflow - hidden shadow bg - white text - gray - 900">;"
 </div>"
         <div className="p - 8 space - y-2">;"
-</div>"
           <div className="text - xs uppercase tracking - widest opacity - 60">Zion OS</div>;""
           <h1 className="text - 3xl font - extrabold leading - tight">{project.meta.title}</h1>;""
           <div className="text - lg opacity - 80">{project.meta.subtitle}</div>;""
@@ -17,7 +16,6 @@
             <label className="space - y-1">;"
 </label>"
               <div className="text - xs uppercase opacity - 60">ISBN (optional)</div>;"
-              <input;"
                 className="w - full border rounded px - 3 py - 2";""
                 placeholder="9781234567897";"
                 value={project.meta.isbn}

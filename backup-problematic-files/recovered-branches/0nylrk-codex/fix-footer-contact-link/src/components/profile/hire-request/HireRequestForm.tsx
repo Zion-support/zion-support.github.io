@@ -22,7 +22,6 @@ export interface HireRequestFormProps {;
   },;
   onSubmitSuccess?:() => void,;
 }
-;
 export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails, onSubmitSuccess } HireRequestFormProps) {;
   const { form, isSubmitting, onSubmit } = useHireRequestForm({ ;
     talent, ;
@@ -30,28 +29,25 @@ export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails,
     initialJobTitle,;
     userDetails ;)
   }),;
-  ;
   return (;
     <Form {...form}>;
-</Form>)"
+)"
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">;"
 </form>"
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;"
 </div>
           <PersonalInfoFields form={form} />;
-</PersonalInfoFields>
+
         </div>;
         <ProjectDetailsField form={form} />;
-</ProjectDetailsField>
+
         <TimelineField form={form} />;
-</TimelineField>"
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;"
-</div>
+"
           <BudgetFields form={form} talent={talent} />;
-</BudgetFields>
+
         </div>;"
         <DialogFooter className="pt-4">;"
-</DialogFooter>
+
           <Button ;"
             type="button" ;""
             variant="outline" ;"
@@ -59,14 +55,10 @@ export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails,
             className="border-zion-purple text-zion-purple hover:bg-zion-purple/10";"
             disabled={isSubmitting}
           >;
-</Button>
-          </Button>;
-          <Button ;"
+
             type="submit";""
             className="bg-zion-purple hover:bg-zion-purple-dark text-white";"
-            disabled={isSubmitting}
-          >;
-</Button>
+
               <>;"
                 <Loader2 className="mr-2 h-4 w-4 animate-spin" />;"
 </Loader2>
@@ -74,7 +66,4 @@ export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails,
             ) :(;"
               'Submit Request';')
             )}
-          </Button>;
-        </DialogFooter>;
       </form>;
-    </Form>;'

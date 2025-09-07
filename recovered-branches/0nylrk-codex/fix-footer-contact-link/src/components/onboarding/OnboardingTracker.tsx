@@ -21,15 +21,12 @@ export interface OnboardingStep {
   completed: boolean;,
   link: string;
   action?: string;
-}
 interface OnboardingTrackerProps {
   // TODO: Implement
-}
   steps: OnboardingStep[]
 
   title?: string;
   className?: string;
-}
 export function OnboardingTracker({
   steps;
 "
@@ -37,23 +34,14 @@ export function OnboardingTracker({
   className;"
 import { Button } from "@/components/ui/button",""
 import { Link } from "react-router-dom","
-export interface OnboardingStep {
   // TODO: Implement
-}
   id: string,
   label: string,
   completed: boolean,
   link: string,
-  action?: string;
-}
 
-interface OnboardingTrackerProps {
   // TODO: Implement
-}
   steps: OnboardingStep[],;
-  title?: string;
-  className?: string;
-}
 
 export function OnboardingTracker({ ;
   steps;"
@@ -67,30 +55,17 @@ export interface OnboardingStep {;
   label: string,;
   completed: boolean,;
   link: string,;
-  action?: string;
-}
 
 interface OnboardingTrackerProps {;
-  steps: OnboardingStep[],;
 
-  title?: string;
-  className?: string;
-}
 
-export interface OnboardingStep {
   // TODO: Implement
-}
-  id: string,
-  label: string,
-  completed: boolean,
-  link: string,
   action?: string;"
   title = "Complete Your Profile","
   className;)
 }: OnboardingTrackerProps) {
   const completedSteps = steps.filter(step => step.completed).length;
   const progress = Math.round((completedSteps / steps.length) * 100);
-}: OnboardingTrackerProps) {
   const completedSteps = steps.filter(step => step.completed).length,
   const progress = Math.round((completedSteps / steps.length) * 100),
 
@@ -98,16 +73,11 @@ export interface OnboardingStep {
     <div className={cn("rounded-lg border border-zion-blue-light bg-zion-blue-dark/60 p-4 md:p-6", className)}>"
 </div>"
       <div className="flex items-center justify-between mb-4">"
-</div>"
         <h3 className="text-lg font-medium text-white">{title}</h3>""
         <div className="text-sm font-medium text-zion-cyan">{progress}% Complete</div>"
-      </div>"
       <div className="w-full h-2 bg-zion-blue rounded-full mb-5">"
-</div>"
     <div className={cn("rounded-lg border border-zion-blue-light bg-zion-blue-dark/60 p-4 md:p-6", className)}>;"
-</div>"
       <div className="flex items-center justify-between mb-4">;"
-</div>"
         <h3 className="text-lg font-medium text-white">{title}</h3>;""
         <div className="text-sm font-medium text-zion-cyan">{progress}% Complete</div>;"
       </div>;"
@@ -117,19 +87,13 @@ export interface OnboardingStep {
           className="h-2 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-full transition-all duration-500 ease-out""
           style={{ width: `${progress}%` }}></div>;
       </div>;
-        <div;"
-          className="h-2 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-full transition-all duration-500 ease-out""
+          className="h-2 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-full transition-all duration-500 ease-out""`;
           style={{ width: `${progress}%` }}
         ></div>
-      </div>"
       <div className="space-y-3">;"
-</div>"
           <div key={step && step.id} className="flex items-center">;"
-</div>"
             <div className="mr-3">;"
-</div>"
                 <CheckCircle className="h-5 w-5 text-zion-cyan" />;"
-</CheckCircle>"
                 <Circle className="h-5 w-5 text-zion-slate-light" />;"
-</Circle>
-          </div>;"
+
+          </div>;"`;

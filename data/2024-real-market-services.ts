@@ -40,7 +40,6 @@ export interface RealMarketService {
   customers: number;
   rating: number;,
   reviews: number;
-}
 
 export const realMarketServices: RealMarketService[] = [
   {"
@@ -93,6 +92,5 @@ export const realMarketServices: RealMarketService[] = [
     customers: 1800,
     rating: 4.7,
     reviews: 950;
-  }
 ];
 "

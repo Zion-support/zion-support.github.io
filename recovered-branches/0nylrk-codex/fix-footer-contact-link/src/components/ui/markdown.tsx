@@ -6,22 +6,14 @@ interface MarkdownProps {
 }
   content: string;
   className?: string;
-}
 export function Markdown({ content, className }: MarkdownProps) {
   return ()"
     <div className={cn("prose dark:prose-invert max-w-none", className)}>"
 </div>
-      <ReactMarkdown>{content}</ReactMarkdown>
+      <ReactMarkdown>{content}
     </div>"
     <div className={cn("prose dark:prose-invert max-w-none", className)}>;"
-</div>
-      <ReactMarkdown>{content}</ReactMarkdown>;
+      <ReactMarkdown>{content};
     </div>;"
     <div className={cn ("prose dark:prose - invert max - w-none", class_name)}>;"
-</div>
-      <ReactMarkdown>{content}</ReactMarkdown>;
     </div>);"
-    <div className={cn("prose dark:prose-invert max-w-none", className)}>;"
-</div>
-      <ReactMarkdown>{content}</ReactMarkdown>;
-    </div>;"

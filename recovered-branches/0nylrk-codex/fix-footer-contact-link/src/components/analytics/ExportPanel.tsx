@@ -21,7 +21,6 @@ import {
   CardContent,
   CardDescription,
   CardHeader,
-  CardTitle,;
 "
 } from "@/components/ui/card";""
 import { Button } from "@/components/ui/button";""
@@ -34,49 +33,36 @@ import { useToast } from "@/hooks/use-toast";""
     }),;
       // In a real implementation, this would trigger an API call to generate and download the export;
       setTimeout(() => {;
-        toast({;)
+        toast({;)`;
           title: `${format && format.toUpperCase()} Export Ready`,;"
           description: "Your export has been downloaded.",;"
         });
       }, 1500));
-  }
 
   const { toast } = useToast();
-"
 import React from "react",""
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",""
 import { Button } from "@/components/ui/button",""
 import { useToast } from "@/hooks/use-toast","
 export function ExportPanel() {
   const { toast } = useToast(),
-  "
-  const handleExport = (format: 'csv' | 'json') => {'
+  const handleExport = (format: 'csv' | 'json') => {
     // Placeholder for actual export functionality;
-    toast({)
+    toast({)`;
       title: `Exporting as ${format.toUpperCase()}`,
 
-    toast({)
-      title: `Exporting as ${format.toUpperCase()}`,
 
-        });
-      }, 1500));
-  }
-        });
-      }, 1500));
-  }
 
-  return ('
+  return (
     <Card className="bg-zion-blue-dark border-zion-blue-light">;"
-</Card>
+
       <CardHeader>;
-</CardHeader>"
-        <CardTitle className="text-white text-lg">Export Data</CardTitle>;""
+        <CardTitle className="text-white text-lg">Export Data;""
         <CardDescription className="text-zion-slate-light">;"
-</CardDescription>
-        </CardDescription>;
-      </CardHeader>;"
+
+        ;
+      ;"
       <CardContent className="space-y-4">;"
-</CardContent>"
         <p className="text-zion-slate">;"
 </p>
         </p>;"
@@ -86,55 +72,36 @@ export function ExportPanel() {
             variant="default"""
             className="bg-zion-purple hover:bg-zion-purple-dark"")"
             onClick={() => handleExport("csv")}"
-</Button>
-          </Button>;
-          <Button;"
+
             variant="outline"""
             className="border-zion-blue-light text-zion-slate-light"""
             onClick={() => handleExport("json")}"
-</Button>
-          </Button>
 
-          <Button;"
-            variant="outline"""
-            className="border-zion-blue-light text-zion-slate-light"""
+          
+
 import React from "react",;""
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;""
 import { Button } from "@/components/ui/button",;""
 import { useToast } from "@/hooks/use-toast",;"
 export function ExportPanel() {;
   const { toast } = useToast(),;"
-  const handleExport = (format: 'csv' | 'json') => {;'
-</Button>'
+  const handleExport = (format: 'csv' | 'json') => {;
+
     <Card className="bg - zion - blue - dark border - zion - blue - light">;"
-</Card>
-      <CardHeader>;
-</CardHeader>"
-        <CardTitle className="text - white text - lg">Export Data</CardTitle>;""
+
+        <CardTitle className="text - white text - lg">Export Data;""
         <CardDescription className="text - zion - slate - light">;"
-</CardDescription>
-        </CardDescription>;
-      </CardHeader>;"
+
       <CardContent className="space - y-4">;"
-</CardContent>"
         <p className="text - zion - slate">;"
-</p>
-        </p>;"
         <div className="flex flex - wrap gap - 4">;"
-</div>
-          <Button;"
             variant="default";""
             className="bg - zion - purple hover:bg - zion - purple - dark";""
             on_click={() => handle_export ("csv")}"
-</Button>
-          </Button>;
-          <Button;"
+
             variant="outline";""
             className="border - zion - blue - light text - zion - slate - light";""
             on_click={() => handle_export ("json")}"
-</Button>
-          </Button>;
+
         </div>;
-      </CardContent>;
-    </Card>;
-    </Card>);"
+    );"`;

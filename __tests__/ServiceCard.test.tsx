@@ -12,11 +12,5 @@ describe("ServiceCard", () => {""
         icon="🚀""
         features={features}
       />,
-</ServiceCard>
-      <ServiceCard;"
-        title="Test Service"""
-        description="Test Description"""
-        icon="🚀""
-        features={features}
-      />,
-</ServiceCard>)"
+
+)"

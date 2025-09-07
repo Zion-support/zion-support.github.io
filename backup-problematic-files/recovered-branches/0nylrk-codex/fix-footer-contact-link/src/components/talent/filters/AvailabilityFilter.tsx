@@ -8,7 +8,6 @@ const AVAILABILITY_OPTIONS = [;"
   { id:"part_time", label:"Part-time" },;""
   { id:"project", label:"Project-based" }"]
 ],;
-;
 export function AvailabilityFilter({ selectedAvailability, toggleAvailability, expanded, toggleSection, isMobileFilterOpen } AvailabilityFilterProps) {;
   return (;"
     <div className="mb-6 border-b border-zion-blue-light pb-6">;"
@@ -20,25 +19,23 @@ export function AvailabilityFilter({ selectedAvailability, toggleAvailability, e
 </button>
         <span>Availability</span>;"
           <ChevronUp className="h-4 w-4 text-zion-slate-light" />;"
-</ChevronUp>"
+"
           <ChevronDown className="h-4 w-4 text-zion-slate-light" />;"
-</ChevronDown>
+
       </button>;"
         <div className="mt-4 space-y-2">;"
 </div>"
             <div key={option.id} className="flex items-center">;"
-</div>
               <Checkbox;
                 id={`availability-${option.id}`})
                 checked={selectedAvailability.includes(option.id)}
                 onCheckedChange={() => toggleAvailability(option.id)}
-</Checkbox>
-              <label;
+
+              <label;`;
                 htmlFor={`availability-${option.id}`}"
                 className="ml-2 text-sm text-zion-slate-light cursor-pointer";"
-              >;
 </label>
               </label>;
             </div>;          ))}
         </div>;
-    </div>;"
+    </div>;"`;

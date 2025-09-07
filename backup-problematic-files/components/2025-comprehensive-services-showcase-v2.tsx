@@ -1,25 +1,24 @@
   Globe, Zap, Lock, Cloud, Smartphone, Building, Phone, Mail, MapPin;
-} from 'lucide-react';'
+} from 'lucide-react';
 // Import our new 2025 V2 innovative services;
                           {(service as any).pricing?.professional ?;
-                            `Professional: ${(service as any).pricing.professional} | Enterprise: ${(service as any).pricing.enterprise}` :;
+                            `Professional: ${(service as any).pricing.professional} | Enterprise: ${(service as any).pricing.enterprise}` :;`;
                             `${service.price} ${service.period}`;
           >
             Our Comprehensive Service Portfolio;
           </motion.h2>
           
-          <motion.div;'
+          <motion.div;
             className="space-y-20""
             variants={staggerContainer}"
             initial="initial"""
             whileInView="animate""
             viewport={{ once: true }}
-          >
 </motion>
               <motion.div key={category.id} variants={fadeInUp}>
 </motion>"
                 <div className="text-center mb-12">"
-</div>
+</div>`;
                   <div className={`inline-flex p-4 rounded-2xl bg-gradient-to-r ${category.color} mb-6`}>
 </div>
                   </div>"
@@ -28,86 +27,50 @@
                   </h3>"
                   <p className="text-xl text-gray-300 max-w-3xl mx-auto">"
 </p>
-                  </p>
-                </div>
                 "
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">"
-</div>
-                    <motion.div;
                       key={service.id}"
                       className="bg-black/30 backdrop-blur-xl border border-cyan-500/20 rounded-2xl p-6 hover:border-cyan-500/50 transition-all duration-300 hover:scale-105""
                       whileHover={{ y: -5 }}
-                    >
-</motion>"
                       <h4 className="text-xl font-semibold text-white mb-3">"
 </h4>
                       </h4>"
                       <p className="text-gray-300 mb-4">"
-</p>
-                      </p>
-                      "
                       <div className="space-y-3 mb-6">"
-</div>"
                         <div className="flex items-center text-sm text-cyan-400">"
-</div>"
                           <TrendingUp className="w-4 h-4 mr-2" />"
-</TrendingUp>
-                        </div>"
+
                         <div className="flex items-center text-sm text-green-400">"
-</div>"
                           <Star className="w-4 h-4 mr-2" />"
-</Star>
-                        </div>
-                      </div>
-                      "
+
                       <div className="mb-6">"
-</div>"
                         <div className="text-2xl font-bold text-white mb-2">"
-</div>
-                        </div>"
                         <div className="text-sm text-gray-400">"
-</div>
                         </div>;
-                      </div>;
-                      <a;
+                      <a;`;
                         href={`/services/${service.slug}`}
                   ))}
                     </motion.div>))}
 </a>
-                </div>;
-              </motion.div>))}
           </motion.div>;
-        </div>;
       </section>;"
       <section className="py - 20 px - 4 bg - black / 20">;"
 </section>"
         <div className="max - w-7xl mx - auto">;"
-</div>
           <motion.h2;"
             className="text - 4xl md:text - 5xl font - bold text - white text - center mb - 16";"
             initial={{ opacity: 0, coordinate_y: 20 }}
             whileInView={{ opacity: 1, coordinate_y: 0 }}"
             className="grid md:grid - cols - 2 lg:grid - cols - 4 gap - 8";"
-            initial={{ opacity: 0, coordinate_y: 20 }}
             whileInView={{ opacity: 1, coordinate_y: 0 }}
-            viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
 
 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}"
             className="text - 4xl md:text - 5xl font - bold text - white mb - 6";"
-            initial={{ opacity: 0, coordinate_y: 20 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            initial={{ opacity: 0, coordinate_y: 20 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}"
             className="flex flex - col sm:flex - row gap - 4 justify - center";"
-            initial={{ opacity: 0, coordinate_y: 20 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.4 }}
-"
+"`;

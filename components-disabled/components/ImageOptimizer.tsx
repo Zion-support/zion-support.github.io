@@ -1,5 +1,5 @@
-import React from 'react';''
-import Image from 'next/image';'
+import React from 'react';
+import Image from 'next/image';
 interface OptimizedImageProps {
   // TODO: Implement
 }
@@ -9,13 +9,12 @@ interface OptimizedImageProps {
   height?: number;
   className?: string;
   priority?: boolean;
-  quality?: number;'
-  placeholder?: 'blur' | 'empty';'
+  quality?: number;
+  placeholder?: 'blur' | 'empty';
   blurDataURL?: string;
-}
 
 const OptimizedImage: React.FC<OptimizedImageProps> = ({
-</OptimizedImageProps>
+
     <Image;
       src={src}
       alt={alt}
@@ -25,10 +24,9 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
       priority={priority}
       quality={quality}
       placeholder={placeholder}
-      blurDataURL={blurDataURL})'
+      blurDataURL={blurDataURL})
       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw""
       style={{"
-        objectFit: 'cover','
+        objectFit: 'cover',
       }}
     />
-</Image>'
