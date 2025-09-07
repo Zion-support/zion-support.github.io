@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 export interface Service {
   id: string;
   name: string;
@@ -30,24 +26,3 @@ export default {
   findService,
   getServicesByCategory
 };
-=======
-// Service finder utility
-export const findService = ("_serviceName": string) => {
-  // Implementation placeholder
-  return null;
-};
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-export const findService = (_serviceName: string) => { return null};
-=======
-export const findService = (_serviceName: string) => { return null};
-=======
-export const findService = (_serviceName: string) => { return null};
-=======
-export const findService = (_serviceName: string) => { return null};
-=======
-export const findService = (_serviceName: string) => { return null};
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5

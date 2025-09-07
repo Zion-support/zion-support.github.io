@@ -1,4 +1,10 @@
-import { PerformanceMetrics } from '../types';
+export interface PerformanceMetrics {
+  loadTime: number;
+  firstContentfulPaint: number;
+  largestContentfulPaint: number;
+  cumulativeLayoutShift: number;
+  firstInputDelay: number;
+}
 
 export const measurePerformance = (): PerformanceMetrics | null => {
   if (typeof window === 'undefined' || !('performance' in window)) {
@@ -49,7 +55,7 @@ export const getPerformanceScore = (metrics: PerformanceMetrics): {
     firstInputDelay: { good: 50, needsImprovement: 100 }
   };
 
-  const getScore = (value: number, threshold: { good: number; needsImprovement: number }, reverse = false) => {
+  const getScore = (value: number, threshold: { good: number; needsImprovement: number }, reverse = false): 'good' | 'needs-improvement' | 'poor' => {
     const compareValue = reverse ? threshold.good / value : value / threshold.good;
     if (compareValue <= 1) return 'good';
     if (compareValue <= (reverse ? threshold.needsImprovement / threshold.good : threshold.needsImprovement / threshold.good)) return 'needs-improvement';

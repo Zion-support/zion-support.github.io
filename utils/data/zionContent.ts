@@ -1,17 +1,36 @@
- 
-}export function buildMarkdownFromWiki (wiki: WikiContent) : string {
-  const infobox = `| | | |---|---| | Founder | $ {
-  wiki.infobox.founder 
-}| 
-}return lines.join ('\n') 
+interface WikiContent {
+  infobox: {
+    founder: string;
+    [key: string]: any;
+  };
+  sections: Array<{
+    title: string;
+    paragraphs: string[];
+  }>;
 }
-}return lines.join ('\n') 
-}for (const s of sections) {
-  lines.push (`## $ {
-  s.title 
-}`);
-for (const p of s.paragraphs) lines.push (p);
-lines.push ('') 
-}return lines.join ('\n') 
-}export function slugify (input: string) : string {
-  return input .toLowerCase () .replace (/[^a-z0-9\s-]/g, '') .trim () 
+
+export function buildMarkdownFromWiki(wiki: WikiContent): string {
+  const infobox = `| | | |---|---| | Founder | ${wiki.infobox.founder} |`;
+  
+  const lines: string[] = [];
+  lines.push(infobox);
+  lines.push('');
+  
+  for (const s of wiki.sections) {
+    lines.push(`## ${s.title}`);
+    for (const p of s.paragraphs) {
+      lines.push(p);
+    }
+    lines.push('');
+  }
+  
+  return lines.join('\n');
+}
+
+export function slugify(input: string): string {
+  return input
+    .toLowerCase()
+    .replace(/[^a-z0-9\s-]/g, '')
+    .trim()
+    .replace(/\s+/g, '-');
+}
