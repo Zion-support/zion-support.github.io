@@ -3,7 +3,8 @@
 export default function About() {return (<div>;
       <main>;
         <h1>About Zion Tech Group</h1>;
-import React from './react';export default /**;
+}
+import React from './react';export default /**;'
  * About - Function description;
  */;
 function About() {return (<div>;
@@ -12,13 +13,15 @@ function About() {return (<div>;
     <div>;
       <main>;
         <h1>About Zion Tech Group</h1>;
-import React from './react';
+}
+import React from './react';'
 ;
 export default /**
  * About - Function description
  */
 function About() {
-  return (
+}
+return (;
     <div>;
       <main>;
         <h1 > About Zion Tech Group</h1>;

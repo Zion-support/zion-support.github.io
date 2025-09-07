@@ -3,13 +3,13 @@
  * PM2 Monitoring Dashboard for Zion Application;
  * Provides real-time monitoring of all PM2 processes;
  */;
-const { exec } = require("$1")
-const fs = require("$1")
-const path = require("path")
+const { exec } = require("$1");
+const fs = require("$1");
+const path = require("path");
     this.logsDir = "./logs"
-const { exec } = require("$1")
-const fs = require("$1")
-const path = require("path")"
+const { exec } = require("$1");
+const fs = require("$1");
+const path = require("path")";
     this.logsDir = "./logs"
       exec("pm2 status --no-daemon")
       exec(pm2 logs ${processName} --lines ${lines} --nostream")
@@ -20,7 +20,7 @@ const path = require("path")"
       exec("pm2 monit --no-daemon")
   // Create logs directory if it doesn"
       fs.mkdirSync(this.logsDir, { "recursive"})
-    const lines = statusOutput.split("\n")
+const lines = statusOutput.split("\n");
       if (line.includes("│") && !line.includes("──") && !line.includes("id")
           .split("│")
             "id"
@@ -30,7 +30,7 @@ const path = require("path")"
             "status"
             "cpu"
             "memory": parts[6] || "N/A"
-    const lines = statusOutput.split("\n")
+const lines = statusOutput.split("\n");
       if (line.includes("│") && !line.includes("──") && !line.includes("id")) {";        const parts = line;          .split("│")"}
           processes.push({);            "id": parts[0],            name": parts[1],";            "mode": parts[2],"""restarts": parts[3],            "status": parts[4],            cpu": parts[5],";            "memory": parts[6] || "N/A", "}),"
       "total"
@@ -66,10 +66,10 @@ const path = require("path")"
         console.error("Error in monitoring "loop": ")
     console.log(")
 "Commands"
-  const command = process.argv[2] || "start"
+const command = process.argv[2] || "start";
     console.log("";PM2 Monitoring Dashboard - Usage);""Commands"
 "Examples":;"
-  const command = process.argv[2] || "start""
+const command = process.argv[2] || "start"";
     case "start"
     case "status"
     case "logs"

@@ -22,7 +22,7 @@ class AutomationImprovementSuite {}
   createEnhancedAutomationScripts() {
     this.log('🔧 Creating Enhanced Automation Scripts');
     // 1. Create a comprehensive error fixer
-    const errorFixerScript = "#!/usr/bin/env node
+const errorFixerScript = "#!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
 class ComprehensiveErrorFixer {
@@ -110,7 +110,7 @@ function runCommand(command, description) {
 }
 // Function to create performance monitoring script
 function createPerformanceMonitor() {
-  const script = `#!/usr/bin/env node
+const script = `#!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
 class PerformanceMonitor {
@@ -158,7 +158,7 @@ main();
   };
   log(message, level = 'INFO') {}
     const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] [${level}] ${message}`;`
+const logMessage = `[${timestamp}] [${level}] ${message}`;`;
     console.log(logMessage);
     fs.appendFileSync(this.logFile, logMessage + '\n');
   };
@@ -225,7 +225,7 @@ main();
   async runOptimization(optimization) {}
     try {}
       this.log(`Running: ${optimization.name}`);
-      const result = execSync(optimization.command, { })
+const result = execSync(optimization.command, { });
         encoding: 'utf8',
         cwd: this.projectRoot;
       }
@@ -320,7 +320,7 @@ monitorFileChanges();
 }
 // Function to create security scanner
 function createSecurityScanner() {
-  const script = `#!/usr/bin/env node
+const script = `#!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
 console.log('🔒 Security Scanner Started...');
@@ -328,7 +328,7 @@ console.log('🔒 Security Scanner Started...');
 function scanSecurity() {
   const vulnerabilities = [];
   // Check for common security issues
-  const filesToCheck = [
+const filesToCheck = [;
     '/workspace/package.json',
     '/workspace/next.config.js',
     '/workspace/tsconfig.json'
@@ -375,7 +375,7 @@ scanSecurity();
 }
 // Function to create code quality analyzer
 function createCodeQualityAnalyzer() {
-  const script = `#!/usr/bin/env node
+const script = `#!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
 console.log('🔍 Code Quality Analyzer Started...');
@@ -466,7 +466,7 @@ analyzeCodeQuality();
 }
 // Function to create automated testing script
 function createAutomatedTestingScript() {
-  const script = `#!/usr/bin/env node
+const script = `#!/usr/bin/env node;
 const fs = require('fs');
 const { execSync } = require('child_process');
 console.log('🧪 Automated Testing Script Started...');

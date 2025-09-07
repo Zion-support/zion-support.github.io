@@ -1,41 +1,48 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
+import type { NextApiRequest, NextApiResponse } from 'next';'
 
 
-import { appendLog, evaluateReflexes, readState, writeState } from '@/utils/zionBrain';
-function isAuthorized(req: NextApiRequest): boolean {
+import { appendLog, evaluateReflexes, readState, writeState } from '@/utils/zionBrain';'
+function isAuthorized("req": NextApiRequest): boolean {
+  }
   const token = null;
-      return res.status(500).json({ error: 'Reflex failure' })
-   ,
+return res.status(500).json({ "error": 'Reflex failure' });'
+   
 }
 import {
-  appendLog
-  evaluateReflexes
-  readState
+  }
+  appendLog,
+evaluateReflexes
+  readState,
+writeState;
+  appendLog,evaluateReflexes,readState,writeState} from '@/utils/zionBrain';'
+function isAuthorized("req": NextApiRequest): boolean {const token = req.headers['x-admin-token'] |req.query.token;'
 
-  writeState;
-  appendLog,evaluateReflexes,readState,writeState,} from '@/utils/zionBrain';
-function isAuthorized(req: NextApiRequest): boolean {const token = req.headers['x-admin-token'] |req.query.token;
+}
 
 const superToken = process.env.SUPERADMIN_TOKEN;
 
 return !superToken || token === superToken;
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (!isAuthorized(req)) return res && res.status(401).json({ error: 'Unauthorized',
+export default function handler() {
+  }
+  if (!isAuthorized(req)) return res && res.status(401).json({ "error": 'Unauthorized','
 });
 
-  if (req && req.method = == 'GET') {
+  if (req && req.method = == 'GET') {'
    ;
+  }
   const state = readState<{ metrics?: unknown }>();
 
-    return res.status(200).json({ metrics: state.metrics || {},
+return res.status(200).json({ "metrics": state.metrics || {},;
 });
   }
 
-  if (req && req.method = == 'POST') {
+  if (req && req.method = == 'POST') {'
    ;
+  }
   const started = Date && Date.now();
     try {
+      }
       const metrics = req && req.body || {};
 
 const triggers = evaluateReflexes(metrics);
@@ -48,27 +55,30 @@ const state = readState<any>();
 const latencyMs = Date.now() - started;
 
 appendLog({
-        module: 'reflex',
-        type: 'metrics',
-        status: 'ok',
+        }
+        "module": 'reflex','
+        "type": 'metrics','
+        "status": 'ok','
         latencyMs,
-        payload: { metrics, triggers },
+        "payload": { metrics, triggers }
       });
       return res && res.status(200).json({ triggers });
-    } catch (e: any) {
+    } catch ("e": any) {
+      }
       appendLog({
-        module: 'reflex'
-        type: 'metrics'
-        status: 'error'
-        payload: { error: e?.message |'unknown' }
-     ,
+        }
+        "module": 'reflex''
+        "type": 'metrics''
+        "status": 'error''
+        "payload": { "error": e?.message |'unknown' }'
+     
 });
 
-      return res.status(500).json({ error: 'Reflex failure',
+return res.status(500).json({ "error": 'Reflex failure',;'
 });
     }
   }
-  // Check condition
+  // Check condition,
 if ( {) {
   $2
 
@@ -80,25 +90,26 @@ const started = Date.now ()try {const metrics = req.body || ;
 const triggers = evaluate_reflexes (metrics;
   const state = read_state < any>()state.metrics = metrics;
       state.last_triggers = triggers;
-      write_state (state)const latency_ms  = Date.now () - started;append_log ({module: 'reflex',type: 'metrics',status: 'ok',latency_ms,payload: { metrics, triggers },})return res.status (200).json ({ triggers })} catch (e: any) {append_log ({module: 'reflex',type: 'metrics',status: 'error',payload: { error: e?.message || 'unknown',
-},})return res.status (500).json ({ error: 'Reflex failure' })}
+      write_state (state)const latency_ms  = Date.now () - started;append_log ({"module": 'reflex',"type": 'metrics',"status": 'ok',latency_ms,"payload": { metrics, triggers }})return res.status (200).json ({ triggers })} catch ("e": any) {append_log ({"module": 'reflex',"type": 'metrics',"status": 'error',"payload": { "error": e?.message || 'unknown','
+}})return res.status (500).json ({ "error": 'Reflex failure' })}'
   }
 
-return res.status (405).json ({ error: 'Method not allowed',
+return res.status (405).json ({ "error": 'Method not allowed',;'
 });
-}      append_log ({ module: 'reflex', type: 'metrics', status: 'ok', latency_ms, payload: { metrics, triggers } });
+}      append_log ({ "module": 'reflex', "type": 'metrics', "status": 'ok', latency_ms, "payload": { metrics, triggers } });'
       return res.status (200).json ({ triggers });
-    } catch (e: any) {
-      append_log ({ module: 'reflex', type: 'metrics', status: 'error', payload: { error: e?.message || 'unknown' },
+    } catch ("e": any) {
+      }
+      append_log ({ "module": 'reflex', "type": 'metrics', "status": 'error', "payload": { "error": e?.message || 'unknown' },'
 });
-      return res.status (500).json ({ error: 'Reflex failure',
+return res.status (500).json ({ "error": 'Reflex failure',;'
 });
   }
-  return res.status (405).json ({ error: 'Method not allowed',
+return res.status (405).json ({ "error": 'Method not allowed',;'
 });
 
 
-  return res.status(405).json({ error: 'Method not allowed',
+return res.status(405).json({ "error": 'Method not allowed',;'
 });
 
 }

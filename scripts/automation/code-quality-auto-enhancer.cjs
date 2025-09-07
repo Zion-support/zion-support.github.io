@@ -26,7 +26,7 @@ class CodeQualityAutoEnhancer {}
   async runCodeQualityChecks() {}
     this.log('Running code quality checks...', 'INFO');
     
-    const checks = [{ "name": 'ESLint', "command": 'npm run lint' },]
+const checks = [{ "name": 'ESLint', "command": 'npm run lint' },];
       { "name": 'Prettier', "command": 'npm run format:check' },
       { "name": 'TypeScript', "command": 'npm run type-check' },
       { "name": 'Test Coverage', "command": 'npm run test:coverage' };
@@ -104,7 +104,7 @@ class CodeQualityAutoEnhancer {}
         const lines = content.split('\n');
         
         // Apply common ESLint fixes;
-        const enhancements = [this.fixUnusedVariables.bind(this),]
+const enhancements = [this.fixUnusedVariables.bind(this),];
           this.fixMissingSemicolons.bind(this),
           this.fixUnusedImports.bind(this),
           this.fixConsoleStatements.bind(this),
@@ -151,7 +151,7 @@ class CodeQualityAutoEnhancer {}
         const lines = content.split('\n');
         
         // Apply common TypeScript enhancements;
-        const enhancements = [this.fixAnyType.bind(this),]
+const enhancements = [this.fixAnyType.bind(this),];
           this.fixMissingImports.bind(this),
           this.fixTypeAnnotations.bind(this),
           this.fixInterfaceIssues.bind(this),
@@ -332,7 +332,7 @@ class CodeQualityAutoEnhancer {}
         const moduleName = importMatch[1];
         
         // Add missing import at the top of the file;
-        const importStatement = `import * as ${moduleName.split('/').pop()} from '${moduleName}';`;`
+const importStatement = `import * as ${moduleName.split('/').pop()} from '${moduleName}';`;`;
         
         // Find the last import statement;
         let lastImportIndex = -1;
@@ -359,7 +359,7 @@ class CodeQualityAutoEnhancer {}
       const varMatch = line.match(/(const|let|var)\s+(\w+)\s*=/);
       if (varMatch) {}
         const varName = varMatch[2];
-        const fixedLine = line.replace()
+const fixedLine = line.replace();
           new RegExp(`(${varMatch[1]}\\s+${varName}\\s*)=`),`
           "$"1": unknown ="
         );

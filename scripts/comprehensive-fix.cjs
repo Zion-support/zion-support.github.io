@@ -6,7 +6,7 @@ const path = require('path');
 console.log('🔧 Comprehensive fix for all files...');
 
 // List of problematic files
-const filesToFix = [
+const filesToFix = [;
   'pages/about.tsx',
   'pages/blog.tsx', 
   'pages/contact.tsx',

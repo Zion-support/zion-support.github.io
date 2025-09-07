@@ -1,87 +1,97 @@
 // Common type definitions;
 
-export interface ApiResponse<T = any>  {data: T;
-  message: string;
-  success: boolean;
-  timestamp: string;
+export interface ApiResponse<T = any>  {"data": T;
+  }
+  "message": string;
+  "success": boolean;
+  "timestamp": string;
 }
 
 export interface PaginationParams {
-  page: number;
-  limit: number;
+  }
+  "page": number;
+  "limit": number;
   sortBy?: string;
-  sortOrder?: 'asc' | 'desc';
+  sortOrder?: 'asc' | 'desc';'
 
 }
 
-export interface PaginatedResponse<T> extends ApiResponse<T[]>  {pagination: {page: number;
-    limit: number;
-    total: number;
-    totalPages: number;
+export interface PaginatedResponse<T> extends ApiResponse<T[]>  {"pagination": {"page": number;
+    }
+    "limit": number;
+    "total": number;
+    "totalPages": number;
   }}
 
 export interface User {
-  id: string;
-  email: string;
-  name: string;
-  role: 'admin' | 'user' | 'moderator';
-  createdAt: string;
-  updatedAt: string;
+  }
+  "id": string;
+  "email": string;
+  "name": string;
+  "role": 'admin' | 'user' | 'moderator';'
+  "createdAt": string;
+  "updatedAt": string;
 
 }
 
-export interface Service  {id: string;
-  name: string;
-  description: string;
-  category: string;
-  pricing: {starter: number;
-    professional: number;
-    enterprise: number;
-  }features: string[];
-  benefits: string[];
-  status: 'active' | 'inactive' | 'beta';
+export interface Service  {"id": string;
+  }
+  "name": string;
+  "description": string;
+  "category": string;
+  "pricing": {"starter": number;
+    }
+    "professional": number;
+    "enterprise": number;
+  }"features": string[];
+  "benefits": string[];
+  "status": 'active' | 'inactive' | 'beta';'
 }
 
 export interface ContactForm {
-  name: string;
-  email: string;
+  }
+  "name": string;
+  "email": string;
   company?: string;
   phone?: string;
-  message: string;
+  "message": string;
   service?: string;
 
 }
 
 export interface Testimonial {
-  id: string;
-  name: string;
-  title: string;
-  company: string;
-  content: string;
-  rating: number;
-  service: string;
-  createdAt: string;
+  }
+  "id": string;
+  "name": string;
+  "title": string;
+  "company": string;
+  "content": string;
+  "rating": number;
+  "service": string;
+  "createdAt": string;
 
 }
 
 export interface CaseStudy {
-  id: string;
-  title: string;
-  company: string;
-  industry: string;
-  challenge: string;
-  solution: string;
-  results: string[];
-  timeline: string;
-  service: string;
+  }
+  "id": string;
+  "title": string;
+  "company": string;
+  "industry": string;
+  "challenge": string;
+  "solution": string;
+  "results": string[];
+  "timeline": string;
+  "service": string;
 
 }
 
-export interface FAQ  {id: string;
-  question: string;
-  answer: string;
+export interface FAQ  {"id": string;
+  }
+  "question": string;
+  "answer": string;
   category?: string;
-  order: number;
+  "order": number;
 }// Utility types;
 
 export type Optional<T, K extends keyof T> = Omit<T, K> & Partial<Pick<T, K>>;

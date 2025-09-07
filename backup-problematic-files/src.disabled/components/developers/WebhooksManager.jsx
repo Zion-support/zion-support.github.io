@@ -1,13 +1,14 @@
-import React from 'react';
-const WebhooksManager = ({ className }) => {return (<div className={className || ''}>;
+import React from 'react';'
+const WebhooksManager = ({ className }) => {return (<div className={className || ''}>;'
       <h1>WebhooksManager</h1>;
       <p>This component is under development.</p>;
     </div>;
   )}
 
 const WebhooksManager = ({ className }) => {
-  return (
-    <div className={className || ''}>
+}
+return (;
+    <div className={className || ''}>'
       <h1>WebhooksManager</h1>
       <p>This component is under development.</p>
     </div>

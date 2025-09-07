@@ -45,7 +45,7 @@ class $1 {}
 ");
   async runCommand(command, cwd = this.projectRoot) {");}
     return new Promise((resolve, reject) => {this.log(Running "command": ${command}");
-      const child = spawn(command, [], {})
+const child = spawn(command, [], {});
   "shell": true,
         cwd,
         "stdio": ["pipe", "pipe", "pipe"]}
@@ -102,7 +102,7 @@ class $1 {}
     const files = fs.readdirSync(distPath);this.log("Build output contains ${files.length} ""files/directories""");
     // Check for critical files;
     const criticalFiles = ["index.html"];
-    const missingFiles = criticalFiles.filter(;)
+const missingFiles = criticalFiles.filter(;);
       file => !fs.existsSync(path.join(distPath, file));
     );
     if (missingFiles.length > 0) {this.log("Missing critical "files": ${missingFiles.join(", ")}", "ERROR");
@@ -131,7 +131,7 @@ class $1 {}
         await this.runCommand("npm install -g http-server")};
 ;
       // Start server in background;
-      const serverProcess = spawn(npx",)
+const serverProcess = spawn(npx",);
         ["http-server", "serverPath", "-p", "5000", "-s"],
         {}
   "shell": true,
@@ -142,7 +142,7 @@ class $1 {}
       await new Promise(resolve => setTimeout(resolve, 3000));
       // Test if server is responding;
       try {}
-  const testResult = await this.runCommand(curl -s -o /""dev/null"" -w "%{http_code}" "http": //localhost:5000";)
+const testResult = await this.runCommand(curl -s -o /""dev/null"" -w "%{http_code}" "http": //localhost:5000";);
         );
         if (testResult.stdout.includes("200")) {}
   this.log("Asset paths verification passed`);
@@ -162,7 +162,7 @@ class $1 {}
         await this.runCommand("npm install -g http-server")};
 ;
       // Start server in background;
-      const serverProcess = spawn(npx",)
+const serverProcess = spawn(npx",);
         ["http-server", "serverPath", "-p", "5000", "-s"],
         {}
   "shell": true,
@@ -175,7 +175,7 @@ class $1 {}
 
       // Test if server is responding;
       try {}
-  const testResult = await this.runCommand(curl -s -o /"dev/null" -w "%{http_code} "http": //localhost:5000";)
+const testResult = await this.runCommand(curl -s -o /"dev/null" -w "%{http_code} "http": //localhost:5000";);
         );
         if (testResult.stdout.includes("200")) {}
   this.log("Asset paths verification passed");
@@ -204,14 +204,14 @@ serverProcess.kill();
   this.log("Running tests...");
     try {}
   // Check if test script exists;
-      const packageJson = JSON.parse(;)
+const packageJson = JSON.parse(;);
         fs.readFileSync(path.join(this.projectRoot, "package.json"), "utf8");
 
   async runTests() {}
   this.log("Running tests...");
     try {}
   // Check if test script exists;
-      const packageJson = JSON.parse(;)
+const packageJson = JSON.parse(;);
         fs.readFileSync(path.join(this.projectRoot, "package.json"), "utf8");
       );
 

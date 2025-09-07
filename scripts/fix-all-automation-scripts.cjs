@@ -22,7 +22,7 @@ class AutomationScriptFixer {}
       console.error(`Failed to write to log "file": ${error.message}`)};
   };
   async ensureDirectories() {}
-    const dirs = [path.dirname(this.logFile),]
+const dirs = [path.dirname(this.logFile),];
       path.dirname(this.reportFile),
       path.join(this.projectRoot, 'logs'),
       path.join(this.projectRoot, 'reports');
@@ -36,7 +36,7 @@ class AutomationScriptFixer {}
     };
   };
   async findScriptFiles() {}
-    const scriptDirs = [path.join(this.projectRoot, 'scripts'),]
+const scriptDirs = [path.join(this.projectRoot, 'scripts'),];
       path.join(this.projectRoot, 'scripts/automation');
     ];
 

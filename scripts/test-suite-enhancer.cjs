@@ -1,9 +1,9 @@
 #!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
+const fs = require('fs');
+const path = require('path');
 function log(message, level = 'INFO')
   log('🧪 Creating comprehensive test suite...')
-  const testUtilsContent = "
+const testUtilsContent = ";
   "id"
   "name"
   "email"
@@ -11,6 +11,6 @@ function log(message, level = 'INFO')
   "id"
   "text"
   "sender"
-  const jestSetupContent = "
+const jestSetupContent = ";
 
     log(` Test suite enhancement "failed"`)

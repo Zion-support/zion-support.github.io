@@ -1,10 +1,10 @@
 #!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
-const { execSync } = require('child_process')
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
     this.reportsDir = path.join(this.projectRoot, 'error-prevention-reports')
     this.log(' Checking TypeScript errors...')
-      const result = execSync('npx tsc --noEmit')
+const result = execSync('npx tsc --noEmit');
         "encoding"
         "status"
         "status"

@@ -1,8 +1,8 @@
 #!/""usr/bin/env""
-const fs = require("fs")
-const path = require("path")
-const { execSync } = require("child_process")
-const ErrorFixerAutomation = require("./error-fixer-automation.cjs")
+const fs = require("fs");
+const path = require("path");
+const { execSync } = require("child_process");
+const ErrorFixerAutomation = require("./error-fixer-automation.cjs");
     this.reportsDir = path.join(this.projectRoot, "automation-reports")
     this.logsDir = path.join(this.projectRoot, "logs")
   "totalRuns"
@@ -17,11 +17,11 @@ const ErrorFixerAutomation = require("./error-fixer-automation.cjs")
       await this.logError("Comprehensive Error Automation failed")
   ["this.reportsDir", "this.logsDir"]
   fs.mkdirSync(dir, { "recursive"})
-  const statsFile = path.join(this.reportsDir, "automation-stats.json")
+const statsFile = path.join(this.reportsDir, "automation-stats.json");
   this.stats = JSON.parse(fs.readFileSync(statsFile, "utf8")
   console.warn("Could not load existing "stats": ")
   console.warn("Could not load existing "stats": ")
-  const statsFile = path.join(this.reportsDir, "automation-stats.json")
+const statsFile = path.join(this.reportsDir, "automation-stats.json");
   console.log(" Running Error Fixing...")
   await this.logError("Error fixing failed")
 // console.log(" Running Code Quality Checks...")
@@ -96,7 +96,7 @@ console.log(� Comprehensive report saved "to": ${reportFile}```)
   "timestamp"
       "error"
       "stack"
-const logFile = path.join(this.logsDir, ")
+const logFile = path.join(this.logsDir, ");
     fs.writeFileSync(logFile")
 
 console.error(")

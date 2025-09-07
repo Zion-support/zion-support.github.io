@@ -2,7 +2,10 @@
 
 import {
 
+}
+
 import {;
+  }
   Bell,;
   FileText,;
   Home,;
@@ -16,15 +19,16 @@ import {;
   Settings,
 
   Users,;
-} from "lucide-react";  Bell,
+} from "lucide-react";  Bell,"
   FileText,
   Home,
   Mail,
   Search,
   Settings,
   Users,;
-} from "lucide-react";
+} from "lucide-react";"
 import {;
+  }
   Sidebar,;
   SidebarContent,;
   SidebarGroup,;
@@ -40,7 +44,7 @@ import {;
             <SidebarMenu>
               <SidebarMenuItem>
                 <SidebarMenuButton asChild>
-                  <a href="/publish">
+                  <a href="/publish">"
                     <FileText size={16} />
                     <span>My Content</span>
                   </Link>                  </Link>
@@ -48,7 +52,7 @@ import {;
               </SidebarMenuItem>
               <SidebarMenuItem>
                 <SidebarMenuButton asChild>
-                  <a href="/analytics">
+                  <a href="/analytics">"
                     <Search size={16} />
                     <span>Analytics</span>
                   </Link>                  </Link>
@@ -60,7 +64,7 @@ import {;
               </SidebarMenuItem>
               <SidebarMenuItem>
                 <SidebarMenuButton asChild>
-                  <a href="/settings">
+                  <a href="/settings">"
                     <Settings size={16} />
                     <span>Settings</span>
                   </Link>                  </Link>
@@ -73,8 +77,9 @@ import {;
   );
 }
   )
-import { Bell, FileText, Home, Mail, Search, Settings, Users } from "lucide-react";
+import { Bell, FileText, Home, Mail, Search, Settings, Users } from "lucide-react";"
 import {;
+  }
   Sidebar,;
   SidebarContent,;
   SidebarGroup,;
@@ -82,8 +87,9 @@ import {;
   SidebarMenuItem,;
   SidebarMenuButton,;
   SidebarGroupLabel,;
-  SidebarGroupContent} from "@/components/ui/sidebar";
+  SidebarGroupContent} from "@/components/ui/sidebar";"
 export function AppSidebar() {;
+  }
   return (;                  </a>;
                 </SidebarMenuButton>;
               </SidebarMenuItem>;

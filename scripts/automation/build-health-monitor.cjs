@@ -68,7 +68,7 @@ class BuildHealthMonitor {}
 ;
       // Check bundle size;
       try {}
-  const bundleAnalysis = execSync("npm run analyze", {})
+const bundleAnalysis = execSync("npm run analyze", {});
   "stdio": "pipe",
           "encoding": "utf8"}
 });
@@ -84,7 +84,7 @@ class BuildHealthMonitor {}
       report.recommendations = this.generateRecommendations(report);
       // Save report;
       const timestamp = Date.now();
-      const reportPath = path.join(;)
+const reportPath = path.join(;);
         this.projectRoot,error-reports", `build-health-report-${timestamp}.json`} catch (error) {`}
   report.bundleSize = {}
   "status": "error",
@@ -96,7 +96,7 @@ class BuildHealthMonitor {}
 
       // Save report;
       const timestamp = Date.now();
-      const reportPath = path.join(;)
+const reportPath = path.join(;);
         this.projectRoot,error-reports", `build-health-report-${timestamp}.json`;`
       );
 

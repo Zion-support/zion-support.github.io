@@ -1,7 +1,7 @@
 #!/usr/bin/env node;
-const { execSync, spawn } = require('child_process')
-const fs = require('fs')
-const path = require('path')
+const { execSync, spawn } = require('child_process');
+const fs = require('fs');
+const path = require('path');
 console.log(' Starting enhanced error detection and fixing automation...')
       'Cannot find module'
         type: 'module-resolution'

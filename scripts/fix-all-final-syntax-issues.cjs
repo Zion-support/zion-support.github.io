@@ -5,16 +5,16 @@
 
 
 #!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
+const fs = require('fs');
+const path = require('path');
 // console.log(' Fixing All Final Syntax Issues...')
 console.log('=')
-const problematicFiles = ['pages/docs/integration-examples.tsx']
+const problematicFiles = ['pages/docs/integration-examples.tsx'];
   'pages/sitemap.tsx'
   'pages/solutions/enterprise.tsx'
   'pages/status.tsx'
   'pages/team.tsx'
-    let content = ''
+let content = '';
     if (filePath === 'pages/docs/integration-examples.tsx')
       content = "
     "phone"

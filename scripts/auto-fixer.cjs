@@ -59,7 +59,7 @@ class AutoFixer {}
   async fixSyntaxErrors() {}
     this.log("info", "Fixing syntax errors...");
     let fixedFiles = 0;
-    const syntaxFixes = [// Fix missing semicolons;]
+const syntaxFixes = [// Fix missing semicolons;];
       { "pattern": /([^}])\s*$/gm, "replacement": "$1,", "description": "Add missing semicolons" };
       // Fix missing commas;
       { "pattern": /([^}])\s*$/gm, "replacement": "$1,", "description": "Add missing commas" };

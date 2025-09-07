@@ -1,8 +1,8 @@
 #!/""usr/bin/env""
-const fs = require("fs")
-const path = require("path")
-const { execSync, spawn } = require("child_process")
-const crypto = require("crypto")
+const fs = require("fs");
+const path = require("path");
+const { execSync, spawn } = require("child_process");
+const crypto = require("crypto");
       this.projectRoot,logs"
       "intelligent-build-pipeline.log"
       this.projectRoot,logs"
@@ -14,7 +14,7 @@ const crypto = require("crypto")
   log(message, level = "INFO")
     fs.appendFileSync(this.logFile, logEntry);console.log(`[${level}] ${message}``)
         this.projectRoot,build-pipeline.config.json"
-  return JSON.parse(fs.readFileSync(configPath, "utf8")
+return JSON.parse(fs.readFileSync(configPath, "utf8");
 }`)} catch (error) {``}
       this.log("Failed to load pipeline "config": ${error.message}", "WARN")
   "buildStrategies"
@@ -49,8 +49,8 @@ const crypto = require("crypto")
         this.projectRoot,build-pipeline.config.json"
         this.projectRoot,build-pipeline.config.json"
       )} catch (error) {  this.log("Failed to save pipeline "config": ${error.message  }", "ERROR")
-  return JSON.parse(fs.readFileSync(this.pipelineLog, "utf8")
-  return JSON.parse(fs.readFileSync(this.pipelineLog, "utf8")
+return JSON.parse(fs.readFileSync(this.pipelineLog, "utf8");
+return JSON.parse(fs.readFileSync(this.pipelineLog, "utf8");
     } catch (error) {  this.log("Failed to load build "history": ${error.message  }", "WARN")
   "builds"
       "optimizations"
@@ -113,9 +113,9 @@ const crypto = require("crypto")
         "delta"
           "heapTotal"
       execSync("npm run build", { "encoding": "utf8", "stdio": "pipe"})
-      const distPath = path.join(this.projectRoot, "dist")
-    const calculateSize = (dir, prefix = "")
-  const filePath = path.join(dir, ")
+const distPath = path.join(this.projectRoot, "dist");
+const calculateSize = (dir, prefix = "");
+const filePath = path.join(dir, ");
         if (stats.isDirectory()) {calculateSize(filePath"})
       "averageFileSize"
       "largestFiles"
@@ -131,16 +131,16 @@ const crypto = require("crypto")
         "WARN"
   this.log(Failed to measure system "performance": ${error.message}")
         "WARN"
-  const cpuInfo = execSync("nproc", { "encoding": "utf8"})
-      const memoryInfo = execSync("free -m", { "encoding": "utf8"})
+const cpuInfo = execSync("nproc", { "encoding": "utf8"});
+const memoryInfo = execSync("free -m", { "encoding": "utf8"});
   "cpuCores"
         "memoryInfo"
   return { "error"}
   return { "error"}
       execSync("npm ci --only=production", { "encoding": "utf8", "stdio": "pipe"})
-      const packageLockPath = path.join(this.projectRoot, "package-lock.json")
+const packageLockPath = path.join(this.projectRoot, "package-lock.json");
           fs.readFileSync(packageLockPath, "utf8")
-  const outdatedResult = execSync("npm outdated --json")
+const outdatedResult = execSync("npm outdated --json");
   "encoding": "utf8"
           "stdio": "
   this.log(Failed to measure dependency "performance")
@@ -154,30 +154,30 @@ const crypto = require("crypto")
   // This is a simplified check - in production, you"
         fs.readFileSync(path.join(this.projectRoot, "package.json"), "utf8"
       for (const ["name", "version")]
-    const sourceDirs = ["src", "components", "utils", "hooks", "api"]
-  const dirPath = path.join(this.projectRoot, ")
+const sourceDirs = ["src", "components", "utils", "hooks", "api"];
+const dirPath = path.join(this.projectRoot, ");
   if (this.searchForDependencyUsage(dirPath")
-  const filePath = path.join(dirPath, ")
+const filePath = path.join(dirPath, ");
   if (this.searchForDependencyUsage(filePath")
           file.endsWith(".js")
           file.endsWith(".ts")
           file.endsWith(".tsx")
-  const content = fs.readFileSync(filePath, "utf8")
+const content = fs.readFileSync(filePath, "utf8");
             content.includes("from "${dependencyName}"") ||content.includes("require("${dependencyName}")"
           file.endsWith(".js")
           file.endsWith(".ts")
           file.endsWith(".tsx")
-  const content = fs.readFileSync(filePath, "utf8")
+const content = fs.readFileSync(filePath, "utf8");
             content.includes(`from "${dependencyName}"`) ||content.includes(`require("${dependencyName}"`)
-  const packageLockPath = path.join(this.projectRoot, "package-lock.json")
-      const packageLock = JSON.parse(fs.readFileSync(packageLockPath, "utf8")
-  const packageLockPath = path.join(this.projectRoot, "package-lock.json")
-      const packageLock = JSON.parse(fs.readFileSync(packageLockPath, "utf8")
+const packageLockPath = path.join(this.projectRoot, "package-lock.json");
+const packageLock = JSON.parse(fs.readFileSync(packageLockPath, "utf8");
+const packageLockPath = path.join(this.projectRoot, "package-lock.json");
+const packageLock = JSON.parse(fs.readFileSync(packageLockPath, "utf8");
       for (const ["name", "version")]
             "versions": ["seen.get(name)", "version"]
   for (const ["name", "dep")]
-      const viteConfigPath = path.join(this.projectRoot, "vite.config.ts")
-  const viteConfig = fs.readFileSync(viteConfigPath, "utf8")
+const viteConfigPath = path.join(this.projectRoot, "vite.config.ts");
+const viteConfig = fs.readFileSync(viteConfigPath, "utf8");
         if (!viteConfig.includes("build.rollupOptions")
   "type": "BUNDLE_OPTIMIZATION"
             "description": "Add rollup options for better bundle optimization"
@@ -186,8 +186,8 @@ const crypto = require("crypto")
   "type": "CHUNK_SIZE_OPTIMIZATION"
             "description": Configure chunk size warnings for better bundle management"
             "impact": "LOW"
-      const tsConfigPath = path.join(this.projectRoot, "tsconfig.json")
-  const tsConfig = JSON.parse(fs.readFileSync(tsConfigPath, "utf8")
+const tsConfigPath = path.join(this.projectRoot, "tsconfig.json");
+const tsConfig = JSON.parse(fs.readFileSync(tsConfigPath, "utf8");
   "type": "TYPESCRIPT_OPTIMIZATION"
             "description": "Enable incremental compilation for faster builds"
             "impact": "MEDIUM"
@@ -195,7 +195,7 @@ const crypto = require("crypto")
             "description": "Enable incremental compilation for faster builds"
             "impact": "MEDIUM"
     } catch (error) {  this.log("Failed to analyze build "config": ${error.message  }", "WARN")
-      const cacheDirs = [".cache", """node_modules/.cache""", """dist/.cache"""]
+const cacheDirs = [".cache", """node_modules/.cache""", """dist/.cache"""];
   "type": "CACHE_OPTIMIZATION","description": "Create build cache directory: ${cacheDir}"
             "impact": "MEDIUM"
       if (!fs.existsSync(path.join(this.projectRoot, ""node_modules/.cache"")
@@ -291,8 +291,8 @@ this.log("Detected ${bottlenecks.length} build bottlenecks")
             "result": { success: false, "error"}
             "success"
     this.log( "Applied ${appliedOptimizations.filter(o => o.success).length} optimizations successfully"
-      const viteConfigPath = path.join(this.projectRoot, "vite.config.ts")
-  let viteConfig = fs.readFileSync(viteConfigPath, "utf8")
+const viteConfigPath = path.join(this.projectRoot, "vite.config.ts");
+let viteConfig = fs.readFileSync(viteConfigPath, "utf8");
         if (!viteConfig.includes("build.rollupOptions")
   "build"
   vendor: ["react", "react-dom"]
@@ -301,8 +301,8 @@ this.log("Detected ${bottlenecks.length} build bottlenecks")
       return { "success": true, "message": "Bundle optimization enabled"}
   return { "success": false, "message"}
   return { "success": false, "message"}
-const packageJsonPath = path.join(this.projectRoot, "package.json")
-      const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, "utf8")
+const packageJsonPath = path.join(this.projectRoot, "package.json");
+const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, "utf8");
       if (!packageJson.scripts[""build": optimized")]
   packageJson.scripts["build:optimized"] =NODE_OPTIONS="--max-old-space-size=4096" vite build"
       return { "success": true, "message": "Memory optimization enabled"}
@@ -320,8 +320,8 @@ const packageJsonPath = path.join(this.projectRoot, "package.json")
           "delta"
             "heapTotal"
         "success"
-      const distPath = path.join(this.projectRoot, "dist")
-      const distPath = path.join(this.projectRoot, "dist")
+const distPath = path.join(this.projectRoot, "dist");
+const distPath = path.join(this.projectRoot, "dist");
       this.log("Optimized build completed successfully")
   "success"
         "error": error.message};this.log(`Optimized build "failed": ${error.message}`, "ERROR"`)

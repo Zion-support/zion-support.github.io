@@ -1,316 +1,262 @@
-import { QuoteFormData } from "@/types/quotes";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Textarea } from "@/components/ui/textarea";
+import { QuoteFormData } from "@/types/quotes";"
+import { Input } from "@/components/ui/input";"
+import { Label } from "@/components/ui/label";"
+import { Textarea } from "@/components/ui/textarea";"
 interface ProjectDetailsStepProps {
-  formData: QuoteFormData;
-  updateFormData: (data: Partial<QuoteFormData>) => void;
+  }
+  "formData": QuoteFormData;
+  "updateFormData": ("data": Partial<QuoteFormData>) => void;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
-export function ProjectDetailsStep({
-  formData,
-  updateFormData,
-}: ProjectDetailsStepProps) {
-  return (
-    <div className="space-y-6">
+export function ProjectDetailsStep() {
+}
+return (;
+    <div className="space-y-6">"
       <div>
-        <h3 className="text-xl font-semibold text-white mb-4">
+        <h3 className="text-xl font-semibold text-white mb-4">"
           Tell us about your project
         </h3>
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
-        <div className="space-y-4">
+        <div className="space-y-4">"
           <div>
-            <Label htmlFor="projectName" className="text-zion-slate-light">
+            <Label htmlFor="projectName" className="text-zion-slate-light">"
               Project Name
             </Label>
-            <Input
-              id="projectName"
-              placeholder="Enter a name for your project"
+            <Input,
+id="projectName""
+              placeholder="Enter a name for your project""
               value={formData.projectName}
-              onChange={(e) => updateFormData({ projectName: e.target.value })}
-              className="bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white"
+              onChange={(e) => updateFormData({ "projectName": e.target.value })}
+              className="bg-zion-blue border border-zion-blue-light "focus":border-zion-purple text-white""
             />
           </div>
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
           <div>
-            <Label
-              htmlFor="projectDescription"
-              className="text-zion-slate-light"
+            <Label,
+htmlFor="projectDescription""
+              className="text-zion-slate-light""
             >
               Project Description
             </Label>
-            <Textarea
-              id="projectDescription"
-              placeholder="Describe your project in detail..."
+            <Textarea,
+id="projectDescription""
+              placeholder="Describe your project in detail...""
               value={formData.projectDescription}
               onChange={(e) =>
-                updateFormData({ projectDescription: e.target.value })
+                }
+                updateFormData({ "projectDescription": e.target.value })
               }
-              className="min-h-32 bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white"
+              className="min-h-32 bg-zion-blue border border-zion-blue-light "focus":border-zion-purple text-white""
             />
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
       <div>
-        <h3 className="text-xl font-semibold text-white mb-4">
+        <h3 className="text-xl font-semibold text-white mb-4">"
           Contact Information
         </h3>
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 "md":grid-cols-2 gap-4">"
           <div>
-            <Label htmlFor="name" className="text-zion-slate-light">
+            <Label htmlFor="name" className="text-zion-slate-light">"
               Name
             </Label>
-            <Input
-              id="name"
-              placeholder="Your name"
-<<<<<<< HEAD
-import { QuoteFormData } from "@/types/quotes";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label",;
-import { Textarea } from "@/components/ui/textarea",;
+            <Input,
+id="name""
+              placeholder="Your name""
+import { QuoteFormData } from "@/types/quotes";"
+import { Input } from "@/components/ui/input";"
+import { Label } from "@/components/ui/label",;"
+import { Textarea } from "@/components/ui/textarea",;"
 interface ProjectDetailsStepProps {;
-  formData: QuoteFormData;
-  updateFormData: (data: Partial<QuoteFormData>) => void;
+  }
+  "formData": QuoteFormData;
+  "updateFormData": ("data": Partial<QuoteFormData>) => void;
 }
 ;
-export function ProjectDetailsStep({ formData, updateFormData }: ProjectDetailsStepProps) {;
+export function ProjectDetailsStep() {;
+  }
   return (;
-    <div className="space-y-6">;
+    <div className="space-y-6">;"
       <div>;
-        <h3 className="text-xl font-semibold text-white mb-4">Tell us about your project</h3>;
-        <div className="space-y-4">;
+        <h3 className="text-xl font-semibold text-white mb-4">Tell us about your project</h3>;"
+        <div className="space-y-4">;"
           <div>;
-            <Label htmlFor="projectName" className="text-zion-slate-light">Project Name</Label>;
+            <Label htmlFor="projectName" className="text-zion-slate-light">Project Name</Label>;"
             <Input;
-              id="projectName";
-              placeholder="Enter a name for your project";
+              id="projectName";"
+              placeholder="Enter a name for your project";"
               value={formData.projectName}
-              onChange={(e) => updateFormData({ projectName: e.target.value })}
-              className="bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white";
+              onChange={(e) => updateFormData({ "projectName": e.target.value })}
+              className="bg-zion-blue border border-zion-blue-light "focus":border-zion-purple text-white";"
             />;
           </div>;
           <div>;
-            <Label htmlFor="projectDescription" className="text-zion-slate-light">Project Description</Label>;
+            <Label htmlFor="projectDescription" className="text-zion-slate-light">Project Description</Label>;"
             <Textarea;
-              id="projectDescription";
-              placeholder="Describe your project in detail...";
+              id="projectDescription";"
+              placeholder="Describe your project in detail...";"
               value={formData.projectDescription}
-              onChange={(e) => updateFormData({ projectDescription: e.target.value })}
-              className="min-h-32 bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white";
+              onChange={(e) => updateFormData({ "projectDescription": e.target.value })}
+              className="min-h-32 bg-zion-blue border border-zion-blue-light "focus":border-zion-purple text-white";"
             />;
           </div>;
         </div>;
       </div>;
       <div>;
-        <h3 className="text-xl font-semibold text-white mb-4">Contact Information</h3>;
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
+        <h3 className="text-xl font-semibold text-white mb-4">Contact Information</h3>;"
+        <div className="grid grid-cols-1 "md":grid-cols-2 gap-4">;"
           <div>;
-            <Label htmlFor="name" className="text-zion-slate-light">Name</Label>;
+            <Label htmlFor="name" className="text-zion-slate-light">Name</Label>;"
             <Input;
-              id="name";
-              placeholder="Your name";
+              id="name";"
+              placeholder="Your name";"
               value={formData.contactInfo.name}          <div>
-=======
-              value={formData.contactInfo.name}
-              onChange={(e) =>
-                updateFormData({
-                  contactInfo: {
-                    ...formData.contactInfo,
-                    name: e.target.value,
-                  },
-                })
-              }
-              className="bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white"
-            />
-          </div>
-
-          <div>
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
-            <Label htmlFor="company" className="text-zion-slate-light">
+            <Label htmlFor="company" className="text-zion-slate-light">"
               Company
             </Label>
-            <Input
-              id="company"
-              placeholder="Your company name"
+            <Input,
+id="company""
+              placeholder="Your company name""
               value={formData.contactInfo.company}
               onChange={(e) =>
+                }
                 updateFormData({
-                  contactInfo: {
-                    ...formData.contactInfo,
-                    company: e.target.value,
-                  },
-                })
+                  }
+                  "contactInfo": {
+                    ...formData.contactInfo
+                    }
+                    "company": e.target.value}})
               }
-              className="bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white"
+              className="bg-zion-blue border border-zion-blue-light "focus":border-zion-purple text-white""
             />
           </div>
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
           <div>
-            <Label htmlFor="email" className="text-zion-slate-light">
+            <Label htmlFor="email" className="text-zion-slate-light">"
               Email
             </Label>
-            <Input
-              id="email"
-              type="email"
-              placeholder="Your email address"
-<<<<<<< HEAD
-=======
-              value={formData.contactInfo.email}
-              onChange={(e) =>
-                updateFormData({
-                  contactInfo: {
-                    ...formData.contactInfo,
-                    email: e.target.value,
-                  },
-                })
-              }
-              className="bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white"
-            />
-          </div>
-
-          <div>
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
-            <Label htmlFor="phone" className="text-zion-slate-light">
+            <Input,
+id="email""
+              type="email""
+              placeholder="Your email address""
+            <Label htmlFor="phone" className="text-zion-slate-light">"
               Phone
             </Label>
-            <Input
-              id="phone"
-              placeholder="Your phone number"
+            <Input,
+id="phone""
+              placeholder="Your phone number""
               value={formData.contactInfo.phone}
               onChange={(e) =>
+                }
                 updateFormData({
-                  contactInfo: {
-                    ...formData.contactInfo,
-                    phone: e.target.value,
-                  },
-                })
+                  }
+                  "contactInfo": {
+                    ...formData.contactInfo
+                    }
+                    "phone": e.target.value}})
               }
-              className="bg-zion-blue border border-zion-blue-light focus: border-zion-purple text-white"
+              className="bg-zion-blue border border-zion-blue-light "focus": border-zion-purple text-white""
             />
           </div>
         </div>
       </div>
     </div>
-<<<<<<< HEAD
-              className="bg-zion-blue border border-zion-blue-light focus: border-zion-purple text-white";
-import { QuoteFormData  } from '@/types / quotes';
-import { Input  } from '@/components / ui / input';
-import { Label  } from '@/components / ui / label';
-import { Textarea  } from '@/components / ui / textarea';
+              className="bg-zion-blue border border-zion-blue-light "focus": border-zion-purple text-white";"
+import { QuoteFormData  } from '@/types / quotes';'
+import { Input  } from '@/components / ui / input';'
+import { Label  } from '@/components / ui / label';'
+import { Textarea  } from '@/components / ui / textarea';'
 interface ProjectDetailsStepProps {
-  form_data: QuoteFormData;
-  updateFormData: (data: Partial < QuoteFormData>) => void;}
+  }
+  "form_data": QuoteFormData;
+  "updateFormData": ("data": Partial < QuoteFormData>) => void;}
             />;
           </div>;
         </div>;
       </div>;
       <div>;
-        <h3 className="text - xl font - semibold text - white mb-4">;
+        <h3 className="text - xl font - semibold text - white mb-4">;"
           Contact Information;
         </h3>;
-        <div className="grid grid - cols - 1 md:grid - cols - 2 gap-4">;
+        <div className="grid grid - cols - 1 "md":grid - cols - 2 gap-4">;"
           <div>;
-            <Label html_for="name" className="text - zion - slate-light">;
+            <Label html_for="name" className="text - zion - slate-light">;"
               Name;
             </Label>;
             <Input;
-              id="name";
-              placeholder="Your name";
+              id="name";"
+              placeholder="Your name";"
               value={form_data.contact_info.name}
               on_change={(e) =>;
+                }
                 updateFormData ({
-                  contact_info: {
-                    ...form_data.contact_info,
-                    name: e.target.value,
-                  },
-                });
+                  }
+                  "contact_info": {
+                    ...form_data.contact_info
+                    }
+                    "name": e.target.value}});
               }
-              className="bg - zion - blue border border - zion - blue - light focus:border - zion - purple text-white";
+              className="bg - zion - blue border border - zion - blue - light "focus":border - zion - purple text-white";"
             />;
           </div>;
           <div>;
-            <Label html_for="company" className="text - zion - slate-light">;
+            <Label html_for="company" className="text - zion - slate-light">;"
               Company;
             </Label>;
             <Input;
-              id="company";
-              placeholder="Your company name";
+              id="company";"
+              placeholder="Your company name";"
               value={form_data.contact_info.company}
               on_change={(e) =>;
+                }
                 updateFormData ({
-                  contact_info: {
-                    ...form_data.contact_info,
-                    company: e.target.value,
-                  },
-                });
+                  }
+                  "contact_info": {
+                    ...form_data.contact_info
+                    }
+                    "company": e.target.value}});
               }
-              className="bg - zion - blue border border - zion - blue - light focus:border - zion - purple text-white";
+              className="bg - zion - blue border border - zion - blue - light "focus":border - zion - purple text-white";"
             />;
           </div>;
           <div>;
-            <Label html_for="email" className="text - zion - slate-light">;
+            <Label html_for="email" className="text - zion - slate-light">;"
               Email;
             </Label>;
             <Input;
-              id="email";
-              type="email";
-              placeholder="Your email address";
+              id="email";"
+              type="email";"
+              placeholder="Your email address";"
               value={form_data.contact_info.email}
               on_change={(e) =>;
+                }
                 updateFormData ({
-                  contact_info: {
-                    ...form_data.contact_info,
-                    email: e.target.value,
-                  },
-                });
+                  }
+                  "contact_info": {
+                    ...form_data.contact_info
+                    }
+                    "email": e.target.value}});
               }
-              className="bg - zion - blue border border - zion - blue - light focus:border - zion - purple text-white";
+              className="bg - zion - blue border border - zion - blue - light "focus":border - zion - purple text-white";"
             />;
           </div>;
           <div>;
-            <Label html_for="phone" className="text - zion - slate-light">;
+            <Label html_for="phone" className="text - zion - slate-light">;"
               Phone;
             </Label>;
             <Input;
-              id="phone";
-              placeholder="Your phone number";
+              id="phone";"
+              placeholder="Your phone number";"
               value={form_data.contact_info.phone}
               on_change={(e) =>;
+                }
                 updateFormData ({
-                  contact_info: {
-                    ...form_data.contact_info,
-                    phone: e.target.value,
-                  },
-                });
+                  }
+                  "contact_info": {
+                    ...form_data.contact_info
+                    }
+                    "phone": e.target.value}});
               }
-              className="bg - zion - blue border border - zion - blue - light focus: border - zion - purple text-white";
+              className="bg - zion - blue border border - zion - blue - light "focus": border - zion - purple text-white";"
             />;
           </div>;
         </div>;
       </div>;
     </div>);}
   )
-=======
-  );
-}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1

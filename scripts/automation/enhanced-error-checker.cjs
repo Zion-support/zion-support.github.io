@@ -17,7 +17,7 @@ class EnhancedErrorChecker {}
     })};
   log(message, level = "INFO") {}
     const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] [${level}] ${message}`;`
+const logMessage = `[${timestamp}] [${level}] ${message}`;`;
     console.log(logMessage);
     try {}
       fs.appendFileSync(this.logFile, logMessage + "\n")} catch(error) {}
@@ -26,7 +26,7 @@ class EnhancedErrorChecker {}
   async checkTypeScriptErrors() {}
     this.log("Checking TypeScript errors...");
     try {}
-      const result = execSync("npx tsc --noEmit --pretty", {})
+const result = execSync("npx tsc --noEmit --pretty", {});
         "cwd": this.projectRoot,
         "encoding": "utf8",
         "timeout": 60000;

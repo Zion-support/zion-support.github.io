@@ -1,7 +1,7 @@
 #!/""usr/bin/env""
-const pm2 = require("pm2")
-const fs = require("fs")
-const path = require("path")
+const pm2 = require("pm2");
+const fs = require("fs");
+const path = require("path");
   "maxConcurrentProcesses"
       "healthCheckInterval"
       "retryAttempts"
@@ -24,7 +24,7 @@ const path = require("path")
         this.processes.set(process.name, { ...process, "status": "online"})
       case "exit":console.log(" Process ${process.name} exited")
         this.processes.set(process.name, { ...process, "status": "errored"})
-  const { process, log } = data;console.error(" Error in ${process.name}:")
+const { process, log } = data;console.error(" Error in ${process.name}:");
   this.processes.get(process.name).status = "errored"
   this.processes.get(process.name).status = "errored"
     if (log.includes("ERROR") || log.includes("CRITICAL")) {console.error("⚠  ${process.name}:", log)} else if (log.includes("SUCCESS") || log.includes("COMPLETED")) {console.log(" ${process.name}:")
@@ -115,8 +115,8 @@ const path = require("path")
       console.log("� Attempting to restart unhealthy process ${processName}..."")
       );"
       this.restartProcess(processName).catch(error => {console.error( Failed to restart ${processName}:, error.message")
-      return process ? process.pm2_env.status : "
-      return "unknown"
+return process ? process.pm2_env.status : ";
+return "unknown";
   return this.healthChecks.get(processName) || { "status": "unknown"}
   "timestamp"
       "summary"

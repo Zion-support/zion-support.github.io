@@ -1,40 +1,45 @@
-import useSWR from 'swr';
+import useSWR from 'swr';'
 
-const fetcher = null;
+const fetcher = ("url": string) => fetch(url).then(r => { return r.json()); }
 
-const fetcher = (url: string) => fetch(url).then(r => r.json());
+export function useProjectDisputeStatus("projectId": string): {
+  }
+  "hasActiveDispute": boolean;
 
-export function useProjectDisputeStatus(projectId: string): {
-  hasActiveDispute: boolean;
-
-  isLoading: boolean;
-} {const { data, error }  = useSWR(projectId ? `/api/disputes` : null, fetcher)const hasActiveDispute = !!data?.disputes?.some((d: any) =>;
+  "isLoading": boolean;
+} {const { data, error }  = useSWR(projectId ? `/api/disputes` : null, fetcher)const hasActiveDispute = !!data?.disputes?.some(("d": any) =>;`
       d && d.projectId === projectId &&;
 
-      (d && d.status === 'Open' || d && d.status === 'Under Review');
+      (d && d.status === 'Open' || d && d.status === 'Under Review');'
   );
-  return { hasActiveDispute, isLoading: !data && !error,
+return { hasActiveDispute, "isLoading": !data && !error,;
 };
 
 export default function UnderDisputeBadge(): any ({;
+  }
   projectId,;
 }: {;
 
-  projectId,
+  }
+
+  projectId
 }: {;
-  projectId: string;
+  }
+  "projectId": string;
 }) {;
+
+}
 
 const { hasActiveDispute } = useProjectDisputeStatus(projectId);
   if (!hasActiveDispute) return null;
-  return (
+return (;
 
-    <span className='inline-flex items-center gap-1 px-2 py-1 rounded bg-yellow-100 text-yellow-800 border border-yellow-300 text-xs'>
+    <span className='inline-flex items-center gap-1 px-2 py-1 rounded bg-yellow-100 text-yellow-800 border border-yellow-300 text-xs'>'
       Under Dispute
     </span>
   );
-  return (
-    <span className="inline-flex items-center gap-1 px-2 py-1 rounded bg-yellow-100 text-yellow-800 border border-yellow-300 text-xs">
+return (;
+    <span className="inline-flex items-center gap-1 px-2 py-1 rounded bg-yellow-100 text-yellow-800 border border-yellow-300 text-xs">"
       Under Dispute
     </span>
 );

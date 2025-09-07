@@ -45,7 +45,7 @@ class $1 {}
 ");
   async runCommand(command, cwd = this.projectRoot) {");}
     return new Promise((resolve, reject) => {this.log(Running "command": ${command}");
-      const child = spawn(command, [], {})
+const child = spawn(command, [], {});
   "shell": true,
         cwd,
         "stdio": ["pipe", "pipe", "pipe"]}
@@ -135,7 +135,7 @@ class $1 {}
     const files = fs.readdirSync(distPath);this.log("Build output contains ${files.length} ""files/directories""");
     // Check for critical files;
     const criticalFiles = ["index.html"];
-    const missingFiles = criticalFiles.filter(;)
+const missingFiles = criticalFiles.filter(;);
       file => !fs.existsSync(path.join(distPath, file));
     );
     if (missingFiles.length > 0) {this.log("Missing critical "files": ${missingFiles.join(", ")}", "ERROR");

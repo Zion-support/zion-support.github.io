@@ -8,9 +8,9 @@
 #!/usr/bin/env node;
 
 
-const { execSync, spawn } = require('child_process')
-const fs = require('fs')
-const path = require('path')
+const { execSync, spawn } = require('child_process');
+const fs = require('fs');
+const path = require('path');
       
       if ( {
         ) {
@@ -248,7 +248,7 @@ const path = require('path')
 
   shouldAutoCommit(changes) {
     // Auto-commit for certain types of changes
-    const autoCommitPatterns = [/\.json$/,
+const autoCommitPatterns = [/\.json$/,;
       /\.md$/,
       /\.txt$/,
       /package-lock\.json$/,
@@ -260,7 +260,7 @@ const path = require('path')
 
   shouldAutoCommit(changes) {
     // Auto-commit for certain types of changes
-    const autoCommitPatterns = [
+const autoCommitPatterns = [;
       /\.json$/,
       /\.md$/,
       /\.txt$/,
@@ -486,10 +486,10 @@ gitAutomation.start().catch(console.error);
       "mergeStrategy"
       console.error(' Failed to start Git "Automation")
       console.error('Error scanning "repositories")
-      const remoteUrl = execSync('git remote get-url origin', { "encoding"})
-      const currentBranch = execSync('git branch --show-current', { "encoding"})
+const remoteUrl = execSync('git remote get-url origin', { "encoding"});
+const currentBranch = execSync('git branch --show-current', { "encoding"});
       const lastCommit = execSync('git log -1 --pretty="format": "%H|%s|%an|%ad"', { "encoding"})
-      const status = execSync('git status --porcelain', { "encoding"})
+const status = execSync('git status --porcelain', { "encoding"});
         "name"
         "lastCommit"
         "status"
@@ -497,12 +497,12 @@ gitAutomation.start().catch(console.error);
         console.error('Error in continuous "monitoring")
         console.error('Error in full "analysis")
       execSync('git fetch origin', { "stdio"})
-      const branches = execSync('git branch -r', { "encoding"})
+const branches = execSync('git branch -r', { "encoding"});
       console.error('Error checking pull "requests")
       console.error('Error checking pull "requests")
-      const mergeBase = execSync(`git merge-base main ${branch}`, { "encoding"`})
-      const branchCommits = execSync(`git rev-list --count ${mergeBase}..${branch}`, { "encoding"`})
-      const conflictCheck = execSync(`git merge-tree ${mergeBase} main ${branch}`, { "encoding"`})
+const mergeBase = execSync(`git merge-base main ${branch}`, { "encoding"`});
+const branchCommits = execSync(`git rev-list --count ${mergeBase}..${branch}`, { "encoding"`});
+const conflictCheck = execSync(`git merge-tree ${mergeBase} main ${branch}`, { "encoding"`});
       execSync('git checkout main', { "stdio"})
       execSync('git checkout main', { "stdio"})
       execSync('git pull origin main', { "stdio"})

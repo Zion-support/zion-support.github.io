@@ -1,9 +1,10 @@
 
-import React from './react';
+import React from './react';'
 ;
 const PageTransition = () =>: any {
-  return (
-    <div data - testid="pagetransition">;
+}
+return (;
+    <div data - testid="pagetransition">;"
       <h1 > PageTransition</h1>;
     </div>);
 }

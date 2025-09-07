@@ -25,7 +25,7 @@ class LinterWatcher {}
     try {}
       console.log('Running lint check...');
       
-      const child = spawn('npm', ['run', 'lint'], {})
+const child = spawn('npm', ['run', 'lint'], {});
         "stdio": ['pipe', 'pipe', 'pipe'],
         "cwd": process.cwd();
       };);
@@ -60,7 +60,7 @@ class LinterWatcher {}
     try {}
       console.log('Attempting to auto-fix linting issues...');
       
-      const child = spawn('npm', ['run', '"lint": fix'], {})
+const child = spawn('npm', ['run', '"lint": fix'], {});
         "stdio": 'inherit',
         "cwd": process.cwd();
       };);

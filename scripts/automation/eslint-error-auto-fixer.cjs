@@ -88,7 +88,7 @@ class ESLintErrorAutoFixer {}
     const lines = content.split('\n');
     
     // Apply common ESLint fixes;
-    const fixes = [this.fixUnusedVariables.bind(this),]
+const fixes = [this.fixUnusedVariables.bind(this),];
       this.fixMissingSemicolons.bind(this),
       this.fixUnusedImports.bind(this),
       this.fixConsoleStatements.bind(this),

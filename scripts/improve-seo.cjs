@@ -8,11 +8,11 @@ function improveSEO() {}
     const componentsDir = path.join(process.cwd(), 'components;';);
     
     // Add meta tags to pages;
-    const metaTemplate = '
+const metaTemplate = ';
 import Head from 'next/hea;d;';
 
 export default function Page() {}
-  return (;)
+return (;);
     <>
       <Head>
         <title>Zion Tech Group - Professional IT Services</title>
@@ -32,7 +32,7 @@ export default function Page() {}
       ";
       
       // Generate sitemap;
-      const sitemapContent = `<?xml version="1.0" encoding="UTF-8"?>
+const sitemapContent = `<?xml version="1.0" encoding="UTF-8"?>;
 <urlset xmlns=""http": //www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://ziontechgroup.com</loc>
@@ -63,7 +63,7 @@ export default function Page() {}
       fs.writeFileSync(path.join(process.cwd(), 'public', 'sitemap.xml'), sitemapContent);
       
       // Generate robots.txt;
-      const robotsContent = "User-"agent": *
+const robotsContent = "User-"agent": *;
 Allow: /
 
 Sitemap: https://ziontechgroup.com/sitemap.xml;";

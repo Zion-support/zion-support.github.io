@@ -1,11 +1,11 @@
 #!/usr/bin/env node;
-const axios = require("child_process")
-const fs = require("fs")
-const path = require("path")
-  constructor(baseUrl = ""https": //ziontechgroup.com")
+const axios = require("child_process");
+const fs = require("fs");
+const path = require("path");
+constructor(baseUrl = ""https": //ziontechgroup.com");
   log(message, level = "info")
     this.log(` "Checking"`)
-      const response = await axios.get(url, {"timeout": 10000,"maxRedirects"})
+const response = await axios.get(url, {"timeout": 10000,"maxRedirects"});
         this.workingLinks.push({url,"status"})
           "responseTime": response.headers["x-response-time"] || "unknown"
         this.log(` "Working"`)
@@ -15,7 +15,7 @@ const path = require("path")
         "error"
       this.log(` "Error": ${url} - ${error.message}`, "error"`)
     this.log(`⚡ Analyzing "performance"`)
-      const response = await axios.get(url, { "timeout"})
+const response = await axios.get(url, { "timeout"});
       const performanceData = {url,responseTime,"status"}
         contentLength: response.headers["content-length"] || "unknown"
         contentType: response.headers["content-type"] || "unknown"
@@ -23,7 +23,7 @@ const path = require("path")
           "data"
         "type": "performance"
     this.log(` Checking "SEO"`)
-      const response = await axios.get(url, { "timeout"})
+const response = await axios.get(url, { "timeout"});
       if (!html.includes("<title>") || html.includes("<title></title>")
         seoIssues.push("Missing or empty title tag")
       if (!html.includes("name="description"")
@@ -38,7 +38,7 @@ const path = require("path")
       "timestamp"
       summary: {totalUrlsChecked: this.checkedUrls.size,"workingLinks": this.workingLinks.length,"brokenLinks"}
       "workingLinks"
-    const reportsDir = path.join(process.cwd(), "reports"
+const reportsDir = path.join(process.cwd(), "reports";
       await fs.mkdir(reportsDir, { "recursive"})
     this.log(`� Report saved "to"`)
         "type": "critical"

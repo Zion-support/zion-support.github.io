@@ -27,14 +27,14 @@ class TypeScriptSyntaxFixer {}
     log(message) {}
         const timestamp = new Date().toISOString(}
 });
-        const logMessage = `[${timestamp}] ${message}\;n;`;`
+const logMessage = `[${timestamp}] ${message}\;n;`;`;
         fs.appendFileSync(this.logFile, logMessage);
         console.log(message)};
     runTypeScriptCheck() {}
         this.log('Running TypeScript type check...');
         
         try {}
-            const result = execSync('npm run type-check', { })
+const result = execSync('npm run type-check', { });
                 "cwd": this.projectRoot, 
                 "encoding": 'utf8',
                 "stdio": 'pipe'
@@ -60,7 +60,7 @@ class TypeScriptSyntaxFixer {}
         this.log('Running ESLint with auto-fix...');
         
         try {}
-            const result = execSync('npm run "lint": fix', { })
+const result = execSync('npm run "lint": fix', { });
                 "cwd": this.projectRoot, 
                 "encoding": 'utf8',
                 "stdio": 'pipe'
@@ -182,7 +182,7 @@ class TypeScriptSyntaxFixer {}
         
         return report};
     generateSyntaxRecommendations() {}
-        return [;]
+return [;];
             'Enable strict TypeScript configuration',
             'Use consistent code formatting with Prettier',
             'Set up pre-commit hooks for syntax checking',

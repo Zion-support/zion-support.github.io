@@ -2,29 +2,26 @@
     console.log(logMessage.trim());
     fs.appendFileSync(this.logFile, logMessage);
   }
-
   async runCommand(command, options = {}) {
     try {
-      const { stdout, stderr } = await execAsync(command, { 
-        cwd: process.cwd(), 
-        timeout: 120000, 
-        ...options 
+      const { stdout, stderr } = await execAsync(command, {
+        cwd: process.cwd(),
+        timeout: 120000,
+        ...options
       });
       return { success: true, stdout, stderr };
     } catch (error) {
       this.log(`Command failed: ${command} - ${error.message}`);
-      return { 
-        success: false, 
-        stdout: error.stdout || "", 
-        stderr: error.stderr || error.message 
+      return {
+        success: false,
+        stdout: error.stdout || "",
+        stderr: error.stderr || error.message
       };
     }
   }
-
   async runAutomation(scriptName, command) {
     this.log(`Running: ${scriptName}`);
     const result = await this.runCommand(command);
-    
     if (result.success) {
       this.results.success.push({ script: scriptName, output: result.stdout });
       this.log(`✅ ${scriptName} completed successfully`);
@@ -32,21 +29,17 @@
       this.results.failed.push({ script: scriptName, error: result.stderr });
       this.log(`❌ ${scriptName} failed: ${result.stderr}`);
     }
-    
     return result;
   }
-
   async runAll() {
     this.log('🚀 Starting comprehensive automation run...');
-    
     // Ensure logs directory exists
     const logsDir = path.join(__dirname, '..', 'automation', 'logs');
     if (!fs.existsSync(logsDir)) {
       fs.mkdirSync(logsDir, { recursive: true });
     }
-
     // Define all automation scripts to run
-    const automations = [
+const automations = [;
       { name: 'Install Dependencies', command: 'npm install' },
       { name: 'Type Check', command: 'npm run type-check' },
       { name: 'Lint Fix', command: 'npm run lint:fix' },
@@ -64,23 +57,18 @@
       { name: 'Git Commit', command: 'git commit -m "Automated improvements and fixes"' },
       { name: 'Git Push', command: 'git push origin main' }
     ];
-
     // Run each automation
     for (const automation of automations) {
       await this.runAutomation(automation.name, automation.command);
     }
-
     // Generate comprehensive report
     this.generateReport();
-    
     this.log('🎉 Comprehensive automation run completed');
     this.log(`✅ Successful: ${this.results.success.length}`);
     this.log(`❌ Failed: ${this.results.failed.length}`);
     this.log(`⚠️ Warnings: ${this.results.warnings.length}`);
-
     return this.results;
   }
-
   generateReport() {
     const report = {
       timestamp: new Date().toISOString(),
@@ -96,19 +84,16 @@
         warnings: this.results.warnings
       }
     };
-
     const reportFile = path.join(__dirname, '..', 'automation', 'logs', 'comprehensive-automation-report.json');
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
     this.log(`📊 Report saved to ${reportFile}`);
     return report;
   }
 }
-
 // Handle command line arguments
 if (require.main === module) {
   const runner = new RunAllAutomations();
   const command = process.argv[2];
-
   switch (command) {
     case "run":
       runner.runAll().catch(error => {
@@ -124,9 +109,5 @@ if (require.main === module) {
       process.exit(1);
   }
 }
-
 module.exports = RunAllAutomations;
-=======
-=======
         "impact"
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358

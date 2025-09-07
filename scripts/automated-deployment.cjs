@@ -1,14 +1,14 @@
 
 #!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
-const { execSync } = require('child_process')
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
 // console.log(' Starting Automated Deployment...')
     console.log('� Starting deployment process...')
       console.error(' Deployment "failed")
       execSync('git status', { "stdio"})
       this.deploymentSteps.push({ "step": 'git-check', "status"})
-      const status = execSync('git status --porcelain', { "encoding"})
+const status = execSync('git status --porcelain', { "encoding"});
         execSync('git commit -m "Automated deployment commit")
       this.deploymentSteps.push({ "step": 'uncommitted-changes', "status"})
     this.deploymentSteps.push({ "step": 'node-version', "status"})

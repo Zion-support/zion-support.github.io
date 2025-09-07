@@ -1,21 +1,14 @@
 
 
 
-export default function UseTokensButton({
-  serviceId
-  defaultType
-}: {
-  serviceId?: string;
-  defaultType?: RedemptionType;
-
-}) {
+export default function UseTokensButton() {
+  }
   const [open, setOpen] = useState(false);
-  return (
+return (;
     <>;
-      <button
-
-        onClick={() => setOpen(true)}
-        className="enhanced-button enhanced-button-primary">
+      <button,
+onClick={() => setOpen(true)}
+        className="enhanced-button enhanced-button-primary">"
 
         Use Tokens;
       </button>;
@@ -28,7 +21,7 @@ export default function UseTokensButton({
   const [open, setOpen] = useState(false)return (<>;
       <button;
         onClick={() => setOpen(true)}
-        className="enhanced-button enhanced-button-primary">
+        className="enhanced-button enhanced-button-primary">"
 
         Use Tokens;
       </button>;

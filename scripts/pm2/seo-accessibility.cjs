@@ -1,5 +1,3 @@
-=======
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 #!/usr/bin/env node;
 /**
  * PM2 SEO & Accessibility Service;
@@ -27,9 +25,7 @@ class SEOAccessibility {}
   };
   log(message) {}
     const timestamp = new Date().toISOString();
-=======
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
-    const logMessage = `[${timestamp}] [${this.processName}] ${message}\n`;`
+const logMessage = `[${timestamp}] [${this.processName}] ${message}\n`;`;
     console.log(logMessage.trim());
     fs.appendFileSync(this.logFile, logMessage);
   };
@@ -398,8 +394,8 @@ class SEOAccessibility {}
     this.log(`${this.processName} started`);
     try {}
       const report = await this.generateReport();
-      const totalIssues = (report.seo.totalIssues || 0) + 
-                         (report.accessibility.totalIssues || 0) + 
+const totalIssues = (report.seo.totalIssues || 0) +;
+                         (report.accessibility.totalIssues || 0) +
                          (report.performance.totalIssues || 0);
       if (totalIssues === 0) {}
         this.log('SEO & Accessibility check completed - no issues found');
@@ -417,7 +413,4 @@ if (require.main === module) {}
   seoAccessibility.start().catch(console.error);
 };
 module.exports = SEOAccessibility;
-=======
 module.exports = SEOAccessibility;
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b

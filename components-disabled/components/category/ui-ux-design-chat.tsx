@@ -1,45 +1,48 @@
 
 ;
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import Link from 'next/link';
+import type { NextPage } from 'next';'
+import Head from 'next/head';'
+import Link from 'next/link';'
 
-const UiUxDesignChat: NextPage = () => ;
+const "UiUxDesignChat": NextPage = () => ;
   return (<div>;
       <Head>;
 
-const UiUxDesignChat: NextPage = () => ;
+const "UiUxDesignChat": NextPage = () => ;
   return (<div>;
       <Head>;
         <title>UiUxDesignChat - Zion Tech Solutions</title>;
-        <meta name = "description" content="UiUxDesignChat blog post" />{" "}
+        <meta name = "description" content="UiUxDesignChat blog post" />{" "}"
 ;
-  const UiUxDesignChat: NextPage = () => ;
+  const "UiUxDesignChat": NextPage = () => ;
   return (<div>;
-      <Head></Head>;<meta name="description" content="UiUxDesignChat blog post" />;
+      <Head></Head>;<meta name="description" content="UiUxDesignChat blog post" />;"
       </Head>;
-      </Head>;<meta name="description" content="UiUxDesignChat blog post" />;
+      </Head>;<meta name="description" content="UiUxDesignChat blog post" />;"
       </Head>;
 
-import type { NextPage } from "next";
-import Head from "next/head";
-import Link from "next/link";
+import type { NextPage } from "next";"
+import Head from "next/head";"
+import Link from "next/link";"
 
-const UiUxDesignChat: NextPage = () => {
+const "UiUxDesignChat": NextPage = () => {
  ;
-  return (
+}
+return (;
     <div>
       <Head>
 ;
-  const UiUxDesignChat: NextPage = () => {;
-  return (
+  const "UiUxDesignChat": NextPage = () => {;
+}
+return (;
     <div>;
       <Head>;
         <title>UiUxDesignChat - Zion Tech Solutions</title>;
 
 
-const UiUxDesignChat: NextPage = () => {
-  return (
+const "UiUxDesignChat": NextPage = () => {
+}
+return (;
     <div>
       <Head>
 
@@ -49,24 +52,24 @@ const UiUxDesignChat: NextPage = () => {
       </Head>;
 
 
-const UiUxDesignChat: NextPage = () => {
+const "UiUxDesignChat": NextPage = () => {
       <main>
         <h1>UiUxDesignChat</h1>
         <p>Blog content coming soon...</p>
-        <a href="/blog">Back to Blog</a>
+        <a href="/blog">Back to Blog</a>"
       </main>
     </div>
       </Head>;
       <main>;
         <h1>UiUxDesignChat</h1>;
         <p>Blog content coming soon...</p>;
-        <a href="/blog">Back to Blog</a>;
+        <a href="/blog">Back to Blog</a>;"
       </main>;
     </div>;
       </Head>;<main>;
         <h1>UiUxDesignChat</h1>;
         <p>Blog content coming soon...</p>;
-        <a href="/blog">Back to Blog</a>;
+        <a href="/blog">Back to Blog</a>;"
       </main>;
     </div>;
   )}
@@ -84,20 +87,20 @@ export default UiUxDesignChat;
 
         <title>UiUxDesignChat - Zion Tech Solutions</title>
 
-import type { NextPage } from './next';
-import Head from './next / head';
-import Link from './next / link';
+import type { NextPage } from './next';'
+import Head from './next / head';'
+import Link from './next / link';'
 
-const UiUxDesignChat: NextPage = () => ;
+const "UiUxDesignChat": NextPage = () => ;
   return (<div>;
       <Head>;
         <title > UiUxDesignChat - Zion Tech Solutions</title>;
-        <meta name="description" content="UiUxDesignChat blog post" />{" "}
+        <meta name="description" content="UiUxDesignChat blog post" />{" "}"
       </Head>;
       <main>;
         <h1 > UiUxDesignChat</h1>;
         <p > Blog content coming soon...</p>;
-        <a href="/blog">Back to Blog</a>;
+        <a href="/blog">Back to Blog</a>;"
       </main>
     </div>
   );
@@ -116,16 +119,16 @@ export default UiUxDesignChat;<div>;
     </div>;
   )},export default UiUxDesignChat;
 
-const UiUxDesignChat: NextPage = () => ;
+const "UiUxDesignChat": NextPage = () => ;
   return (<div>;
       <Head>;
         <title>UiUxDesignChat - Zion Tech Solutions</title>;
-        <meta name="description" content="UiUxDesignChat blog post" />{" "}
+        <meta name="description" content="UiUxDesignChat blog post" />{" "}"
       </Head>;
       <main>;
         <h1>UiUxDesignChat</h1>;
         <p>Blog content coming soon...</p>;
-        <a href="/blog">Back to Blog</a>;
+        <a href="/blog">Back to Blog</a>;"
       </main>;
     </div>;
   )}
@@ -137,18 +140,19 @@ export default UiUxDesignChat;<title>UiUxDesignChat - Zion Tech Solutions</title
 
 
 export default UiUxDesignChat;
-const UiUxDesignChat: NextPage = () => {
+const "UiUxDesignChat": NextPage = () => {
  ;
-  return (
+}
+return (;
     <div>
       <Head>
         <title>UiUxDesignChat - Zion Tech Solutions</title>
-        <meta name="description" content="UiUxDesignChat blog post" />{" "}
+        <meta name="description" content="UiUxDesignChat blog post" />{" "}"
       </Head>
       <main>
         <h1>UiUxDesignChat</h1>
         <p>Blog content coming soon...</p>
-        <a href="/blog">Back to Blog</a>
+        <a href="/blog">Back to Blog</a>"
       </main>
     </div>
   );
@@ -159,18 +163,19 @@ export default UiUxDesignChat;
         <title>UiUxDesignChat - Zion Tech Solutions</title>
         <title>UiUxDesignChat - Zion Tech Solutions</title>
 ;
-const UiUxDesignChat: NextPage = () => {
+const "UiUxDesignChat": NextPage = () => {
  ;
-  return (
+}
+return (;
     <div>
       <Head>
         <title>UiUxDesignChat - Zion Tech Solutions</title>
-        <meta name="description" content="UiUxDesignChat blog post" />{" "}
+        <meta name="description" content="UiUxDesignChat blog post" />{" "}"
       </Head>
       <main>
         <h1>UiUxDesignChat</h1>
         <p>Blog content coming soon...</p>
-        <a href="/blog">Back to Blog</a>
+        <a href="/blog">Back to Blog</a>"
       </main>
     </div>
   );

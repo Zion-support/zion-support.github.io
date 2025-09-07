@@ -1,16 +1,16 @@
 
-const SEOEnhancer = dynamic(() => import("./SEOEnhancer"),{'; loading: () => <p>Loading...</p,>,}) export: 'default SEOEnhancer' ,'
+const SEOEnhancer = dynamic(() => import("./SEOEnhancer"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default SEOEnhancer' ,''
 
-</p>'
-</p>'
-</p>'
-
-
-</p>'
+</p>''
+</p>''
+</p>''
 
 
-</p>'
+</p>''
 
-</p>'
-</p>'
-</p>'
+
+</p>''
+
+</p>''
+</p>''
+</p>''

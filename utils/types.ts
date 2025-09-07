@@ -1,11 +1,12 @@
 export interface Application {;
-  id: string;
-  name: string;
-  email: string;
-  position: string;
-  experience: number;
-  skills: string[];
-  createdAt: string;
+  }
+  "id": string;
+  "name": string;
+  "email": string;
+  "position": string;
+  "experience": number;
+  "skills": string[];
+  "createdAt": string;
   updatedAt?: string;
 }
 
@@ -13,42 +14,46 @@ export interface Application {;
 export interface Application {;
 
 
-  id: string;
-  jobId: string;
-  talentSlug: string;
-  status: "applied" | "skipped" | "pending";
-  createdAtIso: string;
-}
-export type UserRole = 'admin' | 'user' | 'guest';
+  }
 
-export type UserRole = "admin" | "user" | "guest";
-export type UserRole = "admin" | "user" | "guest";
+
+  "id": string;
+  "jobId": string;
+  "talentSlug": string;
+  "status": "applied" | "skipped" | "pending";"
+  "createdAtIso": string;
+}
+export type UserRole = 'admin' | 'user' | 'guest';'
+
+export type UserRole = "admin" | "user" | "guest";"
+export type UserRole = "admin" | "user" | "guest";"
 
 
 export interface Application {
-  id: string;
-  name: string;
-  email: string;
-  position: string;
-  experience: number;
-  skills: string[];
-  createdAt: string;
+  }
+  "id": string;
+  "name": string;
+  "email": string;
+  "position": string;
+  "experience": number;
+  "skills": string[];
+  "createdAt": string;
   updatedAt?: string;
 }
 
-export type UserRole = 'admin' | 'user' | 'guest';
+export type UserRole = 'admin' | 'user' | 'guest';'
 
 
 
 
-  id: string;
+  "id": string;
 
-  job_id: string;
-  talent_slug: string;
-  status: 'applied' | 'skipped' | 'pending';
-  createdAtIso: string;
+  "job_id": string;
+  "talent_slug": string;
+  "status": 'applied' | 'skipped' | 'pending';'
+  "createdAtIso": string;
 }
-export type UserRole = 'admin' | 'user' | 'guest';
+export type UserRole = 'admin' | 'user' | 'guest';'
 
 
 

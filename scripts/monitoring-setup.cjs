@@ -1,9 +1,9 @@
 
 
-const fs = require("$1")
-const path = require("path")
+const fs = require("$1");
+const path = require("path");
     console.log("� Setting up error tracking...")
-    const errorTrackingConfig = "
+const errorTrackingConfig = ";
     "dsn"
     "environment"
     "tracesSampleRate"
@@ -16,8 +16,8 @@ const path = require("path")
     fs.writeFileSync(path.join(this.projectRoot, "config/analytics.js")
 // console.log(" Analytics configuration created")
     console.log("� Setting up health checks...")
-    const healthCheckScript = "
-const express = require("$1")
+const healthCheckScript = ";
+const express = require("$1");
 app.get("/health")
     "status": "healthy"
     "timestamp"

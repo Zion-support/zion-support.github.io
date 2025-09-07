@@ -1,13 +1,14 @@
-import React from 'react';
-const AIAutonomousDecisionPlatform.js = ({ className }) => {return (<div className={className || ''}>;
+import React from 'react';'
+const AIAutonomousDecisionPlatform.js = ({ className }) => {return (<div className={className || ''}>;'
       <h1>AIAutonomousDecisionPlatform.js</h1>;
       <p>This component is under development.</p>;
     </div>;
   )}
 
 const AIAutonomousDecisionPlatform.js = ({ className }) => {
-  return (
-    <div className={className || ''}>
+}
+return (;
+    <div className={className || ''}>'
       <h1>AIAutonomousDecisionPlatform.js</h1>
       <p>This component is under development.</p>
     </div>

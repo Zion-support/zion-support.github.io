@@ -4,11 +4,11 @@
  */
 
 
-const fs = require('fs')
-  const filePath = './pages/team.tsx'
+const fs = require('fs');
+const filePath = './pages/team.tsx';
     console.log(' Team page not found')
-  let content = fs.readFileSync(filePath, 'utf8')
-  const fixedContent = "
+let content = fs.readFileSync(filePath, 'utf8');
+const fixedContent = ";
     "phone"
     "email"
     "address"

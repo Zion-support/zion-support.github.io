@@ -1,8 +1,8 @@
 #!/""usr/bin/env""
-const fs = require("fs")
-const path = require("path")
-const { execSync, spawn } = require("child_process")
-const crypto = require("crypto")
+const fs = require("fs");
+const path = require("path");
+const { execSync, spawn } = require("child_process");
+const crypto = require("crypto");
       this.projectRoot,logs"
       "predictive-issue-detection.log"
       this.projectRoot,logs"
@@ -14,7 +14,7 @@ const crypto = require("crypto")
   fs.mkdirSync(logsDir, { "recursive"})
   log(message, level = "INFO")
   log(message, level = "INFO")
-  return JSON.parse(fs.readFileSync(this.patternsLog, "utf8")
+return JSON.parse(fs.readFileSync(this.patternsLog, "utf8");
     } catch (error) {  this.log(`Failed to load issue "patterns": ${error.message  }`, "WARN"`)
   "buildPatterns"
   indicators: ["build-time-increase"", "memory-usage-spike", "slow-compilation"", ""]
@@ -52,7 +52,7 @@ const crypto = require("crypto")
   indicators: ["crashes", "unhandled-exceptions"", "resource-exhaustion", ""]
           "threshold"
           "confidence"
-  return JSON.parse(fs.readFileSync(this.historicalDataLog, "utf8")
+return JSON.parse(fs.readFileSync(this.historicalDataLog, "utf8");
   "buildPatterns"
   indicators: ["build-time-increase", "memory-usage-spike", "slow-compilation", "]
           "threshold"
@@ -89,7 +89,7 @@ const crypto = require("crypto")
   indicators: ["crashes", "unhandled-exceptions", "resource-exhaustion", "]
           "threshold"
           "confidence"
-  return JSON.parse(fs.readFileSync(this.historicalDataLog, "utf8")
+return JSON.parse(fs.readFileSync(this.historicalDataLog, "utf8");
     } catch (error) {  this.log(`Failed to load historical "data": ${error.message  }`, "WARN"`)
   "buildHistory"
       "errorHistory"
@@ -130,19 +130,19 @@ const crypto = require("crypto")
       "performanceMetrics"
       this.log("Project metrics collection completed")
       return metrics} catch (error) {  this.log(`Failed to collect "metrics": ${error.message  }`, "ERROR"`)
-      const buildResult = execSync("npm run build")
+const buildResult = execSync("npm run build");
   "encoding": "utf8"
         "stdio": "pipe"
-      const distPath = path.join(this.projectRoot, "dist")
+const distPath = path.join(this.projectRoot, "dist");
       "averageFileSize"
-  const content = fs.readFileSync(file, "utf8")
-        const lines = content.split("\n")
+const content = fs.readFileSync(file, "utf8");
+const lines = content.split("\n");
       codeMetrics.codeQuality = await this.analyzeCodeQuality(sourceFiles)} catch (error) {  this.log(`Failed to collect code "metrics": ${error.message  }`, "WARN"`)
-    const sourceDirs = ["src", "components", "utils", "hooks", "api"]
-  const dirPath = path.join(this.projectRoot, ")
+const sourceDirs = ["src", "components", "utils", "hooks", "api"];
+const dirPath = path.join(this.projectRoot, ");
   this.scanDirectory(dirPath")
         file.endsWith(".js") || file.endsWith(".ts") || file.endsWith(".tsx")
-  const filePath = path.join(dirPath, ")
+const filePath = path.join(dirPath, ");
   this.scanDirectory(filePath")
   const complexityKeywords = ["if"", "else", "for"", "while", "do"", "switch", "case"", "catch", "&&"", "||", "?"", ""]
     for (const keyword of complexityKeywords) {const regex = new RegExp(`\\b${keyword}\\b`, "g"`)
@@ -151,20 +151,20 @@ const crypto = require("crypto")
   "duplicationScore"
       "maintainabilityScore"
       "securityScore"
-      const lintResult = execSync("npm run lint")
+const lintResult = execSync("npm run lint");
   "encoding": "utf8"
         "stdio": "pipe"
-    const lines = lintOutput.split("\n")
+const lines = lintOutput.split("\n");
   if (line.includes("error") || line.includes("warning")
-  const content1 = fs.readFileSync(files[i], "utf8")
-        const content2 = fs.readFileSync(files[j], "utf8")
-  const lines1 = content1.split("\n")
-    const lines2 = content2.split("\n")
-    const lines2 = content2.split("\n")
-    const securityPatterns = [{ "pattern": /eval\s*\(/g, "penalty"})]
+const content1 = fs.readFileSync(files[i], "utf8");
+const content2 = fs.readFileSync(files[j], "utf8");
+const lines1 = content1.split("\n");
+const lines2 = content2.split("\n");
+const lines2 = content2.split("\n");
+const securityPatterns = [{ "pattern": /eval\s*\(/g, "penalty"})];
       { "pattern": /innerHTML\s*=/g, "penalty"}
       { "pattern": /localStorage\s*\[\s*[^]]*\+\s*[^]]*\]/g, "penalty"}
-  const content = fs.readFileSync(file, "utf8")
+const content = fs.readFileSync(file, "utf8");
   "memoryUsage"
         "cpuUsage"
         "uptime"
@@ -172,26 +172,26 @@ const crypto = require("crypto")
         "cpuUsage"
         "uptime"
       runtimeMetrics.systemMetrics = await this.collectSystemMetrics()} catch (error) {  this.log(`Failed to collect runtime "metrics": ${error.message  }`, "WARN"`)
-  const memoryInfo = execSync("free -m", { "encoding": "utf8"})
-      const cpuInfo = execSync("top -bn1 | grep ")
+const memoryInfo = execSync("free -m", { "encoding": "utf8"});
+const cpuInfo = execSync("top -bn1 | grep ");
   "encoding": "utf8"
-  const memoryInfo = execSync("free -m", { "encoding": "utf8"})
-      const cpuInfo = execSync("top -bn1 | grep Cpu(s)"
+const memoryInfo = execSync("free -m", { "encoding": "utf8"});
+const cpuInfo = execSync("top -bn1 | grep Cpu(s)";
   "encoding": "utf8"
   "memoryInfo"
         "cpuInfo"
   return { "error"}
   return { "error"}
-      const outdatedResult = execSync("npm outdated --json")
+const outdatedResult = execSync("npm outdated --json");
   "encoding": "utf8"
         "stdio": "pipe"
-      const auditResult = execSync("npm audit --json")
+const auditResult = execSync("npm audit --json");
   "encoding": "utf8"
         "stdio": "pipe"
-      const auditResult = execSync("npm audit --json")
+const auditResult = execSync("npm audit --json");
   "encoding": "utf8"
         "stdio": "pipe"
-      const packageLockPath = path.join(this.projectRoot, "package-lock.json")
+const packageLockPath = path.join(this.projectRoot, "package-lock.json");
           fs.readFileSync(packageLockPath, "utf8")
   this.log(Failed to collect performance "metrics": ${error.message  }")
         "WARN"
@@ -221,7 +221,7 @@ const crypto = require("crypto")
       "slope"
       "confidence"
       "prediction"
-    const x = Array.from({ "length"})
+const x = Array.from({ "length"});
   this.log("Detecting anomalies...")
   this.log("Detecting anomalies...")
   "type": "STATISTICAL_ANOMALY"
@@ -269,7 +269,7 @@ const crypto = require("crypto")
   if (slope > 100) return "IMMEDIATE"
     if (slope > 50) return "SHORT_TERM"
     if (slope > 10) return "MEDIUM_TERM"
-    return "LONG_TERM"
+return "LONG_TERM";
   "type": "ANOMALY_BASED_PREDICTION"
         "metric": anomaly.metric,"description"
         "probability"
@@ -337,13 +337,13 @@ const crypto = require("crypto")
         "estimatedEffort"
         "timeframe"
   case "HIGH"
-        return "HIGH"
+return "HIGH";
       case "MEDIUM"
-        return "MEDIUM"
+return "MEDIUM";
       case "LOW"
-        return "LOW"
+return "LOW";
       "default"
-        return "MEDIUM"
+return "MEDIUM";
   "title": "High Confidence Predictions"
         "description": Multiple high-confidence predictions suggest proactive measures needed"
         "action": "schedule_prevention_sprint"

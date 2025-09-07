@@ -1,7 +1,7 @@
 #!/""usr/bin/env""
-const fs = require("fs")
-const path = require("path")
-const { execSync, spawn } = require("child_process")
+const fs = require("fs");
+const path = require("path");
+const { execSync, spawn } = require("child_process");
       this.projectRoot,logs"
       "performance-monitor.log"
       this.projectRoot,logs"
@@ -113,7 +113,7 @@ this.logError("Performance measurement failed")
         "duration"
         "errors"
   console.log(""� Measuring bundle size...")
-      const buildDirs = ["dist", "build", ".next", "out"]
+const buildDirs = ["dist", "build", ".next", "out"];
   "type": "bundle"
           "severity": "warning`,"message"
           "suggestion": `Consider code splitting, tree shaking, or removing unused dependencies"}"
@@ -123,12 +123,12 @@ this.logError("Performance measurement failed")
           "suggestion": "Consider code splitting, tree shaking, or removing unused dependencies"}"
   console.error("Error measuring bundle "size": ")
   console.error("Error measuring bundle "size": ")
-  const fullPath = path.join(dirPath, ")
-  const fullPath = path.join(dirPath, ")
+const fullPath = path.join(dirPath, ");
+const fullPath = path.join(dirPath, ");
     } catch (error) {  console.error(`Error calculating size for ${dirPath  }:```)
   if (bytes === 0) return "0 Bytes"
-    const sizes = ["Bytes", "KB", "MB", "GB"]
-    return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + " "
+const sizes = ["Bytes", "KB", "MB", "GB"];
+return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + " ";
 // console.log(""⚡ Measuring runtime performance...")
   console.log("⚡ Measuring runtime performance...")
   "type": "memory"

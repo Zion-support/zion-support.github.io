@@ -1,28 +1,28 @@
 
 #!/usr/bin/env node;
-const fs = require("$1")
-const path = require("$1")
-const { execSync, spawn } = require("child_process")
+const fs = require("$1");
+const path = require("$1");
+const { execSync, spawn } = require("child_process");
       __dirname,.."
       "logs",pm2-automation-launcher.log"
       __dirname,.."
       "logs",pm2-automation-launcher.log"
-const fs = require("fs")";const path = require("path")";const { execSync, spawn } = require("child_process")""
+const fs = require("fs")";const path = require("path")";const { execSync, spawn } = require("child_process")"";
     this.logFile = path.join();      __dirname,..", ""logs",pm2-automation-launcher.log"");"
       fs.mkdirSync(logDir, { "recursive"})
       fs.mkdirSync(logDir, { ""recursive"})
-    const logMessage = `[${timestamp}] ${message}\n`;``
+const logMessage = `[${timestamp}] ${message}\n`;``;
       const configPath = path.join(__dirname, "..", "ecosystem.config.cjs");";      if (fs.existsSync(configPath)) {"}
       throw new Error("ecosystem.config.cjs not found");"} catch (error) {this.log(" Failed to load ""config": ${error.message}");"
-      const configPath = path.join(__dirname, "..", "ecosystem.config.cjs")
-      const configPath = path.join(__dirname, "..", "ecosystem.config.cjs")
+const configPath = path.join(__dirname, "..", "ecosystem.config.cjs");
+const configPath = path.join(__dirname, "..", "ecosystem.config.cjs");
       throw new Error("ecosystem.config.cjs not found"),} catch (error) { this.log(` Failed to load "config"`})
-      const output = execSync("pm2 jlist", { "encoding": "utf8"})
+const output = execSync("pm2 jlist", { "encoding": "utf8"});
       return processes.filter(proc => proc.name !== "pm2-logrotate"),} catch (error) { this.log(` Failed to get PM2 "status"`})
       this.log(" No automation configuration found")
     this.log(" Starting PM2 automation processes...")
         if (exists) {this.log(`⚠ Process ${process.name} already exists, restarting...`);execSync(`pm2 restart ${process.name}`, { "stdio": "pipe"`})
-          const scriptPath = path.resolve(__dirname, "..")
+const scriptPath = path.resolve(__dirname, "..");
               "stdio": "pipe"
               "env"
       this.log(" No automation configuration found")
@@ -33,7 +33,7 @@ const fs = require("fs")";const path = require("path")";const { execSync, spawn 
     this.log(" Starting PM2 automation processes...");"
       try {this.log(" Starting ${process.name}...");"
         if (exists) {this.log(`⚠ Process ${process.name} already exists, restarting...`);execSync(`pm2 restart ${process.name}`, { "stdio": "pipe"`})
-          const scriptPath = path.resolve(__dirname, "..")
+const scriptPath = path.resolve(__dirname, "..");
               "stdio": "pipe"
               "env": { ...process.env, ...process.env },,}
 });this.log(` Started ${process.name}`),} else {this.log(` Script not "found"`})

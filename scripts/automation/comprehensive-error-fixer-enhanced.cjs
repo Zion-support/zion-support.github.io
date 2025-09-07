@@ -1,8 +1,8 @@
 #!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
-const { execSync, spawn } = require('child_process')
-const glob = require('glob')
+const fs = require('fs');
+const path = require('path');
+const { execSync, spawn } = require('child_process');
+const glob = require('glob');
     this.reportFile = path.join(this.projectRoot, 'comprehensive-error-fixer-report.json')
   log(message, level = 'info')
     this.log('Starting Comprehensive Error Fixer...', 'info')
@@ -22,8 +22,8 @@ const glob = require('glob')
           'function $1(..."args")
           "type"
           "description"
-      const importRegex = /import\s+.*\s+from\s+['"]([^'')]
+const importRegex = /import\s+.*\s+from\s+['"]([^'')];
           "type"
           "description"
 
-  const backupPath = path.join(this.backupDir, path.basename(filePath) + "
+const backupPath = path.join(this.backupDir, path.basename(filePath) + ";

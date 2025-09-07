@@ -23,7 +23,7 @@ class ErrorMonitor {}
   async checkTypeScriptErrors() {}
     try {}
       this.log("info", "Checking TypeScript errors...");
-      const result = execSync("npx tsc --noEmit", {"cwd": this.projectRoot,"encoding": "utf8";})
+const result = execSync("npx tsc --noEmit", {"cwd": this.projectRoot,"encoding": "utf8";});
         stdio: "pipe"}
 });
       return { "status": "clean", "errors": [] };
@@ -36,7 +36,7 @@ class ErrorMonitor {}
   async checkLintingErrors() {}
     try {}
       this.log("info", "Checking linting errors...");
-      const result = execSync("npm run lint", {"cwd": this.projectRoot,"encoding": "utf8";})
+const result = execSync("npm run lint", {"cwd": this.projectRoot,"encoding": "utf8";});
         stdio: "pipe"}
 });
       return { "status": "clean", "errors": [] };
@@ -49,7 +49,7 @@ class ErrorMonitor {}
   async checkBuildErrors() {}
     try {}
       this.log("info", "Checking build errors...");
-      const result = execSync("npm run build", {"cwd": this.projectRoot,"encoding": "utf8";})
+const result = execSync("npm run build", {"cwd": this.projectRoot,"encoding": "utf8";});
         stdio: "pipe"}
 });
       return { "status": "clean", "errors": [] };
@@ -62,7 +62,7 @@ class ErrorMonitor {}
   async checkTestErrors() {}
     try {}
       this.log("info", "Checking test errors...");
-      const result = execSync("npm test", {"cwd": this.projectRoot,"encoding": "utf8";})
+const result = execSync("npm test", {"cwd": this.projectRoot,"encoding": "utf8";});
         stdio: "pipe"}
 });
       return { "status": "clean", "errors": [] };
@@ -88,7 +88,7 @@ class ErrorMonitor {}
       })};
     findLogFiles(this.logDir);
     findLogFiles(path.join(this.projectRoot, "logs"));
-    const errorPatterns = [/error/i,/exception/i,/failed/i;]
+const errorPatterns = [/error/i,/exception/i,/failed/i;];
       /fatal/i;
       /critical/i;
       /timeout/i;
@@ -217,7 +217,7 @@ class ErrorMonitor {}
     report.summary.warnings = report.logErrors.length;
     report.summary.totalIssues = report.summary.totalErrors + report.summary.warnings;
     // Save report;
-    const reportFile = path.join()
+const reportFile = path.join();
       this.reportsDir;
       `error-report-${new Date().toISOString().replace(/[:.]/g, "-")}.json`);
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));

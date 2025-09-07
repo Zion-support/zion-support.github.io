@@ -409,12 +409,12 @@ throw error}
     this.log('Starting dependency resolution...');
     try {
       // Run comprehensive dependency checks
-      const [vulnCheck, outdatedCheck, packageLockCheck, duplicateCheck] = await Promise.all([this.runDependencyCheck(),
+const [vulnCheck, outdatedCheck, packageLockCheck, duplicateCheck] = await Promise.all([this.runDependencyCheck(),;
         this.runOutdatedCheck(),
         this.checkPackageLockIssues(),
         this.checkDuplicateDependencies()
       ]);
-      const totalIssues = vulnCheck.count + outdatedCheck.count + 
+const totalIssues = vulnCheck.count + outdatedCheck.count +;
                          (packageLockCheck.success ? 0 : 1) + duplicateCheck.duplicates.length;
       if (totalIssues === 0) {
         this.log('No dependency issues found', 'INFO');

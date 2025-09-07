@@ -1,122 +1,152 @@
-import {useState} from 'react';
-import {useQuery, useMutation, useQueryClient} from '@tanstack/react-query';
-import {quoteRequestService} from '@/services/quoteRequestService';
-import type { QuoteRequest, QuoteStatus } from '@/types/quotes';
-import { useToast } from '@/components/ui/use-toast';
-import type { DateRange } from '@/types/dateRange';
+import {useState} from 'react';'
+import {useQuery, useMutation, useQueryClient} from '@tanstack/react-query';'
+import {quoteRequestService} from '@/services/quoteRequestService';'
+import type { QuoteRequest, QuoteStatus } from '@/types/quotes';'
+import { useToast } from '@/components/ui/use-toast';'
+import type { DateRange } from '@/types/dateRange';'
 export const useAdminQuotes = () => {
-export const useAdminQuotes = () => {;    enabled: true});
-  // Filter quotes based on selected filters
-  const filteredQuotes = allQuotes && allQuotes.filter((quote) => {
+}
+export const useAdminQuotes = () => {;    "enabled": true});
+  // Filter quotes based on selected filters,
+const filteredQuotes = allQuotes && allQuotes.filter((quote) => {
     // Status filter
-    if (statusFilter !== 'all' && quote && quote.status !== statusFilter) {
-      return false    return true
+}
+if (statusFilter !== 'all' && quote && quote.status !== statusFilter) {'
+}
+return false    return true;
   });
-  // Update quote status mutation
-  const updateStatusMutation = useMutation({
-    mutationFn: ({ id, status }: { id: string, status: QuoteStatus }) =>     mutationFn: ({ id, status }: { id: string, status: QuoteStatus }) => 
+  // Update quote status mutation,
+const updateStatusMutation = useMutation({
+    }
+    "mutationFn": ({ id, status }: { "id": string, "status": QuoteStatus }) =>     "mutationFn": ({ id, status }: { "id": string, "status": QuoteStatus }) => 
       quoteRequestService && quoteRequestService.updateStatus(id, status);
-    mutationFn: ({ id, status }: { id: string, status: QuoteStatus }) => 
+    "mutationFn": ({ id, status }: { "id": string, "status": QuoteStatus }) => 
       quoteRequestService && quoteRequestService.updateStatus(id, status);
-    mutationFn: ({ id, status }: { id: string, status: QuoteStatus }) => 
+    "mutationFn": ({ id, status }: { "id": string, "status": QuoteStatus }) => 
       quoteRequestService.updateStatus(id, status),
-    mutationFn: ({ id, status }: { id: string, status: QuoteStatus }) => 
-    onSuccess: () => {
+    "mutationFn": ({ id, status }: { "id": string, "status": QuoteStatus }) => 
+    "onSuccess": () => {
+      }
       toast({
-        title: "title",
-    description: "The quote request status has been updated"
+        }
+        "title": "title","
+    "description": "The quote request status has been updated""
     };
-    onError: (error: Error) => {
+    "onError": ("error": Error) => {
+      }
       toast({
-        title: "Error",
-  description: "Failed to update status: " + error && error.message,    onSuccess: (_, variables) => {
+        }
+        "title": "Error","
+  "description": "Failed to update "status": " + error && error.message,    "onSuccess": (_, variables) => {"
+      }
       toast({
-        title: variables.isArchived ? "Quote archived" : "Quote unarchived"
-        description: variables.isArchived
-          ? "The quote request has been archived"
-          : "The quote request has been moved back to active quotes"
+        }
+        "title": variables.isArchived ? "Quote archived" : "Quote unarchived""
+        "description": variables.isArchived
+          ? "The quote request has been archived""
+          : "The quote request has been moved back to active quotes""
       });
-      queryClient.invalidateQueries({ queryKey: ['quotesadmin'] })        variant: "destructive"
+      queryClient.invalidateQueries({ "queryKey": ['quotesadmin'] })        "variant": "destructive""
       })
     }
-  });      queryClient && queryClient.invalidateQueries({ queryKey: ['quotesadmin'] })
+  });      queryClient && queryClient.invalidateQueries({ "queryKey": ['quotesadmin'] })'
     };
-    onError: (error: Error) => {
+    "onError": ("error": Error) => {
+      }
       toast({
-        title: "Error",
-  description: "Failed to delete quote: " + error && error.message,        variant: "destructive"
+        }
+        "title": "Error","
+  "description": "Failed to delete "quote": " + error && error.message,        "variant": "destructive""
       })
     }
   });    },
-    onError: (error: Error) => {
+    "onError": ("error": Error) => {
+      }
       toast({
-        title: "Error",
-        description: "Failed to delete quote: " + error.message,
-        variant: "destructive"
+        }
+        "title": "Error","
+        "description": "Failed to delete "quote": " + error.message,"
+"variant": "destructive";"
       })
 ;
     return true;
   }),;
   // Update quote status mutation;
   const updateStatusMutation = useMutation({;
-    mutationFn: ({ id, status }: { id: string, status: QuoteStatus }) =>;
+    }
+    "mutationFn": ({ id, status }: { "id": string, "status": QuoteStatus }) =>;
       quoteRequestService.updateStatus(id, status),;
-    onSuccess: () => {;
+    "onSuccess": () => {;
+      }
       toast({;
-        title: "Status updated",,
-  description: "The quote request status has been updated";
+        }
+        "title": "Status updated",,"
+  "description": "The quote request status has been updated";"
       }),;
-      queryClient.invalidateQueries({ queryKey: ['quotesadmin'] });
+      queryClient.invalidateQueries({ "queryKey": ['quotesadmin'] });'
     },;
-    onError: (error: Error) => {;
+    "onError": ("error": Error) => {;
+      }
       toast({;
-        title: "Error",,
-  description: "Failed to update status: " + error.message,;
-        variant: "destructive";
+        }
+        "title": "Error",,"
+  "description": "Failed to update "status": " + error.message,;"
+        "variant": "destructive";"
       });
     }
   }),;
   // Archive/Unarchive mutation;
   const toggleArchiveMutation = useMutation({;
-    mutationFn: ({ id, isArchived }: { id: string, isArchived: boolean }) =>;
+    }
+    "mutationFn": ({ id, isArchived }: { "id": string, "isArchived": boolean }) =>;
       quoteRequestService.toggleArchive(id, isArchived),;
-    onSuccess: (_, variables) => {;
+    "onSuccess": (_, variables) => {;
+      }
       toast({;
-        title: variables.isArchived ? "Quote archived" : "Quote unarchived",,
-  description: variables.isArchived;
-          ? "The quote request has been archived";
-          : "The quote request has been moved back to active quotes";
+        }
+        "title": variables.isArchived ? "Quote archived" : "Quote unarchived",,"
+  "description": variables.isArchived;
+          ? "The quote request has been archived";"
+          : "The quote request has been moved back to active quotes";"
       }),;
-      queryClient.invalidateQueries({ queryKey: ['quotesadmin'] });
+      queryClient.invalidateQueries({ "queryKey": ['quotesadmin'] });'
     },;
-    onError: (error: Error) => {;
+    "onError": ("error": Error) => {;
+      }
       toast({;
-        title: "Error",,
-  description: "Failed to update quote: " + error.message,;
-        variant: "destructive";
+        }
+        "title": "Error",,"
+  "description": "Failed to update "quote": " + error.message,;"
+        "variant": "destructive";"
       });
     }
   }),;
   // Delete mutation;
   const deleteMutation = useMutation({;
-    mutationFn: (id: string) => quoteRequestService.delete(id),;
-    onSuccess: () => {;
+    }
+    "mutationFn": ("id": string) => quoteRequestService.delete(id),;
+    "onSuccess": () => {;
+      }
       toast({;
-        title: "Quote deleted",,
-  description: "The quote request has been permanently deleted";
+        }
+        "title": "Quote deleted",,"
+  "description": "The quote request has been permanently deleted";"
       }),;
-      queryClient.invalidateQueries({ queryKey: ['quotesadmin'] });
+      queryClient.invalidateQueries({ "queryKey": ['quotesadmin'] });'
     },;
-    onError: (error: Error) => {;
+    "onError": ("error": Error) => {;
+      }
       toast({;
-        title: "Error",,
-  description: "Failed to delete quote: " + error.message,;
-        variant: "destructive";
+        }
+        "title": "Error",,"
+  "description": "Failed to delete "quote": " + error.message,;"
+        "variant": "destructive";"
       });
     }
   }),;
   return {;
-    quotes: filteredQuotes,;
+    }
+    "quotes": filteredQuotes,;
     isLoading,;
     error,;
     statusFilter,;
@@ -127,16 +157,16 @@ export const useAdminQuotes = () => {;    enabled: true});
     setSearchQuery,;
     dateRange,;
     setDateRange,;
-    updateStatus: (id: string, status: QuoteStatus) =>;
+    "updateStatus": ("id": string, "status": QuoteStatus) =>;
       updateStatusMutation.mutate({ id, status }),;
-    toggleArchive: (id: string, isArchived: boolean) =>;
+    "toggleArchive": ("id": string, "isArchived": boolean) =>;
       toggleArchiveMutation.mutate({ id, isArchived });
-    deleteQuote: (id: string) => deleteMutation.mutate(id)}
+    "deleteQuote": ("id": string) => deleteMutation.mutate(id)}
 }
-    updateStatus: (id: string, status: QuoteStatus) => 
+    "updateStatus": ("id": string, "status": QuoteStatus) => 
       updateStatusMutation && updateStatusMutation.mutate({ id, status });
-    toggleArchive: (id: string, isArchived: boolean) => 
+    "toggleArchive": ("id": string, "isArchived": boolean) => 
       toggleArchiveMutation && toggleArchiveMutation.mutate({ id, isArchived });
-    deleteQuote: (id: string) => deleteMutation && deleteMutation.mutate(id)}
+    "deleteQuote": ("id": string) => deleteMutation && deleteMutation.mutate(id)}
 }
 }

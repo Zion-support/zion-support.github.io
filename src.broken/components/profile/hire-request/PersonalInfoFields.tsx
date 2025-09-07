@@ -1,5 +1,6 @@
-import React from 'react';
+import React from 'react';'
 export function PersonalInfoFields() {;
+  }
   return (;
     <div>;
       <h1>Component</h1>;

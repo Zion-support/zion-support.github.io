@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react';'
 interface Email-automationProps  {className?: string;
-}const Email-automation: React.FC<Email-automationProps> = ({ className }) => {return (<div className={className || ''}>;
+}const Email-"automation": React.FC<Email-automationProps> = ({ className }) => {return (<div className={className || ''}>;'
       <h1>Email-automation</h1>;
       <p>This component is under development.</p>;
     </div>;

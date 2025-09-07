@@ -100,7 +100,7 @@ class $1 {}
 ;
     this.log = (message, level = "INFO") => {}
   const timestamp = new Date().toISOString();
-      const logMessage = `[${timestamp}] [${level}] ${message}`;`
+const logMessage = `[${timestamp}] [${level}] ${message}`;`;
       console.log("logMessage);
 
       try {}
@@ -342,7 +342,7 @@ class $1 {}
       };
 ;
       // Check git status;
-      const status = execSync("git status --porcelain", {})
+const status = execSync("git status --porcelain", {});
   "cwd": this.config.projectRoot,
         "encoding": "utf8"}
 });
@@ -421,7 +421,7 @@ class $1 {}
         isHealthy = false} else {}
   // Check for outdated dependencies;
         try {}
-  const outdated = execSync("npm outdated --json", {})
+const outdated = execSync("npm outdated --json", {});
   "cwd": this.config.projectRoot,
             "encoding": "utf8"}
 });
@@ -619,7 +619,7 @@ class $1 {}
   async collectPerformanceMetrics() {}
   try {}
   // Get system performance data;
-      const output = execSync("pm2 monit --no-daemon", {})
+const output = execSync("pm2 monit --no-daemon", {});
   "encoding": "utf8",
         "timeout": 5000 }
 });
@@ -661,7 +661,7 @@ class $1 {}
   async monitorPerformance() {}
   try {}
   // Check if any process is using too much memory;
-      const output = execSync("pm2 monit --no-daemon", {})
+const output = execSync("pm2 monit --no-daemon", {});
   "encoding": "utf8",
         "timeout": 5000}
 });
@@ -676,7 +676,7 @@ class $1 {}
   async monitorPerformance() {}
   try {}
   // Check if any process is using too much memory;
-      const output = execSync("pm2 monit --no-daemon", {})
+const output = execSync("pm2 monit --no-daemon", {});
   "encoding": "utf8",
         "timeout": 5000}
 });

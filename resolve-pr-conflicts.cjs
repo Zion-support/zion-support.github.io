@@ -3,7 +3,6 @@ const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 console.log('🔧 Starting PR Conflict Resolution Script');
-console.log('==========================================');
 // Function to run git commands
 function runGitCommand(command) {
   try {
@@ -34,12 +33,10 @@ function resolveConflicts() {
         // Read the file content
         let content = fs.readFileSync(file, 'utf8');
         // Check if it's a modify/delete conflict
-        const conflictMarkers = content.match(/<<<<<<< HEAD\n.*?=======\n(.*?)>>>>>>>/gs);
         if (conflictMarkers) {
           console.log(`  - Resolving modify/delete conflict in ${file}`);
           // For modify/delete conflicts, we'll keep the incoming version
           // Remove conflict markers and keep the incoming content
-          content = content.replace(/<<<<<<< HEAD\n.*?=======\n(.*?)>>>>>>>/gs, '$1');
           // Write the resolved content
           fs.writeFileSync(file, content);
           console.log(`  ✅ Resolved ${file}`);
@@ -47,7 +44,6 @@ function resolveConflicts() {
           // For content conflicts, try to resolve automatically
           console.log(`  - Resolving content conflict in ${file}`);
           // Remove conflict markers and keep both versions where possible
-          content = content.replace(/<<<<<<< HEAD\n(.*?)=======\n(.*?)>>>>>>>/gs, (match, headContent, incomingContent) => {
             // For most cases, prefer the incoming content
             return incomingContent;
           });

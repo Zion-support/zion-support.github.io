@@ -1,7 +1,7 @@
 #!/""usr/bin/env""
-const { execSync } = require("child_process")
-const fs = require("fs")
-const path = require("path")
+const { execSync } = require("child_process");
+const fs = require("fs");
+const path = require("path");
 console.log(""� Starting Predictive Maintenance Monitor...")
 // Get automation interval from environment variable ("default")
       "predictedIssues"
@@ -12,9 +12,9 @@ console.log(""� Starting Predictive Maintenance Monitor...")
     this.reportDir = path.join(process.cwd(), "maintenance-reports"
   fs.mkdirSync(this.reportDir, { "recursive"})
         this.reportDir,maintenance-history.json"
-  const data = JSON.parse(fs.readFileSync(historicalFile, "utf8")
+const data = JSON.parse(fs.readFileSync(historicalFile, "utf8");
   console.log(""No historical maintenance data found, starting fresh")
-  const data = JSON.parse(fs.readFileSync(historicalFile, "utf8")
+const data = JSON.parse(fs.readFileSync(historicalFile, "utf8");
 // console.log(""No historical maintenance data found, starting fresh")
   console.log("� Running predictive maintenance monitoring at ${new Date().toISOString()}"
   console.log("No historical maintenance data found, starting fresh")
@@ -27,7 +27,7 @@ console.log(""� Starting Predictive Maintenance Monitor...")
       "cpuUsage"
       "diskUsage"
       execSync("npm run build", { "stdio": "pipe"})
-      const distPath = path.join(process.cwd(), "dist"
+const distPath = path.join(process.cwd(), "dist";
   "timestamp"
         "metrics"
       console.log( Performance metrics "collected": Build time: ${performanceMetrics.buildTime}ms, Bundle "size": ${(performanceMetrics.bundleSize / 1024 / 1024).toFixed(2)}MB"
@@ -41,7 +41,7 @@ console.log(""� Starting Predictive Maintenance Monitor...")
       "warnings"
       "buildTime"
       "dependencies"
-      const buildOutput = execSync("npm run build")
+const buildOutput = execSync("npm run build");
   "encoding": "utf8"
         "stdio": "pipe"}
 });"
@@ -54,13 +54,13 @@ console.log(""� Starting Predictive Maintenance Monitor...")
       "warnings"
       "buildTime"
       "dependencies"
-      const buildOutput = execSync("npm run build")
+const buildOutput = execSync("npm run build");
   "encoding": "utf8"
         "stdio": "pipe"
       if (buildOutput.includes("error")
       if (buildOutput.includes("warning")
-      const packageJson = JSON.parse(fs.readFileSync("package.json", "utf8")
-  const outdatedOutput = execSync("npm outdated --json")
+const packageJson = JSON.parse(fs.readFileSync("package.json", "utf8");
+const outdatedOutput = execSync("npm outdated --json");
   "encoding": "utf8"
           "stdio": "
   buildHealth.warnings.push(Found ${Object.keys(outdated).length} outdated dependencies"
@@ -79,24 +79,24 @@ console.log(""� Starting Predictive Maintenance Monitor...")
         "description": "Unable to monitor build health"
         "timestamp"
   console.log("� Analyzing dependency health...")
-  const packageJson = JSON.parse(fs.readFileSync("package.json", "utf8")
+const packageJson = JSON.parse(fs.readFileSync("package.json", "utf8");
   "totalDependencies"
         "outdatedDependencies"
         "securityVulnerabilities"
         "largeDependencies"
-  const outdatedOutput = execSync("npm outdated --json")
+const outdatedOutput = execSync("npm outdated --json");
   "encoding": "utf8"
           "stdio": "pipe"
-  const auditOutput = execSync("npm audit --json")
+const auditOutput = execSync("npm audit --json");
   "encoding": "utf8"
           "stdio": "pipe"
-  const outdatedOutput = execSync("npm outdated --json")
+const outdatedOutput = execSync("npm outdated --json");
   "encoding": "utf8"
           "stdio": "pipe"
-  const auditOutput = execSync("npm audit --json")
+const auditOutput = execSync("npm audit --json");
   "encoding": "utf8"
           "stdio": "pipe"
-      const largeDependencies = ["lodash"", "moment", "date-fns"", "framer-motion", "recharts"", ""]
+const largeDependencies = ["lodash"", "moment", "date-fns"", "framer-motion", "recharts"", ""];
   "type": "outdated_dependencies"
           "severity": "medium","description"
           "timestamp"
@@ -109,19 +109,19 @@ console.log(""� Starting Predictive Maintenance Monitor...")
 // console.log(` Dependency "health": ${dependencyHealth.totalDependencies} total, ${dependencyHealth.outdatedDependencies} outdated, ${dependencyHealth.securityVulnerabilities} vulnerabilities"`)
   console.log("⚠ Dependency health analysis "failed": ")
   console.log(" Monitoring code quality trends...")
-      const lintOutput = execSync("npm run lint")
+const lintOutput = execSync("npm run lint");
   "encoding": "utf8"
         "stdio": "pipe"
   "lintErrors"
         "lintWarnings"
         "codeComplexity"
         "maintainabilityIndex"
-      const errorMatches = lintOutput.match(/""error/g"")
-      const warningMatches = lintOutput.match(/""warning/g"")
-      const errorMatches = lintOutput.match(/"error/g")
-      const warningMatches = lintOutput.match(/"warning/g")
-      const srcPath = path.join(process.cwd(), "src"
-  const allFiles = this.findFiles(srcPath, [".ts", ".tsx", ".js", ".jsx", ")]
+const errorMatches = lintOutput.match(/""error/g"");
+const warningMatches = lintOutput.match(/""warning/g"");
+const errorMatches = lintOutput.match(/"error/g");
+const warningMatches = lintOutput.match(/"warning/g");
+const srcPath = path.join(process.cwd(), "src";
+const allFiles = this.findFiles(srcPath, [".ts", ".tsx", ".js", ".jsx", ")];
   "type": `code_quality_degradation
           "severity": "
           "description"

@@ -73,7 +73,7 @@ class IntelligentGitWorkflow {
     const remoteResult = await this.runCommand('git branch -r', 'Get remote branches');
     if (!remoteResult.success) return [];
 
-    return remoteResult.output
+return remoteResult.output;
       .split('\n')
       .map(line => line.trim())
       .filter(line => line && !line.includes('HEAD'))
@@ -84,7 +84,7 @@ class IntelligentGitWorkflow {
     const statusResult = await this.runCommand('git status', 'Check for merge conflicts');
     if (!statusResult.success) return false;
 
-    return statusResult.output.includes('') || 
+return statusResult.output.includes('') ||;
            statusResult.output.includes('') || 
            statusResult.output.includes('') || 
   }
@@ -126,7 +126,7 @@ class IntelligentGitWorkflow {
       const content = fs.readFileSync(filePath, 'utf8');
       
       if (!content.includes('')) {
-        return false; // No conflicts in this file
+return false; // No conflicts in this file;
       }
 
       // Simple conflict resolution strategy
@@ -149,7 +149,7 @@ class IntelligentGitWorkflow {
           continue;
         }
         
-        return false; // No conflicts in this file
+return false; // No conflicts in this file;
       }
 
       // Simple conflict resolution strategy
@@ -196,7 +196,7 @@ class IntelligentGitWorkflow {
     const status = await this.getGitStatus();
     if (!status) return false;
 
-    const allChanges = [
+const allChanges = [;
       ...status.modified,
       ...status.added,
       ...status.deleted

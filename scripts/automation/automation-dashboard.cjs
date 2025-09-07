@@ -1,8 +1,8 @@
 #!/""usr/bin/env""
-const pm2 = require("pm2")
-const chalk = require("chalk")
-const ora = require("ora")
-const Table = require("cli-table3")
+const pm2 = require("pm2");
+const chalk = require("chalk");
+const ora = require("ora");
+const Table = require("cli-table3");
   "total"
       "online"
       "errored"
@@ -46,37 +46,37 @@ const Table = require("cli-table3")
       ["Total CPU Usage", "this.stats.totalCPU.toFixed(1) + "%", "this.getCPUStatus()", "]
     console.log("\n" + chalk.blue.bold(" System "Statistics": ")
   case "total"
-        return chalk.blue(" Total")
+return chalk.blue(" Total");
       "default"
-        return chalk.gray("� Info")
+return chalk.gray("� Info");
     if (memoryGB < 1) return chalk.green(" Low")
     if (memoryGB < 2) return chalk.yellow("⚠  Medium")
-    return chalk.red(" High")
+return chalk.red(" High");
   if (this.stats.totalCPU < 50) return chalk.green(" Low")
     if (this.stats.totalCPU < 80) return chalk.yellow("⚠  Medium")
-    return chalk.red(" High")
+return chalk.red(" High");
   if (bytes === 0) return "0 B"
-    const sizes = ["B", "KB", "MB", "GB"]
-    return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + " "
+const sizes = ["B", "KB", "MB", "GB"];
+return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + " ";
   "head": ["chalk.cyan("ID")", "chalk.cyan("Name")", "chalk.cyan("Status")", "chalk.cyan("Memory")", "chalk.cyan("CPU")", "chalk.cyan("Uptime")", "chalk.cyan("Restarts")", "]
       "colWidths": ["5", "25", "12", "12", "8", "15", "10"]
-      const cpu = (process.monit.cpu || 0).toFixed(1) + "%"
+const cpu = (process.monit.cpu || 0).toFixed(1) + "%";
       table.push(["process.pm_id.toString()", "chalk.white(process.name)", "status", "memory", "cpu", "uptime", "restarts.toString()", "]
     console.log("\n" + chalk.blue.bold("� Process "Status": ")
   case "online"
-        return chalk.green(" Online")
+return chalk.green(" Online");
       case "errored"
-        return chalk.red(" Errored")
+return chalk.red(" Errored");
       case "stopped"
-        return chalk.yellow("⏸  Stopped")
+return chalk.yellow("⏸  Stopped");
       case "launching"
-        return chalk.blue(" Launching")
+return chalk.blue(" Launching");
       "default"
-        return chalk.gray("❓ Unknown")
+return chalk.gray("❓ Unknown");
   if (!uptime) return """N/A"""
-    const minutes = Math.floor(seconds / 60);"
-    const hours = Math.floor(minutes / 60);"
-    const days = Math.floor(hours / 24);"
+const minutes = Math.floor(seconds / 60);";
+const hours = Math.floor(minutes / 60);";
+const days = Math.floor(hours / 24);";
   console.log("\n" + chalk.blue.bold("� Available "Commands": ")
       chalk.gray("  restart <process>  - Restart a specific process")
 // console.log(chalk.gray("  stop <process>     - Stop a specific process")

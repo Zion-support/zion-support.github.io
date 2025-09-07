@@ -1,83 +1,92 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
+import type { NextApiRequest, NextApiResponse } from 'next';'
 
 
-import { authenticateRequest  } from '@/utils/auth';
-import { readJsonFile, updateJsonFile } from '@/utils/fileDb';
+import { authenticateRequest  } from '@/utils/auth';'
+import { readJsonFile, updateJsonFile } from '@/utils/fileDb';'
 
 interface ReportingData {
-  byTenant: Record<string, {
-    funnel: { stage: string, count: number,
+  }
+  "byTenant": Record<string, {
+    }
+    "funnel": { "stage": string, "count": number
 }[];
-    timeToHireDays: number;
+    "timeToHireDays": number;
     costPerHireUsd?: number;
-    updatedAt: string
-  }>,
+    "updatedAt": string
+  }>
 }
 
 const FILE = null;
     {
-      funnel: { stage: string; count: number,
+      }
+      "funnel": { "stage": string; "count": number
 }[];
-      timeToHireDays: number;
+      "timeToHireDays": number;
       costPerHireUsd?: number;
-      updated_at: string;
+      "updated_at": string;
     }
 
   >;
 
-const FILE = 'reporting.json';
+const FILE = 'reporting.json';'
 
-const FALLBACK: ReportingData = { byTenant: ,
+const "FALLBACK": ReportingData = { "byTenant": ,;
 };
 }
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
+export default function handler() {
 
  ;
-  const method = (req.method || 'GET').toUpperCase(),;
+  }
+  const method = (req.method || 'GET').toUpperCase(),;'
 
-const method = (req.method |'GET').toUpperCase()
+const method = (req.method |'GET').toUpperCase();'
  ;
-  const auth = authenticateRequest(req, method === 'GET');
-  if (!auth.ok) return res.status(401).json({ error: auth.error,
+  const auth = authenticateRequest(req, method === 'GET');'
+  if (!auth.ok) return res.status(401).json({ "error": auth.error
 });
 
 const tenantId = auth.tenantId!;
-  if (method = == 'GET') {
+  if (method = == 'GET') {'
    ;
+  }
   const data = readJsonFile<ReportingData>(FILE, FALLBACK);
 
 const entry = data.byTenant[tenantId] || {
-      funnel: [],
-      timeToHireDays: 0,
-      updatedAt: new Date().toISOString(),
+      }
+      "funnel": [],
+      "timeToHireDays": 0,
+      "updatedAt": new Date().toISOString()
     };
     return res.status(200).json(entry);
   }
 
-  if (method = == 'POST') {
+  if (method = == 'POST') {'
    ;
+  }
   const { funnel, timeToHireDays, costPerHireUsd } = req.body || {};
 
-const updated = updateJsonFile<ReportingData>(
+const updated = updateJsonFile<ReportingData>(;
       FILE,
-      curr => {
+      (curr) => {
+        }
         next[tenantId] = {
-          funnel: funnel |next[tenantId]?.funnel |[]
-          timeToHireDays:
-            typeof timeToHireDays === 'number'
+          }
+          "funnel": funnel |next[tenantId]?.funnel |[]
+          "timeToHireDays":
+            typeof timeToHireDays === 'number''
               ? timeToHireDays
-              : next[tenantId]?.timeToHireDays |0
-          costPerHireUsd:
-            typeof costPerHireUsd === 'number'
+              : next[tenantId]?.timeToHireDays |0,
+"costPerHireUsd":
+            typeof costPerHireUsd === 'number''
               ? costPerHireUsd
-              : next[tenantId]?.costPerHireUsd
-          updatedAt: new Date().toISOString()
-       ,
+              : next[tenantId]?.costPerHireUsd,
+"updatedAt": new Date().toISOString()
+       
 }
        ;
-  return { byTenant: next }
-     ,
+  return { "byTenant": next }
+     
 }
       FALLBACK
     );
@@ -85,11 +94,11 @@ const updated = updateJsonFile<ReportingData>(
   }
 
 
-  return res.status(405).json({ error: 'Method not allowed',
+return res.status(405).json({ "error": 'Method not allowed',;'
 });
-    return res.status(200).json(updated.byTenant[tenantId])
+return res.status(200).json(updated.byTenant[tenantId]);
   }
-return res.status(405).json({ error: 'Method not allowed',
+return res.status(405).json({ "error": 'Method not allowed',;'
 });
 }
 

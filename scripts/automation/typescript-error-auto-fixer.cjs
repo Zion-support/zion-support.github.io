@@ -79,7 +79,7 @@ class TypeScriptErrorAutoFixer {}
     const lines = content.split('\n');
     
     // Apply common TypeScript fixes;
-    const fixes = [this.fixAnyType.bind(this),]
+const fixes = [this.fixAnyType.bind(this),];
       this.fixMissingImports.bind(this),
       this.fixTypeAnnotations.bind(this),
       this.fixInterfaceIssues.bind(this),
@@ -130,7 +130,7 @@ class TypeScriptErrorAutoFixer {}
         const moduleName = importMatch[1];
         
         // Add missing import at the top of the file;
-        const importStatement = `import * as ${moduleName.split('/').pop()} from '${moduleName}';`;`
+const importStatement = `import * as ${moduleName.split('/').pop()} from '${moduleName}';`;`;
         
         // Find the last import statement;
         let lastImportIndex = -1;
@@ -157,7 +157,7 @@ class TypeScriptErrorAutoFixer {}
       const varMatch = line.match(/(const|let|var)\s+(\w+)\s*=/);
       if (varMatch) {}
         const varName = varMatch[2];
-        const fixedLine = line.replace()
+const fixedLine = line.replace();
           new RegExp(`(${varMatch[1]}\\s+${varName}\\s*)=`),`
           "$"1": unknown ="
         );

@@ -1,14 +1,16 @@
 
 }
 
-const LazyComponent: React.FC<LazyComponentProps> = ({ fallback = <div className="flex items-center justify-center p-4">Loading...</div>, 
+const "LazyComponent": React.FC<LazyComponentProps> = ({ fallback = <div className="flex items-center justify-center p-4">Loading...</div>, "
+  }
   children 
    }) => {
 
 
 
  ;
-  return (
+}
+return (;
     <Suspense fallback={fallback}>
       {children}
     </Suspense>
@@ -19,19 +21,22 @@ const LazyComponent: React.FC<LazyComponentProps> = ({ fallback = <div className
 export default LazyComponent;
 
 interface LazyComponentProps {
-  children: ReactNode;
+  }
+  "children": ReactNode;
   fallback?: ReactNode;
 
 }
 
-const LazyComponent: React.FC<LazyComponentProps> = ({ children, 
+const "LazyComponent": React.FC<LazyComponentProps> = ({ children,;
+  }
   fallback = <LoadingSpinner /> 
    }) => {
 
 
 
  ;
-  return (
+}
+return (;
     <Suspense fallback={fallback}>;
       <Component {...props} />;
     </Suspense>)
@@ -42,7 +47,7 @@ const LazyComponent: React.FC<LazyComponentProps> = ({ children,
 
 ;
 export default LazyComponent;
-import React from 'react'
+import React from 'react''
 },
     <Suspense fallback={fallback}>
       {children}
@@ -52,13 +57,14 @@ import React from 'react'
 
 
 export default LazyComponent;
-import React from 'react'
+import React from 'react''
 }
-import React, { Suspense, lazy } from 'react';
+import React, { Suspense, lazy } from 'react';'
 interface LazyComponentProps {
-  children: ReactNode;
+  }
+  "children": ReactNode;
   fallback?: ReactNode;
-  return (
+return (;
     </Suspense>)
 };
 

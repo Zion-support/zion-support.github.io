@@ -5,13 +5,13 @@
 
 
 #!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
-const { execSync } = require('child_process')
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
 // console.log(' Comprehensive Code Fixer')
 console.log('')
   console.log('� Fixing common linting issues...')
-  const filesToFix = ['components/ContactForm.tsx']
+const filesToFix = ['components/ContactForm.tsx'];
     'components/ErrorBoundary.tsx'
     'components/PerformanceMonitor.tsx'
     'components/SearchBar.tsx'
@@ -28,8 +28,8 @@ console.log('')
     'pages/pricing.tsx'
     'pages/services.tsx'
     'pages/terms.tsx'
-        let content = fs.readFileSync(filePath, 'utf8')
-        let content = fs.readFileSync(filePath, 'utf8')
+let content = fs.readFileSync(filePath, 'utf8');
+let content = fs.readFileSync(filePath, 'utf8');
         content = content.replace(/'/g, '&apos;')
           content = content.replace(/import Image from 'next\/image')
           content = content.replace(/import Image from 'next\/image'}/, '// import Image from \'next/image\';')

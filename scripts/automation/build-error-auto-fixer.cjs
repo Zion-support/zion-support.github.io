@@ -133,7 +133,7 @@ class BuildErrorAutoFixer {}
         const lines = content.split('\n');
         
         // Basic syntax fixes;
-        const fixes = [this.fixMissingSemicolons.bind(this),]
+const fixes = [this.fixMissingSemicolons.bind(this),];
           this.fixUnclosedBrackets.bind(this),
           this.fixUnclosedQuotes.bind(this),
           this.fixTrailingCommas.bind(this);

@@ -18,7 +18,7 @@ function fixHoverSyntax(filePath) {
     let modified = false;
     
     // Fix various hover syntax patterns
-    const patterns = [
+const patterns = [;
       { from: /"hover":\s*/g, to: 'hover:' },
       { from: /"focus":\s*/g, to: 'focus:' },
       { from: /"group-hover":\s*/g, to: 'group-hover:' },
@@ -59,7 +59,7 @@ function fixHoverSyntax(filePath) {
 
 // Function to find and fix all TypeScript/JSX files
 function fixAllFiles() {
-  const filesToCheck = [
+const filesToCheck = [;
     'components/Footer.tsx',
     'components/Header.tsx',
     'components/layout/MainLayout.tsx',

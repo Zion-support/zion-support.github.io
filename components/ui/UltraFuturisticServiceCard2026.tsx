@@ -1,11 +1,12 @@
 
 
-  id: string;
+  "id": string;
 
-  name: string;
-  tagline: string;
-  description: string;
+  "name": string;
+  "tagline": string;
+  "description": string;
   price?: string | {monthly?: number;
+    }
     yearly?: number;
     currency?: string;
     trialDays?: number;
@@ -14,12 +15,12 @@
   },
   period?: string;
   pricing?: any;
-  features: string[],;
+  "features": string[],;
   popular?: boolean;
 
-  category: string;
+  "category": string;
 
-  icon: string;
+  "icon": string;
   marketPrice?: string;
   competitors?: string[];
   targetMarket?: string;
@@ -28,10 +29,11 @@
 }
 
 interface ServiceCardProps {
-  service: Service;
-  variant?: 'ai' | 'quantum' | 'space' | 'cybersecurity' | 'enterprise' | 'automation' | 'it' | 'emerging' | 'premium' | 'default'
+  }
+  "service": Service;
+variant?: 'ai' | 'quantum' | 'space' | 'cybersecurity' | 'enterprise' | 'automation' | 'it' | 'emerging' | 'premium' | 'default';'
 
 }
 
-const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, variant;
+const "UltraFuturisticServiceCard2026": React.FC<ServiceCardProps> = ({ service, variant;
 

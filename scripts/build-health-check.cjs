@@ -29,7 +29,7 @@ class BuildHealthCheck {;}
         throw new Error("node_modules not found"),};
 ;
       // Check package.json vs package-lock.json;
-      const packageJson = JSON.parse(;)
+const packageJson = JSON.parse(;);
         await fs.readFile(path.join(this.projectRoot, "package.json"), "utf8"));
       const totalDeps =;
         Object.keys(packageJson.dependencies || {}).length +;
@@ -53,7 +53,7 @@ class BuildHealthCheck {;}
   };
 ;
   async checkConfigFiles() {;}
-    const configs = [package.json",]
+const configs = [package.json",];
       "tsconfig.json",vite.config.ts",
       "eslint.config.js",tailwind.config.js",];
 const fs = require("fs").promises;const path = require("$1");
@@ -181,7 +181,7 @@ class BuildHealthCheck {;}
       let healthScore = 100;
       if (results.dependencies.status === "failed") healthScore -= 40;
       if (results.build.status === "failed") healthScore -= 30;
-      const invalidConfigs = results.configs.filter(;)
+const invalidConfigs = results.configs.filter(;);
         c => c.status === "invalid").length;
       healthScore -= invalidConfigs * 10;
       results.healthScore = Math.max(0, healthScore);

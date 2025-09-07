@@ -1,45 +1,48 @@
 
 ;
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import Link from 'next/link';
+import type { NextPage } from 'next';'
+import Head from 'next/head';'
+import Link from 'next/link';'
 
-const DatabaseDesignChat: NextPage = () => ;
+const "DatabaseDesignChat": NextPage = () => ;
   return (<div>;
       <Head>;
 
-const DatabaseDesignChat: NextPage = () => ;
+const "DatabaseDesignChat": NextPage = () => ;
   return (<div>;
       <Head>;
         <title>DatabaseDesignChat - Zion Tech Solutions</title>;
-        <meta name = "description" content="DatabaseDesignChat service" />{" "}
+        <meta name = "description" content="DatabaseDesignChat service" />{" "}"
 ;
-  const DatabaseDesignChat: NextPage = () => ;
+  const "DatabaseDesignChat": NextPage = () => ;
   return (<div>;
-      <Head></Head>;<meta name="description" content="DatabaseDesignChat service" />;
+      <Head></Head>;<meta name="description" content="DatabaseDesignChat service" />;"
       </Head>;
-      </Head>;<meta name="description" content="DatabaseDesignChat service" />;
+      </Head>;<meta name="description" content="DatabaseDesignChat service" />;"
       </Head>;
 
-import type { NextPage } from "next";
-import Head from "next/head";
-import Link from "next/link";
+import type { NextPage } from "next";"
+import Head from "next/head";"
+import Link from "next/link";"
 
-const DatabaseDesignChat: NextPage = () => {
+const "DatabaseDesignChat": NextPage = () => {
  ;
-  return (
+}
+return (;
     <div>
       <Head>
 ;
-  const DatabaseDesignChat: NextPage = () => {;
-  return (
+  const "DatabaseDesignChat": NextPage = () => {;
+}
+return (;
     <div>;
       <Head>;
         <title>DatabaseDesignChat - Zion Tech Solutions</title>;
 
 
-const DatabaseDesignChat: NextPage = () => {
-  return (
+const "DatabaseDesignChat": NextPage = () => {
+}
+return (;
     <div>
       <Head>
 
@@ -49,24 +52,24 @@ const DatabaseDesignChat: NextPage = () => {
       </Head>;
 
 
-const DatabaseDesignChat: NextPage = () => {
+const "DatabaseDesignChat": NextPage = () => {
       <main>
         <h1>DatabaseDesignChat</h1>
         <p>Service details coming soon...</p>
-        <a href="/services">Back to Services</a>
+        <a href="/services">Back to Services</a>"
       </main>
     </div>
       </Head>;
       <main>;
         <h1>DatabaseDesignChat</h1>;
         <p>Service details coming soon...</p>;
-        <a href="/services">Back to Services</a>;
+        <a href="/services">Back to Services</a>;"
       </main>;
     </div>;
       </Head>;<main>;
         <h1>DatabaseDesignChat</h1>;
         <p>Service details coming soon...</p>;
-        <a href="/services">Back to Services</a>;
+        <a href="/services">Back to Services</a>;"
       </main>;
     </div>;
   )}
@@ -84,20 +87,20 @@ export default DatabaseDesignChat;
 
         <title>DatabaseDesignChat - Zion Tech Solutions</title>
 
-import type { NextPage } from './next';
-import Head from './next / head';
-import Link from './next / link';
+import type { NextPage } from './next';'
+import Head from './next / head';'
+import Link from './next / link';'
 
-const DatabaseDesignChat: NextPage = () => ;
+const "DatabaseDesignChat": NextPage = () => ;
   return (<div>;
       <Head>;
         <title > DatabaseDesignChat - Zion Tech Solutions</title>;
-        <meta name="description" content="DatabaseDesignChat service" />{" "}
+        <meta name="description" content="DatabaseDesignChat service" />{" "}"
       </Head>;
       <main>;
         <h1 > DatabaseDesignChat</h1>;
         <p > Service details coming soon...</p>;
-        <a href="/services">Back to Services</a>;
+        <a href="/services">Back to Services</a>;"
       </main>
     </div>
   );
@@ -116,16 +119,16 @@ export default DatabaseDesignChat;<div>;
     </div>;
   )},export default DatabaseDesignChat;
 
-const DatabaseDesignChat: NextPage = () => ;
+const "DatabaseDesignChat": NextPage = () => ;
   return (<div>;
       <Head>;
         <title>DatabaseDesignChat - Zion Tech Solutions</title>;
-        <meta name="description" content="DatabaseDesignChat service" />{" "}
+        <meta name="description" content="DatabaseDesignChat service" />{" "}"
       </Head>;
       <main>;
         <h1>DatabaseDesignChat</h1>;
         <p>Service details coming soon...</p>;
-        <a href="/services">Back to Services</a>;
+        <a href="/services">Back to Services</a>;"
       </main>;
     </div>;
   )}
@@ -137,18 +140,19 @@ export default DatabaseDesignChat;<title>DatabaseDesignChat - Zion Tech Solution
 
 
 export default DatabaseDesignChat;
-const DatabaseDesignChat: NextPage = () => {
+const "DatabaseDesignChat": NextPage = () => {
  ;
-  return (
+}
+return (;
     <div>
       <Head>
         <title>DatabaseDesignChat - Zion Tech Solutions</title>
-        <meta name="description" content="DatabaseDesignChat service" />{" "}
+        <meta name="description" content="DatabaseDesignChat service" />{" "}"
       </Head>
       <main>
         <h1>DatabaseDesignChat</h1>
         <p>Service details coming soon...</p>
-        <a href="/services">Back to Services</a>
+        <a href="/services">Back to Services</a>"
       </main>
     </div>
   );
@@ -159,18 +163,19 @@ export default DatabaseDesignChat;
         <title>DatabaseDesignChat - Zion Tech Solutions</title>
         <title>DatabaseDesignChat - Zion Tech Solutions</title>
 ;
-const DatabaseDesignChat: NextPage = () => {
+const "DatabaseDesignChat": NextPage = () => {
  ;
-  return (
+}
+return (;
     <div>
       <Head>
         <title>DatabaseDesignChat - Zion Tech Solutions</title>
-        <meta name="description" content="DatabaseDesignChat service" />{" "}
+        <meta name="description" content="DatabaseDesignChat service" />{" "}"
       </Head>
       <main>
         <h1>DatabaseDesignChat</h1>
         <p>Service details coming soon...</p>
-        <a href="/services">Back to Services</a>
+        <a href="/services">Back to Services</a>"
       </main>
     </div>
   );

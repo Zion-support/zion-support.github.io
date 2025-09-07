@@ -91,12 +91,8 @@ if (require.main === module) {
   const automator = new GitWorkflowAutomator();
   automator.run();
 }
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 '
-=======
 module.exports = GitWorkflowAutomator;'
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 execSync(`git add ${file}`, { "cwd": this.projectRoot, "stdio"`})
             "stdio"
         "encoding"
@@ -107,7 +103,7 @@ execSync(`git add ${file}`, { "cwd": this.projectRoot, "stdio"`})
         "stdio"
         "stdio"
   ', { "stdio"}
-      const prTitle = title || `"feat"
+const prTitle = title || `"feat";
         "stdio"
 execSync(`git add ${file}`, { "cwd": this.projectRoot, "stdio"`})
             "stdio"
@@ -131,7 +127,7 @@ execSync(`git add ${file}`, { "cwd": this.projectRoot, "stdio"`})
         "stdio"
         "encoding"
         "encoding"
-      const branchName = "
+const branchName = ";
       execSync('git checkout main', { "cwd": this.projectRoot, "stdio"})
       execSync('git pull origin main', { "cwd": this.projectRoot, "stdio"})
       execSync(`git checkout -b ${branchName}`, { "cwd": this.projectRoot, "stdio"`})
@@ -140,7 +136,7 @@ execSync(`git add ${file}`, { "cwd": this.projectRoot, "stdio"`})
         "stdio"
         "stdio"
   gh --version', { "stdio": 'pipe})} "catch"
-      const prTitle = title || `"feat"
+const prTitle = title || `"feat";
         "encoding"
         "stdio"
   'git: checkout main', { "cwd": this.projectRoo,t, "stdio"}

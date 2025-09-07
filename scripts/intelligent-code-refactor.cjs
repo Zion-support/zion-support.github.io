@@ -5,9 +5,9 @@
  */
 
 
-const fs = require('fs')
-const path = require('path')
-const { execSync } = require('child_process')
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
   log(message, type = 'INFO')
       'INFO': 'ℹ'
       'SUCCESS': ''
@@ -18,10 +18,10 @@ const { execSync } = require('child_process')
 import React from "react";
 import { Button as MuiButton, ButtonProps as MuiButtonProps } from '@mui/material'
 interface ButtonProps extends Omit<MuiButtonProps, 'variant'
-  variant?: 'primary' | 'secondary' | 'outline' | 'ghost'
+variant?: 'primary' | 'secondary' | 'outline' | 'ghost';
   size?: 'small' | 'medium' | 'large'
   iconPosition?: 'left' | 'right'
-  variant = 'primary'
+variant = 'primary';
   size = 'medium'
   iconPosition = 'left'
       case 'primary'

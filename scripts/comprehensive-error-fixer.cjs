@@ -58,7 +58,7 @@ class ComprehensiveErrorFixer {}
       let content = fs.readFileSync(filePath, "utf8");
       let modified = false;
       // Fix common syntax errors;
-      const fixes = [// Fix semicolons in object properties;]
+const fixes = [// Fix semicolons in object properties;];
         { "pattern": /(\w+):\s*([^}]+);/g, "replacement": "$1: $2," };
         // Fix missing commas in arrays;
         { "pattern": /(\w+)\s*\n\s*(\w+)/g, "replacement": "$1,\n$2" };

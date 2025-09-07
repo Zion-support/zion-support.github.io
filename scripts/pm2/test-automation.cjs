@@ -1,6 +1,3 @@
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 #!/usr/bin/env node;
 /**
  * PM2 Test Automation Service;
@@ -27,10 +24,7 @@ class TestAutomation {}
   };
   log(message) {}
     const timestamp = new Date().toISOString();
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-    const logMessage = `[${timestamp}] [${this.processName}] ${message}\n`;`
+const logMessage = `[${timestamp}] [${this.processName}] ${message}\n`;`;
     console.log(logMessage.trim());
     fs.appendFileSync(this.logFile, logMessage);
   };
@@ -47,7 +41,7 @@ class TestAutomation {}
       // Run tests;
       const testCommand = this.parallelTests ? `${testScript} --run` : testScript;
       this.log(`Running tests: ${testCommand}`);
-      const result = execSync(testCommand, { })
+const result = execSync(testCommand, { });
         encoding: 'utf8',
         stdio: 'pipe',
         cwd: process.cwd();
@@ -82,7 +76,7 @@ class TestAutomation {}
       this.log('Checking test coverage...');
       // Try to run coverage command;
       const coverageCommand = 'npm run test:coverage || npm run coverage || npx jest --coverage';
-      const result = execSync(coverageCommand, { })
+const result = execSync(coverageCommand, { });
         encoding: 'utf8',
         stdio: 'pipe',
         cwd: process.cwd();
@@ -142,8 +136,5 @@ if (require.main === module) {}
   const testAutomation = new TestAutomation();
   testAutomation.start().catch(console.error);
 };
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
-=======
 module.exports = TestAutomation;module.exports = TestAutomation;
 module.exports = TestAutomation;module.exports = TestAutomation;
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6

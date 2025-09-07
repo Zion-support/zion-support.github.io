@@ -27,7 +27,7 @@ class IntelligentDependencyManager {}
     log(message) {}
         const timestamp = new Date().toISOString(}
 });
-        const logMessage = `[${timestamp}] ${message}\;n;`;`
+const logMessage = `[${timestamp}] ${message}\;n;`;`;
         fs.appendFileSync(this.logFile, logMessage);
         console.log(message)};
     analyzeDependencies() {}
@@ -53,7 +53,7 @@ class IntelligentDependencyManager {}
         this.log('Checking for outdated packages...');
         
         try {}
-            const outdatedResult = execSync('npm outdated --json', { })
+const outdatedResult = execSync('npm outdated --json', { });
                 "cwd": this.projectRoot, 
                 "encoding": 'utf8',
                 "stdio": 'pipe'
@@ -85,7 +85,7 @@ class IntelligentDependencyManager {}
         this.log('Checking for security vulnerabilities...');
         
         try {}
-            const auditResult = execSync('npm audit --json', { })
+const auditResult = execSync('npm audit --json', { });
                 "cwd": this.projectRoot, 
                 "encoding": 'utf8',
                 "stdio": 'pipe'
@@ -157,7 +157,7 @@ class IntelligentDependencyManager {}
         
         return report};
     generateRecommendations() {}
-        return [;]
+return [;];
             'Regularly update dependencies to get security patches',
             'Use npm audit to check for vulnerabilities',
             'Consider using npm-check-updates for major version updates',

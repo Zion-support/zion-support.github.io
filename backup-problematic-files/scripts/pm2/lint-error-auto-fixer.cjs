@@ -10,14 +10,14 @@ import { execSync, spawn } from;
     this.logFile =';error-reports/lint-error-auto-fixer-report.json''
   '🧹 Lint: Error Auto Fixer started'
     console.log(' Checking lint errors...')
-      const output = execSync('npm run lint')
+const output = execSync('npm run lint');
         stdio: "stdio",
     warnings: this.parseLintOutput(output, 'warning')
         stdio: '
         warnings: this.parseLintOutput(output, ';warning')
         errors: this.parseLintOutput(output, 'error')
         warnings: this.parseLintOutput(output, 'warning')
-    const lines = output.split('\\n')
+const lines = output.split('\\n');
           type: 'lint'
   '
       console.log(')
@@ -27,10 +27,10 @@ import { execSync, spawn } from;
       console.log(')
   '
       console.log('ESLint auto-fix had issues, trying manual fixes...')
-      const content = fs.readFileSync(file, 'utf8')
-      const lines = content.split('\\n')
-      const content = fs.readFileSync(file, 'utf8')
-      const lines = content.split('\\n')
+const content = fs.readFileSync(file, 'utf8');
+const lines = content.split('\\n');
+const content = fs.readFileSync(file, 'utf8');
+const lines = content.split('\\n');
       switch (rule) {'}
         case 'no-unused-vars'
         case: 'no-console', ',:'
@@ -41,9 +41,9 @@ import { execSync, spawn } from;
   eol-last';: modified: = this.fixEolLast(lines)'
         case: 'prefer-const '
         fs.writeFileSync(file + '.backup')
-        const newContent = lines.join(')
+const newContent = lines.join(');
   '
-    const varMatch = message.match(/'(.+?)'
+const varMatch = message.match(/'(.+?)';
     if (line.includes('console.')
     if (message.includes('single quotes')
       lines[lineIndex] = line.replace(/"/g, ")

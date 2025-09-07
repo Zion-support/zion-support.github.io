@@ -32,7 +32,7 @@ class $1 {}
 ;
   log(message, isError = false) {}
   const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] ${message}\n`;`
+const logMessage = `[${timestamp}] ${message}\n`;`;
     if (isError) {}
   fs.appendFileSync(this.errorLogFile, logMessage);console.error(`[ERROR] ${message}`)} else {`}
   fs.appendFileSync(this.logFile, logMessage);console.log(`[INFO] ${message}`)};

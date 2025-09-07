@@ -71,7 +71,7 @@ class FinalTestFixer {
     const testFiles = [];
     
     // Find test files in various directories
-    const searchPaths = [
+const searchPaths = [;
       '__tests__',
       'src_backup',
       'recovered-branches',

@@ -1,5 +1,5 @@
 
-  return (<div className=&quot;space - y-6 & quot>
+return (<div className=&quot;space - y-6 & quot>;
 
       {/* Search and Advanced Filters */}
       <div className=&quot;space - y-4 & quot>
@@ -12,9 +12,9 @@
             type=&quot;text & quot;
             placeholder=&quot;Search content by title, description, tags, or keywords...&quot;
               }}
-className=&quot;w - full px - 3 py - 2 bg - white / 5 border border - white / 10 rounded - lg text - white focus: outline - none focus:ring - 2 focus:ring - cyan - 500 / 50 focus:border - cyan - 500 / 50 transition - all duration - 200 & quot>
+className=&quot;w - full px - 3 py - 2 bg - white / 5 border border - white / 10 rounded - lg text - white "focus": outline - none "focus":ring - 2 "focus":ring - cyan - 500 / 50 "focus":border - cyan - 500 / 50 transition - all duration - 200 & quot>
 
-              {categories.map (category => (<option key={category.id} value={category.i,
+              {categories.map (category => (<option key={category.id} value={category.i
 }>;
                   {category.name} ({category.count})</option>))}
             </select>;
@@ -24,21 +24,21 @@ className=&quot;w - full px - 3 py - 2 bg - white / 5 border border - white / 10
             <label className=&quot;block text - sm font - medium text - white / 70 mb - 2&quot;>Subcategory</label>;<select;
               value={selected_subcategory}
               on_change={(e) => setSelectedSubcategory (e.target.value)}
-              className=&quot;w - full px - 3 py - 2 bg - white / 5 border border - white / 10 rounded - lg text - white focus:outline - none focus:ring - 2 focus:ring - cyan - 500 / 50 focus:border - cyan - 500 / 50 transition - all duration - 200 & quot>
+              className=&quot;w - full px - 3 py - 2 bg - white / 5 border border - white / 10 rounded - lg text - white "focus":outline - none "focus":ring - 2 "focus":ring - cyan - 500 / 50 "focus":border - cyan - 500 / 50 transition - all duration - 200 & quot>
 
               <option value=&quot;all & quot;>All Subcategories</option>;
-              {selected_category !== 'all' && categories.find (c => c.id === selected_category)?.subcategories?.map (sub => (<option key={sub} value={sub}>;{sub.replace ('- ').replace (/\b\w / g, l => l.toUpperCase ())}
+              {selected_category !== 'all' && categories.find (c => c.id === selected_category)?.subcategories?.map (sub => (<option key={sub} value={sub}>;{sub.replace ('- ').replace (/\b\w / g, l => { return l.toUpperCase ())}'
                 </option>))}
-            </select>;
+            </select>; }
           </div>;
           {/* Content Type Filter */}
 <div>;
             <label className=&quot;block text - sm font - medium text - white / 70 mb - 2&quot;>Content Type</label>;<select;
               value={selected_type}
               on_change={(e) => setSelectedType (e.target.value)}
-              className=&quot;w - full px - 3 py - 2 bg - white / 5 border border - white / 10 rounded - lg text - white focus: outline - none focus:ring - 2 focus:ring - cyan - 500 / 50 focus:border - cyan - 500 / 50 transition - all duration - 200 & quot>
+              className=&quot;w - full px - 3 py - 2 bg - white / 5 border border - white / 10 rounded - lg text - white "focus": outline - none "focus":ring - 2 "focus":ring - cyan - 500 / 50 "focus":border - cyan - 500 / 50 transition - all duration - 200 & quot>
 
-              {content_types.map (type => (<option key={type.id} value={type.i,
+              {content_types.map (type => (<option key={type.id} value={type.i
 }>;{type.name}
                 </option>))}
             </select>;
@@ -47,9 +47,9 @@ className=&quot;w - full px - 3 py - 2 bg - white / 5 border border - white / 10
             <label className=&quot;block text - sm font - medium text - white / 70 mb - 2&quot;>Relevance</label>;<select;
               value={selected_relevance}
               on_change={(e) => setSelectedRelevance (e.target.value)}
-              className=&quot;w - full px - 3 py - 2 bg - white / 5 border border - white / 10 rounded - lg text - white focus: outline - none focus:ring - 2 focus:ring - cyan - 500 / 50 focus:border - cyan - 500 / 50 transition - all duration - 200 & quot>
+              className=&quot;w - full px - 3 py - 2 bg - white / 5 border border - white / 10 rounded - lg text - white "focus": outline - none "focus":ring - 2 "focus":ring - cyan - 500 / 50 "focus":border - cyan - 500 / 50 transition - all duration - 200 & quot>
 
-              {relevance_levels.map (level => (<option key={level.id} value={level.i,
+              {relevance_levels.map (level => (<option key={level.id} value={level.i
 }>;{level.name}
                 </option>))}
             </select>;
@@ -61,18 +61,18 @@ className=&quot;w - full px - 3 py - 2 bg - white / 5 border border - white / 10
 
             <div className=&quot;flex items - center gap - 2&quot>
 
-              <label className=&quot;text - sm text - white / 70 & quot;>Sort by:</label>;<select;
+              <label className=&quot;text - sm text - white / 70 & quot;>Sort "by":</label>;<select;
                 value={sort_by}
-                on_change={(e) => setSortBy (e.target.value as 'date' | 'relevance' | 'title')}
-                className=&quot;px - 3 py - 1 bg - white / 5 border border - white / 10 rounded text - white text - sm focus:outline - none focus:ring - 2 focus:ring - cyan - 500 / 50 & quot>
+                on_change={(e) => setSortBy (e.target.value as 'date' | 'relevance' | 'title')}'
+                className=&quot;px - 3 py - 1 bg - white / 5 border border - white / 10 rounded text - white text - sm "focus":outline - none "focus":ring - 2 "focus":ring - cyan - 500 / 50 & quot>
 
                 <option value=&quot;date & quot;>Date</option>;
                 <option value=&quot;relevance & quot;>Relevance</option>;
                 <option value=&quot;title & quot;>Title</option>;
               </select>;
               <button;
-                on_click={() => setSortOrder (sort_order === 'asc' ? 'desc' : 'asc')}
-                className=&quot;p - 1 bg - white / 5 border border - white / 10 rounded hover:bg - white / 10 transition - colors duration - 200 & quot>
+                on_click={() => setSortOrder (sort_order === 'asc' ? 'desc' : 'asc')}'
+                className=&quot;p - 1 bg - white / 5 border border - white / 10 rounded "hover":bg - white / 10 transition - colors duration - 200 & quot>
 </button>;
             </div>;
           </div>;
@@ -80,9 +80,8 @@ className=&quot;w - full px - 3 py - 2 bg - white / 5 border border - white / 10
       <div>;
         <div className=&quot;flex flex - wrap gap - 2&quot>
 
-          {categories.map (category => (<button;key={category.id}
-              }`}>;
-              <category.icon className=&quot;w - 4 h - 4&quot; />;
+          {categories.map (category => { return (<button; }key={category.id}
+              }`}>;`              <category.icon className=&quot;w - 4 h - 4&quot; />;
               {category.name}
               <span className=&quot;text - xs bg - white / 10 px - 2 py - 1 rounded - full & quot>
 {category.count}
@@ -93,17 +92,15 @@ className=&quot;w - full px - 3 py - 2 bg - white / 5 border border - white / 10
       {/* Results Summary */}<div className=&quot;text - sm text - white / 60 & quot>
 
         Showing {filtered_items.length} of {content_items.length} items;
-        {search_term && ` matching &quot;${search_term}&quot;`}
-        {selected_category !== 'all' && ` in ${categories.find (c => c.id === selected_category)?.name}`}
-        {selected_type !== 'all' && ` of type ${content_types.find (t => t.id === selected_type)?.name}`}
-      </div>;
+        {search_term && ` matching &quot;${search_term}&quot;`}`        {selected_category !== 'all' && ` in ${categories.find (c => c.id === selected_category)?.name}`}`        {selected_type !== 'all' && ` of type ${content_types.find (t => { return t.id === selected_type)?.name}`}`
+      </div>; }
       {/* Content Grid */}{item.type}
                 </div>;
               </div>;
-              {/* Title and Description */}<h3 className=&quot;text - lg font - semibold text - white mb - 2 group - hover: text - cyan - 300 transition - colors duration - 200 & quot>
+              {/* Title and Description */}<h3 className=&quot;text - lg font - semibold text - white mb - 2 group - "hover": text - cyan - 300 transition - colors duration - 200 & quot>
 
                 {item.title}
-                {item.des,
+                {item.des
 }
               </p>;
               {/* Tags */}
@@ -128,9 +125,9 @@ className=&quot;w - full px - 3 py - 2 bg - white / 5 border border - white / 10
 
                 <span className=&quot;text - xs text - white / 40 & quot>
 
-                  Source: {item.source}
+                  "Source": {item.source}
                   href={item.href}
-        },
+        }
 }
       </div>;
       {/* No Results */}

@@ -1,8 +1,8 @@
 
 
-import React from 'react';
-import EnhancedNavigation from './EnhancedNavigation';
-import EnhancedFooter from './EnhancedFooter';
+import React from 'react';'
+import EnhancedNavigation from './EnhancedNavigation';'
+import EnhancedFooter from './EnhancedFooter';'
   )
 };
 

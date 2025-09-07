@@ -41,7 +41,7 @@ class IntelligentErrorOrchestrator {}
   async runComprehensiveErrorCheck() {}
     this.log('Running comprehensive error check...');
     
-    const checks = [{ "name": 'TypeScript', "command": 'npm run type-check' },]
+const checks = [{ "name": 'TypeScript', "command": 'npm run type-check' },];
       { "name": 'ESLint', "command": 'npm run lint' },
       { "name": 'Build', "command": 'npm run build' },
       { "name": 'Dependencies', "command": 'npm audit --audit-level=moderate' };

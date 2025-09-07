@@ -47,7 +47,7 @@ class ComprehensiveSyntaxErrorFixer {}
   async run() {}
     await this.log('Starting comprehensive syntax error fixing...');
     
-    const filesToFix = ['components/layout/ModernLayout.tsx',]
+const filesToFix = ['components/layout/ModernLayout.tsx',];
       'pages/partners.tsx',
       'pages/services/index.route.tsx'
     ];

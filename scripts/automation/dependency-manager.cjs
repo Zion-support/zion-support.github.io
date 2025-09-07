@@ -46,7 +46,7 @@ class $1 {}
       const status = await this.checkDependencyStatus();
       // 2. Fix package.json issues;
       if (status.packageJsonIssues.length > 0) {}
-  const packageFixes = await this.fixPackageJsonIssues(;)
+const packageFixes = await this.fixPackageJsonIssues(;);
           status.packageJsonIssues;
         );
         actions.push(...packageFixes)};
@@ -65,7 +65,7 @@ class $1 {}
       const updateActions = await this.updateDependencies();
       actions.push(...updateActions);
       // 6. Generate dependency report;
-      const report = await this.generateDependencyReport(;)
+const report = await this.generateDependencyReport(;);
         status,
         actions,
         errors;
@@ -94,7 +94,7 @@ class $1 {}
       actions.push(...updateActions);
 
       // 6. Generate dependency report;
-      const report = await this.generateDependencyReport(;)
+const report = await this.generateDependencyReport(;);
         status,
         actions,
         errors;
@@ -237,14 +237,14 @@ class $1 {}
 ;
   async checkOutdatedDependencies() {}
   try {}
-  const result = execSync("npm outdated --json", {})
+const result = execSync("npm outdated --json", {});
   "cwd": this.projectRoot,
         "stdio": "pipe",
         "encoding": "utf8",
 
   async checkOutdatedDependencies() {}
   try {}
-  const result = execSync("npm outdated --json", {})
+const result = execSync("npm outdated --json", {});
   "cwd": this.projectRoot,
         "stdio": "pipe",
         "encoding": "utf8"}
@@ -454,10 +454,10 @@ class $1 {}
       "status": status,
       "actions": actions,
       "errors": errors};
-    const reportFile = path.join(;)
+const reportFile = path.join(;);
       this.reportsDir,dependency-report-${Date.now()}.json`;`
 
-    const reportFile = path.join(;)
+const reportFile = path.join(;);
       this.reportsDir,dependency-report-${Date.now()}.json";
     );
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));

@@ -1,22 +1,22 @@
 }
 }
-import _React,{ useState } from 'react';'''; import { Link } from 'react-router-dom';
+import _React,{ useState } from 'react';'''; import { Link } from 'react-router-dom';'
 
 const AdvancedInnovativeServicesShowcase2025 = () => {;
 }
 
-const [selectedCategory,setSelectedCategory] = useState('all');
-  const [searchTerm,setSearchTerm] = useState('');
-  const [sortBy,setSortBy] = useState('name';
-  const categories = [
-  'all','Legal Tech & Compliance','Quantum Computing & Security','Healthcare & Biotech','Energy & Sustainability','Cybersecurity','Fintech & Trading','Quantum Computing & AI','Supply Chain & Logistics','Edge Computing & IoT','Marketing & Automation','Quantum Technology','AI & Machine Learning','AI & Analytics','AI & Customer Experience'
+const [selectedCategory,setSelectedCategory] = useState('all');'
+  const [searchTerm,setSearchTerm] = useState('');'
+  const [sortBy,setSortBy] = useState('name';'
+const categories = [;
+  'all','Legal Tech & Compliance','Quantum Computing & Security','Healthcare & Biotech','Energy & Sustainability','Cybersecurity','Fintech & Trading','Quantum Computing & AI','Supply Chain & Logistics','Edge Computing & IoT','Marketing & Automation','Quantum Technology','AI & Machine Learning','AI & Analytics','AI & Customer Experience''
 ];
 
 
-const allServices = [
-  ...advancedInnovativeServices2025V3.map(service => ({ ...service,"type": 'Micro SAAS' })),...advancedITServices2025.map(service => ({ ...service,"type": 'IT Service' })),...advancedAIServices2025.map(service => ({ ...service,"type": 'AI Service' }))];
+const allServices = [;
+  ...advancedInnovativeServices2025V3.map(service => ({ ...service,"type": 'Micro SAAS' })),...advancedITServices2025.map(service => ({ ...service,"type": 'IT Service' })),...advancedAIServices2025.map(service => ({ ...service,"type": 'AI Service' }))];'
 
-const filteredServices = allServices .filter(service => selectedCategory === 'all' || service.category === selectedCategory).filter(service => service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||; service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||; service.features?.some((feature) => feature.toLowerCase().includes(searchTerm.toLowerCase()))).sort((a,b) => {}return a.name.localeCompare(b.name)} })const getCategoryIcon = (category) => {}
+const filteredServices = allServices .filter(service => { return selectedCategory === 'all' || service.category === selectedCategory).filter(service => service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||; } service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||; service.features?.some((feature) => feature.toLowerCase().includes(searchTerm.toLowerCase()))).sort((a,b) => {}return a.name.localeCompare(b.name)} })const getCategoryIcon = (category) => {}'
 
 export { AdvancedInnovativeServicesShowcase2025 }
 
@@ -28,15 +28,16 @@ export { AdvancedInnovativeServicesShowcase2025;
 }
 
 export { AdvancedInnovativeServicesShowcase2025 }}}}
-import React from 'react';
+import React from 'react';'
 
 interface AdvancedInnovativeServicesShowcase2025Props {
   // Add props here as needed
 
 }
 
-export default function AdvancedInnovativeServicesShowcase2025({}: AdvancedInnovativeServicesShowcase2025Props) {
-  return (
+export default function AdvancedInnovativeServicesShowcase2025() {
+}
+return (;
     <div>
       <h1>AdvancedInnovativeServicesShowcase2025</h1>
       <p>This component is currently under development.</p>
@@ -45,27 +46,27 @@ export default function AdvancedInnovativeServicesShowcase2025({}: AdvancedInnov
 }
 }
 }
-import _React,{ useState } from 'react';'''; import { Link } from 'react-router-dom';
+import _React,{ useState } from 'react';'''; import { Link } from 'react-router-dom';'
 
 const AdvancedInnovativeServicesShowcase2025 = () => {}};
 
-const [selectedCategory,setSelectedCategory] = useState('all');
+const [selectedCategory,setSelectedCategory] = useState('all');'
 
-const [searchTerm,setSearchTerm] = useState('');
+const [searchTerm,setSearchTerm] = useState('');'
 
-const [sortBy,setSortBy] = useState('name');
+const [sortBy,setSortBy] = useState('name');'
 
-const categories = [
-  'all'; 'Legal Tech & Compliance',; 'Quantum Computing & Security',; 'Healthcare & Biotech',; 'Energy & Sustainability',; 'Cybersecurity',; 'Fintech & Trading',; 'Quantum Computing & AI',; 'Supply Chain & Logistics',; 'Edge Computing & IoT',; 'Marketing & Automation',; 'Quantum Technology',; 'AI & Machine Learning',; 'AI & Analytics',; 'AI & Customer Experience'
+const categories = [;
+  'all'; 'Legal Tech & Compliance',; 'Quantum Computing & Security',; 'Healthcare & Biotech',; 'Energy & Sustainability',; 'Cybersecurity',; 'Fintech & Trading',; 'Quantum Computing & AI',; 'Supply Chain & Logistics',; 'Edge Computing & IoT',; 'Marketing & Automation',; 'Quantum Technology',; 'AI & Machine Learning',; 'AI & Analytics',; 'AI & Customer Experience''
 ];
 
 
-const allServices = [
-  ...advancedInnovativeServices2025V3.map(service => ({ ...service,"type": 'Micro SAAS' })),; ...advancedITServices2025.map(service => ({ ...service,"type": 'IT Service' })),; ...advancedAIServices2025.map(service => ({ ...service,"type": 'AI Service' }))
+const allServices = [;
+  ...advancedInnovativeServices2025V3.map(service => ({ ...service,"type": 'Micro SAAS' })),; ...advancedITServices2025.map(service => ({ ...service,"type": 'IT Service' })),; ...advancedAIServices2025.map(service => ({ ...service,"type": 'AI Service' }))'
 ];
 
 
-const filteredServices = allServices .filter(service => selectedCategory === 'all' || service.category === selectedCategory); .filter(service => service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||; service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||; service.features?.some((feature) => feature.toLowerCase().includes(searchTerm.toLowerCase()))); .sort((a,b) => {}; return a.name.localeCompare(b.name)} });
+const filteredServices = allServices .filter(service => { return selectedCategory === 'all' || service.category === selectedCategory); } .filter(service => { return service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||; } service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||; service.features?.some((feature) => feature.toLowerCase().includes(searchTerm.toLowerCase()))); .sort((a,b) => {}; return a.name.localeCompare(b.name)} });'
 
 const getCategoryIcon = (category) => {};
 

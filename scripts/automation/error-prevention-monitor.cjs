@@ -219,7 +219,7 @@ class ErrorPreventionMonitor {
   async checkFileSizeIssues() {
     this.log('Checking for file size issues...', 'INFO');
     const largeFiles = [];
-    const maxSize = 1024 * 1024; // 1MB
+const maxSize = 1024 * 1024; // 1MB;
     try {
       const files = this.getAllSourceFiles();
       for (const file of files) {
@@ -442,7 +442,7 @@ class ErrorPreventionMonitor {
       const lines = content.split('\n');
       for (let i = 0; i < lines.length; i++) {
         // Look for hardcoded URLs, API keys, etc.
-        const hardcodedPatterns = [/https?:\/\/[^\s'"]+/g,
+const hardcodedPatterns = [/https?:\/\/[^\s'"]+/g,;
           /api_key\s*[:=]\s*['"][^'"]+['"]/g,
           /password\s*[:=]\s*['"][^'"]+['"]/g,
           /secret\s*[:=]\s*['"][^'"]+['"]/g
@@ -547,7 +547,7 @@ class ErrorPreventionMonitor {
     this.log('Starting error prevention check...');
     try {
       // Run all prevention checks
-      const [largeFiles,
+const [largeFiles,;
         circularDeps,
         unusedDeps,
         vulnerabilities,

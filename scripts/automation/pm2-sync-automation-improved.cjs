@@ -134,7 +134,7 @@ class ImprovedPM2SyncAutomation {}
     this.changeTimeout = setTimeout(() => {}
       this.processPendingChanges()}, 2000)};
   shouldIgnoreFile(filePath) {}
-    const ignorePatterns = [/\.log$/,]
+const ignorePatterns = [/\.log$/,];
       /\.tmp$/,
       /\.backup\./,
       /node_modules/,
@@ -153,15 +153,15 @@ class ImprovedPM2SyncAutomation {}
       this.log(`Processing ${this.pendingChanges.size} pending changes...`);
       
       // Add all changes to git;
-      const addResult = execSync('git add -A', { })
+const addResult = execSync('git add -A', { });
         "cwd": this.config.projectRoot, 
         "stdio": 'pipe' 
       }
 });
       
       // Commit changes;
-      const commitMessage = `Auto-"sync": ${this.pendingChanges.size} file changes - ${new Date().toISOString()}`;`
-      const commitResult = execSync(`git commit -m "${commitMessage}"`, { `})
+const commitMessage = `Auto-"sync": ${this.pendingChanges.size} file changes - ${new Date().toISOString()}`;`;
+const commitResult = execSync(`git commit -m "${commitMessage}"`, { `});
         "cwd": this.config.projectRoot, 
         "stdio": 'pipe' 
       }
@@ -170,7 +170,7 @@ class ImprovedPM2SyncAutomation {}
       this.log(`Committed ${this.pendingChanges.size} changes`);
       
       // Push changes;
-      const pushResult = execSync('git push origin main', { })
+const pushResult = execSync('git push origin main', { });
         "cwd": this.config.projectRoot, 
         "stdio": 'pipe' 
       }
@@ -194,7 +194,7 @@ class ImprovedPM2SyncAutomation {}
 });
       
       // Check for conflicts;
-      const status = execSync('git status --porcelain', { })
+const status = execSync('git status --porcelain', { });
         "cwd": this.config.projectRoot, 
         "encoding": 'utf8' 
       }
@@ -236,7 +236,7 @@ class ImprovedPM2SyncAutomation {}
         await this.resolveConflicts()};
       // Push changes if we have commits;
       try {}
-        const aheadStatus = execSync('git status --porcelain -b', { })
+const aheadStatus = execSync('git status --porcelain -b', { });
           "cwd": this.config.projectRoot, 
           "encoding": 'utf8' 
         }

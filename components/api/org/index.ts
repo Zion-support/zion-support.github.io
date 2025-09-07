@@ -1,45 +1,51 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
+import type { NextApiRequest, NextApiResponse } from 'next';'
 
 
-import {readOrgData, filterOrgData} from '../../../utils/org-data';
-import type { OrgFilters, RoleType } from '../../../types/org';
+import {readOrgData, filterOrgData} from '../../../utils/org-data';'
+import type { OrgFilters, RoleType } from '../../../types/org';'
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'GET') {
-    return res.status(405).json({ error: 'Method not allowed',
+export default function handler() {
+  }
+  if (req.method !== 'GET') {'
+}
+return res.status(405).json({ "error": 'Method not allowed',;'
 });
   }
-return Array.isArray(v)
+return Array.isArray(v);
       ? v
       : v
-          .split(',')
-          .map(s => s.trim())
-          .filter(Boolean);
+          .split(',')'
+          .map(s => { return s.trim())
+          .filter(Boolean); }
   }
 
-const filters: OrgFilters = {
+const "filters": OrgFilters = {
 
-    view: (req.query.view as OrgFilters['view']) |'all'
-    roleTypes: parseArray(req.query.roleTypes) as RoleType[] | undefined
-    departments: parseArray(req.query.departments)
-    categories: parseArray(req.query.categories)
-    zones: parseArray(req.query.zones)
-    regions: parseArray(req.query.regions)
-    countries: parseArray(req.query.countries)
-    search: (req.query.search as string) |undefined
-    teamOnly: req.query.teamOnly === 'true' ? true : undefined,  }
-;
-  const filters: OrgFilters = {
-    view: (req.query.view as OrgFilters['view']) |'all';
+    }
 
-    roleTypes: parseArray(req.query.roleTypes) as RoleType[] | undefined;
-    departments: parseArray(req.query.departments)categories: parseArray(req.query.categories)zones: parseArray(req.query.zones)regions: parseArray(req.query.regions)countries: parseArray(req.query.countries)search: (req.query.search as string) |undefined;
-    teamOnly: req.query.teamOnly = == 'true' ? true : undefined,  }
+    "view": (req.query.view as OrgFilters['view']) |'all''
+    "roleTypes": parseArray(req.query.roleTypes) as RoleType[] | undefined,
+"departments": parseArray(req.query.departments)
+    "categories": parseArray(req.query.categories)
+    "zones": parseArray(req.query.zones)
+    "regions": parseArray(req.query.regions)
+    "countries": parseArray(req.query.countries)
+    "search": (req.query.search as string) |undefined,
+"teamOnly": req.query.teamOnly === 'true' ? true : undefined  }'
 ;
-  const filters: OrgFilters = {view: (req.query.view as OrgFilters['view']) |'all';
-    roleTypes: parseArray(req.query.roleTypes) as RoleType[] | undefined;
-    departments: parseArray(req.query.departments)categories: parseArray(req.query.categories)zones: parseArray(req.query.zones)regions: parseArray(req.query.regions)countries: parseArray(req.query.countries)search: (req.query.search as string) |undefined;
-    teamOnly: req.query.teamOnly = == 'true' ? true : undefine,
+  const "filters": OrgFilters = {
+    }
+    "view": (req.query.view as OrgFilters['view']) |'all';'
+
+    "roleTypes": parseArray(req.query.roleTypes) as RoleType[] | undefined;
+    "departments": parseArray(req.query.departments)"categories": parseArray(req.query.categories)"zones": parseArray(req.query.zones)"regions": parseArray(req.query.regions)"countries": parseArray(req.query.countries)"search": (req.query.search as string) |undefined;
+    "teamOnly": req.query.teamOnly = == 'true' ? true : undefined  }'
+;
+  const "filters": OrgFilters = {"view": (req.query.view as OrgFilters['view']) |'all';'
+    }
+    "roleTypes": parseArray(req.query.roleTypes) as RoleType[] | undefined;
+    "departments": parseArray(req.query.departments)"categories": parseArray(req.query.categories)"zones": parseArray(req.query.zones)"regions": parseArray(req.query.regions)"countries": parseArray(req.query.countries)"search": (req.query.search as string) |undefined;
+    "teamOnly": req.query.teamOnly = == 'true' ? true : undefine,'
 }
 ;
   const filtered = filterOrgData(data, filters);

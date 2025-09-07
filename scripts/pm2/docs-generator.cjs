@@ -1,6 +1,3 @@
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 #!/usr/bin/env node;
 /**
  * PM2 Documentation Generator Service;
@@ -28,10 +25,7 @@ class DocsGenerator {}
   };
   log(message) {}
     const timestamp = new Date().toISOString();
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-    const logMessage = `[${timestamp}] [${this.processName}] ${message}\n`;`
+const logMessage = `[${timestamp}] [${this.processName}] ${message}\n`;`;
     console.log(logMessage.trim());
     fs.appendFileSync(this.logFile, logMessage);
   };
@@ -58,7 +52,7 @@ class DocsGenerator {}
 });
       };
       // Generate API docs;
-      const jsdocCommand = `npx jsdoc -c jsdoc.conf.json -d ${docsDir} -r src/ lib/ scripts/`;`
+const jsdocCommand = `npx jsdoc -c jsdoc.conf.json -d ${docsDir} -r src/ lib/ scripts/`;`;
       execSync(jsdocCommand, { "stdio": 'pipe' }
 });
       this.log('API documentation generated successfully');
@@ -215,7 +209,7 @@ class DocsGenerator {}
   };
   generateReadmeContent(projectInfo, existingContent) {}
     const timestamp = new Date().toISOString();
-    let readme = `# ${projectInfo.name}\n\n`;`
+let readme = `# ${projectInfo.name}\n\n`;`;
     readme += `**"Version": ** ${projectInfo.version}\n\n`;`
     readme += `${projectInfo.description}\n\n`;`
     if (projectInfo.repository) {}
@@ -285,8 +279,5 @@ if (require.main === module) {}
   const docsGenerator = new DocsGenerator();
   docsGenerator.start().catch(console.error);
 };
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
-=======
 module.exports = DocsGenerator;module.exports = DocsGenerator;
 module.exports = DocsGenerator;module.exports = DocsGenerator;
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6

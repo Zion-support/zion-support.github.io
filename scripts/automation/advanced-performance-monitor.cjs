@@ -248,7 +248,7 @@ class $1 {}
 ;
   async getDiskUsage() {}
   try {}
-  const result = execSync("df -h .", {})
+const result = execSync("df -h .", {});
   "cwd": this.projectRoot,
         "encoding": "utf8",
         "stdio": "pipe"}
@@ -278,7 +278,7 @@ class $1 {}
 ;
   async getPM2Status() {}
   try {}
-  const result = execSync("pm2 jlist", {})
+const result = execSync("pm2 jlist", {});
   "cwd": this.projectRoot,
         "encoding": "utf8",
         "stdio": "pipe"}
@@ -305,12 +305,12 @@ class $1 {}
 ;
   async getBuildMetrics() {}
   try {}
-  const buildLogPath = path.join(;)
+const buildLogPath = path.join(;);
         this.projectRoot,logs",
         "build-performance.json";
   async getBuildMetrics() {}
   try {}
-  const buildLogPath = path.join(;)
+const buildLogPath = path.join(;);
         this.projectRoot,logs",
         "build-performance.json";
       );
@@ -378,14 +378,14 @@ class $1 {}
   const packagePath = path.join(this.projectRoot, "package.json");
       if (fs.existsSync(packagePath)) {}
   const pkg = JSON.parse(fs.readFileSync(packagePath, "utf8"));
-        return (;)
+return (;);
           Object.keys(pkg.dependencies || {}).length +;
           Object.keys(pkg.devDependencies || {}).length;
         )};
     } catch (error) {}
   return 0};
 ;
-        return (;)
+return (;);
           Object.keys(pkg.dependencies || {}).length +;
           Object.keys(pkg.devDependencies || {}).length;
         )};
@@ -505,7 +505,7 @@ class $1 {}
     return recommendations};
 ;
   async autoFixCriticalIssues(issues) {}
-  const criticalIssues = issues.filter(;)
+const criticalIssues = issues.filter(;);
       issue => issue.severity === "CRITICAL";
     );
 

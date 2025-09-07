@@ -1,6 +1,6 @@
 #!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
+const fs = require('fs');
+const path = require('path');
     this.logFile = path.join(this.projectRoot, 'logs', 'dependency-fixer.log')
     this.reportFile = path.join(this.projectRoot, 'error-reports')
     fs.appendFileSync(this.logFile, logMessage + '\n')

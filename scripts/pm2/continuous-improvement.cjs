@@ -1,6 +1,3 @@
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 #!/usr/bin/env node;
 /**
  * Continuous Improvement Script for PM2;
@@ -16,8 +13,8 @@ const log = (message) => {}
 const runCommand = (command, description) => {}
   try {}
     log(`"Starting": ${description}`);
-    const output = execSync(command, { })
-      "encoding": 'utf8', 
+const output = execSync(command, { });
+      "encoding": 'utf8',
       "stdio": 'pipe',
       "cwd": process.cwd();
     }
@@ -48,7 +45,7 @@ const analyzeCodebase = () => {}
 const optimizeCode = () => {}
   log('Optimizing code and configurations');
   // Run any optimization scripts;
-  const optimizationScripts = ['npm run optimize',]
+const optimizationScripts = ['npm run optimize'];
     'npm run minify',
     'npm run compress'
   ];
@@ -87,7 +84,7 @@ const main = async () => {}
       // Stage improvements;
       runCommand('git add .', 'Staging improvements');
       // Commit with descriptive message;
-      const commitMessage = `Continuous "improvement": ${new Date().toISOString().split('T')[0]}`;`
+const commitMessage = `Continuous "improvement": ${new Date().toISOString().split('T')[0]}`;`;
       runCommand(`git commit -m "${commitMessage}"`, 'Committing improvements');
       // Optionally push changes;
       if (process.env.AUTO_PUSH === 'true') {}
@@ -117,7 +114,4 @@ main().catch(error => {})
   log(`Continuous Improvement Process "failed": ${error.message}`);
   process.exit(1);
 }
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
-=======
 });});
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6

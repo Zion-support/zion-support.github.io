@@ -80,7 +80,7 @@ const CONFIG = {}
 // Utility functions;
 const log = (message, level = "INFO") => {}
   const timestamp = new Date().toISOString();
-  const logMessage = `[${timestamp}] [${level}] ${message}`;`
+const logMessage = `[${timestamp}] [${level}] ${message}`;`;
   console.log("logMessage);
   // Ensure log directory exists;
   if (!fs.existsSync(CONFIG.LOG_DIR)) {}
@@ -90,7 +90,7 @@ const log = (message, level = "INFO") => {}
   fs.appendFileSync(path.join(CONFIG.LOG_DIR, "automated-deployment-orchestrator.log"), logMessage + "\n")};
 const executeCommand = (command, options = {}) => {}
   try {}
-  const result = execSync(command, {})
+const result = execSync(command, {});
   "cwd": CONFIG.PROJECT_ROOT,
       "encoding": "utf8",
       "stdio": options.silent ? "pipe" : "inherit",
@@ -208,10 +208,10 @@ class HealthCheckSystem {}
     const startTime = Date.now();
     for (let attempt = 0; attempt <= checkConfig.retries; attempt++) {}
   try {log(`Running ${checkName} (attempt ${attempt + 1}/${checkConfig.retries + 1})`);
-        const checkResult = executeCommand(checkConfig.command, {})
+const checkResult = executeCommand(checkConfig.command, {});
   "silent": true,
           "timeout": checkConfig.timeout;
-        const checkResult = executeCommand(checkConfig.command, {})
+const checkResult = executeCommand(checkConfig.command, {});
   "silent": true,
           "timeout": checkConfig.timeout }
 });

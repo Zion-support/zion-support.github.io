@@ -4,13 +4,13 @@
  * Comprehensive automation for testing, fixing, and improving the application;
  */
 
-const { execSync } = require('child_process')
-const fs = require('fs')
-const path = require('path')
+const { execSync } = require('child_process');
+const fs = require('fs');
+const path = require('path');
     this.logDir = path.join(this.projectRoot, 'automation', 'logs')
   log(message, level = 'INFO')
   log(message, level = 'INFO')
-    const logFile = path.join(this.logDir, 'enhanced-app-improvement.log')
+const logFile = path.join(this.logDir, 'enhanced-app-improvement.log');
     fs.appendFileSync(logFile, logMessage + '\n')
         "encoding"
         "stdio"
@@ -41,7 +41,7 @@ const path = require('path')
       { "name": 'Memory Usage', "command"}
       { "name": 'Disk Space', "command"}
       { "name": 'Process Status', "command"}
-        const result = execSync(check.command, { "encoding"})
+const result = execSync(check.command, { "encoding"});
         "name"
         "name"
       'git commit -m ""feat": automated improvements and fixes"

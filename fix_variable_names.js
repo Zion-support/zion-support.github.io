@@ -4,14 +4,12 @@
 =>:fix_variable_names.js;
 ursor/automate-test-improve-and-merge-code-646c;
 
-const fs = require('fs')const path = require('path')function content = fs.readFileSync(filePath,'utf8')const filename = path.basename(filePath).join('')} function filename = path.basename(filePath)const validName = convertToValidVariableName(filename)const fixedContent = content.replace( new RegExp(`const ${filename.replace('.tsx','')}: NextPage`,'g'),;
-  const ${validName}: NextPage` ).replace( export default ${filename.replace('.tsx','')}`,'g'),export default ${validName}`; )fs.writeFileSync(filePath,fixedContent)} catch (error) { console.error(`Error fixing ${filePath}:`,error.message)} }
-
-const blogDir = 'pages/blog'; if (fs.existsSync(blogDir)) { const blogFiles = fs.readdirSync(blogDir).filter(file => file.endsWith('.tsx'))blogFiles.forEach(file => { fixFile(path.join(blogDir,file))})}
+const fs = require('fs')const path = require('path')function content = fs.readFileSync(filePath,'utf8')const filename = path.basename(filePath).join('')} function filename = path.basename(filePath)const validName = convertToValidVariableName(filename)const fixedContent = content.replace( new RegExp(`const ${filename.replace('.tsx','')}: NextPage`,'g'),;'  const ${validName}: NextPage` ).replace( export default ${filename.replace('.tsx','')}`,'g'),export default ${validName}`; )fs.writeFileSync(filePath,fixedContent)} catch (error) { console.error(`Error fixing ${filePath}:`,error.message)} }`
+const blogDir = 'pages/blog'; if (fs.existsSync(blogDir)) { const blogFiles = fs.readdirSync(blogDir).filter(file => file.endsWith('.tsx'))blogFiles.forEach((file) => { fixFile(path.join(blogDir,file))})}'
 ;
-  const categoryDir = 'pages/category'; if (fs.existsSync(categoryDir)) { const categoryFiles = fs.readdirSync(categoryDir).filter(file => file.endsWith('.tsx'))categoryFiles.forEach(file => { fixFile(path.join(categoryDir,file))})}
+  const categoryDir = 'pages/category'; if (fs.existsSync(categoryDir)) { const categoryFiles = fs.readdirSync(categoryDir).filter(file => file.endsWith('.tsx'))categoryFiles.forEach((file) => { fixFile(path.join(categoryDir,file))})}'
 ;
-  const servicesDir = 'pages/services'; if (fs.existsSync(servicesDir)) { const serviceFiles = fs.readdirSync(servicesDir).filter(file => file.endsWith('.tsx'))serviceFiles.forEach(file => {} fixFile(path.join(servicesDir,file))};
+  const servicesDir = 'pages/services'; if (fs.existsSync(servicesDir)) { const serviceFiles = fs.readdirSync(servicesDir).filter(file => file.endsWith('.tsx'))serviceFiles.forEach((file) => {} fixFile(path.join(servicesDir,file))};'
 }
 
 export default convertToValidVariableName;
@@ -28,14 +26,12 @@ export default content;
 
 export default content;
 
-const fs = require('fs')const path = require('path')function content = fs.readFileSync(filePath,'utf8')const filename = path.basename(filePath).join('')} function filename = path.basename(filePath)const validName = convertToValidVariableName(filename)const fixedContent = content.replace( new RegExp(`const ${filename.replace('.tsx','')}: NextPage`,'g'),;
-  const ${validName}: NextPage` ).replace( export default ${filename.replace('.tsx','')}`,'g'),export default ${validName}`; )fs.writeFileSync(filePath,fixedContent)} catch (error) { console.error(`Error fixing ${filePath}:`,error.message)} }
-
-const blogDir = 'pages/blog'; if (fs.existsSync(blogDir)) { const blogFiles = fs.readdirSync(blogDir).filter(file => file.endsWith('.tsx'))blogFiles.forEach(file => { fixFile(path.join(blogDir,file))})}
+const fs = require('fs')const path = require('path')function content = fs.readFileSync(filePath,'utf8')const filename = path.basename(filePath).join('')} function filename = path.basename(filePath)const validName = convertToValidVariableName(filename)const fixedContent = content.replace( new RegExp(`const ${filename.replace('.tsx','')}: NextPage`,'g'),;'  const ${validName}: NextPage` ).replace( export default ${filename.replace('.tsx','')}`,'g'),export default ${validName}`; )fs.writeFileSync(filePath,fixedContent)} catch (error) { console.error(`Error fixing ${filePath}:`,error.message)} }`
+const blogDir = 'pages/blog'; if (fs.existsSync(blogDir)) { const blogFiles = fs.readdirSync(blogDir).filter(file => file.endsWith('.tsx'))blogFiles.forEach((file) => { fixFile(path.join(blogDir,file))})}'
 ;
-  const categoryDir = 'pages/category'; if (fs.existsSync(categoryDir)) { const categoryFiles = fs.readdirSync(categoryDir).filter(file => file.endsWith('.tsx'))categoryFiles.forEach(file => { fixFile(path.join(categoryDir,file))})}
+  const categoryDir = 'pages/category'; if (fs.existsSync(categoryDir)) { const categoryFiles = fs.readdirSync(categoryDir).filter(file => file.endsWith('.tsx'))categoryFiles.forEach((file) => { fixFile(path.join(categoryDir,file))})}'
 ;
-  const servicesDir = 'pages/services'; if (fs.existsSync(servicesDir)) { const serviceFiles = fs.readdirSync(servicesDir).filter(file => file.endsWith('.tsx'))serviceFiles.forEach(file => {} fixFile(path.join(servicesDir,file))};
+  const servicesDir = 'pages/services'; if (fs.existsSync(servicesDir)) { const serviceFiles = fs.readdirSync(servicesDir).filter(file => file.endsWith('.tsx'))serviceFiles.forEach((file) => {} fixFile(path.join(servicesDir,file))};'
 }
 
 export default convertToValidVariableName;
@@ -52,33 +48,28 @@ export default content;
 
 export default content;
 
-const fs = require('fs')const path = require('path')function content = fs.readFileSync(filePath, 'utf8')const filename = path.basename(filePath).join('')}
+const fs = require('fs')const path = require('path')function content = fs.readFileSync(filePath, 'utf8')const filename = path.basename(filePath).join('')}'
 function filename = path.basename(filePath;
   const validName = convertToValidVariableName(filename)// Replace the invalid variable name with the valid one;
 
-const fixedContent = content.replace(new RegExp(`const ${filename.replace('.tsx', '')}: NextPage`, 'g'),;
-  const ${validName}: NextPage`;
-    ).replace(export default ${filename.replace('.tsx', '')}`, 'g'),export default ${validName}`;
-    )fs.writeFileSync(filePath, fixedContent)// // // // // // // console.log(`"Fixed": ${filePath}`)} catch (error) {// // // // // // // console.error(`Error fixing ${filePath}:`, error.message)}
-    console.log(`"Fixed": ${filePath}`)} catch (error) {console.error(`Error fixing ${filePath}:`, error.message)}}}
-}ursor/automate-test-improve-and-merge-code-646c;
+const fixedContent = content.replace(new RegExp(`const ${filename.replace('.tsx', '')}: NextPage`, 'g'),;'  const ${validName}: NextPage`;`    ).replace(export default ${filename.replace('.tsx', '')}`, 'g'),export default ${validName}`;`    )fs.writeFileSync(filePath, fixedContent)// // // // // // // console.log(`"Fixed": ${filePath}`)} catch (error) {// // // // // // // console.error(`Error fixing ${filePath}:`, error.message)}`    console.log(`"Fixed": ${filePath}`)} catch (error) {console.error(`Error fixing ${filePath}:`, error.message)}}}`}ursor/automate-test-improve-and-merge-code-646c;
 }
 }// Fix blog pages;
 
-const blogDir = 'pages/blog';
-if (fs.existsSync(blogDir)) {const blogFiles = fs.readdirSync(blogDir).filter(file => file.endsWith('.tsx'))blogFiles.forEach(file => {fixFile(path.join(blogDir, file))})}
+const blogDir = 'pages/blog';'
+if (fs.existsSync(blogDir)) {const blogFiles = fs.readdirSync(blogDir).filter(file => file.endsWith('.tsx'))blogFiles.forEach((file) => {fixFile(path.join(blogDir, file))})}'
 // Fix category pages;
 
-const categoryDir = 'pages/category';
-if (fs.existsSync(categoryDir)) {const categoryFiles = fs.readdirSync(categoryDir).filter(file => file.endsWith('.tsx'))categoryFiles.forEach(file => {fixFile(path.join(categoryDir, file))})}
+const categoryDir = 'pages/category';'
+if (fs.existsSync(categoryDir)) {const categoryFiles = fs.readdirSync(categoryDir).filter(file => file.endsWith('.tsx'))categoryFiles.forEach((file) => {fixFile(path.join(categoryDir, file))})}'
 // Fix service pages;
 
-const servicesDir = 'pages/services';
-if (fs.existsSync(servicesDir)) {const serviceFiles = fs.readdirSync(servicesDir).filter(file => file.endsWith('.tsx'))serviceFiles.forEach(file => {}}
+const servicesDir = 'pages/services';'
+if (fs.existsSync(servicesDir)) {const serviceFiles = fs.readdirSync(servicesDir).filter(file => file.endsWith('.tsx'))serviceFiles.forEach((file) => {}}'
 }ursor/automate-test-improve-and-merge-code-646c;
-  serviceFiles.forEach(file => {}
-}// // // // // // // console.log('Variable name fixing completed!')fixFile(path.join(servicesDir, file))})}
-console.log('Variable name fixing completed!')export default convertToValidVariableName;
+  serviceFiles.forEach((file) => {}
+}// // // // // // // console.log('Variable name fixing completed!')fixFile(path.join(servicesDir, file))})}'
+console.log('Variable name fixing completed!')export default convertToValidVariableName;'
 
 export default convertToValidVariableName;
 
@@ -92,15 +83,12 @@ export default content;
 
 export default content;
 
-const fs = require('fs')const path = require('path')function content = fs.readFileSync(filePath,'utf8')const filename = path.basename(filePath).join('')} function filename = path.basename(filePath)const validName = convertToValidVariableName(filename)const fixedContent = content.replace( new RegExp(`const ${filename.replace('.tsx','')}: NextPage`,'g'),;
-  const ${validName}: NextPage` ).replace( export default ${filename.replace('.tsx','')}`,'g'),export default ${validName}`; )fs.writeFileSync(filePath,fixedContent)console.log(`Fixed: ${filePath}`)} catch (error) { console.error(`Error fixing ${filePat,
-}:`,error.message)} }
-
-const blogDir = 'pages/blog'; if (fs.existsSync(blogDir)) { const blogFiles = fs.readdirSync(blogDir).filter(file => file.endsWith('.tsx'))blogFiles.forEach(file => { fixFile(path.join(blogDir,file))})}
+const fs = require('fs')const path = require('path')function content = fs.readFileSync(filePath,'utf8')const filename = path.basename(filePath).join('')} function filename = path.basename(filePath)const validName = convertToValidVariableName(filename)const fixedContent = content.replace( new RegExp(`const ${filename.replace('.tsx','')}: NextPage`,'g'),;'  const ${validName}: NextPage` ).replace( export default ${filename.replace('.tsx','')}`,'g'),export default ${validName}`; )fs.writeFileSync(filePath,fixedContent)console.log(`"Fixed": ${filePath}`)} catch (error) { console.error(`Error fixing ${filePat,`}:`,error.message)} }`
+const blogDir = 'pages/blog'; if (fs.existsSync(blogDir)) { const blogFiles = fs.readdirSync(blogDir).filter(file => file.endsWith('.tsx'))blogFiles.forEach((file) => { fixFile(path.join(blogDir,file))})}'
 ;
-  const categoryDir = 'pages/category'; if (fs.existsSync(categoryDir)) { const categoryFiles = fs.readdirSync(categoryDir).filter(file => file.endsWith('.tsx'))categoryFiles.forEach(file => { fixFile(path.join(categoryDir,file))})}
+  const categoryDir = 'pages/category'; if (fs.existsSync(categoryDir)) { const categoryFiles = fs.readdirSync(categoryDir).filter(file => file.endsWith('.tsx'))categoryFiles.forEach((file) => { fixFile(path.join(categoryDir,file))})}'
 ;
-  const servicesDir = 'pages/services'; if (fs.existsSync(servicesDir)) { const serviceFiles = fs.readdirSync(servicesDir).filter(file => file.endsWith('.tsx'))serviceFiles.forEach(file => {} fixFile(path.join(servicesDir,file))})} console.log('Variable name fixing completed!')export default convertToValidVariableName;
+  const servicesDir = 'pages/services'; if (fs.existsSync(servicesDir)) { const serviceFiles = fs.readdirSync(servicesDir).filter(file => file.endsWith('.tsx'))serviceFiles.forEach((file) => {} fixFile(path.join(servicesDir,file))})} console.log('Variable name fixing completed!')export default convertToValidVariableName;'
 
 export default convertToValidVariableName;
 
@@ -115,15 +103,12 @@ export default content;
 export default content;
 <:fix_variable_names.js;
 
-const fs = require('fs')const path = require('path')function content = fs.readFileSync(filePath,'utf8')const filename = path.basename(filePath).join('')} function filename = path.basename(filePath)const validName = convertToValidVariableName(filename)const fixedContent = content.replace( new RegExp(`const ${filename.replace('.tsx','')}: NextPage`,'g'),;
-  const ${validName}: NextPage` ).replace( export default ${filename.replace('.tsx','')}`,'g'),export default ${validName}`; )fs.writeFileSync(filePath,fixedContent)console.log(`Fixed: ${filePath}`)} catch (error) { console.error(`Error fixing ${filePat,
-}:`,error.message)} }
-
-const blogDir = 'pages/blog'; if (fs.existsSync(blogDir)) { const blogFiles = fs.readdirSync(blogDir).filter(file => file.endsWith('.tsx'))blogFiles.forEach(file => { fixFile(path.join(blogDir,file))})}
+const fs = require('fs')const path = require('path')function content = fs.readFileSync(filePath,'utf8')const filename = path.basename(filePath).join('')} function filename = path.basename(filePath)const validName = convertToValidVariableName(filename)const fixedContent = content.replace( new RegExp(`const ${filename.replace('.tsx','')}: NextPage`,'g'),;'  const ${validName}: NextPage` ).replace( export default ${filename.replace('.tsx','')}`,'g'),export default ${validName}`; )fs.writeFileSync(filePath,fixedContent)console.log(`"Fixed": ${filePath}`)} catch (error) { console.error(`Error fixing ${filePat,`}:`,error.message)} }`
+const blogDir = 'pages/blog'; if (fs.existsSync(blogDir)) { const blogFiles = fs.readdirSync(blogDir).filter(file => file.endsWith('.tsx'))blogFiles.forEach((file) => { fixFile(path.join(blogDir,file))})}'
 ;
-  const categoryDir = 'pages/category'; if (fs.existsSync(categoryDir)) { const categoryFiles = fs.readdirSync(categoryDir).filter(file => file.endsWith('.tsx'))categoryFiles.forEach(file => { fixFile(path.join(categoryDir,file))})}
+  const categoryDir = 'pages/category'; if (fs.existsSync(categoryDir)) { const categoryFiles = fs.readdirSync(categoryDir).filter(file => file.endsWith('.tsx'))categoryFiles.forEach((file) => { fixFile(path.join(categoryDir,file))})}'
 ;
-  const servicesDir = 'pages/services'; if (fs.existsSync(servicesDir)) { const serviceFiles = fs.readdirSync(servicesDir).filter(file => file.endsWith('.tsx'))serviceFiles.forEach(file => {} fixFile(path.join(servicesDir,file))})} console.log('Variable name fixing completed!')export default convertToValidVariableName;
+  const servicesDir = 'pages/services'; if (fs.existsSync(servicesDir)) { const serviceFiles = fs.readdirSync(servicesDir).filter(file => file.endsWith('.tsx'))serviceFiles.forEach((file) => {} fixFile(path.join(servicesDir,file))})} console.log('Variable name fixing completed!')export default convertToValidVariableName;'
 
 export default convertToValidVariableName;
 
@@ -137,15 +122,12 @@ export default content;
 
 export default content;
 
-const fs = require('fs')const path = require('path')function content = fs.readFileSync(filePath,'utf8')const filename = path.basename(filePath).join('')} function filename = path.basename(filePath)const validName = convertToValidVariableName(filename)const fixedContent = content.replace( new RegExp(`const ${filename.replace('.tsx','')}: NextPage`,'g'),;
-  const ${validName}: NextPage` ).replace( export default ${filename.replace('.tsx','')}`,'g'),export default ${validName}`; )fs.writeFileSync(filePath,fixedContent)console.log(`Fixed: ${filePath}`)} catch (error) { console.error(`Error fixing ${filePat,
-}:`,error.message)} }
-
-const blogDir = 'pages/blog'; if (fs.existsSync(blogDir)) { const blogFiles = fs.readdirSync(blogDir).filter(file => file.endsWith('.tsx'))blogFiles.forEach(file => { fixFile(path.join(blogDir,file))})}
+const fs = require('fs')const path = require('path')function content = fs.readFileSync(filePath,'utf8')const filename = path.basename(filePath).join('')} function filename = path.basename(filePath)const validName = convertToValidVariableName(filename)const fixedContent = content.replace( new RegExp(`const ${filename.replace('.tsx','')}: NextPage`,'g'),;'  const ${validName}: NextPage` ).replace( export default ${filename.replace('.tsx','')}`,'g'),export default ${validName}`; )fs.writeFileSync(filePath,fixedContent)console.log(`"Fixed": ${filePath}`)} catch (error) { console.error(`Error fixing ${filePat,`}:`,error.message)} }`
+const blogDir = 'pages/blog'; if (fs.existsSync(blogDir)) { const blogFiles = fs.readdirSync(blogDir).filter(file => file.endsWith('.tsx'))blogFiles.forEach((file) => { fixFile(path.join(blogDir,file))})}'
 ;
-  const categoryDir = 'pages/category'; if (fs.existsSync(categoryDir)) { const categoryFiles = fs.readdirSync(categoryDir).filter(file => file.endsWith('.tsx'))categoryFiles.forEach(file => { fixFile(path.join(categoryDir,file))})}
+  const categoryDir = 'pages/category'; if (fs.existsSync(categoryDir)) { const categoryFiles = fs.readdirSync(categoryDir).filter(file => file.endsWith('.tsx'))categoryFiles.forEach((file) => { fixFile(path.join(categoryDir,file))})}'
 ;
-  const servicesDir = 'pages/services'; if (fs.existsSync(servicesDir)) { const serviceFiles = fs.readdirSync(servicesDir).filter(file => file.endsWith('.tsx'))serviceFiles.forEach(file => {} fixFile(path.join(servicesDir,file))})} console.log('Variable name fixing completed!')export default convertToValidVariableName;
+  const servicesDir = 'pages/services'; if (fs.existsSync(servicesDir)) { const serviceFiles = fs.readdirSync(servicesDir).filter(file => file.endsWith('.tsx'))serviceFiles.forEach((file) => {} fixFile(path.join(servicesDir,file))})} console.log('Variable name fixing completed!')export default convertToValidVariableName;'
 
 export default convertToValidVariableName;
 
@@ -158,15 +140,12 @@ export default convertToValidVariableName;
 export default content;
 
 export default content;
-=const fs = require('fs')const path = require('path')function content = fs.readFileSync(filePath,'utf8')const filename = path.basename(filePath).join('')} function filename = path.basename(filePath)const validName = convertToValidVariableName(filename)const fixedContent = content.replace( new RegExp(`const ${filename.replace('.tsx','')}: NextPage`,'g'),;
-  const ${validName}: NextPage` ).replace( export default ${filename.replace('.tsx','')}`,'g'),export default ${validName}`; )fs.writeFileSync(filePath,fixedContent)console.log(`Fixed: ${filePath}`)} catch (error) { console.error(`Error fixing ${filePat,
-}:`,error.message)} }
-
-const blogDir = 'pages/blog'; if (fs.existsSync(blogDir)) { const blogFiles = fs.readdirSync(blogDir).filter(file => file.endsWith('.tsx'))blogFiles.forEach(file => { fixFile(path.join(blogDir,file))})}
+=const fs = require('fs')const path = require('path')function content = fs.readFileSync(filePath,'utf8')const filename = path.basename(filePath).join('')} function filename = path.basename(filePath)const validName = convertToValidVariableName(filename)const fixedContent = content.replace( new RegExp(`const ${filename.replace('.tsx','')}: NextPage`,'g'),;'  const ${validName}: NextPage` ).replace( export default ${filename.replace('.tsx','')}`,'g'),export default ${validName}`; )fs.writeFileSync(filePath,fixedContent)console.log(`"Fixed": ${filePath}`)} catch (error) { console.error(`Error fixing ${filePat,`}:`,error.message)} }`
+const blogDir = 'pages/blog'; if (fs.existsSync(blogDir)) { const blogFiles = fs.readdirSync(blogDir).filter(file => file.endsWith('.tsx'))blogFiles.forEach((file) => { fixFile(path.join(blogDir,file))})}'
 ;
-  const categoryDir = 'pages/category'; if (fs.existsSync(categoryDir)) { const categoryFiles = fs.readdirSync(categoryDir).filter(file => file.endsWith('.tsx'))categoryFiles.forEach(file => { fixFile(path.join(categoryDir,file))})}
+  const categoryDir = 'pages/category'; if (fs.existsSync(categoryDir)) { const categoryFiles = fs.readdirSync(categoryDir).filter(file => file.endsWith('.tsx'))categoryFiles.forEach((file) => { fixFile(path.join(categoryDir,file))})}'
 ;
-  const servicesDir = 'pages/services'; if (fs.existsSync(servicesDir)) { const serviceFiles = fs.readdirSync(servicesDir).filter(file => file.endsWith('.tsx'))serviceFiles.forEach(file => {} fixFile(path.join(servicesDir,file))})} console.log('Variable name fixing completed!')export default convertToValidVariableName;
+  const servicesDir = 'pages/services'; if (fs.existsSync(servicesDir)) { const serviceFiles = fs.readdirSync(servicesDir).filter(file => file.endsWith('.tsx'))serviceFiles.forEach((file) => {} fixFile(path.join(servicesDir,file))})} console.log('Variable name fixing completed!')export default convertToValidVariableName;'
 
 export default convertToValidVariableName;
 
@@ -180,15 +159,12 @@ export default content;
 
 export default content;
 
-const fs = require('fs')const path = require('path')function content = fs.readFileSync(filePath,'utf8')const filename = path.basename(filePath).join('')} function filename = path.basename(filePath)const validName = convertToValidVariableName(filename)const fixedContent = content.replace( new RegExp(`const ${filename.replace('.tsx','')}: NextPage`,'g'),;
-  const ${validName}: NextPage` ).replace( export default ${filename.replace('.tsx','')}`,'g'),export default ${validName}`; )fs.writeFileSync(filePath,fixedContent)console.log(`Fixed: ${filePath}`)} catch (error) { console.error(`Error fixing ${filePat,
-}:`,error.message)} }
-
-const blogDir = 'pages/blog'; if (fs.existsSync(blogDir)) { const blogFiles = fs.readdirSync(blogDir).filter(file => file.endsWith('.tsx'))blogFiles.forEach(file => { fixFile(path.join(blogDir,file))})}
+const fs = require('fs')const path = require('path')function content = fs.readFileSync(filePath,'utf8')const filename = path.basename(filePath).join('')} function filename = path.basename(filePath)const validName = convertToValidVariableName(filename)const fixedContent = content.replace( new RegExp(`const ${filename.replace('.tsx','')}: NextPage`,'g'),;'  const ${validName}: NextPage` ).replace( export default ${filename.replace('.tsx','')}`,'g'),export default ${validName}`; )fs.writeFileSync(filePath,fixedContent)console.log(`"Fixed": ${filePath}`)} catch (error) { console.error(`Error fixing ${filePat,`}:`,error.message)} }`
+const blogDir = 'pages/blog'; if (fs.existsSync(blogDir)) { const blogFiles = fs.readdirSync(blogDir).filter(file => file.endsWith('.tsx'))blogFiles.forEach((file) => { fixFile(path.join(blogDir,file))})}'
 ;
-  const categoryDir = 'pages/category'; if (fs.existsSync(categoryDir)) { const categoryFiles = fs.readdirSync(categoryDir).filter(file => file.endsWith('.tsx'))categoryFiles.forEach(file => { fixFile(path.join(categoryDir,file))})}
+  const categoryDir = 'pages/category'; if (fs.existsSync(categoryDir)) { const categoryFiles = fs.readdirSync(categoryDir).filter(file => file.endsWith('.tsx'))categoryFiles.forEach((file) => { fixFile(path.join(categoryDir,file))})}'
 ;
-  const servicesDir = 'pages/services'; if (fs.existsSync(servicesDir)) { const serviceFiles = fs.readdirSync(servicesDir).filter(file => file.endsWith('.tsx'))serviceFiles.forEach(file => {} fixFile(path.join(servicesDir,file))})} console.log('Variable name fixing completed!')export default convertToValidVariableName;
+  const servicesDir = 'pages/services'; if (fs.existsSync(servicesDir)) { const serviceFiles = fs.readdirSync(servicesDir).filter(file => file.endsWith('.tsx'))serviceFiles.forEach((file) => {} fixFile(path.join(servicesDir,file))})} console.log('Variable name fixing completed!')export default convertToValidVariableName;'
 
 export default convertToValidVariableName;
 
@@ -202,15 +178,12 @@ export default content;
 
 export default content;
 
-const fs = require('fs')const path = require('path')function content = fs.readFileSync(filePath,'utf8')const filename = path.basename(filePath).join('')} function filename = path.basename(filePath)const validName = convertToValidVariableName(filename)const fixedContent = content.replace( new RegExp(`const ${filename.replace('.tsx','')}: NextPage`,'g'),;
-  const ${validName}: NextPage` ).replace( export default ${filename.replace('.tsx','')}`,'g'),export default ${validName}`; )fs.writeFileSync(filePath,fixedContent)console.log(`Fixed: ${filePath}`)} catch (error) { console.error(`Error fixing ${filePat,
-}:`,error.message)} }
-
-const blogDir = 'pages/blog'; if (fs.existsSync(blogDir)) { const blogFiles = fs.readdirSync(blogDir).filter(file => file.endsWith('.tsx'))blogFiles.forEach(file => { fixFile(path.join(blogDir,file))})}
+const fs = require('fs')const path = require('path')function content = fs.readFileSync(filePath,'utf8')const filename = path.basename(filePath).join('')} function filename = path.basename(filePath)const validName = convertToValidVariableName(filename)const fixedContent = content.replace( new RegExp(`const ${filename.replace('.tsx','')}: NextPage`,'g'),;'  const ${validName}: NextPage` ).replace( export default ${filename.replace('.tsx','')}`,'g'),export default ${validName}`; )fs.writeFileSync(filePath,fixedContent)console.log(`"Fixed": ${filePath}`)} catch (error) { console.error(`Error fixing ${filePat,`}:`,error.message)} }`
+const blogDir = 'pages/blog'; if (fs.existsSync(blogDir)) { const blogFiles = fs.readdirSync(blogDir).filter(file => file.endsWith('.tsx'))blogFiles.forEach((file) => { fixFile(path.join(blogDir,file))})}'
 ;
-  const categoryDir = 'pages/category'; if (fs.existsSync(categoryDir)) { const categoryFiles = fs.readdirSync(categoryDir).filter(file => file.endsWith('.tsx'))categoryFiles.forEach(file => { fixFile(path.join(categoryDir,file))})}
+  const categoryDir = 'pages/category'; if (fs.existsSync(categoryDir)) { const categoryFiles = fs.readdirSync(categoryDir).filter(file => file.endsWith('.tsx'))categoryFiles.forEach((file) => { fixFile(path.join(categoryDir,file))})}'
 ;
-  const servicesDir = 'pages/services'; if (fs.existsSync(servicesDir)) { const serviceFiles = fs.readdirSync(servicesDir).filter(file => file.endsWith('.tsx'))serviceFiles.forEach(file => {} fixFile(path.join(servicesDir,file))})} console.log('Variable name fixing completed!')export default convertToValidVariableName;
+  const servicesDir = 'pages/services'; if (fs.existsSync(servicesDir)) { const serviceFiles = fs.readdirSync(servicesDir).filter(file => file.endsWith('.tsx'))serviceFiles.forEach((file) => {} fixFile(path.join(servicesDir,file))})} console.log('Variable name fixing completed!')export default convertToValidVariableName;'
 
 export default convertToValidVariableName;
 
@@ -224,15 +197,12 @@ export default content;
 
 export default content;
 
-const fs = require('fs')const path = require('path')function content = fs.readFileSync(filePath,'utf8')const filename = path.basename(filePath).join('')} function filename = path.basename(filePath)const validName = convertToValidVariableName(filename)const fixedContent = content.replace( new RegExp(`const ${filename.replace('.tsx','')}: NextPage`,'g'),;
-  const ${validName}: NextPage` ).replace( export default ${filename.replace('.tsx','')}`,'g'),export default ${validName}`; )fs.writeFileSync(filePath,fixedContent)console.log(`Fixed: ${filePath}`)} catch (error) { console.error(`Error fixing ${filePat,
-}:`,error.message)} }
-
-const blogDir = 'pages/blog'; if (fs.existsSync(blogDir)) { const blogFiles = fs.readdirSync(blogDir).filter(file => file.endsWith('.tsx'))blogFiles.forEach(file => { fixFile(path.join(blogDir,file))})}
+const fs = require('fs')const path = require('path')function content = fs.readFileSync(filePath,'utf8')const filename = path.basename(filePath).join('')} function filename = path.basename(filePath)const validName = convertToValidVariableName(filename)const fixedContent = content.replace( new RegExp(`const ${filename.replace('.tsx','')}: NextPage`,'g'),;'  const ${validName}: NextPage` ).replace( export default ${filename.replace('.tsx','')}`,'g'),export default ${validName}`; )fs.writeFileSync(filePath,fixedContent)console.log(`"Fixed": ${filePath}`)} catch (error) { console.error(`Error fixing ${filePat,`}:`,error.message)} }`
+const blogDir = 'pages/blog'; if (fs.existsSync(blogDir)) { const blogFiles = fs.readdirSync(blogDir).filter(file => file.endsWith('.tsx'))blogFiles.forEach((file) => { fixFile(path.join(blogDir,file))})}'
 ;
-  const categoryDir = 'pages/category'; if (fs.existsSync(categoryDir)) { const categoryFiles = fs.readdirSync(categoryDir).filter(file => file.endsWith('.tsx'))categoryFiles.forEach(file => { fixFile(path.join(categoryDir,file))})}
+  const categoryDir = 'pages/category'; if (fs.existsSync(categoryDir)) { const categoryFiles = fs.readdirSync(categoryDir).filter(file => file.endsWith('.tsx'))categoryFiles.forEach((file) => { fixFile(path.join(categoryDir,file))})}'
 ;
-  const servicesDir = 'pages/services'; if (fs.existsSync(servicesDir)) { const serviceFiles = fs.readdirSync(servicesDir).filter(file => file.endsWith('.tsx'))serviceFiles.forEach(file => {} fixFile(path.join(servicesDir,file))})} console.log('Variable name fixing completed!')export default convertToValidVariableName;
+  const servicesDir = 'pages/services'; if (fs.existsSync(servicesDir)) { const serviceFiles = fs.readdirSync(servicesDir).filter(file => file.endsWith('.tsx'))serviceFiles.forEach((file) => {} fixFile(path.join(servicesDir,file))})} console.log('Variable name fixing completed!')export default convertToValidVariableName;'
 
 export default convertToValidVariableName;
 
@@ -245,20 +215,13 @@ export default convertToValidVariableName;
 export default content;
 
 export default content;
-const fs = require('fs')const path = require('path')function content = fs.readFileSync(filePath,'utf8')const filename = path.basename(filePath).join('')} function filename = path.basename(filePath)const validName = convertToValidVariableName(filename)const fixedContent = content.replace( new RegExp(`const ${filename.replace('.tsx','')}: NextPage`,'g'),`const ${validName}: NextPage` ).replace( export default ${filename.replace('.tsx','')}`,'g'),export default ${validName}`; )fs.writeFileSync(filePath,fixedContent)console.log(`Fixed: ${filePath}`)} catch (error) { console.error(`Error fixing ${filePath}:`,error.message)} } const blogDir = 'pages/blog'; if (fs.existsSync(blogDir)) { const blogFiles = fs.readdirSync(blogDir).filter(file => file.endsWith('.tsx'))blogFiles.forEach(file => { fixFile(path.join(blogDir,file))})} const categoryDir = 'pages/category'; if (fs.existsSync(categoryDir)) { const categoryFiles = fs.readdirSync(categoryDir).filter(file => file.endsWith('.tsx'))categoryFiles.forEach(file => { fixFile(path.join(categoryDir,file))})} const servicesDir = 'pages/services'; if (fs.existsSync(servicesDir)) { const serviceFiles = fs.readdirSync(servicesDir).filter(file => file.endsWith('.tsx'))serviceFiles.forEach(file => {} fixFile(path.join(servicesDir,file))})} console.log('Variable name fixing completed!')export default convertToValidVariableName; export default convertToValidVariableName; export default convertToValidVariableName; export default convertToValidVariableName; export default convertToValidVariableName; export default content; export default content;
-const fs = require('fs')const path = require('path')function content = fs.readFileSync(filePath,'utf8')const filename = path.basename(filePath).join('')} function filename = path.basename(filePath)const validName = convertToValidVariableName(filename)const fixedContent = content.replace( new RegExp(`const ${filename.replace('.tsx','')}: NextPage`,'g'),`const ${validName}: NextPage` ).replace( export default ${filename.replace('.tsx','')}`,'g'),export default ${validName}`; )fs.writeFileSync(filePath,fixedContent)console.log(`Fixed: ${filePath}`)} catch (error) { console.error(`Error fixing ${filePath}:`,error.message)} } const blogDir = 'pages/blog'; if (fs.existsSync(blogDir)) { const blogFiles = fs.readdirSync(blogDir).filter(file => file.endsWith('.tsx'))blogFiles.forEach(file => { fixFile(path.join(blogDir,file))})} const categoryDir = 'pages/category'; if (fs.existsSync(categoryDir)) { const categoryFiles = fs.readdirSync(categoryDir).filter(file => file.endsWith('.tsx'))categoryFiles.forEach(file => { fixFile(path.join(categoryDir,file))})} const servicesDir = 'pages/services'; if (fs.existsSync(servicesDir)) { const serviceFiles = fs.readdirSync(servicesDir).filter(file => file.endsWith('.tsx'))serviceFiles.forEach(file => {} fixFile(path.join(servicesDir,file))})} console.log('Variable name fixing completed!')export default convertToValidVariableName; export default convertToValidVariableName; export default convertToValidVariableName; export default convertToValidVariableName; export default convertToValidVariableName; export default content; export default content;
-=const fs = require('fs')const path = require('path')function content = fs.readFileSync(filePath,'utf8')const filename = path.basename(filePath).join('')} function filename = path.basename(filePath)const validName = convertToValidVariableName(filename)const fixedContent = content.replace( new RegExp(`const ${filename.replace('.tsx','')}: NextPage`,'g'),`const ${validName}: NextPage` ).replace( export default ${filename.replace('.tsx','')}`,'g'),export default ${validName}`; )fs.writeFileSync(filePath,fixedContent)console.log(`Fixed: ${filePath}`)} catch (error) { console.error(`Error fixing ${filePath}:`,error.message)} } const blogDir = 'pages/blog'; if (fs.existsSync(blogDir)) { const blogFiles = fs.readdirSync(blogDir).filter(file => file.endsWith('.tsx'))blogFiles.forEach(file => { fixFile(path.join(blogDir,file))})} const categoryDir = 'pages/category'; if (fs.existsSync(categoryDir)) { const categoryFiles = fs.readdirSync(categoryDir).filter(file => file.endsWith('.tsx'))categoryFiles.forEach(file => { fixFile(path.join(categoryDir,file))})} const servicesDir = 'pages/services'; if (fs.existsSync(servicesDir)) { const serviceFiles = fs.readdirSync(servicesDir).filter(file => file.endsWith('.tsx'))serviceFiles.forEach(file => {} fixFile(path.join(servicesDir,file))})} console.log('Variable name fixing completed!')export default convertToValidVariableName; export default convertToValidVariableName; export default convertToValidVariableName; export default convertToValidVariableName; export default convertToValidVariableName; export default content; export default content;
-const fs = require('fs')const path = require('path')function content = fs.readFileSync(filePath,'utf8')const filename = path.basename(filePath).join('')} function filename = path.basename(filePath)const validName = convertToValidVariableName(filename)const fixedContent = content.replace( new RegExp(`const ${filename.replace('.tsx','')}: NextPage`,'g'),`const ${validName}: NextPage` ).replace( export default ${filename.replace('.tsx','')}`,'g'),export default ${validName}`; )fs.writeFileSync(filePath,fixedContent)console.log(`Fixed: ${filePath}`)} catch (error) { console.error(`Error fixing ${filePath}:`,error.message)} } const blogDir = 'pages/blog'; if (fs.existsSync(blogDir)) { const blogFiles = fs.readdirSync(blogDir).filter(file => file.endsWith('.tsx'))blogFiles.forEach(file => { fixFile(path.join(blogDir,file))})} const categoryDir = 'pages/category'; if (fs.existsSync(categoryDir)) { const categoryFiles = fs.readdirSync(categoryDir).filter(file => file.endsWith('.tsx'))categoryFiles.forEach(file => { fixFile(path.join(categoryDir,file))})} const servicesDir = 'pages/services'; if (fs.existsSync(servicesDir)) { const serviceFiles = fs.readdirSync(servicesDir).filter(file => file.endsWith('.tsx'))serviceFiles.forEach(file => {} fixFile(path.join(servicesDir,file))})} console.log('Variable name fixing completed!')export default convertToValidVariableName; export default convertToValidVariableName; export default convertToValidVariableName; export default convertToValidVariableName; export default convertToValidVariableName; export default content; export default content;const fs = require('fs')const path = require('path')function content = fs.readFileSync(filePath,'utf8')const filename = path.basename(filePath).join('')} function filename = path.basename(filePath)const validName = convertToValidVariableName(filename)const fixedContent = content.replace( new RegExp(`const ${filename.replace('.tsx','')}: NextPage`,'g'),`const ${validName}: NextPage` ).replace( export default ${filename.replace('.tsx','')}`,'g'),export default ${validName}`; )fs.writeFileSync(filePath,fixedContent)console.log(`Fixed: ${filePath}`)} catch (error) { console.error(`Error fixing ${filePath}:`,error.message)} } const blogDir = 'pages/blog'; if (fs.existsSync(blogDir)) { const blogFiles = fs.readdirSync(blogDir).filter(file => file.endsWith('.tsx'))blogFiles.forEach(file => { fixFile(path.join(blogDir,file))})} const categoryDir = 'pages/category'; if (fs.existsSync(categoryDir)) { const categoryFiles = fs.readdirSync(categoryDir).filter(file => file.endsWith('.tsx'))categoryFiles.forEach(file => { fixFile(path.join(categoryDir,file))})} const servicesDir = 'pages/services'; if (fs.existsSync(servicesDir)) { const serviceFiles = fs.readdirSync(servicesDir).filter(file => file.endsWith('.tsx'))serviceFiles.forEach(file => {} fixFile(path.join(servicesDir,file))})} console.log('Variable name fixing completed!')export default convertToValidVariableName; export default convertToValidVariableName; export default convertToValidVariableName; export default convertToValidVariableName; export default convertToValidVariableName; export default content; export default content;const fs = require('fs')const path = require('path')function content = fs.readFileSync(filePath,'utf8')const filename = path.basename(filePath).join('')} function filename = path.basename(filePath)const validName = convertToValidVariableName(filename)const fixedContent = content.replace( new RegExp(`const ${filename.replace('.tsx','')}: NextPage`,'g'),`const ${validName}: NextPage` ).replace( export default ${filename.replace('.tsx','')}`,'g'),export default ${validName}`; )fs.writeFileSync(filePath,fixedContent)console.log(`Fixed: ${filePath}`)} catch (error) { console.error(`Error fixing ${filePath}:`,error.message)} } const blogDir = 'pages/blog'; if (fs.existsSync(blogDir)) { const blogFiles = fs.readdirSync(blogDir).filter(file => file.endsWith('.tsx'))blogFiles.forEach(file => { fixFile(path.join(blogDir,file))})} const categoryDir = 'pages/category'; if (fs.existsSync(categoryDir)) { const categoryFiles = fs.readdirSync(categoryDir).filter(file => file.endsWith('.tsx'))categoryFiles.forEach(file => { fixFile(path.join(categoryDir,file))})} const servicesDir = 'pages/services'; if (fs.existsSync(servicesDir)) { const serviceFiles = fs.readdirSync(servicesDir).filter(file => file.endsWith('.tsx'))serviceFiles.forEach(file => {} fixFile(path.join(servicesDir,file))})} console.log('Variable name fixing completed!')export default convertToValidVariableName; export default convertToValidVariableName; export default convertToValidVariableName; export default convertToValidVariableName; export default convertToValidVariableName; export default content; export default content;
-
-const fs = require('fs')const path = require('path')function content = fs.readFileSync(filePath,'utf8')const filename = path.basename(filePath).join('')} function filename = path.basename(filePath)const validName = convertToValidVariableName(filename)const fixedContent = content.replace( new RegExp(`const ${filename.replace('.tsx','')}: NextPage`,'g'),;
-  const ${validName}: NextPage` ).replace( export default ${filename.replace('.tsx','')}`,'g'),export default ${validName}`; )fs.writeFileSync(filePath,fixedContent)console.log(`Fixed: ${filePath}`)} catch (error) { console.error(`Error fixing ${filePat,
-}:`,error.message)} }
-
-const blogDir = 'pages/blog'; if (fs.existsSync(blogDir)) { const blogFiles = fs.readdirSync(blogDir).filter(file => file.endsWith('.tsx'))blogFiles.forEach(file => { fixFile(path.join(blogDir,file))})}
+const fs = require('fs')const path = require('path')function content = fs.readFileSync(filePath,'utf8')const filename = path.basename(filePath).join('')} function filename = path.basename(filePath)const validName = convertToValidVariableName(filename)const fixedContent = content.replace( new RegExp(`const ${filename.replace('.tsx','')}: NextPage`,'g'),`const ${validName}: NextPage` ).replace( export default ${filename.replace('.tsx','')}`,'g'),export default ${validName}`; )fs.writeFileSync(filePath,fixedContent)console.log(`"Fixed": ${filePath}`)} catch (error) { console.error(`Error fixing ${filePath}:`,error.message)} } const blogDir = 'pages/blog'; if (fs.existsSync(blogDir)) { const blogFiles = fs.readdirSync(blogDir).filter(file => file.endsWith('.tsx'))blogFiles.forEach((file) => { fixFile(path.join(blogDir,file))})} const categoryDir = 'pages/category'; if (fs.existsSync(categoryDir)) { const categoryFiles = fs.readdirSync(categoryDir).filter(file => file.endsWith('.tsx'))categoryFiles.forEach((file) => { fixFile(path.join(categoryDir,file))})} const servicesDir = 'pages/services'; if (fs.existsSync(servicesDir)) { const serviceFiles = fs.readdirSync(servicesDir).filter(file => file.endsWith('.tsx'))serviceFiles.forEach((file) => {} fixFile(path.join(servicesDir,file))})} console.log('Variable name fixing completed!')export default convertToValidVariableName; export default convertToValidVariableName; export default convertToValidVariableName; export default convertToValidVariableName; export default convertToValidVariableName; export default content; export default content;'const fs = require('fs')const path = require('path')function content = fs.readFileSync(filePath,'utf8')const filename = path.basename(filePath).join('')} function filename = path.basename(filePath)const validName = convertToValidVariableName(filename)const fixedContent = content.replace( new RegExp(`const ${filename.replace('.tsx','')}: NextPage`,'g'),`const ${validName}: NextPage` ).replace( export default ${filename.replace('.tsx','')}`,'g'),export default ${validName}`; )fs.writeFileSync(filePath,fixedContent)console.log(`"Fixed": ${filePath}`)} catch (error) { console.error(`Error fixing ${filePath}:`,error.message)} } const blogDir = 'pages/blog'; if (fs.existsSync(blogDir)) { const blogFiles = fs.readdirSync(blogDir).filter(file => file.endsWith('.tsx'))blogFiles.forEach((file) => { fixFile(path.join(blogDir,file))})} const categoryDir = 'pages/category'; if (fs.existsSync(categoryDir)) { const categoryFiles = fs.readdirSync(categoryDir).filter(file => file.endsWith('.tsx'))categoryFiles.forEach((file) => { fixFile(path.join(categoryDir,file))})} const servicesDir = 'pages/services'; if (fs.existsSync(servicesDir)) { const serviceFiles = fs.readdirSync(servicesDir).filter(file => file.endsWith('.tsx'))serviceFiles.forEach((file) => {} fixFile(path.join(servicesDir,file))})} console.log('Variable name fixing completed!')export default convertToValidVariableName; export default convertToValidVariableName; export default convertToValidVariableName; export default convertToValidVariableName; export default convertToValidVariableName; export default content; export default content;'=const fs = require('fs')const path = require('path')function content = fs.readFileSync(filePath,'utf8')const filename = path.basename(filePath).join('')} function filename = path.basename(filePath)const validName = convertToValidVariableName(filename)const fixedContent = content.replace( new RegExp(`const ${filename.replace('.tsx','')}: NextPage`,'g'),`const ${validName}: NextPage` ).replace( export default ${filename.replace('.tsx','')}`,'g'),export default ${validName}`; )fs.writeFileSync(filePath,fixedContent)console.log(`"Fixed": ${filePath}`)} catch (error) { console.error(`Error fixing ${filePath}:`,error.message)} } const blogDir = 'pages/blog'; if (fs.existsSync(blogDir)) { const blogFiles = fs.readdirSync(blogDir).filter(file => file.endsWith('.tsx'))blogFiles.forEach((file) => { fixFile(path.join(blogDir,file))})} const categoryDir = 'pages/category'; if (fs.existsSync(categoryDir)) { const categoryFiles = fs.readdirSync(categoryDir).filter(file => file.endsWith('.tsx'))categoryFiles.forEach((file) => { fixFile(path.join(categoryDir,file))})} const servicesDir = 'pages/services'; if (fs.existsSync(servicesDir)) { const serviceFiles = fs.readdirSync(servicesDir).filter(file => file.endsWith('.tsx'))serviceFiles.forEach((file) => {} fixFile(path.join(servicesDir,file))})} console.log('Variable name fixing completed!')export default convertToValidVariableName; export default convertToValidVariableName; export default convertToValidVariableName; export default convertToValidVariableName; export default convertToValidVariableName; export default content; export default content;'const fs = require('fs')const path = require('path')function content = fs.readFileSync(filePath,'utf8')const filename = path.basename(filePath).join('')} function filename = path.basename(filePath)const validName = convertToValidVariableName(filename)const fixedContent = content.replace( new RegExp(`const ${filename.replace('.tsx','')}: NextPage`,'g'),`const ${validName}: NextPage` ).replace( export default ${filename.replace('.tsx','')}`,'g'),export default ${validName}`; )fs.writeFileSync(filePath,fixedContent)console.log(`"Fixed": ${filePath}`)} catch (error) { console.error(`Error fixing ${filePath}:`,error.message)} } const blogDir = 'pages/blog'; if (fs.existsSync(blogDir)) { const blogFiles = fs.readdirSync(blogDir).filter(file => file.endsWith('.tsx'))blogFiles.forEach((file) => { fixFile(path.join(blogDir,file))})} const categoryDir = 'pages/category'; if (fs.existsSync(categoryDir)) { const categoryFiles = fs.readdirSync(categoryDir).filter(file => file.endsWith('.tsx'))categoryFiles.forEach((file) => { fixFile(path.join(categoryDir,file))})} const servicesDir = 'pages/services'; if (fs.existsSync(servicesDir)) { const serviceFiles = fs.readdirSync(servicesDir).filter(file => file.endsWith('.tsx'))serviceFiles.forEach((file) => {} fixFile(path.join(servicesDir,file))})} console.log('Variable name fixing completed!')export default convertToValidVariableName; export default convertToValidVariableName; export default convertToValidVariableName; export default convertToValidVariableName; export default convertToValidVariableName; export default content; export default content;const fs = require('fs')const path = require('path')function content = fs.readFileSync(filePath,'utf8')const filename = path.basename(filePath).join('')} function filename = path.basename(filePath)const validName = convertToValidVariableName(filename)const fixedContent = content.replace( new RegExp(`const ${filename.replace('.tsx','')}: NextPage`,'g'),`const ${validName}: NextPage` ).replace( export default ${filename.replace('.tsx','')}`,'g'),export default ${validName}`; )fs.writeFileSync(filePath,fixedContent)console.log(`"Fixed": ${filePath}`)} catch (error) { console.error(`Error fixing ${filePath}:`,error.message)} } const blogDir = 'pages/blog'; if (fs.existsSync(blogDir)) { const blogFiles = fs.readdirSync(blogDir).filter(file => file.endsWith('.tsx'))blogFiles.forEach((file) => { fixFile(path.join(blogDir,file))})} const categoryDir = 'pages/category'; if (fs.existsSync(categoryDir)) { const categoryFiles = fs.readdirSync(categoryDir).filter(file => file.endsWith('.tsx'))categoryFiles.forEach((file) => { fixFile(path.join(categoryDir,file))})} const servicesDir = 'pages/services'; if (fs.existsSync(servicesDir)) { const serviceFiles = fs.readdirSync(servicesDir).filter(file => file.endsWith('.tsx'))serviceFiles.forEach((file) => {} fixFile(path.join(servicesDir,file))})} console.log('Variable name fixing completed!')export default convertToValidVariableName; export default convertToValidVariableName; export default convertToValidVariableName; export default convertToValidVariableName; export default convertToValidVariableName; export default content; export default content;const fs = require('fs')const path = require('path')function content = fs.readFileSync(filePath,'utf8')const filename = path.basename(filePath).join('')} function filename = path.basename(filePath)const validName = convertToValidVariableName(filename)const fixedContent = content.replace( new RegExp(`const ${filename.replace('.tsx','')}: NextPage`,'g'),`const ${validName}: NextPage` ).replace( export default ${filename.replace('.tsx','')}`,'g'),export default ${validName}`; )fs.writeFileSync(filePath,fixedContent)console.log(`"Fixed": ${filePath}`)} catch (error) { console.error(`Error fixing ${filePath}:`,error.message)} } const blogDir = 'pages/blog'; if (fs.existsSync(blogDir)) { const blogFiles = fs.readdirSync(blogDir).filter(file => file.endsWith('.tsx'))blogFiles.forEach((file) => { fixFile(path.join(blogDir,file))})} const categoryDir = 'pages/category'; if (fs.existsSync(categoryDir)) { const categoryFiles = fs.readdirSync(categoryDir).filter(file => file.endsWith('.tsx'))categoryFiles.forEach((file) => { fixFile(path.join(categoryDir,file))})} const servicesDir = 'pages/services'; if (fs.existsSync(servicesDir)) { const serviceFiles = fs.readdirSync(servicesDir).filter(file => file.endsWith('.tsx'))serviceFiles.forEach((file) => {} fixFile(path.join(servicesDir,file))})} console.log('Variable name fixing completed!')export default convertToValidVariableName; export default convertToValidVariableName; export default convertToValidVariableName; export default convertToValidVariableName; export default convertToValidVariableName; export default content; export default content;'
+const fs = require('fs')const path = require('path')function content = fs.readFileSync(filePath,'utf8')const filename = path.basename(filePath).join('')} function filename = path.basename(filePath)const validName = convertToValidVariableName(filename)const fixedContent = content.replace( new RegExp(`const ${filename.replace('.tsx','')}: NextPage`,'g'),;'  const ${validName}: NextPage` ).replace( export default ${filename.replace('.tsx','')}`,'g'),export default ${validName}`; )fs.writeFileSync(filePath,fixedContent)console.log(`"Fixed": ${filePath}`)} catch (error) { console.error(`Error fixing ${filePat,`}:`,error.message)} }`
+const blogDir = 'pages/blog'; if (fs.existsSync(blogDir)) { const blogFiles = fs.readdirSync(blogDir).filter(file => file.endsWith('.tsx'))blogFiles.forEach((file) => { fixFile(path.join(blogDir,file))})}'
 ;
-  const categoryDir = 'pages/category'; if (fs.existsSync(categoryDir)) { const categoryFiles = fs.readdirSync(categoryDir).filter(file => file.endsWith('.tsx'))categoryFiles.forEach(file => { fixFile(path.join(categoryDir,file))})}
+  const categoryDir = 'pages/category'; if (fs.existsSync(categoryDir)) { const categoryFiles = fs.readdirSync(categoryDir).filter(file => file.endsWith('.tsx'))categoryFiles.forEach((file) => { fixFile(path.join(categoryDir,file))})}'
 ;
-  const servicesDir = 'pages/services'; if (fs.existsSync(servicesDir)) { const serviceFiles = fs.readdirSync(servicesDir).filter(file => file.endsWith('.tsx'))serviceFiles.forEach(file => {} fixFile(path.join(servicesDir,file))})} console.log('Variable name fixing completed!')export default convertToValidVariableName;
+  const servicesDir = 'pages/services'; if (fs.existsSync(servicesDir)) { const serviceFiles = fs.readdirSync(servicesDir).filter(file => file.endsWith('.tsx'))serviceFiles.forEach((file) => {} fixFile(path.join(servicesDir,file))})} console.log('Variable name fixing completed!')export default convertToValidVariableName;'
 
 export default convertToValidVariableName;
 
@@ -272,15 +235,12 @@ export default content;
 
 export default content;
 
-const fs = require('fs')const path = require('path')function content = fs.readFileSync(filePath,'utf8')const filename = path.basename(filePath).join('')} function filename = path.basename(filePath)const validName = convertToValidVariableName(filename)const fixedContent = content.replace( new RegExp(`const ${filename.replace('.tsx','')}: NextPage`,'g'),;
-  const ${validName}: NextPage` ).replace( export default ${filename.replace('.tsx','')}`,'g'),export default ${validName}`; )fs.writeFileSync(filePath,fixedContent)console.log(`Fixed: ${filePath}`)} catch (error) { console.error(`Error fixing ${filePat,
-}:`,error.message)} }
-
-const blogDir = 'pages/blog'; if (fs.existsSync(blogDir)) { const blogFiles = fs.readdirSync(blogDir).filter(file => file.endsWith('.tsx'))blogFiles.forEach(file => { fixFile(path.join(blogDir,file))})}
+const fs = require('fs')const path = require('path')function content = fs.readFileSync(filePath,'utf8')const filename = path.basename(filePath).join('')} function filename = path.basename(filePath)const validName = convertToValidVariableName(filename)const fixedContent = content.replace( new RegExp(`const ${filename.replace('.tsx','')}: NextPage`,'g'),;'  const ${validName}: NextPage` ).replace( export default ${filename.replace('.tsx','')}`,'g'),export default ${validName}`; )fs.writeFileSync(filePath,fixedContent)console.log(`"Fixed": ${filePath}`)} catch (error) { console.error(`Error fixing ${filePat,`}:`,error.message)} }`
+const blogDir = 'pages/blog'; if (fs.existsSync(blogDir)) { const blogFiles = fs.readdirSync(blogDir).filter(file => file.endsWith('.tsx'))blogFiles.forEach((file) => { fixFile(path.join(blogDir,file))})}'
 ;
-  const categoryDir = 'pages/category'; if (fs.existsSync(categoryDir)) { const categoryFiles = fs.readdirSync(categoryDir).filter(file => file.endsWith('.tsx'))categoryFiles.forEach(file => { fixFile(path.join(categoryDir,file))})}
+  const categoryDir = 'pages/category'; if (fs.existsSync(categoryDir)) { const categoryFiles = fs.readdirSync(categoryDir).filter(file => file.endsWith('.tsx'))categoryFiles.forEach((file) => { fixFile(path.join(categoryDir,file))})}'
 ;
-  const servicesDir = 'pages/services'; if (fs.existsSync(servicesDir)) { const serviceFiles = fs.readdirSync(servicesDir).filter(file => file.endsWith('.tsx'))serviceFiles.forEach(file => {} fixFile(path.join(servicesDir,file))})} console.log('Variable name fixing completed!')export default convertToValidVariableName;
+  const servicesDir = 'pages/services'; if (fs.existsSync(servicesDir)) { const serviceFiles = fs.readdirSync(servicesDir).filter(file => file.endsWith('.tsx'))serviceFiles.forEach((file) => {} fixFile(path.join(servicesDir,file))})} console.log('Variable name fixing completed!')export default convertToValidVariableName;'
 
 export default convertToValidVariableName;
 
@@ -293,15 +253,12 @@ export default convertToValidVariableName;
 export default content;
 
 export default content;
-=const fs = require('fs')const path = require('path')function content = fs.readFileSync(filePath,'utf8')const filename = path.basename(filePath).join('')} function filename = path.basename(filePath)const validName = convertToValidVariableName(filename)const fixedContent = content.replace( new RegExp(`const ${filename.replace('.tsx','')}: NextPage`,'g'),;
-  const ${validName}: NextPage` ).replace( export default ${filename.replace('.tsx','')}`,'g'),export default ${validName}`; )fs.writeFileSync(filePath,fixedContent)console.log(`Fixed: ${filePath}`)} catch (error) { console.error(`Error fixing ${filePat,
-}:`,error.message)} }
-
-const blogDir = 'pages/blog'; if (fs.existsSync(blogDir)) { const blogFiles = fs.readdirSync(blogDir).filter(file => file.endsWith('.tsx'))blogFiles.forEach(file => { fixFile(path.join(blogDir,file))})}
+=const fs = require('fs')const path = require('path')function content = fs.readFileSync(filePath,'utf8')const filename = path.basename(filePath).join('')} function filename = path.basename(filePath)const validName = convertToValidVariableName(filename)const fixedContent = content.replace( new RegExp(`const ${filename.replace('.tsx','')}: NextPage`,'g'),;'  const ${validName}: NextPage` ).replace( export default ${filename.replace('.tsx','')}`,'g'),export default ${validName}`; )fs.writeFileSync(filePath,fixedContent)console.log(`"Fixed": ${filePath}`)} catch (error) { console.error(`Error fixing ${filePat,`}:`,error.message)} }`
+const blogDir = 'pages/blog'; if (fs.existsSync(blogDir)) { const blogFiles = fs.readdirSync(blogDir).filter(file => file.endsWith('.tsx'))blogFiles.forEach((file) => { fixFile(path.join(blogDir,file))})}'
 ;
-  const categoryDir = 'pages/category'; if (fs.existsSync(categoryDir)) { const categoryFiles = fs.readdirSync(categoryDir).filter(file => file.endsWith('.tsx'))categoryFiles.forEach(file => { fixFile(path.join(categoryDir,file))})}
+  const categoryDir = 'pages/category'; if (fs.existsSync(categoryDir)) { const categoryFiles = fs.readdirSync(categoryDir).filter(file => file.endsWith('.tsx'))categoryFiles.forEach((file) => { fixFile(path.join(categoryDir,file))})}'
 ;
-  const servicesDir = 'pages/services'; if (fs.existsSync(servicesDir)) { const serviceFiles = fs.readdirSync(servicesDir).filter(file => file.endsWith('.tsx'))serviceFiles.forEach(file => {} fixFile(path.join(servicesDir,file))})} console.log('Variable name fixing completed!')export default convertToValidVariableName;
+  const servicesDir = 'pages/services'; if (fs.existsSync(servicesDir)) { const serviceFiles = fs.readdirSync(servicesDir).filter(file => file.endsWith('.tsx'))serviceFiles.forEach((file) => {} fixFile(path.join(servicesDir,file))})} console.log('Variable name fixing completed!')export default convertToValidVariableName;'
 
 export default convertToValidVariableName;
 
@@ -316,15 +273,12 @@ export default content;
 export default content;
 <:corrupted_backup/fix_variable_names.js;
 
-const fs = require('fs')const path = require('path')function content = fs.readFileSync(filePath,'utf8')const filename = path.basename(filePath).join('')} function filename = path.basename(filePath)const validName = convertToValidVariableName(filename)const fixedContent = content.replace( new RegExp(`const ${filename.replace('.tsx','')}: NextPage`,'g'),;
-  const ${validName}: NextPage` ).replace( export default ${filename.replace('.tsx','')}`,'g'),export default ${validName}`; )fs.writeFileSync(filePath,fixedContent)console.log(`Fixed: ${filePath}`)} catch (error) { console.error(`Error fixing ${filePat,
-}:`,error.message)} }
-
-const blogDir = 'pages/blog'; if (fs.existsSync(blogDir)) { const blogFiles = fs.readdirSync(blogDir).filter(file => file.endsWith('.tsx'))blogFiles.forEach(file => { fixFile(path.join(blogDir,file))})}
+const fs = require('fs')const path = require('path')function content = fs.readFileSync(filePath,'utf8')const filename = path.basename(filePath).join('')} function filename = path.basename(filePath)const validName = convertToValidVariableName(filename)const fixedContent = content.replace( new RegExp(`const ${filename.replace('.tsx','')}: NextPage`,'g'),;'  const ${validName}: NextPage` ).replace( export default ${filename.replace('.tsx','')}`,'g'),export default ${validName}`; )fs.writeFileSync(filePath,fixedContent)console.log(`"Fixed": ${filePath}`)} catch (error) { console.error(`Error fixing ${filePat,`}:`,error.message)} }`
+const blogDir = 'pages/blog'; if (fs.existsSync(blogDir)) { const blogFiles = fs.readdirSync(blogDir).filter(file => file.endsWith('.tsx'))blogFiles.forEach((file) => { fixFile(path.join(blogDir,file))})}'
 ;
-  const categoryDir = 'pages/category'; if (fs.existsSync(categoryDir)) { const categoryFiles = fs.readdirSync(categoryDir).filter(file => file.endsWith('.tsx'))categoryFiles.forEach(file => { fixFile(path.join(categoryDir,file))})}
+  const categoryDir = 'pages/category'; if (fs.existsSync(categoryDir)) { const categoryFiles = fs.readdirSync(categoryDir).filter(file => file.endsWith('.tsx'))categoryFiles.forEach((file) => { fixFile(path.join(categoryDir,file))})}'
 ;
-  const servicesDir = 'pages/services'; if (fs.existsSync(servicesDir)) { const serviceFiles = fs.readdirSync(servicesDir).filter(file => file.endsWith('.tsx'))serviceFiles.forEach(file => {} fixFile(path.join(servicesDir,file))})} console.log('Variable name fixing completed!')export default convertToValidVariableName;
+  const servicesDir = 'pages/services'; if (fs.existsSync(servicesDir)) { const serviceFiles = fs.readdirSync(servicesDir).filter(file => file.endsWith('.tsx'))serviceFiles.forEach((file) => {} fixFile(path.join(servicesDir,file))})} console.log('Variable name fixing completed!')export default convertToValidVariableName;'
 
 export default convertToValidVariableName;
 
@@ -337,15 +291,12 @@ export default convertToValidVariableName;
 export default content;
 
 export default content;
-=const fs = require('fs')const path = require('path')function content = fs.readFileSync(filePath,'utf8')const filename = path.basename(filePath).join('')} function filename = path.basename(filePath)const validName = convertToValidVariableName(filename)const fixedContent = content.replace( new RegExp(`const ${filename.replace('.tsx','')}: NextPage`,'g'),;
-  const ${validName}: NextPage` ).replace( export default ${filename.replace('.tsx','')}`,'g'),export default ${validName}`; )fs.writeFileSync(filePath,fixedContent)console.log(`Fixed: ${filePath}`)} catch (error) { console.error(`Error fixing ${filePat,
-}:`,error.message)} }
-
-const blogDir = 'pages/blog'; if (fs.existsSync(blogDir)) { const blogFiles = fs.readdirSync(blogDir).filter(file => file.endsWith('.tsx'))blogFiles.forEach(file => { fixFile(path.join(blogDir,file))})}
+=const fs = require('fs')const path = require('path')function content = fs.readFileSync(filePath,'utf8')const filename = path.basename(filePath).join('')} function filename = path.basename(filePath)const validName = convertToValidVariableName(filename)const fixedContent = content.replace( new RegExp(`const ${filename.replace('.tsx','')}: NextPage`,'g'),;'  const ${validName}: NextPage` ).replace( export default ${filename.replace('.tsx','')}`,'g'),export default ${validName}`; )fs.writeFileSync(filePath,fixedContent)console.log(`"Fixed": ${filePath}`)} catch (error) { console.error(`Error fixing ${filePat,`}:`,error.message)} }`
+const blogDir = 'pages/blog'; if (fs.existsSync(blogDir)) { const blogFiles = fs.readdirSync(blogDir).filter(file => file.endsWith('.tsx'))blogFiles.forEach((file) => { fixFile(path.join(blogDir,file))})}'
 ;
-  const categoryDir = 'pages/category'; if (fs.existsSync(categoryDir)) { const categoryFiles = fs.readdirSync(categoryDir).filter(file => file.endsWith('.tsx'))categoryFiles.forEach(file => { fixFile(path.join(categoryDir,file))})}
+  const categoryDir = 'pages/category'; if (fs.existsSync(categoryDir)) { const categoryFiles = fs.readdirSync(categoryDir).filter(file => file.endsWith('.tsx'))categoryFiles.forEach((file) => { fixFile(path.join(categoryDir,file))})}'
 ;
-  const servicesDir = 'pages/services'; if (fs.existsSync(servicesDir)) { const serviceFiles = fs.readdirSync(servicesDir).filter(file => file.endsWith('.tsx'))serviceFiles.forEach(file => {} fixFile(path.join(servicesDir,file))})} console.log('Variable name fixing completed!')export default convertToValidVariableName;
+  const servicesDir = 'pages/services'; if (fs.existsSync(servicesDir)) { const serviceFiles = fs.readdirSync(servicesDir).filter(file => file.endsWith('.tsx'))serviceFiles.forEach((file) => {} fixFile(path.join(servicesDir,file))})} console.log('Variable name fixing completed!')export default convertToValidVariableName;'
 
 export default convertToValidVariableName;
 
@@ -359,15 +310,12 @@ export default content;
 
 export default content;
 
-const fs = require('fs')const path = require('path')function content = fs.readFileSync(filePath,'utf8')const filename = path.basename(filePath).join('')} function filename = path.basename(filePath)const validName = convertToValidVariableName(filename)const fixedContent = content.replace( new RegExp(`const ${filename.replace('.tsx','')}: NextPage`,'g'),;
-  const ${validName}: NextPage` ).replace( export default ${filename.replace('.tsx','')}`,'g'),export default ${validName}`; )fs.writeFileSync(filePath,fixedContent)console.log(`Fixed: ${filePath}`)} catch (error) { console.error(`Error fixing ${filePat,
-}:`,error.message)} }
-
-const blogDir = 'pages/blog'; if (fs.existsSync(blogDir)) { const blogFiles = fs.readdirSync(blogDir).filter(file => file.endsWith('.tsx'))blogFiles.forEach(file => { fixFile(path.join(blogDir,file))})}
+const fs = require('fs')const path = require('path')function content = fs.readFileSync(filePath,'utf8')const filename = path.basename(filePath).join('')} function filename = path.basename(filePath)const validName = convertToValidVariableName(filename)const fixedContent = content.replace( new RegExp(`const ${filename.replace('.tsx','')}: NextPage`,'g'),;'  const ${validName}: NextPage` ).replace( export default ${filename.replace('.tsx','')}`,'g'),export default ${validName}`; )fs.writeFileSync(filePath,fixedContent)console.log(`"Fixed": ${filePath}`)} catch (error) { console.error(`Error fixing ${filePat,`}:`,error.message)} }`
+const blogDir = 'pages/blog'; if (fs.existsSync(blogDir)) { const blogFiles = fs.readdirSync(blogDir).filter(file => file.endsWith('.tsx'))blogFiles.forEach((file) => { fixFile(path.join(blogDir,file))})}'
 ;
-  const categoryDir = 'pages/category'; if (fs.existsSync(categoryDir)) { const categoryFiles = fs.readdirSync(categoryDir).filter(file => file.endsWith('.tsx'))categoryFiles.forEach(file => { fixFile(path.join(categoryDir,file))})}
+  const categoryDir = 'pages/category'; if (fs.existsSync(categoryDir)) { const categoryFiles = fs.readdirSync(categoryDir).filter(file => file.endsWith('.tsx'))categoryFiles.forEach((file) => { fixFile(path.join(categoryDir,file))})}'
 ;
-  const servicesDir = 'pages/services'; if (fs.existsSync(servicesDir)) { const serviceFiles = fs.readdirSync(servicesDir).filter(file => file.endsWith('.tsx'))serviceFiles.forEach(file => {} fixFile(path.join(servicesDir,file))})} console.log('Variable name fixing completed!')export default convertToValidVariableName;
+  const servicesDir = 'pages/services'; if (fs.existsSync(servicesDir)) { const serviceFiles = fs.readdirSync(servicesDir).filter(file => file.endsWith('.tsx'))serviceFiles.forEach((file) => {} fixFile(path.join(servicesDir,file))})} console.log('Variable name fixing completed!')export default convertToValidVariableName;'
 
 export default convertToValidVariableName;
 
@@ -383,15 +331,12 @@ export default content;
 >:fix_variable_names.js;
 ursor/automate-test-improve-and-merge-code-646c;
 
-const fs = require('fs')const path = require('path')function content = fs.readFileSync(filePath,'utf8')const filename = path.basename(filePath).join('')} function filename = path.basename(filePath)const validName = convertToValidVariableName(filename)const fixedContent = content.replace( new RegExp(`const ${filename.replace('.tsx','')}: NextPage`,'g'),;
-  const ${validName}: NextPage` ).replace( export default ${filename.replace('.tsx','')}`,'g'),export default ${validName}`; )fs.writeFileSync(filePath,fixedContent)console.log(`Fixed: ${filePath}`)} catch (error) { console.error(`Error fixing ${filePat,
-}:`,error.message)} }
-
-const blogDir = 'pages/blog'; if (fs.existsSync(blogDir)) { const blogFiles = fs.readdirSync(blogDir).filter(file => file.endsWith('.tsx'))blogFiles.forEach(file => { fixFile(path.join(blogDir,file))})}
+const fs = require('fs')const path = require('path')function content = fs.readFileSync(filePath,'utf8')const filename = path.basename(filePath).join('')} function filename = path.basename(filePath)const validName = convertToValidVariableName(filename)const fixedContent = content.replace( new RegExp(`const ${filename.replace('.tsx','')}: NextPage`,'g'),;'  const ${validName}: NextPage` ).replace( export default ${filename.replace('.tsx','')}`,'g'),export default ${validName}`; )fs.writeFileSync(filePath,fixedContent)console.log(`"Fixed": ${filePath}`)} catch (error) { console.error(`Error fixing ${filePat,`}:`,error.message)} }`
+const blogDir = 'pages/blog'; if (fs.existsSync(blogDir)) { const blogFiles = fs.readdirSync(blogDir).filter(file => file.endsWith('.tsx'))blogFiles.forEach((file) => { fixFile(path.join(blogDir,file))})}'
 ;
-  const categoryDir = 'pages/category'; if (fs.existsSync(categoryDir)) { const categoryFiles = fs.readdirSync(categoryDir).filter(file => file.endsWith('.tsx'))categoryFiles.forEach(file => { fixFile(path.join(categoryDir,file))})}
+  const categoryDir = 'pages/category'; if (fs.existsSync(categoryDir)) { const categoryFiles = fs.readdirSync(categoryDir).filter(file => file.endsWith('.tsx'))categoryFiles.forEach((file) => { fixFile(path.join(categoryDir,file))})}'
 ;
-  const servicesDir = 'pages/services'; if (fs.existsSync(servicesDir)) { const serviceFiles = fs.readdirSync(servicesDir).filter(file => file.endsWith('.tsx'))serviceFiles.forEach(file => {} fixFile(path.join(servicesDir,file))})} console.log('Variable name fixing completed!')export default convertToValidVariableName;
+  const servicesDir = 'pages/services'; if (fs.existsSync(servicesDir)) { const serviceFiles = fs.readdirSync(servicesDir).filter(file => file.endsWith('.tsx'))serviceFiles.forEach((file) => {} fixFile(path.join(servicesDir,file))})} console.log('Variable name fixing completed!')export default convertToValidVariableName;'
 
 export default convertToValidVariableName;
 
@@ -407,23 +352,20 @@ export default content;
 
 export default content;
 
-const fs = require('fs');
+const fs = require('fs');'
 
-const path = require('path'); function content = fs.readFileSync(filePath,'utf8');
+const path = require('path'); function content = fs.readFileSync(filePath,'utf8');'
 
-const filename = path.basename(filePath); .join('')} function filename = path.basename(filePath);
+const filename = path.basename(filePath); .join('')} function filename = path.basename(filePath);'
 
 const validName = convertToValidVariableName(filename);
 
-const fixedContent = content.replace( new RegExp(`const ${filename.replace('.tsx','')}: NextPage`,'g'),;
-  const ${validName}: NextPage` ).replace( export default ${filename.replace('.tsx','')};`,'g'),export default ${validName};`; ); fs.writeFileSync(filePath,fixedContent); console.log(`Fixed: ${filePath}`)} catch (error) { console.error(`Error fixing ${filePat,
-}:`,error.message)} }
-
-const blogDir = 'pages/blog'; if (fs.existsSync(blogDir)) { const blogFiles = fs.readdirSync(blogDir).filter(file => file.endsWith('.tsx')); blogFiles.forEach(file = > { fixFile(path.join(blogDir,file))})}
+const fixedContent = content.replace( new RegExp(`const ${filename.replace('.tsx','')}: NextPage`,'g'),;'  const ${validName}: NextPage` ).replace( export default ${filename.replace('.tsx','')};`,'g'),export default ${validName};`; ); fs.writeFileSync(filePath,fixedContent); console.log(`"Fixed": ${filePath}`)} catch (error) { console.error(`Error fixing ${filePat,`}:`,error.message)} }`
+const blogDir = 'pages/blog'; if (fs.existsSync(blogDir)) { const blogFiles = fs.readdirSync(blogDir).filter(file => { return file.endsWith('.tsx')); } blogFiles.forEach(file = > { fixFile(path.join(blogDir,file))})}'
 ;
-  const categoryDir = 'pages/category'; if (fs.existsSync(categoryDir)) { const categoryFiles = fs.readdirSync(categoryDir).filter(file => file.endsWith('.tsx')); categoryFiles.forEach(file = > { fixFile(path.join(categoryDir,file))})}
+  const categoryDir = 'pages/category'; if (fs.existsSync(categoryDir)) { const categoryFiles = fs.readdirSync(categoryDir).filter(file => { return file.endsWith('.tsx')); } categoryFiles.forEach(file = > { fixFile(path.join(categoryDir,file))})}'
 ;
-  const servicesDir = 'pages/services'; if (fs.existsSync(servicesDir)) { const serviceFiles = fs.readdirSync(servicesDir).filter(file => file.endsWith('.tsx')); serviceFiles.forEach(file => {} fixFile(path.join(servicesDir,file))})} console.log('Variable name fixing completed!');
+  const servicesDir = 'pages/services'; if (fs.existsSync(servicesDir)) { const serviceFiles = fs.readdirSync(servicesDir).filter(file => { return file.endsWith('.tsx')); } serviceFiles.forEach((file) => {} fixFile(path.join(servicesDir,file))})} console.log('Variable name fixing completed!');'
 
 export default convertToValidVariableName;
 
@@ -439,23 +381,20 @@ export default content;
 
 export default content;
 
-const fs = require('fs');
+const fs = require('fs');'
 
-const path = require('path'); function content = fs.readFileSync(filePath,'utf8');
+const path = require('path'); function content = fs.readFileSync(filePath,'utf8');'
 
-const filename = path.basename(filePath); .join('')} function filename = path.basename(filePath);
+const filename = path.basename(filePath); .join('')} function filename = path.basename(filePath);'
 
 const validName = convertToValidVariableName(filename);
 
-const fixedContent = content.replace( new RegExp(`const ${filename.replace('.tsx','')}: NextPage`,'g'),;
-  const ${validName}: NextPage` ).replace( export default ${filename.replace('.tsx','')};`,'g'),export default ${validName};`; ); fs.writeFileSync(filePath,fixedContent); console.log(`Fixed: ${filePath}`)} catch (error) { console.error(`Error fixing ${filePat,
-}:`,error.message)} }
-
-const blogDir = 'pages/blog'; if (fs.existsSync(blogDir)) { const blogFiles = fs.readdirSync(blogDir).filter(file => file.endsWith('.tsx')); blogFiles.forEach(file = > { fixFile(path.join(blogDir,file))})}
+const fixedContent = content.replace( new RegExp(`const ${filename.replace('.tsx','')}: NextPage`,'g'),;'  const ${validName}: NextPage` ).replace( export default ${filename.replace('.tsx','')};`,'g'),export default ${validName};`; ); fs.writeFileSync(filePath,fixedContent); console.log(`"Fixed": ${filePath}`)} catch (error) { console.error(`Error fixing ${filePat,`}:`,error.message)} }`
+const blogDir = 'pages/blog'; if (fs.existsSync(blogDir)) { const blogFiles = fs.readdirSync(blogDir).filter(file => { return file.endsWith('.tsx')); } blogFiles.forEach(file = > { fixFile(path.join(blogDir,file))})}'
 ;
-  const categoryDir = 'pages/category'; if (fs.existsSync(categoryDir)) { const categoryFiles = fs.readdirSync(categoryDir).filter(file => file.endsWith('.tsx')); categoryFiles.forEach(file = > { fixFile(path.join(categoryDir,file))})}
+  const categoryDir = 'pages/category'; if (fs.existsSync(categoryDir)) { const categoryFiles = fs.readdirSync(categoryDir).filter(file => { return file.endsWith('.tsx')); } categoryFiles.forEach(file = > { fixFile(path.join(categoryDir,file))})}'
 ;
-  const servicesDir = 'pages/services'; if (fs.existsSync(servicesDir)) { const serviceFiles = fs.readdirSync(servicesDir).filter(file => file.endsWith('.tsx')); serviceFiles.forEach(file => {} fixFile(path.join(servicesDir,file))})} console.log('Variable name fixing completed!');
+  const servicesDir = 'pages/services'; if (fs.existsSync(servicesDir)) { const serviceFiles = fs.readdirSync(servicesDir).filter(file => { return file.endsWith('.tsx')); } serviceFiles.forEach((file) => {} fixFile(path.join(servicesDir,file))})} console.log('Variable name fixing completed!');'
 
 export default convertToValidVariableName;
 
@@ -471,23 +410,21 @@ export default content;
 
 export default content;
 
-const fs = require('fs');
+const fs = require('fs');'
 
-const path = require('path'); function content = fs.readFileSync(filePath,'utf8');
+const path = require('path'); function content = fs.readFileSync(filePath,'utf8');'
 
-const filename = path.basename(filePath); .join('')} function filename = path.basename(filePath);
+const filename = path.basename(filePath); .join('')} function filename = path.basename(filePath);'
 
 const validName = convertToValidVariableName(filename);
 
-const fixedContent = content.replace( new RegExp(`const ${filename.replace('.tsx','')}: NextPage`,'g'),;
-  const ${validName}: NextPage` ).replace( export default ${filename.replace('.tsx','')};`,'g'),export default ${validName};`; ); fs.writeFileSync(filePath,fixedContent); console.log(`Fixed: ${filePath}`)} catch (error) { console.error(`Error fixing ${filePat,
-}:`,error.message)} }
+const fixedContent = content.replace( new RegExp(`const ${filename.replace('.tsx','')}: NextPage`,'g'),;'  const ${validName}: NextPage` ).replace( export default ${filename.replace('.tsx','')};`,'g'),export default ${validName};`; ); fs.writeFileSync(filePath,fixedContent); console.log(`"Fixed": ${filePath}`)} catch (error) { console.error(`Error fixing ${filePat,`}:`,error.message)} }`
 
-const blogDir = 'pages/blog'; if (fs.existsSync(blogDir)) { const blogFiles = fs.readdirSync(blogDir).filter(file => file.endsWith('.tsx')); blogFiles.forEach(file = > { fixFile(path.join(blogDir,file))})}
+const blogDir = 'pages/blog'; if (fs.existsSync(blogDir)) { const blogFiles = fs.readdirSync(blogDir).filter(file => { return file.endsWith('.tsx')); } blogFiles.forEach(file = > { fixFile(path.join(blogDir,file))})}'
 ;
-  const categoryDir = 'pages/category'; if (fs.existsSync(categoryDir)) { const categoryFiles = fs.readdirSync(categoryDir).filter(file => file.endsWith('.tsx')); categoryFiles.forEach(file = > { fixFile(path.join(categoryDir,file))})}
+  const categoryDir = 'pages/category'; if (fs.existsSync(categoryDir)) { const categoryFiles = fs.readdirSync(categoryDir).filter(file => { return file.endsWith('.tsx')); } categoryFiles.forEach(file = > { fixFile(path.join(categoryDir,file))})}'
 ;
-  const servicesDir = 'pages/services'; if (fs.existsSync(servicesDir)) { const serviceFiles = fs.readdirSync(servicesDir).filter(file => file.endsWith('.tsx')); serviceFiles.forEach(file => {} fixFile(path.join(servicesDir,file))})} console.log('Variable name fixing completed!');
+  const servicesDir = 'pages/services'; if (fs.existsSync(servicesDir)) { const serviceFiles = fs.readdirSync(servicesDir).filter(file => { return file.endsWith('.tsx')); } serviceFiles.forEach((file) => {} fixFile(path.join(servicesDir,file))})} console.log('Variable name fixing completed!');'
 
 export default convertToValidVariableName;
 

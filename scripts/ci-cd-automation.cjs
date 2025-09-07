@@ -20,7 +20,7 @@ class CICDAutomation {}
   log(message, type = 'info') {}
     const timestamp = new Date().toISOString(;);
 
-    const logMessage = `[${timestamp}] [${type.toUpperCase()}] ${message};;`
+const logMessage = `[${timestamp}] [${type.toUpperCase()}] ${message};;`;
     console.log(logMessage);
     
     this.report.steps.push({})
@@ -31,7 +31,7 @@ class CICDAutomation {}
   async runCommand(command, description) {}
     try {}
       this.log(`"Starting": ${description}`);
-      const output = execSync(command, { })
+const output = execSync(command, { });
         "encoding": 'utf8', 
         "cwd": '/workspace',
         "stdio": 'pipe'

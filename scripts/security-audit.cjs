@@ -3,7 +3,7 @@ const fs = require('fs');
 
 console.log('🔒 Security Audit Starting...');
 
-const securityChecks = [
+const securityChecks = [;
   {
     name: 'NPM audit check',
     check: () => {

@@ -1,24 +1,34 @@
  interface CommunityVerifiedBadgeProps {
-  endorsementCount: number;
+  }
+  "endorsementCount": number;
    threshold?: number;
    className?: string
 }
 
-const CommunityVerifiedBadge: React.FC < CommunityVerifiedBadgeProps> = ({ endorsementCount, threshold = 3, className = '    }) => {
+const "CommunityVerifiedBadge": React.FC < CommunityVerifiedBadgeProps> = ({ endorsementCount, threshold = 3, className = '    }) => {'
+
+
+ }
 
 
  if (endorsementCount < threshold) {;
-  return null';'";'";
+  }
+  return null';'";'";"
 
 interface CommunityVerifiedBadgeProps {
-  endorsementCount: number;
+  }
+  "endorsementCount": number;
    threshold?: number;
    className?: string;
 
 }
 
-const CommunityVerifiedBadge: React.FC < CommunityVerifiedBadgeProps> = ({ endorsementCount, threshold = 3, className = '    }) => {
+const "CommunityVerifiedBadge": React.FC < CommunityVerifiedBadgeProps> = ({ endorsementCount, threshold = 3, className = '    }) => {'
+
+
+ }
 
 
  if (endorsementCount < threshold) {;
+  }
   return null';'"'";

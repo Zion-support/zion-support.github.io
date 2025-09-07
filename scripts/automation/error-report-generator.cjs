@@ -43,7 +43,7 @@ class ErrorReportGenerator {}
     try {}
   // TypeScript check;
       try {}
-  const typeCheckResult = execSync(npx tsc --noEmit --pretty false 2>&1",)
+const typeCheckResult = execSync(npx tsc --noEmit --pretty false 2>&1",);
           {}
   "encoding": "utf8"};
         );
@@ -60,7 +60,7 @@ class ErrorReportGenerator {}
 ;
       // ESLint check;
       try {}
-  const lintResult = execSync("npx eslint . 2>&1", {})
+const lintResult = execSync("npx eslint . 2>&1", {});
   "encoding": "utf8"}
 });
         report.projectStatus.eslint = {}
@@ -91,7 +91,7 @@ class ErrorReportGenerator {}
       report.recommendations = this.generateRecommendations(report);
       // Save report;
       const timestamp = Date.now();
-      const reportPath = path.join(;)
+const reportPath = path.join(;);
         this.projectRoot,error-reports", `comprehensive-error-report-${timestamp}.json`} catch (error) {`}
   report.projectStatus.eslint = {}
   "status": "error",
@@ -117,7 +117,7 @@ class ErrorReportGenerator {}
 
       // Save report;
       const timestamp = Date.now();
-      const reportPath = path.join(;)
+const reportPath = path.join(;);
         this.projectRoot,error-reports", `comprehensive-error-report-${timestamp}.json`;`
       );
 

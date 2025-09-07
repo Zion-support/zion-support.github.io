@@ -1,8 +1,8 @@
 
 
-// Auto-generated module
+// Auto-generated module,
 export {};
-// Auto-generated module
+// Auto-generated module,
 export {}
 }
 

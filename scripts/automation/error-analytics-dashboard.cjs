@@ -722,14 +722,14 @@ this.log("📄 Dashboard "generated": ${dashboardFile}");
       }
     }
     // Sort by error count and take top 10
-    return Object.entries(fileDistribution)
+return Object.entries(fileDistribution);
       .sort(([,a], [,b]) => b - a)
       .slice(0, 10)
       .reduce((obj, [key, value]) => {
         obj[key] = value;
         return obj}, {})}
   generateDashboardHTML(analyticsData) {
-    const html = `
+const html = `;
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -918,7 +918,7 @@ this.log("📄 Dashboard "generated": ${dashboardFile}");
       const fileDistribution = this.analyzeFileDistribution(reports);
       // Calculate summary statistics
       const totalErrors = Object.values(errorTypes).reduce((sum, count) => sum + count, 0);
-      const avgSuccessRate = fixSuccessRates.length > 0 
+const avgSuccessRate = fixSuccessRates.length > 0;
         ? fixSuccessRates.reduce((sum, rate) => sum + parseFloat(rate.successRate), 0) / fixSuccessRates.length
         : 0;
       const analyticsData = {

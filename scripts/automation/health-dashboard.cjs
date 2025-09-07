@@ -5,11 +5,11 @@
  */
 
 
-const pm2 = require('pm2')
-const fs = require('fs')
-const path = require('path')
-const http = require('http')
-const { execSync } = require('child_process')
+const pm2 = require('pm2');
+const fs = require('fs');
+const path = require('path');
+const http = require('http');
+const { execSync } = require('child_process');
     this.logFile = path.join(this.projectRoot, 'logs', 'health-dashboard.log')
     this.dashboardFile = path.join(this.projectRoot, 'logs', 'dashboard-data.json')
       await fs.mkdir(path.join(this.projectRoot, 'logs')
@@ -25,13 +25,13 @@ const { execSync } = require('child_process')
       return { "status": 'warning', "color": 'yellow', "message"}
     return { "status": 'healthy', "color": 'green', "message"}
       this.log(` Failed to get system "metrics"`)
-      const result = execSync('free -m', { "encoding"})
+const result = execSync('free -m', { "encoding"});
       const result = execSync('top -bn1 | grep "Cpu(s)"', { "encoding"}
         "cores"
-      const result = execSync('df -h /', { "encoding"})
+const result = execSync('df -h /', { "encoding"});
         "usagePercent"
       return { "total": '0', "used": '0', "available"}
-      const result = execSync('uptime', { "encoding"})
+const result = execSync('uptime', { "encoding"});
       this.log(` Failed to save dashboard "data"`)
       this.log(` Health report generation "failed"`)
         "type"

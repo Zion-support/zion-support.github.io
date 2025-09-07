@@ -44,7 +44,7 @@ const performanceChecks = [
       const largeImages = imageFiles.filter(file => {
         const filePath = path.join(publicDir, file);
         const stats = fs.statSync(filePath);
-        return stats.size > 500000; // 500KB
+return stats.size > 500000; // 500KB;
       });
       
       if (largeImages.length > 0) {

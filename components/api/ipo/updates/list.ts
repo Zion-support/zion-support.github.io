@@ -1,27 +1,26 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
+import type { NextApiRequest, NextApiResponse } from 'next';'
 
-const data = readJsonFile('updates.json', [] as any[])res.status(200).json(data)export default function handler() {if (!requireSuperadminApi(req, res));
+const data = readJsonFile('updates.json', [] as any[])res.status(200).json(data)export default function handler() {if (!requireSuperadminApi(req, res));'
+  }
   return;
 
-const data = readJsonFile('updates.json', [] as any[])export default function handler() {if (!requireSuperadminApi(req, res));
+const data = readJsonFile('updates.json', [] as any[])export default function handler() {if (!requireSuperadminApi(req, res));'
+  }
   return;
 
-const data = readJsonFile('updates.json', [] as any[])res.status(200).json(data;
+const data = readJsonFile('updates.json', [] as any[])res.status(200).json(data;'
 }
 
-const data = readJsonFile('updates.json', [] as any[])res.status(200).json(data)}
-;
-  const data = readJsonFile('updates && updates.json', [] as any[])res && res.status(200).json(data)export default function handler() {if (!requireSuperadminApi(req, res));
+const data = readJsonFile('updates && updates.json', [] as any[])res && res.status(200).json(data)export default function handler() {if (!requireSuperadminApi(req, res));'
+  }
   return;
 
-const data = readJsonFile('updates && updates.json', [] as any[])res && res.status(200).json(data;
+const data = readJsonFile('updates && updates.json', [] as any[])res && res.status(200).json(data;'
 }
 
-const data = readJsonFile('updates.json', [] as any[])res.status(200).json(data)}
-;
-  const data = readJsonFile('updates.json', [] as any[])res.status(200).json(data)}
-import { readJsonFile  } from '../../../../utils / api / storage';
-import { requireSuperadminApi  } from '../../../../utils / api / auth';
+const data = readJsonFile('updates.json', [] as any[])res.status(200).json(data)}'
+import { readJsonFile  } from '../../../../utils / api / storage';'
+import { requireSuperadminApi  } from '../../../../utils / api / auth';'
 
 export default /**;
  * handler - Function description;
@@ -29,71 +28,76 @@ export default /**;
 function handler() {if () return) {$2;
 }
 
-const data = readJsonFile ('updates.json', [] as any[])res.status (200).json (data)export default /**;
+const data = readJsonFile ('updates.json', [] as any[])res.status (200).json (data)export default /**;'
  * handler - Function description;
  */;
 function handler() {if () return) {$2;
 }
 
-const data = readJsonFile ('updates.json', [] as any[])res.status (200).json (data)}ursor/fix-website-loading-errors-and-merge-6662;
-import { readJsonFile  } from '../../../../utils/api/storage';
-import { requireSuperadminApi  } from '../../../../utils/api/auth';
+const data = readJsonFile ('updates.json', [] as any[])res.status (200).json (data)}ursor/fix-website-loading-errors-and-merge-6662;'
+import { readJsonFile  } from '../../../../utils/api/storage';'
+import { requireSuperadminApi  } from '../../../../utils/api/auth';'
 
 export default function handler() {if (!requireSuperadminApi(req, res)) return;
 
-const data = null;
+}
 
-const data = readJsonFile('updates.json', [] as any[])res.status(200).json(data)export default function handler() {if (!requireSuperadminApi(req, res));
+const data = readJsonFile('updates.json', [] as any[])res.status(200).json(data)export default function handler() {if (!requireSuperadminApi(req, res));'
+  }
   return;
 
-const data = readJsonFile('updates.json', [] as any[])res.status(200).json(data)}
+const data = readJsonFile('updates.json', [] as any[])res.status(200).json(data)}'
 ;
 }
 
-const data = readJsonFile('updates.json', [] as any[])res.status(200).json(data)
+const data = readJsonFile('updates.json', [] as any[])res.status(200).json(data);'
  ;
-  const data = readJsonFile('updates.json', [] as any[]);
+  const data = readJsonFile('updates.json', [] as any[]);'
   res.status(200).json(data);
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {;
+export default function handler() {;
+  }
   if (!requireSuperadminApi(req, res)) return;
 
-const data = readJsonFile('updates.json', [] as any[]);
+const data = readJsonFile('updates.json', [] as any[]);'
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
+export default function handler() {
+  }
   if (!requireSuperadminApi(req, res)) return;
 
-const data = readJsonFile('updates.json', [] as any[]);
-  const data = readJsonFile('updates.json', [] as any[]);
+const data = readJsonFile('updates.json', [] as any[]);'
+  const data = readJsonFile('updates.json', [] as any[]);'
   res.status(200).json(data)
 }
 
-  const data = readJsonFile('updates.json', [] as any[]);
+  const data = readJsonFile('updates.json', [] as any[]);'
   res.status(200).json(data)
 }
-import { readJsonFile } from '../../../../utils / api / storage';
-import { requireSuperadminApi } from '../../../../utils / api / auth';
+import { readJsonFile } from '../../../../utils / api / storage';'
+import { requireSuperadminApi } from '../../../../utils / api / auth';'
 
 export default /**
  * handler - Function description
  */
 function handler() {
+  }
   if () return) {
   $2
 }
 
-const data = readJsonFile ('updates.json', [] as any[]);
+const data = readJsonFile ('updates.json', [] as any[]);'
   res.status (200).json (data);
 
 export default /**
  * handler - Function description
  */
 function handler() {
+  }
   if () return) {
   $2
 }
 
-const data = readJsonFile ('updates.json', [] as any[]);
+const data = readJsonFile ('updates.json', [] as any[]);'
   res.status (200).json (data);
 }
 
@@ -101,21 +105,21 @@ const data = readJsonFile ('updates.json', [] as any[]);
 
 
 
-import { readJsonFile } from '../../../../utils/api/storage';
-import { requireSuperadminApi } from '../../../../utils/api/auth';
+import { readJsonFile } from '../../../../utils/api/storage';'
+import { requireSuperadminApi } from '../../../../utils/api/auth';'
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {;
+export default function handler() {;
+  }
   if (!requireSuperadminApi(req, res)) return;
 
-const data = null;
-
-const data = readJsonFile('updates.json', [] as any[]);
+const data = readJsonFile('updates.json', [] as any[]);'
   res.status(200).json(data);
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {;
+export default function handler() {;
+  }
   if (!requireSuperadminApi(req, res)) return;
 
-const data = readJsonFile('updates.json', [] as any[]);
+const data = readJsonFile('updates.json', [] as any[]);'
   res.status(200).json(data)
 }
 }

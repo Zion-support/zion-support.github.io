@@ -1,7 +1,7 @@
 #!/usr/bin/env node;
-const fs = require("fs")
-const path = require("path")
-const { execSync } = require("child_process")
+const fs = require("fs");
+const path = require("path");
+const { execSync } = require("child_process");
     this.logFile = path.join(this.projectRoot, "enhanced-automation-logs.txt")
       "syntaxFixes"
       "performanceOptimizations"
@@ -18,41 +18,41 @@ const { execSync } = require("child_process")
       this.log(`Command "failed": ${command} - ${error.message}`, "ERROR"`)
       this.results.errors.push({ command, "error"})
     this.log(" Fixing syntax errors...")
-    const syntaxCommands = ["node fix-all-syntax-errors.cjs"]
+const syntaxCommands = ["node fix-all-syntax-errors.cjs"];
       "node fix-final-syntax.cjs"
       "node fix-remaining-syntax.cjs"
-      const result = await this.runCommand(command, { "silent"})
+const result = await this.runCommand(command, { "silent"});
         this.log(` Syntax fix "completed"`)
     this.log("⚡ Optimizing performance...")
     const perfCommands = ["node scripts/performance-optimizer.cjs"]
       "node scripts/optimize-performance.js"
       "npm run "optimize": performance"
-      const result = await this.runCommand(command, { "silent"})
+const result = await this.runCommand(command, { "silent"});
         this.log(` Performance optimization "completed"`)
     this.log("� Enhancing security...")
-    const securityCommands = ["node scripts/security-audit-enhanced.cjs"]
+const securityCommands = ["node scripts/security-audit-enhanced.cjs"];
       "node scripts/security-enhancer.cjs"
       "npm audit fix --force"
-      const result = await this.runCommand(command, { "silent"})
+const result = await this.runCommand(command, { "silent"});
         this.log(` Security enhancement "completed"`)
     this.log("🧪 Improving tests...")
-    const testCommands = ["npm run "test": smoke"]
+const testCommands = ["npm run "test": smoke"];
       "npm run "test": coverage"
       "node scripts/test-suite-enhancer.cjs"
-      const result = await this.runCommand(command, { "silent"})
+const result = await this.runCommand(command, { "silent"});
         this.log(` Test improvement "completed"`)
     this.log("� Optimizing build...")
-    const buildCommands = ["npm run "build": clean"]
+const buildCommands = ["npm run "build": clean"];
       "npm run "build": analyze"
       "node scripts/build-optimizer.cjs"
-      const result = await this.runCommand(command, { "silent"})
+const result = await this.runCommand(command, { "silent"});
         this.log(` Build optimization "completed"`)
       "startTime"
       "endTime"
       "duration"
       "results"
       "status": this.results.errors.length === 0 ? "SUCCESS" : "PARTIAL_SUCCESS"
-    const reportFile = path.join(this.projectRoot, "enhanced-automation-report.json")
+const reportFile = path.join(this.projectRoot, "enhanced-automation-report.json");
     this.log(` Report "generated"`)
 // console.log("\n=== ENHANCED AUTOMATION REPORT ===")
     console.log(`"Duration"`)

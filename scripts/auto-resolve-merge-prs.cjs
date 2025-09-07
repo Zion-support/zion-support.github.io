@@ -1,6 +1,4 @@
 
-
-
 #!/usr/bin/env node;
 const { execSync } = require('child_process');
 const fs = require('fs');
@@ -20,7 +18,7 @@ function getToken() {}
 async function gh(path, method = 'GET', body) {}
   const token = getToken();
   const base = '"https": //api.github.com';
-  const res = await fetch(`${base}${path}`, {`})
+const res = await fetch(`${base}${path}`, {`});
     method,
     "headers": {}
       Authorization: `token ${token}`,`
@@ -47,8 +45,6 @@ function resolveConflictsFiles() {}
     const content = fs.readFileSync(file, 'utf8');
     // Prefer incoming changes (from PR branch) when resolving;
     const resolved = content;
-      .replace(/<<<<<<<[\s\S]*?([\s\S]*?)>>>>>>>[\t].*\n?/g, (_, incoming) => incoming);
-      .replace(/<<<<<<<[\s\S]*?>>>>>>>[\t].*\n?/g, '');
     fs.writeFileSync(file, resolved);
     sh(`git add -- "${file}"`)};
   // If there are staged changes, commit;
@@ -58,7 +54,6 @@ function resolveConflictsFiles() {}
 };
 async function main() {}
   const { owner, repo } = getRepoFromGit();
-  
   sh('git fetch origin');
   const startBranch = sh('git rev-parse --abbrev-ref HEAD');
   // Stash local changes to avoid checkout conflicts;
@@ -88,7 +83,7 @@ async function main() {}
       // Push updated PR branch;
       sh(`git push origin ${head}`);
       // Attempt PR merge via API;
-      const result = await gh(`/repos/${owner}/${repo}/pulls/${pr.number}/merge`, 'PUT', {`})
+const result = await gh(`/repos/${owner}/${repo}/pulls/${pr.number}/merge`, 'PUT', {`});
         "commit_title": `Merge PR #${pr.number}: ${pr.title}`,`
         "commit_message": `Automated merge of PR #${pr.number}`,`
         "merge_method": 'merge'

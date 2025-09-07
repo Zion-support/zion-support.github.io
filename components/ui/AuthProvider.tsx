@@ -1,36 +1,43 @@
 
 
-import React, { createContext, useContext, useEffect, useState } from 'react';
+import React, { createContext, useContext, useEffect, useState } from 'react';'
 
 type UserRole = any;
-  setRole: (role: UserRole) => void;
+  "setRole": ("role": UserRole) => void;
 }
 
 const AuthContext = createContext<AuthContextType>({
-  role: 'talent',
-  setRole: () => ,
-},
+  }
+  "role": 'talent','
+  "setRole": () => 
+}
 });
 
-export function AuthProvider({ children }: { children: React.ReactNode,
-}) {
-  const [role, setRoleState] = useState<UserRole>('talent');
+export function AuthProvider() {
+  }
+  const [role, setRoleState] = useState<UserRole>('talent');'
   useEffect(() => {
 
+    }
+
     try {
-      const stored = window.localStorage.getItem('userRole') as UserRole | null;
-      if (stored === 'talent' || stored === 'client') {
+      }
+      const stored = window.localStorage.getItem('userRole') as UserRole | null;'
+      if (stored === 'talent' || stored === 'client') {'
+}
 setRoleState(stored);
       }
     } catch {}
   }, []);
 
-const setRole = (r: UserRole) => {
+const setRole = ("r": UserRole) => {
+    }
     setRoleState(r);
 try {
-      window.localStorage.setItem('userRole', r);
+      }
+      window.localStorage.setItem('userRole', r);'
 
-      document.cookie = `userRole=${r}; path=/; max-age=${60 * 60 * 24 * 365}`;
+      document.cookie = `userRole=${r}; path=/; max-age=${60 * 60 * 24 * 365}`;`
 
     } catch {}
   }
@@ -41,5 +48,6 @@ try {
   );
 
 export function useAuth() {
+  }
   return useContext(AuthContext);
 

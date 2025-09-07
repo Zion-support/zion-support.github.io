@@ -59,7 +59,7 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})
   const [isTyping, setIsTyping] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const [showSettingsPanel, setShowSettingsPanel] = useState(false);
-  const [settings, setSettings] = useState({})
+const [settings, setSettings] = useState({});
     "voiceEnabled": false,
     "autoResponse": true,
     "language": 'en',
@@ -103,7 +103,7 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})
     // Simulate processing delay;
     await new Promise(resolve => setTimeout(resolve, 1000 + Math.random() * 2000));
     
-    const responses = [{}]
+const responses = [{}];
         "content": "I'd be happy to help you with that! Our team specializes in cutting-edge technology solutions.",
         "suggestions": ['Tell me more', 'Get a quote', 'View services', 'Contact us'],
         "relatedServices": ['AI Solutions', 'Cloud Services', 'Digital Transformation'];
@@ -182,7 +182,7 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})
   const toggleVoiceInput = useCallback(() => {}
     setIsListening(!isListening)}, [isListening]);
 
-  return ()
+return ();
     <>
       {/* Chat Toggle Button */};
       <button;

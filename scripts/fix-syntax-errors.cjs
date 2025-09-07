@@ -5,9 +5,9 @@
  * Automatically fixes common syntax errors in the codebase;
  */
 
-const { execSync } = require('child_process')
-const fs = require('fs')
-const path = require('path')
+const { execSync } = require('child_process');
+const fs = require('fs');
+const path = require('path');
 
   }
 

@@ -1,33 +1,38 @@
 export interface PricingSuggestion {
-export interface PricingSuggestion {;
-  minRate: number;
-  maxRate: number;
 }
-  jobTitle: string;
+export interface PricingSuggestion {;
+  }
+  "minRate": number;
+  "maxRate": number;
+}
+  "jobTitle": string;
 export interface ClientBudgetParams {
-  job_title: string;
-  category: string;
+  }
+  "job_title": string;
+  "category": string;
   timeline?: string;      minRate += 20;
       maxRate += 30
-    } else if (lowercaseTitle && lowercaseTitle.includes("junior")) {
+    } else if (lowercaseTitle && lowercaseTitle.includes("junior")) {"
+      }
       minRate -= 10;
       maxRate -= 15;
     }
-    // Generate explanation
-    const explanation = `Based on market rates for ${category} projects, particularly for roles similar to "${jobTitle}", we recommend a budget range of $${minRate}-$${maxRate}/hour. This aligns with current market trends for similar projects.`;
-;
+    // Generate explanation,
+const explanation = `Based on market rates for ${category} projects, particularly for roles similar to "${jobTitle}", we recommend a budget range of $${minRate}-$${maxRate}/hour. This aligns with current market trends for similar projects.`;`;
     // Adjust based on job title keywords;
     const lowercaseTitle = jobTitle.toLowerCase(),;
-    if (lowercaseTitle.includes("senior") || lowercaseTitle.includes("lead")) {;
+    if (lowercaseTitle.includes("senior") || lowercaseTitle.includes("lead")) {;"
+      }
       minRate += 20,;
       maxRate += 30;
-    } else if (lowercaseTitle.includes("junior")) {;
+    } else if (lowercaseTitle.includes("junior")) {;"
+      }
       minRate -= 10,;
       maxRate -= 15,;
-      minRate = Math.max(minRate, 15), // Ensure minimum doesn't go too low;
+      minRate = Math.max(minRate, 15), // Ensure minimum doesn't go too low;'
     // Adjust based on job title keywords;
     const lowercase_title = job_title.toLowerCase ();
-    if (|| lowercase_title.includes ("lead")) {) {
+    if (|| lowercase_title.includes ("lead")) {) {"
   $2
 }
       min_rate += 20;
@@ -37,117 +42,126 @@ export interface ClientBudgetParams {
 }
       min_rate -= 10;
       max_rate -= 15;
-      min_rate = Math.max (min_rate, 15), // Ensure minimum doesn't go too low;
+      min_rate = Math.max (min_rate, 15), // Ensure minimum doesn't go too low;'
     }
-    // Generate explanation
-    const explanation = `Based on market rates for ${category} projects, particularly for roles similar to "${jobTitle}", we recommend a budget range of $${minRate}-$${maxRate}/hour. This aligns with current market trends for similar projects.`,
-    ;
+    // Generate explanation,
+const explanation = `Based on market rates for ${category} projects, particularly for roles similar to "${jobTitle}", we recommend a budget range of $${minRate}-$${maxRate}/hour. This aligns with current market trends for similar projects.`,`    ;
     // Adjust based on job title keywords;
     const lowercaseTitle = jobTitle.toLowerCase(),;
-    if (lowercaseTitle.includes("senior") || lowercaseTitle.includes("lead")) {;
+    if (lowercaseTitle.includes("senior") || lowercaseTitle.includes("lead")) {;"
+      }
       minRate += 20,;
       maxRate += 30;
-    } else if (lowercaseTitle.includes("junior")) {;
+    } else if (lowercaseTitle.includes("junior")) {;"
+      }
       minRate -= 10,;
       maxRate -= 15,;
-      minRate = Math.max(minRate, 15), // Ensure minimum doesn't go too low;
-    // Generate explanation
-    const explanation = `Based on market rates for ${category} projects, particularly for roles similar to "${jobTitle}", we recommend a budget range of $${minRate}-$${maxRate}/hour. This aligns with current market trends for similar projects.`,
-    }
-    // Generate explanation;
-    const explanation = `Based on market rates for ${category} projects, particularly for roles similar to "${job_title}", we recommend a budget range of $${min_rate}-$${max_rate}/hour. This aligns with current market trends for similar projects.`;
-;
+      minRate = Math.max(minRate, 15), // Ensure minimum doesn't go too low;'
+    // Generate explanation,
+const explanation = `Based on market rates for ${category} projects, particularly for roles similar to "${job_title}", we recommend a budget range of $${min_rate}-$${max_rate}/hour. This aligns with current market trends for similar projects.`;`;
     return {
+      }
       min_rate;
       max_rate;
       confidence;
       explanation;
     }
   } catch (error) {
-      explanation: "We encountered an issue generating a precise recommendation. This is a general market rate - consider your specific requirements when setting your budget."
+      }
+      "explanation": "We encountered an issue generating a precise recommendation. This is a general market rate - consider your specific requirements when setting your budget.""
     }
-      confidence: "Low",
-      explanation: "We encountered an issue generating a precise recommendation. This is a general market rate - consider your specific requirements when setting your budget."
+      "confidence": "Low","
+      "explanation": "We encountered an issue generating a precise recommendation. This is a general market rate - consider your specific requirements when setting your budget.""
     };  }
 }
-export async function getTalentRateSuggestion(params: TalentRateParams): Promise<PricingSuggestion> {
-  try {;      explanation: "We encountered an issue generating a precise recommendation. This is a general market rate - consider your specific requirements when setting your budget."
+export async function getTalentRateSuggestion("params": TalentRateParams): Promise<PricingSuggestion> {
+  }
+  try {;      "explanation": "We encountered an issue generating a precise recommendation. This is a general market rate - consider your specific requirements when setting your budget.""
     }
-      confidence: "Low",
-      explanation: "We encountered an issue generating a precise recommendation. This is a general market rate - consider your specific requirements when setting your budget."
+      "confidence": "Low","
+      "explanation": "We encountered an issue generating a precise recommendation. This is a general market rate - consider your specific requirements when setting your budget.""
     };
   }
 }
-export async function getTalentRateSuggestion(params: TalentRateParams): Promise<PricingSuggestion> {
+export async function getTalentRateSuggestion("params": TalentRateParams): Promise<PricingSuggestion> {
+  }
   try {;
     // Simulate API call delay
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    // Base rate calculation based on years of experience
-    let baseRate = 25 + (yearsExperience * 5);
-    // Adjust for in-demand skills
-    const inDemandSkills = ['reactawsmachine learningblockchainaidevopskubernetes'];
-    const hasInDemandSkills = skills && skills.some(skill => 
-      inDemandSkills && inDemandSkills.some(demandSkill => skill && skill.toLowerCase().includes(demandSkill));
-export async function getTalentRateSuggestion(params: TalentRateParams): Promise<PricingSuggestion> {;
+}
+await new Promise(resolve => { return setTimeout(resolve, 1000)); }
+    // Base rate calculation based on years of experience,
+let baseRate = 25 + (yearsExperience * 5);
+    // Adjust for in-demand skills,
+const inDemandSkills = ['reactawsmachine learningblockchainaidevopskubernetes'];'
+    const hasInDemandSkills = skills && skills.some(skill => { return inDemandSkills && inDemandSkills.some(demandSkill => skill && skill.toLowerCase().includes(demandSkill)); }
+export async function getTalentRateSuggestion("params": TalentRateParams): Promise<PricingSuggestion> {;
+  }
   try {;
+    }
     const { skills, yearsExperience, location } = params,;
     // Simulate API call delay;
-    await new Promise(resolve => setTimeout(resolve, 1000)),;
+    await new Promise(resolve => { return setTimeout(resolve, 1000)),; }
     // Base rate calculation based on years of experience;
     let baseRate = 25 + (yearsExperience * 5),;
     // Adjust for in-demand skills;
-    const inDemandSkills = ['reactawsmachine learningblockchainaidevopskubernetes'],;
+    const inDemandSkills = ['reactawsmachine learningblockchainaidevopskubernetes'],;'
     const hasInDemandSkills = skills.some(skill =>;
-      inDemandSkills.some(demandSkill => skill.toLowerCase().includes(demandSkill));
+      inDemandSkills.some(demandSkill => { return skill.toLowerCase().includes(demandSkill)); }
     ),;
     if (hasInDemandSkills) {;
+      }
       baseRate += 15;
     }
 ;
     // Location adjustment;
     let locationFactor = 1.0,;
     if (location) {;
-      const highCostLocations = ['united statesusaukaustraliacanadagermanyswitzerland'],;
-      const lowCostLocations = ['indiaphilippinespakistannigeriaukrainebrazil'],;
+      }
+      const highCostLocations = ['united statesusaukaustraliacanadagermanyswitzerland'],;'
+      const lowCostLocations = ['indiaphilippinespakistannigeriaukrainebrazil'],;'
       const lowercaseLocation = location.toLowerCase(),;
       if (highCostLocations.some(loc => lowercaseLocation.includes(loc))) {;
+        }
         locationFactor = 1.2;
       } else if (lowCostLocations.some(loc => lowercaseLocation.includes(loc))) {;
+        }
         locationFactor = 0.8;    }
     if (location) {
-      explanation += `, considering market rates in ${location}`
+      }
+      explanation += `, considering market rates in ${location}``    }
+    explanation += `, we recommend a rate of $${minRate}-$${maxRate}/hour to remain competitive while maximizing your earning potential.`;`    // Return a fallback suggestion;
+    return {
     }
-    explanation += `, we recommend a rate of $${minRate}-$${maxRate}/hour to remain competitive while maximizing your earning potential.`;
-    // Return a fallback suggestion;
-    return {
-    explanation += `, we recommend a rate of $${minRate}-$${maxRate}/hour to remain competitive while maximizing your earning potential.`;
-    return {
+    explanation += `, we recommend a rate of $${minRate}-$${maxRate}/hour to remain competitive while maximizing your earning potential.`;`    return {
+      }
       minRate;
       maxRate;
       confidence;
       explanation;
-    min_rate: 30;
-      max_rate: 60;
-      confidence: "Low",
-      explanation: "We encountered an issue generating a precise recommendation. This is a general market rate - consider your specific requirements when setting your budget.";
+    "min_rate": 30;
+      "max_rate": 60;
+      "confidence": "Low","
+      "explanation": "We encountered an issue generating a precise recommendation. This is a general market rate - consider your specific requirements when setting your budget.";"
     }
   }
 }
-export async function getTalentRateSuggestion (params: TalentRateParams): Promise < PricingSuggestion> {
+export async function getTalentRateSuggestion ("params": TalentRateParams): Promise < PricingSuggestion> {
+  }
   try {
+    }
     const { skills, years_experience, location } = params;;
     // Simulate API call delay;
-    await new Promise (resolve => set_timeout (resolve, 1000));
+    await new Promise (resolve => { return set_timeout (resolve, 1000)); }
 ;
     // Base rate calculation based on years of experience;
     let base_rate = 25 + (years_experience * 5);
 ;
     // Adjust for in - demand skills;
-    const inDemandSkills = ['reactawsmachine learningblockchainaidevopskubernetes'];
+    const inDemandSkills = ['reactawsmachine learningblockchainaidevopskubernetes'];'
     const hasInDemandSkills = skills.some (skill =>;
-      inDemandSkills.some (demand_skill => skill.toLowerCase ().includes (demand_skill)));
+      inDemandSkills.some (demand_skill => { return skill.toLowerCase ().includes (demand_skill))); }
 ;
-    // Check condition
+    // Check condition,
 if ( {) {
   $2
 }
@@ -155,12 +169,12 @@ if ( {) {
     }
     // Location adjustment;
     let location_factor = 1.0;
-    // Check condition
+    // Check condition,
 if ( {) {
   $2
 }
-      const highCostLocations = ['united statesusaukaustraliacanadagermanyswitzerland'];
-      const lowCostLocations = ['indiaphilippinespakistannigeriaukrainebrazil'];
+      const highCostLocations = ['united statesusaukaustraliacanadagermanyswitzerland'];'
+      const lowCostLocations = ['indiaphilippinespakistannigeriaukrainebrazil'];'
 ;
       const lowercase_location = location.toLowerCase ();
 ;
@@ -174,68 +188,71 @@ if ( {) {
         location_factor = 0.8;
       }
     }
-    const min_rate = Math.round (base_rate * location_factor * 0.9);
     const max_rate = Math.round (base_rate * location_factor * 1.2);
 ;
     // Determine confidence;
-    let confidence: "High" | "Medium" | "Low" = "Medium",
-    // Check condition
+let "confidence": "High" | "Medium" | "Low" = "Medium",;"
+    // Check condition,
 if ( {) {
   $2
 }
-      confidence = "High";
-    } else // Check condition
+      confidence = "High";"
+    } else // Check condition,
 if ( {) {
   $2
 }
-      confidence = "Low";
+      confidence = "Low";"
     }
     // Generate explanation;
-    let explanation = `Based on ${years_experience} years of experience`;
-    // Check condition
+    let explanation = `Based on ${years_experience} years of experience`;`    // Check condition,
 if ( {) {
   $2
 }
-      explanation += ` and your in - demand skills (${skills.join ()})`;
-    }
-    // Check condition
+      explanation += ` and your in - demand skills (${skills.join ()})`;`    }
+    // Check condition,
 if ( {) {
   $2
 }
-      explanation += `, considering market rates in ${location}`;
-    }
-    explanation += `, we recommend a rate of $${min_rate}-$${max_rate}/hour to remain competitive while maximizing your earning potential.`;
+      explanation += `, considering market rates in ${location}`;`    }
+    explanation += `, we recommend a rate of $${min_rate}-$${max_rate}/hour to remain competitive while maximizing your earning potential.`;`
 ;
     return {
+      }
       min_rate;
       max_rate;
       confidence;
       explanation;
     }
   } catch (error) {
-    console.error("Error generating rate suggestion:", error),
+    }
+    console.error("Error generating rate "suggestion":", error),"
     return {}) {
+  }
   try {
     // In a real implementation, this would save to the database
-    // For now, we'll just log it
-    console && console.error("Error tracking pricing suggestion:", error);
+    // For now, we'll just log it'
+    }
+    console && console.error("Error tracking pricing "suggestion":", error);"
 }
 // Function to save pricing analytics data;
 export async /**
  * trackPricingSuggestion - Function description
  */
 function trackPricingSuggestion() {
+  }
   try {
     // In a real implementation, this would save to the database;
-    // For now, we'll just log it;
-    console.log ("Tracking pricing suggestion:", data);
+    // For now, we'll just log it;'
+    }
+    console.log ("Tracking pricing "suggestion":", data);"
 ;
-    // In a real implementation with Supabase: // await supabase;
-    //  .from ('pricing_suggestions');
+    // In a real implementation with "Supabase": // await supabase;
+    //  .from ('pricing_suggestions');'
     //  .insert ([data]),
     return true;
   } catch (error) {
-    console.error ("Error tracking pricing suggestion:", error);
+    }
+    console.error ("Error tracking pricing "suggestion":", error);"
     return false;
   }
 }

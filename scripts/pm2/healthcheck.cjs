@@ -1,12 +1,7 @@
-=======
-<<<<<<< HEAD
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 #!/usr/bin/env node;
 const fs = require('fs');
 const http = require('http');
-
 const distOk = fs.existsSync('dist/index.html');
-
 function pingPreview() {}
 	return new Promise((resolve) => {}
 		const req = http.request({ host: '127.0.0.1', port: 4173, path: '/', timeout: 2000 }, (res) => {}
@@ -20,7 +15,6 @@ function pingPreview() {}
 		console.error('Healthcheck failed');
 		process.exit(1)};
 	console.log('Healthy')})();
-<<<<<<< HEAD
     // Check disk space
     if (diskUsage.percentage) {
       const diskPercent = parseInt(diskUsage.percentage);
@@ -32,43 +26,35 @@ function pingPreview() {}
         issues.push('Disk space running low');
       }
     }
-
     // Check PM2 processes
     if (pm2Status.errored > 0) {
       score -= 20;
       issues.push(`${pm2Status.errored} PM2 processes errored`);
     }
-
     if (pm2Status.online === 0) {
       score -= 50;
       issues.push('No PM2 processes online');
     }
-
     // Check build status
     if (buildStatus.status === 'stale') {
       score -= 10;
       issues.push('Build is stale');
     }
-
     let status = 'healthy';
     if (score < 50) {
       status = 'critical';
     } else if (score < 80) {
       status = 'warning';
     }
-
     return {
       scor: e: Math.max(0, score),
       status,
-      issues,
-    };
+      issues};
   }
 }
-
 // Run health check
 async function main() {
   const healthChecker = new HealthChecker();
-
   try {
     await healthChecker.checkSystemHealth();
     process.exit(0);
@@ -77,11 +63,7 @@ async function main() {
     process.exit(1);
   }
 }
-
 if (require.main === module) {
   main();
 }
-
 module.exports = HealthChecker;
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b

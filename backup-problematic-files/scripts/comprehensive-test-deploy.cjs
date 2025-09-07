@@ -17,9 +17,9 @@ suite.runComprehensiveSuite().catch(console.error);
 
 
 #!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
-const { execSync } = require('child_process')
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
 // console.log(' Comprehensive Test & Deploy Suite')
 console.log('=')
   log(message, type = 'info')
@@ -44,7 +44,7 @@ console.log('=')
       { cmd: 'node scripts/seo-optimizer.cjs', desc: 'SEO optimization'}
       { cmd: 'node scripts/link-checker.cjs', desc: 'Link checking'}
     this.log(' Generating comprehensive reports...')
-    const reportPath = path.join(process.cwd(), 'comprehensive-reports', 'test-deploy-report.json'
+const reportPath = path.join(process.cwd(), 'comprehensive-reports', 'test-deploy-report.json';
       recommendations.push('Fix failing tests before deployment')
       recommendations.push('Fix build issues before deployment')
       recommendations.push('Address multiple errors before deployment')

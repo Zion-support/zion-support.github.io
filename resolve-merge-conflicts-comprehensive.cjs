@@ -10,7 +10,7 @@ function resolveMergeConflicts(filePath) {
     let content = fs.readFileSync(filePath, 'utf8');
     
     // Check if file has merge conflict markers
-      return false; // No conflicts in this file
+return false; // No conflicts in this file;
     }
     
     console.log(`Resolving conflicts in: ${filePath}`);
@@ -20,7 +20,7 @@ function resolveMergeConflicts(filePath) {
     const resolvedLines = [];
     let inConflict = false;
     let conflictBuffer = [];
-    let conflictType = null; // 'ours' or 'theirs'
+let conflictType = null; // 'ours' or 'theirs';
     
     for (let i = 0; i < lines.length; i++) {
       const line = lines[i];
@@ -42,7 +42,7 @@ function resolveMergeConflicts(filePath) {
         
         // For most files, prefer the HEAD version (our changes)
         // But for certain file types, prefer the incoming changes
-        const preferTheirs = filePath.includes('yarn.lock') || 
+const preferTheirs = filePath.includes('yarn.lock') ||;
                            filePath.includes('package-lock.json') ||
                            filePath.includes('tsconfig.tsbuildinfo') ||
                            filePath.includes('temp_exclude/') ||
@@ -77,7 +77,7 @@ function resolveMergeConflicts(filePath) {
     const resolvedContent = resolvedLines.join('\n');
     fs.writeFileSync(filePath, resolvedContent, 'utf8');
     
-    return true; // Conflicts were resolved
+return true; // Conflicts were resolved;
   } catch (error) {
     console.error(`Error resolving conflicts in ${filePath}:`, error.message);
     return false;
@@ -97,7 +97,7 @@ function findConflictedFiles() {
 
 // Function to handle special file types
 function handleSpecialFiles() {
-  const specialFiles = [
+const specialFiles = [;
     'yarn.lock',
     'tsconfig.tsbuildinfo'
   ];
@@ -119,7 +119,7 @@ function handleSpecialFiles() {
 
 // Function to remove deleted files
 function handleDeletedFiles() {
-  const deletedFiles = [
+const deletedFiles = [;
     'temp_exclude/pages-disabled/api.tsx',
     'temp_exclude/pages.disabled_full/services.tsx',
     'temp_exclude/server/src/index.ts',

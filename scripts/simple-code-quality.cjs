@@ -3,11 +3,11 @@
  * Simple Code Quality Checker;
  * Performs basic code quality checks;
  */
-const fs = require('fs')
-const path = require('path')
+const fs = require('fs');
+const path = require('path');
 console.log(' Running code quality checks...')
 if (fs.existsSync('package.json')
-    const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8')
+const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8');
       "name"
       "status"
       "name"

@@ -27,7 +27,7 @@ class SmartPerformanceOptimizer {}
     log(message) {}
         const timestamp = new Date().toISOString(}
 });
-        const logMessage = `[${timestamp}] ${message}\;n;`;`
+const logMessage = `[${timestamp}] ${message}\;n;`;`;
         fs.appendFileSync(this.logFile, logMessage);
         console.log(message)};
     analyzeBundleSize() {}
@@ -42,7 +42,7 @@ class SmartPerformanceOptimizer {}
 });
             
             // Analyze bundle;
-            const bundleAnalysis = execSync('npm run analyze', { })
+const bundleAnalysis = execSync('npm run analyze', { });
                 "cwd": this.projectRoot, 
                 "encoding": 'utf8',
                 "stdio": 'pipe'
@@ -158,7 +158,7 @@ class SmartPerformanceOptimizer {}
         
         return report};
     generateOptimizationSuggestions() {}
-        return [;]
+return [;];
             'Enable gzip compression for static assets',
             'Implement code splitting for better loading performance',
             'Use CDN for static assets',

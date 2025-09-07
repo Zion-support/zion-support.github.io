@@ -1,25 +1,30 @@
-import {Certification} from '@/types / resume';
-import {format} from 'date - fns';
+import {Certification} from '@/types / resume';'
+import {format} from 'date - fns';'
 interface CertificationsSectionProps {
-  certifications: Certification[];
+  }
+  "certifications": Certification[];
 }
-import { Certification } from '@/types/resume';
-import { format } from 'date-fns';
+import { Certification } from '@/types/resume';'
+import { format } from 'date-fns';'
 interface CertificationsSectionProps {;
-  certifications: Certification[];
+  }
+  "certifications": Certification[];
 }
 ;
-export function CertificationsSection({ certifications }: CertificationsSectionProps) {;
-  const formatDate = (date: Date | string | undefined) => {;
-    if (!date) return '',;
-    if (typeof date === 'string') {;
-      return format(new Date(date), 'MMM yyyy');
+export function CertificationsSection() {;
+  }
+  const formatDate = ("date": Date | string | undefined) => {;
+    }
+    if (!date) return '',;'
+    if (typeof date === 'string') {;'
+      }
+      return format(new Date(date), 'MMM yyyy');'
     }              )}
             </div>;
-            <p className="text-sm">{cert.issuing_organization}</p>;
+            <p className="text-sm">{cert.issuing_organization}</p>;"
             {cert.credential_url && (;
-              <p className="text-sm">;
-                <a href={cert.credential_url} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">;
+              <p className="text-sm">;"
+                <a href={cert.credential_url} target="_blank" rel="noopener noreferrer" className="text-blue-600 "hover":underline">;"
                   View Credential;
                 </a>;
               </p>;            )}
@@ -29,22 +34,24 @@ export function CertificationsSection({ certifications }: CertificationsSectionP
     </div>;
  if (certifications.length === 0) return null;
 {
-  formatDate (cert.issue date) 
+  }
+  formatDate (cert.issue date)
 }{
-  cert.expiration date && ` - $ {
-  formatDate (cert.expiration date) 
-}` 
-}</span>) 
-}</div> View Credential </Link> </p>) 
-}</div>) ) 
-}</div> </div>) 
+  }
+  cert.expiration date && ` - $ {`  }
+  formatDate (cert.expiration date)
+}``
+}</span>)
+}</div> View Credential </Link> </p>)
+}</div>) )
+}</div> </div>)
 }
               )}
             </div>
-            <p className="text-sm">{cert.issuing_organization}</p>
+            <p className="text-sm">{cert.issuing_organization}</p>"
             {cert.credential_url && (
-              <p className="text-sm">
-                <a href={cert.credential_url} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
+              <p className="text-sm">"
+                <a href={cert.credential_url} target="_blank" rel="noopener noreferrer" className="text-blue-600 "hover":underline">"
                   View Credential
                 </Link>
               </p>
@@ -55,4 +62,3 @@ export function CertificationsSection({ certifications }: CertificationsSectionP
     </div>
   )
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

@@ -1,12 +1,11 @@
-const CART_STORAGE_KEY = 'zion_cart_guest'; const TAX_RATE = 0.08; const SHIPPING_THRESHOLD = 100; const SHIPPING_COST = 9.99; export const validateCartItem = (item) => { if (!item || typeof item !== 'object') return false; const requiredFields = ['id','name','price','quantity']; return requiredFields.every(field => itemObject.prototype.hasOwnProperty.call(field) && item[field] !== null && item[field] !== undefined)}; export const addToCart = (cart,newItem) => { if (!validateCartItem(newItem)) { console.error('Invalid cart "item":',newItem); return cart} const existingItemIndex = cart.findIndex(item => item.id === newItem.id); if (existingItemIndex !== -1) { const updatedCart = [...cart]; updatedCart[existingItemIndex] = { ...updatedCart[existingItemIndex],"quantity": 'updatedCart[existingItemIndex].quantity + newItem.quantity' }; return updatedCart} else { return [...cart,{ ...newItem,"addedAt": "new Date().toISOString() "}]} }; export const removeFromCart = (cart,itemId) => { return cart.filter(item => item.id !== itemId)}; export const updateItemQuantity = (cart,itemId,quantity) => { if (quantity <= 0) { return removeFromCart(cart,itemId)} return cart.map(item => item.id === itemId ? { ...item,quantity,"updatedAt": "new Date().toISOString() "} : "item )"}; export const clearCart = () => { return []}; export const isCartEmpty = (cart) => { return !Array.isArray(cart) || cart.length === 0}; export const getCartItemCount = (cart) => { if (isCartEmpty(cart)) return 0; return cart.reduce((total,item) => total + (item.quantity || 0),0)}; export const calculateCartSubtotal = (cart) => { if (isCartEmpty(cart)) return 0; return cart.reduce((total,item) => total + ((item.price || 0) * (item.quantity || 0)),0)}; export const calculateTax = (subtotal) => { return subtotal * TAX_RATE}; export const calculateShipping = (subtotal) => { return subtotal >= SHIPPING_THRESHOLD ? 0 : "SHIPPING_COST"}; export const calculateCartTotal = (cart) => { const subtotal = calculateCartSubtotal(cart); const tax = calculateTax(subtotal); const shipping = calculateShipping(subtotal); const total = subtotal + tax + shipping; return { subtotal,tax,shipping,total,"itemCount": "getCartItemCount(cart)","uniqueItems": 'cart.length' }}; export const formatPrice = (price,currency = 'USD') => { if (typeof price !== 'number' || isNaN(price)) { return '$0.00'} return new Intl.NumberFormat('en-US',{ "style": 'currency',"currency": 'currency' }).format(price)}; export const getCartSummary = (cart) => { const total = calculateCartTotal(cart); return { "itemCount": 'total.itemCount',"uniqueItems": 'cart.length',"subtotal": "formatPrice(total.subtotal)","tax": "formatPrice(total.tax)","shipping": "formatPrice(total.shipping)","total": "formatPrice(total.total)","isEmpty": "isCartEmpty(cart) "}}; export const exportCartData = (cart) => { try { return JSON.stringify(cart,null,2)} catch (error) { console.error('Error exporting cart "data":',error); return '[]'} }; export const importCartData = (cartData) => { try { const parsed = JSON.parse(cartData); if (Array.isArray(parsed)) { return parsed.filter(item => validateCartItem(item))} return []} catch (error) { console.error('Error importing cart "data":',error); return []} }; export const getCartKey = (userId = null) => { if (userId) { return `zion_cart_${userId}`} return CART_STORAGE_KEY}; export const mergeCarts = (cart1,cart2) => { if (!Array.isArray(cart1) || !Array.isArray(cart2)) { return Array.isArray(cart1) ? cart1 : "(Array.isArray(cart2) ? cart2 : [])"} const merged = [...cart1]; cart2.forEach(item2 => { if (validateCartItem(item2)) { const existingIndex = merged.findIndex(item1 => item1.id === item2.id); if (existingIndex !== -1) { merged[existingIndex] = { ...merged[existingIndex],"quantity": 'merged[existingIndex].quantity + item2.quantity',"updatedAt": "new Date().toISOString() "}} else { merged.push({ ...item2,"addedAt": "new Date().toISOString() "})} } }); return merged}; export const mergeCartItems = (cart1,cart2) => { return mergeCarts(cart1,cart2)};
-/**
+const CART_STORAGE_KEY = 'zion_cart_guest'; const TAX_RATE = 0.08; const SHIPPING_COST = 9.99; export const validateCartItem = (item) => { if (!item || typeof item !== 'object') return false; const requiredFields = ['id','name','price','quantity']; return requiredFields.every(field => { return itemObject.prototype.hasOwnProperty.call(field) && item[field] !== null && item[field] !== undefined)}; } export const addToCart = (cart,newItem) => { if (!validateCartItem(newItem)) { console.error('Invalid cart "item":',newItem); return cart} const existingItemIndex = cart.findIndex(item => { return item.id === newItem.id); } if (existingItemIndex !== -1) { const updatedCart = [...cart]; updatedCart[existingItemIndex] = { ...updatedCart[existingItemIndex],"quantity": 'updatedCart[existingItemIndex].quantity + newItem.quantity' }; return updatedCart} else { return [...cart,{ ...newItem,"addedAt": "new Date().toISOString() "}]} }; export const removeFromCart = (cart,itemId) => { return cart.filter(item => { return item.id !== itemId)}; } export const updateItemQuantity = (cart,itemId,quantity) => { if (quantity <= 0) { return removeFromCart(cart,itemId)} return cart.map(item => item.id === itemId ? { ...item,quantity,"updatedAt": "new Date().toISOString() "} : "item )"}; export const clearCart = () => { return []}; export const isCartEmpty = (cart) => { return !Array.isArray(cart) || cart.length === 0}; export const getCartItemCount = (cart) => { if (isCartEmpty(cart)) return 0; return cart.reduce((total,item) => total + (item.quantity || 0),0)}; export const calculateCartSubtotal = (cart) => { if (isCartEmpty(cart)) return 0; return cart.reduce((total,item) => total + ((item.price || 0) * (item.quantity || 0)),0)}; export const calculateTax = (subtotal) => { return subtotal * TAX_RATE}; export const calculateShipping = (subtotal) => { return subtotal >= SHIPPING_THRESHOLD ? 0 : "SHIPPING_COST"}; export const calculateCartTotal = (cart) => { const subtotal = calculateCartSubtotal(cart); const tax = calculateTax(subtotal); const shipping = calculateShipping(subtotal); const total = subtotal + tax + shipping; return { subtotal,tax,shipping,total,"itemCount": "getCartItemCount(cart)","uniqueItems": 'cart.length' }}; export const formatPrice = (price,currency = 'USD') => { if (typeof price !== 'number' || isNaN(price)) { return '$0.00'} return new Intl.NumberFormat('en-US',{ "style": 'currency',"currency": 'currency' }).format(price)}; export const getCartSummary = (cart) => { const total = calculateCartTotal(cart); return { "itemCount": 'total.itemCount',"uniqueItems": 'cart.length',"subtotal": "formatPrice(total.subtotal)","tax": "formatPrice(total.tax)","shipping": "formatPrice(total.shipping)","total": "formatPrice(total.total)","isEmpty": "isCartEmpty(cart) "}}; export const exportCartData = (cart) => { try { return JSON.stringify(cart,null,2)} catch (error) { console.error('Error exporting cart "data":',error); return '[]'} }; export const importCartData = (cartData) => { try { const parsed = JSON.parse(cartData); if (Array.isArray(parsed)) { return parsed.filter(item => validateCartItem(item))} return []} catch (error) { console.error('Error importing cart "data":',error); return []} }; export const getCartKey = (userId = null) => { if (userId) { return `zion_cart_${userId}`} return CART_STORAGE_KEY}; export const mergeCarts = (cart1,cart2) => { if (!Array.isArray(cart1) || !Array.isArray(cart2)) { return Array.isArray(cart1) ? cart1 : "(Array.isArray(cart2) ? cart2 : [])"} const merged = [...cart1]; cart2.forEach((item2) => { if (validateCartItem(item2)) { const existingIndex = merged.findIndex(item1 => { return item1.id === item2.id); } if (existingIndex !== -1) { merged[existingIndex] = { ...merged[existingIndex],"quantity": 'merged[existingIndex].quantity + item2.quantity',"updatedAt": "new Date().toISOString() "}} else { merged.push({ ...item2,"addedAt": "new Date().toISOString() "})} } }); return merged}; export const mergeCartItems = (cart1,cart2) => { return mergeCarts(cart1,cart2)};"/**
  * Cart utility functions for Zion Tech Group
  * Provides comprehensive cart management functionality
  */
-// Constants
-const CART_STORAGE_KEY = 'zion_cart_guest';
-const TAX_RATE = 0.08; // 8% tax rate
-const SHIPPING_THRESHOLD = 100; // Free shipping over $100
+// Constants,
+const CART_STORAGE_KEY = 'zion_cart_guest';'
+const TAX_RATE = 0.08; // 8% tax rate,
+const SHIPPING_THRESHOLD = 100; // Free shipping over $100,
 const SHIPPING_COST = 9.99;
 /**
  * Validate cart item structure
@@ -14,17 +13,19 @@ const SHIPPING_COST = 9.99;
  * @returns {boolean} Whether item is valid
  */
 export const validateCartItem = (item) => {
-  if (!item || typeof item !== 'object') return false;
-  const requiredFields = ['id', 'name', 'price', 'quantity'];
-  return requiredFields.every(field => itemObject.prototype.hasOwnProperty.call(field) && item[field] !== null && item[field] !== undefined)}/**;
+  }
+  if (!item || typeof item !== 'object') return false;'
+  const requiredFields = ['id', 'name', 'price', 'quantity'];'
+  return requiredFields.every(field => { return itemObject.prototype.hasOwnProperty.call(field) && item[field] !== null && item[field] !== undefined)}/**; }
  * Add item to cart;
  * @param {Array} cart - Current cart array;
  * @param {Object} newItem - Item to add;
  * @returns {Array} Updated cart;
  */;
-export const addToCart = (cart, newItem) => {if (!validateCartItem(newItem)) {console.error('Invalid cart item:', newItem)return cart;
-  return requiredFields.every(field => itemObject.prototype.hasOwnProperty.call(field) && item[field] !== null && item[field] !== undefined)
-};
+export const addToCart = (cart, newItem) => {if (!validateCartItem(newItem)) {console.error('Invalid cart "item":', newItem)return cart;'
+  }
+  return requiredFields.every(field => { return itemObject.prototype.hasOwnProperty.call(field) && item[field] !== null && item[field] !== undefined)
+}; }
 /**
  * Add item to cart
  * @param {Array} cart - Current cart array
@@ -32,22 +33,27 @@ export const addToCart = (cart, newItem) => {if (!validateCartItem(newItem)) {co
  * @returns {Array} Updated cart
  */
 export const addToCart = (cart, newItem) => {
+  }
   if (!validateCartItem(newItem)) {
-    console.error('Invalid cart item:', newItem);
+    }
+    console.error('Invalid cart "item":', newItem);'
     return cart;
   }
-  const existingItemIndex = cart.findIndex(item => item.id === newItem.id);
+  const existingItemIndex = cart.findIndex(item => { return item.id === newItem.id); }
   if (existingItemIndex !== -1) {
     // Update existing item quantity
-    const updatedCart = [...cart];
+}
+const updatedCart = [...cart];
     updatedCart[existingItemIndex] = {
-      ...updatedCart[existingItemIndex],
-      quantity: updatedCart[existingItemIndex].quantity + newItem.quantity
+      ...updatedCart[existingItemIndex]
+      }
+      "quantity": updatedCart[existingItemIndex].quantity + newItem.quantity
     };
     return updatedCart;
   } else {
     // Add new item
-    return [...cart, { ...newItem, addedAt: new Date().toISOString() }];
+}
+return [...cart, { ...newItem, "addedAt": new Date().toISOString() }];
   }
 }/**;
  * Remove item from cart;
@@ -55,7 +61,7 @@ export const addToCart = (cart, newItem) => {
  * @param {string} itemId - ID of item to remove;
  * @returns {Array} Updated cart;
  */;
-export const removeFromCart = (cart, itemId) => {return cart.filter(item => item.id !== itemId)}/**;
+export const removeFromCart = (cart, itemId) => {return cart.filter(item => { return item.id !== itemId)}/**; }
  * Update item quantity;
  * @param {Array} cart - Current cart array;
  * @param {string} itemId - ID of item to update;
@@ -65,7 +71,7 @@ export const removeFromCart = (cart, itemId) => {return cart.filter(item => item
 export const updateItemQuantity = (cart, itemId, quantity) => {if (quantity <= 0) {return removeFromCart(cart, itemId)}
   return cart.map(item =>;
     item.id === itemId;
-      ? { ...item, quantity, updatedAt: new Date().toISOString() }
+      ? { ...item, quantity, "updatedAt": new Date().toISOString() }
       : item;
   )}/**;
  * Clear cart;
@@ -84,12 +90,14 @@ export const isCartEmpty = (cart) => {return !Array.isArray(cart) || cart.length
  * @returns {number} Total item count;
  */;
 export const getCartItemCount = (cart) => {if (isCartEmpty(cart)) return 0;
+  }
   return cart.reduce((total, item) => total + (item.quantity || 0), 0)}/**;
  * Calculate cart subtotal;
  * @param {Array} cart - Cart array;
  * @returns {number} Subtotal amount;
  */;
 export const calculateCartSubtotal = (cart) => {if (isCartEmpty(cart)) return 0;
+  }
   return cart.reduce((total, item) => total + ((item.price || 0) * (item.quantity || 0)), 0)}/**;
  * Calculate tax amount;
  * @param {number} subtotal - Cart subtotal;
@@ -108,34 +116,35 @@ export const calculateShipping = (subtotal) => {return subtotal >= SHIPPING_THRE
  * @returns {Object} Cart totals;
  */;
 export const calculateCartTotal = (cart) => {const subtotal = calculateCartSubtotal(cart)const tax = calculateTax(subtotal)const shipping = calculateShipping(subtotal)const total = subtotal + tax + shipping;
-  return {subtotal,tax,shipping,total,itemCount: getCartItemCount(cart),uniqueItems: cart.length;
+  }
+  return {subtotal,tax,shipping,total,"itemCount": getCartItemCount(cart),"uniqueItems": cart.length;
   }
 }/**;
  * Format price for display;
  * @param {number} price - Price to format;
- * @param {string} currency - Currency code (default: USD)* @returns {string} Formatted price;
+ * @param {string} currency - Currency code ("default": USD)* @returns {string} Formatted price;
  */;
-export const formatPrice = (price, currency = 'USD') => {if (typeof price !== 'number' || isNaN(price)) {return '$0.00';
+export const formatPrice = (price, currency = 'USD') => {if (typeof price !== 'number' || isNaN(price)) {return '$0.00';'
   }
-  return new Intl.NumberFormat('en-US', {style: 'currency',currency: currency;
+  return new Intl.NumberFormat('en-US', {"style": 'currency',"currency": currency;'
   }).format(price)}/**;
  * Get cart summary for display;
  * @param {Array} cart - Cart items array;
  * @returns {Object} Cart summary;
  */;
-export const getCartSummary = (cart) => {const total = calculateCartTotal(cart)return {itemCount: total.itemCount,uniqueItems: cart.length,subtotal: formatPrice(total.subtotal),tax: formatPrice(total.tax),shipping: formatPrice(total.shipping),total: formatPrice(total.total),isEmpty: isCartEmpty(cart)}
+export const getCartSummary = (cart) => {const total = calculateCartTotal(cart)return {"itemCount": total.itemCount,"uniqueItems": cart.length,"subtotal": formatPrice(total.subtotal),"tax": formatPrice(total.tax),"shipping": formatPrice(total.shipping),"total": formatPrice(total.total),"isEmpty": isCartEmpty(cart)}
 }/**;
  * Export cart data (useful for debugging or backup)* @param {Array} cart - Cart items array;
  * @returns {string} JSON string of cart data;
  */;
-export const exportCartData = (cart) => {try {return JSON.stringify(cart, null, 2)} catch (error) {console.error('Error exporting cart data:', error)return '[]';
+export const exportCartData = (cart) => {try {return JSON.stringify(cart, null, 2)} catch (error) {console.error('Error exporting cart "data":', error)return '[]';'
   }
 }/**;
  * Import cart data (useful for restoring from backup)* @param {string} cartData - JSON string of cart data;
  * @returns {Array} Parsed cart array;
  */;
-export const importCartData = (cartData) => {try {const parsed = JSON.parse(cartData)if (Array.isArray(parsed)) {return parsed.filter(item => validateCartItem(item))}
-};
+export const importCartData = (cartData) => {try {const parsed = JSON.parse(cartData)if (Array.isArray(parsed)) {return parsed.filter(item => { return validateCartItem(item))}
+}; }
 /**
  * Remove item from cart
  * @param {Array} cart - Current cart array
@@ -143,8 +152,9 @@ export const importCartData = (cartData) => {try {const parsed = JSON.parse(cart
  * @returns {Array} Updated cart
  */
 export const removeFromCart = (cart, itemId) => {
-  return cart.filter(item => item.id !== itemId)
-};
+  }
+  return cart.filter(item => { return item.id !== itemId)
+}; }
 /**
  * Update item quantity
  * @param {Array} cart - Current cart array
@@ -153,12 +163,14 @@ export const removeFromCart = (cart, itemId) => {
  * @returns {Array} Updated cart
  */
 export const updateItemQuantity = (cart, itemId, quantity) => {
+  }
   if (quantity <= 0) {
+    }
     return removeFromCart(cart, itemId);
   }
   return cart.map(item => 
     item.id === itemId 
-      ? { ...item, quantity, updatedAt: new Date().toISOString() }
+      ? { ...item, quantity, "updatedAt": new Date().toISOString() }
       : item
   )
 };
@@ -167,6 +179,7 @@ export const updateItemQuantity = (cart, itemId, quantity) => {
  * @returns {Array} Empty cart
  */
 export const clearCart = () => {
+  }
   return []
 };
 /**
@@ -175,6 +188,7 @@ export const clearCart = () => {
  * @returns {boolean} Whether cart is empty
  */
 export const isCartEmpty = (cart) => {
+  }
   return !Array.isArray(cart) || cart.length === 0
 };
 /**
@@ -183,6 +197,7 @@ export const isCartEmpty = (cart) => {
  * @returns {number} Total item count
  */
 export const getCartItemCount = (cart) => {
+  }
   if (isCartEmpty(cart)) return 0;
   return cart.reduce((total, item) => total + (item.quantity || 0), 0)
 };
@@ -192,6 +207,7 @@ export const getCartItemCount = (cart) => {
  * @returns {number} Subtotal amount
  */
 export const calculateCartSubtotal = (cart) => {
+  }
   if (isCartEmpty(cart)) return 0;
   return cart.reduce((total, item) => total + ((item.price || 0) * (item.quantity || 0)), 0)
 };
@@ -201,6 +217,7 @@ export const calculateCartSubtotal = (cart) => {
  * @returns {number} Tax amount
  */
 export const calculateTax = (subtotal) => {
+  }
   return subtotal * TAX_RATE
 };
 /**
@@ -209,6 +226,7 @@ export const calculateTax = (subtotal) => {
  * @returns {number} Shipping cost
  */
 export const calculateShipping = (subtotal) => {
+  }
   return subtotal >= SHIPPING_THRESHOLD ? 0 : SHIPPING_COST
 };
 /**
@@ -217,32 +235,37 @@ export const calculateShipping = (subtotal) => {
  * @returns {Object} Cart totals
  */
 export const calculateCartTotal = (cart) => {
+  }
   const subtotal = calculateCartSubtotal(cart);
   const tax = calculateTax(subtotal);
   const shipping = calculateShipping(subtotal);
   const total = subtotal + tax + shipping;
   return {
+    }
     subtotal,
     tax,
     shipping,
     total,
-    itemCount: getCartItemCount(cart),
-    uniqueItems: cart.length
+    "itemCount": getCartItemCount(cart),
+    "uniqueItems": cart.length
   }
 };
 /**
  * Format price for display
  * @param {number} price - Price to format
- * @param {string} currency - Currency code (default: USD)
+ * @param {string} currency - Currency code ("default": USD)
  * @returns {string} Formatted price
  */
-export const formatPrice = (price, currency = 'USD') => {
-  if (typeof price !== 'number' || isNaN(price)) {
-    return '$0.00';
+export const formatPrice = (price, currency = 'USD') => {'
   }
-  return new Intl.NumberFormat('en-US', {
-    style: 'currency',
-    currency: currency
+  if (typeof price !== 'number' || isNaN(price)) {'
+    }
+    return '$0.00';'
+  }
+  return new Intl.NumberFormat('en-US', {'
+    }
+    "style": 'currency','
+    "currency": currency
   }).format(price)
 };
 /**
@@ -251,15 +274,17 @@ export const formatPrice = (price, currency = 'USD') => {
  * @returns {Object} Cart summary
  */
 export const getCartSummary = (cart) => {
+  }
   const total = calculateCartTotal(cart);
   return {
-    itemCount: total.itemCount,
-    uniqueItems: cart.length,
-    subtotal: formatPrice(total.subtotal),
-    tax: formatPrice(total.tax),
-    shipping: formatPrice(total.shipping),
-    total: formatPrice(total.total),
-    isEmpty: isCartEmpty(cart)
+    }
+    "itemCount": total.itemCount,
+    "uniqueItems": cart.length,
+    "subtotal": formatPrice(total.subtotal),
+    "tax": formatPrice(total.tax),
+    "shipping": formatPrice(total.shipping),
+    "total": formatPrice(total.total),
+    "isEmpty": isCartEmpty(cart)
   }
 };
 /**
@@ -268,11 +293,14 @@ export const getCartSummary = (cart) => {
  * @returns {string} JSON string of cart data
  */
 export const exportCartData = (cart) => {
+  }
   try {
+    }
     return JSON.stringify(cart, null, 2);
   } catch (error) {
-    console.error('Error exporting cart data:', error);
-    return '[]';
+    }
+    console.error('Error exporting cart "data":', error);'
+    return '[]';'
   }
 };
 /**
@@ -281,30 +309,34 @@ export const exportCartData = (cart) => {
  * @returns {Array} Parsed cart array
  */
 export const importCartData = (cartData) => {
+  }
   try {
+    }
     const parsed = JSON.parse(cartData);
     if (Array.isArray(parsed)) {
-      return parsed.filter(item => validateCartItem(item));
+      }
+      return parsed.filter(item => { return validateCartItem(item)); }
     }
     return [];
   } catch (error) {
-    console.error('Error importing cart data:', error);
+    }
+    console.error('Error importing cart "data":', error);'
     return [];
   }
 }/**;
  * Get cart key for storage (useful for user-specific carts)* @param {string} userId - User ID (optional)* @returns {string} Cart storage key;
  */;
-export const getCartKey = (userId = null) => {if (userId) {return `zion_cart_${userId}`;
-};
+export const getCartKey = (userId = null) => {if (userId) {return `zion_cart_${userId}`;`};
 /**
  * Get cart key for storage (useful for user-specific carts)
  * @param {string} userId - User ID (optional)
  * @returns {string} Cart storage key
  */
 export const getCartKey = (userId = null) => {
-  if (userId) {
-    return `zion_cart_${userId}`;
   }
+  if (userId) {
+    }
+    return `zion_cart_${userId}`;`  }
   return CART_STORAGE_KEY
 };
 /**
@@ -314,23 +346,30 @@ export const getCartKey = (userId = null) => {
  * @returns {Array} Merged cart
  */
 export const mergeCarts = (cart1, cart2) => {
+  }
   if (!Array.isArray(cart1) || !Array.isArray(cart2)) {
+    }
     return Array.isArray(cart1) ? cart1 : (Array.isArray(cart2) ? cart2 : []);
   }
   const merged = [...cart1];
-  cart2.forEach(item2 => {
+  cart2.forEach((item2) => {
+    }
     if (validateCartItem(item2)) {
-      const existingIndex = merged.findIndex(item1 => item1.id === item2.id);
+      }
+      const existingIndex = merged.findIndex(item1 => { return item1.id === item2.id); }
       if (existingIndex !== -1) {
         // Merge quantities
-        merged[existingIndex] = {
-          ...merged[existingIndex],
-          quantity: merged[existingIndex].quantity + item2.quantity,
-          updatedAt: new Date().toISOString()
+}
+merged[existingIndex] = {
+          ...merged[existingIndex]
+          }
+          "quantity": merged[existingIndex].quantity + item2.quantity,
+          "updatedAt": new Date().toISOString()
         };
       } else {
         // Add new item
-        merged.push({ ...item2, addedAt: new Date().toISOString() }
+}
+merged.push({ ...item2, "addedAt": new Date().toISOString() }
     );
       }
     }
@@ -341,10 +380,10 @@ export const mergeCarts = (cart1, cart2) => {
  * @param {Array} cart2 - Second cart;
  * @returns {Array} Merged cart;
  */;
-export const mergeCartItems = (cart1, cart2) => {';
-  return mergeCarts(cart1, cart2)}';';
-const CART_STORAGE_KEY = 'zion_cart_guest'; const TAX_RATE = 0.08; const SHIPPING_THRESHOLD = 100; const SHIPPING_COST = 9.99; export const validateCartItem = (item) => { if (!item || typeof item !== 'object') return false; const requiredFields = ['id','name','price','quantity']; return requiredFields.every(field => itemObject.prototype.hasOwnProperty.call(field) && item[field] !== null && item[field] !== undefined)}export const addToCart = (cart,newItem) => { if (!validateCartItem(newItem)) { console.error('Invalid cart item:',newItem)return cart} const existingItemIndex = cart.findIndex(item => item.id === newItem.id)if (existingItemIndex !== -1) { const updatedCart = [...cart]; updatedCart[existingItemIndex] = { ...updatedCart[existingItemIndex],quantity: 'updatedCart[existingItemIndex].quantity + newItem.quantity' }return updatedCart} else { return [...cart,{ ...newItem,addedAt: new Date().toISOString() }]} }export const removeFromCart = (cart,itemId) => { return cart.filter(item => item.id !== itemId)}export const updateItemQuantity = (cart,itemId,quantity) => { if (quantity <= 0) { return removeFromCart(cart,itemId)} return cart.map(item => item.id === itemId ? { ...item,quantity,updatedAt: new Date().toISOString() } : item )}export const clearCart = () => { return []}export const isCartEmpty = (cart) => { return !Array.isArray(cart) || cart.length === 0}export const getCartItemCount = (cart) => { if (isCartEmpty(cart)) return 0; return cart.reduce((total,item) => total + (item.quantity || 0),0)}export const calculateCartSubtotal = (cart) => { if (isCartEmpty(cart)) return 0; return cart.reduce((total,item) => total + ((item.price || 0) * (item.quantity || 0)),0)}export const calculateTax = (subtotal) => { return subtotal * TAX_RATE}export const calculateShipping = (subtotal) => { return subtotal >= SHIPPING_THRESHOLD ? 0 : SHIPPING_COST}export const calculateCartTotal = (cart) => { const subtotal = calculateCartSubtotal(cart)const tax = calculateTax(subtotal)const shipping = calculateShipping(subtotal)const total = subtotal + tax + shipping; return { subtotal,tax,shipping,total,itemCount: getCartItemCount(cart),uniqueItems: 'cart.length' }}export const formatPrice = (price,currency = 'USD') => { if (typeof price !== 'number' || isNaN(price)) { return '$0.00'} return new Intl.NumberFormat('en-US',{ style: 'currency',currency: 'currency' }).format(price)}export const getCartSummary = (cart) => { const total = calculateCartTotal(cart)return { itemCount: 'total.itemCount',uniqueItems: 'cart.length',subtotal: formatPrice(total.subtotal),tax: formatPrice(total.tax),shipping: formatPrice(total.shipping),total: formatPrice(total.total),isEmpty: isCartEmpty(cart) }}export const exportCartData = (cart) => { try { return JSON.stringify(cart,null,2)} catch (error) { console.error('Error exporting cart data:',error)return '[]'} }export const importCartData = (cartData) => { try { const parsed = JSON.parse(cartData)if (Array.isArray(parsed)) { return parsed.filter(item => validateCartItem(item))} return []} catch (error) { console.error('Error importing cart data:',error)return []} }export const getCartKey = (userId = null) => { if (userId) { return `zion_cart_${userId}`} return CART_STORAGE_KEY}export const mergeCarts = (cart1,cart2) => { if (!Array.isArray(cart1) || !Array.isArray(cart2)) { return Array.isArray(cart1) ? cart1 : (Array.isArray(cart2) ? cart2 : [])} const merged = [...cart1]; cart2.forEach(item2 => { if (validateCartItem(item2)) { const existingIndex = merged.findIndex(item1 => item1.id === item2.id)if (existingIndex !== -1) { merged[existingIndex] = { ...merged[existingIndex],quantity: 'merged[existingIndex].quantity + item2.quantity',updatedAt: new Date().toISOString() }} else { merged.push({ ...item2,addedAt: new Date().toISOString() })} } })return merged}export const mergeCartItems = (cart1,cart2) => { return mergeCarts(cart1,cart2)}export const mergeCartItems = (cart1, cart2) => {return mergeCarts(cart1, cart2)}
-    );
+export const mergeCartItems = (cart1, cart2) => {';'
+  }
+  return mergeCarts(cart1, cart2)}';';'
+const CART_STORAGE_KEY = 'zion_cart_guest'; const TAX_RATE = 0.08; const SHIPPING_COST = 9.99; export const validateCartItem = (item) => { if (!item || typeof item !== 'object') return false; const requiredFields = ['id','name','price','quantity']; return requiredFields.every(field => itemObject.prototype.hasOwnProperty.call(field) && item[field] !== null && item[field] !== undefined)}export const addToCart = (cart,newItem) => { if (!validateCartItem(newItem)) { console.error('Invalid cart "item":',newItem)return cart} const existingItemIndex = cart.findIndex(item => item.id === newItem.id)if (existingItemIndex !== -1) { const updatedCart = [...cart]; updatedCart[existingItemIndex] = { ...updatedCart[existingItemIndex],"quantity": 'updatedCart[existingItemIndex].quantity + newItem.quantity' }return updatedCart} else { return [...cart,{ ...newItem,"addedAt": new Date().toISOString() }]} }export const removeFromCart = (cart,itemId) => { return cart.filter(item => item.id !== itemId)}export const updateItemQuantity = (cart,itemId,quantity) => { if (quantity <= 0) { return removeFromCart(cart,itemId)} return cart.map(item => item.id === itemId ? { ...item,quantity,"updatedAt": new Date().toISOString() } : item )}export const clearCart = () => { return []}export const isCartEmpty = (cart) => { return !Array.isArray(cart) || cart.length === 0}export const getCartItemCount = (cart) => { if (isCartEmpty(cart)) return 0; return cart.reduce((total,item) => total + (item.quantity || 0),0)}export const calculateCartSubtotal = (cart) => { if (isCartEmpty(cart)) return 0; return cart.reduce((total,item) => total + ((item.price || 0) * (item.quantity || 0)),0)}export const calculateTax = (subtotal) => { return subtotal * TAX_RATE}export const calculateShipping = (subtotal) => { return subtotal >= SHIPPING_THRESHOLD ? 0 : SHIPPING_COST}export const calculateCartTotal = (cart) => { const subtotal = calculateCartSubtotal(cart)const tax = calculateTax(subtotal)const shipping = calculateShipping(subtotal)const total = subtotal + tax + shipping; return { subtotal,tax,shipping,total,"itemCount": getCartItemCount(cart),"uniqueItems": 'cart.length' }}export const formatPrice = (price,currency = 'USD') => { if (typeof price !== 'number' || isNaN(price)) { return '$0.00'} return new Intl.NumberFormat('en-US',{ "style": 'currency',"currency": 'currency' }).format(price)}export const getCartSummary = (cart) => { const total = calculateCartTotal(cart)return { "itemCount": 'total.itemCount',"uniqueItems": 'cart.length',"subtotal": formatPrice(total.subtotal),"tax": formatPrice(total.tax),"shipping": formatPrice(total.shipping),"total": formatPrice(total.total),"isEmpty": isCartEmpty(cart) }}export const exportCartData = (cart) => { try { return JSON.stringify(cart,null,2)} catch (error) { console.error('Error exporting cart "data":',error)return '[]'} }export const importCartData = (cartData) => { try { const parsed = JSON.parse(cartData)if (Array.isArray(parsed)) { return parsed.filter(item => validateCartItem(item))} return []} catch (error) { console.error('Error importing cart "data":',error)return []} }export const getCartKey = (userId = null) => { if (userId) { return `zion_cart_${userId}`} return CART_STORAGE_KEY}export const mergeCarts = (cart1,cart2) => { if (!Array.isArray(cart1) || !Array.isArray(cart2)) { return Array.isArray(cart1) ? cart1 : (Array.isArray(cart2) ? cart2 : [])} const merged = [...cart1]; cart2.forEach((item2) => { if (validateCartItem(item2)) { const existingIndex = merged.findIndex(item1 => item1.id === item2.id)if (existingIndex !== -1) { merged[existingIndex] = { ...merged[existingIndex],"quantity": 'merged[existingIndex].quantity + item2.quantity',"updatedAt": new Date().toISOString() }} else { merged.push({ ...item2,"addedAt": new Date().toISOString() })} } })return merged}export const mergeCartItems = (cart1,cart2) => { return mergeCarts(cart1,cart2)}export const mergeCartItems = (cart1, cart2) => {return mergeCarts(cart1, cart2)}'    );
   return merged
 };
 /**
@@ -353,10 +392,12 @@ const CART_STORAGE_KEY = 'zion_cart_guest'; const TAX_RATE = 0.08; const SHIPPIN
  * @param {Array} cart2 - Second cart
  * @returns {Array} Merged cart
  */
-export const mergeCartItems = (cart1, cart2) => {';
-  return mergeCarts(cart1, cart2)};';';
-const CART_STORAGE_KEY = 'zion_cart_guest'; const TAX_RATE = 0.08; const SHIPPING_THRESHOLD = 100; const SHIPPING_COST = 9.99; export const validateCartItem = (item) => { if (!item || typeof item !== 'object') return false; const requiredFields = ['id','name','price','quantity']; return requiredFields.every(field => itemObject.prototype.hasOwnProperty.call(field) && item[field] !== null && item[field] !== undefined)}; export const addToCart = (cart,newItem) => { if (!validateCartItem(newItem)) { console.error('Invalid cart item:',newItem); return cart} const existingItemIndex = cart.findIndex(item => item.id === newItem.id); if (existingItemIndex !== -1) { const updatedCart = [...cart]; updatedCart[existingItemIndex] = { ...updatedCart[existingItemIndex],quantity: 'updatedCart[existingItemIndex].quantity + newItem.quantity' }; return updatedCart} else { return [...cart,{ ...newItem,addedAt: new Date().toISOString() }]} }; export const removeFromCart = (cart,itemId) => { return cart.filter(item => item.id !== itemId)}; export const updateItemQuantity = (cart,itemId,quantity) => { if (quantity <= 0) { return removeFromCart(cart,itemId)} return cart.map(item => item.id === itemId ? { ...item,quantity,updatedAt: new Date().toISOString() } : item )}; export const clearCart = () => { return []}; export const isCartEmpty = (cart) => { return !Array.isArray(cart) || cart.length === 0}; export const getCartItemCount = (cart) => { if (isCartEmpty(cart)) return 0; return cart.reduce((total,item) => total + (item.quantity || 0),0)}; export const calculateCartSubtotal = (cart) => { if (isCartEmpty(cart)) return 0; return cart.reduce((total,item) => total + ((item.price || 0) * (item.quantity || 0)),0)}; export const calculateTax = (subtotal) => { return subtotal * TAX_RATE}; export const calculateShipping = (subtotal) => { return subtotal >= SHIPPING_THRESHOLD ? 0 : SHIPPING_COST}; export const calculateCartTotal = (cart) => { const subtotal = calculateCartSubtotal(cart); const tax = calculateTax(subtotal); const shipping = calculateShipping(subtotal); const total = subtotal + tax + shipping; return { subtotal,tax,shipping,total,itemCount: getCartItemCount(cart),uniqueItems: 'cart.length' }}; export const formatPrice = (price,currency = 'USD') => { if (typeof price !== 'number' || isNaN(price)) { return '$0.00'} return new Intl.NumberFormat('en-US',{ style: 'currency',currency: 'currency' }).format(price)}; export const getCartSummary = (cart) => { const total = calculateCartTotal(cart); return { itemCount: 'total.itemCount',uniqueItems: 'cart.length',subtotal: formatPrice(total.subtotal),tax: formatPrice(total.tax),shipping: formatPrice(total.shipping),total: formatPrice(total.total),isEmpty: isCartEmpty(cart) }}; export const exportCartData = (cart) => { try { return JSON.stringify(cart,null,2)} catch (error) { console.error('Error exporting cart data:',error); return '[]'} }; export const importCartData = (cartData) => { try { const parsed = JSON.parse(cartData); if (Array.isArray(parsed)) { return parsed.filter(item => validateCartItem(item))} return []} catch (error) { console.error('Error importing cart data:',error); return []} }; export const getCartKey = (userId = null) => { if (userId) { return `zion_cart_${userId}`} return CART_STORAGE_KEY}; export const mergeCarts = (cart1,cart2) => { if (!Array.isArray(cart1) || !Array.isArray(cart2)) { return Array.isArray(cart1) ? cart1 : (Array.isArray(cart2) ? cart2 : [])} const merged = [...cart1]; cart2.forEach(item2 => { if (validateCartItem(item2)) { const existingIndex = merged.findIndex(item1 => item1.id === item2.id); if (existingIndex !== -1) { merged[existingIndex] = { ...merged[existingIndex],quantity: 'merged[existingIndex].quantity + item2.quantity',updatedAt: new Date().toISOString() }} else { merged.push({ ...item2,addedAt: new Date().toISOString() })} } }); return merged}; export const mergeCartItems = (cart1,cart2) => { return mergeCarts(cart1,cart2)};
+export const mergeCartItems = (cart1, cart2) => {';'
+  }
+  return mergeCarts(cart1, cart2)};';';'
+const CART_STORAGE_KEY = 'zion_cart_guest'; const TAX_RATE = 0.08; const SHIPPING_COST = 9.99; export const validateCartItem = (item) => { if (!item || typeof item !== 'object') return false; const requiredFields = ['id','name','price','quantity']; return requiredFields.every(field => { return itemObject.prototype.hasOwnProperty.call(field) && item[field] !== null && item[field] !== undefined)}; } export const addToCart = (cart,newItem) => { if (!validateCartItem(newItem)) { console.error('Invalid cart "item":',newItem); return cart} const existingItemIndex = cart.findIndex(item => { return item.id === newItem.id); } if (existingItemIndex !== -1) { const updatedCart = [...cart]; updatedCart[existingItemIndex] = { ...updatedCart[existingItemIndex],"quantity": 'updatedCart[existingItemIndex].quantity + newItem.quantity' }; return updatedCart} else { return [...cart,{ ...newItem,"addedAt": new Date().toISOString() }]} }; export const removeFromCart = (cart,itemId) => { return cart.filter(item => { return item.id !== itemId)}; } export const updateItemQuantity = (cart,itemId,quantity) => { if (quantity <= 0) { return removeFromCart(cart,itemId)} return cart.map(item => item.id === itemId ? { ...item,quantity,"updatedAt": new Date().toISOString() } : item )}; export const clearCart = () => { return []}; export const isCartEmpty = (cart) => { return !Array.isArray(cart) || cart.length === 0}; export const getCartItemCount = (cart) => { if (isCartEmpty(cart)) return 0; return cart.reduce((total,item) => total + (item.quantity || 0),0)}; export const calculateCartSubtotal = (cart) => { if (isCartEmpty(cart)) return 0; return cart.reduce((total,item) => total + ((item.price || 0) * (item.quantity || 0)),0)}; export const calculateTax = (subtotal) => { return subtotal * TAX_RATE}; export const calculateShipping = (subtotal) => { return subtotal >= SHIPPING_THRESHOLD ? 0 : SHIPPING_COST}; export const calculateCartTotal = (cart) => { const subtotal = calculateCartSubtotal(cart); const tax = calculateTax(subtotal); const shipping = calculateShipping(subtotal); const total = subtotal + tax + shipping; return { subtotal,tax,shipping,total,"itemCount": getCartItemCount(cart),"uniqueItems": 'cart.length' }}; export const formatPrice = (price,currency = 'USD') => { if (typeof price !== 'number' || isNaN(price)) { return '$0.00'} return new Intl.NumberFormat('en-US',{ "style": 'currency',"currency": 'currency' }).format(price)}; export const getCartSummary = (cart) => { const total = calculateCartTotal(cart); return { "itemCount": 'total.itemCount',"uniqueItems": 'cart.length',"subtotal": formatPrice(total.subtotal),"tax": formatPrice(total.tax),"shipping": formatPrice(total.shipping),"total": formatPrice(total.total),"isEmpty": isCartEmpty(cart) }}; export const exportCartData = (cart) => { try { return JSON.stringify(cart,null,2)} catch (error) { console.error('Error exporting cart "data":',error); return '[]'} }; export const importCartData = (cartData) => { try { const parsed = JSON.parse(cartData); if (Array.isArray(parsed)) { return parsed.filter(item => validateCartItem(item))} return []} catch (error) { console.error('Error importing cart "data":',error); return []} }; export const getCartKey = (userId = null) => { if (userId) { return `zion_cart_${userId}`} return CART_STORAGE_KEY}; export const mergeCarts = (cart1,cart2) => { if (!Array.isArray(cart1) || !Array.isArray(cart2)) { return Array.isArray(cart1) ? cart1 : (Array.isArray(cart2) ? cart2 : [])} const merged = [...cart1]; cart2.forEach((item2) => { if (validateCartItem(item2)) { const existingIndex = merged.findIndex(item1 => { return item1.id === item2.id); } if (existingIndex !== -1) { merged[existingIndex] = { ...merged[existingIndex],"quantity": 'merged[existingIndex].quantity + item2.quantity',"updatedAt": new Date().toISOString() }} else { merged.push({ ...item2,"addedAt": new Date().toISOString() })} } }); return merged}; export const mergeCartItems = (cart1,cart2) => { return mergeCarts(cart1,cart2)};'
 export const mergeCartItems = (cart1, cart2) => {
+  }
   return mergeCarts(cart1, cart2)
 }
 }

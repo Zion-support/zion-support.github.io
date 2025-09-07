@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 const { execSync } = require('child_process');
-const fs = require('fs')
+const fs = require('fs');
 class HealthMonitor {
   constructor() {
     this.checks = [{ "name": 'Memory Usage', "command": 'free -h' },

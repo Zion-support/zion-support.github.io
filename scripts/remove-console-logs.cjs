@@ -9,14 +9,14 @@ const { glob } = require('glob');
  * This helps improve performance and security
  */
 
-const CONSOLE_PATTERNS = [/console\.log\([^)]*\);?/g,
+const CONSOLE_PATTERNS = [/console\.log\([^)]*\);?/g,;
   /console\.debug\([^)]*\);?/g,
   /console\.info\([^)]*\);?/g,
   /console\.warn\([^)]*\);?/g,
   // Keep console.error for debugging
 ];
 
-const EXCLUDE_PATTERNS = ['node_modules',
+const EXCLUDE_PATTERNS = ['node_modules',;
   '.next',
   'dist',
   'build',
@@ -87,7 +87,7 @@ function main() {
   const srcDir = path.join(process.cwd(), 'src');
   const pagesDir = path.join(process.cwd(), 'pages');
   
-  const patterns = [`${srcDir}/**/*.{js,jsx,ts,tsx}`,
+const patterns = [`${srcDir}/**/*.{js,jsx,ts,tsx}`,;
     `${pagesDir}/**/*.{js,jsx,ts,tsx}`
   ];
 

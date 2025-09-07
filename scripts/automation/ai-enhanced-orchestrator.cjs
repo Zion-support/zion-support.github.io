@@ -5,11 +5,11 @@
  * Features: Predictive analytics, auto-scaling, intelligent deployment, security monitoring;
  */
 
-const pm2 = require('pm2')
-const fs = require('fs')
-const path = require('path')
-const { execSync } = require('child_process')
-const os = require('os')
+const pm2 = require('pm2');
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
+const os = require('os');
     this.logFile = path.join(this.projectRoot, 'logs', 'ai-enhanced-orchestrator.log')
     this.configFile = path.join(this.projectRoot, 'logs', 'orchestrator-config.json')
     this.metricsFile = path.join(this.projectRoot, 'logs', 'enhanced-metrics.json')
@@ -23,7 +23,7 @@ const os = require('os')
       console.log('Logs directory already exists')
   log(message, level = 'INFO')
     fs.appendFile(this.logFile, logMessage + '\n')
-      const config = await fs.readFile(this.configFile, 'utf8')
+const config = await fs.readFile(this.configFile, 'utf8');
       this.log(' Configuration loaded successfully')
       this.log('� Using default configuration')
       this.log(` Failed to save configuration: ${error.message}`, 'ERROR'`)
@@ -37,4 +37,4 @@ const os = require('os')
         '5min'
         '15min'
 
-      const result = execSync('top -bn1 | grep "Cpu(s)"
+const result = execSync('top -bn1 | grep "Cpu(s)";

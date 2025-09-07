@@ -1,5 +1,6 @@
-import React from 'react';
+import React from 'react';'
 export function BudgetFields() {;
+  }
   return (;
     <div>;
       <h1>Component</h1>;

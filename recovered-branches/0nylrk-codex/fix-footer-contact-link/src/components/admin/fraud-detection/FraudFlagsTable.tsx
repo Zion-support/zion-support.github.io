@@ -1,30 +1,33 @@
-import React from "react",
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",
-import { Badge } from "@/components/ui/badge",
-import { FraudFlag } from "@/types/fraud",
-import { SeverityDisplay } from "./SeverityDisplay",
-import { ActionButtons } from "./ActionButtons";
-import { EmptyFraudState } from "./EmptyFraudState";
-import { ActionButtons } from "./ActionButtons",
-import { EmptyFraudState } from "./EmptyFraudState",}) => {
+import React from "react","
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table","
+import { Badge } from "@/components/ui/badge","
+import { FraudFlag } from "@/types/fraud","
+import { SeverityDisplay } from "./SeverityDisplay","
+import { ActionButtons } from "./ActionButtons";"
+import { EmptyFraudState } from "./EmptyFraudState";"
+import { ActionButtons } from "./ActionButtons","
+import { EmptyFraudState } from "./EmptyFraudState"}) => {"
+  }
   if (isLoading) {
-    return (
-      <div className="flex justify-center items-center h-64">
-        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-purple"></div>
+}
+return (;
+      <div className="flex justify-center items-center h-64">"
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-purple"></div>"
       </div>
-    )import React from "react";
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
-import { Badge } from "@/components/ui/badge",;
-import { FraudFlag } from "@/types/fraud",;
-import { SeverityDisplay } from "./SeverityDisplay",;
-import { ActionButtons } from "./ActionButtons",;
-import { EmptyFraudState } from "./EmptyFraudState",;      <div className="flex justify-center items-center h-64">;
-        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-purple"></div>;
+    )import React from "react";"
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";"
+import { Badge } from "@/components/ui/badge",;"
+import { FraudFlag } from "@/types/fraud",;"
+import { SeverityDisplay } from "./SeverityDisplay",;"
+import { ActionButtons } from "./ActionButtons",;"
+import { EmptyFraudState } from "./EmptyFraudState",;      <div className="flex justify-center items-center h-64">;"
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-purple"></div>;"
       </div>;
     );
   }
   if (flags.length === 0) {
-    return <EmptyFraudState hasFilters={hasFilters} onResetFilters={resetFilters} />
+}
+return <EmptyFraudState hasFilters={hasFilters} onResetFilters={resetFilters} />;
   }    <Table>;
       <TableHeader>;
         <TableRow>;
@@ -45,16 +48,16 @@ import { EmptyFraudState } from "./EmptyFraudState",;      <div className="flex 
             <TableCell>;
               <SeverityDisplay severity={flag && flag.severity} />;
             </TableCell>;
-            <TableCell className="font-medium">;
+            <TableCell className="font-medium">;"
               {flag && flag.user_email || flag && flag.user_id.substring(0, 8)}
             </TableCell>;
-            <TableCell className="max-w-xs truncate">;
+            <TableCell className="max-w-xs truncate">;"
               {flag && flag.content_excerpt}
             </TableCell>;
             <TableCell>;
-              <Badge variant="outline">{flag && flag.content_type}</Badge>;                <span className="text-muted-foreground text-xs">Not analyzed</span>;
+              <Badge variant="outline">{flag && flag.content_type}</Badge>;                <span className="text-muted-foreground text-xs">Not analyzed</span>;"
   }
-  return (
+return (;
               )}
             </TableCell>;
             <TableCell>;
@@ -62,7 +65,7 @@ import { EmptyFraudState } from "./EmptyFraudState",;      <div className="flex 
               </Badge>;
             </TableCell>;
             <TableCell>;
-              <ActionButtons
-                flagId={flag && flag.id} 
+              <ActionButtons,
+flagId={flag && flag.id} 
                 status={flag && flag.status} 
                 onAction={onAction}

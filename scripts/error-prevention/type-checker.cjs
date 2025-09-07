@@ -24,7 +24,7 @@ class TypeChecker {}
     try {}
       console.log('Running TypeScript type check...');
       
-      const child = spawn('npm', ['run', 'type-check'], {})
+const child = spawn('npm', ['run', 'type-check'], {});
         "stdio": ['pipe', 'pipe', 'pipe'],
         "cwd": process.cwd();
       };);

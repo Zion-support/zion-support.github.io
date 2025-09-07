@@ -10,7 +10,7 @@ const path = require('path');
 function improvePerformance() {}
   try {}
     // Create next.config.js optimizations;
-    const nextConfigContent = "/** @type {import('next').NextConfig} */
+const nextConfigContent = "/** @type {import('next').NextConfig} */;
 const nextConfig = {}
   "reactStrictMode": true,
   "swcMinify": true,
@@ -45,12 +45,12 @@ const nextConfig = {}
             test: /[\\/]node_modules[\\/]/,
             "name": 'vendors',
             "chunks": 'all'}}}};
-    return confi}g},
+return confi}g},;
   
   
   // Headers for performance;
   async headers() {}
-    return [;]
+return [;];
       {}
         "source": '/(.*)',
         "headers": []

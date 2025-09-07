@@ -6,7 +6,7 @@ const path = require('path');
 console.log('🔧 Fixing remaining syntax errors...');
 
 // List of files with known syntax errors
-const filesToFix = [
+const filesToFix = [;
   '/workspace/src/components/Footer.tsx',
   '/workspace/src/components/Header.tsx',
   '/workspace/src/components/HeroSection.tsx',

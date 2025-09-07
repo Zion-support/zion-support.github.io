@@ -16,7 +16,7 @@ class EnhancedAutomationScriptCreator {
   }
 
   createPerformanceMonitor() {
-    const content = `#!/usr/bin/env node
+const content = `#!/usr/bin/env node;
 
 const fs = require('fs');
 const path = require('path');
@@ -196,7 +196,7 @@ monitor.run()
   }
 
   createHealthChecker() {
-    const content = `#!/usr/bin/env node
+const content = `#!/usr/bin/env node;
 
 const fs = require('fs');
 const path = require('path');
@@ -403,7 +403,7 @@ checker.run()
   }
 
   createSEOOptimizer() {
-    const content = `#!/usr/bin/env node
+const content = `#!/usr/bin/env node;
 
 const fs = require('fs');
 const path = require('path');
@@ -617,7 +617,7 @@ optimizer.run()
   }
 
   createSecurityAuditor() {
-    const content = `#!/usr/bin/env node
+const content = `#!/usr/bin/env node;
 
 const fs = require('fs');
 const path = require('path');
@@ -882,12 +882,12 @@ creator
     process.exit(1);
   });
 #!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
+const fs = require('fs');
+const path = require('path');
     this.scriptsDir = path.join(this.projectRoot, 'scripts')
-const fs = require('fs')
-const path = require('path')
-const { execSync } = require('child_process')
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
     this.reportFile = path.join(this.projectRoot, 'performance-monitor-report.json')
     this.log(' Checking build performance')
       execSync('npm run build')

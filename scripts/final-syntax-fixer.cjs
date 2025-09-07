@@ -1,10 +1,10 @@
 
 #!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
+const fs = require('fs');
+const path = require('path');
   console.log(' Starting Final Syntax Fixer...')
-    const files = findCodeFiles('.;')
-        const originalContent = fs.readFileSync(file, 'utf8')
+const files = findCodeFiles('.;');
+const originalContent = fs.readFileSync(file, 'utf8');
           content = content.replace(semicolonAfterProperty, '$"1")
           content = content.replace(semicolonAfterProperty, '$"1")
           content = content.replace(objectPropertySemicolon, '$"1")

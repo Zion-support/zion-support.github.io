@@ -27,14 +27,14 @@ class EnhancedSecurityAutomation {}
     log(message) {}
         const timestamp = new Date().toISOString(}
 });
-        const logMessage = `[${timestamp}] ${message}\;n;`;`
+const logMessage = `[${timestamp}] ${message}\;n;`;`;
         fs.appendFileSync(this.logFile, logMessage);
         console.log(message)};
     runSecurityAudit() {}
         this.log('Running security audit...');
         
         try {}
-            const auditResult = execSync('npm audit --json', { })
+const auditResult = execSync('npm audit --json', { });
                 "cwd": this.projectRoot, 
                 "encoding": 'utf8',
                 "stdio": 'pipe'
@@ -56,7 +56,7 @@ class EnhancedSecurityAutomation {}
     checkForSecrets() {}
         this.log('Checking for exposed secrets...');
         
-        const secretPatterns = [/password\s*=\s*['"][^'"]+['"]/gi,
+const secretPatterns = [/password\s*=\s*['"][^'"]+['"]/gi,;
             /api[_-]?key\s*=\s*['"][^'"]+['"]/gi,
             /secret\s*=\s*['"][^'"]+['"]/gi,
             /token\s*=\s*['"][^'"]+['"]/gi,
@@ -148,7 +148,7 @@ class EnhancedSecurityAutomation {}
     checkFilePermissions() {}
         this.log('Checking file permissions...');
         
-        const criticalFiles = ['package.json',]
+const criticalFiles = ['package.json',];
             'package-lock.json',
             '.env',
             '.env.local',
@@ -211,7 +211,7 @@ class EnhancedSecurityAutomation {}
         
         return report};
     generateSecurityRecommendations() {}
-        return [;]
+return [;];
             'Regularly update dependencies to patch security vulnerabilities',
             'Use environment variables for sensitive configuration',
             'Implement proper file permissions for sensitive files',

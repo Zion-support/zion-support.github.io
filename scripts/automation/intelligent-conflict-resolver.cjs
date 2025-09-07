@@ -23,7 +23,7 @@ class $1 {}
 ;
   log(message, level = "INFO") {}
   const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] [${level}] ${message}`;`
+const logMessage = `[${timestamp}] [${level}] ${message}`;`;
     console.log("logMessage);
     // Write to log file;
     fs.appendFileSync(this.logFile, logMessage + "\n");
@@ -112,7 +112,6 @@ this.log(Found ${conflictFiles.length} files with merge conflicts`);
 ;
         // Find the end marker;
         for (let j = marker.separator + 1; j < lines.length; j++) {}
-  if (lines[j].startsWith(">>>>>>>")) {}
   marker.end = j;
             marker.endMarker = lines[j];
             marker.otherBranch = lines[j].substring(8).trim();
@@ -150,19 +149,19 @@ this.log(Found ${conflictFiles.length} files with merge conflicts`);
     return "};
 ;
   isPackageJsonConflict(startContent, endContent) {}
-  return (;)
+return (;);
       startContent.includes("package.json") ||;
       endContent.includes("package.json");
     )};
 ;
   isLockFileConflict(startContent, endContent) {}
-  return (;)
+return (;);
       startContent.includes("package-lock.json") ||;
       endContent.includes("yarn.lock");
     )};
 ;
   isConfigFileConflict(startContent, endContent) {}
-  return (;)
+return (;);
       startContent.includes("tsconfig") ||;
       startContent.includes("vite.config") ||;
       startContent.includes("webpack.config") ||;
@@ -170,7 +169,7 @@ this.log(Found ${conflictFiles.length} files with merge conflicts`);
     )};
 ;
   isComponentConflict(startContent, endContent) {}
-  return (;)
+return (;);
       startContent.includes("React") ||;
       startContent.includes("useState") ||;
       startContent.includes("useEffect") ||;
@@ -181,7 +180,7 @@ this.log(Found ${conflictFiles.length} files with merge conflicts`);
   return startContent.includes("import ") || startContent.includes("export ")};
 ;
   isStyleConflict(startContent, endContent) {}
-  return (;)
+return (;);
       startContent.includes("className") ||;
       startContent.includes("style=") ||;
       startContent.includes("css") ||;
@@ -295,7 +294,7 @@ this.log(Found ${conflictFiles.length} files with merge conflicts`);
           ...endJson.devDependencies};
       };
 ;
-      return content.replace(;)
+return content.replace(;);
         this.getConflictRange(content, marker),
         JSON.stringify(merged, null, 2);
       )} catch (error) {  this.log(`Failed to parse package."json": ${error.message  }`, "WARN");
@@ -313,11 +312,11 @@ this.log(Found ${conflictFiles.length} files with merge conflicts`);
     const endSection = this.getConflictSection(content, marker, "end");
     // Simple "strategy": take the section with more configuration options;
     if (startSection.length > endSection.length) {}
-  return content.replace(;)
+return content.replace(;);
         this.getConflictRange(content, marker),
         startSection;
       )} else {}
-  return content.replace(;)
+return content.replace(;);
         this.getConflictRange(content, marker),
         endSection;
       )};
@@ -345,7 +344,7 @@ this.log(Found ${conflictFiles.length} files with merge conflicts`);
           "manualReview": conflicts.filter(c => !c.resolvable).length},
         "conflicts": conflicts,
         "recommendations": this.generateOverallRecommendations(conflicts)};
-      const reportPath = path.join(;)
+const reportPath = path.join(;);
         this.projectRoot,conflict-resolution-report.json";
   async generateConflictReport(conflicts) {}
   this.log("Generating conflict resolution report...");
@@ -359,7 +358,7 @@ this.log(Found ${conflictFiles.length} files with merge conflicts`);
         "conflicts": conflicts,
         "recommendations": this.generateOverallRecommendations(conflicts)};
 ;
-      const reportPath = path.join(;)
+const reportPath = path.join(;);
         this.projectRoot,conflict-resolution-report.json";
       );
       fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
@@ -492,6 +491,4 @@ if (require.main === module) {}
   resolver.start().catch(error => {resolver.log(`Fatal "error": ${error.message}`, "ERROR");
     process.exit(1)})};
 ;
-
-
 module.exports = IntelligentConflictResolver;

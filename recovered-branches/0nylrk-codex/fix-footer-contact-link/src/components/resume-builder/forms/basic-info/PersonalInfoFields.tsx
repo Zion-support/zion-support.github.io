@@ -1,60 +1,54 @@
-<<<<<<< HEAD
 
   FormField,
-
-import {FormField, FormItem, FormLabel, FormControl, FormMessage} from "@/components/ui/form";
-import {Input} from "@/components/ui/input";
-import {Control} from "react-hook-form";
-import {BasicInfoFormData} from "./schema";
-import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",
-import { Input } from "@/components/ui/input",
-import { Control } from "react-hook-form",
-import { BasicInfoFormData } from "./schema",import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",
-import { Input } from "@/components/ui/input",
-import { Control } from "react-hook-form",
-import { BasicInfoFormData } from "./schema",
-
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
+import {FormField, FormItem, FormLabel, FormControl, FormMessage} from "@/components/ui/form";"
+import {Input} from "@/components/ui/input";"
+import {Control} from "react-hook-form";"
+import {BasicInfoFormData} from "./schema";"
+import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form","
+import { Input } from "@/components/ui/input","
+import { Control } from "react-hook-form","
+import { BasicInfoFormData } from "./schema",import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form","
+import { Input } from "@/components/ui/input","
+import { Control } from "react-hook-form","
+import { BasicInfoFormData } from "./schema","
 import {
+  }
   FormField,
   FormItem,
   FormLabel,
   FormControl,
-  FormMessage,
-} from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-import { Control } from "react-hook-form";
-import { BasicInfoFormData } from "./schema";
+  FormMessage} from "@/components/ui/form";"
+import { Input } from "@/components/ui/input";"
+import { Control } from "react-hook-form";"
+import { BasicInfoFormData } from "./schema";"
 interface PersonalInfoFieldsProps {
-  control: Control<BasicInfoFormData>;
+  }
+  "control": Control<BasicInfoFormData>;
 }
-
-<<<<<<< HEAD
 interface PersonalInfoFieldsProps {
-} from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-import { Control } from "react-hook-form";
-import { BasicInfoFormData } from "./schema";
-  control: Control<BasicInfoFormData>;
+} from "@/components/ui/form";"
+import { Input } from "@/components/ui/input";"
+import { Control } from "react-hook-form";"
+import { BasicInfoFormData } from "./schema";"
+  "control": Control<BasicInfoFormData>;
 }
-
 export function PersonalInfoFields(): any ({ control }: PersonalInfoFieldsProps) {;
-  return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
-      <FormField
-        control={control}
-        name="fullName"
-
+}
+return (;
+    <div className="grid grid-cols-1 "md":grid-cols-2 gap-6">;"
+      <FormField,
+control={control}
+        name="fullName""
 export /**
  * PersonalInfoFields - Function description
  */
 function PersonalInfoFields() {
-  return (
-    <div className="grid grid - cols - 1 md:grid - cols - 2 gap-6">;
+}
+return (;
+    <div className="grid grid - cols - 1 "md":grid - cols - 2 gap-6">;"
       <FormField;
         control={control}
-        name="full_name";
+        name="full_name";"
         render={({ field }) => (
           <FormItem>;
             <FormLabel > Full Name</FormLabel>;
@@ -64,99 +58,68 @@ function PersonalInfoFields() {
 ;
       <FormField;
         control={control}
-        name="title";
+        name="title";"
         render={({ field }) => (;
           <FormItem>;
             <FormLabel>Professional Title</FormLabel>;
             <FormControl>;
-              <Input placeholder="Senior Software Engineer" {...field} />;
+              <Input placeholder="Senior Software Engineer" {...field} />;"
             </FormControl>;
             <FormMessage />;
-
       />;
-
-      <FormField
-        control={control}
-        name="email"        render={({ field }) => (;
+      <FormField,
+control={control}
+        name="email"        render={({ field }) => (;"
           <FormItem>;
             <FormLabel>Email</FormLabel>;
             <FormControl>;
-              <Input type="email" placeholder="john@example && example.com" {...field} />;            </FormControl>;
+              <Input type="email" placeholder="john@example && example.com" {...field} />;            </FormControl>;"
             <FormMessage />;
           </FormItem>;
         )}
-
       />;
-
-      <FormField
-        control={control}
-        name="phone"
+      <FormField,
+control={control}
+        name="phone""
         render={({ field }) => (;
           <FormItem>;
             <FormLabel>Phone</FormLabel>;      />;
         )}
       />
-=======
-export function PersonalInfoFields({ control }: PersonalInfoFieldsProps) {
-  return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-      <FormField
-        control={control}
-        name="fullName"
-        render={({ field }) => (
-          <FormItem>
-            <FormLabel>Full Name</FormLabel>
-            <FormControl>
-              <Input placeholder="John Doe" {...field} />
-            </FormControl>
-            <FormMessage />
-          </FormItem>
-        )}
-      />
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
-      <FormField
-        control={control}
-        name="title"
+      <FormField,
+control={control}
+        name="title""
         render={({ field }) => (
           <FormItem>
             <FormLabel>Professional Title</FormLabel>
             <FormControl>
-              <Input placeholder="Senior Software Engineer" {...field} />
+              <Input placeholder="Senior Software Engineer" {...field} />"
             </FormControl>
             <FormMessage />
           </FormItem>
         )}
       />
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
-      <FormField
-        control={control}
-        name="email"
+      <FormField,
+control={control}
+        name="email""
         render={({ field }) => (
           <FormItem>
             <FormLabel>Email</FormLabel>
             <FormControl>
-              <Input type="email" placeholder="john@example.com" {...field} />
+              <Input type="email" placeholder="john@example.com" {...field} />"
             </FormControl>
             <FormMessage />
           </FormItem>
         )}
       />
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
-      <FormField
-        control={control}
-        name="phone"
+      <FormField,
+control={control}
+        name="phone""
         render={({ field }) => (
           <FormItem>
             <FormLabel>Phone</FormLabel>
             <FormControl>
-              <Input placeholder="+1 234 567 8900" {...field} />
+              <Input placeholder="+1 234 567 8900" {...field} />"
             </FormControl>
             <FormMessage />
           </FormItem>
@@ -165,41 +128,38 @@ export function PersonalInfoFields({ control }: PersonalInfoFieldsProps) {
     </div>
   );
 }
-<<<<<<< HEAD
 ;
-
           </FormItem>;
         )}
       />;
     </div>;
   ),;}
  interface PersonalInfoFieldsProps {
-  control: Control<BasicInfoFormData> 
-}export function PersonalInfoFields ({
-  control 
-}: PersonalInfoFieldsProps) {
-  return (<div className="grid grid-cols-1 md:grid-cols-2 gap-6" > <FormField control= {
-  control 
-}name="fullName" render= {
+  }
+  "control": Control<BasicInfoFormData>
+}export function PersonalInfoFields() {
+  }
+  return (<div className="grid grid-cols-1 "md":grid-cols-2 gap-6" > <FormField control= {"
+  }
+  control
+}name="fullName" render= {"
   ({
-  field 
-}) => (<FormItem> <FormLabel>Full Name</FormLabel> <FormControl> <Input placeholder="John Doe" {
-  ...field 
-}/> 
-}/> <FormField </FormControl> <FormMessage /> </FormItem>) 
-}/> <FormField </FormControl> <FormMessage /> </FormItem>) 
-}/> <FormField </FormControl> <FormMessage /> </FormItem>) 
-}/> </div>) 
+  }
+  field
+}) => (<FormItem> <FormLabel>Full Name</FormLabel> <FormControl> <Input placeholder="John Doe" {"
+  ...field
+} />
+}/> <FormField </FormControl> <FormMessage /> </FormItem>)
+}/> <FormField </FormControl> <FormMessage /> </FormItem>)
+}/> <FormField </FormControl> <FormMessage /> </FormItem>)
+}/> </div>)
 }
   );
 }
 }
 ;
-
   );
 }
   )
 }
 }
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1

@@ -55,7 +55,7 @@ function resolveMergeConflicts(filePath) {
 function findConflictedFiles() {
   try {
     const statusOutput = execSync('git status --porcelain', { encoding: 'utf8' });
-    const conflictedFiles = statusOutput
+const conflictedFiles = statusOutput;
       .split('\n')
       .filter(line => line.includes('UU') || line.includes('AA') || line.includes('DD'))
       .map(line => line.split(' ').pop())
@@ -113,7 +113,7 @@ async function main() {
     }
     
     // Also check for files with conflict markers that might not be in git status
-    const filesWithConflicts = [
+const filesWithConflicts = [;
       'resolve-all-merge-conflicts.cjs',
       'resolve-merge-conflicts-final.cjs',
       'resolve-all-conflicts.cjs',

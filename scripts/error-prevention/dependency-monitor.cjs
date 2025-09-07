@@ -25,7 +25,7 @@ class DependencyMonitor {}
       console.log('Running dependency check...');
       
       // Check for outdated packages;
-      const child = spawn('npm', ['outdated'], {})
+const child = spawn('npm', ['outdated'], {});
         "stdio": ['pipe', 'pipe', 'pipe'],
         "cwd": process.cwd();
       };);
@@ -73,7 +73,7 @@ class DependencyMonitor {}
     try {}
       console.log('Checking package integrity...');
       
-      const child = spawn('npm', ['ls'], {})
+const child = spawn('npm', ['ls'], {});
         "stdio": ['pipe', 'pipe', 'pipe'],
         "cwd": process.cwd();
       };);

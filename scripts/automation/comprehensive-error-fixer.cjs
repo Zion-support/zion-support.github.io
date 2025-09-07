@@ -49,14 +49,14 @@ class ComprehensiveErrorFixer {
   async fixTypeScriptErrors() {
   let fixes = 0;
     // Fix common TypeScript syntax errors;
-    const filesToFix = ["src/components/MobileExperienceEnhancer.tsx",
+const filesToFix = ["src/components/MobileExperienceEnhancer.tsx",;
       "src/components/ModernUIEnhancer.tsx",
       "src/components/NotificationSystem.tsx",
       "src/context/auth/AuthContext.tsx",
       "src/context/auth/profileMapper.ts",
       "src/context/auth/useAuthEventHandlers.ts",
     // Fix common TypeScript syntax errors;
-    const filesToFix = [
+const filesToFix = [;
   "src/components/MobileExperienceEnhancer.tsx",
       "src/components/ModernUIEnhancer.tsx",
       "src/components/NotificationSystem.tsx",
@@ -106,12 +106,12 @@ for (const filePath of filesToFix) {
   async fixJSXErrors() {
   let fixes = 0;
     // Fix common JSX syntax errors;
-    const filesToFix = ["src/components/ScrollToTop.jsx",
+const filesToFix = ["src/components/ScrollToTop.jsx",;
       "src/components/home/ServicesShowcase.jsx",
       "src/layout/PrimaryNav.jsx",
       "src/legal/TermsOfService.tsx",
     // Fix common JSX syntax errors;
-    const filesToFix = [
+const filesToFix = [;
   "src/components/ScrollToTop.jsx",
       "src/components/home/ServicesShowcase.jsx",
       "src/layout/PrimaryNav.jsx",
@@ -198,12 +198,12 @@ for (const filePath of filesToFix) {
   async fixConsoleStatements() {
   let fixes = 0;
     // Replace console statements with proper logging;
-    const filesToFix = ["src/hooks/useAICodeGeneration.jsx",
+const filesToFix = ["src/hooks/useAICodeGeneration.jsx",;
       "src/hooks/usePerformance.jsx",
       "src/utils/productionLogger.js",
       "src/utils/safeStorage.js",
     // Replace console statements with proper logging;
-    const filesToFix = [
+const filesToFix = [;
   "src/hooks/useAICodeGeneration.jsx",
       "src/hooks/usePerformance.jsx",
       "src/utils/productionLogger.js",

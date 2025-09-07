@@ -14,7 +14,7 @@ console.log('==');
 
 // Function to remove merge conflict markers
 function removeMergeConflictMarkers(content) {
-  return content
+return content;
 
 
 
@@ -32,7 +32,7 @@ function removeMergeConflictMarkers(content) {
 
 // Function to fix common syntax errors
 function fixSyntaxErrors(content) {
-  return content
+return content;
     // Fix object literal syntax
     .replace(/\{\s*$/gm, '{')
     .replace(/\[\s*$/gm, '[')
@@ -174,7 +174,7 @@ async function main() {
     }
 
     // Process all TypeScript/JavaScript files
-    const allFiles = [
+const allFiles = [;
       'pages/about.tsx',
       'pages/blog.tsx',
       'pages/ai-services.tsx',

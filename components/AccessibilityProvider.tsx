@@ -1,36 +1,44 @@
-import React, { createContext, useContext, ReactNode } from "react";
+import React, { createContext, useContext, ReactNode } from "react";"
 
 interface AccessibilityContextType {
-  announceToScreenReader: (message: string) => void;
-  setFocus: (elementId: string) => void;
+  }
+  "announceToScreenReader": ("message": string) => void;
+  "setFocus": ("elementId": string) => void;
 }
 
-const AccessibilityContext = createContext<
+const AccessibilityContext = createContext<;
   AccessibilityContextType | undefined
 >(undefined);
 
 interface AccessibilityProviderProps {
-  children: ReactNode;
+  }
+  "children": ReactNode;
 }
 
-export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({
-  children,
+export const "AccessibilityProvider": React.FC<AccessibilityProviderProps> = ({
+  }
+  children
 }) => {
-  const announceToScreenReader = (message: string) => {
-    const liveRegion = document.getElementById("live-region");
+  }
+  const announceToScreenReader = ("message": string) => {
+    }
+    const liveRegion = document.getElementById("live-region");"
     if (liveRegion) {
+      }
       liveRegion.textContent = message;
     }
   };
 
-  const setFocus = (elementId: string) => {
+  const setFocus = ("elementId": string) => {
+    }
     const element = document.getElementById(elementId);
     if (element) {
+      }
       element.focus();
     }
   };
 
-  return (
+return (;
     <AccessibilityContext.Provider value={{ announceToScreenReader, setFocus }}>
       {children}
     </AccessibilityContext.Provider>
@@ -39,20 +47,23 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({
 }
 ;
 interface AccessibilityProviderProps {
-  children: React.ReactNode;
+  }
+  "children": React.ReactNode;
 }
-export const AccessibilityProvider: React.FC < AccessibilityProviderProps> = ({
-  children,
+export const "AccessibilityProvider": React.FC < AccessibilityProviderProps> = ({
+  }
+  children
 }) => {
+  }
   const [high_contrast, setHighContrast] = useState (false);
   const [large_text, setLargeText] = useState (false);
   const [reduced_motion, setReducedMotion] = useState (false);
 ;
-  const toggleHighContrast = () =>: any setHighContrast (!high_contrast);
   const toggleLargeText = () =>: any setLargeText (!large_text);
   const toggleReducedMotion = () =>: any setReducedMotion (!reduced_motion);
 ;
   const value = {
+    }
     high_contrast,
     large_text,
     reduced_motion,

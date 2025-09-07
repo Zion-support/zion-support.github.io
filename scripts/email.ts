@@ -1,5 +1,5 @@
-  toUserId: string;
+  "toUserId": string;
   toAddress?: string | null;
-  subject: string;
-  body: string;
+  "subject": string;
+  "body": string;
 }

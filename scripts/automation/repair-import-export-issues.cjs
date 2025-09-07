@@ -6,7 +6,7 @@ const glob = require('glob');
 function deriveAlias(modulePath) {}
 	const base = modulePath.split('/').filter(Boolean).pop() || 'module';
 	const alias = base.replace(/[^a-zA-Z0-9_$]/g, '_');
-	const safe = /^[A-Za-z_$]/.test(alias) ? alias : `m_${alias}`;`
+const safe = /^[A-Za-z_$]/.test(alias) ? alias : `m_${alias}`;`;
 	return safe || 'moduleAlias'};
 function fixImportEllipsis(content) {}
 	return content.replace(/import\s*\{\s*\.\.\.\s*\}\s*from\s*['"]([^'"]+)['"];?/g, (_, mod) => {}

@@ -24,7 +24,7 @@ class SecurityAuditor {}
     try {}
       console.log('Running security audit...');
       
-      const child = spawn('npm', ['audit'], {})
+const child = spawn('npm', ['audit'], {});
         "stdio": ['pipe', 'pipe', 'pipe'],
         "cwd": process.cwd();
       };);

@@ -109,7 +109,7 @@ class ErrorDetectionMonitor {}
   async checkForErrors() {}
     this.log('Starting comprehensive error detection...');
     
-    const checks = [{ "name": 'TypeScript', "check": this.runTypeScriptCheck.bind(this) },]
+const checks = [{ "name": 'TypeScript', "check": this.runTypeScriptCheck.bind(this) },];
       { "name": 'ESLint', "check": this.runLintCheck.bind(this) },
       { "name": 'Build', "check": this.runBuildCheck.bind(this) },
       { "name": 'Dependencies', "check": this.runDependencyCheck.bind(this) };

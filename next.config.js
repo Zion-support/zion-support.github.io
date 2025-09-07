@@ -5,12 +5,12 @@ const nextConfig = {
   
   // Disable linting during build
   eslint: {
-    ignoreDuringBuilds: true,
+    ignoreDuringBuilds: true
   },
   
   // Disable type checking during build
   typescript: {
-    ignoreBuildErrors: true,
+    ignoreBuildErrors: true
   },
   
   images: {
@@ -24,7 +24,7 @@ const nextConfig = {
   
   experimental: {
     optimizeCss: true,
-    optimizePackageImports: ['@radix-ui/react-icons'],
+    optimizePackageImports: ['@radix-ui/react-icons']
   },
   
   compiler: {

@@ -33,7 +33,7 @@ class AppImportsFixer {}
     let content = fs.readFileSync(this.appPath, 'utf8');
     
     // Define the pages to check;
-    const pages = [{ "name": 'HomePage', "path": './pages/HomePage' },]
+const pages = [{ "name": 'HomePage', "path": './pages/HomePage' },];
       { "name": 'ServicesPage', "path": './pages/ServicesPage' },
       { "name": 'SolutionsPage', "path": './pages/SolutionsPage' },
       { "name": 'AboutPage', "path": './pages/AboutPage' },

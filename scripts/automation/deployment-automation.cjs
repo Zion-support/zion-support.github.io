@@ -31,7 +31,7 @@ class DeploymentAutomation {}
   log(message, level = 'INFO') {}
     const timestamp = new Date().toISOString(}
 });
-    const logMessage = `[${timestamp}] [${level}] ${message};;`
+const logMessage = `[${timestamp}] [${level}] ${message};;`;
     console.log(logMessage);
     try {}
       fs.appendFileSync(this.logFile, logMessage + '\n')} catch(error) {}
@@ -69,7 +69,7 @@ class DeploymentAutomation {}
 
     // Check if working directory is clean;
     try {}
-      const gitStatus = execSync('git status --porcelain', { })
+const gitStatus = execSync('git status --porcelain', { });
         "cwd": this.projectRoot, 
         "encoding": 'utf8',
         "stdio": 'pipe'
@@ -115,7 +115,7 @@ class DeploymentAutomation {}
   async buildApplication() {}
     this.log('Building application...');
     try {}
-      const buildOutput = execSync('npm run build', { })
+const buildOutput = execSync('npm run build', { });
         "cwd": this.projectRoot, 
         "encoding": 'utf8',
         "stdio": 'pipe',
@@ -138,7 +138,7 @@ class DeploymentAutomation {}
   async runTests() {}
     this.log('Running test suite...');
     try {}
-      const testOutput = execSync('npm test -- --coverage --watchAll=false', { })
+const testOutput = execSync('npm test -- --coverage --watchAll=false', { });
         "cwd": this.projectRoot, 
         "encoding": 'utf8',
         "stdio": 'pipe',
@@ -165,7 +165,7 @@ class DeploymentAutomation {}
       this.log('Changes staged');
 
       // Create commit;
-      const commitMessage = `"feat": automated deployment - ${new Date().toISOString()};;`
+const commitMessage = `"feat": automated deployment - ${new Date().toISOString()};;`;
       execSync(`git commit -m "${commitMessage}"`, { "cwd": this.projectRoot }
 });
       this.log('Changes committed');
@@ -183,7 +183,7 @@ class DeploymentAutomation {}
   async pushToRepository() {}
     this.log('Pushing to repository...');
     try {}
-      const currentBranch = execSync('git branch --show-current', {})
+const currentBranch = execSync('git branch --show-current', {});
         "cwd": this.projectRoot,
         "encoding": 'utf8'
       }).trim(;);
@@ -205,7 +205,7 @@ class DeploymentAutomation {}
   async mergeToMain() {}
     this.log('Merging to main branch...');
     try {}
-      const currentBranch = execSync('git branch --show-current', {})
+const currentBranch = execSync('git branch --show-current', {});
         "cwd": this.projectRoot,
         "encoding": 'utf8'
       }).trim(;);
@@ -250,7 +250,7 @@ class DeploymentAutomation {}
   async createDeploymentTag() {}
     this.log('Creating deployment tag...');
     try {}
-      const tagName = `deployment-${new Date().toISOString().split('T')[0]};;`
+const tagName = `deployment-${new Date().toISOString().split('T')[0]};;`;
       execSync(`git tag -a ${tagName} -m "Deployment tag ${tagName}"`, { "cwd": this.projectRoot }
 });
       execSync(`git push origin ${tagName}`, { "cwd": this.projectRoot }

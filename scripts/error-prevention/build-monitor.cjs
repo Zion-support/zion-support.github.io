@@ -24,7 +24,7 @@ class BuildMonitor {}
     try {}
       console.log('Running build check...');
       
-      const child = spawn('npm', ['run', 'build'], {})
+const child = spawn('npm', ['run', 'build'], {});
         "stdio": ['pipe', 'pipe', 'pipe'],
         "cwd": process.cwd();
       };);
@@ -61,7 +61,7 @@ class BuildMonitor {}
       console.log('Attempting to fix build issues...');
       
       // Clean build directory;
-      const cleanChild = spawn('npm', ['run', 'clean'], {})
+const cleanChild = spawn('npm', ['run', 'clean'], {});
         "stdio": 'inherit',
         "cwd": process.cwd();
       };);

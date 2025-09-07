@@ -1,13 +1,14 @@
-import React from 'react';
-const ProductPage.js = ({ className }) => {return (<div className={className || ''}>;
+import React from 'react';'
+const ProductPage.js = ({ className }) => {return (<div className={className || ''}>;'
       <h1>ProductPage.js</h1>;
       <p>This component is under development.</p>;
     </div>;
   )}
 
 const ProductPage.js = ({ className }) => {
-  return (
-    <div className={className || ''}>
+}
+return (;
+    <div className={className || ''}>'
       <h1>ProductPage.js</h1>
       <p>This component is under development.</p>
     </div>

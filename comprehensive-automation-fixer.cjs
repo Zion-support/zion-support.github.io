@@ -235,7 +235,7 @@ module.exports = ({ children }) => React.createElement('div', {}, children);`;
   async runCustomAutomations() {
     this.log('🔧 Running Custom Automation Scripts');
 
-    const customScripts = [
+const customScripts = [;
       {
         name: 'Performance Optimizer',
         script: () => this.runPerformanceOptimization(),
@@ -406,7 +406,7 @@ module.exports = ({ children }) => React.createElement('div', {}, children);`;
 
   async runDependencyCheck() {
     try {
-      const packageJson = JSON.parse(
+const packageJson = JSON.parse(;
         fs.readFileSync(path.join(this.projectRoot, 'package.json'), 'utf8')
       );
       const dependencies = {
@@ -477,7 +477,7 @@ module.exports = ({ children }) => React.createElement('div', {}, children);`;
       results: results,
     };
 
-    const reportFile = path.join(
+const reportFile = path.join(;
       this.projectRoot,
       'comprehensive-automation-report.json'
     );
@@ -499,19 +499,19 @@ module.exports = ({ children }) => React.createElement('div', {}, children);`;
       this.createMockFiles();
 
       // Run standard automation scripts
-      const standardResults = await this.runCommand(
+const standardResults = await this.runCommand(;
         'npm run lint:fix',
         'ESLint Fix'
       );
-      const typeCheckResults = await this.runCommand(
+const typeCheckResults = await this.runCommand(;
         'npm run type-check',
         'TypeScript Type Check'
       );
-      const testResults = await this.runCommand(
+const testResults = await this.runCommand(;
         'npm run test -- --passWithNoTests',
         'Test Suite'
       );
-      const buildResults = await this.runCommand(
+const buildResults = await this.runCommand(;
         'npm run build',
         'Build Application'
       );
@@ -520,7 +520,7 @@ module.exports = ({ children }) => React.createElement('div', {}, children);`;
       const customResults = await this.runCustomAutomations();
 
       // Combine results
-      const allResults = [
+const allResults = [;
         standardResults,
         typeCheckResults,
         testResults,
@@ -557,16 +557,16 @@ fixer
     process.exit(1);
   });
 #!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
-const automationFiles = ['automation/dependency-fixer.cjs']
+const fs = require('fs');
+const path = require('path');
+const automationFiles = ['automation/dependency-fixer.cjs'];
   'automation/typescript-fixer.cjs'
   'automation/health-check.cjs'
   'automation/security-scanner.cjs'
   'automation/performance-optimizer.cjs'
-    let content = fs.readFileSync(filePath, 'utf8')
-    const fileName = path.basename(filePath, '.cjs')
-    let className = ''
+let content = fs.readFileSync(filePath, 'utf8');
+const fileName = path.basename(filePath, '.cjs');
+let className = '';
       case 'dependency-fixer'
         className = 'DependencyFixer'
       case 'typescript-fixer'

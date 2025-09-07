@@ -27,7 +27,7 @@ class AICodeAnalyzer {}
     log(message) {}
         const timestamp = new Date().toISOString(}
 });
-        const logMessage = `[${timestamp}] ${message}\;n;`;`
+const logMessage = `[${timestamp}] ${message}\;n;`;`;
         fs.appendFileSync(this.logFile, logMessage);
         console.log(message)};
     analyzeCodeQuality() {}
@@ -35,7 +35,7 @@ class AICodeAnalyzer {}
         
         try {}
             // Run ESLint analysis;
-            const eslintResult = execSync('npm run lint', { })
+const eslintResult = execSync('npm run lint', { });
                 "cwd": this.projectRoot, 
                 "encoding": 'utf8',
                 "stdio": 'pipe'
@@ -50,7 +50,7 @@ class AICodeAnalyzer {}
         this.log('Starting TypeScript analysis...');
         
         try {}
-            const typeCheckResult = execSync('npm run type-check', { })
+const typeCheckResult = execSync('npm run type-check', { });
                 "cwd": this.projectRoot, 
                 "encoding": 'utf8',
                 "stdio": 'pipe'
@@ -65,7 +65,7 @@ class AICodeAnalyzer {}
         this.log('Analyzing dependencies...');
         
         try {}
-            const auditResult = execSync('npm audit --json', { })
+const auditResult = execSync('npm audit --json', { });
                 "cwd": this.projectRoot, 
                 "encoding": 'utf8',
                 "stdio": 'pipe'
@@ -101,7 +101,7 @@ class AICodeAnalyzer {}
         
         return report};
     generateRecommendations() {}
-        return [;]
+return [;];
             'Consider implementing automated testing for better code coverage',
             'Review and update dependencies regularly for security patches',
             'Implement code formatting with Prettier for consistent style',

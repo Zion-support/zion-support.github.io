@@ -27,14 +27,14 @@ class PM2SyncAutomation {}
     log(message) {}
         const timestamp = new Date().toISOString(}
 });
-        const logMessage = `[${timestamp}] ${message}\;n;`;`
+const logMessage = `[${timestamp}] ${message}\;n;`;`;
         fs.appendFileSync(this.logFile, logMessage);
         console.log(message)};
     checkPM2Status() {}
         this.log('Checking PM2 status...');
         
         try {}
-            const statusResult = execSync('pm2 status --json', { })
+const statusResult = execSync('pm2 status --json', { });
                 "cwd": this.projectRoot, 
                 "encoding": 'utf8',
                 "stdio": 'pipe'
@@ -88,7 +88,7 @@ class PM2SyncAutomation {}
         this.log('Checking process health...');
         
         try {}
-            const statusResult = execSync('pm2 status --json', { })
+const statusResult = execSync('pm2 status --json', { });
                 "cwd": this.projectRoot, 
                 "encoding": 'utf8',
                 "stdio": 'pipe'
@@ -154,7 +154,7 @@ class PM2SyncAutomation {}
         
         return report};
     generateSyncRecommendations() {}
-        return [;]
+return [;];
             'Set up PM2 monitoring dashboard',
             'Configure automatic restarts for failed processes',
             'Implement log rotation for PM2 logs',

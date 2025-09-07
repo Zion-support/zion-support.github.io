@@ -1,6 +1,3 @@
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 #!/usr/bin/env node;
 /**
  * PM2 Security Scanner Service;
@@ -28,10 +25,7 @@ class SecurityScanner {}
   };
   log(message) {}
     const timestamp = new Date().toISOString();
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-    const logMessage = `[${timestamp}] [${this.processName}] ${message}\n`;`
+const logMessage = `[${timestamp}] [${this.processName}] ${message}\n`;`;
     console.log(logMessage.trim());
     fs.appendFileSync(this.logFile, logMessage);
   };
@@ -43,7 +37,7 @@ class SecurityScanner {}
     try {}
       this.log('Scanning dependencies for vulnerabilities...');
       // Run npm audit;
-      const auditResult = execSync('npm audit --json', { })
+const auditResult = execSync('npm audit --json', { });
         encoding: 'utf8',
         stdio: 'pipe',
         cwd: process.cwd();
@@ -82,7 +76,7 @@ class SecurityScanner {}
       // Check for common security issues;
       const securityIssues = [];
       // Check for hardcoded secrets;
-      const secretPatterns = []
+const secretPatterns = [];
         /password\s*=\s*['"][^'"]+['"]/gi,
         /api[_-]?key\s*=\s*['"][^'"]+['"]/gi,
         /secret\s*=\s*['"][^'"]+['"]/gi,
@@ -126,12 +120,11 @@ class SecurityScanner {}
     };
     try {}
       this.log('Scanning configuration files...');
-      const configFiles = []
+const configFiles = [];
         'package.json',
         'next.config.js',
         'vite.config.js',
-        'webpack.config.js',
-      ].filter(file => fs.existsSync(file));
+        'webpack.config.js'].filter(file => fs.existsSync(file));
       const configIssues = [];
       for (const file of configFiles) {}
         try {}
@@ -214,8 +207,8 @@ class SecurityScanner {}
     this.log(`${this.processName} started`);
     try {}
       const report = await this.generateReport();
-      const totalIssues = (report.dependencyScan.total || 0) + 
-                         (report.codeScan.totalIssues || 0) + 
+const totalIssues = (report.dependencyScan.total || 0) +;
+                         (report.codeScan.totalIssues || 0) +
                          (report.configScan.totalIssues || 0);
       if (totalIssues === 0) {}
         this.log('Security scan completed - no issues found');
@@ -235,8 +228,5 @@ if (require.main === module) {}
   const securityScanner = new SecurityScanner();
   securityScanner.start().catch(console.error);
 };
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
-=======
 module.exports = SecurityScanner;module.exports = SecurityScanner;
 module.exports = SecurityScanner;module.exports = SecurityScanner;
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6

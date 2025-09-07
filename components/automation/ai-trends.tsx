@@ -1,10 +1,10 @@
 
 
-import fs from 'fs';
-import path from 'path';
+import fs from 'fs';'
+import path from 'path';'
 
 export type Trend = any;
-  return { props: { items } },
+return { "props": { items } },;
 }
 
     </div>;

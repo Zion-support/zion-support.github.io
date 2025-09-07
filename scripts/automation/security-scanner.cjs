@@ -27,14 +27,14 @@ class SecurityScanner {}
     log(message) {}
         const timestamp = new Date().toISOString(}
 });
-        const logMessage = `[${timestamp}] ${message}\;n;`;`
+const logMessage = `[${timestamp}] ${message}\;n;`;`;
         fs.appendFileSync(this.logFile, logMessage);
         console.log(message)};
     scanForVulnerabilities() {}
         this.log('Scanning for security vulnerabilities...');
         
         try {}
-            const auditResult = execSync('npm audit --json', { })
+const auditResult = execSync('npm audit --json', { });
                 "cwd": this.projectRoot, 
                 "encoding": 'utf8',
                 "stdio": 'pipe'
@@ -56,7 +56,7 @@ class SecurityScanner {}
     scanForSecrets() {}
         this.log('Scanning for exposed secrets...');
         
-        const secretPatterns = [{ "name": 'API Keys', "pattern": /api[_-]?key\s*[:=]\s*['"][^'"]+['"]/gi },
+const secretPatterns = [{ "name": 'API Keys', "pattern": /api[_-]?key\s*[:=]\s*['"][^'"]+['"]/gi },;
             { "name": 'Passwords', "pattern": /password\s*[:=]\s*['"][^'"]+['"]/gi },
             { "name": 'Secrets', "pattern": /secret\s*[:=]\s*['"][^'"]+['"]/gi },
             { "name": 'Tokens', "pattern": /token\s*[:=]\s*['"][^'"]+['"]/gi },
@@ -128,7 +128,7 @@ class SecurityScanner {}
     checkFilePermissions() {}
         this.log('Checking file permissions...');
         
-        const criticalFiles = ['package.json',]
+const criticalFiles = ['package.json',];
             'package-lock.json',
             '.env',
             '.env.local',
@@ -202,7 +202,7 @@ class SecurityScanner {}
     };
     checkForVulnerablePackages(dependencies) {}
         // This is a simplified check - in practice, you'd use a vulnerability database;
-        const knownVulnerable = ['lodash@4.17.0',]
+const knownVulnerable = ['lodash@4.17.0',];
             'jquery@1.12.0',
             'moment@2.24.0'
         ];
@@ -210,7 +210,7 @@ class SecurityScanner {}
         const vulnerable = [];
         
         for (const [name, version] of Object.entries(dependencies)) {}
-            const packageVersion = \`\${name}@\${version}\;`;`
+const packageVersion = \`\${name}@\${version}\;`;`;
             if ([0]))) {}
                 vulnerable.push({})
                     "name": name,
@@ -237,7 +237,7 @@ class SecurityScanner {}
             nextConfig = fs.readFileSync(nextConfigPath, 'utf8')};
         // Add security headers if not already present;
         if (!nextConfig.includes('X-Frame-Options')) {}
-            const securityHeaders = '
+const securityHeaders = ';
   // Security headers;
   async headers() {}
     return ) {}
@@ -245,10 +245,10 @@ class SecurityScanner {}
             nextConfig = fs.readFileSync(nextConfigPath, 'utf8')};
         // Add security headers if not already present;
         if (!nextConfig.includes('X-Frame-Options')) {}
-            const securityHeaders = '
+const securityHeaders = ';
   // Security headers;
   async headers() {}
-    return }[;]
+return }[;];
       {}
         "source": '/(.*)',
         "headers": []
@@ -297,7 +297,7 @@ class SecurityScanner {}
         
         return report};
     generateSecurityRecommendations() {}
-        return [;]
+return [;];
             'Use environment variables for all sensitive configuration',
             'Implement proper input validation and sanitization',
             'Use HTTPS in production environments',

@@ -48,14 +48,14 @@ setupSignalHandlers() {}
   log(level, ...args) {}
     const timestamp = new Date().toISOString();
 
-    const message = `[${timestamp}] [${level.toUpperCase()}] ${args.join(' ')}`;`
+const message = `[${timestamp}] [${level.toUpperCase()}] ${args.join(' ')}`;`;
     console.log(message);
     
     const logFile = path.join(this.logDir, 'build-monitor.log');
     fs.appendFileSync(logFile, message + '\n')};
   async runCommand(command, options = {}) {}
     try {}
-      const result = execSync(command, { })
+const result = execSync(command, { });
         "encoding": 'utf8', 
         "cwd": this.projectRoot,
         "stdio": 'pipe',

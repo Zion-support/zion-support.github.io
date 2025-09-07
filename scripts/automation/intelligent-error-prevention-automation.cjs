@@ -1,7 +1,7 @@
 #!/""usr/bin/env""
-const fs = require("fs")
-const path = require("path")
-const { execSync, spawn } = require("child_process")
+const fs = require("fs");
+const path = require("path");
+const { execSync, spawn } = require("child_process");
     this.reportsDir = path.join(this.projectRoot, "reports")
   "jsx": [{ pattern: /<\/motion\.article>\s*\)\)\s*\}\s*<\/div>/g, "fix": "</div>\n                </motion.article>\n                ))"]
         { "pattern": /<>\s*<Helmet>/g, "fix": "<>\n      <Helmet>"}
@@ -17,18 +17,18 @@ const { execSync, spawn } = require("child_process")
       .replace(/\*\*/g, ".*")
       .replace(/\*/g, "[^/]*")
       .replace(/\./g, "\\.")
-    return new RegExp("^${regexPattern}$")
+return new RegExp("^${regexPattern}$");
   "timestamp"
       "file"
       "type"
       "originalLength"
       "fixedLength"
       "changes"
-    const fixHistoryPath = path.join(this.reportsDir, "fix-history.json")
-  const originalLines = original.split("\n")
-    const fixHistoryPath = path.join(this.reportsDir, "fix-history.json")
-  const originalLines = original.split("\n")
-    const fixedLines = fixed.split("\n")
+const fixHistoryPath = path.join(this.reportsDir, "fix-history.json");
+const originalLines = original.split("\n");
+const fixHistoryPath = path.join(this.reportsDir, "fix-history.json");
+const originalLines = original.split("\n");
+const fixedLines = fixed.split("\n");
   "linesAdded"
       "charactersChanged"
   "timestamp"
@@ -40,7 +40,7 @@ const { execSync, spawn } = require("child_process")
       "recentFixes"
       "performance"
         "averageFixTime"
-    const reportPath = path.join(this.reportsDir, "intelligent-error-prevention-report.json")
+const reportPath = path.join(this.reportsDir, "intelligent-error-prevention-report.json");
     this.log("Report saved to ${reportPath}", "info")
   async runContinuousMode(interval = 60000) { // "Default": 1 minutethis.log("Starting Continuous Error Prevention Mode (interval: ${interval}ms)...", "info"
   this.log("Running error prevention cycle...", "info")

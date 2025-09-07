@@ -31,7 +31,7 @@ class EnhancedAppOptimizer {}
   log(message, level = 'INFO') {}
     const timestamp = new Date().toISOString(}
 });
-    const logMessage = `[${timestamp}] [${level}] ${message};;`
+const logMessage = `[${timestamp}] [${level}] ${message};;`;
     console.log(logMessage);
     try {}
       fs.appendFileSync(this.logFile, logMessage + '\n')} catch(error) {}
@@ -43,7 +43,7 @@ class EnhancedAppOptimizer {}
 
     try {}
       // Analyze bundle size;
-      const bundleAnalysis = execSync('npm run "build": analyze', { })
+const bundleAnalysis = execSync('npm run "build": analyze', { });
         "cwd": this.projectRoot, 
         "stdio": 'pipe',
         "timeout": 120000;
@@ -245,7 +245,7 @@ class EnhancedAppOptimizer {}
     })};
     return files};
   generateSitemap() {}
-    const pages = ['/',]
+const pages = ['/',];
       '/about',
       '/services',
       '/ai-services',

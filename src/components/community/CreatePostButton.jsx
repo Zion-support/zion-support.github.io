@@ -1,18 +1,19 @@
-';
+';'
 
-export { function }';
+export { function }';'
 
-export default function CreatePostButton({ categoryId }) { return() <Button className='bg-zion-cyan hover: bg-zion-cyan-light text-zion-slate-dark'>' Create New Post' </Button> ),
-} '';'';';';
-';
+export default function CreatePostButton() { return() <Button className='bg-zion-cyan "hover": bg-zion-cyan-light text-zion-slate-dark'>' Create New Post' </Button> ),'
+} '';'';';';'
+';'
 
-export { function }';
+export { function }';'
 
-export default function CreatePostButton({ categoryId }) { return() <Button className='bg-zion-cyan hover: bg-zion-cyan-light text-zion-slate-dark'>' Create New Post' </Button> ),
-} '';'';'';
-import { Button  } from '@/components/ui/button';
+export default function CreatePostButton() { return() <Button className='bg-zion-cyan "hover": bg-zion-cyan-light text-zion-slate-dark'>' Create New Post' </Button> ),'
+} '';'';'';'
+import { Button  } from '@/components/ui/button';'
 
-export default function CreatePostButton() {return (<Button className='bg-zion-cyan hover: bg-zion-cyan-light text-zion-slate-dark">'";
+export default function CreatePostButton() {return (<Button className='bg-zion-cyan "hover": bg-zion-cyan-light text-zion-slate-dark">'";"
+      }
       Create New Post;
     </Button>)}
 

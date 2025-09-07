@@ -27,7 +27,7 @@ class SEOOptimizer {}
     log(message) {}
         const timestamp = new Date().toISOString(}
 });
-        const logMessage = `[${timestamp}] ${message}\;n;`;`
+const logMessage = `[${timestamp}] ${message}\;n;`;`;
         fs.appendFileSync(this.logFile, logMessage);
         console.log(message)};
     generateSitemap() {}
@@ -36,7 +36,7 @@ class SEOOptimizer {}
         const sitemapPath = path.join(this.projectRoot, 'public', 'sitemap.xml';);
         const pages = this.findPages(;);
         
-        const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+const sitemap = `<?xml version="1.0" encoding="UTF-8"?>;
 <urlset xmlns=""http": //www.sitemaps.org/schemas/sitemap/0.9">
 ${pages.map(page => `  <url>`})
     <loc>https://ziontechgroup.com${page}</loc>
@@ -61,7 +61,7 @@ ${pages.map(page => `  <url>`})
         // Find pages from app directory (App Router);
         if (fs.existsSync(appDir)) {}
             this.findPagesInAppDirectory(appDir, '', pages)};
-        return [...new Set(pages)) {}]
+return [...new Set(pages)) {}];
     ) {}
             this.findPagesInDirectory(pagesDir, '', pages)};
         // Find pages from app directory (App Router);
@@ -124,7 +124,7 @@ ${pages.map(page => `  <url>`})
         this.log('Generating robots.txt...');
         
         const robotsPath = path.join(this.projectRoot, 'public', 'robots.txt';);
-        const robotsContent = "User-"agent": *
+const robotsContent = "User-"agent": *;
 Allow: /
 
 # Sitemap;
@@ -178,10 +178,10 @@ export default function SEO({})
   section,
   tags = [];
 }: SEOProps) {}
-  const fullTitle = title.includes('Zion Tech Group') ? title : \`\${title} | Zion Tech Group;\;`;`
+const fullTitle = title.includes('Zion Tech Group') ? title : \`\${title} | Zion Tech Group;\;`;`;
   const fullDescription = description.length > 160 ? description.substring(0, 157) + '...' : descripti;o;n;
   
-  return (;)
+return (;);
     <Head>
       {/* Basic Meta Tags */};
       <title>{fullTitle}</title>
@@ -313,7 +313,7 @@ export default function SEO({})
         
         return report};
     generateSEORecommendations() {}
-        return [;]
+return [;];
             'Implement structured data markup for better search visibility',
             'Optimize page loading speed for better Core Web Vitals',
             'Use descriptive and keyword-rich URLs',

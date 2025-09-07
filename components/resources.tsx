@@ -1,12 +1,13 @@
-import React from 'react';
-import SEO from '../components/SEO';
-import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
-import Link from 'next/link';
+import React from 'react';'
+import SEO from '../components/SEO';'
+import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';'
+import Link from 'next/link';'
 
 export default function ResourcesPage() {
-  return (
+}
+return (;
 
-              <div className='mt-3 text-cyan-300'>Open →</div>
+              <div className='mt-3 text-cyan-300'>Open →</div>'
             </Link>
           ))}
         </div>

@@ -32,7 +32,7 @@ class ComprehensiveTestAutomation {}
   log(message, level = 'INFO') {}
     const timestamp = new Date().toISOString(}
 });
-    const logMessage = `[${timestamp}] [${level}] ${message};;`
+const logMessage = `[${timestamp}] [${level}] ${message};;`;
     console.log(logMessage);
     try {}
       fs.appendFileSync(this.logFile, logMessage + '\n')} catch(error) {}
@@ -116,7 +116,7 @@ class ComprehensiveTestAutomation {}
 
     try {}
       // Check bundle size;
-      const buildOutput = execSync('npm run build', { })
+const buildOutput = execSync('npm run build', { });
         "cwd": this.projectRoot, 
         "encoding": 'utf8',
         "stdio": 'pipe',

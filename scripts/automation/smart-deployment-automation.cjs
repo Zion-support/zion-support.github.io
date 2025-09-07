@@ -27,7 +27,7 @@ class SmartDeploymentAutomation {}
     log(message) {}
         const timestamp = new Date().toISOString(}
 });
-        const logMessage = `[${timestamp}] ${message}\;n;`;`
+const logMessage = `[${timestamp}] ${message}\;n;`;`;
         fs.appendFileSync(this.logFile, logMessage);
         console.log(message)};
     preDeploymentChecks() {}
@@ -160,7 +160,7 @@ class SmartDeploymentAutomation {}
         
         return report};
     generateDeploymentRecommendations() {}
-        return [;]
+return [;];
             'Implement automated testing in CI/CD pipeline',
             'Use environment-specific configuration files',
             'Implement blue-green deployment strategy',

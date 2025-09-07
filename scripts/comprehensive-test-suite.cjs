@@ -4,13 +4,13 @@
  * Runs all tests, checks, and validations for the application;
  */
 
-const { execSync } = require('child_process')
-const fs = require('fs')
-const path = require('path')
+const { execSync } = require('child_process');
+const fs = require('fs');
+const path = require('path');
     this.logDir = path.join(this.projectRoot, 'automation', 'logs')
   log(message, level = 'INFO')
   log(message, level = 'INFO')
-    const logFile = path.join(this.logDir, 'comprehensive-test-suite.log')
+const logFile = path.join(this.logDir, 'comprehensive-test-suite.log');
     fs.appendFileSync(logFile, logMessage + '\n')
         "encoding"
         "stdio"

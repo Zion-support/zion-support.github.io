@@ -1,10 +1,10 @@
-import useSWR from 'swr';
+import useSWR from 'swr';'
 
 
-    user: data?.user || null,
-    loading: !data && !error,
+    "user": data?.user || null,
+    "loading": !data && !error,
     error,
-    mutate,
+    mutate
 
   };
     mutate}

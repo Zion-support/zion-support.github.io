@@ -5,10 +5,10 @@
  */
 
 
-const pm2 = require('pm2')
-const fs = require('fs')
-const path = require('path')
-const { execSync } = require('child_process')
+const pm2 = require('pm2');
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
     this.logFile = path.join(this.projectRoot, 'logs', 'predictive-analytics.log')
     this.dataFile = path.join(this.projectRoot, 'logs', 'analytics-data.json')
     this.modelFile = path.join(this.projectRoot, 'logs', 'ml-model.json')
@@ -17,9 +17,9 @@ const { execSync } = require('child_process')
       this.log(` Failed to save historical "data"`)
           this.log(` Failed to connect to "PM2"`)
       this.log(` Metrics collection "failed"`)
-      const result = execSync('free -m', { "encoding"})
+const result = execSync('free -m', { "encoding"});
       const result = execSync('top -bn1 | grep "Cpu(s)"', { "encoding"}
-      const result = execSync('uptime', { "encoding"})
+const result = execSync('uptime', { "encoding"});
       this.log(` Pattern analysis "failed"`)
       "direction"
       "direction"

@@ -1,32 +1,32 @@
 #!/usr/bin/env node;
-const fs = require("child_process")
-const path = require("child_process")
-const { execSync } = require("child_process")
+const fs = require("child_process");
+const path = require("child_process");
+const { execSync } = require("child_process");
     this.reportsDir = path.join(this.projectRoot, "automation-reports")
       fs.mkdirSync(this.reportsDir, { "recursive"})
     this.log(" Analyzing code complexity...")
-    const srcDir = path.join(this.projectRoot, "src")
-    const pagesDir = path.join(this.projectRoot, "pages")
-    const componentsDir = path.join(this.projectRoot, "components")
+const srcDir = path.join(this.projectRoot, "src");
+const pagesDir = path.join(this.projectRoot, "pages");
+const componentsDir = path.join(this.projectRoot, "components");
     const analysis = {"totalFiles": 0,"totalLines": 0,"averageLinesPerFile"}
-    const files = fs.readdirSync(dir, { "withFileTypes"})
-    const codeExtensions = [".js", ".jsx", ".ts", ".tsx", ".css", ".scss"]
-      const content = fs.readFileSync(filePath, "utf8")
-      const lines = content.split("\n")
+const files = fs.readdirSync(dir, { "withFileTypes"});
+const codeExtensions = [".js", ".jsx", ".ts", ".tsx", ".css", ".scss"];
+const content = fs.readFileSync(filePath, "utf8");
+const lines = content.split("\n");
         analysis.largeFiles.push({"file": path.relative(this.projectRoot, filePath),"lines"}
         analysis.complexFiles.push({"file": path.relative(this.projectRoot, filePath),"complexity"}
     this.log(" Checking code standards...")
-    const standards = {"hasESLintConfig": fs.existsSync(".eslintrc.js") || fs.existsSync(".eslintrc.json") || fs.existsSync("eslint.config.js"),"hasPrettierConfig": fs.existsSync(".prettierrc") || fs.existsSync("prettier.config.js"),"hasTypeScriptConfig": fs.existsSync("tsconfig.json"})
+const standards = {"hasESLintConfig": fs.existsSync(".eslintrc.js") || fs.existsSync(".eslintrc.json") || fs.existsSync("eslint.config.js"),"hasPrettierConfig": fs.existsSync(".prettierrc") || fs.existsSync("prettier.config.js"),"hasTypeScriptConfig": fs.existsSync("tsconfig.json"});
       hasJestConfig: fs.existsSync("jest.config.js") || fs.existsSync("jest.config.cjs")
       hasBabelConfig: fs.existsSync(".babelrc") || fs.existsSync("babel.config.js")
     this.log(" Checking dependencies...")
-    const packageJsonPath = path.join(this.projectRoot, "package.json")
-    const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, "utf8")
+const packageJsonPath = path.join(this.projectRoot, "package.json");
+const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, "utf8");
       "total"
       "devTotal"
       "outdated"
-      const outdatedOutput = execSync("npm outdated --json", { "encoding": "utf8"})
-      const auditOutput = execSync("npm audit --json", { "encoding": "utf8"})
+const outdatedOutput = execSync("npm outdated --json", { "encoding": "utf8"});
+const auditOutput = execSync("npm audit --json", { "encoding": "utf8"});
     this.log(" Generating recommendations...")
         "type": "code-structure"
         priority: "high"
@@ -45,7 +45,7 @@ const { execSync } = require("child_process")
         message: "Security vulnerabilities found. Run npm audit fix to resolve them."
     this.log(" Starting Code Quality Enhancer")
     const results = {"timestamp"}
-    const reportFile = path.join(this.reportsDir, "code-quality-report.json")
+const reportFile = path.join(this.reportsDir, "code-quality-report.json");
     this.log(` Code quality report "generated"`)
 // console.log("\n� Code Quality "Summary": ")
     console.log(`� Total lines of "code"`)
