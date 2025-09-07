@@ -1,127 +1,29 @@
-import { createWriteStream } from 'fs';
-import { join } from 'path';
-;
-const generateSitemap = () => {;
-  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>;
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">;
-  <url>;
-    <loc>https://ziontechgroup.com/</loc>;
-    <lastmod>${new Date().toISOString()}</lastmod>;
-    <changefreq>daily</changefreq>;
-    <priority>1.0</priority>;
-  </url>;
-  <url>;
-    <loc>https://ziontechgroup.com/about</loc>;
-    <lastmod>${new Date().toISOString()}</lastmod>;
-    <changefreq>weekly</changefreq>;
-    <priority>0.8</priority>;
-  </url>;
-  <url>;
-    <loc>https://ziontechgroup.com/services</loc>;
-    <lastmod>${new Date().toISOString()}</lastmod>;
-    <changefreq>weekly</changefreq>;
-    <priority>0.8</priority>;
-  </url>;
-  <url>;
-    <loc>https://ziontechgroup.com/contact</loc>;
-    <lastmod>${new Date().toISOString()}</lastmod>;
-    <changefreq>monthly</changefreq>;
-    <priority>0.6</priority>;
-  </url>;
-</urlset>`;
-;
-  const sitemapPath = join(process.cwd(), 'public', 'sitemap.xml');
-  const writeStream = createWriteStream(sitemapPath);
-  writeStream.write(sitemap);
-  writeStream.end();
-;
-  console.log('Sitemap generated successfully at:', sitemapPath);
-};
-;generateSitemap();
-};
-;
-import { createWriteStream } from 'fs',
-import { join } from 'path',
+
+const fs = require('fs');
+const path = require('path');
+
+const baseUrl = 'https://ziontechgroup.com';
+const pages = [
+  { url: '/', changefreq: 'daily', priority: '1.0' },
+  { url: '/about', changefreq: 'monthly', priority: '0.8' },
+  { url: '/services', changefreq: 'weekly', priority: '0.9' },
+  { url: '/contact', changefreq: 'monthly', priority: '0.7' },
+  { url: '/pricing', changefreq: 'weekly', priority: '0.8' },
+];
+
 const generateSitemap = () => {
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns=""http": //www.sitemaps.org/schemas/sitemap/0.9">
-
-import fs from 'fs'; import path from 'path'; import { fileURLToPath } from 'url'; const __filename = fileURLToPath(import.meta.url); const __dirname = path.dirname(__filename); const baseUrl = 'https: const pages = [ ,'/about','/services','/services/ai-services','/services/micro-saas','/services/it-services','/contact',]; const generateSitemap = () => { const sitemap = `<?xml version="1.0" encoding="UTF-8"?> <urlset xmlns="http: ${pages.map(page => ` <url> <loc>${baseUrl}${page}</loc> <lastmod>${new Date().toISOString().split('T')[0]}</lastmod> <changefreq>weekly</changefreq> <priority>${page ===  ? '1.0' : '0.8'}</priority> </url>`).join('\n')} </urlset>`; const outDir = path.join(__dirname,'..','out'); if (!fs.existsSync(outDir)) { fs.mkdirSync(outDir,{ recursive: true })} fs.writeFileSync(path.join(outDir,'sitemap.xml'),sitemap); }; generateSitemap();`
-  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>""
-<urlset xmlns=""http": //www.sitemaps.org/schemas/sitemap/0.9">"
-</urlset>`
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${pages.map(page => `  <url>
-</url>
-    <loc>${baseUrl}${page}</loc>)"
-    <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>
+    <loc>${baseUrl}${page.url}</loc>
+    <lastmod>${new Date().toISOString()}</lastmod>
     <changefreq>${page.changefreq}</changefreq>
     <priority>${page.priority}</priority>
-  </url>`).join('')}
-</urlset>`
-  fs.writeFileSync(path.join(process.cwd(), 'public/sitemap.xml'), sitemap)
-}
-export default generateSitemap
-    <priority>${page.priority}</priority>`
-  </url>`).join()}`
-    <changefreq>weekly</changefreq>
+  </url>`).join('\n')}
+</urlset>`;
 
-    <priority>${page === '' ? '1.0' : '0.8'}</priority>
-
-  </url>").join('\n')}
-</urlset>"
-  const outDir = path.join(__dirname, '..', 'out')
-  if (!fs.existsSync(outDir)) {
-    fs.mkdirSync(outDir, { "recursive": true })}
-  fs.writeFileSync(path.join(outDir, 'sitemap.xml'), sitemap);
-  console.log('✅ Sitemap generated successfully')};
-generateSitemap();
+  fs.writeFileSync(path.join(__dirname, '..', 'public', 'sitemap.xml'), sitemap);
+  console.log('Sitemap generated successfully');
 };
-,
-generateSitemap(),
 
-  const sitemapPath = join(process.cwd(), 'publicsitemap.xml'),
-  const writeStream = createWriteStream(sitemapPath),
-  writeStream.write(sitemap),
-  writeStream.end(),
-
-  console.log('Sitemap generated successfully at:', sitemapPath)
-},
-
-generateSitemap(),
-import { createWriteStream } from 'fs',;
-import { join } from 'path',;
-const generateSitemap = () => {;
-  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>;
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">;
-  <url>;
-    <loc>https://ziontechgroup.com/</loc>;
-    <lastmod>${new Date().toISOString()}</lastmod>;
-    <changefreq>daily</changefreq>;
-    <priority>1.0</priority>;
-  </url>;
-  <url>;
-    <loc>https://ziontechgroup.com/about</loc>;
-    <lastmod>${new Date().toISOString()}</lastmod>;
-    <changefreq>weekly</changefreq>;
-    <priority>0.8</priority>;
-  </url>;
-  <url>;
-    <loc>https://ziontechgroup.com/services</loc>;
-    <lastmod>${new Date().toISOString()}</lastmod>;
-    <changefreq>weekly</changefreq>;
-    <priority>0.8</priority>;
-  </url>;
-  <url>;
-    <loc>https://ziontechgroup.com/contact</loc>;
-    <lastmod>${new Date().toISOString()}</lastmod>;
-    <changefreq>monthly</changefreq>;
-    <priority>0.6</priority>;
-  </url>;
-</urlset>`,;
-  const sitemapPath = join(process.cwd(), 'publicsitemap.xml'),;
-  const writeStream = createWriteStream(sitemapPath),;
-  writeStream.write(sitemap),;
-  writeStream.end(),;
-  console.log('Sitemap generated successfully at:', sitemapPath);
-},;
 generateSitemap();
