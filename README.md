@@ -131,6 +131,19 @@ npm run dev
 ## 🏗️ Build for Production
 
 ```bash
+# Clone the repository
+git clone https://github.com/ziontechgroup/zion-app.git
+
+# Navigate to project directory
+cd zion-app
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Build for production
 npm run build
 ```
 
@@ -573,11 +586,11 @@ npm start
 ## 📜 Available Scripts
 ### Available Scripts
 
-- `npm run dev` - Start development server
-- `npm run build` - Build for production
-- `npm run preview` - Preview production build
-- `npm run lint` - Run ESLint
-- `npm run type-check` - Run TypeScript type checking
+The application is fully responsive and optimized for:
+- **Desktop** (1920x1080 and above)
+- **Laptop** (1366x768 to 1920x1080)
+- **Tablet** (768x1024 to 1366x768)
+- **Mobile** (320x568 to 768x1024)
 
 ## 🎨 Design System
 
