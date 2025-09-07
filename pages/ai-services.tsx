@@ -1,29 +1,25 @@
-import React from "react";
-import Layout from "../components/Layout";
+import React from 'react';
+import Head from 'next/head';
 
-export default function AIServices() {
+const AIServicesPage: React.FC = () => {
   return (
-    <Layout
-      title="AI Services - Zion Tech Group"
-      description="Comprehensive AI services including machine learning, computer vision, natural language processing, and more."
-    >
-      <div className="min-h-screen bg-gray-50 py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">
-              AI Services
-            </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Transform your business with cutting-edge AI solutions and services.
-            </p>
-          </div>
-          <div className="text-center">
-            <p className="text-gray-600">
-              AI Services page is under construction.
-            </p>
-          </div>
+    <>
+      <Head>
+        <title>AI Services - Zion Tech Group</title>
+        <meta name="description" content="Explore our comprehensive AI services and solutions" />
+      </Head>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <h1 className="text-4xl font-bold text-white text-center mb-8">
+            AI Services
+          </h1>
+          <p className="text-xl text-gray-300 text-center">
+            Coming Soon - AI Services Page
+          </p>
         </div>
       </div>
-    </Layout>
+    </>
   );
-}
+};
+
+export default AIServicesPage;

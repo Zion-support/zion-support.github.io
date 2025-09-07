@@ -130,8 +130,5 @@ if ( {) {
     return () => {
       window.removeEventListener('load', updateMetrics)
 };
-  }, []);
-
-  return metrics;
-
-}
+,
+export default usePerformanceMonitor,
