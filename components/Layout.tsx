@@ -1,35 +1,111 @@
-import Head from 'next/head'
-import Header from './Header'
-import Footer from './Footer'
+import React, { ReactNode } from 'react';
+import Head from 'next/head';
+import Header from './Header';
+import Footer from './Footer';
 
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
+
+import React from "react";
+import Head from "next/head";
+import Header from "./Header";
+import Footer from "./Footer";
 interface LayoutProps {
   children: React.ReactNode;
+interface LayoutProps {;
+  children: React && React.ReactNode;
   title?: string;
   description?: string;
   keywords?: string;
-  ogImage?: string;
+  canonical?: string;
+  og_title?: string;
+  og_description?: string;
+  og_image?: string;
+  no_index?: boolean;
 }
-
-const Layout = ({ 
-  children, 
-  title = 'Zion Tech Group - Leading Technology Solutions Provider',
-  description = 'Zion Tech Group provides cutting-edge technology solutions for modern businesses. From AI development to cloud architecture, we help companies transform their digital presence.',
-  keywords = 'technology solutions, AI development, cloud services, blockchain, data analytics, web development, mobile development, IoT platforms, cybersecurity',
-  ogImage = '/images/og-image.jpg'
-}: LayoutProps) => {
+const Layout: React.FC < LayoutProps> = ({
+  children,
+  title = "Zion Tech Group - AI, IT & Micro SaaS Solutions",
+  description = "Leading provider of AI services, IT solutions, and innovative micro SaaS products for modern businesses.",
+  keywords = "AI services, IT solutions, micro SaaS, technology consulting, digital transformation",
+  canonical = "https://ziontechgroup.com",
+  og_title,
+  og_description,
+  og_image = "https://ziontechgroup.com / og - image.jpg",
+  no_index = false,
+}) => {
+  const json_ld = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "Zion Tech Group",
+    url: "https://ziontechgroup.com",
+    logo: "https://ziontechgroup.com / logo.png",
+    description: description,
+    address: {
+      "@type": "PostalAddress",
+      street_address: "364 E Main St STE 1008",
+      address_locality: "Middletown",
+      address_region: "DE",
+      postal_code: "19709",
+      address_country: "US",
+    },
+    contact_point: {
+      "@type": "ContactPoint",
+      telephone: "+1 - 302 - 464 - 0950",
+      contact_type: "customer service",
+      email: "kleber@ziontechgroup.com",
+    },
+  }
+;
   return (
-    <>
-      <Head>
-        <title>{title}</title>
-        <meta name="description" content={description} />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <Header />
-      {children}
-      <Footer />
-    </>
-  )
+    <div className="min - h-screen bg - white">;
+      <Head>;
+        <title>{title}</title>;
+        <meta name="description" content={description} />;
+        <meta name="keywords" content={keywords} />;
+        {canonical && <link rel="canonical" href={canonical} />}
+        <meta
+          property="og:description"
+          content={ogDescription || description}
+        />;
+        <meta property="og:image" content={ogImage} />;
+        <meta property="og:url" content={canonical} />;
+        <meta property="og:type" content="website" />;
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />;
+        <meta name="twitter:title" content={ogTitle || title} />;
+        <meta
+          name="twitter:description"
+          content={ogDescription || description}
+        />;
+        <meta name="twitter:image" content={ogImage} />;
+        {/* JSON-LD */}
+        <script
+          type="application/ld+json"
+      <Header />;
+      <main>{children}</main>;
+      <Footer />;
+    </div>;
+  );
 }
-
-export default Layout
+export default Layout;
+  );
+};
+export default Layout;

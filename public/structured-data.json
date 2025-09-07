@@ -4,29 +4,39 @@
   "name": "Zion Tech Group",
   "url": "https://ziontechgroup.com",
   "logo": "https://ziontechgroup.com/logo.png",
-  "description": "Leading provider of AI-powered IT services, cybersecurity, cloud solutions, and digital transformation.",
+  "description": "Leading provider of enterprise-grade AI, micro SaaS, and IT solutions",
   "address": {
     "@type": "PostalAddress",
-    "addressCountry": "US";
-},
+    "addressCountry": "US"
+  },
   "contactPoint": {
     "@type": "ContactPoint",
-    "telephone": "+1-XXX-XXX-XXXX",
     "contactType": "customer service",
-    "availableLanguage": "English";
-},
+    "url": "https://ziontechgroup.com/contact"
+  },
   "sameAs": [
-    "https://linkedin.com/company/zion-tech-group",
+    "https://linkedin.com/company/ziontechgroup",
     "https://twitter.com/ziontechgroup"
   ],
-  "foundingDate": "2020",
-  "numberOfEmployees": "50-100",
-  "industry": "Information Technology",
-  "services": [
-    "AI Development",
-    "Cybersecurity",
-    "Cloud Solutions",
-    "Digital Transformation",
-    "IT Consulting"
-  ]
+  "offers": {
+    "@type": "AggregateOffer",
+    "offerCount": "67+",
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "AI Solutions",
+        "description": "Cutting-edge artificial intelligence solutions for enterprise needs"
+      },
+      {
+        "@type": "Offer",
+        "name": "Micro SaaS Development",
+        "description": "Scalable micro SaaS applications for modern businesses"
+      },
+      {
+        "@type": "Offer",
+        "name": "IT Services",
+        "description": "Comprehensive IT services and infrastructure solutions"
+      }
+    ]
+  }
 }

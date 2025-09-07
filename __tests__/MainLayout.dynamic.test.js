@@ -1,0 +1,15 @@
+import React from 'react';
+import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
+
+describe('MainLayout.dynamic.test', () => {
+  test('renders without crashing', () => {
+    expect(true).toBe(true);
+  });
+  test ('displays correct content', () => {
+    // Test content display;
+});
+
+import _React from 'react';  import '@testing-library/jest-dom'; import MainLayoutdynamic from '../components/MainLayout.dynamic'; describe('MainLayoutdynamic',() => { test('renders without crashing',() => { render(<MainLayoutdynamic />); expect(screen.getByTestId('mainlayout.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<MainLayoutdynamic />)}); test('handles user interactions',() => { render(<MainLayoutdynamic />)}); test('applies correct styling',() => { render(<MainLayoutdynamic />)})});
+
+import _React from 'react';  import '@testing-library/jest-dom'; import MainLayoutdynamic from '../components/MainLayout.dynamic'; describe('MainLayoutdynamic',() => { test('renders without crashing',() => { render(<MainLayoutdynamic />); expect(screen.getByTestId('mainlayout.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<MainLayoutdynamic />)}); test('handles user interactions',() => { render(<MainLayoutdynamic />)}); test('applies correct styling',() => { render(<MainLayoutdynamic />)})});

@@ -1,42 +1,31 @@
 {
-  "timestamp": "2025-09-03T05:05:33.745Z",
-  "checks": [
+  "timestamp": "2025-09-06T04:25:47.740Z",
+  "stats": {
+    "totalFiles": 8,
+    "totalLines": 137,
+    "functions": 7,
+    "classes": 0,
+    "comments": 5
+  },
+  "issues": [
     {
-      "name": "Code Style",
-      "status": "failed",
-      "message": "Command failed: npm run lint\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nsh: 1: next: not found\n",
-      "timestamp": "2025-09-03T05:05:33.827Z"
+      "file": "/workspace/src/config/seo.js",
+      "line": 4,
+      "type": "long_line",
+      "message": "Line exceeds 120 characters"
     },
     {
-      "name": "Complexity",
-      "status": "warning",
-      "message": "High complexity detected",
-      "timestamp": "2025-09-03T05:05:35.041Z"
-    },
-    {
-      "name": "Duplication",
-      "status": "passed",
-      "message": "No significant duplication found",
-      "timestamp": "2025-09-03T05:06:44.316Z"
-    },
-    {
-      "name": "Security",
-      "status": "passed",
-      "message": "No security vulnerabilities found",
-      "timestamp": "2025-09-03T05:06:44.827Z"
-    },
-    {
-      "name": "Performance",
-      "status": "failed",
-      "message": "Build failed",
-      "timestamp": "2025-09-03T05:06:44.999Z"
+      "file": "/workspace/src/config/seo.js",
+      "line": 5,
+      "type": "long_line",
+      "message": "Line exceeds 120 characters"
     }
   ],
-  "score": 70,
-  "summary": {
-    "passed": 2,
-    "failed": 2,
-    "warnings": 0,
-    "warning": null
-  }
+  "qualityScore": 96,
+  "recommendations": [
+    "Consider breaking down long functions",
+    "Add more comments to complex code",
+    "Remove console.log statements from production code",
+    "Consider using TypeScript for better type safety"
+  ]
 }

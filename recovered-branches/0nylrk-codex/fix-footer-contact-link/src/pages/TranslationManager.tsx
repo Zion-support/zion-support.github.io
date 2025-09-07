@@ -1,0 +1,319 @@
+import React, { useState, useEffect } from 'react',
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+import { SEO } from "@/components/SEO",
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { Input } from "@/components/ui/input",
+import { Button } from "@/components/ui/button",
+import { Textarea } from "@/components/ui/textarea",
+import { toast } from "@/components/ui/use-toast",
+import { useTranslation } from "react-i18next",
+import { AlertTriangle, Check, Globe, Search, Loader2 } from "lucide-react",
+import { useIsMobile } from "@/hooks/use-mobile",
+import { useLanguage, SupportedLanguage } from "@/context/LanguageContext";
+import { useTranslationService } from "@/hooks/useTranslationService";
+export default function TranslationManager() {
+  const { t, i18n } = useTranslation($2);
+  const isMobile = useIsMobile($2);
+  const { supportedLanguages } = useLanguage($2);
+  const { translateContent, isTranslating } = useTranslationService($2);
+  const [selectedNamespace, setSelectedNamespace] = useState($2);
+  const [searchQuery, setSearchQuery] = useState($2);
+  const [translations, setTranslations] = useState<Record<string, any>>({}),
+  const [filteredKeys, setFilteredKeys] = useState<string[]>([]),
+  const [editingKey, setEditingKey] = useState<string | null>(null),
+  const [editedTranslations, setEditedTranslations] = useState<Record<string, Record<SupportedLanguage, string>>>({}),
+  const [isSaving, setIsSaving] = useState($2);
+  // Simulated translation data - in a real app, this would come from your backend
+  useEffect(() => {
+    // For demo purposes, we're using the loaded translations from i18next
+    const currentTranslations: Record<string, any> = {},
+    
+    supportedLanguages.forEach($2);
+      if (res) {
+        // Flatten nested objects for easier management
+        const flattenObject = (obj: any, prefix = '') => {
+          return Object.keys(obj).reduce((acc, key) => {
+            const pre = $2;
+            if (typeof obj[key] === 'object' && obj[key] !== null) {
+              Object.assign(acc, flattenObject(obj[key], `${pre}${key}`))
+            } else {
+              acc[`${pre}${key}`] = obj[key]
+            }
+            return acc
+          }, {} as Record<string, string>)
+        },
+        
+        currentTranslations[lang.code] = flattenObject(res)
+      }
+    }),
+    
+    setTranslations($2);
+    // Get all unique keys across all languages
+    const allKeys = $2;
+    Object.values(currentTranslations).forEach(langTranslations = $2;
+    setFilteredKeys(Array.from(allKeys))
+  }, [selectedNamespace, i18n]),
+  
+  // Filter keys based on search query
+  useEffect(() => {
+    if (!searchQuery.trim()) {
+      // Get all unique keys across all languages
+      const allKeys = $2;
+      Object.values(translations).forEach(langTranslations = $2;
+      setFilteredKeys(Array.from(allKeys)),
+      return
+    }
+    
+    const query = searchQuery.toLowerCase().trim($2);
+    const filtered: string[] = [],
+    
+    // Search in keys and values
+    Object.values(translations).forEach(langTranslations => {
+      Object.entries(langTranslations).forEach(([key, value]) => {
+        if (
+          key.toLowerCase().includes(query) || 
+          (typeof value = $2;
+    setFilteredKeys([...new Set(filtered)])
+  }, [searchQuery, translations]),
+  
+  const handleEdit = (key: string) => {
+    setEditingKey($2);
+    // Initialize edited translations for this key
+    const initialEdits: Record<SupportedLanguage, string> = {} as Record<SupportedLanguage, string>,
+    supportedLanguages.forEach($2);
+    setEditedTranslations({
+      ...editedTranslations;
+      [key]: initialEdits
+    })
+  },
+  
+  const handleSave = (key: string) => {
+    setIsSaving($2);
+    // In a real application, you would save these to your backend
+    setTimeout(() => {
+      // Update translations with edited values
+      const updatedTranslations = $2;
+      supportedLanguages.forEach(lang = $2;
+      setTranslations($2);
+      setEditingKey($2);
+      setIsSaving($2);
+      toast($2);
+        description: t("translation.changes_saved")})
+    }, 1000)
+  },
+  
+  const handleTranslateKey = $2;
+    let sourceText = $2;
+    for (const lang of supportedLanguages.map(l = $2;
+        sourceText = $2;
+        break
+      }
+    }
+    if (!sourceText) {
+      toast($2);
+        description: t($2);
+        variant: "destructive"}),
+      return
+    }
+    try {
+      const { translations: translatedText, error } = await translateContent($2);
+      if (error) {
+        toast($2);
+          description: error,
+          variant: "destructive"}),
+        return
+      }
+      // Update edited translations with auto-translated content
+      setEditedTranslations($2);
+      toast($2);
+        description: t('translation.content_translated')})
+    } catch (error) {
+      console.error($2);
+      toast($2);
+        description: error instanceof Error ? error.message : t($2);
+        variant: "destructive"})
+    }
+  },
+  
+  const handleCancel = $2;
+  const handleChange = (lang: SupportedLanguage, key: string, value: string) => {
+    setEditedTranslations({
+      ...editedTranslations;
+      [key]: {
+        ...editedTranslations[key]
+        [lang]: value
+      }
+    })
+  },
+  
+  const getMissingLanguages = $2;
+  return (
+    <>
+      <SEO
+        title={t('translation.manager_title')}
+        description={t('translation.manager_description')}
+      />
+      <Header />
+      <main className={`container mx-auto px-${isMobile ? '4' : '6'} py-8`}>
+        <Card>
+          <CardHeader>
+            <CardTitle className="text-2xl">{t('translation.manager_title')}</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="space-y-6">
+              {/* Search and filter */}
+              <div className="flex flex-col sm:flex-row gap-4">
+                <div className="relative flex-1">
+                  <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
+                  <Input
+                    type="search"
+                    placeholder={t('translation.search_placeholder')}
+                    className="pl-8"
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                  />
+                </div>
+                <Tabs
+                  defaultValue="translation"
+                  value={selectedNamespace}
+                  onValueChange={(value) => setSelectedNamespace(value)}
+                  className="w-full sm:w-auto"
+                >
+                  <TabsList>
+                    <TabsTrigger value="translation">General</TabsTrigger>
+                    <TabsTrigger value="admin">Admin</TabsTrigger>
+                  </TabsList>
+                </Tabs>
+              </div>
+              {/* Translations table */}
+              <div className="border rounded-md">
+                <div className="grid grid-cols-[1fr_2fr] sm:grid-cols-[1fr_2fr_auto] border-b">
+                  <div className="p-3 font-medium">{t('translation.key')}</div>
+                  <div className="p-3 font-medium">{t('translation.translations')}</div>
+                  <div className="hidden sm:block p-3 font-medium">{t('translation.actions')}</div>
+                </div>
+                {filteredKeys.length === 0 ? (
+                  <div className="p-6 text-center text-muted-foreground">
+                    {t('translation.no_results')}
+                  </div>
+                ) : (
+                  <div className="divide-y">
+                    {filteredKeys.map((key) => (
+                      <div key={key} className="grid grid-cols-[1fr_2fr] sm:grid-cols-[1fr_2fr_auto]">
+                        <div className="p-3 break-words">{key}</div>
+                        {editingKey === key ? (
+                          <div className="p-3">
+                            <div className="space-y-4">
+                              {supportedLanguages.map((lang) => (
+                                <div key={lang.code}>
+                                  <div className="flex items-center gap-2 mb-1">
+                                    <span>{lang.flag}</span>
+                                    <span>{lang.name}</span>
+                                  </div>
+                                  {editedTranslations[key][lang.code]?.includes('\n') |
+                                   editedTranslations[key][lang.code]?.length > 100 ? (
+                                    <Textarea
+                                      value={editedTranslations[key][lang.code] |''}
+                                      onChange={(e) => handleChange(lang.code, key, e.target.value)}
+                                      dir={lang.code === 'ar' ? 'rtl' : 'ltr'}
+                                      className="min-h-20"
+                                    />
+                                  ) : (
+                                    <Input
+                                      value={editedTranslations[key][lang.code] |''}
+                                      onChange={(e) => handleChange(lang.code, key, e.target.value)}
+                                      dir={lang.code === 'ar' ? 'rtl' : 'ltr'}
+                                    />
+                                  )}
+                                </div>
+                              ))}
+                            </div>
+                            <div className="flex gap-2 mt-4">
+                              <Button
+                                size="sm"
+                                onClick={() => handleSave(key)}
+                                disabled={isSaving}
+                              >
+                                {isSaving ? (
+                                  <>
+                                    <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                                    {t('general.saving')}
+                                  </>
+                                ) : (
+                                  <>
+                                    <Check className="mr-2 h-4 w-4" />
+                                    {t('general.save')}
+                                  </>
+                                )}
+                              </Button>
+                              <Button
+                                size="sm"
+                                variant="outline"
+                                onClick={handleCancel}
+                              >
+                                {t('general.cancel')}
+                              </Button>
+                              <Button
+                                size="sm"
+                                variant="secondary"
+                                onClick={() => handleTranslateKey(key)}
+                                disabled={isTranslating}
+                              >
+                                {isTranslating ? (
+                                  <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                                ) : (
+                                  <Globe className="mr-2 h-4 w-4" />
+                                )}
+                                {t('translation.auto_translate')}
+                              </Button>
+                            </div>
+                          </div>
+                        ) : (
+                          <div className="p-3">
+                            <div className="space-y-2">
+                              {supportedLanguages.slice(0, 2).map((lang) => (
+                                <div key={lang.code} className="flex items-start gap-2">
+                                  <span className="mt-0.5 flex-shrink-0">{lang.flag}</span>
+                                  <span
+                                    className={`${!translations[lang.code]?.[key] ? 'text-zion-purple italic' : ''}`}
+                                    dir={lang.code === 'ar' ? 'rtl' : 'ltr'}
+                                  >
+                                    {translations[lang.code]?.[key] |t('translation.missing')}
+                                  </span>
+                                </div>
+                              ))}
+                              {getMissingLanguages(key).length > 0 && (
+                                <div className="flex items-center gap-2 text-sm text-zion-purple">
+                                  <AlertTriangle className="h-4 w-4" />
+                                  {t('translation.missing_languages', { count: getMissingLanguages(key).length })}
+                                </div>
+                              )}
+                            </div>
+                          </div>
+                        )}
+                        <div className="p-3 flex items-center justify-end">
+                          {editingKey === key ? null : (
+                            <Button
+                              size="sm"
+                              variant="outline"
+                              onClick={() => handleEdit(key)}
+                            >
+                              {t('translation.edit')}
+                            </Button>
+                          )}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+      </main>
+      <Footer />
+    </>
+  )
+}

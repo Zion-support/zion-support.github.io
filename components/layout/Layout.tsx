@@ -1,21 +1,33 @@
-import React from 'react;
-import Header from './Header;
-import Footer from './Footer;
-;
-type LayoutProps = {children: React.ReactNode;,
-};
-;
-  children: React.ReactNode}
-;
-export: default function Layout() {;
+import React, { ReactNode } from 'react';
+import Head from 'next/head';
+import Header from '../Header';
+import Footer from '../Footer';
 
-  return: <div>{children}</div>;
-React from";
-  "react""import Footer from "react";
-  "./Footer"import Footer  from "react./Footer,;
-export default function Layout({ children }: LayoutProps) {;
-  return (;
-<div className="min-h-screen flex flex-col>      <Header />"      <main className="flex-1 pt-16>        {children}"      </main><Footer />;
-    </div>;
-  )"; type: LayoutProps = { children: React.ReactNode, }; export default function Layout({ children }: LayoutProps) { return <div>{children}</div>; type LayoutProps = { children: React.ReactNode, }; export default function Layout({ children }: LayoutProps) { return <div>{children}</div> } " ;
-}}
+interface LayoutProps {
+	children: ReactNode;
+	title?: string;
+	description?: string;
+	keywords?: string;
+}
+
+export default function Layout({
+	children,
+	title = 'Zion Tech Group',
+	description = 'Leading technology solutions provider',
+}: LayoutProps) {
+	return (
+		<>
+			<Head>
+				<title>{title}</title>
+				<meta name="description" content={description} />
+				<meta name="viewport" content="width=device-width, initial-scale=1" />
+				<link rel="icon" href="/favicon.ico" />
+			</Head>
+			<div className="min-h-screen bg-gray-50">
+				<Header />
+				<main className="flex-1">{children}</main>
+				<Footer />
+			</div>
+		</>
+	);
+}

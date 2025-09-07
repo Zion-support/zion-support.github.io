@@ -1,0 +1,1 @@
+<div> <Head> <title>WebApplicationDevelopmentChat - Zion Tech Solutions</title> <meta name="description" content="WebApplicationDevelopmentChat service" /> </Head> <main> <h1>WebApplicationDevelopmentChat</h1> <p>Service details coming soon...</p> <a href="/services" >Back to Services</a> </main> </div> export default WebApplicationDevelopmentChat

@@ -1,59 +1,20 @@
 #!/bin/bash
 
-echo "Starting merge conflict resolution...
+echo "Resolving merge conflicts..."
 
-# List of critical files that we want to keep our version for
-CRITICAL_FILES=(
-    src/pages/Home.tsx"
-    "src/components/layout/MainSidebar.tsx
-    src/components/SEO.tsx"
-    "src/components/PerformanceOptimizer.tsx
-    src/components/EnhancedAccessibilityEnhancer.tsx"
-)
+# Accept incoming changes for most files (from origin/merge-automation-changes)
+git status --porcelain | grep "^UU" | cut -c4- | xargs -I {} git checkout --theirs {}
 
-# Function to resolve conflicts for a file
-resolve_conflicts() {
-    local file="$1
-    
-    if [[ ! -f $file" ]]; then
-        echo "File $file does not exist, skipping...
-        return
-    fi
-    
-    if ! grep -q " "$file; then
-        echo No conflicts in $file, skipping..."
-        return
-    fi
-    
-    echo "Resolving conflicts in $file...
-    
-    # Check if it's a critical file
-    for critical in ${CRITICAL_FILES[@]}"; do
-        if [[ "$file == $critical" ]]; then
-            echo "Keeping our version for critical file: $file
-            # Use our version (HEAD) for critical files
-            git checkout --ours $file"
-            git add "$file
-            return
-        fi
-    done
-    
-    # For non-critical files, use the remote version (theirs)
-    echo Using remote version for: $file"
-    git checkout --theirs "$file
-    git add $file"
-}
+# Handle modify/delete conflicts by keeping the file
+git status --porcelain | grep "^DU" | cut -c4- | xargs -I {} git add {}
 
-# Get all files with merge conflicts
-conflict_files=$(grep -l " -r . --include=*.tsx" --include="*.ts --include=*.js" --include="*.jsx --include=*.json" 2>/dev/null)
+# Handle delete/modify conflicts by keeping the file
+git status --porcelain | grep "^UD" | cut -c4- | xargs -I {} git add {}
 
-echo "Found $(echo $conflict_files | wc -l) files with conflicts"
+# Add all resolved files
+git add .
 
-# Resolve conflicts for each file
-while IFS= read -r file; do
-    if [[ -n "$file ]]; then
-        resolve_conflicts $file"
-    fi
-done <<< "$conflict_files
+echo "Conflicts resolved. Committing merge..."
+git commit -m "Resolve merge conflicts by accepting origin/merge-automation-changes"
 
-echo Merge conflict resolution completed!"
+echo "Merge completed successfully!"

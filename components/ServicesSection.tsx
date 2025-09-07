@@ -1,146 +1,99 @@
 import React from 'react';
-import Link from 'next/link';
-import { ;
-  Brain, ;
-  Cloud, ;
-  Shield, ;
-  BarChart3, ;
-  Code, ;
-  Smartphone,;
-  ArrowRight,;
-  CheckCircle;,
-} from 'lucide-react';
+import { motion  } from 'framer-motion';
+import { Card, CardContent, CardHeader, CardTitle  } from './ui/Card';
+import { Button  } from './ui/Button';
+import { Brain,Cloud,Shield,Database,Code,Smartphone,ArrowRight,} from 'lucide-react';
+
+const ServicesSection: React.FC = () => ;
+  const services = [
+  {icon: Brain,title: 'AI Services',
+  description:;}
+        'Machine learning, natural language processing, and AI-powered automation solutions.',features: [;}
+        'Machine Learning Models','NLP Solutions','AI Automation','Predictive Analytics',],link: '/ai-services',},{icon: Cloud,title: 'Cloud Services',
+  description:;}
+        'Scalable cloud infrastructure and migration services for modern businesses.',features: [;}
+        'Cloud Migration','Infrastructure Setup','DevOps Solutions','Monitoring',],link: '/cloud-services',},{icon: Shield,title: 'Cybersecurity',
+  description:;}
+        'Comprehensive security solutions to protect your digital assets and data.',features: [;}
+        'Security Audits','Penetration Testing','Compliance','Incident Response',],link: '/cybersecurity',},{icon: Database,title: 'Data Analytics',
+  description:;}
+        'Transform your data into actionable insights for better decision making.',features: [;}
+        'Data Visualization','Business Intelligence','ETL Processes','Reporting',],link: '/data-analytics',},{icon: Code,title: 'Custom Development',
+  description:;}
+        'Tailored software solutions built to meet your specific business requirements.',features: [;}
+        'Web Applications','Mobile Apps','API Development','System Integration',],link: '/custom-development',},{icon: Smartphone,title: 'Mobile Solutions',
+  description:;}
+        'Native and cross-platform mobile applications for iOS and Android.',features: [;}
+        'iOS Development','Android Development','React Native','Flutter',],link: '/mobile-solutions',},];
+
+const containerVariants = {hidden: { opacity: 0}
+},visible: {opacity: 1,transition: {staggerChildren: 0.1},},}
 ;
-const ServicesSection: React.FC = () => {;
-  const services = [;
-    {;
-      icon: Brain,;
-      title: 'AI Development',;
-      description: 'Custom AI solutions and machine learning models tailored to your business needs.',;
-      features: ['Machine Learning Models', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'],;
-      color: 'from-blue-500 to-cyan-500',;
-      href: '/services/ai-development';,
-},;
-    {;
-      icon: Cloud,;
-      title: 'Cloud Architecture',;
-      description: 'Scalable cloud solutions and infrastructure design for modern applications.',;
-      features: ['AWS/Azure/GCP', 'Microservices', 'Container Orchestration', 'Auto-scaling'],;
-      color: 'from-purple-500 to-pink-500',;
-      href: '/services/cloud-architecture';,
-},;
-    {;
-      icon: Shield,;
-      title: 'Cybersecurity',;
-      description: 'Comprehensive security solutions to protect your digital assets and data.',;
-      features: ['Security Audits', 'Penetration Testing', 'Compliance', 'Incident Response'],;
-      color: 'from-green-500 to-emerald-500',;
-      href: '/services/cybersecurity';,
-},;
-    {;
-      icon: BarChart3,;
-      title: 'Data Analytics',;
-      description: 'Transform your data into actionable insights with advanced analytics solutions.',;
-      features: ['Business Intelligence', 'Data Visualization', 'Real-time Analytics', 'Data Warehousing'],;
-      color: 'from-orange-500 to-red-500',;
-      href: '/services/data-analytics';,
-},;
-    {;
-      icon: Code,;
-      title: 'DevOps',;
-      description: 'Streamline your development and deployment processes with modern DevOps practices.',;
-      features: ['CI/CD Pipelines', 'Infrastructure as Code', 'Monitoring', 'Automation'],;
-      color: 'from-indigo-500 to-purple-500',;
-      href: '/services/devops';,
-},;
-    {;
-      icon: Smartphone,;
-      title: 'Mobile Development',;
-      description: 'Native and cross-platform mobile applications for iOS and Android.',;
-      features: ['React Native', 'Flutter', 'Native iOS/Android', 'Progressive Web Apps'],;
-      color: 'from-pink-500 to-rose-500',;
-      href: '/services/mobile-development';,
+  const itemVariants = {hidden: { opacity: 0, y: 20,}
+},visible: {opacity: 1,y: 0,transition: {duration: 0.5},},;
+  return (<section className="py-20 bg-gray-50" />;
+      <div className="container mx-auto px-4" />;
+        <motion.div;
+          initial={{ opacity: 0, y: 20 ,}
 }
-  ];
-;
-  return (;
-    <section className="py-20 bg-gray-900">;
-      <div className="container mx-auto px-4">;
-        {/* Section Header */}
-        <div className="text-center mb-16">;
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
-            Our <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Services</span>;
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{once: true }
+}
+          className="text-center mb-16" />
+
+          <h2 className="text-4xl font-bold text-gray-900 mb-4" />;
+            Our Services;
           </h2>;
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
-            Comprehensive technology solutions designed to accelerate your digital transformation and drive business growth.;
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto" />;
+            We provide comprehensive technology solutions to help your business;
+            thrive in the digital age.;
           </p>;
-        </div>;
+        </motion.div>;
+        <motion.div;
+          variants={containerVariants}
+          initial="hidden";
+          whileInView="visible";
+          viewport={{once: true }
+}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" />
 
-        {/* Services Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">;
-          {services.map((service, index) => {;
-            const IconComponent = service.icon;
-            return (;
-              <div;
-                key={index}
-                className="group bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 hover:transform hover:-translate-y-2 hover:shadow-2xl">;
-                {/* Icon */}
-                <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>;
-                  <IconComponent className="w-8 h-8 text-white" />;
-                </div>;
+          {services.map((service, index) => (<motion.div key={index} variants={itemVariants} />;
+              <Card className="h-full hover: shadow-lg transition-shadow duration-300" />;
+                <CardHeader />;
+                  <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center mb-4" />;
+                    <service.icon className="w-6 h-6 text-white" />;
+                  </div>;
+                  <CardTitle className="text-xl font-bold text-gray-900" />;
+                    {service.title}
+                  </CardTitle>;
+                </CardHeader>;
+                <CardContent />;
+                  <p className="text-gray-600 mb-4" />{service.description}</p>;
+                  <ul className="space-y-2 mb-6" />;
+                    {service.features.map((feature, featureIndex) => (<li;}
+                        key={featureIndex}
+                        className="flex items-center text-sm text-gray-700" />
 
-                {/* Content */}
-                <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>;
-                <p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>;
-
-                {/* Features */}
-                <ul className="space-y-3 mb-6">;
-                  {service.features.map((feature, featureIndex) => (;
-                    <li key={featureIndex} className="flex items-center space-x-3">;
-                      <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />;
-                      <span className="text-gray-300 text-sm">{feature}</span>;
-                    </li>;
-                  ))}
-                </ul>;
-
-                {/* CTA */}
-                <Link;
-                  href={service.href}
-                  className="inline-flex items-center space-x-2 text-blue-400 hover:text-blue-300 transition-colors duration-200 group/link">;
-                  <span className="font-semibold">Learn More</span>;
-                  <ArrowRight className="w-4 h-4 group-hover/link:translate-x-1 transition-transform" />;
-                </Link>;
-              </div>;
-            );,
-})}
-        </div>;
-
-        {/* CTA Section */}
-        <div className="text-center">;
-          <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm border border-white/10 rounded-2xl p-8 max-w-4xl mx-auto">;
-            <h3 className="text-3xl font-bold text-white mb-4">;
-              Ready to Transform Your Business?;
-            </h3>;
-            <p className="text-gray-300 mb-8 text-lg">;
-              Let's discuss how our technology solutions can help you achieve your goals.;
-            </p>;
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-              <Link;
-                href="/contact";
-                className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl">;
-                Get Free Consultation;
-              </Link>;
-              <Link;
-                href="/services";
-                className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-900 transition-all duration-300">;
-                View All Services;
-              </Link>;
-            </div>;
-          </div>;
-        </div>;
+                        <div className="w-2 h-2 bg-blue-600 rounded-full mr-3" /></div>;
+                        {feature}
+                      </li>;
+                    ))}
+                  </ul>;
+                  <Button;
+                    variant="outline";
+                    className="w-full group";
+                    onClick={() = /> (window.location.href = service.link)}
+                  >;
+                    Learn More;
+                    <ArrowRight className="w-4 h-4 ml-2 group-hover: translate-x-1 transition-transform" />;
+                  </Button>;
+                </CardContent>;
+              </Card>;
+            </motion.div>;
+          ))}
+        </motion.div>;
       </div>;
     </section>;
-  );,
-};
-;
+  )}
+
 export default ServicesSection;

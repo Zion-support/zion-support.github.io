@@ -1,25 +1,23 @@
-# Netlify configuration for Zion Tech Group
 [build]
-  publish = ".next"
   command = "npm run build"
+  publish = ".next"
 
-[build.environment]
-  NODE_VERSION = "18"
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
 
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+# Optional: keep functions path if you rely on Netlify Functions in this repo
+[functions]
+  directory = "netlify/functions"
 
-[[headers]]
-  for = "/*"
-  [headers.values]
-    X-Frame-Options = "DENY"
-    X-XSS-Protection = "1; mode=block"
-    X-Content-Type-Options = "nosniff"
-    Referrer-Policy = "strict-origin-when-cross-origin"
+[build]
+  command = "npm ci && npm run build"
+  publish = ".next"
+  functions = "netlify/functions"
 
-[[headers]]
-  for = "/static/*"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
+# Next.js runtime for SSR/ISR on Netlify
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+# Cloudinary plugin (already used in Netlify UI)
+[[plugins]]
+  package = "netlify-plugin-cloudinary"

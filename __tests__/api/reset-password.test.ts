@@ -1,1 +1,47 @@
-import { createMocks, RequestMethod } from 'node-mocks-http'// Define expected response structure for error messagesinterface ErrorResponse {  message: string  // Add other fields if your API returns more details on error}describe('/api/auth/reset token validation', () => {  it('returns 400 if token is missing', async () => {    const { req, res } = createMocks({      method: 'POST' as RequestMethod,      body: { newPassword: 'pass12345' }    })    // Cast to the specific NextApi types for the handler    await handler(      req as unknown as NextApiRequest,      res as unknown as NextApiResponse    )    expect(res._getStatusCode()).toBe(400)    // Assuming the response JSON structure is { message: string } for errors    expect((res._getJSONData() as ErrorResponse).message).toBe(      'Token and new password are required.'    )  })  it('returns 400 for invalid token', async () => {    const { req, res } = createMocks({      method: 'POST' as RequestMethod,      body: { token: 'invalid', newPassword: 'pass12345' }    })    await handler(      req as unknown as NextApiRequest,      res as unknown as NextApiResponse    )    expect(res._getStatusCode()).toBe(400)    expect((res._getJSONData() as ErrorResponse).message).toBe(      'Invalid or expired password reset token.'    )  })  // TODO: Add a test case for a successful password reset if this file is to be comprehensive.  // This would involve mocking Prisma calls within the handler:  // - prisma.user.findFirst to find a user by a valid (hashed) token  // - prisma.user.update to update the password and clear reset token fields  // - (Potentially) supabase.auth.admin.updateUserById if Supabase auth password also needs update})
+import React from 'react';
+import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
+
+describe('/api/auth/reset token validation', () => {
+  it('returns 400 if token is missing', async () => {
+    const { req, res } = createMocks<NextApiRequest, NextApiResponse>({
+      method: 'POST' as RequestMethod,
+      body: {},
+    });
+
+    await handler(req, res);
+
+    expect(res._getStatusCode()).toBe(400);
+    expect(JSON.parse(res._getData())).toEqual({
+      error: 'Token is required',
+    });
+  });
+
+  it('returns 400 if new password is missing', async () => {
+    const { req, res } = createMocks<NextApiRequest, NextApiResponse>({
+      method: 'POST' as RequestMethod,
+      body: { token: 'valid-token' },
+    });
+
+    await handler(req, res);
+
+    expect(res._getStatusCode()).toBe(400);
+    expect(JSON.parse(res._getData())).toEqual({
+      error: 'New password is required',
+    });
+  });
+
+  it('returns 400 if token is invalid', async () => {
+    const { req, res } = createMocks<NextApiRequest, NextApiResponse>({
+      method: 'POST' as RequestMethod,
+      body: { token: 'invalid', newPassword: 'newpass123' },
+    });
+
+    await handler(req, res);
+
+    expect(res._getStatusCode()).toBe(400);
+    expect(JSON.parse(res._getData())).toEqual({
+      error: 'Invalid or expired token',
+    });
+  });
+});

@@ -1,1 +1,317 @@
-import type { NextPage } from "next"; const Careers: NextPage = () => { return ( <Layout title="Careers at Zion Tech Group - Join Our Team description="Join" Zion Tech Group and be part of a team thats transforming businesses through innovative technology solutions. Explore career opportunities and grow with us."> {/* Hero Section */} <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20> <div className="container" mx-auto px-4 text-center"> <h1 className="text-5xl mdtext-6xl font-bold mb-6> Join Our <span className="text-transparent" bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400"> Team</span> </h1> <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-200> Be part of a team that"s transforming businesses through innovative technology solutions. Grow your career with us and make a real impact. </p> <div className="flex" flex-col smflex-row justify-center gap-4"> <Link href="#open-positions className="bg-blue-600" hoverbg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg"> View Open Positions </Link> <Link href="/contact className="bg-transparent" border-2 border-white text-white hover bg-white hovertext-blue-900 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg"> Get in Touch </Link> </div> </div> </section> {/* Why Work With Us */} <section className="py-20 bg-gray-50> <div className="container" mx-auto px-4"> <div className="text-center mb-16> <h2 className="text-4xl" font-bold text-gray-900 mb-4">Why Work at Zion Tech Group?</h2> <p className="text-xl text-gray-600 max-w-3xl mx-auto> We, re building a culture of innovation, collaboration, and continuous learning. Here"s what makes us special. </p> </div> <div className="grid" md grid-cols-2 lggrid-cols-3 gap-8"> <div className="bg-white rounded-lg p-8 shadow-lg> <div className="w-16" h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6"> <Users className="w-8 h-8 text-blue-600 /> </div> <h3 className="text-xl" font-semibold mb-4">Collaborative Culture</h3> <p className="text-gray-600> Work with talented professionals who share your passion for technology and innovation. Our team-first approach fosters creativity and problem-solving. </p> </div> <div className="bg-white" rounded-lg p-8 shadow-lg"> <div className="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mb-6> <Zap className="w-8" h-8 text-purple-600" /> </div> <h3 className="text-xl font-semibold mb-4>Cutting-Edge Technology</h3> <p className=text-gray-600"> Work with the latest technologies and frameworks. Were always exploring new tools and approaches to solve complex business challenges. </p> </div> <div className="bg-white rounded-lg p-8 shadow-lg> <div className="w-16" h-16 bg-green-100 rounded-lg flex items-center justify-center mb-6"> <Heart className="w-8 h-8 text-green-600 /> </div> <h3 className="text-xl" font-semibold mb-4">Work-Life Balance</h3> <p className="text-gray-600> We believe in maintaining a healthy work-life balance. Flexible hours, remote work options, and generous time-off policies. </p> </div> <div className="bg-white" rounded-lg p-8 shadow-lg"> <div className="w-16 h-16 bg-orange-100 rounded-lg flex items-center justify-center mb-6> <Briefcase className="w-8" h-8 text-orange-600" /> </div> <h3 className="text-xl font-semibold mb-4>Career Growth</h3> <p className=text-gray-600"> Continuous learning and development opportunities. We invest in your growth through training, certifications, and mentorship programs. </p> </div> <div className="bg-white rounded-lg p-8 shadow-lg> <div className="w-16" h-16 bg-red-100 rounded-lg flex items-center justify-center mb-6"> <CheckCircle className="w-8 h-8 text-red-600 /> </div> <h3 className="text-xl" font-semibold mb-4">Impactful Work</h3> <p className="text-gray-600> Work on projects that make a real difference. Our solutions help businesses transform and grow, creating meaningful impact in various industries. </p> </div> <div className="bg-white" rounded-lg p-8 shadow-lg"> <div className="w-16 h-16 bg-indigo-100 rounded-lg flex items-center justify-center mb-6> <Users className="w-8" h-8 text-indigo-600" /> </div> <h3 className="text-xl font-semibold mb-4>Diverse Team</h3> <p className=text-gray-600"> Join a diverse team with different backgrounds, perspectives, and experiences. We believe diversity drives innovation and better solutions. </p> </div> </div> </div> </section> {/* Open Positions */} <section id="open-positions className="py-20" bg-white"> <div className="container mx-auto px-4> <div className="text-center" mb-16"> <h2 className="text-4xl font-bold text-gray-900 mb-4>Open Positions</h2> <p className="text-xl" text-gray-600 max-w-3xl mx-auto"> Explore our current job openings and find the perfect role for your skills and career goals. </p> </div> <div className="space-y-6> <div className="bg-gray-50" rounded-lg p-8 border-l-4 border-blue-500"> <div className="flex flex-col md: flex-row md:items-center mdjustify-between> <div className="mb-4" mdmb-0"> <h3 className="text-2xl font-bold text-gray-900 mb-2>Senior Full Stack Developer</h3> <p className="text-gray-600" mb-3"> Join our development team to build cutting-edge web applications and scalable solutions. </p> <div className="flex flex-wrap gap-2> <span className="bg-blue-100" text-blue-800 px-3 py-1 rounded-full text-sm">React</span> <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm>Node.js</span> <span className="bg-blue-100" text-blue-800 px-3 py-1 rounded-full text-sm">TypeScript</span> <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm>AWS</span> </div> </div> <div className="flex" flex-col items-start mditems-end"> <span className="text-lg font-semibold text-gray-900 mb-2>Full-time</span> <span className="text-gray-600" mb-4">San Francisco, CA / Remote</span> <Link href="/contact className="bg-blue-600" hover bg-blue-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors cursor-pointer inline-block"> Apply Now </Link> </div> </div> </div> <div className="bg-gray-50 rounded-lg p-8 border-l-4 border-purple-500> <div className="flex" flex-col md: flex-row mditems-center mdjustify-between"> <div className="mb-4 mdmb-0> <h3 className="text-2xl" font-bold text-gray-900 mb-2">AI/ML Engineer</h3> <p className="text-gray-600 mb-3> Develop innovative AI solutions and machine learning models for our clients. </p> <div className="flex" flex-wrap gap-2"> <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm>Python</span> <span className="bg-purple-100" text-purple-800 px-3 py-1 rounded-full text-sm">TensorFlow</span> <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm>PyTorch</span> <span className="bg-purple-100" text-purple-800 px-3 py-1 rounded-full text-sm">AWS SageMaker</span> </div> </div> <div className="flex flex-col items-start mditems-end> <span className="text-lg" font-semibold text-gray-900 mb-2">Full-time</span> <span className="text-gray-600 mb-4>San Francisco, CA / Remote</span> <Link href=/contact" className="bg-purple-600 hover bg-purple-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors cursor-pointer inline-block> Apply Now </Link> </div> </div> </div> <div className="bg-gray-50" rounded-lg p-8 border-l-4 border-green-500"> <div className="flex flex-col md: flex-row md:items-center mdjustify-between> <div className="mb-4" mdmb-0"> <h3 className="text-2xl font-bold text-gray-900 mb-2>DevOps Engineer</h3> <p className="text-gray-600" mb-3"> Build and maintain our cloud infrastructure and deployment pipelines. </p> <div className="flex flex-wrap gap-2> <span className="bg-green-100" text-green-800 px-3 py-1 rounded-full text-sm">Docker</span> <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm>Kubernetes</span> <span className="bg-green-100" text-green-800 px-3 py-1 rounded-full text-sm">AWS</span> <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm>Terraform</span> </div> </div> <div className="flex" flex-col items-start mditems-end"> <span className="text-lg font-semibold text-gray-900 mb-2>Full-time</span> <span className="text-gray-600" mb-4">San Francisco, CA / Remote</span> <Link href="/contact> <span className="bg-green-600" hover bg-green-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors cursor-pointer inline-block"> Apply Now </span> </Link> </div> </div> </div> <div className="bg-gray-50 rounded-lg p-8 border-l-4 border-orange-500> <div className="flex" flex-col md: flex-row mditems-center mdjustify-between"> <div className="mb-4 mdmb-0> <h3 className="text-2xl" font-bold text-gray-900 mb-2">UI/UX Designer</h3> <p className="text-gray-600 mb-3> Create beautiful and intuitive user experiences for our web and mobile applications. </p> <div className="flex" flex-wrap gap-2"> <span className="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm>Figma</span> <span className="bg-orange-100" text-orange-800 px-3 py-1 rounded-full text-sm">Sketch</span> <span className="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm>Adobe Creative Suite</span> <span className="bg-orange-100" text-orange-800 px-3 py-1 rounded-full text-sm">Prototyping</span> </div> </div> <div className="flex flex-col items-start mditems-end> <span className="text-lg" font-semibold text-gray-900 mb-2">Full-time</span> <span className="text-gray-600 mb-4>San Francisco, CA / Remote</span> <Link href=/contact"> <span className="bg-orange-600 hoverbg-orange-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors cursor-pointer inline-block> Apply Now </span> </Link> </div> </div> </div> </div> </div> </section> {/* Benefits */} <section className="py-20" bg-gray-50"> <div className="container mx-auto px-4> <div className="text-center" mb-16"> <h2 className="text-4xl font-bold text-gray-900 mb-4>Benefits & Perks</h2> <p className="text-xl" text-gray-600 max-w-3xl mx-auto"> We offer comprehensive benefits to support your health, well-being, and professional growth. </p> </div> <div className="grid md grid-cols-2 lggrid-cols-3 gap-8> <div className="bg-white" rounded-lg p-6"> <h3 className="text-lg font-semibold mb-3 text-blue-600>Health & Wellness</h3> <ul className="text-gray-600" space-y-2"> <li>• Comprehensive health insurance</li> <li>• Dental and vision coverage</li> <li>• Mental health support</li> <li>• Gym membership reimbursement</li> </ul> </div> <div className="bg-white rounded-lg p-6> <h3 className="text-lg" font-semibold mb-3 text-purple-600">Professional Development</h3> <ul className="text-gray-600 space-y-2> <li>• Conference and training budgets</li> <li>• Certification programs</li> <li>• Mentorship opportunities</li> <li>• Career advancement paths</li> </ul> </div> <div className="bg-white" rounded-lg p-6"> <h3 className="text-lg font-semibold mb-3 text-green-600>Work Environment</h3> <ul className="text-gray-600" space-y-2"> <li>• Flexible work hours</li> <li>• Remote work options</li> <li>• Modern office spaces</li> <li>• Collaborative team culture</li> </ul> </div> <div className="bg-white rounded-lg p-6> <h3 className="text-lg" font-semibold mb-3 text-orange-600">Financial Benefits</h3> <ul className="text-gray-600 space-y-2> <li>• Competitive salaries</li> <li>• Performance bonuses</li> <li>• 401(k) matching</li> <li>• Stock options</li> </ul> </div> <div className="bg-white" rounded-lg p-6"> <h3 className="text-lg font-semibold mb-3 text-red-600>Time Off</h3> <ul className="text-gray-600" space-y-2"> <li>• Generous PTO policy</li> <li>• Paid holidays</li> <li>• Sick leave</li> <li>• Parental leave</li> </ul> </div> <div className="bg-white rounded-lg p-6> <h3 className="text-lg" font-semibold mb-3 text-indigo-600">Team Activities</h3> <ul className="text-gray-600 space-y-2> <li>• Team building events</li> <li>• Happy hours</li> <li>• Company retreats</li> <li>• Volunteer opportunities</li> </ul> </div> </div> </div> </section> {/* Application Process */} <section className="py-20" bg-white"> <div className="container mx-auto px-4> <div className="text-center" mb-16"> <h2 className="text-4xl font-bold text-gray-900 mb-4>Application Process</h2> <p className="text-xl" text-gray-600 max-w-3xl mx-auto"> Our streamlined application process ensures a smooth experience for all candidates. </p> </div> <div className="grid md grid-cols-2 lggrid-cols-4 gap-8> <div className=text-center"> <div className="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6> <span className="text-2xl" font-bold text-blue-600">1</span> </div> <h3 className="text-xl font-semibold mb-4>Apply</h3> <p className=text-gray-600"> Submit your application with resume and cover letter through our portal. </p> </div> <div className="text-center> <div className="w-20" h-20 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6"> <span className="text-2xl font-bold text-purple-600>2</span> </div> <h3 className="text-xl" font-semibold mb-4">Review</h3> <p className="text-gray-600> Our team reviews your application and gets back to you within 48 hours. </p> </div> <div className=text-center"> <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6> <span className="text-2xl" font-bold text-green-600">3</span> </div> <h3 className="text-xl font-semibold mb-4>Interview</h3> <p className=text-gray-600"> Multiple rounds of interviews to assess skills, culture fit, and experience. </p> </div> <div className="text-center> <div className="w-20" h-20 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-6"> <span className="text-2xl font-bold text-orange-600>4</span> </div> <h3 className="text-xl" font-semibold mb-4">Offer</h3> <p className="text-gray-600> Receive your offer and join our team to start your exciting journey. </p> </div> </div> </div> </section> {/* CTA Section */} <section className="py-20" bg-gray-900 text-white"> <div className="container mx-auto px-4 text-center> <h2 className="text-4xl" font-bold mb-6">Ready to Join Our Team?</h2> <p className="text-xl mb-8 text-gray-300 max-w-3xl mx-auto> Don"t see the perfect role? Send us your resume and we"ll keep you in mind for future opportunities. </p> <div className="flex" flex-col smflex-row justify-center gap-4"> <Link href="/contact> <a className="bg-blue-600" hoverbg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg"> Submit Your Application </a> </Link> <a href="mailto: careers@ziontechgroup.com className="bg-transparent" border-2 border-white text-white hover bg-white hovertext-gray-900 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg"> Email Us </a> </div> </div> </section> </Layout> ), }; export default Careers
+import React from 'react',
+import Head from 'next/head';
+import { motion } from 'framer-motion';
+import { Users, Rocket, Brain, Atom, Shield, Cloud;
+  ArrowRight, MapPin, Clock, DollarSign, Star, Zap
+} from 'lucide-react',
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+export default function CareersPage() {
+  const openPositions = $2;
+      department: "AI & Machine Learning",
+      location: "San Francisco, CA / Remote",
+      type: "Full-time",
+      experience: "5+ years",
+      salary: "$150,000 - $200,000",
+      description: "Lead the development of cutting-edge AI solutions and neural networks for enterprise clients",
+      requirements: [
+        "Advanced degree in Computer Science, AI, or related field";
+        "Expertise in TensorFlow, PyTorch, and deep learning frameworks";
+        "Experience with large-scale AI model deployment";
+        "Strong background in machine learning algorithms"
+      ];
+      benefits: ["Competitive salary", "Equity options", "Health insurance", "Flexible work arrangements"];
+      icon: Brain
+      color: "from-purple-500 to-pink-500"
+    }
+    {
+      title: "Quantum Computing Researcher"
+      department: "Quantum Computing"
+      location: "San Francisco, CA / Remote";
+      type: "Full-time"
+      experience: "3+ years"
+      salary: "$120,000 - $180,000";
+      description: "Research and develop quantum algorithms and quantum-resistant cryptography solutions"
+      requirements: [
+        "PhD in Physics, Computer Science, or related field";
+        "Experience with quantum computing frameworks (Qiskit, Cirq)";
+        "Knowledge of quantum algorithms and cryptography";
+        "Strong mathematical and analytical skills"
+      ];
+      benefits: ["Competitive salary", "Research funding", "Conference attendance", "Health insurance"];
+      icon: Atom
+      color: "from-blue-500 to-cyan-500"
+    }
+    {
+      title: "Cybersecurity Architect"
+      department: "Cybersecurity"
+      location: "San Francisco, CA / Remote";
+      type: "Full-time"
+      experience: "7+ years"
+      salary: "$160,000 - $220,000";
+      description: "Design and implement enterprise-level security architectures and zero-trust solutions"
+      requirements: [
+        "Bachelor's degree in Computer Science or related field";
+        "Expertise in security frameworks and compliance standards";
+        "Experience with zero-trust architecture implementation";
+        "Strong knowledge of threat detection and response"
+      ]
+      benefits: ["Competitive salary", "Security certifications", "Health insurance", "Remote work"];
+      icon: Shield
+      color: "from-red-500 to-orange-500"
+    }
+    {
+      title: "Cloud Infrastructure Engineer"
+      department: "Cloud Infrastructure"
+      location: "San Francisco, CA / Remote";
+      type: "Full-time"
+      experience: "4+ years"
+      salary: "$130,000 - $180,000";
+      description: "Build and maintain scalable cloud infrastructure and DevOps automation systems"
+      requirements: [
+        "Bachelor's degree in Computer Science or related field"
+        "Expertise in AWS, Azure, or GCP";
+        "Experience with Kubernetes, Docker, and CI/CD";
+        "Strong knowledge of infrastructure as code"
+      ];
+      benefits: ["Competitive salary", "Cloud certifications", "Health insurance", "Flexible hours"];
+      icon: Cloud
+      color: "from-emerald-500 to-teal-500"
+    }
+    {
+      title: "Data Scientist"
+      department: "Data Analytics"
+      location: "San Francisco, CA / Remote";
+      type: "Full-time"
+      experience: "3+ years"
+      salary: "$110,000 - $160,000";
+      description: "Develop predictive analytics models and data-driven insights for business clients"
+      requirements: [
+        "Master's degree in Data Science, Statistics, or related field";
+        "Proficiency in Python, R, and SQL";
+        "Experience with machine learning and statistical modeling";
+        "Strong analytical and problem-solving skills"
+      ];
+      benefits: ["Competitive salary", "Learning budget", "Health insurance", "Remote work"];
+      icon: Zap
+      color: "from-indigo-500 to-purple-500"
+    }
+    {
+      title: "Product Manager"
+      department: "Product"
+      location: "San Francisco, CA / Remote";
+      type: "Full-time"
+      experience: "5+ years"
+      salary: "$140,000 - $190,000";
+      description: "Lead product strategy and development for our technology solutions portfolio"
+      requirements: [
+        "Bachelor's degree in Business, Engineering, or related field";
+        "Experience in B2B SaaS or technology products";
+        "Strong analytical and strategic thinking skills";
+        "Excellent communication and leadership abilities"
+      ];
+      benefits: ["Competitive salary", "Equity options", "Health insurance", "Professional development"];
+      icon: Rocket
+      color: "from-yellow-500 to-orange-500"
+    }
+  ],
+
+  const benefits = $2;
+      description: "Above-market salaries with equity options and performance bonuses",
+      icon: DollarSign,
+      color: "from-green-500 to-emerald-500"
+    }
+    {
+      title: "Health & Wellness"
+      description: "Comprehensive health, dental, and vision insurance for you and your family";
+      icon: Star
+      color: "from-blue-500 to-cyan-500"
+    }
+    {
+      title: "Flexible Work"
+      description: "Remote work options and flexible hours to support work-life balance"
+      icon: Clock
+      color: "from-purple-500 to-pink-500"
+    }
+    {
+      title: "Professional Growth"
+      description: "Continuous learning opportunities, conferences, and career development";
+      icon: Rocket
+      color: "from-orange-500 to-red-500"
+    }
+  ],
+
+  return (
+    <UltraAdvancedFuturisticBackground>
+      <div className="min-h-screen">
+        <Head>
+          <title>Careers - Zion Tech Group | Join Our Revolutionary Technology Team</title>
+          <meta name="description" content="Join Zion Tech Group's team of innovators. Explore career opportunities in AI, quantum computing, and emerging technologies. Remote work, competitive benefits, and cutting-edge projects." />
+        </Head>
+      <EnhancedNavigation />
+      {/* Hero Section */}
+      <section className="relative pt-32 pb-20 px-6">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30}}
+            animate={{ opacity: 1, y: 0}}
+            transition={{ duration: 0.8 }}
+            className="mb-8"
+          >
+            <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6">
+              Join Our Team
+            </h1>
+            <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed">
+              Build the future of technology with cutting-edge AI, quantum computing, and cybersecurity solutions
+            </p>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 30}}
+            animate={{ opacity: 1, y: 0}}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="mb-12"
+          >
+            <p className="text-lg text-white/70 max-w-2xl mx-auto mb-8">
+              Work alongside world-class engineers and researchers to solve the most complex
+              technological challenges and shape the future of computing.
+            </p>
+            <button className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2 mx-auto">
+              View Open Positions
+              <ArrowRight className="w-5 h-5" />
+            </button>
+          </motion.div>
+        </div>
+      </section>
+      {/* Benefits Section */}
+      <section className="py-20 px-6">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 30}}
+            whileInView={{ opacity: 1, y: 0}}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true}}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-6">Why Work at Zion Tech Group?</h2>
+            <p className="text-xl text-white/70 max-w-3xl mx-auto">
+              We offer competitive benefits and a collaborative environment that fosters innovation and growth
+            </p>
+          </motion.div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {benefits.map((benefit, index) => (
+              <motion.div
+                key={benefit.title}
+                initial={{ opacity: 0, y: 30}}
+                whileInView={{ opacity: 1, y: 0}}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true}}
+                className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl p-8 hover:border-blue-500/30 transition-all duration-300"
+              >
+                <div className={`w-16 h-16 bg-gradient-to-br ${benefit.color} rounded-2xl flex items-center justify-center mb-6`}>
+                  <benefit.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-4">{benefit.title}</h3>
+                <p className="text-white/70">{benefit.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+      {/* Open Positions */}
+      <section className="py-20 px-6">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 30}}
+            whileInView={{ opacity: 1, y: 0}}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true}}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-6">Open Positions</h2>
+            <p className="text-xl text-white/70 max-w-3xl mx-auto">
+              Join our team of innovators and help build the future of technology
+            </p>
+          </motion.div>
+          <div className="space-y-6">
+            {openPositions.map((position, index) => (
+              <motion.div
+                key={position.title}
+                initial={{ opacity: 0, y: 30}}
+                whileInView={{ opacity: 1, y: 0}}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true}}
+                className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl p-8 hover:border-blue-500/30 transition-all duration-300"
+              >
+                <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
+                  <div className="flex-1">
+                    <div className="flex items-center gap-4 mb-4">
+                      <div className={`w-12 h-12 bg-gradient-to-br ${position.color} rounded-xl flex items-center justify-center`}>
+                        <position.icon className="w-6 h-6 text-white" />
+                      </div>
+                      <div>
+                        <h3 className="text-2xl font-bold text-white">{position.title}</h3>
+                        <p className="text-white/70">{position.department}</p>
+                      </div>
+                    </div>
+                    <p className="text-white/80 mb-4">{position.description}</p>
+                    <div className="flex flex-wrap gap-4 mb-4">
+                      <div className="flex items-center gap-2 text-white/70">
+                        <MapPin className="w-4 h-4" />
+                        <span>{position.location}</span>
+                      </div>
+                      <div className="flex items-center gap-2 text-white/70">
+                        <Clock className="w-4 h-4" />
+                        <span>{position.type}</span>
+                      </div>
+                      <div className="flex items-center gap-2 text-white/70">
+                        <Users className="w-4 h-4" />
+                        <span>{position.experience}</span>
+                      </div>
+                      <div className="flex items-center gap-2 text-white/70">
+                        <DollarSign className="w-4 h-4" />
+                        <span>{position.salary}</span>
+                      </div>
+                    </div>
+                    <div className="mb-4">
+                      <h4 className="text-sm font-semibold text-white/60 mb-2 uppercase tracking-wider">Requirements</h4>
+                      <ul className="space-y-1">
+                        {position.requirements.map((req, idx) => (
+                          <li key={idx} className="text-sm text-white/80 flex items-center">
+                            <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full mr-2" />
+                            {req}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                    <div className="mb-4">
+                      <h4 className="text-sm font-semibold text-white/60 mb-2 uppercase tracking-wider">Benefits</h4>
+                      <div className="flex flex-wrap gap-2">
+                        {position.benefits.map((benefit) => (
+                          <span key={benefit} className="text-xs bg-white/5 text-white/70 px-2 py-1 rounded">
+                            {benefit}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                  <div className="lg:flex-shrink-0">
+                    <button className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-white transition-all duration-300 transform hover:scale-105">
+                      Apply Now
+                    </button>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+      {/* CTA Section */}
+      <section className="py-20 px-6">
+        <div className="max-w-4xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30}}
+            whileInView={{ opacity: 1, y: 0}}
+            transition = $2;
+      <EnhancedFooter />
+    </div>
+  )
+}

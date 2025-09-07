@@ -1,51 +1,48 @@
-import NextLink from 'next/link'
-
-export default function Sidebar() {
-  const groups: { title: string; links: { href: string; label: string }[] }[] = [
-    {
-      title: 'Micro SaaS',
-      links: [
-        { href: '/services/micro-saas', label: 'Overview' },
-        { href: '/services/micro-saas/ai-qa', label: 'AI QA' },
-        { href: '/services/micro-saas/lead-enrichment', label: 'Lead Enrichment' },
-        { href: '/services/micro-saas/contract-ai', label: 'Contract AI' },
-        { href: '/services/micro-saas/ai-seo-auditor', label: 'AI SEO Auditor' }
-      ]
-    },
-    {
-      title: 'IT Services',
-      links: [
-        { href: '/services/it-services', label: 'Overview' },
-        { href: '/services/it/cybersecurity', label: 'Cybersecurity' },
-        { href: '/services/cloud-services', label: 'Cloud' },
-        { href: '/services/web-development', label: 'Web Development' }
-      ]
-    },
-    {
-      title: 'AI Services',
-      links: [
-        { href: '/services/ai-services', label: 'Overview' },
-        { href: '/services/ai/ai-development', label: 'AI Development' },
-        { href: '/services/data-analytics', label: 'Data & Analytics' },
-        { href: '/services/computer-vision', label: 'Computer Vision' }
-      ]
-    }
-  ]
-
-  return (
-    <aside className="ztg-sidebar">
-      {groups.map((group) => (
-        <div key={group.title} className="ztg-sidebar-group">
-          <h5>{group.title}</h5>
-          <ul>
-            {group.links.map((l) => (
-              <li key={l.href}>
-                <NextLink href={l.href}>{l.label}</NextLink>
-              </li>
-            ))}
-          </ul>
-        </div>
-      ))}
-    </aside>
-  )
-}
+{/* Backdrop */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 bg-black bg-opacity-50 z-40"
+            onClick={onClose}
+          />
+          {/* Sidebar */}
+              {/* Header */}
+              <div className="flex items-center justify-between mb-8">
+                <div className="flex items-center space-x-2">
+                  <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-2 rounded-lg">
+                    <Building2 className="w-8 h-8 text-white" />
+                  </div>
+                  <span className="text-xl font-bold text-gray-900">Zion Tech Group</span>
+                </div>
+                <button
+                  onClick={onClose}
+              {/* Navigation */}
+              <nav className="space-y-4">
+                {Object.entries(navigation).map(([title, links]) => (
+                  <div key={title}>
+                    <button
+                      onClick={() => handleDropdownToggle(title)}
+                            key={link.name}
+                            href={link.href}
+                            className="block text-gray-600 hover:text-blue-600 transition-colors py-1"
+                            onClick={onClose}
+                          >
+                            {link.name}
+                          </Link>))}
+              {/* Quick Links */}
+              <div className="mt-8 pt-8 border-t border-gray-200">
+                <h3 className="text-lg font-semibold text-gray-900 mb-4">Quick Links</h3>
+                <div className="space-y-2">
+                  {quickLinks.map((link) => (
+                    <Link
+                      key={link.name}
+                      href={link.href}
+                      className="block text-gray-600 hover:text-blue-600 transition-colors py-1"
+                      onClick={onClose}
+                    >
+                      {link.name}
+                    </Link>))}
+                </div>
+              </div>
+              {/* Contact Info */}

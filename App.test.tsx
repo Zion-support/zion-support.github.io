@@ -1,24 +1,40 @@
-import React from 'react'
-import { render, screen } from '@testing-library/react'
-
-// Define a minimal local App component for testing
-const App: React.FC = () => {
-  return React.createElement('main', null, 'Hello')
-}
+<<<<<<< HEAD
+=======
+import React from 'react';
+import { render, screen } from '@testing-library/react';
+import { describe, it, expect } from 'vitest';
+import App from './App';
+>>>>>>> origin/chore/fix-lint-and-merge
 
 describe('App', () => {
   it('renders without crashing', () => {
-    render(React.createElement(App))
-    expect(screen.getByRole('main')).toBeInTheDocument()
-  })
-  
+    render(<App />);
+    expect(screen.getByRole('main')).toBeInTheDocument();
+  });
+
   it('displays correct content', () => {
-    render(React.createElement(App))
-    // Add specific content checks based on component functionality
-  })
-  
+    render(<App />);
+<<<<<<< HEAD
+    expect(screen.getByText('Welcome to Zion Tech Group')).toBeInTheDocument();
+=======
+    expect(screen.getByText('Zion Tech Group')).toBeInTheDocument();
+>>>>>>> origin/chore/fix-lint-and-merge
+  });
+
   it('handles user interactions', () => {
-    render(React.createElement(App))
-    // Add interaction tests based on component functionality
-  })
-})
+    render(<App />);
+    expect(screen.getByText('Get Started Today')).toBeInTheDocument();
+  });
+});
+  });
+});
+  it('displays correct content, () => {
+    render(<App />);
+    // Add specific content assertions here
+  });
+  it(handles user interactions', () => {
+    render(<App />);
+    // Add interaction tests here
+  });
+});
+

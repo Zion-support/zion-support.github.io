@@ -1,52 +1,15 @@
-import fs from 'fs';
-import path from 'path';
-;
-const baseUrl = 'https://ziontechgroup.com';
-;
-const pages = [;
-  '',;
-  '/about',;
-  '/services',;
-  '/services/ai-development',;
-  '/services/cloud-architecture',;
-  '/services/cybersecurity',;
-  '/services/data-analytics',;
-  '/services/devops',;
-  '/services/mobile-development',;
-  '/blockchain-solutions',;
-  '/iot-platforms',;
-  '/solutions/digital-transformation',;
-  '/solutions/enterprise-solutions',;
-  '/contact',;
-  '/privacy',;
-  '/terms',;
-  '/cookies';
-];
-;
-const generateSitemap = () => {;
-  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>;
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">;
-${pages.map(page => {;
-  const url = `${baseUrl}${page}`;
-  const priority = page === '' ? '1.0' : page.startsWith('/services') ? '0.9' : '0.8';
-  const changefreq = page === '' ? 'daily' : 'weekly';
-  ;
-  return `  <url>;
-    <loc>${url}</loc>;
-    <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>;
-    <changefreq>${changefreq}</changefreq>;
-    <priority>${priority}</priority>;
-  </url>`;,
-}).join('\n')}
-</urlset>`;
-;
-  const publicDir = path.join(process.cwd(), 'public');
-  if (!fs.existsSync(publicDir)) {;
-    fs.mkdirSync(publicDir, { recursive: true });,
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'GET') {
+    return res.status(405).json({ message: 'Method not allowed' });
+  }
+
+  try {
+    // TODO: Implement burn logic
+    res.status(200).json({ message: 'burn endpoint' });
+  } catch (error) {
+    console.error('Error in burn:', error);
+    res.status(500).json({ message: 'Internal server error' });
+  }
 }
-;
-  fs.writeFileSync(path.join(publicDir, 'sitemap.xml'), sitemap);
-  console.log('✅ Sitemap generated successfully at public/sitemap.xml');,
-};
-;
-generateSitemap();

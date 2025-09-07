@@ -1,1 +1,54 @@
-import { NextApiRequest, NextApiResponse } from 'next'// Mock Prisma Clientjest.mock('@prisma/client', () => {  const mPrismaClient = {    product: {      findMany: jest.fn(),      aggregate: jest.fn(),    },    productReview: {      aggregate: jest.fn(),    },    $queryRawUnsafe: jest.fn(),    $disconnect: jest.fn(),  }  return { PrismaClient: jest.fn(() => mPrismaClient) }})let prisma: PrismaClientinterface ProductLike {  id: string  name: string  description?: string  images?: unknown[]  price?: number | null  currency?: string  tags?: string[]}describe('/api/products API Endpoint', () => {  beforeEach(() => {    jest.clearAllMocks()    prisma = new PrismaClient()  })  afterEach(() => {    jest.resetAllMocks()  })  test('should return 405 if method is not GET', async () => {    const { req, res } = createMocks({ method: 'POST' })    await productHandler(req as NextApiRequest, res as NextApiResponse)    expect(res._getStatusCode()).toBe(405)  })  test('should return products on successful GET request', async () => {    const mockProducts = [      { id: 1, name: 'Product 1', price: 100 },      { id: 2, name: 'Product 2', price: 200 },    ]    (prisma.product.findMany as jest.Mock).mockResolvedValue(mockProducts)    const { req, res } = createMocks({ method: 'GET' })    await productHandler(req as NextApiRequest, res as NextApiResponse)    expect(res._getStatusCode()).toBe(200)    expect(res._getJSONData()).toEqual(mockProducts)  })})
+import React from 'react';
+import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
+
+jest.mock('@prisma/client', () => {
+  const mPrismaClient = {
+    product: {
+      findMany: jest.fn(),
+      aggregate: jest.fn(),
+    },
+    productReview: {
+      aggregate: jest.fn(),
+    },
+    $queryRawUnsafe: jest.fn(),
+    $disconnect: jest.fn(),
+  };
+  return { PrismaClient: jest.fn(() => mPrismaClient) };
+});
+
+let prisma: PrismaClient;
+
+describe('/api/products API Endpoint', () => {
+  let req: ReturnType<typeof createRequest>;
+  let res: ReturnType<typeof createResponse>;
+
+  describe('GET /api/products with fuzzy search', () => {
+    it('should return products matching search query', async () => {
+      const mockProducts = [
+        {
+          id: '1',
+          name: 'GPT Product',
+          description: 'AI-powered product',
+          price: 100,
+          currency: 'USD',
+          tags: ['ai', 'gpt'],
+        },
+      ];
+
+      (prisma.product.findMany as jest.Mock).mockResolvedValue(mockProducts);
+
+      req = createRequest({
+        method: 'GET',
+        query: { search: 'gpt' },
+      });
+      res = createResponse();
+
+      await productHandler(req, res);
+
+      expect(res._getStatusCode()).toBe(200);
+      const data = JSON.parse(res._getData());
+      expect(data.products).toEqual(mockProducts);
+    });
+  });
+});

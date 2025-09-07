@@ -1,328 +1,179 @@
-import type { NextPage } from 'next';
+import React from 'react';
+
+
+=======
+=======
 import Head from 'next/head';
 import Link from 'next/link';
-import { BarChart3, Zap, Shield, Users, ArrowRight, CheckCircle, Database, TrendingUp } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { BarChart3, TrendingUp, Database, Brain, CheckCircle, ArrowRight } from 'lucide-react';
 
-const DataAnalytics: NextPage = () => {
-  const analyticsSolutions = [
-    {
-      icon: BarChart3,
-      title: 'Business Intelligence',
-      description: 'Transform raw data into actionable insights for better decision making.',
-      features: ['Interactive Dashboards', 'KPI Tracking', 'Performance Metrics', 'Real-time Reporting']
-    },
-    {
-      icon: TrendingUp,
-      title: 'Predictive Analytics',
-      description: 'Forecast future trends and behaviors using advanced statistical models.',
-      features: ['Trend Analysis', 'Forecasting Models', 'Risk Assessment', 'Pattern Recognition']
-    },
-    {
-      icon: Database,
-      title: 'Data Integration',
-      description: 'Connect and consolidate data from multiple sources and systems.',
-      features: ['ETL Processes', 'Data Warehousing', 'API Integration', 'Data Quality Management']
-    },
-    {
-      icon: Users,
-      title: 'Data Visualization',
-      description: 'Create compelling visual representations of complex data.',
-      features: ['Interactive Charts', 'Custom Dashboards', 'Mobile Reports', 'Real-time Updates']
-    }
-  ];
+const analyticsServices = [
 
-  const analyticsProcess = [
-    {
-      number: '01',
-      title: 'Data Assessment',
-      description: 'Evaluate your data sources, quality, and availability.'
-    },
-    {
-      number: '02',
-      title: 'Strategy Planning',
-      description: 'Define analytics goals and create implementation roadmap.'
-    },
-    {
-      number: '03',
-      title: 'Data Preparation',
-      description: 'Clean, transform, and prepare data for analysis.'
-    },
-    {
-      number: '04',
-      title: 'Analysis & Modeling',
-      description: 'Apply statistical methods and build predictive models.'
-    },
-    {
-      number: '05',
-      title: 'Insights & Reporting',
-      description: 'Generate insights and create actionable reports.'
-    }
-  ];
+  {
+    icon: BarChart3,
+    title: 'Business Intelligence',
+    description: 'Advanced analytics and reporting dashboards for data-driven decisions'
+  },
+  {
+    icon: Database,
+    title: 'Data Warehousing',
+    description: 'Centralized data storage and management solutions'
+  },
+  {
+    icon: TrendingUp,
+    title: 'Predictive Analytics',
+    description: 'Machine learning models for forecasting and trend analysis'
+  },
+  {
+    icon: Brain,
+    title: 'AI-Powered Insights',
+    description: 'Artificial intelligence for automated data analysis and insights'
+  },
+  {
+    icon: CheckCircle,
+    title: 'Real-time Analytics',
+    description: 'Live data processing and real-time business intelligence'
+  },
+  {
+    icon: ArrowRight,
+    title: 'Data Visualization',
+    description: 'Interactive charts, graphs, and visual data representations'
+  }
+];
 
-  const tools = [
-    {
-      category: 'Business Intelligence',
-      platforms: ['Tableau', 'Power BI', 'QlikView', 'Looker', 'Domo']
-    },
-    {
-      category: 'Data Processing',
-      platforms: ['Python', 'R', 'SQL', 'Apache Spark', 'Hadoop']
-    },
-    {
-      category: 'Cloud Analytics',
-      platforms: ['AWS Analytics', 'Google Analytics', 'Azure Synapse', 'Snowflake', 'Databricks']
-    }
-  ];
 
-  const useCases = [
-    {
-      industry: 'Retail',
-      applications: ['Customer Segmentation', 'Inventory Optimization', 'Sales Forecasting', 'Market Basket Analysis'],
-      benefits: ['Increased Sales', 'Better Inventory Management', 'Improved Customer Experience', 'Cost Reduction']
-    },
-    {
-      industry: 'Healthcare',
-      applications: ['Patient Analytics', 'Clinical Research', 'Resource Optimization', 'Predictive Diagnostics'],
-      benefits: ['Better Patient Care', 'Improved Outcomes', 'Cost Efficiency', 'Research Advancement']
-    },
-    {
-      industry: 'Finance',
-      applications: ['Risk Assessment', 'Fraud Detection', 'Portfolio Optimization', 'Customer Lifetime Value'],
-      benefits: ['Reduced Risk', 'Increased Security', 'Better Returns', 'Customer Retention']
-    },
-    {
-      industry: 'Manufacturing',
-      applications: ['Predictive Maintenance', 'Quality Control', 'Supply Chain Optimization', 'Performance Analytics'],
-      benefits: ['Reduced Downtime', 'Higher Quality', 'Cost Savings', 'Improved Efficiency']
-    }
-  ];
+=======
+
+export default function DataAnalyticsPage() {
+
+export default function DataAnalyticsPage() {
+  
+    >
+      <div className="min-h-screen bg-white">
+        {/* Hero Section */}
+        <section className="bg-gradient-to-r from-purple-600 to-pink-700 text-white py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+                Data Analytics Services
+              </h1>
+              <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+                Transform your data into actionable insights with advanced analytics,
 
   return (
-    <>
-      <Head>
-        <title>Data Analytics Services - Zion Tech Group</title>
-        <meta name="description" content="Transform your business with Zion Tech Group's data analytics services. Business intelligence, predictive analytics, and data visualization solutions." />
-        <meta name="keywords" content="data analytics, business intelligence, predictive analytics, data visualization, data integration, Zion Tech Group" />
-      </Head>
-      
-      <div className="min-h-screen">
+    <Layout
+      title="Data Analytics Services - Zion Tech Group"
+      description="Transform your data into actionable insights with our comprehensive data analytics services. Business intelligence, predictive analytics, and AI-powered insights."
+      keywords="data analytics, business intelligence, data warehousing, predictive analytics, data visualization, AI insights">;
+      <div className="min-h-screen bg-white">;
         {/* Hero Section */}
-        <section className="bg-gradient-to-r from-orange-900 via-red-900 to-orange-700 text-white py-20">
-          <div className="container mx-auto px-4 text-center">
-            <div className="w-24 h-24 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6">
-              <BarChart3 className="w-12 h-12" />
+
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}"
+              className="text-center"
+            >"
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">Data Analytics</h1>"
+              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+                Transform your data into actionable insights with our comprehensive analytics;
+                solutions and AI-powered intelligence.
+
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                  Get Started
+                </button>
+                <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors">
+                  View Demo
+                </button>
+              </div>
             </div>
-            <h1 className="text-5xl font-bold mb-6">Data Analytics Services</h1>
-            <p className="text-xl max-w-3xl mx-auto">
-              Transform your data into actionable insights that drive business growth. 
-              From business intelligence to predictive analytics, we help you make data-driven decisions.
-            </p>
           </div>
         </section>
 
-        {/* Analytics Solutions */}
-        <section className="py-20">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold mb-4 text-gray-800">Our Analytics Solutions</h2>
-              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                We offer comprehensive data analytics services that help businesses 
-                unlock the value hidden in their data and make informed decisions.
-              </p>
-            </div>
-            
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {analyticsSolutions.map((solution, index) => (
-                <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
-                  <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <solution.icon className="w-8 h-8 text-orange-600" />
+
+=======
+=======
+
+        {/* Services Grid */}
+        <section className="py-16 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {analyticsServices.map((service, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6"
+                >
+                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                    <service.icon className="w-6 h-6 text-blue-600" />
+
                   </div>
-                  <h3 className="text-xl font-semibold mb-3 text-gray-800 text-center">{solution.title}</h3>
-                  <p className="text-gray-600 mb-4 text-center">{solution.description}</p>
-                  <ul className="space-y-2">
-                    {solution.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="text-sm text-gray-600 flex items-center">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                    {feature.title}
+                  </h3>
+                  <p className="text-gray-600">
+                    {feature.description}
+                  </p>
+                </div>
+
+                    <feature.icon className="w-6 h-6 text-purple-600" />                  </div>
+                  <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
+                  <p className="text-gray-600 mb-4">{service.description}</p>
+
+                  <div className="space-y-2 mb-4">
+                    {service.features.map((feature, featureIndex) => ("
+                      <div key={featureIndex} className="flex items-center text-sm text-gray-600">"
                         <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
                         {feature}
-                      </li>
+                      </div>
                     ))}
-                  </ul>
-                </div>
+                  </div>"
+                  <div className="text-lg font-semibold text-blue-600 mb-4">{service.pricing}</div>
+                  <Link"
+                    href="/contact""
+                    className="w-full inline-flex items-center justify-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+                  >
+                    Get Quote"
+                    <ArrowRight className="ml-2 w-4 h-4" />
+                  </Link>
+                </motion.div>
+
               ))}
             </div>
           </div>
         </section>
 
-        {/* Analytics Process */}
-        <section className="py-20 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold mb-4 text-gray-800">Our Analytics Process</h2>
-              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                We follow a systematic approach to ensure your analytics initiatives 
-                deliver maximum value and actionable insights.
-              </p>
-            </div>
-            
-            <div className="grid md:grid-cols-5 gap-8">
-              {analyticsProcess.map((step, index) => (
-                <div key={index} className="text-center">
-                  <div className="w-20 h-20 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <span className="text-white text-2xl font-bold">{step.number}</span>
-                  </div>
-                  <h3 className="text-xl font-semibold mb-3 text-gray-800">{step.title}</h3>
-                  <p className="text-gray-600">{step.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
 
-        {/* Tools & Technologies */}
-        <section className="py-20">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold mb-4 text-gray-800">Tools & Technologies</h2>
-              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                We leverage industry-leading analytics tools and platforms to deliver 
-                powerful insights and exceptional user experiences.
-              </p>
-            </div>
-            
-            <div className="grid md:grid-cols-3 gap-8">
-              {tools.map((tool, index) => (
-                <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
-                  <h3 className="text-xl font-semibold mb-4 text-gray-800 text-center">{tool.category}</h3>
-                  <div className="flex flex-wrap gap-2 justify-center">
-                    {tool.platforms.map((platform, platformIndex) => (
-                      <span 
-                        key={platformIndex}
-                        className="bg-orange-100 text-orange-800 text-sm font-medium px-3 py-1 rounded-full"
-                      >
-                        {platform}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
+=======
 
-        {/* Use Cases by Industry */}
-        <section className="py-20 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold mb-4 text-gray-800">Analytics Use Cases by Industry</h2>
-              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                Discover how data analytics is transforming different industries and creating 
-                new opportunities for innovation and growth.
-              </p>
-            </div>
-            
-            <div className="grid md:grid-cols-2 gap-8">
-              {useCases.map((useCase, index) => (
-                <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
-                  <h3 className="text-2xl font-semibold mb-4 text-gray-800">{useCase.industry}</h3>
-                  
-                  <div className="mb-6">
-                    <h4 className="font-semibold text-gray-700 mb-3">Applications:</h4>
-                    <ul className="space-y-2">
-                      {useCase.applications.map((app, appIndex) => (
-                        <li key={appIndex} className="text-gray-600 flex items-center">
-                          <div className="w-2 h-2 bg-orange-500 rounded-full mr-2"></div>
-                          {app}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                  
-                  <div>
-                    <h4 className="font-semibold text-gray-700 mb-3">Benefits:</h4>
-                    <ul className="space-y-2">
-                      {useCase.benefits.map((benefit, benefitIndex) => (
-                        <li key={benefitIndex} className="text-gray-600 flex items-center">
-                          <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                          {benefit}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Why Choose Us */}
-        <section className="py-20">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold mb-4 text-gray-800">Why Choose Zion Tech Group for Data Analytics?</h2>
-              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                We combine deep analytics expertise with business understanding to deliver 
-                solutions that drive real business value and competitive advantage.
-              </p>
-            </div>
-            
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="text-center p-6">
-                <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Users className="w-8 h-8 text-orange-600" />
-                </div>
-                <h3 className="text-xl font-semibold mb-3 text-gray-800">Expert Analytics Team</h3>
-                <p className="text-gray-600">
-                  Our team includes data scientists, analysts, and engineers with 
-                  proven track records in delivering successful analytics solutions.
-                </p>
-              </div>
-              
-              <div className="text-center p-6">
-                <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Shield className="w-8 h-8 text-orange-600" />
-                </div>
-                <h3 className="text-xl font-semibold mb-3 text-gray-800">Data Security & Privacy</h3>
-                <p className="text-gray-600">
-                  We implement robust security measures and ensure compliance with 
-                  data protection regulations and industry standards.
-                </p>
-              </div>
-              
-              <div className="text-center p-6">
-                <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Zap className="w-8 h-8 text-orange-600" />
-                </div>
-                <h3 className="text-xl font-semibold mb-3 text-gray-800">Scalable Solutions</h3>
-                <p className="text-gray-600">
-                  We build analytics solutions that grow with your business and 
-                  adapt to changing requirements and data volumes.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-orange-600 text-white">
-          <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl font-bold mb-6">Ready to Unlock Your Data's Potential?</h2>
-            <p className="text-xl mb-8 max-w-2xl mx-auto">
-              Let's discuss how data analytics can transform your business 
-              and create new opportunities for growth and innovation.
+        <section className="py-20 bg-gray-900 text-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              Ready to Transform Your Data?
+            </h2>
+            <p className="text-xl mb-8 max-w-3xl mx-auto">
+              Contact our data analytics team to discuss your specific requirements
+              and discover how we can help unlock the value in your data.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/contact"><span className="bg-white text-orange-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                Get Started Today
-              </span></Link>
-              <Link href="/services"><span className="border-2 border-white text-white hover:bg-white hover:text-orange-600 px-8 py-3 rounded-lg font-semibold transition-colors">
-                Explore All Services
-              </span></Link>
+              <button className="bg-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors">
+                Contact Analytics Team
+              </button>
+              <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-colors">
+                Download Analytics Guide
+              </button>
             </div>
           </div>
         </section>
       </div>
+
+
+    </>
     </>
   );
-};
-
-export default DataAnalytics;
