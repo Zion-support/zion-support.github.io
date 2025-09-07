@@ -1,6 +1,8 @@
 import React from 'react';
 import Link from 'next/link';
 import Layout from '../components/Layout';
+import Testimonials from '../components/Testimonials';
+import NewsletterSignup from '../components/NewsletterSignup';
 
 export default function Home() {
   return (
@@ -73,6 +75,25 @@ export default function Home() {
               <p className="text-gray-600">Artificial intelligence solutions to automate processes and enhance user experiences.</p>
             </div>
           </div>
+        </div>
+      </div>
+
+      {/* Testimonials Section */}
+      <div className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">What Our Clients Say</h2>
+            <p className="text-lg text-gray-600">Don't just take our word for it - hear from our satisfied clients</p>
+          </div>
+          
+          <Testimonials className="max-w-4xl mx-auto" />
+        </div>
+      </div>
+
+      {/* Newsletter Section */}
+      <div className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <NewsletterSignup />
         </div>
       </div>
     </Layout>

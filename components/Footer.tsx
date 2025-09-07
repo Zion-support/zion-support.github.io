@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import NewsletterSignup from './NewsletterSignup';
 
 export default function Footer() {
   return (
@@ -49,6 +50,16 @@ export default function Footer() {
               <li><span className="text-gray-300">AI Integration</span></li>
               <li><span className="text-gray-300">Cloud Services</span></li>
             </ul>
+          </div>
+        </div>
+
+        {/* Newsletter Section */}
+        <div className="mt-12 pt-8 border-t border-gray-700">
+          <div className="max-w-2xl mx-auto">
+            <h3 className="text-lg font-semibold text-white mb-4 text-center">
+              Stay Updated with Our Newsletter
+            </h3>
+            <NewsletterSignup variant="compact" />
           </div>
         </div>
 
