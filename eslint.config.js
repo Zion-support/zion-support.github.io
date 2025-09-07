@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { FlatCompat } from '@eslint/eslintrc';
 import js from '@eslint/js';
 import typescript from '@typescript-eslint/eslint-plugin';
@@ -8,25 +6,16 @@ import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
 import nextPlugin from '@next/eslint-plugin-next';
 import globals from 'globals';
-=======
-const { FlatCompat } = require('@eslint/eslintrc');
-const js = require('@eslint/js');
->>>>>>> e69e89595790a81610b7c67a3a58ff639695f186
-=======
-import { FlatCompat } from '@eslint/eslintrc';
-import js from '@eslint/js';
->>>>>>> 91fec3a61bf105731881304ea8d3824dd093e739
 
 const compat = new FlatCompat({
   baseDirectory: import.meta.dirname,
   recommendedConfig: js.configs.recommended,
+  allConfig: js.configs.all,
 });
 
 export default [
-  js.configs.recommended,
+  ...compat.extends('next/core-web-vitals'),
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
     ignores: [
       'node_modules/**',
       'dist/**',
@@ -151,19 +140,6 @@ export default [
   {
     files: ['**/*.js'],
     languageOptions: {
-=======
-    rules: {
-      'no-unused-vars': 'warn',
-      'no-console': 'warn',
-      'prefer-const': 'warn'
-    },
-    languageOptions: {
-      ecmaVersion: 'latest',
-      sourceType: 'module',
->>>>>>> e69e89595790a81610b7c67a3a58ff639695f186
-=======
-    languageOptions: {
->>>>>>> 91fec3a61bf105731881304ea8d3824dd093e739
       globals: {
         console: 'readonly',
         process: 'readonly',
@@ -173,7 +149,6 @@ export default [
         global: 'readonly',
         module: 'readonly',
         require: 'readonly',
-<<<<<<< HEAD
         exports: 'readonly',
       },
     },
@@ -181,102 +156,4 @@ export default [
       'no-console': 'off',
     },
   },
-=======
-        exports: 'readonly'
-      }
-    },
-    rules: {
-      'no-unused-vars': 'warn',
-      'no-console': 'warn',
-      'prefer-const': 'warn'
-    }
-  },
-  {
-    ignores: [
-      'node_modules/**',
-      '.next/**',
-      'dist/**',
-      'build/**',
-      '*.config.js',
-      '*.config.cjs',
-      '*.config.mjs',
-      'scripts/**',
-      'automation/**',
-      'automation_backup/**',
-      'apps.backup/**',
-      'backup-problematic-files/**',
-      'backup-merge-conflicts/**',
-      'corrupted_backup/**',
-      'corrupted-files-backup/**',
-      'src.disabled/**',
-      'components.disabled/**',
-      'pages.disabled/**',
-      'zion-os/**',
-      'zion-website/**',
-      'zion_academy/**',
-      'api-backup/**',
-      'api-disabled/**',
-      'api.disabled/**',
-      'backup/**',
-      'backups/**',
-      'broken_files_backup/**',
-      'cypress_backup/**',
-      'data_backup/**',
-      'deployment/**',
-      'deployments/**',
-      'dao/**',
-      'e2e/**',
-      'server/**',
-      'temp_*/**',
-      'test_build/**',
-      'tests/**',
-      '__tests__/**',
-      'components/apps/extension/**',
-      'lib.broken/**',
-      'middleware/**',
-      'netlify/**',
-      'pm2-automation/**',
-      'pm2-backups/**',
-      'recovered-branches/**',
-      'src.broken/**',
-      'src_backup_temp/**',
-      'test-next/**',
-      'tools/**',
-      'utils/**',
-      '*.cjs',
-      '*.mjs',
-      'supabase/**',
-      'ultimate-*.cjs',
-      'advanced-*.js',
-      'comprehensive-*.js',
-      'enhanced-*.js',
-      'fix-*.js',
-      'merge-*.js',
-      'run-*.js',
-      'test-*.js',
-      '*.test.js',
-      '*.spec.js',
-      'aggressive-*.js',
-      'batch-*.js',
-      'clean-*.js',
-      'critical-*.js',
-      'execute-*.js',
-      'final-*.js',
-      'health-*.js',
-      'improve-*.js',
-      'maintenance-*.js',
-      'monitoring-*.js',
-      'optimized-*.js',
-      'performance-*.js',
-      'resolve-*.js',
-      'seo-*.js',
-      'simple-*.js',
-      'structural-*.js',
-      'system-*.js',
-      'ultimate-*.js',
-      'pages_backup_conflict/**',
-      'data.disabled/**'
-    ]
-  }
->>>>>>> e69e89595790a81610b7c67a3a58ff639695f186
 ];
