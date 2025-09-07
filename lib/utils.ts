@@ -51,6 +51,7 @@ export function capitalizeFirst(str: string): string {
 }
 
 export function slugify(str: string): string {
+<<<<<<< HEAD
   // TODO: Implement
 }
   return str;
@@ -139,3 +140,11 @@ origin/main;
 
 }
 "
+=======
+  return str
+    .toLowerCase()
+    .replace(/[^\w\s-]/g, '')
+    .replace(/[\s_-]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+}
+>>>>>>> a2c6a2cc86d6e83a9083c45bfcf5a35f741b3208

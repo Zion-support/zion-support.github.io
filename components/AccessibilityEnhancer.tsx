@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -76,6 +77,9 @@
   );
 }
 export default AccessibilityEnhancer;
+=======
+import React, { useEffect, useState } from 'react';
+>>>>>>> a2c6a2cc86d6e83a9083c45bfcf5a35f741b3208
 
 export default AccessibilityEnhancer;
 
@@ -146,6 +150,7 @@ export default function AccessibilityEnhancer() {
         </div>
       </div>
     </div>
+<<<<<<< HEAD
     <>;
       {/* Accessibility Controls */}"
       <div className="accessibility-controls fixed top-4 right-4 z-50 bg-white dark:bg-gray-800 shadow-lg rounded-lg p-4 border">;"
@@ -303,3 +308,7 @@ export default AccessibilityEnhancer;
 
 
 '
+=======
+  );
+}
+>>>>>>> a2c6a2cc86d6e83a9083c45bfcf5a35f741b3208
