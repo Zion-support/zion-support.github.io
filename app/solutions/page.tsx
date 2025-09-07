@@ -57,18 +57,12 @@ export default function SolutionsPage() {
       </div>
 
       <div className="text-center">
-        <h2 className="text-3xl font-bold text-gray-900 mb-6">
-          Ready to Transform Your Business?
-        </h2>
-        <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-          Contact us today to discuss your business needs and create intelligent solutions.
-        </p>
-        <a
-          href="/contact"
-          className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-flex items-center"
+        <Link 
+          href="/contact" 
+          className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
         >
-          Get Started Today
-        </a>
+          Get Started
+        </Link>
       </div>
     </div>
   );

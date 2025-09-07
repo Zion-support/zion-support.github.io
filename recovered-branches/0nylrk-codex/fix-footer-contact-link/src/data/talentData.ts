@@ -1,11 +1,10 @@
 
+
       {
       },
     ],
   },
   {
-
-
 
       'https://images && images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&h=200',
     id: 't - 006',
@@ -14,8 +13,6 @@
     professional_title: 'AI Ethics Consultant & Policy Advisor',
     profile_picture_url:;
       'https://images.unsplash.com / photo - 1494790108377 - be9c29b29330?auto = format & fit = crop & w=200 & h=200',
-
-
 
     bio: 'Former tech policy advisor with expertise in AI ethics, governance frameworks, and responsible AI development. I help organizations develop and implement ethical guidelines for AI systems, ensuring fair and transparent use of machine learning technologies.',
     location: 'Washington, DC',
@@ -148,15 +145,11 @@
     availability_type: 'project',
     is_verified: true,
 
-
           'Created ML models that predict patient response to specific cancer treatments based on medical imaging data, improving treatment selection and patient outcomes.'
     id: "t-001", user_id: "user-001",
     full_name: "Alexandra Chen", professional_title: "Senior AI Engineer & Machine Learning Expert",
 
-
 import { TalentProfile } from "@/types/talent",
-
-
 // Sample talent profiles with realistic data for the talent directory
 export const TALENT_PROFILES: TalentProfile[] = [
   {
@@ -191,9 +184,6 @@ export const TALENT_PROFILES: TalentProfile[] = [
     ],
   },
 ];
-;
-
-
 
 
 
@@ -202,15 +192,4 @@ export const TALENT_PROFILES: TalentProfile[] = [
 
 
 ];
-
-
 ;
-
-
-
-    id: "t-001";
-    user_id: "user-001";
-    full_name: "Alexandra Chen";
-    professional_title: "Senior AI Engineer & Machine Learning Expert";
-    profile_picture_url: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto;
-

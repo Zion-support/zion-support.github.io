@@ -1,34 +1,74 @@
 [build]
 command = "npm ci && npm run build"
+<<<<<<< HEAD
+publish = ".next"
+
+[build.environment]
+<<<<<<< HEAD
+
+  NODE_VERSION = "20"
+  NODE_OPTIONS = "--max-old-space-size=4096"
+ursor/automate-test-improve-and-merge-code-646c
+NODE_VERSION = "20"
+NODE_OPTIONS = "--max-old-space-size=4096"
+>>>>>>> main
+  command = "npm install --legacy-peer-deps && npm run build"
+  publish = ".next"
+command = "npm ci && npm run build"
+publish = ".next"
+=======
 publish = "dist"
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-474c
 
 [build.environment]
 NODE_VERSION = "20"
 NODE_OPTIONS = "--max-old-space-size=4096"
+<<<<<<< HEAD
+=======
+NODE_VERSION = "20"
+NODE_OPTIONS = "--max-old-space-size=4096"
+>>>>>>> 5d0bfd029486ab7d4285b084fd1f13e833405bec
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-474c
 
 [[plugins]]
-package = "@netlify/plugin-nextjs"
+  package = "@netlify/plugin-nextjs"
 
 [functions]
-directory = "netlify/functions"
+  directory = "netlify/functions"
 
 [[redirects]]
+<<<<<<< HEAD
+<<<<<<< HEAD
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
+from = "/api/*"
+to = "/.netlify/functions/:splat"
+status = 200
+>>>>>>> main
+
+=======
+>>>>>>> 5d0bfd029486ab7d4285b084fd1f13e833405bec
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-474c
 from = "/api/*"
 to = "/.netlify/functions/:splat"
 status = 200
 
 # Security and caching headers for static assets
 [[headers]]
-for = "/assets/*"
-[headers.values]
-Cache-Control = "public, max-age=31536000, immutable"
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
 
 [[headers]]
-for = "/*.js"
-[headers.values]
-Cache-Control = "public, max-age=31536000, immutable"
+  for = "/*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
 
 [[headers]]
+<<<<<<< HEAD
 for = "/*.css"
 [headers.values]
 Referrer-Policy = "strict-origin-when-cross-origin"
@@ -43,6 +83,10 @@ Cross-Origin-Resource-Policy = "same-origin"
 X-Permitted-Cross-Domain-Policies = "none"
 Origin-Agent-Cluster = "?1"
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> 5d0bfd029486ab7d4285b084fd1f13e833405bec
 # SPA fallback for client-side routing
 [[redirects]]
 from = "/*"
@@ -50,6 +94,30 @@ to = "/index.html"
 status = 200
 
 # Static redirects for specific routes
+<<<<<<< HEAD
+
+# Static redirects for exported site
+ursor/automate-test-improve-and-merge-code-646c
+# Static redirects for exported site
+=======
+>>>>>>> 5d0bfd029486ab7d4285b084fd1f13e833405bec
+=======
+  for = "/*.css"
+  [headers.values]
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "DENY"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
+    X-DNS-Prefetch-Control = "on"
+    Content-Security-Policy = "default-src 'self'; object-src 'none'; upgrade-insecure-requests; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'"
+    Cross-Origin-Opener-Policy = "same-origin"
+    Cross-Origin-Resource-Policy = "same-origin"
+    X-Permitted-Cross-Domain-Policies = "none"
+    Origin-Agent-Cluster = "?1"
+
+# Static redirects for exported site
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-474c
 [[redirects]]
 from = "/ai-customer-success-platform"
 to = "/services/ai-customer-success-platform/"
@@ -86,6 +154,33 @@ to = "/services/smart-crm-intelligence-suite/"
 status = 301
 
 [[redirects]]
+<<<<<<< HEAD
+<<<<<<< HEAD
+
 from = "/affiliate-attribution-suite"
 to = "/services/affiliate-attribution-suite/"
 status = 301
+
+  from = "/affiliate-attribution-suite"
+  to = "/services/affiliate-attribution-suite/"
+  status = 301
+from = "/affiliate-attribution-suite"
+to = "/services/affiliate-attribution-suite/"
+status = 301
+>>>>>>> main
+ursor/automate-test-improve-and-merge-code-646c
+[[plugins]]
+  package = "netlify-plugin-cloudinary"
+from = "/affiliate-attribution-suite"
+to = "/services/affiliate-attribution-suite/"
+status = 301
+=======
+from = "/affiliate-attribution-suite"
+to = "/services/affiliate-attribution-suite/"
+status = 301
+>>>>>>> 5d0bfd029486ab7d4285b084fd1f13e833405bec
+=======
+from = "/affiliate-attribution-suite"
+to = "/services/affiliate-attribution-suite/"
+status = 301
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-474c
