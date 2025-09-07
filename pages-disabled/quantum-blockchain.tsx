@@ -1,48 +1,26 @@
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
+class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}
+  static getDerivedStateFromError(error) {return { hasError: true }}
+  componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}
+  render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
     }
     return this.props.children;
   }
 }
-import React from "react";
-import Head from "next/head";
-import {;
-  Phone,;
-  Mail,;
-  MapPin,;
-  Check,;
-  ArrowRight,;
-  Sparkles,;
-  Star,;
-} from "lucide-react";
-import UltraAdvancedFuturisticBackground from "../components/ui/UltraAdvancedFuturisticBackground";
-import Button from "../components/ui/Button";
-import { enhancedRealMicroSaasServices } from "../data/enhanced-real-micro-saas-services";
-export default function MetaverseAIPlatformPage() {;
-  const service = enhancedRealMicroSaasServices && enhancedRealMicroSaasServices.find((s) =>;
-    s && s.link.endsWith("/metaverse-ai-development-platform"),;
-  );
-  if (!service) return null;
-  return (
-    <UltraAdvancedFuturisticBackground>;
+import React from 'react';
+import Head from 'next/head';
+import {Phone,Mail,MapPin,Check,ArrowRight,Sparkles,Star,} from 'lucide-react';
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+import Button from '../components/ui/Button';
+import { enhancedRealMicroSaasServices  } from '../data/enhanced-real-micro-saas-services';
+export default function MetaverseAIPlatformPage() {const service = enhancedRealMicroSaasServices && enhancedRealMicroSaasServices.find((s) =>;
+    s && s.link.endsWith("/metaverse-ai-development-platform"),)if (!service) return null;
+  return (<UltraAdvancedFuturisticBackground>;
       <Head>;
         <title>{service && service.name} - Zion Tech Group</title>;
         <meta name="description" content={service && service.description} />;
-        <link
-          rel="canonical"
-          href="https://ziontechgroup && ziontechgroup.com/metaverse-ai-development-platform"
+        <link;
+          rel="canonical";
+          href="https://ziontechgroup && ziontechgroup.com/metaverse-ai-development-platform";
         />;
       </Head>;
       <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">;
@@ -63,8 +41,7 @@ export default function MetaverseAIPlatformPage() {;
               </h2>;
               <p className="text-slate-300 mb-6">{service && service.description}</p>;
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">;
-                {service && service.features.slice(0, 12).map((feat, i) => (;
-                  <li
+                {service && service.features.slice(0, 12).map((feat, i) => (<li;
                     key={i}
                     className="flex items-start space-x-3 text-slate-200">;
                     <Check className="w-5 h-5 text-violet-400 mt-0 && 0.5" />;
@@ -92,10 +69,10 @@ export default function MetaverseAIPlatformPage() {;
                   {service && service.rating.toFixed(1)}
                 </div>;
               </div>;
-              <Button
-                href="/contact"
-                variant="quantum"
-                size="lg"
+              <Button;
+                href="/contact";
+                variant="quantum";
+                size="lg";
                 className="w-full">;
                 Request a Demo;
                 <ArrowRight className="w-5 h-5 ml-2" />;
@@ -119,34 +96,20 @@ export default function MetaverseAIPlatformPage() {;
         </div>;
       </div>;
     </UltraAdvancedFuturisticBackground>;
-  );
-import React from './react';
+  )import React from './react';
 import Head from './next / head';
-import {
-  Phone,
-  Mail,
-  MapPin,
-  Check,
-  ArrowRight,
-  Sparkles,
-  Star,
-} from './lucide-react';
-import UltraAdvancedFuturisticBackground from "../components / ui / UltraAdvancedFuturisticBackground";
-import Button from "../components / ui / Button";
-import { enhancedRealMicroSaasServices  } from '../data / enhanced - real - micro - saas - services';
-export default /**
- * MetaverseAIPlatformPage - Function description
- */
-function MetaverseAIPlatformPage() {
-  const service = enhancedRealMicroSaasServices.find ((s) =>;
-    s.link.ends_with ("/metaverse - ai - development - platform"),
-  );
-  // Check condition
-if (return null) {
-  $2
+import { Phone,Mail,MapPin,Check,ArrowRight,Sparkles,Star,} from './lucide-react';
+import UltraAdvancedFuturisticBackground from '../components / ui / UltraAdvancedFuturisticBackground';
+import Button from '../components / ui / Button';
+import { enhancedRealMicroSaasServices   } from '../data / enhanced - real - micro - saas - services';
+export default /**;
+ * MetaverseAIPlatformPage - Function description;
+ */;
+function MetaverseAIPlatformPage() {const service = enhancedRealMicroSaasServices.find ((s) =>;
+    s.link.ends_with ("/metaverse - ai - development - platform"),)// Check condition;
+if (return null) {$2;
 }
-return (
-    <UltraAdvancedFuturisticBackground>;
+return (<UltraAdvancedFuturisticBackground>;
       <Head>;
         <title>{service.name} - Zion Tech Group</title>;
         <meta name="description" content={service.description} />;
@@ -173,8 +136,7 @@ return (
               </h2>;
               <p className="text - slate - 300 mb-6">{service.description}</p>;
               <ul className="grid grid - cols - 1 md:grid - cols - 2 gap-3">;
-                {service.features.slice (0, 12).map ((feat, i) => (
-                  <li;
+                {service.features.slice (0, 12).map ((feat, i) => (<li;
                     key={i}
                     className="flex items - start space - x-3 text - slate-200";
                   >;
@@ -229,5 +191,4 @@ return (
           </div>;
         </div>;
       </div>;
-    </UltraAdvancedFuturisticBackground>);
-}
+    </UltraAdvancedFuturisticBackground>)}

@@ -1,9 +1,4 @@
-import React from 'react',;
-import Head from 'next/head',;
-;
-export default function ForbiddenPage() {;
-  return (;
-    <>;
+import React from 'react',import Head from 'next/head',export default function ForbiddenPage() {return (<>;
       <Head>;
         <title>403 - Zion App</title>;
         <meta name="description" content="403 page" />;
@@ -17,5 +12,4 @@ export default function ForbiddenPage() {;
         </div>;
       </div>;
     </>;
-  );
-}
+  )}

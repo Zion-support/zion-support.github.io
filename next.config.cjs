@@ -1,12 +1,20 @@
-<<<<<<< HEAD
-/** @type {import(
-  'next').NextConfig} */
+/** @type {import('next').NextConfig} */
 const nextConfig = {
-<<<<<<< HEAD
   reactStrictMode: true,
   eslint: {
+    ignoreDuringBuilds: true
+  },
+  typescript: {
+    ignoreBuildErrors: true
+  },
+  experimental: {
+    esmExternals: false
+  },
+  images: {
+    domains: ['ziontechgroup.com', 'localhost', 'images.unsplash.com', 'via.placeholder.com'],
+    unoptimized: true
+  },
     ignoreDuringBuilds: true,
-=======
   reactStrictMode: false,
   swcMinify: false,
   compress: true,
@@ -39,7 +47,7 @@ const nextConfig = {
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production'},
   webpack: (config, { dev, isServer }) => {
-    // Completely exclude problematic directories from the build
+    // Exclude problematic directories from the build
     config.module.rules.push({
       test: /\.(ts|tsx)$/,
       exclude: [
@@ -53,7 +61,9 @@ const nextConfig = {
         /automation_backup/,
         /broken_files_backup/,
         /contracts/,
-        /hardhat/,
+        /hardhat/
+      ]
+    });
         /^components\//, // Exclude root components directory
       ]});
 
@@ -66,8 +76,8 @@ const nextConfig = {
 
     return config;
   },
-  // Try to exclude problematic directories at the Next.js level
-  pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
+  pageExtensions: ['tsx', 'ts', 'jsx', 'js']
+};
   pageExtensions: ['tsxtsjsx', 'js'],
   onDemandEntries: {
     // period (in ms) where the server will keep pages in the buffer
@@ -76,17 +86,3 @@ const nextConfig = {
     pagesBufferLength: 2}};
 
 module.exports = nextConfig;
-=======
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
-  eslint: {
-    ignoreDuringBuilds: true
-  },
-  typescript: {
-    ignoreBuildErrors: true
-  }
-};
-
-export default nextConfig;
->>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
