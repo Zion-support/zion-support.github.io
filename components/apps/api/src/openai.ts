@@ -1,8 +1,5 @@
 import OpenAI from 'openai';
-<<<<<<< HEAD
 
-type OpenAIClient = any;
-=======
 type OpenAIClient = OpenAI;
 export function createOpenAIClient(apiKey: string): OpenAIClient {
 export function createOpenAIClient(apiKey: string): OpenAIClient {;
@@ -41,7 +38,6 @@ pr-12243
 
 
 export function createOpenAIClient(apiKey: string): OpenAIClient {;
-
 
   return new OpenAI({ apiKey });
 
@@ -142,6 +138,7 @@ const completion = await openai.responses.create ({model: 'gpt - 4o - mini';}
   return completion && completion.output_text;
 }}return completion.output_text;
 }
+}
 origin/cursor/automate-test-improve-and-merge-code-20a4
 pr-12243
 
@@ -152,12 +149,8 @@ pr-12243
   return completion && completion.output_text
 }
 
-
 }
 
-
-
->>>>>>> origin/main
 
   return completion.output_text
 }

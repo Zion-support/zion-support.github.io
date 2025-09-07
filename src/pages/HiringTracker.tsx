@@ -25,6 +25,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </p>
           </div>
         </div>
+        <Tabs defaultValue="kanban" onValueChange={setActiveTab} className="mb-8">"
 
 
 
@@ -38,24 +39,27 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         >
 origin/cursor/automate-test-improve-and-merge-code-2533
           <TabsList>
-            <TabsTrigger value="kanban">Kanban Board</TabsTrigger>
-            <TabsTrigger value="analytics">Analytics</TabsTrigger>
+            <TabsTrigger value="kanban">Kanban Board</TabsTrigger>"
+            <TabsTrigger value="analytics">Analytics</TabsTrigger>"
           </TabsList>
-
+        <Tabs defaultValue="kanban" onValueChange={setActiveTab} className="mb-8">"
+          <TabsList>
+            <TabsTrigger value="kanban">Kanban Board</TabsTrigger>"
+            <TabsTrigger value="analytics">Analytics</TabsTrigger>"
+          </TabsList>
+          <TabsContent value="kanban" className="mt-6">"
+            <KanbanBoard jobId={jobId} />
+          </TabsContent>
+          <TabsContent value="kanban" className="mt-6">"
+            <KanbanBoard jobId={jobId} />
+          </TabsContent>
+          <TabsContent value="analytics" className="mt-6">"
 
         <Tabs defaultValue="kanban" onValueChange={setActiveTab} className="mb-8">
           <TabsList>
-
             <TabsTrigger value="kanban">Kanban Board</TabsTrigger>
             <TabsTrigger value="analytics">Analytics</TabsTrigger>
           </TabsList>
-          <TabsContent value="kanban" className="mt-6">
-            <KanbanBoard jobId={jobId} />
-          </TabsContent>
-
-          <TabsContent value="kanban" className="mt-6">
-            <KanbanBoard jobId={jobId} />
-          </TabsContent>
 
           <TabsContent value="analytics" className="mt-6">
           <TabsContent value='kanban' className='mt-6'>
@@ -69,6 +73,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </Tabs>
       </main>
     </>
+  );
+}
+export default function HiringTracker() {
+  return (
+    <ProtectedRoute>
+)
+  )
       <HiringTrackerContent />
     </ProtectedRoute>
 
@@ -131,6 +142,7 @@ function HiringTrackerContent() {;
     </ProtectedRoute>;
   );
 }
+;
 
   );
 }

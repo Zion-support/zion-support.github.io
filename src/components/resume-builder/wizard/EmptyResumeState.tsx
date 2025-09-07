@@ -7,6 +7,7 @@
             className="gap-2"
           >
             <FilePlus className="h-4 w-4" />
+            Create Resume
 
 
 import { Card, CardContent } from "@/components/ui/card",;

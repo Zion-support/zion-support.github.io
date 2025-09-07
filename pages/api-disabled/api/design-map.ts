@@ -1,3 +1,42 @@
+
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse): Promise<void> {
+  try {
+    // Mock design map data
+    const designMap = {
+      route: '/design-system',
+      products: ['zion-os', 'zion-gpt', 'zion-marketplace'],
+      tokens: {
+        colors: {
+          primary: '#3B82F6',
+          secondary: '#8B5CF6',
+          accent: '#F59E0B'
+        },
+        typography: {
+          fontSizes: {
+            sm: '0.875rem',
+            base: '1rem',
+            lg: '1.125rem',
+            xl: '1.25rem'
+          }
+        }
+      }
+    };
+
+    res.status(200).json(designMap);
+    return;
+  } catch (e: unknown) {
+    res.status(500).json({
+      error: (e as Error)?.message || 'Failed to build design map'
+    });
+    return;
+  }
+}
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 import {
@@ -13,6 +52,20 @@ export default async function handler(
   try {
 
 
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
+  try {;
+
+
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
+  try {;
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
+  try {;
+
+import { getZionDesignMap, buildTokenSet, fetchLovableTokens } from '../../utils/design-map';
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {try {;
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
   try {;
 
@@ -72,6 +125,15 @@ export default async function handler(req, res) {
 import { getZionDesignMap, buildTokenSet, fetchLovableTokens } from '../../utils/design-map';
 export default async function handler(req, res) {
   try {
+
+
+
+
+
+
+
+
+
 ursor/fix-website-loading-errors-and-merge-6662
 import {
   getZionDesignMap;
@@ -91,6 +153,10 @@ pr-12243
       buildTokenSet();
       fetchLovableTokens()]);
     const tokens = {;
+
+
+  }
+}
 pr-12243
   }
 }
@@ -100,6 +166,14 @@ pr-12243
   } catch (e: any) {res.status(500).json({ error: e?.message |'Failed to build design map' });
       colors: { ...localTokens.colors, ...(cmsTokens?.colors || {}) };
       typography: {;
+
+
+
+  }
+}
+
+
+
 pr-12243
         fontSizes: { ...localTokens.typography.fontSizes, ...(cmsTokens?.typography?.fontSizes || {}) }}}
 ;
@@ -149,11 +223,20 @@ pr-12243
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+}
 pr-12243
 
+}
+
+
+}
 
   }
 }
+
+  }
+}
+
 pr-12243
 
 

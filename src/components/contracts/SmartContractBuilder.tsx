@@ -19,7 +19,37 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   const [formValues, setFormValues] = useState<ContractFormValues | undefined>(
     undefined
 
+
   return (
+    <Dialog open={isOpen} onOpenChange={onClose}>
+      <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
+        <DialogHeader>
+          <DialogTitle>Smart Contract Builder</DialogTitle>
+        </DialogHeader>
+        <Tabs value={activeTab} onValueChange={setActiveTab} className="mt-4">
+          <div className="flex justify-between items-center">
+            <TabsList className="grid grid-cols-2">
+              <TabsTrigger value="form">Contract Details</TabsTrigger>
+              <TabsTrigger value="preview" disabled={!generatedContract}>Preview</TabsTrigger>
+            </TabsList>
+            <div className="flex gap-2">
+              <Button 
+                variant="outline" 
+                size="sm"
+                onClick={() => setTemplateManagerOpen(true)}
+                className="flex gap-1"
+              >
+                <Save className="h-4 w-4" />
+                Templates
+              </Button>
+            </div>
+          </div>
+          <TabsContent value="form" className="pt-4">
+            <ContractForm 
+    setGeneratedContract(contract);
+    setActiveTab("preview");
+  };
+  return (;
     <Dialog open={isOpen} onOpenChange={onClose}>;
       <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">;
         <DialogHeader>;
@@ -31,16 +61,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <TabsTrigger value="form">Contract Details</TabsTrigger>;
               <TabsTrigger value="preview" disabled={!generatedContract}>Preview</TabsTrigger>;
             </TabsList>;
-
             <div className="flex gap-2">;
               <Button
-                variant="outline" 
-                size="sm"
+                variant="outline" "
+                size="sm""
                 onClick = {(,) => setTemplateManagerOpen(true),}
                 className="flex gap-1";
               >;
                 <Save className="h-4 w-4" />;
-    <Dialog open={is_open} onOpenChange={on_close}>;
+    <Dialog open={is_open} onOpenChange={on_close}>;,
       <DialogContent className="max - w-4xl max - h-[90vh] overflow - y-auto">;
         <DialogHeader>;
           <DialogTitle > Smart Contract Builder</DialogTitle>;
@@ -59,7 +88,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 className="flex gap - 1";
               >;
                 <Save className="h - 4 w - 4" />;
-
+              <Button;
+                variant="outline";
+                size="sm";
+                onClick={() => setTemplateManagerOpen(true)}
+                className="flex gap-1";
+              >;
+                <Save className="h-4 w-4" />;
                 Templates;
               </Button>;
             </div>;
@@ -76,50 +111,69 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
             />;
           </TabsContent>;
-
           <TabsContent value="preview" className="pt-4">;
             {generatedContract && (;
               <div>;
-
                 <ContractPreview
                   generatedContract = {generatedContract,}
                   talent = {talent,}
                   onClose = {onClose,}
                   deploymentInfo = {deploymentInfo,}
-
                 />;
-
                 {!deploymentInfo && deployOptions && deployOptions.deployToChain && (;
                   <div className="mt-6 flex justify-center">;
-
                     <Button
                       onClick = {handleDeployContract,}
-                      disabled = {deployStatus === 'deploying',}
+                      disabled = {deployStatus === 'deploying',}'
                       className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700">;
-                      {deployStatus === 'deploying' ? 'Deploying...' : 'Deploy to Blockchain'}
+                      {deployStatus === 'deploying' ? 'Deploying...' : 'Deploy to Blockchain'}'
                     </Button>;
                   </div>                )}
+          <TabsContent value="form" className="pt-4">;
+            <ContractForm;
+              talent={talent}
+              clientName={clientName}
+              initialValues={formValues}
+              onFormValuesChange={setFormValues}
+              onContractGenerated={handleFormSubmit}
+            />
+          </TabsContent>
+          <TabsContent value="preview" className="pt-4">
+            {generatedContract && (
+              <div>
+                <ContractPreview 
+                  generatedContract={generatedContract}
+                  talent={talent}
+                  onClose={onClose}
+                  deploymentInfo={deploymentInfo}
+                />
+                {!deploymentInfo && deployOptions.deployToChain && (
+                  <div className="mt-6 flex justify-center">
+                    <Button 
+                      onClick={handleDeployContract}
+                      disabled={deployStatus === 'deploying'}
+                      className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700"
+                    >
+                      {deployStatus === 'deploying' ? 'Deploying...' : 'Deploy to Blockchain'}
+                    </Button>;
+                  </div>;
+                )}
               </div>;
             )}
-
           </TabsContent>;
         </Tabs>;
-
-
         <TemplateManager
           isOpen = {templateManagerOpen,}
           onClose = {() => setTemplateManagerOpen(false),}
           onSelectTemplate = {handleLoadTemplate,}
           currentValues = {formValues,}
-
         />;
       </DialogContent>;
     </Dialog>;
   );
-
 };
-//Modified to match the expected interface const handleFormSubmit = (contract: string) => {';
-  //This should be a function that takes a string (contract content) //Since we need to adapt the interface, we'll implement the simplest solution that works if (onContractGenerated) {;
+//Modified to match the expected interface const handleFormSubmit = (contract:,  string) => {';
+  //This should be a function that takes a string (contract,  content) //Since we need to adapt the interface, we'll implement the simplest solution that works if (onContractGenerated) {;
   setGeneratedContract (contract);";
 setActiveTab ("preview");
 };";
@@ -133,19 +187,19 @@ setActiveTab ("preview");
 }onContractGenerated= {;
   handleFormSubmit ;
 }/> </TabsContent> <div> <ContractPreviewgeneratedContract= {
-  generatedContract 
+  generatedContract
 }talent= {
-  talent 
+  talent
 }onClose= {
-  onClose 
+  onClose
 }deploymentInfo= {
-  deploymentInfo 
+  deploymentInfo
 }/> > {';
   deployStatus === 'deploying' ? 'Deploying...' : 'Deploy to Blockchain' ;
 }</Button> </div>) ;
 }</div>) ;
 }</TabsContent> </Tabs> <TemplateManagerisOpen= {
-  templateManagerOpen 
+  templateManagerOpen
 }onClose= {
   () => setTemplateManagerOpen (false) ;
 }onSelectTemplate= {;
@@ -153,20 +207,17 @@ setActiveTab ("preview");
 }currentValues= {;
   formValues ;
 }/> </DialogContent> </Dialog>) ;
-
-}'"            {!enableOnChainAgreement && <p className="text-muted-foreground p-4 text-center">Enable on-chain agreement to deploy this contract to a blockchain.</p>}
+}'"            {!enableOnChainAgreement && <p className="text-muted-foreground p-4 text-center">Enable on-chain agreement to deploy this contract to a blockchain.</p>}"
             {/* Fallback for old Solidity preview if needed, or remove if fully replaced by on-chain flow */}
-
             {/* {generatedSolidityContract && !deployOptions && deployOptions.deployToChain && !enableOnChainAgreement && ( ... )} */}
           </TabsContent>;
         </Tabs>;
-
         <TemplateManager
-
-
-          <TabsContent value="preview" className="pt-4">
+          <TabsContent value="preview" className="pt-4">"
             {generatedContract && (
               <div>
+                <ContractPreview
+        <TemplateManager;
                 <ContractPreview 
                 />
                 {!deploymentInfo && deployOptions.deployToChain && (
@@ -192,8 +243,6 @@ setActiveTab ("preview");
           onClose={() => setTemplateManagerOpen(false)}
           onSelectTemplate={handleLoadTemplate}
           currentValues={formValues}
-
-
 ;
         />;
       </DialogContent>;
@@ -227,10 +276,10 @@ setActiveTab ("preview");
                   <div className="mt - 6 flex justify - center">;
                     <Button;
                       on_click = {handleDeployContract, }
-                      disabled = {deploy_status === 'deploying', }
+                      disabled = {deploy_status === 'deploying', }'
                       className="bg - gradient - to - r from - blue - 600 to - indigo - 600 hover:from - blue - 700 hover:to - indigo - 700";
                     >;
-                      {deploy_status === 'deploying' ? 'Deploying...' : 'Deploy to Blockchain'}
+                      {deploy_status === 'deploying' ? 'Deploying...' : 'Deploy to Blockchain'}'
                     </Button>;
                   </div>                )}
               </div>)}
@@ -245,6 +294,13 @@ setActiveTab ("preview");
       </DialogContent>;
     </Dialog>);
 }
+;
+        />;
+      </DialogContent>;
+    </Dialog>;
+  );
+}
+;
 
 ;
         />

@@ -13,12 +13,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
   }
 
-<<<<<<< HEAD
-  const result = null;
-=======
-  const result = validateCredentials(email, password, code);
-  res.setHeader('Set-Cookie', cookie);
->>>>>>> origin/main
+
 
   return res.status(200).json({ ok: true })
 }

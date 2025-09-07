@@ -1,145 +1,36 @@
 
 
-#!/usr/bin/env node
+
 /**
  * Continuous Integration Automation;
  * Comprehensive CI pipeline with build, test, and quality checks;
  */
 
     const stages = [{
-<<<<<<< HEAD
-        "name": 'install-dependencies',
-        "command": 'npm install',
-        "description": 'Install Dependencies
-      },
-      {
-        "name": 'type-check',
-        "command": 'npm run type-check',
-        "description": 'TypeScript Type Check
-        "name": 'build',
-        "command": 'npm run build',
-        "description": 'Build Application
-        "name": 'security-audit',
-        "command": 'npm audit --audit-level=high',
-        "description": 'Security Audit
-        "name": 'performance-check',
-        "command": 'node scripts/performance-monitor.cjs',
-        "description": 'Performance Check
-=======
-        "name": install-dependencies,
-        "command": npm install,
-        "description": Install Dependencies
-      },
-      {
-        "name": type-check,
-        "command": npm run type-check,
-        "description": TypeScript Type Check
-      },
-      {
-        "name": build,
-        "command": npm run build,
-        "description": Build Application
-      },
-      {
-        "name": security-audit,
-        "command": npm audit --audit-level=high,
-        "description": Security Audit
-      },
-      {
-        "name": performance-check,
-        "command": node scripts/performance-monitor.cjs,
-        "description": Performance Check
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
       }]
     ];
 
     // Run stages sequentially;
     for (const stage of stages) {
       const result = await this.runStage(stage.name, stage.command, stage.description);
-      
       // Stop pipeline if critical stage fails;
-<<<<<<< HEAD
-      if (result.status === 'failed' && ['build', 'type-check'].includes(stage.name)) {
-        this.log("❌ Critical stage failed. Stopping pipeline.", 'error');
-=======
-      if (result.status ===failed' && [build,type-check].includes(stage.name)) {
-        this.log("❌ Critical stage failed. Stopping pipeline.",error');
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
         break}
     }
 
     this.generateCIReport();
-<<<<<<< HEAD
-    
-    const successCount = this.ciResults.stages.filter(s => s.status === 'success').length;
-    const totalCount = this.ciResults.stages.length;
-    
-    this.log('🏁 Continuous Integration Pipeline completed');
-    this.log(`📊 "Results": ${successCount}/${totalCount} stages successful`);""
-    this.ciResults.status = successCount === totalCount ? 'success' : 'failed';
-=======
-    '
-    const successCount = this.ciResults.stages.filter(s => s.status ===success').length;
-    const totalCount = this.ciResults.stages.length;
-    '
-    this.log('🏁 Continuous Integration Pipeline completed');
-    this.log(`📊 "Results": ${successCount}/${totalCount} stages successful`);
-    this.ciResults.status = successCount === totalCount ? 'success: failed';
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
     return this.ciResults}
 
   generateCIReport() {`;
     const reportPath = path.join(this.logDir, `ci-pipeline-report-${this.timestamp}.json`);
-<<<<<<< HEAD
-    
-=======
-    '
-    const successCount = this.ciResults.stages.filter(s => s.status ===success').length;
-    const totalCount = this.ciResults.stages.length;
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
     const averageDuration = this.ciResults.stages.length > 0 ?
       this.ciResults.stages.reduce((sum, stage) => sum + stage.duration, 0) / this.ciResults.stages.length : 0;
 
     this.ciResults.summary = {
-<<<<<<< HEAD
-      "totalStages": totalCount,""
-      "successfulStages": successCount,""
-      "failedStages": totalCount - successCount,""
-      "successRate": totalCount > 0 ? (successCount / totalCount * 100).toFixed(2) + '%' : '0%',
-      "averageDuration": Math.round(averageDuration),""
-      "totalDuration": this.ciResults.stages.reduce((sum, stage) => sum + stage.duration, 0),""
-      "recommendations": this.generateCIRecommendations()"
-    };
 
-    fs.writeFileSync(reportPath, JSON.stringify(this.ciResults, null, 2));"`;
-    this.log(`📄 CI Pipeline report saved "to": ${reportPath}`)}"
-  generateCIRecommendations() {
-    const recommendations = [];
-    "
-    const failedStages = this.ciResults.stages.filter(s => s.status === 'failed');
-    if (failedStages.length > 0) {
-      recommendations.push('Fix failed stages before merging to main branch')}
-    if (this.ciResults.stages.every(s => s.status === 'success')) {
-=======
-      "totalStages": totalCount,
-      "successfulStages": successCount,
-      "failedStages": totalCount - successCount,
-      "successRate": totalCount > 0 ? (successCount / totalCount * 100).toFixed(2) +%: 0%,
-      "averageDuration": Math.round(averageDuration),
-      "totalDuration": this.ciResults.stages.reduce((sum, stage) => sum + stage.duration, 0),
-      "recommendations": this.generateCIRecommendations()"
-    };
-
-    fs.writeFileSync(reportPath, JSON.stringify(this.ciResults, null, 2));"
-    this.log(`📄 CI Pipeline report saved "to": ${reportPath})}"
-  generateCIRecommendations() {
-    const recommendations = [];
-    "
-    const failedStages = this.ciResults.stages.filter(s => s.status ===failed');
-    if (failedStages.length > 0) {
-      recommendations.push('Fix failed stages before merging to main branch')}
-    if (this.ciResults.stages.every(s => s.status ===success')) {
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
       recommendations.push('All CI stages passed - ready for deployment')}
     const slowStages = this.ciResults.stages.filter(s => s.duration > 60000);
     if (slowStages.length > 0) {
@@ -151,39 +42,7 @@ if (require.main === module) {
   const ci = new ContinuousIntegration();
   ci.runCIPipeline()
     .then(results => {)
-<<<<<<< HEAD
-      process.exit(results.status === 'success' ? 0 : 1)})
-    .catch(error => {)
-      console.error('Fatal "error": ', error);
-      process.exit(1)})}
 
-module.exports = ContinuousIntegration;
-
-const { execSync } = require('child_process')
-const fs = require('fs')
-const path = require('path')
-    this.logDir = 'automation-reports
-    this.timestamp = new Date().toISOString().replace(/[:.]/g, '-')
-      "pipeline"""
-      "status"""
-      "output"""
-      "error"""
-        "encoding"""`;
-      this.log(` ${description} "failed"`)""
-        "name"""
-        "command"""
-        "description"""
-        this.log(" Critical stage failed. Stopping pipeline.")""
-      "successRate"""
-      console.error('Fatal "error")""`;
-=======
-      process.exit(results.status ===success' ? 0 : 1)})
-    .catch(error => {)
-      console.error('Fatal "error": , error);
-      process.exit(1)})}
-
-module.exports = ContinuousIntegration;
-'
 const { execSync } = require('child_process')
 const fs = require('fs')
 const path = require('path')
@@ -214,4 +73,5 @@ const path = require('path')
         this.log(" Critical stage failed. Stopping pipeline.")
       "successRate"
       console.error('Fatal "error")
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
+

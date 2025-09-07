@@ -1,4 +1,5 @@
 
+
 import { Calendar, RefreshCw } from 'lucide-react'
 origin/cursor/automate-test-improve-and-merge-code-2533
 import { Card, CardContent } from "@/components/ui/card",;
@@ -195,17 +196,4 @@ interface QuotesFilterProps {
 
 }
 export const QuotesFilter: React.FC<QuotesFilterProps> = ({
-
-  searchQuery;
-  setSearchQuery;
-  statusFilter;
-  setStatusFilter;
-  archiveFilter;
-  setArchiveFilter;
-  dateRange;
-  setDateRange;
-
-  onReset
-}) => {
-  return (
 

@@ -1,33 +1,4 @@
-<<<<<<< HEAD
-import React from 'react';
 
-import { motion  } from 'framer-motion';
-import { Phone, Mail, MapPin, Globe, Github, Linkedin, ExternalLink } from 'lucide-react';
-const contactInfo = null;
-
-export default function NeoFuturisticFooter() {
-=======
-
-
-const contactInfo = {;
-  mobile: '+1 302 464 0950',;
-  email: 'kleber@ziontechgroup && ziontechgroup.com',;
-  address: '364 E Main St STE 1008 Middletown DE 19709',;
-  website: 'https://ziontechgroup && ziontechgroup.com',};
-export default function NeoFuturisticFooter() {;
-  return (  website: 'https://ziontechgroup && ziontechgroup.com'
-};
-
-export default function NeoFuturisticFooter() {;
-import React from 'react';
-import { motion  } from 'framer-motion';
-import { Phone, Mail, MapPin, Globe, Github, Linkedin, ExternalLink } from 'lucide-react';
-
-const contactInfo = null;
-
-export default function NeoFuturisticFooter() {
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/main
   return (
               Productized AI, IT and micro SaaS solutions with transparent;
 

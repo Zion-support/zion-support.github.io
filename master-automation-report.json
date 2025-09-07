@@ -17,6 +17,7 @@
     "dependencyFix": {
       "success": true,
       "duration": 60590,
+
 origin/cursor/fix-syntax-push-and-merge-to-main-8452
   "timestamp": "2025-09-05T15:05:30.907Z",
   "totalDuration": "86s",
@@ -29,6 +30,8 @@ origin/cursor/fix-syntax-push-and-merge-to-main-8452
     "typescriptFix": {
       "success": false,
       "duration": 19,
+      "duration": 25,
+      "errors": ["Command failed: node automation/typescript-fixer.cjs"]
       "errors": ["Command failed: node automation/typescript-fixer.cjs"]
 origin/cursor/fix-syntax-push-and-merge-to-main-8452
       "errors": [
@@ -54,6 +57,33 @@ origin/cursor/fix-syntax-push-and-merge-to-main-8452
       "success": true,
       "duration": 20538,
       "errors": []
+      "success": false,
+      "duration": 103,
+      "errors": [
+        "Command failed: npm run build"
+      ]
+      "success": false,
+      "duration": 26,
+      "errors": ["Command failed: node automation/health-check.cjs"]
+    },
+    "securityScan": {
+      "success": false,
+      "duration": 24,
+      "errors": ["Command failed: node automation/security-scanner.cjs"]
+    },
+    "performanceOptimize": {
+      "success": false,
+      "duration": 23,
+      "errors": ["Command failed: node automation/performance-optimizer.cjs"]
+    },
+    "buildTest": {
+      "success": false,
+      "duration": 6106,
+      "errors": ["Command failed: npm run build"]
+      "errors": [
+        "Command failed: npm run build"
+      ]
+
       "errors": ["Command failed: npm run build"]
 origin/cursor/fix-syntax-push-and-merge-to-main-8452
     }
@@ -66,6 +96,45 @@ origin/cursor/fix-syntax-push-and-merge-to-main-8452
     "successfulPhases": 4,
     "failedPhases": 2,
     "overallSuccess": false
+
+    "successfulPhases": 1,
+    "failedPhases": 5,
+    "overallSuccess": false
+
+  }
+}
+  "timestamp": "2025-09-06T19:17:00.201Z",
+  "duration": "4s",
+  "results": {
+    "builds": {
+      "success": 1,
+      "failed": 0
+    },
+    "tests": {
+      "passed": 0,
+      "failed": 0
+    },
+    "optimizations": {
+      "applied": 2,
+      "errors": 0
+    },
+    "security": {
+      "issues": 0,
+      "fixed": 0
+    },
+    "improvements": [
+      "Error Boundary Component",
+      "Performance Monitor Hook",
+      "SEO Meta Component"
+    ]
+  },
+  "summary": {
+    "buildsSuccessful": 1,
+    "buildsFailed": 0,
+    "optimizationsApplied": 2,
+    "securityIssuesFixed": 0,
+    "improvementsCreated": 3,
+    "totalDuration": "4s"
 origin/cursor/fix-syntax-push-and-merge-to-main-8452
   }
 }

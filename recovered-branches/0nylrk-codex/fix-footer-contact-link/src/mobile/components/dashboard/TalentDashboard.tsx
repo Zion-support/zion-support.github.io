@@ -1,24 +1,4 @@
-<<<<<<< HEAD
 
-
-import React from "react",
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
-import { Badge } from "@/components/ui/badge",
-import { ChevronRight, FileText, Image, Clock, Zap, BookOpen } from "lucide-react";
-import { Link } from "react-router-dom";
-
-export function TalentDashboard() {
-=======
-import React from "react",;
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",;
-import { Button } from "@/components/ui/button",;
-import { Badge } from "@/components/ui/badge",;
-import { ChevronRight, FileText, Image, Clock, Zap, BookOpen } from "lucide-react";
-import { Link } from "react-router-dom";
-import { ChevronRight, FileText, Image, Clock, Zap, BookOpen } from "lucide-react",;
-import { Link } from "react-router-dom",export function TalentDashboard() {
->>>>>>> origin/main
   return (
     <div className="space-y-6 px-4 pb-24">
       <section>
@@ -503,8 +483,8 @@ export function TalentDashboard() {
             <Button variant="ghost" size="sm" className="h-8 gap-1">"
               View all <ChevronRight className="h-4 w-4" />"
 
-            
-          
+;
+
         <div className="space-y-3">"
           <Card>
             <CardContent className="p-4">"
@@ -516,7 +496,6 @@ export function TalentDashboard() {
                     <Badge variant="secondary" className="text-xs">"
 
 
-                    
                 <div className="flex flex-col items-end">"
                   <div className="bg-primary/10 text-primary font-medium rounded-full px-2 py-1 text-xs">"
                   <span className="text-xs text-muted-foreground mt-1">"
@@ -525,18 +504,11 @@ export function TalentDashboard() {
                 <Button size="sm">Apply Now""
                 <Button size="sm" variant="outline">"
 
-                
-            
-          
 
                   <h3 className="font-medium">UX/UI Designer</h3>""
 
 
-                    
 
-                
-            
-          
       </section>
 
         <h2 className="text-lg font-medium mb-4">Application Tracker</h2>"
@@ -551,9 +523,6 @@ export function TalentDashboard() {
                 <div className="text-xs text-muted-foreground">Jobs Viewed</div>"
             <Button variant="outline" className="w-full mt-4">"
 
-            
-          
-        
 
         <h2 className="text-lg font-medium mb-4">Quick Actions</h2>""
           <Button variant="outline" className="h-auto py-4 flex flex-col gap-1">"
@@ -569,12 +538,10 @@ export function TalentDashboard() {
             <Zap className="h-5 w-5 mb-1" />"
 
             <span>AI Resume Boost</span>
-          
 
           <h2 className="text-lg font-medium">Learning Hub</h2>""
           <Button variant="ghost" size="sm" className="h-8">"
 
-          
             <div className="flex items-center gap-3">"
               <div className="bg-primary/10 p-3 rounded-full">"
                 <BookOpen className="h-6 w-6 text-primary" />"
@@ -583,8 +550,6 @@ export function TalentDashboard() {
                 <h3 className="font-medium">Improve your profile visibility</h3>""
                 <p className="text-sm text-muted-foreground">"
 </p>
-          
-        
     </div>)"
 pr-12325
 

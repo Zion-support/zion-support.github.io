@@ -8,21 +8,19 @@ pr-12325
   Home,
   Bug,
   Send,
-
-
   Clipboard,;
-
 } from 'lucide-react';
 
 interface ErrorBoundaryState {
-  has_error: boolean;
-  error: Error | null;
-  error_info: ErrorInfo | null;
-  error_id: string | null;
-  retry_count: number;
-  user_feedback: string;
-  show_details: boolean;
+  has_error: boolean;,
+  error: Error | null;,
+  error_info: ErrorInfo | null;,
+  error_id: string | null;,
+  retry_count: number;,
+  user_feedback: string;,
+  show_details: boolean;,
 interface ErrorBoundaryProps {
+  children: ReactNode;,
 import { Button } from '@/components/ui/ button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/ card';
 import { Badge } from '@/components/ui/ badge';
@@ -42,12 +40,9 @@ interface ErrorBoundaryProps {
 pr-12325
   children: ReactNode;
   fallback?: ReactNode;
-
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
+  onError?: (error: Error, errorInfo:,  ErrorInfo) => void;,
   enableRetry?: boolean;
-
   maxRetries?: number;
-
   showReportButton?: boolean;
   context?: string;  enable_retry?: boolean;
   max_retries?: number;

@@ -1,15 +1,59 @@
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
+import React, { useEffect } from 'react';
+
+export default function YouTubeRedirect() {;
+  useEffect(() => {;
+    if (typeof window !== 'undefined') {;
+      window && window.location.replace('https: //youtube && youtube.com/@ziontechgroup'),;
+import Head from 'next / head';
+export default /**
+ * YouTubeRedirect - Function description
+ */
+function YouTubeRedirect() {
+  useEffect (() => {
+    // Check condition
+if ( {) {
+  $2
+}
+      window.location.replace ('https: //youtube.com/@ziontechgroup'),
+    }
+
+      window.location.replace('https: //youtube.com/@ziontechgroup'),
+    };
+
+  }, []);
+  return (
+    <>;
+      <Head>;
+
+}
+
+export default function YouTubeRedirect() {
   }
 }
 import React, { useEffect } from 'react';
 import Head from 'next/head';
 export default function YouTubeRedirect() {
 
-<<<<<<< HEAD
-=======
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      window.location.replace('https: //youtube.com/@ziontechgroup')
->>>>>>> origin/main
+
 	useEffect(() => {
 		if (typeof window !== 'undefined') {
 			window.location.replace('https: //youtube.com/@ziontechgroup')
@@ -31,9 +75,7 @@ export default function YouTubeRedirect() {
 		</>
 	)
 }
-<<<<<<< HEAD
 
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
     }
       window.location.replace('https: //youtube.com/@ziontechgroup'),
@@ -43,6 +85,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     <>
       <Head>
         <title>YouTube | Zion Tech Group</title>
+        <link rel='canonical' href='https: //youtube.com/@ziontechgroup' />
+        <meta
+          httpEquiv='refresh'
+          content='0,url=https://youtube.com/@ziontechgroup'
         <link rel='canonical' href='https://youtube.com/@ziontechgroup' />
         <meta
           httpEquiv='refresh'
@@ -52,6 +98,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </Head>
       <div className='min-h-screen bg-black text-white flex items-center justify-center p-8'>
         <a
+          href='https: //youtube.com/@ziontechgroup'
           href='https://youtube.com/@ziontechgroup'
           className='text-cyan-400 underline'
         >
@@ -75,20 +122,16 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -115,6 +158,8 @@ if ( {) {
     <>;
       <Head>;
 
+}
+
 
 
 }
@@ -146,4 +191,4 @@ export default function YouTubeRedirect() {
 
 
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/main
+

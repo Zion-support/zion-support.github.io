@@ -1,10 +1,5 @@
 
-<<<<<<< HEAD
-import { useLocation } from "react-router-dom";
-import { useEffect } from "react";
-const NotFound = null;
 
-=======
 import {useLocation} from "react-router-dom";
 import {useEffect} from "react";
 const NotFound = () => {
@@ -34,6 +29,8 @@ const NotFound = () => {
 const NotFound = () => {
   const location = useLocation(),
 
+const NotFound = () => {
+  const location = useLocation(),
   useEffect(() => {
     console.error(
       "404 Error: User attempted to access non-existent route:",
@@ -41,6 +38,9 @@ const NotFound = () => {
     );
   }, [location.pathname]);
 
+}, [location.pathname]);
+  }, [location.pathname]),
+  return (
   }, [location.pathname]);
   }, [location.pathname]),
 
@@ -50,11 +50,15 @@ const NotFound = () => {
         <p className="text-xl text-gray-600 mb-4">Oops! Page not found</p>
         <a href="/" className="text-blue-500 hover: text-blue-700 underline">
           Return to Home
+        </a>
+</Link>
+      </div>
         </Link>      </div>
     </div>
   )
 };
 
+};
 import { use_location } from './react-router-dom';
 import { useEffect } from './react';
 const NotFound = () =>: any {
@@ -80,6 +84,18 @@ const NotFound = () =>: any {
 ;
 export default NotFound;
 ;
+},;
+;export default NotFound,
+ const NotFound = () => {
+  const location = useLocation ();
+useEffect ( () => {
+  console.error ("404 Error: User attempted to access non-existent route:";
+location.pathname) 
+}, [location.pathname]);
+};
+export default NotFound;
+},;
+export default NotFound;
 import { useLocation } from "react-router-dom";""
 import { useEffect } from "react";"
 const NotFound = () => {
@@ -121,4 +137,4 @@ import { useEffect } from "react","
       </div>;)
     </div>);"
 pr-12325
->>>>>>> origin/main
+

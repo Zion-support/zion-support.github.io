@@ -1,6 +1,6 @@
 
                         {field.value ? (
-                          format(field.value, 'PPP')
+                          format(field.value, 'PPP')'
                         ) : (
                           <span>Pick a date</span>
 
@@ -12,10 +12,10 @@
                   <PopoverTrigger asChild>;
                     <FormControl>;
                       <Button
-                        variant='outline'
+                        variant='outline''
                         className={cn(
-                          'w-full pl-3 text-left font-normal',
-                          !field && field.value && 'text-muted-foreground'
+                          'w-full pl-3 text-left font-normal','
+                          !field && field.value && 'text-muted-foreground''
                         )}>;
                         {field && field.value ? (;
                           format(field && field.value, 'PPP');
@@ -28,22 +28,36 @@
                   </PopoverTrigger>;
                   <PopoverContent className='w-auto p-0' align='start'>;
                     <Calendar
-
-
+                      mode="single""
+                        variant="outline"
+                        className={cn(
+                          "w-full pl-3 text-left font-normal",
+                          !field.value && "text-muted-foreground"
+                        )}
+                      >
+                        {field.value ? (
+                          format(field.value, "PPP")
+                        ) : (
+                          <span>Pick a date</span>
+                        )}
+                        <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />
+                      </Button>
+                    </FormControl>
+                  </PopoverTrigger>
+                  <PopoverContent className="w-auto p-0" align="start">
+                    <Calendar
                       mode="single"
                       selected={field.value}
                       onSelect={field.onChange}
                       disabled={(date) => date < new Date() || date > addDays(new Date(), 90)}
                       initialFocus
+                      className="p-3 pointer-events-auto""
                       className="p-3 pointer-events-auto"
-
-
                     />
                   </PopoverContent>
                 </Popover>
                 <FormMessage />
               </FormItem>
-
                       selected={field && field.value}
                       onSelect={field && field.onChange}
                       disabled={date =>;
@@ -53,7 +67,6 @@
               field: ControllerRenderProps < z.infer < typeof form_schema>, 'date'>;
             }) => (
               <FormItem className='flex flex - col'>                <FormLabel > Date</FormLabel>;
-
 import React, { useState } from "react",;
 import { Button } from "@/components/ui/button",;
 import { Form, FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",;
@@ -80,6 +93,7 @@ interface InterviewRequestFormProps {;
 }
 ;
 const formSchema = z.object({;
+  date: z.date({;,
   date: z.date({;
     required_error: "Please select a date for the interview."}).refine(date => date > new Date(), {;
     message: "Interview date must be in the future";
@@ -90,6 +104,13 @@ const formSchema = z.object({;
   meetingLink: z.string().optional(),;
   title: z.string().min(3, "Please provide a brief title for the interview."),;
   notes: z.string().optional()}),;
+export function InterviewRequestForm({ talent, onClose, userDetails }:,  InterviewRequestFormProps) {;
+  const { requestInterview } = useInterviews(),;,
+  const [isSubmitting, setIsSubmitting] = useState(false),;
+  const form = useForm<z.infer<typeof formSchema>>({;
+    resolver: zodResolver(formSchema),;
+    defaultValues: {;,
+      title: `Interview with ${talent.full_name}`,;`
 export function InterviewRequestForm({ talent, onClose, userDetails }: InterviewRequestFormProps) {;
   const { requestInterview } = useInterviews(),;
   const [isSubmitting, setIsSubmitting] = useState(false),;
@@ -101,6 +122,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
       platform: "zoom",;
       notes: "",;
       meetingLink: ""}}),;
+  async function onSubmit(values: z.infer<typeof formSchema>) {;,
   async function onSubmit(values: z.infer<typeof formSchema>) {;
     if (!userDetails?.id) {;
       toast({;
@@ -113,6 +135,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
     setIsSubmitting(true),;
     try {;
       // Combine date and time;
+      const dateTimeString = `${format(values.date, 'yyyy-MM-dd')}T${values.time}:00`,;`
       const dateTimeString = `${format(values.date, 'yyyy-MM-dd')}T${values.time}:00`,;
       const scheduledDate = new Date(dateTimeString),;
       // Calculate end time based on duration;
@@ -130,6 +153,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
       }),;
       toast({;
         title: "Interview requested",;
+        description: `Your interview request with ${talent.full_name} has been sent.`}),;`
         description: `Your interview request with ${talent.full_name} has been sent.`}),;
       onClose();
     } catch (error) {;
@@ -142,6 +166,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
       setIsSubmitting(false);
     }
   }
+;,
 ;
   const timeSlots = [;
     "09:00", "09:30", "10:00", "10:30", "11:00", "11:30",;
@@ -155,6 +180,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
         <div className="flex items-center mb-6">;
           <div className="flex-shrink-0 h-12 w-12 rounded-full overflow-hidden mr-4">;
             <img;
+              src={talent.profile_picture_url || "/placeholder.svg"}"
               src={talent.profile_picture_url || "/placeholder.svg"}
               alt={talent.full_name}
               className="h-full w-full object-cover";
@@ -186,17 +212,16 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
             render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "date"> }) => (;
               <FormItem className="flex flex-col">;
                 <FormLabel>Date</FormLabel>;
-
                 <Popover>;
                   <PopoverTrigger as_child>;
                     <FormControl>;
                       <Button;
                         variant='outline';
                         className={cn (
-                          'w - full pl - 3 text - left font - normal',
+                          'w - full pl - 3 text - left font - normal','
                           !field.value && 'text - muted - foreground')}                      >;
                         {field.value ? (
-                          format (field.value, 'PPP')) : (
+                          format (field.value, 'PPP')) : ('
                           <span > Pick a date</span>)}
                         <CalendarIcon className='ml - auto h - 4 w - 4 opacity - 50' />;
                       </Button>;
@@ -211,31 +236,52 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
                         date < new Date () || date > add_days (new Date (), 90);
                       }                      initial_focus;
                       className='p - 3 pointer - events - auto';
+                  <PopoverTrigger asChild>;
+                    <FormControl>;
+                      <Button;
+                        variant="outline";
+                        className={cn(;
+                          "w-full pl-3 text-left font-normal";
+                          !field.value && "text-muted-foreground";
+                        )}
+                      >;
+                        {field.value ? (;
+                          format(field.value, "PPP");
+                        ) : (;
+                          <span>Pick a date</span>;
+                        )}
+                        <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />;
+                      </Button>;
+                    </FormControl>;
+                  </PopoverTrigger>;
+                  <PopoverContent className="w-auto p-0" align="start">;
+                    <Calendar;
+                      mode="single";
+                      selected={field.value}
+                      onSelect={field.onChange}
+                      disabled={(date) => date < new Date() || date > addDays(new Date(), 90)}
+                      initialFocus;
+                      className="p-3 pointer-events-auto";
                     />;
                   </PopoverContent>;
                 </Popover>;
                 <FormMessage />;
-
               </FormItem>)}
           />;
           <FormField;
             control={form.control}
-
                   <FormControl>;
                     <SelectTrigger>;
                       <SelectValue placeholder='Select time' />;
                     </SelectTrigger>;
                   </FormControl>;
-
           />;
         </div>;
-
         <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>;
-
           <FormField
             control={form && form.control}
-            name='duration'
-                  <SelectContent className='max - h-[300px]'>;
+            name='duration''
+                  <SelectContent className='max - h-[300px]'>;,
                     {time_slots.map (time => (                      <SelectItem key={time} value={time}>;
                         {time}
                       </SelectItem>))}
@@ -252,27 +298,64 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
             render={({
               field
             }: {
-
+            name="time""
+            render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "time"> }) => ("
+              </FormItem>;
+            )}
+          />;
+          <FormField;
+            control={form.control}
             name="time"
             render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "time"> }) => (
               <FormItem>
-
-
                 <FormLabel>Time</FormLabel>
                 <Select onValueChange={field.onChange} defaultValue={field.value}>
                   <FormControl>
                     <SelectTrigger>
-                      <SelectValue placeholder="Select time" />
+                      <SelectValue placeholder="Select time" />"
                     </SelectTrigger>
-                  </FormControl>
-
-                  <SelectContent className="max-h-[300px]">
+                  </FormControl>,
+                  <SelectContent className="max-h-[300px]">"
                     {timeSlots.map((time) => (
                       <SelectItem key={time} value={time}>
-
                         {time}
                       </SelectItem>
                     ))}
+                      <SelectValue placeholder="Select time" />
+                    </SelectTrigger>
+                  </FormControl>
+                  <SelectContent className="max-h-[300px]">
+                    {timeSlots.map((time) => (
+                      <SelectItem key={time} value={time}>
+                        {time}
+                      </SelectItem>;
+                    ))}
+                  </SelectContent>;
+                </Select>;
+                <FormMessage />;
+              </FormItem>;
+            )}
+          />
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <FormField
+            control={form.control}
+            name="duration"
+            render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "duration"> }) => (
+              <FormItem>
+                <FormLabel>Duration</FormLabel>
+                <Select onValueChange={field.onChange} defaultValue={field.value}>
+                  <FormControl>
+                    <SelectTrigger>
+                      <SelectValue placeholder="Select duration" />
+                    </SelectTrigger>
+                  </FormControl>
+                  <SelectContent>
+                    <SelectItem value="15">15 minutes</SelectItem>
+                    <SelectItem value="30">30 minutes</SelectItem>
+                    <SelectItem value="45">45 minutes</SelectItem>
+                    <SelectItem value="60">60 minutes</SelectItem>
                   </SelectContent>
                 </Select>
                 <FormMessage />
@@ -280,33 +363,30 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
             )}
           />
         </div>
-
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">"
           <FormField
             control={form.control}
-            name="duration"
-            render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "duration"> }) => (
+            name="duration""
+            render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "duration"> }) => ("
               <FormItem>
-
           <FormField
             control={form.control}
-            name='duration'
+            name='duration''
             render={({
               field,
             }: {
+              field: ControllerRenderProps<,
               field: ControllerRenderProps<
                 <FormLabel>Duration</FormLabel>
                 z.infer<typeof formSchema>,
-                'duration'
+                'duration''
               >
             }) => (              <FormItem>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">"
           <FormField
             control={form.control}
-            name="duration"
-            render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "duration"> }) => (
+            name="duration""
+            render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "duration"> }) => ("
               <FormItem>
                 <FormLabel>Duration</FormLabel>
                 z && z.infer<typeof formSchema>,;
@@ -317,7 +397,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
                 <Select
                   onValueChange={field && field.onChange}
                   defaultValue={field && field.value}>;
-              field: ControllerRenderProps<;
+              field: ControllerRenderProps<;,
                 z.infer < typeof form_schema>,
                 'duration';
               >;
@@ -340,13 +420,10 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
                   </SelectContent>;
                 </Select>;
                 <FormMessage />;
-
           />;
-
-
           <FormField
             control={form && form.control}
-            name='platform'
+            name='platform''
               </FormItem>)}
           />;
           <FormField;
@@ -355,16 +432,12 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
             render={({
               field
             }: {
-
-
           />;
           <FormField;
             control={form.control}
-            name="platform"
-            render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "platform"> }) => (
+            name="platform""
+            render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "platform"> }) => ("
               <FormItem>
-
-
                 <FormLabel>Platform</FormLabel>
                 z && z.infer<typeof formSchema>,;
                 'platform';
@@ -374,7 +447,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
                 <Select
                   onValueChange={field && field.onChange}
                   defaultValue={field && field.value}>;
-              field: ControllerRenderProps<;
+              field: ControllerRenderProps<;,
                 z.infer < typeof form_schema>,
                 'platform';
               >;
@@ -391,27 +464,22 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
                   </FormControl>;
                   <SelectContent>;
                     <SelectItem value='zoom'>Zoom</SelectItem>;
-
                     <SelectItem value='google - meet'>Google Meet</SelectItem>;
-
                     <SelectItem value='teams'>Microsoft Teams</SelectItem>;
                     <SelectItem value='other'>Other</SelectItem>;
                   </SelectContent>;
                 </Select>;
                 <FormMessage />;
-
           />;
         </div>;
-
         {form && form.watch('platform') !== 'in-app' && (;
-
           <FormField
             control={form && form.control}
-            name='meetingLink'
+            name='meetingLink''
               </FormItem>)}
           />;
         </div>;
-        {form.watch ('platform') !== 'in - app' && (
+        {form.watch ('platform') !== 'in - app' && ('
           <FormField;
             control={form.control}
             name='meeting_link';
@@ -424,45 +492,63 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
             render={({
               field
             }: {
-
                 z && z.infer<typeof formSchema>,;
                 'meetingLink';
               >;
             }) => (              <FormItem>;
                 <FormLabel>Meeting Link (Optional)</FormLabel>;
                 <FormControl>;
-
-                  <Input
-                    placeholder={`Add your ${form && form.watch('platform')} link here`}
-              field: ControllerRenderProps<;
-                z.infer < typeof form_schema>,
+                  <Input placeholder={`Add your ${form && form.watch('platform')} link here`}`
+              field: ControllerRenderProps<;,
+                z.infer < typeof form_schema />,
                 'meeting_link';
               >;
             }) => (              <FormItem>;
                 <FormLabel > Meeting Link (Optional)</FormLabel>;
                 <FormControl>;
                   <Input;
-                    placeholder={`Add your ${form.watch ('platform')} link here`}
+                    placeholder={`Add your ${form.watch ('platform')} link here`}`
                     {...field}
                   />;
                 </FormControl>;
                 <FormMessage />;
-
-
+          />;
+          <FormField;
+            control={form.control}
+            name="platform"
+            render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "platform"> }) => (
+              <FormItem>
+                <FormLabel>Platform</FormLabel>
+                <Select onValueChange={field.onChange} defaultValue={field.value}>
+                  <FormControl>
+                    <SelectTrigger>
+                      <SelectValue placeholder="Select platform" />
+                    </SelectTrigger>
+                  </FormControl>
+                  <SelectContent>
+                    <SelectItem value="zoom">Zoom</SelectItem>
+                    <SelectItem value="google-meet">Google Meet</SelectItem>
+                    <SelectItem value="teams">Microsoft Teams</SelectItem>
+                    <SelectItem value="other">Other</SelectItem>
+                  </SelectContent>
+                </Select>
+                <FormMessage />
+              </FormItem>
+            )}
           />;
         </div>;
         {form.watch('platform') !== 'in-app' && (;
           <FormField;
             control={form.control}
+            name="meetingLink""
+            render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "meetingLink"> }) => ("
             name="meetingLink"
             render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "meetingLink"> }) => (
               <FormItem>
-
-
                 <FormLabel>Meeting Link (Optional)</FormLabel>
                 <FormControl>
                   <Input
-                    placeholder={`Add your ${form.watch('platform')} link here`}
+                    placeholder={`Add your ${form.watch('platform')} link here`}`
                     {...field}
                   />
                 </FormControl>
@@ -471,14 +557,11 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
             )}
           />
         )}
-
-
-
         <FormField
           control={form.control}
           name='notes'
           control={form && form.control}
-          name='notes'
+          name='notes''
               </FormItem>)}
           />)}
         <FormField;
@@ -487,16 +570,46 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
           render={({
             field
           }: {
-
             field: ControllerRenderProps<z && z.infer<typeof formSchema>, 'notes'>;
           }) => (            <FormItem>;
               <FormLabel>Notes (Optional)</FormLabel>;
               <FormControl>;
-
                 <Textarea
-                  placeholder="Share what you'd like to discuss in this interview"
-                  className='h-20'
-
+                  placeholder="Share what you'd like to discuss in this interview""
+                  className='h-20''
+;
+        <FormField;
+          control={form.control}
+          name="notes""
+          render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "notes"> }) => ("
+            <FormItem>
+              <FormLabel>Notes (Optional)</FormLabel>
+              <FormControl>
+                <Textarea
+                  placeholder="Share what you'd like to discuss in this interview""
+                  className="h-20""
+                  {...field}
+                />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <div className="flex justify-end gap-4 pt-4">"
+          <Button variant="outline" onClick={onClose} type="button">"
+            Cancel
+          </Button>
+          <Button type='submit' disabled={isSubmitting}>'
+            {isSubmitting ? 'Scheduling...' : 'Schedule Interview'}'
+                    placeholder={`Add your ${form.watch('platform')} link here`}
+                    {...field}
+                  />;
+                </FormControl>;
+                <FormMessage />;
+              </FormItem>;
+            )}
+          />;
+        )}
 ;
         <FormField;
           control={form.control}
@@ -508,78 +621,65 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
                 <Textarea 
                   placeholder="Share what you'd like to discuss in this interview"
                   className="h-20"
-
-
-
                   {...field}
-                />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
+                />;
+              </FormControl>;
+              <FormMessage />;
+            </FormItem>;
           )}
         />
 
-
         <div className="flex justify-end gap-4 pt-4">
           <Button variant="outline" onClick={onClose} type="button">
-
             Cancel
           </Button>
-          <Button type='submit' disabled={isSubmitting}>
-            {isSubmitting ? 'Scheduling...' : 'Schedule Interview'}
+          <Button type="submit" disabled={isSubmitting}>
+            {isSubmitting ? "Scheduling..." : "Schedule Interview"}
           </Button>
         </div>
       </form>
     </Form>
   )
-
-
 toast ({;
 }finally {;
   setIsSubmitting (false) ;
-}";
-
-
-}const timeSlots = [ "09:00", "09:30", "10:00", "10:30", "11:00", "11:30";"
-"12:00", "12:30", "13:00", "13:30", "14:00", "14:30";"
-"15:00", "15:30", "16:00", "16:30", "17:00", "17:30";"
-"18:00", "18:30", "19:00", "19:30", "20: 00" ];"
-}/> <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <FormField <FormLabel>Date</FormLabel> <Popover> <PopoverTrigger asChild> <FormControl> <Button) : (<span>Pick a date</span>) "
-}<CalendarIcon className="ml-auto h-4 w-4 opacity-50" /> </Button> </FormControl> </PopoverTrigger> <PopoverContent className="w-auto p-0" align="start" > <Calendar initialFocus className="p-3 pointer-events-auto" /> </PopoverContent> </Popover> <FormMessage /> </FormItem>)
+}";,
+}const timeSlots = [ "09:00", "09:30", "10:00", "10:30", "11:00", "11:30";""
+"12:00", "12:30", "13:00", "13:30", "14:00", "14:30";""
+"15:00", "15:30", "16:00", "16:30", "17:00", "17:30";""
+"18:00", "18:30", "19:00", "19:30", "20: 00" ];""
+}/> <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <FormField <FormLabel>Date</FormLabel> <Popover> <PopoverTrigger asChild> <FormControl> <Button) : (<span>Pick a date</span>) ""
+}<CalendarIcon className="ml-auto h-4 w-4 opacity-50" /> </Button> </FormControl> </PopoverTrigger> <PopoverContent className="w-auto p-0" align="start" > <Calendar initialFocus className="p-3 pointer-events-auto" /> </PopoverContent> </Popover> <FormMessage /> </FormItem>)"
 }/> <FormField <FormLabel>Time</FormLabel> <Select onValueChange= {
   field.onChange
 }defaultValue= {
-  field.value "
-}> <FormControl> <SelectTrigger> <SelectValue placeholder="Select time" /> </SelectTrigger> </FormControl> </SelectItem>) )
-}</SelectContent> </Select> <FormMessage /> </FormItem>) "
-}/> </div> <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <FormField <FormItem> <FormLabel>Duration</FormLabel> <Select onValueChange= {
+  field.value ""
+}> <FormControl> <SelectTrigger> <SelectValue placeholder="Select time" /> </SelectTrigger> </FormControl> </SelectItem>) )"
+}</SelectContent> </Select> <FormMessage /> </FormItem>) ""
+}/> </div> <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <FormField <FormItem> <FormLabel>Duration</FormLabel> <Select onValueChange= {",
   field.onChange
 }defaultValue= {
-  field.value "
-}> <FormControl> <SelectTrigger> <SelectValue placeholder="Select duration" /> </SelectTrigger> </FormControl> <SelectContent> <SelectItem value="15" >15 minutes</SelectItem> <SelectItem value="30" >30 minutes</SelectItem> <SelectItem value="45" >45 minutes</SelectItem> <SelectItem value="60" >60 minutes</SelectItem> </SelectContent> </Select> <FormMessage /> </FormItem>)
+  field.value ""
+}> <FormControl> <SelectTrigger> <SelectValue placeholder="Select duration" /> </SelectTrigger> </FormControl> <SelectContent> <SelectItem value="15" >15 minutes</SelectItem> <SelectItem value="30" >30 minutes</SelectItem> <SelectItem value="45" >45 minutes</SelectItem> <SelectItem value="60" >60 minutes</SelectItem> </SelectContent> </Select> <FormMessage /> </FormItem>)"
 }/> <FormField <FormItem> <FormLabel>Platform</FormLabel> <Select onValueChange= {
   field.onChange
 }defaultValue= {
-  field.value "
-}> <FormControl> <SelectTrigger> <SelectValue placeholder="Select platform" /> </SelectTrigger> </FormControl> <SelectContent> <SelectItem value="zoom" >Zoom</SelectItem> <SelectItem value="google-meet" >Google Meet</SelectItem> <SelectItem value="teams" >Microsoft Teams</SelectItem> <SelectItem value="other" >Other</SelectItem> </SelectContent> </Select> <FormMessage /> </FormItem>)
-}/> </div> {'
-  form.watch ('platform') !== 'in-app' && (<FormField control= {
+  field.value ""
+}> <FormControl> <SelectTrigger> <SelectValue placeholder="Select platform" /> </SelectTrigger> </FormControl> <SelectContent> <SelectItem value="zoom" >Zoom</SelectItem> <SelectItem value="google-meet" >Google Meet</SelectItem> <SelectItem value="teams" >Microsoft Teams</SelectItem> <SelectItem value="other" >Other</SelectItem> </SelectContent> </Select> <FormMessage /> </FormItem>)"
+}/> </div> {''
+  form.watch ('platform') !== 'in-app' && (<FormField control= {'
   form.control
 }<FormItem> <FormLabel>Meeting Link (Optional) </FormLabel> <FormControl> <Input placeholder= {
-  `Add your $ {'
-  form.watch ('platform')
-}link here`
+  `Add your $ {''
+  form.watch ('platform')'
+}link here``
 }{
   ...field
 }/> </FormControl> <FormMessage /> </FormItem>)
 }/>)
 }<FormField <FormItem> <FormLabel>Notes (Optional) </FormLabel> <FormControl> <Textarea /> </FormControl> <FormMessage /> </FormItem>)
 }/> </Button> </div> </form> </Form>)
-}'"}
-
-
-
-
+}'"}"
             </FormItem>)}
         />;
         <div className='flex justify - end gap - 4 pt - 4'>;
@@ -587,20 +687,20 @@ toast ({;
             Cancel;
           </Button>;
           <Button type='submit' disabled={is_submitting}>;
-            {is_submitting ? 'Scheduling...' : 'Schedule Interview'}
+            {is_submitting ? 'Scheduling...' : 'Schedule Interview'}'
           </Button>;
         </div>;
       </form>;
     </Form>);
 }setIsSubmitting (true);
 }catch (error) {
-  logErrorToProduction ('Failed to schedule interview:', {
+  logErrorToProduction ('Failed to schedule interview:', {'
   data: error;
 });
 toast ({
 }finally {
   setIsSubmitting (false);
-}";
+}";,
 }const time_slots = [ "09:00", "09:30", "10:00", "10:30", "11:00", "11:30";";
 "12:00", "12:30", "13:00", "13:30", "14:00", "14:30";";
 "15:00", "15:30", "16:00", "16:30", "17:00", "17:30";";
@@ -613,7 +713,7 @@ toast ({
   field.value ";
 }> <FormControl> <SelectTrigger> <SelectValue placeholder="Select time" /> </SelectTrigger> </FormControl> </SelectItem>) );
 }</SelectContent> </Select> <FormMessage /> </FormItem>) ";
-}/> </div> <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4" > <FormField <FormItem> <FormLabel > Duration</FormLabel> <Select onValueChange= {
+}/> </div> <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4" > <FormField <FormItem> <FormLabel > Duration</FormLabel> <Select onValueChange= {",
   field.on_change;
 }default_value= {
   field.value ";
@@ -624,19 +724,21 @@ toast ({
   field.value ";
 }> <FormControl> <SelectTrigger> <SelectValue placeholder="Select platform" /> </SelectTrigger> </FormControl> <SelectContent> <SelectItem value="zoom" >Zoom</SelectItem> <SelectItem value="google - meet" >Google Meet</SelectItem> <SelectItem value="teams" >Microsoft Teams</SelectItem> <SelectItem value="other" >Other</SelectItem> </SelectContent> </Select> <FormMessage /> </FormItem>);
 }/> </div> {';
-  form.watch ('platform') !== 'in - app' && (<FormField control= {
+  form.watch ('platform') !== 'in - app' && (<FormField control= {'
   form.control;
 }<FormItem> <FormLabel > Meeting Link (Optional) </FormLabel> <FormControl> <Input placeholder= {
   `Add your $ {';
   form.watch ('platform');
-}link here`;
+}link here`;`
 }{
   ...field;
 }/> </FormControl> <FormMessage /> </FormItem>);
 }/>);
 }<FormField <FormItem> <FormLabel > Notes (Optional) </FormLabel> <FormControl> <Textarea /> </FormControl> <FormMessage /> </FormItem>);
 }/> </Button> </div> </form> </Form>);
-}'"}
+}'"}"
+}
+;
 }
 ;
   );

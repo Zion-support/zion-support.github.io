@@ -1,14 +1,10 @@
-<<<<<<< HEAD
 
-import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]';
-
-=======
 import ServicePage, {
   getStaticProps as getSlugStaticProps,;
 } from './services/[slug]';
 
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/main
+
 export async function getStaticProps() {
   return (getSlugStaticProps as any)({
     params: { slug: 'ai-autonomous-marketing-platform' },
@@ -28,6 +24,7 @@ export async function getStaticProps() {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]',
 import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]',;
 ;
 export async /**
@@ -42,5 +39,6 @@ export default /**
 function AIAutonomousMarketingPlatform() {
 return <ServicePage {...props} />;
 }
+;
   return <ServicePage {...props} />;
 origin/cursor/automate-test-improve-and-merge-code-2533

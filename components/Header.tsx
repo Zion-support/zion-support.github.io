@@ -1,39 +1,6 @@
-<<<<<<< HEAD
 
-import React, { useState } from 'react';
-import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Phone;
-  Mail;
-  Facebook;
-  Twitter;
-  Linkedin;
-  Instagram;
-  ChevronDown;
-  Menu;
-  X;
-  Code;
-  Smartphone;
-  Cloud;
-  Database;
-  Shield;
-  Zap;
-  Building;
-  ShoppingCart;
-  Heart;
-  GraduationCap;
-  Factory;
-  Truck;
-  CreditCard
-} from 'lucide-react';
-
-
-export default function Header() {
-=======
 'use client';
 
-<<<<<<< HEAD
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="w-4 h-4" />
@@ -97,13 +64,13 @@ export default function Header() {
                 </div>
               ))}
 
-=======
+
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Menu, X, ChevronDown, Building2 } from 'lucide-react';
 
 const Header: React.FC = () => {
->>>>>>> origin/main
+
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -116,52 +83,7 @@ const Header: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-<<<<<<< HEAD
 
-  const servicesDropdown = null;
-      icon: Zap
-    }
-  ];
-
-  const solutionsDropdown = null;
-      icon: GraduationCap
-    }
-  ];
-
-  const industriesDropdown = null;
-    { name: 'Retail', href: '/industries/retail', icon: ShoppingCart }
-  ];
-
-  const navigation = null;
-    { name: 'Contact', href: '/contact' }
-
-=======
-  const navigation = [
-    { name: 'Home', href: '/' },
-    { 
-      name: 'Services', 
-      href: '/services',
-      dropdown: [
-        { name: 'AI Services', href: '/services/ai-services' },
-        { name: 'Cloud Solutions', href: '/services/cloud-platform' },
-        { name: 'Cybersecurity', href: '/services/cybersecurity' },
-        { name: 'Data Analytics', href: '/services/ai-analytics-platform' },
-        { name: 'Blockchain', href: '/services/blockchain' },
-        { name: 'DevOps', href: '/services/ai-powered-devops-platform' }
-      ]
-    },
-    { 
-      name: 'Solutions', 
-      href: '/solutions',
-      dropdown: [
-        { name: 'Enterprise', href: '/enterprise' },
-        { name: 'Startup', href: '/startup' },
-        { name: 'Industry Solutions', href: '/industry-solutions' }
-      ]
-    },
-    { name: 'About', href: '/about' },
-    { name: 'Contact', href: '/contact' }
->>>>>>> origin/main
   ];
 
   return (
@@ -189,7 +111,6 @@ const Header: React.FC = () => {
                   {item.name}
                   {item.dropdown && <ChevronDown className="ml-1 h-4 w-4" />}
                 </Link>
-                
                 {/* Dropdown Menu */}
                 {item.dropdown && (
                   <div className="absolute top-full left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
@@ -229,6 +150,69 @@ const Header: React.FC = () => {
         </div>
       </div>
 
+      <AnimatePresence>
+        {mobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            className="md:hidden bg-white border-t"
+          >
+            <div className="px-4 py-2 space-y-1">
+              {Object.entries(navigation).map(([key, items]) => (
+                <div key={key} className="py-2">
+                  <div className="text-sm font-medium text-gray-900 mb-2">{key}</div>
+                  {items.map((item) => (
+                    <Link
+                      key={item.name}
+                      href={item.href}
+                      className="block py-1 text-sm text-gray-600 hover:text-blue-600"
+                    >
+                      {item.name}
+                    </Link>
+                  ))}
+                </div>
+              ))}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </header>
+  );
+}
+import React, { useState } from 'react';
+import Link from 'next/link';
+import { Menu, X, Phone, Mail, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
+
+const Header: React.FC = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  return (
+    <header className="bg-white shadow-lg">
+      <div className="bg-blue-900 text-white py-2">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col md:flex-row justify-between items-center text-sm">
+            <div className="flex items-center space-x-6 mb-2 md:mb-0">
+              <div className="flex items-center">
+                <Phone className="w-4 h-4 mr-2" />
+                <a href="tel:+13024640950" className="hover:text-blue-300">+1 302 464 0950</a>
+              </div>
+              <div className="flex items-center">
+                <Mail className="w-4 h-4 mr-2" />
+                <a href="mailto:kleber@ziontechgroup.com" className="hover:text-blue-300">kleber@ziontechgroup.com</a>
+              </div>
+            </div>
+            <div className="flex items-center space-x-4">
+              <span className="text-blue-200">24/7 Support Available</span>
+              <div className="flex space-x-2">
+                <a href="#" className="hover:text-blue-300"><Facebook className="w-4 h-4" /></a>
+                <a href="#" className="hover:text-blue-300"><Twitter className="w-4 h-4" /></a>
+                <a href="#" className="hover:text-blue-300"><Linkedin className="w-4 h-4" /></a>
+                <a href="#" className="hover:text-blue-300"><Instagram className="w-4 h-4" /></a>
       {/* Mobile Menu */}
       {isMenuOpen && (
         <div className="md:hidden bg-white border-t border-gray-200">
@@ -275,4 +259,9 @@ const Header: React.FC = () => {
 };
 
 export default Header;
->>>>>>> cursor/automate-test-improve-and-merge-code-5b47
+
+
+
+
+export default Header;
+

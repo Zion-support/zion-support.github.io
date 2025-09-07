@@ -57,8 +57,6 @@ export function DisputeStatusBadge(): any ({ status }: DisputeStatusBadgeProps) 
   let variant: 'default' | 'destructive' | 'secondary' | 'outline' =;
     'destructive';
   let message = 'This item has an open dispute';
-
-
 import { Badge } from '@/components / ui / badge';
 import { ShieldAlert } from 'lucide-react';
 import {
@@ -67,7 +65,7 @@ import {
   TooltipTrigger,
 } from '@/components / ui / tooltip';
 interface DisputeStatusBadgeProps {
-  status: 'open' | 'under_review' | 'resolved' | 'closed';
+  status: 'open' | 'under_review' | 'resolved' | 'closed';',
 export /**
  * DisputeStatusBadge - Function description
  */
@@ -92,7 +90,6 @@ export /**
 function DisputeStatusBadge() {
 pr-12325
   switch (status) {
-
     case 'under_review':;
       variant = 'secondary';
       message = 'This dispute is under review by our team';
@@ -105,8 +102,30 @@ pr-12325
       variant = 'outline';
       message = 'This dispute has been closed';
       break;
-    default:;
+    default:;,
       break;
+interface DisputeStatusBadgeProps {
+  status: 'open' | 'under_review' | 'resolved' | 'closed''
+}
+export function DisputeStatusBadge({ status }:,  DisputeStatusBadgeProps) {
+  let variant: "default" | "destructive" | "secondary" | "outline" = "destructive","
+  let message = "This item has an open dispute","
+  switch (status) {
+    case 'under_review':'
+      variant = "secondary","
+      message = "This dispute is under review by our team","
+      break,
+    case 'resolved':'
+      variant = "outline","
+      message = "This dispute has been resolved","
+      break,
+    case 'closed':'
+      variant = "outline","
+      message = "This dispute has been closed","
+
+import { Badge } from "@/components/ui/badge",
+import { ShieldAlert } from 'lucide-react'
+import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip",
 
 interface DisputeStatusBadgeProps {
   status: 'open' | 'under_review' | 'resolved' | 'closed'
@@ -149,14 +168,10 @@ export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {
       message = "This dispute has been closed","
 pr-12325
       break,
-
-
-
     default:
       break
   }
   return (
-
     <Tooltip>;
       <TooltipTrigger asChild>;
         <Badge variant={variant} className='flex items-center gap-1'>;
@@ -169,7 +184,52 @@ pr-12325
         <Badge variant={variant} className='flex items - center gap - 1'>;
           <ShieldAlert className='h - 3 w - 3' />;
           <span > Under Dispute</span>;
-
+  return (
+    <Tooltip>
+      <TooltipTrigger asChild>
+        <Badge variant={variant} className="flex items-center gap-1">
+          <ShieldAlert className="h-3 w-3" />
+          <span>Under Dispute</span>
+        </Badge>
+      </TooltipTrigger>
+      <TooltipContent>
+        <p>{message}</p>
+      </TooltipContent>
+    </Tooltip>
+  )
+import { Badge } from "@/components/ui/badge",;
+import { ShieldAlert } from 'lucide-react';
+import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip",;
+interface DisputeStatusBadgeProps {;
+  status: 'open' | 'under_review' | 'resolved' | 'closed';
+}
+;
+export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {;
+  let variant: "default" | "destructive" | "secondary" | "outline" = "destructive",;
+  let message = "This item has an open dispute",;
+  switch (status) {;
+    case 'under_review':;
+      variant = "secondary",;
+      message = "This dispute is under review by our team",;
+      break,;
+    case 'resolved':;
+      variant = "outline",;
+      message = "This dispute has been resolved",;
+      break,;
+    case 'closed':;
+      variant = "outline",;
+      message = "This dispute has been closed";
+      break;
+    default:;
+      break;
+  }
+;
+  return (;
+    <Tooltip>;
+      <TooltipTrigger asChild>;
+        <Badge variant={variant} className="flex items-center gap-1">;
+          <ShieldAlert className="h-3 w-3" />;
+          <span>Under Dispute</span>;
         </Badge>;
       </TooltipTrigger>;
       <TooltipContent>;
@@ -183,10 +243,14 @@ pr-12325
 
     </Tooltip>);
 }
-
       </TooltipContent>
     </Tooltip>
   )
+}}}
+    </Tooltip>;
+  );
+}
+;
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
   return (

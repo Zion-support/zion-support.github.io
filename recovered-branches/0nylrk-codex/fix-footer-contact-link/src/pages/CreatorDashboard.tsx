@@ -1,24 +1,4 @@
-<<<<<<< HEAD
 
-
-import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar",
-import { AppSidebar } from "@/components/creator/CreatorSidebar",
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-
-export default function CreatorDashboard() {
-=======
-import {SidebarProvider, SidebarTrigger} from "@/components/ui/sidebar";
-import {AppSidebar} from "@/components/creator/CreatorSidebar";
-import {Header} from "@/components/Header";
-import {Footer} from "@/components/Footer";
-import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar",;
-import { AppSidebar } from "@/components/creator/CreatorSidebar",;
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { Header } from "@/components/Header",;
-import { Footer } from "@/components/Footer",export default function CreatorDashboard() {
->>>>>>> origin/main
   return (
     <SidebarProvider>
       <div className="min-h-screen flex w-full bg-zion-blue">
@@ -77,6 +57,7 @@ import { Footer } from "@/components/Footer",export default function CreatorDash
                 account using the sidebar menu.
               </p>
 }
+    </SidebarProvider>);
 
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar",;
 import { AppSidebar } from "@/components/creator/CreatorSidebar",;

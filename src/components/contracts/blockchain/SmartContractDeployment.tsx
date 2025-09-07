@@ -26,11 +26,10 @@ export function SmartContractDeployment({
 isDeploying
 }: SmartContractDeploymentProps) {
   const [deploymentOptions, setDeploymentOptions] = useState<DeploymentOptions>({
-    network: 'none'
-    useEscrow: true
-    deployToChain: false
-    walletAddress: ''
-
+    network: 'none'',
+    useEscrow: true,
+    deployToChain: false,
+    walletAddress: '''
 ;
 import React, { useState } from './react';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle  } from '@/components / ui / card';
@@ -59,12 +58,11 @@ pr-12325
  */
 function SmartContractDeployment() {
   const [deployment_options, setDeploymentOptions] = useState < DeploymentOptions>({
-    network: 'none',
+    network: 'none','
     use_escrow: true,
     deployToChain: false,
     wallet_address: '';
   });
-
 
                   })}
                 />
@@ -75,15 +73,12 @@ function SmartContractDeployment() {
                   onCheckedChange={(checked) => setDeploymentOptions({;
                     ...deploymentOptions;
                     useEscrow: checked;
-
-
-
                   })}
                   className="flex flex-col space-y-1";
                 >;
                   <div className="flex items-center space-x-2">;
                     <RadioGroupItem value="ethereum" id="ethereum" />;
-                    <Label htmlFor="ethereum">Ethereum (higher fees, more secure)</Label>;
+                    <Label htmlFor="ethereum">Ethereum (higher fees, more,  secure)</Label>;
                   </div>;
                   <div className="flex items-center space-x-2">;
                     <RadioGroupItem value="polygon" id="polygon" />;
@@ -91,23 +86,20 @@ function SmartContractDeployment() {
                   </div>;
                 </RadioGroup>;
               </div>;
-
               <div className="space-y-2">;
                 <Label htmlFor="wallet-address">Wallet address for transactions</Label>;
-                <Input
-                  id="wallet-address" 
-                  placeholder="0x..." 
-                  value={deploymentOptions && deploymentOptions.walletAddress || ''}
-                  onChange={(e) => setDeploymentOptions({;
+                <Input id="wallet-address" "
+                  placeholder="0x..." "
+                  value={deploymentOptions && deploymentOptions.walletAddress || ''}'
+                  onChange={(e) = /> setDeploymentOptions({;
                     ...deploymentOptions;                    walletAddress: e && e.target.value;
                   })}
                 />;
               </div>;
-
               <div className="flex items-center space-x-2">;
                 <Switch
-                  id="use-escrow"
-                  aria-label="Use escrow"
+                  id="use-escrow""
+                  aria-label="Use escrow""
                   checked={deploymentOptions && deploymentOptions.useEscrow}
                   onCheckedChange={(checked) => setDeploymentOptions({;
                     ...deploymentOptions;                    useEscrow: checked;
@@ -150,9 +142,6 @@ function SmartContractDeployment() {
 pr-12325
           )}
 
-
-
-
           <div className="rounded-md bg-muted p-4">
             <h4 className="text-sm font-medium mb-2">Smart Contract Preview</h4>
             <div className="max-h-52 overflow-y-auto bg-background p-3 rounded text-xs font-mono">
@@ -162,17 +151,11 @@ pr-12325
         </div>
       </CardContent>
 
-
-
-
       <CardFooter className="flex justify-between">
         <Button variant="outline" onClick={handleDownloadSolidity}>
           <Download className="mr-2 h-4 w-4" />
           Download .sol File
         </Button>
-
-
-
 
         <Button onClick={handleDeployContract} disabled={isDeploying}>
           {isDeploying ? (
@@ -183,41 +166,10 @@ pr-12325
           ) : (
             'Deploy Contract'
           )}
-
-
-          <div className="rounded-md bg-muted p-4">;
-            <h4 className="text-sm font-medium mb-2">Smart Contract Preview</h4>;
-            <div className="max-h-52 overflow-y-auto bg-background p-3 rounded text-xs font-mono">;
-              <pre>{solidityCode && solidityCode.slice(0, 500)}...</pre>;
-            </div>;
-          </div>;
-        </div>;
-      </CardContent>;
-
-      <CardFooter className="flex justify-between">;
-        <Button variant="outline" onClick={handleDownloadSolidity}>;
-          <Download className="mr-2 h-4 w-4" />;
-          Download .sol File;
-        </Button>;
-
-        <Button onClick={handleDeployContract} disabled={isDeploying}>;
-          {isDeploying ? (;
-            <>;
-              <Loader2 className="mr-2 h-4 w-4 animate-spin" />;
-              Deploying...;
-            </>;
-          ) : (;
-            'Deploy Contract';
-          )}
-
-
         </Button>;
       </CardFooter>;
     </Card>;
   );
-
-
-
       <CardContent className="space - y-6">;
         <div className="space - y-4">;
           <div className="flex items - center space - x-2">;
@@ -244,7 +196,7 @@ pr-12325
                 >;
                   <div className="flex items - center space - x-2">;
                     <RadioGroupItem value="ethereum" id="ethereum" />;
-                    <Label html_for="ethereum">Ethereum (higher fees, more secure)</Label>;
+                    <Label html_for="ethereum">Ethereum (higher fees, more,  secure)</Label>;
                   </div>;
                   <div className="flex items - center space - x-2">;
                     <RadioGroupItem value="polygon" id="polygon" />;
@@ -254,11 +206,11 @@ pr-12325
               </div>;
               <div className="space - y-2">;
                 <Label html_for="wallet - address">Wallet address for transactions</Label>;
-                <Input;
+                <Input ;
                   id="wallet - address";
                   placeholder="0x...";
-                  value={deployment_options.wallet_address || ''}
-                  on_change={(e) => setDeploymentOptions ({
+                  value={deployment_options.wallet_address || ''}'
+                  on_change={(e) = /> setDeploymentOptions ({
                     ...deployment_options;                    wallet_address: e.target.value;
                   })}
                 />;
@@ -294,12 +246,12 @@ pr-12325
               <Loader2 className="mr - 2 h - 4 w - 4 animate - spin" />;
               Deploying...;
             </>) : (
-            'Deploy Contract')}
+            'Deploy Contract')}'
         </Button>;
       </CardFooter>;
     </Card>);
 }
-<CardHeader> <CardTitle className="flex items - center gap - 2" > <ShieldCheck className="h - 5 w - 5 text - primary" /> Smart Contract Deployment </CardTitle> <CardDescription> Deploy your agreement as a smart contract for enhanced security and automation </CardDescription> </CardHeader> <CardContent className="space - y-6" > <div className="space - y-4" > <div className="flex items - center space - x-2" > <Switch /> <Label html_for="deploy - blockchain" >Deploy to blockchain</Label> </div> > <div className="flex items - center space - x-2" > <RadioGroupItem value="ethereum" id="ethereum" /> <Label html_for="ethereum" >Ethereum (higher fees, more secure) </Label> </div> <div className="flex items - center space - x-2" > <RadioGroupItem value="polygon" id="polygon" /> <Label html_for="polygon" >Polygon (lower fees, faster) </Label> </div> </RadioGroup> </div> <div className="space - y-2" > <Label html_for="wallet - address" >Wallet address for transactions</Label> <Input /> </div> <div className="flex items - center space - x-2" > <Switch /> <Label html_for="use - escrow" >Use escrow for payments</Label> </div> </>);
+<CardHeader> <CardTitle className="flex items - center gap - 2" > <ShieldCheck className="h - 5 w - 5 text - primary" /> Smart Contract Deployment </CardTitle> <CardDescription> Deploy your agreement as a smart contract for enhanced security and automation </CardDescription> </CardHeader> <CardContent className="space - y-6" > <div className="space - y-4" > <div className="flex items - center space - x-2" > <Switch /> <Label html_for="deploy - blockchain" >Deploy to blockchain</Label> </div> > <div className="flex items - center space - x-2" > <RadioGroupItem value="ethereum" id="ethereum" /> <Label html_for="ethereum" >Ethereum (higher fees, more,  secure) </Label> </div> <div className="flex items - center space - x-2" > <RadioGroupItem value="polygon" id="polygon" /> <Label html_for="polygon" >Polygon (lower fees, faster) </Label> </div> </RadioGroup> </div> <div className="space - y-2" > <Label html_for="wallet - address" >Wallet address for transactions</Label> <Input /> </div> <div className="flex items - center space - x-2" > <Switch /> <Label html_for="use - escrow" >Use escrow for payments</Label> </div> </>);
 }</div> </div> </div> </CardContent> Download .sol File </Button> <Button on_click={
   handleDeployContract;
 }disabled= {
@@ -307,7 +259,10 @@ pr-12325
 }> {'";
   is_deploying ? (<> <Loader2 className="mr - 2 h - 4 w - 4 animate - spin" /> Deploying... </>) : ('Deploy Contract');
 }</Button> </CardFooter> </Card>);
-}'"}
+}'"}"
+}
+;
+}}}
 }
 ;
         </Button>

@@ -1,20 +1,5 @@
 
-<<<<<<< HEAD:pages/api/auth/me.ts
-import { NextApiRequest, NextApiResponse } from 'next';
-import { getUserFromRequest } from '../../utils/auth';
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  const user = null;
-  res.status(200).json({ user })
-};
-=======
-import { NextApiRequest, NextApiResponse } from 'next';
-import { getUserFromRequest } from '../../../utils/auth';
-=======
-import { getUserFromRequest } from '../../../utils/auth';
-import { NextApiRequest, NextApiResponse } from 'next',;
-import { getUserFromRequest } from '../../../utils/auth',;
->>>>>>> origin/main:pages/api-disabled/api/auth/me.ts
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const user = getUserFromRequest(req);
   if (!user) return res.status(200).json({ user: null });

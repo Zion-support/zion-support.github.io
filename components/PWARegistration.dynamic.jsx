@@ -13,6 +13,8 @@ const PWARegistration.dynamic = () => ;
     </div>
   );
 }
+;
+
 
 pr-12243
 export default PWARegistration.dynamic;

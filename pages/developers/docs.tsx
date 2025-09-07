@@ -1,9 +1,4 @@
-<<<<<<< HEAD
 
-import dynamic from 'next/dynamic';
-const ApiDocsPage = null;
-
-=======
 import dynamic from 'next/dynamic',;
 const ApiDocsPage = dynamic(() => import('../../components/docs/ApiDocsPage'), { ssr: false }),;
 
@@ -22,7 +17,7 @@ export default function DocsRoute(req, res) {
 }
 import dynamic from 'next/dynamic';
 const ApiDocsPage = null;
->>>>>>> origin/main
+
 export default function DocsRoute() {
   return <ApiDocsPage />
 origin/cursor/automate-test-improve-and-merge-code-2533

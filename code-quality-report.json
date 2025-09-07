@@ -1,18 +1,5 @@
 {
-<<<<<<< HEAD
 
-  "timestamp": "2025-09-06T04:57:23.695Z",
-  "stats": {
-    "totalFiles": 441,
-    "totalLines": 32232,
-    "functions": 326,
-    "classes": 7,
-    "comments": 785
-  },
-=======
-  "timestamp": "2025-09-06T17:35:18.805Z",
-  "totalIssues": 204,
->>>>>>> origin/main
   "issues": [
     {
       "file": "/workspace/src/components/AIListingGenerator.tsx",
@@ -1034,17 +1021,7 @@
       "type": "any",
       "message": "TypeScript any type used - consider more specific typing"
     }
-<<<<<<< HEAD
-  ],
-  "qualityScore": 0,
-  "recommendations": [
-    "Consider breaking down long functions",
-    "Add more comments to complex code",
-    "Remove console.log statements from production code",
-    "Consider using TypeScript for better type safety"
 
-=======
->>>>>>> origin/main
   ]
 }
   ],

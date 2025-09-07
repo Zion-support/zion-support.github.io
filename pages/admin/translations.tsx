@@ -1,15 +1,5 @@
 
-<<<<<<< HEAD
-import dynamic from 'next/dynamic';
-const TranslationPreview = null;
 
-=======
-
-const TranslationPreview = dynamic(() => import('../../components/admin/TranslationPreview'), { ssr: false }),;
-import dynamic from 'next/dynamic';
-const TranslationPreview = null;
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/main
 export default function TranslationsAdminPage() {
   return (
     <div className="container mx-auto px-4 py-8">
@@ -33,6 +23,20 @@ export default function TranslationsAdminPage() {_return (
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+}
+
+}
+
+import dynamic from 'next / dynamic',
+const TranslationPreview = dynamic (() => import ('../../components / admin / TranslationPreview'), { ssr: false }),
+export default /**
+ * TranslationsAdminPage - Function description
+ */
+function TranslationsAdminPage() {
+  return (
+    <div className="container mx - auto px - 4 py - 8">;
+      <TranslationPreview />;
+    </div>);
 }
 
 

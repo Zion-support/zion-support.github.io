@@ -1,11 +1,5 @@
 
-<<<<<<< HEAD
-import React from 'react',
-=======
-}</ul> </div> <div className="bg-black/30 rounded-2xl border border-cyan-500/30 p-6 h-fit" > <div className="flex items-end justify-between mb-3" > <div> </div> </div> </div> </div> </div> </UltraAdvancedFuturisticBackground>) import React from 'react';
-import React from 'react';
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/main
+
 import Head from 'next/head';
 import { Shield, Phone, Mail, MapPin, Check, ArrowRight  } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
@@ -15,11 +9,7 @@ import Button from '../components/ui/Button';
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
 export default function ApiObservabilityPage() {
   const service = null;
-<<<<<<< HEAD
 
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/main
   return (
     <UltraAdvancedFuturisticBackground>;
       <Head>;

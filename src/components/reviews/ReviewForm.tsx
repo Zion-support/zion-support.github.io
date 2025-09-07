@@ -1,55 +1,10 @@
 
-
-import { useState } from "react",
-import { Star } from 'lucide-react'
-import { useForm } from "react-hook-form",
-
-import { Button } from "@/components/ui/button";
-import { Textarea } from "@/components/ui/textarea";
-import {
-  Form;
-  FormControl;
-  FormField;
-  FormItem;
-  FormLabel;
-
-  FormMessage} from "@/components/ui/form",
-import {
-  RadioGroup;
-  RadioGroupItem} from "@/components/ui/radio-group",
-import { Switch } from "@/components/ui/switch";
-
-import { Review } from "@/types/reviews";
-interface ReviewFormValues {
-  rating?: number;
   review_text?: string;
   communication_rating?: number;
   quality_rating?: number;
   timeliness_rating?: number;
   would_work_again?: boolean;
-  is_anonymous?: boolean
-}
 
-interface ReviewFormProps {
-
-  projectId: string;
-  revieweeId: string;
-  revieweeName: string;
-  onSubmit: (data: any) => Promise<boolean>;
-  defaultValues?: Review;
-  isSubmitting: boolean
-}
-
-export function ReviewForm({
-  projectId;
-  revieweeId;
-  revieweeName;
-  onSubmit;
-  defaultValues;
-  isSubmitting}: ReviewFormProps) {
-  const [hoveredStar, setHoveredStar] = useState<number>(0),
-  
-  const form = null;
               message: "Review must be at least 20 characters"}}}
           render={({ field }: { field: any }) => (
             <FormItem>
@@ -59,20 +14,13 @@ export function ReviewForm({
                   placeholder="Share your experience and feedback..."
                   className="min-h-24 resize-none"
                   {...field}
-                />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        
+
         {/* Additional Rating Categories (only shown if main rating is provided) */}
         {(watchRating ?? 0) > 0 && (
           <div className="space-y-6 border-t pt-6">
             <h3 className="font-medium text-sm">Additional Ratings (Optional)</h3>
-            
             {/* Communication */}
-            <FormField
+
               control={form.control}
               name="communication_rating"
               render={({ field }: { field: any }) => (
@@ -82,10 +30,7 @@ export function ReviewForm({
                     <RadioGroup
                       onValueChange={(value) => field.onChange(parseInt(value))}
                       defaultValue={field.value?.toString()}
-                      className="flex flex-wrap gap-4"
-                    >
-                      {[1, 2, 3, 4, 5].map((value) => (
-                        <FormItem
+
                           key={value}
                           className="flex items-center space-x-2"
                         >
@@ -94,18 +39,7 @@ export function ReviewForm({
                           </FormControl>
                           <FormLabel className="cursor-pointer font-normal">
                             {value}
-                          </FormLabel>
-                        </FormItem>
-                      ))}
-                    </RadioGroup>
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            
-            {/* Quality */}
-            <FormField
+
               control={form.control}
               name="quality_rating"
               render={({ field }: { field: any }) => (
@@ -115,10 +49,7 @@ export function ReviewForm({
                     <RadioGroup
                       onValueChange={(value) => field.onChange(parseInt(value))}
                       defaultValue={field.value?.toString()}
-                      className="flex flex-wrap gap-4"
-                    >
-                      {[1, 2, 3, 4, 5].map((value) => (
-                        <FormItem
+
                           key={value}
                           className="flex items-center space-x-2"
                         >
@@ -127,18 +58,7 @@ export function ReviewForm({
                           </FormControl>
                           <FormLabel className="cursor-pointer font-normal">
                             {value}
-                          </FormLabel>
-                        </FormItem>
-                      ))}
-                    </RadioGroup>
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            
-            {/* Timeliness */}
-            <FormField
+
               control={form.control}
               name="timeliness_rating"
               render={({ field }: { field: any }) => (
@@ -148,10 +68,7 @@ export function ReviewForm({
                     <RadioGroup
                       onValueChange={(value) => field.onChange(parseInt(value))}
                       defaultValue={field.value?.toString()}
-                      className="flex flex-wrap gap-4"
-                    >
-                      {[1, 2, 3, 4, 5].map((value) => (
-                        <FormItem
+
                           key={value}
                           className="flex items-center space-x-2"
                         >
@@ -160,18 +77,7 @@ export function ReviewForm({
                           </FormControl>
                           <FormLabel className="cursor-pointer font-normal">
                             {value}
-                          </FormLabel>
-                        </FormItem>
-                      ))}
-                    </RadioGroup>
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            
-            {/* Would Work Again */}
-            <FormField
+
               control={form.control}
               name="would_work_again"
               render={({ field }: { field: any }) => (
@@ -194,12 +100,7 @@ export function ReviewForm({
                   <FormMessage />
                 </FormItem>
               )}
-            />
-          </div>
-        )}
-        
-        {/* Anonymous Review */}
-        <FormField
+
           control={form.control}
           name="is_anonymous"
           render={({ field }: { field: any }) => (
@@ -223,7 +124,6 @@ export function ReviewForm({
             </FormItem>
           )}
         />
-        
         <Button
           type="submit"
           className="w-full"
@@ -235,5 +135,3 @@ export function ReviewForm({
     </Form>
   )
 
-}
-;

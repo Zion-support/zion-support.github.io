@@ -1,4 +1,9 @@
 
+import _React from 'react';  import '@testing-library/jest-dom'; import EnhancedAnalyticsdynamic from '../components/EnhancedAnalytics.dynamic'; describe('EnhancedAnalyticsdynamic',() => { test('renders without crashing',() => { render(<EnhancedAnalyticsdynamic />); expect(screen.getByTestId('enhancedanalytics.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<EnhancedAnalyticsdynamic />)}); test('handles user interactions',() => { render(<EnhancedAnalyticsdynamic />)}); test('applies correct styling',() => { render(<EnhancedAnalyticsdynamic />)})});
+ursor/fix-syntax-push-and-merge-to-main-40de
+
+
+
 
 import _React from 'react';  import '@testing-library/jest-dom'; import EnhancedAnalyticsdynamic from '../components/EnhancedAnalytics.dynamic'; describe('EnhancedAnalyticsdynamic',() => { test('renders without crashing',() => { render(<EnhancedAnalyticsdynamic />); expect(screen.getByTestId('enhancedanalytics.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<EnhancedAnalyticsdynamic />)}); test('handles user interactions',() => { render(<EnhancedAnalyticsdynamic />)}); test('applies correct styling',() => { render(<EnhancedAnalyticsdynamic />)})});
 ursor/fix-syntax-push-and-merge-to-main-40de
@@ -17,6 +22,16 @@ describe('EnhancedAnalyticsdynamic', () => {
     render(<EnhancedAnalyticsdynamic />);
     expect(screen.getByTestId('enhancedanalytics.dynamic')).toBeInTheDocument();
   });
+
+});
+
+
+
+import _React from 'react';  import '@testing-library/jest-dom'; import EnhancedAnalyticsdynamic from '../components/EnhancedAnalytics.dynamic'; describe('EnhancedAnalyticsdynamic',() => { test('renders without crashing',() => { render(<EnhancedAnalyticsdynamic />); expect(screen.getByTestId('enhancedanalytics.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<EnhancedAnalyticsdynamic />)}); test('handles user interactions',() => { render(<EnhancedAnalyticsdynamic />)}); test('applies correct styling',() => { render(<EnhancedAnalyticsdynamic />)})});
+
+
+
+
 });
 });
   test('displays correct content', () => {
@@ -35,6 +50,14 @@ ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 
 
+
+
+
+
+
+
+
+
 import React from 'react'
 import { render, screen, fireEvent } from '@testing-library/react'
 import '@testing-library/jest-dom'
@@ -45,6 +68,24 @@ describe('EnhancedAnalyticsdynamic'
   test('displays correct content'
   test('handles user interactions'
   test('applies correct styling'
+
+
+
+
+
+
+
+});
+
+
+
+import _React from 'react';  import '@testing-library/jest-dom'; import EnhancedAnalyticsdynamic from '../components/EnhancedAnalytics.dynamic'; describe('EnhancedAnalyticsdynamic',() => { test('renders without crashing',() => { render(<EnhancedAnalyticsdynamic />); expect(screen.getByTestId('enhancedanalytics.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<EnhancedAnalyticsdynamic />)}); test('handles user interactions',() => { render(<EnhancedAnalyticsdynamic />)}); test('applies correct styling',() => { render(<EnhancedAnalyticsdynamic />)})});
+
+
+
+
+const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import EnhancedAnalyticsdynamic from "./components/EnhancedAnalytics.dynamic"; describe('EnhancedAnalyticsdynamic', () => { test("renders without crashing",() => { render(<EnhancedAnalyticsdynamic />); expect(screen.getByTestId("enhancedanalytics.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<EnhancedAnalyticsdynamic />)}); test("handles user interactions",() => { render(<EnhancedAnalyticsdynamic />)}); test("applies correct styling"
+
 const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import EnhancedAnalyticsdynamic from "./components/EnhancedAnalytics.dynamic"; describe('EnhancedAnalyticsdynamic', () => { test("renders without crashing",() => { render(<EnhancedAnalyticsdynamic />); expect(screen.getByTestId("enhancedanalytics.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<EnhancedAnalyticsdynamic />)}); test("handles user interactions",() => { render(<EnhancedAnalyticsdynamic />)}); test("applies correct styling"
 });
 });

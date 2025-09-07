@@ -1,5 +1,5 @@
-import React from 'react'
-import FocusLock from 'react-focus-lock'
+import React from 'react''
+import FocusLock from 'react-focus-lock''
 import {
 
 import React from 'react
@@ -12,21 +12,31 @@ pr-12325
   DialogContent,
   DialogHeader,;
   DialogTitle;
+} from '@/components/ui/dialog'; import { Button } from '@/components/ui/button'; import { Input } from '@/components/ui/input''
+import { Textarea } from '@/components/ui/textarea''
 
 } from '@/components/ui/dialog'; import { Button } from '@/components/ui/button'; import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
   Dialog
   DialogContent
   DialogHeader
-  DialogTitle} from '@/components/ui/dialog'
-import { Button } from '@/components/ui/button'
-import { Input } from '@/components/ui/input'
+  DialogTitle} from '@/components/ui/dialog''
+import { Button } from '@/components/ui/button''
+import { Input } from '@/components/ui/input''
   Form
   FormField
   FormItem
   FormLabel
   FormControl
   FormMessage
+} from '@/components/ui/form''
+import { useForm, type Resolver } from 'react-hook-form''
+import { yupResolver } from '@hookform/resolvers/yup';
+import * as yup from 'yup';
+import { SendIcon, Mail } from 'lucide-react'; import api from '@/services/apiClient''
+import { toast } from '@/hooks/use-toast''
+import { useAuth } from '@/hooks/useAuth''
+import { LoginModal } from '@/components/auth/LoginModal''
 } from '@/components/ui/form'
 import { useForm, type Resolver } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
@@ -40,14 +50,14 @@ import { LoginModal } from '@/components/auth/LoginModal'
   FormItem
   FormLabel
   FormControl
-  FormMessage} from '@/components/ui/form'
-import {useForm, type, Resolver} from 'react-hook-form'
-import {yupResolver} from '@hookform/resolvers/yup'
-import { SendIcon, Mail } from 'lucide-react'
-import api from '@/services/apiClient'
-  isOpen: boolean
-  onClose: () => void
-  publisherName: string
+  FormMessage} from '@/components/ui/form''
+import {useForm, type, Resolver} from 'react-hook-form''
+import {yupResolver} from '@hookform/resolvers/yup''
+import { SendIcon, Mail } from 'lucide-react''
+import api from '@/services/apiClient''
+  isOpen: boolean,
+  onClose: () => void,
+  publisherName: string,
   publisherEmail?: string
   productId?: string
 import React from 'react';
@@ -65,6 +75,7 @@ interface ContactPublisherModalProps {
   isOpen: boolean;
   onClose: () => void;
   publisherName: string;
+
 
   return (
     <>

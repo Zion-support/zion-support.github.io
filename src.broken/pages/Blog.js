@@ -1,3 +1,12 @@
+:src.broken/pages/Blog.js
+
+
+
+:src.broken/pages/Blog.js
+:src.broken/pages/Blog.js
+:src.broken/pages/Blog.js
+
+import { useState, useEffect } from "react";
 :src.broken/pages/Blog.jsimport { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { GradientHeading } from "@/components/GradientHeading";
@@ -137,6 +146,12 @@ pr-12325
               </Select>
             </div>
           </div>
+
+:src.broken/pages/Blog.js
+import React from 'react';
+import React from 'react';
+
+
 import React from 'react';
 export default function Blog() {
     return (
@@ -178,10 +193,21 @@ export default function Blog() {
                 </div>
             </div>
         </div>
+
+:src.broken/pages/Blog.js
+
 :src.broken/pages/Blog.js
       </div>
     </>);
     );
+
+
+:src.broken/pages/Blog.js
+      </div>
+    </>);
+    );
+}
+
         }, 120000); // every 2 minutes;
         return () => clearInterval(interval);
     }, []);

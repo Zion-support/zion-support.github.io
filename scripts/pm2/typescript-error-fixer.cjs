@@ -6,8 +6,7 @@
 
 const fs = // // require('fs');
 const path = // // require('path');
-<<<<<<< HEAD
-const { execSync } = // // require('child_process');
+
 class TypeScriptErrorFixer {}
   constructor() {}
     this.projectRoot = process.cwd();
@@ -16,7 +15,6 @@ class TypeScriptErrorFixer {}
     this.typeAnnotationFix = process.env.TYPE_ANNOTATION_FIX === 'true';
     this.interfaceGeneration = process.env.INTERFACE_GENERATION === 'true';
     this.maxComplexity = parseInt(process.env.MAX_COMPLEXITY) || 10;
-    
     this.fixesApplied = 0;
     this.fixesFailed = 0;
     this.fixesSkipped = 0;
@@ -30,6 +28,9 @@ class TypeScriptErrorFixer {}
       data,
       service: 'typescript-error-fixer
     };
+
+
+
 
     if (level === 'error') {}
       console.error(`[${timestamp}] ERROR: ${message}`, data)} else if (level === 'warn') {`}`;
@@ -50,8 +51,8 @@ class TypeScriptErrorFixer {}
       await this.performTypeScriptFixes();
       this.startContinuousFixing();
       this.setupSignalHandlers();
-      
       this.log('info', 'TypeScript Error Fixer Service started successfully');
+
       setInterval(async () => {}
         await this.performTypeScriptFixes()}, this.fixInterval)} catch (error) {}
       this.log('error', 'Failed to start TypeScript Error Fixer Service', error);
@@ -67,7 +68,6 @@ class TypeScriptErrorFixer {}
     this.log('info', 'Starting TypeScript error fixing process...');
       this.resetCounters();
       const errors = await this.getTypeScriptErrors();
-      
       if (errors.length === 0) {}
         this.log('info', 'No TypeScript errors found');
         return};`;
@@ -89,7 +89,6 @@ class TypeScriptErrorFixer {}
         stdio: 'pipe
       }
 });
-      
       if (result) {}
         const parsed = JSON.parse(result);
         return parsed.errors || []};
@@ -109,7 +108,6 @@ class TypeScriptErrorFixer {}
           column: parseInt(match[3]),
           message: match[4].trim(),
           code: 'TS_ERROR
-    
     return errors};
   async fixTypeScriptError(error) {}
     if (!error.file || !fs.existsSync(error.file)) {}
@@ -121,21 +119,18 @@ class TypeScriptErrorFixer {}
         return};
       const lineIndex = error.line - 1;
       const line = lines[lineIndex];
-      
       if (this.shouldSkipLine(line)) {}
       const fixedLine = await this.fixTypeScriptLine(line, error, lines, lineIndex);
-      
       if (fixedLine !== line) {}
         lines[lineIndex] = fixedLine;
         const fixedContent = lines.join('\n');
         // Create backup;
         await this.createBackup(error.file);
-        
         // Write fixed content;
         fs.writeFileSync(error.file, fixedContent, 'utf8');
         this.fixesApplied++;
         this.fixedFiles.add(error.file);
-`;
+
         this.log('info', `Successfully fixed TypeScript error in: ${error.file}:${error.line}`)} else {`}
         this.fixesSkipped++};
     } catch (error) {}`;
@@ -150,7 +145,6 @@ class TypeScriptErrorFixer {}
            trimmed.startsWith('export')};
   async fixTypeScriptLine(line, error, allLines, lineIndex) {}
     let fixedLine = line;
-    
     // Fix common TypeScript errors;
     if (error.message.includes('Cannot find name')) {}
       fixedLine = this.fixUndefinedName(line, error, allLines, lineIndex)} else if (error.message.includes('Type')) {}
@@ -162,13 +156,11 @@ class TypeScriptErrorFixer {}
   fixUndefinedName(line, error, allLines, lineIndex) {}
     const nameMatch = error.message.match(/Cannot find name '([^']+)'/);
     if (!nameMatch) return line;
-    
     const undefinedName = nameMatch[1];
 
-    // Try to find the name in the file;`;
+
     const namePattern = new RegExp(`\\b${undefinedName}\\b`, 'g');
     const matches = line.match(namePattern);
-    
     if (matches) {}
       // Check if it should be imported;
       if (this.shouldBeImported(undefinedName, allLines)) {}
@@ -191,8 +183,8 @@ class TypeScriptErrorFixer {}
   fixModuleError(line, error, allLines, lineIndex) {}
     const moduleMatch = error.message.match(/Cannot find module '([^']+)'/);
     if (!moduleMatch) return line;
-    
     const moduleName = moduleMatch[1];
+
 
     // Try to fix common module issues;
     if (moduleName.startsWith('@/')) {}
@@ -203,8 +195,8 @@ class TypeScriptErrorFixer {}
   fixPropertyError(line, error, allLines, lineIndex) {}
     const propertyMatch = error.message.match(/Property '([^']+)' does not exist on type/);
     if (!propertyMatch) return line;
-    
     const propertyName = propertyMatch[1];
+
 
     // Add type assertion;
     if (line.includes('.' + propertyName)) {}`;
@@ -225,17 +217,16 @@ class TypeScriptErrorFixer {}
     let firstUsage = -1;
     let declaration = -1;
 
+
     allLines.forEach((line, index) => {}
       if (namePattern.test(line)) {}
         if (firstUsage === -1) firstUsage = index;
         if (line.includes('const') || line.includes('let') || line.includes('var') || line.includes('function')) {}
           declaration = index};
-    
     return firstUsage !== -1 && (declaration === -1 || declaration > firstUsage)};
   addImportStatement(name, allLines) {}
     // Find the best place to add import;
     let importIndex = 0;
-    
     for (let i = 0; i < allLines.length; i++) {}
       if (allLines[i].trim().startsWith('import')) {}
         importIndex = i + 1} else if (allLines[i].trim() && !allLines[i].trim().startsWith('//')) {}
@@ -251,7 +242,6 @@ class TypeScriptErrorFixer {}
       const fileName = path.basename(filePath);
       const timestamp = new Date().toISOString().replace(/[:.]/g, '-');`;
       const backupPath = path.join(backupDir, `${fileName}.${timestamp}.backup`);
-      
       fs.copyFileSync(filePath, backupPath);`;
       this.log('debug', `Backup created: ${backupPath}`)} catch (error) {`}`;
       this.log('warn', `Failed to create backup for: ${filePath}`, error.message)};
@@ -313,6 +303,5 @@ process.on('unhandledRejection', (reason, promise) => {}
 // Start the service;
 fixer.start().catch(error => {})
   fixer.log('error', 'Failed to start service', error);
-=======
-const { execSync } = // // require('child_process');
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
+

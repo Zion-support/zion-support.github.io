@@ -1,57 +1,9 @@
-<<<<<<< HEAD
 
-import React from 'react',
-import Head from 'next/head';
-import { Phone, Mail, MapPin, Check, ArrowRight, Smartphone  } from 'lucide-react';
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
-=======
-  Phone,
-  Mail,
-  MapPin,
-  Check,
-  ArrowRight,;
-  Smartphone,;
-import React from 'react';
-import Head from 'next/head';
-import { Phone, Mail, MapPin, Check, ArrowRight, Smartphone  } from 'lucide-react';
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
->>>>>>> origin/main
 import Button from '../components/ui/Button';
 import { extraServices } from '../data/extra-services';
 export default function MDMPage() {
   const service = null;
-<<<<<<< HEAD
 
-=======
-import {
-  Phone
-  Mail
-  MapPin
-  Check
-  ArrowRight
-  Smartphone;
-origin/cursor/automate-test-improve-and-merge-code-2533
-} from 'lucide-react';
-export default function MDMPage() {
-  const service = extraServices.find(s =>
-    s.link.endsWith('/mdm-mobile-device-management')
-
-export default function MDMPage() {;
-  const service = extraServices && extraServices.find(s =>;
-    s && s.link.endsWith('/mdm-mobile-device-management');
-  );  if (!service) return null;import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
-export default function MDMPage() {;
-  const service = extraServices && extraServices.find(s => s && s.link.endsWith('/mdm-mobile-device-management'));
-  if (!service) return null;
-
-  return (
-    <UltraAdvancedFuturisticBackground>;
-      <Head>;
-        <title>{service && service.name} - Zion Tech Group</title>;
-        <meta name='description' content={service && service.description} />;
-  );
-  if (!service) return null;
->>>>>>> origin/main
   return (
     <UltraAdvancedFuturisticBackground>
       <Head>

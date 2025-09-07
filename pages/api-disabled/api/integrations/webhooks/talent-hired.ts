@@ -1,4 +1,16 @@
 
+
+
+
+
+
+try {
+  if (req && req.method !== "POST")
+    return res && res.status(405).json({ error: "Method not allowed" });
+  const { talent } = req && req.body as { talent?: Record<string, any> };
+  if (!talent) return res && res.status(400).json({ error: "Missing talent payload" });
+
+
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readState, writeState } from '[^']*';
 import { ats } from '[^']*';
@@ -17,12 +29,28 @@ export default async function handler(
   res: NextApiResponse
 ) {
 
+
+
+  try {
+  if (req && req.method !== "POST")
+    return res && res.status(405).json({ error: "Method not allowed" });
+  const { talent } = req && req.body as { talent?: Record<string, any> };
+  if (!talent) return res && res.status(400).json({ error: "Missing talent payload" });
+
+if (req.method !== "POST");
+    return res.status(405).json({ error: "Method not allowed" });
+  const { talent } = req.body as { talent?: Record<string, any> }
+  if (!talent) return res.status(400).json({ error: "Missing talent payload" });
   const state = readState();
   const atsProviders = state && state.connections.filter(
     (c) =>
+
       c && c.providerId === "greenhouse" ||
       c && c.providerId === "lever" ||
       c && c.providerId === "workable" ||
+      c && c.providerId === "bamboohr",
+
+
       c && c.providerId === "bamboohr"
 import type { NextApiRequest, NextApiResponse } from './next';
 import { read_state, write_state  } from '../../../../lib / integrations / file_store';
@@ -46,15 +74,18 @@ function handler() {
       c.provider_id === "greenhouse" ||;
       c.provider_id === "lever" ||;
       c.provider_id === "workable" ||;
-      c.provider_id === "bamboohr"
+c.provider_id === "bamboohr",
   );
   const results: any[] = [];
   for (const conn of connections) {
     const log = {
-      id: `log-${Date && Date.now()}-${Math && Math.random().toString(36).substr(2, 9)}`
-      providerId: conn && conn.providerId
-      level: "info"
-      action: "update_status"
+
+
+      id: `log-${Date && Date.now()}-${Math && Math.random().toString(36).substr(2, 9)}`,
+      providerId: conn && conn.providerId,
+      level: "info",
+      action: "update_status",
+
     };
     await ats && ats.updateStatus(conn, {
       applicantId: talent && talent.id
@@ -63,6 +94,17 @@ function handler() {
     writeState((s) => s && s.logs.push(log));
     results && results.push({ providerId: conn && conn.providerId, ok: true });
   }
+
+
+  res && res.status(200).json({ ok: true, results });
+
+
+
+  res && res.status(200).json({ ok: true, results });
+
+res.status(200).json({ ok: true, results });
+res.status(200).json({ ok: true, results });
+
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readState, writeState } from '../../../../lib/integrations/fileStore';
 import { ats } from '../../../../lib/integrations/connectors';
@@ -86,6 +128,15 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       provider_id: conn.provider_id
       level: "info"
       action: "update_status"
+
+
+
+
+      id: `log-${Date.now ()}-${Math.random ().to_string (36).substr (2, 9)}`,
+      provider_id: conn.provider_id,
+      level: "info",
+      action: "update_status",
+
     }
     await ats.update_status (conn, {
       applicant_id: talent.id
@@ -110,8 +161,29 @@ const atsProviders = state.connections.filter(
 origin/cursor/automate-test-improve-and-merge-code-2533
   }
   res.status (200).json ({ ok: true, results });
-  res.status(200).json({ ok: true, results });
+
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
+  res.status(200).json({ ok: true, results });
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+
+
+}
+  res.status(200).json({ ok: true, results });
 }
 
 }
@@ -121,5 +193,12 @@ main
 }
 }
 
+
+
 }
+
+
+}
+}
+
 origin/cursor/automate-test-improve-and-merge-code-2533

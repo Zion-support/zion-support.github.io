@@ -5,21 +5,7 @@ import { Button } from "@/components/ui/button",
 import { ExternalLink } from 'lucide-react'
 import { TalentProfile } from "@/types/talent",
 import { HireRequestModal } from "@/components/profile/hire-request",
-import { useAuthStatus } from "@/hooks/talent";
-import type { UserProfile } from "@/types/auth";
-import { useRouter } from 'next/router';
-interface TalentCardFooterProps {
-  profile: TalentProfile;
-  onViewProfile: (id: string) => void;
-  onRequestHire?: (profile: TalentProfile) => void
 
-}
-
-export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: TalentCardFooterProps) {
-  const [isHireModalOpen, setIsHireModalOpen] = useState(false);
-  const { userDetails } = useAuthStatus();
-
-  const router = null;
 
   return (
     <>
@@ -28,6 +14,7 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: Tale
         <div>
           {profile.hourly_rate ? (
             <div>
+
               <span className="text-zion-slate-light text-xs">Hourly Rate</span>
               <div className="text-white font-bold">${profile.hourly_rate}/hr</div>
             </div>
@@ -37,23 +24,21 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: Tale
               <span className="text-zion-slate-light">{profile.years_experience} years exp.</span>
             </div>
           )}
-        </div>
-        
+
         {/* Action Buttons */}
         <div className="flex gap-2">
           <Button 
             variant="default" 
             size="sm" 
-            onClick = {handleRequestHire,}
+
             className="bg-zion-purple hover:bg-zion-purple-dark text-white"
           >
             Hire
           </Button>
-          
           <Button 
             variant="outline" 
             size="sm" 
-            onClick = {handleViewProfile,}
+
             className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
           >
             View
@@ -61,15 +46,5 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: Tale
           </Button>
         </div>
       </div>
-      
       {/* Hire Request Modal */}
-      <HireRequestModal
-        talent = {profile,}
-        isOpen = {isHireModalOpen,}
-        onClose = {() => setIsHireModalOpen(false),}
-        userDetails = {userProfile,}
-      />
-    </>
-  )
-}
-;
+

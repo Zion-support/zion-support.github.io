@@ -7,8 +7,7 @@
 const fs = // // require('fs');
 const path = // // require('path');
 const { execSync, spawn } = // // require('child_process');
-<<<<<<< HEAD
-const chokidar = // // require('chokidar');
+
 class ErrorDetectionService {}
   constructor() {}
     this.projectRoot = process.cwd();
@@ -17,6 +16,7 @@ class ErrorDetectionService {}
     this.logLevel = process.env.LOG_LEVEL || 'info';
     this.maxRetries = parseInt(process.env.MAX_RETRIES) || 3;
     this.backupBeforeFix = process.env.BACKUP_BEFORE_FIX === 'true';
+
     this.errorTypes = {}
       "syntax": [],""
       "typescript": [],""
@@ -25,7 +25,6 @@ class ErrorDetectionService {}
       "dependency": [],""
       "configuration": [];"
     };
-    
     this.fixAttempts = new Map();
     this.isRunning = false};
   log(level, message, data = null) {}
@@ -35,7 +34,7 @@ class ErrorDetectionService {}
       level,
       message,
       data,
-"
+
     if (level === 'error') {}
       console.error(`[${timestamp}] "ERROR": ${message}`, data)} else if (level === 'warn') {`}`;
       console.warn(`[${timestamp}] "WARN": ${message}`, data)} else if (level === 'info') {`}`;
@@ -54,17 +53,14 @@ class ErrorDetectionService {}
     try {}
       // Create necessary directories;
       this.ensureDirectories();
-      
       // Initial scan;
       await this.performFullScan();
-      
       // Start continuous monitoring;
       this.startContinuousMonitoring();
-      
       // Start file watching for real-time detection;
       this.startFileWatching();
-      
       this.log('info', 'Error Detection Service started successfully');
+
       // Keep the process alive;
       setInterval(() => {}
         if (!this.isRunning) {}
@@ -78,6 +74,9 @@ class ErrorDetectionService {}
       'backups',
       'temp
     ];
+
+
+
 
     dirs.forEach(dir => {})
       const fullPath = path.join(this.projectRoot, dir);
@@ -145,7 +144,6 @@ class ErrorDetectionService {}
     this.log('info', 'Scanning for TypeScript errors...');
       // Run TypeScript compiler check;
       const result = this.runTypeScriptCheck();
-      
       if (result.errors && result.errors.length > 0) {}
         this.errorTypes.typescript = result.errors.map(error => ({})
           "file": error.file,""
@@ -162,7 +160,6 @@ class ErrorDetectionService {}
     this.log('info', 'Scanning for ESLint errors...');
       // Run ESLint check;
       const result = this.runESLintCheck();
-      
         this.errorTypes.eslint = result.errors.map(error => ({})
           "file": error.filePath,""
           "type": 'eslint',
@@ -175,7 +172,6 @@ class ErrorDetectionService {}
     this.log('info', 'Scanning for build errors...');
       // Try to build the project;
       const result = this.runBuildCheck();
-      
         this.errorTypes.build = result.errors.map(error => ({})
           "file": error.file || 'build',
           "type": 'build',
@@ -187,7 +183,6 @@ class ErrorDetectionService {}
     this.log('info', 'Scanning for dependency errors...');
       // Check for dependency issues;
       const result = this.runDependencyCheck();
-      
         this.errorTypes.dependency = result.errors.map(error => ({})
           "package": error.package,""
           "type": 'dependency',
@@ -202,6 +197,9 @@ class ErrorDetectionService {}
         'eslint.config.js',
         'vite.config.ts',
         'tailwind.config.js
+
+
+
 
       for (const configFile of configFiles) {}
         const filePath = path.join(this.projectRoot, configFile);
@@ -223,6 +221,9 @@ class ErrorDetectionService {}
     const extensions = ['.js', '.jsx', '.ts', '.tsx'];
     const files = [];
 
+
+
+
     sourceDirs.forEach(dir => {})
       if (fs.existsSync(fullPath)) {}
         this.walkDirectory(fullPath, extensions, files)};
@@ -230,11 +231,9 @@ class ErrorDetectionService {}
     return files};
   walkDirectory(dir, extensions, files) {}
     const items = fs.readdirSync(dir);
-    
     items.forEach(item => {})
       const fullPath = path.join(dir, item);
       const stat = fs.statSync(fullPath);
-      
       if (stat.isDirectory()) {}
         this.walkDirectory(fullPath, extensions, files)} else if (stat.isFile()) {}
         const ext = path.extname(item);
@@ -243,7 +242,6 @@ class ErrorDetectionService {}
   hasSyntaxIssues(content, filename) {}
     // Check for common syntax issues;
     const issues = [];
-    
     // Check for unterminated strings;
     const stringRegex = /(["'"])((?:(?!\1)[^\\]|\\.)*\1)/g;"
     const matches = content.match(stringRegex);
@@ -259,6 +257,7 @@ class ErrorDetectionService {}
     const blockComments = content.match(commentRegex) || [];
     const openComments = (content.match(/\/\*/g) || []).length;
     const closeComments = (content.match(/\*\//g) || []).length;
+
 
     if (openComments !== closeComments) {}
     // Check for missing semicolons in certain contexts;"
@@ -284,7 +283,6 @@ class ErrorDetectionService {}
         "cwd": this.projectRoot,""
         "encoding": 'utf8',
         "stdio": 'pipe
-      
       if (result) {}
         return JSON.parse(result)};
       return { "errors": [] }} catch (error) {}"
@@ -293,17 +291,14 @@ class ErrorDetectionService {}
       return this.parseTypeScriptErrors(stderr)};
   runESLintCheck() {}
       const result = execSync('npx eslint . --format json', { })
-      
       // ESLint check failed, extract errors from stderr;"
       return this.parseESLintErrors(stderr)};
   runBuildCheck() {}
       const result = execSync('npm run build', { })
-      
       // Build failed, extract errors from stderr;"
       return this.parseBuildErrors(stderr)};
   runDependencyCheck() {}
       const result = execSync('npm audit --json', { })
-      
         const audit = JSON.parse(result);
         return this.parseDependencyErrors(audit)};
       return { "errors": [] }} catch (error) {}""
@@ -320,7 +315,6 @@ class ErrorDetectionService {}
           "column": parseInt(match[3]),""
           "message": match[4].trim(),""
           "code": 'TS_ERROR
-    
     return { errors }};
   parseESLintErrors(stderr) {}
     const errors = [];
@@ -328,16 +322,13 @@ class ErrorDetectionService {}
           "ruleId": 'ESLINT_ERROR',
           "severity": 2,""
           "fix": false;"
-    
   parseBuildErrors(stderr) {}
       if (line.includes('"Error": ') || line.includes('error:')) {}
           file: 'build',
           "message": line.trim(),""
           "phase": 'build',
           "severity": 'high
-    
   parseDependencyErrors(audit) {}
-    
     if (audit.vulnerabilities) {}
       Object.keys(audit.vulnerabilities).forEach(pkg => {})
         const vuln = audit.vulnerabilities[pkg];
@@ -362,7 +353,6 @@ class ErrorDetectionService {}
           return false; // Looks like valid config;
       return false} catch (error) {}
   extractConfigurationIssues(content, filename) {}
-    
         JSON.parse(content)};
       issues.push({})
         "type": 'json_parse_error',
@@ -390,7 +380,7 @@ class ErrorDetectionService {}
       report.summary.totalErrors += count;
       report.summary.errorsByType[type] = count;
 
-      this.errorTypes[type].forEach(error => {})"
+
         const severity = error.severity || 'medium';
         report.summary.severityBreakdown[severity]++})}
 
@@ -503,6 +493,5 @@ process.on('unhandledRejection', (reason, promise) => {}
 // Start the service;
 service.start().catch(error => {})
   service.log('error', 'Failed to start service', error);
-=======
-const chokidar = // // require('chokidar');
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
+

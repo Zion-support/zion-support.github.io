@@ -9,129 +9,7 @@ type Note = {;
   target_type: string; // e.g., 'user' | 'listing';
   target_id: string; // unique identifier for the target;
 import React, { useEffect, useMemo, useState } from 'react';
-<<<<<<< HEAD
 
-export type AdminNotesPanelProps = any;
-
-=======
-  targetType: string; // e.g., 'user' | 'listing'
-export type AdminNotesPanelProps = any;
-origin/cursor/automate-test-improve-and-merge-code-2533
-export type AdminNotesPanelProps = {
-  targetType: string; // e.g., 'user' | 'listing'
-  targetId: string; // unique identifier for the target
-};
-
-type Note = {
-  id: string;
-  target_type: string;
-  target_id: string;
-  text: string;
-  targetType,
-  targetId,;
-}: AdminNotesPanelProps) {  const [isAdmin, setIsAdmin] = useState(true);};
-
-type Note = {
-  id: string
-  targetType: string
-  targetId: string
-  text: string
-  authorId: string
-  createdAt: number
-
-};
-
-
-
-};
-
-export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPanelProps) {;
-
-  authorId: string;
-  createdAt: number;
-};
-
-export default function AdminNotesPanel({
-  targetType,
-  targetId
-}: AdminNotesPanelProps) {
-origin/cursor/automate-test-improve-and-merge-code-2533
-  const [isAdmin, setIsAdmin] = useState(true);
-  const [adminId, setAdminId] = useState('admin-demo');
-  const [notes, setNotes] = useState<Note[]>([]);
-  const [loading, setLoading] = useState(false);
-  const [adding, setAdding] = useState(false);
-  const [text, setText] = useState('');
-  async function fetchNotes() {
-
-  const fetchNotes = useCallback(async () => {
-    try {
-      setLoading(true);
-      const res = await fetch(
-        `/api/admin/notes?targetType=${encodeURIComponent(targetType)}&targetId=${encodeURIComponent(targetId)}`,
-        {
-          headers: { 'X-Admin': isAdmin ? 'true' : 'false' }
-origin/cursor/automate-test-improve-and-merge-code-2533
-        }
-      );
-      if (!res.ok) {
-        alert('Failed to fetch notes');
-        return;
-      }
-
-        method: 'POST',
-        headers: { 'Content-Type': 'application/jsonX-Admin': isAdmin ? 'true' : 'falseX-Admin-User': adminId },
-        body: JSON.stringify({ targetType, targetId, text })});
-      const data = await res.json();
-      setNotes(data.notes || []);
-    } finally {
-      setLoading(false);
-    }
-  }
-origin/cursor/automate-test-improve-and-merge-code-2533
-  }, [targetType, targetId, isAdmin]);
-
-  useEffect(() => {
-    if (isAdmin) {
-      fetchNotes();
-    }
-  }, [isAdmin, targetType, targetId, fetchNotes]);
-
-  async function addNote() {
-    if (!text.trim()) return;
-    setAdding(true);
-    try {
-      const res = await fetch('/api/admin/notes', {
-        method: 'POST'
-        headers: {
-          'Content-Type': 'application/json'
-          'X-Admin': isAdmin ? 'true' : 'false'
-          'X-Admin-User': adminId
-        }
-        body: JSON.stringify({ targetType, targetId, text })
-    } finally {
-      setAdding(false);    }      if (!res.ok) {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'X-Admin': isAdmin ? 'true' : 'false',
-          'X-Admin-User': adminId
-        },
-        body: JSON.stringify({ targetType, targetId, text })
-      });
-      if (!res.ok) {
-origin/cursor/automate-test-improve-and-merge-code-2533
-        alert('Failed to add note');
-        return;
-      }
-      setText('');
-      setAdding(false);    }
-
-
-      await fetchNotes();
-    } finally {
-      setAdding(false);
->>>>>>> origin/main
       await fetchNotes()
     } finally {
       setAdding(false)
@@ -227,11 +105,9 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
   target_type: string; // e.g., 'user' | 'listing';
   target_id: string; // unique identifier for the target;

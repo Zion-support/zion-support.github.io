@@ -13,6 +13,8 @@ const ModernLayout.dynamic = () => ;
     </div>
   );
 }
+;
+
 
 pr-12243
 export default ModernLayout.dynamic;

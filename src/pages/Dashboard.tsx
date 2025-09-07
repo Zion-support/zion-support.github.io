@@ -10,6 +10,7 @@ import Link from 'next/link';
 const CommunityDiscussion = null;
                             variant: "destructive"})
 
+
                         }
                       }}
                     >
@@ -50,6 +51,33 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <h2 className="text-2xl font-bold text-white" data-testid="dashboard-header">Dashboard</h2>
                   <div className="flex items-center gap-2">
                     <NotificationBell />
+                    <Button 
+                      variant="outline" 
+                      className="text-zion-slate-light border-zion-blue-light hover:bg-zion-blue hover:text-white"
+                      onClick={logout}
+                    >;
+                      <LogOut size={16} className="mr-2" />;
+                      Logout;
+                    </Button>;
+                  </div>;
+                </div>;
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4 mb-6">;
+                  <div className="p-4 rounded-lg bg-gradient-to-br from-zion-blue to-zion-purple/30 border border-zion-blue-light">;
+                    <h3 className="text-lg font-medium text-white">Welcome, {userWithExtendedProps?.displayName?.split(' ')[0] || 'User'}</h3>;
+                    <p className="text-zion-slate-light mt-1">Your journey on Zion has just begun!</p>;
+                  </div>;
+                  <div className="p-4 rounded-lg bg-gradient-to-br from-zion-blue to-zion-cyan/30 border border-zion-blue-light">;
+                    <h3 className="text-lg font-medium text-white">Getting Started</h3>;
+                    <p className="text-zion-slate-light mt-1">Complete your profile to unlock all features.</p>;
+                  </div>;
+                </div>;
+                {/* Badges Preview */}
+                <div className="mb-8">
+                  <h3 className="text-lg font-bold text-white mb-4">Your Badges</h3>
+                  <div className="grid grid-cols-3 sm:grid-cols-4 gap-4">
+                    <div className="flex flex-col items-center">
+                      <div className="w-16 h-16 rounded-full bg-gradient-to-br from-zion-purple to-zion-cyan flex items-center justify-center mb-2">
+                        <UserCheck size={24} className="text-white" />
                       Welcome,{' '}
                       {userWithExtendedProps?.displayName?.split(' ')[0] |
                         'User'}
@@ -124,6 +152,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <h3 className="text-lg font-bold text-white mb-4">Community</h3>
                   <CommunityDiscussion />
                 </div>
+
                 {/* User Overview */}
                 <div className="mt-8 space-y-8">
                   <div className="bg-zion-blue-dark rounded-xl p-6">
@@ -139,68 +168,36 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         description="You haven't purchased anything yet."
                         action={{ text: 'Visit Marketplace', href: '/marketplace' }}
                         className="border-none bg-transparent text-center";
+                      />;
+                    ) : (;
+                      <ul className="space-y-1">;
+                        {orders.slice(0, 3).map(o => (;
+                          <li key={o.orderId} className="flex justify-between">;
+                            <span>#{o.orderId}</span>;
+                            <Link href={`/orders/${o.orderId}`} className="text-zion-purple underline">View</Link>;
+                          </li>;
 
 
 
                         ))}
-                      </ul>
+                      </ul>;
                     )}
-
-                        className='text-zion-purple underline'>;
-                        className='border - none bg - transparent text - center';
-                      />) : (
-                      <ul className='space - y-1'>;
-                        {orders.slice (0, 3).map (object => (
-                          <li key={o.order_id} className='flex justify - between'>;
-                            <span>#{o.order_id}</span>;
-                            <Link;
-                              href={`/orders/${o.order_id}`}
-                              className='text - zion - purple underline';
-                            >;
-                              View;
-                            </Link>;
-                          </li>))}
-                      </ul>)}
-                    <div className='mt - 2 text - right'>;
-                      <Link;
-                        href='/orders';
-                        className='text - zion - purple underline';
-                      >;
-                        View all;
-                      </Link>;
-
                     <div className="mt-2 text-right">;
                       <Link href="/orders" className="text-zion-purple underline">View all</Link>;
-
                     </div>;
                   </div>;
                   <div className='bg - zion - blue - dark rounded - xl p - 6'>;
                     <h3 className='text - lg font - bold text - white mb - 4 flex items - center'>;
                       <Heart className='mr - 2' size={18} /> Wishlist;
                     </h3>;
-                    {favorites.length === 0 ? (
-                      <p className='text - zion - slate - light'>No items saved.</p>) : (
-                      <ul className='space - y-1'>;
-                        {favorites.slice (0, 3).map (function => (
-                          <li key={f.item_id}>{f.item_id}</li>))}
-                      </ul>)}
-                    <div className='mt - 2 text - right'>;
-                      <Link;
-                        href='/wishlist';
-                        className='text - zion - purple underline';
-                      >;
-                        View all;
-                      </Link>;
-                    </div>;
-                  </div>;
-
+                    {favorites.length === 0 ? (;
+                      <p className="text-zion-slate-light">No items saved.</p>;
+                    ) : (;
                       <ul className="space-y-1">;
                         {favorites.slice(0, 3).map(f => (;
                           <li key={f.item_id}>{f.item_id}</li>;
-
-
                         ))}
-                      </ul>
+                      </ul>;
                     )}
                     <div className='mt-2 text-right'>
                       <Link
@@ -282,6 +279,7 @@ return (<> <Header /> <div className="min-h-screen bg-zion-blue"> <div className
     </>;
   );
 }
+;
 import React from 'react';
 
 const Dashboard: React.FC = () => {

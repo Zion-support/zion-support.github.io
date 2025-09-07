@@ -101,7 +101,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =  // Run the automation guardian
   logStep('automation:guardian', () => runNode('automation/automation-guardian-10min && 10min.cjs')),
 
-
   logStep('automation:guardian', () => runNode('automation/automation-guardian-10min.cjs'))
   // Attempt to push any changes
 
@@ -224,47 +223,5 @@ function log_step() {
   // Attempt to push any changes
   logStep('git:sync', () => runNode('automation/advanced-git-sync.cjs'));
   return { statusCode: 200, body: logs.join('\n') }
-<<<<<<< HEAD
 
-};
-=======
-};
-origin/cursor/automate-test-improve-and-merge-code-2533
-  return { status: res.status || 0, stdout: res.stdout || , stderr: res.stderr ||  }
-exports.config = {
-exports.handler = async () => {
-  /**
- * log_step - Function description;
-function log_step() {`;
-    logs.push (`\number=== ${name} ===`),
-    const { status, stdout, stderr } = fn (),
-    if (logs.push (stdout), ) {
-  $2;
-    if (logs.push (stderr), ) {
-}`;
-    logs.push (`exit=${status}`),
-  // Generate sitemap for crawling;
-  log_step ('sitemap:generate', () => run_node ('scripts / generate - sitemap.js')),
-  // Generate sitemap for crawling;'
-  log_step ('sitemap:generate', () => run_node ('scripts / generate - sitemap.js')),'
-  // Build search index if available;
-  // TODO: Implement
-    log_step ('search:index', () => run_node ('scripts / generate - search - index.js'));
-    logs.push (`Search index generation skipped: ${String (error)}`);
-  // Commit and push;
-  log_step ('git:sync', () => run_node ('automation / git - sync.cjs')),
-  log_step ('automation:guardian', () => run_node ('automation / automation - guardian - 10min.cjs')),
-  // Attempt to push any changes;
-  log_step ('git:sync', () => run_node ('automation / advanced - git - sync.cjs')),
-  return { status_code: 200, body: logs.join ('\n') }`;
-pr-12325
-  }
-  // Commit and push;'
-  log_step ('git:sync', () => run_node ('automation / git - sync.cjs')),'
-=  // Run the automation guardian;'
-  log_step ('automation:guardian', () => run_node ('automation / automation - guardian - 10min.cjs')),'
-  // Attempt to push any changes;'
-  log_step ('git:sync', () => run_node ('automation / advanced - git - sync.cjs')),''
-  return { status_code: 200, body: logs.join ('\n') }''
->>>>>>> origin/main
 

@@ -42,14 +42,5 @@ reporter: [ ['list'], ['json', {
   //     name: webkit',  //     use: { ...devices['Desktop Safari'],}
 },  //   };
   // ]
-<<<<<<< HEAD
 
-});
-=======
-});
-  //     name: webkit',  //     use: { ...devices['Desktop Safari'],}
-},  //   }
-  // ]
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/main
 

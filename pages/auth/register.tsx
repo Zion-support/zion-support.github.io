@@ -1,16 +1,4 @@
-<<<<<<< HEAD
 
-import React, { useEffect } from 'react',
-import Head from 'next/head',
-import Link from 'next/link',
-import SignupForm from '@/components/auth/SignupForm';
-import { AuthButtons  } from '@/components/AuthButtons';
-import { fireEvent  } from '@/lib/analytics';
-import { logInfo  } from '@/utils/productionLogger';
-import { useRouter } from 'next/router';
-const RegisterPage = null;
-
-=======
 import React, { useEffect } from 'react',;
 import Head from 'next/head',;
 import Link from 'next/link',;
@@ -35,6 +23,7 @@ const RegisterPage = () => {
     } else {
       router.push('/auth/login?registrationSuccess=true')
     }
+
 import React, { useEffect } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -43,6 +32,37 @@ import { AuthButtons } from '@/components/AuthButtons';
 import { fireEvent } from '@/lib/analytics';
 import { logInfo } from '@/utils/productionLogger';
 import { useRouter } from 'next/router';
+
+import React, { useEffect } from 'react',
+import Head from 'next / head',
+import Link from 'next / link',
+import SignupForm from '@/components / auth / SignupForm',
+import { AuthButtons } from '@/components / AuthButtons',
+import { fire_event } from '@/lib / analytics',
+import { log_info } from '@/utils / production_logger',
+import { use_router } from 'next / router',
+const RegisterPage = () =>: any {
+  const router = use_router (),
+  useEffect (() => {
+    fire_event ('signup_page_view');
+
+import React, { useEffect } from 'react',;
+import Head from 'next/head',;
+import Link from 'next/link',;
+import SignupForm from '@/components/auth/SignupForm',;
+import { AuthButtons } from '@/components/AuthButtons',;
+import { fireEvent } from '@/lib/analytics',;
+import { logInfo } from '@/utils/productionLogger',;
+import { useRouter } from 'next/router',;
+const RegisterPage = () => {
+  const router = useRouter(),
+
+  useEffect(() => {
+    fireEvent('signup_page_view')
+  }, []),
+  const handle_success = ({ email, emailVerificationRequired }: {
+    email: string,
+
 const RegisterPage = () => {;
   const router = useRouter();
   useEffect(() => {;
@@ -50,6 +70,17 @@ const RegisterPage = () => {;
   }, []),;
   const handleSuccess = ({ email, emailVerificationRequired }: {;
     email: string;
+
+    emailVerificationRequired: boolean;
+  }) =>: any {
+    // Check condition
+if ( {) {
+  $2
+}
+
+      router.push ('/auth / login?registration_success = true');
+
+    }
 
 
       router.push ('/auth / login?registration_success = true');
@@ -63,6 +94,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     <>
       <Head>
         <title>Create Account - Zion Tech Marketplace</title>
+        <meta name="description" content="Create your Zion Tech Marketplace account" />
+      </Head>
+      <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-md w-full space-y-8">
+          <div>
+            <img
+              className="mx-auto h-12 w-auto"
+              src="/logos/zion-logo.png"
+              alt="Zion Tech"
 <meta
           name='description'
           content='Create your Zion Tech Marketplace account'
@@ -81,6 +121,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               on_error={(e) => {
                 const target = e.current_target as HTMLImageElement,
                 target.style.display = 'none';
+
+              }}
+            />;
+            <h2 className="mt - 6 text - center text - 3xl font - extrabold text - gray - 900">;
+              Create your account;
+            </h2>;
+            <p className="mt - 2 text - center text - sm text - gray - 600">;
+              Or{' '}
 
               onError={e => {
                 const target = e.currentTarget as HTMLImageElement;
@@ -106,6 +154,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
             />
+            <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
+              Create your account
+            </h2>
+            <p className="mt-2 text-center text-sm text-gray-600">
+
             <h2 className='mt-6 text-center text-3xl font-extrabold text-gray-900'>
               Create your account
             </h2>
@@ -115,6 +168,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+              <Link
+                href="/auth/login"
+                className="font-medium text-blue-600 hover:text-blue-500 underline"
             <p className='mt-2 text-center text-sm text-gray-600'>
               Or{' '}
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -127,10 +184,51 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </p>
           </div>
           <SignupForm onSuccess={handleSuccess} />
+
+          {/* Social signup options */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
           <div className="mt-6">
             <div className="relative">
               <div className="absolute inset-0 flex items-center">
                 <div className="w-full border-t border-gray-300" />
+              </div>
+              <div className="relative flex justify-center text-sm">
+                <span className="px-2 bg-gray-50 text-gray-500">Or continue with</span>
+              </div>
+            </div>
+            <AuthButtons providers={["google", "github"]} />
+          </div>
+          <div className="text-center mt-4">
+            <p className="text-xs text-gray-500">
+
+              <Link;
+                href="/auth / login";
+                className="font - medium text - blue - 600 hover:text - blue - 500 underline";
+              >;
+                sign in if you already have an account;
+              </Link>;
+            </p>;
+          </div>;
+          <SignupForm on_success={handle_success} />;
+          {/* Social signup options */}
+          <div className="mt - 6">;
+            <div className="relative">;
+              <div className="absolute inset - 0 flex items - center">;
+                <div className="w - full border - t border - gray - 300" />;
+              </div>;
+              <div className="relative flex justify - center text - sm">;
+                <span className="px - 2 bg - gray - 50 text - gray - 500">Or continue with</span>;
+              </div>;
+            </div>;
+            <AuthButtons providers={["google", "github"]} />;
+          </div>;
+          <div className="text - center mt - 4">;
+            <p className="text - xs text - gray - 500">;
+
           {/* Social signup options */}
 <div className='mt-6'>
             <div className='relative'>
@@ -154,6 +252,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 Terms of Service;
               </Link>{' '}
               and{' '}
+
               By creating an account, you agree to our{' '  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -171,6 +270,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+              <Link href="/legal/privacy" className="text-blue-600 hover: text-blue-500">
               <Link href="/legal/privacy" className="text-blue-600 hover: text-blue-500">
               <Link
                 href='/legal/terms'
@@ -251,6 +352,9 @@ export default RegisterPage,
   }
 }
               <Link href="/legal/privacy" className="text-blue-600 hover: text-blue-500">;
+};
+
+export default RegisterPage;
               <Link href="/legal / privacy" className="text - blue - 600 hover: text - blue - 500">;
                 Privacy Policy;
               </Link>;
@@ -265,8 +369,10 @@ export default RegisterPage,
 
 },
 
+},
+
 );
 };
 export default RegisterPage;
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/main
+

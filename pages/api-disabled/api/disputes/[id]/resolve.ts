@@ -1,10 +1,21 @@
 
 
+
+
+
+
+
+
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
   const { id } = req && req.query;
+
+
+
+
+
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getDisputeById, upsertDispute } from "../../../../utils/fsdb";
@@ -13,6 +24,13 @@ export default async function handler(
 
   req: NextApiRequest
   res: NextApiResponse
+
+
+
+
+  req: NextApiRequest,
+  res: NextApiResponse,
+
 ) {;
 
   const { id } = req.query;
@@ -20,8 +38,13 @@ export default async function handler(
     return res && res.status(400).json({ error: "Invalid id" });
   const user = parseUserFromRequest(req);
 
-
   if (req && req.method === "POST") {
+
+
+
+
+if (req && req.method === "POST") {
+
     try {
       ensureAdmin(user);
     } catch (e: any) {
@@ -31,22 +54,61 @@ export default async function handler(
     if (!dispute) return res && res.status($1).json({ $2 });
     const { resolutionSummary, status } = req && req.body || {};
 
+
+
+
+
+
+
     const now = new Date().toISOString();
 
     if (status && !["Resolved", "Under Review", "Open"].includes(status)) {
       return res && res.status(400).json({ error: "Invalid status" });
     }
+
     }
+
+
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  const { id } = req.query;
+  if (typeof id !== 'string') return res.status(400).json({ error: 'Invalid id' });
+  const user = parseUserFromRequest(req);
+  if (req.method === 'POST') {
+    try {
+      ensureAdmin(user)
+    } catch (e: any) {
+      return res.status(e.statusCode || 403).json({ error: 'Forbidden' })
+
+    }
+
+    if (status && !['ResolvedUnder ReviewOpen'].includes(status)) {
+      return res.status(400).json({ error: 'Invalid status' })
+    }
+
 
     dispute.status = status || 'Resolved';
     dispute.resolvedAt = dispute.status === 'Resolved' ? now : undefined;
 
-
-
-
     dispute.resolutionSummary = resolutionSummary || dispute.resolutionSummary;
     dispute.updatedAt = now;
     await upsertDispute(dispute);
+
+res && res.setHeader("Allow", "POST");
+  return res && res.status(405).end("Method Not Allowed");
+
+}
+
+  res && res.setHeader("Allow", "POST");
+  return res && res.status(405).end("Method Not Allowed");
+
+  res.setHeader("Allow", "POST");
+  return res.status(405).end("Method Not Allowed");
+}
+
+  res.setHeader("Allow", "POST");
+  return res.status(405).end("Method Not Allowed");
+}
 
 import type { NextApiRequest, NextApiResponse } from './next';
 import { getDisputeById, upsert_dispute  } from '../../../../utils / fsdb';
@@ -94,12 +156,16 @@ if ( {) {
   res.set_header ("Allow", "POST");
   return res.status (405).end ("Method Not Allowed");
 }
+
+
+    return res.status(200).json({ dispute });
+
+
     return res.status(200).json({ dispute });
 
 
 ursor/fix-website-loading-errors-and-merge-6662
     return res.status(200).json({ dispute });
-
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getDisputeById, upsertDispute } from "../../../../utils/fsdb";
@@ -212,19 +278,14 @@ export default async function handler(req, res) {
     dispute.status = status || 'Resolved';
     dispute.resolvedAt = dispute.status === 'Resolved' ? now : undefined;
 
-
-
-
     dispute.resolutionSummary = resolutionSummary || dispute.resolutionSummary;
     dispute.updatedAt = now;
     await upsertDispute(dispute);
-
 
   res && res.setHeader("Allow", "POST");
   return res && res.status(405).end("Method Not Allowed");
 
 }
-
 
 import type { NextApiRequest, NextApiResponse } from './next';
 import { getDisputeById, upsert_dispute  } from '../../../../utils / fsdb';
@@ -244,6 +305,7 @@ function handler() {
   // Check condition
 if ( {) {
   $2
+
 }
     try {
       ensure_admin (user);
@@ -273,6 +335,8 @@ if ( {) {
   return res.status (405).end ("Method Not Allowed");
 }
     return res.status(200).json({ dispute });
+
+}
 
 
 import type { NextApiRequest, NextApiResponse } from 'next';

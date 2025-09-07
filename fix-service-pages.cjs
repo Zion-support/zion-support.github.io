@@ -14,17 +14,14 @@ function fixServicePage(content, filePath) {
     const titleMatch = fixed.match(/title:\s*['"`]([^'"`]+)['"`]/);
     const descMatch = fixed.match(/description:\s*['"`]([^'"`]+)['"`]/);
     const keywordsMatch = fixed.match(/keywords:\s*['"`]([^'"`]+)['"`]/);
-    
     if (titleMatch) {
       const title = titleMatch[1];
       const description = descMatch ? descMatch[1] : 'Professional services for your business needs.';
       const keywords = keywordsMatch ? keywordsMatch[1] : 'services, business, technology';
-      
       // Remove the malformed metadata lines
       fixed = fixed.replace(/title:\s*['"`][^'"`]+['"`][,\s]*/g, '');
       fixed = fixed.replace(/description:\s*['"`][^'"`]+['"`][,\s]*/g, '');
       fixed = fixed.replace(/keywords:\s*['"`][^'"`]+['"`][,\s]*/g, '');
-      
       // Add proper metadata export at the top
       const metadataExport = `export const metadata = {
   title: '${title}',
@@ -33,7 +30,6 @@ function fixServicePage(content, filePath) {
 };
 
 `;
-      
       // Insert after imports
       const importEnd = fixed.lastIndexOf('import');
       if (importEnd !== -1) {
@@ -67,10 +63,9 @@ function fixServicePage(content, filePath) {
   }
 
   // Fix merge conflict markers
-  if (fixed.includes('<<<<<<<') || fixed.includes('=======') || fixed.includes('>>>>>>>')) {
+  if (fixed.includes('<<<<<<<') || fixed.includes('') || fixed.includes('>>>>>>>')) {
     // Remove merge conflict markers and keep the HEAD version
-    fixed = fixed.replace(/<<<<<<< HEAD\n?/g, '');
-    fixed = fixed.replace(/=======.*?>>>>>>> [^\n]+\n?/gs, '');
+    fixed = fixed.replace(/
     changes++;
   }
 
@@ -112,7 +107,6 @@ function fixServicePage(content, filePath) {
 function processServicePages() {
   const servicesDir = path.join(__dirname, 'app', 'services');
   const files = [];
-  
   function findServicePages(dir) {
     const items = fs.readdirSync(dir);
     for (const item of items) {
@@ -125,19 +119,14 @@ function processServicePages() {
       }
     }
   }
-  
   findServicePages(servicesDir);
-  
   console.log(`Found ${files.length} service pages to process...`);
-  
   let totalChanges = 0;
   let processedFiles = 0;
-  
   for (const filePath of files) {
     try {
       const content = fs.readFileSync(filePath, 'utf8');
       const result = fixServicePage(content, filePath);
-      
       if (result.changes > 0) {
         fs.writeFileSync(filePath, result.content);
         console.log(`Fixed ${result.changes} issues in ${path.relative(__dirname, filePath)}`);
@@ -148,7 +137,6 @@ function processServicePages() {
       console.error(`Error processing ${filePath}:`, error.message);
     }
   }
-  
   console.log(`\nProcessed ${processedFiles} files with ${totalChanges} total changes.`);
 }
 

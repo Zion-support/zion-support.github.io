@@ -30,13 +30,7 @@ function cleanContent(content) {}
     .replace(/([)}>])\s*"\s*(?=\s*[, ")}\]"]|\s*$)/g, "$1");
     // "JSX": >"< to ><;"
   // In-line fixes across the whole file;
-<<<<<<< HEAD
-    // Comma followed by stray apostrophe (e.g., Shield,"");""
-=======
-  out = out;"
-    // Comma followed by stray apostrophe (e.g., Shield);
-    .replace(/,\s*"/g, ",");"
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
     // Remove apostrophe after closing tokens if followed by punctuation or end;"
     .replace(/([)}>])\s*"\s*(?=\s*[", ")}\]"]|\s*$)/g, "$1");
     // "JSX": >"< to ><;
@@ -61,16 +55,9 @@ function $1() {}
   const original = fs.readFileSync(f, "utf8");"
       const updated = cleanContent(original);
       if (updated !== original) {}"
-<<<<<<< HEAD
-  fs.writeFileSync(f, updated, "utf8');
-=======
-  fs.writeFileSync(f, updated, "utf8);
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
         changed += 1};
     } catch (e) {}
-  
-  
-  
   // ignore file-level errors} catch (e) {}
   // ignore file-level errors};
   console.log(`Cleaned ${changed} files.`)};

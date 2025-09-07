@@ -1,16 +1,14 @@
-<<<<<<< HEAD
 
-import React, { useEffect, useState } from 'react';
-
-=======
-import React, { useEffect, useState } from 'react';
->>>>>>> origin/main
 export default function PrivacySettingsPage() {
 
   const [userId, setUserId] = useState('')
   const [optOut, setOptOut] = useState(false)
   const [loading, setLoading] = useState(false)
   const [message, setMessage] = useState('')
+import React, { useEffect, useState } from 'react',
+import React, { useEffect, useState } from 'react',;
+;
+import React, { useEffect, useState } from 'react',
 import React, { useEffect, useState } from 'react',;
 import React, { useEffect, useState } from 'react',;
 ;
@@ -30,6 +28,33 @@ export default function PrivacySettingsPage() {
     if (res.ok) setOptOut(!!json.monitoringContentAnalysisOptOut);
     else setMessage(json.error || 'Failed to load');
     setLoading(false)
+
+import React, { useEffect, useState } from 'react',
+import React, { useEffect, useState } from 'react',;
+;
+import React, { useEffect, useState } from 'react',
+
+export default function PrivacySettingsPage() {
+  const [userId, setUserId] = useState(''),
+  const [optOut, setOptOut] = useState(false),
+  const [loading, setLoading] = useState(false),
+  const [message, setMessage] = useState(''),
+  const load = async () => {
+
+    if (!userId) return;
+    setLoading(true);
+    setMessage('');
+    const res = await fetch(`/api/fraud/settings/opt-out?userId=${encodeURIComponent(userId)}`);
+    const json = await res.json();
+    if (res.ok) setOptOut(!!json.monitoringContentAnalysisOptOut);
+    else setMessage(json.error || 'Failed to load');
+    setLoading(false)
+  };
+import React, { useEffect, useState } from 'react';
+export default function PrivacySettingsPage() {
+
+  },
+
     if (!userId) return;
     setLoading(true);
     setMessage('');
@@ -56,6 +81,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     if (res.ok) setMessage('Saved');
     else setMessage(json.error || 'Save failed');
     setLoading(false)
+  };
+
+  useEffect(() => {
+    const savedUser = localStorage.getItem('user-id');
+    if (savedUser) setUserId(savedUser)
+  }, []);
+
   const onSaveUser = () => {
     localStorage.setItem('user-id', userId);
 
@@ -63,6 +95,23 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 
   },
+  }
+
+  },
+
+  useEffect(() => {
+    const savedUser = localStorage.getItem('user-id')
+    if (savedUser) setUserId(savedUser)
+
+  }, []),
+
+  const onSaveUser = () => {
+    localStorage.setItem('user-id', userId)
+    load()
+
+  },
+
+  return (
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
 body: JSON.stringify({ userId, optOut }),
@@ -162,6 +211,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 }
 
+}
+
+import React, { useEffect, useState } from 'react',
 import React, { useEffect, useState } from 'react',;
 ;
 export default /**

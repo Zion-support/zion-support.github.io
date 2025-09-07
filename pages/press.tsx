@@ -1,9 +1,4 @@
-<<<<<<< HEAD
 
-import React from 'react';
-import SEO from '../components/SEO';
-
-=======
 import * as React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -75,6 +70,10 @@ const contactInfo = {
   email: "kleber@ziontechgroup.com",
   address: "364 E Main St STE 1008 Middletown DE 19709"
 };
+
+
+
+}
 
 export default function Press() {
   const pressReleases = [
@@ -172,7 +171,7 @@ origin/cursor/automate-test-improve-and-merge-code-20a4
 
 import React from 'react';
 import SEO from '../components/SEO';
->>>>>>> origin/main
+
 export default function PressPage() {
 	return (
 		<>
@@ -184,12 +183,18 @@ export default function PressPage() {
 		</>
 	)
 }
+
+
+
+
+
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 ;
+
 
 ursor/fix-website-loading-errors-and-merge-6662
   return (
@@ -211,7 +216,6 @@ ursor/fix-website-loading-errors-and-merge-6662
         <meta name="description" content="Latest news, press releases, and media coverage about Zion Tech Group. Stay updated on our innovations and achievements." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-      
       <main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
         {/* Hero Section */}
         <section className="relative overflow-hidden bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600">
@@ -249,7 +253,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                 Official announcements and company news
               </p>
             </div>
-            
             <div className="space-y-8">
               {pressReleases.map((release, index) => (
                 <div key={index} className="bg-white rounded-xl shadow-lg p-8 hover: shadow-xl transition-shadow">
@@ -302,7 +305,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                 What the media is saying about us
               </p>
             </div>
-            
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {mediaCoverage.map((coverage, index) => (
                 <div key={index} className="bg-gray-50 rounded-xl p-6 hover: shadow-lg transition-shadow">
@@ -338,7 +340,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                 Industry recognition for our innovation and impact
               </p>
             </div>
-            
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {awards.map((award, index) => (
                 <div key={index} className="bg-white rounded-xl shadow-lg p-6 text-center hover: shadow-xl transition-shadow">
@@ -369,7 +370,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                 Perspectives from our leadership team
               </p>
             </div>
-            
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {teamQuotes.map((member, index) => (
                 <div key={index} className="bg-gray-50 rounded-xl p-8">

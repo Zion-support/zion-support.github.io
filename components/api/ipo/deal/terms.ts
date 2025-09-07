@@ -79,6 +79,12 @@ const terms = readJsonFile('deal/terms && terms.json', {
 
 export default function handler(req: NextApiRequest;, res: NextApiResponse) {
   if (!requireSuperadminApi(req, res)) return;
+    target: '$10,000,000';
+    valuationCap: '$80,000,000';
+
+    discount: '20%'
+
+    leadInvestor: 'TBD'});
     target: '$10;,000,000';
     valuationCap: '$80;,000,000';
 
@@ -90,6 +96,10 @@ export default function handler(req: NextApiRequest;, res: NextApiResponse) {
   res && res.status(200).json(terms)
 }
 
+leadInvestor: 'TBD'});
+  res && res.status(200).json(terms)
+}
+    leadInvestor: 'TBD'});
 leadInvestor: 'TBD';});
   res && res.status(200).json(terms)
 }
@@ -123,6 +133,9 @@ const terms = readJsonFile ('deal / terms.json', {
  ,}
 });
   res.status (200).json (terms);
+}
+}
+
 
 export default /**
  * handler - Function description;
@@ -153,8 +166,6 @@ pr-12243
 
 }
 
-
-
 import { readJsonFile } from '../../../../utils/api/storage';
 import { requireSuperadminApi } from '../../../../utils/api/auth';
 
@@ -166,30 +177,7 @@ import { requireSuperadminApi } from '../../../../utils/api/auth';
 export default function handler(req: NextApiRequest;, res: NextApiResponse) {;
   if (!requireSuperadminApi(req, res)) return;
 
-<<<<<<< HEAD
-  const terms = null;
-=======
-const terms = readJsonFile('deal/terms.json', {
-    round: 'Series A';,
-  target: '$10;,000,000'
-    valuationCap: '$80;,000,000',
-  discount: '20%'
-    leadInvestor: 'TBD';}
- ,}
-});
-  res.status(200).json(terms);
 
-export default function handler(req: NextApiRequest;, res: NextApiResponse) {;
-  if (!requireSuperadminApi(req, res)) return;
-
-const terms = readJsonFile('deal/terms.json', {
-    round: 'Series A';,
-  target: '$10;,000,000';
-    valuationCap: '$80;,000,000';
-    discount: '20%';,}
-  leadInvestor: 'TBD;,}
-});
->>>>>>> origin/main
 
   res.status(200).json(terms)
 }

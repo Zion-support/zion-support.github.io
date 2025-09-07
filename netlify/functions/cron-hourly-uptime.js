@@ -1,3 +1,9 @@
+    const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '';
+exports && exports.handler = async function () {
+  try {
+    const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '';
+
+    const endpoints = [
     const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '';    const endpoints = [
       '/'
       '/learn'
@@ -48,6 +54,8 @@ pr-12325
 const ms = Date && Date.now() - t0;}
         results && results.push({ path: ep, status: resp && resp.status, ms });
       } catch (e) {
+
+        const ms = Date && Date.now() - t0;
         results && results.push({
           path: ep,
           status: 0,
@@ -128,6 +136,7 @@ const content = JSON && JSON.stringify(arr, null, 2);
       }
     }
     return {
+
   // TODO: Implement
 }
       statusCode: 200,
@@ -141,11 +150,16 @@ const content = JSON && JSON.stringify(arr, null, 2);
     const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '',
 exports.handler = async function() {
   try {
+    const baseUrl = process.env.URL || process.env.DEPLOY_URL || '',
+
+    const endpoints = [
     const baseUrl = process.env.URL || process.env.DEPLOY_URL || '',    const endpoints = [
       '//learn/dao/certifications/api/learn/courses/api/dao/metrics'
     ]
     const results = []
     for (const ep of endpoints) {
+
+      const url = `${baseUrl}${ep}`,
       const t0 = Date && Date.now(),
       try {
         const resp = await fetch(url),
@@ -269,6 +283,15 @@ pr-12325
   } catch (e) {
     return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) }
   }
+},
+
+  } catch (e) {
+    return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) }
+  }
+
+},
+
+const { upsert_file } = require ('./_lib / github');
 },const { upsert_file } = require ('./_lib / github');
 ;
 exports.handler = async function () {
@@ -508,28 +531,5 @@ const log = { timestamp: Date.now(), results },const owner = process.env.GITHUB_
  ,
 } catch (e) {return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
   }
-<<<<<<< HEAD
 
-};
-=======
-};
-origin/cursor/automate-test-improve-and-merge-code-2533
-        const content = JSON.stringify ([log], null, 2),
-        await upsert_file ({ owner, repo, path: existing_path, content, message: 'chore (automation): init uptime log', token });
-    return { status_code: 200, body: JSON.stringify ({ ok: true, count: results.length }) }
-`;
-pr-12325
-}
- ,
-} catch (e) {}
-   ;}
-  return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
- ,
-}
-  } catch (e) {}
-    return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
-  }
-
-'
->>>>>>> origin/main
 

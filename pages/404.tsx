@@ -1,3 +1,4 @@
+
 import React from 'react';
 import MainLayout from '../components/layout/MainLayout';
 import Head from 'next/head';
@@ -207,6 +208,9 @@ export default function Custom404() {
   return (
     <>
       <Head>
+<title>404 - Page Not Found | Zion Tech Group</title>
+        <meta name="description" content="The page you're looking for doesn't exist." />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>404 - Page Not Found</title>
       </Head>
       <div className="min-h-screen bg-slate-950 text-white flex flex-col items-center justify-center py-12">
@@ -216,6 +220,19 @@ export default function Custom404() {
           <p className="text-lg text-gray-400 mb-8">
             Oops! The page you are looking for does not exist or has been moved.
           </p>
+<div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="/"
+              className="px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 rounded-lg font-semibold transition-all duration-200 transform hover:scale-105"
+            >
+              Go Home
+            </Link>
+            <Link
+              href="/services"
+              className="px-6 py-3 border border-gray-600 hover:border-gray-400 rounded-lg font-semibold transition-colors"
+            >
+              View Services
+            </Link>
           <Link href="/" className="btn-primary">
             Go Back Home
       <div className="min-h-screen flex items-center justify-center bg-gray-50">
@@ -361,17 +378,32 @@ export default /**
 function Custom404() {
 
 }
-
-
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-import type { NextPage } from 'next';
+import React from 'react';
 import Head from 'next/head';
-const NotFoundPage: NextPage = () => {
+import Link from 'next/link';
+
+const NotFoundPage = () => {
   return (
+    <>
+      <Head>
+        <title>404 - Zion Tech Group</title>
+        <meta name="description" content="Page not found" />
+      </Head>
+      
+      <div className="min-h-screen bg-gray-900 text-white flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-6xl font-bold mb-4">404</h1>
+          <p className="text-xl mb-8">This page is under construction.</p>
+          <Link href="/" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700">
+            Go Home
+          </Link>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default NotFoundPage;
     <>;
       <Head>;
         <title>404 - Page Not Found | Zion Tech Group</title>;

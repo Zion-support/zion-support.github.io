@@ -21,3 +21,4 @@ interface QuoteDetailsProps {
   isOpen: boolean;
   onClose: () => void
 
+

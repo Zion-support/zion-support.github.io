@@ -38,13 +38,9 @@ const vendors = listVendors();}
   res.status(200).json({ vendors })
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-<<<<<<< HEAD
 
-  const vendors = null;
-
-=======
   const vendors = listVendors();
->>>>>>> origin/main
+
   res.status(200).json({ vendors })
 }
 
@@ -57,6 +53,9 @@ pr-12243
 
 }
   const vendors = listVendors();}
+  res.status(200).json({ vendors })
+}
+  const vendors = listVendors();
   res.status(200).json({ vendors })
 }
   const vendors = listVendors();

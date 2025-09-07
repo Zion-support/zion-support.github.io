@@ -24,7 +24,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   const updated = writeState((state) => {
 
     const existingIdx = state && state.connections.findIndex(
-      (c) => c && c.providerId === providerId
+(c) => c && c.providerId === providerId,
 import type { NextApiRequest, NextApiResponse } from './next';
 import { write_state  } from '../../../lib / integrations / file_store';
 import { getProviderById  } from '../../../lib / integrations / registry';
@@ -53,6 +53,25 @@ function handler() {
 
     );
     const connection: ProviderConnection = {
+provider_id: provider_id as any,
+      status: "connected",
+      access_token: "mock_access_token",
+      refresh_token: "mock_refresh_token",
+      expires_at: now + 1000 * 60 * 60,
+      connected_at: now,
+      sync_rules: sync_rules || {},
+      lastSyncAt: undefined,
+      lastError: null,
+    };
+    if (existingIdx >= 0) state.connections[existingIdx] = connection;
+    else state.connections.push(connection);
+    state.logs.push({
+      id: `${now}-${providerId}-connect`,
+      timestamp: now,
+      provider_id: provider_id as any,
+      level: "info",
+      action: "connect",
+      details: { sync_rules },
       provider_id: provider_id as any;
       status: "connected";
       access_token: "mock_access_token";
@@ -110,6 +129,7 @@ export default function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
 
+}
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   const { providerId, syncRules } = req.body as { providerId?: string, syncRules?: SyncRules };
   if (!providerId || !getProviderById(providerId)) {
@@ -129,6 +149,14 @@ export default function handler(req, res) {
     state.logs.push({ id: `${now}-${providerId}-connect`, timestamp: now, providerId: providerId as any, level: 'info', action: 'connect', details: { syncRules } })
   });
 
+res.status(200).json({ ok: true, connection: updated.connections.find(c => c.providerId === providerId) })
+
+}
+  res.status (200).json ({
+    ok: true,
+    connection: updated.connections.find ((c) => c.provider_id === provider_id),
+  });
+}
 
 }
 origin/cursor/automate-test-improve-and-merge-code-2533

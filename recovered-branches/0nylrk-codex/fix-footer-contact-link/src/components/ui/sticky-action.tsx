@@ -1,28 +1,4 @@
-<<<<<<< HEAD
 
-
-import React, { useEffect, useState } from "react",
-import { cn } from "@/lib/utils";
-import { motion, AnimatePresence } from "framer-motion";
-interface StickyActionProps {
-  className?: string;
-  children: React.ReactNode;
-
-  showAfterScroll?: number;
-  position?: "bottom" | "top"
-=======
-interface StickyActionProps {
-
-interface StickyActionProps {
-
-import React, { useEffect, useState } from "react";
-import {cn} from "@/lib/utils";
-import {motion, AnimatePresence} from "framer-motion";
-
-
-interface StickyActionProps {
-  // TODO: Implement
->>>>>>> origin/main
 }
   // TODO: Implement
 import React, { useEffect, useState } from "react";""
@@ -33,47 +9,48 @@ interface StickyActionProps {;
   className?: string;
   children: React && React.ReactNode,;
 
-  showAfterScroll?: number;  children;
+  showAfterScroll?: number;
+  position?: "bottom" | "top";
+}
 
-<<<<<<< HEAD
+export function StickyAction(): any ({;
+
+showAfterScroll?: number;
+
+import React, { useEffect, useState } from "react",
+import { cn } from "@/lib/utils";
+import { motion, AnimatePresence } from "framer-motion";
+import React, { useEffect, useState } from "react";
+import {cn} from "@/lib/utils";
+import {motion, AnimatePresence} from "framer-motion";
+interface StickyActionProps {
+  className?: string;
+
+  children: React.ReactNode
+
+  showAfterScroll?: number;
+  position?: "bottom" | "top"
+}
+
+import { cn } from "@/lib/utils",
+import { motion, AnimatePresence } from "framer-motion",
+
+interface StickyActionProps {
+  className?: string,
+  children: React.ReactNode,
+  showAfterScroll?: number,
+
+  position?: "bottom" | "top"
+}
 export function StickyAction({
+  position?: "bottom" | "top";
+}
+export function StickyAction(): any ({;
   className;
   children;
+  showAfterScroll?: number;  children;
 
-  showAfterScroll;
 
-            className
-          )}
-        >
-          <div className="rounded-lg bg-zion-blue-dark border border-zion-blue-light shadow-lg shadow-zion-purple/10 flex items-center">
-            {children}
-          </div>
-        </motion.div>
-      )}
-    </AnimatePresence>
-  )
-=======
-  showAfterScroll = 300;
-  position = "bottom";
-}: StickyActionProps) {;
-  const [isVisible, setIsVisible] = useState(false);  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > showAfterScroll) {
-        setIsVisible(true)  return (
-    <AnimatePresence>
-      {isVisible && (
-        <motion.div
-
-          initial={{ opacity: 0, y: position === "bottom" ? 20 : -20 }}
-import React, { useEffect, useState } from "react",;
-import { cn } from "@/lib/utils",;
-import { motion, AnimatePresence } from "framer-motion",;
-interface StickyActionProps {;
-  className?: string,;
-  children: React.ReactNode,;
-  showAfterScroll?: number,;
-  position?: "bottom" | "top";
->>>>>>> origin/main
 }
   showAfterScroll?: number;"
   position?: "bottom" | "top";"
@@ -158,6 +135,46 @@ export function StickyAction({;
   position = "bottom";
 }: StickyActionProps) {;
   const [isVisible, setIsVisible] = useState(false),;
+
+  useEffect(() => {;
+    const handleScroll = () => {;
+      if (window && window.scrollY > showAfterScroll) {;
+useEffect(() => {;
+    const handleScroll = () => {;
+      if (window && window.scrollY > showAfterScroll) {;
+  useEffect(() => {;
+    const handleScroll = () => {;
+      if (window.scrollY > showAfterScroll) {;
+        setIsVisible(true);
+      } else {;
+        setIsVisible(false);
+      }
+    };
+
+    window && window.addEventListener("scroll", handleScroll);
+    return () => {;
+      window && window.removeEventListener("scroll", handleScroll);
+    }
+  }, [showAfterScroll]);
+
+  const positionClasses = {;
+    bottom: "bottom-4",;
+    top: "top-20";
+  };
+
+  return (
+    <AnimatePresence>;
+      {isVisible && (;
+        <motion&& motion.div
+          initial={{ opacity: 0, y: position === "bottom" ? 20 : -20 }}
+
+            "fixed left-0 right-0 z-50 mx-auto flex justify-center px-4"
+            positionClasses[position]
+
+            "fixed left-0 right-0 z-50 mx-auto flex justify-center px-4"
+            positionClasses[position]
+
+          animate={{ opacity: 1, y: 0 }}
         setIsVisible(true);
       } else {;
         setIsVisible(false);
@@ -167,6 +184,21 @@ export function StickyAction({;
           className={cn(
             "fixed left-0 right-0 z-50 mx-auto flex justify-center px-4"
             positionClasses[position]
+            className
+          )}>;
+          <div className="rounded-lg bg-zion-blue-dark border border-zion-blue-light shadow-lg shadow-zion-purple/10 flex items-center">;
+            {children}
+          </div>;
+        </motion && motion.div>;
+      )}
+
+    </AnimatePresence>;
+  );
+}
+
+</AnimatePresence>;
+  );
+}
 ;
   const position_classes = {
     bottom: "bottom - 4",
@@ -218,6 +250,9 @@ export function StickyAction({;
           </div>;
         </motion && motion.div>;
       )}
+    </AnimatePresence>
+  )
+}
 
 
           initial={{ opacity: 0, coordinate_y: position === "bottom" ? 20 : -20 }}"

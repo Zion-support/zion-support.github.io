@@ -1,4 +1,43 @@
 {
+"timestamp": "2025-09-06T19:13:30.116Z",
+  "duration": "56s",
+
+  "timestamp": "2025-09-06T20:31:43.598Z",
+  "duration": "72s",
+
+  "results": {
+    "syntaxFixes": 0,
+    "buildSuccess": false,
+    "testsPassed": 0,
+    "optimizations": 0,
+    "errors": [
+      {
+        "command": "npm run lint:fix",
+        "description": "ESLint Auto-fix",
+"error": "Command failed: npm run lint:fix\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n"
+      },
+      {
+        "command": "npm run format",
+        "description": "Prettier Code Formatting",
+        "error": "spawnSync /bin/sh ENOBUFS"
+      },
+      {
+        "command": "npm run type-check",
+        "description": "TypeScript Type Checking",
+        "error": "spawnSync /bin/sh ETIMEDOUT"
+
+      },
+      {
+        "command": "npm run test:smoke",
+        "description": "Smoke Tests",
+"error": "Command failed: npm run test:smoke\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nSyntaxError: Unexpected identifier 'reactStrictMode'\n    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)\n    at #translate (node:internal/modules/esm/loader:534:12)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)\n    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)\n"
+      },
+      {
+        "command": "npm test -- --passWithNoTests",
+        "description": "Jest Tests",
+"error": "Command failed: npm test -- --passWithNoTests\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nSyntaxError: Unexpected identifier 'reactStrictMode'\n    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)\n    at #translate (node:internal/modules/esm/loader:534:12)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)\n    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)\n"
+      }
+    ]
   "timestamp": "2025-09-06T17:31:43.872Z",
   "duration": "46s",
   "timestamp": "2025-09-06T20:40:15.907Z",
@@ -18,6 +57,8 @@ pr-12325
     "syntaxFixes": 0,
     "buildSuccess": false,
     "testsPassed": 0,
+  "timestamp": "2025-09-06T10:44:46.097Z",
+  "totalDuration": 76866,
     "totalErrors": 5
   "timestamp": "2025-09-06T10:42:27.266Z",
   "totalDuration": 60241,
@@ -29,6 +70,7 @@ pr-12325
   "results": {
     "dependencyFix": {
       "success": true,
+"duration": 22421,
       "duration": 7037,
       "duration": 22421,
 ursor/automate-test-improve-and-merge-code-e883
@@ -45,6 +87,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     },
     "codeQuality": {
       "success": false,
+"duration": 27631,
       "duration": 27333,
       "duration": 27631,
 ursor/automate-test-improve-and-merge-code-e883
@@ -61,6 +104,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     },
     "securityAudit": {
       "success": true,
+"duration": 1683,
       "duration": 1719,
       "duration": 1683,
 ursor/automate-test-improve-and-merge-code-e883
@@ -73,6 +117,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     },
     "buildOptimization": {
       "success": true,
+"duration": 6198,
       "duration": 6250,
       "duration": 6198,
 ursor/automate-test-improve-and-merge-code-e883
@@ -88,6 +133,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       "warnings": []
     },
     "seoOptimization": {
+"success": true,
+      "duration": 43,
+      "errors": [],
+
+      "success": true,
+      "duration": 46,
+      "errors": [],
+
       "success": false,
       "duration": 39,
 "errors": [],
@@ -108,6 +161,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     },
     "accessibilityImprovements": {
       "success": false,
+"duration": 9692,
       "duration": 9508,
       "duration": 9692,
 ursor/automate-test-improve-and-merge-code-e883
@@ -119,6 +173,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     },
     "performanceOptimization": {
       "success": true,
+"duration": 7154,
       "duration": 6736,
       "duration": 7154,
 ursor/automate-test-improve-and-merge-code-e883
@@ -142,6 +197,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     },
     "deployment": {
       "success": true,
+"duration": 2037,
+      "errors": [],
+      "warnings": []
+    }
+
+
+    "totalErrors": 6
+
+
+
       "duration": 1612,
       "errors": [],
       "warnings": []

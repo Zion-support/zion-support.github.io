@@ -1,18 +1,18 @@
+import { ResumeWizard, as, WizardComponent } from "./wizard";
+export function ResumeWizard() {
+  return <WizardComponent />;
+}
+import {ResumeWizard, as, WizardComponent} from './wizard';
+export function ResumeWizard() {;
+  return <WizardComponent />;
+}
 import { ResumeWizard, as, WizardComponent  } from './wizard';
 export /**
  * ResumeWizard - Function description
  */
 function ResumeWizard() {
 
-<<<<<<< HEAD
 
-import { ResumeWizard as WizardComponent } from './wizard';
-
-export function ResumeWizard() {
-  return <WizardComponent />
-=======
-  return <WizardComponent />;
->>>>>>> origin/main
 }
 import {ResumeWizard, as, WizardComponent} from './wizard';
 export function ResumeWizard() {;
@@ -29,6 +29,7 @@ import { ResumeWizard as WizardComponent } from './wizard',;
 export function ResumeWizard() {;
   return <WizardComponent />,;
 } 
+import { ResumeWizard as WizardComponent } from './wizard';
 
 
 import { ResumeWizard, as, WizardComponent } from "./wizard";"
@@ -51,5 +52,7 @@ pr-12325
   return <WizardComponent />;
 </WizardComponent>
   return <WizardComponent />;
+}
+;
 </WizardComponent>"
 

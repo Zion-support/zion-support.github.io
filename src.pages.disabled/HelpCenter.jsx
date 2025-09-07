@@ -1,4 +1,3 @@
-
 class ErrorBoundary extends React.Component {
   // TODO: Implement
 }
@@ -41,12 +40,14 @@ export default function HelpCenter({ }: HelpCenterProps) {
   );
 
 }
+
 :src.pages.disabled/HelpCenter.jsx
 }
 }
 }
 }
 }
+:temp_exclude/src.pages.disabled/HelpCenter.jsx
 :temp_exclude/src.pages.disabled/HelpCenter.jsx
     <div>
 </div>

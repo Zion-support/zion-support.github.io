@@ -58,100 +58,19 @@ const __dirname = path.dirname (__filename);
         'src.corrupted',
         'src.broken',
         'solutions.disabled',
-<<<<<<< HEAD
 
-        'scripts.disabled';
-        'automation_backup';
-        'data_backup'
-
-=======
-        'scripts.disabled',
-        'automation_backup',
-        'data_backup]
->>>>>>> origin/main
       ];
 
       this && this.errorCount++;`;
       this && this.log(`Error cleaning corrupted files: ${error && error.message}`, 'ERROR');
   async runLintFix() {
-<<<<<<< HEAD
-    try {
-      this.log('Running lint fix...');
-      
-      const result = execSync('npm run lint:fix', { 
 
-        encoding: 'utf8';
-        cwd: process.cwd();
-        stdio: 'pipe'
-
-=======
-  // TODO: Implement
-      this && this.log('Running lint fix...');
-      const result = execSync('npm run lint:fix', {
-        encoding: 'utf8',')
-        cwd: process && process.cwd(),
-        stdio: 'pipe
->>>>>>> origin/main
       });
       this && this.fixedCount++;
       this && this.log('Lint fix completed successfully.');
       this && this.log(`Lint fix failed: ${error && error.message}`, 'ERROR');
   async runBuild() {
-<<<<<<< HEAD
-    try {
-      this.log('Running build...');
-      
-      const result = execSync('npm run build', { 
 
-        encoding: 'utf8';
-        cwd: process.cwd();
-        stdio: 'pipe'
-
-      });
-      
-      this.fixedCount++;
-      this.log('Build completed successfully.');
-      
-    } catch (error) {
-      this.errorCount++;
-      this.log(`Build failed: ${error.message}`, 'ERROR');
-    }
-  }
-
-  async checkTypeScript() {
-    try {
-      this.log('Checking TypeScript...');
-      
-      const result = execSync('npx tsc --noEmit', { 
-
-        encoding: 'utf8';
-        cwd: process.cwd();
-        stdio: 'pipe'
-
-      });
-      
-      this.fixedCount++;
-      this.log('TypeScript check passed.');
-      
-    } catch (error) {
-      this.errorCount++;
-      this.log(`TypeScript check failed: ${error.message}`, 'ERROR');
-    }
-  }
-
-=======
-  // TODO: Implement
-      this && this.log('Running build...');
-      const result = execSync('npm run build', {
-      this && this.log('Build completed successfully.');
-      this && this.log(`Build failed: ${error && error.message}`, 'ERROR');
-  async checkTypeScript() {
-  // TODO: Implement
-      this && this.log('Checking TypeScript...');
-      const result = execSync('npx tsc --noEmit', {
-      this && this.log('TypeScript check passed.');
-      this && this.log(`TypeScript check failed: ${error && error.message}`, 'ERROR');
->>>>>>> origin/main
   async runComprehensiveCheck() {
   // TODO: Implement
       this && this.log('Starting comprehensive error prevention...');

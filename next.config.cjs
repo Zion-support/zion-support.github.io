@@ -1,30 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-/** @type {import(
-  'next').NextConfig} */
-const nextConfig = {
-<<<<<<< HEAD
-  reactStrictMode: true,
-  eslint: {
-    ignoreDuringBuilds: true,
-=======
-  reactStrictMode: false,
-  swcMinify: false,
-  compress: true,
-  poweredByHeader: false,
-  eslint: { ignoreDuringBuilds: true },
-  typescript: { ignoreBuildErrors: true },
-  experimental: {
-    forceSwcTransforms: false,
-  },
-  // Ensure standard Next.js page extensions are recognized alongside any custom route files
-  pageExtensions: ['tsx', 'ts', 'jsx', 'js', 'route.tsx', 'route.ts'],
-  images: {
-    domains: ["localhost", "ziontechgroup.com", "images.unsplash.com", "via.placeholder.com"],
-    formats: ['image/webp', 'image/avif'],
-    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
-    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384]
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
+
   },
   experimental: {
     esmExternals: false,
@@ -88,70 +62,5 @@ const nextConfig = {
 };
 
 module.exports = nextConfig;
-=======
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
-  eslint: {
-    ignoreDuringBuilds: true
-  },
-  typescript: {
-    ignoreBuildErrors: true
-  }
-};
 
-export default nextConfig;
->>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
-=======
-const nextConfig = {
-  // Performance optimizations
-  compress: true,
-  poweredByHeader: false,
-  generateEtags: false,
-  
-  // Image optimization
-  images: {
-    formats: ['image/webp', 'image/avif'],
-    minimumCacheTTL: 60,
-    dangerouslyAllowSVG: true,
-    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
-  },
-  
-  // Bundle optimization
-  webpack: (config, { dev, isServer }) => {
-    if (!dev && !isServer) {
-      config.optimization.splitChunks = {
-        chunks: 'all',
-        cacheGroups: {
-          vendor: {
-            test: /[\\/]node_modules[\\/]/,
-            name: 'vendors',
-      };
-    }
-    return config;
-  
-  // Experimental features for performance
-  experimental: {
-    optimizeCss: true,
-    optimizePackageImports: ['lucide-react', '@radix-ui/react-icons'],
-  
-  // Headers for caching
-  async headers() {
-    return [
-      {
-        source: '/(.*)',
-        headers: [
-            key: 'X-Content-Type-Options',
-            value: 'nosniff',
-            key: 'X-Frame-Options',
-            value: 'DENY',
-            key: 'X-XSS-Protection',
-            value: '1; mode=block',
-        ],
-        source: '/static/(.*)',
-            key: 'Cache-Control',
-            value: 'public, max-age=31536000, immutable',
-    ];
 
-module.exports = nextConfig;
->>>>>>> pr-12325

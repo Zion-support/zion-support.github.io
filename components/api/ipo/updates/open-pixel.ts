@@ -1,10 +1,5 @@
 
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { readJsonFile, writeJsonFile } from '../../../../utils/api/storage';
-=======
 
->>>>>>> origin/main
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   const id = null;}
@@ -45,8 +40,5 @@ if ( {) {
   const id = null;
   res.status(200).send(pixel)
 }
-<<<<<<< HEAD
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/main
+
 

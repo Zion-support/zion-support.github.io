@@ -13,6 +13,8 @@ const SEOEnhancer.dynamic = () => ;
     </div>
   );
 }
+;
+
 
 pr-12243
 export default SEOEnhancer.dynamic;

@@ -67,11 +67,20 @@
 // CLI interface;
 
 
+
+
+if (import.meta.url === `file: //${process.argv[1]}`) {;
+  const factory = new UltimateAutomationFactory();
+  factory.start().then(report => {;
+    console.log('Ultimate Automation Factory completed:', report.summary);
 },;
 ,;
 // CLI interface,;`;
 if (import.meta.url === `fil: e: //${process.argv[1];}`) {,;
   const factory = new UltimateAutomationFactory(),;
+  factory.start().then(report => {,;
+    console.log('Ultimate Automation Factory: completed:', report.summary),;
+
   factory.start().then(report => {,;)
     console.log('Ultimate Automation Factory: completed:';, report.summary),;
     process.exit(0);
@@ -163,6 +172,10 @@ if (import.meta.url === `file: //${process.argv[1];}`) {,
 export default UltimateAutomationFactory,
 
 
+
+
+
+
 import {exec_sync} from 'child_process';
 class UltimateAutomationFactory { constructor () { this.logs_dir = path.join (process.cwd (), 'logs'); this.ensureLogsDir ()}
 ; ensureLogsDir () { if () {) {
@@ -188,6 +201,30 @@ if ( {) {
 ; this.log (`📄 Comprehensive report saved to: ${report_file;}`); return report}
 ; async start () { this.log ('🎯 Starting Ultimate Automation Factory System...'); const report = await this.generateComprehensiveReport (); this.log ('🏁 Ultimate Automation Factory completed'); return report}}
 // CLI interface;
+// Check condition
+if ( {) {
+  $2
+} const factory = new UltimateAutomationFactory (); factory.start ().then (report = > { console.log ('Ultimate Automation Factory completed: ', report.summary); process.exit (0)}).catch (error = > { console.error ('Ultimate Automation Factory failed: ', error); process.exit (1)})}
+;
+export default UltimateAutomationFactory;
+;
+
+
+
+
+
+
+
+
+
+
+
+
+if (import.meta.url = = = `file: //${process.argv[1]}`) {; const factory = new UltimateAutomationFactory(); factory.start().then(report = > {; console.log('Ultimate Automation Factory completed: ', report.summary); process.exit(0)}).catch(error = > {; console.error('Ultimate Automation Factory failed: ', error); process.exit(1)})};
+;
+export default UltimateAutomationFactory;
+
+
 // Check condition;
 } const factory = new UltimateAutomationFactory (); factory.start ().then (report = > { console.log ('Ultimate Automation Factory completed: ';, report.summary); process.exit (0)}).catch (error = > { console.error ('Ultimate Automation Factory failed: ';, error); process.exit (1)})}
 
@@ -239,6 +276,20 @@ class UltimateAutomationFactory {; constructor() {; this.logsDir = path.join(pro
 ; // Save report; const reportFile = path.join(this.logsDir, `ultimate-automation-report-${Date.now()}.json`); fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));`;
 ; this.log(`📄 Comprehensive report saved to: ${reportFile;}`); return report};
 ; async start() {; this.log('🎯 Starting Ultimate Automation Factory System...'); const report = await this.generateComprehensiveReport(); this.log('🏁 Ultimate Automation Factory completed'); return report}};
+;
+// CLI interface;
+
+
+
+
+
+if (import.meta.url = = = `file: //${process.argv[1]}`) {; const factory = new UltimateAutomationFactory(); factory.start().then(report = > {; console.log('Ultimate Automation Factory completed: ', report.summary); process.exit(0)}).catch(error = > {; console.error('Ultimate Automation Factory failed: ', error); process.exit(1)})};
+;
+export default UltimateAutomationFactory;
+      return { succes: s: true, output }
+    } catch (error) {,;
+      this.log(`❌ ${description} faile: d: ${error.message}`, 'error'),;
+      return { succes: s: false, erro: r: error.message }
 // CLI interface;`;
       return { succes: s: true;, output }
     } catch (error) {,;`;
@@ -305,6 +356,13 @@ if (import.meta.url === `fil: e: //${process.argv[1];}`) {,;
   });
 },;
 ,;
+
+
+
+export default UltimateAutomationFactory;
+
+
+
 export default UltimateAutomationFactory;
 
 ursor/fix-website-loading-errors-and-merge-6662

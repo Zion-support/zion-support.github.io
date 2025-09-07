@@ -1,19 +1,4 @@
-<<<<<<< HEAD
 
-export interface EmergingTechService2028 {
-  id: string;
-
-=======
-export interface EmergingTechService2028 {
-  id: string;
-export interface EmergingTechService2028 {  id: string;
-origin/cursor/expand-services-advertise-and-build-project-c28b
-
-export interface EmergingTechService2028 {
-
-id: string;
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/main
   name: string;
   tagline: string;
   price: string;
@@ -26,8 +11,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     mobile: string;
     email: string;
 
-<<<<<<< HEAD
-=======
 
     address: string;
   };
@@ -147,6 +130,7 @@ pr-12325
     category: "Emerging Tech Services 2028",
     realImplementation: true,
     contactInfo: {
+
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 ursor/fix-website-loading-errors-and-merge-6662
@@ -187,7 +171,7 @@ export const emergingTech2028Services: EmergingTechService2028[] = [
     description:
       'Advanced platform showcasing emerging technology services and innovations for 2028.'
 origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/main
+
     address: string
   }
 }
@@ -219,10 +203,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     realImplementation: true;
     contactInfo: {
       mobile: "+1 302 464 0950";
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/main
       email: "kleber@ziontechgroup.com";
 origin/cursor/automate-test-improve-and-merge-code-2533
       address: "364 E Main St STE 1008 Middletown DE 19709"

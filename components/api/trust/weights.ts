@@ -1,36 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
 
-import { getTrustWeights, setTrustWeights, getDefaultWeights } from '../../../utils/trust/weights';
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method;
-
-  return res.status(405).json({ error: 'Method not allowed' })
-=======
-import {
-  getTrustWeights,
-  setTrustWeights,
-  getDefaultWeights,;
-} from '../../../utils/trust/weights';
-
-import { getTrustWeights, setTrustWeights, getDefaultWeights } from '../../../utils/trust/weights';
-
-export default async function handler(req: NextApiRequest;, res: NextApiResponse) {
-  if (req.method;
-origin/cursor/automate-test-improve-and-merge-code-2533
-  getTrustWeights;
-setTrustWeights,}
-getDefaultWeights;}
-} from '../../../utils/trust/weights';
-
-export default async function handler(
-  req: NextApiRequest;
-res: NextApiResponse;
-) {
-export default async function handler(req: NextApiRequest;, res: NextApiResponse) {
-    const current = await getTrustWeights();
-  }
->>>>>>> origin/main
 }
     const current = await getTrustWeights ();
     return res.status (200).json ({ current, defaults: getDefaultWeights () ;});  }

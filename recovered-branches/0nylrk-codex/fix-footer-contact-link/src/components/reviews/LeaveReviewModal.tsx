@@ -1,41 +1,9 @@
-<<<<<<< HEAD
 
-
-import { useState, useEffect } from "react";
-=======
-import {useState, useEffect} from \"react\";
-import {Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger} from \"@/components/ui/dialog\";
-import {Button} from \"@/components/ui/button\";
-import {Tabs, TabsContent, TabsList, TabsTrigger} from \"@/components/ui/tabs\";
-import {ReviewForm} from \"./ReviewForm\";
-import {useReviews} from \"@/hooks/useReviews\";
-import { useState, useEffect } from \"react\",;
->>>>>>> origin/main
 import {
   Dialog;
   DialogContent;
   DialogDescription;
-<<<<<<< HEAD
-  DialogHeader;
-  DialogTitle;
-  DialogTrigger} from "@/components/ui/dialog",
-import { Button } from "@/components/ui/button",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { ReviewForm } from "./ReviewForm";
-import { useReviews } from "@/hooks/useReviews";
 
-=======
-  DialogHeader;}
-  DialogTitle;}
-  DialogTrigger} from \"@/components/ui/dialog\",
-import { Button } from \"@/components/ui/button\",;
-import { Tabs, TabsContent, TabsList, TabsTrigger } from \"@/components/ui/tabs\",;
-import { ReviewForm } from \"./ReviewForm\";
-import { useReviews } from \"@/hooks/useReviews\";
-interface LeaveReviewModalProps {}
-import { ReviewForm } from \"./ReviewForm\",;
-import { useReviews } from \"@/hooks/useReviews\",;
->>>>>>> origin/main
 interface LeaveReviewModalProps {
   projectId: string,
   revieweeId: string,
@@ -71,42 +39,7 @@ interface LeaveReviewModalProps {;
   revieweeId;
   revieweeName;
   isOpen;
-<<<<<<< HEAD
-  onClose}: LeaveReviewModalProps) {
-  const { userReview, submitReview, updateReview, isSubmitting } = useReviews(projectId);
-  const [open, setOpen] = useState(isOpen);
 
-
-  useEffect(() => {
-    setOpen(isOpen)
-  }, [isOpen]);
-  
-
-  const handleOpenChange = null;
-
-=======
-      if (success) {;}
-        handleOpenChange(false);}
-      }
-      return success;
-    } else {;
-      // Create new review;
-      const success = await submitReview(formValues);
-      if (success) {;}
-        handleOpenChange(false);}
-      }
-      return success;
-    }
-  }
-  },
-      }
-      return success;
-    }
-  };
-  },
-  };
-  },
->>>>>>> origin/main
   return (
     <Dialog open={open} onOpenChange={handleOpenChange} />;
       <DialogContent className=\"max-w-md\" />;

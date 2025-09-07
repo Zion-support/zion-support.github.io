@@ -3,6 +3,8 @@
 
 export interface Project {
 
+// Marketplace data store utilitiesexport interface Project {;
+
 
 // Marketplace data store utilitiesexport interface Project {;
 
@@ -60,7 +62,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 export interface Offer {
 }
 
-
 export interface Offer {;
 
 ursor/fix-website-loading-errors-and-merge-6662
@@ -105,7 +106,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 export interface Application {
   notes?: string
 }
-
 
 export interface Application {;
 
@@ -186,7 +186,6 @@ export interface Message {
   notes?: string
 }
 
-
 export interface Message {;
 
 ursor/fix-website-loading-errors-and-merge-6662
@@ -229,7 +228,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 export interface Conversation {
   isRead: boolean
 }
-
 
 export interface Conversation {;
 
@@ -896,6 +894,7 @@ pr-12325
       if (&& conversation.participants.includes (userId2)) {) {
   $2
 }
+        return conversation,
 origin/cursor/automate-test-improve-and-merge-code-20a4
         return conversation,
 origin/cursor/automate-test-improve-and-merge-code-382a
@@ -979,6 +978,7 @@ pr-12325
   async getUnreadMessageCount (user_id: string): Promise < number> {
     return Array.from (this.messages.values ());
       .filter (m => m.recipient_id === user_id && !m.is_read);
+      .length,
 origin/cursor/automate-test-improve-and-merge-code-20a4
       .length,
 origin/cursor/automate-test-improve-and-merge-code-382a
@@ -1059,7 +1059,6 @@ export async function updateProject(id: string, updates: Partial<Project>): Prom
 origin/cursor/expand-services-advertise-and-build-project-c28b
 }
 
-
 export async function updateProject(id: string, updates: Partial<Project>): Promise<Project | null> {;
 
   return marketplaceStore.updateProject(id, updates);
@@ -1069,6 +1068,7 @@ export async function deleteProject(id: string): Promise<boolean> {
 
   return marketplaceStore.deleteProject(id)
 
+  return marketplaceStore && marketplaceStore.deleteProject(id),
 origin/cursor/expand-services-advertise-and-build-project-c28b
   return marketplaceStore && marketplaceStore.deleteProject(id),
 origin/cursor/automate-test-improve-and-merge-code-382a
@@ -1077,6 +1077,7 @@ export async function createOffer(offer: Offer): Promise<Offer> {
 
   return marketplaceStore.createOffer(offer)
 
+  return marketplaceStore && marketplaceStore.createOffer(offer),
 origin/cursor/expand-services-advertise-and-build-project-c28b
   return marketplaceStore && marketplaceStore.createOffer(offer),
 origin/cursor/automate-test-improve-and-merge-code-382a
@@ -1139,7 +1140,6 @@ export async function getOffer(id: string): Promise<Offer | null> {
 export async function updateOffer(id: string, updates: Partial<Offer>): Promise<Offer | null> {
 pr-12325
 
-
 export async function updateOffer(id: string, updates: Partial<Offer>): Promise<Offer | null> {;
 
   return marketplaceStore.updateOffer(id, updates);
@@ -1149,6 +1149,7 @@ export async function deleteOffer(id: string): Promise<boolean> {
 
   return marketplaceStore.deleteOffer(id)
 
+  return marketplaceStore && marketplaceStore.deleteOffer(id),
 origin/cursor/expand-services-advertise-and-build-project-c28b
   return marketplaceStore && marketplaceStore.deleteOffer(id),
 origin/cursor/automate-test-improve-and-merge-code-382a
@@ -1157,6 +1158,7 @@ export async function createApplication(application: Application): Promise<Appli
 
   return marketplaceStore.createApplication(application)
 
+  return marketplaceStore && marketplaceStore.createApplication(application),
 origin/cursor/expand-services-advertise-and-build-project-c28b
   return marketplaceStore && marketplaceStore.createApplication(application),
 origin/cursor/automate-test-improve-and-merge-code-382a
@@ -1184,7 +1186,6 @@ export async function getApplication(id: string): Promise<Application | null> {
 export async function updateApplication(id: string, updates: Partial<Application>): Promise<Application | null> {
 pr-12325
 
-
 export async function updateApplication(id: string, updates: Partial<Application>): Promise<Application | null> {;
 
   return marketplaceStore.updateApplication(id, updates);
@@ -1194,6 +1195,7 @@ export async function deleteApplication(id: string): Promise<boolean> {
 
   return marketplaceStore.deleteApplication(id)
 
+  return marketplaceStore && marketplaceStore.deleteApplication(id),
 origin/cursor/expand-services-advertise-and-build-project-c28b
   return marketplaceStore && marketplaceStore.deleteApplication(id),
 origin/cursor/automate-test-improve-and-merge-code-382a
@@ -1202,6 +1204,7 @@ export async function createMessage(message: Message): Promise<Message> {
 
   return marketplaceStore.createMessage(message)
 
+  return marketplaceStore && marketplaceStore.createMessage(message),
 origin/cursor/expand-services-advertise-and-build-project-c28b
   return marketplaceStore && marketplaceStore.createMessage(message),
 origin/cursor/automate-test-improve-and-merge-code-382a
@@ -1215,7 +1218,6 @@ export async function updateMessage(id: string, updates: Partial<Message>): Prom
 
   return marketplaceStore && marketplaceStore.getMessage(id),
 }
-
 
 export async function updateMessage(id: string, updates: Partial<Message>): Promise<Message | null> {;
 
@@ -1303,6 +1305,8 @@ export async function updateMessage(id: string, updates: Partial<Message>): Prom
   return marketplaceStore && marketplaceStore.updateMessage(id, updates);
   return marketplaceStore.getMessage(id)
 }
+
+  return marketplaceStore.updateMessage(id, updates);
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
@@ -1315,6 +1319,9 @@ export async function deleteMessage(id: string): Promise<boolean> {
   return marketplaceStore.deleteMessage(id)
 
   return marketplaceStore && marketplaceStore.deleteMessage(id),
+}
+// Utility functions
+
 origin/cursor/automate-test-improve-and-merge-code-382a
 }
 // Utility functions
@@ -1705,6 +1712,25 @@ export function generate_id (prefix: string = 'item'): string {
 export function generate_id (prefix: string = 'item'): string {
   return `${prefix}_${Date.now ()}_${Math.random ().to_string (36).substr (2, 9)}`;
 }
+import fs from "fs";
+import path from "path";
+import { MarketplaceDb, Offer, Project } from "./types";
+const DATA_DIR = path.join(process.cwd(), "data", "runtime");
+const DB_PATH = path.join(DATA_DIR, "marketplace.json");
+function ensureDataFile(): void {;
+  if (!fs.existsSync(DATA_DIR)) {;
+    fs.mkdirSync(DATA_DIR, { recursive: true });
+  }
+  if (!fs.existsSync(DB_PATH)) {;
+    const initial: MarketplaceDb = { offers: [], projects: [] };
+    fs.writeFileSync(DB_PATH, JSON.stringify(initial, null, 2), "utf-8");
+  }
+}
+;
+export function readDb(): MarketplaceDb {;
+  ensureDataFile();
+  try {;
+    const raw = fs.readFileSync(DB_PATH, "utf-8");
 origin/cursor/automate-test-improve-and-merge-code-20a4
 origin/cursor/expand-services-advertise-and-build-project-c28b
 import fs from 'fs';
@@ -1731,6 +1757,22 @@ export function readDb(): MarketplaceDb {
     if (!data.offers) data.offers = [];
     if (!data.projects) data.projects = [];
     return data;
+  } catch (err) {;
+    return { offers: [], projects: [] }
+  }
+}
+;
+export function writeDb(db: MarketplaceDb): void {;
+  ensureDataFile();
+  fs.writeFileSync(DB_PATH, JSON.stringify(db, null, 2), "utf-8");
+}
+;
+export function saveOffer(offer: Offer): Offer {;
+  const db = readDb();
+  const index = db.offers.findIndex((o) => o.id === offer.id);
+  if (index >= 0) {;
+    db.offers[index] = offer;
+  } else {;
   } catch (err) {
     return { offers: [], projects: [] };
   }
@@ -1749,6 +1791,28 @@ export function saveOffer(offer: Offer): Offer {
   }
   writeDb(db);
   return offer;
+}
+;
+export function getOfferById(id: string): Offer | undefined {;
+  const db = readDb();
+  return db.offers.find((o) => o.id === id);
+}
+;
+export function listOffers(params?: { talentSlug?: string, clientId?: string, status?: string }): Offer[] {;
+  const db = readDb();
+  let list = db.offers;
+  if (params?.talentSlug) list = list.filter((o) => o.talentSlug === params.talentSlug);
+  if (params?.clientId) list = list.filter((o) => o.clientId === params.clientId);
+  if (params?.status) list = list.filter((o) => o.status === params.status);
+  return list.sort((a, b) => b.createdAtIso.localeCompare(a.createdAtIso));
+}
+;
+export function saveProject(project: Project): Project {;
+  const db = readDb();
+  const index = db.projects.findIndex((p) => p.id === project.id);
+  if (index >= 0) {;
+    db.projects[index] = project;
+  } else {;
 
 export function getOfferById(id: string): Offer | undefined {
   const db = readDb();
@@ -1777,6 +1841,12 @@ export function saveProject(project: Project): Project {
   }
   writeDb(db);
   return project;
+}
+;
+export function getProjectById(id: string): Project | undefined {;
+  const db = readDb();
+  return db.projects.find((p) => p.id === id);
+}
 
 export function getProjectById(id: string): Project | undefined {
   const db = readDb();

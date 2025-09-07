@@ -349,8 +349,6 @@ const talentProfileSchema = null;
                             className="w-full h-full object-cover"
                             loading="lazy"
                           />
-
-
                         </AspectRatio>
                       ) : (
                         <div className="flex items-center justify-center h-full">
@@ -358,7 +356,6 @@ const talentProfileSchema = null;
                         </div>
                       )}
                     </div>
-
 
                     <label className="flex items-center justify-center px-4 py-2 rounded-md bg-zion-purple hover:bg-zion-purple-dark text-white cursor-pointer transition-colors">
                       <Upload className="mr-2 h-4 w-4" />
@@ -371,48 +368,11 @@ const talentProfileSchema = null;
                       />;
                     </label>;
                   </div>;
-                  <p className='text-sm text-zion-slate'>;
-                          <FormMessage className='text - red - 400' />;
-                        </FormItem>)}
-                    />;
-                  </div>;
-                </div>;
-                {/* Upload Avatar */}
-                <div className='space - y-2'>;
-                  <FormLabel className='text - zion - slate - light'>;
-                    Profile Picture;
-                  </FormLabel>;
-                  <div className='flex items - center gap - 6'>;
-                    <div className='relative w - 24 h - 24 rounded - full overflow - hidden bg - zion - blue - light border border - zion - blue - light'>;
-                      {uploaded_avatar ? (
-                        <AspectRatio ratio={1 / 1}>;
-                          <img;
-                            src={uploaded_avatar}
-                            alt='Avatar preview';
-                            className='w - full h - full object - cover';
-                            loading='lazy'                          />;
-                        </AspectRatio>) : (
-                        <div className='flex items - center justify - center h - full'>;
-                          <UserRound className='h - 10 w - 10 text - zion - slate opacity - 50' />;
-                        </div>)}
-                    </div>;
-                    <label className='flex items - center justify - center px - 4 py - 2 rounded - md bg - zion - purple hover:bg - zion - purple - dark text - white cursor - pointer transition - colors'>;
-                      <Upload className='mr - 2 h - 4 w - 4' />;
-                      <span > Upload Photo</span>;
-                      <input;
-                        type='file';
-                        accept='image/*';
-                        className='hidden';
-                        on_change={handleAvatarUpload}                      />;
-                    </label>;
-                  </div>;
-                  <p className='text - sm text - zion - slate'>;
-                    For best results, use an image at least 400x400 pixels in;
-                    JPG, PNG, or GIF format.;
+                  <p className="text-sm text-zion-slate">;
+                    For best results, use an image at least 400x400 pixels in JPG, PNG, or GIF format.;
                   </p>;
                 </div>;
               </div>;
-
               <Separator className="bg-zion-blue-light/50" />;
               {/* Bio Section */}
               <div className="space-y-4">
@@ -423,87 +383,30 @@ const talentProfileSchema = null;
                   render={({ field }: { field: any }) => (
                     <FormItem>
                       <FormLabel className="text-zion-slate-light">About Yourself</FormLabel>
-
-
                       <FormControl>
                         <Textarea
-                          className='h-32 min-h-[128px] bg-zion-blue border-zion-blue-light text-white'
-                          placeholder='Describe your professional background, expertise, and the value you bring to clients...'
+                          className="h-32 min-h-[128px] bg-zion-blue border-zion-blue-light text-white"
+                          placeholder="Describe your professional background, expertise, and the value you bring to clients..."
                           {...field}
-
-                        />;
-                      </FormControl>;
-                      <FormMessage className='text-red-400' />;
-                      <FormDescription className='text-zion-slate'>;
-                        {field && field.value?.length || 0}/1000 characters;
-                      </FormDescription>;
-                    </FormItem>;
+                        />
+                      </FormControl>
+                      <FormMessage className="text-red-400" />
+                      <FormDescription className="text-zion-slate">
+                        {field.value?.length || 0}/1000 characters
+                      </FormDescription>
+                    </FormItem>
                   )}
-                />;
-
-
-                {/* AI Enhancement Option */}
-                <FormField
-                  control={form && form.control}
-                  name='enhancedProfile'
-                  render={({ field }: { field: any }) => (;
-                    <FormItem className='flex flex-row items-center justify-between p-3 border border-zion-blue-light bg-zion-blue/30 rounded-md'>;
-                      <div className='space-y-0 && 0.5'>;
-                        <FormLabel className='text-white flex items-center'>;
-                          <Sparkles className='w-4 h-4 mr-2 text-zion-purple' />                          AI Profile Enhancement;
-                        </FormLabel>;
-                        <FormDescription className='text-zion-slate-light'>;
-              <Separator className='bg - zion - blue - light / 50' />;
-              {/* Bio Section */}
-              <div className='space - y-4'>;
-                <h3 className='text - lg font - medium text - white'>;
-                  Professional Bio;
-                </h3>;
-                <FormField;
-                  control={form.control}
-                  name='enhancedProfile'
-                  render={({ field }: { field: any }) => (
-                    <FormItem className='flex flex-row items-center justify-between p-3 border border-zion-blue-light bg-zion-blue/30 rounded-md'>
-                      <div className='space-y-0.5'>
-                        <FormLabel className='text-white flex items-center'>
-                          <Sparkles className='w-4 h-4 mr-2 text-zion-purple' />                          AI Profile Enhancement
                 />;
                 {/* AI Enhancement Option */}
                 <FormField;
                   control={form.control}
                   name="enhancedProfile"
                   render={({ field }: { field: any }) => (
-                    <FormItem className='flex flex - row items - center justify - between p - 3 border border - zion - blue - light bg - zion - blue / 30 rounded - md'>;
-                      <div className='space - y-0.5'>;
-                        <FormLabel className='text - white flex items - center'>;
-                          <Sparkles className='w - 4 h - 4 mr - 2 text - zion - purple' />                          AI Profile Enhancement;
-                        </FormLabel>;
-                        <FormDescription className='text - zion - slate - light'>;
-                          Let AI help optimize your profile for better;
-                          visibility and engagement;
-                        </FormDescription>;
-                      </div>;
-                      <FormControl>;
-
-                />;
-
-                {form && form.watch('enhancedProfile') && (;
-                  <div className='flex justify-end'>;
-
-                    <Button
-                      type='button'
-                      variant='outline'
-                      className='border-zion-purple text-zion-purple hover:bg-zion-purple/10'
-                      onClick={generateEnhancedProfile}
-                      disabled={isGenerating}                    >
-                      <Sparkles className='mr-2 h-4 w-4' />
-                      {isGenerating
-                        ? 'Generating...'
-                        : 'Generate Enhanced Profile'}
-                    </Button>;
-                  </div>;
-
-
+                    <FormItem className="flex flex-row items-center justify-between p-3 border border-zion-blue-light bg-zion-blue/30 rounded-md">
+                      <div className="space-y-0.5">
+                        <FormLabel className="text-white flex items-center">
+                          <Sparkles className="w-4 h-4 mr-2 text-zion-purple" />
+                          AI Profile Enhancement
                         </FormLabel>
                         <FormDescription className="text-zion-slate-light">
                           Let AI help optimize your profile for better visibility and engagement
@@ -511,22 +414,30 @@ const talentProfileSchema = null;
                       </div>
                       <FormControl>
                         <Switch
-
                           aria-label="AI profile enhancement"
                           checked={field.value}
                           onCheckedChange={field.onChange}
                           className="data-[state=checked]:bg-zion-purple"
                         />
-
                       </FormControl>
                     </FormItem>
                   )}
                 />
-
-
+                {form.watch("enhancedProfile") && (
+                  <div className="flex justify-end">
+                    <Button
+                      type="button"
+                      variant="outline"
+                      className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
+                      onClick={generateEnhancedProfile}
+                      disabled={isGenerating}
+                    >
+                      <Sparkles className="mr-2 h-4 w-4" />
+                      {isGenerating ? "Generating..." : "Generate Enhanced Profile"}
                     </Button>
                   </div>
                 )}
+;
                 {/* Generated Content Display */}
                 {generatedContent && (;
                   <div className='bg-zion-blue-light/20 border border-zion-blue-light rounded-md p-4'>;
@@ -543,44 +454,29 @@ const talentProfileSchema = null;
                         AI-Generated Content
                       </h4>
                       <Button
-
-                        onClick={applyGeneratedContent}>;
-                        <Check className='mr-1 h-3 w-3' /> Apply;
-
                         type="button"
                         size="sm"
                         className="bg-zion-purple hover:bg-zion-purple-dark text-white"
                         onClick={applyGeneratedContent}
                       >;
                         <Check className="mr-1 h-3 w-3" /> Apply;
-
                       </Button>;
                     </div>;
-
-                    <div className='space-y-4'>;
+                    <div className="space-y-4">;
                       <div>;
-                        <h5 className='text-zion-slate-light text-sm mb-1'>;
-                          Professional Summary;
-                        </h5>;
-                        <p className='text-zion-slate italic'>;
-                          {generatedContent && generatedContent.summary}
-                        </p>;
+                        <h5 className="text-zion-slate-light text-sm mb-1">Professional Summary</h5>;
+                        <p className="text-zion-slate italic">{generatedContent.summary}</p>;
                       </div>;
-
-                      {generatedContent && generatedContent.categorizedSkills && (;
+                      {generatedContent.categorizedSkills && (;
                         <div>;
-
                           <h5 className="text-zion-slate-light text-sm mb-1">Categorized Skills</h5>;
                           <div className="flex flex-wrap gap-2 mt-1">;
                             {Object.entries(generatedContent.categorizedSkills).map(([category, skills]) => (;
                               <div key={category} className="flex items-center gap-2">;
                                 <Badge;
-
-
                                   className={`w-fit ${getCategoryColor(category as CategoryType)}`}
-                                >
+                                >;
                                   {category}
-
                                 </Badge>;
                                 <div className="flex flex-wrap gap-1">;
                                   {skills.map((skill: string) => (;
@@ -588,26 +484,20 @@ const talentProfileSchema = null;
                                       key={skill}
                                       className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none";
                                     >;
-
                                       {skill}
-                                    </Badge>
+                                    </Badge>;
                                   ))}
-                                </div>
-                              </div>
+                                </div>;
+                              </div>;
                             ))}
-                          </div>
-                        </div>
+                          </div>;
+                        </div>;
                       )}
-                    </div>
-                  </div>
+                    </div>;
+                  </div>;
                 )}
-
-
-
               </div>;
-
-              <Separator className='bg-zion-blue-light/50' />;
-
+              <Separator className="bg-zion-blue-light/50" />;
               {/* Skills and Availability */}
               <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>;
                 {/* Skills Section */}
@@ -620,15 +510,12 @@ const talentProfileSchema = null;
                 <div className="space-y-4">
                   <h3 className="text-lg font-medium text-white">Skills & Expertise</h3>
                   <FormField
-
                     control={form.control}
                     name="skills"
                     render={({ field }: { field: any }) => (
                       <FormItem>
                         <FormLabel className="text-zion-slate-light">Skills</FormLabel>
                         <div className="flex gap-2">
-
-
                           <FormControl>
                             <Input
                               className='flex-1 bg-zion-blue border-zion-blue-light text-white'
@@ -641,65 +528,6 @@ const talentProfileSchema = null;
                             />
                           </FormControl>
                           <Button
-
-                  />;
-
-                  <div className='flex flex-wrap gap-2 mt-2'>;
-                    {skillTags && skillTags.map(skill => (;
-
-                      <Badge
-                        key={skill}
-                        className='bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none pl-2 pr-1 py-1.5 flex items-center gap-1'
-                      >
-                        {skill}
-                        <button
-                          type='button'
-                          onClick={() => handleRemoveSkill(skill)}
-                          className='rounded-full hover:bg-zion-purple-dark/20 p-0.5'                        >
-                          <X className='h-3 w-3' />
-                        </button>
-                      </Badge>
-                    ))}
-                    {skillTags.length === 0 && (
-                      <p className='text-zion-slate text-sm italic'>
-                        No skills added yet
-                      </p>
-                            type="button"
-                            variant="outline"
-                            className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white"
-                            onClick={handleAddSkill}
-                          >;
-                            Add;
-                          </Button>;
-                        </div>;
-                        <FormDescription className="text-zion-slate">;
-                          Press Enter or click Add to include a skill;
-                        </FormDescription>;
-                        <FormMessage className="text-red-400" />;
-                      </FormItem>;
-                    )}
-                  />;
-                  <div className="flex flex-wrap gap-2 mt-2">;
-                    {skillTags.map(skill => (;
-                      <Badge;
-                        key={skill}
-                        className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none pl-2 pr-1 py-1.5 flex items-center gap-1"
-                      >
-                        {skill}
-                        <button
-                          type="button"
-                          onClick={() => handleRemoveSkill(skill)}
-                          className="rounded-full hover:bg-zion-purple-dark/20 p-0.5";
-                        >;
-                          <X className="h-3 w-3" />;
-                        </button>;
-                      </Badge>;
-                    ))}
-                    {skillTags && skillTags.length === 0 && (;
-                      <p className='text-zion-slate text-sm italic'>;
-                        No skills added yet;
-                      </p>;
-
                             type="button"
                             variant="outline"
                             className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white"
@@ -733,139 +561,10 @@ const talentProfileSchema = null;
                     ))}
                     {skillTags.length === 0 && (;
                       <p className="text-zion-slate text-sm italic">No skills added yet</p>;
-
                     )}
-
                   </div>;
                 </div>;
-
-
                 {/* Availability Section */}
-
-                                className='text-white flex items-center gap-2'>;
-                                <div className='h-2 w-2 rounded-full bg-green-500'></div>;
-                                Available Now;
-                              </label>;
-                            </div>;
-
-                            <div className='flex items-center space-x-2'>;
-
-                              <input
-                                type='radio'
-                                id='limited'
-                                value='limited'
-                                checked={field.value === 'limited'}
-                                onChange={() => field.onChange('limited')}
-                                className='text-zion-purple focus:ring-zion-purple'                              />
-                              <label
-                                htmlFor='limited'
-
-                                className='text-white flex items-center gap-2'>;
-                                <div className='h-2 w-2 rounded-full bg-yellow-500'></div>;
-                                Limited Availability;
-                              </label>;
-                            </div>;
-
-                            <div className='flex items-center space-x-2'>;
-
-                              <input
-                                type='radio'
-                                id='unavailable'
-                                value='unavailable'
-                                checked={field.value === 'unavailable'}
-                                onChange={() => field.onChange('unavailable')}
-                                className='text-zion-purple focus:ring-zion-purple'                              />
-                              <label
-                                htmlFor='unavailable'
-                                className='text-white flex items-center gap-2'>;
-                                <div className='h-2 w-2 rounded-full bg-red-500'></div>;
-                        <Switch;
-                          aria - label='AI profile enhancement';
-                          checked={field.value}
-                          onCheckedChange={field.on_change}
-                          className='data-[state = checked]:bg - zion - purple'                        />;
-                      </FormControl>;
-                    </FormItem>)}
-                />;
-                {form.watch ('enhanced_profile') && (
-                  <div className='flex justify - end'>;
-                    <Button;
-                      type='button';
-                      variant='outline';
-                      className='border - zion - purple text - zion - purple hover:bg - zion - purple / 10';
-                      on_click={generateEnhancedProfile}
-                      disabled={is_generating}                    >;
-                      <Sparkles className='mr - 2 h - 4 w - 4' />;
-                      {is_generating;
-                        ? 'Generating...';
-                        : 'Generate Enhanced Profile'}
-                    </Button>;
-                  </div>)}
-                {/* Generated Content Display */}
-                {generated_content && (
-                  <div className='bg - zion - blue - light / 20 border border - zion - blue - light rounded - md p - 4'>;
-                    <div className='flex items - center justify - between mb - 3'>;
-                      <h4 className='text - white font - medium flex items - center'>;
-                        <Sparkles className='w - 4 h - 4 mr - 2 text - zion - purple' />;
-                        AI - Generated Content;
-                      </h4>;
-                      <Button;
-                        type='button';
-                        size='sm';
-                        className='bg - zion - purple hover:bg - zion - purple - dark text - white';
-                        on_click={applyGeneratedContent}                      >;
-                        <Check className='mr - 1 h - 3 w - 3' /> Apply;
-                      </Button>;
-                    </div>;
-                    <div className='space - y-4'>;
-                      <div>;
-                        <h5 className='text - zion - slate - light text - sm mb - 1'>;
-                          Professional Summary;
-                        </h5>;
-                        <p className='text - zion - slate italic'>;
-                          {generated_content.summary}
-                        </p>;
-                      </div>;
-                      {generated_content.categorized_skills && (
-                        <div>;
-                          <h5 className='text - zion - slate - light text - sm mb - 1'>;
-                            Categorized Skills;
-                          </h5>;
-                          <div className='flex flex - wrap gap - 2 mt - 1'>;
-                            {Object.entries (
-                              generated_content.categorized_skills).map (([category, skills]) => (
-                              <div;
-                                key={category}
-                                className='flex items - center gap - 2';
-                              >                                <Badge;
-                                  className={`w - fit ${getCategoryColor (category as CategoryType)}`}
-                                >;
-                                  {category}
-                                </Badge>;
-                                <div className='flex flex - wrap gap - 1'>;
-                                  {skills.map ((skill: string) => (
-                                    <Badge;
-                                      key={skill}
-                                      className='bg - zion - purple / 20 hover:bg - zion - purple / 30 text - zion - purple border - none'                                    >;
-                                      {skill}
-                                    </Badge>))}
-                                </div>;
-                              </div>))}
-                          </div>;
-                        </div>)}
-                    </div>;
-                  </div>)}
-              </div>;
-              <Separator className='bg - zion - blue - light / 50' />;
-              {/* Skills and Availability */}
-              <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 8'>;
-                {/* Skills Section */}
-                <div className='space - y-4'>;
-                  <h3 className='text - lg font - medium text - white'>;
-                    Skills & Expertise;
-                  </h3>;
-                  <FormField;
-
                 <div className="space-y-4">
                   <h3 className="text-lg font-medium text-white">Availability</h3>
                   <FormField
@@ -927,7 +626,6 @@ const talentProfileSchema = null;
                     control={form.control}
                     name='availability';
                     render={({ field }: { field: any }) => (
-
                       <FormItem className="space-y-4">
                         <FormLabel className="text-zion-slate-light">Current Status</FormLabel>
                         <FormControl>
@@ -973,8 +671,6 @@ const talentProfileSchema = null;
                               />
                               <label htmlFor="unavailable" className="text-white flex items-center gap-2">
                                 <div className="h-2 w-2 rounded-full bg-red-500"></div>
-
-
                                 Currently Unavailable
                               </label>
                             </div>
@@ -983,21 +679,13 @@ const talentProfileSchema = null;
                         <FormMessage className="text-red-400" />
                       </FormItem>
                     )}
-
-                        <FormMessage className='text - red - 400' />;
-                      </FormItem>)}
-
-                  />;
-                </div>;
-              </div>;
-            </CardContent>;
-
-
+                  />
+                </div>
+              </div>
+            </CardContent>
 
             <CardFooter className="border-t border-zion-blue-light pt-6">
               <div className="flex flex-col sm:flex-row gap-4 w-full sm:justify-between">
-
-
                 <Button
                   type="button"
                   variant="outline"
@@ -1005,14 +693,12 @@ const talentProfileSchema = null;
                 >
                   Save as Draft
                 </Button>
-
                 <Button 
                   type="submit"
                   className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
                   disabled={isSubmitting}
                 >
                   {isSubmitting ? "Creating Profile..." : "Create Profile"}
-
                 </Button>
               </div>
             </CardFooter>
@@ -1021,30 +707,8 @@ const talentProfileSchema = null;
       </Card>
     </div>
   )
-
-            <CardFooter className='border - t border - zion - blue - light pt - 6'>;
-              <div className='flex flex - col sm:flex - row gap - 4 w - full sm:justify - between'>;
-                <Button;
-                  type='button';
-                  variant='outline';
-                  className='border - zion - blue - light text - zion - slate - light hover:bg - zion - blue - light hover:text - white';
-                >;
-                  Save as Draft;
-                </Button>;
-                <Button;
-                  type='submit';
-                  className='bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - white';
-                  disabled={is_submitting}                >;
-                  {is_submitting ? 'Creating Profile...' : 'Create Profile'}
-                </Button>;
-              </div>;
-            </CardFooter>;
-          </form>;
-        </Form>;
-      </Card>;
-    </div>);
-
 }
+;
 //Generate enhanced profile with AI return;
 }
 

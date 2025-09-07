@@ -1,21 +1,5 @@
 module.exports = {
   plugins: {
-<<<<<<< HEAD
-    tailwindcss: {},
-    autoprefixer: {},
-  },
-};
-=======
-
-<
-    tailwindcss: {},
-
->
-    autoprefixer: {},
-  },
-}
-
-
 
 
 
@@ -23,14 +7,3 @@ module.exports = {
 
 
 
-
-
-
-
-
-
-
-
-
-
->>>>>>> pr-12325

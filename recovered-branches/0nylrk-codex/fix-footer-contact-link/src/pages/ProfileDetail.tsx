@@ -1,44 +1,4 @@
-<<<<<<< HEAD
 
-import { useState, useEffect } from "react",
-import { useParams } from "react-router-dom",
-import { supabase } from "@/integrations/supabase/client",
-import { toast } from "@/hooks/use-toast",
-import { SEO } from "@/components/SEO",
-import { Header } from "@/components/Header",
-import { Footer } from "@/components/Footer",
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-=======
-import {useState, useEffect} from "react";
-import {useParams} from "react-router-dom";
-import {supabase} from "@/integrations/supabase/client";
-import {toast} from "@/hooks/use-toast";
-import {SEO} from "@/components/SEO";
-import {Header} from "@/components/Header";
-import {Footer} from "@/components/Footer";
-import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
-import {Button} from "@/components/ui/button";
-import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
-import {Badge} from "@/components/ui/badge";
-import {MapPin, Clock, Link, as, LinkIcon, Github, Twitter, Linkedin, CheckCircle2, Mail, Phone, Globe} from "lucide-react";
-import {HireNowCTA} from "@/components/profile/HireNowCTA";
-import { useState, useEffect } from "react",;
-import { useParams } from "react-router-dom",;
-import { supabase } from "@/integrations/supabase/client",;
-import { toast } from "@/hooks/use-toast",;
-import { SEO } from "@/components/SEO",;
-import { Header } from "@/components/Header",;
-import { Footer } from "@/components/Footer",;
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
-import { Button } from "@/components/ui/button",;
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
-import { Badge } from "@/components/ui/badge",;
->>>>>>> origin/main
 import { 
   MapPin;
   Clock;
@@ -50,21 +10,13 @@ import {
   Mail;
   Phone;
   Globe
-<<<<<<< HEAD
-} from "lucide-react",
-import { HireNowCTA } from "@/components/profile/HireNowCTA";
 
-=======
-} from "lucide-react",import { HireNowCTA } from "@/components/profile/HireNowCTA";
->>>>>>> origin/main
 export default function ProfileDetail() {
   // useParams is typed as `any` in this environment due to missing type
   // definitions, so avoid passing a type argument to prevent TS2347.
   const { profileId } = useParams();
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/main
+
   const [profileData, setProfileData] = useState<any>(null),
   const [isLoading, setIsLoading] = useState(true);
 import { HireNowCTA } from "@/components/profile/HireNowCTA",;
@@ -76,130 +28,7 @@ export default function ProfileDetail() {
   const [isLoading, setIsLoading] = useState(true),
   const [error, setError] = useState<string | null>(null),
 
-<<<<<<< HEAD
-  useEffect(() => {
-    const fetchProfile = null;
 
-=======
-  const [error, setError] = useState<string | null>(null);
-  useEffect(() => {
-    const fetchProfile = async () => {
-      setIsLoading(true),
-      setError(null),
-      try {
-        if (!profileId) {
-          setError("Profile ID is missing."),
-          return
-        }
-        const { data, error } = await supabase
-          .from("talent_profiles")
-          .select("*")
-          .eq("id", profileId)
-          .single();
-          .single(),
-      setIsLoading(true);
-      setError(null);
-      try {;
-        if (!profileId) {;
-          setError("Profile ID is missing.");
-          return;
-        }
-
-          .single(),
-
-          .single();
-          .single(),
-
-        if (error) {
-          throw new Error(error.message);
-        }
-        if (!data) {
-          setError("Profile not found.");
-          return;
-        }
-
-        setProfileData(data);
-      } catch (err: any) {
-        (setError(err.message || "Failed to fetch profile."),
-          toast({
-            title: "Error",
-            description: err.message || "Failed to fetch profile.",
-            variant: "destructive",
-          }));
-      } finally {
-        setIsLoading(false);
-      }
-    }      } finally {
-        setIsLoading(false)
-      }
-    }
-    },
-
-    fetchProfile();
-  }, [profileId]);
-  if (isLoading) {
-    return (
-      <div className="min-h-screen flex items-center justify-center">
-        <p>Loading profile...</p>
-      </div>
-    );
-  }
-  if (error) {
-    return (
-      <div className="min-h-screen flex items-center justify-center">
-        <p>Error: {error}</p>
-      </div>
-    );
-  }
-  if (!profileData) {
-    return (
-      <div className="min-h-screen flex items-center justify-center">
-        <p>Profile not found.</p>
-      </div>
-    );
-  }
-
-  if (error) {;
-
-    return (    return (
-;
-  if (error) {;
-    return (;      <div className="min-h-screen flex items-center justify-center">;
-        <p>Profile not found.</p>;
-      </div>;
-    );
-  }
-      <Header />
-      <div className="container mx-auto px-4 py-8">
-        <div className="grid grid-cols-12 gap-6">            <Card className="mb-6 bg-zion-blue border-zion-blue-light">;
-              <CardHeader>;
-                <CardTitle className="text-xl font-bold text-white">About Me</CardTitle>;
-              </CardHeader>;
-              <CardContent>;
-              </CardContent>;
-            </Card>;
-;
-            {/* Skills Section */}
-            <Card className="mb-6 bg-zion-blue border-zion-blue-light">;
-              <CardHeader>;
-                <CardTitle className="text-xl font-bold text-white">Skills</CardTitle>;
-              </CardHeader>;
-              <CardContent>;
-                <div className="flex flex-wrap gap-2">;
-                  {profileData.skills?.map((skill:string, index:number) => (;                    <Badge key={index} className="bg-zion-blue-light text-zion-slate-light border-none">{skill}</Badge>;
-                  )) || <p className="text-zion-slate-light">No skills provided.</p>}
-                </div>;
-              </CardContent>;
-            </Card>;
-;            {/* Experience Section */}
-            <Card className="mb-6 bg-zion-blue border-zion-blue-light">;
-              <CardHeader>;
-                <CardTitle className="text-xl font-bold text-white">Experience</CardTitle>;
-              </CardHeader>;
-              <CardContent>;                id: profileData?.id || '',
-                full_name: profileData?.full_name || '',
-                professional_title: profileData?.professional_title || '',
->>>>>>> origin/main
                 hourly_rate: profileData?.hourly_rate || 0
 
               }}
@@ -380,6 +209,17 @@ export default function ProfileDetail() {
                     LinkedIn;
                   </a>)}
 
+}}
+            />
+            {/* Contact Information */}
+            <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mt-6">
+              <h3 className="text-xl font-bold mb-4">Contact</h3>
+              <div className="flex flex-col space-y-3">
+                {profileData.email && (
+                  <div className="flex items-center gap-2 text-zion-slate-light">
+                    <Mail className="h-4 w-4" />
+                    <a href={`mailto:${profileData.email}`} className="hover:text-zion-cyan">{profileData.email}</Link>
+                  </div>
                 {profileData.linkedin_url && (
                   <a href={profileData.linkedin_url} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-zion-slate-light hover:text-zion-cyan">
                     <Linkedin className="h-4 w-4" />
@@ -388,6 +228,23 @@ export default function ProfileDetail() {
                 )}
               </div>;
             </div>;
+            {/* Social Links */}
+            <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mt-6">
+              <h3 className="text-xl font-bold mb-4">Social</h3>
+              <div className="flex flex-col space-y-3">
+                {profileData.github_url && (
+                  <a href={profileData.github_url} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-zion-slate-light hover:text-zion-cyan">
+                    <Github className="h-4 w-4" />
+                    GitHub
+                  </Link>
+                )}
+                {profileData.twitter_url && (
+                  <a href={profileData.twitter_url} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-zion-slate-light hover:text-zion-cyan">
+                    <Twitter className="h-4 w-4" />
+                    Twitter
+                  </Link>
+                )}
+                {profileData.linkedin_url && (
           </div>;
         </div>;
       </div>;
@@ -473,6 +330,7 @@ export default function ProfileDetail() {
           profileData.bio || "Check out this talent's profile on Zion!""
       />
 
+;
       <Header />
 "
       <div className="container mx-auto px-4 py-8">"
@@ -493,7 +351,6 @@ export default function ProfileDetail() {
 
                       <AvatarFallback>
 
-                      
                   ;
                   <div>;
                     <CardTitle className="text-2xl font-bold text-white flex items-center gap-2">;"
@@ -501,8 +358,6 @@ export default function ProfileDetail() {
 </CheckCircle2>
                     <CardDescription className="text-zion-cyan">"
 
-                    
-              
               <CardContent>
                 <div className="flex flex-wrap gap-4 text-sm">"
                     <div className="flex items-center text-zion-slate-light">"
@@ -515,25 +370,16 @@ export default function ProfileDetail() {
                     <div className="text-white font-bold">"
                       <span className="text-zion-slate-light font-normal">"
 </span>
-              
-            
 
 
-              
-            
             ;"
 
                 <CardTitle className="text-xl font-bold text-white">"
 
-                
-              
                 <p className="text-zion-slate-light">"
 </p>
-              
 
 
-                
-              
                 <div className="flex flex-wrap gap-2">"
                     <Badge;
                       key={index}"
@@ -541,18 +387,14 @@ export default function ProfileDetail() {
                     >
 
                     <p className="text-zion-slate-light">No skills provided.</p>"
-              
 
 
-                
-              
                     <div key={index} className="mb-4">"
                       <h4 className="font-bold text-white">{exp.title}</h4>""
                       <p className="text-zion-cyan">{exp.company}</p>""
                       <p className="text-sm text-zion-slate-light">"
                       </p>"
                       <p className="text-zion-slate-light">{exp.description}</p>"
-              
             <Card className="mb-6 bg-zion-blue border-zion-blue-light">;"
 
               <CardHeader>;
@@ -579,8 +421,6 @@ export default function ProfileDetail() {
                   <p className="text-zion-slate-light">No experience provided.</p>;                )}"
 
 
-                
-              
                   <div className="flex flex-col gap-3">"
                         <a;
                           key={index}
@@ -727,7 +567,6 @@ export default function ProfileDetail() {
                     href={profileData.linkedin_url}"
                     <Linkedin className="h-4 w-4" />"
 
-                  
       <Footer />
 
     </>
@@ -773,6 +612,11 @@ const [error, setError] = useState<string | null> (null);
 }Twitter ) 
 }LinkedIn ) 
 }</div> </div> </div> </div> </div> <Footer /> </>) 
+}
+    </>;
+  );
+}
+;
 
 `;
 pr-12325

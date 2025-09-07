@@ -1,34 +1,13 @@
 
 
 import React from 'react';
-<<<<<<< HEAD
 
-import { ApiDocsSpec, Visibility } from '../../data/api-docs/types';
-interface SidebarProps {
-  spec: ApiDocsSpec;
-  activeEndpointId?: string;
-
-=======
-import { ApiDocsSpec, Visibility  } from '../../data/api-docs/types';
-
-interface SidebarProps {
-  spec: ApiDocsSpec;
-  activeEndpointId?: string;
->>>>>>> origin/main
   onSelectEndpoint: (endpointId: string) => void;
   selectedVersion: string;
   onChangeVersion: (v: string) => void;
   visibilityFilter: Visibility | 'all';
 
-<<<<<<< HEAD
-  onChangeVisibility: (v: Visibility | 'all') => void
-}
 
-=======
-  onChangeVisibility: (v: Visibility | 'all') => void}
-}
-}
->>>>>>> origin/main
 
 export default function Sidebar({
   spec;

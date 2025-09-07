@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 
-
-=======
->>>>>>> origin/main
 import {
   // TODO: Implement
 }
@@ -15,10 +11,7 @@ pr-12325
   SelectValue,
 } from "@/components/ui/select";
 import { SortFilterProps } from "@/types/filters";
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/main
 export function SortFilter({ sortOption, setSortOption }: SortFilterProps) {
   return (
     <div className="mb-6">
@@ -38,6 +31,14 @@ export function SortFilter({ sortOption, setSortOption }: SortFilterProps) {
         </SelectContent>
       </Select>
     </div>
+  );
+}
+
+  );
+}
+
+}
+
 import {;
   Select,;
   SelectContent,;
@@ -93,6 +94,8 @@ function SortFilter() {
       </Select>;
     </div>);
 }
+
+)
   )
 
           <SelectItem value="price-low">Price:Low to High</SelectItem>;
@@ -136,8 +139,6 @@ export function SortFilter({ sortOption, setSortOption }: SortFilterProps) {
           <SelectItem value="experience">Most Experienced""
           <SelectItem value="price-low">Price: Low to High""
           <SelectItem value="price-high">Price: High to Low"
-        
-      
     <div className="mb - 6">;"
       <label className="text - sm font - medium text - zion - slate - light mb - 2 block">;"
       </label>;
@@ -165,3 +166,4 @@ pr-12325
 }> <SelectTrigger className="bg-zion-blue border-zion-blue-light text-white" > <SelectValue placeholder="Sort by" /> bg-zion-blue border-zion-blue-light text-white"> <SelectItem value=" relevance">Relevance</SelectItem> <SelectItem value=" rating">Highest Rating</SelectItem> <SelectItem value=" experience">Most Experienced</SelectItem> <SelectItem value=" price-low">Price: Low to High</SelectItem> <SelectItem value=" price-high" >Price: High to Low</SelectItem> </SelectContent> </Select> </div>)"
 </SelectTrigger>"
 
+import {

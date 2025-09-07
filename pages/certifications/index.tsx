@@ -1,7 +1,5 @@
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/main
+
 import { useEffect, useState  } from 'react';
 import CertificatePreview from '../../components/learn/CertificatePreview';
 export default function Certifications() {
@@ -25,12 +23,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           {leaderboard.map(u => (
             <li key={u.userId}>
               {u.name} — {u.points} pts
+            </li>          ))}
             </li>
           ))}
         </ol>
       </div>
     </div>
 );
+import { useEffect, useState } from 'react',
 import { useEffect, useState } from 'react',;
 import CertificatePreview from '../../components/learn/CertificatePreview'
 export default function Certifications() {
@@ -49,10 +49,7 @@ export default function Certifications() {
         <div className="font-medium mb-2">Your Certificates</div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
           <CertificatePreview courseId="ai-dev-foundations" />
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/main
         </div>
       </div>
       <div>

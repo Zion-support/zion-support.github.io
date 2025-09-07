@@ -33,21 +33,7 @@ interface OptimizedImageProps {
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 }
 const OptimizedImage: React.FC<OptimizedImageProps> = ({
-<<<<<<< HEAD
-  src;
-  alt;
 
-  width;
-
-=======
-  src,
-  alt,
-  width = 800,
-  height = 600,
-  className = "",
-  priority = false,
-  quality = 75,
->>>>>>> origin/main
 }) => {
   return (
     <Image
@@ -162,7 +148,6 @@ const observer = new IntersectionObserver();([entry]) => {
       {isLoading && (
         <div className="absolute inset-0 bg-gray-200 dark: bg-gray-700 animate-pulse z-10" />
       )}
-      
       {/* Next.js Image component */}
       <Image
         src={src}
@@ -218,7 +203,6 @@ width={fill ? undefined : width}``        height={fill ? undefined : height}``` 
           objectFit: fill ? 'cover' : 'contain'
         }}
       />
-      
       {/* Loading spinner */}
       {isLoading && (
         <div className="absolute inset-0 flex items-center justify-center z-20">

@@ -27,68 +27,11 @@ class ErrorMonitor {}
 });"
       return { "status": "clean", "errors": [] };"
     } catch (error) {}
-<<<<<<< HEAD
-      const errors = error.stdout || error.stderr || error.message;"`;
-      this.log("warn", `TypeScript errors "found": ${errors.length} characters`);""
-=======
-      const errors = error.stdout || error.stderr || error.message;"
-      this.log("warn", `TypeScript errors "found": ${errors.length} characters`);
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
       return { "status": "errors", "errors": errors.toString() };"
     };
   async checkLintingErrors() {}
-<<<<<<< HEAD
-      this.log("info", "Checking linting errors...");""
-      const result = execSync("npm run lint", {"cwd": this.projectRoot,"encoding": "utf8";})""
-      this.log("warn", `Linting errors "found": ${errors.length} characters`);""
-  async checkBuildErrors() {}
-      this.log("info", "Checking build errors...");""
-      const result = execSync("npm run build", {"cwd": this.projectRoot,"encoding": "utf8";})""
-      this.log("warn", `Build errors "found": ${errors.length} characters`);""
-  async checkTestErrors() {}
-      this.log("info", "Checking test errors...");""
-      const result = execSync("npm test", {"cwd": this.projectRoot,"encoding": "utf8";})""
-      this.log("warn", `Test errors "found": ${errors.length} characters`);""
-=======
-    try {}"
-      this.log("info", "Checking linting errors...");
-      const result = execSync("npm run lint", {"cwd": this.projectRoot,"encoding": "utf8";})
-        stdio: "pipe"}"
-});"
-      return { "status": "clean", "errors": [] };"
-    } catch (error) {}
-      const errors = error.stdout || error.stderr || error.message;"
-      this.log("warn", `Linting errors "found": ${errors.length} characters`);
-      return { "status": "errors", "errors": errors.toString() };"
-    };
-  };
-  async checkBuildErrors() {}
-    try {}"
-      this.log("info", "Checking build errors...");
-      const result = execSync("npm run build", {"cwd": this.projectRoot,"encoding": "utf8";})
-        stdio: "pipe"}"
-});"
-      return { "status": "clean", "errors": [] };"
-    } catch (error) {}
-      const errors = error.stdout || error.stderr || error.message;"
-      this.log("warn", `Build errors "found": ${errors.length} characters`);
-      return { "status": "errors", "errors": errors.toString() };"
-    };
-  };
-  async checkTestErrors() {}
-    try {}"
-      this.log("info", "Checking test errors...");
-      const result = execSync("npm test", {"cwd": this.projectRoot,"encoding": "utf8";})
-        stdio: "pipe"}"
-});"
-      return { "status": "clean", "errors": [] };"
-    } catch (error) {}
-      const errors = error.stdout || error.stderr || error.message;"
-      this.log("warn", `Test errors "found": ${errors.length} characters`);
-      return { "status": "errors", "errors": errors.toString() };"
-    };
-  };
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
   async scanLogFiles() {}"
     this.log("info", "Scanning log files for errors...");"
     const logFiles = [];
@@ -113,38 +56,14 @@ class ErrorMonitor {}
       /permission denied/i];
     const foundErrors = [];
     for (const logFile of logFiles) {}
-<<<<<<< HEAD
-        const content = fs.readFileSync(logFile, "utf8");""
-=======
-      try {}"
-        const content = fs.readFileSync(logFile, "utf8");
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
         const lines = content.split("\n");"
         lines.forEach((line, index) => {}
           errorPatterns.forEach(pattern => {})
             if (pattern.test(line)) {}"
               foundErrors.push({"file": logFile,"line": index + 1,"content": line.trim();}"
                 timestamp: new Date().toISOString()})};
-<<<<<<< HEAD
-          })})} catch (error) {}"`;
-        this.log("warn", `Could not read log file ${logFile}: ${error.message}`);""
-const fs = require("fs").promises;""
-const { exec } = require("child_process");""
-const util = require("child_process");"
-const execAsync = util.promisify(exec);
-    this.logFile = path.join(__dirname, "../logs/error-monitor.log");""
-=======
-          })})} catch (error) {}"
-        this.log("warn", `Could not read log file ${logFile}: ${error.message});
-const fs = require("fs").promises;
-const path = require("child_process");
-const { exec } = require("child_process");
-const util = require("child_process");"
-const execAsync = util.promisify(exec);
-class ErrorMonitor {}
-  constructor() {}"
-    this.logFile = path.join(__dirname, "../logs/error-monitor.log");
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
     this.reportFile = path.join(__dirname, "../logs/error-report.json");"
     this.lastCheck = new Date()};"
   async log(message, level = "INFO") {}"
@@ -154,74 +73,19 @@ class ErrorMonitor {}
       await fs.appendFile(this.logFile, logEntry);
       console.log(logEntry.trim())} catch (error) {}"
       console.error("Failed to write to log "file": ", error)};"
-<<<<<<< HEAD
-      const { stdout, stderr } = await execAsync(cd /workspace && npm run build 2>&1");""
-      if (stderr || stdout.includes("error") || stdout.includes("Error")) {}""
-        await this.log("Build errors detected", "ERROR");""
-=======
-  };
-  async checkBuildErrors() {}
-    try {}"
-      const { stdout, stderr } = await execAsync(cd /workspace && npm run build 2>&1");
-      if (stderr || stdout.includes("error") || stdout.includes("Error")) {}
-        await this.log("Build errors detected", "ERROR");
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
         return {"type": "build","hasErrors": true,"output": stdout + stderr;}"
           timestamp: new Date().toISOString()};
       };"
       await this.log("Build check passed", "INFO");
       return {"type": "build","hasErrors": false;}"
-<<<<<<< HEAD
-        timestamp: new Date().toISOString()};"`;
-    } catch (error) {await this.log(`Build check "failed": ${error.message}`, "ERROR");""
-=======
-        timestamp: new Date().toISOString()};"
-    } catch (error) {await this.log(`Build check "failed": ${error.message}, "ERROR");
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
       return {"type": "build","hasErrors": true,"error": error.message;}"
   async checkLintErrors() {}
-<<<<<<< HEAD
-      const { stdout, stderr } = await execAsync(cd /workspace && npm run lint 2>&1");""
-        await this.log("Lint errors detected", "ERROR");""
-        return {"type": "lint","hasErrors": true,"output": stdout + stderr;}"
-      await this.log("Lint check passed", "INFO");""
-      return {"type": "lint","hasErrors": false;}"
-    } catch (error) {await this.log(`Lint check "failed": ${error.message}`, "ERROR");""
-=======
-    try {}"
-      const { stdout, stderr } = await execAsync(cd /workspace && npm run lint 2>&1");
-      if (stderr || stdout.includes("error") || stdout.includes("Error")) {}
-        await this.log("Lint errors detected", "ERROR");
-        return {"type": "lint","hasErrors": true,"output": stdout + stderr;}"
-          timestamp: new Date().toISOString()};
-      };"
-      await this.log("Lint check passed", "INFO");
-      return {"type": "lint","hasErrors": false;}"
-        timestamp: new Date().toISOString()};"
-    } catch (error) {await this.log(`Lint check "failed": ${error.message}, "ERROR");
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
       return {"type": "lint","hasErrors": true,"error": error.message;}"
   async checkTypeErrors() {}
-<<<<<<< HEAD
-      const { stdout, stderr } = await execAsync(cd /workspace && npm run type-check 2>&1");""
-        await this.log("TypeScript errors detected", "ERROR");""
-        return {"type": "typescript","hasErrors": true,"output": stdout + stderr;}"
-      await this.log("TypeScript check passed", "INFO");""
-      return {"type": "typescript","hasErrors": false;}"
-    } catch (error) {await this.log(`TypeScript check "failed": ${error.message}`, "ERROR");""
-=======
-    try {}"
-      const { stdout, stderr } = await execAsync(cd /workspace && npm run type-check 2>&1");
-      if (stderr || stdout.includes("error") || stdout.includes("Error")) {}
-        await this.log("TypeScript errors detected", "ERROR");
-        return {"type": "typescript","hasErrors": true,"output": stdout + stderr;}"
-          timestamp: new Date().toISOString()};
-      };"
-      await this.log("TypeScript check passed", "INFO");
-      return {"type": "typescript","hasErrors": false;}"
-        timestamp: new Date().toISOString()};"
-    } catch (error) {await this.log(`TypeScript check "failed": ${error.message}, "ERROR");
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
       return {"type": "typescript","hasErrors": true,"error": error.message;}"
   async triggerFixes(errorTypes) {}
     for (const errorType of errorTypes) {}
@@ -233,15 +97,7 @@ class ErrorMonitor {}
           case "lint":
             await this.log("Auto-fixing lint errors", "INFO");
             await execAsync(cd /workspace && npm run lint -- --fix 2>/dev/null || true");"
-<<<<<<< HEAD
-          case "typescript":""
-            await this.log("Triggering TypeScript error fixer", "INFO");""
-=======
-            break;"
-          case "typescript":
-            await this.log("Triggering TypeScript error fixer", "INFO");
-            exec("pm2 restart syntax-fixer");"
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
             break};
       } catch (error) {}"
         await this.log(Failed to trigger fix for ${errorType}: ${error.message}";)
@@ -272,13 +128,7 @@ class ErrorMonitor {}
     const reportFile = path.join()
       this.reportsDir;"`;
       `error-report-${new Date().toISOString().replace(/[:.]/g, "-")}.json`);"
-<<<<<<< HEAD
-    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));"`;
-    this.log("info", `Error report saved to ${reportFile}`);""`;
-=======
-    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));"
-    this.log("info", `Error report saved to ${reportFile});
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
     this.log("info", `"Summary": ${report.summary.totalIssues} total issues (${report.summary.criticalIssues} critical, ${report.summary.warnings} warnings)`);"
     return report};
   async run() {}"
@@ -288,60 +138,18 @@ class ErrorMonitor {}
       if (report.summary.criticalIssues > 0) {}"
         this.log("warn", "Critical issues detected, attempting to fix...");"
         await this.attemptAutoFix(report)};
-<<<<<<< HEAD
-      return report} catch (error) {}"`;
-      this.log("error", `Error monitoring "failed": ${error.message}`);"
-=======
-      return report} catch (error) {}"
-      this.log("error", `Error monitoring "failed": ${error.message});"
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
       throw error};
   async attemptAutoFix(report) {}"
     this.log("info", "Attempting automatic fixes...");"
     // Try to run syntax fixer;
-<<<<<<< HEAD
-      this.log("info", "Running syntax fixer...");""
-      execSync("node scripts/automation/syntax-error-fixer.cjs", {"cwd": this.projectRoot,"stdio": "pipe"}")
-      this.log("info", "Syntax fixer completed")} catch (error) {}""`;
-      this.log("warn", `Syntax fixer "failed": ${error.message}`)};"
-    // Try to run TypeScript fixer;
-      this.log("info", "Running TypeScript fixer...");""
-      execSync("node scripts/automation/typescript-error-fixer.cjs", {"cwd": this.projectRoot,"stdio": "pipe"}")
-      this.log("info", "TypeScript fixer completed")} catch (error) {}""`;
-      this.log("warn", `TypeScript fixer "failed": ${error.message}`)};"
-=======
-    try {}"
-      this.log("info", "Running syntax fixer...");
-      execSync("node scripts/automation/syntax-error-fixer.cjs", {"cwd": this.projectRoot,"stdio": "pipe"}")
-});"
-      this.log("info", "Syntax fixer completed")} catch (error) {}
-      this.log("warn", `Syntax fixer "failed": ${error.message})};"
-    // Try to run TypeScript fixer;
-    try {}"
-      this.log("info", "Running TypeScript fixer...");
-      execSync("node scripts/automation/typescript-error-fixer.cjs", {"cwd": this.projectRoot,"stdio": "pipe"}")
-});"
-      this.log("info", "TypeScript fixer completed")} catch (error) {}
-      this.log("warn", `TypeScript fixer "failed": ${error.message})};"
-  };
-};
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
 // Run error monitoring if this script is executed directly;
 if (require.main === module) {}
   const errorMonitor = new ErrorMonitor();
   errorMonitor.run();
     .then(report => {})"
-<<<<<<< HEAD
-      console.log("\n=== Error Monitoring Results ===");""`;
-      console.log(`Total "Issues": ${report.summary.totalIssues}`);""`;
-      console.log(`Critical "Issues": ${report.summary.criticalIssues}`);""`;
-      console.log(`"Warnings": ${report.summary.warnings}`);"
-=======
-      console.log("\n=== Error Monitoring Results ===");
-      console.log(`Total "Issues": ${report.summary.totalIssues});
-      console.log(`Critical "Issues": ${report.summary.criticalIssues});
-      console.log(`"Warnings": ${report.summary.warnings});"
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
       process.exit(report.summary.criticalIssues > 0 ? 1 : 0)}
     .catch(error => {})"
       console.error("Error monitoring "failed": ", error);"
@@ -353,11 +161,7 @@ module.exports = ErrorMonitor;
   monitor.run();
   setInterval(() => monitor.run(), 5 * 60 * 1000);
   // Keep process alive;"
-<<<<<<< HEAD
-  process.on("SIGINT", () => {}""
-=======
-  process.on("SIGINT", () => {}
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
     monitor.log("Error monitor shutting down", "INFO');
     process.exit(0)})};
 `;

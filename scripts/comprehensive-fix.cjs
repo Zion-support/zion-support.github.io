@@ -1,24 +1,4 @@
-<<<<<<< HEAD
-#!/usr/bin/env node;
-const fs = require('fs');
-const path = require('path');
-console.log('🔧 Comprehensive fix for all files...');
-// List of problematic files;
-const filesToFix = [
-  'pages/about.tsx',
-  'pages/blog.tsx',
-  'pages/contact.tsx',
-  'pages/services.tsx',
-  'pages/talent.tsx]
-=======
-#!/usr/bin/env node
-const fs = require('fs');
-const path = require('path');
-console.log('🔧 Comprehensive fix for all files...);
-// List of problematic files;
-const filesToFix = [
-  'pages/about.tsx,pages/blog.tsx,pages/contact.tsx,pages/services.tsx,pages/talent.tsx]
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
 ];
 
 function fixFile(filePath) {
@@ -28,19 +8,10 @@ function fixFile(filePath) {
     if (!fs.existsSync(filePath)) {
       console.log(`⚠️  File not found: ${filePath});
       return false;
-<<<<<<< HEAD
 
-    let content = fs.readFileSync(filePath, 'utf8');
-=======
-    }
-'
-    let content = fs.readFileSync(filePath,utf8);
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
     // Remove all merge conflict markers;
     content = content.replace(/
-    
-    // Fix common syntax issues;)
-<<<<<<< HEAD
+
     content = content.replace(/md: text-2xl/g, 'md:text-2xl');
     content = content.replace(/import MainLayout from '\.\.\/components\/layout\/MainLayout';[\s\S]*?const blogPosts/g, 'const blogPosts');
     content = content.replace(/,\s*"title":/g, ',');
@@ -53,22 +24,8 @@ function fixFile(filePath) {
     // Write the fixed content;
     fs.writeFileSync(filePath, content);`;
     console.log(`✅ Fixed: ${filePath}`);
-=======
-    content = content.replace(/md: text-2xl/g,md:text-2xl');
-    content = content.replace(/import MainLayout from '\.\.\/components\/layout\/MainLayout';[\s\S]*?const blogPosts/g,const blogPosts');
-    content = content.replace(/,\s*"title":/g,,);
-    content = content.replace(/,\s*"description":/g,,);
-    content = content.replace(/,\s*"icon":/g,,);
-    content = content.replace(/,\s*"href":/g,,);
-    // Clean up extra whitespace and newlines;
-    content = content.replace(/\n\n\n+/g,\n\n');
-    content = content.replace(/\s+$/gm, );
-    // Write the fixed content;
-    fs.writeFileSync(filePath, content);
-    console.log(`✅ Fixed: ${filePath});
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
     return true;
-    
   } catch (error) {`;
     console.error(`❌ Error fixing ${filePath}:`, error.message);
 

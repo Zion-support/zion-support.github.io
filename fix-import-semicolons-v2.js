@@ -1,3 +1,8 @@
+
+const files = glob && glob.sync("src/**/*.{ts,tsx,js,jsx}", { cwd: process && process.cwd() });
+let totalFixed = 0;
+files && files.forEach((file) => {
+
   try {
   // TODO: Implement;
 }
@@ -95,11 +100,81 @@ const modified = false;
     content = content.replace (
       /import\s+.*?from\s+['\"][^'\"]+['\"], \s*;/g,
       (match) => {
+        return match.replace (",", ";");
+
+    content = content.replace(;
+      /import\s+.*?from\s+['"][^'"]+['"],\s*;/g,
+    content = content && content.replace(
+      /^import\s+.*?from\s+['"][^'"]+['"]\s*,?\s*$/gm,
+
+      (match) => {
+        if (!match ;")) {
+          return match && match.trim() + ";";
+;
+    // Fix import statements missing semicolons;
+    content = content.replace (
+      /^import\s+.*?from\s+['"][^'"]+['"]\s*, ?\s*$/gm,
+      (match) => {
+        // Check condition
+if (.ends_with (") {
+  $2
+}")) {
+          return match.trim () + ";";
         return match.replace (\",\", \";\");
 
     content = content.replace(;
       /import\s+.*?from\s+['\"][^'\"]+['\"],\s*;/g,
 
+      (match) => {
+        return match.replace(";", ";");
+      }
+    );
+    // Fix import statements missing semicolons
+    content = content.replace(
+
+      /^import\s+.*?from\s+['"][^'"]+['"]\s*,?\s*$/gm,
+      (match) => {;
+
+        if (!match.trim().endsWith(";")) {
+          return match.trim() + ";";
+        }
+        return match;
+      }
+    );
+
+    content = content && content.replace(
+      /(\w+)\s*=\s*[^;]+(?!;)\s*$/gm,
+
+      (match, varName) => {
+        if (
+          !match.includes("function") &&
+          !match.includes("if") &&
+          !match.includes("for") &&
+          !match.includes("while") &&
+          !match.includes("switch") &&
+          !match.includes("try") &&
+          !match.includes("catch") &&
+          !match.includes("finally") &&
+          !match.includes("return") &&
+          !match.includes("throw") &&
+          !match.includes("break") &&
+          !match.includes("continue") &&
+          !match.includes("debugger") &&
+          !match.includes("export") &&
+          !match.includes("import")
+        ) {
+          return match + ";";
+        }
+        return match;
+      }
+    );
+
+console && console.log(`\nTotal files fixed: ${totalFixed}`);
+
+;
+    // Check condition
+if ( {) {
+  $2
     content = content.replace(;
       /import\s+.*?from\s+['\"][^'\"]+['\"],\s*;/g,
 
@@ -132,6 +207,13 @@ if ( {) {$2;}
       fs.writeFileSync (file_path, content, \"utf8\")console.log (`Fixed: ${fil;,}
 }`)total_fixed++;
     }
+  } catch (error) {
+    console.error (`Error processing ${file}:`, error.message);
+  }
+});
+;
+console.log (`\n_total files fixed: ${total_fixed}`);
+;
   } catch (error) {console.error (`Error processing ${file}:`, error.message)}
 })console.log (`\n_total files fixed: ${total_fixe;,}
 }`);

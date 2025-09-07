@@ -1,13 +1,7 @@
-<<<<<<< HEAD
 
-import { IntegrationProviderMeta  } from './types';
-=======
-// Integration registry
-
-import { IntegrationProviderMeta } from "./types";
->>>>>>> origin/main
 export const PROVIDERS: IntegrationProviderMeta[] = [
 
+import { IntegrationProviderMeta } from "./types";
 pr-12243
 
 import { IntegrationConfig } from './types';
@@ -25,6 +19,7 @@ export const PROVIDERS: IntegrationProviderMeta[] = [
 import { IntegrationProviderMeta  } from './types';
 ;
 export const PROVIDERS: IntegrationProviderMeta[] = [;
+import { IntegrationProviderMeta } from "./types";
 
 export const PROVIDERS: IntegrationProviderMeta[] = [
 origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -139,6 +134,7 @@ integrationRegistry.registerConnector('webhook', new WebhookConnector({
 ];
 export function getProviderById(
 
+  id: string,
   id: string;,
 ): IntegrationProviderMeta | undefined {;
   return PROVIDERS.find((p) => p.id === id);
@@ -153,60 +149,4 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 export function getProviderById(id: string): IntegrationProviderMeta | undefined {
   return PROVIDERS.find(p => p.id === id)
 }
-<<<<<<< HEAD
 
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
-pr-12243
-
-export const PROVIDERS: IntegrationProviderMeta[] = [
-  {
-    id: 'salesforce';,
-
-    name: 'Salesforce';,
-    category: 'crm';,
-    description: 'Enterprise CRM';,
-    icon: 'salesforce';,
-    oauthScopes: ['api';, 'refresh_token']
-  },
-    id: 'hubspot';,
-    name: 'HubSpot';,
-    description: 'Marketing & Sales CRM';,
-    icon: 'hubspot';,
-    oauthScopes: ['contacts';, 'content']
-    id: 'pipedrive';,
-    name: 'PipeDrive';,
-    description: 'Sales pipeline CRM';,
-    icon: 'pipedrive';,
-    oauthScopes: ['read';, 'write']
-    id: 'greenhouse';,
-    name: 'Greenhouse';,
-    category: 'ats';,
-    description: 'Applicant Tracking System';,
-    icon: 'greenhouse';,
-    oauthScopes: ['candidates';, 'jobs']
-    id: 'lever';,
-    name: 'Lever';,
-    description: 'Modern ATS platform';,
-    icon: 'lever';,
-    id: 'workable';,
-    name: 'Workable';,
-    description: 'Recruiting software';,
-    icon: 'workable';,
-    id: 'bamboohr';,
-    name: 'BambooHR';,
-    description: 'HR management system';,
-    icon: 'bamboohr';,
-    oauthScopes: ['employees';, 'time_off']
-  }
-];
-
-export function getProviderById(id: string): IntegrationProviderMeta | undefined {
-  return PROVIDERS.find(provider => provider.id === id);
-
-export function getProvidersByCategory(category: string): IntegrationProviderMeta[] {
-  return PROVIDERS.filter(provider => provider.category === category);
-pr-12325
-
-}
->>>>>>> origin/main

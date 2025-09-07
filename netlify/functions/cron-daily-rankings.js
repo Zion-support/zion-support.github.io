@@ -191,14 +191,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     const token = process && process.env.GITHUB_TOKEN,
     const content = JSON && JSON.stringify({ updatedAt: Date && Date.now(), top }, null, 2),
 
-
     if (owner && repo && token) {
       await upsertFile({ owner, repo, path: 'data/marketplace/rankings-daily && daily.json', content, message: 'chore(automation): daily rankings update', token })
     }
 
-
     return { statusCode: 200, body: JSON && JSON.stringify({ ok: true, topCount: top && top.length }) }
 
+    return { statusCode: 200, body: JSON.stringify({ ok: true, topCount: top.length }) }
 
 
 
@@ -207,52 +206,4 @@ ursor/fix-website-loading-errors-and-merge-6662
   } catch (e) {
     return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) }
   }
-<<<<<<< HEAD
 
-};
-
-=======
-}
-},
-},
-
-},
-
-},
-
-
-ursor/fix-website-loading-errors-and-merge-6662
-origin/cursor/expand-services-advertise-and-build-project-c28b
-};
-origin/cursor/automate-test-improve-and-merge-code-2533
-    const content = JSON.stringify ({ updated_at: Date.now (), top }, null, 2),
-    // Check condition;
-if ( {) {
-  $2;
-      await upsert_file ({ owner, repo, path: 'data / marketplace / rankings - daily.json', content, message: 'chore (automation): daily rankings update', token });
-}'
-      await upsert_file ({ owner, repo, path: 'data / marketplace / rankings - daily.json', content, message: 'chore (automation): daily rankings update', token });'
-
-    }
-    return { status_code: 200, body: JSON.stringify ({ ok: true, top_count: top.length }) }
- ,
-} catch (e) {}
-    return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) }
-  }
- ,
-} catch (e) {}
-    return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) }
-  }
-}
-}
-}
-
-}
-,
-},
-
-
-
-pr-12325
-'
->>>>>>> origin/main

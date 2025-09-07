@@ -11,6 +11,8 @@ function fixMergeConflicts(filePath) {
     let content = fs.readFileSync(filePath, 'utf8');
     const originalContent = content;
     
+    // Remove merge conflict markers and keep HEAD version
+    content = content.replace(/[\s\S]*?[\s\S]*?    content = content.replace(/[\s\S]*?    
     // Remove merge conflict markers and keep HEAD version;
     content = content.replace(/    content = content.replace(/    
 
@@ -45,6 +47,13 @@ function getAllFiles() {
         files = files.concat (getAllFiles (full_path, extensions));
       } else if ()) {) {
         files.push (full_path);
+function getAllFiles(dir, extensions) {let files = [];
+const { execSync } = require('child_process'),;
+const fs = require('fs'),;
+const path = require('path'),;
+const { execSync } = require('child_process');
+const fs = require('fs');
+const path = require('path');
 
 
 const { execSync } = require('child_process'),;
@@ -54,6 +63,8 @@ console.log('🚀 Starting comprehensive merge conflict resolution and PR mergin
 // Function to fix merge conflicts in a file;
 function fixMergeConflicts(filePath) {;
     let content = fs.readFileSync(filePath, 'utf8'),;
+    const originalContent = content;
+    // Remove merge conflict markers and keep HEAD version;
     // Remove merge conflict markers and keep HEAD version;
 
     // Remove merge conflict markers and keep HEAD version;
@@ -63,6 +74,10 @@ function fixMergeConflicts(filePath) {;
     // Remove merge conflict markers and keep HEAD version;
     content = content.replace(/[\s\S]*?
     content = content.replace(/
+    const originalContent = content;
+    // Remove merge conflict markers and keep HEAD version;
+    content = content.replace(/[\s\S]*?[\s\S]*?    content = content.replace(/[\s\S]*?    if (content !== originalContent) {;
+      fs.writeFileSync(filePath, content, 'utf8'),;
     // Remove merge conflict markers and keep HEAD version;)
     if (content !== originalContent) {;
 
@@ -79,6 +94,7 @@ function getAllFiles(dir, extensions) {;
     const items = fs.readdirSync(dir),;
       const fullPath = path.join(dir, item),;
       const stat = fs.statSync(fullPath),;
+// Function to get all files recursively
 
 // Function to get all files recursively;
 function getAllFiles(dir, extensions) {
@@ -161,6 +177,23 @@ async function main() {
         // Commit the merge;"
         execSync('git commit -m "feat: resolve merge conflicts automatically\n\n- Resolved merge conflicts by accepting appropriate versions\n- Integrated latest changes from main branch\n- All services and improvements preserved"');
     let fixedCount = 0;
+    for (const file of files) {;
+      try {;
+        const content = fs.readFileSync(file, 'utf8'),;
+          if (fixMergeConflicts(file)) {;
+    
+    for (const file of files) {
+      try {
+        const content = fs.readFileSync(file, 'utf8');
+        if (content.includes('') || content.includes('') || content.includes('>>>>>>>')) {
+          if (fixMergeConflicts(file)) {
+            fixedCount++;
+          }
+        }
+      } catch (error) {
+        // Skip files that can't be read
+      }
+    }
         const content = fs.readFileSync(file, 'utf8'),;
           if (fixMergeConflicts(file)) {;
 
@@ -248,5 +281,11 @@ main().catch(console.error),;
         // Check condition;
 if (|| content.includes (') {
 
+;
+    // Now scan for and fix any remaining merge conflicts in files;
+    console.log('🔍 Scanning for merge conflicts in files...'),;
+    const files = getAllFiles(process.cwd(), ['.tsx.ts.jsx.js', '.json.md.css']),;
+
+main().catch(console.error);
 main().catch(console.error);
 `;

@@ -17,94 +17,43 @@ class AISecurityIntelligence {
       fs.mkdirSync(logDir, { recursive: true });
 
   log(message) {
-<<<<<<< HEAD
-    console.log(`[AI Security Intelligence] ${message}`);
-=======
-    console.log(`[AI Security Intelligence] ${message});
-  }
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
 
   async runSecurityAnalysis() {
     this.log('Starting AI-powered security analysis...);
-    
     const analysis = {
       timestamp: new Date().toISOString(),
       vulnerabilities: [],
       securityIssues: [],
       recommendations: [],
       riskScore: 0,
-<<<<<<< HEAD
-      status: 'safe
-    };
-=======
-      status: safe};
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
 
     try {
       // Run npm audit
       await this.runNpmAudit(analysis);
-      
       // Analyze environment variables
       await this.analyzeEnvironmentVariables(analysis);
-      
       // Analyze dependencies
       await this.analyzeDependencies(analysis);
-      
       // Analyze code for security issues
       await this.analyzeCodeSecurity(analysis);
-      
       // Analyze configuration files
       await this.analyzeConfigurationFiles(analysis);
-      
       // Calculate risk score
       analysis.riskScore = this.calculateRiskScore(analysis);
       analysis.status = this.determineSecurityStatus(analysis.riskScore);
-      
       // Generate recommendations
       this.generateSecurityRecommendations(analysis);
-      
       // Save report
       fs.writeFileSync(this.reportFile, JSON.stringify(analysis, null, 2));
-<<<<<<< HEAD
-      `;
-      this.log(`Security analysis complete. Risk score: ${analysis.riskScore}/100`);`;
-      this.log(`Security status: ${analysis.status}`);`;
-      this.log(`Report saved to: ${this.reportFile}`);
-      
-      return analysis;
-    } catch (error) {`;
-      this.log(`Error during security analysis: ${error.message}`);
-=======
-      
-      this.log(`Security analysis complete. Risk score: ${analysis.riskScore}/100`);
-      this.log(`Security status: ${analysis.status});
-      this.log(`Report saved to: ${this.reportFile});
-      
-      return analysis;
-    } catch (error) {
-      this.log(`Error during security analysis: ${error.message});
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
       analysis.error = error.message;
 
   async runNpmAudit(analysis) {
     this.log('Running npm audit...);
-    
-<<<<<<< HEAD
-      const auditResult = execSync('npm audit --json', { 
-        encoding: 'utf8', 
-        cwd: this.workspaceRoot,
-        stdio: 'pipe
-      });
-=======
-    try {
-      const auditResult = execSync('npm audit --json, { 
-        encoding: utf8, 
-        cwd: this.workspaceRoot,
-        stdio: pipe});
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
-      
+
       const auditData = JSON.parse(auditResult);
-      
       if (auditData.vulnerabilities) {
         Object.entries(auditData.vulnerabilities).forEach(([name, vuln]) => {
           analysis.vulnerabilities.push({
@@ -113,248 +62,95 @@ class AISecurityIntelligence {
             title: vuln.title,
             description: vuln.description,
             recommendation: vuln.recommendation
-      
       analysis.metrics = {
         totalVulnerabilities: auditData.metadata?.vulnerabilities?.total || 0,
         high: auditData.metadata?.vulnerabilities?.high || 0,
         moderate: auditData.metadata?.vulnerabilities?.moderate || 0,
         low: auditData.metadata?.vulnerabilities?.low || 0,
         info: auditData.metadata?.vulnerabilities?.info || 0
-      
     } catch (error) {
       this.log('npm audit failed or no vulnerabilities found');
       analysis.metrics = { totalVulnerabilities: 0, high: 0, moderate: 0, low: 0, info: 0 };
 
   async analyzeEnvironmentVariables(analysis) {
     this.log('Analyzing environment variables...);
-    
     const envFiles = [.env,.env.local,.env.production,.env.development];
     const envIssues = [];
-    
     envFiles.forEach(envFile => {
       const envPath = path.join(this.workspaceRoot, envFile);
       if (fs.existsSync(envPath)) {
         const content = fs.readFileSync(envPath,utf8);
         const lines = content.split('\n');
-        
         lines.forEach((line, index) => {
           if (line.includes('PASSWORD') || line.includes('SECRET') || line.includes('KEY')) {
             if (line.includes('=') && !line.includes('=')) {
               envIssues.push({
                 file: envFile,
                 line: index + 1,
-<<<<<<< HEAD
-                issue: 'Potential hardcoded secret',
-                severity: 'high
-          
-          if (line.includes('NODE_ENV=development') && envFile.includes('production')) {
-              issue: 'Development environment in production file',
-              severity: 'medium
-=======
-                issue: Potential hardcoded secret,
-                severity: high});
-            }
-          }
-          
-          if (line.includes('NODE_ENV=development') && envFile.includes('production')) {
-            envIssues.push({
-              file: envFile,
-              line: index + 1,
-              issue: Development environment in production file,
-              severity: medium});
-          }
-        });
-      }
-    });
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
-    
+
     analysis.securityIssues = analysis.securityIssues.concat(envIssues);
 
   async analyzeDependencies(analysis) {
     this.log('Analyzing dependencies...);
-    
     const packageJsonPath = path.join(this.workspaceRoot,package.json');
     if (!fs.existsSync(packageJsonPath)) {
       return;
-    
     const packageJson = JSON.parse(fs.readFileSync(packageJsonPath,utf8));
     const dependencies = { ...packageJson.dependencies, ...packageJson.devDependencies };
-    
     const suspiciousPackages = [];
-<<<<<<< HEAD
-    const knownVulnerablePackages = [
-      'lodash', 'moment', 'jquery', 'express', 'request
-    ];
-=======
-    const knownVulnerablePackages = [lodash,moment,jquery,express,request];
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
-    
+
     Object.keys(dependencies).forEach(dep => {
       if (knownVulnerablePackages.includes(dep)) {
         suspiciousPackages.push({
           package: dep,
           version: dependencies[dep],
-<<<<<<< HEAD
-          issue: 'Known vulnerable package',
-      
-      // Check for packages with suspicious names
-      if (dep.includes('crypto') || dep.includes('hash') || dep.includes('encrypt')) {
-          issue: 'Crypto-related package - verify authenticity',
-          severity: 'low
-=======
-          issue: Known vulnerable package,
-          severity: medium});
-      }
-      
-      // Check for packages with suspicious names
-      if (dep.includes('crypto') || dep.includes('hash') || dep.includes('encrypt')) {
-        suspiciousPackages.push({
-          package: dep,
-          version: dependencies[dep],
-          issue: Crypto-related package - verify authenticity,
-          severity: low});
-      }
-    });
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
-    
+
     analysis.securityIssues = analysis.securityIssues.concat(suspiciousPackages);
 
   async analyzeCodeSecurity(analysis) {
     this.log('Analyzing code for security issues...);
-    
     const srcDir = path.join(this.workspaceRoot,src');
     if (!fs.existsSync(srcDir)) {
-    
     const codeFiles = this.findFiles(srcDir, [.ts,.tsx,.js,.jsx]);
     const codeIssues = [];
-    
     codeFiles.forEach(file => {
       const content = fs.readFileSync(file,utf8);
-      
       // Check for dangerous patterns
       if (content.includes('eval(') || content.includes('Function(')) {
         codeIssues.push({
           file: path.relative(this.workspaceRoot, file),
-<<<<<<< HEAD
-          issue: 'Use of eval() or Function() constructor',
-          severity: 'high',
-          recommendation: 'Avoid dynamic code execution
-      
-      if (content.includes('innerHTML') && !content.includes('textContent')) {
-          issue: 'Potential XSS vulnerability with innerHTML',
-          severity: 'medium',
-          recommendation: 'Use textContent or sanitize HTML
-      
-      if (content.includes('localStorage') && content.includes('password')) {
-          issue: 'Potential password storage in localStorage',
-          recommendation: 'Use secure storage methods
-      
-      if (content.includes('http://') && !content.includes('localhost')) {
-          issue: 'Insecure HTTP protocol usage',
-          recommendation: 'Use HTTPS for production
-=======
-          issue: Use of eval() or Function() constructor,
-          severity: high,
-          recommendation: Avoid dynamic code execution});
-      }
-      
-      if (content.includes('innerHTML') && !content.includes('textContent')) {
-        codeIssues.push({
-          file: path.relative(this.workspaceRoot, file),
-          issue: Potential XSS vulnerability with innerHTML,
-          severity: medium,
-          recommendation: Use textContent or sanitize HTML});
-      }
-      
-      if (content.includes('localStorage') && content.includes('password')) {
-        codeIssues.push({
-          file: path.relative(this.workspaceRoot, file),
-          issue: Potential password storage in localStorage,
-          severity: high,
-          recommendation: Use secure storage methods});
-      }
-      
-      if (content.includes('http://) && !content.includes('localhost')) {
-        codeIssues.push({
-          file: path.relative(this.workspaceRoot, file),
-          issue: Insecure HTTP protocol usage,
-          severity: medium,
-          recommendation: Use HTTPS for production});
-      }
-    });
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
-    
+
     analysis.securityIssues = analysis.securityIssues.concat(codeIssues);
 
   async analyzeConfigurationFiles(analysis) {
     this.log('Analyzing configuration files...);
-    
-<<<<<<< HEAD
-    const configFiles = [
-      'next.config.js',
-      'vite.config.ts',
-      'tsconfig.json',
-      'eslint.config.js',
-      'netlify.toml
-=======
-    const configFiles = [next.config.js,vite.config.ts,tsconfig.json,eslint.config.js,netlify.toml];
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
-    
+
     const configIssues = [];
-    
     configFiles.forEach(configFile => {
       const configPath = path.join(this.workspaceRoot, configFile);
       if (fs.existsSync(configPath)) {
         const content = fs.readFileSync(configPath,utf8);
-        
         // Check for security-related configurations
         if (content.includes('cors') && !content.includes('origin')) {
           configIssues.push({
             file: configFile,
-<<<<<<< HEAD
-            issue: 'CORS configuration may be too permissive',
-            recommendation: 'Specify allowed origins
-        
-        if (content.includes('helmet') && !content.includes('contentSecurityPolicy')) {
-            issue: 'Missing Content Security Policy',
-            recommendation: 'Implement CSP headers
-=======
-            issue: CORS configuration may be too permissive,
-            severity: medium,
-            recommendation: Specify allowed origins});
-        }
-        
-        if (content.includes('helmet') && !content.includes('contentSecurityPolicy')) {
-          configIssues.push({
-            file: configFile,
-            issue: Missing Content Security Policy,
-            severity: medium,
-            recommendation: Implement CSP headers});
-        }
-      }
-    });
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
-    
+
     analysis.securityIssues = analysis.securityIssues.concat(configIssues);
 
   findFiles(dir, extensions) {
     let files = [];
     const items = fs.readdirSync(dir);
-    
     items.forEach(item => {
       const fullPath = path.join(dir, item);
       const stat = fs.statSync(fullPath);
-      
       if (stat.isDirectory()) {
         files = files.concat(this.findFiles(fullPath, extensions));
       } else if (extensions.some(ext => item.endsWith(ext))) {
         files.push(fullPath);
-    
     return files;
 
   calculateRiskScore(analysis) {
     let score = 0;
-    
     // Add points for vulnerabilities
     analysis.vulnerabilities.forEach(vuln => {
       switch (vuln.severity) {
@@ -363,37 +159,13 @@ class AISecurityIntelligence {
           break;
         case 'moderate:
           score += 10;
-<<<<<<< HEAD
-        case 'low':
-          score += 5;
-        case 'info':
-=======
-          break;
-        case 'low:
-          score += 5;
-          break;
-        case 'info:
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
           score += 1;
-    
     // Add points for security issues
     analysis.securityIssues.forEach(issue => {
       switch (issue.severity) {
-<<<<<<< HEAD
-          score += 15;
-        case 'medium':
-          score += 8;
-=======
-        case 'high:
-          score += 15;
-          break;
-        case 'medium:
-          score += 8;
-          break;
-        case 'low:
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
           score += 3;
-    
     return Math.min(100, score);
 
   determineSecurityStatus(riskScore) {
@@ -406,60 +178,10 @@ class AISecurityIntelligence {
   generateSecurityRecommendations(analysis) {
     if (analysis.metrics?.high > 0) {
       analysis.recommendations.push({
-<<<<<<< HEAD
-        priority: 'critical',
-        category: 'vulnerabilities',
-        message: 'Address high-severity vulnerabilities immediately
-    
-    if (analysis.metrics?.moderate > 0) {
-        priority: 'high',
-        message: 'Update packages with moderate vulnerabilities
-=======
-        priority: critical,
-        category: vulnerabilities,
-        message: Address high-severity vulnerabilities immediately});
-    }
-    
-    if (analysis.metrics?.moderate > 0) {
-      analysis.recommendations.push({
-        priority: high,
-        category: vulnerabilities,
-        message: Update packages with moderate vulnerabilities});
-    }
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
-    
+
     const highSeverityIssues = analysis.securityIssues.filter(issue => issue.severity ===high');
     if (highSeverityIssues.length > 0) {
-<<<<<<< HEAD
-        category: 'code',
-        message: 'Fix high-severity security issues in code
-    
-      priority: 'medium',
-      category: 'general',
-      message: 'Implement security headers and CSP
-    
-      priority: 'low',
-      category: 'monitoring',
-      message: 'Set up automated security monitoring
-=======
-      analysis.recommendations.push({
-        priority: high,
-        category: code,
-        message: Fix high-severity security issues in code});
-    }
-    
-    analysis.recommendations.push({
-      priority: medium,
-      category: general,
-      message: Implement security headers and CSP});
-    
-    analysis.recommendations.push({
-      priority: low,
-      category: monitoring,
-      message: Set up automated security monitoring});
-  }
-}
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
 
 // CLI interface
 if (require.main === module) {

@@ -1,23 +1,4 @@
-<<<<<<< HEAD
 
-import { useEffect, useState  } from 'react';
-import Head from 'next/head',
-
-export default function AutomationInsightsPage() {
-  const [intel, setIntel] = useState<any>(null);
-  const [talentMd, setTalentMd] = useState<string>('');
-=======
-return (<div> <Head><title>Automation Insights — Zion</title></Head>) ) 
- return (<div> <Head><title>Automation Insights — Zion</title></Head>) ) 
-}</ul> </div> </div>) 
-
-
-}</section>) : (<pre className="mt-3 whitespace-pre-wrap text-sm bg-gray-50 dark:bg-gray-900 p-3 rounded border border-gray-200 dark:border-gray-800" > {
-  talentMd
-}</pre>)
-}</section> </div>) import { useEffect, useState } from 'react';
-import Head from 'next/head';
->>>>>>> origin/main
 
 
 
@@ -35,36 +16,7 @@ const [talentMd, setTalentMd] = useState<string />('');
 }
     fetch('/data/automation/market-intel.json').then((r) => r.json()).then(setIntel).catch(() => {});
     fetch('/data/automation/talent-highlights.md').then((r) => r.text()).then(setTalentMd).catch(() => {})
-<<<<<<< HEAD
-  }, []);
 
-
-  return (
-    <div>
-      <Head><title>Automation Insights — Zion</title></Head>
-      <h1 className="text-2xl font-semibold mb-4">Automation Insights</h1>
-      <section className="mb-8">
-        <h2 className="font-medium">Market Intelligence</h2>
-=======
-return (<div /> <Head /><title  /> Automation Insights — Zion</title></Head>) );
-}</ul> </div> </div>);
-}</section>) : (<pre className=\"mt - 3 whitespace - pre - wrap text - sm bg - gray - 50 dark: bg - gray - 900 p - 3 rounded border border - gray - 200 dark:border - gray - 800\"  /> {;}
-  talent_md;}
-}</pre>);
-}</section> </div>) import { useEffect, useState } from 'react';
-
-import Head from 'next / head';
-
-export default /**;
- * AutomationInsightsPage - Function description;
- */;
-function AutomationInsightsPage() {const [intel, set_intel] = useState < any>(null)const [talent_md, setTalentMd]  = useState < string>('')useEffect (() => {fetch ('/data / automation / market - intel.json').then ((r) => r.json ()).then (set_intel).catch (() => {})fetch ('/data / automation / talent - highlights.md').then ((r) => r.text ()).then (setTalentMd).catch (() => {})}, [])return (<div />;
-      <Head /><title  /> Automation Insights — Zion</title></Head>;"
-      <h1 className=\"text - 2xl font - semibold mb - 4\" />Automation Insights</h1>;"
-      <section className=\"mb - 8\" />;"
-        <h2 className=\"font - medium\" />Market Intelligence</h2>;
-
->>>>>>> origin/main
         {!intel ? (
           <div className="text - sm text - gray - 500">Loading…</div>) : (
           <div className="mt - 3 text - sm">;

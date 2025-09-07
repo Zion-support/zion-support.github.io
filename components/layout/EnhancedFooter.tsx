@@ -184,98 +184,18 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
 const EnhancedFooter: React.FC = () => {;
   const currentYear = new Date().getFullYear();
-<<<<<<< HEAD
 
-=======
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Phone, Mail, MapPin, Globe;
-  Twitter, Linkedin, Facebook, Instagram;
-  ArrowRight, Rocket, Brain, Cpu, Shield;
-  Star, Users, TrendingUp, Zap
- } from 'lucide-react';
-const contactInfo = null;
-  ];
-=======
->>>>>>> origin/main
 
   const company = null;
   ];
   const resources = null;
   ];
   const socialLinks = null;
-<<<<<<< HEAD
 
-=======
-const EnhancedFooter: React.FC = () => {const currentYear = new Date().getFullYear();
-import React from 'react';
-import Link from 'next/link';
-import { Mail, Phone, MapPin, Linkedin, Twitter, Github, Facebook, ArrowRight } from 'lucide-react';
-
-const EnhancedFooter: React.FC = () => {
-  const currentYear = new Date().getFullYear();
-  
-  const services = [
-    { name: 'AI Services', href: '/ai-services' },
-    { name: 'IT Services', href: '/it-services' },
-    { name: 'Micro SaaS', href: '/micro-saas' },
-    { name: 'Innovative Solutions', href: '/innovative-it-services' },
-    { name: 'Cybersecurity', href: '/cybersecurity' },
-    { name: 'Cloud Services', href: '/cloud-devops' }
-  ];
-
-  const company = [
-    { name: 'About Us', href: '/about' },
-    { name: 'Our Team', href: '/team' },
-    { name: 'Careers', href: '/careers' },
-    { name: 'Blog', href: '/blog' },
-    { name: 'Case Studies', href: '/case-studies' },
-    { name: 'Contact', href: '/contact' }
-  ];
-
-  const resources = [
-    { name: 'FAQ', href: '/faq' },
-    { name: 'Pricing', href: '/pricing' },
-    { name: 'Support', href: '/support' },
-    { name: 'Documentation', href: '/docs' },
-    { name: 'Privacy Policy', href: '/privacy' },
-    { name: 'Terms of Service', href: '/terms' }
-  ];
-
-  const solutions = [
-    { name: 'AI Analytics Platform', href: '/solutions/ai-analytics' },
-    { name: 'Cloud Migration', href: '/solutions/cloud-migration' },
-    { name: 'Cybersecurity Suite', href: '/solutions/cybersecurity' },
-    { name: 'Digital Transformation', href: '/solutions/digital-transformation' },
-    { name: 'IoT Solutions', href: '/solutions/iot' },
-    { name: 'Blockchain Integration', href: '/solutions/blockchain' }
->>>>>>> origin/main
   ];
 
   return (
-<<<<<<< HEAD
 
-    <footer className;
-                  return (
-                    <a
-                      key={social.name}
-                      href={social.href}
-                      className="w-10 h-10 bg-gray-800/50 border border-gray-700/50 rounded-lg flex items-center justify-center text-gray-400 hover: text-cyan-400 hover:border-cyan-500/50 transition-all duration-200"
-                    >
-                      <Icon className="w-5 h-5" />
-                    </a>
-                  )
-                })}
-=======
-    <footer className="bg-gray-900 text-white">
-      <div className="container mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
-          {/* Company Info */}
-          <div className="lg:col-span-2">
-            <div className="flex items-center space-x-2 mb-4">
-              <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">Z</span>
->>>>>>> origin/main
               </div>
               <div>
                 <div className="text-xl font-bold">Zion Tech Group</div>
@@ -385,154 +305,7 @@ const EnhancedFooter: React.FC = () => {
         </div>
 
         {/* Newsletter Signup */}
-<<<<<<< HEAD
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          viewport={{ once: true }}
-          className="mt-12 pt-12 border-t border-gray-700/50"
-        >
-          <div className="text-center">
-            <h3 className="text-2xl font-bold text-white mb-4">
-              Stay Updated with Latest Innovations
-            </h3>
-            <p className="text-gray-400 mb-6 max-w-2xl mx-auto">
-              Get exclusive insights into the latest AI, quantum computing, and IT innovations. 
-              Be the first to know about new services and breakthrough technologies.
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-e9d8
-            </p>
-            <div className="flex space-x-4">
-              <a
-                href="#"
-                className="text-gray-400 hover:text-white transition-colors"
-              >
-                <Linkedin className="h-5 w-5" />
-              </a>
-              <a
-                href="#"
-                className="text-gray-400 hover:text-white transition-colors"
-              >
-                <Twitter className="h-5 w-5" />
-              </a>
-              <a
-                href="#"
-                className="text-gray-400 hover:text-white transition-colors"
-              >
-                <Github className="h-5 w-5" />
-              </a>
-            </div>
-          </div>
-          {/* Services */}
-          <div className="space-y-4">
-            <h3 className="text-lg font-semibold">Services</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link
-                  href="/services/web-development"
-                  className="text-gray-300 hover:text-white transition-colors"
-                >
-                  Web Development
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/services/mobile-apps"
-                  className="text-gray-300 hover:text-white transition-colors"
-                >
-                  Mobile Apps
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/services/ai-solutions"
-                  className="text-gray-300 hover:text-white transition-colors"
-                >
-                  AI Solutions
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/services/cloud-services"
-                  className="text-gray-300 hover:text-white transition-colors"
-                >
-                  Cloud Services
-                </Link>
-              </li>
-            </ul>
-          </div>
-          {/* Company */}
-          <div className="space-y-4">
-            <h3 className="text-lg font-semibold">Company</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link
-                  href="/about"
-                  className="text-gray-300 hover:text-white transition-colors"
-                >
-                  About Us
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/careers"
-                  className="text-gray-300 hover:text-white transition-colors"
-                >
-                  Careers
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/blog"
-                  className="text-gray-300 hover:text-white transition-colors"
-                >
-                  Blog
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/contact"
-                  className="text-gray-300 hover:text-white transition-colors"
-                >
-                  Contact
-                </Link>
-              </li>
-            </ul>
-          </div>
-          {/* Contact Info */}
-          <div className="space-y-4">
-            <h3 className="text-lg font-semibold">Contact</h3>
-            <div className="space-y-2">
-              <div className="flex items-center space-x-2">
-                <Mail className="h-4 w-4 text-gray-400" />
-                <span className="text-gray-300">info@ziontechgroup.com</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <Phone className="h-4 w-4 text-gray-400" />
-                <span className="text-gray-300">+1 (555) 123-4567</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <MapPin className="h-4 w-4 text-gray-400" />
-                <span className="text-gray-300">New York, NY</span>
-              </div>
-=======
-        <div className="border-t border-gray-800 mt-12 pt-8">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-8">
-              <h3 className="text-2xl font-bold mb-2">Stay Updated with Our Latest Innovations</h3>
-              <p className="text-gray-300">Get insights on the latest technology trends and our newest solutions delivered to your inbox.</p>
-            </div>
-            <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-              <input
-                type="email"
-                placeholder="Enter your email address"
-                className="flex-1 px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-white placeholder-gray-400"
-              />
-              <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors">
-                Subscribe
-              </button>
->>>>>>> origin/main
             </div>
           </div>
         </div>

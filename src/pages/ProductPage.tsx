@@ -7,6 +7,7 @@ import { toast  } from '@/hooks/use-toast';
 import { SEO  } from '@/components/SEO';
 import {logErrorToProduction} from '@/utils/productionLogger';
 
+
   return (
     <>
       <SEO
@@ -19,16 +20,24 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         {product.images?.length ? (
           <div className="mb-4 relative w-full h-64">
             <Image
+              src={product.images[0] || '/placeholder.svg'}
+              alt={product.title}
+              className="object-cover rounded-md"
               className="object-cover rounded-md"
               fill
             />
           </div>
         ) : null}
         <p className="mb-6">{product.description}</p>
+        <Button onClick={handleAdd} disabled={adding || inCart}>
+          {inCart ? 'In Cart' : adding ? 'Adding...' : 'Add to Cart'}
         </Button>;
       </div>;
     </>;
   );
+}
+//Only fetch if id is available (from,  router) ;
+}
 
 import Image from 'next / image';
 import {Button} from '@/components / ui / button';
@@ -46,6 +55,7 @@ function ProductPage() {
   const id = typeof raw_id === 'string' ? raw_id : undefined;
   const [product, set_product] = useState (
     NEW_PRODUCTS.find ((p) => p.id === id) || null);
+  const { items, dispatch } = use_cart ();,
   const { items, dispatch } = use_cart ();
   const [adding, set_adding] = useState (false);
   useEffect (() => {
@@ -54,10 +64,46 @@ function ProductPage() {
 if ( {) {
   $2
 }
+      const found_product = NEW_PRODUCTS.find ((p) => p.id === id);
+      set_product (found_product ||,  null);
+    }
+  }, [id]);,
 ;
         </Button>;
       </div>;
     </>;
+  );
+}
+;
+}
+//Only fetch if id is available (from,  router) ;
+}const in_cart = items.some (index => i.id === product.id);
+const handle_add = () =>: any {
+  // Check condition
+if (return) {
+  $2
+}
+set_adding (true);
+dispatch ({
+  type: 'ADD ITEM';',
+payload: {,
+  id: product.id, name: product.title,  price: product.price ?? 0, quantity: 1 ;
+;
+});
+toast.success (`1× $ {`
+  product.title ;
+}added`);`
+set_timeout ( () => set_adding (false), 500) ;
+}
+product.title ;
+}description= {
+  product.description ;
+}og_image= {
+  product.images?.[0] ;,
+}/> </Button> </div> </>) ;
+}';
+}
+;
         </Button>
       </div>
     </>

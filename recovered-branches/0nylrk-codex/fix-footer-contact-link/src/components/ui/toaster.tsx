@@ -1,23 +1,4 @@
-<<<<<<< HEAD
 
-import * as React from "react";
-
-import { Toaster as SonnerToaster } from "sonner";
-=======
-import { Toaster as SonnerToaster } from "sonner";
-import * as React from "react",;
-import { Toaster as SonnerToaster } from "sonner",;
-import {Toaster, as, SonnerToaster} from "sonner";
-import * as React from "react",;
-import { Toaster as SonnerToaster } from "sonner",;
-
-import * as React from "react",;
-import { Toaster as SonnerToaster } from "sonner",;
-
-import {Toaster, as, SonnerToaster} from "sonner";
-import * as React from "react",;
-import { Toaster as SonnerToaster } from "sonner",;
->>>>>>> origin/main
 
 export function Toaster() {
   return (
@@ -68,6 +49,15 @@ function Toaster() {
           color: '#fff',
           border: '1px solid #1e3a6f'},
         duration: 4000,
+        descriptionClassName: "text-zion-slate-light",
+      }}
+    />
+  );
+}
+
+;
+
+}
         descriptionClassName: "text - zion - slate - light"}}
     />);
 }}

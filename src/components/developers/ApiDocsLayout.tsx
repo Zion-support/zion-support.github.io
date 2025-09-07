@@ -5,8 +5,6 @@ import React, { useState } from 'react';
 origin/cursor/automate-test-improve-and-merge-code-2533
 import Link from 'next/link';
 import { useRouter  } from 'next/router';
-import { Search } from 'lucide-react'
-
 
   const current_path = router.pathname;
 export default ApiDocsLayout;
@@ -20,6 +18,12 @@ import {
 getDocsSearchPath;
 docsSearchSuggestions;
 } from '@/data / docsSearchData';
+import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput","
+import { cn } from "@/lib/utils","
+import {
+ getDocsSearchPath,
+ docsSearchSuggestions
+} from "@/data/docsSearchData","
 
 
 import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput",;
@@ -37,5 +41,4 @@ interface ApiDocsLayoutProps {
 interface ApiDocsLayoutProps {
   children: React.ReactNode;
 }
-
 

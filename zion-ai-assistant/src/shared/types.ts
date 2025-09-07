@@ -1,3 +1,35 @@
+
+
+
+
+
+
+export type ProjectType = "Web Dev" | "AI / ML" | "DevOps" | "Mobile" | "Data Engineering" | "Other",
+export interface MilestoneSuggestionInput {
+  scopeOfWork: string,
+
+
+
+
+export type ProjectType = "Web Dev" | "AI/ML" | "DevOps" | "Mobile" | "Data Engineering" | "Other",;
+export interface MilestoneSuggestionInput {;
+  scopeOfWork: string,;
+
+export type ProjectType = "Web Dev" | "AI / ML" | "DevOps" | "Mobile" | "Data Engineering" | "Other",
+export interface MilestoneSuggestionInput {
+  scopeOfWork: string,
+
+
+
+
+
+
+
+
+export type ProjectType = "Web Dev" | "AI / ML" | "DevOps" | "Mobile" | "Data Engineering" | "Other",
+export interface MilestoneSuggestionInput {
+  scopeOfWork: string,
+
 export type ProjectType = "Web Dev" | "AI / ML" | "DevOps" | "Mobile" | "Data Engineering" | "Other",
 export interface MilestoneSuggestionInput {
   scopeOfWork: string,
@@ -8,6 +40,15 @@ export interface MilestoneSuggestionInput {
   estimatedEffortHours: number, // estimated hours;
   tags?: string[], // e.g., ["AI Suggested"];
 }
+
+
+
+
+
+
+
+
+
 
 export interface MilestoneSuggestionResponse {
   milestones: SuggestedMilestoneItem[];
@@ -43,10 +84,47 @@ export interface SuggestedMilestoneItem {
   description: string,
 
 
+export type ProjectType = "Web Dev" | "AI/ML" | "DevOps" | "Mobile" | "Data Engineering" | "Other";
+export interface MilestoneSuggestionInput {scopeOfWork: string;
+export type ProjectType = "Web Dev" | "AI/ML" | "DevOps" | "Mobile" | "Data Engineering" | "Other",;
+export interface MilestoneSuggestionInput {;
+  scopeOfWork: string,;
+export interface MilestoneSuggestionInput {;
+  scopeOfWork: string;
+  startDateIso: string, // ISO 8601;
+  endDateIso: string,   // ISO 8601;
+  projectType: ProjectType;
+}
+export interface SuggestedMilestoneItem {title: string;
+  description: string;
+
+
+
+
+
 ;
 export interface SuggestedMilestoneItem {;
   title: string,;
   description: string,;
+
+
+export interface SuggestedMilestoneItem {
+  title: string,
+  description: string,
+
+
+
+
+;
+export interface SuggestedMilestoneItem {;
+  title: string;
+  description: string;
+  suggestedDueDateIso: string;
+  estimatedEffortHours: number, // estimated hours;
+  tags?: string[], // e.g., ["AI Suggested"];
+}
+
+
 
   // TODO: Implement
 
@@ -58,11 +136,23 @@ export interface MilestoneSuggestionResponse {
   // TODO: Implement
   milestones: SuggestedMilestoneItem[];
 
+
+
+
+
+export interface MilestoneSuggestionResponse {
+  milestones: SuggestedMilestoneItem[];
+}
+
+;
   // TODO: Implement
 
 
 export interface MilestoneSuggestionResponse {;
 
+}
+;
+export interface SuggestedMilestoneItem {;
   title:string,;
   description:string,;
   suggestedDueDateIso:string,;
@@ -70,4 +160,26 @@ export interface MilestoneSuggestionResponse {;
   tags?:string[], // e.g., ["AI Suggested"];"
   milestones:SuggestedMilestoneItem[];
 export interface MilestoneSuggestionResponse {milestones: SuggestedMilestoneItem[];
+;
+export interface MilestoneSuggestionResponse {;
+  milestones: SuggestedMilestoneItem[];
+}
+
+
+
+
+
+
+
+;
+export interface MilestoneSuggestionResponse {;
+  milestones: SuggestedMilestoneItem[];
+}
+
+
+
+;
+export interface MilestoneSuggestionResponse {;
+  milestones: SuggestedMilestoneItem[];
+}
 pr-12325

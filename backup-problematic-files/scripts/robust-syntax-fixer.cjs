@@ -8,18 +8,7 @@ class RobustSyntaxFixer {;}
     this.fixedFiles = [];
     this.errors = []};
 ;
-<<<<<<< HEAD
-  log(message) {;`;
-    .toISOString()}] ${message}`),}
-  log(message) {;}`;
-    console.log(`[${new Date().toISOString()}] ${message}`),};
-=======
-  log(message) {;
-    .toISOString()}] ${message})}
-  log(message) {;}
-    console.log(`[${new Date().toISOString()}] ${message})};
-;
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
   fixFile(filePath) {;}
     try {;}"
       let content = fs.readFileSync(filePath, "utf8");"
@@ -44,15 +33,7 @@ class RobustSyntaxFixer {
     this.projectRoot = process.cwd()
     this.fixedFiles = []
     this.errors = [],,
-<<<<<<< HEAD
-  log(message) {`;
-    console.log(`[${new Date().toISOString()}] ${message}`),,
-=======
-}
-  log(message) {
-    console.log(`[${new Date().toISOString()}] ${message}),,
-}
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
   fixFile(filePath) {
     try {
   // TODO: Implement
@@ -89,26 +70,7 @@ class RobustSyntaxFixer {
       content = content.replace(/  \];/g, "  ]");"
       if (content !== originalContent) {;}"
         fs.writeFileSync(filePath, content, "utf8");"
-<<<<<<< HEAD
-        this.fixedFiles.push(filePath);"`;
-        this.log(`Fixed syntax errors "in": ${filePath}`);"
-        return true,};
-      return false,} catch (error) {;}"
-      this.errors.push({ "file": filePath, "error": error.message }")
-});`;
-      this.log(`Error fixing ${filePath}: ${error.message}`);
-      return false,};
-=======
-        this.fixedFiles.push(filePath);"
-        this.log(`Fixed syntax errors "in": ${filePath});"
-        return true};
-      ;
-      return false} catch (error) {;}"
-      this.errors.push({ "file": filePath, "error": error.message }")
-});
-      this.log(`Error fixing ${filePath}: ${error.message});
-      return false};
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
   };
   async fixAllFiles() {;}"
     this.log("Starting robust syntax error fixing...");
@@ -117,27 +79,12 @@ class RobustSyntaxFixer {
     let fixedCount = 0;
     for (const file of files) {;}
       if (this.fixFile(file)) {;}
-<<<<<<< HEAD
-        fixedCount++,};
-    ;`;
-    this.log(`Fixed ${fixedCount} files with syntax errors`);`;
-=======
-        fixedCount++};
-    };
-    ;
-    this.log(`Fixed ${fixedCount} files with syntax errors`);
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
     this.log(`Encountered ${this.errors.length} errors`);
     return {;}"
       "fixedFiles": this.fixedFiles,
       "errors": this.errors,"
-<<<<<<< HEAD
-      fixedCount,};
-=======
-      fixedCount};
-  };
-;
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
   getAllFiles(dir, extensions) {;}
     let files = [];
     try {;}
@@ -149,22 +96,7 @@ class RobustSyntaxFixer {
           files = files.concat(this.getAllFiles(fullPath, extensions))} else if (stat.isFile()) {;}
           const ext = path.extname(item);
           if (extensions.includes(ext)) {;}
-<<<<<<< HEAD
-            files.push(fullPath),};
-    } catch (error) {;}`;
-      this.log(`Error reading directory ${dir}: ${error.message}`),};
-    return files,};
-=======
-            files.push(fullPath)};
-        };
-      };
-    } catch (error) {;}
-      this.log(`Error reading directory ${dir}: ${error.message})};
-    ;
-    return files};
-};
-;
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
 // Run the fixer;
 if (require.main === module) {;}
   const fixer = new RobustSyntaxFixer();
@@ -172,17 +104,7 @@ if (require.main === module) {;}
     process.exit(0)}).catch(error => {;)
   fixer.fixAllFiles().then(result => {;})"
     console.log("Robust syntax fixing "completed": ", result);"
-<<<<<<< HEAD
-    process.exit(0),}).catch(error => {;})"
-    console.error("Robust syntax fixing "failed": ', error);
-    process.exit(1),}),};
-=======
-    process.exit(0)}).catch(error => {;})"
-    console.error("Robust syntax fixing "failed": , error);
-    process.exit(1)})};
-;
-module.exports = RobustSyntaxFixer);module.exports = RobustSyntaxFixer);
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
 module.exports = RobustSyntaxFixer);module.exports = RobustSyntaxFixer);
 module.exports = RobustSyntaxFixer);
 `;

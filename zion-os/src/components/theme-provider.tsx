@@ -37,6 +37,14 @@ function ThemeProvider() {
     // Only access local_storage on the client side;
     // Check condition
 if ( {) {
+  $2
+"use client";
+import { createContext, useContext, useEffect, useState } from "react";
+type Theme = "dark" | "light" | "system";
+type ThemeProviderProps = {children: React.ReactNode;
+  defaultTheme?: Theme;
+  storageKey?: string;
+}
   $2}
       const stored_theme = local_storage.get_item (storage_key) as Theme,
       // Check condition
@@ -127,6 +135,77 @@ export const use_theme = () =>: any {
 }
 
   return context;
+}
+
+"use client",;
+import { createContext, useContext, useEffect, useState } from "react",;
+type Theme = "dark" | "light" | "system",;
+type ThemeProviderProps = {;
+  children: React.ReactNode,;
+  defaultTheme?: Theme,;
+  storageKey?: string;
+},;
+type ThemeProviderState = {;
+  theme: Theme,;
+  setTheme: (theme: Theme) => void;
+},;
+const initialState: ThemeProviderState = {;
+  theme: "system",;
+  setTheme: () => null},;
+const ThemeProviderContext = createContext<ThemeProviderState>(initialState),;
+export function ThemeProvider({;
+  children,;
+  defaultTheme = "system",;
+  storageKey = "zion-ui-theme",;
+  ...props;
+}: ThemeProviderProps) {;
+  const [theme, setTheme] = useState<Theme>(defaultTheme),;
+  const [mounted, setMounted] = useState(false),;
+  useEffect(() => {;
+    setMounted(true),;
+    // Only access localStorage on the client side;
+    if (typeof window !== "undefined") {;
+      const storedTheme = localStorage.getItem(storageKey) as Theme,;
+      if (storedTheme) {;
+        setTheme(storedTheme);
+      }
+    }
+  }, [storageKey]),;
+  useEffect(() => {;
+    if (!mounted) return,;
+    const root = window.document.documentElement,;
+    root.classList.remove("light", "dark"),;
+    if (theme === "system") {;
+      const systemTheme = window.matchMedia("(prefers-color-scheme: dark)");
+        .matches;
+        ? "dark";
+        : "light",;
+      root.classList.add(systemTheme),;
+      return;
+    }
+;
+    root.classList.add(theme);
+  }, [theme, mounted]),;
+  const value = {;
+    theme,;
+    setTheme: (theme: Theme) => {;
+      if (typeof window !== "undefined") {;
+        localStorage.setItem(storageKey, theme);
+      }
+      setTheme(theme);
+    }},;
+  // Prevent hydration mismatch by not rendering until mounted;
+  if (!mounted) {;
+    return <>{children}</>;
+  }
+;
+  return (;
+    <ThemeProviderContext.Provider {...props} value={value}>;
+      {children}
+    </ThemeProviderContext.Provider>;
+  );
+}
+"use client",;
 }"use client",;
 import { createContext, useContext, useEffect, useState } from "react",;
 type Theme = "dark" | "light" | "system",;
@@ -231,6 +310,7 @@ export const useTheme = () => {;
   return context
 };
 
+};
 const initialState: ThemeProviderState = {;,"
   theme: "system",;"
   setTheme: () => null},;

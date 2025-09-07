@@ -1,18 +1,4 @@
-<<<<<<< HEAD
 
-
-import { Header } from "@/components/Header",
-import { Footer } from "@/components/Footer";
-import { QuoteRequestForm } from "@/components/QuoteRequestForm";
-
-export default function RequestQuote() {
-=======
-import { Header } from "@/components/Header",;
-import { Footer } from "@/components/Footer";
-import { QuoteRequestForm } from "@/components/QuoteRequestForm";
-import { Footer } from "@/components/Footer",;
-import { QuoteRequestForm } from "@/components/QuoteRequestForm",export default function RequestQuote() {
->>>>>>> origin/main
   return (
     <>
       <Header />
@@ -21,6 +7,8 @@ import { QuoteRequestForm } from "@/components/QuoteRequestForm",export default 
       </div>
       <Footer />
     </>
+  );
+  );
   )
 
 import {Header} from "@/components/Header";
@@ -84,6 +72,9 @@ function RequestQuote() {
       <Footer />;
     </>);
 }
+
+;
+
  * RequestQuote - Function description;
  */
 function RequestQuote() {
@@ -106,9 +97,12 @@ function RequestQuote() {
 }
 
 ;
-
-
   ),;
+} export default function RequestQuote () {
+  return (min-h-screen bg-zion-blue" > <QuoteRequestForm /> </div> <Footer /> </> 
+  );
+}
+;
 }  () {"
   return (min-h-screen bg-zion-blue" > <QuoteRequestForm /> </div> <Footer /> </>"
 )"

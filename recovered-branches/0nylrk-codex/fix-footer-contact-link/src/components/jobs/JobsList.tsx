@@ -1,43 +1,4 @@
-<<<<<<< HEAD
 
-
-import { useState, useEffect } from "react",
-import { useAuth } from "@/hooks/useAuth",
-import { supabase } from "@/integrations/supabase/client",
-import { Job, JobStatus } from "@/types/jobs",
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { Badge } from "@/components/ui/badge",
-import { Loader2, Edit, X, Eye } from "lucide-react",
-import { format } from "date-fns";
-import { Link } from "react-router-dom";
-
-interface JobsListProps {
-=======
-import {useState, useEffect} from "react";
-import {useAuth} from "@/hooks/useAuth";
-import {supabase} from "@/integrations/supabase/client";
-import {Job, JobStatus} from "@/types/jobs";
-import {Button} from "@/components/ui/button";
-import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
-import {Badge} from "@/components/ui/badge";
-import {Loader2, Edit, X, Eye} from "lucide-react";
-import {format} from "date-fns";
-import {Link} from "react-router-dom";
-import {useState, useEffect} from "react";""
-import {useAuth} from "@/hooks/useAuth";""
-import {supabase} from "@/integrations/supabase/client";""
-import {Job, JobStatus} from "@/types/jobs";""
-import {Button} from "@/components/ui/button";""
-import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";""
-import {Badge} from "@/components/ui/badge";""
-import {Loader2, Edit, X, Eye} from "lucide-react";""
-import {format} from "date-fns";""
-import {Link} from "react-router-dom";"
-pr-12325
-interface JobsListProps {;
-
->>>>>>> origin/main
   filter?: JobStatus;
   onSelectJob?: (jobId: string, jobTitle: string) => void;
 }
@@ -47,108 +8,7 @@ pr-12325
 export function JobsList(): any ({ filter, onSelectJob }: JobsListProps) {;
 
   const { user } = useAuth();
-<<<<<<< HEAD
 
-  const [jobs, setJobs] = useState<Job[]>([]),
-  const [isLoading, setIsLoading] = useState(true);
-  useEffect(() => {
-    const fetchJobs = null;
-
-  return (
-    <div className="grid gap-6 md:grid-cols-2">
-      {jobs.map((job) => (
-        <Card 
-          key={job.id} 
-          className={`overflow-hidden cursor-pointer transition-shadow hover:shadow-md ${
-            onSelectJob ? "cursor-pointer" : ""
-=======
-  const [jobs, setJobs] = useState<Job[]>([]),
-  const [isLoading, setIsLoading] = useState(true);
-
-import { useState, useEffect } from "react",;
-import { useAuth } from "@/hooks/useAuth",;
-import { supabase } from "@/integrations/supabase/client",;
-import { Job, JobStatus } from "@/types/jobs",;
-import { Button } from "@/components/ui/button",;
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
-import { Badge } from "@/components/ui/badge",;
-import { Loader2, Edit, X, Eye } from "lucide-react",;
-import { format } from "date-fns";
-import { Link } from "react-router-dom";
-import { format } from "date-fns",;
-import { Link } from "react-router-dom",;
-interface JobsListProps {
-  filter?: JobStatus,
-  onSelectJob?: (jobId: string, jobTitle: string) => void
-}
-  const { user } = useAuth();
-  const [jobs, setJobs] = useState<Job[]>([]),
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-
-    const fetchJobs = async () => {
-      if (!user) return;
-      if (!user) return,  const { user } = useAuth();
-  const [jobs, setJobs] = useState<Job[]>([]),
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-
-    const fetchJobs = async () => {
-      if (!user) return;
-      if (!user) return,
-
-        let query = supabase
-          .from("jobs")
-          .select("*")
-          .eq("client_id", user.id)
-          .order("created_at", { ascending: false })
-        if (filter) {
-          query = query.eq("status", filter)          }
-        </p>;
-        <Button asChild className="mt-4">;
-          <Link to="/post-job">Post Your First Job</Link>;
-        </Button>;
-      </div>;
-    );
-  }
-
-  const getStatusColor = (status: JobStatus) => {;
-    switch (status) {;
-      case "new": return "bg-blue-100 text-blue-800";
-      case "in_progress":;
-        return "bg-yellow-100 text-yellow-800";
-      case "filled":;
-        return "bg-green-100 text-green-800";
-
-      case "closed":;
-        return "bg-gray-100 text-gray-800",;
-      default:;
-        return "bg-gray-100 text-gray-800";
-
-    }
-  }
-
-  return (
-
-    <div className="grid gap-6 md:grid-cols-2">;
-      {jobs && jobs.map((job) => (;
-        <Card
-          key={job && job.id}       case "closed":;
-        return "bg-gray-100 text-gray-800";
-      default:;
-        return "bg-gray-100 text-gray-800";
-    }
-  };
-  return (;
-    <div className="grid gap-6 md:grid-cols-2">;
-      {jobs.map((job) => (;
-        <Card;
-          key={job.id} ;
-          className={`overflow-hidden cursor-pointer transition-shadow hover:shadow-md ${;
-            onSelectJob ? "cursor-pointer" : "";
->>>>>>> origin/main
           }`}
           onClick={() => onSelectJob?.(job.id, job.title)}
         >
@@ -222,10 +82,35 @@ interface JobsListProps {
             <div className="flex flex-wrap gap-1 mt-2">;
               {job.skills.slice(0, 3).map((skill, index) => (;
               <Link to={`/jobs/${job.id}`}>;
+{job && job.skills.slice(0, 3).map((skill, index) => (;
+                <Badge key={index} variant="outline" className="text-xs">;
+                  {skill}
+                </Badge>;
+              ))}
+              {job && job.skills.length > 3 && (;
+                <Badge variant="outline" className="text-xs">;
+                  +{job && job.skills.length - 3} more;
+                </Badge>;
+              )}
+            </div>;
+            <div className="mt-3 text-sm">;
+              <span className="font-medium">Budget:</span> ${job && job.budget.min} - ${job && job.budget.max}
+            </div>;
+            <div className="mt-1 text-sm">;
+              <span className="font-medium">Deadline:</span> {format(new Date(job && job.deadline), "PPP")}
+            </div>;
+          </CardContent>;
+          <CardFooter className="flex justify-between p-4 pt-0 gap-2">;
+            <Button variant="outline" size="sm" asChild>;
+              <Link to={`/jobs/${job && job.id}`}>;
+                <Eye className="h-4 w-4 mr-1" /> View Details;
               </Link>;
             </Button>;
             <div className="flex gap-2">;
               <Button variant="outline" size="sm" asChild>;
+                <Link to={`/jobs/${job && job.id}/edit`}>;
+<Link to={`/jobs/${job.id}/edit`}>;
+                <Link to={`/jobs/${job && job.id}/edit`}>;
                 <Link to={`/jobs/${job && job.id}/edit`}>;                <Link to={`/jobs/${job && job.id}/edit`}>;
                   <Edit className="h-4 w-4" />;
                 </Link>;
@@ -236,6 +121,41 @@ interface JobsListProps {
             </div>;
           </CardFooter>;
         </Card>;
+      ))}
+
+    </div>;
+  );
+}
+import { useState, useEffect } from './react';
+import { use_auth } from '@/hooks / use_auth';
+import { supabase } from '@/integrations / supabase / client';
+import { Job, JobStatus } from '@/types / jobs';
+import { Button } from '@/components / ui / button';
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components / ui / card';
+import { Badge } from '@/components / ui / badge';
+import { Loader2, Edit, X, Eye } from './lucide-react';
+import { format } from './date - fns';
+import { Link } from './react-router-dom';
+interface JobsListProps {
+  filter?: JobStatus;
+  onSelectJob?: (job_id: string, job_title: string) => void;
+}
+export /**
+ * JobsList - Function description
+ */
+function JobsList() {
+  const { user } = use_auth ();
+  const [jobs, set_jobs] = useState < Job[]>([]);
+  const [is_loading, setIsLoading] = useState (true);
+;
+
+</div>;
+  useEffect (() => {
+    const fetch_jobs = async () => {
+      // Check condition
+if (return) {
+  $2
+}
       ))}}
       try {
         let query = supabase;
@@ -391,7 +311,6 @@ try {
 if (error) throw error;
 setJobs (data as Job[]) 
 }catch (error) {
-  
 }finally {
   setIsLoading (false) 
 }
@@ -483,7 +402,6 @@ return (<div className="grid gap-6 md:grid-cols-2" > {
         </p>"
         <Button asChild className="mt-4">"
           <Link to="/post-job">Post Your First Job"
-        
     <div className="grid gap-6 md:grid-cols-2">"
 </div>
         <Card;
@@ -498,10 +416,8 @@ return (<div className="grid gap-6 md:grid-cols-2" > {
                 <CardTitle className="text-xl">{job.title}""
                 <CardDescription className="mt-1">"
 
-                
               <Badge className={getStatusColor(job.status)}>
 
-              
           <CardContent className="p-4 pt-0">"
             <p className="line-clamp-3 text-sm text-muted-foreground mb-2">"
 </p>
@@ -556,9 +472,7 @@ return (<div className="grid gap-6 md:grid-cols-2" > {
               <Link to={`/jobs/${job && job.id}`}>;
             onSelectJob ? "cursor-pointer" : "";"`;
 
-                
 
-              
 
 
 </div>`;
@@ -669,7 +583,6 @@ return (<div className="grid gap-6 md:grid-cols-2" > {"
 
                 <Badge variant="outline" className="text-xs">"
 
-                
             <div className="mt-3 text-sm">"
               <span className="font-medium">Budget:</span> ${job.budget.min} - ${job.budget.max}"
             <div className="mt-1 text-sm">"
@@ -678,17 +591,12 @@ return (<div className="grid gap-6 md:grid-cols-2" > {"
             <Button variant="outline" size="sm" asChild>"
               <Link to={`/jobs/${job.id}`}>
 
-              
             <div className="flex gap-2">"
                 <Link to={`/jobs/${job.id}/edit`}>
                   <Edit className="h-4 w-4" />"
 
-                
               <Button variant="outline" size="sm">"
                 <X className="h-4 w-4" />"
 
-              
-          
-        
     </div>;"`;
 pr-12325

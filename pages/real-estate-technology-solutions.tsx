@@ -1,10 +1,4 @@
-<<<<<<< HEAD
 
-import React from 'react';
-import Head from 'next/head';
-
-export default function RealEstateTechnologySolutions() {
-=======
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -13,7 +7,7 @@ export default function RealEstateTechnologySolutions() {
 ;
 import React from 'react';
 export default function Page() {
->>>>>>> origin/main
+
   return (
     <>
       <Head>

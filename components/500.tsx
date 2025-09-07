@@ -1,3 +1,5 @@
+
+export default function FiveHundred() {;
 export default function FiveHundred() {;
 export default function FiveHundred() {;
 
@@ -31,6 +33,9 @@ function FiveHundred() {
 function FiveHundred() {
   return <div className="min - h-screen flex items - center justify - center">Something went wrong.</div>;
 }
+
+}
+
 origin/cursor/automate-test-improve-and-merge-code-20a4
 pr-12243
 
@@ -40,10 +45,6 @@ pr-12243
 
 
 }
-
-
-
-
 export default function FiveHundred() {
 import React from 'react';
 

@@ -1,3 +1,4 @@
+
 main
 import { NextRequest, NextResponse } from "next/server";
 import { getServerSession } from "next-auth";
@@ -16,6 +17,8 @@ export async function POST(request: NextRequest) {
       {
         message: 'Onboarding completed successfully'
         user: {
+
+
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 main
@@ -44,11 +47,13 @@ pr-12325
       { status: 200 },
     );
   } catch (error) {
+
 main
     console.error("Onboarding completion error:", error);
     return NextResponse.json(
       { error: "Internal server error" },
       { status: 500 },
+
 origin/cursor/expand-services-advertise-and-build-project-c28b
       { status: 200 },
     );
@@ -81,6 +86,7 @@ pr-12325
 
       { error: 'Internal server error' },
 
+
 origin/cursor/expand-services-advertise-and-build-project-c28b
 import { NextRequest, NextResponse } from "next/server",;
 import { getServerSession } from "next-auth",;
@@ -95,6 +101,15 @@ export async function POST(request: NextRequest) {;
     if (!session?.user?.email) {;
       return NextResponse.json(;
         { error: "Unauthorized" },;
+import { NextRequest, NextResponse } from "next/server";
+import { getServerSession } from "next-auth";
+import { prisma } from "@/lib/prisma";
+export async function POST(request: NextRequest) {;
+  try {;
+    const session = await getServerSession();
+    if (!session?.user?.email) {;
+      return NextResponse.json(;
+        { error: "Unauthorized" };
         { status: 401 }
       );
     }
@@ -127,12 +142,26 @@ pr-12325
           role: updatedUser.role,;
           onboardingCompleted: updatedUser.onboardingCompleted}
       },;
+      where: { email: session.user.email };
+      data: { onboardingCompleted: true }});
+    return NextResponse.json(;
+      {;
+        message: "Onboarding completed successfully";
+        user: {;
+          id: updatedUser.id;
+          name: updatedUser.name;
+          email: updatedUser.email;
+          role: updatedUser.role;
+          onboardingCompleted: updatedUser.onboardingCompleted}
+      };
       { status: 200 }
     );
   } catch (error) {;
     console.error("Onboarding completion error:", error);
     return NextResponse.json(;
       { error: "Internal server error" };
+
+
       {
         message: 'Onboarding completed successfully'
         user: {
@@ -188,12 +217,21 @@ pr-12325
     return NextResponse.json(
       { error: 'Failed to complete onboarding' },
 
+
+      { status: 500 }
+
+
+
 origin/cursor/expand-services-advertise-and-build-project-c28b
       { status: 500 }
 main
     );
   }
 }
+}
+      { status: 500 }
+    );
+  }
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
       preferences;

@@ -1,11 +1,4 @@
-<<<<<<< HEAD
 
-import { useRouter  } from 'next/router';
-import useSWR from 'swr';
-import { useEffect, useState } from 'react';
-const fetcher = null;
-
-=======
 import { useRouter  } from 'next/router';
 import {useRouter} from 'next/router';
 import useSWR from 'swr';
@@ -17,6 +10,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 const fetcher = (url: string) => fetch(url).then(r => r.json());
 export default function EditJobPage() {
 export default function EditJobPage() {;
+
+import {useRouter} from 'next/router';
+
+import useSWR from 'swr';
 
 
 import {useRouter} from 'next/router';
@@ -120,15 +117,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
       body: JSON && JSON.stringify({ title, description, category }),;
     });
     router && router.push('/client/dashboard');  }
 
   if (!job) return <div>Loading…</div>;
 
+  return (
 
 
->>>>>>> origin/main
+
   return (
 
 

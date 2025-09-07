@@ -1,3 +1,6 @@
+export type WatchlistMatch = {;
+  list: 'OFAC' | 'PEP' | 'Sanctions' | 'AdverseMedia';
+
 interface AmlMatch {
   list: string;
   name: string;
@@ -67,6 +70,7 @@ main
 ;
 
 export type AmlCheckResult = {
+
   status: "clear" | "match" | "review" | "unknown";
   status: "clear" | "match" | "review" | "unknown";
 };
@@ -80,6 +84,11 @@ export type AmlCheckResult = {
 };
 
 export type AmlCheckResult = {;
+
+  status: 'clear' | 'match' | 'review' | 'unknown';
+
+
+  status: "clear" | "match" | "review" | "unknown";
 
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -105,6 +114,7 @@ export interface AmlProvider {
   check_business (params: { business_name: string, country: string }): Promise < AmlResult>;
 }
 class MockAmlProvider implements AmlProvider {
+
 main
   async checkPerson(params: {
     fullLegalName: string;
@@ -247,6 +257,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   }
   async checkBusiness(params: { businessName: string, country: string }): Promise<AmlResult> {
     // Mock implementation - in production, this would call a real AML service
+const name = params && params.businessName.toLowerCase();
+    if (name && name.includes('test') || name && name.includes('demo')) {
+      return { status: 'match', details: { reason: 'Test business name detected' } };
+
+
+
 
     const name = params && params.businessName.toLowerCase();
     if (name && name.includes('test') || name && name.includes('demo')) {
@@ -273,11 +289,13 @@ main
     return { status: "clear" };
   }
 }
+
 main
 
 export function getAmlProvider(): AmlProvider {
   return provider;
   return new MockAmlProvider();
+
 main
 }
 

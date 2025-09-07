@@ -1,17 +1,4 @@
-<<<<<<< HEAD
-import { GetServerSideProps } from 'next';
 
-export const getServerSideProps: GetServerSideProps;
-
-export default function LaunchRedirect() {
-=======
-
-import { GetServerSideProps } from 'next';
-
-  };      permanent: false}}
-
-export default function LaunchRedirect() {;
->>>>>>> origin/main
   return null;
 }
       destination: '/academy / founder - course',

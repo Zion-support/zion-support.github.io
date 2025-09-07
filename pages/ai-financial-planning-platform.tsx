@@ -1,12 +1,4 @@
-<<<<<<< HEAD
 
-import React from 'react';
-import ServiceLanding from '../components/sections/ServiceLanding';
-
-export default function AiFinancialPlanningPlatform() {
-	return (
-		<ServiceLanding
-=======
 			pricePerMonthUSD={349}
 			implementationWeeks="1-2 weeks"
 			roiNote="Finance teams report 3–6x ROI via faster cycles and improved accuracy"
@@ -20,7 +12,7 @@ export default function AiFinancialPlanningPlatform() {
 				"Executive dashboards and board-ready reports"
 
 import React from 'react';
->>>>>>> origin/main
+
 			title;
 origin/cursor/automate-test-improve-and-merge-code-2533
 				"Headcount planning and hiring plans"
@@ -47,6 +39,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 				"Integrations: NetSuite, QuickBooks, Stripe, Snowflake",
 				"Executive dashboards and board-ready reports",
 				"Headcount planning and hiring plans"
+
+]}
+			industries={["SaaS", "Ecommerce", "Fintech", "Professional Services"]}
+			canonical="https: //ziontechgroup.com/ai-financial-planning-platform"
+		/>
+	)
+};
 			]  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });

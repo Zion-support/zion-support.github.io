@@ -1,4 +1,5 @@
 export interface ProjectBrief {
+talentFilters?: { 
   projectName: string;
   goals: string;
   timeline: string;
@@ -68,9 +69,16 @@ export interface ProjectRequirements {
   deliverables: string[];
 }
 
+  projectName: string;,
+  goals: string;,
+  timeline: string;,
+  budget: string;,
+  techStack?: string[];,
+  talentFilters?: { verifiedOnly?: boolean; regions?: string[] };
 }
-
   projectName: string, goals: string,
+  timeline: string, budget: string,;,
+  techStack?: string[];,
   timeline: string, budget: string,;
   techStack?: string[];
 export interface ProjectBrief {
@@ -87,13 +95,15 @@ export interface ProjectBrief {
   timeline: string, budget: string,;
 pr-12325
   talentFilters?: { verifiedOnly?: boolean; regions?: string[] }
-
 export interface ProjectBrief {;
   projectNam: e: string,;
   goal: s: string,;
   timelin: e: string,;
-  budge: t: string,;
+  budge: t: string,;,
   techStack?: string[];
+  talentFilters?: { verifiedOnly?: boolean, regions?: string[] },
+}
+
   talentFilters?: { verifiedOnly?: boolean, regions?: string[] }
 
 pr-12243

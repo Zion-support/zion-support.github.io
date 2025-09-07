@@ -1,24 +1,4 @@
-<<<<<<< HEAD
 
-
-import React from "react",
-import { Card, CardContent } from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
-import { Badge } from "@/components/ui/badge",
-import { ChevronRight, Plus, UserCheck, FileText, Bell } from "lucide-react";
-import { Link } from "react-router-dom";
-
-export function ClientDashboard() {
-=======
-import React from "react",;
-import { Card, CardContent } from "@/components/ui/card",;
-import { Button } from "@/components/ui/button",;
-import { Badge } from "@/components/ui/badge",;
-import { ChevronRight, Plus, UserCheck, FileText, Bell } from "lucide-react";
-import { Link } from "react-router-dom";
-import { ChevronRight, Plus, UserCheck, FileText, Bell } from "lucide-react",;
-import { Link } from "react-router-dom",export function ClientDashboard() {
->>>>>>> origin/main
   return (
     <div className="space-y-6 px-4 pb-24">
       <section className="mt-4">
@@ -448,6 +428,8 @@ export function ClientDashboard() {
     </div>
   )
 
+;
+
 import React from "react";
 import {Card, CardContent} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
@@ -542,7 +524,6 @@ export function ClientDashboard() {
 "
           <Plus className="mr-2 h-5 w-5" /> Post a New Job;"
 
-        
       </section>
 
       <section>
@@ -552,8 +533,6 @@ export function ClientDashboard() {
             <Button variant="ghost" size="sm" className="h-8 gap-1">"
               View all <ChevronRight className="h-4 w-4" />"
 
-            
-          
         </div>
 
         <Card>
@@ -582,15 +561,10 @@ export function ClientDashboard() {
 
                 <Button size="sm" variant="outline">"
 
-                
-          
-        
 
           <h2 className="text-lg font-medium">Suggested Talents</h2>""
           <Link to="/mobile/browse">"
 
-            
-          
         <div className="space-y-3">"
               <div className="flex justify-between">"
                 <div className="flex items-center gap-3">"
@@ -606,24 +580,16 @@ export function ClientDashboard() {
 
 
 
-                
               <div className="flex gap-2 mt-3">"
                 <Button size="sm">View Profile""
 
-                
-            
-          
 
 
                     <h3 className="font-medium">Michael Chen</h3>""
 
 
 
-                
 
-                
-            
-          
 
           <h2 className="text-lg font-medium">Recent Updates</h2>"
 
@@ -642,9 +608,6 @@ export function ClientDashboard() {
                 <p className="text-xs text-muted-foreground">1 day ago</p>"
             <Button variant="outline" className="w-full">"
 
-            
-          
-        
     </div>)"
 pr-12325
 

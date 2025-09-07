@@ -22,75 +22,67 @@ pr-12325
   sender?: string;
   avatar?: string;
 
-
   status?: 'sent' | 'delivered' | 'read';
-
 interface MobileChatViewProps {;
-  contact: {;
-
-    id: string;
-    name: string;
+  contact: {;,
+    id: string;,
+    name: string;,
     avatar?: string;
 
     status?: string
   },
+  messages: Message[];,
+  onBack: () => void;,
+  onSendMessage: (content:,  string) => void,
   messages: Message[];
   onBack: () => void;
   onSendMessage: (content: string) => void
 
 
                 {message.timestamp}
-
+                {message.isMe && message.status && (;
+                  <span className="ml-1">;
+                    {message.status === 'read' ? '✓✓' : '✓'}'
+              <div className={cn(;
+                "text-xs mt-1 flex justify-end";
+                message.isMe ? "text-primary-foreground/80" : "text-muted-foreground";
+              )}>;
+                {message.timestamp}
                 {message.isMe && message.status && (;
                   <span className="ml-1">;
 
                     {message.status === 'read' ? '✓✓' : '✓'}
-
+                  </span>;
+                )}
               </div>;
             </div>;
           </div>;
         ))}
 
-      <div className="sticky bottom-0 bg-background border-t border-border p-2">
-        <div className="flex items-center gap-2">
-          <Button variant="ghost" size="icon" aria-label="Attach file">
-            <PaperclipIcon className="h-5 w-5" />
-
           </Button>
-          <Input
-            value={newMessage}
-
-            onChange={e => setNewMessage(e.target.value)}
+          <Input value={newMessage}
+            onChange={e = /> setNewMessage(e.target.value)}
             onKeyDown={handleKeyDown}
-            placeholder='Type a message...'
-            className='flex-1'          />
-
+            placeholder='Type a message...''
+            className='flex-1'          />'
           <Button
-            size='icon'
+            size='icon''
             onClick={handleSend}
             disabled={!newMessage.trim()}
-            className={!newMessage.trim() ? 'opacity-50' : ''}
-            aria-label='Send message'          >
-            <Send className='h-5 w-5' />
-      <div className="sticky bottom-0 bg-background border-t border-border p-2">
-        <div className="flex items-center gap-2">
-          <Button variant="ghost" size="icon" aria-label="Attach file">
-            <PaperclipIcon className="h-5 w-5" />
-          </Button>
-          <Input
-            value={newMessage}
-            onChange={e => setNewMessage(e.target.value)}
-            onKeyDown={handleKeyDown}
-            placeholder='Type a message...'
-            className='flex-1'          />
 
+          </Button>
+          <Input value={newMessage}
+            onChange={e = /> setNewMessage(e.target.value)}
+            onKeyDown={handleKeyDown}
+            placeholder='Type a message...''
+            className='flex-1'          />'
           <Button
-            size='icon'
+            size='icon''
             onClick={handleSend}
             disabled={!newMessage.trim()}
-            className={!newMessage.trim() ? 'opacity-50' : ''}
-            aria-label='Send message'          >
-            <Send className='h-5 w-5' />
+            className={!newMessage.trim() ? 'opacity-50' : ''}'
+            aria-label='Send message'          >'
+            <Send className='h-5 w-5' />'
           </Button>
         </div>
       </div>;
@@ -99,6 +91,7 @@ interface MobileChatViewProps {;
 };
 }
 }
+
       <div className="sticky bottom-0 bg-background border-t border-border p-2">
         <div className="flex items-center gap-2">
           <Button variant="ghost" size="icon" aria-label="Attach file">
@@ -276,15 +269,13 @@ pr-12325
       </div>
     </div>
   )
-
             placeholder='Type a message...';
             className='flex-1'          />;
-
           <Button
-            size='icon'
+            size='icon''
             onClick={handleSend}
             disabled={!newMessage && newMessage.trim()}
-            className={!newMessage && newMessage.trim() ? 'opacity-50' : ''}
+            className={!newMessage && newMessage.trim() ? 'opacity-50' : ''}'
             aria-label='Send message'>;
             <Send className='h-5 w-5' />;
           </Button>;
@@ -293,7 +284,6 @@ pr-12325
     </div>;
   );
 }
-
                   </span>)}
               </div>;
             </div>;
@@ -304,9 +294,9 @@ pr-12325
           <Button variant='ghost' size='icon' aria - label='Attach file'>;
             <PaperclipIcon className='h - 5 w - 5' />;
           </Button>;
-          <Input;
+          <Input ;
             value={new_message}
-            on_change={e => setNewMessage (e.target.value)}
+            on_change={e = /> setNewMessage (e.target.value)}
             onKeyDown={handleKeyDown}
             placeholder='Type a message...';
             className='flex - 1'          />;
@@ -314,7 +304,7 @@ pr-12325
             size='icon';
             on_click={handle_send}
             disabled={!new_message.trim ()}
-            className={!new_message.trim () ? 'opacity - 50' : ''}
+            className={!new_message.trim () ? 'opacity - 50' : ''}'
             aria - label='Send message'          >;
             <Send className='h - 5 w - 5' />;
           </Button>;
@@ -322,7 +312,8 @@ pr-12325
       </div>;
     </div>);
 }
-
+}
+;
 }
 ;
   );

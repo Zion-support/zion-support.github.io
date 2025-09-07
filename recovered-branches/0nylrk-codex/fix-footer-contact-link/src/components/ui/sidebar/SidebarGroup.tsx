@@ -1,11 +1,5 @@
 import React from "react";
-<<<<<<< HEAD
 
-import { cn } from "@/lib/utils";
-
-=======
-import { cn } from "@/lib/utils";
->>>>>>> origin/main
 interface SidebarGroupProps extends React.HTMLAttributes<HTMLDivElement> {
   className?: string,
   children?: React.ReactNode
@@ -18,6 +12,17 @@ interface SidebarGroupProps extends React && React.HTMLAttributes<HTMLDivElement
   className?: string;
   children?: React && React.ReactNode;
 }
+
+export function SidebarGroup({
+  className,
+  children,
+  ...props
+}: SidebarGroupProps) {
+  return (
+
+    <div className={cn("mb-4", className)} {...props}>
+      {children}
+    </div>
   );
 }
   )
@@ -32,6 +37,15 @@ interface SidebarGroupProps extends React.HTMLAttributes<HTMLDivElement> {;
 };
 export function SidebarGroup({ className, children, ...props }: SidebarGroupProps) {;
   return (;
+
+    <div className={cn("mb-4", className)} {...props}>;
+      {children}
+
+    </div>;
+  );
+}
+
+;
 }
 
 ;

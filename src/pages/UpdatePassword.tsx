@@ -5,6 +5,9 @@
   FormLabel;
 
   FormMessage} from "@/components/ui/form",
+import { toast } from "@/hooks/use-toast",
+import { cleanupAuthState } from "@/utils/authUtils",
+import { logErrorToProduction } from '@/utils/productionLogger',
 import { toast } from "@/hooks/use-toast",;
 import { cleanupAuthState } from "@/utils/authUtils",;
 import { logErrorToProduction } from '@/utils/productionLogger',;
@@ -14,6 +17,7 @@ const updatePasswordSchema = z
     password: z
       .string()
       .min(8, "Password must be at least 8 characters")
+      .max(64, "Password must be less than 64 characters"),
     confirmPassword: z.string()})
   .refine((data) => data.password === data.confirmPassword, {
     message: "Passwords do not match",

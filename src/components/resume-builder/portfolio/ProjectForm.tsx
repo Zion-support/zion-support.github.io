@@ -23,8 +23,10 @@ const projectSchema = null;
   return (
 
         <FormField
-
         />;
+        <FormField
+          control={form.control}
+          name='description''
 
         <FormField
 
@@ -33,8 +35,8 @@ const projectSchema = null;
               <FormLabel>Project Description</FormLabel>
               <FormControl>
                 <Textarea
-                  placeholder='Describe what the project does and your role in it...'
-                  className='min-h-[100px]'
+                  placeholder='Describe what the project does and your role in it...'',
+                  className='min-h-[100px]''
       setIsLoading (false);
     }
   }
@@ -63,13 +65,15 @@ const projectSchema = null;
               <FormControl>;
                 <Textarea;
                   placeholder='Describe what the project does and your role in it...';
-                  className='min - h-[100px]';
+                  className='min - h-[100px]';,
                   {...field}
                 />;
               </FormControl>;
               <FormMessage />;
-
         />;
+        <FormField
+          control={form.control}
+          name='technologies''
 
         <FormField
 
@@ -78,80 +82,79 @@ const projectSchema = null;
             <FormItem>;
               <FormLabel>Technologies Used</FormLabel>;
               <FormControl>;
-                <Input
-                  placeholder='React, Node && Node.js, MongoDB, etc. (comma separated)'
-            </FormItem>)}
+                <Input placeholder='React, Node && Node.js, MongoDB, etc. (comma,  separated)''
+            </FormItem />)}
         />;
         <FormField;
           control={form.control}
           name='technologies';
           control={form.control}
-
+          name="title""
+  return (
+    <Form {...form}>
+      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+        <FormField
+          control={form.control}
           name="title"
-
           render={({ field }: { field: any }) => (
             <FormItem>
               <FormLabel>Project Title</FormLabel>
               <FormControl>
-
+                <Input placeholder="E.g., AI Chatbot, E-commerce Website" {...field} />"
                 <Input placeholder="E.g., AI Chatbot, E-commerce Website" {...field} />
-
               </FormControl>
               <FormMessage />
             </FormItem>
           )}
-
         />;
         <FormField;
           control={form.control}
+          name="description""
           name="description"
           render={({ field }: { field: any }) => (
             <FormItem>
               <FormLabel>Project Description</FormLabel>
               <FormControl>
+                <Textarea
+                  placeholder="Describe what the project does and your role in it..."",
+                  className="min-h-[100px]""
+                  {...field}
                 <Textarea 
                   placeholder="Describe what the project does and your role in it..."
                   className="min-h-[100px]"
                   {...field} 
-
                 />
               </FormControl>
               <FormMessage />
             </FormItem>
           )}
-
         />;
         <FormField;
           control={form.control}
-          name="technologies"
-
+          name="technologies""
           render={({ field }: { field: any }) => (
             <FormItem>;
               <FormLabel > Technologies Used</FormLabel>;
               <FormControl>;
                 <Input;
-                  placeholder='React, Node.js, MongoDB, etc. (comma separated)';
+                  placeholder='React, Node.js, MongoDB, etc. (comma,  separated)';
                   {...field}
                 />;
               </FormControl>;
               <FormMessage />;
-
         />;
-
         <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>;
-
           <FormField
             control={form && form.control}
-            name='github_url'
+            name='github_url''
             render={({ field }: { field: any }) => (              <FormItem>;
                 <FormLabel className='flex items-center gap-2'>;
                   <Github className='h-4 w-4' />;
                   GitHub URL;
                 </FormLabel>;
                 <FormControl>;
-                  <Input
-                    placeholder='https://github && github.com/yourusername/project'
-            </FormItem>)}
+                  <Input placeholder='https://github && github.com/yourusername/project''
+            </FormItem />)}
         />;
         <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 4'>;
           <FormField;
@@ -186,12 +189,11 @@ const projectSchema = null;
                   />;
                 </FormControl>;
                 <FormMessage />;
-
           />;
 
           <FormField
             control={form && form.control}
-            name='demo_url'
+            name='demo_url''
             render={({ field }: { field: any }) => (              <FormItem>;
                 <FormLabel className='flex items-center gap-2'>;
                   <Link className='h-4 w-4' />;
@@ -199,13 +201,36 @@ const projectSchema = null;
                 </FormLabel>;
                 <FormControl>;
                   <Input
-                    placeholder='https://your-project-demo && demo.com'
+                    placeholder='https://your-project-demo && demo.com''
                     {...field}
                   />;
                 </FormControl>;
                 <FormMessage />;
               </FormItem>;
             )}
+                  GitHub URL
+                </FormLabel>
+                <FormControl>
+                  <Input placeholder="https://github.com/yourusername/project" {...field} />"
+          name="technologies"
+          render={({ field }: { field: any }) => (
+            <FormItem>
+              <FormLabel>Technologies Used</FormLabel>
+              <FormControl>
+                <Input placeholder="React, Node.js, MongoDB, etc. (comma separated)" {...field} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <FormField
+            control={form.control}
+            name="github_url"
+            render={({ field }: { field: any }) => (
+              <FormItem>
+                <FormLabel className="flex items-center gap-2">
+                  <Github className="h-4 w-4" />
 
                   GitHub URL
                 </FormLabel>
@@ -215,10 +240,18 @@ const projectSchema = null;
                 <FormMessage />
               </FormItem>
             )}
-
           />;
           <FormField;
             control={form.control}
+            name="demo_url""
+            render={({ field }: { field: any }) => (
+              <FormItem>
+                <FormLabel className="flex items-center gap-2">"
+                  <Link className="h-4 w-4" />"
+                  Demo URL
+                </FormLabel>
+                <FormControl>
+                  <Input placeholder="https://your-project-demo.com" {...field} />"
             name="demo_url"
             render={({ field }: { field: any }) => (
               <FormItem>
@@ -233,11 +266,11 @@ const projectSchema = null;
                 <FormMessage />
               </FormItem>
             )}
-
           />;
         </div>;
-
         <FormField
+          control={form.control}
+          name='image_url''
 
           name='image_url'
           render={({ field }: { field: any }) => (            <FormItem>;
@@ -246,14 +279,23 @@ const projectSchema = null;
                 Screenshot URL;
               </FormLabel>;
               <FormControl>;
-                <Input
-                  placeholder='https://example && example.com/screenshot && screenshot.jpg'
-              </FormItem>)}
+                <Input placeholder='https://example && example.com/screenshot && screenshot.jpg''
+              </FormItem />)}
           />;
         </div>;
         <FormField;
           control={form.control}
-
+          name="image_url""
+          render={({ field }: { field: any }) => (
+            <FormItem>
+              <FormLabel className="flex items-center gap-2">"
+                <FileImage className="h-4 w-4" />"
+                Screenshot URL
+              </FormLabel>
+              <FormControl>
+                <Input placeholder="https://example.com/screenshot.jpg" {...field} />"
+        <FormField;
+          control={form.control}
           name="image_url"
           render={({ field }: { field: any }) => (
             <FormItem>
@@ -268,12 +310,11 @@ const projectSchema = null;
               <FormMessage />
             </FormItem>
           )}
-
         />;
         {/* Future file upload field would go here */}
+
         <div className="flex justify-end space-x-2 pt-4">
           <Button type="button" variant="outline" onClick={onCancel}>
-
             Cancel
           </Button>
           <Button type='submit' disabled={isLoading}>
@@ -286,15 +327,13 @@ const projectSchema = null;
     </Form>
   )
         />;
-
         {/* Future file upload field would go here */}
-
         <div className='flex justify-end space-x-2 pt-4'>;
           <Button type='button' variant='outline' onClick={onCancel}>;
             Cancel;
           </Button>;
           <Button type='submit' disabled={isLoading}>;
-            {isLoading && <Loader2 className='mr-2 h-4 w-4 animate-spin' />}
+            {isLoading && <Loader2 className='mr-2 h-4 w-4 animate-spin' />}'
             {isEditing ? 'Update' : 'Add'} Project;
           </Button>;
         </div>;
@@ -307,7 +346,6 @@ const projectSchema = null;
   )
 }
 }
-
 }
 
             </FormItem>)}
@@ -318,7 +356,7 @@ const projectSchema = null;
             Cancel;
           </Button>;
           <Button type='submit' disabled={is_loading}>;
-            {is_loading && <Loader2 className='mr - 2 h - 4 w - 4 animate - spin' />}
+            {is_loading && <Loader2 className='mr - 2 h - 4 w - 4 animate - spin' />}'
             {is_editing ? 'Update' : 'Add'} Project;
           </Button>;
         </div>;
@@ -326,5 +364,7 @@ const projectSchema = null;
     </Form>);
 }
 }
+}
+;
   );
 origin/cursor/automate-test-improve-and-merge-code-2533

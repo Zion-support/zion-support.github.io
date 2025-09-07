@@ -49,7 +49,6 @@ export default function Placeholder() {
 }
 ;
 
-
     <main className="min-h-screen p-8">;
       <Head>;
         <title>Reports • Seo • Latest && Latest.json - Placeholder</title>;

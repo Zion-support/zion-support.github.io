@@ -2,17 +2,7 @@ import React from 'react';
 
 export function VerifiedBadge({ labels }: { labels: string[] }) {
 
-<<<<<<< HEAD
-  if (!labels || labels.length;
 
-=======
-  if (!labels || labels.length;
-origin/cursor/automate-test-improve-and-merge-code-2533
-export function VerifiedBadge({ labels }: { labels: string[],}
-}) {
-
-  if (!labels || labels.length;
->>>>>>> origin/main
   return (
     <div className='flex gap-2 items-center' />;
       {labels && labels.map(label => (;}

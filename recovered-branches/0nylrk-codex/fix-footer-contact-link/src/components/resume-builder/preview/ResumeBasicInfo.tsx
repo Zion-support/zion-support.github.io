@@ -1,11 +1,4 @@
-<<<<<<< HEAD
 
-
-import { ResumeBasicInfo } from '@/types/resume';
-
-=======
-import { ResumeBasicInfo } from "@/types/resume";
->>>>>>> origin/main
 interface ResumeBasicInfoSectionProps {
   basicInfo: ResumeBasicInfo;
 }

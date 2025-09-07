@@ -9,34 +9,13 @@ const { execSync } = require('child_process');
 const fs = require('fs');
 const log = (message) => {}
   const timestamp = new Date().toISOString();
-  
 };
 
 const runCommand = (command, description) => {}
   try {}
     log(`Starting: ${description});
     const output = execSync(command, { })
-<<<<<<< HEAD
-      encoding: 'utf8',
-      stdio: 'pipe',
-      cwd: process.cwd();
-    }
-});`;
-    log(`Completed: ${description}`);
-    return { success: true, output };
-  } catch (error) {}`;
-    log(`Failed: ${description} - ${error.message}`);
-=======
-      encoding: utf8,
-      stdio: pipe,
-      cwd: process.cwd();
-    }
-});
-    log(`Completed: ${description});
-    return { success: true, output };
-  } catch (error) {}
-    log(`Failed: ${description} - ${error.message});
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
     return { success: false, error: error.message };
 
 const checkBuildPerformance = () => {}
@@ -44,56 +23,26 @@ const checkBuildPerformance = () => {}
   const startTime = Date.now();
   const buildResult = runCommand('npm run build,Building project for performance check');
   const endTime = Date.now();
-  
   const buildTime = endTime - startTime;`;
   log(`Build completed in ${buildTime}ms`);
-  
   return { }
     success: buildResult.success, 
     buildTime: buildTime,
-<<<<<<< HEAD
-    performance: buildTime < 60000 ? 'GOOD' : buildTime < 120000 ? 'FAIR' : 'POOR
 
-const checkMemoryUsage = () => {}
-  log('Checking memory usage');
-    const memInfo = execSync('free -m', { encoding: 'utf8' }')
-=======
-    performance: buildTime < 60000 ? 'GOOD: buildTime < 120000 ? 'FAIR: POOR
-  };
-};
-
-const checkMemoryUsage = () => {}
-  log('Checking memory usage');
-  try {}
-    const memInfo = execSync('free -m, { encoding: utf8})
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
 });
     const lines = memInfo.split('\n');
     const memLine = lines[1].split(/\s+/);
-    
     const totalMem = parseInt(memLine[1]);
     const usedMem = parseInt(memLine[2]);
     const memUsagePercent = (usedMem / totalMem) * 100;
     `;
     log(`Memory usage: ${memUsagePercent.toFixed(2)}% (${usedMem}MB / ${totalMem}MB)`);
-    
     return {}
       success: true,
       total: totalMem,
       used: usedMem,
       usagePercent: memUsagePercent,
-<<<<<<< HEAD
-      status: memUsagePercent < 80 ? 'GOOD' : memUsagePercent < 90 ? 'WARNING' : 'CRITICAL
-    log(`Memory check failed: ${error.message}`);
-=======
-      status: memUsagePercent < 80 ? 'GOOD: memUsagePercent < 90 ? 'WARNING: CRITICAL
-    };
-  } catch (error) {}
-    log(`Memory check failed: ${error.message});
-    return { success: false, error: error.message };
-  };
-};
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
 
 const generatePerformanceReport = (results) => {}
   const report = {}
@@ -103,28 +52,15 @@ const generatePerformanceReport = (results) => {}
     overall: {}
       status: GOOD,
       issues: 0;
-  
   // Calculate overall status;
   if (results.build && results.build.performance ===POOR') {}
     report.overall.status = 'WARNING';
     report.overall.issues++;
-<<<<<<< HEAD
-  if (results.memory && results.memory.status === 'CRITICAL') {}
-=======
-  };
-  if (results.memory && results.memory.status ===CRITICAL') {}
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
     report.overall.status = 'CRITICAL';
   // Save report;
   const reportPath = 'logs/pm2/performance-report.json';
-<<<<<<< HEAD
-  fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));`;
-  log(`Performance report saved to ${reportPath}`);
-=======
-  fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-  log(`Performance report saved to ${reportPath});
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
-  
+
   return report;
 
 const main = async () => {}
@@ -132,14 +68,11 @@ const main = async () => {}
   // Run performance checks;
   const buildResults = checkBuildPerformance();
   const memoryResults = checkMemoryUsage();
-  
   // Generate comprehensive report;
   const results = {}
     build: buildResults,
     memory: memoryResults;
-  
   const report = generatePerformanceReport(results);
-  
   // Handle performance issues;
   if (report.overall.status ===CRITICAL') {}
     log('Critical performance issues detected');
@@ -153,27 +86,9 @@ const main = async () => {}
 process.on('SIGINT, () => {}
   log('Performance Monitor Process interrupted');
   process.exit(0);
-<<<<<<< HEAD
 
-process.on('SIGTERM', () => {}
-=======
-}
-});
-'
-process.on('SIGTERM, () => {}
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
   log('Performance Monitor Process terminated');
 
 // Run the main function;
-<<<<<<< HEAD
-main().catch(error => {})`;
-  log(`Performance Monitor Process failed: ${error.message}`);
-  process.exit(1);
-=======
-main().catch(error => {})
-  log(`Performance Monitor Process failed: ${error.message});
-  process.exit(1);
-}
 
-'
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+

@@ -1,9 +1,4 @@
-<<<<<<< HEAD
 
-import React from 'react',
-=======
-import React from 'react';
->>>>>>> origin/main
 import SEO from '../components/SEO';
 import Link from 'next/link';
 export default function RAGEvaluationLabPage() {
@@ -18,11 +13,7 @@ export default function RAGEvaluationLabPage() {
 							</div>
 						))}
 					</div>
-<<<<<<< HEAD
 
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/main
 
   return (
     <>;

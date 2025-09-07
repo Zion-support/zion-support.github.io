@@ -2,29 +2,7 @@
 
 export default function EpisodePage() {
 
-<<<<<<< HEAD
-  const router = null;
 
-=======
-export default function EpisodePage() {
-
-  const router = useRouter();
-  const { id } = router.query as { id?: string }
-  const [episode, setEpisode] = useState<any>(null);
-  useEffect(() => {
-export default function EpisodePage() {;
-  const router = useRouter();
-  const { id } = router && router.query as { id?: string };
-  const [episode, setEpisode] = useState<any>(null);
-
-  useEffect(() => {;
-    if (!id) return;
-    (async () => {;
-      const res = await fetch('/api/podcast/get?id=' + id);
-  }, [id]);
-  if (!episode) return <div>Loading…</div>;
-
->>>>>>> origin/main
   return (
       <div>
         <h2 className="text-xl font-semibold">Transcript</h2>

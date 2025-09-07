@@ -1,26 +1,4 @@
 
-import React, { useState } from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/components/ui/card';
-import { Switch  } from '@/components/ui/switch';
-import { Button  } from '@/components/ui/button';
-import { Label  } from '@/components/ui/label';
-import { ShieldAlert, Info } from 'lucide-react'
-import {logErrorToProduction} from '@/utils/productionLogger';
-import {
-  Accordion;
-  AccordionContent;
-  AccordionItem;
-  AccordionTrigger} from "@/components/ui/accordion",
-import { toast  } from '@/hooks/use-toast';
-import { supabase  } from '@/integrations/supabase/client';
-import { useAuth } from '@/hooks/useAuth';
-export function FraudDetectionSettings() {
-  const { user } = useAuth();
-  const [messageScanningEnabled, setMessageScanningEnabled] = useState(true);
-  const [activityMonitoringEnabled, setActivityMonitoringEnabled] = useState(true);
-  const [aiAnalysisEnabled, setAiAnalysisEnabled] = useState(true);
-  const [isSaving, setIsSaving] = useState(false);
-  const handleSavePreferences = null;
   return (
     <Card className="mb-8">
       <CardHeader className="space-y-1">
@@ -33,6 +11,7 @@ export function FraudDetectionSettings() {
         </CardDescription>
       </CardHeader>
       <CardContent>
+
         <div className="space-y-6">
           <div className="space-y-4">
             <div className="flex items-center justify-between">
@@ -45,13 +24,14 @@ export function FraudDetectionSettings() {
                 </p>
               </div>
               <Switch
+
                 id="message-scanning"
                 aria-label="Message scanning"
                 checked={messageScanningEnabled}
                 onCheckedChange={setMessageScanningEnabled}
               />
             </div>
-            
+
             <div className="flex items-center justify-between">
               <div>
                 <Label className="font-medium" htmlFor="activity-monitoring">
@@ -62,13 +42,14 @@ export function FraudDetectionSettings() {
                 </p>
               </div>
               <Switch
+
                 id="activity-monitoring"
                 aria-label="Activity monitoring"
                 checked={activityMonitoringEnabled}
                 onCheckedChange={setActivityMonitoringEnabled}
               />
             </div>
-            
+
             <div className="flex items-center justify-between">
               <div>
                 <Label className="font-medium" htmlFor="ai-analysis">
@@ -79,6 +60,7 @@ export function FraudDetectionSettings() {
                 </p>
               </div>
               <Switch
+
                 id="ai-analysis"
                 aria-label="AI analysis"
                 checked={aiAnalysisEnabled}
@@ -86,7 +68,7 @@ export function FraudDetectionSettings() {
               />
             </div>
           </div>
-          
+
           <Accordion type="single" collapsible className="w-full">
             <AccordionItem value="item-1">
               <AccordionTrigger className="text-sm font-medium">
@@ -105,13 +87,14 @@ export function FraudDetectionSettings() {
                   <li>Monitoring for suspicious account activities</li>
                 </ul>
                 <p>
+
                   You can opt out of some of these protections, but this may limit your ability to use certain platform features. 
                   We prioritize keeping our marketplace safe while respecting your privacy.
                 </p>
               </AccordionContent>
             </AccordionItem>
           </Accordion>
-          
+
           <div className="pt-2">
             <Button 
               onClick={handleSavePreferences}
@@ -126,6 +109,3 @@ export function FraudDetectionSettings() {
     </Card>
   )
 
-}
-}
-;

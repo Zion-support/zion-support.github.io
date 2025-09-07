@@ -1,12 +1,4 @@
-<<<<<<< HEAD
 
-import React from 'react';
-import ServiceLanding from '../components/sections/ServiceLanding';
-
-export default function AIAutonomousBusinessOperations() {
-	return (
-		<ServiceLanding
-=======
 			implementationWeeks="Implementation: 3–6 weeks"
 			roiNote="Average ROI 5–12x within 120 days"
 			features={[
@@ -17,7 +9,7 @@ export default function AIAutonomousBusinessOperations() {
 				"Compliance logging and role-based access"
 
 import React from 'react';
->>>>>>> origin/main
+
 			title;
 origin/cursor/automate-test-improve-and-merge-code-2533
 				"Integrations: Slack/Teams, Jira, Zendesk, QuickBooks, Stripe"
@@ -30,6 +22,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
 			implementationWeeks="Implementation: 3–6 weeks"
 			roiNote="Average ROI 5–12x within 120 days"
 			features={[
@@ -39,6 +32,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 				"Playbooks for incident response and customer recovery",
 				"Compliance logging and role-based access",
 				"Integrations: Slack/Teams, Jira, Zendesk, QuickBooks, Stripe"
+
+]}
+			industries={["SaaS", "Healthcare", "Finance", "Retail"]}
+			canonical="https: //ziontechgroup.com/ai-autonomous-business-operations"
+		/>
+	)
+};
 			]  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });

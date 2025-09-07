@@ -1,12 +1,4 @@
-<<<<<<< HEAD
 
-import React from 'react';
-import ServiceLanding from '../components/sections/ServiceLanding';
-
-export default function AIAutonomousEcosystemManager() {
-	return (
-		<ServiceLanding
-=======
 			implementationWeeks="Implementation: 4–8 weeks"
 			roiNote="Average ROI 4–9x within 6 months"
 			features={[
@@ -17,7 +9,7 @@ export default function AIAutonomousEcosystemManager() {
 				"Cost and performance optimization"
 
 import React from 'react';
->>>>>>> origin/main
+
 			title;
 origin/cursor/automate-test-improve-and-merge-code-2533
 				"Integrations: Kubernetes, Slack/Teams, Jira, GitHub"
@@ -30,6 +22,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
 			implementationWeeks="Implementation: 4–8 weeks"
 			roiNote="Average ROI 4–9x within 6 months"
 			features={[
@@ -39,6 +32,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 				"Sandboxing and E2E approvals for sensitive actions",
 				"Cost and performance optimization",
 				"Integrations: Kubernetes, Slack/Teams, Jira, GitHub"
+
+]}
+			industries={["Platform Teams", "R&D", "Operations", "Security"]}
+			canonical="https: //ziontechgroup.com/ai-autonomous-ecosystem-manager"
+		/>
+	)
+};
 			]  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });

@@ -1,15 +1,7 @@
-<<<<<<< HEAD
-import dynamic from 'next/dynamic';
-
-const ExpoPage = null;
-
-export default function GlobalEventRoute() {
-  return <ExpoPage />;const ExpoPage = dynamic(() => import('../../components/expo/ExpoPage'), { ssr: false }),
-export default function GlobalEventRoute() {
-=======
 
 
->>>>>>> origin/main
+
+
   return <ExpoPage />;
 }
 origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -1,28 +1,4 @@
-<<<<<<< HEAD
 
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { appendLog, detectIntent, routeToChain } from '@/utils/zionBrain';
-function isAuthorized(req: NextApiRequest): boolean {
-  const token = null;
-    return res.status(500).json({ error: 'Router failure' })
-
-=======
-export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
-) {
-  if (!isAuthorized(req))
-    return res.status(401).json({ error: "Unauthorized" });
-  function isAuthorized(req: NextApiRequest): boolean {
-
-
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { appendLog, detectIntent, routeToChain } from '@/utils/zionBrain';
-function isAuthorized(req: NextApiRequest): boolean {}
-  const token = null;}
-    return res.status(500).json({ error: 'Router failure' })
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/main
   }
 
 export default async function handler(

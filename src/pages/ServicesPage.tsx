@@ -123,6 +123,39 @@ const ServicesPage: React.FC = () => {
               key={item.id} ref={index === services.length - 1 ? lastElementRef : null}
               initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.9 }}
               transition={{ delay: Math.min(index * 0.03, 0.5) }} whileHover={{ scale: 1.02 }}
+            >;
+              <ServiceCard service={item} onViewDetails={() => router.push(`/services/${item.id}`)} />;
+            </motion.div>;
+          ))}
+        </AnimatePresence>;
+      </motion.div>;
+      {(isFetching || loading) && (;
+        <motion.div className="mt-8" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>;
+          <ServicesLoadingGrid count={4} />;
+        </motion.div>;
+      )}
+;
+      {!hasMore && services.length > 0 && (;
+        <motion.div className="text-center mt-12 py-8 border-t" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>;
+          <div className="text-muted-foreground text-lg mb-2">🚀 You've explored all available services!</div>;
+          <div className="text-sm text-muted-foreground">Showing {services.length} IT & AI services</div>;
+        </motion.div>;
+      )}
+;
+      <AnimatePresence>;
+        {showScrollTop && (;
+          <motion.button onClick={scrollToTop} className="fixed bottom-8 right-8 p-3 bg-primary hover:bg-primary/90 rounded-full shadow-lg z-50";
+            initial={{ opacity: 0, scale: 0 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0 }}
+            whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}
+          >;
+            <ArrowUp className="h-5 w-5 text-primary-foreground" />;
+          </motion.button>;
+        )}
+      </AnimatePresence>;
+    </div>;
+  );
+}
+;
             >
               <ServiceCard service={item} onViewDetails={() => router.push(`/services/${item.id}`)} />
             </motion.div>

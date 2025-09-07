@@ -1,29 +1,4 @@
-<<<<<<< HEAD:pages/api/book/export/epub.ts
 
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { randomUUID } from '[^']*';
-import { promises as fs } from '[^']*';
-const Epub = null;
-  return text
-    .split(/\n\n+/)
-    .map((p) => `<p>${escapeHtml(p)}</p>`)
-    .join('\n')
-}
-
-=======
-import { NextApiRequest, NextApiResponse } from "next";
-import { randomUUID } from "crypto";
-import { promises as fs } from "fs";
-import { Epub } from "epub-gen";
-
-export const config = {
-  api: {
-    bodyParser: {
-      sizeLimit: "10mb",
-    },
-  },
-};
->>>>>>> origin/main:temp-disabled/pages-backup/api/book/export/epub.ts
 
 function escapeHtml(s: string): string {
   return s

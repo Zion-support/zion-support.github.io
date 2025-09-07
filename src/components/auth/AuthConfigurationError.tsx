@@ -1,18 +1,19 @@
 
 import Link from 'next/link';
-
 import { Button } from '@/components/ui/button';
 import { Alert, AlertDescription } from '@/components/ui/alert';
-
-import React from 'react'
-import Link from 'next/link'
+import React from 'react''
+import Link from 'next/link''
 import {
-
   AlertTriangle,
   ExternalLink,
   RefreshCw,
   Settings,;
   CheckCircle;
+} from 'lucide-react'; import { Button } from '@/components/ui/button'; import { AlertTriangle, ExternalLink, RefreshCw, Settings, CheckCircle } from 'lucide-react''
+import { Button } from '@/components/ui/button''
+import { Alert, AlertDescription } from '@/components/ui/alert''
+import { AlertTriangle, ExternalLink, RefreshCw, Settings, CheckCircle } from 'lucide-react''
 
 
 } from 'lucide-react'; import { Button } from '@/components/ui/button'; import { AlertTriangle, ExternalLink, RefreshCw, Settings, CheckCircle } from 'lucide-react'
@@ -40,15 +41,22 @@ interface AuthConfigurationErrorProps {;
 export function AuthConfigurationError({ onRetry, showSetupButton = true }: AuthConfigurationErrorProps) {;
 interface AuthConfigurationErrorProps {;
   onRetry?: () => void;
-
   showSetupButton?: boolean
-
-
-
 export function AuthConfigurationError(): any ({;
   onRetry,;
   showSetupButton = true,;
-}: AuthConfigurationErrorProps) {;
+}:,  AuthConfigurationErrorProps) {;
+import React from 'react',;
+import Link from 'next/link',;
+import { AlertTriangle, ExternalLink, RefreshCw, Settings, CheckCircle } from 'lucide-react';
+import { Button } from '@/components/ui/button',;
+import { Alert, AlertDescription } from '@/components/ui/alert',;
+interface AuthConfigurationErrorProps {;
+  onRetry?: () => void,;
+  showSetupButton?: boolean;
+}
+;
+export function AuthConfigurationError({ onRetry, showSetupButton = true }: AuthConfigurationErrorProps) {;
   const handleRefresh = () => {;
     if (onRetry) {;
       onRetry();
@@ -56,4 +64,5 @@ export function AuthConfigurationError(): any ({;
 }
 
 export function AuthConfigurationError({ onRetry, showSetupButton;
+
 

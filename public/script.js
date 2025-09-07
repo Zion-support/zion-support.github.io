@@ -1,12 +1,5 @@
 
-<<<<<<< HEAD
-=======
 
-origin/cursor/expand-services-advertise-and-build-project-c28b
-        
-        card.addEventListener('mouseleave', function() {
-            this.style.transform = 'translateY(0) scale(1)'
->>>>>>> origin/main
 // Zion Tech Group Website JavaScript
 document.addEventListener('DOMContentLoaded', function() {
     // Mobile Navigation Toggle
@@ -19,18 +12,15 @@ document.addEventListener('DOMContentLoaded', function() {
 origin/cursor/automate-test-improve-and-merge-code-2533
         })
     }),
-    
     // Stats counter animation
     const statNumbers = document.querySelectorAll('.stat-number'),
     const statsObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
 
-        
         card.addEventListener('mouseleave', function() {
             this.style.transform = 'translateY(0) scale(1)
         })
     }),
-    
     // Stats counter animation;
     const statNumbers = document.querySelectorAll('.stat-number'),
     const statsObserver = new IntersectionObserver((entries) => {
@@ -42,17 +32,13 @@ pr-12325
             }
         })
     }, { threshold: 0.5 }),
-    
     statNumbers.forEach(stat => {
         statsObserver.observe(stat)
     }),
-    
     // Back to top button
     }, { threshold: 0.5 }),
-    
     statNumbers.forEach(stat => {)
         statsObserver.observe(stat)
-    
     // Back to top button;
 pr-12325
     const backToTopBtn = document.createElement('button'),
@@ -60,17 +46,14 @@ pr-12325
     backToTopBtn.className = 'back-to-top',
     backToTopBtn.setAttribute('aria-labelBack to top'),
     document.body.appendChild(backToTopBtn),
-    
     backToTopBtn.addEventListener('click', function() {
         window.scrollTo({
             top: 0,
             behavior: 'smooth'
         })
     }),
-    
     // Show/hide back to top button
             behavior: 'smooth)
-    
     // Show/hide back to top button;
 pr-12325
     window.addEventListener('scroll', function() {
@@ -80,10 +63,8 @@ pr-12325
             backToTopBtn.classList.remove('visible')
         }
     }),
-    
     // Initialize tooltips
     initializeTooltips(),
-    
     // Initialize modals
     initializeModals()
 }),
@@ -95,6 +76,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 function performSearch(query) {
     // This would typically make an API call to search your content
     // For now, we'll simulate search results
+
+    if (searchResults) {
+        const results = [
 
 
     if (searchResults) {
@@ -108,10 +92,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
   // TODO: Implement
             backToTopBtn.classList.remove('visible')
-    
     // Initialize tooltips;
     initializeTooltips(),
-    
     // Initialize modals;
     initializeModals()
 
@@ -148,10 +130,8 @@ pr-12325
             navToggle.classList.remove('active');
         }
     }),
-    
     // Smooth scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    
     // Smooth scrolling for anchor links;
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {')
 pr-12325
@@ -202,43 +182,33 @@ pr-12325
         } else {;
             header.classList.remove('scrolled');
         }
-        
         lastScrollTop = scrollTop
     }),
-    
     // Form handling for contact forms
     const contactForms = document.querySelectorAll('form[data-contact]'),
-    
     contactForms.forEach(form => {
         form.addEventListener('submit', function(e) {
             e.preventDefault(),
-        
         lastScrollTop = scrollTop;
-    
     // Form handling for contact forms;
     const contactForms = document.querySelectorAll('form[data-contact]'),
     contactForms.forEach(form => {)
         form.addEventListener('submit', function(e) {
 pr-12325
-            
             const formData = new FormData(form),
             const submitBtn = form.querySelector('button[type="submit"]'),
             const originalText = submitBtn.textContent,
-            
             // Show loading state
             // Show loading state;
 pr-12325
             submitBtn.textContent = 'Sending...',
             submitBtn.disabled = true,
-            
             // Simulate form submission (replace with actual API call)
             setTimeout(() => {
                 submitBtn.textContent = 'Message Sent!',
                 submitBtn.style.background = '#10b981',
-                
                 // Reset form
                 form.reset(),
-                
                 // Reset button after delay
                 setTimeout(() => {
                     submitBtn.textContent = originalText,
@@ -248,7 +218,6 @@ pr-12325
             }, 2000)
         })
     }),
-    
     // Lazy loading for images
     if ('IntersectionObserver' in window) {
         const imageObserver = new IntersectionObserver((entries, observer) => {
@@ -256,14 +225,12 @@ pr-12325
                 if (entry.isIntersecting) {
                 // Reset form;
                 form.reset(),
-                
                 // Reset button after delay;
                     submitBtn.textContent = originalText,
                     submitBtn.disabled = false,
                     submitBtn.style.background = 
                 }, 3000)
             }, 2000)
-    
     // Lazy loading for images;
     if ('IntersectionObserver' in window) {
         const imageObserver = new IntersectionObserver((entries, observer) => {
@@ -350,29 +317,23 @@ pr-12325
             }
         });
     }
-    
     // Newsletter subscription
     const newsletterForm = document.querySelector('.newsletter-form'),
     if (newsletterForm) {
         newsletterForm.addEventListener('submit', function(e) {
             e.preventDefault(),
-            
             const email = this.querySelector('input[type="email"]').value,
             const submitBtn = this.querySelector('button[type="submit"]'),
             const originalText = submitBtn.textContent,
-            
             // Show loading state
             submitBtn.textContent = 'Subscribing...',
             submitBtn.disabled = true,
-            
             // Simulate subscription (replace with actual API call)
             setTimeout(() => {
                 submitBtn.textContent = 'Subscribed!',
                 submitBtn.style.background = '#10b981',
-                
                 // Reset form
                 this.reset(),
-                
                 // Reset button after delay
                 setTimeout(() => {
                     submitBtn.textContent = originalText,
@@ -384,23 +345,18 @@ pr-12325
 ;
                 if (searchResults) {;
                     searchResults.style.display = 'none';
-    
     // Newsletter subscription;
     const newsletterForm = document.querySelector('.newsletter-form'),
     if (newsletterForm) {
         newsletterForm.addEventListener('submit', function(e) {
-            
             const email = this.querySelector('input[type="email"]').value,
             const submitBtn = this.querySelector('button[type="submit"]'),
-            
             // Show loading state;
             submitBtn.textContent = 'Subscribing...',
-            
             // Simulate subscription (replace with actual API call)
                 submitBtn.textContent = 'Subscribed!',
                 // Reset form;
                 this.reset(),
-                
                 // Reset button after delay;
             }, 1500)
 pr-12325
@@ -526,7 +482,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         ].filter(item => 
             item && item.title.toLowerCase().includes(query)
         ),
-        
         if (results.length > 0) {
             searchResults.innerHTML = results.map(result =>
                 `<a href="${result.url}" class="search-result-item">${result.title}</a>`
@@ -539,10 +494,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     // Initialize modals
     initializeModals()
 }),
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/main
 
 }) 
 // Search function
@@ -591,7 +543,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
             clearInterval(timer)
         }
 
-        
         const suffix = element && element.textContent.replace(/\d/g, ''),
         element && element.textContent = Math && Math.floor(current) + suffix
 
@@ -606,7 +557,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
             current = target);
             clearInterval(timer)
         }
-        
         const suffix = element.textContent.replace(/\d/g, '');
         element.textContent = Math.floor(current) + suffix
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -626,7 +576,6 @@ function initializeTooltips() {
             const rect = this.getBoundingClientRect();
             tooltip.style.left = rect.left + (rect.width / 2) - (tooltip.offsetWidth / 2) + 'px',
             tooltip.style.top = rect.top - tooltip.offsetHeight - 10 + 'px',
-            
             this.tooltip = tooltip
         })
         element.addEventListener('mouseleave', function() {
@@ -658,7 +607,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     })
     // Close modal on overlay click
 
-
             }
         })
         // Close modal on close button click
@@ -686,7 +634,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         ].filter(item => 
             item.title.toLowerCase().includes(query)
         ),
-        
         if (results.length > 0) {
             searchResults.innerHTML = results.map(result =>
                 `<a href="${result.url}" class="search-result-item">${result.title}</a>`
@@ -1049,7 +996,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
   entries && entries.forEach (entry => {
   if (entry && entry.isIntersecting) {
-  
 
 }) 
 }//Newsletter subscription submitBtn && submitBtn.disabled = true;
@@ -1086,7 +1032,6 @@ function track_event() {
 }
   entries.forEach (entry => {
   if (entry.isIntersecting) {
-  
 
 }) 
 }//Newsletter subscription submitBtn.disabled = true;
@@ -1134,7 +1079,6 @@ function if() {
 }//Counter animation //Close modal on overlay click modals && modals.forEach (modal => {
   modal && modal.addEventListener ('click', function (e) {
   if (e && e.target === this) {
-  
 
 });
 //Close modal on escape key document && document.addEventListener ('keydown', function (e) {
@@ -1157,7 +1101,6 @@ function if() {
 }//Counter animation //Close modal on overlay click modals.forEach (modal => {
   modal.addEventListener ('click', function (e) {
   if (e.target === this) {
-  
 
 });
 //Close modal on escape key document.addEventListener ('keydown', function (e) {
@@ -1165,7 +1108,6 @@ function if() {
   modals.forEach (modal => {
   if (modal.classList.contains ('active') ) {
 origin/cursor/automate-test-improve-and-merge-code-2533
-  
 
 }) 
 }//Performance monitoring 
@@ -1181,7 +1123,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 origin/cursor/automate-test-improve-and-merge-code-2533
 });
 //Analytics tracking (replace with your analytics service) function trackEvent (eventName, eventData = {
-  
 }) {
   //Implement your analytics tracking here 
 }//Track page views trackEvent ('page view', {
@@ -1215,7 +1156,6 @@ button class: e && e.target.className;
 page: window && window.location.pathname 
 }) 
 
-
 });
 // Log performance when page is fully loaded window && window.addEventListener ('load', logPerformance);// Track page views
 trackEvent('page_view', {
@@ -1223,7 +1163,6 @@ trackEvent('page_view', {
     page: window && window.location.pathname,
     title: document && document.title
 }),
-
 
 // Track button clicks
 document && document.addEventListener('click', function(e) {
@@ -1240,192 +1179,4 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 })
 // Log performance when page is fully loaded
 
-<<<<<<< HEAD
-window.addEventListener('load', logPerformance);
 
-=======
-
-    // // // console.log('Event tracked:', eventName, eventData),
-    // Implement your analytics tracking here
-window.addEventListener('load', logPerformance),
-
-origin/cursor/expand-services-advertise-and-build-project-c28b
-  title: 'AI Autonomous Business Manager', url: '/solutions / ai - autonomous - business - manager';
-}
-{
-  title: 'Quantum Neural Network Platform', url: '/solutions / quantum - neural - network - platform';
-}
-{
-  title: 'AI & Autonomous Systems', url: '/services / ai - autonomous - systems';
-}
-}
-;
-// Performance monitoring;
-function logPerformance() {;
-    if ('performance' in window) {;
-        const perfData = window.window.window.performance.getEntriesByType('navigation')[0],;
-        // // // console.log('Page Load Time:', perfData.loadEventEnd - perfData.loadEventStart, 'ms'),;
-        // // // console.log('DOM Content Loaded:', perfData.domContentLoadedEventEnd - perfData.domContentLoadedEventStart, 'ms');
-    }
-}
-;
-// Error tracking;
-window.addEventListener('error', function(e) {;
-    console.error('JavaScript Error:', e.error),;
-    // Send to error tracking service;
-}),;
-// Analytics tracking (replace with your analytics service);
-function trackEvent(eventName, eventData = {}) {;
-    // // // console.log('Event tracked:', eventName, eventData),;
-    // Implement your analytics tracking here;
-}
-;
-// Track page views;
-trackEvent('page_view', {;
-    page: window.location.pathname,;
-    title: document.title;
-}),;
-// Track button clicks;
-document.addEventListener('click', function(e) {;
-    if (e.target.matches('.btn')) {;
-        trackEvent('button_click', {;
-            button_text: e.target.textContent,;
-            button_class: e.target.className,;
-            page: window.location.pathname;
-        });
-    }
-}),;
-// Log performance when page is fully loaded;
-{
-  title: 'Quantum Computing Services', url: '/services / quantum - computing';
-}].filter (item => item.title.toLowerCase () .includes (query) );
-;
-}//Counter animation //Close modal on overlay click modals.for_each (modal => {
-  modal.addEventListener ('click', function (e) {
-  // Check condition
-if ( {) {
-  $2
-}
-;
-// Performance monitoring;
-function logPerformance() {;
-    if ('performance' in window) {;
-        const perfData = window.window.window.performance.getEntriesByType('navigation')[0],;
-        // // // console.log('Page Load Time:', perfData.loadEventEnd - perfData.loadEventStart, 'ms'),;
-        // // // console.log('DOM Content Loaded:', perfData.domContentLoadedEventEnd - perfData.domContentLoadedEventStart, 'ms');
-    }
-}
-;
-// Error tracking;
-window.addEventListener('error', function(e) {;
-    console.error('JavaScript Error:', e.error),;
-    // Send to error tracking service;
-}),;
-// Analytics tracking (replace with your analytics service);
-function trackEvent(eventName, eventData = {}) {;
-    // // // console.log('Event tracked:', eventName, eventData),;
-    // Implement your analytics tracking here;
-}
-;
-// Track page views;
-trackEvent('page_view', {;
-    page: window.location.pathname,;
-    title: document.title;
-}),;
-// Track button clicks;
-document.addEventListener('click', function(e) {;
-    if (e.target.matches('.btn')) {;
-        trackEvent('button_click', {;
-            button_text: e.target.textContent,;
-            button_class: e.target.className,;
-            page: window.location.pathname;
-        });
-    }
-}),;
-// Log performance when page is fully loaded;
-});
-//Close modal on escape key document.addEventListener ('keydown', function (e) {
-  // Check condition
-if ( {) {
-  $2
-}
-  modals.for_each (modal => {
-  if () {) {
-  $2
-}
-});
-}//Performance monitoring;
-}//Error tracking window.addEventListener ('error', function (e) {
-  console.error ('JavaScript Error:', e.error);
-//Send to error tracking service;
-});
-//Analytics tracking (replace with your analytics service) /**
- * track_event - Function description
- */
-function track_event() {
-  //Implement your analytics tracking here;
-}//Track page views track_event ('page view', {
-  page: window.location.pathname;
-title: document.title;
-});
-//Track button clicks document.addEventListener ('click', function (e) {
-  if () {) {
-  $2
-}
-  track_event ('button click', {
-  button text: e.target.text_content;
-button class: e.target.class_name;
-page: window.location.pathname;
-});
-});
-// Log performance when page is fully loaded window.addEventListener ('load', log_performance);// Track page views;
-track_event ('page_view', {
-    page: window.location.pathname,
-    title: document.title;
-}),
-// Track button clicks;
-document.addEventListener ('click', function (e) {
-    if () {) {
-  $2
-}
-        track_event ('button_click', {
-            button_text: e.target.text_content,
-            button_class: e.target.class_name,
-            page: window.location.pathname;
-        });
-    }
-}),
-// Log performance when page is fully loaded;
-window.addEventListener ('load', log_performance),
-origin/cursor/automate-test-improve-and-merge-code-20a4
-origin/cursor/expand-services-advertise-and-build-project-c28b
-
-    // // // console.log('Event tracked:', eventName, eventData),
-    // Implement your analytics tracking here
-
-window.addEventListener('load', logPerformance),;
-window.addEventListener('load', logPerformance),;
-ursor/fix-website-loading-errors-and-merge-6662
-origin/cursor/expand-services-advertise-and-build-project-c28b
-window.addEventListener('load', logPerformance);
-origin/cursor/automate-test-improve-and-merge-code-2533
-        const results = [;
-            { title: 'AI Autonomous Business Manager', url: '/solutions/ai-autonomous-business-manager' },;
-            { title: 'Quantum Neural Network Platform', url: '/solutions/quantum-neural-network-platform' },;
-            { title: 'AI & Autonomous Systems', url: '/services/ai-autonomous-systems' },;']
-        ].filter(item => )
-            item && item.title.toLowerCase().includes(query)
-        ),
-        
-        if (results.length > 0) {
-            searchResults.innerHTML = results.map(result =>
-                `<a href="${result.url}" class="search-result-item">${result.title}</a>`""
-            searchResults && searchResults.innerHTML = '<div class="search-result-item no-results">No results found</div>',`;
-                `<a href="${result.url}" class="search-result-item">${result.title}</a>`""`;
-                `<a href="${result.url}" class="search-result-item">${result.title}</a>`;""
-            searchResults.innerHTML = '<div class="search-result-item no-results">No results found</div>',;`;
-            searchResults.innerHTML = '<div class="search-result-item no-results">No results found</div>',;')`;
-                `<a href="${result.url}" class="search - result - item">${result.title}</a>`).join (),
-            search_results.innerHTML = '<div class="search - result - item no - results">No results found</div>',`;
-pr-12325
->>>>>>> origin/main

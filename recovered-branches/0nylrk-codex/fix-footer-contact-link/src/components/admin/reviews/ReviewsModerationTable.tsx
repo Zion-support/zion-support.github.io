@@ -1,39 +1,4 @@
 
-<<<<<<< HEAD
-import { useState } from "react",
-import { useMutation } from "@tanstack/react-query",
-import { Check, X, User, Star, MoreHorizontal } from "lucide-react",
-import { format } from "date-fns",
-import { toast } from "@/hooks/use-toast",
-import { supabase } from "@/integrations/supabase/client";
-import { Review, ReviewStatus } from "@/types/reviews";
-import {
-  Table;
-  TableBody;
-  TableCell;
-  TableHead;
-  TableHeader;
-  TableRow} from "@/components/ui/table",
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import {
-  Dialog;
-  DialogContent;
-  DialogDescription;
-  DialogFooter;
-  DialogHeader;
-  DialogTitle} from "@/components/ui/dialog",
-import {
-  DropdownMenu;
-  DropdownMenuContent;
-  DropdownMenuItem;
-  DropdownMenuTrigger} from "@/components/ui/dropdown-menu",
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-
-interface ReviewsModerationTableProps {
-  reviews: Review[];
-  isLoading: boolean;
-=======
 import {useState} from "react";
 import {useMutation} from "@tanstack/react-query";
 import {Check, X, User, Star, MoreHorizontal} from "lucide-react";
@@ -41,6 +6,20 @@ import {format} from "date-fns";
 import {toast} from "@/hooks/use-toast";
 import {supabase} from "@/integrations/supabase/client";
 import {Review, ReviewStatus} from "@/types/reviews";
+
+import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
+import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
+import {Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle} from "@/components/ui/dialog";
+import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger} from "@/components/ui/dropdown-menu";
+import {Badge} from "@/components/ui/badge";
+import {Button} from "@/components/ui/button";
+import { useState } from "react",
+import { useMutation } from "@tanstack/react-query",
+import { Check, X, User, Star, MoreHorizontal } from "lucide-react",
+import { format } from "date-fns",
+import { toast } from "@/hooks/use-toast",
+import { supabase } from "@/integrations/supabase/client",
+import { Review, ReviewStatus } from "@/types/reviews",
 
 import {
 
@@ -96,14 +75,22 @@ import {
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger} from "@/components/ui/dropdown-menu",
+import { Badge } from "@/components/ui/badge",
+import { Button } from "@/components/ui/button",
+interface ReviewsModerationTableProps {
 import { Badge } from "@/components/ui/badge",;
 import { Button } from "@/components/ui/button",interface ReviewsModerationTableProps {
   reviews: Review[]
   isLoading: boolean
 
->>>>>>> origin/main
+
   onRefresh: () => void
 }
+
+  onRefresh}: ReviewsModerationTableProps) {
+  const [selectedReview, setSelectedReview] = useState<Review | null>(null),
+
+  const [viewDetailsOpen, setViewDetailsOpen] = useState(false),
 
 export function ReviewsModerationTable({;
   reviews;
@@ -113,388 +100,12 @@ export function ReviewsModerationTable({
   isLoading,
 
   onRefresh}: ReviewsModerationTableProps) {
-<<<<<<< HEAD
-
-  const [selectedReview, setSelectedReview] = useState<Review | null>(null),
-  const [viewDetailsOpen, setViewDetailsOpen] = useState(false);
-
-  const { mutate: updateReviewStatus, isPending } = useMutation({
-    mutationFn: async ({
-      reviewId;
-      status}: {
-      reviewId: string;
-      status: ReviewStatus
-    }) => {
-      const { error } = await supabase
-        .from("reviews")
-        .update({ status })
-        .eq("id", reviewId);
 
 
-      if (error) throw error;
-      return { reviewId, status }
-    };
-    onSuccess: (data) => {
-      toast({
-
-        title: "Review updated";
-        description: `Review has been ${data.status}.`});
-
-      onRefresh();
-      setViewDetailsOpen(false)
-    };
-=======
-  const [selectedReview, setSelectedReview] = useState<Review | null>(null),
-  const [viewDetailsOpen, setViewDetailsOpen] = useState(false);
-  const [viewDetailsOpen, setViewDetailsOpen] = useState(false),
->>>>>>> origin/main
     onError: (error: Error) => {
       toast({
 
-<<<<<<< HEAD
 
-  const getStatusColor = null;
-
-=======
-        title: "Error"
-        description: `Failed to update review: ${error.message}`
-        variant: "destructive"})  },
-
-  const handleReject = (reviewId: string) => {
-    updateReviewStatus({ reviewId, status: "rejected" })
-  },
-
-  const handleViewDetails = (review: Review) => {
-    setSelectedReview(review)
-    setViewDetailsOpen(true)
-
-  },
-
-  const renderStars = (rating: number) => {
-    return (
-      <div className="flex">
-        {[1, 2, 3, 4, 5].map((star) => (
-          <Star
-            key={star}
-            className={`h-4 w-4 ${star <= rating ? "fill-yellow-400 text-yellow-400" : "text-gray-300"}`}
-          />
-interface ReviewsModerationTableProps {;
-  reviews: Review[],;
-  isLoading: boolean,;
-  onRefresh: () => void;
-}
-        .eq("id", reviewId);
-      if (error) throw error;
-      return { reviewId, status }  const { mutate: updateReviewStatus, isPending } = useMutation({;
-    mutationFn: async ({;
-      reviewId,;
-      status}: {;
-      reviewId: string,;
-      status: ReviewStatus;
-import { useState } from "react",;
-import { useMutation } from "@tanstack/react-query",;
-import { Check, X, User, Star, MoreHorizontal } from "lucide-react",;
-import { format } from "date-fns",;
-import { toast } from "@/hooks/use-toast",;
-import { supabase } from "@/integrations/supabase/client",;
-import { Review, ReviewStatus } from "@/types/reviews",;
-;
-import {;
-  Table,;
-  TableBody,;
-  TableCell,;
-  TableHead,;
-  TableHeader,;
-  TableRow} from "@/components/ui/table",;
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
-import {;
-  Dialog,;
-  DialogContent,;
-  DialogDescription,;
-  DialogFooter,;
-  DialogHeader,;
-  DialogTitle} from "@/components/ui/dialog",;
-import {;
-  DropdownMenu,;
-  DropdownMenuContent,;
-  DropdownMenuItem,;
-  DropdownMenuTrigger} from "@/components/ui/dropdown-menu",;
-import { Badge } from "@/components/ui/badge",;
-import { Button } from "@/components/ui/button",;
-;
-interface ReviewsModerationTableProps {;
-  reviews:Review[],;
-  isLoading:boolean,;
-  onRefresh:() => void;
-}
-;
-export function ReviewsModerationTable({;
-  reviews,;
-  isLoading,;
-  onRefresh} ReviewsModerationTableProps) {;
-  const [selectedReview, setSelectedReview] = useState<Review | null>(null),;
-  const [viewDetailsOpen, setViewDetailsOpen] = useState(false),;
-;
-  const { mutate:updateReviewStatus, isPending } = useMutation({;
-    mutationFn:async ({;
-      reviewId,;
-      status} {;
-      reviewId:string,;
-      status:ReviewStatus;
-    }) => {;
-      const { error } = await supabase;
-        .from("reviews");
-        .update({ status });
-        .eq("id", reviewId);
-      if (error) throw error;
-      return { reviewId, status }
-      case "rejected":;
-        return "bg-red-100 text-red-800 hover:bg-red-200",;
-      default:;
-        return "bg-yellow-100 text-yellow-800 hover:bg-yellow-200";
-    }
-  };
-  const getInitials = (name: string) => {;
-    return name;
-      .split(" ");
-      .map((n) => n[0]);
-      .join("");
-      .toUpperCase()
-};
-
-  if (isLoading) {;
-
-    return (        .eq("id", reviewId);
-      if (error) throw error;
-      return { reviewId, status }
-    return (
-      <div className="space-y-4">;
-        <div className="h-12 w-full bg-muted rounded animate-pulse" />;
-        <div className="h-16 w-full bg-muted rounded animate-pulse" />;
-        <div className="h-16 w-full bg-muted rounded animate-pulse" />;
-        <div className="h-16 w-full bg-muted rounded animate-pulse" />;
-      </div>;
-      <div className="py-10 text-center">;
-        <h3 className="text-lg font-medium mb-2">No reviews to moderate</h3>;
-        <p className="text-muted-foreground">;
-          All reviews have been processed. Check back later for new submissions.;
-        </p>;
-      </div>;
-    );
-  }
-
-  const handleApprove = (reviewId: string) => {;
-    updateReviewStatus({ reviewId, status: "approved" })
-};
-
-  const handleReject = (reviewId: string) => {;
-    updateReviewStatus({ reviewId, status: "rejected" })
-};
-  const handleViewDetails = (review: Review) => {;
-    setSelectedReview(review),;
-    setViewDetailsOpen(true)
-};
-
-  const renderStars = (rating: number) => {;import { useState } from './react';
-import { use_mutation } from '@tanstack / react - query';
-import { Check, X, User, Star, MoreHorizontal } from './lucide-react';
-import { format } from './date - fns';
-import { toast } from '@/hooks / use - toast';
-import { supabase } from '@/integrations / supabase / client';
-import { Review, ReviewStatus } from '@/types / reviews';
-;
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components / ui / table';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components / ui / avatar';
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from '@/components / ui / dialog';
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components / ui / dropdown - menu';
-import { Badge } from '@/components / ui / badge';
-import { Button } from '@/components / ui / button';
-interface ReviewsModerationTableProps {
-  reviews: Review[],
-  is_loading: boolean,
-  on_refresh: () => void;
-}
-export /**
- * ReviewsModerationTable - Function description
- */
-function ReviewsModerationTable() {
-  DialogHeader,"
-  DialogTitle} from "@/components/ui/dialog","
-  DialogHeader,"
-  DialogTitle} from "@/components/ui/dialog","
-
-import {
-  // TODO: Implement
-  DropdownMenu,
-
-  DropdownMenuContent,
-  DropdownMenuItem,"
-  DropdownMenuTrigger} from "@/components/ui/dropdown-menu",""
-import { Badge } from "@/components/ui/badge",""
-import { Button } from "@/components/ui/button","
-interface ReviewsModerationTableProps {
-  // TODO: Implement
-  reviews: Review[],
-  isLoading: boolean;
-  onRefresh: () => void;
-
-
-
-
-  onRefresh}: ReviewsModerationTableProps) {
-  const [selectedReview, setSelectedReview] = useState<Review | null>(null),
-
-"
-      <div className="space-y-4">"
-</div>"
-        <div className="h-12 w-full bg-muted rounded animate-pulse" />"
-        <div className="h-16 w-full bg-muted rounded animate-pulse" />"
-</div>
-      <div className="py-10 text-center">"
-        <h3 className="text-lg font-medium mb-2">No reviews to moderate</h3>""
-        <p className="text-muted-foreground">"
-</p>
-      <div className="flex">"
-          <Star;
-            key={star}"
-            className={`h-4 w-4 ${star <= rating ? "fill-yellow-400 text-yellow-400" : "text-gray-300"}`}"
-          />
-
-  const [selectedReview, setSelectedReview] = useState<Review | null>(null);
-      <div className="space-y-4">;"
-        <div className="h-12 w-full bg-muted rounded animate-pulse" />;"
-        <div className="h-16 w-full bg-muted rounded animate-pulse" />;"
-      </div>;"
-      <div className="py-10 text-center">;"
-        <h3 className="text-lg font-medium mb-2">No reviews to moderate</h3>;""
-        <p className="text-muted-foreground">;"
-        </p>;
-      <div className="flex">;"
-            key={star}"`;
-          />;
-
-      </div>;
-pr-12325
-
-  const [selected_review, setSelectedReview] = useState < Review | null>(null);
-  const [viewDetailsOpen, setViewDetailsOpen] = useState (false);}
-;}
-  const { mutate: updateReviewStatus, is_pending } = use_mutation ({
-    mutation_fn: async ({}
-      review_id,}
-      status}: {
-      review_id: string,}
-      status: ReviewStatus;}
-  }
-;
-  const get_initials = (name: string) =>: any {
-    return name;
-      .split (" ");
-      .map ((n) => n[0]);
-      .join ("");
-      .toUpperCase ();
-  }
-;
-  // Check condition
-if ( {) {
-  $2
-}
-    return (
-      <div className="space-y-4">;
-        <div className="h - 12 w - full bg - muted rounded animate-pulse" />;
-        <div className="h - 16 w - full bg - muted rounded animate-pulse" />;
-        <div className="h - 16 w - full bg - muted rounded animate-pulse" />;
-        <div className="h - 16 w - full bg - muted rounded animate-pulse" />;
-      </div>);
-  }
-  // Check condition
-if ( {) {
-  $2
-}
-    return (
-      <div className="py - 10 text-center">;
-        <h3 className="text - lg font - medium mb-2">No reviews to moderate</h3>;
-        <p className="text - muted-foreground">;
-          All reviews have been processed. Check back later for new submissions.;
-        </p>;
-  const handle_reject = (review_id: string) =>: any {
-    updateReviewStatus ({ review_id, status: "rejected" });
-  }
-;
-  const handleViewDetails = (review: Review) =>: any {
-    setSelectedReview (review),
-    setViewDetailsOpen (true);
-  }
-;
-  const render_stars = (rating: number) =>: any {
-    return (
-      <div className="flex">;
-        {[1, 2, 3, 4, 5].map ((star) => (
-          <Star;
-            key={star}
-  return (    <>;
-      <Table>;
-        <TableHeader>;
-          <TableRow>;                          : <User className="h-4 w-4" />}
-                      </AvatarFallback>;
-                    )}
-                    )}
-                  </div>;
-                </div>;
-              </TableCell>;
-                  "None";
-                )}
-              </TableCell>;
-              <TableCell className="text-right">;
-                <div className="flex justify-end gap-2">;
-                  {review && review.status === "pending" && (;
-                    <>;                  {review && review.status === "pending" && (;
-                    <>;
-                      <Button
-                        size="sm"
-                        variant="outline"
-                        className="h-8 w-8 p-0"                        disabled={isPending}
-                      >;
-                        <X className="h-4 w-4 text-red-500" />;
-;)
-  const get_initials = (name: string) =>: any {
-
-  // TODO: Implement
-}
-    return name;"
-      .split (" ");"
-      .map ((n) => n[0]);"
-      .join ("");"
-      .toUpperCase ();
-  }
-;
-  // Check condition;
-if ( {) {
-  $2;
-}
-    return ("
-      <div className="space - y-4">;"
-</div>"
-        <div className="h - 12 w - full bg - muted rounded animate - pulse" />;"
-</div>"
-        <div className="h - 16 w - full bg - muted rounded animate - pulse" />;"
-</div>"
-        <div className="h - 16 w - full bg - muted rounded animate - pulse" />;"
-</div>"
-        <div className="h - 16 w - full bg - muted rounded animate - pulse" />;"
-</div>)
-      </div>);"
-      <div className="py - 10 text - center">;"
-</div>"
-        <h3 className="text - lg font - medium mb - 2">No reviews to moderate</h3>;""
-        <p className="text - muted - foreground">;"
-</p>
-        </p>;"
-      <div className="flex">;"
-</div>
-          <Star;
-            key={star}
->>>>>>> origin/main
   return (
     <>;
 </Star>
@@ -608,6 +219,13 @@ if ( {) {
                       <Button
                         variant="ghost"
                         size="sm"
+                        className="h-8 w-8 p-0">;
+<Button;
+                        variant="ghost";
+                        size="sm";
+                        className="h-8 w-8 p-0";
+                      >;
+                        <MoreHorizontal className="h-4 w-4" />;
                         className="h-8 w-8 p-0">;                        <MoreHorizontal className="h-4 w-4" />;
                       </Button>;
                     </DropdownMenuTrigger>;
@@ -625,6 +243,7 @@ if ( {) {
                           Mark as approved;
                         </DropdownMenuItem>;
                       )}
+
 </DropdownMenu>
                     <DropdownMenuTrigger asChild>;
 </DropdownMenuTrigger>
@@ -772,6 +391,93 @@ if ( {) {
                         <DropdownMenuItem on_click={() => updateReviewStatus ({ review_id: review.id, status: "rejected" })}>;
                           Mark as rejected;
                         </DropdownMenuItem>)}
+                      {review.status === "rejected" && (
+                        onClick={() => handleReject(review.id)}
+                        disabled={isPending}
+                      >
+                        <X className="h-4 w-4 text-red-500" />
+                      </Button>
+                    </>
+                  )}
+                  <DropdownMenu>
+                    <DropdownMenuTrigger asChild>
+                      <Button
+                        variant="ghost"
+                        size="sm"
+                        className="h-8 w-8 p-0"
+                      >
+                        <MoreHorizontal className="h-4 w-4" />
+                      </Button>
+                    </DropdownMenuTrigger>
+                    <DropdownMenuContent align="end">
+                      <DropdownMenuItem onClick={() => handleViewDetails(review)}>
+                        View details
+                      </DropdownMenuItem>
+                      {review.status === "approved" && (
+                        <DropdownMenuItem onClick={() => updateReviewStatus({ reviewId: review.id, status: "rejected" })}>
+                          Mark as rejected
+                        </DropdownMenuItem>
+                      )}
+                      {review.status === "rejected" && (
+                        <DropdownMenuItem onClick={() => updateReviewStatus({ reviewId: review.id, status: "approved" })}>
+                          Mark as approved
+                        </DropdownMenuItem>
+                      )}
+                        <DropdownMenuItem on_click={() => updateReviewStatus ({ review_id: review.id, status: "approved" })}>;
+                          Mark as approved;
+                        </DropdownMenuItem>)}
+
+                      {review.status === "approved" && (;
+                        <DropdownMenuItem onClick={() => updateReviewStatus({ reviewId:review.id, status:"rejected" })}>;
+                          Mark as rejected;
+                        </DropdownMenuItem>;
+                      )}
+                      {review.status === "rejected" && (;
+                        <DropdownMenuItem onClick={() => updateReviewStatus({ reviewId:review.id, status:"approved" })}>;
+                          Mark as approved;
+                        </DropdownMenuItem>;                      )}
+                    </DropdownMenuContent>
+                  </DropdownMenu>
+                </div>
+              </TableCell>
+            </TableRow>
+                    </DropdownMenuContent>;
+                  </DropdownMenu>;
+                </div>;
+              </TableCell>;
+
+            </TableRow>;
+
+          ))}
+
+        </TableBody>;
+      </Table>;
+
+</TableRow>;
+          ))}
+        </TableBody>;
+      </Table>;
+;
+      {selectedReview && (;
+        <Dialog open={viewDetailsOpen} onOpenChange={setViewDetailsOpen}>;
+          <DialogContent className="max-w-lg">;
+            <DialogHeader>;
+              <DialogTitle>Review Details</DialogTitle>;
+              <DialogDescription>;
+                Review submitted on{" "}
+                {format(new Date(selectedReview && selectedReview.created_at), "MMMM d, yyyy")}
+              </DialogDescription>;
+            </DialogHeader>;
+
+{format(new Date(selectedReview.created_at), "MMMM d, yyyy")}
+              </DialogDescription>;
+            </DialogHeader>;
+;
+            <div className="space-y-4">;
+              <div className="flex items-center justify-between">;
+                <div className="flex items-center gap-2">;
+                  <Avatar>;
+                    {selectedReview && selectedReview.reviewer_profile?.avatar_url ? (;
                       {review.status === "rejected" && (                    </DropdownMenuContent>;
                   </DropdownMenu>;
                 </div>;
@@ -997,6 +703,8 @@ if ( {) {
 
           <TableRow>;
 
+: <User className="h-4 w-4" />}
+                    {selectedReview.reviewer_profile?.avatar_url ? (;
                       <AvatarImage;
 
 
@@ -1009,6 +717,25 @@ if ( {) {
                           : <User className="h-4 w-4" />}"
 
                   <div>;
+                    <div className="font-medium">;
+                  )}
+                  {selectedReview && selectedReview.quality_rating && (;
+                    <Badge variant="outline">;
+                      Quality: {selectedReview && selectedReview.quality_rating}/5;
+                    </Badge>;
+                  )}
+                  {selectedReview && selectedReview.timeliness_rating && (;
+                    <Badge variant="outline">;
+                      Timeliness: {selectedReview && selectedReview.timeliness_rating}/5;
+                    </Badge>;
+                  )}
+                  {selectedReview && selectedReview.would_work_again !== undefined && (;
+                    <Badge
+                      variant={selectedReview && selectedReview.would_work_again ? "default" : "secondary"}
+                      className={selectedReview && selectedReview.would_work_again ? "bg-green-100 text-green-800" : "bg-gray-100 text-gray-800"}>;
+                      {selectedReview && selectedReview.would_work_again ? "Would work again" : "Would not work again"}
+                    </Badge>;
+                  )}
                       <span className="text-sm font-medium">Anonymous</span>;""
                       <span className="text-sm font-medium">;"
 </span>
@@ -1023,11 +750,158 @@ if ( {) {
 
             <TableRow key={review.id}>;
 
+              {selectedReview && selectedReview.report_count > 0 && (;
+                <div className="bg-red-50 border border-red-200 rounded-md p-3">;
+                  <h4 className="text-sm font-medium text-red-800">Reports: {selectedReview && selectedReview.report_count}</h4>;
+{selectedReview.is_anonymous;
+                        ? "Anonymous";
+                        :selectedReview.reviewer_profile?.display_name || "User"}
+                    </div>;
+                    <Badge variant="outline" className={getStatusColor(selectedReview.status as ReviewStatus)}>;
+                      {selectedReview.status}
+                    </Badge>;
+                  </div>;
+                </div>;
+                <div>{renderStars(selectedReview.rating)}</div>;
+              </div>;
+;
+              <div className="border rounded-md p-3 bg-muted/20">;
+                <p className="whitespace-pre-wrap">{selectedReview.review_text}</p>;
+              </div>;
+;
+              <div className="space-y-2">;
+                <h4 className="text-sm font-medium">Additional Ratings</h4>;
+                <div className="flex flex-wrap gap-2">;
+                  {selectedReview.communication_rating && (;
+                    <Badge variant="outline">;
+                      Communication:{selectedReview.communication_rating}/5;
+                    </Badge>;
+                  )}
+                  {selectedReview.quality_rating && (;
+                    <Badge variant="outline">;
+                      Quality:{selectedReview.quality_rating}/5;
+                    </Badge>;
+                  )}
+                  {selectedReview.timeliness_rating && (;
+                    <Badge variant="outline">;
+                      Timeliness:{selectedReview.timeliness_rating}/5;
+                    </Badge>;
+                  )}
+                  {selectedReview.would_work_again !== undefined && (;
+                    <Badge;
+                      variant={selectedReview.would_work_again ? "default" :"secondary"}
+                      className={selectedReview.would_work_again ? "bg-green-100 text-green-800" :"bg-gray-100 text-gray-800"}
+                    >;
+                      {selectedReview.would_work_again ? "Would work again" :"Would not work again"}
+                    </Badge>;
+                  )}
+                </div>;
+              </div>;
+;
+              {selectedReview.report_count > 0 && (;
+                <div className="bg-red-50 border border-red-200 rounded-md p-3">;
+                  <h4 className="text-sm font-medium text-red-800">Reports:{selectedReview.report_count}</h4>;
+                  <p className="text-sm text-red-700">;
+                    This review has been reported by users and may need investigation.;
+                  </p>;
+                </div>;
+              )}
+            </div>;
               <TableCell>;
                 <div className="flex items-center gap-2">;"
                   <Avatar className="h-8 w-8">;"
 
 
+                  <Button
+                    variant="destructive"
+                    onClick={() => handleReject(selectedReview && selectedReview.id)}
+<Button
+                    variant="destructive"
+                    onClick={() => handleReject(selectedReview && selectedReview.id)}
+;
+            <DialogFooter>;
+              {selectedReview.status === "pending" && (;
+                <>;
+                  <Button;
+                    variant="destructive";
+                    onClick={() => handleReject(selectedReview.id)}
+                    </Badge>;
+                  )}
+                  <Button
+                    variant="destructive"
+                    onClick={() => handleReject(selectedReview && selectedReview.id)}
+                    disabled={isPending}
+                  >;
+                    Reject;
+                  </Button>;
+                  <Button
+                    onClick={() => handleApprove(selectedReview && selectedReview.id)}
+                    disabled={isPending}
+<Button;
+                    onClick={() => handleApprove(selectedReview.id)}                    disabled={isPending}
+                  <Button
+                    onClick={() => handleApprove(selectedReview && selectedReview.id)}
+                    disabled={isPending}
+                  >;
+                    Approve;
+                  </Button>;
+                </>;
+              )}
+              {selectedReview && selectedReview.status === "approved" && (;
+                <Button
+                  variant="destructive"
+                  onClick={() => updateReviewStatus({ reviewId: selectedReview && selectedReview.id, status: "rejected" })}
+{selectedReview.status === "approved" && (;
+                <Button;
+                  variant="destructive";
+                  onClick={() => updateReviewStatus({ reviewId:selectedReview.id, status:"rejected" })}
+                  disabled={isPending}
+                >;
+                  Mark as Rejected;
+                </Button>;
+              )}
+              {selectedReview && selectedReview.status === "rejected" && (;
+                <Button
+                  onClick={() => updateReviewStatus({ reviewId: selectedReview && selectedReview.id, status: "approved" })}
+                  disabled={isPending}
+                >;
+                  Mark as Approved;
+                </Button>;
+              )}
+{selectedReview.status === "rejected" && (;
+                <Button;
+                  onClick={() => updateReviewStatus({ reviewId:selectedReview.id, status:"approved" })}
+                  disabled={isPending}
+                >;
+                  Mark as Approved;
+                </Button>;              )}
+            </DialogFooter>;
+          </DialogContent>;
+        </Dialog>;
+      )}
+    </>;
+  );
+            </TableRow>))}
+        </TableBody>;
+      </Table>;
+      {selected_review && (
+        <Dialog open={viewDetailsOpen} onOpenChange={setViewDetailsOpen}>;
+          <DialogContent className="max - w-lg">;
+            <DialogHeader>;
+              <DialogTitle > Review Details</DialogTitle>;
+              <DialogDescription>;
+                Review submitted on{" "}
+                {format (new Date (selected_review.created_at), "MMMM d, yyyy")}
+              </DialogDescription>;
+            </DialogHeader>;
+            <div className="space - y-4">;
+              <div className="flex items - center justify - between">;
+                <div className="flex items - center gap - 2">;
+                  <Avatar>;
+                    {selected_review.reviewer_profile?.avatar_url ? (
+                      <AvatarImage;
+                        src={selected_review.reviewer_profile.avatar_url}
+                        alt={selected_review.reviewer_profile.display_name || ""}
                       </span>;"
 
               <TableCell>{renderStars(review && review.rating)};
@@ -1128,7 +1002,6 @@ if ( {) {
                         )}"
                         <X className="h-4 w-4 text-red-500" />"
 
-                      
                     </>
                   <DropdownMenu>
 
@@ -1137,7 +1010,6 @@ if ( {) {
                       >
                         <MoreHorizontal className="h-4 w-4" />"
 
-                      
                     <DropdownMenuContent align="end">"
 
                       <DropdownMenuItem onClick={() => handleViewDetails(review)}>
@@ -1153,10 +1025,6 @@ if ( {) {
                         <DropdownMenuItem onClick={() => updateReviewStatus({ reviewId:review.id, status:"approved" })}>;"
 
                         ;                      )}
-                    
-                  
-              
-            
         <Dialog open={viewDetailsOpen} onOpenChange={setViewDetailsOpen}>;
           <DialogContent className="max-w-lg">;"
 
@@ -1254,6 +1122,7 @@ if ( {) {
                   on_click={() => updateReviewStatus ({ review_id: selected_review.id, status: "approved" })}"
 
     </>);
+),; import {
   ),; import {
   // TODO: Implement
   Table;
@@ -1340,8 +1209,6 @@ return (<> <Table> <TableHeader> <TableRow> <TableHead>Reviewer <TableHead>Ratin
 }> Mark as Approved ) 
 }  ) 
 }</>) 
-        
-      
         <Dialog open={viewDetailsOpen} onOpenChange={setViewDetailsOpen}>
           <DialogContent className="max-w-lg">"
 
@@ -1350,7 +1217,6 @@ return (<> <Table> <TableHeader> <TableRow> <TableHead>Reviewer <TableHead>Ratin
               <DialogTitle>Review Details
               <DialogDescription>
 
-              
               <div className="flex items-center justify-between">"
                 <div className="flex items-center gap-2">"
                   <Avatar>
@@ -1359,13 +1225,10 @@ return (<> <Table> <TableHeader> <TableRow> <TableHead>Reviewer <TableHead>Ratin
                         alt={selectedReview.reviewer_profile.display_name |""}"
 
 
-                      
-                  
                   <div>
                     <div className="font-medium">"
                     <Badge variant="outline" className={getStatusColor(selectedReview.status as ReviewStatus)}>"
 
-                    
                 <div>{renderStars(selectedReview.rating)}</div>
               <div className="border rounded-md p-3 bg-muted/20">"
                 <p className="whitespace-pre-wrap">{selectedReview.review_text}</p>"
@@ -1376,11 +1239,9 @@ return (<> <Table> <TableHeader> <TableRow> <TableHead>Reviewer <TableHead>Ratin
 
 
 
-                    
                       variant={selectedReview.would_work_again ? "default" : "secondary"}""
                       className={selectedReview.would_work_again ? "bg-green-100 text-green-800" : "bg-gray-100 text-gray-800"}"
 
-                    
                 <div className="bg-red-50 border border-red-200 rounded-md p-3">"
                   <h4 className="text-sm font-medium text-red-800">Reports: {selectedReview.report_count}</h4>""
                   <p className="text-sm text-red-700">"
@@ -1389,20 +1250,13 @@ return (<> <Table> <TableHeader> <TableRow> <TableHead>Reviewer <TableHead>Ratin
                 <>
                     onClick={() => handleReject(selectedReview.id)}
 
-                  
                     onClick={() => handleApprove(selectedReview.id)}
 
-                  
               {selectedReview.status === "approved" && ("
                   onClick={() => updateReviewStatus({ reviewId: selectedReview.id, status: "rejected" })}"
 
-                
                   onClick={() => updateReviewStatus({ reviewId: selectedReview.id, status: "approved" })}"
 
-                
-            
-          
-        
 }"`;
 pr-12325
 </Button>
@@ -1412,5 +1266,6 @@ pr-12325
         </Dialog>
     </>
   )
+}
 }"
 

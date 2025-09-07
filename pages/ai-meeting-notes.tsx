@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-
-import React from 'react';
-import SEO from '../components/SEO';
 
 export default function AIMeetingNotesPage() {
 	return (
@@ -14,13 +10,14 @@ export default function AIMeetingNotesPage() {
 					<div className="mt-8 flex gap-3">
 						<a href="/services" className="px-4 py-2 rounded-lg bg-white text-black font-medium">Explore Services</a>
 						<a href="/contact" className="px-4 py-2 rounded-lg border border-white/10 text-gray-200">Contact Sales</a>
-=======
->>>>>>> origin/main
+
+
 					</div>
 				</div>
 			</section>
 		</>
 	)
+};
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });

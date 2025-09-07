@@ -1,11 +1,9 @@
-<<<<<<< HEAD
+
 
 
 import React from 'react',
 
-=======
 
->>>>>>> origin/main
 import { ResumeSelector, ResumeOption } from "../resume-selector";
 import { Button } from "@/components/ui/button";
 import { ResumeSelector, ResumeOption } from "../resume-selector";""
@@ -21,32 +19,7 @@ export interface ResumeTabProps {;
   onResumeSelected?: (resume: ResumeOption) => void;
 
   onApply?: () => Promise<void>;
-<<<<<<< HEAD
 
-  isSubmitting?: boolean
-}
-
-export function ResumeTab({ selectedResumeId, onSelectResume, onResumeSelected, onApply, isSubmitting;
-=======
-  isSubmitting?: boolean
-}
-
-export function ResumeTab({
-  selectedResumeId
-  onSelectResume
-  onResumeSelected
-  onApply
-  isSubmitting = false
-}: ResumeTabProps) {
-  const handleResumeSelected = (resume: ResumeOption) => {
-    if (onResumeSelected) {;
-      onResumeSelected(resume);
-    }
-    if (onSelectResume) {
-      onSelectResume(resume.id);
-    }
-  }
->>>>>>> origin/main
 
   return (
     <div className="space-y-4">
@@ -68,10 +41,15 @@ export function ResumeTab(): any ({;
   onApply,;
   isSubmitting = false,;
 }: ResumeTabProps) {;
+      {onApply && (
         <div className="mt-6">
           <Button
             onClick={onApply}
             disabled={!selectedResumeId |isSubmitting}
+
+import React from 'react',
+import { ResumeSelector, ResumeOption } from "../resume-selector",
+import { Button } from "@/components/ui/button",
 
 import React from 'react',;
 import { ResumeSelector, ResumeOption } from "../resume-selector",;
@@ -117,6 +95,53 @@ export function ResumeTab({ selectedResumeId, onSelectResume, onResumeSelected, 
     }
 
     if (onSelectResume) {;
+      onSelectResume(resume && resume.id);
+
+  selectedResumeId?: string | null;
+  onSelectResume?: (resume_id: string) => void;
+  onResumeSelected?: (resume: ResumeOption) => void;
+    }
+  }
+
+  return (
+
+}
+  }
+  return (
+
+;
+    if (onSelectResume) {;
+      onSelectResume(resume.id);
+    }
+  },
+  return (
+    <div className="space-y-4">
+      <ResumeSelector onResumeSelected={handleResumeSelected} />
+      {onApply && (
+        <div className="mt-6">
+          <Button 
+            onClick={onApply} 
+            disabled={!selectedResumeId || isSubmitting}
+
+            className="w-full"
+          >
+            {isSubmitting ? "Submitting..." : "Submit Application"}
+          </Button>
+
+className="w-full"
+          >
+            {isSubmitting ? 'Submitting...' : 'Submit Application'}
+          </Button>
+          {!selectedResumeId && (
+            <p className="text-sm text-muted-foreground mt-2">
+              Please select a resume to continue
+            </p>
+    <div className="space-y-4">;
+      <ResumeSelector onResumeSelected={handleResumeSelected} />;
+
+      {onApply && (;
+        <div className="mt-6">;
+          <Button
       onSelectResume(resume && resume.id);      {onApply && (
         <div className="mt-6">
           <Button 
@@ -152,7 +177,6 @@ export interface ResumeTabProps {
             className="w-full""
           >
 
-          
             <p className="text-sm text-muted-foreground mt-2">"
 </p>
             </p>"
@@ -165,6 +189,7 @@ export interface ResumeTabProps {
           ;"
             <p className="text-sm text-muted-foreground mt-2">;"
             </p>;
+          )}
         </div>;
   on_apply?: () => Promise < void>;
   is_submitting?: boolean;
@@ -194,6 +219,17 @@ if ( {) {
             </p>)}
         </div>)}
     </div>);
+}
+}
+
+import React from 'react',;
+import { ResumeSelector, ResumeOption } from "../resume-selector",;
+import { Button } from "@/components/ui/button",;
+;
+export interface ResumeTabProps {;
+  selectedResumeId?:string | null,;
+  onSelectResume?:(resumeId:string) => void,;
+  onResumeSelected?:(resume:ResumeOption) => void,;
   onApply?:() => Promise<void>,;
           <Button ;
             onClick={onApply} ;
@@ -202,6 +238,16 @@ if ( {) {
             </p>;          )}
 } Please select a resume to continue </p>) 
 }</div>) 
+}</div>) 
+}
+          )}
+        </div>
+      )}
+    </div>
+    </div>;
+  );
+}
+}
     </div>;"
 pr-12325
 

@@ -114,6 +114,9 @@ function ServicesPage() { return ( <Layout; title = "Our Services - Zion Tech Gr
         {/* Why Choose Us */}
 ;
 
+;
+  }
+
 
 ;
   }
@@ -302,6 +305,9 @@ pr-12325
             </div>,;
           </div>,;
         </section>,;
+
+        {/* Why Choose Us */};
+        {/* Why Choose Us */};
         {/* Why Choose Us */};
 
 

@@ -1,0 +1,15 @@
+{
+  "timestamp": "2025-09-06T20:28:14.964Z",
+  "results": [
+    {
+      "type": "bundle-size",
+      "size": "0.38 MB",
+      "status": "good"
+    },
+    {
+      "type": "dependencies",
+      "count": 95,
+      "status": "warning"
+    }
+  ]
+}

@@ -11,10 +11,29 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (!state.config.optIn |state.config.paused) {
     return res.status(403).json({ error: "Sync disabled for this instance" })
   }
+
+
+
+  const { txId, token, amount, fromSubnet, toSubnet, timestamp } = req.body as {
+    txId: string
+    token: string
+    amount: number
+    fromSubnet: string
+    toSubnet: string
+    timestamp?: number
+
   };
 
   if (!txId || !token || typeof amount !== "number" || !fromSubnet || !toSubnet) {
     return res.status(400).json({ error: "txId, token, amount, fromSubnet, toSubnet required" })
+
+
+
+  };
+  if (!txId || !token || typeof amount !== "number" || !fromSubnet || !toSubnet) {
+    return res.status(400).json({ error: "txId, token, amount, fromSubnet, toSubnet required" })
+
+
   }
   if (!txId |!token |typeof amount !== "number" |!fromSubnet |!toSubnet) {
     return res.status(400).json({ error: "txId, token, amount, fromSubnet, toSubnet required" })
@@ -22,7 +41,18 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const version = nextVersionFor(state, txId)
   const event = {
 
+eventId: uuidv4(), type: "token_transfer" as const
 
+  const { txId, token, amount, fromSubnet, toSubnet, timestamp } = req.body as {
+    txId: string,
+    token: string,
+    amount: number,
+    fromSubnet: string,
+    toSubnet: string,
+    timestamp?: number
+  },
+
+    eventId: uuidv4(), type: "token_transfer" as const,
 origin/cursor/integrate-build-improve-and-re-verify-2156
     eventId: uuidv4(), type: "token_transfer" as const
     payload: {
@@ -36,6 +66,96 @@ origin/cursor/integrate-build-improve-and-re-verify-2156
   const headers: Record<string, string> = {};
   const sig = signPayload(body);
   if (sig) headers["x-zion-signature"] = sig;
+
+  await Promise.all(
+    state.config.peers
+      .filter((p) => !p.paused)
+      .map(async (peer) => {
+
+        const url = new URL("/api/sync/publish", peer.baseUrl).toString()
+import type { NextApiRequest, NextApiResponse } from './next';,
+import { read_state, write_state, upsert_event  } from '../../../utils / sync / storage';,
+import { sign_payload  } from '../../../utils / sync / signature';,
+import axios from './axios';,
+import { v4 as uuidv4  } from './uuid';,
+import { nextVersionFor  } from '../../../utils / sync / versioning';,
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+  if (return res.status (405).json ({ error: "Method not allowed" }), ) {
+  $2
+}
+  const state = read_state (),
+  // Check condition
+if ( {) {
+  $2
+}
+    return res.status (403).json ({ error: "Sync disabled for this instance" });
+  }
+  const { tx_id, token, amount, from_subnet, to_subnet, timestamp } = req.body as {
+    tx_id: string,
+    token: string,
+    amount: number,
+    from_subnet: string,
+    to_subnet: string,
+    timestamp?: number;
+  },
+  // Check condition
+if ( {) {
+  $2
+}
+    return res.status (400).json ({ error: "tx_id, token, amount, from_subnet, to_subnet required" });
+  }
+  const version = nextVersionFor (state, tx_id),
+  const event = {
+    event_id: uuidv4 (),
+    type: "token_transfer" as const,
+    payload: { id: tx_id, tx_id, token, amount, from_subnet, to_subnet, timestamp: timestamp || Date.now () },
+    originInstanceId: state.config.instance_id,
+    version,
+    timestamp: Date.now ()},
+  upsert_event (state, event),
+  write_state (state),
+  const body = { ...event, propagate: false },
+  const headers: Record < string, string> = {},
+  const sig = sign_payload (body),
+  // Check condition
+if (headers["x - zion - signature"] = sig, ) {
+  $2
+}
+  await Promise.all (
+    state.config.peers;
+      .filter ((p) => !p.paused);
+      .map (async (peer) => {
+        const url = new URL ("/api / sync / publish", peer.base_url).to_string (),
+
+        try {
+          await axios.post (url, body, { headers, timeout: 5000 });
+        } catch {}
+
+}
+
+        try {
+          await axios.post (url, body, { headers, timeout: 5000 });
+        } catch {}
+}
+      })),
+  return res.status (200).json ({ status: "created", version, event_id: event.event_id });
+}
+;
+
+  }
+  const { txId, token, amount, fromSubnet, toSubnet, timestamp } = req.body as {
+    txId: string,
+    token: string,
+    amount: number,
+    fromSubnet: string,
+    toSubnet: string,
+    timestamp?: number
+  },
+
+
   await Promise.all(
     state.config.peers
       .filter((p) => !p.paused)
@@ -48,6 +168,13 @@ import { sign_payload  } from '../../../utils / sync / signature';
 import axios from './axios';
 import { v4 as uuidv4  } from './uuid';
 import { nextVersionFor  } from '../../../utils / sync / versioning';
+
+import type { NextApiRequest, NextApiResponse } from './next';,
+import { read_state, write_state, upsert_event  } from '../../../utils / sync / storage';,
+import { sign_payload  } from '../../../utils / sync / signature';,
+import axios from './axios';,
+import { v4 as uuidv4  } from './uuid';,
+import { nextVersionFor  } from '../../../utils / sync / versioning';,
 export default async /**
  * handler - Function description
  */
@@ -189,6 +316,22 @@ export default async function handler(_req: NextApiRequest, _res: NextApiRespons
 
   return res.status(200).json({ status: "created", version, eventId: event.eventId })
   return res.status(200).json({_status: "created", _version, _eventId: event.eventId});
+
+        const url = new URL ("/api / sync / publish", peer.base_url).to_string (),
+
+        try {
+          await axios.post (url, body, { headers, timeout: 5000 });
+        } catch {}
+
+}
+
+      })),
+  return res.status (200).json ({ status: "created", version, event_id: event.event_id });
+}
+;
+
+
+
 import type { NextApiRequest, NextApiResponse } from "next",;
 import { readState, writeState, upsertEvent } from "../../../utils/sync/storage",;
 import { signPayload } from "../../../utils/sync/signature",;
@@ -196,8 +339,7 @@ import axios from "axios",;
 import { v4 as uuidv4 } from "uuid",;
 import { nextVersionFor } from "../../../utils/sync/versioning",;
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" })
-
+if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" }),
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, writeState, upsertEvent } from "../../../utils/sync/storage";
@@ -256,8 +398,7 @@ export default async function handler(req, res) {
     fromSubnet: string
     toSubnet: string
     timestamp?: number
-  }
-
+},
 
   await Promise.all(
     state.config.peers
@@ -337,8 +478,15 @@ return res
 origin/cursor/automate-test-improve-and-merge-code-2533
 
   return res.status(200).json({ status: "created", version, eventId: event.eventId })
+
         const url = new URL("/api/sync/publish", peer.baseUrl).toString();
         const url = new URL("/api/sync/publish", peer.baseUrl).toString()
+
+
+
+
+        const url = new URL("/api/sync/publish", peer.baseUrl).toString(),
+
         try {
           await axios.post(url, body, { headers, timeout: 5000 })
         } catch {  } catch (error) {

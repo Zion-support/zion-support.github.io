@@ -151,37 +151,36 @@ useState
   useEffect
   useRef
   ReactNode
-  useContext} from 'react'
-import { AuthContext } from '../../context/auth/AuthContext'
-import { useDebounce } from '../../hooks/useDebounce'
-import { useLocalStorage } from '../../hooks/useLocalStorage'
-import { ChatMessage } from './ChatMessage'
-import { ChatInput } from './ChatInput'
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
-import { Button } from '@/components/ui/button'
-import { X } from 'lucide-react'
+  useContext} from 'react''
+import { AuthContext } from '../../context/auth/AuthContext''
+import { useDebounce } from '../../hooks/useDebounce''
+import { useLocalStorage } from '../../hooks/useLocalStorage''
+import { ChatMessage } from './ChatMessage''
+import { ChatInput } from './ChatInput''
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar''
+import { Button } from '@/components/ui/button''
+import { X } from 'lucide-react''
 export interface Message {
-  id: string
-  role: 'user' | 'assistant'
-  message: string
-  timestamp: Date
-
+  id: string,
+  role: 'user' | 'assistant'',
+  message: string,
+  timestamp: Date,
   read?: boolean
 }
 export interface ChatAssistantProps {
-
-  isOpen: boolean
-  onClose: () => void
-  recipient: {
-    id: string
-    name: string
+  isOpen: boolean,
+  onClose: () => void,
+  recipient: {,
+    id: string,
+    name: string,
     avatarUrl?: string
     role?: string
   }
   conversationId?: string
-  initialMessages?: Message[]
+  initialMessages?: Message[],
   onSendMessage: (message: string, conversationId?: string,) => Promise<void>
   contextHeader?: ReactNode
+  /** Optional canned questions shown when the chat is empty */,
 
 import React, {
   useState;
@@ -225,10 +224,10 @@ export function ChatAssistant({
 
   return (
     <div
-      className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4"
-      role="dialog"
-      aria-modal="true"
-      aria-labelledby="chat-assistant-title">;
+      className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4""
+      role="dialog""
+      aria-modal="true""
+      aria-labelledby="chat-assistant-title">;,
       <div className="w-full max-w-xl bg-zion-blue rounded-lg shadow-xl overflow-hidden flex flex-col max-h-[80vh]">;
         {/* Header */}
         <div className="bg-zion-blue-dark p-3 flex items-center justify-between border-b border-zion-purple/20">;
@@ -251,24 +250,19 @@ export function ChatAssistant({
             </div>;
           </div>;
           <Button
-            variant="ghost"
-            size="icon"
-            className="text-white hover:bg-zion-purple/10 rounded-full"
-
-
+            variant="ghost""
+            size="icon""
+            className="text-white hover:bg-zion-purple/10 rounded-full"",
             onClick={onClose}
-
-
-            aria-label="Close chat"
+            aria-label="Close chat""
           >
-            <X className="h-5 w-5" />
+            <X className="h-5 w-5" />"
           </Button>
         </div>
             aria-label="Close chat">;
             <X className="h-5 w-5" />;
           </Button>;
         </div>;
-
         {/* Context Header (Optional) */}
         {contextHeader && (;
           <div className="border-b border-zion-purple/20 bg-zion-blue-dark/50 p-3">;
@@ -278,8 +272,80 @@ export function ChatAssistant({
         )}
         {/* Messages */}
         <div
-          className="flex-1 overflow-y-auto p-4 space-y-4"
+          className="flex-1 overflow-y-auto p-4 space-y-4""
+          aria-live="polite""
+        >
+          {currentMessages.length === 0 ? (
+            <div className="text-center text-zion-slate py-8 space-y-4">"
+              <p>Start a conversation with {recipient.name}</p>
+              {starterQuestions.length > 0 && (
+                <div className="flex flex-wrap justify-center gap-2">"
+                  {starterQuestions.map((q, idx) => (
+                    <Button
+                      key={idx}
+                      variant="outline""
+                      className="text-xs""
+  useEffect(() => {;
+    if (!isOpen) return,;
+    const handleKeyDown = (e: KeyboardEvent) => {;
+      if (e.key === 'Escape') {;
+        e.preventDefault(),;
+        onClose();
+      }
+    },
+    document.addEventListener('keydown', handleKeyDown),
+    return () => document.removeEventListener('keydown', handleKeyDown)
+  }, [isOpen, onClose]),
 
+  if (!isOpen) return null,
+
+  return (
+    <div
+      className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="chat-assistant-title"
+    >
+      <div className="w-full max-w-xl bg-zion-blue rounded-lg shadow-xl overflow-hidden flex flex-col max-h-[80vh]">
+        {/* Header */}
+        <div className="bg-zion-blue-dark p-3 flex items-center justify-between border-b border-zion-purple/20">
+          <div className="flex items-center space-x-3">
+            <Avatar className="h-10 w-10 border border-zion-purple/20">
+              <AvatarImage src={recipient.avatarUrl} alt={recipient.name} />
+              <AvatarFallback className="bg-zion-purple/20 text-white">
+                {recipient.name.charAt(0).toUpperCase()}
+              </AvatarFallback>
+            </Avatar>
+            <div>
+              <h2 id="chat-assistant-title" className="font-medium text-white">
+                {recipient.name}
+              </h2>
+              {recipient.role && (
+                <div className="text-xs text-zion-slate">{recipient.role}</div>
+              )}
+            </div>
+          </div>
+          <Button
+            variant="ghost"
+            size="icon"
+            className="text-white hover:bg-zion-purple/10 rounded-full"
+            onClick={onClose}
+            aria-label="Close chat"
+          >
+            <X className="h-5 w-5" />
+          </Button>
+        </div>
+
+        {/* Context Header (Optional) */}
+        {contextHeader && (
+          <div className="border-b border-zion-purple/20 bg-zion-blue-dark/50 p-3">
+            {contextHeader}
+          </div>;
+        )}
+;
+        {/* Messages */}
+        <div
+          className="flex-1 overflow-y-auto p-4 space-y-4"
 
                       {q}
                     </Button>
@@ -299,7 +365,6 @@ export function ChatAssistant({
               <p>Start a conversation with {recipient.name}</p>
               {starterQuestions.length > 0 && (
                 <div className="flex flex-wrap justify-center gap-2">
-
                   {starterQuestions.map((q, idx) => (
                     <Button
                       key={idx}
@@ -307,8 +372,6 @@ export function ChatAssistant({
                       className="text-xs"
                       onClick={() => handleSendMessage(q)}
                     >;
-
-
                       {q}
                     </Button>;
                   ))}
@@ -318,19 +381,22 @@ export function ChatAssistant({
           ) : (;
             currentMessages && currentMessages.map((msg,) => (;
               <ChatMessage key={msg && msg.id} role={msg && msg.role} message={msg && msg.message} />;
+            currentMessages.map((msg) => (;
+              <ChatMessage key={msg.id} role={msg.role} message={msg.message} />;
             ));
           )}
-
           <div ref={messagesEndRef} />;
         </div>;
-
         {/* Input */}
         <div className="p-3 border-t border-zion-purple/20 bg-zion-blue-dark/30">;
           <ChatInput onSend={handleSendMessage} />;
         </div>;
       </div>;
-
       {showGuestModal && guestMessage && (;
+        <div,
+          className="fixed inset-0 bg-black/60 z-[100] flex items-center justify-center p-4""
+          role="dialog""
+          aria-modal="true""
 
         <div
           className="fixed inset-0 bg-black/60 z-[100] flex items-center justify-center p-4"
@@ -351,7 +417,7 @@ export function ChatAssistant({
           aria-labelledby="confirm-message-title">;
           <div className="bg-zion-blue-darker p-6 rounded-lg shadow-xl w-full max-w-md">;
             <h3
-              id="confirm-message-title"
+              id="confirm-message-title""
               className="text-lg font-semibold text-white mb-4">;
               Confirm Message;
             </h3>;
@@ -360,6 +426,8 @@ export function ChatAssistant({
             </p>;
             <div className="flex justify-end space-x-3">;
               <Button
+                variant="outline""
+  }, [;,
                 variant="outline"
 
     []),;
@@ -455,13 +523,13 @@ pr-12325
 if ( {) {
   $2
 }
-      // Update state if initial_messages prop changes (e.g. new conversation loaded);
+      // Update state if initial_messages prop changes (e.g. new conversation,  loaded);
       setLoggedInMessages (initial_messages);
     }
   }, [is_guest, initial_messages, recipient.id]),
   // Determine current_messages and setCurrentMessages based on is_guest;
   const current_messages = is_guest ? displayGuestMessages : loggedInMessages,
-  const setCurrentMessages = (
+  const setCurrentMessages = (,
     valueOrFn: Message[] | ((val: Message[], ) =>: any Message[]),
   ) => {
     // Check condition
@@ -505,9 +573,9 @@ if ( {) {
   $2
 }
       // Logged - in user;
-      const new_message: Message = {
+      const new_message: Message = {,
         id: Date.now ().to_string (),
-        role: 'user',
+        role: 'user','
         message: message_content,
         timestamp: new Date ()},
       setCurrentMessages ((prev: Message[], ) => [...prev, new_message]),
@@ -523,9 +591,9 @@ if ( {) {
 if (return, ) {
   $2
 }
-    const new_message: Message = {
+    const new_message: Message = {,
       id: Date.now ().to_string (),
-      role: 'user',
+      role: 'user','
       message: guest_message,
       timestamp: new Date ()},
     setCurrentMessages ((prev: Message[], ) => [...prev, new_message]), // This will now use the guest - aware setCurrentMessages;
@@ -551,7 +619,7 @@ if ( {) {
         on_close ();
       }
     },
-    document.addEventListener ('keydown', handleKeyDown),
+    document.addEventListener ('keydown', handleKeyDown),'
     return () => document.removeEventListener ('keydown', handleKeyDown);
   }, [is_open, on_close]),
   // Check condition
@@ -565,7 +633,7 @@ if (return null, ) {
       aria - modal="true";
       aria - labelledby="chat - assistant - title";
     >;
-      <div className="w - full max - w-xl bg - zion - blue rounded - lg shadow - xl overflow - hidden flex flex - col max - h-[80vh]">;
+      <div className="w - full max - w-xl bg - zion - blue rounded - lg shadow - xl overflow - hidden flex flex - col max - h-[80vh]">;,
         {/* Header */}
         <div className="bg - zion - blue - dark p - 3 flex items - center justify - between border - b border - zion - purple / 20">;
           <div className="flex items - center space - x-3">;
@@ -580,13 +648,13 @@ if (return null, ) {
                 {recipient.name}
               </h2>;
               {recipient.role && (
-                <div className="text - xs text - zion - slate">{recipient.role}</div>)}
+                <div className="text - xs text - zion - slate">{recipient.role}</div>)}"
             </div>;
           </div>;
           <Button;
             variant="ghost";
             size="icon";
-            className="text - white hover:bg - zion - purple / 10 rounded - full";
+            className="text - white hover:bg - zion - purple / 10 rounded - full";",
             on_click = {on_close, }
             aria - label="Close chat";
           >;
@@ -629,7 +697,7 @@ if (return null, ) {
         </div>;
       </div>;
       {showGuestModal && guest_message && (
-        <div;
+        <div;,
           className="fixed inset - 0 bg - black / 60 z-[100] flex items - center justify - center p - 4";
           role="dialog";
           aria - modal="true";
@@ -657,24 +725,45 @@ if (return null, ) {
                 on_click = {handleModalSendConfirm, }
                 className="bg - zion - purple hover:bg - zion - purple - dark text - white";
               >;
-
                 Send;
               </Button>;
             </div>;
           </div>;
-
-
                 onClick={handleModalCancel}
+                className="text-white border-zion-purple hover:bg-zion-purple/10""
+        <div className="p-3 border-t border-zion-purple/20 bg-zion-blue-dark/30">
+          <ChatInput onSend={handleSendMessage} />
+        </div>
+      </div>
 
-
+      {showGuestModal && guestMessage && (
+        <div
+          className="fixed inset-0 bg-black/60 z-[100] flex items-center justify-center p-4"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="confirm-message-title"
+        >
+          <div className="bg-zion-blue-darker p-6 rounded-lg shadow-xl w-full max-w-md">
+            <h3
+              id="confirm-message-title"
+              className="text-lg font-semibold text-white mb-4"
+            >
+              Confirm Message
+            </h3>
+            <p className="text-zion-slate mb-6 whitespace-pre-wrap break-words">
+              {guestMessage}
+            </p>
+            <div className="flex justify-end space-x-3">
+              <Button
+                variant="outline"
+                onClick={handleModalCancel}
                 className="text-white border-zion-purple hover:bg-zion-purple/10"
               >
                 Cancel
               </Button>
               <Button
-
                 onClick={handleModalSendConfirm}
-
+                className="bg-zion-purple hover:bg-zion-purple-dark text-white""
                 className="bg-zion-purple hover:bg-zion-purple-dark text-white"
               >
                 Send
@@ -696,6 +785,10 @@ if (return null, ) {
     </div>);
 }
 }
+}
+}}
+}
+;
 
 }
     </div>

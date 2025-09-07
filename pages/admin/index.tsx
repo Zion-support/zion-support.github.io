@@ -1,13 +1,9 @@
-<<<<<<< HEAD
 
-import Link from 'next/link';
-
-=======
 import Link from 'next/link',;
 import Link from 'next/link';
 
 
->>>>>>> origin/main
+
 export default function AdminIndex() {
 import React from 'react';
 export default function Page() {

@@ -64,61 +64,12 @@ function ask() {
 
 export default function CoachWidget() {
   const [input, setInput] = useState('');
-<<<<<<< HEAD
 
-  const [reply, setReply] = useState<string | null>(null),
-  const [loading, setLoading] = useState(false);
-
-=======
-
-const [reply, setReply] = useState<string | null />(null),
-  const [loading, setLoading] = useState(false);
->>>>>>> origin/main
   async function ask() {
     if (!input.trim()) return;
     setLoading(true);
     try {
-<<<<<<< HEAD
 
-      const resp = null;
-
-      setReply(data.text || '')
-    } finally {
-      setLoading(false)
-=======
-      const resp = null;}
-      setReply(data.text || '')}
-    } finally {}
-      setLoading(false)}
-    }
-  }
-  return (
-<div className='border rounded p-3' />
-      <div className='font-medium mb-2' />ZionGPT Coach</div>
-      <div className='flex gap-2' />
-        <input;
-className='flex-1 border rounded px-3 py-2 bg-white dark: bg-black'
-          placeholder='Ask for help...'
-origin/cursor/automate-test-improve-and-merge-code-2533
-
-          value={input}
-          on_change={e = /> set_input (e.target.value,}
-}
-        />;
-        <button;
-          on_click={ask}
-          className='px - 3 py - 2 bg - blue - 600 text - white rounded';
-          disabled={loading}
-         />;
-          {loading ? '...' : 'Ask'}
-        </button>;
-
-      {reply && (}
-        <div className='mt - 2 text - sm text - gray - 800 dark:text - gray - 200' />;}
-          {reply}
-        </div>)}
-    </div>);
->>>>>>> origin/main
     }
   }
 

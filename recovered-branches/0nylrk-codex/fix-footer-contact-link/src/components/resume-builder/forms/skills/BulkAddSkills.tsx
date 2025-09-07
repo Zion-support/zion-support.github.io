@@ -1,17 +1,5 @@
 
-<<<<<<< HEAD
 
-import { useState  } from 'react';
-import { Button  } from '@/components/ui/button';
-import { Loader2, Sparkles  } from 'lucide-react';
-import { useResumeEnhancer  } from '@/hooks/useResumeEnhancer';
-import { useResume  } from '@/hooks/useResume';
-import { BulkAddSkillsProps  } from './types';
-import { Alert, AlertDescription  } from '@/components/ui/alert';
-import { Textarea } from '@/components/ui/textarea';
-export const BulkAddSkills = null;
-
-=======
 
   },  return (
 
@@ -114,11 +102,20 @@ export const BulkAddSkills = ({ resumeId, onSuccess } BulkAddSkillsProps) => {;
           <label className="text-sm font-medium">Enter multiple skills (comma separated)</label>;
 
           <Textarea
+
           <Textarea 
 
             className="min-h-24"
             placeholder="Python, React, TypeScript, Project Management, Communication..."
             value={bulkSkills}
+
+<Button
+        <Button 
+
+          onClick={handleCategorizeSkills}
+          disabled={isEnhancing |!bulkSkills.trim()}
+          disabled={isEnhancing || !bulkSkills.trim()}
+
           className="gap-2"
         >
           {isEnhancing ? (
@@ -152,10 +149,35 @@ export const BulkAddSkills = ({ resumeId, onSuccess } BulkAddSkillsProps) => {;
           {isEnhancing ? (;
             <Loader2 className="h-4 w-4 animate-spin" />;
           ) : (;
+<Textarea ;
+            className="min-h-24";
+            placeholder="Python, React, TypeScript, Project Management, Communication...";
+            value={bulkSkills}
+            onChange={(e) => setBulkSkills(e.target.value)}
+          />;
+        </div>;
+;
+        <Button ;
+          onClick={handleCategorizeSkills}
+          disabled={isEnhancing || !bulkSkills.trim()}
+          className="gap-2";
+        >;
+          {isEnhancing ? (;
+            <Loader2 className="h-4 w-4 animate-spin" />;
+          ) :(;
             <Sparkles className="h-4 w-4" />;
           )}
           Categorize with AI;
         </Button>;
+
+        <p className="text-xs text-muted-foreground mt-1">;
+          AI will identify skills and categorize them automatically. This may take a moment to process.;
+        </p>;
+
+        {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
+      </div>;
+    </div>;
+  );
 
 },
 
@@ -202,6 +224,31 @@ export const BulkAddSkills = ({ resumeId, onSuccess } BulkAddSkillsProps) => {;
     </div>);
 }
 ;
+        ;
+        <p className="text-xs text-muted-foreground mt-1">;
+          AI will identify skills and categorize them automatically. This may take a moment to process.;
+        </p>;
+        ;
+        {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
+      </div>;
+    </div>;
+  ),;
+},; if (enhancedContent) {
+  try {
+  //Parse the JSON response //Add the categorized skills for (const [category, skillsList] of Object.entries (categorizedSkills) ) {
+  if (Array.isArray (skillsList) ) {
+  for (const skillName of skillsList as string[]) {
+}
+}
+}//Reset the form and bulk input setBulkSkills ('');
+//Refresh the skills return (<div className="bg-muted/40 p-6 rounded-lg" > <h3 className="text-md font-medium mb-4" >Bulk Add & AI Categorization</h3> <div className="space-y-4" > <div className="space-y-2" > <label className="text-sm font-medium" >Enter multiple skills (comma separated) </label> <Textarea /> </div> <Button) : (<Sparkles className="h-4 w-4" />) 
+}Categorize with AI </Button> <p className="text-xs text-muted-foreground mt-1" > AI will identify skills and categorize them automatically. This may take a moment to process. </p> </div> </div>) 
+};
+}
+
+},
+};
+},
 import {useState} from 'react';
 import {Button} from '@/components / ui / button';
 import {Loader2, Sparkles} from 'lucide-react';
@@ -394,4 +441,4 @@ if ( {) {
 pr-12325
 }Categorize with AI </Button> <p className="text-xs text-muted-foreground mt-1" > AI will identify skills and categorize them automatically. This may take a moment to process. </p> </div> </div>)""
 
->>>>>>> origin/main
+

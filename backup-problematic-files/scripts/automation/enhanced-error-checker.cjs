@@ -24,28 +24,7 @@ class EnhancedErrorChecker {}
   };
   async checkTypeScriptErrors() {}"
     this.log("Checking TypeScript errors...");"
-<<<<<<< HEAD
-      const result = execSync("npx tsc --noEmit --pretty", {})""
-        "cwd": this.projectRoot,""
-        "encoding": "utf8",""
-        "timeout": 60000;"
-      }
-});"
-      this.log("No TypeScript errors found");""
-      return { "errors": 0, "output": result }} catch(error) {}""`;
-      this.log(`TypeScript errors "found": ${error.message}`, "ERROR");""
-=======
-    try {}"
-      const result = execSync("npx tsc --noEmit --pretty", {})
-        "cwd": this.projectRoot,
-        "encoding": "utf8",
-        "timeout": 60000;"
-      }
-});"
-      this.log("No TypeScript errors found");
-      return { "errors": 0, "output": result }} catch(error) {}
-      this.log(`TypeScript errors "found": ${error.message}, "ERROR");
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
       return { "errors": 1, "output": error.stdout || error.message }};"
   async run() {}"
     this.log("Starting Enhanced Error Checker...");"

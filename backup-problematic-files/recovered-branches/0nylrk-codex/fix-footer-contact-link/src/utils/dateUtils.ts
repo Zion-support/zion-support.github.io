@@ -1,4 +1,5 @@
 
+import { format } from "date-fns";
 import { format } from "date-fns";"
 ;
 /**;
@@ -7,6 +8,12 @@ import { format } from "date-fns";"
  * @returns Formatted date string;
  */;
 export const formatDate = (dateString:string):string => {;
+  try {;
+    return format(new Date(dateString), 'PP');
+  } catch (e) {;
+    return dateString;
+  }
+}; 
   try {;"
     return format(new Date(dateString), 'PP'),;
   } catch (e) {;

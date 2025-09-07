@@ -1,19 +1,4 @@
-<<<<<<< HEAD
 
-
-import React from "react",
-import { Heart } from "lucide-react",
-import { cn } from "@/lib/utils";
-import { useToast } from "@/hooks/use-toast";
-
-=======
-import React from \"react\",;
-import { Heart } from \"lucide-react\",;
-import { cn } from \"@/lib/utils\";
-import { useToast } from \"@/hooks/use-toast\";
-import { cn } from \"@/lib/utils\",;
-import { useToast } from \"@/hooks/use-toast\",;
->>>>>>> origin/main
 interface TalentCardSaveButtonProps {
   profileId: string;
     profileName: string;
@@ -21,46 +6,11 @@ isSaved: boolean;
 onToggleSave?: (id: string, isSaved: boolean) => void;}
 isAuthenticated: boolean}
 }
-<<<<<<< HEAD
 
-export function TalentCardSaveButton({ 
-
-=======
-export function TalentCardSaveButton({
->>>>>>> origin/main
   profileId;
 profileName;
   isSaved;
-<<<<<<< HEAD
 
-  onToggleSave;
-  isAuthenticated 
-}: TalentCardSaveButtonProps) {
-  const { toast } = useToast();
-  const [localIsSaved, setLocalIsSaved] = React.useState(isSaved);
-
-  // Handle save toggle
-  const handleSaveToggle = null;
-
-          localIsSaved ? "fill-red-500 text-red-500" : "text-zion-slate"
-        )} 
-      />
-    </button>
-  )
-=======
-  // Handle save toggle;
-const handleSaveToggle = (
-    e.stopPropagation()
-    if (!isAuthenticated) {
-      toast({
-        title: \"title\",
-    description: \"Please log in to save talents to your favorites\"
-        variant: \"destructive\"
-    toast({
-      title: localIsSaved ? \"Removed from favorites\" : \"Added to favorites\"
-      description: localIsSaved) => {
-  return $3;}
->>>>>>> origin/main
 }
         ? `${profileName} has been removed from your favorites`
         : `${profileName} has been added to your favorites`;

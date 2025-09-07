@@ -5,33 +5,7 @@ pr-12243
 ;
 ursor/fix-website-loading-errors-and-merge-6662;
 import Head from 'next/head';
-<<<<<<< HEAD
 
-export default function Page(){
-
-=======
-
-export default function Page() {return (export default function Page() {export default function Page() {return (<div className='min-h-screen bg-slate-950 text-white' />;
-      <Head />;
-        <title />Reference Architecture — Autonomous Content Mesh</title>;
-        <meta;
-          name='description';
-          content='High-level blueprint for an autonomous content mesh with evaluation-in-the-loop.';
-        />;
-        <meta;
-          property='og:title';
-          content='Reference Architecture — Autonomous Content Mesh';
-        />;
-        <meta;
-          property='og:description';
-          content='High-level blueprint for an autonomous content mesh with evaluation-in-the-loop.';
-
-export default function Page() {
-
-export default function Page(){
-export default function Page() {
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/main
   return (
 pr-12243
     <div className='min-h-screen bg-slate-950 text-white'>

@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 
-
-=======
->>>>>>> origin/main
 import { useState  } from 'react';
 import { useMessaging  } from '@/context/MessagingContext';
 import { MainNavigation  } from './MainNavigation';
@@ -13,23 +9,10 @@ import { MobileMenu  } from '@/components/header/MobileMenu';
 import { useIsMobile  } from '@/hooks/use-mobile';
 import { MobileBottomNav } from '@/components/header/MobileBottomNav';
 export function AppHeader() {
-<<<<<<< HEAD
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const isMobile = null;
 
-    unreadCount = count
-=======
-import {useState} from 'react';
-import {use_messaging} from '@/context / MessagingContext';
-import {MainNavigation} from './MainNavigation';
-import {Logo} from '@/components / header / Logo';
-import {ModeToggle} from '@/components / ModeToggle';
-import {Menu, X} from 'lucide-react';
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
-  const isMobile = useIsMobile();
->>>>>>> origin/main
   } catch (error) {
+    console.warn("Messaging context not available");
+  }
     console.warn ('Messaging context not available');
 import { useState } from 'react',;
 import { useMessaging } from '@/context/MessagingContext',;
@@ -62,6 +45,12 @@ export function AppHeader() {;
 
           {/* Mobile menu button */}
           <div className="md:hidden ml-auto mr-4">;
+            <button
+;
+          {/* Mobile menu button */}
+          <div className="md:hidden ml-auto mr-4">;
+            <button;
+          {/* Mobile menu button */}
             <button          {/* Mobile menu button */}
           <div className="md:hidden ml-auto mr-4">;
             <button
@@ -136,10 +125,65 @@ export function AppHeader() {
           <ModeToggle />
         </div>
       </header>
+
+</button>;
+          </div>;
+          <ModeToggle />;
+        </div>;
+      </header>;
       {/* Mobile menu - positioned outside of header to prevent overlap issues */}
       {mobileMenuOpen && (
         <div className="md:hidden fixed inset-0 z-40 pt-16">
           <div
+            className="absolute inset-0 bg-black/50 backdrop-blur-sm"
+) :(;
+                <Menu className="block h-6 w-6" aria-hidden="true" />;              )}
+            </button>;
+          </div>;
+          ;
+          <ModeToggle />;
+        </div>;
+      </header>;
+      ;
+      {/* Mobile menu - positioned outside of header to prevent overlap issues */}
+      {mobileMenuOpen && (;
+        <div className="md:hidden fixed inset-0 z-40 pt-16">;
+          <div ;
+            className="absolute inset-0 bg-black/50 backdrop-blur-sm";
+            onClick={() => setMobileMenuOpen(false)}
+            aria-hidden="true"
+          />
+          <div className="relative bg-zion-blue-dark border-t border-zion-purple/20 h-auto max-h-[calc(100vh-4rem)] overflow-y-auto">
+            <MobileMenu
+              unreadCount={unreadCount}
+              onClose={() => setMobileMenuOpen(false)}
+            />
+          </div>
+        </div>
+      )}
+
+      {/* Mobile Bottom Navigation */}
+      {isMobile && <MobileBottomNav unreadCount={unreadCount} />}
+    </>
+  );
+}
+
+{/* Mobile Bottom Navigation */}
+      {isMobile && <MobileBottomNav unreadCount={unreadCount} />}
+
+      )}
+;
+      {/* Mobile Bottom Navigation */}
+      {isMobile && <MobileBottomNav unreadCount={unreadCount} />}
+    </>;
+              ) : (;
+                <Menu className="block h-6 w-6" aria-hidden="true" />;
+              )}
+      {/* Mobile Bottom Navigation */}
+      {isMobile && <MobileBottomNav unreadCount={unreadCount} />}
+    <>;
+      <header className="sticky top - 0 z - 50 w - full border - b border - zion - purple / 20 bg - zion - blue - dark / 90 backdrop - blur - md">;
+        <div className="container flex h - 16 items - center px - 4 sm:px - 6">;
             className="absolute inset-0 bg-black/50 backdrop-blur-sm"    <>;
       <header className="sticky top - 0 z - 50 w - full border - b border - zion - purple / 20 bg - zion - blue - dark / 90 backdrop - blur-md">;
         <div className="container flex h - 16 items - center px - 4 sm:px-6">;
@@ -183,6 +227,22 @@ export function AppHeader() {
       {is_mobile && <MobileBottomNav unread_count={unread_count} />}
     </>);
 }
+  ),;}
+) : (<Menu className="block h-6 w-6" aria-hidden="true" />) 
+}</button> </div> <ModeToggle /> </div> </header> <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick= {
+  () => setMobileMenuOpen (false) 
+}aria-hidden="true" /> <div className="relative bg-zion-blue-dark border-t border-zion-purple/20 h-auto max-h-[calc (100vh-4rem) ] overflow-y-auto" > <MobileMenu unreadCount= {
+  unreadCount 
+}onClose= {
+  () => setMobileMenuOpen (false) 
+}/> </div> </div>) 
+}{
+  /* Mobile Bottom Navigation */ 
+}{
+  isMobile && <MobileBottomNav unreadCount= {
+  unreadCount 
+}/> 
+}</>) 
 import { useState } from "react";""
 import { useMessaging } from "@/context/MessagingContext";""
 import { MainNavigation } from "./MainNavigation";""

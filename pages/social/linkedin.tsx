@@ -1,10 +1,25 @@
-<<<<<<< HEAD
-import React, { useEffect } from 'react';
-import Head from 'next/head';
-=======
->>>>>>> origin/main
+
 
 export default function LinkedInRedirect() {
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
+import React, { useEffect } from 'react';
 
 
 
@@ -49,6 +64,12 @@ export default function LinkedInRedirect(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 
+}
+	}, []),
+
+}
+
+export default function LinkedInRedirect() {
 
 }
 	}, []),
@@ -56,6 +77,8 @@ export default function LinkedInRedirect(req, res) {
 		if (typeof window !== 'undefined') {
 			window.location.replace('https: //www.linkedin.com/company/zion-tech-group')
 		}
+}, []);
+
 	}, []);
 origin/cursor/automate-test-improve-and-merge-code-2533
 	return (
@@ -74,9 +97,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 		</>
 	)
 }
-<<<<<<< HEAD
 
-=======
 import Head from 'next / head';
 ;
 export default /**
@@ -152,4 +173,4 @@ if ( {) {
     </>
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/main
+

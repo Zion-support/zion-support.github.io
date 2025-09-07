@@ -1,77 +1,62 @@
-
-<<<<<<< HEAD
+export type ModerationStatus = 'pending' | 'approved' | 'removed' | 'warned' | 'banned';
 export interface ModerationAction {
-  id: string;
 
+export interface ModerationAction {;
+
+
+
+
+
+
+  id: string;
   flagId: string;
   action: ModerationStatus;
   adminNotes?: string;
   adminId: string;
+  reason?: string;
   createdAt: string;
 
-}
-=======
-export interface ModerationResult {
-  // TODO: Implement
-}
-  id: string;,
-  content: string;
-  status: 'approved' | 'rejected' | 'pending';
-  reason?: string;
-  moderatedBy?: string;
-  moderatedAt: Date;
-}
+export type ModerationStatus = 'pending' | 'approved' | 'removed' | 'warned' | 'banned';
+
 
 
 
 ;
 export interface ModerationAction {
-  // TODO: Implement
-  type: "approve" | "remove" | "warn" | "ban";"
-  targetId: string;,"
-  targetType: "post" | "comment" | "user";"
-  adminId: string;
-  createdAt: string;
-}
-
-
-
-
-export interface ModerationFlag {
-  // TODO: Implement
-export interface ModerationFlag {;
-  id: string;,"
-  type: "spam" | "inappropriate" | "harassment" | "other";"
-  content: string;,
   id: string;
-type: \"spam\" | \"inappropriate\" | \"harassment\" | \"other\";
+  type: "approve" | "remove" | "warn" | "ban";
+  targetId: string;
+  targetType: "post" | "comment" | "user";
+  adminId: string;
+  reason?: string;
+created_at: string,
+
+
+}
+}
+export interface ModerationFlag {
+
+export interface ModerationFlag {;
+  id: string;
+  type: "spam" | "inappropriate" | "harassment" | "other";
   content: string;
   reporterId: string;
-  status: ModerationStatus;,
+  targetId: string;
+  targetType: "post" | "comment" | "user";
+  status: ModerationStatus;
+  createdAt: string;
   updatedAt: string;
   adminNotes?: string;
 
-  // TODO: Implement
 
-export interface ModerationRule {
-  // TODO: Implement
-  name: string;
-  pattern: string;,"
-  action: 'approve' | 'reject' | 'flag';
-  severity: 'low' | 'medium' | 'high';
 
-  createdAt: string;
-  updatedAt: string;}
-  adminNotes?: string;}
-}}
 
-export interface ModerationRule {
-  id: string;
-name: string;
-  pattern: string;
-  action: 'approve' | 'reject' | 'flag';
-  severity: 'low' | 'medium' | 'high';}
+
 }
+export interface ModerationFlag {
 
-export type ModerationStatus = 'pending' | 'approved' | 'rejected';
->>>>>>> origin/main
+
+export interface ModerationResult {
+  id: string;
+
+

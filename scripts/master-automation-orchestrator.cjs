@@ -1,74 +1,20 @@
 
-
-<<<<<<< HEAD
 #!/usr/bin/env node;
+
+<>#!/usr/bin/env node;
+
+
+<:scripts/master-automation-orchestrator.cjs
+>#!/usr/bin/env node;
+
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
 // console.log(' Starting Master Automation Orchestrator...')
 console.log('=====')
-    "status"""
-      "encoding"""
-      "stdio"""
-const metricsResult = runCommand('Metrics Generation', 'echo "Generating final metrics...")""
-  console.log('\n "Recommendations")"
-<
 
-<<<<<<< HEAD
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
 
-class MasterAutomationOrchestrator {
-  constructor() {
-    this.projectRoot = process.cwd();
-<<<<<<< HEAD
-    this.startTime = new Date();
-    this.results = {
-      scripts: [],
-      tests: { passed: 0, failed: 0 },
-      builds: { success: false },
-      improvements: [],
-      errors: []
-    };
-  }
 
-  log(message, type = 'INFO') {
-    const timestamp = new Date().toISOString();
-    const prefix = {
-      'INFO': 'ℹ️',
-      'SUCCESS': '✅',
-      'ERROR': '❌',
-      'WARNING': '⚠️',
-      'PROGRESS': '🔄'
-    }[type] || 'ℹ️';
-    console.log(`${prefix} [${timestamp}] ${message}`);
-  }
-
-  async runCommand(command, description, options = {}) {
-    this.log(`Running: ${description}`);
-=======
-    this.reportsDir = path.join(this.projectRoot, 'automation-reports');
-    this.logFile = path.join(this.reportsDir, 'master-automation.log');
-    this.ensureDirectories();
-  }
-
-  ensureDirectories() {
-    if (!fs.existsSync(this.reportsDir)) {
-      fs.mkdirSync(this.reportsDir, { recursive: true });
-    }
-  }
-
-  log(message) {
-    const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] ${message}`;
-    console.log(logMessage);
-    fs.appendFileSync(this.logFile, logMessage + '\n');
-  }
-
-  async runCommand(command, description) {
-    this.log(`🚀 Starting: ${description}`);
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
     try {
       const result = execSync(command, {
         cwd: this.projectRoot,
@@ -76,275 +22,7 @@ class MasterAutomationOrchestrator {
         encoding: 'utf8',
         ...options,
       });
-<<<<<<< HEAD
-      this.log(`✅ ${description} completed successfully`);
-      return { success: true, output: result };
-    } catch (error) {
-      this.log(`❌ ${description} failed: ${error.message}`, 'ERROR');
-      return {
-        success: false,
-        error: error.message,
-        output: error.stdout || error.stderr,
-      };
-    }
-  }
 
-  async runScript(scriptPath, description) {
-    this.log(`\n🔄 Running: ${description}`);
-    
-    try {
-      const result = await this.runCommand(`node ${scriptPath}`, description);
-      
-      this.results.scripts.push({
-        name: description,
-        path: scriptPath,
-        success: result.success,
-        error: result.error
-      });
-      
-      if (result.success) {
-        this.log(`✅ ${description} completed successfully`, 'SUCCESS');
-      } else {
-        this.log(`❌ ${description} failed: ${result.error}`, 'ERROR');
-        this.results.errors.push(`${description}: ${result.error}`);
-      }
-      
-      return result;
-    } catch (error) {
-      this.log(`❌ Error running ${description}: ${error.message}`, 'ERROR');
-      this.results.errors.push(`${description}: ${error.message}`);
-=======
-      this.log(`✅ Completed: ${description}`);
-      return { success: true, output: result };
-    } catch (error) {
-      this.log(`❌ Failed: ${description} - ${error.message}`);
-      return { success: false, error: error.message };
-    }
-  }
-
-  async runAutomationScript(scriptPath, description) {
-    this.log(`🎯 Running: ${description}`);
-    try {
-      const result = execSync(`node ${scriptPath}`, {
-        cwd: this.projectRoot,
-        encoding: 'utf8',
-        timeout: 900000, // 15 minutes timeout
-      });
-      this.log(`✅ Completed: ${description}`);
-      return { success: true, output: result };
-    } catch (error) {
-      this.log(`❌ Failed: ${description} - ${error.message}`);
-      return { success: false, error: error.message };
-    }
-  }
-
-  async runErrorFixing() {
-    this.log('🔧 Running Error Fixing Automation');
-
-    const errorFixingScripts = [
-      {
-        script: 'scripts/comprehensive-error-fixer.cjs',
-        description: 'Comprehensive Error Fixer',
-      },
-    ];
-
-    const results = [];
-    for (const script of errorFixingScripts) {
-      const result = await this.runAutomationScript(
-        script.script,
-        script.description
-      );
-      results.push({ ...script, ...result });
-    }
-
-    return results;
-  }
-
-  async runTesting() {
-    this.log('🧪 Running Testing Automation');
-
-    const testingScripts = [
-      {
-        script: 'scripts/comprehensive-testing-automation.cjs',
-        description: 'Comprehensive Testing',
-      },
-    ];
-
-    const results = [];
-    for (const script of testingScripts) {
-      const result = await this.runAutomationScript(
-        script.script,
-        script.description
-      );
-      results.push({ ...script, ...result });
-    }
-
-    return results;
-  }
-
-  async runPerformanceOptimization() {
-    this.log('⚡ Running Performance Optimization');
-
-    const performanceScripts = [
-      {
-        script: 'scripts/performance-optimization-automation.cjs',
-        description: 'Performance Optimization',
-      },
-    ];
-
-    const results = [];
-    for (const script of performanceScripts) {
-      const result = await this.runAutomationScript(
-        script.script,
-        script.description
-      );
-      results.push({ ...script, ...result });
-    }
-
-    return results;
-  }
-
-  async runBuildAndDeployment() {
-    this.log('🏗️ Running Build and Deployment');
-
-    const buildScripts = [
-      {
-        script: 'scripts/enhanced-build-deployment-automation.cjs',
-        description: 'Enhanced Build and Deployment',
-      },
-    ];
-
-    const results = [];
-    for (const script of buildScripts) {
-      const result = await this.runAutomationScript(
-        script.script,
-        script.description
-      );
-      results.push({ ...script, ...result });
-    }
-
-    return results;
-  }
-
-  async runAdditionalAutomations() {
-    this.log('🔧 Running Additional Automations');
-
-    const additionalScripts = [
-      {
-        command: 'npm run lint:fix',
-        description: 'ESLint Auto-Fix',
-      },
-      {
-        command: 'npm run format',
-        description: 'Code Formatting',
-      },
-      {
-        command: 'npm run sitemap',
-        description: 'Sitemap Generation',
-      },
-      {
-        command: 'npm run search:index',
-        description: 'Search Index Generation',
-      },
-    ];
-
-    const results = [];
-    for (const script of additionalScripts) {
-      const result = await this.runCommand(script.command, script.description);
-      results.push({ ...script, ...result });
-    }
-
-    return results;
-  }
-
-  async generateMasterReport(allResults) {
-    this.log('📊 Generating Master Automation Report');
-
-    const report = {
-      timestamp: new Date().toISOString(),
-      summary: {
-        totalAutomations: allResults.length,
-        successful: allResults.filter(r => r.success).length,
-        failed: allResults.filter(r => !r.success).length,
-        successRate:
-          (
-            (allResults.filter(r => r.success).length / allResults.length) *
-            100
-          ).toFixed(2) + '%',
-      },
-      automationCategories: {
-        errorFixing: allResults.filter(r =>
-          r.description.includes('Error Fixer')
-        ),
-        testing: allResults.filter(r => r.description.includes('Testing')),
-        performance: allResults.filter(r =>
-          r.description.includes('Performance')
-        ),
-        build: allResults.filter(
-          r =>
-            r.description.includes('Build') ||
-            r.description.includes('Deployment')
-        ),
-        additional: allResults.filter(
-          r =>
-            r.description.includes('ESLint') ||
-            r.description.includes('Format') ||
-            r.description.includes('Sitemap') ||
-            r.description.includes('Search')
-        ),
-      },
-      details: allResults,
-    };
-
-    const reportFile = path.join(
-      this.reportsDir,
-      'master-automation-report.json'
-    );
-    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
-
-    this.log(`📄 Master report saved to: ${reportFile}`);
-    return report;
-  }
-
-  async run() {
-    this.log('🎯 Starting Master Automation Orchestrator');
-
-    try {
-      const allResults = [];
-
-      // Run all automation categories
-      const errorFixingResults = await this.runErrorFixing();
-      allResults.push(...errorFixingResults);
-
-      const testingResults = await this.runTesting();
-      allResults.push(...testingResults);
-
-      const performanceResults = await this.runPerformanceOptimization();
-      allResults.push(...performanceResults);
-
-      const buildResults = await this.runBuildAndDeployment();
-      allResults.push(...buildResults);
-
-      const additionalResults = await this.runAdditionalAutomations();
-      allResults.push(...additionalResults);
-
-      // Generate comprehensive report
-      const report = await this.generateMasterReport(allResults);
-
-      // Check overall success
-      const failedAutomations = allResults.filter(r => !r.success);
-      const success = failedAutomations.length === 0;
-
-      if (success) {
-        this.log('🎉 Master automation orchestration completed successfully');
-      } else {
-        this.log(`❌ ${failedAutomations.length} automations failed`);
-      }
-
-      return { success, report, failedAutomations };
-    } catch (error) {
-      this.log(`❌ Master automation orchestration failed: ${error.message}`);
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
       return { success: false, error: error.message };
     }
   }
@@ -379,7 +57,6 @@ class MasterAutomationOrchestrator {
 
   async runTests() {
     this.log('\n🧪 RUNNING TESTS');
-    
     try {
       // Run type check
       const typeResult = await this.runCommand('npm run type-check', 'TypeScript type check');
@@ -414,14 +91,12 @@ class MasterAutomationOrchestrator {
 
   async buildProject() {
     this.log('\n🏗️ BUILDING PROJECT');
-    
     try {
       // Clean build
       await this.runCommand('npm run clean', 'Clean build');
 
       // Build project
       const buildResult = await this.runCommand('npm run build', 'Production build');
-      
       if (buildResult.success) {
         this.results.builds.success = true;
         this.log('✅ Build successful', 'SUCCESS');
@@ -437,7 +112,6 @@ class MasterAutomationOrchestrator {
 
   async commitAndPush() {
     this.log('\n📝 COMMITTING AND PUSHING CHANGES');
-    
     try {
       // Add all changes
       await this.runCommand('git add .', 'Git add');
@@ -458,7 +132,6 @@ class MasterAutomationOrchestrator {
 
   async mergeToMain() {
     this.log('\n🔄 MERGING TO MAIN BRANCH');
-    
     try {
       // Check current branch
       const currentBranch = execSync('git branch --show-current', { encoding: 'utf8' }).trim();
@@ -467,13 +140,10 @@ class MasterAutomationOrchestrator {
       if (currentBranch !== 'main') {
         // Switch to main branch
         await this.runCommand('git checkout main', 'Switch to main branch');
-        
         // Merge the current branch
         await this.runCommand(`git merge ${currentBranch}`, `Merge ${currentBranch} into main`);
-        
         // Push to main
         await this.runCommand('git push origin main', 'Push to main branch');
-        
         this.log('✅ Successfully merged to main branch', 'SUCCESS');
       } else {
         this.log('ℹ️ Already on main branch', 'INFO');
@@ -486,7 +156,6 @@ class MasterAutomationOrchestrator {
 
   generateFinalReport() {
     const duration = Date.now() - this.startTime;
-    
     this.log('\n📊 MASTER AUTOMATION ORCHESTRATOR REPORT');
     this.log('='.repeat(60));
     this.log(`Total Duration: ${duration}ms`);
@@ -548,51 +217,13 @@ class MasterAutomationOrchestrator {
   }
 }
 
-<<<<<<< HEAD
-// Run the master automation orchestrator
-if (require.main === module) {
-  const orchestrator = new MasterAutomationOrchestrator();
-  orchestrator.run().catch(console.error);
-=======
-// Run the automation
-if (require.main === module) {
-  const automation = new MasterAutomationOrchestrator();
-  automation.run().then(result => {
-    if (result.success) {
-      console.log('✅ Master automation orchestration completed successfully');
-      process.exit(0);
-    } else {
-      console.log('❌ Master automation orchestration failed');
-      process.exit(1);
-    }
-  });
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+
 }
 
 module.exports = MasterAutomationOrchestrator;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/scripts/master-automation-orchestrator.cjs
-<<<<<<< HEAD
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-=======
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-=======
-"');
->>>>>>> pr-12325
-=======
-#!/usr/bin/env node
-const fs = require('fs')
-const path = require('path')
-const { execSync } = require('child_process')
-// console.log(' Starting Master Automation Orchestrator...)
-console.log('====)
-    "status"
-      "encoding"
-      "stdio"
-const metricsResult = runCommand('Metrics Generation,echo "Generating final metrics...")
-  console.log('\n "Recommendations")"
-<
 
-"
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
+
+
+
+

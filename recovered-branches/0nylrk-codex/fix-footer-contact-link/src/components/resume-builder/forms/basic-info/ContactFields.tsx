@@ -1,44 +1,5 @@
 
-<<<<<<< HEAD
 
-import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",
-import { Input } from "@/components/ui/input",
-import { Control } from "react-hook-form";
-import { BasicInfoFormData } from "./schema";
-
-=======
-  FormField,
-
-import {FormField, FormItem, FormLabel, FormControl, FormMessage} from "@/components/ui/form";
-import {Input} from "@/components/ui/input";
-import {Control} from "react-hook-form";
-import {BasicInfoFormData} from "./schema";
-import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",;
-import { Input } from "@/components/ui/input",;
-import { Control } from "react-hook-form",;
-import { BasicInfoFormData } from "./schema",import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",;
-import { Input } from "@/components/ui/input",;
-import { Control } from "react-hook-form",;
-import { BasicInfoFormData } from "./schema",;
-
-import {
-import {
-  // TODO: Implement
-}
-pr-12325
-import {
-  // TODO: Implement
-}
-  FormField,
-  FormItem,
-  FormLabel,
-  FormControl,
-  FormMessage,
-} from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-import { Control } from "react-hook-form";
-import { BasicInfoFormData } from "./schema";
->>>>>>> origin/main
 interface ContactFieldsProps {
   control: Control<BasicInfoFormData>;
 }
@@ -70,10 +31,57 @@ function ContactFields() {
         render={({ field }) => (
           <FormItem>;
             <FormLabel > Location</FormLabel>;
+
+import { BasicInfoFormData } from "./schema",;
+;
+interface ContactFieldsProps {;
+  control:Control<BasicInfoFormData>;
+}
+;
+export function ContactFields({ control } ContactFieldsProps) {;
+  return (;
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
+      <FormField;
+        control={control}
+        name="location";
+        render={({ field }) => (;
+          <FormItem>;
+            <FormLabel>Location</FormLabel>;
+            <FormControl>;
+              <Input placeholder="San Francisco, CA" {...field} />;
+            </FormControl>;
+            <FormMessage />;
+
+        render={({ field }) => (
+          <FormItem>
+            <FormLabel>Location</FormLabel>
+            <FormControl>
+              <Input placeholder="San Francisco, CA" {...field} />
+            </FormControl>
+            <FormMessage />
+          </FormItem>
+
+        )}
+
+      />;
+
+      <FormField
+        control={control}
+        name="website"
+</FormItem>;
+        )}
+      />;
+;
+      <FormField;
+        control={control}
+        name="website";
         render={({ field }) => (;
           <FormItem>;
             <FormLabel>Website</FormLabel>;
             <FormControl>;
+              <Input placeholder="https://yourwebsite && yourwebsite.com" {...field} />;
+<Input placeholder="https://yourwebsite.com" {...field} />;
+              <Input placeholder="https://yourwebsite && yourwebsite.com" {...field} />;
               <Input placeholder="https://yourwebsite && yourwebsite.com" {...field} />;              <Input placeholder="https://yourwebsite && yourwebsite.com" {...field} />;
             </FormControl>;
             <FormMessage />;
@@ -95,6 +103,7 @@ function ContactFields() {
           </FormItem>)}
       />;
       <FormField;
+
         control={control}
         name="linkedin";
         render={({ field }) => (
@@ -126,6 +135,35 @@ function ContactFields() {
 
       <FormField
         control={control}
+        name="github"
+/>;
+      <FormField
+        control={control}
+        name="linkedin"
+        render={({ field }) => (
+          <FormItem>
+            <FormLabel>LinkedIn</FormLabel>
+            <FormControl>
+              <Input
+                placeholder="https://linkedin.com/in/username"
+                {...field}
+              />
+            </FormControl>
+            <FormMessage />
+          </FormItem>
+        )}
+      />;
+;
+      <FormField;
+        control={control}
+        name="github";
+        render={({ field }) => (;
+          <FormItem>;
+            <FormLabel>GitHub</FormLabel>;
+            <FormControl>;
+              <Input placeholder="https://github && github.com/username" {...field} />;
+<Input placeholder="https://github.com/username" {...field} />;
+            </FormControl>;
         name="github"        render={({ field }) => (;
           <FormItem>;
             <FormLabel>GitHub</FormLabel>;
@@ -147,6 +185,11 @@ interface ContactFieldsProps {
   // TODO: Implement
   control: Control<BasicInfoFormData>;
 
+      />
+    </div>
+  );
+}
+;
 
 
 "
@@ -288,10 +331,8 @@ function ContactFields() {
             <FormControl>
               <Input placeholder="San Francisco, CA" {...field} />"
 
-            
             <FormMessage />
 
-          
         name="website"")
 
 
@@ -329,9 +370,7 @@ function ContactFields() {
                 placeholder="https://linkedin.com/in/username""
               />
 
-            
 
-          
 
                 {...field}
               />
@@ -340,6 +379,29 @@ function ContactFields() {
             <FormMessage />
 </FormMessage>
           </FormItem>
+        )}
+      />
+      <FormField
+        control={control}
+        name="github"
+        render={({ field }) => (
+          <FormItem>
+            <FormLabel>GitHub</FormLabel>
+            <FormControl>
+              <Input placeholder="https://github.com/username" {...field} />
+            </FormControl>
+            <FormMessage />
+          </FormItem>
+        )}
+      />
+    </div>
+  );
+}
+  )
+}
+;
+}
+;
 
       <FormField;
         control={control}"
@@ -365,24 +427,18 @@ function ContactFields() {
             <FormLabel>Website
               <Input placeholder="https://yourwebsite.com" {...field} />"
 
-            
-
-          
 
 
 
 
-            
 
-          
+
 
 
             <FormLabel>GitHub
               <Input placeholder="https://github.com/username" {...field} />"
 
-            
 
-          
 pr-12325
 </Input>
             </FormControl>

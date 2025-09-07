@@ -3,6 +3,7 @@ export interface ProfileSkill {
   level: number; // 1-5
   endorsements?: number;
 }
+
 }
   id: string;
   title: string,
@@ -15,18 +16,7 @@ export interface ProfileSkill {
 
   id: string;,
   title: string;
-<<<<<<< HEAD
-  description: string;
-  imageUrl?: string;
-  tags?: string[];
 
-  url?: string;
-
-  date: string
-=======
-pr-12325
-}
->>>>>>> origin/main
 }
 
   id: string;,
@@ -44,31 +34,34 @@ pr-12325
 
 }
 export interface ProfileExperience {
+export interface ProfileSkill {
+
+  name: string
+
+  level: number, // 1-5
+  endorsements?: number
+}
+export interface ProfileProject {
+
+export interface ProfileProject {;
+  id: string;
+  title: string;
+  description: string;
+  imageUrl?: string;
+  tags?: string[];
+
+  url?: string
+
+  date: string
+}
+export interface ProfileExperience {
+
+export interface ProfileExperience {;
   id: string;
   role: string;
   company: string,
   description: string;
-<<<<<<< HEAD
-  startDate: string;
 
-  endDate?: string;
-
-  current?: boolean
-}
-
-export interface Availability {
-  status: 'available' | 'limited' | 'unavailable';
-  nextAvailable?: string;
-
-  message?: string;
-
-  availableHours?: { day: string, hours: string }[]
-=======
-  status: 'available' | 'limited' | 'unavailable';
-  next_available?: string;
-  message?: string,
-  available_hours?: { day: string, hours: string }[];
->>>>>>> origin/main
 }
 export interface ProfileData {
   id: string;
@@ -161,13 +154,8 @@ pr-12325
   projects: ProfileProject[];
   experience: ProfileExperience[];
   availability: Availability;
-<<<<<<< HEAD
 
-  hourlyRate?: number;
 
-=======
-  hourlyRate?: number;
->>>>>>> origin/main
   contactEmail?: string
 };
 export interface ProfileProject {;
@@ -187,6 +175,8 @@ export interface ProfileProject {;
 export interface ProfileSkill {;
   name: string,;
   level: number, // 1-5;
+  endorsements?: number;
+}
 ;
 
 export interface ProfileProject {;
@@ -251,6 +241,7 @@ pr-12325
   contactEmail?: string;
 }
 ;
+}
 pr-12325
   hourlyRate?: number;}
   contactEmail?: string;}

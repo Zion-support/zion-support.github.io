@@ -62,13 +62,9 @@ const data = readJsonFile('updates.json', [] as any[]);
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!requireSuperadminApi(req, res)) return;
-<<<<<<< HEAD
 
-  const data = null;
-
-=======
   const data = readJsonFile('updates.json', [] as any[]);
->>>>>>> origin/main
+
   res.status(200).json(data)
 }
 

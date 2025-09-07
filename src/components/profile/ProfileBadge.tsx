@@ -15,15 +15,20 @@ type BadgeType = any;
 origin/cursor/automate-test-improve-and-merge-code-2533
 }: ProfileBadgeProps) {
   const badge_config = {
-  verified: {
+  verified: {,
   const {
-  icon: Icon,  text, colors;
+  icon: Icon,  text, colors;,
 }= badge_config[type];
-}> <Icon className="w - 3 h - 3" /> <span> {
+}> <Icon className="w - 3 h - 3" /> <span> {"
   text;
 }</span>;
 }'"  );
 }
+}}}
+    </div>;
+  );
+}
+;
   icon: Icon,  text, colors
 }= badgeConfig[type]
 }> <Icon className="w-3 h-3" /> <span> {

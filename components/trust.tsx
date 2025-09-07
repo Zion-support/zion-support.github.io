@@ -3,74 +3,7 @@ import EnhancedLayout from '../components/layout/EnhancedLayout';
 import TrustBadge from '../components/ui/TrustBadge';
 import TrustRadar from '../components/ui/TrustRadar';
 import RiskIndicator from '../components/ui/RiskIndicator';
-<<<<<<< HEAD
-export default function TrustPage() {
 
-  const [userId, setUserId] = useState<string>('demo-user'),
-  const [data, setData] = useState<any>(null),
-  const [loading, setLoading] = useState<boolean>(true);
-  const [showLogic, setShowLogic] = useState<boolean>(false);
-  useEffect(() => {
-    const params = null;
-
-=======
-
-
-  const [loading, setLoading] = useState<boolean>(true);
-  const [showLogic, setShowLogic] = useState<boolean>(false);
-  useEffect(() => {
-
-    const params = new URLSearchParams(window.location.search);
-    const u = params.get('user');
-    if (u) setUserId(u);    if (u) setUserId(u)
-    const params = null;
-origin/cursor/automate-test-improve-and-merge-code-2533
-  }, []);
-  useEffect(() => {
-    async function load() {
-  }, []);
-
-  useEffect(() => {;
-    async function load() {;
-      setLoading(true);
-const res = await fetch(
-        `/api/trust/${encodeURIComponent(userId)}?analyze=true`
-origin/cursor/automate-test-improve-and-merge-code-2533
-      );
-      const json = await res && res.json();
-      setData(json);
-      setLoading(false);
-    }
-    load();
-  }, [userId]);
-    <EnhancedLayout>    await fetch('/api/trust/appeal', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ userId, message, contactEmail }) });
-    alert('Appeal submitted');
-
-
-    form && form.reset();
-
-  async function submitPeer(type: 'endorse' | 'flag') {
-    await fetch('/api/trust/peer', {
-      method: 'POST'
-      headers: { 'Content-Type': 'application/json' }
-      body: JSON.stringify({ userId, reviewerId: 'demo-reviewer', type })
-    });
-    alert(type === 'endorse' ? 'Endorsed' : 'Flagged');
-  }
-  async function submitAppeal(e: React.FormEvent) {
-    e.preventDefault();
-    const form = e.target as HTMLFormElement;
-    const formData = new FormData(form);
-    const message = formData.get('message');
-    const contactEmail = formData.get('email');
-await fetch('/api/trust/appeal', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ userId, message, contactEmail }),
-    });
-    alert('Appeal submitted');
-    form.reset();
->>>>>>> origin/main
     form.reset()
 origin/cursor/automate-test-improve-and-merge-code-2533
   }

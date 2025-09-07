@@ -1,18 +1,5 @@
 
-<<<<<<< HEAD
-import { useRouter  } from 'next/router';
-import CertificatePreview from '../../../components/learn/CertificatePreview';
 
-=======
-import { useRouter } from 'next/router';
-import CertificatePreview from '../../../components/learn/CertificatePreview';
-export default function CertificatePage() {
-  const router = useRouter()
-  const { courseId } = router.query as { courseId: string }
-  if (!courseId) return null
-import { useRouter  } from 'next/router';
-import CertificatePreview from '../../../components/learn/CertificatePreview';
->>>>>>> origin/main
 export default function CertificatePage() {
   const router = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -21,12 +8,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <h1 className="text-2xl font-semibold">Certificate</h1>
       <CertificatePreview courseId={courseId} />
     </div>
+
+)
   )
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+}
+
+import { use_router } from 'next / router',
+import CertificatePreview from '../../../components / learn / CertificatePreview',
 
 }
 
@@ -49,6 +42,13 @@ if (return null, ) {
     </div>);
 }
 
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+}
 
 }
 origin/cursor/automate-test-improve-and-merge-code-2533

@@ -92,8 +92,11 @@ export const realMarketServices: RealMarketService[] = [
     customers: 1800,
     rating: 4.7,
     reviews: 950
+  };
+],
   }
 ];
+// Placeholder content - file was empty after conflict resolution
 import { ServiceVariant } from "../types/service-variants";"
 export interface RealMarketService {
   // TODO: Implement

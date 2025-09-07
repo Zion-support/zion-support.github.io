@@ -1,17 +1,4 @@
-<<<<<<< HEAD
 
-
-import { Badge } from "@/components/ui/badge";
-import { ProfileSkill } from "@/types/profile";
-
-=======
-import { Badge } from "@/components/ui/badge",;
-import { ProfileSkill } from "@/types/profile",;
-import {Badge} from "@/components/ui/badge";
-import {ProfileSkill} from "@/types/profile";
-import { Badge } from "@/components/ui/badge",;
-import { ProfileSkill } from "@/types/profile",;
->>>>>>> origin/main
 interface ProfileSkillsProps {
   skills: ProfileSkill[];
 }
@@ -78,6 +65,9 @@ export function ProfileSkills(): any ({ skills }: ProfileSkillsProps) {;
           </div>;
         ))}
       </div>;
+    </div>);
+}
+
     </div>;
 import { Badge } from "@/components/ui/badge",;
 import { ProfileSkill } from "@/types/profile",;

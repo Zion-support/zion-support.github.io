@@ -1,10 +1,4 @@
-<<<<<<< HEAD
 
-import React from 'react';
-import SEO from '../components/SEO';
-
-export default function AICreativityStudioPage() {
-=======
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -12,7 +6,7 @@ export default function AICreativityStudioPage() {
 }
 import React from 'react';
 export default function Page() {
->>>>>>> origin/main
+
   return (
     <div className='min-h-[60vh] px-6 py-24'>
       <SEO

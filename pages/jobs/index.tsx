@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 
-import Link from 'next/link',
-import EnhancedMarketplaceCard from '../../components/ui/EnhancedMarketplaceCard',
-=======
 import Link from 'next / link';
 import EnhancedMarketplaceCard from '../../components / ui / EnhancedMarketplaceCard';
 import EnhancedLoading from '../../components / ui / EnhancedLoading';
@@ -17,43 +13,17 @@ function JobsListPage() {
     const t = set_timeout (() => set_loading (false), 500);
     return () => clear_timeout (t);
   }, []);
+import Link from 'next/link',
+import EnhancedMarketplaceCard from '../../components/ui/EnhancedMarketplaceCard',
 import Link from 'next/link',;
 import EnhancedMarketplaceCard from '../../components/ui/EnhancedMarketplaceCard',;
->>>>>>> origin/main
+
 import EnhancedLoading from '../../components/ui/EnhancedLoading';
 import { useEffect, useState  } from 'react';
 import InteractiveSearch from '../../components/ui/InteractiveSearch';
 export default function JobsListPage() {
   const [loading, setLoading] = useState(true);
-<<<<<<< HEAD
-  useEffect(() => { const t = null;
 
-=======
-
-  useEffect(() => {
-    const t = setTimeout(() => setLoading(false), 500);
-    return () => clearTimeout(t);
-  }, []);
-  const jobs = [
-;
-  const jobs = [;
-    {
-      slug: 'senior - ai - engineer',
-      title: 'Senior AI Engineer',
-      subtitle: 'Remote • Contract',
-      description: 'Build and optimize LLM - powered features in production.',
-    },
-    {
-      slug: 'mlops - specialist',
-      title: 'MLOps Specialist',
-      subtitle: 'Remote • Part - time',
-      description: 'Design pipelines for training / inference at scale.',
-    },
-  ];
-;
-  useEffect(() => { const t = null;
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/main
   return (
 
 import EnhancedLoading from '../../components/ui/EnhancedLoading',;
@@ -75,6 +45,14 @@ export default function JobsListPage() {
           {jobs.map((j) => (
             <Link key={j.slug} href={`/jobs/${j.slug}`}>
               <a>
+                <EnhancedMarketplaceCard title={j.title} subtitle={j.subtitle} description={j.description} footer={<span className="text-blue-600">View Job →</span>} />
+              </a>
+            </Link>
+
+    </div>;
+  );
+
+    </div>
   )
 }
     <div className='space - y-4'>;
@@ -117,6 +95,7 @@ export default function JobsListPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
                   footer={<span className='text-blue-600'>View Job →</span>}
                 />
               </a>

@@ -1,11 +1,17 @@
-<<<<<<< HEAD
 
+import type { AuthContextType } from "@/types/auth";
+
+import { createContext } from "react",
+import type { AuthContextType } from "@/types/auth",
 
 import { createContext } from "react";
-
-=======
->>>>>>> origin/main
+import {createContext} from "react";
 import type { AuthContextType } from "@/types/auth";
+import { createContext } from "react",
+import type { AuthContextType } from "@/types/auth",
+import type { AuthContextType } from "@/types/auth";
+import { createContext } from "react",
+import type { AuthContextType } from "@/types/auth",
 import { createContext } from "react",;
 import type { AuthContextType } from "@/types/auth",;
 import { createContext } from "react";
@@ -20,11 +26,7 @@ import type { AuthContextType } from "@/types/auth",;
 // parameter to `createContext` because in environments where the React
 // type definitions are unavailable, calling an untyped function with type
 // arguments causes a TypeScript error (TS2347). Instead, we cast the
-<<<<<<< HEAD
-// default value so consumers still get some level of type safety.
 
-export const AuthContext = null;
-=======
 
 export const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
@@ -50,6 +52,7 @@ export const AuthContext = createContext<AuthContextType | undefined>(undefined)
 export const AuthContext = createContext<AuthContextType | undefined>(
   undefined,
 );
+);
 
 </AuthContextType>
 
@@ -59,5 +62,5 @@ export const AuthContext = createContext<AuthContextType | undefined>(
 )"`;
 pr-12325
 </AuthContextType>)"
->>>>>>> origin/main
+
 

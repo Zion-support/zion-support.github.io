@@ -3,7 +3,6 @@
 origin/cursor/automate-test-improve-and-merge-code-2533
 import React from 'react';
 
-interface MessageBubbleProps {
 
         <div className='text-xs opacity-70 text-right mt-1'>
   isUserMessage: boolean
@@ -18,7 +17,7 @@ export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {
 origin/cursor/automate-test-improve-and-merge-code-2533
         <div className="whitespace-pre-wrap">{message.content}</div>
         {message.attachment_url && (
-          <a
+          <a 
             href={message.attachment_url}
             target="_blank"
             rel="noopener noreferrer"
@@ -26,14 +25,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           >
             <PaperclipIcon className="h-3 w-3 mr-1" aria-hidden="true" />
             {message.attachment_name || 'Attachment'}
-          </a>
+          </Link>
         )}
-
         <div className="text-xs opacity-70 text-right mt-1">
           {format(new Date(message.created_at), 'h:mm a')}
         </div>;
       </div>;
     </div>;
+  );
+}
+;
   );
 }
 

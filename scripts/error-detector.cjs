@@ -1,6 +1,6 @@
 
 
-const path = require("path");"
+
 class ErrorDetector {}
   constructor() {}
     this.projectRoot = process.cwd();"
@@ -19,4 +19,4 @@ if (require.main === module) {}
   const detector = new ErrorDetector();
   detector.detect().catch(console.error)};
 
-"`;
+

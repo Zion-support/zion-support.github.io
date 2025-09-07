@@ -1,363 +1,5 @@
-<<<<<<< HEAD
-
-import React from 'react',
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
-=======
-import React from 'react';
-import MainLayout from '../components/layout/MainLayout';
-import Head from 'next/head';
-import Link from 'next/link';
-import {
-  BookOpen,
-  Search,
-  FileText,
-  Code,
-  Database,
-  Cloud,
-  Shield,
-  Users,
-  ArrowRight,
-  Download,
-  ExternalLink,
-  Clock,
-} from 'lucide-react';
-
-export default function Documentation() {
-  const docCategories = [
-  const contact = {
-    phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    site: 'https://ziontechgroup.com'
-  }
-  const documentationSections = [
-origin/cursor/automate-test-fix-improve-and-merge-code-a7a7
-    {
-      title: 'Getting Started',
-      description: 'Quick start guides and setup instructions',
-      icon: BookOpen,
-      docs: [
-        {
-          title: 'Quick Start Guide',
-          description: 'Get up and running in minutes',
-          time: '5 min read',
-        },
-        {
-          title: 'Installation Guide',
-          description: 'Step-by-step installation instructions',
-          time: '10 min read',
-        },
-        {
-          title: 'Configuration',
-          description: 'Configure your environment',
-          time: '15 min read',
-        },
-        {
-          title: 'First Project',
-          description: 'Create your first project',
-          time: '20 min read',
-        },
-      ],
-    },
-    {
-      title: 'API Reference',
-      description: 'Complete API documentation and endpoints',
-      icon: Code,
-      docs: [
-        {
-          title: 'Authentication',
-          description: 'API authentication and security',
-          time: '8 min read',
-        },
-        {
-          title: 'Endpoints',
-          description: 'All available API endpoints',
-          time: '25 min read',
-        },
-        {
-          title: 'Rate Limits',
-          description: 'API rate limiting and quotas',
-          time: '5 min read',
-        },
-        {
-          title: 'Error Codes',
-          description: 'Common error codes and solutions',
-          time: '10 min read',
-        },
-      ],
-    },
-    {
-      title: 'AI Services',
-      description: 'AI and machine learning service documentation',
-      icon: Database,
-      docs: [
-        {
-          title: 'AI Models',
-          description: 'Available AI models and capabilities',
-          time: '15 min read',
-        },
-        {
-          title: 'Training Data',
-          description: 'Data preparation and training',
-          time: '20 min read',
-        },
-        {
-          title: 'Model Deployment',
-          description: 'Deploy and manage AI models',
-          time: '12 min read',
-        },
-        {
-          title: 'Performance Tuning',
-          description: 'Optimize model performance',
-          time: '18 min read',
-        },
-      ],
-    },
-    {
-      title: 'Cloud Services',
-      description: 'Cloud infrastructure and deployment guides',
-      icon: Cloud,
-      docs: [
-        {
-          title: 'Cloud Setup',
-          description: 'Configure cloud environments',
-          time: '15 min read',
-        },
-        {
-          title: 'Deployment',
-          description: 'Deploy applications to cloud',
-          time: '20 min read',
-        },
-        {
-          title: 'Scaling',
-          description: 'Scale your applications',
-          time: '12 min read',
-        },
-        {
-          title: 'Monitoring',
-          description: 'Monitor cloud resources',
-          time: '10 min read',
-        },
-      ],
-    },
-    {
-      title: 'Security',
-      description: 'Security best practices and guidelines',
-      icon: Shield,
-      docs: [
-        {
-          title: 'Security Overview',
-          description: 'Security architecture and principles',
-          time: '12 min read',
-        },
-        {
-          title: 'Authentication',
-          description: 'User authentication and authorization',
-          time: '15 min read',
-        },
-        {
-          title: 'Data Protection',
-          description: 'Protect sensitive data',
-          time: '18 min read',
-        },
-        {
-          title: 'Compliance',
-          description: 'Meet compliance requirements',
-          time: '20 min read',
-        },
-      ],
-    },
-    {
-      title: 'Support',
-      description: 'Help and support resources',
-      icon: Users,
-      docs: [
-        {
-          title: 'FAQ',
-          description: 'Frequently asked questions',
-          time: '10 min read',
-        },
-        {
-          title: 'Troubleshooting',
-          description: 'Common issues and solutions',
-          time: '15 min read',
-        },
-        {
-          title: 'Contact Support',
-          description: 'Get help from our team',
-          time: '5 min read',
-        },
-        {
-          title: 'Community',
-          description: 'Join our developer community',
-          time: '8 min read',
-        },
-      ],
-    },
-  ];
-
-  const popularDocs = [
-    {
-      title: 'Quick Start Guide',
-      description: 'Get started with Zion Tech Group services in minutes',
-      category: 'Getting Started',
-      views: '12.5k',
-      rating: 4.9,
-    },
-    {
-      title: 'API Authentication',
-      description: 'Learn how to authenticate with our APIs',
-      category: 'API Reference',
-      views: '8.2k',
-      rating: 4.8,
-    },
-    {
-      title: 'AI Model Training',
-      description: 'Train custom AI models for your use case',
-      category: 'AI Services',
-      views: '6.7k',
-      rating: 4.9,
-    },
-    {
-      title: 'Cloud Deployment',
-      description: 'Deploy your applications to the cloud',
-      category: 'Cloud Services',
-      views: '5.9k',
-      rating: 4.7,
-    },
-  ];
-
-  const resources = [
-    {
-      title: 'SDK Downloads',
-      description: 'Download our SDKs for popular programming languages',
-      icon: Download,
-      items: ['Python SDK', 'JavaScript SDK', 'Java SDK', 'C# SDK'],
-    },
-    {
-      title: 'Code Examples',
-      description: 'Ready-to-use code examples and snippets',
-      icon: Code,
-      items: [
-        'REST API Examples',
-        'Webhook Examples',
-        'Integration Examples',
-        'Best Practices',
-      ],
-    },
-    {
-      title: 'Video Tutorials',
-      description: 'Step-by-step video tutorials',
-      icon: ExternalLink,
-      items: [
-        'Getting Started',
-        'Advanced Features',
-        'Troubleshooting',
-        'Case Studies',
-      ],
-    },
-  ];
-origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
-
-const Page = () => {
-  return (
-    <MainLayout 
-      title="Page - Zion Tech Group"
-      description="Zion Tech Group page"
-    >
-      <div className="min-h-screen bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 py-20">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">Page</h1>
-          <p className="text-xl text-gray-600">Coming soon...</p>
-        </div>
-      </div>
-    </MainLayout>
-  );
-};
-
-export default Page;
 
 
-import React from 'react',;
-origin/cursor/automate-test-improve-and-merge-code-2533
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
-import React from 'react',;
-import Head from 'next/head',;
-import Layout from '../components/layout/Layout',;
-import React from 'react'
-import Head from 'next/head'
-import Layout from '../components/layout/Layout'
-
-
-ursor/fix-website-loading-errors-and-merge-6662
-export default function DocsPage() {
-	return (
-		<Layout>
-			<Head>
-				<title>Documentation | Zion Tech Group</title>
-				<link rel="canonical" href="https://ziontechgroup.com/docs" />
-			</Head>
-			<section className="container mx-auto px-4 py-24">
-				<h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6">Documentation</h1>
-				<p className="text-gray-300">Guides, API docs, and best practices. Coming soon.</p>
-			</section>
-		</Layout>
-	)
-
-}
-
-import React from 'react',;
-import Head from 'next / head',;
-import Layout from '../components / layout / Layout',;
-export default /**
- * DocsPage - Function description
- */
-function DocsPage() {
-return (
-  <Layout>;
-  <Head>;
-    <title > Documentation | Zion Tech Group</title>;
-    <link rel="canonical" href="https://ziontechgroup.com / docs" />;
-  </Head>;
-  <section className="container mx - auto px - 4 py - 24">;
-    <h1 className="text - 4xl md:text - 6xl font - bold bg - gradient - to - r from - cyan - 400 via - purple - 500 to - pink - 500 bg - clip - text text - transparent mb - 6">Documentation</h1>;
-    <p className="text - gray - 300">Guides, API docs, and best practices. Coming soon.</p>;
-  </section>;
-  </Layout>);
-}
-origin/cursor/automate-test-improve-and-merge-code-20a4
-
-
-		<Layout>
-			<Head>
-				<title>Documentation | Zion Tech Group</title>
-				<link rel=&quot;canonical&quot; href=&quot;https://ziontechgroup.com/docs&quot; />
-			</Head>
-			<section className=&quot;container mx-auto px-4 py-24&quot;>
-				<h1 className=&quot;text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6&quot;>Documentation</h1>
-				<p className=&quot;text-gray-300&quot;>Guides, API docs, and best practices. Coming soon.</p>
-			</section>
-		</Layout>
-	)
-}
-
-
-import React from 'react';
-
-
-
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
-import React from 'react',;
-import Head from 'next/head',;
-import Layout from '../components/layout/Layout',;
-import React from 'react'
-import Head from 'next/head'
-import Layout from '../components/layout/Layout'
-
->>>>>>> origin/main
 
 export default function DocsPage() {
 	return (
@@ -378,6 +20,99 @@ export default function DocsPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+;
+
+import React from 'react';
+import MainLayout from '../src/components/layout/MainLayout';
+
+const Page = () => {
+  return (
+    <MainLayout 
+      title="Page - Zion Tech Group"
+      description="Zion Tech Group page"
+    >
+      <div className="min-h-screen bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 py-20">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">Page</h1>
+          <p className="text-xl text-gray-600">Coming soon...</p>
+        </div>
+      </div>
+    </MainLayout>
+  );
+};
+
+export default Page;
+
+
+
+export default function DocsPage() {
+	return (
+		<Layout>
+			<Head>
+				<title>Documentation | Zion Tech Group</title>
+				<link rel="canonical" href="https://ziontechgroup.com/docs" />
+			</Head>
+			<section className="container mx-auto px-4 py-24">
+				<h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6">Documentation</h1>
+				<p className="text-gray-300">Guides, API docs, and best practices. Coming soon.</p>
+			</section>
+		</Layout>
+	)
+
+}
+
+		<Layout>
+			<Head>
+				<title>Documentation | Zion Tech Group</title>
+				<link rel=&quot;canonical&quot; href=&quot;https://ziontechgroup.com/docs&quot; />
+			</Head>
+			<section className=&quot;container mx-auto px-4 py-24&quot;>
+				<h1 className=&quot;text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6&quot;>Documentation</h1>
+				<p className=&quot;text-gray-300&quot;>Guides, API docs, and best practices. Coming soon.</p>
+			</section>
+		</Layout>
+	)
+}
+
+import React from 'react';
+
+import Head from 'next/head';
+import Layout from '../components/layout/Layout';
+import React from 'react',;
+import Head from 'next/head',;
+import Layout from '../components/layout/Layout',;
+import React from 'react'
+import Head from 'next/head'
+import Layout from '../components/layout/Layout'
+
+export default function DocsPage() {
+	return (
+		<Layout>
+			<Head>
+				<title>Documentation | Zion Tech Group</title>
+				<link rel="canonical" href="https://ziontechgroup.com/docs" />
+			</Head>
+			<section className="container mx-auto px-4 py-24">
+				<h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6">Documentation</h1>
+				<p className="text-gray-300">Guides, API docs, and best practices. Coming soon.</p>
+			</section>
+		</Layout>
+	)
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
+
+
+
+;
+
+
+
 ;
 
 ursor/fix-website-loading-errors-and-merge-6662

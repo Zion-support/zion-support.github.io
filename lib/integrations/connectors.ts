@@ -1,15 +1,38 @@
-<<<<<<< HEAD
 
-import { ProviderConnection, SyncLogEntry  } from './types';
-import { v4 as uuidv4 } from 'uuid';
-export async function simulateAction<T;
-
-=======
 // Integration connectors
 import { ProviderConnection, SyncLogEntry } from './types';
 import { v4 as uuidv4 } from 'uuid';
 import { ProviderConnection, SyncLogEntry } from "./types";
 import { v4 as uuidv4 } from "uuid";
+import { ProviderConnection, SyncLogEntry } from './types';
+import { v4 as uuidv4 } from 'uuid';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+import { ProviderConnection, SyncLogEntry } from "./types";
+import { v4 as uuidv4 } from "uuid";
+async function mockProviderCall<T>(
+  connection: ProviderConnection
+  action: string
+  details: Record<string, any>
+): Promise<{ log: SyncLogEntry; result: T }> {
+
+
+
+
+
+
 pr-12243
 
 import { IntegrationConfig, IntegrationResponse, ApiEndpoint } from './types';
@@ -87,6 +110,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 // ATS actions
 export const ats = {
+
   const log: SyncLogEntry = {
     id: uuidv4();,
     timestamp: Date.now();,
@@ -116,6 +140,13 @@ async function mockProviderCall < T>(
 }
 // CRM actions;
 export const crm = {
+
+
+
+
+
+
+
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
   async addEmailTouchpoint(connection: ProviderConnection;, touch: Record<string;, any>) {
@@ -137,6 +168,11 @@ pr-12243
   async test(): Promise<IntegrationResponse> {
     throw new Error('Test method must be implemented');
   }
+
+
+
+
+
 
   protected async makeRequest(endpoint: ApiEndpoint): Promise<any> {
     const response = await fetch(endpoint.url, {
@@ -204,6 +240,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     return mockProviderCall(connection, "update_status", { status });
   }
 }
+
+
+
   async sync_contact (
     connection: ProviderConnection;,
     contact: Record < string;, any>,
@@ -222,6 +261,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   ) {
     return mockProviderCall (connection, "add_project_note", { note });
   },
+
   const log: SyncLogEntry = {
     id: uuidv4()
     timestamp: Date.now()
@@ -239,11 +279,40 @@ pr-12243
   async test(): Promise<IntegrationResponse> {
     return this.connect();
   }
+  // In a real implementation, call provider SDK/API here using connection.accessToken
+  return { log, result: { ok: true } as unknown as T }
+
+
+
+
+
 }
 ;
 // ATS actions;
 export const ats = {
   async update_status (
+    connection: ProviderConnection,
+    status: Record < string, any>,
+  ) {
+    return mockProviderCall (connection, "update_status", { status });
+  },
+}
+
+
+
+;
+
+
+;
+
+
+}
+;
+// ATS actions;
+export const ats = {
+  async update_status (
+    connection: ProviderConnection,
+    status: Record < string, any>,
     connection: ProviderConnection;,
     status: Record < string;, any>,
   ) {
@@ -251,6 +320,11 @@ export const ats = {
   },
 }
 ;
+
+
+
+
+
 origin/cursor/expand-services-advertise-and-build-project-c28b
 pr-12243
 
@@ -258,6 +332,11 @@ export class WebhookConnector extends BaseConnector {
   async connect(): Promise<IntegrationResponse> {
     return { success: true ;};
   }
+
+
+
+
+
 
   async disconnect(): Promise<IntegrationResponse> {
     return { success: true ;};
@@ -276,6 +355,13 @@ export const email = {
   ) {
     return executeProviderAction(connection, 'sendNotification', { notification });
   },
+
+
+
+};
+
+
+
 };
 
 ursor/fix-website-loading-errors-and-merge-6662
@@ -334,4 +420,4 @@ pr-12325
 
   }
 }
->>>>>>> origin/main
+

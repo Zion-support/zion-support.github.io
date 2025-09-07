@@ -201,7 +201,7 @@ class GitWorkflow {
   }
 pr-12325
 
-  async checkGitStatus() {
+async checkGitStatus() {
     try {
   // TODO: Implement
       this.log('📋 Checking git status...');

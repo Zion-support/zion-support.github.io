@@ -1,16 +1,4 @@
-<<<<<<< HEAD
 
-import React from 'react';
-
-=======
-import React from 'react';
-
-
-ursor/fix-website-loading-errors-and-merge-6662
-pr-12243
-
-pr-12243
->>>>>>> origin/main
 export default function AutomationPage() {
   return (
     <div className="container mx-auto px-4 py-10">

@@ -1,10 +1,4 @@
-<<<<<<< HEAD
 
-
-import { ContractFormValues } from "@/components/contracts/components/ContractForm";
-
-=======
->>>>>>> origin/main
 export interface ContractTemplate {
 
 import {ContractFormValues} from "@/components/contracts/components/ContractForm";
@@ -14,15 +8,7 @@ export interface ContractTemplate {  id: string;
   template_data: ContractFormValues;
   is_default: boolean;
 
-<<<<<<< HEAD
-  created_at: string;
 
-  updated_at: string
-=======
-  created_at: string,
-  updated_at: string;
-
->>>>>>> origin/main
 }
   created_at: string,
   updated_at: string
@@ -50,6 +36,9 @@ export interface ContractTemplate {;
 ;
 }
 ;
+}
+;
+}
 }
 
 import { ContractFormValues } from "@/components/contracts/components/ContractForm";"

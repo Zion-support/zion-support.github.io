@@ -1,24 +1,4 @@
-<<<<<<< HEAD
 
-import React from "react";
-
-import { TalentRegistrationForm } from "@/components/profile/TalentRegistrationForm";
-
-=======
-import { TalentRegistrationForm } from "@/components/profile/TalentRegistrationForm";
-import React from "react",;
-import { TalentRegistrationForm } from "@/components/profile/TalentRegistrationForm",;
-import {TalentRegistrationForm} from "@/components/profile/TalentRegistrationForm";
-import React from "react",;
-import { TalentRegistrationForm } from "@/components/profile/TalentRegistrationForm",;
-
-import React from "react",;
-import { TalentRegistrationForm } from "@/components/profile/TalentRegistrationForm",;
-
-import {TalentRegistrationForm} from "@/components/profile/TalentRegistrationForm";
-import React from "react",;
-import { TalentRegistrationForm } from "@/components/profile/TalentRegistrationForm",;
->>>>>>> origin/main
 export default function CreateTalentProfile() {
   return (
     <div className="bg-zion-blue min-h-screen py-8 md: py-12">
@@ -58,6 +38,9 @@ export default function CreateTalentProfile() {
 import React from "react",;
 import { TalentRegistrationForm } from "@/components/profile/TalentRegistrationForm";
 
+;
+
+    </div>);
 export default function CreateTalentProfile() {;
   return (
     <div className="bg-zion-blue min-h-screen py-8 md: py-12">;

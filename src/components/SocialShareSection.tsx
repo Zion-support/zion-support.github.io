@@ -12,6 +12,8 @@ export function SocialShareSection() {
                 title={link.name}
               >;
                 {link.icon}
+                <span className="sr-only">{link.name}</span>"
+                <span aria-hidden="true">{link.name}</span>"
                 <span className="sr-only">{link.name}</span>
                 <span aria-hidden="true">{link.name}</span>
               </Button>
@@ -21,10 +23,8 @@ export function SocialShareSection() {
       </div>;
     </section>;
   );
-
   navigator && navigator.clipboard.writeText (window && window.location.href) .then ( () => {;
   toast ({;
-
 }) .catch ( () => {;
   toast ({;
   title: t ('errors && errors.failed to copy');
@@ -33,34 +33,30 @@ export function SocialShareSection() {
 }</div> </div> </div> </section>) ;
 }'";
 }
-
 }</div> </div> </div> </section>)
-}'"
+}'""
 }
-
-
-
-      name: 'Twitter',
-      icon: <Twitter className='h - 5 w - 5' aria - hidden='true' />,
-      color: 'bg-[#1DA1F2] hover:bg-[#1DA1F2]/80',
+      name: 'Twitter','
+      icon: <Twitter className='h - 5 w - 5' aria - hidden='true' />,',
+      color: 'bg-[#1DA1F2] hover:bg-[#1DA1F2]/80','
       on_click: shareToTwitter,
     },
     {
-      name: 'Facebook',
-      icon: <Facebook className='h - 5 w - 5' aria - hidden='true' />,
-      color: 'bg-[#4267B2] hover:bg-[#4267B2]/80',
+      name: 'Facebook','
+      icon: <Facebook className='h - 5 w - 5' aria - hidden='true' />,',
+      color: 'bg-[#4267B2] hover:bg-[#4267B2]/80','
       on_click: shareToFacebook,
     },
     {
-      name: 'LinkedIn',
-      icon: <Linkedin className='h - 5 w - 5' aria - hidden='true' />,
-      color: 'bg-[#0077B5] hover:bg-[#0077B5]/80',
+      name: 'LinkedIn','
+      icon: <Linkedin className='h - 5 w - 5' aria - hidden='true' />,',
+      color: 'bg-[#0077B5] hover:bg-[#0077B5]/80','
       on_click: shareToLinkedIn,
     },
     {
-      name: 'Copy Link',
-      icon: <Link className='h - 5 w - 5' aria - hidden='true' />,
-      color: 'bg - zion - blue - dark hover:bg - zion - blue - dark / 80',
+      name: 'Copy Link','
+      icon: <Link className='h - 5 w - 5' aria - hidden='true' />,'
+      color: 'bg - zion - blue - dark hover:bg - zion - blue - dark / 80','
       on_click: copyLinkToClipboard,
     },
   ];
@@ -92,7 +88,7 @@ export function SocialShareSection() {
           <div className='flex flex - wrap gap - 3'>;
             {share_links.map ((link, index) => (              <Button;
                 key = {index, }
-                className={`${link.color} text - white`}
+                className={`${link.color} text - white`}`
                 size='sm';
                 on_click={link.on_click}
                 aria - label={link.name}
@@ -115,6 +111,9 @@ export function SocialShareSection() {
 }</div> </div> </div> </section>);
 }'";
 }
+;)))
+}
+;
 ;
 }</div> </div> </div> </section>)
 }'"

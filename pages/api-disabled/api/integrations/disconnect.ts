@@ -21,10 +21,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     const idx = state.connections.findIndex((c) => c.providerId === providerId);
     if (idx >= 0) state.connections.splice(idx, 1);
     state.logs.push({
+      id: `${now}-${providerId}-disconnect`,
+      timestamp: now,
+      providerId: providerId as any,
+      level: "info",
+      action: "disconnect",
     });
   });
 
 }
+
 import { writeState } from '../../../lib/integrations/fileStore';
 import { getProviderById } from '../../../lib/integrations/registry';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -46,6 +52,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+}
+
+  res.status (200).json ({ ok: true });
 }
 
 

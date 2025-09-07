@@ -1,12 +1,4 @@
-<<<<<<< HEAD
 
-import React from 'react';
-import ServiceLanding from '../components/sections/ServiceLanding';
-
-export default function AIContentPersonalizationEngine() {
-	return (
-		<ServiceLanding
-=======
 			implementationWeeks="Implementation: 2–4 weeks"
 			roiNote="Average ROI 3–6x within 90 days"
 			features={[
@@ -17,7 +9,7 @@ export default function AIContentPersonalizationEngine() {
 				"Privacy-safe profiling and consent management"
 
 import React from 'react';
->>>>>>> origin/main
+
 			title;
 origin/cursor/automate-test-improve-and-merge-code-2533
 				"Integrations: CDP, ESP, CMS, Web SDK"
@@ -30,6 +22,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
 			implementationWeeks="Implementation: 2–4 weeks"
 			roiNote="Average ROI 3–6x within 90 days"
 			features={[
@@ -39,6 +32,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 				"Journey orchestration across channels",
 				"Privacy-safe profiling and consent management",
 				"Integrations: CDP, ESP, CMS, Web SDK"
+
+]}
+			industries={["E‑commerce", "Media", "SaaS", "Education"]}
+			canonical="https: //ziontechgroup.com/ai-content-personalization-engine"
+		/>
+	)
+};
 			]  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });

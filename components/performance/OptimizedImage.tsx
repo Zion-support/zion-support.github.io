@@ -12,30 +12,7 @@ interface OptimizedImageProps {
   sizes?: string;}
 }
 
-<<<<<<< HEAD
 
-export const OptimizedImage: React.FC<OptimizedImageProps> = ({
-  src;
-  alt;
-  width;
-  height;
-  priority;
-
-=======
-const OptimizedImage: React.FC<OptimizedImageProps> = ({
-}
-
-const OptimizedImage: React.FC<OptimizedImageProps /> = ({
-  src,
-const OptimizedImage: React.FC<OptimizedImageProps /> = ({ src,
-  alt,
-  width,
-  height,"
-  className = \"\",
-  priority = false,
-  quality = 75,
-  sizes = "100vw",
->>>>>>> origin/main
 }) => {
   return (
     <Image

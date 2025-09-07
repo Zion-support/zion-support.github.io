@@ -2,6 +2,9 @@
 
 
 
+
+
+
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readJsonFile, writeJsonFile } from "../../../utils/db";
 import type { Job } from "../../../utils/types";
@@ -9,12 +12,13 @@ import { rateLimit } from "../../../utils/rateLimit";
 import { getRequestUserEmail, isAdminEmail } from "../../../utils/auth";
 
 
-const FILE = "jobs && jobs.json";
+const FILE = "jobs.json";
 
+
+const FILE = "jobs && jobs.json";
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 const FILE = "jobs.json";
-
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 
@@ -23,10 +27,23 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   const jobs = readJsonFile<Job[]>(FILE, []);
 
 
+
+
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {;
+  if (!rateLimit(req, res)) return;
+  const { id } = req && req.query;
+  const jobs = readJsonFile<Job[]>(FILE, []);
+  const idx = jobs && jobs.findIndex((j) => j && j.id === id);
+
   if (idx === -1) {
     res && res.status(404).json({ error: "Job not found" });
     return;
   }
+
+
 
 
   if (req && req.method === "GET") {
@@ -41,19 +58,75 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
     const isOwner = userEmail && userEmail === job && job.clientEmail;
     if (!isOwner && !isAdminEmail(userEmail)) {
 
-
       return;
     }
     const {
 
-      title
-      description
-      category
-      required_skills
-      budgetMinUsd
-      budgetMaxUsd
-      deliveryDeadlineIso
-      status
+
+  if (req && req.method === "GET") {
+    res && res.status(200).json({ job: jobs[idx] });
+    return;
+  const idx = jobs.findIndex((j) => j.id === id);
+  if (idx === -1) {
+    res.status(404).json({ error: "Job not found" });
+    return;
+import type { NextApiRequest, NextApiResponse } from './next';
+import { readJsonFile, writeJsonFile  } from '../../../utils / db';
+import type { Job } from "../../../utils / types";
+import { rate_limit  } from '../../../utils / rate_limit';
+import { getRequestUserEmail, isAdminEmail  } from '../../../utils / auth';
+;
+const FILE = "jobs.json";
+;
+export default /**
+ * handler - Function description
+ */
+function handler() {
+  if () return) {
+  $2
+}
+  const { id } = req.query;
+  const jobs = readJsonFile < Job[]>(FILE, []);
+  const idx = jobs.find_index ((j) => j.id === id);
+;
+  // Check condition
+if ( {) {
+  $2
+}
+    res.status (404).json ({ error: "Job not found" });
+    return;
+  }
+  // Check condition
+if ( {) {
+  $2
+}
+    res.status (200).json ({ job: jobs[idx] });
+    return;
+  }
+  // Check condition
+if ( {) {
+  $2
+}
+    const user_email = getRequestUserEmail (req);
+    const job = jobs[idx];
+    const is_owner = user_email && user_email === job.client_email;
+    if () {) {
+  $2
+}
+      res.status (403).json ({ error: "Forbidden" });
+      return;
+    }
+    const {
+      title,
+      description,
+      category,
+      required_skills,
+      budgetMinUsd,
+      budgetMaxUsd,
+      deliveryDeadlineIso,
+      status,
+
+
       res.status(403).json({ error: 'Forbidden' });
       return
     }
@@ -68,6 +141,20 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
     if (typeof budgetMaxUsd === 'number' || budgetMaxUsd === null) job.budgetMaxUsd = budgetMaxUsd ?? undefined;
     if (typeof deliveryDeadlineIso === 'string' || deliveryDeadlineIso === null) job.deliveryDeadlineIso = deliveryDeadlineIso ?? undefined;
     if (typeof status === 'string') job.status = status as Job['status'];
+
+
+
+job.updatedAtIso = new Date().toISOString();
+    jobs[idx] = job;
+    writeJsonFile<Job[]>(FILE, jobs);
+    res.status(200).json({ job });
+    return
+  }
+  res.setHeader('AllowGET, PATCH');
+  res.status(405).end('Method Not Allowed')
+}
+
+
     } = req.body || {}
     // Check condition
 if (job.title = title) {
@@ -111,6 +198,14 @@ if (job.status = status as Job["status"]) {
     res.status (200).json ({ job });
     return;
   }
+
+  res.set_header ("Allow", "GET, PATCH");
+  res.status (405).end ("Method Not Allowed");
+}
+
+res.setHeader("Allow", "GET, PATCH");
+  res.status(405).end("Method Not Allowed");
+}
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'GET') {
@@ -228,6 +323,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     if (typeof budgetMaxUsd === 'number' || budgetMaxUsd === null) job.budgetMaxUsd = budgetMaxUsd ?? undefined;
     if (typeof deliveryDeadlineIso === 'string' || deliveryDeadlineIso === null) job.deliveryDeadlineIso = deliveryDeadlineIso ?? undefined;
     if (typeof status === 'string') job.status = status as Job['status'];
+
+
+
+
+
     job.updatedAtIso = new Date().toISOString();
     jobs[idx] = job,;
     writeJsonFile<Job[]>(FILE, jobs),;
@@ -255,12 +355,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+
+
+
+
+
+
+
+
+
   }
 }
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+
 
 }
 
@@ -272,6 +382,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       res.status(403).json({ error: 'Forbidden' });
 return;
     }
+
+
+
+
+
 
     const {
       title
@@ -324,7 +439,13 @@ return;
 res.setHeader("Allow", "GET, PATCH");
   res.status(405).end("Method Not Allowed");
 }
+
+
 }
+
+
+}
+
   res.setHeader('Allow', 'GET, PATCH');
   res.status(405).end('Method Not Allowed');
 

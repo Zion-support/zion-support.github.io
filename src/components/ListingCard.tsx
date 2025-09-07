@@ -4,11 +4,6 @@ import Image from "next/image";
 origin/cursor/automate-test-improve-and-merge-code-2533
 interface ListingCardProps {
   id?: string;
-  title: string;
-  description: string;
-  images?: string[];
-  category: string;
-  tags?: string[];
 
   author?: { name: string, id?: string, avatarUrl?: string, email?: string },
   className?: string;
@@ -32,10 +27,10 @@ export function ListingCard({
 
       {images && images.length > 0 && images[0] && (
         <div className='h - 48 w - full overflow - hidden relative'>;
-          <Image;
+          <Image;,
             src={images[0]}
             alt={title}
-            className='object - cover transition - transform duration - 300 group - hover:scale - 105';
+            className='object - cover transition - transform duration - 300 group - hover:scale - 105';',
             loading='lazy'          />;
         </div>)}
       <div className='flex flex - col p - 4 flex - grow'>;
@@ -178,17 +173,19 @@ pr-12325
                 className='rounded - full mr - 2';
                 loading='lazy';
               />) : (
-              <div className='h - 8 w - 8 rounded - full bg - zion - purple / 20 mr - 2' />)}
-            <span className='text - sm text - zion - slate - light'>{author.name}</span>          </div>        {author && (
+              <div className='h - 8 w - 8 rounded - full bg - zion - purple / 20 mr - 2' />)}'
+            <span className='text - sm text - zion - slate - light'>{author.name}</span>          </div>        {author && ('
           <div className="flex items - center mt - auto pt - 4 border - t border - zion - blue - light">;
             {author.avatar_url ? (
-              <Image src={author.avatar_url} alt={author.name} width={32} height={32} className="rounded - full mr - 2" loading="lazy" />) : (
-              <div className="h - 8 w - 8 rounded - full bg - zion - purple / 20 mr - 2" />)}
+              <Image src={author.avatar_url} alt={author.name} width={32} height={32} className="rounded - full mr - 2" loading="lazy" />) : ("
+              <div className="h - 8 w - 8 rounded - full bg - zion - purple / 20 mr - 2" />)}"
             <span className="text - sm text - zion - slate - light">{author.name}</span>;
           </div>)}
       </div>;
     </Link>);
 }"}) })";
+;
+}))
 ;
                 variant='outline'
                 className='border-zion-slate-dark text-zion-slate-light'

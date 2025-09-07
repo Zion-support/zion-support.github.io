@@ -1,9 +1,4 @@
-<<<<<<< HEAD
 
-import { useEffect, useState } from 'react';
-type Holder = any;
-
-=======
 import { useEffect, useState } from 'react';
 
 type Holder = { address: string, amount: string }
@@ -60,9 +55,10 @@ export default function DaoMetrics(req, res) {
   }, []),
   if (loading) return <div>Loading...</div>,
   if (!data) return <div>Error loading data</div>,
+
 type Holder = any;
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/main
+
   return (
     <div className="space-y-6">
       <div className="flex items-end justify-between">
@@ -89,6 +85,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
         </div>
 
+        <div className="border rounded p-4">
+          <div className="font-medium mb-2">Top Holders (approx)</div>
+          <table className="w-full text-sm">
+            <thead>
+              <tr className="text-left text-gray-500">
+                <th className="py-1">Address</th>
+                <th className="py-1">Net Delta</th>
+              </tr>
+            </thead>
+            <tbody>
+              {data.topHolders.map((h) => (
+                <tr key={h.address} className="border-t border-gray-200 dark:border-gray-800">
+                  <td className="py-1 pr-2 truncate max-w-[10rem]">{h.address}</td>
+                  <td className="py-1">{h.amount}</td>
 <div className='border rounded p-4'>
           <div className='font-medium mb-2'>Top Holders (approx)</div>
           <table className='w-full text-sm'>
@@ -115,6 +125,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
       </section>
 
+      <section className="grid lg:grid-cols-2 gap-6">
+        <div className="border rounded p-4">
+          <div className="font-medium mb-2">Active Proposals</div>
+          {data.activeProposals.length ? (
+            <ul className="list-disc pl-5 text-sm">
 <section className='grid lg:grid-cols-2 gap-6'>
         <div className='border rounded p-4'>
           <div className='font-medium mb-2'>Active Proposals</div>
@@ -125,11 +140,34 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               ))}
             </ul>
           ) : (
+            <div className="text-sm text-gray-600">No active proposals.</div>
+
+<div className="text-sm text-gray-600">No active proposals.</div>
+          )}
+            <div className="text-sm text-gray-600">No active proposals.</div>
           )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+        </div>
+        <div className="border rounded p-4">
+          <div className="font-medium mb-2">Governance Participation Rate</div>
+          <div className="text-3xl font-semibold">{data.governanceParticipationRate}%</div>
+          <div className="w-full h-3 bg-gray-200 dark:bg-gray-800 rounded mt-2">
+            <div className="h-3 bg-indigo-600 rounded" style={{ width: `${Math.min(100, data.governanceParticipationRate)}%` }} />
+          </div>
+          <div className="text-xs text-gray-500 mt-1">Weekly updates via Etherscan</div>
+        </div>
+      </section>
+    </div>
+}
+
+  );
+};
+  )
+
 <div className='text-sm text-gray-600'>No active proposals.</div>
           )}
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -162,6 +200,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 
 }
+import { useEffect, useState } from 'react',
 
 import { useEffect, useState } from 'react',;
 ;
@@ -266,6 +305,12 @@ if (return <div > Error loading data</div>, ) {
     </div>);
 }
 
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+}
 
   );
 origin/cursor/automate-test-improve-and-merge-code-2533

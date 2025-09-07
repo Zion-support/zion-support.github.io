@@ -1,3 +1,7 @@
+jobs: { variant: "default" },"
+      candidates: { variant: "outline" },"
+      team: { variant: "secondary" },"
+      billing: { variant: "destructive" }},"
 import {
 
 
@@ -18,7 +22,6 @@ import {
         </Table>
       </div>
 
-
       <div className="flex items-center justify-between">
         <Button variant="outline" size="sm">
           Previous
@@ -31,6 +34,9 @@ import {
         </Button>
       </div>
     </div>
+  )
+}
+;
   );
 
 };

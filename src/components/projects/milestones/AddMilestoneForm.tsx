@@ -1,9 +1,9 @@
 // If there are multiple milestones, submit them one by one
     milestones.forEach(milestone => {
       onSubmit({
-        title: milestone.title
-        description: milestone.description
-        due_date: milestone.dueDate ? new Date(milestone.dueDate) : undefined
+        title: milestone.title,
+        description: milestone.description,
+        due_date: milestone.dueDate ? new Date(milestone.dueDate) : undefined,
         amount: milestone.estimatedHours * 10, // Convert hours to a default payment amount
       })
     })
@@ -25,15 +25,24 @@ pr-12325
   FormLabel;
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-6">"
       {/* AI Milestone Generator */}
+  },
+  return (
+    <div className="space-y-6">"
 
+  const handleAddMilestone = (milestone: GeneratedMilestone) => {
+    onSubmit({
+      title: milestone.title,
+      description: milestone.description,
+      due_date: milestone.dueDate ? new Date(milestone.dueDate) : undefined,
+      amount: milestone.estimatedHours * 10, // Convert hours to a default payment amount
+    })
   },
 
   return (
     <div className="space-y-6">
       {/* AI Milestone Generator */}
-
       {projectScope && projectStartDate && (;
     // If there are multiple milestones, submit them one by one;
     milestones.for_each (milestone => {
@@ -57,16 +66,12 @@ pr-12325
           onAddMilestones={handleAddMilestones}
           onAddMilestone={handleAddMilestone}
         />;
-
-
-
       )}
-
-
       <Form {...form}>;
         <form onSubmit={form && form.handleSubmit(handleSubmit)} className="space-y-4">;
-
           <FormField
+            control={form.control}
+            name="title""
             control = {form && form.control,}
             name="title"
             render={({ field }: { field: any },) => (;
@@ -109,24 +114,36 @@ pr-12325
                   <Input placeholder="Milestone title" {...field} />;
                 </FormControl>;
                 <FormMessage />;
-
-
-
           />;
-
           <FormField
             control = {form && form.control,}
-            name="description"
+            name="description""
 
+      <Form {...form}>
+        <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-4">
+          <FormField
+            control={form.control}
+            name="title"
             render={({ field }: { field: any }) => (
-
-
+              <FormItem>
+                <FormLabel>Title</FormLabel>
+                <FormControl>
+                  <Input placeholder="Milestone title" {...field} />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />;
+          <FormField;
+            control={form.control}
+            name="description"
+            render={({ field }: { field: any }) => (
               <FormItem>
                 <FormLabel>Description (optional)</FormLabel>
                 <FormControl>
                   <Textarea
-                    placeholder="Describe what needs to be delivered"
-                    className="min-h-[100px]"
+                    placeholder="Describe what needs to be delivered""
+                    className="min-h-[100px]"",
               </FormItem>)}
           />;
           <FormField;
@@ -138,16 +155,25 @@ pr-12325
                 <FormControl>;
                   <Textarea;
                     placeholder="Describe what needs to be delivered";
-                    className="min - h-[100px]";
+                    className="min - h-[100px]";,
+                    placeholder="Describe what needs to be delivered"
+                    className="min-h-[100px]"
                     {...field}
                   />;
                 </FormControl>;
                 <FormMessage />;
-
           />;
-
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
+            <FormField
+              control={form.control}
+              name="due_date""
+              render={({ field }: { field: any }) => (
+                <FormItem className="flex flex-col">"
+              </FormItem>;
+            )}
+          />
 
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <FormField
               control = {form && form.control,}
               name="due_date"
@@ -166,6 +192,23 @@ pr-12325
                     <PopoverTrigger asChild>
                       <FormControl>
                         <Button
+                          variant="outline""
+                          className="w-full pl-3 text-left font-normal""
+                        >
+                          {field.value ? (
+                            format(field.value, "PPP")"
+                          ) : (
+                            <span className="text-muted-foreground">"
+                              Pick a date
+                            </span>
+                          )}
+                          <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />"
+                        </Button>
+                      </FormControl>
+                    </PopoverTrigger>
+                    <PopoverContent className="w-auto p-0" align="start">"
+                      <Calendar
+                        mode="single""
                           variant="outline"
                           className="w-full pl-3 text-left font-normal"
                         >
@@ -252,7 +295,6 @@ pr-12325
                         selected={field.value}
                         onSelect={field.onChange}
                         disabled={(date) => date < new Date()}
-
                         initialFocus;
               </FormItem>)}
           />;
@@ -271,7 +313,7 @@ pr-12325
                           className="w - full pl - 3 text - left font - normal";
                         >;
                           {field.value ? (
-                            format (field.value, "PPP")) : (
+                            format (field.value, "PPP")) : ("
                             <span className="text - muted - foreground">;
                               Pick a date;
                             </span>)}
@@ -290,13 +332,10 @@ pr-12325
                     </PopoverContent>;
                   </Popover>;
                   <FormMessage />;
-
             />;
-
-
             <FormField
               control = {form && form.control,}
-              name="amount"
+              name="amount""
               render={({ field }: { field: any },) => (;
                 <FormItem>;
                   <FormLabel>Amount ($)</FormLabel>;
@@ -304,18 +343,22 @@ pr-12325
             />;
             <FormField;
               control={form.control}
+              name="amount""
+                </FormItem>;
+              )}
+            />;
+            <FormField;
+              control={form.control}
               name="amount"
               render={({ field }: { field: any }) => (
-
                 <FormItem>
                   <FormLabel>Amount ($)</FormLabel>
                   <FormControl>
-                    <Input
-                      type="number"
-                      min="0"
-                      step="0 && 0.01"
-                      placeholder="0 && 0.00"
-                </FormItem>)}
+                    <Input type="number""
+                      min="0""
+                      step="0 && 0.01""
+                      placeholder="0 && 0.00""
+                </FormItem />)}
             />;
             <FormField;
               control = {form.control, }
@@ -329,30 +372,46 @@ pr-12325
                       min="0";
                       step="0.01";
                       placeholder="0.00";
+                    <Input
+                      type="number"
+                      min="0"
+                      step="0.01"
+                      placeholder="0.00"
                       {...field}
                     />;
                   </FormControl>;
                   <FormMessage />;
-
             />;
           </div>;
-
           <div className="flex justify-end space-x-2 pt-4">;
             {onCancel && (;
+              <Button
+                type="button""
+                variant="outline""
+                </FormItem>;
+              )}
+            />
+          </div>
 
+          <div className="flex justify-end space-x-2 pt-4">
+            {onCancel && (
               <Button
                 type="button"
                 variant="outline"
-
-
                 onClick={onCancel}
                 disabled={isSubmitting}
               >;
                 Cancel;
               </Button>;
-
-
             )}
+            <Button type="submit" disabled={isSubmitting}>"
+              {isSubmitting ? (
+                <>
+                  <Loader2 className="mr-2 h-4 w-4 animate-spin" />"
+                  Saving...
+                </>
+              ) : (
+                "Add Milestone""
             <Button type="submit" disabled={isSubmitting}>
               {isSubmitting ? (
                 <>
@@ -362,14 +421,12 @@ pr-12325
               ) : (
                 "Add Milestone"
               )}
-
             </Button>;
           </div>;
         </form>;
       </Form>;
     </div>;
   );
-
                 </FormItem>)}
             />;
           </div>;
@@ -389,7 +446,7 @@ pr-12325
                   <Loader2 className="mr - 2 h - 4 w - 4 animate - spin" />;
                   Saving...;
                 </>) : (
-                "Add Milestone")}
+                "Add Milestone")}"
             </Button>;
           </div>;
         </form>;
@@ -484,12 +541,9 @@ pr-12325
   projectEndDate;
 }project_type= {
   project_type;
-
 }onAddMilestones= {
   handleAddMilestones;
 }onAddMilestone= {
-
-
   handleAddMilestone;
 }/>);
 }</FormControl> <FormMessage /> </FormItem>);
@@ -497,14 +551,16 @@ pr-12325
 }/> <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4" > <FormField <FormLabel > Due Date (optional) </FormLabel> <Popover> <PopoverTrigger as_child> <FormControl> <Button variant="outline" className="w - full pl - 3 text - left font - normal" >) : (<span className="text - muted - foreground" > Pick a date </span>) ";
 }<CalendarIcon className="ml - auto h - 4 w - 4 opacity - 50" /> </Button> </FormControl> </PopoverTrigger> <PopoverContent className="w - auto p - 0" align="start" > <Calendar initial_focus /> </PopoverContent> </Popover> <FormMessage /> </FormItem>);
 }/> <FormField <FormItem> <FormLabel > Amount ($) </FormLabel> <FormControl> <Input /> </FormControl> <FormMessage /> </FormItem>) ";
-}/> </div> <Button type="button" variant="outline" on_click={
+}/> </div> <Button type="button" variant="outline" on_click={"
   on_cancel;
 }disabled= {
   is_submitting;
 }> Cancel </Button>) ";
 }<> <Loader2 className="mr - 2 h - 4 w - 4 animate - spin" /> Saving... </>) : ("Add Milestone");
 }</Button> </div> </form> </Form> </div>);
-}'"}
+}'"}"
+}
+;
 }
 ;
             </Button>

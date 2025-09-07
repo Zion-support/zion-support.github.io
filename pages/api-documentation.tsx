@@ -1,9 +1,5 @@
-<<<<<<< HEAD
 
-import React from 'react',
 
-=======
->>>>>>> origin/main
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
 export default function APIDocumentationPage() {
@@ -26,6 +22,9 @@ export default function APIDocumentationPage() {
   );
 
 }
+import React from 'react',
+import Head from 'next/head',
+import Layout from '../components/layout/Layout',
 import React from 'react',;
 import Head from 'next/head',;
 import Layout from '../components/layout/Layout',;

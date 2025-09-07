@@ -1,51 +1,9 @@
-<<<<<<< HEAD
 
+  return (
+    <AppLayout>
+      <section className="py-16 bg-zion-blue">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
 
-import { useState, useEffect } from "react",
-import { useSearchParams } from "react-router-dom",
-import { AppLayout } from "@/layout/AppLayout",
-import { ITServicePricingTable } from "@/components/services/ITServicePricingTable",
-import { GlobalServiceSection } from "@/components/GlobalServiceSection",
-import { QuoteFormSection } from "@/components/QuoteFormSection",
-import { TrustedBySection } from "@/components/TrustedBySection",
-import { CountryPricing, onsiteServicePricing } from "@/data/onsiteServicePricing",
-import { toast } from "@/hooks/use-toast",
-import { PageHero } from "@/components/services/PageSections/PageHero",
-import { CountryTabs } from "@/components/services/PageSections/CountryTabs",
-import { ServiceDetailsSection } from "@/components/services/PageSections/ServiceDetailsSection",
-import { ServiceProcessSteps } from "@/components/services/PageSections/ServiceProcessSteps",
-import { ServiceIncludes } from "@/components/services/PageSections/ServiceIncludes";
-import { EnterpriseCallToAction } from "@/components/services/PageSections/EnterpriseCallToAction";
-export default function ITOnsiteServicesPage() {
-  const [searchParams] = useSearchParams();
-  const [selectedCountry, setSelectedCountry] = useState<CountryPricing | null>(null),
-  const [searchQuery, setSearchQuery] = useState("");
-  // Check for success parameter in URL
-  const success = null;
-
-=======
-import {useState, useEffect} from "react";
-import {useSearchParams} from "react-router-dom";
-import {AppLayout} from "@/layout/AppLayout";
-import {ITServicePricingTable} from "@/components/services/ITServicePricingTable";
-import {GlobalServiceSection} from "@/components/GlobalServiceSection";
-import {QuoteFormSection} from "@/components/QuoteFormSection";
-import {TrustedBySection} from "@/components/TrustedBySection";
-import {CountryPricing, onsiteServicePricing} from "@/data/onsiteServicePricing";
-import {toast} from "@/hooks/use-toast";
-import {PageHero} from "@/components/services/PageSections/PageHero";
-import {CountryTabs} from "@/components/services/PageSections/CountryTabs";
-import {ServiceDetailsSection} from "@/components/services/PageSections/ServiceDetailsSection";
-import {ServiceProcessSteps} from "@/components/services/PageSections/ServiceProcessSteps";
-import {ServiceIncludes} from "@/components/services/PageSections/ServiceIncludes";
-import {EnterpriseCallToAction} from "@/components/services/PageSections/EnterpriseCallToAction";
-export default function ITOnsiteServicesPage() {;
-  const [searchParams] = useSearchParams();
-  const [selectedCountry, setSelectedCountry] = useState<CountryPricing | null>(null);
-  const [searchQuery, setSearchQuery] = useState("");
-  
-  // Check for success parameter in URL
-  const success = searchParams.get("success");
 import { useState, useEffect } from "react",;
 import { useSearchParams } from "react-router-dom",;
 import { AppLayout } from "@/layout/AppLayout",;
@@ -58,73 +16,55 @@ import { toast } from "@/hooks/use-toast",;
 import { PageHero } from "@/components/services/PageSections/PageHero",;
 import { CountryTabs } from "@/components/services/PageSections/CountryTabs",;
 import { ServiceDetailsSection } from "@/components/services/PageSections/ServiceDetailsSection",;
-import { ServiceProcessSteps } from "@/components/services/PageSections/ServiceProcessSteps",import { ServiceIncludes } from "@/components/services/PageSections/ServiceIncludes";
-import { EnterpriseCallToAction } from "@/components/services/PageSections/EnterpriseCallToAction";
-export default function ITOnsiteServicesPage() {
-  const [searchParams] = useSearchParams();
-  const [selectedCountry, setSelectedCountry] = useState<CountryPricing | null>(
-    null,
-  );
+import { ServiceProcessSteps } from "@/components/services/PageSections/ServiceProcessSteps",;
+import { ServiceIncludes } from "@/components/services/PageSections/ServiceIncludes",;
+import { EnterpriseCallToAction } from "@/components/services/PageSections/EnterpriseCallToAction",;
+export default function ITOnsiteServicesPage() {;
+  const [searchParams] = useSearchParams(),;
+  const [selectedCountry, setSelectedCountry] = useState<CountryPricing | null>(null),;
+  const [searchQuery, setSearchQuery] = useState(""),;
+
+  // Check for success parameter in URL;
+  const success = searchParams && searchParams.get("success");
+
+const [searchParams] = useSearchParams();
+  const [selectedCountry, setSelectedCountry] = useState<CountryPricing | null>(null),
   const [searchQuery, setSearchQuery] = useState("");
+  // Check for success parameter in URL;
+  const success = searchParams && searchParams.get("success");
 
-  // Check for success parameter in URL
-  const success = searchParams.get("success");
-
-  // Show success toast if redirected from successful payment
-  useEffect(() => {
-    if (success === "true") {
-      toast({
-        title: "Payment Successful",
-        description:
-          "Your IT onsite service request has been received. Our team will contact you shortly.",
-      });
-    }
-  }, [success]);
-
-  // Popular countries for the featured cards
-  const popularCountries = [
-    "United States",
-    "United Kingdom",
-    "Canada",
-    "Germany",
-    "Japan",
-    "Singapore",
-  ];
-  // Filter countries based on search query
-  const filteredCountries = onsiteServicePricing
-    .filter((country) =>
-      country.country.toLowerCase().includes(searchQuery.toLowerCase()),
-    )
-    .sort((a, b) => {
-      // First, sort by popular status
-  const handleCountrySelect = (country: CountryPricing) => {
-    setSelectedCountry(country)
-    // Scroll to the service details section
-    setTimeout(() => {
-      document.getElementById('service-details')?.scrollIntoView({ behavior: 'smooth' })
-    }, 100)  const handleCountrySelect = (country: CountryPricing) => {
-    (setSelectedCountry(country),
-      // Scroll to the service details section
-      setTimeout(() => {
-        document
-          .getElementById("service-details")
-          ?.scrollIntoView({ behavior: "smooth" });
-      }, 100))
-};
-
-  }
-
-  },
-  
->>>>>>> origin/main
-  return (
-    <AppLayout>
-      <section className="py-16 bg-zion-blue">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+import { useState, useEffect } from "react",;
+import { useSearchParams } from "react-router-dom",;
+import { AppLayout } from "@/layout/AppLayout",;
+import { ITServicePricingTable } from "@/components/services/ITServicePricingTable",;
+import { GlobalServiceSection } from "@/components/GlobalServiceSection",;
+import { QuoteFormSection } from "@/components/QuoteFormSection",;
+import { TrustedBySection } from "@/components/TrustedBySection",;
+import { CountryPricing, onsiteServicePricing } from "@/data/onsiteServicePricing",;
+import { toast } from "@/hooks/use-toast",;
+import { PageHero } from "@/components/services/PageSections/PageHero",;
+import { CountryTabs } from "@/components/services/PageSections/CountryTabs",;
+import { ServiceDetailsSection } from "@/components/services/PageSections/ServiceDetailsSection",;
+import { ServiceProcessSteps } from "@/components/services/PageSections/ServiceProcessSteps",;
+import { ServiceIncludes } from "@/components/services/PageSections/ServiceIncludes",;
+import { EnterpriseCallToAction } from "@/components/services/PageSections/EnterpriseCallToAction",;
+;
+export default function ITOnsiteServicesPage() {;
+  const [searchParams] = useSearchParams(),;
+  const [selectedCountry, setSelectedCountry] = useState<CountryPricing | null>(null),;
+  const [searchQuery, setSearchQuery] = useState(""),;
+  ;
+  // Check for success parameter in URL;
+  const success = searchParams.get("success"),;
+  ;
+  // Check for success parameter in URL;
+  const success = searchParams.get("success"),;
   // Show success toast if redirected from successful payment;
   useEffect(() => {;
     if (success === "true") {;
       toast({;
+        title: "Payment Successful",;
+        description: "Your IT onsite service request has been received. Our team will contact you shortly."});
         title: "Payment Successful",,
   description: "Your IT onsite service request has been received. Our team will contact you shortly."});
     }
@@ -156,6 +96,10 @@ export default function ITOnsiteServicesPage() {
     // Scroll to the service details section;
     setTimeout(() => {;
       document && document.getElementById('service-details')?.scrollIntoView({ behavior: 'smooth' });
+    }, 100);
+  };
+
+  return (
     }, 100)
 };
 import { useState, useEffect } from "react";""
@@ -202,6 +146,13 @@ pr-12325
               filteredCountries={filteredCountries}
               handleCountrySelect={handleCountrySelect}
               searchQuery={searchQuery}
+              setSearchQuery={setSearchQuery}
+            />
+          </div>
+
+            />
+          </div>
+          {/* Service Details Section */}
               setSearchQuery={setSearchQuery}          {/* Service Details Section */}
           <ServiceDetailsSection
             selectedCountry={selectedCountry}
@@ -338,7 +289,6 @@ function ITOnsiteServicesPage() {
 
       <QuoteFormSection />
 
-    
           <ServiceProcessSteps />;
 
           <ServiceIncludes />;
@@ -353,7 +303,6 @@ function ITOnsiteServicesPage() {
 
 
 
-    
   const [selected_country, setSelectedCountry] = useState < CountryPricing | null>(null);"
   const [search_query, setSearchQuery] = useState ("");"
 ;
@@ -437,10 +386,10 @@ if (return 1) {
       <QuoteFormSection />;
     </AppLayout>);
 }
+}
   ),; //Show success toast if redirected from successful payment useEffect ( () => {
   if (success === "true") {
   toast ({
-  
 }
 
 }
@@ -475,6 +424,7 @@ if (return 1) {
 }
 ;
 ;
+}
       // Check condition;
 if (return -1) {
   $2;

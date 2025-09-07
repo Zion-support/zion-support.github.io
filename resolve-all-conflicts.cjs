@@ -1,23 +1,15 @@
-<<<<<<< HEAD
-#!/usr/bin/env node;
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
-// Function to resolve merge conflicts in a file;
+
 function resolveMergeConflicts(filePath) {
   try {
   // TODO: Implement
 }
     if (!fs.existsSync(filePath)) {
 
+
       return false;
 
     const content = fs.readFileSync(filePath, 'utf8');
-    // Check if file has merge conflicts;
-    if (!content.includes(
-        const parts = match.split(
 
-// Function to find all files with merge conflicts;)
 function findFilesWithConflicts() {
   // TODO: Implement
     const result = execSync('git status --porcelain', { encoding: 'utf8' });
@@ -25,18 +17,17 @@ function findFilesWithConflicts() {
       .filter(line => line.includes('UU') || line.includes('AA') || line.includes('DD'))
       .map(line => line.substring(3).trim())
       .filter(file => file.length > 0);
-    
     return files;
+
 
   } catch (error) {
     console.error('Error finding conflicted files:', error.message);
     return [];
 
-// Main resolution process;
+
 function main() {
   console.log('🔍 Finding files with merge conflicts...');
   const conflictedFiles = findConflictedFiles();
-  
   if (conflictedFiles.length === 0) {
     console.log('✅ No merge conflicts found!');
     return;
@@ -73,8 +64,7 @@ function main() {
 
 // Run the resolution;
 main();
-=======
-#!/usr/bin/env node
+
 
 const { execSync } = require('child_process');
 const fs = require('fs');
@@ -95,7 +85,6 @@ try {
   for (const file of conflictedFiles) {
     try {
       console.log(`Resolving conflict for: ${file}`);
-      
       // Check if file exists in our version
       if (fs.existsSync(file)) {
         // Use our version (HEAD)
@@ -106,10 +95,8 @@ try {
         execSync(`git rm "${file}"`, { stdio: 'pipe' });
         console.log(`🗑️ Removed deleted file: ${file}`);
       }
-      
       // Add the resolved file
       execSync(`git add "${file}"`, { stdio: 'pipe' });
-      
     } catch (error) {
       console.log(`⚠️ Could not resolve ${file}: ${error.message}`);
     }
@@ -140,11 +127,10 @@ try {
   // Commit the merge
   console.log('📝 Committing merge resolution...');
   execSync('git commit -m "Resolve merge conflicts: accept cleaned-up version with syntax fixes"', { stdio: 'inherit' });
-  
   console.log('✅ All merge conflicts resolved and committed!');
-  
 } catch (error) {
   console.error('❌ Error resolving conflicts:', error.message);
   process.exit(1);
 }
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
+

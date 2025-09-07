@@ -1,3 +1,8 @@
+Card,
+  CardContent,
+  CardDescription,
+  CardHeader,;
+  CardTitle;
 
 } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
@@ -12,6 +17,23 @@ import { PartnerResources } from '@/components/partners/PartnerResources';
 import { useAuth } from '@/hooks/useAuth';
 import { useRouter } from 'next/router';
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
+import { Button } from "@/components/ui/button","
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card","
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs","
+import { CheckCircle, FileDown, FileText, PieChart, Users } from 'lucide-react''
+import { useState, useEffect } from "react","
+import { useTranslation } from 'react-i18next','
+import Link from 'next/link','
+import { PartnerRegistrationForm } from "@/components/partners/PartnerRegistrationForm","
+import { PartnerReferralLinks } from "@/components/partners/PartnerReferralLinks","
+import { PartnerDashboard } from "@/components/partners/PartnerDashboard","
+import { PartnerLeaderboard } from "@/components/partners/PartnerLeaderboard","
+import { PartnerResources } from "@/components/partners/PartnerResources","
+import { useAuth } from "@/hooks/useAuth","
+import { useRouter } from 'next/router','
+import { logInfo, logErrorToProduction } from '@/utils/productionLogger','
+export default function Partners() {;
+  logInfo('PartnersPage rendering');,
 
 
 
@@ -44,7 +66,9 @@ export default function Partners() {
 origin/cursor/automate-test-improve-and-merge-code-2533
 
 
+
   return (
+    <div className="container max-w-7xl py-10">
       <h1>DEBUG: Partners Page - Authenticated View</h1>
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">
         <div>
@@ -77,6 +101,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </Button>
         </div>
       </div>
+
+      <Tabs value={activeTab} onValueChange={setActiveTab} className="space-y-4">
+        <TabsList className="grid grid-cols-2 md:grid-cols-5 mb-4">
+          <TabsTrigger value="overview">{t('partner.tabs.overview')}</TabsTrigger>
+          <TabsTrigger value="referrals">{t('partner.tabs.referrals')}</TabsTrigger>
+          <TabsTrigger value="earnings">{t('partner.tabs.earnings')}</TabsTrigger>
+          <TabsTrigger value="leaderboard">{t('partner.tabs.leaderboard')}</TabsTrigger>
+          <TabsTrigger value="resources">{t('partner.tabs.resources')}</TabsTrigger>
+        </TabsList>
+        <TabsContent value="overview" className="space-y-4">
+          <PartnerDashboard />
+        </TabsContent>
+        <TabsContent value="referrals" className="space-y-4">
+          <PartnerReferralLinks />
+        </TabsContent>
+        <TabsContent value="earnings" className="space-y-4">
         <TabsContent value="earnings" className="space-y-4">
 
 <Tabs
@@ -123,6 +163,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </CardContent>
           </Card>
         </TabsContent>
+        <TabsContent value="leaderboard" className="space-y-4">
+          <PartnerLeaderboard />
+        </TabsContent>
+        <TabsContent value="resources" className="space-y-4">
         <TabsContent value="resources" className="space-y-4">
 <p className='text-zion-slate-light'>
                 {t('partner.earnings_placeholder')}
@@ -141,6 +185,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </TabsContent>
       </Tabs>
     </div>
+  )
+}
+;
   );
 async function checkHealth () {;
   try {;

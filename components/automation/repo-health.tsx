@@ -1,9 +1,4 @@
-<<<<<<< HEAD
 
-import fs from 'fs',
-=======
-import fs from 'fs';
->>>>>>> origin/main
 import path from 'path';
 import type { GetStaticProps } from 'next';
 interface Report {
@@ -13,20 +8,8 @@ interface Report {
   largestFiles: { file: string;, bytes: number ;}[],
   stalePages: { file: string;, lastCommitAt: string ;}[]
 }
- 
 
-<<<<<<< HEAD
-type Props = any;
 
-=======
-
-export default function RepoHealth({ report }: Props) {
-export default function RepoHealth({ report }: Props) {;
-  if (!report) return <div>No report yet. Check back soon.</div>;
-type Props = any;
-origin/cursor/automate-test-improve-and-merge-code-2533
-type Props = any;
->>>>>>> origin/main
   return (
 
     <div className=\"space-y-6\" />;

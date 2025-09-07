@@ -1,10 +1,5 @@
 
-<<<<<<< HEAD
 
-export type ProjectStatus = any;
-
-    avatar_url?: string
-=======
 export type ProjectStatus =
 export type ProjectStatus = 
 export type ProjectStatus = 
@@ -22,6 +17,8 @@ export type ProjectStatus =;
 export interface Project {
 
 export interface Project {;
+export interface Project {
+  id: string;
 
 export interface Project {  id: string;
   client_id: string;
@@ -45,11 +42,30 @@ export interface Project {  id: string;
 };
   client_profile?: {
     display_name: string;
+    avatar_url?: string;
+  };
+}
+
+export interface ProjectNote {;
+
+export interface ProjectNote {;
+
+    title: string
+    description: string
+  }
+  talent_profile?: {
+    full_name: string;
+    professional_title?: string
+    profile_picture_url?: string
+  }
+  client_profile?: {
+    display_name: string
     avatar_url?: string
 };
 }
 
 export interface ProjectNote {;
+export interface ProjectNote {
 
 export interface ProjectNote {export interface ProjectNote {
   id: string;
@@ -58,7 +74,7 @@ export interface ProjectNote {export interface ProjectNote {
   content: string;
   created_at: string;
   created_by_profile?: {
->>>>>>> origin/main
+
   }
 }
 export type ProjectStatus =
@@ -93,6 +109,8 @@ export interface Project {
   client_profile?: {
     display_name: string;
     avatar_url?: string;
+  };
+}
 
 
 

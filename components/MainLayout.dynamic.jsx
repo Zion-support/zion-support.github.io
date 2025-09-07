@@ -13,6 +13,8 @@ const MainLayout.dynamic = () => ;
     </div>
   );
 }
+;
+
 
 pr-12243
 export default MainLayout.dynamic;

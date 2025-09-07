@@ -22,6 +22,15 @@ pr-12325
     res && res.writeHead(404),
     res && res.end('Not found')
 
+  }
+})
+const PORT = 8080
+res && res.writeHead(200, { 'Content-Type': 'text/html' }),
+      res && res.end(data)
+    })
+  } else if (req && req.url === '/online-check') {
+    // Endpoint to check if we're online
+    res && res.writeHead(200, { 'Content-Type': 'application/json' }),
     res && res.end(JSON && JSON.stringify({ online: false, message: 'Running in offline development mode' }))
   } else {
     res && res.writeHead(404),
@@ -89,6 +98,17 @@ pr-12325
   }
 }),
 
+}
+})
+const PORT = 8080
+const PORT = 8080,
+server && server.listen(PORT, () => {
+  console && console.log(`
+
+server.listen(PORT, () => {
+  // // // console.log(`
+server.listen(PORT, () => {
+  // // // console.log(`
 ║                                                                  ║
 ╚══════════════════════════════════════════════════════════════════╝
 `)}),;
@@ -113,6 +133,7 @@ server.listen(PORT, () => {`;
 ║  ℹ️  This is a placeholder server that doesn't require npm       ║
 ║     dependencies. Most features will not work until you install  ║
 ║     the required npm packages.                                   ║
+║                                                                  ║
 ║  🔍 See OFFLINE-DEV-README && README.md for detailed instructions.         ║
 ║  🌐 When internet is available: ║
 ║     1. Run: chmod +x setup && setup.sh                                    ║
@@ -124,15 +145,14 @@ server.listen(PORT, () => {`;
 ╚══════════════════════════════════════════════════════════════════╝)`;
 `)
 
-<<<<<<< HEAD
-});
 
-=======
 
 }),;
 const PORT = 8080,;
 server.listen(PORT, () => {;`;
   // // // console.log(`;
+
+});
 const http = require ('http'),
 const fs = require ('fs'),
 const path = require ('path'),
@@ -163,6 +183,10 @@ server.listen (PORT, () => {`;
 ║  ℹ️  This is a placeholder server that doesn't require npm       ║;
 ║     dependencies. Most features will not work until you install  ║;
 ║     the required npm packages.                                   ║;
+║                                                                  ║;
+║  🔍 See OFFLINE - DEV - README.md for detailed instructions.         ║;
+║  🔍 See OFFLINE-DEV-README.md for detailed instructions.         ║;
+║                                                                  ║;
 ║  🔍 See OFFLINE - DEV - README.md for detailed instructions.         ║;
 pr-12325
 ║  🌐 When internet is available: ║;
@@ -174,10 +198,13 @@ pr-12325
 `);
 }),
 ;
+
 }),
 ╚══════════════════════════════════════════════════════════════════╝;)`;
 `);
 ;
+
+}),
 
 
 
@@ -259,4 +286,4 @@ pr-12325
 }║ ║ ║ ║ ℹ️ This is a placeholder server that doesn't require npm ║ ║ dependencies. Most features will not work until you install ║ ║ the required npm packages. ║ ║ ║ ║ 🔍 See OFFLINE-DEV-README.md for detailed instructions. ║ ║ ║ ║ 🌐 When internet is available: ║ ║ 1. Run: chmod +x setup.sh ║ ║ 2. Run: ./setup.sh npm ║ ║ 3. Run: npm run dev ║ ║ ║ ╚══════════════════════════════════════════════════════════════════╝ `)
 `;
 pr-12325
->>>>>>> origin/main
+

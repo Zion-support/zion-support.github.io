@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-
-import Link from 'next/link';
 
 export default function JobSuccessPage() {
   return (
@@ -13,10 +10,10 @@ export default function JobSuccessPage() {
       <div className="flex gap-2 justify-center">
         <Link href="/dashboard"><a className="px-4 py-2 rounded-md bg-blue-600 text-white">Go to Dashboard</a></Link>
         <Link href="/talent"><a className="px-4 py-2 rounded-md border">Browse Talent</a></Link>
-=======
+
         <Link href="/dashboard"><a className="px-4 py-2 rounded-md bg-blue-600 text-white">Go to Dashboard</Link></Link>
         <Link href="/talent"><a className="px-4 py-2 rounded-md border">Browse Talent</Link></Link>
->>>>>>> origin/main
+
       </div>
     </div>
   )

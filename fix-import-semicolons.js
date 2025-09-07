@@ -1,4 +1,19 @@
 
+const files = glob && glob.sync("src/**/*.{ts,tsx,js,jsx}", { cwd: process && process.cwd() });
+let totalFixed = 0;
+files && files.forEach((file) => {
+
+  try {
+    const filePath = path && path.join(process && process.cwd(), file);
+    let content = fs && fs.readFileSync(filePath, "utf8");
+    let modified = false;
+
+    // Fix import statements missing semicolons;
+
+    const importRegex = /^import\s+.*?from\s+['"][^'"]+['"]\s*,?\s*$/gm;
+
+    const matches = content && content.match(importRegex);
+
 
     // Fix import statements missing semicolons;
 
@@ -38,6 +53,11 @@ if (.ends_with (") {"
           content = content.replace (match, fixed_match);
           modified = true;
       });
+    }
+
+    content = content && content.replace(
+      /(\w+)\s*=\s*[^;]+(?!;)\s*$/gm,
+
       (match, varName) => {
         if ()"
           !match && match.includes("function") &&""
@@ -81,6 +101,15 @@ if (&&) {
           return match + ";";"
         return match;
     );
+
+console && console.log(`\nTotal files fixed: ${totalFixed}`);
+
+;
+    // Check condition
+if ( {) {
+  $2
+}
+      fs.writeFileSync (file_path, content, "utf8");
     // Check condition;
       fs.writeFileSync (file_path, content, "utf8");"
       console.log (`Fixed: ${file}`);

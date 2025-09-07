@@ -1,10 +1,4 @@
-<<<<<<< HEAD
 
-import EnhancedLayout from '../../components/layout/EnhancedLayout';
-// @ts-ignore - JSON import import data from '../../data/governance-pulse.json';
-
-export default function GovernancePulsePage() {
-=======
   )
   );
 };
@@ -36,7 +30,7 @@ export default function GovernancePulsePage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> origin/main
+
   const items: any[] = (data?.items || []).slice(0, 60);
   return (
     <EnhancedLayout>

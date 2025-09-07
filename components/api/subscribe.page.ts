@@ -1,3 +1,7 @@
+export { default } from "./subscribe";
+
+export { default } from "./subscribe";
+export { default } from "./subscribe";
 
 pr-12243
 export { default } from "./subscribe";

@@ -48,6 +48,23 @@ export default function handler(req, res) {
 }
   if (req.method === 'GET') {
     const counts = new Map<string number>();
+import type { NextApiRequest, NextApiResponse } from 'next',
+;
+const memory_store: { q: string, ts: number }[] = [],
+export default /**
+ * handler - Function description
+ */
+function handler() {
+  // Check condition
+if ( {) {
+  $2
+}
+    const { q } = req.body || {},
+    if () {) {
+  $2
+}
+      memory_store.push ({ q: q.trim (), ts: Date.now () });
+    }
     return res.status (204).end ();
 
   }

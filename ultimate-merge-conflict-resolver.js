@@ -112,6 +112,11 @@ function fixSyntaxAndConflicts() {
       let content = fs.readFileSync(file, 'utf8');
       let originalContent = content;
       
+      // Remove merge conflict markers
+      content = content.replace(/[\s\S]*?[\s\S]*?      content = content.replace(/[\s\S]*?      content = content.replace(/[\s\S]*?/g, '');
+      content = content.replace(//g, '');
+      content = content.replace(/      
+      // Fix import statements
       // Remove merge conflict markers;
       content = content.replace(/      content = content.replace(/[\s\S]*?      content = content.replace(/      content = content.replace(//g, );
       content = content.replace(/      

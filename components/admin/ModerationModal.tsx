@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-import React, { useState } from 'react';
-
-export type ModerationModalProps = any;
-
-=======
 
 export type ModerationModalProps = {
   flag: any | null;
@@ -55,20 +49,16 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false ;};
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true ;};
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary: ';, error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -377,6 +367,7 @@ pr-12243
   );
 
 
+);
   );
 
 export type ModerationModalProps = {;
@@ -403,7 +394,7 @@ export default function ModerationModal({
   if (!flag) return null;
 
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/main
+
   return (
     <div className='fixed inset-0 z-50 flex items-center justify-center bg-black/50'>
       <div className='bg-white dark:bg-black w-full max-w-2xl rounded shadow-lg'>
@@ -511,6 +502,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </div>
 );
 }
+);
   );
 }
 origin/cursor/automate-test-improve-and-merge-code-2533

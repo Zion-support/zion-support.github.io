@@ -1,3 +1,23 @@
+
+"use client",
+import Link from './next / link';,
+import { ReactNode  } from './react';,
+interface CTAButtonProps {
+  href: string,
+  variant?: "primary" | "secondary" | "outline",
+  size?: "small" | "medium" | "large",
+  children: ReactNode,
+  class_name?: string,
+  on_click?: () => void;
+"use client";
+import Link from "next/link";
+import { ReactNode } from "react";
+interface CTAButtonProps {href: string;
+  variant?: "primary" | "secondary" | "outline";
+  size?: "small" | "medium" | "large";
+  children: ReactNode;
+  className?: string;
+  onClick?: () => void;
 }
 export /**
  * CTAButton - Function description
@@ -14,6 +34,12 @@ function CTAButton() {
     medium: "px - 6 py - 3 text - base",
     large: "px - 8 py - 4 text - lg";
   }
+  const classes = `${base_classes} ${variant_classes[variant]} ${size_classes[size]} ${class_name}`;
+  return (
+
+    <Link;
+      href={href}
+
 "use client",;
 import Link from "next/link",;
 import { ReactNode } from "react",;
@@ -104,6 +130,7 @@ pr-12325
   return (;
     <Link;
       href={href} ;
+
       className={classes}
       on_click={on_click}
       role="button";
@@ -111,6 +138,15 @@ pr-12325
     >;
       {children}
     </Link>);
+}
+      className={classes}
+      onClick={onClick}
+      role="button";
+      tabIndex={0}
+    >;
+      {children}
+    </Link>;
+  );
 }
       on_click={on_click}"
       role="button";"

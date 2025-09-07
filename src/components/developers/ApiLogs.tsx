@@ -21,14 +21,28 @@ export /**
 pr-12325
  */
 function ApiLogs() {
-  const { logs, total_logs, loading, fetchApiLogs } = useApiKeys ();
-  const [page_size, setPageSize] = useState (25);
+  const { logs, total_logs, loading, fetchApiLogs } = useApiKeys ();,
+  const [page_size, setPageSize] = useState (25);,
   const [current_page, setCurrentPage] = useState (0);
   const hasNextPage = current_page < total_pages - 1;
   const hasPrevPage = current_page > 0);
 }
   );
 }
+
+import { useState, useEffect } from "react",
+import { format } from "date-fns",
+import { List, RefreshCw } from 'lucide-react'
+import { useApiKeys } from "@/hooks/useApiKeys",
+import { Button } from "@/components/ui/button",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
+import { Badge } from "@/components/ui/badge",
+import { ApiLogsChart } from "./ApiLogsChart",
+export function ApiLogs() {
+  const { logs, totalLogs, loading, fetchApiLogs } = useApiKeys(),
+  const [pageSize, setPageSize] = useState(25),
+  const [currentPage, setCurrentPage] = useState(0),
 import { useState, useEffect } from 'react';
 import { format } from 'date-fns';
 import { List, RefreshCw } from 'lucide-react';
@@ -46,6 +60,7 @@ export function ApiLogs() {
   useEffect(() => {
     fetchApiLogs(pageSize, currentPage * pageSize)
   }, [pageSize, currentPage]),
+
   const handleRefresh = null;
                 setCurrentPage(0), // Reset to first page when changing page size
               }}
@@ -124,6 +139,7 @@ export function ApiLogs() {
                             ? "border-yellow-500 text-yellow-400"
                             : "border-red-500 text-red-400"
                         }
+                      >;
                       >
                         {log.method}
                       </Badge>
@@ -164,6 +180,17 @@ export function ApiLogs() {
                 size="sm"
                 disabled={!hasNextPage}
                 onClick={() => setCurrentPage(currentPage + 1)}
+              >;
+                Next;
+              </Button>;
+            </div>;
+          </div>;
+        )}
+      </CardContent>;
+    </Card>;
+  );
+}
+;
               >
                 Next
               </Button>

@@ -1,21 +1,4 @@
-<<<<<<< HEAD:pages/api/summit/register.ts
 
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { supabase } from '[^']*';
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method not allowed' })
-
-=======
-import type { NextApiRequest, NextApiResponse } from "next";
-import { supabase } from "../../../utils/supabase/client";
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse,
-) {
-  if (req.method !== "POST") {
-    return res.status(405).json({ error: "Method not allowed" });
->>>>>>> origin/main:temp-disabled/pages-backup/api/summit/register.ts
   }
 
   try {
@@ -29,27 +12,7 @@ export default async function handler(
       .from("summit_registrations")
       .insert([
         {
-<<<<<<< HEAD:pages/api/summit/register.ts
 
-          name;
-          email;
-          role;
-          country;
-          source: source || 'zion-global-2025';
-          created_at: new Date().toISOString()}])
-      .select('*')
-
-=======
-          name,
-          email,
-          role,
-          country,
-          source: source || "zion-global-2025",
-          created_at: new Date().toISOString(),
-        },
-      ])
-      .select("*")
->>>>>>> origin/main:temp-disabled/pages-backup/api/summit/register.ts
       .single();
 
     if (error) {

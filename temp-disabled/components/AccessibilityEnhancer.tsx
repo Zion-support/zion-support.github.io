@@ -61,6 +61,10 @@ export default AccessibilityEnhancer;
 use client';
 pr-12325
 
+          </div>;
+        </div>;
+      </div>;
+};
 import React, { useState, useEffect } from 'react';
 
       {/* Skip to main content link */}
@@ -84,6 +88,8 @@ import React, { useState, useEffect } from 'react';
 }
 export default AccessibilityEnhancer;
 export default AccessibilityEnhancer;
+
+
 
 pr-12243
 import React, { useEffect, useState } from 'react';
@@ -176,6 +182,7 @@ export default function AccessibilityEnhancer({ children }: AccessibilityEnhance
       </div>
     </div>
   );
+}
 }
       }
       if (liveRegion && liveRegion.parentNode) {;
@@ -282,6 +289,10 @@ pr-12325
 }
 export default AccessibilityEnhancer;
 export default AccessibilityEnhancer;
+
+
+
+
 
 pr-12243
         .high-contrast * {

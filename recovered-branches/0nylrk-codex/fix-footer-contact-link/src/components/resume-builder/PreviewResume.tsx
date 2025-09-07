@@ -16,47 +16,14 @@ pr-12325
   CertificationsSection,
 } from "./preview";
 
-<<<<<<< HEAD
 
-import { Resume } from '@/types/resume';
-import { PreviewHeader;
-  ResumeBasicInfoSection;
-  WorkExperienceSection;
-  EducationSection;
-  SkillsSection;
-  CertificationsSection
- } from './preview';
-
-=======
-import {Resume} from '@/types/resume';
-import {PreviewHeader, ResumeBasicInfoSection, WorkExperienceSection, EducationSection, SkillsSection, CertificationsSection} from './preview';
-
-import { Resume } from '@/types/resume',;
-import {;
-  PreviewHeader,;
-  ResumeBasicInfoSection,;
-  WorkExperienceSection,;
-  EducationSection,;
-  SkillsSection,;
-  CertificationsSection;
-} from './preview',;
-interface PreviewResumeProps {;
-  resume: Resume;
-  onBack: () => void;import { Resume } from "@/types/resume";
-import {
-  CertificationsSection,"
-} from "./preview";"
 interface PreviewResumeProps {
-  // TODO: Implement
-}
-  resume: Resume;,
+  resume: Resume;
   onBack: () => void;
 }
-"
-import { Resume } from "@/types/resume";"
+
+import { Resume } from "@/types/resume";
 import {
-  // TODO: Implement
-}
   PreviewHeader,
   ResumeBasicInfoSection,
   WorkExperienceSection,
@@ -65,9 +32,6 @@ import {
   CertificationsSection,
 } from "./preview";
 
->>>>>>> origin/main
-interface PreviewResumeProps {
-  resume: Resume;
   CertificationsSection,"
 } from "./preview";"
 interface PreviewResumeProps {
@@ -79,6 +43,7 @@ interface PreviewResumeProps {
 
 }
 
+export function PreviewResume({ resume, onBack }: PreviewResumeProps) {
   return (
     <div className="space-y-6">
       <PreviewHeader resume={resume} onBack={onBack} />
@@ -92,6 +57,10 @@ interface PreviewResumeProps {
         <CertificationsSection certifications={resume.certifications} />
       </div>
     </div>
+  );
+}
+
+  );
 }  );
 }
 
@@ -110,6 +79,7 @@ interface PreviewResumeProps {
 }
 ;
 ;
+}
   CertificationsSection,"
 } from "./preview";"
 interface PreviewResumeProps {

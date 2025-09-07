@@ -1,12 +1,4 @@
-<<<<<<< HEAD
 
-import React from 'react';
-export type EmptyStateProps = any;
-export default function EmptyState({ emoji = '✨', title, message, action }: EmptyStateProps) {
-
-=======
-const UserEngagementSystem = () => {
->>>>>>> origin/main
   return (
     <div className="bg-white rounded-lg shadow-md p-6">
       <h3 className="text-lg font-semibold mb-4">User Engagement</h3>

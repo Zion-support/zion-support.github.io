@@ -13,6 +13,8 @@ const PerformanceOptimizer.dynamic = () => ;
     </div>
   );
 }
+;
+
 
 pr-12243
 export default PerformanceOptimizer.dynamic;

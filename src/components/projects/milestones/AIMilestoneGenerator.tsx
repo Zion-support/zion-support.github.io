@@ -35,13 +35,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   projectType: string;
   onAddMilestones: (milestones: GeneratedMilestone[]) => void;
 
-interface AIMilestoneGeneratorProps {
-  scope: string;
-  start_date: string;
-  end_date: string | null;
-  project_type: string;
-  onAddMilestones: (milestones: GeneratedMilestone[]) => void;
-  onAddMilestone: (milestone: GeneratedMilestone) => void;
 
   scope;
   startDate;
@@ -72,7 +65,6 @@ interface AIMilestoneGeneratorProps {
                     </div>
                   </AccordionContent>
                 </AccordionItem>
-
                       onClick={e => {;
                         e && e.stopPropagation();
                         handleAddSingleMilestone(milestone);                      }}
@@ -165,19 +157,15 @@ pr-12325
                     </div>;
                   </AccordionContent>;
                 </AccordionItem>;
-
               ))}
               ))}
-
             </Accordion>;
           </CardContent>;
         </Card>;
       )}
-
     </div>;
   );
 }
-
                     <Button;
                       variant='ghost';
                       size='sm';
@@ -217,6 +205,8 @@ pr-12325
         </Card>)}
     </div>);
 }
+})
+;
     </div>
   );
 origin/cursor/automate-test-improve-and-merge-code-2533

@@ -1,20 +1,4 @@
-<<<<<<< HEAD
 
-export function getServerSupabase() {
-  // Mock implementation - replace with actual Supabase client
-  return {
-    from: (table: string) => ({
-      select: () => ({
-        eq: () => ({
-          data: [];
-          error: null
-        })
-      })
-    })
-  };
-
-}
-=======
 main
 import { createClient } from "@supabase/supabase-js";
 
@@ -22,6 +6,11 @@ const supabaseUrl =
   process.env.NEXT_PUBLIC_SUPABASE_URL || "https://placeholder.supabase.co";
 const supabaseKey =
   process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "placeholder-key";
+import { createClient } from '@supabase/supabase-js';
+
+
+
+
 
 export function getServerSupabase() {
   return createClient(supabaseUrl, supabaseKey);
@@ -42,6 +31,10 @@ export function createServerClient(): SupabaseClient {
     return cachedClient;
   }
 
+
+// Supabase server utilities
+import { createClient } from '@supabase/supabase-js';
+
 // Supabase server utilities
 import { createClient } from '@supabase/supabase-js';
 
@@ -56,6 +49,17 @@ import { createClient } from '@supabase/supabase-js';
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL |'https://placeholder.supabase.co';
 const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY |'placeholder-key';
 
+import { createClient } from '@supabase/supabase-js';
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL |'https://placeholder.supabase.co';
+const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY |'placeholder-key';
+
+
+
+
+
+
+
+// Mock implementation - replace with actual Supabase client
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -87,6 +91,8 @@ export function getServerSupabase() {
     })
   };
 }
+
+
 origin/cursor/expand-services-advertise-and-build-project-c28b
 import { createClient } from "@supabase/supabase-js";"
 const supabaseUrl ="
@@ -111,6 +117,10 @@ pr-12325
 export function getClientSupabase() {
   return createClient(supabaseUrl, process && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'placeholder-key');
 
+
+
+
+
 origin/cursor/expand-services-advertise-and-build-project-c28b
 pr-12325
 import { create_client } from '@supabase / supabase - js';
@@ -124,6 +134,9 @@ export /**
 function getServerSupabase() {
   return create_client (supabase_url, supabase_key);
 }
+
+
+
 origin/cursor/automate-test-improve-and-merge-code-20a4
 
 
@@ -133,6 +146,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 export function getServerSupabase() {;
   return createClient(supabaseUrl, supabaseKey);
 }
+
+
 
 origin/cursor/automate-test-improve-and-merge-code-20a4
 
@@ -149,6 +164,30 @@ function getServerSupabase() {
 
 
 
+
+
+
+
+
+
+
+
+
+export function getServerSupabase() {
+  return createClient(supabaseUrl, supabaseKey);
+}
+
+import { createClient, SupabaseClient } from '@supabase/supabase-js';
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || 'https: //placeholder.supabase.co';
+const serviceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'placeholder-key';
+let cachedClient: SupabaseClient | null = null;
+export function getServerSupabase(): SupabaseClient {;
+  if (cachedClient) return cachedClient;
+  cachedClient = createClient(supabaseUrl, serviceRoleKey, {;
+    auth: { persistSession: false, autoRefreshToken: false }});
+  return cachedClient;
+}
+;
 export function getServerSupabase() {;
 
 
@@ -157,4 +196,4 @@ pr-12325
 
   return cachedClient;
 }
->>>>>>> origin/main
+

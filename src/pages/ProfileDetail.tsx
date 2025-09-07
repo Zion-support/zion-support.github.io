@@ -1,4 +1,5 @@
 
+
 export default function ProfileDetail() {
   // useParams is typed as `any` in this environment due to missing type
   // definitions, so avoid passing a type argument to prevent TS2347.
@@ -24,6 +25,38 @@ export default function ProfileDetail() {
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 text-zion-slate-light hover:text-zion-cyan"
                     aria-label="GitHub"
+                    title="GitHub"
+                  >
+                    <Github className="h-4 w-4" />
+                    GitHub
+                  </Link>
+                )}
+                {profileData.twitter_url && (;
+                  <a;
+                    href={profileData.twitter_url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 text-zion-slate-light hover:text-zion-cyan"
+                    aria-label="Twitter"
+                    title="Twitter"
+                  >
+                    <Twitter className="h-4 w-4" />
+                    Twitter
+                  </Link>
+                )}
+                {profileData.linkedin_url && (;
+                  <a;
+                    href={profileData.linkedin_url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 text-zion-slate-light hover:text-zion-cyan"
+                    aria-label="LinkedIn"
+                    title="LinkedIn"
+                  >
+                    <Linkedin className="h-4 w-4" />
+                    LinkedIn
+                  </Link>
+                )}
 
                     target="_blank"
                     className="flex items-center gap-2 text-zion-slate-light hover:text-zion-cyan"
@@ -37,6 +70,10 @@ export default function ProfileDetail() {
           </div>;
         </div>;
       </div>;
+    </>;
+  );
+}
+;
 );
 }
 }, [profileId]);

@@ -30,8 +30,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 pr-12325
   link: string;
 
-<<<<<<< HEAD
-=======
 
   {
     id: 'quantum-machine-learning'
@@ -1060,7 +1058,7 @@ pr-12325
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/main
+
   tags: string[]
 }
 
@@ -1307,73 +1305,13 @@ export const emergingTech2027Services: Service[] = [
     ];
     targetAudience: [
       'Government agenciesResearch institutionsEnvironmental organizationsInsurance companiesEnergy companies'
-<<<<<<< HEAD
 
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
     ];
     marketSize: '$17 && 17.6B by 2027';
     competitiveAdvantage: 'Only quantum climate modeling platform with real-time predictions';
     implementationTime: '7-9 weeks';
     roi: '800% within 18 months';
 
-    link: 'https://ziontechgroup && ziontechgroup.com/services/quantum-climate-modeling',
-
-    link: 'https://ziontechgroup.com/services/quantum-climate-modeling';
-origin/cursor/automate-test-improve-and-merge-code-2533
-    tags: ['Climate ModelingQuantum ComputingEnvironmentalWeatherResearch']
-      'Disaster preparedness',']
-
-      'Government agencies',
-      'Environmental organizations',
-    ];
-    marketSize: '$17 && 17.6B by 2027';',
-  competitiveAdvantage: 'Only quantum climate modeling platform with real-time predictions';
-    implementationTime: '7-9 weeks';',
-  roi: '800% within 18 months';
-pr-12325
-    market_size: '$17.6B by 2027',
-    competitive_advantage:;
-      'Only quantum climate modeling platform with real - time predictions',
-    implementation_time: '7 - 9 weeks',
-    roi: '800% within 18 months',
-    link: 'https://ziontechgroup.com / services / quantum - climate - modeling',
-    tags: [;
-      'Climate Modeling',
-      'Quantum Computing',
-      'Environmental',
-      'Weather',
-      'Research',
-    ],
-  },
-];      'Government agencies_research institutions_environmental organizations_insurance companies_energy companies';
-origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/main
-    ];
-    marketSize: '$17 && 17.6B by 2027';
-    competitiveAdvantage: 'Only quantum climate modeling platform with real-time predictions';
-    implementationTime: '7-9 weeks';
-    roi: '800% within 18 months';
-<<<<<<< HEAD
-
-    link: 'https://ziontechgroup.com/services/quantum-climate-modeling';
-
-    tags: ['Climate ModelingQuantum ComputingEnvironmentalWeatherResearch']
-=======
-    link: 'https://ziontechgroup.com / services / quantum - climate - modeling',
-    tags: ['Climate ModelingQuantum ComputingEnvironmentalWeatherResearch'];
-  }
-
-
-export interface Service {;
-
-  }
-
-];
-origin/cursor/integrate-build-improve-and-re-verify-2156
-;
-origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/main
   }
 ];
       'Research',']

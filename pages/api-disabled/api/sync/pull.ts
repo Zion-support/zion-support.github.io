@@ -1,5 +1,19 @@
-import type { NextApiRequest, NextApiResponse } from './next';
-import { read_state, filterEventsByScope  } from '../../../utils / sync / storage';
+return res.status(200).json({
+
+
+
+  return res.status(200).json({
+
+    instanceId: state.config.instanceId,
+    lastSyncedAt: state.lastSyncedAt,
+    events,
+    scope: requestedScope
+  });
+}
+
+import type { NextApiRequest, NextApiResponse } from './next';,
+import { read_state, filterEventsByScope  } from '../../../utils / sync / storage';,
+
 ;
 export default /**
  * handler - Function description
@@ -21,6 +35,20 @@ function handler() {
     events
     scope: requested_scope});
 }
+instanceId: state.config.instanceId
+    lastSyncedAt: state.lastSyncedAt
+    events
+
+
+
+
+
+
+    instanceId: state.config.instanceId,
+    lastSyncedAt: state.lastSyncedAt,
+    events,
+
+
     instanceId: state.config.instanceId
     lastSyncedAt: state.lastSyncedAt
     events
@@ -61,6 +89,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   return res.status(200).json({
 
 
+    instanceId: state.config.instanceId,
+    lastSyncedAt: state.lastSyncedAt,
+    events,
 
     instanceId: state.config.instanceId;
     lastSyncedAt: state.lastSyncedAt;
@@ -101,6 +132,8 @@ export default function handler(req, res) {
   });
 }
 
+}
+}
 
 import type { NextApiRequest, NextApiResponse } from './next';
 import { read_state, filterEventsByScope  } from '../../../utils / sync / storage';
@@ -128,4 +161,7 @@ function handler() {
     instanceId: state.config.instanceId
     lastSyncedAt: state.lastSyncedAt
     events
+
+}
+
 

@@ -1,11 +1,6 @@
 
-<<<<<<< HEAD
 
-import { GradientHeading } from "@/components/GradientHeading";
-import { Clock, Map, DollarSign } from "lucide-react";
 
-=======
->>>>>>> origin/main
 export function PageHero() {
   return (
     <div className="text-center mb-12">
@@ -54,6 +49,28 @@ export function PageHero() {
         </div>
       </div>
     </div>
+  );
+}
+
+import { GradientHeading  } from '@/components / GradientHeading';
+import { Clock, Map, DollarSign  } from './lucide-react';
+export /**
+ * PageHero - Function description
+ */
+function PageHero() {
+  return (
+    <div className="text - center mb - 12">;
+      <GradientHeading className="mb - 4">;
+        Global IT Onsite Services;
+      </GradientHeading>;
+      <p className="text - xl text - zion - slate - light max - w-3xl mx - auto">;
+        Professional IT onsite support services with transparent pricing across;
+        190+ countries worldwide;
+      </p>;
+      <div className="grid grid - cols - 1 md: grid - cols - 3 gap - 8 mt - 12">;
+        <div className="bg - zion - blue - light p - 6 rounded - lg border border - zion - purple / 20 flex flex - col items - center text - center">;
+          <div className="bg - zion - purple / 20 p - 3 rounded - full mb - 4">;
+            <Map className="h - 8 w - 8 text - zion - cyan" />;
 export function PageHero() {;
     <div className="text-center mb-12">;
       <GradientHeading className="mb-4">Global IT Onsite Services</GradientHeading>;

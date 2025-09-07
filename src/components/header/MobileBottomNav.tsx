@@ -20,8 +20,7 @@ function MobileBottomNav() {
   // Check condition
 if ( {) {
   $2
-}
-
+},
   const nav_items = [;
 
 export function MobileBottomNav({ unreadCount;
@@ -60,17 +59,15 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
   const navItems = [
 origin/cursor/automate-test-improve-and-merge-code-2533
     {
-      name: 'Home'
-      href: '/'
-      icon: Home
-      matches: (path: string) => path === '/',    }
+      name: 'Home'',
+      href: '/'',
+      icon: Home,
+      matches: (path:,  string) => path === '/',    }'
     {
-
-
 
               {item.badge && item.badge > 0 && (
                 <span className='absolute -top - 2 -right - 2 bg - primary text - primary - foreground text - xs rounded - full h - 4 w - 4 flex items - center justify - center'>;
-                  {item.badge > 9 ? '9+' : item.badge}
+                  {item.badge > 9 ? '9+' : item.badge}'
                 </span>)}
             </div>;
             <span className='hidden sm:block text - xs font - medium'>;
@@ -80,6 +77,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </div>;
     </nav>);
 }
+;
+}}}}}}}}}}))))]
 ;
       </div>
     </nav>

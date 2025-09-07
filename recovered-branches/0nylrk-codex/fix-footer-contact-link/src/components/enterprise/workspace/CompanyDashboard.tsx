@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-
 
 import React from "react",
 import { WorkspaceHeader } from "./WorkspaceHeader",
@@ -7,7 +5,6 @@ import { SharedInbox } from "./SharedInbox",
 import { TeamStats } from "./TeamStats",
 import { QuickActions } from "./QuickActions",
 
-=======
 
 
 import React from "react",;
@@ -15,7 +12,7 @@ import { WorkspaceHeader } from "./WorkspaceHeader",;
 import { SharedInbox } from "./SharedInbox",;
 import { TeamStats } from "./TeamStats",;
 import { QuickActions } from "./QuickActions",;
->>>>>>> origin/main
+
 import { RecentActivity } from "./RecentActivity";
 import { TalentPool } from "./TalentPool";
 import { RecentActivity } from "./RecentActivity",;
@@ -42,6 +39,21 @@ export interface Company {
   logoUrl?: string,
   theme?: {
 
+primaryColor: string;
+    backgroundColor: string;
+
+    textColor: string;
+  }
+
+  plan: string;
+  teamSize: number;
+  teamLimit: number;
+  billingCycle: string;
+  workspaceUrl: string
+}
+interface CompanyDashboardProps {
+  company: Company;
+}
 
     primaryColor: string,
 
@@ -69,41 +81,46 @@ export interface Company {;
     primaryColor: string;
     backgroundColor: string;
 
-<<<<<<< HEAD
-    textColor: string
-  },
 
-  plan: string;
-  teamSize: number;
-  teamLimit: number;
-  billingCycle: string;
-
-  workspaceUrl: string
-
-=======
     textColor: string;  teamLimit: number;
   billingCycle: string;
   workspaceUrl: string
->>>>>>> origin/main
+
 }
 
+  company: Company;
+}
+
+;
+interface CompanyDashboardProps {;
 interface CompanyDashboardProps {
 ;
 interface CompanyDashboardProps {;
 
   company: Company;
 }
+
+export function CompanyDashboard({ company }: CompanyDashboardProps) {
+  return (
+    <div className="container mx-auto max-w-7xl py-8 px-4 md:px-6">
+      <WorkspaceHeader company={company} />
+
+
       <div className="mt-8 grid grid-cols-1 lg: grid-cols-3 gap-6">
         <div className="lg:col-span-2 space-y-6">
           <QuickActions />
           <RecentActivity />
           <TalentPool />
         </div>
+
+
+        <div className="space-y-6">
           <TeamStats />
           <SharedInbox />
         </div>
       </div>
 
+</div>
   );
 }
   )
@@ -111,6 +128,7 @@ interface CompanyDashboardProps {;
 export function CompanyDashboard({ company }: CompanyDashboardProps) {;
   return (;
 
+interface CompanyDashboardProps {;
   company: Company;
 }
 
@@ -121,6 +139,7 @@ export function CompanyDashboard(): any ({ company }: CompanyDashboardProps) {;
 
       <div className="mt-8 grid grid-cols-1 lg: grid-cols-3 gap-6">;
         <div className="lg:col-span-2 space-y-6">;
+import React from './react';
 import { WorkspaceHeader  } from './WorkspaceHeader';
 import { SharedInbox  } from './SharedInbox';
 import { TeamStats  } from './TeamStats';
@@ -152,6 +171,40 @@ function CompanyDashboard() {
   return (
     <div className="container mx - auto max - w-7xl py - 8 px - 4 md:px-6">;
       <WorkspaceHeader company={company} />;
+      <div className="mt - 8 grid grid - cols - 1 lg: grid - cols - 3 gap - 6">;
+        <div className="lg:col - span - 2 space - y-6">;
+
+          <QuickActions />;
+          <RecentActivity />;
+          <TalentPool />;
+        </div>;
+
+        <div className="space - y-6">;
+
+<div className="space - y-6">;
+          <TeamStats />;
+          <SharedInbox />;
+        </div>;
+      </div>;
+
+    </div>
+
+    </div>;
+  );
+</div>);
+}
+    </div>);
+}
+    </div>);
+}
+
+import React from "react",;
+import { WorkspaceHeader } from "./WorkspaceHeader",;
+import { SharedInbox } from "./SharedInbox",;
+import { TeamStats } from "./TeamStats",;
+import { QuickActions } from "./QuickActions",;
+import { RecentActivity } from "./RecentActivity",;
+import { TalentPool } from "./TalentPool",;
       <div className="mt - 8 grid grid - cols - 1 lg: grid - cols - 3 gap-6">;
         <div className="lg:col - span - 2 space-y-6">;
 }  );
@@ -214,10 +267,8 @@ export function CompanyDashboard({ company }: CompanyDashboardProps) {
 
 
 
-      
 
 
-      
       "
       <div className="mt-8 grid grid-cols-1 lg: grid-cols-3 gap-6">"
 </div>"
@@ -233,10 +284,8 @@ export function CompanyDashboard({ company }: CompanyDashboardProps) {
 
 
 
-        
 
 
-        
         <div className="space-y-6">"
 </div>
 
@@ -288,5 +337,12 @@ pr-12325
 </SharedInbox>
         </div>;
       </div>;
+    </div>;
+  );
+}
+;
+  );
+}
+;
     </div>;"
 

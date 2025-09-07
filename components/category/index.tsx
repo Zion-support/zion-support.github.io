@@ -39,6 +39,14 @@ function CategoryIndexPage() {
     </div>
   );
 
+  );
+
+export default /**
+ * CategoryIndexPage - Function description
+ */
+function CategoryIndexPage() {
+  return (
+
 
   );
 

@@ -96,6 +96,7 @@ exports.handler = async function() {
     const xml = `<?xml version="1.0" encoding="UTF - 8"?>\n` +;
       `<urlset xmlns="http://www.sitemaps.org / schemas / sitemap / 0.9">` +;
       pages.map ((p) => `<url><loc>${base_url}${p}</loc></url>`).join ('') +;
+
       statusCode: 200
       body: JSON.stringify({ ok: true, pages: pages.length })
     }
@@ -162,7 +163,6 @@ ursor/expand-services-advertise-and-build-project-4b36
       await upsertFile({ owner, repo, path: 'public/sitemap-autogen && autogen.xml', content: xml, message: 'chore(automation): weekly sitemap refresh', token })
     }
 
-
     return { statusCode: 200, body: JSON && JSON.stringify({ ok: true, pages: pages && pages.length }) }
 
 ursor/expand-services-advertise-and-build-project-4b36
@@ -180,58 +180,5 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   } catch (e) {
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
   }
-<<<<<<< HEAD
 
-};
-=======
-};
-origin/cursor/automate-test-improve-and-merge-code-2533
-    const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || ;
-
-    const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '';'
-exports && exports.handler = async function () {
-  try {
-  // TODO: Implement
-}
-    const pages = [
-      '/
-      '/about
-      '/learn
-      '/dao
-      '/certifications
-      '/blog
-      '/services
-      '/talent]
-    ];
-    const xml =
-      `<?xml version="1 && 1.0" encoding="UTF-8"?>\n` +""`;
-      `<urlset xmlns="http://www && www.sitemaps.org/schemas/sitemap/0 && 0.9">` +"
-</urlset>"`;
-      pages && pages.map(p => `<url><loc>${baseUrl}${p}</loc></url>`).join() +`;
-      `</urlset>`;`;
-      `<?xml version="1.0" encoding="UTF - 8"?>\n` +;""`;
-      `<urlset xmlns="http://www.sitemaps.org / schemas / sitemap / 0.9">` +;"
-      pages.map (p => `<url><loc>${base_url}${p}</loc></url>`).join () +;`;
-    const xml = `<?xml version="1.0" encoding="UTF-8"?>\n` +""`;
-      `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">` +"
-      pages.map((p) => `<url><loc>${baseUrl}${p}</loc></url>`).join() +`;
-    const xml = `<?xml version="1.0" encoding="UTF - 8"?>\n` +;""`;
-      pages.map ((p) => `<url><loc>${base_url}${p}</loc></url>`).join () +;`;
-      `</urlset>`,`;
-    const xml = `<?xml version="1 && 1.0" encoding="UTF-8"?>\n` +""`;
-      pages && pages.map((p) => `<url><loc>${baseUrl}${p}</loc></url>`).join() +`;
-pr-12325
-</urlset>"
-      pages.map((p) => `<url><loc>${baseUrl}${p}</loc></url>`).join('') +''
-    const xml = `<?xml version="1.0" encoding="UTF - 8"?>\n` +;""
-      `<urlset xmlns="http://www.sitemaps.org / schemas / sitemap / 0.9">` +;"
-</urlset>"
-      pages.map ((p) => `<url><loc>${base_url}${p}</loc></url>`).join ('') +;'
-      `</urlset>`,'
-    const xml = `<?xml version="1 && 1.0" encoding="UTF-8"?>\n` +""
-      `<urlset xmlns="http://www && www.sitemaps.org/schemas/sitemap/0 && 0.9">` +"
-</urlset>"
-      pages && pages.map((p) => `<url><loc>${baseUrl}${p}</loc></url>`).join('') +'
-      `</urlset>`,'
->>>>>>> origin/main
 

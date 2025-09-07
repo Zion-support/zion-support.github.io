@@ -1,4 +1,3 @@
-
 class ErrorBoundary extends React.Component {
   // TODO: Implement
 }
@@ -41,12 +40,14 @@ export default function EducationSolutions({ }: EducationSolutionsProps) {
   );
 
 }
+
 :src.pages.disabled/EducationSolutions.jsx
 }
 }
 }
 }
 }
+:temp_exclude/src.pages.disabled/EducationSolutions.jsx
 :temp_exclude/src.pages.disabled/EducationSolutions.jsx
     <div>
 </div>

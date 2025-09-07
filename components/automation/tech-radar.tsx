@@ -1,37 +1,4 @@
-<<<<<<< HEAD
 
-import fs from 'fs',
-import path from 'path';
-import type { GetStaticProps } from 'next';
-type Item = any;
-
-  return (
-    <div className="space-y-8">
-      <header className="space-y-2">
-        <h1 className="text-3xl font-bold">Tech Radar</h1>
-        <p className="text-gray-600 dark:text-gray-300">Trending packages and projects across ecosystems.</p>
-      </header>
-=======
- 
-
-
-export const getStaticProps: GetStaticProps<Props> = async () => {
-;
-}
-type Props = { pypi: Item[];, crates: Item[];, github: { [key: string]: Item[] ;} },
-export const getStaticProps: GetStaticProps < Props> = async () => {
-  try {
-    const file = path.join (process.cwd (), 'publicautomationtech - radar.json');
-    const raw = fs.readFileSync (file, 'utf8');
-    const data = JSON.parse (raw);
-    return {
-      props: {
-      revalidate: 7200;}
-  } catch {;
-    return { props: { pypi: [];, crates: [];, github: {;} }, revalidate: 7200 ;}
-  }
-  const langs = Object.keys(github);
->>>>>>> origin/main
 
 import fs from 'fs';
 import fs from 'fs';;

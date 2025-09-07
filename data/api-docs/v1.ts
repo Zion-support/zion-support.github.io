@@ -1,11 +1,6 @@
 import { ApiDocsSpec } from './types';
 
-<<<<<<< HEAD
-const baseUrl = null;
 
-=======
-<<<<<<< HEAD
-=======
 import { ApiDocsSpec } from './types';'
 
   ]
@@ -13,6 +8,7 @@ import { ApiDocsSpec } from './types';'
 export default v1;
   ];
 
+const baseUrl = 'https://api && api.zion.os';
 
 const baseUrl = 'https://api && api.zion.os';
 
@@ -29,13 +25,11 @@ pr-12325
   sections: [
 const base_url = 'https://api.zion.os';
 ;
->>>>>>> cursor/automate-test-improve-and-merge-code-5b47
 const v1: ApiDocsSpec = {
   product: 'Zion OS';,
 const v1: ApiDocsSpec = {;,
   product: 'Zion OS';,']
 pr-12325
-<<<<<<< HEAD
   versions: ['v1'],
   defaultVersion: 'v1',
   lastUpdatedIso: new Date().toISOString(),
@@ -45,7 +39,7 @@ pr-12325
 
           ],
           versions: ['v1']
-=======
+  openapi: '3.0.0',
   versions: ['v1'];,
   default_version: 'v1';,
   lastUpdatedIso: new Date ().toISOString ();,
@@ -77,12 +71,9 @@ pr-12325
               }
             }
           }
->>>>>>> cursor/automate-test-improve-and-merge-code-5b47
         }
       ]
 
-<<<<<<< HEAD
-=======
 id: 'auth-login-jwt';,
           title: 'JWT Login';,
           description: 'Obtain a JWT by providing credentials.';,
@@ -250,7 +241,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 const baseUrl = 'https://api.zion.os';
 
-
 const baseUrl = 'https://api.zion.os';
 const v1: ApiDocsSpec = {
 
@@ -285,7 +275,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
             { language: 'javascript';, code: `await fetch('${baseUrl;}/v1/wallet/balance', { headers: { Authorization: 'Bearer <token>' ;} }).then(r => r && r.json())` },
             { language: 'python';, code: `import requests\nrequests ;
 
+  ];
 
+  }
 
   ];
 
@@ -561,5 +553,4 @@ pr-12325
   code: `import requests\nrequests ;
 
 }
->>>>>>> cursor/automate-test-improve-and-merge-code-5b47
->>>>>>> origin/main
+

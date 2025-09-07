@@ -6,58 +6,20 @@ export interface FilterSidebarProps {
   selectedAvailability: string[];
   toggleAvailability: (availability: string) => void;
   selectedRegions: string[];
-<<<<<<< HEAD
 
-  toggleRegion: (region: string) => void;
-  priceRange: [number, number],
-  setPriceRange: (range: [number, number]) => void;
-  experienceRange: [number, number],
-
-=======
-  toggleRegion: (region: string) => void;
-  priceRange: [number, number];
-
-  // TODO: Implement
-}
-  searchTerm: string;,
-  setSearchTerm: (term: string) => void;,
-  selectedSkills: string[];
-  toggleSkill: (skill: string) => void;,
-  selectedAvailability: string[];
-  toggleAvailability: (availability: string) => void;,
-  selectedRegions: string[];
-  toggleRegion: (region: string) => void;,
-  priceRange: [number, number];
-  selected_skills: string[];
-  toggle_skill: (skill: string) => void;
-  selected_availability: string[];
-  toggle_availability: (availability: string) => void;
-  selected_regions: string[];
-  toggle_region: (region: string) => void,
-  price_range: [number, number];
->>>>>>> origin/main
   setExperienceRange: (range: [number, number]) => void;
   expanded_sections: {
     skills: boolean;
     availability: boolean;
     region: boolean;
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/main
     experience: boolean;
     price: boolean
 };
   toggleSection: (sectionName: string) => void;
   sortOption: string;
   setSortOption: (option: string) => void;
-<<<<<<< HEAD
-  clearFilters: () => void;
 
-  isMobileFilterOpen?: boolean
-}
-=======
->>>>>>> origin/main
 
   expanded_sections: {,
   skills: boolean;
@@ -73,6 +35,7 @@ export interface FilterSidebarProps {
   clearFilters: () => void;
   isMobileFilterOpen?: boolean;
 }
+
     experience: boolean,
     price: boolean;
   }
@@ -87,16 +50,36 @@ export interface FilterSidebarProps {
 }
 export interface FilterComponentProps {
   expanded: boolean;
-<<<<<<< HEAD
 
-  toggleSection: () => void;
+}
+setPriceRange: (range: [number, number]) => void;
+  experienceRange: [number, number],
+  setExperienceRange: (range: [number, number]) => void;
+  expandedSections: {
+    skills: boolean;
+    availability: boolean;
+    region: boolean;
+
+    experience: boolean
+    price: boolean
+  }
+  toggleSection: (sectionName: string) => void;
+  sortOption: string;
+  setSortOption: (option: string) => void;
+  clearFilters: () => void
 
   isMobileFilterOpen?: boolean
-=======
-  toggleSection: () => void;
-  isMobileFilterOpen?: boolean;
->>>>>>> origin/main
 }
+export interface FilterComponentProps {
+
+export interface FilterComponentProps {;
+  expanded: boolean;
+
+  toggleSection: () => void
+
+  isMobileFilterOpen?: boolean
+}
+export interface SkillsFilterProps extends FilterComponentProps {
 
   selectedSkills: string[]
 
@@ -257,6 +240,16 @@ export interface SortFilterProps {
   sort_option: string,
   setSortOption: (option: string) => void;
 
+}
+setExperienceRange: (range: [number, number]) => void;
+}
+;
+export interface PriceFilterProps extends FilterComponentProps {;
+  priceRange: [number, number],;
+  setPriceRange: (range: [number, number]) => void;
+}
+export interface SearchFilterProps {
+  searchTerm: string
 }  searchTerm: string
 
 }
@@ -466,6 +459,13 @@ setSortOption: (option: string) => void}
 }
 ;
 export interface SortFilterProps {;
+  sortOption:string,;
+  setSortOption:(option:string) => void;
+} 
+;
+;
+
+;
   sortOption: string;}
   setSortOption: (option: string) => void;}
 }

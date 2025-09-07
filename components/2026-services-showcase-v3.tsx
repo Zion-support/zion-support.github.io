@@ -1,31 +1,4 @@
-<<<<<<< HEAD
 
-import React from 'react',
-import Head from 'next/head';
-import { motion  } from 'framer-motion';
-import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavigation2026',
-import Enhanced2026ServicesShowcaseV3 from '../components/sections/Enhanced2026ServicesShowcaseV3';
-import UltraQuantumHolographicBackground from '../components/ui/UltraQuantumHolographicBackground';
-export default function ServicesShowcase2026V3() {
-  const contactInfo = null;
-
-=======
-import Head from 'next/head';
-import { motion  } from 'framer-motion';
-import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavigation2026';
-import Enhanced2026ServicesShowcaseV3 from '../components/sections/Enhanced2026ServicesShowcaseV3';
-import UltraQuantumHolographicBackground from '../components/ui/UltraQuantumHolographicBackground';
-
-export default function ServicesShowcase2026V3() {;
-  const contactInfo = {;
-    mobile: '+1 302 464 0950';,;
-    email: 'kleber@ziontechgroup && ziontechgroup.com';,;
-    address: '364 E Main St STE 1008 Middletown DE 19709';,;
-    website: 'https://ziontechgroup.com';,  };
-
-  const contactInfo = null;
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/main
   return (
     <UltraQuantumHolographicBackground
       intensity="extreme" 

@@ -1,16 +1,33 @@
 import _React from 'react';  import '@testing-library/jest-dom'; import Layoutdynamic from '../components/Layout.dynamic'; describe('Layoutdynamic',() => { test('renders without crashing',() => { render(<Layoutdynamic />); expect(screen.getByTestId('layout.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<Layoutdynamic />)}); test('handles user interactions',() => { render(<Layoutdynamic />)}); test('applies correct styling',() => { render(<Layoutdynamic />)})});
+
+
+
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import Layoutdynamic from '../components/Layout.dynamic';
 
-describe('Layoutdynamic', () => {
-  test('renders without crashing', () => {
+import React from "react";
+import { render, screen, fireEvent } from "@testing-library/react";
+import "@testing-library/jest-dom";
+import Layoutdynamic from "../components/Layout.dynamic";
+
+
+describe("Layoutdynamic", () => {
+  test("renders without crashing", () => {
     render(<Layoutdynamic />);
-    expect(screen.getByTestId('layout.dynamic')).toBeInTheDocument();
+    expect(screen.getByTestId("layout.dynamic")).toBeInTheDocument();
   });
 });
+
+
+
+
+
+
+import _React from 'react';  import '@testing-library/jest-dom'; import Layoutdynamic from '../components/Layout.dynamic'; describe('Layoutdynamic',() => { test('renders without crashing',() => { render(<Layoutdynamic />); expect(screen.getByTestId('layout.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<Layoutdynamic />)}); test('handles user interactions',() => { render(<Layoutdynamic />)}); test('applies correct styling',() => { render(<Layoutdynamic />)})});
+
 
 
 
@@ -25,6 +42,9 @@ describe('Layoutdynamic', () => {
 
 
 
+
+
+
 import React from 'react'
 import { render, screen, fireEvent } from '@testing-library/react'
 import '@testing-library/jest-dom'
@@ -34,6 +54,11 @@ describe('Layoutdynamic'
 
 });
 
+
+    expect(screen && screen.getByTestId('layout ; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import Layoutdynamic from "./components/Layout ; describe('Layoutdynamic', () => { test("renders without crashing",() => { render(<Layoutdynamic />); expect(screen && screen.getByTestId("layout && layout.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<Layoutdynamic />)}); test("handles user interactions",() => { render(<Layoutdynamic />)}); test("applies correct styling"
+
+
+import React from 'react';
     expect(screen && screen.getByTestId('layout ; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import Layoutdynamic from "./components/Layout ; describe('Layoutdynamic', () => { test("renders without crashing",() => { render(<Layoutdynamic />); expect(screen && screen.getByTestId("layout && layout.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<Layoutdynamic />)}); test("handles user interactions",() => { render(<Layoutdynamic />)}); test("applies correct styling"
 import { render, screen } from '@testing-library/react';
 import Layout from '../components/Layout.dynamic';
@@ -59,6 +84,8 @@ describe('Layout', () => {
     // Add styling tests here
   });
 });
+
+
   test ('displays correct content', () => {
     // Test content display;
   test ('handles user interactions', () => {
@@ -66,6 +93,17 @@ describe('Layout', () => {
   test ('applies correct styling', () => {
     // Test styling;
 });
+
+
+
+
+import _React from 'react';  import '@testing-library/jest-dom'; import Layoutdynamic from '../components/Layout.dynamic'; describe('Layoutdynamic',() => { test('renders without crashing',() => { render(<Layoutdynamic />); expect(screen.getByTestId('layout.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<Layoutdynamic />)}); test('handles user interactions',() => { render(<Layoutdynamic />)}); test('applies correct styling',() => { render(<Layoutdynamic />)})});
+
+
+import _React from 'react';  import '@testing-library/jest-dom'; import Layoutdynamic from '../components/Layout.dynamic'; describe('Layoutdynamic',() => { test('renders without crashing',() => { render(<Layoutdynamic />); expect(screen.getByTestId('layout.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<Layoutdynamic />)}); test('handles user interactions',() => { render(<Layoutdynamic />)}); test('applies correct styling',() => { render(<Layoutdynamic />)})});
+
+
+
 main
 
   test('displays correct content', () => {

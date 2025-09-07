@@ -1,14 +1,31 @@
-<<<<<<< HEAD
 
-import type { GetServerSideProps } from 'next';
-export const getServerSideProps: GetServerSideProps;
-export default function EnterpriseRedirect() { return null }
-
-=======
 export const getServerSideProps: GetServerSideProps = async () => {
   return {
     redirect: {
       destination: '/plans/enterprise'
+      permanent: false}}
+}
+export default function EnterpriseRedirect() { return null }
+
+},
+;
+export default function EnterpriseRedirect() { return null };
+import type { GetServerSideProps } from 'next';
+export const getServerSideProps: GetServerSideProps = async () => {;
+  return {;
+    redirect: {;
+      destination: '/plans/enterprise';
+      permanent: false}  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+};
+export default function EnterpriseRedirect() { return null   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -166,7 +183,6 @@ export default function EnterprisePage() {
               We deliver enterprise-grade solutions that meet the highest standards of security, scalability, and performance.
             </p>
           </motion.div>
-          
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => {
               const IconComponent = feature.icon;
@@ -205,7 +221,6 @@ export default function EnterprisePage() {
               Comprehensive enterprise solutions designed to streamline operations and drive business growth.
             </p>
           </motion.div>
-          
           <div className="grid md:grid-cols-2 gap-8">
             {solutions.map((solution, index) => (
               <motion.div
@@ -217,7 +232,6 @@ export default function EnterprisePage() {
               >
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">{solution.title}</h3>
                 <p className="text-gray-600 mb-6">{solution.description}</p>
-                
                 <div className="mb-6">
                   <h4 className="font-semibold text-gray-900 mb-3">Key Features:</h4>
                   <ul className="space-y-2">
@@ -229,7 +243,6 @@ export default function EnterprisePage() {
                     ))}
                   </ul>
                 </div>
-                
                 <div className="flex justify-between items-center">
                   <span className="text-2xl font-bold text-indigo-600">{solution.pricing}</span>
                   <Link 
@@ -275,6 +288,9 @@ export default function EnterprisePage() {
 
 
       permanent: false}}
+
+permanent: false}}
+
 }
 export default function EnterpriseRedirect() { return null }
 
@@ -318,11 +334,15 @@ export default function EnterpriseRedirect() { return null   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+
+
+
 }
+
 
 
 import type { GetServerSideProps } from 'next';
 export const getServerSideProps: GetServerSideProps;
 export default function EnterpriseRedirect() { return null }
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/main
+

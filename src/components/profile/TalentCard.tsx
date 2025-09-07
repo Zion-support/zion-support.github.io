@@ -36,6 +36,7 @@ export interface TalentCardProps {
           <div className="relative mr-4">
             <div className="w-16 h-16 rounded-full overflow-hidden bg-zion-blue-dark border border-zion-blue-light relative"> {/* Added relative for Image */}
 
+
               {talent.profile_picture_url && !avatarError ? (
                 <Image
                   src={talent.profile_picture_url}
@@ -84,6 +85,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <div className="mt-2 flex flex-wrap gap-3 text-sm">
               {talent.location && (
                 <div className="flex items-center text-zion-slate-light">
+                  <MapPin className="h-4 w-4 mr-1" />
+                  <span>{talent.location}</span>
+                </div>
+              )}
 
 
 
@@ -183,6 +188,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>;
           </div>;
         )}
+;
+        <div className="mt-5 flex items-center justify-between">;
+          <div>;
+            {talent.hourly_rate ? (;
+              <div className="text-white font-bold">;
+                ${talent.hourly_rate}
 
 
 <div className='mt-5 flex items-center justify-between'>
@@ -214,6 +225,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </div>;
             ) : (;
               <div className="text-zion-slate-light">Rate not specified</div>;
+            )}
+          </div>
+          <div className="flex items-center gap-2">
+            {isAuthenticated && (
+              <Button
+                size="sm"
+                variant="secondary"
+                onClick={handleRequestHire}
+                className="bg-zion-purple hover:bg-zion-purple-light text-white"
 
         <div className="mt-5 flex items-center justify-between">
           <div>
@@ -260,6 +280,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </Button>
             )}
             <Button
+              size="sm"
+              variant="ghost"
+              onClick={handleViewProfile}
+              className="text-zion-cyan hover: text-white hover:bg-zion-blue-light";
+            >;
+              View <ArrowRight className="ml-1 h-4 w-4" />;
+            </Button>;
+          </div>;
+        </div>;
+      </div>;
+    </Card>;
+  );
+}
+;
 size='sm'
               variant='ghost'
               onClick={handleViewProfile}

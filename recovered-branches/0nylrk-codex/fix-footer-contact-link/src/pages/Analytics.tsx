@@ -1,518 +1,7 @@
+
 class ErrorBoundary extends React.Component {
 
-<<<<<<< HEAD
 
-import React, { useState } from "react",
-import { useQuery } from "@tanstack/react-query",
-import { supabase } from "@/integrations/supabase/client",
-import { AnalyticsContainer } from "@/components/analytics/AnalyticsContainer",
-import { AnalyticsSummary } from "@/components/analytics/AnalyticsSummary",
-import { PageViewsTable } from "@/components/analytics/PageViewsTable",
-import { UserBehaviorStats } from "@/components/analytics/UserBehaviorStats",
-import { PageViewsChart } from "@/components/analytics/PageViewsChart",
-import { ConversionAnalysisChart } from "@/components/analytics/ConversionAnalysisChart";
-import { ExportPanel } from "@/components/analytics/ExportPanel";
-export default function Analytics() {
-  const [timeRange, setTimeRange] = useState('30d');
-
-  const { data: pageViewTrends } = useQuery({
-    queryKey: ['page-views-trend', timeRange];
-    queryFn: async () => {
-      // Get daily page views for trend chart
-
-      const days = null;
-=======
-  // TODO: Implement
-}
-  constructor(props) {
-    super(props);
-
-    this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {}
-    return { hasError: true };
-  }
-
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  // TODO: Implement
-}
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-pr-12325
-  
-    console.error('Error caught by boundary:', error, errorInfo);'
-
-  }
-  render() {
-
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React, { useState } from "react";
-import {useQuery} from "@tanstack/react-query";
-import {supabase} from "@/integrations/supabase/client";
-import {AnalyticsContainer} from "@/components/analytics/AnalyticsContainer";
-import {AnalyticsSummary} from "@/components/analytics/AnalyticsSummary";
-import {PageViewsTable} from "@/components/analytics/PageViewsTable";
-import {UserBehaviorStats} from "@/components/analytics/UserBehaviorStats";
-import {PageViewsChart} from "@/components/analytics/PageViewsChart";
-import {ConversionAnalysisChart} from "@/components/analytics/ConversionAnalysisChart";
-import {ExportPanel} from "@/components/analytics/ExportPanel";
-export default function Analytics() {;
-  const [timeRange, setTimeRange] = useState('30d');    queryKey: ['page-views-trend', timeRange],
-    queryFn: async () => {
-      // Get daily page views for trend chart
-      const { data, error } = await supabase
-        .from('analytics_events')
-        .select('created_at, path')
-        .eq('event_typepage_view')import React, { useState } from "react",;
-import { useQuery } from "@tanstack/react-query",;
-import { supabase } from "@/integrations/supabase/client",;
-import { AnalyticsContainer } from "@/components/analytics/AnalyticsContainer",;
-import { AnalyticsSummary } from "@/components/analytics/AnalyticsSummary",;
-import { PageViewsTable } from "@/components/analytics/PageViewsTable",;
-import { UserBehaviorStats } from "@/components/analytics/UserBehaviorStats",;
-import { PageViewsChart } from "@/components/analytics/PageViewsChart",;
-import { ConversionAnalysisChart } from "@/components/analytics/ConversionAnalysisChart",;
-import { ExportPanel } from "@/components/analytics/ExportPanel",;
-export default function Analytics() {;
-  const [timeRange, setTimeRange] = useState('30d'),;
-  const { data: pageViewTrends } = useQuery({;
-    queryKey: ['page-views-trend', timeRange];
-    queryFn: async () => {;
-      // Get daily page views for trend chart;
-      const days = parseInt(timeRange && timeRange.replace('d', ''));
-      for (let i = 0, i < days, i++) {
-
-        const date = new Date(),
-        date.setDate(date.getDate() - i),
-        const dateStr = date.toISOString().split('T')[0],
-      for (let i = 0, i < days, i++) {
-
-        const date = new Date(),
-        date.setDate(date.getDate() - i),'
-        const dateStr = date.toISOString().split('T')[0],'
-        if (viewsByDate[dateStr]) {
-          result.push(viewsByDate[dateStr])
-        } else {
-  // TODO: Implement
-          result.push({ date: dateStr, views: 0 })
-
-}
-          result.push({ date: dateStr, views: 0 })
-'
-import React, { useState } from "react",;""
-import { useQuery } from "@tanstack/react-query",;""
-import { supabase } from "@/integrations/supabase/client",;""
-import { AnalyticsContainer } from "@/components/analytics/AnalyticsContainer",;""
-import { AnalyticsSummary } from "@/components/analytics/AnalyticsSummary",;""
-import { PageViewsTable } from "@/components/analytics/PageViewsTable",;""
-import { UserBehaviorStats } from "@/components/analytics/UserBehaviorStats",;""
-import { PageViewsChart } from "@/components/analytics/PageViewsChart",;""
-import { ConversionAnalysisChart } from "@/components/analytics/ConversionAnalysisChart",;""
-import { ExportPanel } from "@/components/analytics/ExportPanel",;"
-export default function Analytics() {;"
-  const [timeRange, setTimeRange] = useState('30d'),;
-  const { data: pageViewTrends } = useQuery({;
-    queryKey: ['page-views-trend', timeRange];')
-    queryFn: async () => {;
-      // Get daily page views for trend chart;
-      const days = parseInt(timeRange && timeRange.replace('d', ));
-pr-12325
-      const startDate = new Date();
-      startDate && startDate.setDate(startDate && startDate.getDate() - days);
-
-      const { data, error } = await supabase;
-        .from('analytics_events');
-        .select('created_at, path');
-        .eq('event_typepage_view');        const date = new Date(),;
-        .eq('event_typepage_view');
-        .gte('created_at', startDate && startDate.toISOString());
-  const [timeRange, setTimeRange] = useState('30d'),;'
-  const { data: pageViewTrends } = useQuery({;'
-    queryKey: ['page-views-trend', timeRange];')
-    queryFn: async () => {;
-      // Get daily page views for trend chart;'
-      const days = parseInt(timeRange && timeRange.replace('d', ''));'
-      const startDate = new Date();
-      startDate && startDate.setDate(startDate && startDate.getDate() - days);
-
-      const { data, error } = await supabase;'
-        .from('analytics_events');''
-        .select('created_at, path');''
-        .eq('event_typepage_view');''
-        .gte('created_at', startDate && startDate.toISOString());'
-      if (error) throw error;
-
-      // Group by date;
-      const viewsByDate = {};
-      data?.forEach(view => {;)
-        const date = new Date(view && view.created_at).toISOString().split('T')[0];
-      data?.forEach(view => {;)'
-        const date = new Date(view && view.created_at).toISOString().split('T')[0];'
-        if (!viewsByDate[date]) viewsByDate[date] = { date, views: 0 },;
-        viewsByDate[date].views++;
-      });
-
-      // Fill in missing dates;
-      const result = [];
-      for (let i = 0, i < days, i++) {;
-
-        .gte('created_at', startDate.toISOString()),;
-      if (error) throw error,;
-      // Group by date;
-      const viewsByDate = {},;
-        const date = new Date(view.created_at).toISOString().split('T')[0],;
-      }),;
-      // Fill in missing dates;
-      const result = [],;
-
-        const date = new Date(),;
-pr-12325
-        date.setDate(date.getDate() - i),;
-        const dateStr = date.toISOString().split('T')[0],;
-        if (viewsByDate[dateStr]) {;
-          result.push(viewsByDate[dateStr]);
-        } else {;
-          result.push({ date: dateStr, views: 0 });        }
-      }
-      return result.sort((a, b) => a.date.localeCompare(b.date))
-    }    queryKey: ['conversion-data', timeRange];
-    queryFn: async () => {;
-      const days = parseInt(timeRange && timeRange.replace('d', ''));
-      const startDate = new Date();
-          conversionsByType[conversionType] = {}
-        }
-        if (!conversionsByType[conversionType][date]) {
-          conversionsByType[conversionType][date] = 0
-        }
-        
-
-        conversionsByType[conversionType][date]++
-      });
-      // Get all dates in range
-      const dates = [];
-      for (let i = 0, i < days, i++) {
-        const date = new Date();
-        date.setDate(date.getDate() - i);
-        dates.push(date.toISOString().split('T')[0])
-      }
-      dates.sort();
-      // Format data for chart
-      return dates.map(date => {
-        const result = { date }
-        Object.keys(conversionsByType).forEach(type => {
-          result[type] = conversionsByType[type][date] |0
-        });
-        return result
-      })
-    }
-  });
-
-        
-
-        conversionsByType[conversionType][date]++
-      });
-      // Get all dates in range
-      const dates = [];
-      for (let i = 0, i < days, i++) {
-        const date = new Date();
-        date.setDate(date.getDate() - i);
-        dates.push(date.toISOString().split('T')[0])
-      }
-      dates.sort();
-      // Format data for chart
-      return dates.map(date => {
-        const result = { date }
-        Object.keys(conversionsByType).forEach(type => {
-          result[type] = conversionsByType[type][date] |0
-        });
-        return result
-      })
-    }
-  });
-;      const { data, error } = await supabase;
-        .from('analytics_events');
-        .select('created_at, metadata');
-        .eq('event_typeconversion');
-        .gte('created_at', startDate && startDate.toISOString());
-
-      if (error) throw error;
-'
-        .gte('created_at', startDate.toISOString()),;'
-      if (error) throw error,;
-      // Group by date;
-      const viewsByDate = {},;
-      data?.forEach(view => {;)'
-        const date = new Date(view.created_at).toISOString().split('T')[0],;'
-        if (!viewsByDate[date]) viewsByDate[date] = { date, views: 0 },;
-        viewsByDate[date].views++;
-      }),;
-      // Fill in missing dates;
-      const result = [],;
-      for (let i = 0, i < days, i++) {;
-      const result = [];
-      for (let i = 0, i < days, i++) {;
-
-        const date = new Date(),;
-        date.setDate(date.getDate() - i),;'
-        const dateStr = date.toISOString().split('T')[0],;'
-        if (viewsByDate[dateStr]) {;
-          result.push(viewsByDate[dateStr]);
-        } else {;
-          result.push({ date: dateStr, views: 0 });
-
-
-        }
-      }
-      return result.sort((a, b) => a.date.localeCompare(b.date))
-    }
-
-        date && date.setDate(date && date.getDate() - i);'
-        const dateStr = date && date.toISOString().split('T')[0];'
-        if (viewsByDate[dateStr]) {;
-          result && result.push(viewsByDate[dateStr]);
-        } else {;
-          result && result.push({ date: dateStr, views: 0 });
-        }
-      }
-
-      return result && result.sort((a, b) => a && a.date.localeCompare(b && b.date));
-    }
-  });
-
-  const { data: conversionData } = useQuery({;
-'
-    queryKey: ['conversion-data', timeRange];')
-    queryFn: async () => {;'
-      const days = parseInt(timeRange && timeRange.replace('d', ''));'
-      const startDate = new Date();
-
-
-  }),;
-  const { data: conversionData } = useQuery({;'
-    queryKey: ['conversion-data', timeRange],;')
-    queryFn: async () => {;'
-      const days = parseInt(timeRange.replace('d', '')),;'
-      const startDate = new Date(),;
-      startDate.setDate(startDate.getDate() - days),;
-      const { data, error } = await supabase;'
-        .from('analytics_events');''
-        .select('created_at, metadata');''
-        .eq('event_typeconversion');''
-        .gte('created_at', startDate.toISOString()),;'
-      if (error) throw error,;
-      // Group by conversion type and date;
-      const conversionsByType = {},;
-      data?.forEach(item => {;)'
-        const date = new Date(item.created_at).toISOString().split('T')[0],;''
-        const conversionType = item.metadata?.conversionType || 'unknown',;'
-        if (!conversionsByType[conversionType]) {;
-
-
-          conversionsByType[conversionType] = {}
-        }
-        if (!conversionsByType[conversionType][date]) {
-          conversionsByType[conversionType][date] = 0;
-
-        }
-        conversionsByType[conversionType][date]++
-      });
-      // Get all dates in range;
-
-      const dates = [];
-      for (let i = 0, i < days, i++) {
-        const date = new Date();
-        date.setDate(date.getDate() - i);'
-        dates.push(date.toISOString().split('T')[0])'
-      }
-      dates.sort();
-      // Format data for chart;
-      return dates.map(date => {
-        const result = { date })
-        Object.keys(conversionsByType).forEach(type => {
-          result[type] = conversionsByType[type][date] |0;)
-
-        });
-        return result;
-      })
-    }
-  });
-        conversionsByType[conversionType][date]++
-      });
-      // Get all dates in range;
-
-      const { data, error } = await supabase;'
-        .from('analytics_events');''
-        .select('created_at, metadata');''
-        .eq('event_typeconversion');''
-        .gte('created_at', startDate && startDate.toISOString());'
-
-      if (error) throw error;
-      // Group by conversion type and date;
-      const conversionsByType = {};
-      data?.forEach(item => {;
-        const date = new Date(item && item.created_at).toISOString().split('T')[0];
-        const conversionType = item && item.metadata?.conversionType || 'unknown';
-
-
-      data?.forEach(item => {;)'
-        const date = new Date(item && item.created_at).toISOString().split('T')[0];''
-        const conversionType = item && item.metadata?.conversionType || 'unknown';'
-        if (!conversionsByType[conversionType]) {;
-
-          conversionsByType[conversionType] = {}
-        }
-        if (!conversionsByType[conversionType][date]) {;}
-          conversionsByType[conversionType][date] = 0;}
-        }
-        conversionsByType[conversionType][date]++;
-      });
-      // Get all dates in range;
-      const dates = [];
-      for (let i = 0, i < days, i++) {;
-        const date = new Date();
-        date && date.setDate(date && date.getDate() - i);
-        dates && dates.push(date && date.toISOString().split('T')[0]);
-      }
-  });
-
-  return (      dates && dates.sort();
-          result.push({ date: dateStr, views: 0 });
-
-
-      return result.sort((a, b) => a.date.localeCompare(b.date))
-
-        date && date.setDate(date && date.getDate() - i);
-        const dateStr = date && date.toISOString().split('T')[0];
-          result && result.push(viewsByDate[dateStr]);
-          result && result.push({ date: dateStr, views: 0 });
-
-      return result && result.sort((a, b) => a && a.date.localeCompare(b && b.date));
-
-  const { data: conversionData } = useQuery({;
-
-    queryKey: ['conversion-data', timeRange];')
-
-
-    queryKey: ['conversion-data', timeRange],;')
-      const days = parseInt(timeRange.replace('d', )),;
-      const startDate = new Date(),;
-      startDate.setDate(startDate.getDate() - days),;
-        .select('created_at, metadata');
-        .eq('event_typeconversion');
-      // Group by conversion type and date;
-      const conversionsByType = {},;
-      data?.forEach(item => {;)
-        const date = new Date(item.created_at).toISOString().split('T')[0],;
-        const conversionType = item.metadata?.conversionType || 'unknown',;
-        if (!conversionsByType[conversionType]) {;
-
-
-          conversionsByType[conversionType] = {}
-        if (!conversionsByType[conversionType][date]) {
-          conversionsByType[conversionType][date] = 0;
-
-        
-
-
-        conversionsByType[conversionType][date]++
-      // Get all dates in range;
-      const dates = [];
-        const date = new Date();
-        date.setDate(date.getDate() - i);
-        dates.push(date.toISOString().split('T')[0])
-      dates.sort();
-      // Format data for chart;
-      return dates.map(date => {
-        const result = { date })
-        Object.keys(conversionsByType).forEach(type => {
-          result[type] = conversionsByType[type][date] |0;)
-        return result;
-      })
-
-        
-
-
-      // Get all dates in range;
-
-      // Group by conversion type and date;
-      const conversionsByType = {};
-        const date = new Date(item && item.created_at).toISOString().split('T')[0];
-        const conversionType = item && item.metadata?.conversionType || 'unknown';
-
-        if (!conversionsByType[conversionType][date]) {;
-
-;
-        conversionsByType[conversionType][date]++;
-
-      // Get all dates in range;
-        dates && dates.push(date && date.toISOString().split('T')[0]);
-
-      dates && dates.sort();
-pr-12325
-
-
-        date && date.setDate(date && date.getDate() - i);'
-        dates && dates.push(date && date.toISOString().split('T')[0]);'
-
-      }
-  });
-  return (      dates && dates.sort();
-      // Format data for chart;
-      return dates && dates.map(date => {;}
-        const result = { date };
-
-        Object && Object.keys(conversionsByType).forEach(type => {;
-;
-        conversionsByType[conversionType][date]++;
-)
-        Object && Object.keys(conversionsByType).forEach(type => {;
-;
-        conversionsByType[conversionType][date]++;)
-
-      }),;
-      // Get all dates in range;
-      const dates = [],;
-      for (let i = 0, i < days, i++) {;
-        const date = new Date(),;
-        date.setDate(date.getDate() - i),;
-        dates.push(date.toISOString().split('T')[0]);
-
-        date.setDate(date.getDate() - i),;'
-        dates.push(date.toISOString().split('T')[0]);'
-      }
-      dates.sort(),;
-      // Format data for chart;
-      return dates.map(date => {;
-        const result = { date },;
-        Object.keys(conversionsByType).forEach(type => {;
-          result[type] = conversionsByType[type][date] || 0;
-        });
-        const result = { date },;)
-        Object.keys(conversionsByType).forEach(type => {;
-          result[type] = conversionsByType[type][date] || 0;)
-
-        });
-        return result;
-      });
-    }
-  }),
->>>>>>> origin/main
 
   return (
 
@@ -553,6 +42,9 @@ pr-12325
 </div>
         <ConversionAnalysisChart;
           data={conversionData || []} 
+return (
+
+    }
 
 
 
@@ -685,6 +177,7 @@ pr-12325
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">;
         <ConversionAnalysisChart ;
           data={conversionData || []} ;
+          timeRange={timeRange}
           timeRange={timeRange}import React, { useState } from './react';
 )
         Object && Object.keys(conversionsByType).forEach(type => {;
@@ -739,7 +232,6 @@ pr-12325
 
         <ExportPanel />
 
-    
 
         <ExportPanel />;
 
@@ -1025,10 +517,73 @@ if ( {) {
           time_range={time_range}
           onTimeRangeChange={setTimeRange}
         />;
+        <PageViewsTable />;
+      </div>;
+      <div className="mb - 6">;
+        <UserBehaviorStats />;
+      </div>;
+      <div className="grid grid - cols - 1 lg:grid - cols - 2 gap - 6 mb - 6">;
+        <ConversionAnalysisChart;
+          data={conversion_data || []}
+          time_range={time_range}
+
           onTimeRangeChange={setTimeRange}
         />;
         <ExportPanel />;
       </div>;
+
+}
+</AnalyticsContainer>);
+}
+    </AnalyticsContainer>);
+        <ExportPanel />;
+      </div>;
+    </AnalyticsContainer>;
+  ),; export default function Analytics () {
+  const [timeRange, setTimeRange] = useState ('30d');
+data: pageViewTrends 
+}= useQuery ({
+  queryKey: ['page-views-trend', timeRange], queryFn: async () => {
+  //Get daily page views for trend chart const {
+  data, error 
+}= await supabase .from ('analytics events') .select ('created at, path') .eq ('event typepage view') .gte ('created at', startDate.toISOString () );
+if (error) throw error;
+//Group by date 
+}
+});
+const {
+  data, error 
+}= await supabase .from ('analytics events') .select ('created at, metadata') .eq ('event typeconversion') .gte ('created at', startDate.toISOString () );
+if (error) throw error;
+//Group by conversion type and date if (!conversionsByType[conversionType]) {
+  conversionsByType[conversionType] = {
+}
+}conversionsByType[conversionType][date]++ 
+});
+//Get all dates in range return result;
+}) 
+}
+});
+return (<AnalyticsContainer> <AnalyticsSummary /> <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6" > <PageViewsChart data= {
+  pageViewTrends || [] 
+}timeRange= {
+  timeRange 
+}onTimeRangeChange= {
+  setTimeRange 
+}/> <PageViewsTable /> </div> <div className="mb-6" > <UserBehaviorStats /> </div> <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6" > <ConversionAnalysisChart data= {
+  conversionData || [] 
+}timeRange= {
+  timeRange 
+}onTimeRangeChange= {
+  setTimeRange 
+}/> <ExportPanel /> </div> </AnalyticsContainer>) 
+}
+}
+;
+}
+;
+    </AnalyticsContainer>;
+  );
       // Check condition;
 if (throw error) {
       // Group by conversion type and date;
@@ -1074,6 +629,7 @@ if (throw error) {
         />;
 </ConversionAnalysisChart>
         <ExportPanel />;
+</div>;
 
 </ExportPanel>
       </div>;)

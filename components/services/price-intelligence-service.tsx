@@ -1,16 +1,4 @@
-<<<<<<< HEAD
 
-import Head from 'next/head';
-
-import Link from 'next/link';
-export default function Placeholder() {
-=======
-import Link from 'next / link';
-export default /**
- * Placeholder - Function description
- */
-function Placeholder() {
->>>>>>> origin/main
   return (
     <main className="min - h-screen p - 8">;
       <Head>;

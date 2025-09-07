@@ -1,4 +1,6 @@
 import React, { useEffect, useRef } from 'react';
+const ParticleBackground: React.FC = () => {,
+  const canvasRef = useRef<HTMLCanvasElement>(null);
 
 interface Particle {
   x: number;
@@ -17,14 +19,26 @@ const ParticleBackground: React.FC = () => {
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
-
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
+    let animationId: number;,
 
     const resizeCanvas = () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
     };
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
+    interface Particle {
+      x: number;,
+      y: number;,
+      vx: number;,
+      vy: number;,
+      size: number;,
+      opacity: number;
+    }
+    const particles: Particle[] = [];,
+    const particleCount = 50;
 
     const createParticles = () => {
       const particles: Particle[] = [];
@@ -66,9 +80,13 @@ const ParticleBackground: React.FC = () => {
         opacity: Math.random() * 0.5 + 0.1,
       });
     }
-
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
+particles.forEach((particle) => {
+        // Update position
+        particle.x += particle.vx;
+        particle.y += particle.vy;
+        // Wrap around edges
 
       particlesRef.current.forEach((particle, index) => {
         particle.x += particle.vx;
@@ -86,13 +104,11 @@ const ParticleBackground: React.FC = () => {
         if (particle.x > canvas.width) particle.x = 0;
         if (particle.y < 0) particle.y = canvas.height;
         if (particle.y > canvas.height) particle.y = 0;
-
         // Draw particle
         ctx.beginPath();
         ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(59, 130, 246, ${particle.opacity})`;
+        ctx.fillStyle = `rgba(59, 130, 246, ${particle.opacity})`;`
         ctx.fill();
-
         // Draw connections
         particlesRef.current.forEach((otherParticle, otherIndex) => {
           if (index !== otherIndex) {
@@ -115,18 +131,20 @@ const ParticleBackground: React.FC = () => {
         particles.slice(i + 1).forEach((otherParticle) => {
           const dx = particle.x - otherParticle.x;
           const dy = particle.y - otherParticle.y;
-          const distance = Math.sqrt(dx * dx + dy * dy);
-
+          const distance = Math.sqrt(dx * dx + dy *,  dy);
           if (distance < 100) {
             ctx.beginPath();
             ctx.moveTo(particle.x, particle.y);
             ctx.lineTo(otherParticle.x, otherParticle.y);
+            ctx.strokeStyle = `rgba(59, 130, 246, ${0.1 * (1 - distance / 100)})`;`
+            ctx.lineWidth = 0.5;
             ctx.strokeStyle = `rgba(59, 130, 246, ${0.1 * (1 - distance / 100)})`;
             ctx.lineWidth = 1;
             ctx.stroke();
           }
         });
       });
+      animationId = requestAnimationFrame(animate);
 
       animationRef.current = requestAnimationFrame(animate);
     };
@@ -146,19 +164,16 @@ const ParticleBackground: React.FC = () => {
       }
       requestAnimationFrame(animate);
     };
-
     animate();
-
     return () => {
       window.removeEventListener('resize', resizeCanvas);
     };
-  }, []);
-
+  }, []);,
   return (
     <canvas
       ref={canvasRef}
-      className="fixed inset-0 pointer-events-none z-0"
-      style={{ background: 'transparent' }}
+      className="fixed inset-0 pointer-events-none z-0""
+      style={{ background: 'transparent' }}'
     />
   );
 };

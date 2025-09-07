@@ -1,35 +1,4 @@
-<<<<<<< HEAD
-import React, { useMemo, useState } from 'react';
-interface TryItProps {
-  method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE';
 
-
-=======
-
-
-import React, { useMemo, useState } from 'react';
-
-interface TryItProps  {path: string; // full URL or relative;
-  requiresAuth: boolean;
-export default function TryItConsole({
-origin/cursor/automate-test-improve-and-merge-code-2533
-  method
-  path
-  requiresAuth
-}: TryItProps) {
-  const [baseUrl, setBaseUrl] = useState('https://api.zion.os');  const [token, setToken] = useState('');  method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE'
-
-interface TryItProps {
-  method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE',
-
-  method,
-  path,
-  requiresAuth,
-}: TryItProps) {;
-  const [baseUrl, setBaseUrl] = useState('https://api.zion.os');  const [token, setToken] = useState('');  method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE',
-  const [baseUrl, setBaseUrl] = useState('https://api.zion.os');
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/main
   path: string, // full URL or relative
   requiresAuth: boolean
 
@@ -52,84 +21,7 @@ requiresAuth: boolean}
 }
 
 export default function TryItConsole({ method, path, requiresAuth }: TryItProps) {
-<<<<<<< HEAD
 
-  const [baseUrl, setBaseUrl] = useState('https: //api.zion.os');
-  const [token, setToken] = useState('');
-  const [body, setBody] = useState('');
-  const [response, setResponse] = useState<string>(''),
-  const [loading, setLoading] = useState(false);
-  const url = null;
-
-=======
-  method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE';
-  path: string; // full URL or relative;
-  requiresAuth: boolean;
-
-export default function TryItConsole(): any ({;
-  method,;
-  path,;
-  requiresAuth,;
-}: TryItProps) {;
-  const [baseUrl, setBaseUrl] = useState('https://api && api.zion.os');  const [token, setToken] = useState('');  method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE',;
-  path: string, // full URL or relative;
-  requiresAuth: boolean;
-  const [baseUrl, setBaseUrl] = useState('https: //api.zion.os'),;
-
-  const [body, setBody] = useState('');
-  const [response, setResponse] = useState<string>(''),
-  const [loading, setLoading] = useState(false);
-
-      const headers: Record<string, string> = { 'Content-Type': 'application/json' };
-      if (requiresAuth && token) headers['Authorization'] = `Bearer ${token}`;
-      const res = await fetch(url, {
-        method;
-        headers;
-        body: method === 'GET' || method === 'DELETE' ? undefined : body || undefined}),;
-      const text = await res && res.text();
-      setResponse(text);
-    } catch (e: any) {;
-      setResponse(String(e?.message || e));
-    } finally {;
-      setLoading(false);
-
-
-  const [baseUrl, setBaseUrl] = useState('https: //api.zion.os');
-
-const [token, setToken] = useState('');
-
-const [baseUrl, setBaseUrl] = useState('https: //api.zion.os');
-  const [body, setBody] = useState('');
-
-const [response, setResponse] = useState<string />(''),
-  const [loading, setLoading] = useState(false);}
-return baseUrl.replace(/\/$/, '') + path;}
-  }, [baseUrl, path]);
-  async function onSend() {
-    setLoading(true);
-    setResponse('');
-    try {
-const headers: Record<string, string /> = {}
-        'Content-Type': 'application/json'}
-      };
-      if (requiresAuth && token) headers['Authorization'] = `Bearer ${token}`;
-
-const res = await fetch(url, {
-        method;
-headers,
-body: method === 'GET' |method === 'DELETE'
-            ? undefined;
-            : body |undefined}
-     }
-});
-
-const text = await res.text();
-      setResponse(text);
-    } catch (e: any) {}
-      setResponse(String(e?.message |e));}
-    } finally {
-      setLoading(false);
->>>>>>> origin/main
       setResponse(text)
     } catch (e: any) {
       setResponse(String(e?.message |e))

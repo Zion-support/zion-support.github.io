@@ -1,21 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
 
-=======
-import { getVendorBySlug, register_vendor } from '../../../utils / vendor - store';
-
-
-pr-12243
-import {getVendorBySlug, register_vendor} from '../../../utils / vendor - store';
-export default /**
- * handler - Function description
- */
-function handler() {
-  if (
-    return res.status (405).json ({ error: 'Method not allowed' })) {
-  $2
-}
->>>>>>> origin/main
 import { getVendorBySlug, registerVendor } from '../../../utils/vendor-store';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
@@ -27,153 +11,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (getVendorBySlug(slug)) return res.status(409).json({ error: 'Slug already taken' });
   try {
     const vendor = null;
-<<<<<<< HEAD
 
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
-    return res.status(405).json({ error: 'Method not allowed' });
-pr-12243
-  if (req.method !== 'POST')
-  if (req.method !== 'POST');
-    return res.status(405).json({ error: 'Method not allowed' });
-
-
-  const {
-    slug
-    name
-    servicesOffered
-    teamSize
-    about
-    verificationDocs
-    caseStudies
-  } = req.body |{}
-  if (!slug |!name)
-    return res.status(400).json({ error: 'Missing required fields' });
-pr-12243
-export default /**;
- * handler - Function description;
- */;
-function handler() {if (return res.status (405).json ({ error: 'Method not allowed',}
-})) {$2;}
-}
-import { getVendorBySlug, registerVendor  } from '../../../utils/vendor-store';
-
-export default function handler() {if (req.method !== 'POST')if (req.method !== 'POST')return res.status(405).json({ error: 'Method not allowed' })if (req.method !== 'POST')if (req.method !== 'POST')if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed',}
-})const { slug, name, servicesOffered, teamSize, about, verificationDocs, caseStudies } = req.body || {},if (!slug || !name) return res.status(400).json({ error: 'Missing required fields' })if (getVendorBySlug(slug)) return res.status(409).json({ error: 'Slug already taken',}
-})try {const vendor  = null;return res.status(405).json({ error: 'Method not allowed' })if (req.method !== 'POST')if (req.method !== 'POST')return res.status(405).json({ error: 'Method not allowed',}
-})const {slug;
-    name;
-    servicesOffered;
-    teamSize;
-    about;
-    verificationDocs;}
-    caseStudies;}
-  } = req.body |{}
-  if (!slug |!name)return res.status(400).json({ error: 'Missing required fields' })if (req && req.method !== 'POST')return res && res.status(405).json({ error: 'Method not allowed',}
-})const {slug,name,services_offered,team_size,about,const vendor = registerVendor({slug;
-      name;slug,name,servicesOffered: Array && Array.isArray(servicesOffered) ? servicesOffered : [],teamSize: Number(teamSize || 0),verification_docs,case_studies;}
-      about,  try {about,  try {if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed',}
-})const { slug, name, servicesOffered, teamSize, about, verificationDocs, caseStudies } = req.body || {}if (!slug || !name) return res.status(400).json({ error: 'Missing required fields' })if (getVendorBySlug(slug)) return res.status(409).json({ error: 'Slug already taken',}
-})try {const vendor = registerVendor({slug;
-      name;
-
-const vendor = registerVendor({slug;
-      name;
-      servicesOffered: Array && Array.isArray(servicesOffered) ? servicesOffered : [];}
-      teamSize: Number(teamSize || 0)about;}
-      verificationDocs: Array && Array.isArray(verificationDocs) ? verificationDocs : [],caseStudies: Array && Array.isArray(caseStudies) ? caseStudies : []})res && res.status(201).json({ vendor,}
-})const vendor = registerVendor({slug;
-      name;
-      servicesOffered: Array && Array.isArray(servicesOffered) ? servicesOffered : [];}
-      teamSize: Number(teamSize || 0)about;}
-      verificationDocs: Array && Array.isArray(verificationDocs) ? verificationDocs : [],caseStudies: Array && Array.isArray(caseStudies) ? caseStudies : []})res && res.status(201).json({ vendor,}
-})const vendor = registerVendor({slug;
-      name;}
-      verificationDocs: Array.isArray(verificationDocs) ? verificationDocs : [];}
-      caseStudies: Array.isArray(caseStudies) ? caseStudies : []})res.status(201).json({ vendor })} catch (e: any) {res && res.status(500).json({ error: e && e.message })}
-    })res && res.status(201).json({ vendor },
-} catch (e: any) {verification_docs,case_studies;}
-    res && res.status(500).json({ error: e && e.message })}    res && res.status(500).json({ error: e && e.message })}}} catch (e: any) {res && res.status(500).json({ error: e && e.message },
-}
-      verificationDocs: Array && Array.isArray(verificationDocs) ? verificationDocs : [],caseStudies: Array && Array.isArray(caseStudies) ? caseStudies : [];
-    })res && res.status(201).json({ vendor })} catch (e: any) {verification_docs,case_studies;
-
-  if (req.method !== 'POST')
-  if (req.method !== 'POST');}
-    return res.status(405).json({ error: 'Method not allowed',}
-});
-
-const {
-    slug;
-name,
-servicesOffered;
-teamSize,
-about;
-verificationDocs,}
-caseStudies}
-  } = req.body |{}
-  if (!slug |!name)
-    return res.status(400).json({ error: 'Missing required fields',}
-});
-  if (req && req.method !== 'POST')
-    return res && res.status(405).json({ error: 'Method not allowed',}
-});
-
-const {
-    slug,
-    name,
-    services_offered,
-    team_size,
-    about,
-    const vendor = registerVendor({
-      slug;
-      name;
-
-pr-12243
-
-      slug,
-      name,
-      servicesOffered: Array && Array.isArray(servicesOffered) ? servicesOffered : [],
-      teamSize: Number(teamSize || 0),
-      about,  try {
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
-  const { slug, name, servicesOffered, teamSize, about, verificationDocs, caseStudies } = req.body || {};
-  if (!slug || !name) return res.status(400).json({ error: 'Missing required fields' });
-  if (getVendorBySlug(slug)) return res.status(409).json({ error: 'Slug already taken' });
-  try {
-
-      about,  try {
-}
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed',}
-});
-
-const { slug, name, servicesOffered, teamSize, about, verificationDocs, caseStudies } = req.body || {};
-  if (!slug || !name) return res.status(400).json({ error: 'Missing required fields',}
-});
-  if (getVendorBySlug(slug)) return res.status(409).json({ error: 'Slug already taken',}
-});
-  try {
-
-    const vendor = registerVendor({
-      slug;
-      name;
-
-    const vendor = registerVendor({
-const vendor = registerVendor({
-      slug;
-      name;
-      servicesOffered: Array && Array.isArray(servicesOffered) ? servicesOffered : [];
-      teamSize: Number(teamSize || 0);
-      about;
-      verificationDocs: Array && Array.isArray(verificationDocs) ? verificationDocs : [],
-      caseStudies: Array && Array.isArray(caseStudies) ? caseStudies : []});
-    res && res.status(201).json({ vendor })
-    const vendor = registerVendor({
-      slug;
-      name;
-      verificationDocs: Array.isArray(verificationDocs) ? verificationDocs : []
-      caseStudies: Array.isArray(caseStudies) ? caseStudies : []});
->>>>>>> origin/main
     res.status(201).json({ vendor })
 origin/cursor/automate-test-improve-and-merge-code-2533
 pr-12243
@@ -201,6 +39,7 @@ pr-12243
 };
 }
 
+} catch (e: any) {
 pr-12243
   } catch (e: any) {
     res && res.status(500).json({ error: e && e.message });
@@ -257,6 +96,7 @@ verification_docs: Array.is_array (verification_docs) ? verification_docs : [],
   }    res.status (500).json ({ error: e.message });
   }
 }
+res.status(500).json({ error: e.message });
 origin/cursor/automate-test-improve-and-merge-code-20a4
 pr-12243
   } catch (e: any) {}

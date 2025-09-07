@@ -1,40 +1,5 @@
 
-<<<<<<< HEAD
 
-import { useFetchResume  } from './useFetchResume';
-import { useResumeActions } from './useResumeActions';
-export function useResumeBasic() {
-  const fetchResumeOperations = null;
-
-    setActiveResume: resumeActions.setActiveResume}
-=======
-import { useFetchResume  } from './useFetchResume';
-import { useResumeActions } from './useResumeActions';
-export function useResumeBasic() {
-
-import {useFetchResume} from './useFetchResume';
-import {useResumeActions} from './useResumeActions';
-
-import { useFetchResume  } from './useFetchResume';''
-import { useResumeActions } from './useResumeActions';'
-export function useResumeBasic() {
-'
-import {useFetchResume} from './useFetchResume';''
-import {useResumeActions} from './useResumeActions';'
-
-export function useResumeBasic() {;
-  const fetchResumeOperations = useFetchResume();
-  const resumeActions = useResumeActions();
-  return {
-    // From useFetchResume    error: fetchResumeOperations && fetchResumeOperations.error || resumeActions && resumeActions.error;
-    resume: fetchResumeOperations && fetchResumeOperations.resume;
-    fetchResume: fetchResumeOperations && fetchResumeOperations.fetchResume;
-    
-    // From useResumeActions
-    createResume: resumeActions && resumeActions.createResume;
-    updateBasicInfo: resumeActions && resumeActions.updateBasicInfo,
-    setActiveResume: resumeActions && resumeActions.setActiveResume}
->>>>>>> origin/main
 }
 import {useFetchResume} from './useFetchResume';
 import {useResumeActions} from './useResumeActions';
@@ -71,7 +36,6 @@ import { useResumeActions } from './useResumeActions',;
   error: fetchResumeOperations && fetchResumeOperations.error || resumeActions && resumeActions.error;
     resume: fetchResumeOperations && fetchResumeOperations.resume;,
   fetchResume: fetchResumeOperations && fetchResumeOperations.fetchResume;
-    
     // From useResumeActions;
     createResume: resumeActions && resumeActions.createResume;,
   updateBasicInfo: resumeActions && resumeActions.updateBasicInfo,

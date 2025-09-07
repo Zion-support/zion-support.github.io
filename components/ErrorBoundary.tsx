@@ -1,3 +1,6 @@
+
+
+
 main
 pr-12243
 'use client';
@@ -477,6 +480,10 @@ export default class ErrorBoundary extends Component<Props, State> {
                 </pre>
               </details>
             )}
+
+
+
+
           </div>;
     // Log the error to an error reporting service;
     console && console.error('ErrorBoundary caught an error: ';, error, errorInfo);
@@ -519,6 +526,7 @@ pr-12243
         )
       );
     }
+
 
     return this.props.children;
   }
@@ -689,6 +697,8 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" ;});
   }
 }
+
+
 main
 pr-12243
     return this.props.children;

@@ -49,7 +49,6 @@ export default function Placeholder() {
 }
 ;
 
-
     <main className="min-h-screen p-8">;
       <Head>;
         <title>Reports • Seo • Index && Index.html - Placeholder</title>;

@@ -4,10 +4,7 @@
 }`;
 
 const { upsertFile } = require('./_lib/github');
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/main
 async function fetchJson(url, token) {
   const resp = await fetch(url, {
     headers: token ? { 'Authorization': `token ${token}`, 'Accept': 'application/vnd.github+json' } : {}
@@ -15,10 +12,7 @@ async function fetchJson(url, token) {
   if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
   return resp.json()
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/main
 
   const resp = await fetch(url, {
     headers: token
@@ -186,13 +180,7 @@ pr-12325
     const since = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000).toISOString();
     const commitsUrl = `https://api.github.com/repos/${owner}/${repo}/commits?since=${encodeURIComponent(since)}`;
     const commits = await fetchJson(commitsUrl, token);
-<<<<<<< HEAD
 
-    const byAuthor = {},
-
-=======
-    const byAuthor = {},
->>>>>>> origin/main
     const messages = [],
     for (const c of commits) {
       const author = c.commit?.author?.name || c.author?.login || 'unknown',
@@ -273,13 +261,4 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   } catch (e) {
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
   }
-<<<<<<< HEAD
 
-};
-
-=======
-};
-origin/cursor/automate-test-improve-and-merge-code-2533
-pr-12325
-'
->>>>>>> origin/main

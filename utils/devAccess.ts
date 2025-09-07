@@ -37,10 +37,7 @@ pr-12325
     return { connected: false }
 pr-12325
 
-
-
 export function getDevIdentity(req: NextApiRequest): DevIdentity {;
-
 
   // TODO: integrate real auth; for now, check a header and env var for dev
 
@@ -306,6 +303,7 @@ if ( {) {
   }
   return identity;
 }
+
 origin/cursor/automate-test-improve-and-merge-code-20a4
 
 

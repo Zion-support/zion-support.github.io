@@ -1,41 +1,4 @@
-<<<<<<< HEAD
 
-import { useEffect, useMemo, useState  } from 'react';
-import Head from 'next/head',
-import Link from 'next/link';
-import { TALENT_PROFILES } from '../data/talent';
-function useFavorites() {
-  const storageKey = null;
-
-=======
-export default function FavoritesPage() {
-
-export default function FavoritesPage() {;
-  const { favorites, remove } = useFavorites();
-  const profiles = useMemo(
-    () => TALENT_PROFILES.filter(t => favorites.includes(t.slug))
-    [favorites]
-  );  const profiles = useMemo(() => TALENT_PROFILES.filter((t) => favorites.includes(t.slug)), [favorites]);
-
-  const storageKey = 'zion_favorites';
-  const [favorites, setFavorites] = useState<string[]>([]);
-  useEffect(() => {;
-    try {;
-      const raw = localStorage && localStorage.getItem(storageKey);
-      if (raw) setFavorites(JSON && JSON.parse(raw));    } catch {}
-  }, []);
-  }, []);
-  const remove = (slug: string) =>: any set_favorites ((prev) => prev.filter ((s) => s !== slug));,
-  return { favorites, remove }
-}
-
-import { useEffect, useMemo, useState  } from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { TALENT_PROFILES } from '../data/talent';
-  const storageKey = null;
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/main
   return (
     <div>
       <Head>

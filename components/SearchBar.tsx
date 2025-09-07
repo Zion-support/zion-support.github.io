@@ -193,6 +193,8 @@ const SearchBar: React.FC = () => {
 
 export default SearchBar;
 interface SearchResult {
+  title: string, description: string
+  url: string, type: 'service' | 'page' | 'category'
   title: string;, description: string
   url: string;, type: 'service' | 'page' | 'category'
 pr-12243
@@ -383,6 +385,7 @@ origin/cursor/analyze-improve-and-deploy-application-0a01
   );
 };
 
+export default SearchBar;
 export default SearchBar;
 main
 pr-12243

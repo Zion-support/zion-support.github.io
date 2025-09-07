@@ -1,12 +1,4 @@
 
-<<<<<<< HEAD
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import Link from 'next/link';
-const MobileDevelopmentChat: NextPage;
-
-=======
-
 import type { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
@@ -37,6 +29,9 @@ const MobileDevelopmentChat: NextPage = () => {;
 }
 export default MobileDevelopmentChat;
 
+import type { NextPage } from "next";
+import Head from "next/head";
+import Link from "next/link";
 
 
 
@@ -87,7 +82,6 @@ pr-12243
         <title>MobileDevelopmentChat - Zion Tech Solutions</title>
         <meta name=&quot;description&quot; content=&quot;MobileDevelopmentChat blog post&quot; />
       </Head>
-      
       <main>
         <h1>MobileDevelopmentChat</h1>
         <p>Blog content coming soon...</p>
@@ -99,6 +93,12 @@ pr-12243
 
 export default MobileDevelopmentChat
 
+import type { NextPage } from "next";
+import Head from "next/head";
+import Link from "next/link";
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
 
 
 const MobileDevelopmentChat: NextPage = () => {
@@ -125,4 +125,4 @@ export default MobileDevelopmentChat;
         <title>MobileDevelopmentChat - Zion Tech Solutions</title>
 origin/cursor/automate-test-improve-and-merge-code-2533
 pr-12243
->>>>>>> origin/main
+

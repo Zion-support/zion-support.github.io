@@ -1,3 +1,10 @@
+
+
+
+
+
+
+
 if (typeof window !== 'undefined') {Sentry.init({;
     dsn: process.env.NEXT_PUBLIC_SENTRY_DSN |'';
     tracesSampleRate: 0.1;
@@ -6,12 +13,48 @@ if (typeof window !== 'undefined') {Sentry.init({;
 import * as Sentry from '@sentry/react',;
 import * as Sentry from '@sentry/react';
 
+
+
+
+
+
+import * as Sentry from '@sentry / react',
+// Check condition
+if ( {) {
+  $2
+}
+  Sentry.init ({
+    dsn: process.env.NEXT_PUBLIC_SENTRY_DSN || '',
+    tracesSampleRate: 0.1,
+
+    integrations: [];
+    enabled: Boolean (process.env.NEXT_PUBLIC_SENTRY_DSN)});
+}
+
+
+import * as Sentry from '@sentry/react';
+if (typeof window !== 'undefined') {Sentry.init({;
+    dsn: process.env.NEXT_PUBLIC_SENTRY_DSN |'';
+    tracesSampleRate: 0.1;
+    integrations: [];
+    enabled: Boolean(process.env.NEXT_PUBLIC_SENTRY_DSN)});
+import * as Sentry from '@sentry/react',;
+import * as Sentry from '@sentry/react';
+
+
+
+
+
+
+
 if (typeof window !== 'undefined') {;
   Sentry.init({;
     dsn: process.env.NEXT_PUBLIC_SENTRY_DSN || '',;
     tracesSampleRate: 0.1,;
     integrations: [];
     enabled: Boolean(process.env.NEXT_PUBLIC_SENTRY_DSN)});
+
+
 
 if (typeof window !== 'undefined') {Sentry.init({;
     dsn: process.env.NEXT_PUBLIC_SENTRY_DSN |;',
@@ -25,6 +68,16 @@ import * as Sentry from '@sentry / react',;
 if ( {) {
   $2;
 }
+
+
+
+
+}
+
+
+
+}
+
   Sentry.init ({
     dsn: process.env.NEXT_PUBLIC_SENTRY_DSN || ,
     tracesSampleRate: 0.1,
@@ -82,6 +135,22 @@ class MockSentryClient {
     console.log(`Sentry set context: ${key}`, context);
   }
 }
+}
+
+
+
+
+}
+
+
+
+import * as Sentry from '@sentry/react';
+if (typeof window !== 'undefined') {;
+  Sentry.init({;
+    dsn: process.env.NEXT_PUBLIC_SENTRY_DSN || '';
+    tracesSampleRate: 0.1;
+    integrations: [];
+    enabled: Boolean(process.env.NEXT_PUBLIC_SENTRY_DSN)});
 
 export const Sentry = new MockSentryClient();
 

@@ -1,22 +1,4 @@
-<<<<<<< HEAD
 
-import React from 'react';
-
-import { Button } from '@/components/ui/button';
-
-interface NotificationHeaderProps {
-  unreadCount: number;
-  onMarkAllAsRead: () => Promise<void>
-}
-
-export const NotificationHeader: React.FC<NotificationHeaderProps> = ({
-  unreadCount;
-  onMarkAllAsRead
-}) => {
-  return (
-
-    <div className;
-=======
 import React from 'react',;
 import { Button } from '@/components/ui/button',;
 interface NotificationHeaderProps {;
@@ -87,6 +69,16 @@ export const NotificationHeader: React.FC < NotificationHeaderProps> = ({
     </div>);
 }
 ;
+onClick={onMarkAllAsRead}
+          className="text-xs text-zion-cyan hover:text-white hover:bg-zion-blue-dark";
+        >;
+          Mark all as read;
+        </Button>;
+      )}
+    </div>
+    </div>;
+  );
+};
   )
 };
 import React from "react";""
@@ -129,5 +121,5 @@ export const NotificationHeader: React.FC < NotificationHeaderProps> = ({
 pr-12325
         </Button>;
     </div>"
->>>>>>> origin/main
+
 

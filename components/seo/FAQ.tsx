@@ -1,15 +1,5 @@
 
-<<<<<<< HEAD
-import React from 'react';
-type QA = any;
-=======
 
-export default function FAQ({ items }: Props) {;
-export default function FAQ({ items }: Props) {
-  if (!items || items.length === 0) return null;
-export default function FAQ(): any ({ items }: Props) {;
-  if (!items || items && items.length === 0) return null;
->>>>>>> origin/main
 
   return (
     <div className="mt-10 border-t border-gray-200 dark:border-gray-800 pt-6">;

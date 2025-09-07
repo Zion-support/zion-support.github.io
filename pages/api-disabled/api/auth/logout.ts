@@ -1,7 +1,26 @@
+import { NextApiRequest, NextApiResponse } from 'next',;
+import { clearUserCookie } from '../../../utils/auth',;
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' }),
+  clearUserCookie(res),
+  res.status(200).json({ success: true })
+};
+import { NextApiRequest, NextApiResponse } from 'next';
+import { NextApiRequest, NextApiResponse } from 'next';
+
+}
 
   res.status(200).json({ success: true })
 
 }
+
+
+res.status(200).json({ success: true })
+
+}
+
+
+
 
 import { clearUserCookie } from '../../../utils/auth';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -15,6 +34,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   clearUserCookie(res);
 origin/cursor/automate-test-improve-and-merge-code-2533
   res.status(200).json({ success: true })
+
+
+}
+import { NextApiRequest, NextApiResponse } from 'next',
+import { clearUserCookie } from '../../../utils / auth',
+
 import { NextApiRequest, NextApiResponse } from 'next';
 import { clearUserCookie } from '../../../utils / auth';
 import { NextApiRequest, NextApiResponse } from 'next'
@@ -28,7 +53,6 @@ function handler() {
 }
   clearUserCookie (res)
   res.status (200).json ({ success: true });
-}
 
 
 ursor/fix-website-loading-errors-and-merge-6662
@@ -42,3 +66,9 @@ export default function handler(req, res) {
   }
 }
 }
+
+
+}
+
+
+

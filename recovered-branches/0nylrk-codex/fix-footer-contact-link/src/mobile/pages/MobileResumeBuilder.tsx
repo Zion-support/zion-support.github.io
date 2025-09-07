@@ -1,16 +1,4 @@
-<<<<<<< HEAD
 
-
-import React from "react",
-import { MobileHeader } from "../components/common/MobileHeader",
-import { BottomNavigation } from "../components/common/BottomNavigation";
-import { MobileResumeBuilder as ResumeBuilderComponent } from "../components/resume/MobileResumeBuilder";
-=======
-import React from "react";
-import {MobileHeader} from "../components/common/MobileHeader";
-import {BottomNavigation} from "../components/common/BottomNavigation";
-import {MobileResumeBuilder, as, ResumeBuilderComponent} from "../components/resume/MobileResumeBuilder";
->>>>>>> origin/main
 
 export function MobileResumeBuilder() {
   return (
@@ -18,6 +6,13 @@ export function MobileResumeBuilder() {
       <MobileHeader
         title="Resume Builder"
         showBack
+
+import React from "react",
+import { MobileHeader } from "../components/common/MobileHeader",
+import { BottomNavigation } from "../components/common/BottomNavigation";
+import { MobileResumeBuilder as ResumeBuilderComponent } from "../components/resume/MobileResumeBuilder";
+import { BottomNavigation } from "../components/common/BottomNavigation",
+import { MobileResumeBuilder as ResumeBuilderComponent } from "../components/resume/MobileResumeBuilder",
 import React from "react",;
 import { MobileHeader } from "../components/common/MobileHeader",;
 import { BottomNavigation } from "../components/common/BottomNavigation";
@@ -64,6 +59,20 @@ function MobileResumeBuilder() {
     </div>);
 }
 
+;
+
+;
+import React from "react",;
+import { MobileHeader } from "../components/common/MobileHeader",;
+import { BottomNavigation } from "../components/common/BottomNavigation",;
+import { MobileResumeBuilder as ResumeBuilderComponent } from "../components/resume/MobileResumeBuilder",;
+;
+export function MobileResumeBuilder() {;
+  return (;
+    <div className="min-h-screen">;
+      <MobileHeader;
+        title="Resume Builder";
+        showBack;
 import React from "react";""
 import { MobileHeader } from "../components/common/MobileHeader";""
 import { BottomNavigation } from "../components/common/BottomNavigation";"
@@ -112,6 +121,14 @@ import { MobileResumeBuilder as ResumeBuilderComponent } from "../components/res
       </main>;
 
       <BottomNavigation />;
+    </div>;
+  ),;
+} export function MobileResumeBuilder () {
+  return (<div className="min-h-screen" > Resume Builder"showBack /> <main className=" py-4" > <ResumeBuilderComponent /> </main> <BottomNavigation /> </div> 
+}
+;
+}
+;
 )
     </div>);"
         showBack;

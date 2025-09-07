@@ -1,11 +1,5 @@
 
-<<<<<<< HEAD
-import React from 'react',
 
-=======
-
-import React from 'react';
->>>>>>> origin/main
 import SEO from '../components/SEO';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 

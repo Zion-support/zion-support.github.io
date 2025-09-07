@@ -2,8 +2,6 @@
 import { useTheme } from "@/hooks/useTheme";
 interface ChatMessageProps {;
 interface ChatMessageProps {
-  message: string;
-  isUser: boolean;
 
 }
 

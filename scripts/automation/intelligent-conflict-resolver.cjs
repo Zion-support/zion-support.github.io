@@ -45,26 +45,7 @@ class $1 {}
       if (conflictFiles.length === 0) {}"
   this.log("No merge conflicts detected");"
         return []};
-<<<<<<< HEAD
-      if (conflictFiles.length === 0) {");}""
-        this.log("No merge conflicts detected");");""`;
-        return [];")}`);"`;
-this.log(Found ${conflictFiles.length} files with merge conflicts`);"`;
-      return conflictFiles} catch (error) {  this.log(`Failed to check for "conflicts": ${error.message  }`, "ERROR");"
-;`;
-  async analyzeConflictFile(filePath) {this.log(`Analyzing conflict in ${filePath}`);
-=======
-;"
-      if (conflictFiles.length === 0) {");}
-        this.log("No merge conflicts detected");");
-        return [];")}`);"
-this.log(Found ${conflictFiles.length} files with merge conflicts`);"
-      return conflictFiles} catch (error) {  this.log(`Failed to check for "conflicts": ${error.message  }, "ERROR");"
-      return []};
-  };
-;
-  async analyzeConflictFile(filePath) {this.log(`Analyzing conflict in ${filePath});
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
     try {}"
   const content = fs.readFileSync(filePath, "utf8");"
       const conflictMarkers = this.extractConflictMarkers(content);
@@ -81,14 +62,7 @@ this.log(Found ${conflictFiles.length} files with merge conflicts`);"
   analysis.recommendations = this.generateResolutionStrategy(;)
           conflictMarkers,
           filePath;
-<<<<<<< HEAD
-;"`;
-      return analysis} catch (error) {  this.log(`Failed to analyze ${filePath  }: ${error.message}`, "ERROR");""
-=======
-        )};
-;"
-      return analysis} catch (error) {  this.log(`Failed to analyze ${filePath  }: ${error.message}, "ERROR");
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
       return { "type": "error", "resolvable": false, "error": error.message };"
   extractConflictMarkers(content) {}
   const markers = [];"
@@ -104,11 +78,7 @@ this.log(Found ${conflictFiles.length} files with merge conflicts`);"
         for (let j = i + 1; j < lines.length; j++) {}"
   if (lines[j].startsWith()) {}"
   // Find the separator;
-<<<<<<< HEAD
-=======
-        for (let j = i + 1; j < lines.length; j++) {}"
-  if (lines[j].startsWith()) {}"
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
   marker.separator = j;
             break};
         // Find the end marker;
@@ -145,50 +115,18 @@ this.log(Found ${conflictFiles.length} files with merge conflicts`);"
       startContent.includes("package.json") ||;
       endContent.includes("package.json");"
   isLockFileConflict(startContent, endContent) {}
-<<<<<<< HEAD
-      startContent.includes("package-lock.json") ||;""
-=======
-  return (;)"
-      startContent.includes("package-lock.json") ||;
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
       endContent.includes("yarn.lock");"
   isConfigFileConflict(startContent, endContent) {}
-<<<<<<< HEAD
-      startContent.includes("tsconfig") ||;""
-      startContent.includes("vite.config") ||;""
-      startContent.includes("webpack.config") ||;""
-=======
-  return (;)"
-      startContent.includes("tsconfig") ||;
-      startContent.includes("vite.config") ||;
-      startContent.includes("webpack.config") ||;
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
       startContent.includes("eslint");"
   isComponentConflict(startContent, endContent) {}
-<<<<<<< HEAD
-      startContent.includes("React") ||;""
-      startContent.includes("useState") ||;""
-      startContent.includes("useEffect") ||;""
-=======
-  return (;)"
-      startContent.includes("React") ||;
-      startContent.includes("useState") ||;
-      startContent.includes("useEffect") ||;
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
       startContent.includes("className");"
   isImportConflict(startContent, endContent) {}"
   return startContent.includes("import ") || startContent.includes("export ")};"
   isStyleConflict(startContent, endContent) {}
-<<<<<<< HEAD
-      startContent.includes("className") ||;""
-      startContent.includes("style=") ||;""
-      startContent.includes("css") ||;""
-=======
-  return (;)"
-      startContent.includes("className") ||;
-      startContent.includes("style=") ||;
-      startContent.includes("css") ||;
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
       startContent.includes("tailwind");"
   canAutoResolve(markers) {}
   // Can auto-resolve package.json, lock files, and some config conflicts;"
@@ -206,47 +144,11 @@ this.log(Found ${conflictFiles.length} files with merge conflicts`);"
           break;"
         case "lock-file":;
           strategies.push("Regenerate lock file by running npm install");"
-<<<<<<< HEAD
-        case "config-file":;""
-          strategies.push(Merge configuration options, preferring development settings";)"
-        case "component":;""
-          strategies.push(Manual review required - merge component logic carefully";)"
-        case "import":;""
-          strategies.push("Consolidate imports, removing duplicates");"
-        case "style":;""
-          strategies.push("Merge style classes, avoiding conflicts");"
-        "default": ;""
-=======
-          break;"
-        case "config-file":;
-          strategies.push(Merge configuration options, preferring development settings";)"
-          );
-          break;"
-        case "component":;
-          strategies.push(Manual review required - merge component logic carefully";)"
-          );
-          break;"
-        case "import":;
-          strategies.push("Consolidate imports, removing duplicates");"
-          break;"
-        case "style":;
-          strategies.push("Merge style classes, avoiding conflicts");"
-          break;"
-        "default": ;
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
           strategies.push("Manual review required")};"
     }
     return strategies};
-<<<<<<< HEAD
-  async autoResolveConflict(filePath, analysis) {this.log(`Attempting to auto-resolve conflict in ${filePath}`);
-=======
-;
-  async autoResolveConflict(filePath, analysis) {this.log(`Attempting to auto-resolve conflict in ${filePath});
-    try {}"
-  const content = fs.readFileSync(filePath, "utf8");"
-    try {}"
-  const content = fs.readFileSync(filePath, "utf8");"
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
       let resolvedContent = content;
       analysis.markers.forEach(marker => {})
   case "package-json":;"
@@ -257,27 +159,7 @@ this.log(Found ${conflictFiles.length} files with merge conflicts`);"
             resolvedContent = this.resolveLockFileConflict(;)
           case "config-file":;"
             resolvedContent = this.resolveConfigFileConflict(;)
-<<<<<<< HEAD
-            break;"`;
-          "default": this.log(`Cannot auto-resolve ${type} conflict in ${filePath}`)};"
-      if (resolvedContent !== content) {}`;
-  fs.writeFileSync(filePath, resolvedContent);this.log(`Auto-resolved conflict in ${filePath}`);
-        return true};
-      return false} catch (error) {  this.log(`Failed to auto-resolve ${filePath  }: ${error.message}`, "ERROR");"
-=======
-              resolvedContent,
-              marker;
-            );
-            break;"
-          "default": this.log(`Cannot auto-resolve ${type} conflict in ${filePath})};"
-      }
-});
-      if (resolvedContent !== content) {}
-  fs.writeFileSync(filePath, resolvedContent);this.log(`Auto-resolved conflict in ${filePath});
-        return true};
-;"
-      return false} catch (error) {  this.log(`Failed to auto-resolve ${filePath  }: ${error.message}, "ERROR");"
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
       return false};
   resolvePackageJsonConflict(content, marker) {}"
   // Simple "strategy": take the version with more dependencies;
@@ -285,17 +167,7 @@ this.log(Found ${conflictFiles.length} files with merge conflicts`);"
     const endSection = this.getConflictSection(content, marker, "end");"
   const startJson = JSON.parse(startSection);
       const endJson = JSON.parse(endSection);
-<<<<<<< HEAD
-  // Simple "strategy": take the version with more dependencies;""
-=======
-  resolvePackageJsonConflict(content, marker) {}"
-  // Simple "strategy": take the version with more dependencies;
-    const startSection = this.getConflictSection(content, marker, "start");
-    const endSection = this.getConflictSection(content, marker, "end");"
-    try {}
-  const startJson = JSON.parse(startSection);
-      const endJson = JSON.parse(endSection);
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
       // Merge dependencies, preferring higher versions;
       const merged = { ...startJson };
       if (endJson.dependencies) {}
@@ -308,45 +180,24 @@ this.log(Found ${conflictFiles.length} files with merge conflicts`);"
           ...endJson.devDependencies};
       return content.replace(;)
         this.getConflictRange(content, marker),
-<<<<<<< HEAD
-        JSON.stringify(merged, null, 2);"`;
-      )} catch (error) {  this.log(`Failed to parse package."json": ${error.message  }`, "WARN");"
-=======
-        JSON.stringify(merged, null, 2);"
-      )} catch (error) {  this.log(`Failed to parse package."json": ${error.message  }, "WARN");"
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
       return content};
   resolveLockFileConflict(content, marker) {}
   // For lock files, suggest regeneration;"
     this.log("Lock file conflict detected - recommend running npm install");"
   resolveConfigFileConflict(content, marker) {}
   // For config files, prefer development settings;"
-<<<<<<< HEAD
-    const endSection = this.getConflictSection(content, marker, "end");""
-=======
-    const startSection = this.getConflictSection(content, marker, "start");
-    const endSection = this.getConflictSection(content, marker, "end");
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
     // Simple "strategy": take the section with more configuration options;"
     if (startSection.length > endSection.length) {}
         startSection;
       )} else {}
         endSection;
   getConflictSection(content, marker, side) {}"
-<<<<<<< HEAD
-  const lines = content.split("\n");""
-  return lines.slice(marker.start + 1, marker.separator).join("\n")} else {}""
-=======
-  const lines = content.split("\n");
-    if (side === "start") {}
-  return lines.slice(marker.start + 1, marker.separator).join("\n")} else {}
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
   return lines.slice(marker.separator + 1, marker.end).join("\n")};"
   getConflictRange(content, marker) {}"
-<<<<<<< HEAD
-=======
-  const lines = content.split("\n");
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
     return lines.slice(marker.start, marker.end + 1).join("\n")};"
   async generateConflictReport(conflicts) {}"
   this.log("Generating conflict resolution report...");"
@@ -360,30 +211,7 @@ this.log(Found ${conflictFiles.length} files with merge conflicts`);"
         "recommendations": this.generateOverallRecommendations(conflicts)};"
       const reportPath = path.join(;)"
         this.projectRoot,conflict-resolution-report.json";"
-<<<<<<< HEAD
-      fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));`;
-this.log(`Conflict resolution report saved to ${reportPath}`);"`;
-      return report} catch (error) {  this.log(`Failed to generate "report": ${error.message  }`, "ERROR");"
-=======
-  async generateConflictReport(conflicts) {}"
-  this.log("Generating conflict resolution report...");"
-    try {}
-  const report = {}"
-  "timestamp": new Date().toISOString(),
-        "summary": {}"
-  totalConflicts: conflicts.length,"
-          "autoResolvable": conflicts.filter(c => c.resolvable).length,
-          "manualReview": conflicts.filter(c => !c.resolvable).length},
-        "conflicts": conflicts,
-        "recommendations": this.generateOverallRecommendations(conflicts)};"
-;
-      const reportPath = path.join(;)"
-        this.projectRoot,conflict-resolution-report.json";"
-      );
-      fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-this.log(`Conflict resolution report saved to ${reportPath});"
-      return report} catch (error) {  this.log(`Failed to generate "report": ${error.message  }, "ERROR");"
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
       throw error};
   generateOverallRecommendations(conflicts) {}
   const recommendations = [];
@@ -398,41 +226,16 @@ this.log(`Conflict resolution report saved to ${reportPath});"
   recommendations.push(Auto-resolve ${autoResolvable.length} conflicts using intelligent resolution";)"
     if (manualReview.length > 0) {}"`;
   recommendations.push( `Manually review ${manualReview.length} conflicts that require human intervention";`)"
-<<<<<<< HEAD
-    if (conflicts.some(c => c.type === "lock-file")) {}""
-  recommendations.push(Regenerate lock files after resolving package.json conflicts";)"
-    if (conflicts.some(c => c.type === "package-json")) {}""
-=======
-      )};
-;"
-    if (conflicts.some(c => c.type === "lock-file")) {}
-  recommendations.push(Regenerate lock files after resolving package.json conflicts";)"
-      )};
-;"
-    if (conflicts.some(c => c.type === "package-json")) {}
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
   recommendations.push(Run npm install after resolving package.json conflicts";)"
   async runConflictResolution() {}"
   this.log("Starting intelligent conflict resolution...");"
   // Check for conflicts;
       const conflictFiles = await this.checkForConflicts();
-<<<<<<< HEAD
-  this.log("No conflicts to resolve");""
-=======
-      if (conflictFiles.length === 0) {}"
-  this.log("No conflicts to resolve");
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
         return { "resolved": 0, "total": 0 };"
   // Check for conflicts;
-<<<<<<< HEAD
-=======
-      const conflictFiles = await this.checkForConflicts();
-      if (conflictFiles.length === 0) {}"
-  this.log("No conflicts to resolve");
-        return { "resolved": 0, "total": 0 };"
-      };
-;
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
       // Analyze each conflict;
       const conflicts = [];
       let resolvedCount = 0;
@@ -449,11 +252,7 @@ this.log(`Conflict resolution report saved to ${reportPath});"
       await this.generateConflictReport(conflicts);"
       this.log(Conflict resolution "completed": ${resolvedCount}/${conflicts.length} conflicts resolved";)"
       );"
-<<<<<<< HEAD
-      return { "resolved": resolvedCount, "total": conflicts.length };""`;
-=======
-      return { "resolved": resolvedCount, "total": conflicts.length };
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
     } catch (error) {  this.log(`Conflict resolution "failed": ${error.message  }", "ERROR");"
   async start() {}"`;
   this.log("Starting intelligent conflict resolver...`);"
@@ -462,31 +261,14 @@ this.log(`Conflict resolution report saved to ${reportPath});"
       // Set up periodic conflict checking;
       setInterval(;)
         async () => {}
-<<<<<<< HEAD
-  await this.runConflictResolution()} catch (error) {}"`;
-  this.log(Periodic conflict resolution "failed": ${error.message  }`,`)""
-=======
-  try {}
-  await this.runConflictResolution()} catch (error) {}"
-  this.log(Periodic conflict resolution "failed": ${error.message  },`)
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
               "ERROR";"
         },
         30 * 60 * 1000;
       ); // Every 30 minutes;"
       this.log("Intelligent conflict resolver started successfully");"
       // Keep the process running;
-<<<<<<< HEAD
-      setInterval(() => {}"`;
-  this.log("Conflict resolver heartbeat...")}, 60000); // Every minute} catch (error) {  this.log(`Failed to start conflict "resolver": ${error.message  }`, "ERROR");"
-=======
-      setInterval(() => {}"
-  this.log("Conflict resolver heartbeat...")}, 60000); // Every minute} catch (error) {  this.log(`Failed to start conflict "resolver": ${error.message  }, "ERROR");"
-      throw error};
-  };
-};
-;
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
 // Main execution;
 if (require.main === module) {}
   const resolver = new IntelligentConflictResolver();
@@ -494,32 +276,9 @@ if (require.main === module) {}
   process.on("SIGINT", () => {}
   resolver.log("Shutting down gracefully...");"
     process.exit(0)}
-<<<<<<< HEAD
-  process.on("SIGTERM", () => {}""
-});"`;
-  resolver.start().catch(error => {resolver.log(`Fatal "error": ${error.message}`, "ERROR");"
-=======
-});"
-  process.on("SIGTERM", () => {}
-  resolver.log("Shutting down gracefully...");"
-    process.exit(0)}
-});"
-  resolver.start().catch(error => {resolver.log(`Fatal "error": ${error.message}, "ERROR");"
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
 // Main execution;
   // Handle graceful shutdown;"
-<<<<<<< HEAD
-=======
-  process.on("SIGINT", () => {}
-  resolver.log("Shutting down gracefully...");"
-    process.exit(0)}
-});"
-  process.on("SIGTERM", () => {}
-  resolver.log("Shutting down gracefully...");"
-    process.exit(0)}
-});"
-  resolver.start().catch(error => {resolver.log(`Fatal "error": ${error.message}, "ERROR");"
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
     process.exit(1)})};
 
-"`;

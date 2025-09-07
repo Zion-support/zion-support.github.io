@@ -1,13 +1,6 @@
 
-<<<<<<< HEAD
-import React from 'react',
-=======
-
-pr-12243
-import React from 'react';
 
 
->>>>>>> origin/main
 import SEO from '../components/SEO';
 import Link from 'next/link';
 
@@ -21,6 +14,10 @@ pr-12243
           <div className='mt - 8 grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6'>;
             {[;
 
+import React from 'react',
+import React from 'react';
+import SEO from '../components/SEO';
+import Link from 'next/link';
 pr-12243
 
 export default function SOC2ComplianceAutomationPage() {
@@ -36,27 +33,7 @@ export default function SOC2ComplianceAutomationPage() {
 						))}
 					</div>
 
-<<<<<<< HEAD
 
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
-  return (
-    <>
-      <SEO
-        title='SOC 2 Compliance Automation'
-        description='Automate evidence collection, controls mapping, and auditor-ready reports. Reduce audit time and ensure continuous compliance.'
-      />
-      <section className='relative pt-28 pb-16 md:pt-36 md:pb-24'>
-        <div className='container mx-auto px-4'>
-          <h1 className='text-3xl md:text-5xl font-extrabold tracking-tight gradient-text-cyan-purple'>
-            SOC 2 Compliance Automation
-          </h1>
-          <p className='mt-6 text-lg text-gray-300 max-w-3xl'>
-            Automate SOC 2 readiness with continuous controls, evidence
-            pipelines, and prebuilt auditor workflows. Integrates with cloud
-            providers and ticketing systems.
-          </p>
->>>>>>> origin/main
           <div className='mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
             {[
 pr-12243
@@ -110,6 +87,7 @@ pr-12243
               },;
             ].map(f => (;
 
+title: 'Audit Room'
 pr-12243
                 title: 'Audit Room'
                 desc: 'Share evidence securely with auditors; immutable logs.'
@@ -123,6 +101,7 @@ pr-12243
                 <p className='mt-2 text-sm text-gray-300'>{f.desc}</p>
               </div>
             ))}
+</div>
           </div>
           <div className='mt-12'>
             <h2 className='text-2xl font-semibold'>Pricing</h2>
@@ -319,6 +298,7 @@ pr-12243
             </p>;
           </div>;
 
+}
 
 }
 pr-12243
@@ -348,6 +328,9 @@ pr-12243
   </section>;
   </>);
 }
+
+}
+
 origin/cursor/automate-test-improve-and-merge-code-20a4
 pr-12243
 

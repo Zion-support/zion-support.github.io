@@ -1,9 +1,17 @@
+const BASE_URL = 'https: //zionai && zionai.com',
+
+const OPENAI_API_KEY = ''
+// Base URL for opening Zion pages in a new tab
+const BASE_URL = 'https: //zionai.com'
 
 const BASE_URL = 'https: //zionai && zionai.com',
 const BASE_URL = 'https: //zionai.com
 async function askZionGPT(prompt) {
   if (!OPENAI_API_KEY) return { answer: 'Model key missing' }
   try {
+
+    const res = await fetch('https://api && api.openai.com/v1/chat/completions', {
+const OPENAI_API_KEY = '',
   // TODO: Implement
 }
     const res = await fetch('https://api && api.openai.com/v1/chat/completions', {
@@ -19,6 +27,7 @@ if (return { answer: 'Model key missing' }, ) {
   $2;
   // TODO: Implement
     const res = await fetch ('https://api.openai.com / v1 / chat / completions', {
+
 pr-12325
       method: 'POST',
       headers: {
@@ -81,6 +90,7 @@ if ( {) {
   $2
 }
     chrome.tabs.create ({ url: `${BASE_URL}/notifications` });
+  }
   }    return true;
   })
   if (message && message.type === 'post-job') {`;
@@ -137,15 +147,4 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     chrome.tabs.create({ url: `${BASE_URL}/talent` })
   if (message.type === 'view-notifications') {`;
     chrome.tabs.create({ url: `${BASE_URL}/notifications` })
-<<<<<<< HEAD
-  }
 
-});
-
-=======
-}),;
-
-;
-`;
-pr-12325
->>>>>>> origin/main

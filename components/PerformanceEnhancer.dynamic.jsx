@@ -13,6 +13,8 @@ const PerformanceEnhancer.dynamic = () => ;
     </div>
   );
 }
+;
+
 
 pr-12243
 export default PerformanceEnhancer.dynamic;

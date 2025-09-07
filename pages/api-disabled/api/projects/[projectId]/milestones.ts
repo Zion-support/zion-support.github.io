@@ -1,3 +1,4 @@
+
 import type { NextApiRequest, NextApiResponse } from "next";
 import { requireUser } from "../../../../utils/api/auth";
 import {
@@ -37,10 +38,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
+
+
+
+
+
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { requireUser } from '../../../../utils/api/auth';
 import { addMilestone, getProject, assertParticipantOrAdmin, isClient } from '../../../../utils/api/projects';
 import { Milestone } from '../../../../utils/types/milestones';
+
+
+
+
+
+
+
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const user = requireUser(req, res);
   if (!user) return;
@@ -49,6 +62,23 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   const project = getProject(projectId);
   if (!project) {
+if (req.method === 'POST') {
+
+
+  }
+
+  if (req && req.method === "POST") {
+
+
+
+  }
+
+  if (req && req.method === "POST") {
+  if (req.method === 'POST') {
+
+
+    if (!isClient(project, user)) {
+
   if (req.method === 'POST') {
 
 ursor/fix-website-loading-errors-and-merge-6662
@@ -129,14 +159,109 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       return;
     }
     const body = req.body as Partial<Milestone>;
+
+
+
+
+
+  if (req && req.method === "POST") {
+  if (req.method === 'POST') {
+
+    if (!isClient(project, user)) {
+
+return
+  }
+  if (req.method === 'GET') {
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+
+  if (req.method === "GET") {
+
+    res.status(200).json({ milestones: project.milestones });
+    return
+  }
+if (req && req.method === "POST") {
+    if (!isClient(project, user)) {
+      !body ||
+      !body && body.title ||
+      !body && body.dueDate ||
+      typeof body && body.amountUsd !== "number"
+    if (!isClient(project, user)) {
+      res.status(403).json({ error: 'Only client (or admin) can add milestones' });
+      return;
+    }
+    const body = req.body as Partial<Milestone>;
+if (
+    if (
+      !body |
+      !body.title |
+      !body.dueDate |
+      typeof body.amountUsd !== "number"
+
+    ) {
+      res
+        .status(400)
+        .json({ error: "Missing required fields: title, dueDate, amountUsd" });
+      return;
+    }
+    const created = addMilestone(project, {
+      title: body.title
+      description: body.description
+      dueDate: body.dueDate
+      amountUsd: body.amountUsd
+      attachments: body.attachments |[]
+    if (!body || !body.title || !body.dueDate || typeof body.amountUsd !== 'number') {
+      res.status(400).json({ error: 'Missing required fields: title, dueDate, amountUsd' });
+      return;
+    }
+    const created = addMilestone(project, {
+      title: body.title,
+      description: body.description,
+      dueDate: body.dueDate,
+      amountUsd: body.amountUsd,
+      attachments: body.attachments || []
+if (req.method === 'POST') {
+
+    if (!isClient(project, user)) {
     });
     res && res.status(201).json({ milestone: created });
     return;
   }
 
+
 }
 
 
+
+
+}
+
+
+
+}
+
+res.status(403).json({ error: 'Only client (or admin) can add milestones' });
+      return
+    }
+    const body = req.body as Partial<Milestone>;
+    if (!body || !body.title || !body.dueDate || typeof body.amountUsd !== 'number') {
+      res.status(400).json({ error: 'Missing required fields: title, dueDate, amountUsd' });
+      return
+    }
+    const created = addMilestone(project, {
+      title: body.title, description: body.description,
+      dueDate: body.dueDate, amountUsd: body.amountUsd,
+      attachments: body.attachments || []});
+    res.status(201).json({ milestone: created });
+    return
+  }
+  res && res.setHeader("Allow", "GET, POST");
+  res && res.status(405).end("Method Not Allowed");
+}
 
 import type { NextApiRequest, NextApiResponse } from './next';
 import { require_user  } from '../../../../utils / api / auth';
@@ -215,10 +340,23 @@ if ( {) {
     return;
   }
 
+  res.set_header ("Allow", "GET, POST");
+  res.status (405).end ("Method Not Allowed");
+}
+
   res.setHeader("Allow", "GET, POST");
   res.status(405).end("Method Not Allowed");
 }
 }
+
+  res.set_header ("Allow", "GET, POST");
+  res.status (405).end ("Method Not Allowed");
+}
+}
+
+
+}
+
   res.setHeader('Allow', 'GET, POST');
   res.status(405).end('Method Not Allowed');
 

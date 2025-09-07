@@ -12,6 +12,10 @@ class PerformanceMonitor {
       memoryUsage: 0,
       timestamp: new Date().toISOString()
     };
+  }
+
+  async measureBundleSize() {
+    try {
 
   async measureBundleSize() {
     try {
@@ -44,35 +48,24 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   generateReport() {
     const report = {
       timestamp: this.metrics.timestamp,
-<<<<<<< HEAD
 
-      bundleSize: this.metrics.bundleSize;
-      memoryUsage: this.metrics.memoryUsage;
-      recommendations: []
-
-=======
-      bundleSize: this.metrics.bundleSize,
-      memoryUsage: this.metrics.memoryUsage,
-      recommendations: []
->>>>>>> origin/main
     };
 pr-12325
-    
 
 origin/cursor/automate-test-improve-and-merge-code-2533
     if (this.metrics.bundleSize > 1000000) {
       report.recommendations.push('Consider code splitting to reduce bundle size');
     if (this.metrics.memoryUsage > 100) {
       report.recommendations.push('Consider optimizing memory usage');
-    
     if (this.metrics.bundleSize > 1000000) {
       report.recommendations.push('Consider code splitting to reduce bundle size');
     }
     if (this.metrics.memoryUsage > 100) {
       report.recommendations.push('Consider optimizing memory usage');
     }
-    
     return report;
+  }
+}
 
 const monitor = new PerformanceMonitor();
 monitor.measureBundleSize();

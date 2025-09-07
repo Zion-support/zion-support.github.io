@@ -1,17 +1,4 @@
-<<<<<<< HEAD
 
-
-import { QuoteFormData } from "@/types/quotes",
-import { Input } from "@/components/ui/input",
-import { Label } from "@/components/ui/label";
-import { Textarea } from "@/components/ui/textarea";
-
-=======
-import { QuoteFormData } from "@/types/quotes";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Textarea } from "@/components/ui/textarea";
->>>>>>> origin/main
 interface ProjectDetailsStepProps {
   formData: QuoteFormData;
   updateFormData: (data: Partial<QuoteFormData>) => void;
@@ -25,6 +12,11 @@ export function ProjectDetailsStep({
     <div className="space-y-6">
       <div>
         <h3 className="text-xl font-semibold text-white mb-4">
+          Tell us about your project
+        </h3>
+
+        <h3 className="text-xl font-semibold text-white mb-4">Tell us about your project</h3>
+<h3 className="text-xl font-semibold text-white mb-4">
           Tell us about your project
         </h3>
         <div className="space-y-4">
@@ -116,6 +108,18 @@ interface ProjectDetailsStepProps {
         <h3 className="text-xl font-semibold text-white mb-4">
           Contact Information
         </h3>
+
+        <h3 className="text-xl font-semibold text-white mb-4">Contact Information</h3>
+
+<div>
+<h3 className="text-xl font-semibold text-white mb-4">
+          Contact Information
+        </h3>
+      <div>
+        <h3 className="text-xl font-semibold text-white mb-4">
+          Contact Information
+        </h3>
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
             <Label htmlFor="name" className="text-zion-slate-light">
@@ -231,6 +235,26 @@ interface ProjectDetailsStepProps {;
             <Input;
               id="name";
               placeholder="Your name";
+
+value={formData.contactInfo.name}
+              onChange={(e) =>
+                updateFormData({
+                  contactInfo: {
+
+              value={formData.contactInfo.name}
+              onChange={(e) =>
+                updateFormData({
+                  contactInfo: {
+                    ...formData.contactInfo,
+                    name: e.target.value,
+                  },
+                })
+              }
+              className="bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white"
+            />
+          </div>
+
+          <div>
               value={formData.contactInfo.name}          <div>
             <Label htmlFor="company" className="text-zion-slate-light">
               Company
@@ -259,6 +283,21 @@ interface ProjectDetailsStepProps {;
               id="email"
               type="email"
               placeholder="Your email address"
+
+              value={formData.contactInfo.email}
+              onChange={(e) =>
+                updateFormData({
+                  contactInfo: {
+                    ...formData.contactInfo,
+                    email: e.target.value,
+                  },
+                })
+              }
+              className="bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white"
+            />
+          </div>
+
+          <div>
             <Label htmlFor="phone" className="text-zion-slate-light">
               Phone
             </Label>
@@ -461,7 +500,6 @@ interface ProjectDetailsStepProps {
         <div className="space-y-4">"
             <Label htmlFor="projectName" className="text-zion-slate-light">"
 
-            
             <Input;"
               id="projectName"""
               placeholder="Enter a name for your project""
@@ -474,7 +512,6 @@ interface ProjectDetailsStepProps {
               className="text-zion-slate-light""
             >
 
-            
             <Textarea;"
               id="projectDescription"""
               placeholder="Describe your project in detail...""
@@ -487,7 +524,6 @@ interface ProjectDetailsStepProps {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">"
             <Label htmlFor="name" className="text-zion-slate-light">"
 
-            
               id="name"""
               placeholder="Your name"""
 import { QuoteFormData } from "@/types/quotes",;""
@@ -519,7 +555,6 @@ value={formData.contactInfo.name}
 
             <Label htmlFor="company" className="text-zion-slate-light">"
 
-            
               id="company"""
               placeholder="Your company name""
               value={formData.contactInfo.company}
@@ -527,7 +562,6 @@ value={formData.contactInfo.name}
 
             <Label htmlFor="email" className="text-zion-slate-light">"
 
-            
               id="email"""
               type="email"""
               placeholder="Your email address""
@@ -536,7 +570,6 @@ value={formData.contactInfo.name}
 
             <Label htmlFor="phone" className="text-zion-slate-light">"
 
-            
               id="phone"""
               placeholder="Your phone number""
               value={formData.contactInfo.phone}
@@ -570,6 +603,47 @@ value={formData.contactInfo.name}
               value={form_data.contact_info.phone}
 
     </div>);
+);
+}
+
+  )
+
+</div>;
+  );
+  );
+}
+
+  )
+
+    </div>;
+  );}
+ interface ProjectDetailsStepProps {
+  formData: QuoteFormData;
+updateFormData: (data: Partial<QuoteFormData>) => void 
+}export function ProjectDetailsStep ({
+  formData, updateFormData 
+}: ProjectDetailsStepProps) {
+  return (<div className="space-y-6" > text-xl font-semibold text-white mb-4">Tell us about your project</h3> <div className=" space-y-4"> <div> <Label htmlFor=" projectName"className=" text-zion-slate-light">Project Name</Label> <Input id=" projectName"placeholder=" Enter a name for your project"value= {
+  formData.projectName 
+}/> </div> <div> <Label htmlFor=" projectDescription"className=" text-zion-slate-light">Project Description</Label> <Textarea /> </div> </div> </div> <div> <h3 className=" text-xl font-semibold text-white mb-4">Contact Information</h3> <div className=" grid grid-cols-1 md:grid-cols-2 gap-4"> <div> <Label htmlFor=" name"className=" text-zion-slate-light">Name</Label> <Input 
+}) 
+}className=" bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white"/> </div> <div> <Label htmlFor=" company"className=" text-zion-slate-light">Company</Label> <Input 
+}) 
+}className=" bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white"/> </div> <div> <Label htmlFor=" email"className=" text-zion-slate-light">Email</Label> <Input 
+}) 
+}className=" bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white"/> </div> <div> <Label htmlFor=" phone"className=" text-zion-slate-light" >Phone</Label> <Input 
+}) 
+}/> </div> </div> </div> </div>) 
+}
+);
+}
+}
+;
+
+}
+;
+}
+;
   return (<div className="space-y-6" > text-xl font-semibold text-white mb-4">Tell us about your project</h3> <div className=" space-y-4"> <div> <Label htmlFor=" projectName"className=" text-zion-slate-light">Project Name <Input id=" projectName"placeholder=" Enter a name for your project"value= {"
 }/> </div> <div> <Label htmlFor=" projectDescription"className=" text-zion-slate-light">Project Description <Textarea /> </div> </div> </div> <div> <h3 className=" text-xl font-semibold text-white mb-4">Contact Information</h3> <div className=" grid grid-cols-1 md:grid-cols-2 gap-4"> <div> <Label htmlFor=" name"className=" text-zion-slate-light">Name <Input;")
 }) "

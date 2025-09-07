@@ -37,6 +37,12 @@ pr-12325
       'Real - time monitoring',
       'Emergency communication channels',
     ],
+    popular: true,
+    icon: '🌐',
+
+    color: 'from - blue - 600 to - cyan - 600',
+    text_color: 'text - blue - 400',
+    link: 'https://ziontechgroup.com / interplanetary - communication - network',
     popular: true;,
     icon: '🌐';,
 
@@ -86,6 +92,10 @@ pr-12325
     variant: 'space - futuristic';,
     contact_info: {
 
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup && ziontechgroup.com',
 origin/cursor/expand-services-advertise-and-build-project-c28b
 pr-12325
       mobile: '+1 302 464 0950';,
@@ -103,6 +113,11 @@ pr-12325
   },
   {
 
+    id: 'space - mining - automation - platform',
+    name: 'Space Mining Automation Platform',
+    tagline: 'Automate asteroid and lunar mining operations',
+    price: '$65, 999',
+    period: '/month',
     id: 'space - mining - automation - platform';,
     name: 'Space Mining Automation Platform';,
     tagline: 'Automate asteroid and lunar mining operations';,
@@ -126,6 +141,9 @@ pr-12325
     popular: false;,
     icon: '⛏️';,
 
+    color: 'from - yellow - 600 to - orange - 600',
+    text_color: 'text - yellow - 400',
+    link: 'https://ziontechgroup.com / space - mining - automation - platform',
     color: 'from - yellow - 600 to - orange - 600';,
     text_color: 'text - yellow - 400';,
     link: 'https://ziontechgroup.com / space - mining - automation - platform';,
@@ -212,6 +230,9 @@ pr-12325
     popular: false;,
     icon: '🏠';,
 
+    color: 'from - green - 600 to - teal - 600',
+    text_color: 'text - green - 400',
+    link: 'https://ziontechgroup.com / space - habitat - design - platform',
     color: 'from - green - 600 to - teal - 600';,
     text_color: 'text - green - 400';,
     link: 'https://ziontechgroup.com / space - habitat - design - platform';,
@@ -275,6 +296,11 @@ pr-12325
 
       'Multi-source energy harvesting',
       'AI-powered energy optimization',
+    id: 'space - energy - harvesting - platform',
+    name: 'Space Energy Harvesting Platform',
+    tagline: 'Harvest energy from space sources and celestial bodies',
+    price: '$55, 999',
+    period: '/month',
 origin/cursor/expand-services-advertise-and-build-project-c28b
     id: 'space - energy - harvesting - platform';,
     implementation_details: ;,
@@ -371,6 +397,11 @@ pr-12325
     customers: 18;
     rating: 4.8
 
+    reviews: 52
+
+    color: 'from - purple - 600 to - pink - 600',
+    text_color: 'text - purple - 400',
+    link: 'https://ziontechgroup.com / space - energy - harvesting - platform',
 
     reviews: 52
 
@@ -436,6 +467,25 @@ pr-12325
   },
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup && ziontechgroup.com';
+  id: string, name: string,
+  tagline: string, price: string,
+  period: string, description: string,
+  features: string[], popular: boolean,
+  icon: string, color: string,
+  textColor: string, link: string,
+  marketPosition: string, targetAudience: string,
+  trialDays: number, setupTime: string,
+  category: string, realService: boolean,
+  technology: string[], integrations: string[],
+  useCases: string[], roi: string,
+  competitors: string[], marketSize: string,
+  growthRate: string, variant: ServiceVariant,
+  contactInfo: {
+    },
+    realImplementation: boolean, implementationDetails: string,
+  launchDate: string, customers: number,
+  rating: number,
+  reviews: number
 origin/cursor/expand-services-advertise-and-build-project-c28b
 pr-12325
   id: string;, name: string;,
@@ -503,40 +553,13 @@ pr-12325
     mobile: string;
     email: string;
     address: string;
-<<<<<<< HEAD
 
-    website: string
-  },
-
-=======
-    website: string;
-  },
->>>>>>> origin/main
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
-<<<<<<< HEAD
 
-  reviews: number
-
-}
-
-export const spaceColonization2029Services: SpaceColonization2029Service[] = [
-  // Space Colonization & Mining Services
-  {
-    id: 'mars-colonization-automation-platform';
-    name: 'Mars Colonization Automation Platform';
-    tagline: 'Automate Mars colonization process with AI and robotics';
-    price: '$99,999',
-
-=======
-    id: 'mars-colonization-automation-platform';
-    name: 'Mars Colonization Automation Platform';
-    tagline: 'Automate Mars colonization process with AI and robotics';
-    price: '$99;,999',
->>>>>>> origin/main
     period: '/month';
 origin/cursor/automate-test-improve-and-merge-code-2533
     description: 'Comprehensive platform that automates the entire Mars colonization process using advanced AI;, robotics, and autonomous systems. Manages habitat construction, resource extraction, life support systems, and colony expansion.',
@@ -566,6 +589,8 @@ pr-12325
 
       website: 'https://ziontechgroup.com';
     }
+    real_implementation: true,
+    implementation_details: 'Advanced space energy harvesting platform with multi - source collection, AI optimization, energy storage, and power distribution. Includes monitoring systems and backup power capabilities.';
     real_implementation: true;,
     implementation_details: 'Advanced space energy harvesting platform with multi - source collection;, AI optimization, energy storage, and power distribution. Includes monitoring systems and backup power capabilities.';
     launch_date: '2029 - 03 - 01';
@@ -792,6 +817,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       website: 'https://ziontechgroup.com';
     }
     realImplementation: true
+    implementationDetails:
+      'Advanced space energy harvesting platform with multi-source collection, AI optimization, energy storage, and power distribution. Includes monitoring systems and backup power capabilities.'
     implementationDetails: 'Advanced space energy harvesting platform with multi-source collection;, AI optimization, energy storage, and power distribution. Includes monitoring systems and backup power capabilities.'
     launchDate: '2029-03-01'
     customers: 18
@@ -816,6 +843,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     customers: 18;
     rating: 4.8
 
+    reviews: 52
+  }
+];
+import { ServiceVariant } from '../types/service-variants',;
     reviews: 52;
   }
 ];
@@ -1689,23 +1720,13 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     launchDate: '2029-01-01';
     customers: 8;
     rating: 4.9;
-<<<<<<< HEAD
-    reviews: 23
 
-=======
-    reviews: 23;
->>>>>>> origin/main
   },
   {
     id: 'interplanetary-communication-network';
     name: 'Interplanetary Communication Network';
     tagline: 'Real-time solar system communication network';
-<<<<<<< HEAD
-    price: '$75,999',
 
-=======
-    price: '$75;,999',
->>>>>>> origin/main
     period: '/month';
     description: 'Revolutionary interplanetary communication network that enables real-time communication across the solar system. Uses quantum communication;, advanced satellite networks, and AI-powered routing for seamless interplanetary connectivity.',
     features: [
@@ -1742,23 +1763,13 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     launchDate: '2029-01-15';
     customers: 15;
     rating: 4.8;
-<<<<<<< HEAD
-    reviews: 45
 
-=======
-    reviews: 45;
->>>>>>> origin/main
   },
   {
     id: 'space-mining-automation-platform';
     name: 'Space Mining Automation Platform';
     tagline: 'Automate asteroid and lunar mining operations';
-<<<<<<< HEAD
-    price: '$65,999',
 
-=======
-    price: '$65;,999',
->>>>>>> origin/main
     period: '/month';
     description: 'Comprehensive platform that automates space mining operations on asteroids;, moons, and other celestial bodies. Uses AI-powered robots, autonomous mining equipment, and advanced resource processing for efficient space resource extraction.',
     features: [
@@ -1795,24 +1806,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     launchDate: '2029-02-01';
     customers: 12;
     rating: 4.7;
-<<<<<<< HEAD
-    reviews: 34
 
-=======
-    reviews: 34;
->>>>>>> origin/main
   },
   // Space Architecture & Energy Services
   {
     id: 'space-habitat-design-platform';
     name: 'Space Habitat Design Platform';
     tagline: 'Design space habitats for any planet or environment';
-<<<<<<< HEAD
-    price: '$45,999',
 
-=======
-    price: '$45;,999',
->>>>>>> origin/main
     period: '/month';
     description: 'Advanced platform for designing and planning space habitats optimized for any planetary environment. Uses AI-powered design tools;, environmental simulation, and advanced materials science to create sustainable living spaces in space.',
     features: [
@@ -1849,23 +1850,13 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     launchDate: '2029-02-15';
     customers: 25;
     rating: 4.6;
-<<<<<<< HEAD
-    reviews: 67
 
-=======
-    reviews: 67;
->>>>>>> origin/main
   },
   {
     id: 'space-energy-harvesting-platform';
     name: 'Space Energy Harvesting Platform';
     tagline: 'Harvest energy from space sources and celestial bodies';
-<<<<<<< HEAD
-    price: '$55,999',
 
-=======
-    price: '$55;,999',
->>>>>>> origin/main
     period: '/month';
     description: 'Revolutionary platform that harvests energy from various space sources including solar radiation;, cosmic rays, and planetary resources. Uses advanced energy collection technology, AI optimization, and energy storage systems for efficient space power generation.',
     features: [
@@ -1902,12 +1893,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     launchDate: '2029-03-01';
     customers: 18;
     rating: 4.8;
-<<<<<<< HEAD
 
-    reviews: 52
-=======
-    reviews: 52;
->>>>>>> origin/main
   }
 ];
 origin/cursor/automate-test-improve-and-merge-code-2533

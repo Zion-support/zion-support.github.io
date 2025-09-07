@@ -1,12 +1,4 @@
-<<<<<<< HEAD
 
-import React from 'react';
-import ServiceLanding from '../components/sections/ServiceLanding';
-
-export default function AiPoweredDecisionEngine() {
-	return (
-		<ServiceLanding
-=======
 			pricePerMonthUSD={279}
 			implementationWeeks="3-7 days"
 			roiNote="Teams report 2–5x ROI via faster, consistent decisions and uplift from experimentation"
@@ -20,7 +12,7 @@ export default function AiPoweredDecisionEngine() {
 				"Drift monitoring and alerts"
 
 import React from 'react';
->>>>>>> origin/main
+
 			title;
 origin/cursor/automate-test-improve-and-merge-code-2533
 				"Versioned strategies with canary rollouts"
@@ -47,6 +39,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 				"Integrations: Kafka, Snowflake, Redis, REST/gRPC",
 				"Drift monitoring and alerts",
 				"Versioned strategies with canary rollouts"
+
+]}
+			industries={["Fintech", "SaaS", "Marketplaces", "Logistics"]}
+			canonical="https: //ziontechgroup.com/ai-powered-decision-engine"
+		/>
+	)
+};
 			]  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });

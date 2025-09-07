@@ -1,7 +1,4 @@
 
-        .replace(/^>>>>>>>.*$/gm, )
-        // Fix module.exports;
-<<<<<<< HEAD
         .replace(/module\.exports\s*=\s*{;/g, 'module.exports = {')
         // Fix constructor;
         .replace(/constructor\s*\(\s*\)\s*{;/g, 'constructor() {')
@@ -11,17 +8,7 @@
         .replace(/;+/g, ';')
         // Fix semicolons before commas;
         .replace(/;\s*,/g, ',');
-=======
-        .replace(/module\.exports\s*=\s*{;/g,module.exports = {)
-        // Fix constructor;
-        .replace(/constructor\s*\(\s*\)\s*{;/g,constructor() {)
-        // Fix empty lines with semicolons;
-        .replace(/^\s*;\s*$/gm, )
-        // Fix multiple semicolons;
-        .replace(/;+/g,;)
-        // Fix semicolons before commas;
-        .replace(/;\s*,/g,,);
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
       if (content !== originalContent) {
         fs.writeFileSync(filePath, content);
         this.fixedFiles.push(filePath);
@@ -30,16 +17,7 @@
       }
 
       return false;
-<<<<<<< HEAD
-    } catch (error) {`;
-      this.log(`Error fixing ${filePath}: ${error.message}`);
-=======
-    } catch (error) {
-      this.log(`Error fixing ${filePath}: ${error.message});
-      return false;
-    }
-  }
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
 
   async run() {
     this.log('🚀 Starting Quick Syntax Fixer');
@@ -52,11 +30,7 @@
       'scripts/fix-syntax-errors.cjs';
       'scripts/performance-monitor.cjs';
       'scripts/security-audit.cjs';
-<<<<<<< HEAD
-      'scripts/health-check.cjs';']
-=======
-      'scripts/health-check.cjs';]
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
     ];
 
     let fixedCount = 0;
@@ -74,20 +48,9 @@ if (require.main === module) {
 
 module.exports = QuickSyntaxFixer;
 
-<<<<<<< HEAD
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
       let content = fs.readFileSync(filePath, 'utf8')
-        .replace(/(\w+):\s*([^,]+),/g, '$"1"""
-        .replace(/(\w+):\s*([^,]+);\s*}/g, '$"1"""
-        .replace(/(\w+):\s*([^,]+);\s*]/g, '$"1"""`;
-=======
-#!/usr/bin/env node'
-const fs = require('fs')
-const path = require('path')
-      let content = fs.readFileSync(filePath,utf8)
-        .replace(/(\w+):\s*([^]+),/g,$"1"
-        .replace(/(\w+):\s*([^]+);\s*}/g,$"1"
-        .replace(/(\w+):\s*([^]+);\s*]/g,$"1"
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
+

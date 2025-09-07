@@ -6,8 +6,7 @@
 
 const fs = // // require('fs');
 const path = // // require('path');
-<<<<<<< HEAD
-const { execSync } = // // require('child_process');
+
 class SyntaxErrorFixer {}
   constructor() {}
     this.projectRoot = process.cwd();
@@ -16,11 +15,11 @@ class SyntaxErrorFixer {}
     this.maxFixesPerRun = parseInt(process.env.MAX_FIXES_PER_RUN) || 100;
     this.skipLargeFiles = process.env.SKIP_LARGE_FILES === 'true';
     this.largeFileThreshold = parseInt(process.env.LARGE_FILE_THRESHOLD) || 10000;
-    
     this.fixesApplied = 0;
     this.fixesFailed = 0;
     this.fixesSkipped = 0;
     this.fixedFiles = new Set();
+
 
     this.syntaxPatterns = {}
       unterminatedStrings: []
@@ -51,10 +50,7 @@ class SyntaxErrorFixer {}
       service: 'syntax-error-fixer
     };
 
-    if (level === 'error') {}`;
-      console.error(`[${timestamp}] ERROR: ${message}`, data)} else if (level === 'warn') {`}`;
-      console.warn(`[${timestamp}] WARN: ${message}`, data)} else if (level === 'info') {`}`;
-      console.log(`[${timestamp}] INFO: ${message}`, data)} else if (level === 'debug') {`}`;
+
       console.log(`[${timestamp}] DEBUG: ${message}`, data)};
     // Write to log file;
     this.writeToLog(logEntry)};
@@ -69,17 +65,14 @@ class SyntaxErrorFixer {}
     try {}
       // Create necessary directories;
       this.ensureDirectories();
-      
       // Initial fix run;
       await this.performSyntaxFixes();
-      
       // Start continuous fixing;
       this.startContinuousFixing();
-      
       // Listen for signals to trigger fixes;
       this.setupSignalHandlers();
-      
       this.log('info', 'Syntax Error Fixer Service started successfully');
+
       // Keep the process alive;
       setInterval(async () => {}
         await this.performSyntaxFixes()}, this.fixInterval)} catch (error) {}
@@ -92,6 +85,9 @@ class SyntaxErrorFixer {}
       'temp',
       'fixed-files
 
+
+
+
     dirs.forEach(dir => {})
       const fullPath = path.join(this.projectRoot, dir);
       if (!fs.existsSync(fullPath)) {}
@@ -102,20 +98,21 @@ class SyntaxErrorFixer {}
       // Reset counters;
       this.fixedFiles.clear();
 
+
+
+
       // Find files with syntax issues;
       const filesWithIssues = await this.findFilesWithSyntaxIssues();
-      
       if (filesWithIssues.length === 0) {}
         this.log('info', 'No files with syntax issues found');
         return};`;
       this.log('info', `Found ${filesWithIssues.length} files with syntax issues`);
       // Process files in batches to avoid overwhelming the system;
       const batchSize = Math.min(10, Math.ceil(filesWithIssues.length / 4));
-      
       for (let i = 0; i < filesWithIssues.length; i += batchSize) {}
         const batch = filesWithIssues.slice(i, i + batchSize);
-        
         await Promise.all(batch.map(file => this.fixFileSyntax(file)));
+
 
         // Small delay between batches;
         if (i + batchSize < filesWithIssues.length) {}
@@ -130,23 +127,22 @@ class SyntaxErrorFixer {}
     const extensions = ['.js', '.jsx', '.ts', '.tsx'];
     const filesWithIssues = [];
 
+
+
+
     for (const dir of sourceDirs) {}
       if (fs.existsSync(fullPath)) {}
         const files = this.walkDirectory(fullPath, extensions);
-        
         for (const file of files) {}
           if (await this.hasSyntaxIssues(file)) {}
             filesWithIssues.push(file)};
     return filesWithIssues};
   walkDirectory(dir, extensions) {}
     const files = [];
-    
       const items = fs.readdirSync(dir);
-      
       items.forEach(item => {})
         const fullPath = path.join(dir, item);
         const stat = fs.statSync(fullPath);
-        
         if (stat.isDirectory()) {}
           files.push(...this.walkDirectory(fullPath, extensions))} else if (stat.isFile()) {}
           const ext = path.extname(item);
@@ -169,12 +165,12 @@ class SyntaxErrorFixer {}
     const doubleQuotes = (content.match(/"/g) || []).length;"`;
     const backticks = (content.match(/`/g) || []).length;
 
+
     if (singleQuotes % 2 !== 0 || doubleQuotes % 2 !== 0 || backticks % 2 !== 0) {}
       return true};
     // Check for unterminated comments;
     const openComments = (content.match(/\/\*/g) || []).length;
     const closeComments = (content.match(/\*\//g) || []).length;
-    
     if (openComments !== closeComments) {}
     // Check for unclosed brackets;
     const openBraces = (content.match(/\{/g) || []).length;}
@@ -184,11 +180,11 @@ class SyntaxErrorFixer {}
     const openParens = (content.match(/\(/g) || []).length;
     const closeParens = (content.match(/\)/g) || []).length;
 
+
     if (openBraces !== closeBraces || openBrackets !== closeBrackets || openParens !== closeParens) {}
     // Check for malformed imports/exports;
     const importLines = content.match(/import\s+[^]+/g) || [];
     const exportLines = content.match(/export\s+[^]+/g) || [];
-    
     for (const line of [...importLines, ...exportLines]) {}"
       if (!line.trim().endsWith(';')) {}
   async fixFileSyntax(filePath) {}
@@ -200,13 +196,13 @@ class SyntaxErrorFixer {}
       // Read file content;
       // Apply fixes;
       const fixedContent = await this.applySyntaxFixes(content, filePath);
-      
       if (fixedContent !== content) {}
         // Write fixed content;
         fs.writeFileSync(filePath, fixedContent, 'utf8');
         this.fixesApplied++;
         this.fixedFiles.add(filePath);
         this.log('info', `Successfully fixed syntax issues in: ${filePath}`);
+
         // Verify the fix;
         if (await this.verifyFix(filePath)) {}`;
           this.log('info', `Fix verification passed for: ${filePath}`)} else {`}`;
@@ -224,7 +220,6 @@ class SyntaxErrorFixer {}
       const fileName = path.basename(filePath);
       const timestamp = new Date().toISOString().replace(/[:.]/g, '-');`;
       const backupPath = path.join(backupDir, `${fileName}.${timestamp}.backup`);
-      
       fs.copyFileSync(filePath, backupPath);`;
       this.log('debug', `Backup created: ${backupPath}`)} catch (error) {`}`;
       this.log('warn', `Failed to create backup for: ${filePath}`, error.message)};
@@ -234,22 +229,16 @@ class SyntaxErrorFixer {}
 
     // Fix unterminated strings;
     fixedContent = this.fixUnterminatedStrings(fixedContent, fixes);
-    
     // Fix unterminated comments;
     fixedContent = this.fixUnterminatedComments(fixedContent, fixes);
-    
     // Fix missing semicolons;
     fixedContent = this.fixMissingSemicolons(fixedContent, fixes);
-    
     // Fix malformed imports/exports;
     fixedContent = this.fixMalformedImports(fixedContent, fixes);
-    
     // Fix unclosed brackets;
     fixedContent = this.fixUnclosedBrackets(fixedContent, fixes);
-    
     // Fix common JSX issues;
     fixedContent = this.fixJSXIssues(fixedContent, fixes);
-    
     // Fix common TypeScript issues;
     if (filePath.endsWith('.ts') || filePath.endsWith('.tsx')) {}
       fixedContent = this.fixTypeScriptIssues(fixedContent, fixes)};
@@ -258,7 +247,6 @@ class SyntaxErrorFixer {}
     return fixedContent};
   fixUnterminatedStrings(content, fixes) {}
     const fixed = content;
-    
     // Fix single quotes;
     const singleQuoteMatches = fixed.match(/'[^']*$/gm);
     if (singleQuoteMatches) {}
@@ -282,14 +270,11 @@ class SyntaxErrorFixer {}
         const fixed = match + '`';
     return fixed};
   fixUnterminatedComments(content, fixes) {}
-    
     // Find lines with unterminated block comments;
     const lines = fixed.split('\n');
     let inComment = false;
-    
     for (let i = 0; i < lines.length; i++) {}
       const line = lines[i];
-      
       if (line.includes('/*') && !line.includes('*/')) {}
         inComment = true};
       if (inComment && line.includes('*/')) {}
@@ -301,10 +286,8 @@ class SyntaxErrorFixer {}
 });
     return lines.join('\n')};
   fixMissingSemicolons(content, fixes) {}
-    
     // Fix missing semicolons after statements;
       const line = lines[i].trim();
-      
       if (line && )
           !line.endsWith(';') &&
           !line.endsWith('{') && }
@@ -335,7 +318,6 @@ class SyntaxErrorFixer {}
         fixes.push({ type: 'missing_semicolon', line: i + 1, action: 'added_semicolon' })};
   fixMalformedImports(content, fixes) {}
     let fixed = content;
-    
     // Fix imports without semicolons;
     fixed = fixed.replace(/import\s+([^]+?)(?=\n|$)/g, (match, importContent) => {}
       if (!importContent.trim().endsWith(';')) {}
@@ -343,15 +325,12 @@ class SyntaxErrorFixer {}
 });`;
         return `import ${importContent};};
       return match}
-    
     // Fix exports without semicolons;
     fixed = fixed.replace(/export\s+([^]+?)(?=\n|$)/g, (match, exportContent) => {}
       if (!exportContent.trim().endsWith(';')) {}
         fixes.push({ type: 'malformed_export', action: 'added_semicolon' }')
         return `export ${exportContent};};
-    
   fixUnclosedBrackets(content, fixes) {}
-    
     // Count brackets and add missing ones;
     const openBraces = (fixed.match(/\{/g) || []).length;}
     const closeBraces = (fixed.match(/\}/g) || []).length;
@@ -359,6 +338,7 @@ class SyntaxErrorFixer {}
     const closeBrackets = (fixed.match(/\]/g) || []).length;
     const openParens = (fixed.match(/\(/g) || []).length;
     const closeParens = (fixed.match(/\)/g) || []).length;
+
 
     // Add missing closing braces;
     if (openBraces > closeBraces) {}
@@ -376,18 +356,15 @@ class SyntaxErrorFixer {}
       fixed += '\n' + ')'.repeat(missing);`;
       fixes.push({ type: 'unclosed_brackets', action: `added_${missing}_closing_parentheses` })};
   fixJSXIssues(content, fixes) {}
-    
     // Fix JSX self-closing tags;
     fixed = fixed.replace(/(<[^>]+)(?=\n|$)/g, (match, tagStart) => {}
       if (tagStart.includes('=') && !tagStart.endsWith('/>')) {}
         fixes.push({ type: 'jsx_self_closing', action: 'fixed_self_closing_tag' }')
         return tagStart + ' />'};
-    
     // Fix JSX fragment syntax;
     fixed = fixed.replace(/<>([^<]*)<\/>/g, (match, content) => {}
       if (content.trim()) {}
         fixes.push({ type: 'jsx_fragment', action: 'fixed_fragment_syntax' }')
         return `<React.Fragment>${content}</React.Fragment>`};
-=======
-const { execSync } = // // require('child_process');
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
+

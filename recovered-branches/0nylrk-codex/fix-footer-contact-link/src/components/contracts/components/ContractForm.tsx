@@ -1,165 +1,6 @@
 
 
-<<<<<<< HEAD
-import { useState, useEffect } from "react",
-import { useForm } from "react-hook-form",
-import { zodResolver } from "@hookform/resolvers/zod",
-import { z } from "zod",
-import { Loader2 } from "lucide-react",
-import { Button } from "@/components/ui/button",
-import { Form } from "@/components/ui/form",
-import { DialogDescription, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog",
-import { useToast } from "@/hooks/use-toast",
-import { TalentProfile } from "@/types/talent",
-import { GeneratedMilestone } from "@/hooks/useMilestoneGenerator",
-import { generateContract } from "../utils/contractUtils",
-import { ProjectDetailsFields } from "./ProjectDetailsFields",
-import { PaymentTermsFields } from "./PaymentTermsFields",
-import { AdditionalClausesFields } from "./AdditionalClausesFields";
-import { DeploymentOptions } from "@/types/smart-contracts";
-const formSchema = null;
 
-  return (
-    <>
-      <DialogHeader>
-        <DialogTitle className="text-xl">Contract Builder</DialogTitle>
-        <DialogDescription>
-          Create a professional contract for your project with {talent.full_name}
-        </DialogDescription>
-      </DialogHeader>
-    
-      <Form {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-          <ProjectDetailsFields 
-            form={form} 
-          />
-          
-          <PaymentTermsFields 
-            form={form}
-=======
-import {useState, useEffect} from "react";
-import {useForm} from "react-hook-form";
-import {zodResolver} from "@hookform/resolvers/zod";
-import {z} from "zod";
-import {Loader2} from "lucide-react";
-import {Button} from "@/components/ui/button";
-import {Form} from "@/components/ui/form";
-import {DialogDescription, DialogFooter, DialogHeader, DialogTitle} from "@/components/ui/dialog";
-import {useToast} from "@/hooks/use-toast";
-import {TalentProfile} from "@/types/talent";
-import {GeneratedMilestone} from "@/hooks/useMilestoneGenerator";
-import {generateContract} from "../utils/contractUtils";
-import {ProjectDetailsFields} from "./ProjectDetailsFields";
-import {PaymentTermsFields} from "./PaymentTermsFields";
-import {AdditionalClausesFields} from "./AdditionalClausesFields";
-import {DeploymentOptions} from "@/types/smart-contracts";
-  scopeSummary: z.string().min(10, "Scope summary should be at least 10 characters");
-  startDate: z.date({
-
-const formSchema = z && z.object({;
-  projectName: z && z.string().min(1, "Project name is required");
-  scopeSummary: z && z.string().min(10, "Scope summary should be at least 10 characters");
-  startDate: z && z.date({;
-    required_error: "Start date is required"}),;
-  endDate: z && z.date().optional(),;
-  paymentTerms: z && z.enum(["hourly", "fixed", "milestone"]);
-  paymentAmount: z && z.string().min(1, "Payment amount is required");
-  additionalClauses: z && z.array(z && z.string()).default([])}),;  talent;
-
-
-import {useState, useEffect} from "react";""
-import {useForm} from "react-hook-form";""
-import {zodResolver} from "@hookform/resolvers/zod";""
-import {z} from "zod";""
-import {Loader2} from "lucide-react";""
-import {Button} from "@/components/ui/button";""
-import {Form} from "@/components/ui/form";""
-import {DialogDescription, DialogFooter, DialogHeader, DialogTitle} from "@/components/ui/dialog";""
-import {useToast} from "@/hooks/use-toast";""
-import {TalentProfile} from "@/types/talent";""
-import {GeneratedMilestone} from "@/hooks/useMilestoneGenerator";""
-import {generateContract} from "../utils/contractUtils";""
-import {ProjectDetailsFields} from "./ProjectDetailsFields";""
-import {PaymentTermsFields} from "./PaymentTermsFields";""
-import {AdditionalClausesFields} from "./AdditionalClausesFields";""
-import {DeploymentOptions} from "@/types/smart-contracts";""
-import { useState, useEffect } from "react",""
-import { useForm } from "react-hook-form",""
-import { zodResolver } from "@hookform/resolvers/zod",""
-import { z } from "zod",""
-import { Loader2 } from "lucide-react",""
-import { Button } from "@/components/ui/button",""
-import { Form } from "@/components/ui/form",""
-import { DialogDescription, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog",""
-import { useToast } from "@/hooks/use-toast",""
-import { TalentProfile } from "@/types/talent",""
-import { GeneratedMilestone } from "@/hooks/useMilestoneGenerator",""
-import { generateContract } from "../utils/contractUtils",""
-import { ProjectDetailsFields } from "./ProjectDetailsFields",""
-import { PaymentTermsFields } from "./PaymentTermsFields",""
-import { AdditionalClausesFields } from "./AdditionalClausesFields",""
-import { DeploymentOptions } from "@/types/smart-contracts","
-const formSchema = z.object({)"
-  projectName: z.string().min(1, "Project name is required");""
-  scopeSummary: z.string().min(10, "Scope summary should be at least 10 characters");"
-  startDate: z.date({
-
-const formSchema = z && z.object({;)"
-  projectName: z && z.string().min(1, "Project name is required");""
-  scopeSummary: z && z.string().min(10, "Scope summary should be at least 10 characters");"
-  startDate: z && z.date({;,)"
-  required_error: "Start date is required"}),;"
-  endDate: z && z.date().optional(),;"
-  paymentTerms: z && z.enum(["hourly", "fixed", "milestone"]);""
-  paymentAmount: z && z.string().min(1, "Payment amount is required");"
-  additionalClauses: z && z.array(z && z.string()).default([])}),;
-  talent;
-pr-12325
-  clientName;
-  initialValues;
-  onFormValuesChange;
-  onContractGenerated;
-  deployOptions;
-  onDeployOptionsChange;
-}: ContractFormProps) {;
-  const [isGenerating, setIsGenerating] = useState(false);
-  const [generatedMilestones, setGeneratedMilestones] = useState<GeneratedMilestone[]>([]);
-  const { toast } = useToast();
-  const { toast } = useToast(),
-
-  const form = useForm<ContractFormValues>({
-    resolver: zodResolver(formSchema),
-    defaultValues: initialValues || {
-      projectName: "",
-      scopeSummary: "",
-      startDate: new Date(),
-      paymentTerms: talent.hourly_rate ? "hourly" : "fixed",
-      paymentAmount: talent.hourly_rate ? `$${talent.hourly_rate}/hour` : "",
-      additionalClauses: ["nda", "ip"]}}),
-  
-
-  // Update form when initialValues change
-  useEffect(() => {
-    if (initialValues) {
-      Object.keys(initialValues).forEach((key) => {
-
-          const typedKey = key as keyof ContractFormValues,
-        form.setValue(typedKey, initialValues[typedKey])
-      })
-  const onSubmit = async (values: ContractFormValues) => {
-    setIsGenerating(true)
-    try {
-      const contract = await generateContract(
-        values
-        talent
-        clientName
-        generatedMilestones      );
-      ),
-      
-      onContractGenerated(contract)
-    } catch (error) {
-      console.error("Error generating contract:", error),            form={form}
->>>>>>> origin/main
             talent={talent}
             handleMilestonesGenerated={handleMilestonesGenerated}
 
@@ -172,6 +13,134 @@ pr-12325
               </>;
             ) : (;
               "Generate Contract";
+            )}
+
+          </Button>;
+        </form>;
+      </Form>;
+
+      <DialogFooter className="gap-2 flex-wrap mt-4">;
+        <Button
+/>;
+          <AdditionalClausesFields;
+            form={form}
+          />
+          <AdditionalClausesFields
+            form={form}
+          />
+          <Button
+            type="submit"
+          />;
+          <AdditionalClausesFields;
+            form={form}
+          />
+          <AdditionalClausesFields 
+            form={form}
+          />
+          <Button 
+            type="submit" 
+
+            className="w-full bg-zion-purple hover:bg-zion-purple-dark"
+            disabled={isGenerating}>;
+          ;
+          <AdditionalClausesFields ;
+            form={form}
+          />;
+          ;
+          <Button ;
+            type="submit" ;
+            className="w-full bg-zion-purple hover:bg-zion-purple-dark";
+            disabled={isGenerating}
+          >;
+            {isGenerating ? (;
+              <>;
+                <Loader2 className="mr-2 h-4 w-4 animate-spin" />;
+                Generating Contract...;
+              </>;
+            ) :(;
+              "Generate Contract";
+            )}
+            className="w-full bg-zion-purple hover:bg-zion-purple-dark"
+            disabled={isGenerating}
+          >
+            {isGenerating ? (
+              <>
+                <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                Generating Contract...
+              </>
+            ) : (
+              "Generate Contract"
+            )}
+          </Button>
+        </form>
+      </Form>
+      <DialogFooter className="gap-2 flex-wrap mt-4">
+
+          </Button>;
+        </form>;
+      </Form>;
+
+        <Button 
+
+          variant="outline" 
+          onClick={() => form && form.reset()}
+          disabled={isGenerating}
+        </DialogDescription>;
+      </DialogHeader>;
+      <Form {...form}>;
+        <form on_submit={form.handle_submit (on_submit)} className="space - y-6">;
+          <ProjectDetailsFields;
+            form={form}
+          />;
+          <PaymentTermsFields;
+            form={form}
+            talent={talent}
+            handleMilestonesGenerated={handleMilestonesGenerated}
+          />;
+          <AdditionalClausesFields;
+            form={form}
+          />;
+          <Button;
+            type="submit";
+            className="w - full bg - zion - purple hover:bg - zion - purple - dark";
+            disabled={is_generating}
+          >;
+            {is_generating ? (
+              <>;
+                <Loader2 className="mr - 2 h - 4 w - 4 animate - spin" />;
+                Generating Contract...;
+              </>) : (
+              "Generate Contract")}
+          </Button>;
+        </form>;
+      </Form>;
+      <DialogFooter className="gap - 2 flex - wrap mt - 4">;
+        <Button;
+          variant="outline";
+          on_click={() => form.reset ()}
+          disabled={is_generating}
+;
+      <DialogFooter className="gap-2 flex-wrap mt-4">;
+        <Button ;
+          variant="outline" ;
+          onClick={() => form.reset()}
+          disabled={isGenerating}
+        <Button
+          variant="outline"
+          onClick={() => form.reset()}
+          disabled={isGenerating}
+        >
+          Reset Form
+        </Button>
+      </DialogFooter>
+    </>
+  )
+}
+        <Button 
+          variant="outline" 
+          onClick={() => form.reset()}
+          disabled={isGenerating}
+        >;
             )}        >;
           Reset Form;
         </Button>;
@@ -180,6 +149,14 @@ pr-12325
     </>);
 }
 
+;
+    </>;
+  ),; const formSchema = z.object ({
+  projectName: z.string () .min (1, "Project name is required");
+scopeSummary: z.string () .min (10, "Scope summary should be at least 10 characters");
+startDate: z.date ({
+  required error: "Start date is required" 
+});
 
   const form = useForm<ContractFormValues>({
 )
@@ -199,8 +176,6 @@ export type ContractFormValues = z.infer<typeof formSchema>,;
         <DialogDescription>;
 
 
-        
-      
       <Form {...form}>
 )"
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">"
@@ -357,8 +332,6 @@ if (!== "milestone") {) {"
           onClick={() => form.reset()}
 
 
-        
-      
     </>
 
     </>);
@@ -381,5 +354,7 @@ export type ContractFormValues = z.infer<typeof formSchema>;
 </Loader2>"
 } </form>  <DialogFooter className="gap-2 flex-wrap mt-4" > <Button > Reset Form   </>)"
   );
+}
+;
 "`;
 pr-12325

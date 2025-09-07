@@ -1,65 +1,9 @@
-<<<<<<< HEAD
-=======
-  Calendar,;
-  Star,;} from 'lucide-react';import { ;
-  Phone, Mail, MapPin, Globe, ;
-  Calendar,
-  Star,;} from 'lucide-react';import { 
-  Phone, Mail, MapPin, Globe, 
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com',
-import {;
-  Phone,;
-  Mail,;
-  MapPin,;
-  Globe,;
-  Clock,;
-  ChevronDown,;
-  ChevronUp,;
-  MessageCircle,;
-  Calendar,;
-  Star,;} from 'lucide-react';import { ;
-  Phone, Mail, MapPin, Globe, ;
-  Clock, ChevronDown, ChevronUp;
-  MessageCircle, Calendar, Star;
 
-
-const quickActions = [;
-  { name: 'Get Quote', href: '/quote', icon: <MessageCircle className="w-4 h-4" /> },;
-  { name: 'Book Demo', href: '/demo', icon: <Calendar className="w-4 h-4" /> },;
-  { name: 'Live Chat', href: '/chat', icon: <MessageCircle className="w-4 h-4" /> }
-
-export default function TopContactBar() {;
-
-export default function TopContactBar() {;
-
-  const [isExpanded, setIsExpanded] = useState(false);
-
-  return (
-    <div className='relative z-40'>;
->>>>>>> origin/main
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import { Phone, Mail, MapPin, Globe;
-<<<<<<< HEAD
-  Clock, ChevronDown, ChevronUp;
-  MessageCircle, Calendar, Star
- } from 'lucide-react';
-const contactInfo = null;
 
-=======
-  Clock, ChevronDown, ChevronUp;}
-  MessageCircle, Calendar, Star;}
-  } from 'lucide-react';
-
-const contactInfo = null;
-
-export default function TopContactBar() {
-  const [isExpanded, setIsExpanded] = useState(false);
->>>>>>> origin/main
   return (
 <div className='relative z-40'>
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -574,7 +518,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   action.icon
 }<span> {
   action.name
-        
 }
       </AnimatePresence>;
     </div>;

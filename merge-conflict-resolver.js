@@ -39,7 +39,6 @@ class MergeConflictResolver {
   async getConflictedFiles() {
     this.log('Checking for merge conflicts...');
     const result = await this.runCommand('git status --porcelain');
-    
     if (!result.success) {
       this.log('Error checking git status');
       return [];
@@ -58,7 +57,6 @@ class MergeConflictResolver {
 
   async resolveConflictsInFile(filePath) {
     this.log(`Resolving conflicts in ${filePath}`);
-    
     if (!fs.existsSync(filePath)) {
       this.log(`File ${filePath} does not exist, skipping`);
       return false;
@@ -66,56 +64,15 @@ class MergeConflictResolver {
 
     try {
       let content = fs.readFileSync(filePath, 'utf8');
-      
       // Check if file has merge conflict markers
-      if (!content.includes('<<<<<<<') && !content.includes('=======') && !content.includes('>>>>>>>')) {
-        this.log(`No conflicts found in ${filePath}`);
-        return true;
-      }
-
-      // Strategy 1: Accept incoming changes (from the branch being merged)
-      let resolvedContent = this.acceptIncomingChanges(content);
-      
-      // Strategy 2: If that doesn't work, try accepting current changes
-      if (resolvedContent.includes('<<<<<<<')) {
-        resolvedContent = this.acceptCurrentChanges(content);
-      }
-
-      // Strategy 3: If still conflicts, try smart merge
-      if (resolvedContent.includes('<<<<<<<')) {
-        resolvedContent = this.smartMerge(content);
-      }
-
-      // If still has conflicts, log and skip
-      if (resolvedContent.includes('<<<<<<<')) {
-        this.log(`Could not resolve conflicts in ${filePath}, keeping current version`);
-        resolvedContent = this.acceptCurrentChanges(content);
-      }
-
-      fs.writeFileSync(filePath, resolvedContent);
-      this.resolvedFiles.push(filePath);
-      this.log(`Resolved conflicts in ${filePath}`);
-      return true;
-
-    } catch (error) {
-      this.log(`Error resolving conflicts in ${filePath}: ${error.message}`);
-      this.failedFiles.push(filePath);
-      return false;
-    }
-  }
-
-  acceptIncomingChanges(content) {
-    // Remove conflict markers and keep incoming changes
-    return content
-      .replace(/<<<<<<< HEAD[\s\S]*?=======([\s\S]*?)>>>>>>> [^\n]+/g, '$1')
-      .replace(/<<<<<<< [^\n]+[\s\S]*?=======([\s\S]*?)>>>>>>> [^\n]+/g, '$1');
+      if (!content.includes('<<<<<<<') && !content.includes('
   }
 
   acceptCurrentChanges(content) {
     // Remove conflict markers and keep current changes
     return content
-      .replace(/<<<<<<< HEAD([\s\S]*?)=======[\s\S]*?>>>>>>> [^\n]+/g, '$1')
-      .replace(/<<<<<<< [^\n]+([\s\S]*?)=======[\s\S]*?>>>>>>> [^\n]+/g, '$1');
+      .replace(/
+      .replace(/<<<<<<< [^\n]+([\s\S]*?)
   }
 
   smartMerge(content) {
@@ -136,13 +93,12 @@ class MergeConflictResolver {
         continue;
       }
 
-      if (line.startsWith('=======')) {
+      if (line.startsWith('')) {
         continue;
       }
 
       if (line.startsWith('>>>>>>>')) {
         inConflict = false;
-        
         // Smart merge logic
         const merged = this.mergeBlocks(currentBlock, incomingBlock);
         result.push(...merged);
@@ -166,19 +122,16 @@ class MergeConflictResolver {
   mergeBlocks(current, incoming) {
     // Simple merge strategy: prefer non-empty lines, avoid duplicates
     const merged = [...current];
-    
     for (const line of incoming) {
       if (line.trim() && !merged.includes(line)) {
         merged.push(line);
       }
     }
-    
     return merged;
   }
 
   async addResolvedFiles() {
     this.log('Adding resolved files to git...');
-    
     for (const file of this.resolvedFiles) {
       const result = await this.runCommand(`git add "${file}"`);
       if (result.success) {
@@ -191,7 +144,6 @@ class MergeConflictResolver {
 
   async commitMerge(message = 'Resolve merge conflicts automatically') {
     this.log('Committing merge...');
-    
     const result = await this.runCommand(`git commit -m "${message}"`);
     if (result.success) {
       this.log('Merge committed successfully');
@@ -204,10 +156,8 @@ class MergeConflictResolver {
 
   async resolveAllConflicts() {
     this.log('Starting merge conflict resolution...');
-    
     // Get list of conflicted files
     await this.getConflictedFiles();
-    
     if (this.conflictFiles.length === 0) {
       this.log('No merge conflicts found');
       return true;
@@ -223,11 +173,9 @@ class MergeConflictResolver {
 
     // Commit the merge
     const committed = await this.commitMerge();
-    
     this.log(`Resolution complete:`);
     this.log(`- Resolved: ${this.resolvedFiles.length} files`);
     this.log(`- Failed: ${this.failedFiles.length} files`);
-    
     if (this.failedFiles.length > 0) {
       this.log('Failed files:');
       this.failedFiles.forEach(file => this.log(`  - ${file}`));
@@ -240,7 +188,6 @@ class MergeConflictResolver {
 // Main execution
 async function main() {
   const resolver = new MergeConflictResolver();
-  
   try {
     const success = await resolver.resolveAllConflicts();
     process.exit(success ? 0 : 1);

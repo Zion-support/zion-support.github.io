@@ -1,11 +1,5 @@
 
-<<<<<<< HEAD
-import React from 'react',
-import Head from 'next/head',
-import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
-import Link from 'next/link';
 
-=======
 
 import React from 'react',;
 import Head from 'next/head',;
@@ -20,12 +14,14 @@ import React from 'react'
 import Head from 'next/head'
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground'
 import Link from 'next/link'
->>>>>>> origin/main
+
 export default function DeveloperPage() {
   return (
     <>
       <Head>
         <title>Developer Portal | Zion Tech Group</title>
+        <meta name="description" content="Developer resources, API keys, examples, and SDKs." />
+        <link rel="canonical" href="https://ziontechgroup.com/developer" />
 <meta
           name='description'
           content='Developer resources, API keys, examples, and SDKs.'
@@ -67,6 +63,11 @@ export default function DeveloperPage() {_return (
       </div>
     </>
   )
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
       <div className='container mx-auto px-4 py-16 text-gray-200'>
         <h1 className='text-4xl md:text-6xl font-bold mb-4'>
           Developer Portal

@@ -1,12 +1,9 @@
 
 
-
-import { useState } from 'react'
-import { useForm, ControllerRenderProps } from 'react-hook-form'
-import { Button } from '@/components/ui/button'
-import { Textarea } from '@/components/ui/textarea'
-
-
+import { useState } from "react",
+import { useForm, ControllerRenderProps } from "react-hook-form",
+import { Button } from "@/components/ui/button",
+import { Textarea } from "@/components/ui/textarea",
 import { useState } from 'react';
 import { useForm, ControllerRenderProps } from 'react-hook-form';
 import { Button } from '@/components/ui/button';
@@ -45,12 +42,12 @@ interface ReplyFormValues {
 
 
 interface ReplyFormProps {
-  onSubmit: (content: string) => Promise<void>;
+  onSubmit: (content:,  string) => Promise<void>;,
   parentId?: string
-
       content: '',;
     },;
   });
+  const handleSubmit = async (values:,  ReplyFormValues) => {;,
   const handleSubmit = async (values: ReplyFormValues) => {;
 
 interface ReplyFormProps {
@@ -63,21 +60,18 @@ interface ReplyFormProps {
       setIsSubmitting(false)
   parentId?: string;
 interface ReplyFormValues {;
-  content: string;
-
-export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {;
+  content: string;,
+export const ReplyForm = ({ onSubmit, parentId }:,  ReplyFormProps) => {;,
   const [isSubmitting, setIsSubmitting] = useState(false);
   const form = useForm<ReplyFormValues>({;
-    defaultValues: {;
+    defaultValues: {;,
       content: '',;
     },;
   });
-
-  const handleSubmit = async (values: ReplyFormValues) => {;
+  const handleSubmit = async (values:,  ReplyFormValues) => {;,
     setIsSubmitting(true);    try {;
       await onSubmit(values && values.content);
       form && form.reset();
     } finally {;
       setIsSubmitting(false);
-
 

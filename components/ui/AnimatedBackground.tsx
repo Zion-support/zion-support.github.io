@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-import React from 'react';
 
-
-=======
->>>>>>> origin/main
 export default function AnimatedBackground() {
   return (
     <div className='pointer-events-none fixed inset-0 -z-10 overflow-hidden'>
@@ -34,7 +29,6 @@ class ErrorBoundary extends React.Component {
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
       {/* Gradient Background */}
       {/* Animated Orbs */}

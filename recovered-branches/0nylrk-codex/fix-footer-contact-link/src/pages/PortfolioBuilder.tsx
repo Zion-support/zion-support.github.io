@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 
-
-=======
->>>>>>> origin/main
 import { useState  } from 'react';
 import { AppHeader  } from '@/layout/AppHeader';
 import { Footer  } from '@/components/Footer';
@@ -13,30 +9,7 @@ import { ResumeWizard  } from '@/components/resume-builder/ResumeWizard';
 import { PortfolioBuilder as PortfolioSection } from '@/components/resume-builder/portfolio/PortfolioBuilder';
 function PortfolioBuilderContent() {
   const [activeTab, setActiveTab] = useState('resume');
-<<<<<<< HEAD
 
-  return (
-=======
-import {useState} from 'react';
-import {AppHeader} from '@/layout/AppHeader';
-import {Footer} from '@/components/Footer';
-import {SEO} from '@/components/SEO';
-import {ProtectedRoute} from '@/components/ProtectedRoute';
-import {Tabs, TabsContent, TabsList, TabsTrigger} from '@/components/ui/tabs';
-import {ResumeWizard} from '@/components/resume-builder/ResumeWizard';
-import {PortfolioBuilder, as, PortfolioSection} from '@/components/resume-builder/portfolio/PortfolioBuilder';
-import { useState } from 'react',;
-import { AppHeader } from '@/layout/AppHeader',;
-import { Footer } from '@/components/Footer',;
-import { SEO } from '@/components/SEO',;
-import { ProtectedRoute } from '@/components/ProtectedRoute',;
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs',;
-import { ResumeWizard } from '@/components/resume-builder/ResumeWizard',;
-import { PortfolioBuilder as PortfolioSection } from '@/components/resume-builder/portfolio/PortfolioBuilder',;
-function PortfolioBuilderContent() {
-  const [activeTab, setActiveTab] = useState('resume'),
-    return (
->>>>>>> origin/main
     <>
       <SEO
         title="Portfolio Builder | Zion AI Marketplace"
@@ -119,22 +92,16 @@ function PortfolioBuilderContent() {"
               value="resume"""
               className="data-[state=active]:bg-background""
 
-            
               value="portfolio"""
 
-            
-          
           <TabsContent value="resume" className="space-y-6">"
 
             <ResumeWizard />
 
-          
           <TabsContent value="portfolio" className="space-y-6">"
 
             <PortfolioSection />
 
-          
-        
       </main>
       <Footer />
 
@@ -158,6 +125,19 @@ function PortfolioBuilderContent() {;
     </ProtectedRoute>
   );
 }
+
+;
+
+export default function PortfolioBuilder() {;
+  return (
+    <ProtectedRoute>;
+      <PortfolioBuilderContent />;
+    </ProtectedRoute>;
+  );
+}
+
+;
+
 import {useState} from 'react';
 import {AppHeader} from '@/layout / AppHeader';
 import {Footer} from '@/components / Footer';
@@ -206,14 +186,22 @@ function PortfolioBuilder() {
       <PortfolioBuilderContent />;
     </ProtectedRoute>);
 }
+  ),;
+}
+export default function PortfolioBuilder() {
+  return (
     <ProtectedRoute>
 
       <PortfolioBuilderContent />
 
-    
     <ProtectedRoute>;
 
       <PortfolioBuilderContent />;
+    </ProtectedRoute>;
+  );
+}
+;
+;
 
     ;
     <>;
@@ -249,6 +237,5 @@ function PortfolioBuilder() {
 
 
 
-    
 
 pr-12325

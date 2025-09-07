@@ -1,3 +1,6 @@
+/* eslint-env node */
+/* eslint-disable no-undef */
+module.exports = {
 
 /* eslint - env node */;
 /* eslint-env node */
@@ -14,6 +17,15 @@ module && module.exports = {
     node: true,
     es2021: true
   },
+  globals: {
+    module: 'readonly',
+    require: 'readonly',
+    exports: 'readonly',
+    __dirname: 'readonly',
+    __filename: 'readonly',
+    global: 'readonly',
+    Buffer: 'readonly',
+    console: 'readonly'
   extends: ["next/core-web-vitals", "plugin:@typescript-eslint/recommended"],
   parser: "@typescript-eslint/parser",
   plugins: ["@typescript-eslint"],
@@ -58,10 +70,18 @@ ursor/add-new-services-and-deploy-updates-0462
     ecmaVersion: 12,
     sourceType: 'module',
   },
-  plugins: ['react', '@typescript-eslint'],
+  extends: ['next/core-web-vitals'],
   rules: {
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
+    '@typescript-eslint/no-unused-vars': [
+      'warn',
+      { argsIgnorePattern: '^_', varsIgnorePattern: '^_' }
+    ],
+    '@typescript-eslint/no-explicit-any': 'warn',
+    '@typescript-eslint/no-empty-object-type': 'warn',
+    '@next/next/no-html-link-for-pages': 'warn'
+  },
     'no-unused-vars': 'off',
     '@typescript-eslint/no-unused-vars': 'warn',
     'no-console': 'off',
@@ -137,6 +157,17 @@ module.exports = {
     'node_modules/',
     '.next/',
     'out/',
+    'build/',
+    'dist/',
+    '*.config.js',
+    '*.config.ts',
+    'scripts/',
+    'automation/',
+    'netlify/',
+    'src/',
+    'apps/'
+  ]
+};
     'dist/',
     '*.config.js',
     '*.config.cjs',

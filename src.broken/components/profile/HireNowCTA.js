@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 :src/components/profile/HireNowCTA.jsx
 import React, {useState} from 'react';
 import {Button} from "../ui/Button";
@@ -94,6 +95,7 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }) {
         budget: '',
         startDate: '',
         message: ''
+        e.preventDefault();
 :src/components/profile/HireNowCTA.jsx
     }
     );
@@ -108,6 +110,7 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }) {
             projectDescription: '',
             budget: '',
             startDate: '',
+    const handleChange = (e) => {
 :src/components/profile/HireNowCTA.jsx
             message: ''}
     );
@@ -182,6 +185,7 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }) {
           </form>)}
       </CardContent>
     </Card>);
+}
 }
 import React, { useState } from 'react';
 export function HireNowCTA({ talentName, hourlyRate, onHire }) {

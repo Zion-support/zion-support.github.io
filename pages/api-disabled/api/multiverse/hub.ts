@@ -26,6 +26,14 @@ import type { NextApiRequest, NextApiResponse } from './next';;
 import { read_state  } from '../../../utils / sync / storage';;
 import type { NextApiRequest, NextApiResponse } from './next';
 import { read_state  } from '../../../utils / sync / storage';
+
+}
+
+}
+
+import type { NextApiRequest, NextApiResponse } from './next';,
+import { read_state  } from '../../../utils / sync / storage';,
+
 export default async /**
  * handler - Function description
  */
@@ -36,8 +44,16 @@ if ( {) {
   $2
 }
     return res.status (200).json ({
-      route: "/multiverse / hub"
-      instance_id: state.config.instance_id
+
+
+      route: "/multiverse / hub",
+      instance_id: state.config.instance_id,
+
+
+
+      route: "/multiverse / hub",
+      instance_id: state.config.instance_id,
+}
 
 
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -72,6 +88,9 @@ export default async function handler(req, res) {
   const state = readState()
   if (req.method === "GET") {
     return res.status(200).json({
+
+
+
       route: "/multiverse/hub"
       instanceId: state.config.instanceId
 
@@ -87,6 +106,19 @@ pr-12243
       scope: state.config.scope
       opt_in: state.config.opt_in
       paused: state.config.paused
+
+
+      route: "/multiverse/hub",
+      instanceId: state.config.instanceId,
+
+
+      route: "/multiverse/hub",
+      instanceId: state.config.instanceId,
+      peers: state.config.peers,
+      scope: state.config.scope,
+      opt_in: state.config.opt_in,
+      paused: state.config.paused,
+
 main
 pr-12243
       lastSyncedAt: state.lastSyncedAt})

@@ -11,21 +11,12 @@ class CICDAutomation {}
   constructor() {}
     this.startTime = new Date();
     this.report = {}
-<<<<<<< HEAD
-      "timestamp": this.startTime.toISOString(),""
-      "status": 'running',
-      "steps": [],""
-      "errors": [],""
-=======
-      "timestamp": this.startTime.toISOString(),
-      "status": running,
-      "steps": [],
-      "errors": [],
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
       "summary": {};"
     }};"
   log(message, type = 'info') {}
     const timestamp = new Date().toISOString(;);
+
 
     this.report.steps.push({})
       timestamp,
@@ -34,124 +25,26 @@ class CICDAutomation {}
     })};
   async runCommand(command, description) {}
     try {}
-<<<<<<< HEAD
-      this.log(`"Starting": ${description}`);"
-      const output = execSync(command, { })"
-        "encoding": 'utf8',
-        "cwd": '/workspace',
-        "stdio": 'pipe
-      };);`;
-      this.log(`"Completed": ${description}`, 'success');
-      return output} catch (error) {}`;
-      this.log(`"Failed": ${description} - ${error.message}`, 'error');
-      this.report.errors.push({})
-        "step": description,""
-        "error": error.message,""
-=======
-      this.log(`"Starting": ${description});"
-      const output = execSync(command, { })"
-        "encoding": utf8,
-        "cwd": /workspace,
-        "stdio": pipe
-      };);
-      this.log(`"Completed": ${description},success');
-      return output} catch (error) {}
-      this.log(`"Failed": ${description} - ${error.message},error');
-      this.report.errors.push({})
-        "step": description,
-        "error": error.message,
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
         "timestamp": new Date().toISOString();"
       }
 });
       throw error};
   };
   async installDependencies() {}"
-<<<<<<< HEAD
-    await this.runCommand('npm ci', 'Install dependencies')};
-  async runTests() {}
-      await this.runCommand('npm test', 'Run tests');
-      this.report.summary.tests = 'passed'} catch (error) {}
-      this.report.summary.tests = 'failed';
-      // Don't throw, continue with other steps;
-  async runLinting() {}
-      await this.runCommand('npm run lint', 'Run linting');
-      this.report.summary.linting = 'passed'} catch (error) {}
-      this.report.summary.linting = 'failed';
-      // Don't throw, continue with other steps;
-  async buildApplication() {}
-      await this.runCommand('npm run build', 'Build application');
-      this.report.summary.build = 'success'} catch (error) {}
-      this.report.summary.build = 'failed';
-  async generateReport() {}
-    const endTime = new Date;(;);
-    this.report.status = this.report.errors.length === 0 ? 'success' : 'failed';
-    this.report.duration = endTime - this.startTime;
-    this.report.endTime = endTime.toISOString();
 
-    const reportPath = path.join('/workspace', 'ci-cd-automation-report.json';);
-    fs.writeFileSync(reportPath, JSON.stringify(this.report, null, 2));
-    `;
-    this.log(`Report saved "to": ${reportPath}`)};"
-=======
-    await this.runCommand('npm ci,Install dependencies')};
-  async runTests() {}
-    try {}
-      await this.runCommand('npm test,Run tests');
-      this.report.summary.tests = 'passed} catch (error) {}
-      this.report.summary.tests = 'failed';
-      // Don't throw, continue with other steps;
-    };
-  };
-  async runLinting() {}
-    try {}
-      await this.runCommand('npm run lint,Run linting');
-      this.report.summary.linting = 'passed} catch (error) {}
-      this.report.summary.linting = 'failed';
-      // Don't throw, continue with other steps;
-    };
-  };
-  async buildApplication() {}
-    try {}
-      await this.runCommand('npm run build,Build application');
-      this.report.summary.build = 'success} catch (error) {}
-      this.report.summary.build = 'failed';
-      throw error};
-  };
-  async generateReport() {}
-    const endTime = new Date;(;);
-    this.report.status = this.report.errors.length === 0 ? 'success: failed';
-    this.report.duration = endTime - this.startTime;
-    this.report.endTime = endTime.toISOString();
-'
-    const reportPath = path.join('/workspace,ci-cd-automation-report.json';);
-    fs.writeFileSync(reportPath, JSON.stringify(this.report, null, 2));
-    '
-    this.log(`Report saved "to": ${reportPath})};"
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
   async run() {}
     try {}"
       this.log('Starting CI/CD Pipeline Automation');
       // Install dependencies;
       await this.installDependencies();
-      
       // Run tests;
       await this.runTests();
-      
       // Run linting;
       await this.runLinting();
-      
       // Build application;
       await this.buildApplication();
-<<<<<<< HEAD
-      
-      this.log('CI/CD Pipeline completed successfully', 'success')} catch (error) {}`;
-      this.log(`CI/CD Pipeline "failed": ${error.message}`, 'error')} finally {`}
-=======
-      '
-      this.log('CI/CD Pipeline completed successfully,success')} catch (error) {}
-      this.log(`CI/CD Pipeline "failed": ${error.message},error')} finally {`}
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
       await this.generateReport()};
 // Run the automation;
 if ( {})
@@ -159,3 +52,4 @@ if ( {})
      {}
   const automation = new CICDAutomation}(;);
   automation.run().catch(console.error)};
+

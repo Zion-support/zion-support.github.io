@@ -1,4 +1,5 @@
 
+
 import type { NextApiRequest, NextApiResponse } from "next";
 import { evaluateHeuristics } from "../../../utils/fraud/heuristics";
 import { classifyWithGPT } from "../../../utils/fraud/gpt";
@@ -27,12 +28,31 @@ export default async function handler(
     res && res.status(405).json({ error: "Method not allowed" });
     return;
 
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { evaluateHeuristics } from '../../../utils/fraud/heuristics';
+import { classifyWithGPT } from '../../../utils/fraud/gpt';
+import { getFraudStore, newEvent } from '../../../utils/fraud/store';
+import { extractClientIp } from '../../../utils/ip';
+import { AdminActionRecord, GptClassification, GptClassificationLabel, MonitoredSource, StoredFraudRecord } from '../../../utils/fraud/types';
+import { sendWarningEmail } from '../../../utils/email';
+const allowedSources: MonitoredSource[] = ['signup', 'job_post', 'message', 'quote', 'review'];
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') {
+    res.status(405).json({ error: 'Method not allowed' });
+    return
+
+  }
+  try {
+
+    const body = req && req.body || {};
+    const source = body && body.source as MonitoredSource;
+    if (!allowedSources && allowedSources.includes(source)) {
+      res && res.status(400).json({ error: "Invalid source" });
       return;
     }
 
     const userId = typeof body && body.userId === "string" ? body && body.userId : null;
     const content = typeof body && body.content === "string" ? body && body.content : null;
-
 
     const metadata =
       body && body.metadata && typeof body && body.metadata === "object" ? body && body.metadata : null;
@@ -54,11 +74,22 @@ import { classifyWithGPT  } from '../../../utils / fraud / gpt';
 import { getFraudStore, new_event  } from '../../../utils / fraud / store';
 import { extractClientIp  } from '../../../utils / ip';
 import {
+import type { NextApiRequest, NextApiResponse } from "next";
+import { evaluateHeuristics } from "../../../utils/fraud/heuristics";
+import { classifyWithGPT } from "../../../utils/fraud/gpt";
+import { getFraudStore, newEvent } from "../../../utils/fraud/store";
+import { extractClientIp } from "../../../utils/ip";
+import {
   AdminActionRecord
   GptClassification
   GptClassificationLabel
   MonitoredSource
   StoredFraudRecord
+AdminActionRecord,
+  GptClassification,
+  GptClassificationLabel,
+  MonitoredSource,
+  StoredFraudRecord,
 } from '../../../utils / fraud / types';
 import { sendWarningEmail  } from '../../../utils / email';
 ;
@@ -179,12 +210,10 @@ if ( {) {
       source === "message";
     const stored: Omit<StoredFraudRecord, "id"> = {
 
-
-      ...event
-      heuristic
-      gpt
-      autoHidden: !!autoHide
-
+...event,
+      heuristic,
+      gpt,
+      autoHidden: !!autoHide,
 
       process.env.FRAUD_AUTOHIDE === 'true' &&
       combinedLabel !== 'SAFE' &&
@@ -210,7 +239,6 @@ toUserId: userId;
         });
       }
     }
-
 
     res && res.status(200).json({
       id: saved && saved.id
@@ -260,6 +288,13 @@ if ( {) {
       }
     }
     res.status (200).json ({
+id: saved.id,
+      flagged: combined_label !== "SAFE",
+      label: combined_label,
+      heuristic,
+      gpt,
+      auto_hidden: saved.auto_hidden,
+      created_at: saved.created_at,
       id: saved.id;
       flagged: combined_label !== "SAFE";
       label: combined_label;
@@ -312,9 +347,7 @@ export default async function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
 
-
       .json({ error: "Internal error", details: e?.message || String(e) });
-
 
   }
 }
@@ -324,6 +357,16 @@ export default async function handler(req, res) {
 
     const saved = await store.saveEvent(stored);
 
+});
+  } catch (e: any) {
+
+      .json({ error: "Internal error", details: e?.message || String(e) });
+
+      .json({ error: "Internal error", details: e?.message |String(e) });
+  }
+}
+      status: 'PENDING'};
+    const saved = await store.saveEvent(stored);
     if (process.env.FRAUD_EMAIL_WARNINGS === 'true' && userId) {
       const prior = await store.countFlaggedForUser(userId);
       if (prior <= 1 && combinedLabel !== 'SAFE') {
@@ -349,8 +392,65 @@ export default async function handler(req, res) {
 }
   }
 }
+}
+}
 
-
+    res;
+      .status (500);
+      .json ({ error: "Internal error", details: e?.message || String (e) });
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+    res.status(200).json({;
+      id: saved.id,;
+      flagged: combinedLabel !== 'SAFE',;
+      label: combinedLabel,;
+      heuristic,;
+      gpt;
+      autoHidden: saved.autoHidden;
+      createdAt: saved.createdAt});
+  } catch (error) {
+    res.status(500).json({ error: 'Internal error', details: e?.message || String(e) });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
 
   }
 }

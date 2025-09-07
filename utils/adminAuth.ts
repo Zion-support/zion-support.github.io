@@ -1,14 +1,27 @@
 
 
+
+import type { NextApiRequest } from 'next';
+
+
+
+
+
 import type { NextApiRequest } from 'next';
 export interface Session {
 
 export interface Session {;
   userId: string;
+
+
+
+
+
 origin/cursor/expand-services-advertise-and-build-project-c28b
   email: string;
   role: 'admin' | 'user' | 'guest';
 }
+
 
 export function getSessionFromReq(req: NextApiRequest): Session | null {
   // Mock implementation - replace with actual session logic;
@@ -26,6 +39,8 @@ export function getSessionFromReq(req: NextApiRequest): Session | null {
 }
 
 
+
+
 export interface Session {
   user_id: string;
   email: string;
@@ -33,21 +48,51 @@ export interface Session {
 }
 
 
+
+
+
+
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
   // Check for internal agent headers or IPs;
   const userAgent = req.headers['user-agent'] || '';
 
-
   const internalAgents = ['zion-bot', 'internal-agent', 'automation'];
   return internalAgents.some(agent => userAgent.toLowerCase().includes(agent));
 }
+
+
+
+
+
+
+
+
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 export const isAdmin = () => {
   // Placeholder implementation
   return true;
 }
+
+
+
+export const isAdmin = () => {
+  // Placeholder implementation
+  return true;
+
+
+
+
+
+export const isAdmin = () => {
+  // Placeholder implementation
+  return true;
+
+
+export const isAdmin = () => {
+  // Placeholder implementation
+  return true;
 
 export const isAdmin = () => {
   // Placeholder implementation
@@ -282,6 +327,8 @@ export const is_admin = () =>: any {
 }
 ;
 
+
+
 ursor/fix-website-loading-errors-and-merge-6662
 export function isInternalAgentRequest(req: NextApiRequest): boolean {
   // Check for internal agent headers or IPs
@@ -303,6 +350,9 @@ export const isAdmin = () => {
   return true;
 }
 
+};
+
+
 origin/cursor/expand-services-advertise-and-build-project-c28b
 };
 
@@ -311,6 +361,21 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 }
 ;
 
+};
+
+}
+;
+
+
+// Stub admin auth utility - placeholder for missing functionality;
+export const requireAdminAuth = () => {;
+  // Placeholder implementation;
+  return true;
+};
+export const isAdmin = () => {;
+  // Placeholder implementation;
+  return true;
+};
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
 };

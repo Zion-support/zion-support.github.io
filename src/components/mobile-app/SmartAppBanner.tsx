@@ -12,6 +12,7 @@ interface SmartAppBannerProps {
   appStoreUrl?: string;
   googlePlayUrl?: string;
 
+
 }
 export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
 

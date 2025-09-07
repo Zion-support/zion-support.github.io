@@ -296,6 +296,10 @@ monitor.run().catch(error = > {; process.exit(1)});
       // Log summary,;
       // If there are critical vulnerabilities, suggest immediate action,;
 // Run the dependency monitor,;
+const monitor = new DependencyMonitor(),;
+monitor.run().catch(error => {,;
+  process.exit(1);
+}),;
 
 
 
@@ -814,6 +818,7 @@ const monitor = new DependencyMonitor ();
 monitor.run ().catch (error = > { process.exit (1)});
 ;
 
+monitor.run().catch(error = > {; process.exit(1)});
 monitor.run().catch(error = > {; process.exit(1)});
 
 ursor/fix-website-loading-errors-and-merge-6662

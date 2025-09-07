@@ -1,17 +1,37 @@
+
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+
 import type { NextApiRequest, NextApiResponse } from 'next',;
 import type { NextApiRequest, NextApiResponse } from 'next';
 pr-12243
 
 
+  res.status(200).json({ store });
+}
+
+
+import type { NextApiRequest, NextApiResponse } from 'next',;
+
 import type { NextApiRequest, NextApiResponse } from 'next';
 ;
 const store: Record<string, any> = (global as any).__ZION_DID_STORE__ || {}
 
+
+const store: Record<string, any> = (global as any).__ZION_DID_STORE__ || {};
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  const { address } = req.query as { address?: string };
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  const { address } = req.query as { address?: string };
   if (!address) return res.status(400).json({ error: 'Missing address' });
   const data = store[String(address).toLowerCase()] || null;
   return res.status(200).json({ data })
 }
-import type { NextApiRequest, NextApiResponse } from 'next'
+
+
+import type { NextApiRequest, NextApiResponse } from 'next',
+
 ;
 const store: Record < string, any> = (global as any).__ZION_DID_STORE__ || {}
 export default /**
@@ -25,6 +45,8 @@ function handler() {
   const data = store[String (address).toLowerCase ()] || null
   return res.status (200).json ({ data });
 }
+
+
 import type { NextApiRequest, NextApiResponse } from 'next';
 import type { NextApiRequest, NextApiResponse } from 'next';
 ;
@@ -32,6 +54,11 @@ const store: Record<string, any> = (global as any).__ZION_DID_STORE__ || {}
 
 const store: Record<string, any> = (global as any).__ZION_DID_STORE__ |{}
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
+
+
+
+
+
 pr-12243
   const { address } = req.query as { address?: string }
   if (!address) return res.status(400).json({ error: 'Missing address' })
@@ -57,24 +84,45 @@ export default function handler(req: any, res: any) {
   res.status(200).json({ store });
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-
-
-
 const store: Record<string, any> = (global as any).__ZION_DID_STORE__ || {};
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const { address } = req.query as { address?: string };
+
+
+
+
+  if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
 pr-12243
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+
+
+}
 ursor/fix-website-loading-errors-and-merge-6662
 pr-12243
 }
 
 }
 }
+
+
+
+}
+
+
+
 origin/cursor/expand-services-advertise-and-build-project-c28b
 main
 pr-12243

@@ -1,4 +1,3 @@
-
 class ErrorBoundary extends React.Component {
   // TODO: Implement
 }
@@ -41,12 +40,14 @@ export default function SOC2ComplianceAutomation({ }: SOC2ComplianceAutomationPr
   );
 
 }
+
 :src.pages.disabled/SOC2ComplianceAutomation.jsx
 }
 }
 }
 }
 }
+:temp_exclude/src.pages.disabled/SOC2ComplianceAutomation.jsx
 :temp_exclude/src.pages.disabled/SOC2ComplianceAutomation.jsx
     <div>
 </div>

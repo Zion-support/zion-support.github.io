@@ -3,8 +3,6 @@ import { Card, CardContent, CardFooter } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 
-
-
 import { useState  } from 'react';
 import { Card, CardContent, CardFooter  } from '@/components/ui/card';
 import { Button  } from '@/components/ui/button';
@@ -25,26 +23,19 @@ interface ProjectCardProps {
           <Image
             src={project.image_url}
             alt={project.title}
-
-
-            className="object-cover"
-            loading="lazy"
+            className="object-cover""
+            loading="lazy""
           />
-
-
         ) : (
-          <div className="w-full h-full flex items-center justify-center bg-muted">
-            <FileText className="h-12 w-12 text-muted-foreground/50" />
+          <div className="w-full h-full flex items-center justify-center bg-muted">"
+            <FileText className="h-12 w-12 text-muted-foreground/50" />"
           </div>
         )}
       </div>
-
       </div>;
-
       <CardContent className='flex-grow pt-6'>;
         <div className='space-y-2'>;
           <h3 className='font-semibold text-lg'>{project && project.title}</h3>;
-
           {project && project.description && (;
             <p className='text-sm text-muted-foreground line-clamp-3'>;
               {project && project.description}
@@ -74,9 +65,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </Badge>
               ))}
             </div>
-
           )}
-
           {project && project.technologies && project && project.technologies.length > 0 && (;
             <div className='flex flex-wrap gap-1 mt-2'>;
               {project && project.technologies.map((tech, index) => (;
@@ -88,21 +77,35 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>;
         )}
       </div>;
-
       <CardContent className="flex-grow pt-6">;
         <div className="space-y-2">;
           <h3 className="font-semibold text-lg">{project && project.title}</h3>;
-
           {project && project.description && (;
             <p className="text-sm text-muted-foreground line-clamp-3">{project && project.description}</p>;
           )}
-
           {project && project.technologies && project && project.technologies.length > 0 && (;
             <div className="flex flex-wrap gap-1 mt-2">;
               {project && project.technologies.map((tech, index) => (;
                 <Badge key={index} variant="secondary" className="text-xs">;
-
-
+            className="object-cover"
+            loading="lazy"
+          />
+        ) : (
+          <div className="w-full h-full flex items-center justify-center bg-muted">
+            <FileText className="h-12 w-12 text-muted-foreground/50" />
+          </div>
+        )}
+      </div>
+      <CardContent className="flex-grow pt-6">
+        <div className="space-y-2">
+          <h3 className="font-semibold text-lg">{project.title}</h3>
+          {project.description && (
+            <p className="text-sm text-muted-foreground line-clamp-3">{project.description}</p>
+          )}
+          {project.technologies && project.technologies.length > 0 && (
+            <div className="flex flex-wrap gap-1 mt-2">
+              {project.technologies.map((tech, index) => (
+                <Badge key={index} variant="secondary" className="text-xs">
                   {tech}
                 </Badge>;
               ))}
@@ -118,10 +121,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
             <a
               href={project && project.github_url}
-              target='_blank'
-              rel='noopener noreferrer'
-              aria-label='GitHub'
-              title='GitHub'
+              target='_blank''
+              rel='noopener noreferrer''
+              aria-label='GitHub''
+              title='GitHub''
               href = {project && project.github_url,}
 
       <CardFooter className="flex justify-between border-t bg-muted/40 p-4">
@@ -129,7 +132,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           {project.github_url && (
             <a
               href={project.github_url}
-
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub"
@@ -140,6 +142,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </Button>
             </Link>
           )}
+;
+          {project.demo_url && (;
+            <a;
+              href={project.demo_url}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Live demo"
+              title="Live demo"
+            >
+              <Button variant="ghost" size="icon" aria-label="Live demo link">
 
         </div>;
 
@@ -304,27 +316,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 </Trash2>
 pr-12325
 
-
-
       <AlertDialog open={deleteDialogOpen} onOpenChange={setDeleteDialogOpen}>
         <AlertDialogContent>
           <AlertDialogHeader>
             <AlertDialogTitle>Delete Project</AlertDialogTitle>
             <AlertDialogDescription>
-
-
             aria-label='Delete project';
           >;
             <Trash2 className='h-4 w-4' />;
           </Button>;
         </div>;
       </CardFooter>;
-
       <AlertDialog open={deleteDialogOpen} onOpenChange={setDeleteDialogOpen}>;
         <AlertDialogContent>;
           <AlertDialogHeader>;
             <AlertDialogTitle>Delete Project</AlertDialogTitle>;
-
             </p>)}
           {project.technologies && project.technologies.length > 0 && (
             <div className='flex flex - wrap gap - 1 mt - 2'>;
@@ -339,7 +345,7 @@ pr-12325
         <div className="space - y-2">;
           <h3 className="font - semibold text - lg">{project.title}</h3>;
           {project.description && (
-            <p className="text - sm text - muted - foreground line - clamp - 3">{project.description}</p>)}
+            <p className="text - sm text - muted - foreground line - clamp - 3">{project.description}</p>)}"
           {project.technologies && project.technologies.length > 0 && (
             <div className="flex flex - wrap gap - 1 mt - 2">;
               {project.technologies.map ((tech, index) => (
@@ -439,14 +445,11 @@ pr-12325
         <AlertDialogContent>;
           <AlertDialogHeader>;
             <AlertDialogTitle > Delete Project</AlertDialogTitle>;
-
             <AlertDialogDescription>;
               Are you sure you want to delete this project? This action cannot;
               be undone.            </AlertDialogDescription>;
           </AlertDialogHeader>;
           <AlertDialogFooter>;
-
-
             <AlertDialogAction
               onClick={handleDelete}
               className='bg-destructive text-destructive-foreground'>              Delete              Are you sure you want to delete this project? This action cannot be undone.;
@@ -456,6 +459,7 @@ pr-12325
             <AlertDialogCancel>Cancel</AlertDialogCancel>;
             <AlertDialogAction
               onClick={handleDelete}
+              Are you sure you want to delete this project? This action cannot be undone.
 
 
 Are you sure you want to delete this project? This action cannot
@@ -465,8 +469,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </AlertDialogHeader>
           <AlertDialogFooter>
             <AlertDialogCancel>Cancel</AlertDialogCancel>
-
-
+            <AlertDialogAction onClick={handleDelete} className="bg-destructive text-destructive-foreground">"
             <AlertDialogAction onClick={handleDelete} className="bg-destructive text-destructive-foreground">
 
 
@@ -479,12 +482,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </AlertDialogAction>
           </AlertDialogFooter>
         </AlertDialogContent>
-
-
-
       </AlertDialog>
     </Card>
-
               className='bg-destructive text-destructive-foreground'>            <AlertDialogAction onClick={handleDelete} className="bg-destructive text-destructive-foreground">;
             <AlertDialogCancel > Cancel</AlertDialogCancel>;
             <AlertDialogAction;
@@ -499,19 +498,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               on_click={handle_delete}
               className='bg - destructive text - destructive - foreground';
             >            <AlertDialogAction on_click={handle_delete} className="bg - destructive text - destructive - foreground">;
-
               Delete;
             </AlertDialogAction>;
           </AlertDialogFooter>;
         </AlertDialogContent>;
       </AlertDialog>;
-
-
   );
 }
 }
     </Card>);
 }
+}}}}))))))
+  )
+}
+;
   );
 }
 origin/cursor/automate-test-improve-and-merge-code-2533

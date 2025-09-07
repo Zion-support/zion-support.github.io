@@ -1,10 +1,130 @@
 
+import React, { useState } from 'react';
+import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
+import { X, Building2, ChevronDown, ChevronRight } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
+import { useRouter } from 'next/router';
+import {
+  X,
+  ChevronDown,
+  ChevronRight,
+  Home,
+  Briefcase,
+  Users,
+  FileText,
+  HelpCircle,
+  LogOut,
+  User,
+  Search,
+  Brain,
+  Shield,
+  Cloud,
+  Code,
+  Network,
+  Zap,
+  Phone,
+  Mail,
+  MapPin,
+  Building2,
+} from 'lucide-react';
+const navigation = {
+  'Services': [
+    { name: 'AI Services', href: '/ai-services' },
+    { name: 'IT Services', href: '/it-services' },
+    { name: 'Micro SaaS', href: '/micro-saas' },
+    { name: 'Cloud Solutions', href: '/cloud-solutions' },
+    { name: 'Cybersecurity', href: '/cybersecurity' },
+    { name: 'Quantum Computing', href: '/quantum-computing' },
+    { name: 'Blockchain', href: '/blockchain' },
+    { name: 'IoT Solutions', href: '/iot-solutions' },
+  ],
+  'Solutions': [
+    { name: 'Enterprise Solutions', href: '/solutions/enterprise' },
+    { name: 'Startup Solutions', href: '/solutions/startup' },
+    { name: 'Digital Transformation', href: '/solutions/digital-transformation' },
+    { name: 'Custom Development', href: '/solutions/custom' },
+  ],
+  'Industries': [
+    { name: 'Healthcare', href: '/industries/healthcare' },
+    { name: 'Finance', href: '/industries/finance' },
+    { name: 'Education', href: '/industries/education' },
+    { name: 'Government', href: '/industries/government' },
+    { name: 'Manufacturing', href: '/industries/manufacturing' },
+    { name: 'Retail', href: '/industries/retail' },
+    { name: 'Agriculture', href: '/industries/agriculture' },
+    { name: 'Energy', href: '/industries/energy' },
+  ],
+  'Resources': [
+    { name: 'Blog', href: '/blog' },
+    { name: 'Documentation', href: '/docs' },
+    { name: 'API Documentation', href: '/docs/api' },
+    { name: 'Tutorials', href: '/tutorials' },
+    { name: 'White Papers', href: '/white-papers' },
+    { name: 'Webinars', href: '/webinars' },
+    { name: 'Training', href: '/training' },
+    { name: 'FAQ', href: '/faq' },
+  ],
+  'Company': [
+    { name: 'About Us', href: '/about' },
+    { name: 'Our Team', href: '/team' },
+    { name: 'Careers', href: '/careers' },
+    { name: 'Case Studies', href: '/case-studies' },
+    { name: 'News', href: '/news' },
+    { name: 'Partners', href: '/partners' },
+    { name: 'Contact', href: '/contact' },
+    { name: 'Privacy Policy', href: '/privacy' },
+  ],
+};
+const quickLinks = [
+  { name: 'Free Consultation', href: '/consultation' },
+  { name: 'Get Quote', href: '/quote' },
+  { name: 'Support', href: '/support' },
+];
 pr-12243
 
 interface SidebarProps {
   isOpen: boolean;
   onClose: () => void;
 }
+
+const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
+  const [openDropdowns, setOpenDropdowns] = useState<string[]>([]);
+
+  const navigation = {
+    'Services': [
+      { name: 'AI Services', href: '/ai-services' },
+      { name: 'IT Services', href: '/it-services' },
+      { name: 'Micro SaaS', href: '/micro-saas' },
+    ],
+    'Solutions': [
+      { name: 'Cloud Migration', href: '/solutions/cloud-migration' },
+      { name: 'Cybersecurity', href: '/solutions/cybersecurity' },
+      { name: 'Data Analytics', href: '/solutions/data-analytics' },
+    ],
+    'Industries': [
+      { name: 'Healthcare', href: '/industries/healthcare' },
+      { name: 'Finance', href: '/industries/finance' },
+      { name: 'Manufacturing', href: '/industries/manufacturing' },
+    ],
+  };
+
+  const quickLinks = [
+    { name: 'About Us', href: '/about' },
+    { name: 'Contact', href: '/contact' },
+    { name: 'Pricing', href: '/pricing' },
+    { name: 'Blog', href: '/blog' },
+  ];
+
+  const handleDropdownToggle = (title: string) => {
+    setOpenDropdowns(prev => 
+      prev.includes(title) 
+        ? prev.filter(item => item !== title)
+        : [...prev, title]
+    );
+  };
 
 export function Sidebar({ isOpen, onClose }: SidebarProps) {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
@@ -23,19 +143,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
   const handleDropdownToggle = (item: string) => {
     setActiveDropdown(activeDropdown === item ? null : item);
   };
-<<<<<<< HEAD
 
-
-  const navigation = null;
-  };
-
-  const quickLinks = null;
-
-  ];
-
-=======
-pr-12243
->>>>>>> origin/main
   return (
     <AnimatePresence>
       {isOpen && (
@@ -50,6 +158,12 @@ pr-12243
           />
           {/* Sidebar */}
           <motion.div
+            initial={{ x: '-100%' }}
+            animate={{ x: 0 }}
+            exit={{ x: '-100%' }}
+            className="fixed left-0 top-0 h-full w-80 bg-white shadow-xl z-50 overflow-y-auto"
+            transition={{ type: 'tween', duration: 0.3 }}
+            className="fixed top-0 left-0 h-full w-80 bg-white shadow-xl z-50 overflow-y-auto"
             initial={{ x: '-100%' ;}}
             animate={{ x: 0 ;}}
             exit={{ x: '-100%' ;}}
@@ -69,6 +183,8 @@ pr-12243
                 </div>
                 <button
                   onClick={onClose}
+                  className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
+                  className="p-2 text-gray-500 hover:text-gray-700 transition-colors"
                   className="p-2 text-gray-500 hover:text-gray-700 transition-colors"
 
 pr-12243
@@ -84,6 +200,40 @@ pr-12243
                   <div key={title}>
                     <button
                       onClick={() => handleDropdownToggle(title)}
+                      className="flex items-center justify-between w-full text-left py-2 px-3 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-lg transition-colors"
+                    >
+                      <span className="font-medium">{title}</span>
+                      {openDropdowns.includes(title) ? (
+                        <ChevronDown className="w-4 h-4" />
+                      ) : (
+                        <ChevronRight className="w-4 h-4" />
+                      )}
+                    </button>
+                    <AnimatePresence>
+                      {openDropdowns.includes(title) && (
+                        <motion.div
+                          initial={{ height: 0, opacity: 0 }}
+                          animate={{ height: 'auto', opacity: 1 }}
+                          exit={{ height: 0, opacity: 0 }}
+                          className="ml-4 space-y-1"
+                        >
+                          {links.map((link) => (
+                            <Link
+                              key={link.name}
+                              href={link.href}
+                              className="block text-gray-600 hover:text-blue-600 transition-colors py-1"
+                              onClick={onClose}
+                            >
+                              {link.name}
+                            </Link>
+                          ))}
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </div>
+                ))}
+              </nav>
+
                       className="flex items-center justify-between w-full text-left text-lg font-semibold text-gray-900 py-2 hover:text-blue-600 transition-colors"
                     >
                       <span>{title}</span>
@@ -131,6 +281,15 @@ pr-12243
                   ))}
                 </div>
               </div>
+
+              {/* Contact Info */}
+              <div className="mt-8 pt-8 border-t border-gray-200">
+                <h3 className="text-lg font-semibold text-gray-900 mb-4">Contact Us</h3>
+                <div className="space-y-2 text-sm text-gray-600">
+                  <p>+1 302 464 0950</p>
+                  <p>kleber@ziontechgroup.com</p>
+                  <p>24/7 Support Available</p>
+                </div>
               {/* Contact Info */}
               <div className="mt-8 pt-8 border-t border-gray-200">
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">Contact Info</h3>
@@ -161,6 +320,9 @@ pr-12243
       )}
     </AnimatePresence>
   );
+};
+
+export default Sidebar;
 }
 
 class ErrorBoundary extends React.Component {
@@ -168,20 +330,16 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false ;};
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true ;};
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary: ';, error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -211,7 +369,6 @@ interface SidebarProps {
 }
         : [...prev, title];
     );
-
 
   ];
   return (
@@ -434,8 +591,10 @@ const navigation = {
     { name: 'Contact';, href: '/contact' ;}
   ]
 };
+
 import React from 'react';
 import { Home, Settings, User, LogOut } from 'lucide-react';
+
 pr-12243
 
 interface SidebarProps {
@@ -443,6 +602,7 @@ interface SidebarProps {
   onClose: () => void;
 }
 
+const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
 const Sidebar: React.FC<SidebarProps> = ({ isOpen;, onClose }) => {
   const menuItems = [
     { href: '/dashboard';, label: 'Dashboard';, icon: Home ;},
@@ -496,4 +656,9 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen;, onClose }) => {
 };
 
 export default Sidebar;
+
+
+
+
+
 pr-12243

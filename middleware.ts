@@ -1,9 +1,11 @@
+
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 
 export function middleware(request: NextRequest) {
 export function middleware(_request: NextRequest) {
   return NextResponse.next();
+
 export function middleware(_request: NextRequest) {
   const response = NextResponse.next();
 
@@ -30,6 +32,29 @@ export function middleware(_request: NextRequest) {
   response.headers.set('Content-Security-Policy', csp);
   
   return response;
+    return response;
+
+
+import { NextResponse } from 'next/server';
+import type { NextRequest } from 'next/server';
+
+export function middleware(request: NextRequest) {
+  return NextResponse.next();
+
+}
+
+export const config = {
+
+export const config = {
+  matcher: ["/((?!api | _next / static | _next / image | favicon.ico).*)"],
+}
+;
+
+  matcher: [
+    '/((?!api|_next/static|_next/image|favicon.ico).*)',
+  ],
+};
+
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 }
 

@@ -60,6 +60,87 @@ default:
             </Button>
           </div>
           {/* Article header */}
+          <div className="mb-8 max-w-4xl mx-auto">
+            <span className="text-sm text-zion-cyan bg-zion-blue-dark px-3 py-1 rounded-full inline-block mb-4">
+              {post.category}
+            </span>
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              {post.title}
+            </h1>
+            <p className="text-xl text-zion-slate-light mb-8">
+              {post.excerpt}
+            </p>;
+            {/* Author and metadata */}
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-8">
+              <div className="flex items-center mb-4 sm:mb-0">
+                <ImageWithRetry
+                  src={post.author.avatarUrl}
+                  alt={post.author.name}
+                  className="w-12 h-12 rounded-full mr-3"
+                  fallbackSrc="/images/blog-placeholder.svg"
+                />
+                <div>
+                  <p className="text-white font-medium">{post.author.name}</p>
+                  <p className="text-sm text-zion-slate-light">{post.author.title}</p>
+                </div>
+              </div>
+              <div className="flex items-center space-x-4">
+                <div className="flex items-center text-zion-slate-light">
+                  <Calendar className="h-4 w-4 mr-1" />
+                  <span className="text-sm">{post.publishedDate}</span>
+                </div>
+                <div className="flex items-center text-zion-slate-light">
+                  <Clock className="h-4 w-4 mr-1" />
+                  <span className="text-sm">{post.readTime}</span>
+                </div>
+                <div className="relative">
+                  <Button 
+                    variant="ghost" 
+                    size="sm"
+                    className="text-zion-slate-light hover:text-white hover:bg-zion-blue-dark"
+                    onClick={() => setShowShareMenu(!showShareMenu)}
+                  >
+                    <Share2 className="h-4 w-4 mr-1" />
+                    <span className="text-sm">Share</span>
+                  </Button>
+                  {showShareMenu && (
+                    <div className="absolute right-0 top-full mt-2 bg-zion-blue-dark border border-zion-blue-light rounded-md p-2 z-10">
+                      <a
+                        href={getShareUrl('facebook')}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center p-2 hover:bg-zion-blue rounded transition-colors text-zion-slate-light hover:text-white"
+                        aria-label="Share on Facebook"
+                        title="Share on Facebook"
+                      >
+                        <Facebook className="h-4 w-4 mr-2" />
+                        <span>Facebook</span>
+                      </Link>
+                      <a
+                        href={getShareUrl('twitter')}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center p-2 hover:bg-zion-blue rounded transition-colors text-zion-slate-light hover:text-white"
+                        aria-label="Share on Twitter"
+                        title="Share on Twitter"
+                      >
+                        <Twitter className="h-4 w-4 mr-2" />
+                        <span>Twitter</span>
+                      </Link>
+                      <a
+                        href={getShareUrl('linkedin')}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center p-2 hover:bg-zion-blue rounded transition-colors text-zion-slate-light hover:text-white"
+                        aria-label="Share on LinkedIn"
+                        title="Share on LinkedIn"
+                      >
+                        <Linkedin className="h-4 w-4 mr-2" />
+                        <span>LinkedIn</span>
+                      </Link>
+                    </div>
+                  )}
+          {/* Article header */}
           <div className='mb - 8 max - w-4xl mx - auto'>;
             <span className='text - sm text - zion - cyan bg - zion - blue - dark px - 3 py - 1 rounded - full inline - block mb - 4'>;
               {post.category}
@@ -231,6 +312,11 @@ default:
                   key={tag} 
                   className="text-xs text-zion-slate-light bg-zion-blue-dark px-3 py-1 rounded-full"
                 >
+                  #{tag}
+                </span>;
+              ))}
+            </div>
+            <Separator className="my-12 bg-zion-blue-light" />
             </h1>
                   #{tag}
                 </span>
@@ -242,6 +328,28 @@ default:
                 <h3 className="text-2xl font-bold text-white mb-6">Related Articles</h3>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                   {relatedPosts.map(relatedPost => (
+                    <Link 
+                      key={relatedPost.id}
+                      href={`/blog/${relatedPost.slug}`}
+                      className="bg-zion-blue-dark border border-zion-blue-light rounded-lg overflow-hidden hover:border-zion-purple transition-all duration-300"
+                    >
+                      <div className="aspect-[16/9] relative">
+                        <ImageWithRetry
+                          src={relatedPost.featuredImage}
+                          alt={relatedPost.featuredImageAlt || relatedPost.title}
+                          className="object-cover w-full h-full"
+                          fallbackSrc="/images/blog-placeholder.svg"
+                        />
+                      </div>
+                      <div className="p-4">
+                        <span className="text-xs text-zion-cyan">{relatedPost.category}</span>
+                        <h4 className="text-white font-bold mt-1 line-clamp-2">{relatedPost.title}</h4>
+                      </div>
+                    </Link>
+                  ))}
+                </div>;
+              </div>;
+            )}
                       </div>
                     </Link>
                   ))}
@@ -262,6 +370,13 @@ default:
                 Ready to put these ideas into action? Explore our{' '}
                 <Link href="/services" className="text-zion-cyan underline">AI services</Link>{' '}
                 or browse expert{' '}
+                <Link href="/talent" className="text-zion-cyan underline">talent</Link> to accelerate your projects.
+              </p>
+            </div>
+
+            {/* Navigation */}
+            <div className="flex justify-between items-center mt-12">
+              <Button
               </p>
             </div>
             {/* Navigation */}

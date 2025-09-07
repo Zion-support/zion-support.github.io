@@ -1,3 +1,4 @@
+const redirectTo = options?.redirectTo |'/login''
 
 
 import React, { useEffect } from 'react';

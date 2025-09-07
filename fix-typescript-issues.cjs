@@ -14,7 +14,6 @@ class TypeScriptIssueFixer {
 
   async findProblematicFiles() {
     this.log('🔍 Scanning for problematic TypeScript files...');
-    
     const directoriesToScan = [
       'components',
       'pages',
@@ -33,11 +32,9 @@ class TypeScriptIssueFixer {
   scanDirectory(dir) {
     try {
       const items = fs.readdirSync(dir);
-      
       for (const item of items) {
         const fullPath = path.join(dir, item);
         const stat = fs.statSync(fullPath);
-        
         if (stat.isDirectory()) {
           this.scanDirectory(fullPath);
         } else if (item.endsWith('.ts') || item.endsWith('.tsx')) {
@@ -47,22 +44,16 @@ class TypeScriptIssueFixer {
 
   checkFile(filePath) {
       const content = fs.readFileSync(filePath, 'utf8');
-      
       // Check for common issues that cause TypeScript problems
       const issues = [];
-      
       if (content.length > 50000) {
         issues.push('Very large file');
-      
-      if (content.includes('<<<<<<< HEAD') || content.includes('>>>>>>>')) {
+      if (content.includes('') || content.includes('>>>>>>>')) {
         issues.push('Merge conflict markers');
-      
       if (content.includes('export * from') && content.split('export * from').length > 10) {
         issues.push('Too many wildcard exports');
-      
       if (content.includes('any') && content.split('any').length > 20) {
         issues.push('Too many any types');
-      
       if (issues.length > 0) {
         this.problematicFiles.push({
           file: filePath,
@@ -73,7 +64,6 @@ class TypeScriptIssueFixer {
 
   async createExcludeList() {
     this.log('📝 Creating TypeScript exclude list...');
-    
     const excludePatterns = [
       'node_modules',
       '.next',
@@ -95,12 +85,9 @@ class TypeScriptIssueFixer {
 
   async updateTsConfig(excludePatterns) {
     this.log('🔧 Updating TypeScript configuration...');
-    
     const tsConfigPath = path.join(this.projectRoot, 'tsconfig.json');
     const tsConfig = JSON.parse(fs.readFileSync(tsConfigPath, 'utf8'));
-    
     tsConfig.exclude = excludePatterns;
-    
     // Add more robust compiler options
     tsConfig.compilerOptions = {
       ...tsConfig.compilerOptions,
@@ -111,19 +98,15 @@ class TypeScriptIssueFixer {
       noImplicitReturns: false,
       noFallthroughCasesInSwitch: false
     };
-    
     fs.writeFileSync(tsConfigPath, JSON.stringify(tsConfig, null, 2));
     this.log('✅ TypeScript configuration updated');
 
   async run() {
     this.log('🚀 Starting TypeScript Issue Fixer...');
-    
       await this.findProblematicFiles();
       const excludePatterns = await this.createExcludeList();
       await this.updateTsConfig(excludePatterns);
-      
       this.log('🎉 TypeScript issues fixed successfully');
-      
       const report = {
         timestamp: new Date().toISOString(),
         problematicFiles: this.problematicFiles.length,
@@ -134,10 +117,8 @@ class TypeScriptIssueFixer {
           'Disabled strict type checking for problematic files',
           'Added memory optimization options
         ]
-      
       fs.writeFileSync('typescript-fix-report.json', JSON.stringify(report, null, 2));
       this.log('📊 Report saved to typescript-fix-report.json');
-      
     } catch (error) {`;
       this.log(`❌ Error fixing TypeScript issues: ${error.message}`);
       throw error;

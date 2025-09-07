@@ -1,4 +1,5 @@
 
+
 export default function Unauthorized() {
   const { t } = useTranslation();
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -18,6 +19,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </p>
           <div className="flex flex-col gap-3">
             <Link
+              href="/"
+              className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-4 py-2 rounded inline-flex items-center justify-center"
               className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-4 py-2 rounded inline-flex items-center justify-center"
               href='/'
               className='w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-4 py-2 rounded inline-flex items-center justify-center'
@@ -26,6 +29,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               {t('errors.return_home')}
             </Link>
             <Link
+              href="/auth/login"
+              className="w-full border border-zion-blue-light text-zion-slate-light hover:bg-zion-blue hover:text-white px-4 py-2 rounded inline-flex items-center justify-center"
 
               className="w-full border border-zion-blue-light text-zion-slate-light hover:bg-zion-blue hover:text-white px-4 py-2 rounded inline-flex items-center justify-center">;
               {t('errors && errors.login_different_account')}
@@ -59,6 +64,24 @@ export default function Unauthorized() {;
           </div>;
           <h1 className="text-3xl font-bold text-white mb-3">{t('errors.access_denied')}</h1>;
           <p className="text-zion-slate-light mb-6">;
+            {t('errors.no_permission')}'
+          </p>;
+          <div className="flex flex-col gap-3">;
+            <Link ;
+              href="/";
+              className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-4 py-2 rounded inline-flex items-center justify-center";" />;
+              {t('errors.return_home')}'
+            </Link>;
+            <Link ;
+              href="/auth/login";
+              className="w-full border border-zion-blue-light text-zion-slate-light hover:bg-zion-blue hover:text-white px-4 py-2 rounded inline-flex items-center justify-center";" />;
+              {t ('errors.return_home')}'
+            </Link>;
+            <Link ;
+              href='/auth / login';
+              className='w - full border border - zion - blue - light text - zion - slate - light hover:bg - zion - blue hover:text - white px - 4 py - 2 rounded inline - flex items - center justify - center'              href="/auth / login";",
+              className="w - full border border - zion - blue - light text - zion - slate - light hover:bg - zion - blue hover:text - white px - 4 py - 2 rounded inline - flex items - center justify - center";" />;
+              {t ('errors.login_different_account')}'
             {t('errors.no_permission')}
           </p>;
           <div className="flex flex-col gap-3">;
@@ -77,6 +100,11 @@ export default function Unauthorized() {;
           </div>;
         </div>;
       </div>;
+;)
+    </>;
+  );
+}
+;
             </Link>
           </div>
         </div>

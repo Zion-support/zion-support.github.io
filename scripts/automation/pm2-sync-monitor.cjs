@@ -15,10 +15,7 @@
  *;
  * Features:;
  */;
-<<<<<<< HEAD
-=======
-#!/usr/bin/env node
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
 
 /**;
  * Uses remote-first strategy for conflict resolution;
@@ -53,35 +50,7 @@ class $1 {}
         "memory": 0,
         "disk": 0}};"
 ;"
-<<<<<<< HEAD
-      "logFile": "logs/pm2-sync-monitor.log",""
-      "metricsFile": "logs/pm2-sync-metrics.json"};"
-      "lastHealthCheck": Date.now(),""
-      "totalChecks": 0,""
-      "systemStatus": "healthy",""
-      "uptime": 0,""
-=======
-      "healthCheckPort": 3001,
-      "maxErrors": 10,
-      "maxRestarts": 5,
-      "logFile": "logs/pm2-sync-monitor.log",
-      "metricsFile": "logs/pm2-sync-metrics.json"};"
-    this.metrics = {}"
-  "startTime": Date.now(),
-      "lastHealthCheck": Date.now(),
-      "totalChecks": 0,
-      "failedChecks": 0,
-      "systemStatus": "healthy",
-      "errors": [],
-      "restarts": 0,
-      "lastHealthCheck": null,
-      "systemStatus": "unknown",
-      "uptime": 0,
-      "performance": {}"
-  cpu: 0,"
-        "memory": 0,
-        "disk": 0}};"
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
     this.isRunning = false;
     this.setupLogging();
     this.initialize()};
@@ -106,21 +75,7 @@ class $1 {}
       // Start health check server;
       this.startHealthCheckServer();
       // Initial health check;
-<<<<<<< HEAD
-      await this.performHealthCheck();"`;
-      this.log("PM2 Sync Monitor System initialized successfully`)} catch (error) {  this.log(Initialization "failed": ${error.message  }, `ERROR"");""
-=======
-      await this.performHealthCheck();"
-      this.log("PM2 Sync Monitor System initialized successfully`)} catch (error) {  this.log(Initialization "failed": ${error.message  }, `ERROR);
-        fs.appendFileSync(this.config.logFile, logMessage + "\n")} catch (error) {}
-  console.error("Failed to write to log "file": ", error.message)};"
-    };
-  };
-;
-  async initialize() {}
-  try {}"
-  this.log("Initializing PM2 Sync Monitor System...");"
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
       // Start monitoring loops;
 
       // Start health check server;
@@ -128,13 +83,7 @@ class $1 {}
       // Initial health check;
       await this.performHealthCheck();
       this.log("PM2 Sync Monitor System initialized successfully");"
-<<<<<<< HEAD
-      this.isRunning = true} catch (error) {}"`;
-  this.log(`Initialization "failed": ${error.message}`, "ERROR");"
-=======
-      this.isRunning = true} catch (error) {}"
-  this.log(`Initialization "failed": ${error.message}, "ERROR");"
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
       this.recordError(error);
       this.restartAfterDelay()};
   startMonitoringLoops() {}
@@ -173,31 +122,7 @@ class $1 {}
         await this.attemptIssueResolution(healthStatus.issues);
       this.metrics.totalChecks++;
       if (healthStatus.isHealthy) {}"
-<<<<<<< HEAD
-        // Attempt to fix issues;
-        await this.attemptIssueResolution(healthStatus.issues)};
-      this.metrics.lastHealthCheck = Date.now();"`;
-      await this.saveMetrics()} catch (error) {  this.log(`Health check "failed": ${error.message  }`, "ERROR");"
-      this.metrics.systemStatus = "error"} catch (error) {}""`;
-  this.log(`Health check "failed": ${error.message}`, "ERROR");"
-=======
-  this.metrics.systemStatus = "healthy";
-        this.log("Health check passed")} else {}"
-  this.metrics.failedChecks++;"
-        this.metrics.systemStatus = "unhealthy";
-        this.log(Health check "failed": ${healthStatus.issues.join(", ")}",WARN";"
-        );
-        // Attempt to fix issues;
-        await this.attemptIssueResolution(healthStatus.issues)};
-;
-      this.metrics.lastHealthCheck = Date.now();"
-      await this.saveMetrics()} catch (error) {  this.log(`Health check "failed": ${error.message  }, "ERROR");"
-      this.recordError(error);
-      this.metrics.failedChecks++;"
-      this.metrics.systemStatus = "error"} catch (error) {}
-  this.log(`Health check "failed": ${error.message}, "ERROR");"
-      this.recordError(error);
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
       this.metrics.failedChecks++};
   async checkSystemHealth() {}
   const issues = [];
@@ -226,18 +151,7 @@ class $1 {}
       if (!depsStatus.isHealthy) {}
   issues.push(...depsStatus.issues);
       return {}"
-<<<<<<< HEAD
-  "isHealthy": issues.length === 0,""
-        "issues": issues};""`;
-    } catch (error) {  issues.push(`Health check "error": ${error.message  }`);"
-  "isHealthy": false,""
-=======
-  "isHealthy": issues.length === 0,
-        "issues": issues};
-    } catch (error) {  issues.push(`Health check "error": ${error.message  });"
-      return {}"
-  "isHealthy": false,
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
         "issues": issues}};"
   async checkPM2Status() {}
   const output = execSync("pm2 jlist", { "encoding": "utf8" }")
@@ -256,72 +170,29 @@ class $1 {}
 
       return { isHealthy, issues };
     } catch (error) {}
-<<<<<<< HEAD
-  return {}"`;
-  "isHealthy": false,"issues": [`PM2 status check failed: ${error.message  }`]}};"
-=======
-  return {}"
-  "isHealthy": false,"issues": [`PM2 status check failed: ${error.message  }]}};"
-  };
-;
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
   async checkFileSystem() {}
       // Check critical directories;"
       const criticalDirs = ["src", "pages", "components", "utils", "public"];"
       criticalDirs.forEach(dir => {})
   // Check critical directories;"
-<<<<<<< HEAD
-      criticalDirs.forEach(dir => {})"`;
-  if (!fs.existsSync(dir)) {issues.push(`Critical directory "missing": ${dir}`);"
-=======
-      const criticalDirs = ["src", "pages", "components", "utils", "public"];"
-      criticalDirs.forEach(dir => {})"
-  if (!fs.existsSync(dir)) {issues.push(`Critical directory "missing": ${dir});"
-          isHealthy = false};
-      }
-});
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
       // Check log files;"
       const logDir = "logs";"
       // Check disk space;
-<<<<<<< HEAD
-  if (!fs.existsSync(dir)) {}"`;
-  issues.push(`Critical directory "missing": ${dir}`);"
-=======
-      criticalDirs.forEach(dir => {})
-  if (!fs.existsSync(dir)) {}"
-  issues.push(`Critical directory "missing": ${dir});"
-          isHealthy = false};
-      }
-});
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
       // Check disk space;
       // Check disk space;
       const diskUsage = await this.getDiskUsage();
       if (diskUsage.usagePercent > 90) {}"`;
   issues.push(`Disk usage "high": ${diskUsage.usagePercent}%`);"
-<<<<<<< HEAD
-  "isHealthy": false,"issues": [`File system check failed: ${error.message  }`]}};"
-=======
-        isHealthy = false};
-;
-      return { isHealthy, issues };
-    } catch (error) {}
-  return {}"
-  "isHealthy": false,"issues": [`File system check failed: ${error.message  }]}};"
-  };
-;
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
   async checkGitRepository() {}
       // Check if git repository exists;"
       if (!fs.existsSync(".git")) {}
   issues.push("Git repository not found");"
       // Check if git repository exists;"
-<<<<<<< HEAD
-=======
-      if (!fs.existsSync(".git")) {}
-  issues.push("Git repository not found");"
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
         isHealthy = false;
       // Check git status;"
       const status = execSync("git status --porcelain", {})
@@ -331,26 +202,7 @@ class $1 {}
       if (status.trim()) {}"
   issues.push("Uncommitted changes detected");"
       // Check remote connection;
-<<<<<<< HEAD
-  execSync("git remote -v", {})""
-          "stdio": "pipe"})} catch (error) {}""
-  issues.push("Git remote connection failed");"
-  "isHealthy": false,"issues": [`Git repository check failed: ${error.message  }`]}};"
-=======
-      try {}"
-  execSync("git remote -v", {})
-  "cwd": this.config.projectRoot,
-          "stdio": "pipe"})} catch (error) {}
-  issues.push("Git remote connection failed");"
-        isHealthy = false};
-;
-      return { isHealthy, issues };
-    } catch (error) {}
-  return {}"
-  "isHealthy": false,"issues": [`Git repository check failed: ${error.message  }]}};"
-  };
-;
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
   async checkBuildStatus() {}
       // Check if build artifacts exist;"
       const buildDirs = [".next", "dist", "build"];"
@@ -363,54 +215,17 @@ class $1 {}
       const packageJson = JSON.parse(fs.readFileSync("package.json", "utf8"));"
       if (!packageJson.scripts.build) {}"
   issues.push("Build script not found in package.json");"
-<<<<<<< HEAD
-  "isHealthy": false,"issues": [`Build status check failed: ${error.message}`],`"
-=======
-        isHealthy = false};
-;
-      return { isHealthy, issues };
-    } catch (error) {}
-  return {}"
-  "isHealthy": false,"issues": [`Build status check failed: ${error.message}],`"
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
       const hasBuild = buildDirs.some(dir => fs.existsSync(dir));
       if (!hasBuild) {}"
       // Check package.json scripts;"
-<<<<<<< HEAD
-  "isHealthy": false,"issues": [`Build status check failed: ${error.message  }`]}};"
-=======
-      const packageJson = JSON.parse(fs.readFileSync("package.json", "utf8"));"
-      if (!packageJson.scripts.build) {}"
-  issues.push("Build script not found in package.json");"
-        isHealthy = false};
-;
-      return { isHealthy, issues };
-    } catch (error) {}
-  return {}"
-  "isHealthy": false,"issues": [`Build status check failed: ${error.message  }]}};"
-  };
-;
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
   async checkDependencies() {}
       // Check if node_modules exists;"
       if (!fs.existsSync("node_modules")) {}
   issues.push("Dependencies not installed");"
       // Check if node_modules exists;"
-<<<<<<< HEAD
-        isHealthy = false} else {}
-  // Check for outdated dependencies;
-  const outdated = execSync("npm outdated --json", {})""
-=======
-      if (!fs.existsSync("node_modules")) {}
-  issues.push("Dependencies not installed");"
-        isHealthy = false} else {}
-  // Check for outdated dependencies;
-        try {}"
-  const outdated = execSync("npm outdated --json", {})
-  "cwd": this.config.projectRoot,
-            "encoding": "utf8"}"
-});
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
           const outdatedDeps = JSON.parse(outdated);
           if (Object.keys(outdatedDeps).length > 0) {}`;
   issues.push(`${Object.keys(outdatedDeps).length} dependencies are outdated`);
@@ -421,42 +236,13 @@ class $1 {}
       if (!fs.existsSync("package-lock.json")) {}
   issues.push("Package lock file missing");"
       // Check for security vulnerabilities;
-<<<<<<< HEAD
-  execSync("npm audit --audit-level=moderate", {})""
-  issues.push("Security vulnerabilities detected");"
-  "isHealthy": false,"issues": [`Dependencies check failed: ${error.message  }`]}};"
-=======
-      try {}"
-  execSync("npm audit --audit-level=moderate", {})
-  "cwd": this.config.projectRoot,
-          "stdio": "pipe"})} catch (error) {}
-  issues.push("Security vulnerabilities detected");"
-        isHealthy = false};
-;
-      return { isHealthy, issues };
-    } catch (error) {}
-  return {}"
-  "isHealthy": false,"issues": [`Dependencies check failed: ${error.message  }]}};"
-  };
-;
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
   async attemptIssueResolution(issues) {}"
   this.log("Attempting to resolve issues...");"
   async fixIssues(issues) {}`;
   this.log(`Attempting to fix ${issues.length} issues...`);
     for (const issue of issues) {}
-<<<<<<< HEAD
-  if (issue.includes("Process") && issue.includes("not running")) {}""
-  await this.restartProcess(issue)} else if (issue.includes("Dependencies not installed")) {}""
-  await this.installDependencies()} else if (issue.includes("Security vulnerabilities")) {}""
-  await this.fixSecurityVulnerabilities()} else if (issue.includes("Uncommitted changes")) {}""
-=======
-  try {}"
-  if (issue.includes("Process") && issue.includes("not running")) {}
-  await this.restartProcess(issue)} else if (issue.includes("Dependencies not installed")) {}
-  await this.installDependencies()} else if (issue.includes("Security vulnerabilities")) {}
-  await this.fixSecurityVulnerabilities()} else if (issue.includes("Uncommitted changes")) {}
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
   await this.commitChanges()} else if (issue.includes("No build artifacts")) {}"
   await this.triggerBuild()};
       } catch (error) {}"
@@ -464,16 +250,7 @@ class $1 {}
         )};
   async restartProcess(issue) {}
   const processName = issue.match(/Process (.+) is not running/)?.[1];
-<<<<<<< HEAD
-    if (processName) {}"`;
-  this.log(`Restarting "process": ${processName}`);""`;
-      execSync(`pm2 restart ${processName}`, { "stdio": "pipe" }")
-=======
-    if (processName) {}"
-  this.log(`Restarting "process": ${processName});
-      execSync(`pm2 restart ${processName}, { "stdio": "pipe" }")
-});
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
       this.metrics.restarts++};
   async installDependencies() {}"
   this.log("Installing dependencies...");
@@ -485,86 +262,16 @@ class $1 {}
   this.log("Committing uncommitted changes...");
     execSync("git add .", { "cwd": this.config.projectRoot, "stdio": "pipe" }")
 });"
-<<<<<<< HEAD
-    execSync("git commit -m Auto-"commit": Uncommitted changes, {})""
-=======
-    execSync("git commit -m Auto-"commit": Uncommitted changes, {})
-  "cwd": this.config.projectRoot,
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
       "stdio": "pipe"}"
   this.log("Committing uncommitted changes with remote-first strategy...");"
     // First, try to sync with remote using remote-first strategy;
   execSync("git fetch origin", { "cwd": this.config.projectRoot, "stdio": "pipe" }")
-<<<<<<< HEAD
-      execSync("git merge -X theirs --no-edit origin/main", {})""
-      this.log("Successfully synced with remote using remote-first strategy")} catch (error) {}""
-=======
-});"
-      execSync("git merge -X theirs --no-edit origin/main", {})
-  "cwd": this.config.projectRoot,
-        "stdio": "pipe"}"
-});"
-      this.log("Successfully synced with remote using remote-first strategy")} catch (error) {}
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
   this.log("Failed to sync with remote, resolving conflicts...", "WARN");"
       // Resolve conflicts by accepting remote changes;
   execSync("git checkout --theirs .", { "cwd": this.config.projectRoot, "stdio": "pipe" }")
-<<<<<<< HEAD
-        execSync("git commit -m "Auto-"commit": Resolved conflicts with remote-first strategy", {})""
-          "stdio": "pipe"})} catch (commitError) {}""
-  this.log("Failed to commit after conflict resolution", "ERROR")};"
-  const processName = issue.match(/Process (.+) is not running/)?.[1];"`;
-    if (processName) {this.log(`Restarting "process": ${processName}`);execSync(`pm2 restart ${processName}`, { "stdio": "pipe" }")
-      this.metrics.restarts++;
-  async syncWithRemote() {}"
-  this.log("Syncing with remote repository using remote-first strategy...");"
-      // Resolve conflicts by accepting remote changes;
-=======
-});"
-        execSync("git add .", { "cwd": this.config.projectRoot, "stdio": "pipe" }")
-});"
-        execSync("git commit -m "Auto-"commit": Resolved conflicts with remote-first strategy", {})
-  "cwd": this.config.projectRoot,
-          "stdio": "pipe"})} catch (commitError) {}
-  this.log("Failed to commit after conflict resolution", "ERROR")};"
-    };
-  };
-;
-  async restartProcess(issue) {}
-  const processName = issue.match(/Process (.+) is not running/)?.[1];"
-    if (processName) {this.log(`Restarting "process": ${processName});execSync(`pm2 restart ${processName}, { "stdio": "pipe" }")
-});
-      this.metrics.restarts++;
-  async syncWithRemote() {}"
-  this.log("Syncing with remote repository using remote-first strategy...");"
-    try {}"
-  execSync("git fetch origin", { "cwd": this.config.projectRoot, "stdio": "pipe" }")
-});"
-      execSync("git merge -X theirs --no-edit origin/main", {})
-  "cwd": this.config.projectRoot,
-        "stdio": "pipe"}"
-});"
-      this.log("Successfully synced with remote using remote-first strategy")} catch (error) {}
-  this.log("Failed to sync with remote, resolving conflicts...", "WARN");"
-      // Resolve conflicts by accepting remote changes;
-      try {}"
-  execSync("git checkout --theirs .", { "cwd": this.config.projectRoot, "stdio": "pipe" }")
-});"
-        execSync("git add .", { "cwd": this.config.projectRoot, "stdio": "pipe" }")
-});"
-        execSync("git commit -m "Auto-"commit": Resolved conflicts with remote-first strategy", {})
-  "cwd": this.config.projectRoot,
-          "stdio": "pipe"})} catch (commitError) {}
-  this.log("Failed to commit after conflict resolution", "ERROR")};"
-    };
-    };
-};
-;
-  async installDependencies() {}"
-  this.log("Installing dependencies...");
-    execSync("npm install", { "cwd": this.config.projectRoot, "stdio": "pipe" })};"
-;
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
   async updateDependencies() {}"
   this.log("Updating dependencies...");
     execSync("npm update", { "cwd": this.config.projectRoot, "stdio": "pipe" })};"
@@ -588,15 +295,7 @@ class $1 {}
       // Update uptime;
       // Collect performance metrics;
       await this.collectPerformanceMetrics();
-<<<<<<< HEAD
-      // Save metrics;"`;
-      await this.saveMetrics()} catch (error) {  this.log(`Failed to collect "metrics": ${error.message  }`, "ERROR")};"
-=======
-      // Save metrics;"
-      await this.saveMetrics()} catch (error) {  this.log(`Failed to collect "metrics": ${error.message  }, "ERROR")};"
-  };
-;
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
   async getSystemPerformance() {}
   // Get CPU usage (simplified);
       const cpuUsage = process.cpuUsage();
@@ -608,14 +307,7 @@ class $1 {}
         (memoryUsage.heapUsed / memoryUsage.heapTotal) * 100;
       // Get disk usage;
 
-<<<<<<< HEAD
-  "cpu": Math.round(cpuPercent * 100) / 100,""
-        "memory": Math.round(memoryPercent * 100) / 100,""
-=======
-      return {}"
-  "cpu": Math.round(cpuPercent * 100) / 100,
-        "memory": Math.round(memoryPercent * 100) / 100,
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
         "disk": diskUsage.usagePercent};"
   return { "cpu": 0, "memory": 0, "disk": 0 };"
   async collectPerformanceMetrics() {}
@@ -632,25 +324,7 @@ class $1 {}
   async getDiskUsage() {}
   const output = execSync("df .", { "encoding": "utf8" })} catch (error) {}"
   // Ignore timeout errors from pm2 monit;"
-<<<<<<< HEAD
-      if (!error.message.includes("timeout")) {}""`;
-  this.log(`Performance monitoring "failed": ${error.message}`, "ERROR")};"
-  const output = execSync("df .", { "encoding": "utf8" }")
-      const lines = output.trim().split("\n");""
-      const [", "usageLine"] = lines;""
-=======
-      if (!error.message.includes("timeout")) {}
-  this.log(`Performance monitoring "failed": ${error.message}, "ERROR")};"
-    };
-  };
-;
-  async getDiskUsage() {}
-  try {}"
-  const output = execSync("df .", { "encoding": "utf8" }")
-});"
-      const lines = output.trim().split("\n");
-      const [", "usageLine"] = lines;
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
       const [", "used", "available"] = usageLine.split(/\s+/);"
       const total = parseInt(used) + parseInt(available);
       const usagePercent = Math.round((parseInt(used) / total) * 100);
@@ -659,43 +333,13 @@ class $1 {}
   return { "usagePercent": 0   };"
   async monitorPerformance() {}
   // Check if any process is using too much memory;"
-<<<<<<< HEAD
-=======
-      const output = execSync("pm2 monit --no-daemon", {})
-  "encoding": "utf8",
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
         "timeout": 5000}"
       // Parse memory usage and restart if necessary;"
       if (output.includes("Memory usage high")) {}"
   return { "usagePercent": 0 };"
   // Check if any process is using too much memory;"
-<<<<<<< HEAD
 
-      // Parse memory usage and restart if necessary;"
-      if (output.includes("Memory usage high")) {}""
-  this.log("High memory usage detected, restarting processes...", "WARN");""
-execSync("pm2 restart all", { "stdio": "pipe" })};"
-  // Ignore timeout errors from pm2 monit;"`;
-      if (!error.message.includes("timeout")) {this.log(`Performance monitoring "failed": ${error.message  }`, "ERROR")};"
-=======
-      const output = execSync("pm2 monit --no-daemon", {})
-  "encoding": "utf8",
-        "timeout": 5000}"
-});
-
-      // Parse memory usage and restart if necessary;"
-      if (output.includes("Memory usage high")) {}
-  this.log("High memory usage detected, restarting processes...", "WARN");
-      if (output.includes("Memory usage high")) {}
-  this.log("High memory usage detected, restarting processes...", "WARN");
-execSync("pm2 restart all", { "stdio": "pipe" })};"
-    } catch (error) {}
-  // Ignore timeout errors from pm2 monit;"
-      if (!error.message.includes("timeout")) {this.log(`Performance monitoring "failed": ${error.message  }, "ERROR")};"
-    };
-  };
-;
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
   async cleanupOldData() {}
   // Clean up old log files;"
       if (fs.existsSync(logDir)) {}
@@ -714,28 +358,7 @@ execSync("pm2 restart all", { "stdio": "pipe" })};"
   fs.unlinkSync(filePath);this.log("Cleaned up old log "file": ${file}");"
       const [, usageLine] = lines;
       const [, used, available] = usageLine.split(/\s+/);
-<<<<<<< HEAD
-  "used": parseInt(used),""
-        "available": parseInt(available),""
-        "total": total,""
-        "usagePercent": usagePercent};"
-  "used": 0,""
-        "available": 0,""
-        "total": 0,""
-=======
-      const total = parseInt(used) + parseInt(available);
-      const usagePercent = Math.round((parseInt(used) / total) * 100);
-      return {}"
-  "used": parseInt(used),
-        "available": parseInt(available),
-        "total": total,
-        "usagePercent": usagePercent};"
-    } catch (error) {}
-  return {}"
-  "used": 0,
-        "available": 0,
-        "total": 0,
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
         "usagePercent": 0};"
   async cleanup() {}
   // Clean up old log files;
@@ -748,22 +371,7 @@ execSync("pm2 restart all", { "stdio": "pipe" })};"
       // Clean up old metrics;
       if (this.metrics.errors.length > this.config.maxErrors) {}
   this.metrics.errors = this.metrics.errors.slice(-this.config.maxErrors)};"
-<<<<<<< HEAD
-    } catch (error) {  this.log("Cleanup "failed": ${error.message  }"", "ERROR")};"
-  startHealthCheckServer() {}
-  const server = http.createServer((req, res) => {}"
-  if (req.url === "/health") {}""
-  res.writeHead(200, { "Content-Type": ""application/json"" }")
-=======
-    } catch (error) {  this.log("Cleanup "failed": ${error.message  }, "ERROR")};"
-  };
-;
-  startHealthCheckServer() {}
-  const server = http.createServer((req, res) => {}"
-  if (req.url === "/health") {}
-  res.writeHead(200, { "Content-Type": application/json }")
-});
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
         res.end(;)
           JSON.stringify({})"
   "status": this.metrics.systemStatus,
@@ -773,14 +381,7 @@ execSync("pm2 restart all", { "stdio": "pipe" })};"
             "successRate": this.metrics.successRate || 0,
             "errors": this.metrics.errors.length,
             "restarts": this.metrics.restarts}"
-<<<<<<< HEAD
-        )} else if (req.url === "/metrics") {}""
-=======
-});"
-        )} else if (req.url === "/metrics") {}
-  res.writeHead(200, { "Content-Type": application/json }")
-});
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
         res.end(JSON.stringify(this.metrics))} else {}
   res.writeHead(404);"
         res.end("Not Found")};"
@@ -802,53 +403,7 @@ execSync("pm2 restart all", { "stdio": "pipe" })};"
       fs.writeFileSync(;)
         this.config.metricsFile,
         JSON.stringify(this.metrics, null, 2);
-<<<<<<< HEAD
-  res.writeHead(200, { "Content-Type": "application/json" }")
-            "lastCheck": this.metrics.lastHealthCheck,""
-            "totalChecks": this.metrics.totalChecks,""
-            "failedChecks": this.metrics.failedChecks}"
-  res.writeHead(200, { "Content-Type": """application/json""" }")
-        res.end("Not Found");""
-        res.end(JSON.stringify(this.metrics))} else {}"
-  res.writeHead(404, { "Content-Type": "text/plain" }")
-  "timestamp": Date.now(),""
-=======
-  startHealthCheckServer() {}
-  const server = http.createServer((req, res) => {}"
-  if (req.url === "/health") {}
-  res.writeHead(200, { "Content-Type": "application/json" }")
-});
-        res.end(;)
-          JSON.stringify({})"
-  "status": this.metrics.systemStatus,
-            "uptime": this.metrics.uptime,
-            "lastCheck": this.metrics.lastHealthCheck,
-            "totalChecks": this.metrics.totalChecks,
-            "failedChecks": this.metrics.failedChecks}"
-});"
-        )} else if (req.url === "/metrics") {}
-  res.writeHead(200, { "Content-Type": "application/json" }")
-});
-        res.end(JSON.stringify(this.metrics))} else {}
-  res.writeHead(404);"
-        res.end("Not Found");
-        res.writeHead(200, { "Content-Type": "application/json" }")
-});
-        res.end(JSON.stringify(this.metrics))} else {}"
-  res.writeHead(404, { "Content-Type": "text/plain" }")
-});"
-        res.end("Not Found")};"
-    }
-});
-    server.listen(this.config.healthCheckPort, () => {}"
-  this.log(Health check server listening on port ${this.config.healthCheckPort}";)"
-      )})};
-;
-  recordError(error) {}
-  this.metrics.errors.push({})"
-  "timestamp": Date.now(),
-      "message": error.message,
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
       "stack": error.stack}"
     // Keep only recent errors;
   async loadMetrics() {}
@@ -869,40 +424,13 @@ execSync("pm2 restart all", { "stdio": "pipe" })};"
     setTimeout(() => {}
   this.initialize()}, delay)};
   getStatus() {}
-<<<<<<< HEAD
-  "isRunning": true,""
-      "systemStatus": this.metrics.systemStatus,""
-      "restarts": this.metrics.restarts,""
-=======
-  return {}"
-  "isRunning": true,
-      "systemStatus": this.metrics.systemStatus,
-      "healthChecks": this.metrics.healthChecks,
-      "successRate": this.metrics.successRate || 0,
-      "errors": this.metrics.errors.length,
-      "restarts": this.metrics.restarts,
-      "uptime": this.metrics.uptime,
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
       "performance": this.metrics.performance}};"
 // Handle process signals;"
 process.on("SIGINT", async () => {}
   console.log("\nReceived SIGINT, shutting down gracefully...");"
 // Handle process signals;"
-<<<<<<< HEAD
-  if (global.pm2SyncMonitor) {}
-  await global.pm2SyncMonitor.stop()};
-  process.exit(0)}
-process.on("SIGTERM", async () => {}""
-=======
-process.on("SIGINT", async () => {}
-  console.log("\nReceived SIGINT, shutting down gracefully...");"
-  if (global.pm2SyncMonitor) {}
-  await global.pm2SyncMonitor.stop()};
-  process.exit(0)}
-});
-"
-process.on("SIGTERM", async () => {}
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
   console.log("\nReceived SIGTERM, shutting down gracefully...");"
 // Start the monitor system;
 if (require.main === module) {}
@@ -912,6 +440,4 @@ if (require.main === module) {}
   if (global.pm2SyncMonitor && global.pm2SyncMonitor.isRunning) {}
   // Process is healthy};
   }, 60000)};
-module.exports = PM2SyncMonitor;
 
-"`;

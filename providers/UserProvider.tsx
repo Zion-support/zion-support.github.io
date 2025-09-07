@@ -1,3 +1,4 @@
+
 import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';
 
 import React, {;
@@ -8,6 +9,10 @@ import React, {;
   useState,;} from 'react';} from 'react';
 import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';
 
+import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';
+
+
+export type UserRole = 'client' | 'talent';
 origin/cursor/expand-services-advertise-and-build-project-c28b
 import React, {
   createContext,
@@ -101,6 +106,12 @@ pr-12325
 
   return <UserContext.Provider value={contextValue}>{children}</UserContext.Provider>;
 };
+
+
+export default UserProvider;
+export default UserProvider;
+export default UserProvider;
+
 
 export default UserProvider;
 export default UserProvider;

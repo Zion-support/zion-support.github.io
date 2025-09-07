@@ -1,4 +1,9 @@
 
+
+
+
+
+
 /** @type {import ('next').NextConfig} */;
 const next_config = {
   reactStrictMode: true,
@@ -7,8 +12,55 @@ const next_config = {
   eslint: { ignoreDuringBuilds: true },
   typescript: { ignoreBuildErrors: true },
   page_extensions: ['tsxtsjsxjs'],
+
+
+
+
+
+
 /** @type {import('next').NextConfig} */;
 const nextConfig = {;
+
+
+/** @type {import('next').NextConfig} */;
+const nextConfig = {reactStrictMode: true;
+  compress: true;
+  poweredByHeader: false;
+  eslint: { ignoreDuringBuilds: true }
+  typescript: { ignoreBuildErrors: true }
+  pageExtensions: ['tsxtsjsxjs'];
+  // Image optimization;
+  images: {domains: ["localhost", "ziontechgroup.com", "images.unsplash.com", "via.placeholder.com"];
+    formats: ['image/webpimage/avif'];
+  }
+  // Output configuration;
+  output: 'standalone';
+  // Trailing slash;
+  trailingSlash: false;
+  // Base path;
+  basePath: '';
+  // Asset prefix;
+  assetPrefix: '';
+  // Generate ETags;
+  generateEtags: true;
+  // Dist directory;
+  distDir: '.next';
+}
+module.exports = nextConfig;
+const nextConfig = {;
+  reactStrictMode: true;
+  reactStrictMode: true,;
+  reactStrictMode: true;
+  reactStrictMode: true,;
+  reactStrictMode: true;
+
+
+
+  reactStrictMode: true,;
+  reactStrictMode: true;
+
+
+
 
   reactStrictMode: true,;
   reactStrictMode: true;,
@@ -17,6 +69,12 @@ const nextConfig = {;
   eslint: { ignoreDuringBuilds: true },;
   typescript: { ignoreBuildErrors: true },;
   pageExtensions: ['tsxtsjsxjs'],;
+
+
+
+
+
+
   // Image optimization;
   images: {,
   domains: ["localhost", "ziontechgroup.com", "images.unsplash.com", "via.placeholder.com"],""
@@ -34,4 +92,13 @@ const nextConfig = {;
   generate_etags: true,
   // Dist directory;
   dist_dir: '.next';
+},
+
+
+
+
+module.exports = next_config,
+
+
+
 module.exports = next_config,

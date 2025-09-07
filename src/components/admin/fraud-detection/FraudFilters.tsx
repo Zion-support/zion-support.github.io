@@ -4,11 +4,7 @@
 export const FraudFilters: React.FC<FraudFiltersProps> = ({
 resetFilters: () => void
 }
-export const FraudFilters: React.FC<FraudFiltersProps> = ({
-
-
-
-
+export const FraudFilters: React.FC<FraudFiltersProps> = ({,
   searchQuery
   setSearchQuery
   statusFilter
@@ -19,7 +15,6 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({
   setContentTypeFilter
 import React from 'react';
 };
-
 interface FraudFiltersProps {;
   searchQuery: string,;
   setSearchQuery: (value: string,) => void,;
@@ -31,8 +26,7 @@ interface FraudFiltersProps {;
   setContentTypeFilter: (value: string | null,) => void,;
   resetFilters: () => void;
 }
-
-export const FraudFilters: React.FC<FraudFiltersProps> = ({;
+export const FraudFilters: React.FC<FraudFiltersProps> = ({;,
   searchQuery;
   setSearchQuery;
   statusFilter;

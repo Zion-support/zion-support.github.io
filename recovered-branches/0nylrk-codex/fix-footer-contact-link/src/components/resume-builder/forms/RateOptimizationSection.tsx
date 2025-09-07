@@ -1,11 +1,24 @@
-
-<<<<<<< HEAD
 import React, { useState } from "react";
-
 import { Control } from "react-hook-form";
-=======
+import {Control} from "react-hook-form";
+import {FormField, FormItem, FormLabel, FormControl, FormDescription, FormMessage} from "@/components/ui/form";
+import {Input} from "@/components/ui/input";
+import {TalentRateRecommender} from "@/components/pricing/TalentRateRecommender";
+import {Card, CardContent} from "@/components/ui/card";
 
->>>>>>> origin/main
+import React, { useState } from "react",
+import { Control } from "react-hook-form",
+import React, { useState } from "react",
+import { Control } from "react-hook-form",
+
+import React, { useState } from "react",
+import { Control } from "react-hook-form",
+import React, { useState } from "react",
+import { Control } from "react-hook-form",
+import React, { useState } from "react",
+import { Control } from "react-hook-form",
+
+
 import { 
 
 
@@ -30,32 +43,7 @@ pr-12325
   FormDescription;
   FormMessage
 } from "@/components/ui/form",
-<<<<<<< HEAD
-import { Input } from "@/components/ui/input",
-import { TalentRateRecommender } from "@/components/pricing/TalentRateRecommender";
-import { Card, CardContent } from "@/components/ui/card";
-interface RateOptimizationSectionProps {
-  control: Control<any>;
-  setValue: (name: string, value: any) => void;
-  skills: string[];
-  yearsExperience: number;
 
-  location?: string;
-  rateType: "hourly" | "fixed"
-}
-
-export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = ({
-  control;
-  setValue;
-  skills;
-  yearsExperience;
-
-  location;
-  rateType
-}) => {
-  const handleSuggestionApplied = null;
-
-=======
 import { Input } from "@/components/ui/input",;
 
 interface RateOptimizationSectionProps {
@@ -63,12 +51,41 @@ interface RateOptimizationSectionProps {
   setValue: (name: string, value: any) => void,
   skills: string[],
   yearsExperience: number,
+  location?: string,
+
+  rateType: "hourly" | "fixed"
+}
+
+  rateType: "hourly" | "fixed"
+}
+
+export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = ({;
+  control;
+  setValue;
+  skills;
+  yearsExperience;
+export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = ({
+  control;
+  setValue;
+  skills;
+  yearsExperience;
+
+  location
+  control,
+  setValue,
+  skills,
+  yearsExperience,
+  location,
+  rateType
+}) => {
   location?: string,}) => {
   const handleSuggestionApplied = (rate: number) => {
     setValue("hourlyRate", rate)
 
   },
 
+}
+  },
   return (
     <div className="space-y-4">
       <FormField
@@ -82,6 +99,22 @@ interface RateOptimizationSectionProps {
                 type="number"
                 min="1"
                 step="0.01"
+                placeholder={rateType === "hourly" ? "e.g. 45" : "e.g. 1000"}
+
+import React, { useState } from "react",;
+import { Control } from "react-hook-form",;
+import {;
+  FormField,;
+  FormItem,;
+  FormLabel,;
+  FormControl,;
+  FormDescription,;
+  FormMessage;
+} from "@/components/ui/form",;
+import { Input } from "@/components/ui/input",;
+import { TalentRateRecommender } from "@/components/pricing/TalentRateRecommender",;
+import { Card, CardContent } from "@/components/ui/card",;
+interface RateOptimizationSectionProps {;
                 placeholder={rateType === "hourly" ? "e.g. 45" : "e.g. 1000"}interface RateOptimizationSectionProps {;
   control: Control<any>,;
   setValue: (name: string, value: any) => void,;
@@ -91,16 +124,128 @@ interface RateOptimizationSectionProps {
   rateType: "hourly" | "fixed";
 }
 
+export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = ({;
+
+export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = ({;
+  location?: string;
+  rateType: "hourly" | "fixed";
+}
+import React, { useState } from './react';
+import { Control } from './react - hook - form';
+import { FormField, FormItem, FormLabel, FormControl, FormDescription, FormMessage } from '@/components / ui / form';
+import { Input } from '@/components / ui / input';
+import { TalentRateRecommender } from '@/components / pricing / TalentRateRecommender';
+import { Card, CardContent } from '@/components / ui / card';
+interface RateOptimizationSectionProps {
+  control: Control < any>,
+  set_value: (name: string, value: any) => void,
+  skills: string[],
+  years_experience: number,
+  location?: string;
+  rate_type: "hourly" | "fixed";
+}
+export const RateOptimizationSection: React.FC < RateOptimizationSectionProps> = ({
+  control;
+  set_value;
+  skills;
+
+  location,;
+  rateType;
+}) => {;
+  const handleSuggestionApplied = (rate: number) => {;
+    setValue("hourlyRate", rate);
+  };
+
+  return (
 export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = ({;  return (
     <div className="space-y-4">;
       <FormField
         control={control}
         name="hourlyRate"
+        render={({ field }) => (;
+          <FormItem>;
+            <FormLabel>Your {rateType === "hourly" ? "Hourly Rate" : "Fixed Rate"} ($USD)</FormLabel>;
+            <FormControl>;
+              <Input
+                type="number"
+                min="1"
+                step="0 && 0.01"
+                placeholder={rateType === "hourly" ? "e && e.g. 45" : "e && e.g. 1000"}
+years_experience;
+  location,
+  rate_type;
+}) => {
+  const handleSuggestionApplied = (rate: number) =>: any {
+    set_value ("hourly_rate", rate);
+  }
+;
+  return (
+    <div className="space - y-4">;
+      <FormField;
+        control={control}
+        name="hourly_rate";
+        render={({ field }) => (
+          <FormItem>;
+            <FormLabel > Your {rate_type === "hourly" ? "Hourly Rate" : "Fixed Rate"} ($USD)</FormLabel>;
+
+import React, { useState } from "react",;
+import { Control } from "react-hook-form",;
+import { ;
+  FormField,;
+  FormItem, ;
+  FormLabel, ;
+  FormControl, ;
+  FormDescription,;
+  FormMessage;
+} from "@/components/ui/form",;
+import { Input } from "@/components/ui/input",;
+import { TalentRateRecommender } from "@/components/pricing/TalentRateRecommender",;
+import { Card, CardContent } from "@/components/ui/card",;
+;
+interface RateOptimizationSectionProps {;
+  control:Control<any>,;
+  setValue:(name:string, value:any) => void,;
+  skills:string[],;
+  yearsExperience:number,;
+  location?:string,;
+  rateType:"hourly" | "fixed";
+}
+;
+export const RateOptimizationSection:React.FC<RateOptimizationSectionProps> = ({;
+  location?: string,;
+  rateType: "hourly" | "fixed";
+}
+;
+export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = ({;
+  control,;
+  setValue,;
+  skills,;
+  yearsExperience,;
+  location,;
+  rateType;
+}) => {;
+  const handleSuggestionApplied = (rate: number) => {;
+    setValue("hourlyRate", rate);
+  };
+  return (;
+    <div className="space-y-4">;
+      <FormField;
+        control={control}
+        name="hourlyRate";
+        render={({ field }) => (;
+          <FormItem>;
+            <FormLabel>Your {rateType === "hourly" ? "Hourly Rate" : "Fixed Rate"} ($USD)</FormLabel>;
+            <FormControl>;
             <FormControl>;            <FormControl>;
               <Input;
                 type="number";
                 min="1";
                 step="0.01";
+
+                placeholder={rateType === "hourly" ? "e.g. 45" : "e.g. 1000"}
+
+placeholder={rateType === "hourly" ? "e.g. 45" :"e.g. 1000"}
+                placeholder={rate_type === "hourly" ? "e.g. 45" : "e.g. 1000"}
                 placeholder={rate_type === "hourly" ? "e.g. 45" : "e.g. 1000"}                placeholder={rateType === "hourly" ? "e.g. 45" :"e.g. 1000"}
                 {...field}
               />;
@@ -115,6 +260,9 @@ export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = (
       <Card>;
         <CardContent className="pt-4">;
 
+          <TalentRateRecommender
+          <TalentRateRecommender
+<TalentRateRecommender
           <TalentRateRecommender          <TalentRateRecommender
           </FormItem>)}
       />;
@@ -232,6 +380,48 @@ pr-12325
             location={location}
             onSuggestionApplied={handleSuggestionApplied}
 
+</FormItem>;
+        )}
+      />;
+;
+      <Card>;
+        <CardContent className="pt-4">;
+          <TalentRateRecommender;
+            skills={skills}            yearsExperience={yearsExperience}
+            location={location}
+            onSuggestionApplied={handleSuggestionApplied}
+            rateType={rateType}
+                placeholder={rateType === "hourly" ? "e.g. 45" : "e.g. 1000"}
+                {...field}
+              />
+            </FormControl>
+            <FormDescription>
+              Set a competitive rate based on your skills and experience
+            </FormDescription>
+            <FormMessage />
+          </FormItem>
+        )}
+      />
+      <Card>
+        <CardContent className="pt-4">
+          <TalentRateRecommender
+            skills={skills}
+            yearsExperience={yearsExperience}
+            location={location}
+            onSuggestionApplied={handleSuggestionApplied}
+            rateType={rateType}
+          />
+        </CardContent>
+      </Card>
+    </div>
+  )
+}
+          />;
+        </CardContent>;
+      </Card>;
+    </div>;
+  );
+
 };
             rate_type={rate_type}
           />;
@@ -240,6 +430,14 @@ pr-12325
     </div>);
 }
 ;
+  ),;
+},; import {
+  FormField;
+FormItem;
+FormLabel;
+FormControl;
+FormDescription;
+FormMessage interface RateOptimizationSectionProps {
 
 
 
@@ -252,6 +450,26 @@ pr-12325
 return (<div className="space-y-4" > <FormField control= {"
 </div>)
 }) => (<FormItem> <FormLabel>Your {
+  rateType === "hourly" ? "Hourly Rate" : "Fixed Rate" 
+}($USD) </FormLabel> <FormControl> <Input type="number" min="1" step="0.01" placeholder= {
+  rateType === "hourly" ? "e.g. 45" : "e.g. 1000" 
+}{
+  ...field 
+}
+}/> <Card> <CardContent className="pt-4" > <TalentRateRecommender skills= {
+  skills 
+}yearsExperience= {
+  yearsExperience 
+}location= {
+  location 
+}onSuggestionApplied= {
+  handleSuggestionApplied 
+}rateType= {
+  rateType 
+}/> </CardContent> </Card> </div>) 
+};
+  );
+};
 }($USD)  <FormControl> <Input type="number" min="1" step="0.01" placeholder= {"
 }/> <Card> <CardContent className="pt-4" > <TalentRateRecommender skills= {"
 
@@ -260,4 +478,4 @@ pr-12325
 </Card>
 }/> </CardContent> </Card> </div>) "
 
->>>>>>> origin/main
+

@@ -1,12 +1,4 @@
-<<<<<<< HEAD
 
-import React from 'react';
-import ServiceLanding from '../components/sections/ServiceLanding';
-
-export default function AIEthicsGovernanceFramework() {
-	return (
-		<ServiceLanding
-=======
 			implementationWeeks="Implementation: 3–6 weeks"
 			roiNote="Reduce compliance risk and accelerate approvals"
 			features={[
@@ -17,7 +9,7 @@ export default function AIEthicsGovernanceFramework() {
 				"Regulatory mapping (EU AI Act, NIST AI RMF)"
 
 import React from 'react';
->>>>>>> origin/main
+
 			title;
 origin/cursor/automate-test-improve-and-merge-code-2533
 				"Training and incident response runbooks"
@@ -30,6 +22,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
 			implementationWeeks="Implementation: 3–6 weeks"
 			roiNote="Reduce compliance risk and accelerate approvals"
 			features={[
@@ -39,6 +32,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 				"Prompt governance and access controls",
 				"Regulatory mapping (EU AI Act, NIST AI RMF)",
 				"Training and incident response runbooks"
+
+]}
+			industries={["Finance", "Healthcare", "Public Sector", "SaaS"]}
+			canonical="https: //ziontechgroup.com/ai-ethics-governance-framework"
+		/>
+	)
+};
 			]  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });

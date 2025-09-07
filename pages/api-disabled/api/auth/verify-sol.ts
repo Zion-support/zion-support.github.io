@@ -125,6 +125,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 }
 
 
+
+
     const token = jwt.sign({ sub: publicKey, chain: 'sol' }, JWT_SECRET, { expiresIn: '7d' })
     res.setHeader('Set-Cookie', `web3-session=${token}, HttpOnly, Path=/, SameSite=Lax, Max-Age=${7 * 24 * 3600}`)
 const JWT_SECRET = null;

@@ -1,40 +1,5 @@
 
-<<<<<<< HEAD
 
-import { FormField, FormItem, FormLabel, FormControl, FormMessage  } from '@/components/ui/form';
-import { Input  } from '@/components/ui/input';
-import { UseFormReturn  } from 'react-hook-form';
-import { CertificationFormValues } from './types';
-=======
-  FormField,
-import {
-
-  // TODO: Implement
-}
-  FormField,
-
-
-
-pr-12325
-FormField,
-  FormItem,
-  FormLabel,
-
-  FormControl,
-  FormMessage,
-} from '@/components / ui / form';
-import { Input  } from '@/components / ui / input';
-import { UseFormReturn  } from './react - hook - form';
-import { CertificationFormValues  } from './types';
-
-interface CertificationFormFieldsProps {
-  form: UseFormReturn < CertificationFormValues>;
-}
-import {FormField, FormItem, FormLabel, FormControl, FormMessage} from '@/components/ui/form';
-import {Input} from '@/components/ui/input';
-import {UseFormReturn} from 'react-hook-form';
-import {CertificationFormValues} from './types';
->>>>>>> origin/main
 
 interface CertificationFormFieldsProps {
   form: UseFormReturn<CertificationFormValues>
@@ -66,6 +31,8 @@ export function CertificationFormFields({
         <FormField
           control={form && form.control}
           name="name"
+
+export /**
             <FormItem>;
               <FormLabel > Certification Name</FormLabel>;
               <FormControl>;
@@ -140,6 +107,15 @@ function CertificationFormFields() {
               <FormMessage />;
             </FormItem>)}
         />;
+        <FormField;
+render={({ field }) => (
+            <FormItem>
+              <FormLabel>Issuing Organization</FormLabel>
+              <FormControl>
+                <Input
+                  placeholder="Amazon Web Services, PMI, etc."
+                  {...field}
+                />
         <FormField;                />
               </FormControl>
               <FormMessage />
@@ -166,6 +142,36 @@ function CertificationFormFields() {
             <FormItem>;
               <FormLabel>Issue Date</FormLabel>;
               <FormControl>;
+                <Input
+/>;
+        <FormField;
+
+        />
+        <FormField
+        />;
+        <FormField;
+          control={form.control}
+          name="expiration_date"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Expiration Date (Optional)</FormLabel>
+              <FormControl>
+                <Input type="date" {...field} value={field.value || ""} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+      </div>
+
+                <Input type="date" {...field} value={field.value || ""} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />;
+
+        <FormField
                 <Input          control={form.control}        <FormField
           control={form && form.control}
           name="expiration_date"
@@ -186,6 +192,18 @@ function CertificationFormFields() {
         />;
       </div>;
 
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
+
+<div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
+
+            <FormItem>;
+              <FormLabel > Issuing Organization</FormLabel>;
+              <FormControl>;
+                <Input;
+                  placeholder="Amazon Web Services, PMI, etc.";
+                  {...field}
+        <FormField
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;        <FormField
           control={form && form.control}
           name="credential_id"
@@ -267,6 +285,8 @@ function CertificationFormFields() {
 }
 ;
 
+<FormItem>
+              <FormLabel>Credential URL (Optional)</FormLabel>
 }
 ;
 "
@@ -286,10 +306,8 @@ function CertificationFormFields() {
                   {...field}
                 />
 
-              
               <FormMessage />
 
-            
           name="issuing_organization"")
 
 
@@ -297,9 +315,7 @@ function CertificationFormFields() {
 
                   placeholder="Amazon Web Services, PMI, etc.""
 
-              
 
-            
               ;
               <FormMessage />;
 )
@@ -310,9 +326,7 @@ function CertificationFormFields() {
               <FormLabel>Issue Date
                 <Input type="date" {...field} value={field.value || ""} />"
 
-              
 
-            
             <FormItem>;
 
               <FormLabel>Issue Date;
@@ -323,15 +337,11 @@ function CertificationFormFields() {
 
               <FormLabel>Expiration Date (Optional)
 
-              
-
-            
 
 
 
-              
 
-            
+
           name="expiration_date""
           render={({ field }) => (;
 
@@ -379,18 +389,14 @@ function CertificationFormFields() {
 
                   placeholder="https://www.credential.com/verify/abc123""
 
-              
 
-            
     </>
   );
 
 
 
 
-              
 
-            
                   {...field}
                 />
 </Input>

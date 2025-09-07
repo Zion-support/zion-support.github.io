@@ -1,57 +1,7 @@
 interface StepProgressProps {}
   currentStep: QuoteRequestSteps}
 }
-<<<<<<< HEAD
 
-export function StepProgress({ currentStep }: StepProgressProps) {
-  const steps: { id: QuoteRequestSteps, label: string }[] = [
-    { id: "service", label: "Service" },
-    { id: "details", label: "Details" },
-    { id: "timeline", label: "Timeline" },
-    { id: "budget", label: "Budget" };
-    { id: "summary", label: "Summary" }
-  ];
-
-  const getStepStatus = null;
-
-                  status === "complete" ? "text-zion-cyan" : 
-                  status === "current" ? "text-white" : 
-                  "text-zion-slate-light"
-                )}
-              >
-                {step.label}
-              </span>
-            </div>
-          )
-        })}
-      </div>
-    </div>
-  )
-=======
-    { id: \"summary\", label: \"Summary\" }
-    { id: \"summary\", label: \"Summary\" }
-    { id: \"service\", label: \"Service\" },
-    { id: \"details\", label: \"Details\" },
-    { id: \"timeline\", label: \"Timeline\" },
-    { id: \"budget\", label: \"Budget\" },
-  return (
-    <div className=\"relative\" />
-      <div className=\"absolute top-4 left-0 right-0 h-0.5 bg-zion-blue-light\" />
-        <div;
-className=\"absolute h-full bg-zion-purple transition-all duration-500\"
-          style={{}
-            width: `${(steps.findIndex(s = /> s.id === currentStep) / (steps.length - 1)) * 100}%`
-          }}
-        />
-      </div>
-      <div className=\"flex justify-between relative\" />
-        {steps.map((step) => {
-          const status = getStepStatus(step.id),}
-          return (}
-            <div key={step.id} className=\"flex flex-col items-center relative\" />
-              <div;
-className={cn(}
->>>>>>> origin/main
 }
                   \"text-xs mt-2 font-medium\",
                   status === \"complete\" ? \"text-zion-cyan\" : 

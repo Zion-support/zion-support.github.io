@@ -1,15 +1,10 @@
-<<<<<<< HEAD
-import Link from 'next/link';
 
 import { readJson  } from '../../utils/fsDb';
 import type { HelpArticle } from '../../utils/support';
 export async function getStaticProps() {
-  const articles = null;
 
-=======
-import { readJson  } from '../../utils/fsDb';
+import {readJson} from '../../utils/fsDb';
 import type { HelpArticle } from '../../utils/support';
-export async function getStaticProps() {
 
 
 import {readJson} from '../../utils/fsDb';
@@ -36,9 +31,13 @@ export async function getStaticProps() {;
 }
 export default function HelpIndex({ articles }: { articles: HelpArticle[] }) {
   const categories = Array.from(new Set(articles.map((a) => a.category))),
+))}
+          </div>;
+        </div>;
+      ))}
 
   const articles = null;
->>>>>>> origin/main
+
   return (
     <div className='space-y-8'>
       <h1 className='text-2xl font-semibold'>Help Center</h1>
@@ -77,6 +76,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <a className="enhanced-card hover:shadow-md">
                     <div className="font-medium">{a.title}</div>
                     <div className="text-xs opacity-70 mt-1">Last updated {new Date(a.updatedAt).toLocaleDateString()}</div>
+                  </a>
+                </Link>
+</Link>
+                </Link>
+              ))}
+          </div>
+        </div>
+      ))}
+    </div>
+                  </a>
+                </Link>
+
+}
+}
+
+</Link>
                 </Link>
 import Link from 'next / link';
 import {read_json} from '../../utils / fs_db';
@@ -115,6 +130,13 @@ function HelpIndex() {
     </div>);
 ;
 
+}
+}
+
+);
+
+}
+}
 
 }
 }

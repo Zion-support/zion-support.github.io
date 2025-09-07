@@ -31,20 +31,37 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                             alt={testimonial.author}
                             width={80}
                             height={80}
-
+                            loading="lazy""
+                          />
+                        </Avatar>
+                        <div className="text-center md:text-left">"
+                          <p className="font-bold text-zion-cyan">{testimonial.author}</p>"
+                          <p className="text-zion-slate-light text-sm">{testimonial.role}</p>"
+                        </div>
+                      </div>
+                      <div className="flex-1">"
+                        <div className="flex items-center gap-3 mb-4">"
+                          <Image
+                            src={testimonial && testimonial.companyLogo}
+                            alt={`${testimonial && testimonial.company} logo`}`
+                            width={32}
+                            height={32}
+                        </div>
+                        <Quote className="h-10 w-10 text-zion-cyan opacity-30 mb-3" />"
+                        <p className="text-white text-lg mb-6">"{testimonial.quote}"</p>"
+                      </div>
+                    </CardContent>
+                    <CardFooter className="p-6 pt-0">"
+                      <Button variant="link" className="text-zion-cyan p-0" asChild>"
+                        <Link href={`/case-studies/${testimonial.slug}`} />Read Case Study →</Link>`
                             loading="lazy"
                           />
-
                         </Avatar>
                         <div className="text-center md:text-left">
                           <p className="font-bold text-zion-cyan">{testimonial.author}</p>
                           <p className="text-zion-slate-light text-sm">{testimonial.role}</p>
                         </div>
                       </div>
-
-
-
-
                       <div className="flex-1">
                         <div className="flex items-center gap-3 mb-4">
 loading='lazy'
@@ -63,21 +80,19 @@ loading='lazy'
                         <div className='flex items-center gap-3 mb-4'>
 origin/cursor/automate-test-improve-and-merge-code-2533
                           <Image
-                            src={testimonial && testimonial.companyLogo}
-                            alt={`${testimonial && testimonial.company} logo`}
+                            src={testimonial.companyLogo}
+                            alt={`${testimonial.company} logo`}
                             width={32}
                             height={32}
-
-
+                            className="h-8 w-auto"
+                            loading="lazy"
+                          />
+                          <span className="text-white font-semibold">{testimonial.company}</span>
                         </div>
                         <Quote className="h-10 w-10 text-zion-cyan opacity-30 mb-3" />
                         <p className="text-white text-lg mb-6">"{testimonial.quote}"</p>
                       </div>
                     </CardContent>
-
-
-
-
                     <CardFooter className="p-6 pt-0">
                       <Button variant="link" className="text-zion-cyan p-0" asChild>
                         <Link href={`/case-studies/${testimonial.slug}`}>Read Case Study →</Link>
@@ -109,11 +124,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </CarouselItem>
               ))}
             </CarouselContent>
-
-
+            <div className="flex justify-center mt-8 gap-2">"
+              <CarouselPrevious className="relative static left-0 translate-y-0 bg-zion-blue-dark border-zion-purple/30 text-zion-cyan hover: bg-zion-blue-light hover:text-zion-cyan hover:border-zion-purple" />"
+              <CarouselNext className="relative static right-0 translate-y-0 bg-zion-blue-dark border-zion-purple/30 text-zion-cyan hover:bg-zion-blue-light hover:text-zion-cyan hover:border-zion-purple" />"
             <div className="flex justify-center mt-8 gap-2">
-
-
               <CarouselPrevious className="relative static left-0 translate-y-0 bg-zion-blue-dark border-zion-purple/30 text-zion-cyan hover: bg-zion-blue-light hover:text-zion-cyan hover:border-zion-purple" />
               <CarouselNext className="relative static right-0 translate-y-0 bg-zion-blue-dark border-zion-purple/30 text-zion-cyan hover:bg-zion-blue-light hover:text-zion-cyan hover:border-zion-purple" />
 <div className='flex justify-center mt-8 gap-2'>
@@ -123,9 +137,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>
           </Carousel>
         </div>
-
-
-
       </div>
     </section>
         </div>
@@ -154,6 +165,34 @@ export default TestimonialCarousel;
               <CarouselPrevious className='relative static left-0 translate-y-0 bg-zion-blue-dark border-zion-purple/30 text-zion-cyan hover:bg-zion-blue-light hover:text-zion-cyan hover:border-zion-purple' />;
               <CarouselNext className='relative static right-0 translate-y-0 bg-zion-blue-dark border-zion-purple/30 text-zion-cyan hover:bg-zion-blue-light hover:text-zion-cyan hover:border-zion-purple' />            </div>            <div className="flex justify-center mt-8 gap-2">;
               <CarouselPrevious className="relative static left-0 translate-y-0 bg-zion-blue-dark border-zion-purple/30 text-zion-cyan hover: bg-zion-blue-light hover:text-zion-cyan hover:border-zion-purple" />;
+              <CarouselNext className="relative static right-0 translate-y-0 bg-zion-blue-dark border-zion-purple/30 text-zion-cyan hover:bg-zion-blue-light hover:text-zion-cyan hover:border-zion-purple" />;",
+                            loading='lazy';
+                        </Avatar>;
+                        <div className='text - center md:text - left'>;
+                          <p className='font - bold text - zion - cyan'>;
+                            {testimonial.author}
+                          </p>;
+                          <p className='text - zion - slate - light text - sm'>;
+                            {testimonial.role}
+                          </p>;
+                        </div>;
+                      </div>;
+                      <div className='flex - 1'>;
+                        <div className='flex items - center gap - 3 mb - 4'>                          <Image;
+                      <div className="flex - 1">;
+                        <div className="flex items - center gap - 3 mb - 4">;
+                          />;
+                        </Avatar>;
+                        <div className="text - center md:text - left">;
+                          <p className="font - bold text - zion - cyan">{testimonial.author}</p>;
+                          <p className="text - zion - slate - light text - sm">{testimonial.role}</p>;
+                        </div>;
+                      </div>;
+                      <div className="flex - 1">;
+                        <div className="flex items - center gap - 3 mb - 4">;
+                          <Image;
+                            src={testimonial.company_logo}
+                            alt={`${testimonial.company} logo`}`
               <CarouselNext className="relative static right-0 translate-y-0 bg-zion-blue-dark border-zion-purple/30 text-zion-cyan hover:bg-zion-blue-light hover:text-zion-cyan hover:border-zion-purple" />;
                 <CarouselItem key={index} className='md:basis - 1/1 lg:basis - 1/1'>;
 
@@ -269,6 +308,59 @@ pr-12325
                         variant='link';
                         className='text - zion - cyan p - 0';
                         as_child;
+                      >;
+                        <Link href={`/case - studies/${testimonial.slug}`} />;`
+                          Read Case Study →;
+                        </Link>                      </Button>;
+                    <CardFooter className="p - 6 pt - 0">;
+                      <Button variant="link" className="text - zion - cyan p - 0" as_child>;
+                        <Link href={`/case - studies/${testimonial.slug}`} />Read Case Study →</Link>;`
+                          />;
+                          <span className="text - white font - semibold">{testimonial.company}</span>;
+                        </div>;
+                        <Quote className="h - 10 w - 10 text - zion - cyan opacity - 30 mb - 3" />;
+                        <p className="text - white text - lg mb - 6">"{testimonial.quote}"</p>;
+                      </div>;
+                    </CardContent>;
+                    <CardFooter className="p - 6 pt - 0">;
+                      <Button variant="link" className="text - zion - cyan p - 0" as_child>;
+                        <Link href={`/case - studies/${testimonial.slug}`} />Read Case Study →</Link>;`
+                      </Button>;
+                    </CardFooter>;
+                  </Card>;
+                </CarouselItem>))}
+            </CarouselContent>;
+            <div className='flex justify - center mt - 8 gap - 2'>;
+              <CarouselPrevious className='relative static left - 0 translate - y-0 bg - zion - blue - dark border - zion - purple / 30 text - zion - cyan hover:bg - zion - blue - light hover:text - zion - cyan hover:border - zion - purple' />;
+              <CarouselNext className='relative static right - 0 translate - y-0 bg - zion - blue - dark border - zion - purple / 30 text - zion - cyan hover:bg - zion - blue - light hover:text - zion - cyan hover:border - zion - purple' />            </div>            <div className="flex justify - center mt - 8 gap - 2">;
+              <CarouselPrevious className="relative static left - 0 translate - y-0 bg - zion - blue - dark border - zion - purple / 30 text - zion - cyan hover: bg - zion - blue - light hover:text - zion - cyan hover:border - zion - purple" />;
+              <CarouselNext className="relative static right - 0 translate - y-0 bg - zion - blue - dark border - zion - purple / 30 text - zion - cyan hover:bg - zion - blue - light hover:text - zion - cyan hover:border - zion - purple" />;
+  )
+                            className="h-8 w-auto";
+                            loading="lazy";
+                          />;
+                          <span className="text-white font-semibold">{testimonial.company}</span>;
+                        </div>;
+                        <Quote className="h-10 w-10 text-zion-cyan opacity-30 mb-3" />;
+                        <p className="text-white text-lg mb-6">"{testimonial.quote}"</p>;
+                      </div>;
+                    </CardContent>;
+                    <CardFooter className="p-6 pt-0">;
+                      <Button variant="link" className="text-zion-cyan p-0" asChild>;
+                        <Link href={`/case-studies/${testimonial.slug}`}>Read Case Study →</Link>;
+                      </Button>;
+                    </CardFooter>;
+                  </Card>;
+                </CarouselItem>;
+              ))}
+            </CarouselContent>;
+            <div className="flex justify-center mt-8 gap-2">;
+              <CarouselPrevious className="relative static left-0 translate-y-0 bg-zion-blue-dark border-zion-purple/30 text-zion-cyan hover: bg-zion-blue-light hover:text-zion-cyan hover:border-zion-purple" />;
+              <CarouselNext className="relative static right-0 translate-y-0 bg-zion-blue-dark border-zion-purple/30 text-zion-cyan hover:bg-zion-blue-light hover:text-zion-cyan hover:border-zion-purple" />;
+            </div>;
+          </Carousel>;
+        </div>;
+      </div>;
                         <Link href={`/case - studies/${testimonial.slug}`}>;
 
                     <CardFooter className="p - 6 pt - 0">;"
@@ -292,6 +384,11 @@ pr-12325
 }
     </section>);
 }
+)))))
+    </section>;
+  );
+}
+;
 origin/cursor/expand-services-advertise-and-build-project-c28b
 main
   );

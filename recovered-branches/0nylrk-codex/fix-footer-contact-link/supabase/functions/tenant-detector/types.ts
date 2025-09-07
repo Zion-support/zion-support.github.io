@@ -8,15 +8,8 @@ export interface TenantInfo {
   theme_preset: string;
   landing_page_copy: {
     headline: string;
-<<<<<<< HEAD
 
-    subtitle: string;
 
-    cta: string
-  };
-  is_active: boolean
-=======
->>>>>>> origin/main
 }
 
 export interface TenantResponse {
@@ -56,6 +49,7 @@ export interface TenantInfo {;
 
   },;
 ;
+}
 export interface TenantResponse {;
 
   // TODO: Implement

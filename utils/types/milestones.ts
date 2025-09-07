@@ -1,3 +1,11 @@
+export type ProjectParticipants = {
+
+export type ProjectParticipants = {;
+
+  clientUserId: string;
+  talentUserId: string;
+}
+export type Project = {  id: string;
 pr-12325
 export type ProjectParticipants = {
 
@@ -30,11 +38,36 @@ pr-12325
 }
 
 
+    value === 'Pending' ||
+    value === 'In Progress' ||
+    value === 'Submitted' ||
+    value === 'Approved' ||;
+    value === 'Paid';
+  );export interface MilestoneAttachment {;
+
   id: string;
   name: string;
   url: string;
   type: string;
   size: number;
+
+  uploaded_at: string,
+
+}
+export interface CreateMilestoneRequest {
+  uploadedAt: string
+}
+
+export interface CreateMilestoneRequest {;
+
+  title: string;
+  description?: string;
+}
+export interface UpdateMilestoneRequest {
+
+export interface UpdateMilestoneRequest {;
+
+export interface UpdateMilestoneRequest {
 
 }
 
@@ -58,6 +91,8 @@ export function isOverdue(milestone: Milestone): boolean {
     return false;
   }
   return new Date(milestone.dueDate) < new Date();
+}
+
 origin/cursor/expand-services-advertise-and-build-project-c28b
   updatedAt: string;
 
@@ -73,3 +108,55 @@ export function isMilestoneStatus(value: string): value is MilestoneStatus {
 
 export function getDaysUntilDue(milestone: Milestone): number | null {
 
+}
+}
+export type MilestoneStatus =;
+  | 'Pending';
+  | 'In Progress';
+  | 'Submitted';
+  | 'Approved';
+  | 'Paid';
+export type MilestoneAttachment = {;
+  id: string;
+  type: 'link' | 'file';
+  url: string;
+  label?: string;
+  uploadedByUserId: string;
+  uploadedAt: string, // ISO date;
+};
+export type Milestone = {;
+  id: string;
+  title: string;
+  description?: string;
+  dueDate: string, // ISO date;
+  amountUsd: number;
+  status: MilestoneStatus;
+  attachments?: MilestoneAttachment[];
+  submittedByUserId?: string;
+  approvedByUserId?: string;
+  paidAt?: string, // ISO date;
+  createdAt: string, // ISO date;
+  updatedAt: string, // ISO date;
+};
+export type ProjectParticipantRole = 'client' | 'talent';
+export type ProjectParticipants = {;
+  clientUserId: string;
+  talentUserId: string;
+};
+export type Project = {;
+  id: string;
+  name: string;
+  participants: ProjectParticipants;
+  milestones: Milestone[];
+  createdAt: string;
+  updatedAt: string;
+};
+export function isMilestoneStatus(value: string): value is MilestoneStatus {;
+  return (;
+    value === 'Pending' ||;
+    value === 'In Progress' ||;
+    value === 'Submitted' ||;
+    value === 'Approved' ||;
+    value === 'Paid';
+  );
+}

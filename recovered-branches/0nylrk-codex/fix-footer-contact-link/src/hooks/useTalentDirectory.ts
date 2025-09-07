@@ -1,254 +1,143 @@
-
-<<<<<<< HEAD
-
+import {useAuthStatus} from "./talent/useAuthStatus";
+import {useTalentData} from "./talent/useTalentData";
+import {useFilterTalents} from "./talent/useFilterTalents";
+import {useUIState} from "./talent/useUIState";
+export function useTalentDirectory() {
+  // Fetch auth status and saved talents
+  const { ;
+    isAuthenticated;
 import { useAuthStatus } from "./talent/useAuthStatus",
 import { useTalentData } from "./talent/useTalentData",
 import { useFilterTalents } from "./talent/useFilterTalents";
 import { useUIState } from "./talent/useUIState";
+export function useTalentDirectory() {
+  // Fetch auth status and saved talents
+  const {
+    isAuthenticated;
 
+    userDetails
+    savedTalents
+    handleToggleSave
+  } = useAuthStatus();
+  // Fetch talent data
+  const {
+    talents
+    isLoading
+import { useFilterTalents } from "./talent/useFilterTalents",
+import { useUIState } from "./talent/useUIState",
 export function useTalentDirectory() {
   // Fetch auth status and saved talents
   const { 
-    isAuthenticated;
-
-    userDetails;
-    savedTalents;
-    handleToggleSave 
-  } = useAuthStatus();
-
-  // Fetch talent data
-  const { 
-    talents;
-    isLoading 
-  } = useTalentData();
-
-
-  // Apply filters and sorting
-  const {
-    filteredTalents;
-    searchTerm;
-    setSearchTerm;
-    selectedSkills;
-    selectedAvailability;
-    selectedRegions;
-    priceRange;
-    setPriceRange;
-    experienceRange;
-    setExperienceRange;
-    sortOption;
-    setSortOption;
-    toggleSkill;
-    toggleAvailability;
-    toggleRegion;
-    clearFilters
-  } = useFilterTalents(talents);
-
-
-  // Manage UI state
-  const {
-    isMobileFilterOpen;
-    setIsMobileFilterOpen;
-    isHireModalOpen;
-    setIsHireModalOpen;
-    selectedTalent;
-    setSelectedTalent;
-    expandedSections;
-    toggleSection
-  } = useUIState();
-
-
-  return {
-    // Talents and loading state
-    talents;
-    filteredTalents;
-    isLoading;
-
-
-    // Search and filter state
-    searchTerm;
-    setSearchTerm;
-    selectedSkills;
-    selectedAvailability;
-    selectedRegions;
-    priceRange;
-    setPriceRange;
-    experienceRange;
-    setExperienceRange;
-    sortOption;
-    setSortOption;
-
-
-    // UI state
-=======
-import { useAuthStatus } from "./talent/useAuthStatus",;
-import { useTalentData } from "./talent/useTalentData",;
-import { useFilterTalents } from "./talent/useFilterTalents";
-import { useUIState } from "./talent/useUIState";
-export function useTalentDirectory() {
-  // Fetch auth status and saved talents  } = useUIState(),
-
-  return {
-    // Talents and loading state
-    talents,
-    filteredTalents,
-    isLoading,
-    
-    // Search and filter state
-
-import { useAuthStatus } from "./talent/useAuthStatus",""
-import { useTalentData } from "./talent/useTalentData",""
-import { useFilterTalents } from "./talent/useFilterTalents";""
-import { useUIState } from "./talent/useUIState";"
-export function useTalentDirectory() {
-  // Fetch auth status and saved talents;
-  const {
-  // TODO: Implement
-}
-    isAuthenticated;
-
-    userDetails;
-    savedTalents;
-    handleToggleSave;
-  } = useAuthStatus();
-  // Fetch talent data;
-  // TODO: Implement
-    talents;
-    isLoading;"
-import { useFilterTalents } from "./talent/useFilterTalents",""
-import { useUIState } from "./talent/useUIState","
-  // Fetch auth status and saved talents;
-  // TODO: Implement
     isAuthenticated,
     userDetails, 
     savedTalents, 
+    handleToggleSave 
   } = useAuthStatus(),
 
-  // Fetch talent data;
-  // TODO: Implement
+  // Fetch talent data
+  const { 
     talents, 
-    isLoading;
-  } = useTalentData(),"
+    isLoading 
+  } = useTalentData(),
 import { useAuthStatus } from './talent / useAuthStatus';
 import { useTalentData } from './talent / useTalentData';
 import { useFilterTalents } from './talent / useFilterTalents';
 import { useUIState } from './talent / useUIState';
 export /**
- * useTalentDirectory - Function description;
+ * useTalentDirectory - Function description
  */
 function useTalentDirectory() {
   // Fetch auth status and saved talents;
 
-  // TODO: Implement
+  const {
     is_authenticated;
     user_details,
     saved_talents,
+    handleToggleSave;
   } = useAuthStatus ();
 ;
   // Fetch talent data;
-  // TODO: Implement
->>>>>>> origin/main
+  const {
     isMobileFilterOpen;
     setIsMobileFilterOpen;
     isHireModalOpen;
     setIsHireModalOpen;
-<<<<<<< HEAD
+
+    expanded_sections;
+
+  } = useTalentData();
+  // Apply filters and sorting
+  const {
+    filteredTalents,
+    searchTerm,
+    setSearchTerm,
+    selectedSkills,
+    selectedAvailability,
+    selectedRegions,
+    priceRange,
+    setPriceRange,
+    experienceRange,
+    setExperienceRange,
+    sortOption,
+    setSortOption,
+    toggleSkill,
+    toggleAvailability,
+    toggleRegion,
+    clearFilters
+
+  } = useFilterTalents(talents),
+
+} = useFilterTalents(talents);
+  } = useFilterTalents(talents),
+  // Manage UI state
+  const {
+    isMobileFilterOpen,
+    setIsMobileFilterOpen,
+    isHireModalOpen,
+    setIsHireModalOpen,
+    selectedTalent,
+    setSelectedTalent,
+    expandedSections,
+    toggleSection
+
+} = useUIState();
+  return {
+    // Talents and loading state
+    talents;
+    filteredTalents;
+    isLoading;
+    // Search and filter state
+    searchTerm;
+    setSearchTerm;
+    selectedSkills;
+    selectedAvailability;
+    selectedRegions;
+    priceRange;
+    setPriceRange;
+    experienceRange;
+    setExperienceRange;
+    sortOption;
+    setSortOption;
+    // UI state
+    isMobileFilterOpen;
+    setIsMobileFilterOpen;
+    isHireModalOpen;
+    setIsHireModalOpen;
     selectedTalent;
     setSelectedTalent;
     expandedSections;
-
-
     // Auth and user state
     isAuthenticated;
     userDetails;
     savedTalents;
-
-=======
-
-    expanded_sections;
-
-
-
-
-  } = useTalentData();
-  // Apply filters and sorting;
-  // TODO: Implement
-    filteredTalents,
-pr-12325
-    searchTerm,
-    setSearchTerm,
-    selectedSkills,
-    selectedAvailability,
-    selectedRegions,
-    priceRange,
-    setPriceRange,
-    experienceRange,
-    setExperienceRange,
-    sortOption,
-    setSortOption,
-    
-    // UI state
-    toggleSkill,
-    toggleAvailability,
-    toggleRegion,
-    clearFilters;
-  } = useFilterTalents(talents),
-
-
-  // Manage UI state;
-  // TODO: Implement
-pr-12325
-}
-    isMobileFilterOpen,
-    setIsMobileFilterOpen,
-    isHireModalOpen,
-    setIsHireModalOpen,
-    selectedTalent,
-    setSelectedTalent,
-    expandedSections,
-    toggleSection;
   } = useUIState(),
 
-  return {
-  // TODO: Implement
-}
-    // Talents and loading state;
-    talents,
-    filteredTalents,
-    isLoading,
-    
-    // Search and filter state;
-    searchTerm,
 
-    setSearchTerm,
-    selectedSkills,
-    selectedAvailability,
-    selectedRegions,
-    priceRange,
-    setPriceRange,
-    experienceRange,
-    setExperienceRange,
-    sortOption,
-    setSortOption,
+    isMobileFilterOpen;
+    setIsMobileFilterOpen;
+    isHireModalOpen;
+    setIsHireModalOpen;
 
-    
-    // UI state;
-    isMobileFilterOpen,
-
-    setIsMobileFilterOpen,
-    isHireModalOpen,
-    setIsHireModalOpen,
-    selectedTalent,
-    setSelectedTalent,
-    expandedSections,
-
-    
-    // Auth and user state
-    // Auth and user state;
-    isAuthenticated,
-    userDetails,
-    savedTalents,
-    
->>>>>>> origin/main
 
     // Actions
 
@@ -260,6 +149,19 @@ pr-12325
     toggleSection;
     handleToggleSave
 
+    expanded_sections;
+expanded_sections;
+
+    // Actions
+    toggleSkill,
+    toggleAvailability,
+    toggleRegion,
+    clearFilters,
+    toggleSection,
+    handleToggleSave
+  }
+}
+import { useAuthStatus } from "./talent/useAuthStatus",;
     expanded_sections;import { useAuthStatus } from "./talent/useAuthStatus",;
 import { useTalentData } from "./talent/useTalentData",;
 import { useFilterTalents } from "./talent/useFilterTalents",;
@@ -271,13 +173,9 @@ import { useUIState } from "./talent/useUIState",;
   // TODO: Implement
     // Talents and loading state;
     isLoading,
-    
     // Search and filter state;
-    
     // UI state;
-    
     // Auth and user state;
-    
 
 
     // Actions;
@@ -420,12 +318,19 @@ pr-12325
     toggle_section;
     handleToggleSave;
   }
+}
 }  }
 }
 ;
 "
 pr-12325
 
+  }
+}
+;
+  }
+}
+;
   }
 }
 ;

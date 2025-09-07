@@ -1,10 +1,5 @@
 
 
-<<<<<<< HEAD
-#!/usr/bin/env node;
-=======
-#!/usr/bin/env node
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
 /**
  * PM2 SEO & Accessibility Service;
  * Checks SEO and accessibility compliance;
@@ -39,51 +34,21 @@ class SEOAccessibility {}
       this.log('SEO checking disabled');
       return { checked: false };
     try {}
-<<<<<<< HEAD
-      this.log('Checking SEO compliance...');
-=======
-      this.log('Checking SEO compliance...);
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
       const seoIssues = [];
       const htmlFiles = this.findHTMLFiles();
-      
       for (const file of htmlFiles) {}
-<<<<<<< HEAD
-          const content = fs.readFileSync(file, 'utf8');
-          const issues = this.analyzeSEO(content, file);
-          seoIssues.push(...issues);
-        } catch (err) {}`;
-          this.log(`Error reading ${file}: ${err.message}`);
-      };`;
-=======
-        try {}
-          const content = fs.readFileSync(file,utf8);
-          const issues = this.analyzeSEO(content, file);
-          seoIssues.push(...issues);
-        } catch (err) {}
-          this.log(`Error reading ${file}: ${err.message});
-        };
-      };
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
       this.log(`Found ${seoIssues.length} SEO issues`);
-      
       return {}
         checked: true,
         issues: seoIssues,
         totalIssues: seoIssues.length,
         filesChecked: htmlFiles.length;
-<<<<<<< HEAD
-    } catch (error) {}`;
-      this.log(`SEO check failed: ${error.message}`);
-=======
-      };
-    } catch (error) {}
-      this.log(`SEO check failed: ${error.message});
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
       return { checked: false, error: error.message };
   findHTMLFiles() {}
     const htmlFiles = [];
-    
     const scanDir = (dir) => {}
         const files = fs.readdirSync(dir);
         for (const file of files) {}
@@ -105,44 +70,19 @@ class SEOAccessibility {}
     return htmlFiles;
   analyzeSEO(content, filePath) {}
     const issues = [];
-    
     // Check for title tag;
     if (!content.includes('<title>')) {}
-<<<<<<< HEAD
-</title>
-        message: 'Missing <title> tag
-    if (!content.includes('<h1>')) {}
-</h1>
-        message: 'Missing <h1> tag
-=======
-</title>'
-        message: Missing <title> tag
-</title>'
-    if (!content.includes('<h1>')) {}
-</h1>'
-        message: Missing <h1> tag
-</h1>
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
     const imgTags = content.match(/<img[^>]*>/g) || [];
 </img>
     const headings = content.match(/<h[1-6][^>]*>/g) || [];
 </h>
       const level = parseInt(heading.match(/<h(\d)/)[1]);
       if (level > lastLevel + 1) {}
-<<<<<<< HEAD
-    const inputTags = content.match(/<input[^>]*>/g) || [];
-</input>
-=======
-</h>
-    const inputTags = content.match(/<input[^>]*>/g) || [];
-</input>'
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
           const hasLabel = content.includes('</label>');
     const interactiveElements = content.match(/<button|<a|<input|<select|<textarea/g) || [];
     const tabIndexElements = content.match(/tabindex/g) || [];
     if (interactiveElements.length > 0 && tabIndexElements.length === 0) {}
-<<<<<<< HEAD
-</button>`;
-=======
-</button>'
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
+

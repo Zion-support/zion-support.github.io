@@ -1,5 +1,13 @@
 
 
+
+export type TokenSymbol = "ZION$",
+
+
+
+
+export type TokenSymbol = "ZION$";
+
 export type TokenSymbol = "ZION$";
 export type TokenSymbol = "ZION$",;
 export type TokenSymbol = "ZION$";
@@ -8,6 +16,15 @@ export type TokenTransactionType =;
   | "burn";
   | "issue";
   | "revoke";
+
+
+
+
+  | "redeem";
+export interface TokenTransaction {id: string;
+  userId: string;
+  type: TokenTransactionType;
+
   | "redeem",;
 export type TokenSymbol = "ZION$",""
 export type TokenSymbol = "ZION$";""
@@ -25,6 +42,11 @@ export interface TokenTransaction {;
   id: string,;
   userId: string,;
   type: TokenTransactionType,;
+  | "redeem";
+export interface TokenTransaction {;
+  id: string;
+  userId: string;
+  type: TokenTransactionType;
   amount: number, // positive integer tokens;
   reason: string;
 
@@ -33,6 +55,18 @@ export interface TokenTransaction {;
 }
 export interface Wallet {userId: string;
   balance: number, // current token balance;
+}
+export interface TokenConfig {symbol: TokenSymbol;
+
+
+
+
+
+
+}
+export interface TokenConfig {symbol: TokenSymbol;
+
+
   | "redeem",
 export interface TokenTransaction {
   id: string,
@@ -43,6 +77,27 @@ export interface TokenTransaction {
   metadata?: Record < string any>,
   created_at: string, // ISO timestamp;
 
+
+
+
+
+}
+export interface Wallet {
+  user_id: string,
+  balance: number, // current token balance;
+
+
+  | "redeem",;
+export interface TokenTransaction {;
+
+}
+export interface TokenConfig {
+  symbol: TokenSymbol,
+
+
+
+  usdPerToken: number, // e.g., 0.05 means 100 ZION$ = $5;
+
 }
 
 export interface WalletSummary {
@@ -50,6 +105,8 @@ export interface WalletSummary {
 
   transactions: TokenTransaction[];
   config: TokenConfig;
+
+}
 
 }
 
@@ -114,6 +171,7 @@ export interface WalletSummary {
   | "redeem",;"
 
 export interface TokenTransaction {;
+
 }
 }
 }
@@ -141,6 +199,38 @@ export interface TokenConfig {
   burnRules: Record<string number>, // feature -> tokens;
   earnRules: Record<string, number>, // action -> tokens;
   burnRules: Record<string, number>, // feature -> tokens;
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+export interface WalletSummary {;
+  wallet: Wallet,;
+  transactions: TokenTransaction[];
+  config: TokenConfig;
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+}
+
+
+}
+;
+export interface TokenConfig {;
+  symbol: TokenSymbol;
+  usdPerToken: number, // e.g., 0.05 means 100 ZION$ = $5;
+  earnRules: Record<string, number>, // action -> tokens;
+  burnRules: Record<string, number>, // feature -> tokens;
+}
+;
+export interface WalletSummary {;
+  wallet: Wallet;
+  transactions: TokenTransaction[];
+  config: TokenConfig;
+}
 </string>"
 pr-12325
 

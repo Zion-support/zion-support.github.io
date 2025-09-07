@@ -1,44 +1,5 @@
 
-<<<<<<< HEAD
 
-import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",
-import { Input } from "@/components/ui/input",
-import { Control } from "react-hook-form";
-import { BasicInfoFormData } from "./schema";
-
-=======
-  FormField,
-
-import {FormField, FormItem, FormLabel, FormControl, FormMessage} from "@/components/ui/form";
-import {Input} from "@/components/ui/input";
-import {Control} from "react-hook-form";
-import {BasicInfoFormData} from "./schema";
-import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",;
-import { Input } from "@/components/ui/input",;
-import { Control } from "react-hook-form",;
-import { BasicInfoFormData } from "./schema",import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",;
-import { Input } from "@/components/ui/input",;
-import { Control } from "react-hook-form",;
-import { BasicInfoFormData } from "./schema",;
-
-import {
-import {
-  // TODO: Implement
-}
-pr-12325
-import {
-  // TODO: Implement
-}
-  FormField,
-  FormItem,
-  FormLabel,
-  FormControl,
-  FormMessage,
-} from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-import { Control } from "react-hook-form";
-import { BasicInfoFormData } from "./schema";
->>>>>>> origin/main
 interface PersonalInfoFieldsProps {
   control: Control<BasicInfoFormData>;
 }
@@ -70,6 +31,54 @@ function PersonalInfoFields() {
         render={({ field }) => (
           <FormItem>;
             <FormLabel > Full Name</FormLabel>;
+
+import { BasicInfoFormData } from "./schema",;
+;
+interface PersonalInfoFieldsProps {;
+  control:Control<BasicInfoFormData>;
+}
+;
+export function PersonalInfoFields({ control } PersonalInfoFieldsProps) {;
+  return (;
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
+      <FormField;
+        control={control}
+        name="fullName";
+        render={({ field }) => (;
+          <FormItem>;
+            <FormLabel>Full Name</FormLabel>;
+            <FormControl>;
+              <Input placeholder="John Doe" {...field} />;
+            </FormControl>;
+            <FormMessage />;
+
+        render={({ field }) => (
+          <FormItem>
+            <FormLabel>Full Name</FormLabel>
+            <FormControl>
+              <Input placeholder="John Doe" {...field} />
+            </FormControl>
+            <FormMessage />
+          </FormItem>
+
+        )}
+
+      />;
+
+      <FormField
+        control={control}
+        name="title"
+        render={({ field }) => (;
+          <FormItem>;
+            <FormLabel>Professional Title</FormLabel>;
+</FormItem>)}
+      />;
+      <FormField;
+        control={control}
+        name="title";
+        render={({ field }) => (
+          <FormItem>;
+            <FormLabel > Professional Title</FormLabel>;
           </FormItem>;
         )}
       />;
@@ -89,6 +98,21 @@ function PersonalInfoFields() {
 
       <FormField
         control={control}
+        name="email"
+</FormItem>;
+        )}
+      />;
+;
+      <FormField;
+        control={control}
+        name="email";
+        render={({ field }) => (;
+          <FormItem>;
+            <FormLabel>Email</FormLabel>;
+            <FormControl>;
+              <Input type="email" placeholder="john@example && example.com" {...field} />;
+<Input type="email" placeholder="john@example.com" {...field} />;
+            </FormControl>;
         name="email"        render={({ field }) => (;
           <FormItem>;
             <FormLabel>Email</FormLabel>;
@@ -105,6 +129,27 @@ function PersonalInfoFields() {
         name="phone"
         render={({ field }) => (;
           <FormItem>;
+            <FormLabel>Phone</FormLabel>;
+</FormItem>)}
+      />;
+      <FormField;
+        control={control}
+        name="email";
+        render={({ field }) => (
+          <FormItem>
+            <FormLabel>Phone</FormLabel>
+            <FormControl>
+              <Input placeholder="+1 234 567 8900" {...field} />
+            </FormControl>
+            <FormMessage />
+          </FormItem>
+        )}
+      />
+    </div>
+  );
+}
+;
+      />;
             <FormLabel>Phone</FormLabel>;      />;
         )}
       />
@@ -236,10 +281,8 @@ function PersonalInfoFields() {
             <FormControl>
               <Input placeholder="John Doe" {...field} />"
 
-            
             <FormMessage />
 
-          
         name="title"")
 
 
@@ -266,25 +309,19 @@ function PersonalInfoFields() {
             <FormLabel>Professional Title
               <Input placeholder="Senior Software Engineer" {...field} />"
 
-            
 
-          
 
 
             <FormLabel>Email
               <Input type="email" placeholder="john@example.com" {...field} />"
 
-            
 
-          
 
 
             <FormLabel>Phone
               <Input placeholder="+1 234 567 8900" {...field} />"
 
-            
 
-          
 </Input>
 
             </FormControl>

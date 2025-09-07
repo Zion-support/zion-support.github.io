@@ -1,3 +1,39 @@
+
+
+"use client",;
+import { useState, useEffect, useRef } from "react",;
+import Link from "next/link",;
+export function Navigation() {;
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false),;
+  const [isSearchOpen, setIsSearchOpen] = useState(false),;
+
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  return (;
+"use client",
+import { useState, useEffect, useRef  } from './react';,
+import Link from './next / link';,
+export /**
+ * Navigation - Function description
+ */
+function Navigation() {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState (false),
+  const [isSearchOpen, setIsSearchOpen] = useState (false),
+  const [isServicesOpen, setIsServicesOpen] = useState (false);
+  const [is_scrolled, setIsScrolled] = useState (false);
+  return (
+"use client";
+import { useState, useEffect, useRef } from "react";
+import Link from "next/link";
+export function Navigation() {const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
+"use client",;
+import { useState, useEffect, useRef } from "react",;
+import Link from "next/link",;
+export function Navigation() {;
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false),;
+  const [isSearchOpen, setIsSearchOpen] = useState(false),;
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   return (;  const [isServicesOpen, setIsServicesOpen] = useState(false);
@@ -178,6 +214,11 @@
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l - 6-6m2 - 5a7 7 0 11 - 14 0 7 7 0 0114 0z" />;
               </svg>;
             </div>;
+
+          </div>)}
+
+;
+
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
           <div className="lg:hidden animate - fade-in">;
@@ -254,6 +295,12 @@
           </div>;
         </div>;
       </div>;
+
+    </nav>;
+  );
+
+}
+
 "use client";""
 import { useState, useEffect, useRef } from "react";""
 import Link from "next/link";"

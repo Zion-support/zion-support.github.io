@@ -13,6 +13,8 @@ const PerformanceMonitor.dynamic = () => ;
     </div>
   );
 }
+;
+
 
 pr-12243
 export default PerformanceMonitor.dynamic;

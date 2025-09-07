@@ -1,566 +1,4 @@
-<<<<<<< HEAD
 
-}    description: "80+ cutting-edge AI solutions including machine learning, computer vision, natural language processing, quantum AI, and advanced analytics",
-
-=======
-import React from 'react';
-import MainLayout from '../components/layout/MainLayout';
-
-const Page = () => {
-  return (
-    <MainLayout
-      title="Services - Zion Tech Group"
-      description="Our services and solutions"
-    >
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-4 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">Services</h1>
-          <p className="text-xl text-gray-600">Coming soon...</p>
-        </div>
-      </div>
-    </MainLayout>
-  );
-};
-
-export default Page;
-import Head from 'next/head';
-
-export default function Services() {
-  const services = [
-    {
-      title: "AI Development",
-      description: "Custom AI solutions tailored to your business needs",
-      features: ["Machine Learning Models", "Natural Language Processing", "Computer Vision", "Predictive Analytics"]
-    },
-    {
-      title: "Cloud Infrastructure",
-      description: "Scalable and secure cloud solutions",
-      features: ["AWS/Azure/GCP Migration", "Container Orchestration", "Serverless Architecture", "DevOps Automation"]
-    },
-    {
-      title: "Web Development",
-      description: "Modern web applications with cutting-edge technology",
-      features: ["React/Next.js Applications", "Progressive Web Apps", "API Development", "Performance Optimization"]
-    },
-    {
-      title: "Data Analytics",
-      description: "Transform your data into actionable insights",
-      features: ["Business Intelligence", "Data Visualization", "Real-time Analytics", "Data Pipeline Development"]
-    }
-  ];
-
-  return (
-    <>
-      <Head>
-        <title>Services - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive AI-powered IT services and solutions" />
-      </Head>
-      <main className="min-h-screen bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <div className="text-center mb-16">
-            <h1 className="text-5xl font-bold text-gray-900 mb-4">Our Services</h1>
-            <p className="text-xl text-gray-600">Comprehensive AI-powered solutions for your business</p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
-            {services.map((service, index) => (
-              <div key={index} className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow">
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">{service.title}</h3>
-                <p className="text-gray-600 mb-6">{service.description}</p>
-                <ul className="space-y-2">
-                  {service.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center text-gray-700">
-                      <span className="text-emerald-500 mr-2">✓</span>
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </div>
-      </main>
-    </>
-  );
-}
-
-
-
-
-
-
-
-origin/main
-origin/automation-improvements-final
-
-import React from 'react';
-import Link from 'next/link';
-import React from 'react';
-
-import Link from 'next/link';
-import Link from 'next / link';
-;
-type Service = {
-type Service = {;
-  name: string;
-  summary: string;
-  pricing: string;
-  link: string;
-}
-];
-const aiServices: Service[] = [
-  {
-    name: 'AI Customer Support Automation'
-    summary: 'Chatbots, triage, knowledge mining and human-in-the-loop escalation.'
-    link: 'https://ziontechgroup.com/ai-services'}
-  {
-    name: 'Predictive Analytics & Forecasting'
-    summary: 'Time-series forecasts for demand, revenue, churn and supply risk.'
-    link: 'https://ziontechgroup.com/ai-services'}
-  {
-    name: 'GenAI Content & SEO Automation'
-    summary: 'Editorial-quality drafts, briefs, clustering and internal linking suggestions.'
-    link: 'https://ziontechgroup.com/ai-services'}
-  {
-    name: 'Computer Vision & Image Analysis'
-    summary: 'Object detection, facial recognition, quality control, and medical imaging analysis.'
-    link: 'https://ziontechgroup.com/ai-services'}
-  {
-    name: 'Natural Language Processing Suite'
-    summary: 'Sentiment analysis, entity extraction, text classification, and language translation.'
-    link: 'https://ziontechgroup.com/ai-services'}
-  {
-    name: 'AI-Powered Fraud Detection'
-    summary: 'Real-time fraud scoring, anomaly detection, and risk assessment for financial transactions.'
-    link: 'https://ziontechgroup.com/ai-services'}
-  {
-    name: 'Recommendation Engine Platform'
-    summary: 'Personalized product recommendations, content suggestions, and user behavior analysis.'
-    link: 'https://ziontechgroup.com/ai-services'}
-  {
-    name: 'Voice AI & Speech Processing'
-    summary: 'Speech-to-text, text-to-speech, voice commands, and conversational AI interfaces.'
-    link: 'https://ziontechgroup.com/ai-services'}
-  {
-    name: 'AI Data Pipeline Automation'
-    summary: 'Automated data cleaning, feature engineering, model training, and deployment pipelines.'
-    link: 'https://ziontechgroup.com/ai-services'}
-  {
-    name: 'Intelligent Document Analysis'
-    summary: 'Contract analysis, legal document review, compliance checking, and knowledge extraction.'
-    link: 'https://ziontechgroup.com/ai-services'}
-  {
-    name: 'AI-Powered Supply Chain Optimization'
-    summary: 'Demand forecasting, route optimization, inventory management, and supplier risk assessment.'
-    link: 'https://ziontechgroup.com/ai-services'}
-  {
-    name: 'Conversational AI Platform'
-    summary: 'Multi-channel chatbots, voice assistants, and intelligent virtual agents.'
-    link: 'https://ziontechgroup.com/ai-services'}
-  {
-    name: 'AI Model Monitoring & MLOps'
-    summary: 'Model performance tracking, drift detection, automated retraining, and deployment management.'
-    link: 'https://ziontechgroup.com/ai-services'}
-  {
-    name: 'Intelligent Process Automation'
-    summary: 'RPA with AI, workflow automation, document processing, and business process optimization.'
-    link: 'https://ziontechgroup.com/ai-services'}
-  {
-    name: 'AI-Powered Market Research'
-    summary: 'Competitive intelligence, trend analysis, consumer sentiment, and market forecasting.'
-    link: 'https://ziontechgroup.com/ai-services'}
-  {
-    name: 'Edge AI & IoT Intelligence'
-    summary: 'Real-time inference on edge devices, IoT data processing, and distributed AI systems.'
-    link: 'https://ziontechgroup.com/ai-services'}
-  {
-    name: 'AI-Powered Cybersecurity Threat Detection'
-    summary: 'Advanced threat hunting, behavioral analysis, and automated incident response.'
-    link: 'https://ziontechgroup.com/ai-services'}
-  {
-    name: 'Intelligent Process Mining & Optimization'
-    summary: 'Business process discovery, bottleneck identification, and workflow optimization.'
-    link: 'https://ziontechgroup.com/ai-services'}
-  {
-    name: 'AI-Powered Content Moderation Platform'
-    summary: 'Automated content filtering, toxicity detection, and community management.'
-    link: 'https://ziontechgroup.com/ai-services'}
-  {
-    name: 'Smart Manufacturing Quality Control'
-    summary: 'Computer vision for defect detection, predictive maintenance, and quality optimization.'
-    link: 'https://ziontechgroup.com/ai-services'}
-  {
-    name: 'AI-Powered Healthcare Diagnostics'
-    summary: 'Medical image analysis, symptom prediction, and treatment recommendation systems.'
-    link: 'https://ziontechgroup.com/ai-services'}
-  {
-    name: 'Intelligent Document Intelligence Platform'
-    summary: 'Advanced document understanding, information extraction, and knowledge graph creation.'
-    link: 'https://ziontechgroup.com/ai-services'}
-  {
-    name: 'AI-Powered Risk Assessment Engine'
-    summary: 'Credit scoring, insurance underwriting, and financial risk modeling.'
-    link: 'https://ziontechgroup.com/ai-services'}
-  {
-    name: 'Smart Energy Grid Optimization'
-    summary: 'Demand forecasting, load balancing, and renewable energy integration.'
-    link: 'https://ziontechgroup.com/ai-services'}
-  {
-    name: 'AI-Powered Personalization Engine'
-    summary: 'Real-time user profiling, content recommendation, and experience optimization.'
-    link: 'https://ziontechgroup.com/ai-services'}
-  {
-    name: 'Intelligent Automation Orchestration'
-    summary: 'RPA with AI decision-making, workflow automation, and process intelligence.'
-    link: 'https://ziontechgroup.com/ai-services'}
-  {
-    name: 'AI-Powered Environmental Monitoring'
-    summary: 'Climate data analysis, pollution detection, and environmental impact assessment.'
-    link: 'https://ziontechgroup.com/ai-services'}
-  {
-    name: 'Smart Transportation Optimization'
-    summary: 'Route optimization, traffic prediction, and fleet management intelligence.'
-    link: 'https://ziontechgroup.com/ai-services'}
-  {
-    name: 'AI-Powered Agricultural Intelligence'
-    summary: 'Crop monitoring, yield prediction, and precision farming optimization.'
-    link: 'https://ziontechgroup.com/ai-services'}
-  {
-    name: 'Intelligent Customer Journey Analytics'
-    summary: 'Behavioral analysis, journey mapping, and conversion optimization.'
-    link: 'https://ziontechgroup.com/ai-services'}
-  {
-    name: 'AI-Powered Real Estate Valuation'
-    summary: 'Property assessment, market analysis, and investment opportunity identification.'
-    link: 'https://ziontechgroup.com/ai-services'}
-  {
-    name: 'Smart Retail Analytics Platform'
-    summary: 'Customer behavior analysis, inventory optimization, and sales forecasting.'
-    link: 'https://ziontechgroup.com/ai-services'}
-  {
-    name: 'AI-Powered Educational Assessment'
-    summary: 'Learning analytics, personalized education, and performance prediction.'
-    link: 'https://ziontechgroup.com/ai-services'}
-  {
-    name: 'Intelligent Financial Trading Algorithms'
-    summary: 'Algorithmic trading, market prediction, and portfolio optimization.'
-    link: 'https://ziontechgroup.com/ai-services'}
-  {
-    name: 'AI-Powered Smart City Solutions'
-    summary: 'Urban planning optimization, traffic management, and resource allocation.'
-    link: 'https://ziontechgroup.com/ai-services'}
-  {
-    name: 'AI-Powered Quantum Computing Solutions'
-    summary: 'Quantum algorithms for optimization, cryptography, and complex problem solving.'
-    link: 'https://ziontechgroup.com/ai-services'}
-  {
-    name: 'Advanced Neural Network Architectures'
-    summary: 'Custom deep learning models, transformer networks, and specialized AI architectures.'
-    link: 'https://ziontechgroup.com/ai-services'}
-  {
-    name: 'AI-Powered Drug Discovery Platform'
-    summary: 'Molecular analysis, drug interaction prediction, and pharmaceutical research automation.'
-    link: 'https://ziontechgroup.com/ai-services'}
-  {
-    name: 'Intelligent Autonomous Systems'
-    summary: 'Self-driving algorithms, robotic process automation, and autonomous decision making.'
-    link: 'https://ziontechgroup.com/ai-services'}
-  {
-    name: 'AI-Powered Financial Trading Algorithms'
-    summary: 'Algorithmic trading, market prediction, and automated portfolio management.'
-    link: 'https://ziontechgroup.com/ai-services'}
-  {
-    name: 'Advanced Natural Language Generation'
-    summary: 'GPT-style content creation, automated reporting, and intelligent document generation.'
-    link: 'https://ziontechgroup.com/ai-services'}
-  {
-    name: 'AI-Powered Scientific Research Assistant'
-    summary: 'Literature analysis, hypothesis generation, and research automation.'
-    link: 'https://ziontechgroup.com/ai-services'}
-  {
-    name: 'Intelligent Multi-Modal AI Systems'
-    summary: 'Vision-language models, audio-visual processing, and cross-modal understanding.'
-    link: 'https://ziontechgroup.com/ai-services'}
-  {
-    name: 'AI-Powered Space Technology Solutions'
-    summary: 'Satellite data analysis, space mission optimization, and astronomical research.'
-    link: 'https://ziontechgroup.com/ai-services'}
-  {
-    name: 'Advanced Reinforcement Learning Systems'
-    summary: 'Game AI, optimization algorithms, and adaptive learning systems.'
-    link: 'https://ziontechgroup.com/ai-services'}
-  {
-    name: 'AI-Powered Metaverse Development'
-    summary: 'Virtual world creation, avatar intelligence, and immersive experience optimization.'
-    link: 'https://ziontechgroup.com/ai-services'}
-  {
-    name: 'Intelligent Blockchain Analytics'
-    summary: 'Cryptocurrency analysis, smart contract optimization, and DeFi intelligence.'
-    link: 'https://ziontechgroup.com/ai-services'}
-  {
-    name: 'AI-Powered Climate Change Solutions'
-    summary: 'Climate modeling, carbon footprint optimization, and environmental impact prediction.'
-    link: 'https://ziontechgroup.com/ai-services'}
-  {
-    name: 'Advanced Computer Vision for Robotics'
-    summary: 'Robot vision systems, object manipulation, and autonomous navigation.'
-    link: 'https://ziontechgroup.com/ai-services'}
-  {
-    name: 'AI-Powered Mental Health Analytics'
-    summary: 'Emotional analysis, mental health prediction, and therapeutic intervention systems.'
-    link: 'https://ziontechgroup.com/ai-services'}
-  {
-    name: 'Intelligent Energy Storage Optimization'
-    summary: 'Battery management, grid storage optimization, and renewable energy integration.'
-    link: 'https://ziontechgroup.com/ai-services'}
-  {
-    name: 'AI-Powered Smart City Infrastructure'
-    summary: 'Urban planning optimization, traffic management, and city service automation.'
-    link: 'https://ziontechgroup.com/ai-services'}
-  {
-    name: 'Advanced AI Ethics & Bias Detection'
-    summary: 'Algorithmic fairness, bias detection, and ethical AI implementation.'
-    link: 'https://ziontechgroup.com/ai-services'}
-  {
-    name: 'AI-Powered Cybersecurity Intelligence'
-    summary: 'Advanced threat detection, zero-day vulnerability analysis, and security automation.'
-    link: 'https://ziontechgroup.com/ai-services'}
-  {
-    name: 'Intelligent Digital Twin Technology'
-    summary: 'Virtual replicas, predictive maintenance, and real-time system optimization.'
-    link: 'https://ziontechgroup.com/ai-services'}
-  {
-    name: 'AI-Powered Augmented Reality Solutions'
-    summary: 'AR object recognition, spatial computing, and immersive experience creation.'
-    link: 'https://ziontechgroup.com/ai-services'}
-  {
-    name: 'Advanced AI Model Compression'
-    summary: 'Model optimization, edge deployment, and efficient AI inference.'
-    link: 'https://ziontechgroup.com/ai-services'}
-  {
-    name: 'AI-Powered Supply Chain Intelligence'
-    summary: 'End-to-end visibility, disruption prediction, and optimization across global networks.'
-    link: 'https://ziontechgroup.com/ai-services'}
-  {
-    name: 'Intelligent AI Model Governance'
-    summary: 'Model lifecycle management, compliance monitoring, and AI governance frameworks.'
-    link: 'https://ziontechgroup.com/ai-services'}
-  {
-    name: 'AI-Powered Personalized Medicine'
-    summary: 'Genomic analysis, treatment optimization, and precision healthcare delivery.'
-    link: 'https://ziontechgroup.com/ai-services'}
-  {
-    name: 'Advanced AI-Powered Education Systems'
-    summary: 'Personalized learning, adaptive assessment, and intelligent tutoring systems.'
-    link: 'https://ziontechgroup.com/ai-services'}
-  {
-    name: 'AI-Powered Smart Manufacturing 4.0'
-    summary: 'Industrial IoT intelligence, predictive maintenance, and autonomous production.'
-    link: 'https://ziontechgroup.com/ai-services'}
-  {
-    name: 'Intelligent AI-Powered Legal Tech'
-    summary: 'Contract analysis, legal research automation, and case outcome prediction.'
-    link: 'https://ziontechgroup.com/ai-services'}
-  {
-    name: 'AI-Powered Advanced Materials Discovery'
-    summary: 'Material property prediction, composition optimization, and novel material design.'
-    link: 'https://ziontechgroup.com/ai-services'}
-  {
-    name: 'Intelligent AI-Powered Sports Analytics'
-    summary: 'Performance optimization, injury prediction, and strategic decision support.'
-    link: 'https://ziontechgroup.com/ai-services'}
-  {
-    name: 'AI-Powered Advanced Robotics'
-    summary: 'Humanoid robots, collaborative automation, and intelligent robotic systems.'
-    link: 'https://ziontechgroup.com/ai-services'}
-  {
-    name: 'Intelligent AI-Powered Gaming Systems'
-    summary: 'Procedural content generation, intelligent NPCs, and adaptive gameplay.'
-    link: 'https://ziontechgroup.com/ai-services'}
-  {
-    name: 'AI-Powered Advanced Biometrics'
-    summary: 'Multi-modal authentication, behavioral analysis, and identity verification.'
-    link: 'https://ziontechgroup.com/ai-services'}
-  {
-    name: 'Intelligent AI-Powered Logistics'
-    summary: 'Route optimization, warehouse automation, and last-mile delivery intelligence.'
-    link: 'https://ziontechgroup.com/ai-services'}
-  {
-    name: 'AI-Powered Advanced Simulation Systems'
-    summary: 'Physics simulation, virtual testing, and scenario modeling.'
-    link: 'https://ziontechgroup.com/ai-services'}
-  {
-    name: 'Intelligent AI-Powered Content Creation'
-    summary: 'Multi-modal content generation, creative AI, and automated media production.'
-    link: 'https://ziontechgroup.com/ai-services'}
-  {
-    name: 'AI-Powered Advanced Data Science'
-    summary: 'Automated feature engineering, model selection, and advanced analytics.'
-    link: 'https://ziontechgroup.com/ai-services'}
-  {
-    name: 'Intelligent AI-Powered Customer Intelligence'
-    summary: 'Advanced customer profiling, behavior prediction, and relationship optimization.'
-    link: 'https://ziontechgroup.com/ai-services'}
-  {
-    name: 'AI-Powered Advanced Process Mining'
-    summary: 'Business process discovery, optimization, and intelligent automation.'
-    link: 'https://ziontechgroup.com/ai-services'}
-  {
-    name: 'Intelligent AI-Powered Decision Support'
-    summary: 'Strategic decision making, scenario analysis, and intelligent recommendations.'
-    link: 'https://ziontechgroup.com/ai-services'}
-  {
-    name: 'AI-Powered Advanced Predictive Analytics'
-    summary: 'Multi-variate forecasting, anomaly detection, and predictive insights.'
-    link: 'https://ziontechgroup.com/ai-services'}
-  {
-    name: 'Intelligent AI-Powered Knowledge Management'
-    summary: 'Automated knowledge extraction, semantic search, and intelligent information retrieval.'
-    link: 'https://ziontechgroup.com/ai-services'}
-  {
-    name: 'AI-Powered Advanced Optimization'
-    summary: 'Multi-objective optimization, constraint solving, and intelligent resource allocation.'
-    link: 'https://ziontechgroup.com/ai-services'}
-  {
-    name: 'Intelligent AI-Powered Innovation Systems'
-    summary: 'Idea generation, innovation management, and creative problem solving.'
-    link: 'https://ziontechgroup.com/ai-services'}
-  {
-    name: 'AI-Powered Advanced Human-Computer Interaction'
-    summary: 'Natural language interfaces, gesture recognition, and intelligent user experience.'
-    link: 'https://ziontechgroup.com/ai-services'}
-  {
-    name: 'Intelligent AI-Powered Quality Assurance'
-    summary: 'Automated testing, defect prediction, and quality optimization.'
-    link: 'https://ziontechgroup.com/ai-services'}
-  {
-    name: 'AI-Powered Advanced Security Systems'
-    summary: 'Threat intelligence, security automation, and intelligent incident response.'
-    link: 'https://ziontechgroup.com/ai-services'}
-  {
-    name: 'Intelligent AI-Powered Performance Optimization'
-    summary: 'System optimization, resource management, and intelligent scaling.'
-    link: 'https://ziontechgroup.com/ai-services'}
-  {
-    name: 'AI-Powered Advanced Integration Systems'
-    summary: 'API intelligence, data integration, and intelligent system connectivity.'
-    link: 'https://ziontechgroup.com/ai-services'}
-  {
-    name: 'Intelligent AI-Powered Monitoring Systems'
-    summary: 'Real-time monitoring, anomaly detection, and intelligent alerting.'
-    link: 'https://ziontechgroup.com/ai-services'}
-  {
-    name: 'AI-Powered Advanced Analytics Platform'
-    summary: 'Multi-dimensional analysis, pattern recognition, and intelligent insights.'
-    link: 'https://ziontechgroup.com/ai-services'}
-  {
-    name: 'Intelligent AI-Powered Automation Suite'
-    summary: 'End-to-end automation, intelligent workflows, and process optimization.'
-    link: 'https://ziontechgroup.com/ai-services'}
-  {
-    name: 'AI-Powered Advanced Intelligence Platform'
-    summary: 'Comprehensive AI solutions, intelligent decision making, and strategic insights.'
-    link: 'https://ziontechgroup.com/ai-services'}
-];
-export default function Services(): React.JSX.Element {
-
-export default function Services(): React.JSX.Element {;
-  const Section = ({ title, items, color }: { title: string; items: Service[]; color: string }) => (
-    <section style={{ maxWidth: 1400, margin: '0 auto', padding: '32px 20px', }}>
-      <div style={{
-        display: 'flex', alignItems: 'center', gap: 12, marginBottom: 24
-        paddingBottom: 12, borderBottom: `2px solid ${color}20`
-      }}>;
-        <divstyle={{ 
-          width: 4, height: 32, background: color, borderRadius: 2 
-        }}></div>;
-        <h2style={{ 
-          fontSize: 28, fontWeight: 800, margin: 0,
-          background: `linear-gradient(135deg, ${color}, ${color}80)`,
-          WebkitBackgroundClip: 'text',
-          WebkitTextFillColor: 'transparent',
-          backgroundClip: 'text'
-        }}>{title}</h2>;
-        <divstyle={{ 
-          background: `${color}20`, color: color, padding: '4px 12px', 
-          borderRadius: 20, fontSize: 14, fontWeight: 600 
-        }}>;
-          {items && items.length} Services;
-        </div>;
-      </div>;
-      <divstyle={{ 
-        display: 'grid', 
-        gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', 
-        gap: 20 
-      }}>;
-        {items && items.map((s) => (;
-          <akey={s && s.name} href={s && s.link} style={{
-            border: '1px solid rgba(0,0,0,0 && 0.08)', borderRadius: 16, padding: 24,
-            background: 'white', textDecoration: 'none', color: '#0b1220',
-            transition: 'all 0 && 0.3s ease', boxShadow: '0 2px 8px rgba(0,0,0,0 && 0.04)',
-            ':hover': {
-              transform: 'translateY(-4px)',
-              boxShadow: '0 8px 24px rgba(0,0,0,0 && 0.12)',
-              borderColor: `${color}40`
-            }
-              borderRadius: 8, display: 'inline-block'
-            }}>{s && s.pricing}</div>;
-          </a>;
-        ))}
-      </div>;
-    </section>;
-  );
-  return (
-    description: "80+ cutting-edge AI solutions including machine learning, computer vision, natural language processing, quantum AI, and advanced analytics",
-    icon: Brain,
-
-export default function Services() {
-            </div>
-          </div>
-        </div>
-      </section>
-      <Section title="Micro SaaS Products" items={microSaaS} color="#3b82f6" />
-      <Section title="AI Services & Platforms" items={aiServices} color="#8b5cf6" />
-      <Section title="IT & Cloud Services" items={itServices} color="#22c55e" />
-      {/* CTA Section */}
-      <section style={{ 
-        maxWidth: 1400, margin: '0 auto', padding: '60px 20px',
-        textAlign: 'center', background: 'white', marginTop: 40,
-        borderRadius: 24, boxShadow: '0 4px 24px rgba(0,0,0,0.06)'
-      }}>
-        <h2 style={{ 
-          fontSize: 32, fontWeight: 700, marginBottom: 16,
-          color: '#1e293b'
-        }}>Ready to Get Started?</h2>
-        <p style={{ 
-          fontSize: 18, color: '#64748b', marginBottom: 32,
-          maxWidth: 600, margin: '0 auto 32px auto'
-        }}>
-          Contact our experts to discuss your project requirements and discover 
-          how our innovative solutions can drive your business forward.
-        </p>
-        <div style={{ display: 'flex', gap: 16, justifyContent: 'center', flexWrap: 'wrap' }}>
-          <Link href="/contact" style={{
-            display: 'inline-block', 
-            background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)', 
-            color: 'white', padding: '16px 32px', borderRadius: 12, 
-            fontWeight: 700, textDecoration: 'none', fontSize: 16,
-            transition: 'all 0.3s ease'
-          }}>Request a Quote</Link>
-          <a href="tel:+13024640950" style={{
-            display: 'inline-block', 
-            background: 'rgba(34, 197, 94, 0.1)', 
-            color: '#22c55e', padding: '16px 32px', borderRadius: 12, 
-            fontWeight: 700, textDecoration: 'none', fontSize: 16,
-            border: '2px solid #22c55e', transition: 'all 0.3s ease'
-          }}>Call +1 302 464 0950</a>
-        </div>
-      </section>
-    </main>
-  );
-}
-    description: "80+ cutting-edge AI solutions including machine learning, computer vision, natural language processing, quantum AI, and advanced analytics",
->>>>>>> origin/main
     icon: Brain,
 export default function Services() {;
   const [isLoaded, setIsLoaded] = useState(false);
@@ -845,7 +283,6 @@ import Footer from '../components/Footer';
   const getColorClasses = (color: string) => {
     const colors = {
       blue: {
-      
         bg: 'bg-blue-600',
         hover: 'hover:bg-blue-700',
         text: 'text-blue-400',
@@ -943,9 +380,107 @@ ring: 'focus:ring-green-500',
 
 origin/cursor/automate-test-improve-and-merge-code-2533
   return (
-    <>
+    <Layout>
       <Head>
         <title>Our Services - Zion Tech Group</title>
+        <meta name="description" content="Comprehensive IT services including custom software development, AI solutions, cloud services, cybersecurity, and more." />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-800">
+        {/* Hero Section */}
+        <section className="relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-pink-600/20"></div>
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+            <div className="text-center">
+              <h1 className="text-5xl md:text-6xl font-bold mb-6">
+                <span className="gradient-text">Our Services</span>
+              </h1>
+              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Comprehensive technology solutions designed to drive your business forward
+              </p>
+            </div>
+          </div>
+</section>
+
+        {/* Services Grid */}
+        <section className="py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {services.map((service, index) => (
+                <div key={index} className="card group hover:scale-105 transition-all duration-300">
+                  <div className="text-6xl mb-6 text-center">{service.icon}</div>
+                  <h3 className="text-2xl font-semibold text-white mb-4 group-hover:text-blue-400 transition-colors">
+                    {service.title}
+                  </h3>
+                  <p className="text-gray-300 mb-6">
+                    {service.description}
+                  </p>
+                  <ul className="space-y-2 mb-6">
+                    {service.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center text-gray-300">
+                        <div className="w-2 h-2 bg-blue-500 rounded-full mr-3 flex-shrink-0"></div>
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                  <Link 
+                    href="/contact" 
+                    className="inline-block w-full text-center px-6 py-3 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white rounded-lg font-semibold transition-all duration-300 hover:scale-105"
+                  >
+                    Learn More
+                  </Link>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Process Section */}
+        <section className="py-20 bg-slate-900/50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Our Process</h2>
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+                A proven methodology that ensures successful project delivery
+              </p>
+            </div>
+            <div className="grid md:grid-cols-4 gap-8">
+              <div className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <span className="text-2xl font-bold text-white">1</span>
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-4">Discovery</h3>
+                <p className="text-gray-300">
+                  We start by understanding your business goals, challenges, and requirements through detailed consultation.
+                </p>
+              </div>
+              <div className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <span className="text-2xl font-bold text-white">2</span>
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-4">Planning</h3>
+                <p className="text-gray-300">
+                  Our team creates a comprehensive project plan with timelines, milestones, and resource allocation.
+                </p>
+              </div>
+              <div className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <span className="text-2xl font-bold text-white">3</span>
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-4">Development</h3>
+                <p className="text-gray-300">
+                  We build your solution using agile methodologies with regular updates and feedback sessions.
+                </p>
+              </div>
+              <div className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-green-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <span className="text-2xl font-bold text-white">4</span>
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-4">Deployment</h3>
+                <p className="text-gray-300">
+                  We deploy your solution and provide comprehensive training and ongoing support.
+                </p>
       <div className="min-h-screen bg-slate-950 text-white flex flex-col items-center justify-center py-12">
         <main className="text-center max-w-4xl px-4">
           <h1 className="text-5xl font-bold mb-6 gradient-text">Our Advanced Services</h1>
@@ -1108,29 +643,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <div className='grid lg:grid-cols-3 gap-8'>
                 {serviceCategories.map((category, index) => {
                   const colors = getColorClasses(category.color);
-<<<<<<< HEAD
-                  
-=======
-import Link from 'next/link',
-import Head from 'next/head';
-import { useState, useEffect  } from 'react';
-import { ContactInfo  } from '../types';
-import ErrorBoundary from '../components/ErrorBoundary';
-import LoadingSpinner from '../components/LoadingSpinner';
-export default function Services() {
-  const [isLoaded, setIsLoaded] = useState(false);
-  useEffect(() => {
-    const timer = null;
-                  return (
-                    <div 
-                      key={category.title}
-                      className={`p-8 bg-slate-900/60 rounded-xl border border-white/10 hover:border-${category.color}-500/40 transition-all duration-300 hover:scale-105 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
-                      style={{ transitionDelay: `${index * 200}ms` }}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-e9d8
-=======
 
 
->>>>>>> origin/main
                     >
                       <div className='flex items-center justify-between mb-6'>                        <h3 className={`text-2xl font-bold ${colors.text}`}>
         <meta name="description" content="Explore our comprehensive range of micro SaaS products, AI services, and IT solutions. 350+ innovative services to transform your business." />
@@ -1139,7 +653,6 @@ export default function Services() {
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href={`${contact.site}/services`} />
       </Head>
-      
       <ErrorBoundary level="page">
         <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
           {/* Hero Section */}
@@ -3128,6 +2641,72 @@ export default function Services() {
             </div>
           </div>
         </section>
+
+        {/* Technology Stack */}
+        <section className="py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Technologies We Use</h2>
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+                Cutting-edge technologies and frameworks to build robust, scalable solutions
+              </p>
+            </div>
+            <div className="grid md:grid-cols-4 gap-8">
+              <div className="card text-center">
+                <h3 className="text-xl font-semibold text-white mb-4">Frontend</h3>
+                <div className="space-y-2">
+                  <span className="inline-block px-3 py-1 bg-blue-500/20 text-blue-300 rounded-full text-sm mr-2 mb-2">React</span>
+                  <span className="inline-block px-3 py-1 bg-blue-500/20 text-blue-300 rounded-full text-sm mr-2 mb-2">Next.js</span>
+                  <span className="inline-block px-3 py-1 bg-blue-500/20 text-blue-300 rounded-full text-sm mr-2 mb-2">TypeScript</span>
+                  <span className="inline-block px-3 py-1 bg-blue-500/20 text-blue-300 rounded-full text-sm mr-2 mb-2">Tailwind CSS</span>
+                </div>
+              </div>
+              <div className="card text-center">
+                <h3 className="text-xl font-semibold text-white mb-4">Backend</h3>
+                <div className="space-y-2">
+                  <span className="inline-block px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-sm mr-2 mb-2">Node.js</span>
+                  <span className="inline-block px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-sm mr-2 mb-2">Python</span>
+                  <span className="inline-block px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-sm mr-2 mb-2">Java</span>
+                  <span className="inline-block px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-sm mr-2 mb-2">Go</span>
+                </div>
+              </div>
+              <div className="card text-center">
+                <h3 className="text-xl font-semibold text-white mb-4">Cloud & DevOps</h3>
+                <div className="space-y-2">
+                  <span className="inline-block px-3 py-1 bg-pink-500/20 text-pink-300 rounded-full text-sm mr-2 mb-2">AWS</span>
+                  <span className="inline-block px-3 py-1 bg-pink-500/20 text-pink-300 rounded-full text-sm mr-2 mb-2">Azure</span>
+                  <span className="inline-block px-3 py-1 bg-pink-500/20 text-pink-300 rounded-full text-sm mr-2 mb-2">Docker</span>
+                  <span className="inline-block px-3 py-1 bg-pink-500/20 text-pink-300 rounded-full text-sm mr-2 mb-2">Kubernetes</span>
+                </div>
+              </div>
+              <div className="card text-center">
+                <h3 className="text-xl font-semibold text-white mb-4">AI & Data</h3>
+                <div className="space-y-2">
+                  <span className="inline-block px-3 py-1 bg-green-500/20 text-green-300 rounded-full text-sm mr-2 mb-2">TensorFlow</span>
+                  <span className="inline-block px-3 py-1 bg-green-500/20 text-green-300 rounded-full text-sm mr-2 mb-2">PyTorch</span>
+                  <span className="inline-block px-3 py-1 bg-green-500/20 text-green-300 rounded-full text-sm mr-2 mb-2">MongoDB</span>
+                  <span className="inline-block px-3 py-1 bg-green-500/20 text-green-300 rounded-full text-sm mr-2 mb-2">PostgreSQL</span>
+                </div>
+              </div>
+            </div>
+</div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 bg-slate-900/50">
+          <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Start Your Project?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Let's discuss your requirements and create a solution that drives your business forward
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/contact" className="btn-primary text-lg px-8 py-4">
+                Get Free Consultation
+              </Link>
+              <Link href="/about" className="btn-secondary text-lg px-8 py-4">
+                Learn More About Us
         {/* Pricing & Market Positioning Section */}
         <section className="py-24 sm:py-32 bg-gray-50">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -3459,157 +3038,36 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>
           </div>
         </section>
+      </div>
+    </>
+  );
+}
+        <title>Services - Zion Tech Group</title>
+        <meta name="description" content="Comprehensive technology services and solutions" />
+      </Head>
+      <div className="min-h-screen bg-gray-100 py-12">
+        <div className="container mx-auto px-4">
+          <h1 className="text-4xl font-bold text-center mb-8">Our Services</h1>
+          <p className="text-center text-gray-600">Comprehensive technology solutions for your business needs.</p>
+        </div>
+      </div>
+    </Layout>
+  );
+};
+
+export default ServicesPage;
       </main>
       <Footer />
     </>
   );
-<<<<<<< HEAD
-=======
-}
-}
-                      
-                      <p className="text-slate-300 mb-6">
-                        {category.description}
-                      </p>
-                      <ul className="text-slate-400 space-y-2 mb-8">
-                        {category.services.map((service, serviceIndex) => (
-                          <li key={serviceIndex} className="flex items-center">
-                            <span className="w-2 h-2 bg-blue-400 rounded-full mr-3 flex-shrink-0"></span>
-                      key={category.title}
-                      className={_`p-8 bg-slate-900/60 rounded-xl border border-white/10 hover:border-${category.color}-500/40 transition-all duration-300 hover:scale-105 ${_isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
-                      style={_{ transitionDelay: `${index * 200}ms` }}
-                    >
-                      <div className=&quot;flex items-center justify-between mb-6&quot;>
-                        <h3 className={`text-2xl font-bold ${colors.text}`}>
-                          {category.title}
-                        </h3>
-                        <span className={_`text-3xl font-bold ${colors.text}`}>
-                          {_category.count}
-                        </span>
-                      </div>
-                      
-                      <p className=&quot;text-slate-300 mb-6&quot;>
-                        {category.description}
-                      </p>
-                      
-                      <ul className=&quot;text-slate-400 space-y-2 mb-8&quot;>
-                        {category.services.map((service, serviceIndex) => (
-                          <li key={serviceIndex} className=&quot;flex items-center&quot;>
-                            <span className=&quot;w-2 h-2 bg-blue-400 rounded-full mr-3 flex-shrink-0&quot;></span>
 
-                            {service}
-                          </li>
-                        ))}
-                      </ul>
-<Link 
-                        href={category.href}
-                        className={`inline-flex items-center px-6 py-3 ${colors.bg} ${colors.hover} rounded-lg font-semibold transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 ${colors.ring} focus:ring-offset-2 focus:ring-offset-slate-900`}
-                      >
-                        View All {category.title}
-                        <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                        </svg>
-                      </Link>
-                    </div>
-                  )
-                })}
-              </div>
-            </div>
-          </section>
-{/* Why Choose Us */}
-          <section className="py-16 px-4 bg-slate-900/40">
-            <div className="max-w-6xl mx-auto">
-              <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-                Why Choose Zion Tech Group?
-              </h2>
-              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                    </svg>
-                  </div>
-                  <h3 className="text-xl font-bold mb-2">Lightning Fast</h3>
-                  <p className="text-slate-400">Rapid deployment and implementation of solutions</p>
-                </div>
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                  </div>
-                  <h3 className="text-xl font-bold mb-2">Enterprise Grade</h3>
-                  <p className="text-slate-400">Scalable solutions for businesses of all sizes</p>
-                </div>
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-                    </svg>
-                  </div>
-                  <h3 className="text-xl font-bold mb-2">Secure & Reliable</h3>
-                  <p className="text-slate-400">Bank-level security and 99.9% uptime guarantee</p>
-                </div>
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192L5.636 18.364M12 2.25a9.75 9.75 0 100 19.5 9.75 9.75 0 000-19.5z" />
-                    </svg>
-                  </div>
-                  <h3 className="text-xl font-bold mb-2">24/7 Support</h3>
-                  <p className="text-slate-400">Round-the-clock technical support and maintenance</p>
-                </div>
-              </div>
-            </div>
-          </section>
-{/* CTA Section */}
-          <section className="py-16 px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-3xl md:text-4xl font-bold mb-8">
-                Ready to Get Started?
-              </h2>
-              <p className="text-lg text-slate-300 mb-8">
-                Contact our experts today to discuss your project requirements and discover 
-                how our innovative solutions can transform your business.
-              </p>
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <Link 
-                  href="/contact" 
-                  className="px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors"
-                >
-                  Get a Quote
-                </Link>
-                <a 
-                  href={`tel:${contact.phone.replace(/[^\d+]/g,'')}`} 
-className="px-8 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold transition-colors"
-                >
-                  Call {contact.phone}
-                </a>
-                <a 
-                  href={`mailto:${contact.email}`} 
-                  className="px-8 py-3 bg-slate-800 hover: bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors"
-                >
-                  Email Us
-                </a>
-                >
-                  Email Us
-                </Link>
-
-              </div>
-
-
-  );
->>>>>>> origin/main
 
             </div>
           </section>
         </main>
       </ErrorBoundary>
     </>
-<<<<<<< HEAD
-=======
-}
->>>>>>> origin/main
+
 
   )
 }

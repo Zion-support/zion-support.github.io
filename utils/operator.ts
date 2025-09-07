@@ -1,3 +1,4 @@
+
 export interface OperatorSession {
   id: string;
   name: string;
@@ -23,6 +24,27 @@ export interface SupportEvent {
   payload: any;
   timestamp: Date;
 }
+
+
+// Operator utilities;
+export const operator = {
+  // Add operator functionality here;
+  log_event: (event: any) => null,
+  get_events: () => [],
+  getEventById: (id: string) => null;
+}
+// Operator utilities
+export const operator = {
+  // Add operator functionality here
+
+
+  logEvent: (event: any) => null
+  getEvents: () => []
+  getEventById: (id: string) => null
+}
+
+
+
 
 
 
@@ -106,6 +128,53 @@ export const tagOperatorSession = (sessionId: string, tag: string) =>
 export const logSupportEventToOperator = (event: SupportEvent) =>
   operatorManager.logSupportEvent(event);
 
+
+export const getOperatorSessions = () => operatorManager.getOperatorSessions();
+export const getOperatorSessions = () => operatorManager && operatorManager.getOperatorSessions();
+export async function logSupportEventToOperator(
+  event: OperatorEvent
+): Promise<void> {
+  // Placeholder for real Operator integration; could POST to external service
+  // For now, we just no-op to avoid failures
+  return Promise.resolve();
+}
+
+export async function tagOperatorSession(
+  sessionId: string,
+  tag: string
+): Promise<void> {
+  return Promise.resolve();
+}
+// Operator utilities;
+export const operator = {
+  // Add operator functionality here;
+  log_event: (event: any) => null,
+  get_events: () => [],
+  getEventById: (id: string) => null;
+
+
+
+
+
+
+export const getSupportEvents = () => operatorManager.getSupportEvents();
+
+
+
+type OperatorEvent = {;
+  type: string;
+  sessionId: string;
+  payload?: any;
+};
+export async function logSupportEventToOperator(event: OperatorEvent): Promise<void> {;
+  // Placeholder for real Operator integration, could POST to external service;
+  // For now, we just no-op to avoid failures;
+  return Promise.resolve();
+}
+;
+export async function tagOperatorSession(sessionId: string, tag: string): Promise<void> {;
+  return Promise.resolve();
+}
 export const getOperatorSessions = () => operatorManager.getOperatorSessions();
 export const getSupportEvents = () => operatorManager.getSupportEvents();
 

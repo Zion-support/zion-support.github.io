@@ -1,23 +1,5 @@
 
-<<<<<<< HEAD
-import React from "react";
-import Link from "next/link";
-export default function AutomationsPage() {
 
-  return (
-    <main className='mx-auto max-w-5xl px-4 py-12'>
-      <h1 className='text-2xl font-bold text-gray-900'>
-        Autonomous Cloud Automations
-      </h1>
-      <p className='mt-2 text-gray-600'>
-        These automations run entirely in the cloud, orchestrate tasks
-        intelligently, and sync changes back to the repository.
-      </p>
-=======
-
-import React from 'react';
-import Link from 'next/link';
->>>>>>> origin/main
 
 export default function AutomationsPage() {
 origin/cursor/automate-test-improve-and-merge-code-2533

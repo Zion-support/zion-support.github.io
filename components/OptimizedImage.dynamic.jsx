@@ -13,6 +13,8 @@ const OptimizedImage.dynamic = () => ;
     </div>
   );
 }
+;
+
 
 pr-12243
 export default OptimizedImage.dynamic;

@@ -13,74 +13,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   contactInfo: {
     mobile: string;
     email: string;
-<<<<<<< HEAD
 
-=======
-  id: string;,
-  name: string;
-  tagline: string;,
-  price: string;
-  description: string;,
-  features: string[];
-  link: string;,
-  category: string;
-  realImplementation: boolean;,
-  contactInfo: {
-    mobile: string;,
-  email: string;
-pr-12325
-export interface FuturisticAiService2029 {;
-    address: string;
-  };
-  id: string,;
-  name: string,;
-  tagline: string,;
-  price: string,;
-  description: string,;
-  features: string[],;
-  link: string,;
-  category: string,;
-  realImplementation: boolean,;
-  contactInfo: {;
-    mobile: string,;
-    email: string,;
-    address: string;
-  }
-}
-
-
-origin/cursor/expand-services-advertise-and-build-project-c28b
-      address: "364 E Main St STE 1008 Middletown DE 19709"
-    }
-  }
-];
-origin/cursor/expand-services-advertise-and-build-project-c28b
-  contactInfo: {;,
-  mobile: string,;
-    email: string,;
-  }
-      address: "364 E Main St STE 1008 Middletown DE 19709""
-];
-pr-12325
-  id: string, name: string,
-  tagline: string, price: string,
-  description: string, features: string[],
-  link: string, category: string,
-  realImplementation: boolean,
-  contactInfo: {
-export const futuristicAIServices2029: FuturisticAiService2029[] = [
-  {
-    id: "2029-futuristic-ai", name: "2029 Futuristic AI Platform",
-    tagline: "Futuristic AI for 2029", price: "$499/month",
-    description: "Futuristic AI platform that showcases the most advanced artificial intelligence capabilities for 2029.",
-    id: '2029-futuristic-ai'
-    name: '2029 Futuristic AI Platform'
-    tagline: 'Futuristic AI for 2029'
-    price: '$499/month'
-    description:
-      'Futuristic AI platform that showcases the most advanced artificial intelligence capabilities for 2029.'
-origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/main
     address: string
   }
 }
@@ -111,10 +44,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     realImplementation: true;
     contactInfo: {
       mobile: "+1 302 464 0950";
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/main
       email: "kleber@ziontechgroup.com";
 origin/cursor/automate-test-improve-and-merge-code-2533
       address: "364 E Main St STE 1008 Middletown DE 19709"

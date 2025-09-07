@@ -20,37 +20,28 @@ export function CartDrawer() {
       <Link href="/cart" aria-label="Cart" className="relative p-1" onClick={handleClick}>
         <ShoppingCart className="h-5 w-5 text-foreground hover:text-primary" />
         {count > 0 && (
-
-
-;
-
           <span className="absolute -top-1 -right-1 bg-primary text-primary-foreground text-[10px] rounded-full h-4 w-4 flex items-center justify-center">
           <span className='absolute -top-1 -right-1 bg-primary text-primary-foreground text-[10px] rounded-full h-4 w-4 flex items-center justify-center'>
 origin/cursor/automate-test-improve-and-merge-code-2533
             {count}
-
-          </span>
+          </span>;
         )}
-
       </Link>;
       <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />;
     </>;
   );
 }
-
   );
 }
-
-      <Link;
+      <Link ;
         href='/cart';
         aria - label='Cart';
         className='relative p - 1';
-        on_click={handle_click}
-      >;
+        on_click={handle_click} />;
         <ShoppingCart className='h - 5 w - 5 text - foreground hover:text - primary' />;
         {count > 0 && (
-          <span className='absolute -top - 1 -right - 1 bg - primary text - primary - foreground text-[10px] rounded - full h - 4 w - 4 flex items - center justify - center'>            {count}
-          <span className="absolute -top - 1 -right - 1 bg - primary text - primary - foreground text-[10px] rounded - full h - 4 w - 4 flex items - center justify - center">;
+          <span className='absolute -top - 1 -right - 1 bg - primary text - primary - foreground text-[10px] rounded - full h - 4 w - 4 flex items - center justify - center'>            {count}',
+          <span className="absolute -top - 1 -right - 1 bg - primary text - primary - foreground text-[10px] rounded - full h - 4 w - 4 flex items - center justify - center">;,
           <span className="absolute -top - 1 -right - 1 bg - primary text - primary - foreground text-[10px] rounded - full h - 4 w - 4 flex items - center justify - center">;
             {count}
           </span>)}
@@ -58,6 +49,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <LoginModal is_open={login_open} onOpenChange={setLoginOpen} />;
     </>);
 }
+;
 ;
       </Link>
       <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />

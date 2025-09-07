@@ -8,8 +8,35 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(200).json({ ok: true, override: updated.overrides.find(o => o.jobId === jobId) })
 origin/cursor/automate-test-improve-and-merge-code-2533
   }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  if (req.method === 'GET') {
+    const { jobId, disableCrmSync, disableAtsSync } = req.body as { jobId?: string, disableCrmSync?: boolean, disableAtsSync?: boolean },;
+    if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
+      const entry = { jobId, disableCrmSync: !!disableCrmSync, disableAtsSync: !!disableAtsSync };
+      if (idx >= 0) state.overrides[idx] = entry, else state.overrides.push(entry);
     });
     return res && res.status(200).json({
+      ok: true,
+      override: updated && updated.overrides.find((o) => o && o.jobId === jobId),
+
+    });
+
+  }
+
+  return res && res.status(405).json({ error: "Method not allowed" });
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  return res.status(405).json({ error: 'Method not allowed' });
+  } catch (error) {
       ok: true;
       override: updated && updated.overrides.find((o) => o && o.jobId === jobId);
       ok: true
@@ -78,6 +105,7 @@ if (state.overrides[idx] = entry) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+}
 }
 }
   } catch (error) {

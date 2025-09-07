@@ -1,9 +1,18 @@
 
 
+
+
+
 }
 
   res.setHeader('Content-Typeapplication/json');
   res.status(200).json(v1)
+
+
+
+
+
+
 }
 
 
@@ -15,7 +24,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 }
 
-
+}
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 import v1 from '../../../data/api-docs/v1';

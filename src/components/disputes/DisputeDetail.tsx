@@ -174,11 +174,10 @@ export function DisputeDetail() {;
     if (!disputeId) return,;
     const success = await updateDisputeStatus(disputeId, status),;
 }
-
     const success = await resolve_dispute (dispute_id, {
       summary: resolution.summary,
       resolution_type:;
-        (resolution.resolution_type as ResolutionType) || 'compromise',
+        (resolution.resolution_type as,  ResolutionType) || 'compromise','
     });
     // Check condition
 if ( {) {
@@ -190,18 +189,15 @@ if ( {) {
         resolution_type: resolution.resolution_type,
         resolved_at: new Date ().toISOString (),
       });
-
     } else {
       toast.error ('Failed to resolve dispute');
     }
   }
   const handleSendMessage = async () => {
-
     if () return) {
   $2
 }
     setIsSending (true);
-
     try {
       const success = await addDisputeMessage (dispute_id, message, is_admin);
       // Check condition
@@ -229,7 +225,6 @@ if ( {) {
         <p > Loading dispute details...</p>;
       </div>);
   }
-
 import {logErrorToProduction} from '@/utils/productionLogger';
 import {;
   Dispute,;
@@ -238,7 +233,6 @@ import {;
   DisputeStatus,;
   ResolutionType,;
 } from '@/types/disputes';
-
 import { Button } from '@/components/ui/button';
 import { Textarea } from '@/components/ui/textarea';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
@@ -258,7 +252,6 @@ import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import { ArrowDown, Check, MessageSquare, Download } from 'lucide-react';
 import { useAuth } from '@/hooks/useAuth';
 import { toast } from 'sonner';
-
 
                           }}
                         >
@@ -280,10 +273,7 @@ import { toast } from 'sonner';
                   </CardContent>;
                 </Card>;
 
-
         <div className="space-y-6">
-
-
           <Card>
             <CardHeader>
               <CardTitle>Parties Involved</CardTitle>
@@ -347,50 +337,46 @@ import { toast } from 'sonner';
                   </p>
                 </div>
               </div>
-
-
+              <div className="flex justify-center">
+                <ArrowDown className="h-6 w-6 text-muted-foreground" />
+              </div>
+              <div className="flex items-start gap-4">
+                <Avatar className="h-10 w-10">
+                  <AvatarImage src={dispute.talent_profile?.avatar_url} alt={dispute.talent_profile?.display_name || "Talent avatar"} />
+                  <AvatarFallback>T</AvatarFallback>
+                </Avatar>
+                <div>
+                  <p className="font-medium">Talent</p>
+                  <p className="text-sm text-muted-foreground">
+                    {dispute.talent_profile?.display_name || "Unknown Talent"}
                   </p>
                 </div>
               </div>
             </CardContent>
           </Card>
 
-
-
-
           <Card>
             <CardHeader>
               <CardTitle>Case Information</CardTitle>
             </CardHeader>
-            <CardContent className='space-y-4 text-sm'>
-              <div className='flex justify-between'>
-                <span className='font-medium'>Case ID:</span>
-                <span className='font-mono'>{dispute.id}</span>
+            <CardContent className="space-y-4 text-sm">
+              <div className="flex justify-between">
+                <span className="font-medium">Case ID:</span>
+                <span className="font-mono">{dispute.id}</span>
               </div>
-              <div className='flex justify-between'>
-                <span className='font-medium'>Created:</span>
-                <span>
-                  {format(new Date(dispute.created_at), 'MMM d, yyyy')}
-                </span>
+              <div className="flex justify-between">
+                <span className="font-medium">Created:</span>
+                <span>{format(new Date(dispute.created_at), "MMM d, yyyy")}</span>
               </div>
-              <div className='flex justify-between'>
-                <span className='font-medium'>Status:</span>
+              <div className="flex justify-between">
+                <span className="font-medium">Status:</span>
                 <Badge variant={getStatusBadgeVariant(dispute.status)}>
-                  {dispute.status.replace('_', ' ')}
+                  {dispute.status.replace('_ ')}
                 </Badge>
               </div>
-              <div className='flex justify-between'>
-                <span className='font-medium'>Raised by:</span>
-                <span>
-                  {dispute.client_profile &&
-                  dispute.talent_profile &&
-                  dispute.raised_by === (dispute.client_profile as any).id
-                    ? 'Client'
-                    : dispute.talent_profile &&
-                        dispute.raised_by === (dispute.talent_profile as any).id
-                      ? 'Talent'
-                      : 'Unknown'}
-                </span>
+              <div className="flex justify-between">
+                <span className="font-medium">Raised by:</span>
+                <span>{dispute.client_profile && dispute.talent_profile && dispute.raised_by === (dispute.client_profile as any).id ? "Client" : dispute.talent_profile && dispute.raised_by === (dispute.talent_profile as any).id ? "Talent" : "Unknown"}</span>
               </div>
             </CardContent>
           </Card>
@@ -619,11 +605,6 @@ container mx-auto p-4 space-y-6" > <div className="flex flex-wrap items-center j
     </div>);
 
 }
-
-}, [dispute_id, getDisputeById, getDisputeMessages, router]);
-}
-const handleResolveDispute = async () => {
-
 ;
 
 ;

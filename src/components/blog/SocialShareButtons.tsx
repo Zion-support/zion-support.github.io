@@ -4,14 +4,13 @@ export function SocialShareButtons({ title }: SocialShareButtonsProps) {
   const shareToTwitter = () => {
 const shareToTwitter = () => {
     window.open(
-      `https://twitter.com/intent/tweet?url=${shareUrl}&text=${shareText}`
-      '_blank'
+      `https://twitter.com/intent/tweet?url=${shareUrl}&text=${shareText}``
+      '_blank''
     )
-
 import React from 'react';
 
 interface SocialShareButtonsProps {
-  title: string;
+  title: string;,
 export /**
  * SocialShareButtons - Function description
 const shareToTwitter = () => {
@@ -32,6 +31,7 @@ export function SocialShareButtons({ title }: SocialShareButtonsProps) {;
   const shareText = encodeURIComponent(title),;
   const shareToTwitter = () => {;
     window.open(;
+      `https://twitter.com/intent/tweet?url=${shareUrl}&text=${shareText}`,;`
       `https://twitter.com/intent/tweet?url=${shareUrl}&text=${shareText}`,;
       '_blank';
     );
@@ -48,6 +48,7 @@ export function SocialShareButtons({ title }: SocialShareButtonsProps) {;
       .writeText(window.location.href);
       .then(() => toast.success('Link copied to clipboard'));
       .catch(() => toast.error('Failed to copy link'));
+  },;,
   },;
   const buttons = [;
     { icon: <Twitter className="h-4 w-4" />, label: 'Twitter', onClick: shareToTwitter },;
@@ -65,6 +66,8 @@ export function SocialShareButtons({ title }: SocialShareButtonsProps) {;
     </div>;
   );
 }
+;))
+;
 ;
     </div>
   );

@@ -4,25 +4,28 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
 import React, { useState } from 'react';
 
+      'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.',
+    language: 'en',;
+
+  });  const [loading, setLoading] = useState(false);
+  const [result, setResult] = useState<any>(null);
+  const [translated, setTranslated] = useState<string>('');
+  const onChange = (
 
       'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.',
     language: 'en',;
@@ -37,10 +40,7 @@ export default function UNBridge() {
     regionalScope: 'Global South';
     budgetOrResolution: 'USD 3M over 24 months';
     supportingMultiverses: 'Digital Labor, AI Ethics',
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/main
     promptAssist: 'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.',
     language: 'en'});
   const [loading, setLoading] = useState(false);
@@ -50,147 +50,7 @@ export default function UNBridge() {
   const onChange = null;
       setResult((r: any) => ({ ...r, meta: data.meta }))
     } finally { setLoading(false) }
-<<<<<<< HEAD
 
-  }
-=======
-    title: 'Zion DAO x Digital Labor Initiative'
-    targetInstitution: 'UN Development Programme'
-    type: 'Workforce Dev'
-    regionalScope: 'Global South'
-    budgetOrResolution: 'USD 3M over 24 months'
-    supportingMultiverses: 'Digital Labor, AI Ethics'
-    promptAssist:
-      'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.'
-    language: 'en'
-origin/cursor/automate-test-improve-and-merge-code-2533
-  });  const [loading, setLoading] = useState(false);
-  const [result, setResult] = useState<any>(null);
-  const [translated, setTranslated] = useState<string>('');
-
-const onChange = (
-    e: React.ChangeEvent<
-      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
-    >
-  ) => {
-    const { name, value } = e.target;
-    setForm(f => ({ ...f, [name]: value }));
-  };
-
-  async function generate() {
-    setLoading(true);
-    try {
-      const res = await fetch('/api/proposals/generate', {
-        method: 'POST'
-        headers: { 'Content-Type': 'application/json' }
-        body: JSON.stringify({
-export default function UNBridge(req, res) {
-  try {
-          ...form;
-          supportingMultiverses: form.supportingMultiverses.split().map((s) => s.trim()).filter(Boolean)})}),
-...form,
-          supportingMultiverses: form.supportingMultiverses
-            .split(',')
-            .map(s => s.trim())
-            .filter(Boolean)
-        })
-      });
-origin/cursor/automate-test-improve-and-merge-code-2533
-      const data = await res.json();
-
-  const [form, setForm] = useState({;
-    title: 'Zion DAO x Digital Labor Initiative',;
-    targetInstitution: 'UN Development Programme',;
-    type: 'Workforce Dev',;
-    regionalScope: 'Global South',;
-    budgetOrResolution: 'USD 3M over 24 months',;
-    supportingMultiverses: 'Digital Labor, AI Ethics',;
-      });
-      const data = await res && res.json();
-      setResult(data);
-    } finally {;
-      setLoading(false);
-    }  }
-
-
-    try {;
-      const res = await fetch('/api/proposals/translate', {;
-        method: 'POST',;
-        headers: { 'Content-Type': 'application/json' },;
-        body: JSON && JSON.stringify({ markdown: result && result.markdown, targetLanguage }),;
-    }
-  }
-
-  async function translate(targetLanguage: string) {
-    if (!result?.markdown) return;
-    setLoading(true)
-    try {
-      const res = await fetch('/api/proposals/translate', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-body: JSON.stringify({ markdown: result.markdown, targetLanguage }),
-origin/cursor/automate-test-improve-and-merge-code-2533
-      });
-      const data = await res && res.json();
-      setTranslated(data && data.translated);
-    } finally {;
-      setLoading(false);
-    }  }
-
-
-    }
-  }
-
-  async function exportArtifacts() {
-    if (!result?.meta?.id) return;
-    setLoading(true);
-    try {
-      await fetch('/api/proposals/export', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-body: JSON.stringify({ id: result.meta.id }),
-origin/cursor/automate-test-improve-and-merge-code-2533
-      });
-      // Refresh meta;
-      const list = await fetch('/api/proposals/list');
-
-      const { proposals } = await list && list.json();
-      const updated = proposals && proposals.find((p: any) => p && p.id === result && result.meta.id),;
-
-      setResult((r: any) => ({ ...r, meta: updated }));
-    } finally {;
-      setLoading(false);
-    }  }
-
-
-
-  async function submit(): any (channels: string[]) {;
-    if (!result?.meta?.id) return;
-    setLoading(true),;
-    try {;
-      const res = await fetch('/api/proposals/submit', {;
-        method: 'POST',;
-        headers: { 'Content-Type': 'application/json' },;
-        body: JSON && JSON.stringify({ id: result && result.meta.id, channels }),;
-    }
-  }
-
-  async function submit(channels: string[]) {
-    if (!result?.meta?.id) return;
-    setLoading(true)
-    try {
-      const res = await fetch('/api/proposals/submit', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-body: JSON.stringify({ id: result.meta.id, channels }),
-origin/cursor/automate-test-improve-and-merge-code-2533
-      });
-      const data = await res && res.json();
-      setResult((r: any) => ({ ...r, meta: data && data.meta }));
-    } finally {;
-      setLoading(false);
-    }
->>>>>>> origin/main
 
 origin/cursor/automate-test-improve-and-merge-code-2533
   }
@@ -378,6 +238,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <div className="space-y-3">
           <label className="block">
             <span className="text-sm">Title</span>
+<input name="title" value={form.title} onChange={onChange} className="w-full border rounded p-2" />
             <input name="title" value={form.title} onChange={onChange} className="w-full border rounded p-2" />
           </label>
           <label className="block">
@@ -387,6 +248,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <label className="block">
             <span className="text-sm">Type</span>
             <select name="type" value={form.type} onChange={onChange} className="w-full border rounded p-2">
+
             >
 origin/cursor/automate-test-improve-and-merge-code-2533
               <option>Workforce Dev</option>
@@ -395,6 +257,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <option>Education</option>
             </select>
           </label>
+<label className="block">
+          <label className="block">
+            <span className="text-sm">Regional scope</span>
+            <input name="regionalScope" value={form.regionalScope} onChange={onChange} className="w-full border rounded p-2" />
           <label className="block">
             <span className="text-sm">Regional scope</span>
             <input name="regionalScope" value={form.regionalScope} onChange={onChange} className="w-full border rounded p-2" />
@@ -421,6 +287,70 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <textarea name="promptAssist" rows={5} value={form.promptAssist} onChange={onChange} className="w-full border rounded p-2" />
           </label>
           <div className="flex gap-3">
+            <button onClick={generate} disabled={loading} className="px-4 py-2 bg-black text-white rounded">{loading ? 'Working…' : 'Generate Proposal'}</button>
+          </div>
+        </div>
+
+        <div className="space-y-3">
+          <div className="text-sm opacity-70">Output</div>
+          <div className="border rounded p-3 h-96 overflow-auto whitespace-pre-wrap bg-gray-50">
+            {result?.markdown || 'No draft yet'}
+        <div className='space-y-3'>
+          <div className='text-sm opacity-70'>Output</div>
+          <div className='border rounded p-3 h-96 overflow-auto whitespace-pre-wrap bg-gray-50'>
+            {result?.markdown |'No draft yet'}
+          </div>
+          <div className='flex items-center gap-2'>
+            <button
+              onClick={() => translate('fr')}
+              disabled={loading |!result}
+              className='px-3 py-2 border rounded'
+            >
+              Translate FR
+            </button>
+            <button
+              onClick={() => translate('es')}
+              disabled={loading |!result}
+              className='px-3 py-2 border rounded'
+            >
+              Translate ES
+            </button>
+            <button
+              onClick={() => translate('ar')}
+              disabled={loading |!result}
+              className='px-3 py-2 border rounded'
+            >
+              Translate AR
+            </button>
+          </div>
+          {translated && (
+            <div className='border rounded p-3 h-60 overflow-auto whitespace-pre-wrap bg-gray-50'>
+              {translated}
+            </div>
+          )}
+          <div className='flex items-center gap-2'>
+            <button
+              onClick={exportArtifacts}
+              disabled={loading |!result}
+              className='px-3 py-2 border rounded'
+            >
+              Export PDF + Sign + IPFS
+            </button>
+            <button
+              onClick={() => submit(['email'])}
+              disabled={loading |!result}
+              className='px-3 py-2 border rounded'
+            >
+              Submit (Email)
+            </button>
+        <div className="space-y-3">
+          <div className="text-sm opacity-70">Output</div>
+          <div className="border rounded p-3 h-96 overflow-auto whitespace-pre-wrap bg-gray-50">
+            {result?.markdown || 'No draft yet'  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
           </div>
           <div className="flex items-center gap-2">
             <button onClick={() => translate('fr')} disabled={loading || !result} className="px-3 py-2 border rounded">Translate FR</button>
@@ -442,10 +372,129 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
           </div>
           <div className="flex items-center gap-2">
+
           </div>
           {result?.meta && (
             <div className="text-sm space-y-1">
               <div><span className="font-medium">Status:</span> {result.meta.status}</div>
+              {result.meta.artifacts?.markdownPath && (
+                <div><a className="text-blue-600 underline" href={result.meta.artifacts.markdownPath} target="_blank" rel="noreferrer">Markdown</a></div>
+              )}
+              {result.meta.artifacts?.pdfPath && (
+
+export default /**
+ * UNBridge - Function description
+ */
+function UNBridge() {
+  const [form, set_form] = useState ({
+    title: 'Zion DAO x Digital Labor Initiative',
+    target_institution: 'UN Development Programme',
+    type: 'Workforce Dev',
+    regional_scope: 'Global South',
+    budgetOrResolution: 'USD 3M over 24 months',
+    supporting_multiverses: 'Digital Labor, AI Ethics',
+    prompt_assist:;
+      'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO - based governance logic.',
+    language: 'en',
+  });  const [loading, set_loading] = useState (false);
+  const [result, set_result] = useState < any>(null);
+  const [translated, set_translated] = useState < string>('');
+;
+  const on_change = (
+    e: React.ChangeEvent<;
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement;
+    >) =>: any {
+    const { name, value } = e.target;
+    set_form (function => ({ ...f, [name]: value }));  }
+;
+  async /**
+ * generate - Function description
+ */
+function generate() {
+    set_loading (true);
+    try {
+      const res = await fetch ('/api / proposals / generate', {
+        method: 'POST',
+        headers: { 'Content - Type': 'application / json' },
+        body: JSON.stringify ({
+          ...form,
+          supporting_multiverses: form.supporting_multiverses;
+            .split (', ');
+            .map (string => s.trim ());
+            .filter (Boolean),
+        }),
+      });
+      const data = await res.json ();
+      set_result (data);
+    } finally {
+      set_loading (false);
+    }  }
+  async /**
+ * translate - Function description
+ */
+function translate() {
+    // Check condition
+if (return) {
+  $2
+}
+    set_loading (true),
+    try {
+      const res = await fetch ('/api / proposals / translate', {
+        method: 'POST',
+        headers: { 'Content - Type': 'application / json' },
+        body: JSON.stringify ({ markdown: result.markdown, target_language }),
+      });
+      const data = await res.json ();
+      set_translated (data.translated);
+    } finally {
+      set_loading (false);
+    }  }
+  async /**
+ * export_artifacts - Function description
+ */
+function export_artifacts() {
+    // Check condition
+if (return) {
+  $2
+}
+    set_loading (true);
+    try {
+      await fetch ('/api / proposals / export', {
+        method: 'POST',
+        headers: { 'Content - Type': 'application / json' },
+        body: JSON.stringify ({ id: result.meta.id }),
+      });
+      // Refresh meta;
+      const list = await fetch ('/api / proposals / list');
+      const { proposals } = await list.json ();
+      const updated = proposals.find ((p: any) => p.id === result.meta.id),
+      set_result ((r: any) => ({ ...r, meta: updated }));
+    } finally {
+      set_loading (false);
+    }  }
+  async /**
+ * submit - Function description
+ */
+function submit() {
+    // Check condition
+if (return) {
+  $2
+}
+    set_loading (true),
+    try {
+      const res = await fetch ('/api / proposals / submit', {
+        method: 'POST',
+        headers: { 'Content - Type': 'application / json' },
+        body: JSON.stringify ({ id: result.meta.id, channels }),
+      });
+      const data = await res.json ();
+      set_result ((r: any) => ({ ...r, meta: data.meta }));
+    } finally {
+      set_loading (false);
+    }
+
+}
+
                 <div><a className="text-blue-600 underline" href={result.meta.artifacts.pdfPath} target="_blank" rel="noreferrer">PDF</Link></div>
               )  } catch (error) {
     console.error("Error:", error);
@@ -622,6 +671,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>)}
         </div>;
       </div>;
+
+    </div>;
+  );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
               </div>
               {result.meta.artifacts?.markdownPath && (
                 <div>

@@ -1,12 +1,4 @@
-<<<<<<< HEAD
 
-import React from 'react';
-import ServiceLanding from '../components/sections/ServiceLanding';
-
-export default function AIAutonomousResearchAssistant() {
-	return (
-		<ServiceLanding
-=======
 			implementationWeeks="Implementation: 1–2 weeks"
 			roiNote="Average ROI 3–6x within 60 days"
 			features={[
@@ -17,7 +9,7 @@ export default function AIAutonomousResearchAssistant() {
 				"Export to Slides/Docs/Notion"
 
 import React from 'react';
->>>>>>> origin/main
+
 			title;
 origin/cursor/automate-test-improve-and-merge-code-2533
 				"Compliance-friendly data handling, audit logs"
@@ -30,6 +22,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
 			implementationWeeks="Implementation: 1–2 weeks"
 			roiNote="Average ROI 3–6x within 60 days"
 			features={[
@@ -39,6 +32,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 				"RFP/RFI opportunity discovery and alerts",
 				"Export to Slides/Docs/Notion",
 				"Compliance-friendly data handling, audit logs"
+
+]}
+			industries={["Consulting", "Healthcare", "Finance", "Public Sector"]}
+			canonical="https: //ziontechgroup.com/ai-autonomous-research-assistant"
+		/>
+	)
+};
 			]  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });

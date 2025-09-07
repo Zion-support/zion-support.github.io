@@ -1,12 +1,4 @@
-<<<<<<< HEAD
 
-import React from 'react';
-import ServiceLanding from '../components/sections/ServiceLanding';
-
-export default function AIConsciousnessEvolution2025() {
-	return (
-		<ServiceLanding
-=======
 			implementationWeeks="Implementation: 6–12 weeks"
 			roiNote="Strategic R&D with demonstrable prototypes and IP"
 			features={[
@@ -17,7 +9,7 @@ export default function AIConsciousnessEvolution2025() {
 				"Multi-modal context fusion (text, voice, UI)"
 
 import React from 'react';
->>>>>>> origin/main
+
 			title;
 origin/cursor/automate-test-improve-and-merge-code-2533
 				"Partnered research roadmap and governance"
@@ -30,6 +22,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
 			implementationWeeks="Implementation: 6–12 weeks"
 			roiNote="Strategic R&D with demonstrable prototypes and IP"
 			features={[
@@ -39,6 +32,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 				"Evaluation harness for subjective tasks",
 				"Multi-modal context fusion (text, voice, UI)",
 				"Partnered research roadmap and governance"
+
+]}
+			industries={["R&D", "Healthcare", "Education", "Assistive Tech"]}
+			canonical="https: //ziontechgroup.com/ai-consciousness-evolution-2025"
+		/>
+	)
+};
 			]  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });

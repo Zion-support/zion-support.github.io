@@ -1,3 +1,5 @@
+baseURL: process && process.env.PLAYWRIGHT_BASE_URL || http://localhost:3000',    trace: on-first-retry'};
+
 
 ;
     baseURL: process && process.env.PLAYWRIGHT_BASE_URL || http://localhost:3000',    trace: on-first-retry,
@@ -146,56 +148,8 @@ pr-12243
         browserName: webkit',        ...devices['iPhone 12']}
     }
   ];
+reporter: [
+    ['list'],    ['html', { outputFolder: playwright-logs/html-report', open: never' }]]
   reporter: [
     ['list'],    ['html', { outputFolder: playwright-logs/html-report', open: never' }]]
-<<<<<<< HEAD
 
-});
-
-=======
-   ,
-}
-    {}
-      name: Mobile Safari',      use: {}
-        browserName: webkit',        ...devices['iPhone 12']}
-    }
-  ];
-
-});
-  reporter: [;
-    ['list'],    ['html', { output_folder: playwright - logs / html - report', open: never',}
-}]];
-});
-;
-
-});
-});
-projects: [ {
-  name: Desktop Chrome', use: {
-  browserName: chromium', channel: window.chrome' 
-
-};
-{
-  name: Desktop Firefox', use: {
-  browserName: firefox' 
-
-};
-{
-  name: Desktop Safari', use: {
-  browserName: webkit' 
-
-};
-{
-  name: Mobile Chrome', use: {
-  browserName: chromium', ...devices['Pixel 5'] 
-
-};
-{
-  name: Mobile Safari', use: {
-  browserName: webkit', ...devices['iPhone 12'] 
-
-}];
-reporter: [
-origin/cursor/automate-test-improve-and-merge-code-2533
-pr-12243
->>>>>>> origin/main

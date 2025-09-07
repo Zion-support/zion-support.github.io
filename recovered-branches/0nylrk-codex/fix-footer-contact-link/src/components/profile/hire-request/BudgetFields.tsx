@@ -1,27 +1,4 @@
-<<<<<<< HEAD
 
-
-import React from "react",
-import { UseFormReturn } from "react-hook-form",
-import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",
-import { Input } from "@/components/ui/input",
-import { TalentProfile } from "@/types/talent";
-import { FormValues } from "./useHireRequestForm";
-
-=======
-import React from "react";
-import { UseFormReturn } from "react-hook-form";
-import {
-  FormField
-  FormItem
-  FormLabel
-  FormControl
-  FormMessage
-} from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-import { TalentProfile } from "@/types/talent";
-import { FormValues } from "./useHireRequestForm";
->>>>>>> origin/main
 interface BudgetFieldsProps {
   form: UseFormReturn<FormValues>;
   talent?: TalentProfile;
@@ -168,6 +145,11 @@ export function BudgetFields(): any ({ form, talent }: BudgetFieldsProps) {;
 }
 
 export function BudgetFields(): any ({ form, talent }: BudgetFieldsProps) {;
+  form: UseFormReturn<FormValues>;
+  talent?: TalentProfile;
+}
+
+export function BudgetFields(): any ({ form, talent }: BudgetFieldsProps) {;
   return (
     <>
       <FormField
@@ -239,14 +221,12 @@ interface BudgetFieldsProps {
               </div>
             <FormMessage className="text-red-400" />"
 
-          
         control={form.control}"
         name="budget_min";"
 
             <FormLabel className="text-white">Budget (Max)"
 
 
-          
     </>
   );
 ;
@@ -257,7 +237,6 @@ interface BudgetFieldsProps {
 
 
 
-          
         control={form.control}
   )
 pr-12325

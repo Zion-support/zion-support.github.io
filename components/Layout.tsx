@@ -1,6 +1,14 @@
 
-<<<<<<< HEAD
-=======
+import React from 'react';
+import Head from 'next/head';
+
+interface LayoutProps {
+  children: React.ReactNode;
+  title?: string;
+  description?: string;
+}
+
+export default function Layout({ children, title = "Zion Tech Group", description = "Leading technology solutions provider" }: LayoutProps) {
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -174,6 +182,9 @@ const Layout: React.FC<LayoutProps> = ({ children ;}) => {
   );
 };
 export default Layout;
+
+
+
 pr-12243
 import React, { useState } from 'react';
 import Head from 'next/head';
@@ -197,7 +208,6 @@ import {
 } from 'lucide-react';
 
 interface LayoutProps {
->>>>>>> cursor/automate-test-improve-and-merge-code-5b47
 import React, { ReactNode } from 'react';
 
 interface LayoutProps {
@@ -227,8 +237,17 @@ export default function Layout({
       <Head>
         <title>{title}</title>
         <meta name="description" content={description} />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <div className="min-h-screen bg-gray-50">
+        {children}
+      </div>
+    </>
+  );
+}
         <meta name="keywords" content={keywords} />
-<<<<<<< HEAD
+        <meta name="keywords" content={keywords} />
 
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
@@ -247,21 +266,19 @@ export default function Layout({
         <meta name="twitter:image" content={ogImage} />
         
         <link rel="canonical" href={ogUrl || "https://ziontechgroup.com"} />
-=======
         <meta property="og: title" content={ogTitle || title;} />
         <meta property="og: description" content={ogDescription || description;} />
         <meta property="og: image" content={ogImage;} />
         {ogUrl && <meta property="og: url" content={ogUrl;} />}
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
->>>>>>> cursor/automate-test-improve-and-merge-code-5b47
       </Head>
       {children}
     </>
   );
-<<<<<<< HEAD
+}
+import React, { ReactNode } from 'react';
 
-=======
 }
 
 interface LayoutProps {
@@ -283,9 +300,13 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 };
 
 export default Layout;
+
+
+
+
+
 main
 main
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 pr-12243
 }
->>>>>>> cursor/automate-test-improve-and-merge-code-5b47

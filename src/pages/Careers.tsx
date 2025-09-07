@@ -2,8 +2,20 @@
   return (
     <>
       <SEO
-        title='Careers at Zion - Join Our Team'
+        title="Careers at Zion - Join Our Team"
         description="Join the team building the future of AI and technology. Explore career opportunities at Zion's innovative marketplace platform."
+        keywords="Zion careers, AI jobs, tech careers, remote work, startup jobs"
+        canonical="https://app.ziontechgroup.com/careers"
+      />
+      <main className="min-h-screen bg-zion-blue pt-24 pb-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <GradientHeading>Join Our Team</GradientHeading>
+            <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">
+              Help us build the future of AI and technology
+            </p>
+          </div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24">
 
 
             <div>
@@ -14,6 +26,19 @@
             </div>
             <div className="rounded-lg overflow-hidden relative w-full h-full">
               <img
+                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&h=600&q=80"
+                alt="Team collaboration"
+                className="object-cover"
+              />
+            </div>
+          </div>
+          <div className="mb-24">
+            <h2 className="text-3xl font-bold text-white mb-12 text-center">Our Benefits</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="bg-zion-blue-dark p-8 rounded-lg border border-zion-blue-light">
+                  <div className="bg-zion-blue inline-flex p-4 rounded-full mb-4">
+                    {benefit.icon}
                 <div
                   key={index}
                   className='bg-zion-blue-dark p-8 rounded-lg border border-zion-blue-light'>;
@@ -30,6 +55,8 @@
                   <p className="text-zion-slate-light">{benefit.description}</p>
                 </div>
               ))}
+            </div>
+          </div>
                 <TabsTrigger
                   value='engineering'
                   className='data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple'>;
@@ -103,30 +130,16 @@ export default function Careers() {;
   // Benefits list;
   const benefits = [;
                           >;
-                            <Link href={`/careers/${job.id}`}>;
-                              View Details;
-                            </Link>;
+                            <Link href={`/careers/${job.id}`}>View Details</Link>;
                           </Button>;
                         </div>;
                       </CardContent>;
+                    </Card>;
 
 
                   ))}
                 </TabsContent>
               ))}
-
-            </Tabs>;
-          </div>;
-
-          <div className='bg-gradient-to-r from-zion-blue-dark to-zion-blue-light border border-zion-purple/30 rounded-xl p-8 md:p-12 text-center'>;
-            <h2 className='text-3xl font-bold text-white mb-6'>;
-              Don't see the right position?;
-            </h2>;
-            <p className='text-zion-slate-light text-lg mb-8 max-w-2xl mx-auto'>;
-              We're always looking for talented individuals who are passionate;
-              about AI and technology. Send us your resume and let's start a;
-              conversation. You can also apply directly by emailing us at;
-
 
           <div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue-light border border-zion-purple/30 rounded-xl p-8 md:p-12 text-center">
             <h2 className="text-3xl font-bold text-white mb-6">Don't see the right position?</h2>
@@ -155,6 +168,8 @@ export default function Careers() {;
       </main>
     </>
   )
+}
+;
 }
 
 export default Careers

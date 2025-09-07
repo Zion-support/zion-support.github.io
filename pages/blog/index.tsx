@@ -1,13 +1,4 @@
-<<<<<<< HEAD
 
-import React from 'react',
-import Head from 'next/head',
-import Link from 'next/link',
-import UltraFuturisticBackground from '../../components/ui/UltraFuturisticBackground';
-import Card from '../../components/ui/Card';
-const posts = null;
-
-=======
 
   {
     slug: 'ai-automation-trends-2025',
@@ -83,7 +74,7 @@ export default function BlogIndexPage() {
                 Read →
               </Link>
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/main
+
 export default function BlogIndexPage() {
   return (
     <UltraFuturisticBackground  intensity="medium">
@@ -104,6 +95,25 @@ export default function BlogIndexPage() {
             <div key={p.slug} className="p-6 bg-black/40 border border-gray-700/50 hover:border-cyan-500/40 transition-colors p-6 bg-black/40 border border-gray-700/50 rounded-lg backdrop-blur-sm">
               <h2 className="text-white text-xl font-semibold mb-2">{p.title}</h2>
               <p className="text-gray-400 mb-4">{p.excerpt}</p>
+              <Link href={`/blog/${p.slug}`} className="text-cyan-400 hover:text-white font-medium">Read →</Link>
+            </div>
+
+}
+
+}
+          ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+</div>
+          ))}
+        </div>
+      </div>
+    </UltraFuturisticBackground>
+  )
+}
           ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });

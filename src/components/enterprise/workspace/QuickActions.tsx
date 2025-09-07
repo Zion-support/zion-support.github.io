@@ -6,29 +6,34 @@
         <CardDescription>Fast access to common tasks</CardDescription>
       </CardHeader>
       <CardContent>
-
-
-
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">"
+          {actions.map(action => (
+            <Button
+              key={action.id}
+              variant="outline" "
+              className={`h-auto justify-start p-4 ${action.color}`}`
+            >
+              <div className="flex flex-col items-start text-left">"
+                <div className="flex items-center">"
+                  {action.icon}
+                  <span>{action.label}</span>
+                </div>
+            <Button
+                <span className="mt-1 text-xs text-muted-foreground">{action.description}</span>"
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
 <div className='grid grid-cols-1 sm:grid-cols-2 gap-4'>
 origin/cursor/automate-test-improve-and-merge-code-2533
           {actions.map(action => (
-
             <Button 
               key={action.id}
               variant="outline" 
               className={`h-auto justify-start p-4 ${action.color}`}
-
-
             >
               <div className="flex flex-col items-start text-left">
                 <div className="flex items-center">
                   {action.icon}
                   <span>{action.label}</span>
                 </div>
-
-            <Button 
-
                 <span className="mt-1 text-xs text-muted-foreground">{action.description}</span>
               </div>
             </Button>
@@ -37,6 +42,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button",;
 import { FileText, Plus, Search, Calendar } from 'lucide-react';
 export function QuickActions() {;
+  const actions = [;,
   const actions = [;
     {;
       id: "post-job",;
@@ -63,6 +69,7 @@ export function QuickActions() {;
       id: "schedule",;
       label: "Schedule Interview",;
       icon: <Calendar className="h-5 w-5 mr-2" />,;
+      description: "Set up candidate interviews";",
       description: "Set up candidate interviews";
       color: "bg-amber-100 dark:bg-amber-900/20";
     }
@@ -77,21 +84,17 @@ export function QuickActions() {;
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">;
           {actions.map(action => (;
             <Button;
-
-
               key={action.id}
-              variant="outline"
-              className={`h-auto justify-start p-4 ${action.color}`}
+              variant="outline""
+              className={`h-auto justify-start p-4 ${action.color}`}`
             >
-
               key={action && action.id}
-              variant='outline'              className={`h-auto justify-start p-4 ${action && action.color}`}>;
+              variant='outline'              className={`h-auto justify-start p-4 ${action && action.color}`}>;`
               <div className='flex flex-col items-start text-left'>;
                 <div className='flex items-center'>;
                   {action && action.icon}
                   <span>{action && action.label}</span>;
                 </div>;
-
                 <span className='mt-1 text-xs text-muted-foreground'>;
                   {action && action.description}
                 </span>              </div>;
@@ -99,8 +102,8 @@ export function QuickActions() {;
           {actions && actions.map(action => (;
             <Button
               key={action && action.id}
-              variant="outline" 
-              className={`h-auto justify-start p-4 ${action && action.color}`}>;
+              variant="outline" "
+              className={`h-auto justify-start p-4 ${action && action.color}`}>;`
               <div className="flex flex-col items-start text-left">;
                 <div className="flex items-center">;
                   {action && action.icon}
@@ -109,39 +112,45 @@ export function QuickActions() {;
                 <span className="mt-1 text-xs text-muted-foreground">{action && action.description}</span>;
               </div>;
             </Button>;
-
-
-              <div className='flex flex-col items-start text-left'>
-                <div className='flex items-center'>
+              <div className='flex flex-col items-start text-left'>'
+                <div className='flex items-center'>'
                   {action.icon}
                   <span>{action.label}</span>
                 </div>
-                <span className='mt-1 text-xs text-muted-foreground'>
+                <span className='mt-1 text-xs text-muted-foreground'>'
                   {action.description}
                 </span>              </div>
 
                 </span>
 origin/cursor/automate-test-improve-and-merge-code-2533
               </div>
-
             </Button>
+              variant="outline";
+              className={`h-auto justify-start p-4 ${action.color}`}
+            >;
+              <div className="flex flex-col items-start text-left">;
+                <div className="flex items-center">;
+                  {action.icon}
+                  <span>{action.label}</span>;
+                </div>;
+                <span className="mt-1 text-xs text-muted-foreground">{action.description}</span>;
+              </div>;
+            </Button>;
           ))}
         </div>;
       </CardContent>;
     </Card>;
   );
 }
-
   );
 }
-
                 </span>              </div>;
                 <span className="mt - 1 text - xs text - muted - foreground">{action.description}</span>;
           {actions.map (action => (
             <Button;
               key={action.id}
               variant="outline";
-              className={`h - auto justify - start p - 4 ${action.color}`}
+              className={`h - auto justify - start p - 4 ${action.color}`}`
             >;
               <div className="flex flex - col items - start text - left">;
                 <div className="flex items - center">;
@@ -155,6 +164,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </CardContent>;
     </Card>);
 }
+;)))))))))
+;
 
 ;
         </div>

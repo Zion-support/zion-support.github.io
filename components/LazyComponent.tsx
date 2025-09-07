@@ -1,4 +1,5 @@
 
+import React, { Suspense, lazy } from 'react',
 pr-12243
 import React, { Suspense, lazy } from 'react';
 interface LazyComponentProps {
@@ -17,6 +18,9 @@ const LazyComponent: React.FC < LazyComponentProps> = ({
       <LazyLoadedComponent {...props} />;
     </Suspense>);
 },
+
+export default LazyComponent;
+export default LazyComponent;
 export default LazyComponent;
 
 pr-12243

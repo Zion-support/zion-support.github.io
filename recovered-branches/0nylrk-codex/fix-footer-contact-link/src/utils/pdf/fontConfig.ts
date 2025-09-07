@@ -1,39 +1,12 @@
-
-<<<<<<< HEAD
-
-import { jsPDF } from 'jspdf';
-export interface FontConfig {
-  regular: ArrayBuffer;
-  bold?: ArrayBuffer;
-  italic?: ArrayBuffer;
-  boldItalic?: ArrayBuffer
-}
-
-export type FontFamily = any;
-
-    // Fall back to default font
-    doc.setFont('helvetica')
-=======
 import {jsPDF} from 'jspdf';
 export interface FontConfig {;
 
-  regular: ArrayBuffer;
-  bold?: ArrayBuffer;
+import { jsPDF } from 'jspdf';
+export interface FontConfig {
+import {jsPDF} from 'jspdf';
+export interface FontConfig {;
 
-  italic?: ArrayBuffer
-  boldItalic?: ArrayBuffer
-}
-export type FontFamily = 'default' | 'montserrat' | 'open-sans' | 'roboto';
-/**
- * Loads and registers custom fonts for PDF documents
- */
-export async function loadCustomFonts(doc: jsPDF, fontFamily: FontFamily = 'default'): Promise<void> {
-  if (fontFamily === 'default') return
-  try {
-    // Font loading logic would go here
-    // For demonstration purposes, we'll just set up the font using standard fonts
-    switch (fontFamily) {    doc.set_font ('helvetica');
->>>>>>> origin/main
+
   }
 }
 
@@ -43,6 +16,8 @@ export interface FontConfig {;
 
   regular: ArrayBuffer;
   bold?: ArrayBuffer;
+  italic?: ArrayBuffer,
+  bold_italic?: ArrayBuffer;
 
   italic?: ArrayBuffer;
   boldItalic?: ArrayBuffer;
@@ -74,4 +49,9 @@ if (return, ) {
 
     doc.setFont('helvetica');
 
+  }
+}
+doc.set_font ('helvetica');
+  }
+}
 pr-12325

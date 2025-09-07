@@ -1,19 +1,4 @@
-<<<<<<< HEAD
 
-export interface InnovativeMicroSaas2029 {
-  id: string;
-
-=======
-export interface InnovativeMicroSaas2029 {
-  id: string;
-export interface InnovativeMicroSaas2029 {  id: string;
-origin/cursor/expand-services-advertise-and-build-project-c28b
-
-export interface InnovativeMicroSaas2029 {
-
-id: string;
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/main
   name: string;
   tagline: string;
   price: string;
@@ -26,8 +11,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     mobile: string;
     email: string;
 
-<<<<<<< HEAD
-=======
 
     address: string;
   };
@@ -147,6 +130,7 @@ pr-12325
     category: "Innovative Micro SAAS 2029",
     realImplementation: true,
     contactInfo: {
+
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 ursor/fix-website-loading-errors-and-merge-6662
@@ -187,7 +171,7 @@ export const innovativeMicroSaasServices2029: InnovativeMicroSaas2029[] = [
     description:
       'Innovative micro SAAS platform that showcases the latest innovations for 2029.'
 origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/main
+
     address: string
   }
 }
@@ -219,10 +203,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     realImplementation: true;
     contactInfo: {
       mobile: "+1 302 464 0950";
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/main
       email: "kleber@ziontechgroup.com";
 origin/cursor/automate-test-improve-and-merge-code-2533
       address: "364 E Main St STE 1008 Middletown DE 19709"

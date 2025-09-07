@@ -1,13 +1,4 @@
-<<<<<<< HEAD
 
-
-import { CountryPricing } from "@/data/onsiteServicePricing";
-import { CountryServiceSelector } from "../CountryServiceSelector";
-
-=======
-import { CountryPricing } from "@/data/onsiteServicePricing";
-import { CountryServiceSelector } from "../CountryServiceSelector";
->>>>>>> origin/main
 interface ServiceDetailsSectionProps {
   selectedCountry: CountryPricing | null;
 
@@ -63,6 +54,7 @@ import { CountryServiceSelector } from "../CountryServiceSelector";"
 interface ServiceDetailsSectionProps {
   // TODO: Implement
 }
+;
   selectedCountry: CountryPricing | null;,
   setSelectedCountry: (country: CountryPricing | null) => void;
 

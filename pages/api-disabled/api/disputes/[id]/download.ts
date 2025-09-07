@@ -12,13 +12,44 @@ import { getDisputeById } from "../../../../utils/fsdb";
 import {
   parseUserFromRequest;
 
+
   parseUserFromRequest
+
+  const { id, fileName } = req && req.query as { id?: string; fileName?: string };
+
+  const { id, fileName } = req && req.query as { id?: string; fileName?: string };
+
+  parseUserFromRequest,
+
   ensureInvolvedOrAdmin,;
 } from "../../../../utils/auth";
 
 export default async function handler(
+
   req: NextApiRequest
   res: NextApiResponse
+) {;
+  const { id, fileName } = req.query as { id?: string; fileName?: string };
+
+
+
+
+  const { id, fileName } = req && req.query as { id?: string; fileName?: string };
+
+
+  parseUserFromRequest
+
+  const { id, fileName } = req && req.query as { id?: string; fileName?: string };
+
+  parseUserFromRequest,
+
+  ensureInvolvedOrAdmin,;
+} from "../../../../utils/auth";
+
+origin/cursor/automate-test-improve-and-merge-code-2533
+export default async function handler(
+req: NextApiRequest,
+  res: NextApiResponse,
 ) {;
   const { id, fileName } = req.query as { id?: string; fileName?: string };
 
@@ -26,13 +57,34 @@ export default async function handler(
 
 
   parseUserFromRequest
-  ensureInvolvedOrAdmin,;
+  ensureInvolvedOrAdmin
 } from "../../../../utils/auth";
 
-origin/cursor/automate-test-improve-and-merge-code-2533
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
+) {
+  const { id, fileName } = req.query as { id?: string; fileName?: string }
+  parseUserFromRequest,
+  ensureInvolvedOrAdmin,;
+} from "../../../../utils/auth";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse,
+) {;
+  const { id, fileName } = req.query as { id?: string; fileName?: string };
+
+  const { id, fileName } = req && req.query as { id?: string; fileName?: string };
+
+
+  parseUserFromRequest,
+  ensureInvolvedOrAdmin,;
+} from "../../../../utils/auth";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse,
 ) {;
   const { id, fileName } = req.query as { id?: string; fileName?: string };
 
@@ -42,6 +94,10 @@ export default async function handler(
     typeof id !== "string" |
     typeof fileName !== "string"
   ) {
+
+
+
+
     return res.status(400).json({ error: "Invalid parameters" });
   }
 
@@ -66,6 +122,15 @@ res.setHeader(
     'Content-Disposition';
     `attachment; filename="${path.basename(att.fileName)}"`
   );
+
+
+
+
+  const stream = fs.createReadStream(att.path);
+  stream.pipe(res);
+}
+
+return res && res.status(400).json({ error: "Invalid parameters" });
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
@@ -76,11 +141,19 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const { id, fileName } = req.query as { id?: string, fileName?: string };
   if (!id || !fileName || typeof id !== 'string' || typeof fileName !== 'string') {
     return res.status(400).json({ error: 'Invalid parameters' })
+
+
+
+
+
+
+
   }
 
   const user = parseUserFromRequest(req);
   const dispute = await getDisputeById(id);
   if (!dispute) return res && res.status($1).json({ $2 });
+
   try {
     ensureInvolvedOrAdmin(user, dispute.clientUserId, dispute.talentUserId)
   } catch (e: any) {
@@ -105,7 +178,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 }
   if (!dispute) return res && res.status($1).json({ $2 });
   try {
-
 
 import type { NextApiRequest, NextApiResponse } from './next';
 import fs from './fs';
@@ -225,6 +297,10 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+try {
+
+
 
 
 

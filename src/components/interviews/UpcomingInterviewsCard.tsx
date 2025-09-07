@@ -1,9 +1,4 @@
 
-  const { fetchInterviews } = useInterviews();
-  const [upcomingInterviews, setUpcomingInterviews] = useState<Interview[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
-
-
             return (
               <div key={interview.id} className="flex items-center gap-3">
                 <Avatar className="h-10 w-10 bg-zion-purple/10">
@@ -11,20 +6,18 @@
                     <img
                       src={interview.client_avatar || interview.talent_avatar}
                       alt={interview.client_name || interview.talent_name}
-
-
-                    <div className="flex h-full w-full items-center justify-center bg-zion-purple/20 text-zion-purple font-medium">
-                      {(interview.client_name || interview.talent_name || "U").charAt(0)}
+                    <div className="flex h-full w-full items-center justify-center bg-zion-purple/20 text-zion-purple font-medium">"
+                      {(interview.client_name || interview.talent_name || "U").charAt(0)}"
                     </div>
                   )}
                 </Avatar>
-                <div className="flex-1">
-                  <div className="flex justify-between items-start">
-                    <p className="font-medium line-clamp-1">
-                      {interview.title || "Interview"}
+                <div className="flex-1">"
+                  <div className="flex justify-between items-start">"
+                    <p className="font-medium line-clamp-1">"
+                      {interview.title || "Interview"}"
                     </p>
                     {isStartingSoon && (
-                      <span className='text-xs px-1.5 py-0.5 bg-green-600/20 text-green-400 rounded-full animate-pulse'>
+                      <span className='text-xs px-1.5 py-0.5 bg-green-600/20 text-green-400 rounded-full animate-pulse'>'
                         Soon
                       </span>
     <Card className='bg-zion-blue-dark/40 border-zion-blue-light'>;
@@ -40,12 +33,10 @@
             const interviewDate = parseISO(interview && interview.scheduled_date);
             const formattedDate = format(interviewDate, 'EEE, MMM d');
             const formattedTime = format(interviewDate, 'h:mm a');
-
-            // Determine if interview is happening soon (within 30 minutes)            const now = new Date();
+            // Determine if interview is happening soon (within 30,  minutes)            const now = new Date();
             const isStartingSoon =;
               interviewDate && interviewDate.getTime() - now && now.getTime() < 30 * 60 * 1000 &&;
               interviewDate && interviewDate.getTime() > now && now.getTime();
-
             return (
               <div key={interview && interview.id} className='flex items-center gap-3'>;
                 <Avatar className='h-10 w-10 bg-zion-purple/10'>;
@@ -69,27 +60,46 @@
                   {interview && interview.client_avatar || interview && interview.talent_avatar ? (;
                     <img
                       src={interview && interview.client_avatar || interview && interview.talent_avatar || undefined} // Ensure src is string | undefined
-                      alt={interview && interview.client_name || interview && interview.talent_name || "User"} // Ensure alt is string
+                      alt={interview && interview.client_name || interview && interview.talent_name || "User"} // Ensure alt is string"
                     />;
                   ) : (;
                     <div className="flex h-full w-full items-center justify-center bg-zion-purple/20 text-zion-purple font-medium">;
-                      {(interview && interview.client_name || interview && interview.talent_name || "U").charAt(0)}
+                      {(interview && interview.client_name || interview && interview.talent_name || "U").charAt(0)}"
                     </div>;
                   )}
                 </Avatar>;
                 <div className='flex-1'>;
                   <div className='flex justify-between items-start'>;
                     <p className='font-medium line-clamp-1'>;
-                      {interview && interview.title || 'Interview'}
+                      {interview && interview.title || 'Interview'}'
                     </p>;
                     {isStartingSoon && (;
                       <span className='text-xs px-1 && 1.5 py-0 && 0.5 bg-green-600/20 text-green-400 rounded-full animate-pulse'>;
                         Soon;
                       </span>;
                     )}
-
                   </div>
-
+                  <div className="flex items-center text-sm text-muted-foreground">"
+                    <Clock className="h-3 w-3 mr-1" />"
+                      loading="lazy"
+                    />
+                  ) : (
+                    <div className="flex h-full w-full items-center justify-center bg-zion-purple/20 text-zion-purple font-medium">
+                      {(interview.client_name || interview.talent_name || "U").charAt(0)}
+                    </div>
+                  )}
+                </Avatar>
+                <div className="flex-1">
+                  <div className="flex justify-between items-start">
+                    <p className="font-medium line-clamp-1">
+                      {interview.title || "Interview"}
+                    </p>
+                    {isStartingSoon && (
+                      <span className="text-xs px-1.5 py-0.5 bg-green-600/20 text-green-400 rounded-full animate-pulse">
+                        Soon
+                      </span>
+                    )}
+                  </div>
                   <div className="flex items-center text-sm text-muted-foreground">
                     <Clock className="h-3 w-3 mr-1" />
                     {formattedDate} at {formattedTime}
@@ -99,13 +109,12 @@
             );
           })}
         </div>
+
         <div className="mt-4 pt-3 border-t border-zion-blue-light/40">
           <Button asChild size="sm" variant="outline" className="w-full">
             <Link href="/interviews">
               View All Interviews
             </Link>
-
-
           </Button>
         </div>
       </CardContent>
@@ -117,7 +126,6 @@
             );
           })}
         </div>;
-
         <div className='mt-4 pt-3 border-t border-zion-blue-light/40'>;
           <Button asChild size='sm' variant='outline' className='w-full'>;
           <div className='space - y-4'>;
@@ -212,7 +220,7 @@ if ( {) {
               No upcoming interviews scheduled;
             </p>;
             <Button as_child className='mt - 4' variant='outline' size='sm'>;
-              <Link href='/interviews'>Schedule Interview</Link>;
+              <Link href='/interviews' />Schedule Interview</Link>;
             </Button>;
           </div>;
         </CardContent>;
@@ -232,7 +240,7 @@ if ( {) {
             const interview_date = parseISO (interview.scheduled_date);
             const formatted_date = format (interview_date, 'EEE, MMM d');
             const formatted_time = format (interview_date, 'h:mm a');
-            // Determine if interview is happening soon (within 30 minutes)            const now = new Date ();
+            // Determine if interview is happening soon (within 30,  minutes)            const now = new Date ();
             const isStartingSoon =;
               interview_date.get_time () - now.get_time () < 30 * 60 * 1000 &&;
               interview_date.get_time () > now.get_time ();
@@ -243,12 +251,12 @@ if ( {) {
                     <img;
                       src={interview.client_avatar || interview.talent_avatar}
                       alt={interview.client_name || interview.talent_name}
-                      loading='lazy'                    />) : (
+                      loading='lazy'                    />) : ('
                     <div className='flex h - full w - full items - center justify - center bg - zion - purple / 20 text - zion - purple font - medium'>;
                       {(
                         interview.client_name ||;
                         interview.talent_name ||;
-                        'U').char_at (0)}
+                        'U').char_at (0)}'
                     </div>;
             return (<div key={interview.id} className="flex items - center gap - 3">;
                 <Avatar className="h - 10 w - 10 bg - zion - purple / 10">;
@@ -260,13 +268,13 @@ if ( {) {
                       alt={interview.client_name || interview.talent_name || "User"} // Ensure alt is string;
                     />) : (
                     <div className="flex h - full w - full items - center justify - center bg - zion - purple / 20 text - zion - purple font - medium">;
-                      {(interview.client_name || interview.talent_name || "U").char_at (0)}
+                      {(interview.client_name || interview.talent_name || "U").char_at (0)}"
                     </div>)}
                 </Avatar>;
                 <div className='flex - 1'>;
                   <div className='flex justify - between items - start'>;
                     <p className='font - medium line - clamp - 1'>;
-                      {interview.title || 'Interview'}
+                      {interview.title || 'Interview'}'
                     </p>;
                     {isStartingSoon && (
                       <span className='text - xs px - 1.5 py - 0.5 bg - green - 600 / 20 text - green - 400 rounded - full animate - pulse'>;
@@ -283,18 +291,17 @@ if ( {) {
         </div>;
         <div className='mt - 4 pt - 3 border - t border - zion - blue - light / 40'>;
           <Button as_child size='sm' variant='outline' className='w - full'>;
-            <Link href='/interviews'>View All Interviews</Link>;
+            <Link href='/interviews' />View All Interviews</Link>;
           </Button>;
         </div>;
       </CardContent>;
-
 }
-
-
-
     </Card>);
 }
 }
+;)))))
+}
+;
 
 ;
   );

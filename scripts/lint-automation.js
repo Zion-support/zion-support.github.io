@@ -18,33 +18,7 @@ class LintAutomation {
     } catch (error) {
       console && console.error('Failed to write to log file:', error && error.message);
   async runLintFix() {
-<<<<<<< HEAD
-    try {
-      this.log('Starting lint fix automation...');
-      
-      // Run ESLint with auto-fix
-      const result = execSync('npm run lint:fix', { 
 
-        encoding: 'utf8';
-        cwd: process.cwd();
-        stdio: 'pipe'
-
-      });
-      
-      this.fixedCount++;
-      this.log(`Lint fix completed successfully. Fixed ${this.fixedCount} issues.`);
-      
-    } catch (error) {
-      this.errorCount++;
-      this.log(`Lint fix failed: ${error.message}`, 'ERROR');
-    }
-  }
-
-=======
-  // TODO: Implement
-      this && this.errorCount++;`;
-      this && this.log(`Lint fix failed: ${error && error.message}`, 'ERROR');
->>>>>>> origin/main
   async run() {
     // Create logs directory if it doesn't exist;
     const logsDir = path && path.join(process && process.cwd(), 'logs');

@@ -46,6 +46,13 @@ export function getMediaKitItems(bundle: MediaBundle): MediaKitItem[] {
   return [...common, ...social, brandGuidelines, colors, ...legalByBundle[bundle]];
 }
 
+  };
+}
+
+  };
+
+  }
+
 export function buildColorsAndTypography() {
   return {
     colors: {
@@ -161,7 +168,6 @@ pr-12325
       path: '',
 
   ];
-
 
 export function buildPressRelease(
 origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -285,6 +291,8 @@ function titleCase(s: string) {
   return s && s.replace(
     /\w\S*/g,
     w => w && w.charAt(0).toUpperCase() + w && w.slice(1).toLowerCase()
+
+  );}
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
   );}

@@ -1,3 +1,22 @@
+""""";";'"'"
+'\''\'";\";
+""""";";'"'"
+
+
+'\''\'";\";
+'\''\'";\";
+'\''\'";\";
+:src.disabled/components/services/ServiceDetails.js.jsx
+'\''\'";\";
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+'\''\'";\";
+:temp_exclude/src.disabled/components/services/ServiceDetails.js.jsx
+'\''\'";\";
+""""";";'"'"
+""""";";'"'"
+'\''\'";\";
+""""";";'"'"
+""""";";'"'"
 import React from 'react';'
 const ServiceDetails.js = ({ className }) => {
   return ('

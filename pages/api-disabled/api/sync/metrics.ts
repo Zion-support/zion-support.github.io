@@ -4,9 +4,11 @@ import { readState, filterEventsByScope } from "../../../utils/sync/storage",;
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
+const state = readState(),
+  const events = filterEventsByScope(state.events, state.config.scope),
 
-  const state = readState()
-  const events = filterEventsByScope(state.events, state.config.scope)
+  const state = readState(),
+  const events = filterEventsByScope(state.events, state.config.scope),
 
 
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -20,10 +22,20 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 import type { NextApiRequest, NextApiResponse } from "next"
 import { readState, filterEventsByScope } from "../../../utils/sync/storage"
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== "GET") return res.status(405).json({ error: "Method not allowed" })
-  const state = readState()
-  const events = filterEventsByScope(state.events, state.config.scope)
 
+
+  const totalsByToken: Record<string, number> = {},
+  const contributionsBySubject: Record<string, number> = {},
+  let globalVotes = 0,
+
+
+  if (req.method !== "GET") return res.status(405).json({ error: "Method not allowed" }),
+  const state = readState(),
+  const events = filterEventsByScope(state.events, state.config.scope),
+
+  const totalsByToken: Record<string, number> = {},
+  const contributionsBySubject: Record<string, number> = {},
+  let globalVotes = 0,
 
   const totalsByToken: Record<string, number> = {}
   const contributionsBySubject: Record<string, number> = {}
@@ -42,11 +54,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const totalsByToken: Record<string, number> = {}
   const contributionsBySubject: Record<string, number> = {}
   let globalVotes = 0
-  const state = readState()
-  const events = filterEventsByScope(state.events, state.config.scope)
-
-
-
+const state = readState(),
+  const events = filterEventsByScope(state.events, state.config.scope),
 
 import type { NextApiRequest, NextApiResponse } from "next",;
 import { readState, filterEventsByScope } from "../../../utils/sync/storage",;
@@ -54,9 +63,11 @@ import { readState, filterEventsByScope } from "../../../utils/sync/storage",;
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
+const state = readState(),
+  const events = filterEventsByScope(state.events, state.config.scope),
 
-  const state = readState()
-  const events = filterEventsByScope(state.events, state.config.scope)
+  const state = readState(),
+  const events = filterEventsByScope(state.events, state.config.scope),
 
 
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -70,6 +81,18 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 import type { NextApiRequest, NextApiResponse } from "next"
 import { readState, filterEventsByScope } from "../../../utils/sync/storage"
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
+
+
+  if (req.method !== "GET") return res.status(405).json({ error: "Method not allowed" }),
+  const state = readState(),
+  const events = filterEventsByScope(state.events, state.config.scope),
+  const totalsByToken: Record<string, number> = {},
+  const contributionsBySubject: Record<string, number> = {},
+  let globalVotes = 0,
+  const totalsByToken: Record<string, number> = {},
+  const contributionsBySubject: Record<string, number> = {},
+  let globalVotes = 0,
+
   if (req.method !== "GET") return res.status(405).json({ error: "Method not allowed" });
   const state = readState();
   const events = filterEventsByScope(state.events, state.config.scope);
@@ -182,10 +205,12 @@ export default function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+
 }
 }
 }
 }
+
 
 
 

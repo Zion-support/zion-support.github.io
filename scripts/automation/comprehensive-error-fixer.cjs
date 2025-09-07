@@ -14,13 +14,7 @@ class $1 {
   constructor() {
   /**;
  */;"
-<<<<<<< HEAD
-=======
-const fs = require("fs");
-const path = require("path");
-const { execSync } = require("child_process");
-const glob = require("glob");"
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
 class ComprehensiveErrorFixer {
   // TODO: Implement
   this.projectRoot = process.cwd();"
@@ -55,15 +49,7 @@ class ComprehensiveErrorFixer {
       "src/context/auth/useAuthEventHandlers.ts","
     // Fix common TypeScript syntax errors;
     const filesToFix = ["
-<<<<<<< HEAD
-  "src/components/MobileExperienceEnhancer.tsx",""
-=======
-  "src/components/MobileExperienceEnhancer.tsx",
-      "src/components/ModernUIEnhancer.tsx",
-      "src/components/NotificationSystem.tsx",
-      "src/context/auth/AuthContext.tsx",
-      "src/context/auth/profileMapper.ts",
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
       "src/context/auth/useAuthEventHandlers.ts","]
     ]];
 for (const filePath of filesToFix) {
@@ -84,25 +70,7 @@ for (const filePath of filesToFix) {
           content = content.replace(;)"
             /"logout": \s*any\(\)\s*=>\s*Promise<any>;/g,"
 </any>"
-<<<<<<< HEAD
-            ""logout": () => Promise<any>;";"
-            ""logout": () => Promise<any>;"
-          content = content.replace(/<\/>div>/g, "</div>");""
-          content = content.replace(/<\/>header>/g, "</header>");""
-=======
-            logout": () => Promise<any>;";"
-</any>"
-            /"logout": \s*any\(\)\s*=>\s*Promise<any>;/g,"
-</any>"
-            logout": () => Promise<any>;"
-</any>"
-          content = content.replace(/<\/>div>/g, "</div>");
-          content = content.replace(/<\/>header>/g, "</header>");
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
           content = content.replace(/<\/>;/g, "</>");"
           // Fix JSX expressions;
-          content = content.replace(;"
-            /<div\s+className="max-w-4xl mx-auto space-y-8>\s*<div/g,"
-</div>)"
-            "<div className=max-w-4xl mx-auto space-y-8><div"          );"
-</div>"
+

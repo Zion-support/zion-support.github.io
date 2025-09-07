@@ -1,6 +1,10 @@
 
 
 
+
+
+
+
 }
 import type { NextApiRequest, NextApiResponse } from './next';
 import { PROVIDERS  } from '../../../lib / integrations / registry';
@@ -14,6 +18,10 @@ function handler() {
 }
   res.status (200).json ({ providers: PROVIDERS });
 }
+
+
+
+
 
 
 ursor/fix-website-loading-errors-and-merge-6662
@@ -56,6 +64,14 @@ export default function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+
+
+}
+
+
+}
+
+
 }
 
   if (req.method !== 'GET') return res.status(405).json({ error: 'Method not allowed' });

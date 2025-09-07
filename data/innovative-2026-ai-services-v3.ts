@@ -13,74 +13,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   contactInfo: {
     mobile: string;
     email: string;
-<<<<<<< HEAD
 
-=======
-  id: string;,
-  name: string;
-  tagline: string;,
-  price: string;
-  description: string;,
-  features: string[];
-  link: string;,
-  category: string;
-  realImplementation: boolean;,
-  contactInfo: {
-    mobile: string;,
-  email: string;
-pr-12325
-export interface Innovative2026AiServiceV3 {;
-    address: string;
-  };
-  id: string,;
-  name: string,;
-  tagline: string,;
-  price: string,;
-  description: string,;
-  features: string[],;
-  link: string,;
-  category: string,;
-  realImplementation: boolean,;
-  contactInfo: {;
-    mobile: string,;
-    email: string,;
-    address: string;
-  }
-}
-
-
-origin/cursor/expand-services-advertise-and-build-project-c28b
-      address: "364 E Main St STE 1008 Middletown DE 19709"
-    }
-  }
-];
-origin/cursor/expand-services-advertise-and-build-project-c28b
-  contactInfo: {;,
-  mobile: string,;
-    email: string,;
-  }
-      address: "364 E Main St STE 1008 Middletown DE 19709""
-];
-pr-12325
-  id: string, name: string,
-  tagline: string, price: string,
-  description: string, features: string[],
-  link: string, category: string,
-  realImplementation: boolean,
-  contactInfo: {
-export const innovative2026AIServicesV3: Innovative2026AiServiceV3[] = [
-  {
-    id: "2026-innovative-ai-v3", name: "2026 Innovative AI Platform V3",
-    tagline: "Third generation innovative AI", price: "$349/month",
-    description: "Third generation of the 2026 innovative AI platform with enhanced capabilities and features.",
-    id: '2026-innovative-ai-v3'
-    name: '2026 Innovative AI Platform V3'
-    tagline: 'Third generation innovative AI'
-    price: '$349/month'
-    description:
-      'Third generation of the 2026 innovative AI platform with enhanced capabilities and features.'
-origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/main
     address: string
   }
 }
@@ -111,10 +44,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     realImplementation: true;
     contactInfo: {
       mobile: "+1 302 464 0950";
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/main
       email: "kleber@ziontechgroup.com";
 origin/cursor/automate-test-improve-and-merge-code-2533
       address: "364 E Main St STE 1008 Middletown DE 19709"

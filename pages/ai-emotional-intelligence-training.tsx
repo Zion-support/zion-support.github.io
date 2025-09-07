@@ -1,12 +1,4 @@
-<<<<<<< HEAD
 
-import React from 'react';
-import ServiceLanding from '../components/sections/ServiceLanding';
-
-export default function AIEmotionalIntelligenceTraining() {
-	return (
-		<ServiceLanding
-=======
 			implementationWeeks="Implementation: 1–2 weeks"
 			roiNote="Average ROI 2–5x within 60–90 days"
 			features={[
@@ -17,7 +9,7 @@ export default function AIEmotionalIntelligenceTraining() {
 				"Integrations: LMS, Slack/Teams, Gmail/Outlook"
 
 import React from 'react';
->>>>>>> origin/main
+
 			title;
 origin/cursor/automate-test-improve-and-merge-code-2533
 				"Privacy-first voice and text processing"
@@ -30,6 +22,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
 			implementationWeeks="Implementation: 1–2 weeks"
 			roiNote="Average ROI 2–5x within 60–90 days"
 			features={[
@@ -39,6 +32,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 				"Team dashboards and skill gap analysis",
 				"Integrations: LMS, Slack/Teams, Gmail/Outlook",
 				"Privacy-first voice and text processing"
+
+]}
+			industries={["Customer Support", "Sales", "HR & L&D", "Leadership"]}
+			canonical="https: //ziontechgroup.com/ai-emotional-intelligence-training"
+		/>
+	)
+};
 			]  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });

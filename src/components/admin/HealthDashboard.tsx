@@ -31,47 +31,68 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 import React, { useState, useEffect } from 'react';
 
 interface HealthData {
-  status: 'healthy' | 'warning' | 'critical';
-  timestamp: string;
-  uptime: number;
-  version: string;
-  environment: string;
-
-  metrics: {
-
-  health: {
-    status: string;
-    score: number;
-    issues: string[];
-
-
-  errors: {
-    summary: {
-      total: number;
-      critical: number;
-      high: number;
-      medium: number;
-
-
-      patternId: string;
-      description: string;
-      occurrences: number;
-      severity: string;
 
       solution?: string
     }>
-    byCategory: { [category: string]: number }
+    byCategory: { [category: string]: number },
       low: number;
     }
-    top_errors: Array<{
-      pattern_id: string;
-      description: string;
-      occurrences: number;
-      severity: string;
+    top_errors: Array<{,
+      pattern_id: string;,
+      description: string;,
+      occurrences: number;,
+      severity: string;,
       solution?: string;
     }>;
-    by_category: { [category: string]: number }
+    by_category: { [category: string]: number },
   }
+import React, { useState, useEffect } from 'react',;
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',;
+import { Badge } from '@/components/ui/badge',;
+import { Button } from '@/components/ui/button',;
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs',;
+import { AlertTriangle, CheckCircle, XCircle, Clock, TrendingUp, Activity } from 'lucide-react';
+interface HealthData {;
+  status: 'healthy' | 'warning' | 'critical',;
+  timestamp: string,;
+  uptime: number,;
+  version: string,;
+  environment: string,;
+  metrics: {;,
+    errorRate: number,;
+    criticalErrors: number,;
+    responseTime: number,;
+    memoryUsage: number;
+  },;
+  health: {;,
+    status: string,;
+    score: number,;,
+    issues: string[],;,
+    recommendations: string[];
+  },;
+  errors: {;,
+    summary: {;,
+      total: number,;
+      critical: number,;
+      high: number,;
+      medium: number,;
+      low: number;
+    },;
+    topErrors: Array<{;,
+      patternId: string,;
+      description: string,;
+      occurrences: number,;
+      severity: string,;
+      solution?: string;
+    }>,;,
+    byCategory: { [category: string]: number }
+  }
+}
+;
+const HealthDashboard: React.FC = () => {;,
+  const [healthData, setHealthData] = useState<HealthData | null>(null),;,
+  const [loading, setLoading] = useState(true),;,
+  const [error, setError] = useState<string | null>(null),;,
     topErrors: Array<{;,
   patternId: string;
       description: string;,

@@ -1,11 +1,5 @@
 
-<<<<<<< HEAD
-=======
-  const router = useRouter();
-  const { id } = router && router.query as { id: string };  const [item, setItem] = useState<GrantApplication | null>(null);export default function GrantDetailPage() {;
-  const router = useRouter();
 
->>>>>>> origin/main
 import { useEffect, useState  } from 'react';
 import { useRouter  } from 'next/router';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
@@ -13,69 +7,7 @@ import type { GrantApplication } from '../../types/grants';
 
 export default function GrantDetailPage() {
   const router = null;
-<<<<<<< HEAD
 
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
-  const [item, setItem] = useState<GrantApplication | null>(null);
-  const [loading, setLoading] = useState(true);
-  const [updateContent, setUpdateContent] = useState('');
-
-const [item, setItem] = useState<GrantApplication | null />(null);
-
-const [loading, setLoading] = useState(true);
-
-const [updateContent, setUpdateContent] = useState('');
-
-  useEffect(() => {
-;
-    if (!id) return;
-    setLoading(true);
-    if (!id |!updateContent.trim()) return;    fetch(`/api/grants/${id}`).then((r) => r.json()).then((d) => setItem(d.record)).finally(() => setLoading(false))
-    if (!id || !updateContent.trim()) return;
-
-    if (!id || !updateContent.trim()) return;    fetch(`/api/grants/${id}`).then((r) => r.json()).then((d) => setItem(d.record)).finally(() => setLoading(false))
-    if (!id || !updateContent.trim()) return;
-
-    setLoading(true);}
-}
-fetch(`/api/grants/${id}`)
-      .then(r => r.json())
-      .then(d => setItem(d.record))
-      .finally(() => setLoading(false));
-origin/cursor/automate-test-improve-and-merge-code-2533
-  }, [id]);
-
-const addUpdate = async () => {
-    if (!id || !updateContent.trim());
-  return;}
-}
-const resp = await fetch(`/api/grants/${id}/updates`, {
-      method: 'POST',}
-  headers: { 'Content-Type': 'application/json',}
-},
-      body: JSON.stringify({ content: updateContent,}
-}),
-    });
-
-const u = await resp.json();
-      setItem(prev =>
-        prev ? { ...prev, updates: [...(prev.updates |[]), u.update] } : prev;
-      );
-      setUpdateContent('');
-    }
-
-  }
-  if (loading)return (<EnhancedLayout />;
-        <div />Loading...</div>;
-      </EnhancedLayout>;
-    )if (!item)return (<EnhancedLayout />;
-        <div />Not found</div>;
-      </EnhancedLayout>;
-
-    );
-
->>>>>>> origin/main
   return (
     <EnhancedLayout />
       <div className='flex items-center justify-between mb-4' />

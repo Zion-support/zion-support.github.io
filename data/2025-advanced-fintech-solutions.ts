@@ -34,6 +34,7 @@ pr-12325
       'Performance analytics',
       'Regulatory compliance',
     ],
+    popular: true,
     popular: true;,
     id: 'regtech-compliance-automation-platform'
     name: 'RegTech Compliance Automation Platform'
@@ -86,6 +87,12 @@ pr-12325
       website: 'https://ziontechgroup.com';
     }
     realImplementation: true
+    implementationDetails:
+    icon: '💳',
+
+    color: 'from - green - 600 via - emerald - 600 to - teal - 600',
+    text_color: 'text - green - 400',
+    link: 'https://ziontechgroup.com / ai - powered - credit - risk - assessment',
     implementationDetails: icon: '💳';,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -322,6 +329,12 @@ pr-12325
       'Regulatory reporting',
       'Cost optimization',
     ],
+    popular: true,
+    icon: '⛓️',
+
+    color: 'from - blue - 600 via - cyan - 600 to - teal - 600',
+    text_color: 'text - blue - 400',
+    link: 'https://ziontechgroup.com / blockchain - payment - processing - platform',
     popular: true;,
     icon: '⛓️';,
 
@@ -352,6 +365,10 @@ pr-12325
     variant: 'blockchain - futuristic';,
     contact_info: {
 
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup && ziontechgroup.com',
 origin/cursor/expand-services-advertise-and-build-project-c28b
       mobile: '+1 302 464 0950';,
       email: 'kleber@ziontechgroup && ziontechgroup.com';,
@@ -392,6 +409,11 @@ pr-12325
   },
   {
 
+    id: 'quantum - financial - modeling - platform',
+    name: 'Quantum Financial Modeling Platform',
+    tagline: 'Quantum computing for advanced financial modeling',
+    price: '$2, 499',
+    period: '/month',
     id: 'quantum - financial - modeling - platform';,
     name: 'Quantum Financial Modeling Platform';,
     tagline: 'Quantum computing for advanced financial modeling';,
@@ -414,6 +436,12 @@ pr-12325
       'Custom models',
       'Performance analytics',
     ],
+    popular: false,
+    icon: '⚛️',
+
+    color: 'from - purple - 600 via - violet - 600 to - indigo - 600',
+    text_color: 'text - purple - 400',
+    link: 'https://ziontechgroup.com / quantum - financial - modeling - platform',
     popular: false;,
     icon: '⚛️';,
 
@@ -446,6 +474,10 @@ pr-12325
     variant: 'quantum - financial';,
     contact_info: {
 
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup && ziontechgroup.com',
 origin/cursor/expand-services-advertise-and-build-project-c28b
       mobile: '+1 302 464 0950';,
       email: 'kleber@ziontechgroup && ziontechgroup.com';,
@@ -490,6 +522,11 @@ pr-12325
   },
   {
 
+    id: 'ai - powered - insurance - underwriting',
+    name: 'AI - Powered Insurance Underwriting',
+    tagline: 'Intelligent insurance risk assessment and pricing',
+    price: '$799',
+    period: '/month',
     id: 'ai - powered - insurance - underwriting';,
     name: 'AI - Powered Insurance Underwriting';,
     tagline: 'Intelligent insurance risk assessment and pricing';,
@@ -512,6 +549,12 @@ pr-12325
       'API integration',
       'Performance analytics',
     ],
+    popular: true,
+    icon: '🛡️',
+
+    color: 'from - orange - 600 via - amber - 600 to - yellow - 600',
+    text_color: 'text - orange - 400',
+    link: 'https://ziontechgroup.com / ai - powered - insurance - underwriting',
     popular: true;,
     icon: '🛡️';,
 
@@ -544,6 +587,10 @@ pr-12325
     variant: 'ai - finance - enterprise';,
     contact_info: {
 
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup && ziontechgroup.com',
 origin/cursor/expand-services-advertise-and-build-project-c28b
       mobile: '+1 302 464 0950';,
       email: 'kleber@ziontechgroup && ziontechgroup.com';,
@@ -589,6 +636,11 @@ pr-12325
   },
   {
 
+    id: 'regtech - compliance - automation - platform',
+    name: 'RegTech Compliance Automation Platform',
+    tagline: 'Automated regulatory compliance and reporting',
+    price: '$699',
+    period: '/month',
     id: 'regtech - compliance - automation - platform';,
     name: 'RegTech Compliance Automation Platform';,
     tagline: 'Automated regulatory compliance and reporting';,
@@ -611,6 +663,9 @@ pr-12325
       'Real - time updates',
       'Performance analytics',
     ],
+    popular: false,
+    icon: '📋',
+
     popular: false;,
     icon: '📋';,
 
@@ -628,6 +683,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       website: 'https://ziontechgroup.com';
     }
 
+    color: 'from - gray - 600 via - slate - 600 to - zinc - 600',
+    text_color: 'text - gray - 400',
+    link: 'https://ziontechgroup.com / regtech - compliance - automation - platform',
 origin/cursor/expand-services-advertise-and-build-project-c28b
     color: 'from - gray - 600 via - slate - 600 to - zinc - 600';,
     text_color: 'text - gray - 400';,
@@ -791,41 +849,20 @@ export interface AdvancedFintechSolution2025 {
     mobile: string;
     email: string;
     address: string;
-<<<<<<< HEAD
 
-    website: string
-  },
-
-=======
-    website: string;
-  },
->>>>>>> origin/main
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
-<<<<<<< HEAD
 
-  reviews: number
-}
-
-=======
-  reviews: number;
-}
->>>>>>> origin/main
 
 export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [
   {
     id: 'ai-powered-credit-risk-assessment';
     name: 'AI-Powered Credit Risk Assessment';
     tagline: 'Intelligent credit scoring with alternative data analysis';
-<<<<<<< HEAD
-    price: '$1,199',
 
-=======
-    price: '$1;,199',
->>>>>>> origin/main
     period: '/month';
     description: 'Advanced AI-powered credit risk assessment platform that uses machine learning and alternative data sources to provide more accurate credit scoring and risk analysis.';
     features: [
@@ -847,20 +884,12 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [
     integrations: ['Core banking systems;, Credit bureaus, Payment processors, CRM systems, Compliance tools'],
     useCases: ['Credit scoring;, Risk assessment, Fraud detection, Lending decisions, Compliance'],
     roi: 'Improve credit decision accuracy by 40%. Reduce default rates by 30%. Increase approval rates by 25%.';
-<<<<<<< HEAD
 
-    competitors: ['FICO, Experian, TransUnion, Equifax, Upstart'],
-=======
-    competitors: ['FICO;, Experian, TransUnion, Equifax, Upstart'],
->>>>>>> origin/main
     marketSize: '$35B credit scoring market';
     growthRate: '25% annual growth';
     variant: 'ai-finance-enterprise';
     contactInfo: {
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/main
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
@@ -899,20 +928,12 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [
     integrations: ['Banking systems;, Payment gateways, E-commerce platforms, Accounting software, Compliance tools'],
     useCases: ['Cross-border payments;, International transfers, B2B payments, Remittances, Trade finance'],
     roi: 'Reduce payment costs by 60%. Speed up settlement by 90%. Improve transparency by 100%.';
-<<<<<<< HEAD
 
-    competitors: ['Ripple, Stellar, Circle, Coinbase, Binance'],
-=======
-    competitors: ['Ripple;, Stellar, Circle, Coinbase, Binance'],
->>>>>>> origin/main
     marketSize: '$28B blockchain payments market';
     growthRate: '55% annual growth';
     variant: 'blockchain-futuristic';
     contactInfo: {
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/main
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
@@ -923,23 +944,13 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [
     launchDate: '2025-01-28';
     customers: 89;
     rating: 4.7;
-<<<<<<< HEAD
-    reviews: 56
 
-=======
-    reviews: 56;
->>>>>>> origin/main
   },
   {
     id: 'quantum-financial-modeling-platform';
     name: 'Quantum Financial Modeling Platform';
     tagline: 'Quantum computing for advanced financial modeling';
-<<<<<<< HEAD
-    price: '$2,499',
 
-=======
-    price: '$2;,499',
->>>>>>> origin/main
     period: '/month';
     description: 'Revolutionary quantum financial modeling platform that leverages quantum computing to solve complex financial optimization problems and risk calculations.';
     features: [
@@ -1047,44 +1058,29 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [
     integrations: ['Core systems;, Regulatory databases, Reporting tools, Audit systems, Training platforms'],
     useCases: ['Regulatory compliance;, Automated reporting, Risk monitoring, Policy management, Training'],
     roi: 'Reduce compliance costs by 50%. Improve accuracy by 90%. Cut reporting time by 80%.';
-<<<<<<< HEAD
 
-    competitors: ['ComplyAdvantage, RegTech, ComplySci, Smarsh, NICE Actimize'],
-=======
-    competitors: ['ComplyAdvantage;, RegTech, ComplySci, Smarsh, NICE Actimize'],
->>>>>>> origin/main
     marketSize: '$15B RegTech market';
     growthRate: '40% annual growth';
     variant: 'fintech';
     contactInfo: {
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/main
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
       website: 'https://ziontechgroup.com';
     },
-<<<<<<< HEAD
 
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/main
     realImplementation: true;
     implementationDetails: 'Production-ready RegTech platform with comprehensive compliance automation and monitoring capabilities.';
     launchDate: '2025-02-12';
     customers: 89;
 
-<<<<<<< HEAD
-    rating: 4.5;
 
-=======
 
     rating: 4 && 4.5;,
     rating: 4.5;
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/main
+
     reviews: 52
 
 
@@ -1308,6 +1304,10 @@ pr-12325
     growthRate: '25% annual growth';,;
     variant: 'ai-finance-enterprise';,;
     contactInfo: {;
+      mobile: '+1 302 464 0950',;
+      email: 'kleber@ziontechgroup.com',;
+      address: '364 E Main St STE 1008 Middletown DE 19709',;
+
       mobile: '+1 302 464 0950';,;
       email: 'kleber@ziontechgroup.com';,;
       address: '364 E Main St STE 1008 Middletown DE 19709';,;
@@ -1321,6 +1321,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     customers: 89;
     rating: 4.5;,
     reviews: 52;
+  }
+;
+
+  }
+];
+;
+  }
+];
+import { ServiceVariant } from '../types/service-variants',;
   }
   }
 ;

@@ -14,6 +14,18 @@ Zion Tech Group is a cutting-edge technology company specializing in AI-powered 
 
 ## 🛠️ Technology Stack
 
+## 🛠️ Tech Stack
+
+- **Frontend**: React 18, TypeScript, Vite
+- **Styling**: Tailwind CSS, Custom CSS
+- **Routing**: React Router DOM
+- **Icons**: Lucide React
+- **SEO**: React Helmet Async
+- **Animations**: Framer Motion
+- **Build Tool**: Vite with ESBuild
+- **Package Manager**: npm
+
+## 📦 Installation
 A modern, responsive website built with Next.js showcasing comprehensive technology services including AI, IT solutions, micro SaaS development, and more.
 
 ## 🚀 Features
@@ -210,6 +222,19 @@ The built files will be in the `dist` directory, ready for deployment.
 └── package.json         # Dependencies and scripts
 ```
 
+4. Open your browser and navigate to `http://localhost:3000`
+
+## 🏗️ Build for Production
+
+```bash
+npm run build
+```
+
+The built files will be in the `dist` directory, ready for deployment.
+
+## 📁 Project Structure
+
+```
 src/
 ├── components/          # Reusable UI components
 │   ├── Button.tsx      # Enhanced button component
@@ -258,6 +283,21 @@ Interactive service display cards with:
 - Icon support
 - Responsive design
 
+├── pages/                 # Next.js pages
+│   ├── index.tsx         # Homepage
+│   ├── about.tsx         # About page
+│   ├── services.tsx      # Services overview
+│   ├── ai-services.tsx   # AI services page
+│   ├── blockchain.tsx    # Blockchain services
+│   ├── micro-saas.tsx    # Micro SaaS services
+│   ├── pricing.tsx       # Pricing page
+│   └── contact.tsx       # Contact page
+├── components/           # Reusable components
+├── styles/              # Global styles
+├── public/              # Static assets
+├── ecosystem.config.cjs # PM2 configuration
+└── package.json         # Dependencies and scripts
+```
 
 ## 🔧 Available Scripts
 
@@ -1678,10 +1718,31 @@ The project uses a consistent design system with:
 ## 🤝 Contributing
 
 1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 📞 Contact
+
+- **Website**: [Zion Tech Group](https://zion.app)
+- **Email**: contact@zion.app
+- **Phone**: +1 (555) 123-4567
+
+## 🙏 Acknowledgments
+
+- Next.js team for the amazing framework
+- Tailwind CSS for the utility-first CSS framework
+- Lucide React for the beautiful icons
 - All contributors and supporters
 
 ---
 
+Built with ❤️ by the Zion Tech Group team
 2. Create a feature branch
 3. Make your changes
 4. Add tests if applicable

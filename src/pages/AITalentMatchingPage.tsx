@@ -15,6 +15,7 @@ import React from "react",;
 import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate",;
 import { Bot, Users, TrendingUp } from 'lucide-react';
 export default function AITalentMatchingPage() {;
+  const benefits = [;,
   const benefits = [;
     {;
       title: "Precise Candidate Matching",;
@@ -27,6 +28,7 @@ export default function AITalentMatchingPage() {;
     {;
       title: "Scalable Talent Pools",;
       description: "Access a global network of vetted professionals ready for your projects.",;
+      icon: <TrendingUp className="h-8 w-8" />}],;,
       icon: <TrendingUp className="h-8 w-8" />}],;
   const testimonials = [;
     {;
@@ -37,13 +39,14 @@ export default function AITalentMatchingPage() {;
     {;
       name: "Raj Patel",;
       role: "Startup Founder",;
+      text: "The quality of candidates has improved dramatically since using Zion's platform.";",
       text: "The quality of candidates has improved dramatically since using Zion's platform.";
       avatar: "/placeholder.svg"}];
   return (;
     <ServiceLandingTemplate;
       title="AI Talent Matching";
       subtitle="Find the perfect experts for your projects with intelligent matching.";
-      heroImage="https://placehold.co/600x300/192134/9b87f5?text=AI+Talent+Matching";
+      heroImage="https://placehold.co/600x300/192134/9b87f5?text=AI+Talent+Matching";",
       description="Our AI-powered system analyzes your requirements and quickly surfaces the best talent for the job. Reduce hiring time and make smarter selections with data-driven insights.";
 pr-12243
     { label: "Time to Hire", value: "50% faster" },
@@ -58,15 +61,23 @@ pr-12243
       benefits={benefits}
       features={features}
       stats={stats}
-
     />;
   );
-
       cta_text="Start Matching Talent";
       cta_link="/contact";
     />);
 }
-
+}
+;
+}}}]
+      heroImage="https://placehold.co/600x300/192134/9b87f5?text=AI+Talent+Matching";
+      description="Our AI-powered system analyzes your requirements and quickly surfaces the best talent for the job. Reduce hiring time and make smarter selections with data-driven insights.";
+      benefits={benefits}
+      testimonials={testimonials}
+      ctaText="Find Your AI Talent";
+      ctaLink="/request-quote";
+    />;
+  );
 }
 ;
       ctaText="Start Matching Talent"

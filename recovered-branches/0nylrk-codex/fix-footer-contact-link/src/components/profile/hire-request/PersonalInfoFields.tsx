@@ -2,6 +2,8 @@
 
   FormField,
 FormField,
+FormField,
+  FormItem,
   FormLabel,
   FormControl,
   FormMessage,
@@ -14,18 +16,12 @@ interface PersonalInfoFieldsProps {
   form: UseFormReturn < FormValues>;
 }
 
-<<<<<<< HEAD
 
-import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",
-import { Input } from "@/components/ui/input",
-import { UseFormReturn } from "react-hook-form";
-import { FormValues } from "./useHireRequestForm";
-=======
 import {FormField, FormItem, FormLabel, FormControl, FormMessage} from "@/components/ui/form";
 import {Input} from "@/components/ui/input";
 import {UseFormReturn} from "react-hook-form";
 import {FormValues} from "./useHireRequestForm";
->>>>>>> origin/main
+
 
 interface PersonalInfoFieldsProps {
   form: UseFormReturn<FormValues>
@@ -392,16 +388,12 @@ interface PersonalInfoFieldsProps {
 
               />
 
-            
             <FormMessage />
 
-          
 
 
 
-            
 
-          
   )
 pr-12325
                 {...field}"

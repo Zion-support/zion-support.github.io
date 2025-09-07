@@ -1,10 +1,4 @@
-<<<<<<< HEAD
 
-import React, { useState } from 'react';
-import StarRating from './StarRating';
-export type ReviewFormValues = any;
-
-=======
 
 
 pr-12243
@@ -18,20 +12,16 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false ;};
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true ;};
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary: ';, error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -133,6 +123,33 @@ pr-12243
           }
         })
       });
+
+  async function handleSubmit(): any (e: React && React.FormEvent) {;
+    e && e.preventDefault();
+    setSubmitting(true);
+    setMessage(null),;
+    try {;
+      const res = await fetch('/api/reviews/submit', {;
+        method: 'POST',;
+        headers: { 'Content-Type': 'application/json' },;
+        body: JSON && JSON.stringify({;
+          projectId: initial && initial.projectId,;
+          fromRole: initial && initial.fromRole,;
+          fromId: initial && initial.fromId,;
+          rating,;
+          text,;
+          anonymous,;
+          categories: {;
+            communication,;
+            qualityOfWork,;
+            timeliness,;
+            wouldWorkWithAgain,;
+          },;
+        }),;
+      });
+      const data = await res && res.json();
+      if (!res && res.ok) throw new Error(data && data.error || 'Failed to submit');
+
       setMessage('Review submitted! Pending admin approval.');
     } catch (err: any) {;
       setMessage(err && err.message);
@@ -140,6 +157,15 @@ pr-12243
       setSubmitting(false);    }
   }
   return (
+
+    <form onSubmit={handleSubmit} className='space-y-6'>;
+      <div>;
+        <label className='block text-sm font-medium mb-2'>Overall Rating</label>        <StarRating value={rating} onChange={setRating} />;
+      </div>;
+
+      <div>;
+        <label className='block text-sm font-medium mb-2'>Your Review</label>          categories: {;
+
       const data = await res.json ();
       if (throw new Error (data.error || 'Failed to submit')) {
   $2
@@ -161,10 +187,12 @@ pr-12243
             qualityOfWork;
             timeliness;
             wouldWorkWithAgain}})});
+
     }
   }
   return (
 
+}
 
     }
   }
@@ -207,6 +235,8 @@ pr-12243
           onChange={e => setText(e && e.target.value)}          required;
         />;
       </div>;
+
+<label className="block text-sm font-medium mb-2" htmlFor="input-Your Review">Your Review</label>
         <label className="block text-sm font-medium mb-2" htmlFor="input-Your Review">Your Review</label>
 
         <textarea
@@ -227,6 +257,19 @@ pr-12243
           id='anonymous'
           type='checkbox'
           checked={anonymous}
+
+          onChange={e => setAnonymous(e && e.target.checked)}
+        />;
+        <label htmlFor='anonymous'>Submit anonymously</label>;
+
+      <div className='grid md:grid-cols-2 gap-4'>;
+        <div className='enhanced-card'>;
+          <div className='flex items-center justify-between mb-2'>;
+            <span className='text-sm'>Communication</span>;
+
+            <StarRating
+              value={communication |0}
+              onChange={v => setCommunication(v)}
       set_submitting (false);
     }
   }
@@ -274,14 +317,33 @@ pr-12243
           </div>;
           <span className='pill'>Optional</span>;
         </div>;
+
+        <div className='enhanced - card'>;
+          <div className='flex items - center justify - between mb - 2'>;
+            <span className='text - sm'>Quality of Work</span>;
+            <StarRating;
+              value={qualityOfWork || 0}
+              on_change={v => setQualityOfWork (v)}
+
             />;
           </div>;
           <span className='pill'>Optional</span>;
         </div>;
+
+        <div className='enhanced - card'>;
+          <div className='flex items - center justify - between mb - 2'>;
+            <span className='text - sm'>Timeliness</span>;
+            <StarRating;
+              value={timeliness || 0}
+              on_change={v => set_timeliness (v)}
+
             />;
           </div>;
           <span className='pill'>Optional</span>;
         </div>;
+
+              onChange={e => setWouldWorkWithAgain(e && e.target.checked)}
+<div className='enhanced - card'>;
         <div className='enhanced - card'>;
           <div className='flex items - center justify - between mb - 2'>;
             <span className='text - sm'>Would Work With Again</span>;
@@ -294,6 +356,23 @@ pr-12243
           </div>;
           <span className='pill'>Optional</span>        </div>;
       </div>;
+
+      </button>;
+
+      {message && <p className='text-sm'>{message}</p>}
+    </form>;
+  );
+
+};
+
+export default ReviewForm;    </form>;
+  );
+
+        disabled={submitting}
+      >;
+        {submitting ? 'Submitting...' : 'Submit Review'}
+
+<button
       <button
         type="submit"
         className="enhanced-button enhanced-button-primary"
@@ -335,4 +414,4 @@ export default ReviewForm;
 export default ReviewForm;
 origin/cursor/automate-test-improve-and-merge-code-2533
 pr-12243
->>>>>>> origin/main
+

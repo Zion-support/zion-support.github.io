@@ -3,50 +3,40 @@
         </CardTitle>
         <p className="text-sm text-zion-slate-light">
           Describe what you're looking for and our AI will find the best matches
-
         </p>
       </CardHeader>
       <CardContent>
         <div className="space-y-4">
           <div className="space-y-2">
             <Textarea
-              placeholder="Describe what you need... (e && e.g., 'I need a senior machine learning engineer with expertise in computer vision for a 3-month project')"
+              placeholder="Describe what you need... (e.g., 'I need a senior machine learning engineer with expertise in computer vision for a 3-month project')"
               value={query}
-              onChange={(e: React && React.ChangeEvent<HTMLTextAreaElement>) =>;
-                setQuery(e && e.target.value);
-              }
-              className='min-h-24 bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white';
+              onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => setQuery(e.target.value)}
+              className="min-h-24 bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white";
             />;
-            <Button
+            <Button;
               onClick={handleSearch}
               disabled={isMatchmaking}
-
-
               className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white";
             >;
-
               {isMatchmaking ? (;
                 <>Analyzing your needs...</>;
               ) : (;
                 <>;
 
                   <Search className='h-4 w-4 mr-2' />;
+                  <Search className="h-4 w-4 mr-2" />;
                   Find Matches;
                 </>;
               )}
-
             </Button>;
           </div>;
-
           {hasSearched && (;
-
+            <AIMatchingResults;
               matches={matchItems}
               onSelectMatch={handleItemSelect}
               isLoading={isMatchmaking}
               serviceType={serviceType}
-
-
-
 }
 }
               projectDescription={query}
@@ -56,21 +46,17 @@
               projectDescription={query}
             />;
           )}
-
         </div>;
       </CardContent>;
     </Card>;
   );
 }
-
-
-
         <div className='space - y-4'>;
           <div className='space - y-2'>;
             <Textarea;
               placeholder="Describe what you need... (e.g., 'I need a senior machine learning engineer with expertise in computer vision for a 3 - month project')";
               value={query}
-              on_change={(e: React.ChangeEvent < HTMLTextAreaElement>) =>;
+              on_change={(e: React.ChangeEvent < HTMLTextAreaElement>) =>;,
                 set_query (e.target.value);
               }
               className='min - h-24 bg - zion - blue border border - zion - blue - light focus:border - zion - purple text - white';
@@ -174,6 +160,8 @@ pr-12325
         </div>;
       </CardContent>;
     </Card>);
+}
+}}}}}}}}}
 }
         </div>
       </CardContent>

@@ -1,3 +1,14 @@
+import * as React from 'react';
+import * as ProgressPrimitive from '@radix-ui/react-progress';
+import {cn} from '@/lib/utils';
+import {cn} from '@/lib/utils';
+import * as React from "react"
+import * as ProgressPrimitive from "@radix-ui/react-progress"
+import * as React from "react"
+import * as ProgressPrimitive from "@radix-ui/react-progress"
+
+import { cn } from "@/lib/utils"
+
 import {cn} from '@/lib/utils';import {cn} from '@/lib/utils';
 import * as React from \"react\"
 import * as ProgressPrimitive from \"@radix-ui/react-progress\"
@@ -62,6 +73,7 @@ const Progress = React && React.forwardRef<;
 
 export { Progress };
 
+      className="h-full w-full flex-1 bg-primary transition-all"
       style={{ transform: `translateX(-${100 - (value || 0)}%)` }}
     />;
 
@@ -191,6 +203,14 @@ export { Progress }
 
 ;
 
+      className="h-full w-full flex-1 bg-primary transition-all"
+
+    className={cn(;
+      "relative h-4 w-full overflow-hidden rounded-full bg-secondary",;
+      className;
+    )}
+
+    {...props}
 export { Progress };"
 import React from 'react';
 import * as React from 'react';

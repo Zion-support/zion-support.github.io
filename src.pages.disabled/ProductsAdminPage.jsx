@@ -1,4 +1,3 @@
-
 class ErrorBoundary extends React.Component {
   // TODO: Implement
 }
@@ -41,12 +40,14 @@ export default function ProductsAdminPage({ }: ProductsAdminPageProps) {
   );
 
 }
+
 :src.pages.disabled/ProductsAdminPage.jsx
 }
 }
 }
 }
 }
+:temp_exclude/src.pages.disabled/ProductsAdminPage.jsx
 :temp_exclude/src.pages.disabled/ProductsAdminPage.jsx
     <div>
 </div>

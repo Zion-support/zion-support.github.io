@@ -1,39 +1,5 @@
 
-<<<<<<< HEAD
-import fs from 'fs';
-import path from 'path';
-type NewsItem = any;
 
-=======
-
-}</div> </div>) import fs from 'fs';
-import fs from 'fs';
-import path from 'path';
- </div> </div>) ) ;
-}</div> </div>) import fs from 'fs';
-}</div> </div>) import fs from 'fs';
-type NewsItem = { source: string;, title: string;, url: string;, summary: string;, tags: string[] ;}
-export async function getServerSideProps() {
-}</div> </div>) import fs from 'fs';
-type NewsItem = { source: string;, title: string;, url: string;, summary: string;, tags: string[] ;},
-export async function getServerSideProps() {;
-  const file = path.join(process.cwd(), 'datanews-digest.json');
-  let items: NewsItem[] = [];  let generatedAt = '';
-  try {;
-    const raw = fs && fs.readFileSync(file, 'utf-8');
-    const json = JSON && JSON.parse(raw);
-    items = json && json.items || [];
-    generatedAt = json && json.generatedAt || '';
-type NewsItem = { source: string;, title: string;, url: string;, summary: string;, tags: string[] ;},
-export async function getServerSideProps() {;
-  const file = path.join(process.cwd(), 'datanews-digest.json');
-  let items: NewsItem[] = [];  let generatedAt = '';
-  try {
-    items = json.items || [];
-
-type NewsItem = any;
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/main
     generatedAt = json.generatedAt || ''
 
   } catch {}

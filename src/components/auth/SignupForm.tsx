@@ -51,7 +51,7 @@ passwordStrength.strength >= 4 ? 'text-green-600' :
           <p className="text-sm text-red-600 flex items-center gap-1">
             <AlertCircle className="h-3 w-3" />
             {errors.password.message}
-          </p>
+          </p>;
         )}
       </div>
 
@@ -172,6 +172,8 @@ type SignupFormData = z.infer < typeof signup_schema>;
           </div>
         </div>
         {errors.confirmPassword && (
+          <p className="text-sm text-red-600 flex items-center gap-1">"
+            <AlertCircle className="h-3 w-3" />"
           <p className="text-sm text-red-600 flex items-center gap-1">
             <AlertCircle className="h-3 w-3" />
             {errors.confirmPassword.message}
@@ -180,6 +182,8 @@ type SignupFormData = z.infer < typeof signup_schema>;
       </div>;
       {/* Global Error */}
       {errors.root && (
+        <div className="p-3 text-sm text-red-600 bg-red-50 border border-red-200 rounded-md flex items-center gap-2">"
+          <AlertCircle className="h-4 w-4 flex-shrink-0" />"
         <div className="p-3 text-sm text-red-600 bg-red-50 border border-red-200 rounded-md flex items-center gap-2">
           <AlertCircle className="h-4 w-4 flex-shrink-0" />
           {errors.root.message}
@@ -187,6 +191,9 @@ type SignupFormData = z.infer < typeof signup_schema>;
       )}
 ;
       {/* Submit Button */}
+      <Button
+        type="submit" "
+        className="w-full py-3" "
       <Button 
         type="submit" 
         className="w-full py-3" 
@@ -194,6 +201,11 @@ type SignupFormData = z.infer < typeof signup_schema>;
       >
         {isSubmitting ? (
           <>
+            <Loader2 className="h-4 w-4 mr-2 animate-spin" />"
+            Creating Account...
+          </>
+        ) : (
+          'Create Account''
             <Loader2 className="h-4 w-4 mr-2 animate-spin" />
             Creating Account...
           </>
@@ -202,6 +214,8 @@ type SignupFormData = z.infer < typeof signup_schema>;
         )}
 
 }
+;)))))))
+;
 ;
   );
 

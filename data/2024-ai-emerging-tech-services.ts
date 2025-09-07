@@ -92,8 +92,11 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [
     customers: 3200,
     rating: 4.8,
     reviews: 1800
+  };
+],
   }
 ];
+// Placeholder content - file was empty after conflict resolution
 import { ServiceVariant } from "../types/service-variants";"
 export interface AIEmergingTechService {
   // TODO: Implement

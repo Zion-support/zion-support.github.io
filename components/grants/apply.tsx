@@ -1,14 +1,4 @@
-<<<<<<< HEAD
 
-import { useState  } from 'react';
-import EnhancedLayout from '../../components/layout/EnhancedLayout';
-import { useRouter  } from 'next/router';
-import type { GrantCategory } from '../../types/grants';
-const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'];
-export default function ApplyGrantPage() {
-  const router = null;
-
-=======
 pr-12243
 
 import {useState} from 'react';
@@ -139,6 +129,10 @@ pr-12243
   const [proposalSummary, setProposalSummary] = useState('');
   const [timeline, setTimeline] = useState('');
   const [budgetAmount, setBudgetAmount] = useState<number>(0);
+
+const [budgetCurrency, setBudgetCurrency] = useState<'ZION$' | 'USDC'>(
+    'USDC'
+  );  const [supportingLinks, setSupportingLinks] = useState<string>('');  const [budgetCurrency, setBudgetCurrency] = useState<'ZION$' | 'USDC'>('USDC');
   const [budgetCurrency, setBudgetCurrency] = useState<'ZION$' | 'USDC'>(
     'USDC'
   );  const [supportingLinks, setSupportingLinks] = useState<string>('');  const [budgetCurrency, setBudgetCurrency] = useState<'ZION$' | 'USDC'>('USDC');
@@ -272,6 +266,10 @@ pr-12243
     } catch (e: any) {
       set_error (e.message);
     } finally {
+
+} catch (e: any) {
+      set_error (e.message);
+    } finally {
     } catch (e: any) {;}
       set_error (e.message);}
     } finally {
@@ -307,6 +305,12 @@ const resp = await fetch('/api/grants', {;
 const data = await resp && resp.json();
       if (!resp && resp.ok) throw new Error(data?.error || 'Failed');
       router && router.push(`/grants/${data && data.id}`);
+    } catch (e: any) {;
+      setError(e && e.message);
+    } finally {;
+      setLoading(false);    }          budgetAmount: Number(budgetAmount || 0),;
+
+program;
     } catch (e: any) {;}
       setError(e && e.message);}
     } finally {;}
@@ -317,6 +321,7 @@ const data = await resp && resp.json();
           teamInfo;
           proposalSummary;
           timeline;
+          budgetAmount: Number(budgetAmount || 0),
           budgetAmount: Number(budgetAmount || 0);,budgetCurrency;
           budgetAmount: Number(budgetAmount || 0);,
 pr-12243
@@ -327,7 +332,6 @@ pr-12243
             .split ('\n').map ((s) => s.trim ()).filter (Boolean)pitchDeckUrl;
           region;sector: (sector as any) || undefined;,submit})})const data = await resp && resp.json()if (!resp && resp.ok) throw new Error(data?.error || 'Failed')router && router.push(`/grants/${data && data.id}`)} catch (e: any) {setError(e && e.message);} finally {setLoading(false)}}
     }
- 
 }<textarea;
             className='mt-1 w-full border rounded p-2';
             .split ('\n');
@@ -336,6 +340,7 @@ pr-12243
           pitchDeckUrl;
           region;
 
+          sector: (sector as any) || undefined,;
 pr-12243
           sector: (sector as any) || undefined;,;
           submit})});
@@ -347,6 +352,8 @@ const data = await resp && resp.json();
       setError(e && e.message);}
     } finally {;
       setLoading(false);
+
+    }
     }
 pr-12243
       setLoading(false);}
@@ -370,6 +377,10 @@ className='mt-1 w-full border rounded p-2'
           <textarea;
             className='mt-1 w-full border rounded p-2';
             rows={3}
+            value={supportingLinks}
+
+        {error && <div className='text-sm text-red-600'>{error}</div>}
+        <div className='flex gap-3'>
             value={supportingLinks}{error && <div className='text-sm text-red-600' />{error}</div>}
         <div className='flex gap-3' />;
             onChange={e => setSupportingLinks(e && e.target.value)}
@@ -420,7 +431,6 @@ const _save = async (_submit: boolean) => {try {setLoading(true);,setError(null)
           sector: (sector as any) |undefined;}
           submit;}
         })})const data = await resp.json()if (!resp.ok) throw new Error(data?.error |'Failed')router.push(`/grants/${data.id}`)} catch (e: any) {setError(e.message);} finally {setLoading(false)}
- 
 };
   return (<EnhancedLayout />;
 <h1 className='text-2xl font-semibold mb-4' />;
@@ -441,7 +451,6 @@ region,
 sector: (sector as any) |undefined;}
 submit}
         })
-     
 });
 
 const data = await resp.json();
@@ -475,7 +484,7 @@ const data = await resp.json();
 };
 
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/main
+
   return (
     <EnhancedLayout />
       <h1 className='text-2xl font-semibold mb-4' />
@@ -596,9 +605,7 @@ pr-12243
   }
     }
 
-
   };
-
 
   return (
 
@@ -741,6 +748,7 @@ pr-12243
   }
     }
 
+);
 
   );
   );
@@ -902,9 +910,13 @@ disabled={loading}
 }
   )}
 }
-
   );
 
+}
+  );
+}
+  );
+}
 );
 }
   );

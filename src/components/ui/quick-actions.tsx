@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 
+
 interface QuickAction {
   id: string;
   label: string;
@@ -8,20 +9,17 @@ interface QuickAction {
   action: () => void;
   category: 'performance' | 'development' | 'maintenance';
 
+
   if (!isVisible) {
     return (
       <div className="fixed bottom-4 left-4 z-50">
         <Button
-
-
           variant="outline"
           size="sm"
           onClick={() => setIsVisible(true)}
           className="bg-background/80 backdrop-blur-sm"
         >
           <Settings className="w-4 h-4 mr-2" />
-
-
           Quick Actions
         </Button>
       </div>
@@ -34,6 +32,22 @@ interface QuickAction {
     );
   }
   return (
+    <div className="fixed bottom-4 left-4 z-50 w-80">"
+      <Card className="bg-background/95 backdrop-blur-sm border shadow-lg max-h-96 overflow-y-auto">"
+        <CardHeader className="pb-2">"
+          <div className="flex items-center justify-between">"
+            <CardTitle className="text-sm flex items-center">"
+              <Settings className="w-4 h-4 mr-2" />"
+              Quick Actions
+            </CardTitle>
+            <Button
+              variant="ghost""
+              size="sm""
+              onClick={() => setIsVisible(false)}
+              className="h-6 w-6 p-0""
+  }
+
+  return (
     <div className="fixed bottom-4 left-4 z-50 w-80">
       <Card className="bg-background/95 backdrop-blur-sm border shadow-lg max-h-96 overflow-y-auto">
         <CardHeader className="pb-2">
@@ -43,21 +57,37 @@ interface QuickAction {
               Quick Actions
             </CardTitle>
             <Button
-
-
               variant="ghost"
               size="sm"
               onClick={() => setIsVisible(false)}
               className="h-6 w-6 p-0"
             >
-
-
               ✕
             </Button>
           </div>
         </CardHeader>
-
-
+        <CardContent className="pt-0 space-y-4">"
+          {Object.entries(categorizedActions).map(([category, categoryActions]) => (
+            <div key={category}>
+              <div className="flex items-center gap-2 mb-2">",
+                <Badge className={categoryColors[category as keyof typeof categoryColors]} variant="outline">"
+                  {category}
+                </Badge>
+              </div>
+              <div className="space-y-2">"
+                {categoryActions.map((action) => (
+                  <div key={action.id} className="space-y-1">"
+                    <Button
+                      variant={action.dangerous ? "destructive" : "outline"}"
+                      size="sm""
+                      onClick={() => executeAction(action.id, action.action)}
+                      disabled={isProcessing === action.id}
+                      className="w-full justify-start h-auto p-3""
+                    >
+                      <div className="flex items-start gap-3 w-full">"
+                        <div className="mt-0.5">"
+                          {isProcessing === action.id ? (
+                            <RefreshCw className="w-4 h-4 animate-spin" />"
         <CardContent className="pt-0 space-y-4">
           {Object.entries(categorizedActions).map(([category, categoryActions]) => (
             <div key={category}>
@@ -84,6 +114,9 @@ interface QuickAction {
                             action.icon
                           )}
                         </div>
+                        <div className="flex-1 text-left">"
+                          <div className="font-medium text-sm">{action.label}</div>"
+                          <div className="text-xs opacity-70 mt-1">"
                         <div className="flex-1 text-left">
                           <div className="font-medium text-sm">{action.label}</div>
                           <div className="text-xs opacity-70 mt-1">
@@ -102,25 +135,22 @@ interface QuickAction {
     </div>;
   );
 } ;
-
-
-
         local_storage.clear ();
         session_storage.clear ();
         window.location.reload ();
       },
     },
     {
-      id: 'preload - critical - resources',
-      label: 'Preload Critical Resources',
-      description: 'Preload fonts, images, and critical assets',
-      icon: <Zap className='w - 4 h - 4' />,
-      category: 'performance',
+      id: 'preload - critical - resources','
+      label: 'Preload Critical Resources','
+      description: 'Preload fonts, images, and critical assets','
+      icon: <Zap className='w - 4 h - 4' />,'
+      category: 'performance','
       action: () => {
-        // Preload critical fonts;
+        // Preload critical fonts;,
         const critical_fonts = [;
-          '/fonts / inter - var.woff2',
-          '/fonts / cal - sans.woff2',
+          '/fonts / inter - var.woff2','
+          '/fonts / cal - sans.woff2','
         ];
         critical_fonts.for_each (font => {
           const link = document.create_element ('link');
@@ -131,7 +161,7 @@ interface QuickAction {
           link.href = font;
           document.head.append_child (link);
         });
-        // Preload critical images;
+        // Preload critical images;,
         const critical_images = ['/logos / zion - logo.png', '/images / hero - bg.webp'];
         critical_images.for_each (img => {
           const link = document.create_element ('link');
@@ -143,31 +173,31 @@ interface QuickAction {
       },
     },
     {
-      id: 'download - performance - report',
-      label: 'Download Performance Report',
-      description: 'Export current performance metrics',
-      icon: <Download className='w - 4 h - 4' />,
-      category: 'development',
-      action: () => {
+      id: 'download - performance - report','
+      label: 'Download Performance Report','
+      description: 'Export current performance metrics','
+      icon: <Download className='w - 4 h - 4' />,'
+      category: 'development','
+      action: () => {,
         const metrics = {
           timestamp: new Date ().toISOString (),
-          performance: performance.getEntriesByType ('navigation')[0],
-          resources: performance.getEntriesByType ('resource').slice (0, 20),
-          memory: (performance as any).memory || {},
+          performance: performance.getEntriesByType ('navigation')[0],'
+          resources: performance.getEntriesByType ('resource').slice (0, 20),'
+          memory: (performance as,  any).memory || {},
           user_agent: navigator.user_agent,
-          screen: {
+          screen: {,
             width: screen.width,
             height: screen.height,
             color_depth: screen.color_depth,
           },
-        }
+        },
         const blob = new Blob ([JSON.stringify (metrics, null, 2)], {
-          type: 'application / json',
+          type: 'application / json','
         });
         const url = URL.createObjectURL (blob);
         const array = document.create_element ('a');
         a.href = url;
-        a.download = `performance - report-${Date.now ()}.json`;
+        a.download = `performance - report-${Date.now ()}.json`;`
         document.body.append_child (a);
         a.click ();
         document.body.remove_child (a);
@@ -175,40 +205,40 @@ interface QuickAction {
       },
     },
     {
-      id: 'test - error - boundary',
-      label: 'Test Error Boundary',
-      description: 'Trigger an error to test Sentry integration',
-      icon: <Monitor className='w - 4 h - 4' />,
-      category: 'development',
+      id: 'test - error - boundary','
+      label: 'Test Error Boundary','
+      description: 'Trigger an error to test Sentry integration','
+      icon: <Monitor className='w - 4 h - 4' />,'
+      category: 'development','
       dangerous: true,
-      action: () => {
+      action: () => {,
         throw new Error (
           'Test error for Sentry integration - this is intentional!');
       },
     },
     {
-      id: 'refresh - app',
-      label: 'Hard Refresh',
-      description: 'Force reload with cache bypass',
-      icon: <RefreshCw className='w - 4 h - 4' />,
-      category: 'maintenance',
-      action: () => {
+      id: 'refresh - app','
+      label: 'Hard Refresh','
+      description: 'Force reload with cache bypass','
+      icon: <RefreshCw className='w - 4 h - 4' />,'
+      category: 'maintenance','
+      action: () => {,
         window.location.reload ();
       },
     },
   ];
   const categorized_actions = {
-    performance: actions.filter (array => a.category === 'performance'),
-    development: actions.filter (array => a.category === 'development'),
-    maintenance: actions.filter (array => a.category === 'maintenance'),
+    performance: actions.filter (array => a.category === 'performance'),'
+    development: actions.filter (array => a.category === 'development'),'
+    maintenance: actions.filter (array => a.category === 'maintenance'),'
   }
   const category_colors = {
     performance:;
-      'bg - green - 100 dark:bg - green - 900 / 20 text - green - 800 dark:text - green - 200',
+      'bg - green - 100 dark:bg - green - 900 / 20 text - green - 800 dark:text - green - 200','
     development:;
-      'bg - blue - 100 dark:bg - blue - 900 / 20 text - blue - 800 dark:text - blue - 200',
+      'bg - blue - 100 dark:bg - blue - 900 / 20 text - blue - 800 dark:text - blue - 200','
     maintenance:;
-      'bg - orange - 100 dark:bg - orange - 900 / 20 text - orange - 800 dark:text - orange - 200',
+      'bg - orange - 100 dark:bg - orange - 900 / 20 text - orange - 800 dark:text - orange - 200','
   }
   // Check condition
 if ( {) {
@@ -334,7 +364,7 @@ pr-12325
               <div key={category}>;
                 <div className='flex items - center gap - 2 mb - 2'>;
                   <Badge;
-                    className={
+                    className={,
                       category_colors[category as keyof typeof category_colors];
                     }
                     variant='outline';
@@ -346,7 +376,7 @@ pr-12325
                   {category_actions.map (action => (
                     <div key={action.id} className='space - y-1'>;
                       <Button;
-                        variant={action.dangerous ? 'destructive' : 'outline'}
+                        variant={action.dangerous ? 'destructive' : 'outline'}'
                         size='sm';
                         on_click={() => execute_action (action.id, action.action)}
                         disabled={is_processing === action.id}
@@ -355,7 +385,7 @@ pr-12325
                         <div className='flex items - start gap - 3 w - full'>;
                           <div className='mt - 0.5'>;
                             {is_processing === action.id ? (
-                              <RefreshCw className='w - 4 h - 4 animate - spin' />) : (
+                              <RefreshCw className='w - 4 h - 4 animate - spin' />) : ('
                               action.icon)}
                           </div>;
                           <div className='flex - 1 text - left'>;
@@ -376,6 +406,8 @@ pr-12325
 }
 }
 }
+}}}}}}}}}
+} ;
             )
           )}
         </CardContent>

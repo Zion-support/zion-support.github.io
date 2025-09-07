@@ -1,22 +1,3 @@
-<<<<<<< HEAD
-
-
-import { useState, useEffect } from "react",
-import { Star } from "lucide-react",
-import { ReviewStats } from "@/components/reviews/ReviewStats",
-import { ReviewsList } from "@/components/reviews/ReviewsList",
-import { useReviews } from "@/hooks/useReviews",
-import { Button } from "@/components/ui/button";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-interface ProfileRatingsProps {
-  userId: string;
-
-  averageRating?: number;
-  ratingCount?: number
-}
-
-
-export function ProfileRatings({ userId, averageRating;
 
   return (
     <div className="space-y-6">
@@ -28,10 +9,8 @@ export function ProfileRatings({ userId, averageRating;
             ratingDistribution={ratingDistribution}
           />
         </div>
-        
-        <div className="md:w-2/3">
-=======
->>>>>>> origin/main
+
+
           <Tabs defaultValue="all">
             <TabsList className="mb-4">
               <TabsTrigger value="all">
@@ -218,6 +197,9 @@ export function ProfileRatings({
                 is_loading={is_loading}
                 onReportReview={report_review}
 
+}
+
+    </div>;
               />;
             </TabsContent>;
           </Tabs>;
@@ -234,7 +216,6 @@ ratingCount?: number
   reviews, isLoading, fetchUserReviews, reportReview 
 }= useReviews ();
 const [ratingDistribution, setRatingDistribution] = useState<Record<number number>> ({
-  
 });
 //Calculate rating distribution useEffect ( () => {
   if (reviews.length > 0) {
@@ -351,7 +332,6 @@ export function ProfileRatings({
 
               <TabsTrigger value="positive">Positive""
               <TabsTrigger value="critical">Critical"
-            
             <TabsContent value="all">"
 
               <ReviewsList;
@@ -359,19 +339,15 @@ export function ProfileRatings({
                 isLoading={isLoading}
                 onReportReview={reportReview}
 
-            
             <TabsContent value="positive">"
 
               <ReviewsList;)
                 reviews={reviews && reviews.filter((r) => r && r.rating >= 4)}
 
-            
             <TabsContent value="critical">"
 
                 reviews={reviews && reviews.filter((r) => r && r.rating < 4)}
 
-            
-          
     </div>;
 const [ratingDistribution, setRatingDistribution] = useState<Record<number number>> ({
 
