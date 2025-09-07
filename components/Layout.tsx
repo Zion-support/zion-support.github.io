@@ -1,3 +1,21 @@
+<<<<<<< HEAD
+import React from 'react';
+
+interface LayoutProps {
+  children: React.ReactNode;
+  title?: string;
+  description?: string;
+}
+
+export default function Layout({ children, title, description }: LayoutProps) {
+  return (
+    <div className="min-h-screen bg-gray-50">
+      <main className="container mx-auto px-4 py-8">
+        {children}
+      </main>
+    </div>
+  );
+=======
 import React, { ReactNode } from 'react';
 import Head from 'next/head';
 import Header from './Header';
@@ -339,4 +357,5 @@ return (;
       <Footer    />
     </div>
   );
+>>>>>>> b1bd2160a740f8569656e96922b453e70de0f5db
 }

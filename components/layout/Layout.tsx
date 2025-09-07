@@ -1,3 +1,19 @@
+<<<<<<< HEAD
+import React from 'react';
+
+interface LayoutProps {
+  children: React.ReactNode;
+  title?: string;
+  description?: string;
+}
+
+export default function Layout({ children, title, description }: LayoutProps) {
+  return (
+    <div className="min-h-screen bg-gray-50">
+      <main className="container mx-auto px-4 py-8">
+        {children}
+      </main>
+=======
 import React, { ReactNode } from 'react';
 import Head from 'next/head';
 import Header from './Header';
@@ -105,6 +121,7 @@ export default function Layout({
       <Header  />
       <main>{children}</main>
       <Footer  />
+>>>>>>> b1bd2160a740f8569656e96922b453e70de0f5db
     </div>
 >>>>>>> origin/chore/fix-lint-and-merge
   );

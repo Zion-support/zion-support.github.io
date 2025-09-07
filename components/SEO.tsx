@@ -1,10 +1,28 @@
+<<<<<<< HEAD
+=======
 
 ;
+>>>>>>> b1bd2160a740f8569656e96922b453e70de0f5db
 import React from 'react';
 import Head from 'next/head';
 
 interface SEOProps {
   title?: string;
+<<<<<<< HEAD
+  description?: string;
+  keywords?: string;
+}
+
+export default function SEO({ title, description, keywords }: SEOProps) {
+  return (
+    <Head>
+      {title && <title>{title}</title>}
+      {description && <meta name="description" content={description} />}
+      {keywords && <meta name="keywords" content={keywords} />}
+    </Head>
+  );
+}
+=======
 
 interface SEOProps {
   title?: string;
@@ -143,3 +161,4 @@ export default SEO;
     </Head>
   );
 }
+>>>>>>> b1bd2160a740f8569656e96922b453e70de0f5db

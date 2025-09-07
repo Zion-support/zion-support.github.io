@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 
@@ -6,14 +8,16 @@ pr-12243
 
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> b1bd2160a740f8569656e96922b453e70de0f5db
 import React from 'react';
 
-interface UltraFuturisticBackgroundProps {}
+interface UltraFuturisticBackgroundProps {
   children: React.ReactNode;
 <<<<<<< HEAD
   variant?: 'quantum' | 'matrix' | 'neon';
-  variant?: 'quantum' | 'neon' | 'cyber';
   intensity?: 'low' | 'medium' | 'high';
+<<<<<<< HEAD
+=======
 
 pr-12243
 =======
@@ -28,34 +32,22 @@ interface UltraFuturisticBackgroundProps {}
 
   intensity?: low' | 'medium | high';
   className?: string;
+>>>>>>> b1bd2160a740f8569656e96922b453e70de0f5db
 }
 
 export default function UltraFuturisticBackground({ 
   children, 
-  variant = 'quantum, 
-  intensity = medium',
-  className = '
+  variant = 'quantum', 
+  intensity = 'medium' 
 }: UltraFuturisticBackgroundProps) {
-  const getBackgroundClasses = () => {
-    const baseClasses = min-h-screen relative overflow-hidden';
-    
-    switch (variant) {
-      case 'quantum:
-        return `${baseClasses} bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900`;
-      case matrix':
-        return `${baseClasses} bg-gradient-to-br from-green-900 via-gray-900 to-black`;
-      case 'neon:
-        return `${baseClasses} bg-gradient-to-br from-pink-900 via-purple-900 to-cyan-900`;
-      default:
-        return `${baseClasses} bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900`;
-    }
-  }
-  
   return (
-    <div className={`${getBackgroundClasses()} ${className}`}>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {children}
     </div>
   );
+<<<<<<< HEAD
+}
+=======
 }
   intensity?: low' | 'medium | high';
   colorScheme?: 'quantum-fusion | neon-cyber' | 'holographic-matrix | space-time';
@@ -195,3 +187,4 @@ export default UltraFuturisticBackground;"
 
 export default UltraFuturisticBackground;
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> b1bd2160a740f8569656e96922b453e70de0f5db

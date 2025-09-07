@@ -1,4 +1,23 @@
 import React from 'react';
+<<<<<<< HEAD:pages/careers.tsx
+import Head from 'next/head';
+
+export default function Careers() {
+  return (
+    <>
+      <Head>
+        <title>careers | Zion Tech Group</title>
+        <meta name="description" content="careers page" />
+      </Head>
+      <div className="min-h-screen bg-gray-50 py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-6">
+              careers
+            </h1>
+            <p className="text-xl text-gray-600">
+              This is the careers page.
+=======
 import { motion } from 'framer-motion';
 import MainLayout from '../components/layout/MainLayout';
 
@@ -966,26 +985,16 @@ transition={{ duration: 0 && 0.8 }}
             </h2>
             <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
               We&apos;re always looking for talented individuals. Send us your resume and let&apos;s discuss how you can contribute to our mission.
+>>>>>>> b1bd2160a740f8569656e96922b453e70de0f5db:pages.disabled/careers.tsx
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
-              <a href="mailto:careers@ziontechgroup.com" className="flex items-center text-white hover:text-blue-200 transition-colors">
-                <Mail className="w-5 h-5 mr-2" />
-                careers@ziontechgroup.com
-              </a>
-              <a href="tel:+13024640950" className="flex items-center text-white hover:text-blue-200 transition-colors">
-                <Phone className="w-5 h-5 mr-2" />
-                +1 302 464 0950
-              </a>
-            </div>
-            <div className="mt-8">
-              <Link href="/contact">
-                <button className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors text-lg">
-                  Send Your Resume
-                  <ArrowRight className="w-5 h-5 ml-2 inline" />
-                </button>
-              </Link>
-            </div>
           </div>
+<<<<<<< HEAD:pages/careers.tsx
+        </div>
+      </div>
+    </>
+  );
+}
+=======
         </section>
       </main>
 </>
@@ -1066,3 +1075,4 @@ const Page = () => {
           <p className="text-xl text-gray-600">Join our innovative team! Check back soon for exciting career opportunities.</p>
 
         </div>
+>>>>>>> b1bd2160a740f8569656e96922b453e70de0f5db:pages.disabled/careers.tsx

@@ -1,3 +1,5 @@
+<<<<<<< HEAD:pages/api/fraud/ingest.ts
+=======
 
 
 import type { NextApiRequest, NextApiResponse } from "next";
@@ -324,8 +326,24 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   } catch (e: any) {
       .json({ error: "Internal error", details: e?.message |String(e) });
       .json({ error: "Internal error", details: e?.message || String(e) });
+>>>>>>> b1bd2160a740f8569656e96922b453e70de0f5db:pages.disabled/api/fraud/ingest.ts
 import type { NextApiRequest, NextApiResponse } from 'next';
+
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
+<<<<<<< HEAD:pages/api/fraud/ingest.ts
+  if (req.method !== 'GET') {
+    return res.status(405).json({ message: 'Method not allowed' });
+  }
+
+  try {
+    // TODO: Implement ingest logic
+    res.status(200).json({ message: 'ingest endpoint' });
+  } catch (error) {
+    console.error('Error in ingest:', error);
+    res.status(500).json({ message: 'Internal server error' });
+  }
+}
+=======
   res.status(200).json({ message: 'Fraud ingest endpoint' });
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { evaluateHeuristics } from '../../../utils/fraud/heuristics';
@@ -457,3 +475,4 @@ export default async function handler(req, res) {
 
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> b1bd2160a740f8569656e96922b453e70de0f5db:pages.disabled/api/fraud/ingest.ts

@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+import React from 'react';
+=======
 
 
 ;
@@ -41,14 +44,14 @@ import React, { ReactNode } from 'react';
 import Head from 'next/head';
 import Header from '../Header';
 import Footer from './Footer';
+>>>>>>> b1bd2160a740f8569656e96922b453e70de0f5db
 
 interface MainLayoutProps {
-  title: string,
-  description: string,
-  children: React.ReactNode,
-  title: string;
-  description: string;
   children: React.ReactNode;
+<<<<<<< HEAD
+  title?: string;
+  description?: string;
+=======
 =======
 return (<>;}
       <Head    />;}
@@ -60,16 +63,21 @@ import Layout from './Layout';
 interface MainLayoutProps {
   interface MainLayoutProps  {children: ReactNode, title?: string,  description?: string;
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> b1bd2160a740f8569656e96922b453e70de0f5db
   keywords?: string;
   image?: string;
   url?: string;
-  type?: 'website' | 'article' | 'product';
+  type?: string;
   noindex?: boolean;
   nofollow?: boolean;
 <<<<<<< HEAD
   canonical?: string;
 }
 
+<<<<<<< HEAD
+const MainLayout: React.FC<MainLayoutProps> = ({ 
+  children, 
+=======
 const MainLayout: React.FC<MainLayoutProps> = ({
   children;
   title = "Zion Tech Group - Leading Technology Solutions Provider";
@@ -322,11 +330,22 @@ return (<>;}
 export default MainLayout;ursor/automate-test-improve-and-merge-code-646c;
 }
 export default function MainLayout({ 
+>>>>>>> b1bd2160a740f8569656e96922b453e70de0f5db
   title, 
   description, 
-  children, 
-  keywords = "AI solutions, IT services, micro SaaS, technology consulting",
+  keywords, 
+  image, 
+  url, 
+  type = 'website', 
+  noindex = false, 
+  nofollow = false, 
   canonical 
+<<<<<<< HEAD
+}) => {
+  return (
+    <div className="min-h-screen bg-gray-50">
+      <main className="container mx-auto px-4 py-8">
+=======
 }: MainLayoutProps) {
 
 <<<<<<< HEAD
@@ -653,14 +672,16 @@ return (;
       </div>
 <<<<<<< HEAD
       <main className="min-h-screen bg-gray-50">
+>>>>>>> b1bd2160a740f8569656e96922b453e70de0f5db
         {children}
       </main>
-    </>
+    </div>
   );
 };
-export default MainLayout;"
-};
 
+<<<<<<< HEAD
+export default MainLayout;
+=======
 export default MainLayout;
 =======
 
@@ -670,3 +691,4 @@ export default MainLayout;
 
 export default MainLayout;"
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> b1bd2160a740f8569656e96922b453e70de0f5db

@@ -1,3 +1,7 @@
+<<<<<<< HEAD:pages/jobs/new.tsx
+import React from 'react';
+import Head from 'next/head';
+=======
 
 import { useState  } from 'react';
 import EnhancedCard from '../../components/ui/EnhancedCard',
@@ -36,8 +40,32 @@ export default function NewJobPage() {
       notify('Job posted! Invite talent to get responses.success')
     }, 800)
   },
+>>>>>>> b1bd2160a740f8569656e96922b453e70de0f5db:pages.disabled/jobs/new.tsx
 
+export default function New() {
   return (
+<<<<<<< HEAD:pages/jobs/new.tsx
+    <>
+      <Head>
+        <title>new | Zion Tech Group</title>
+        <meta name="description" content="new page" />
+      </Head>
+      <div className="min-h-screen bg-gray-50 py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-6">
+              new
+            </h1>
+            <p className="text-xl text-gray-600">
+              This is the new page.
+            </p>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}
+=======
     <div className="max-w-2xl mx-auto">
       <EnhancedCard>
         <h1 className="text-lg font-semibold mb-3">Post a Job</h1>
@@ -57,3 +85,4 @@ export default function NewJobPage() {
     </div>
 );
 origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> b1bd2160a740f8569656e96922b453e70de0f5db:pages.disabled/jobs/new.tsx

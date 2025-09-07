@@ -1,12 +1,17 @@
 import type { Metadata } from 'next';
+import React from 'react';
 import { Inter } from 'next/font/google';
-import './globals.css';
+import Header from './components/Header';
+import Footer from './components/Footer';
+// import './globals.css';
+import PerformanceMonitor from './components/PerformanceMonitor';
 
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Zion Tech Group - Enterprise AI & IT Solutions | Micro SaaS Development',
-  description: 'Leading provider of micro SaaS products, AI services, and IT solutions. 67+ innovative services including cloud optimization, AI automation, quantum computing, and enterprise technology solutions.',
+  metadataBase: new URL('https://ziontechgroup.com'),
+  title: 'Zion Tech Group - Leading AI and Technology Solutions',
+  description: 'Zion Tech Group is a leading technology company specializing in AI, micro SaaS development, and IT services. Transform your business with cutting-edge technology.',
   keywords: ['AI', 'artificial intelligence', 'micro SaaS', 'IT services', 'technology', 'innovation', 'business solutions', 'zion tech'],
   authors: [{ name: 'Zion Tech Group' }],
   creator: 'Zion Tech Group',
@@ -23,7 +28,6 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
     description: 'Enterprise-grade AI, micro SaaS, and IT solutions. Build faster with Zion Tech Group.',
->>>>>>> origin/chore/fix-lint-and-merge
     url: 'https://ziontechgroup.com',
     siteName: 'Zion Tech Group',
     images: [
@@ -31,12 +35,11 @@ export const metadata: Metadata = {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Zion Tech Group - Enterprise AI & IT Solutions',
+        alt: 'Zion Tech Group - AI and Technology Solutions',
       },
     ],
     locale: 'en_US',
     type: 'website',
->>>>>>> origin/chore/fix-lint-and-merge
   },
   twitter: {
     card: 'summary_large_image',
@@ -44,8 +47,6 @@ export const metadata: Metadata = {
     description: 'Transform your business with cutting-edge AI and technology solutions from Zion Tech Group.',
     images: ['/og-image.jpg'],
   },
-<<<<<<< HEAD
-=======
   verification: {
     google: 'your-google-verification-code',
   },
@@ -60,9 +61,7 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-  themeColor: '#000000',
 };
->>>>>>> 88842f44d25f20f54aaa266432fdcc276bc7a834
 
 export default function RootLayout({
   children,
@@ -71,8 +70,18 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="icon" href="/favicon.ico" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#0f172a" />
+      </head>
       <body className={inter.className}>
-        {children}
+        <PerformanceMonitor />
+        <Header />
+        <main>{children}</main>
+        <Footer />
       </body>
     </html>
   );

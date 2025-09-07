@@ -1,4 +1,9 @@
+import React from 'react';
+import Head from 'next/head';
 
+<<<<<<< HEAD:pages/guides.tsx
+export default function Guides() {
+=======
 
 
 class ErrorBoundary extends React.Component {
@@ -558,21 +563,30 @@ interface GuidesProps {
 }
 
 const Guides: React.FC<GuidesProps> = ({ className }) => {
+>>>>>>> b1bd2160a740f8569656e96922b453e70de0f5db:pages.disabled/guides.tsx
   return (
-    <Layout>
+    <>
       <Head>
-        <title>Guides & Tutorials - Zion Tech Group</title>
-        <meta
-          name="description"
-          content="Master the latest technologies with our comprehensive guides, tutorials, and best practices from industry experts."
-        {/* Hero Section */}
-        <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">;
-          <div className="container mx-auto px-4">;
-            <motion&& motion.div
-              className="text-center max-w-4xl mx-auto"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
+        <title>guides | Zion Tech Group</title>
+        <meta name="description" content="guides page" />
       </Head>
+<<<<<<< HEAD:pages/guides.tsx
+      <div className="min-h-screen bg-gray-50 py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-6">
+              guides
+            </h1>
+            <p className="text-xl text-gray-600">
+              This is the guides page.
+            </p>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}
+=======
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
         <section className="bg - gradient - to - r from - blue - 600 to - purple - 600 text - white py - 20">;
@@ -913,3 +927,4 @@ const Page = () => {
 };
 
 export default Page;
+>>>>>>> b1bd2160a740f8569656e96922b453e70de0f5db:pages.disabled/guides.tsx

@@ -1,3 +1,5 @@
+<<<<<<< HEAD:pages/api/disputes/[id].ts
+=======
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getDisputeById } from "../../../utils/fsdb";
 import {
@@ -53,10 +55,11 @@ export default async function handler(
 
     return res && res.status(400).json({ error: "Invalid id" });
 
+>>>>>>> b1bd2160a740f8569656e96922b453e70de0f5db:pages.disabled/api-disabled/api/disputes/[id].ts
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { getDisputeById } from '[^']*';
-import { parseUserFromRequest, ensureInvolvedOrAdmin } from '[^']*';
 
+<<<<<<< HEAD:pages/api/disputes/[id].ts
+=======
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const { id } = req.query;
   if (typeof id !== 'string') return res.status(400).json({ error: 'Invalid id' });
@@ -135,34 +138,22 @@ if ( {) {
 }
 
 import type { NextApiRequest, NextApiResponse } from 'next';
+>>>>>>> b1bd2160a740f8569656e96922b453e70de0f5db:pages.disabled/api-disabled/api/disputes/[id].ts
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.setHeader('Allow', ['GET']);
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { getDisputeById } from '../../../utils/fsdb';
-import { parseUserFromRequest, ensureInvolvedOrAdmin } from '../../../utils/auth';
-export default async function handler(req, res) {
+  if (req.method !== 'GET') {
+    return res.status(405).json({ message: 'Method not allowed' });
+  }
+
   try {
-  const { id } = req.query;
-
-  if (typeof id !== "string")
-
-    return res && res.status(400).json({ error: "Invalid id" });
-
-  const user = parseUserFromRequest(req);
-
-  if (req && req.method === "GET") {
-    const dispute = await getDisputeById(id);
-    if (!dispute) return res && res.status(404).json({ error: "Dispute not found" });
-    try {
-
-    }
-    return res && res.status(200).json({ dispute });
-  }
-}
+    // TODO: Implement id logic
+    res.status(200).json({ message: 'id endpoint' });
   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error in id:', error);
+    res.status(500).json({ message: 'Internal server error' });
   }
+<<<<<<< HEAD:pages/api/disputes/[id].ts
+}
+=======
 }
     return res.status(200).json({ dispute });
     } catch (error) {
@@ -210,3 +201,4 @@ ensureInvolvedOrAdmin(user, dispute.clientUserId, dispute.talentUserId);
 
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> b1bd2160a740f8569656e96922b453e70de0f5db:pages.disabled/api-disabled/api/disputes/[id].ts

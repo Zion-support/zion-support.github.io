@@ -1,7 +1,15 @@
-
 import type { NextApiRequest, NextApiResponse } from 'next';
 
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'GET') {
+    return res.status(405).json({ message: 'Method not allowed' });
+  }
 
+<<<<<<< HEAD:pages/api/design-map.ts
+  try {
+    // TODO: Implement designmap logic
+    res.status(200).json({ message: 'designmap endpoint' });
+=======
 export default async function handler(req: NextApiRequest, res: NextApiResponse): Promise<void> {
   try {
     // Mock design map data
@@ -94,10 +102,14 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+>>>>>>> b1bd2160a740f8569656e96922b453e70de0f5db:pages.disabled/api-disabled/api/design-map.ts
   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error in designmap:', error);
+    res.status(500).json({ message: 'Internal server error' });
   }
+<<<<<<< HEAD:pages/api/design-map.ts
+}
+=======
 }
         } catch (error) {
     console.error("Error:", error);
@@ -249,3 +261,4 @@ main
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
 pr-12243
+>>>>>>> b1bd2160a740f8569656e96922b453e70de0f5db:pages.disabled/api-disabled/api/design-map.ts

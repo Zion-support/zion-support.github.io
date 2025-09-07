@@ -1,5 +1,10 @@
 import React from 'react';
 <<<<<<< HEAD
+
+interface CardProps {
+  children: React.ReactNode;
+=======
+<<<<<<< HEAD
 import { cn } from '../../lib/utils';
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
@@ -375,43 +380,21 @@ const CardFooter = React.forward_ref<;
 import React from 'react',interface CardProps {'
   }
   "children": React.ReactNode;
+>>>>>>> b1bd2160a740f8569656e96922b453e70de0f5db
   className?: string;
-  style?: React.CSSProperties;
-  onClick?: () => void;
-
-interface CardProps  {"children": React.ReactNode;
-  }
-  className?: string;
-  style?: React.CSSProperties;
-  onClick?: () => void;
-  hover?: boolean;
+  title?: string;
 }
-const Card: React.FC<CardProps> = ({children;
-  className = '';
-  style;
-  onClick;
-  hover = true}) => ;
-  const baseClasses = 'bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-xl p-6 transition-all duration-300 relative overflow-hidden';'
 
-const hoverClasses = hover ? '"hover": border-blue-500/30 "hover":shadow-2xl "hover":shadow-blue-500/10 "hover":-translate-y-1 "hover":bg-gray-900/80 focus-"within":border-blue-500/50 focus-"within":shadow-lg focus-"within":shadow-blue-500/20' : '';'
-
-const clickableClasses = onClick ? 'cursor-pointer "focus":outline-none "focus":ring-2 "focus":ring-blue-500 "focus":ring-offset-2 "focus":ring-offset-black' : '';'
-
-const classes = `${baseClasses} ${hoverClasses} ${clickableClasses} ${className}`;`
-  />))CardFooter.display_name = "CardFooter";"
-
-interface CardProps  {"children": React.ReactNode,class_name?: string,style?: React.CSSProperties,on_click?: () => void,hover?: boolean;
-}
-  return (className={classes}
-    ref={ref}
-    className={cn("flex items-center p-6 pt-0", className)}
-    {...props}
-  />
-));
-CardFooter.displayName = "CardFooter";
-
-export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent };
+export default function Card({ children, className = '', title }: CardProps) {
   return (
+<<<<<<< HEAD
+    <div className={`bg-white rounded-lg shadow-md border border-gray-200 p-6 ${className}`}>
+      {title && <h3 className="text-lg font-semibold text-gray-900 mb-4">{title}</h3>}
+      {children}
+    </div>
+  );
+}
+=======
       className={classes}
       style={style}
       on_click={on_click}
@@ -561,3 +544,4 @@ export default function Card({ children, className = ' }: CardProps) {
 =======
 "
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> b1bd2160a740f8569656e96922b453e70de0f5db

@@ -1,4 +1,14 @@
 <<<<<<< HEAD
+import { useState } from 'react';
+
+export const useLocalStorage = <T>(key: string, initialValue: T) => {
+  const [storedValue, setStoredValue] = useState<T>(() => {
+    try {
+      const item = window.localStorage.getItem(key);
+      return item ? JSON.parse(item) : initialValue;
+    } catch (error) {
+=======
+<<<<<<< HEAD
 =======
 };
 
@@ -65,11 +75,20 @@ export const useLocalStorage = <T>(key: string, initialValue: T) => {
       return item ? JSON.parse(item) : initialValue;
     } catch (error) {
       // Error reading localStorage key
+>>>>>>> 09b7f5b76b3a513eae3b15ab3d3ff5712b092513
       return initialValue;
     }
   });
 
   const setValue = (value: T | ((val: T) => T)) => {
+<<<<<<< HEAD
+    try {
+      const valueToStore = value instanceof Function ? value(storedValue) : value;
+      setStoredValue(valueToStore);
+      window.localStorage.setItem(key, JSON.stringify(valueToStore));
+    } catch (error) {
+      console.error('Error saving to localStorage:', error);
+=======
 
     try {;
 
@@ -216,10 +235,16 @@ export function useLocalStorage<T>(key: string, initialValue: T) {
 <<<<<<< HEAD
     } catch (_error) {
       // Error setting localStorage key
+>>>>>>> 09b7f5b76b3a513eae3b15ab3d3ff5712b092513
     }
   };
 
   return [storedValue, setValue] as const;
+<<<<<<< HEAD
+};
+
+export default useLocalStorage;
+=======
 }
 =======
     } catch (error) {
@@ -316,3 +341,4 @@ const { useState } from "react"; export const useLocalStorage = <T>(key: string,
 return [storedValue, setValue] as const;
 }
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 09b7f5b76b3a513eae3b15ab3d3ff5712b092513

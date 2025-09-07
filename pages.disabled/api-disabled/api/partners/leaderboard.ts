@@ -1,3 +1,18 @@
+<<<<<<< HEAD:pages/api/partners/leaderboard.ts
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'GET') {
+    return res.status(405).json({ message: 'Method not allowed' });
+  }
+
+  try {
+    // TODO: Implement leaderboard logic
+    res.status(200).json({ message: 'leaderboard endpoint' });
+  } catch (error) {
+    console.error('Error in leaderboard:', error);
+    res.status(500).json({ message: 'Internal server error' });
+=======
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getServerSupabase } from "../../../utils/supabase/server";
 export default async function handler(
@@ -280,5 +295,6 @@ origin/cursor/automate-test-improve-and-merge-code-20a4
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+>>>>>>> b1bd2160a740f8569656e96922b453e70de0f5db:pages.disabled/api-disabled/api/partners/leaderboard.ts
   }
 }
