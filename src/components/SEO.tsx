@@ -157,7 +157,7 @@ export function SEO({
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       {/* Structured Data */}
       <script type="application/ld+json">
-        {JSON.stringify(finalStructuredData)}
+        {JSON.stringify(combinedStructuredData)}
       </script>
       {/* Additional SEO Meta Tags */}
       <meta name="application-name" content={siteName} />
@@ -169,5 +169,105 @@ export function SEO({
       <meta httpEquiv="X-XSS-Protection" content="1; mode=block" />
       <meta httpEquiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
     </Helmet>
+  );
+};
+
+export function HomePageSEO() {
+  return (
+    <SEO
+      title="AI Services, Quantum Computing & IT Solutions | Zion Tech Group"
+      description="Comprehensive range of AI services, quantum computing solutions, and enterprise IT services. From autonomous business operations to advanced cybersecurity and cloud infrastructure."
+      keywords="AI services, quantum computing services, IT infrastructure, cybersecurity services, cloud computing, business automation, machine learning services"
+      type="website"
+      structuredData={{
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Technology Services",
+        "provider": {
+          "@type": "Organization",
+          "name": "Zion Tech Group"
+        },
+        "serviceType": "AI Solutions, Quantum Computing, IT Services",
+        "description": "Comprehensive technology services including AI, quantum computing, and IT infrastructure"
+      }}
+    />
+  );
+}
+
+export function ContactPageSEO() {
+  return (
+    <SEO
+      title="Contact Zion Tech Group | Get in Touch for AI & Quantum Solutions"
+      description="Contact Zion Tech Group for AI-powered business solutions, quantum computing services, and IT consulting. Get expert advice on digital transformation and technology implementation."
+      keywords="contact Zion Tech Group, AI consulting, quantum computing consulting, IT consulting, digital transformation consulting"
+      type="website"
+      structuredData={{
+        "@context": "https://schema.org",
+        "@type": "ContactPage",
+        "name": "Contact Zion Tech Group",
+        "description": "Get in touch with Zion Tech Group for technology consulting and solutions",
+        "mainEntity": {
+          "@type": "Organization",
+          "name": "Zion Tech Group",
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+1-555-0123",
+            "contactType": "customer service",
+            "email": "info@ziontechgroup.com"
+          }
+        }
+      }}
+    />
+  );
+}
+
+export function BlogPostSEO({ 
+  title, 
+  description, 
+  author, 
+  publishedDate, 
+  image, 
+  slug 
+}: {
+  title: string;
+  description: string;
+  author: string;
+  publishedDate: string;
+  image: string;
+  slug: string;
+}) {
+  return (
+    <SEO
+      title={title}
+      description={description}
+      image={image}
+      url={`https://ziontechgroup.com/blog/${slug}`}
+      type="article"
+      structuredData={{
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": title,
+        "description": description,
+        "image": image,
+        "author": {
+          "@type": "Person",
+          "name": author
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Zion Tech Group",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://ziontechgroup.com/images/zion-tech-group-logo.png"
+          }
+        },
+        "datePublished": publishedDate,
+        "dateModified": publishedDate,
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": `https://ziontechgroup.com/blog/${slug}`
+        }
+      }}
+    />
   );
 }
