@@ -585,6 +585,20 @@ const ComprehensivePricingGuide2025 = () => {
             <p className="text-xl text-gray-300 mb-8">
               Choose from our comprehensive suite of innovative services and start your digital transformation journey today
             </p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+              <div className="flex items-center justify-center space-x-3 text-gray-300">
+                <Phone className="w-5 h-5 text-blue-400" />
+                <span>+1 302 464 0950</span>
+              </div>
+              <div className="flex items-center justify-center space-x-3 text-gray-300">
+                <Mail className="w-5 h-5 text-blue-400" />
+                <span>kleber@ziontechgroup.com</span>
+              </div>
+              <div className="flex items-center justify-center space-x-3 text-gray-300">
+                <MapPin className="w-5 h-5 text-blue-400" />
+                <span>Middletown, DE</span>
+              </div>
+            </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold text-lg">
                 Get Started Today
@@ -596,6 +610,170 @@ const ComprehensivePricingGuide2025 = () => {
           </motion.div>
         </div>
       </section>
+
+      {/* Service Detail Modal */}
+      <AnimatePresence>
+        {isModalOpen && selectedService && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm"
+            onClick={closeServiceModal}
+          >
+            <motion.div
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.9, opacity: 0 }}
+              transition={{ type: "spring", damping: 25, stiffness: 300 }}
+              className="bg-zion-slate-dark border border-white/20 rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <div className="p-8">
+                {/* Modal Header */}
+                <div className="flex items-start justify-between mb-6">
+                  <div className="flex items-center space-x-4">
+                    <div className={`w-16 h-16 bg-gradient-to-br ${selectedService.color} rounded-xl flex items-center justify-center`}>
+                      {React.createElement(getIconComponent(selectedService.icon), { className: "w-8 h-8 text-white" })}
+                    </div>
+                    <div>
+                      <h2 className="text-2xl font-bold text-white">{selectedService.name}</h2>
+                      <p className="text-gray-400">{selectedService.category}</p>
+                    </div>
+                  </div>
+                  <button
+                    onClick={closeServiceModal}
+                    className="p-2 bg-white/10 hover:bg-white/20 rounded-lg transition-colors"
+                  >
+                    <X className="w-6 h-6 text-gray-400" />
+                  </button>
+                </div>
+
+                {/* Service Description */}
+                <div className="mb-6">
+                  <p className="text-gray-300 leading-relaxed">{selectedService.detailedDescription}</p>
+                </div>
+
+                {/* Pricing Section */}
+                <div className="mb-6">
+                  <h3 className="text-lg font-semibold text-white mb-4">Pricing Plans</h3>
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    {selectedService.pricing.starter > 0 && (
+                      <div className="bg-white/5 border border-white/10 rounded-lg p-4">
+                        <h4 className="font-semibold text-white mb-2">Starter</h4>
+                        <div className="text-2xl font-bold text-blue-400 mb-2">${selectedService.pricing.starter}/month</div>
+                        <p className="text-gray-400 text-sm">Perfect for small teams</p>
+                      </div>
+                    )}
+                    {selectedService.pricing.professional > 0 && (
+                      <div className="bg-white/5 border border-white/10 rounded-lg p-4">
+                        <h4 className="font-semibold text-white mb-2">Professional</h4>
+                        <div className="text-2xl font-bold text-blue-400 mb-2">${selectedService.pricing.professional}/month</div>
+                        <p className="text-gray-400 text-sm">Ideal for growing businesses</p>
+                      </div>
+                    )}
+                    {selectedService.pricing.enterprise > 0 && (
+                      <div className="bg-white/5 border border-white/10 rounded-lg p-4">
+                        <h4 className="font-semibold text-white mb-2">Enterprise</h4>
+                        <div className="text-2xl font-bold text-blue-400 mb-2">${selectedService.pricing.enterprise}/month</div>
+                        <p className="text-gray-400 text-sm">For large organizations</p>
+                      </div>
+                    )}
+                  </div>
+                  {selectedService.pricing.custom && (
+                    <div className="mt-4 text-center">
+                      <p className="text-gray-400">{selectedService.pricing.custom}</p>
+                    </div>
+                  )}
+                </div>
+
+                {/* Features and Benefits */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                  <div>
+                    <h3 className="text-lg font-semibold text-white mb-4">Key Features</h3>
+                    <ul className="space-y-2">
+                      {selectedService.features.map((feature, index) => (
+                        <li key={index} className="flex items-center space-x-2 text-gray-300">
+                          <Check className="w-4 h-4 text-green-400 flex-shrink-0" />
+                          <span>{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-white mb-4">Benefits</h3>
+                    <ul className="space-y-2">
+                      {selectedService.benefits.map((benefit, index) => (
+                        <li key={index} className="flex items-center space-x-2 text-gray-300">
+                          <Star className="w-4 h-4 text-yellow-400 flex-shrink-0" />
+                          <span>{benefit}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+
+                {/* Use Cases */}
+                <div className="mb-6">
+                  <h3 className="text-lg font-semibold text-white mb-4">Use Cases</h3>
+                  <div className="flex flex-wrap gap-2">
+                    {selectedService.useCases.map((useCase, index) => (
+                      <span key={index} className="px-3 py-1 bg-white/10 text-gray-300 rounded-full text-sm">
+                        {useCase}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Technologies */}
+                <div className="mb-6">
+                  <h3 className="text-lg font-semibold text-white mb-4">Technologies</h3>
+                  <div className="flex flex-wrap gap-2">
+                    {selectedService.technologies.map((tech, index) => (
+                      <span key={index} className="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-sm">
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Action Buttons */}
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <a
+                    href="/contact"
+                    className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2"
+                  >
+                    <span>Get Started</span>
+                    <ArrowRight className="w-5 h-5" />
+                  </a>
+                  {selectedService.demoUrl && (
+                    <a
+                      href={selectedService.demoUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-8 py-4 bg-white/10 text-white font-semibold rounded-xl hover:bg-white/20 transition-all duration-300 flex items-center justify-center space-x-2"
+                    >
+                      <Video className="w-5 h-5 mr-2" />
+                      <span>View Demo</span>
+                    </a>
+                  )}
+                  {selectedService.documentationUrl && (
+                    <a
+                      href={selectedService.documentationUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-8 py-4 bg-white/10 text-white font-semibold rounded-xl hover:bg-white/20 transition-all duration-300 flex items-center justify-center space-x-2"
+                    >
+                      <BookOpen className="w-5 h-5 mr-2" />
+                      <span>Documentation</span>
+                    </a>
+                  )}
+                </div>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 };
