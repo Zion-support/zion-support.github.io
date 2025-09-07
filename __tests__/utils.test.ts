@@ -1,11 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-describe("Utils", () => {
-  it("should work correctly", () => {
-    expect(true).toBe(true);
-  });
-});
-export {};'
+// Mock test for utils
 describe("Utils", () => {
   it("should work correctly", () => {
     expect(true).toBe(true);

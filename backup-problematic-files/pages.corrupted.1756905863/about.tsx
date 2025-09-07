@@ -8,39 +8,9 @@ import React from 'react';
 <<<<<<< HEAD
 
 interface AboutProps {
-<<<<<<< HEAD:backup-problematic-files/pages.corrupted.1756905863/about.tsx
-=======
-interface AboutProps  {:pages.corrupted.1756905863/about.tsx;
-  // Add props here as needed;
-}
-export default function About() {ursor/automate-test-improve-and-merge-code-646c;
-export default function About() {:backup-problematic-files/pages.corrupted.1756905863/about.tsx;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-  className?: string;
-}const About: React.FC<AboutProps> = ({ className }) => {:backup-problematic-files/pages.corrupted.1756905863/about.tsx;
-  // Add props here as needed;
-  return (<div className={className || ''}>;
-      <h1>About</h1>;
-      <p>This component is under development.</p>;
-    </div>;
-  )}
-:pages.corrupted.1756905863/about.tsx;
-}ursor/fix-syntax-push-and-merge-to-main-40de;
-ursor/automate-test-improve-and-merge-code-646c;
-  return (<div>;
-      <h1>About</h1>;
-      <p>This component is currently under development.</p>;
-    </div>;
-  )}}ursor/automate-test-improve-and-merge-code-646c;
-}
-<<<<<<< HEAD
-
-const About: React.FC<AboutProps> = ({ className }) => {
-=======
   // Add props here as needed
 }
 export default function About({ }: AboutProps) {
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages.corrupted.1756905863/about.tsx
   return (
     <div className={className || ''}>
       <h1>About</h1>
@@ -48,13 +18,4 @@ export default function About({ }: AboutProps) {
     </div>
   );
 }
-<<<<<<< HEAD:backup-problematic-files/pages.corrupted.1756905863/about.tsx
-}
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages.corrupted.1756905863/about.tsx
-=======
-:backup-problematic-files/pages.corrupted.1756905863/about.tsx;
-:backup-problematic-files/pages.corrupted.1756905863/about.tsx;
-}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

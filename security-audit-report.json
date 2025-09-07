@@ -141,9 +141,7 @@
   }
 }
   ],
-<<<<<<< HEAD
   "recommendations": [
-    {}
     {
       "type": "file_permissions",
       "message": "package.json is world-readable",

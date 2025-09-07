@@ -1,15 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import _React from "react"; export function TrustedBySection() { const companies = []; return () <section className="py-16 bg-white/5> <div className="container" mx-auto px-4 text-center> <h3 className="text-lg" font-medium text-zion-slate-light mb-8"> Trusted by leading companies worldwide </h3>" <div className="flex" flex-wrap justify-center items-center gap-8 opacity-60> {companies.map(comp => ( <div key="{comp}" className="text-zion-slate-light" font-semibold> {comp} </div> ))} </div> </div> </section> )} ");} ); "export default ComponentName;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
-import _React from "react"; export function TrustedBySection() { const companies = []; return () <section className="py-16 bg-white/5> <div className="container" mx-auto px-4 text-center> <h3 className="text-lg" font-medium text-zion-slate-light mb-8"> Trusted by leading companies worldwide </h3>" <div className="flex" flex-wrap justify-center items-center gap-8 opacity-60> {companies.map(comp => ( <div key="{comp}" className="text-zion-slate-light" font-semibold> {comp} </div> ))} </div> </div> </section> )} ");} ); "export default ComponentName;"
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
-import _React from "react"; export function TrustedBySection() { const companies = []; return () <section className="py-16 bg-white/5> <div className="container" mx-auto px-4 text-center> <h3 className="text-lg" font-medium text-zion-slate-light mb-8"> Trusted by leading companies worldwide </h3>" <div className="flex" flex-wrap justify-center items-center gap-8 opacity-60> {companies.map(comp => ( <div key="{comp}" className="text-zion-slate-light" font-semibold> {comp} </div> ))} </div> </div> </section> )} ");} ); "export default ComponentName;"
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 
 import _React from "react"; export function TrustedBySection() { const companies = []; return () <section className="py-16 bg-white/5> <div className="container" mx-auto px-4 text-center> <h3 className="text-lg" font-medium text-zion-slate-light mb-8"> Trusted by leading companies worldwide </h3>" <div className="flex" flex-wrap justify-center items-center gap-8 opacity-60> {companies.map(comp => ( <div key="{comp}" className="text-zion-slate-light" font-semibold> {comp} </div> ))} </div> </div> </section> )} ")} )"export default ComponentName;";
 class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
@@ -28,15 +17,6 @@ const React from "react"; export function TrustedBySection() { const companies =
 
 import _React from "react"; export function TrustedBySection() { const companies = []; return () <section className="py-16 bg-white/5> <div className="container" mx-auto px-4 text-center> <h3 className="text-lg" font-medium text-zion-slate-light mb-8"> Trusted by leading companies worldwide </h3>" <div className="flex" flex-wrap justify-center items-center gap-8 opacity-60> {companies && companies.map(comp => ( <div key="{comp}" className="text-zion-slate-light" font-semibold> {comp} </div> ))} </div> </div> </section> )} ");} ); "export default ComponentName;"
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import _React from "react"; export function TrustedBySection() { const companies = []; return () <section className="py-16 bg-white/5> <div className="container" mx-auto px-4 text-center> <h3 className="text-lg" font-medium text-zion-slate-light mb-8"> Trusted by leading companies worldwide </h3>" <div className="flex" flex-wrap justify-center items-center gap-8 opacity-60> {companies.map(comp => ( <div key="{comp}" className="text-zion-slate-light" font-semibold> {comp} </div> ))} </div> </div> </section> )} ");} ); "export default ComponentName;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 import React from \"react\"; export function TrustedBySection() { const companies = []; return () <section className=\"py-16 bg-white/5> <div className=\"container\" mx-auto px-4 text-center> <h3 className=\"text-lg\" font-medium text-zion-slate-light mb-8\"> Trusted by leading companies worldwide </h3>\" <div className=\"flex\" flex-wrap justify-center items-center gap-8 opacity-60> {companies.map(comp => ( <div key=\"{comp}\" className=\"text-zion-slate-light\" font-semibold> {comp} </div> ))} </div> </div> </section> )} \");} ); \"export default ComponentName;\"
 const React from "react"; export function TrustedBySection() { const companies = []; return () <section className="py-16 bg-white/5> <div className="container" mx-auto px-4 text-center> <h3 className="text-lg" font-medium text-zion-slate-light mb-8"> Trusted by leading companies worldwide </h3>" <div className="flex" flex-wrap justify-center items-center gap-8 opacity-60> {companies.map(comp => ( <div key="{comp}" className="text-zion-slate-light" font-semibold> {comp} </div> ))} </div> </div> </section> )} ");} ); "export default ComponentName;"""

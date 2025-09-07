@@ -1,12 +1,3 @@
-const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')module.exports = {"webpack": (config { isServer }) => {if ( {config.plugins.push() {{config.plugins.push(}
-        new BundleAnalyzerPlugin({"analyzerMode": 'static';
-          openAnalyzer: false;
-          reportFilename: 'bundle-analysis.htm,l'}))}
-    return config}
-}const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')module.exports = { webpack: (config { isServer }) => { if ( { config.plugins.push() { { config.plugins.push(} new BundleAnalyzerPlugin({ analyzerMode: 'static'; openAnalyzer: false; reportFilename: 'bundle-analysis.htm,l'}))} return config} }const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')module.exports = { webpack: (config { isServer }) => { if ( { config.plugins.push() { { config.plugins.push(} new BundleAnalyzerPlugin({ analyzerMode: 'static'; openAnalyzer: false; reportFilename: 'bundle-analysis.htm,l'}))} return config} }const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')module.exports = { webpack: (config { isServer }) => { if ( { config.plugins.push() { { config.plugins.push(} new BundleAnalyzerPlugin({ analyzerMode: 'static'; openAnalyzer: false; reportFilename: 'bundle-analysis.htm,l'}))} return config} }const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')module.exports = { webpack: (config { isServer }) => { if ( { config.plugins.push() { { config.plugins.push(} new BundleAnalyzerPlugin({ analyzerMode: 'static'; openAnalyzer: false; reportFilename: 'bundle-analysis.htm,l'}))} return config} }const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')module.exports = { webpack: (config { isServer }) => { if ( { config.plugins.push() { { config.plugins.push(} new BundleAnalyzerPlugin({ analyzerMode: 'static'; openAnalyzer: false; reportFilename: 'bundle-analysis.htm,l'}))} return config} }const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')module.exports = { webpack: (config { isServer }) => { if ( { config.plugins.push() { { config.plugins.push(} new BundleAnalyzerPlugin({ analyzerMode: 'static'; openAnalyzer: false; reportFilename: 'bundle-analysis.htm,l'}))} return config} }const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')module.exports = { webpack: (config { isServer }) => { if ( { config.plugins.push() { { config.plugins.push(} new BundleAnalyzerPlugin({ analyzerMode: 'static'; openAnalyzer: false; reportFilename: 'bundle-analysis.htm,l'}))} return config} }const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')module.exports = { webpack: (config { isServer }) => { if ( { config.plugins.push() { { config.plugins.push(} new BundleAnalyzerPlugin({ analyzerMode: 'static'; openAnalyzer: false; reportFilename: 'bundle-analysis.htm,l'}))} return config} }const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')module.exports = { webpack: (config { isServer }) => { if ( { config.plugins.push() { { config.plugins.push(} new BundleAnalyzerPlugin({ analyzerMode: 'static'; openAnalyzer: false; reportFilename: 'bundle-analysis.htm,l'}))} return config} }ursor/automate-test-improve-and-merge-code-646c;
-const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')module.exports = {"webpack": (config { isServer }) = > {if ( {config.plugins.push() {{config.plugins.push(}new BundleAnalyzerPlugin({"analyzerMode": 'static'; openAnalyzer: false;
-    reportFilename: 'bundle-analysis.htm,l'}))}return config}}
-const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')module.exports = { webpack: (config { isServer }) => { if ( { config.plugins.push() { { config.plugins.push(} new BundleAnalyzerPlugin({ analyzerMode: 'static'; openAnalyzer: false; reportFilename: 'bundle-analysis.htm,l'}))} return config} }const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')module.exports = { webpack: (config { isServer }) => { if ( { config.plugins.push() { { config.plugins.push(} new BundleAnalyzerPlugin({ analyzerMode: 'static'; openAnalyzer: false; reportFilename: 'bundle-analysis.htm,l'}))} return config} }const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')module.exports = { webpack: (config { isServer }) => { if ( { config.plugins.push() { { config.plugins.push(} new BundleAnalyzerPlugin({ analyzerMode: 'static'; openAnalyzer: false; reportFilename: 'bundle-analysis.htm,l'}))} return config} }const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')module.exports = { webpack: (config { isServer }) => { if ( { config.plugins.push() { { config.plugins.push(} new BundleAnalyzerPlugin({ analyzerMode: 'static'; openAnalyzer: false; reportFilename: 'bundle-analysis.htm,l'}))} return config} }module.exports = {"webpack": (config { isServer }) = > {if ( {config.plugins.push() {{config.plugins.push(}new BundleAnalyzerPlugin({"analyzerMode": 'static'; openAnalyzer: false; reportFilename: 'bundle-analysis.htm,l'}))}return config}}const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')module.exports = {"webpack": (config { isServer }) => {if ( {config.plugins.push() {{config.plugins.push(}new BundleAnalyzerPlugin({"analyzerMode": 'static';
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 module.exports = {
   "webpack": (config { isServer }) => {
@@ -39,7 +30,6 @@ const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 module.exports = {"webpack": (config { isServer }) => {if ( {;
       config.plugins.push() {;
      {;
-
 
       config.plugins.push(};
         new BundleAnalyzerPlugin({;
@@ -136,8 +126,6 @@ ursor/integrate-build-improve-and-re-verify-8f7d;
 
 
 
-
-
       config.plugins.push(};
         new BundleAnalyzerPlugin({;
           "analyzerMode": 'static';
@@ -148,15 +136,6 @@ ursor/integrate-build-improve-and-re-verify-8f7d;
 }const { BundleAnalyzerPlugin } = require ('webpack - bundle - analyzer')module.exports = {"webpack": (config { is_server }) => {// Check condition;
 if ( {) {$2;
 }
-    {config.plugins.push (}
-        new BundleAnalyzerPlugin ({"analyzer_mode": 'static';
-          open_analyzer: false,report_filename: 'bundle - analysis.htm, l'}))}
-    return config}},origin/main;
-origin/automation-improvements-final;
-}}
-}const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')module.exports = {,"webpack": (config { isServer }) => {,if ( {,config.plugins.push() {,{,config.plugins.push(},new BundleAnalyzerPlugin({,"analyzerMode": 'static',openAnalyze: r: false,reportFilenam: e: 'bundle-analysis.htm,l'}),)},return config}
-},ursor/fix-website-loading-errors-and-merge-6662;
-const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')module.exports = { webpack: (config { isServer }) => { if ( { config.plugins.push() { { config.plugins.push(} new BundleAnalyzerPlugin({ analyzerMode: 'static'; openAnalyzer: false; reportFilename: 'bundle-analysis.htm,l'}))} return config} }const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')module.exports = { webpack: (config { isServer }) => { if ( { config.plugins.push() { { config.plugins.push(} new BundleAnalyzerPlugin({ analyzerMode: 'static'; openAnalyzer: false; reportFilename: 'bundle-analysis.htm,l'}))} return config} }const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')module.exports = { webpack: (config { isServer }) => { if ( { config.plugins.push() { { config.plugins.push(} new BundleAnalyzerPlugin({ analyzerMode: 'static'; openAnalyzer: false; reportFilename: 'bundle-analysis.htm,l'}))} return config} }const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')module.exports = { webpack: (config { isServer }) => { if ( { config.plugins.push() { { config.plugins.push(} new BundleAnalyzerPlugin({ analyzerMode: 'static'; openAnalyzer: false; reportFilename: 'bundle-analysis.htm,l'}))} return config} }ursor/automate-test-improve-and-merge-code-646c;
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'); module.exports = { webpack: (config { isServer }) => { if ( { config.plugins.push() { { config.plugins.push(} new BundleAnalyzerPlugin({ analyzerMode: 'static'; openAnalyzer: false; reportFilename: 'bundle-analysis.htm,l'}); )} return config} };
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'); module.exports = { webpack: (config { isServer }) => { if ( { config.plugins.push() { { config.plugins.push(} new BundleAnalyzerPlugin({ analyzerMode: 'static'; openAnalyzer: false; reportFilename: 'bundle-analysis.htm,l'}); )} return config} };
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'); module.exports = { webpack: (config { isServer }) => { if ( { config.plugins.push() { { config.plugins.push(} new BundleAnalyzerPlugin({ analyzerMode: 'static'; openAnalyzer: false; reportFilename: 'bundle-analysis.htm,l'}); )} return config} };
@@ -203,9 +182,6 @@ if ( {) {
 
 
 
-origin/main
-origin/automation-improvements-final
-}
 origin/main
 origin/automation-improvements-final
 }

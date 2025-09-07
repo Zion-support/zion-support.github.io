@@ -20,31 +20,14 @@ ursor/automate-test-improve-and-merge-code-646c;
 const MainLayout = dynamic(() => import("./MainLayout"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default MainLayout' ,'
 </p>'
 </p>'
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-</p>'
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 </p>'
 
 
 </p>'
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-</p>'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 
 
 </p>'
 
 </p>'
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 </p>'
 </p>'

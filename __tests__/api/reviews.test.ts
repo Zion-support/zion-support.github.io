@@ -112,6 +112,7 @@ import { describe, it, expect, beforeEach, vi } from 'vitest'
 
 
 
+
 jest.mock('@prisma/client'
           this.name = 'PrismaClientKnownRequestError'
 jest.mock('@/integrations/supabase/client'
@@ -816,11 +817,6 @@ ursor/add-new-services-and-deploy-updates-0462
 ursor/integrate-build-improve-and-re-verify-8f7d
         "error"
         "error"
-        error: 'productId is required in the URL path and must be a string.',
-      });
-    });
-  });
-});
 
         "error"
 

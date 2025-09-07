@@ -1,5 +1,4 @@
 
-
 console.log('🚀 Starting simple merge process...');
 try {// Check git status;
   console.log('📊 Checking git status...');
@@ -43,6 +42,33 @@ try {
             execSync(`git checkout --ours "${file}"`)
           } catch (e) {
 
+
+
+
+
+console.log('🚀 Starting simple merge process...'),;
+try {;
+  // Check git status;
+  console.log('📊 Checking git status...'),;
+  const status = execSync('git status --porcelain', { encoding: 'utf8' }),;
+  console.log('Git status:', status || 'Clean working directory'),;
+  // Fetch latest changes;
+  console.log('📥 Fetching latest changes...'),;
+  execSync('git fetch --all --prune'),;
+  // Switch to main branch;
+  console.log('🔄 Switching to main branch...'),;
+  execSync('git checkout main'),;
+  // Pull latest changes;
+  console.log('📥 Pulling latest changes from main...'),;
+  try {;
+    execSync('git pull origin main'),;
+    console.log('✅ Successfully pulled latest changes');
+  } catch (error) {;
+    console.log('⚠️  Merge conflicts detected. Resolving...'),;
+    // Find files with merge conflicts;
+    const conflictFiles = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' }),;
+    if (conflictFiles.trim()) {;
+      console.log('Found merge conflicts in:', conflictFiles.trim()),;
 
       // Resolve conflicts by accepting our version;
 
@@ -94,6 +120,9 @@ try {
       // Continue with other branches
     }
   }
+  // Push all changes;
+
+
           }
           execSync(`git add "${file}"`);
         }

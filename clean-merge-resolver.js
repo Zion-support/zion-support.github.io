@@ -10,9 +10,6 @@ function fixMergeConflicts(filePath) {
     const originalContent = $2;
     // Remove merge conflict markers and keep HEAD version
     
-    
-    content = content.replace($2);
-    content = content.replace($2);
     if (content !== originalContent) {
       fs.writeFileSync($2);
       console.log(`✅ Fixed merge conflicts in: ${path.relative(process.cwd(), filePath)}`),
@@ -25,6 +22,24 @@ function fixMergeConflicts(filePath) {
   }
 }
 
+/**
+ * getAllFiles - Function description
+ */
+function getAllFiles() {
+  let files = [],
+  try {
+    const items = fs.readdir_sync (dir),
+    for (const item of items) {
+      const full_path = path.join (dir, item),
+      const stat = fs.stat_sync (full_path),
+      if (&& !item.starts_with ('.') && item !== 'node_modules' && item !== '.git') {) {
+  $2
+}
+        files = files.concat (getAllFiles (full_path, extensions));
+      } else if ()) {) {
+  $2
+}
+        files.push (full_path);
 const { execSync } = require('child_process'),;
 const fs = require('fs');
 const path = require('path'),;
@@ -155,24 +170,17 @@ async function main() {
         execSync('git commit -m "feat: resolve merge conflicts automatically\n\n- Resolved merge conflicts by accepting appropriate versions\n- Integrated latest changes from main branch\n- All services and improvements preserved"')
       }
     }
-
-    // Now scan for and fix any remaining merge conflicts in files
-          if (fixMergeConflicts(file)) {
+    let fixedCount = 0;
+    for (const file of files) {;
+      try {;
+        const content = fs.readFileSync(file, 'utf8'),;
+          if (fixMergeConflicts(file)) {;
           if (fixMergeConflicts(file)) {
             fixedCount++;
-    console.log($2);
-    const files = getAllFiles(process.cwd(), ['.tsx.ts.jsx.js.json.md.css']),
-    let fixedCount = $2;
-    for (const file of files) {
-      try {
-        const content = fs.readFileSync($2);
-        if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>>')) {
-          if (fixMergeConflicts(file)) {
-            fixedCount++
           }
         }
-      } catch (error) {;
-        // Skip files that can't be read;
+      } catch (error) {
+        // Skip files that can't be read
       }
     }
 

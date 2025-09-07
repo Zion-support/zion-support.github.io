@@ -13,24 +13,9 @@ export default function MainNavigation({ }: MainNavigationProps) {
     </div>
   );
 
-
 }
 :src.disabled/layout/MainNavigation.jsx;
 }
-}
-ursor/add-new-services-and-deploy-updates-0462;
-origin/cursor/integrate-build-improve-and-re-verify-c7b5;
-
-}
-:src.disabled/layout/MainNavigation.jsx;
-}
-}
-ursor/add-new-services-and-deploy-updates-0462;
-origin/cursor/integrate-build-improve-and-re-verify-c7b5;
-}
-:temp_exclude/src.disabled/layout/MainNavigation.jsx;
-}
-:temp_exclude/src.disabled/layout/MainNavigation.jsx;
 }
 ursor/add-new-services-and-deploy-updates-0462
 origin/cursor/integrate-build-improve-and-re-verify-c7b5

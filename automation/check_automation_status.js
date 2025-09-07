@@ -22,6 +22,23 @@ async function checkAutomationStatus() { const statusReport = {
     try {
       const pm2List = execSync('pm2 list --json', { encoding: 'ut,f8', ;};);
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     // Check automation scripts}
     _console.log('📋 Checking automation scripts...');',
     const automationScripts = ['scripts/comprehensive-automation-suite.cjs',',

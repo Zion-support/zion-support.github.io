@@ -7,38 +7,6 @@ import React from 'react';
 <<<<<<< HEAD
 
 interface CloudProps {
-<<<<<<< HEAD:backup-problematic-files/pages.corrupted.1756905863/services/cloud.tsx
-=======
-interface CloudProps  {:pages.corrupted.1756905863/services/cloud.tsx;
-  // Add props here as needed;
-export default function Cloud() {return (<div>;
-      <h1>Cloud</h1>;
-      <p>This component is currently under development.</p>;
-    </div>;
-  )<:pages.corrupted.1756905863/services/cloud.tsx;
-}ursor/fix-syntax-push-and-merge-to-main-40de;
-=}
-}
-}
-export default function Cloud() {return (<div>;
-:backup-problematic-files/pages.corrupted.1756905863/services/cloud.tsx;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-  className?: string;
-}const Cloud: React.FC<CloudProps> = ({ className }) => {return (<div className={className || ''}>;
-:backup-problematic-files/pages.corrupted.1756905863/services/cloud.tsx;
-  // Add props here as needed;
-  return (<div>;
-      <h1>Cloud</h1>;
-      <p>This component is currently under development.</p>;
-    </div>;
-  )}
-}
-<<<<<<< HEAD
-
-const Cloud: React.FC<CloudProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-=======
   // Add props here as needed
   return (
     <div>;
@@ -52,30 +20,8 @@ const Cloud: React.FC<CloudProps> = ({ className }) => {
 export default function Cloud({ }: CloudProps) {
   return (
     <div>
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages.corrupted.1756905863/services/cloud.tsx
       <h1>Cloud</h1>
       <p>This component is under development.</p>
     </div>
   );
 }
-<<<<<<< HEAD:backup-problematic-files/pages.corrupted.1756905863/services/cloud.tsx
-}
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages.corrupted.1756905863/services/cloud.tsx
-=======
-export default function Cloud() {return (<div>;
-      <h1>Cloud</h1>;
-      <p>This component is under development.</p>;
-    </div>;
-  )}
-:pages.corrupted.1756905863/services/cloud.tsx;
-  return (<div>;
-      <h1>Cloud</h1>;
-      <p>This component is currently under development.</p>;
-    </div>;
-  )ursor/automate-test-improve-and-merge-code-646c;
-}
-:backup-problematic-files/pages.corrupted.1756905863/services/cloud.tsx;
-:backup-problematic-files/pages.corrupted.1756905863/services/cloud.tsx;
-}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

@@ -1,15 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import _React from "react";" const Input = _React.forwardRef(({ className,type,...props },ref) => { return ( <input type="{type}" className="{cn(flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background "file": border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabledcursor-not-allowed disabledopacity-50",className )} ref="{ref}" {...props} / > );";}); " Input.displayName = "Input"; export { Input }; "; export default Component;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
-import _React from "react";" const Input = _React.forwardRef(({ className,type,...props },ref) => { return ( <input type="{type}" className="{cn(flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background "file": border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabledcursor-not-allowed disabledopacity-50",className )} ref="{ref}" {...props} / > );";}); " Input.displayName = "Input"; export { Input }; "; export default Component;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
-import _React from "react";" const Input = _React.forwardRef(({ className,type,...props },ref) => { return ( <input type="{type}" className="{cn(flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background "file": border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabledcursor-not-allowed disabledopacity-50",className )} ref="{ref}" {...props} / > );";}); " Input.displayName = "Input"; export { Input }; "; export default Component;
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 
 import _React from "react";" const Input = _React.forwardRef(({ className,type,...props },ref) => { return ( <input type="{type}" className="{cn(flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background "file": border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabledcursor-not-allowed disabledopacity-50",className )} ref="{ref}" {...props} / > )";})" Input.displayName = "Input"; export { Input }"; export default Component;class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
     }return this.props.children;
@@ -26,15 +15,6 @@ const React from "react";" const Input = React && React.forwardRef(({ className,
 
 import _React from "react";" const Input = _React && _React.forwardRef(({ className,type,...props },ref) => { return ( <input type="{type}" className="{cn(flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background "file": border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabledcursor-not-allowed disabledopacity-50",className )} ref="{ref}" {...props} / > );";}); " Input && Input.displayName = "Input"; export { Input }; "; export default Component;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import _React from "react";" const Input = _React.forwardRef(({ className,type,...props },ref) => { return ( <input type="{type}" className="{cn(flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background "file": border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabledcursor-not-allowed disabledopacity-50",className )} ref="{ref}" {...props} / > );";}); " Input.displayName = "Input"; export { Input }; "; export default Component;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 import React from \"react\";\" const Input = React.forwardRef(({ className,type,...props },ref) => { return ( <input type=\"{type}\" className=\"{cn(flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background \"file\": border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabledcursor-not-allowed disabledopacity-50\",className )} ref=\"{ref}\" {...props} / > );\";}); \" Input.displayName = \"Input\"; export { Input }; \"; export default Component;
 const React from "react";" const Input = React.forwardRef(({ className,type,.props },ref) => { return ( <input type="{type}" className="{cn(flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file: border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabledcursor-not-allowed disabledopacity-50",className )} ref="{ref}" {.props} / > );";}); " Input.displayName = "Input"; export { Input }; "; export default Component;""

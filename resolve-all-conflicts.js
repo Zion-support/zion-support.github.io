@@ -12,10 +12,6 @@ function resolveMergeConflicts(filePath) {
         let content = fs.readFileSync(filePath, 'utf8');
         
         // Check if file has merge conflicts
-        if (!content.includes('<<<<<<<') && !content.includes('') && !content.includes('>>>>>>>')) {
-            return false; // No conflicts to resolve
-        if (!content.includes('<<<<<<<') && !content.includes('') && !content.includes('>>>>>>>')) {
-        if (!content.includes('')) {
             return false; // No conflicts to resolve
         }
         
@@ -23,20 +19,7 @@ function resolveMergeConflicts(filePath) {
         // Remove merge conflict markers and keep the HEAD version
         
         // Remove any remaining conflict markers
-        content = content.replace(/
         
-        // Remove any remaining conflict markers
-        
-        // Remove any remaining conflict markers
-        content = content.replace(/<<<<<<< [^\n]+\n?/g, '');
-        content = content.replace(/\n?/g, '');
-        content = content.replace(/
-        
-        content = content.replace(/\n([\s\S]*?)\n([\s\S]*?)        
-        // Remove any remaining conflict markers
-        content = content.replace(/\n/g, '');
-        content = content.replace(/\n/g, '');
-        content = content.replace(/        
         // Clean up any duplicate content
         content = content.replace(/\n\n\n+/g, '\n\n');
         
@@ -59,9 +42,6 @@ function getConflictFiles() {
         // If git command fails, use grep to find files with conflict markers
         const { execSync } = require('child_process');
         try {
-            return result.trim().split('\n').filter(file => file.length > 0);
-            const result = execSync('grep -l "<<<<<<<" -r . --exclude-dir=node_modules --exclude-dir=.git', { encoding: 'utf8' });
-            const result = execSync('grep -l "" . -r --include="*.js" --include="*.ts" --include="*.tsx" --include="*.json" --include="*.cjs" --include="*.mjs"', { encoding: 'utf8' });
             return result.trim().split('\n').filter(file => file.length > 0);
         } catch (e) {
             return [];

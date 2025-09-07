@@ -350,6 +350,7 @@ class DependencyMonitor {,
         this.log('Consider: running: npm audit fix')
       
 
+
       , vulnerabilities: {, total: 0, critical: 0, high: 0, moderate: 0,
     low: 0;
     } catch (error) {,
@@ -865,15 +866,4 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 monitor.run().catch(error = > {; process.exit(1)});
 
-    } catch (error) {,
-      this.log($2);
-      process.exit(1)
-    }
-  }
-},
-,
-// Run the dependency monitor,
-const monitor = new DependencyMonitor($2);
-monitor.run().catch(error = $2;
-  process.exit(1)
-}),
+

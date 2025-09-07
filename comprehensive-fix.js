@@ -127,8 +127,6 @@ function fixNextLinks(filePath) {
   let content = fs.readFileSync(filePath, "utf8");
     // Add Link import if not present and file has href attributes;
     if (content.includes("href="/") && !content.includes("import Link")) {
-    if (content.includes("href="/") && !content.includes("import Link")) {
-    if (content.includes("href="/") && !content.includes("import Link")) {;
   content = content.replace(;
         /import React from "react";/,
         "import React from "react";
@@ -146,8 +144,6 @@ import Link from "next/link";";
     console.log(`Fixed Next.js links "in": ${filePath}`)} catch (error) {
   console.error(`Error fixing links in ${filePath}:`, error.message)}
 }
-}
-
 ;
 // "Note": previously broken fixer removed to avoid syntax errors.
 // Function to fix test files;

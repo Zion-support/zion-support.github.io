@@ -30,13 +30,7 @@ try {
     Shield,
 
 
-    Zap,
-  } = require('lucide-react');
-  console.log('✅ Lucide React icons import successful', {
 
-    Zap
-  } = require('lucide-react');
-  console.log('✅ Lucide React icons import successful', {
     Zap,
   } = require('lucide-react');
   console.log('✅ Lucide React icons import successful', {

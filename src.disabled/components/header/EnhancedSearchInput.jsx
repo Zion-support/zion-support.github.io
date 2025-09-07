@@ -23,24 +23,9 @@ export default function EnhancedSearchInput({ }: EnhancedSearchInputProps) {
     </div>
   );
 
-
 }
 :src.disabled/components/header/EnhancedSearchInput.jsx;
 }
-}
-ursor/add-new-services-and-deploy-updates-0462;
-origin/cursor/integrate-build-improve-and-re-verify-c7b5;
-
-}
-:src.disabled/components/header/EnhancedSearchInput.jsx;
-}
-}
-ursor/add-new-services-and-deploy-updates-0462;
-origin/cursor/integrate-build-improve-and-re-verify-c7b5;
-}
-:temp_exclude/src.disabled/components/header/EnhancedSearchInput.jsx;
-}
-:temp_exclude/src.disabled/components/header/EnhancedSearchInput.jsx;
 }
 ursor/add-new-services-and-deploy-updates-0462
 origin/cursor/integrate-build-improve-and-re-verify-c7b5

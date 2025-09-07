@@ -287,7 +287,6 @@ try {
   execSync('yarn add chokidar', { stdio: 'inherit' });
 }
 }
-}
 // Main execution
 if (require.main === module) {
   const watcher = new FileWatcher();

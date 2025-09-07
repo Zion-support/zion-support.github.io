@@ -66,7 +66,6 @@ function restorePage(pagePath) {
 
 
 
-        backupContent = parts[1].split('>>>>>>>')[0]
       }
     }
     // Clean up the content
@@ -110,6 +109,9 @@ function restoreAllCorruptedPages() {
       } else if (entry.name.endsWith('.tsx') || entry.name.endsWith('.jsx')) {
         results.total++,
         
+        console.log(`\n🔍 Checking: ${fullPath}`),
+
+
       } else if (entry.name.endsWith('.tsx') || entry.name.endsWith('.jsx')) {
         results.total++,
         
@@ -155,8 +157,25 @@ function restoreAllCorruptedPages() {;
           results.failed++,
           console.log($2);
           console.log(`   Reason: ${result.reason}`)
+          results.failed++,
+          results.failed++,
+          // // // console.log(`❌ Failed: ${fullPath}`),
+          // // // console.log(`   Reason: ${result.reason}`)
+      } else if (entry.name.endsWith('.tsx') || entry.name.endsWith('.jsx')) {;
+        results.total++,;
+        // // // console.log(`\n🔍 Checking: ${fullPath}`),;
+        const result = restorePage(fullPath);
+        if (result.restored) {;
+          results.restored++,;
+          // // // console.log(`✅ Restored: ${fullPath}`),;
+          // // // console.log(`   Used backup: ${result.backupUsed}`),;
+          // // // console.log(`   Corrupted backup: ${result.corruptedBackup}`);
+        } else {;
+          results.failed++,;
+          // // // console.log(`❌ Failed: ${fullPath}`),;
+          // // // console.log(`   Reason: ${result.reason}`);
 
-
+          results.failed++,
 
 
           results.failed++,
@@ -188,9 +207,12 @@ function restoreAllCorruptedPages() {;
       }
     }
   }
-  
-  console.log('🚀 Starting page restoration process...'),
+
+
+  return results
   // // // console.log('🚀 Starting page restoration process...'),
+  scanDirectory(pagesDir),
+  // Generate summary
   
   console.log('🚀 Starting page restoration process...'),
   // // // console.log('🚀 Starting page restoration process...'),
@@ -310,13 +332,6 @@ function scan_directory() {const entries = fs.readdir_sync (dir, { withFileTypes
         // Check condition;
 if ( {) {$2;
 }
-          scan_directory (full_path)}
-      } else if (|| entry.name.ends_with ('.jsx')) {) {$2;
-}
-        results.total++,console.log (`\n🔍 Checking: ${full_path}`),const result = restore_page (full_path),// Check condition;
-if ( {) {$2;
-
-}
 
 }
 
@@ -354,9 +369,6 @@ module.exports = {
   restore_page,
   restoreAllCorruptedPages,
   findBestBackup;
-
-
-};
 
 
 };

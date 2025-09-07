@@ -147,8 +147,13 @@ export type {
   FileInfo
 } from './fileConverterService',
 
-;
+export type {
 
+export type {;
+export type {
+
+
+export type {;
 export type {
   TextAnalysisResult;
   BasicTextStats;
@@ -273,11 +278,6 @@ export const SERVICES_METADATA = $2;
 
     pricing: 'Free (Basic) / $19 && 19.99/month (Pro)',
 
-
-    features: [
-      'Readability metricsSentiment analysisKeyword extractionEntity recognitionLanguage detection'
-    ],
-    pricing: 'Free (Basic) / $19.99/month (Pro)',
     apiEndpoint: '/api/text-analysis'
   }
 } as const,
@@ -288,11 +288,6 @@ export const SERVICES_METADATA = $2;
 export const getServiceStatus = () => {
 
 
-  return {
-    urlShortener: { status: 'active', uptime: '99.9%', lastUpdated: new Date() }
-    passwordGenerator: { status: 'active', uptime: '99.9%', lastUpdated: new Date() }
-    qrCodeGenerator: { status: 'active', uptime: '99.9%', lastUpdated: new Date() }
-    fileConverter: { status: 'active', uptime: '99.9%', lastUpdated: new Date() }
 
   return {;
     urlShortener: { status: 'active', uptime: '99.9%', lastUpdated: new Date() };
@@ -902,11 +897,9 @@ export const getServiceStats = () => {;
       textAnalysis: { users: 3890, requests: 11500, avgResponse: 178 }
 
 export const getServiceStats = () =>: any {
-  // TODO: Implement
-  // TODO: Implement
-    total_users: 15420;,
-  total_requests: 2847500;
-
+  return {
+    total_users: 15420;
+    total_requests: 2847500;
     averageResponseTime: 125,
     services: {
       urlShortener: { users: 8920, requests: 1250000, avgResponse: 89},
@@ -917,6 +910,3 @@ export const getServiceStats = () =>: any {
     }
   }
 };
-  }
-};
-},

@@ -205,15 +205,6 @@
   "duration": "46s",
   "timestamp": "2025-09-06T20:40:15.907Z",
   "duration": "124s",
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-  "timestamp": "2025-09-06T17:31:43.872Z",
-  "duration": "46s",
   "results": {
     "syntaxFixes": 0,
     "buildSuccess": true,
@@ -641,23 +632,7 @@ origin/cursor/automate-test-improve-and-merge-code-646c
       "errors": [],
       "warnings": []
     }
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     "totalErrors": 6
-ursor/automate-test-improve-and-merge-code-646c
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-      "errors": [],
-      "warnings": []
-    }
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
-=======
-    "totalErrors": 6
-ursor/automate-test-improve-and-merge-code-646c
-      "errors": [],
-      "warnings": []
-    }
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
   }
 }
       "success": false,

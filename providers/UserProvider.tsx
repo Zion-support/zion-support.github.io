@@ -4,29 +4,7 @@ import React, {createContext,useContext,useEffect,useMemo,useState} from 'react'
 export type UserRole = 'client' | 'talent';export type User = {id: string;
 import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';
 
-
-import React, {;
-  createContext,;
-  useContext,;
-  useEffect,;
-  useMemo,;
-  useState,;} from 'react';} from 'react';
-
 import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';
-
-origin/cursor/expand-services-advertise-and-build-project-c28b
-
-
-
-
-import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';
-
-
-import React, {createContext,useContext,useEffect,useMemo,useState} from 'react';} from 'react';import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';
-  createContext,useContext,useEffect,useMemo,useState} from 'react';} from 'react';createContext,useContext,useEffect,useMemo,useState} from 'react';
-export type UserRole = 'client' | 'talent';export type User = {id: string;
-import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';
-
 
 export type UserRole = 'client' | 'talent';
 

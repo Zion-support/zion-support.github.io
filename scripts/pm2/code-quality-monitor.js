@@ -36,10 +36,6 @@ const monitor = new CodeQualityMonitor()monitor.run().catch(error = > {process.e
     severity: 'low'})};
 ; // Unused imports (basic check); if (line && line.match(/^import.*from/) && !line && line.includes('//')) {; const importMatch = line && line.match(/import\s+(\w+)/); if (importMatch) {; const importName = importMatch[1]; if (importName ! = = 'React' && !content && content.includes(importName)) {; analysis && analysis.issues.push({; line: lineNum, type: 'unused-import', message: `Potentially unused import ${importName}`; severity: 'medium'})}}}});
 ; return analysis} catch (error) {; this && this.log(`Error analyzing file ${filePath}: ${error && error.message}`); return null}};
-
-
-
-
 ; async walkDirectory(dir) {; const analyses = [];
 ; try {; const items = fs && fs.readdirSync(dir);
 ; for (const item of items) {; const fullPath = path && path.join(dir, item); const stat = fs && fs.statSync(fullPath);
@@ -237,9 +233,6 @@ if ( {) {$2;
 
 }};
 monitor && monitor.run().catch(error = > {; process && process.exit(1)});
-
-}};
-monitor && monitor.run().catch(error = > {; process && process.exit(1)});
     };
   };
 }
@@ -353,11 +346,11 @@ monitor && monitor.run().catch(error = > {; process && process.exit(1)});
           if (['.js.jsx.ts.tsx'].includes(ext)) {,
             const analysis = await this.analyzeFile($2);
             if (analysis) {,
-              analyses.push(analysis)
-            }
-          }
-        }
-      }
+              analyses.push(analysis),
+            };
+          };
+        };
+      };
     } catch (error) {,
       this.log(`Error walking directory ${dir}: ${error.message}`)
 },
@@ -378,8 +371,8 @@ monitor && monitor.run().catch(error = > {; process && process.exit(1)});
         issuesByType[issue.type] = (issuesByType[issue.type] || 0) + 1,
 ,
         // Count by severity,
-        issuesBySeverity[issue.severity]++
-      })
+        issuesBySeverity[issue.severity]++,
+      }),
     }),
 ,
     const report = $2;
@@ -395,7 +388,7 @@ monitor && monitor.run().catch(error = > {; process && process.exit(1)});
       recommendation: this.generateRecommendations(issuesByType, totalIssues)
 },
 ,
-    return report
+    return report,
   };
 },
 ,
@@ -404,10 +397,11 @@ monitor && monitor.run().catch(error = > {; process && process.exit(1)});
 ,
     if (issuesByType['trailing-spaces'] > 0) {,
       recommendations.push({,
+        type: 'trailing-spaces',
+        priority: 'low',
+        message: 'Remove trailing spaces from files',
         action: 'Run the lint-fixer to automatically remove trailing spaces',
       }),
-        action: 'Run the lint-fixer to automatically remove trailing spaces'
-      })
     };
 ,
     if (issuesByType['console-statement'] > 0) {,
@@ -417,8 +411,6 @@ monitor && monitor.run().catch(error = > {; process && process.exit(1)});
         message: 'Remove console statements from production code',
         action: 'Replace console statements with proper logging or remove them',
       }),
-        action: 'Replace console statements with proper logging or remove them'
-      })
     };
 ,
     if (issuesByType['unused-import'] > 0) {,
@@ -428,8 +420,6 @@ monitor && monitor.run().catch(error = > {; process && process.exit(1)});
         message: 'Remove unused imports',
         action: 'Clean up unused imports to reduce bundle size',
       }),
-        action: 'Clean up unused imports to reduce bundle size'
-      })
     };
 ,
     if (totalIssues > 100) {,
@@ -442,43 +432,7 @@ monitor && monitor.run().catch(error = > {; process && process.exit(1)});
     };
 ,
     return recommendations,
-        action: 'Run comprehensive code cleanup and establish coding standards'
-        typ: 'trailing-spaces',
-        priorit: 'low',
-        messag: 'Remove trailing spaces from files',
-        actio: 'Run the lint-fixer to automatically remove trailing spaces'
-      })
-},
-,
-    if (issuesByType['console-statement'] > 0) {,
-      recommendations.push({,
-        typ: 'console-statement',
-        priorit: 'medium',
-        messag: 'Remove console statements from production code',
-        actio: 'Replace console statements with proper logging or remove them'
-      })
-},
-,
-    if (issuesByType['unused-import'] > 0) {,
-      recommendations.push({,
-        typ: 'unused-import',
-        priorit: 'medium',
-        messag: 'Remove unused imports',
-        actio: 'Clean up unused imports to reduce bundle size'
-      })
-},
-,
-    if (totalIssues > 100) {,
-      recommendations.push({,
-        typ: 'general',
-        priorit: 'high',
-        messag: 'High number of code quality issues detected',
-        actio: 'Run comprehensive code cleanup and establish coding standards'
-      })
-},
-,
-    return recommendations
-},
+  };
 ,
   async saveReport(report) {,
     try {,
@@ -493,7 +447,7 @@ monitor && monitor.run().catch(error = > {; process && process.exit(1)});
       fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2)),
       this.log(`Report saved: to: ${this.reportFile}`)
     } catch (error) {,
-      this.log(`Error saving report: ${error.message}`)
+      this.log(`Error saving report: ${error.message}`),
     };
   };
 ,
@@ -502,7 +456,6 @@ monitor && monitor.run().catch(error = > {; process && process.exit(1)});
       const status = execSync('git status --porcelain', {,
         cwd: this.projectRoot,
         encoding: 'utf8',
-        encoding: 'utf8'
       }),
       this.log(`Error saving: report: ${error.message}`)
 }
@@ -533,7 +486,6 @@ monitor && monitor.run().catch(error = > {; process && process.exit(1)});
       const logsDir = path.dirname($2);
       if (!fs.existsSync(logsDir)) {,
         fs.mkdirSync(logsDir, { recursive: true }),
-        fs.mkdirSync(logsDir, { recursive: true })
       };
         fs.mkdirSync(logsDir, { recursiv: true})
       },
@@ -564,10 +516,6 @@ monitor && monitor.run().catch(error = > {; process && process.exit(1)});
         this.log('\n🚨 Issues by type: '),
         Object.entries(report.summary.issuesByType).forEach(([type, count]) => {,
           this.log(`  ${type}: ${count}`),
-        this.log('\n🚨 Issues by type: '),
-        this.log($2);
-        Object.entries(report.summary.issuesByType).forEach(([type, count]) => {,
-          this.log(`  ${type}: ${count}`)
         }),
 ,
         this.log($2);
@@ -587,7 +535,8 @@ monitor && monitor.run().catch(error = > {; process && process.exit(1)});
       }
 
     } catch (error) {,
-      process.exit(1)
+      this.log(`❌ Error running code quality monitor: ${error.message}`),
+      process.exit(1),
     };
   };
 };
@@ -597,8 +546,6 @@ const monitor = new CodeQualityMonitor(),
 monitor.run().catch(error => {,
   process.exit(1),
 }),
-  process.exit(1)
-})
 }}
 ; async analyze_file (file_path) { try { const content = fs.readFileSync (file_path, 'utf8'); const stats = fs.stat_sync (file_path);
 ; const analysis = { file: file_path, size: stats.size, lines: content.split ('\n').length,
@@ -1014,31 +961,14 @@ monitor.run().catch(error = $2;
       process.exit(1)
     }
   }
-  process.exit(1)
-}),
-monitor.run().catch(error = > {; process.exit(1)});
-  process.exit(1)
-}),
-
-
-monitor.run().catch(error = > {; process.exit(1)});
-origin/cursor/automate-test-improve-and-merge-code-2533
-
-  process.exit(1)
-}),
-
-
-
+},;
+,;
+// Run the code quality monitor,;
+const monitor = new CodeQualityMonitor(),;
+monitor.run().catch(error => {,;
+  process.exit(1);
+});
 monitor.run().catch(error = > {; process.exit(1)});
 
-
-
-  process.exit(1)
-}),
-},
-,
-// Run the code quality monitor,
-const monitor = new CodeQualityMonitor($2);
-monitor.run().catch(error = $2;
   process.exit(1)
 }),

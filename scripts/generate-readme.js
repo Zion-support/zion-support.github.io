@@ -1,6 +1,20 @@
 
 const fs = require('fs'),const path = require('path'),const README_TEMPLATE = `# Zion Tech Group — Autonomous Innovation Hub;
 
+
+
+
+
+
+#!/usr/bin/env node;
+
+
+
+/**;
+ * Generate README;
+ * Creates or updates the main README && README.md file;
+ */;
+
 ;
 const fs = require('fs');
 const path = require('path'),;
@@ -102,14 +116,10 @@ function generateReadme() {
       return
 
 
-
-
     }
   }
 
   fs.writeFileSync(outputPath, README_TEMPLATE),
-
-
 
 
 import fs from 'fs'; import path from 'path'; function main() { const repoRoot = process.cwd(); const readmePath = path.join(repoRoot,'README.md'); const now = new Date().toISOString(); let content = ''; try { content = fs.readFileSync(readmePath,'utf8')} catch (err) { content = '# Project\n\n'} const footer = `\n\n---\nAutomation summary: README refreshed ${now}\n`; if (!content.includes('Automation summary:')) { content += footer} else { content = content.replace(/\n---\nAutomation summary:[\s\S]*$/m,footer)} fs.writeFileSync(readmePath,content,'utf8'); } main();
@@ -154,8 +164,6 @@ npm run automation:all;
 \`\`\`;
 ## 🏗️ Project Structure;
 - \`pages/\` - Next.js pages and routing;
-## 🏗️ Project Structure;
-- \`pages/\` - Next.js pages and routing;
 const README_TEMPLATE = `# Zion Tech Group — Autonomous Innovation Hub;
 
 Leading-edge technology solutions and autonomous innovation systems.;
@@ -187,8 +195,6 @@ npm run automation:all;
 - \`pages/\` - Next && Next.js pages and routing;
 ;
 - \`pages/\` - Next.js pages and routing;
-;
-- \`pages/\` - Next.js pages and routing;
 - \`styles/\` - Global CSS and Tailwind configuration;
 - \`automation/\` - Autonomous automation systems;
 - \`scripts/\` - Utility scripts and build tools;
@@ -205,16 +211,10 @@ npm run automation:all;
 
 
 
-
-
-
 ### Automation;
 - \`npm run automation:all\` - Start all automation systems;
 - \`npm run redundancy:start\` - Start redundancy systems;
 - \`npm run pm2:start\` - Start PM2 process manager;
-
-
-
 
 
 
@@ -300,8 +300,9 @@ if (require.main === module) {generateReadme()}// Simple README maintenance: app
   fs.writeFileSync($2);
   console.log(`✅ README generated at: ${outputPath}`)
 }
-
-
+if (require.main === module) {
+  generateReadme()
+}
 
 
 // Simple README maintenance: append an automation run footer with timestamp
@@ -393,6 +394,8 @@ function main() { const repo_root = process.cwd (); const readme_path = path.joi
   $2
 } } main ();
 // Simple README "maintenance": append an automation run footer with timestamp;
+import fs from 'fs';
+import path from 'path';
 /**
  * main - Function description
  */
@@ -424,7 +427,6 @@ main();
 import fs from 'fs'; import path from 'path'; function main() { const repoRoot = process.cwd(); const readmePath = path.join(repoRoot,'README.md'); const now = new Date().toISOString(); let content = ''; try { content = fs.readFileSync(readmePath,'utf8')} catch (err) { content = '# Project\n\n'} const footer = `\n\n---\nAutomation summary: README refreshed ${now}\n`; if (!content.includes('Automation summary:')) { content += footer} else { content = content.replace(/\n---\nAutomation summary:[\s\S]*$/m,footer)} fs.writeFileSync(readmePath,content,'utf8'); console.log('✅ README updated')} main();
 
 import fs from 'fs'; import path from 'path'; function main() { const repoRoot = process.cwd(); const readmePath = path.join(repoRoot,'README.md'); const now = new Date().toISOString(); let content = ''; try { content = fs.readFileSync(readmePath,'utf8')} catch (err) { content = '# Project\n\n'} const footer = `\n\n---\nAutomation summary: README refreshed ${now}\n`; if (!content.includes('Automation summary:')) { content += footer} else { content = content.replace(/\n---\nAutomation summary:[\s\S]*$/m,footer)} fs.writeFileSync(readmePath,content,'utf8'); console.log('✅ README updated')} main();
-
 
 // Simple README maintenance: append an automation run footer with timestamp
 
@@ -517,7 +519,3 @@ module.exports = { generateReadme },;
 
 
 
-
-
-
-if (require.main = $2;

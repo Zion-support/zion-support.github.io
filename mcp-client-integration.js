@@ -72,13 +72,6 @@ module && module.exports = MCPClientIntegration;
 if (require && require.main === module) {
   const client = new MCPClientIntegration();
 
-module && module.exports = MCPClientIntegration;
-
-
-// Run if called directly
-if (require && require.main === module) {
-  const client = new MCPClientIntegration();
-
   client && client.connect();  }
 
   connect() {
@@ -92,12 +85,6 @@ if (require && require.main === module) {
   }
 }
 // Export for use in other modules
-
-module && module.exports = MCPClientIntegration,
-
-
-module.exports = MCPClientIntegration
-// Run if called directly
 
 module && module.exports = MCPClientIntegration,
 
@@ -380,23 +367,3 @@ if (require.main === module) {;
 
 
 
-
-
-
-
-
-module.exports = MCPClientIntegration;
-// Run if called directly
-if (require.main === module) {
-  const client = new MCPClientIntegration();
-  client.connect()
-}
-
-
-
-module.exports = $2;
-// Run if called directly
-if (require.main === module) {
-  const client = new MCPClientIntegration($2);
-  client.connect()
-}

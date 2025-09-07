@@ -2,6 +2,8 @@
 
 #!/usr/bin/env node;
 
+#!/usr/bin/env node;
+
 
 console.log('🚀 Starting merge process for all open PRs...'),;
 try {;
@@ -123,8 +125,6 @@ try {;
     }
     // Push all changes;console.log('📤 Pushing all changes to main...')execSync('git push origin main')console.log('🎉 All merge operations completed successfully!')console.log('✅ All PRs have been merged into main branch')console.log('✅ All merge conflicts have been resolved')console.log('✅ Repository is now clean and up to date')} catch (error) {console.error('❌ Error during merge process:', error.message);
     // Push all changes;
-
-
 
 
 

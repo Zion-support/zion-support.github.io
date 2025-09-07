@@ -13,27 +13,6 @@ export default function Leadenrichment({ }: LeadenrichmentProps) {
       <p>This component is under development.</p>
     </div>
   );
-<<<<<<< HEAD:backup-problematic-files/pages_backup_before_cleanup/services/micro-saas/lead-enrichment.tsx
-=======
 }
 }
 }
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:backup-problematic-files/pages.bak/services/micro-saas/lead-enrichment.tsx
-=======
-interface LeadenrichmentProps  {// Add props here as needed;
-:backup-problematic-files/pages.bak/services/micro-saas/lead-enrichment.tsx;
-}export default function Leadenrichment() {export default function Leadenrichment() {:backup-problematic-files/pages_backup_before_cleanup/services/micro-saas/lead-enrichment.tsx;
-  return (<div className={className || ''}>;
-      <h1>Lead-enrichment</h1>;
-      <p>This component is under development.</p>;
-    </div>;
-  ):backup-problematic-files/pages.bak/services/micro-saas/lead-enrichment.tsx;
-}
-}
-}ursor/automate-test-improve-and-merge-code-646c;
-:backup-problematic-files/pages_backup_before_cleanup/services/micro-saas/lead-enrichment.tsx;
-:backup-problematic-files/pages_backup_before_cleanup/services/micro-saas/lead-enrichment.tsx;
-}
-}
-}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

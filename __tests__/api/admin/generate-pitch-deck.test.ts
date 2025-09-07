@@ -50,7 +50,6 @@ describe('/api/admin/generate-pitch-deck API Endpoint'
       "method"
 
 
-
 import { NextApiRequest, NextApiResponse } from 'next';
 import { createMocks, RequestMethod } from 'node-mocks-http';
 import handler from '@/pages/api/admin/generate-pitch-deck';

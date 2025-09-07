@@ -9,3 +9,7 @@ import { render, axe, toHaveNoViolations } from 'lucide-react'; import { ModeTog
 
 </ModeToggle>'
 </ModeToggle>'
+</ModeToggle>'
+</ModeToggle>'
+</ModeToggle>'
+</ModeToggle>'

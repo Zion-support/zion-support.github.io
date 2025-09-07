@@ -23,24 +23,9 @@ export default function FuturisticServicesShowcase({ }: FuturisticServicesShowca
     </div>
   );
 
-
 }
 :src.disabled/components/FuturisticServicesShowcase.jsx;
 }
-}
-ursor/add-new-services-and-deploy-updates-0462;
-origin/cursor/integrate-build-improve-and-re-verify-c7b5;
-
-}
-:src.disabled/components/FuturisticServicesShowcase.jsx;
-}
-}
-ursor/add-new-services-and-deploy-updates-0462;
-origin/cursor/integrate-build-improve-and-re-verify-c7b5;
-}
-:temp_exclude/src.disabled/components/FuturisticServicesShowcase.jsx;
-}
-:temp_exclude/src.disabled/components/FuturisticServicesShowcase.jsx;
 }
 ursor/add-new-services-and-deploy-updates-0462
 origin/cursor/integrate-build-improve-and-re-verify-c7b5

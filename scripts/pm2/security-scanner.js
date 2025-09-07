@@ -1,5 +1,4 @@
     
-    
 
 
 
@@ -55,7 +54,6 @@ const scanner = new SecurityScanner()scanner.run().catch(error = > {process.exit
     if (!fs.existsSync(logDir)) {}
       fs.mkdirSync(logDir, { recursive: true });,
 
-
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -100,9 +98,6 @@ class SecurityScanner {; constructor() {; this.projectRoot = process.cwd(); this
 const scanner = new SecurityScanner();
 scanner.run().catch(error = > {; process.exit(1)}));
 }),);
-
-
-
 
 
 
@@ -413,8 +408,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de;
       process.exit(1);
 
 
-
-
     }
   }
   log(message, level = 'INFO') {'}
@@ -641,10 +634,6 @@ scanner && scanner.run().catch(error = > {; process && process.exit(1)}));}),);
 
 scanner.run().catch(error = > {process.exit(1)}));}),);
 }),);
-scanner.run().catch(error = > {process.exit(1)}));}),);
-}),);
-
-
 
 
 
@@ -934,9 +923,6 @@ const scanner = new SecurityScanner()scanner.run().catch(error => {process.exit(
 const scanner = new SecurityScanner();
 scanner.run().catch(error => {;
   process.exit(1);
-
-
-
 
 
 
@@ -1912,24 +1898,3 @@ scanner.run().catch(error = > {; process.exit(1)}));
 
 
 module.exports = SecurityScanner;
-
-main
-
-
-scanner.run().catch(error = > {; process.exit(1)}));
-}),);
-origin/cursor/automate-test-improve-and-merge-code-2533
-
-
-
-
-
-
-
-
-scanner.run().catch(error = > {; process.exit(1)}));
-}),);
-
-
-
-}),),

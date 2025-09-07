@@ -1,18 +1,11 @@
 import React from 'react';
+interface Performance.testProps {
+  // Add props here as needed
+}
 }
 
 export default function Performance.test({ }: Performance.testProps) {
 export default function Performance.test({ }: Performance.testProps) {
-
-}
-
-export default function Performance.test({}: Performance.testProps) {
-export default function Performance.test({}: Performance.testProps) {
-
-}
-
-export default function Performance.test({}: Performance.testProps) {
-export default function Performance.test({}: Performance.testProps) {
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -41,29 +34,11 @@ interface PricingGuidePageProps {
 
 
 
+export default function PricingGuidePage({ }: PricingGuidePageProps) {
 import React from 'react';
 interface Performance.testProps {
   // Add props here as needed
 }
-export default function Performance.test({ }: Performance.testProps) {
-  return (
-export default function PricingGuidePage({}: PricingGuidePageProps) {
-interface Performance.testProps {
-  // Add props here as needed
-}
-export default function Performance.test({}: Performance.testProps) {
-  return (
-export default function PricingGuidePage({}: PricingGuidePageProps) {
-interface Performance.testProps {
-  // Add props here as needed
-}
-export default function Performance.test({}: Performance.testProps) {
-  return (
-
-interface Performance.testProps {
-  // Add props here as needed
-}
-
 export default function Performance.test({ }: Performance.testProps) {
   return (
     <div>
@@ -95,12 +70,6 @@ export default function Performance.test({ }: Performance.testProps) {
 }
 
 }
-}
-
-}
-}
-
-}
 
 
 
@@ -112,14 +81,4 @@ export default function Performance.test({ }: Performance.testProps) {
 }
 }
 }
-}
-}
-}
-}
-}
-
-}
-
-}
-
 }

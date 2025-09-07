@@ -32,18 +32,6 @@ describe('AppMinimal', () => {
     render(<AppMinimal />);
     // Add interaction tests here
   });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-  it('handles user interactions', () => {
-    render(<AppMinimal />);
-    // Add interaction tests here
-  });
-});
-<<<<<<< HEAD
-=======
-  it('has correct structure', () => {
-    render(<AppMinimal />);
-    // Add more specific tests here
-  });
 });
 >>>>>>> cursor/automate-test-improve-and-merge-code-aa0d
 =======
@@ -72,8 +60,3 @@ const { render,screen } from "@testing-library/react"; import { describe,it,expe
 });
 });
 </AppMinimal>'
-});
-=======
-</AppMinimal>'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
->>>>>>> origin/main

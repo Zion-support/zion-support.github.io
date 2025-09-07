@@ -5,11 +5,6 @@ import type { NextPage } from \'next\'; import Head from \'next/head\'; import L
 import React from 'react';
 <<<<<<< HEAD
 interface IndexProps {
-<<<<<<< HEAD:backup-problematic-files/pages.disabled_auto/blog/index.tsx
-  className?: string;
-}
-export default function Index({ }: IndexProps) {
-=======
   // Add props here as needed
 }
 export default function Index({ }: IndexProps) {
@@ -17,7 +12,6 @@ export default function Index({ }: IndexProps) {
 
 
 export default function Index({ }: IndexProps) {
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages.broken/blog/index.tsx
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -63,28 +57,5 @@ export default function Index(): any ({ }: IndexProps) {;
       <p>This component is under development.</p>
     </div>
   );
-<<<<<<< HEAD:backup-problematic-files/pages.disabled_auto/blog/index.tsx
-=======
-:pages.broken/blog/index.tsx;
-export default function Index(): any ({}: IndexProps) {ursor/automate-test-improve-and-merge-code-646c;
-export default function Index(): any ({}: IndexProps) {:backup-problematic-files/pages.disabled_auto/blog/index.tsx;
-  return (<div className={className || ''}>;
-      <h1>Index</h1>;
-      <p>This component is under development.</p>;
-    </div>;
-  ):backup-problematic-files/pages.disabled_auto/blog/index.tsx;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-}
-:pages.broken/blog/index.tsx;
-}}}ursor/fix-syntax-push-and-merge-to-main-40de;
-ursor/automate-test-improve-and-merge-code-646c;
-}
-<<<<<<< HEAD
-=======
 }
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages.broken/blog/index.tsx
-=======
-:backup-problematic-files/pages.disabled_auto/blog/index.tsx;
-}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
