@@ -1,57 +1,4 @@
-<<<<<<< HEAD:src_backup/pages/UpdatePassword.tsx
-
-import { useState, useEffect } from "react";
-import { useRouter  } from 'next/router';
-origin/cursor/automate-test-improve-and-merge-code-2533
-import { zodResolver } from "@hookform/resolvers/zod",
-import { useForm, ControllerRenderProps } from "react-hook-form",
-import { z } from "zod",
-import { LockKeyhole } from 'lucide-react'
-
-  )
-}
-
-
-  FormMessage } from '@/components / ui / form'; import { toast  } from '@/hooks / use - toast';
-import { cleanupAuthState  } from '@/utils / auth_utils';
-import { logErrorToProduction } from '@/utils / production_logger';
-// Form validation schema;
-const updatePasswordSchema = z;
-  .object ({
-    password: z;
-      .string ();
-      .min (8, "Password must be at least 8 characters");
-      .max (64, "Password must be less than 64 characters");
-    confirm_password: z.string ()});
-  .refine ((data, ) => data.password === data.confirm_password, {
-    message: "Passwords do not match",
-    path: ["confirm_password"]}),
-type UpdatePasswordFormValues = z.infer < typeof updatePasswordSchema>;
-}
-  );
-}
-
-      .max(64, "Password must be less than 64 characters"),
-      .max(64, "Password must be less than 64 characters"),
-
-import { supabase } from "@/integrations/supabase/client",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-=======
-
-  FormControl;
-  FormField;
-  FormItem;
-  FormLabel;
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/pages.disabled/UpdatePassword.tsx
-  FormMessage} from "@/components/ui/form",
+FormMessage} from "@/components/ui/form",
 import { toast } from "@/hooks/use-toast",
 import { cleanupAuthState } from "@/utils/authUtils",
 import { logErrorToProduction } from '@/utils/productionLogger',
@@ -223,7 +170,7 @@ export default function UpdatePassword() {;
         password: data.password}),;
       if (error) {;
         toast({;
-          title: "Password update failed",;
+          title: "Password update failed",
           description: error.message,;
           variant: "destructive"}),;
         setError(error.message),;
@@ -233,7 +180,7 @@ export default function UpdatePassword() {;
       // Show success message and clean up auth state;
       setSuccess(true),;
       toast({;
-        title: "Password updated successfully",;
+        title: "Password updated successfully",
         description: "You can now log in with your new password."}),;
       // Clean auth state and redirect after a delay;
       cleanupAuthState(),;
@@ -243,7 +190,7 @@ export default function UpdatePassword() {;
     } catch (error: any) {;
       logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Password update error' }),;
       toast({;
-        title: "Password update failed",;
+        title: "Password update failed",
         description: error.message || "An unexpected error occurred",;
         variant: "destructive"}),;
       setError(error.message || "An unexpected error occurred");
@@ -403,29 +350,7 @@ export default function UpdatePassword() {;
                   </form>
                 </Form>
               )}
-<<<<<<< HEAD:src_backup/pages/UpdatePassword.tsx
-=======
-            </div>;
-          </div>;
-        </div>;
-        <div className="hidden lg: block relative w-0 flex-1">;
-          <div className="absolute inset-0 h-full w-full object-cover bg-gradient-to-tr from-zion-blue-dark via-zion-purple to-zion-cyan opacity-80">;
-            <div className="flex flex-col justify-center items-center h-full px-8">;
-              <div className="max-w-md text-center">;
-                <h3 className="text-3xl font-bold text-white mb-4">Password Recovery</h3>;
-                <p className="text-lg text-white/80">;
-                  Set a strong password to secure your account and continue your journey in the Zion marketplace.;
-                </p>;
-              </div>;
-            </div>;
-          </div>;
-        </div>;
-      </div>;
-    </>;
-  );
-}
-;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/pages.disabled/UpdatePassword.tsx
+
             </div>
           </div>
         </div>

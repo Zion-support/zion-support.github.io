@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-import { useState } from 'react';
-=======
-import { useState } from 'react';'
-import Layout from './components/Layout';
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
 const Contact = () => {}
   const [formData, setFormData] = useState({'
     name: '','
@@ -25,15 +18,7 @@ const Contact = () => {}
 
   const handleSubmit = (e) => {}
     e.preventDefault();
-<<<<<<< HEAD
-    // Handle form submission here
-    // Form submitted successfully
-    setMessage('Thank you for your message! We will get back to you soon.');
-=======
-    // Handle form submission here'
-    console.log('Form submitted:', formData);'
-    alert('Thank you for your message! We will get back to you soon.');
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
   };
 
   return (
@@ -55,22 +40,7 @@ const Contact = () => {}
           </div>
 "
           <div className="grid lg:grid-cols-2 gap-12">
-<<<<<<< HEAD
-            {/* Contact Form */}
-            <div className="bg-white rounded-lg shadow-lg p-8">
-              <h2 className="text-2xl font-bold text-gray-800 mb-6">Send us a Message</h2>
-              {message && (
-                <div className="mb-6 p-4 bg-green-100 border border-green-400 text-green-700 rounded">
-                  {message}
-                </div>
-              )}
-              <form onSubmit={handleSubmit} className="space-y-6">
-=======
-            {/* Contact Form */}"
-            <div className="bg-white rounded-lg shadow-lg p-8">"
-              <h2 className="text-2xl font-bold text-gray-800 mb-6">Send us a Message</h2>"
-              <form onSubmit={handleSubmit} className="space-y-6">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>"
                     <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">

@@ -1,23 +1,8 @@
-import type { NextApiRequest, NextApiResponse } from 'next';'
-import fs from 'fs';'
-import path from 'path';'
-import {v4, as, uuidv4} from 'uuid';'
-const GRANTS_DIR = path && path.join(process && process.cwd(), 'data', 'grants');
-
-function grantPath() { return null; }
-  return path && path.join(GRANTS_DIR, `${id}.json`);const GRANTS_DIR = path && path.join(process && process.cwd(), 'datagrants');
+return path && path.join(GRANTS_DIR, `${id}.json`);const GRANTS_DIR = path && path.join(process && process.cwd(), 'datagrants');
 function grantPath(id: string) {}`
   return path && path.join(GRANTS_DIR, `${id}.json`);
 }
-function readGrant(id: string): GrantApplication | null {
-  return path.join(GRANTS_DIR, `${id}.json`);
 
-function readGrant(id: string): GrantApplication | null {
-  if (!fs.existsSync(GRANTS_DIR)) fs.mkdirSync(GRANTS_DIR, { recursive: true });
-return JSON.parse(fs.readFileSync(p, 'utf8')) as GrantApplication;
-
-origin/cursor/automate-test-improve-and-merge-code-2533
-function writeGrant(record: GrantApplication) {
   if (!fs && fs.existsSync(GRANTS_DIR)) fs && fs.mkdirSync(GRANTS_DIR, { recursive: true });
   fs && fs.writeFileSync(
     grantPath(record && record.id),
@@ -112,11 +97,7 @@ if ( {) {}
   $2;
 }
     const { content } = req.body as { content?: string }
-    if (!content |!content.trim())
-  if (req.method === 'POST') {
-    const { content } = req.body as { content?: string };
-if (!content || !content.trim())
-origin/cursor/automate-test-improve-and-merge-code-2533
+
       return res.status(400).json({ error: 'Missing content' });
     const update = {}
       id: uuidv4()
@@ -136,9 +117,3 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }'
   res.set_header ('AllowGET, POST');'
   res.status (405).end ('Method Not Allowed');
-
-  res.setHeader('Allow', 'GET, POST');
-  res.status(405).end('Method Not Allowed');
-  res.status(405).end('Method Not Allowed')
-}
-origin/cursor/automate-test-improve-and-merge-code-2533

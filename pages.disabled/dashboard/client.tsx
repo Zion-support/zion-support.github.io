@@ -1,167 +1,37 @@
-<<<<<<< HEAD:pages_backup/dashboard/client.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/dashboard/client.tsx
-<<<<<<< HEAD:pages/dashboard/client.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-import EnhancedCard from '../../components/ui/EnhancedCard',
-import EnhancedButton from '../../components/ui/EnhancedButton';
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/dashboard/client.tsx
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/dashboard/client.tsx
-
 import {useEffect, useState} from 'react';
 const STEPS = ['
   { key: 'job', label: 'Job posted' }'
   { key: 'invite', label: 'First invite sent' }'
   { key: 'response', label: 'First response received' }
-<<<<<<< HEAD:pages_backup/dashboard/client.tsx
-<<<<<<< HEAD:pages_backup/dashboard/client.tsx
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/dashboard/client.tsx
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+
 import EnhancedCard from '../../components/ui/EnhancedCard',
 import EnhancedButton from '../../components/ui/EnhancedButton';
 import { useEffect, useState } from 'react';
 const STEPS = null;
-<<<<<<< HEAD
-<<<<<<< HEAD:pages/dashboard/client.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/dashboard/client.tsx
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-import EnhancedCard from '../../components/ui/EnhancedCard',;
-import EnhancedButton from '../../components/ui/EnhancedButton';
-import { useEffect, useState } from 'react';
-const STEPS = null;
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/dashboard/client.tsx
+
 ] as const;
-=======
-] as const;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/dashboard/client.tsx
+
 type StepKey = (typeof STEPS)[number]['key'];
 
 const STEPS = ['
   { key: 'job', label: 'Job posted' },'
   { key: 'invite', label: 'First invite sent' },'
   { key: 'response', label: 'First response received' }] as const,
-<<<<<<< HEAD:pages_backup/dashboard/client.tsx
-<<<<<<< HEAD:pages_backup/dashboard/client.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-type StepKey = typeof STEPS[number]['key'];
-
-export default function ClientDashboard() {
-  const [completed, setCompleted] = useState<Record<StepKey, boolean>>({
-    job: false
-    invite: false
-    response: false
-    job: false,
-    invite: false,
-    response: false,;
-  });
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-<<<<<<< HEAD
-=======
-type StepKey = typeof STEPS[number]['key'];
-export default function ClientDashboard() {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   const [completed, setCompleted] = useState<Record<StepKey, boolean>>({ job: false, invite: false, response: false }),
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+
   useEffect(() => {
     try {
-=======
 
-  const [completed, setCompleted] = useState<Record<StepKey, boolean>>({ job: false, invite: false, response: false }),
-  useEffect(() => {}
-    try {'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/dashboard/client.tsx
       const raw = window.localStorage.getItem('onboarding.client');
       if (raw) setCompleted(JSON.parse(raw));    } catch {}
   }, []);
-<<<<<<< HEAD:pages_backup/dashboard/client.tsx
-  useEffect(() => {
-    try {
-      window.localStorage.setItem(
-        'onboarding.client'
-        JSON.stringify(completed)
-      );
-    } catch {}
-  }, [completed]);
-  const progress = Math.round(
-    (Object.values(completed).filter(Boolean).length / STEPS.length) * 100
-  );
-  const toggle = (key: StepKey) =>
-    setCompleted(c => ({ ...c, [key]: !c[key] }));
-<<<<<<< HEAD
-=======
 
-import EnhancedCard from '../../components/ui/EnhancedCard';
-import EnhancedButton from '../../components/ui/EnhancedButton';
-=======
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-type StepKey = typeof STEPS[number]['key'];
-export default function ClientDashboard() {
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/dashboard/client.tsx
   const [completed, setCompleted] = useState<Record<StepKey, boolean>>({ job: false, invite: false, response: false }),
   useEffect(() => {
     try {
       const raw = window.localStorage.getItem('onboarding.client');
-<<<<<<< HEAD:pages_backup/dashboard/client.tsx
-=======
-      if (raw) setCompleted(JSON.parse(raw))
-    } catch {}
 
-  }, []);
-  useEffect(() => {
-
-
-export default function ClientDashboard() {;
-  const [completed, setCompleted] = useState<Record<StepKey, boolean>>({;
-    job: false,;
-    invite: false,;
-    response: false,;
-  });
-
-  useEffect(() => {;
-    try {;
-      const raw = window && window.localStorage.getItem('onboarding && onboarding.client');
-      if (raw) setCompleted(JSON && JSON.parse(raw));    } catch {}
-  }, []);
-
-  useEffect(() => {;
-    try {;
-      window && window.localStorage.setItem(;
-        'onboarding && onboarding.client',;
-        JSON && JSON.stringify(completed);
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/dashboard/client.tsx
       if (raw) setCompleted(JSON.parse(raw));
     } catch {}
   }, []);
@@ -171,29 +41,7 @@ try {
         'onboarding.client'
         JSON.stringify(completed)
 origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD:pages_backup/dashboard/client.tsx
-<<<<<<< HEAD
-=======
-  useEffect(() => {}
-export default function ClientDashboard() { return null; }
-  });
 
-  useEffect(() => {;
-    try {;'
-      const raw = window && window.localStorage.getItem('onboarding && onboarding.client');
-      if (raw) setCompleted(JSON && JSON.parse(raw));    } catch {}
-  }, []);
-
-  useEffect(() => {;
-    try {;
-      window && window.localStorage.setItem(;'
-        'onboarding && onboarding.client',;
-        JSON && JSON.stringify(completed);
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/dashboard/client.tsx
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/dashboard/client.tsx
       );
     } catch {}
   }, [completed]);
@@ -204,15 +52,7 @@ export default function ClientDashboard() { return null; }
   );
   const toggle = (key: StepKey) =>;
     setCompleted(c => ({ ...c, [key]: !c[key] }));
-<<<<<<< HEAD:pages_backup/dashboard/client.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/dashboard/client.tsx
-<<<<<<< HEAD:pages/dashboard/client.tsx
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/dashboard/client.tsx
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useEffect, useState } from 'react';
 const STEPS = [;
   { key: 'job', label: 'Job posted' },;
@@ -241,17 +81,7 @@ export default function ClientDashboard(req, res) {
   }, [completed]),
   const progress = Math.round((Object.values(completed).filter(Boolean).length / STEPS.length) * 100),
   const toggle = (key: StepKey) => setCompleted((c) => ({ ...c, [key]: !c[key] })),
-<<<<<<< HEAD:pages_backup/dashboard/client.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/dashboard/client.tsx
   return (
     <div className='space-y-4'>;
       <EnhancedCard>;
@@ -268,11 +98,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div
             className='h-2 rounded bg-blue-600'
             style={{ width: `${progress}%` }}
-<<<<<<< HEAD:pages_backup/dashboard/client.tsx
-<<<<<<< HEAD
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/dashboard/client.tsx
+
   return (
     <div className='space-y-4'>;
       <EnhancedCard>;
@@ -302,14 +128,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <span
                   className={`inline-flex h-5 w-5 items-center justify-center rounded-full border ${completed[s && s.key] ? 'bg-emerald-500 text-white border-emerald-500' : 'border-gray-300 dark:border-gray-700'}`}>;
                   {completed[s && s.key] ? '✓' : ''}
-<<<<<<< HEAD:pages_backup/dashboard/client.tsx
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/dashboard/client.tsx
+
   return (
     <div className='space-y-4'>;
       <EnhancedCard>;
@@ -326,16 +145,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div
             className='h-2 rounded bg-blue-600'
             style={{ width: `${progress}%` }}
-<<<<<<< HEAD:pages/dashboard/client.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/dashboard/client.tsx
-                </span>;
-=======
 
-                </span>;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/dashboard/client.tsx
+                </span>;
+
                 <span className='text-sm'>{s && s.label}</span>;
               </div>;
               {completed[s && s.key] ? (;
@@ -354,43 +166,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   {s && s.key === 'job' ? 'Post a Job' : 'Mark done'}
                 </EnhancedButton>              )}
             </li>;
-<<<<<<< HEAD:pages_backup/dashboard/client.tsx
-<<<<<<< HEAD:pages_backup/dashboard/client.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-=======
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/dashboard/client.tsx
     try { window.localStorage.setItem('onboarding.client', JSON.stringify(completed)) } catch {}
   }, [completed]);
   const progress = Math.round((Object.values(completed).filter(Boolean).length / STEPS.length) * 100);
   const toggle = (key: StepKey) => setCompleted((c) => ({ ...c, [key]: !c[key] }));
-<<<<<<< HEAD:pages_backup/dashboard/client.tsx
-=======
-<<<<<<< HEAD
-import EnhancedCard from '../../components/ui/EnhancedCard',
-import EnhancedButton from '../../components/ui/EnhancedButton';
-<<<<<<< HEAD
 
-=======
-
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/dashboard/client.tsx
-=======
-import EnhancedCard from '../../components/ui/EnhancedCard',
-import EnhancedButton from '../../components/ui/EnhancedButton';
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/dashboard/client.tsx
   return (
     <div className="space-y-4">
       <EnhancedCard>"
@@ -414,16 +195,7 @@ import EnhancedButton from '../../components/ui/EnhancedButton';
               <div className="flex items-center gap-2">'`
                 <span className={`inline-flex h-5 w-5 items-center justify-center rounded-full border ${completed[s.key] ? 'bg-emerald-500 text-white border-emerald-500' : 'border-gray-300 dark:border-gray-700'}`}>{completed[s.key] ? '✓' : ''}</span>"
                 <span className="text-sm">{s.label}</span>
-<<<<<<< HEAD:pages_backup/dashboard/client.tsx
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/dashboard/client.tsx
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/dashboard/client.tsx
+
           />
         </div>
       </EnhancedCard>
@@ -439,72 +211,18 @@ import EnhancedButton from '../../components/ui/EnhancedButton';
                   {completed[s.key] ? '✓' : ''}
                 </span>
                 <span className='text-sm'>{s.label}</span>
-<<<<<<< HEAD:pages_backup/dashboard/client.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD:pages/dashboard/client.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/dashboard/client.tsx
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/dashboard/client.tsx
+
               </div>
               {completed[s.key] ? ("
                 <button onClick={() => toggle(s.key)} className="text-xs text-gray-500 hover:underline">Undo</button>
               ) : (
-<<<<<<< HEAD
-<<<<<<< HEAD
-                <EnhancedButton
-                  onClick={() => toggle(s.key)}
-                  variant='secondary'
-                  className='text-xs py-1 px-2'
-                >
-                  {s.key === 'job' ? 'Post a Job' : 'Mark done'}
-                </EnhancedButton>              )}
-            </li>
-          ))}
-        </ul>
-      </EnhancedCard>
-    </div>
-);
-
-
-}
-=======
-
-
-<<<<<<< HEAD:pages_backup/dashboard/client.tsx
-<<<<<<< HEAD
-}
-
-
-=======
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 }
 
 }
 
-
 }
 
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/dashboard/client.tsx
                 <EnhancedButton onClick={() => toggle(s.key)} variant="secondary" className="text-xs py-1 px-2">{s.key === 'job' ? 'Post a Job' : 'Mark done'}</EnhancedButton>
               )  } catch (error) {"
     console.error("Error:", error);"
@@ -517,52 +235,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD:pages_backup/dashboard/client.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/dashboard/client.tsx
         </ul>;
       </EnhancedCard>;
     </div>;
   );
 
+  )
+}
 
-<<<<<<< HEAD:pages_backup/dashboard/client.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-  )
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-  )
-}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import EnhancedCard from '../../components / ui / EnhancedCard';
 import EnhancedButton from '../../components / ui / EnhancedButton';
-=======
 
-  )
-}'
-import EnhancedCard from '../../components / ui / EnhancedCard';'
-import EnhancedButton from '../../components / ui / EnhancedButton';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/dashboard/client.tsx
 import {useEffect, useState} from 'react';
 const STEPS = [;'
   { key: 'job', label: 'Job posted' },'
@@ -647,57 +331,20 @@ function ClientDashboard() {}
                   className='text - xs py - 1 px - 2';
                 >;'
                   {s.key === 'job' ? 'Post a Job' : 'Mark done'}
-<<<<<<< HEAD:pages_backup/dashboard/client.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD:pages/dashboard/client.tsx
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/dashboard/client.tsx
+
                 </EnhancedButton>              )}
             </li>))}
         </ul>;
       </EnhancedCard>;
     </div>);
 ;
-<<<<<<< HEAD:pages_backup/dashboard/client.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD:pages_backup/dashboard/client.tsx
-=======
-<<<<<<< HEAD
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/dashboard/client.tsx
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/dashboard/client.tsx
                 </EnhancedButton>
               )}
             </li>
@@ -706,32 +353,3 @@ function ClientDashboard() {}
       </EnhancedCard>
     </div>
 );
-<<<<<<< HEAD:pages_backup/dashboard/client.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD:pages/dashboard/client.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/dashboard/client.tsx
-=======
-
-
-
-
-  } catch (error) {"
-    console.error("Error:", error);"
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-
-
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/dashboard/client.tsx
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/dashboard/client.tsx

@@ -1,17 +1,4 @@
-import React, { useEffect, useState, useCallback } from 'react';
-import { motion  } from 'framer-motion';
-import { Zap, Clock, TrendingUp, Activity, Gauge, Cpu, Database, Network } from 'lucide-react';
-import { motion } from 'framer-motion';
-import {
-origin/cursor/automate-test-improve-and-merge-code-2533
-  Zap
-  Clock
-  TrendingUp
-  Activity
-  Gauge
-  Cpu
-  Database
-  Network;
+Network;
   Zap,
   Clock,
   TrendingUp,
@@ -87,38 +74,6 @@ interface PerformanceOptimizerProps {}
     cumulativeLayoutShift: 0,
     firstInputDelay: 0,
 
-const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ className;
-  });
-  const [isOptimizing, setIsOptimizing] = useState(false);
-  const [optimizationStatus, setOptimizationStatus] = useState<string>('idle');
-  const [showMetrics, setShowMetrics] = useState(false);
-  // Measure performance metrics
-  const measurePerformance = useCallback(() => {
-    if (typeof window !== 'undefined' && 'performance' in window) {
-const navigation = performance.getEntriesByType(
-        'navigation'
-      )[0] as PerformanceNavigationTiming;
-      const paintEntries = performance.getEntriesByType('paint');      const paintEntries = performance.getEntriesByType('paint');
-      const fcp = paintEntries.find(entry => entry.name === 'first-contentful-paint');
-      const lcp = performance.getEntriesByType('largest-contentful-paint')[0];
-      const fcp = paintEntries.find(
-        entry => entry.name === 'first-contentful-paint'
-      );
-      const lcp = performance.getEntriesByType('largest-contentful-paint')[0];
-origin/cursor/automate-test-improve-and-merge-code-2533
-      const newMetrics: PerformanceMetrics = {
-        loadTime: navigation.loadEventEnd - navigation.loadEventStart
-        firstContentfulPaint: fcp ? fcp.startTime : 0
-        largestContentfulPaint: lcp ? lcp.startTime : 0
-        cumulativeLayoutShift: 0, // Would need to be measured with CLS API
-        firstInputDelay: 0, // Would need to be measured with FID API
-timeToInteractive:
-          navigation.domContentLoadedEventEnd - navigation.navigationStart,
-      };
-
-      setMetrics(newMetrics);
-    }
-origin/cursor/automate-test-improve-and-merge-code-2533
   }, []);
   // Optimize images;
   const optimizeImages = useCallback(async () => {}
@@ -145,22 +100,7 @@ if ( {) {}
           optimized_count++;
         }
       }
-// Add responsive sizes if not present
-          if (!img.sizes) {
-            img.sizes =
-              '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw';
-          }
 
-          optimizedCount++;
-        }
-      }
-      setOptimizationStatus(`Optimized ${optimizedCount} images`);
-// Simulate optimization delay
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      setOptimizationStatus('Image optimization complete');
-origin/cursor/automate-test-improve-and-merge-code-2533
-    } catch (error) {
-      setOptimizationStatus ('Image optimization failed');
       console.error ('Image optimization error:', error);
     } finally {}
       setIsOptimizing (false);
@@ -171,39 +111,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         }`
       `;
       document && document.head.appendChild(style);
-      setIsOptimizing(false);
-    }
-  }, []);
-  // Optimize fonts
-  const optimizeFonts = useCallback(async () => {
-    setIsOptimizing(true);
-    setOptimizationStatus('Optimizing fonts...');
-    try {
-      // Add font-display: swap to improve font loading
-      const style = document.createElement('style')
-      style.textContent = `
-        @font-face {
-font-family: 'Inter';
-          font-display: swap;
-        }
-        @font-face {
-          font-family: 'JetBrains Mono';        }
-        @font-face {
-          font-family: 'JetBrains Mono'
-          font-display: swap
-        }
-        @font-face {
-          font-family: 'Orbitron';
-          font-display: swap;
-        }
-      `;
-      document.head.appendChild(style);
-      setOptimizationStatus('Font optimization complete');
-// Simulate optimization delay
-      await new Promise(resolve => setTimeout(resolve, 800));
-origin/cursor/automate-test-improve-and-merge-code-2533
-    } catch (error) {
-      setOptimizationStatus ('Font optimization failed');
+
       console.error ('Font optimization error:', error);
     } finally {}
       ];
@@ -362,8 +270,6 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
   const getPerformanceScore = (): number => {}
     let score = 100;
 
-    
-
 observer.observe({ entryTypes: ['largest-contentful-paint'] });
 
       return () => {
@@ -382,34 +288,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     if (metrics.timeToInteractive > 3500) score -= 20;
   };
 
-  const getPerformanceGrade = (score: number): string => {;
-return Math.max(0, score);
-  };
-
-  const getPerformanceGrade = (score: number): string => {
-origin/cursor/automate-test-improve-and-merge-code-2533
-    if (score >= 90) return 'A';
-    if (score >= 80) return 'B';
-    if (score >= 70) return 'C';
-    if (score >= 60) return 'D';
-return 'F';
-  };
-
-  const performanceScore = getPerformanceScore();
-  const performanceGrade = getPerformanceGrade(performanceScore);
-
->
-      <div className='flex items-center justify-between mb-6'>
-        <h3 className='text-xl font-bold text-white flex items-center gap-2'>
-          <Gauge className='w-5 h-5 text-cyan-400' />
-          Performance Optimizer
-        </h3>
-        <button
-          onClick={() => setShowMetrics(!showMetrics)}
-className='text-sm text-cyan-400 hover:text-cyan-300 transition-colors duration-300'
-origin/cursor/automate-test-improve-and-merge-code-2533
-        >
-          {showMetrics ? 'Hide' : 'Show'} Metrics
         </button>
       </div>
             className="h-3 bg-gradient-to-r from-red-500 via-yellow-500 to-green-500 rounded-full"
@@ -442,12 +320,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <motion&& motion.div;
           initial={{ opacity: 0, height: 0 }}'
           animate={{ opacity: 1, height: 'auto' }}
-          exit={{ opacity: 0, height: 0 }}
-className='grid grid-cols-2 md:grid-cols-3 gap-4 mb-6'
-        >
-origin/cursor/automate-test-improve-and-merge-code-2533
-          <div className='text-center p-3 rounded-lg bg-white/5 border border-white/10'>
-            <Clock className='w-6 h-6 text-blue-400 mx-auto mb-2' />
+
             <div className='text-lg font-bold text-white'>
               {Math.round(metrics.loadTime)}ms;
             </div>'
@@ -524,19 +397,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <div className="text-lg font-bold text-white">{Math.round(metrics.firstInputDelay)}ms</div>"
             <div className="text-xs text-white/60">FID</div>'"
       <div className='space-y-3'>        <button      <div className="space-y-3">
-        <button
-
-            <div className='text-xs text-white/60'>FID</div>
-          </div>
-        </motion.div>
-      )}
-origin/cursor/automate-test-improve-and-merge-code-2533
-      {/* Optimization Controls */}
-<div className='space-y-3'>
-        <button
-      <div className='space-y-3'>        <button
-
-        <button
 
       {/* Optimization Controls */}
 
@@ -613,8 +473,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         )}
       </div>
 
-      {/* Performance Tips */}
-<div className='mt-6 pt-4 border-t border-white/10'>
         <h4 className='text-sm font-semibold text-white/80 mb-3'>
           Performance Tips;
         </h4>
@@ -861,8 +719,7 @@ if ( {'              window.addEventListener ('load', function () {'            
 }`
           ``        }}/>;
     </Head>);
-}
-  );
+});
 }
 ;
 );
@@ -892,5 +749,3 @@ interface PerformanceOptimizerProps {}
     }
 export default PerformanceOptimizer;
   );
-
-origin/cursor/automate-test-improve-and-merge-code-2533

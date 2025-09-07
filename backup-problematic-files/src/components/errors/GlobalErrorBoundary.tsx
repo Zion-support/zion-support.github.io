@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-'use client';
-=======
-use client';
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 ;
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -35,36 +27,7 @@ interface ErrorBoundaryProps {;
 export class GlobalErrorBoundary extends Component<ErrorBoundaryProps ErrorBoundaryState> {;
 
   static getDerivedStateFromError(error:Error):Partial<ErrorBoundaryState> {;
-<<<<<<< HEAD
-    return {;
-      hasError:true,;
-      error;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-    }
-  }
-;
-  componentDidCatch(error:Error, errorInfo:ErrorInfo) {;
-    const errorId = this.generateErrorId();
-    ;
-    // Enhanced error logging;
-    const enhancedError = {;
-      ...error,;
-      componentStack:errorInfo.componentStack,;
-      errorBoundary:this.props.context || 'GlobalErrorBoundary',;
-      timestamp:new Date().toISOString(),;
-      userAgent:typeof window !== 'undefined' ? navigator.userAgent :'SSR',;
-      url:typeof window !== 'undefined' ? window.location.href :'SSR',;
-      userId:this.getUserId(),;
-      buildInfo:this.getBuildInfo();
-    }
-;
-    // Log to console in development;
-    if (process.env.NODE_ENV === 'development') {;
-<<<<<<< HEAD
-      console.group('🚨 Error Boundary Caught Error');
-=======
-      console.group(' Error Boundary Caught Error');
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+
       logErrorToProduction('Error:', { data:error });
       logErrorToProduction('Error Info:', { data:errorInfo });
       logErrorToProduction('Enhanced Error:', { data:enhancedError });
@@ -93,14 +56,7 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps ErrorBound
       errorId;
     });
   }
-<<<<<<< HEAD
 
-=======
-;
-  componentWillUnmount() {;
-    // Clear any pending retry timeouts;
-    this.retryTimeouts.forEach(timeout => clearTimeout(timeout));
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   }
 ;
   private generateErrorId():string {;
@@ -120,155 +76,12 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps ErrorBound
       }    }
     return null;
   }
-<<<<<<< HEAD
 
-=======
-;
-  private getBuildInfo() {;
-    return {;
-      version:process.env.NEXT_PUBLIC_APP_VERSION || 'unknown',;
-      environment:process.env.NODE_ENV,;
-      buildTime:process.env.NEXT_PUBLIC_BUILD_TIME || 'unknown';
-    }
-  }
-;
-  private getErrorSeverity(error:Error):'low' | 'medium' | 'high' | 'critical' {;
-    const message = error.message.toLowerCase();
-    const stack = error.stack?.toLowerCase() || '';
-;
-    // Critical errors;
-    if (message.includes('network') || message.includes('fetch')) {;
-      return 'medium';
-    }
-    ;
-    if (message.includes('chunk') || message.includes('loading')) {;
-      return 'medium';
-    }
-;
-    if (stack.includes('auth') || stack.includes('payment')) {;
-      return 'critical';
-    }
-;
-    if (stack.includes('database') || stack.includes('api')) {;
-      return 'high';
-    }
-;
-    return 'low';
-  }
-;
-  private getErrorSuggestion(error:Error):string {;
-    const message = error.message.toLowerCase();
-;
-    if (message.includes('network') || message.includes('fetch')) {;
-      return 'Please check your internet connection and try again.';
-    }
-    ;
-    if (message.includes('chunk')) {;
-      return 'The application was updated. Please refresh the page.';
-    }
-;
-    if (message.includes('permission') || message.includes('unauthorized')) {;
-      return 'You may need to log in again or check your permissions.';
-    }
-;
-    return 'This appears to be a temporary issue. Please try again.';
-  }
-;
-  private retry = () => {;
-    if (this.state.retryCount >= (this.props.maxRetries || 3)) {;
-      return;
-    }
-;
-    const retryDelay = Math.pow(2, this.state.retryCount) * 1000 // Exponential backoff;
-;
-    const timeout = setTimeout(() => {;
-      this.setState({;
-        hasError:false,;
-        error:null,;
-        errorInfo:null,;
-        errorId:null,;
-        retryCount:this.state.retryCount + 1,;
-        showDetails:false;
-      });
-    }, retryDelay);
-;
-    this.retryTimeouts.push(timeout);
-  }
-;
-  private copyErrorDetails = async () => {;
-    const errorDetails = {;
-      errorId:this.state.errorId,;
-      message:this.state.error?.message,;
-      stack:this.state.error?.stack,;
-      componentStack:this.state.errorInfo?.componentStack,;
-      timestamp:new Date().toISOString(),;
-      url:typeof window !== 'undefined' ? window.location.href :'unknown',;
-      userAgent:typeof window !== 'undefined' ? navigator.userAgent :'unknown';
-    }
-;
-    try {;
-      await navigator.clipboard.writeText(JSON.stringify(errorDetails, null, 2));
-      // Could show a toast notification here;
-    } catch (err) {;
-      logErrorToProduction('Failed to copy error details:', { data:err });
-    }
-  }
-;
-  private reportError = async () => {;
-    if (!this.state.error || !this.state.errorId) return;
-;
-    try {;
-      // Report to your error reporting service;
-      const response = await fetch('/api/error-report', {;
-        method:'POST',;
-        headers:{;
-          'Content-Type':'application/json';
-        },;
-        body:JSON.stringify({;
-          errorId:this.state.errorId,;
-          error:{;
-            message:this.state.error.message,;
-            stack:this.state.error.stack,;
-            name:this.state.error.name;
-          },;
-          errorInfo:this.state.errorInfo,;
-          userFeedback:this.state.userFeedback,;
-          context:this.props.context,;
-          timestamp:new Date().toISOString();
-        });
-      });
-;
-      if (response.ok) {;
-        // Show success message;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       }
     } catch (err) {;
       logErrorToProduction('Failed to report error:', { data:err });
     }
-<<<<<<< HEAD
 
-=======
-  }
-;
-  private goHome = () => {;
-    if (typeof window !== 'undefined') {;
-      window.location.href = '/';
-    }
-  }
-;
-  render() {;
-    if (this.state.hasError && this.state.error) {;
-      // Use custom fallback if provided;
-      if (this.props.fallback) {;
-        return this.props.fallback;
-      }
-;
-      const severity = this.getErrorSeverity(this.state.error);
-      const suggestion = this.getErrorSuggestion(this.state.error);
-      const canRetry = this.props.enableRetry !== false && ;
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                        this.state.retryCount < (this.props.maxRetries || 3);
       return (;
         <div className="min-h-screen flex items-center justify-center p-4 bg-gradient-to-br from-red-50 to-orange-50 dark:from-red-950/20 dark:to-orange-950/20">;"
@@ -313,27 +126,7 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps ErrorBound
                     <Home className="h-4 w-4" />;"
 
                   <Button ;
-<<<<<<< HEAD
-                    onClick={() => this.setState({ showDetails:!this.state.showDetails })}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-                    variant="ghost" ;
-                    size="sm";
-                    className="flex items-center gap-2";
-                  >;
-                    <Bug className="h-4 w-4" />;
-<<<<<<< HEAD
 
-=======
-                    {this.state.showDetails ? 'Hide' :'Show'} Details;
-                  </Button>;
-                </div>;
-;
-                {/* Error Details */}
-=======
-                    onClick={() => this.setState({ showDetails: !this.state.showDetails ;})}
-                    <Bug className="h-4 w-4" />;"
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 <AnimatePresence>;
 
                       initial={{ opacity: 0;, height: 0 ;}}"
@@ -360,46 +153,11 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps ErrorBound
                             ;                          )}
                     </motion.div>;
                   )}
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-                </AnimatePresence>;
-              </CardContent>;
-            </Card>;
-          </motion.div>;
-<<<<<<< HEAD
 
-=======
-        </div>;
-      );
-    }
-;
-    return this.props.children;
-  }
-}
-;
-// Hook for programmatic error boundary;
-export const useErrorBoundary = () => {;
-  const [error, setError] = React.useState<Error | null>(null);
-;
-  React.useEffect(() => {;
-    if (error) {;
-      throw error;
-    }
-  }, [error]);
-;
-  const captureError = React.useCallback((error:Error) => {;
-    setError(error);
-  }, []);
-;
-  return { captureError }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
 ;
 // Higher-order component for adding error boundaries;
-=======
-  const [error, setError] = React.useState<Error | null>(null);
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export const withErrorBoundary = <P extends object>(;
 
   Component: React.ComponentType<P>;,;
@@ -408,19 +166,7 @@ export const withErrorBoundary = <P extends object>(;
     <GlobalErrorBoundary {...errorBoundaryProps}>;
 
       <Component {...props} />;
-<<<<<<< HEAD
-    </GlobalErrorBoundary>;
-  );
-;
-  WrappedComponent.displayName = `withErrorBoundary(${Component.displayName || Component.name})`;
-  ;
-  return WrappedComponent;}
-;
-<<<<<<< HEAD
-export default GlobalErrorBoundary
-=======
-export default GlobalErrorBoundary 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+
 'use client' import { ;
   {;
   React, {;
@@ -433,20 +179,14 @@ import * as Sentry from '@sentry/nextjs' error: Error | null errorInfo: ErrorInf
   super (props) this.state = {';
   hasError: false, error: null, errorInfo: null, errorId: null, retryCount: 0,  userFeedback: '', showDetails: false ;
 }
-<<<<<<< HEAD
 
-=======
-=======
-
-    ;)
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }static getDerivedStateFromError (error: Error) : Partial<ErrorBoundaryState> {;
 
 }const severity = this.getErrorSeverity (this.state.error) const suggestion = this.getErrorSuggestion (this.state.error) const canRetry = this.props.enableRetry !== false && this.state.retryCount < (this.props.maxRetries || 3) return (<div className="min-h-screen flex items-center justify-center p-4 bg-gradient-to-br from-red-50 to-orange-50 dark:from-red-950/20 dark:to-orange-950/20" > <motion.div initial= {;"
 }> <Card className="w-full max-w-2xl border-red-200 bg-white dark:bg-gray-900" > <CardHeader className="text-center" > <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-red-100 dark:bg-red-900/20" > <AlertTriangle className="h-8 w-8 text-red-600 dark:text-red-400" /> </div> <CardTitle className="text-2xl font-bold text-gray-900 dark:text-gray-100" > Oops! Something went wrong  <div className="flex items-center justify-center gap-2 mt-2" > <Badge variant= {';
 
 } ID: {;)
-}) ;
+});
 }componentWillUnmount () {;
   //Clear any pending retry timeouts this.retryTimeouts.forEach (timeout => clearTimeout (timeout) ) ;
 }private generateErrorId () : string {;
@@ -491,7 +231,7 @@ import * as Sentry from '@sentry/nextjs' error: Error | null errorInfo: ErrorInf
 }const retryDelay = Math.pow (2, this.state.retryCount) * 1000 //Exponential backoff const timeout = setTimeout ( () => {;
   this.setState ({;
   hasError: false;, error: null;, errorInfo: null;, errorId: null;,  retryCount: this.state.retryCount + 1;, showDetails: false ;
-}) ;
+});
 }, retryDelay) this.retryTimeouts.push (timeout) ;
 }private copyErrorDetails = async () => {;
   const errorDetails = {';
@@ -501,7 +241,7 @@ import * as Sentry from '@sentry/nextjs' error: Error | null errorInfo: ErrorInf
 }catch (err) {';
   logErrorToProduction ('Failed to copy error details: ';, {;
   data: err ;
-}) ;
+});
 }
 }private reportError = async () => {;
   if (!this.state.error || !this.state.errorId) return try {';
@@ -517,14 +257,14 @@ errorInfo: this.state.errorInfo;
 userFeedback: this.state.userFeedback;
 context: this.props.context;
 timestamp: new Date () .toISOString () ;
-}) ;
+});
 }) if (response.ok) {;
   //Show success message ;
 }
 }catch (err) {';
   logErrorToProduction ('Failed to report error: ';, {;
   data: err ;
-}) ;
+});
 }
 }private goHome = () => {';
   if (typeof window !== 'undefined') {';
@@ -578,14 +318,3 @@ pr-12325
 }//Higher-order component for adding error boundaries <GlobalErrorBoundary {;
   ...errorBoundaryProps ;
 }> <Component {;
-<<<<<<< HEAD
-  ...props ;
-}/> </GlobalErrorBoundary>) WrappedComponent.displayName = `withErrorBoundary ($ {;
-  Component.displayName || Component.name ;
-}) ` return WrappedComponent;
-}export default GlobalErrorBoundary '"
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
-}/> ) WrappedComponent.displayName = `withErrorBoundary ($ {;)"`;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

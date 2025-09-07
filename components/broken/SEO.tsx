@@ -1,6 +1,3 @@
-
-{}
-  /* Robots Meta */
 import React, { useEffect } from 'react';
 import Head from 'next/head';
 
@@ -22,8 +19,7 @@ interface SEOProps {
 
 const SEO: React.FC<SEOProps> = ({
   title;
-origin/cursor/automate-test-improve-and-merge-code-2533
-}{
+
   noindex && <meta name="robots" content="noindex" />
 }{"
   nofollow && <meta name="robots" content="nofollow" />
@@ -237,24 +233,7 @@ const SEO: React.FC<SEOProps> = ({'
   author = 'Zion Tech Group';
   section;
   tags = [];
-  structuredData;
-    : `https://ziontechgroup.com${image}`;
 
-  return (
-    <Head>
-      {/* Basic Meta Tags */}
-      <title>{fullTitle}</title>
-<meta name='description' content={description} />
-      <meta
-        name='keywords'
-        content={Array.isArray(keywords) ? keywords.join(', ') : keywords}
-      />
-      <meta name='author' content={author} />
-      <meta name='robots' content={noindex ? 'noindex' : 'index'} />
-origin/cursor/automate-test-improve-and-merge-code-2533
-      {nofollow && <meta name='robots' content='nofollow' />}
-      {noindex && <meta name='robots' content='noindex' />}
-      {nofollow && <meta name='robots' content='nofollow' />}
       {!noindex && !nofollow && <meta name='robots' content='index, follow' />}
       {/* Open Graph Meta Tags */}
       {/* Article Specific Meta Tags */}'
@@ -372,7 +351,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           })
         }}
 
-      {/* Favicon and App Icons */}
       <link rel='icon' href='/favicon.ico' />
       <link'
         rel='apple-touch-icon''
@@ -418,8 +396,7 @@ export default SEO;            __html: JSON && JSON.stringify(structuredData);
 origin/cursor/automate-test-improve-and-merge-code-2533
           }}
         />;
-      )}
-  );
+      )});
 export default SEO;  )
 };
 
@@ -537,9 +514,3 @@ export default SEO);
 ;
 export default SEO;
 ;
-    </Head>
-);
-};
-
-export default SEO;
-origin/cursor/automate-test-improve-and-merge-code-2533

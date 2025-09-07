@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/wiki.tsx
-<<<<<<< HEAD:pages/wiki.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/wiki.tsx
-
-
-
 function CopyButton({ text, label }: { text: string, label: string }) {}
   const [copied, setCopied] = useState(false)
   return (
@@ -18,8 +6,6 @@ function CopyButton({ text, label }: { text: string, label: string }) {}
         await navigator.clipboard.writeText(text)
         setCopied(true)
         setTimeout(() => setCopied(false), 1500)
-
-
 
 }
 
@@ -37,29 +23,16 @@ export default function WikiPage() {};
             <li key={s.id}>"
               <a href={`#${slugify(s.title)}`} className="opacity-80 hover:opacity-100">
 
+import React, { useMemo, useState } from 'react',
 
-import React, { useMemo, useState } from 'react',
-<<<<<<< HEAD:pages_backup/wiki.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import React, { useMemo, useState } from 'react',
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React, { useMemo, useState } from 'react';
-=======
 
-';
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/wiki.tsx
 import React, { useMemo, useState } from 'react',;
-
-
 
 import {}
   generateZionWiki,
   buildMarkdownFromWiki,
   buildWikitextFromWiki,
-
-
 
       }}";
       className="px - 3 py - 1 rounded border text - xs hover:bg - gray - 50 dark:hover:bg - gray - 900";
@@ -68,16 +41,10 @@ import {}
     </button>);
 }
 
-
-
-
-
-
 export default function WikiPage() {}
   const wiki = useMemo(() => generateZionWiki(), [])
   const md = useMemo(() => buildMarkdownFromWiki(wiki), [wiki])
   const wikitext = useMemo(() => buildWikitextFromWiki(wiki), [wiki])
-
 
 export default /**;
  * WikiPage - Function description;
@@ -96,9 +63,7 @@ function WikiPage() {}
             <li key={s.id}>;"`
               <a href={`#${slugify (s.title)}`} className="opacity - 80 hover:opacity - 100">;
 
-
                 {s.title}
-
 
                 {s.title  } catch (error) {"
     console.error("Error:", error);"
@@ -107,34 +72,19 @@ function WikiPage() {}
 }
               </Link>
 
-
-
             </li>
           ))}
           <li>
 
-
-
-
 "
             <a href="#references" className="opacity-80 hover:opacity-100">References</Link>
-
-
-
-
-
 
           </li>
         </ul>
       </aside>
 
-
   operatorPrompt,'
   slugify} from '../utils/data/zionContent',
-<<<<<<< HEAD
-}
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 export default function WikiPage() {
   const wiki = useMemo(() => generateZionWiki(), []),
@@ -168,46 +118,7 @@ function CopyButton({ text, label }: { text: string, label: string }) {
         await navigator.clipboard.writeText(text)
         setCopied(true)
         setTimeout(() => setCopied(false), 1500)
-<<<<<<< HEAD
-      }}
-      className="px-3 py-1 rounded border text-xs hover:bg-gray-50 dark:hover:bg-gray-900"
-    >
-      {copied ? 'Copied' : label}
-    </button>
-  )
-=======
-}
-export default function WikiPage() {
-  const wiki = useMemo(() => generateZionWiki(), [])
-  const md = useMemo(() => buildMarkdownFromWiki(wiki), [wiki])
-  const wikitext = useMemo(() => buildWikitextFromWiki(wiki), [wiki])
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
-=======
-import React, { useMemo, useState } from 'react',;
-import {
-  generateZionWiki,
-  buildMarkdownFromWiki,
-  buildWikitextFromWiki,
-  operatorPrompt,
-  slugify} from '../utils/data/zionContent',
-
-
-function CopyButton({ text, label }: { text: string, label: string }) {}
-  const [copied, setCopied] = useState(false)
-  return (
-    <button;
-      onClick={async () => {}
-        await navigator.clipboard.writeText(text)
-        setCopied(true)
-        setTimeout(() => setCopied(false), 1500)
-}
-<<<<<<< HEAD:pages_backup/wiki.tsx
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/wiki.tsx
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React, { useMemo, useState } from 'react';
 import { generateZionWiki;
   buildMarkdownFromWiki;
@@ -224,19 +135,9 @@ export default function WikiPage() {
   const wiki = useMemo(() => generateZionWiki(), [])
   const md = useMemo(() => buildMarkdownFromWiki(wiki), [wiki])
   const wikitext = useMemo(() => buildWikitextFromWiki(wiki), [wiki])
-<<<<<<< HEAD
-<<<<<<< HEAD:pages/wiki.tsx
-<<<<<<< HEAD
 
-=======
-export default function WikiPage() {}
-  const wiki = useMemo(() => generateZionWiki(), [])
-  const md = useMemo(() => buildMarkdownFromWiki(wiki), [wiki])
-  const wikitext = useMemo(() => buildWikitextFromWiki(wiki), [wiki])
-';
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/wiki.tsx
 import React, { useMemo, useState } from 'react';
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+
 import {;
   generateZionWiki,;
   buildMarkdownFromWiki,;
@@ -263,61 +164,8 @@ function CopyButton() { return null; }
     return res.status(500).json({ error: "Internal server error" });
   }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-}
-=======
-
-
 }
 
-<<<<<<< HEAD:pages_backup/wiki.tsx
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-export default function WikiPage() {
-  const wiki = useMemo(() => generateZionWiki(), []),
-  const md = useMemo(() => buildMarkdownFromWiki(wiki), [wiki]),
-  const wikitext = useMemo(() => buildWikitextFromWiki(wiki), [wiki]),
-<<<<<<< HEAD
-
-  return (
-    <div className="grid grid-cols-1 lg:grid-cols-[260px,1fr] gap-8">
-      <aside className="sticky top-20 self-start hidden lg:block">
-        <div className="text-sm font-semibold mb-2">Table of contents</div>
-=======
-export default function WikiPage() {}
-  const wiki = useMemo(() => generateZionWiki(), []),
-  const md = useMemo(() => buildMarkdownFromWiki(wiki), [wiki]),
-  const wikitext = useMemo(() => buildWikitextFromWiki(wiki), [wiki]),
-  return ("
-    <div className="grid grid-cols-1 lg:grid-cols-[260px,1fr] gap-8">"
-      <aside className="sticky top-20 self-start hidden lg:block">"
-        <div className="text-sm font-semibold mb-2">Table of contents</div>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/wiki.tsx
-        <ul className="space-y-1 text-sm">
-          {wiki.sections.map((s) => (
-            <li key={s.id}>"`
-              <a href={`#${slugify(s.title)}`} className="opacity-80 hover:opacity-100">
-<<<<<<< HEAD
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-            </li>
-          ))}
-          <li>
-
-=======
-=======
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/wiki.tsx
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return (
 <div className='grid grid-cols-1 lg:grid-cols-[260px,1fr] gap-8'>
       <aside className='sticky top-20 self-start hidden lg:block'>
@@ -329,7 +177,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 href={`#${slugify(s.title)}`}
                 className='opacity-80 hover:opacity-100'
               >
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+
                 {s.title}
                 {s.title  } catch (error) {";
     console.error("Error:", error);"
@@ -337,75 +185,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
               </Link>
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-            </li>
-          ))}
-<<<<<<< HEAD:pages_backup/wiki.tsx
-          <li>
-<<<<<<< HEAD
-            <a href="#references" className="opacity-80 hover:opacity-100">References</a>
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-          <li>"
-            <a href="#references" className="opacity-80 hover:opacity-100">References</a>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/wiki.tsx
+
             <a href="#references" className="opacity-80 hover:opacity-100">References</Link>
-<<<<<<< HEAD
-=======
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<a href='#references' className='opacity-80 hover:opacity-100'>
-              References
-            </a>
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           </li>
         </ul>
       </aside>
 
-<<<<<<< HEAD
-
-
-"
-      <article className="prose dark:prose-invert max-w-none">
-        <h1>{wiki.title}</h1>"
-        <div className="not-prose border rounded p-4 bg-white/60 dark:bg-black/20 mb-4">"
-          <div className="grid grid-cols-2 gap-x-6 gap-y-1 text-sm">"
-            <div className="font-semibold">Founder</div><div>{wiki.infobox.founder}</div>"
-            <div className="font-semibold">Launch Year</div><div>{wiki.infobox.launchYear}</div>"
-            <div className="font-semibold">Token</div><div>{wiki.infobox.token}</div>"
-            <div className="font-semibold">Protocol Type</div><div>{wiki.infobox.protocolType}</div>
-          </div>
-        </div>
-        <p>{wiki.intro}</p>
-
-
-
-
-
-
-
-        {wiki.sections.map((s) => (
-=======
-            </li>
-          ))}
-          <li>
-<a href='#references' className='opacity-80 hover:opacity-100'>
-              References
-            </a>
-origin/cursor/automate-test-improve-and-merge-code-2533
-          </li>
-        </ul>
-      </aside>
-
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 <article className='prose dark:prose-invert max-w-none'>
 origin/cursor/automate-test-improve-and-merge-code-2533
         <h1>{wiki.title}</h1>
@@ -424,69 +210,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <p>{wiki.intro}</p>
 
 {wiki.sections.map(s => (
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+
           <section key={s.id} id={slugify(s.title)}>
             <h2>{s.title}</h2>
             {s.paragraphs.map((p, i) => (
               <p key={i}>{p}</p>
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/wiki.tsx
-<<<<<<< HEAD:pages/wiki.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
-=======
-
-
-
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             ))}
           </section>
         ))}
 
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-
-
-=======
-
-
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             ))  } catch (error) {
     console.error("Error:", error);
-=======
 
-
-
-
-
-
-
-
-
-
-
-
-            ))  } catch (error) {"
-    console.error("Error:", error);"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/wiki.tsx
     return res.status(500).json({ error: "Internal server error" });
   }
 }
@@ -496,82 +232,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD:pages_backup/wiki.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/wiki.tsx
 
-
-<<<<<<< HEAD:pages_backup/wiki.tsx
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
-
-
-
-
-"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/wiki.tsx
         <h2 id="references">References</h2>
-=======
-        <h2 id="references">References</h2>
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/wiki.tsx
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+
             ))}
           </section>
         ))}
 
 <h2 id='references'>References</h2>
-<<<<<<< HEAD
-<<<<<<< HEAD:pages/wiki.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/wiki.tsx
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+
         <ol>
           {wiki.references.map((r, i) => (
             <li key={i}>{r}</li>
           ))}
         </ol>
-<<<<<<< HEAD:pages_backup/wiki.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/wiki.tsx
-
-
-
-
-
 
 "
         <div className="not-prose mt-10 p-4 border rounded bg-white/60 dark:bg-black/20">"
@@ -583,20 +257,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>
           </div>"
           <pre className="overflow-auto text-xs whitespace-pre-wrap">
-<<<<<<< HEAD:pages_backup/wiki.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/wiki.tsx
-
-
-
 
 {md  } catch (error) {"
     console.error("Error:", error);"
@@ -604,64 +264,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
 
-
-
-
-<<<<<<< HEAD:pages_backup/wiki.tsx
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
-<div className='not-prose mt-10 p-4 border rounded bg-white/60 dark:bg-black/20'>
-          <div className='flex items-center justify-between mb-2'>
-            <div className='font-semibold'>Export</div>
-            <div className='flex gap-2'>
-              <CopyButton text={md} label='Copy Markdown' />
-              <CopyButton text={wikitext} label='Copy Wikitext' />
-            </div>
-          </div>
-<<<<<<< HEAD
-<<<<<<< HEAD:pages/wiki.tsx
-<<<<<<< HEAD
-          <pre className="overflow-auto text-xs whitespace-pre-wrap">
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
-
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/wiki.tsx
           </pre>
         </div>"
         <div className="not-prose mt-6 p-4 border rounded bg-white/60 dark:bg-black/20">"
           <div className="font-semibold mb-2">Operator Prompt</div>"
           <pre className="overflow-auto text-xs whitespace-pre-wrap">{operatorPrompt}</pre>
-<<<<<<< HEAD:pages_backup/wiki.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 
         </div>
       </article>
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/wiki.tsx
-        </div>
-      </article>
-
 
 }
-
 
               </a>;
             </li>))}
@@ -712,10 +324,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </div>);
 }
 
-
-
-
-
         </div>
       </article>
     </div>;
@@ -724,41 +332,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </div>
   )
 
-<<<<<<< HEAD:pages_backup/wiki.tsx
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/wiki.tsx
     </div>
   )
   } catch (error) {"
     console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD:pages_backup/wiki.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/wiki.tsx
 
-
-<<<<<<< HEAD:pages_backup/wiki.tsx
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/wiki.tsx
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           <pre className='overflow-auto text-xs whitespace-pre-wrap'>{md}</pre>
         </div>
 
@@ -771,21 +351,3 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </article>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD:pages/wiki.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/wiki.tsx
-=======
-
-
-
-
-
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/wiki.tsx
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

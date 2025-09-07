@@ -1,29 +1,6 @@
-<<<<<<< HEAD:src/components/NotificationCenter.tsx
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/NotificationCenter.tsx
 unreadCount, ;
     markAsRead, ;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
-<<<<<<< HEAD
-  const handleFilterChange = (newFilter: FilterType,) => {;
-
-<<<<<<< HEAD
-
-<<<<<<< HEAD:src/components/NotificationCenter.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/NotificationCenter.tsx
 import React, { useState, useEffect } from 'react',
 import React, { useState, useEffect } from 'react';
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -39,20 +16,7 @@ import {
   NotificationHeader, 
   NotificationList, 
   NotificationFooter 
-<<<<<<< HEAD:src/components/NotificationCenter.tsx
-<<<<<<< HEAD
-} from '@/components/notifications',
-import { FilterType } from '@/components/notifications/NotificationFilter',
-export const NotificationCenter: React.FC = () => {
-  const { 
-    filteredNotifications,
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     unreadCount, 
     markAsRead, 
     markAllAsRead,
@@ -68,11 +32,6 @@ export const NotificationCenter: React.FC = () => {
   const [loadedOnce, setLoadedOnce] = useState(false),
   const enqueueSnackbar = useEnqueueSnackbar(),
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   // Refresh notifications when popover opens, but avoid duplicate
   useEffect(() => {
     if (open && !loadedOnce) {
@@ -135,7 +94,6 @@ export const NotificationCenter: React.FC = () => {;
       loadNotifications();
     }
   }, [open, loadedOnce, fetchNotifications]),
-<<<<<<< HEAD
 
   const handleMarkAllAsRead = async () => {
     try {
@@ -147,61 +105,12 @@ export const NotificationCenter: React.FC = () => {;
     }
   },
 
-  const handleFilterChange = (newFilter: FilterType) => {
-    setFilter(newFilter as any)
-  },
-
-  return (
-    <Popover open={open} onOpenChange={(v) => setOpen(v ?? false)}>
-=======
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
- } from '@/components/notifications';
-import { FilterType } from '@/components/notifications/NotificationFilter';
-export const NotificationCenter: React.FC;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
- } from '@/components/notifications';
-import { FilterType } from '@/components/notifications/NotificationFilter';
-export const NotificationCenter: React.FC;
-origin/cursor/automate-test-improve-and-merge-code-2533
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/NotificationCenter.tsx
-
-  const handleMarkAllAsRead = async () => {
-    try {
-      await markAllAsRead(),
-      enqueueSnackbar("All notifications marked as read", { variant: 'success' })
-    } catch (err) {
-      logErrorToProduction('Failed to mark notifications as read:', { data: err }),
-      enqueueSnackbar((err as any)?.response?.data?.message || (err instanceof Error ? err.message : String(err)), { variant: 'error' })
-    }
-  },
-
-<<<<<<< HEAD:src/components/NotificationCenter.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/NotificationCenter.tsx
       <PopoverTrigger asChild>
         <Button variant="ghost" size="icon" className="relative" aria-label="Open notifications">
           <Bell className="h-5 w-5 text-zion-slate-light" />
           {unreadCount > 0 && (
             <span className="absolute -top-0.5 -right-0.5 flex h-5 w-5 items-center justify-center rounded-full bg-zion-cyan text-[10px] text-white font-medium">
 
-<<<<<<< HEAD:src/components/NotificationCenter.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/NotificationCenter.tsx
   }, [open, loadedOnce, fetchNotifications]),;
   const handleMarkAllAsRead = async () => {;
     try {;
@@ -213,53 +122,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     }
   },;
   const handleFilterChange = (newFilter: FilterType) => {;
-<<<<<<< HEAD:src/components/NotificationCenter.tsx
-<<<<<<< HEAD
-    setFilter(newFilter as any);
-  };
-  return (;
-    <Popover open={open} onOpenChange={(v) => setOpen(v ?? false)}>;
-      <PopoverTrigger asChild>;
-        <Button variant="ghost" size="icon" className="relative" aria-label="Open notifications">;
-          <Bell className="h-5 w-5 text-zion-slate-light" />;
-          {unreadCount > 0 && (;
-            <span className="absolute -top-0.5 -right-0.5 flex h-5 w-5 items-center justify-center rounded-full bg-zion-cyan text-[10px] text-white font-medium">;
-              {unreadCount > 9 ? '9+' : unreadCount}
-            </span>;
-          )}
-<<<<<<< HEAD
-        </Button>
-      </PopoverTrigger>
-      <PopoverContent className="w-[350px] p-0 bg-zion-blue border-zion-blue-light max-h-[500px] flex flex-col">
-<<<<<<< HEAD
-        <NotificationHeader 
-=======
-=======
-=======
-    setFilter(newFilter as any);
-  };
 
-
-  return (
-
-
-
-          )}
-
-        </Button>;
-      </PopoverTrigger>;
-      <PopoverContent className="w-[350px] p-0 bg-zion-blue border-zion-blue-light max-h-[500px] flex flex-col">;
-        <NotificationHeader
-          unreadCount = {unreadCount,}
-          onMarkAllAsRead = {handleMarkAllAsRead,}
         />;
-
-        <NotificationFilter
-          filter = {filter as FilterType,}
-          onFilterChange = {handleFilterChange,}
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/NotificationCenter.tsx
-        />;
-
 
         <NotificationList
 
@@ -269,35 +133,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           onMarkAsRead = {markAsRead,}
           onDismiss = {dismissNotification,}
           onRetry = {fetchNotifications,}
-<<<<<<< HEAD:src/components/NotificationCenter.tsx
-<<<<<<< HEAD
-        />
-        <NotificationFooter onClose={() => setOpen(false)} />
-      </PopoverContent>
-    </Popover>
-<<<<<<< HEAD
-  )
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-          unreadCount={unreadCount} 
-          onMarkAllAsRead={handleMarkAllAsRead} 
-        />
-        
-        <NotificationFilter 
-          filter={filter as FilterType} 
-          onFilterChange={handleFilterChange} 
-        />
-        
-        <NotificationList 
-          loading={loading}
-          error={error}
-          notifications={filteredNotifications}
-          onMarkAsRead={markAsRead}
-          onDismiss={dismissNotification}
-          onRetry={fetchNotifications}
-        />;
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/NotificationCenter.tsx
 
         </Button>;
       </PopoverTrigger>;
@@ -307,121 +142,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           onMarkAllAsRead = {handleMarkAllAsRead,}
         />;
 
-<<<<<<< HEAD:src/components/NotificationCenter.tsx
-        <NotificationFilter
-          filter = {filter as FilterType,}
-          onFilterChange = {handleFilterChange,}
-        />;
-
-
-        <NotificationList
-          loading = {loading,}
-          error = {error,}
-          notifications = {filteredNotifications,}
-          onMarkAsRead = {markAsRead,}
-          onDismiss = {dismissNotification,}
-          onRetry = {fetchNotifications,}
-
-        />;
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
-  return (
-
-          )}
-
-        </Button>;
-      </PopoverTrigger>;
-      <PopoverContent className="w-[350px] p-0 bg-zion-blue border-zion-blue-light max-h-[500px] flex flex-col">;
-        <NotificationHeader
-          unreadCount = {unreadCount,}
-          onMarkAllAsRead = {handleMarkAllAsRead,}
-        />;
-
-        <NotificationFilter
-          filter = {filter as FilterType,}
-          onFilterChange = {handleFilterChange,}
-
-          loading = {loading,}
-          error = {error,}
-          notifications = {filteredNotifications,}
-          onMarkAsRead = {markAsRead,}
-          onDismiss = {dismissNotification,}
-          onRetry = {fetchNotifications,}
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/NotificationCenter.tsx
         <NotificationFooter onClose={() => setOpen(false)} />;
       </PopoverContent>;
     </Popover>;
   );
-<<<<<<< HEAD
-};
-=======
-},;
 
-    <Popover open={open} onOpenChange={(v, ) => set_open (v ?? false)}>;
-      <PopoverTrigger as_child>;
-        <Button variant="ghost" size="icon" className="relative" aria - label="Open notifications">;
-          <Bell className="h - 5 w - 5 text - zion - slate - light" />;
-          {unread_count > 0 && (
-            <span className="absolute -top - 0.5 -right - 0.5 flex h - 5 w - 5 items - center justify - center rounded - full bg - zion - cyan text-[10px] text - white font - medium">;
-              {unread_count > 9 ? '9+' : unread_count}
-            </span>)}
-        </Button>;
-      </PopoverTrigger>;
-      <PopoverContent className="w-[350px] p - 0 bg - zion - blue border - zion - blue - light max - h-[500px] flex flex - col">;
-        <NotificationHeader;
-          unread_count = {unread_count, }
-          onMarkAllAsRead = {handleMarkAllAsRead, }
-        />;
-        <NotificationFilter;
-          filter = {filter as FilterType, }
-          onFilterChange = {handleFilterChange, }
-        />;
-        <NotificationList;
-          loading = {loading, }
-          error = {error, }
-          notifications = {filtered_notifications, }
-          onMarkAsRead = {markAsRead, }
-          on_dismiss = {dismiss_notification, }
-          on_retry = {fetch_notifications, }
-        />;
-        <NotificationFooter on_close={() => set_open (false)} />;
-      </PopoverContent>;
-    </Popover>);
-},
-;
-
-<<<<<<< HEAD:src/components/NotificationCenter.tsx
-<<<<<<< HEAD
-        <NotificationHeader
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-  const handleFilterChange = (newFilter: FilterType) => {
-    setFilter(newFilter as any)
-  },
-
-  return (
-    <Popover open={open} onOpenChange={(v) => setOpen(v ?? false)}>      <PopoverTrigger asChild>
-        <Button variant="ghost" size="icon" className="relative" aria-label="Open notifications">
-          <Bell className="h-5 w-5 text-zion-slate-light" />
-          {unreadCount > 0 && (
-            <span className="absolute -top-0.5 -right-0.5 flex h-5 w-5 items-center justify-center rounded-full bg-zion-cyan text-[10px] text-white font-medium">
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-=======
-        <NotificationHeader
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/NotificationCenter.tsx
   );
 };
 
@@ -432,7 +157,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 });
 enqueueSnackbar ( (err as any) ?.response?.data?.message || (err instanceof Error ? err.message : String (err) ), {';
   variant: 'error' ;
-}) ;
+});
 
 };
 
@@ -465,9 +190,3 @@ enqueueSnackbar ( (err as any) ?.response?.data?.message || (err instanceof Erro
 }/> </PopoverContent> </Popover>) ;
 };
 '"
-<<<<<<< HEAD:src/components/NotificationCenter.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/NotificationCenter.tsx

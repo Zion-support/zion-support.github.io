@@ -1,4 +1,3 @@
-
 import "https://deno.land/x/xhr@0.1.0/mod.ts";
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
@@ -20,8 +19,7 @@ serve(async (req) => {;
   if (!openAiKey) {;
     return new Response(;
       JSON.stringify({ error:"OpenAI API key is not configured" });
-      { status:500, headers:{ ...corsHeaders, "Content-Type":"application/json" } }
-    );
+      { status:500, headers:{ ...corsHeaders, "Content-Type":"application/json" } });
   }
 ;
   const supabase = createClient(supabaseUrl, supabaseAnonKey);
@@ -219,8 +217,7 @@ serve(async (req) => {;
       { ;
         status:200, ;
         headers:{ ...corsHeaders, "Content-Type":"application/json" } ;
-      }
-    );
+      });
   } catch (error) {;
     console.error("Error in resume-scorer function:", error);
     return new Response(;
@@ -228,8 +225,7 @@ serve(async (req) => {;
       { ;
         status:500, ;
         headers:{ ...corsHeaders, "Content-Type":"application/json" } ;
-      }
-    );  }
+      });  }
 });
  serve (async (req) => {
   //Handle CORS preflight requests if (req.method === "OPTIONS") {
@@ -315,7 +311,3 @@ headers: {
 }) 
 }
 });
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

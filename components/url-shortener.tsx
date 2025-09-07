@@ -1,23 +1,4 @@
-  Link;
-  Copy;
-  BarChart3;
-  ArrowRight;
-  RefreshCw;
-  CheckCircle;
-  ExternalLink;
-  QrCode;
-  Settings;
-  Trash2;
-} from 'lucide-react';import { Link, Copy, BarChart3, ArrowRight, RefreshCw, CheckCircle, ExternalLink, QrCode, Settings, Trash2 } from 'lucide-react';
-
-import React, { useState } from 'react',
-import Head from 'next/head',
-import Card from '../components/ui/Card',
-import Button from '../components/ui/Button';
-import { Link, Copy, BarChart3, ArrowRight, RefreshCw, CheckCircle, ExternalLink, QrCode, Settings, Trash2 } from 'lucide-react';
-origin/cursor/automate-test-improve-and-merge-code-2533
-export default function URLShortenerPage() {
-  Link,
+Link,
   Copy,
   BarChart3,
   ArrowRight,
@@ -60,35 +41,6 @@ import { Link, Copy, BarChart3, ArrowRight, RefreshCw, CheckCircle, ExternalLink
 export default function URLShortenerPage() { return null; }
 } from 'lucide-react';import { Link, Copy, BarChart3, ArrowRight, RefreshCw, CheckCircle, ExternalLink, QrCode, Settings, Trash2 } from 'lucide-react';
 
-export default function URLShortenerPage() {;
-  const [longUrl, setLongUrl] = useState('');
-  const [customAlias, setCustomAlias] = useState('');
-  const [shortenedUrls, setShortenedUrls] = useState<any[]>([]),
-  const [isShortening, setIsShortening] = useState(false);
-
-setIsShortening(true);
-
-    // Simulate API call delay
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    const alias = customAlias.trim() |generateRandomAlias();
-    const shortUrl = `https://zion.tech/${alias}`;
-    const newShortUrl = {
-      id: Date.now()
-      longUrl: longUrl.trim()
-      shortUrl
-      alias
-      clicks: 0
-      createdAt: new Date().toISOString()
-      qrCode: `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(shortUrl)}`
-    }
-origin/cursor/automate-test-improve-and-merge-code-2533
-    setShortenedUrls(prev => [newShortUrl, ...prev]);
-    setLongUrl('');
-    setCustomAlias('');
-    setIsShortening(false);
-      'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-    let result = '';
-    for (let i = 0; i < 6; i++) {
       result += chars.charAt(Math.floor(Math.random() * chars.length));
     }
     return result;
@@ -215,7 +167,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
       </section>
       {/* URL Shortening Tool */}
-            </h2>"
+
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
               Our advanced shortening engine creates professional, trackable links in seconds.
             </p>
@@ -323,14 +275,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </>
                   ) : (
                     <>
-<Link className='w-5 h-5 mr-2' />
-origin/cursor/automate-test-improve-and-merge-code-2533
-                      Create Short URL
+
                     </>
                   )}
                 </Button>
 
-                <Button;
                   onClick={generateShortUrl}
                   disabled={!longUrl && longUrl.trim() || isShortening}'
                   className='w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white py-4 text-lg font-semibold disabled:opacity-50 disabled:cursor-not-allowed'>;
@@ -398,7 +347,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <div className='text-center p-4 bg-gray-700 rounded-lg'>'
                     <div className='text-3xl font-bold text-red-400 mb-2'>
                       {getTotalClicks()}
-                    </div>;"
+
                     <div className="text-sm text-gray-400">Total Clicks</div>;
                   </div>;
                 </div>;
@@ -481,6 +430,25 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </h2>"
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
 
+<section className='py-20 bg-gray-800'>
+          <div className='max-w-6xl mx-auto px-4 sm:px-6 lg:px-8'>
+            <div className='text-center mb-16'>
+              <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>
+                Your Shortened URLs
+              </h2>
+              <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
+                Manage and track all your shortened URLs in one place.
+              </p>
+            </div>
+
+<div className='space-y-4'>
+              {shortenedUrls.map(url => (
+origin/cursor/automate-test-improve-and-merge-code-2533
+                <Card
+                  key={url && url.id}
+                  className='p-6 bg-gray-700 border border-gray-600'>;
+                  <div className='grid grid-cols-1 lg:grid-cols-3 gap-6'>;
+
             <div className="space-y-4">
               {shortenedUrls.map((url) => ("
                 <Card key={url.id} className="p-6 bg-gray-700 border border-gray-600">"
@@ -501,8 +469,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                             {url && url.longUrl}
                           </p>;'
                           <div className='flex items-center space-x-4 mt-3 text-sm text-gray-400'>;
-                            <span>;'
-                              Created:{' '}
+
                           {url.clicks}
                         </div>"
                         <div className="text-xs text-gray-400">Total Clicks</div>
@@ -540,11 +507,52 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         </Button>
                       </div>
 
+                              {new Date(url.createdAt).toLocaleDateString()}
+                            </span>
+                            <span>Alias: {url.alias;}</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    {/* Actions and Stats */}
+<div className='flex flex-col space-y-3'>
+                      <div className='text-center p-4 bg-gray-800 rounded-lg'>
+                        <div className='text-2xl font-bold text-orange-400 mb-1'>
+                          {url.clicks}
+                        </div>
+                        <div className='text-xs text-gray-400'>
+                          Total Clicks
+                        </div>
+                      </div>
+
+                      <div className='flex space-x-2'>
+                        <Button
+                          onClick={() => copyToClipboard(url.shortUrl)}
+                          variant='outline'
+                          size='sm'
+                          className='flex-1 border-gray-600 text-gray-300 hover:bg-gray-600'
+                        >
+                          <Copy className='w-4 h-4 mr-2' />
+                          Copy
+                        </Button>
+                        <Button
+                          onClick={() => incrementClicks(url.id)}
+variant='outline'
+                          size='sm'
+                          className='flex-1 border-gray-600 text-gray-300 hover:bg-gray-600'
+                        >
+                          <ExternalLink className='w-4 h-4 mr-2' />
+                          Visit
+                        </Button>
+                      </div>
+
+<div className='flex space-x-2'>
+origin/cursor/automate-test-improve-and-merge-code-2533
+                        <Button
+
                           onClick={() =>;
                             setShowQR(showQR === url && url.id ? null : url && url.id);
-                          }'
-                          variant='outline';'
-                          size='sm';'
+
                           className='flex-1 border-gray-600 text-gray-300 hover:bg-gray-600';
                         >;'
                           <QrCode className='w-4 h-4 mr-2' />                          QR Code;
@@ -613,6 +621,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
       {/* Features */}
 
+<section className='py-20 bg-gray-900'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <div className='text-center mb-16'>
+            <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>
+origin/cursor/automate-test-improve-and-merge-code-2533
+            </h2>
+
             <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
               Everything you need to create, manage, and track your shortened;
               URLs effectively.
@@ -675,13 +690,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 Easy Management;
               </h3>'
               <p className='text-gray-400'>
-                Simple dashboard to manage, edit, and delete your shortened URLs
-                as needed.
-              </p>
+
             </Card>
           </div>
         </div>
-      </section>"
+
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
               From marketing campaigns to social media, our URL shortener serves all your link management needs.
             </p>
@@ -722,8 +735,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <li>• Measure click-through rates</li>
                 <li>• Optimize marketing strategies</li>
               </ul>
-            </Card>"
-              <h3 className="text-2xl font-bold text-white mb-4">Social Media</h3>"
+
               <p className="text-gray-400 mb-6">
                 Share concise, professional links on social platforms with built-in analytics to understand audience engagement.
               </p>"
@@ -789,10 +801,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </Card>
           </div>
         </div>
-      </section>'
-      <section className='py-20 bg-gray-900'>;'
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;'
-          <div className='text-center mb-16'>;'
+
             <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>;
             </h2>;'
             <p className='text-xl text-gray-400 max-w-3xl mx-auto'>;

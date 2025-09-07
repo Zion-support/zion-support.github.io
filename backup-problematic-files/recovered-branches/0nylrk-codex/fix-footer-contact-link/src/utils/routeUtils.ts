@@ -1,4 +1,3 @@
-
 import { completeSitemap, SitemapItem } from "@/config/sitemap";
 ;
 // Find a route by path in the complete sitemap;
@@ -69,11 +68,7 @@ export const getBreadcrumbsForPath = (path:string):Array<{label:string, path:str
 };
 //Check if a route requires authentication export const isProtectedRoute = (path: string) : boolean => {
   const route = findRouteByPath (path);
-<<<<<<< HEAD
-return route?.requiredAuth === true
-=======
-return route?.requiredAuth === true 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
 };
 isAuthenticated: boolean;
 userType?: string | null //If route doesn't exist in our sitemap if (!route) return true, //Default to accessible //If route requires authentication and user is not authenticated if (route.requiredAuth && !isAuthenticated) return false;
@@ -83,22 +78,3 @@ userType?: string | null //If route doesn't exist in our sitemap if (!route) ret
 //Get breadcrumb items for a path if (path === '/') return breadcrumbs;
 //Split the path into segments if (route) {
   breadcrumbs.push ({
-<<<<<<< HEAD
-  label: route.label, path: currentPath
-});
-}else {
-  // For dynamic routes that might not be in the static sitemap breadcrumbs.push ({
-
-}
-<<<<<<< HEAD
-
-=======
-  label: route.label, path: currentPath 
-});
-}else {
-  // For dynamic routes that might not be in the static sitemap breadcrumbs.push ({
-  
-}
-}return breadcrumbs;
-};
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

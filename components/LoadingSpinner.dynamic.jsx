@@ -1,5 +1,5 @@
 import React from 'react';
-export default LoadingSpinner.dynamic;
+
 ;
 const LoadingSpinner.dynamic = () => {}
   return (
@@ -16,4 +16,3 @@ const LoadingSpinner.dynamic = () => ;
 
 pr-12243
 export default LoadingSpinner.dynamic;
-

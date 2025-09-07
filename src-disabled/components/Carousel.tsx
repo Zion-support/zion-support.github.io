@@ -16,17 +16,7 @@ const Carousel: React.FC<CarouselProps> = ({,
   autoPlayInterval = 5000,
   showDots = true,
   showArrows = true,
-<<<<<<< HEAD
-  className = '',
-  itemClassName = '',
-}) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-=======
-className = '','
-  itemClassName = '''
-}) => {,
-  const [currentIndex, setCurrentIndex] = useState(0);,
->>>>>>> 1c09286d1558200887d8869d925675c122bd9172
+
   const [isPlaying, setIsPlaying] = useState(autoPlay);
   useEffect(() => {
     if (!isPlaying || items.length <= 1) return;
@@ -39,13 +29,7 @@ className = '','
     setCurrentIndex(index);
   };
   const goToPrevious = () => {
-<<<<<<< HEAD
-    setCurrentIndex(prevIndex =>
-      prevIndex === 0 ? items.length - 1 : prevIndex - 1,
-=======
-setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? items.length - 1 : prevIndex - 1
->>>>>>> 1c09286d1558200887d8869d925675c122bd9172
+
     );
   };
   const goToNext = () => {
@@ -72,15 +56,7 @@ setCurrentIndex((prevIndex) =>
             initial={{ opacity: 0, x: 300 }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -300 }}
-<<<<<<< HEAD
-            transition={{ duration: 0.5, ease: 'easeInOut' }}
-            className={`w-full h-full ${itemClassName}`}
-          >
-=======
-transition={{ duration: 0.5, ease: "easeInOut" }}"
-            className={`w-full h-full ${itemClassName}`}`
-          >,
->>>>>>> 1c09286d1558200887d8869d925675c122bd9172
+
             {items[currentIndex]}
           </motion.div>
         </AnimatePresence>

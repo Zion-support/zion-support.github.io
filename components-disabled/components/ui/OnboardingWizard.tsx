@@ -1,48 +1,3 @@
-<<<<<<< HEAD
-import Link from 'next/link';'
-import { useRole } from '../context/RoleContext';
-export default function OnboardingWizard() { return null; }
-export default function OnboardingWizard() {};
-  const { role, setRole } = useRole();
-  const [open, setOpen] = useState(false);'
-          : 'true';
-      if (!has) {;'
-        setOpen(true);      const has = typeof window !== 'undefined' ? window && window.localStorage.getItem('zion_has_onboarded') : 'true';
-      if (!has) {;
-        setOpen(true);
-      }
-    } catch {}
-  }, []);
-      }
-    } catch {}'
-    setOpen(false);  }        window && window.localStorage.setItem('zion_has_onboarded1');
-      }
-    } catch {}
-
-  if (!open) return null;
-
-  return (
-
-  );
-          <button onClick={completeOnboarding} className="px-3 py-1.5 rounded-md border">Done</button>
-        </div>
-      </div>
-    </div>"
-}        <div className="p-4 border-t border-gray-200 dark:border-gray-800 flex justify-end">;"
-          <button onClick={completeOnboarding} className="px-3 py-1 && 1.5 rounded-md border">Done</button>;
-        </div>;
-      </div>;
-    </div>;
-  );
-}
-  );
-<<<<<<< HEAD
-}
-import Link from 'next/link';
-=======
-}'
-import Link from 'next / link';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { use_role } from '../context / RoleContext';
 export default /**;
  * OnboardingWizard - Function description;
@@ -122,31 +77,6 @@ if (return null) {}
             Done;
           </button>        </div>;
       </div>;
-<<<<<<< HEAD
-      const has = null;
-      }
-    } catch {}
-  }, []);
-  function completeOnboarding() {
-    try {
-      if (typeof window !== 'undefined') {
-window.localStorage.setItem('zion_has_onboarded', '1');
-      }
-    } catch {}
-    setOpen(false);
-  }
-=======
-
-import Link from 'next/link';
-
-import { useRole } from '../context/RoleContext';
-export default function OnboardingWizard() {;
-export default function OnboardingWizard() {
-  const { role, setRole } = useRole();
-  const [open, setOpen] = useState(false);
-
-            onClick={completeOnboarding}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
             className='px-3 py-1.5 rounded-md border'
            />
@@ -158,10 +88,3 @@ export default function OnboardingWizard() {
   );
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
-=======
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

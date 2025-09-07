@@ -1,14 +1,10 @@
-
 import { emergingTechServicesEnhanced2025 } from '../data/2025-emerging-tech-services-enhanced';import { advancedAIAutomationServices } from '../data/2026-advanced-ai-automation-services';import { ;
   innovativeRealMicroSaasServices2025 ;'
 } from '../data/2025-innovative-real-micro-saas-services';
 import { ;
   innovativeAIServicesEnhanced2025 ;'
 } from '../data/2025-innovative-ai-services-enhanced';
-import { ;
-  innovativeITServicesEnhanced2025 ;'
-} from '../data/2025-innovative-it-services-enhanced';
-import { ;
+
   emergingTechServicesEnhanced2025 ;
 } from '../data/2025-emerging-tech-services-enhanced';
 import React, { useState, useEffect, Suspense } from 'react';
@@ -37,19 +33,7 @@ import { ArrowRight, Star, Brain, Atom, Shield, Zap;
 interface Homepage2025Props { showInternalNav?: boolean }
 
 const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav;
-import { motion, AnimatePresence } from 'framer-motion';
-import { innovativeRealMicroSaasServices2025 } from '../data/2025-innovative-real-micro-saas-services';
-import { innovativeAIServicesEnhanced2025 } from '../data/2025-innovative-ai-services-enhanced';
-import { innovativeITServicesEnhanced2025 } from '../data/2025-innovative-it-services-enhanced';
-import { emergingTechServicesEnhanced2025 } from '../data/2025-emerging-tech-services-enhanced';
-import { advancedAIAutomationServices } from '../data/2026-advanced-ai-automation-services';
-origin/cursor/automate-test-improve-and-merge-code-2533
-import { quantumCybersecurityServices } from '../data/2026-quantum-cybersecurity-services';
-import { innovativeMicroSaasServices2026 } from '../data/2026-innovative-micro-saas-expansion';
-import { specializedITSolutions2026 } from '../data/2026-specialized-it-solutions';
-import { emergingTechServices2026 } from '../data/2026-emerging-tech-services';
-import UltraFuturisticBackground2026 from './backgrounds/UltraFuturisticBackground2026';
-import UltraFuturisticServiceCard2026 from './ui/UltraFuturisticServiceCard2026';
+
 import Link from 'next/link';
 import {;
   ArrowRight,;
@@ -64,14 +48,7 @@ import {;
   Rocket,;
   Cpu,;
   Lock,;
-import {
-} from 'lucide-react';
-interface Homepage2025Props {
-  showInternalNav?: boolean;
-const Homepage2025: React.FC<Homepage2025Props> = ({
-  showInternalNav = true,
-}) => {
-origin/cursor/automate-test-improve-and-merge-code-2533
+
   const [activeSection, setActiveSection] = useState('hero');
   const [currentServiceIndex, setCurrentServiceIndex] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
@@ -230,74 +207,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   ];
       icon: Brain;
     }
-    ...emergingTechServices2026,
-  ];
-  const featuredServices = allServices
-    .filter(service => service.popular)
-    .slice(0, 12);
 
-  const navigationSections = [
-    { id: 'hero', label: 'Home', icon: '🏠' },
-    { id: 'services', label: 'Micro SAAS', icon: '🚀' },
-    { id: 'ai', label: 'AI Services', icon: '🧠' },
-    { id: 'automation', label: 'AI Automation', icon: '⚡' },
-    { id: 'quantum', label: 'Quantum Security', icon: '🔐' },
-    { id: 'it', label: 'IT Solutions', icon: '💻' },
-    { id: 'emerging', label: 'Emerging Tech', icon: '🌟' },
-{ id: 'contact', label: 'Contact', icon: '📞' },
-  ];
-  const features = [
-    {
-title: 'AI-Powered Innovation',
-      description:
-        'Cutting-edge artificial intelligence solutions that transform business operations and drive growth',
-      icon: Brain,
-    },
-origin/cursor/automate-test-improve-and-merge-code-2533
-    {
-      title: 'Quantum Computing',
-      description:
-        'Next-generation quantum solutions for complex problem-solving and advanced cryptography',
-      icon: Atom,
-    },
-    {
-      title: 'Cybersecurity Excellence',
-      description:
-        'Enterprise-grade security solutions with AI-powered threat detection and response',
-      icon: Shield,
-    },
-    {
-      title: 'Process Automation',
-      description:
         'Intelligent automation that streamlines operations and enhances productivity'
       icon: Zap;
     },  ];      title: "Process Automation""
       description: "Intelligent automation that streamlines operations and enhances productivity"
       icon: Zap;
     }
-        'Intelligent automation that streamlines operations and enhances productivity',
-      icon: Zap,
-    },
-  ];
 
-  const itemVariants = {
-    initial: { opacity: 0, y: 20 },
-    animate: { opacity: 1, y: 0 },
-transition: { duration: 0.6 },
-  };
-
-origin/cursor/automate-test-improve-and-merge-code-2533
-  const staggerContainer = {
-    initial: {}
-    animate: {
-      transition: {
-staggerChildren: 0.1,
-      },
-    },
-  };
-
-origin/cursor/automate-test-improve-and-merge-code-2533
-  return (
     <UltraFuturisticBackground2026 intensity='medium' theme='quantum'>;
       {showInternalNav && (;
         <>;
@@ -349,15 +266,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 {/* Desktop Navigation */}"
                 <div className="hidden lg:flex space-x-8">
                   {navigationSections.map((section) => (
-                <div className='hidden lg:flex space-x-8'>
-                  {navigationSections.map(section => (
-origin/cursor/automate-test-improve-and-merge-code-2533
-                    <button
-                  {navigationSections.map(section => (                    <button
-
-                    <button
-
-                    <button
 
                       key={section.id}
                       on_click={() => scrollToSection (section.id)}
@@ -627,14 +535,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 "
       <section id="hero" className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-16">"
         <div className="text-center z-10 max-w-6xl mx-auto">
-      {/* Hero Section */}
-<section
-        id='hero'
-        className='relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-16'
-      >
-        <div className='text-center z-10 max-w-6xl mx-auto'>
-origin/cursor/automate-test-improve-and-merge-code-2533
-          <motion.div
+
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -720,9 +621,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </Link>"
                 <Link href="/get-started">"
                   <button className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105">
-                  <button className='px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105'>
-origin/cursor/automate-test-improve-and-merge-code-2533
-                    Get Started
+
                   </button>
                 </Link>
               </motion.div>
@@ -735,39 +634,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       {/* Features Section */}"
       <section className="py-20 px-4 relative">"
         <div className="max-w-7xl mx-auto">
-                transition={{ duration: 0.8, delay: 0.4 }}
-className='flex items-center justify-center space-x-6 text-sm text-gray-400'
-              >
-                <div className='flex items-center space-x-2'>
-                  <Shield className='w-4 h-4 text-green-400' />
-                  <span>Enterprise Security</span>
-                </div>
-                <div className='flex items-center space-x-2'>
-                  <Globe className='w-4 h-4 text-blue-400' />
-                  <span>Global Reach</span>
-                </div>
-                <div className='flex items-center space-x-2'>
-                  <TrendingUp className='w-4 h-4 text-purple-400' />
-                  <span>Proven Results</span>
-                </div>
-              </motion.div>
-            </motion.div>
-          </motion.div>
-        </div>
-      </section>
-      {/* Features Section */}
-<section className='py-20 px-4 relative'>
-        <div className='max-w-7xl mx-auto'>
-origin/cursor/automate-test-improve-and-merge-code-2533
-          <motion.div
+
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
 
-className='text-center mb-20'
-origin/cursor/automate-test-improve-and-merge-code-2533
-          >
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
               Comprehensive Technology Solutions;
             </h2>'
@@ -834,28 +706,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             className="text-center mb-16"
             initial={{ opacity: 0, y: 40 }}
 
-                whileHover={{ y: -10, scale: 1.02 }}
-              >
-<div className='absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300' />
-                <div className='relative'>
-                  <div className='w-14 h-14 rounded-xl bg-gradient-to-br from-cyan-500 to-blue-600 p-3 mb-6'>
-                    <feature.icon className='w-full h-full text-white' />
-                  </div>
-                  <h3 className='text-xl font-semibold text-white mb-4'>
-                    {feature.title}
-                  </h3>
-                  <p className='text-gray-300 leading-relaxed'>
-                    {feature.description}
-                  </p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-origin/cursor/automate-test-improve-and-merge-code-2533
-      {/* Enhanced Services Preview */}
-<section className='py-20 px-4'>
         <div className='max-w-6xl mx-auto'>
           <motion.div'
             className='text-center mb-16'            initial={{ opacity: 0, y: 40 }}
@@ -893,7 +743,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             {[;
               {;'
                 title: 'AI Business Intelligence',;
-                description:;'
+                description:'
                   'Transform data into actionable insights with AI-powered analytics',;
                 icon: Brain,;'
                 gradient: 'from-purple-500 to-pink-500',;'
@@ -901,7 +751,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               },;
               {;'
                 title: 'Cloud Infrastructure',;
-                description:;'
+                description:'
                   'Automate cloud infrastructure deployment and management',;
                 icon: Cloud,;'
                 gradient: 'from-cyan-500 to-blue-500',;'
@@ -930,7 +780,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               },;
               {;'
                 title: 'Blockchain Intelligence',;
-                description:;'
+                description:'
                   'Intelligent blockchain analytics and DeFi optimization',;
                 icon: Lock,;'
                 gradient: 'from-yellow-500 to-orange-500',;'
@@ -1031,9 +881,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 whileHover={{ y: -10, scale: 1.02 }}
-onClick={() => (window.location.href = service.link)}
-              >
-                <div
+
                   className={`absolute inset-0 bg-gradient-to-br ${service.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-300`}
                 />'
                 <div className='relative p-6'>
@@ -1051,10 +899,7 @@ onClick={() => (window.location.href = service.link)}
                   <a;
                     href={service.link}'
                     className='flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors'
-                  >
-                    <span className='text-sm font-medium'>Explore Service</span>
-                    <ArrowRight className='w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform' />
-                  </a>
+
                 </div>
               </motion.div>
             ))}
@@ -1103,74 +948,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <p className="text-gray-300 text-sm">Round-the-clock assistance</p>
             </div>
           </div>
-          <motion.div
 
-href='/comprehensive-services-showcase-2026'
-              className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-xl hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-purple-500/25'
-            >
-              <Rocket className='w-5 h-5 mr-2' />
-              View All 2026 Services
-              <ArrowRight className='w-5 h-5 ml-2' />
-            </a>
-          </motion.div>
-        </div>
-      </section>
-      {/* Contact Section */}
-<section id='contact' className='py-20 px-4'>
-        <div className='max-w-6xl mx-auto'>
-          <motion.div
-            className='text-center mb-16'
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
-<h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
-              Ready to Transform Your Business?
-            </h2>
-            <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
-              Get in touch with our team to discuss how our innovative services
-              can help you achieve your goals.
-            </p>
-          </motion.div>
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-8 mb-12'>
-            <div className='text-center'>
-              <div className='w-16 h-16 bg-cyan-500/20 rounded-full flex items-center justify-center mx-auto mb-4'>
-                <Users className='w-8 h-8 text-cyan-400' />
-              </div>
-              <h3 className='text-lg font-semibold text-white mb-2'>
-                Expert Team
-              </h3>
-              <p className='text-gray-300 text-sm'>
-                Dedicated professionals ready to help
-              </p>
-            </div>
-            <div className='text-center'>
-              <div className='w-16 h-16 bg-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-4'>
-                <Zap className='w-8 h-8 text-blue-400' />
-              </div>
-              <h3 className='text-lg font-semibold text-white mb-2'>
-                Fast Implementation
-              </h3>
-              <p className='text-gray-300 text-sm'>
-                Quick setup and deployment
-              </p>
-            </div>
-            <div className='text-center'>
-              <div className='w-16 h-16 bg-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-4'>
-                <Shield className='w-8 h-8 text-purple-400' />
-              </div>
-              <h3 className='text-lg font-semibold text-white mb-2'>
-                24/7 Support
-              </h3>
-              <p className='text-gray-300 text-sm'>
-                Round-the-clock assistance
-              </p>
-            </div>
-          </div>
-          <motion.div
-className='text-center'
-origin/cursor/automate-test-improve-and-merge-code-2533
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -1234,35 +1012,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               2025 Services;
             </a>"
             <a href="https://ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300 transition-colors">
-      {/* Footer */}
-<footer className='py-12 px-4 border-t border-white/10'>
-        <div className='max-w-6xl mx-auto text-center'>
-          <div className='text-gray-400 mb-4'>
-            <p>© 2025-2026 ZionTech Group. All rights reserved.</p>
-            <p className='mt-2'>
-              Address: 364 E Main St STE 1008 Middletown DE 19709 | Phone: +1
-              302 464 0950 | Email: kleber@ziontechgroup.com
-            </p>
-          </div>
-          <div className='flex justify-center space-x-6'>
-            <a
-              href='/comprehensive-services-showcase-2026'
-              className='text-cyan-400 hover:text-cyan-300 transition-colors'
-            >
-              2026 Services
-            </a>
-            <a
-              href='/comprehensive-services-showcase-2025'
-              className='text-cyan-400 hover:text-cyan-300 transition-colors'
-            >
-              2025 Services
-            </a>
-            <a
-              href='https://ziontechgroup.com'
-              className='text-cyan-400 hover:text-cyan-300 transition-colors'
-            >
-origin/cursor/automate-test-improve-and-merge-code-2533
-              Website
+
             </a>
           </div>
         </div>
@@ -1288,8 +1038,3 @@ export default Homepage2025);
 ;
 export default Homepage2025;
 ;
-);
-};
-
-export default Homepage2025;
-origin/cursor/automate-test-improve-and-merge-code-2533

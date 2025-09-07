@@ -1,9 +1,4 @@
-
-
-type Experiment = {
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
+super(props);
     this.state = { hasError: false };
   }
   static getDerivedStateFromError(error) {}
@@ -18,14 +13,7 @@ class ErrorBoundary extends React.Component {
     }
     return this.props.children;
   }
-}
-import React from "react",
-import fs from "fs";
-import path from "path";
-type Experiment = any;
-origin/cursor/automate-test-improve-and-merge-code-2533
-import React from 'react';
-import fs from 'fs';
+
 import path from 'path';
 
 type Experiment = {;
@@ -73,24 +61,6 @@ type Props = {;
   items: Experiment[]
 };
 
-  updatedAt: string | null;
-items: Experiment[]
-};
-
-export default function CurationPage({ updatedAt, items }: Props) {
-  return (
-<main className='mx-auto max-w-4xl px-4 py-12'>
-      <h1 className='text-2xl font-bold text-gray-900'>
-        AI Curated Growth Experiments
-      </h1>
-        <p className='mt-2 text-sm text-gray-600'>Last updated: {updatedAt}</p>
-      ) : (
-        <p className='mt-2 text-sm text-gray-600'>
-          No curated output yet. It will appear here automatically after the
-          next run.
-        </p>
-      )}
-origin/cursor/automate-test-improve-and-merge-code-2533
       <div className='mt-6 space-y-4'>
         {items.map((exp, idx) => (
           <div;
@@ -117,8 +87,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             )}
             {(exp.effort |exp.impact) && ('
               <div className='mt-2 text-xs text-gray-500'>
-                {exp.effort ? `Effort: ${exp.effort}/5` : null}
-                {exp.effort && exp.impact ? ' · ' : null}
+
                 {exp.impact ? `Impact: ${exp.impact}/5` : null}
   return (
   return ('
@@ -212,11 +181,7 @@ export async function getStaticProps() {};
     const raw = fs.readFileSync(filePath, "utf8");
 
     const parsed = JSON.parse(raw);
-    );
-    const raw = fs.readFileSync(filePath, 'utf8');
-    const parsed = JSON.parse(raw);
-    return {
-      props: {
+
             </div>;
             {(exp.hypothesis || exp.metric) && ('
               <div className='mt - 2 text - sm text - gray - 700'>;
@@ -237,8 +202,7 @@ export async function getStaticProps() {};
                 {exp.impact ? `Impact: ${exp.impact}/5` : null}
               </div>)}
           </div>))}
-        {!items.length && (
-          <div className='rounded - xl border border - gray - 200 bg - white p - 6 text - center text - gray - 600'>            Nothing to show yet.          <div className="rounded - xl border border - gray - 200 bg - white p - 6 text - center text-gray-600">;
+
             Nothing to show yet.;
           </div>)}
       </div>;

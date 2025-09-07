@@ -1,30 +1,65 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { X, CheckCircle, AlertCircle, Info, AlertTriangle } from 'lucide-react';
 
-  id: string;
-
-  type: "success" | "error" | "warning" | "info";
-
-pr-12243
   title?: string;
   message: string;}
   duration?: number;}
 }
 
-pr-12243
-const getNotificationStyles = (type: Notification["type"]): string => {
-  const baseStyles = "border-l-4";
-  const typeStyles = {
-    success: "bg-green-50 border-green-400 text-green-800"
-    error: "bg-red-50 border-red-400 text-red-800"
-    warning: "bg-yellow-50 border-yellow-400 text-yellow-800"
-    info: "bg-blue-50 border-blue-400 text-blue-800"
-  }
-  return `${baseStyles} ${typeStyles[type]}`;
 interface NotificationSystemProps {
   notifications: Notification[];
   onDismiss?: (id: string) => void;
   position?: 'top-right' | 'top-left' | 'bottom-right' | 'bottom-left';
+
+}
+
+const NotificationSystem: React.FC<NotificationSystemProps> = ({
+  notifications,
+  onDismiss,
+  position = 'top-right',
+}) => {
+  const [visibleNotifications, setVisibleNotifications] = useState<Notification[]>([]);
+
+  const handleDismiss = useCallback((id: string) => {
+    setVisibleNotifications(prev => prev.filter(n => n.id !== id));
+    onDismiss?.(id);
+  }, [onDismiss]);
+
+  useEffect(() => {
+    setVisibleNotifications(notifications);
+  }, [notifications]);
+
+  useEffect(() => {
+    const timers: ReturnType<typeof setTimeout>[] = [];
+    notifications.forEach(notification => {
+      if (notification.duration && notification.duration > 0) {
+        const timer = setTimeout(() => {
+          handleDismiss(notification.id);
+        }, notification.duration);
+        timers.push(timer);
+      }
+    });
+
+    return () => {
+      timers.forEach(timer => clearTimeout(timer));
+    };
+  }, [notifications, handleDismiss]);
+
+  const getNotificationStyles = (type: Notification['type']) => {
+    const baseStyles = 'border-l-4';
+    switch (type) {
+      case 'success':
+        return `${baseStyles} border-green-500 bg-green-50 text-green-800`;
+      case 'error':
+        return `${baseStyles} border-red-500 bg-red-50 text-red-800`;
+      case 'warning':
+        return `${baseStyles} border-yellow-500 bg-yellow-50 text-yellow-800`;
+      case 'info':
+        return `${baseStyles} border-blue-500 bg-blue-50 text-blue-800`;
+      default:
+        return `${baseStyles} border-gray-500 bg-gray-50 text-gray-800`;
+    }
+  };
 
   const getIcon = (type: Notification['type']) => {
     switch (type) {
@@ -61,6 +96,16 @@ interface NotificationSystemProps {
   return (
     <div className={`fixed ${getPositionStyles()} z-50 space-y-2`}>
       {visibleNotifications.map(notification => (
+
+  return (
+    <div className="fixed top-4 right-4 z-50 space-y-2">
+      {notifications.map((notification) => (
+        <NotificationItem
+          key={notification.id}
+className={`max-w-sm w-full border rounded-lg p-4 shadow-lg ${getNotificationStyles(notification.type)}`}
+        >
+          <div className="flex items-start justify-between">
+            <div className="flex-1">
 
               <div className="flex items-start space-x-2">
                 {getIcon(notification.type)}
@@ -111,6 +156,11 @@ onClick={() = /> handleDismiss(notification.id)}"
             )}
           </div>
         </div>
+
+      ))}
+    </div>
+  )
+};
 
               {notification.title && (
               <p className="text-sm">{notification.message}</p>
@@ -191,4 +241,3 @@ export const useNotifications = () => {
   }
   return context;
 };
-pr-12243

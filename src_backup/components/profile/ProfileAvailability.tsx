@@ -1,35 +1,8 @@
-<<<<<<< HEAD:src/components/profile/ProfileAvailability.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-import { Availability } from "@/types/profile",
-import { Badge } from "@/components/ui/badge",
-import { Calendar, Clock, Check } from 'lucide-react'
-
-interface ProfileAvailabilityProps {
-  availability: Availability
-import { Availability } from "@/types/profile",;
-import { Badge } from "@/components/ui/badge",;
-import { Calendar, Clock, Check } from 'lucide-react';
-interface ProfileAvailabilityProps {;
-  availability: Availability;
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { Calendar, Clock, Check } from 'lucide-react'
 import { Calendar } from 'lucide-react'
 interface ProfileAvailabilityProps {
   availability: Availability
 
-<<<<<<< HEAD
-
-
-
-export function ProfileAvailability({
-  availability
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/profile/ProfileAvailability.tsx
 }
 
 export function ProfileAvailability({ availability }: ProfileAvailabilityProps) {
@@ -49,31 +22,7 @@ export /**
 function ProfileAvailability() {
   const getStatusColor = (status: 'available' | 'limited' | 'unavailable') =>: any {
     switch (status) {
-<<<<<<< HEAD:src/components/profile/ProfileAvailability.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-      case 'available':
-        return 'bg-emerald-500/20 text-emerald-400 border-emerald-500/30'
-      case 'limited':
-        return 'bg-amber-500/20 text-amber-400 border-amber-500/30'
-      case 'unavailable':
-        return 'bg-rose-500/20 text-rose-400 border-rose-500/30'
-      default:
-        return ''
-    }
-  }
-  const getStatusText = (status: 'available' | 'limited' | 'unavailable') => {
-    switch (status) {
-      case 'available':
-        return 'Available Now'
-      case 'limited':
-        return 'Limited Availability'
-      case 'unavailable':
-        return 'Currently Unavailable'
-      default:
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+
       case 'available':;
         return 'bg - emerald - 500 / 20 text - emerald - 400 border - emerald - 500 / 30';
       case 'limited':;
@@ -93,16 +42,10 @@ function ProfileAvailability() {
       case 'unavailable':;
         return 'Currently Unavailable';
       default:;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+
         return '' }
   }
 
-
-
-
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/profile/ProfileAvailability.tsx
       case 'available':
         return 'bg-emerald-500/20 text-emerald-400 border-emerald-500/30';
       case 'limited':
@@ -149,10 +92,8 @@ function ProfileAvailability() {
 origin/cursor/automate-test-improve-and-merge-code-2533
   return (
 
-
         <Badge 
           variant="outline" 
-
 
         >
           {getStatusText(availability.status)}
@@ -169,10 +110,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       {availability.message && (
         <p className='text-zion-slate mb-4'>{availability.message}</p>
       )}
-
-
-
-
 
       {availability.availableHours &&
         availability.availableHours.length > 0 && (
@@ -199,50 +136,6 @@ import { Calendar } from 'lucide-react';
 
 interface ProfileAvailabilityProps {
   availability: Availability
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-}
-;
-export function ProfileAvailability({ availability }: ProfileAvailabilityProps) {;
-  const getStatusColor = (status: 'available' | 'limited' | 'unavailable') => {;
-    switch(status) {;
-      case 'available': return 'bg-emerald-500/20 text-emerald-400 border-emerald-500/30',;
-      case 'limited': return 'bg-amber-500/20 text-amber-400 border-amber-500/30',;
-      case 'unavailable': return 'bg-rose-500/20 text-rose-400 border-rose-500/30',;
-      default: return '';
-    }
-  },;
-  const getStatusText = (status: 'available' | 'limited' | 'unavailable') => {;
-    switch(status) {;
-      case 'available': return 'Available Now',;
-      case 'limited': return 'Limited Availability',;
-      case 'unavailable': return 'Currently Unavailable';
-      default: return '';
-    }
-  },
-=======
-}
-
-export function ProfileAvailability({ availability }: ProfileAvailabilityProps) {
-  const getStatusColor = (status: 'available' | 'limited' | 'unavailable') => {
-    switch(status) {
-      case 'available': return 'bg-emerald-500/20 text-emerald-400 border-emerald-500/30';
-      case 'limited': return 'bg-amber-500/20 text-amber-400 border-amber-500/30';
-      case 'unavailable': return 'bg-rose-500/20 text-rose-400 border-rose-500/30';
-      default: return ''
-    }
-  };
-  
-  const getStatusText = (status: 'available' | 'limited' | 'unavailable') => {
-    switch(status) {
-      case 'available': return 'Available Now';
-      case 'limited': return 'Limited Availability';
-      case 'unavailable': return 'Currently Unavailable';
-      default: return ''
-    }
-  };
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
   return (
     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8">
@@ -252,11 +145,7 @@ export function ProfileAvailability({ availability }: ProfileAvailabilityProps) 
         <Badge 
           variant="outline" 
           className={`${getStatusColor(availability.status)} text-sm py-1 px-3 mb-4 md:mb-0 w-fit`}
-<<<<<<< HEAD
-        >;
-=======
-        >
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+
           {getStatusText(availability.status)}
         </Badge>
         
@@ -271,49 +160,19 @@ export function ProfileAvailability({ availability }: ProfileAvailabilityProps) 
       {availability.message && (
         <p className="text-zion-slate mb-4">{availability.message}</p>
       )}
-      
-<<<<<<< HEAD
-=======
 
-
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       {availability.availableHours && availability.availableHours.length > 0 && (
         <div className="mt-4">
           <h4 className="text-zion-slate-light text-sm mb-2">Weekly Availability</h4>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-            {availability.availableHours.map((slot, index) => (
-              <div key={index} className="flex items-center gap-2 text-zion-slate">
-=======
-
 
             {availability.availableHours.map((slot, index) => (
               <div key={index} className="flex items-center gap-2 text-zion-slate">
 
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 <div className="w-20 text-zion-slate-light">{slot.day}:</div>
                 <div className="flex items-center gap-1">
                   <Clock className="h-4 w-4 text-zion-cyan" />
                   <span>{slot.hours}</span>
-<<<<<<< HEAD
-<<<<<<< HEAD
-                </div>
-              </div>
-            ))}
-          </div>;
-        </div>;
-      )}
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 interface ProfileAvailabilityProps {;
   availability: Availability;
@@ -362,77 +221,7 @@ export function ProfileAvailability(): any ({;
           </div>;
         )}
 
-<<<<<<< HEAD:src/components/profile/ProfileAvailability.tsx
-      <div className="flex flex-col md:flex-row md:items-center md:gap-6 mb-4">;
-        <Badge
-          variant="outline" >;
-          {getStatusText(availability && availability.status)}
-        </Badge>;
-
-        {availability && availability.nextAvailable && availability && availability.status !== 'available' && (;
-          <div className='flex items-center gap-2 text-zion-slate-light'>;
-            <Calendar className='h-4 w-4' />        ;
-        {availability && availability.nextAvailable && availability && availability.status !== 'available' && (;
-          <div className="flex items-center gap-2 text-zion-slate-light">;
-            <Calendar className="h-4 w-4" />;
-          </div>;
-        )}
-      </div>;
-
-      {availability && availability.message && (;
-        <p className='text-zion-slate mb-4'>{availability && availability.message}</p>;
       )}
-
-      {availability && availability.availableHours &&;
-        availability && availability.availableHours.length > 0 && (;
-          <div className='mt-4'>;
-            <h4 className='text-zion-slate-light text-sm mb-2'>;
-              Weekly Availability;
-            </h4>;
-            <div className='grid grid-cols-1 md:grid-cols-2 gap-2'>;
-              {availability && availability.availableHours.map((slot, index) => (;
-                <div
-                  key={index}
-                  className='flex items-center gap-2 text-zion-slate'>;
-                  <div className='w-20 text-zion-slate-light'>{slot && slot.day}:</div>;
-                  <div className='flex items-center gap-1'>;
-                    <Clock className='h-4 w-4 text-zion-cyan' />;
-                    <span>{slot && slot.hours}</span>;
-                  </div>      ;
-      {availability && availability.availableHours && availability && availability.availableHours.length > 0 && (;
-        <div className="mt-4">;
-          <h4 className="text-zion-slate-light text-sm mb-2">Weekly Availability</h4>;
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-2">;
-            {availability && availability.availableHours.map((slot, index,) => (              <div key={index} className="flex items-center gap-2 text-zion-slate">;
-                <div className="w-20 text-zion-slate-light">{slot && slot.day}:</div>;
-                <div className="flex items-center gap-1">;
-                  <Clock className="h-4 w-4 text-zion-cyan" />;
-                  <span>{slot && slot.hours}</span>;
-                </div>;
-
-              ))}
-            </div>;
-          </div>;
-        )}
-
-    </div>;
-  );;
-                </div>;
-              </div>;
-
-            ))}
-<<<<<<< HEAD
-          </div>
-        </div>
-<<<<<<< HEAD
-=======
-          </div>;
-        </div>;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-      )}
-
-
-
 
                 </div>
               </div>
@@ -441,20 +230,6 @@ export function ProfileAvailability(): any ({;
         </div>
 
       )};
-
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-    </div>;
-  );
-}
-<<<<<<< HEAD
-=======
-=======
-    </div>;
-  );
-}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-
 
     <div className='bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 6 mb - 8'>;
       <h3 className='text - xl font - bold text - white mb - 4'>Availability</h3>;
@@ -523,28 +298,3 @@ export function ProfileAvailability(): any ({;
         </div>)}
     </div>);
 }
-
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-;
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-=======
-;
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-=======
-    </div>
-  );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-    </div>
-  );
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/profile/ProfileAvailability.tsx

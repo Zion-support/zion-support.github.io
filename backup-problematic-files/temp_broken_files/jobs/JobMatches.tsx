@@ -1,23 +1,4 @@
-
-=======
-import React from "react",;
-import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card",;
-import { EmptyMatchesCard } from "@/components/jobs/EmptyMatchesCard",;
-import { JobMatchCard } from "@/components/jobs/JobMatchCard",;
-import { useJobMatches } from "@/hooks/useJobMatches",;
-import { Skeleton } from "@/components/ui/skeleton",;
-;
-interface JobMatchesProps {;
-  jobId:string;
-}
-;
-export function JobMatches({ jobId } JobMatchesProps) {;
-  const { matches, isLoading, isProcessing, triggerAIMatching } = useJobMatches(jobId),;
-  ;
-  if (isLoading) {;
-    return (;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-      <Card>;
+<Card>;
         <CardHeader>;
           <CardTitle className="flex items-center gap-2">;
             <Skeleton className="h-4 w-24" />;
@@ -38,5 +19,3 @@ export function JobMatches({ jobId } JobMatchesProps) {;
           ))}
         </CardContent>;
       </Card>;
-<<<<<<< HEAD
-

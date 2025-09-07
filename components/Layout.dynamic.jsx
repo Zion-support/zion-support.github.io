@@ -1,5 +1,5 @@
 import React from 'react';
-export default Layout.dynamic;
+
 ;
 const Layout.dynamic = () => {}
   return (
@@ -16,4 +16,3 @@ const Layout.dynamic = () => ;
 
 pr-12243
 export default Layout.dynamic;
-

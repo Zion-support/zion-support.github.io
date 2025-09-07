@@ -22,15 +22,6 @@ class ErrorBoundary extends React.Component {
 }
 const \"Contact\": NextPage = () => {;
 
-
-
-
-
-
-
-
-
-
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -113,29 +104,9 @@ import type { NextPage } from 'next';
 import MainLayout from '../components/layout/MainLayout';
 import { Mail, Phone, MapPin, Clock, Send } from 'lucide-react';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-
-
-
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const "Contact": NextPage = () => {
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
-
-
-
-
-
-
-
 
   const contactInfo = [{
       icon: Mail,
@@ -206,31 +177,11 @@ const "Contact": NextPage = () => {;
     }
   ];
 
-
-
-
-
-
   return (
     <MainLayout
       title=\"Contact Us - Zion Tech Group\"
       description=\"Get in touch with Zion Tech Group. We\'re here to help you transform your business with innovative technology solutions.\">;
 
-
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
-
-
-
-
-
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       {/* Hero Section */}
       <section className=\"bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20\">;
         <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">;
@@ -320,122 +271,32 @@ const "Contact": NextPage = () => {;
                       name=\"firstName\"
                       required
                       className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent\"
-<<<<<<< HEAD
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor=\"lastName\" className=\"block text-sm font-medium text-gray-700 mb-2\">
-                      Last Name *
-<<<<<<< HEAD
-<<<<<<< HEAD
-                    </label>                    <input
-=======
-                    </label>
-=======
-/>;
-                  </div>;
-                  <div>;
-                    <label htmlFor=\"lastName\" className=\"block text-sm font-medium text-gray-700 mb-2\">;
-                      Last Name *;
-                    </label>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
                     <input
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
-                    </label>
-                    <input
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+
                       type=\"text\"
                       id=\"lastName\"
                       name=\"lastName\"
                       required
                       className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent\"
-<<<<<<< HEAD
-                    />
-                  </div>
-                </div>
-                <div>
-                  <label htmlFor=\"email\" className=\"block text-sm font-medium text-gray-700 mb-2\">
-                    Email Address *
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  </label>                  <input
-=======
-                  </label>
-=======
-/>;
-                  </div>;
-                </div>;
-                <div>;
-                  <label htmlFor=\"email\" className=\"block text-sm font-medium text-gray-700 mb-2\">;
-                    Email Address *;
-                  </label>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
                   <input
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
-                  </label>
-                  <input
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+
                     type=\"email\"
                     id=\"email\"
                     name=\"email\"
                     required
                     className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent\"
-<<<<<<< HEAD
-                  />
-                </div>
-                <div>
-                  <label htmlFor=\"company\" className=\"block text-sm font-medium text-gray-700 mb-2\">
-                    Company
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  </label>                  <input
-=======
-                  </label>
-=======
-/>;
-                </div>;
-                <div>;
-                  <label htmlFor=\"company\" className=\"block text-sm font-medium text-gray-700 mb-2\">;
-                    Company;
-                  </label>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
                   <input
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
-                  </label>
-                  <input
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+
                     type=\"text\"
                     id=\"company\"
                     name=\"company\"
                     className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent\"
-<<<<<<< HEAD
-                  />
-                </div>
-                <div>
-                  <label htmlFor=\"phone\" className=\"block text-sm font-medium text-gray-700 mb-2\">
-                    Phone Number
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  </label>                  <input
-=======
-                  </label>
-=======
-/>;
-                </div>;
-                <div>;
-                  <label htmlFor=\"phone\" className=\"block text-sm font-medium text-gray-700 mb-2\">;
-                    Phone Number;
-                  </label>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
                   <input
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
-                  </label>
-                  <input
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+
                     type=\"tel\"
                     id=\"phone\"
                     name=\"phone\"
@@ -449,54 +310,9 @@ const "Contact": NextPage = () => {;
                   <select
                     id=\"service\"
                     name=\"service\"
-<<<<<<< HEAD
-                    className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent\"
-                  >
-                    <option value=\"">Select a service</option>
-                    <option value=\"ai-development\">AI Development</option>
-                    <option value=\"cloud-solutions\">Cloud Solutions</option>
-                    <option value=\"web-development\">Web Development</option>
-                    <option value=\"mobile-development\">Mobile Development</option>
-                    <option value=\"blockchain\">Blockchain Solutions</option>
-                    <option value=\"iot-platforms\">IoT Platforms</option>
-                    <option value=\"data-analytics\">Data Analytics</option>
-                    <option value=\"cybersecurity\">Cybersecurity</option>
-                    <option value=\"consulting\">Technology Consulting</option>
-                  </select>
-                </div>
-                <div>
-                  <label htmlFor=\"message\" className=\"block text-sm font-medium text-gray-700 mb-2\">
-                    Message *
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  </label>                  <textarea
-=======
-                  </label>
-=======
-                    className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent\">;
-                    <option value=\"">Select a service</option>;
-                    <option value=\"ai-development\">AI Development</option>;
-                    <option value=\"cloud-solutions\">Cloud Solutions</option>;
-                    <option value=\"web-development\">Web Development</option>;
-                    <option value=\"mobile-development\">Mobile Development</option>;
-                    <option value=\"blockchain\">Blockchain Solutions</option>;
-                    <option value=\"iot-platforms\">IoT Platforms</option>;
-                    <option value=\"data-analytics\">Data Analytics</option>;
-                    <option value=\"cybersecurity\">Cybersecurity</option>;
-                    <option value=\"consulting\">Technology Consulting</option>;
-                  </select>;
-                </div>;
-                <div>;
-                  <label htmlFor=\"message\" className=\"block text-sm font-medium text-gray-700 mb-2\">;
-                    Message *;
-                  </label>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
                   <textarea
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
-                  </label>
-                  <textarea
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+
                     id=\"message\"
                     name=\"message\"
                     rows={6}
@@ -547,36 +363,9 @@ placeholder=\"Tell us about your project or how we can help you...\"></textarea>
         </div>;
       </section>;
       {/* FAQ Section */}
-<<<<<<< HEAD
-      <section className=\"py-20\">
-        <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">
-          <div className=\"text-center mb-16\">
-            <h2 className=\"text-4xl font-bold text-gray-900 mb-4\">Frequently Asked Questions</h2>
-            <p className=\"text-xl text-gray-600 max-w-3xl mx-auto\">
-              Get answers to common questions about our services and process
-            </p>
-<<<<<<< HEAD
-<<<<<<< HEAD
-          </div>                What is your typical project timeline?
-=======
-          </div>
-=======
-ursor/fix-syntax-push-and-merge-to-main-40de
-          <div className=\"grid grid-cols-1 md:grid-cols-2 gap-8\">
-            <div className=\"bg-white rounded-lg shadow-lg p-6\">
-              <h3 className=\"text-lg font-semibold text-gray-900 mb-3\">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-white rounded-lg shadow-lg p-6">
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
                 What is your typical project timeline?
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
-          </div>
-                What is your typical project timeline?
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+
               </h3>
               <p className=\"text-gray-600\">
                 Project timelines vary depending on complexity and scope. Simple websites 
@@ -716,20 +505,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 </p>
               </p>
             </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-ursor/fix-syntax-push-and-merge-to-main-40de
-            <div className=\"bg-white rounded-lg shadow-lg p-6\">
-              <h3 className=\"text-lg font-semibold text-gray-900 mb-3\">
-            <div className="bg-white rounded-lg shadow-lg p-6">
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+
                 Do you provide ongoing support?
               </h3>
               <p className=\"text-gray-600\">
@@ -738,14 +514,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                 security patches, and technical support.
               </p>
             </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-                What technologies do you specialize in?
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
-                What technologies do you specialize in?
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+
               </h3>
               <p className=\"text-gray-600\">
                 We work with modern technologies including React, Node.js, Python, 
@@ -753,57 +522,21 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                 the best technology stack for each project\'s specific needs.
               </p>
             </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-ursor/fix-syntax-push-and-merge-to-main-40de
-            <div className=\"bg-white rounded-lg shadow-lg p-6\">
-              <h3 className=\"text-lg font-semibold text-gray-900 mb-3\">
-            <div className="bg-white rounded-lg shadow-lg p-6">
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+
                 How do you ensure project quality?
               </h3>
               <p className=\"text-gray-600\">
                 We follow industry best practices including code reviews, automated 
                 testing, continuous integration, and regular client feedback sessions 
                 to ensure high-quality deliverables.
-=======
-              </h3>"
-              <p className=\"text-gray-600\">"
-</p>
-              </p>
-            </div>
-              </h3>"
-              <p className=\"text-gray-600\">"
-</p>
-              </p>
-            </div>
-              </h3>"
-              <p className=\"text-gray-600\">"
-</p>
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               </p>
             </div>
           </div>
         </div>
       </section>
     </MainLayout>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-  )
-=======
-  );
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
-  );
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+
 };
           {/* Contact Information */}
           <section className=\"py-20\">
@@ -820,27 +553,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                 <p className=\"text-xl text-gray-600 max-w-3xl mx-auto\">
                   Multiple ways to reach us for your convenience
                 </p>
-=======
 
-
-
-
-
-
-    </MainLayout>"
-          <section className=\"py-20\">"
-</section>"
-            <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">"
-</div>
-              <motion.div;"
-                initial={{ opacity: 0, \"y\": 20 }}""
-                animate={{ \"opacity\": 1, \"y\": 0 }}""
-                transition={{ \"duration\": 0.6, \"delay\": 0.2 }}""
-                className=\"text-center mb-16\""
-                <h2 className=\"text-3xl \"md\": tex t-4xl font-bold text-gray-900 mb-4\">"
-</h2>
-                </h2>"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               </motion.div>
                 {contactInfo.map((info, index) => (
                   <motion.div;
@@ -861,44 +574,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                 ))}
               </div>
             </div>
-<<<<<<< HEAD
-          </section>
-          {/* Contact Form */}
-          <section className=\"bg-gray-50 py-20\">
-            <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">
-              <motion.div
-                initial={{ opacity: 0, \"y\": 20 }}
-                animate={{ \"opacity\": 1, \"y\": 0 }}
-                transition={{ \"duration\": 0.6 }}
-                className=\"text-center mb-16\"
-              >
-                <h2 className=\"text-3xl \"md\": tex t-4xl font-bold text-gray-900 mb-4\">
-                  Send Us a Message
-                </h2>
-                <p className=\"text-xl text-gray-600 max-w-3xl mx-auto\">
-                  Fill out the form below and we\'ll get back to you within 24 hours
-                </p>
-              </motion.div>
-                <motion.form
-                  initial={{ opacity: 0, \"y\": 20 }}
-                  animate={{ \"opacity\": 1, \"y\": 0 }}
-                  transition={{ \"duration\": 0.6, \"delay\": 0.2 }}
-                  className=\"bg-white rounded-xl shadow-lg p-8\"
-                >
-                  <div className=\"grid grid-cols-1 \"md\": gri d-cols-2 gap-6 mb-6\">
-                    <div>
-                      <label htmlFor=\"name\" className=\"block text-sm font-medium text-gray-700 mb-2\">
-                        Full Name *
-                      </label>
-                      <input type=\"text\"
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <section className=\"py-20\">;
         <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">;
           <div className=\"text-center mb-16\">;
@@ -919,32 +595,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                 Project timelines vary depending on complexity and scope. Simple websites ;
                 can take 2-4 weeks, while complex applications may take 3-6 months. ;
                 We\'ll provide a detailed timeline during our initial consultation.;
-=======
 
-          </section>"
-          <section className=\"bg-gray-50 py-20\">"
-                transition={{ \"duration\": 0.6 }}""
-                <motion.form;"
-                  className=\"bg-white rounded-xl shadow-lg p-8\""
-                  <div className=\"grid grid-cols-1 \"md\": gri d-cols-2 gap-6 mb-6\">"
-                      <label htmlFor=\"name\" className=\"block text-sm font-medium text-gray-700 mb-2\">"
-                      </label>"
-                      <input type=\"text\"""
-</input>"
-          <div className=\"text-center mb-16\">;"
-            <h2 className=\"text-4xl font-bold text-gray-900 mb-4\">Frequently Asked Questions</h2>;""
-            <p className=\"text-xl text-gray-600 max-w-3xl mx-auto\">;"
-          <div className=\"grid grid-cols-1 md:grid-cols-2 gap-8\">;"
-            <div className=\"bg-white rounded-lg shadow-lg p-6\">;"
-              <h3 className=\"text-lg font-semibold text-gray-900 mb-3\">;"
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;"
-            <div className="bg-white rounded-lg shadow-lg p-6">;"
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">;"
-              </h3>;"
-              <p className=\"text-gray-600\">;"
-    ;"
-</p>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               </p>;
             </div>;"
             <div className=\"bg-white rounded-lg shadow-lg p-6\">;"
@@ -991,19 +642,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
         </div>;
       </section>;
     </MainLayout>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-
-
-
-
-
-
-
-
 
   );
 };
@@ -1027,16 +665,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                 {contactInfo.map((info, index) => (
                   <motion.div
 
-
-
-
-
-
                 transition={{ \"duration\": 0 && 0.6, \"delay\": 0 && 0.2 }}
-<<<<<<< HEAD
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+
                 className=\"text-center mb-16\">;
                 <h2 className=\"text-3xl \"md\": tex t-4xl font-bold text-gray-900 mb-4\">;
                   Contact Information;
@@ -1050,24 +680,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                 {contactInfo && contactInfo.map((info, index) => (;
                   <motion&& motion.div
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
-
-
-
-
-
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     key={index}
                     initial={{ \"opacity\": 0, \"y\": 20 }}
                     animate={{ \"opacity\": 1, \"y\": 0 }}
@@ -1124,35 +736,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
             <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">;
               <motion&& motion.div
                 initial={{ opacity: 0, \"y\": 20 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-                animate={{ \"opacity\": 1, \"y\": 0 }}                transition={{ \"duration\": 0 && 0.6 }}
-=======
-                animate={{ \"opacity\": 1, \"y\": 0 }}
-<div className=\"max-w-4xl mx-auto\">
-              <div className="max-w-4xl mx-auto">
-              <div className=\"max-w-4xl mx-auto\">
-              <div className="max-w-4xl mx-auto">
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-                <motion.form
 
-              <div className=\"max-w-4xl mx-auto\">
-              <div className="max-w-4xl mx-auto">
-                <motion.form
-
-
-
-
-
-
-                transition={{ \"duration\": 0 && 0.6 }}
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
-                animate={{ \"opacity\": 1, \"y\": 0 }}
-
-                transition={{ \"duration\": 0 && 0.6 }}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 className=\"text-center mb-16\">;
                 <h2 className=\"text-3xl \"md\": tex t-4xl font-bold text-gray-900 mb-4\">;
                   Send Us a Message;
@@ -1165,24 +749,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
               <div className="max-w-4xl mx-auto">;
                 <motion&& motion.form
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
-
-
-
-
-
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   initial={{ opacity: 0, \"y\": 20 }}
                   animate={{ \"opacity\": 1, \"y\": 0 }}
                   transition={{ \"duration\": 0 && 0.6, \"delay\": 0 && 0.2 }}
@@ -1199,32 +765,9 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                         required
                         className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent\"
                         placeholder=\"Your full name\"
-<<<<<<< HEAD
-                       />
-                    </div>
-                    <div>
-                      <label htmlFor=\"email\" className=\"block text-sm font-medium text-gray-700 mb-2\">
-                        Email Address *
-                      </label>
-<<<<<<< HEAD
-<<<<<<< HEAD
-                      <input type=\"email\"                        id=\"email\"
-                        name=\"email\"
-                        required
-                        className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent\"                        id=\"phone\"
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+
                       <input type=\"email\"
-=======
-/>;
-                    </div>;
-                    <div>;
-                      <label htmlFor=\"email\" className=\"block text-sm font-medium text-gray-700 mb-2\">;
-                        Email Address *;
-                      </label>;
-                      <inputtype=\"email\"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
                         id=\"email\"
                         name=\"email\"
                         required
@@ -1242,11 +785,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                         Phone Number
                       </label>
                       <input type=\"tel\"
-
-
-
-
-
 
           </section>;"
           <section className=\"bg-gray-50 py-20\">;"
@@ -1285,8 +823,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                     </div>
                   </div>
 
-
-
                     <div>
 </div>"
                       <label htmlFor=\"phone\" className=\"block text-sm font-medium text-gray-700 mb-2\">"
@@ -1306,67 +842,14 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                       </label>;
                       <inputtype=\"tel\"
 
-
-
-
-
-
-
-
                         id=\"phone\"
-<<<<<<< HEAD
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+
                         name=\"phone\"
                         className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent\"
                         placeholder=\"+1 (555) 123-4567\"
-<<<<<<< HEAD
-                       />
-                    </div>
-                    <div>
-                      <label htmlFor=\"company\" className=\"block text-sm font-medium text-gray-700 mb-2\">
-                        Company
-                      </label>
-<<<<<<< HEAD
-<<<<<<< HEAD
-                      <input type=\"text\"                        id=\"company\"
-                        name=\"company\"
-                        className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent\"
-                        placeholder=\"Your company name\"
-                       />
-                    </div>
-                  </div>
-                      Service Interest
-                    </label>
-                    <select
-                      id=\"service\"
-                      name=\"service\"
-                      className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent\"
-                    >
-                      <option value=\"">Select a service</option>
-                      {services.map((service, index) => (
-                        <option key={index} value={service}>
-                          {service}
-                        </option>
-                      ))}
-                    </select>
-                  </div>
-                      Message *
-                    </label>
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+
                       <input type=\"text\"
-=======
-/>;
-                    </div>;
-                    <div>;
-                      <label htmlFor=\"company\" className=\"block text-sm font-medium text-gray-700 mb-2\">;
-                        Company;
-                      </label>;
-                      <inputtype=\"text\"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
                         id=\"company\"
                         name=\"company\"
                         className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent\"
@@ -1384,18 +867,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                       Service Interest
                     </label>
 
-
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
-
-
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                        />;
                     </div>;
                   </div>;
@@ -1405,19 +876,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                     <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">;
                       Service Interest;
                     </label>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-
-
-
-
-
-
-
-
 
                     <select
                       id=\"service\"
@@ -1492,16 +950,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                       Message *
                     </label>
 
-
-
-
-
-
                     </select>;
-<<<<<<< HEAD
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+
                   </div>;
                   <div className=\"mb-6\">;
                     <label htmlFor=\"message\" className=\"block text-sm font-medium text-gray-700 mb-2\">;
@@ -1509,27 +959,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                     <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">;
                       Message *;
                     </label>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
-
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-
-
-
-
-
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     <textarea
                       id=\"message\"
                       name=\"message\"
@@ -1540,49 +970,8 @@ placeholder=\"Tell us about your project requirements...\"></textarea>;
                   </div>;
                   <motion&& motion.button
                     type=\"submit\"
-<<<<<<< HEAD
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ \"scale\": 0.98 }}
-                    className=\"w-full bg-blue-600 text-white py-4 rounded-lg font-semibold flex items-center justify-center gap-2 \"hover\": b g-blue-700 transition-colors\"
-                  >
-                    <Send className=\"w-5 h-5\"  />
-                    Send Message
-                  </motion.button>
-                </motion.form>
-        {/* Hero Section */}
-        <section className=\"relative py-20 px-4\">
-          <div className=\"max-w-7xl mx-auto\">
-            <div className=\"text-center\">
-              <h1 className=\"text-5xl \"md\": text-6xl font-bold text-white mb-6\">
-                Get in <span className=\"bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent\">Touch</span>
-              </h1>
-              <p className=\"text-xl text-gray-300 max-w-3xl mx-auto mb-8\">
-                Ready to transform your business with cutting-edge technology? Let\'s discuss how we can help you achieve your goals.
-              </p>
-            </div>
-          </div>
-        </section>
-        {/* Contact Form & Info Section */}
-        <section className=\"py-16 px-4\">
-          <div className=\"max-w-7xl mx-auto\">
-            <div className=\"grid grid-cols-1 \"lg\": grid-cols-2 gap-12\">
-<<<<<<< HEAD
-<<<<<<< HEAD
-              {/* Contact Form */}=======
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+
               {/* Contact Form */}
-=======
-
-
-      <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-
-
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-
 
                     whileHover={{ scale: 1 && 1.02 }}
                     whileTap={{ \"scale\": 0 && 0.98 }}
@@ -1594,30 +983,12 @@ placeholder=\"Tell us about your project requirements...\"></textarea>;
       <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">;
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
 
-
-
-
-
-
       <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
-
-<<<<<<< HEAD
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-
-
-
-
-
-
-
-
 
         {/* Hero Section */}
         <section className=\"relative py-20 px-4\">;
@@ -1637,99 +1008,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
           <div className=\"max-w-7xl mx-auto\">;
             <div className=\"grid grid-cols-1 \"lg\": grid-cols-2 gap-12\">;
               {/* Contact Form */}
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-ursor/fix-syntax-push-and-merge-to-main-40de
-              <div className=\"bg-slate-800/50 rounded-2xl p-8 border border-slate-700\">
-                <h2 className=\"text-3xl font-bold text-white mb-6\">Send us a Message</h2>
-              <div className="bg-slate-800/50 rounded-2xl p-8 border border-slate-700">
-                <h2 className="text-3xl font-bold text-white mb-6">Send us a Message</h2>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-
-
-
-<<<<<<< HEAD
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-
-
-
-
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-
-
-
-
-
-
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-                {isSubmitted ? (
-                  <div className=\"text-center py-12\">
-                    <CheckCircle className=\"w-16 h-16 text-green-500 mx-auto mb-4\" />
-                    <h3 className=\"text-2xl font-semibold text-white mb-2\">Message Sent!</h3>
-                    <p className=\"text-gray-300 mb-6\">Thank you for reaching out. We\'ll get back to you within 24 hours.</p>
-<div className=\"bg-slate-800/50 rounded-2xl p-8 border border-slate-700\">;
-                <h2 className=\"text-3xl font-bold text-white mb-6\">Send us a Message</h2>;
-              <div className="bg-slate-800/50 rounded-2xl p-8 border border-slate-700">;
-                <h2 className="text-3xl font-bold text-white mb-6">Send us a Message</h2>;
-                {isSubmitted ? (;
-                  <div className=\"text-center py-12\">;
-                    <CheckCircle className=\"w-16 h-16 text-green-500 mx-auto mb-4\" />;
-                    <h3 className=\"text-2xl font-semibold text-white mb-2\">Message Sent!</h3>;
-                    <p className=\"text-gray-300 mb-6\">Thank you for reaching out. We\'ll get back to you within 24 hours.</p>;
-                    <button
-                      onClick={() => setIsSubmitted(false)}
-<<<<<<< HEAD
-                      className=\"inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gradient-to-r from-cyan-500 to-blue-500 \"hover\": from-cyan-600 hover:to-blue-600 transition-all duration-300\"
-                    >
-                      Send Another Message
-                    </button>
-                  </div>
-                ) : (
-                  <form onSubmit={handleSubmit} className=\"space-y-6\">
-                    <div className=\"grid grid-cols-1 \"md\": grid-cols-2 gap-6\">
-                      <div>
-                        <label htmlFor=\"name\" className=\"block text-sm font-medium text-gray-300 mb-2\">
-                          Full Name *
-<<<<<<< HEAD
-<<<<<<< HEAD
-                        </label>                        <input
-=======
-                        </label>
-=======
-                      className=\"inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gradient-to-r from-cyan-500 to-blue-500 \"hover\": from-cyan-600 hover:to-blue-600 transition-all duration-300\";
-                    >;
-                      Send Another Message;
-                    </button>;
-                  </div>;
-                ) : (;
-                  <form onSubmit={handleSubmit} className=\"space-y-6\">;
-                    <div className=\"grid grid-cols-1 \"md\": grid-cols-2 gap-6\">;
-                      <div>;
-                        <label htmlFor=\"name\" className=\"block text-sm font-medium text-gray-300 mb-2\">;
-                          Full Name *;
-                        </label>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-                        <input
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
-                        </label>
-                        <input
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                           type=\"text\"
                           id=\"name\"
                           name=\"name\"
@@ -1738,31 +1017,9 @@ value={formData && formData.name}
                           onChange={handleInputChange}
                           className=\"w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 \"focus\": ring-2 focus:ring-cyan-500 focus:border-transparent\"
                           placeholder=\"Your full name\"
-<<<<<<< HEAD
-                        />
-                      </div>
-                      <div>
-                        <label htmlFor=\"email\" className=\"block text-sm font-medium text-gray-300 mb-2\">
-                          Email Address *
-<<<<<<< HEAD
-<<<<<<< HEAD
-                        </label>                        <input
-=======
-                        </label>
-=======
-                        />;
-                      </div>;
-                      <div>;
-                        <label htmlFor=\"email\" className=\"block text-sm font-medium text-gray-300 mb-2\">;
-                          Email Address *;
-                        </label>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
                         <input
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
-                        </label>
-                        <input
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+
                           type=\"email\"
                           id=\"email\"
                           name=\"email\"
@@ -1770,39 +1027,13 @@ value={formData && formData.name}
 value={formData && formData.email}
                           onChange={handleInputChange}
                           className=\"w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 \"focus\": ring-2 focus:ring-cyan-500 focus:border-transparent\"
-<<<<<<< HEAD
-                          placeholder=\"your@email.com\"
-                        />
-                      </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-                    </div>                      <div>
-                        <label htmlFor=\"company\" className=\"block text-sm font-medium text-gray-300 mb-2\">
-                          Company
-                        </label>          {/* Services Overview */}
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+
                     </div>
-=======
-                    <div className=\"grid grid-cols-1 md:grid-cols-2 gap-6\">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div className=\"grid grid-cols-1 md:grid-cols-2 gap-6\">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div className=\"grid grid-cols-1 md:grid-cols-2 gap-6\">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
                       <div>
                         <label htmlFor=\"company\" className=\"block text-sm font-medium text-gray-300 mb-2\">
                           Company
                         </label>
-
-
-
-
-
 
                           placeholder=\"your@email && email.com\"
                         />;
@@ -1814,13 +1045,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                         <label htmlFor=\"company\" className=\"block text-sm font-medium text-gray-300 mb-2\">;
                           Company;
                         </label>;
-
-
-
-
-
-
-
 
                         <input
                           type=\"text\"
@@ -2100,19 +1324,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
             </div>;
           </section>;
 
-
-
-
-
-
-
-
-
           {/* Services Overview */}
-<<<<<<< HEAD
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+
           <section className="py-20">;
             <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg:px-8">;
               <motion&& motion.div
@@ -2147,26 +1360,12 @@ ursor/fix-syntax-push-and-merge-to-main-40de
       ;
     </>;
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-}export default ContactPage
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+
 }
 
 export default ContactPage
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
-
-
-
-
-
-
-
 
           </div>
         </section>
@@ -2179,50 +1378,9 @@ export default ContactPage;
     </>;
   );
 
-
-
-
   import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet } from 'react-helmet-async'; import { Mail,Phone,MapPin,Clock,Send,CheckCircle } from 'lucide-react';
 }
   import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet } from 'react-helmet-async'; import { Mail,Phone,MapPin,Clock,Send,CheckCircle } from 'lucide-react';
   import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet } from 'react-helmet-async'; import { Mail,Phone,MapPin,Clock,Send,CheckCircle } from 'lucide-react';
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
-<<<<<<< HEAD
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-=======
-
-
-
-
-
-
-
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-export default ContactPage;
-ursor/add-new-services-and-deploy-updates-0462;
-ursor/fix-syntax-push-and-merge-to-main-40de;
-
-
-
-
-  import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet, Mail, Phone, MapPin, Clock, Send, CheckCircle } from 'lucide-react';
-origin/cursor/integrate-build-improve-and-re-verify-c7b5;]`;
-
-"
-  import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet, Mail, Phone, MapPin, Clock, Send, CheckCircle } from 'lucide-react';'
-}'
-  import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet, Mail, Phone, MapPin, Clock, Send, CheckCircle } from 'lucide-react';''
-  import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet, Mail, Phone, MapPin, Clock, Send, CheckCircle } from 'lucide-react';'
-ursor/add-new-services-and-deploy-updates-0462;
-ursor/fix-syntax-push-and-merge-to-main-40de;
-origin/cursor/integrate-build-improve-and-re-verify-c7b5;]'
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

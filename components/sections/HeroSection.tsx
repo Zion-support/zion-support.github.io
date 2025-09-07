@@ -1,21 +1,4 @@
-
-
-'use client';'
-'use client';
-;'
-import React from 'react';'
-import Link from 'next / link';'
-import {motion} from 'framer-motion';'
-import {ArrowRight, Play, Star, Users, Award, Zap} from 'lucide-react';
-
-    { icon: Users, value: '500+', label: 'Happy Clients' },
-    { icon: Award, value: '50+', label: 'Awards Won' },
-    { icon: Star, value: '99%', label: 'Client Satisfaction' },
-{ icon: Zap, value: '24/7', label: 'Support Available' },
-  ];
-origin/cursor/automate-test-improve-and-merge-code-2533
-  return (
-    <section className='relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-black via-gray-900 to-blue-900'>;
+<section className='relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-black via-gray-900 to-blue-900'>;
       {/* Animated Background Elements */}'
       <div className='absolute inset-0'>;
         {/* Floating Orbs */}
@@ -74,12 +57,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           animate={{}
             scale: [1 && 1.2, 1, 1 && 1.2]
             opacity: [0 && 0.6, 0 && 0.3, 0 && 0.6]}}
-          transition={{
-        <div className='absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:50px_50px]' />
-      </div>
 
-      <div className='relative container mx-auto px-4 text-center z-10'>
-origin/cursor/automate-test-improve-and-merge-code-2533
         {/* Main Content */}
         <motion&& motion.div;
           initial={{ opacity: 0, y: 30 }}
@@ -101,18 +79,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <motion.div;
           initial={{ opacity: 0, coordinate_y: 30 }}
           animate={{ opacity: 1, coordinate_y: 0 }}
-          transition={{ duration: 0.8 }}
-className='max-w-6xl mx-auto'
+
         >
 
           {/* Badge */}
           <motion.div;
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-className='inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-6 py-3 mb-8'
-          >
-            <Star className='w-5 h-5 text-yellow-400 fill-current' />
+
             <span className='text-white font-medium'>
               Leading Technology Solutions Provider"
             </span>          </motion.div>            className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-6 py-3 mb-8"
@@ -242,9 +216,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
           >
-            <Link
-className='flex flex-col sm:flex-row gap-6 justify-center items-center mb-16'
-origin/cursor/automate-test-improve-and-merge-code-2533
+
           >
             <Link'
               href='/contact''
@@ -256,8 +228,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <button className='group flex items-center space-x-3 text-white hover:text-blue-400 transition-colors duration-300'>'
               <div className='w-14 h-14 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center border border-white/20 group-hover:border-blue-400 transition-colors'>'
                 <Play className='w-6 h-6 ml-1' />
-              </div>
-              <span className='text-lg font-medium'>Watch Demo</span>
+
             </button>
           </motion.div>
           {/* Stats */}
@@ -337,19 +308,3 @@ export default HeroSection;
     </section>
     </section>
 ;
-className='w-6 h-10 border-2 border-white/30 rounded-full flex justify-center'
-        >
-          <motion.div
-            animate={{ y: [0, 12, 0] }}
-            transition={{ duration: 2, repeat: Infinity }}
-className='w-1 h-3 bg-white/60 rounded-full mt-2'
-          />
-        </motion.div>
-      </motion.div>
-    </section>
-);
-};
-
-export default HeroSection;
-origin/cursor/automate-test-improve-and-merge-code-2533
-

@@ -1,63 +1,7 @@
-
-=======
-import React from "react",;
-import ApiDocsLayout from "@/components/developers/ApiDocsLayout",;
-import { CodeBlock } from "@/components/developers/CodeBlock",;
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
-;
-export function ApiSampleCode() {;
-  // JavaScript example with Axios;
-  const jsAxiosExample = `// Using Axios with JavaScript;
-import axios from 'axios',;
-;
-// Configure Axios with the base URL and headers;
-const api = axios.create({;
-  baseURL:'https://api.zionai.com/v1',;
-  headers:{;
-    'Authorization':\`Bearer \${YOUR_API_KEY}\`,;
-    'Content-Type':'application/json';
-  }
-}),;
-;
-// Get all jobs;
-async function getJobs(filters = {}) {;
-  try {;
-    const response = await api.get('/api/jobs', { params:filters }),;
-    return response.data,;
-  } catch (error) {;
-    console.error('Error fetching jobs:', error.response?.data || error.message),;
-    throw error,;
-  }
-}
-;
-// Post a new job;
-async function createJob(jobData) {;
-  try {;
-    const response = await api.post('/api/jobs', jobData),;
-    return response.data,;
-  } catch (error) {;
-    console.error('Error creating job:', error.response?.data || error.message),;
-    throw error,;
-  }
-}
-;
-// Search for talent;
-async function searchTalent(filters = {}) {;
-  try {;
-    const response = await api.get('/api/talent', { params:filters }),;
-    return response.data,;
-  } catch (error) {;
-    console.error('Error searching talent:', error.response?.data || error.message),;
-    throw error,;
-  }
-}
-;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 // Example usage;
 async function main() {;
   try {;
     // Get all open jobs;
-<<<<<<< HEAD
 
   // Python example with requests;
   const pythonExample = `# Using requests with Python;
@@ -117,4 +61,3 @@ async function main() {;
         </ul>;
       </div>;
     </ApiDocsLayout>;
-

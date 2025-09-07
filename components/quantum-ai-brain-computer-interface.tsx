@@ -1,40 +1,14 @@
-  Phone,
-  Mail,
-  MapPin,
-  Check,
-  ArrowRight,
-  Brain,;
-  Star,;
-import React from 'react',
-import Head from 'next/head';
-import { Phone, Mail, MapPin, Check, ArrowRight, Brain, Star  } from 'lucide-react';
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
 import Button from '../components/ui/Button';
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
 export default function QuantumAIBCIPage() {
   const service = null;
-import {
-  Phone
-  Mail
-  MapPin
-  Check
-  ArrowRight
-  Brain
-  Star;
-origin/cursor/automate-test-improve-and-merge-code-2533
-} from 'lucide-react';
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
-import Button from '../components/ui/Button';
+
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
 
 export default function QuantumAIBCIPage() {}
 export default function QuantumAIBCIPage() { return null; }
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
-export default function QuantumAIBCIPage() {;
-  const service = enhancedRealMicroSaasServices.find(s =>
-    s.link.endsWith('/quantum-ai-brain-computer-interface')
-  );
-  if (!service) return null;
+
   return (
     <UltraAdvancedFuturisticBackground>
       <Head>
@@ -98,6 +72,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <div className="mt-6 space-y-3 text-sm text-slate-300">
                 <div className="flex items-center space-x-2"><Phone className="w-4 h-4 text-cyan-400" /><span>{service.contactInfo.mobile}</span></div>
                 <div className="flex items-center space-x-2"><Mail className="w-4 h-4 text-purple-400" /><span>{service.contactInfo.email}</span></div>
+
                 <div className="flex items-center space-x-2"><MapPin className="w-4 h-4 text-green-400" /><span className="text-xs">{service.contactInfo.address}</span></div>
                 className='w-full'
               >
@@ -170,9 +145,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <span className='text - slate - 400 text - base'>;
                       {service.period}
                     </span>;
-                  </div>;'
-                  <div className='text - slate - 400'>;'
-                    {service.trial_days}-day free trial • Setup:{' '}
+
                     {service.setup_time}
                   </div>;
                 </div>;'
@@ -216,3 +189,4 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 }
 
+origin/cursor/automate-test-improve-and-merge-code-2533

@@ -1,5 +1,5 @@
 import React from 'react';
-export default Navigation.dynamic;
+
 ;
 const Navigation.dynamic = () => {}
   return (
@@ -16,4 +16,3 @@ const Navigation.dynamic = () => ;
 
 pr-12243
 export default Navigation.dynamic;
-

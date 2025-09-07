@@ -1,20 +1,3 @@
-<<<<<<< HEAD:pages_backup/products/index.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/products/index.tsx
-<<<<<<< HEAD:pages/products/index.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/products/index.tsx
 import React from 'react';
 import MainLayout from '../../components/layout/MainLayout';
 
@@ -35,16 +18,6 @@ const Page = () => {
 };
 
 export default Page;
-<<<<<<< HEAD:pages_backup/products/index.tsx
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/products/index.tsx
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/products/index.tsx
-
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -65,7 +38,6 @@ class ErrorBoundary extends React.Component {
   }
 }
 
-
 import React from 'react';
 import { NextPage } from 'next';
 import Head from 'next/head';
@@ -73,135 +45,17 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 
 origin/main
 origin/automation-improvements-final
-=======
-
-
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/products/index.tsx
-
 
 import Link from 'next/link';'
 import { motion } from 'framer-motion';'
 import { ArrowRight, CheckCircle, Star, Zap, Shield, Users, Globe, Award, Search } from 'lucide-react';'
 import Layout from '../../components/Layout';
 
-<<<<<<< HEAD:pages_backup/products/index.tsx
-<<<<<<< HEAD:pages_backup/products/index.tsx
-=======
-const products = [;
-  {;
-    id: 'ai-analytics-suite',;
-    name: 'ZionAI Analytics Suite',;
-    description: 'Comprehensive business intelligence platform with AI-powered insights and predictive analytics.',;
-    category: 'AI & Analytics',;
-    pricing: '$2,999/month',;
-    features: ['Real-time Analytics', 'Predictive Modeling', 'Custom Dashboards', 'API Integration'],;
-    benefits: ['Data-Driven Decisions', 'Improved Efficiency', 'Competitive Advantage', 'Scalable Solutions'],;
-    icon: Award,;
-    popular: true;
-  },;
-  {;
-    id: 'cloud-infrastructure',;
-    name: 'ZionCloud Infrastructure',;
-    description: 'Scalable cloud infrastructure solutions with enterprise-grade security and performance.',;
-    category: 'Cloud Services',;
-    pricing: '$4,999/month',;
-    features: ['Auto-scaling', '99 && 99.9% Uptime', 'Global CDN', 'Security Compliance'],;
-    benefits: ['Cost Optimization', 'High Availability', 'Global Performance', 'Secure Operations'],;
-    icon: Globe,;
-    popular: true;
-  },;
-  {;
-    id: 'cybersecurity-suite',;
-    name: 'ZionShield Security',;
-    description: 'Advanced cybersecurity solutions with threat detection and prevention capabilities.',;
-    category: 'Security',;
-    pricing: '$3,999/month',;
-    features: ['Threat Detection', 'Real-time Monitoring', 'Incident Response', 'Compliance Management'],;
-    benefits: ['Enhanced Security', 'Risk Mitigation', 'Compliance Ready', 'Peace of Mind'],;
-    icon: Shield,;
-    popular: false;
-  },;
-  {;
-    id: 'automation-platform',;
-    name: 'ZionAutomate Platform',;
-    description: 'Intelligent automation platform for streamlining business processes and workflows.',;
-    category: 'Automation',;
-    pricing: '$2,499/month',;
-    features: ['Workflow Automation', 'Process Optimization', 'Integration Hub', 'Analytics Dashboard'],;
-    benefits: ['Increased Productivity', 'Reduced Errors', 'Cost Savings', 'Better Efficiency'],;
-    icon: Zap,;
-    popular: false;
-  },;
-  {;
-    id: 'collaboration-suite',;
-    name: 'ZionCollaborate Suite',;
-    description: 'Comprehensive collaboration platform for teams and organizations.',;
-    category: 'Collaboration',;
-    pricing: '$1,999/month',;
-    features: ['Team Chat', 'Video Conferencing', 'File Sharing', 'Project Management'],;
-    benefits: ['Better Communication', 'Improved Collaboration', 'Remote Work Ready', 'Enhanced Productivity'],;
-    icon: Users,;
-    popular: false;
-  },;
-  {;
-    id: 'data-management',;
-    name: 'ZionData Manager',;
-    description: 'Advanced data management and governance platform for enterprise data needs.',;
-    category: 'Data Management',;
-    pricing: '$3,499/month',;
-    features: ['Data Governance', 'Quality Management', 'Compliance Tools', 'Analytics Integration'],;
-    benefits: ['Data Quality', 'Compliance Ready', 'Better Insights', 'Risk Reduction'],;
-    icon: Star,;
-    popular: false;
-  }
-];
-const categories = [;
-  'All',;
-  'AI & Analytics',;
-  'Cloud Services',;
-  'Security',;
-  'Automation',;
-  'Collaboration',;
-  'Data Management';
-];
-const ProductsIndex: NextPage = () => {;
-  const [selectedCategory, setSelectedCategory] = React && React.useState('All');
-  const [searchTerm, setSearchTerm] = React && React.useState('');
-  const filteredProducts = products && products.filter(product => {;
-    const matchesCategory = selectedCategory === 'All' || product && product.category === selectedCategory;
-    const matchesSearch = product && product.name.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
-                         product && product.description.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
-                         product && product.category.toLowerCase().includes(searchTerm && searchTerm.toLowerCase());
-
-    return matchesCategory && matchesSearch;
-  });
-
-const Index: NextPage = () => {
-  return (
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/products/index.tsx
     <Layout
       title="Products - Zion Tech Group"
       description="Discover our comprehensive suite of technology products designed to transform your business operations."
       keywords="products, technology solutions, AI, cloud, security, automation, collaboration">;
-=======
 
-
-
-
-
-const Index: NextPage = () => {}
-  return (
-
-
-
-
-    <Layout;
-      title="Products - Zion Tech Group""
-      description="Discover our comprehensive suite of technology products designed to transform your business operations.""
-      keywords="products, technology solutions, AI, cloud, security, automation, collaboration">;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/products/index.tsx
       <div className="min-h-screen bg-gray-50">;
         {/* Hero Section */}
 "
@@ -228,16 +82,6 @@ const Index: NextPage = () => {}
           </div>;
         </section>;
 
-<<<<<<< HEAD:pages_backup/products/index.tsx
-
-        {/* Search and Filter Section */}"
-        <section className="py-12 bg-white">;"
-          <div className="container mx-auto px-4">;"
-=======
-        {/* Search and Filter Section */}
-        <section className="py-12 bg-white">;
-          <div className="container mx-auto px-4">;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/products/index.tsx
             <div className="max-w-4xl mx-auto">;
               {/* Search Bar */}"
               <div className="mb-8">;"
@@ -254,12 +98,6 @@ const Index: NextPage = () => {}
                 </div>;
               </div>;
 
-<<<<<<< HEAD:pages_backup/products/index.tsx
-
-              {/* Category Filter */}"
-=======
-              {/* Category Filter */}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/products/index.tsx
               <div className="flex flex-wrap gap-2 justify-center mb-8">;
                 {categories && categories.map((category) => (;
                   <button;
@@ -286,18 +124,7 @@ const Index: NextPage = () => {}
                   }}
 "
                   className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold";
-<<<<<<< HEAD:pages_backup/products/index.tsx
-import Head from 'next / head';
-import Link from 'next / link';
-import { motion } from 'framer-motion';
-import { ArrowRight, CheckCircle, Star, Zap, Shield, Users, Globe, Award, Search } from 'lucide-react';
-=======
-'
-import Head from 'next / head';'
-import Link from 'next / link';'
-import { motion } from 'framer-motion';'
-import { ArrowRight, CheckCircle, Star, Zap, Shield, Users, Globe, Award, Search } from 'lucide-react';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/products/index.tsx
+
 import Layout from '../../components / Layout';
 ;
 const products = [;
@@ -468,71 +295,17 @@ const ProductsIndex: NextPage = () => {'
             </div>;
           </div>;
         </section>;
-<<<<<<< HEAD:pages_backup/products/index.tsx
-<<<<<<< HEAD:pages_backup/products/index.tsx
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/products/index.tsx
-=======
-</div>;
-                    </div>;
-                    <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">;
-                      {product && product.name}
-                    </h3>;
-                    <p className="text-gray-600 mb-4 leading-relaxed">;
-                      {product && product.description}
-                    </p>;
-                    <div className="space-y-2 mb-4">;
-                      <h4 className="font-semibold text-gray-900 text-sm">Key Features:</h4>;
-                      <ul className="space-y-1">;
-                        {product && product.features.map((feature, idx) => (;
-                          <li key={idx} className="flex items-center text-sm text-gray-600">;
-                            <CheckCircle className="w-3 h-3 text-green-500 mr-2 flex-shrink-0" />;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/products/index.tsx
                             {feature}
                           </li>;
                         ))}
                             {benefit}
                           </li>;
                         ))}
-<<<<<<< HEAD:pages_backup/products/index.tsx
-<<<<<<< HEAD:pages_backup/products/index.tsx
-=======
-</ul>;
-                    </div>;
-                    <div className="space-y-2 mb-6">;
-                      <div className="flex justify-between items-center">;
-                        <span className="text-sm font-medium text-gray-900">Pricing:</span>;
-                        <span className="text-lg font-bold text-blue-600">{product && product.pricing}</span>;
-                      </div>;
-                    </div>;
-                    <button className="w-full bg-blue-600 hover:bg-blue-700 text-white px-4 py-3 rounded-lg font-medium transition-colors duration-200 flex items-center justify-center group">;
-                      Learn More;
-                      <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />;
-                    </button>;
-                  </div>;
-                </motion && motion.div>;
-              ))}
-            </div>;
-            {filteredProducts && filteredProducts.length === 0 && (;
-              <div className="text-center py-12">;
-                <div className="text-gray-400 mb-4">;
-                  <Search className="w-16 h-16 mx-auto" />;
-                </div>;
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">No products found</h3>;
-                <p className="text-gray-600">Try adjusting your search or filter criteria.</p>;
-              </div>;
-            )}
-          </div>;
-        </section>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/products/index.tsx
+
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">;
-=======
 
-        {/* CTA Section */}"
-        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/products/index.tsx
           <div className="container mx-auto px-4 text-center">;
             <motion&& motion.div;
               initial={{ opacity: 0, y: 30 }}
@@ -552,27 +325,6 @@ const ProductsIndex: NextPage = () => {'
                 <Link"
                   href="/contact"
 
-<<<<<<< HEAD:pages_backup/products/index.tsx
-
-export default Index;'
-import type { NextPage } from 'next','
-import Head from 'next/head',
-const Index: NextPage = () => {}
-  return (
-
-
-
-
-<<<<<<< HEAD:pages_backup/products/index.tsx
-=======
-export default Index;
-import type { NextPage } from 'next',;
-import Head from 'next/head',;
-const Index: NextPage = () => {
-  return (
-
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/products/index.tsx
     <div>
       <Head>
         <title>Index - Zion Tech Solutions</title>
@@ -597,19 +349,7 @@ className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white 
 export default ProductsIndex;
 import type { NextPage } from 'next';
 import Head from 'next/head';
-=======
 
-
-    <div>
-      <Head>
-        <title>Index - Zion Tech Solutions</title>
-
-;
-export default ProductsIndex;'
-import type { NextPage } from 'next';'
-import Head from 'next/head';
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/products/index.tsx
       <main>
         <h1>Index</h1>
         <p>This page is under construction.</p>
@@ -623,32 +363,6 @@ export default Index;
 }
 export default Index;
 
-<<<<<<< HEAD:pages_backup/products/index.tsx
-},
-export default Index,
-
-)
-};
-
-export default Index;
-
-        {/* Products Grid */}
-        <section className="py - 16">;
-          <div className="container mx - auto px - 4">;
-=======
-
-};
-
-export default Index;
-
-
-
-
-
-        {/* Products Grid */}"
-        <section className="py - 16">;"
-          <div className="container mx - auto px - 4">;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/products/index.tsx
             <div className="grid md:grid - cols - 2 lg:grid - cols - 3 gap - 8">;
               {filtered_products.map ((product, index) => (
                 <motion.div;
@@ -754,21 +468,6 @@ export default Index;
       </div>;
     </Layout>);
 }
-<<<<<<< HEAD:pages_backup/products/index.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/products/index.tsx
-<<<<<<< HEAD:pages/products/index.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-export default ProductsIndex;
-
-  )
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/products/index.tsx
-
-
 
 '
 import React from 'react';'
@@ -783,27 +482,7 @@ const Page = () => {}
       <div className="min-h-screen bg-gray-50">"
         <div className="container mx-auto px-4 py-16">"
           <h1 className="text-4xl font-bold text-gray-900 mb-6">Products</h1>"
-=======
-export default ProductsIndex;
 
-  )
-
-},
-export default Index,
-
-import React from 'react';
-import MainLayout from '../../components/layout/MainLayout';
-
-const Page = () => {
-  return (
-    <MainLayout
-      title="Products - Zion Tech Group"
-      description="Our products and solutions"
-    >
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-4 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">Products</h1>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/products/index.tsx
           <p className="text-xl text-gray-600">Coming soon...</p>
         </div>
       </div>
@@ -812,50 +491,3 @@ const Page = () => {
 };
 
 export default Page;
-<<<<<<< HEAD:pages_backup/products/index.tsx
-<<<<<<< HEAD:pages_backup/products/index.tsx
->>>>>>> main
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-import type { NextPage } from 'next';
-import Head from 'next/head';
-const Index: NextPage;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
-
-import type { NextPage } from 'next';
-import Head from 'next/head';
-const Index: NextPage;
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/products/index.tsx
-=======
-
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/products/index.tsx
-=======
-
-
-import type { NextPage } from 'next';
-import Head from 'next/head';
-const Index: NextPage;
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-import type { NextPage } from 'next';
-import Head from 'next/head';
-const Index: NextPage;
-origin/cursor/automate-test-improve-and-merge-code-2533
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/products/index.tsx

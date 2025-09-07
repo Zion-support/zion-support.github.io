@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 }
 key={f}
                 className=\"flex items-start gap-3 p-4 rounded-xl bg-black/40 border border-gray-700/60\"

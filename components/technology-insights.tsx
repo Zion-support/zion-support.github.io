@@ -1,21 +1,4 @@
-import Head from 'next/head';'
-import Link from 'next/link';
-export default function TechnologyInsightsPage() {}
-  const technologyTrends = []
-    {'
-      id: 'quantum-computing''
-      title: 'Quantum Computing in 2025'
-      description:
-        'Exploring the latest developments in quantum computing and their implications for AI and automation.',      category: 'Emerging Tech',
-      readTime: '15 min read',
-      featured: true
-};
-    {
-      id: 'edge-ai'
-      title: 'Edge AI Revolution'
-      description: 'How edge computing is transforming AI deployment and enabling real-time intelligent applications.'
-      category: 'AI/ML'
-      readTime: '12 min read'
+readTime: '12 min read'
       featured: false;
     }
     {'
@@ -30,9 +13,7 @@ export default function TechnologyInsightsPage() {}
   ];
 
   const researchAreas = [;
-    {;
-      title: 'Autonomous Systems Research',,
-  description:;
+
         'Pioneering research in building truly autonomous systems that can operate independently.',;
       focus: [;'
         'Decision Making',;'
@@ -41,27 +22,14 @@ export default function TechnologyInsightsPage() {}
         'System Integration',;
       ],;'
       icon: '🔬',;
-    },;
-      title: 'AI Ethics & Governance',,
-  description:;
-        'Research into responsible AI development and ethical considerations for autonomous systems.',;
-      focus: ['Ethical AI', 'Bias Detection', 'Transparency', 'Accountability'],;
-      icon: '⚖️',;
-    },;
-    {;
-      title: 'Human-AI Collaboration',,
-  description:;
+
         'Exploring how humans and AI can work together effectively and safely.',;
       focus: [;'
         'Human-AI Interface',;'
         'Collaborative Decision Making',;'
         'Safety Protocols',;'
         'Trust Building',;
-      ],;
-      icon: '🤝',;
-    },  ],
-  description: 'Exploring how humans and AI can work together effectively and safely.',;
-      focus: ['Human-AI InterfaceCollaborative Decision MakingSafety ProtocolsTrust Building'],;
+
       icon: '🤝';
     }'
       <div className='min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white'>;'
@@ -267,8 +235,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </div>;
             </div>;
             {/* Research Areas */}
-            {/* Research Areas */}
-<div className='mb-16'>
+
               <h2 className='text-3xl font-bold mb-8 text-center text-fuchsia-400'>
                 Research Focus Areas;
               </h2>'
@@ -308,8 +275,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
             {/* Whitepapers */}
 
-            {/* Whitepapers */}
-<div className='mb-16'>
               <h2 className='text-3xl font-bold mb-8 text-center text-green-400'>
                 Research Whitepapers;
               </h2>'
@@ -344,12 +309,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       className="inline-flex items-center text-fuchsia-400 hover:text-fuchsia-300 transition-colors"
                     >"
                       Download PDF <span className="ml-1">→</span>
-                      href={paper.downloadUrl}
-                      className='inline-flex items-center text-fuchsia-400 hover:text-fuchsia-300 transition-colors'
-                    >
-                      Download PDF <span className='ml-1'>→</span>
-origin/cursor/automate-test-improve-and-merge-code-2533
-                    </Link>
+
                       Download PDF <span className='ml-1'>→</span>                    </Link>
 
                     </Link>
@@ -359,8 +319,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </div>
             </div>
 
-            {/* Innovation Lab */}
-<div className='mb-16'>
               <h2 className='text-3xl font-bold mb-8 text-center text-blue-400'>
                 Innovation Lab;
               </h2>'
@@ -381,16 +339,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <h3 className="text-2xl font-bold mb-4 text-cyan-400">Cutting-Edge Research</h3>"
                     <p className="text-white/80 mb-6">
                       Our innovation lab is dedicated to exploring the frontiers of technology, conducting research in autonomous systems, AI ethics, and human-AI collaboration. We work with leading institutions and industry partners to advance the state of the art.
-                    <ul className='space-y-2 text-white/70'>
-origin/cursor/automate-test-improve-and-merge-code-2533
+
                     </p>
+
                     <ul className="space-y-2 text-white/70">
                       <li>• Advanced AI research and development</li>
                       <li>• Autonomous system prototyping</li>
                       <li>• Ethical AI framework development</li>
                       <li>• Industry collaboration and partnerships</li>
                     </ul>
-                  </div>"
+
                     <p className="text-white/60 text-sm">Innovation Lab</p>
 <div className='text-center'>
                     <div className='text-6xl mb-4'>🧪</div>
@@ -424,7 +382,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 >
                   Get in Touch;
                 </Link>
-                <Link"
+
                   href="/blog"
                   Read Our Blog;
                 </Link>;
@@ -437,9 +395,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 }
     </>);
-}
-  );
+});
 }
     </>);
 }
 
+                  href='/blog'
+                  className='px-8 py-3 bg-white/10 text-white font-bold rounded-lg border border-white/20 hover:bg-white/20 transition-all duration-200'
+                >
+                  Read Our Blog
+                </Link>
+              </div>
+            </div>
+          </section>
+        </main>
+      </div>
+    </>
+  );
+}
+origin/cursor/automate-test-improve-and-merge-code-2533

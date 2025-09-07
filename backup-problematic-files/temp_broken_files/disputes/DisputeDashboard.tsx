@@ -1,30 +1,7 @@
-
-=======
-import React, { useEffect } from "react",;
-import { useDisputes } from "@/hooks/useDisputes",;
-import { DisputesList } from "./DisputesList",;
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
-import { Button } from "@/components/ui/button",;
-import { ShieldAlert } from "lucide-react",;
-;
-export function DisputeDashboard() {;
-  const { disputes, isLoading, refetch } = useDisputes(),;
-;
-  useEffect(() => {;
-    refetch(),;
-  }, [refetch]),;
-;
-  const openDisputes = disputes.filter(d => d.status === 'open'),;
-  const underReviewDisputes = disputes.filter(d => d.status === 'under_review'),;
-  const resolvedDisputes = disputes.filter(d => d.status === 'resolved'),;
-;
-  return (;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-    <div className="container mx-auto p-4 space-y-6">;
+<div className="container mx-auto p-4 space-y-6">;
       <div className="flex flex-wrap items-center justify-between gap-4">;
         <div>;
           <h1 className="text-3xl font-bold">Dispute Resolution Center</h1>;
-<<<<<<< HEAD
 
         <Button onClick={refetch} variant="outline">;
           Refresh;

@@ -1,5 +1,5 @@
 import React from 'react';
-export default SEO.dynamic;
+
 ;
 const SEO.dynamic = () => {}
   return (
@@ -16,4 +16,3 @@ const SEO.dynamic = () => ;
 
 pr-12243
 export default SEO.dynamic;
-

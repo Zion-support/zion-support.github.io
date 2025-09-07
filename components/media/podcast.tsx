@@ -1,12 +1,8 @@
-
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 
 type EpisodeListItem = any;
-origin/cursor/automate-test-improve-and-merge-code-2533
-useEffect ( () => {
-  const load = async () => {
-  try {
+
   return (
     <div className='space-y-6'>;'
       <div className='flex items-center justify-between'>;'
@@ -64,6 +60,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     MP3;
                   </a>;
                 )}
+
                 {ep && ep.audio?.wavUrl && (;
                   <a;
                     href={ep && ep.audio.wavUrl}'
@@ -82,11 +79,7 @@ href={ep.audio.wavUrl}
                     WAV;
                   </a>;
                 )}
-                {ep && ep.audio?.mp4Url && (;
-                  <a;
-                    href={ep && ep.audio.mp4Url}'
-                    className='px-3 py-2 bg-purple-700 text-white rounded'"
-                    download>                    MP4                  <a href={ep && ep.audio.mp4Url} className="px-3 py-2 bg-purple-700 text-white rounded" download>;
+
                     MP4;
                   </a>;
                 )}
@@ -138,9 +131,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </ul>;
     </div>;
   );
-  // Check condition;
-if (return <div > Loading episodes…</div>) {}
-  $2;
+
 }
   return ('
     <div className='space - y-6'>;'
@@ -233,4 +224,3 @@ if (return <div > Loading episodes…</div>) {}
 
 origin/cursor/automate-test-improve-and-merge-code-2533
 }
-'"`

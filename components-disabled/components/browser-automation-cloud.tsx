@@ -1,50 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD:components/browser-automation-cloud.tsx
-class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
-    }return this.props.children;
-  }
-<<<<<<< HEAD
-}import React from 'react';
-=======
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-=======
-class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false ;}}static getDerivedStateFromError(error) {return { hasError: true ;,}
-}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary: ';, error, errorInfo)}render() {if (this.state.hasError) ;}
-  return <div />Something went wrong.</div>;}
-    }return this.props.children;
-  }
-const features = [
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
-
-  static getDerivedStateFromError(error) {}
+static getDerivedStateFromError(error) {}
     return { hasError: true ;};
 
   componentDidCatch(error, errorInfo) {
-<<<<<<< HEAD
-    console.error('Error caught by boundary:', error, errorInfo);
 
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-
-import React from 'react';
->>>>>>> cursor/automate-test-improve-and-merge-code-0ffd:components-disabled/components/browser-automation-cloud.tsx
-import SEO from '../components / SEO';
-import {Check, ExternalLink} from 'lucide-react';
-
-<<<<<<< HEAD:components/browser-automation-cloud.tsx
-
-
-
-=======
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-=======
-    console.error('Error caught by boundary: ';, error, errorInfo);
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
   }
   componentDidCatch(error, errorInfo) {}
     console.error('Error caught by boundary: ';, error, errorInfo);}
@@ -67,12 +25,7 @@ export default function BrowserAutomationCloudPage() {
     'Rotating proxies and geo targeting',
     'Webhook callbacks and REST API',;
   ];
-<<<<<<< HEAD
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-0ffd:components-disabled/components/browser-automation-cloud.tsx
-=======
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
+
   const features = [
 const features = [
 
@@ -214,50 +167,11 @@ title='Browser Automation Cloud'
               className='inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300' />;
               <ExternalLink className='w-4 h-4' /> Playwright;
             </a>;
-<<<<<<< HEAD
-            <a
-              href='https://pptr && pptr.dev/'
-              target='_blank'
-              rel='noreferrer'
-              className='inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300'>;
-<<<<<<< HEAD:components/browser-automation-cloud.tsx
-<<<<<<< HEAD
-              <ExternalLink className='w-4 h-4' /> Puppeteer;className='inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300'>;
-              <ExternalLink className='w-4 h-4' /> Puppeteer;
-export default /**;
- * BrowserAutomationCloudPage - Function description;
- */;
-function BrowserAutomationCloudPage() {const features = [;
-    'Parallel Playwright / Puppeteer execution','Queued jobs with retries and rate limits','Artifacts: HAR, traces, screenshots, videos','Rotating proxies and geo targeting','Webhook callbacks and REST API';
-    'Webhook callbacks and REST API';
-=======
-            <a;
-              href='https://pptr && pptr.dev/';
-              target='_blank';
-              rel='noreferrer';
-              className='inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300' />;
-    'Webhook callbacks and REST API'
-];
-return (<>;
-
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
-    'Webhook callbacks and REST API';
-  ];return (<>;
-              <ExternalLink className='w-4 h-4' /> Puppeteer;
-<<<<<<< HEAD
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
-=======
-              <ExternalLink className='w-4 h-4' /> Puppeteer;
->>>>>>> cursor/automate-test-improve-and-merge-code-0ffd:components-disabled/components/browser-automation-cloud.tsx
-=======
-    'Webhook callbacks and REST API'
-];
-return (<>;
 
     'Webhook callbacks and REST API';
   ];return (<>;
               <ExternalLink className='w-4 h-4' /> Puppeteer;
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
+
 export default /**
  * BrowserAutomationCloudPage - Function description;
  */
@@ -328,15 +242,6 @@ function BrowserAutomationCloudPage() {
       </main>;</>)return (<>;
       </main>;
 
-<<<<<<< HEAD
-<<<<<<< HEAD:components/browser-automation-cloud.tsx
-
-=======
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-0ffd:components-disabled/components/browser-automation-cloud.tsx
-=======
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
     </>);	return (
   <SEO title="Browser Automation Cloud" description="Parallel Playwright / Puppeteer automation at scale with queues, storage, and proxies." />;"
 "
@@ -396,10 +301,7 @@ export default function BrowserAutomationCloudPage() {
     </div>;
     </section>;
   </main>;
-<<<<<<< HEAD
-<<<<<<< HEAD:components/browser-automation-cloud.tsx
-=======
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
+
   </>)}</>)}
   </>)}
 
@@ -441,18 +343,11 @@ const features = null;
   </>)}
 }
 	const features = [
-<<<<<<< HEAD
-=======
-  </>),
 
-const features = [
->>>>>>> cursor/automate-test-improve-and-merge-code-0ffd:components-disabled/components/browser-automation-cloud.tsx
 		'Parallel Playwright/Puppeteer executionQueued jobs with retries and rate limitsArtifacts: HAR, traces, screenshots, videosRotating proxies and geo targetingWebhook callbacks and REST API'
-=======
-		'Parallel Playwright/Puppeteer executionQueued jobs with retries and rate limitsArtifacts: HAR;, traces, screenshots, videosRotating proxies and geo targetingWebhook callbacks and REST API'
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
+
 	];
-import React from 'react';;
+import React from 'react';
 
 export default function BrowserAutomationCloudPage() {
 
@@ -678,12 +573,6 @@ href='https://pptr.dev/'
 	)
 }
 
-<<<<<<< HEAD
-	),
-
-<<<<<<< HEAD:components/browser-automation-cloud.tsx
-=======
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
 	)
 }
 
@@ -691,17 +580,7 @@ href='https://pptr.dev/'
 }
 	),
 }
-<<<<<<< HEAD
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
-=======
-=======
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
+
 	),
 }
 	const features = [
-
-<<<<<<< HEAD
-	),
->>>>>>> cursor/automate-test-improve-and-merge-code-0ffd:components-disabled/components/browser-automation-cloud.tsx
-=======
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee

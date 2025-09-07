@@ -1,5 +1,5 @@
 import React from 'react';
-export default MainSidebar.dynamic;
+
 ;
 const MainSidebar.dynamic = () => {}
   return (
@@ -16,4 +16,3 @@ const MainSidebar.dynamic = () => ;
 
 pr-12243
 export default MainSidebar.dynamic;
-

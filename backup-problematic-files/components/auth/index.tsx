@@ -6,10 +6,7 @@ export default function AuthIndexPage() {
       <p className="mt-2 text-gray-600 dark: text-gray-300">Authentication UI coming soon.</p>
     </div>
     </div>
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   )
 import React from 'react';
 export default function AuthIndexPage() {;

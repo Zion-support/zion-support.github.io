@@ -1,25 +1,9 @@
-
-=======
-import React from "react",;
-import { AlertTriangle, AlertCircle, CheckCircle } from "lucide-react",;
-;
-interface FraudTabContentProps {;
-  tabValue:string;
-}
-;
-export const FraudTabContent:React.FC<FraudTabContentProps> = ({ tabValue }) => {;
-  switch(tabValue) {;
-    case 'pending':;
-      return (;
-        <div className="bg-amber-50 dark:bg-amber-950/20 p-8 rounded-lg text-center">;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-          <AlertTriangle className="mx-auto h-12 w-12 text-amber-500 mb-4" />;
+<AlertTriangle className="mx-auto h-12 w-12 text-amber-500 mb-4" />;
           <h3 className="text-xl font-medium mb-4">Pending Review Flags</h3>;
           <p className="text-muted-foreground">;
             This tab will show fraud flags that are still pending admin review.;
           </p>;
         </div>;
-<<<<<<< HEAD
 
         <div className="bg-red-50 dark:bg-red-950/20 p-8 rounded-lg text-center">;
           <AlertCircle className="mx-auto h-12 w-12 text-red-500 mb-4" />;
@@ -37,4 +21,3 @@ export const FraudTabContent:React.FC<FraudTabContentProps> = ({ tabValue }) => 
           </p>;
         </div>;
       ),;
-

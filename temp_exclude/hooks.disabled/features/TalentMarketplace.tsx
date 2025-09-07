@@ -1,19 +1,4 @@
-<<<<<<< HEAD:temp_exclude/hooks.disabled/features/TalentMarketplace.tsx
-<<<<<<< HEAD
-import React from "react",
-import { Header } from "@/components/Header",
-import { SEO } from "@/components/SEO",
-import { GradientHeading } from "@/components/GradientHeading",
-import { Button } from "@/components/ui/button",
-import Link from 'next/link',
-=======
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-=======
-class ErrorBoundary extends React.Component {}
-  constructor(props) {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/features/TalentMarketplace.tsx
-    super(props);
+super(props);
     this.state = { hasError: false };
   }
   
@@ -53,62 +38,11 @@ import { SEO } from "@/components/SEO";"
 import { GradientHeading } from "@/components/GradientHeading";"
 import { Button } from "@/components/ui/button";'
 import Link from 'next/link';
-<<<<<<< HEAD:temp_exclude/hooks.disabled/features/TalentMarketplace.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-export default function TalentMarketplace() {
-  const schema = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "Talent Marketplace",
-    "description": "Hire vetted AI and tech professionals from around the world on Zion.",
-    "url": "https://app.ziontechgroup.com/features/talent-marketplace"
-  },
 
-<<<<<<< HEAD
-=======
-=======
-export default function TalentMarketplace() {}
-  const schema = {"
-    "@context": "https://schema.org","
-    "@type": "WebPage","
-    "name": "Talent Marketplace","
-    "description": "Hire vetted AI and tech professionals from around the world on Zion.","
-    "url": "https://app.ziontechgroup.com/features/talent-marketplace"
-;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/features/TalentMarketplace.tsx
   };
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
-<<<<<<< HEAD:temp_exclude/hooks.disabled/features/TalentMarketplace.tsx
-    <>
-      <SEO
-        title="Talent Marketplace"
-        description="Discover and hire top AI specialists through the Zion talent marketplace."
-        keywords="AI talent marketplace, hire developers, tech freelancers"
-=======
-    <>;
 
-
-                Create a free account and send a message or job invite directly;
-                from their profile.;
-              </p>;
-            </div>;
-            <div>;
-'
-              <p className='font - semibold'>Are payments protected?</p>;'
-              <p className='text - zion - slate - light'>;
-
-                Yes, funds are held in escrow until you approve completed;
-                milestones.;
-              </p>;
-            </div>;
-          </div>;
-"
-        title="Talent Marketplace""
-        description="Discover and hire top AI specialists through the Zion talent marketplace.""
-        keywords="AI talent marketplace, hire developers, tech freelancers""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/features/TalentMarketplace.tsx
         canonical="https://app.ziontechgroup.com/features/talent-marketplace"
       />
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
@@ -148,7 +82,6 @@ export default function TalentMarketplace() {}
             </div>
           </div>
 
-
 "
           <div className="text-center">"
             <Button size="lg" className="bg-zion-purple text-white" asChild>"
@@ -159,26 +92,13 @@ export default function TalentMarketplace() {}
       </main>
     </>
   )
-<<<<<<< HEAD
-=======
 
-;
-<<<<<<< HEAD:temp_exclude/hooks.disabled/features/TalentMarketplace.tsx
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React from "react",;
 import { Header } from "@/components/Header",;
 import { SEO } from "@/components/SEO",;
 import { GradientHeading } from "@/components/GradientHeading",;
 import { Button } from "@/components/ui/button",;
-=======
-"
-import React from "react",;"
-import { Header } from "@/components/Header",;"
-import { SEO } from "@/components/SEO",;"
-import { GradientHeading } from "@/components/GradientHeading",;"
-import { Button } from "@/components/ui/button",;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/features/TalentMarketplace.tsx
+
 import Link from 'next/link',;
 export default function TalentMarketplace() { return null; }
   };
@@ -203,55 +123,11 @@ export default function TalentMarketplace() { return null; }
             Browse thousands of verified AI engineers, data scientists and other tech professionals.;
           </p>;"
           <div className="relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden">;
-<<<<<<< HEAD:temp_exclude/hooks.disabled/features/TalentMarketplace.tsx
-            <img;
-              src="https: //placehold.co/800x400";
-              alt="Screenshot of talent directory";
-              className="object-cover";
-            />;
-          </div>;
-          <h2 className="text-2xl font-bold mb-4">Benefits &amp, Use Cases</h2>;
-          <ul className="list-disc list-inside space-y-2 mb-8 text-zion-slate-light">;
-            <li>Find pre-screened experts for short or long term projects.</li>;
-            <li>AI-powered matching recommends the best candidates for your needs.</li>;
-            <li>Secure escrow and milestone tracking keep payments safe.</li>;
-          </ul>;
-          <h2 className="text-2xl font-bold mb-4">Frequently Asked Questions</h2>;
-          <div className="space-y-4 mb-12">;
-            <div>;
-              <p className="font-semibold">How do I contact a freelancer?</p>;
-              <p className="text-zion-slate-light">Create a free account and send a message or job invite directly from their profile.</p>;
-            </div>;
-            <div>;
-              <p className="font-semibold">Are payments protected?</p>;
-              <p className="text-zion-slate-light">Yes, funds are held in escrow until you approve completed milestones.</p>;
-            </div>;
-          </div>;
-          <div className="text-center">;
-            <Button size="lg" className="bg-zion-purple text-white" asChild>;
-=======
-            <img"
-              src="https: //placehold && placehold.co/800x400""
-              alt="Screenshot of talent directory""
-              className="object-cover"
 
-"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/features/TalentMarketplace.tsx
               <Link href="/talent">Browse Talent</Link>;
             </Button>;
           </div>;
         </div>;
       </main>;
-<<<<<<< HEAD
-    </>;
-  );
-}
-=======
 
-
-<<<<<<< HEAD:temp_exclude/hooks.disabled/features/TalentMarketplace.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
-=======
-;'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/features/TalentMarketplace.tsx

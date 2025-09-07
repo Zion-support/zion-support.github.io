@@ -1,12 +1,37 @@
+export default function About() {
+  return (
+    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+      <h1>About Us</h1>
+      <p>Learn about Zion Tech Group</p>
+    </main>
+  );
+}
 import React from 'react';
 import { Metadata } from 'next';
-
+export const metadata = {
+  title: 'About | Zion Tech Group',
+  description: 'Learn about Zion Tech Group\'s mission to deliver enterprise-grade AI, micro SaaS, and IT solutions that drive real business results.',
+  description:
+    "Learn about Zion Tech Group's mission to deliver enterprise-grade AI,micro SaaS,and IT solutions that drive real business results.",;
+  title: "About | Zion Tech Group",
+  description: "Learn about Zion Tech Group's mission to deliver enterprise-grade AI, micro SaaS, and IT solutions that drive real business results.",
+  description:
+    "Learn about Zion Tech Group's mission to deliver enterprise-grade AI, micro SaaS, and IT solutions that drive real business results.",
+  title: 'About | Zion Tech Group',
+  description: 'Learn about Zion Tech Group\'s mission to deliver enterprise-grade AI, micro SaaS, and IT solutions that drive real business results.',
+  description: "Learn about Zion Tech Group's mission to deliver enterprise-grade AI, micro SaaS, and IT solutions that drive real business results.",
+export const metadata = {
+  title: 'About | Zion Tech Group',
+  description: 'Learn about Zion Tech Group\'s mission to deliver enterprise-grade AI, micro SaaS, and IT solutions that drive real business results.',
+  description:
+    "Learn about Zion Tech Group's mission to deliver enterprise-grade AI, micro SaaS, and IT solutions that drive real business results.",
+import React from 'react';
+import { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'About Us - Zion Tech Group | Enterprise AI & IT Solutions',
   description: 'Learn about Zion Tech Group, a leading provider of micro SaaS products, AI services, and IT solutions. Discover our mission, values, and commitment to innovation.',
   keywords: 'about us, Zion Tech Group, company, mission, values, team, AI services, IT solutions, micro SaaS'
 };
-
 export default function AboutPage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
@@ -19,7 +44,6 @@ export default function AboutPage() {
             Pioneering the future of technology with innovative solutions that transform businesses and drive digital transformation.
           </p>
         </div>
-
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20">
           <div>
             <h2 className="text-3xl font-bold mb-6">Our Mission</h2>
@@ -32,6 +56,13 @@ export default function AboutPage() {
               Our mission is to make advanced technology accessible and practical for businesses 
               of all sizes, from startups to enterprise organizations.
             </p>
+            <Link 
+              href="/contact" 
+              className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
+            >
+              Get in Touch
+              <ArrowRightIcon className="ml-2 w-5 h-5" />
+            </Link>
           </div>
           <div>
             <h2 className="text-3xl font-bold mb-6">Our Vision</h2>
@@ -46,7 +77,6 @@ export default function AboutPage() {
             </p>
           </div>
         </div>
-
         <div className="mb-20">
           <h2 className="text-3xl font-bold mb-8 text-center">Our Values</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -75,7 +105,6 @@ export default function AboutPage() {
             ))}
           </div>
         </div>
-
         <div className="text-center">
           <h2 className="text-3xl font-bold mb-8">Ready to Work With Us?</h2>
           <p className="text-lg text-slate-300 mb-8 max-w-2xl mx-auto">
@@ -99,5 +128,6 @@ export default function AboutPage() {
         </div>
       </div>
     </div>
-  );
+  )
+}
 }

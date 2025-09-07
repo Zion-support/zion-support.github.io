@@ -1,4 +1,3 @@
-
 class ErrorBoundary extends React.Component {
 class ErrorBoundary extends React.Component {
   // TODO: Implement
@@ -28,24 +27,6 @@ import React from 'react';
 interface ServiceProcessStepsProps {
   // Add props here as needed
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-const ServiceProcessSteps = ({ className }) => {
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-const ServiceProcessSteps = ({ className }) => {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-}
-
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-import React from 'react';
-interface ServiceProcessStepsProps {
-  // Add props here as needed
-}
-export default function ServiceProcessSteps({ }: ServiceProcessStepsProps) {
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return (
     <div>
       <h1>ServiceProcessSteps</h1>
@@ -78,13 +59,6 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
       <h1>ServiceProcessSteps</h1>
       <p>This component is under development.</p>
     </div>
-<<<<<<< HEAD
-  );
-<<<<<<< HEAD
-=======
-  )
-};
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
     </div>'
 pr-12325

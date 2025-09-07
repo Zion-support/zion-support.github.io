@@ -1,4 +1,3 @@
-
 import { serve } from "https://deno.land/std@0.177.0/http/server.ts";
 ;
 interface ServiceProfileData {;
@@ -30,8 +29,7 @@ serve(async (req) => {;
       return new Response(;
         JSON.stringify({;
           error:"Missing required service provider data"});
-        { headers, status:400 }
-      );
+        { headers, status:400 });
     }
 ;
     // Get OpenAI API key from environment;
@@ -40,8 +38,7 @@ serve(async (req) => {;
       return new Response(;
         JSON.stringify({;
           error:"OpenAI API key not configured"});
-        { headers, status:500 }
-      );
+        { headers, status:500 });
     }
 ;
     const prompt = `;
@@ -90,8 +87,7 @@ serve(async (req) => {;
         JSON.stringify({;
           error:"Failed to generate enhanced profile content";
           details:responseData});
-        { headers, status:500 }
-      );
+        { headers, status:500 });
     }
 ;
     try {;
@@ -102,16 +98,14 @@ serve(async (req) => {;
         JSON.stringify({;
           summary:parsedContent.summary;
           services:parsedContent.services});
-        { headers, status:200 }
-      );
+        { headers, status:200 });
     } catch (error) {;
       console.error("Error parsing AI response:", error);
       return new Response(;
         JSON.stringify({;
           error:"Failed to parse AI response";
           raw:responseData.choices[0]?.message?.content});
-        { headers, status:500 }
-      );
+        { headers, status:500 });
     }
   } catch (error) {;
     console.error("Function error:", error);
@@ -123,8 +117,7 @@ serve(async (req) => {;
           "Content-Type":"application/json";
           "Access-Control-Allow-Origin":"*"}, ;
         status:500 ;
-      }
-    );  }
+      });  }
 });
  interface ServiceProfileData {
   name: string;
@@ -186,7 +179,3 @@ raw: responseData.choices[0]?.message?.content
 }) 
 }
 });
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

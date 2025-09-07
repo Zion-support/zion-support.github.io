@@ -1,8 +1,4 @@
-import React from "react";
-import Link from "next/link";
-import { motion } from "framer-motion";
-import {
-  X,
+X,
   Home,
   Users,
   Briefcase,
@@ -41,7 +37,7 @@ import {
   Server,
   Shield,
   Zap,
-  Lock,
+
 } from "lucide-react";
 
 interface SidebarProps {}
@@ -49,15 +45,6 @@ interface SidebarProps {}
   onClose: () => void;}
 }
 }
-
-const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
-  const quickLinks = [
-    { name: "Home", href: "/", icon: Home },
-    { name: "Services", href: "/services", icon: Briefcase },
-    { name: "Solutions", href: "/solutions", icon: Target },
-    { name: "About", href: "/about", icon: Users },
-    { name: "Contact", href: "/contact", icon: Phone },
-  ];
 
 const quickLinks = [}
   { name: \"Home\", href: \"/\", icon: Home}"
@@ -76,12 +63,6 @@ const serviceLinks = ["
 },{ name: \"Database Solutions\", href: \"/database-solutions\", icon: Database}
 }];
 
-  const companyLinks = [
-    { name: "About Us", href: "/about", icon: Users },
-    { name: "Our Team", href: "/team", icon: Users },
-    { name: "Careers", href: "/careers", icon: Briefcase },
-    { name: "Partners", href: "/partners", icon: Handshake },
-    { name: "News", href: "/news", icon: Newspaper },
     { name: "Contact", href: "/contact", icon: Phone },
   ];
 
@@ -94,21 +75,7 @@ const companyLinks = ["
 },{ name: \"Contact\", href: \"/contact\", icon: Phone}
 }];return (<>;
       {/* Overlay */}
-      {isOpen && (
-        <motion.div;
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}"
-          className="fixed inset-0 bg-black bg-opacity-50 z-40"
-          onClick={onClose}
-        />
-      )}
 
-      {/* Sidebar */}
-      <motion.div
-        initial={{ x: "-100%" }}
-        animate={{ x: isOpen ? 0 : "-100%" }}
-        transition={{ type: "spring", damping: 25, stiffness: 200 }}
         className="fixed left-0 top-0 h-full w-80 bg-white shadow-xl z-50 overflow-y-auto"
       >"
         <div className="p-6">
@@ -117,9 +84,7 @@ const companyLinks = ["
             <div className="flex items-center">"
               <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">"
                 <span className="text-white font-bold text-lg">Z</span>
-              </div>
-              <span className="ml-3 text-xl font-bold text-gray-900">
-                Zion Tech Group
+
               </span>
             </div>
             <button;
@@ -206,6 +171,7 @@ const companyLinks = ["
                   <link.icon className="h-5 w-5 mr-3 text-blue-500" />"
                   <span className="font-medium">{link.name}</span>
                 </Link>
+
               ))}
             </div>;
           </div>;
@@ -249,24 +215,6 @@ const companyLinks = ["
     </>;
   )}
 
-          {/* Contact Info */}"
-          <div className="border-t border-gray-200 pt-6">"
-            <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-4">
-              Contact Info;
-            </h3>"
-            <div className="space-y-3">"
-              <div className="flex items-center text-gray-600">"
-                <Phone className="h-4 w-4 mr-3 text-blue-500" />"
-                <span className="text-sm">+1 (555) 123-4567</span>
-              </div>"
-              <div className="flex items-center text-gray-600">"
-                <Mail className="h-4 w-4 mr-3 text-blue-500" />"
-                <span className="text-sm">info@ziontechgroup.com</span>
-              </div>
-              <div className="flex items-center text-gray-600">
-                <MapPin className="h-4 w-4 mr-3 text-blue-500" />
-                <span className="text-sm">
-                  123 Tech Street, Innovation City
                 </span>
               </div>
             </div>

@@ -1,52 +1,3 @@
-<<<<<<< HEAD:src/components/admin/zion-gpt/ModelManager.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { useState, useEffect } from 'react',
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",
-import { Badge } from "@/components/ui/badge",
-import { Loader2, RefreshCw, Play, CheckCircle, AlertCircle } from 'lucide-react'
-import { supabase } from '@/integrations/supabase/client',
-import { ModelConfig } from '@/utils/zion-gpt',
-import {logErrorToProduction} from '@/utils/productionLogger',
-interface ModelVersionData extends ModelConfig {
-  trainingStatus: 'queued' | 'running' | 'succeeded' | 'failed',
-  errorMessage?: string
-import { useState, useEffect } from 'react',;
-import { Button } from "@/components/ui/button",;
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",;
-import { Badge } from "@/components/ui/badge",;
-import { Loader2, RefreshCw, Play, CheckCircle, AlertCircle } from 'lucide-react';
-import { supabase } from '@/integrations/supabase/client',;
-import { ModelConfig } from '@/utils/zion-gpt',;
-import {logErrorToProduction} from '@/utils/productionLogger',;
-interface ModelVersionData extends ModelConfig {;
-  trainingStatus: 'queued' | 'running' | 'succeeded' | 'failed',;
-  errorMessage?: string;
-}
-;
-export function ZionGPTModelManager() {;
-  const [models, setModels] = useState<ModelVersionData[]>([]),;
-  const [isLoading, setIsLoading] = useState(true),;
-  const [activeJobs, setActiveJobs] = useState<{[key: string]: boolean}>({}),;
-  // Fetch model data on component mount;
-  useEffect(() => {;
-    fetchModels();
-  }, []),;
-  const fetchModels = async () => {;
-    try {;
-      setIsLoading(true),;
-      const { data, error } = await supabase;
-        .from('model_versions');
-        .select('*');
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/admin/zion-gpt/ModelManager.tsx
 // If activating, deactivate all other models with the same purpose;
       // Check condition
 if ( {) {
@@ -57,29 +8,11 @@ if ( {) {
           .from('model_versions');
           .update({ active: false });
           .eq('purpose', purpose);
-<<<<<<< HEAD:src/components/admin/zion-gpt/ModelManager.tsx
-=======
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/admin/zion-gpt/ModelManager.tsx
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
       }
 
       // Update this model;
-<<<<<<< HEAD:src/components/admin/zion-gpt/ModelManager.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import { Loader2, RefreshCw, Play, CheckCircle, AlertCircle } from 'lucide-react'
-import { supabase  } from '@/integrations/supabase/client';
-import { ModelConfig  } from '@/utils/zion-gpt';
-import {logErrorToProduction} from '@/utils/productionLogger';
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/admin/zion-gpt/ModelManager.tsx
+
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import {
@@ -114,14 +47,7 @@ interface ModelVersionData extends ModelConfig {
   trainingStatus: 'queued' | 'running' | 'succeeded' | 'failed';
   errorMessage?: string
 }
-<<<<<<< HEAD:src/components/admin/zion-gpt/ModelManager.tsx
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/admin/zion-gpt/ModelManager.tsx
       await supabase;
         .from ('model_versions');
         .update ({ active: !current_active });
@@ -129,37 +55,10 @@ interface ModelVersionData extends ModelConfig {
       // Refresh the model list;
       fetch_models ();
 
-<<<<<<< HEAD:src/components/admin/zion-gpt/ModelManager.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-      }
-      // Update this model
-      await supabase
-        .from('model_versions')
-        .update({ active: !currentActive })
-        .eq('id', modelId)
-      // Refresh the model list
-      fetchModels()
-    } catch (error) {
-      logErrorToProduction('Error toggling model active state:', { data: error })
-    }
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/admin/zion-gpt/ModelManager.tsx
     } catch (error) {
       logErrorToProduction ('Error toggling model active state:', { data: error });
     }
 
-
-<<<<<<< HEAD:src/components/admin/zion-gpt/ModelManager.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/admin/zion-gpt/ModelManager.tsx
         .order('createdAt', { ascending: false }),;
       if (error) throw error,;
       // Map the data to our component state;
@@ -212,21 +111,9 @@ interface ModelVersionData extends ModelConfig {
     }
   },;
   const toggleModelActive = async (modelId: string, currentActive: boolean, purpose: string) => {;
-=======
-import { Loader2, RefreshCw, Play, CheckCircle, AlertCircle } from 'lucide-react'
-import { supabase  } from '@/integrations/supabase/client';
-import { ModelConfig  } from '@/utils/zion-gpt';
-import {logErrorToProduction} from '@/utils/productionLogger';
-interface ModelVersionData extends ModelConfig {
-  trainingStatus: 'queued' | 'running' | 'succeeded' | 'failed';
-  errorMessage?: string
-}        .order('createdAt', { ascending: false }),;
-=======
-        .order('createdAt', { ascending: false }),;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
   const toggleModelActive = async (modelId: string, currentActive: boolean, purpose: string,) => {;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+
     try {;
       // If activating, deactivate all other models with the same purpose;
       if (!currentActive) {;
@@ -246,34 +133,9 @@ interface ModelVersionData extends ModelConfig {
     } catch (error) {;
       logErrorToProduction('Error toggling model active state:', { data: error });
     }
-<<<<<<< HEAD:src/components/admin/zion-gpt/ModelManager.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-  },
-
-=======
-  },;
-<<<<<<< HEAD
-=======
-  },;
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/admin/zion-gpt/ModelManager.tsx
 
   },
 
-
-<<<<<<< HEAD:src/components/admin/zion-gpt/ModelManager.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-  },;
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/admin/zion-gpt/ModelManager.tsx
 export function ZionGPTModelManager() {
   const [models, setModels] = useState<ModelVersionData[]>([]),
   const [isLoading, setIsLoading] = useState(true);
@@ -285,12 +147,7 @@ export function ZionGPTModelManager() {
   }, []),
 
   const fetchModels = null;
-<<<<<<< HEAD:src/components/admin/zion-gpt/ModelManager.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/admin/zion-gpt/ModelManager.tsx
+
   return (
     <Card className="w-full">
       <CardHeader className="flex flex-row items-center justify-between">
@@ -339,84 +196,25 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     ) : (
                       <Badge className="bg-yellow-500">Queued</Badge>
                     )}
-<<<<<<< HEAD
-                    {model.active && <Badge className="ml-2 bg-purple-500">Active</Badge>}
-                  </TableCell>
-                  <TableCell>{new Date(model.createdAt).toLocaleDateString()}</TableCell>
-                  <TableCell className="text-right">
-=======
 
-                    {model && model.active && <Badge className="ml-2 bg-purple-500">Active</Badge>}
-                  </TableCell>;
-                  <TableCell>{new Date(model && model.createdAt).toLocaleDateString()}</TableCell>;
-                  <TableCell className="text-right">;
-                    {model && model.trainingStatus === 'queued' || model && model.trainingStatus === 'running' ? (;
-
-                      <Button
-                        variant="ghost"
-                        size="sm"
-                        onClick = {(,) => checkTrainingStatus(model && model.id),}
-                        disabled = {activeJobs[model && model.id],}
-                      >;
-                        {activeJobs[model && model.id] ? (;
-                          <Loader2 className="h-4 w-4 animate-spin" />;
-                        ) : (;
-                          <RefreshCw className="h-4 w-4" />;
-
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                     {model.trainingStatus === 'queued' || model.trainingStatus === 'running' ? (
                       <Button
                         variant="ghost"
                         size="sm"
-<<<<<<< HEAD
-                        onClick={() => checkTrainingStatus(model.id)}
-                        disabled={activeJobs[model.id]}
-=======
 
-<<<<<<< HEAD:src/components/admin/zion-gpt/ModelManager.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/admin/zion-gpt/ModelManager.tsx
                       >
                         {activeJobs[model.id] ? (
                           <Loader2 className="h-4 w-4 animate-spin" />
                         ) : (
                           <RefreshCw className="h-4 w-4" />
                         )}
-<<<<<<< HEAD:src/components/admin/zion-gpt/ModelManager.tsx
-<<<<<<< HEAD
-                        <span className="ml-1">Check</span>
-                      </Button>
-                    ) : model.trainingStatus === 'succeeded' ? (
-=======
-                        <span className="ml-1">Check</span>;
-                      </Button>;
-                    ) : model && model.trainingStatus === 'succeeded' ? (;
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/admin/zion-gpt/ModelManager.tsx
+
                       <Button
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                         variant={model.active ? "outline" : "default"}
                         size="sm"
                         onClick={() => toggleModelActive(model.id, model.active, model.purpose)}
 
-
-<<<<<<< HEAD:src/components/admin/zion-gpt/ModelManager.tsx
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/admin/zion-gpt/ModelManager.tsx
                       >
                         {model.active ? (
                           <>
@@ -427,80 +225,24 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                             <Play className="h-4 w-4 mr-1" /> Activate
                           </>
                         )}
-<<<<<<< HEAD:src/components/admin/zion-gpt/ModelManager.tsx
-<<<<<<< HEAD
-                      </Button>
-<<<<<<< HEAD
-                    ) : (
-=======
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-                      </Button>;
-                    ) : (;
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/admin/zion-gpt/ModelManager.tsx
                       <Button
-=======
-                    ) : (                      <Button
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+
                         variant="ghost"
                         size="sm"
                         className="text-red-500"
-<<<<<<< HEAD
-=======
 
-                        title = {model && model.errorMessage || "Training failed",}>;
-                        <AlertCircle className="h-4 w-4 mr-1" /> Error;
-                      </Button>;
-
-                    )}
-                  </TableCell>;
-                </TableRow>;
-
-                        title={model.errorMessage || "Training failed"}
-
-                        title = {model.errorMessage || "Training failed",}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                         title={model.errorMessage || "Training failed"}
                       >
                         <AlertCircle className="h-4 w-4 mr-1" /> Error
                       </Button>
                     )}
-<<<<<<< HEAD:src/components/admin/zion-gpt/ModelManager.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  </TableCell>;
-                </TableRow>;
-=======
 
-                  </TableCell>;
-                </TableRow>;
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
-                  </TableCell>;
-                </TableRow>;
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/admin/zion-gpt/ModelManager.tsx
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               ))}
             </TableBody>;
           </Table>;
         )}
 }
-<<<<<<< HEAD:src/components/admin/zion-gpt/ModelManager.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-;
-=======
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 }
 
@@ -592,23 +334,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </CardContent>;
     </Card>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/admin/zion-gpt/ModelManager.tsx
       </CardContent>
     </Card>
   );
@@ -630,9 +356,3 @@ return (<Card className="w-full" > <CardHeader className="flex flex-row items-ce
 }</TableBody> </Table>) ;
 }</CardContent> </Card>) ;
 }'"
-<<<<<<< HEAD:src/components/admin/zion-gpt/ModelManager.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/admin/zion-gpt/ModelManager.tsx

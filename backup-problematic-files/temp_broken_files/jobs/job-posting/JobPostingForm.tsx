@@ -1,54 +1,7 @@
-
-=======
-import React, { useState, useEffect, useCallback } from 'react',;
-import { useNavigate } from 'react-router-dom',;
-import { toast } from "sonner",;
-import { Input } from "@/components/ui/input",;
-import { Label } from "@/components/ui/label",;
-import { Button } from "@/components/ui/button",;
-import { Form } from "@/components/ui/form",;
-import { useJobForm } from './useJobForm',;
-import { BasicInfoFields } from './BasicInfoFields',;
-import { DateFields } from './DateFields',;
-import { DescriptionFields } from './DescriptionFields',;
-import { useJobs } from "@/hooks/useJobs",;
-import { JobSchemaType } from './validation',;
-;
-interface JobPostingFormProps {;
-  jobId?:string,;
-  onSuccess?:() => void,;
-}
-;
-export function JobPostingForm({ jobId, onSuccess } JobPostingFormProps) {;
-  const navigate = useNavigate(),;
-  const { createJob, updateJob, getJobById } = useJobs(),;
-  const [isFormLoading, setIsFormLoading] = useState(false),;
-  const [editorContent, setEditorContent] = useState(""),;
-  ;
-  const {;
-    form,;
-    isLoading,;
-    startDate,;
-    setStartDate,;
-    endDate,;
-    setEndDate,;
-    isRemote,;
-    setIsRemote,;
-    submitJob;
-  } = useJobForm({ jobId, onSuccess }),;
-;
-  const { handleSubmit, setValue, formState } = form,;
-  const { isSubmitting } = formState,;
-;
-  useEffect(() => {;
-    if (jobId) {;
-      setIsFormLoading(true),;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-      getJobById(jobId);
+getJobById(jobId);
         .then((job) => {;
           if (job) {;
             // Set form values;
-<<<<<<< HEAD
 
     }
   },;

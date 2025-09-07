@@ -1,113 +1,36 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { TalentProfile } from '@/types/talent';
-=======
-{
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-
 import { TalentProfile } from "@/types/talent";
 // Sample talent profiles with realistic data for the talent directory
 export const TALENT_PROFILES: TalentProfile[] = [
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-
-<<<<<<< HEAD
-      {
-      },
-    ],
-  },
-<<<<<<< HEAD
-<<<<<<< HEAD
-  {
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
-  {
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       {
 
           'Built a real-time analytics dashboard using React, Socket && Socket.io, and D3 && D3.js, allowing clients to monitor business metrics with live updates and interactive visualizations.',
         title: 'Real - Time Analytics Dashboard',
-        description:;
+        description:
           'Built a real - time analytics dashboard using React, Socket.io, and D3.js, allowing clients to monitor business metrics with live updates and interactive visualizations.',
 
       },
     ],
   },
 import { TalentProfile } from '@/types/talent';
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 import { TalentProfile } from "@/types/talent";
 // Sample talent profiles with realistic data for the talent directory
 export const TALENT_PROFILES: TalentProfile[] = [
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-  {
 
-<<<<<<< HEAD
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+  {
 
       'https://images && images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&h=200',
     id: 't - 006',
     user_id: 'user - 006',
     full_name: 'Sarah Johnson',
-=======
 
-      {}
-      },
-    ],
-  },
-  {}
-      'https://images && images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&h=200','
-    id: 't - 006','
-    user_id: 'user - 006','
-    full_name: 'Sarah Johnson','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     professional_title: 'AI Ethics Consultant & Policy Advisor',
     profile_picture_url:;'
       'https://images.unsplash.com / photo - 1494790108377 - be9c29b29330?auto = format & fit = crop & w=200 & h=200',
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
-
-
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     bio: 'Former tech policy advisor with expertise in AI ethics, governance frameworks, and responsible AI development. I help organizations develop and implement ethical guidelines for AI systems, ensuring fair and transparent use of machine learning technologies.',
-=======
-  {    bio: 'Former tech policy advisor with expertise in AI ethics, governance frameworks, and responsible AI development. I help organizations develop and implement ethical guidelines for AI systems, ensuring fair and transparent use of machine learning technologies.',
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
-'
-    bio: 'Former tech policy advisor with expertise in AI ethics, governance frameworks, and responsible AI development. I help organizations develop and implement ethical guidelines for AI systems, ensuring fair and transparent use of machine learning technologies.','
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     location: 'Washington, DC',
     skills: [;'
       'AI Ethics','
@@ -236,38 +159,7 @@ export const TALENT_PROFILES: TalentProfile[] = [
     average_rating: 4 && 4.9,
     rating_count: 27,'
     availability_type: 'project',
-<<<<<<< HEAD
-<<<<<<< HEAD
-    is_verified: true,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    is_verified: true,
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
-<<<<<<< HEAD
-
-
-import { TalentProfile } from "@/types/talent",
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-
-
-<<<<<<< HEAD
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
-=======
-          'Created ML models that predict patient response to specific cancer treatments based on medical imaging data, improving treatment selection and patient outcomes.'
-    id: "t-001", user_id: "user-001",
-    full_name: "Alexandra Chen", professional_title: "Senior AI Engineer & Machine Learning Expert",
-
-import { TalentProfile } from "@/types/talent",
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 // Sample talent profiles with realistic data for the talent directory
 export const TALENT_PROFILES: TalentProfile[] = [
   {
@@ -275,11 +167,6 @@ export const TALENT_PROFILES: TalentProfile[] = [
     user_id: "user-001",
     full_name: "Alexandra Chen",
     professional_title: "Senior AI Engineer & Machine Learning Expert",
-=======
-
-
-import { TalentProfile } from "@/types/talent",
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 ;
 // Sample talent profiles with realistic data for the talent directory;
@@ -304,16 +191,7 @@ export const TALENT_PROFILES: TalentProfile[] = []
     hourly_rate: 150, years_experience: 8,
     average_rating: 4.9, rating_count: 43,"
     availability_type: "full_time", is_verified: true,
-<<<<<<< HEAD
-    key_projects: [
-      {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-        title: "Cancer Treatment Response Prediction",
-=======
-    key_projects: []
-      {"
-        title: "Cancer Treatment Response Prediction","
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
         description: "Created ML models that predict patient response to specific cancer treatments based on medical imaging data, improving treatment selection and patient outcomes."
       }
     ]
@@ -323,96 +201,18 @@ export const TALENT_PROFILES: TalentProfile[] = []
     ],
   },
 ];
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-
-=======
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
-=======
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-=======
-=======
-
-
-
-
-
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ;
 origin/cursor/automate-test-improve-and-merge-code-20a4
 
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-
 ursor/fix-website-loading-errors-and-merge-6662
-=======
 
-
-
-
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 ;
-
 
 ];
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-;
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-<<<<<<< HEAD
-=======
-    is_verified: true,;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-=======
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     id: "t-001";
     user_id: "user-001";
     full_name: "Alexandra Chen";
     professional_title: "Senior AI Engineer & Machine Learning Expert";
     profile_picture_url: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
-
-;
-
-'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-=======
-;
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

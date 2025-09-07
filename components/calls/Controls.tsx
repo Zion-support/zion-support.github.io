@@ -1,7 +1,8 @@
+import React from 'react';
+import type { Room } from 'livekit-client';
 
-type Props = {;
-  room: Room | null;
-  onLeave: () => void;
+type Props = any;
+
   const [micEnabled, setMicEnabled] = React.useState(true);
   const [camEnabled, setCamEnabled] = React.useState(true);
   const [sharing, setSharing] = React.useState(false);'
@@ -48,27 +49,14 @@ export default function Controls(): any ({ room, onLeave, accent = 'cyan' }: Pro
       setSharing(enabled)
     } catch (e) {'
       console.warn('Screen share failed', e)
-const enabled =
-      await room.localParticipant.setMicrophoneEnabled(!micEnabled);
-    setMicEnabled(enabled);
-  };
 
-  const toggleCam = async () => {
-    if (!room) return;
-    const enabled = await room.localParticipant.setCameraEnabled(!camEnabled);
-setCamEnabled(enabled);
-  };
+  return (
+<div className='flex items-center gap-3'>
+origin/cursor/automate-test-improve-and-merge-code-2533
+<div className = 'flex items-center gap-3' />
+ ;
+  return (
 
-  const toggleScreenShare = async () => {
-    if (!room) return;
-    try {
-const enabled =
-        await room.localParticipant.setScreenShareEnabled(!sharing);
-      setSharing(enabled);
-    } catch (e) {
-      console.warn('Screen share failed', e);
-    }
-  };
     <div className='flex items-center gap-3'>
       <button;
         onClick={toggleMic}
@@ -91,6 +79,7 @@ const enabled =
         onClick={onLeave}'
         className='px-4 py-2 rounded bg-red-600 text-white'
       >
+
         Leave;
       </button>
     </div>
@@ -200,8 +189,3 @@ if (return) {}
       </button>;
     </div>);
 }
-  );
-origin/cursor/automate-test-improve-and-merge-code-2533
-
-  );
-

@@ -1,38 +1,4 @@
-
-=======
-import React from "react",;
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
-import { Progress } from "@/components/ui/progress",;
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
-;
-export function UsageOverview() {;
-  // Mock usage data;
-  const usage = {;
-    jobPosts:{;
-      used:32,;
-      total:100,;
-      percentage:32;
-    },;
-    interviews:{;
-      used:45,;
-      total:150,;
-      percentage:30;
-    },;
-    messaging:{;
-      used:1250,;
-      total:5000,;
-      percentage:25;
-    },;
-    storage:{;
-      used:2.4,;
-      total:10,;
-      percentage:24;
-    }
-  },;
-;
-  return (;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-    <Card>;
+<Card>;
       <CardHeader>;
         <CardTitle>Usage Overview</CardTitle>;
         <CardDescription>Track your team's resource usage across the platform</CardDescription>;
@@ -43,7 +9,6 @@ export function UsageOverview() {;
             <TabsTrigger value="current">Current Period</TabsTrigger>;
             <TabsTrigger value="historical">Historical</TabsTrigger>;
           </TabsList>;
-<<<<<<< HEAD
 
           <TabsContent value="current" className="space-y-6">;
             <div className="space-y-4">;
@@ -62,4 +27,3 @@ export function UsageOverview() {;
           </TabsContent>;
         </Tabs>;
       </CardContent>;
-

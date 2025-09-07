@@ -1,14 +1,4 @@
-<<<<<<< HEAD
-import React, {_useState} from 'react'
-import Link from 'next/link'
-
-  const [open, setOpen] = useState(false)
-  if (!user) return null
-=======
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-
-    <div className=&quot;relative&quot;>
+<div className=&quot;relative&quot;>
 </div>
       <button onClick={() => setOpen(o => !o)} className=&quot;h-8 w-8 rounded-full bg-gradient-to-br from-indigo-500 to-cyan-500 text-white text-xs font-semibold grid place-items-center ring-1 ring-white/40&quot;>
 </button>
@@ -19,20 +9,3 @@ import Link from 'next/link'
           <Link href=&quot;/onboarding&quot;><a className=&quot;block px-3 py-2 hover:bg-gray-50/60 dark:hover:bg-white/5&quot;>Onboarding</a></a>
 
           <button onClick={logout} className=&quot;w-full text-left px-3 py-2 hover:bg-gray-50/60 dark:hover:bg-white/5&quot;>Logout</button>        </div>
-<<<<<<< HEAD
-      )}
-    </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-  );}
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-    </div>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

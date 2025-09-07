@@ -1,25 +1,3 @@
-<<<<<<< HEAD:pages_backup/team.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/team.tsx
-<<<<<<< HEAD:pages/team.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/team.tsx
-import React from 'react';
-import MainLayout from '../components/layout/MainLayout';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-
 const Page = () => {
   return (
     <MainLayout
@@ -37,35 +15,12 @@ const Page = () => {
 };
 
 export default Page;
-<<<<<<< HEAD:pages_backup/team.tsx
-=======
-=======
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/team.tsx
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/team.tsx
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/team.tsx
 
 import React from "react";"
 import Head from "next/head";"
 import Link from "next/link";"
 import { motion } from "framer-motion";
-<<<<<<< HEAD:pages_backup/team.tsx
-<<<<<<< HEAD:pages_backup/team.tsx
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/team.tsx
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/team.tsx
   ArrowRight,
   Phone,
   Mail,
@@ -77,13 +32,7 @@ import { motion } from "framer-motion";
   Users,
   Globe,
   Code,
-<<<<<<< HEAD:pages_backup/team.tsx
-} from "lucide-react";
-import Layout from "../components/Layout";
-<<<<<<< HEAD:pages_backup/team.tsx
-import React from 'react';
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/team.tsx
+
 import SEO from '../components/SEO';
 origin/cursor/automate-test-improve-and-merge-code-2533
 const teamMembers = [
@@ -109,30 +58,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
       "Strategic Leadership"
       "AI/ML"
       "Cloud Architecture"
-=======
 
-
-    id: 1,"
-    name: "Kleber Santos","
-    position: "CEO & Founder","
-    department: "Leadership","
-    bio: "Visionary leader with 15+ years in technology and business transformation. Passionate about leveraging AI and cloud technologies to solve complex business challenges.",
-
-    id: 1"
-    name: "Kleber Santos""
-    position: "CEO & Founder""
-    department: "Leadership""
-    bio: "Visionary leader with 15+ years in technology and business transformation. Passionate about leveraging AI and cloud technologies to solve complex business challenges.""
-    image: "/api/placeholder/300/300""
-    linkedin: "https://linkedin.com/in/klebersantos""
-    twitter: "https://twitter.com/klebersantos""
-    github: "https://github.com/klebersantos"
-
-    expertise: ["
-      "Strategic Leadership""
-      "AI/ML""
-      "Cloud Architecture""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/team.tsx
       "Business Development"
     ]
   }
@@ -189,16 +115,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
     github: "https://github.com/davidkim""
     expertise: ["Data Science", "Big Data", "Predictive Analytics", "BI"]
   }
-<<<<<<< HEAD:pages_backup/team.tsx
-    image: "/api / placeholder / 300 / 300",
-    linkedin: "https://linkedin.com / in / klebersantos",
-    twitter: "https://twitter.com / klebersantos",
-=======
-"
-    image: "/api / placeholder / 300 / 300","
-    linkedin: "https://linkedin.com / in / klebersantos","
-    twitter: "https://twitter.com / klebersantos","
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/team.tsx
+
     github: "https://github.com / klebersantos",
     expertise: [;"
       "Strategic Leadership","
@@ -207,76 +124,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
       "Business Development",
     ],
   },
-<<<<<<< HEAD:pages_backup/team.tsx
-  {
-<<<<<<< HEAD:pages_backup/team.tsx
-=======
-  {}
-"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/team.tsx
-=======
-id: 2,
-    name: "Sarah Johnson",
-    position: "CTO",
-    department: "Technology",
-    bio: "Technology visionary with expertise in cloud computing, AI, and scalable architecture. Led digital transformations for Fortune 500 companies.",
-    image: "/api / placeholder / 300 / 300",
-    linkedin: "https://linkedin.com / in / sarahjohnson",
-    twitter: "https://twitter.com / sarahjohnson",
-    github: "https://github.com / sarahjohnson",
-    expertise: ["Cloud Computing", "AI / ML", "System Architecture", "DevOps"],
-  },
-  {
-    id: 3,
-    name: "Mike Chen",
-    position: "Head of Cybersecurity",
-    department: "Security",
-    bio: "Cybersecurity expert with 12+ years protecting enterprise systems. Specializes in zero - trust architecture and threat intelligence.",
-    image: "/api / placeholder / 300 / 300",
-    linkedin: "https://linkedin.com / in / mikechen",
-    twitter: "https://twitter.com / mikechen",
-    github: "https://github.com / mikechen",
-    expertise: [;
-      "Cybersecurity",
-      "Zero - Trust",
-      "Threat Intelligence",
-      "Compliance",
-    ],
-  },
-  {
-    id: 4,
-    name: "Emily Rodriguez",
-    position: "Head of AI / ML",
-    department: "AI & Machine Learning",
-    bio: "AI researcher and practitioner with deep expertise in machine learning, natural language processing, and computer vision applications.",
-    image: "/api / placeholder / 300 / 300",
-    linkedin: "https://linkedin.com / in / emilyrodriguez",
-    twitter: "https://twitter.com / emilyrodriguez",
-    github: "https://github.com / emilyrodriguez",
-    expertise: ["Machine Learning", "NLP", "Computer Vision", "Deep Learning"],
-  },
-  {
-    id: 5,
-    name: "David Kim",
-    position: "Head of Data Analytics",
-    department: "Data & Analytics",
-    bio: "Data science leader with expertise in big data, predictive analytics, and business intelligence. Transforms data into actionable insights.",
-    image: "/api / placeholder / 300 / 300",
-    linkedin: "https://linkedin.com / in / davidkim",
-    twitter: "https://twitter.com / davidkim",
-    github: "https://github.com / davidkim",
-    expertise: ["Data Science", "Big Data", "Predictive Analytics", "BI"],
-  },
-  {
 
-    image: "/api / placeholder / 300 / 300",
-    linkedin: "https://linkedin.com / in / lisawang",
-    twitter: "https://twitter.com / lisawang",
-    github: "https://github.com / lisawang",
-    expertise: ["Product Strategy", "SaaS Development", "UX / UI", "Mobile Apps"],
-
-  },
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/team.tsx
     expertise: ["Product Strategy", "SaaS Development", "UX/UI", "Mobile Apps"]
     name: 'Dr. Sarah Johnson','
     role: 'Chief Technology Officer','
@@ -304,11 +152,7 @@ id: 2,
     expertise: 'Project Management',
     icon: Users,'
     description: 'Leading our development teams with agile methodologies and client-focused delivery.'
-<<<<<<< HEAD:pages_backup/team.tsx
-<<<<<<< HEAD:pages_backup/team.tsx
-=======
-}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/team.tsx
+
     id: 6
     name: "Lisa Wang"
     position: "Head of Product Development"
@@ -319,50 +163,7 @@ id: 2,
     twitter: "https://twitter.com/lisawang"
     github: "https://github.com/lisawang"
     expertise: ["Product Strategy", "SaaS Development", "UX/UI", "Mobile Apps"]
-<<<<<<< HEAD:pages_backup/team.tsx
-=======
 
-    id: 6"
-    name: "Lisa Wang""
-    position: "Head of Product Development""
-    department: "Product""
-    bio: "Product strategist with experience building scalable SaaS platforms and mobile applications. Focuses on user experience and market fit.""
-    image: "/api/placeholder/300/300""
-    linkedin: "https://linkedin.com/in/lisawang""
-    twitter: "https://twitter.com/lisawang""
-    github: "https://github.com/lisawang""
-    expertise: ["Product Strategy", "SaaS Development", "UX/UI", "Mobile Apps"]
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/team.tsx
-=======
-name: 'Dr. Sarah Johnson',
-    role: 'Chief Technology Officer',
-    expertise: 'AI & Machine Learning',
-    icon: Brain,
-    description: 'Leading our AI initiatives with 15+ years of experience in machine learning and data science.'
-  },
-  {
-    name: 'Michael Chen',
-    role: 'Cloud Solutions Architect',
-    expertise: 'Cloud Infrastructure',
-    icon: Cloud,
-    description: 'Expert in cloud migration and scalable infrastructure design with AWS and Azure certifications.'
-  },
-  {
-    name: 'Emily Rodriguez',
-    role: 'Security Specialist',
-    expertise: 'Cybersecurity',
-    icon: Shield,
-    description: 'Ensuring enterprise-grade security with expertise in threat detection and prevention.'
-  },
-  {
-    name: 'David Thompson',
-    role: 'Team Lead',
-    expertise: 'Project Management',
-    icon: Users,
-    description: 'Leading our development teams with agile methodologies and client-focused delivery.'
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/team.tsx
   }
 ];
 
@@ -435,14 +236,6 @@ import {;
   Users,;
   Globe,;
   Code,;
-<<<<<<< HEAD:pages_backup/team.tsx
-  Shield,;"
-} from "lucide-react";"
-import Layout from "../components/Layout";
-=======
-  Shield,;
-} from "lucide-react";
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/team.tsx
 
 const teamMembers = [;
   {;
@@ -528,14 +321,7 @@ const teamMembers = [;
     expertise: ["Product Strategy", "SaaS Development", "UX/UI", "Mobile Apps"],;
   },;
 ];
-<<<<<<< HEAD:pages_backup/team.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/team.tsx
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/team.tsx
 export default function TeamPage() {
   return (
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -543,15 +329,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       title="Our Team - Zion Tech Group"
       description="Meet our expert team of technology professionals. Experienced engineers, data scientists, and business leaders dedicated to delivering exceptional results."
       keywords="team, experts, engineers, data scientists, AI specialists, cybersecurity experts, technology professionals"
-=======
 
-
-
-    <Layout"
-      title="Our Team - Zion Tech Group""
-      description="Meet our expert team of technology professionals. Experienced engineers, data scientists, and business leaders dedicated to delivering exceptional results.""
-      keywords="team, experts, engineers, data scientists, AI specialists, cybersecurity experts, technology professionals""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/team.tsx
       canonical="https://ziontechgroup && ziontechgroup.com/team">;
       {/* Hero Section */}"
       <section className="bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 text-white py-20">;"
@@ -579,19 +357,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>;
       </section>;
 
-<<<<<<< HEAD:pages_backup/team.tsx
-<<<<<<< HEAD:pages_backup/team.tsx
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/team.tsx
       {/* Stats Section */}
       <section className="py-16 bg-gray-50">;
         <div className="container mx-auto px-4">;
-=======
 
-      {/* Stats Section */}"
-      <section className="py-16 bg-gray-50">;"
-        <div className="container mx-auto px-4">;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/team.tsx
           <div className="grid md:grid-cols-4 gap-8">;
             {stats && stats.map((stat, index) => (;
               <motion&& motion.div;
@@ -782,23 +551,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>;
       </section>;
 
-<<<<<<< HEAD:pages_backup/team.tsx
-<<<<<<< HEAD:pages_backup/team.tsx
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/team.tsx
       {/* Join Our Team CTA */}
       <section className="py-16 bg-purple-600 text-white">;
         <div className="container mx-auto px-4 text-center">;
           <h2 className="text-3xl font-bold mb-4">Join Our Growing Team</h2>;
           <p className="text-xl mb-8 text-purple-100 max-w-3xl mx-auto">;
-=======
 
-      {/* Join Our Team CTA */}"
-      <section className="py-16 bg-purple-600 text-white">;"
-        <div className="container mx-auto px-4 text-center">;"
-          <h2 className="text-3xl font-bold mb-4">Join Our Growing Team</h2>;"
-          <p className="text-xl mb-8 text-purple-100 max-w-3xl mx-auto">;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/team.tsx
             We're always looking for talented individuals who share our passion;
             for technology and innovation.;
           </p>;"
@@ -819,367 +577,14 @@ const stats = [;"
   { number: "25+", label: "Countries Represented" },"
   { number: "95%", label: "Employee Satisfaction" },
 ];
-<<<<<<< HEAD:pages_backup/team.tsx
-export default /**;
- * TeamPage - Function description;
- */
-function TeamPage() {}
-=======
 
-export default function TeamPage() {
-  return (
-    <Layout
-      title="Our Team - Zion Tech Group"
-      description="Meet our expert team of technology professionals. Experienced engineers, data scientists, and business leaders dedicated to delivering exceptional results."
-      keywords="team, experts, engineers, data scientists, AI specialists, cybersecurity experts, technology professionals"
-      canonical="https://ziontechgroup.com/team"
-    >
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 text-white py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center max-w-4xl mx-auto">
-            <motion.h1
-              className="text-5xl md:text-6xl font-bold mb-6 leading-tight"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              Meet Our
-              <span className="text-purple-400"> Expert Team</span>
-            </motion.h1>
-            <motion.p
-              className="text-xl mb-8 text-purple-100"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-            >
-              Our diverse team of technology professionals brings together
-              decades of experience in AI, cloud computing, cybersecurity, and
-              business transformation.
-            </motion.p>
-          </div>
-        </div>
-      </section>
-
-      {/* Stats Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <motion.div
-                key={index}
-                className="text-center"
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-              >
-                <div className="text-4xl font-bold text-purple-600 mb-2">
-                  {stat.number}
-                </div>
-                <div className="text-gray-600">{stat.label}</div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Leadership Team */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Leadership Team
-            </h2>
-            <p className="text-xl text-gray-600">
-              Visionary leaders driving innovation and growth
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {teamMembers.slice(0, 3).map((member, index) => (
-              <motion.div
-                key={member.id}
-                className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow"
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-              >
-                <div className="text-center mb-4">
-                  <img
-                    src={member.image}
-                    alt={member.name}
-                    className="w-24 h-24 rounded-full mx-auto mb-4 object-cover"
-                  />
-                  <h3 className="text-xl font-bold text-gray-900">
-                    {member.name}
-                  </h3>
-                  <p className="text-purple-600 font-semibold">
-                    {member.position}
-                  </p>
-                </div>
-                <p className="text-gray-600 text-sm mb-4">{member.bio}</p>
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {member.expertise.slice(0, 2).map((skill) => (
-                    <span
-                      key={skill}
-                      className="px-2 py-1 bg-purple-100 text-purple-800 rounded text-xs"
-                    >
-                      {skill}
-                    </span>
-                  ))}
-                </div>
-                <div className="flex justify-center space-x-4">
-                  <a
-                    href={member.linkedin}
-                    className="text-gray-400 hover:text-blue-600 transition-colors"
-                  >
-                    <Linkedin className="w-5 h-5" />
-                  </a>
-                  <a
-                    href={member.twitter}
-                    className="text-gray-400 hover:text-blue-400 transition-colors"
-                  >
-                    <Twitter className="w-5 h-5" />
-                  </a>
-                  <a
-                    href={member.github}
-                    className="text-gray-400 hover:text-gray-600 transition-colors"
-                  >
-                    <Github className="w-5 h-5" />
-                  </a>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* All Team Members */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Our Expert Team
-            </h2>
-            <p className="text-xl text-gray-600">
-              Dedicated professionals across all departments
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {teamMembers.map((member, index) => (
-              <motion.div
-                key={member.id}
-                className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow"
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-              >
-                <div className="text-center mb-4">
-                  <img
-                    src={member.image}
-                    alt={member.name}
-                    className="w-20 h-20 rounded-full mx-auto mb-3 object-cover"
-                  />
-                  <h3 className="text-lg font-bold text-gray-900">
-                    {member.name}
-                  </h3>
-                  <p className="text-purple-600 font-semibold text-sm">
-                    {member.position}
-                  </p>
-                  <p className="text-gray-500 text-xs">{member.department}</p>
-                </div>
-                <p className="text-gray-600 text-sm mb-4">{member.bio}</p>
-                <div className="flex flex-wrap gap-1 mb-4">
-                  {member.expertise.slice(0, 3).map((skill) => (
-                    <span
-                      key={skill}
-                      className="px-2 py-1 bg-purple-100 text-purple-800 rounded text-xs"
-                    >
-                      {skill}
-                    </span>
-                  ))}
-                </div>
-                <div className="flex justify-center space-x-3">
-                  <a
-                    href={member.linkedin}
-                    className="text-gray-400 hover:text-blue-600 transition-colors"
-                  >
-                    <Linkedin className="w-4 h-4" />
-                  </a>
-                  <a
-                    href={member.twitter}
-                    className="text-gray-400 hover:text-blue-400 transition-colors"
-                  >
-                    <Twitter className="w-4 h-4" />
-                  </a>
-                  <a
-                    href={member.github}
-                    className="text-gray-400 hover:text-gray-600 transition-colors"
-                  >
-                    <Github className="w-4 h-4" />
-                  </a>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Departments */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Our Departments
-            </h2>
-            <p className="text-xl text-gray-600">
-              Specialized teams working together to deliver excellence
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {departments.map((dept, index) => (
-              <motion.div
-                key={dept.name}
-                className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors"
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-              >
-                <div className="text-4xl mb-4">{dept.icon}</div>
-                <h3 className="text-lg font-semibold mb-2">{dept.name}</h3>
-                <p className="text-gray-600 text-sm mb-2">{dept.description}</p>
-                <div className="text-purple-600 font-semibold">
-                  {dept.count} members
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Join Our Team CTA */}
-      <section className="py-16 bg-purple-600 text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-4">Join Our Growing Team</h2>
-          <p className="text-xl mb-8 text-purple-100 max-w-3xl mx-auto">
-            We're always looking for talented individuals who share our passion
-            for technology and innovation.
-          </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Link
-              href="/careers"
-              className="bg-white text-purple-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors"
-            >
-              View Open Positions
-            </Link>
-            <Link
-              href="/contact"
-              className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-purple-600 px-8 py-4 rounded-lg font-semibold transition-colors"
-            >
-              Get in Touch
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Contact CTA Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold mb-6">
-            Ready to Work with Our Expert Team?
-          </h2>
-          <p className="text-xl mb-8 text-gray-600 max-w-3xl mx-auto">
-            Let's discuss how our experienced team can help transform your
-            business with cutting-edge technology solutions.
-          </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4 mb-8">
-            <Link
-              href="/contact"
-              className="bg-purple-600 text-white hover:bg-purple-700 px-8 py-4 rounded-lg font-semibold transition-colors text-lg"
-            >
-              Get Free Consultation
-            </Link>
-          </div>
-
-          {/* Contact Information */}
-          <div className="grid md:grid-cols-3 gap-8 mt-12">
-            <div className="flex items-center justify-center">
-              <Phone className="w-6 h-6 mr-2" />
-              <span>+1 302 464 0950</span>
-            </div>
-            <div className="flex items-center justify-center">
-              <Mail className="w-6 h-6 mr-2" />
-              <span>kleber@ziontechgroup.com</span>
-            </div>
-            <div className="flex items-center justify-center">
-              <MapPin className="w-6 h-6 mr-2" />
-              <span>364 E Main St STE 1008, Middletown DE 19709</span>
-            </div>
-          </div>
-        </div>
-      </section>
-    </Layout>
-  );
-
-}import Head from 'next/head';
-import {motion} from 'framer-motion';
-import {Brain, Cloud, Shield, Users} from 'lucide-react';
-
-
-const teamMembers = [
-  {
-    name: "Dr. Sarah Johnson",
-    role: "Chief Technology Officer",
-    expertise: "AI & Machine Learning",
-    icon: Brain,
-    description:
-      "Leading our AI initiatives with 15+ years of experience in machine learning and data science.",
-  },
-  {
-    name: "Michael Chen",
-    role: "Cloud Solutions Architect",
-    expertise: "Cloud Infrastructure",
-    icon: Cloud,
-    description:
-      "Expert in cloud migration and scalable infrastructure design with AWS and Azure certifications.",
-  },
-  {
-    name: "Emily Rodriguez",
-    role: "Security Specialist",
-    expertise: "Cybersecurity",
-    icon: Shield,
-    description:
-      "Ensuring enterprise-grade security with expertise in threat detection and prevention.",
-  },
-  {
-    name: "David Thompson",
-    role: "Team Lead",
-    expertise: "Project Management",
-    icon: Users,
-    description:
-      "Leading our development teams with agile methodologies and client-focused delivery.",
-  },
-];
-
-export default function TeamPage() {
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/team.tsx
   return (
               Get in Touch;
             </Link>;
           </div>;
         </div>;
       </section>;
-<<<<<<< HEAD:pages_backup/team.tsx
-<<<<<<< HEAD:pages_backup/team.tsx
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/team.tsx
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/team.tsx
     <>
       <SEO'
         title='Our Team | Zion Tech Group''
@@ -1193,56 +598,7 @@ export default function TeamPage() {
         </p>
       </div>
     </>
-<<<<<<< HEAD:pages_backup/team.tsx
-    </Layout>;
-  );
 
-}
-import Head from "next/head";
-import { motion } from "framer-motion";
-import { Brain, Cloud, Shield, Users } from "lucide-react";
-const teamMembers = [
-  {
-    name: "Dr. Sarah Johnson"
-    role: "Chief Technology Officer"
-    expertise: "AI & Machine Learning"
-    icon: Brain
-    description:
-      "Leading our AI initiatives with 15+ years of experience in machine learning and data science."
-  }
-  {
-    name: "Michael Chen"
-    role: "Cloud Solutions Architect"
-    expertise: "Cloud Infrastructure"
-    icon: Cloud
-    description:
-      "Expert in cloud migration and scalable infrastructure design with AWS and Azure certifications."
-  }
-  {
-    name: "Emily Rodriguez"
-    role: "Security Specialist"
-    expertise: "Cybersecurity"
-    icon: Shield
-    description:
-      "Ensuring enterprise-grade security with expertise in threat detection and prevention."
-  }
-  {
-    name: "David Thompson"
-    role: "Team Lead"
-    expertise: "Project Management"
-    icon: Users
-    description:
-      "Leading our development teams with agile methodologies and client-focused delivery."
-  }
-<<<<<<< HEAD:pages_backup/team.tsx
-=======
-
-
-"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/team.tsx
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/team.tsx
               className="bg-purple-600 text-white hover:bg-purple-700 px-8 py-4 rounded-lg font-semibold transition-colors text-lg">;
               Get Free Consultation;
             </Link>;
@@ -1303,7 +659,7 @@ const teamMembers = [;
     role: "Chief Technology Officer",;"
     expertise: "AI & Machine Learning",;
     icon: Brain,;
-    description:;"
+    description:"
       "Leading our AI initiatives with 15+ years of experience in machine learning and data science.",;
   },;
   {;"
@@ -1311,7 +667,7 @@ const teamMembers = [;
     role: "Cloud Solutions Architect",;"
     expertise: "Cloud Infrastructure",;
     icon: Cloud,;
-    description:;"
+    description:"
       "Expert in cloud migration and scalable infrastructure design with AWS and Azure certifications.",;
   },;
   {;"
@@ -1319,7 +675,7 @@ const teamMembers = [;
     role: "Security Specialist",;"
     expertise: "Cybersecurity",;
     icon: Shield,;
-    description:;"
+    description:"
       "Ensuring enterprise-grade security with expertise in threat detection and prevention.",;
   },;
   {;"
@@ -1327,36 +683,11 @@ const teamMembers = [;
     role: "Team Lead",;"
     expertise: "Project Management",;
     icon: Users,;
-    description:;"
+    description:"
       "Leading our development teams with agile methodologies and client-focused delivery.",;
   },;
 ];
 
-<<<<<<< HEAD:pages_backup/team.tsx
-export default function TeamPage() {;
-
-  return (
-    <>
-<>
-      <SEO
-        title="Our Team | Zion Tech Group"
-        description="Meet the leadership team at Zion Tech Group."
-        canonical="/team"
-
-<<<<<<< HEAD:pages_backup/team.tsx
-=======
-</>;
-      />
-      <div className="container mx-auto px-4 py-16">
-        <h1 className="text-4xl font-bold mb-4">Our Team</h1>
-        <p className="text-gray-300 mb-8">
-          Profiles coming soon. For inquiries, contact us.
-        </p>
-      </div>
-
-    </>;
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/team.tsx
     </>;
   );
   return (
@@ -1394,20 +725,7 @@ export default function TeamPage() {
 }
 import Head from './next / head';
 import { motion  } from './framer-motion';
-=======
-export default function TeamPage() { return null; }
-export default function TeamPage() {}
-	return (
 
-		<>"
-			<SEO title="Our Team | Zion Tech Group" description="Meet the leadership team at Zion Tech Group." canonical="/team" />"
-			<div className="container mx-auto px-4 py-16">"
-				<h1 className="text-4xl font-bold mb-4">Our Team</h1>
-
-}';
-import Head from './next / head';'
-import { motion  } from './framer-motion';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/team.tsx
 import { Brain, Cloud, Shield, Users  } from './lucide-react';
 ;
 const team_members = [;
@@ -1416,7 +734,7 @@ const team_members = [;
     role: "Chief Technology Officer","
     expertise: "AI & Machine Learning",
     icon: Brain,
-    description:;"
+    description:"
       "Leading our AI initiatives with 15+ years of experience in machine learning and data science.",
   },
   {"
@@ -1424,7 +742,7 @@ const team_members = [;
     role: "Cloud Solutions Architect","
     expertise: "Cloud Infrastructure",
     icon: Cloud,
-    description:;"
+    description:"
       "Expert in cloud migration and scalable infrastructure design with AWS and Azure certifications.",
   },
   {"
@@ -1432,7 +750,7 @@ const team_members = [;
     role: "Security Specialist","
     expertise: "Cybersecurity",
     icon: Shield,
-    description:;"
+    description:"
       "Ensuring enterprise - grade security with expertise in threat detection and prevention.",
   },
   {"
@@ -1440,7 +758,7 @@ const team_members = [;
     role: "Team Lead","
     expertise: "Project Management",
     icon: Users,
-    description:;"
+    description:"
       "Leading our development teams with agile methodologies and client - focused delivery.",
   },
 ];
@@ -1450,27 +768,7 @@ export default /**;
  */
 function TeamPage() {}
   return (
-<<<<<<< HEAD:pages_backup/team.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/team.tsx
 
-<<<<<<< HEAD:pages/team.tsx
-}
-
-;
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-import React from 'react';
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/team.tsx
     <>;
       <SEO;"
         title="Our Team | Zion Tech Group";"
@@ -1501,59 +799,10 @@ import React from 'react';
 ;
 }
 
-
-
-
-
 }
 
 ;
 
-<<<<<<< HEAD:pages_backup/team.tsx
-
-
-
-'
-import React from 'react';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/team.tsx
-import MainLayout from '../components/layout/MainLayout';
-
-const Page = () => {}
-  return (
-    <MainLayout"
-      title="Team - Zion Tech Group""
-      description="Meet our team"
-    >"
-      <div className="min-h-screen bg-gray-50">"
-        <div className="container mx-auto px-4 py-16">"
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">Team</h1>"
-          <p className="text-xl text-gray-600">Coming soon...</p>
-        </div>
-      </div>
-    </MainLayout>
-  );
-};
-
-export default Page;
-<<<<<<< HEAD:pages_backup/team.tsx
->>>>>>> main
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/team.tsx
-=======
-
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     <>
       <SEO
         title="Our Team | Zion Tech Group"
@@ -1731,40 +980,3 @@ export default function Team() {
 </>
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
   );
-<<<<<<< HEAD
-<<<<<<< HEAD:pages/team.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/team.tsx
-=======
-
-'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/team.tsx
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-import React from 'react';
-import MainLayout from '../components/layout/MainLayout';
-
-const Page = () => {
-  return (
-    <MainLayout
-      title="Team - Zion Tech Group"
-      description="Meet our team"
-    >
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-4 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">Team</h1>
-          <p className="text-xl text-gray-600">Coming soon...</p>
-        </div>
-      </div>
-    </MainLayout>
-  );
-};
-
-export default Page;
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/team.tsx

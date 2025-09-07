@@ -1,16 +1,13 @@
-
-
+import { motion } from 'framer-motion';
+interface UltraFuturisticBackground2035Props {;
+  children: React && React.ReactNode;
 }
-}: UltraFuturisticBackground2035Props) {  const canvasRef = useRef<HTMLCanvasElement>(null);import React, { useEffect, useRef } from 'react';'
+
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
     canvas.width = window.innerWidth * (window.devicePixelRatio |1);
     canvas.height = window.innerHeight * (window.devicePixelRatio |1);
-    if (ctx) {
-ctx.scale(window.devicePixelRatio || 1, window.devicePixelRatio || 1);
-    }
 
-origin/cursor/automate-test-improve-and-merge-code-2533
     let animationFrameId: number;
     let particles: Array<{;
       x: number;
@@ -85,47 +82,7 @@ if ( {) {}
         case 'quantum':;'
           return ['#8b5cf6', '#06b6d4', '#ec4899'][;
             Math && Math.floor(Math && Math.random() * 3);
-      maxLife: number;
-    }> = [];
 
-    // Initialize particles with enhanced types
-    const initParticles = () => {
-      particles = [];
-      const isSmallScreen = window.innerWidth < 768;
-const particleCount = prefersReducedMotion
-        ? 15
-        : isSmallScreen
-          ? 60
-          : 150;
-      for (let i = 0; i < particleCount; i++) {
-        const type = ['quantum', 'hologram', 'neon', 'energy'][
-          Math.floor(Math.random() * 4)
-        ] as any;
-        const maxLife = Math.random() * 200 + 100;
-        particles.push({
-          x: (Math.random() * canvas.width) / (window.devicePixelRatio || 1),
-          y: (Math.random() * canvas.height) / (window.devicePixelRatio || 1),
-          vx: prefersReducedMotion ? 0 : (Math.random() - 0.5) * 0.6,
-          vy: prefersReducedMotion ? 0 : (Math.random() - 0.5) * 0.6,
-          size: Math.random() * (isSmallScreen ? 2 : 3) + 1,
-          opacity: Math.random() * 0.5 + 0.1,
-          color: getColorForType(type),
-type,
-          life: maxLife,
-          maxLife,
-        });
-      }
-    };
-
-    // Get color based on particle type
-    const getColorForType = (type: string) => {
-      switch (type) {
-        case 'quantum':
-return ['#8b5cf6', '#06b6d4', '#ec4899'][
-            Math.floor(Math.random() * 3)
-origin/cursor/automate-test-improve-and-merge-code-2533
-          ];
-        case 'hologram':;
           return ['#10b981', '#f59e0b', '#ef4444'][;
             Math && Math.floor(Math && Math.random() * 3);
           ];'
@@ -227,161 +184,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       })
 };            ctx && ctx.stroke();
           }
-        }
-break;
-      }
-      ctx.restore();
-    }
-    // Quantum particle with wave-like effects
-    const drawQuantumParticle = (
-      ctx: CanvasRenderingContext2D
-      particle: any
-    ) => {
-      const time = Date.now() * 0.001;
-      const wave = Math.sin(time + particle.x * 0.01) * 0.5;
-      ctx.beginPath();
-      ctx.arc(particle.x, particle.y + wave, particle.size, 0, Math.PI * 2);
-      ctx.fillStyle = particle.color;
-      ctx.fill();
-      // Add quantum glow effect
-      ctx.shadowColor = particle.color;
-      ctx.shadowBlur = 10;
-      ctx.beginPath();
-ctx.arc(
-        particle.x,
-        particle.y + wave,
-        particle.size * 0.5,
-        0,
-        Math.PI * 2
-      );
-      ctx.fill();
-      ctx.shadowBlur = 0;
-    }
-    // Hologram particle with transparency and distortion
-    const drawHologramParticle = (
-      ctx: CanvasRenderingContext2D
-      particle: any
-    ) => {
-      const time = Date.now() * 0.002;
-      const distortion = Math.sin(time + particle.y * 0.02) * 2;
-      ctx.globalAlpha *= 0.7;
-      ctx.beginPath();
-      ctx.arc(
-        particle.x + distortion
-        particle.y
-        particle.size
-        0
-        Math.PI * 2
-      );
-      ctx.fillStyle = particle.color;
-      ctx.fill();
-      // Add holographic effect
-      ctx.globalAlpha *= 0.5;
-      ctx.beginPath();
-ctx.arc(
-        particle.x + distortion,
-        particle.y,
-        particle.size * 1.5,
-        0,
-        Math.PI * 2
-      );
-      ctx.strokeStyle = particle.color;
-      ctx.lineWidth = 1;
-      ctx.stroke();
-    };
 
-    // Neon particle with bright glow
-    const drawNeonParticle = (ctx: CanvasRenderingContext2D, particle: any) => {
-      // Bright core
-      ctx.beginPath()
-      ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
-      ctx.fillStyle = '#ffffff';
-      ctx.fill();
-      // Neon glow
-      ctx.shadowColor = particle.color;
-      ctx.shadowBlur = 15;
-      ctx.beginPath();
-      ctx.arc(particle.x, particle.y, particle.size * 0.8, 0, Math.PI * 2);
-      ctx.fillStyle = particle.color;
-      ctx.fill();
-ctx.shadowBlur = 0;
-    };
-
-    // Energy particle with pulsing effect
-    const drawEnergyParticle = (
-      ctx: CanvasRenderingContext2D
-      particle: any
-    ) => {
-      const time = Date.now() * 0.003;
-      const pulse = Math.sin(time) * 0.3 + 0.7;
-      const size = particle.size * pulse;
-      ctx.beginPath();
-      ctx.arc(particle.x, particle.y, size, 0, Math.PI * 2);
-      ctx.fillStyle = particle.color;
-      ctx.fill();
-      // Energy field effect
-      ctx.globalAlpha *= 0.3;
-      ctx.beginPath();
-      ctx.arc(particle.x, particle.y, size * 2, 0, Math.PI * 2);
-      ctx.fillStyle = particle.color;
-ctx.fill();
-    };
-
-    // Enhanced connection drawing with different effects
-    const drawConnections = (
-      ctx: CanvasRenderingContext2D
-      particles: any[]
-      currentIndex: number
-      maxDistance: number
-      opacity: number
-    ) => {
-      particles.forEach((otherParticle, otherIndex) => {
-        if (currentIndex !== otherIndex) {
-          const dx = particles[currentIndex].x - otherParticle.x;
-          const dy = particles[currentIndex].y - otherParticle.y;
-          const distance = Math.sqrt(dx * dx + dy * dy);
-          if (distance < maxDistance) {
-const connectionOpacity =
-              ((maxDistance - distance) / maxDistance) * 0.15 * opacity;
-            // Different connection styles based on particle types
-            if (particles[currentIndex].type === otherParticle.type) {
-              // Same type - stronger connection
-              ctx.globalAlpha = connectionOpacity * 1.5;
-              ctx.strokeStyle = particles[currentIndex].color;
-ctx.lineWidth = 2;
-            } else {
-              // Different types - weaker connection
-              ctx.globalAlpha = connectionOpacity * 0.7;
-              ctx.strokeStyle = '#ffffff';
-ctx.lineWidth = 1;
-            }
-            ctx.beginPath();
-            ctx.moveTo(particles[currentIndex].x, particles[currentIndex].y);
-            ctx.lineTo(otherParticle.x, otherParticle.y);
-ctx.stroke();
-          }
-        }
-      });
-    };
-
-    // Handle window resize
-    const handleResize = () => {
-      canvas.width = window.innerWidth * (window.devicePixelRatio |1);
-      canvas.height = window.innerHeight * (window.devicePixelRatio |1);
-      if (ctx) {
-ctx.scale(window.devicePixelRatio || 1, window.devicePixelRatio || 1);
-      }
-      initParticles();
-    };
-
-origin/cursor/automate-test-improve-and-merge-code-2533
     window.addEventListener('resize', handleResize);
     initParticles();
     updateParticles();
     return () => {'
       window.removeEventListener('resize', handleResize);
-      if (animationFrameId) {
-cancelAnimationFrame(animationFrameId);
+
       }
     };  }, []);
   return (
@@ -424,11 +233,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           }}
         {/* Holographic grid effect */}'
         <div className='absolute inset-0 opacity-20'>;
-        />
-{/* Holographic grid effect */}
-        <div className='absolute inset-0 opacity-20'>
-origin/cursor/automate-test-improve-and-merge-code-2533
-          <div
+
             className='h-full w-full'
             style={{}
               backgroundImage: `
@@ -451,13 +256,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 '
           className='absolute inset-0 w-full h-full'          style={{ filter: 'blur(0.5px)' }}
 
-          />
-        </div>
-        {/* Canvas for animated particles */}
-        <canvas
-          ref={canvasRef}
-className='absolute inset-0 w-full h-full'
-origin/cursor/automate-test-improve-and-merge-code-2533
           style={{ filter: 'blur(0.5px)' }}
 
         />
@@ -516,7 +314,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
         />;
 
-        {/* Quantum energy waves */}
         <div className='absolute inset-0 overflow-hidden'>;
           <motion&& motion.div'
             className='absolute top-1/2 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-400 to-transparent'
@@ -594,6 +391,3 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       {children}
     </>);
 }
-    </>
-  );
-origin/cursor/automate-test-improve-and-merge-code-2533

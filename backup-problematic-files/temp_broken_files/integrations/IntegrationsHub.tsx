@@ -1,21 +1,4 @@
-
-=======
-import React, { useState } from "react",;
-import { Button } from "@/components/ui/button",;
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
-import { IntegrationCards } from "./IntegrationCards",;
-import { ZapierIntegration } from "./ZapierIntegration",;
-import { Badge } from "@/components/ui/badge",;
-import { WebhookManager } from "./WebhookManager",;
-import { IntegrationsSyncLog } from "./IntegrationsSyncLog",;
-;
-export function IntegrationsHub() {;
-  const [activeTab, setActiveTab] = useState("marketplace"),;
-  ;
-  return (;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-    <div className="space-y-6">;
+<div className="space-y-6">;
       <div className="flex justify-between items-center">;
         <div>;
           <h1 className="text-3xl font-bold">Integrations Hub</h1>;
@@ -23,7 +6,6 @@ export function IntegrationsHub() {;
             Connect your platform with the tools and services you use every day;
           </p>;
         </div>;
-<<<<<<< HEAD
 
         <div className="flex gap-2">;
           <Button variant="outline">View Documentation</Button>;
@@ -69,4 +51,3 @@ export function IntegrationsHub() {;
           </TabsContent>;
         </div>;
       </Tabs>;
-

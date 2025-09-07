@@ -1,19 +1,4 @@
-<<<<<<< HEAD:temp_exclude/hooks.disabled/features/Internationalization.tsx
-<<<<<<< HEAD
-import React from "react",
-import { Header } from "@/components/Header",
-import { SEO } from "@/components/SEO",
-import { GradientHeading } from "@/components/GradientHeading",
-import { Button } from "@/components/ui/button",
-import Link from 'next/link',
-=======
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-=======
-class ErrorBoundary extends React.Component {}
-  constructor(props) {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/features/Internationalization.tsx
-    super(props);
+super(props);
     this.state = { hasError: false };
   }
   
@@ -53,75 +38,11 @@ import { SEO } from "@/components/SEO";"
 import { GradientHeading } from "@/components/GradientHeading";"
 import { Button } from "@/components/ui/button";'
 import Link from 'next/link';
-<<<<<<< HEAD:temp_exclude/hooks.disabled/features/Internationalization.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-export default function Internationalization() {
-  const schema = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "Internationalization",
-    "description": "Use Zion in multiple languages and attract clients worldwide with localized listings.",
-    "url": "https://app.ziontechgroup.com/features/internationalization"
-  },
 
-<<<<<<< HEAD
-=======
-=======
-export default function Internationalization() {}
-  const schema = {"
-    "@context": "https://schema.org","
-    "@type": "WebPage","
-    "name": "Internationalization","
-    "description": "Use Zion in multiple languages and attract clients worldwide with localized listings.","
-    "url": "https://app.ziontechgroup.com/features/internationalization"
-;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/features/Internationalization.tsx
   };
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
-<<<<<<< HEAD:temp_exclude/hooks.disabled/features/Internationalization.tsx
-    <>
-      <SEO
-        title="Internationalization"
-        description="Reach a global audience with multi-language support across the Zion platform."
-        keywords="i18n, multi-language marketplace, localized listings"
-=======
-    <>;
 
-
-            <li>;
-              Automatic language detection ensures a localized experience.;
-            </li>;
-          </ul>;
-'
-          <h2 className='text - 2xl font - bold mb - 4'>;
-            Frequently Asked Questions;
-          </h2>;'
-          <div className='space - y-4 mb - 12'>;
-            <div>;'
-              <p className='font - semibold'>Which languages are supported?</p>;'
-              <p className='text - zion - slate - light'>;
-
-                The platform currently supports English, Spanish, Portuguese and;
-                more.;
-              </p>;
-            </div>;
-            <div>;
-'
-              <p className='font - semibold'>Can I suggest new translations?</p>;'
-              <p className='text - zion - slate - light'>;
-
-                Yes, community contributions help us continually add new;
-                languages.;
-              </p>;
-            </div>;
-          </div>;
-"
-        title="Internationalization""
-        description="Reach a global audience with multi-language support across the Zion platform.""
-        keywords="i18n, multi-language marketplace, localized listings""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/features/Internationalization.tsx
         canonical="https://app.ziontechgroup.com/features/internationalization"
       />
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
@@ -161,7 +82,6 @@ export default function Internationalization() {}
             </div>
           </div>
 
-
 "
           <div className="text-center">"
             <Button size="lg" className="bg-zion-purple text-white" asChild>"
@@ -172,26 +92,13 @@ export default function Internationalization() {}
       </main>
     </>
   )
-<<<<<<< HEAD
-=======
 
-;
-<<<<<<< HEAD:temp_exclude/hooks.disabled/features/Internationalization.tsx
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React from "react",;
 import { Header } from "@/components/Header",;
 import { SEO } from "@/components/SEO",;
 import { GradientHeading } from "@/components/GradientHeading",;
 import { Button } from "@/components/ui/button",;
-=======
-"
-import React from "react",;"
-import { Header } from "@/components/Header",;"
-import { SEO } from "@/components/SEO",;"
-import { GradientHeading } from "@/components/GradientHeading",;"
-import { Button } from "@/components/ui/button",;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/features/Internationalization.tsx
+
 import Link from 'next/link',;
 export default function Internationalization() { return null; }
   };
@@ -216,55 +123,11 @@ export default function Internationalization() { return null; }
             Our interface and search support multiple languages so you can collaborate without barriers.;
           </p>;"
           <div className="relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden">;
-<<<<<<< HEAD:temp_exclude/hooks.disabled/features/Internationalization.tsx
-            <img;
-              src="https://placehold.co/800x400";
-              alt="Screenshot of language options";
-              className="object-cover";
-            />;
-          </div>;
-          <h2 className="text-2xl font-bold mb-4">Benefits &amp, Use Cases</h2>;
-          <ul className="list-disc list-inside space-y-2 mb-8 text-zion-slate-light">;
-            <li>Publish product and service pages in your native language.</li>;
-            <li>Attract international clients and expand your reach.</li>;
-            <li>Automatic language detection ensures a localized experience.</li>;
-          </ul>;
-          <h2 className="text-2xl font-bold mb-4">Frequently Asked Questions</h2>;
-          <div className="space-y-4 mb-12">;
-            <div>;
-              <p className="font-semibold">Which languages are supported?</p>;
-              <p className="text-zion-slate-light">The platform currently supports English, Spanish, Portuguese and more.</p>;
-            </div>;
-            <div>;
-              <p className="font-semibold">Can I suggest new translations?</p>;
-              <p className="text-zion-slate-light">Yes, community contributions help us continually add new languages.</p>;
-            </div>;
-          </div>;
-          <div className="text-center">;
-            <Button size="lg" className="bg-zion-purple text-white" asChild>;
-=======
-            <img"
-              src="https://placehold && placehold.co/800x400""
-              alt="Screenshot of language options""
-              className="object-cover"
 
-"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/features/Internationalization.tsx
               <Link href="/">Explore Zion</Link>;
             </Button>;
           </div>;
         </div>;
       </main>;
-<<<<<<< HEAD
-    </>;
-  );
-}
-=======
 
-
-<<<<<<< HEAD:temp_exclude/hooks.disabled/features/Internationalization.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
-=======
-;'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src/pages/features/Internationalization.tsx

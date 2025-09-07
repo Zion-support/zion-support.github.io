@@ -1,46 +1,3 @@
-<<<<<<< HEAD:src/components/resume-builder/forms/WorkExperienceForm.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { useState } from 'react',;
-import { useForm } from 'react-hook-form',;
-import { zodResolver } from '@hookform/resolvers/zod',;
-import { z } from 'zod',;
-import { Button } from '@/components/ui/button',;
-import { Textarea } from '@/components/ui/textarea',;
-import { Input } from '@/components/ui/input',;
-import { Checkbox } from '@/components/ui/checkbox',;
-import { format } from 'date-fns',;
-import {;
-  Form,;
-  FormControl,;
-  FormField,;
-  FormItem,;
-  FormLabel,;
-  FormMessage} from '@/components/ui/form',;
-import { WorkExperience } from '@/types/resume',;
-import { Loader2, Edit, Trash2 } from 'lucide-react';
-import { useResume } from '@/hooks/useResume',;
-import { Alert, AlertDescription } from '@/components/ui/alert',;
-import { Card, CardContent } from '@/components/ui/card',;
-import { AIEnhancementButton } from '@/components/resume-builder/forms/AIEnhancementButton',;
-// Define schema for form validation;
-const workExperienceSchema = z.object({;
-  company_name: z.string().min(1, 'Company name is required'),;
-  role_title: z.string().min(1, 'Job title is required'),;
-  start_date: z.string().min(1, 'Start date is required'),;
-  end_date: z.string().optional(),;
-  is_current: z.boolean().default(false),;
-  description: z.string().optional(),;
-  location: z.string().optional()}),;
-type WorkExperienceFormValues = z.infer<typeof workExperienceSchema>,;
-interface WorkExperienceFormProps {;
-  resumeId: string,;
-  workExperiences: WorkExperience[],;
-  onComplete: () => void,;
-  onBack: () => void;
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
       // Check condition
 if ( {) {
@@ -51,22 +8,9 @@ if ( {) {
         success = await addWorkExperience(resumeId, experienceData)
       }
 
-<<<<<<< HEAD
-      setError(err.message || 'An error occurred')
-};
-=======
-      setError(err.message || 'An error occurred');
-    };
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   };
   const handleEdit = (work: WorkExperience) => {;
 
-<<<<<<< HEAD
-=======
-
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/resume-builder/forms/WorkExperienceForm.tsx
 import { useState  } from 'react';
 import { useForm  } from 'react-hook-form';
 import { zodResolver  } from '@hookform/resolvers/zod';
@@ -109,12 +53,7 @@ import { AIEnhancementButton } from '@/components/resume-builder/forms/AIEnhance
   };
 
   const handleEdit = (work: WorkExperience) => {
-<<<<<<< HEAD:src/components/resume-builder/forms/WorkExperienceForm.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/resume-builder/forms/WorkExperienceForm.tsx
+
     setEditingId(work.id!);    form.reset({
       ...work
   const handleEdit = (work: WorkExperience) => {
@@ -130,7 +69,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       // Check condition
 if ( {) {
   $2
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+
 }
 ;
 export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBack }: WorkExperienceFormProps) {;
@@ -183,39 +122,7 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
     } catch (err: any) {;
       setError(err.message || 'An error occurred');
     }
-<<<<<<< HEAD
-  },;
-  const handleEdit = (work: WorkExperience) => {;
-    setEditingId(work.id!),;
-    form.reset({;
-      ...work,;
-      start_date: formatDateValue(work.start_date),;
-      end_date: work.end_date && !work.is_current ? formatDateValue(work.end_date) : undefined});
-  },;
-  const handleDelete = async (id: string) => {;
-    if (confirm('Are you sure you want to delete this work experience?')) {;
-      await deleteWorkExperience(id);
-=======
-  }
-  const handle_edit = (work: WorkExperience) =>: any {
-    setEditingId (work.id!);    form.reset ({
-      ...work,
-  const handle_edit = (work: WorkExperience) =>: any {
-    setEditingId (work.id!);
-    form.reset ({
-      start_date: formatDateValue (work.start_date),
-      end_date:;
-        work.end_date && !work.is_current;
-          ? formatDateValue (work.end_date);
-          : undefined,
-    });
-  }
-  const handle_delete = async (id: string, ) => {
-    if () {) {
-  $2
-}
-      await deleteWorkExperience (id);
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+
     }
   },
 
@@ -232,16 +139,6 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
         </p>
       </div>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-      {workExperiences.length > 0 && (
-=======
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -409,7 +306,7 @@ export function WorkExperienceForm(): any ({;
                             ? work.end_date
                             : format(work.end_date, 'MMM yyyy')
                           : ''}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+
         <div className="space-y-4">
           <h3 className="text-md font-medium">Added Experience</h3>
           {workExperiences.map((work) => (
@@ -431,195 +328,11 @@ export function WorkExperienceForm(): any ({;
                     {work.location && (
                       <p className="text-xs text-muted-foreground">{work.location}</p>
                     )}
-<<<<<<< HEAD:src/components/resume-builder/forms/WorkExperienceForm.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  </div>
-                  <div className="flex gap-2">
-=======
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-                  </div>
-                  <div className="flex gap-2">
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/resume-builder/forms/WorkExperienceForm.tsx
                     <Button
-<<<<<<< HEAD
-                      variant="ghost"
-                      size="icon"
-                      onClick={() => handleEdit(work)}
-                      aria-label="Edit experience"
-                    >
-                      <Edit className="h-4 w-4" />
-                    </Button>
-                    <Button
-                      variant="ghost"
-                      size="icon"
-                      onClick={() => handleDelete(work.id!)}
-                      aria-label="Delete experience"
-                    >
-                      <Trash2 className="h-4 w-4" />
-                    </Button>
-                  </div>
-                </div>
-                {work.description && (
-                  <p className="text-sm mt-3 line-clamp-2">{work.description}</p>
-                )}
-              </CardContent>;
-            </Card>;
-          ))}
-        </div>;
-      )}
 
-      <div className="bg-muted/40 p-6 rounded-lg">
-        <h3 className="text-md font-medium mb-4">
-          {editingId ? 'Update Experience' : 'Add Experience'}
-        </h3>
-
-        <Form {...form}>
-          <form onSubmit={form.handleSubmit(handleAddOrUpdate)} className="space-y-4">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <FormField
-                control={form.control}
-                name="company_name"
-                render={({ field }: { field: any }) => (
-                  <FormItem>
-                    <FormLabel>Company Name</FormLabel>
-                    <FormControl>
-                      <Input placeholder="Google, Microsoft, etc." {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />;
-              <FormField;
-                control={form.control}
-                name="role_title"
-                render={({ field }: { field: any }) => (
-                  <FormItem>
-                    <FormLabel>Job Title</FormLabel>
-                    <FormControl>
-                      <Input placeholder="Software Engineer, Product Manager, etc." {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <FormField
-                control={form.control}
-                name="start_date"
-                render={({ field }: { field: any }) => (
-                  <FormItem>
-                    <FormLabel>Start Date</FormLabel>
-                    <FormControl>
-                      <Input 
-                        type="date" 
-                        {...field} 
-                        value={field.value || ''}
-                      />;
-                    </FormControl>;
-                    <FormMessage />;
-                  </FormItem>;
-                )}
-              />
-
-              <div className="space-y-4">
-                <FormField
-                  control={form.control}
-                  name="is_current"
-                  render={({ field }: { field: any }) => (
-                    <FormItem className="flex flex-row items-start space-x-3 space-y-0 py-2">
-                      <FormControl>
-                        <Checkbox
-                          checked={field.value}
-                          onCheckedChange={field.onChange}
-                        />
-                      </FormControl>
-                      <div className="space-y-1 leading-none">
-                        <FormLabel>I currently work here</FormLabel>
-                      </div>
-                    </FormItem>
-                  )}
-                />;
-                {!form.watch('is_current') && (;
-                  <FormField;
-                    control={form.control}
-                    name="end_date"
-                    render={({ field }: { field: any }) => (
-                      <FormItem>
-                        <FormLabel>End Date</FormLabel>
-                        <FormControl>
-                          <Input 
-                            type="date" 
-                            {...field} 
-                            value={field.value || ''} 
-                          />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />;
-                )}
-              </div>;
-            </div>;
-            <FormField;
-              control={form.control}
-              name="location"
-              render={({ field }: { field: any }) => (
-                <FormItem>
-                  <FormLabel>Location (Optional)</FormLabel>
-                  <FormControl>
-                    <Input placeholder="San Francisco, CA (Remote)" {...field} />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />;
-            <FormField;
-              control={form.control}
-              name="description"
-              render={({ field }: { field: any }) => (
-                <FormItem>
-                  <FormLabel className="flex justify-between">
-                    <span>Job Description</span>
-                    <AIEnhancementButton
-                      currentContent={field.value || ''}
-                      enhancementType="work-description"
-                      context={`Role: ${form.getValues('role_title')} at ${form.getValues('company_name')}`}
-                      onEnhanced={handleEnhanceDescription}
-                    />
-                  </FormLabel>
-                  <FormControl>
-                    <Textarea
-                      placeholder="Describe your responsibilities and accomplishments..."
-                      className="min-h-[100px]"
-                      {...field}
-                    />;
-                  </FormControl>;
-                  <FormMessage />;
-                </FormItem>;
-              )}
-            />
-
-            {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
-
-            <div className="flex justify-between pt-2">
-              <Button
-                type="button"
-                variant="outline"
-                onClick={() => {
-                  if (editingId) {
-=======
-=======
-                  </div>;
-                  <div className='flex gap-2'>;                    <Button
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                     setEditingId(null),
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+
                     setEditingId(null),
                     form.reset({
                       company_name: '',
@@ -630,41 +343,7 @@ export function WorkExperienceForm(): any ({;
                       location: ''})
                   } else {
                     onBack()
-<<<<<<< HEAD
-=======
-            />;
 
-            {error && (;
-              <Alert variant='destructive'>;
-                <AlertDescription>{error}</AlertDescription>;
-              </Alert>;
-            )}
-
-            <div className='flex justify-between pt-2'>;
-              <Button
-                type='button'
-                variant='outline'
-<<<<<<< HEAD:src/components/resume-builder/forms/WorkExperienceForm.tsx
-<<<<<<< HEAD
-                onClick={() => {;
-                  if (editingId) {;
-                    setEditingId(null);
-                    form && form.reset({;
-                      company_name: '',;
-                      role_title: '',;
-                      start_date: format(new Date(), 'yyyy-MM-dd'),;
-                      is_current: false,,
-  description: '',;
-                      location: '',;
-                    });
-                  } else {;
-                    onBack();
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/resume-builder/forms/WorkExperienceForm.tsx
                 onClick={() => {
                   if (editingId) {
                     setEditingId(null)
@@ -678,59 +357,25 @@ export function WorkExperienceForm(): any ({;
                     })
                   } else {
                     onBack()
-<<<<<<< HEAD:src/components/resume-builder/forms/WorkExperienceForm.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/resume-builder/forms/WorkExperienceForm.tsx
+
                   }
                 }}
               >;
                 {editingId ? 'Cancel' : 'Back'}
               </Button>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-              <div className="flex gap-2">
-                <Button type="submit" disabled={isLoading}>
-                  {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
-                  {editingId ? 'Update' : 'Add'} Experience
-                </Button>
-
-=======
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
               <div className="flex gap-2">
                 <Button type="submit" disabled={isLoading}>
                   {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
 
                   {editingId ? 'Update' : 'Add'} Experience
                 </Button>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+
                 {!editingId && workExperiences.length > 0 && (
                   <Button type='button' onClick={onComplete}>
                     Next
                   </Button>
                 )}
-<<<<<<< HEAD:src/components/resume-builder/forms/WorkExperienceForm.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-              </div>;
-            </div>;
-          </form>;
-        </Form>;
-      </div>;
-    </div>;
-  );
-}
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
               </Button>;
 
@@ -809,14 +454,7 @@ if ( {) {
 }</div> </div> </form> </Form> </div> </div>);
 }'"  );
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-;
-=======
-;
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/resume-builder/forms/WorkExperienceForm.tsx
+
               </div>
             </div>
           </form>
@@ -830,9 +468,3 @@ if ( {) {
 }</Button> Next </Button>) ;
 }</div> </div> </form> </Form> </div> </div>) ;
 }'"
-<<<<<<< HEAD:src/components/resume-builder/forms/WorkExperienceForm.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/resume-builder/forms/WorkExperienceForm.tsx

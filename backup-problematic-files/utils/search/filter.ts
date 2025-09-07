@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import type { ParsedFilters } from './parser';
 import { TALENT_PROFILES } from '../../data/talent';
 import type { TalentProfile } from '../../data/talent';
@@ -107,10 +103,7 @@ export function suggestDidYouMean(query: string): string | null {;
   if (q.includes('react') && q.includes('under') && q.match(/\d/)) return 'React developers under $' + (q.match(/\d{2,3}/)?.[0] || '50') + '/hr';
   return null;
 }
-<<<<<<< HEAD
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
 export type AccessLevel = 'public' | 'private' | 'admin';
 export interface SearchResult {
   id: string;
@@ -128,9 +121,3 @@ pr-12325
   location?: string;
   skills?: string[];
   keywords?: string[];
-<<<<<<< HEAD
-}
-}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -6,9 +6,7 @@ type RequestBody = any;
 
   return res.status(200).json(response)
 }
-origin/cursor/automate-test-improve-and-merge-code-2533
-}const completion = await client.chat.completions.create ({
-  model: 'gpt-4o-mini', messages: [ {
+
   role: 'system', content: 'You are a compensation analyst. Be specific and concise. Use USD.'
 type InsightResponse = {}
   recommendedHourlyUsd: number;
@@ -171,61 +169,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     .map(([r, list]) => ({ region: r, medianHourlyUsd: Math.round(median(list.map((p) => p.hourlyRateUsd))) }))
     .sort((a, b) => b.medianHourlyUsd - a.medianHourlyUsd)
     .slice(0, 8);
-  // Tags
-const expMultiplier =
-    experienceLevel === 'Junior'
-      ? 0.8
-      : experienceLevel === 'Mid'
-        ? 1.0
-        : experienceLevel === 'Senior'
-          ? 1.2
-          : 1.35;
-  const remoteMultiplier = remote ? 1.1 : 1.0;
-  const typeMultiplier = employmentType === 'full-time' ? 0.9 : 1.15; // FT tends to lower hourly; contract/freelance higher
-  const recommendedHourly = Math.round(
-    baseMedian * expMultiplier * remoteMultiplier * typeMultiplier
-  );
-  const recommendedMonthly = Math.round(recommendedHourly * 160);
-  // Confidence based on sample size and dispersion
-  const sampleSize = rates.length;
-  const dispersion = (max - min) / Math.max(1, baseMedian);
-  const confidence = Math.max(
-    0.2
-    Math.min(0.95, (sampleSize / 20) * (1 - Math.min(0.6, dispersion)) + 0.2)
-  );
-  // Trend series and regional comparison
-  const trend = buildTrend(
-    recommendedMonthly
-    `${roleTitle}|${skills?.join('|')}|${region}|${experienceLevel}`
-  );
-  const byRegion = groupBy(TALENT_PROFILES, p => extractCountry(p.location));
-  const regionalComparison = Object.entries(byRegion)
-    .map(([r, list]) => ({
-      region: r,
-      medianHourlyUsd: Math.round(median(list.map(p => p.hourlyRateUsd))),
-    }))
-    .sort((a, b) => b.medianHourlyUsd - a.medianHourlyUsd)
-    .slice(0, 8);
-  // Tags
-const scarceSkills = [
-    'RAG',
-    'LangChain',
-    'Vector DBs',
-    'Kubernetes',
-    'AppSec',
-    'Security',
-  ];
-  const undersupplied = (skills |[]).some(s =>
-    scarceSkills.some(t => s.toLowerCase().includes(t.toLowerCase()))
-  );
-  if (remote) tags.push('Remote Premium');
-  if (undersupplied) tags.push('Undersupplied Skill')
-origin/cursor/automate-test-improve-and-merge-code-2533
-  const gptRecommendation = await maybeGetGptRecommendation(body, {
-    median: baseMedian
-    min
-    max
-    country
+
   });
   const response: InsightResponse = {'
   const scarceSkills = ['RAGLangChainVector DBsKubernetesAppSecSecurity'];
@@ -390,17 +334,3 @@ return res.status (200).json (response);  return res.status (200).json (response
 }
   // Tags;
 }
-    recommendedHourlyUsd: recommendedHourly,
-    recommendedMonthlyUsd: recommendedMonthly,
-    medianHourlyUsd: Math.round(baseMedian),
-    minHourlyUsd: Math.round(min),
-    maxHourlyUsd: Math.round(max),
-    confidence: Number(confidence.toFixed(2)),
-    trendMonthly: trend,
-    regionalComparison,
-    tags,
-    gptRecommendation,
-  };
-
-  return res.status(200).json(response);
-origin/cursor/automate-test-improve-and-merge-code-2533

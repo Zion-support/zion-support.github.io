@@ -1,25 +1,5 @@
 import type { GetServerSideProps } from 'next';
 
-type Props = { vendor: Vendor | null };type Props = { vendor: Vendor | null }
-type Props = { vendor: Vendor | null };
-
-type Props = { vendor: Vendor | null };type Props = { vendor: Vendor | null },
-export default function VendorProfilePage() { return null; }
-type Props = { vendor: Vendor | null };
-
-export default function VendorProfilePage({ vendor }: Props) {};
-type Props = { vendor: Vendor | null };type Props = { vendor: Vendor | null },
-export default function VendorProfilePage() { return null; }
-type Props = { vendor: Vendor | null };
-
-export default function VendorProfilePage({ vendor }: Props) {};
-  const [message, setMessage] = useState<string | null>(null);
-  const [loading, setLoading] = useState(false);
-import { FormEvent, useState } from 'react';
-import type { Vendor } from '../../utils/vendor-types';
-type Props = any;
-origin/cursor/automate-test-improve-and-merge-code-2533
-  async function submitLead(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const form = e.currentTarget;
     const formData = new FormData(form);'
@@ -36,46 +16,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className="text-2xl font-semibold flex items-center gap-2">
             {vendor.name}"
             {vendor.verified && <span className="text-xs px-2 py-0.5 rounded bg-green-100 text-green-700">Verified</span>}
-      const res = await fetch('/api/vendors/lead', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-body: JSON.stringify({ vendorId: vendor.id, title }),
-      });
-      if (!res.ok) throw new Error('Failed to submit');
-      setMessage('Thanks! We will contact you soon.');
-      form.reset();
-    } catch (e: any) {
-      setMessage(e.message);
-    } finally {
-      setLoading(false);
-    }
-  }
-  return (
-<div className='space-y-8'>
-      <div className='flex items-center gap-4'>
-        {vendor.logoUrl ? (
-          // eslint-disable-next-line @next/next/no-img-element
-          <img
-            src={vendor.logoUrl}
-            alt={vendor.name}
-            className='w-16 h-16 rounded'
-          />
-        ) : (
-          <div className='w-16 h-16 rounded bg-gray-100 dark:bg-gray-900' />
-        )}
-        <div>
-          <div className='text-2xl font-semibold flex items-center gap-2'>
-            {vendor.name}
-            {vendor.verified && (
-              <span className='text-xs px-2 py-0.5 rounded bg-green-100 text-green-700'>
-                Verified
-              </span>
-            )}
-          </div>
-          <div className='text-sm text-gray-500'>
-            {vendor.servicesOffered?.join(', ')}
-origin/cursor/automate-test-improve-and-merge-code-2533
-          </div>
+
         </div>
       </div>
       <div>
@@ -198,8 +139,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
       )}
 
-      <div>
-<h2 className='text-lg font-medium mb-2'>Request a Quote</h2>
         <form onSubmit={submitLead} className='space-y-3'>
           <input'
             name='title'
@@ -257,8 +196,3 @@ export const getServerSideProps: GetServerSideProps<Props> = async (ctx) => {;'
 };
 };
 };
-
-  const vendor = slug ? getVendorBySlug(slug) || null : null;
-  return { props: { vendor } };
-};
-origin/cursor/automate-test-improve-and-merge-code-2533

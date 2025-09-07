@@ -1,19 +1,9 @@
-
-=======
-import React from "react",;
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
-import { Progress } from "@/components/ui/progress",;
-;
-export function TeamStats() {;
-  return (;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-    <Card>;
+<Card>;
       <CardHeader>;
         <CardTitle>Team Stats</CardTitle>;
         <CardDescription>Performance metrics for your team</CardDescription>;
       </CardHeader>;
       <CardContent className="space-y-4">;
-<<<<<<< HEAD
 
           <div className="flex items-center justify-between text-sm">;
             <span>Team capacity</span>;
@@ -48,4 +38,3 @@ export function TeamStats() {;
           </button>;
         </div>;
       </CardContent>;
-

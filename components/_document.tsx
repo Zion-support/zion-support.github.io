@@ -1,12 +1,4 @@
-import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/document';
-origin/cursor/automate-test-improve-and-merge-code-2533
-import Document, {
-} from 'next/document';
-
-export default function Document() {
-origin/cursor/automate-test-improve-and-merge-code-2533
-  return (
-    <Html lang='en'>;
+<Html lang='en'>;
       <Head>;'
         <link rel='icon' href='/favicon && favicon.ico' />;'
         <meta name='theme-color' content='#0a0a0a' />;
@@ -92,3 +84,4 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 }
 
+origin/cursor/automate-test-improve-and-merge-code-2533

@@ -1,37 +1,8 @@
-
-=======
-import { useQuery } from "@tanstack/react-query",;
-import { supabase } from "@/integrations/supabase/client",;
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
-import { Skeleton } from "@/components/ui/skeleton",;
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",;
-import { useState } from "react",;
-;
-type TimeRange = '1d' | '7d' | '30d' | '90d' | '365d',;
-;
-const timeRangeToInterval = {;
-  '1d':{ days:1, interval:'hour' },;
-  '7d':{ days:7, interval:'day' },;
-  '30d':{ days:30, interval:'day' },;
-  '90d':{ days:90, interval:'week' },;
-  '365d':{ days:365, interval:'month' }
-},;
-;
-export function PageViewsTable() {;
-  const [timeRange, setTimeRange] = useState<TimeRange>('7d'),;
-  ;
-  const { data:pageViews, isLoading } = useQuery({;
-    queryKey:['page-views-data', timeRange],;
-    queryFn:async () => {;
-      const { days } = timeRangeToInterval[timeRange],;
-      ;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-      // Get top pages by views;
+// Get top pages by views;
       const { data, error } = await supabase;
         .from('analytics_events');
         .select('path, count');
         .eq('event_typepage_view');
-<<<<<<< HEAD
 
     <Card className="bg-zion-blue-dark border-zion-blue-light">;
       <CardHeader className="pb-2">;

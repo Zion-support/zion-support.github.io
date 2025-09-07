@@ -1,36 +1,4 @@
-
-
-export default function SiteHealth() {
-
-  return (
-          <div className="hidden gap-6 md:flex text-white/80">
-            <Link href="/"><a>Home</a></Link>
-            <Link href="/automation"><a>Automations</a></Link>
-            <Link href="/reports/seo"><a>SEO Audit</a></Link>
-            <Link href="/reports/ai-trends"><a>AI Trends</a></Link>
-            </Link>
-          </div>
-        </nav>
-      </header>
-
-<main className='relative z-10'>
-        <section className='mx-auto max-w-7xl px-6 pt-10 pb-16 md:pt-16 md:pb-20 text-center'>
-          <div className='mx-auto inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs text-white/70 backdrop-blur-md'>
-            <span className='h-2 w-2 animate-pulse rounded-full bg-emerald-400 shadow-[0_0_12px_rgba(52,211,153,0.9)]' />
-          </div>
-          <h1 className='mt-6 text-5xl font-extrabold leading-[1.05] tracking-tight md:text-6xl'>
-            <span className='gradient-text'>Site Health</span>
-          </h1>
-          <p className='mx-auto mt-5 max-w-3xl text-lg text-white/80'>
-            Dashboards, audits, and guardrails that keep your experience fast
-            accessible, and reliable.
-          </p>
-          <div className='mt-8 flex flex-wrap justify-center gap-3'>
-origin/cursor/automate-test-improve-and-merge-code-2533
-            <a
-              href='/site-health'
-              target='_blank'
-              rel='noopener'
+rel='noopener'
               className='rounded-xl border border-white/20 bg-white/5 px-6 py-3 font-semibold backdrop-blur-md hover:bg-white/10'
             >
               Live Pipelines
@@ -80,47 +48,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
         </section>
 
-<section className='mx-auto max-w-7xl px-6 pb-16'>
-          <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
-            Artifacts
-          </h2>
-          <div className='mx-auto mt-6 max-w-4xl grid grid-cols-1 gap-4 sm:grid-cols-2'>
-            <a
-              href='/reports/seo/latest.json'
-              className='rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur-xl hover:border-cyan-400/30'
-            >
-              Latest SEO Report JSON ↗
-            </a>
-            <a
-              href='/reports/seo/index.html'
-              className='rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur-xl hover:border-cyan-400/30'
-            >
-              SEO Audit Dashboard →
-            </a>
-          </div>
-        </section>
-        <section className='mx-auto max-w-7xl px-6 pb-24'>
-          <div className='animated-border relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-r from-fuchsia-600/20 via-violet-600/20 to-cyan-600/20 p-8 text-center backdrop-blur-xl'>
-            <h3 className='text-2xl font-bold'>
-              Keep quality high — continuously
-            </h3>
-            <p className='mx-auto mt-2 max-w-2xl text-white/80'>
-              Automations enforce guardrails and publish transparent artifacts
-              for every run.
-            </p>
-            <div className='mt-6 flex flex-wrap justify-center gap-3'>
-              <Link href='/automation'>
-                <a className='rounded-xl bg-white/90 px-6 py-3 font-semibold text-slate-900 hover:bg-white'>
-                  Get Started
-                </a>
-              </Link>
-origin/cursor/automate-test-improve-and-merge-code-2533
-              <a
-                href='/site-health'
-                target='_blank'
-                rel='noopener'
-        <section className='mx - auto max - w-7xl px - 6 pb - 24'>;
-          <div className='animated - border relative overflow - hidden rounded - 3xl border border - white / 10 bg - gradient - to - r from - fuchsia - 600 / 20 via - violet - 600 / 20 to - cyan - 600 / 20 p - 8 text - center backdrop - blur - xl'>;
             <h3 className='text - 2xl font - bold'>;
               Keep quality high — continuously;
             </h3>;'
@@ -140,14 +67,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 rel='noopener';'
                 className='rounded - xl border border - white / 20 bg - white / 5 px - 6 py - 3 font - semibold backdrop - blur - md hover:bg - white / 10';
               >;
-                View Pipelines;
-              </a>            </div>        <section className="mx - auto max - w-7xl px-6 pb-24">;
-          <div className="animated - border relative overflow - hidden rounded - 3xl border border - white / 10 bg - gradient - to - r from - fuchsia - 600 / 20 via - violet - 600 / 20 to - cyan - 600 / 20 p - 8 text - center backdrop-blur-xl">;
-            <h3 className="text-2xl font-bold">Keep quality high — continuously</h3>;
-            <p className="mx - auto mt - 2 max-w-2xl text-white / 80">Automations enforce guardrails and publish transparent artifacts for every run.</p>;
-            <div className="mt - 6 flex flex - wrap justify-center gap-3">;
-              <Link href="/automation"><a className="rounded - xl bg - white / 90 px - 6 py - 3 font - semibold text - slate-900 hover:bg-white">Get Started</a></Link>;
-              <a href="/site - health" target="_blank" rel="noopener" className="rounded - xl border border - white / 20 bg - white / 5 px - 6 py - 3 font - semibold backdrop - blur-md hover:bg-white / 10">View Pipelines</a>;
+
           </div>;
         </section>;
       </main>;

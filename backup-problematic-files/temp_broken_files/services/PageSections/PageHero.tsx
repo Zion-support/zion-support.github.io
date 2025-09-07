@@ -1,17 +1,8 @@
-
-=======
-import { GradientHeading } from "@/components/GradientHeading",;
-import { Clock, Map, DollarSign } from "lucide-react",;
-;
-export function PageHero() {;
-  return (;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-    <div className="text-center mb-12">;
+<div className="text-center mb-12">;
       <GradientHeading className="mb-4">Global IT Onsite Services</GradientHeading>;
       <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">;
         Professional IT onsite support services with transparent pricing across 190+ countries worldwide;
       </p>;
-<<<<<<< HEAD
 
         <div className="bg-zion-blue-light p-6 rounded-lg border border-zion-purple/20 flex flex-col items-center text-center">;
           <div className="bg-zion-purple/20 p-3 rounded-full mb-4">;
@@ -39,4 +30,3 @@ export function PageHero() {;
       </div>;
     </div>;
   );
-

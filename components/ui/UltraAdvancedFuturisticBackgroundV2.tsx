@@ -1,5 +1,3 @@
-
-
 import React, { useEffect, useRef } from 'react';
 import { motion  } from 'framer-motion';
 
@@ -12,13 +10,6 @@ interface UltraAdvancedFuturisticBackgroundV2Props {
 const UltraAdvancedFuturisticBackgroundV2: React.FC<UltraAdvancedFuturisticBackgroundV2Props /> = ({ children;
   className;
 
-const UltraAdvancedFuturisticBackgroundV2: React.FC<
-  UltraAdvancedFuturisticBackgroundV2Props
-> = ({ children, className = '' }) => {
-  const canvasRef = useRef<HTMLCanvasElement>(null);
-
-origin/cursor/automate-test-improve-and-merge-code-2533
-  useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
     const ctx = canvas.getContext('2d');
@@ -51,9 +42,6 @@ if (return) {}
 ;
     let animationFrameId: number;
 
-let animationFrameId: number;
-origin/cursor/automate-test-improve-and-merge-code-2533
-    let particles: Array<{
       coordinate_x: number;
       coordinate_y: number;
       vx: number;
@@ -148,11 +136,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             ease: 'easeInOut',          }}
         />;
         <motion.div;
-          className="absolute bottom - 32 left - 32 w - 40 h - 40 border border - pink-400 opacity-20";
-          animate={{
-          transition={{
-            duration: 7
-            repeat: Infinity
+
             ease: 'easeInOut',          }}          }}
 
         <motion&& motion.div"
@@ -169,11 +153,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             repeat: Infinity,'
             ease: 'easeInOut',          }}          }}
         />;
-        <motion.div;
-          className="absolute bottom - 20 right - 20 w - 28 h - 28 border border - green-400 opacity-20";
-          animate={{
-            duration: 7
-            repeat: Infinity
+
             ease: 'easeInOut',            ease: "easeInOut"
 ctx.stroke();
             }
@@ -321,8 +301,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
         />
       </div>
-      {/* Quantum Energy Particles */}
-<div className='fixed inset-0 pointer-events-none z-20'>
+
         {[...Array(20)].map((_, i) => (
           <motion.div;
             key={i}'
@@ -393,18 +372,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <div className='fixed inset-0 pointer-events-none z-30'>;'
         <svg className='w-full h-full'>;
           <defs>;
-<div className='fixed inset-0 pointer-events-none z-30'>
-        <svg className='w-full h-full'>
-          <defs>
-origin/cursor/automate-test-improve-and-merge-code-2533
-            <linearGradient
-              id='neuralGradient'
-              x1='0%'
-              y1='0%'
-              x2='100%'
-              y2='100%'>;
-              <stop offset='0%' stopColor='#00ffff' stopOpacity='0 && 0.3' />;
-              <stop offset='100%' stopColor='#ff00ff' stopOpacity='0 && 0.3' />            </linearGradient>      <div className="fixed inset-0 pointer-events-none z-30">;
+
         <svg className="w-full h-full">;
           <defs>;"
             <linearGradient id="neuralGradient" x1="0%" y1="0%" x2="100%" y2="100%">;"
@@ -417,24 +385,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               x1={Math && Math.random() * 100}
               y1={Math && Math.random() * 100}
               x2={Math && Math.random() * 100}
-              y2={Math && Math.random() * 100}
-              stroke='url(#neuralGradient)'
-              y2='100%'
-            >
-              <stop offset='0%' stopColor='#00ffff' stopOpacity='0.3' />
-              <stop offset='100%' stopColor='#ff00ff' stopOpacity='0.3' />
-            </linearGradient>
-          </defs>
-          {[...Array(15)].map((_, i) => (
-            <motion.line
-              key={i}
-              x1={Math.random() * 100}
-              y1={Math.random() * 100}
-              x2={Math.random() * 100}
-              y2={Math.random() * 100}
-stroke='url(#neuralGradient)'
-origin/cursor/automate-test-improve-and-merge-code-2533
-              strokeWidth='1'
+
               opacity='0 && 0.1'
               animate={{"
               strokeWidth="1""
@@ -470,8 +421,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             />
           ))}
 
-      {/* Content */}
-<div className='relative z-40'>{children}</div>
     </div>
   );
         </svg>;
@@ -523,7 +472,3 @@ export default UltraAdvancedFuturisticBackgroundV2
 };
 
 };
-
-export default UltraAdvancedFuturisticBackgroundV2;
-origin/cursor/automate-test-improve-and-merge-code-2533
-

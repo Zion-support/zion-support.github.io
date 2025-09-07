@@ -1,4 +1,3 @@
-
 import React, { useState, useMemo } from 'react';
 
 import { Star, Users, TrendingUp, DollarSign, Clock;
@@ -6,23 +5,7 @@ import { Star, Users, TrendingUp, DollarSign, Clock;
 }
   Brain, Globe, Lock, Code, Database, Cloud}
  } from 'lucide-react';
-import {
-origin/cursor/automate-test-improve-and-merge-code-2533
-  Star
-  Users
-  TrendingUp
-  DollarSign
-  Clock
-  CheckCircle
-  ArrowRight
-  Zap
-  Shield
-  Rocket
-  Brain
-  Globe
-  Lock
-  Code
-  Database
+
   Cloud;
 
   Star,
@@ -59,6 +42,7 @@ import {;
   Database,;
   Cloud,;
 origin/cursor/automate-test-improve-and-merge-code-2533
+
 import Button from '../ui/Button';
 
 interface Service {;
@@ -110,10 +94,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   subtitle: string;
   show_filters?: boolean;
   services?: Service[];
-  subtitle;
-  showFilters = false;
-  services = []
-  maxServices = 12
+
   maxServices?: number
 
   maxServices?: number}
@@ -124,9 +105,7 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps /> = ({
   title;
   subtitle;
   showFilters;
-origin/cursor/automate-test-improve-and-merge-code-2533
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all');
+
   const [sortBy, setSortBy] = useState<string>('popular');
   const categories = []
   const filteredServices = useMemo(() => {}
@@ -142,65 +121,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           (selectedPriceRange === 'medium' && parseFloat(service.price.replace(/[$]/g, '')) >= 1000 && parseFloat(service.price.replace(/[$]/g, '')) < 5000) |'
                           (selectedPriceRange === 'high' && parseFloat(service.price.replace(/[$]/g, '')) >= 5000 && parseFloat(service.price.replace(/[$]/g, '')) < 20000) |'
                           (selectedPriceRange === 'premium' && parseFloat(service.price.replace(/[$]/g, '')) >= 20000);
-      return matchesCategory && matchesPrice
-    { id: 'all', name: 'All Services', icon: '🚀' },
-    { id: 'ai', name: 'AI & ML', icon: '🧠' },
-    { id: 'quantum', name: 'Quantum', icon: '⚛️' },
-    { id: 'blockchain', name: 'Blockchain', icon: '⛓️' },
-    { id: 'enterprise', name: 'Enterprise', icon: '🏢' },
-{ id: 'emerging', name: 'Emerging Tech', icon: '🌟' },
-  ];
-  const priceRanges = [
-    { id: 'all', name: 'All Prices' },
-    { id: 'low', name: 'Under $1K/month' },
-    { id: 'medium', name: '$1K - $5K/month' },
-    { id: 'high', name: '$5K - $20K/month' },
-{ id: 'premium', name: '$20K+/month' },
-  ];
-  const sortOptions = [
-    { id: 'popular', name: 'Most Popular' },
-    { id: 'rating', name: 'Highest Rated' },
-    { id: 'roi', name: 'Best ROI' },
-    { id: 'price-low', name: 'Price Low to High' },
-{ id: 'price-high', name: 'Price High to Low' },
-  ];
-  const filteredServices = useMemo(() => {
-    let filtered = services.filter(service => {
-      const matchesCategory =
-        selectedCategory === 'all' |
-        (selectedCategory === 'ai' &&
-          (service.category.includes('AI') |
-            service.category.includes('Machine Learning'))) |
-        (selectedCategory === 'quantum' &&
-          (service.category.includes('Quantum') |
-            service.category.includes('Space'))) |
-        (selectedCategory === 'blockchain' &&
-          (service.category.includes('Blockchain') |
-            service.category.includes('DeFi') |
-            service.category.includes('NFT'))) |
-        (selectedCategory === 'enterprise' &&
-          (service.category.includes('Enterprise') |
-            service.category.includes('IT'))) |
-        (selectedCategory === 'emerging' &&
-          (service.category.includes('Neural') |
-            service.category.includes('Autonomous') |
-            service.category.includes('Space') |
-            service.category.includes('Biotech')));
-      const matchesPrice =
-        selectedPriceRange === 'all' |
-        (selectedPriceRange === 'low' &&
-          parseFloat(service.price.replace(/[$]/g, '')) < 1000) |
-        (selectedPriceRange === 'medium' &&
-          parseFloat(service.price.replace(/[$]/g, '')) >= 1000 &&
-          parseFloat(service.price.replace(/[$]/g, '')) < 5000) |
-        (selectedPriceRange === 'high' &&
-          parseFloat(service.price.replace(/[$]/g, '')) >= 5000 &&
-          parseFloat(service.price.replace(/[$]/g, '')) < 20000) |
-        (selectedPriceRange === 'premium' &&
-          parseFloat(service.price.replace(/[$]/g, '')) >= 20000);
 
-      return matchesCategory && matchesPrice;
-origin/cursor/automate-test-improve-and-merge-code-2533
     });
     // Sort services;
     switch (sortBy) {'
@@ -497,8 +418,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <motion&& motion.p;
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'
+
           >
             {subtitle}
           </motion.p>'
@@ -526,8 +446,7 @@ className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'
           <motion.div;
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto'
+
           >
             {stats.map((stat, index) => ('
               <div key={index} className='text-center'>
@@ -536,8 +455,7 @@ className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto'
                 </div>'
                 <div className='text-2xl font-bold text-white'>
                   {stat.value}
-                </div>
-                <div className='text-sm text-gray-400'>{stat.label}</div>
+
               </div>
             ))}
           </motion.div>
@@ -550,11 +468,6 @@ className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto'
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
 
-            transition={{ duration: 0.8, delay: 0.6 }}
-className='mb-12'
-origin/cursor/automate-test-improve-and-merge-code-2533
-          >
-            <div className='bg-gray-900/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50'>
               <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
                 {/* Category Filter */}
                 <div>'
@@ -584,16 +497,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>;
 
                 {/* Price Range Filter */}
-                <div>
-<label className='block text-sm font-medium text-gray-300 mb-3'>
-                    Price Range
+
                   </label>
                   <select;
                     value={selectedPriceRange}
                     onChange={e => setSelectedPriceRange(e.target.value)}'
                     className='w-full bg-gray-800/50 border border-gray-600 rounded-lg px-4 py-2 text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent'
                   >
-                    {priceRanges.map(range => (
+
                       <option key={range.id} value={range.id}>
                     {priceRanges.map(range => (                      <option key={range.id} value={range.id}>
 
@@ -607,16 +518,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>;
 
                 {/* Sort Options */}
-                <div>
-<label className='block text-sm font-medium text-gray-300 mb-3'>
-                    Sort By
+
                   </label>
                   <select;
                     value={sortBy}
                     onChange={e => setSortBy(e.target.value)}'
                     className='w-full bg-gray-800/50 border border-gray-600 rounded-lg px-4 py-2 text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent'
                   >
-                    {sortOptions.map(option => (
+
                       <option key={option.id} value={option.id}>
                     {sortOptions.map(option => (                      <option key={option.id} value={option.id}>
 
@@ -688,18 +597,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 initial={{ opacity: 0, coordinate_y: 30, scale: 0.9 }}
                 whileInView={{ opacity: 1, coordinate_y: 0, scale: 1 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                whileHover={{ y: -5, scale: 1.02 }}
-className='group'
-origin/cursor/automate-test-improve-and-merge-code-2533
-              >
-                <div className='relative bg-gray-900/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 h-full'>
-                  {/* Popular Badge */}
-                  {service.popular && (
-                    <div className='absolute -top-3 left-6 bg-gradient-to-r from-cyan-500 to-purple-500 text-white text-xs font-bold px-3 py-1 rounded-full'>                      ⭐ Most Popular
-
-                    <div className='absolute -top-3 left-6 bg-gradient-to-r from-cyan-500 to-purple-500 text-white text-xs font-bold px-3 py-1 rounded-full'>
-origin/cursor/automate-test-improve-and-merge-code-2533
-                      ⭐ Most Popular
 
                     </div>
                   )}
@@ -756,9 +653,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         <li key={idx} className="text-sm text-gray-400 flex items-start">;
                     </p>
                   </div>
-                  {/* Features */}
-<div className='mb-6'>
-                    <h4 className='text-sm font-semibold text-gray-300 mb-3 flex items-center'>
+
                       <CheckCircle className='w-4 h-4 mr-2 text-green-400' />
                       Key Features;
                     </h4>"
@@ -782,9 +677,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   {/* Stats */}'
                   <div className='grid grid-cols-3 gap-4 mb-6 text-center'>
 
-<div className='grid grid-cols-3 gap-4 mb-6 text-center'>
-origin/cursor/automate-test-improve-and-merge-code-2533
-                    <div>
                       <div className='text-lg font-bold text-white'>
                         {service.rating}
                       </div>'
@@ -917,33 +809,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <Button;
                       href={service.link}"
                       variant="primary"
-                  {/* Contact Info */}
-                  <div className='mt-4 text-center'>;
-                    <div className='text-xs text-gray-500'>;
-<div className='mb-6 p-4 bg-gray-800/30 rounded-lg'>
-                    <div className='text-sm text-cyan-400 font-semibold mb-2'>
-                      📊 Market Position
-                    </div>
-                    <div className='text-xs text-gray-300 leading-relaxed'>
-                      {service.marketPosition}
-                    </div>
-                  </div>
-                  {/* CTA */}
-<div className='mt-auto'>
-                    <Button
-                      href={service.link}
-                      variant='primary'
-                      className='w-full group-hover:bg-cyan-500 transition-colors'
-                    >
-                      Get Started
-                      <ArrowRight className='ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform' />
-                    </Button>
-                  </div>
-                  {/* Contact Info */}
-<div className='mt-4 text-center'>
-                    <div className='text-xs text-gray-500'>
-origin/cursor/automate-test-improve-and-merge-code-2533
-                      Contact:{' '}
+
                       <span className='text-cyan-400'>;
                         {service && service.contactInfo.mobile}
                       </span>;
@@ -979,23 +845,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <motion&& motion.div;
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1.0 }}
-className='text-center mt-16'
-        >
-          <div className='bg-gradient-to-r from-cyan-900/20 to-purple-900/20 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/20'>
-            <h3 className='text-2xl font-bold text-white mb-4'>
-              Ready to Transform Your Business?
-            </h3>
-            <p className='text-gray-300 mb-6 max-w-2xl mx-auto'>
-              Join thousands of companies already achieving breakthrough results
-              with our cutting-edge AI, quantum, and blockchain solutions. Get
-              started today and see the future of business technology.
-            </p>
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-origin/cursor/automate-test-improve-and-merge-code-2533
-              <Button
-                href='/contact'
-                variant='primary'
+
                 className='text-lg px-8 py-4'>;
                 Schedule a Consultation;'
                 <ArrowRight className='ml-2 w-5 h-5' />;
@@ -1217,16 +1067,3 @@ export default EnhancedServiceShowcase;
   );
 
 };
-
-                <span className='text-cyan-400'>https://ziontechgroup.com</span>
-              </p>
-            </div>
-          </div>
-        </motion.div>
-      </div>
-    </section>
-);
-};
-
-export default EnhancedServiceShowcase;
-origin/cursor/automate-test-improve-and-merge-code-2533

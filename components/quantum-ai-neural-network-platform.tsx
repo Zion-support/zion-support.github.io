@@ -1,3 +1,9 @@
+import React from 'react';
+
+import { motion  } from 'framer-motion';
+import { Atom, Brain, Zap, Shield, Users, Target, ArrowRight, Check, Star, Globe, Cpu, Network  } from 'lucide-react';
+import SEO from '../components/SEO';
+const QuantumAINeuralNetworkPlatform: React.FC;
 
   Network;
   Atom,
@@ -166,10 +172,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <section className='py-20 bg-gray-900/50'>'"
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div      <section className="py-20 bg-gray-900/50">"
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<section className='py-20 bg-gray-900/50'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-origin/cursor/automate-test-improve-and-merge-code-2533
-          <motion.div
+
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
   Atom,
@@ -300,9 +303,7 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {}
             initial={{ opacity: 0, coordinate_y: 20 }}
             whileInView={{ opacity: 1, coordinate_y: 0 }}
             viewport={{ once: true }}
-className='text-center mb-16'
-origin/cursor/automate-test-improve-and-merge-code-2533
-          >
+
             <h2 className='text-4xl md:text-5xl font-bold mb-6'>
               Quantum-Powered Features;
             </h2>'
@@ -352,18 +353,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </p>;
           </motion && motion.div>;
 
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
-            {features.map((feature, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-className='bg-gray-800/50 border border-blue-500/20 rounded-xl p-6 hover:border-blue-500/40 transition-all duration-300'
-origin/cursor/automate-test-improve-and-merge-code-2533
-              >
-                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4">
                   <Check className="w-6 h-6 text-white" />
                 </div>"
                 <h3 className="text-lg font-semibold mb-2">{feature}</h3>
@@ -420,10 +409,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
         </div>
       </section>
-      {/* Benefits Section */}
-<section className='py-20'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-          <motion.div
+
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -460,14 +446,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
 
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-className='text-center'
-origin/cursor/automate-test-improve-and-merge-code-2533
-              >
-                <div className='w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4'>
-                  <Star className='w-8 h-8 text-white' />
-                </div>
-                <h3 className='text-xl font-semibold mb-2'>{benefit}</h3>
               </motion.div>
 
             ))}
@@ -483,11 +461,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <section className='py-20 bg-gray-900/50'>;'"
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion && motion.div      <section className="py-20 bg-gray-900/50">;"
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
-          <motion&& motion.div
-      {/* Pricing Section */}
-<section className='py-20 bg-gray-900/50'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-          <motion.div
 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -495,9 +468,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             transition={{ duration: 0.8 }}'
             className='text-center mb-16'
 
-className='text-center mb-16'
-origin/cursor/automate-test-improve-and-merge-code-2533
-          >
             <h2 className='text-4xl md:text-5xl font-bold mb-6'>
               Pricing Plans;
             </h2>'
@@ -620,31 +590,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       {/* CTA Section */}"
       <section className="py-20">"
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                className={`bg-gray-800/50 border rounded-xl p-8 ${
-plan === 'professional'
-                    ? 'border-blue-500/50 bg-blue-900/20'
-                    : 'border-gray-600/50'
-                }`}
-              >
-                <h3 className='text-2xl font-bold mb-4 capitalize'>{plan}</h3>
-                <div className='text-4xl font-bold mb-6'>{price}</div>
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className='w-full px-6 py-3 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all duration-300'
-                >
-                  Get Started
-                </motion.button>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-      {/* CTA Section */}
-<section className='py-20'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
-origin/cursor/automate-test-improve-and-merge-code-2533
-          <motion.div
 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -796,8 +741,3 @@ export default QuantumAINeuralNetworkPlatform);
 ;
 export default QuantumAINeuralNetworkPlatform;
 ;
-);
-};
-
-export default QuantumAINeuralNetworkPlatform;
-origin/cursor/automate-test-improve-and-merge-code-2533

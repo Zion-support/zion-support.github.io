@@ -1,6 +1,3 @@
-import React from 'react';
-import Link from 'next/link';
-
 import { 
   Phone, 
   Mail, 
@@ -13,44 +10,26 @@ import {
   Cloud,
   Database,
   Shield,
-  Zap,
-  Github
+
 } from 'lucide-react';
 const Footer: React.FC = () => {
-  const currentYear = new Date().getFullYear();
+
+  const currentYear = new Date().getFullYear()
+  const services = [
+
   ];
   const solutions = [
-    { name: 'Enterprise Solutions', href: '/solutions/enterprise' },
-    { name: 'E-commerce Platforms', href: '/solutions/ecommerce' },
-    { name: 'Healthcare Technology', href: '/solutions/healthcare' },
-    { name: 'Educational Platforms', href: '/solutions/education' },
+
+  ];
+  const company = [
+
     { name: 'Careers', href: '/careers' },
     { name: 'News', href: '/news' },
   ];
 
-  const support = [
-    { name: 'Help Center', href: '/help' },
-    { name: 'Documentation', href: '/docs' },
-    { name: 'Contact Support', href: '/contact' },
-    { name: 'Status', href: '/status' },
-  ];
-
-  const legal = [
-    { name: 'Privacy Policy', href: '/privacy' },
-    { name: 'Terms of Service', href: '/terms' },
-    { name: 'Cookie Policy', href: '/cookies' },
-    { name: 'GDPR Compliance', href: '/gdpr' },
   ];
   return (
-    <footer className="bg-gray-900 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
-          {/* Company Info */}
-          <div className="lg:col-span-2">
-            <h3 className="text-2xl font-bold mb-4">Zion Tech Group</h3>
-            <p className="text-gray-300 mb-6">
-              Leading technology solutions provider specializing in AI, cloud computing, 
-              and innovative software development for businesses worldwide.
+
             </p>
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
@@ -148,16 +127,7 @@ import Link from 'next/link';
 
           {/* Services */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Services</h4>
-            <ul className="space-y-2">
-              {services.map((service) => (
-                <li key={service.name}>
-                  <Link 
-                    href={service.href}
-                    className="text-gray-300 hover:text-blue-400 transition-colors flex items-center space-x-2"
-                  >
-                    <service.icon className="h-4 w-4" />
-                    <span>{service.name}</span>
+
 import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
 
 const Footer: React.FC = () => {
@@ -189,50 +159,12 @@ pr-12243
   ];
 
   const socialLinks = [
-    { name: 'Facebook', href: '#', icon: Facebook },
-    { name: 'Twitter', href: '#', icon: Twitter },
-    { name: 'LinkedIn', href: '#', icon: Linkedin },
-    { name: 'Instagram', href: '#', icon: Instagram },
 
   ];
 
   return (
     <footer className="bg-gray-900 text-white">
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
-          {/* Company Info */}
-          <div className="lg:col-span-2">
-            <div className="flex items-center mb-6">
-              <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">Z</span>
-              </div>
-              <span className="ml-3 text-2xl font-bold">Zion Tech Group</span>
-            </div>
-            <p className="text-gray-300 mb-6 max-w-md">
-              Leading technology solutions provider specializing in AI, cloud computing, 
-              and digital transformation services for businesses worldwide.
-            </p>
-            
-            {/* Contact Info */}
-            <div className="space-y-3">
-              <div className="flex items-center text-gray-300">
-                <MapPin className="h-5 w-5 mr-3 text-blue-400" />
-                <span>123 Tech Street, Innovation City, IC 12345</span>
-              </div>
-              <div className="flex items-center text-gray-300">
-                <Phone className="h-5 w-5 mr-3 text-blue-400" />
-                <span>+1 (555) 123-4567</span>
-              </div>
-              <div className="flex items-center text-gray-300">
-                <Mail className="h-5 w-5 mr-3 text-blue-400" />
-                <span>info@ziontechgroup.com</span>
-              </div>
-              <div className="flex items-center text-gray-300">
-                <Clock className="h-5 w-5 mr-3 text-blue-400" />
-                <span>Mon-Fri 9AM-6PM EST</span>
-              </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-1">
@@ -259,13 +191,7 @@ pr-12243
 
           {/* Services */}
           <div>
-            <h3 className="text-lg font-semibold mb-6">Services</h3>
-            <ul className="space-y-3">
-              {footerSections.services.map((item) => (
-                <li key={item.name}>
-                  <Link 
-                    href={item.href}
-                    className="text-gray-300 hover:text-white transition-colors duration-200"
+
                   >
                     {item.name}
 
@@ -275,15 +201,6 @@ pr-12243
             </ul>
           </div>
 
-          {/* Solutions */}
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Solutions</h4>
-            <ul className="space-y-2">
-              {solutions.map((solution) => (
-                <li key={solution.name}>
-                  <Link 
-                    href={solution.href}
-                    className="text-gray-300 hover:text-blue-400 transition-colors"
                   >
                     {item.name}
 
@@ -291,28 +208,7 @@ pr-12243
                 </li>
               ))}
             </ul>
-          </div>
 
-          {/* Company */}
-          <div>
-            <h3 className="text-lg font-semibold mb-6">Company</h3>
-            <ul className="space-y-3">
-              {footerSections.company.map((item) => (
-                <li key={item.name}>
-                  <Link 
-                    href={item.href}
-                    className="text-gray-300 hover:text-white transition-colors duration-200"
-                  >
-                    {item.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Company */}
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Company</h4>
             <ul className="space-y-2">
               {company.map((item) => (
                 <li key={item.name}>
@@ -327,29 +223,11 @@ pr-12243
             </ul>
           </div>
 
-          {/* Support */}
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Support</h4>
-            <ul className="space-y-2">
-              {support.map((item) => (
-                <li key={item.name}>
-                  <Link 
-                    href={item.href}
-                    className="text-gray-300 hover:text-blue-400 transition-colors"
-                  >
-                    {item.name}
                   </Link>
                 </li>
               ))}
             </ul>
-          </div>
-        </div>
 
-        {/* Bottom Section */}
-        <div className="border-t border-gray-800 mt-8 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="text-gray-400 text-sm mb-4 md:mb-0">
-              © {currentYear} Zion Tech Group. All rights reserved.
 import { Facebook, Twitter, Linkedin, Instagram, Mail, Phone } from 'lucide-react';
 
 const Footer: React.FC = () => {
@@ -399,7 +277,6 @@ const Footer: React.FC = () => {
                 <Mail className="w-4 h-4 mr-2" />
                 <span className="text-gray-300">kleber@ziontechgroup.com</span>
 
-pr-12243
               </div>
 
             </div>
@@ -476,19 +353,92 @@ pr-12243
               <span className="font-semibold text-white">500+</span>
               <span className="ml-2">companies worldwide</span>
 
+            </div>
+          </div>
+
+        <div className="border-t border-gray-700 mt-8 pt-8 text-center">
+          <p className="text-gray-400">
+            © {new Date().getFullYear()} Zion Tech Group. All rights reserved.
+          </p>
+
+const Footer = () => {
+  return (
+    <footer className="bg-gray-900 text-white py-8">
+      <div className="container mx-auto px-4">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          {/* Services */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Services</h3>
+            <ul className="space-y-2">
+              <li>
+                <Link href="/services" className="hover:text-blue-400">
+                  All Services
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Company */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Company</h3>
+            <ul className="space-y-2">
+              <li>
+                <Link href="/about" className="hover:text-blue-400">
+                  About
+                </Link>
+              </li>
+              <li>
+                <Link href="/contact" className="hover:text-blue-400">
+                  Contact
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Resources */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Resources</h3>
+            <ul className="space-y-2">
+              <li>
+                <Link href="/blog" className="hover:text-blue-400">
+                  Blog
+                </Link>
+              </li>
+              <li>
+                <Link href="/docs" className="hover:text-blue-400">
+                  Documentation
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Legal */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Legal</h3>
+            <ul className="space-y-2">
+              <li>
+                <Link href="/privacy" className="hover:text-blue-400">
+                  Privacy Policy
+                </Link>
+              </li>
+              <li>
+                <Link href="/terms" className="hover:text-blue-400">
+                  Terms of Service
+                </Link>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="border-t border-gray-700 mt-8 pt-8 text-center">
+          <p>&copy; 2025 Zion Tech Group. All rights reserved.</p>
+            </div>
+          </div>
+
+pr-12243
+
         </div>
       </div>
     </footer>
   );
 };
-
-export default Footer;
-
-export default Footer;
-
-export default Footer;
-
-export default Footer;
-pr-12243
-export default Footer;
-

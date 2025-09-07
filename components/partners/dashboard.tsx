@@ -1,28 +1,5 @@
-import { useEffect, useState } from 'react';'
-import Head from 'next/head';
-export default function PartnerDashboard() { return null; }
-  const [apiKey, setApiKey] = useState('');  const [token, setToken] = useState<string | null>(null);import { useEffect, useState } from "react";"
 import Head from "next/head";
-export default function PartnerDashboard() {;
-  const [apiKey, setApiKey] = useState("");
-  const [token, setToken] = useState<string | null>(null),
-  const [usage, setUsage] = useState<any>(null),
 
-export default function PartnerDashboard() {
-  const [apiKey, setApiKey] = useState('');  const [token, setToken] = useState<string | null>(null);
-
-  const [token, setToken] = useState<string | null>(null);
-
-export default function PartnerDashboard() {
-  const [apiKey, setApiKey] = useState('');
-  const [token, setToken] = useState<string | null>(null);
-origin/cursor/automate-test-improve-and-merge-code-2533
-  const [usage, setUsage] = useState<any>(null);
-  const [loading, setLoading] = useState(false);
-
-  useEffect(() => {
-    const saved = localStorage.getItem("zion_partner_token");
-    if (saved) setToken(saved)
   }, []);
 
   async function getToken() { return null; }
@@ -60,6 +37,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     }
   }
   return (
+
 const res = await fetch('/api/partners/usage', {
       headers: token ? { Authorization: `Bearer ${token}` } : {},
     });
@@ -101,6 +79,7 @@ const data = await res.json();
 origin/cursor/automate-test-improve-and-merge-code-2533
               <input
                 className='border rounded px-3 py-2 flex-1'
+
                 placeholder='Paste your API key'
           <div className='bg-white p-6 rounded-lg shadow mb-8' />
             <h2 className='text-lg font-medium mb-3' />Authenticate</h2>
@@ -111,8 +90,7 @@ className='border rounded px-3 py-2 flex-1'}
                 value={apiKey}
                 onChange={e = /> setApiKey(e && e.target.value)}
               />;
-              <button;
-                onClick={getToken}'
+
                 className='bg-black text-white px-4 py-2 rounded'>;
                 Get JWT;
               </button>            </div>;
@@ -125,6 +103,7 @@ className='border rounded px-3 py-2 flex-1'}
               <button onClick={getToken} className="bg-black text-white px-4 py-2 rounded">Get JWT</button>;
           </div>;
         )}
+
                 className='bg-black text-white px-4 py-2 rounded'
                />
                 Get JWT;
@@ -155,6 +134,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               {loading ? 'Loading...' : 'Refresh'}
           <div className="bg-white p-6 rounded-lg shadow md:col-span-2">
             <h3 className="font-medium mb-2">Usage</h3>
+
             <button onClick={fetchUsage} className="bg-gray-900 text-white px-3 py-2 rounded text-sm mb-3">{loading ? "Loading..." : "Refresh"}</button>
             {usage ? ("
               <div className="text-sm">
@@ -162,14 +142,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <div className="mt-3">"
                   <p className="font-medium">By Endpoint</p>"
                   <ul className="list-disc ml-6">
-
-          <div className='bg-white p-6 rounded-lg shadow md:col-span-2' />
-            <h3 className='font-medium mb-2' />Usage</h3>
-            <button;
-onClick={fetchUsag}
-}
-              className='bg-gray-900 text-white px-3 py-2 rounded text-sm mb-3' />;
-              {loading ? 'Loading...' : 'Refresh'}
 
             </button>
             {usage ? (
@@ -191,22 +163,30 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </ul>;
                 </div>;
               </div>;
-            ) : (;'
-              <p className='text-gray-500 text-sm'>No usage yet.</p>            )}
-          </div>;
-        </div>;"
-              <p className="text-gray-500 text-sm">No usage yet.</p>;
+
                   </ul>
                 </div>
               </div>
             ) : (
             )}
 
+<p className='text-gray-500 text-sm'>No usage yet.</p>
+
+<p className='text-gray-500 text-sm' />No usage yet.</p>
+            )}
+          </div>
+        </div>
+
+<div className='bg-white p-6 rounded-lg shadow mt-6'>
+          <h3 className='font-medium mb-2'>SDKs</h3>
+origin/cursor/automate-test-improve-and-merge-code-2533
+          <a
+            className='text-blue-600 underline mr-4'
+
             href='/api/partners/sdk?type=rest'>;
             REST SDK;
           </a>;
-          <a'
-            className='text-blue-600 underline''
+
             href='/api/partners/sdk?type=graphql'>;
             GraphQL SDK;
           </a>        </div>;

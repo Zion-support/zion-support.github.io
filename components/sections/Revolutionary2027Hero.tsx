@@ -1,62 +1,4 @@
-
-  ArrowRight;
-  Brain;
-  Rocket;
-  TestTube;
-  Globe;
-  Microscope;
-  Lock;
-  Star;
-  TrendingUp;
-  Zap;
-  Sparkles;
-  Atom;
-  ArrowRight,
-  Brain,
-  Rocket,
-  TestTube,
-  Globe,
-  Microscope,
-  Lock,
-  Star,
-  TrendingUp,
-  Zap,
-  Sparkles,;
-  Atom,;
-} from 'lucide-react';'
-import Link from 'next/link';import { ArrowRight, Brain, Rocket, TestTube, Globe, Microscope, Lock, Star, TrendingUp, Zap, Sparkles, Atom } from 'lucide-react';'
-import Link from 'next/link';
-const Revolutionary2027Hero = () => {}
-  const floatingIcons = ['
-    { icon: Brain, delay: 0, position: 'top-20 left-20' }'
-    { icon: Rocket, delay: 0.5, position: 'top-40 right-32' }'
-    { icon: TestTube, delay: 1, position: 'bottom-40 left-32' }'
-    { icon: Globe, delay: 1.5, position: 'bottom-20 right-20' }'
-    { icon: Microscope, delay: 2, position: 'top-1/2 left-10' }'
-    { icon: Lock, delay: 2.5, position: 'top-1/2 right-10' }'
-    { icon: Atom, delay: 3, position: 'bottom-1/3 left-1/2' }'
-    { icon: Sparkles, delay: 3.5, position: 'top-1/3 right-1/2' },  ];    { icon: Sparkles, delay: 3.5, position: 'top-1/3 right-1/2' }
-import React from 'react';
-import { motion  } from 'framer-motion';
-import { ArrowRight, Brain, Rocket, TestTube, Globe, Microscope, Lock, Star, TrendingUp, Zap, Sparkles, Atom  } from 'lucide-react';
-import Link from 'next/link';
-const Revolutionary2027Hero = null;
-origin/cursor/automate-test-improve-and-merge-code-2533
-  ];
-  const containerVariants = {}
-    hidden: { opacity: 0 }
-
-    visible: {
-      opacity: 1
-      transition: {
-staggerChildren: 0.1,
-      },
-    },
-  };
-
-origin/cursor/automate-test-improve-and-merge-code-2533
-  const itemVariants = {
-    hidden: { opacity: 0, y: 30 }
+hidden: { opacity: 0, y: 30 }
     visible: {}
       opacity: 1;
       y: 0;
@@ -110,14 +52,7 @@ const Revolutionary2027Hero = () => {;
       },;
     },;
   };
-        duration: 0.8,
-ease: 'easeOut' as const,
-      },
-    },
-  };
 
-origin/cursor/automate-test-improve-and-merge-code-2533
-  return (
     <section className='relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 via-purple-900/20 to-gray-900'>;
       {/* Enhanced Background Effects */}'
       <div className='absolute inset-0 opacity-20'>;'
@@ -146,10 +81,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       {/* Animated Grid Pattern */}"
       <div className="absolute inset-0 opacity-20">"
         <div className="absolute inset-0 bg-[linear-gradient(rgba(139,92,246,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(139,92,246,0.1)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
-      <div className='absolute inset-0 opacity-20'>
-        <div className='absolute inset-0 bg-[linear-gradient(rgba(139,92,246,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(139,92,246,0.1)_1px,transparent_1px)] bg-[size:50px_50px]'></div>
-origin/cursor/automate-test-improve-and-merge-code-2533
-      </div>
+
         <div className='absolute inset-0 bg-[linear-gradient(rgba(139,92,246,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(139,92,246,0.1)_1px,transparent_1px)] bg-[size:50px_50px]'></div>      </div>
 
       </div>
@@ -195,26 +127,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         >"
           <item.icon className="w-8 h-8" />
         </motion.div>
-y: [0, -20, 0],
-            rotate: [0, 5, -5, 0],
-          }}
-          transition={{
-            duration: 4,
-            delay: item.delay,
-            repeat: Infinity,
-ease: 'easeInOut',
-          }}
-        >
-          <item.icon className='w-8 h-8' />
-        </motion.div>
-      ))}
-      {/* Main Content */}
-<div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
-        <motion.div
-origin/cursor/automate-test-improve-and-merge-code-2533
-          variants={containerVariants}
-          initial='hidden'
-          animate='visible'
+
           className='space-y-8'>;
           {/* Main Heading */}'
           <motion && motion.div variants={itemVariants} className='space-y-6'>;'
@@ -480,22 +393,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           ease: 'easeInOut',
         }}>;'
         <div className='w-6 h-10 border-2 border-purple-400/50 rounded-full flex justify-center'>;
-          <motion&& motion.div
-      {/* Scroll Indicator */}
-      <motion.div
-className='absolute bottom-8 left-1/2 transform -translate-x-1/2'
-        animate={{
-          y: [0, 10, 0]
-        }}
-        transition={{
-          duration: 2
-          repeat: Infinity
-          ease: 'easeInOut'
-        }}
-      >
-        <div className='w-6 h-10 border-2 border-purple-400/50 rounded-full flex justify-center'>
-          <motion.div
-origin/cursor/automate-test-improve-and-merge-code-2533
+
             className='w-1 h-3 bg-gradient-to-b from-cyan-400 to-purple-400 rounded-full mt-2'
       >;'
         <div className='w - 6 h - 10 border - 2 border - purple - 400 / 50 rounded - full flex justify - center'>;
@@ -504,14 +402,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             animate={{}
             animate={{}
               coordinate_y: [0, 12, 0]}}
-            transition={{
-              y: [0, 12, 0],
-            }}
-            transition={{
-              duration: 2,
-              repeat: Infinity,
-              ease: 'easeInOut',
-origin/cursor/automate-test-improve-and-merge-code-2533
+
             }}
             transition={{}
               duration: 2;
@@ -580,17 +471,3 @@ export default Revolutionary2027Hero);
 ;
 export default Revolutionary2027Hero;
 ;
-              duration: 3 + Math.random() * 2,
-              repeat: Infinity,
-              delay: Math.random() * 2,
-            }}
-          />
-        ))}
-      </div>
-    </section>
-);
-};
-
-export default Revolutionary2027Hero;
-origin/cursor/automate-test-improve-and-merge-code-2533
-

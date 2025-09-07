@@ -1,4 +1,3 @@
-
 import Head from 'next / head';'
 import Card from '../components / ui / Card';'
 import Button from '../components / ui / Button';
@@ -10,16 +9,7 @@ import {}
   XCircle,
   ArrowRight,
   Download,
-  Upload,
-} from 'lucide-react';import { Code, Copy, RefreshCw, CheckCircle, XCircle, ArrowRight, Download, Upload, Settings, Eye } from 'lucide-react';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components / ui / card';
-import { Star } from 'lucide-react';
-  Settings,
-  Eye,;
-} from 'lucide-react';
-export default function JSONFormatterPage() {
-origin/cursor/automate-test-improve-and-merge-code-2533
-  const [inputJson, setInputJson] = useState('');
+
   const [formattedJson, setFormattedJson] = useState('');
   const [isValid, setIsValid] = useState(true);'
   const [errorMessage, setErrorMessage] = useState('');
@@ -27,90 +17,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   const [compactMode, setCompactMode] = useState(false);
   const [showLineNumbers, setShowLineNumbers] = useState(true);
 
-      setIsValid(true);'
-      setErrorMessage('');
-    } catch (error) {;
-      setIsValid(false);'
-      setErrorMessage(error instanceof Error ? error && error.message : 'Invalid JSON');    }      setErrorMessage('');
-    } catch (error) {;
-      setIsValid(false);
-
-'
-      setErrorMessage(error instanceof Error ? error && error.message : 'Invalid JSON');
-  };
-
-  const clearAll = () => {;'
-    setInputJson('');'
-    setFormattedJson('');
-    setIsValid(true);'
-    setErrorMessage('');
-  const copyToClipboard = (text: string) => {}
-    navigator.clipboard.writeText(text)
-  }
-
-  const downloadJSON = (content: string, filename: string) => {
-return;
-    }
-
-    try {
-      const parsed = JSON.parse(inputJson);
-const formatted = compactMode
-        ? JSON.stringify(parsed)
-        : JSON.stringify(parsed, null, indentSize);
-      setFormattedJson(formatted);
-      setIsValid(true);
-      setErrorMessage('');
-    } catch (error) {
-      setIsValid(false);
-      setErrorMessage(error instanceof Error ? error.message : 'Invalid JSON');
-      setFormattedJson('');
-    }
-  }
-  const minifyJSON = () => {
-    if (!inputJson.trim()) return;
-
-    try {
-      const parsed = JSON.parse(inputJson);
-      const minified = JSON.stringify(parsed);
-      setFormattedJson(minified);
-      setIsValid(true);
-setErrorMessage('');
-    } catch (error) {
-      setIsValid(false);
-      setErrorMessage(error instanceof Error ? error.message : 'Invalid JSON');
-    }
-  };
-
-  const validateJSON = () => {
-    if (!inputJson.trim()) {
-      setIsValid(true);
-      setErrorMessage('');
-return;
-    }
-    try {
-      JSON.parse(inputJson);
-      setIsValid(true);
-setErrorMessage('');
-    } catch (error) {
-      setIsValid(false);
-      setErrorMessage(error instanceof Error ? error.message : 'Invalid JSON');
-    }
-  };
-
-  const clearAll = () => {
-    setInputJson('');
-    setFormattedJson('');
-    setIsValid(true);
-setErrorMessage('');
-  };
-
-  const copyToClipboard = (text: string) => {
-    navigator.clipboard.writeText(text);
-  }
-  const downloadJSON = (content: string, filename: string) => {
-    const blob = new Blob([content], { type: 'application/json' });
-origin/cursor/automate-test-improve-and-merge-code-2533
-    const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
     a.download = filename;
@@ -118,37 +24,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     a.click();
     document.body.removeChild(a);
         }
-URL.revokeObjectURL(url);
-  };
 
-  const loadSampleJSON = () => {
-    const sample = {
-name: 'John Doe',
-      age: 30,
-      email: 'john.doe@example.com',
-      address: {
-        street: '123 Main St'
-        city: 'Anytown'
-        state: 'CA'
-        zipCode: '12345'
-      }
-      phoneNumbers: [
-origin/cursor/automate-test-improve-and-merge-code-2533
-        {
-          type: 'home',
-          number: '555-123-4567',
-        },
-        {
-          type: 'work',
-          number: '555-987-6543',
-        },
-      ],
-      interests: ['programming', 'reading', 'hiking'],
-      active: true,
-      lastLogin: '2024-01-15T10:30:00Z',
-    };
-
-    setInputJson(JSON.stringify(sample, null, 2));
     setFormattedJson('');
     setIsValid(true);
   };
@@ -277,9 +153,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </p>
         </div>
       </section>
-      {/* JSON Formatter Tool */}"
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
-          <div className="text-center mb-16">"
+
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
               Format Your JSON Data;
             </h2>"
@@ -341,6 +215,26 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </select>;
                 </div>;
 
+<div className='flex items-center space-x-2'>
+                  <input
+                    type='checkbox'
+                    id='compactMode'
+                    checked={compactMode}
+                    onChange={e => setCompactMode(e.target.checked)}
+                    className='w-4 h-4 text-teal-600 bg-gray-700 border-gray-600 rounded focus:ring-teal-500'
+                  />
+                  <label
+                    htmlFor='compactMode'
+                    className='text-sm text-gray-300'
+                  >
+                    Compact mode
+                  </label>
+                </div>
+                <div className='flex items-center space-x-2'>
+origin/cursor/automate-test-improve-and-merge-code-2533
+                  <input
+                    type='checkbox'
+
                     id='showLineNumbers'
                     checked={showLineNumbers}
                     onChange={e => setShowLineNumbers(e && e.target.checked)}'
@@ -356,6 +250,70 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   onClick={loadSampleJSON}"
                   variant="outline""
                   size="sm"
+
+                    className='text-sm text-gray-300'
+                  >
+                    Line numbers
+                  </label>
+                </div>
+              </div>
+              <div className='flex items-center space-x-3'>
+                <Button
+                  onClick={loadSampleJSON}
+                  variant='outline'
+                  size='sm'
+                  className='border-gray-600 text-gray-300 hover:bg-gray-700'
+                >
+                  <Upload className='w-4 h-4 mr-2' />
+                  Load Sample
+                </Button>
+                <Button
+                  onClick={clearAll}
+variant='outline'
+                  size='sm'
+                  className='border-gray-600 text-gray-300 hover:bg-gray-700'
+                >
+                  <Upload className='w-4 h-4 mr-2' />                  Load Sample
+                </Button>
+                <Button
+                  onClick={clearAll}
+                  variant='outline'
+                  size='sm'
+                  className='border-gray-600 text-gray-300 hover:bg-gray-700'                >
+                  Clear All
+                </Button>
+              </div>
+            </div>
+          </Card>
+
+<div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
+            {/* Input Section */}
+            <Card className='p-8 bg-gray-800 border border-gray-700'>
+              <div className='flex items-center justify-between mb-6'>
+                <h3 className='text-2xl font-bold text-white flex items-center'>
+                  <Code className='w-6 h-6 mr-3 text-teal-400' />
+                  Input JSON
+                </h3>
+                <div className='flex items-center space-x-2'>
+                  <span
+                    className={`px-2 py-1 rounded text-xs font-medium ${
+                      isValid
+                        ? 'bg-green-500/20 text-green-400'
+                        : 'bg-red-500/20 text-red-400'
+                    }`}
+                  >
+                    {isValid ? 'Valid' : 'Invalid'}
+                  </span>
+                </div>
+              </div>
+
+<div className='space-y-4'>
+                <div className='relative'>
+                  {showLineNumbers && (
+                    <div className='absolute left-0 top-0 bottom-0 w-12 bg-gray-700 border-r border-gray-600 text-xs text-gray-400 p-2 font-mono overflow-hidden'>
+                      {getLineNumbers(inputJson)}
+origin/cursor/automate-test-improve-and-merge-code-2533
+                    </div>
 
                     <div className='absolute left-0 top-0 bottom-0 w-12 bg-gray-700 border-r border-gray-600 text-xs text-gray-400 p-2 font-mono overflow-hidden'>                      {getLineNumbers(inputJson)}
 
@@ -382,15 +340,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   )}
                   <textarea;
                     value={inputJson}
-onChange={e => setInputJson(e.target.value)}
-                    placeholder='Paste your JSON data here...'
-origin/cursor/automate-test-improve-and-merge-code-2533
-                    rows={15}
-                    className={`w-full p-4 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-teal-500 font-mono text-sm resize-none ${;
-                      showLineNumbers ? 'pl-16' : '';
+
                     }`}
-'"
-                <div className='flex space-x-3'>                  <div className="p-3 bg-red-500/20 border border-red-500/30 rounded text-sm text-red-300">'
+
                 <div className='flex space-x-3'>
 
                     <strong>Error:</strong> {errorMessage}
@@ -546,10 +498,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
         </div>
       </section>
-      {/* Features */}
-<section className='py-20 bg-gray-800'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-          <div className='text-center mb-16'>
+
             <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>
 
               Professional JSON Formatting Features;
@@ -616,13 +565,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 Customizable;
               </h3>'
               <p className='text-gray-400'>
-                Adjust indentation size, toggle compact mode, and customize
-                display options.
-              </p>
+
             </Card>
           </div>
         </div>
-      </section>"
+
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
               From development to data analysis, our JSON formatter serves all your formatting needs.
             </p>
@@ -661,8 +608,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <li>• Configuration file management</li>
                 <li>• Debug and troubleshooting</li>
               </ul>
-            </Card>"
-              <h3 className="text-2xl font-bold text-white mb-4">Data Analysts</h3>"
+
               <p className="text-gray-400 mb-6">
                 Clean and format JSON datasets for analysis, reporting, and data visualization projects.
               </p>"

@@ -1,25 +1,4 @@
-<<<<<<< HEAD:src_backup/pages/Careers.tsx
-<<<<<<< HEAD:src/pages/Careers.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { SEO } from "@/components/SEO",
-import { GradientHeading } from "@/components/GradientHeading",
-import { Button } from "@/components/ui/button",
-import { Card, CardContent } from "@/components/ui/card",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import Link from "next/link",
-import { CAREER_JOBS } from "@/data/careersJobs",
-export default function Careers() {
-  const applyEmail = "careers@ziontechgroup.com",
-  const jobs = CAREER_JOBS,
-
-  const whyWork =
-    "At Zion, we’re building more than a marketplace—we’re cultivating a community where forward-thinking engineers, product visionaries, and creatives collaborate to pioneer accessible AI technology. You’ll join a remote-first team dedicated to removing barriers and shaping solutions that empower everyday innovators. Our culture emphasizes trust, continuous learning, and meaningful impact, giving you the freedom to take ownership and experiment. We believe diverse perspectives fuel groundbreaking ideas, so we welcome talent from every background. You’ll work alongside passionate peers who care about real-world results, not just buzzwords. Zion’s growth means endless opportunities to expand your skills, explore new roles, and contribute to open-source initiatives. If you’re driven by curiosity and want to leave a lasting mark on the future of technology, Zion offers a supportive environment where your contributions truly matter. Come help us redefine what’s possible and make advanced AI accessible to all. Join us to transform ideas into reality today.",
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-  // Benefits list
+// Benefits list
   const benefits = [
     {
       title: "Flexible Work",
@@ -68,9 +47,6 @@ export default function Careers() {
     }
   ],
 
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/pages/Careers.tsx
 import { SEO } from '@/components/SEO';
 import { GradientHeading } from '@/components/GradientHeading';
 import { Button } from '@/components/ui/button';
@@ -82,9 +58,7 @@ import { CAREER_JOBS } from '@/data/careersJobs';
 export default function Careers() {
   const applyEmail = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/pages.disabled/Careers.tsx
   return (
     <>
       <SEO
@@ -101,14 +75,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               Help us build the future of AI and technology
             </p>
           </div>
-<<<<<<< HEAD:src_backup/pages/Careers.tsx
-          
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24">
-=======
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24">
 
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/pages.disabled/Careers.tsx
             <div>
               <h2 className="text-3xl font-bold text-white mb-6">Why Work at Zion?</h2>
               <p className="text-zion-slate-light text-lg whitespace-pre-line">
@@ -123,10 +90,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               />
             </div>
           </div>
-<<<<<<< HEAD:src_backup/pages/Careers.tsx
-          
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/pages.disabled/Careers.tsx
+
           <div className="mb-24">
             <h2 className="text-3xl font-bold text-white mb-12 text-center">Our Benefits</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -134,20 +98,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <div key={index} className="bg-zion-blue-dark p-8 rounded-lg border border-zion-blue-light">
                   <div className="bg-zion-blue inline-flex p-4 rounded-full mb-4">
                     {benefit.icon}
-<<<<<<< HEAD:src_backup/pages/Careers.tsx
-=======
-                <div
-                  key={index}
-                  className='bg-zion-blue-dark p-8 rounded-lg border border-zion-blue-light'>;
-                  <div className='bg-zion-blue inline-flex p-4 rounded-full mb-4'>                    {benefit && benefit.icon}
-                  </div>;
-                  <h3 className='text-xl font-bold text-white mb-3'>;
-                    {benefit && benefit.title}
-                  </h3>;
-                  <p className='text-zion-slate-light'>{benefit && benefit.description}</p>;
-                </div>;
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/pages.disabled/Careers.tsx
                   </div>
                   <h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3>
                   <p className="text-zion-slate-light">{benefit.description}</p>
@@ -155,34 +106,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               ))}
             </div>
           </div>
-<<<<<<< HEAD:src_backup/pages/Careers.tsx
-          
-=======
-                <TabsTrigger
-                  value='engineering'
-                  className='data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple'>;
-                  Engineering;
-                </TabsTrigger>;
-                <TabsTrigger
-                  value='product'
-                  className='data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple'>;
-                  Product;
-                </TabsTrigger>;
-                <TabsTrigger
-                  value='marketing'
-                  className='data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple'>;
-                  Marketing;
-                </TabsTrigger>;
-                <TabsTrigger
-                  value='operations'
-                <TabsContent
-                  key={department}
-                  value={department}
-                  className='space-y-6'>;
-                  {jobList && jobList.map((job, index) => (;
-                    <Card
-                      key={index}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/pages.disabled/Careers.tsx
+
           <div className="mb-24">
             <h2 className="text-3xl font-bold text-white mb-12 text-center">Open Positions</h2>
             <Tabs defaultValue="engineering" className="w-full">
@@ -231,7 +155,7 @@ export default function Careers() {;
   // Benefits list;
   const benefits = [;
     {;
-      title: "Flexible Work",;
+      title: "Flexible Work",
       description: "Remote-first culture with flexible hours to support your productivity and work-life balance.",;
       icon: (;
         <svg className="w-10 h-10 text-zion-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">;
@@ -240,7 +164,7 @@ export default function Careers() {;
       );
     },;
     {;
-      title: "Health & Wellness",;
+      title: "Health & Wellness",
       description: "Comprehensive health insurance and wellness programs to keep you at your best.",;
       icon: (;
         <svg className="w-10 h-10 text-zion-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">;
@@ -249,7 +173,7 @@ export default function Careers() {;
       );
     },;
     {;
-      title: "Continuous Learning",;
+      title: "Continuous Learning",
       description: "Education stipends and dedicated learning time to help you grow professionally.",;
       icon: (;
         <svg className="w-10 h-10 text-zion-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">;
@@ -258,7 +182,7 @@ export default function Careers() {;
       );
     },;
     {;
-      title: "Competitive Compensation",;
+      title: "Competitive Compensation",
       description: "Salary packages that recognize your value, plus equity options to share in our success.",;
       icon: (;
         <svg className="w-10 h-10 text-zion-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">;
@@ -267,7 +191,7 @@ export default function Careers() {;
       );
     },;
     {;
-      title: "Impactful Projects",;
+      title: "Impactful Projects",
       description: "Contribute to innovations that make advanced technology accessible worldwide.";
       icon: (;
         <svg className="w-10 h-10 text-zion-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">;
@@ -354,21 +278,11 @@ export default function Careers() {;
                         </div>;
                       </CardContent>;
                     </Card>;
-<<<<<<< HEAD:src_backup/pages/Careers.tsx
-=======
 
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/pages.disabled/Careers.tsx
                   ))}
                 </TabsContent>;
               ))}
-<<<<<<< HEAD:src_backup/pages/Careers.tsx
-            </Tabs>
-          </div>
-          
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/pages.disabled/Careers.tsx
           <div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue-light border border-zion-purple/30 rounded-xl p-8 md:p-12 text-center">
             <h2 className="text-3xl font-bold text-white mb-6">Don't see the right position?</h2>
             <p className="text-zion-slate-light text-lg mb-8 max-w-2xl mx-auto">
@@ -393,79 +307,9 @@ export default function Careers() {;
         </div>
       </main>
     </>
-<<<<<<< HEAD:src_backup/pages/Careers.tsx
-<<<<<<< HEAD:src/pages/Careers.tsx
-<<<<<<< HEAD
-  )
-}
-=======
-  )
-}
+
 ;
-}
 
-export default Careers
-}
-
-
-
-
-}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/pages.disabled/Careers.tsx
-;
-<<<<<<< HEAD
-=======
-
-                    </Card>))}
-                </TabsContent>))}
-            </Tabs>;
-          </div>;
-          <div className='bg - gradient - to - r from - zion - blue - dark to - zion - blue - light border border - zion - purple / 30 rounded - xl p - 8 md:p - 12 text - center'>;
-            <h2 className='text - 3xl font - bold text - white mb - 6'>;
-              Don't see the right position?;
-            </h2>;
-            <p className='text - zion - slate - light text - lg mb - 8 max - w-2xl mx - auto'>;
-              We're always looking for talented individuals who are passionate;
-              about AI and technology. Send us your resume and let's start a;
-              conversation. You can also apply directly by emailing us at;
-              <a;
-                href={`mailto:${apply_email}`}
-                className='text - zion - cyan hover:text - zion - purple transition - colors';
-              >;
-                {apply_email}
-              </a>;
-              .;
-            </p>;
-            <Button;
-              as_child;
-              className='bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple';
-            >;
-              <a href={`mailto:${apply_email}`}>Send General Application</a>;
-            </Button>;
-          </div>;
-        </div>;
-      </main>;
-    </>);
-import React from 'react';
-import { SEO } from '../components / SEO';
-const Careers: React.FC = () => {
-  return (<>;
-      <SEO title="Careers - Zion Tech Group" />;
-      <div className="min - h-screen bg - white py - 20">;
-        <div className="max - w-4xl mx - auto px - 4">;
-          <h1 className="text - 4xl font - bold text - gray - 900 mb - 8">Careers</h1>;
-          <p className="text - lg text - gray - 600">Content coming soon...</p>;
-        </div>;
-      </div>;
-    </>);
-}
-<<<<<<< HEAD:src_backup/pages/Careers.tsx
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/pages/Careers.tsx
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/pages.disabled/Careers.tsx
 import React from 'react';
 import Card from '../components/Card';
 
@@ -507,25 +351,3 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 };
 
 export default Careers;
-<<<<<<< HEAD:src_backup/pages/Careers.tsx
-<<<<<<< HEAD:src/pages/Careers.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-  );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
-  );
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/pages/Careers.tsx
-=======
-  );
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/pages.disabled/Careers.tsx

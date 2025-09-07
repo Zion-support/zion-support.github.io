@@ -1,20 +1,6 @@
 import { GetServerSideProps } from 'next';
 
-  };      permanent: true}}
-
-export default function ApiDocsRedirect() { return null; }
-}'
-      destination: '/developers / docs',
-      permanent: true,
-    },
-  }      permanent: true}}
+export default function ApiDocsRedirect() {
+  return null;
 }
-;
-export default /**;
- * ApiDocsRedirect - Function description;
- */
-function ApiDocsRedirect() {}
-}
-;
-
-export const getServerSideProps: GetServerSideProps;
+origin/cursor/automate-test-improve-and-merge-code-2533

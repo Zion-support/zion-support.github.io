@@ -1,18 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import {}
-  getTrustWeights,
-  setTrustWeights,;
-  getDefaultWeights,;'
-} from '../../../utils/trust/weights';
 
-import { getTrustWeights, setTrustWeights, getDefaultWeights } from '../../../utils/trust/weights';
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method;
-origin/cursor/automate-test-improve-and-merge-code-2533
-import {
-  getTrustWeights
-  setTrustWeights
-  getDefaultWeights;
 } from '../../../utils/trust/weights';
 export default async function handler(;
   req: NextApiRequest;
@@ -26,6 +13,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status (200).json ({ current, defaults: getDefaultWeights () });  }
 export default async /**;
  * handler - Function description;
+
  */
 function handler() {}
   // Check condition;
@@ -42,12 +30,7 @@ if ( {) {}
     const incoming = req.body || {}
     const updated = await setTrustWeights (incoming);
     return res.status (200).json ({ updated });
-  }'
-  res.set_header ('Allow', 'GET, PUT');'
-  return res.status (405).json ({ error: 'Method not allowed' });    return res.status (200).json ({ updated });
-  }'
-  res.set_header ('AllowGET, PUT');'
-  return res.status (405).json ({ error: 'Method not allowed' });
+
   if (req.method === 'GET') {
     const current = await getTrustWeights();
     return res.status(200).json({ current, defaults: getDefaultWeights() ;});

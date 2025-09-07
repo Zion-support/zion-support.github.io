@@ -1,47 +1,12 @@
-<<<<<<< HEAD:pages_backup/admin/notes.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD:pages/admin/notes.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { useEffect, useState } from 'react';
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-
-  const [isAdmin, setIsAdmin] = useState(true);
+const [isAdmin, setIsAdmin] = useState(true);
   const [notes, setNotes] = useState<Note[]>([]);
   const [loading, setLoading] = useState(false);
 
-
-<<<<<<< HEAD
-=======
-=======
-type Note = any;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-type Note = any;
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/notes.tsx
-=======
-type Note = any;
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   useEffect(() => {
     async function load() {
       setLoading(true)
       try {
-<<<<<<< HEAD
-<<<<<<< HEAD:pages/admin/notes.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   id: string,
   target_type: string,
   target_id: string,
@@ -70,103 +35,12 @@ function load() {
       } finally {;
         setLoading(false);
         } catch (error) {
-=======
 
-
-  return (
-    <div className="space-y-4">
-      <div className="flex items-center justify-between">
-        <h1 className="text-xl font-semibold">Admin Notes</h1>
-        <label className="inline-flex items-center gap-2 text-sm">
-          <input type="checkbox" checked={isAdmin} onChange={(e) => setIsAdmin(e.target.checked)} />
-          <span>Admin</span>
-        </label>
-      </div>
-      {loading ? (
-        <div>Loading…</div>
-      ) : notes.length === 0 ? (
-        <div className="opacity-70">No notes found.</div>
-<div className='opacity-70'>No notes found.</div>
-      ) : (
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-          {notes.map((n) => (
-            <div key={n.id} className="rounded border p-3 text-sm">
-          ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-
-}
-        </div>;
-      )  } catch (error) {
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/admin/notes.tsx
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD:pages_backup/admin/notes.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
-    if (load ()) {
-  $2
-}
-  }, [is_admin]),
-  return (
-    <div className="space - y-4">;
-      <div className="flex items - center justify - between">;
-        <h1 className="text - xl font - semibold">Admin Notes</h1>;
-        <label className="inline - flex items - center gap - 2 text - sm">;
-          <input type="checkbox" checked={is_admin} on_change={(e) => setIsAdmin (e.target.checked)} />;
-          <span > Admin</span>;
-        </label>;
-      </div>;
-      {loading ? (
-        <div > Loading…</div>) : notes.length === 0 ? (
-        <div className="opacity - 70">No notes found.</div>) : (
-        <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 3">;
-          {notes.map ((n) => (
-            <div key={n.id} className="rounded border p - 3 text - sm">;
-              <div className="opacity - 60 text - xs mb - 1">{new Date (n.created_at).toLocaleString ()} • {n.author_id}</div>;
-              <div className="font - medium mb - 1">{n.target_type} • {n.target_id}</div>;
-              <div>{n.text}</div>;
-            </div>))}
-        </div>)}
-    </div>);
-}
-
-    }
-    if (isAdmin) load()
-  }, [isAdmin]);
-
-  return (
-    <div className=&quot;space-y-4&quot;>
-      <div className=&quot;flex items-center justify-between&quot;>
-        <h1 className=&quot;text-xl font-semibold&quot;>Admin Notes</h1>
-        <label className=&quot;inline-flex items-center gap-2 text-sm&quot;>
-          <input type=&quot;checkbox&quot; checked={isAdmin} onChange={(e) => setIsAdmin(e.target.checked)} />
-          <span>Admin</span>
-        </label>
-      </div>
-
-      {_loading ? (
-        <div>Loading…</div>
-      ) : notes.length === 0 ? (
-        <div className=&quot;opacity-70&quot;>No notes found.</div>
-      ) : (
-        <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-3&quot;>
-          {notes.map((n) => (
-            <div key={n.id} className=&quot;rounded border p-3 text-sm&quot;>
-              <div className=&quot;opacity-60 text-xs mb-1&quot;>{new Date(n.createdAt).toLocaleString()} • {n.authorId}</div>
-              <div className=&quot;font-medium mb-1&quot;>{n.targetType} • {n.targetId}</div>
-        const res = await fetch('/api/admin/notes-all', { headers: { 'X-Admin': isAdmin ? 'true' : 'false' } })
-        if (!res.ok) return
-        const data = await res.json()
-        setNotes(data.notes |[])
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/admin/notes.tsx
       } finally {
         setLoading(false)
       }
@@ -174,21 +48,6 @@ function load() {
     if (isAdmin) load()
   }, [isAdmin])
 
-<<<<<<< HEAD:pages_backup/admin/notes.tsx
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-import { useEffect, useState } from 'react',;
-;
-import { useEffect, useState } from 'react';
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/admin/notes.tsx
 type Note = {
   id: string;
   targetType: string;
@@ -217,30 +76,7 @@ export default function AdminNotesConsole(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD:pages_backup/admin/notes.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-    if (isAdmin) load()
-  }, [isAdmin]),
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/notes.tsx
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 const res = await fetch('/api/admin/notes-all', {
           headers: { 'X-Admin': isAdmin ? 'true' : 'false' },
         });
@@ -264,16 +100,7 @@ const res = await fetch('/api/admin/notes-all', {
             checked={isAdmin}
             onChange={e => setIsAdmin(e.target.checked)}
           />
-<<<<<<< HEAD
-<<<<<<< HEAD:pages/admin/notes.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/notes.tsx
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+
   return (
     <div className="space-y-4">
       <div className="flex items-center justify-between">
@@ -286,106 +113,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       {loading ? (
         <div>Loading…</div>
       ) : notes.length === 0 ? (
-<<<<<<< HEAD
-        <div className="opacity-70">No notes found.</div>
-      ) : (
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-          {notes.map((n) => (
-            <div key={n.id} className="rounded border p-3 text-sm">
-<<<<<<< HEAD
-              <div className="opacity-60 text-xs mb-1">{new Date(n.createdAt).toLocaleString()} • {n.authorId}</div>
-              <div className="font-medium mb-1">{n.targetType} • {n.targetId}</div>
-              <div>{n.text}</div>
-            </div>
-          ))}
-        </div>
-      )}
-    </div>
-  );
-};
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<div className='opacity-70'>No notes found.</div>
-      ) : (
-<<<<<<< HEAD
-<<<<<<< HEAD:pages/admin/notes.tsx
-<<<<<<< HEAD
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-          {notes.map((n) => (
-            <div key={n.id} className="rounded border p-3 text-sm">
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-          ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-}
-<<<<<<< HEAD
-=======
-
-}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-        </div>;
-      )  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-<<<<<<< HEAD
-<<<<<<< HEAD
-    </div>;
-  );
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-}
-
-type Note = {
-  id: string;
-  targetType: string;
-  targetId: string;
-  text: string;
-  authorId: string;
-  createdAt: number;
-};
-export default function AdminNotesConsole(req, res) {
-  try {
-  const [isAdmin, setIsAdmin] = useState(true);
-  const [notes, setNotes] = useState<Note[]>([]);
-  const [loading, setLoading] = useState(false);
-  useEffect(() => {;
-    async function load() {;
-      setLoading(true);
-      try {
-        const res = await fetch('/api/admin/notes-all', { headers: { 'X-Admin': isAdmin ? 'true' : 'false' } });
-        if (!res.ok) return,;
-        const data = await res.json();
-        setNotes(data.notes || []);
-      } finally {;
-        setLoading(false);
-        } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-=======
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-=======
-
-=======
-    if (load ()) {
-  $2
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
   }, [is_admin]),
   return (
@@ -409,60 +137,9 @@ export default function AdminNotesConsole(req, res) {
             </div>))}
         </div>)}
     </div>);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+
 }
 
-
-=======
-<<<<<<< HEAD
-    }
-    if (isAdmin) load()
-  }, [isAdmin]);
-
-  return (
-    <div className=&quot;space-y-4&quot;>
-      <div className=&quot;flex items-center justify-between&quot;>
-        <h1 className=&quot;text-xl font-semibold&quot;>Admin Notes</h1>
-        <label className=&quot;inline-flex items-center gap-2 text-sm&quot;>
-          <input type=&quot;checkbox&quot; checked={isAdmin} onChange={(e) => setIsAdmin(e.target.checked)} />
-          <span>Admin</span>
-        </label>
-      </div>
-
-      {_loading ? (
-        <div>Loading…</div>
-      ) : notes.length === 0 ? (
-        <div className=&quot;opacity-70&quot;>No notes found.</div>
-      ) : (
-        <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-3&quot;>
-          {notes.map((n) => (
-            <div key={n.id} className=&quot;rounded border p-3 text-sm&quot;>
-              <div className=&quot;opacity-60 text-xs mb-1&quot;>{new Date(n.createdAt).toLocaleString()} • {n.authorId}</div>
-              <div className=&quot;font-medium mb-1&quot;>{n.targetType} • {n.targetId}</div>
-=======
-        const res = await fetch('/api/admin/notes-all', { headers: { 'X-Admin': isAdmin ? 'true' : 'false' } })
-        if (!res.ok) return
-        const data = await res.json()
-        setNotes(data.notes |[])
-      } finally {
-        setLoading(false)
-      }
-    }
-    if (isAdmin) load()
-  }, [isAdmin])
-
-=======
-=======
-<<<<<<< HEAD
-import { useEffect, useState } from 'react',;
-;
-=======
-import { useEffect, useState } from 'react';
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 type Note = {
   id: string;
   targetType: string;
@@ -490,7 +167,7 @@ export default function AdminNotesConsole(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+
 }
       } catch (error) {
     console.error("Error:", error);
@@ -540,24 +217,7 @@ export default function AdminNotesConsole(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-=======
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/notes.tsx
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/admin/notes.tsx
         <div className='grid grid-cols-1 md:grid-cols-2 gap-3'>
           {notes.map(n => (
             <div key={n.id} className='rounded border p-3 text-sm'>
@@ -670,17 +330,3 @@ export default function AdminNotesConsole(req, res) {
       </main>
     </>
   );
-<<<<<<< HEAD:pages_backup/admin/notes.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD:pages/admin/notes.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/admin/notes.tsx
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/admin/notes.tsx

@@ -1,5 +1,5 @@
 import React from 'react';
-export default ModernLayout.dynamic;
+
 ;
 const ModernLayout.dynamic = () => {}
   return (
@@ -16,4 +16,3 @@ const ModernLayout.dynamic = () => ;
 
 pr-12243
 export default ModernLayout.dynamic;
-

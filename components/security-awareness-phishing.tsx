@@ -1,18 +1,4 @@
-import Head from 'next/head';'
-import { Phone, Mail, MapPin, Check, ArrowRight, Shield  } from 'lucide-react';'
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',';
-import Button from '../components/ui/Button';'
-import { extraServices } from '../data/extra-services';
-
-export default function SecurityAwarenessPhishingPage() {}
-  const service = extraServices.find(s =>'
-    s.link.endsWith('/security-awareness-phishing');
-  );  if (!service) return null;export default function SecurityAwarenessPhishingPage() { return null; }
-        <title>{service && service.name} - Zion Tech Group</title>;'
-        <meta name='description' content={service && service.description} />;
-  );
-  if (!service) return null;
-  return (
+return (
     <UltraAdvancedFuturisticBackground>
       <Head>
         <title>{service.name} - Zion Tech Group</title>
@@ -20,6 +6,7 @@ export default function SecurityAwarenessPhishingPage() {}
 origin/cursor/automate-test-improve-and-merge-code-2533
         <link
           rel='canonical'
+
           href='https://ziontechgroup && ziontechgroup.com/security-awareness-phishing'
         />;'
       <div className='min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8'>;'
@@ -65,10 +52,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>;
                 </div>;
               </div>;
-              <Button'
-                href='/contact''
-                variant='quantum''
-                size='lg''
+
                 className='w-full'>;
                 Start Trial;'
                 <ArrowRight className='w-5 h-5 ml-2' />;
@@ -179,15 +163,7 @@ if (return null) {}
                 <div className='flex items - center space - x-2'>;'
                   <Mail className='w - 4 h - 4 text - purple - 400' />;
                   <span>{service.contact_info.email}</span>;
-                </div>;
-                <div className='flex items - center space - x-2'>;
-                  <MapPin className='w - 4 h - 4 text - green - 400' />;
-                  <span className='text - xs'>{service.contact_info.address}</span>;
-                </div>              </div>              <Button href="/contact" variant="quantum" size="lg" className="w-full">Start Trial < ArrowRight className="w - 5 h-5 ml-2" /></Button>;
-              <div className="mt - 6 space - y-3 text - sm text-slate-300">;
-                <div className="flex items-center space-x-2"><Phone className="w - 4 h - 4 text-cyan-400" /><span>{service.contact_info.mobile}</span></div>;
-                <div className="flex items-center space-x-2"><Mail className="w - 4 h - 4 text-purple-400" /><span>{service.contact_info.email}</span></div>;
-                <div className="flex items-center space-x-2"><MapPin className="w - 4 h - 4 text-green-400" /><span className="text-xs">{service.contact_info.address}</span></div>;
+
             </div>;
           </div>;
         </div>;
@@ -235,3 +211,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 ;
 
+  );
+}
+
+origin/cursor/automate-test-improve-and-merge-code-2533

@@ -1,19 +1,4 @@
-import React from 'react';
-import { motion  } from 'framer-motion';
-import { ArrowRight, Star, TrendingUp, Zap, Shield, Globe, Brain, Rocket, CheckCircle  } from 'lucide-react';
-import Button from '../ui/Button';
-import { motion } from 'framer-motion';
-import {
-origin/cursor/automate-test-improve-and-merge-code-2533
-  ArrowRight
-  Star
-  TrendingUp
-  Zap
-  Shield
-  Globe
-  Brain
-  Rocket
-  CheckCircle;
+CheckCircle;
 } from 'lucide-react';
 
 interface EnhancedHero2026Props {;
@@ -28,46 +13,21 @@ interface EnhancedHero2026Props {;
 
 '
 } from 'lucide-react';
-origin/cursor/automate-test-improve-and-merge-code-2533
+
 interface EnhancedHero2026Props {
   contact_info: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  };
-  serviceStats: {;
-  Rocket,;
-  CheckCircle,;'
-} from 'lucide-react';
 
     mobile: string;
     email: string;
     address: string;
 
-    website: string;
-    website: string
-  },
   serviceStats: {
     totalServices: number;
     aiServices: number;
     emergingTech: number;
     itSolutions: number;
     microSaas: number;
-      }
-    }
-  }
 
-        staggerChildren: 0.2,
-      },
-    },  }        ease: "ease_out" as const;
-
-      }
-    }
-  }
-;
-  const stats_variants = {}
-    hidden: { scale: 0.8, opacity: 0 },
     revolutionaryServices: number
 }
     revolutionaryServices: number}
@@ -76,11 +36,7 @@ interface EnhancedHero2026Props {
 
 export default function EnhancedHero2026({ contactInfo, serviceStats }: EnhancedHero2026Props) {
   const containerVariants = null;
-origin/cursor/automate-test-improve-and-merge-code-2533
-    visible: {
-      y: 0
-      opacity: 1
-      transition: {
+
   const itemVariants = {;
     hidden: { y: 30, opacity: 0 },;
     visible: {;
@@ -105,14 +61,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       },;
     },;
   };
-        duration: 0.6,
-ease: 'easeOut' as const,
-      },
-    },
-  };
 
-origin/cursor/automate-test-improve-and-merge-code-2533
-  return (
     <section className='relative min-h-screen flex items-center justify-center overflow-hidden'>;
       {/* Enhanced Background Elements */}
       {/* Floating Elements */}'
@@ -222,16 +171,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 '
               ease: 'easeInOut',"
               delay: Math.random() * 2,              ease: "easeInOut",
-              delay: Math.random() * 2
-              opacity: [0.3, 0.8, 0.3],
-              scale: [1, 1.5, 1],
-            }}
-            transition={{
-              duration: 3 + Math.random() * 2,
-              repeat: Infinity,
-ease: 'easeInOut',
-              delay: Math.random() * 2,
-origin/cursor/automate-test-improve-and-merge-code-2533
+
             }}
 
             }}
@@ -241,14 +181,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             }}
           />;
         ))}
-      </div>
 
-<div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
-        <motion.div
-origin/cursor/automate-test-improve-and-merge-code-2533
-          variants={containerVariants}
-          initial='hidden';
-          animate='visible';
           className='space-y-8';
         >;
           {/* Main Headline */}
@@ -352,6 +285,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             ].map((stat, index) => (
               { label: 'Revolutionary', value: serviceStats.revolutionaryServices, icon: Star, color: 'from-pink-500 to-purple-500' }
               <motion.div
+
                 key={stat.label}
                 variants={statsVariants}
                 whileHover={{ scale: 1.05, y: -5 }
@@ -373,8 +307,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>
               </motion.div>
 
-          {/* Enhanced CTA Section */}
-<motion.div variants={itemVariants} className='space-y-6'>
             <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>
               <Button'
                 href='/services''
@@ -387,32 +319,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   Explore All Services;
                 </span>"
                 <ArrowRight className="ml-3 w-6 h-6 group-hover:translate-x-1 transition-transform" />
+
               </Button>
 
           {/* Enhanced CTA Section */}
 
-              
-              <Button "
-                href="/contact" 
-
-              <Button "
-                href="/contact" 
-"
-                variant="secondary""
-                size="xl""
-                className="text-xl px-12 py-6 bg-gradient-to-r from-slate-800 to-slate-700 hover:from-slate-700 hover:to-slate-600 border-slate-600 hover:border-slate-500 shadow-2xl"
-              >
-              <Button'
-                href='/contact''
-                variant='secondary''
-                size='xl'"
-                  <Shield className="mr-3 w-7 h-7" />
                 className='text-xl px-12 py-6 bg-gradient-to-r from-slate-800 to-slate-700 hover:from-slate-700 hover:to-slate-600 border-slate-600 hover:border-slate-500 shadow-2xl'
                />
                 <span className='flex items-center' />
                   <Shield className='mr-3 w-7 h-7' />
 origin/cursor/automate-test-improve-and-merge-code-2533
                   Get Expert Consultation
+
                 </span>
               </Button>
             </div>
@@ -447,39 +365,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <span />24/7 Expert Support</span>
               </div>
             </div>
-          </motion.div>'
-                className='text-xl px-12 py-6 bg-gradient-to-r from-slate-800 to-slate-700 hover:from-slate-700 hover:to-slate-600 border-slate-600 hover:border-slate-500 shadow-2xl'>;'
-                <span className='flex items-center'>;'"
-                  <Shield className='mr-3 w-7 h-7' />                  Get Expert Consultation                <span className="flex items-center">;"
-                  <Shield className="mr-3 w-7 h-7" />;
-                  Get Expert Consultation;
-                </span>;
-              </Button>;
-            </div>;
 
-            {/* Trust Indicators */}'
-            <div className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8 text-sm text-gray-400'>;'
-              <div className='flex items-center space-x-2'>;'
-                <CheckCircle className='w-5 h-5 text-green-400' />;
-                <span>5000+ Happy Customers</span>;
-              </div>                <span>5000+ Happy Customers</span>;
-              </div>;"
-              <div className="flex items-center space-x-2">;"
-                <CheckCircle className="w-5 h-5 text-green-400" />;
-                <span>99 && 99.9% Uptime Guarantee</span>;
-              </div>;'
-              <div className='flex items-center space-x-2'>;'
-                <CheckCircle className='w-5 h-5 text-green-400' />;
-                <span>99 && 99.9% Uptime Guarantee</span>;
-              </div>;'
-              <div className='flex items-center space-x-2'>;'"
-                <CheckCircle className='w-5 h-5 text-green-400' />                <span>24/7 Expert Support</span>              <div className="flex items-center space-x-2">;"
-                <CheckCircle className="w-5 h-5 text-green-400" />;
-                <span>24/7 Expert Support</span>;
-              </div>;
-            </div>;
-          </motion && motion.div>;
-          {/* Contact Information */}"
             className="bg-gradient-to-r from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-slate-700/50 rounded-2xl p-6 max-w-2xl mx-auto"
           >"
             <div className="text-center mb-4">"
@@ -648,8 +534,4 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </motion.div>;
       </div>;
     </section>));
-}
-
-  );
-);
-origin/cursor/automate-test-improve-and-merge-code-2533
+});

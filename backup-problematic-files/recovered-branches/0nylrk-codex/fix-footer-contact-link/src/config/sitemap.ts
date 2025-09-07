@@ -1,8 +1,3 @@
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 // Define the types for our sitemap structure;
 export type SitemapItem = {;
   path:string;

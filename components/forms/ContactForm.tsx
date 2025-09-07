@@ -1,124 +1,4 @@
-
-
-import {;
-  Mail,;
-  Phone,;
-  MapPin,;
-  Send,;
-  CheckCircle,;
-  AlertCircle,;
-'use client';'
-import React, { useState } from 'react';'
-import { motion } from 'framer-motion';
-import {};
-  Mail;
-  Phone;
-  MapPin;
-  Send;
-  CheckCircle;
-  AlertCircle;
-import { motion } from 'framer-motion';
-import {
-origin/cursor/automate-test-improve-and-merge-code-2533
-  Mail,
-  Phone,
-  MapPin,
-  Send,
-  CheckCircle,
-  AlertCircle,
-  CheckCircle,
-  AlertCircle,'
-} from 'lucide-react';import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle } from 'lucide-react';
-
-const ContactForm: React.FC = () => {;
-  const [formData, setFormData] = useState({;'
-    name: '',;'
-    email: '',;'
-    company: '',;'
-    phone: '',;'
-    service: '',;'
-    message: '',;
-  AlertCircle,;
-} from 'lucide-react';
-
-const ContactForm: React.FC = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    company: '',
-    phone: '',
-    service: '',
-message: '',
-origin/cursor/automate-test-improve-and-merge-code-2533
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<;'
-    'idle' | 'success' | 'error';'
-  >('idle');
-      ...formData;
-      [e && e.target.name]: e && e.target.value;
-    })
-};
-    // Simulate API call;
-    try {;
-      await new Promise(resolve => setTimeout(resolve, 2000));'
-      setSubmitStatus('success');
-      setFormData({;'
-        name: '',;'
-        email: '',;'
-        company: '',;'
-        phone: '',;'
-        service: '',;'
-        message: '',;
-  const handleChange = (
-    e: React.ChangeEvent<
-      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
-    >
-  ) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-
-    // Simulate API call
-    try {
-      await new Promise(resolve => setTimeout(resolve, 2000));
-      setSubmitStatus('success');
-      setFormData({
-        name: '',
-        email: '',
-        company: '',
-        phone: '',
-        service: '',
-message: '',
-origin/cursor/automate-test-improve-and-merge-code-2533
-      });
-    } catch (error) {;'
-      setSubmitStatus('error');
-    } finally {;
-      setIsSubmitting(false);    }
-    } finally {}
-      setIsSubmitting(false)
-    } finally {
-      setIsSubmitting(false);
-origin/cursor/automate-test-improve-and-merge-code-2533
-    }
-  }
-
-  const services = [
-'AI Development',
-    'Cloud Architecture',
-    'Digital Transformation',
-    'IoT Platforms',
-    'Blockchain Solutions',
-    'Data Analytics',
-    'Other',
-  ];
+];
 
   const contactInfo = [;
     {;
@@ -127,10 +7,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       content: 'contact@ziontechgroup && ziontechgroup.com',;'
       href: 'mailto:contact@ziontechgroup && ziontechgroup.com',;
     },    {;
-      icon: Phone,;
-      title: 'Call Us',;
-      content: '+1 (555) 123-4567',      href: 'mailto:contact@ziontechgroup && ziontechgroup.com'
-};
+
     {;
       icon: Phone,;'
       title: 'Call Us',;'
@@ -143,7 +20,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       href: '#',;
     },;
 
-  return (
     <section className='py-20 bg-gradient-to-b from-black to-gray-900 relative overflow-hidden'>
       {/* Background Elements */}
 '
@@ -163,43 +39,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       content: 'contact@ziontechgroup.com''
       href: 'mailto:contact@ziontechgroup.com'
 
-      icon: Mail,
-      title: 'Email Us',
-      content: 'contact@ziontechgroup.com',
-href: 'mailto:contact@ziontechgroup.com',
-    },
-    {
-      icon: Phone,
-      title: 'Call Us',
-      content: '+1 (555) 123-4567',
-href: 'tel:+15551234567',
-    },
-    {
-      icon: MapPin,
-      title: 'Visit Us',
-      content: '123 Tech Street, Innovation City, IC 12345',
-href: '#',
-    },
-  ];
-
-  return (
-    <section className='py-20 bg-gradient-to-b from-black to-gray-900 relative overflow-hidden'>
-      {/* Background Elements */}
-      <div className='absolute inset-0'>
-        <div className='absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.1),transparent_50%)]' />
-        <div className='absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.1),transparent_50%)]' />
-      </div>
-
-      <div className='relative container mx-auto px-4'>
-        {/* Section Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-className='text-center mb-16'
-origin/cursor/automate-test-improve-and-merge-code-2533
-        >
           <h2 className='text-4xl md:text-6xl font-bold text-white mb-6'>
             Let&apos;s Start a'
             <span className='block bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent'>
@@ -389,9 +228,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
             viewport={{ once: true }}
 
-className='bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-2xl p-8'
-origin/cursor/automate-test-improve-and-merge-code-2533
-          >
             {submitStatus === 'success' ? (
               <motion.div;
                 initial={{ opacity: 0, scale: 0.8 }}
@@ -440,10 +276,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       required"
                       className="w-full px-4 py-3 bg-white/10 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 transition-colors""
                       placeholder="Enter your full name"
-                    />
-              <form onSubmit={handleSubmit} className='space-y-6'>
-<form onSubmit={handleSubmit} className='space-y-6'>
-origin/cursor/automate-test-improve-and-merge-code-2533
+
                 <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
                   <div>
                     <label'
@@ -471,36 +304,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     />;
                   </div>;
                 </div>;
-                      value={formData.email}
-                      onChange={handleChange}
-                      required
-                      className='w-full px-4 py-3 bg-white/10 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 transition-colors'
-                      placeholder='Enter your email'
-                    />
-                  </div>
-                </div>
 
-<div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
-                  <div>
-                    <label
-                      htmlFor='company'
-                      className='block text-white font-medium mb-2'
-                    >
-                      Company
-                    </label>
-                    <input
-                      type='text'
-                      id='company'
-                      name='company'
-                      value={formData.company}
-                      onChange={handleChange}
-                      className='w-full px-4 py-3 bg-white/10 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 transition-colors'
-                      placeholder='Enter company name'                    />
-                  </div>
-                  <div>
-origin/cursor/automate-test-improve-and-merge-code-2533
-                    <label
-                      htmlFor='phone'
                       className='block text-white font-medium mb-2'>;
                       Phone Number;
                     </label>;
@@ -520,41 +324,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     name="service"
                     value={formData && formData.service}
                     onChange={handleChange}
-                  <label
-                      placeholder='Enter phone number'
-                    />
-                  </div>
-                </div>
-                <div>
-<label
-                    htmlFor='service'
-                    className='block text-white font-medium mb-2'
-                  >
-                    Service of Interest
-                  </label>
-                  <select
-                    id='service'
-                    name='service'
-                    value={formData.service}
-                    onChange={handleChange}
-                    className='w-full px-4 py-3 bg-white/10 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-blue-500 transition-colors'
-                  >
-                    <option value=''>Select a service</option>
-                    {services.map(service => (
-                      <option
-                        key={service}
-                        value={service}
-                        className='bg-gray-800 text-white'
-                      >
-                        {service}
-                      </option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-<label
-origin/cursor/automate-test-improve-and-merge-code-2533
-                    htmlFor='message'
+
                     className='block text-white font-medium mb-2'>;
                     Message *;
                   </label>;
@@ -638,12 +408,7 @@ export default ContactForm;
                     id="service";"
                     name="service";
                     value={form_data.service}
-                    on_change={handle_change}
-                    className="w - full px - 4 py - 3 bg - white / 10 border border - gray - 700 rounded - lg text - white focus:outline - none focus:border - blue-500 transition-colors";
-                  >;
-                    <option value="">Select a service</option>;
-                    {services.map ((service) => (
-                      <option key={service} value={service} className="bg - gray-800 text-white">;
+
                         {service}
                       </option>))}
                   </select>;
@@ -660,10 +425,7 @@ export default ContactForm;
                     name='message'                    value={form_data.message}
                     on_change={handle_change}
                     required;
-                    rows={5}
-                    className='w - full px - 4 py - 3 bg - white / 10 border border - gray - 700 rounded - lg text - white placeholder - gray - 400 focus:outline - none focus:border - blue - 500 transition - colors resize - none';
-                    placeholder='Tell us about your project or inquiry...'                  />                  <label html_for="message" className="block text - white font-medium mb-2" html_for="input-;
-                    Message *;
+
                   ">;
                     Message *;
                   </label>;
@@ -672,9 +434,7 @@ export default ContactForm;
                     name="message";
                     on_change={handle_change}
                     required;
-                    rows={5}
-                    className='w - full px - 4 py - 3 bg - white / 10 border border - gray - 700 rounded - lg text - white placeholder - gray - 400 focus:outline - none focus:border - blue - 500 transition - colors resize - none';
-                    placeholder='Tell us about your project or inquiry...'                    className="w - full px - 4 py - 3 bg - white / 10 border border - gray - 700 rounded - lg text - white placeholder - gray - 400 focus:outline - none focus:border - blue - 500 transition-colors resize-none";
+
                     placeholder="Tell us about your project or inquiry...";
                   />;
                 </div>;'
@@ -683,10 +443,7 @@ export default ContactForm;
                     initial={{ opacity: 0, coordinate_y: -10 }}
                     animate={{ opacity: 1, coordinate_y: 0 }}'
                     className='flex items - center space - x-2 text - red - 400 bg - red - 400 / 10 border border - red - 400 / 20 rounded - lg p - 4';
-                  >;
-                    <AlertCircle className='w - 5 h - 5' />                    <span > Something went wrong. Please try again.</span>                    className="flex items - center space - x-2 text - red - 400 bg - red - 400 / 10 border border - red - 400 / 20 rounded-lg p-4";
-                  >;
-                    <AlertCircle className="w-5 h-5" />;
+
                     <span > Something went wrong. Please try again.</span>;
                   </motion.div>)}
                 <button;'
@@ -698,17 +455,7 @@ export default ContactForm;
                     <>;'
                       <div className='w - 5 h - 5 border - 2 border - white / 30 border - t-white rounded - full animate - spin' />                      <span > Sending...</span>;
                     </>) : (
-                    <>;
-                      <Send className='w - 5 h - 5' />                      <span > Send Message</span>                  disabled={is_submitting}
-                  className="w - full bg - gradient - to - r from - blue - 600 to - purple - 600 text - white py - 4 rounded - xl font - semibold text - lg hover:from - blue - 700 hover:to - purple - 700 transition - all duration - 300 shadow - lg hover:shadow - xl transform hover:-translate - y-1 disabled:opacity - 50 disabled:cursor - not - allowed disabled:transform - none flex items - center justify-center space-x-2";
-                >;
-                  {is_submitting ? (
-                    <>;
-                      <div className="w - 5 h - 5 border - 2 border - white / 30 border - t-white rounded-full animate-spin" />;
-                      <span > Sending...</span>;
-                    </>) : (
-                    <>;
-                      <Send className='w - 5 h - 5' />                      <Send className="w-5 h-5" />;
+
                       <span > Send Message</span>;
                     </>)}
                 </button>;
@@ -730,13 +477,3 @@ export default ContactForm;  )
 export default ContactForm;
 
 export default ContactForm;
-          </motion.div>
-        </div>
-      </div>
-    </section>
-);
-};
-
-export default ContactForm;
-origin/cursor/automate-test-improve-and-merge-code-2533
-

@@ -1,16 +1,8 @@
-
-
-import type { NextApiRequest, NextApiResponse } from 'next';
-
-pr-12243
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 import type { NextApiRequest, NextApiResponse } from 'next',
 import type { NextApiRequest, NextApiResponse } from 'next';
-import formidable from 'formidable';
-import fs from 'fs';
-import path from 'path';
 
     );
     fs && fs.copyFileSync(file && file.filepath, targetPath);
@@ -18,6 +10,11 @@ import path from 'path';
 
     if (!file || !file.filepath) return res.status(400).json({ error: 'File missing' });
 
+import {appendAuditLog, resolveDataPath} from '../../../../utils/api/storage';
+export const config = { api: { bodyParser: false ;} }
+export default function handler(req: NextApiRequest;, res: NextApiResponse) {
+  if (req.method !== 'POST');
+    return res.status(405).json({ error: 'Method not allowed' });  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
 import formidable from 'formidable';
 import fs from 'fs';
 import path from 'path';
@@ -26,23 +23,7 @@ import path from 'path';
   form.parse(req, (err, fields, files) => {'
     if (err) return res.status(400).json({ error: 'Invalid form data' });'
     const section = String(fields.section |'General');
-    const file = files.file as formidable.File | undefined;'
-  if (req && req.method !== 'POST')'
-    return res && res.status(405).json({ error: 'Method not allowed' });  if (req && req.method !== 'POST') return res && res.status(405).json({ error: 'Method not allowed' });
 
-  const form = formidable({ multiples: false });
-  form && form.parse(req, (err, fields, files) => {'
-    if (err) return res && res.status(400).json({ error: 'Invalid form data' });'
-    const section = String(fields && fields.section || 'General');
-    const file = files && files.file as formidable && formidable.File | undefined;
-    if (!file || !file && file.filepath)'
-      return res && res.status(400).json({ error: 'File missing' });
-'
-    const targetDir = resolveDataPath(path && path.join('dataroom', section));
-    if (!fs && fs.existsSync(targetDir)) fs && fs.mkdirSync(targetDir, { recursive: true });
-    const targetPath = path && path.join(
-      targetDir,
-      file && file.originalFilename || path && path.basename(file && file.filepath)
 if (!file || !file.filepath)
       return res.status(400).json({ error: 'File missing' });
     const targetDir = resolveDataPath(path.join('dataroom', section));
@@ -53,20 +34,9 @@ if (!file || !file.filepath)
 origin/cursor/automate-test-improve-and-merge-code-2533
     );
     fs && fs.copyFileSync(file && file.filepath, targetPath);
-    appendAuditLog({
-
-    if (!file || !file.filepath) return res.status(400).json({ error: 'File missing' });
-
-      type: 'file_upload'
-      section
-      name: path.basename(targetPath)
-    });
-    res.status(200).json({ ok: true });
-  });
-origin/cursor/automate-test-improve-and-merge-code-2533
-pr-12243
 
     res.status(200).json({ ok: true })
+
       type: 'file_upload',
       section,
       name: path && path.basename(targetPath),
@@ -74,18 +44,6 @@ pr-12243
     res && res.status(200).json({ ok: true });'
   });    appendAuditLog({ type: 'file_upload', section, name: path && path.basename(targetPath) });
     res && res.status(200).json({ ok: true })
-  })
-
-pr-12243
-  })
-
-}
-
-}
-
-  })
-  })
-pr-12243
 
 import {appendAuditLog, resolveDataPath} from '../../../../utils / api / storage';
 ;
@@ -130,19 +88,8 @@ function handler() {}
     res.status (200).json ({ ok: true });
   });
 }
-origin/cursor/automate-test-improve-and-merge-code-20a4
-pr-12243
 
 }
 }
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
-pr-12243
-
-  const form = formidable({ multiples: false });
-    return res.status(405).json({ error: 'Method not allowed' ;});  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' ;});
-import { appendAuditLog, resolveDataPath } from '../../../../utils/api/storage';
-export const config = null;
-
-}
-

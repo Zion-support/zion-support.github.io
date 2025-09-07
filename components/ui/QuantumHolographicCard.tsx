@@ -3,18 +3,7 @@ import React from 'react';
 import { motion  } from 'framer-motion';
 
 import { Star, Zap, Shield, TrendingUp, ArrowRight, ExternalLink, Check, Users, Clock, DollarSign } from 'lucide-react';
-import { motion } from 'framer-motion';
-import {
-origin/cursor/automate-test-improve-and-merge-code-2533
-  Star
-  Zap
-  Shield
-  TrendingUp
-  ArrowRight
-  ExternalLink
-  Check
-  Users
-  Clock
+
   DollarSign;
   Star,
   Zap,
@@ -29,6 +18,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 } from 'lucide-react';
 interface QuantumHolographicCardProps {}
   service: {}
+
 import {;
   Star,;
   Zap,;
@@ -72,43 +62,13 @@ interface QuantumHolographicCardProps  {service: {id: string;
       email: string;
       address: string;
 
-      website: string;
-    }
-      opacity: 1,
-      coordinate_y: 0,
-      scale: 1,
-      transition: {}
-        duration: 0.6,
-      }
-    }
-    hover: {}
-      coordinate_y: -10,
-      scale: 1.02,
-      transition: {}
-        duration: 0.3,
-      }
-    }
-  }
-;
-  const glow_variants = {}
-    initial: { opacity: 0.5, scale: 1 },
-    animate: {
-      website: string
-    },
     realImplementation: boolean;
 
     implementationDetails: string;
     launchDate: string;
     customers: number;
     rating: number;
-    reviews: number
-  },
-  className?: string
-}
 
-const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({ service, className;
-origin/cursor/automate-test-improve-and-merge-code-2533
-  const featureVariants = {
     hidden: { opacity: 0, x: -20 }
     visible: (i: number) => ({}
       opacity: 1;
@@ -175,7 +135,6 @@ ease: 'easeOut' as const,
     }),
   };
 
-  
 origin/cursor/automate-test-improve-and-merge-code-2533
     >
       {/* Holographic glow effect */}
@@ -571,18 +530,3 @@ export default QuantumHolographicCard);
 ;
 export default QuantumHolographicCard;
 ;
-              href={service.link}
-              className='inline-flex items-center space-x-2 text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-300'
-            >
-              <span>Learn more about {service.name}</span>
-              <ExternalLink className='w-3 h-3' />
-            </a>
-          </div>
-        </div>
-      </div>
-    </motion.div>
-);
-};
-
-export default QuantumHolographicCard;
-origin/cursor/automate-test-improve-and-merge-code-2533

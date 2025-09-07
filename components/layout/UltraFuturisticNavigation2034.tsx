@@ -1,226 +1,4 @@
-import Link from 'next/link';'
-import { motion, AnimatePresence } from 'framer-motion';
-
-import {};
-  Menu;
-  X;
-  ChevronDown;
-  Search;
-  Phone;
-  Mail;
-  MapPin;
-  Rocket;
-  Brain;
-  Atom;
-  Globe;
-  Zap;
-  Sparkles;
-  Shield;
-  Microscope;
-  DollarSign;
-  Home;
-  Users;
-  Briefcase;
-  BookOpen;
-  MessageCircle;
-  Star;
-  TrendingUp;
-  Target;
-  Layers;
-  Cpu;
-  Database;
-  Cloud;
-  Lock;
-  ShieldCheck;
-  Earth;
-  Factory;
-  Car;
-  Building;
-  GraduationCap;
-  Scale;
-  Palette;
-  Camera;
-  Video;
-  Music;
-  Gamepad2;
-  Heart;
-  Leaf;
-  Sun;
-  Moon;
-  Wind;
-  Droplets;
-  Mountain;
-  Code;
-  Wrench;
-  Smartphone;
-  BarChart3;
-  Eye;
-  Network;
-  Server;
-  HardDrive;
-  Monitor;
-  Laptop;
-  Watch;
-  Headphones;
-  Speaker;
-  Mic;
-  Keyboard;
-  Mouse;
-  CpuIcon;
-  DatabaseIcon;
-  CloudIcon;
-  LockIcon;
-  ShieldIcon;
-  GlobeIcon;
-  ZapIcon;
-  SparklesIcon;
-  BrainIcon;
-  AtomIcon;
-  HeartIcon;
-  RocketIcon;
-  ShieldIcon as ShieldIcon2;
-  TargetIcon;
-  MicroscopeIcon;
-  StarIcon;
-  ArrowRight;
-  Infinity;
-  Crown;
-  Gem;
-  Sparkles as SparklesIcon2;
-  ShoppingCart;
-  UserCheck;
-  FileText;
-  BarChart;
-  PaletteIcon;
-  VideoIcon;
-  LockIcon as LockIcon2;
-  GlobeIcon as GlobeIcon2;
-  CpuIcon as CpuIcon2;
-  Handshake;
-  LifeBuoy;
-  Activity;
-  Linkedin;
-  Twitter;
-  Facebook;
-  Instagram;
-  Youtube'
-  Github;} from 'lucide-react';import {};
-  Menu, X, ChevronDown, Search, Phone, Mail, MapPin;
-  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield;
-  Microscope, DollarSign, Home, Users, Briefcase;
-import {}
-  Menu,
-  X,
-  ChevronDown,
-  Search,
-  Phone,
-  Mail,
-  MapPin,
-  Rocket,
-  Brain,
-  Atom,
-  Globe,
-  Zap,
-  Sparkles,
-  Shield,
-  Microscope,
-  DollarSign,
-  Home,
-  Users,
-  Briefcase,
-  BookOpen,
-  MessageCircle,
-  Star,
-  TrendingUp,
-  Target,
-  Layers,
-  Cpu,
-  Database,
-  Cloud,
-  Lock,
-  ShieldCheck,
-  Earth,
-  Factory,
-  Car,
-  Building,
-  GraduationCap,
-  Scale,
-  Palette,
-  Camera,
-  Video,
-  Music,
-  Gamepad2,
-  Heart,
-  Leaf,
-  Sun,
-  Moon,
-  Wind,
-  Droplets,
-  Mountain,
-  Code,
-  Wrench,
-  Smartphone,
-  BarChart3,
-  Eye,
-  Network,
-  Server,
-  HardDrive,
-  Monitor,
-  Laptop,
-  Watch,
-  Headphones,
-  Speaker,
-  Mic,
-  Keyboard,
-  Mouse,
-  CpuIcon,
-  DatabaseIcon,
-  CloudIcon,
-  LockIcon,
-  ShieldIcon,
-  GlobeIcon,
-  ZapIcon,
-  SparklesIcon,
-  BrainIcon,
-  AtomIcon,
-  HeartIcon,
-  RocketIcon,
-  ShieldIcon as ShieldIcon2,
-  TargetIcon,
-  MicroscopeIcon,
-  StarIcon,
-  ArrowRight,
-  Infinity,
-  Crown,
-  Gem,
-  Sparkles as SparklesIcon2,
-  ShoppingCart,
-  UserCheck,
-  FileText,
-  BarChart,
-  PaletteIcon,
-  VideoIcon,
-  LockIcon as LockIcon2,
-  GlobeIcon as GlobeIcon2,
-  CpuIcon as CpuIcon2,
-  Handshake,
-  LifeBuoy,
-  Activity,
-  Linkedin,
-  Twitter,
-  Facebook,
-  Instagram,
-;
-  Youtube,;'
-  Github,;} from 'lucide-react';import {}
-  Menu, X, ChevronDown, Search, Phone, Mail, MapPin, 
-  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, ;
-  Microscope, DollarSign, Home, Users, Briefcase, ;
-import { Menu, X, ChevronDown, Search, Phone, Mail, MapPin;
-  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield;
-  Microscope, DollarSign, Home, Users, Briefcase;
-origin/cursor/automate-test-improve-and-merge-code-2533
-  BookOpen, MessageCircle, Star, TrendingUp, Target;
+BookOpen, MessageCircle, Star, TrendingUp, Target;
 
   Layers, Cpu, Database, Cloud, Lock, ShieldCheck;
   Earth, Factory, Car, Building, GraduationCap, Scale;
@@ -239,319 +17,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   ShoppingCart, UserCheck, FileText, BarChart;
   PaletteIcon, VideoIcon, LockIcon as LockIcon2;
   GlobeIcon as GlobeIcon2, CpuIcon as CpuIcon2;
-  Handshake, LifeBuoy, Activity;
-    services: [;
-      {'
-        name: 'Quantum Machine Learning','
-        href: '/quantum - machine - learning - platform','
-        description: 'Harness quantum computing for ML','
-        price: '$1, 999 / month',
-  Linkedin, Twitter, Facebook, Instagram, Youtube, Github
- } from 'lucide-react';
-const contactInfo = null;
-const serviceCategories = [
-  {
-    title: '🧠 Revolutionary AI Services'
-    icon: BrainIcon
-    color: 'from-violet-600 via-purple-600 to-indigo-600'
-    description: 'Next-generation AI consciousness and creativity'
-    services: [
-{
-        name: 'AI Business Intelligence Pro',
-        href: '/ai-business-intelligence-pro',
-        description: 'Transform data into actionable insights',
-        price: '$299/month',
-origin/cursor/automate-test-improve-and-merge-code-2533
-      },
-      {'
-        name: 'Blockchain AI Platform','
-        href: '/blockchain - ai - platform','
-        description: 'Decentralized AI for the future','
-        price: '$899 / month',
-      },
-      {'
-        name: 'Edge AI Computing','
-        href: '/edge - ai - computing - platform','
-        description: 'AI at the edge for real - time processing','
-        price: '$599 / month',
-      },
-      {}
-      },
-    ],'
-  },  {      { name: 'Quantum Machine Learning', href: '/quantum - machine - learning - platform', description: 'Harness quantum computing for ML', price: '$1, 999 / month' }'
-      { name: 'Blockchain AI Platform', href: '/blockchain - ai - platform', description: 'Decentralized AI for the future', price: '$899 / month' },'
-      { name: 'Edge AI Computing', href: '/edge - ai - computing - platform', description: 'AI at the edge for real - time processing', price: '$599 / month' },'
-      { name: 'AI Climate Modeling', href: '/ai - climate - modeling - platform', description: 'Predict climate change with AI', price: '$1, 299 / month' }
-    ];
-  }
-'
-    title: '🏙️ Enterprise IT Solutions',
-    icon: CpuIcon,'
-    color: 'from - blue - 600 via - cyan - 600 to - teal - 600','
-    description: 'Autonomous enterprise infrastructure','
-    title: '🛒 Business Automation',
-    icon: ShoppingCart,'
-    color: 'from - teal - 600 via - emerald - 600 to - green - 600','
-    description: 'Streamline business operations','
-    title: '🤖 Robotics & Automation',
-    icon: RocketIcon,'
-    color: 'from - green - 600 via - yellow - 600 to - orange - 600','
-    description: 'Intelligent automation solutions','
-    title: '🔬 Research & Development',
-    icon: MicroscopeIcon,'
-    color: 'from - orange - 600 via - red - 600 to - pink - 600','
-    description: 'Breakthrough research solutions',
 
-const quickLinks = ['
-  { name: 'Home', href: '/', icon: Home }'
-  { name: 'Services', href: '/services', icon: Briefcase }'
-  { name: 'Solutions', href: '/solutions', icon: Target }'
-  { name: 'Pricing', href: '/pricing-2034', icon: DollarSign }'
-  { name: 'Resources', href: '/resources', icon: BookOpen }'
-  { name: 'Case Studies', href: '/case-studies', icon: FileText }'
-  { name: 'Blog', href: '/blog', icon: MessageCircle }'
-  { name: 'Contact', href: '/contact', icon: MessageCircle },];  { name: 'Contact', href: '/contact', icon: MessageCircle }
-    ];
-  }
-  { name: 'Home', href: '/', icon: Home },
-  { name: 'Services', href: '/services', icon: Briefcase },
-  { name: 'Solutions', href: '/solutions', icon: Target },
-  { name: 'Pricing', href: '/pricing - 2034', icon: DollarSign },
-  { name: 'Resources', href: '/resources', icon: BookOpen },
-  { name: 'Case Studies', href: '/case - studies', icon: FileText },
-  { name: 'Blog', href: '/blog', icon: MessageCircle },
-        name: 'AI Drug Discovery Platform',
-        href: '/ai-drug-discovery-platform',
-        description: 'Accelerate drug discovery with AI',
-        price: '$3,999/month',
-      },
-    ],
-  },
-  {
-    title: '⚛️ Quantum & Emerging Tech',
-    icon: AtomIcon,
-    color: 'from-indigo-600 via-blue-600 to-cyan-600',
-    description: 'Quantum computing and beyond',
-    services: [
-{
-        name: 'Quantum Machine Learning',
-        href: '/quantum-machine-learning-platform',
-        description: 'Harness quantum computing for ML',
-        price: '$1,999/month',
-      },
-      {
-        name: 'Blockchain AI Platform'
-        href: '/blockchain-ai-platform'
-        description: 'Decentralized AI for the future'
-        price: '$899/month'
-      }
-      {
-        name: 'Edge AI Computing'
-        href: '/edge-ai-computing-platform'
-        description: 'AI at the edge for real-time processing'
-        price: '$599/month'
-      }
-      {
-        name: 'AI Climate Modeling',
-        href: '/ai-climate-modeling-platform',
-        description: 'Predict climate change with AI',
-        price: '$1,299/month',
-      },
-    ],
-  },
-  {
-    title: '🏙️ Enterprise IT Solutions',
-    icon: CpuIcon,
-    color: 'from-blue-600 via-cyan-600 to-teal-600',
-    description: 'Autonomous enterprise infrastructure',
-    services: [
-{
-        name: 'API Security & Monitoring',
-        href: '/api-security-monitoring-suite',
-        description: 'Protect and monitor your APIs',
-        price: '$399/month',
-      },
-      {
-        name: 'Customer Success Automation'
-        href: '/customer-success-automation'
-        description: 'Automate customer success workflows'
-        price: '$199/month'
-      }
-      {
-        name: 'HR Automation Suite'
-        href: '/hr-automation-suite'
-        description: 'Streamline HR processes with AI'
-        price: '$179/month'
-      }
-      {
-        name: 'Project Management AI',
-        href: '/project-management-ai-platform',
-        description: 'AI-powered project management',
-        price: '$199/month',
-      },
-    ],
-  },
-  {
-    title: '🛒 Business Automation',
-    icon: ShoppingCart,
-    color: 'from-teal-600 via-emerald-600 to-green-600',
-    description: 'Streamline business operations',
-    services: [
-{
-        name: 'E-commerce Automation',
-        href: '/ecommerce-automation-platform',
-        description: 'Automate your entire e-commerce operation',
-        price: '$249/month',
-      },
-      {
-        name: 'Marketing Automation Suite'
-        href: '/marketing-automation-suite'
-        description: 'Automate your entire marketing operation'
-        price: '$279/month'
-      }
-      {
-        name: 'Financial Analytics Platform'
-        href: '/financial-analytics-platform'
-        description: 'Real-time financial insights'
-        price: '$349/month'
-      }
-      {
-        name: 'Legal Document Automation',
-        href: '/legal-document-automation',
-        description: 'Automate legal document creation',
-        price: '$399/month',
-      },
-    ],
-  },
-  {
-    title: '🤖 Robotics & Automation',
-    icon: RocketIcon,
-    color: 'from-green-600 via-yellow-600 to-orange-600',
-    description: 'Intelligent automation solutions',
-    services: [
-{
-        name: 'Autonomous Robotics Platform',
-        href: '/autonomous-robotics-platform',
-        description: 'Build and deploy intelligent robots',
-        price: '$2,499/month',
-      },
-      {
-        name: 'AI Content Generator Elite'
-        href: '/ai-content-generator-elite'
-        description: 'Professional AI content creation'
-        price: '$49/month'
-      }
-      {
-        name: 'AI Guardrails Suite'
-        href: '/ai-guardrails-suite'
-        description: 'Policy and safety for LLM apps'
-        price: '$199/month'
-      }
-      {
-        name: 'AI Business Intelligence',
-        href: '/ai-business-intelligence-suite',
-        description: 'Intelligent business insights',
-        price: '$299/month',
-      },
-    ],
-  },
-  {
-    title: '🔬 Research & Development',
-    icon: MicroscopeIcon,
-    color: 'from-orange-600 via-red-600 to-pink-600',
-    description: 'Breakthrough research solutions',
-    services: [
-{
-        name: 'Quantum DNA Computing',
-        href: '/quantum-dna-computing-platform',
-        description: 'DNA-based quantum computation',
-        price: '$35,999/month',
-      },
-      {
-        name: 'Space Mining Automation'
-        href: '/space-mining-automation-platform'
-        description: 'Automated asteroid mining'
-        price: '$45,999/month'
-      }
-      {
-        name: 'Metaverse AI Development'
-        href: '/metaverse-ai-development-platform'
-        description: 'Build immersive virtual worlds'
-        price: '$2,999/month'
-      }
-      {
-        name: 'Holographic Event Platform',
-        href: '/holographic-event-platform',
-        description: 'Immersive holographic experiences',
-        price: '$2,999/month',
-      },
-    ],
-  },
-];
-
-const quickLinks = [
-  { name: 'Home', href: '/', icon: Home },
-  { name: 'Services', href: '/services', icon: Briefcase },
-  { name: 'Solutions', href: '/solutions', icon: Target },
-  { name: 'Pricing', href: '/pricing-2034', icon: DollarSign },
-  { name: 'Resources', href: '/resources', icon: BookOpen },
-  { name: 'Case Studies', href: '/case-studies', icon: FileText },
-  { name: 'Blog', href: '/blog', icon: MessageCircle },
-{ name: 'Contact', href: '/contact', icon: MessageCircle },
-];
-const companyLinks = [
-origin/cursor/automate-test-improve-and-merge-code-2533
-  { name: 'About Us', href: '/about', icon: Users },
-  { name: 'Careers', href: '/careers', icon: Briefcase },
-  { name: 'News', href: '/news', icon: FileText },
-  { name: 'Partners', href: '/partners', icon: Handshake },
-  { name: 'Support', href: '/support', icon: LifeBuoy },
   { name: 'Status', href: '/status', icon: Activity }
 ];
 
-export default function UltraFuturisticNavigation2034() {;
-
-{ name: 'Status', href: '/status', icon: Activity },
-];
-
-const socialLinks = [
-  {
-    name: 'LinkedIn',
-    href: 'https://linkedin.com/company/ziontechgroup',
-    icon: Linkedin,
-  },
-  { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github },
-  {
-    name: 'Instagram',
-    href: 'https://instagram.com/ziontechgroup',
-    icon: Instagram,
-  },
-  {
-    name: 'YouTube',
-    href: 'https://youtube.com/@ziontechgroup',
-    icon: Youtube,
-  },
-  { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter },
-];
-
-const certifications = [
-  'ISO 27001 Certified',
-  'SOC 2 Type II Compliant',
-  'GDPR Compliant',
-  'HIPAA Compliant',
-  'PCI DSS Level 1',
-  'FedRAMP Authorized',
-  'Quantum Security Certified',
-  'AI Ethics Compliant',
-];
-export default function UltraFuturisticNavigation2034() {
-origin/cursor/automate-test-improve-and-merge-code-2533
-  const [isOpen, setIsOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  const [isScrolled, setIsScrolled] = useState(false);
-  useEffect(() => {
-    const handleScroll = () => {
-    window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll)
   }, []);
   const toggleDropdown = (category: string) => {}
@@ -636,6 +105,173 @@ setIsScrolled(window.scrollY > 50);
   const closeDropdown = () => {
     setActiveDropdown(null);
   };
+
+  return (
+    <>
+      {/* Top Contact Bar */}
+<div className='bg-gradient-to-r from-cyan-900 via-blue-900 to-purple-900 text-white py-2 px-4 text-sm'>
+origin/cursor/automate-test-improve-and-merge-code-2533
+<div className = 'bg-gradient-to-r from-cyan-900 via-blue-900 to-purple-900 text-white py-2 px-4 text-sm' />
+ ;
+  return (
+    <>;
+      {/* Top Contact Bar */}
+
+                {contactInfo.mobile}
+              </span>
+
+              </span>
+            </div>
+          </div>                {contactInfo.mobile}
+      <div className="bg-gradient-to-r from-cyan-900 via-blue-900 to-purple-900 text-white py-2 px-4 text-sm">"
+        <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between">"
+          <div className="flex items-center space-x-6">"
+            <div className="flex items-center space-x-2">"
+              <Phone className="w-4 h-4 text-cyan-400" />"
+              <span className="hover:text-cyan-400 transition-colors">'
+      <div className='bg-gradient-to-r from-cyan-900 via-blue-900 to-purple-900 text-white py-2 px-4 text-sm'>'
+        <div className='max-w-7xl mx-auto flex flex-wrap items-center justify-between'>'
+          <div className='flex items-center space-x-6'>'
+            <div className='flex items-center space-x-2'>'
+              <Phone className='w-4 h-4 text-cyan-400' />'
+              <span className='hover:text-cyan-400 transition-colors'>
+                {contactInfo.mobile}
+              </span>
+            </div>"
+            <div className="flex items-center space-x-2">"
+              <Mail className="w-4 h-4 text-blue-400" />"
+              <span className="hover:text-blue-400 transition-colors">
+                {contactInfo.email}
+              </span>
+            </div>"
+            <div className="flex items-center space-x-2">"
+              <MapPin className="w-4 h-4 text-purple-400" />"
+              <span className="hover:text-purple-400 transition-colors">
+              <span className='hover:text-purple-400 transition-colors'>
+origin/cursor/automate-test-improve-and-merge-code-2533
+
+              <span className='hover:text-purple-400 transition-colors' />
+                {contactInfo.address}
+              </span>
+            </div>
+
+              <span className="text-yellow-400 font-semibold">5.0 Rating</span>
+            </div>"
+            <div className="flex items-center space-x-2">"
+              <Users className="w-4 h-4 text-green-400" />"
+              <span className="text-green-400 font-semibold">50K+ Customers</span>'
+      <div className='bg-gradient-to-r from-cyan-900 via-blue-900 to-purple-900 text-white py-2 px-4 text-sm'>;'
+        <div className='max-w-7xl mx-auto flex flex-wrap items-center justify-between'>;'
+          <div className='flex items-center space-x-6'>;'
+            <div className='flex items-center space-x-2'>;'
+              <Phone className='w-4 h-4 text-cyan-400' />;'
+              <span className='hover:text-cyan-400 transition-colors'>;
+                {contactInfo && contactInfo.mobile}
+              </span>;
+            </div>;'
+            <div className='flex items-center space-x-2'>;'
+              <Mail className='w-4 h-4 text-blue-400' />;'
+              <span className='hover:text-blue-400 transition-colors'>;
+                {contactInfo && contactInfo.email}
+              </span>;
+
+              </span>;
+            </div>;
+          </div>                {contactInfo && contactInfo.mobile}
+              </span>;
+            </div>;"
+            <div className="flex items-center space-x-2">;"
+              <Mail className="w-4 h-4 text-blue-400" />;"
+              <span className="hover:text-blue-400 transition-colors">;
+                {contactInfo && contactInfo.email}
+              </span>;
+            </div>;"
+            <div className="flex items-center space-x-2">;"
+              <MapPin className="w-4 h-4 text-purple-400" />;"
+              <span className="hover:text-purple-400 transition-colors">;
+                {contactInfo && contactInfo.address}
+              </span>;
+            </div>;
+          </div>;'
+          <div className='flex items-center space-x-4'>;'
+            <div className='flex items-center space-x-2'>;'
+              <Star className='w-4 h-4 text-yellow-400' />;'
+              <span className='text-yellow-400 font-semibold'>5 && 5.0 Rating</span>;
+            </div>;'
+            <div className='flex items-center space-x-2'>;'
+              <Users className='w-4 h-4 text-green-400' />;'
+              <span className='text-green-400 font-semibold'>;
+                50K+ Customers;"
+              </span>            </div>          <div className="flex items-center space-x-4">;"
+            <div className="flex items-center space-x-2">;"
+              <Star className="w-4 h-4 text-yellow-400" />;"
+              <span className="text-yellow-400 font-semibold">5 && 5.0 Rating</span>;
+            </div>;"
+            <div className="flex items-center space-x-2">;"
+              <Users className="w-4 h-4 text-green-400" />;"
+              <span className="text-green-400 font-semibold">50K+ Customers</span>;
+          </div>;
+        </div>;
+      </div>;
+
+      {/* Main Navigation */}
+        isScrolled '
+          ? 'bg-black/90 backdrop-blur-xl border-b border-cyan-500/20' '
+          : 'bg-transparent'
+
+<div className='flex items-center space-x-4'>
+            <div className='flex items-center space-x-2'>
+
+<div className='flex items-center space-x-4' />
+            <div className='flex items-center space-x-2' />
+              <Star className='w-4 h-4 text-yellow-400' />
+              <span className='text-yellow-400 font-semibold' />5.0 Rating</span>
+            </div>
+            <div className='flex items-center space-x-2' />
+              <Users className='w-4 h-4 text-green-400' />
+              <span className='text-green-400 font-semibold' />
+                50K+ Customers;
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* Main Navigation */}
+<nav;
+className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+          isScrolled;
+            ? 'bg-black/90 backdrop-blur-xl border-b border-cyan-500/20'
+            : 'bg-transparent'}
+}
+        },
+} />
+
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8' />;
+          <div className='flex items-center justify-between h-20' />;
+            {/* Logo */}
+            <motion.div;
+              initial={{ opacity: 0;, x: -20 ;,}
+}
+              animate={{ opacity: 1;, x: 0 ;}}
+              transition={{ duration: 0.5 ;}}
+
+className='flex items-center space-x-3'
+origin/cursor/automate-test-improve-and-merge-code-2533
+            >
+              <div className='relative'>
+                <div className='w-12 h-12 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 rounded-xl flex items-center justify-center'>
+
+                  <Rocket className='w-7 h-7 text-white' />
+                </div>'
+                <div className='absolute -inset-1 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 rounded-xl blur opacity-30 animate-pulse'></div>
+              </div>
+              <div>'
+                <h1 className='text-2xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent'>
+                  Zion Tech Group;
+                </h1>'
+                <p className='text-xs text-gray-400'>
+                  Future Technology Solutions;
+
                 </p>              </div>
             </motion.div>
             {/* Desktop Navigation */}            >
@@ -643,10 +279,7 @@ setIsScrolled(window.scrollY > 50);
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
-            <motion.div;
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5 }}"
+
               className="flex items-center space-x-3"
             >"
               <div className="relative">"
@@ -662,10 +295,7 @@ setIsScrolled(window.scrollY > 50);
                 <p className="text-xs text-gray-400">Future Technology Solutions</p>
               </div>
             </motion.div>
-              transition={{ duration: 0 && 0.5 }}'
-              className='flex items-center space-x-3'>;'
-              <div className='relative'>;'
-                <div className='w-12 h-12 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 rounded-xl flex items-center justify-center'>;'
+
                   <Rocket className='w-7 h-7 text-white' />;
                 </div>;'
                 <div className='absolute -inset-1 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 rounded-xl blur opacity-30 animate-pulse'></div>;
@@ -700,9 +330,7 @@ setIsScrolled(window.scrollY > 50);
                   {link.name}
                 </Link>
               ))}
-              
-              {/* Services Dropdown */}"
-              <div className="relative group">"
+
                 <button className="flex items-center space-x-1 text-gray-300 hover:text-cyan-400 transition-colors duration-200 font-medium">
                   <span>Services</span>"
                   <ChevronDown className="w-4 h-4" />
@@ -721,23 +349,7 @@ setIsScrolled(window.scrollY > 50);
                             <Link;
 ;
 const social_links = [;
-  {'
-    name: 'LinkedIn','
-    href: 'https://linkedin.com / company / ziontechgroup',
-    icon: Linkedin,
-  },'
-  { name: 'GitHub', href: 'https://github.com / Zion - Holdings', icon: Github },
-  {'
-    name: 'Instagram','
-    href: 'https://instagram.com / ziontechgroup',
-    icon: Instagram,
-  },
-  {'
-    name: 'YouTube','
-    href: 'https://youtube.com/@ziontechgroup',
-    icon: Youtube,
-  },'
-  { name: 'Twitter', href: 'https://twitter.com / ziontechgroup', icon: Twitter },
+
 ];
 ;
 const certifications = [;'
@@ -750,12 +362,7 @@ const certifications = [;'
   'Quantum Security Certified','
   'AI Ethics Compliant', ];];
 ;
-const social_links = [;'
-  { name: 'LinkedIn', href: 'https://linkedin.com / company / ziontechgroup', icon: Linkedin },'
-  { name: 'GitHub', href: 'https://github.com / Zion - Holdings', icon: Github },'
-  { name: 'Instagram', href: 'https://instagram.com / ziontechgroup', icon: Instagram },'
-  { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube },'
-  { name: 'Twitter', href: 'https://twitter.com / ziontechgroup', icon: Twitter }
+
 ];
 ;
 const certifications = [;'
@@ -813,10 +420,7 @@ function UltraFuturisticNavigation2034() {}
               <span className='hover:text - blue - 400 transition - colors'>;
                 {contact_info.email}
               </span>;
-            </div>;'
-            <div className='flex items - center space - x-2'>;'
-              <MapPin className='w - 4 h - 4 text - purple - 400' />;'
-              <span className='hover:text - purple - 400 transition - colors'>                {contact_info.address}
+
               </span>;
             </div>;
           </div>                {contact_info.mobile}
@@ -872,9 +476,7 @@ function UltraFuturisticNavigation2034() {}
         <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;"
           <div className="flex items - center justify - between h - 20">;
             <motion.div;
-              initial={{ opacity: 0, coordinate_x: -20 }}
-              animate={{ opacity: 1, coordinate_x: 0 }}
-              transition={{ duration: 0.5 }}'
+
               className='flex items - center space - x-3';
             >;'
               <div className='relative'>;'
@@ -948,9 +550,7 @@ function UltraFuturisticNavigation2034() {}
                           {category.services.slice (0, 2).map (service => (
                             <Link;
                               key={service.name}
-                              href={service.href}'
-                              className='block text - xs text - gray - 300 hover:text - cyan - 400 transition - colors'                            >              {/* Services Dropdown */}"
-              <div className="relative group">;"
+
                 <button className="flex items - center space - x-1 text - gray - 300 hover:text - cyan - 400 transition - colors duration - 200 font - medium">;
                   <span > Services</span>;"
                   <ChevronDown className="w - 4 h - 4" />;
@@ -972,9 +572,6 @@ function UltraFuturisticNavigation2034() {}
                               href={service.href}"
                               className="block text - xs text - gray - 300 hover:text - cyan - 400 transition - colors";
                             >;
-
-                <p className='text-xs text-gray-400' />
-                  Future Technology Solutions;
 
                 </p>
               </div>
@@ -1031,12 +628,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       </div>;
 
                     ))}
-                    <Link'
-                      href='/services''
+
                       className='flex items-center justify-center w-full px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200'>;
                       View All Services;'
                       <ArrowRight className='w-4 h-4 ml-2' />                    </Link>                    <Link"
                 className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 font-medium"
+
                   </div>
 <div className='mt-4 pt-4 border-t border-cyan-500/20' />
                     <Link;
@@ -1102,14 +699,7 @@ onClick={() = /> setIsOpen(!isOpen,}
 origin/cursor/automate-test-improve-and-merge-code-2533
 
         {/* Mobile Menu */}
-        <AnimatePresence>;
-          {isOpen && (;
-            <motion&& motion.div;
-              initial={{ opacity: 0, height: 0 }}'
-              animate={{ opacity: 1, height: 'auto' }}
-              exit={{ opacity: 0, height: 0 }}
 
-              transition={{ duration: 0.3 }}
 className='lg:hidden bg-black/95 backdrop-blur-xl border-t border-cyan-500/20'
              />
               <div className='px-4 py-6 space-y-4' />
@@ -1147,16 +737,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <AnimatePresence>;
           {is_open && (
             <motion.div;
-              initial={{ opacity: 0, height: 0 }}'
-              animate={{ opacity: 1, height: 'auto' }}
-              exit={{ opacity: 0, height: 0 }}
-              transition={{ duration: 0.3 }}'
-              className='lg:hidden bg - black / 95 backdrop - blur - xl border - t border - cyan - 500 / 20';
-            >;
-                          initial={{ opacity: 0, height: 0 }}'
-                          animate={{ opacity: 1, height: 'auto' }}
-                          exit={{ opacity: 0, height: 0 }}
-                          transition={{ duration: 0.2 }}
 
 className='mt-3 ml-4 space-y-2'
                         >
@@ -1180,10 +760,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </AnimatePresence>;
                   </div>;
                 ))}
-<Link
+
                   href='/contact'
-                  onClick={() => setIsOpen(false)}'
-                  className='block w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 font-medium text-center'                >                <Link"
+
                   href="/contact"
                   onClick={() => setIsOpen(false)}"
                   className="block w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 font-medium text-center";'
@@ -1221,21 +800,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </>
         </AnimatePresence>;
       </nav>;
-
-      {/* Spacer for fixed navigation */}'
-      <div className='h-20'></div>;
-    </>;"
-  );      <div className="h-20"></div>;
-    </>;
-  );
-            </motion.div>)}
-        </AnimatePresence>;
-      </nav>;
-      {/* Spacer for fixed navigation */}'
-      <div className='h - 20'></div>;"
-    </>);      <div className="h - 20"></div>;
-    </>);
-}
 
                   className='block w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 font-medium text-center'
                   className='block w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover: from-cyan-600 hover:to-blue-600 transition-all duration-200 font-medium text-center'
