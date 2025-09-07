@@ -2,6 +2,9 @@
 
   "extends": ["next/core-web-vitals", "@typescript-eslint/recommended"],
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 31cc1573ab846ce7dcfbe0085aaa9595e93df4ee
 
   "extends": ["next/core-web-vitals", "@typescript-eslint/recommended"],
   "extends": ["next/core-web-vitals", "@typescript-eslint/recommended"],
@@ -12,8 +15,11 @@
   ],
   "extends": ["next/core-web-vitals", "@typescript-eslint/recommended"],
 origin/automation-improvements-final
+<<<<<<< HEAD
 =======
 >>>>>>> 5d0bfd029486ab7d4285b084fd1f13e833405bec
+=======
+>>>>>>> 31cc1573ab846ce7dcfbe0085aaa9595e93df4ee
   "parser": "@typescript-eslint/parser",
   "plugins": ["@typescript-eslint"],
   "env": {
@@ -23,14 +29,20 @@ origin/automation-improvements-final
     "es6": true,
     "jest": true,
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 31cc1573ab846ce7dcfbe0085aaa9595e93df4ee
 
     "jest": true
     "es6": true,
     "jest": true
     "es6": true,
     "jest": true
+<<<<<<< HEAD
 =======
 >>>>>>> 5d0bfd029486ab7d4285b084fd1f13e833405bec
+=======
+>>>>>>> 31cc1573ab846ce7dcfbe0085aaa9595e93df4ee
     "es2021": true
   },
   "globals": {
@@ -41,6 +53,9 @@ origin/automation-improvements-final
     "HTMLImageElement": "readonly",
     "alert": "readonly"
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 31cc1573ab846ce7dcfbe0085aaa9595e93df4ee
 
 
     "es6": true,
@@ -51,8 +66,11 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
+<<<<<<< HEAD
 =======
 >>>>>>> 5d0bfd029486ab7d4285b084fd1f13e833405bec
+=======
+>>>>>>> 31cc1573ab846ce7dcfbe0085aaa9595e93df4ee
   },
   "rules": {
     "@typescript-eslint/no-unused-vars": "warn",
@@ -61,6 +79,9 @@ origin/automation-improvements-final
     "react/no-unescaped-entities": "off",
     "react-hooks/exhaustive-deps": "warn",
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 31cc1573ab846ce7dcfbe0085aaa9595e93df4ee
     "no-console": "warn"
     "react/no-unescaped-entities": "off",
     "react-hooks/exhaustive-deps": "warn",
@@ -83,11 +104,14 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
+<<<<<<< HEAD
 =======
     "no-console": "warn",
     "react/react-in-jsx-scope": "off",
     "no-undef": "error"
 >>>>>>> 5d0bfd029486ab7d4285b084fd1f13e833405bec
+=======
+>>>>>>> 31cc1573ab846ce7dcfbe0085aaa9595e93df4ee
   },
   "ignorePatterns": [
     "node_modules/",
@@ -163,6 +187,9 @@ origin/automation-improvements-final
 
     "pages.disabled_auto/"
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 31cc1573ab846ce7dcfbe0085aaa9595e93df4ee
 
     "pages.disabled_auto/",
     "zion_academy/",
@@ -421,7 +448,10 @@ origin/automation-improvements-final
     "pages.disabled_auto/"
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
+<<<<<<< HEAD
 =======
 >>>>>>> 5d0bfd029486ab7d4285b084fd1f13e833405bec
+=======
+>>>>>>> 31cc1573ab846ce7dcfbe0085aaa9595e93df4ee
   ]
 }

@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 31cc1573ab846ce7dcfbe0085aaa9595e93df4ee
 src
 src.disabled
 src.pages.disabled
@@ -6,6 +9,7 @@ src.pages.disabled.auto
 components.disabled
 **/*.js.jsx
 **/*.d.tsx
+<<<<<<< HEAD
 =======
 node_modules/
 .next/
@@ -162,3 +166,5 @@ check-syntax.js
 clean-conflicts.js
 commit-and-push.js
 >>>>>>> 5d0bfd029486ab7d4285b084fd1f13e833405bec
+=======
+>>>>>>> 31cc1573ab846ce7dcfbe0085aaa9595e93df4ee
