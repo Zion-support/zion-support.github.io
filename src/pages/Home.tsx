@@ -234,6 +234,86 @@ export default function Home() {
           <motion.div className="text-center mb-20" variants={itemVariants}>
             <h2 className="text-5xl md:text-6xl font-bold text-white mb-8">
               Featured <span className="bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent">Services</span>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+});
+
+// CTA section
+const CTASection = React.memo(() => {
+  return (
+    <section className="py-20">
+      <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
+          <h2 className="text-4xl font-bold text-white mb-6">
+            Ready to Transform Your Business?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+            Join hundreds of companies already leveraging our cutting-edge technology 
+            solutions to stay ahead of the competition.
+          </p>
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/contact"
+              className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-bold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
+            >
+              Get Free Consultation
+            </Link>
+            
+            <Link
+              to="/about"
+              className="px-8 py-4 bg-transparent border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-zion-slate-dark font-bold rounded-xl transition-all duration-300 transform hover:scale-105"
+            >
+              Learn More About Us
+            </Link>
+          </div>
+        </motion.div>
+      </div>
+    </section>
+  );
+});
+
+// Main Home component
+const Home: React.FC = () => {
+  const handleGetStarted = () => {
+    // Handle get started action
+
+    console.log('Get started clicked');
+  };
+
+  return (
+    <>
+      <SEO 
+        title="Zion Tech Group - Leading AI, Quantum Computing & Micro SAAS Solutions"
+        description="Transform your business with Zion Tech Group's cutting-edge AI solutions, quantum computing expertise, and innovative micro SAAS services. Leading the future of technology."
+        keywords="AI solutions, quantum computing, micro SAAS, digital transformation, cybersecurity, cloud computing, Zion Tech Group"
+      />
+      
+      <FuturisticBackground />
+
+      <HeroSection onGetStarted={handleGetStarted} />
+      <StatsSection />
+      <FeaturedServices />
+
+      {/* Contact Section */}
+      <section className="px-4 sm:px-6 lg:px-8 py-20 bg-slate-800/30">
+        <div className="max-w-4xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
+            transition={{ duration: 0.8 }}
+
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Transform Your Business?
             </h2>
             <p className="text-xl md:text-2xl text-zion-slate-light max-w-3xl mx-auto">
               Discover our most popular and innovative technology solutions
