@@ -9,7 +9,12 @@ import EnhancedFooter from './EnhancedFooter';
       </main>
       <EnhancedFooter />
     </div>
-  );
-},
-
+<<<<<<< HEAD
+  )
+};
 export default EnhancedLayout;
+=======
+  );
+}
+export default EnhancedLayout;
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

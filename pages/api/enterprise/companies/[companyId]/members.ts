@@ -1,85 +1,49 @@
-import { NextApiRequest, NextApiResponse } from 'next';
-import { enterpriseStore } from '../../../../../utils/data/enterpriseStore';
-
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { store } from '[^']*';
+import type { EnterpriseRole } from '../../../../../utils/types/enterprise';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const { companyId } = req.query;
-  
-  if (!companyId || Array.isArray(companyId)) {
-    return res.status(400).json({ error: 'Invalid company ID' });
+<<<<<<< HEAD
+  if (!companyId || typeof companyId !== 'string') {
+    return res.status(400).json({ error: 'companyId required' })
   }
-
-  if (req.method === 'GET') {
-    const company = enterpriseStore.getCompany(companyId);
-    if (!company) {
-      return res.status(404).json({ error: 'Company not found' });
-    }
-
-    // Get company members (placeholder)
-    const members = [
-      {
-        id: '1',
-        name: 'John Doe',
-        email: 'john@example.com',
-        role: 'admin',
-        joinedAt: new Date().toISOString()
-      }
-    ];
-
-    return res.status(200).json(members);
+  const company = null;
+    return res.status(ok ? 200 : 404).json(ok ? { success: true } : { error: 'member_not_found' })
+=======
+  if (!companyId |typeof companyId !== "string") {
+    return res.status(400).json({ error: "companyId required" });
   }
-
-  if (req.method === 'POST') {
-    const { email, role } = req.body;
-    
-    if (!email || !role) {
-      return res.status(400).json({ error: 'Email and role are required' });
-    }
-
-    // Add member logic (placeholder)
-    const member = {
-      id: Date.now().toString(),
-      email,
-      role,
-      joinedAt: new Date().toISOString()
-    };
-
+  const company = store.getCompanyById(companyId);
+  if (!company) return res.status(404).json({ error: "Company not found" });
+  if (req.method === "GET") {
+    return res.status(200).json(company.members);
+  }
+  if (req.method === "POST") {
+    const { name, email, role } = req.body |{}
+    if (!name |!email)
+      return res.status(400).json({ error: "name and email required" });
+    const r: EnterpriseRole = role |"viewer";
+    const member = store.addMember(companyId, name, email, r);
     return res.status(201).json(member);
   }
-
-  if (req.method === 'PUT') {
-    const { memberId } = req.query;
-    const { role } = req.body;
-
-    if (!memberId || Array.isArray(memberId)) {
-      return res.status(400).json({ error: 'Invalid member ID' });
-    }
-
-    if (!role) {
-      return res.status(400).json({ error: 'Role is required' });
-    }
-
-    // Update member role (placeholder)
-    return res.status(200).json({ 
-      success: true, 
-      memberId, 
-      role 
-    });
+  if (req.method === "PATCH") {
+    const { memberId, role } = req.body |{}
+    if (!memberId |!role)
+      return res.status(400).json({ error: "memberId and role required" });
+    const ok = store.updateMemberRole(companyId, memberId, role);
+    return res
+      .status(ok ? 200 : 404)
+      .json(ok ? { success: true } : { error: "member_not_found" });
   }
-
   if (req.method === "DELETE") {
     const { memberId } = req.query;
-
-    if (!memberId || Array.isArray(memberId)) {
-      return res.status(400).json({ error: 'Invalid member ID' });
-    }
-
-    // Remove member logic (placeholder)
-    return res.status(200).json({ 
-      success: true, 
-      memberId 
-    });
+    if (!memberId |typeof memberId !== "string")
+      return res.status(400).json({ error: "memberId required" });
+    const ok = store.removeMember(companyId, memberId);
+    return res
+      .status(ok ? 200 : 404)
+      .json(ok ? { success: true } : { error: "member_not_found" });
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   }
-
-  res.setHeader('Allow', 'GET, POST, PUT, DELETE');
-  return res.status(405).json({ error: 'method_not_allowed' });
+  return res.status(405).json({ error: "method_not_allowed" });
 }

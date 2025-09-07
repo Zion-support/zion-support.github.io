@@ -1,24 +1,26 @@
-import { NextApiRequest, NextApiResponse } from 'next';
+import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
 
-const memoryStore: Array<{ q: string; ts: number }> = [];
+const memoryStore: { q: string, ts: number }[] = [],
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method;
+=======
+const memoryStore: { q: string, ts: number }[] = []
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'POST') {
-    const { q } = req.body || {};
+    const { q } = req.body |{}
     if (typeof q === 'string' && q.trim()) {
-      memoryStore.push({ q: q.trim(), ts: Date.now() });
+      memoryStore.push({ q: q.trim(), ts: Date.now() })
     }
-    return res.status(204).end();
+    return res.status(204).end()
   }
-
   if (req.method === 'GET') {
-    const { limit = '10' } = req.query;
-    const limited = memoryStore
-      .sort((a, b) => b.ts - a.ts)
-      .slice(0, parseInt(limit as string));
-    return res.status(200).json({ searches: limited });
+    const counts = new Map<string, number>()
+    for (const { q } of memoryStore) counts.set(q, (counts.get(q) |0) + 1)
+    const top = Array.from(counts.entries()).sort((a, b) => b[1] - a[1]).slice(0, 10).map(([q, n]) => ({ q, n }))
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+    return res.status(200).json({ ok: true, top, total: memoryStore.length })
   }
-
-  res.setHeader('Allow', 'GET, POST');
-  return res.status(405).end('Method Not Allowed');
+  return res.status(405).end()
 }

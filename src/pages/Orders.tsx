@@ -1,14 +1,45 @@
+<<<<<<< HEAD
+  TableRow,
+=======
 import { FileText, CheckCircle2, Clock, ShieldAlert } from 'lucide-react';
-
+import Link from 'next/link'; // Changed from react-router-dom
 import { useAuth } from '@/hooks/useAuth';
 import { useGetOrdersQuery } from '@/hooks/useOrders';
 import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-
+  Table
+  TableBody
+  TableCell
+  TableHead
+  TableHeader
+<<<<<<< HEAD
+TableRow;
+=======
+  TableRow
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-2c83
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+} from '@/components/ui/table';
+import { Badge } from '@/components/ui/badge';
+=======
+import { FileText, CheckCircle2, Clock, ShieldAlert } from 'lucide-react'
+import Link from 'next/link', // Changed from react-router-dom
+import { useAuth  } from '@/hooks/useAuth';
+import { useGetOrdersQuery } from '@/hooks/useOrders';
+import { Table;
+  TableBody;
+  TableCell;
+  TableHead;
+  TableHeader;
+  TableRow } from '@/components/ui/table';
+import { Badge  } from '@/components/ui/badge';
+import Skeleton from '@/components/ui/skeleton';
+import { EmptyState } from '@/components/ui/empty-state';
+export default function OrdersPage() {
+  const { user } = useAuth();
+  const { data: orders, isLoading } = useGetOrdersQuery(user?.id);
+<<<<<<< HEAD
+  const formatDate = null;
+=======
+  const formatDate = (date: string) => new Date(date).toLocaleDateString();
   const getStatusBadge = (status: string,) => {
     switch (status) {
       case 'in_escrow':
@@ -29,12 +60,12 @@ import {
           <Badge variant='destructive' className='flex items-center gap-1'>
             <ShieldAlert className='h-3 w-3' /> Disputed
           </Badge>
-        ),
+        )
       default:
         return status;
     }
-  };
-
+  }
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   return (
     <div className='container max-w-4xl py-10'>
       <h1 className='text-3xl font-bold mb-6'>Order History</h1>
@@ -73,8 +104,8 @@ import {
         </Table>
       ) : orders.length === 0 ? (
         <EmptyState
-
-          description="You haven't purchased anything yet."
+          icon={<FileText className='h-10 w-10' />}
+          title='No Orders'          description="You haven't purchased anything yet."
         />
       ) : (
         <Table>
@@ -88,8 +119,7 @@ import {
             </TableRow>
           </TableHeader>
           <TableBody>
-
-              <TableRow key={order.orderId}>
+            {orders.map(order => (              <TableRow key={order.orderId}>
                 <TableCell className='font-medium'>{order.orderId}</TableCell>
                 <TableCell>{formatDate(order.date)}</TableCell>
                 <TableCell>{order.total}</TableCell>
@@ -109,3 +139,4 @@ import {
       )}
     </div>
   );
+}

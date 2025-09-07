@@ -1,6 +1,19 @@
-
-import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
-import {SortFilterProps} from "@/types/filters";
+import {
+<<<<<<< HEAD
+  Select;
+  SelectContent;
+  SelectItem;
+  SelectTrigger;
+  SelectValue} from "@/components/ui/select",
+=======
+  Select
+  SelectContent
+  SelectItem
+  SelectTrigger
+  SelectValue
+} from "@/components/ui/select";
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+import { SortFilterProps } from "@/types/filters";
 export function SortFilter({ sortOption, setSortOption }: SortFilterProps) {
   return (
     <div className="mb-6">
@@ -20,5 +33,5 @@ export function SortFilter({ sortOption, setSortOption }: SortFilterProps) {
         </SelectContent>
       </Select>
     </div>
-  )
+  );
 }

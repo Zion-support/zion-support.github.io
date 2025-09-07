@@ -1,25 +1,42 @@
-import React, { useState } from 'react';
-import { Milestone, MilestoneStatus, MilestoneActivity } from '@/hooks/useMilestones';
-import { useAuth } from '@/hooks/useAuth';
-import { MilestoneCard } from './MilestoneCard';
-import { AddMilestoneForm } from './AddMilestoneForm';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
-// lucide-react doesn't export PlusIcon, use our icon wrapper
 
+import React, { useState } from 'react';
+import { Milestone, MilestoneStatus, MilestoneActivity  } from '@/hooks/useMilestones';
+import { useAuth  } from '@/hooks/useAuth';
+import { MilestoneCard  } from './MilestoneCard';
+import { AddMilestoneForm  } from './AddMilestoneForm';
+import { Button  } from '@/components/ui/button';
+import { Card, CardContent  } from '@/components/ui/card';
+// lucide-react doesn't export PlusIcon, use our icon wrapper
+import { Plus } from 'lucide-react'
 import { EmptyState } from '@/components/ui/empty-state';
 interface MilestonesListProps {
-  milestones: Milestone[],
-  activities: Record<string, MilestoneActivity[]>;
-  isLoading: boolean,
-  isClient: boolean,
-
-  isSubmitting: boolean,
-  onApprove?: (id: string,) => Promise<void>,
+<<<<<<< HEAD
+  milestones: Milestone[];
+  activities: Record<string, MilestoneActivity[]>,
+  isLoading: boolean;
+  isClient: boolean;
+  onCreateMilestone: (data: any) => Promise<Milestone | null>;
+  onUpdateStatus: (id: string, status: MilestoneStatus, comment?: string) => Promise<boolean>,
+  onDeleteMilestone: (id: string) => Promise<boolean>;
+  onUploadDeliverable: (id: string, file: File) => Promise<any>;
+  isSubmitting: boolean;
+  onApprove?: (id: string) => Promise<void>;
+  onReject?: (id: string) => Promise<void>
+=======
+  milestones: Milestone[]
+  activities: Record<string, MilestoneActivity[]>
+  isLoading: boolean
+  isClient: boolean
+  onCreateMilestone: (data: any) => Promise<Milestone | null>
+  onUpdateStatus: (id: string, status: MilestoneStatus, comment?: string) => Promise<boolean>
+  onDeleteMilestone: (id: string) => Promise<boolean>
+  onUploadDeliverable: (id: string, file: File) => Promise<any>,  isSubmitting: boolean
+  onApprove?: (id: string,) => Promise<void>
   onReject?: (id: string,) => Promise<void>
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 }
-
 export const MilestonesList: React.FC<MilestonesListProps> = ({
+<<<<<<< HEAD
   milestones;
   activities;
   isLoading;
@@ -29,12 +46,28 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
   onDeleteMilestone;
   onUploadDeliverable;
   isSubmitting;
-  onApprove,
+  onApprove;
   onReject
-
-    setShowAddForm(false)
-  };
-
+}) => {
+  const [showAddForm, setShowAddForm] = useState(false);
+  const handleSubmit = null;
+=======
+  milestones
+  activities
+  isLoading
+  isClient
+  onCreateMilestone
+  onUpdateStatus
+  onDeleteMilestone
+  onUploadDeliverable
+  isSubmitting
+  onApprove
+  onReject
+}) => {
+  const [showAddForm, setShowAddForm] = useState(false)
+  const handleSubmit = async (data: any) => {
+    await onCreateMilestone(data);    setShowAddForm(false)
+  }
   if (isLoading) {
     return (
       <div className="space-y-4">
@@ -50,25 +83,23 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
       </div>
     )
   }
-
   if (milestones.length === 0 && !showAddForm) {
     return (
       <EmptyState
         icon = {<span className="text-3xl">📊</span>,}
         title="No Milestones Yet"
-        description = {isClient ? 
-          "Break down the project into manageable milestones to track progress and payments." : 
+        description = {isClient ?
+          "Break down the project into manageable milestones to track progress and payments." :
           "No milestones have been created for this project yet.",}
-        action={isClient ? 
+        action={isClient ?
           {
-            text: "Create First Milestone",
+            text: "Create First Milestone"
             onClick: (,) => setShowAddForm(true)
           } : undefined
         }
       />
-    );
+    )
   }
-
   return (
     <div className="space-y-6">
       {isClient && !showAddForm && (
@@ -79,12 +110,11 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
           </Button>
         </div>
       )}
-
       {showAddForm && (
         <Card>
           <CardContent className="pt-6">
             <h3 className="text-lg font-medium mb-4">Create New Milestone</h3>
-            <AddMilestoneForm 
+            <AddMilestoneForm
               onSubmit = {handleSubmit,}
               isSubmitting = {isSubmitting,}
               onCancel = {(,) => setShowAddForm(false),}
@@ -92,7 +122,6 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
           </CardContent>
         </Card>
       )}
-
       <div className="space-y-4">
         {milestones.map((milestone,) => (
           <MilestoneCard
@@ -111,5 +140,6 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
       </div>
     </div>
   )
-};
+}
 "
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

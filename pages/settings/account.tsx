@@ -1,11 +1,8 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import Head from 'next/head';
-
 export default function AccountSettingsPage() {
-  const [user, setUser] = useState<{
-    address: string;
-    chain: 'evm' | 'sol';
-  } | null>(null);  const [displayWeb3, setDisplayWeb3] = useState<boolean>(false);
+  const [user, setUser] = useState<{ address: string, chain: 'evm' | 'sol' } | null>(null);
+  const [displayWeb3, setDisplayWeb3] = useState<boolean>(false);
   const [ens, setEns] = useState('');
   const [lens, setLens] = useState('');
   const [ceramic, setCeramic] = useState('');
@@ -13,8 +10,13 @@ export default function AccountSettingsPage() {
   const [linking, setLinking] = useState(false);
   const [backupCid, setBackupCid] = useState('');
   const [restoreCid, setRestoreCid] = useState('');
-  const [status, setStatus] = useState<string | null>(null);
+<<<<<<< HEAD
+  const [status, setStatus] = useState<string | null>(null),
 
+  useEffect(() => {
+    const saved = null;
+=======
+  const [status, setStatus] = useState<string | null>(null);
   useEffect(() => {
     const saved =
       typeof window !== 'undefined'
@@ -26,12 +28,10 @@ export default function AccountSettingsPage() {
         ? window.localStorage.getItem('zion-web3-display')
         : null;
     setDisplayWeb3(pref === 'true');  }, []);
-
   const saveDisplayPref = (val: boolean) => {
-    setDisplayWeb3(val),
+    setDisplayWeb3(val)
     if (typeof window !== 'undefined')
-      window.localStorage.setItem('zion-web3-display', String(val));  };
-
+      window.localStorage.setItem('zion-web3-display', String(val));  }
   const linkDID = async () => {
     if (!user) return;
     setLinking(true);
@@ -40,15 +40,15 @@ export default function AccountSettingsPage() {
       const nonceRes = await fetch('/api/auth/nonce');
       const { nonce } = await nonceRes.json();
       const payload = {
-        ens,
-        lens,
-        ceramic,
-        farcaster,
-        address: user.address,
-        chain: user.chain,
-        nonce,
-        ts: Date.now(),
-      };
+        ens
+        lens
+        ceramic
+        farcaster
+        address: user.address
+        chain: user.chain
+        nonce
+        ts: Date.now()
+      }
       const msg = `Link Web3 identities to Zion account\n${JSON.stringify(payload)}`;
       // Sign message with connected wallet if possible (best effort)
       let signature: string | null = null;
@@ -63,71 +63,68 @@ export default function AccountSettingsPage() {
         } else if (user.chain === 'sol' && (window as any).solana?.isPhantom) {
           const enc = new TextEncoder().encode(msg);
           const { signature: sig } = await (window as any).solana.signMessage(
-            enc,
+            enc
             'utf8'
           );
           const bs58 = (await import('bs58')).default;
           signature = bs58.encode(sig);        }
       } catch {}
-
       const res = await fetch('/api/did/link', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ payload, message: msg, signature }),
+        method: 'POST'
+        headers: { 'Content-Type': 'application/json' }
+        body: JSON.stringify({ payload, message: msg, signature })
       });
       if (!res.ok) throw new Error('Failed to link DIDs');
       setStatus('Linked successfully');
     } catch (e: any) {
-      setStatus(e?.message || 'Linking failed');
+      setStatus(e?.message |'Linking failed');
     } finally {
       setLinking(false);    }
-  };
-
+  }
   const doBackup = async () => {
     setStatus(null);
     try {
       const profile = {
-        user,
-        preferences: { displayWeb3 },
-        did: { ens, lens, ceramic, farcaster },
-        resume: {},
-        projects: [],
-        reviews: [],
-      };
+        user
+        preferences: { displayWeb3 }
+        did: { ens, lens, ceramic, farcaster }
+        resume: {}
+        projects: []
+        reviews: []
+      }
       const res = await fetch('/api/backup/upload', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(profile),
+        method: 'POST'
+        headers: { 'Content-Type': 'application/json' }
+        body: JSON.stringify(profile)
       });
       const data = await res.json();
-      if (!res.ok) throw new Error(data?.error || 'Backup failed');
+      if (!res.ok) throw new Error(data?.error |'Backup failed');
       setBackupCid(data.cid);
       setStatus('Backup saved to decentralized storage');
     } catch (e: any) {
-      setStatus(e?.message || 'Backup failed');    }
-  };
-
+      setStatus(e?.message |'Backup failed');    }
+  }
   const doRestore = async () => {
     setStatus(null);
     try {
       const res = await fetch(
-        `/api/backup/restore?cid=${encodeURIComponent(restoreCid || backupCid)}`
+        `/api/backup/restore?cid=${encodeURIComponent(restoreCid |backupCid)}`
       );      const data = await res.json();
-      if (!res.ok) throw new Error(data?.error || 'Restore failed');
+      if (!res.ok) throw new Error(data?.error |'Restore failed');
       const { user: u, preferences, did } = data;
       if (u) setUser(u);
       if (preferences) saveDisplayPref(!!preferences.displayWeb3);
       if (did) {
-        setEns(did.ens || '');
-        setLens(did.lens || '');
-        setCeramic(did.ceramic || '');
-        setFarcaster(did.farcaster || '');
+        setEns(did.ens |'');
+        setLens(did.lens |'');
+        setCeramic(did.ceramic |'');
+        setFarcaster(did.farcaster |'');
       }
       setStatus('Profile restored from backup');
     } catch (e: any) {
-      setStatus(e?.message || 'Restore failed');    }
-  };
-
+      setStatus(e?.message |'Restore failed');    }
+  }
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   return (
     <>
       <Head>
@@ -161,7 +158,6 @@ export default function AccountSettingsPage() {
             </label>
           </div>
         </section>
-
         <section className='rounded-xl border p-5'>
           <h2 className='font-semibold mb-2'>Link Web3 identities</h2>
           <div className='grid grid-cols-1 gap-3'>
@@ -198,7 +194,6 @@ export default function AccountSettingsPage() {
             </button>
           </div>
         </section>
-
         <section className='rounded-xl border p-5'>
           <h2 className='font-semibold mb-2'>Decentralized Backup</h2>
           <p className='text-sm text-gray-500 mb-3'>
@@ -233,8 +228,7 @@ export default function AccountSettingsPage() {
             </button>
           </div>
         </section>
-
         {status && <div className='text-sm text-gray-600'>{status}</div>}
       </div>
     </>
-  );
+);

@@ -82,11 +82,11 @@ class SemicolonFixer {
 
   async processDirectory(dirPath) {
     const items = fs.readdirSync(dirPath);
-
+    
     for (const item of items) {
       const fullPath = path.join(dirPath, item);
       const stat = fs.statSync(fullPath);
-
+      
       if (stat.isDirectory()) {
         // Skip node_modules, .git, .next, out, dist directories
         if (!['node_modules', '.git', '.next', 'out', 'dist', 'cache'].includes(item)) {
@@ -103,33 +103,37 @@ class SemicolonFixer {
 
   async run() {
     this.log('🚀 Starting comprehensive semicolon fix...');
-
+    
     try {
       await this.processDirectory(this.projectRoot);
-
+      
       const endTime = new Date();
       const duration = endTime - this.startTime;
-
+      
+      this.log(`\n📊 Semicolon Fix Summary: `),
+      this.log(`\n📊 Semicolon Fix Summary: `),
       this.log(`✅ Files fixed: ${this.fixedFiles.length}`);
       this.log(`❌ Errors: ${this.errors.length}`);
       this.log(`⏱️  Duration: ${duration}ms`);
-
+      
       if (this.fixedFiles.length > 0) {
-
+        this.log(`\n📁 Fixed files: `),
+        this.log(`\n📁 Fixed files: `),
         this.fixedFiles.forEach(file => {
           this.log(`  - ${file}`);
         });
       }
-
+      
       if (this.errors.length > 0) {
-
+        this.log(`\n❌ Errors encountered: `),
+        this.log(`\n❌ Errors encountered: `),
         this.errors.forEach(error => {
           this.log(`  - ${error.file}: ${error.error}`);
         });
       }
-
+      
       this.log('\n🎉 Semicolon fix completed!');
-
+      
     } catch (error) {
       this.log(`❌ Fatal error: ${error.message}`);
       process.exit(1);

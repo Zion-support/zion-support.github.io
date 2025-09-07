@@ -1,141 +1,143 @@
-import React from 'react';
+import React from 'react',
 import Head from 'next/head';
-import {motion} from 'framer-motion';
-import {Brain, BarChart3, TrendingUp, Users, Target, Zap, Shield, Database, Globe, ArrowRight, CheckCircle, Star,} from 'lucide-react';
+import { motion } from 'framer-motion';
+import { Brain, BarChart3, TrendingUp, Users, Target, Zap;
+  Shield, Database, Globe, ArrowRight, CheckCircle, Star
+ } from 'lucide-react';
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
 export default function AIBusinessIntelligencePage() {
+<<<<<<< HEAD
+  const features = null;
+=======
   const features = [
     {
-      icon: Brain,
-      title: 'Predictive Analytics',
+      icon: Brain
+      title: 'Predictive Analytics'
       description:
-        'Forecast future trends and customer behavior with 95% accuracy using advanced machine learning algorithms.',
-      color: 'from-purple-500 to-pink-500',
-    },
+        'Forecast future trends and customer behavior with 95% accuracy using advanced machine learning algorithms.'
+      color: 'from-purple-500 to-pink-500'
+    }
     {
-      icon: BarChart3,
-      title: 'Real-time Dashboards',
+      icon: BarChart3
+      title: 'Real-time Dashboards'
       description:
-        'Monitor key performance indicators in real-time with customizable, interactive dashboards.',
-      color: 'from-blue-500 to-cyan-500',
-    },
+        'Monitor key performance indicators in real-time with customizable, interactive dashboards.'
+      color: 'from-blue-500 to-cyan-500'
+    }
     {
-      icon: TrendingUp,
-      title: 'Performance Optimization',
+      icon: TrendingUp
+      title: 'Performance Optimization'
       description:
-        'Automatically identify bottlenecks and optimize business processes for maximum efficiency.',
-      color: 'from-green-500 to-emerald-500',
-    },
+        'Automatically identify bottlenecks and optimize business processes for maximum efficiency.'
+      color: 'from-green-500 to-emerald-500'
+    }
     {
-      icon: Users,
-      title: 'Customer Insights',
+      icon: Users
+      title: 'Customer Insights'
       description:
-        'Deep understanding of customer behavior, preferences, and lifetime value through AI analysis.',
-      color: 'from-orange-500 to-red-500',
-    },
+        'Deep understanding of customer behavior, preferences, and lifetime value through AI analysis.'
+      color: 'from-orange-500 to-red-500'
+    }
     {
-      icon: Target,
-      title: 'Strategic Planning',
+      icon: Target
+      title: 'Strategic Planning'
       description:
-        'Data-driven decision making with scenario modeling and risk assessment capabilities.',
-      color: 'from-indigo-500 to-purple-500',
-    },
+        'Data-driven decision making with scenario modeling and risk assessment capabilities.'
+      color: 'from-indigo-500 to-purple-500'
+    }
     {
-      icon: Zap,
-      title: 'Automated Reporting',
+      icon: Zap
+      title: 'Automated Reporting'
       description:
-        'Generate comprehensive reports automatically, saving hours of manual work each week.',
-      color: 'from-yellow-500 to-orange-500',
-    },
+        'Generate comprehensive reports automatically, saving hours of manual work each week.'
+      color: 'from-yellow-500 to-orange-500'
+    }
   ];
-
 const AIBusinessIntelligence: React.FC = () => {
   const benefits = [
-    'Increase revenue by 25-40% through data-driven insights',
-    'Reduce operational costs by 15-30% with process optimization',
-    'Improve customer retention by 20-35% with predictive analytics',
-    'Accelerate decision-making by 60% with real-time data',
-    'Reduce manual reporting time by 80% with automation',
+    'Increase revenue by 25-40% through data-driven insights'
+    'Reduce operational costs by 15-30% with process optimization'
+    'Improve customer retention by 20-35% with predictive analytics'
+    'Accelerate decision-making by 60% with real-time data'
+    'Reduce manual reporting time by 80% with automation'
     'Achieve 99.9% data accuracy with AI-powered validation',  ];
-
   const useCases = [
     {
-      industry: 'Retail & E-commerce',
+      industry: 'Retail & E-commerce'
       description:
-        'Customer segmentation, inventory optimization, and demand forecasting',
+        'Customer segmentation, inventory optimization, and demand forecasting'
       results:
-        '35% increase in conversion rates, 25% reduction in inventory costs',
-    },
+        '35% increase in conversion rates, 25% reduction in inventory costs'
+    }
     {
-      industry: 'Financial Services',
+      industry: 'Financial Services'
       description:
-        'Risk assessment, fraud detection, and portfolio optimization',
-      results: '40% improvement in risk prediction, 60% faster fraud detection',
-    },
+        'Risk assessment, fraud detection, and portfolio optimization'
+      results: '40% improvement in risk prediction, 60% faster fraud detection'
+    }
     {
-      industry: 'Healthcare',
+      industry: 'Healthcare'
       description:
-        'Patient outcome prediction, resource allocation, and treatment optimization',
+        'Patient outcome prediction, resource allocation, and treatment optimization'
       results:
-        '30% improvement in patient outcomes, 20% reduction in operational costs',
-    },
+        '30% improvement in patient outcomes, 20% reduction in operational costs'
+    }
     {
-      industry: 'Manufacturing',
+      industry: 'Manufacturing'
       description:
-        'Predictive maintenance, quality control, and supply chain optimization',
-      results: '45% reduction in downtime, 35% improvement in product quality',
+        'Predictive maintenance, quality control, and supply chain optimization'
+      results: '45% reduction in downtime, 35% improvement in product quality'
     },  ];
-
   const pricing = [
     {
-      plan: 'Starter',
-      price: '$499',
-      period: '/month',
-      description: 'Perfect for small businesses getting started with AI',
+      plan: 'Starter'
+      price: '$499'
+      period: '/month'
+      description: 'Perfect for small businesses getting started with AI'
       features: [
-        'Basic predictive analytics',
-        '5 customizable dashboards',
-        'Standard reporting',
-        'Email support',
-        'Up to 10 users',
-      ],
-      popular: false,
-    },
+        'Basic predictive analytics'
+        '5 customizable dashboards'
+        'Standard reporting'
+        'Email support'
+        'Up to 10 users'
+      ]
+      popular: false
+    }
     {
-      plan: 'Professional',
-      price: '$1,299',
-      period: '/month',
-      description: 'Advanced features for growing businesses',
+      plan: 'Professional'
+      price: '$1,299'
+      period: '/month'
+      description: 'Advanced features for growing businesses'
       features: [
-        'Advanced predictive analytics',
-        'Unlimited dashboards',
-        'Custom reporting',
-        'Priority support',
-        'Up to 50 users',
-        'API access',
-        'Custom integrations',
-      ],
-      popular: true,
-    },
+        'Advanced predictive analytics'
+        'Unlimited dashboards'
+        'Custom reporting'
+        'Priority support'
+        'Up to 50 users'
+        'API access'
+        'Custom integrations'
+      ]
+      popular: true
+    }
     {
-      plan: 'Enterprise',
-      price: 'Custom',
-      period: '',
-      description: 'Full-scale solution for large organizations',
+      plan: 'Enterprise'
+      price: 'Custom'
+      period: ''
+      description: 'Full-scale solution for large organizations'
       features: [
-        'Everything in Professional',
-        'Custom AI models',
-        'Dedicated support team',
-        'Unlimited users',
-        'On-premise deployment',
-        'Custom training',
-        'SLA guarantees',
-      ],
-      popular: false,
-    },
+        'Everything in Professional'
+        'Custom AI models'
+        'Dedicated support team'
+        'Unlimited users'
+        'On-premise deployment'
+        'Custom training'
+        'SLA guarantees'
+      ]
+      popular: false
+    }
   ];
-
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   return (
     <Layout>
       <Head>
@@ -161,9 +163,7 @@ const AIBusinessIntelligence: React.FC = () => {
           property='og:url'
           content='https://ziontechgroup.com/ai-business-intelligence'
         />      </Head>
-
       <EnhancedNavigation />
-
       {/* Hero Section */}
       <section className='pt-32 pb-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>
         <div className='max-w-7xl mx-auto px-6'>          <motion.div
@@ -199,7 +199,6 @@ const AIBusinessIntelligence: React.FC = () => {
             </div>
           </motion.div>
         </div>
-
       {/* Features */}
       <section className='py-20 bg-white'>
         <div className='max-w-7xl mx-auto px-6'>          <motion.div
@@ -222,7 +221,6 @@ const AIBusinessIntelligence: React.FC = () => {
               <li>• Market trend analysis</li>
             </ul>
           </div>
-
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {features.map((feature, index) => (
               <motion.div
                 key={feature.title}
@@ -245,7 +243,6 @@ const AIBusinessIntelligence: React.FC = () => {
             ))}
           </div>
         </div>
-
       {/* Benefits */}
       <section className='py-20 bg-slate-50'>
         <div className='max-w-7xl mx-auto px-6'>
@@ -276,7 +273,6 @@ const AIBusinessIntelligence: React.FC = () => {
                 ))}
               </div>
             </motion.div>
-
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -309,7 +305,6 @@ const AIBusinessIntelligence: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Use Cases */}
       <section className='py-20 bg-white'>
         <div className='max-w-7xl mx-auto px-6'>          <motion.div
@@ -326,7 +321,6 @@ const AIBusinessIntelligence: React.FC = () => {
               to transform their operations.
             </p>
           </motion.div>
-
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>            {useCases.map((useCase, index) => (
               <motion.div
                 key={useCase.industry}
@@ -349,7 +343,6 @@ const AIBusinessIntelligence: React.FC = () => {
             ))}
           </div>
         </div>
-
       {/* Pricing */}
       <section className='py-20 bg-slate-900'>
         <div className='max-w-7xl mx-auto px-6'>          <motion.div
@@ -366,7 +359,6 @@ const AIBusinessIntelligence: React.FC = () => {
               our core AI features.
             </p>
           </motion.div>
-
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            {pricing.map((plan, index) => (
               <motion.div
                 key={plan.plan}
@@ -382,7 +374,6 @@ const AIBusinessIntelligence: React.FC = () => {
                     Most Popular
                   </div>
                 )}
-
                 <div className='text-center mb-8'>
                   <h3 className='text-2xl font-bold text-slate-900 mb-2'>
                     {plan.plan}
@@ -395,7 +386,6 @@ const AIBusinessIntelligence: React.FC = () => {
                   </div>
                   <p className='text-slate-600'>{plan.description}</p>
                 </div>
-
                 <ul className='space-y-4 mb-8'>
                   {plan.features.map(feature => (
                     <li key={feature} className='flex items-center space-x-3'>
@@ -403,7 +393,6 @@ const AIBusinessIntelligence: React.FC = () => {
                       <span className='text-slate-700'>{feature}</span>                    </li>
                   ))}
                 </ul>
-
                 <a
                   href='/contact'
                   className='block w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white text-center py-3 rounded-xl font-medium transition-all duration-200 transform hover:scale-105'                >
@@ -414,7 +403,6 @@ const AIBusinessIntelligence: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* CTA */}
       <section className='py-20 bg-gradient-to-r from-blue-600 to-cyan-600'>
         <div className='max-w-4xl mx-auto px-6 text-center'>          <motion.div
@@ -444,7 +432,6 @@ const AIBusinessIntelligence: React.FC = () => {
           </motion.div>
         </div>
       </section>
-
       <EnhancedFooter />
     </>
-  );
+);

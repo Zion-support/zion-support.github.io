@@ -1,30 +1,26 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { store } from '../../../utils/data/enterpriseStore';
-
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method === 'POST') {
-    const { name, slug, logoUrl, brandColor, plan } = req.body || {};
-    
-    if (!name || !slug) {
-      return res.status(400).json({ error: 'Name and slug are required' });
-    }
-
-    const company = store.createCompany({
-      name,
-      slug,
-      logoUrl,
-      brandColor,
-      plan: plan || 'basic'
-    });
-
-    return res.status(201).json(company);
-  }
-
-  if (req.method === 'GET') {
+import { store } from '[^']*';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+<<<<<<< HEAD
+  if (req.method;
+    return res.status(201).json(created)
+=======
+  if (req.method === "GET") {
     const companies = store.listCompanies();
     return res.status(200).json(companies);
   }
-
-  res.setHeader('Allow', 'GET, POST');
-  res.status(405).end('Method Not Allowed');
+  if (req.method === "POST") {
+    const { name, slug, logoUrl, brandColor, plan } = req.body |{}
+    const created = store.createCompany({
+      name
+      slug
+      logoUrl
+      brandColor
+      plan
+    });
+    return res.status(201).json(created);
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+  }
+  res.setHeader("Allow", "GET,POST");
+  return res.status(405).end("Method Not Allowed");
 }

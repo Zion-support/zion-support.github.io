@@ -1,18 +1,36 @@
-import { useState } from 'react';
+import { useState } from 'react'
 import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-  CardDescription,
-  CardFooter,;
-} from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
-import { DollarSign, Calendar, CheckCircle, XCircle } from 'lucide-react';
-import { format } from 'date-fns';
-import { JobMatch } from '@/types/jobs';
+  Card
+  CardContent
+  CardHeader
+  CardTitle
+  CardDescription
+  CardFooter
+} from '@/components/ui/card'
+import { Badge } from '@/components/ui/badge'
+import { Button } from '@/components/ui/button'
+import { DollarSign, Calendar, CheckCircle, XCircle } from 'lucide-react'
+import { format } from "date-fns";
+import { JobMatch } from "@/types/jobs";
+interface JobMatchCardProps {
+  match: JobMatch;
+  onApply: (matchId: string, jobId: string) => void;
+  onDecline: (matchId: string) => void;
+  showApplied?: boolean
+<<<<<<< HEAD
+}
 
+export function JobMatchesCard({ match, onApply, onDecline, showApplied;
+=======
+export function JobMatchesCard({
+  match
+  onApply
+  onDecline
+  showApplied = false
+}: JobMatchCardProps) {
+  const job = match.job
+  if (!job) return null
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   return (
     <Card className='overflow-hidden border-l-4 border-l-blue-500'>
       <CardHeader className='p-4 pb-2'>
@@ -37,10 +55,14 @@ import { JobMatch } from '@/types/jobs';
         <p className='text-sm text-muted-foreground line-clamp-2 mb-3'>
           {job.description}
         </p>
-
         {match.matched_skills?.length > 0 && (
-
-                  {skill}
+          <div className='mb-3'>
+            <p className='text-xs text-muted-foreground mb-1'>
+              Matched skills:
+            </p>
+            <div className='flex flex-wrap gap-1'>
+              {match.matched_skills.slice(0, 5).map((skill, i) => (
+                <Badge key={i} variant='secondary' className='text-xs'>                  {skill}
                 </Badge>
               ))}
               {match.matched_skills.length > 5 && (
@@ -51,7 +73,6 @@ import { JobMatch } from '@/types/jobs';
             </div>
           </div>
         )}
-
         <div className='grid grid-cols-2 gap-2 mb-2 mt-3'>
           <div className='flex items-center text-sm'>
             <DollarSign className='h-4 w-4 mr-1 text-muted-foreground' />$
@@ -64,7 +85,7 @@ import { JobMatch } from '@/types/jobs';
         </div>
       </CardContent>
       <CardFooter className='p-4 pt-0'>
-        {match.status === 'applied' || showApplied ? (
+        {match.status === 'applied' |showApplied ? (
           <div className='w-full flex items-center justify-center p-2 bg-green-50 text-green-700 rounded-md'>
             <CheckCircle className='h-4 w-4 mr-2' />
             Applied
@@ -75,14 +96,22 @@ import { JobMatch } from '@/types/jobs';
             Declined
           </div>
         ) : (
-
+          <div className='flex gap-2 w-full'>
+            <Button
+              className='flex-1'
+              onClick={() => onApply(match.id, job.id)}
             >
+              Apply Now
+            </Button>
+            <Button
+              variant='outline'
+              className='flex-1'
+              onClick={() => onDecline(match.id)}            >
               Decline
             </Button>
           </div>
         )}
       </CardFooter>
     </Card>
-  );
-
+  )
 }

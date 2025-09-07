@@ -1,11 +1,36 @@
-if (!tutorial) {
+import Link from 'next/link'
+import { useRouter } from 'next/router'
+import { TUTORIALS } from '@/data/tutorials'
+import { SEO } from '@/components/SEO'
+import { Button } from '@/components/ui/button'
+import { ArrowLeft } from 'lucide-react'
+import ReactMarkdown from "react-markdown";
+import type { Tutorial as TutorialType } from "@/types/tutorial";
+interface TutorialPageProps {
+  tutorial?: TutorialType
+export default function Tutorial({
+  tutorial: initialTutorial
+}: TutorialPageProps) {
+  const router = useRouter()
+  const slug = router.query.slug as string | undefined
+  const tutorial = initialTutorial |TUTORIALS.find(t => t.slug === slug);interface TutorialPageProps {
+  tutorial?: TutorialType
+}
+export default function Tutorial({ tutorial: initialTutorial }: TutorialPageProps) {
+<<<<<<< HEAD
+  const router = null;
+=======
+  const router = useRouter()
+  const slug = router.query.slug as string | undefined
+  const tutorial = initialTutorial |TUTORIALS.find((t,) => t.slug === slug)
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+  if (!tutorial) {
     return (
       <div className='min-h-screen bg-zion-blue flex items-center justify-center text-white'>
         Tutorial not found.
       </div>
-    );
+    )
   }
-
   return (
     <>
       <SEO title={tutorial.title} description={tutorial.excerpt} />
@@ -38,6 +63,5 @@ if (!tutorial) {
         </div>
       </div>
     </>
-  );
-
+  )
 }

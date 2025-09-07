@@ -1,54 +1,51 @@
 import React from "react";
 import Link from "next/link";
 import {
-  Phone,
-  Mail,
-  MapPin,
-  Facebook,
-  Twitter,
-  Linkedin,
-  Instagram,
-  ArrowRight,
+  Phone
+  Mail
+  MapPin
+  Facebook
+  Twitter
+  Linkedin
+  Instagram
+  ArrowRight
 } from "lucide-react";
-
 export default function Footer() {
   const currentYear = new Date().getFullYear();
-
   const footerLinks = {
     services: [
-      { name: "AI Services", href: "/ai-services" },
-      { name: "IT Services", href: "/it-services" },
-      { name: "Micro SaaS", href: "/micro-saas" },
-      { name: "Blockchain", href: "/blockchain" },
-      { name: "IoT Solutions", href: "/iot" },
-      { name: "Cybersecurity", href: "/cybersecurity" },
-    ],
+      { name: "AI Services", href: "/ai-services" }
+      { name: "IT Services", href: "/it-services" }
+      { name: "Micro SaaS", href: "/micro-saas" }
+      { name: "Blockchain", href: "/blockchain" }
+      { name: "IoT Solutions", href: "/iot" }
+      { name: "Cybersecurity", href: "/cybersecurity" }
+    ]
     solutions: [
-      { name: "Enterprise Solutions", href: "/enterprise" },
-      { name: "Startup Solutions", href: "/startup" },
-      { name: "E-commerce", href: "/ecommerce" },
-      { name: "Healthcare", href: "/industries/healthcare" },
-      { name: "Finance", href: "/industries/finance" },
-      { name: "Education", href: "/industries/education" },
-    ],
+      { name: "Enterprise Solutions", href: "/enterprise" }
+      { name: "Startup Solutions", href: "/startup" }
+      { name: "E-commerce", href: "/ecommerce" }
+      { name: "Healthcare", href: "/industries/healthcare" }
+      { name: "Finance", href: "/industries/finance" }
+      { name: "Education", href: "/industries/education" }
+    ]
     company: [
-      { name: "About Us", href: "/about" },
-      { name: "Our Team", href: "/team" },
-      { name: "Careers", href: "/careers" },
-      { name: "Case Studies", href: "/case-studies" },
-      { name: "News", href: "/news" },
-      { name: "Contact", href: "/contact" },
-    ],
+      { name: "About Us", href: "/about" }
+      { name: "Our Team", href: "/team" }
+      { name: "Careers", href: "/careers" }
+      { name: "Case Studies", href: "/case-studies" }
+      { name: "News", href: "/news" }
+      { name: "Contact", href: "/contact" }
+    ]
     resources: [
-      { name: "Blog", href: "/blog" },
-      { name: "Documentation", href: "/docs" },
-      { name: "API Reference", href: "/api" },
-      { name: "Tutorials", href: "/tutorials" },
-      { name: "White Papers", href: "/white-papers" },
-      { name: "Support", href: "/support" },
-    ],
-  };
-
+      { name: "Blog", href: "/blog" }
+      { name: "Documentation", href: "/docs" }
+      { name: "API Reference", href: "/api" }
+      { name: "Tutorials", href: "/tutorials" }
+      { name: "White Papers", href: "/white-papers" }
+      { name: "Support", href: "/support" }
+    ]
+  }
   return (
     <footer className="bg-gray-900 text-white">
       {/* Main Footer Content */}
@@ -60,11 +57,10 @@ export default function Footer() {
               Zion Tech Group
             </Link>
             <p className="text-gray-300 mb-6 max-w-md">
-              Leading technology solutions provider specializing in AI,
-              cybersecurity, cloud infrastructure, quantum computing,
+              Leading technology solutions provider specializing in AI
+              cybersecurity, cloud infrastructure, quantum computing
               blockchain, IoT, and digital transformation services.
             </p>
-
             {/* Contact Info */}
             <div className="space-y-3">
               <div className="flex items-center text-gray-300">
@@ -85,7 +81,6 @@ export default function Footer() {
               </div>
             </div>
           </div>
-
           {/* Services */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Services</h3>
@@ -102,7 +97,6 @@ export default function Footer() {
               ))}
             </ul>
           </div>
-
           {/* Solutions */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Solutions</h3>
@@ -119,7 +113,6 @@ export default function Footer() {
               ))}
             </ul>
           </div>
-
           {/* Company & Resources */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Company</h3>
@@ -135,7 +128,6 @@ export default function Footer() {
                 </li>
               ))}
             </ul>
-
             <h3 className="text-lg font-semibold mb-4">Resources</h3>
             <ul className="space-y-2">
               {footerLinks.resources.map((link) => (
@@ -152,7 +144,6 @@ export default function Footer() {
           </div>
         </div>
       </div>
-
       {/* Newsletter Signup */}
       <div className="border-t border-gray-800">
         <div className="container mx-auto px-4 py-8">
@@ -176,7 +167,6 @@ export default function Footer() {
           </div>
         </div>
       </div>
-
       {/* Bottom Footer */}
       <div className="border-t border-gray-800">
         <div className="container mx-auto px-4 py-6">
@@ -184,7 +174,6 @@ export default function Footer() {
             <div className="text-gray-400 text-sm mb-4 md:mb-0">
               © {currentYear} Zion Tech Group. All rights reserved.
             </div>
-
             {/* Social Links */}
             <div className="flex space-x-4 mb-4 md:mb-0">
               <a
@@ -220,7 +209,6 @@ export default function Footer() {
                 <Instagram className="w-5 h-5" />
               </a>
             </div>
-
             {/* Legal Links */}
             <div className="flex space-x-6 text-sm">
               <Link

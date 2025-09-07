@@ -1,3 +1,6 @@
+
+
+
 #!/usr/bin/env node
 
 const fs = require('fs');
@@ -10,11 +13,11 @@ console.log('🔧 Starting comprehensive lint error fixing...');
 function getAllFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
   let files = [];
   const items = fs.readdirSync(dir);
-
+  
   for (const item of items) {
     const fullPath = path.join(dir, item);
     const stat = fs.statSync(fullPath);
-
+    
     if (stat.isDirectory()) {
       // Skip node_modules, .git, .next, etc.
       if (!['node_modules', '.git', '.next', 'dist', 'build'].includes(item)) {
@@ -24,7 +27,7 @@ function getAllFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
       files.push(fullPath);
     }
   }
-
+  
   return files;
 }
 
@@ -33,7 +36,7 @@ function fixLintIssues(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
-
+    
     // Fix unused variables by prefixing with underscore
     content = content.replace(/(\s+)(const|let|var)\s+([a-zA-Z_$][a-zA-Z0-9_$]*)\s*=/g, (match, spaces, decl, varName) => {
       if (!varName.startsWith('_') && !varName.includes('_unused')) {
@@ -41,7 +44,7 @@ function fixLintIssues(filePath) {
       }
       return match;
     });
-
+    
     // Fix function parameters
     content = content.replace(/function\s+[^(]*\(([^)]*)\)/g, (match, params) => {
       if (params.trim()) {
@@ -56,7 +59,7 @@ function fixLintIssues(filePath) {
       }
       return match;
     });
-
+    
     // Fix arrow function parameters
     content = content.replace(/\(([^)]*)\)\s*=>/g, (match, params) => {
       if (params.trim()) {
@@ -71,18 +74,18 @@ function fixLintIssues(filePath) {
       }
       return match;
     });
-
+    
     // Fix any types to unknown
     content = content.replace(/:\s*any\b/g, ': unknown');
-
+    
     // Fix console.log statements
     content = content.replace(/console\.(log|warn|error|info)\([^)]*\);?/g, '');
-
+    
     // Fix undefined variables by adding proper imports or declarations
     content = content.replace(/\bchrome\b/g, 'window.chrome');
     content = content.replace(/\bcrypto\b/g, 'window.crypto');
     content = content.replace(/\bURL\b/g, 'window.URL');
-
+    
     // Remove unused imports
     const lines = content.split('\n');
     const filteredLines = lines.filter(line => {
@@ -100,14 +103,14 @@ function fixLintIssues(filePath) {
       }
       return true;
     });
-
+    
     content = filteredLines.join('\n');
-
+    
     if (content !== fs.readFileSync(filePath, 'utf8')) {
       fs.writeFileSync(filePath, content);
       modified = true;
     }
-
+    
     return modified;
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
@@ -119,10 +122,10 @@ function fixLintIssues(filePath) {
 try {
   const files = getAllFiles('.');
   console.log(`Found ${files.length} files to process...`);
-
+  
   let fixedCount = 0;
   let errorCount = 0;
-
+  
   for (const file of files) {
     try {
       if (fixLintIssues(file)) {
@@ -134,13 +137,15 @@ try {
       console.error(`❌ Error in ${file}:`, error.message);
     }
   }
-
+  
   console.log(`\n🎉 Lint fixing complete!`);
   console.log(`✅ Fixed: ${fixedCount} files`);
   console.log(`❌ Errors: ${errorCount} files`);
-
+  
 } catch (error) {
   console.error('Script error:', error);
   process.exit(1);
+
+
 
 }

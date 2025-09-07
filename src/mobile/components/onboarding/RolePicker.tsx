@@ -1,18 +1,16 @@
-import React, { useState } from 'react';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
-import { Briefcase, Users, Check } from 'lucide-react';
 
-export function RolePicker({ onSelect }: RolePickerProps) {
-  const [selectedRole, setSelectedRole] = useState<UserRole>(null);
+import React, { useState } from "react",
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Briefcase, Users, Check } from 'lucide-react'
 
+type UserRole = any;
   return (
     <div className='space-y-4 px-4'>
       <h2 className='text-xl font-medium'>What brings you to Zion?</h2>
       <p className='text-muted-foreground'>
         Choose how you want to use our platform
       </p>
-
       <div className='space-y-3 mt-6'>
         <Card
           className={`cursor-pointer transition-all ${
@@ -39,7 +37,6 @@ export function RolePicker({ onSelect }: RolePickerProps) {
             </div>
           </CardContent>
         </Card>
-
         <Card
           className={`cursor-pointer transition-all ${
             selectedRole === 'client'
@@ -67,4 +64,5 @@ export function RolePicker({ onSelect }: RolePickerProps) {
         </Card>
       </div>
     </div>
-  );
+  )
+}

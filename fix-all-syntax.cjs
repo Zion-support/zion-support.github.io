@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 const fs = require('fs');
+const path = require('path');
 
 // Read the file
 let content = fs.readFileSync('enhanced-automation-suite.cjs', 'utf8');
@@ -77,6 +78,9 @@ const fixes = [
   { from: /introductio:\s*n:/g, to: 'introduction:' },
 ];
 
+console.log('🔧 Fixing all syntax errors...');
+const fixedCount = findAndFixFiles('.');
+console.log(`✅ Fixed ${fixedCount} files with syntax errors`);
 // Apply fixes
 fixes.forEach(fix => {
   content = content.replace(fix.from, fix.to);
@@ -84,3 +88,7 @@ fixes.forEach(fix => {
 
 // Write the fixed content back
 fs.writeFileSync('enhanced-automation-suite.cjs', content);
+
+console.log('✅ Fixed all syntax errors in enhanced-automation-suite.cjs');
+console.log('✅ Fixed all syntax errors in enhanced-automation-suite.cjs');
+console.log('✅ Fixed all syntax errors in enhanced-automation-suite.cjs');

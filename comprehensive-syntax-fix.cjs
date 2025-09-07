@@ -38,8 +38,8 @@ class ComprehensiveSyntaxFixer {
           let content = fs.readFileSync(filePath, 'utf8');
           
           // Remove merge conflict markers
-          content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
-          content = content.replace(/<<<<<<< HEAD[\s\S]*?>>>>>>> [^\n]+/g, '');
+          content = content.replace(/[\s\S]*?
+          content = content.replace(/
           
           fs.writeFileSync(filePath, content);
           this.log(`✅ Fixed merge conflicts in ${file}`);

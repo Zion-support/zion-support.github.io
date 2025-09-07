@@ -1,103 +1,73 @@
 {
   "version": "1.0",
-  "generated": "2025-09-06T09:16:13.542Z",
-  "baseUrl": "https://zion.app",
+  "generated": "2025-09-05T21:52:45.982Z",
   "pages": [
+  "generatedAt": "2025-09-05T23:41:15.563Z",
+  "items": [
     {
-      "url": "https://zion.app",
       "title": "Home",
-      "description": "Zion Tech Group - Leading technology solutions and services",
+      "url": "/",
+      "description": "Zion Tech Group - AI and Technology Solutions",
       "keywords": [
-        "home",
-        "ztech",
+        "AI",
         "technology",
         "solutions",
-        "services"
+        "automation"
       ],
-      "lastmod": "2025-09-06",
-      "type": "page"
     },
     {
-      "url": "https://zion.app/about",
-      "title": "About Us",
-      "description": "Learn about Zion Tech Group and our mission to provide innovative technology solutions",
+      "title": "About",
+      "url": "/about",
+      "description": "About Zion Tech Group - Leading AI and Technology Company",
       "keywords": [
         "about",
         "company",
-        "mission",
         "team",
-        "history"
+        "mission"
       ],
-      "lastmod": "2025-09-06",
-      "type": "page"
     },
     {
-      "url": "https://zion.app/services",
-      "title": "Our Services",
-      "description": "Comprehensive technology services including web development, mobile apps, and cloud solutions",
+      "title": "Services",
+      "url": "/services",
+      "description": "Our Services - AI Development, Automation, and Technology Solutions",
       "keywords": [
         "services",
-        "web development",
-        "mobile apps",
-        "cloud",
-        "solutions"
+        "AI",
+        "automation",
+        "development"
       ],
-      "lastmod": "2025-09-06",
-      "type": "page"
     },
     {
-      "url": "https://zion.app/contact",
-      "title": "Contact Us",
-      "description": "Get in touch with Zion Tech Group for your technology needs",
+      "title": "Contact",
+      "url": "/contact",
+      "description": "Contact Us - Get in Touch with Zion Tech Group",
       "keywords": [
         "contact",
-        "get in touch",
         "support",
         "help"
       ],
-      "lastmod": "2025-09-06",
-      "type": "page"
     },
     {
-      "url": "https://zion.app/blog",
+      "title": "Portfolio",
+      "url": "/portfolio",
+      "description": "Our Portfolio - AI and Technology Projects",
+      "keywords": [
+        "portfolio",
+        "projects",
+        "work",
+        "examples"
+      ],
+    },
+    {
       "title": "Blog",
-      "description": "Latest insights and updates from Zion Tech Group",
+      "url": "/blog",
+      "description": "Blog - Latest AI and Technology Insights",
       "keywords": [
         "blog",
-        "news",
+        "articles",
         "insights",
-        "updates",
-        "articles"
+        "news"
       ],
-      "lastmod": "2025-09-06",
-      "type": "page"
-    },
-    {
-      "url": "https://zion.app/privacy",
-      "title": "Privacy Policy",
-      "description": "Privacy policy and data protection information",
-      "keywords": [
-        "privacy",
-        "policy",
-        "data protection",
-        "legal"
-      ],
-      "lastmod": "2025-09-06",
-      "type": "page"
-    },
-    {
-      "url": "https://zion.app/terms",
-      "title": "Terms of Service",
-      "description": "Terms and conditions for using our services",
-      "keywords": [
-        "terms",
-        "conditions",
-        "legal",
-        "agreement"
-      ],
-      "lastmod": "2025-09-06",
-      "type": "page"
+      "id": 6
     }
-  ],
-  "totalPages": 7
 }

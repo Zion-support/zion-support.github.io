@@ -1,40 +1,40 @@
-import useSWR from 'swr';
-import React, { useMemo, useState } from 'react';
-import EnhancedLayout from '../../../components/layout/EnhancedLayout';
+import useSWR from 'swr',
+import React, { useMemo, useState } from 'react',
+import EnhancedLayout from '../../../components/layout/EnhancedLayout',
 import Link from 'next/link';
 import type { GetServerSideProps } from 'next';
-
-const fetcher = (url: string) => fetch(url).then(r => r.json()),
-
+<<<<<<< HEAD
+const fetcher = null;
+=======
+const fetcher = (url: string) => fetch(url).then(r => r.json())
 export const getServerSideProps: GetServerSideProps = async ({ req }) => {
-  const cookies = (req.headers.cookie || '').split(';').reduce(
+  const cookies = (req.headers.cookie |'').split(';').reduce(
     (acc: any, part: string) => {
       const [k, v] = part.trim().split('=');
-      if (k) acc[k] = decodeURIComponent(v || '');
+      if (k) acc[k] = decodeURIComponent(v |'');
       return acc;
-    },
+    }
     {} as Record<string, string>
   );
   let role = 'guest';
   try {
     const user = cookies['x-user'] ? JSON.parse(cookies['x-user']) : null;
-    role = user?.role || 'guest';
+    role = user?.role |'guest';
   } catch {}
   if (role !== 'admin') {
-    return { redirect: { destination: '/', permanent: false } };
+    return { redirect: { destination: '/', permanent: false } }
   }
-  return { props: {} };};
-
+  return { props: {} };}
 export default function AdminDisputesDashboard() {
   const { data } = useSWR('/api/disputes', fetcher);
   const [statusFilter, setStatusFilter] = useState<
     'All' | 'Open' | 'Under Review' | 'Resolved'
   >('Open');
   const disputes = useMemo(() => {
-    const list = data?.disputes || [];
+    const list = data?.disputes |[];
     if (statusFilter === 'All') return list;
     return list.filter((d: any) => d.status === statusFilter);  }, [data, statusFilter]);
-
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   return (
     <EnhancedLayout>
       <div className='max-w-6xl mx-auto'>
@@ -102,4 +102,4 @@ export default function AdminDisputesDashboard() {
         </div>
       </div>
     </EnhancedLayout>
-  );
+);

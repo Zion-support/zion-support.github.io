@@ -1,7 +1,10 @@
 import React from 'react';
-
 export function VerifiedBadge({ labels }: { labels: string[] }) {
-  if (!labels || labels.length === 0) return null;
+<<<<<<< HEAD
+  if (!labels || labels.length;
+=======
+  if (!labels |labels.length === 0) return null;
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   return (
     <div className='flex gap-2 items-center'>
       {labels.map(label => (

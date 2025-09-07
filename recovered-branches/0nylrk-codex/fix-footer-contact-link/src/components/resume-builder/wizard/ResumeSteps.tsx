@@ -1,13 +1,20 @@
 
-import {Tabs, TabsList, TabsTrigger} from "@/components/ui/tabs";
-import {StepProps} from "./types";
+import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { StepProps } from "./types";
 interface ResumeStepsProps {
-  steps: StepProps[],
-  activeTab: string,
+  steps: StepProps[];
+  activeTab: string;
   onChange: (value: string) => void
 }
+<<<<<<< HEAD
 
-export const ResumeSteps = ({ steps, activeTab, onChange }: ResumeStepsProps) => {
+export const ResumeSteps = null;
+=======
+export const ResumeSteps = ({
+  steps
+  activeTab
+  onChange
+}: ResumeStepsProps) => {
   return (
     <TabsList className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 mb-8">
       {steps.map((step) => (
@@ -16,5 +23,6 @@ export const ResumeSteps = ({ steps, activeTab, onChange }: ResumeStepsProps) =>
         </TabsTrigger>
       ))}
     </TabsList>
-  )
-};
+  );
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

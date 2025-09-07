@@ -1,8 +1,22 @@
-import React from 'react';
+import React from 'react',
 import Head from 'next/head';
-import Layout from '../components/layout/Layout';
-
+import ServiceLanding from '../components/sections/ServiceLanding';
 export default function AIPoweredDevOpsPlatformPage() {
+<<<<<<< HEAD
+	return (
+		<>
+			<Head>
+				<title>AI-Powered DevOps Platform | Zion Tech Group</title>
+				<meta name;
+					"Incident prediction, runbooks, and guardrails"
+				]}
+				industries={["SaaS", "E-commerce", "Fintech", "Media", "Enterprise IT"]}
+				canonical="https: //ziontechgroup.com/ai-powered-devops-platform"
+			/>
+		</>
+	)
+}
+=======
   return (
     <>
       <Head>
@@ -24,15 +38,16 @@ export default function AIPoweredDevOpsPlatformPage() {
         implementationWeeks='2-4 weeks'
         roiNote='Cut MTTR by 40% and increase deployment frequency 3-5x'
         features={[
-          'Autonomous CI/CD optimization and caching',
-          'Flaky test detection and auto quarantine',
-          'Change-risk scoring before deploy',
-          'Automated canary and feature flags',
-          'Rollback orchestration with blast radius limits',
-          'Incident prediction, runbooks, and guardrails',
+          'Autonomous CI/CD optimization and caching'
+          'Flaky test detection and auto quarantine'
+          'Change-risk scoring before deploy'
+          'Automated canary and feature flags'
+          'Rollback orchestration with blast radius limits'
+          'Incident prediction, runbooks, and guardrails'
         ]}
         industries={['SaaS', 'E-commerce', 'Fintech', 'Media', 'Enterprise IT']}
         canonical='https: //ziontechgroup.com/ai-powered-devops-platform'
       />
     </>
   );
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

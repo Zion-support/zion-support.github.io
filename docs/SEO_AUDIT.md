@@ -1,5 +1,7 @@
 # SEO Audit (Autonomous)
 
+Generated: 2025-09-06T00:57:27.834ZGenerated: 2025-09-06T01:35:54.611Z
+
 | File | Title | Meta | Links | Images |
 |---|---:|---:|---:|---:|
 | pages/2025-advanced-services-showcase.tsx | Yes | No | 2 | 0 |

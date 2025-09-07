@@ -1,6 +1,20 @@
 
 import React, { useState, useEffect } from 'react';
 // Use the shared icon wrapper
+<<<<<<< HEAD
+import { Bell  } from '@/components/icons';
+import { Button  } from '@/components/ui/button';
+import { Popover, PopoverContent, PopoverTrigger  } from '@/components/ui/popover';
+import { useNotifications  } from '@/context/notifications/NotificationContext';
+import { toast } from 'sonner';
+import { NotificationFilter;
+  NotificationHeader;
+  NotificationList;
+  NotificationFooter 
+ } from '@/components/notifications';
+import { FilterType } from '@/components/notifications/NotificationFilter';
+export const NotificationCenter: React.FC;
+=======
 import {Bell} from '@/components/icons';
 import {Button} from '@/components/ui/button';
 import {Popover, PopoverContent, PopoverTrigger} from '@/components/ui/popover';
@@ -9,21 +23,19 @@ import {toast} from 'sonner';
 import {NotificationFilter, NotificationHeader, NotificationList, NotificationFooter} from '@/components/notifications';
 import {FilterType} from '@/components/notifications/NotificationFilter';
 export const NotificationCenter: React.FC = () => {
-  const { 
-    filteredNotifications,
-    unreadCount, 
-    markAsRead, 
+  const {
+    filteredNotifications
+    unreadCount
+    markAsRead
     markAllAsRead;
-    dismissNotification, 
+    dismissNotification
     loading;
     filter;
     setFilter;
     fetchNotifications
   } = useNotifications();
-  
   const [open, setOpen] = useState(false);
   const [error, setError] = useState<string | null>(null);
-
   // Refresh notifications when popover opens
   useEffect(() => {
     if (open) {
@@ -36,12 +48,10 @@ export const NotificationCenter: React.FC = () => {
           setError("Couldn't load notifications");
           toast.error("Failed to load notifications")
         }
-      };
-      
+      }
       loadNotifications()
     }
   }, [open, fetchNotifications]);
-
   const handleMarkAllAsRead = async () => {
     try {
       await markAllAsRead();
@@ -50,12 +60,10 @@ export const NotificationCenter: React.FC = () => {
       console.error("Failed to mark notifications as read:", err);
       toast.error("Failed to update notifications")
     }
-  };
-
+  }
   const handleFilterChange = (newFilter: FilterType) => {
     setFilter(newFilter as any)
-  };
-
+  }
   return (
     <Popover open={open} onOpenChange={setOpen}>
       <PopoverTrigger asChild>
@@ -69,17 +77,15 @@ export const NotificationCenter: React.FC = () => {
         </Button>
       </PopoverTrigger>
       <PopoverContent className="w-[350px] p-0 bg-zion-blue border-zion-blue-light max-h-[500px] flex flex-col">
-        <NotificationHeader 
-          unreadCount={unreadCount} 
-          onMarkAllAsRead={handleMarkAllAsRead} 
+        <NotificationHeader
+          unreadCount={unreadCount}
+          onMarkAllAsRead={handleMarkAllAsRead}
         />
-        
-        <NotificationFilter 
-          filter={filter as FilterType} 
-          onFilterChange={handleFilterChange} 
+        <NotificationFilter
+          filter={filter as FilterType}
+          onFilterChange={handleFilterChange}
         />
-        
-        <NotificationList 
+        <NotificationList
           loading={loading}
           error={error}
           notifications={filteredNotifications}
@@ -87,9 +93,9 @@ export const NotificationCenter: React.FC = () => {
           onDismiss={dismissNotification}
           onRetry={fetchNotifications}
         />
-        
         <NotificationFooter onClose={() => setOpen(false)} />
       </PopoverContent>
     </Popover>
   )
-};
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

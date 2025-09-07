@@ -1,23 +1,32 @@
 
-import {useAuthStatus} from "./talent/useAuthStatus";
-import {useTalentData} from "./talent/useTalentData";
-import {useFilterTalents} from "./talent/useFilterTalents";
-import {useUIState} from "./talent/useUIState";
+import { useAuthStatus } from "./talent/useAuthStatus",
+import { useTalentData } from "./talent/useTalentData",
+import { useFilterTalents } from "./talent/useFilterTalents";
+import { useUIState } from "./talent/useUIState";
 export function useTalentDirectory() {
   // Fetch auth status and saved talents
-  const { 
+  const {
     isAuthenticated;
-    userDetails, 
-    savedTalents, 
+<<<<<<< HEAD
+    userDetails;
+    savedTalents;
     handleToggleSave 
   } = useAuthStatus();
-
   // Fetch talent data
   const { 
-    talents, 
+    talents;
     isLoading 
+=======
+    userDetails
+    savedTalents
+    handleToggleSave
+  } = useAuthStatus();
+  // Fetch talent data
+  const {
+    talents
+    isLoading
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   } = useTalentData();
-
   // Apply filters and sorting
   const {
     filteredTalents;
@@ -37,7 +46,6 @@ export function useTalentDirectory() {
     toggleRegion;
     clearFilters
   } = useFilterTalents(talents);
-
   // Manage UI state
   const {
     isMobileFilterOpen;
@@ -49,13 +57,11 @@ export function useTalentDirectory() {
     expandedSections;
     toggleSection
   } = useUIState();
-
   return {
     // Talents and loading state
     talents;
     filteredTalents;
     isLoading;
-    
     // Search and filter state
     searchTerm;
     setSearchTerm;
@@ -68,7 +74,6 @@ export function useTalentDirectory() {
     setExperienceRange;
     sortOption;
     setSortOption;
-    
     // UI state
     isMobileFilterOpen;
     setIsMobileFilterOpen;
@@ -77,12 +82,10 @@ export function useTalentDirectory() {
     selectedTalent;
     setSelectedTalent;
     expandedSections;
-    
     // Auth and user state
     isAuthenticated;
     userDetails;
     savedTalents;
-    
     // Actions
     toggleSkill;
     toggleAvailability;

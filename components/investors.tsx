@@ -1,6 +1,5 @@
 import React from 'react';
 import Head from 'next/head';
-
 export default function InvestorsPage() {
   return (
     <div className='min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8'>
@@ -60,5 +59,5 @@ export default function InvestorsPage() {
 				<div className="pt-4 text-slate-300">Contact IR: <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a></div>
 			</div>
 		</div>
-	),
+	)
 }

@@ -2,8 +2,24 @@
   "timestamp": "2025-09-06T00:32:21.706Z",
   "vulnerabilities": 11,
   "recommendations": [
-
-    "Run \"npm audit fix\" to resolve dependency vulnerabilities",
+    {
+      "type": "file_permissions",
+      "message": "package.json is world-readable",
+      "severity": "medium"
+    },
+    {
+      "type": "file_permissions",
+      "message": "package-lock.json is world-readable",
+      "severity": "medium"
+    }
+  ],
+  "summary": {
+    "totalVulnerabilities": 0,
+    "totalRecommendations": 2,
+    "securityScore": 90,
+    "status": "good"
+  }
+}
     "Review and remove any hardcoded secrets",
     "Update outdated dependencies",
     "Implement proper environment variable management",

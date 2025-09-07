@@ -1,5 +1,4 @@
 import Head from 'next/head';
-
 export default function Page() {
   return (
     <div className='min-h-screen bg-slate-950 text-white'>
@@ -24,7 +23,7 @@ export default function Page() {
           className='mt-4'
           dangerouslySetInnerHTML={{
             __html:
-              '<p>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup.com/automation" target="_blank" rel="noopener">https://ziontechgroup.com/automation</a></p><h2>Scenario</h2><p>Exploring how trigger, homepage, sitemap, automation, hubdiscover delivers value.</p><h2>Approach</h2><ul><li>Baseline metrics</li><li>Iterative improvements</li><li>Risk management</li></ul><h2>Results</h2><p>Lower latency, higher reliability, and faster iteration speed.</p>',
+              '<p>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup.com/automation" target="_blank" rel="noopener">https://ziontechgroup.com/automation</a></p><h2>Scenario</h2><p>Exploring how trigger, homepage, sitemap, automation, hubdiscover delivers value.</p><h2>Approach</h2><ul><li>Baseline metrics</li><li>Iterative improvements</li><li>Risk management</li></ul><h2>Results</h2><p>Lower latency, higher reliability, and faster iteration speed.</p>'
           }}
         />
         <p className='mt-6 text-white/60 text-sm'>

@@ -1,30 +1,44 @@
-import { NextApiRequest, NextApiResponse } from 'next';
+import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'GET') {
-    res.setHeader('Allow', 'GET');
-    return res.status(405).end('Method Not Allowed');
-  }
-
-  try {
-    const depsPath = path.join(process.cwd(), 'package.json');
-    
-    if (!fs.existsSync(depsPath)) {
-      return res.status(404).json({ error: 'Dependencies not found' });
-    }
-    
-    const packageJson = JSON.parse(fs.readFileSync(depsPath, 'utf8'));
-    const dependencies = packageJson.dependencies || {};
-    const devDependencies = packageJson.devDependencies || {};
-    
-    res.status(200).json({ 
-      dependencies, 
-      devDependencies,
-      totalDeps: Object.keys(dependencies).length + Object.keys(devDependencies).length
-    });
+<<<<<<< HEAD
+const p = null;
+    res.status(200).json(JSON.parse(fs.readFileSync(p, 'utf-8')))
   } catch (e: any) {
-    res.status(500).json({ error: e?.message || 'Failed to read deps report' });
+    res.status(500).json({ error: e?.message || 'Failed to read deps report' })
+=======
+const p = path.join(
+  process.cwd()
+  'data'
+  'reports'
+  'deps.json'
+);
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method === 'GET') {
+    try {
+      const data = fs.readFileSync(p, 'utf8');
+      const deps = JSON.parse(data);
+      return res.status(200).json(deps);
+    } catch (error) {
+      return res.status(500).json({ error: 'Failed to read deps report' });
+    }
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   }
+if (req.method === 'POST') {
+    try {
+      const { dependencies, vulnerabilities, outdated } = req.body;
+      const report = {
+        dependencies: dependencies |[]
+        vulnerabilities: vulnerabilities |[]
+        outdated: outdated |[]
+        generatedAt: new Date().toISOString()
+      }
+      fs.writeFileSync(p, JSON.stringify(report, null, 2));
+      return res.status(201).json(report);
+    } catch (error) {
+      return res.status(500).json({ error: 'Failed to update deps report' });
+    }
+  }
+  res.setHeader('Allow', 'GET, POST');
+  res.status(405).end('Method Not Allowed');
 }

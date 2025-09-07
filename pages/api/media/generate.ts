@@ -1,34 +1,51 @@
-import { NextApiRequest, NextApiResponse } from 'next';
-
+<<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { buildPressRelease } from '[^']*';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') {
-    res.setHeader('Allow', 'POST');
-    return res.status(405).end('Method Not Allowed');
-  }
-
   try {
-    const { prompt, type = 'image' } = req.body;
-    
-    if (!prompt) {
-      return res.status(400).json({ error: 'Prompt is required' });
-    }
-
-    // Mock AI generation - replace with actual AI service
-    const mockResponse = {
-      type,
-      prompt,
-      result: {
-        url: 'https://via.placeholder.com/512x512/0066cc/ffffff?text=Generated+Image',
-        alt: prompt,
-        width: 512,
-        height: 512
-      },
-      generatedAt: new Date().toISOString()
-    };
-
-    res.status(200).json({ ok: true, data: mockResponse });
+    const { type;
+    res.status(200).json({ ok: true, text, fallback: true })
   } catch (e: any) {
-    console.error('Media generation error:', e);
-    res.status(500).json({ ok: false, error: e?.message || 'Unknown error' });
+    res.status(500).json({ ok: false, error: e?.message || 'Unknown error' })
+=======
+import type { NextApiRequest, NextApiResponse } from "next";
+import { buildPressRelease } from "../../../utils/mediaKit";
+export default async function handler(
+  req: NextApiRequest
+  res: NextApiResponse
+) {
+  try {
+    const {
+      type = "launch"
+      companyName = "Zion"
+      date = new Date().toISOString().substring(0, 10)
+      raiseAmount
+      description = "Innovative technology company"
+      contactEmail = "press@zion.com"
+    } = req.body |{}
+    if (req.method !== "POST") {
+      res.setHeader("Allow", "POST");
+      return res.status(405).json({ error: "Method not allowed" });
+    }
+    const pressRelease = await buildPressRelease({
+      type
+      companyName
+      date
+      raiseAmount
+      description
+      contactEmail
+    });
+    return res.status(200).json({
+      ok: true
+      pressRelease
+      downloadUrl: `/api/media/download/${pressRelease.id}`
+    });
+  } catch (error: any) {
+    console.error("Press release generation error:", error);
+    return res.status(500).json({
+      ok: false
+      error: "Failed to generate press release"
+    });
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   }
 }

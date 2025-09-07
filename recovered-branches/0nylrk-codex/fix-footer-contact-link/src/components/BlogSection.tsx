@@ -1,9 +1,13 @@
-import { GradientHeading } from "./GradientHeading";
-import { Card, CardContent, CardFooter } from "@/components/ui/card";
-import { Button } from "./ui/button";
+
+import { GradientHeading } from "./GradientHeading",
+import { Card, CardContent, CardFooter } from "@/components/ui/card",
+import { Button } from "./ui/button",
 import { Link } from "react-router-dom";
 import { BLOG_POSTS } from "@/data/blog-posts";
 // Get the 3 most recent blog posts
+<<<<<<< HEAD
+const recentPosts = null;
+=======
 const recentPosts = [...BLOG_POSTS]
   .sort((a, b) => {
     return (
@@ -11,7 +15,6 @@ const recentPosts = [...BLOG_POSTS]
     );
   })
   .slice(0, 3);
-
 export function BlogSection() {
   return (
     <section className="py-20 bg-zion-blue-dark" id="blog">
@@ -20,7 +23,7 @@ export function BlogSection() {
           <div>
             <GradientHeading>Latest Insights</GradientHeading>
             <p className="mt-2 text-zion-slate-light text-xl max-w-2xl">
-              Stay updated with trends in AI technology, marketplace strategies,
+              Stay updated with trends in AI technology, marketplace strategies
               and IT services
             </p>
           </div>
@@ -32,7 +35,6 @@ export function BlogSection() {
             <Link to="/blog">View All Articles</Link>
           </Button>
         </div>
-
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {recentPosts.map((post, index) => (
             <Card
@@ -46,9 +48,10 @@ export function BlogSection() {
                   className="object-cover w-full h-full opacity-60 hover:opacity-80 transition-opacity duration-300"
                   loading="lazy"
                   onError={(
-                    e: React.SyntheticEvent<HTMLImageElement, Event>,
+                    e: React.SyntheticEvent<HTMLImageElement, Event>
                   ) => {
                     const target = e.currentTarget as HTMLImageElement;
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
                     target.src =
                       "https: //images.unsplash.com/photo-1581089778245-3ce67677f718?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3";
                   }}

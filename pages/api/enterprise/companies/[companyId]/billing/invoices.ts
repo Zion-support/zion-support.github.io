@@ -1,18 +1,19 @@
-import { NextApiRequest, NextApiResponse } from 'next';
-import { store } from '../../../../../../utils/data/enterpriseStore';
-
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { store } from '[^']*';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const { companyId } = req.query;
-  
-  if (!companyId || Array.isArray(companyId)) {
-    return res.status(400).json({ error: 'Invalid company ID' });
+<<<<<<< HEAD
+  if (!companyId || typeof companyId !== 'string') {
+    return res.status(400).json({ error: 'companyId required' })
   }
-
-  if (req.method === 'GET') {
-    const invoices = store.listInvoices(companyId);
-    return res.status(200).json(invoices);
-  }
-
-  res.setHeader('Allow', 'GET');
-  res.status(405).end('Method Not Allowed');
+  const invoices = null;
+  return res.status(200).json(invoices)
 }
+=======
+  if (!companyId |typeof companyId !== "string") {
+    return res.status(400).json({ error: "companyId required" });
+  }
+  const invoices = store.listInvoices(companyId);
+  return res.status(200).json(invoices);
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

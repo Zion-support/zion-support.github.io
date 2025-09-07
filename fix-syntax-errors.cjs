@@ -1,75 +1,171 @@
-console.log(`Fixed: ${filePath}`);
-    }
+#!/usr/bin/env node
 
-  } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
+
+console.log('🔧 Starting comprehensive syntax error fix...');
+
+// Common syntax error patterns and their fixes
+const syntaxFixes = [
+  // Fix extra semicolons and commas in type definitions
+  {
+    pattern: /,\s*;/g,
+    replacement: ';'
+  },
+  {
+    pattern: /;\s*;/g,
+    replacement: ';'
+  },
+  {
+    pattern: /export\s+type\s+(\w+)\s*=\s*([^;]+),\s*;/g,
+    replacement: 'export type $1 = $2;'
+  },
+  {
+    pattern: /export\s+type\s+(\w+)\s*=\s*{([^}]+)},\s*;/g,
+    replacement: 'export type $1 = {$2};'
+  },
+  // Fix function declarations
+  {
+    pattern: /export\s+async\s+function\s+(\w+)\s*\([^)]*\)\s*{\s*;/g,
+    replacement: 'export async function $1() {'
+  },
+  // Fix object properties
+  {
+    pattern: /(\w+):\s*([^,;]+),\s*;/g,
+    replacement: '$1: $2;'
+  },
+  // Fix array types
+  {
+    pattern: /(\w+)\[\],\s*;/g,
+    replacement: '$1[];'
+  },
+  // Fix union types
+  {
+    pattern: /\|\s*'([^']+)';\s*;/g,
+    replacement: "| '$1';"
+  },
+  // Fix generic types
+  {
+    pattern: /Pick<\s*(\w+),\s*([^>]+)\s*>\s*&\s*{([^}]+)},\s*;/g,
+    replacement: 'Pick<$1, $2> & {$3};'
+  },
+  // Fix Omit types
+  {
+    pattern: /Omit<(\w+)\s+'([^']+)'\s*>\s*&\s*{([^}]+)},\s*;/g,
+    replacement: "Omit<$1, '$2'> & {$3};"
+  },
+  // Fix Record types
+  {
+    pattern: /Record<string\s+any>/g,
+    replacement: 'Record<string, any>'
+  },
+  // Fix fetch options
+  {
+    pattern: /body:\s*JSON\.stringify\([^)]+\);\s*keepalive:\s*true\s+as\s+any\}/g,
+    replacement: 'body: JSON.stringify($1),\n      keepalive: true as any\n    }'
   }
-function fixSyntaxErrors(filePath) {;
-  console.log(`Fixing syntax errors in: ${filePath}`);
-  let content = fs.readFileSync(filePath, 'utf8');
-  // Fix common syntax errors;
-  content = content;
-    // Remove extra semicolons after class declarations;
-    .replace(/class\s+\w+\s*\{;/g, (match) => match.replace('{;', '{'));
-    // Remove extra semicolons after method declarations;
-    .replace(/(\w+)\s*\([^)]*\)\s*\{;/g, '$1() {');
-    // Remove extra semicolons after if/for/while statements;
-    .replace(/(if|for|while|switch)\s*\([^)]*\)\s*\{;/g, '$1() {');
-    // Remove trailing commas before closing braces;
-    .replace(/,(\s*[}\]])/g, '$1');
-    // Remove extra semicolons after closing braces;
-    .replace(/\}(\s*;)/g, '}$1');
-    // Fix method declarations with extra semicolons;
-    .replace(/(\w+)\s*\([^)]*\)\s*\{;/g, '$1() {');
-    // Remove standalone semicolons;
-    .replace(/^\s*;\s*$/gm, '');
-    // Fix object property declarations;
-    .replace(/(\w+):\s*([^,}]+),/g, '$1: $2,');
-    // Fix array declarations;
-    .replace(/\[\s*\]\s*;/g, '[]');
-    // Remove extra semicolons in function calls;
-    .replace(/\(\s*\)\s*;/g, '()');
-    // Fix constructor calls;
-    .replace(/new\s+(\w+)\s*\(\s*\)\s*;/g, 'new $1()');
-    // Clean up multiple semicolons;
-    .replace(/;+/g, ';');
-    // Remove semicolons at end of lines that shouldn't have them;
-    .replace(/;\s*$/gm, (match, offset, string) => {;
-      const lines = string.split('\n');
-      const lineIndex = string.substring(0, offset).split('\n').length - 1;
-      const line = lines[lineIndex];
-      // Don't remove semicolons from statements that should have them;
-      if (line.match(/(const|let|var|return|throw|break|continue)\s/)) {;
-        return match;
-}
-
-      // Don't remove semicolons from object/array literals;
-      if (line.match(/[\[\{]\s*$/)) {;
-        return match;
-}
-
-      return match.replace(';', '');
-});
-  fs.writeFileSync(filePath, content);
-  console.log(`Fixed syntax errors in: ${filePath}`);
-}
-
-// Fix the main automation files;
-const filesToFix = [;
-  'simple-automation-orchestrator.cjs',
-  'run-automation-suite.cjs';
 ];
-filesToFix.forEach(file => {;
-  if (fs.existsSync(file)) {;
-    fixSyntaxErrors(file);
-} else {;
-    console.log(`File not found: ${file}`);
+
+function fixFile(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    let originalContent = content;
+    
+    // Apply all syntax fixes
+    syntaxFixes.forEach(fix => {
+      content = content.replace(fix.pattern, fix.replacement);
+    });
+    
+    // Additional specific fixes
+    content = content
+      .replace(/,\s*$/gm, '') // Remove trailing commas
+      .replace(/;\s*$/gm, ';') // Ensure proper semicolons
+      .replace(/\{\s*;\s*\}/g, '{}') // Fix empty objects with semicolons
+      .replace(/\}\s*;\s*$/gm, '}') // Fix closing braces
+      .replace(/\{\s*$/gm, '{') // Fix opening braces
+      .replace(/\}\s*,\s*$/gm, '}') // Fix closing braces with commas
+      .replace(/\{\s*;\s*([^}]+)\s*\}/g, '{$1}') // Fix objects with semicolons inside
+      .replace(/\|\s*$/gm, '') // Remove trailing pipes
+      .replace(/\|\s*\|\s*/g, '|') // Fix double pipes
+      .replace(/\s+$/gm, '') // Remove trailing whitespace
+      .replace(/\n\s*\n\s*\n/g, '\n\n'); // Fix multiple newlines
+    
+    if (content !== originalContent) {
+      fs.writeFileSync(filePath, content, 'utf8');
+      console.log(`✅ Fixed: ${filePath}`);
+      return true;
+    }
+    return false;
+  } catch (error) {
+    console.error(`❌ Error fixing ${filePath}:`, error.message);
+    return false;
+  }
 }
 
-  const files = fs.readdirSync(dir);
+function findFiles(dir, extensions) {
+  const files = [];
+  
+  function traverse(currentDir) {
+    try {
+      const items = fs.readdirSync(currentDir);
+      
+      for (const item of items) {
+        const fullPath = path.join(currentDir, item);
+        const stat = fs.statSync(fullPath);
+        
+        if (stat.isDirectory()) {
+          // Skip certain directories
+          if (!['node_modules', '.git', 'dist', 'build', '.next', 'cache'].includes(item)) {
+            traverse(fullPath);
+          }
+        } else if (stat.isFile()) {
+          const ext = path.extname(item);
+          if (extensions.includes(ext)) {
+            files.push(fullPath);
+          }
+        }
+      }
+    } catch (error) {
+      // Skip directories we can't read
+    }
+  }
+  
+  traverse(dir);
+  return files;
+}
 
-  files.forEach(file => {
-    const filePath = path.join(dir, file);
-    const stat = fs.statSync(filePath);
+// Main execution
+const targetDir = process.cwd();
+const extensions = ['.ts', '.tsx', '.js', '.jsx'];
 
-    if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
+console.log(`📁 Scanning ${targetDir} for files with extensions: ${extensions.join(', ')}`);
+
+const files = findFiles(targetDir, extensions);
+console.log(`📄 Found ${files.length} files to check`);
+
+let fixedCount = 0;
+let errorCount = 0;
+
+for (const file of files) {
+  try {
+    if (fixFile(file)) {
+      fixedCount++;
+    }
+  } catch (error) {
+    console.error(`❌ Error processing ${file}:`, error.message);
+    errorCount++;
+  }
+}
+
+console.log(`\n🎉 Syntax fix complete!`);
+console.log(`✅ Fixed: ${fixedCount} files`);
+console.log(`❌ Errors: ${errorCount} files`);
+
+// Run linter to check remaining issues
+console.log('\n🔍 Running linter to check remaining issues...');
+try {
+  execSync('npm run lint', { stdio: 'inherit' });
+} catch (error) {
+  console.log('⚠️  Linter found remaining issues (this is expected)');
+}

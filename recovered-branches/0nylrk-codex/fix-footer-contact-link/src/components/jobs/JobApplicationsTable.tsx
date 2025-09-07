@@ -1,29 +1,53 @@
 
+<<<<<<< HEAD
+import { useState } from "react",
+import { JobApplication, ApplicationStatus } from "@/types/jobs";
+import { useJobApplications } from "@/hooks/useJobApplications";
+import {
+  ApplicationsTable;
+  EmptyState;
+  ErrorState;
+  LoadingState;
+  ScoreDialog
+} from "./applications",
+
+=======
 import {useState} from "react";
 import {JobApplication, ApplicationStatus} from "@/types/jobs";
 import {useJobApplications} from "@/hooks/useJobApplications";
 import {ApplicationsTable, EmptyState, ErrorState, LoadingState, ScoreDialog} from "./applications";
-
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 interface JobApplicationsTableProps {
   jobId: string
 }
-
 export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {
+<<<<<<< HEAD
   const { 
-    applications, 
-    isLoading, 
-    error, 
-    updateApplicationStatus, 
+    applications;
+    isLoading;
+    error;
+    updateApplicationStatus;
     markApplicationAsViewed;
     refetch
   } = useJobApplications(jobId);
-
+  const [processingId, setProcessingId] = useState<string | null>(null),
+  const [selectedApplication, setSelectedApplication] = useState<JobApplication | null>(null),
+  const [showScoreDialog, setShowScoreDialog] = useState(false);
+  const handleStatusChange = null;
+=======
+  const {
+    applications
+    isLoading
+    error
+    updateApplicationStatus
+    markApplicationAsViewed;
+    refetch
+  } = useJobApplications(jobId);
   const [processingId, setProcessingId] = useState<string | null>(null);
   const [selectedApplication, setSelectedApplication] = useState<JobApplication | null>(null);
   const [showScoreDialog, setShowScoreDialog] = useState(false);
-  
   const handleStatusChange = async (applicationId: string, newStatus: ApplicationStatus) => {
-    setProcessingId(applicationId),
+    setProcessingId(applicationId)
     try {
       await updateApplicationStatus(applicationId, newStatus);
       // If it's not already viewed, mark it as viewed
@@ -34,33 +58,27 @@ export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {
     } finally {
       setProcessingId(null)
     }
-  };
-
+  }
   const handleViewScore = (application: JobApplication) => {
-    setSelectedApplication(application),
+    setSelectedApplication(application)
     setShowScoreDialog(true)
-  };
-
+  }
   const handleViewApplication = async (applicationId: string) => {
     await markApplicationAsViewed(applicationId)
-  };
-
+  }
   const handleScoreUpdated = (updatedApplication: JobApplication) => {
     refetch()
-  };
-
+  }
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   if (isLoading) {
     return <LoadingState />
   }
-
   if (error) {
     return <ErrorState error={error} />
   }
-
   if (applications.length === 0) {
     return <EmptyState />
   }
-
   return (
     <>
       <ApplicationsTable
@@ -70,7 +88,6 @@ export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {
         onStatusChange={handleStatusChange}
         onViewScore={handleViewScore}
       />
-
       <ScoreDialog
         open={showScoreDialog}
         onOpenChange={setShowScoreDialog}

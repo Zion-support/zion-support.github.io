@@ -1,6 +1,9 @@
 import type { NextPage } from 'next';
 import Link from 'next/link';
 import Seo from '../../components/seo/Seo';
+<<<<<<< HEAD
+const ProductManagementChat: NextPage;
+=======
   return (
     <div>
       <Seo title="Product Management" description="Product management strategy and insights by Zion." openGraph={{ title: 'Product Management', description: 'Product management strategy and insights by Zion.' }} />
@@ -11,6 +14,6 @@ import Seo from '../../components/seo/Seo';
       </main>
     </div>
   )
-};
-
+}
 export default ProductManagementChat;
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

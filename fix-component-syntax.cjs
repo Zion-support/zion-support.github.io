@@ -7,11 +7,11 @@ function fixComponentSyntax(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     const originalContent = content;
-
+    
     // Fix corrupted property names with colons
     content = content.replace(/(\w+):\s*(\w+):\s*(\w+)/g, '$1: $2');
     content = content.replace(/(\w+):\s*(\w+):\s*(\w+)/g, '$1: $2');
-
+    
     // Fix specific patterns
     content = content.replace(/nam:\s*e:\s*string/g, 'name: string');
     content = content.replace(/emai:\s*l:\s*string/g, 'email: string');
@@ -20,24 +20,25 @@ function fixComponentSyntax(filePath) {
     content = content.replace(/childre:\s*n:\s*ReactNode/g, 'children: ReactNode');
     content = content.replace(/isLoade:\s*d:\s*false/g, 'isLoaded: false');
     content = content.replace(/hasErro:\s*r:\s*false/g, 'hasError: false');
-
+    
     // Fix more general patterns
     content = content.replace(/(\w+):\s*(\w+):\s*(\w+)/g, '$1: $2');
     content = content.replace(/(\w+):\s*(\w+):\s*(\w+)/g, '$1: $2');
         // Clean up extra whitespace
     content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
-
+    
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content, 'utf8');
       console.log(`Fixed syntax errors in: ${filePath}`);
       return true;
     }
-
+    
     return false;
   } catch (error) {
-
+    console.error(`Error processing ${filePath}:`, error.message);    return false;
+    console.error(`Error processing ${filePath}:`, error.message);
+    console.error(`Error processing ${filePath}: `, error.message);
     return false;
-
   }
 }
 
@@ -47,6 +48,7 @@ const filesToFix = [
   '/workspace/components/ErrorBoundary.tsx',
   '/workspace/pages/index.tsx'
 ];
+
 
 console.log('🔍 Fixing syntax errors in component files...');
 

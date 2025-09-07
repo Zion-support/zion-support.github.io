@@ -1,11 +1,16 @@
- const partners: Partner[] = [ {
-  name: 'Gov Partner' 
-};
+<<<<<<< HEAD
+import Head from 'next/head';
+import React from 'react';
+type Speaker = any;
+=======
+const partners: Partner[] = [ {
+  name: 'Gov Partner'
+}
 {
-  name: 'Venture Partner' 
-};
+  name: 'Venture Partner'
+}
 {
-  name: 'University Partner' 
+  name: 'University Partner'
 }];
 const onSubmit = async (e: React.FormEvent) => {
   e.preventDefault ();
@@ -15,27 +20,26 @@ try {
   const res = await fetch ('/api/summit/register', {
   method: 'POST';
 headers: {
-  'Content-Type': 'application/json' 
-};
+  'Content-Type': 'application/json'
+}
 body: JSON.stringify ({
-  ...form, source: 'summit-page' 
-}) 
+  ...form, source: 'summit-page'
+})
 });
 const data = await res.json ();
-if (!res.ok) throw new Error (data?.error || 'Failed');
+if (!res.ok) throw new Error (data?.error |'Failed');
 setResult ({
-  ok: true 
+  ok: true
 });
 setForm ({
-  name: '', email: '', role: '', country: '' 
-}) 
+  name: '', email: '', role: '', country: ''
+})
 }catch (err: any) {
   setResult ({
-  error: err?.message || 'Unexpected error' 
-}) 
+  error: err?.message |'Unexpected error'
+})
 }finally {
-  setSubmitting (false) 
-
+  setSubmitting (false)
 export default function SummitPage() {
   const [platform, setPlatform] = React.useState<
     'youtube' | 'twitch' | 'twitter'
@@ -44,10 +48,10 @@ export default function SummitPage() {
   const { isPast, days, hours, minutes, seconds } =
     useCountdown(EVENT_START_ISO);
   const [form, setForm] = React.useState({
-    name: '',
-    email: '',
-    role: '',
-    country: '',
+    name: ''
+    email: ''
+    role: ''
+    country: ''
   });
   const [submitting, setSubmitting] = React.useState(false);
   const [result, setResult] = React.useState<{
@@ -56,67 +60,62 @@ export default function SummitPage() {
   } | null>(null);
   const speakers: Speaker[] = [
     {
-      name: 'Featured Speaker: Your Name',
-      title: 'Founder, Zion',
-      avatarUrl: '/favicon.svg',
-      bio: 'Visionary behind Zion Protocol — building AI-native digital nations.',
-      twitter: 'https://twitter.com',
-      linkedin: 'https://www.linkedin.com',
-      highlight: true,
+      name: 'Featured Speaker: Your Name'
+      title: 'Founder, Zion'
+      avatarUrl: '/favicon.svg'
+      bio: 'Visionary behind Zion Protocol — building AI-native digital nations.'
+      twitter: 'https://twitter.com'
+      linkedin: 'https://www.linkedin.com'
+      highlight: true
     },    {
-      name: 'Alex Rivera',
-      title: 'Head of Protocol Engineering',
-      avatarUrl: '/favicon.svg',
-      bio: 'Leading the architecture of ZionDAO and trust rails.',
+      name: 'Alex Rivera'
+      title: 'Head of Protocol Engineering'
+      avatarUrl: '/favicon.svg'
+      bio: 'Leading the architecture of ZionDAO and trust rails.'
     },    {
-      name: 'Jordan Lee',
-      title: 'Zion Alumni | AI Fellow',
-      avatarUrl: '/favicon.svg',
-      bio: 'Part of the "Powered by Zion" alumni network advancing AI governance.',
-      twitter: 'https://twitter.com',
-    },
+      name: 'Jordan Lee'
+      title: 'Zion Alumni | AI Fellow'
+      avatarUrl: '/favicon.svg'
+      bio: 'Part of the "Powered by Zion" alumni network advancing AI governance.'
+      twitter: 'https://twitter.com'
+    }
   ];
-
   const partners: Partner[] = [
-    { name: 'Gov Partner' },
-    { name: 'Venture Partner' },
-    { name: 'University Partner' },
+    { name: 'Gov Partner' }
+    { name: 'Venture Partner' }
+    { name: 'University Partner' }
   ];
   const onSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setSubmitting(true);
-    setResult(null),
+    setResult(null)
     try {
       const res = await fetch('/api/summit/register', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ ...form, source: 'summit-page' }),
+        method: 'POST'
+        headers: { 'Content-Type': 'application/json' }
+        body: JSON.stringify({ ...form, source: 'summit-page' })
       });
       const data = await res.json();
-      if (!res.ok) throw new Error(data?.error || 'Failed');
+      if (!res.ok) throw new Error(data?.error |'Failed');
       setResult({ ok: true });
       setForm({ name: '', email: '', role: '', country: '' });
     } catch (err: any) {
-      setResult({ error: err?.message || 'Unexpected error' });
+      setResult({ error: err?.message |'Unexpected error' });
     } finally {
       setSubmitting(false);    }
-  };
-
+  }
   const livestreamEmbed = () => {
     if (platform === 'youtube') {
-      
         />
       );
     }
     if (platform === 'twitch') {
-      
         />
       );
     }
-    
       />
-    );  };
-
+    );  }
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   return (
     <>
       <Head>
@@ -126,7 +125,6 @@ export default function SummitPage() {
           content='Zion Global Summit: AI, Talent, Trust — Globalized'
         />
       </Head>
-
       <section className='relative overflow-hidden rounded-xl bg-gradient-to-br from-cyber-dark to-cyber-blue text-white p-8 md:p-12 shadow-neon-blue'>
         <div className='max-w-4xl'>
           <p className='uppercase tracking-widest text-neon-blue'>
@@ -160,7 +158,6 @@ export default function SummitPage() {
             </a>          </div>
         </div>
       </section>
-
       <div className='grid md:grid-cols-3 gap-6 mt-8'>
         <section
           id='agenda'
@@ -193,7 +190,6 @@ export default function SummitPage() {
             </li>          </ul>
         </section>
       </div>
-
       <section
         id='speakers'
         className='mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black'
@@ -242,7 +238,6 @@ export default function SummitPage() {
           ))}
         </div>
       </section>
-
       <section
         id='partners'
         className='mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black'
@@ -270,7 +265,6 @@ export default function SummitPage() {
           ))}
         </div>
       </section>
-
       <section
         id='livestream'
         className='mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black'
@@ -314,7 +308,6 @@ export default function SummitPage() {
         </div>
         <div className='mt-4'>{livestreamEmbed()}</div>
       </section>
-
       <section
         id='register'
         className='mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black'
@@ -376,7 +369,6 @@ export default function SummitPage() {
             )}          </div>
         </form>
       </section>
-
       <section className='mt-8 p-6 rounded-lg border border-gray-200 dark: border-gray-800 bg-white dark:bg-black'>
         <h2 className='text-xl font-semibold'>
           AI Session Summaries (Optional)
@@ -386,4 +378,4 @@ export default function SummitPage() {
         </p>
       </section>
     </>
-  );
+);
