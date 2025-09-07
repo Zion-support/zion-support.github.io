@@ -2,20 +2,6 @@
   "name": "ziontechgroup-site",
   "version": "1.0.0",
   "private": true,
-<<<<<<< HEAD
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "build:netlify": "node scripts/build-with-error-handling.js",
-    "prebuild": "echo \"Starting build...\"",
-    "export": "vite build",
-    "start": "vite preview --port 4173",
-    "postbuild": "echo \"Build completed\"",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
-    "lint:check": "eslint . --max-warnings 0",
-    "type-check": "tsc --noEmit",
-=======
   "type": "module",
   "scripts": {
     "dev": "next dev",
@@ -29,7 +15,6 @@
     "lint:fix": "node --max-old-space-size=4096 ./node_modules/.bin/eslint . --fix --max-warnings 1000",
     "lint:check": "eslint . --max-warnings 0",
     "type-check": "node --max-old-space-size=8192 ./node_modules/.bin/tsc --noEmit --skipLibCheck",
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-2a0c
     "test": "jest --config jest.config.cjs",
     "test:smoke": "jest --config jest.config.smoke.cjs --passWithNoTests",
     "test:watch": "jest --watch --config jest.config.ts",
@@ -45,11 +30,6 @@
     "ecosystem": "ecosystem.maintenance.cjs"
   },
   "dependencies": {
-<<<<<<< HEAD
-<<<<<<< HEAD
-    "@babel/core": "^7.28.4",
-=======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-2a0c
     "@fastify/cors": "^11.1.0",
     "@fastify/rate-limit": "^10.3.0",
     "@google-analytics/data": "^5.2.0",
@@ -98,6 +78,7 @@
     "autoprefixer": "^10.4.21",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.0.0",
+    "critters": "^0.0.23",
     "framer-motion": "^10.18.0",
     "fs": "^0.0.1-security",
     "fs-extra": "^11.3.1",
@@ -137,7 +118,6 @@
     "@esbuild/linux-x64": "^0.25.9"
   },
   "devDependencies": {
-<<<<<<< HEAD
     "@eslint/eslintrc": "^3.3.1",
     "@types/node": "^20.0.0",
     "@types/react": "^18.2.0",
@@ -165,15 +145,6 @@
     "typescript": "^5.9.2",
     "vite": "^7.1.4",
     "web-vitals": "^5.1.0"
-=======
-    "@types/next": "^8.0.7",
-    "@types/node": "^18.0.0",
-    "@types/node-cron": "^3.0.11",
-    "@types/react": "^18.3.24",
-    "@types/react-dom": "^18.3.7",
-    "@types/react-router-dom": "^5.3.3",
-    "typescript": "5.9.2"
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-2a0c
   },
   "engines": {
     "node": ">=18.0.0",
@@ -194,29 +165,4 @@
   ],
   "author": "Zion Tech Group",
   "license": "MIT"
-<<<<<<< HEAD
 }
-=======
-    "@types/node": "^22.10.2",
-    "@types/react": "^18.3.17",
-    "@types/react-dom": "^18.3.5",
-    "autoprefixer": "^10.4.20",
-    "critters": "^0.0.23",
-    "next": "^15.5.2",
-    "postcss": "^8.5.0",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "tailwindcss": "^3.4.17",
-    "typescript": "^5.9.2"
-  },
-  "devDependencies": {
-    "@types/jest": "^29.5.12",
-    "eslint": "^8.57.0",
-    "eslint-config-next": "^15.5.2",
-    "jest": "^29.7.0",
-    "jest-environment-jsdom": "^29.7.0"
-  }
-=======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-2a0c
-}
->>>>>>> 79992479b4902964b4a5ef1267a2a2e3ae279c60

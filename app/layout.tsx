@@ -1,15 +1,8 @@
-<<<<<<< HEAD
-import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-
-const inter = Inter({ subsets: ['latin'] })
-=======
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
 
 const inter = Inter({ subsets: ['latin'] });
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 export const metadata: Metadata = {
   title: 'Zion Tech Group - Enterprise AI & IT Solutions',
@@ -24,14 +17,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-<<<<<<< HEAD
     title: 'Zion Tech Group - Enterprise AI & IT Solutions',
     description: 'Leading provider of AI-powered business solutions, automation tools, and digital transformation services.',
-  },
-}
-=======
-    title: 'Zion Tech Group - AI, Micro SaaS & Enterprise IT Solutions',
-    description: 'Leading provider of AI solutions, micro SaaS development, and enterprise IT services.',
     images: ['/og-image.jpg'],
     creator: '@ziontechgroup',
   },
@@ -55,7 +42,6 @@ export const metadata: Metadata = {
   colorScheme: 'light',
   themeColor: '#000000',
 };
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 export default function RootLayout({
   children,
@@ -72,9 +58,5 @@ export default function RootLayout({
         </div>
       </body>
     </html>
-<<<<<<< HEAD
-  )
-=======
   );
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-2a0c
 }

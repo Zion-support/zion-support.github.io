@@ -1,10 +1,6 @@
 import React from 'react';
 
 
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-2a0c
 export const metadata = {
   title: 'AI Invoice Generator | Zion Tech Group',
   description: 'Intelligent invoice generation with AI-powered data extraction, automated billing, payment tracking, and smart expense categorization for streamlined financial management.',
@@ -37,27 +33,9 @@ interface PricingTierProps {
   cta: string;
 }
 
-<<<<<<< HEAD
-
-function PricingTier({
-  name,
-  price,
-  period,
-  description,
-  features,
-  popular = false,
-  cta,
-}: PricingTierProps) {
-  return (
-    <div
-      className={`relative p-8 rounded-lg border-2 ${popular ? "border-blue-500 bg-blue-50" : "border-gray-200 bg-white"} shadow-lg`}
-    >
-
-=======
 function PricingTier({ name, price, period, description, features, popular = false, cta }: PricingTierProps) {
   return (
     <div className={`relative p-8 rounded-lg border-2 ${popular ? 'border-blue-500 bg-blue-50' : 'border-gray-200 bg-white'} shadow-lg`}>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-2a0c
       {popular && (
         <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
           <span className="bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
@@ -76,23 +54,8 @@ function PricingTier({ name, price, period, description, features, popular = fal
       <ul className="space-y-3 mb-8">
         {features.map((feature, index) => (
           <li key={index} className="flex items-center">
-<<<<<<< HEAD
-
-            <svg
-              className="w-5 h-5 text-green-500 mr-3"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-            >
-              <path
-                fillRule="evenodd"
-                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                clipRule="evenodd"
-              />
-
-=======
             <svg className="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
               <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-2a0c
             </svg>
             <span className="text-gray-700">{feature}</span>
           </li>
@@ -102,15 +65,8 @@ function PricingTier({ name, price, period, description, features, popular = fal
         href="mailto:kleber@ziontechgroup.com?subject=AI Invoice Generator Quote - {name}"
         className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
           popular
-<<<<<<< HEAD
-
-            ? "bg-blue-600 text-white hover:bg-blue-700"
-            : "bg-gray-900 text-white hover:bg-gray-800"
-
-=======
             ? 'bg-blue-600 text-white hover:bg-blue-700'
             : 'bg-gray-900 text-white hover:bg-gray-800'
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-2a0c
         }`}
       >
         {cta}
@@ -149,15 +105,7 @@ export default function AIInvoiceGeneratorPage() {
       {/* Key Features */}
       <section className="py-12">
         <div className="text-center mb-12">
-<<<<<<< HEAD
-
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">
-            AI-Powered Invoice Features
-          </h2>
-
-=======
           <h2 className="text-3xl font-bold text-gray-900 mb-4">AI-Powered Invoice Features</h2>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-2a0c
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Comprehensive AI solutions to streamline your invoicing and financial management processes.
           </p>
@@ -227,15 +175,7 @@ export default function AIInvoiceGeneratorPage() {
       {/* How It Works */}
       <section className="py-12">
         <div className="text-center mb-12">
-<<<<<<< HEAD
-
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">
-            How It Works
-          </h2>
-
-=======
           <h2 className="text-3xl font-bold text-gray-900 mb-4">How It Works</h2>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-2a0c
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Simple 4-step process to automate your invoicing with AI.
           </p>
@@ -275,15 +215,7 @@ export default function AIInvoiceGeneratorPage() {
       {/* Pricing */}
       <section className="py-12 bg-gray-50 rounded-lg">
         <div className="text-center mb-12">
-<<<<<<< HEAD
-
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">
-            Pricing Plans
-          </h2>
-
-=======
           <h2 className="text-3xl font-bold text-gray-900 mb-4">Pricing Plans</h2>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-2a0c
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Choose the plan that fits your invoicing needs and business size.
           </p>
@@ -384,15 +316,7 @@ export default function AIInvoiceGeneratorPage() {
 
       {/* Contact CTA */}
       <section className="py-12 bg-blue-600 rounded-lg text-white text-center">
-<<<<<<< HEAD
-
-        <h2 className="text-3xl font-bold mb-4">
-          Ready to Automate Your Invoicing?
-        </h2>
-
-=======
         <h2 className="text-3xl font-bold mb-4">Ready to Automate Your Invoicing?</h2>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-2a0c
         <p className="text-xl mb-8 max-w-2xl mx-auto">
           Start your free trial today and see how AI can transform your invoicing process.
         </p>

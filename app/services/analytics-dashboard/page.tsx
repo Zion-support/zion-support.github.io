@@ -1,57 +1,4 @@
 export const metadata = {
-<<<<<<< HEAD
-
-  title: 'Analytics Dashboard | Zion Tech Group',
-  description: 'Professional analytics dashboard services for your business needs.',
-  keywords: 'analytics-dashboard, services, business, technology'
-};
-
-export default function ServicePage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Analytics Dashboard
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Professional analytics dashboard services for your business needs.
-          </p>
-        </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
-            <h3 className="text-2xl font-bold text-white mb-4">Feature 1</h3>
-            <p className="text-gray-300 mb-6">Description of the first key feature.</p>
-            <ul className="space-y-2 text-gray-300">
-              <li>• Benefit 1</li>
-              <li>• Benefit 2</li>
-              <li>• Benefit 3</li>
-            </ul>
-          </div>
-          
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
-            <h3 className="text-2xl font-bold text-white mb-4">Feature 2</h3>
-            <p className="text-gray-300 mb-6">Description of the second key feature.</p>
-            <ul className="space-y-2 text-gray-300">
-              <li>• Benefit 1</li>
-              <li>• Benefit 2</li>
-              <li>• Benefit 3</li>
-            </ul>
-          </div>
-          
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
-            <h3 className="text-2xl font-bold text-white mb-4">Feature 3</h3>
-            <p className="text-gray-300 mb-6">Description of the third key feature.</p>
-            <ul className="space-y-2 text-gray-300">
-              <li>• Benefit 1</li>
-              <li>• Benefit 2</li>
-              <li>• Benefit 3</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-=======
   title: 'Analytics Dashboard Platform | Zion Tech Group',
   description: 'Build powerful analytics dashboards with real-time data visualization, custom metrics, and business intelligence. Professional analytics solutions starting at $16k.',
 };
@@ -128,13 +75,10 @@ export default function AnalyticsDashboardPage() {
       </section>
 
       <Pricing />
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-2a0c
     </div>
   );
 }
 
-<<<<<<< HEAD
-=======
 function Item({ title, details }: { title: string; details: string[] }) {
   return (
     <div className="border border-gray-200 rounded-xl p-6 bg-white">
@@ -252,4 +196,3 @@ function Plan({ name, price, duration, features }: {
     </div>
   );
 }
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-2a0c

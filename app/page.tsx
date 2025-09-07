@@ -79,13 +79,8 @@ export default function HomePage() {
   return (
     <div className="space-y-16">
       {/* Hero Section */}
-<<<<<<< HEAD
-      <section className="text-center py-20 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 rounded-lg relative overflow-hidden" role="banner">
-        {/* Animated background elements */}
-=======
       <section className="text-center py-24 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 rounded-2xl relative overflow-hidden" role="banner">
         {/* Enhanced animated background elements */}
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-2a0c
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-8 -left-8 w-80 h-80 bg-gradient-to-r from-blue-200 to-blue-300 rounded-full mix-blend-multiply filter blur-xl opacity-60 animate-float"></div>
           <div className="absolute -bottom-12 -right-8 w-80 h-80 bg-gradient-to-r from-purple-200 to-purple-300 rounded-full mix-blend-multiply filter blur-xl opacity-60 animate-float" style={{ animationDelay: '2s' }}></div>
@@ -159,162 +154,11 @@ export default function HomePage() {
         <div className="text-center mb-12">
           <h2 id="services-heading" className="text-3xl font-bold text-gray-900 mb-4">
             Our Core Services
-<<<<<<< HEAD
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             From AI-powered automation to complete IT infrastructure.
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" role="list" aria-label="Core service offerings">
-          <ServiceCard
-            title="Micro SaaS Solutions"
-            href="/services/micro-saas"
-            description="Scalable, secure micro SaaS products that solve specific business challenges with modern architecture."
-            bullets={[
-              "Custom web applications",
-              "API development",
-              "Database design",
-              "User authentication",
-              "Payment integration"
-            ]}
-            icon="🚀"
-          />
-          <ServiceCard
-            title="AI & Machine Learning"
-            href="/services/ai-ml"
-            description="Intelligent automation, predictive analytics, and custom AI models tailored to your business needs."
-            bullets={[
-              "Custom AI models",
-              "Predictive analytics",
-              "Natural language processing",
-              "Computer vision",
-              "Process automation"
-            ]}
-            icon="🤖"
-          />
-          <ServiceCard
-            title="Cloud Infrastructure"
-            href="/services/cloud"
-            description="Scalable cloud solutions, DevOps, and infrastructure management for enterprise applications."
-            bullets={[
-              "AWS/Azure/GCP migration",
-              "Container orchestration",
-              "CI/CD pipelines",
-              "Monitoring & logging",
-              "Cost optimization"
-            ]}
-            icon="☁️"
-          />
-          <ServiceCard
-            title="Blockchain Solutions"
-            href="/services/blockchain"
-            description="Smart contracts, DeFi platforms, and blockchain integration for secure, transparent operations."
-            bullets={[
-              "Smart contract development",
-              "DeFi protocols",
-              "NFT marketplaces",
-              "Token economics",
-              "Security auditing"
-            ]}
-            icon="⛓️"
-          />
-          <ServiceCard
-            title="Data Analytics"
-            href="/services/analytics"
-            description="Transform raw data into actionable insights with advanced analytics and visualization tools."
-            bullets={[
-              "Data warehousing",
-              "Business intelligence",
-              "Real-time dashboards",
-              "Predictive modeling",
-              "Data visualization"
-            ]}
-            icon="📊"
-          />
-          <ServiceCard
-            title="Cybersecurity"
-            href="/services/security"
-            description="Comprehensive security solutions to protect your digital assets and ensure compliance."
-            bullets={[
-              "Security audits",
-              "Penetration testing",
-              "Compliance consulting",
-              "Incident response",
-              "Security training"
-            ]}
-            icon="🔒"
-          />
-        </div>
-      </section>
-
-      {/* Why Choose Us */}
-      <section className="py-16 bg-gradient-to-r from-gray-50 to-blue-50 rounded-lg" aria-labelledby="why-choose-heading">
-        <div className="text-center mb-16">
-          <h2 id="why-choose-heading" className="text-4xl font-bold text-gray-900 mb-6 animate-fade-in">
-            Why Choose Zion Tech Group?
-=======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-2a0c
-          </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            From AI-powered automation to complete IT infrastructure.
-          </p>
-        </div>
-<<<<<<< HEAD
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" role="list" aria-label="Key advantages and benefits">
-          <div className="text-center p-8 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group">
-            <div className="w-20 h-20 bg-gradient-to-br from-blue-100 to-blue-200 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-              <span className="text-3xl">⚡</span>
-            </div>
-            <h3 className="text-xl font-semibold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors duration-300">
-              Fast Delivery
-            </h3>
-            <p className="text-gray-600 group-hover:text-gray-700 transition-colors duration-300">
-              Rapid development and deployment with agile methodologies
-            </p>
-          </div>
-
-          <div className="text-center p-8 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group">
-            <div className="w-20 h-20 bg-gradient-to-br from-green-100 to-green-200 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-              <span className="text-3xl">🔒</span>
-            </div>
-            <h3 className="text-xl font-semibold text-gray-900 mb-4 group-hover:text-green-600 transition-colors duration-300">
-              Secure & Reliable
-            </h3>
-            <p className="text-gray-600 group-hover:text-gray-700 transition-colors duration-300">
-              Enterprise-grade security and 99.9% uptime guarantee
-            </p>
-          </div>
-
-          <div className="text-center p-8 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group">
-            <div className="w-20 h-20 bg-gradient-to-br from-purple-100 to-purple-200 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-              <span className="text-3xl">🎯</span>
-            </div>
-            <h3 className="text-xl font-semibold text-gray-900 mb-4 group-hover:text-purple-600 transition-colors duration-300">
-              Custom Solutions
-            </h3>
-            <p className="text-gray-600 group-hover:text-gray-700 transition-colors duration-300">
-              Tailored solutions that fit your specific business needs
-            </p>
-          </div>
-
-          <div className="text-center p-8 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group">
-            <div className="w-20 h-20 bg-gradient-to-br from-orange-100 to-orange-200 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-              <span className="text-3xl">📞</span>
-            </div>
-            <h3 className="text-xl font-semibold text-gray-900 mb-4 group-hover:text-orange-600 transition-colors duration-300">
-              24/7 Support
-            </h3>
-            <p className="text-gray-600 group-hover:text-gray-700 transition-colors duration-300">
-              Round-the-clock technical support and maintenance
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="text-center py-20 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-700 rounded-lg relative overflow-hidden" role="complementary" aria-labelledby="cta-heading">
-        {/* Animated background elements */}
-=======
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" role="list" aria-label="Core service offerings">
           <ServiceCard
             title="Micro SaaS Solutions"
@@ -400,7 +244,6 @@ export default function HomePage() {
       {/* Why Choose Us */}
       <section className="py-20 bg-gradient-to-br from-gray-50 via-blue-50 to-indigo-50 rounded-2xl relative overflow-hidden" aria-labelledby="why-choose-heading">
         {/* Background decoration */}
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-2a0c
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-l from-blue-100 to-transparent rounded-full filter blur-2xl opacity-30"></div>
           <div className="absolute bottom-0 left-0 w-64 h-64 bg-gradient-to-r from-purple-100 to-transparent rounded-full filter blur-2xl opacity-30"></div>
@@ -467,8 +310,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
       {/* CTA Section */}
       <section className="text-center py-24 bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-700 rounded-2xl relative overflow-hidden" role="complementary" aria-labelledby="cta-heading">
@@ -540,7 +381,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-2a0c
     </div>
   );
 }
