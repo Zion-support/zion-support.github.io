@@ -513,4 +513,46 @@ const ServicesOverview: React.FC = () => {
   );
 };
 
-export default ServicesOverview;
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-cyan-600 to-blue-600">
+        <div className="container mx-auto px-4 text-center">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-xl text-cyan-100 mb-8 max-w-3xl mx-auto">
+              Join hundreds of companies already leveraging our AI-powered solutions to drive growth and innovation
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link to="/request-quote">
+                <Button size="lg" className="bg-white text-cyan-600 hover:bg-gray-100">
+                  Get Started Today
+                  <ArrowRight className="ml-2 w-4 h-4" />
+                </Button>
+              </Link>
+              <Link to="/contact">
+                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-cyan-600">
+                  Schedule Demo
+                </Button>
+              </Link>
+            </div>
+
+            <div className="mt-8 text-cyan-100">
+              <p className="text-sm">
+                Need immediate assistance? Call us at{' '}
+                <a href={`tel:${CONTACT_INFO.phone}`} className="font-semibold hover:text-white">
+                  {CONTACT_INFO.phone}
+                </a>
+              </p>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </>
+  );
+}

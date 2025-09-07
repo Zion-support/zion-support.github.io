@@ -24,7 +24,8 @@ import {
   MapPin
 } from 'lucide-react';
 import { SEO } from '@/components/SEO';
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '../data/innovativeMicroSaasServices2025';
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
 
 const ComprehensivePricingGuide2027: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -491,6 +492,6 @@ const ComprehensivePricingGuide2027: React.FC = () => {
           </div>
         </div>
       </section>
-    </div>
+    </>
   );
 }
