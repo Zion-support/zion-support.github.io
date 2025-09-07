@@ -1,5 +1,4 @@
 import React from 'react';
-
 interface TestimonialCardProps {
   name: string;
   role: string;
@@ -8,7 +7,6 @@ interface TestimonialCardProps {
   avatar?: string;
   rating?: number;
 }
-
 export default function TestimonialCard({
   name,
   role,
@@ -38,7 +36,6 @@ export default function TestimonialCard({
           <p className="text-sm text-gray-600">{role} at {company}</p>
         </div>
       </div>
-      
       <div className="flex items-center mb-3">
         {[...Array(rating)].map((_, i) => (
           <svg
@@ -51,7 +48,6 @@ export default function TestimonialCard({
           </svg>
         ))}
       </div>
-      
       <blockquote className="text-gray-700 italic">
         &ldquo;{content}&rdquo;
       </blockquote>

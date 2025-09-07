@@ -1,11 +1,9 @@
 import Link from "next/link";
-
 export const metadata = {
   title: "ERP Solutions | Zion Tech Group",
   description: "Streamline your business operations with comprehensive ERP solutions, including financial management, HR systems, and supply chain optimization.",
   keywords: "erp solutions, enterprise resource planning, business management, financial systems, hr management"
 };
-
 export default function ERPSolutionsPage() {
   return (
     <div className="max-w-6xl mx-auto px-4 py-12">
@@ -17,7 +15,6 @@ export default function ERPSolutionsPage() {
           Streamline your business operations with comprehensive ERP solutions, including financial management, HR systems, and supply chain optimization.
         </p>
       </div>
-
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
         <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
           <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
@@ -30,7 +27,6 @@ export default function ERPSolutionsPage() {
             Comprehensive financial management systems for accounting, budgeting, and reporting.
           </p>
         </div>
-
         <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
           <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6">
             <span className="text-2xl">👥</span>
@@ -42,7 +38,6 @@ export default function ERPSolutionsPage() {
             Complete human resources management including payroll, benefits, and employee records.
           </p>
         </div>
-
         <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
           <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
             <span className="text-2xl">📊</span>
@@ -55,7 +50,6 @@ export default function ERPSolutionsPage() {
           </p>
         </div>
       </div>
-
       <div className="text-center">
         <h2 className="text-3xl font-bold text-gray-900 mb-6">
           Ready to Streamline Your Business?

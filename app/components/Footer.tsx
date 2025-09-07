@@ -1,9 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
-
 export default function Footer() {
   const currentYear = new Date().getFullYear();
-
   return (
     <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -53,7 +51,6 @@ export default function Footer() {
               </a>
             </div>
           </div>
-
           {/* Services */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Services</h3>
@@ -80,7 +77,6 @@ export default function Footer() {
               </li>
             </ul>
           </div>
-
           {/* Company */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Company</h3>
@@ -108,7 +104,6 @@ export default function Footer() {
             </ul>
           </div>
         </div>
-
         {/* Bottom Bar */}
         <div className="border-t border-gray-800 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
@@ -130,5 +125,3 @@ export default function Footer() {
         </div>
       </div>
     </footer>
-  );
-}

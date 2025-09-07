@@ -1,11 +1,9 @@
 import React from "react";
 import { Metadata } from 'next';
-
 export const metadata: Metadata = {
   title: 'AI Analytics Platform - Zion Tech Group',
   description: 'Advanced AI-powered analytics platform for data-driven insights.',
 };
-
 export default function AIAnalyticsPlatformPage() {
   return (
     <div className="min-h-screen bg-white">

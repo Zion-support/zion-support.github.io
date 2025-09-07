@@ -1,5 +1,4 @@
 import React from 'react';
-
 interface PricingTierProps {
   name: string;
   price: string;
@@ -11,7 +10,6 @@ interface PricingTierProps {
   buttonHref?: string;
   color?: 'blue' | 'purple' | 'green' | 'red' | 'yellow' | 'indigo';
 }
-
 export default function PricingTier({
   name,
   price,
@@ -61,9 +59,7 @@ export default function PricingTier({
       text: 'text-indigo-600'
     }
   };
-
   const classes = colorClasses[color];
-
   return (
     <div className={`relative bg-white rounded-lg shadow-lg border-2 ${isPopular ? classes.border : 'border-gray-200'} p-8`}>
       {isPopular && (
@@ -71,7 +67,6 @@ export default function PricingTier({
           Most Popular
         </div>
       )}
-      
       <div className="text-center mb-8">
         <h3 className="text-2xl font-bold text-gray-900 mb-2">{name}</h3>
         <p className="text-gray-600 mb-4">{description}</p>
@@ -80,7 +75,6 @@ export default function PricingTier({
           <span className="text-gray-600 ml-1">{period}</span>
         </div>
       </div>
-
       <ul className="space-y-4 mb-8">
         {features.map((feature, index) => (
           <li key={index} className="flex items-center">
@@ -91,7 +85,6 @@ export default function PricingTier({
           </li>
         ))}
       </ul>
-
       <a
         href={buttonHref}
         className={`w-full ${classes.bg} ${classes.hover} text-white font-semibold py-3 px-6 rounded-lg transition-colors text-center block`}

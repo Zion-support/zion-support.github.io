@@ -1,16 +1,9 @@
 import Link from 'next/link';
 import { ArrowRightIcon } from '@heroicons/react/24/outline';
-
 export const metadata = {
-<<<<<<< HEAD
-  title: 'About Us - Zion Tech Group',
-  description: 'Learn about Zion Tech Group, a leading provider of AI solutions, micro SaaS development, and enterprise IT services.',
-=======
   title: 'About | Zion Tech Group',
   description: 'Learn about Zion Tech Group\'s mission to deliver enterprise-grade AI, micro SaaS, and IT solutions that drive real business results.'
->>>>>>> 70a7e91307b7b137e58209a8df72dcd2ceb02acb
 };
-
 export default function AboutPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
@@ -20,24 +13,23 @@ export default function AboutPage() {
             About Zion Tech Group
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            We are a leading technology company specializing in AI solutions, 
+            We are a leading technology company specializing in AI solutions,
             micro SaaS development, and comprehensive enterprise IT services.
           </p>
         </div>
-
         <div className="max-w-6xl mx-auto">
           {/* Company Overview */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
             <div>
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Mission</h2>
               <p className="text-lg text-gray-600 mb-6">
-                To empower businesses with cutting-edge technology solutions that drive growth, 
-                efficiency, and innovation. We believe in the transformative power of AI and 
+                To empower businesses with cutting-edge technology solutions that drive growth,
+                efficiency, and innovation. We believe in the transformative power of AI and
                 modern software development to solve complex business challenges.
               </p>
               <p className="text-lg text-gray-600">
-                Since our founding, we have delivered over 1000 successful projects across 
-                various industries, helping companies of all sizes achieve their digital 
+                Since our founding, we have delivered over 1000 successful projects across
+                various industries, helping companies of all sizes achieve their digital
                 transformation goals.
               </p>
             </div>
@@ -75,7 +67,6 @@ export default function AboutPage() {
               </div>
             </div>
           </div>
-
           {/* Team Section */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Our Expertise</h2>
@@ -110,7 +101,6 @@ export default function AboutPage() {
               </div>
             </div>
           </div>
-
           {/* Stats Section */}
           <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl p-12 text-white mb-16">
             <h2 className="text-3xl font-bold mb-8 text-center">Our Impact</h2>
@@ -133,14 +123,13 @@ export default function AboutPage() {
               </div>
             </div>
           </div>
-
           {/* CTA Section */}
           <div className="text-center bg-white rounded-xl shadow-lg p-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-6">
               Ready to Work With Us?
             </h2>
             <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-              Let's discuss your project and see how we can help transform your business 
+              Let's discuss your project and see how we can help transform your business
               with innovative technology solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

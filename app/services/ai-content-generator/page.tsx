@@ -1,12 +1,10 @@
 import React from "react";
 import { Metadata } from 'next';
-
 export const metadata: Metadata = {
   title: 'AI Content Generator Pro | Zion Tech Group',
   description: 'Advanced AI-powered content creation platform for blogs, social media, and marketing materials. Generate high-quality, SEO-optimized content at scale.',
   keywords: 'AI content generator, content creation, blog writing, social media content, marketing automation, SEO content',
 };
-
 export default function AIContentGeneratorPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
@@ -17,7 +15,7 @@ export default function AIContentGeneratorPage() {
             AI Content Generator Pro
           </h1>
           <p className="text-xl text-gray-600 mb-8 max-w-4xl mx-auto">
-            Transform your content marketing with our advanced AI-powered platform. Generate high-quality, 
+            Transform your content marketing with our advanced AI-powered platform. Generate high-quality,
             SEO-optimized content for blogs, social media, and marketing materials at scale.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -35,7 +33,6 @@ export default function AIContentGeneratorPage() {
             </a>
           </div>
         </div>
-
         {/* Features Section */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
           <div>
@@ -67,7 +64,6 @@ export default function AIContentGeneratorPage() {
               />
             </div>
           </div>
-
           <div>
             <h2 className="text-3xl font-bold text-gray-900 mb-8">Why Choose Our Platform?</h2>
             <div className="space-y-6">
@@ -94,7 +90,6 @@ export default function AIContentGeneratorPage() {
             </div>
           </div>
         </div>
-
         {/* Pricing Section */}
         <div className="bg-white rounded-2xl shadow-xl p-8 mb-16">
           <h2 className="text-3xl font-bold text-gray-900 text-center mb-8">Simple, Transparent Pricing</h2>
@@ -148,12 +143,11 @@ export default function AIContentGeneratorPage() {
             />
           </div>
         </div>
-
         {/* CTA Section */}
         <div className="bg-gradient-to-r from-blue-600 to-indigo-700 rounded-2xl p-12 text-center text-white">
           <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Content Strategy?</h2>
           <p className="text-xl mb-8 max-w-3xl mx-auto">
-            Join 10,000+ businesses already using AI Content Generator Pro to create 
+            Join 10,000+ businesses already using AI Content Generator Pro to create
             high-quality content at scale. Start your free trial today!
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -179,12 +173,11 @@ export default function AIContentGeneratorPage() {
     </div>
   );
 }
-
-function FeatureItem({ icon, title, description, benefits }: { 
-  icon: string; 
-  title: string; 
-  description: string; 
-  benefits: string[] 
+function FeatureItem({ icon, title, description, benefits }: {
+  icon: string;
+  title: string;
+  description: string;
+  benefits: string[]
 }) {
   return (
     <div className="p-6 bg-white rounded-xl shadow-md border border-gray-200 hover:shadow-lg transition-shadow">
@@ -202,11 +195,10 @@ function FeatureItem({ icon, title, description, benefits }: {
     </div>
   );
 }
-
-function BenefitCard({ icon, title, description }: { 
-  icon: string; 
-  title: string; 
-  description: string 
+function BenefitCard({ icon, title, description }: {
+  icon: string;
+  title: string;
+  description: string
 }) {
   return (
     <div className="p-6 bg-white rounded-xl shadow-md border border-gray-200">
@@ -216,21 +208,20 @@ function BenefitCard({ icon, title, description }: {
     </div>
   );
 }
-
-function PricingCard({ 
-  title, 
-  price, 
-  period, 
-  description, 
-  features, 
-  popular 
-}: { 
-  title: string; 
-  price: string; 
-  period: string; 
-  description: string; 
-  features: string[]; 
-  popular: boolean 
+function PricingCard({
+  title,
+  price,
+  period,
+  description,
+  features,
+  popular
+}: {
+  title: string;
+  price: string;
+  period: string;
+  description: string;
+  features: string[];
+  popular: boolean
 }) {
   return (
     <div className={`p-8 rounded-xl border-2 ${popular ? 'border-blue-500 bg-blue-50' : 'border-gray-200 bg-white'} relative`}>
@@ -262,8 +253,8 @@ function PricingCard({
       <a
         href="mailto:kleber@ziontechgroup.com?subject=AI Content Generator - {title} Plan"
         className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
-          popular 
-            ? 'bg-blue-600 text-white hover:bg-blue-700' 
+          popular
+            ? 'bg-blue-600 text-white hover:bg-blue-700'
             : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
         }`}
       >

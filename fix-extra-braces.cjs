@@ -1,10 +1,14 @@
 const fs = require('fs');
 const path = require('path');
 
-function fixAllRemaining(filePath) {
+function fixExtraBraces(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
+    
+    // Remove extra closing parentheses and braces at the end
+    // Pattern: } followed by ); followed by }
+    content = content.replace(/\s*\);\s*}\s*$/g, '');
     
     // Remove any stray commit hashes
     content = content.replace(/[a-f0-9]{40}/g, '');
@@ -14,22 +18,7 @@ function fixAllRemaining(filePath) {
     content = content.replace(/<<<<<<< HEAD[\s\S]*?>>>>>>>/g, '');
     content = content.replace(/=======[\s\S]*?>>>>>>>/g, '');
     
-    // Fix missing closing braces for function components
-    if (content.includes('export default function') && !content.match(/}\s*$/)) {
-      // Find the last closing div tag
-      const lastDivMatch = content.match(/.*<\/div>\s*$/);
-      if (lastDivMatch) {
-        // Add the missing closing braces
-        content = content.trim() + '\n  );\n}';
-        modified = true;
-      }
-    }
-    
-    // Fix extra spaces and clean up
-    content = content.replace(/\s+$/gm, ''); // Remove trailing whitespace from each line
-    content = content.replace(/\n\s*\n\s*\n/g, '\n\n'); // Remove multiple empty lines
-    
-    // Ensure file ends with single newline
+    // Clean up any extra whitespace at the end
     content = content.trim() + '\n';
     
     const originalContent = fs.readFileSync(filePath, 'utf8');
@@ -55,9 +44,9 @@ function findAndFixFiles(dir) {
     
     if (stat.isDirectory()) {
       fixedCount += findAndFixFiles(filePath);
-    } else if (file.endsWith('.tsx') || file.endsWith('.ts')) {
-      if (fixAllRemaining(filePath)) {
-        console.log(`Fixed remaining issues in: ${filePath}`);
+    } else if (file.endsWith('.tsx')) {
+      if (fixExtraBraces(filePath)) {
+        console.log(`Fixed extra braces in: ${filePath}`);
         fixedCount++;
       }
     }
@@ -66,6 +55,6 @@ function findAndFixFiles(dir) {
   return fixedCount;
 }
 
-console.log('Starting comprehensive fixes...');
+console.log('Starting extra braces cleanup...');
 const fixedCount = findAndFixFiles('./app');
-console.log(`Fixed remaining issues in ${fixedCount} files.`);
+console.log(`Fixed extra braces in ${fixedCount} files.`);

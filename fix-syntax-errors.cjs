@@ -1,86 +1,60 @@
 const fs = require('fs');
 const path = require('path');
 
-// Common syntax fixes
-const fixes = [
-  // Fix merge conflict markers
-  { pattern: /[\s\S]*?[\s\S]*?>>>>>>> [^\n]+/g, replacement: '' },
-  { pattern: /[\s\S]*?>>>>>>> [^\n]+/g, replacement: '' },
-  { pattern: /[\s\S]*?>>>>>>> [^\n]+/g, replacement: '' },
-  
-  // Fix common syntax errors
-  { pattern: /import\s+{\s*([^}]+)\s*}\s+from\s+['"]([^'"]+)['"]\s*;\s*;\s*/g, replacement: 'import { $1 } from \'$2\';' },
-  { pattern: /export\s+default\s+([^;]+)\s*;\s*;\s*/g, replacement: 'export default $1;' },
-  { pattern: /const\s+([^=]+)=\s*([^;]+)\s*;\s*;\s*/g, replacement: 'const $1 = $2;' },
-  { pattern: /let\s+([^=]+)=\s*([^;]+)\s*;\s*;\s*/g, replacement: 'let $1 = $2;' },
-  { pattern: /var\s+([^=]+)=\s*([^;]+)\s*;\s*;\s*/g, replacement: 'var $1 = $2;' },
-  { pattern: /function\s+([^(]+)\([^)]*\)\s*{\s*;\s*/g, replacement: 'function $1() {' },
-  { pattern: /}\s*;\s*;\s*/g, replacement: '};' },
-  { pattern: /;\s*;\s*/g, replacement: ';' },
-  
-  // Fix JSX syntax errors
-  { pattern: /<([^>]+)>\s*;\s*<\/\1>/g, replacement: '<$1></$1>' },
-  { pattern: /<([^>]+)>\s*;\s*([^<]+)<\/\1>/g, replacement: '<$1>$2</$1>' },
-  
-  // Fix TypeScript syntax errors
-  { pattern: /interface\s+([^{]+)\s*{\s*;\s*/g, replacement: 'interface $1 {' },
-  { pattern: /type\s+([^=]+)=\s*([^;]+)\s*;\s*;\s*/g, replacement: 'type $1 = $2;' },
-  
-  // Fix common parsing errors
-  { pattern: /,\s*;\s*/g, replacement: ',' },
-  { pattern: /{\s*;\s*/g, replacement: '{' },
-  { pattern: /}\s*;\s*/g, replacement: '}' },
-  { pattern: /\(\s*;\s*/g, replacement: '(' },
-  { pattern: /\)\s*;\s*/g, replacement: ')' }
-];
-
-function fixFile(filePath) {
+function fixSyntaxErrors(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
-    let originalContent = content;
-    
-    // Apply fixes
-    fixes.forEach(fix => {
-      content = content.replace(fix.pattern, fix.replacement);
-    });
-    
-    // Only write if content changed
-    if (content !== originalContent) {
-      fs.writeFileSync(filePath, content, 'utf8');
     let modified = false;
-
-        replacement: ''
-      },
-      // Fix malformed function declarations
-      {
-        pattern: /^[\s\n]*\}[\w\s]*\([\s\S]*?\)\s*\{[\s\S]*?\}[\s\S]*$/,
-        replacement: `import type { NextApiRequest, NextApiResponse } from 'next';\n\nexport default async function handler(req: NextApiRequest, res: NextApiResponse) {\n  res.status(200).json({ message: 'API endpoint' });\n}`
-      },
-      // Fix files with just return statements
-      {
-        pattern: /^[\s\n]*return[\s\S]*$/,
-        replacement: `import type { NextApiRequest, NextApiResponse } from 'next';\n\nexport default async function handler(req: NextApiRequest, res: NextApiResponse) {\n  res.status(200).json({ message: 'API endpoint' });\n}`
-      },
-      // Fix malformed object literals
-      {
-        pattern: /^[\s\n]*\{[\s\S]*\}\s*$/,
-        replacement: `import type { NextApiRequest, NextApiResponse } from 'next';\n\nexport default async function handler(req: NextApiRequest, res: NextApiResponse) {\n  res.status(200).json({ message: 'API endpoint' });\n}`
-      }
-    ];
-
-    for (const fix of fixes) {
-      if (fix.pattern.test(content)) {
-        content = content.replace(fix.pattern, fix.replacement);
-        modified = true;
-        break; // Only apply one fix per file
+    
+    // Fix missing closing brace in metadata and missing function declaration
+    if (content.includes('export const metadata = {') && !content.includes('export default function')) {
+      // Find the metadata object and add missing closing brace and function declaration
+      const metadataMatch = content.match(/export const metadata = \{[\s\S]*?keywords: "[^"]*"/);
+      if (metadataMatch) {
+        const beforeMetadata = content.substring(0, content.indexOf('export const metadata = {'));
+        const afterMetadata = content.substring(content.indexOf('export const metadata = {'));
+        
+        // Extract the metadata content
+        const metadataContent = afterMetadata.match(/export const metadata = \{[\s\S]*?keywords: "[^"]*"/)[0];
+        
+        // Find where the JSX starts (look for <div)
+        const jsxStart = afterMetadata.search(/^\s*<div/);
+        if (jsxStart !== -1) {
+          const jsxContent = afterMetadata.substring(jsxStart);
+          
+          // Get the function name from the file path
+          const fileName = path.basename(filePath, '.tsx');
+          const functionName = fileName.split('-').map(word => 
+            word.charAt(0).toUpperCase() + word.slice(1)
+          ).join('') + 'Page';
+          
+          // Reconstruct the file
+          content = beforeMetadata + 
+            metadataContent + '};\n\n' +
+            `export default function ${functionName}() {\n` +
+            '  return (\n' +
+            jsxContent.replace(/^\s*/, '    ') + '\n' +
+            '  );\n' +
+            '}';
+          
+          modified = true;
+        }
       }
     }
-
+    
+    // Remove stray commit hashes
+    content = content.replace(/[a-f0-9]{40}/g, '');
+    
+    // Remove any remaining merge conflict markers
+    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>>/g, '');
+    content = content.replace(/<<<<<<< HEAD[\s\S]*?>>>>>>>/g, '');
+    content = content.replace(/=======[\s\S]*?>>>>>>>/g, '');
+    
     if (modified) {
-      fs.writeFileSync(filePath, content);
-      console.log(`Fixed: ${filePath}`);
+      fs.writeFileSync(filePath, content, 'utf8');
       return true;
     }
+    
     return false;
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
@@ -88,65 +62,27 @@ function fixFile(filePath) {
   }
 }
 
-function walkDirectory(dir) {
+function findAndFixFiles(dir) {
+  const files = fs.readdirSync(dir);
   let fixedCount = 0;
-  let totalFiles = 0;
   
-  try {
-    const items = fs.readdirSync(dir);
-    
-    for (const item of items) {
-      const fullPath = path.join(dir, item);
-      
-      try {
-        const stat = fs.statSync(fullPath);
-        
-        if (stat.isDirectory()) {
-          // Skip node_modules, .git, and other common directories
-          if (!['node_modules', '.git', 'dist', 'build', '.next', 'coverage'].includes(item)) {
-            fixedCount += walkDirectory(fullPath);
-          }
-        } else if (stat.isFile()) {
-          // Only process JavaScript/TypeScript files
-          if (/\.(js|jsx|ts|tsx)$/.test(item)) {
-            totalFiles++;
-            if (fixFile(fullPath)) {
-              fixedCount++;
-            }
-          }
-        }
-      } catch (error) {
-        // Skip files that can't be accessed
-        if (error.code !== 'ENOENT' && error.code !== 'EACCES') {
-          console.error(`Error accessing ${fullPath}:`, error.message);
-        }
-      }
-
-  for (const file of files) {
+  files.forEach(file => {
     const filePath = path.join(dir, file);
     const stat = fs.statSync(filePath);
-
+    
     if (stat.isDirectory()) {
-      fixedCount += findAndFixApiFiles(filePath);
-    } else if (file.endsWith('.ts') && !file.endsWith('.d.ts')) {
+      fixedCount += findAndFixFiles(filePath);
+    } else if (file.endsWith('.tsx') || file.endsWith('.ts')) {
       if (fixSyntaxErrors(filePath)) {
+        console.log(`Fixed syntax errors in: ${filePath}`);
         fixedCount++;
-
       }
     }
-
-    if (modified) {
-      fs.writeFileSync(filePath, lines.join('\n'));
-      return true;
-    }
-  } catch (error) {
-    console.error(`Error reading directory ${dir}:`, error.message);
-  }
+  });
   
   return fixedCount;
 }
 
 console.log('Starting syntax error fixes...');
-const fixedCount = walkDirectory('/workspace');
-console.log(`Fixed ${fixedCount} files`);
-
+const fixedCount = findAndFixFiles('./app');
+console.log(`Fixed syntax errors in ${fixedCount} files.`);

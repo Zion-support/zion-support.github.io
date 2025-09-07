@@ -1,12 +1,10 @@
 import React from "react";
 import { Metadata } from 'next';
-
 export const metadata: Metadata = {
   title: 'AI Social Media Scheduler | Zion Tech Group',
   description: 'Intelligent social media management with optimal posting times and content suggestions. Maximize engagement across all platforms.',
   keywords: 'social media scheduler, AI social media, content scheduling, social media automation, engagement optimization',
 };
-
 export default function AISocialSchedulerPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-50 to-pink-100">
@@ -17,7 +15,7 @@ export default function AISocialSchedulerPage() {
             AI Social Media Scheduler
           </h1>
           <p className="text-xl text-gray-600 mb-8 max-w-4xl mx-auto">
-            Maximize your social media impact with AI-powered scheduling and content optimization. 
+            Maximize your social media impact with AI-powered scheduling and content optimization.
             Post at optimal times, engage your audience, and grow your following across all platforms.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -35,7 +33,6 @@ export default function AISocialSchedulerPage() {
             </a>
           </div>
         </div>
-
         {/* Features Section */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
           <div>
@@ -67,7 +64,6 @@ export default function AISocialSchedulerPage() {
               />
             </div>
           </div>
-
           <div>
             <h2 className="text-3xl font-bold text-gray-900 mb-8">Why Choose Our Platform?</h2>
             <div className="space-y-6">
@@ -94,7 +90,6 @@ export default function AISocialSchedulerPage() {
             </div>
           </div>
         </div>
-
         {/* Platform Support */}
         <div className="bg-white rounded-2xl shadow-xl p-8 mb-16">
           <h2 className="text-3xl font-bold text-gray-900 text-center mb-8">Supported Platforms</h2>
@@ -126,7 +121,6 @@ export default function AISocialSchedulerPage() {
             />
           </div>
         </div>
-
         {/* Pricing Section */}
         <div className="bg-white rounded-2xl shadow-xl p-8 mb-16">
           <h2 className="text-3xl font-bold text-gray-900 text-center mb-8">Simple, Transparent Pricing</h2>
@@ -182,12 +176,11 @@ export default function AISocialSchedulerPage() {
             />
           </div>
         </div>
-
         {/* CTA Section */}
         <div className="bg-gradient-to-r from-purple-600 to-pink-700 rounded-2xl p-12 text-center text-white">
           <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Social Media?</h2>
           <p className="text-xl mb-8 max-w-3xl mx-auto">
-            Join 15,000+ businesses already using AI Social Media Scheduler to grow their 
+            Join 15,000+ businesses already using AI Social Media Scheduler to grow their
             social media presence and engagement. Start your free trial today!
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -213,12 +206,11 @@ export default function AISocialSchedulerPage() {
     </div>
   );
 }
-
-function FeatureItem({ icon, title, description, benefits }: { 
-  icon: string; 
-  title: string; 
-  description: string; 
-  benefits: string[] 
+function FeatureItem({ icon, title, description, benefits }: {
+  icon: string;
+  title: string;
+  description: string;
+  benefits: string[]
 }) {
   return (
     <div className="p-6 bg-white rounded-xl shadow-md border border-gray-200 hover:shadow-lg transition-shadow">
@@ -236,11 +228,10 @@ function FeatureItem({ icon, title, description, benefits }: {
     </div>
   );
 }
-
-function BenefitCard({ icon, title, description }: { 
-  icon: string; 
-  title: string; 
-  description: string 
+function BenefitCard({ icon, title, description }: {
+  icon: string;
+  title: string;
+  description: string
 }) {
   return (
     <div className="p-6 bg-white rounded-xl shadow-md border border-gray-200">
@@ -250,11 +241,10 @@ function BenefitCard({ icon, title, description }: {
     </div>
   );
 }
-
-function PlatformCard({ icon, title, description }: { 
-  icon: string; 
-  title: string; 
-  description: string 
+function PlatformCard({ icon, title, description }: {
+  icon: string;
+  title: string;
+  description: string
 }) {
   return (
     <div className="text-center p-6 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors">
@@ -264,21 +254,20 @@ function PlatformCard({ icon, title, description }: {
     </div>
   );
 }
-
-function PricingCard({ 
-  title, 
-  price, 
-  period, 
-  description, 
-  features, 
-  popular 
-}: { 
-  title: string; 
-  price: string; 
-  period: string; 
-  description: string; 
-  features: string[]; 
-  popular: boolean 
+function PricingCard({
+  title,
+  price,
+  period,
+  description,
+  features,
+  popular
+}: {
+  title: string;
+  price: string;
+  period: string;
+  description: string;
+  features: string[];
+  popular: boolean
 }) {
   return (
     <div className={`p-8 rounded-xl border-2 ${popular ? 'border-purple-500 bg-purple-50' : 'border-gray-200 bg-white'} relative`}>
@@ -310,8 +299,8 @@ function PricingCard({
       <a
         href="mailto:kleber@ziontechgroup.com?subject=AI Social Media Scheduler - {title} Plan"
         className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
-          popular 
-            ? 'bg-purple-600 text-white hover:bg-purple-700' 
+          popular
+            ? 'bg-purple-600 text-white hover:bg-purple-700'
             : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
         }`}
       >

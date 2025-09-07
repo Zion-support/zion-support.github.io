@@ -1,8 +1,6 @@
 'use client';
-
 import React from 'react';
 import Link from 'next/link';
-
 interface ServiceCardProps {
   title: string;
   href: string;
@@ -11,7 +9,6 @@ interface ServiceCardProps {
   icon?: string;
   className?: string;
 }
-
 export default function ServiceCard({
   title,
   href,
@@ -35,11 +32,9 @@ export default function ServiceCard({
           {title}
         </h3>
       </div>
-      
       <p className="text-gray-600 mb-4 group-hover:text-gray-700 transition-colors duration-300">
         {description}
       </p>
-      
       {bullets.length > 0 && (
         <ul className="space-y-2">
           {bullets.map((bullet, index) => (
@@ -50,7 +45,6 @@ export default function ServiceCard({
           ))}
         </ul>
       )}
-      
       {/* Hover indicator */}
       <div className="mt-4 flex items-center text-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
         <span className="text-sm font-medium mr-2">Learn More</span>
@@ -59,5 +53,3 @@ export default function ServiceCard({
         </svg>
       </div>
     </Link>
-  );
-}

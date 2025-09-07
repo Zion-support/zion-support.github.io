@@ -1,11 +1,9 @@
 import Link from "next/link";
-
 export const metadata = {
   title: "Mobile App Development | Zion Tech Group",
   description: "Create powerful mobile applications for iOS and Android with native and cross-platform solutions, featuring modern UI/UX design.",
   keywords: "mobile app development, ios apps, android apps, cross-platform development, mobile ui/ux"
 };
-
 export default function MobileAppDevelopmentPage() {
   return (
     <div className="max-w-6xl mx-auto px-4 py-12">
@@ -17,7 +15,6 @@ export default function MobileAppDevelopmentPage() {
           Create powerful mobile applications for iOS and Android with native and cross-platform solutions, featuring modern UI/UX design.
         </p>
       </div>
-
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
         <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
           <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
@@ -30,7 +27,6 @@ export default function MobileAppDevelopmentPage() {
             High-performance native apps for iOS and Android with platform-specific optimizations.
           </p>
         </div>
-
         <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
           <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6">
             <span className="text-2xl">🔄</span>
@@ -42,7 +38,6 @@ export default function MobileAppDevelopmentPage() {
             Efficient cross-platform development for faster deployment across multiple platforms.
           </p>
         </div>
-
         <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
           <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
             <span className="text-2xl">🎨</span>
@@ -55,7 +50,6 @@ export default function MobileAppDevelopmentPage() {
           </p>
         </div>
       </div>
-
       <div className="text-center">
         <h2 className="text-3xl font-bold text-gray-900 mb-6">
           Ready to Build Your Mobile App?

@@ -1,6 +1,4 @@
-
 import Link from 'next/link';
-
 interface CardProps {
   title: string;
   href: string;
@@ -8,7 +6,6 @@ interface CardProps {
   bullets?: string[];
   icon?: string;
 }
-
 function ServiceCard({
   title,
   href,
@@ -43,7 +40,6 @@ function ServiceCard({
     </Link>
   );
 }
-
 export default function HomePage() {
   return (
     <div className="space-y-16">
@@ -57,7 +53,6 @@ export default function HomePage() {
           <div className="absolute top-1/4 right-1/4 w-32 h-32 bg-gradient-to-r from-cyan-200 to-cyan-300 rounded-full mix-blend-multiply filter blur-lg opacity-50 animate-pulse-slow"></div>
           <div className="absolute bottom-1/4 left-1/4 w-24 h-24 bg-gradient-to-r from-pink-200 to-pink-300 rounded-full mix-blend-multiply filter blur-lg opacity-50 animate-pulse-slow" style={{ animationDelay: '1s' }}></div>
         </div>
-        
         <div className="relative z-10">
           <div className="inline-block mb-6 animate-bounce-in">
             <span className="text-6xl animate-wiggle">🚀</span>
@@ -95,7 +90,6 @@ export default function HomePage() {
               </span>
             </a>
           </div>
-          
           {/* Stats Section */}
           <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 animate-slide-up" style={{ animationDelay: '0.5s' }}>
             <div className="text-center group">
@@ -117,7 +111,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
       {/* Featured Services */}
       <section className="py-12" role="main" aria-labelledby="services-heading">
         <div className="text-center mb-12">
@@ -209,7 +202,6 @@ export default function HomePage() {
           />
         </div>
       </section>
-
       {/* Why Choose Us */}
       <section className="py-20 bg-gradient-to-br from-gray-50 via-blue-50 to-indigo-50 rounded-2xl relative overflow-hidden" aria-labelledby="why-choose-heading">
         {/* Background decoration */}
@@ -217,7 +209,6 @@ export default function HomePage() {
           <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-l from-blue-100 to-transparent rounded-full filter blur-2xl opacity-30"></div>
           <div className="absolute bottom-0 left-0 w-64 h-64 bg-gradient-to-r from-purple-100 to-transparent rounded-full filter blur-2xl opacity-30"></div>
         </div>
-        
         <div className="relative z-10">
           <div className="text-center mb-20">
             <h2 id="why-choose-heading" className="text-5xl font-bold bg-gradient-to-r from-gray-900 to-blue-600 bg-clip-text text-transparent mb-8 animate-fade-in">
@@ -240,7 +231,6 @@ export default function HomePage() {
                 Rapid development and deployment with agile methodologies and modern tools
               </p>
             </div>
-
             <div className="text-center p-10 bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4 group border border-white/20">
               <div className="w-24 h-24 bg-gradient-to-br from-green-100 to-green-200 rounded-2xl flex items-center justify-center mx-auto mb-8 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 animate-float" style={{ animationDelay: '0.5s' }}>
                 <span className="text-4xl animate-pulse-slow">🔒</span>
@@ -252,7 +242,6 @@ export default function HomePage() {
                 Enterprise-grade security and 99.9% uptime guarantee with 24/7 monitoring
               </p>
             </div>
-
             <div className="text-center p-10 bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4 group border border-white/20">
               <div className="w-24 h-24 bg-gradient-to-br from-purple-100 to-purple-200 rounded-2xl flex items-center justify-center mx-auto mb-8 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 animate-float" style={{ animationDelay: '1s' }}>
                 <span className="text-4xl animate-pulse-slow">🎯</span>
@@ -264,7 +253,6 @@ export default function HomePage() {
                 Tailored solutions that perfectly fit your specific business needs and goals
               </p>
             </div>
-
             <div className="text-center p-10 bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4 group border border-white/20">
               <div className="w-24 h-24 bg-gradient-to-br from-orange-100 to-orange-200 rounded-2xl flex items-center justify-center mx-auto mb-8 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 animate-float" style={{ animationDelay: '1.5s' }}>
                 <span className="text-4xl animate-pulse-slow">📞</span>
@@ -279,7 +267,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
       {/* Testimonials Section */}
       <section className="py-20 bg-white" aria-labelledby="testimonials-heading">
         <div className="text-center mb-16">
@@ -290,7 +277,6 @@ export default function HomePage() {
             Don&apos;t just take our word for it. Here&apos;s what our clients have to say about working with us.
           </p>
         </div>
-        
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" role="list" aria-label="Client testimonials">
           <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group border border-blue-100 animate-stagger-1">
             <div className="flex items-center mb-4">
@@ -311,7 +297,6 @@ export default function HomePage() {
               </div>
             </div>
           </div>
-
           <div className="bg-gradient-to-br from-purple-50 to-pink-50 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group border border-purple-100 animate-stagger-2">
             <div className="flex items-center mb-4">
               {[...Array(5)].map((_, i) => (
@@ -331,7 +316,6 @@ export default function HomePage() {
               </div>
             </div>
           </div>
-
           <div className="bg-gradient-to-br from-green-50 to-emerald-50 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group border border-green-100 animate-stagger-3">
             <div className="flex items-center mb-4">
               {[...Array(5)].map((_, i) => (
@@ -353,7 +337,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
       {/* Technology Stack Section */}
       <section className="py-20 bg-gray-50" aria-labelledby="tech-stack-heading">
         <div className="text-center mb-16">
@@ -364,7 +347,6 @@ export default function HomePage() {
             We use cutting-edge technologies and frameworks to deliver robust, scalable solutions.
           </p>
         </div>
-        
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8" role="list" aria-label="Technology stack">
           {[
             { name: 'React', icon: '⚛️', color: 'from-blue-400 to-blue-600' },
@@ -380,7 +362,7 @@ export default function HomePage() {
             { name: 'Redis', icon: '🔴', color: 'from-red-500 to-red-700' },
             { name: 'GraphQL', icon: '🔺', color: 'from-pink-500 to-pink-700' }
           ].map((tech, index) => (
-            <div 
+            <div
               key={tech.name}
               className="text-center p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group animate-stagger-1"
               style={{ animationDelay: `${index * 0.1}s` }}
@@ -395,7 +377,6 @@ export default function HomePage() {
           ))}
         </div>
       </section>
-
       {/* Newsletter Signup Section */}
       <section className="py-20 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 rounded-2xl relative overflow-hidden" aria-labelledby="newsletter-heading">
         <div className="absolute inset-0 bg-black/10"></div>
@@ -408,7 +389,6 @@ export default function HomePage() {
               Get the latest insights, updates, and exclusive offers delivered to your inbox.
             </p>
           </div>
-          
           <div className="max-w-md mx-auto animate-slide-up" style={{ animationDelay: '0.2s' }}>
             <form className="flex flex-col sm:flex-row gap-4">
               <input
@@ -430,7 +410,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="text-center py-24 bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-700 rounded-2xl relative overflow-hidden" role="complementary" aria-labelledby="cta-heading">
         {/* Enhanced animated background elements */}
@@ -442,7 +421,6 @@ export default function HomePage() {
           <div className="absolute top-1/4 right-1/4 w-32 h-32 bg-gradient-to-r from-cyan-300/20 to-cyan-400/20 rounded-full mix-blend-multiply filter blur-xl opacity-60 animate-pulse-slow"></div>
           <div className="absolute bottom-1/4 left-1/4 w-24 h-24 bg-gradient-to-r from-pink-300/20 to-pink-400/20 rounded-full mix-blend-multiply filter blur-xl opacity-60 animate-pulse-slow" style={{ animationDelay: '1s' }}></div>
         </div>
-        
         <div className="relative z-10">
           <div className="inline-block mb-8 animate-bounce-in">
             <span className="text-6xl animate-wiggle">💼</span>
@@ -479,7 +457,6 @@ export default function HomePage() {
               </span>
             </Link>
           </div>
-          
           {/* Trust indicators */}
           <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 animate-slide-up" style={{ animationDelay: '0.5s' }}>
             <div className="text-center">

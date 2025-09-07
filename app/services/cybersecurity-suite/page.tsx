@@ -1,12 +1,10 @@
 import { Metadata } from 'next';
 import React from 'react';
-
 export const metadata: Metadata = {
   title: 'Cybersecurity Suite | Zion Tech Group',
   description: 'Comprehensive cybersecurity solutions including security assessments, penetration testing, compliance audits, and managed security services.',
   keywords: 'cybersecurity, security assessment, penetration testing, compliance, managed security, incident response'
 };
-
 export default function CybersecuritySuitePage() {
   return (
     <div className="min-h-screen bg-gray-50">
@@ -14,11 +12,10 @@ export default function CybersecuritySuitePage() {
         <div className="text-center mb-16">
           <h1 className="text-5xl font-bold text-gray-900 mb-6">Cybersecurity Suite</h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Protect your business with our comprehensive cybersecurity solutions. 
+            Protect your business with our comprehensive cybersecurity solutions.
             From security assessments to managed security services, we've got you covered.
           </p>
         </div>
-        
         <SecurityServicesSection />
         <PricingSection />
         <ContactSection />
@@ -26,7 +23,6 @@ export default function CybersecuritySuitePage() {
     </div>
   );
 }
-
 function SecurityServicesSection() {
   const services = [
     {
@@ -66,7 +62,6 @@ function SecurityServicesSection() {
       price: "Starting at $15,000/month"
     }
   ];
-
   return (
     <div className="bg-white rounded-2xl p-8 mb-16">
       <h2 className="text-3xl font-bold text-gray-900 text-center mb-8">Security Services</h2>
@@ -85,7 +80,6 @@ function SecurityServicesSection() {
     </div>
   );
 }
-
 function PricingSection() {
   return (
     <div className="bg-white rounded-2xl p-8 mb-16">
@@ -119,9 +113,8 @@ function PricingSection() {
     </div>
   );
 }
-
-function PricingCard({ name, price, period, description, features, popular }: { 
-  name: string; price: string; period: string; description: string; features: string[]; popular: boolean 
+function PricingCard({ name, price, period, description, features, popular }: {
+  name: string; price: string; period: string; description: string; features: string[]; popular: boolean
 }) {
   return (
     <div className={`relative border-2 rounded-xl p-8 ${popular ? 'border-red-500 bg-red-50' : 'border-gray-200'}`}>
@@ -149,8 +142,8 @@ function PricingCard({ name, price, period, description, features, popular }: {
       <a
         href="tel:+13024640950"
         className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
-          popular 
-            ? 'bg-red-600 text-white hover:bg-red-700' 
+          popular
+            ? 'bg-red-600 text-white hover:bg-red-700'
             : 'bg-gray-900 text-white hover:bg-gray-800'
         }`}
       >
@@ -159,7 +152,6 @@ function PricingCard({ name, price, period, description, features, popular }: {
     </div>
   );
 }
-
 function ContactSection() {
   return (
     <div className="bg-gradient-to-r from-red-600 to-pink-600 p-8 rounded-2xl text-center">

@@ -1,10 +1,8 @@
 import React from 'react';
-
 export const metadata = {
   title: "Research | Zion Tech Group",
   description: "Explore our cutting-edge research in AI, quantum computing, and autonomous systems."
 };
-
 export default function ResearchPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -17,7 +15,6 @@ export default function ResearchPage() {
             Driving the future of technology through cutting-edge research in AI, quantum computing, and autonomous systems.
           </p>
         </div>
-
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <div className="bg-gray-800 rounded-lg p-6">
             <h3 className="text-xl font-bold text-white mb-4">AI Research</h3>
@@ -26,7 +23,6 @@ export default function ResearchPage() {
             </p>
             <div className="text-blue-400 font-semibold">25+ Patents Filed</div>
           </div>
-
           <div className="bg-gray-800 rounded-lg p-6">
             <h3 className="text-xl font-bold text-white mb-4">Quantum Computing</h3>
             <p className="text-gray-300 mb-4">
@@ -34,7 +30,6 @@ export default function ResearchPage() {
             </p>
             <div className="text-blue-400 font-semibold">15+ Publications</div>
           </div>
-
           <div className="bg-gray-800 rounded-lg p-6">
             <h3 className="text-xl font-bold text-white mb-4">Autonomous Systems</h3>
             <p className="text-gray-300 mb-4">
@@ -43,13 +38,11 @@ export default function ResearchPage() {
             <div className="text-blue-400 font-semibold">10+ Active Projects</div>
           </div>
         </div>
-
         <div className="text-center">
           <h2 className="text-3xl font-bold text-white mb-6">Research Partnerships</h2>
           <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
             We collaborate with leading universities and research institutions worldwide to advance the frontiers of technology.
           </p>
-          
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center">
               <h3 className="text-xl font-bold text-white mb-2">Stanford University</h3>

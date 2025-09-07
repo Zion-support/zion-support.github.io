@@ -1,15 +1,11 @@
 'use client';
-
 import React, { useState } from 'react';
 import Link from 'next/link';
-
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
-
   return (
     <header className="bg-white shadow-lg sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -21,7 +17,6 @@ export default function Header() {
               <span className="text-2xl font-bold text-gray-900 ml-1">Tech</span>
             </Link>
           </div>
-
           {/* Desktop Navigation */}
           <nav className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-8">
@@ -51,7 +46,6 @@ export default function Header() {
               </Link>
             </div>
           </nav>
-
           {/* CTA Button */}
           <div className="hidden md:block">
             <Link
@@ -61,7 +55,6 @@ export default function Header() {
               Get Started
             </Link>
           </div>
-
           {/* Mobile menu button */}
           <div className="md:hidden">
             <button
@@ -79,7 +72,6 @@ export default function Header() {
             </button>
           </div>
         </div>
-
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="md:hidden">
@@ -126,5 +118,3 @@ export default function Header() {
         )}
       </div>
     </header>
-  );
-}

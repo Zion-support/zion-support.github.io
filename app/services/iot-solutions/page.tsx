@@ -1,11 +1,9 @@
 import Link from "next/link";
-
 export const metadata = {
   title: "IoT Solutions | Zion Tech Group",
   description: "Connect and manage devices with comprehensive IoT solutions, including sensor networks, data collection, and real-time monitoring systems.",
   keywords: "iot solutions, internet of things, sensor networks, device management, iot analytics"
 };
-
 export default function IoTSolutionsPage() {
   return (
     <div className="max-w-6xl mx-auto px-4 py-12">
@@ -17,7 +15,6 @@ export default function IoTSolutionsPage() {
           Connect and manage devices with comprehensive IoT solutions, including sensor networks, data collection, and real-time monitoring systems.
         </p>
       </div>
-
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
         <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
           <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
@@ -30,7 +27,6 @@ export default function IoTSolutionsPage() {
             Seamless connectivity solutions for IoT devices with secure communication protocols.
           </p>
         </div>
-
         <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
           <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6">
             <span className="text-2xl">📡</span>
@@ -42,7 +38,6 @@ export default function IoTSolutionsPage() {
             Advanced sensor network solutions for data collection and environmental monitoring.
           </p>
         </div>
-
         <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
           <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
             <span className="text-2xl">📊</span>
@@ -55,7 +50,6 @@ export default function IoTSolutionsPage() {
           </p>
         </div>
       </div>
-
       <div className="text-center">
         <h2 className="text-3xl font-bold text-gray-900 mb-6">
           Ready to Connect Your Devices?

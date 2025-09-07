@@ -12,36 +12,41 @@ function fixMergeConflicts(filePath) {
     
     console.log(`Fixing merge conflicts in: ${filePath}`);
     
-    // Split by merge conflict markers and take the newer version (after =======)
-    const parts = content.split(/<<<<<<< HEAD[\s\S]*?=======/);
-    const afterConflict = content.split(/=======[\s\S]*?>>>>>>>/);
+    // More sophisticated merge conflict resolution
+    // Split by merge conflict markers
+    const lines = content.split('\n');
+    let result = [];
+    let inConflict = false;
+    let conflictType = null; // 'head' or 'newer'
     
-    if (parts.length > 1 && afterConflict.length > 1) {
-      // Take everything before the first conflict and everything after the last conflict
-      let fixedContent = parts[0];
+    for (let i = 0; i < lines.length; i++) {
+      const line = lines[i];
       
-      // For each conflict, take the newer version (after =======)
-      const conflictMatches = content.match(/<<<<<<< HEAD[\s\S]*?=======([\s\S]*?)>>>>>>>/g);
-      if (conflictMatches) {
-        conflictMatches.forEach(match => {
-          const afterEquals = match.split('=======')[1];
-          const beforeEnd = afterEquals.split('>>>>>>>')[0];
-          fixedContent += beforeEnd;
-        });
+      if (line.includes('<<<<<<< HEAD')) {
+        inConflict = true;
+        conflictType = 'head';
+        continue;
+      } else if (line.includes('=======')) {
+        conflictType = 'newer';
+        continue;
+      } else if (line.includes('>>>>>>>')) {
+        inConflict = false;
+        conflictType = null;
+        continue;
       }
       
-      // Add any remaining content after the last conflict
-      const lastConflictIndex = content.lastIndexOf('>>>>>>>');
-      if (lastConflictIndex !== -1) {
-        const afterLastConflict = content.substring(lastConflictIndex + 7);
-        fixedContent += afterLastConflict;
+      if (inConflict) {
+        // Only include lines from the newer version (after =======)
+        if (conflictType === 'newer') {
+          result.push(line);
+        }
+      } else {
+        result.push(line);
       }
-      
-      fs.writeFileSync(filePath, fixedContent, 'utf8');
-      return true;
     }
     
-    return false;
+    fs.writeFileSync(filePath, result.join('\n'), 'utf8');
+    return true;
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
     return false;

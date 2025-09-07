@@ -2,7 +2,6 @@ export const metadata = {
   title: 'FinTech Solutions | Zion Tech Group',
   description: 'Complete financial technology solutions including digital banking, payment processing, trading platforms, and blockchain financial services. Bank-grade security and compliance.',
 };
-
 export default function FinTechPage() {
   return (
     <div className="min-h-screen bg-gray-50 py-12">
@@ -14,7 +13,6 @@ export default function FinTechPage() {
             trading platforms, and blockchain financial services. Bank-grade security and compliance.
           </p>
         </div>
-
         {/* FinTech Categories */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <FinTechCategory
@@ -108,7 +106,6 @@ export default function FinTechPage() {
             marketSize="$400B"
           />
         </div>
-
         {/* Additional FinTech Services */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <FinTechService
@@ -196,7 +193,6 @@ export default function FinTechPage() {
             icon="🌍"
           />
         </div>
-
         {/* CTA Section */}
         <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-xl p-8 text-center">
           <h3 className="text-2xl font-bold text-gray-900 mb-4">
@@ -225,7 +221,6 @@ export default function FinTechPage() {
     </div>
   );
 }
-
 function FinTechCategory({
   title,
   icon,
@@ -262,7 +257,6 @@ function FinTechCategory({
     </div>
   );
 }
-
 function FinTechService({
   title,
   description,
