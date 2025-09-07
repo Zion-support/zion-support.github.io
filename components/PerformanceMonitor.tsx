@@ -2,108 +2,91 @@ import React, { useEffect, useState } from 'react';
 import { BarChart3 } from 'lucide-react';
 
 interface PerformanceMetrics {
-  pageLoadTime: number;
-  memoryUsage: number;
-  isOnline: boolean;
+  loadTime: number;
+  firstContentfulPaint: number;
+  largestContentfulPaint: number;
+  cumulativeLayoutShift: number;
+  firstInputDelay: number;
 }
 
 interface PerformanceMonitorProps {
-  onPerformanceData?: (metrics: PerformanceMetrics) => void;
+  onMetricsUpdate?: (metrics: PerformanceMetrics) => void;
+  enabled?: boolean;
 }
 
-const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceData }) => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    pageLoadTime: 0,
-    memoryUsage: 0,
-    isOnline: navigator.onLine,
-  });
+const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ 
+  onMetricsUpdate, 
+  enabled = process.env.NODE_ENV === 'development' 
+}) => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
 
   useEffect(() => {
-    const trackPageLoad = () => {
-      const loadTime = performance.now();
-      setMetrics(prev => ({ ...prev, pageLoadTime: loadTime }));
-    };
+    if (!enabled || typeof window === 'undefined') return;
 
-    const trackMemory = () => {
-      if ('memory' in performance) {
-        const memory = (performance as any).memory;
-        const memoryUsage = memory.usedJSHeapSize / 1024 / 1024; // Convert to MB
-        setMetrics(prev => ({ ...prev, memoryUsage }));
+    const measurePerformance = () => {
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      const paintEntries = performance.getEntriesByType('paint');
+      
+      const loadTime = navigation.loadEventEnd - navigation.loadEventStart;
+      const firstContentfulPaint = paintEntries.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0;
+      const largestContentfulPaint = paintEntries.find(entry => entry.name === 'largest-contentful-paint')?.startTime || 0;
+
+      // Get Core Web Vitals
+      const observer = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          if (entry.entryType === 'layout-shift') {
+            const clsEntry = entry as PerformanceEntry & { value: number };
+            setMetrics(prev => prev ? { ...prev, cumulativeLayoutShift: clsEntry.value } : null);
+          }
+          if (entry.entryType === 'first-input') {
+            const fidEntry = entry as PerformanceEntry & { processingStart: number; startTime: number };
+            const firstInputDelay = fidEntry.processingStart - fidEntry.startTime;
+            setMetrics(prev => prev ? { ...prev, firstInputDelay } : null);
+          }
+        }
+      });
+
+      observer.observe({ entryTypes: ['layout-shift', 'first-input'] });
+
+      const newMetrics: PerformanceMetrics = {
+        loadTime,
+        firstContentfulPaint,
+        largestContentfulPaint,
+        cumulativeLayoutShift: 0,
+        firstInputDelay: 0
+      };
+
+      setMetrics(newMetrics);
+      onMetricsUpdate?.(newMetrics);
+
+      // Log performance metrics in development
+      if (process.env.NODE_ENV === 'development') {
+        console.log('Performance Metrics:', newMetrics);
       }
+
+      return () => observer.disconnect();
     };
 
-    const trackNetwork = () => {
-      setMetrics(prev => ({ ...prev, isOnline: navigator.onLine }));
-    };
-
-    // Initial tracking
-    trackPageLoad();
-    trackMemory();
-    trackNetwork();
-
-    // Set up periodic tracking
-    const interval = setInterval(() => {
-      trackMemory();
-      trackNetwork();
-    }, 10000);
-
-    // Track online/offline status
-    const handleOnline = () => setMetrics(prev => ({ ...prev, isOnline: true }));
-    const handleOffline = () => setMetrics(prev => ({ ...prev, isOnline: false }));
-
-    window.addEventListener('online', handleOnline);
-    window.addEventListener('offline', handleOffline);
-
-    return () => {
-      clearInterval(interval);
-      window.removeEventListener('online', handleOnline);
-      window.removeEventListener('offline', handleOffline);
-    };
-  }, []);
-
-  // Show performance issues
-  useEffect(() => {
-    const hasPerformanceIssues =
-      metrics.pageLoadTime > 3000 || // > 3 seconds
-      metrics.memoryUsage > 100 || // > 100 MB
-      !metrics.isOnline;
-
-    if (hasPerformanceIssues) {
-      setIsVisible(true);
-      // Auto-hide after 10 seconds
-      const timer = setTimeout(() => setIsVisible(false), 10000);
-      return () => clearTimeout(timer);
+    // Wait for page to fully load
+    if (document.readyState === 'complete') {
+      measurePerformance();
+    } else {
+      window.addEventListener('load', measurePerformance);
+      return () => window.removeEventListener('load', measurePerformance);
     }
-  }, [metrics]);
+  }, [enabled, onMetricsUpdate]);
 
-  // Call the callback with performance data
-  useEffect(() => {
-    if (onPerformanceData) {
-      onPerformanceData(metrics);
-    }
-  }, [metrics, onPerformanceData]);
-
-  if (!isVisible) return null;
+  if (!enabled || !metrics) return null;
 
   return (
-    <div className="fixed bottom-4 right-4 z-50">
-      <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-lg p-4 shadow-xl">
-        <div className="flex items-center gap-3 mb-3">
-          <BarChart3 className="w-5 h-5 text-blue-400" />
-          <span className="text-sm font-medium text-white">Performance Monitor</span>
-          <button
-            onClick={() => setIsVisible(false)}
-            className="ml-auto text-white/60 hover:text-white"
-          >
-            ×
-          </button>
-        </div>
-        <div className="space-y-2 text-xs text-white/80">
-          <div>Load Time: {metrics.pageLoadTime.toFixed(0)}ms</div>
-          <div>Memory: {metrics.memoryUsage.toFixed(1)}MB</div>
-          <div>Status: {metrics.isOnline ? 'Online' : 'Offline'}</div>
-        </div>
+    <div className="fixed bottom-4 right-4 bg-slate-900/90 backdrop-blur-sm border border-slate-700 rounded-lg p-3 text-xs text-slate-300 max-w-xs">
+      <div className="font-semibold text-blue-400 mb-2">Performance Monitor</div>
+      <div className="space-y-1">
+        <div>Load Time: {metrics.loadTime.toFixed(2)}ms</div>
+        <div>FCP: {metrics.firstContentfulPaint.toFixed(2)}ms</div>
+        <div>LCP: {metrics.largestContentfulPaint.toFixed(2)}ms</div>
+        <div>CLS: {metrics.cumulativeLayoutShift.toFixed(4)}</div>
+        <div>FID: {metrics.firstInputDelay.toFixed(2)}ms</div>
       </div>
     </div>
   );

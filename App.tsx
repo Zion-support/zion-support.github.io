@@ -1,22 +1,18 @@
-import React, { JSX } from 'react';
+import React, { JSX, Suspense, lazy } from 'react';
+import { ErrorBoundary } from './components/ErrorBoundary';
+import { LoadingSpinner } from './components/LoadingSpinner';
 
-export default function App(): JSX.Element {
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Header from './src/components/Header';
-import Footer from './src/components/Footer';
-import HomePage from './src/pages/Home';
-import AboutPage from './src/pages/About';
-import ContactPage from './src/pages/Contact';
-import ServicesPage from './src/pages/Services';
-import PricingPage from './src/pages/Pricing';
-
-export default function App() {
+// Lazy load components for better performance
+const HomePage = lazy(() => import('./pages/index'));
 
 export default function App(): JSX.Element {
   return (
-    <main>
-      <h1>Hello App</h1>
-    </main>
+    <ErrorBoundary>
+      <Suspense fallback={<LoadingSpinner />}>
+        <main className="min-h-screen">
+          <HomePage />
+        </main>
+      </Suspense>
+    </ErrorBoundary>
   );
 }
