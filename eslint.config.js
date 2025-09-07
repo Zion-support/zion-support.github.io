@@ -103,7 +103,6 @@ export default [
         'warn',
         { argsIgnorePattern: '^_' }
       ],
-<<<<<<< HEAD
     },
   },
   {
@@ -120,8 +119,6 @@ export default [
         require: 'readonly',
         exports: 'readonly',
       },
-=======
->>>>>>> cursor/fix-lint-push-and-merge-to-main-1b2e
     },
   },
   {
@@ -191,7 +188,6 @@ export default [
       'components/tokens/**',
       'components/layout/**',
       'components/ui/**',
-<<<<<<< HEAD
       'components.disabled/**',
       'components.disabled_full/**',
       'components-disabled/**',
@@ -225,13 +221,11 @@ export default [
       'automation/**',
       'backup-merge-conflicts/**',
       'broken_files_backup/**',
-      '*.js',
-=======
       'api-backup/**',
       'api.disabled/**',
       'pages_backup_conflict/**',
       'pages_api.disabled/**',
->>>>>>> cursor/fix-lint-push-and-merge-to-main-1b2e
+      '*.js',
       '*.cjs',
       'fix_typescript_syntax_errors.jsx',
       'fix_utils_files.ts',
