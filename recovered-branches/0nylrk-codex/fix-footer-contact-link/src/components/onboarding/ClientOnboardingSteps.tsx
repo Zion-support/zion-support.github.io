@@ -117,6 +117,7 @@ export function ClientOnboardingSteps() {;
   return <OnboardingTracker steps={steps} title="Get Started With Hiring" />;
 }
 
+
 import React from "react";""
 import {useOnboardingStatus} from "@/hooks/useOnboardingStatus";""
 import {PlusCircle, SendIcon, InboxIcon} from "lucide-react";""
@@ -147,3 +148,13 @@ export function ClientOnboardingSteps() {;
 "
   return <OnboardingTracker steps={steps} title="Get Started With Hiring" />;"
 pr-12325
+</OnboardingTracker>"
+  return <OnboardingTracker steps={steps} title="Get Started With Hiring" />;"
+</OnboardingTracker>"
+  return <OnboardingTracker steps={steps} title="Get Started With Hiring" />;"
+</OnboardingTracker>"
+  return <OnboardingTracker steps={steps} title="Get Started With Hiring" />;"
+</OnboardingTracker>"
+  return <OnboardingTracker steps={steps} title="Get Started With Hiring" />;"
+</OnboardingTracker>"
+

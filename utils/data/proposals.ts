@@ -7,6 +7,7 @@ import { v4 as uuidv4 } from 'uuid';
 export type ProposalStatus = 'Draft' | 'Submitted' | 'Under Review' | 'Accepted' | 'Rejected' | 'Failed';
 export type ProposalMeta = {id: string;
 export type ProposalMeta = {
+interface ProposalMeta {
   id: string;
   createdAt: string;
   updatedAt: string;
@@ -373,14 +374,35 @@ pr-12325
   fs.mkdir_sync (publicProposalDir, { recursive: true }),
   const markdown_path = path.join (publicProposalDir, 'proposal.md'),
   const json_path = path.join (proposal_dir, 'proposal.json'),
+  status: 'Draft' | 'Submitted' | 'Under Review' | 'Approved' | 'Rejected';
+  artifacts: {
+    markdownPath: string;
+    jsonPath: string;
+  };
+}
+
+interface CreateProposalPayload {
+  title: string;
+  targetInstitution: string;
+  type: string;
+  regionalScope: string;
+  budgetOrResolution: string;
+  supportingMultiverses?: string[];
+  language?: string;
+}
+
+export function createProposalMeta(id: string, payload: CreateProposalPayload): ProposalMeta {
+  const createdAt = new Date().toISOString();
+  const updatedAt = createdAt;
+  
   const meta: ProposalMeta = {
     id,
-    created_at,
-    updated_at,
+    createdAt,
+    updatedAt,
     title: payload.title,
-    target_institution: payload.target_institution,
+    targetInstitution: payload.targetInstitution,
     type: payload.type,
-    regional_scope: payload.regional_scope,
+    regionalScope: payload.regionalScope,
     budgetOrResolution: payload.budgetOrResolution,
     supporting_multiverses: payload.supporting_multiverses || [],
     languages: payload.language ? [payload.language] : ['en'],
@@ -469,3 +491,14 @@ export function update_artifacts (id: string, artifacts: Partial < ProposalMeta[
     artifacts: { ...meta.artifacts, ...artifacts }}));
 `;
 pr-12325
+    supportingMultiverses: payload.supportingMultiverses || [],
+    languages: payload.language ? [payload.language] : ['en'],
+    status: 'Draft',
+    artifacts: {
+      markdownPath: `/proposals/${id}/proposal.md`,
+      jsonPath: `/proposals/${id}/proposal.json`
+    }
+  };
+  
+  return meta;
+}

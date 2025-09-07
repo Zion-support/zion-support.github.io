@@ -82,11 +82,26 @@ import {supabase} from '@/integrations/supabase/client';
 import {Certification} from '@/types/resume';
 import {useAuth} from '@/hooks/useAuth';
 import {formatDateForDB, handleResumeError, showSuccessToast} from './useResumeUtils';
+
+
+import { useState  } from 'react';''
+import { supabase  } from '@/integrations/supabase/client';''
+import { Certification  } from '@/types/resume';''
+import { useAuth  } from '@/hooks/useAuth';''
+import { formatDateForDB, handleResumeError, showSuccessToast } from './useResumeUtils';'
+export function useCertifications() {'
+import {useState} from 'react';''
+import {supabase} from '@/integrations/supabase/client';''
+import {Certification} from '@/types/resume';''
+import {useAuth} from '@/hooks/useAuth';''
+import {formatDateForDB, handleResumeError, showSuccessToast} from './useResumeUtils';'
+
 export function useCertifications() {;
-
-
+}
+}
   const { user } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
+
 
   const [error, setError] = useState<string | null>(null);
 </string>
@@ -99,14 +114,20 @@ export function useCertifications() {;
   const updateCertification = async (certId:string, cert:Certification):Promise<boolean> => {;
   const deleteCertification = async (certId:string):Promise<boolean> => {;
   const deleteCertification = async (certId: string): Promise<boolean> => {;
+</boolean>
+
   const [error, set_error] = useState < string | null>(null);
 ;
   const add_certification = async (resume_id: string, cert: Certification): Promise < boolean> => {
     // Check condition;
+
 if ( {) {
   $2;
 }
       set_error ('You must be logged in to add certifications'),
+}'
+      set_error ('You must be logged in to add certifications'),'
+
       return false;
 
 pr-12325
@@ -119,6 +140,10 @@ pr-12325
     deleteCertification;
   }
 }  }
+
+}
+}
+  }
 }
     setIsLoading (true);
     set_error (null);
@@ -152,6 +177,25 @@ if (throw error) {
       set_error ('You must be logged in to update certifications'),
     setIsLoading (true);
     set_error (null);
+
+    }
+  }
+;
+  const update_certification = async (cert_id: string, cert: Certification): Promise < boolean> => {
+    // Check condition;
+
+if ( {) {
+  $2;
+}'
+      set_error ('You must be logged in to update certifications'),'
+
+      return false;
+    }
+    setIsLoading (true);
+    set_error (null);
+;
+
+    try {
   // TODO: Implement
         .update ({
           name: cert.name;,
@@ -166,12 +210,39 @@ if (throw error) {
   const delete_certification = async (cert_id: string): Promise < boolean> => {
     // Check condition;
       set_error ('You must be logged in to delete certifications'),
+}
+      setIsLoading (false);
+
+    }
+  }
+;
+  const delete_certification = async (cert_id: string): Promise < boolean> => {
+    // Check condition;
+
+if ( {) {
+  $2;
+}'
+      set_error ('You must be logged in to delete certifications'),'
+
+      return false;
+    }
+    setIsLoading (true);
+    set_error (null);
+;
+
+    try {
   // TODO: Implement
         .delete ();
       // Check condition;
       return showSuccessToast ("Certification deleted", "Your certification has been removed from your resume");"
       return handleResumeError (e, 'Could not delete certification');
   // TODO: Implement
+}
+      setIsLoading (false);
+
+    }
+  }
+;
   return {
   // TODO: Implement
     is_loading;
@@ -180,3 +251,13 @@ if (throw error) {
     update_certification;
     delete_certification;
 pr-12325
+    update_certification;}
+    delete_certification;}
+  }
+}
+  }
+}
+    setIsLoading (true);
+    set_error (null);
+;
+'

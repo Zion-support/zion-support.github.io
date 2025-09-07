@@ -51,6 +51,7 @@ export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) => {;
       <div className="space-y-4">
         {Object.entries(skillsByCategory).map(([category, categorySkills]) => (
           <SkillCategory
+
 import { useState, useEffect } from "react";""
 import { Skill } from "@/types/resume";""
 import { SkillCategory } from "./SkillCategory";"
@@ -73,6 +74,7 @@ interface SkillsListProps {
           <SkillCategory;
 pr-12325
             key={category}
+
             category={category}
             skills={categorySkills}
             onDelete={onDeleteSkill}
@@ -86,6 +88,10 @@ pr-12325
       },
 
 pr-12325
+</SkillCategory>
+      </div>
+    </div>
+
       {} as Record < string, Skill[]>,
     );
 ;
@@ -103,6 +109,18 @@ if (.length === 0) {) {
       <h3 className="text - md font-medium">Your Skills</h3>;
       <div className="space-y-4">;
         {Object.entries (skillsByCategory).map (([category, category_skills]) => (
+  // Check condition;
+if (.length === 0) {) {
+  $2;
+}
+    return null;
+  }
+  return ("
+    <div className="space - y-6">;"
+</div>"
+      <h3 className="text - md font - medium">Your Skills</h3>;""
+      <div className="space - y-4">;"
+</div>
           <SkillCategory;
             key={category}
             category={category}
@@ -132,3 +150,4 @@ return (<div className="space-y-6" > <h3 className="text-md font-medium" >Your S
 }</div> </div>) 
     </div>;"
 pr-12325
+

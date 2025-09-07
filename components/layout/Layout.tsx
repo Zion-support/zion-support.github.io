@@ -10,26 +10,13 @@ import Header from 'react'
   './Footer'
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
-import Header from '../Header';
-import Footer from '../Footer';
-
 import React, { ReactNode } from 'react';
-import Header from './Header';
-import Footer from './Footer';
+import Head from 'next/head';
 import Header from '../Header';
 import Footer from '../Footer';
 
-
-
-
-
-
-;
-import React from 'react';
 interface LayoutProps {
-  children: React.ReactNode;
-interface LayoutProps {;
-  children: React && React.ReactNode;
+  children: ReactNode;
   title?: string;
   description?: string;
   keywords?: string;
@@ -150,3 +137,23 @@ export default Layout;
 main
 main
 pr-12243
+  description = "Leading technology solutions provider" 
+}: LayoutProps) {
+  return (
+    <>
+      <Head>
+        <title>{title}</title>
+        <meta name="description" content={description} />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <div className="min-h-screen bg-gray-50">
+        <Header />
+        <main className="flex-1">
+          {children}
+        </main>
+        <Footer />
+      </div>
+    </>
+  );
+}

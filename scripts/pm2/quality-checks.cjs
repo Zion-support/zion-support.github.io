@@ -1,4 +1,4 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 /**
  * Quality Checks Script for PM2;
  * Replaces GitHub Actions quality assurance workflows;
@@ -15,8 +15,9 @@ const log = (message) => {}
 
 const runCommand = (command, description) => {}
   try {}
-    log(`Starting: ${description}`);
+    log(`Starting: ${description});
     const output = execSync(command, { })
+<<<<<<< HEAD
       encoding: 'utf8',
       stdio: 'pipe',
       cwd: process.cwd();
@@ -26,21 +27,41 @@ const runCommand = (command, description) => {}
     return { success: true, output };
   } catch (error) {}`;
     log(`Failed: ${description} - ${error.message}`);
+=======
+      encoding: utf8,
+      stdio: pipe,
+      cwd: process.cwd();
+    }
+});
+    log(`Completed: ${description});
+    return { success: true, output };
+  } catch (error) {}
+    log(`Failed: ${description} - ${error.message});
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
     return { success: false, error: error.message };
 
 const runLinting = () => {}
   log('Running linting checks');
   const lintCommands = []
+<<<<<<< HEAD
     'npm run lint',
     'npm run lint:fix',
     'npm run lint:check
+=======
+    'npm run lint,npm run lint:fix,npm run lint:check
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
   ];
   
   let lintPassed = 0;
   let lintFailed = 0;
   
+<<<<<<< HEAD
   lintCommands.forEach(cmd => {})`;
     const result = runCommand(cmd, `Running ${cmd}`);
+=======
+  lintCommands.forEach(cmd => {})
+    const result = runCommand(cmd, `Running ${cmd});
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
     if (result.success) {}
       lintPassed++;
     } else {}
@@ -53,14 +74,25 @@ const runLinting = () => {}
 const runTypeChecking = () => {}
   log('Running type checking');
   const typeCheckCommands = []
+<<<<<<< HEAD
     'npm run type-check',
     'npm run tsc',
     'npx tsc --noEmit
+=======
+    'npm run type-check,npm run tsc,npx tsc --noEmit
+  ];
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
   
   let typeCheckPassed = 0;
   let typeCheckFailed = 0;
   
+<<<<<<< HEAD
   typeCheckCommands.forEach(cmd => {})`;
+=======
+  typeCheckCommands.forEach(cmd => {})
+    const result = runCommand(cmd, `Running ${cmd});
+    if (result.success) {}
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
       typeCheckPassed++;
       typeCheckFailed++;
   log(`Type checking results: ${typeCheckPassed} passed, ${typeCheckFailed} failed`);
@@ -69,15 +101,26 @@ const runTypeChecking = () => {}
 const runCodeQualityChecks = () => {}
   log('Running code quality checks');
   const qualityCommands = []
+<<<<<<< HEAD
     'npm run quality',
     'npm run code-quality',
     'npx eslint . --ext .js,.jsx,.ts,.tsx',
     'npx prettier --check .
+=======
+    'npm run quality,npm run code-quality,npx eslint . --ext .js,.jsx,.ts,.tsx,npx prettier --check .
+  ];
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
   
   let qualityPassed = 0;
   let qualityFailed = 0;
   
+<<<<<<< HEAD
   qualityCommands.forEach(cmd => {})`;
+=======
+  qualityCommands.forEach(cmd => {})
+    const result = runCommand(cmd, `Running ${cmd});
+    if (result.success) {}
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
       qualityPassed++;
       qualityFailed++;
   log(`Code quality results: ${qualityPassed} passed, ${qualityFailed} failed`);
@@ -86,14 +129,25 @@ const runCodeQualityChecks = () => {}
 const checkCodeCoverage = () => {}
   log('Checking code coverage');
   const coverageCommands = []
+<<<<<<< HEAD
     'npm run test:coverage',
     'npm run coverage',
     'npx nyc npm test
+=======
+    'npm run test:coverage,npm run coverage,npx nyc npm test
+  ];
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
   
   let coveragePassed = 0;
   let coverageFailed = 0;
   
+<<<<<<< HEAD
   coverageCommands.forEach(cmd => {})`;
+=======
+  coverageCommands.forEach(cmd => {})
+    const result = runCommand(cmd, `Running ${cmd});
+    if (result.success) {}
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
       coveragePassed++;
       coverageFailed++;
   log(`Code coverage results: ${coveragePassed} passed, ${coverageFailed} failed`);
@@ -114,8 +168,13 @@ const generateQualityReport = (results) => {}
   
   // Save report;
   const reportPath = 'logs/pm2/quality-report.json';
+<<<<<<< HEAD
   fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));`;
   log(`Quality report saved to ${reportPath}`);
+=======
+  fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+  log(`Quality report saved to ${reportPath});
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
   
   return report;
 
@@ -142,9 +201,15 @@ const main = async () => {}
     
     // Attempt to fix issues automatically;
     log('Attempting to fix quality issues automatically');
+<<<<<<< HEAD
     runCommand('npm run fix', 'Running automatic fixes');
     runCommand('npm run lint:fix', 'Fixing linting issues');
     runCommand('npx prettier --write .', 'Fixing formatting issues');
+=======
+    runCommand('npm run fix,Running automatic fixes');
+    runCommand('npm run lint:fix,Fixing linting issues');
+    runCommand('npx prettier --write .,Fixing formatting issues');
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
     // Re-run checks after fixes;
     log('Re-running quality checks after fixes');
     runLinting();
@@ -153,14 +218,28 @@ const main = async () => {}
   log('Quality Checks Process completed');
 
 // Handle process termination;
-process.on('SIGINT', () => {}
+process.on('SIGINT, () => {}
   log('Quality Checks Process interrupted');
   process.exit(0);
+<<<<<<< HEAD
 
 process.on('SIGTERM', () => {}
+=======
+}
+});
+'
+process.on('SIGTERM, () => {}
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
   log('Quality Checks Process terminated');
 
 // Run the main function;
+<<<<<<< HEAD
 main().catch(error => {})`;
   log(`Quality Checks Process failed: ${error.message}`);
   process.exit(1);
+=======
+main().catch(error => {})
+  log(`Quality Checks Process failed: ${error.message});
+  process.exit(1);
+}
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a

@@ -252,6 +252,7 @@ const mockReplies: ForumReply[] = [
                   key={reply.id}
                   reply={reply}                <ReplyCard
 
+
 import { useState } from "react",""
 import { useParams, Link } from "react-router-dom",""
 import { AppLayout } from "@/layout/AppLayout",""
@@ -455,6 +456,12 @@ class ErrorBoundary extends React.Component {
                     <Badge variant="outline" className="mt-1">;"
 
                     
+</Badge>
+
+                    </Badge>
+                </div>
+
+              </div>"
               <div className="flex items-center text-sm text-muted-foreground">"
                 <Calendar className="h-4 w-4 mr-1" />"
 
@@ -640,6 +647,10 @@ pr-12325
               .filter(reply => !reply && reply.isAnswer);
               .map(reply => (;
                 <ReplyCard
+            </Alert>;"
+          <div className="space-y-6">;"
+</div>
+                <ReplyCard;
                   key={reply && reply.id}
                   reply={reply}
 
@@ -659,6 +670,11 @@ pr-12325
 
                   onMarkAnswer={() => handleMarkAsAnswer(reply && reply.id)}
 
+</ReplyCard>
+          </div>;
+        </div>;
+      </div>;
+    </AppLayout>;"
         <div className="mt - 8">;"
           <h2 className="text - xl font - bold mb - 6">Responses ({post.reply_count})</h2>;""
             <div className="mb - 6">;"
@@ -712,3 +728,6 @@ pr-12325
 
 }</div> </div> </div> ) "`;
 pr-12325
+</ReplyCard>
+}</div> </div> </div> </AppLayout>) "
+

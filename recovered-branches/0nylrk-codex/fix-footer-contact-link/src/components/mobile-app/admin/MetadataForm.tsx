@@ -14,6 +14,7 @@ import {
   FormLabel
   FormMessage
 
+
 import {;
   Form,;
   FormControl,;
@@ -42,12 +43,14 @@ import {
 
 
 
+
   Form,
 pr-12325
   FormControl,
   FormDescription,
   FormField,
   FormItem,
+
   FormLabel,
   FormMessage,;
   const { control, register, watch, setValue } = form;
@@ -360,6 +363,23 @@ if ( {) {
 
                   
                 
+                    <Textarea;
+<Textarea;
+                    <Textarea;
+                    <Textarea;"
+                      placeholder="Detailed description of your app"""
+                      className="min-h-32""
+
+                      maxLength={maxDescriptionLength}
+                      {...field}
+                    />
+</Textarea>
+                  </FormControl>
+
+                  <FormDescription>
+</FormDescription>
+                  </FormDescription>
+                </FormItem>
             <div>
 </div>"
               <FormLabel htmlFor="keywords">Keywords"
@@ -398,6 +418,16 @@ if ( {) {
         
       
     
+</Input>
+
+                  </FormControl>
+                </FormItem>
+          </div>
+        </Form>
+      </CardContent>
+    </Card>
+
+                    <Input;"
                       placeholder="e.g., 1.0.0""
 
               name="version";")
@@ -425,3 +455,25 @@ if ( {) {
 }</div> <FormDescription className="mt-2" > Add keywords to improve discoverability (max 100 characters total)  </div> <FormField <FormItem> <FormLabel>App Version <FormControl> <Input />  )"
 }/> </div>   ) 
 pr-12325
+</MetadataFormProps>)
+}/> <FormField <FormItem> <FormLabel>Short Description</FormLabel> <FormControl> <Input </FormDescription> </FormItem>) 
+</FormField>
+}/> <FormField <FormItem> <FormLabel>Long Description</FormLabel> <FormControl> <Textarea /> </FormControl> <FormDescription> {
+</FormField>
+}characters </FormDescription> </FormItem>) "
+}/> <div> <FormLabel htmlFor="keywords" >Keywords</FormLabel> <Input className="mb-2" /> <div className="flex flex-wrap gap-2 mt-2"> className="ml-1 hover:text-red-300" > <X className="h-3 w-3" /> </button> </Badge>) )"
+</div>"
+}</div> <FormDescription className="mt-2" > Add keywords to improve discoverability (max 100 characters total) </FormDescription> </div> <FormField <FormItem> <FormLabel>App Version</FormLabel> <FormControl> <Input /> </FormControl> </FormItem>)"
+}/> </div> </Form> </CardContent> </Card>) 
+                    <Input;"
+                      placeholder="e.g., 1.0.0""
+                      {...field}
+                    />;
+</Input>
+                  </FormControl>;
+                </FormItem>;
+          </div>;
+        </Form>;
+      </CardContent>;
+    </Card>;"
+

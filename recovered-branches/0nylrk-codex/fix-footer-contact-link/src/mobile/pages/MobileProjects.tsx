@@ -196,6 +196,7 @@ export function MobileProjects() {;
 ;
 
 
+
 import React from "react";""
 import {MobileHeader} from "../components/common/MobileHeader";""
 import {BottomNavigation} from "../components/common/BottomNavigation";""
@@ -266,9 +267,10 @@ export function MobileProjects() {;
   totalAmount: "$12,000","
   progress: 60,"
   description: "Redesign of the company website with a focus on improving user experience and conversion rates. Includes new homepage, about page, and product listing pages.""
-},
 
+},
 const milestonesData = [
+
   {"
     id: "milestone-1",""
     title: "Initial Design Concepts",""
@@ -305,6 +307,7 @@ export function MobileProjects() {
           project={projectData} 
 
 
+
           milestones={milestonesData}
 
       <BottomNavigation />
@@ -314,6 +317,20 @@ export function MobileProjects() {
       </main>;
       <BottomNavigation />;
 
+</BottomNavigation>
+    </div>"
+      <main className="py-4">;"
+</main>
+        <MobileProjectView;
+          project={projectData} 
+
+          milestones={milestonesData}
+        />;
+</MobileProjectView>
+      </main>;
+      <BottomNavigation />;
+
+</BottomNavigation>
     </div>;"
     <div className="min - h-screen">;"
         show_back;
@@ -325,7 +342,31 @@ export function MobileProjects() {
         <MobileProjectView ;
 
 
+    <div className="min-h-screen">;"
+</div>
+      <MobileHeader;"
+        title="Project Details";"
+        showBack;
+      />;
+</MobileHeader>"
+      <main className="py-4">;"
+</main>
+        <MobileProjectView ;
+
+          project={projectData} ;
+          milestones={milestonesData}
+        />;
+</MobileProjectView>
+      </main>;
+      <BottomNavigation />;
+
+</BottomNavigation>
+    </div>;"
  <MobileHeader title="Project Details" showBack /> <main className="py-4"> <MobileProjectView project= {"
 
 }/> </main> <BottomNavigation /> </div>) 
 pr-12325
+}
+}
+};
+;

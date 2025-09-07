@@ -1,22 +1,10 @@
-  useState,
-  useRef,
-  useEffect,
-  FormEvent,
-  KeyboardEvent,;
 
-import React, {;
-  useState,;
-  useRef,;
-  useEffect,;
-  FormEvent,;
-  KeyboardEvent,;
 
 import React, {
   useState,
   useRef,
   useEffect,
   FormEvent,
-  KeyboardEvent,;
 
 } from "react";
 
@@ -81,6 +69,8 @@ export function ChatInput({ onSend, disabled = false }: ChatInputProps) {;
 
 import React, {
 
+
+} from "react";""
 } from "react";""
 import { Button } from "@/components/ui/button";""
 import { Send } from "lucide-react";"
@@ -127,3 +117,7 @@ export function ChatInput(): any ({ onSend, disabled = false }: ChatInputProps) 
 
       
 pr-12325
+</Send>
+      </Button>
+    </form>"
+

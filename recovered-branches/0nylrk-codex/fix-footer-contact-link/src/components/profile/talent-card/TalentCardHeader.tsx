@@ -26,6 +26,7 @@ interface TalentCardHeaderProps {
 
 
 
+
 import React from "react";""
 import {BadgeCheck} from "lucide-react";""
 import {TalentCardAvatar} from "./TalentCardAvatar";""
@@ -63,6 +64,8 @@ import { TalentCardAvatar } from "./TalentCardAvatar",""
 import { TalentCardAvailability } from "./TalentCardAvailability","
   // TODO: Implement
 pr-12325
+}
+
   fullName: string,
   professionalTitle: string,
   profilePicture?: string,
@@ -89,8 +92,14 @@ pr-12325
             {yearsExperience > 5 && (;
               <BadgeCheck className="h-4 w-4 text-zion-cyan" aria-label="Verified Expert" />;
             )}
+  yearsExperience: number;
+}
+  professionalTitle, 
+  profilePicture, 
+  availabilityType,
   yearsExperience;
 }: TalentCardHeaderProps) {
+
   return (
 "
     <div className="flex items-start gap-4 mb-4">;"
@@ -132,3 +141,5 @@ pr-12325
   availabilityType;)
 }/> </div> </div> </div>) 
 pr-12325
+</TalentCardAvailability>"
+

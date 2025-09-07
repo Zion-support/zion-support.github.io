@@ -38,6 +38,8 @@ export function JobMatchCard({
   onApply
   onViewDetails
   onInvite
+
+import React from 'react',''
 import { Badge } from "@/components/ui/badge",""
 import { Button } from "@/components/ui/button",""
 import { Card, CardContent } from "@/components/ui/card",""
@@ -61,6 +63,7 @@ interface JobMatchProps {
   onApply?: (matchId: string) => void;
   onViewDetails?: (matchId: string) => void;
   onInvite?: (matchId: string) => void;
+}
 export function JobMatchCard({
   matchId;
 
@@ -105,13 +108,41 @@ interface JobMatchProps {
   const handleInvite = () => {
     if (onInvite) {
       onInvite(matchId)
+
+}: JobMatchProps) {
+  const handleApply = (
+    if (onApply) {
+      onApply(matchId)) => {
+  return $3;}
+}
+    }
+  }
+  const handleViewDetails = (
+    if (onViewDetails) {
+      onViewDetails(matchId)) => {
+  return $3;}
+}
+    }
+  }
+  const handleInvite = (
+    if (onInvite) {
+      onInvite(matchId)) => {
+  return $3;}
+}
+    }
+  }
   // Generate a formatted date for display;
+
   const postedDate = new Date();
 "
 import { formatDistanceToNow } from "date-fns",""
 import { JobMatch } from "@/types/jobs","
   // TODO: Implement
 pr-12325
+
+interface JobMatchProps {
+  // TODO: Implement
+}
   matchId: string,
   talentId: string,
   name: string,
@@ -132,6 +163,10 @@ pr-12325
     </Card>;
   );
 
+
+  onViewDetails?: (matchId: string) => void,
+  onInvite?: (matchId: string) => void;
+}
 
 export function JobMatchCard({ ;
   talentId, 
@@ -291,3 +326,9 @@ postedDate.setDate (postedDate.getDate () - Math.floor (Math.random () * 14) ), 
 }</div> Apply Now ) 
 }</div> </div>  ) "
 pr-12325
+}</h3> <Badge variant="default" > h-3 w-3" /> </AvatarFallback>)"
+</Badge>
+}</Avatar> </Badge>) ) 
+}</div> Apply Now </Button>) 
+}</div> </div> </CardContent> </Card>) "
+

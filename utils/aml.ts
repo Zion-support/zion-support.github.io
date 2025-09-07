@@ -7,17 +7,26 @@ interface AmlMatch {
 interface AmlResult {
   status: 'review' | 'clear';
   matches: AmlMatch[];
+interface AmlResult {
+  status: 'clear' | 'review' | 'blocked';
+  matches: Array<{
+    list: string;
+    name: string;
+    score: number;
+  }>;
   checkedAt: string;
   provider: string;
 }
 
 interface AmlProvider {
   checkBusiness(businessName: string): Promise<AmlResult>;
+  check(businessName: string): Promise<AmlResult>;
 }
 
 class MockAmlProvider implements AmlProvider {
-  async checkBusiness(businessName: string): Promise<AmlResult> {
+  async check(businessName: string): Promise<AmlResult> {
     const isSanction = businessName.toLowerCase().includes('sanction');
+    
     return {
       status: isSanction ? 'review' : 'clear',
       matches: isSanction ? [{
@@ -408,3 +417,4 @@ export function getAmlProvider (): AmlProvider {
   // TODO: Implement
   return new MockAmlProvider ();
 pr-12325
+export { provider, type AmlResult, type AmlProvider };

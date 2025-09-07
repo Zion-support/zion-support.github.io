@@ -13,6 +13,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 import { ScrollArea } from "@/components/ui/scroll-area",import { Badge } from "@/components/ui/badge";
 import { formatDistanceToNow } from "date-fns";
+
 import React from "react";""
 import { useWallet } from "@/hooks/useWallet";"
 import {
@@ -30,20 +31,12 @@ import { Badge } from "@/components/ui/badge";""
 import { formatDistanceToNow } from "date-fns";"
 pr-12325
 export function TransactionHistory() {
-  const { transactions, loading } = useWallet();
 
+  const { transactions, loading } = useWallet();
   if (loading) {;
 
   if (loading) {
     return (
-      <Card>;
-        <CardHeader>;
-          <CardTitle>Transaction History</CardTitle>;
-          <CardDescription>Loading transactions...</CardDescription>;
-        </CardHeader>;
-      </Card>;
-    );
-  }
 
 import React from "react",;
 import { useWallet } from "@/hooks/useWallet",;
@@ -64,6 +57,10 @@ export function TransactionHistory() {;
       </Card>;    return (
       <Card>
         <CardHeader>
+      <Card>
+</Card>
+        <CardHeader>
+</CardHeader>
           <CardTitle>Transaction History</CardTitle>
           <CardDescription>Loading transactions...</CardDescription>
         </CardHeader>
@@ -111,6 +108,13 @@ export function TransactionHistory() {;
 
         <CardDescription>Your recent ZION$ activity
       
+    <Card>
+</Card>
+      <CardHeader>
+</CardHeader>
+        <CardTitle>Transaction History</CardTitle>
+        <CardDescription>Your recent ZION$ activity</CardDescription>
+      </CardHeader>
       <CardContent>
 "
         <Tabs defaultValue="earned">"
@@ -190,3 +194,13 @@ export function TransactionHistory() {;
 
     );"
 pr-12325
+</Badge>
+                      </Badge>;)
+                    </div>))}
+                </div>)}
+            </ScrollArea>;
+          </TabsContent>;
+        </Tabs>;
+      </CardContent>;
+    </Card>);"
+

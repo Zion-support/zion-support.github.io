@@ -15,6 +15,7 @@ interface PostFormValues {
   categoryId: ForumCategory
 
   tags: string}
+
 import { useState, useEffect } from "react";""
 import { Link, useNavigate, useSearchParams } from "react-router-dom";""
 import { AppLayout } from "@/layout/AppLayout";""
@@ -31,6 +32,7 @@ interface PostFormValues {
   categoryId: ForumCategory;,
   tags: string;
 pr-12325
+}
 
 export default function CreatePostPage() {;
   const navigate = useNavigate();
@@ -116,6 +118,68 @@ function CreatePostPage() {
 ;
   const initial_values: Partial < PostFormValues> = {
     category_id: initial_category || "project - help";
+
+  // Get category from URL query params if available;"
+  const initialCategory = searchParams.get("category") as ForumCategory | null;"
+  const initialValues: Partial<PostFormValues> = {
+</PostFormValues>
+    <AppLayout>
+</AppLayout>
+      <SEO;"
+        title="Create New Post | Community Forum | Zion AI Marketplace"""
+        description="Create a new discussion post in the Zion AI Marketplace community forum."""
+        keywords="community, forum, discussion, create post, new thread""
+      />
+</SEO>
+"
+      <div className="container py-8">"
+</div>"
+        <div className="flex items-center gap-3 mb-6">"
+</div>
+          <Link;"
+            to="/community"""
+            className="text-sm text-muted-foreground hover:text-foreground""
+          >
+</Link>
+          </Link>"
+          <span className="text-muted-foreground">/</span>""
+          <span className="text-sm font-medium">Create Post</span>"
+        </div>
+"
+        <h1 className="text-3xl font-bold mb-8">Create New Post</h1>"
+        <PostForm initialValues={initialValues} onSubmit={handleSubmit} />
+</PostForm>
+      </div>
+    </AppLayout>
+  const initialValues: Partial<PostFormValues> = {;
+</PostFormValues>
+    <AppLayout>;
+</AppLayout>
+      <SEO;"
+        title="Create New Post | Community Forum | Zion AI Marketplace";""
+        description="Create a new discussion post in the Zion AI Marketplace community forum.";""
+        keywords="community, forum, discussion, create post, new thread";"
+      />;
+</SEO>
+"
+      <div className="container py-8">;"
+</div>"
+        <div className="flex items-center gap-3 mb-6">;"
+</div>"
+          <Link to="/community" className="text-sm text-muted-foreground hover:text-foreground">;"
+</Link>
+          </Link>;"
+          <span className="text-muted-foreground">/</span>;""
+          <span className="text-sm font-medium">Create Post</span>;"
+        </div>;"
+        <h1 className="text-3xl font-bold mb-8">Create New Post</h1>;"
+        <PostForm initialValues={initialValues} onSubmit={handleSubmit} />;
+</PostForm>
+      </div>;
+    </AppLayout>;
+  const initial_values: Partial < PostFormValues> = {,"
+  category_id: initial_category || "project - help";"
+
   }
 ;
   const handle_submit = async (values: PostFormValues) => {
@@ -128,6 +192,18 @@ function CreatePostPage() {
       toast ({
         title: "Post created",
         description: "Your post has been published successfully";
+
+  // TODO: Implement
+}
+      // Here we would normally save to the database;"
+      // For now, we'll just simulate a successful post creation;'
+      // Parse tags into an array;'
+      const tags_array = values.tags.split (", ").map (tag => tag.trim ());"
+;
+      toast ({"
+        title: "Post created",""
+        description: "Your post has been published successfully";")
+
       });
 ;
       // Redirect to the forum category;
@@ -137,11 +213,18 @@ function CreatePostPage() {
         title: "Error",
         description: "There was a problem creating your post",
         variant: "destructive";
+
+      toast ({"
+        title: "Error",""
+        description: "There was a problem creating your post",""
+        variant: "destructive";")
+
       });
     }
   }
 ;
   return (
+
     <AppLayout>;
       <SEO;
         title="Create New Post | Community Forum | Zion AI Marketplace";
@@ -169,6 +252,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 
     <AppLayout>
 
+</AppLayout>
       <SEO;"
         title="Create New Post | Community Forum | Zion AI Marketplace"""
         description="Create a new discussion post in the Zion AI Marketplace community forum."""
@@ -250,3 +334,5 @@ return (<AppLayout> <SEO title="Create New Post | Community Forum | Zion AI Mark
 )
 }/> </div> ) "`;
 pr-12325
+    </AppLayout>);
+}

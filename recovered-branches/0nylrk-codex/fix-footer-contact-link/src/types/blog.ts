@@ -1,7 +1,12 @@
 export interface BlogAuthor {
   name: string;
+
+  // TODO: Implement
+}
+  name: string;,
   title: string;
   avatarUrl: string;
+
 }
   // TODO: Implement
 }
@@ -31,6 +36,7 @@ export interface BlogPost {;
   tags: string[];
   tweetSummary?: string;
   imagePrompt?: string;
+
 }
 
   tweet_summary?: string,
@@ -47,13 +53,20 @@ export interface BlogPost {
   // TODO: Implement
   // TODO: Implement
   name: string;
+
+}
+export interface BlogPost {
   // TODO: Implement
 export interface BlogPost {;
+
   id: string;,
+
+  title: string;
   slug: string;,
   excerpt: string;
   content: string;,
   author: BlogAuthor;
+
   published_date: string;,
   read_time: string;
   category: string;,
@@ -74,6 +87,7 @@ export interface BlogPost {;
 export interface GeneratedBlogContent {
   // TODO: Implement
   title: string;,
+
   meta_description: string;
   body: string;,
   tweetSummary?: string;
@@ -81,6 +95,15 @@ export interface GeneratedBlogContent {
 
   tweet_summary?: string,
   image_prompt?: string;
+  tags: string[];
+  tweetSummary?: string;}
+  imagePrompt?: string;}
+}
+
+  tweet_summary?: string,
+  image_prompt?: string;
+
+}
   publishedDate: string;,
   readTime: string;
 
@@ -96,6 +119,7 @@ export interface GeneratedNewsletterContent {;
   cta: string;
 export interface BlogAuthor {;
   name: string,;
+
   title: string,;
 ;
   id: string,;
@@ -111,8 +135,8 @@ pr-12325
   featuredImage: string,;
   isFeatured?: boolean,;
   isPublished?: boolean,;
-  createdBy?: string,;
-  updatedAt?: string;
+  createdBy?: string,;}
+  updatedAt?: string;}
 }
 ;
 // Type for generated blog content;
@@ -121,10 +145,22 @@ export interface GeneratedBlogContent {;
   metaDescription: string,;
   body: string,;
   tags: string[],;
-  tweetSummary?: string,;
-  imagePrompt?: string;
+  tweetSummary?: string,;}
+  imagePrompt?: string;}
 }
 ;
+
+// Type for generated newsletter content;
+export interface GeneratedNewsletterContent {
+  // TODO: Implement
+}
+  subject: string;,
+  previewText: string;
+  body: string;,
+  cta: string;
+}
+
+
 export interface BlogAuthor {;
 
 // Type for generated newsletter content;
@@ -132,7 +168,10 @@ export interface GeneratedNewsletterContent {;
   subject: string,;
   previewText: string,;
   body: string;
+
+  body: string;,
   cta: string;
+
 }
 ;
 // Type for generated blog content;
@@ -148,3 +187,4 @@ export interface GeneratedNewsletterContent {
   subject: string,;
   previewText: string,;
 pr-12325
+}

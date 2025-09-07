@@ -35,6 +35,7 @@ export function UpcomingInterviewsCard() {
       try {;
         const interviews = await fetchInterviews();
         const now = new Date();
+
 import React, { useEffect, useState } from "react";""
 import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";""
 import {Button} from "@/components/ui/button";""
@@ -78,9 +79,10 @@ export function UpcomingInterviewsCard() {
   // TODO: Implement
         setIsLoading(false)
 pr-12325
+      }
+
 
     },
-
     loadInterviews()
   }, []),
 
@@ -201,6 +203,7 @@ export function UpcomingInterviewsCard() {;
               </div>;
             );
           })}
+
 
   if (isLoading) {
     return ("
@@ -354,3 +357,5 @@ return (<img src= {
 }</div> </div> </div> </div>) "
 }</div> <div className="mt-4 pt-3 border-t border-zion-blue-light/40" > <Button asChild size="sm" variant="outline" className="w-full" > <Link to="/interviews" > View All Interviews   </div>  )""
 pr-12325
+}</div> <div className="mt-4 pt-3 border-t border-zion-blue-light/40" > <Button asChild size="sm" variant="outline" className="w-full" > <Link to="/interviews" > View All Interviews </Link> </Button> </div> </CardContent> </Card>)""
+

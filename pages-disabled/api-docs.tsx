@@ -15,6 +15,7 @@ import {
   CheckCircle, 
   ArrowRight,
   Phone,
+
   Mail,
   MapPin;
 } from 'lucide-react';
@@ -53,12 +54,47 @@ const apiEndpoints = [
     methods: ['GET', 'POST'],
       '/api/analytics/metrics',
       '/api/analytics/reports]
+  {'
+    title: 'User Management API',''
+    description: 'User profile and account management','
+    icon: Globe,'
+    methods: ['GET', 'PUT', 'DELETE'],'
+    endpoints: ['
+      '/api/users/profile',''
+      '/api/users/update',''
+      '/api/users/delete'']
+    ]
+  },
+  {'
+    title: 'Data API',''
+    description: 'Data retrieval and manipulation endpoints','
+    icon: Database,'
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],'
+    endpoints: ['
+      '/api/data/retrieve',''
+      '/api/data/create',''
+      '/api/data/update',''
+      '/api/data/delete'']
+    ]
+  },
+  {'
+    title: 'Analytics API',''
+    description: 'Analytics and reporting endpoints','
+    icon: Server,'
+    methods: ['GET', 'POST'],'
+    endpoints: ['
+      '/api/analytics/metrics',''
+      '/api/analytics/reports'']
+
+    ]
 
 ];
 
 export default function APIDocsPage() {
   return (
     <MainLayout;
+
+    <MainLayout;'
       title="API Documentation - Zion Tech Group"""
       description="Comprehensive API documentation for Zion Tech Group services. Learn how to integrate with our APIs."""
       keywords="API documentation, REST API, integration, developer resources""
@@ -96,12 +132,28 @@ export default function APIDocsPage() {
                         } text-white`}
 </span>
                 
+
+                      </span>
+                  </div>
+                </div>
+
+                '
+                <div className="mb-6">"
+</div>"
                   <h4 className="text-lg font-semibold text-white mb-3">Endpoints:</h4>""
                   <ul className="space-y-2">"
 </ul>"
                       <li key={idx} className="text-gray-300 font-mono text-sm">"
 </li>
                   </ul>
+
+                      </li>
+                  </ul>
+                </div>
+              </div>
+          </div>
+
+"
           <div className="bg-blue-600 rounded-xl p-8 text-center">"
             <h2 className="text-3xl font-bold text-white mb-4">"
 </h2>
@@ -120,3 +172,10 @@ export default function APIDocsPage() {
 
                 <span>364 E Main St STE 1008 Middletown DE 19709</span>
     )"`;
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </MainLayout>)"

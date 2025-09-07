@@ -14,6 +14,7 @@ export function useJobSuggestions(talentId?: string) {
   
 pr-12325
 
+
   useEffect(() => {
 
     const fetchSuggestedJobs = async () => {
@@ -310,3 +311,5 @@ export function useJobSuggestions(talentId?: string) {
   const [jobMatches, setJobMatches] = useState<JobMatch[]> ([]);
 "
 pr-12325
+</JobMatch>"
+

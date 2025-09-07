@@ -2,6 +2,9 @@
 
 import React from 'react';
 import MainLayout from '../components/layout/MainLayout';
+
+import React from 'react';''
+import MainLayout from '../components/layout/MainLayout';'
 const Page = () => {
   return (
     <MainLayout;
@@ -16,3 +19,6 @@ const Page = () => {
           <p className="text-xl text-gray-600">Coming soon...</p>"
         </div>
     )"
+      </div>
+    </MainLayout>)"
+

@@ -8,48 +8,27 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Menu, 
   X, 
-  Search, 
   Phone, 
-  FileText,
-  BarChart3,
-  Cpu,
+  Mail, 
+  ChevronDown,
+  Brain,
   Shield,
   Cloud,
   Database,
-  Zap,
-  Users,
-  CheckCircle,
-  ArrowRight,
-  Star,
-  TrendingUp,
-  Target,
-  Rocket,
-  Code,
-  Network,
-  Atom,
-  Workflow,
-  MessageCircle,
-  ArrowUp,
-  Sparkles,
-  Home,
-  Truck,
-  BookOpen,
-  Leaf,
-  Satellite,
-  HelpCircle,
   Building2,
-  Factory,
-  Building,
-  DollarSign,
-  ShoppingCart,
+  Rocket,
+  Workflow,
   Heart,
-  Eye,
-  Server,
-  Lock,
-  ChevronDown
+  DollarSign,
+  Factory,
+  ShoppingCart,
+  BookOpen,
+  Building,
+  ArrowRight,
+  Star
 } from 'lucide-react';
 
-const Header = () => {
+const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
@@ -62,8 +41,8 @@ const Header = () => {
       hasDropdown: true,
       children: [
         { name: 'AI Services', href: '/ai-services', icon: Brain },
-        { name: 'IT Services', href: '/it-services', icon: Server },
-        { name: 'Micro SaaS', href: '/micro-saas', icon: Zap },
+        { name: 'IT Services', href: '/it-services', icon: Database },
+        { name: 'Micro SaaS', href: '/micro-saas', icon: Cloud },
         { name: 'Security', href: '/security', icon: Shield },
         { name: 'Cloud Solutions', href: '/cloud-solutions', icon: Cloud },
         { name: 'Database Solutions', href: '/database-solutions', icon: Database }
@@ -1106,7 +1085,6 @@ const Header = () => {
                     )}
                   </div>
                 ))}
-                
                 <div className="pt-4 border-t border-gray-200">
                   <Link
                     href="/contact"
@@ -1151,3 +1129,6 @@ main
 export default Header;
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 pr-12243
+};
+
+export default Header;

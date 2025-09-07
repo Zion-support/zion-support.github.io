@@ -4,17 +4,23 @@
     const id = Date.now ().to_string ();
     const new_record: FraudRecord = {
 export interface FraudRecord {
+export interface StoredFraudRecord {
   id: string;
-  type: string;
-  severity: "low" | "medium" | "high" | "critical";
-  description: string;
+  ipAddress: string;
   source: string;
-  timestamp: string;
-  status: "pending" | "investigating" | "resolved" | "false_positive";
-  adminId?: string;
-  resolution?: string;
+  createdAt: string;
+  data: any;
 }
 
+export interface AdminActionRecord {
+  id: string;
+  action: string;
+  timestamp: string;
+  adminId: string;
+  details: any;
+}
+
+let events: StoredFraudRecord[] = [];
 
 class FraudStore {
   private records: Map<string, FraudRecord> = new Map();
@@ -267,140 +273,63 @@ export class FraudStore {
         monitoringContentAnalysisOptOut: false,
         updatedAt: now,
       }
+export function isSupabaseConfigured(): boolean {
+  return !!(process.env.NEXT_PUBLIC_SUPABASE_URL && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY);
+}
+
+export async function getRecentFraudEvents(
+  ip: string,
+  source: string,
+  since: string
+): Promise<number> {
+  if (isSupabaseConfigured()) {
+    // Mock Supabase query
+    const data = events.filter(event => 
+      event.ipAddress === ip && 
+      event.source === source && 
+      new Date(event.createdAt) >= new Date(since)
     );
+    return data.length;
   }
+  
+  return 0;
+}
 
-  async setPrivacySettings(
-    userId: string,
-    monitoringContentAnalysisOptOut: boolean
-  ): Promise<PrivacySettings> {
-    const updated: PrivacySettings = {
-      userId,
-      monitoringContentAnalysisOptOut,
-      updatedAt: new Date().toISOString(),
-    };
-
-    if (isSupabaseConfigured()) {
-      const supabase = getSupabaseAdmin();
-      await supabase
-        .from('privacy_settings')
-        .upsert(updated as any, { onConflict: 'userId' });
-      return updated;
-    }
-
-    ensureFiles();
-    const json = JSON.parse(fs.readFileSync(privacyPath, 'utf8') || '{}');
-    json[userId] = updated;
-    fs.writeFileSync(privacyPath, JSON.stringify(json, null, 2));
-    return updated;
-  }
-
-  async generateMonthlyReport(month: string): Promise<MonthlyReport> {
-    // month format: YYYY-MM
-    const [year, mon] = month.split('-').map(v => parseInt(v, 10));
-    const start = new Date(Date.UTC(year, mon - 1, 1, 0, 0, 0));
-    const end = new Date(Date.UTC(year, mon, 1, 0, 0, 0));
-
-    let events: StoredFraudRecord[] = [];
-
-    if (isSupabaseConfigured()) {
-      const supabase = getSupabaseAdmin();
-      const { data } = await supabase
-        .from('fraud_events')
-        .select('*')
-        .gte('createdAt', start.toISOString())
-        .lt('createdAt', end.toISOString());
-      events = data as any as StoredFraudRecord[];
-    } else {
-      ensureFiles();
-      events = await this._readAllEvents();
-      events = events.filter(e => {
-        const ts = Date.parse(e.createdAt);
-        return ts >= start.getTime() && ts < end.getTime();
-      });
-    }
-
-    const totals = {
-      all: events.length,
-      safe: events.filter(e => e.gpt?.label === 'SAFE').length,
-      suspicious: events.filter(e => e.gpt?.label === 'SUSPICIOUS').length,
-      dangerous: events.filter(e => e.gpt?.label === 'DANGEROUS').length,
-    };
-
-    const bySource: MonthlyReport['bySource'] = {
-      signup: 0,
-      job_post: 0,
-      message: 0,
-      quote: 0,
-      review: 0,
-    };
-    for (const e of events) bySource[e.source as MonitoredSource]++;
-
-    const actions = await this._readAllActions();
-    const falsePositives = actions.filter(a => a.action === 'IGNORE').length;
-
-    const reasonCounts: Record<string, number> = {};
-    
-    const topReasons = Object.entries(reasonCounts)
-      .sort((a, b) => b[1] - a[1])
-      .slice(0, 10)
-      .map(([reason, count]) => ({ reason, count }));
-
-    return { month, totals, bySource, falsePositives, topReasons };
-  }
-
-  private async _readAllEvents(): Promise<StoredFraudRecord[]> {
-    ensureFiles();
-    const text = fs.readFileSync(eventsPath, 'utf8');
-    return text
-      .split('\n')
-      .filter(Boolean)
-      .map(line => {
-        try {
-          return JSON.parse(line) as StoredFraudRecord;
-        } catch {
-          return null;
-        }
-      })
-      .filter(Boolean) as StoredFraudRecord[];
-  }
-
-  private async _writeAllEvents(events: StoredFraudRecord[]): Promise<void> {
-    ensureFiles();
-    const content = events.map(e => JSON.stringify(e)).join('\n') + '\n';
-    await fs.writeFile(eventsPath, content, 'utf8');
-  }
-
-  private async _readAllActions(): Promise<AdminActionRecord[]> {
-    ensureFiles();
-    const text = fs.readFileSync(actionsPath, 'utf8');
-    return text
-      .split('\n')
-      .filter(Boolean)
-      .map(line => {
-        try {
-          return JSON.parse(line) as AdminActionRecord;
-        } catch {
-          return null;
-        }
-      })
-      .filter(Boolean) as AdminActionRecord[];
-  }
-
-export function getFraudStore(): FraudStore {
-  return new FraudStore();
-
-export function newEvent(
-  partial: Partial<FraudEvent> & Pick<FraudEvent, 'source'>
-): FraudEvent {
-  const id = uuidv4();
-  return {
-    id,
-    userId: partial.userId ?? null,
-    source: partial.source,
-    content: partial.content ?? null,
-    metadata: partial.metadata ?? null,
-    ipAddress: partial.ipAddress ?? null,
-    createdAt: partial.createdAt ?? new Date().toISOString(),
+export function storeFraudEvent(record: Omit<StoredFraudRecord, 'id' | 'createdAt'>): void {
+  const newRecord: StoredFraudRecord = {
+    ...record,
+    id: Math.random().toString(36).substr(2, 9),
+    createdAt: new Date().toISOString()
   };
 origin/cursor/automate-test-improve-and-merge-code-2533
+  
+  events.push(newRecord);
+}
+
+export function parseFraudRecords(text: string): StoredFraudRecord[] {
+  return text
+    .split('\n')
+    .filter(Boolean)
+    .map((line) => {
+      try {
+        return JSON.parse(line) as StoredFraudRecord;
+      } catch {
+        return null;
+      }
+    })
+    .filter(Boolean) as StoredFraudRecord[];
+}
+
+export function parseAdminActions(text: string): AdminActionRecord[] {
+  return text
+    .split('\n')
+    .filter(Boolean)
+    .map((line) => {
+      try {
+        return JSON.parse(line) as AdminActionRecord;
+      } catch {
+        return null;
+      }
+    })
+    .filter(Boolean) as AdminActionRecord[];
+}

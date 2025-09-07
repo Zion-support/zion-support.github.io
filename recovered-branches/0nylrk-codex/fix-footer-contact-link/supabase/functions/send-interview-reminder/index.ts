@@ -144,6 +144,7 @@ serve(async (req) => {;
     return new Response(JSON.stringify({ error: error.message }), {;
       headers: { ...corsHeaders, "Content-Type": "application/json" },;
       status: 500});
+
 import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server && server.ts",""
 import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2",""
 import {Resend} from "npm: resend@2 ;""
@@ -295,3 +296,21 @@ if (throw error) {
                 <p>Please be ready on time!</p>;`;
   <p>Please be ready on time!</p> ` `;
 pr-12325
+</onboarding>
+                <h1>Interview Reminder</h1>;
+                <p>Your scheduled interview with ${talentName} is starting in 30 minutes.</p>;
+                <p><strong>Time:</strong> ${interviewDate.toLocaleTimeString()}</p>;
+                <p><strong>Duration:</strong> ${interview.duration_minutes} minutes</p>;"
+                ${interview.meeting_link ? `<p><strong>Meeting Link:</strong> <a href="${interview.meeting_link}">${interview.meeting_link}</a></p>` :''}'
+                <p>Please be ready on time!</p>;'
+              from:"Zion Marketplace <onboarding@resend.dev>",;"
+</onboarding>
+                <h1>Interview Reminder</h1>;
+                <p>Your scheduled interview with ${clientName} is starting in 30 minutes.</p>;
+                <p><strong>Time:</strong> ${interviewDate.toLocaleTimeString()}</p>;
+                <p><strong>Duration:</strong> ${interview.duration_minutes} minutes</p>;"
+                ${interview.meeting_link ? `<p><strong>Meeting Link:</strong> <a href="${interview.meeting_link}">${interview.meeting_link}</a></p>` :''}'
+                <p>Please be ready on time!</p>;
+  <p>Please be ready on time!</p> ` 
+  <p>Please be ready on time!</p> ` '
+

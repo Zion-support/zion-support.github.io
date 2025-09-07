@@ -38,6 +38,29 @@ interface MilestonesListProps {;
 // lucide-react doesn't export PlusIcon, use our icon wrapper;
 import { Plus  } from '@/components/icons';
 import { EmptyState } from '@/components/ui/empty-state';
+
+
+import { Milestone, MilestoneStatus, MilestoneActivity  } from '@/hooks/useMilestones';''
+import { useAuth  } from '@/hooks/useAuth';''
+import { MilestoneCard  } from './MilestoneCard';''
+import { AddMilestoneForm  } from './AddMilestoneForm';''
+import { Button  } from '@/components/ui/button';''
+import { Card, CardContent  } from '@/components/ui/card';''
+// lucide-react doesn't export PlusIcon, use our icon wrapper;''
+import { Plus  } from '@/components/icons';''
+import { EmptyState } from '@/components/ui/empty-state';'
+interface MilestonesListProps {
+  // TODO: Implement
+}'
+import {Milestone, MilestoneStatus, MilestoneActivity} from '@/hooks/useMilestones';''
+import {useAuth} from '@/hooks/useAuth';''
+import {MilestoneCard} from './MilestoneCard';''
+import {AddMilestoneForm} from './AddMilestoneForm';''
+import {Button} from '@/components/ui/button';''
+import {Card, CardContent} from '@/components/ui/card';''
+// lucide-react doesn't export PlusIcon, use our icon wrapper;''
+import {Plus} from '@/components/icons';''
+import {EmptyState} from '@/components/ui/empty-state';'
 interface MilestonesListProps {
   // TODO: Implement
 }
@@ -97,6 +120,7 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
   on_reject?: (id: string) => Promise < void>;
 export const MilestonesList: React.FC < MilestonesListProps> = ({
 pr-12325
+
   milestones;
   activities;
   is_loading;
@@ -126,6 +150,7 @@ pr-12325
       <div className="space-y-4">;
         {milestones && milestones.map((milestone) => (;
           <MilestoneCard
+
   onUploadDeliverable;
 
 
@@ -193,14 +218,20 @@ pr-12325
             <AddMilestoneForm;
             <AddMilestoneForm ;
               onSubmit={handleSubmit}
+
               isSubmitting={isSubmitting}
               onCancel={() => setShowAddForm(false)}
 
         ;"
+</AddMilestoneForm>
+          </CardContent>;
+
+        </Card>;"
       <div className="space-y-4">"
           <MilestoneCard;
 pr-12325
             key={milestone && milestone.id}
+
             id={milestone && milestone.id}
             projectId={milestone && milestone.project_id}
             title={milestone && milestone.title}
@@ -227,6 +258,7 @@ pr-12325
       <div className="space-y-4">
         {milestones.map((milestone) => (
           <MilestoneCard
+
             onApprove={onApprove}
             onReject={onReject}
           />;
@@ -237,7 +269,26 @@ pr-12325
 
           
 pr-12325
+      <div className="space-y-4">;"
+</div>
+          <MilestoneCard;
+
+            key={milestone.id}            id={milestone.id}
+            projectId={milestone.projectid}
+            <AddMilestoneForm;
+            <AddMilestoneForm;
+
+              onSubmit={handleSubmit}
+              isSubmitting={isSubmitting}
+              onCancel={() => setShowAddForm(false)}
+</MilestoneCard>
+          </CardContent>
+        </Card>"
+      <div className="space-y-4">"
+</div>
+          <MilestoneCard;
             key={milestone.id}
+
             id={milestone.id}
             projectId={milestone.project_id}
             title={milestone.title}
@@ -308,6 +359,42 @@ if ( {) {
         <Card>;
           <CardContent className="pt-6">;
             <h3 className="text - lg font - medium mb-4">Create New Milestone</h3>;
+
+
+
+      </div>;
+</MilestoneCard>
+    </div>;"
+      <div className="space - y-4">;"
+</div>
+          <Card key={i}>;
+</Card>"
+            <CardContent className="p - 6">;"
+</CardContent>"
+              <div className="h - 6 w - 48 bg - muted rounded animate - pulse mb - 4"></div>;""
+              <div className="h - 4 bg - muted rounded animate - pulse w - full mb - 2"></div>;""
+              <div className="h - 4 bg - muted rounded animate - pulse w - 3/4"></div>;"
+            </CardContent>;
+          </Card>))}
+      </div>);
+      <EmptyState;"
+        icon={<span className="text - 3xl">📊</span>}"
+</EmptyState>"
+    <div className="space - y-6">;"
+</div>"
+        <div className="flex justify - end">;"
+</div>
+          <Button on_click={() => setShowAddForm (true)}>;
+</Button>"
+            <Plus className="h - 4 w - 4 mr - 2" />;"
+</Plus>
+          </Button>;
+        </div>)}
+        <Card>;
+</Card>"
+          <CardContent className="pt - 6">;"
+</CardContent>"
+            <h3 className="text - lg font - medium mb - 4">Create New Milestone</h3>;"
             <AddMilestoneForm;
               on_submit={handle_submit}
               is_submitting={is_submitting}
@@ -317,7 +404,13 @@ if ( {) {
         </Card>)}
       <div className="space-y-4">;
         {milestones.map ((milestone) => (
+</AddMilestoneForm>
+          </CardContent>;
+        </Card>)}"
+      <div className="space - y-4">;"
+</div>
           <MilestoneCard;
+
             key={milestone.id}
             id={milestone.id}
             project_id={milestone.project_id}
@@ -360,6 +453,9 @@ pr-12325
     </div>);
 }
 ;
+</MilestoneCard>
+      </div>;
+    </div>);
 
 },; <Card key= {
   i;"
@@ -399,3 +495,8 @@ pr-12325
 
 }</div> </div>) 
 pr-12325
+      </div>
+    </div>
+      </div>;
+    </div>;"
+

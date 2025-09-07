@@ -8,6 +8,7 @@ const Textarea = React.forwardRef<HTMLTextAreaElement TextareaProps>(
       <textarea
         className={cn(export { Textarea }
 export { Textarea };
+
 import * as React from "react"""
 import { cn } from "@/lib/utils""
 export type TextareaProps = React.ComponentProps<&quot;textarea&quot;>"
@@ -64,3 +65,8 @@ export { Textarea }
 export { Textarea };
 Textarea.displayName = "Textarea""
 pr-12325
+export { Textarea }
+;
+;
+"
+

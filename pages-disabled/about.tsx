@@ -1,5 +1,6 @@
 
 
+
 import React from "react";""
 import Layout from "../components/Layout";""
 import React from 'react';
@@ -10,6 +11,7 @@ import MainLayout from '../components/layout/MainLayout';
 import {
   // TODO: Implement
 }
+
   TrendingUp,
   Building,
   Rocket,
@@ -30,6 +32,7 @@ import {
   Clock, 
   BarChart3,
   Phone,
+
   Mail,
   MapPin;
 } from 'lucide-react';
@@ -121,6 +124,15 @@ export default function AboutPage() {
                   <h3 className="text-2xl font-bold text-white">{value.title}</h3>"
                 <p className="text-gray-300">{value.description}</p>"
 
+
+              </motion.div>
+            ))}
+          </div>
+
+
+          <motion.div;
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.8 }}"
             className="bg-blue-600 rounded-xl p-8 text-center""
             <h2 className="text-3xl font-bold text-white mb-4">"
@@ -139,6 +151,14 @@ export default function AboutPage() {
                 <MapPin className="h-5 w-5 mr-2" />"
 
                 <span>364 E Main St STE 1008 Middletown DE 19709</span>
+
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </div>
+
+    </MainLayout>"
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">"
       <Head>
 
@@ -179,16 +199,29 @@ export default function AboutPage() {
               <div className="flex gap-3">"
                 <Button href="/contact" className="bg-gradient-to-r from-cyan-600 to-blue-700 text-white">Talk to Sales""
                 <Button href="/pricing" variant="outline" className="border border-gray-600 text-gray-200">Pricing"
+</div>"
+                <Button href="/contact" className="bg-gradient-to-r from-cyan-600 to-blue-700 text-white">Talk to Sales</Button>""
+                <Button href="/pricing" variant="outline" className="border border-gray-600 text-gray-200">Pricing</Button>"
+
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
     </>
   )
+
 
 export default AboutPage;"
 import React from './react';
 import Layout from "../components / Layout";;"
+
 export default /**
  * About - Function description;
  */
 function About() {
+  return (
+
     <Layout;"
       title="About Us - Zion Tech Group";""
       description="Learn about Zion Tech Group, our mission, team, and commitment to delivering cutting - edge technology solutions.";"
@@ -206,3 +239,5 @@ function About() {
           </div>;
       </div>;)
     );"
+    </Layout>);"
+

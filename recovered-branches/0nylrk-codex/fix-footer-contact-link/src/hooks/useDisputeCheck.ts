@@ -124,6 +124,7 @@ if (error) throw error;
   }
 }
 
+
 import { useState, useEffect } from "react";""
 import { supabase } from "@/integrations/supabase/client";"
 export function useDisputeCheck(projectId?: string, milestoneId?: string) {
@@ -195,3 +196,5 @@ export function useDisputeCheck(projectId?: string, milestoneId?: string) {;
 const [disputeStatus, setDisputeStatus] = useState<'open' | 'under review' | 'resolved' | 'closed' | null> (null);
 const [disputeId, setDisputeId] = useState<string | null> (null);
 pr-12325
+</string>'
+

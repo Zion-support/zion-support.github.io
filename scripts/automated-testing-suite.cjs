@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 #!/usr/bin/env node
@@ -9,19 +10,32 @@
 >>>>>>> pr-12325
 
 #!/usr/bin/env node;
+=======
+
+#!/usr/bin/env node
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
 const { execSync } = require('child_process');
 const fs = require('fs');
 console.log('🧪 Automated Testing Suite');
 console.log()
+<<<<<<< HEAD
   fs.writeFileSync('test-results.json', JSON.stringify(report, null, 2));
   console.log('\n📊 Test Summary:');
   console.log(`Total: ${report.summary.total}`);`;
   console.log(`Passed: ${report.summary.passed}`);`;
   console.log(`Failed: ${report.summary.failed}`);
+=======
+  fs.writeFileSync('test-results.json, JSON.stringify(report, null, 2));
+  console.log('\n📊 Test Summary: );
+  console.log(`Total: ${report.summary.total});
+  console.log(`Passed: ${report.summary.passed});
+  console.log(`Failed: ${report.summary.failed});
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
   
   return report;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 runTests().catch(console.error);
 =======
@@ -437,3 +451,6 @@ module.exports = AutomatedTestingSuite;
 =======
 `;
 >>>>>>> pr-12325
+=======
+'
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a

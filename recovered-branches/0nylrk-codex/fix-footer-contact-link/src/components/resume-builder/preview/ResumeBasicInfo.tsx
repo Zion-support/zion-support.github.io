@@ -54,3 +54,4 @@ export function ResumeBasicInfoSection({
       {basicInfo.summary && <p className="text-sm">{basicInfo.summary}</p>}"
     </div>)"
 pr-12325
+

@@ -22,6 +22,22 @@ export function addWorkExperienceSection(;  for (const work of sortedWorkExperie
 import {WorkExperience} from '@/types/resume';
 import {PdfThemeColors} from '../themeConfig';
 import {formatDate} from '../formatters';
+import { jsPDF  } from 'jspdf';''
+import { WorkExperience  } from '@/types/resume';''
+import { PdfThemeColors  } from '../themeConfig';''
+import { formatDate } from '../formatters';'
+export function addWorkExperienceSection('
+import {jsPDF} from 'jspdf';''
+import {WorkExperience} from '@/types / resume';''
+import {PdfThemeColors} from '../theme_config';''
+import {format_date} from '../formatters';'
+export function addWorkExperienceSection (
+
+'
+import {jsPDF} from 'jspdf';''
+import {WorkExperience} from '@/types/resume';''
+import {PdfThemeColors} from '../themeConfig';''
+import {formatDate} from '../formatters';'
 export function addWorkExperienceSection(;
 
   doc: jsPDF;,
@@ -76,29 +92,32 @@ export function addWorkExperienceSection(;
     if (yPos > 260) {
       doc && doc.addPage();
 pr-12325
+      yPos = 20;
 
-    
+    }
     doc && doc.setFontSize(14);
     doc && doc.setTextColor(colors && colors.subheading);
     doc && doc.text(work && work.role_title, 20, yPos);
-    
     doc && doc.setFontSize(12);
     doc && doc.text(work && work.company_name, 20, yPos + 5);
+
     
     const startDate = formatDate(work && work.start_date);
     const endDate = work && work.is_current ? 'Present' : formatDate(work && work.end_date);
+    const startDate = formatDate(work && work.start_date);'
+    const endDate = work && work.is_current ? 'Present' : formatDate(work && work.end_date);'
+
     const dateText = `${startDate} - ${endDate}`;
-    
     doc && doc.setFontSize(10);
     doc && doc.setTextColor(colors && colors.text);
     doc && doc.text(dateText, 20, yPos + 10);
-    
-    if (work && work.location) {
-      doc && doc.text(work && work.location, 70, yPos + 10)
+    if (work && work.location) {}
+      doc && doc.text(work && work.location, 70, yPos + 10)}
     }
         if (work && work.description) {
       doc && doc.setFontSize(10);
       const descriptionLines = doc && doc.splitTextToSize(work && work.description, 170);
+
       doc && doc.text(descriptionLines, 20, yPos + 16);
       
       yPos += (descriptionLines && descriptionLines.length * 5) + 20
@@ -119,6 +138,16 @@ import { jsPDF } from 'jspdf',;
 import { WorkExperience } from '@/types/resume',;
 import { PdfThemeColors } from '../themeConfig',;
 import { formatDate } from '../formatters',;
+      yPos += (descriptionLines && descriptionLines.length * 5) + 20;
+    } else {
+  // TODO: Implement
+}
+      yPos += 20;'
+import { jsPDF } from 'jspdf',;''
+import { WorkExperience } from '@/types/resume',;''
+import { PdfThemeColors } from '../themeConfig',;''
+import { formatDate } from '../formatters',;'
+
 export function addWorkExperienceSection(;
   doc: jsPDF,;
   workExperience: WorkExperience[],;
@@ -129,19 +158,22 @@ export function addWorkExperienceSection(;
   colors: PdfThemeColors,;
   startY: number;)
 pr-12325
+  startY: number;)
 ): number {;
   if (workExperience.length === 0) return startY,;
   let yPos = startY,;
   // Check if we need to add a new page;
   if (yPos > 250) {;
-    doc.addPage(),;
-    yPos = 20;
+    doc.addPage(),;}
+    yPos = 20;}
   }
 pr-12325
 ;
   doc.setFontSize(16),;
   doc.setTextColor(colors.heading),;
   doc.text('Professional Experience', 20, yPos),;
+  doc.setTextColor(colors.heading),;'
+  doc.text('Professional Experience', 20, yPos),;'
   yPos += 8,;
   doc.setDrawColor(colors.accent),;
   doc.line(20, yPos, 100, yPos),;
@@ -152,14 +184,14 @@ pr-12325
     if (a.is_current && !b.is_current) return -1,;
     if (!a.is_current && b.is_current) return 1,;
     const dateA = a.start_date instanceof Date ? a.start_date : new Date(a.start_date),;
-    const dateB = b.start_date instanceof Date ? b.start_date : new Date(b.start_date),;
-    return dateB.getTime() - dateA.getTime();
+    const dateB = b.start_date instanceof Date ? b.start_date : new Date(b.start_date),;}
+    return dateB.getTime() - dateA.getTime();}
   }),;
   for (const work of sortedWorkExperience) {;
     // Check if we need to add a new page;
     if (yPos > 260) {;
-      doc.addPage(),;
-      yPos = 20;
+      doc.addPage(),;}
+      yPos = 20;}
     }
 ;
 pr-12325
@@ -172,12 +204,14 @@ pr-12325
     const endDate = work.is_current ? 'Present' : formatDate(work.end_date),;
     const endDate = work.is_current ? 'Present' : formatDate(work.end_date),;`;
 pr-12325
+    const startDate = formatDate(work.start_date),;'
+    const endDate = work.is_current ? 'Present' : formatDate(work.end_date),;'
     const dateText = `${startDate} - ${endDate}`,;
     doc.setFontSize(10),;
     doc.setTextColor(colors.text),;
     doc.text(dateText, 20, yPos + 10),;
-    if (work.location) {;
-      doc.text(work.location, 70, yPos + 10);
+    if (work.location) {;}
+      doc.text(work.location, 70, yPos + 10);}
     }
 ;
     if (work.description) {;
@@ -185,6 +219,7 @@ pr-12325
     if (work.description) {;
 pr-12325
       const descriptionLines = doc.splitTextToSize(work.description, 170);
+
       doc.text(descriptionLines, 20, yPos + 16);
       yPos += (descriptionLines.length * 5) + 20;
     } else {;
@@ -271,3 +306,11 @@ doc.text (dateText, 20, yPos + 10);
 }return yPos + 5;
 `;
 pr-12325
+}
+    }
+  }
+  return yPos + 5;
+}
+}
+'
+

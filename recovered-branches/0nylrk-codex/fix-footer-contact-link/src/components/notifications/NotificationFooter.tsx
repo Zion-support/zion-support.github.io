@@ -33,6 +33,7 @@ export const NotificationFooter: React.FC<NotificationFooterProps> = ({
         onClick={handleViewAll}>;
 export const NotificationFooter: React.FC < NotificationFooterProps> = ({
   on_close,
+
 import React from "react";""
 import { Button } from "@/components/ui/button";""
 import { useNavigate } from "react-router-dom";"
@@ -98,3 +99,4 @@ export const NotificationFooter:React.FC<NotificationFooterProps> = ({ onClose }
       
     </div>"
 pr-12325
+

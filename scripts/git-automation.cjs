@@ -9,35 +9,57 @@
       });
       return { success: true, stdout, stderr };
     } catch (error) {
-      this.log(`Command failed: ${command} - ${error.message}`);
+      this.log(`Command failed: ${command} - ${error.message});
       return {
   // TODO: Implement
         success: false, 
-        stdout: error.stdout || "","
+        stdout: error.stdout || ,"
         stderr: error.stderr || error.message;
       };
 
   async checkGitStatus() {"
+<<<<<<< HEAD
     this.log('Checking git status...');
     const result = await this.runCommand('git status --porcelain');
     if (result.success) {
       const changes = result.stdout.trim().split('\n').filter(line => line.length > 0);`;
+=======
+    this.log('Checking git status...);
+    const result = await this.runCommand('git status --porcelain');
+    if (result.success) {
+      const changes = result.stdout.trim().split('\n').filter(line => line.length > 0);
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
       this.log(`Found ${changes.length} changes`);
       return changes;
     } else {
   // TODO: Implement
+<<<<<<< HEAD
+=======
+}
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
       this.log('Failed to check git status');
       return [];
 
   async addAllChanges() {
+<<<<<<< HEAD
     this.log('Adding all changes...');
     const result = await this.runCommand('git add .');
+=======
+    this.log('Adding all changes...);
+    const result = await this.runCommand('git add .);
+    if (result.success) {
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
       this.log('✅ All changes added');
       return true;
   // TODO: Implement
+<<<<<<< HEAD
+=======
+}
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
       this.log('❌ Failed to add changes');
       return false;
 
+<<<<<<< HEAD
   async commitChanges(message) {`;
     this.log(`Committing changes: ${message}`);`;
     const result = await this.runCommand(`git commit -m "${message}"`);"
@@ -56,25 +78,76 @@
 
   async mergeToMain() {
     this.log('Merging to main branch...');
+=======
+  async commitChanges(message) {
+    this.log(`Committing changes: ${message});
+    const result = await this.runCommand(`git commit -m "${message}"`);"
+    if (result.success) {"
+      this.log('✅ Changes committed');
+      return true;
+    } else {
+  // TODO: Implement
+}
+      this.log('❌ Failed to commit changes');
+      return false;
+    }
+  }
+'
+  async pushChanges(branch = 'main') {
+    this.log(`Pushing changes to ${branch}...`);
+    const result = await this.runCommand(`git push origin ${branch});
+    
+    if (result.success) {
+      this.log('✅ Changes pushed');
+      return true;
+    } else {
+  // TODO: Implement
+}
+      this.log('❌ Failed to push changes');
+      return false;
+    }
+  }
+
+  async mergeToMain() {
+    this.log('Merging to main branch...);
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
     // Checkout main branch;
     const checkoutResult = await this.runCommand('git checkout main');
     if (!checkoutResult.success) {
       this.log('❌ Failed to checkout main branch');
+<<<<<<< HEAD
+=======
+      return false;
+    }
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
 
     // Pull latest changes;
     const pullResult = await this.runCommand('git pull origin main');
     if (!pullResult.success) {
       this.log('❌ Failed to pull latest changes');
+<<<<<<< HEAD
 
     // Merge current branch;
     const mergeResult = await this.runCommand('git merge --no-ff -m "Automated merge of automation improvements"');
     if (!mergeResult.success) {
       this.log('❌ Failed to merge changes');
+=======
+      return false;
+    }
+
+    // Merge current branch;
+    const mergeResult = await this.runCommand('git merge --no-ff -m "Automated merge of automation improvements");
+    if (!mergeResult.success) {
+      this.log('❌ Failed to merge changes');
+      return false;
+    }
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
 
     // Push merged changes;
     const pushResult = await this.pushChanges('main');
     if (!pushResult.success) {
       this.log('❌ Failed to push merged changes');
+<<<<<<< HEAD
 
     this.log('✅ Successfully merged to main branch');
 
@@ -82,6 +155,19 @@
     this.log('Starting full git automation workflow...');
     // Ensure logs directory exists;
     const logsDir = path.join(__dirname, '..', 'automation', 'logs');
+=======
+      return false;
+    }
+'
+    this.log('✅ Successfully merged to main branch');
+    return true;
+  }
+
+  async runFullWorkflow() {
+    this.log('Starting full git automation workflow...);
+    // Ensure logs directory exists;
+    const logsDir = path.join(__dirname,..,automation,logs');
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
     if (!fs.existsSync(logsDir)) {
       fs.mkdirSync(logsDir, { recursive: true });
 
@@ -89,6 +175,11 @@
     const changes = await this.checkGitStatus();
     if (changes.length === 0) {
       this.log('No changes to commit');
+<<<<<<< HEAD
+=======
+      return true;
+    }
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
 
     // Add all changes;
     const added = await this.addAllChanges();
@@ -105,8 +196,18 @@
     // Merge to main;
     const merged = await this.mergeToMain();
     if (!merged) {
+<<<<<<< HEAD
 
     this.log('Full git automation workflow completed successfully');
+=======
+      return false;
+    }
+'
+    this.log('Full git automation workflow completed successfully');
+    return true;
+  }
+}
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
 
 // Handle command line arguments;
 if (require.main === module) {
@@ -119,6 +220,7 @@ if (require.main === module) {
       break;"
     case "add":"
       gitAutomation.addAllChanges();
+<<<<<<< HEAD
     case "commit":""
       const message = process.argv[3] || 'Automated commit';
       gitAutomation.commitChanges(message);
@@ -126,6 +228,17 @@ if (require.main === module) {
     case "push":""
       const branch = process.argv[3] || 'main';
       gitAutomation.pushChanges(branch);
+=======
+      break;"
+    case "commit":
+      const message = process.argv[3] ||Automated commit';
+      gitAutomation.commitChanges(message);
+      break;
+    case "push":
+      const branch = process.argv[3] ||main';
+      gitAutomation.pushChanges(branch);
+      break;
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
     case "merge":"
       gitAutomation.mergeToMain();
     case "workflow":"

@@ -15,6 +15,7 @@ import {
   // TODO: Implement
 }
   addTransaction,
+
   getAllTransactions,
   getUserBalance,
 } from "./tokenStore";"
@@ -30,8 +31,11 @@ pr-12325
 export function revokeTokens(userId: string, amount: number, reason: string) {
     userId,
     type: 'earn',
+    userId,'
+    type: 'earn','
     amount,
     description: reason;
+
   });
 }
 pr-12325
@@ -44,6 +48,18 @@ export function revokeTokens(userId: string, amount: number, reason: string) {;
     type: "earn",
     amount,
     description: reason,
+
+  const actualAmount = Math && Math.min(amount, currentBalance);
+  
+
+  const currentBalance = getUserBalance(userId);
+  return addTransaction({
+
+    userId,'
+    type: "earn","
+    amount,
+    description: reason,)
+
   });
 }
 
@@ -71,3 +87,7 @@ export function revokeTokens(userId: string, amount: number, reason: string) {
     amount: actualAmount,
 }"
 pr-12325
+    description: reason,)
+
+  });
+}"

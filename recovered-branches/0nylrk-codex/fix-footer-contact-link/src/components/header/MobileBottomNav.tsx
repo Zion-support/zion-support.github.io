@@ -12,7 +12,53 @@ import { cn } from "@/lib/utils";
 import { useAuth } from "@/hooks/useAuth";
 import { cn } from "@/lib/utils",
 import { useAuth } from "@/hooks/useAuth",export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
+
+import React from "react";""
+import {Link, useLocation} from "react-router-dom";""
+import {Home, Search, BriefcaseIcon, MessageSquare, User, MessageCircle} from "lucide-react";""
+import {cn} from "@/lib/utils";""
+import {useAuth} from "@/hooks/useAuth";"
+interface MobileBottomNavProps {;
+  unreadCount?: number;
+
+}
+
+export function MobileBottomNav(): any ({ unreadCount = 0 }: MobileBottomNavProps) {;
   const location = useLocation();
+  const { user } = useAuth();
+  const isAuthenticated = !!user;
+
+
+
+"
+import React from "react",""
+import { Link, useLocation } from "react-router-dom",""
+import { Home, Search, BriefcaseIcon, MessageSquare, User, MessageCircle } from "lucide-react",""
+import { cn } from "@/lib/utils";""
+import { useAuth } from "@/hooks/useAuth";""
+import { cn } from "@/lib/utils",""
+import { useAuth } from "@/hooks/useAuth","
+}
+export function MobileBottomNav(): any ({ unreadCount = 0 }: MobileBottomNavProps) {;
+  const location = useLocation();
+  const { user } = useAuth();
+  const isAuthenticated = !!user;
+interface MobileBottomNavProps {
+  // TODO: Implement
+}
+  unreadCount?: number;
+}
+
+
+export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
+
+export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {;
+  const location = useLocation();
+  const { user } = useAuth();
+  const isAuthenticated = !!user;
+export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
+  const location = useLocation();
+
   const { user } = useAuth();
   const isAuthenticated = !!user;
   const location = useLocation(),
@@ -145,6 +191,7 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {;
   const { user } = useAuth(),
   const isAuthenticated = !!user,
 
+
   const navItems = [
     {"
       name: "Home"","
@@ -257,3 +304,7 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {;
             <span className="text-xs font-medium">{item.name}</span>"
           
 pr-12325
+          </Link>
+      </div>
+    </nav>"
+

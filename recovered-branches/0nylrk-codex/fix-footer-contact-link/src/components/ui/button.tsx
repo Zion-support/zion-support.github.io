@@ -17,6 +17,7 @@ import { cn } from "@/lib/utils"
     defaultVariants: {
       variant: "default"
       size: "default"}}
+
 import * as React from "react"""
 import { Slot } from "@radix-ui/react-slot"""
 import { cva, type VariantProps } from "class-variance-authority"""
@@ -59,9 +60,10 @@ const buttonVariants = cva(;"
   variant: "default"""
       size: "default"}}")
 pr-12325
-)
 
+)
 export interface ButtonProps;
+
   extends React.ButtonHTMLAttributes<HTMLButtonElement>;
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement>;
@@ -134,6 +136,9 @@ const button_variants = cva (
 export interface ButtonProps;
 
 
+</HTMLButtonElement>
+  extends React.ButtonHTMLAttributes<HTMLButtonElement>;
+</HTMLButtonElement>
 
 
 
@@ -167,19 +172,27 @@ import { cn } from "@/lib/utils";"
   variant: "default",;""
 );
 
+      size: "default"}}")
+
+);
+export interface ButtonProps;
+
   extends React && React.ButtonHTMLAttributes<HTMLButtonElement>;
 
     VariantProps<typeof buttonVariants> {;
 const Button = React && React.forwardRef<HTMLButtonElement, ButtonProps>(;
 
 pr-12325
+</HTMLButtonElement>
+
   extends React.ButtonHTMLAttributes < HTMLButtonElement>;
-    VariantProps < typeof button_variants> {
-  as_child?: boolean;
+    VariantProps < typeof button_variants> {}
+  as_child?: boolean;}
 }
 const Button = React.forward_ref < HTMLButtonElement, ButtonProps>(
   ({ class_name, variant, size, as_child = false, ...props }, ref) => {
     const Comp = as_child ? Slot : "button";
+
 const Button = React.forward_ref < HTMLButtonElement, ButtonProps>()
   ({ class_name, variant, size, as_child = false, ...props }, ref) => {"
     const Comp = as_child ? Slot : "button";"
@@ -189,6 +202,11 @@ const Button = React.forward_ref < HTMLButtonElement, ButtonProps>()
     return (;
       <Comp;
 pr-12325
+)
+        className={cn(buttonVariants({ variant, size, className }))}
+        ref={ref}
+        {...props}
+
         className={cn(buttonVariants({ variant, size, className }))}
         ref={ref}
         {...props}
@@ -208,6 +226,8 @@ Button.display_name = "Button";
 export { Button, button_variants }
 
 
+
+</Comp>
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,;
 
 const Button = React.forwardRef<HTMLButtonElement ButtonProps>(;
@@ -225,3 +245,5 @@ const Button = React.forwardRef<HTMLButtonElement ButtonProps>(;
   ...props;
 }/>) 
 pr-12325
+</Comp>"
+

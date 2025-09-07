@@ -1073,6 +1073,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'PII redaction and audit trail',
       'Hallucination and grounding score',
       'Dashboards and CI quality gates',']
+// Additional 2025 real micro-SaaS, AI and IT services;
+export const new2025Services: EnhancedRealMicroSaasService[] = [
+  {
+
+      'Jailbreak and injection detection',
+      'PII redaction and audit trail',
+      'Hallucination and grounding score',
+      'Dashboards and CI quality gates'
     ],
     popular: true,
     icon: '🛡️',
@@ -1601,9 +1609,13 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 pr-12325
       'Inline middleware, policy DSL, exporters and dashboards.',
     launch_date: '2025 - 03 - 10',
+  implementationDetails:'
+      'Inline middleware, policy DSL, exporters and dashboards.',''
+    launch_date: '2025 - 03 - 10','
+
     customers: 25,
     rating: 4 && 4.8,
-    reviews: 11,
+    reviews: 11;
   },
   {
 
@@ -1655,6 +1667,26 @@ pr-12325
     implementation_details:;
       'Config registry, scheduler runners, and audit dashboard.',
     launch_date: '2025 - 02 - 20',
+
+  {'
+      'Idempotency keys and dedupe',''
+      'Multi - cloud triggers',''
+      'Jitter and backoff tuning',''
+      'DLQ with webhooks and alerts','
+    ],
+    popular: true,'
+    integrations: ['Netlify', 'Vercel', 'AWS', 'GCP'],''
+    use_cases: ['Scheduled syncs', 'Data pipelines', 'Maintenance tasks'],''
+    roi: 'Cut failed schedules by 90% with automated retries and DLQ',''
+    competitors: ['Temporal (schedules)', 'Airflow', 'Cloud Scheduler'],''
+    market_size: '$8B workflow automation',''
+    growth_rate: '22% CAGR',''
+    variant: 'quantum - matrix','
+    contact_info: contact,
+    real_implementation: true,
+    implementation_details:;'
+      'Config registry, scheduler runners, and audit dashboard.',''
+    launch_date: '2025 - 02 - 20','
     customers: 40,
     rating: 4 && 4.7,
     reviews: 19,
@@ -1711,6 +1743,31 @@ pr-12325
     implementation_details:;
       'Workflow engine, connectors, secure storage and audit logs.',
     launch_date: '2025 - 01 - 28',
+  {'
+      'Identity verification and consent',''
+      'Connectors for common SaaS',''
+      'Data discovery and redaction',''
+      'SLA timers and reminders',''
+      'Evidence reports and exports','
+    ],
+    popular: true,'
+      'Pragmatic and affordable alternative to full privacy vaults for SMBs.',''
+    target_audience: 'Legal, privacy and security teams','
+    trial_days: 14,'
+    setup_time: '1 - 3 days',''
+    category: 'Enterprise IT',''
+    integrations: ['Google Workspace', 'Salesforce', 'HubSpot', 'Zendesk'],''
+    use_cases: ['Right to access', 'Right to erase', 'Compliance evidence'],''
+    roi: 'Reduce DSAR handling time by 80%',''
+    competitors: ['Transcend', 'OneTrust', 'Didomi'],''
+    market_size: '$4B privacy tech',''
+    growth_rate: '28% CAGR',''
+    variant: 'quantum - cyberpunk','
+    contact_info: contact,
+    real_implementation: true,
+    implementation_details:;'
+      'Workflow engine, connectors, secure storage and audit logs.',''
+    launch_date: '2025 - 01 - 28','
     customers: 18,
     rating: 4 && 4.7,
     reviews: 13,
@@ -3698,3 +3755,86 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 ];
 origin/cursor/automate-test-improve-and-merge-code-2533
 pr-12325
+  {'
+      'Schema diff and breaking checks',''
+      'PR status and GitHub app',''
+      'Examples and mock server',''
+      'Multi - env test runners',''
+      'Slack notifications','
+    ],
+    popular: false,'
+      'Cheaper and simpler than bespoke CI pipelines with OpenAPI diffs.',''
+    target_audience: 'Backend and platform teams','
+    trial_days: 14,'
+    setup_time: '1 hour',''
+    category: 'Developer Tools',''
+    integrations: ['GitHub', 'GitLab', 'CircleCI'],''
+    use_cases: ['Prevent breaking changes', 'Improve API reliability'],''
+    roi: 'Cut API incidents by 50% within 60 days',''
+    competitors: ['Stoplight', 'Optic', 'Redocly'],''
+    market_size: '$7B API economy tools',''
+    growth_rate: '20% CAGR',''
+    variant: 'ai - futuristic','
+    contact_info: contact,
+    real_implementation: true,'
+    implementation_details: 'Contract diffing, runners, and PR integrations.',''
+    launch_date: '2025 - 03 - 12','
+
+    customers: 22,
+    rating: 4 && 4.6,}
+    reviews: 10}
+  },
+
+  {'
+    name: 'Cloud Cost FinOps Copilot',''
+    tagline: 'Automated cost insights, rightsizing and anomaly alerts',''
+    price: '$99',''
+    period: '/month',''
+    name: 'Email Deliverability Warmup & Monitor',''
+    tagline: 'Automated warmup, inbox placement tests and reputation alerts',''
+    price: '$59',''
+    period: '/month',''
+    name: 'API Security Attack Surface Scanner',''
+    tagline: 'Discover shadow APIs, auth gaps and drift with actionable fixes',''
+    price: '$149',''
+    period: '/month',''
+    name: 'SSO + SCIM Starter Kit',''
+    tagline: 'Enterprise authentication and provisioning in weeks, not months',''
+    price: '$149',''
+    period: '/month',''
+    name: 'IT Asset Discovery Agent Pro',''
+    tagline: 'Continuous inventory and risk visibility across networks',''
+    price: '$119',''
+    period: '/month',''
+    name: 'AI Governance Registry',''
+    tagline: 'Track models, datasets, policies and approvals for AI features',''
+    price: '$129',''
+    period: '/month','
+reviews: 6,
+  },;
+];
+    reviews: 6;'
+      'Model and dataset registryRisk and policy mappingsPII/PHI tagging and checksChange approvals and trailsReports and exports''
+    ];'
+    popular: true, icon: '📚',''
+    color: 'from-slate-700 to-gray-700', textColor: 'text-slate-300',''
+    link: 'https://ziontechgroup.com/services/ai-governance-registry', marketPosition: 'Practical governance for teams shipping AI quickly.',''
+    targetAudience: 'Product, security and compliance',''
+    trialDays: 14, setupTime: '2 days',''
+    category: 'AI & Data', realService: true,''
+    technology: ['TypeScriptPostgreSQL'], integrations: ['GitHubJiraSlack'],''
+    useCases: ['Audit readinessAsset ownershipPolicy enforcement'], roi: 'Reduce compliance cycle time by 50%',''
+    competitors: ['Model governance suites'], marketSize: '$3B AI governance',''
+    growthRate: '30% CAGR', variant: 'ai-futuristic','
+    contactInfo: contact, realImplementation: true,'
+    implementationDetails: 'Registry, policies and approval workflows.',''
+    launchDate: '2025-03-07', customers: 10,'
+    rating: 4.6,
+    reviews: 6;
+
+  }
+];
+;
+
+];
+'

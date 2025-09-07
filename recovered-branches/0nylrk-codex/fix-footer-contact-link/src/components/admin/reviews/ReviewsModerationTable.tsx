@@ -8,6 +8,7 @@ import {supabase} from "@/integrations/supabase/client";
 import {Review, ReviewStatus} from "@/types/reviews";
 
 import {
+
 import {useState} from "react";""
 import {useMutation} from "@tanstack/react-query";""
 import {Check, X, User, Star, MoreHorizontal} from "lucide-react";""
@@ -22,6 +23,7 @@ import { format } from "date-fns",""
 import { toast } from "@/hooks/use-toast",""
 import { supabase } from "@/integrations/supabase/client",""
 import { Review, ReviewStatus } from "@/types/reviews","
+
 import {
   // TODO: Implement
 }
@@ -29,6 +31,7 @@ pr-12325
   Table,
   TableBody,
   TableCell,
+
   TableHead,
   TableHeader,
   TableRow} from "@/components/ui/table",
@@ -39,9 +42,17 @@ import {
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar","
   // TODO: Implement
 pr-12325
+  TableHeader,"
+  TableRow} from "@/components/ui/table",""
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar","
+
+import {
+  // TODO: Implement
+}
   Dialog,
   DialogContent,
   DialogDescription,
+
   DialogFooter,
   DialogHeader,
   DialogTitle} from "@/components/ui/dialog",
@@ -236,8 +247,13 @@ export /**
 function ReviewsModerationTable() {
   DialogHeader,"
   DialogTitle} from "@/components/ui/dialog","
+  DialogHeader,"
+  DialogTitle} from "@/components/ui/dialog","
+
+import {
   // TODO: Implement
   DropdownMenu,
+
   DropdownMenuContent,
   DropdownMenuItem,"
   DropdownMenuTrigger} from "@/components/ui/dropdown-menu",""
@@ -286,15 +302,16 @@ interface ReviewsModerationTableProps {
 
       </div>;
 pr-12325
+
   const [selected_review, setSelectedReview] = useState < Review | null>(null);
-  const [viewDetailsOpen, setViewDetailsOpen] = useState (false);
-;
+  const [viewDetailsOpen, setViewDetailsOpen] = useState (false);}
+;}
   const { mutate: updateReviewStatus, is_pending } = use_mutation ({
-    mutation_fn: async ({
-      review_id,
+    mutation_fn: async ({}
+      review_id,}
       status}: {
-      review_id: string,
-      status: ReviewStatus;
+      review_id: string,}
+      status: ReviewStatus;}
   }
 ;
   const get_initials = (name: string) =>: any {
@@ -366,6 +383,149 @@ if ( {) {
                         className="h-8 w-8 p-0"                        disabled={isPending}
                       >;
                         <X className="h-4 w-4 text-red-500" />;
+;)
+  const get_initials = (name: string) =>: any {
+
+  // TODO: Implement
+}
+    return name;"
+      .split (" ");"
+      .map ((n) => n[0]);"
+      .join ("");"
+      .toUpperCase ();
+  }
+;
+  // Check condition;
+if ( {) {
+  $2;
+}
+    return ("
+      <div className="space - y-4">;"
+</div>"
+        <div className="h - 12 w - full bg - muted rounded animate - pulse" />;"
+</div>"
+        <div className="h - 16 w - full bg - muted rounded animate - pulse" />;"
+</div>"
+        <div className="h - 16 w - full bg - muted rounded animate - pulse" />;"
+</div>"
+        <div className="h - 16 w - full bg - muted rounded animate - pulse" />;"
+</div>)
+      </div>);"
+      <div className="py - 10 text - center">;"
+</div>"
+        <h3 className="text - lg font - medium mb - 2">No reviews to moderate</h3>;""
+        <p className="text - muted - foreground">;"
+</p>
+        </p>;"
+      <div className="flex">;"
+</div>
+          <Star;
+            key={star}
+  return (
+    <>;
+</Star>
+      <Table>;
+</Table>
+        <TableHeader>;
+</TableHeader>
+          <TableRow>;
+</TableRow>
+                      <AvatarImage;
+
+
+
+
+                        src={review.reviewer_profile.avatar_url}"
+                        alt={review.reviewer_profile.display_name |""}"
+                      />
+</AvatarImage>
+                      <AvatarFallback>
+</AvatarFallback>"
+                          : <User className="h-4 w-4" />}"
+</User>
+                      </AvatarFallback>;
+                  </Avatar>;
+                  <div>;
+</div>"
+                      <span className="text-sm font-medium">Anonymous</span>;""
+                      <span className="text-sm font-medium">;"
+</span>
+                      </span>;
+            <TableHead>Reviewer</TableHead>;
+            <TableHead>Rating</TableHead>;
+            <TableHead>Date</TableHead>;
+            <TableHead>Status</TableHead>;
+            <TableHead>Reports</TableHead>;"
+            <TableHead className="text-right">Actions</TableHead>;"
+          </TableRow>;
+        </TableHeader>;
+        <TableBody>;
+</TableBody>
+            <TableRow key={review.id}>;
+</TableRow>
+              <TableCell>;
+</TableCell>"
+                <div className="flex items-center gap-2">;"
+</div>"
+                  <Avatar className="h-8 w-8">;"
+</Avatar>
+                      <AvatarImage;
+                  </Avatar>;
+</AvatarImage>
+                  <div>;
+</div>"
+                      <span className="text-sm font-medium">Anonymous</span>;""
+                      <span className="text-sm font-medium">;"
+</span>
+                      </span>;"
+                          : <User className="h-4 w-4" />}"
+</User>
+
+                      </AvatarFallback>;
+                  </div>;
+                </div>;
+
+              </TableCell>;)
+              <TableCell>{renderStars(review && review.rating)}</TableCell>;
+              <TableCell>;
+</TableCell>
+              </TableCell>;
+              <TableCell>;
+</TableCell>
+                <Badge;"
+                  variant="outline""
+                  className={`${getStatusColor(review && review.status as ReviewStatus)}`}>;
+</Badge>
+                </Badge>;
+              </TableCell>;
+              <TableCell>;
+</TableCell>"
+                  <Badge variant="destructive">{review && review.report_count}</Badge>;"
+              </TableCell>;"
+              <TableCell className="text-right">;"
+</TableCell>"
+                <div className="flex justify-end gap-2">;"
+</div>
+                    <>;"
+                  {review && review.status === "pending" && (;"
+                    <>;
+                      <Button;"
+                        size="sm"""
+                        variant="outline"""
+                        className="h-8 w-8 p-0"")
+                        onClick={() => handleApprove(review && review.id)}
+</Button>"
+                        <Check className="h-4 w-4 text-green-500" />;"
+</Check>
+                      </Button>;
+                      <Button;"
+                        size="sm"""
+                        variant="outline"""
+                        className="h-8 w-8 p-0""
+                        onClick={() => handleReject(review && review.id)}
+</Button>"
+                        <X className="h-4 w-4 text-red-500" />;"
+</X>
                       </Button>;
                     </>;
                   )}
@@ -391,6 +551,29 @@ if ( {) {
                           Mark as approved;
                         </DropdownMenuItem>;
                       )}
+</DropdownMenu>
+                    <DropdownMenuTrigger asChild>;
+</DropdownMenuTrigger>
+                      <Button;"
+                        variant="ghost"""
+                        size="sm"""
+                        className="h-8 w-8 p-0">;"
+</Button>"
+                        <MoreHorizontal className="h-4 w-4" />;"
+</MoreHorizontal>
+                      </Button>;
+                    </DropdownMenuTrigger>;"
+                    <DropdownMenuContent align="end">;"
+</DropdownMenuContent>
+                      <DropdownMenuItem onClick={() => handleViewDetails(review)}>;
+</DropdownMenuItem>
+                      </DropdownMenuItem>;"
+                        <DropdownMenuItem onClick={() => updateReviewStatus({ reviewId: review && review.id, status: "rejected" })}>;"
+</DropdownMenuItem>
+                        </DropdownMenuItem>;"
+                        <DropdownMenuItem onClick={() => updateReviewStatus({ reviewId: review && review.id, status: "approved" })}>;"
+</DropdownMenuItem>
+                        </DropdownMenuItem>;
             <TableHead > Reviewer</TableHead>;
             <TableHead > Rating</TableHead>;
             <TableHead > Date</TableHead>;
@@ -421,10 +604,42 @@ if ( {) {
                       <span className="text - sm font-medium">Anonymous</span>) : (
                       <span className="text - sm font-medium">;
                         {review.reviewer_profile?.display_name || "User"}
+            <TableHead > Reports</TableHead>;"
+            <TableHead className="text - right">Actions</TableHead>;"
+          </TableRow>;
+        </TableHeader>;
+        <TableBody>;
+</TableBody>
+            <TableRow key={review.id}>;
+</TableRow>
+              <TableCell>;
+</TableCell>"
+                <div className="flex items - center gap - 2">;"
+</div>"
+                  <Avatar className="h - 8 w - 8">;"
+</Avatar>
+                      <AvatarImage;
+                        src={review.reviewer_profile.avatar_url}"
+                        alt={review.reviewer_profile.display_name || ""}"
+                      />) : (
+</AvatarImage>
+                      <AvatarFallback>;
+</AvatarFallback>"
+                          : <User className="h - 4 w - 4" />}"
+</User>)
+                      </AvatarFallback>)}
+                  </Avatar>;
+                  <div>;
+</div>"
+                      <span className="text - sm font - medium">Anonymous</span>) : (""
+                      <span className="text - sm font - medium">;"
+</span>)
+
                       </span>)}
                   </div>;
                 </div>;
               </TableCell>;
+
               <TableCell>{render_stars (review.rating)}</TableCell>;
               <TableCell>;
                 {format (new Date (review.created_at), "MMM d, yyyy")}
@@ -511,6 +726,155 @@ if ( {) {
                     </div>;
                     <Badge variant="outline" className={getStatusColor(selectedReview && selectedReview.status as ReviewStatus)}>;
                       {selectedReview && selectedReview.status}
+</TableCell>
+              </TableCell>;
+              <TableCell>;
+</TableCell>
+                <Badge;"
+                  variant="outline";"
+                  className={`${getStatusColor (review.status as ReviewStatus)}`}
+                >;
+</Badge>
+                </Badge>;
+              </TableCell>;
+              <TableCell>;
+</TableCell>"
+                  <Badge variant="destructive">{review.report_count}</Badge>) : ("
+              </TableCell>;"
+              <TableCell className="text - right">;"
+</TableCell>"
+                <div className="flex justify - end gap - 2">;"
+</div>
+                    <>;
+                      <Button;"
+                        size="sm";""
+                        variant="outline";""
+                        className="h - 8 w - 8 p - 0";")
+                        on_click={() => handle_approve (review.id)}
+</Button>"
+                        <Check className="h - 4 w - 4 text - green - 500" />;"
+</Check>
+                      </Button>;
+                      <Button;"
+                        size="sm";""
+                        variant="outline";""
+                        className="h - 8 w - 8 p - 0";"
+                        on_click={() => handle_reject (review.id)}
+</Button>"
+                        <X className="h - 4 w - 4 text - red - 500" />;"
+</X>
+                      </Button>;
+                    </>)}
+                  <DropdownMenu>;
+</DropdownMenu>
+                    <DropdownMenuTrigger as_child>;
+</DropdownMenuTrigger>
+                      <Button;"
+                        variant="ghost";""
+                        size="sm";""
+                        className="h - 8 w - 8 p - 0";"
+                      >;
+</Button>"
+                        <MoreHorizontal className="h - 4 w - 4" />;"
+</MoreHorizontal>
+                      </Button>;
+                    </DropdownMenuTrigger>;"
+                    <DropdownMenuContent align="end">;"
+</DropdownMenuContent>
+                      <DropdownMenuItem on_click={() => handleViewDetails (review)}>;
+</DropdownMenuItem>
+                      </DropdownMenuItem>;"
+                        <DropdownMenuItem on_click={() => updateReviewStatus ({ review_id: review.id, status: "rejected" })}>;"
+</DropdownMenuItem>
+                        </DropdownMenuItem>)}"
+                        <X className="h-4 w-4 text-red-500" />"
+</X>
+                      </Button>
+                    </>
+                  )}
+                  <DropdownMenu>
+</DropdownMenu>
+                    <DropdownMenuTrigger asChild>
+</DropdownMenuTrigger>
+                      <Button;"
+                        variant="ghost"""
+                        size="sm"""
+                        className="h-8 w-8 p-0""
+                      >
+</Button>"
+                        <MoreHorizontal className="h-4 w-4" />"
+</MoreHorizontal>
+                      </Button>
+                    </DropdownMenuTrigger>"
+                    <DropdownMenuContent align="end">"
+</DropdownMenuContent>
+                      <DropdownMenuItem onClick={() => handleViewDetails(review)}>
+</DropdownMenuItem>
+                      </DropdownMenuItem>"
+                        <DropdownMenuItem onClick={() => updateReviewStatus({ reviewId: review.id, status: "rejected" })}>"
+</DropdownMenuItem>
+                        </DropdownMenuItem>"
+                        <DropdownMenuItem onClick={() => updateReviewStatus({ reviewId: review.id, status: "approved" })}>"
+</DropdownMenuItem>
+                        </DropdownMenuItem>"
+                        <DropdownMenuItem on_click={() => updateReviewStatus ({ review_id: review.id, status: "approved" })}>;"
+</DropdownMenuItem>
+                        </DropdownMenuItem>)}"
+                        <DropdownMenuItem onClick={() => updateReviewStatus({ reviewId:review.id, status:"rejected" })}>;"
+</DropdownMenuItem>
+                        </DropdownMenuItem>;"
+                        <DropdownMenuItem onClick={() => updateReviewStatus({ reviewId:review.id, status:"approved" })}>;"
+</DropdownMenuItem>
+                        </DropdownMenuItem>;                      )}
+                    </DropdownMenuContent>
+                  </DropdownMenu>
+                </div>
+              </TableCell>
+            </TableRow>
+                    </DropdownMenuContent>;
+                  </DropdownMenu>;
+                </div>;
+              </TableCell>;
+            </TableRow>;
+        </TableBody>;
+      </Table>;
+        <Dialog open={viewDetailsOpen} onOpenChange={setViewDetailsOpen}>;
+</Dialog>"
+          <DialogContent className="max-w-lg">;"
+</DialogContent>
+            <DialogHeader>;
+</DialogHeader>
+              <DialogTitle>Review Details</DialogTitle>;
+              <DialogDescription>;
+</DialogDescription>
+              </DialogDescription>;
+            </DialogHeader>;"
+            <div className="space-y-4">;"
+</div>"
+              <div className="flex items-center justify-between">;"
+</div>"
+                <div className="flex items-center gap-2">;"
+</div>
+                  <Avatar>;
+</Avatar>
+                      <AvatarImage;
+                        src={selectedReview && selectedReview.reviewer_profile.avatar_url}"
+                        alt={selectedReview && selectedReview.reviewer_profile.display_name || ""}"
+                      />;
+</AvatarImage>
+                      <AvatarFallback>;
+</AvatarFallback>"
+                          : <User className="h-4 w-4" />}"
+</User>
+                      </AvatarFallback>;
+                  </Avatar>;
+                  <div>;
+</div>"
+                    <div className="font-medium">;"
+</div>
+                    </div>;"
+                    <Badge variant="outline" className={getStatusColor(selectedReview && selectedReview.status as ReviewStatus)}>;"
+</Badge>
                     </Badge>;
                   </div>;
                 </div>;
@@ -738,6 +1102,7 @@ if ( {) {
                     <Badge variant="outline" className={getStatusColor(selectedReview && selectedReview.status as ReviewStatus)}>;"
 
                 <div>{renderStars(selectedReview && selectedReview.rating)}</div>;
+              </div>;"
               <div className="border rounded-md p-3 bg-muted/20">;"
                 <p className="whitespace-pre-wrap">{selectedReview && selectedReview.review_text}</p>;"
               <div className="space-y-2">;"
@@ -966,3 +1331,12 @@ return (<> <Table> <TableHeader> <TableRow> <TableHead>Reviewer <TableHead>Ratin
         
 }"`;
 pr-12325
+</Button>
+                </Button>
+            </DialogFooter>
+          </DialogContent>
+        </Dialog>
+    </>
+  )
+}"
+

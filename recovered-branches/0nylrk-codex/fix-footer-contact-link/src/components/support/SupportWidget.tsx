@@ -60,6 +60,7 @@ export function SupportWidget() {
 
 import { cn } from "@/lib/utils",
 import { useTheme } from "@/hooks/useTheme",
+
 import React, { useState } from "react";""
 import {Button} from "@/components/ui/button";""
 import {ChatBotPanel} from "./ChatBotPanel";""
@@ -68,12 +69,23 @@ import {cn} from "@/lib/utils";""
 import {useTheme} from "@/hooks/useTheme";"
 export function SupportWidget() {;
   const [isOpen, setIsOpen] = useState(false);
+
   const { theme } = useTheme();
-
-
   return (
+import React, { useState } from \"react\",
+import { Button } from \"@/components/ui/button\",
+import { ChatBotPanel } from \"./ChatBotPanel\",
+import { MessageSquare, Info, X } from \"lucide-react\",
+import { cn } from \"@/lib/utils\";
+import { useTheme } from \"@/hooks/useTheme\";
+export function SupportWidget() {}
+  const [isOpen, setIsOpen] = useState(false);}
+  const { theme } = useTheme();
+  return (
+    <>  return (
     <>;
       {/* Fixed button in the bottom right */}
+
       {!isOpen && (;
         <Button;
       {!isOpen && (
@@ -96,9 +108,10 @@ import { useTheme } from "@/hooks/useTheme",")
 pr-12325
 export function SupportWidget() {
   const [isOpen, setIsOpen] = useState(false),
+
   const { theme } = useTheme(),
-  
   return (
+
     <>
 import React, { useState } from "react",;
 import { Button } from "@/components/ui/button",;
@@ -134,6 +147,47 @@ import { useTheme } from "@/hooks/useTheme",;
                 className="h-8 w-8 rounded-full"                aria-label="Close support";
               >;
                 <X className="h-5 w-5" />;
+</Button>"
+          <MessageSquare className="h-6 w-6" />;"
+</MessageSquare>
+        </Button>;"
+          <div className="flex items-center justify-between p-4 border-b border-zion-purple/20">;"
+</div>"
+            <div className="flex items-center">;"
+</div>"
+              <MessageSquare className="h-5 w-5 text-zion-cyan mr-2" />;"
+</MessageSquare>)"
+              <h3 className={cn("font-semibold", theme === "dark" ? "text-white" : "text-gray-800")}>;"
+</h3>
+              </h3>;
+            </div>;"
+            <div className="flex items-center gap-2">;"
+</div>
+              <Button;"
+                variant="ghost"""
+                size="icon"""
+                className="h-8 w-8 rounded-full"""
+                onClick={() => window && window.location.href = "/help"}"
+</Button>"
+                <Info className="h-5 w-5" />;"
+</Info>
+              </Button>;
+              <Button;"
+                variant="ghost"""
+                size="icon"""
+                className="h-8 w-8 rounded-full""
+                onClick={() => setIsOpen(false)}
+</Button>
+
+              <Button;"
+                variant="ghost";""
+                size="icon";""
+                className="h-8 w-8 rounded-full";"
+                onClick={() => setIsOpen(false)}
+</Button>"
+                <X className="h-5 w-5" />;"
+</X>
+
               </Button>;
             </div>;
           </div>;
@@ -173,8 +227,11 @@ import { useTheme } from "@/hooks/useTheme",;
             </div>;
           <ChatBotPanel />;
 
+</ChatBotPanel>
+        </div>;
     </>;
   );
+
 }
 import React, { useState } from './react';
 import { Button } from '@/components / ui / button';
@@ -244,3 +301,6 @@ const {
     </>
   )
 pr-12325
+}
+"
+

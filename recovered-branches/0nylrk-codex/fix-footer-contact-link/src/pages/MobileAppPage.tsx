@@ -106,3 +106,6 @@ const MobileAppPage: React.FC = () => {
 
     ;)"
 pr-12325
+</AppLayout>
+    </AppLayout>;)"
+

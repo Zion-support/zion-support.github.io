@@ -67,6 +67,7 @@ export function ApplicationActions({
 }
 ;
 
+
 import {useState} from "react";""
 import {Link} from "react-router-dom";""
 import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger} from "@/components/ui/dropdown-menu";""
@@ -182,3 +183,10 @@ interface ApplicationActionsProps {
 
     </div>;"`;
 pr-12325
+</Link>
+        </Link>;
+      </Button>;
+    </div>;
+  );
+}
+;

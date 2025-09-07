@@ -8,6 +8,40 @@ import { cn } from "@/lib/utils";
 import { Input } from "@/components/ui/input",
 import { cn } from "@/lib/utils",export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {
 
+
+import React from "react",""
+import { Link, useLocation } from "react-router-dom",""
+import { Search } from "lucide-react",""
+import { Input } from "@/components/ui/input";""
+import { cn } from "@/lib/utils";""
+import { Input } from "@/components/ui/input",""
+import { cn } from "@/lib/utils","
+interface ApiDocsLayoutProps {
+  // TODO: Implement
+}
+  children: React.ReactNode;
+}
+interface ApiDocsLayoutProps {
+  // TODO: Implement
+}
+  children: React.ReactNode;
+}
+
+
+
+export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {
+
+  const location = useLocation(),
+  const currentPath = location.pathname,
+
+  
+
+export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {;
+  const location = useLocation();
+  const currentPath = location.pathname;
+
+export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {
+
   const location = useLocation();
   const currentPath = location.pathname;
   const location = useLocation(),
@@ -100,8 +134,12 @@ import { Search } from "lucide-react",;""
 import { Input } from "@/components/ui/input",;""
 import { cn } from "@/lib/utils",;"
 interface ApiDocsLayoutProps {;
+  children: React.ReactNode;
+
+}
 ;)
   const location = useLocation(),;
+
   const currentPath = location.pathname,;
   const navigationItems = [;"
     { title: "Getting Started", path: "/developers/docs/getting-started" },;""
@@ -145,3 +183,7 @@ interface ApiDocsLayoutProps {;
               </li>;"
       <div className="flex-grow max-w-5xl mx-auto px-4 py-8 md:px-8 md:py-12">;"
 pr-12325
+</div>
+      </div>;
+    </div>;"
+

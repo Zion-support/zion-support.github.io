@@ -1,13 +1,16 @@
-
 class ErrorBoundary extends React.Component {
+
+  // TODO: Implement
+}
   constructor(props) {
     super(props);
+
     this.state = { hasError: false };
   }
-  
-  static getDerivedStateFromError(error) {
+  static getDerivedStateFromError(error) {}
     return { hasError: true };
   }
+
   
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
@@ -25,7 +28,11 @@ class ErrorBoundary extends React.Component {
     console.error('Error caught by boundary:', error, errorInfo);
 pr-12325
   
+    console.error('Error caught by boundary:', error, errorInfo);'
+
+  }
   render() {
+
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
@@ -55,6 +62,18 @@ import type { QuoteRequest } from "@/types/quotes";
 
   const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null);
   const [showDetails, setShowDetails] = useState(false);    quotes;
+  const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null);
+</QuoteRequest>
+  const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null);
+</QuoteRequest>
+  const [selected_quote, setSelectedQuote] = useState < QuoteRequest | null>(null);
+  const [show_details, setShowDetails] = useState (false);
+;
+  const {
+  // TODO: Implement
+}
+    quotes;
+
     is_loading;
     error;
     status_filter;
@@ -179,12 +198,75 @@ function QuoteManager() {
 
 
 pr-12325
+
+    setDateRange;'
+import type { QuoteRequest } from "@/types/quotes",""
+import { ProtectedRoute } from "@/components/ProtectedRoute",""
+import { QuoteDetails } from "@/components/quotes/QuoteDetails",""
+import { ExportToCSV } from "@/components/quotes/ExportToCSV","
+
+import {
+  // TODO: Implement
+}
+  QuoteStatusCards,
+
+  QuotesFilter,
+  QuotesTable;"
+} from "@/components/admin/quotes","
+export default function QuoteManager() {
+  const { user } = useAuth(),"
+  const isAdmin = user?.userType === 'admin','
+  const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null),
+</QuoteRequest>'
+    return <Navigate to="/unauthorized" replace />"
+</Navigate>"
+    return <Navigate to="/unauthorized" replace />;"
+</Navigate>
+  const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null),;
+</QuoteRequest>
+  const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null),;
+</QuoteRequest>"
+    return <Navigate to="/unauthorized" replace />;"
+</Navigate>
+    <ProtectedRoute adminOnly>;
+</ProtectedRoute>
+      <div>;
+</div>
+        <Header />;
+</Header>"
+        <div className="min-h-screen bg-zion-blue px-4 py-8">;"
+</div>"
+          <div className="container mx-auto">;"
+</div>"
+            <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8">;"
+</div>
+              <div>;
+</div>"
+                <h1 className="text-3xl font-bold text-white mb-2">Quote Request Manager</h1>;""
+                <p className="text-zion-slate-light">Manage and respond to all talent hire requests</p>;"
+              </div>;"
+              <ExportToCSV quotes={quotes} filename="zion-quote-requests" />;"
+</ExportToCSV>
+            </div>;
+            <QuoteStatusCards statusCounts={statusCounts} />;
+</QuoteStatusCards>
+            <QuoteStatusCards statusCounts={statusCounts} />;
+</QuoteStatusCards>
+            <QuotesFilter;
+              searchQuery={searchQuery}              setSearchQuery={setSearchQuery}
+            {/* Status Summary Cards */}
+            <QuoteStatusCards statusCounts={statusCounts} />
+</QuotesFilter>
+            <QuoteStatusCards statusCounts={statusCounts} />;
+</QuoteStatusCards>
+
   const [selected_quote, setSelectedQuote] = useState < QuoteRequest | null>(null);
   const [show_details, setShowDetails] = useState (false);
 ;
   const {
   // TODO: Implement
 pr-12325
+}
     quotes;
     is_loading;
     error;
@@ -194,8 +276,8 @@ pr-12325
     setArchiveFilter;
     search_query;
     setSearchQuery;
-    date_range;
-    setDateRange;
+    date_range;}
+    setDateRange;}
   }
   return (                    isLoading={isLoading}
                     updateStatus={updateStatus}
@@ -338,6 +420,7 @@ export default function QuoteManager() {
 
 
   // TODO: Implement
+
   return (
             {/* Filters */}
               searchQuery={searchQuery}
@@ -373,10 +456,15 @@ export default function QuoteManager() {
                 <Card className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">"
 
                     quotes={quotes.filter(quote => quote.is_archived)}
+</QuotesTable>
+            </Tabs>;
+          </div>;
+        </div>;
 
         <QuoteDetails;
-          quote={selectedQuote}
+quote={selectedQuote}
           isOpen={showDetails}
+
 
 
           onClose={() => {;
@@ -389,6 +477,15 @@ export default function QuoteManager() {
         <Footer />
 
 
+</QuoteDetails>
+
+        <Footer />
+</Footer>
+      </div>
+
+    </ProtectedRoute>"
+    return <Navigate to="/unauthorized" replace />;"
+</Navigate>
     <ProtectedRoute admin_only>;
 
         <div className="min - h-screen bg - zion - blue px - 4 py - 8">;"
@@ -422,6 +519,15 @@ export default function QuoteManager() {
 
     );
 
+</Footer>
+      </div>;
+    </ProtectedRoute>);
+
+        <Footer />;
+</Footer>
+      </div>;
+
+    </ProtectedRoute>;"
 }min-h-screen bg-zion-blue px-4 py-8"> <div className=" container mx-auto"> <div className=" flex flex-col md:flex-row justify-between items-start md:items-center mb-8"> <div> <h1 className=" text-3xl font-bold text-white mb-2">Quote Request Manager</h1> <p className=" text-zion-slate-light">Manage and respond to all talent hire requests</p> </div> </div> {"
 }<QuoteStatusCards statusCounts= {
   statusCounts;
@@ -447,3 +553,10 @@ export default function QuoteManager() {
 }/>    </div> </div> {
 }<QuoteDetails /> <Footer /> </div> ) 
 pr-12325
+</QuotesFilter>"
+}/> </Card> </TabsContent> <TabsContent value=" archived"> <Card className=" bg-zion-blue-dark border border-zion-blue-light overflow-hidden" > <QuotesTable quotes= {"
+</TabsContent>
+}/> </Card> </TabsContent> </Tabs> </div> </div> {
+}<QuoteDetails /> <Footer /> </div> </ProtectedRoute>) 
+}
+}

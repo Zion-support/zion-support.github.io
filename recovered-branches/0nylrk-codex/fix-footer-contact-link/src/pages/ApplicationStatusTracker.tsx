@@ -97,6 +97,7 @@ export default function ApplicationStatusTracker() {;
 
 }
 }
+
 import { AppLayout } from "@/layout/AppLayout";""
 import { SEO } from "@/components/SEO";""
 import { ApplicationsTracker } from "@/components/jobs/applications";""
@@ -163,6 +164,21 @@ export default function ApplicationStatusTracker() {
 
       
     
+</AppLayout>
+
+        <ApplicationStatusTrackerContent />
+</ApplicationStatusTrackerContent>
+      </AppLayout>
+
+    </ProtectedRoute>
+    <ProtectedRoute>
+</ProtectedRoute>
+      <AppLayout>
+</AppLayout>
+        <ApplicationStatusTrackerContent />
+</ApplicationStatusTrackerContent>
+      </AppLayout>
+    </ProtectedRoute>
     <ProtectedRoute>;
 
       <AppLayout>;
@@ -187,3 +203,17 @@ Application Status Tracker | Zion AI Marketplace"description=" Track the status 
     )
     );`;
 pr-12325
+}> <ApplicationsTracker /> </CardContent> </Card> </div> </div> </>) 
+</ApplicationsTracker>
+  return (<ProtectedRoute> <AppLayout> <ApplicationStatusTrackerContent /> </AppLayout> </ProtectedRoute> 
+    </ProtectedRoute>;
+    <ProtectedRoute>
+</ProtectedRoute>
+      <AppLayout>
+</AppLayout>
+        <ApplicationStatusTrackerContent />
+</ApplicationStatusTrackerContent>
+      </AppLayout>
+    </ProtectedRoute>)
+    </ProtectedRoute>);'
+

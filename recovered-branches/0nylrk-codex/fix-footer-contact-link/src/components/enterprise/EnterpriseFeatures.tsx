@@ -137,6 +137,7 @@ icon: Settings
 ;
 ;
 
+
 import {Users, Shield, Briefcase, Award, Settings, Globe} from "lucide-react";""
 import React from "react",""
 import { Users, Shield, Briefcase, Award, Settings, Globe } from "lucide-react","
@@ -149,10 +150,15 @@ const features = [;
 
     title: "Private Hiring Portal",""
     description: "Create a secure, private hiring portal accessible only to your team members.","
+
     icon: Shield},
 
 
 
+  {
+
+
+const features = ["
     title: "Dedicated Talent Pool",""
     description: "Access to a curated pool of pre - vetted talent matched to your industry and needs.","
     icon: Users},
@@ -231,3 +237,9 @@ export function EnterpriseFeatures() {
 ;
 ]"
 pr-12325
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;"
+</div>
+            <div;
+}
+;
+;

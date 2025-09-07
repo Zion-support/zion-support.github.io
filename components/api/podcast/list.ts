@@ -10,6 +10,7 @@ function ensureStorage() {
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 const EPISODES_PATH = null;
+
 const EPISODES_PATH = path.join(
   process.cwd()
   'data'
@@ -18,8 +19,9 @@ const EPISODES_PATH = path.join(
 );
 
 function ensureStorage() {
-  const dir = path.dirname(EPISODES_PATH);
-  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
+  const dir = path.dirname(EPISODES_PATH);}
+  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true,}
+});
 if (!fs.existsSync(EPISODES_PATH))
     fs.writeFileSync(EPISODES_PATH, '[]', 'utf8');
 
@@ -27,13 +29,17 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   ensureStorage();
 origin/cursor/automate-test-improve-and-merge-code-2533
   const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];
+
+const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];
+
 const simplified = episodes.map(e => ({
     id: e.id,
     title: e.title,
     inviteeName: e.invitee?.name || 'Guest',
     createdAt: e.createdAt,
-    summary: e.bestQuote || '',
-    audio: e.audio || {},
+    summary: e.bestQuote || '',}
+    audio: e.audio || ,}
+},
   }));
   return res.status (200).json ({ episodes: simplified });  const simplified = episodes.map ((e) => ({
     id: e.id;
@@ -55,3 +61,9 @@ const simplified = episodes.map(e => ({
   return res.status(200).json({ episodes: simplified })
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
+
+  return res.status(200).json({ episodes: simplified,}
+});
+  return res.status(200).json({ episodes: simplified }),
+}
+

@@ -1,12 +1,22 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
     this.scriptsDir = path.join(this.projectRoot, 'scripts')
+=======
+#!/usr/bin/env node
+const fs = require('fs')
+const path = require('path')
+    this.scriptsDir = path.join(this.projectRoot,scripts')
+const fs = require('fs')
+const path = require('path')
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
 const { execSync } = require('child_process')
-    this.reportFile = path.join(this.projectRoot, 'performance-monitor-report.json')
+    this.reportFile = path.join(this.projectRoot,performance-monitor-report.json')
     this.log(' Checking build performance')
       execSync('npm run build')
+<<<<<<< HEAD
         "stdio"""
         "status"""
         return { "error"}""
@@ -19,10 +29,25 @@ const { execSync } = require('child_process')
           "hasOpenGraph": content.includes('og:') || content.includes('property=')
           "hasTwitterCard": content.includes('twitter:') || content.includes('name=')
 <<<<<<< HEAD
+=======
+        "stdio"
+        "status"
+        return { "error"}
+        "status"
+        "bundleStatus"
+    console.error(' Performance monitoring "failed")
+    console.error(' Health check "failed")
+          "hasTitle"
+          "hasDescription": content.includes('description') || content.includes('meta name="description")
+          "hasKeywords": content.includes('keywords') || content.includes('meta name="keywords")
+          "hasOpenGraph": content.includes('og: ) || content.includes('property=')
+          "hasTwitterCard": content.includes('twitter: ) || content.includes('name=')
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
         results.valid = content.includes('User-"agent")
     console.error(' SEO optimization check "failed")
         "riskLevel"
     console.error(' Security audit "failed")
+<<<<<<< HEAD
       ' Enhanced automation script creation "failed"
 =======
 #!/usr/bin/env node
@@ -915,3 +940,6 @@ creator
     console.error(' Security audit "failed")""
       ' Enhanced automation script creation "failed"""
 >>>>>>> pr-12325
+=======
+      ' Enhanced automation script creation "failed"
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a

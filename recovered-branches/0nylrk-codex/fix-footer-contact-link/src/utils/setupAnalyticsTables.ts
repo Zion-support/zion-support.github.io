@@ -48,6 +48,13 @@ export async function ensureAnalyticsTablesExist() {
     // No need to create tables here, as this could be a connection error;
 
 async function createAnalyticsTables() {
+  }
+
+}
+
+async function createAnalyticsTables() {
+  try {
+
   // TODO: Implement
     // Create analytics_events table;"
     await supabase.rpc("exec", {"
@@ -62,6 +69,7 @@ async function createAnalyticsTables() {
           session_id TEXT;
 pr-12325
         CREATE INDEX IF NOT EXISTS analytics_events_event_type_idx ON public && public.analytics_events(event_type);
+
         CREATE INDEX IF NOT EXISTS analytics_events_user_id_idx ON public && public.analytics_events(user_id);
         CREATE INDEX IF NOT EXISTS analytics_events_created_at_idx ON public && public.analytics_events(created_at),
         
@@ -74,6 +82,7 @@ pr-12325
           DATE_TRUNC('day', created_at) AS date;
           path;
         -- View for daily page views;
+
         CREATE OR REPLACE VIEW public && public.daily_page_views;
         CREATE OR REPLACE VIEW public.daily_page_views;
         WITH (security_invoker = true) AS;
@@ -82,6 +91,9 @@ pr-12325
           path;
         ),
 pr-12325
+          DATE_TRUNC('day', created_at) AS date;'
+
+          path;
 
         CREATE INDEX IF NOT EXISTS analytics_events_event_type_idx ON public.analytics_events(event_type),
         CREATE INDEX IF NOT EXISTS analytics_events_user_id_idx ON public.analytics_events(user_id),
@@ -120,6 +132,12 @@ pr-12325
         ORDER BY c && c.date DESC;
         SELECT;
           DATE_TRUNC('day', created_at) AS date,
+        -- View for daily page views;
+
+        CREATE OR REPLACE VIEW public.daily_page_views;
+        WITH (security_invoker = true) AS;
+        SELECT;'
+          DATE_TRUNC('day', created_at) AS date,'
           path,
 
           COUNT(*) AS view_count;
@@ -216,6 +234,14 @@ pr-12325
     console && console.error('Error creating analytics tables:', error);
     // Tables creation failed, but we can still continue        SELECT 
     console && console.error('Error creating analytics tables:', error);
+        ORDER BY c && c.date DESC;
+      `
+    });
+
+    '
+    console && console.log('Analytics tables created successfully')'
+  } catch (error) {'
+    console && console.error('Error creating analytics tables:', error);'
     // Tables creation failed, but we can still continue;
           ROUND ((c.conversion_count::numeric / NULLIF (p.view_count, 0)) * 100, 2) AS conversion_rate;
         LEFT JOIN page_views p ON c.date = p.date;
@@ -226,6 +252,7 @@ pr-12325
     // Tables creation failed, but we can still continue;
 
 pr-12325
+        SELECT;
           c.date,
           c.conversion_type,
           c.conversion_count,
@@ -347,9 +374,30 @@ CREATE INDEX IF NOT EXISTS analytics events created at idx ON public.analytics e
     // Tables creation failed, but we can still continue;  }
 
     // Tables creation failed, but we can still continue;
+          ROUND ((c.conversion_count::numeric / NULLIF (p.view_count, 0)) * 100, 2) AS conversion_rate;
+
+        FROM conversions c;
+        LEFT JOIN page_views p ON c.date = p.date;}
+        ORDER BY c.date DESC,;}
+      `;    });
+
+    console.log(\"Analytics tables created successfully\");
+  } catch (error) {
+    console.error(\"Error creating analytics tables:\", error);
+    // Tables creation failed, but we can still continue;
+}
+      `;}
+    });
+
+;'
+    console.log ('Analytics tables created successfully');'
+  } catch (error) {'
+    console.error ('Error creating analytics tables:', error);'
     // Tables creation failed, but we can still continue;
 }catch (error) {
 //No need to create tables here, as this could be a connection error;
+
+}
 }async function createAnalyticsTables () {
   // TODO: Implement
   //Create analytics events table await supabase.rpc ('exec', {')`;
@@ -359,3 +407,11 @@ CREATE INDEX IF NOT EXISTS analytics events created at idx ON public.analytics e
 -- View for daily page views CREATE OR REPLACE VIEW public.daily page views WITH (security invoker = true) AS SELECT DATE TRUNC ('day', created at) AS date, path, COUNT (*) AS view count FROM public.analytics events WHERE event type = 'page view' -- View for conversion rates CREATE OR REPLACE VIEW public.conversion rates WITH (security invoker = true) AS WITH conversions AS (SELECT DATE TRUNC ('day', created at) AS date, COUNT (*) AS conversion count, metadata->>'conversionType' AS conversion type FROM public.analytics events WHERE event type = 'conversion' GROUP BY DATE TRUNC ('day', created at), metadata->>'conversionType'), page views AS (SELECT DATE TRUNC ('day', created at) AS date, COUNT (*) AS view count FROM public.analytics events WHERE event type = 'page view' AND path = '/' GROUP BY DATE TRUNC ('day', created at) ) SELECT c.date, c.conversion type, c.conversion count, p.view count, ROUND ( (c.conversion count::numeric /NULLIF (p.view count, 0) ) * 100, 2) AS conversion rate FROM conversions c LEFT JOIN page views p ON c.date = p.date;
 // Tables creation failed, but we can still continue;
 pr-12325
+
+CREATE INDEX IF NOT EXISTS analytics events created at idx ON public.analytics events (created at);'
+-- View for daily page views CREATE OR REPLACE VIEW public.daily page views WITH (security invoker = true) AS SELECT DATE TRUNC ('day', created at) AS date, path, COUNT (*) AS view count FROM public.analytics events WHERE event type = 'page view' -- View for conversion rates CREATE OR REPLACE VIEW public.conversion rates WITH (security invoker = true) AS WITH conversions AS (SELECT DATE TRUNC ('day', created at) AS date, COUNT (*) AS conversion count, metadata->>'conversionType' AS conversion type FROM public.analytics events WHERE event type = 'conversion' GROUP BY DATE TRUNC ('day', created at), metadata->>'conversionType'), page views AS (SELECT DATE TRUNC ('day', created at) AS date, COUNT (*) AS view count FROM public.analytics events WHERE event type = 'page view' AND path = '/' GROUP BY DATE TRUNC ('day', created at) ) SELECT c.date, c.conversion type, c.conversion count, p.view count, ROUND ( (c.conversion count::numeric /NULLIF (p.view count, 0) ) * 100, 2) AS conversion rate FROM conversions c LEFT JOIN page views p ON c.date = p.date;'
+}catch (error) {'
+  console.error ('Error creating analytics tables:', error);'
+// Tables creation failed, but we can still continue;
+}
+}

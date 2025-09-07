@@ -14,6 +14,7 @@ import { SafeRef } from "@/types/ref-types",  title?: string;
 }
 
 const SidebarGroup = forwardRef<HTMLDivElement, SidebarGroupProps>(
+
 import React, { forwardRef } from "react";""
 import { ChevronDown } from "lucide-react";""
 import { cn } from "@/lib/utils";""
@@ -32,6 +33,7 @@ interface SidebarGroupProps extends React.HTMLAttributes < HTMLDivElement> {
 }
 const SidebarGroup = forward_ref < HTMLDivElement, SidebarGroupProps>(
 pr-12325
+
   (
     {
       title,
@@ -207,6 +209,7 @@ SidebarGroup && SidebarGroup.displayName = "SidebarGroup";
 ),
 
 export { SidebarGroup };
+
       default_expanded = true,
       show_chevron = true,
       class_name,
@@ -281,3 +284,18 @@ ref as SafeRef<HTMLDivElement>
 }</div>) "
       </div>;"
 pr-12325
+}</div>) 
+});
+SidebarGroup.displayName = \"SidebarGroup\";
+SidebarGroup.displayName = \"SidebarGroup\",
+export { SidebarGroup },
+        <div className={cn(\"mt-1\", !expanded && \"hidden\")} />{children}</div>;
+      </div>;
+    );
+  }
+);
+SidebarGroup && SidebarGroup.displayName = \"SidebarGroup\";
+    )
+  }
+),
+export { SidebarGroup };

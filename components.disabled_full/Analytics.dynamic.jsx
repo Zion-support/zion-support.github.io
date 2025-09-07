@@ -12,3 +12,35 @@ const Analytics = dynamic(() => import("./Analytics"),{'; "loading": () => <p>Lo
 </p>'''
 </p>'''
 pr-12325
+const Analytics = dynamic(() => import(\"./Analytics\"),{'; \"loading\": () => <p />Loading...</p,>}) \"export\": 'default Analytics' ,';
+</p>';
+</p>';
+</p>';
+</p>';
+;
+</p>';
+</p>';
+</p>';
+ursor/add-new-services-and-deploy-updates-0462;
+;
+</p>';
+</p>';
+</p>';
+</p>';
+;
+</p>';
+</p>';
+</p>'</p>';
+</p>';
+const Analytics = dynamic(() => import(\"./Analytics\"),{'; \"loading\": () => <p />Loading...</p,>}) \"export\": 'default Analytics' ,'
+</p>'
+</p>'
+</p>'
+
+</p>'
+
+</p>'
+
+</p>'
+</p>'
+</p>'

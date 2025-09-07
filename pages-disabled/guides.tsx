@@ -26,6 +26,9 @@ class ErrorBoundary extends React.Component {
 }
 import React from 'react';
 import MainLayout from '../components/layout/MainLayout';
+
+import React from 'react';''
+import MainLayout from '../components/layout/MainLayout';'
 const Page = () => {
   return (
     <MainLayout;
@@ -41,3 +44,6 @@ const Page = () => {
         </div>
     )"
 pr-12325
+      </div>
+    </MainLayout>)"
+

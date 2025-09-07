@@ -130,12 +130,16 @@ export interface TokenTransaction {
   reason: string;
 export function getConfig() {
   return {
+export function getConfig() {
+  return {
+
   // TODO: Implement
 }
     tokenName: 'Zion Token',
     tokenSymbol: 'ZION',
     decimals: 18,
     totalSupply: 1000000;
+
   };
 export interface TokenTransaction {;
   id: string;,
@@ -149,10 +153,18 @@ export interface TokenTransaction {
   type: "issue" | "redeem" | "transfer";"
   reason: string;,
 pr-12325
+}
+  id: string;,
+  user_id: string;
+
+  amount: number;,'
+  type: "issue" | "redeem" | "transfer";"
+  reason: string;,
+
   timestamp: number;
 
-
-
+}
+}
 }
 // Mock data storage - replace with actual database;
 let transactions: TokenTransaction[] = [];
@@ -182,6 +194,24 @@ main
     userId,
     amount,
     type: "issue",
+
+  reason: string,)
+): TokenTransaction {
+  // TODO: Implement
+}
+  const transaction: TokenTransaction = {,
+  id: `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
+    userId;
+    amount;"
+    type: 'issue''
+    reason;
+    timestamp: Date.now()
+  }
+    id: `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+    userId,
+    amount,'
+    type: "issue","
+
     reason,
     timestamp: Date.now(),
   };
@@ -241,6 +271,23 @@ export function redeem_tokens (user_id: string, amount: number, reason: string):
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
     type: 'redeem',
+
+  reason: string,)
+): TokenTransaction {
+  // TODO: Implement
+}
+  const transaction: TokenTransaction = {,
+  id: `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
+    userId;
+    amount: -amount, // Negative for redemption;"
+    type: "redeem","
+    reason,
+    timestamp: Date.now(),
+  };
+"
+    type: "redeem",""
+    type: 'redeem','
+
     reason,
     timestamp: Date.now(),
   };
@@ -436,12 +483,15 @@ export interface TokenConfig {
   contractAddress?: string;
   network: string;,
   isActive: boolean;
+
   createdAt: Date;,
   updatedAt: Date;
 
 export function setConfig(
   partial: Partial<ReturnType<typeof getConfig>>,
 )
+</ReturnType>)
+
   partial: Partial < ReturnType < typeof get_config>>): void {
   // TODO: Implement
   const current = get_config ();
@@ -450,3 +500,8 @@ export function setConfig(
 
 `;
 pr-12325
+  // Update the configuration;}
+  Object.assign (current, partial);}
+}
+
+'

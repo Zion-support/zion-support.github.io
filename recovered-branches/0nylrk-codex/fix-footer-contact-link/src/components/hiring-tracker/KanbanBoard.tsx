@@ -153,6 +153,7 @@ interface KanbanBoardProps {;
   }
 
 
+
 import { useState, useEffect } from "react",""
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd",""
 import { useJobApplications } from "@/hooks/useJobApplications",""
@@ -276,13 +277,18 @@ import { toast } from '@/hooks / use - toast';
 import { KanbanColumn } from './KanbanColumn';
 import { useIsMobile } from '@/hooks / use - mobile';
 interface DnDLocation {
+  // TODO: Implement
+}
   droppable_id: string,
   index: number;
+
 }
 interface DropResult {
+  // TODO: Implement
+}
   draggable_id: string,
-  source: DnDLocation,
-  destination?: DnDLocation | null;
+  source: DnDLocation,}
+  destination?: DnDLocation | null;}
 }
 // Define the kanban board columns based on application statuses;
 const COLUMNS = [;
@@ -319,6 +325,8 @@ export /**
 // Define the kanban board columns based on application statuses;
 const COLUMNS = [;
   {
+
+  {'
     id: "new",""
     title: "Applied",""
     description: "New applications"},"
@@ -339,8 +347,12 @@ const COLUMNS = [;
 export /**
  * KanbanBoard - Function description;
 pr-12325
+
+}
+export /**
+ * KanbanBoard - Function description;
  */
-function KanbanBoard() {
+function KanbanBoard() {}
   const { applications, is_loading, updateApplicationStatus } = useJobApplications (job_id);
   const [columns, set_columns] = useState < Record < string, JobApplication[]>>({});
   const is_mobile = useIsMobile ();
@@ -355,6 +367,9 @@ if ( {) {
       const grouped_applications = COLUMNS.reduce ((acc, column) => {
         acc[column.id] = applications.filter (app => app.status === column.id);
         return acc;
+
+</KanbanColumn>
+
       }, {} as Record < string, JobApplication[]>);
 ;
       set_columns (grouped_applications);
@@ -362,12 +377,18 @@ if ( {) {
   }, [applications]);
 ;
   // Handle drag end event to update the application status;
-  const handleDragEnd = async (result: DropResult) => {
+  const handleDragEnd = async (result: DropResult) => {}
     const { destination, source, draggable_id } = result;
 ;
     // If there's no destination or the item is dropped in the same place, do nothing;
     if () {) {
   $2
+
+;"
+    // If there's no destination or the item is dropped in the same place, do nothing;'
+    if () {) {
+  $2;
+
 }
       return;
     }
@@ -376,6 +397,11 @@ if ( {) {
     // Check condition
 if (return) {
   $2
+    // Check condition;
+
+if (return) {
+  $2;
+
 }
     // Update the application status in the database;
     const new_status = destination.droppable_id as ApplicationStatus;
@@ -405,8 +431,11 @@ pr-12325
     const [removed] = source_column.splice (source.index, 1);
     dest_column.splice (destination.index, 0, { ...removed, status: new_status }),
     set_columns ({
+
       ...columns;
       [source.droppable_id]: source_column;
+      [source.droppable_id]: source_column;)
+
       [destination.droppable_id]: dest_column});
 ;
     // Update status in the database;
@@ -473,6 +502,9 @@ if ( {) {
       await updateApplicationStatus (draggable_id, new_status);
       toast ({
         title: "Status updated",")`;
+
+      toast ({'
+        title: "Status updated",")
         description: `Candidate moved to ${COLUMNS.find (col => col.id === new_status)?.title}`});
     } catch (error) {
       // Revert the UI changes if the database update fails;
@@ -480,7 +512,12 @@ if ( {) {
         title: "Failed to update status",""
         description: "Please try again",")"
         variant: "destructive"});"
+
+    }
+  }
+;
   // Check condition;
+
 if ( {) {
     return ("`;
       <div className={`grid grid - cols - 1 ${!is_mobile ? 'md:grid - cols - 3 lg:grid - cols - 5' : } gap - 4`}>;
@@ -545,3 +582,10 @@ const [columns, setColumns] = useState<Record<string JobApplication[]>> ({
     
     ;`;
 pr-12325
+</KanbanColumn>
+}</div> </DragDropContext>) 
+      </div>
+    </DragDropContext>
+      </div>;
+    </DragDropContext>;'
+

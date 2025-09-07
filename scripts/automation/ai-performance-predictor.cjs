@@ -7,7 +7,7 @@ const { execSync } = require('child_process');
 class AIPerformancePredictor {
   constructor() {
     this.workspaceRoot = '/workspace';
-    this.reportFile = path.join(this.workspaceRoot, 'automation_logs', 'ai-performance-report.json');
+    this.reportFile = path.join(this.workspaceRoot,automation_logs,ai-performance-report.json');
     this.ensureLogDirectory();
   }
 
@@ -17,10 +17,15 @@ class AIPerformancePredictor {
       fs.mkdirSync(logDir, { recursive: true });
 
   log(message) {
+<<<<<<< HEAD
     console.log(`[AI Performance Predictor] ${message}`);
+=======
+    console.log(`[AI Performance Predictor] ${message});
+  }
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
 
   async analyzePerformance() {
-    this.log('Starting AI-powered performance analysis...');
+    this.log('Starting AI-powered performance analysis...);
     
     const analysis = {
       timestamp: new Date().toISOString(),
@@ -58,6 +63,7 @@ class AIPerformancePredictor {
       
       // Save report
       fs.writeFileSync(this.reportFile, JSON.stringify(analysis, null, 2));
+<<<<<<< HEAD
       `;
       this.log(`Performance analysis complete. Score: ${analysis.performanceScore}/100`);`;
       this.log(`Report saved to: ${this.reportFile}`);
@@ -65,20 +71,33 @@ class AIPerformancePredictor {
       return analysis;
     } catch (error) {`;
       this.log(`Error during performance analysis: ${error.message}`);
+=======
+      
+      this.log(`Performance analysis complete. Score: ${analysis.performanceScore}/100`);
+      this.log(`Report saved to: ${this.reportFile});
+      
+      return analysis;
+    } catch (error) {
+      this.log(`Error during performance analysis: ${error.message});
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
       analysis.error = error.message;
 
   async analyzeBundleSize(analysis) {
-    this.log('Analyzing bundle size...');
+    this.log('Analyzing bundle size...);
     
       // Run build to generate bundle
-      execSync('npm run build', { 
-        encoding: 'utf8', 
+      execSync('npm run build, { 
+        encoding: utf8, 
         cwd: this.workspaceRoot,
+<<<<<<< HEAD
         stdio: 'pipe
       });
+=======
+        stdio: pipe});
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
       
       // Check if dist directory exists
-      const distDir = path.join(this.workspaceRoot, 'dist');
+      const distDir = path.join(this.workspaceRoot,dist');
       if (fs.existsSync(distDir)) {
         const bundleSize = this.getDirectorySize(distDir);
         analysis.metrics.bundleSize = bundleSize;
@@ -90,33 +109,43 @@ class AIPerformancePredictor {
         
         if (bundleSize > 2 * 1024 * 1024) { // 2MB threshold
           analysis.issues.push({
+<<<<<<< HEAD
             type: 'bundle',
             severity: 'warning',
             message: 'Bundle size exceeds 2MB',
             impact: 'Slow initial load
+=======
+            type: bundle,
+            severity: warning,
+            message: Bundle size exceeds 2MB,
+            impact: Slow initial load});
+        }
+      }
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
     } catch (error) {
       this.log('Build failed, skipping bundle analysis');
       analysis.metrics.bundleSize = 0;
 
   async analyzeCodePatterns(analysis) {
-    this.log('Analyzing code patterns...');
+    this.log('Analyzing code patterns...);
     
-    const srcDir = path.join(this.workspaceRoot, 'src');
+    const srcDir = path.join(this.workspaceRoot,src');
     if (!fs.existsSync(srcDir)) {
       return;
     
-    const codeFiles = this.findFiles(srcDir, ['.ts', '.tsx', '.js', '.jsx']);
+    const codeFiles = this.findFiles(srcDir, [.ts,.tsx,.js,.jsx]);
     let performanceIssues = 0;
     let totalLines = 0;
     
     codeFiles.forEach(file => {
-      const content = fs.readFileSync(file, 'utf8');
+      const content = fs.readFileSync(file,utf8);
       const lines = content.split('\n');
       totalLines += lines.length;
       
       // Check for performance anti-patterns
-      if (content.includes('useEffect') && content.includes('[]')) {
+      if (content.includes('useEffect') && content.includes('[])) {
         performanceIssues++;
+<<<<<<< HEAD
           type: 'react',
           severity: 'info',
           file: path.relative(this.workspaceRoot, file),
@@ -135,15 +164,60 @@ class AIPerformancePredictor {
           type: 'import',
           message: 'Wildcard import detected',
           impact: 'Larger bundle size
+=======
+        analysis.issues.push({
+          type: react,
+          severity: info,
+          file: path.relative(this.workspaceRoot, file),
+          message: Empty dependency array in useEffect,
+          impact: Potential stale closure});
+      }
+      
+      if (content.includes('map(') && !content.includes('key=')) {
+        performanceIssues++;
+        analysis.issues.push({
+          type: react,
+          severity: warning,
+          file: path.relative(this.workspaceRoot, file),
+          message: Missing key prop in map function,
+          impact: Inefficient re-renders});
+      }
+      
+      if (content.includes('onClick') && content.includes('() =>')) {
+        performanceIssues++;
+        analysis.issues.push({
+          type: react,
+          severity: info,
+          file: path.relative(this.workspaceRoot, file),
+          message: Inline function in JSX,
+          impact: Unnecessary re-renders});
+      }
+      
+      if (content.includes('import * as')) {
+        performanceIssues++;
+        analysis.issues.push({
+          type: import,
+          severity: warning,
+          file: path.relative(this.workspaceRoot, file),
+          message: Wildcard import detected,
+          impact: Larger bundle size});
+      }
+    });
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
     
     analysis.metrics.totalFiles = codeFiles.length;
     analysis.metrics.totalLines = totalLines;
     analysis.metrics.performanceIssues = performanceIssues;
 
   async analyzeAssets(analysis) {
-    this.log('Analyzing assets...');
+    this.log('Analyzing assets...);
     
+<<<<<<< HEAD
     const publicDir = path.join(this.workspaceRoot, 'public');
+=======
+    const publicDir = path.join(this.workspaceRoot,public');
+    const srcDir = path.join(this.workspaceRoot,src');
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
     
     let totalAssetSize = 0;
     let imageCount = 0;
@@ -151,7 +225,7 @@ class AIPerformancePredictor {
     
     // Analyze public assets
     if (fs.existsSync(publicDir)) {
-      const publicAssets = this.findFiles(publicDir, ['.jpg', '.jpeg', '.png', '.gif', '.svg', '.webp']);
+      const publicAssets = this.findFiles(publicDir, [.jpg,.jpeg,.png,.gif,.svg,.webp]);
       publicAssets.forEach(asset => {
         const size = fs.statSync(asset).size;
         totalAssetSize += size;
@@ -160,14 +234,27 @@ class AIPerformancePredictor {
           imageCount++;
           if (size > 500 * 1024) { // 500KB threshold
             largeImages++;
+<<<<<<< HEAD
               type: 'asset',
               file: path.relative(this.workspaceRoot, asset),
               message: 'Large image file',
               impact: 'Slow loading
+=======
+            analysis.issues.push({
+              type: asset,
+              severity: warning,
+              file: path.relative(this.workspaceRoot, asset),
+              message: Large image file,
+              impact: Slow loading});
+          }
+        }
+      });
+    }
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
     
     // Analyze src assets
     if (fs.existsSync(srcDir)) {
-      const srcAssets = this.findFiles(srcDir, ['.jpg', '.jpeg', '.png', '.gif', '.svg', '.webp']);
+      const srcAssets = this.findFiles(srcDir, [.jpg,.jpeg,.png,.gif,.svg,.webp]);
       srcAssets.forEach(asset => {
         
           if (size > 500 * 1024) {
@@ -178,17 +265,21 @@ class AIPerformancePredictor {
     analysis.metrics.largeImages = largeImages;
 
   async analyzeDependencies(analysis) {
-    this.log('Analyzing dependencies...');
+    this.log('Analyzing dependencies...);
     
-    const packageJsonPath = path.join(this.workspaceRoot, 'package.json');
+    const packageJsonPath = path.join(this.workspaceRoot,package.json');
     if (!fs.existsSync(packageJsonPath)) {
     
-    const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
+    const packageJson = JSON.parse(fs.readFileSync(packageJsonPath,utf8));
     const dependencies = { ...packageJson.dependencies, ...packageJson.devDependencies };
     
+<<<<<<< HEAD
     const heavyDependencies = [
       'lodash', 'moment', 'jquery', 'bootstrap', 'antd', 'material-ui
     ];
+=======
+    const heavyDependencies = [lodash,moment,jquery,bootstrap,antd,material-ui];
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
     
     let heavyDepCount = 0;
     let totalDeps = Object.keys(dependencies).length;
@@ -196,26 +287,38 @@ class AIPerformancePredictor {
     Object.keys(dependencies).forEach(dep => {
       if (heavyDependencies.includes(dep)) {
         heavyDepCount++;
+<<<<<<< HEAD
           type: 'dependency',
           package: dep,
           message: 'Heavy dependency detected',
+=======
+        analysis.issues.push({
+          type: dependency,
+          severity: info,
+          package: dep,
+          message: Heavy dependency detected,
+          impact: Larger bundle size});
+      }
+    });
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
     
     analysis.metrics.totalDependencies = totalDeps;
     analysis.metrics.heavyDependencies = heavyDepCount;
 
   async analyzeBuildConfig(analysis) {
-    this.log('Analyzing build configuration...');
+    this.log('Analyzing build configuration...);
     
-    const configFiles = ['vite.config.ts', 'next.config.js', 'webpack.config.js'];
+    const configFiles = [vite.config.ts,next.config.js,webpack.config.js];
     let optimizationIssues = 0;
     
     configFiles.forEach(configFile => {
       const configPath = path.join(this.workspaceRoot, configFile);
       if (fs.existsSync(configPath)) {
-        const content = fs.readFileSync(configPath, 'utf8');
+        const content = fs.readFileSync(configPath,utf8);
         
         if (!content.includes('minify') && !content.includes('terser')) {
           optimizationIssues++;
+<<<<<<< HEAD
             type: 'build',
             file: configFile,
             message: 'Minification not configured',
@@ -223,6 +326,27 @@ class AIPerformancePredictor {
         if (!content.includes('splitChunks') && !content.includes('chunk')) {
             message: 'Code splitting not configured',
             impact: 'Slower initial load
+=======
+          analysis.issues.push({
+            type: build,
+            severity: warning,
+            file: configFile,
+            message: Minification not configured,
+            impact: Larger bundle size});
+        }
+        
+        if (!content.includes('splitChunks') && !content.includes('chunk')) {
+          optimizationIssues++;
+          analysis.issues.push({
+            type: build,
+            severity: info,
+            file: configFile,
+            message: Code splitting not configured,
+            impact: Slower initial load});
+        }
+      }
+    });
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
     
     analysis.metrics.optimizationIssues = optimizationIssues;
 
@@ -231,6 +355,7 @@ class AIPerformancePredictor {
     if (analysis.metrics.bundleSize) {
       const predictedLoadTime = Math.max(1, analysis.metrics.bundleSize / (1024 * 1024) * 2);
       analysis.predictions.push({
+<<<<<<< HEAD
         metric: 'Initial Load Time',`;
         predicted: `${predictedLoadTime.toFixed(1)}s`,
         confidence: 'medium',
@@ -246,6 +371,31 @@ class AIPerformancePredictor {
     if (analysis.metrics.performanceIssues > 10) {
         metric: 'Cumulative Layout Shift',
         basedOn: 'Code patterns
+=======
+        metric: Initial Load Time,
+        predicted: `${predictedLoadTime.toFixed(1)}s`,
+        confidence: medium,
+        basedOn: Bundle size});
+    }
+    
+    // Predict Core Web Vitals
+    if (analysis.metrics.largeImages > 0) {
+      analysis.predictions.push({
+        metric: Largest Contentful Paint,
+        predicted: Poor,
+        confidence: high,
+        basedOn: Large images detected});
+    }
+    
+    if (analysis.metrics.performanceIssues > 10) {
+      analysis.predictions.push({
+        metric: Cumulative Layout Shift,
+        predicted: Poor,
+        confidence: medium,
+        basedOn: Code patterns});
+    }
+  }
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
 
   calculatePerformanceScore(analysis) {
     let score = 100;
@@ -253,10 +403,10 @@ class AIPerformancePredictor {
     // Deduct points for issues
     analysis.issues.forEach(issue => {
       switch (issue.severity) {
-        case 'warning':
+        case 'warning:
           score -= 5;
           break;
-        case 'info':
+        case 'info:
           score -= 2;
     
     // Deduct points for bundle size
@@ -270,6 +420,7 @@ class AIPerformancePredictor {
 
   generatePerformanceRecommendations(analysis) {
       analysis.recommendations.push({
+<<<<<<< HEAD
         priority: 'high',
         category: 'bundle',
         message: 'Implement code splitting to reduce initial bundle size
@@ -288,6 +439,37 @@ class AIPerformancePredictor {
       priority: 'low',
       category: 'monitoring',
       message: 'Set up performance monitoring
+=======
+        priority: high,
+        category: bundle,
+        message: Implement code splitting to reduce initial bundle size});
+    }
+    
+    if (analysis.metrics.largeImages > 0) {
+      analysis.recommendations.push({
+        priority: high,
+        category: assets,
+        message: Optimize and compress images});
+    }
+    
+    if (analysis.metrics.performanceIssues > 5) {
+      analysis.recommendations.push({
+        priority: medium,
+        category: code,
+        message: Optimize React component patterns});
+    }
+    
+    analysis.recommendations.push({
+      priority: medium,
+      category: general,
+      message: Implement lazy loading for components});
+    
+    analysis.recommendations.push({
+      priority: low,
+      category: monitoring,
+      message: Set up performance monitoring});
+  }
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
 
   findFiles(dir, extensions) {
     let files = [];

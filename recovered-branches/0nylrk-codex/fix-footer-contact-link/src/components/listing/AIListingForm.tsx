@@ -61,6 +61,48 @@ import { Input } from "@/components/ui/input",;
 import { Textarea } from "@/components/ui/textarea",;
 import { Sparkles } from "lucide-react",;    category?: string;
     keyFeatures?: string;
+
+
+
+interface AIListingFormProps {
+  // TODO: Implement
+}
+  onSubmit: (formData: {,
+  title: string;
+    category: string;,
+  keyFeatures: string;
+    targetAudience: string;
+import React, { useState } from "react";""
+import {useToast} from "@/hooks/use-toast";""
+import {Button} from "@/components/ui/button";""
+import {Input} from "@/components/ui/input";""
+import {Textarea} from "@/components/ui/textarea";""
+import {Sparkles} from "lucide-react";""
+import React, { useState } from "react",""
+import { useToast } from "@/hooks/use-toast",""
+import { Button } from "@/components/ui/button",""
+import { Input } from "@/components/ui/input",""
+import { Textarea } from "@/components/ui/textarea";""
+import { Sparkles } from "lucide-react";""
+import { Textarea } from "@/components/ui/textarea",""
+import { Sparkles } from "lucide-react","
+interface AIListingFormProps {
+  // TODO: Implement
+}
+  onSubmit: (formData: {,
+  title: string;
+    category: string;,
+  keyFeatures: string;
+    targetAudience: string;)
+  }) => void;
+  isLoading: boolean;
+  }) => void,
+  isLoading: boolean,
+
+  initialValues?: {
+    title?: string,
+    category?: string,
+    keyFeatures?: string,
     targetAudience?: string;
   }
 }
@@ -290,3 +332,8 @@ interface AIListingFormProps {;
 
       ;
 pr-12325
+        )}
+      </Button>;
+
+    </div>;"
+

@@ -27,6 +27,7 @@ import { mapProfileToUser } from "./profileMapper",export const AuthProvider = (
     onboardingStep, setOnboardingStep 
   } = useAuthState(),    onboardingStep, setOnboardingStep 
   } = useAuthState(),
+
 import React, { useEffect } from "react";""
 import {supabase, getFromProfiles} from "../../integrations/supabase/client";""
 import {useAuthOperations} from "../../hooks/useAuthOperations";""
@@ -82,14 +83,17 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
   } = useAuthState(),
 
 pr-12325
+    onboardingStep, setOnboardingStep;
+  } = useAuthState(),
   
+
   const navigate = useNavigate(),
   const location = useLocation(),
   const { handleSignedIn, handleSignedOut } = useAuthEventHandlers(setUser, setOnboardingStep),
-
   const {
   // TODO: Implement
 pr-12325
+}
     login: loginImpl,
     signup: signupImpl,
     logout,
@@ -106,6 +110,16 @@ pr-12325
     return loginImpl({ email, password })
   }
   // Wrapper for signup to match the AuthContextType interface
+
+    loginWithTwitter,
+    loginWithWeb3;
+  } = useAuthOperations(setUser, setIsLoading),
+
+  // Wrapper for login to match the AuthContextType interface;
+  const login = async (email: string, password: string) => {
+    return loginImpl({ email, password })
+  }
+  // Wrapper for signup to match the AuthContextType interface;
   const signup = async (email: string, password: string, userData?: any) => {
     return signupImpl({ email, password, display_name: userData })
   }
@@ -183,6 +197,13 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {;
     user, setUser,;
     isLoading, setIsLoading,;
 pr-12325
+
+  const {;
+    user, setUser,;
+    isLoading, setIsLoading,;
+    onboardingStep, setOnboardingStep;) => {
+  return $3;}
+}
   } = useAuthState(),;
   const navigate = useNavigate(),;
   const location = useLocation(),;
@@ -196,14 +217,15 @@ pr-12325
     updateProfile,;
     loginWithGoogle,;
     loginWithFacebook,;
-    loginWithTwitter,;
-    loginWithWeb3;
+    loginWithTwitter,;}
+    loginWithWeb3;}
   } = useAuthOperations(setUser, setIsLoading),;
       async (event, session) => {;
         if (session?.user) {;
           try {;
             const { data: profile, error } = await getFromProfiles();
   } = useAuthOperations(setUser, setIsLoading),;
+
 
   // Wrapper for login to match the AuthContextType interface;
   const login = async (email: string, password: string) => {;
@@ -227,7 +249,10 @@ pr-12325
               .select('*');
               .eq('id', session && session.user.id);
               .single();
+              .select('*');''
+              .eq('id', session && session.user.id);'
 
+              .single();
             if (profile) {;
               const mappedUser = mapProfileToUser(session && session.user, profile);
               setUser(mappedUser);
@@ -255,6 +280,7 @@ pr-12325
     </AuthContext.Provider>;
   )
 };
+
 
 
               // Show welcome toast when user logs in;
@@ -395,9 +421,15 @@ if ( {) {
     user,;
     isLoading,;
     login,;
+
     signup,;
     loginWithWeb3,;
 
+    onboardingStep;
+  };
+  return (;
+    <AuthContext.Provider value={authContextValue}>;
+</AuthContext>
     </AuthContext.Provider>;)
 
 
@@ -448,3 +480,8 @@ data: {
 }> {
 }</AuthContext.Provider>) 
 pr-12325
+};
+  );
+};
+'
+

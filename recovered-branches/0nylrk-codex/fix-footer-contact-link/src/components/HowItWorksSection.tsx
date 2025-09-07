@@ -79,6 +79,11 @@ const steps = [
   );
 }
   {
+
+import { GradientHeading } from './GradientHeading';''
+import { Check, Handshake, Search, Send } from './lucide-react';'
+const steps = [;
+  {'
     title: "Post",""
     description: "Publish your service, job, or equipment in minutes with our AI - powered form.";"
     icon: Send},
@@ -192,3 +197,5 @@ import { Check, Handshake, Search, Send } from "lucide-react",;"
 }</div> </div>) ) 
 }</div> </div> </div> </section>) "`;
 pr-12325
+}</div> </div> </div> </section>) "
+

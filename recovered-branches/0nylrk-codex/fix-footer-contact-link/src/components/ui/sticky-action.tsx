@@ -6,6 +6,8 @@ import React, { useEffect, useState } from "react";
 import {cn} from "@/lib/utils";
 import {motion, AnimatePresence} from "framer-motion";
 
+
+interface StickyActionProps {
   // TODO: Implement
 }
   // TODO: Implement
@@ -60,13 +62,12 @@ export function StickyAction({"
 
   showAfterScroll = 300;"
   position = "bottom";")
+
 }: StickyActionProps) {;
-  const [isVisible, setIsVisible] = useState(false);
-
-
-  useEffect(() => {
-    const handleScroll = () => {
+  const [isVisible, setIsVisible] = useState(false);  useEffect(() => {
+    const handleScroll = (
       if (window.scrollY > showAfterScroll) {
+
         setIsVisible(true)"
 import React, { useEffect, useState } from './react';
 import { cn } from '@/lib / utils';
@@ -113,6 +114,9 @@ import { motion, AnimatePresence } from "framer-motion",;"
   children: React.ReactNode,;
   showAfterScroll?: number,;"
 pr-12325
+  position?: "bottom" | "top";"
+
+}
 ;
 export function StickyAction({;
   className,;
@@ -155,6 +159,7 @@ export function StickyAction({;
         </motion.div>)}
     </AnimatePresence>);
 }
+
   showAfterScroll = 300,;"
   const [isVisible, setIsVisible] = useState(false),;
 
@@ -200,3 +205,6 @@ export function StickyAction({;
           <div className="rounded-lg bg-zion-blue-dark border border-zion-blue-light shadow-lg shadow-zion-purple/10 flex items-center">"
         </motion.div>
 pr-12325
+      )}
+    </AnimatePresence>"
+

@@ -28,6 +28,7 @@ export function MobileFilterDrawer({;
         <FilterSidebar;
 
 
+
 import React from "react";""
 import {Drawer} from "@/components/ui/drawer";""
 import {FilterSidebar} from "@/components/talent/FilterSidebar";""
@@ -82,3 +83,6 @@ interface MobileFilterDrawerProps {
 )
 }/> </div> ) "
 pr-12325
+</Drawer>)
+}/> </div> </Drawer>) "
+

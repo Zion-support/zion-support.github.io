@@ -76,6 +76,7 @@ import { useAuth } from "@/hooks/useAuth",;
 import { Button } from "@/components/ui/button",;
 import { useNavigate } from "react-router-dom",;
 import { toast } from "sonner",;
+
 import React, { useEffect } from "react";""
 import { Header } from "@/components/Header";""
 import { Footer } from "@/components/Footer";""
@@ -102,6 +103,7 @@ export default function Profile() {
         <div className="min-h-screen bg-zion-blue flex items-center justify-center">"
 </div>"
           <div className="animate-pulse text-white">Loading profile...</div>"
+
         </div>
         <Footer />
 
@@ -110,6 +112,15 @@ export default function Profile() {
 
 
   if (!user) {;
+  }
+  if (!user) {;
+    return (
+      <>
+        <Header />
+
+</Header>"
+        <div className="min-h-screen bg-zion-blue flex items-center justify-center">"
+</div>"
           <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 max-w-md">"
             <h1 className="text-xl font-bold text-white mb-4">Please log in</h1>""
             <p className="text-zion-slate mb-4">"
@@ -120,6 +131,21 @@ export default function Profile() {
             
 
       </>
+</Button>
+
+            </Button>
+          </div>
+        </div>
+        <Footer />
+</Footer>
+      </>
+    );
+  }
+  return (
+
+    <>
+      <Header />
+</Header>"
       <div className="min-h-screen bg-zion-blue">"
         <div className="container mx-auto px-4 py-8">"
           <h1 className="text-2xl font-bold text-white mb-8">My Profile</h1>""
@@ -137,6 +163,19 @@ export default function Profile() {
 
                 
 
+</Button>
+
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <Footer />
+</Footer>
+    </>
+
+  );
 }"
       toast.error ("Please log in to view your profile");""
       navigate ("/login?redirect=/profile");""
@@ -155,6 +194,9 @@ export default function Profile() {;
     if (!isLoading && !user) {;
       toast.error("Please log in to view your profile"),;
       navigate("/login?redirect=/profile");
+    if (!isLoading && !user) {;"
+      toast.error("Please log in to view your profile"),;""
+      navigate("/login?redirect=/profile");"
 
     }
   }, [user, is_loading, navigate]);
@@ -162,6 +204,11 @@ export default function Profile() {;
   // Check condition
 if ( {) {
   $2
+  // Check condition;
+
+if ( {) {
+  $2;
+
 }
     return (
       <>;
@@ -175,6 +222,22 @@ if ( {) {
   // Check condition
 if ( {) {
   $2
+
+</Header>"
+        <div className="min - h-screen bg - zion - blue flex items - center justify - center">;"
+</div>"
+          <div className="animate - pulse text - white">Loading profile...</div>;"
+
+        </div>;
+        <Footer />;
+</Footer>)
+      </>);
+  }
+  // Check condition;
+
+if ( {) {
+  $2;
+
 }
     return (
       <>;
@@ -187,10 +250,23 @@ if ( {) {
               on_click={() => navigate ("/login?redirect=/profile")}
               className="bg - gradient - to - r from - zion - purple to - zion - purple - dark hover: from - zion - purple - light hover:to - zion - purple text-white";            >;
               Go to Login;
+
+</Header>"
+        <div className="min - h-screen bg - zion - blue flex items - center justify - center">;"
+</div>"
+          <div className="bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 6 max - w-md">;"
+</div>"
+            <h1 className="text - xl font - bold text - white mb - 4">Please log in</h1>;""
+            <p className="text - zion - slate mb - 4">You need to be logged in to view your profile.</p>;"
+            <Button;)"
+              on_click={() => navigate ("/login?redirect=/profile")}"
+</Button>
+
             </Button>;
           </div>;
         </div>;
         <Footer />;
+</Footer>
       </>);
   }
   return (
@@ -218,6 +294,61 @@ if ( {) {
                   className="border - zion - blue - light text - zion - slate - light hover: bg - zion - blue - light hover:text-white";
                 >;
                   Logout;
+
+</Header>"
+      <div className="min - h-screen bg - zion - blue">;"
+</div>"
+        <div className="container mx - auto px - 4 py - 8">;"
+</div>"
+          <h1 className="text - 2xl font - bold text - white mb - 8">My Profile</h1>;""
+          <div className="bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 6">;"
+</div>"
+            <div className="flex flex - col md:flex - row gap - 6">;"
+</div>"
+              <div className="md:w - 1/3">;"
+</div>"
+                <div className="w - 32 h - 32 rounded - full bg - zion - purple flex items - center justify - center text - 3xl font - bold text - white mb - 4 mx - auto md:mx - 0">;"
+</div>
+                </div>;
+              </div>;"
+              <div className="md:w - 2/3">;"
+</div>"
+                <h2 className="text - xl font - bold text - white">{user.display_name || "User"}</h2>;""
+                <p className="text - zion - slate - light mb - 4">{user.email}</p>;"
+                <Button;)
+                  on_click={() => {
+</Button>
+      </>;
+    );
+  }
+;
+  return (;
+    <>;
+      <Header />;
+</Header>"
+      <div className="min-h-screen bg-zion-blue">;"
+</div>"
+        <div className="container mx-auto px-4 py-8">;"
+</div>"
+          <h1 className="text-2xl font-bold text-white mb-8">My Profile</h1>;""
+          <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6">;"
+</div>"
+            <div className="flex flex-col md:flex-row gap-6">;"
+</div>"
+              <div className="md:w-1/3">;"
+</div>"
+                <div className="w-32 h-32 rounded-full bg-zion-purple flex items-center justify-center text-3xl font-bold text-white mb-4 mx-auto md:mx-0">;"
+</div>
+                </div>;
+              </div>;"
+              <div className="md:w-2/3">;"
+</div>"
+                <h2 className="text-xl font-bold text-white">{user.displayName || "User"}</h2>;""
+                <p className="text-zion-slate-light mb-4">{user.email}</p>;"
+                <Button;)
+                  onClick={() => {;
+</Button>
+
                 </Button>;
               </div>;
             </div>;
@@ -298,3 +429,7 @@ return (<> <Header /> <div className="min-h-screen bg-zion-blue flex items-cente
 
     </>;)
 pr-12325
+</Footer>
+
+    </>);
+}

@@ -10,6 +10,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { HireNowCTA } from "@/components/profile/HireNowCTA";
 import {
+
 import { useState, useEffect } from "react";""
 import { useParams } from "react-router-dom";""
 import { supabase } from "@/integrations/supabase/client";""
@@ -21,6 +22,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";""
 import { Badge } from "@/components/ui/badge";""
 import { Button } from "@/components/ui/button";""
 import { HireNowCTA } from "@/components/profile/HireNowCTA";"
+
 import {
   // TODO: Implement
 }
@@ -33,6 +35,7 @@ pr-12325
   LinkIcon,
   Github,
   Twitter,
+
   Linkedin,
   CheckCircle2,
 } from "lucide-react";
@@ -282,10 +285,14 @@ export default function ProfilePage() {
         title={`${profileData.full_name} | Talent Profile`}
         description={"
           profileData.bio || "View the profile of this talented individual.""
+
+        }
       />
 
       <AppHeader />
 "
+
+</AppHeader>"
       <div className="container mx-auto px-4 py-8">"
         <div className="grid grid-cols-12 gap-6">"
       <AppHeader />;
@@ -325,6 +332,13 @@ export default function ProfilePage() {
                       <p className="text-zion-cyan font-medium">"
 </p>
 
+
+                      </p>
+                    </div>
+                  </div>
+
+
+                  </div>;"
                   <div className="mt-2 flex flex-wrap gap-3 text-sm">;"
                       <div className="flex items-center text-zion-slate-light">;"
                         <MapPin className="h-4 w-4 mr-1" />;"
@@ -333,6 +347,12 @@ export default function ProfilePage() {
                         <Clock className="h-4 w-4 mr-1" />;"
 
                         <span>{profileData && profileData.availability}</span>;
+
+                      </div>;
+                  </div>
+                </div>
+
+              </div>"
                 <div className="mt-4">"
                   <h4 className="text-lg font-bold text-white mb-2">Skills</h4>""
                   <div className="flex flex-wrap gap-2">"
@@ -353,6 +373,17 @@ export default function ProfilePage() {
 </a>"
                       <LinkIcon className="h-4 w-4 mr-2" />;"
 
+</LinkIcon>
+                    </a>"
+                  <p className="text-zion-slate-light">"
+</p>
+
+                  </p>
+              </div>
+
+            </div>"
+            <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">"
+</div>"
               <h2 className="text-xl font-bold text-white mb-3">Experience</h2>""
               <h2 className="text-xl font-bold text-white mb-3">Connect</h2>;""
               <div className="flex space-x-4">;"
@@ -374,6 +405,13 @@ export default function ProfilePage() {
 </a>
                     <Linkedin className="h-6 w-6" />;"
 
+</Linkedin>
+
+                  </a>;
+              </div>;
+            </div>;
+
+          </div>;"
           <div className="col-span-12 lg:col-span-4 space-y-6">;"
             <HireNowCTA;
               talentProfile={{"
@@ -442,3 +480,5 @@ if (isLoading) {"
 
 `;
 pr-12325
+'
+

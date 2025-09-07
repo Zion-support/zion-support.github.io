@@ -8,6 +8,7 @@ import {RadioGroup, RadioGroupItem} from "@/components/ui/radio-group";
 import {Switch} from "@/components/ui/switch";
 import {Review} from "@/types/reviews";
 interface ReviewFormValues {;
+
 import {useState} from "react";""
 import {Star} from "lucide-react";""
 import {useForm} from "react-hook-form";""
@@ -33,13 +34,26 @@ interface ReviewFormValues {
   // TODO: Implement
 }
 pr-12325
+import { useState } from './react';''
+import { Star } from './lucide-react';''
+import { use_form } from './react - hook - form';''
+import { Button } from '@/components / ui / button';''
+import { Textarea } from '@/components / ui / textarea';''
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components / ui / form';''
+import { RadioGroup, RadioGroupItem } from '@/components / ui / radio - group';''
+import { Switch } from '@/components / ui / switch';''
+import { Review } from '@/types / reviews';'
+
+interface ReviewFormValues {
+  // TODO: Implement
+}
   rating?: number;
   review_text?: string;
   communication_rating?: number;
   quality_rating?: number;
   timeliness_rating?: number;
-  would_work_again?: boolean;
-  is_anonymous?: boolean;
+  would_work_again?: boolean;}
+  is_anonymous?: boolean;}
 }
 import { useState } from "react",
 import { Star } from "lucide-react",
@@ -48,17 +62,22 @@ import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import {
 
+
+'
 import { useState } from "react",""
 import { Star } from "lucide-react",""
 import { useForm } from "react-hook-form",""
 import { Button } from "@/components/ui/button";""
 import { Textarea } from "@/components/ui/textarea";"
+
 import {
   // TODO: Implement
 pr-12325
+}
   Form;
   FormControl;
   FormField;
+
   FormItem;
   FormLabel;
 import { Button } from "@/components/ui/button",
@@ -69,9 +88,17 @@ import { Button } from "@/components/ui/button",""
 import { Textarea } from "@/components/ui/textarea","
   // TODO: Implement
 pr-12325
+  FormLabel;"
+import { Button } from "@/components/ui/button",""
+import { Textarea } from "@/components/ui/textarea","
+
+import {
+  // TODO: Implement
+}
   Form,
   FormControl,
   FormField,
+
   FormItem,
   FormLabel,
   FormMessage} from "@/components/ui/form",
@@ -126,6 +153,8 @@ import { Review } from "@/types/reviews",""
   timeliness_rating?: number,
   would_work_again?: boolean,
 pr-12325
+  is_anonymous?: boolean;
+
 interface ReviewFormProps {;
   projectId: string,;
   revieweeId: string,;
@@ -165,6 +194,7 @@ import { Star } from "lucide-react",;
 import { useForm } from "react-hook-form",;
 import { Button } from "@/components/ui/button",;
 import { Textarea } from "@/components/ui/textarea",;
+
   onSubmit: (data: any) => Promise<boolean>, ;
 </boolean>
   onSubmit: (data: any) => Promise<boolean>,;
@@ -189,10 +219,12 @@ import { useForm } from "react-hook-form",;""
 import { Button } from "@/components/ui/button",;""
 import { Textarea } from "@/components/ui/textarea",;"
 pr-12325
+
 import {;
   Form,;
   FormControl,;
   FormField,;
+
   FormItem,;
   FormLabel,;
   FormMessage} from "@/components/ui/form",;
@@ -209,14 +241,15 @@ interface ReviewFormValues {;
   RadioGroupItem} from "@/components/ui/radio-group",;""
 import { Switch } from "@/components/ui/switch",;""
 import { Review } from "@/types/reviews",;"
+
 ;
 pr-12325
   rating?:number,;
   review_text?:string,;
   communication_rating?:number,;
   quality_rating?:number,;
-  timeliness_rating?:number,;
-  would_work_again?:boolean,;
+  timeliness_rating?:number,;}
+  would_work_again?:boolean,;}
   is_anonymous?:boolean,;}
 ;
 interface ReviewFormProps {;
@@ -224,6 +257,7 @@ pr-12325
   projectId:string,;
   revieweeId:string,;
   revieweeName:string,;
+
   onSubmit:(data:any) => Promise<boolean>, ;
   defaultValues?:Review,;
   isSubmitting:boolean;
@@ -300,6 +334,7 @@ export function ReviewForm({;
 
               message: "Review must be at least 20 characters"}}};
 
+</FormField>
   const [hoveredStar, setHoveredStar] = useState<number>(0),;
 
 )"
@@ -382,15 +417,22 @@ interface ReviewFormProps {
       is_anonymous: false})
   });
 pr-12325
+;
   const handle_submit = async (values: ReviewFormValues) => {
+
     const formatted_data = {
-      ...values,
-      project_id: project_id,
+      ...values,}
+      project_id: project_id,}
       reviewee_id: reviewee_id},
     const success = await on_submit (formatted_data);
     // Check condition
 if ( {) {
   $2
+    // Check condition;
+
+if ( {) {
+  $2;
+
 }
       form.reset ();
     }
@@ -414,6 +456,30 @@ if ( {) {
               <FormControl>;
                 <div className="flex justify - center gap-1">;
                   {[1, 2, 3, 4, 5].map ((star) => (
+
+;"
+  const watch_rating = form.watch ("rating");"
+;
+  return (
+    <Form {...form}>;
+</Form>)"
+      <form on_submit={form.handle_submit (handle_submit)} className="space - y-6">;"
+</form>
+        <FormField;
+          control={form.control}"
+          name="rating";""
+          rules={{ required: "Rating is required" }}"
+          render={({ field }) => (
+</FormField>
+            <FormItem>;
+</FormItem>"
+              <FormLabel className="block text - center mb - 2">;"
+</FormLabel>
+              </FormLabel>;
+              <FormControl>;
+</FormControl>"
+                <div className="flex justify - center gap - 1">;"
+</div>
                     <button;
                       key={star}
         {/* Review Text */}
@@ -510,6 +576,7 @@ if ( {) {
                 <div className="flex justify - center gap - 1">;"
                       key={star}
         {/* Review Text */}
+          control={form.control}"
           name="review_text";"
             required: "Please provide feedback","
             min_length: {,
@@ -521,8 +588,15 @@ if ( {) {
                   placeholder="Share your experience and feedback...";""
                   className="min - h-24 resize - none";"
                   className="min-h-24 resize-none";"
+
                   {...field}
 
+                />;
+</Textarea>
+              </FormControl>;
+              <FormMessage />;
+
+</FormMessage>"
           <div className="space-y-6 border-t pt-6">;"
 </div>)"
             <h3 className="font-medium text-sm">Additional Ratings (Optional)</h3>;"
@@ -554,6 +628,53 @@ if ( {) {
 
 
 
+</FormLabel>
+                          </FormLabel>;
+                        </FormItem>;
+                        </FormItem>;
+
+                    </RadioGroup>;
+                  </FormControl>;
+                  <FormMessage />;
+</FormMessage>
+                </FormItem>;
+
+            <FormField;
+              control={form && form.control}"
+              name="quality_rating""
+              render={({ field }) => (;
+</FormField>"
+                <FormItem className="space-y-2">;"
+</FormItem>
+                  <FormLabel>Quality of Work</FormLabel>;
+                  <FormControl>;
+</FormControl>
+                    <RadioGroup;)
+                      onValueChange={(value) => field && field.onChange(parseInt(value))}
+</RadioGroup>
+                        <FormItem;
+                          key={value}"
+                          className="flex items-center space-x-2">;"
+</FormItem>
+                          <FormControl>;
+</FormControl>
+                            <RadioGroupItem value={value && value.toString()} />;
+</RadioGroupItem>
+                          </FormControl>;"
+                          <FormLabel className="cursor-pointer font-normal">;"
+</FormLabel>
+                          </FormLabel>;
+                        </FormItem>;
+                        </FormItem>;
+
+                    </RadioGroup>;
+                  </FormControl>;
+                  <FormMessage />;
+</FormMessage>
+                </FormItem>;
+
+            <FormField;
+              control={form && form.control}"
               name="timeliness_rating""
 
                   <FormLabel>Timeliness;
@@ -636,7 +757,11 @@ if ( {) {
               </div>;"
               <p className="text-xs text-muted-foreground mt-1">;"
 </p>
+
               </p>;
+              <FormMessage />;
+</FormMessage>
+            </FormItem>;
 
         <Button;"
           type="submit"""
@@ -708,3 +833,7 @@ onSubmit: (data: any) => Promise<boolean>;
 }/>  <FormLabel className="cursor-pointer font-normal"> Submit anonymously  </div> <p className="text-xs text-muted-foreground mt-1" > Anonymous reviews won't display your name but will still be linked to your account. </p> <FormMessage /> )
 }/> <Button  </form> ) `;
 pr-12325
+</FormField>"
+}/> </FormControl> <FormLabel className="cursor-pointer font-normal"> Submit anonymously </FormLabel> </div> <p className="text-xs text-muted-foreground mt-1" > Anonymous reviews won't display your name but will still be linked to your account. </p> <FormMessage /> </FormItem>)'
+}/> <Button </Button> </form> </Form>) '
+

@@ -13,6 +13,7 @@ import { TalentPool } from "./TalentPool",    primaryColor: string,
     textColor: string
 
 
+
 import React from "react",""
 import { WorkspaceHeader } from "./WorkspaceHeader",""
 import { SharedInbox } from "./SharedInbox",""
@@ -32,6 +33,7 @@ export interface Company {
 
 
     primaryColor: string,
+
     backgroundColor: string,
     textColor: string;
 pr-12325
@@ -131,6 +133,7 @@ function CompanyDashboard() {
 }  );
 }
 ;
+
   workspaceUrl: string;"
 import React from "react",;""
 import { WorkspaceHeader } from "./WorkspaceHeader",;""
@@ -139,11 +142,13 @@ import { TeamStats } from "./TeamStats",;""
 import { QuickActions } from "./QuickActions",;""
 import { RecentActivity } from "./RecentActivity",;""
 import { TalentPool } from "./TalentPool",;"
+
 export interface Company {;
   id: string;,
   name: string;
   logoUrl?: string;
   theme?: {;
+
     primaryColor: string;,
   backgroundColor: string;
 
@@ -167,6 +172,15 @@ interface CompanyDashboardProps {
   // TODO: Implement
 
 
+}
+interface CompanyDashboardProps {
+  // TODO: Implement
+}
+;
+interface CompanyDashboardProps {;}
+  company: Company;}
+}
+
 
 export function CompanyDashboard({ company }: CompanyDashboardProps) {
   return ("
@@ -184,6 +198,8 @@ export function CompanyDashboard({ company }: CompanyDashboardProps) {
       <div className="mt-8 grid grid-cols-1 lg: grid-cols-3 gap-6">"
 </div>"
         <div className="lg:col-span-2 space-y-6">"
+</div>
+
           <QuickActions />
 
           <RecentActivity />
@@ -192,15 +208,22 @@ export function CompanyDashboard({ company }: CompanyDashboardProps) {
 
 
 
+
         
 
 
         
         <div className="space-y-6">"
+</div>
+
           <TeamStats />
 
           <SharedInbox />
 
+</SharedInbox>
+        </div>
+
+      </div>"
     <div className="container mx-auto max-w-7xl py-8 px-4 md:px-6">;"
       <WorkspaceHeader company={company} />;
 
@@ -234,3 +257,12 @@ export function CompanyDashboard({ company }: CompanyDashboardProps) {
         <div className="space-y-6">;"
 
 pr-12325
+</div>
+          <TeamStats />;
+</TeamStats>
+          <SharedInbox />;
+</SharedInbox>
+        </div>;
+      </div>;
+    </div>;"
+

@@ -174,6 +174,7 @@ return (<div className="bg-zion-blue-dark rounded-lg p-6" > <Tabs defaultValue="
 };
 
 
+
 import React, { useState } from "react";""
 import {useForm} from "react-hook-form";""
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";""
@@ -306,6 +307,16 @@ export const MetadataManager: React.FC = () => {"
 
         
       
+</ExportPanel>
+
+            </div>
+          </div>
+        </TabsContent>
+      </Tabs>
+
+    </div>"
+  const [currentPlatform, setCurrentPlatform] = useState<AppPlatform>("ios");"
+</AppPlatform>"
   const iosForm = useForm<AppMetadataValues>({ defaultValues: { ...defaultValues, platform: "ios" } }),;"
   const androidForm = useForm<AppMetadataValues>({ defaultValues: { ...defaultValues, platform: "android" } }),;"
     <div className="bg-zion-blue-dark rounded-lg p-6">;"
@@ -340,6 +351,11 @@ export const MetadataManager: React.FC = () => {"
               <ExportPanel platform="android" metadata={androidForm.getValues()} />;"
 
     </div>);
+
+    </div>);
+    </div>);
+
+    </div>;"
 return (<div className="bg-zion-blue-dark rounded-lg p-6" > <Tabs defaultValue="ios" className="w-full" > <div className="flex justify-between items-center mb-6" > <TabsList className="bg-zion-blue" > <TabsTrigger value="ios" onClick= {"
 </div>)"
 }> App Store (iOS)  <TabsTrigger value="android" onClick= {""
@@ -348,3 +364,9 @@ return (<div className="bg-zion-blue-dark rounded-lg p-6" > <Tabs defaultValue="
 }> </div> </div>  </div> </div>   </div>) 
     </div>;"`;
 pr-12325
+</TabsTrigger>
+}> </div> </div> </TabsContent> </div> </div> </TabsContent> </Tabs> </div>) 
+};
+    </div>;
+  )
+};

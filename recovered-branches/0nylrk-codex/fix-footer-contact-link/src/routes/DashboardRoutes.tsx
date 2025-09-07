@@ -379,6 +379,7 @@ const DashboardRoutes = () => {;
 ;
 export default DashboardRoutes;
 ;
+
 import { Fragment } from "react";""
 import { Route, Routes } from "react-router-dom";""
 import { ProtectedRoute } from "@/components/ProtectedRoute";""
@@ -603,13 +604,132 @@ import ContractBuilder from "@/pages/ContractBuilder","
 
 
           
+</ProjectDetails>
+          </ProtectedRoute>;
+          <ProtectedRoute>;
+</ProtectedRoute>
+
+            <ProjectRoom />;
+</ProjectRoom>
+          </ProtectedRoute>;
+
+      <Route;"
+        path="/messages""
+        element={
+          <ProtectedRoute>
+</Route>
+            <MessagingInbox />
+</MessagingInbox>
+          </ProtectedRoute>
+      <Route;"
+        path="/inbox""
+        element={
+          <ProtectedRoute>
+</Route>
+            <MessagingInbox />
+</MessagingInbox>
+          </ProtectedRoute>
+      <Route;"
+        path="/payments""
+        element={
+          <ProtectedRoute>
+</Route>
+            <Payments />
+</Payments>
+          </ProtectedRoute>
+      <Route;"
+        path="/interviews""
+        element={
+          <ProtectedRoute>
+</Route>
+            <Interviews />
+</Interviews>
+          </ProtectedRoute>
+      <Route;"
+        path="/notifications""
+        element={
+          <ProtectedRoute>
+</Route>
+            <Notifications />
+</Notifications>
+          </ProtectedRoute>
+      <Route;"
+        path="/applications/track""
+        element={
+          <ProtectedRoute>
+</Route>
+            <ApplicationStatusTracker />
+</ApplicationStatusTracker>
+          </ProtectedRoute>
+      <Route;"
+        path="/hiring-tracker""
+        element={
+          <ProtectedRoute>
+</Route>
+            <HiringTracker />
+</HiringTracker>
+          </ProtectedRoute>
+      <Route;"
+        path="/portfolio-builder""
+        element={
+          <ProtectedRoute>
+</Route>
+            <PortfolioBuilder />
+</PortfolioBuilder>
+          </ProtectedRoute>
+      <Route;"
+        path="/referrals""
+        element={
+          <ProtectedRoute>
+</Route>
+            <Referrals />
+</Referrals>
+          </ProtectedRoute>
+      <Route;"
+        path="/developers""
+        element={
+          <ProtectedRoute>;
+</Route>
+            <DeveloperPortal />;
+</DeveloperPortal>
+          </ProtectedRoute>;
+          <ProtectedRoute>;
+</ProtectedRoute>
+
+            <WalletPage />;
+</WalletPage>
+          </ProtectedRoute>;
+
+      <Route;"
+        path="/dashboard/api-access""
+        element={
+          <ProtectedRoute>
+</Route>
+            <DeveloperPortal />
+</DeveloperPortal>
+          </ProtectedRoute>
+      <Route;"
+        path="/contract-builder""
         }
+
       />;
 )
     );
 
 
           
+</Route>)
+    </Routes>);
+
+      <Route;"
+        path="/wallet""
+        element={
+          <ProtectedRoute>
+</Route>
+            <WalletPage />
+</WalletPage>
+          </ProtectedRoute>
+      <Route;"
         path="/dashboard/api-access";"
         element={;
 
@@ -620,3 +740,7 @@ import ContractBuilder from "@/pages/ContractBuilder","
 
     ;"
 pr-12325
+</ContractBuilder>
+          </ProtectedRoute>;
+    </Routes>;"
+

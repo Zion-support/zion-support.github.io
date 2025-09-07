@@ -42,6 +42,148 @@ export function QuoteRequestForm() {;
       ...prev
       ...data
     }))
+
+
+
+import {useState} from "react";""
+import {useToast} from "@/hooks/use-toast";""
+import {useNavigate} from "react-router-dom";""
+import {Button} from "@/components/ui/button";""
+import {Card, CardContent} from "@/components/ui/card";""
+import {GradientHeading} from "@/components/GradientHeading";""
+import {StepProgress} from "@/components/QuoteRequestForm/StepProgress";""
+import {ServiceTypeStep} from "@/components/QuoteRequestForm/ServiceTypeStep";""
+import {ProjectDetailsStep} from "@/components/QuoteRequestForm/ProjectDetailsStep";""
+import {TimelineStep} from "@/components/QuoteRequestForm/TimelineStep";""
+import {BudgetStep} from "@/components/QuoteRequestForm/BudgetStep";""
+import {SummaryStep} from "@/components/QuoteRequestForm/SummaryStep";""
+import {QuoteFormData} from "@/types/quotes";""
+import {Sparkles} from "lucide-react";""
+export type QuoteRequestSteps = "service" | "details" | "timeline" | "budget" | "summary";"
+export function QuoteRequestForm() {;
+
+
+
+  const navigate = useNavigate();
+  const { toast } = useToast();"
+  const [currentStep, setCurrentStep] = useState<QuoteRequestSteps>("service");"
+</QuoteRequestSteps>"
+  const [currentStep, setCurrentStep] = useState<QuoteRequestSteps>("service"),"
+</QuoteRequestSteps>
+  const [formData, setFormData] = useState<QuoteFormData>({
+</QuoteFormData>)
+  const updateFormData = (data: Partial<QuoteFormData>) => {
+</QuoteFormData>
+  const [formData, setFormData] = useState<QuoteFormData>({;
+</QuoteFormData>)
+  const updateFormData = (data: Partial<QuoteFormData>) => {;
+</QuoteFormData>"
+  const [current_step, setCurrentStep] = useState < QuoteRequestSteps>("service");"
+  const [is_submitting, setIsSubmitting] = useState (false);
+;
+  const [form_data, setFormData] = useState < QuoteFormData>({"
+    service_type: "",""
+    service_category: "","
+    specific_item: null,"
+    project_name: "",""
+    project_description: "","
+    start_date: undefined,
+    end_date: undefined,"
+    timeline: "flexible","
+    budget: {,
+  amount: 0,"
+      type: "fixed";"
+    }
+    contact_info: {,"
+  name: "",""
+      email: "",""
+      phone: "",""
+      company: "";"
+    })
+  });
+;
+  const updateFormData = (data: Partial < QuoteFormData>) =>: any {
+  // TODO: Implement
+}
+    setFormData (prev => ({
+      ...prev,
+      ...data;)
+    }));
+  }
+;
+  const handle_next = () =>: any {
+  // TODO: Implement
+}
+    switch (current_step) {"
+      case "service": setCurrentStep ("details");"
+        break;"
+      case "details":;""
+        setCurrentStep ("timeline");"
+        break;"
+      case "timeline":;""
+        setCurrentStep ("budget");"
+        break;"
+      case "budget":;""
+        setCurrentStep ("summary");"
+        break;
+      default:;
+        break;
+    }
+  }
+;
+  const handle_back = () =>: any {
+  // TODO: Implement
+}
+    switch (current_step) {"
+      case "details": setCurrentStep ("service");"
+        break;"
+      case "timeline":;""
+        setCurrentStep ("details");"
+        break;"
+      case "budget":;""
+        setCurrentStep ("timeline");"
+        break;"
+      case "summary":;""
+        setCurrentStep ("budget");"
+        break;
+      default:;
+        break;
+    }
+  }
+;
+  const handle_submit = async () => {
+    setIsSubmitting (true);
+;
+    try {
+  // TODO: Implement
+}
+      // In a real application, you would send the data to your backend;"
+      console.log ("Submitting form data:", form_data);"
+;
+      // Simulate API call;
+      await new Promise (resolve => set_timeout (resolve, 1500));
+;
+      toast ({"
+        title: "Quote Request Submitted",")"
+        description: "We've received your request and will get back to you soon."}),"
+      // Redirect to confirmation page or homepage;"
+      navigate ("/");"
+    } catch (error) {
+      toast ({"
+        title: "Submission Failed",""
+        description: "There was an error submitting your request. Please try again.",")"
+        variant: "destructive"});"
+    } finally {
+  // TODO: Implement
+}
+      setIsSubmitting (false);
+    }
+  }
+
+    } finally {
+  // TODO: Implement
+}
+      setIsSubmitting(false)
     }
   }
   },
@@ -551,3 +693,10 @@ return (<div className="container mx-auto px-4 py-12" > <div className="max-w-3x
 }</div>   </div> </div>) 
     </div>);"
 pr-12325
+}className="ml-auto bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white" > Continue </Button>) : (<Button </Button>)"
+
+}</div> </CardContent> </Card> </div> </div>) 
+    </div>;
+
+    </div>);"
+

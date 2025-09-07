@@ -4,7 +4,11 @@ function fixFile(filePath) {
   try {
   // TODO: Implement
 }
+<<<<<<< HEAD
     let content = fs.readFileSync(filePath, 'utf8');
+=======
+    let content = fs.readFileSync(filePath,utf8);
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
     let originalContent = content;
 
     // Fix common patterns;
@@ -12,30 +16,55 @@ function fixFile(filePath) {
       // Fix files that are just closing braces or malformed;
       {]
         pattern: /^[\s\n]*\}[\s\S]*$/,
+<<<<<<< HEAD
         replacement: `import type { NextApiRequest, NextApiResponse } from 'next';\n\nexport default async function handler(req: NextApiRequest, res: NextApiResponse) {\n  res.status(200).json({ message: 'API endpoint' });\n}`
       },
       // Fix merge conflict markers;
       {
         pattern: /,
   replacement: 
+=======
+        replacement: `import type { NextApiRequest, NextApiResponse } from 'next';\n\nexport default async function handler(req: NextApiRequest, res: NextApiResponse) {\n  res.status(200).json({ message: API endpoint});\n}`},
+      // Fix merge conflict markers;
+      {
+        pattern: /,
+  replacement: },
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
       // Fix malformed function calls and syntax;
         pattern: /^[\s\n]*[^i][^m][^p][^o][^r][^t][\s\S]*$/,
         replacement: (match) => {
           if (match.includes('import') || match.includes('export')) {
             return match; // Don't replace if it already has imports/exports;
+<<<<<<< HEAD
           }`;
           return `import type { NextApiRequest, NextApiResponse } from 'next';\n\nexport default async function handler(req: NextApiRequest, res: NextApiResponse) {\n  res.status(200).json({ message: 'API endpoint' });\n}`;
     ];
 
     for (const fix of fixes) {
       if (typeof fix.replacement === 'function') {
+=======
+          }
+          return `import type { NextApiRequest, NextApiResponse } from 'next';\n\nexport default async function handler(req: NextApiRequest, res: NextApiResponse) {\n  res.status(200).json({ message: API endpoint});\n}`;
+        }
+      }
+    ];
+
+    for (const fix of fixes) {
+      if (typeof fix.replacement ===function') {
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
         content = content.replace(fix.pattern, fix.replacement);
       } else {
   // TODO: Implement
 
     // If the file is very short and malformed, replace entirely;
+<<<<<<< HEAD
     if (content.length < 200 && (content.includes('}') || content.includes('return'))) {`;
       content = `import type { NextApiRequest, NextApiResponse } from 'next';\n\nexport default async function handler(req: NextApiRequest, res: NextApiResponse) {\n  res.status(200).json({ message: 'API endpoint' });\n}`;
+=======
+    if (content.length < 200 && (content.includes(}) || content.includes('return'))) {
+      content = `import type { NextApiRequest, NextApiResponse } from 'next';\n\nexport default async function handler(req: NextApiRequest, res: NextApiResponse) {\n  res.status(200).json({ message: API endpoint});\n}`;
+    }
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
 
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content);
@@ -56,6 +85,7 @@ function processDirectory(dir) {
       fixedCount += processDirectory(filePath);
     } else if (file.endsWith('.ts') && !file.endsWith('.d.ts')) {
       if (fixFile(filePath)) {
+<<<<<<< HEAD
         fixedCount++;`;
         console.log(`Fixed: ${filePath}`);
 
@@ -65,3 +95,18 @@ console.log('Starting comprehensive syntax fixes...');
 const apiDir = '/workspace/pages/api';
 const fixedCount = processDirectory(apiDir);`;
 console.log(`Fixed ${fixedCount} files`);`;
+=======
+        fixedCount++;
+        console.log(`Fixed: ${filePath});
+      }
+    }
+  }
+
+  return fixedCount;
+}
+'
+console.log('Starting comprehensive syntax fixes...);
+const apiDir = '/workspace/pages/api';
+const fixedCount = processDirectory(apiDir);
+console.log(`Fixed ${fixedCount} files`);
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a

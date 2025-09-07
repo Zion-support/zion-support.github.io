@@ -1,12 +1,12 @@
-#!/""usr/bin/env"" node;"
 #!/usr/bin/env node;"
-const fs = require("fs");""
-const path = require("path");""
+#!/usr/bin/env node"
+const fs = require("fs");
+const path = require("path");
 const { spawn, exec } = require("child_process");"
 class $1 {}
   constructor() {}"
-  this.projectRoot = "/workspace";""
-    this.logDir = path.join(this.projectRoot, "logs");""
+  this.projectRoot = "/workspace";
+    this.logDir = path.join(this.projectRoot, "logs");
     this.reportDir = path.join(this.projectRoot, "error-reports");"
     this.checkInterval = 5 * 60 * 1000; // 5 minutes;
     this.isRunning = false;
@@ -19,23 +19,31 @@ class $1 {}
   fs.mkdirSync(dir, { "recursive": true })};"
     })};
   setupSignalHandlers() {}"
-  process.on("SIGTERM", () => this.shutdown());""
-    process.on("SIGINT", () => this.shutdown());""
-    process.on("uncaughtException", (error) => {}""
+  process.on("SIGTERM", () => this.shutdown());
+    process.on("SIGINT", () => this.shutdown());
+    process.on("uncaughtException", (error) => {}
   this.log("error", "Uncaught "exception": ", error);      this.shutdown()})};"
   log(level, ...args) {}
   const timestamp = new Date().toISOString();"
+<<<<<<< HEAD
     const message = `[${timestamp}] [${level.toUpperCase()}] ${args.join(" ")}`;`""
     console.log("message);""
     const logFile = path.join(this.logDir, "error-monitor.log");""
     fs.appendFileSync(logFile, message + "\\n");""
+=======
+    const message = `[${timestamp}] [${level.toUpperCase()}] ${args.join(" ")};`
+    console.log("message);
+    const logFile = path.join(this.logDir, "error-monitor.log");
+    fs.appendFileSync(logFile, message + "\\n");
+    const logFile = path.join(this.logDir, "error-monitor.log");
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
     fs.appendFileSync(logFile, message + "\n")};"
   async runLintCheck() {}
   return new Promise((resolve) => {}"
   exec("npm run lint", { "cwd": this.projectRoot }, (error, stdout, stderr) => {}"
   const hasErrors = error !== null;"
-        const errorCount = hasErrors ? (stdout.match(/""error/g"") || []).length : 0;""
-        const warningCount = hasErrors ? (stdout.match(/""warning/g"") || []).length : 0;"
+        const errorCount = hasErrors ? (stdout.match(/error/g) || []).length : 0;
+        const warningCount = hasErrors ? (stdout.match(/warning/g) || []).length : 0;"
         resolve({})
   hasErrors,
           errorCount,
@@ -43,14 +51,27 @@ class $1 {}
           "output": stdout + stderr})})})};"
   async runTypeCheck() {}
   exec("npm run type-check", { "cwd": this.projectRoot }, (error, stdout, stderr) => {}"
+<<<<<<< HEAD
         const errorCount = hasErrors ? (stderr.match(/error ""TS/g"") || []).length : 0;"
+=======
+  const hasErrors = error !== null;"
+        const errorCount = hasErrors ? (stderr.match(/error TS/g) || []).length : 0;"
+        resolve({})
+  hasErrors,
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
           errorCount,"
         const errorCount = hasErrors ? (stderr.match(/error "TS/g") || []).length : 0;"
   async runBuildCheck() {}
   exec("npm run build", { "cwd": this.projectRoot, "timeout": 120000 }, (error, stdout, stderr) => {}"
   const hasErrors = error !== null;
   hasErrors,"
+<<<<<<< HEAD
           "buildSuccess": !hasErrors,""
+=======
+          "buildSuccess": !hasErrors,
+          "output": stdout + stderr})})})};"
+;
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
   async detectCorruptedFiles() {}
   const corruptedFiles = [];"
     const srcDir = path.join(this.projectRoot, "src");"
@@ -66,84 +87,152 @@ class $1 {}
   const content = fs.readFileSync(itemPath, "utf8");"
               // Check for common corruption patterns;
               if (;)"
-                content.includes("Unterminated string literal") ||;""
-                content.match(/^"[^"]*$/m) ||;""
-                content.match(/^"[^]*$/m) ||;""
+                content.includes("Unterminated string literal") ||;
+                content.match(/^"[^"]*$/m) ||;
+                content.match(/^"[^]*$/m) ||;
                 content.includes("                content.includes("                content.includes("Parsing "error": ") ||;"
                 content.length === 0;
               ) {}
   corruptedFiles.push({})
   path: itemPath,"
-                  "relativePath": path.relative(this.projectRoot, itemPath),""
-                  "size": stat.size,""
+                  "relativePath": path.relative(this.projectRoot, itemPath),
+                  "size": stat.size,
                   "issues": this.analyzeFileIssues(content)})};"
             } catch (error) {}
   // Check for common corruption patterns;
+<<<<<<< HEAD
                 content.match(/^"[^"]*$/m) ||;"
                 content.match(/^[^]*$/m) ||;"
   corruptedFiles.push({})"
   "path": itemPath,""
                 "error": error.message,""
+=======
+              if (;)"
+                content.includes("Unterminated string literal") ||;
+                content.match(/^"[^"]*$/m) ||;"
+                content.match(/^[^]*$/m) ||;"
+                content.includes("                content.includes("                content.includes("Parsing "error": ") ||;"
+                content.length === 0;
+              ) {}
+  corruptedFiles.push({})
+  path: itemPath,"
+                  "relativePath": path.relative(this.projectRoot, itemPath),
+                  "size": stat.size,
+                  "issues": this.analyzeFileIssues(content)})};"
+            } catch (error) {}
+  corruptedFiles.push({})"
+  "path": itemPath,
+                "relativePath": path.relative(this.projectRoot, itemPath),
+                "error": error.message,
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
                 "issues": ["read_error"]})};"
           };
       } catch (error) {}"
   this.log("error", "Error scanning directory ${dir}: ${error.message}")} catch (error) {}"
+<<<<<<< HEAD
         };"`;
       } catch (error) {  this.log("error`, Error scanning directory ${dir  }:, error.message`);""
                 "issues": ["read_error"]}""
+=======
+  corruptedFiles.push({})"
+  "path": itemPath,
+                "relativePath": path.relative(this.projectRoot, itemPath),
+                "error": error.message,
+                "issues": ["read_error"]})};"
+          };
+        };"
+      } catch (error) {  this.log("error`, Error scanning directory ${dir  }:, error.message`);
+                "issues": ["read_error"]}
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
 });")}")}")}")} catch (error) {this.log("error", Error scanning directory ${dir}:, error.message")};"
     if (fs.existsSync(srcDir)) {}
   scanDirectory(srcDir)};
     return corruptedFiles};
   analyzeFileIssues(content) {}
   const issues = [];"
+<<<<<<< HEAD
     if (content.includes("Unterminated string literal")) issues.push("unterminated_string");""
     if (content.match(/^"[^"]*$/m)) issues.push("unclosed_single_quote");""
     if (content.match(/^[^"]*$/m)) issues.push("unclosed_double_quote");""
     if (content.includes("Parsing "error": ")) issues.push("parsing_error");""
     if (content.length === 0) issues.push("empty_file");""
+=======
+    if (content.includes("Unterminated string literal")) issues.push("unterminated_string");
+    if (content.includes("Unterminated string literal")) issues.push("unterminated_string");
+    if (content.match(/^"[^"]*$/m)) issues.push("unclosed_single_quote");
+    if (content.match(/^[^"]*$/m)) issues.push("unclosed_double_quote");
+    if (content.includes("Parsing "error": ")) issues.push("parsing_error");
+    if (content.length === 0) issues.push("empty_file");
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
     if (content.includes("require is not defined")) issues.push("module_system_error");"
     return issues};
   async generateReport() {}
+<<<<<<< HEAD
     const reportId = timestamp.replace(/[:.]/g, "-");""
     this.log("info", "Generating error report...");""
+=======
+  const timestamp = new Date().toISOString();"
+    const reportId = timestamp.replace(/[:.]/g, "-");
+    this.log("info", "Generating error report...");
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
     const ["lintResults", "typeResults", "buildResults", "corruptedFiles"] = await Promise.all(["this.runLintCheck()", "this.runTypeCheck()", "this.runBuildCheck()", "this.detectCorruptedFiles()"]);"
     const report = {}
   timestamp,
       reportId,"
       "summary": {}"
   totalErrors: lintResults.errorCount + typeResults.errorCount,"
-        "lintErrors": lintResults.errorCount,""
-        "lintWarnings": lintResults.warningCount,""
-        "typeErrors": typeResults.errorCount,""
-        "buildSuccess": buildResults.buildSuccess,""
-        "corruptedFiles": corruptedFiles.length},""
+        "lintErrors": lintResults.errorCount,
+        "lintWarnings": lintResults.warningCount,
+        "typeErrors": typeResults.errorCount,
+        "buildSuccess": buildResults.buildSuccess,
+        "corruptedFiles": corruptedFiles.length},
       "details": {}"
   lint: lintResults,"
-        "typeCheck": typeResults,""
+        "typeCheck": typeResults,
         "build": buildResults,"
         corruptedFiles},"
-      "recommendations": this.generateRecommendations(lintResults, typeResults, buildResults, corruptedFiles)};""
-    // Save reportconst reportFile = path.join(this.reportDir, ""error-report-${reportId}.json");""
+      "recommendations": this.generateRecommendations(lintResults, typeResults, buildResults, corruptedFiles)};
+    // Save reportconst reportFile = path.join(this.reportDir, error-report-${reportId}.json");
     fs.writeFileSync(reportFile", JSON.stringify(report, null, 2));"
     // Update latest report;"
     const latestReportFile = path.join(this.reportDir, "latest-error-report.json");"
+<<<<<<< HEAD
     fs.writeFileSync(latestReportFile, JSON.stringify(report, null, 2));"`;
     this.log("info", `Report "generated": ${reportFile}`);this.log("info", `Total errors "found": ${report.summary.totalErrors}`);this.log("info", `Corrupted "files": ${report.summary.corruptedFiles}`);"
+=======
+    fs.writeFileSync(latestReportFile, JSON.stringify(report, null, 2));"
+    this.log("info", `Report "generated": ${reportFile});this.log("info", `Total errors "found": ${report.summary.totalErrors});this.log("info", `Corrupted "files": ${report.summary.corruptedFiles});"
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
     return report};
   generateRecommendations(lintResults, typeResults, buildResults, corruptedFiles) {}
   const recommendations = [];
     if (corruptedFiles.length > 0) {}
   recommendations.push({})"
+<<<<<<< HEAD
   "priority": "high",""`;
         "action": "fix_corrupted_files","description": `Fix ${corruptedFiles.length} corrupted files with syntax errors`,`""
+=======
+  "priority": "high",
+        "action": "fix_corrupted_files","description": `Fix ${corruptedFiles.length} corrupted files with syntax errors`,`
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
         "files": corruptedFiles.map(f => f.relativePath)})};"
     if (lintResults.errorCount > 100) {}
+<<<<<<< HEAD
+=======
+  recommendations.push({})"
+  "priority": "high",
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
         "action": "run_lint_fix","description": "Run "npm run lint --fix` to automatically fix ${lintResults.errorCount} lint errors`})};"
     if (typeResults.errorCount > 50) {}
+<<<<<<< HEAD
   "priority": "medium",""`;
+=======
+  recommendations.push({})"
+  "priority": "medium",
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
         "action": "fix_type_errors","description": `Fix ${typeResults.errorCount} TypeScript errors`})};"
     if (!buildResults.buildSuccess) {}
+<<<<<<< HEAD
   "priority": "critical",""
         "action": "fix_build_errors",""
         "description": "Project build is failing - fix build errors immediately";"
@@ -153,6 +242,32 @@ class $1 {}
         "action": "run_lint_fix","description": "Run "npm run lint --fix" to automatically fix ${lintResults.errorCount} lint errors"})};"
   "priority": "medium",""
         "action": "fix_type_errors","description": "Fix ${typeResults.errorCount} TypeScript errors"})};"
+=======
+  recommendations.push({})"
+  "priority": "critical",
+        "action": "fix_build_errors",
+        "description": "Project build is failing - fix build errors immediately";"
+    if (corruptedFiles.length > 0) {}
+  recommendations.push({})"
+  priority: "high",
+        "action": "fix_corrupted_files","description": "Fix ${corruptedFiles.length} corrupted files with syntax errors",
+        "files": corruptedFiles.map(f => f.relativePath)})};"
+    ;
+    if (lintResults.errorCount > 100) {}
+  recommendations.push({})"
+  "priority": "high",
+        "action": "run_lint_fix","description": "Run "npm run lint --fix" to automatically fix ${lintResults.errorCount} lint errors"})};"
+    ;
+    if (typeResults.errorCount > 50) {}
+  recommendations.push({})"
+  "priority": "medium",
+        "action": "fix_type_errors","description": "Fix ${typeResults.errorCount} TypeScript errors"})};"
+    ;
+    if (!buildResults.buildSuccess) {}
+  recommendations.push({})"
+  "priority": "critical",
+        "action": "fix_build_errors",
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
         "description": "Project build is failing - fix build errors immediately"})};"
     return recommendations};
   async triggerAutomaticFixes(report) {}
@@ -162,18 +277,23 @@ class $1 {}
     this.log("info", "Triggering automatic fixes...");"
     // Trigger syntax fixer for corrupted files;
     if (report.summary.corruptedFiles > 0) {}"
-  this.log("info", "Triggering syntax fixer...");""
+  this.log("info", "Triggering syntax fixer...");
       exec("pm2 restart syntax-fixer", { "cwd": this.projectRoot }, (error) => {}"
   if (error) {}"
-  this.log("error", "Failed to trigger syntax "fixer": ", error.message)} else {}""
+  this.log("error", "Failed to trigger syntax "fixer": ", error.message)} else {}
   this.log("info", "Syntax fixer triggered successfully")};"
     // Auto-fix lint errors if not too many;
     if (report.summary.lintErrors > 0 && report.summary.lintErrors < 50) {}
   // Auto-fix lint errors if not too many;
     if (report.summary.lintErrors > 0 && report.summary.lintErrors < 50) {}"
-  this.log("info", "Running automatic lint fixes...");""
+  this.log("info", "Running automatic lint fixes...");
       exec("npm run lint -- --fix", { "cwd": this.projectRoot }, (error, stdout, stderr) => {}"
+<<<<<<< HEAD
   this.log("error", "Lint fix "failed": ", error.message)} else {}""
+=======
+  if (error) {}"
+  this.log("error", "Lint fix "failed": ", error.message)} else {}
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
   this.log("info", "Lint fixes applied successfully")};"
   async performHealthCheck() {}
   const report = await this.generateReport();
@@ -182,9 +302,9 @@ class $1 {}
       // Check if PM2 processes are running;"
       exec("pm2 list", { "cwd": this.projectRoot }, (error, stdout) => {}"
   if (!error) {}"
-  const onlineProcesses = (stdout.match(/""online/g"") || []).length;this.log("info", "PM2 processes "online": ${onlineProcesses}")};"
+  const onlineProcesses = (stdout.match(/online/g) || []).length;this.log("info", "PM2 processes "online": ${onlineProcesses}")};"
       })} catch (error) {}"
-  this.log("error", "Health check "failed": ", error.message)} catch (error) {}""
+  this.log("error", "Health check "failed": ", error.message)} catch (error) {}
   this.log("error", "Health check "failed": ", error.message)};"
   async start() {}"
   this.log("info", "Error Monitor starting...");"

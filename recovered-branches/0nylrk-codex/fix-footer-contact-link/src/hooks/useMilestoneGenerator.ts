@@ -34,7 +34,34 @@ export interface GeneratedMilestone {;
 
 
 
+
+  scope: string;,
+  startDate: string;
+
+import { useState  } from 'react';''
+import { supabase  } from '@/integrations/supabase/client';''
+import { toast } from 'sonner';'
+export interface MilestoneInput {
+  // TODO: Implement
+}'
+import {useState} from 'react';''
+import {supabase} from '@/integrations / supabase / client';''
+import {toast} from 'sonner';'
+export interface MilestoneInput {;'
+import {useState} from 'react';''
+import {supabase} from '@/integrations / supabase / client';''
+import {toast} from 'sonner';'
+
+export interface MilestoneInput {
+  // TODO: Implement
+}
+  scope: string;,
+  start_date: string;
+  end_date: string | null,}
+  project_type: string;}
+}
 export interface GeneratedMilestone {;
+
 
   title: string;,
 pr-12325
@@ -47,6 +74,7 @@ pr-12325
 pr-12325
 export function useMilestoneGenerator() {
 
+export function useMilestoneGenerator() {
   const [isGenerating, setIsGenerating] = useState(false);
 
   const [generatedMilestones, setGeneratedMilestones] = useState<GeneratedMilestone[]>([]);
@@ -68,6 +96,9 @@ export function useMilestoneGenerator() {
   }    clearGeneratedMilestones}
 }
 
+
+  const [generatedMilestones, setGeneratedMilestones] = useState<GeneratedMilestone[]>([]);
+</GeneratedMilestone>
   const generateMilestones = async (input: MilestoneInput): Promise<GeneratedMilestone[]> => {
 
 
@@ -119,3 +150,5 @@ export function useMilestoneGenerator() {;
 
   const generateMilestones = async (input: MilestoneInput): Promise<GeneratedMilestone[]> => {;
 pr-12325
+</GeneratedMilestone>'
+

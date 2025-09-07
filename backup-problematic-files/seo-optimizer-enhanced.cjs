@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -7,3 +8,15 @@ const path = require('path')
       if (file.endsWith('.tsx') || file.endsWith('.jsx')
         const content = fs.readFileSync(filePath, 'utf8')
         if (!content.includes('<Head>') && !content.includes('<title>')
+=======
+#!/usr/bin/env node
+const fs = require('fs')
+const path = require('path')
+    this.log(' Checking meta tags...)
+    const pagesDir = path.join(this.projectRoot,pages')
+      this.log('Pages directory not found')
+      if (file.endsWith('.tsx') || file.endsWith('.jsx')
+        const content = fs.readFileSync(filePath,utf8)
+        if (!content.includes('<Head>') && !content.includes('<title>')
+</Head>'
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a

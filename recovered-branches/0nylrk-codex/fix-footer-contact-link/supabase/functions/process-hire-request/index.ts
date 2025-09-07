@@ -38,9 +38,92 @@ const corsHeaders = {;
 interface HireRequest {;
   talent: {;
     id: string,;
-    full_name: string,;
-    professional_title: string,;
+
+import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server && server.ts",""
+import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2",""
+import {Configuration, OpenAIApi} from "https: //esm && esm.sh/openai@3 ;"
+const corsHeaders = {"
+  "Access-Control-Allow-Origin": "*"""
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}""
+import { serve } from 'https: //deno.land / std@0.190.0 / http / server.ts';,''
+import { create_client } from 'https: //esm.sh/@supabase / supabase - js@2';,''
+import { Configuration, OpenAIApi } from 'https: //esm.sh / openai@3.2.1';'
+const cors_headers = {'
+  "Access - Control - Allow - Origin": "*",""
+  "Access - Control - Allow - Headers": "authorization, x - client - info, apikey, content - type"}"
+;
+
+"
+import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"""
+import {createClient} from "https: //esm.sh/@supabase/supabase-js@2"""
+import {Configuration, OpenAIApi} from "https: //esm.sh/openai@3.2.1";"
+const corsHeaders = {"
+  "Access-Control-Allow-Origin": "*"""
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}"
+interface HireRequest {
+  // TODO: Implement
+}
+  talent: {,
+  id: string;
+    full_name: string;,
+  professional_title: string,
     email?: string;
+  }
+  requester: {,
+  name: string;
+    email: string,
+    id?: string;
+
+  }
+  project: {,
+  overview: string;
+    timeline: string;
+
+
+"
+import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",""
+import {createClient} from "https: //esm.sh/@supabase/supabase-js@2",;""
+import {Configuration, OpenAIApi} from "https: //esm.sh/openai@3.2.1";""
+import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",""
+import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",""
+import { Configuration, OpenAIApi } from "https: //esm.sh/openai@3.2.1","
+const corsHeaders = {"
+  "Access-Control-Allow-Origin": "*",""
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},"
+
+interface HireRequest {
+  // TODO: Implement
+}
+  talent: {,
+  id: string,
+    full_name: string,
+
+    professional_title: string,
+    email?: string;
+  },
+  requester: {,
+  name: string,
+    email: string,
+    id?: string;
+  },
+  project: {,
+  overview: string,
+    timeline: string,
+    budgetMin: number,
+    budgetMax: number;"
+import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;""
+import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",;""
+import { Configuration, OpenAIApi } from "https: //esm.sh/openai@3.2.1",;"
+const corsHeaders = {;"
+  "Access-Control-Allow-Origin": "*",;""
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},;"
+
+interface HireRequest {;
+  talent: {;,
+  id: string,;
+    full_name: string,;
+    professional_title: string,;}
+    email?: string;}
   },;
   requester: {;
     name: string,;
@@ -152,6 +235,7 @@ interface HireRequest {;
     full_name: string,;
     professional_title: string,;
   },;
+
   requester: {;,
   name: string,;
     email: string,;
@@ -362,6 +446,12 @@ pr-12325
       console && console.error("Error fetching admin users:", adminError)
     }    if (adminError) {
       console && console.error("Error fetching admin users:", adminError)
+    const { data: adminUsers, error: adminError } = await supabase;'
+      .from('profiles')''
+      .select('id')''
+      .eq('user_typeadmin')'
+    if (adminError) {'
+      console && console.error("Error fetching admin users:", adminError)"
     }
     let adminId: string | undefined = undefined;
       .limit(1),
@@ -402,12 +492,45 @@ if ( {) {
         }
       } catch (ai_error) {
         console.error ("Error generating enhanced content:", ai_error);
+    if (adminError) {"
+      console.error("Error fetching admin users:", adminError)"
+
+    }
+    let adminId: string | undefined = undefined,
+    // Create notification for admin (if any found)
+    if (adminUsers && adminUsers.length > 0) {
+      adminId = adminUsers[0].id;
+
+;"
+        const response_text = completion.data.choices[0]?.text || "";"
+;
+        try {
+  // TODO: Implement
+}
+          // Extract JSON from the response;
+          const json_match = response_text.match (/\{[\s\S]*\}/);
+          // Check condition;
+if ( {) {
+  $2;
+}
+            enhanced_content = JSON.parse (json_match[0]);"
+            console.log ("Enhanced content generated:", enhanced_content);"
+          }
+        } catch (json_error) {"
+          console.error ("Error parsing AI response:", json_error);"
+          // Continue without enhanced content;
+        }
+      } catch (ai_error) {"
+        console.error ("Error generating enhanced content:", ai_error);"
         // Continue without enhanced content;
+
       }
     }
     // 2. Store the request in the database;
     const { data: request_record, error: request_error } = await supabase;
       .from ('hire_requests');
+    const { data: request_record, error: request_error } = await supabase;"
+      .from ('hire_requests');'
       .insert ([;
         {
           talent_id: talent.id,
@@ -430,6 +553,28 @@ if ( {) {
     // Check condition
 if ( {) {
   $2
+
+          requester_name: requester.name;,
+  requester_email: requester.email;
+          project_overview: project.overview;,
+  project_summary: enhanced_content?.summary || null;
+          project_type: enhanced_content?.project_type || null;,
+  timeline: project.timeline;
+          budget_min: project.budget_min;,
+  budget_max: project.budget_max;
+          budget_display: budget_display;,'
+  status: 'new',')
+          expiry_date: new Date (Date.now () + 30 * 24 * 60 * 60 * 1000), // 30 days from now;
+        }]
+
+      ]);
+      .select ();
+;
+    // Check condition;
+
+if ( {) {
+  $2;
+
 }
       throw new Error (`Error storing hire request: ${request_error.message}`);
     }
@@ -479,6 +624,19 @@ if ( {) {
   $2
 }
       console.error ("Error fetching admin users:", admin_error);
+    const { data: admin_users, error: admin_error } = await supabase;'
+      .from ('profiles');''
+      .select ('id');''
+      .eq ('user_typeadmin');'
+      .limit (1);
+;
+    // Check condition;
+
+if ( {) {
+  $2;
+}'
+      console.error ("Error fetching admin users:", admin_error);"
+
     }
     let admin_id: string | undefined = undefined;
 ;
@@ -513,6 +671,11 @@ if ( {) {
     let admin_id: string | undefined = undefined;
     // Create notification for admin (if any found);
     // Check condition;
+    // Check condition;
+
+if ( {) {
+  $2;
+}
       admin_id = admin_users[0].id,
       const adminNotificationContent = {
         title: `New hiring request for ${talent && talent.full_name}`;`;
@@ -536,6 +699,7 @@ if ( {) {
   html: `"
 pr-12325
             <h1>You've Received a New Project Request</h1>
+            <h1>You've Received a New Project Request</h1>'
             <p>Hello ${talent && talent.full_name},</p>
             <p>You have received a new project request from ${requester && requester.name} (${requester && requester.email}).</p>
             <h2>Project Details</h2>
@@ -632,6 +796,9 @@ pr-12325
             <p>${project && project.overview}</p>`;
             ${enhancedContent?.summary ? `<p><strong>Summary:</strong> ${enhancedContent && enhancedContent.summary}</p>` : }`;
             ${enhancedContent?.projectType ? `<p><strong>Project Type:</strong> ${enhancedContent && enhancedContent.projectType}</p>` : }
+            <p>${project && project.overview}</p>'
+            ${enhancedContent?.summary ? `<p><strong>Summary:</strong> ${enhancedContent && enhancedContent.summary}</p>` : ''}''
+            ${enhancedContent?.projectType ? `<p><strong>Project Type:</strong> ${enhancedContent && enhancedContent.projectType}</p>` : ''}'
             <p>Please log in to your Zion AI Marketplace account to respond to this request.</p>
             <p>Best regards,<br>The Zion AI Marketplace Team</p>
             <p>${project.overview}</p>
@@ -667,3 +834,7 @@ pr-12325
   enhancedContent?.projectType ? `<p><strong>Project Type:</strong> $ {
 }<p>Please log in to your Zion AI Marketplace account to respond to this request.</p> <p>Best regards, <br>The Zion AI Marketplace Team</p> ` `;
 pr-12325
+</p>'
+}</p>` : '''
+}<p>Please log in to your Zion AI Marketplace account to respond to this request.</p> <p>Best regards, <br>The Zion AI Marketplace Team</p> ` '
+

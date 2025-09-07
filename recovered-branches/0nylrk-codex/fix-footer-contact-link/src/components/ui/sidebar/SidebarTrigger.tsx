@@ -37,6 +37,7 @@ export function SidebarTrigger({ className, ...props }: SidebarTriggerProps) {;
     </Button>
   );
 }
+
 import React from "react";""
 import { Button } from "@/components/ui/button";""
 import { Menu, X } from "lucide-react";""
@@ -63,3 +64,5 @@ interface SidebarTriggerProps extends React.HTMLAttributes<HTMLButtonElement> {;
       {open ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}"
       <span className="sr-only">Toggle Sidebar</span>"
 pr-12325
+    </Button>"
+

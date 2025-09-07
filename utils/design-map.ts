@@ -9,7 +9,10 @@ export type DesignMapSection = {
   id: string;
   title: string;
   description?: string;
-  items: { id: string; title: string; description?: string }[];
+  items?: Array<{
+    id: string;
+    title: string;
+  }>;
 };
 
 export type DesignMap = {
@@ -35,8 +38,8 @@ export function getZionDesignMap(): DesignMap {
           title: 'Color system',
           items: [
             { id: 'light', title: 'Light' },
-            { id: 'dark', title: 'Dark' },
-          ],
+            { id: 'dark', title: 'Dark' }
+          ]
         },
         {
           id: 'foundations-typography',
@@ -44,16 +47,16 @@ export function getZionDesignMap(): DesignMap {
           items: [
             { id: 'heading-scale', title: 'Heading scale' },
             { id: 'body-text', title: 'Body text' },
-            { id: 'mono', title: 'Monospace' },
-          ],
+            { id: 'mono', title: 'Monospace' }
+          ]
         },
         {
           id: 'foundations-icons',
           title: 'Icon set',
           items: [
             { id: 'system', title: 'System icons' },
-            { id: 'product', title: 'Product icons' },
-          ],
+            { id: 'product', title: 'Product icons' }
+          ]
         },
         {
           id: 'foundations-components',
@@ -62,9 +65,9 @@ export function getZionDesignMap(): DesignMap {
             { id: 'buttons', title: 'Buttons' },
             { id: 'cards', title: 'Cards' },
             { id: 'badges', title: 'Badges' },
-            { id: 'tags', title: 'Tags' },
-          ],
-        },
+            { id: 'tags', title: 'Tags' }
+          ]
+        }
       ],
       talent: [
         {
@@ -73,8 +76,8 @@ export function getZionDesignMap(): DesignMap {
           items: [
             { id: 'sections', title: 'Sections' },
             { id: 'templates', title: 'Templates' },
-            { id: 'export', title: 'Export' },
-          ],
+            { id: 'export', title: 'Export' }
+          ]
         },
         {
           id: 'talent-apply',
@@ -82,33 +85,33 @@ export function getZionDesignMap(): DesignMap {
           items: [
             { id: 'job-list', title: 'Job list' },
             { id: 'apply-form', title: 'Apply form' },
-            { id: 'status', title: 'Status' },
-          ],
+            { id: 'status', title: 'Status' }
+          ]
         },
         {
           id: 'talent-portfolio',
           title: 'Portfolio / project cards',
           items: [
             { id: 'grid', title: 'Grid' },
-            { id: 'detail', title: 'Detail' },
-          ],
+            { id: 'detail', title: 'Detail' }
+          ]
         },
         {
           id: 'talent-interview',
           title: 'Interview & chat UI',
           items: [
             { id: 'chat', title: 'Chat' },
-            { id: 'interview', title: 'Interview' },
-          ],
+            { id: 'interview', title: 'Interview' }
+          ]
         },
         {
           id: 'talent-dashboard',
           title: 'Dashboard with stats',
           items: [
             { id: 'overview', title: 'Overview' },
-            { id: 'charts', title: 'Charts' },
-          ],
-        },
+            { id: 'charts', title: 'Charts' }
+          ]
+        }
       ],
       client: [
         {
@@ -116,33 +119,33 @@ export function getZionDesignMap(): DesignMap {
           title: 'Job post flow',
           items: [
             { id: 'draft', title: 'Draft' },
-            { id: 'publish', title: 'Publish' },
-          ],
+            { id: 'publish', title: 'Publish' }
+          ]
         },
         {
           id: 'client-team-builder',
           title: 'Team builder',
           items: [
             { id: 'roles', title: 'Roles' },
-            { id: 'invite', title: 'Invite' },
-          ],
+            { id: 'invite', title: 'Invite' }
+          ]
         },
         {
           id: 'client-shortlist-offer',
           title: 'Shortlist + offer page',
           items: [
             { id: 'shortlist', title: 'Shortlist' },
-            { id: 'offer', title: 'Offer' },
-          ],
+            { id: 'offer', title: 'Offer' }
+          ]
         },
         {
           id: 'client-milestone-quote',
           title: 'Milestone + quote view',
           items: [
             { id: 'milestones', title: 'Milestones' },
-            { id: 'quotes', title: 'Quotes' },
-          ],
-        },
+            { id: 'quotes', title: 'Quotes' }
+          ]
+        }
       ],
       aiTools: [
         {
@@ -150,33 +153,33 @@ export function getZionDesignMap(): DesignMap {
           title: 'GPT prompt modals',
           items: [
             { id: 'prompt-modal', title: 'Prompt modal' },
-            { id: 'history', title: 'History' },
-          ],
+            { id: 'history', title: 'History' }
+          ]
         },
         {
           id: 'ai-content-assistant',
           title: 'Content assistant panels',
           items: [
             { id: 'side-panel', title: 'Side panel' },
-            { id: 'inline', title: 'Inline helper' },
-          ],
+            { id: 'inline', title: 'Inline helper' }
+          ]
         },
         {
           id: 'ai-scoring',
           title: 'Scoring overlays',
           items: [
             { id: 'resume-score', title: 'Resume score' },
-            { id: 'job-fit', title: 'Job fit' },
-          ],
+            { id: 'job-fit', title: 'Job fit' }
+          ]
         },
         {
           id: 'ai-chat',
           title: 'Chat-style interaction screens',
           items: [
             { id: 'chat', title: 'Chat' },
-            { id: 'agent', title: 'Agent view' },
-          ],
-        },
+            { id: 'agent', title: 'Agent view' }
+          ]
+        }
       ],
       dao: [
         {
@@ -184,33 +187,33 @@ export function getZionDesignMap(): DesignMap {
           title: 'Voting screens',
           items: [
             { id: 'list', title: 'Proposals list' },
-            { id: 'vote', title: 'Vote flow' },
-          ],
+            { id: 'vote', title: 'Vote flow' }
+          ]
         },
         {
           id: 'dao-treasury',
           title: 'Treasury dashboard',
           items: [
             { id: 'balances', title: 'Balances' },
-            { id: 'activity', title: 'Activity' },
-          ],
+            { id: 'activity', title: 'Activity' }
+          ]
         },
         {
           id: 'dao-proposals',
           title: 'Proposal submission',
           items: [
             { id: 'create', title: 'Create proposal' },
-            { id: 'review', title: 'Review' },
-          ],
+            { id: 'review', title: 'Review' }
+          ]
         },
         {
           id: 'dao-token',
           title: 'Token transfer + staking',
           items: [
             { id: 'transfer', title: 'Transfer' },
-            { id: 'stake', title: 'Stake' },
-          ],
-        },
+            { id: 'stake', title: 'Stake' }
+          ]
+        }
       ],
       admin: [
         {
@@ -218,33 +221,33 @@ export function getZionDesignMap(): DesignMap {
           title: 'User metrics',
           items: [
             { id: 'cohorts', title: 'Cohorts' },
-            { id: 'funnels', title: 'Funnels' },
-          ],
+            { id: 'funnels', title: 'Funnels' }
+          ]
         },
         {
           id: 'admin-content-approvals',
           title: 'Content approvals',
           items: [
             { id: 'queue', title: 'Queue' },
-            { id: 'policies', title: 'Policies' },
-          ],
+            { id: 'policies', title: 'Policies' }
+          ]
         },
         {
           id: 'admin-global-toggles',
           title: 'Global toggle center',
           items: [
             { id: 'flags', title: 'Feature flags' },
-            { id: 'experiments', title: 'Experiments' },
-          ],
+            { id: 'experiments', title: 'Experiments' }
+          ]
         },
         {
           id: 'admin-deployment',
           title: 'Deployment panel',
           items: [
             { id: 'environments', title: 'Environments' },
-            { id: 'releases', title: 'Releases' },
-          ],
-        },
+            { id: 'releases', title: 'Releases' }
+          ]
+        }
       ],
       mobile: [
         {
@@ -252,16 +255,16 @@ export function getZionDesignMap(): DesignMap {
           title: 'Navigation tabs',
           items: [
             { id: 'tabs', title: 'Tabs' },
-            { id: 'topbar', title: 'Top bar' },
-          ],
+            { id: 'topbar', title: 'Top bar' }
+          ]
         },
         {
           id: 'mobile-flows',
           title: 'Condensed flows for jobs + chat',
           items: [
             { id: 'jobs', title: 'Jobs' },
-            { id: 'chat', title: 'Chat' },
-          ],
+            { id: 'chat', title: 'Chat' }
+          ]
         },
         {
           id: 'mobile-onboarding',
@@ -919,3 +922,10 @@ export async function buildUIKit(
 ): Promise<UIKit> {
 "`;
 pr-12325
+            { id: 'permissions', title: 'Permissions' }
+          ]
+        }
+      ]
+    }
+  };
+}

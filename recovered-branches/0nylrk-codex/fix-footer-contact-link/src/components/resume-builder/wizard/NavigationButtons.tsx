@@ -104,6 +104,7 @@ export const NavigationButtons = ({
 ;
 
 
+
 import {Button} from "@/components/ui/button";""
 import {Loader2} from "lucide-react";""
 import {NavigationButtonsProps} from "./types";""
@@ -144,6 +145,20 @@ export const NavigationButtons = ({
     </div>
     </div>;
 
+
+        </Button>
+    </div>
+    </div>;
+        </Button>;
+
+        <Button onClick={onNext} disabled={isNextDisabled || isLoading}>;
+</Button>
+        <Button onClick={onNext} disabled={isNextDisabled || isLoading}>
+</Button>"
+          {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}"
+</Loader2>
+        </Button>;
+    </div>;
     </div>;"
     <div className="flex justify - between">;"
         <Button variant="outline" on_click={on_back}>;"
@@ -163,3 +178,7 @@ export const NavigationButtons = ({
 </Loader2>)
 }</div>) 
 pr-12325
+    </div>
+    </div>;
+    </div>;"
+

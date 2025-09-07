@@ -5,6 +5,7 @@ interface ResumeStepsProps {
   activeTab: string;
   onChange: (value: string) => void;
 }
+
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";""
 import { StepProps } from "./types";"
 interface ResumeStepsProps {
@@ -97,3 +98,15 @@ export const ResumeSteps = ({ steps, activeTab, onChange } ResumeStepsProps) => 
 
         
 pr-12325
+</TabsTrigger>)
+        </TabsTrigger>))}
+    </TabsList>);"
+    <TabsList className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 mb-8">;"
+</TabsList>
+        <TabsTrigger key={step.id} value={step.id}>;
+</TabsTrigger>
+        </TabsTrigger>;
+    </TabsList>;
+        </TabsTrigger>
+    </TabsList>"
+

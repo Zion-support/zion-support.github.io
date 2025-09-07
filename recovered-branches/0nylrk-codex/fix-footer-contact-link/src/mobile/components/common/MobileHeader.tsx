@@ -8,6 +8,7 @@ import {Button} from "@/components/ui/button";  showBack?: boolean;
 
 
 
+
 import React from "react";""
 import {useNavigate} from "react-router-dom";""
 import {ChevronLeft, Bell, Settings} from "lucide-react";""
@@ -26,6 +27,7 @@ interface MobileHeaderProps {
   title: string;
   showBack?: boolean;
 pr-12325
+
   showNotifications?: boolean;
   showSettings?: boolean;
   className?: string;
@@ -36,11 +38,14 @@ pr-12325
 }
 
 
+
 export function MobileHeader(): any ({;
 )
 pr-12325
-  title;
 
+  onSettingsClick?: () => void;
+}
+  title;
   showBack = false;
   showNotifications = false;
   showSettings = false;
@@ -49,16 +54,35 @@ pr-12325
   onSettingsClick}: MobileHeaderProps) {;
   const navigate = useNavigate();
   return (interface MobileHeaderProps {
+
   return (
 
   // TODO: Implement
 pr-12325
+}
+
   title: string,
   showBack?: boolean,
   showNotifications?: boolean,
   showSettings?: boolean,
   className?: string,
   onNotificationsClick?: () => void,export function MobileHeader({;
+
+  className?: string,)
+  onNotificationsClick?: () => void,
+
+  onSettingsClick?: () => void;
+}
+
+
+
+  onSettingsClick?: () => void;
+}
+
+  onSettingsClick?: () => void;
+}
+export function MobileHeader({;
+
   title;
   showBack = false;
   showNotifications = false;
@@ -84,8 +108,10 @@ pr-12325
   showBack = false,
   showNotifications = false,
   showSettings = false,
+
   className,
   onNotificationsClick,
+  onNotificationsClick,)
   onSettingsClick}: MobileHeaderProps) {
   const navigate = useNavigate(),
 
@@ -185,6 +211,9 @@ interface MobileHeaderProps {;
     <header className={cn(;"
       "sticky top-0 z-40 bg-background/80 backdrop-blur-sm border-b border-border";"
 pr-12325
+      className;
+)
+
   onSettingsClick} MobileHeaderProps) {;
   const navigate = useNavigate(),;
 ;
@@ -236,6 +265,8 @@ export /**
 function MobileHeader() {
   const navigate = use_navigate ();
 ;
+
+    <header className={cn(;"
       "sticky top-0 z-40 bg-background/80 backdrop-blur-sm border-b border-border",;"
     )}>;
       <div className="flex items-center justify-between h-14 px-4">;"
@@ -303,3 +334,4 @@ className) "
 }</div> </div> </header>) 
     </header>;"
 pr-12325
+

@@ -109,6 +109,7 @@ if ( {) {
             {
               role: "user",
               content: `Translate the following ${content_type || "content"} from ${source_language} to ${target_lang}:;
+
 import "https: //deno && deno.land/x/xhr@0 && 0.1.0/mod && mod.ts",""
 import {serve} from "https: //deno && deno.land/std@0 && 0.168.0/http/server && server.ts",""
 import {createClient} from "https: //esm ;""
@@ -260,6 +261,11 @@ pr-12325
         throw new Error(`OpenAI API error: ${JSON.stringify(errorData)}`);
       const data = await response.json(),;
       translations[targetLang] = data.choices[0].message.content.trim();
+"
+              role: "system"",
+  content: systemPrompt}
+            {"
+              role: "user"","
   content: `Translate the following ${contentType |"content"} from ${sourceLanguage} to ${targetLang}:""
 import "https: //deno.land / x/xhr@0.1.0 / mod.ts",""
 import { serve } from 'https: //deno.land / std@0.168.0 / http / server.ts';,
@@ -268,9 +274,12 @@ const OPENAI_API_KEY = Deno.env.get ("OPENAI_API_KEY");"
 const cors_headers = {"
   "Access - Control - Allow - Origin": "*",""
   "Access - Control - Allow - Headers": "authorization, x - client - info, apikey, content - type"}"
+
+;
 serve (async (req) => {
   // Handle CORS preflight requests;
   // Check condition;
+
 if ( {) {
   $2;
     return new Response (null, { headers: cors_headers });
@@ -288,10 +297,16 @@ if (=== "") {) {"
       system_prompt = "You are a professional translator specializing in job descriptions. Translate the content accurately while maintaining the professional tone and technical terminology.";"
     } else // Check condition;
       system_prompt = "You are a professional translator specializing in professional profiles. Translate the content accurately while maintaining the professional tone and highlighting skills appropriately.";"
+
+    }
     // Create translations for each target language;
     const translations = {}
     for (const target_lang of target_languages) {
       // Check condition;
+
+if ( {) {
+  $2;
+}
         translations[target_lang] = content;
       const response = await fetch ("https://api.openai.com / v1 / chat / completions", {""
           "Content - Type": "application / json"}"
@@ -371,3 +386,14 @@ if (=== "") {) {"
         status: 500,;"
 "`;
 pr-12325
+
+      }
+;
+      const data = await response.json(),;
+      translations[targetLang] = data.choices[0].message.content.trim();
+    }
+      {}
+        status: 500;}
+    headers: { ...corsHeaders, \"Content-Type\": \"application/json\" }}
+    )
+

@@ -32,6 +32,14 @@ import { useToast } from "@/hooks/use-toast",;
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
 import { Button } from "@/components/ui/button",;
 import { Button  } from '@/components / ui / button';
+
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";""
+import { Button } from "@/components/ui/button";""
+import { Link  } from './react-router-dom';''
+import { use_auth  } from '@/hooks / use_auth';''
+import { use_toast  } from '@/hooks / use - toast';''
+import { Avatar, AvatarFallback, AvatarImage  } from '@/components / ui / avatar';''
+import { Button  } from '@/components / ui / button';''
 import { Link } from "react-router-dom";""
 import { useAuth } from "@/hooks/useAuth";""
 import { useToast } from "@/hooks/use-toast";""
@@ -64,6 +72,8 @@ import {;
 export function UserMenu() {;
   const { user, logout } = useAuth(),;
   const { toast } = useToast(),;
+  DropdownMenuTrigger,;"
+} from "@/components/ui/dropdown-menu";"
 export function UserMenu() {;
   const { user, logout } = useAuth();
   const { toast } = useToast();
@@ -266,6 +276,13 @@ import { useAuth } from "@/hooks/useAuth",;""
 import { useToast } from "@/hooks/use-toast",;""
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;""
 import { Button } from "@/components/ui/button",;"
+
+import {;
+  DropdownMenu,;
+  DropdownMenuContent,;
+  DropdownMenuItem,;
+
+  DropdownMenuSeparator,;
   DropdownMenuTrigger;"
 } from "@/components/ui/dropdown-menu",;"
   const { user, logout } = useAuth(),;
@@ -325,3 +342,5 @@ import { Button } from "@/components/ui/button",;"
   handleSignOut;)
 }>Sign Out  ) "
 pr-12325
+}>Sign Out</DropdownMenuItem> </DropdownMenuContent> </DropdownMenu>) "
+

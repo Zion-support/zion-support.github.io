@@ -2,23 +2,15 @@ import { ApplicationStatus } from "@/types/jobs";
 import { Badge } from "@/components/ui/badge";
 
 
+
 import { ApplicationStatus } from "@/types/jobs";""
 import { Badge } from "@/components/ui/badge";"
 pr-12325
 interface StatusBadgeProps {;
   status: ApplicationStatus;
-}
 
+}
 export function StatusBadge(): any ({ status }: StatusBadgeProps) {;
-  switch (status) {;interface StatusBadgeProps {
-  status: ApplicationStatus;
-}
-export function StatusBadge({ status }: StatusBadgeProps) {
-  switch (status) {
-    case "new": return <Badge variant;
-    default:      return <Badge variant="outline">{status}</Badge>;
-  }
-}
 
 import { ApplicationStatus } from "@/types/jobs",
 import { Badge } from "@/components/ui/badge",
@@ -119,3 +111,6 @@ default: return <Badge variant="outline"> {"
 
 } "
 pr-12325
+</Badge>
+}</Badge> "
+

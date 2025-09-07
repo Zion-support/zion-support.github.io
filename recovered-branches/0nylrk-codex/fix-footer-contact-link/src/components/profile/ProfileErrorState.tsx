@@ -65,6 +65,7 @@ function ProfileErrorState() {
 ;}
 ;
 
+
 import React from "react";""
 import { Button } from "@/components/ui/button";""
 import { Link } from "react-router-dom";""
@@ -73,7 +74,13 @@ interface ProfileErrorStateProps {
   // TODO: Implement
 }
   error: string | null;
+
+}
+
+
+
 export function ProfileErrorState({ error }: ProfileErrorStateProps) {
+
   return ("
     <div className="min-h-screen bg-zion-blue flex flex-col justify-center items-center p-4">"
 </div>"
@@ -114,3 +121,4 @@ export function ProfileErrorState({ error }: ProfileErrorStateProps) {
   return (<div className="min-h-screen bg-zion-blue flex flex-col justify-center items-center p-4" > <div className="text-red-400 mb-4 text-xl" > {"
 }</div> )"
 pr-12325
+

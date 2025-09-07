@@ -1,4 +1,5 @@
       name: 'Test User'
+      name: 'Test User''
     }
   }
   return null;
@@ -11,7 +12,10 @@ export function assertTalentOrClientForOffer(
 export function assertTalentOrClientForOffer(
   req: NextApiRequest;,
 pr-12325
+
+  req: NextApiRequest;,
   offer: { clientId: string; talentSlug: string }
+
   req: NextApiRequest,;
   offer: { clientId: string; talentSlug: string },
 
@@ -47,6 +51,7 @@ export interface MarketplaceUser {
   name: string;
   slug: string;
   talentSlugHeader?: string;)
+
 ): DemoUser {
   // TODO: Implement
   const u = getDemoUser(req);
@@ -55,6 +60,10 @@ export interface MarketplaceUser {
   )
     return u;
   const err = new Error('Not authorized for this offer');
+
+    return u;'
+  const err = new Error('Not authorized for this offer');'
+
   // @ts-ignore;
 // Marketplace authentication utilities;
 export interface MarketplaceUser {
@@ -81,6 +90,18 @@ pr-12325
     website?: string;
   };
   createdAt: string;
+
+    hourlyRate?: number;'
+    availability?: 'available' | 'busy' | 'unavailable';'
+  };
+  business?: {
+    name: string;,
+  industry: string;'
+    size: 'startup' | 'small' | 'medium' | 'large' | 'enterprise';'
+    website?: string;
+
+  };
+  createdAt: string;,
   lastActiveAt: string;
 }
 
@@ -129,6 +150,26 @@ export function getUserFromRequest (req: any): User | null {
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+  // TODO: Implement
+}
+  user: MarketplaceUser | null;,
+  isAuthenticated: boolean;
+  permissions: string[];}
+  sessionId?: string;}
+}
+
+
+
+
+export function getUserFromRequest (req: any): User | null {
+  // TODO: Implement
+}
+  // Mock implementation - in production, this would extract user from JWT or session;
+  const auth_header = req.headers.authorization;
+  if () {) {
+
+  $2;
+
 }
     return null;
   }
@@ -154,6 +195,19 @@ pr-12325
       email: 'user@example.com',
       role: 'client',
       name: 'Test User';
+  // Check condition;
+
+if ( {) {
+  $2;
+}
+    return {
+  // TODO: Implement
+}'
+      id: 'user - 1',''
+      email: 'user@example.com',''
+      role: 'client',''
+      name: 'Test User';'
+
     }
   }
   return null;
@@ -204,8 +258,35 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   throw err;
 origin/cursor/automate-test-improve-and-merge-code-2533
   // TODO: Implement
+  offer: { client_id: string; talent_slug: string },)
+  talentSlugHeader?: string): DemoUser {
+
+  // TODO: Implement
+}
+  const u = getDemoUser (req);
+  // Check condition;
+if (return u) {
+  $2;
+}
+  // Check condition;
+if (=== offer.talent_slug) {
+  $2;
+
+}
+  );
+    return u;'
+  const err = new Error ('Not authorized for this offer');'
+  // @ts - ignore;
+  err.status_code = 403;
+  throw err;export function require_auth (req: any): User {
+
+  // TODO: Implement
+
+}
   const user = getUserFromRequest (req);
   // Check condition;
     throw new Error ('Authentication required'),
   return user;
 pr-12325
+}
+'

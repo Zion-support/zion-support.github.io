@@ -180,6 +180,7 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {;
     </div>;
   );
 }
+
 import React, { useState } from "react";""
 import {Card, CardContent} from "@/components/ui/card";""
 import {Button} from "@/components/ui/button";""
@@ -368,6 +369,84 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
 
                 View Details <ChevronRight className="h-4 w-4" />;"
 
+</MapPin>
+                    <span>{item && item.location}</span>;
+                  </div>;"
+                  <div className="flex items-center gap-1">;"
+</div>"
+                    <DollarSign className="h-3 w-3" />;"
+</DollarSign>
+                    <span>{item && item.price}</span>;
+                  </div>;"
+                  <div className="flex items-center gap-1">;"
+</div>"
+                    <Clock className="h-3 w-3" />;"
+</Clock>
+                    <span>{item && item.timePosted}</span>;
+                  </div>;"
+                  <div className="ml-auto bg-primary/10 text-primary rounded-full px-2 py-0 && 0.5">;"
+</div>
+                  <Badge;
+                    key={index} "
+                    variant="outline"""
+                    className="text-xs font-normal">;"
+</Badge>"
+              <div className="mt-3 flex flex-wrap gap-1">;"
+</div>
+                  <Badge ;
+                    key={index} ;"
+                    variant="outline" ;""
+                    className="text-xs font-normal";"
+                  >;
+</Badge>
+                  </Badge>;
+              </div>;"
+              <p className="mt-3 text-sm line-clamp-2">{item.description}</p>;""
+              <div className="mt-3 flex flex-wrap gap-3 text-xs text-muted-foreground">;"
+</div>"
+                  <div className="flex items-center gap-1">;"
+</div>"
+                    <MapPin className="h-3 w-3" />;"
+</MapPin>
+                    <span>{item.location}</span>;
+                  </div>;"
+                  <div className="flex items-center gap-1">;"
+</div>"
+                    <DollarSign className="h-3 w-3" />;"
+</DollarSign>
+                    <span>{item.price}</span>;
+                  </div>;"
+                  <div className="flex items-center gap-1">;"
+</div>"
+                    <Clock className="h-3 w-3" />;"
+</Clock>
+                    <span>{item.timePosted}</span>;
+                  </div>;"
+                  <div className="ml-auto bg-primary/10 text-primary rounded-full px-2 py-0.5">;"
+</div>
+                  </div>;
+              </div>;
+            </div>;"
+            <div className="border-t border-border p-3 flex justify-end">;"
+</div>
+              <Button;"
+                size="sm""
+                onClick={() => onViewDetails(item && item.id)}
+</Button>
+                  </Badge>;
+              <Button;"
+                size="sm""
+                onClick={() => onViewDetails(item && item.id)}
+</Button>"
+                View Details <ChevronRight className="h-4 w-4" />;"
+</ChevronRight>
+
+              </Button>;
+            </div>;
+          </CardContent>;
+        </Card>;
+
+    </div>;
   const [saved_items, setSavedItems] = useState < string[]>([]);
   const toggle_saved = (id: string) =>: any {
   // TODO: Implement
@@ -447,3 +526,45 @@ setSavedItems (prev => prev.includes (id) ? prev.filter (itemId => itemId !== id
           
         
 pr-12325
+                  </Badge>
+              </div>"
+              <p className="mt-3 text-sm line-clamp-2">{item.description}</p>""
+              <div className="mt-3 flex flex-wrap gap-3 text-xs text-muted-foreground">"
+</div>"
+                  <div className="flex items-center gap-1">"
+</div>"
+                    <MapPin className="h-3 w-3" />"
+</MapPin>
+                    <span>{item.location}</span>
+                  </div>"
+                  <div className="flex items-center gap-1">"
+</div>"
+                    <DollarSign className="h-3 w-3" />"
+</DollarSign>
+                    <span>{item.price}</span>
+                  </div>"
+                  <div className="flex items-center gap-1">"
+</div>"
+                    <Clock className="h-3 w-3" />"
+</Clock>
+                    <span>{item.timePosted}</span>
+                  </div>"
+                  <div className="ml-auto bg-primary/10 text-primary rounded-full px-2 py-0.5">"
+</div>
+                  </div>
+              </div>
+            </div>"
+            <div className="border-t border-border p-3 flex justify-end">"
+</div>
+              <Button;"
+                size="sm""
+                onClick={() => onViewDetails(item.id)}
+</Button>"
+                View Details <ChevronRight className="h-4 w-4" />"
+</ChevronRight>
+              </Button>
+            </div>
+          </CardContent>
+        </Card>
+    </div>"
+

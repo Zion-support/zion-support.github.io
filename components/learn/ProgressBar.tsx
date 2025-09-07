@@ -1,5 +1,7 @@
 
+
 import React from 'react';
+
 type ProgressBarProps = any;
 origin/cursor/automate-test-improve-and-merge-code-2533
 export default function ProgressBar({ value }: ProgressBarProps) {
@@ -13,21 +15,36 @@ export default function ProgressBar({ value }: ProgressBarProps) {;
 
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
-  return (
-    <div className="w-full h-3 bg-gray-200 dark:bg-gray-800 rounded">
-      <div className="h-3 bg-blue-600 rounded" style={{ width: `${pct}%` }} />
-    </div>
-export default function ProgressBar({ value }: ProgressBarProps) {
+
+export default function ProgressBar({ value }: ProgressBarProps) {}
 export default function ProgressBar({ value }: ProgressBarProps) {;
-  const pct = Math.max(0, Math.min(100, value));
+
+const pct = Math.max(0, Math.min(100, value));
+  return (}
+    <div className='w-full h-3 bg-gray-200 dark: bg-gray-800 rounded' />}
+      <div className='h-3 bg-blue-600 rounded' style={{ width: `${pct}%` 
+} />
+    </div>
+
+  );
+  return (
+    <div className=\"w-full h-3 bg-gray-200 dark: bg-gray-800 rounded\" />"
+      <div className=\"h-3 bg-blue-600 rounded\" style={{ width: `${pct}%` }} />
+    </div>
+export default function ProgressBar({ value }: ProgressBarProps) {}
+export default function ProgressBar({ value}
+}: ProgressBarProps) {;
+
+const pct = Math.max(0, Math.min(100, value));
   return (
   const pct = Math.max(0, Math.min(100, value));
 
-  return (
-    <div className="w-full h-3 bg-gray-200 dark:bg-gray-800 rounded">
-      <div className="h-3 bg-blue-600 rounded" style={{ width: `${pct}%` }} />
+  return (}"
+    <div className=\"w-full h-3 bg-gray-200 dark: bg-gray-800 rounded\" />}"
+      <div className=\"h-3 bg-blue-600 rounded\" style={{ width: `${pct}%` }} />
     </div>
-type ProgressBarProps = { value: number };
+type ProgressBarProps = { value: number}
+};
 );
 }
 export default function ProgressBar(): any ({ value }: ProgressBarProps) {;
@@ -76,3 +93,5 @@ function ProgressBar() {
 }
 
 origin/cursor/automate-test-improve-and-merge-code-2533
+
+"

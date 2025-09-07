@@ -124,6 +124,7 @@ const DATA_DIR = path.resolve(process.cwd(), 'data', 'integrations');
 const STATE_FILE = path.join(DATA_DIR, 'state.json');
 
 pr-12325
+
 function ensureDataDir(): void {
   if (!fs.existsSync(DATA_DIR)) {
     fs.mkdirSync(DATA_DIR, { recursive: true });
@@ -225,6 +226,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
 pr-12243
+}
 
 export function loadState(): IntegrationsState {
   ensureDataDir();
@@ -237,6 +239,9 @@ export function loadState(): IntegrationsState {
     };
     saveState(initialState);
     return initialState;
+
+  }
+
 
   try {
     const data = fs.readFileSync(STATE_FILE, 'utf8');
@@ -274,3 +279,5 @@ export function getConnections(): any[] {
 export function getSyncLogs(): any[] {
   return state.syncLogs;
 pr-12325
+
+}

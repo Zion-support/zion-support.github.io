@@ -1,4 +1,5 @@
 
+
 export const useRecordActivity = () => {;
   const { user } = useAuth();import { useAuth } from '@/hooks/useAuth',
 import { supabase } from '@/integrations/supabase/client',
@@ -23,6 +24,8 @@ import { MilestoneActivity } from './types',
 
   
 pr-12325
+  const recordMilestoneActivity = async (
+
     milestoneId: string,
     action: string, 
     previousStatus: string | null, 
@@ -45,6 +48,7 @@ pr-12325
 import { supabase } from '@/integrations/supabase/client',;
 import { MilestoneActivity } from './types',;
 export const useRecordActivity = () => {;
+
     comment?: string;)
   ) => {
     if (!user) return null;
@@ -72,6 +76,13 @@ export const useRecordActivity = () => {;
 
           comment})`;
           *,)
+          comment})
+
+        .select(`
+          *,)
+          created_by_profile:profiles!user_id(display_name, avatar_url)
+
+        `)
         .single();
       if (error) throw error;
         .single(),
@@ -127,6 +138,11 @@ import { useAuth } from '@/hooks/useAuth',;
 import { supabase } from '@/integrations/supabase/client',;
 import { MilestoneActivity } from './types',;
 pr-12325
+import { useAuth } from '@/hooks/useAuth',;''
+import { supabase } from '@/integrations/supabase/client',;''
+import { MilestoneActivity } from './types',;'
+export const useRecordActivity = () => {;
+
   const { user } = useAuth(),;
   const recordMilestoneActivity = async (;
     milestoneId: string,;
@@ -138,20 +154,31 @@ pr-12325
     if (!user) return null,;
     try {;
       const { data, error } = await supabase;
+    comment?: string;)
   ) => {;
+
     if (!user) return null,;
     try {;
 pr-12325
         .from('milestone_activities');
+      const { data, error } = await supabase;'
+        .from('milestone_activities');'
+
         .insert({;
           milestone_id: milestoneId,;
           user_id: user.id,;
           action,;
+
           previous_status: previousStatus,;
           new_status: newStatus,;
           comment});
         .select(`;
           *,;
+          new_status: newStatus,;)
+
+          comment});
+        .select(`;
+          *,;)
           created_by_profile:profiles!user_id(display_name, avatar_url);
         `);
         .single(),;
@@ -171,6 +198,11 @@ pr-12325
     recordMilestoneActivity
   }
 }
+
+    } catch (err: any) {;'
+      console.error("Error recording activity:", err),;"
+      return null;
+    }
 
   };
   return {;
@@ -198,3 +230,4 @@ pr-12325
 
 "`;
 pr-12325
+};

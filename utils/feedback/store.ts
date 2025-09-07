@@ -20,9 +20,10 @@ import path from 'path';
 
 export type FeedbackRecord = {
 origin/cursor/automate-test-improve-and-merge-code-2533
+export interface Feedback {
   id: string;
-  createdAtIso: string;
-  user: { id?: string; role?: string; talentSlug?: string };
+  userId: string;
+  content: string;
   rating: number;
 
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -53,20 +54,17 @@ export async function saveFeedbackFallback(feedback: FeedbackRecord): Promise<vo
   feedbackData.push(feedback);
   console.log('Feedback saved:', feedback.id);
 origin/cursor/expand-services-advertise-and-build-project-c28b
+  category: string;
+  createdAt: string;
+  status: 'pending' | 'reviewed' | 'resolved';
 }
 
-export interface FeedbackStats {
-  total: number;
-  averageRating: number;
-  byKind: {
-    bug: number;
-    feature: number;
-    general: number;
-  };
-  byRating: {
-    [rating: number]: number;
-  };
-  recent: FeedbackRecord[];
+export interface FeedbackStore {
+  feedback: Feedback[];
+  addFeedback: (feedback: Omit<Feedback, 'id' | 'createdAt'>) => void;
+  updateFeedback: (id: string, updates: Partial<Feedback>) => void;
+  getFeedback: (id: string) => Feedback | undefined;
+  getAllFeedback: () => Feedback[];
 }
 
 export function getAllFeedback(): FeedbackRecord[] {;
@@ -77,10 +75,28 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   ip: string;
 }
 main
+class FeedbackStoreImpl implements FeedbackStore {
+  feedback: Feedback[] = [];
 
+  addFeedback(feedback: Omit<Feedback, 'id' | 'createdAt'>): void {
+    const newFeedback: Feedback = {
+      ...feedback,
+      id: Math.random().toString(36).substr(2, 9),
+      createdAt: new Date().toISOString()
+    };
+    this.feedback.push(newFeedback);
+  }
 
+  updateFeedback(id: string, updates: Partial<Feedback>): void {
+    const index = this.feedback.findIndex(f => f.id === id);
+    if (index !== -1) {
+      this.feedback[index] = { ...this.feedback[index], ...updates };
+    }
+  }
 
-export interface FeedbackRecord {;
+  getFeedback(id: string): Feedback | undefined {
+    return this.feedback.find(f => f.id === id);
+  }
 
 // Mock feedback store utility;
 export function tryWriteToFirestore(doc: any): Promise<boolean> {
@@ -141,3 +157,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 ): Promise<void> {
 </void>
 pr-12325
+  getAllFeedback(): Feedback[] {
+    return [...this.feedback];
+  }
+}
+
+export const feedbackStore = new FeedbackStoreImpl();

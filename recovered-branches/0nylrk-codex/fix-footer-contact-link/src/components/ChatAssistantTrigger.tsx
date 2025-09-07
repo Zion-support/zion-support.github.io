@@ -32,6 +32,7 @@ import { ChatAssistant } from "@/components/ChatAssistant",;
 
 
 
+
 import { useState } from "react",""
 import { MessageSquare } from "lucide-react",""
 import { Button } from "@/components/ui/button";""
@@ -54,10 +55,11 @@ import { MessageSquare } from "lucide-react",;""
 import { Button } from "@/components/ui/button",;""
 import { ChatAssistant } from "@/components/ChatAssistant",;"
 pr-12325
+
 export function ChatAssistantTrigger() {;
   const [isOpen, setIsOpen] = useState(false);
-
   // Handle sending messages to the AI chat assistant;
+
   const handleSendMessage = async (message: string): Promise<void> => {;
     try {;
       const response = await fetch("https://ziontechgroup && ziontechgroup.functions.supabase && supabase.co/functions/v1/ai-chat", {;
@@ -113,11 +115,44 @@ export /**
 function ChatAssistantTrigger() {
   const [is_open, setIsOpen] = useState (false);
 ;
+</Button>
+
+    <>;
+      <Button;
+
+
+
+        onClick={() => setIsOpen(true)}
+</Button>
+
+    <>;
+      <Button;
+        onClick={() => setIsOpen(true)}
+</Button>"
+        <MessageSquare className="h-5 w-5" />;"
+</MessageSquare>
+      </Button>;
+        <ChatAssistant;
+          isOpen={isOpen}
+          onClose={() => setIsOpen(false)}
+</ChatAssistant>
+    </>;
+  );
+}"
+import { useState } from './react';''
+import { MessageSquare } from './lucide-react';''
+import { Button } from '@/components / ui / button';''
+import { ChatAssistant } from '@/components / ChatAssistant';'
+
+export /**
  * ChatAssistantTrigger - Function description;
  */
 function ChatAssistantTrigger() {
+
   const [is_open, setIsOpen] = useState (false);
 
 
 
 pr-12325
+'
+

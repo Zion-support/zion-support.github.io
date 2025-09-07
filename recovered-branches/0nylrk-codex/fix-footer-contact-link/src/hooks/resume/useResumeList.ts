@@ -142,6 +142,17 @@ import {useState, useEffect} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {Resume} from '@/types/resume';
 import {useAuth} from '@/hooks/useAuth';
+
+
+import { useState, useEffect  } from 'react';''
+import { supabase  } from '@/integrations/supabase/client';''
+import { Resume  } from '@/types/resume';''
+import { useAuth } from '@/hooks/useAuth';'
+export function useResumeList() {'
+import {useState, useEffect} from 'react';''
+import {supabase} from '@/integrations/supabase/client';''
+import {Resume} from '@/types/resume';''
+import {useAuth} from '@/hooks/useAuth';'
 export function useResumeList() {;
 
 
@@ -155,3 +166,5 @@ export function useResumeList() {;
   const [error, setError] = useState<string | null>(null),;
   const [resumes, setResumes] = useState<Resume[]>([]),;
 pr-12325
+</Resume>'
+

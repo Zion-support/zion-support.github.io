@@ -1,7 +1,6 @@
 #!/bin/bash
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 # Script to automatically resolve merge conflicts by choosing main branch version
 echo "Resolving merge conflicts by choosing main branch version..."
 
@@ -21,9 +20,6 @@ done
 
 echo "All conflicts resolved. Committing merge..."
 git commit -m "Merge PR #11903: Expand services advertise and build project - Resolved conflicts by choosing main branch version"
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 echo "Starting conflict resolution..."
 
 # First, let's merge main into our branch
@@ -56,10 +52,7 @@ git add .
 
 echo "Conflict resolution completed. Checking status..."
 git status
-<<<<<<< HEAD
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-=======
+
 # Script to automatically resolve merge conflicts by choosing main branch version
 echo "Resolving merge conflicts by choosing main branch version..."
 
@@ -79,5 +72,5 @@ done
 
 echo "All conflicts resolved. Committing merge..."
 git commit -m "Merge PR #11903: Expand services advertise and build project - Resolved conflicts by choosing main branch version"
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+
+

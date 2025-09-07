@@ -65,3 +65,4 @@ export const ResumeProgress = ({ resume, progress }: ResumeProgressProps) => {
 
     </div>);"
 pr-12325
+

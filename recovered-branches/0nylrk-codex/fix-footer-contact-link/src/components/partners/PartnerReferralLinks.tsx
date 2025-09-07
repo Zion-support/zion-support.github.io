@@ -20,6 +20,7 @@ import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/c
     })
 
 
+
 import {useRef, useState} from "react";""
 import {Button} from "@/components/ui/button";""
 import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";""
@@ -52,15 +53,16 @@ export function PartnerReferralLinks() {;
       title: "Link copied!"","
   description: "The referral link has been copied to your clipboard"""
       variant: "default"")
+
     })
 
 
 pr-12325
   },
-  
-  const handleGenerateLink = () => {
+  const handleGenerateLink = (
     if (baseLink) {
       const url = new URL(baseLink),
+
       
 
       // Add custom campaign parameter if selected
@@ -99,6 +101,216 @@ pr-12325
               className="flex items-center gap-2">;
               <Download className="h-4 w-4" />;
               Export Links;
+
+      // Add custom campaign parameter if selected;"
+      if (selectedCampaign !== "default") {""
+        url.searchParams.append("campaign", selectedCampaign)"
+      }
+      // Add custom parameter if provided;
+      if (customParam) {"
+        url.searchParams.append("source", customParam)"
+      }
+      const newLink = {"
+        name: `${selectedCampaign}${customParam ? `-${customParam}` : ""}`"
+        link: url.toString()
+
+  const [generatedLinks, setGeneratedLinks] = useState<{name: string, link: string}[]>([]),;
+
+  // Get the base referral link;
+  const baseLink = getReferralLink();
+
+  const handleCopyLink = (link: string) => {;
+    navigator && navigator.clipboard.writeText(link),;
+    toast({;"
+      title: "Link copied!",;""
+      description: "The referral link has been copied to your clipboard",;""
+      variant: "default";")
+    });
+  };
+
+  const handleGenerateLink = () => {;
+    if (baseLink) {;
+      const url = new URL(baseLink);
+
+      // Add custom campaign parameter if selected;"
+      if (selectedCampaign !== "default") {;""
+        url && url.searchParams.append("campaign", selectedCampaign);"
+
+      }
+      // Add custom parameter if provided;
+
+      if (customParam) {;"
+        url && url.searchParams.append("source", customParam);"
+      }
+
+      const newLink = {;"
+        name: `${selectedCampaign}${customParam ? `-${customParam}` : ""}`,;"
+        link: url && url.toString();
+      };
+
+
+      setGeneratedLinks(prev => [...prev, newLink]);
+      setIsDialogOpen(false);"
+      setCustomParam("");"
+    }
+
+
+      },
+      
+      setGeneratedLinks(prev => [...prev, newLink]),
+      setIsDialogOpen(false),"
+      setCustomParam("")"
+    }
+  },
+  
+
+
+  const handleDownloadLinks = () => {
+    const allLinks = ["
+      { name: "Default", link: baseLink }"
+      ...generatedLinks;
+  };
+
+  const handleDownloadLinks = () => {;
+    const allLinks = [;"
+      { name: "Default", link: baseLink },;"
+      ...generatedLinks;]
+    ];
+
+    const csvContent = [;
+"
+      "Name,Link";"
+      ...allLinks && allLinks.map(l => `${l && l.name},${l && l.link}`);]"
+    ].join("\n");"
+    ],
+    
+
+    const csvContent = ["
+      "Name,Link","
+      ...allLinks.map(l => `${l.name},${l.link}`)
+]"
+    ].join("\n"),""
+    const blob = new Blob([csvContent], { type: 'text/csv,charset=utf-8,' }),'
+    const url = URL.createObjectURL(blob),'
+    const link = document.createElement("a"),""
+    link.setAttribute("href", url),""
+    link.setAttribute("download", "zion_referral_links.csv"),""
+    link.style.visibility = 'hidden','
+    document.body.appendChild(link),
+    link.click(),
+    document.body.removeChild(link)
+  },
+
+
+
+  return ('
+    <div className="space-y-6">"
+</div>"
+      <Card className="bg-zion-blue-dark border-zion-blue-light">"
+</Card>
+        <CardHeader>
+</CardHeader>"
+          <CardTitle className="flex items-center justify-between">"
+</CardTitle>
+            <span>Your Referral Link</span>)"
+  const [selectedCampaign, setSelectedCampaign] = useState<string>("default"),;"
+</string>"
+  const [customParam, setCustomParam] = useState<string>(""),;"
+</string>
+  const [generatedLinks, setGeneratedLinks] = useState<{name:string, link:string}[]>([]),;
+  ;
+  // Get the base referral link;
+  const baseLink = getReferralLink(),;
+  ;
+  const handleCopyLink = (link:string) => {;
+    navigator.clipboard.writeText(link),;
+    toast({;"
+      title:"Link copied!",;""
+      description:"The referral link has been copied to your clipboard",;""
+      variant:"default";")
+    }),;
+  },;
+  ;
+  const handleGenerateLink = () => {;
+    if (baseLink) {;
+      const url = new URL(baseLink),;
+      ;
+      // Add custom campaign parameter if selected;"
+      if (selectedCampaign !== "default") {;""
+        url.searchParams.append("campaign", selectedCampaign),;"
+      }
+      ;
+      // Add custom parameter if provided;
+      if (customParam) {;"
+        url.searchParams.append("source", customParam),;"
+      }
+      ;
+      const newLink = {;"
+        name:`${selectedCampaign}${customParam ? `-${customParam}` :""}`,;"
+        link:url.toString();
+      },;
+      ;
+      setGeneratedLinks(prev => [...prev, newLink]),;
+      setIsDialogOpen(false),;"
+      setCustomParam(""),;"
+    }
+  },;
+  ;
+  const handleDownloadLinks = () => {;
+    const allLinks = [;"
+      { name:"Default", link:baseLink },;"
+      ...generatedLinks;]
+    ],;
+    ;
+    const csvContent = [;"
+      "Name,Link",;"
+      ...allLinks.map(l => `${l.name},${l.link}`);]"
+    ].join("\n"),;"
+    ;"
+    const blob = new Blob([csvContent], { type:'text/csv,charset=utf-8,' }),;'
+    const url = URL.createObjectURL(blob),;'
+    const link = document.createElement("a"),;""
+    link.setAttribute("href", url),;""
+    link.setAttribute("download", "zion_referral_links.csv"),;""
+    link.style.visibility = 'hidden',;'
+    document.body.appendChild(link),;
+  };
+  return (;
+
+  return ('
+    <div className="space-y-6">;"
+</div>"
+      <Card className="bg-zion-blue-dark border-zion-blue-light">;"
+</Card>
+        <CardHeader>;
+</CardHeader>"
+          <CardTitle className="flex items-center justify-between">;"
+</CardTitle>
+            <span>Your Referral Link</span>;
+            <Button;"
+              variant="outline"""
+              size="sm""
+            <Button;"
+              variant="outline"""
+              size="sm""
+              onClick={handleDownloadLinks}"
+              className="flex items-center gap-2">;"
+</Button>
+            <Button;"
+              variant="outline"""
+              size="sm""
+              onClick={handleDownloadLinks}"
+              className="flex items-center gap-2">;"
+</Button>
+            <Button ;"
+              variant="outline" ;""
+              size="sm" ;"
+              onClick={handleDownloadLinks}"
+              className="flex items-center gap-2";"
+            >;
+</Button>"
+              <Download className="h-4 w-4" />;"
+</Download>
             </Button>;
           </CardTitle>;
           <CardDescription>Share this link with your audience to earn rewards</CardDescription>;
@@ -309,6 +521,7 @@ pr-12325
 
           <CardDescription>Share this link with your audience to earn rewards;
         <CardContent>;
+</CardContent>"
           <div className="flex space-x-2">;"
 </div>
             <Input;
@@ -403,6 +616,15 @@ if ( {) {
               <Download className="h - 4 w - 4" />;"
 
           <CardDescription > Share this link with your audience to earn rewards;
+</Download>
+
+            </Button>;
+          </CardTitle>;
+          <CardDescription />Share this link with your audience to earn rewards</CardDescription>;
+        </CardHeader>;
+
+        <CardContent>;
+</CardContent>"
           <div className="flex space - x-2">;"
               value={base_link}
               read_only;"
@@ -467,6 +689,16 @@ if ( {) {
                 variant="outline""
                 onClick={() => setIsDialogOpen(true)}
 
+</Button>"
+                <Plus className="h-4 w-4" />;"
+</Plus>
+
+              </Button>;
+            </CardContent>;
+          </Card>;
+      </div>;
+
+    </div>;"
                     <span>{item.name || "Campaign Link"}</span>;"
             ))) : ("
           <Card className="bg - zion - blue / 20 border - dashed border - zion - blue - light">;"
@@ -491,3 +723,10 @@ if ( {) {
           
     </div>"`;
 pr-12325
+</Plus>
+              </Button>
+            </CardContent>
+          </Card>
+      </div>
+    </div>"
+

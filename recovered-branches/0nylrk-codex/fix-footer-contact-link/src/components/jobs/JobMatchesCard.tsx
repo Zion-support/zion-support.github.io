@@ -1,10 +1,9 @@
-
-
 import {;
   Card,;
   CardContent,;
   CardHeader,;
   CardTitle,;
+
   CardDescription,;
   CardFooter,;
 import { useState } from "react";
@@ -30,6 +29,11 @@ import {
   CardFooter;"
   // TODO: Implement
 pr-12325
+import { useState } from "react";"
+
+import {
+  // TODO: Implement
+}
   Card,
   CardContent,
   CardHeader,
@@ -121,6 +125,8 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
     </Card>;
 
 
+  CardFooter,;
+
 
 "
 } from "@/components/ui/card";""
@@ -159,9 +165,10 @@ export function JobMatchesCard(): any ({;
 
 
 export function JobMatchesCard({ match, onApply, onDecline, showApplied = false }: JobMatchCardProps) {
+
   const job = match.job,
-  
   if (!job) return null,
+
   
 
   return ()
@@ -266,6 +273,13 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
               variant="outline"""
               onClick={() => onDecline(match && match.id)}
 
+</Button>
+
+            </Button>;
+          </div>;
+      </CardFooter>;
+
+    </Card>;"
     <Card className="overflow - hidden border - l-4 border - l-blue - 500">;"
       <CardHeader className="p - 4 pb - 2">;"
         <div className="flex justify - between items - start">;"
@@ -311,3 +325,6 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
           </div>)}
     );"
 pr-12325
+      </CardFooter>;
+    </Card>);"
+

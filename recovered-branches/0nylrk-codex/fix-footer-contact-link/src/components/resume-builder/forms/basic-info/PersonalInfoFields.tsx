@@ -18,6 +18,9 @@ import {
   // TODO: Implement
 }
 pr-12325
+import {
+  // TODO: Implement
+}
   FormField,
   FormItem,
   FormLabel,
@@ -273,6 +276,51 @@ function PersonalInfoFields() {
             
 
           
+</Input>
+
+            </FormControl>
+            <FormMessage />
+</FormMessage>
+          </FormItem>
+
+      <FormField;
+        control={control}"
+        name="email"")
+        render={({ field }) => (
+</FormField>
+          <FormItem>
+</FormItem>
+            <FormLabel>Email</FormLabel>
+            <FormControl>
+</FormControl>"
+              <Input type="email" placeholder="john@example.com" {...field} />"
+</Input>
+
+            </FormControl>
+            <FormMessage />
+</FormMessage>
+          </FormItem>
+
+      <FormField;
+        control={control}"
+        name="phone"")
+        render={({ field }) => (
+</FormField>
+          <FormItem>
+</FormItem>
+            <FormLabel>Phone</FormLabel>
+            <FormControl>
+</FormControl>"
+              <Input placeholder="+1 234 567 8900" {...field} />"
+</Input>
+
+            </FormControl>
+            <FormMessage />
+</FormMessage>
+          </FormItem>
+    </div>
+
+          </FormItem>;
     </div>;
   control: Control<BasicInfoFormData> 
   return (<div className="grid grid-cols-1 md:grid-cols-2 gap-6" > <FormField control= {"
@@ -285,3 +333,4 @@ function PersonalInfoFields() {
 
 }/> </div>) "
 pr-12325
+

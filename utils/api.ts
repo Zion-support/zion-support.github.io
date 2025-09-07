@@ -11,95 +11,12 @@
   signal?: AbortSignal | null;
   window?: any;
   timeout?: number;
+export interface ApiResponse<T = any> {
+  data: T;
+  success: boolean;
+  message?: string;
+  error?: string;
 }
-interface AbortSignal extends EventTarget {
-  aborted: boolean;
-  onabort: ((this: AbortSignal, ev: Event) => any) | null;
-}
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'https://api.ziontechgroup.com';
-export class ApiClient {
-  private baseURL: string;
-  private defaultHeaders: Record<string, string>;
-  constructor(baseURL: string = API_BASE_URL) {
-    this.baseURL = baseURL;
-    this.defaultHeaders = {
-      'Content-Type': 'application/json',
-    };
-  }
-  private async request<T>(
-    endpoint: string,
-    options: RequestInit = {}
-  ): Promise<T> {
-    const url = `${this.baseURL}${endpoint}`;
-    const config: RequestInit = {
-      ...options,
-      headers: {
-        ...this.defaultHeaders,
-        ...options.headers,
-      },
-    };
-    try {
-      const response = await fetch(url, config);
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
-      return await response.json();
-    } catch (error) {
-      console.error('API request failed:', error);
-      throw error;
-    }
-  }
-  async get<T>(endpoint: string, options?: RequestInit): Promise<T> {
-    return this.request<T>(endpoint, {
-      ...options,
-      method: 'GET',
-    });
-  }
-  async post<T>(endpoint: string, data?: any, options?: RequestInit): Promise<T> {
-    return this.request<T>(endpoint, {
-      ...options,
-      method: 'POST',
-      body: data ? JSON.stringify(data) : undefined,
-    });
-  }
-  async put<T>(endpoint: string, data?: any, options?: RequestInit): Promise<T> {
-    return this.request<T>(endpoint, {
-      ...options,
-      method: 'PUT',
-      body: data ? JSON.stringify(data) : undefined,
-    });
-  }
-  async delete<T>(endpoint: string, options?: RequestInit): Promise<T> {
-    return this.request<T>(endpoint, {
-      ...options,
-      method: 'DELETE',
-    });
-  }
-}
-// Define AbortSignal if not available
-interface AbortSignal extends EventTarget {
-  aborted: boolean;
-  onabort: ((this: AbortSignal, ev: Event) => any) | null;
-
-}
-};
-export const apiClient = new ApiClient();
-export type { ApiResponse, RequestOptions };
-;
-interface ApiResponse<T = unknown> {
-  data?: T;
-  error?: string;  success: boolean;
-}
-interface RequestOptions extends RequestInit {
-  timeout?: number;
-}
-declare global {
-  interface RequestInit {
-    timeout?: number;
-  }
-}
-class ApiClient {
-  private baseURL: string;
 
 export interface RequestOptions {
   method?: 'GET' | 'POST' | 'PUT' | 'DELETE';
@@ -110,36 +27,43 @@ export interface RequestOptions {
 class ApiClient {
   private baseUrl: string;
 
-  constructor(baseUrl: string = '') {
+  constructor(baseUrl: string = '/api') {
     this.baseUrl = baseUrl;
   }
 
-  async request<T = any>(endpoint: string, options: RequestOptions = {}): Promise<ApiResponse<T>> {
-    const { method = 'GET', headers = {}, body } = options;
-    
+  async request<T>(endpoint: string, options: RequestOptions = {}): Promise<ApiResponse<T>> {
     try {
       const response = await fetch(`${this.baseUrl}${endpoint}`, {
-        method,
+        method: options.method || 'GET',
         headers: {
           'Content-Type': 'application/json',
-          ...headers
+          ...options.headers,
         },
-        body: body ? JSON.stringify(body) : undefined
+        body: options.body ? JSON.stringify(options.body) : undefined,
       });
 
       const data = await response.json();
-      
+
+      if (!response.ok) {
+        return {
+          data: null,
+          success: false,
+          error: data.message || 'Request failed',
+        };
+      }
+
       return {
         data,
-        success: response.ok
+        success: true,
       };
     } catch (error) {
       return {
-        data: null as any,
+        data: null,
         success: false,
-        message: error instanceof Error ? error.message : 'Unknown error'
+        error: error instanceof Error ? error.message : 'Unknown error',
       };
-    }  }
+    }
+  }
 }
 
 export const apiClient = new ApiClient();
@@ -164,3 +88,4 @@ export interface ApiResponse<T = any> {
 </string>
   async request<T = any>(endpoint: string, options: RequestOptions = {}): Promise<ApiResponse<T>> {
 pr-12325
+export const apiClient = new ApiClient();

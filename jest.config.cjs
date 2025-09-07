@@ -1,23 +1,16 @@
-<<<<<<< HEAD
 const nextJest = require('next/jest');
+
 const createJestConfig = nextJest({
   dir: './',
 });
 
 const customJestConfig = {
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
-  moduleNameMapping: {
-    '^@/(.*)$': '<rootDir>/$1',
-  },
   testEnvironment: 'jsdom',
-  testMatch: [
-    '<rootDir>/__tests__/**/*.(test|spec).(js|jsx|ts|tsx)',
-    '<rootDir>/src/**/*.(test|spec).(js|jsx|ts|tsx)',
-    '<rootDir>/tests/**/*.(test|spec).(js|jsx|ts|tsx)',
-  ],
   testPathIgnorePatterns: [
     '<rootDir>/.next/',
     '<rootDir>/node_modules/',
+<<<<<<< HEAD
     '<rootDir>/dist/',
     '<rootDir>/build/',
     '<rootDir>/backup-problematic-files/',
@@ -30,11 +23,19 @@ const customJestConfig = {
     '<rootDir>/backup*/',
     '<rootDir>/corrupted_backup/',
     '<rootDir>/temp_*/',
+=======
+    '<rootDir>/src.disabled/',
+    '<rootDir>/components.disabled/',
+    '<rootDir>/pages.disabled/',
+    '<rootDir>/src/__tests__/.*\.test\.tsx?$'
+  ],
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
   collectCoverageFrom: [
     'src/**/*.{js,jsx,ts,tsx}',
     '!src/**/*.d.ts',
     '!src/**/*.stories.{js,jsx,ts,tsx}',
     '!src/**/*.test.{js,jsx,ts,tsx}',
+<<<<<<< HEAD
     '!src/**/*.spec.{js,jsx,ts,tsx}',
   coveragePathIgnorePatterns: [
   coverageThreshold: {
@@ -63,3 +64,16 @@ module.exports = {
     '^@/(.*)$': '<rootDir>/src/$1
   testTimeout: 10000
 >>>>>>> cursor/automate-test-improve-and-merge-code-6b26
+=======
+  ],
+  moduleNameMapping: {
+    '^@/(.*)$': '<rootDir>/src/$1',
+  },
+  testMatch: [
+    '<rootDir>/src/__tests__/**/*.test.{js,jsx,ts,tsx}',
+    '<rootDir>/src/**/*.test.{js,jsx,ts,tsx}',
+  ],
+};
+
+module.exports = createJestConfig(customJestConfig);
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a

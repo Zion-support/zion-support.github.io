@@ -22,6 +22,7 @@ type DisputeFormProps = {
   milestoneId?: string,
   onDisputeCreated?: (disputeId: string) => void,
   onCancel?: () => void
+
 import React, { useState } from "react";""
 import {useForm} from "react-hook-form";""
 import {zodResolver} from "@hookform/resolvers/zod";""
@@ -66,17 +67,17 @@ const formSchema = z.object({)
     .min(1, { message: "Please select a reason for the dispute" })"
   description: z.string()"
     .min(20, { message: "Description must be at least 20 characters" })"
+
   attachments: z.array(z.any()).optional()})
 type DisputeFormProps = {
-
-
-  projectId: string,
   milestoneId?: string,
+
   onDisputeCreated?: (disputeId: string) => void,
   onCancel?: () => void;
 pr-12325
 },
 
+},
 export function DisputeForm({ 
   projectId, 
   milestoneId, 
@@ -189,6 +190,98 @@ if ( {) {
       const new_files = Array.from (e.target.files),
       set_files (prev => [...prev, ...new_files]);
       form.set_value ("attachments", [...files, ...new_files]);
+  onCancel;
+
+  const form = useForm<z.infer<typeof formSchema>>({
+</z>)
+  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+</HTMLInputElement>
+  const [files, setFiles] = useState<File[]>([]);
+</File>
+
+  const form = useForm<z && z.infer<typeof formSchema>>({;
+</z>)
+  const handleFileChange = (e: React && React.ChangeEvent<HTMLInputElement>) => {;
+</HTMLInputElement>
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+</typeof>
+  async function onSubmit(): any (values: z && z.infer<typeof formSchema>) {;
+</typeof>
+          <FormField;
+            control={form.control}"
+            name="reason_code""
+            render={({ field }) => (
+</FormField>
+              <FormItem>
+</FormItem>
+                <FormLabel>Reason for dispute</FormLabel>
+                <Select onValueChange={field.onChange} defaultValue={field.value}>
+</Select>
+                  <FormControl>
+</FormControl>
+                    <SelectTrigger>
+</SelectTrigger>"
+                      <SelectValue placeholder="Select a reason" />"
+</SelectValue>
+                    </SelectTrigger>
+                  </FormControl>
+                  <SelectContent>
+</SelectContent>
+                      <SelectItem key={value} value={value}>{label}</SelectItem>)
+  const [files, setFiles] = useState<File[]>([]),;
+</File>
+  const form = useForm<z.infer<typeof formSchema>>({;
+</z>)
+  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {;
+</HTMLInputElement>
+          <FormField;
+            control={form.control}"
+            name="reason_code""
+      setFiles(prev => [...prev, ...newFiles]);
+</FormField>"
+    <div className="space-y-6">;"
+</div>"
+      <div className="flex items-center space-x-2">;"
+</div>"
+        <FileText className="h-5 w-5 text-primary" />;"
+</FileText>"
+        <h2 className="text-xl font-semibold">Report an Issue</h2>;"
+      </div>;
+      <Form {...form}>;
+</Form>"
+        <form onSubmit={form && form.handleSubmit(onSubmit)} className="space-y-6">;"
+</form>
+          <FormField;
+            control={form && form.control}"
+            name="reason_code""
+            render={({ field }) => (;
+</FormField>
+              <FormItem>;
+</FormItem>
+                <FormLabel>Reason for dispute</FormLabel>;
+                <Select onValueChange={field && field.onChange} defaultValue={field && field.value}>;
+</Select>)
+
+  const [files, set_files] = useState < File[]>([]);
+;
+  const form = use_form < z.infer < typeof form_schema>>({)
+    resolver: zod_resolver (form_schema),
+
+    default_values: {,"
+  reason_code: "",""
+      description: "","
+      attachments: []}}),
+  const handleFileChange = (e: React.ChangeEvent < HTMLInputElement>) =>: any {
+  // TODO: Implement
+}
+    // Check condition;
+if ( {) {
+  $2;
+}
+      const new_files = Array.from (e.target.files),
+      set_files (prev => [...prev, ...new_files]);"
+      form.set_value ("attachments", [...files, ...new_files]);"
+
     }
   }
 ;
@@ -282,8 +375,12 @@ if ( {) {
   // TODO: Implement
     const new_files = [...files],
     new_files.splice (index, 1);
+
     set_files (new_files);"
     form.set_value ("attachments", new_files);"
+
+  }
+;
   async /**
  * on_submit - Function description;
  */
@@ -291,9 +388,11 @@ function on_submit() {
     try {
   // TODO: Implement
 pr-12325
+}
       setIsSubmitting (true),
       const dispute = await create_dispute ({
         project_id: project_id,
+
         milestone_id: milestone_id,
         reason_code: values.reason_code,
         description: values.description}),
@@ -314,6 +413,28 @@ if ( {) {
         // Check condition
 if ( {) {
   $2
+        reason_code: values.reason_code,)
+        description: values.description}),
+      // Check condition;
+if ( {) {
+  $2;
+
+}
+        // Future enhancement: Upload attachments;
+        // For now we just log the files that would be uploaded;
+        // Check condition;
+
+if ( {) {
+  $2;
+}
+          console.log (`Would upload ${files.length} files for dispute ${dispute.id}`);
+        }"
+        toast.success ("Your dispute has been submitted");"
+;
+        // Check condition;
+if ( {) {
+  $2;
+
 }
           onDisputeCreated (dispute.id);
         }
@@ -359,7 +480,92 @@ if ( {) {
                     placeholder="Please provide specific details about the issue..."
                     className="min-h-[150px]"
                     {Object.entries (disputeReasonLabels).map (([value, label]) => (
+
+    } catch (error) {"
+      console.error ("Error submitting dispute:", error);""
+      toast.error ("Failed to submit dispute. Please try again.");"
+    } finally {
+  // TODO: Implement
+}
+      setIsSubmitting (false);
+    }
+  }
+  return ("
+    <div className="space - y-6">;"
+</div>"
+      <div className="flex items - center space - x-2">;"
+</div>"
+        <FileText className="h - 5 w - 5 text - primary" />;"
+</FileText>"
+        <h2 className="text - xl font - semibold">Report an Issue</h2>;"
+      </div>;
+      <Form {...form}>;
+</Form>)"
+        <form on_submit={form.handle_submit (on_submit)} className="space - y-6">;"
+</form>
+          <FormField;
+            control={form.control}"
+            name="reason_code";"
+            render={({ field }) => (
+</FormField>
+              <FormItem>;
+</FormItem>
+                <FormLabel > Reason for dispute</FormLabel>;
+                <Select onValueChange={field.on_change} default_value={field.value}>;
+</Select>
+          <FormField;
+            control={form && form.control}"
+            name="description""
+      ;
+      <Form {...form}>;
+</FormField>)"
+        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">;"
+</form>
+          <FormField;
+            control={form.control}"
+            name="reason_code";"
+            render={({ field }) => (;
+</FormField>
+              <FormItem>;
+</FormItem>
+                <FormLabel>Reason for dispute</FormLabel>;
+                <Select onValueChange={field.onChange} defaultValue={field.value}>;
+</Select>
+                  <FormControl>;
+</FormControl>
+                    <SelectTrigger>;
+</SelectTrigger>"
+                      <SelectValue placeholder="Select a reason" />;"
+</SelectValue>
+                    </SelectTrigger>;
+                  </FormControl>;
+                  <SelectContent>;
+</SelectContent>
+                      <SelectItem key={value} value={value}>{label}</SelectItem>;
+                  </SelectContent>;
+
+                </Select>;
+                <FormMessage />;
+</FormMessage>
+              </FormItem>;
+
+          <FormField;
+            control={form && form.control}"
+            name="description"")
+            render={({ field }) => (;
+</FormField>
+              <FormItem>;
+</FormItem>
+                <FormLabel>Describe the issue in detail</FormLabel>;
+                <FormControl>;
+</FormControl>
+                  <Textarea;"
+                    placeholder="Please provide specific details about the issue..."""
+                    className="min-h-[150px]"")
+                    {Object.entries (disputeReasonLabels).map (([value, label]) => (
+</Textarea>)
                       <SelectItem key={value} value={value}>{label}</SelectItem>))}
+
                   </SelectContent>;
                 </Select>;
                 <FormMessage />;
@@ -466,6 +672,19 @@ if ( {) {
 
                 <FormLabel>Describe the issue in detail;
 
+</FormMessage>
+              </FormItem>)}
+          <FormField;
+
+            control={form.control}"
+            name="description";"
+            render={({ field }) => (
+</FormField>
+              <FormItem>;
+</FormItem>
+                <FormLabel > Describe the issue in detail</FormLabel>;
+                <FormControl>;
+</FormControl>
                   <Textarea;"
                     placeholder="Please provide specific details about the issue..."""
                     className="min-h-[150px]"")
@@ -481,11 +700,22 @@ if ( {) {
                     placeholder="Please provide specific details about the issue...";""
                     className="min - h-[150px]";"
                     className="min-h-[150px]";"
+
                     {...field}
                   />;
 
 
             <FormLabel>Attachments (optional);
+</Textarea>
+                </FormControl>;
+                <FormMessage />;
+
+</FormMessage>
+          <FormItem>;
+</FormItem>)
+            <FormLabel>Attachments (optional)</FormLabel>;
+            <FormControl>;
+</FormControl>"
               <div className="space-y-4">;"
 </div>
                 <Input;"
@@ -548,6 +778,23 @@ if ( {) {
             
       
                           
+</Button>
+            </Button>;
+
+          </div>;
+        </form>;
+      </Form>;
+    </div>);
+
+            </Button>
+
+          </div>
+        </form>
+      </Form>
+    </div>
+
+                          </Button>
+                        </li>
                     </ul>
             
             <FormMessage />
@@ -580,3 +827,6 @@ if ( {) {
 }</div>  <FormMessage />   </div> </form>  </div>) 
 "`;
 pr-12325
+}</div> </FormControl> <FormMessage /> </FormItem> </Button> </div> </form> </Form> </div>) 
+</FormMessage>"
+

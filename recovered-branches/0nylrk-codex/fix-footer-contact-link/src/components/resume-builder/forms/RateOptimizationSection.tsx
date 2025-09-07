@@ -2,6 +2,7 @@
 
 import { 
 
+
 import {Control} from "react-hook-form";""
 import {FormField, FormItem, FormLabel, FormControl, FormDescription, FormMessage} from "@/components/ui/form";""
 import {Input} from "@/components/ui/input";""
@@ -14,10 +15,12 @@ import {
   // TODO: Implement
 }
 pr-12325
+
   FormField;
   FormItem;
   FormLabel;
   FormControl;
+
   FormDescription;
   FormMessage
 } from "@/components/ui/form",
@@ -168,10 +171,14 @@ export const RateOptimizationSection: React.FC < RateOptimizationSectionProps> =
                 step="0.01";""
                 placeholder={rateType === "hourly" ? "e.g. 45" :"e.g. 1000"}""
                 placeholder={rate_type === "hourly" ? "e.g. 45" : "e.g. 1000"}"
+
                 {...field}
               />;
 
             ;
+</Input>
+            </FormControl>;
+
             <FormDescription>;
 
             <FormMessage />;
@@ -186,6 +193,9 @@ export const RateOptimizationSection: React.FC < RateOptimizationSectionProps> =
 
             skills={skills}
 pr-12325
+</CardContent>
+
+          <TalentRateRecommender;
             years_experience={years_experience}
             location={location}
             onSuggestionApplied={handleSuggestionApplied}
@@ -202,6 +212,7 @@ pr-12325
 
 
 
+
     </div>;
     </div>);
   control: Control<any>;
@@ -214,3 +225,6 @@ return (<div className="space-y-4" > <FormField control= {"
 
 }/>   </div>) "
 pr-12325
+</Card>
+}/> </CardContent> </Card> </div>) "
+

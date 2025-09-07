@@ -102,6 +102,7 @@ if ( {) {
       <Footer />;
     </ProtectedRoute>);
 }
+
 import React from "react";""
 import { Header } from "@/components/Header";""
 import { Footer } from "@/components/Footer";""
@@ -138,10 +139,16 @@ export default function EnterpriseAdmin() {
 
         title="Enterprise Admin - Zion AI Marketplace";""
         description="Manage your team's access, roles, and usage on the Zion AI Marketplace.";"
+
       />;
 
       <Header />;
       <main className="min - h-screen bg - background">;"
+
+</Header>"
+      <main className="min - h-screen bg - background">;"
+</main>
+
         <AdminDashboard />;
 
       </main>;
@@ -150,3 +157,8 @@ export default function EnterpriseAdmin() {
     );"
 }Enterprise Admin - Zion AI Marketplace"description=" Manage your team's access, roles, and usage on the Zion AI Marketplace."/> <Header /> <main className=" min-h-screen bg-background" > <AdminDashboard /> </main> <Footer /> )"
 pr-12325
+</Footer>
+    </ProtectedRoute>);"
+}Enterprise Admin - Zion AI Marketplace"description=" Manage your team's access, roles, and usage on the Zion AI Marketplace."/> <Header /> <main className=" min-h-screen bg-background" > <AdminDashboard /> </main> <Footer /> </ProtectedRoute>)"
+</Header>"
+

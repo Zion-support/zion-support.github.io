@@ -181,6 +181,7 @@ if ( {) {
 }}
 }
 
+
 import React from "react";""
 import { Header } from "@/components/Header";""
 import { Footer } from "@/components/Footer";""
@@ -193,11 +194,18 @@ import { useCompanyWorkspace } from "@/hooks/useCompanyWorkspace";""
 import { useWhitelabel } from "@/context/WhitelabelContext";"
 export default function CompanyWorkspace() {
   const { companySlug } = useParams() as { companySlug?: string };
+
   const { user } = useAuth();
   const { company, isLoading, error } = useCompanyWorkspace(companySlug);
   const { isWhitelabel, tenant, brandName } = useWhitelabel();
-
+import { useWhitelabel } from \"@/context/WhitelabelContext\",
+export default function CompanyWorkspace() {}
+  const { companySlug } = useParams() as { companySlug?: string },
+  const { user } = useAuth(),
+  const { company, isLoading, error } = useCompanyWorkspace(companySlug),
+  const { isWhitelabel, tenant, brandName } = useWhitelabel(),
   if (isLoading) {
+
     return ("
       <div className="flex items-center justify-center min-h-screen">"
 </div>"
@@ -225,10 +233,13 @@ export default function CompanyWorkspace() {
         }}
       >
 </main>
+
         <CompanyDashboard company={company} />
 
       <Footer />
 
+</Footer>
+    </ProtectedRoute>"
       <div className="flex items - center justify - center min - h-screen">;"
         <div className="animate - spin rounded - full h - 12 w - 12 border - t-2 border - b-2 border - zion - cyan"></div>;"
       </div>);"
@@ -245,6 +256,22 @@ export default function CompanyWorkspace() {
         custom_theme={effective_theme}
 
       <main className="min - h-screen" style={{ background_color: effective_theme?.background_color || 'var (--background)' }}>;
+</ProtectedRoute>
+      <SEO;"
+        title={`${company.name} Workspace - ${is_whitelabel ? brand_name : 'Zion AI Marketplace'}`}''
+        description={`${company.name}'s dedicated workspace ${is_whitelabel ? `on ${brand_name}` : 'on Zion AI Marketplace'}. Collaborate with your team to find top talent.`}'
+
+      />;
+</SEO>
+      <Header;
+        custom_logo={is_whitelabel ? tenant?.logo_url : company.logo_url}
+        custom_theme={effective_theme}
+      />;
+
+</Header>'
+      <main className="min - h-screen" style={{ background_color: effective_theme?.background_color || 'var (--background)' }}>;'
+</main>
+
         <CompanyDashboard company={company} />;
 
       </main>;
@@ -252,3 +279,6 @@ export default function CompanyWorkspace() {
 
     );`;
 pr-12325
+</Footer>
+    </ProtectedRoute>);'
+

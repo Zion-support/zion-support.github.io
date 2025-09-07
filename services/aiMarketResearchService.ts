@@ -254,6 +254,7 @@ export interface MarketTrend {;
 
 export const aiMarketResearchService = new AIMarketResearchService(process.env.MARKET_RESEARCH_API_KEY || 'demo-key');
 export interface MarketTrend {;
+export interface MarketTrend  {export interface MarketTrend  {id: string;
 
 export interface MarketTrend {
   // TODO: Implement
@@ -261,6 +262,7 @@ export interface MarketTrend {
 export interface MarketTrend {;
   id: string;,
   keyword: string;
+
   searchVolume: number;,
   trendDirection: 'rising' | 'falling' | 'stable';
   growthRate: number;,
@@ -278,6 +280,9 @@ export interface MarketTrend {;
 
   // TODO: Implement
 
+
+}
+  id: string;,
   competitor_name: string;
   website: string;,
   market_share: number;
@@ -291,6 +296,8 @@ export interface MarketTrend {;
   socialMediaPresence: Record < string, number>;
   last_updated: Date;
 
+}
+
 export interface MarketSegment {
   // TODO: Implement
   // TODO: Implement
@@ -298,12 +305,26 @@ export interface MarketSegment {
   size: number;
 export interface MarketReport {
   // TODO: Implement
+
+}
   pricingStrategy: string;,
   featureComparison: Record<string, boolean>;
 </string>
   socialMediaPresence: Record<string, number>;
 
   // TODO: Implement
+</string>
+  feature_comparison: Record < string, boolean>;
+  socialMediaPresence: Record < string, number>;
+  last_updated: Date;}
+}
+}
+export interface MarketSegment {
+  // TODO: Implement
+}
+  id: string;,
+  name: string;
+
   size: number;,
   growth_rate: number,
   demographics: Record < string, any>;
@@ -315,6 +336,7 @@ export interface MarketReport {
   // TODO: Implement
   title: string;
   industry: string;,
+
   summary: string;
   key_findings: string[];,
   market_size: number;
@@ -325,6 +347,18 @@ export interface MarketReport {
   generated_at: Date,
   expires_at: Date;
 
+  expires_at: Date;}
+}
+}
+export interface MarketResearchRequest {  success: boolean;}
+  data: {trends?: MarketTrend[];}
+    competitors?: CompetitorAnalysis[];  }
+  async analyzeMarketTrends(request: MarketResearchRequest): Promise<MarketTrend[] /> {try {const response = await fetch(`${this && this.baseUrl}/api/market-research/trends`, {      const response = await fetch(`${this && this.baseUrl}/api/market-research/trends`, {method: 'POST',}
+  headers: {'Authorization': `Bearer ${this && this.apiKey}`;
+          'Content-Type': 'application/json'}body: JSON && JSON.stringify(request)})method: 'POST',
+  headers: {'Authorization': `Bearer ${this && this.apiKey}`;
+          'Content-Type': 'application/json'}body: JSON && JSON.stringify(request)})if (!response && response.ok) {throw new Error(`HTTP error! status: ${response && response.status}`)}const data  = await response && response.json()} catch (error) {console && console.error('Error analyzing market trends:', error)throw error;}
+    }
 export interface MarketResearchRequest {
   // TODO: Implement
   target_market: string;
@@ -333,6 +367,9 @@ export interface MarketResearchRequest {
   includeHistoricalData: boolean,
   custom_metrics?: string[];
 
+  custom_metrics?: string[];}
+}
+}
 export interface MarketResearchResponse {
   // TODO: Implement
   success: boolean;,
@@ -348,6 +385,9 @@ export class AIMarketResearchService {;
 
   private baseUrl: string;
   constructor(apiKey: string, baseUrl: string = 'https://api.ziontechgroup.com') {
+
+  private baseUrl: string;'
+  constructor(apiKey: string, baseUrl: string = 'https://api.ziontechgroup.com') {'
     this.apiKey = apiKey;
     this.baseUrl = baseUrl;
   async analyzeMarketTrends(request: MarketResearchRequest): Promise<MarketTrend[]> {
@@ -386,11 +426,16 @@ export class AIMarketResearchService {;
 if ( {) {
   $2;
 }`;
+
+}
         throw new Error (`HTTP error! status: ${response.status}`);
       const data = await response.json ();
       return data.trends || [];
     } catch (error) {
       console.error ('Error analyzing market trends:', error);
+
+    } catch (error) {'
+      console.error ('Error analyzing market trends:', error);'
       throw error;
   async analyze_competitors (request: MarketResearchRequest): Promise < CompetitorAnalysis[]> {
   // TODO: Implement
@@ -398,18 +443,60 @@ if ( {) {
       // Check condition;
       return data.competitors || [];
       console.error ('Error analyzing competitors:', error);
+if ( {) {
+  $2;
+
+}
+        throw new Error (`HTTP error! status: ${response.status}`);
+      }
+      const data = await response.json ();
+      return data.competitors || [];
+
+    } catch (error) {'
+      console.error ('Error analyzing competitors:', error);'
+      throw error;
+    }
+  }
   async segment_market (request: MarketResearchRequest): Promise < MarketSegment[]> {
   // TODO: Implement
       const response = await fetch (`${this.base_url}/api / market - research / segments`, {
       // Check condition;
       return data.segments || [];
       console.error ('Error segmenting market:', error);
+if ( {) {
+  $2;
+
+}
+        throw new Error (`HTTP error! status: ${response.status}`);
+      }
+      const data = await response.json ();
+      return data.segments || [];
+
+    } catch (error) {'
+      console.error ('Error segmenting market:', error);'
+      throw error;
+    }
+  }
   async generateComprehensiveReport (request: MarketResearchRequest): Promise < MarketReport> {
   // TODO: Implement
       const response = await fetch (`${this.base_url}/api / market - research / comprehensive`, {
       // Check condition;
       return data.report;
       console.error ('Error generating comprehensive report:', error);
+if ( {) {
+  $2;
+
+}
+        throw new Error (`HTTP error! status: ${response.status}`);
+      }
+      const data = await response.json ();
+      return data.report;
+
+    } catch (error) {'
+      console.error ('Error generating comprehensive report:', error);'
+      throw error;
+    }
+  }
   async getRealTimeInsights (keyword: string): Promise < MarketTrend[]> {
   // TODO: Implement
       const response = await fetch (`${this.base_url}/api / market - research / realtime?keyword=${encodeURIComponent (keyword)}`, {
@@ -417,6 +504,22 @@ if ( {) {
       // Check condition;
       console.error ('Error getting real - time insights:', error);
   async export_report (report_id: string, format: 'pdf' | 'csv' | 'excel'): Promise < string> {
+if ( {) {
+  $2;
+
+}
+        throw new Error (`HTTP error! status: ${response.status}`);
+      }
+      const data = await response.json ();
+      return data.trends || [];
+
+    } catch (error) {'
+      console.error ('Error getting real - time insights:', error);'
+      throw error;
+    }
+  }'
+  async export_report (report_id: string, format: 'pdf' | 'csv' | 'excel'): Promise < string> {'
+    try {
   // TODO: Implement
       const response = await fetch (`${this.base_url}/api / market - research / export/${report_id}`, {
         body: JSON.stringify ({ format })});
@@ -424,6 +527,22 @@ if ( {) {
       return data.download_url;
       console.error ('Error exporting report:', error);
   async schedule_report (request: MarketResearchRequest, schedule: 'daily' | 'weekly' | 'monthly'): Promise < string> {
+if ( {) {
+  $2;
+
+}
+        throw new Error (`HTTP error! status: ${response.status}`);
+      }
+      const data = await response.json ();
+      return data.download_url;
+
+    } catch (error) {'
+      console.error ('Error exporting report:', error);'
+      throw error;
+    }
+  }'
+  async schedule_report (request: MarketResearchRequest, schedule: 'daily' | 'weekly' | 'monthly'): Promise < string> {'
+    try {
   // TODO: Implement
       const response = await fetch (`${this.base_url}/api / market - research / schedule`, {
         body: JSON.stringify ({ ...request, schedule })});
@@ -436,6 +555,34 @@ export const aiMarketResearchService = new AIMarketResearchService (process.env.
 export const aiMarketResearchService = new AIMarketResearchService(process.env.MARKET_RESEARCH_API_KEY || 'demo-key');
 
 pr-12325
+if ( {) {
+  $2;
+
+}
+        throw new Error (`HTTP error! status: ${response.status}`);
+      }
+      const data = await response.json ();
+      return data.schedule_id;
+
+    } catch (error) {'
+      console.error ('Error scheduling report:', error);'
+      throw error;
+
+    }
+  }
+}'
+export const aiMarketResearchService = new AIMarketResearchService (process.env.MARKET_RESEARCH_API_KEY || 'demo - key');'
+;
+
+export interface MarketTrend {;
+'
+export const aiMarketResearchService = new AIMarketResearchService(process.env.MARKET_RESEARCH_API_KEY || 'demo-key');'
+export interface MarketTrend {;
+
+'
+export const aiMarketResearchService = new AIMarketResearchService(process.env.MARKET_RESEARCH_API_KEY || 'demo-key');'
+
+export interface MarketTrend {;
   id:string,;
   keyword:string,;
   searchVolume:number,;
@@ -443,7 +590,11 @@ pr-12325
   growthRate:number,;
   relatedKeywords:string[],;
   marketOpportunity:'high' | 'medium' | 'low',;
+
+  relatedKeywords:string[],;'
+  marketOpportunity:'high' | 'medium' | 'low',;'
   timestamp:Date;
+
 }
 ;
 export interface CompetitorAnalysis {;
@@ -458,6 +609,7 @@ pr-12325
   opportunities:string[],;
   threats:string[],;
   pricingStrategy:string,;
+
   featureComparison:Record<string boolean>,;
   socialMediaPresence:Record<string number>,;
   lastUpdated:Date;
@@ -673,6 +825,9 @@ export class AIMarketResearchService {;
 ;
 export const aiMarketResearchService = new AIMarketResearchService(process.env.MARKET_RESEARCH_API_KEY || 'demo-key');
 export const aiMarketResearchService = new AIMarketResearchService(process.env.MARKET_RESEARCH_API_KEY || 'demo-key');
+</string>
+  socialMediaPresence:Record<string number>,;
+</string>
   demographics:Record<string any>,;
   psychographics:Record<string any>,;
   buyingBehavior:Record<string any>,;
@@ -690,3 +845,9 @@ export const aiMarketResearchService = new AIMarketResearchService(process.env.M
   async scheduleReport(request: MarketResearchRequest, schedule: 'daily' | 'weekly' | 'monthly'): Promise<string> {;
 </string>`;
 pr-12325
+</MarketTrend>'
+  async exportReport(reportId: string, format: 'pdf' | 'csv' | 'excel'): Promise<string> {;'
+</string>'
+  async scheduleReport(request: MarketResearchRequest, schedule: 'daily' | 'weekly' | 'monthly'): Promise<string> {;'
+</string>'
+

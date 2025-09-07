@@ -305,6 +305,7 @@ const trusted_companies = [;
 ;
 
 
+
 import { GradientHeading } from "./GradientHeading",""
 import { useState } from "react",""
 import { GradientHeading } from "./GradientHeading";""
@@ -477,3 +478,5 @@ export function TrustedBySection() {
           <p className="text-zion-slate-light text-sm">And many more enterprises worldwide...</p>"
     </section>
 pr-12325
+            </div>;"
+

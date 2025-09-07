@@ -232,6 +232,7 @@ export function QuickAccess() {;
     </section>);
 }
 
+
 import React from "react",""
 import { Link } from "react-router-dom","
 import {
@@ -317,6 +318,13 @@ export function QuickAccess() {
                 <ArrowRight className="ml - 1 h - 3 w - 3" />;"
 
             ))}
+</ArrowRight>
+
+              </div>;
+            </Link>))}
+        </div>;
+      </div>;
+
     </section>);"
             <Link ;
               key={index} ;
@@ -333,3 +341,4 @@ export function QuickAccess() {
 }</div> </div> </section>) 
     </section>]"
 pr-12325
+

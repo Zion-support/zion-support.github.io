@@ -21,17 +21,21 @@ export function matchIntent(
   query: string,
   articles: HelpArticle[],
 ): IntentMatch {
+
   logEvent: (event: any) => null;,
   getArticles: () => []
+
   getArticleById: (id: string) => null;
 }
   logEvent: (event: any) => null,
   getArticles: () => [],
 };
 
+
 export const logSupportEventToOperator = (event: any) => {
   // Add support event logging functionality here;
   return null;
+
 
 
 export interface IntentMatch {
@@ -39,6 +43,10 @@ export interface IntentMatch {
   intentMatched: boolean;,
   matchedArticleIds: string[];
   confidence: number;
+  confidence: number;) => {
+  return $3;}
+}
+}
 
 export function matchIntent(
   query: string,
@@ -46,6 +54,7 @@ export function matchIntent(
 ): IntentMatch {
   // TODO: Implement
 pr-12325
+}
   const queryLower = query.toLowerCase();
   const matchedArticles: string[] = [];
   let confidence = 0;
@@ -58,30 +67,38 @@ pr-12325
     );
 
     if (titleMatch || contentMatch || tagMatch) {
-      matchedArticles && matchedArticles.push(article && article.id);
-      confidence += titleMatch ? 0 && 0.8 : contentMatch ? 0 && 0.6 : tagMatch ? 0 && 0.4 : 0;
+      matchedArticles && matchedArticles.push(article && article.id);}
+      confidence += titleMatch ? 0 && 0.8 : contentMatch ? 0 && 0.6 : tagMatch ? 0 && 0.4 : 0;}
     }
   }
 
   return {
+  // TODO: Implement
+}
     intentMatched: matchedArticles && matchedArticles.length > 0,
-    matchedArticleIds: matchedArticles,
-    confidence: Math.min(confidence, 1),
+    matchedArticleIds: matchedArticles,}
+    confidence: Math.min(confidence, 1),}
   };
 }
 
 export function getArticlesByCategory(
   articles: HelpArticle[],
   category: string,
+
+  category: string,)
 ): HelpArticle[] {
   return articles.filter((article) => article.category === category);
+
 }
 
 export function getArticlesByTag(
   articles: HelpArticle[],
   tag: string,
+
+  tag: string,)
 ): HelpArticle[] {
   return articles.filter((article) => article.tags.includes(tag));
+
 }
 
 export function searchArticles(
@@ -100,6 +117,7 @@ export function searchArticles(
 export function getArticlesByCategory(
   articles: HelpArticle[],
   category: string,)
+  query: string,)
 ): HelpArticle[] {
   return articles.filter((article) => article.category === category);
 
@@ -114,8 +132,8 @@ pr-12325
     (article) =>
       article.title.toLowerCase().includes(queryLower) ||
       article.content.toLowerCase().includes(queryLower) ||
-      article.tags.some((tag) => tag.toLowerCase().includes(queryLower)),
-  );
+      article.tags.some((tag) => tag.toLowerCase().includes(queryLower)),}
+  );}
 }
   // Add support functionality here;
   log_event: (event: any) => null,
@@ -132,3 +150,10 @@ pr-12325
   get_articles: () => [],
   // Add support event logging functionality here;
 pr-12325
+}
+export const logSupportEventToOperator = (
+  // Add support event logging functionality here;
+  return null;) => {
+  return $3;}
+}
+}

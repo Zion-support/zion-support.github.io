@@ -126,6 +126,7 @@ const AuthRoutes = () => {;
     <Routes>;
       {/* Auth Routes */}
 export default AuthRoutes;
+
 import { Fragment } from "react";""
 import { Route, Routes } from "react-router-dom";""
 import Login from "@/pages/Login";""
@@ -210,3 +211,12 @@ import ServiceOnboarding from "@/pages/ServiceOnboarding","
 )
 }/> ) "
 pr-12325
+</Route>
+}<Route <Onboarding /> </ProtectedRoute> 
+</Route>
+}/> <Route <TalentOnboarding /> </ProtectedRoute> 
+</Route>
+}/> <Route <ServiceOnboarding /> </ProtectedRoute> 
+</Route>)
+}/> </Routes>) "
+

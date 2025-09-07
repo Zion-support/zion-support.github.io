@@ -22,10 +22,8 @@ export async function ensureDisputeUploadDir(caseId: string): Promise<string> {;
 export function read_json < T>(file_path: string, default_value: T): T {
 main
 import fs from 'fs';
+import { promises as fs } from 'fs';
 import path from 'path';
-import { promisify } from 'util';
-import crypto from 'crypto';
-import { DisputeCase } from '../types/disputes';
 
 const mkdir = promisify(fs.mkdir);
 const readFile = promisify(fs.readFile);
@@ -251,170 +249,49 @@ export class FSDatabase {
   constructor(basePath: string = './data/fsdb') {
     this.basePath = basePath;
     this.ensureBasePath();
-  }
-
-  private ensureBasePath(): void {
-    if (!fs.existsSync(this.basePath)) {
-      fs.mkdirSync(this.basePath, { recursive: true });
-    }
-  }
-
-  private getCollectionPath(collectionName: string): string {
-    return path.join(this.basePath, collectionName);
-  }
-
-  private ensureCollectionPath(collectionName: string): void {
-    const collectionPath = this.getCollectionPath(collectionName);
-    if (!fs.existsSync(collectionPath)) {
-      fs.mkdirSync(collectionPath, { recursive: true });
-    }
-  }
-
-  private loadCollection(collectionName: string): FSCollection {
-    const collectionPath = this.getCollectionPath(collectionName);
-    const documents = new Map<string, FSDocument>();
-
-    if (fs.existsSync(collectionPath)) {
-      const files = fs.readdirSync(collectionPath);
-      for (const file of files) {
-        if (file.endsWith('.json')) {
-          try {
-            const filePath = path.join(collectionPath, file);
-            const content = fs.readFileSync(filePath, 'utf8');
-            const document = JSON.parse(content);
-            documents.set(document.id, {
-              ...document,
-              createdAt: new Date(document.createdAt),
-              updatedAt: new Date(document.updatedAt)
-            });
-          } catch (error) {
-            console.error(`Error loading document ${file}:`, error);
-          }
-        }
-      }
-    }
-
-    const collection: FSCollection = {
-      name: collectionName,
-      path: collectionPath,
-      documents
-    };
-
-    this.collections.set(collectionName, collection);
-    return collection;
-  }
-
-  private saveDocument(collectionName: string, document: FSDocument): void {
-    const collection = this.collections.get(collectionName) || this.loadCollection(collectionName);
-    this.ensureCollectionPath(collectionName);
-    
-    const filePath = path.join(collection.path, `${document.id}.json`);
-    fs.writeFileSync(filePath, JSON.stringify(document, null, 2));
-    
-    collection.documents.set(document.id, document);
-  }
-
-  async create(collectionName: string, data: any, id?: string): Promise<FSDocument> {
-    const documentId = id || `doc_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-    const now = new Date();
-    
-    const document: FSDocument = {
-      id: documentId,
-      data,
-      createdAt: now,
-      updatedAt: now,
-      version: 1
-    };
-
-    this.saveDocument(collectionName, document);
-    return document;
-  }
-
-  async read(collectionName: string, id: string): Promise<FSDocument | null> {
-    const collection = this.collections.get(collectionName) || this.loadCollection(collectionName);
-    return collection.documents.get(id) || null;
-  }
-
-  async update(collectionName: string, id: string, data: any): Promise<FSDocument | null> {
-    const collection = this.collections.get(collectionName) || this.loadCollection(collectionName);
-    const existingDoc = collection.documents.get(id);
-    
-    if (!existingDoc) return null;
-
-    const updatedDoc: FSDocument = {
-      ...existingDoc,
-      data: { ...existingDoc.data, ...data },
-      updatedAt: new Date(),
-      version: existingDoc.version + 1
-    };
-
-    this.saveDocument(collectionName, updatedDoc);
-    return updatedDoc;
-  }
-
-  async delete(collectionName: string, id: string): Promise<boolean> {
-    const collection = this.collections.get(collectionName) || this.loadCollection(collectionName);
-    const document = collection.documents.get(id);
-    
-    if (!document) return false;
-
-    const filePath = path.join(collection.path, `${id}.json`);
-    if (fs.existsSync(filePath)) {
-      fs.unlinkSync(filePath);
-    }
-
-    collection.documents.delete(id);
-    return true;
-  }
-
-  async list(collectionName: string, filter?: (doc: FSDocument) => boolean): Promise<FSDocument[]> {
-    const collection = this.collections.get(collectionName) || this.loadCollection(collectionName);
-    const documents = Array.from(collection.documents.values());
-    
-    if (filter) {
-      return documents.filter(filter);
-    }
-    
-    return documents;
-  }
-
-  async find(collectionName: string, query: any): Promise<FSDocument[]> {
-    const collection = this.collections.get(collectionName) || this.loadCollection(collectionName);
-    const documents = Array.from(collection.documents.values());
-    
-    return documents.filter(doc => {
-      for (const [key, value] of Object.entries(query)) {
-        if (doc.data[key] !== value) {
-          return false;
-        }
-      }
-      return true;
-    });
-  }
-
-  async count(collectionName: string): Promise<number> {
-    const collection = this.collections.get(collectionName) || this.loadCollection(collectionName);
-    return collection.documents.size;
-  }
-
-  async clear(collectionName: string): Promise<void> {
-    const collection = this.collections.get(collectionName) || this.loadCollection(collectionName);
-    
-    // Delete all files
-    for (const [id] of collection.documents) {
-      const filePath = path.join(collection.path, `${id}.json`);
-      if (fs.existsSync(filePath)) {
-        fs.unlinkSync(filePath);
-      }
-    }
-    
-    collection.documents.clear();
-  }
-
-  getCollectionNames(): string[] {
-    return Array.from(this.collections.keys());
-  }
+export interface FSDBOptions {
+  baseDir: string;
+  encoding?: BufferEncoding;
 }
+
+export class FSDB {
+  private baseDir: string;
+  private encoding: BufferEncoding;
+
+  constructor(options: FSDBOptions) {
+    this.baseDir = options.baseDir;
+    this.encoding = options.encoding || 'utf8';
+  }
+
+  async ensureDir(dirPath: string): Promise<void> {
+    const fullPath = path.join(this.baseDir, dirPath);
+    await fs.mkdir(fullPath, { recursive: true });
+  }
+
+  async writeFile(filePath: string, data: string): Promise<void> {
+    const fullPath = path.join(this.baseDir, filePath);
+    await fs.writeFile(fullPath, data, this.encoding);
+  }
+
+  async readFile(filePath: string): Promise<string> {
+    const fullPath = path.join(this.baseDir, filePath);
+    return await fs.readFile(fullPath, this.encoding);
+  }
+
+  async exists(filePath: string): Promise<boolean> {
+    const fullPath = path.join(this.baseDir, filePath);
+    try {
+      await fs.access(fullPath);
+      return true;
+    } catch {
+      return false;
+    }
+  }
+
+  async deleteFile(filePath: string): Promise<void> {
+    const fullPath = path.join(this.baseDir, filePath);
+    await fs.unlink(fullPath);
+  }
 
 // Singleton instance
 export const fsdb = new FSDatabase();
@@ -473,3 +350,9 @@ export function write_json < T>(file_path: string, data: T): void {
     const dir = path.dirname (file_path),
   // TODO: Implement
 pr-12325
+  async listFiles(dirPath: string): Promise<string[]> {
+    const fullPath = path.join(this.baseDir, dirPath);
+    const files = await fs.readdir(fullPath);
+    return files;
+  }
+}

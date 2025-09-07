@@ -1,6 +1,7 @@
 
 
 // Fix the specific syntax errors we identified;
+<<<<<<< HEAD
 const files = [
   'components/Footer.tsx',
   'components/Header.tsx',
@@ -9,6 +10,9 @@ const files = [
   'pages/blog.tsx',
   'pages/contact.tsx',
   'pages/index.tsx]
+=======
+const files = [components/Footer.tsx,components/Header.tsx,pages/about.tsx,pages/ai-services.tsx,pages/blog.tsx,pages/contact.tsx,pages/index.tsx]
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
 ];
 
 files.forEach(file => {
@@ -16,16 +20,26 @@ files.forEach(file => {
   // TODO: Implement
 })
     if (fs.existsSync(file)) {
+<<<<<<< HEAD
       let content = fs.readFileSync(file, 'utf8');
       let modified = false;
 
       // Fix hover syntax;
       if (content.includes('"hover":')) {
         content = content.replace(/"hover":\s*/g, 'hover:');
+=======
+      let content = fs.readFileSync(file,utf8);
+      let modified = false;
+
+      // Fix hover syntax;
+      if (content.includes('"hover": )) {
+        content = content.replace(/"hover":\s*/g,hover: );
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
         modified = true;
       }
 
       // Fix focus syntax;
+<<<<<<< HEAD
       if (content.includes('"focus":')) {
         content = content.replace(/"focus":\s*/g, 'focus:');
 
@@ -71,10 +85,83 @@ files.forEach(file => {
 console.log('✅ Syntax fixes completed!');
 console.log('🎉 Ready for merge process!');
 #!/usr/bin/env node;
+=======
+      if (content.includes('"focus": )) {
+        content = content.replace(/"focus":\s*/g,focus: );
+        modified = true;
+      }
+
+      // Fix group-hover syntax;
+      if (content.includes('"group-hover": )) {
+        content = content.replace(/"group-hover":\s*/g,group-hover: );
+        modified = true;
+      }
+
+      // Fix responsive breakpoints;
+      if (content.includes('"sm": )) {
+        content = content.replace(/"sm":\s*/g,sm: );
+        modified = true;
+      }
+'
+      if (content.includes('"md": )) {
+        content = content.replace(/"md":\s*/g,md: );
+        modified = true;
+      }
+'
+      if (content.includes('"lg": )) {
+        content = content.replace(/"lg":\s*/g,lg: );
+        modified = true;
+      }
+'
+      if (content.includes('"xl": )) {
+        content = content.replace(/"xl":\s*/g,xl: );
+        modified = true;
+      }
+
+      // Fix animation properties;
+      if (content.includes('"y": )) {
+        content = content.replace(/"y":\s*/g,y: );
+        modified = true;
+      }
+'
+      if (content.includes('"opacity": )) {
+        content = content.replace(/"opacity":\s*/g,opacity: );
+        modified = true;
+      }
+'
+      if (content.includes('"duration": )) {
+        content = content.replace(/"duration":\s*/g,duration: );
+        modified = true;
+      }
+'
+      if (content.includes('"delay": )) {
+        content = content.replace(/"delay":\s*/g,delay: );
+        modified = true;
+      }
+'
+      if (content.includes('"once": )) {
+        content = content.replace(/"once":\s*/g,once: );
+        modified = true;
+      }
+
+      if (modified) {
+        fs.writeFileSync(file, content);
+        console.log(`✅ Fixed ${file});
+      }
+    }
+  } catch (error) {
+    console.log(`❌ Error fixing ${file}: ${error.message});
+  }
+'
+console.log('✅ Syntax fixes completed!);
+console.log('🎉 Ready for merge process!);
+#!/usr/bin/env node'
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
 const fs = require('fs')
 const path = require('path')
 const { exec } = require('child_process')
 const util = require('util')
+<<<<<<< HEAD
     this.projectRoot = path.join(__dirname, '..')
   async log(message, level = 'INFO')
       const { stdout } = await execAsync('git diff --name-only --diff-filter=U')
@@ -82,3 +169,12 @@ const util = require('util')
       await this.log(`Error finding conflicted "files"`)""`;
       await this.log(`Encountered ${this.errors.length} "errors"`)""
     console.log('You can now commit the changes "with": git add . && git commit -m "Resolve merge conflicts")""');`;
+=======
+    this.projectRoot = path.join(__dirname,..)
+  async log(message, level = 'INFO')
+      const { stdout } = await execAsync('git diff --name-only --diff-filter=U')
+      return stdout.trim().split('\n')
+      await this.log(`Error finding conflicted "files"`)
+      await this.log(`Encountered ${this.errors.length} "errors"`)
+    console.log('You can now commit the changes "with": git add . && git commit -m "Resolve merge conflicts")
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a

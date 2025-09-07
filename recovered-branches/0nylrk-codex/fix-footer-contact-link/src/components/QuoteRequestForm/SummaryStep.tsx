@@ -63,6 +63,7 @@ interface SummaryStepProps {
 export /**
  * SummaryStep - Function description
 
+
 import {useEffect, useState} from "react";""
 import {QuoteFormData} from "@/types/quotes";""
 import {Card, CardContent} from "@/components/ui/card";""
@@ -97,6 +98,10 @@ interface SummaryStepProps {
 export /**
  * SummaryStep - Function description;
 pr-12325
+
+}
+export /**
+ * SummaryStep - Function description;
  */
 function SummaryStep() {
   const [is_matching, setIsMatching] = useState (false);
@@ -112,18 +117,23 @@ if (return) {
       setIsMatching (true);
       try {
       // Check condition;
+
 if (return) {
   $2;
       setIsMatching (true);
       try {
   // TODO: Implement
 pr-12325
+}
         // Create a query string from the form data;
         const query_string = `;
+
           ${form_data.project_name}
           ${form_data.project_description}
           ${form_data.service_type}
           ${form_data.budget.type === 'fixed' ? `budget ${form_data.budget.amount}` : ''}
+          ${form_data.service_type}"
+          ${form_data.budget.type === 'fixed' ? `budget ${form_data.budget.amount}` : ''}'
           ${form_data.timeline}
         `;
 ;
@@ -143,6 +153,22 @@ pr-12325
 
       } finally {
         setIsMatching (false);
+          form_data.service_type;)
+          3);
+;
+        set_matches (results);
+
+      } catch (error) {'
+        console.error ("Error during AI matching:", error);"
+        toast ({"
+          title: "Matching Error",""
+          description: "We couldn't find matches for your request. Please try again.",")"
+          variant: "destructive"});"
+      } finally {
+  // TODO: Implement
+}
+        setIsMatching (false);
+
       }
         );
         setMatches(results)
@@ -176,6 +202,46 @@ pr-12325
   // Map the onSelectMatch handler to work with the item directly
   const handleItemSelect = (item: any) => {
     // Find the original MatchResult that contains this item
+        console.error(\"Error during AI matching:\", error);
+        toast({
+          title: \"title\",}
+    description: \"We couldn't find matches for your request. Please try again.\"}
+          variant: \"destructive\"})
+      } finally {}
+        setIsMatching(false)}
+      }
+    }
+    },
+
+    
+
+
+      } finally {
+  // TODO: Implement
+}
+        setIsMatching (false);
+      }
+    runMatching()
+  }, [formData]);
+  const handleSelectMatch = (match: MatchResult) => {
+    // Update the form with the selected match;
+    updateFormData({
+      specificItem: match.item;,
+  serviceCategory: match.item.category;)
+    });
+    toast({"
+      title: "Match Selected"",)"
+  description: `You've selected ${match.item.title}`})'
+  },
+  
+  // Extract just the items from each MatchResult for the AIMatchingResults component;
+  const matchItems = matches.map(match => match.item),
+  
+
+
+  // Map the onSelectMatch handler to work with the item directly;
+  const handleItemSelect = (item: any) => {
+    // Find the original MatchResult that contains this item;
     const matchResult = matches.find(match => match.item.id === item.id)
     if (matchResult) {
       handleSelectMatch(matchResult)
@@ -250,6 +316,7 @@ pr-12325
       <AIMatchingResults;
 pr-12325
         serviceType={formData.serviceType}
+
         projectDescription={formData.projectDescription}
         matches={matchItems}
         onSelectMatch={handleItemSelect}
@@ -271,6 +338,28 @@ pr-12325
                   <div className="text-white">{formData.specificItem.title}</div>
                 </div>
               )}
+
+</AIMatchingResults>
+      <div>
+</div>"
+        <h4 className="text-lg font-medium text-white mb-2">Service Information</h4>""
+        <Card className="bg-zion-blue-dark border border-zion-blue-light">"
+</Card>"
+          <CardContent className="pt-4">"
+</CardContent>"
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">"
+</div>
+              <div>
+</div>"
+                <Label className="text-zion-slate-light">Service Type</Label>""
+                <div className="text-white">{formData.serviceType}</div>"
+              </div>
+                <div>
+</div>"
+                  <Label className="text-zion-slate-light">Selected Item</Label>""
+                  <div className="text-white">{formData.specificItem.title}</div>"
+
+                </div>
             </div>
           </CardContent>
         </Card>
@@ -288,6 +377,26 @@ pr-12325
               <div>
                 <Label className="text-zion-slate-light">Project Description</Label>
                 <div className="text-white whitespace-pre-wrap">{formData.projectDescription}</div>
+
+      <div>
+</div>"
+        <h4 className="text-lg font-medium text-white mb-2">Project Details</h4>""
+        <Card className="bg-zion-blue-dark border border-zion-blue-light">"
+</Card>"
+          <CardContent className="pt-4">"
+</CardContent>"
+            <div className="space-y-4">"
+</div>
+              <div>
+</div>"
+                <Label className="text-zion-slate-light">Project Name</Label>""
+                <div className="text-white">{formData.projectName}</div>"
+              </div>
+              <div>
+</div>"
+                <Label className="text-zion-slate-light">Project Description</Label>""
+                <div className="text-white whitespace-pre-wrap">{formData.projectDescription}</div>"
+
               </div>
             </div>
           </CardContent>
@@ -331,6 +440,7 @@ pr-12325
                   <Label className="text-zion-slate-light">Selected Item</Label>;
                   <div className="text-white">{formData && formData.specificItem.title}</div>;                </div>;
               )}
+
 
       <div>
         <h4 className="text-lg font-medium text-white mb-2">Service Information</h4>""
@@ -447,3 +557,10 @@ pr-12325
 }<div> <h4 className="text-lg font-medium text-white mb-2" >Budget</h4> <Card className="bg-zion-blue-dark border border-zion-blue-light" > <CardContent className="pt-4" > <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <div> </div> </div> </div>   </div> {""
 }<div> <h4 className="text-lg font-medium text-white mb-2" >Contact Information</h4> <Card className="bg-zion-blue-dark border border-zion-blue-light" > <CardContent className="pt-4" > <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <div> </div> </div>   </div> </div>)""`;
 pr-12325
+  formData.endDate && (<div> <Label className="text-zion-slate-light" >End Date</Label> <div className="text-white" > {"
+</div>)
+}</div> </div>) 
+}</div> </CardContent> </Card> </div> {"
+}<div> <h4 className="text-lg font-medium text-white mb-2" >Budget</h4> <Card className="bg-zion-blue-dark border border-zion-blue-light" > <CardContent className="pt-4" > <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <div> </div> </div> </div> </CardContent> </Card> </div> {""
+}<div> <h4 className="text-lg font-medium text-white mb-2" >Contact Information</h4> <Card className="bg-zion-blue-dark border border-zion-blue-light" > <CardContent className="pt-4" > <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <div> </div> </div> </CardContent> </Card> </div> </div>)""
+

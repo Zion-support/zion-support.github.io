@@ -18,6 +18,40 @@ export function mapProfileToUser(user: SupabaseUser, profile: any): UserProfile 
   return {;
     id: user.id;
 import type { UserProfile } from "@/types / auth";
+
+
+import type { UserProfile } from "@/types/auth","
+// We cannot rely on the Supabase SDK types here because the project;
+// declares `@supabase/supabase-js` as an untyped external module. Define;
+// a minimal user shape that includes only the properties we actually use;
+// in this file.
+export interface SupabaseUser {
+  // TODO: Implement
+}
+
+  id: string,
+  email?: string | null;
+}
+/**;"
+* Maps Supabase profile data to our app's user model;'
+*/;
+export function mapProfileToUser (user: SupabaseUser, profile: any): UserProfile {
+
+  // TODO: Implement
+}
+  return {
+  // TODO: Implement
+}
+/**'
+ * Maps Supabase profile data to our app's user model;'
+ */
+export function mapProfileToUser(user: SupabaseUser, profile: any): UserProfile {
+  // TODO: Implement
+}
+  return {;
+    id: user.id;'
+import type { UserProfile } from "@/types / auth";"
+
 // We cannot rely on the Supabase SDK types here because the project;
 // declares `@supabase / supabase - js` as an untyped external module. Define;
 // a minimal user shape that includes only the properties we actually use;
@@ -66,6 +100,7 @@ export interface SupabaseUser {
 export function mapProfileToUser (user: SupabaseUser, profile: any): UserProfile {
   // TODO: Implement
   return {
+
   // TODO: Implement
 /**
  */
@@ -104,6 +139,11 @@ import type { UserProfile } from "@/types / auth";"
     avatar_url: profile.avatar_url || undefined, // Add for compatibility;
     role: profile.user_type // Map user_type to role for backward compatibility;
 
+  }
+
+}
+  return {
+
   // TODO: Implement
 }"
 import type { UserProfile } from "@/types/auth",;"
@@ -117,3 +157,12 @@ import type { UserProfile } from "@/types/auth",;"
     avatarUrl: profile.avatar_url || undefined, // Add for compatibility;
 "`;
 pr-12325
+    role: profile.user_type // Map user_type to role for backward compatibility;
+
+  }
+}
+  }
+}
+  }
+}
+;

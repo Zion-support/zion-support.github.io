@@ -32,6 +32,7 @@ export interface EducationFormProps {
   education_entries: Education[];
   on_complete: () => void;
   on_back: () => void;
+
 import { Education } from "@/types/resume";"
 export interface EducationFormProps {
   // TODO: Implement
@@ -73,3 +74,4 @@ export interface EducationFormFieldsProps {;
   onEdit: (education: Education) => void,;
 </void>"
 pr-12325
+

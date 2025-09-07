@@ -72,6 +72,38 @@ import { Button } from "@/components/ui/button",;
 import { Badge } from "@/components/ui/badge",;
 import { Globe, Server, Clock, MapPin, Check } from "lucide-react",;
 import { CountryPricing } from "@/data/onsiteServicePricing",;
+
+
+
+import {Card, CardContent, CardFooter, CardHeader} from "@/components/ui/card";""
+import {Button} from "@/components/ui/button";""
+import {Badge} from "@/components/ui/badge";""
+import {Globe, Server, Clock, MapPin, Check} from "lucide-react";""
+import {CountryPricing} from "@/data/onsiteServicePricing";""
+import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",""
+import { Button } from "@/components/ui/button",""
+import { Badge } from "@/components/ui/badge",""
+import { Globe, Server, Clock, MapPin, Check } from "lucide-react";""
+import { CountryPricing } from "@/data/onsiteServicePricing";""
+import { Globe, Server, Clock, MapPin, Check } from "lucide-react",""
+import { CountryPricing } from "@/data/onsiteServicePricing","
+interface CountryServiceCardProps {
+  // TODO: Implement
+}
+  country: CountryPricing;,
+  onSelect: (country: CountryPricing) => void;
+  isPopular?: boolean;
+}
+export function CountryServiceCard({ country, onSelect, isPopular }: CountryServiceCardProps) {
+  // Get region flag based on country name (for demo purposes)
+
+  const getRegionEmoji = (countryName: string): string => {
+"
+import {Card, CardContent, CardFooter, CardHeader} from "@/components/ui/card";""
+import {Button} from "@/components/ui/button";""
+import {Badge} from "@/components/ui/badge";""
+import {Globe, Server, Clock, MapPin, Check} from "lucide-react";""
+import {CountryPricing} from "@/data/onsiteServicePricing";"
 interface CountryServiceCardProps {;
   country: CountryPricing,;
   onSelect: (country: CountryPricing) => void,;
@@ -232,3 +264,8 @@ import { CountryPricing } from "@/data/onsiteServicePricing",;"
   isPopular > Select Service   ) 
     ;"`;
 pr-12325
+  isPopular </div> <div className="flex items-start" > <MapPin className="h-4 w-4 mr-2 text-zion-purple mt-1" /> <span>Service available in major cities</span> </div> <div className="flex items-start" > <Server className="h-4 w-4 mr-2 text-zion-purple mt-1" /> <span>Hardware & network support</span> </div> <div className="flex items-start" > <Check className="h-4 w-4 mr-2 text-zion-purple mt-1" /> <span>First hour included</span> </div> </div> </CardContent> <CardFooter> <Button onClick= {"
+</Card>)
+  isPopular > Select Service </Button> </CardFooter> </Card>) 
+    </Card>;"
+

@@ -63,6 +63,22 @@ import {Label} from '@/components/ui/label';
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from '@/components/ui/select';
 import {Skill} from '@/types/resume';
 import {AIEnhancementButton} from '@/components/resume-builder/forms/AIEnhancementButton';
+
+
+import { useState  } from 'react';''
+import { Button  } from '@/components/ui/button';''
+import { Input  } from '@/components/ui/input';''
+import { Label  } from '@/components/ui/label';''
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue  } from '@/components/ui/select';''
+import { Skill  } from '@/types/resume';''
+import { AIEnhancementButton } from '@/components/resume-builder/forms/AIEnhancementButton';''
+import {useState} from 'react';''
+import {Button} from '@/components/ui/button';''
+import {Input} from '@/components/ui/input';''
+import {Label} from '@/components/ui/label';''
+import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from '@/components/ui/select';''
+import {Skill} from '@/types/resume';''
+import {AIEnhancementButton} from '@/components/resume-builder/forms/AIEnhancementButton';'
 interface AddSkillFormProps {
   // TODO: Implement
 }
@@ -177,3 +193,12 @@ if ( {) {
             <Button type="submit">Add;"
     </form>);"
 pr-12325
+</Input>"
+            <Button type="submit">Add</Button>;"
+          </div>;
+        </div>;
+      </div>;
+    </form>);}
+},
+};
+},

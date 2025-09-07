@@ -12,9 +12,18 @@ export function getServerSupabase() {
 import { createClient } from '@supabase/supabase-js';
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+// Mock Supabase server client implementation
+interface SupabaseClient {
+  auth: any;
+  from: (table: string) => any;
+}
 
-const supabaseUrl = process && process.env.NEXT_PUBLIC_SUPABASE_URL || 'https://placeholder && placeholder.supabase.co';
-const supabaseServiceKey = process && process.env.SUPABASE_SERVICE_ROLE_KEY || 'placeholder-key';
+let cachedClient: SupabaseClient | null = null;
+
+export function createServerClient(): SupabaseClient {
+  if (cachedClient) {
+    return cachedClient;
+  }
 
 // Supabase server utilities
 import { createClient } from '@supabase/supabase-js';
@@ -38,13 +47,26 @@ export function getServerSupabase() {
 }
   // Mock implementation - replace with actual Supabase client
   return {
+  cachedClient = {
+    auth: {
+      getUser: () => Promise.resolve({ data: { user: null }, error: null }),
+      signOut: () => Promise.resolve({ error: null })
+    },
     from: (table: string) => ({
-      select: () => ({
-        eq: () => ({
-          data: [];
-          error: null
+      select: (columns?: string) => ({
+        eq: (column: string, value: any) => ({
+          eq: (column2: string, value2: any) => ({
+            maybeSingle: () => Promise.resolve({ data: null, error: null })
+          })
         })
-      })
+      }),
+      insert: (data: any) => Promise.resolve({ data: null, error: null }),
+      update: (data: any) => ({
+        eq: (column: string, value: any) => ({
+          eq: (column2: string, value2: any) => Promise.resolve({ data: null, error: null })
+        })
+      }),
+      delete: () => Promise.resolve({ data: null, error: null })
     })
   };
 }
@@ -115,3 +137,6 @@ export function getServerSupabase() {;
 
 
 pr-12325
+
+  return cachedClient;
+}

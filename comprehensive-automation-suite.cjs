@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 #!/usr/bin/env node;
+=======
+#!/usr/bin/env node
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
 const { execSync } = require('child_process');
 const fs = require('fs');
 class ComprehensiveAutomationSuite {
@@ -6,6 +10,7 @@ class ComprehensiveAutomationSuite {
 }
   constructor() {
     this.projectRoot = process.cwd();
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -450,11 +455,23 @@ class ComprehensiveAutomationSuite {
       { cmd: 'npm run lint:fix', desc: 'Fix linting issues' },
       { cmd: 'npm run build', desc: 'Build project' },
       { cmd: 'npm test -- --passWithNoTests', desc: 'Run tests' }']
+=======
+  }
+
+  async run() {
+    console.log('🚀 Running Comprehensive Automation Suite...);
+    const commands = [
+      { cmd: npm install, desc: Install dependencies},
+      { cmd: npm run lint:fix, desc: Fix linting issues},
+      { cmd: npm run build, desc: Build project},
+      { cmd: npm test -- --passWithNoTests, desc: Run tests}]
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
     ];
 
     for (const { cmd, desc } of commands) {
       try {
   // TODO: Implement
+<<<<<<< HEAD
         console.log(`Running: ${desc}`);
         execSync(cmd, { stdio: 'inherit', cwd: this.projectRoot });`;
         console.log(`✅ ${desc} completed`);
@@ -463,3 +480,18 @@ class ComprehensiveAutomationSuite {
 
 const suite = new ComprehensiveAutomationSuite();
 suite.run().catch(console.error);`;
+=======
+}
+        console.log(`Running: ${desc});
+        execSync(cmd, { stdio: inherit, cwd: this.projectRoot });
+        console.log(`✅ ${desc} completed`);
+      } catch (error) {
+        console.log(`❌ ${desc} failed: ${error.message});
+      }
+    }
+  }
+}
+
+const suite = new ComprehensiveAutomationSuite();
+suite.run().catch(console.error);
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a

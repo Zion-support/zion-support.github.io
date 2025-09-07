@@ -5,6 +5,10 @@
 
   // Fetch saved talents;
 pr-12325
+
+
+
+  // Fetch saved talents;
   useEffect(() => {
 
     const fetchSavedTalents = async () => {
@@ -70,6 +74,11 @@ export function useSavedTalents() {
 </string>
 
 pr-12325
+  const [savedTalents, setSavedTalents] = useState<TalentProfile[]>([]),
+</TalentProfile>
+  const [savedTalentIds, setSavedTalentIds] = useState<string[]>([]),
+</string>
+
   const [saved_talents, setSavedTalents] = useState < TalentProfile[]>([]);
   const [savedTalentIds, setSavedTalentIds] = useState < string[]>([]);
   const [is_loading, setIsLoading] = useState (true);
@@ -80,12 +89,18 @@ pr-12325
       // Check condition
 if ( {) {
   $2
+      // Check condition;
+
+if ( {) {
+  $2;
+
 }
         setIsLoading (false);
         return;
       }
       setIsLoading (true);
 ;
+
       try {
         // Get saved talent IDs;
         const { data: saved_data, error: saved_error } = await supabase;
@@ -100,6 +115,22 @@ if (throw saved_error) {
         // Check condition
 if ( {) {
   $2
+  // TODO: Implement
+}
+        // Get saved talent IDs;
+        const { data: saved_data, error: saved_error } = await supabase;"
+          .from ('saved_talents');''
+          .select ('talent_id');''
+          .eq ('user_id', user_details.id);'
+;
+        // Check condition;
+if (throw saved_error) {
+  $2;
+}
+        // Check condition;
+if ( {) {
+  $2;
+
 }
           const talent_ids = saved_data.map (item => item.talent_id);
           setSavedTalentIds (talent_ids);
@@ -141,6 +172,27 @@ if (throw talent_error) {
 }
             setSavedTalents (talent_data || []);
           } else {
+          // Check condition;
+
+if ( {) {
+  $2;
+
+}
+            // Fetch full talent profiles for saved talents;
+            const { data: talent_data, error: talent_error } = await supabase;'
+              .from ('talent_profiles');''
+              .select ('*');''
+              .in ('id', talent_ids);'
+;
+            // Check condition;
+
+if (throw talent_error) {
+  $2;
+}
+            setSavedTalents (talent_data || []);
+          } else {
+  // TODO: Implement
+}
             setSavedTalents ([]);
           }
         }
@@ -165,6 +217,10 @@ if (throw talent_error) {
         description: "Please log in to save talents to your favorites",        variant: "destructive"
       }),
       return
+  // TODO: Implement
+}
+        setIsLoading (false);
+      }
     }
             // Check condition;
 if (throw talent_error) {
@@ -220,15 +276,24 @@ if (throw talent_error) {
 
 
     
+      return;
+    }
     const isSaved = savedTalentIds && savedTalentIds.includes(talent && talent.id);
+
     
 
 
       }),
 pr-12325
+"
+        variant: "destructive""
+
+      }),
+      return;
+    }
     const isSaved = savedTalentIds.includes(talent.id);
-    
     const isSaved = savedTalentIds.includes(talent.id),
+
     
       if (isSaved) {
         // Remove from saved_talents
@@ -256,6 +321,7 @@ pr-12325
             talent_id: talent.id}),
           
         if (error) throw error,
+    try {
   // TODO: Implement
       if (isSaved) {
         // Remove from saved_talents;
@@ -300,8 +366,21 @@ pr-12325
           
 pr-12325
         
+
+            talent_id: talent && talent.id});
+        if (error) throw error;
+        setSavedTalents(prev => [...prev, talent]);
+            user_id: userDetails.id;
+    talent_id: talent.id});
+        if (error) throw error;
+        setSavedTalents(prev => [...prev, talent]);
+        setSavedTalentIds(prev => [...prev, talent.id]);
+            user_id: userDetails.id,
+            talent_id: talent.id}),
+        if (error) throw error,
         setSavedTalents(prev => [...prev, talent]),
         setSavedTalentIds(prev => [...prev, talent.id]),
+
         
 
         toast({
@@ -334,15 +413,16 @@ pr-12325
   const isTalentSaved = (talentId: string) => {
 
     return savedTalentIds && savedTalentIds.includes(talentId)
+
   };
-
-
   return {
   // TODO: Implement
 pr-12325
+}
     savedTalents;
     savedTalentIds;
     isLoading;
+
     toggleSaveTalent;
 
     isTalentSaved
@@ -352,9 +432,17 @@ pr-12325
           title: "Error loading favorites",,
   description: "There was a problem loading your saved talents.",;
           variant: "destructive";
+    isTalentSaved;
+      } catch (error) {;"
+        console.error('Error fetching saved talents:', error),;'
+        toast({;'
+          title: "Error loading favorites",;""
+          description: "There was a problem loading your saved talents.",;""
+          variant: "destructive";")
+
         });
-      } finally {;
-        setIsLoading(false);
+      } finally {;}
+        setIsLoading(false);}
       }
     isTalentSaved;
       } catch (error) {;"
@@ -379,6 +467,7 @@ pr-12325
       return;
     }  }
 }
+
       toast({;"
         title: "Authentication required",;""
         description: "Please log in to save talents to your favorites",;""
@@ -446,3 +535,12 @@ if (throw error) {
     savedTalentIds,;
 "`;
 pr-12325
+    isLoading;
+    toggleSaveTalent;
+    isTalentSaved;
+  }
+}
+  }
+}
+"
+

@@ -7,7 +7,7 @@ const { execSync } = require('child_process');
 class ContinuousImprovementOrchestrator {
   constructor() {
     this.workspaceRoot = '/workspace';
-    this.reportFile = path.join(this.workspaceRoot, 'automation_logs', 'continuous-improvement-report.json');
+    this.reportFile = path.join(this.workspaceRoot,automation_logs,continuous-improvement-report.json');
     this.ensureLogDirectory();
   }
 
@@ -17,10 +17,15 @@ class ContinuousImprovementOrchestrator {
       fs.mkdirSync(logDir, { recursive: true });
 
   log(message) {
+<<<<<<< HEAD
     console.log(`[Continuous Improvement Orchestrator] ${message}`);
+=======
+    console.log(`[Continuous Improvement Orchestrator] ${message});
+  }
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
 
   async runContinuousImprovements() {
-    this.log('Starting continuous improvement orchestration...');
+    this.log('Starting continuous improvement orchestration...);
     
     const improvements = {
       timestamp: new Date().toISOString(),
@@ -48,6 +53,7 @@ class ContinuousImprovementOrchestrator {
       
       // Save report
       fs.writeFileSync(this.reportFile, JSON.stringify(improvements, null, 2));
+<<<<<<< HEAD
       `;
       this.log(`Continuous improvements complete. Score: ${improvements.score}/100`);`;
       this.log(`Report saved to: ${this.reportFile}`);
@@ -55,6 +61,15 @@ class ContinuousImprovementOrchestrator {
       return improvements;
     } catch (error) {`;
       this.log(`Error during continuous improvements: ${error.message}`);
+=======
+      
+      this.log(`Continuous improvements complete. Score: ${improvements.score}/100`);
+      this.log(`Report saved to: ${this.reportFile});
+      
+      return improvements;
+    } catch (error) {
+      this.log(`Error during continuous improvements: ${error.message});
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
       improvements.error = error.message;
 
   async runImprovementCycle(cycleNumber) {
@@ -81,17 +96,17 @@ class ContinuousImprovementOrchestrator {
     return cycle;
 
   async improveCodeStructure(cycle) {
-    this.log('Improving code structure...');
+    this.log('Improving code structure...);
     
-    const srcDir = path.join(this.workspaceRoot, 'src');
+    const srcDir = path.join(this.workspaceRoot,src');
     if (!fs.existsSync(srcDir)) {
       return;
     
-    const componentFiles = this.findFiles(srcDir, ['.tsx', '.jsx']);
+    const componentFiles = this.findFiles(srcDir, [.tsx,.jsx]);
     let improvements = 0;
     
     componentFiles.forEach(file => {
-      const content = fs.readFileSync(file, 'utf8');
+      const content = fs.readFileSync(file,utf8);
       const lines = content.split('\n');
       
       // Check for long functions
@@ -103,12 +118,18 @@ class ContinuousImprovementOrchestrator {
           if (inFunction && functionLength > 20) {
             improvements++;
             cycle.improvements.push({
-              type: 'code-structure',
+              type: code-structure,
               file: path.relative(this.workspaceRoot, file),
               line: index,
+<<<<<<< HEAD
               issue: 'Long function detected',
               suggestion: 'Break down into smaller functions
             });
+=======
+              issue: Long function detected,
+              suggestion: Break down into smaller functions});
+          }
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
           functionLength = 0;
           inFunction = true;
         } else if (inFunction) {
@@ -116,21 +137,46 @@ class ContinuousImprovementOrchestrator {
       
       // Check for complex components
       if (content.includes('useState') && content.split('useState').length > 5) {
+<<<<<<< HEAD
           issue: 'Complex component with many state variables',
           suggestion: 'Consider using useReducer or custom hooks
+=======
+        improvements++;
+        cycle.improvements.push({
+          type: code-structure,
+          file: path.relative(this.workspaceRoot, file),
+          issue: Complex component with many state variables,
+          suggestion: Consider using useReducer or custom hooks});
+      }
+    });
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
     
     cycle.metrics.codeStructureImprovements = improvements;
 
   async optimizePerformance(cycle) {
-    this.log('Optimizing performance...');
+    this.log('Optimizing performance...);
     
+<<<<<<< HEAD
     
     let optimizations = 0;
     
+=======
+    const srcDir = path.join(this.workspaceRoot,src');
+    if (!fs.existsSync(srcDir)) {
+      return;
+    }
+    
+    const componentFiles = this.findFiles(srcDir, [.tsx,.jsx]);
+    let optimizations = 0;
+    
+    componentFiles.forEach(file => {
+      const content = fs.readFileSync(file,utf8);
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
       
       // Check for missing memoization
       if (content.includes('useState') && !content.includes('useMemo') && !content.includes('useCallback')) {
         optimizations++;
+<<<<<<< HEAD
           type: 'performance',
           issue: 'Missing memoization opportunities',
           suggestion: 'Add useMemo and useCallback for expensive operations
@@ -139,20 +185,52 @@ class ContinuousImprovementOrchestrator {
       if (content.includes('useEffect') && content.includes('[]')) {
           issue: 'Empty dependency array in useEffect',
           suggestion: 'Review dependencies or add proper cleanup
+=======
+        cycle.improvements.push({
+          type: performance,
+          file: path.relative(this.workspaceRoot, file),
+          issue: Missing memoization opportunities,
+          suggestion: Add useMemo and useCallback for expensive operations});
+      }
+      
+      // Check for unnecessary re-renders
+      if (content.includes('useEffect') && content.includes('[])) {
+        optimizations++;
+        cycle.improvements.push({
+          type: performance,
+          file: path.relative(this.workspaceRoot, file),
+          issue: Empty dependency array in useEffect,
+          suggestion: Review dependencies or add proper cleanup});
+      }
+    });
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
     
     cycle.metrics.performanceOptimizations = optimizations;
 
   async enhanceSecurity(cycle) {
-    this.log('Enhancing security...');
+    this.log('Enhancing security...);
     
+<<<<<<< HEAD
+=======
+    const srcDir = path.join(this.workspaceRoot,src');
+    if (!fs.existsSync(srcDir)) {
+      return;
+    }
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
     
-    const componentFiles = this.findFiles(srcDir, ['.tsx', '.jsx', '.ts', '.js']);
+    const componentFiles = this.findFiles(srcDir, [.tsx,.jsx,.ts,.js]);
     let securityEnhancements = 0;
     
+<<<<<<< HEAD
+=======
+    componentFiles.forEach(file => {
+      const content = fs.readFileSync(file,utf8);
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
       
       // Check for XSS vulnerabilities
       if (content.includes('dangerouslySetInnerHTML')) {
         securityEnhancements++;
+<<<<<<< HEAD
           type: 'security',
           issue: 'Potential XSS vulnerability',
           suggestion: 'Sanitize HTML or use safer alternatives
@@ -161,19 +239,52 @@ class ContinuousImprovementOrchestrator {
       if (content.includes('password') || content.includes('secret') || content.includes('key')) {
           issue: 'Potential hardcoded secret',
           suggestion: 'Move to environment variables
+=======
+        cycle.improvements.push({
+          type: security,
+          file: path.relative(this.workspaceRoot, file),
+          issue: Potential XSS vulnerability,
+          suggestion: Sanitize HTML or use safer alternatives});
+      }
+      
+      // Check for hardcoded secrets
+      if (content.includes('password') || content.includes('secret') || content.includes('key')) {
+        securityEnhancements++;
+        cycle.improvements.push({
+          type: security,
+          file: path.relative(this.workspaceRoot, file),
+          issue: Potential hardcoded secret,
+          suggestion: Move to environment variables});
+      }
+    });
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
     
     cycle.metrics.securityEnhancements = securityEnhancements;
 
   async improveUserExperience(cycle) {
-    this.log('Improving user experience...');
+    this.log('Improving user experience...);
     
+<<<<<<< HEAD
     
     let uxImprovements = 0;
     
+=======
+    const srcDir = path.join(this.workspaceRoot,src');
+    if (!fs.existsSync(srcDir)) {
+      return;
+    }
+    
+    const componentFiles = this.findFiles(srcDir, [.tsx,.jsx]);
+    let uxImprovements = 0;
+    
+    componentFiles.forEach(file => {
+      const content = fs.readFileSync(file,utf8);
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
       
       // Check for loading states
       if (content.includes('useState') && !content.includes('loading') && content.includes('async')) {
         uxImprovements++;
+<<<<<<< HEAD
           type: 'ux',
           issue: 'Missing loading state for async operation',
           suggestion: 'Add loading state for better UX
@@ -182,28 +293,71 @@ class ContinuousImprovementOrchestrator {
       if (content.includes('try') && !content.includes('catch')) {
           issue: 'Incomplete error handling',
           suggestion: 'Add proper error handling and user feedback
+=======
+        cycle.improvements.push({
+          type: ux,
+          file: path.relative(this.workspaceRoot, file),
+          issue: Missing loading state for async operation,
+          suggestion: Add loading state for better UX});
+      }
+      
+      // Check for error handling
+      if (content.includes('try') && !content.includes('catch')) {
+        uxImprovements++;
+        cycle.improvements.push({
+          type: ux,
+          file: path.relative(this.workspaceRoot, file),
+          issue: Incomplete error handling,
+          suggestion: Add proper error handling and user feedback});
+      }
+    });
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
     
     cycle.metrics.uxImprovements = uxImprovements;
 
   async improveDocumentation(cycle) {
-    this.log('Improving documentation...');
+    this.log('Improving documentation...);
     
+<<<<<<< HEAD
     
     let documentationImprovements = 0;
     
+=======
+    const srcDir = path.join(this.workspaceRoot,src');
+    if (!fs.existsSync(srcDir)) {
+      return;
+    }
+    
+    const componentFiles = this.findFiles(srcDir, [.tsx,.jsx,.ts,.js]);
+    let documentationImprovements = 0;
+    
+    componentFiles.forEach(file => {
+      const content = fs.readFileSync(file,utf8);
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
       
       // Check for JSDoc comments
       if (content.includes('function') || content.includes('const') || content.includes('class')) {
-        if (!content.includes('/**') && !content.includes('//')) {
+        if (!content.includes('/**) && !content.includes('//)) {
           documentationImprovements++;
+<<<<<<< HEAD
             type: 'documentation',
             issue: 'Missing documentation',
             suggestion: 'Add JSDoc comments for functions and components
+=======
+          cycle.improvements.push({
+            type: documentation,
+            file: path.relative(this.workspaceRoot, file),
+            issue: Missing documentation,
+            suggestion: Add JSDoc comments for functions and components});
+        }
+      }
+    });
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
     
     cycle.metrics.documentationImprovements = documentationImprovements;
 
   analyzeImprovementPatterns(improvements) {
-    this.log('Analyzing improvement patterns...');
+    this.log('Analyzing improvement patterns...);
     
     const allImprovements = improvements.cycles.flatMap(cycle => cycle.improvements);
     const patterns = {};
@@ -225,13 +379,14 @@ class ContinuousImprovementOrchestrator {
     improvements.metrics.recurringIssues = recurringIssues;
 
   generateContinuousRecommendations(improvements) {
-    this.log('Generating continuous recommendations...');
+    this.log('Generating continuous recommendations...);
     
     const patterns = improvements.metrics.patterns || {};
     
     Object.entries(patterns).forEach(([type, count]) => {
       if (count > 2) {
         improvements.recommendations.push({
+<<<<<<< HEAD
           priority: 'high',
           category: type,`;
           message: `Address recurring ${type} issues (${count} occurrences)`,
@@ -247,6 +402,29 @@ class ContinuousImprovementOrchestrator {
       category: 'process',
       message: 'Set up automated code quality checks',
       action: 'Integrate with CI/CD pipeline
+=======
+          priority: high,
+          category: type,
+          message: `Address recurring ${type} issues (${count} occurrences)`,
+          action: Implement systematic fixes});
+      }
+    });
+    
+    if (improvements.metrics.totalImprovements > 10) {
+      improvements.recommendations.push({
+        priority: medium,
+        category: general,
+        message: High number of improvements needed,
+        action: Consider code review process improvements});
+    }
+    
+    improvements.recommendations.push({
+      priority: low,
+      category: process,
+      message: Set up automated code quality checks,
+      action: Integrate with CI/CD pipeline});
+  }
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
 
   calculateContinuousScore(improvements) {
     let score = 100;

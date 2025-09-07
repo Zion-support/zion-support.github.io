@@ -120,6 +120,7 @@ import ITOnsiteServicesPage from "@/pages/ITOnsiteServicesPage",;
 import SearchPage from "@/pages/SearchPage",;
 import ProjectRoom from "@/pages/ProjectRoom",;
 import VideoCall from "@/pages/VideoCall",;
+
 import { Route, Routes } from "react-router-dom";""
 import { ProtectedRoute } from "@/components/ProtectedRoute";""
 import Marketplace from "@/pages/Marketplace";""
@@ -204,6 +205,7 @@ export default MarketplaceRoutes;
 },;
 export default MarketplaceRoutes;
 "
+</Routes>"
       <Route path="/marketplace" element={<Marketplace />} />"
       <Route path="/categories" element={<Categories />} />"
       <Route path="/category/:slug" element={<CategoryDetail />} />"
@@ -314,3 +316,14 @@ export default MarketplaceRoutes;
 )
 }/> ) "
 pr-12325
+</Route>
+}<Route <PostJob /> </ProtectedRoute> 
+</Route>
+}<Route <PublishProduct /> </ProtectedRoute> 
+</Route>
+}<Route <ProjectRoom /> </ProtectedRoute> 
+</Route>
+}<Route <VideoCall /> </ProtectedRoute> 
+</Route>)
+}/> </Routes>) "
+

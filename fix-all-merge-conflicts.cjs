@@ -8,8 +8,13 @@ function fixMergeConflicts(filePath) {
     if (
 )
     ) {
+<<<<<<< HEAD
       console.log(`Fixing merge conflicts: in: ${filePath}`);
 
+=======
+      console.log(`Fixing merge conflicts: in: ${filePath});
+'
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
       const lines = content.split('\n');
       const fixedLines = [];
       let inConflict = false;
@@ -26,8 +31,15 @@ function fixMergeConflicts(filePath) {
 
         if (!inConflict || keepContent) {
           fixedLines.push(line);
+<<<<<<< HEAD
 
       fs.writeFileSync(filePath, fixedLines.join('\n'), 'utf8');
+=======
+        }
+      }
+'
+      fs.writeFileSync(filePath, fixedLines.join('\n'),utf8);
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
       return true;
 
     return false;
@@ -49,11 +61,22 @@ function processDirectory(dirPath) {
       file.endsWith('.ts') ||
       file.endsWith('.jsx') ||
       file.endsWith('.js')
+<<<<<<< HEAD
+=======
+    ) {
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
       if (fixMergeConflicts(filePath)) fixedCount++;
 
   return fixedCount;
+<<<<<<< HEAD
 
 console.log('Starting comprehensive merge conflict fixes...');
 const fixedCount = processDirectory('.');`;
+=======
+}
+'
+console.log('Starting comprehensive merge conflict fixes...);
+const fixedCount = processDirectory('.);
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
 console.log(`Fixed ${fixedCount} files`);
 `;

@@ -87,6 +87,7 @@ export function QuickReplyButton({ text, onClick }: QuickReplyButtonProps) {
 }
 ;
 
+
 import React from "react";""
 import { Button } from "@/components/ui/button";""
 import { cn } from "@/lib/utils";"
@@ -145,3 +146,6 @@ import { cn  } from '@/lib / utils';
         "transition-colors duration-200"""
     >
 pr-12325
+</Button>
+    </Button>"
+

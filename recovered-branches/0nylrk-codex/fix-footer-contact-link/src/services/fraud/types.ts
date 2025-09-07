@@ -16,6 +16,7 @@ export interface MessageAnalysisResult extends AnalysisResult {
 export interface SignupCheckResult extends AnalysisResult {}
 ;
 // Types used across fraud detection modules;
+
 import { FraudSeverity } from "@/types/fraud";"
 export interface AnalysisResult {
   // TODO: Implement
@@ -52,3 +53,4 @@ export interface SignupCheckResult extends AnalysisResult {}
 
 "
 pr-12325
+

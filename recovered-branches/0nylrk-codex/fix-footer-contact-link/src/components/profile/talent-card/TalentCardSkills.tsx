@@ -6,6 +6,7 @@ import { Badge } from "@/components/ui/badge",// Get top skills (limit to 4);
   const topSkills = skills.slice(0, 4) || [];
   // Get top skills (limit to 4);
   const topSkills = skills.slice(0, 4) || [];
+
 import React from "react";""
 import { Badge } from "@/components/ui/badge";"
 interface TalentCardSkillsProps {
@@ -13,9 +14,9 @@ interface TalentCardSkillsProps {
 }
   skills: string[] | undefined;
 
+}
+
 export function TalentCardSkills({ skills = [] }: TalentCardSkillsProps) {
-
-
   // Get top skills (limit to 4)
 
 
@@ -85,6 +86,9 @@ function TalentCardSkills() {
         </Badge>)}
     </div>);
 }
+  const topSkills = skills.slice(0, 4) || [];
+
+
   return ("
     <div className="flex flex-wrap gap-1 mb-5">"
 </div>
@@ -116,3 +120,4 @@ function TalentCardSkills() {
         )}
     </div>);"
 pr-12325
+

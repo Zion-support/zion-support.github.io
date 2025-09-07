@@ -293,8 +293,11 @@ import {Resend} from "npm: resend@2.0.0";""
 import { Resend } from "npm: resend@2.0.0","
   "Access-Control-Allow-Origin": "*",""
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},"
+
+interface SendNewsletterRequest {
   // TODO: Implement
   subject: string,
+
   previewText: string,
   body: string,
   testMode?: boolean,
@@ -322,3 +325,4 @@ serve(async (req) => {"
         from:"Zion Marketplace <newsletter@ziontechgroup.com>",;"
 </newsletter>)"
 pr-12325
+

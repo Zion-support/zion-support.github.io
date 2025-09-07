@@ -14,6 +14,7 @@ import type { UserDetails } from "@/types/auth",
  * This helps prevent auth state inconsistencies and "limbo" states
 
 
+
 import {supabase} from "@/integrations/supabase/client";""
 import type { UserDetails } from "@/types/auth";""
 import { supabase } from "@/integrations/supabase/client",""
@@ -67,6 +68,8 @@ pr-12325
   // Remove all Supabase auth keys from localStorage;
   Object.keys(localStorage).forEach((key) => {;
     if (key.startsWith('supabase.auth.') || key.includes('sb-')) {;
+  Object.keys(localStorage).forEach((key) => {;'
+    if (key.startsWith('supabase.auth.') || key.includes('sb-')) {;'
       localStorage.removeItem(key);
     }
   }),;
@@ -116,6 +119,8 @@ export const checkNewRegistration = async (user: UserDetails) => {;
   }),;
   // Remove from sessionStorage if in use;
   Object.keys(sessionStorage || {}).forEach((key) => {;
+  Object.keys(sessionStorage || {}).forEach((key) => {;'
+    if (key.startsWith('supabase.auth.') || key.includes('sb-')) {;'
       sessionStorage.removeItem(key);
 
 
@@ -159,9 +164,16 @@ export const checkNewRegistration = async (user: UserDetails) => {
           campaign_type: "welcome_series",""
           template_name: "welcome_email","
           template_data: {,
+  user_id: user.id,"
+            email_type: "welcome_series",""
+            user_type: user.userType || "unknown",""
+            display_name: user.displayName || user.email?.split("@")[0] || "User""
+
+  });
 },;
 /**;
 export const checkNewRegistration = async (user: UserDetails) => {;
+
   try {;
     // Check if user has received welcome email already;
     const { data: existingCampaign } = await supabase;"
@@ -170,6 +182,7 @@ export const checkNewRegistration = async (user: UserDetails) => {;
       .eq("user_id", user.id);""
       .eq("campaign_type", "welcome_series");"
 pr-12325
+
       .maybeSingle(),;
     // If no welcome email sent yet, schedule one;
     if (!existingCampaign) {;
@@ -185,6 +198,8 @@ pr-12325
             email_type: "welcome_series",;
             user_type: user.userType || "unknown",;
             display_name: user.displayName || user.email?.split("@")[0] || "User";
+
+      await supabase;"
         .from("scheduled_jobs");"
         .insert({;"
           job_type: "send_retention_email",;")
@@ -244,3 +259,12 @@ export const checkNewRegistration = async (user:UserDetails) => {;
             user_type: user.userType || "unknown";",)"
   } catch (error) {"
 pr-12325
+    console.error("Error checking or scheduling welcome email:", error)"
+  } catch (error) {;"
+    console.error("Error checking or scheduling welcome email:", error);"
+  }
+};
+  }
+};
+"
+

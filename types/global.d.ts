@@ -1,9 +1,9 @@
+/// <reference types="next" />
+/// <reference types="next/image-types/global" />
+/// <reference types="next/navigation-types/navigation" />
 
-
-// Global type declarations for DOM types;
+// Global window extensions
 declare global {
-  // TODO: Implement
-}
   interface Window {
   // TODO: Implement
     performance: Performance;
@@ -69,10 +69,26 @@ declare global {
   // TODO: Implement
     aborted: boolean;,
   onabort: ((this: AbortSignal, ev: Event) => any) | null;
+    gtag?: (...args: any[]) => void;
+    dataLayer?: any[];
+  }
+}
 
+// Module declarations for static assets
+declare module "*.svg" {
+  const content: string;
+  export default content;
+}
 
+declare module "*.png" {
+  const content: string;
+  export default content;
+}
 
-export {};
+declare module "*.jpg" {
+  const content: string;
+  export default content;
+}
 
 // Global type declarations;
 declare module "*.svg" {""
@@ -92,10 +108,45 @@ declare module "*.module.scss" {""
 // Next.js specific types;
 declare namespace NodeJS {
   // TODO: Implement
+declare module "*.jpeg" {
+  const content: string;
+  export default content;
+}
+
+declare module "*.gif" {
+  const content: string;
+  export default content;
+}
+
+declare module "*.webp" {
+  const content: string;
+  export default content;
+}
+
+declare module "*.css" {
+  const content: { [className: string]: string };
+  export default content;
+}
+
+declare module "*.scss" {
+  const content: { [className: string]: string };
+  export default content;
+}
+
+declare module "*.module.css" {
+  const content: { [className: string]: string };
+  export default content;
+}
+
+declare module "*.module.scss" {
+  const content: { [className: string]: string };
+  export default content;
+}
+
+// Environment variables
+declare namespace NodeJS {
   interface ProcessEnv {
-  // TODO: Implement
-}"
-    "NODE_ENV": "development" | "production" | "test";"
+    NODE_ENV: "development" | "production" | "test";
     NEXT_PUBLIC_SUPABASE_URL?: string;
     NEXT_PUBLIC_SUPABASE_ANON_KEY?: string;
     SUPABASE_SERVICE_ROLE_KEY?: string;
@@ -104,3 +155,8 @@ declare namespace NodeJS {
 </reference>"
 /// <reference types="next/image-types/global" />"
 /// <reference types="next/navigation-types/navigation" />"
+    NEXT_PUBLIC_GA_TRACKING_ID?: string;
+  }
+}
+
+export {};

@@ -170,6 +170,12 @@ export const MobileFeatureShowcase: React.FC = () => {;
 }
 ;
 
+import React from './react';''
+import { CheckCircle, Smartphone, Users, Star, Mail } from './lucide-react';'
+export const MobileFeatureShowcase: React.FC = () => {
+  const features = [;
+    {
+
 
 import {CheckCircle, Smartphone, Users, Star, Mail} from "lucide-react";""
 import React from "react",""
@@ -236,3 +242,4 @@ import {CheckCircle, Smartphone, Users, Star, Mail} from "lucide-react";"
 }className="bg-zion-blue-dark border border-zion-blue-light p-6 rounded-lg hover:border-zion-purple/50 transition-all duration-300" > </div>) )"
 }</div> </div> </section>) ]"
 pr-12325
+

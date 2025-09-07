@@ -3,6 +3,7 @@
 
 pr-12325
   title: string,
+title: string,
   isOpen: boolean,
   onClose: () => void,
   onApply: (content: string) => void,
@@ -14,6 +15,10 @@ pr-12325
 
 export function AIEnhancementDialog({;
 import React from 'react';
+  initialContent?: string;
+}
+export function AIEnhancementDialog({;
+import React from 'react';'
   title;
   isOpen;
   onClose;
@@ -33,10 +38,25 @@ import { AIEnhancementOptions } from '@/hooks/useAIContentEnhancer',;
 interface AIEnhancementDialogProps {;
   title: string,;
   isOpen: boolean,;
+
+  defaultOptions;
+'
+import React from 'react',;'
+import {;
+  Dialog,;
+  DialogContent,;
+  DialogHeader,;'
+  DialogTitle} from '@/components/ui/dialog',;''
+import { AIEnhancementPanel } from './AIEnhancementPanel',;''
+import { AIEnhancementOptions } from '@/hooks/useAIContentEnhancer',;'
+
+interface AIEnhancementDialogProps {;
+  title: string,;
+  isOpen: boolean,;)
   onClose: () => void,;
   onApply: (content: string) => void,;
-  defaultOptions: AIEnhancementOptions,;
-  initialContent?: string;
+  defaultOptions: AIEnhancementOptions,;}
+  initialContent?: string;}
 }
 
 }: AIEnhancementDialogProps) {;
@@ -59,6 +79,7 @@ interface AIEnhancementDialogProps {;
   defaultOptions: AIEnhancementOptions,;
 
 
+
   title: string;,
   isOpen: boolean;
   onClose: () => void;,
@@ -78,14 +99,16 @@ export function AIEnhancementDialog({
     onApply(content)
     onClose()
   initialContent;
+
 }: AIEnhancementDialogProps) {;
-  const handleApply = (content: string) => {;
+  const handleApply = (;
     onApply(content),;
-    onClose();
-  };
-
-
+    onClose()) => {
+  return $3;}
+}
+};
   },
+
 
   return ()
     <Dialog open={isOpen} onOpenChange={() => onClose()}>;
@@ -99,15 +122,18 @@ export function AIEnhancementDialog({
         <AIEnhancementPanel;
 pr-12325
           title={title}
+
           defaultOptions={defaultOptions}
           onApply={handleApply}
           initialContent={initialContent}
-
         />;
       </DialogContent>;
     </Dialog>;
   );
 }
+</AIEnhancementPanel>
+      </DialogContent>;
+    </Dialog>;
 
     <Dialog open={is_open} onOpenChange={() => on_close ()}>;
 "
@@ -130,3 +156,9 @@ pr-12325
 
       
 pr-12325
+  initialContent;
+}/> </DialogContent> </Dialog>) 
+</AIEnhancementPanel>
+      </DialogContent>
+    </Dialog>"
+

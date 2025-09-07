@@ -28,6 +28,7 @@ interface Listing {
 
 
 
+
 import React from 'react';
 import {useState} from "react";""
 import {Header} from "@/components/Header";""
@@ -75,6 +76,7 @@ interface Listing {
   category: string;
 pr-12325
   subcategory?: string;
+
   image?: string;
   tags?: string[];
   author?: string;
@@ -89,7 +91,17 @@ interface CategoryListingPageProps {
 
   title: string
   description: string
+
+  price?: number | null;
+  createdAt: string;
+}
+interface CategoryListingPageProps {
+  // TODO: Implement
+}
+  title: string;,
+  description: string;
   listings: Listing[]
+
   sortOptions?: { label: string, value: string }[]
   filterOptions?: { label: string, value: string }[]
 }
@@ -154,10 +166,31 @@ pr-12325
   const [searchQuery, setSearchQuery] = useState("");"
   const [selectedSort, setSelectedSort] = useState(sortOptions[0].value);
   const [selectedFilter, setSelectedFilter] = useState(filterOptions[0].value);
+  title;
+
+  description;
+  listings: initialListings;
+  sortOptions = ["
+    { label: 'Newest First', value: 'newest' }''
+    { label: 'Oldest First', value: 'oldest' }''
+    { label: 'Highest Rating', value: 'rating-high' }''
+    { label: 'Highest AI Match', value: 'ai-match' }''
+    { label: 'A-Z', value: 'a-z' }']'
+    { label: 'Z-A', value: 'z-a' }]'
+  filterOptions = ['
+    { label: 'All', value: 'all' }''
+    { label: 'Highly Rated', value: 'high-rating' }']'
+    { label: 'Best AI Match', value: 'best-match' }]')
+}: CategoryListingPageProps) {'
+  const [searchQuery, setSearchQuery] = useState("");"
+  const [selectedSort, setSelectedSort] = useState(sortOptions[0].value);
+  const [selectedFilter, setSelectedFilter] = useState(filterOptions[0].value);
+
   // Process listings based on filters and search;
   const processedListings = initialListings;
     .filter(listing => {
       // Apply search filter;
+
       const matchesSearch =)
         listing.title.toLowerCase().includes(searchQuery.toLowerCase()) |
         listing.description.toLowerCase().includes(searchQuery.toLowerCase()) |
@@ -168,6 +201,9 @@ pr-12325
       if (selectedFilter === 'all') return matchesSearch;
       if (selectedFilter === 'high-rating') return matchesSearch && (listing.rating |0) >= 4;
       if (selectedFilter === 'best-match') return matchesSearch && (listing.aiScore |0) >= 85;
+      if (selectedFilter === 'all') return matchesSearch;''
+      if (selectedFilter === 'high-rating') return matchesSearch && (listing.rating |0) >= 4;''
+      if (selectedFilter === 'best-match') return matchesSearch && (listing.aiScore |0) >= 85;'
       return matchesSearch;
     })
     .sort((a, b) => {
@@ -332,6 +368,22 @@ export function CategoryListingPage({;
                   description={listing.description}
                   category={listing.subcategory |listing.category}
         default: return 0;
+      switch (selectedSort) {'
+        case 'newest':'
+          return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime();'
+        case 'oldest':'
+          return new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime();'
+        case 'rating-high':'
+          return (b.rating |0) - (a.rating |0);'
+        case 'ai-match':'
+          return (b.aiScore |0) - (a.aiScore |0);'
+        case 'a-z':'
+          return a.title.localeCompare(b.title);'
+        case 'z-a':'
+          return b.title.localeCompare(a.title);
+        default: return 0;
+
+      }
     });
   return (
     <>
@@ -347,6 +399,8 @@ export function CategoryListingPage({;
 </p>
     <>;
       <Header />;
+
+</Header>"
       <div className="min-h-screen bg-zion-blue py-12 px-4">;"
         <div className="container mx-auto">;"
           <div className="text-center mb-12">;"
@@ -422,8 +476,18 @@ pr-12325
                   author_image={listing.author_image}
                   ai_score={listing.ai_score}
                   rating={listing.rating}
+                  key={listing.id}
+                  title={listing.title}
+
+                  description={listing.description}
+                  category={listing.subcategory |listing.category}
+                  image={listing.image}
+                  tags={listing.tags}
+                  author={listing.author}
+                  author_image={listing.author_image}
+                  ai_score={listing.ai_score}
+                  rating={listing.rating}
             </p>;
-          </div>;
 
           {/* Listings Grid */}
           {processedListings && processedListings.length > 0 ? (;
@@ -436,7 +500,13 @@ pr-12325
 
 
 pr-12325
+</ListingScoreCard>
+          </div>;"
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;"
+</div>
+                <ListingScoreCard;
                   key={listing && listing.id}
+
                   title={listing && listing.title}
                   description={listing && listing.description}
                   category={listing && listing.subcategory || listing && listing.category}
@@ -462,6 +532,10 @@ pr-12325
 
               
 
+</ListingScoreCard>
+              </Button>
+            </div>
+
 
             <div className="text-center py-20">;"
               <h3 className="text-xl font-bold text-white mb-2">No listings found</h3>;""
@@ -479,6 +553,17 @@ pr-12325
       <Footer />;
 
 pr-12325
+                onClick={() => {;
+</Button>
+              </Button>
+            </div>
+              </Button>;
+            </div>;
+
+        </div>;
+      </div>;
+      <Footer />;
+</Footer>
     </>;
   );
                   review_count={listing.review_count}
@@ -496,6 +581,17 @@ pr-12325
                 className="border - zion - purple text - zion - purple hover:bg - zion-purple / 10";
               >;
                 Clear all filters;
+
+            </div>) : ("
+            <div className="text - center py - 20">;"
+</div>"
+              <h3 className="text - xl font - bold text - white mb - 2">No listings found</h3>;""
+              <p className="text - zion - slate - light mb - 6">Try adjusting your filters or search query</p>;"
+              <Button;"
+                variant="outline";")
+                on_click={() => {
+</Button>
+
               </Button>;
             </div>)}
         </div>;
@@ -512,7 +608,9 @@ pr-12325
 
             </div>)}
 
+</Footer>
     </>);
+
   ),; //Example listing type interface Listing {
   // TODO: Implement
 }interface CategoryListingPageProps {
@@ -614,3 +712,4 @@ case 'z-a': return (<> <Header /> <div className="min-h-screen bg-zion-blue py-1
     </>
 }"
 pr-12325
+

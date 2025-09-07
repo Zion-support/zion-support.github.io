@@ -54,6 +54,7 @@ function MobileResumeBuilder() {
       <BottomNavigation />;
     </div>);
 }
+
 import React from "react";""
 import { MobileHeader } from "../components/common/MobileHeader";""
 import { BottomNavigation } from "../components/common/BottomNavigation";"
@@ -95,9 +96,12 @@ import { MobileResumeBuilder as ResumeBuilderComponent } from "../components/res
         show_back;
       />;
       <main className="py - 4">;"
+</main>
+
         <ResumeBuilderComponent />;
 
       </main>;
+
       <BottomNavigation />;
 )
     </div>);"
@@ -108,3 +112,4 @@ import { MobileResumeBuilder as ResumeBuilderComponent } from "../components/res
     </div>;"
   return (<div className="min-h-screen" > Resume Builder"showBack /> <main className=" py-4" > <ResumeBuilderComponent /> </main> <BottomNavigation /> </div>")"
 pr-12325
+

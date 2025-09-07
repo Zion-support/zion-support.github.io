@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input",
 import { Textarea } from "@/components/ui/textarea",
 import { Avatar, AvatarFallback } from "@/components/ui/avatar",
 
+
 import React, { useState } from "react",""
 import { MessageCircle } from "lucide-react",""
 import { Button } from "@/components/ui/button",""
@@ -37,6 +38,7 @@ import { Card, CardContent } from "@/components/ui/card",""
 import { Separator } from "@/components/ui/separator","
   // TODO: Implement
 pr-12325
+}
   id: number,
   author: string,
   avatar?: string,
@@ -103,8 +105,11 @@ const initial_posts: DiscussionPost[] = [;
   title: "Quick tip: How to rank your Zion listing higher"","
   body: "Fill out every profile detail, add strong tags, and post weekly! See results in a month.""
   }]
+
 ];
+
 export const CommunityDiscussion: React.FC = () => {
+
 const initialPosts: DiscussionPost[] = [;
   {;
     id: 1,;"
@@ -232,8 +237,10 @@ pr-12325
     ]);"
     setNewTitle("");""
     setNewBody("");"
+
     setShowNew(false);
   return (
+
 
   return ("
     <div className="w-full max-w-2xl mx-auto mt-8 p-6 bg-zion-blue-light rounded-2xl shadow-xl animate-fade-in">"
@@ -329,6 +336,31 @@ export const CommunityDiscussion: React.FC = () => {;
         
                 
               
+</Button>
+
+              </Button>
+            </div>
+          </CardContent>
+        </Card>
+      )}
+      <div className=\"flex flex-col gap-6\" />
+        {posts.map((post) => (}
+          <Card;}
+key={post.id}
+            className=\"bg-zion-blue border-zion-slate-dark shadow-lg\"
+           />
+            <CardContent className=\"py-4 flex gap-4\" />
+              <Avatar />
+                <AvatarFallback />
+                  {post.author;
+                    .split(\" \")
+                    .map((s) => s[0])
+                    .join(\"\")}
+                    .toUpperCase()}
+                    .slice(0, 2)}
+                </AvatarFallback>
+              </Avatar>
+
               <div>
                 <div className="flex gap-2 items-center">"
                   <span className="font-semibold text-white">"
@@ -341,6 +373,17 @@ export const CommunityDiscussion: React.FC = () => {;
             
           
       <div className="mt-8 text-xs text-zion-slate-dark text-center">"
+
+                </p>
+              </div>
+            </CardContent>
+          </Card>
+      </div>"
+      <div className="mt-8 text-xs text-zion-slate-dark text-center">"
+</div>
+      </div>
+
+    </div>"
             <div className="flex gap - 3 justify - end">;"
                 variant="secondary";""
                 size="sm";""
@@ -362,6 +405,12 @@ export const CommunityDiscussion: React.FC = () => {;
                 </h3>;"
                 <p className="text-zion-slate-light mt-1 whitespace-pre-line">;"
                 </p>;
+</p>
+                </p>;
+              </div>;
+            </CardContent>;
+          </Card>;
+      </div>;"
       <div className="mt-8 text-xs text-zion-slate-dark text-center">;"
         )}"
       <div className="flex flex - col gap - 6">;"
@@ -383,3 +432,4 @@ export const CommunityDiscussion: React.FC = () => {;
       <div className="mt - 8 text - xs text - zion - slate - dark text - center">;"
     </div>);"
 pr-12325
+

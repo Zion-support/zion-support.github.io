@@ -24,6 +24,18 @@ import {useState} from 'react';
   | 'job-post
   | 'proposal
   | 'general';
+
+
+
+import {useState} from 'react';''
+import {supabase} from '@/integrations/supabase/client';''
+import {toast} from '@/hooks/use-toast';'
+type EnhancementType ='
+  | 'resume-summary'''
+  | 'work-description'''
+  | 'job-post'''
+  | 'proposal'''
+  | 'general';'
   enhancementType: EnhancementType;
   content?: string;
   context?: string;
@@ -109,6 +121,16 @@ function useAIContentEnhancer() {
   const [is_enhancing, setIsEnhancing] = useState (false);
   const [error, set_error] = useState < string | null>(null);  }
 }
+'
+import {useState} from 'react';''
+import {supabase} from '@/integrations / supabase / client';''
+import {toast} from '@/hooks / use - toast';'
+type EnhancementType =;'
+  | 'resume - summary';''
+  | 'work - description';''
+  | 'job - post';''
+  | 'proposal';''
+  | 'general';'
 ;
 
 export interface AIEnhancementOptions {
@@ -177,3 +199,7 @@ if ( {) {
     is_enhancing;
     error;
 pr-12325
+  }
+}
+'
+

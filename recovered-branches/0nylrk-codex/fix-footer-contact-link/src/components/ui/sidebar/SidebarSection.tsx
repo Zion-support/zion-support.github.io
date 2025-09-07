@@ -33,6 +33,7 @@ export function SidebarSection({ className, title, children, ...props }: Sidebar
 }
 
 ursor/fix-website-loading-errors-and-merge-6662
+
 import React from "react";""
 import { cn } from "@/lib/utils";"
 interface SidebarSectionProps extends React.HTMLAttributes<HTMLDivElement> {
@@ -75,3 +76,5 @@ interface SidebarSectionProps extends React.HTMLAttributes<HTMLDivElement> {;
 }</div> 
         </h3>"
 pr-12325
+  );
+}

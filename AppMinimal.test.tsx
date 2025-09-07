@@ -1,4 +1,12 @@
+import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import AppMinimal from './AppMinimal';
 
+describe('AppMinimal', () => {
+  it('renders without crashing', () => {
+    render(<AppMinimal />);
+    expect(screen.getByRole('main')).toBeInTheDocument();
+  });
 
 import React from 'react';
 import { render, screen } from '@testing-library/react';
@@ -21,3 +29,13 @@ import { render,screen } from \'@testing-library/react\'; import { describe,it,e
 const { render,screen } from "@testing-library/react"; import { describe,it,expect } from "vitest"; import AppMinimal from "./AppMinimal"; describe('AppMinimal', () => { it('renders without crashing', () => { render(<AppMinimal />); expect(screen.getByRole("main")).toBeInTheDocument()}); it('displays correct content', () => { render(<AppMinimal />)}); it("handles user interactions""
 "
 )
+  it('displays correct content', () => {
+    render(<AppMinimal />);
+    // Add content tests here
+  });
+
+  it('handles user interactions', () => {
+    render(<AppMinimal />);
+    // Add interaction tests here
+  });
+});

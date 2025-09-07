@@ -1,6 +1,6 @@
 export interface User {
+interface User {
   id: string;
-  email: string;
   role: 'client' | 'talent' | 'admin';
   name?: string;
 }
@@ -10,6 +10,8 @@ export interface AuthContext {
   login: (email: string, password: string) => Promise<User | null>;
   logout: () => void;
   register: (email: string, password: string, role: User['role']) => Promise<User | null>;
+  email: string;
+  name: string;
 }
 
 export function validateUser(userId: string, role: string): User | null {
@@ -18,8 +20,9 @@ export function validateUser(userId: string, role: string): User | null {
   
   return {
     id: userId,
+    role: role as 'client' | 'talent' | 'admin',
     email: '',
-    role: role as User['role']
+    name: ''
   };
 }
 import { NextApiRequest, NextApiResponse } from "next";
@@ -75,3 +78,4 @@ export interface AuthContext {
 
   register: (email: string, password: string, role: User['role']) => Promise<User | null>;
 pr-12325
+}

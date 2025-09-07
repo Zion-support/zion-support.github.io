@@ -54,13 +54,19 @@ export interface EmptyResumeProps {
 }
 }
 ;
+
 import { Resume } from "@/types/resume";"
 export interface StepProps {
   // TODO: Implement
 }
   id: string;,
   label: string;
+
+}
+
+
 export interface NavigationButtonsProps {
+
   // TODO: Implement
 export interface NavigationButtonsProps {;
   // TODO: Implement
@@ -71,14 +77,19 @@ import { Resume } from "@/types/resume",""
 import {Resume} from "@/types/resume";"
   // TODO: Implement
 
+
   onBack?: () => void;
   onNext?: () => void;
   isNextDisabled?: boolean;
   backLabel?: string;
   nextLabel?: string;
   isLoading?: boolean;
+  isLoading?: boolean;}
+
+}
 
 export interface ResumeProgressProps {
+
   // TODO: Implement
   resume: Resume | null;,
   progress: number;
@@ -88,3 +99,4 @@ export interface CreateResumeFormProps {;
 </void>
 </void>"
 pr-12325
+

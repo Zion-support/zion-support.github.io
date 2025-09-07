@@ -43,201 +43,53 @@ import {
 } from 'lucide-react';
 ;
 const sitemap_data = [;
+import { GetServerSideProps } from 'next';
+
+const sitemap_data = [
   {
     category: 'Main Pages',
-    pages: [;
-      { name: 'Home', url: '/', icon: Home },
-      { name: 'About', url: '/about', icon: Users },
-      { name: 'Contact', url: '/contact', icon: Globe },
-      { name: 'Services', url: '/services', icon: Settings }
-    ];
+    pages: [
+      { name: 'Home', url: '/', icon: 'Home' },
+      { name: 'About', url: '/about', icon: 'Users' },
+      { name: 'Contact', url: '/contact', icon: 'Globe' },
+      { name: 'Services', url: '/services', icon: 'Settings' }
+    ]
   },
   {
     category: 'Services',
-    pages: [;
-      { name: 'AI Services', url: '/ai - services', icon: Brain },
-      { name: 'IT Services', url: '/it - services', icon: Network },
-      { name: 'Micro SaaS', url: '/micro - saas', icon: Target },
-      { name: 'Cloud Services', url: '/services / cloud', icon: Cloud },
-      { name: 'Cybersecurity', url: '/services / cybersecurity', icon: Shield },
-      { name: 'Data Analytics', url: '/services / data - analytics', icon: BarChart3 }
-    ];
-  },
-  {
-    category: 'Solutions',
-    pages: [;
-      { name: 'Cloud Migration', url: '/solutions / cloud - migration', icon: Cloud },
-      { name: 'Digital Transformation', url: '/solutions / digital - transformation', icon: Settings },
-      { name: 'Custom Solutions', url: '/solutions / custom', icon: Target }
-    ];
-  },
-  {
-    category: 'Resources',
-    pages: [;
-      { name: 'Documentation', url: '/docs', icon: Globe },
-      { name: 'API Documentation', url: '/api - docs', icon: Settings },
-      { name: 'Guides', url: '/guides', icon: Globe },
-      { name: 'FAQ', url: '/faq', icon: Users }
-    ];
+    pages: [
+      { name: 'AI Services', url: '/ai-services', icon: 'Brain' },
+      { name: 'IT Services', url: '/it-services', icon: 'Network' },
+      { name: 'Micro SaaS', url: '/micro-saas', icon: 'Target' },
+      { name: 'Cloud Services', url: '/services/cloud', icon: 'Cloud' },
+      { name: 'Cybersecurity', url: '/services/cybersecurity', icon: 'Shield' },
+      { name: 'Data Analytics', url: '/services/data-analytics', icon: 'BarChart3' }
+    ]
   }
 ];
 
-
-
-
-export default function SitemapPage() {
-  return (
-    <>
-      <Head>
-        <title>Sitemap - Zion Tech Group</title>
-        <meta name="description" content="Complete sitemap of Zion Tech Group website. Find all our pages, services, and resources in one place." />
-      </Head>
-      <div className="min-h-screen bg-gray-50">
-
-export default function SitemapPage() {;
-  return (
-    <>;
-      <Head>;
-        <title>Sitemap - Zion Tech Group</title>;
-        <meta name="description" content="Complete sitemap of Zion Tech Group website. Find all our pages, services, and resources in one place." />;
-      </Head>;
-
-      <div className="min-h-screen bg-gray-50">;
-        {/* Hero Section */}
-        <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">;
-          <div className="max-w-7xl mx-auto px-4">;
-            <motion&& motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-        {/* Sitemap Content */}
-        <section className="py-16">;
-          <div className="max-w-7xl mx-auto px-4">;
-            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">;
-              {sitemapData && sitemapData.map((section, sectionIndex) => (;
-                <motion&& motion.div
-                  key={section && section.category}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0 && 0.6, delay: sectionIndex * 0 && 0.1 }}
-                  className="bg-white rounded-lg shadow-lg p-6">;
-                  <h3 className="text-xl font-bold mb-4 text-gray-800">;
-                    {section && section.category}
-                  </h3>;
-                  <div className="space-y-3">;
-                    {section && section.pages.map((page, pageIndex) => (;
-                      <Link
-                        key={page && page.name}
-                        href={page && page.url}
-                        className="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-50 transition-colors group">;
-                        <page && page.icon className="w-5 h-5 text-blue-600 group-hover:text-blue-700" />;
-                        <div>;
-                          <div className="font-medium text-gray-800 group-hover:text-blue-600">;
-                            {page && page.name}
-                          </div>;
-                        </div>;
-                        <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-blue-600 ml-auto" />;
-                      </Link>;
-                    ))}
-                  </div>;
-                </motion && motion.div>;
-              ))}
-;
-export default /**
- * SitemapPage - Function description
- */
-function SitemapPage() {
-  return (
-    <>;
-      <Head>;
-        <title > Sitemap - Zion Tech Group</title>;
-        <meta name="description" content="Complete sitemap of Zion Tech Group website. Find all our pages, services, and resources in one place." />;
-      </Head>;
-      <div className="min - h-screen bg - gray - 50">;
-        {/* Hero Section */}
-        <section className="bg - gradient - to - r from - blue - 600 to - purple - 600 text - white py - 20">;
-          <div className="max - w-7xl mx - auto px - 4">;
-            <motion.div;
-              initial={{ opacity: 0, coordinate_y: 20 }}
-              animate={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="text - center";
-            >;
-              <h1 className="text - 4xl md:text - 6xl font - bold mb - 6">;
-                Site <span className="text - yellow - 400">Map</span>;
-              </h1>;
-              <p className="text - xl mb - 8 max - w-3xl mx - auto">;
-                Navigate through all our pages, services, and resources;
-              </p>;
-            </motion.div>;
-          </div>;
-        </section>;
-        {/* Sitemap Content */}
-        <section className="py - 16">;
-          <div className="max - w-7xl mx - auto px - 4">;
-            <div className="grid gap - 8 md:grid - cols - 2 lg:grid - cols - 3">;
-              {sitemap_data.map ((section, section_index) => (
-                <motion.div;
-                  key={section.category}
-                  initial={{ opacity: 0, coordinate_y: 20 }}
-                  animate={{ opacity: 1, coordinate_y: 0 }}
-                  transition={{ duration: 0.6, delay: section_index * 0.1 }}
-                  className="bg - white rounded - lg shadow - lg p - 6";
-                >;
-                  <h3 className="text - xl font - bold mb - 4 text - gray - 800">;
-                    {section.category}
-                  </h3>;
-                  <div className="space - y-3">;
-                    {section.pages.map ((page, page_index) => (
-                      <Link;
-                        key={page.name}
-                        href={page.url}
-                        className="flex items - center space - x-3 p - 3 rounded - lg hover:bg - gray - 50 transition - colors group";
-                      >;
-                        <page.icon className="w - 5 h - 5 text - blue - 600 group - hover:text - blue - 700" />;
-                        <div>;
-                          <div className="font - medium text - gray - 800 group - hover:text - blue - 600">;
-                            {page.name}
-    </>
-  );
-origin/automation-improvements-final
-}
-ursor/integrate-build-improve-and-re-verify-8f7d
-origin/cursor/integrate-build-improve-and-re-verify-242d
-origin/main
-import {
-  Home
-  Search
-  Rocket
-  FileText
-  Users
-  Mail
-  Map
-  ArrowRight
-  ExternalLink
-  ChevronRight
-  Globe
-  Building;
-    </>;
-  );
+function generateSiteMap() {
+  return `<?xml version="1.0" encoding="UTF-8"?>
+   <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+     ${sitemap_data
+       .flatMap(category => category.pages)
+       .map(page => {
+         return `
+       <url>
+           <loc>https://ziontechgroup.com${page.url}</loc>
+           <lastmod>${new Date().toISOString()}</lastmod>
+           <changefreq>weekly</changefreq>
+           <priority>0.8</priority>
+       </url>
+     `;
+       })
+       .join('')}
+   </urlset>
+ `;
 }
 
-
-
-
-
-import {
-                          </div>;
-                        </div>;
-                        <ArrowRight className="w - 4 h - 4 text - gray - 400 group - hover:text - blue - 600 ml - auto" />;
-                      </Link>))}
-                  </div>;
-                </motion.div>))}
-
-            </div>;
-          </div>;
-        </section>;
-      </div>;
-
+function SiteMap() {
+  // getServerSideProps will do the heavy lifting
 }
 
 
@@ -2105,3 +1957,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 }> Need Help Finding Something? </h2> <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto" > Use our search functionality or contact us directly for assistance </p> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <Link href="/search" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl" > Search Site <Search className="w-5 h-5 ml-2" /> </Link> <Link href="/contact" className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10" > Contact Support <Mail className="w-5 h-5 ml-2" /> </Link> </div> </motion.div> </div> </section> <SmartFooter /> </div>)
 origin/cursor/automate-test-improve-and-merge-code-2533
+// eslint-disable-next-line react-refresh/only-export-components
+export const getServerSideProps: GetServerSideProps = async ({ res }) => {
+  // We generate the XML sitemap with the posts data
+  const sitemap = generateSiteMap();
+
+  res.setHeader('Content-Type', 'text/xml');
+  // we send the XML to the browser
+  res.write(sitemap);
+  res.end();
+
+  return {
+    props: {},
+  };
+};
+
+export default SiteMap;

@@ -15,6 +15,7 @@ import {
   Globe,
   Heart,
   Phone,
+
   Mail,
   MapPin;
 } from 'lucide-react';
@@ -37,11 +38,31 @@ const accessibilityFeatures = [
     title: 'Security & Privacy',
     description: 'Secure accessibility features that protect user data and privacy.',
     features: ['Data encryption', 'Privacy controls', 'Secure authentication', 'GDPR compliance']
+  {
+    icon: Ear,'
+    title: 'Audio Accessibility',''
+    description: 'Audio descriptions, captions, and alternative audio formats for all content.',''
+    features: ['Audio descriptions', 'Closed captions', 'Transcripts', 'Volume controls']'
+  },
+  {
+    icon: MousePointer,'
+    title: 'Motor Accessibility',''
+    description: 'Keyboard navigation, voice control, and assistive technology support.',''
+    features: ['Keyboard navigation', 'Voice control', 'Switch control', 'Gesture alternatives']'
+  },
+  {
+    icon: Shield,'
+    title: 'Security & Privacy',''
+    description: 'Secure accessibility features that protect user data and privacy.',''
+    features: ['Data encryption', 'Privacy controls', 'Secure authentication', 'GDPR compliance']'
+
 ];
 
 export default function AccessibilityPage() {
   return (
     <MainLayout;
+
+    <MainLayout;'
       title="Accessibility - Zion Tech Group"""
       description="Committed to making technology accessible to everyone. Learn about our accessibility features and compliance."""
       keywords="accessibility, inclusive design, WCAG, screen reader, assistive technology""
@@ -77,12 +98,17 @@ export default function AccessibilityPage() {
                     <li key={idx} className="flex items-center text-gray-300">"
 </li>"
                       <CheckCircle className="h-4 w-4 text-green-400 mr-2" />"
+</CheckCircle>
 
                     </li>
                 </ul>
               </motion.div>)
             ))}
 
+          <motion.div;
+
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.8 }}"
             className="bg-blue-600 rounded-xl p-8 text-center""
             <h2 className="text-3xl font-bold text-white mb-4">"
@@ -101,3 +127,12 @@ export default function AccessibilityPage() {
                 <MapPin className="h-5 w-5 mr-2" />"
 
                 <span>364 E Main St STE 1008 Middletown DE 19709</span>
+</MapPin>
+                <span>364 E Main St STE 1008 Middletown DE 19709</span>
+
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </div>
+    </MainLayout>"

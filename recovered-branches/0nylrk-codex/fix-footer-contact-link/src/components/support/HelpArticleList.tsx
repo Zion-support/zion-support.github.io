@@ -132,12 +132,14 @@ function formatDate(date: string): string {
   })
 
 import React from "react";"
+
 import {
   // TODO: Implement
 }
   Card,
   CardContent,
   CardDescription,
+
   CardHeader,
   CardTitle,"
 } from "@/components/ui/card";""
@@ -148,8 +150,11 @@ interface HelpArticleListProps {
   onArticleSelect: (articleId: string) => void;,
   searchQuery: string;
 
+}
+
 export function HelpArticleList({
   categoryId,
+
   onArticleSelect,
   searchQuery,)
 }: HelpArticleListProps) {
@@ -188,6 +193,36 @@ export function HelpArticleList({
               
               
             
+</p>
+
+                </p>
+              </CardContent>
+            </Card>
+        </div>
+    </div>
+
+            <Card;
+              key={article.id}"
+              className="cursor-pointer hover:border-zion-purple/50 transition-colors""
+              onClick={() => onArticleSelect(article.id)}
+</Card>"
+              <CardHeader className="pb-2">"
+</CardHeader>"
+                <CardTitle className="text-lg">{article.title}</CardTitle>""
+                <CardDescription className="text-zion-slate-light text-sm">"
+</CardDescription>
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+</CardContent>"
+                <p className="text-sm text-zion-slate-light truncate">"
+</p>
+                </p>
+              </CardContent>
+            </Card>
+        </div>
+    </div>
+    return <div>Category not found</div>;
     <div>;
       <div className="mb-6">;"
         <h2 className="text-2xl font-bold mb-2">{category && category.name}</h2>;""
@@ -233,3 +268,4 @@ export function HelpArticleList({
 }</div>) 
 }</div>) "
 pr-12325
+

@@ -8,6 +8,7 @@ declare module '@tanstack/react-query';
 }  // Minimal placeholder for the DayPicker component used in the app;
 
 
+
 declare module "@radix - ui / react - hover - card";""
 declare module "input - otp";""
 declare module "react - markdown";""
@@ -28,23 +29,14 @@ declare module '@tanstack/react-query';
 
   // Minimal placeholder for the DayPicker component used in the app;
 pr-12325
+  }
+}  // Minimal placeholder for the DayPicker component used in the app;
   // The actual library provides full typings but we stub them here so the;
   // TypeScript compiler can understand the imports without requiring the real;
   // type definitions.;
   // eslint - disable - next - line @typescript - eslint / no - explicit - any;
   export const DayPicker: any;
 }
-declare module "cmdk",
-declare module "@radix-ui/react-context-menu",
-declare module "vaul",
-declare module "@radix-ui/react-hover-card",
-declare module "input-otp",
-declare module "react-markdown",
-declare module "@radix-ui/react-menubar",
-declare module "@radix-ui/react-navigation-menu",
-declare module "react-resizable-panels",
-declare module "@radix-ui/react-toggle-group",
-declare module "@radix-ui/react-toggle",
 
 declare module '@tanstack/react-query',
 declare module 'react-day-picker' {
@@ -66,6 +58,8 @@ declare module "@radix-ui/react-toggle-group",;
 declare module "@radix-ui/react-toggle",;
 
 
+
+}'
 declare module "cmdk",""
 declare module "@radix-ui/react-context-menu",""
 declare module "vaul",""
@@ -103,10 +97,24 @@ pr-12325
 declare module 'sonner';
 declare module 'lucide-react' {
 import {FC, SVGProps} from 'react';
+declare module '@tanstack/react-query',;''
+declare module 'react-day-picker' {;'
+
+  export interface DateRange {;
+    from?: Date,;}
+    to?: Date}
+};
+
+'
+declare module 'sonner';''
+declare module 'lucide-react' {''
+import {FC, SVGProps} from 'react';'
+
   export type LucideProps = SVGProps < SVGSVGElement>;
   export type LucideIcon = FC < LucideProps>;
 ;
   export interface DateRange {;
+
     from?: Date;
     to?: Datedeclare module 'lucide-react' {
 
@@ -122,6 +130,8 @@ declare module 'jspdf' {
   export const jsPDF: any,
   export default jsPDF;
 }
+    to?: Date;
+  }
   // Minimal placeholder for the DayPicker component used in the app;
   // The actual library provides full typings but we stub them here so the;
   // TypeScript compiler can understand the imports without requiring the real;
@@ -398,10 +408,11 @@ declare module 'react - hook - form' {
   export type FieldPath < TFieldValues extends FieldValues> =;
     keyof TFieldValues & string;
   export type Control < TFieldValues extends FieldValues = FieldValues> = any;
-  export interface UseFormReturn<;
 
+  export interface UseFormReturn<;
     TFieldValues extends FieldValues = FieldValues;
   > {
+
     control: Control < TFieldValues>;,
   handle_submit: any;
     register: any;,
@@ -442,6 +453,10 @@ declare module 'class-variance-authority' {
   export type FieldValues = Record<string, any>
 </string>
   export type FieldPath<TFieldValues extends FieldValues> =
+</TFieldValues>
+  export type Control<TFieldValues extends FieldValues = FieldValues> = any;
+</TFieldValues>
+  export interface UseFormReturn<
 
   export type Control<TFieldValues extends FieldValues = FieldValues> = any;
 
@@ -453,6 +468,13 @@ declare module 'class-variance-authority' {
   >(options?: any): UseFormReturn<TFieldValues>
 
   export function useFieldArray<
+</TFieldValues>
+  export function useForm<
+    TFieldValues extends FieldValues = FieldValues;
+  >(options?: any): UseFormReturn<TFieldValues>
+</TFieldValues>
+  export function useFieldArray<
+    TFieldValues extends FieldValues = FieldValues;
   >(options: any): any;
   export interface ControllerProps<
 
@@ -499,23 +521,38 @@ declare module 'class-variance-authority' {
   >(options?: any): UseFormReturn < TFieldValues>;
     TName extends FieldPath < TFieldValues> = FieldPath < TFieldValues>,
 pr-12325
+  export function useFieldArray<;
+    TFieldValues extends FieldValues = FieldValues;
+
+  >(options: any): any;
+export interface ControllerProps<  > {
     name: TName;
     control?: Control < TFieldValues>;
     rules?: any;
-    default_value?: any;
-    render: (props: any) => ReactElement;
+    default_value?: any;}
+    render: (props: any) => ReactElement;}
   }
-
   export const Controller: ComponentType < ControllerProps < any, any>>;
   export interface FormProviderProps<;
   export const Controller: ComponentType<ControllerProps<any, any>>
 
   export interface FormProviderProps<;
 
+
+
+  export const Controller: ComponentType<ControllerProps<any, any>>
+</ControllerProps>
+
+
+  export interface FormProviderProps<;
+
+  export const Controller: ComponentType < ControllerProps < any, any>>;
+
+  export interface FormProviderProps<;
     TFieldValues extends FieldValues = FieldValues;
   > {
-    children?: ReactNode;
-    [key: string]: any;
+    children?: ReactNode;}
+    [key: string]: any;}
   }
 }
 declare module 'react - i18next';
@@ -547,6 +584,19 @@ declare module 'recharts';
 
 declare module 'react - i18next';
 declare module 'react-dom / client';
+
+}'
+declare module 'react - i18next';''
+declare module 'react-dom / client';''
+declare module 'react-dom';''
+declare module 'react - beautiful - dnd';''
+declare module 'react - redux';''
+declare module 'semver';''
+declare module 'ws';''
+declare module 'recharts';'
+}'
+declare module 'react - i18next';''
+declare module 'react-dom / client';'
   // eslint-disable-next-line @typescript-eslint/no-explicit-any;
   export const DayPicker:any;
 declare module 'sonner',;
@@ -591,3 +641,5 @@ declare module 'lucide-react' {;
 
     TFieldValues extends FieldValues = FieldValues>(): UseFormReturn<TFieldValues>;
 pr-12325
+</TFieldValues>'
+

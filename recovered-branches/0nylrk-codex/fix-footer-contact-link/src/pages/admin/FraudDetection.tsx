@@ -130,6 +130,7 @@ export default function FraudDetection() {
               <CardContent className="p-0">;
                 <FraudFlagsTable
 
+
 import React, { useState, useEffect } from "react",""
 import { AppLayout } from "@/layout/AppLayout",""
 import { SEO } from "@/components/SEO",""
@@ -144,11 +145,13 @@ import {FraudStatsCards, FraudFilters, FraudFlagsTable, FraudTabContent} from "@
 import { supabase } from "@/integrations/supabase/client",""
 import { FraudFlag, FraudStats } from "@/types/fraud","
 // Import refactored components;
+
 import {
   // TODO: Implement
 }
   FraudStatsCards,
   FraudFilters,
+
   FraudFlagsTable,
   FraudTabContent;"
 } from "@/components/admin/fraud-detection","
@@ -228,6 +231,14 @@ export default function FraudDetection() {
 
             
         <FraudStatsCards stats={stats} />
+</Button>
+
+            </Button>
+          </div>
+        </div>
+        <FraudStatsCards stats={stats} />
+
+</FraudStatsCards>"
         <Tabs defaultValue="all" className="mb-8">"
 
           <TabsList>
@@ -392,6 +403,7 @@ if ( {) {
                 <FraudFlagsTable;
 pr-12325
                   flags={filteredFlags}
+
                   isLoading={isLoading}
                   hasFilters={hasFilters}
                   resetFilters={resetFilters}
@@ -401,6 +413,13 @@ pr-12325
             {/* Flags Table */}
             <Card>;
               <CardContent className="p-0">;
+
+</FraudFlagsTable>
+            <Card>;
+</Card>"
+              <CardContent className="p - 0">;"
+</CardContent>
+
                 <FraudFlagsTable;
                   flags={filtered_flags}
                   is_loading={is_loading}
@@ -436,6 +455,11 @@ pr-12325
                   on_action={handle_action}
 
 
+</FraudFlagsTable>
+              </CardContent>;
+            </Card>;
+
+          </TabsContent>;"
           <TabsContent value="pending">;"
             <FraudTabContent tab_value="pending" />;"
 
@@ -462,3 +486,6 @@ Fraud Detection | Admin Dashboard"description=" Monitor and manage fraud detecti
 )"
 }/>    <TabsContent value=" pending"> <FraudTabContent tabValue=" pending"/>  <TabsContent value=" dangerous"> <FraudTabContent tabValue=" dangerous"/>  <TabsContent value=" actioned"> <FraudTabContent tabValue=" actioned" />   </div> )""`;
 pr-12325
+</Card>)"
+}/> </CardContent> </Card> </TabsContent> <TabsContent value=" pending"> <FraudTabContent tabValue=" pending"/> </TabsContent> <TabsContent value=" dangerous"> <FraudTabContent tabValue=" dangerous"/> </TabsContent> <TabsContent value=" actioned"> <FraudTabContent tabValue=" actioned" /> </TabsContent> </Tabs> </div> </AppLayout>)""
+

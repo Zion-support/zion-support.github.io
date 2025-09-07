@@ -9,6 +9,7 @@ import {SearchSuggestion, SearchHighlight} from "@/types/search";interface Autoc
   visible: boolean
 import { SearchSuggestion, SearchHighlight } from "@/types/search",;
 
+
 import {SearchSuggestion, SearchHighlight} from "@/types/search";""
 import React from "react";""
 import { SearchSuggestion, SearchHighlight } from "@/types/search";""
@@ -65,6 +66,28 @@ pr-12325
     match: text.substring (index, index + search_term.length);
     after: text.substring (index + search_term.length);
   }};
+
+interface AutocompleteSuggestionsProps {;
+  suggestions: SearchSuggestion[],;
+  searchTerm: string,;
+  onSelectSuggestion: (suggestion: string) => void,;}
+  visible: boolean;}
+}
+// Helper function to highlight matching text;
+
+const highlightMatch = (text: string, searchTerm: string): SearchHighlight => {
+  if (!searchTerm |searchTerm.length === 0) {"
+    return { before: '', match: text, after: '' }'
+
+  }
+  const lowerText = text.toLowerCase();
+  const lowerSearchTerm = searchTerm.toLowerCase();
+  const index = lowerText.indexOf(lowerSearchTerm);
+
+  if (index === -1) {'
+    return { before: '', match: text, after: '' }'
+
+  }
   return {
   // TODO: Implement
     before: text.substring (0, index);
@@ -235,6 +258,13 @@ return (<li key= {
 }</ul> </div>) 
 }
 ;
+    match: text.substring (index, index + search_term.length);}
+    after: text.substring (index + search_term.length);}
+  }};
+export function AutocompleteSuggestions({ 
+  suggestions, 
+  searchTerm, ;
+
   onSelectSuggestion;
 
 
@@ -323,3 +353,25 @@ return (<li key= {`;
 }</span> </div> <span className="text-xs text-zion-slate-light capitalize" > {"
 }</ul> </div>) "`;
 pr-12325
+</div>
+return (<li key= {
+  `$ {}
+  suggestion.type }
+}-$ {}
+  index }
+}` 
+}className=\"px-4 py-2 hover:bg-zion-blue-light/20 cursor-pointer\" onClick= {}
+  () = /> onSelectSuggestion (suggestion.text) }
+}> <div className=\"flex items-center justify-between\"  /> <div /> <span /> {}
+  highlight.before }
+}</span> <span className=\"font-bold text-zion-purple\"  /> {}
+  highlight.match }
+}</span> <span /> {}
+  highlight.after }
+}</span> </div> <span className=\"text-xs text-zion-slate-light capitalize\"  /> {}
+  suggestion.type }
+}
+}) 
+}</ul> </div>) 
+}
+;

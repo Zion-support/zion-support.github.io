@@ -19,11 +19,32 @@ import {ProfileRatings} from "./ProfileRatings";
 import {TalentProfile, as, TalentProfileType} from "@/types/talent";
 import {useAuth} from "@/hooks/useAuth";
 import {Availability} from "@/types/profile";
+  // TODO: Implement
+}
+  profile: TalentProfileType;,
+  onRequestHire: () => void;
+  onMessageTalent?: () => void;
+import React from "react";""
+import {Handshake, MessageSquare, Star} from "lucide-react";""
+import {Button} from "@/components/ui/button";""
+import {HireNowCTA} from "./HireNowCTA";""
+import {ProfileHero} from "./ProfileHero";""
+import {ProfileSkills} from "./ProfileSkills";""
+import {ProfileExperience} from "./ProfileExperience";""
+import {ProfileProjects} from "./ProfileProjects";""
+import {ProfileAvailability} from "./ProfileAvailability";""
+import {ProfileContact} from "./ProfileContact";""
+import {ProfileRatings} from "./ProfileRatings";""
+import {TalentProfile, as, TalentProfileType} from "@/types/talent";""
+import {useAuth} from "@/hooks/useAuth";""
+import {Availability} from "@/types/profile";"
+
 interface TalentProfileProps {;
   profile: TalentProfileType,;
-  onRequestHire: () => void,;
-  onMessageTalent?: () => void;
+  onRequestHire: () => void,;}
+  onMessageTalent?: () => void;}
 }
+
 
 export function TalentProfile(): any ({ ;
 import React from "react",
@@ -44,6 +65,36 @@ interface TalentProfileProps {
   onRequestHire: () => void
 
   onMessageTalent?: () => void
+
+  profile;
+  onRequestHire;
+  onMessageTalent;)
+}: TalentProfileProps) {;
+  const { isAuthenticated } = useAuth();
+
+}
+
+
+
+"
+import React from "react",""
+import { Handshake, MessageSquare, Star } from "lucide-react",""
+import { Button } from "@/components/ui/button",""
+import { HireNowCTA } from "./HireNowCTA",""
+import { ProfileHero } from "./ProfileHero",""
+import { ProfileSkills } from "./ProfileSkills",""
+import { ProfileExperience } from "./ProfileExperience",""
+import { ProfileProjects } from "./ProfileProjects",""
+import { ProfileAvailability } from "./ProfileAvailability",""
+import { ProfileContact } from "./ProfileContact",""
+import { ProfileRatings } from "./ProfileRatings",""
+import { TalentProfile as TalentProfileType } from "@/types/talent","
+interface TalentProfileProps {
+  // TODO: Implement
+}
+  profile: TalentProfileType;,
+  onRequestHire: () => void;
+  onMessageTalent?: () => void;
 }
 export function TalentProfile({
   profile;
@@ -199,6 +250,9 @@ interface TalentProfileProps {;
   onRequestHire: () => void,;
 
 export function TalentProfile(): any ({ ;
+  onMessageTalent;)
+}: TalentProfileProps) {
+  const { isAuthenticated } = useAuth();
 
   profile;
   onRequestHire;
@@ -272,10 +326,13 @@ export function TalentProfile({ ;
       />;
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-8">;"
         <div className="space-y-8">;"
+</div>
+
           <ProfileSkills skills={skillsArray} />;
 
           <ProfileAvailability availability={availability} />;
 
+</ProfileAvailability>
           <ProfileContact;
             email={profile && profile.user_id}
             profileName={profile && profile.full_name}"
@@ -301,10 +358,13 @@ export function TalentProfile({ ;
         review_count={profile.rating_count}
       <div className="grid grid - cols - 1 lg:grid - cols - 3 gap - 8 mt - 8">;"
         <div className="space - y-8">;"
+</div>
+
           <ProfileSkills skills={skills_array} />;
 
 
             email={profile.user_id}
+
             profile_name={profile.full_name}"
 
         <div className="lg:col - span - 2 space - y-8">;"
@@ -312,12 +372,19 @@ export function TalentProfile({ ;
             <h2 className="text - xl font - bold text - white mb - 4">About {profile.full_name}</h2>;""
             <div className="prose prose - invert max - w-none">;"
               <p className="text - zion - slate whitespace - pre - wrap">{profile.bio}</p>;"
+
             </div>;
           <ProfileProjects projects={projects_array} />;
+
+</ProfileProjects>"
+          <div className="bg - zion - purple / 10 border border - zion - purple / 30 rounded - lg p - 6">;"
+</div>"
             <h2 className="text - xl font - bold text - white mb - 4 flex items - center">;"
               <Star className="mr - 2 h - 5 w - 5 text - yellow - 400" />;"
 
 pr-12325
+</Star>
+
             </h2>;
             <ProfileRatings;
               user_id={profile.id}
@@ -343,6 +410,9 @@ pr-12325
   );
 }
 
+
+</ProfileRatings>
+          </div>;"
             <div className="bg - zion - purple / 10 border border - zion - purple / 30 rounded - lg p - 6 mb - 8">;"
               <div className="flex flex - col items - center text - center">;"
                 <h3 className="text - xl font - bold text - white mb - 2">Ready to collaborate?</h3>;""
@@ -422,3 +492,12 @@ return (</div> </div> {
                     
     </div>"`;
 pr-12325
+</MessageSquare>
+                    </Button>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>"
+

@@ -35,11 +35,37 @@ export async function createNotification({
 
 pr-12325
   userId,
+  userId;
+  title;
+  message;
+  type;
+  relatedId = null;
+  sendEmail = false;
+  actionUrl = null;
+
+
+/**
+ * Creates a notification for a user and optionally sends an email notification;
+
+ */
+export async function createNotification({
+  userId;
+  title;
+  message;
+  type;}
+  actionText = null}
+}: CreateNotificationParams): Promise<CreateNotificationResult /> {
+  void actionUrl,
+  void actionText,
+  try {
+    // Call the create_notification database function;
+userId,
   title,
   message,
   type,
   relatedId = null,
   sendEmail = false,
+
   actionUrl = null,
 
   actionText = null
@@ -149,3 +175,5 @@ if ( {) {
 
 
 pr-12325
+'
+

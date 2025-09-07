@@ -344,6 +344,7 @@ if (!description.en && !description.es && !description.pt && !description.ar) re
 ;
 
 
+
 interface TranslatableJobFormProps {
   // TODO: Implement
 }
@@ -477,6 +478,16 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
                   value={description[lang && lang.code] || }
                   onChange={(e) => handleDescriptionChange(e && e.target.value)}
 
+</Textarea>
+
+              </TabsContent>;
+          </Tabs>;
+
+        </div>;'
+        <div className="space-y-2">;"
+</div>"
+          <div className="flex justify-between items-center">;"
+</div>"
             <label htmlFor="requirements" className="text-lg font-medium">;"
               onClick={() => autoTranslate('requirements')}
 
@@ -657,6 +668,12 @@ if (return) {
           disabled={isSubmitting || isTranslating}
 
               <Loader2 className="mr-2 h-4 w-4 animate-spin" />;              {t('jobs.submitting')}
+        >;
+</Button>
+            <>;"
+              <Loader2 className="mr-2 h-4 w-4 animate-spin" />;              {t('jobs.submitting')}'
+</Loader2>
+
             </>;
           ) :(;)
             t('jobs.post_job_button');
@@ -675,3 +692,26 @@ if (return) {
 }</>) : (t ('jobs.post job button') )
 } </div> </form>) `;
 pr-12325
+        </Button>;
+      </div>;
+
+    </form>;'
+  ) : (<Globe className=" h-4 w-4"/>)"
+</Globe>
+}</Button> </div> </TabsTrigger>) ) 
+}</TabsList> /> </div> </TabsContent>) ) "
+}</Tabs> </div>) : (<Globe className=" h-4 w-4"/>)"
+</Globe>
+}</Button> </div> </TabsTrigger>) ) 
+}</TabsList> /> </TabsContent>) ) "
+}</Tabs> </div>) : (<Globe className=" h-4 w-4"/>)"
+</Globe>
+}</Button> </div> </TabsTrigger>) ) 
+}</TabsList> /> </TabsContent>) ) 
+}</Tabs> </div> /> </div> </div> </div> <div className=\" pt-4\" /> <Button  /> {
+  isSubmitting ? (<> <Loader2 className=\" mr-2 h-4 w-4 animate-spin\" /> {}
+  t ('jobs.submitting') }
+}</>) : (t ('jobs.post job button') ) 
+}</Button> </div> </form>) 
+}
+;

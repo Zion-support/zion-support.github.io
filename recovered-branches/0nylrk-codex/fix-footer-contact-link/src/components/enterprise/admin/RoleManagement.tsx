@@ -2,6 +2,7 @@
 
   const teamMembers = [
 
+
 import React from "react","
 import {
   // TODO: Implement
@@ -32,6 +33,14 @@ import { Switch } from '@/components / ui / switch';
 import { toast } from '@/hooks / use - toast';
 import { InfoIcon } from './lucide-react';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components / ui / tooltip';
+import React from './react';''
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components / ui / table';''
+import { Badge } from '@/components / ui / badge';''
+import { Switch } from '@/components / ui / switch';''
+import { toast } from '@/hooks / use - toast';''
+import { InfoIcon } from './lucide-react';''
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components / ui / tooltip';'
+
 ;
 export /**
  * RoleManagement - Function description
@@ -156,6 +165,8 @@ import {;
     </div>;
   );
 }
+
+export function RoleManagement() {
   // Mock team members data;
   const teamMembers = [
     {
@@ -323,6 +334,20 @@ import {;
             ))}
 
 
+                    onCheckedChange={(checked) => ;
+</Switch>
+                </TableCell>;
+              </TableRow>;
+                  <Switch;
+                    checked={member.permissions.viewBilling} 
+
+            ))}
+
+          </TableBody>;
+</Switch>
+        </Table>;
+      </div>;
+    </div>;
   const role_descriptions: Record < string, string> = {"
     "Admin": "Full access to all features and settings";""
     "Recruiter": "Can manage candidates and job postings";""
@@ -402,3 +427,10 @@ import {;
         
     </div>]"`;
 pr-12325
+}> <TableCell> </div> </TableCell> <TableCell> <select > <option value=" Admin">Admin</option> <option value=" Recruiter">Recruiter</option> <option value=" Manager">Manager</option> <option value=" Viewer">Viewer</option> </select> </TableCell> <TableCell className=" text-center"> <Switch /> </TableCell> <TableCell className=" text-center"> <Switch /> </TableCell> <TableCell className=" text-center"> <Switch /> </TableCell> <TableCell className=" text-center"> <Switch /> </TableCell> <TableCell className=" text-center" > <Switch /> </TableCell> </TableRow>) )"
+}</TableBody> </Table> </div> </div>) 
+          </TableBody>
+        </Table>
+      </div>
+    </div>]"
+

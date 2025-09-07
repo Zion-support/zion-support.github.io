@@ -1,4 +1,4 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 /**
  * Syntax Error Fixer Service;
  * Automatically fixes common syntax errors in JavaScript/TypeScript files;
@@ -6,6 +6,7 @@
 
 const fs = // // require('fs');
 const path = // // require('path');
+<<<<<<< HEAD
 const { execSync } = // // require('child_process');
 class SyntaxErrorFixer {}
   constructor() {}
@@ -387,3 +388,6 @@ class SyntaxErrorFixer {}
       if (content.trim()) {}
         fixes.push({ type: 'jsx_fragment', action: 'fixed_fragment_syntax' }')
         return `<React.Fragment>${content}</React.Fragment>`};
+=======
+const { execSync } = // // require('child_process');
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a

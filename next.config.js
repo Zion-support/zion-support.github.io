@@ -40,6 +40,22 @@ const nextConfig = {
   },
   
   // Headers
+  experimental: {
+    optimizeCss: true,
+    optimizePackageImports: ['lucide-react']
+  },
+  eslint: {
+    ignoreDuringBuilds: false
+  },
+  typescript: {
+    ignoreBuildErrors: false
+  },
+  // Image optimization
+  images: {
+    domains: ['localhost'],
+    formats: ['image/webp', 'image/avif'],
+  },
+  // Security headers
   async headers() {
     return [
       {
@@ -77,6 +93,22 @@ const nextConfig = {
   experimental: {
     optimizeCss: true,
 pr-12325
+  // Redirects
+  async redirects() {
+    return [
+      {
+        source: '/home',
+        destination: '/',
+        permanent: true,
+      },
+    ];
+  },
+  // Trailing slash
+  trailingSlash: false,
+  // Environment variables
+  env: {
+    CUSTOM_KEY: process.env.CUSTOM_KEY,
+  },
 };
 
 export default nextConfig;

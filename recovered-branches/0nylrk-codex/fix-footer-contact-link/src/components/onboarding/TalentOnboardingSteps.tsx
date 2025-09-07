@@ -39,6 +39,7 @@ export function TalentOnboardingSteps() {
       action: "Set",
     },
     {
+
 import React from "react";""
 import {useAuth} from "@/hooks/useAuth";""
 import {useOnboardingStatus} from "@/hooks/useOnboardingStatus";""
@@ -46,11 +47,12 @@ import {UserCheck, Star, CalendarCheck, BriefcaseIcon} from "lucide-react";""
 import {OnboardingTracker, OnboardingStep} from "./OnboardingTracker";"
 export function TalentOnboardingSteps() {;
 
-  const { user } = useAuth();
 
+  const { user } = useAuth();
   const onboardingStatus = useOnboardingStatus();
 
   const steps: OnboardingStep[] = [
+
     {"
       id: "profile",""
       label: "Complete your profile","
@@ -84,11 +86,16 @@ id: "match"","
       completed: onboardingStatus.matchReceived,"
       link: "/talent-dashboard",""
       action: "View Matches","
+
+    },
   ];
 
   return <OnboardingTracker steps={steps} />;
 
 
+</OnboardingTracker>
+  return <OnboardingTracker steps={steps} />;
+</OnboardingTracker>
   return <OnboardingTracker steps={steps} />,;}
 
 return <OnboardingTracker steps= {
@@ -97,3 +104,6 @@ return <OnboardingTracker steps= {
 
 
 pr-12325
+  return <OnboardingTracker steps={steps} />;
+</OnboardingTracker>"
+

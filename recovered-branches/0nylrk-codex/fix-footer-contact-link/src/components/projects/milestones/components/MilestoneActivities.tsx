@@ -9,6 +9,8 @@ function MilestoneActivities() {
   return <div > Activity will be shown here</div>;
 }
 origin/cursor/automate-test-improve-and-merge-code-20a4import React from "react";"
+
+import React from "react";"
 interface MilestoneActivitiesProps {
   // TODO: Implement
 }
@@ -22,3 +24,4 @@ function MilestoneActivities() {
   return <div>Activity will be shown here</div>,;
   return <div>Activity will be shown here</div>;"
 pr-12325
+

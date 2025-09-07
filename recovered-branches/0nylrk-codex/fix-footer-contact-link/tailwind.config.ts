@@ -64,6 +64,7 @@ export default config;
     })]}
 ;
 export default config;
+
 import { Config } from "tailwindcss",""
 import { fontFamily } from "tailwindcss/defaultTheme",""
 import plugin from "tailwindcss/plugin";""
@@ -323,6 +324,13 @@ const config: Config = {;,"
 export default config;
 ;
           text_align: 'left'}}
+export default config;
+export default config;'
+          text_align: 'left'}}'
       add_utilities (new_utilities);
+
     })]}
 pr-12325
+;
+export default config;
+'

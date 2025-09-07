@@ -177,10 +177,12 @@ import { Calendar } from "@/components/ui/calendar";""
 import { Button } from "@/components/ui/button";""
 import { Label } from "@/components/ui/label";""
 import { CalendarIcon } from "@/components/icons";"
+
 import {
   // TODO: Implement
 }
   Popover,
+
   PopoverContent,
   PopoverTrigger,"
 } from "@/components/ui/popover";""
@@ -304,6 +306,25 @@ interface TimelineStepProps {;
                 
 
 
+</Calendar>
+
+                  </PopoverContent>
+                </Popover>
+              </div>
+
+
+              <div>
+</div>"
+                <Label className="block mb-2 text-zion-slate-light">"
+</Label>
+                </Label>
+                <Popover>
+</Popover>
+                  <PopoverTrigger asChild>
+</PopoverTrigger>
+                    <Button;"
+                      variant="outline""
+                      className={cn("
                         "w-full justify-start text-left font-normal bg-zion-blue border border-zion-blue-light hover: bg-zion-blue-dark",""
                         !formData.endDate && "text-zion-slate-light",")
 
@@ -359,3 +380,13 @@ interface TimelineStepProps {;
     </div>);
     </div>;"`;
 pr-12325
+</div>
+      </div>
+    </div>
+        </div>
+      </div>
+    </div>
+        </div>;
+      </div>;
+    </div>;"
+

@@ -7,25 +7,25 @@ export const Playwright.config = () => {
   return null;
 trace: on-first-retry' 
 origin/cursor/automate-test-improve-and-merge-code-2533
+
+
+trace: on-first-retry' ,
 };
 reporter: [ ['list'], ['json', {
 
-  outputFile: playwright-logs/test-results && results.json' 
-
+  outputFile: playwright-logs/test-results && results.json' }
+,}
 }], ['html', {
-  outputFolder: playwright-logs/html-report', open: never'
+  outputFolder: playwright-logs/html-report', open: never'}
+,}
 }]];
-// Configure the web server to be started by Playwright webServer: {
-// Optional: Define projects for different browsers // projects: [ // {
-  // name: chromium', // use: {
-  ...devices['Desktop Chrome']
-}, //
+// Configure the web server to be started by Playwright webServer: {// Optional: Define projects for different browsers // projects: [ // {// name: chromium', // use: {...devices['Desktop Chrome'];}
+}, //;
 }
-// {
-  // name: firefox', // use: {
-  ...devices['Desktop Firefox']
-}, //
+// {// name: firefox', // use: {...devices['Desktop Firefox'];}
+}, //;
 }
+
 // {
   // name: webkit', // use: {
     timeout: 120 * 1000, // 2 minutes timeout for server to start
@@ -38,8 +38,13 @@ reporter: [ ['list'], ['json', {
   //     name: firefox',  //     use: { ...devices['Desktop Firefox'] },  //   }
   //   {
   //     name: webkit',  //     use: { ...devices['Desktop Safari'] },  //   };
+}
+  //     name: webkit',  //     use: { ...devices['Desktop Safari'],}
+},  //   };
   // ]
 });
-  //     name: webkit',  //     use: { ...devices['Desktop Safari'] },  //   }
+  //     name: webkit',  //     use: { ...devices['Desktop Safari'],}
+},  //   }
   // ]
 origin/cursor/automate-test-improve-and-merge-code-2533
+

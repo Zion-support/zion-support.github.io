@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 #!/usr/bin/env node;
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
@@ -13,9 +14,19 @@ const fs = require("fs")";const path = require("path")""
     console.log(`[${new Date().toISOString()}] ${message}`);
     this.log("� Checking meta tags");""
       "pages": [],""issues": [],,"
+=======
+
+
+const fs = require("fs")";const path = require("path")
+      "seo-optimization-report.json),
+    console.log(`[${new Date().toISOString()}] ${message});"
+    this.log("� Checking meta tags");
+      "pages": [],issues": [],,"
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
     const pagesDir = path.join(this.projectRoot, "src", "pages");";    if (!fs.existsSync(pagesDir)) {";      results.issues.push("Pages directory not found");";      return results,"}
-    const files = this.getAllFiles(pagesDir, [".tsx", ".jsx", ".ts", ".js"]);""
+    const files = this.getAllFiles(pagesDir, [".tsx", ".jsx", ".ts", ".js"]);
         const content = fs.readFileSync(file, "utf8");";        const pageName = path.basename(file);"
+<<<<<<< HEAD
           "file": pageName,""hasTitle": content.includes("<title>") || content.includes(""title":"),""hasDescription":;";            content.includes("description") ||";            content.includes("meta name="description""),""hasKeywords":;";            content.includes("keywords") ||";            content.includes("meta name="keywords""),""hasOpenGraph":;";            content.includes(""og":") || content.includes("property=""og":"),""hasTwitterCard":;";            content.includes(""twitter":") || content.includes("name=""twitter":"),"};"
           results.issues.push("${pageName}: Missing title tag");"
 =======
@@ -283,3 +294,8 @@ const fs = require("fs")";const path = require("path")""""
 </title>"
         const content = fs.readFileSync(sitemapPath, "utf8");";        results.valid =;";          content.includes("<urlset") && content.includes("</urlset>");""""`;
 >>>>>>> pr-12325
+=======
+          "file": pageName,hasTitle": content.includes("<title>") || content.includes(title":"),hasDescription":;";            content.includes("description") ||";            content.includes("meta name="description),hasKeywords":;";            content.includes("keywords") ||";            content.includes("meta name="keywords),hasOpenGraph":;";            content.includes(og":") || content.includes("property=og":"),hasTwitterCard":;";            content.includes(twitter":") || content.includes("name=twitter":"),"};
+</title>"
+        const content = fs.readFileSync(sitemapPath, "utf8");";        results.valid =;";          content.includes("<urlset") && content.includes("</urlset>");
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a

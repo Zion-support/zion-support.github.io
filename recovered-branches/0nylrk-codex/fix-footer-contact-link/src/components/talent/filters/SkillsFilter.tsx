@@ -54,6 +54,7 @@ const POPULAR_SKILLS = [;
           ))}
         </div>;
       )}
+
 import {ChevronDown, ChevronUp} from "lucide-react";""
 import {Button} from "@/components/ui/button";""
 import {Checkbox} from "@/components/ui/checkbox";""
@@ -121,6 +122,15 @@ export function SkillsFilter({ selectedSkills, toggleSkill, expanded, toggleSect
                 htmlFor={`skill-${skill}`}
               </label>;
             </div>;
+"
+                className="ml-2 text-sm text-zion-slate-light cursor-pointer""
+              >
+</label>
+
+              </label>;
+            </div>;
+        </div>;
+
     </div>;"
     <div className="mb - 6 border - b border - zion - blue - light pb - 6">;"
         on_click={toggle_section}"
@@ -153,3 +163,14 @@ export function SkillsFilter({ selectedSkills, toggleSkill, expanded, toggleSect
 }</div>) 
     </div>"`;
 pr-12325
+}</div>) 
+              <label;
+                htmlFor={`skill-${skill}`}"
+                className="ml-2 text-sm text-zion-slate-light cursor-pointer""
+              >
+</label>
+              </label>
+            </div>
+        </div>
+    </div>"
+

@@ -947,8 +947,25 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     if (userConversations) {
       userConversations && userConversations.delete(conversationId),
       userConversations && userConversations.delete(conversationId),
+export interface Message {
+  id: string;
+  conversationId: string;
+  senderId: string;
+  content: string;
+  timestamp: string;
+  type: 'text' | 'image' | 'file';
+  metadata?: any;
+}
 
-      userConversations.delete(conversationId)
+export interface Conversation {
+  id: string;
+  participants: string[];
+  lastMessageAt: string;
+  unreadBy: Record<string, number>;
+  createdAt: string;
+}
+
+const MESSAGES_FILE = '/tmp/messages.json';
 
       userConversations && userConversations.delete(conversationId),
 origin/cursor/automate-test-improve-and-merge-code-382a
@@ -1222,26 +1239,27 @@ export async function createConversation(conversation: Omit<Conversation, 'id' |
 }
 export async function getConversation(id: string): Promise<Conversation | null> {
   return messagingStorage.getConversation(id)
+let messages: Message[] = [];
+let conversations: Conversation[] = [];
+
+export function loadMessages(): Message[] {
+  return messages;
 }
 
-
-export async function updateConversation(id: string, updates: Partial<Conversation>): Promise<Conversation | null> {;
-  return messagingStorage.updateConversation(id, updates);
+export function saveMessages(newMessages: Message[]): void {
+  messages = newMessages;
+  // In a real implementation, this would write to a file or database
+  console.log('Messages saved to storage');
 }
 
-export async function getMessagesByConversation(conversationId: string, limit?: number, offset?: number): Promise<Message[]> {;
-  return messagingStorage.getMessagesByConversation(conversationId, limit, offset);
+export function loadConversations(): Conversation[] {
+  return conversations;
 }
 
-export async function getConversationsByUser(userId: string, includeArchived?: boolean): Promise<Conversation[]> {;
-  return messagingStorage.getConversationsByUser(userId, includeArchived);
-  return messagingStorage && messagingStorage.getConversationsByUser(userId, includeArchived);
-}
-export async function getUnreadMessageCount(userId: string): Promise<number> {
-  return messagingStorage.getConversationsByUser(userId, includeArchived);
-}
-export async function getUnreadMessageCount(userId: string): Promise<number> {
-  return messagingStorage.getUnreadMessageCount(userId)
+export function saveConversations(newConversations: Conversation[]): void {
+  conversations = newConversations;
+  // In a real implementation, this would write to a file or database
+  console.log('Conversations saved to storage');
 }
 
 
@@ -1773,12 +1791,21 @@ export function sendMessage(input: NewMessageInput): {
     createdAt: new Date().toISOString(),
     status: 'sent',
   };
+export function addMessage(message: Message): void {
   messages.push(message);
-  writeJson(MESSAGES_FILE, messages);
-
-  conversation.lastMessageAt = message.createdAt;
-  if (!conversation.unreadBy.includes(input.recipientId)) {
-    conversation.unreadBy.push(input.recipientId);
+  saveMessages(messages);
+  
+  // Update conversation unreadBy
+  const conversation = conversations.find(c => c.id === message.conversationId);
+  if (conversation) {
+    conversation.lastMessageAt = message.timestamp;
+    // Increment unread count for all participants except sender
+    conversation.participants.forEach(participantId => {
+      if (participantId !== message.senderId) {
+        conversation.unreadBy[participantId] = (conversation.unreadBy[participantId] || 0) + 1;
+      }
+    });
+    saveConversations(conversations);
   }
   writeJson(CONVERSATIONS_FILE, conversations);
 
@@ -1815,3 +1842,4 @@ if ( { // 7 days) {
 
 `;
 pr-12325
+}

@@ -16,6 +16,7 @@ const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
 // Initialize Supabase client
 const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
 const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!
+
 import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server && server.ts",""
 import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2 && 2.45.0",""
 import {Resend} from "npm: resend@2 ;"
@@ -63,6 +64,10 @@ const corsHeaders = {
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
 
 interface EmailData {
+import { serve } from 'https: //deno.land / std@0.190.0 / http / server.ts';,''
+import { create_client } from 'https: //esm.sh/@supabase / supabase - js@2.45.0';,''
+import { Resend } from 'npm: resend@2.0.0';'
+// Initialize Resend with API key;'
 const resend = new Resend (Deno.env.get ("RESEND_API_KEY"));"
 ;
 // Initialize Supabase client;"
@@ -72,6 +77,8 @@ const supabase = create_client (supabase_url, supabaseServiceKey);
 const cors_headers = {"
   "Access - Control - Allow - Origin": "*";""
   "Access - Control - Allow - Headers": "authorization, x - client - info, apikey, content - type"}"
+
+;
 interface EmailData {
   // TODO: Implement
 }
@@ -80,6 +87,7 @@ interface EmailData {
   display_name: string;,
   user_type: string;
   days_inactive?: number;
+
   onboarding_status?: any;
 
 
@@ -101,12 +109,17 @@ const supabase = createClient(supabaseUrl, supabaseServiceKey),
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},"
   // TODO: Implement
 pr-12325
+
+interface EmailData {
+  // TODO: Implement
+}
   user_id: string,
   email_type: string,
   display_name: string,
   user_type: string,
   days_inactive?: number,
   onboarding_status?: any,
+
   job_id?: string,
   job_title?: string
 }
@@ -269,6 +282,7 @@ async function generateEmail(emailData: EmailData, userData: any): Promise<{ sub
         success: false,)
         error: error.message}),
           ...corsHeaders,
+"
           "Content-Type": "application/json"},""
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;""
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",;""
@@ -283,6 +297,7 @@ const corsHeaders = {;"
   "Access-Control-Allow-Origin": "*",;""
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},;"
 pr-12325
+
 interface EmailData {;
   user_id: string,;
   email_type: string,;
@@ -290,13 +305,17 @@ interface EmailData {;
   user_type: string,;
   days_inactive?: number,;
   onboarding_status?: any,;
-  job_id?: string,;
-  job_title?: string;
+  job_id?: string,;}
+  job_title?: string;}
 }
 ;
 serve(async (req) => {;
   // Handle CORS preflight requests;
   if (req.method === "OPTIONS") {;
+
+  // Handle CORS preflight requests;"
+  if (req.method === "OPTIONS") {;"
+
     return new Response(null, { headers: corsHeaders });
   }
 ;
@@ -306,8 +325,8 @@ serve(async (req) => {;
     return new Response(null, { headers: corsHeaders });
 pr-12325
   try {;
-    // Extract job data from request;
-    const jobData = await req.json(),;
+    // Extract job data from request;}
+    const jobData = await req.json(),;}
     const { id: jobId, payload } = jobData,;
     const emailData = payload as EmailData,;
     // Fetch user's email;
@@ -315,8 +334,16 @@ pr-12325
       .from("profiles");
       .select("id, display_name, avatar_url, user_type");
       .eq("id", emailData.user_id);
+
+    const emailData = payload as EmailData,;"
+    // Fetch user's email;'
+    const { data: userData, error: userError } = await supabase;'
+      .from("profiles");""
+      .select("id, display_name, avatar_url, user_type");""
+      .eq("id", emailData.user_id);"
+
       .single(),;
-    if (userError) {;
+    if (userError) {;}
       throw new Error(`Error fetching user data: ${userError.message}`);
     }
 ;
@@ -324,14 +351,24 @@ pr-12325
       .from("auth.users");
       .select("email");
       .eq("id", emailData.user_id);
+
+    const { data: authUser, error: authError } = await supabase;"
+      .from("auth.users");""
+      .select("email");""
+      .eq("id", emailData.user_id);"
+
       .single(),;
-    if (authError) {;
+    if (authError) {;}
       throw new Error(`Error fetching user email: ${authError.message}`);
     }
 ;
     const userEmail = authUser.email,;
     if (!userEmail) {;
       throw new Error("User email not found");
+
+    if (!userEmail) {;"
+      throw new Error("User email not found");"
+
     }
 ;
     // Generate email content based on email type;
@@ -562,6 +599,7 @@ if ( {) {
     // Generate email content based on email type;
     const { subject, html } = await generateEmail(emailData, userData),;
     // Send email via Resend;
+
     const emailResponse = await resend.emails.send({;"
       from: "Zion AI Marketplace <notifications@zion.ai>",;"
       from: "Zion AI Marketplace <notifications@zion.ai>";"
@@ -624,6 +662,7 @@ pr-12325
             <p > We're excited to have you join our community of innovative businesses and entrepreneurs.</p>;
             <p > Here's what to do next to get started: </p>;
             <ol>;
+            </ol>;'
             <div style="margin: 25px 0, ">;"
 </div>"
               <a href="${supabase_url}/dashboard" style="background - color: #9b87f5, color: white, padding: 12px 20px, text - decoration: none, border - radius: 4px, ">Complete Your Profile</a>;"
@@ -633,6 +672,14 @@ pr-12325
           </div>;"
             <p > We're excited to have you join our community of innovative businesses and entrepreneurs.</p>;
 pr-12325
+          <div style="font - family: sans - serif, max - width: 600px, margin: 0 auto, ">;"
+</div>
+            <h2 > Welcome to Zion AI Marketplace!</h2>;
+            <p > Hi ${first_name}, </p>;"
+            <p > We're excited to have you join our community of innovative businesses and entrepreneurs.</p>;''
+            <p > Here's what to do next to get started: </p>;'
+            <ol>;
+</ol>
               <li > Complete your company profile</li>;
               <li > Post your first job or project</li>;
               <li > Browse talent profiles in our directory</li>;
@@ -688,6 +735,9 @@ async function generateEmail(emailData: EmailData, userData: any): Promise<{ sub
             <p>We're excited to have you join our community of talented AI professionals.</p>;
             <p>Here's what to do next to get started: </p>;
             <ol>;
+            </ol>;'
+            <div style="margin: 25px 0, ">;"
+</div>"
               <a href="${supabase_url}/dashboard" style="background - color: #9b87f5, color: white, padding: 12px 20px, text - decoration: none, border - radius: 4px, ">Post Your First Job</a>;"
           <div style="font-family: sans-serif, max-width: 600px, margin: 0 auto,">"
             <h2>New opportunities waiting for you!</h2>
@@ -784,6 +834,10 @@ async function generateEmail(emailData: EmailData, userData: any): Promise<{ sub
             <p>We're excited to have you join our community of talented AI professionals.</p>;
             <p>Here's what to do next to get started: </p>;
 pr-12325
+            <p>We're excited to have you join our community of talented AI professionals.</p>;''
+            <p>Here's what to do next to get started: </p>;'
+            <ol>;
+</ol>
               <li>Complete your profile to help clients find you</li>;
               <li>Add your skills and expertise</li>;
               <li>Set your availability preferences</li>;
@@ -807,12 +861,22 @@ pr-12325
             <p>We're excited to have you join our community of innovative businesses and entrepreneurs.</p>;
             <p>Here's what to do next to get started: </p>;
             <ol>;
+            </ol>;'
             <div style="margin: 25px 0,">;"
               <a href="${supabaseUrl}/dashboard" style="background-color: #9b87f5, color: white, padding: 12px 20px, text-decoration: none, border-radius: 4px,">Complete Your Profile</a>;"
             <p>If you have any questions, just reply to this email.</p>;
             <p>The Zion AI Marketplace Team</p>;
             <p>We're excited to have you join our community of innovative businesses and entrepreneurs.</p>;
 pr-12325
+          </div>;"
+          <div style="font-family: sans-serif, max-width: 600px, margin: 0 auto,">;"
+</div>
+            <h2>Welcome to Zion AI Marketplace!</h2>;
+            <p>Hi ${firstName},</p>;"
+            <p>We're excited to have you join our community of innovative businesses and entrepreneurs.</p>;''
+            <p>Here's what to do next to get started: </p>;'
+            <ol>;
+</ol>
               <li>Complete your company profile</li>;
               <li>Post your first job or project</li>;
               <li>Browse talent profiles in our directory</li>;
@@ -861,6 +925,9 @@ pr-12325
     return {;
       subject: `${firstName}, one quick step to unlock more opportunities`,;
 }
+            </ol>;'
+            <div style="margin: 25px 0,">;"
+</div>"
               <a href="${supabaseUrl}/dashboard" style="background-color: #9b87f5, color: white, padding: 12px 20px, text-decoration: none, border-radius: 4px,">Post Your First Job</a>;"
           <h2 > Let's find talent for your job</h2>;
           <p > We noticed your job "${email_data.job_title}" has been open for a while. Here are some tips to attract more qualified candidates: </p>;"
@@ -933,3 +1000,7 @@ async function generateEmail(emailData:EmailData, userData:any):Promise<{ subjec
           <a href="${supabaseUrl}/dashboard" style="background-color: #9b87f5, color: white, padding: 12px 20px, text-decoration: none, border-radius: 4px,">Log In Now</a>;"
       </div>;"`;
 pr-12325
+        </div>;
+        <p>The Zion AI Marketplace Team</p>;
+      </div>;"
+

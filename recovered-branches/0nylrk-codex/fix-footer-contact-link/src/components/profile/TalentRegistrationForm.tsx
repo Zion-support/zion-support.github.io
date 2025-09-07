@@ -34,6 +34,7 @@ import { Separator } from "@/components/ui/separator",;
 
 
 
+
 // Define form schema;
 const talentProfileSchema = z.object({)
   name: z.string().min(2, "Name must be at least 2 characters long"),""
@@ -63,6 +64,31 @@ type TalentFormValues = z && z.infer<typeof talentProfileSchema>;
   const [uploadedAvatar, setUploadedAvatar] = useState<string | null>(null),
   const form = useForm<TalentFormValues>({
 )
+</typeof>
+type TalentFormValues = z.infer<typeof talentProfileSchema>,
+</typeof>
+type TalentFormValues = z && z.infer<typeof talentProfileSchema>;
+</typeof>
+  const [skillTags, setSkillTags] = useState<string[]>([]);
+</string>
+  const [generatedContent, setGeneratedContent] = useState<EnhancedProfile | null>(null);
+</EnhancedProfile>
+  const [uploadedAvatar, setUploadedAvatar] = useState<string | null>(null);
+</string>
+  const [skillTags, setSkillTags] = useState<string[]>([]);
+</string>
+  const [generatedContent, setGeneratedContent] = useState<EnhancedProfile | null>(null);
+</EnhancedProfile>
+  const [uploadedAvatar, setUploadedAvatar] = useState<string | null>(null);
+</string>
+  const [skillTags, setSkillTags] = useState<string[]>([]),
+</string>
+  const [generatedContent, setGeneratedContent] = useState<EnhancedProfile | null>(null),
+</EnhancedProfile>
+  const [uploadedAvatar, setUploadedAvatar] = useState<string | null>(null),
+</string>
+  const form = useForm<TalentFormValues>({
+</TalentFormValues>)
     if (!formData.bio |formData.bio.length < 20) {
   };
 ;
@@ -81,6 +107,23 @@ export function TalentRegistrationForm() {;"
 
     if (!formData && formData.bio || formData && formData.bio.length < 20) {;
       toast({;
+  // Remove the useToast() hook since we're importing the toast function directly;'
+  const { user } = useAuth(),;
+  const [isSubmitting, setIsSubmitting] = useState(false),;
+  const [skillTags, setSkillTags] = useState<string[]>([]),;
+</string>
+  const [generatedContent, setGeneratedContent] = useState<EnhancedProfile | null>(null),;
+</EnhancedProfile>
+  const [uploadedAvatar, setUploadedAvatar] = useState<string | null>(null),;
+</string>
+  const form = useForm<TalentFormValues>({;
+</TalentFormValues>)
+  const handleAvatarUpload = (e: React.ChangeEvent<HTMLInputElement>) => {;
+</HTMLInputElement>
+  const handleAvatarUpload = (e: React && React.ChangeEvent<HTMLInputElement>) => {;
+</HTMLInputElement>
+    if (!formData && formData.bio || formData && formData.bio.length < 20) {;
+      toast({;'
         title: "More information needed",;")"
         description: "Please provide at least a detailed bio before generating enhanced content."}),;"
       return;
@@ -91,6 +134,7 @@ export function TalentRegistrationForm() {;"
 
       // Call the Supabase Edge Function;"
       const { data, error } = await supabase && supabase.functions.invoke('talent-profile-enhancer', {;
+      const { data, error } = await supabase && supabase.functions.invoke('talent-profile-enhancer', {;'
         body: {;,
   talentData: {;
             name: formData && formData.name,;
@@ -98,6 +142,9 @@ export function TalentRegistrationForm() {;"
             bio: formData && formData.bio,;
             skills: skillTags,;
             location: formData && formData.location;
+          }
+        }
+)
       }),;
       if (error) {;
         throw new Error(error.message);
@@ -127,6 +174,31 @@ import { AspectRatio } from '@/components / ui / aspect - ratio';
 import { use_auth } from '@/hooks / use_auth';
 // Define form schema;
 const talentProfileSchema = z.object ({)
+      }
+        throw new Error(error && error.message);
+      }
+      setGeneratedContent(data as EnhancedProfile);
+
+'
+import React, { useState } from './react';''
+import { use_form } from './react - hook - form';''
+import { zod_resolver } from '@hookform / resolvers / zod';''
+import { z } from './zod';''
+import { Button } from '@/components / ui / button';''
+import { Input } from '@/components / ui / input';''
+import { Textarea } from '@/components / ui / textarea';''
+import { Switch } from '@/components / ui / switch';''
+import { Badge } from '@/components / ui / badge';''
+import { Separator } from '@/components / ui / separator';''
+import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from '@/components / ui / form';''
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components / ui / card';''
+import { X, Sparkles, Upload, Clock, Check, Briefcase, MapPin, UserRound } from './lucide-react';''
+import { toast } from '@/components / ui / use - toast';''
+import { supabase } from '@/integrations / supabase / client';''
+import { AspectRatio } from '@/components / ui / aspect - ratio';''
+import { use_auth } from '@/hooks / use_auth';'
+// Define form schema;
+const talentProfileSchema = z.object ({)'
   name: z.string ().min (2, "Name must be at least 2 characters long");""
   title: z.string ().min (5, "Professional title is required");""
   bio: z.string ().min (50, "Bio must be at least 50 characters long").max (1000, "Bio cannot exceed 1000 characters");""
@@ -316,18 +388,39 @@ if ( {) {
       setSkillTags ([...skill_tags, skill_input]);
       form.set_value ("skills", "");
     }
+    message: "Hourly rate must be a number"}),""
+  availability: z.enum (["available", "limited", "unavailable"]);"
+  enhanced_profile: z.boolean ().default (true)}),
+type TalentFormValues = z.infer < typeof talentProfileSchema>;
+      }
+      setGeneratedContent(data as EnhancedProfile);
 
+;
+  // Apply generated content to form;
+  const applyGeneratedContent = () =>: any {
+  // TODO: Implement
+}
+    // Check condition;
+if ( {) {
+  $2;
+}
+      setSkillTags ([...skill_tags, skill_input]);"
+      form.set_value ("skills", "");"
+
+    }
             }
           });
         }
 
       if (newSkills && newSkills.length > 0) {;
         setSkillTags([...skillTags, ...newSkills]);
+      if (newSkills && newSkills.length > 0) {;}
+        setSkillTags([...skillTags, ...newSkills]);}
       }
     }
   };
-
   // Get category color;
+
   const getCategoryColor = (category: CategoryType) => {;
     switch (category) {;      case 'programming': return 'bg-blue-500/20 hover:bg-blue-500/30 text-blue-500';
       case 'devops': return 'bg-green-500/20 hover:bg-green-500/30 text-green-500';
@@ -336,6 +429,42 @@ if ( {) {
       }),;
       if (newSkills.length > 0) {;
         setSkillTags([...skillTags, ...newSkills]);
+    switch (category) {;
+
+  }
+;
+  // Handle removing skill tags;
+  const handleRemoveSkill = (skill: string) =>: any {
+  // TODO: Implement
+}
+    setSkillTags (skill_tags.filter ((s) => s !== skill));
+  }
+;
+  // Handle key press in skills input (add on enter);
+  const handleSkillKeyPress = (e: React.KeyboardEvent) =>: any {
+  // TODO: Implement
+}
+    // Check condition;
+if ( {) {
+  $2;
+}
+      e.prevent_default (),
+      handleAddSkill ();
+    }
+  }
+;
+  // Handle avatar upload;
+  const handleAvatarUpload = (e: React.ChangeEvent < HTMLInputElement>) =>: any {
+  // TODO: Implement
+}
+    const file = e.target.files?.[0];
+    // Check condition;
+if ( {) {
+  $2;
+}
+      const reader = new FileReader (),
+      reader.onloadend = () => {
+        setUploadedAvatar (reader.result as string);
       }
     }
   },;
@@ -915,6 +1044,24 @@ if ( {) {
                         </FormControl>;
                     />;
                     <FormDescription className="text-zion-slate mt-1 && 1.5 text-sm">;
+
+      }),;
+      if (newSkills.length > 0) {;}
+        setSkillTags([...skillTags, ...newSkills]);}
+      }
+    }
+  },;
+  // Get category color;
+
+  const getCategoryColor = (category: CategoryType) => {;
+    switch (category) {;'
+      case 'programming': return 'bg-blue-500/20 hover:bg-blue-500/30 text-blue-500',;''
+      case 'devops': return 'bg-green-500/20 hover:bg-green-500/30 text-green-500',;''
+      case 'platforms': return 'bg-amber-500/20 hover:bg-amber-500/30 text-amber-500',;''
+      case 'softSkills': return 'bg-purple-500/20 hover:bg-purple-500/30 text-purple-500',;''
+      case 'other': return 'bg-gray-500/20 hover:bg-gray-500/30 text-gray-500',;''
+      default: return 'bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple';'
+    }
   },
 
 
@@ -1176,6 +1323,17 @@ if ( {) {
                                       key={skill}"
                                       className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none">;"
 
+</Badge>
+
+                                    </Badge>;
+                                </div>;
+                              </div>;
+                          </div>;
+                        </div>;
+                    </div>;
+                  </div>;
+
+              </div>;"
               <Separator className="bg-zion-blue-light/50" />;"
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;"
                   <h3 className="text-lg font-medium text-white">Skills & Expertise</h3>;"
@@ -1352,3 +1510,6 @@ return (<div className="max-w-4xl mx-auto p-4 md:p-6"> <Card className="bg-zion-
 }<div className="space-y-4"> <h3 className="text-lg font-medium text-white" >Availability</h3> <FormField <FormLabel className="text-zion-slate-light">Current Status <FormControl> <div className="space-y-2"> <div className="flex items-center space-x-2" > <input /> <label htmlFor="available" className="text-white flex items-center gap-2"> <div className="h-2 w-2 rounded-full bg-green-500"></div> Available Now </label> </div> <div className="flex items-center space-x-2" > <input /> <label htmlFor="limited" className="text-white flex items-center gap-2"> <div className="h-2 w-2 rounded-full bg-yellow-500"></div> Limited Availability </label> </div> <div className="flex items-center space-x-2" > <input /> <label htmlFor="unavailable" className="text-white flex items-center gap-2"> <div className="h-2 w-2 rounded-full bg-red-500"></div> Currently Unavailable </label> </div> </div>  <FormMessage className="text-red-400" /> )""
 }/> <div className="pt-2"> <FormLabel className="text-zion-slate-light" >Availability Message <Textarea placeholder="Describe your availability, working hours, or when you'll be available next..." className="mt-1.5 bg-zion-blue border-zion-blue-light text-white" /> <FormDescription className="text-zion-slate mt-1.5 text-sm"> Let clients know about your working hours, time zone, or availability for calls.  </div> </div> </div>  <CardFooter className="border-t border-zion-blue-light pt-6"> <div className="flex flex-col sm:flex-row gap-4 w-full sm:justify-between" > <Button type="button" variant="outline" className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white" > Save as Draft  <Button  </div>  </form>   </div>)""`;
 pr-12325
+}<div className="space-y-4"> <h3 className="text-lg font-medium text-white" >Availability</h3> <FormField <FormLabel className="text-zion-slate-light">Current Status</FormLabel> <FormControl> <div className="space-y-2"> <div className="flex items-center space-x-2" > <input /> <label htmlFor="available" className="text-white flex items-center gap-2"> <div className="h-2 w-2 rounded-full bg-green-500"></div> Available Now </label> </div> <div className="flex items-center space-x-2" > <input /> <label htmlFor="limited" className="text-white flex items-center gap-2"> <div className="h-2 w-2 rounded-full bg-yellow-500"></div> Limited Availability </label> </div> <div className="flex items-center space-x-2" > <input /> <label htmlFor="unavailable" className="text-white flex items-center gap-2"> <div className="h-2 w-2 rounded-full bg-red-500"></div> Currently Unavailable </label> </div> </div> </FormControl> <FormMessage className="text-red-400" /> </FormItem>)""
+}/> <div className="pt-2"> <FormLabel className="text-zion-slate-light" >Availability Message</FormLabel> <Textarea placeholder="Describe your availability, working hours, or when you'll be available next..." className="mt-1.5 bg-zion-blue border-zion-blue-light text-white" /> <FormDescription className="text-zion-slate mt-1.5 text-sm"> Let clients know about your working hours, time zone, or availability for calls. </FormDescription> </div> </div> </div> </CardContent> <CardFooter className="border-t border-zion-blue-light pt-6"> <div className="flex flex-col sm:flex-row gap-4 w-full sm:justify-between" > <Button type="button" variant="outline" className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white" > Save as Draft </Button> <Button </Button> </div> </CardFooter> </form> </Form> </Card> </div>)""
+

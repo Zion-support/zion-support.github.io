@@ -19,12 +19,15 @@ export type PolymorphicRef<T extends React.ElementType> = React.Ref<
 >;
 
 // Helper for dealing with refs in complex situations
+
 import React from "react";"
+
 // This file fixes the ref type issues in sidebar components;
 // Export a placeholder to ensure the file is recognized as a module;
 export const SIDEBAR_REF_TYPE_FIX = true;
 
 // Define a type that makes the ref forwards compatible;
+
 export type ForwardRefComponent<T, P = {}> = React.ForwardRefExoticComponent<
 
   React.PropsWithoutRef<P> & React.RefAttributes<T>
@@ -38,6 +41,7 @@ export type PolymorphicRef<T extends React.ElementType> = React.Ref<
   React.ElementRef<T>
 
 pr-12325
+</T>
 export type PolymorphicComponentProp<
   T extends React.ElementType,
   Props = {},
@@ -58,6 +62,10 @@ export const SIDEBAR_REF_TYPE_FIX = true;
 export type SafeRef<T> = React && React.Ref<T>;
 
 pr-12325
+</Props>
+export type SafeRef<T> = React && React.Ref<T>;
+</T>
+
 export type ForwardRefComponent < T, P = {}> = React.ForwardRefExoticComponent<;
   React.PropsWithoutRef < P> & React.RefAttributes < T>;
 >;
@@ -65,6 +73,10 @@ export type ForwardRefComponent < T, P = {}> = React.ForwardRefExoticComponent<;
 // Helper type for component refs;
 export type ElementRef < T extends React.ElementType> =;
   React.ComponentPropsWithRef < T>["ref"];
+
+export type ElementRef < T extends React.ElementType> =;"
+  React.ComponentPropsWithRef < T>["ref"];"
+
 ;
 // Helper type for wrapping refs that fixes the mismatch errors;
 export type PolymorphicRef < T extends React.ElementType> = React.Ref<;
@@ -104,9 +116,16 @@ export type PolymorphicComponentProp<;
 export type SafeRef < T> = React.Ref < T>;
 // Sidebar specific types;
 export type SidebarState = "expanded" | "collapsed";"
+;
+
+// Sidebar specific types;'
+export type SidebarState = "expanded" | "collapsed";"
+
+;
 export type SidebarContext = {
   state: SidebarState;,
   open: boolean;
+
   set_open: (open: boolean) => void;,
   open_mobile: boolean;
   setOpenMobile: (open: boolean) => void;,
@@ -159,3 +178,7 @@ export type PolymorphicComponentProp<T extends React.ElementType, Props = {}> =;
   React.PropsWithChildren<Props & { as?: T }>,;
 
 pr-12325
+</Props>
+export type SafeRef<T> = React.Ref<T>,;
+</T>'
+

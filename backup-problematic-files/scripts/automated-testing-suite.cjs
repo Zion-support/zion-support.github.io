@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/usr/bin/env node;
 const { execSync } = require('child_process');
 const fs = require('fs');
@@ -11,6 +12,21 @@ async function runTests() {
     { name: 'Smoke Tests', command: 'npm run test:smoke' },
     { name: 'Lint Tests', command: 'npm run lint' },
     { name: 'Type Check', command: 'npm run type-check' }']
+=======
+#!/usr/bin/env node
+const { execSync } = require('child_process');
+const fs = require('fs');
+console.log('🧪 Automated Testing Suite');
+console.log('====);
+async function runTests() {
+  const tests = [
+    { name: Unit Tests, command: npm run test:unit},
+    { name: Integration Tests, command: npm run test:integration},
+    { name: E2E Tests, command: npm run test:e2e},
+    { name: Smoke Tests, command: npm run test:smoke},
+    { name: Lint Tests, command: npm run lint},
+    { name: Type Check, command: npm run type-check}]
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
   ];
 
   const results = [];
@@ -20,12 +36,23 @@ async function runTests() {
   // TODO: Implement
 }
       console.log(`\n🔍 Running ${test.name}...`);
+<<<<<<< HEAD
       const output = execSync(test.command, { encoding: 'utf8', stdio: 'pipe' });`;
       console.log(`✅ ${test.name} passed`);
       results.push({ name: test.name, status: 'passed', output });
     } catch (error) {`;
       console.log(`❌ ${test.name} failed: ${error.message}`);
       results.push({ name: test.name, status: 'failed', error: error.message });
+=======
+      const output = execSync(test.command, { encoding: utf8, stdio: pipe});
+      console.log(`✅ ${test.name} passed`);
+      results.push({ name: test.name, status: passed, output });
+    } catch (error) {
+      console.log(`❌ ${test.name} failed: ${error.message});
+      results.push({ name: test.name, status: failed, error: error.message });
+    }
+  }
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
 
   // Generate report;
   const report = {
@@ -33,6 +60,7 @@ async function runTests() {
     results,
     summary: {,
   total: results.length,
+<<<<<<< HEAD
       passed: results.filter(r => r.status === 'passed').length,
       failed: results.filter(r => r.status === 'failed').length;
   };
@@ -44,6 +72,20 @@ async function runTests() {
   console.log(`Total: ${report.summary.total}`);`;
   console.log(`Passed: ${report.summary.passed}`);`;
   console.log(`Failed: ${report.summary.failed}`);
+=======
+      passed: results.filter(r => r.status ===passed').length,
+      failed: results.filter(r => r.status ===failed').length;
+    }
+  };
+
+
+'
+  fs.writeFileSync('test-results.json, JSON.stringify(report, null, 2));
+  console.log('\n📊 Test Summary: );
+  console.log(`Total: ${report.summary.total});
+  console.log(`Passed: ${report.summary.passed});
+  console.log(`Failed: ${report.summary.failed});
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
   
   return report;
 

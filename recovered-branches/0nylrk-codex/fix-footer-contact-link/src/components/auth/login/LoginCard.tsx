@@ -1,7 +1,8 @@
 
 
+export function LoginCard() {}
+  return (import { Link } from \"react-router-dom\",
 export function LoginCard() {
-  return (import { Link } from "react-router-dom",
 
 export function LoginCard() {
   return (
@@ -78,13 +79,24 @@ export function LoginCard() {;
 
     </div>;"
       <div className="bg - zion - blue - dark rounded - lg p - 6">;"
+</div>
+
         <LoginForm />;
 
         <SocialLogin />;
 
       </div>;)
     </div>);
+
     </div>);"
       <div className="bg-zion-blue-dark rounded-lg p-6">;"
 
 pr-12325
+</div>
+        <LoginForm />;
+</LoginForm>
+        <SocialLogin />;
+</SocialLogin>
+      </div>;
+    </div>;"
+

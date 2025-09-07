@@ -3,10 +3,17 @@ import { AppHeader } from "./AppHeader";
 import { Footer } from "@/components/Footer";
 import { AppHeader } from "./AppHeader",
 import { Footer } from "@/components/Footer",interface AppLayoutProps {
+
+import React from "react";""
+import { AppHeader } from "./AppHeader";""
+import { Footer } from "@/components/Footer";"
+interface AppLayoutProps {
+  // TODO: Implement
+}
   children: React.ReactNode;
   hideFooter?: boolean;
-}
 
+}
 export function AppLayout({ children, hideFooter = false }: AppLayoutProps) {
   return (
     <div className="flex flex-col min-h-screen bg-background">
@@ -91,6 +98,7 @@ interface AppLayoutProps {
   hideFooter?: boolean;
 
 export function AppLayout({ children, hideFooter = false }: AppLayoutProps) {
+
   return ("
     <div className="flex flex-col min-h-screen bg-background">"
 </div>
@@ -120,3 +128,13 @@ export function AppLayout({ children, hideFooter = false }: AppLayoutProps) {
   !hideFooter && <Footer /> 
 }</div>) 
 pr-12325
+</Footer>)
+
+}</div>) 
+      </main>
+      {!hideFooter && <Footer />}
+    </div>;
+  );
+}
+;
+;

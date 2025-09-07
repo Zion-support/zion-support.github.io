@@ -7,8 +7,12 @@ const PerformanceMonitor.dynamic = () => {
     <div data - testid="performancemonitor.dynamic">;
       <h1 > PerformanceMonitor.dynamic</h1>;
     </div>);
+const PerformanceMonitor.dynamic = () => ;
+  return (<div data - testid=\"performancemonitor.dynamic\" />;
+      <h1  /> PerformanceMonitor.dynamic</h1>
+    </div>
+  );
 }
-;
 
 pr-12243
 export default PerformanceMonitor.dynamic;

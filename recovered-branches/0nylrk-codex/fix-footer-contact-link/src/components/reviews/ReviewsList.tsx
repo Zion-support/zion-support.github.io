@@ -51,6 +51,7 @@ export function ReviewsList({
 }
 ;
 
+
 import { Review } from "@/types/reviews";""
 import { ReviewCard } from "./ReviewCard";"
 interface ReviewsListProps {
@@ -88,3 +89,6 @@ interface ReviewsListProps {
     <div className="space - y-4">;"
         <ReviewCard key={review.id} review={review} on_report={onReportReview} />))}
 pr-12325
+</ReviewCard>
+    </div>);"
+

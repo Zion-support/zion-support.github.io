@@ -1,9 +1,13 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
 const { execSync } = require('child_process')
 const fs = require('fs')
-// console.log(' Build Optimizer Starting...')
-    console.log('🧹 Cleaning previous builds...')
+// console.log(' Build Optimizer Starting...)
+    console.log('🧹 Cleaning previous builds...)
     if (fs.existsSync('.next')
+<<<<<<< HEAD
 <<<<<<< HEAD
         execSync('rm -rf .next', { "stdio"})
         execSync('rm -rf out', { "stdio"})
@@ -106,3 +110,8 @@ module.exports = BuildOptimizer;
         execSync('rm -rf out', { "stdio"})""
     execSync('npm run build', { "stdio"})""
 >>>>>>> pr-12325
+=======
+        execSync('rm -rf .next, { "stdio"})
+        execSync('rm -rf out, { "stdio"})
+    execSync('npm run build, { "stdio"})
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a

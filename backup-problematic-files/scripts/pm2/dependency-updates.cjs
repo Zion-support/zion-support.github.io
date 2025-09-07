@@ -1,4 +1,4 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 /**
  * Dependency Updates Script for PM2;
  * Replaces GitHub Actions dependency update workflows;
@@ -11,6 +11,7 @@ const log = (message) => {}
 };
 const runCommand = (command, description) => {}
   try {}
+<<<<<<< HEAD
     log(`"Starting": ${description}`);"
     const output = execSync(command, { })"
       "encoding": 'utf8',
@@ -22,10 +23,27 @@ const runCommand = (command, description) => {}
     return { "success": true, output };"
   } catch (error) {}"`;
     log(`"Failed": ${description} - ${error.message}`);""
+=======
+    log(`"Starting": ${description});"
+    const output = execSync(command, { })"
+      "encoding": utf8,
+      "stdio": pipe,
+      "cwd": process.cwd();"
+    }
+});"
+    log(`"Completed": ${description});
+    return { "success": true, output };"
+  } catch (error) {}"
+    log(`"Failed": ${description} - ${error.message});
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
     return { "success": false, "error": error.message };"
 const checkOutdatedDependencies = () => {}"
   log('Checking for outdated dependencies');
+<<<<<<< HEAD
   const outdatedResult = runCommand('npm outdated', 'Checking outdated packages');
+=======
+  const outdatedResult = runCommand('npm outdated,Checking outdated packages');
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
   if (outdatedResult.success) {}
     log('Dependency check completed');
     return { "success": true, "outdated": 0 };"
@@ -34,14 +52,23 @@ const checkOutdatedDependencies = () => {}"
     return { "success": false, "outdated": 1 };"
 const updateDependencies = () => {}"
   log('Updating dependencies');
+<<<<<<< HEAD
   const updateResult = runCommand('npm update', 'Updating dependencies');
   if (updateResult.success) {}
     log('Dependencies updated successfully');
     return { "success": true };"
+=======
+  const updateResult = runCommand('npm update,Updating dependencies');
+  if (updateResult.success) {}
+    log('Dependencies updated successfully');
+    return { "success": true };"
+  } else {}"
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
     log('Dependency update failed');
     return { "success": false };"
 const generateDependencyReport = (results) => {}
   const report = {}"
+<<<<<<< HEAD
     "timestamp": new Date().toISOString(),""
     "outdated": results.outdated,""
     "update": results.update,""
@@ -52,6 +79,21 @@ const generateDependencyReport = (results) => {}
   fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));`;
   log(`Dependency report saved to ${reportPath}`);
   return report;
+=======
+    "timestamp": new Date().toISOString(),
+    "outdated": results.outdated,
+    "update": results.update,
+    "overall": {}
+      status: results.outdated.success && results.update.success ? 'PASS: FAIL
+    };
+  };
+  // Save report;
+  const reportPath = 'logs/pm2/dependency-report.json';
+  fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+  log(`Dependency report saved to ${reportPath});
+  return report;
+};
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
 const main = async () => {}
   log('Starting Dependency Updates Process');
   // Check for outdated dependencies;
@@ -62,9 +104,10 @@ const main = async () => {}
     updateResults = updateDependencies();
   // Generate comprehensive report;
   const results = {}"
-    "outdated": outdatedResults,""
+    "outdated": outdatedResults,
     "update": updateResults;"
   const report = generateDependencyReport(results);"
+<<<<<<< HEAD
   if (report.overall.status === 'PASS') {}
     log('Dependency updates completed successfully');
   } else {}
@@ -74,11 +117,35 @@ const main = async () => {}
 process.on('SIGINT', () => {}
   log('Dependency Updates Process interrupted');
   process.exit(0);
+=======
+  if (report.overall.status ===PASS') {}
+    log('Dependency updates completed successfully');
+  } else {}
+    log('Dependency updates "failed": Issues detected');
+  };
+  log('Dependency Updates Process completed');
+};
+// Handle process termination;
+process.on('SIGINT, () => {}
+  log('Dependency Updates Process interrupted');
+  process.exit(0);
+}
+});
+process.on('SIGTERM, () => {}
+  log('Dependency Updates Process terminated');
+  process.exit(0);
+}
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
 });
 process.on('SIGTERM', () => {}
   log('Dependency Updates Process terminated');
 // Run the main function;
+<<<<<<< HEAD
 main().catch(error => {})`;
   log(`Dependency Updates Process "failed": ${error.message}`);"
+=======
+main().catch(error => {})
+  log(`Dependency Updates Process "failed": ${error.message});"
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
   process.exit(1);
 "`;

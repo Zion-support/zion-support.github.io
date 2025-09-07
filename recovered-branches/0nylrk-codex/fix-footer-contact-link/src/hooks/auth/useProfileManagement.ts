@@ -195,6 +195,7 @@ return {
 };
   return { updateProfile }
 };
+
 import { supabase } from "@/integrations/supabase/client",""
 import { toast } from "@/hooks/use-toast";""
 import type { UserProfile } from "@/types/auth";""
@@ -238,3 +239,7 @@ export const useProfileManagement = (setIsLoading: (loading: boolean) => void) =
 
   const updateProfile = async (data:Partial<UserProfile>) => {;
 pr-12325
+</UserProfile>
+  const updateProfile = async (data: Partial<UserProfile>) => {
+</UserProfile>"
+

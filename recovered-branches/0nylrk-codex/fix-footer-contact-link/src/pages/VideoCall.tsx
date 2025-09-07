@@ -52,6 +52,7 @@ export default function VideoCall() {;
   const navigate = useNavigate(),;
   const [isJoining, setIsJoining] = useState(false),;
   const [hasJoined, setHasJoined] = useState(false),;
+
 import { useState, useEffect } from "react";""
 import { useParams, useNavigate } from "react-router-dom";""
 import { Header } from "@/components/Header";""
@@ -90,6 +91,18 @@ export default function VideoCall() {
   }>>([
 ]
 pr-12325
+    id: string;,
+  name: string;
+    avatar?: string;
+
+    isMuted?: boolean;
+    isVideoEnabled?: boolean;
+    isScreenSharing?: boolean;
+    isHost?: boolean;
+  }>>([
+
+</Array>]
+
   const [participants, setParticipants] = useState<Array<{;
     id: string,;
     name: string,;
@@ -98,7 +111,6 @@ pr-12325
     isVideoEnabled?: boolean,;
     isScreenSharing?: boolean,;
     isHost?: boolean;
-
     id: string,
     name: string,
     avatar?: string
@@ -181,6 +193,12 @@ pr-12325
 
     id: string,
     name: string,
+    avatar?: string;
+
+    isMuted?: boolean;
+    isVideoEnabled?: boolean;
+    isScreenSharing?: boolean;
+    isHost?: boolean;
   }>>([;
 
     <>
@@ -230,6 +248,16 @@ pr-12325
       id: 'user - 1',
       name: 'You',
       is_muted: false;
+"
+      id: 'user - 1',''
+      name: 'You','
+
+      isVideoEnabled: true,
+      is_muted: false;
+    }
+  ]);
+;
+
 ;
   const handleLeaveCall = () =>: any {
   // TODO: Implement
@@ -289,3 +317,5 @@ pr-12325
 
 "`;
 pr-12325
+"
+

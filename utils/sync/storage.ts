@@ -19,8 +19,13 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 export function readState(): SyncState {;
+}
+
+
+export function readState(): SyncState {;}
   return { ...state };
 }
+
 
 export function updateState(updates: Partial<SyncState>): void {;
   state = { ...state, ...updates };
@@ -485,6 +490,36 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 origin/cursor/automate-test-improve-and-merge-code-2533
   async createJob(job: Omit<SyncJob, 'id' | 'createdAt' | 'updatedAt' | 'progress'>): Promise<SyncJob> {
 
+</SyncState>
+    filters?: Record<string, any>;
+</string>
+    mappings?: Record<string, string>;
+</string>
+  metadata?: Record<string, any>;
+</string>
+    credentials?: Record<string, string>;
+</string>
+    options?: Record<string, any>;
+</string>
+  fieldMappings: Record<string, string>;
+</string>
+  transformations?: Array<{
+    field: string;,
+  type: 'format' | 'convert' | 'calculate' | 'filter';'
+    config: Record<string, any>;
+</string>
+  details?: Record<string, any>;
+</string>
+  private jobs: Map<string, SyncJob> = new Map();
+</string>
+  private connections: Map<string, SyncConnection> = new Map();
+</string>
+  private mappings: Map<string, SyncMapping> = new Map();
+</string>
+  private logs: Map<string, SyncLog> = new Map();
+</string>'
+  async createJob(job: Omit<SyncJob, 'id' | 'createdAt' | 'updatedAt' | 'progress'>): Promise<SyncJob> {'
+</SyncJob>
   async getJob(id: string): Promise<SyncJob | null> {
 
   async updateJob(id: string, updates: Partial<SyncJob>): Promise<SyncJob | null> {
@@ -530,3 +565,7 @@ export async function getLogsByJob(jobId: string, limit?: number): Promise<SyncL
   fieldMappings: Record<string, string>
 ): Omit<SyncMapping, 'id' | 'createdAt' | 'updatedAt'> {
 pr-12325
+</string>'
+): Omit<SyncMapping, 'id' | 'createdAt' | 'updatedAt'> {'
+</SyncMapping>'
+

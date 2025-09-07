@@ -1,13 +1,16 @@
-
 class ErrorBoundary extends React.Component {
+
+  // TODO: Implement
+}
   constructor(props) {
     super(props);
+
     this.state = { hasError: false };
   }
-  
-  static getDerivedStateFromError(error) {
+  static getDerivedStateFromError(error) {}
     return { hasError: true };
   }
+
   
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
@@ -25,7 +28,11 @@ class ErrorBoundary extends React.Component {
     console.error('Error caught by boundary:', error, errorInfo);
 pr-12325
   
+    console.error('Error caught by boundary:', error, errorInfo);'
+
+  }
   render() {
+
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
@@ -547,10 +554,16 @@ if ( {) {
                                     className={`${!translations[lang && lang.code]?.[key] ? 'text-zion-purple italic' : }`}
                                     dir={lang && lang.code === 'ar' ? 'rtl' : 'ltr'}>;
 </span>
+
                                   </span>;
                                 <div className="flex items-center gap-2 text-sm text-zion-purple">;"
                                   <AlertTriangle className="h-4 w-4" />;"
 
+</AlertTriangle>
+                                </div>;
+
+                            </div>;
+                          </div>;"
                         <div className="p-3 flex items-center justify-end">;"
                               onClick={() => handleEdit(key)}
 
@@ -740,6 +753,18 @@ if ( {) {
 
 
     </>);
+                              {t('translation && translation.edit')}'
+
+                            </Button>;
+                        </div>;
+              </div>;
+            </div>;
+          </CardContent>;
+        </Card>;
+      </main>;
+      <Footer />;
+
+</Footer>
 
   ),; export default function TranslationManager () {
   const {
@@ -820,3 +845,7 @@ const isMobile = useIsMobile ();
   );
 "`;
 pr-12325
+}
+;
+"
+

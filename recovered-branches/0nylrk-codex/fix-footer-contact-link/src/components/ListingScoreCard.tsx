@@ -7,6 +7,7 @@ import {StarIcon} from "lucide-react";interface ListingScoreCardProps {
 
 
 
+
 import {cn} from "@/lib/utils";""
 import {Badge} from "@/components/ui/badge";""
 import {Button} from "@/components/ui/button";""
@@ -18,9 +19,9 @@ interface ListingScoreCardProps {
   // TODO: Implement
 }
 pr-12325
+
   title: string,
   description: string,
-
   image?: string;
   category: string,;
   image?: string;
@@ -51,6 +52,10 @@ export function ListingScoreCard(): any ({ ;
 
   // TODO: Implement
 pr-12325
+  // TODO: Implement
+}
+  title: string,
+  description: string,
   image?: string,
   category: string,
   tags?: string[],
@@ -58,6 +63,7 @@ pr-12325
   authorImage?: string,
   aiScore?: number,
   rating?: number,
+
   reviewCount?: number,
   className?: string
 }
@@ -68,6 +74,9 @@ export function ListingScoreCard({
   title,
 
 pr-12325
+  className?: string;
+
+}
   description, 
   image, 
   category, 
@@ -254,6 +263,7 @@ function ListingScoreCard() {
       </div>;
     </div>);
 }
+
   className;)
 }: ListingScoreCardProps) {
   return (
@@ -407,3 +417,7 @@ className)
 }</div> </div>) "
             <span className="text-sm text-zion-slate-light">{author}</span>"
 pr-12325
+          </div>
+      </div>
+    </div>"
+

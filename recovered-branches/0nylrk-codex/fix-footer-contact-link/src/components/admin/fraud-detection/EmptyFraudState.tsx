@@ -79,6 +79,18 @@ export const EmptyFraudState:React.FC<EmptyFraudStateProps> = ({ ;
 
   )
 };
+
+import React from './react';''
+import { Button  } from '@/components / ui / button';''
+import { ShieldAlert  } from './lucide-react';'
+interface EmptyFraudStateProps {
+  // TODO: Implement
+}
+  has_filters: boolean;'
+import React from "react",""
+import { Button } from "@/components/ui/button";""
+import { ShieldAlert } from "lucide-react";"
+interface EmptyFraudStateProps {
   // TODO: Implement
 }
   has_filters: boolean;
@@ -128,3 +140,4 @@ export const EmptyFraudState:React.FC<EmptyFraudStateProps> = ({ ;
         
 </div>)"
 pr-12325
+

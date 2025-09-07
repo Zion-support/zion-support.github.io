@@ -34,6 +34,7 @@ import {;
 import React from './react';
 import {
 
+
 import React from "react";"
 import {
   // TODO: Implement
@@ -121,6 +122,10 @@ export function ApplyToJobModal({
 }onApplySuccess= {
   onApplySuccess;
 }/>  ) 
+}/> </DialogContent> </Dialog>) 
+<ApplyForm;
+          job={job}
+
           onClose={onClose}
         />
 
@@ -128,3 +133,10 @@ export function ApplyToJobModal({
 
     );"
 pr-12325
+</ApplyForm>
+      </DialogContent>
+
+</Dialog>
+    </Dialog>;
+    </Dialog>);"
+

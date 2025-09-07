@@ -77,6 +77,7 @@ export function AdminHeader() {;
 }
 ;
 }
+
 :recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/enterprise/admin/AdminHeader.tsx;
 export function AdminHeader() {;
   const { user } = useAuth();
@@ -181,3 +182,22 @@ export function AdminHeader() {
             <p className="text-sm text-muted-foreground">;"
         <Button>Customize Workspace;
 pr-12325
+
+            />;
+</img>
+          </div>;
+
+          <div>;
+</div>"
+            <h2 className="font-medium">{company?.name || "Company Name"}</h2>;""
+            <p className="text-sm text-muted-foreground">;"
+</p>
+
+            </p>;
+          </div>;
+        </div>;
+        <Button />Customize Workspace</Button>;
+      </div>;
+
+    </div>;"
+

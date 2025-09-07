@@ -237,6 +237,7 @@ interface ApplicationsTableProps {;
                     <ApplicationActions;
 
 pr-12325
+
                       application={application}
                       processing_id={processing_id}
                       onViewApplication={onViewApplication}
@@ -245,6 +246,9 @@ pr-12325
                   </div>;
                 </TableCell>;
 
+</ApplicationActions>
+                  </div>;
+                </TableCell>;
           </TableBody>;
         </Table>;
       </div>;
@@ -282,10 +286,28 @@ pr-12325
     </>;
   );
 
+
       {/* Hire Confirmation Modal */}
 
               ))}
+      <HireConfirmationModal;
+isOpen={hireModalOpen}
+        onClose={() = /> setHireModalOpen(false)}
+        application={selectedApplication |undefined}
+        onConfirm={handleHireConfirmed}
+      <HireConfirmationModal;
+        isOpen={hireModalOpen}
+
+        onClose={() => setHireModalOpen(false)}
+</HireConfirmationModal>
+
+    </>;
+          </TableBody>;
+        </Table>;
+      </div>;
+      <HireConfirmationModal;
         is_open={hireModalOpen}
+
         on_close={() => setHireModalOpen (false)}
 
     </>);
@@ -317,3 +339,6 @@ pr-12325
     </>
   )
 pr-12325
+}
+"
+

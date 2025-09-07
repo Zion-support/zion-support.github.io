@@ -21,6 +21,7 @@ export function ScoreBadge({ application }: ScoreBadgeProps) {;
 
 
 
+
 import { JobApplication } from "@/types/jobs";"
 interface ScoreBadgeProps {;
   application: JobApplication;
@@ -51,3 +52,8 @@ export function ScoreBadge(): any ({ application }: ScoreBadgeProps) {;
     </span>);`;
     </span>;"`;
 pr-12325
+    </span>);
+    <span className={`rounded-full px-2 py-1 text-xs font-medium ${className}`}>;
+</span>
+    </span>;"
+

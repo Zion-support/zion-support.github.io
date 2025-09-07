@@ -162,6 +162,7 @@ function EnhancedSearchInput() {
 
 
 
+
 import React, { useState, useEffect, useRef } from "react";""
 import {Search, X} from "lucide-react";""
 import {Input} from "@/components/ui/input";""
@@ -227,6 +228,19 @@ export function EnhancedSearchInput({
       <div className="relative">;"
         />;
 
+</div>
+        <Search;"
+          className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate""
+
+        />;
+</Search>
+        <Input;
+
+          ref={inputRef}"
+          type="text""
+        <Input;
+          ref={inputRef}"
+          type="text""
         <Input;
           ref={inputRef}"
           type="text""
@@ -255,6 +269,10 @@ export function EnhancedSearchInput({
 
 
 pr-12325
+      />;
+</AutocompleteSuggestions>
+    </div>;
+
   const [filtered_suggestions, setFilteredSuggestions] = useState < SearchSuggestion[]>([]);
   const input_ref = useRef < HTMLInputElement>(null);
   const container_ref = useRef < HTMLDivElement>(null);
@@ -273,8 +291,11 @@ if ( {) {
       suggestion.text.toLowerCase ().includes (value.toLowerCase ()));
 ;
     // Check condition;
+
 if ( {) {
   $2;
+
+}
       // Show recent searches when input is empty;"
       setFilteredSuggestions (search_suggestions.filter (string => s.type === 'recent'));
       return;
@@ -284,8 +305,8 @@ pr-12325
     // Sort suggestions to prioritize those that start with the search term;
     filtered.sort ((a, b) => {
       const aStartsWith = a.text.toLowerCase ().starts_with (value.toLowerCase ()) ? -1 : 0;
-      const bStartsWith = b.text.toLowerCase ().starts_with (value.toLowerCase ()) ? -1 : 0;
-      return aStartsWith - bStartsWith;
+      const bStartsWith = b.text.toLowerCase ().starts_with (value.toLowerCase ()) ? -1 : 0;}
+      return aStartsWith - bStartsWith;}
     });
 ;
     setFilteredSuggestions (filtered.slice (0, 8)), // Limit to 8 suggestions;
@@ -308,9 +329,27 @@ function handleClickOutside() {
   }, []);
 ;
   const handleSelectSuggestion = (suggestion: string) =>: any {
+ * handleClickOutside - Function description;
+ */
+function handleClickOutside() {
+
+      if () {) {
+  $2;
+}
+        setIsFocused (false);
+      }
+    }'
+    document.addEventListener ("mousedown", handleClickOutside);""
+    return () => document.removeEventListener ("mousedown", handleClickOutside);"
+
+  }, []);
+;
+  const handleSelectSuggestion = (suggestion: string) =>: any {
+  // TODO: Implement
+}
     on_change (suggestion);
-    setIsFocused (false),
-    input_ref.current?.blur ();
+    setIsFocused (false),}
+    input_ref.current?.blur ();}
   }
 ;
   return (
@@ -334,6 +373,31 @@ function handleClickOutside() {
             on_click={() => on_change ('')}
           >;
             <X className="h - 4 w-4" />;
+
+  return ("
+    <div className="relative w - full" ref={container_ref}>;"
+</div>"
+      <div className="relative">;"
+</div>
+        <Search;"
+          className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 h - 4 w - 4 text - zion - slate";"
+
+        />;
+</Search>
+        <Input;
+
+          ref={input_ref}"
+          type="text";"
+          value={value})
+          on_change={(e) => on_change (e.target.value)}
+</Input>
+          <button;"
+            className="absolute right - 3 top - 1/2 transform -translate - y-1 / 2 text - zion - slate hover:text - white";""
+            on_click={() => on_change ('')}'
+</button>'
+            <X className="h - 4 w - 4" />;"
+</X>
+
           </button>)}
       </div>;
       <AutocompleteSuggestions;
@@ -378,7 +442,9 @@ function handleClickOutside() {
         search_term={value}
         visible={is_focused}
 
+</AutocompleteSuggestions>
     </div>);
+
 const [filteredSuggestions, setFilteredSuggestions] = useState<SearchSuggestion[]> ([]);
 
 const inputRef = useRef<HTMLInputElement> (null);
@@ -396,3 +462,6 @@ const containerRef = useRef<HTMLDivElement> (null);
   isFocused;
 }/> </div>) 
 pr-12325
+</AutocompleteSuggestions>
+    </div>"
+

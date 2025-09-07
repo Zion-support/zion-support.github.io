@@ -14,6 +14,19 @@ export /**
 export /**
  * FeaturedListingsSection - Function description;
 pr-12325
+
+import { ProductListingCard } from '@/components / ProductListingCard';''
+import { GradientHeading } from '@/components / GradientHeading';''
+import { Button } from '@/components / ui / button';''
+import { Link } from './react-router-dom';'
+interface FeaturedListingsSectionProps {
+  // TODO: Implement
+}
+  show_title?: boolean;
+
+}
+export /**
+ * FeaturedListingsSection - Function description;
  */
 function FeaturedListingsSection() {
   const featured_listings = [;
@@ -75,6 +88,8 @@ function FeaturedListingsSection() {
   )
 
 
+
+'
       id: "advanced-nlp-model",""
       title: "Advanced NLP Model for Text Analysis",""
       description: "State-of-the-art natural language processing with 98% accuracy","
@@ -86,7 +101,9 @@ function FeaturedListingsSection() {
   avatarUrl: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=64&h=64&fit=crop&auto=format""
 
 
+      }
     },
+
     {"
       id: "image-generation-service",""
       title: "AI Image Generation Service",""
@@ -355,6 +372,14 @@ export function FeaturedListingsSection({ showTitle = true } FeaturedListingsSec
             <Link to="/marketplace">View All Listings"
           
     </section>
+</Button>"
+            <Link to="/marketplace">View All Listings</Link>"
+
+          </Button>
+        </div>
+      </div>
+    </section>
+
         </div>;"
         <div className="mt-10 text-center">;"
             asChild>;
@@ -371,3 +396,4 @@ export function FeaturedListingsSection({ showTitle = true } FeaturedListingsSec
     </section>;
     </section>);"
 pr-12325
+

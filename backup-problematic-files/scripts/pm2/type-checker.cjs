@@ -26,6 +26,7 @@ class TypeChecker {}
     console.error(message);
   async runTypeCheck() {}
     try {}
+<<<<<<< HEAD
       this.log('Running TypeScript type check...');
       execSync('npm run type-check', { })
         stdio: 'pipe',
@@ -35,6 +36,18 @@ class TypeChecker {}
       return { success: true, errors: 0 };
     } catch (err) {}`;
       this.error(`TypeScript type check failed: ${err.message}`);
+=======
+      this.log('Running TypeScript type check...);
+      execSync('npm run type-check, { })
+        stdio: pipe,
+        cwd: process.cwd();
+      }
+});
+      this.log('TypeScript type check completed successfully');
+      return { success: true, errors: 0 };
+    } catch (err) {}
+      this.error(`TypeScript type check failed: ${err.message});
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
       
       // Parse TypeScript errors from stderr;
       const errorOutput = err.stderr ? err.stderr.toString() : err.message;
@@ -68,24 +81,53 @@ class TypeChecker {}
           const fixed = await this.fixFileErrors(filePath, errors.filter(e => e.file === filePath));
           if (fixed) {}
             fixedCount++;
+<<<<<<< HEAD
         this.error(`Error fixing file ${filePath}: ${err.message}`);
     };`;
+=======
+          };
+        };
+      } catch (err) {}
+        this.error(`Error fixing file ${filePath}: ${err.message});
+      };
+    };
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
     this.log(`Fixed TypeScript errors in ${fixedCount} files`);
     return fixedCount;
   async fixFileErrors(filePath, fileErrors) {}
+<<<<<<< HEAD
       let content = fs.readFileSync(filePath, 'utf8');
+=======
+    try {}
+      let content = fs.readFileSync(filePath,utf8);
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
       let modified = false;
       
       for (const error of fileErrors) {}
         const fix = this.getFixForError(error, content);
         if (fix) {}
           content = fix;
+<<<<<<< HEAD
           modified = true;`;
           this.log(`Fixed error in ${filePath} at line ${error.line}: ${error.message}`);
+=======
+          modified = true;
+          this.log(`Fixed error in ${filePath} at line ${error.line}: ${error.message});
+        };
+      };
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
       if (modified) {}
         fs.writeFileSync(filePath, content);
         return true;
       return false;
+<<<<<<< HEAD
+=======
+    } catch (err) {}
+      this.error(`Error fixing file ${filePath}: ${err.message});
+      return false;
+    };
+  };
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
   getFixForError(error, content) {}
     const lines = content.split('\n');
     const lineIndex = error.line - 1;
@@ -96,6 +138,7 @@ class TypeChecker {}
     let fixedLine = line;
     
     switch (error.code) {}
+<<<<<<< HEAD
       case '1005': // ';' expected;
         if (line.trim().endsWith(')') && !line.trim().endsWith(');')) {}
           fixedLine = line.replace(/\)$/, ');');
@@ -121,3 +164,37 @@ class TypeChecker {}
 
           fixedLine = line.replace(/render\(<App:\s*\/>\)/g, 'render(<App />)');
 `;
+=======
+      case '1005: //; expected;
+        if (line.trim().endsWith(')) && !line.trim().endsWith(');)) {}
+          fixedLine = line.replace(/\)$/,););
+        } else if (line.trim().endsWith(}) && !line.trim().endsWith(};)) {}
+          fixedLine = line.replace(/\}$/, };);
+        };
+        break;
+        '
+      case '1435: // Unknown keyword or identifier;
+        if (line.includes('with out')) {}
+          fixedLine = line.replace(/with out/g,without');
+        };
+        break;
+        '
+      case '1003: // Identifier expected;
+        if (line.includes('import') && line.includes(';;)) {}
+          fixedLine = line.replace(/;;/g,;);
+        };
+        break;
+        '
+      case '1128: // Declaration or statement expected;
+        if (line.includes('interface') && line.includes('{)) {}
+          // Fix malformed interface declarations;
+          fixedLine = line.replace(/\{\s*,\s*\}/g,{});
+        };
+        break;
+        '
+      case '1009: // Expression expected;
+        if (line.includes('render(<App: />))) {}
+</App>'
+          fixedLine = line.replace(/render\(<App:\s*\/>\)/g,render(<App />));
+</App>'
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a

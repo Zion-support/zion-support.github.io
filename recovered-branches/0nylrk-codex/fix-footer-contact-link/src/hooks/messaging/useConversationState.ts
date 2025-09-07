@@ -12,6 +12,7 @@ export /**
  */
 function useConversationState() {
 
+
 import {useState} from 'react';
 import {Conversation, Message} from '@/types/messaging';
 /**
@@ -29,6 +30,8 @@ export function useConversationState() {;
   const [activeConversation, setActiveConversation] = useState<Conversation | null>(null),
 
 pr-12325
+</Conversation>
+
   const [messages, set_messages] = useState < Message[]>([]);
   const [active_messages, setActiveMessages] = useState < Message[]>([]);
   const [conversations, set_conversations] = useState < Conversation[]>([]);
@@ -47,14 +50,22 @@ pr-12325
     setActiveMessages;
     conversations;
     set_conversations;
+
     unread_count;
     setUnreadCount;    activeConversation;
 import { useState } from 'react',;
 import { Conversation, Message } from '@/types/messaging',;
+    setUnreadCount;
+
+    activeConversation;'
+import { useState } from 'react',;''
+import { Conversation, Message } from '@/types/messaging',;'
+
 /**;
  * Hook to manage messaging state;
  */;
 export function useConversationState() {;
+
   const [messages, setMessages] = useState<Message[]>([]),;
   const [activeMessages, setActiveMessages] = useState<Message[]>([]),;
   const [conversations, setConversations] = useState<Conversation[]>([]),;
@@ -86,9 +97,12 @@ import { Conversation, Message } from '@/types/messaging',;
  */;
   const [messages, setMessages] = useState<Message[]>([]),;
 
+</Message>
   const [activeMessages, setActiveMessages] = useState<Message[]>([]),;
 
   const [conversations, setConversations] = useState<Conversation[]>([]),;
 
   const [activeConversation, setActiveConversation] = useState<Conversation | null>(null),;
 pr-12325
+</Conversation>'
+

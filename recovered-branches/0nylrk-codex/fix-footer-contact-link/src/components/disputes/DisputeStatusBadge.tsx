@@ -1,4 +1,5 @@
 
+
 interface DisputeStatusBadgeProps {
   status: 'open' | 'under_review' | 'resolved' | 'closed'
 }
@@ -142,3 +143,12 @@ function DisputeStatusBadge() {"
 }</p>  ) 
     );"
 pr-12325
+      </TooltipContent>;)
+    </Tooltip>);
+    </Tooltip>);
+    </Tooltip>);
+    </Tooltip>;
+}</p> </TooltipContent> </Tooltip>) 
+    </Tooltip>;
+    </Tooltip>);"
+

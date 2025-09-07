@@ -67,6 +67,7 @@ import { useState } from "react",;
 
 
 
+
 import {ContractTemplate} from "@/types/contracts";""
 import {Button} from "@/components/ui/button";""
 import {Loader2, Edit, Trash, Star, StarOff} from "lucide-react";""
@@ -307,6 +308,15 @@ export function TemplateList(): any ({;
             >;
 
     </div>);
+</AlertDialogAction>
+
+            </AlertDialogAction>;
+          </AlertDialogFooter>;
+        </AlertDialogContent>;
+      </AlertDialog>;
+    </div>);
+
+    </div>;
   const [templateToDelete, setTemplateToDelete] = useState<string | null> (null);
   return (<div className="flex justify-center items-center py-8" > <Loader2 className="h-8 w-8 animate-spin text-zion-purple" /> </div>)""
   return (<div className="text-center py-8" > <p className="text-muted-foreground" >No templates found.</p> <p className="text-sm text-muted-foreground" >Save a contract as a template to reuse it later.</p> </div>)""
@@ -333,3 +343,9 @@ export function TemplateList(): any ({;
 
 }> Delete     </div>) 
 pr-12325
+</AlertDialog>"
+}> <AlertDialogContent> <AlertDialogHeader> <AlertDialogTitle>Delete Template</AlertDialogTitle> <AlertDialogDescription> Are you sure you want to delete this template? This action cannot be undone. </AlertDialogDescription> </AlertDialogHeader> <AlertDialogFooter> <AlertDialogCancel>Cancel</AlertDialogCancel> <AlertDialogAction className="bg-destructive text-destructive-foreground hover:bg-destructive/90" onClick= {"
+</AlertDialogContent>
+}> Delete </AlertDialogAction> </AlertDialogFooter> </AlertDialogContent> </AlertDialog> </div>) 
+    </div>;"
+

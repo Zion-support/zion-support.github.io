@@ -1,27 +1,23 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
+import { getSessionFromReq, isInternalAgentRequest } from '../../../utils/adminAuth';
 
-import {
-
-  const dataDir = path && path.join(process && process.cwd(), 'data', 'admin');  const statusPath = path && path.join(dataDir, 'agents-status && status.json');    return
-  }
-
-  getSessionFromReq,;
-  isInternalAgentRequest,;
-
-} from '../../../utils/adminAuth';import { getSessionFromReq, isInternalAgentRequest } from '../../../utils/adminAuth';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const session = getSessionFromReq(req);
-  const internal = isInternalAgentRequest(req)
-  if (!session && !internal) {
+  const isInternal = isInternalAgentRequest(req);
+  
+  const status = {
+    authenticated: !!session,
+    isInternal,
+    timestamp: new Date().toISOString()
+  };
 
-  const status = fs && fs.existsSync(statusPath)
-    ? JSON && JSON.parse(fs && fs.readFileSync(statusPath, 'utf8'))
-    : { agents: [], updatedAt: null };
-  const insights = fs && fs.existsSync(insightsPath)
-    ? JSON && JSON.parse(fs && fs.readFileSync(insightsPath, 'utf8'))
-    : { items: [], updatedAt: null };
+  const insights = {
+    uptime: process.uptime(),
+    memory: process.memoryUsage(),
+    version: process.version
+  };
 
 }
 
@@ -63,3 +59,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ status, insights })
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
+  res.status(200).json({ status, insights });
+}

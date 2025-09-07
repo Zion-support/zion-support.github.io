@@ -66,6 +66,7 @@ export default function EnterprisePlans() {;
         description="Scale your talent acquisition with Zion's enterprise solutions. Custom branded portals, dedicated talent pools, and powerful admin tools.";
       />;
       <Header />;    </>);
+
 import React from "react";""
 import { Header } from "@/components/Header";""
 import { Footer } from "@/components/Footer";""
@@ -82,12 +83,16 @@ export default function EnterprisePlans() {
       <SEO;"
         title="Enterprise Plans - Zion AI Marketplace"""
         description="Scale your talent acquisition with Zion's enterprise solutions. Custom branded portals, dedicated talent pools, and powerful admin tools.""
+
       />
 
       <Header />
 "
+
+</Header>"
       <main className="min-h-screen bg-background">"
 </main>
+
         <EnterpriseHero />
 
         <EnterprisePricingTable />
@@ -102,6 +107,7 @@ export default function EnterprisePlans() {
 
       <Footer />
 
+</Footer>
     </>)
   );
 }
@@ -132,6 +138,11 @@ export default function EnterprisePlans() {;
         title="Enterprise Plans - Zion AI Marketplace";""
         description="Scale your talent acquisition with Zion's enterprise solutions. Custom branded portals, dedicated talent pools, and powerful admin tools.";"
 
+      />;
+</SEO>
+      <Header />;
+
+</Header>"
       <main className="min - h-screen bg - background">;"
 </main>"
         <EnterpriseHero />;
@@ -153,4 +164,9 @@ export default function EnterprisePlans() {;
     </>);
 pr-12325
 ;
+
+
+    </>);
+}
+"
 

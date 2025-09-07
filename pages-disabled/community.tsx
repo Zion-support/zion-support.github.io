@@ -5,6 +5,8 @@ import Layout from '../components/Layout';
 export default function CommunityPage() {
   const communityFeatures = [
     {
+
+    {'
       title: "Developer Forums",""
       description: "Connect with developers and share knowledge","
       icon: MessageCircle,]"
@@ -75,10 +77,15 @@ export default function CommunityPage() {
                       <li key={idx} className="text-sm text-gray-500 flex items-center">"
 </li>"
                         <div className="w-2 h-2 bg-blue-500 rounded-full mr-2"></div>"
+
                       </li>
                   </ul>
                 </motion.div>)
               ))}
+            </div>
+          </div>
+
+        </section>"
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">"
           <div className="container mx-auto px-4 text-center">"
               transition={{ duration: 0.8 }}
@@ -91,3 +98,12 @@ export default function CommunityPage() {
                 </button>"
                 <button className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">"
         </section>
+</button>
+
+                </button>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+      </div>
+    </Layout>"

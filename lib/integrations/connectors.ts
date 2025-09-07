@@ -36,6 +36,11 @@ import { v4 as uuidv4 } from 'uuid';
 
 async function mockProviderCall<T>(
 pr-12325
+import { ProviderConnection, SyncLogEntry } from './types';
+import { v4 as uuidv4 } from 'uuid';
+
+
+async function mockProviderCall<T>(
   connection: ProviderConnection,
   action: string,
   details: Record<string, any>
@@ -326,3 +331,7 @@ export class AnalyticsConnector {
     metric: Record<string, any>
     const { log } = await mockProviderCall(connection, 'sync_metric', metric);
 pr-12325
+    return log;
+
+  }
+}

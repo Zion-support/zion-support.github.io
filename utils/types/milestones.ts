@@ -77,6 +77,9 @@ export interface CreateMilestoneRequest {;
 ursor/fix-website-loading-errors-and-merge-6662
   title: string;
   description?: string;
+  clientUserId: string;,
+  talentUserId: string;
+
 }
 export interface UpdateMilestoneRequest {
 
@@ -105,6 +108,8 @@ export function isOverdue(milestone: Milestone): boolean {
   }
   return new Date(milestone.dueDate) < new Date();
 origin/cursor/expand-services-advertise-and-build-project-c28b
+  updatedAt: string;
+
 }
 
 
@@ -127,16 +132,37 @@ export interface UpdateMilestoneRequest {;
   due_date?: string;
   amount_usd?: number;
   status?: 'pending' | 'completed' | 'cancelled';
+  title: string;}
+  description?: string;}
+}
+export interface UpdateMilestoneRequest {
+  // TODO: Implement
+}
+export interface UpdateMilestoneRequest {;
+
+export interface UpdateMilestoneRequest {
+  // TODO: Implement
+}
+  title?: string;
+  description?: string;
+  due_date?: string;
+
+  amount_usd?: number;'
+  status?: 'pending' | 'completed' | 'cancelled';'
+  attachments?: MilestoneAttachment[];
+
+}
 
 
 export function getDaysUntilDue(milestone: Milestone): number | null {
   // TODO: Implement
 pr-12325
+}
   if (!milestone.dueDate) return null;
   const dueDate = new Date(milestone.dueDate);
   const now = new Date();
-  const diffTime = dueDate.getTime() - now.getTime();
-  return Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+  const diffTime = dueDate.getTime() - now.getTime();}
+  return Math.ceil(diffTime / (1000 * 60 * 60 * 24));}
 }
 
 }
@@ -167,3 +193,4 @@ export function isMilestoneStatus(value: string): value is MilestoneStatus {
 origin/cursor/automate-test-improve-and-merge-code-2533
 
 pr-12325
+'

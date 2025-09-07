@@ -19,6 +19,13 @@ const iconMap = {;
 interface UserBadgesProps {
   // TODO: Implement
 pr-12325
+const iconMap = {;
+interface UserBadgesProps {
+  // TODO: Implement
+}
+  badges: Badge[];
+
+}
 const icon_map = {
   Trophy;
   Award;
@@ -155,6 +162,10 @@ export default UserBadges;
 export default UserBadges;
   MessageSquare;
 };
+  Star;}
+  MessageSquare}
+};
+
 
 export const UserBadges = ({ badges }: UserBadgesProps) => {;
 "
@@ -182,9 +193,14 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/comp
                   <IconComponent;
                     style={{ color: badge.color }}"
                     className="w-4 h-4""
+
                   />
 
               
+</IconComponent>
+                </div>
+              </TooltipTrigger>
+
               <TooltipContent>
                 <div className="text-center">"
 </div>"
@@ -222,14 +238,30 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/comp
                 >;
                     className="w - 4 h - 4";"
 
+                  />;
+</IconComponent>
+                </div>;
+              </TooltipTrigger>;
+
+              <TooltipContent>;
+</TooltipContent>"
                 <div className="text - center">;"
                   <div className="font - medium">{badge.name}</div>;""
                   <div className="text - xs text - gray - 500">{badge.description}</div>;"
             ;)
           );
     </div>);
+
+                </div>;
+              </TooltipContent>;
+            </Tooltip>;)
+          </TooltipProvider>);
+    </div>);
+
+    </div>;"
 return (<div className="flex flex-wrap gap-2" > {"
 </div>)
 }> <Tooltip> <TooltipTrigger asChild> <div /> </div>  <TooltipContent> </div>   ) 
 }</div>) "
 pr-12325
+

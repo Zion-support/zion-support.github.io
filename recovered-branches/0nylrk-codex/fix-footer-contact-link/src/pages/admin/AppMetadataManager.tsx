@@ -65,3 +65,13 @@ const AppMetadataManager: React.FC = () => {
 
     ;"
 pr-12325
+    </AppLayout>;)"
+}/> <div className=" container py-8"> <h1 className=" text-3xl font-bold text-zion-cyan mb-8" >App Metadata Manager</h1> <MetadataManager /> </div> </AppLayout>)""
+      <div className="container py-8">;"
+</div>"
+        <h1 className="text-3xl font-bold text-zion-cyan mb-8">App Metadata Manager</h1>;"
+        <MetadataManager />;
+</MetadataManager>
+      </div>;
+    </AppLayout>;"
+

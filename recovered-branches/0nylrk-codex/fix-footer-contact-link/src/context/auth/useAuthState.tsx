@@ -55,6 +55,7 @@ function useAuthState() {
     is_loading;
     setIsLoading;
 
+
 import React, { useState } from "react",""
 import type { UserProfile } from "@/types/auth";""
 import type { UserProfile } from "@/types/auth","
@@ -78,3 +79,4 @@ export function useAuthState() {
   const [onboardingStep, setOnboardingStep] = useState<string | null>(null),;
 </string>"
 pr-12325
+

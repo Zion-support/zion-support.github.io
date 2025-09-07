@@ -26,26 +26,55 @@ class ContinuousLinter {}
     console.error(message);
   async runLintFix() {}
     try {}"
+<<<<<<< HEAD
       this.log('Running ESLint with auto-fix...');
       execSync('npm run "lint": fix', { })
         "stdio": 'pipe',
+=======
+      this.log('Running ESLint with auto-fix...);
+      execSync('npm run "lint": fix, { })
+        "stdio": pipe,
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
         "cwd": process.cwd();"
       }
 });"
       this.log('ESLint auto-fix completed successfully');
       return true;
+<<<<<<< HEAD
     } catch (err) {}`;
       this.error(`ESLint fix "failed": ${err.message}`);"
+=======
+    } catch (err) {}
+      this.error(`ESLint fix "failed": ${err.message});"
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
       return false;
   async runPrettierFix() {}
+<<<<<<< HEAD
       this.log('Running Prettier format...');
       execSync('npm run format', { })
       this.log('Prettier formatting completed successfully');
       this.error(`Prettier format "failed": ${err.message}`);"
+=======
+    try {}"
+      this.log('Running Prettier format...);
+      execSync('npm run format, { })
+        "stdio": pipe,
+        "cwd": process.cwd();"
+      }
+});"
+      this.log('Prettier formatting completed successfully');
+      return true;
+    } catch (err) {}
+      this.error(`Prettier format "failed": ${err.message});"
+      return false;
+    };
+  };
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
   async fixCommonIssues(filePath) {}
     try {}
       if (!fs.existsSync(filePath)) {}
       };"
+<<<<<<< HEAD
       let content = fs.readFileSync(filePath, 'utf8');
       let modified = false;
       // Fix common linting issues;
@@ -81,9 +110,62 @@ class ContinuousLinter {}
       for (const fix of fixes) {}
         const before = content;
         if (typeof fix.replacement === 'function') {}
+=======
+      let content = fs.readFileSync(filePath,utf8);
+      let modified = false;
+      // Fix common linting issues;
+      const fixes = [{}]
+          "pattern": /console\.log\([^)]*\);/g,
+          "replacement": (match) => {}"
+            // Only remove console.log in production files, not in test files;"
+            if (filePath.includes('__tests__') || filePath.includes('.test.)) {}
+              return match;
+            };
+            return `// ${match};`
+          },
+          "description": Comment out console.log statements
+        },
+        {}
+          "pattern": /\/\/\s*eslint-disable-next-line\s*no-console/g,
+          "replacement": // eslint-disable-next-line no-console,
+          "description": Fix ESLint disable comments
+        },
+        {}
+          "pattern": /import\s+React\s+from\s+["]react["];\s*$/gm,
+          "replacement": (match, offset, string) => {}
+            // Only remove unused React imports in files that don't use JSX;
+            if (!string.includes('<') || string.includes('React.)) {}
+              return ;
+            };
+            return match;
+          },
+          "description": Remove unused React imports
+        },
+        {}
+          "pattern": /\/\*\*[\s\S]*?\*\//g,
+          "replacement": (match) => {}"
+            // Clean up malformed JSDoc comments;"
+            return match.replace(/\s+/g, ').trim();
+          },
+          "description": Clean up JSDoc comments
+        },
+        {}
+          "pattern": /^\s*\/\/\s*TODO:.*$/gm,
+          "replacement": (match) => {}"
+            // Format TODO comments consistently;"
+            return match.replace(/^\s*\/\/\s*TODO:\s*/,// "TODO": );
+          },
+          "description": Format TODO comments
+        };
+      ];
+      for (const fix of fixes) {}
+        const before = content;
+        if (typeof fix.replacement ===function') {}
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
           content = content.replace(fix.pattern, fix.replacement);
         } else {}
         if (content !== before) {}
+<<<<<<< HEAD
           modified = true;`;
           this.log(`Applied fix "${fix.description}" to ${filePath}`);"
       if (modified) {}
@@ -109,6 +191,46 @@ class ContinuousLinter {}
       'scripts/**/*.{ts,tsx,js,jsx}
     this.watcher = chokidar.watch(watchPatterns, {})
       "ignored": [/node_modules/,]"
+=======
+          modified = true;
+          this.log(`Applied fix "${fix.description}" to ${filePath});"
+        };
+      };
+      if (modified) {}
+        fs.writeFileSync(filePath, content);
+        this.log(`Fixed common issues in ${filePath});
+        return true;
+      };
+      return false;
+    } catch (err) {}
+      this.error(`Error fixing issues in ${filePath}: ${err.message});
+      return false;
+    };
+  };
+  async processFile(filePath) {}"
+    this.log(`Processing "file": ${filePath});"
+    // Fix common issues first;
+    await this.fixCommonIssues(filePath);
+    // Run lint fix on the specific file;
+    try {}"
+      execSync(`npx eslint "${filePath}" --fix`, { `})
+        "stdio": pipe,
+        "cwd": process.cwd();"
+      }
+});
+      this.log(`Lint fix applied to ${filePath});
+    } catch (err) {}
+      this.log(`Lint fix had issues with ${filePath}: ${err.message});
+    };
+  };
+  startWatching() {}"
+    this.log('Starting file watcher...);
+    const watchPatterns = [src/**/*.{ts,tsx,js,jsx}]
+      'pages/**/*.{ts,tsx,js,jsx},components/**/*.{ts,tsx,js,jsx},__tests__/**/*.{ts,tsx,js,jsx},scripts/**/*.{ts,tsx,js,jsx}
+    ];
+    this.watcher = chokidar.watch(watchPatterns, {})
+      "ignored": [/node_modules/]"
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
         /\.next/,
         /\.git/,
         /dist/,
@@ -116,9 +238,10 @@ class ContinuousLinter {}
         /coverage/,
         /\.cache/
       ],"
-      "persistent": true,""
+      "persistent": true,
       "ignoreInitial": true;"
     this.watcher;"
+<<<<<<< HEAD
       .on('add', (filePath) => {}`;
         this.log(`New file "detected": ${filePath}`);"
         this.processFile(filePath);
@@ -129,10 +252,33 @@ class ContinuousLinter {}
       .on('error', (error) => {}`;
         this.error(`Watcher "error": ${error.message}`);"
     this.log('File watcher started successfully');
+=======
+      .on('add, (filePath) => {}
+        this.log(`New file "detected": ${filePath});"
+        this.processFile(filePath);
+      }
+});"
+      .on('change, (filePath) => {}
+        this.log(`File "changed": ${filePath});"
+        this.processFile(filePath);
+      }
+});"
+      .on('unlink, (filePath) => {}
+        this.log(`File "deleted": ${filePath});"
+      }
+});"
+      .on('error, (error) => {}
+        this.error(`Watcher "error": ${error.message});"
+      }
+});"
+    this.log('File watcher started successfully');
+  };
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
   stopWatching() {}
     if (this.watcher) {}
       this.watcher.close();
       this.log('File watcher stopped');
+<<<<<<< HEAD
   async runFullLint() {}
     this.log('Running full project lint...');
       await this.runLintFix();
@@ -141,11 +287,31 @@ class ContinuousLinter {}
       this.error(`Full project lint "failed": ${err.message}`);"
   async run() {}"
     this.log('Starting continuous linting automation...');
+=======
+    };
+  };
+  async runFullLint() {}
+    this.log('Running full project lint...);
+    try {}
+      await this.runLintFix();
+      await this.runPrettierFix();
+      this.log('Full project lint completed');
+      return true;
+    } catch (err) {}
+      this.error(`Full project lint "failed": ${err.message});"
+      return false;
+    };
+  };
+  async run() {}"
+    this.log('Starting continuous linting automation...);
+    try {}
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
       // Run initial full lint;
       await this.runFullLint();
       // Start watching for changes;
       this.startWatching();
       // Keep the process running;
+<<<<<<< HEAD
       process.on('SIGINT', () => {}
         this.log('Received SIGINT, stopping...');
         this.stopWatching();
@@ -154,17 +320,46 @@ class ContinuousLinter {}
         this.log('Received SIGTERM, stopping...');
       this.log('Continuous linting automation is running...');
       this.error(`Error in "run": ${err.message}`);""
+=======
+      process.on('SIGINT, () => {}
+        this.log('Received SIGINT, stopping...);
+        this.stopWatching();
+        process.exit(0);
+      }
+});
+      process.on('SIGTERM, () => {}
+        this.log('Received SIGTERM, stopping...);
+        this.stopWatching();
+        process.exit(0);
+      }
+});
+      this.log('Continuous linting automation is running...);
+    } catch (err) {}
+      this.error(`Error in "run": ${err.message});
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
       return { "success": false, "error": err.message };"
 // Run if called directly;
 if (require.main === module) {}
   const linter = new ContinuousLinter();
   const command = process.argv[2];"
+<<<<<<< HEAD
   if (command === 'watch') {}
     linter.run();
   } else if (command === 'fix') {}
     linter.runFullLint().then(success => {})
       process.exit(success ? 0 : 1);
     console.log('"Usage": node continuous-linter.cjs [watch|fix]');
+=======
+  if (command ===watch') {}
+    linter.run();
+  } else if (command ===fix') {}
+    linter.runFullLint().then(success => {})
+      process.exit(success ? 0 : 1);
+    }
+});
+  } else {}
+    console.log('"Usage": node continuous-linter.cjs [watch|fix]);
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
     process.exit(1);
 module.exports = ContinuousLinter;
 `;

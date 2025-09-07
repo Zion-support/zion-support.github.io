@@ -1,6 +1,7 @@
 
 
       {
+      {}
       },
     ],
   },
@@ -50,6 +51,26 @@ pr-12325
       'Compliance',
       'Stakeholder Engagement',
       'Research',
+
+      'https://images && images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&h=200',''
+    id: 't - 006',''
+    user_id: 'user - 006',''
+    full_name: 'Sarah Johnson',''
+    professional_title: 'AI Ethics Consultant & Policy Advisor','
+    profile_picture_url:;'
+      'https://images.unsplash.com / photo - 1494790108377 - be9c29b29330?auto = format & fit = crop & w=200 & h=200',''
+    bio: 'Former tech policy advisor with expertise in AI ethics, governance frameworks, and responsible AI development. I help organizations develop and implement ethical guidelines for AI systems, ensuring fair and transparent use of machine learning technologies.',''
+    location: 'Washington, DC','
+    skills: [;'
+      'AI Ethics',''
+      'Policy Development',''
+      'Risk Assessment',''
+      'Governance',''
+      'Responsible AI',''
+      'Compliance',''
+      'Stakeholder Engagement',''
+      'Research',']
+
     ],
       'Research',']
 pr-12325
@@ -71,6 +92,22 @@ pr-12325
       'C++',
       'CUDA',
       'Edge AI',
+
+    rating_count: 21,'
+    availability_type: 'project','
+    is_verified: true,'
+    bio: 'Computer vision engineer with expertise in developing advanced visual recognition systems using deep learning. My work spans object detection, image classification, and video analysis for applications in retail, manufacturing, and autonomous systems.',''
+    location: 'San Francisco, CA','
+    skills: [;'
+      'Computer Vision',''
+      'PyTorch',''
+      'TensorFlow',''
+      'Object Detection',''
+      'Image Processing',''
+      'C++',''
+      'CUDA',''
+      'Edge AI',']
+
     ],
       'Edge AI',']
 pr-12325
@@ -79,6 +116,9 @@ pr-12325
     average_rating: 4 && 4.7,
     rating_count: 26,
     availability_type: 'full_time',
+
+    rating_count: 26,'
+    availability_type: 'full_time','
     is_verified: true,
       },
     ],
@@ -98,6 +138,19 @@ pr-12325
       'Hugging Face',
       'Language Models',
       'Sentiment Analysis',
+  {'
+    bio: 'PhD in Computational Linguistics with 8+ years of experience in NLP research and applications. I specialize in sentiment analysis, text generation, language understanding, and multilingual NLP systems for enterprise applications.',''
+    location: 'Montreal, Canada','
+    skills: [;'
+      'Natural Language Processing',''
+      'BERT',''
+      'Transformers',''
+      'GPT',''
+      'Python',''
+      'Hugging Face',''
+      'Language Models',''
+      'Sentiment Analysis',']
+
     ],
       'Sentiment Analysis',']
 pr-12325
@@ -121,6 +174,22 @@ pr-12325
       'Python',
       'TensorFlow Quantum',
       'Optimization',
+
+    rating_count: 34,'
+    availability_type: 'part_time','
+    is_verified: true,'
+    bio: 'Quantum computing researcher with focus on quantum machine learning algorithms and applications. My work bridges the gap between quantum computing theory and practical machine learning implementations for complex optimization problems.',''
+    location: 'Toronto, Canada','
+    skills: [;'
+      'Quantum Computing',''
+      'Quantum Machine Learning',''
+      'Qiskit',''
+      'PennyLane',''
+      'Linear Algebra',''
+      'Python',''
+      'TensorFlow Quantum',''
+      'Optimization',']
+
     ],
     hourly_rate: 190,
     years_experience: 5,
@@ -148,6 +217,22 @@ pr-12325
       'Analytics',
       'Stakeholder Management',
       'Product Roadmap',
+
+    rating_count: 17,'
+    availability_type: 'project','
+    is_verified: false,'
+    bio: 'Experienced product manager specializing in AI products and services. I bridge the gap between technical AI capabilities and business value, helping organizations define, develop, and deploy impactful machine learning solutions.',''
+    location: 'London, UK','
+    skills: [;'
+      'Product Management',''
+      'AI Strategy',''
+      'User Research',''
+      'Go - to - Market',''
+      'Agile',''
+      'Analytics',''
+      'Stakeholder Management',''
+      'Product Roadmap',']
+
     ],
     hourly_rate: 140,
     years_experience: 9,
@@ -166,6 +251,22 @@ pr-12325
       'Simulation',
       'OpenAI Gym',
       'Multi - agent Systems',
+
+    rating_count: 39,'
+    availability_type: 'full_time','
+    is_verified: true,'
+    bio: 'Specialist in reinforcement learning with applications in robotics, autonomous systems, and optimization problems. I develop RL algorithms that enable systems to learn optimal behaviors through interaction with their environment.',''
+    location: 'Berlin, Germany','
+    skills: [;'
+      'Reinforcement Learning',''
+      'Deep RL',''
+      'PyTorch',''
+      'TensorFlow',''
+      'Robotics',''
+      'Simulation',''
+      'OpenAI Gym',''
+      'Multi - agent Systems',']
+
     ],
     hourly_rate: 150,
     years_experience: 6,
@@ -200,6 +301,22 @@ pr-12325
       'DICOM',
       'Clinical Validation',
       'Regulatory Compliance',
+
+    rating_count: 23,'
+    availability_type: 'part_time','
+    is_verified: true,'
+    bio: 'Medical imaging specialist with expertise in applying AI to healthcare challenges. I develop deep learning solutions for medical image analysis, diagnostics, and personalized treatment planning in clinical settings.',''
+    location: 'Boston, MA','
+    skills: [;'
+      'Medical Imaging',''
+      'Healthcare AI',''
+      'Deep Learning',''
+      'CNN',''
+      'PyTorch',''
+      'DICOM',''
+      'Clinical Validation',''
+      'Regulatory Compliance',']
+
     ],
     hourly_rate: 170,
     years_experience: 8,
@@ -274,6 +391,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     rating_count: 27,
 
           'Created ML models that predict patient response to specific cancer treatments based on medical imaging data, improving treatment selection and patient outcomes.
+
+    rating_count: 27,'
+    availability_type: 'project','
+    is_verified: true,
+'
+          'Created ML models that predict patient response to specific cancer treatments based on medical imaging data, improving treatment selection and patient outcomes.'''
     id: "t-001", user_id: "user-001",""
     full_name: "Alexandra Chen", professional_title: "Senior AI Engineer & Machine Learning Expert",""
 import { TalentProfile } from "@/types/talent","
@@ -299,9 +422,14 @@ export const TALENT_PROFILES: TalentProfile[] = [
         title: "Cancer Treatment Response Prediction",""
         description: "Created ML models that predict patient response to specific cancer treatments based on medical imaging data, improving treatment selection and patient outcomes.""
       }]
+
     ]
   }"
           'Created ML models that predict patient response to specific cancer treatments based on medical imaging data, improving treatment selection and patient outcomes.',
+          'Created ML models that predict patient response to specific cancer treatments based on medical imaging data, improving treatment selection and patient outcomes.','
+      },
+    ],
+  },
 ];
 
 
@@ -311,3 +439,6 @@ export const TALENT_PROFILES: TalentProfile[] = [
 
 
 pr-12325
+];
+;
+'

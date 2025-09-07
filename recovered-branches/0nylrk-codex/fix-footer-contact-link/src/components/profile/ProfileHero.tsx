@@ -8,6 +8,7 @@ import {cn} from "@/lib/utils";  avatarUrl?: string;
 
 
 
+
 import {Avatar, AvatarImage, AvatarFallback} from "@/components/ui/avatar";""
 import {AspectRatio} from "@/components/ui/aspect-ratio";""
 import {Badge} from "@/components/ui/badge";""
@@ -28,6 +29,7 @@ interface ProfileHeroProps {
   title: string;
   avatarUrl?: string;
 pr-12325
+
   coverImageUrl?: string;
   location?: string;
   rating?: number;
@@ -39,6 +41,7 @@ pr-12325
 export function ProfileHero(): any ({;interface ProfileHeroProps {
   aiScore?: number;"
   profileType: 'service' | 'talent';
+
 
 
 export function ProfileHero(): any ({;
@@ -55,6 +58,8 @@ export function ProfileHero(): any ({;
 }: ProfileHeroProps) {;
   // TODO: Implement
 pr-12325
+}
+
   name: string,
   title: string,
   avatarUrl?: string,
@@ -170,6 +175,10 @@ export function ProfileHero({;
       </div>;
   profileType: 'service' | 'talent
 
+  aiScore?: number,'
+  profileType: 'service' | 'talent''
+}
+
 
 
   profileType;
@@ -258,6 +267,12 @@ export function ProfileHero({
                   </div>;
                   <div className="px-2 py-0.5 rounded bg-zion-purple/20 text-xs font-medium text-zion-cyan">"
 
+</div>
+
+                  </div>
+                  </div>;
+
+                  </div>;"
                   <div className="px-2 py-0 && 0.5 rounded bg-zion-purple/20 text-xs font-medium text-zion-cyan">;"
     <div className="w - full overflow - hidden">;"
         <AspectRatio ratio={3 / 1} className="bg - zion - blue - light">;"
@@ -296,3 +311,10 @@ export function ProfileHero({
                   </div>)}
     </div>);"`;
 pr-12325
+              </div>;
+            </div>;
+          </div>;
+        </div>;
+      </div>;
+    </div>);"
+

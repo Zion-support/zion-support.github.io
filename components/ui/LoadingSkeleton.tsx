@@ -1,7 +1,4 @@
 
-  className?: string;
-  height?: string;
-  width?: string;
 
   rounded?: string;
 interface SkeletonProps {
@@ -65,12 +62,14 @@ interface StatsSkeletonProps {
 }
 import React from 'react';
 import { motion } from 'framer-motion';
-  rounded?: string
+  rounded?: string;
 }
 
 const Skeleton: React.FC<SkeletonProps> = ({ 
   className;
 origin/cursor/automate-test-improve-and-merge-code-2533
+const Skeleton: React.FC<SkeletonProps /> = ({ }
+  className;}
           ))}
         </div>
       </div>
@@ -93,58 +92,10 @@ export const ServiceCardSkeleton: React.FC<ServiceCardSkeletonProps> = ({ classN
   );
   )
 
-interface HeroSkeletonProps {;
-  className?: string;
-}
-export default Skeleton;  )
-}
-export const StatsSkeleton: React.FC<StatsSkeletonProps> = ({ className = '' }) => {;
-  return (
-    <div className={`py-20 px-6 ${className}`}>;
-      <div className="max-w-7xl mx-auto">;
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">;
-          {[...Array(4)].map((_, index) => (;
-            <div key={index} className='text-center'>;
-              <Skeleton className='w-16 h-16 rounded-full mx-auto mb-4' />;
-              <Skeleton className='h-10 w-20 mx-auto mb-2' />;
-              <Skeleton className='h-5 w-24 mx-auto' />            <div key={index} className="text-center">;
-              <Skeleton className="w-16 h-16 rounded-full mx-auto mb-4" />;
-              <Skeleton className="h-10 w-20 mx-auto mb-2" />;
-              <Skeleton className="h-5 w-24 mx-auto" />;
-          ))}
-        </div>;
-      </div>;
-    </div>;
-  )
-};
-
-export default Skeleton;  )
+)
 };
 
 export default Skeleton;
-export const StatsSkeleton: React.FC < StatsSkeletonProps> = ({ class_name = '' }) => {
-  return (
-    <div className={`py - 20 px - 6 ${class_name}`}>;
-      <div className="max-w-7xl mx-auto">;
-        <div className="grid grid - cols - 2 md:grid - cols-4 gap-8">;
-          {[...Array (4)].map ((_, index) => (
-            <div key={index} className='text - center'>;
-              <Skeleton className='w - 16 h - 16 rounded - full mx - auto mb - 4' />;
-              <Skeleton className='h - 10 w - 20 mx - auto mb - 2' />;
-              <Skeleton className='h - 5 w - 24 mx - auto' />            <div key={index} className="text-center">;
-              <Skeleton className="w - 16 h - 16 rounded - full mx-auto mb-4" />;
-              <Skeleton className="h - 10 w - 20 mx-auto mb-2" />;
-              <Skeleton className="h - 5 w-24 mx-auto" />))}
-        </div>;
-      </div>;
-    </div>);
-}
-;
-export default Skeleton);
-}
-;
-export default Skeleton;
-;
 
 interface SkeletonProps {
   className?: string;

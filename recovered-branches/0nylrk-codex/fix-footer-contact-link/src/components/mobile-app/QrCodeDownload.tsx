@@ -26,6 +26,7 @@ export const QrCodeDownload: React.FC = () => {
 
               <AppStoreButtons
                 className="mb-8"
+
 import React from "react";""
 import { QrCode } from "lucide-react";""
 import { AppStoreButtons } from "./AppStoreButtons";"
@@ -68,6 +69,45 @@ pr-12325
                 </div>
                 <p className="text-center text-sm mt-2 text-zion-blue-dark font-medium">
                   Scan to download
+</div>"
+          <div className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12">"
+</div>"
+            <div className="flex-1">"
+</div>"
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">"
+</h2>"
+                Download <span className="text-zion-cyan">Zion</span> to Your;"
+              </h2>"
+              <p className="text-lg text-gray-300 mb-8">"
+</p>
+              </p>
+
+              <AppStoreButtons;"
+                className="mb-8""
+                appStoreUrl={appStoreUrl}
+                googlePlayUrl={googlePlayUrl}
+              />
+</AppStoreButtons>
+"
+              <div className="flex gap-2 items-center text-sm text-gray-400">"
+</div>"
+                <span className="block h-1 w-1 rounded-full bg-zion-purple"></span>"
+                <span>Compatible with iOS 14+ and Android 8.0+</span>
+              </div>
+            </div>
+"
+            <div className="flex-shrink-0">"
+</div>"
+              <div className="bg-white p-6 rounded-xl shadow-lg">"
+</div>"
+                <div className="w-48 h-48 flex items-center justify-center bg-white rounded-lg">"
+</div>"
+                  <QrCode className="w-full h-full p-4" />"
+</QrCode>
+                </div>"
+                <p className="text-center text-sm mt-2 text-zion-blue-dark font-medium">"
+</p>
+
                 </p>
               </div>
             </div>
@@ -128,6 +168,8 @@ export const QrCodeDownload: React.FC = () => {;
                   <QrCode className="w-full h-full p-4" />"
 
                 <p className="text-center text-sm mt-2 text-zion-blue-dark font-medium">"
+
+    </section>"
     <section className="py-16 bg-gradient-to-b from-zion-blue to-zion-blue-dark">;"
       <div className="container mx-auto px-4">;"
         <div className="max-w-5xl mx-auto">;"
@@ -153,3 +195,4 @@ export const QrCodeDownload: React.FC = () => {;
                 <p className="text-center text-sm mt-2 text-zion-blue-dark font-medium">;"
       </div>;)"
 pr-12325
+

@@ -8,7 +8,39 @@
   description: string;
   status: string;
   createdAt: Date;
+
+
+  getData: () => [],
+  setData: (data: any) => null;,
+  updateData: (id: string, data: any) => null;,
+  deleteData: (id: string) => null;
+
+}
+
+
+  getData: () => [],
+  setData: (data: any) => null,
+  updateData: (id: string, data: any) => null,
+  deleteData: (id: string) => null;
+};
+
+
+  getData: () => [],
+  setData: (data: any) => null,
+  updateData: (id: string, data: any) => null,
+  deleteData: (id: string) => null;
+};
+interface Project {
+  // TODO: Implement
+}
+  id: string;,
+  title: string;
+  description: string;,
+  status: string;
+
+  createdAt: Date;,
   updatedAt: Date;
+
 }
 
 interface Review {
@@ -24,8 +56,26 @@ interface Review {
   anonymous: boolean;
   approved: boolean;
   removed: boolean;
+  // TODO: Implement
+}
+  id: string;,
+  projectId: string;
+
+  fromRole: "client" | "talent";",
+  fromId: string;"
+  toRole: "client" | "talent";",
+
+  toId: string;
+  rating: number;,
+  text: string;
+  categories?: any;
+  anonymous: boolean;,
+  approved: boolean;
+
+  removed: boolean;,
   createdAt: Date;
   updatedAt: Date;
+
 }
 
 class DataStore {
@@ -131,6 +181,7 @@ const store = new DataStore();
   setData: (data: any) => null;,
   updateData: (id: string, data: any) => null;,
   deleteData: (id: string) => null;
+  // TODO: Implement
 }
 
 
@@ -169,6 +220,7 @@ class DataStore {
   private reviews: Review[] = [];
 
   // Project methods;
+
   findProjectById(id: string): Project | undefined {
   // TODO: Implement
     return this.projects.find((project) => project.id === id);
@@ -192,3 +244,5 @@ export const createProject = (data: Partial<Project>) =>
 export const upsertReview = (data: Partial<Review>) => store.upsertReview(data);
 "
 pr-12325
+</Review>"
+

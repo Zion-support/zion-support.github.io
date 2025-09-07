@@ -15,6 +15,9 @@ import { Skill  } from '@/types / resume';
 
 export interface SkillsFormProps {
 import { Skill } from "@/types/resume";"
+
+import { Skill } from "@/types/resume";"
+
 export interface SkillsFormProps {
   // TODO: Implement
 }
@@ -23,6 +26,13 @@ export interface SkillsFormProps {
   onComplete: () => void;,
   onBack: () => void;
 
+
+  onComplete: () => void;,
+  onBack: () => void;
+}
+
+  resumeId: string;,
+  skills: Skill[];
 
   on_complete: () => void;,
   on_back: () => void;
@@ -49,6 +59,19 @@ export interface AddSkillFormProps {;
 
 ;
 ;
+import { Skill  } from '@/types / resume';'
+export interface SkillsFormProps {
+  // TODO: Implement
+}
+  resume_id: string;
+'
+import {Skill} from '@/types/resume';'
+export interface SkillsFormProps {;
+  resumeId: string;,
+  skills: Skill[];
+  onComplete: () => void;,
+  onBack: () => void;
+}
 export interface SkillItemProps {
   // TODO: Implement
   skill: Skill;,
@@ -60,7 +83,11 @@ export interface SkillItemProps {
   onSuccess: () => Promise<void>;
   onAddSkill: (skill: Skill) => Promise < boolean>;
   default_category?: string;
+
+}
+
 export interface BulkAddSkillsProps {
+
   // TODO: Implement
   resume_id: string;,
   on_success: () => Promise < void>;
@@ -71,3 +98,7 @@ export interface BulkAddSkillsProps {
 
 
 pr-12325
+;
+;
+'
+

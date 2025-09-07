@@ -2,103 +2,102 @@
 
 const fs = require('fs');
 const path = require('path');
+const { execSync } = require('child_process');
 
-/**
- * Comprehensive syntax error fixer
- */
-class ComprehensiveSyntaxFixer {
-  constructor() {
-    this.projectRoot = process.cwd();
-    this.fixedFiles = [];
+console.log('🔧 Fixing all syntax errors...\n');
+
+// Function to fix common syntax errors
+function fixSyntaxErrors(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    let fixed = false;
+
+    // Fix unterminated strings
+    content = content.replace(/\"[^"]*$/gm, (match) => {
+      if (!match.endsWith('"')) {
+        fixed = true;
+        return match + '"';
+      }
+      return match;
+    });
+
+    // Fix trailing commas in objects/arrays
+    content = content.replace(/,(\s*[}\]])/g, '$1');
+
+    // Fix malformed JSX
+    content = content.replace(/className=\"[^"]*\"\s*\/>/g, (match) => {
+      return match.replace(/\/>$/, '></div>');
+    });
+
+    // Fix broken import statements
+    content = content.replace(/import\s+React\s+from\s+"react";/g, 'import React from "react";');
+
+    // Fix broken metadata objects
+    content = content.replace(/export\s+const\s+metadata\s*=\s*\{[^}]*\},?\s*\}/g, (match) => {
+      return match.replace(/,\s*}/g, '}');
+    });
+
+    // Fix broken JSX elements
+    content = content.replace(/<(\w+)\s+className="[^"]*"\s*\/>/g, '<$1 className="$2"></$1>');
+
+    // Fix broken function declarations
+    content = content.replace(/function\s+(\w+)\s*\(\s*\)\s*\{[^}]*\},?\s*\}/g, (match) => {
+      return match.replace(/,\s*}/g, '}');
+    });
+
+    if (fixed) {
+      fs.writeFileSync(filePath, content);
+      console.log(`✅ Fixed syntax errors in ${filePath}`);
+      return true;
+    }
+  } catch (error) {
+    console.log(`❌ Error fixing ${filePath}: ${error.message}`);
   }
+  return false;
+}
 
-  log(message, type = 'INFO') {
-    const timestamp = new Date().toISOString();
-    const prefix = type === 'ERROR' ? '❌' : type === 'SUCCESS' ? '✅' : 'ℹ️';
-    console.log(`${prefix} [${timestamp}] ${message}`);
-  }
+// Function to find and fix all TypeScript/JavaScript files
+function fixAllFiles() {
+  const patterns = [
+    'app/**/*.tsx',
+    'app/**/*.ts',
+    'pages/**/*.tsx',
+    'pages/**/*.ts',
+    'components/**/*.tsx',
+    'components/**/*.ts',
+    'src/**/*.tsx',
+    'src/**/*.ts'
+  ];
 
-  fixFile(filePath) {
+  let totalFixed = 0;
+
+  for (const pattern of patterns) {
     try {
-      this.log(`Fixing: ${filePath}`);
-      
-      let content = fs.readFileSync(filePath, 'utf8');
-      let modified = false;
-      
-      // Count opening and closing braces
-      const openBraces = (content.match(/\{/g) || []).length;
-      const closeBraces = (content.match(/\}/g) || []).length;
-      
-      if (openBraces > closeBraces) {
-        const missingBraces = openBraces - closeBraces;
-        content += '\n' + '}'.repeat(missingBraces);
-        modified = true;
-        this.log(`Added ${missingBraces} missing closing braces`);
+      const files = execSync(`find . -path "./${pattern}" -type f 2>/dev/null || true`, { 
+        cwd: '/workspace', 
+        encoding: 'utf8' 
+      }).trim().split('\n').filter(f => f);
+
+      for (const file of files) {
+        if (fs.existsSync(file)) {
+          if (fixSyntaxErrors(file)) {
+            totalFixed++;
+          }
+        }
       }
-      
-      // Fix common patterns
-      content = content.replace(/(\s+return res\.status\([^)]+\);\s*)(\n\s*)(\w)/g, '$1\n  }\n\n  $3');
-      content = content.replace(/(\s+} catch \([^)]+\) \{\s*\n\s*return res\.status\([^)]+\);\s*\n\s*\}\s*)(\n\s*)(\w)/g, '$1\n}\n\n$3');
-      
-      if (modified) {
-        fs.writeFileSync(filePath, content);
-        this.fixedFiles.push(filePath);
-        this.log(`✅ Fixed: ${filePath}`, 'SUCCESS');
-        return true;
-      }
-      
-      return false;
     } catch (error) {
-      this.log(`❌ Error fixing ${filePath}: ${error.message}`, 'ERROR');
-      return false;
+      console.log(`⚠️  Error processing pattern ${pattern}: ${error.message}`);
     }
   }
 
-  async fixAllFiles() {
-    this.log('🔧 Starting comprehensive syntax error fixing...');
-    
-    // Find all TypeScript files in pages/api
-    const apiDir = path.join(this.projectRoot, 'pages', 'api');
-    const files = this.findTsFiles(apiDir);
-    
-    let fixedCount = 0;
-    
-    for (const file of files) {
-      if (this.fixFile(file)) {
-        fixedCount++;
-      }
-    }
-    
-    this.log(`🎉 Comprehensive syntax error fixing completed!`, 'SUCCESS');
-    this.log(`📊 Summary: ${fixedCount}/${files.length} files fixed`);
-  }
-
-  findTsFiles(dir) {
-    const files = [];
-    
-    if (!fs.existsSync(dir)) return files;
-    
-    const items = fs.readdirSync(dir);
-    
-    for (const item of items) {
-      const fullPath = path.join(dir, item);
-      const stat = fs.statSync(fullPath);
-      
-      if (stat.isDirectory()) {
-        files.push(...this.findTsFiles(fullPath));
-      } else if (item.endsWith('.ts') || item.endsWith('.tsx')) {
-        files.push(fullPath);
-      }
-    }
-    
-    return files;
-  }
+  return totalFixed;
 }
 
-// Run the fixer
-if (require.main === module) {
-  const fixer = new ComprehensiveSyntaxFixer();
-  fixer.fixAllFiles().catch(console.error);
+// Main execution
+try {
+  const totalFixed = fixAllFiles();
+  console.log(`\n🎉 Fixed syntax errors in ${totalFixed} files`);
+} catch (error) {
+  console.error('💥 Error during syntax fixing:', error.message);
+  process.exit(1);
 }
-
-module.exports = ComprehensiveSyntaxFixer;

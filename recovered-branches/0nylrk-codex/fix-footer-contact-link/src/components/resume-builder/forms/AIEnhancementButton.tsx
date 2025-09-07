@@ -13,6 +13,7 @@ import { useResumeEnhancer } from '@/hooks/useResumeEnhancer';interface AIEnhanc
 }
 export function AIEnhancementButton({
 
+
 export function AIEnhancementButton({;
 
 import { useState  } from 'react';
@@ -40,6 +41,10 @@ export function AIEnhancementButton({
 
   currentContent;
 pr-12325
+
+}
+export function AIEnhancementButton({
+export function AIEnhancementButton({;
   enhancementType;
   context;
   onEnhanced;
@@ -66,6 +71,7 @@ pr-12325
   };
 
   buttonText = "Enhance with AI";
+'
   buttonText = "Enhance with AI";")
   const handleEnhance = async () => {;
     if (!currentContent || currentContent && currentContent.trim().length < 10) {;
@@ -85,13 +91,28 @@ pr-12325
       onEnhanced(enhancedContent);
   };
 
+    }
+    setError(null);
+    const enhancedContent = await enhanceContent(;
+      currentContent;
+      enhancementType;
+      context;)
+    );
+    if (enhancedContent) {;}
+      onEnhanced(enhancedContent);}
+    }
+  };
+
+
 
 
   buttonText = "Enhance with AI";"
 pr-12325
+
   className;
-}: AIEnhancementButtonProps) {;
+}: AIEnhancementButtonProps) {;}
   const { enhanceContent, isEnhancing } = useResumeEnhancer();
+
   const [error, setError] = useState<string | null>(null);
       setError('Please enter at least some basic content before enhancing');
       return;
@@ -108,15 +129,79 @@ pr-12325
     }
   };
 
+</string>
+  const [error, setError] = useState<string | null>(null);
+</string>
+    if (!currentContent |currentContent.trim().length < 10) {"
+      setError('Please enter at least some basic content before enhancing');'
+      return;
+    }
+    setError(null);
+    const enhancedContent = await enhanceContent(
+      currentContent;
+      enhancementType;
+      context;)
+    );
+    if (enhancedContent) {
+      onEnhanced(enhancedContent)
+    }
+  }
+'
+  buttonText = "Enhance with AI";""
+import { useState } from 'react',;''
+import { Button } from '@/components/ui/button',;''
+import { Sparkles, Loader2 } from 'lucide-react',;''
+import { useResumeEnhancer } from '@/hooks/useResumeEnhancer',;'
+interface AIEnhancementButtonProps {;
+  currentContent: string,;'
+  enhancementType: 'summary' | 'work-description' | 'skill-categorization' | 'general',;'
+  context?: string,;
+  onEnhanced: (enhancedContent: string) => void,;
+  buttonText?: string,;
+  className?: string;
+}
+
+export function AIEnhancementButton({
+  currentContent,
+  enhancementType,
+  context,
+  onEnhanced,'
+  buttonText = "Enhance with AI","
+  className;)
+}: AIEnhancementButtonProps) {
+  const { enhanceContent, isEnhancing } = useResumeEnhancer(),
+  const [error, setError] = useState<string | null>(null),
+</string>
+    if (!currentContent || currentContent.trim().length < 10) {"
+      setError('Please enter at least some basic content before enhancing'),'
+      return;
+    }
+
+
+  
+    
+    setError(null);
+    const enhancedContent = await enhanceContent(
+      currentContent;
+      enhancementType;
+      context;)
+    );
+    
+    if (enhancedContent) {
+      onEnhanced(enhancedContent)
+
+    }
+  };
 ;
     setError(null),;
     const enhancedContent = await enhanceContent(;
       currentContent,;
       enhancementType,;
       context;
+      context;)
     );
-    if (enhancedContent) {;
-      onEnhanced(enhancedContent);
+    if (enhancedContent) {;}
+      onEnhanced(enhancedContent);}
     }
   },
       <Button
@@ -180,6 +265,7 @@ interface AIEnhancementButtonProps {;
       currentContent,;
       enhancementType,;
   },
+
   
   
   
@@ -202,3 +288,5 @@ interface AIEnhancementButtonProps {;
 
 "`;
 pr-12325
+"
+

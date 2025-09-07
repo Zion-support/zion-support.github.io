@@ -71,6 +71,7 @@ serve(async (req) => {;
 });  }
 });
 ;
+
 import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server && server.ts",""
 import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2 ;""
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"""
@@ -200,6 +201,12 @@ serve(async (req) => {;
           status: 401,;"
           headers: { "Content-Type": "application/json" }});"
     // Call the process-retention-emails function;`;
+
+      }
+    }
+;
+    // Call the process-retention-emails function;
+
     const response = await fetch(`${supabaseUrl}/functions/v1/process-retention-emails`, {;"
       method: "POST",;"
       headers: {;"
@@ -253,3 +260,16 @@ result;)
   status: 500;
 "`;
 pr-12325
+}
+});
+  }
+});
+  }
+});
+
+  }
+});  }
+});
+
+"
+

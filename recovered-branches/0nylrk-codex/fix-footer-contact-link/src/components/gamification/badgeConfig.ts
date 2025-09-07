@@ -17,6 +17,7 @@ import {;
 
 
 
+
 import {LucideIcon} from "lucide-react";""
 import {BadgeCheck, //, publishing, a, listing, Award, //, top, contributor, Star, //, profile, complete, Trophy, //, featured, creator, BadgePlus, //, first, action, BadgeDollarSign, //, monetization} from "lucide-react";""
 import { LucideIcon } from "lucide-react","
@@ -49,6 +50,28 @@ pr-12325
   description: "Earned your first AI dollar in the marketplace.";
 
   badgeList && badgeList.find((b) => b && b.key === key),
+  BadgeDollarSign // monetization;"
+} from "lucide-react","
+export type BadgeKey ="
+  | "first_listing"""
+  | "top_contributor"""
+  | "profile_complete"""
+  | "featured_creator"""
+import { LucideIcon } from './lucide-react';''
+import { BadgeCheck, //, publishing, a, listing, Award, //, top, contributor, Star, //, profile, complete, Trophy, //, featured, creator, BadgePlus, //, first, action, BadgeDollarSign, //, monetization } from './lucide-react';'
+;
+;
+;
+'
+import { LucideIcon } from "lucide-react",;"
+
+import {;
+  BadgeCheck, // publishing a listing;
+  Award,      // top contributor;
+  Star,       // profile complete;
+  Trophy,     // featured creator;
+
+  BadgePlus,  // first action;
   BadgeDollarSign // monetization;"
 } from "lucide-react","
 export type BadgeKey ="
@@ -221,3 +244,5 @@ export const badgeList: BadgeMeta[] = [;
 export const getBadgeMeta = (key: BadgeKey) =>;
   badgeList.find((b) => b.key === key);
 pr-12325
+"
+

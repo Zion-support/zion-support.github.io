@@ -58,6 +58,13 @@ i18n.on ('language_changed', (lng) => {
 ;
 export default i18n;
 ;
+
+import {initReactI18next} from 'react-i18next';''
+import LanguageDetector from 'i18next-browser-languagedetector';''
+import enTranslation from './locales/en/translation ;''
+import esTranslation from './locales/es/translation ;''
+import ptTranslation from './locales/pt/translation ;''
+import arTranslation from './locales/ar/translation ;'
 // Initialize i18next;
 i18n;
   .use(LanguageDetector) // Detect user language;
@@ -133,6 +140,49 @@ i18n.on ('language_changed', (lng) => {
   // If user is authenticated, save language preference to profile;
   // This will be implemented in the LanguageContext;
 
+
+      }
+    }'
+    fallback_lng: 'en', // Default language;''
+    debug: process.env.NODE_ENV === 'development','
+    interpolation: {,
+  escape_value: false, // React already escapes by default;
+    }
+
+    detection: {,'
+  order: ['local_storagenavigator'];''
+      lookupLocalStorage: 'zion_language',''
+      caches: ['local_storage'];')
+
+    }});
+;
+// For RTL language support;
+document.document_element.dir = i18n.dir ();
+;
+// Listen for language changes to update RTL / LTR direction;'
+i18n.on ('language_changed', (lng) => {'
+  document.document_element.dir = i18n.dir ();
+;
+  // Save language preference to local_storage;'
+  local_storage.set_item ('zion_language', lng);'
+;
+  // If user is authenticated, save language preference to profile;}
+  // This will be implemented in the LanguageContext;}
+});
+;
+export default i18n;
+
+;
+'
+import i18n from 'i18next',;''
+import { initReactI18next } from 'react-i18next',;''
+import LanguageDetector from 'i18next-browser-languagedetector',;'
+;'
+import enTranslation from './locales/en/translation.json',;''
+import esTranslation from './locales/es/translation.json',;''
+import ptTranslation from './locales/pt/translation.json',;''
+import arTranslation from './locales/ar/translation.json',;'
+;
 // Initialize i18next;
   .init({;
     resources: {;,
@@ -158,3 +208,6 @@ i18n.on('languageChanged', (lng) => {;
   // This will be implemented in the LanguageContext;
 }),;
 pr-12325
+export default i18n;
+'
+

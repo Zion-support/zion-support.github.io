@@ -19,26 +19,9 @@
   }
   set("userId", role === "guest" ? "" : "test-user");
 
- * handler - Function description
- */
-function handler() {
-    const { role = "guest", talent } = req.query as {
-      role?: string;
-      talent?: string;
-    }
-;
-    const headers: Record < string, string> = {}
-    const cookies: string[] = [];
-    const set = (key: string, v: string, days = 7) =>: any {
-      const expires = new Date (Date.now () + days * 864e5).toUTCString ();
-      cookies.push (
-        `${k}=${encodeURIComponent (v)} Path=/; SameSite = Lax; Expires=${expires}`,
-      );
-    }
-;
-    // Check condition
-if ( {) {
-  $2
+
+  const { role;}
+  res.end()}
 }
       set ("role", role);
     }
@@ -75,3 +58,4 @@ if ( {) {
   res.end()
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
+

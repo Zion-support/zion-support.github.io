@@ -82,6 +82,7 @@ function useMarketplaceSearch() {
   const [search_query, setSearchQuery] = useState ("");
 ;
   // Filter states;
+
 import { useState, useMemo } from "react",""
 import { ProductListing } from "@/types/listings",""
 import { SearchSuggestion, FilterOptions } from "@/types/search";""
@@ -89,6 +90,7 @@ import { generateSearchSuggestions, generateFilterOptions, MARKETPLACE_LISTINGS 
 export function useMarketplaceSearch() {
   // Search state;"
   const [searchQuery, setSearchQuery] = useState("");"
+
   // Filter states;
   const [selectedProductTypes, setSelectedProductTypes] = useState<string[]>([]);
 </string>
@@ -101,6 +103,7 @@ export function useMarketplaceSearch() {
   const [selectedAvailability, setSelectedAvailability] = useState<string[]>([]),
   const [selectedRating, setSelectedRating] = useState<number | null>(null),
 pr-12325
+</number>
   const [selectedProductTypes, setSelectedProductTypes] = useState < string[]>([]);
   const [selected_locations, setSelectedLocations] = useState < string[]>([]);
   const [selected_availability, setSelectedAvailability] = useState < string[]>([]);
@@ -125,6 +128,7 @@ pr-12325
     return MARKETPLACE_LISTINGS.filter (listing => {
       // Search query filter;
       const matches_search = !search_query ||;
+      const matches_search = !search_query ||;)
         listing.title.toLowerCase ().includes (search_query.toLowerCase ()) ||;
         listing.description.toLowerCase ().includes (search_query.toLowerCase ()) ||;
         listing.tags.some (tag => tag.toLowerCase ().includes (search_query.toLowerCase ()));
@@ -161,8 +165,8 @@ pr-12325
       return matches_search &&;
         matchesProductType &&;
         matches_location &&;
-        matches_availability &&;
-        matches_rating;
+        matches_availability &&;}
+        matches_rating;}
     });
   }, [search_query, selectedProductTypes, selected_locations, selected_availability, selected_rating]);
 ;
@@ -195,6 +199,25 @@ pr-12325
           prev.includes (value) ? prev.filter (array => a !== value) : [...prev, value]);
 
       default: break;
+  // TODO: Implement
+}
+    switch (filter_type) {"
+      case 'product_types':;'
+        setSelectedProductTypes ((prev: string[]) =>;
+          prev.includes (value) ? prev.filter (t => t !== value) : [...prev, value]);
+        break;'
+      case 'locations':;'
+        setSelectedLocations ((prev: string[]) =>;
+          prev.includes (value) ? prev.filter (l => l !== value) : [...prev, value]);
+        break;'
+      case 'availability':;'
+        setSelectedAvailability ((prev: string[]) =>;
+          prev.includes (value) ? prev.filter (array => a !== value) : [...prev, value]);
+        break;}
+      default: break;}
+    }
+
+  }
 
   // Clear all filters;
   const clearAllFilters = () =>: any {
@@ -208,6 +231,8 @@ pr-12325
   return {
   // TODO: Implement
 pr-12325
+}
+
     search_query;
     setSearchQuery;
     search_suggestions;
@@ -219,7 +244,6 @@ pr-12325
     filtered_listings;
     handleFilterChange;
     clearAllFilters;
-
     filter_options;
           prev.includes(value) ? prev.filter(a => a !== value) : [...prev, value]
         ),
@@ -227,7 +251,12 @@ pr-12325
       default: break
     }
 
+        break,
+      default: break;
+
+    }
   },
+
   
   // Clear all filters
   const clearAllFilters = () => {
@@ -255,6 +284,17 @@ pr-12325
   
   // TODO: Implement
 pr-12325
+
+    setSelectedProductTypes([]),
+    setSelectedLocations([]),
+    setSelectedAvailability([]),
+    setSelectedRating(null)) => {
+  return $3;}
+}
+  },
+  return {
+  // TODO: Implement
+}
     searchQuery,
     setSearchQuery,
     searchSuggestions,
@@ -268,11 +308,14 @@ pr-12325
     clearAllFilters,
     filterOptions
 
+    clearAllFilters,
+    filterOptions;
   }
-}import { useState, useMemo } from "react",;
-import { ProductListing } from "@/types/listings",;
-import { SearchSuggestion, FilterOptions } from "@/types/search",;
-import { generateSearchSuggestions, generateFilterOptions, MARKETPLACE_LISTINGS } from "@/data/marketplaceData",;
+}"
+import { useState, useMemo } from "react",;""
+import { ProductListing } from "@/types/listings",;""
+import { SearchSuggestion, FilterOptions } from "@/types/search",;""
+import { generateSearchSuggestions, generateFilterOptions, MARKETPLACE_LISTINGS } from "@/data/marketplaceData",;"
 export function useMarketplaceSearch() {;
   // Search state;
   const [searchQuery, setSearchQuery] = useState(""),;
@@ -286,11 +329,13 @@ export function useMarketplaceSearch() {;
   // Search state;"
   const [searchQuery, setSearchQuery] = useState(""),;"
 pr-12325
+  // Search state;"
+  const [searchQuery, setSearchQuery] = useState(""),;"
   // Filter states;
-  const [selectedProductTypes, setSelectedProductTypes] = useState<string[]>([]),;
-  const [selectedLocations, setSelectedLocations] = useState<string[]>([]),;
-  const [selectedAvailability, setSelectedAvailability] = useState<string[]>([]),;
-  const [selectedRating, setSelectedRating] = useState<number | null>(null),;
+  const [selectedProductTypes, setSelectedProductTypes] = useState<string[] />([]),;
+  const [selectedLocations, setSelectedLocations] = useState<string[] />([]),;
+  const [selectedAvailability, setSelectedAvailability] = useState<string[] />([]),;
+  const [selectedRating, setSelectedRating] = useState<number | null />(null),;
   // Generate search suggestions and filter options;
   const searchSuggestions: SearchSuggestion[] = useMemo(;
     () => generateSearchSuggestions(),;
@@ -321,12 +366,12 @@ pr-12325
       return matchesSearch &&;
         matchesProductType &&;
         matchesLocation &&;
-        matchesAvailability &&;
-        matchesRating;
+        matchesAvailability &&;}
+        matchesRating;}
     });
   }, [searchQuery, selectedProductTypes, selectedLocations, selectedAvailability, selectedRating]),;
   // Handle filter changes;
-  const handleFilterChange = (filterType: string, value: string) => {;
+  const handleFilterChange = (;
     switch (filterType) {;
       case 'productTypes':;
         setSelectedProductTypes((prev: string[]) =>;
@@ -343,16 +388,20 @@ pr-12325
           prev.includes(value) ? prev.filter(a => a !== value) : [...prev, value];
         ),;
         break,;
-      default: break;
+      default: break;) => {
+  return $3;}
+}
     }
   },;
   // Clear all filters;
-  const clearAllFilters = () => {;
-    setSearchQuery(""),;
+  const clearAllFilters = (;
+    setSearchQuery(\"\"),;
     setSelectedProductTypes([]),;
     setSelectedLocations([]),;
     setSelectedAvailability([]),;
-    setSelectedRating(null);
+    setSelectedRating(null);) => {
+  return $3;}
+}
   },;
   return {;
     searchQuery,;
@@ -365,8 +414,8 @@ pr-12325
     setSelectedRating,;
     filteredListings,;
     handleFilterChange;
-    clearAllFilters;
-    filterOptions;
+    clearAllFilters;}
+    filterOptions;}
   }
 }
 ;
@@ -375,3 +424,4 @@ pr-12325
 ;
 </number>"
 pr-12325
+;

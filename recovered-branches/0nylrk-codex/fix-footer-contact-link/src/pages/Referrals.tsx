@@ -51,6 +51,11 @@ import {Share, Users} from 'lucide-react';
     referralCode;import {use_navigate} from 'react-router-dom';
 export default /**
  * ReferralsPage - Function description
+
+
+import {use_navigate} from 'react-router-dom';'
+export default /**
+ * ReferralsPage - Function description;
  */
 function ReferralsPage() {
   const navigate = use_navigate ();
@@ -94,6 +99,43 @@ import {toast} from '@/hooks / use - toast';
 import {Share, Users} from 'lucide-react';
 
 pr-12325
+  // TODO: Implement
+}
+    is_loading;
+    referral_code;
+'
+import { useEffect  } from 'react';''
+import { useAuth  } from '@/hooks/useAuth';''
+import { useReferrals  } from '@/hooks/useReferrals';''
+import { ReferralStats  } from '@/components/referrals/ReferralStats';''
+import { ReferralLink  } from '@/components/referrals/ReferralLink';''
+import { ReferralTable  } from '@/components/referrals/ReferralTable';''
+import { RewardsCard  } from '@/components/referrals/RewardsCard';''
+import { ReferralGuide  } from '@/components/referrals/ReferralGuide';''
+import { ReferralLeaderboard  } from '@/components/referrals/ReferralLeaderboard';''
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",""
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";""
+import { Button  } from '@/components/ui/button';''
+import { toast  } from '@/hooks/use-toast';''
+import { Share, Users  } from 'lucide-react';''
+import { useNavigate } from 'react-router-dom';'
+export default function ReferralsPage() {
+'
+import {useEffect} from 'react';''
+import {use_auth} from '@/hooks / use_auth';''
+import {useReferrals} from '@/hooks / useReferrals';''
+import {ReferralStats} from '@/components / referrals / ReferralStats';''
+import {ReferralLink} from '@/components / referrals / ReferralLink';''
+import {ReferralTable} from '@/components / referrals / ReferralTable';''
+import {RewardsCard} from '@/components / referrals / RewardsCard';''
+import {ReferralGuide} from '@/components / referrals / ReferralGuide';''
+import {ReferralLeaderboard} from '@/components / referrals / ReferralLeaderboard';''
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components / ui / card';''
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / tabs';''
+import {Button} from '@/components / ui / button';''
+import {toast} from '@/hooks / use - toast';''
+import {Share, Users} from 'lucide-react';'
+
   const navigate = useNavigate();
   const { isAuthenticated } = useAuth();
   const {;
@@ -101,6 +143,20 @@ pr-12325
     referralCode;
   // TODO: Implement
 pr-12325
+
+    referralCode;'
+import {use_navigate} from 'react-router-dom';'
+export default /**
+ * ReferralsPage - Function description;
+ */
+function ReferralsPage() {
+  const navigate = use_navigate ();
+  const { is_authenticated } = use_auth ();
+  const {
+  // TODO: Implement
+}
+    is_loading;
+    referral_code;
     referrals;
     rewards;
     stats;
@@ -145,18 +201,56 @@ import { useNavigate } from 'react-router-dom',
 export default function ReferralsPage() {
   const navigate = useNavigate(),
   const { isAuthenticated } = useAuth(),  const {
+'
+import {useEffect} from 'react';''
+import {useAuth} from '@/hooks/useAuth';''
+import {useReferrals} from '@/hooks/useReferrals';''
+import {ReferralStats} from '@/components/referrals/ReferralStats';''
+import {ReferralLink} from '@/components/referrals/ReferralLink';''
+import {ReferralTable} from '@/components/referrals/ReferralTable';''
+import {RewardsCard} from '@/components/referrals/RewardsCard';''
+import {ReferralGuide} from '@/components/referrals/ReferralGuide';''
+import {ReferralLeaderboard} from '@/components/referrals/ReferralLeaderboard';''
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";""
+import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";""
+import {Button} from '@/components/ui/button';''
+import {toast} from '@/hooks/use-toast';''
+import {Share, Users} from 'lucide-react';''
+import {useNavigate} from 'react-router-dom';'
+export default function ReferralsPage() {;
+  const navigate = useNavigate();
+  const { isAuthenticated } = useAuth();
+'
+import { useEffect } from 'react',''
+import { useAuth } from '@/hooks/useAuth',''
+import { useReferrals } from '@/hooks/useReferrals',''
+import { ReferralStats } from '@/components/referrals/ReferralStats',''
+import { ReferralLink } from '@/components/referrals/ReferralLink',''
+import { ReferralTable } from '@/components/referrals/ReferralTable',''
+import { RewardsCard } from '@/components/referrals/RewardsCard',''
+import { ReferralGuide } from '@/components/referrals/ReferralGuide',''
+import { ReferralLeaderboard } from '@/components/referrals/ReferralLeaderboard',''
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",""
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",""
+import { Button } from '@/components/ui/button',''
+import { toast } from '@/hooks/use-toast',''
+import { Share, Users } from 'lucide-react',''
+import { useNavigate } from 'react-router-dom','
+export default function ReferralsPage() {
   const navigate = useNavigate(),
   const { isAuthenticated } = useAuth(),
 
   // TODO: Implement
 pr-12325
+}
+
     isLoading,
     referralCode,
     referrals,
     rewards,
     stats,
-    getReferralLink,
-    copyReferralLink,
+    getReferralLink,}
+    copyReferralLink,}
     shareOnSocialMedia} = useReferrals(),
 
   useEffect(() => {;
@@ -176,6 +270,7 @@ pr-12325
         variant: "destructive"})""
       navigate("/login")"
 pr-12325
+    }
   }, [isAuthenticated, navigate]),
 
   const referralLink = getReferralLink(),
@@ -238,6 +333,97 @@ export default function ReferralsPage() {;
       <div className="grid gap-6 mt-6 lg:grid-cols-3">;
         <div className="lg:col-span-2 space-y-6">;
           <ReferralLink
+  return ("
+    <div className="container max-w-7xl py-10">"
+</div>"
+      <div className="mb-8 flex flex-col md:flex-row justify-between md:items-center gap-4">"
+</div>
+        <div>
+</div>"
+          <h1 className="text-3xl font-bold tracking-tight">Referral Program</h1>""
+          <p className="text-muted-foreground mt-1">"
+</p>
+          </p>
+        </div>"
+        <Button className="flex items-center gap-2" onClick={copyReferralLink}>"
+</Button>"
+          <Share className="h-4 w-4" />"
+</Share>
+        </Button>
+      </div>
+      <ReferralStats stats={stats} isLoading={isLoading} />
+</ReferralStats>"
+      <div className="grid gap-6 mt-6 lg:grid-cols-3">"
+</div>"
+        <div className="lg:col-span-2 space-y-6">"
+</div>
+          <ReferralLink;
+            referralLink={referralLink}
+            onCopy={copyReferralLink}
+            onShare={shareOnSocialMedia}
+          />
+</ReferralLink>"
+          <Tabs defaultValue="referrals" className="w-full">"
+</Tabs>"
+            <TabsList className="w-full grid grid-cols-2">"
+</TabsList>"
+              <TabsTrigger value="referrals" className="flex items-center gap-2">"
+</TabsTrigger>"
+                <Users className="h-4 w-4" />"
+</Users>
+              </TabsTrigger>"
+              <TabsTrigger value="rewards" className="flex items-center gap-2">"
+</TabsTrigger>"
+                <Share className="h-4 w-4" />"
+</Share>
+              </TabsTrigger>
+            </TabsList>"
+            <TabsContent value="referrals" className="p-0 border rounded-md mt-6">"
+</TabsContent>
+              <ReferralTable referrals={referrals} isLoading={isLoading} />
+</ReferralTable>
+            </TabsContent>"
+            <TabsContent value="rewards" className="p-0 mt-6">"
+</TabsContent>
+              <RewardsCard rewards={rewards} isLoading={isLoading} />
+</RewardsCard>
+            </TabsContent>
+          </Tabs>
+        </div>"
+        <div className="space-y-6">"
+</div>
+          <ReferralGuide />
+</ReferralGuide>
+          <ReferralLeaderboard />
+</ReferralLeaderboard>
+        </div>
+      </div>
+    </div>"
+    <div className="container max-w-7xl py-10">;"
+</div>"
+      <div className="mb-8 flex flex-col md:flex-row justify-between md:items-center gap-4">;"
+</div>
+        <div>;
+</div>"
+          <h1 className="text-3xl font-bold tracking-tight">Referral Program</h1>;""
+          <p className="text-muted-foreground mt-1">;"
+</p>
+          </p>;
+        </div>;"
+        <Button className="flex items-center gap-2" onClick={copyReferralLink}>;"
+</Button>"
+          <Share className="h-4 w-4" />;"
+</Share>
+        </Button>;
+      </div>;
+      <ReferralStats stats={stats} isLoading={isLoading} />;
+</ReferralStats>
+"
+      <div className="grid gap-6 mt-6 lg:grid-cols-3">;"
+</div>"
+        <div className="lg:col-span-2 space-y-6">;"
+</div>
+          <ReferralLink;
             referralLink={referralLink} 
             onCopy={copyReferralLink} 
             onShare={shareOnSocialMedia}
@@ -267,6 +453,38 @@ export default function ReferralsPage() {;
         <div className="space-y-6">;
   return ("
     <div className="container max-w-7xl py-10">"
+</ReferralLink>
+"
+          <Tabs defaultValue="referrals" className="w-full">;"
+</Tabs>"
+            <TabsList className="w-full grid grid-cols-2">;"
+</TabsList>"
+              <TabsTrigger value="referrals" className="flex items-center gap-2">;"
+</TabsTrigger>"
+                <Users className="h-4 w-4" />;"
+</Users>
+              </TabsTrigger>;"
+              <TabsTrigger value="rewards" className="flex items-center gap-2">;"
+</TabsTrigger>"
+                <Share className="h-4 w-4" />;"
+</Share>
+              </TabsTrigger>;
+            </TabsList>;"
+            <TabsContent value="referrals" className="p-0 border rounded-md mt-6">;"
+</TabsContent>
+              <ReferralTable referrals={referrals} isLoading={isLoading} />;
+</ReferralTable>
+            </TabsContent>;"
+            <TabsContent value="rewards" className="p-0 mt-6">;"
+</TabsContent>
+
+              <RewardsCard rewards={rewards} isLoading={isLoading} />;
+</RewardsCard>
+            </TabsContent>;
+          </Tabs>;
+
+        </div>;"
+        <div className="space-y-6">;"
 </div>"
       <div className="mb-8 flex flex-col md:flex-row justify-between md:items-center gap-4">"
 </div>
@@ -359,3 +577,4 @@ return (<div className="container max-w-7xl py-10" > <div className="mb-8 flex f
 }/> <Tabs defaultValue="referrals" className="w-full" > <TabsList className="w-full grid grid-cols-2" > <TabsTrigger value="referrals" className="flex items-center gap-2" > <Users className="h-4 w-4" /> Your Referrals  <TabsTrigger value="rewards" className="flex items-center gap-2" > <Share className="h-4 w-4" /> Rewards     </div> <div className="space-y-6" > <ReferralGuide /> <ReferralLeaderboard /> </div> </div> </div>)"
     </div>);"
 pr-12325
+

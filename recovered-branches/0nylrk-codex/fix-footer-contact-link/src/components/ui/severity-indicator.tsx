@@ -63,6 +63,7 @@ export function SeverityIndicator({;
 
 
 
+
 import React from "react";""
 import {cn} from "@/lib/utils";""
 import {AlertTriangle, AlertCircle, CheckCircle} from "lucide-react";"
@@ -80,9 +81,18 @@ interface SeverityIndicatorProps {
   showText?: boolean;"
   size?: "sm" | "md" | "lg";"
   className?: string;
+
 }
 
 
+import React from \"react\";
+import {cn} from \"@/lib/utils\";
+import {AlertTriangle, AlertCircle, CheckCircle} from \"lucide-react\";
+interface SeverityIndicatorProps {;}
+  severity: \"safe\" | \"suspicious\" | \"dangerous\",;import React from \"react\",}
+import { cn } from \"@/lib/utils\";
+import { AlertTriangle, AlertCircle, CheckCircle } from \"lucide-react\";
+interface SeverityIndicatorProps {
 
   // TODO: Implement
   severity: "safe" | "suspicious" | "dangerous","
@@ -162,3 +172,4 @@ default: return <CheckCircle className= {"
 return (</div>) "
     </div>;"
 pr-12325
+

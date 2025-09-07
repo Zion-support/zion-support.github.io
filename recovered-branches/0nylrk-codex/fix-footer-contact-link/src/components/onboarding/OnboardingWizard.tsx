@@ -31,6 +31,26 @@ import {Card, CardContent, CardFooter, CardHeader, CardTitle} from '@/components
 import Rocket from 'lucide-react / dist / esm / icons / rocket';
 import {FileText, Users, Calendar, Eye, MessageSquare} from 'lucide-react';
 import {cn} from '@/lib / utils';
+
+import { useState, useEffect  } from 'react';''
+import { useNavigate  } from 'react-router-dom';''
+import { useAuth  } from '@/hooks/useAuth';''
+import { Button  } from '@/components/ui/button';''
+import { Card, CardContent, CardFooter, CardHeader, CardTitle  } from '@/components/ui/card';''
+import {useState, useEffect} from 'react';''
+import {useNavigate} from 'react-router-dom';''
+import {useAuth} from '@/hooks/useAuth';''
+import {Button} from '@/components/ui/button';''
+import {Card, CardContent, CardFooter, CardHeader, CardTitle} from '@/components/ui/card';''
+import Rocket from 'lucide-react/dist/esm/icons/rocket';''
+import {useState, useEffect} from 'react';''
+import {use_navigate} from 'react-router-dom';''
+import {use_auth} from '@/hooks / use_auth';''
+import {Button} from '@/components / ui / button';''
+import {Card, CardContent, CardFooter, CardHeader, CardTitle} from '@/components / ui / card';''
+import Rocket from 'lucide-react / dist / esm / icons / rocket';''
+import {FileText, Users, Calendar, Eye, MessageSquare} from 'lucide-react';''
+import {cn} from '@/lib / utils';'
 interface WizardStep {
   // TODO: Implement
 }
@@ -39,10 +59,15 @@ interface WizardStep {
   icon: React.ReactNode;,
   action: {
 import {cn} from '@/lib/utils';
+  action: {'
+import {FileText, Users, Calendar, Eye, MessageSquare} from 'lucide-react';''
+import {cn} from '@/lib/utils';'
+
 interface WizardStep {;
-  title: string,;
+  title: string,,
   description: string,;
   icon: React && React.ReactNode,;
+
   action: {;,
   text: string,;
     url: string;
@@ -52,9 +77,12 @@ pr-12325
 
 interface OnboardingWizardProps {;
   type: 'client' | 'talent',;
+interface OnboardingWizardProps {;'
+  type: 'client' | 'talent',;'
+
   onComplete: () => void,;
-  onSkip: () => void,;
-  className?: string;
+  onSkip: () => void,;}
+  className?: string;}
 }
 
 export function OnboardingWizard(): any ({ type, onComplete, onSkip, className }: OnboardingWizardProps) {;import { useState, useEffect } from 'react',;
@@ -90,13 +118,30 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/componen
 import Rocket from 'lucide-react/dist/esm/icons/rocket',;
 import { FileText, Users, Calendar, Eye, MessageSquare } from 'lucide-react',;
 import { cn } from '@/lib/utils',;
+  const [currentStep, setCurrentStep] = useState(0);
+  const navigate = useNavigate();
+  const { user } = useAuth();
+'
+import { useState, useEffect } from 'react',;''
+import { useNavigate } from 'react-router-dom',;''
+import { useAuth } from '@/hooks/useAuth',;''
+import { Button } from '@/components/ui/button',;''
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card',;''
+import Rocket from 'lucide-react/dist/esm/icons/rocket',;''
+import { FileText, Users, Calendar, Eye, MessageSquare } from 'lucide-react',;''
+import { cn } from '@/lib/utils',;'
+
 interface WizardStep {;
   title: string,,
   description: string,;
   icon: React.ReactNode,;
   action: {;
     text: string,;
+
+  action: {;,
+  text: string,;
     url: string;
+
   },;
   skipText?: string;
 }
@@ -127,14 +172,99 @@ interface OnboardingWizardProps {;
       setCurrentStep(currentStep + 1)
     } else {
       // Last step
+interface OnboardingWizardProps {;'
+  type: 'client' | 'talent',;'
+  onComplete: () => void,;
+  onSkip: () => void,;
+  className?: string;
+
+
+
+}
+export function OnboardingWizard({ type, onComplete, onSkip, className }: OnboardingWizardProps) {
+
+  const [currentStep, setCurrentStep] = useState(0),
+  const navigate = useNavigate(),
+  const { user } = useAuth(),
+
+  
+
+}
+
+  title: string;,
+  description: string;
+  icon: React.ReactNode;,
+  action: {
+    text: string;,
+  url: string;
+  }
+  skipText?: string;
+}
+interface OnboardingWizardProps {
+  // TODO: Implement
+}'
+  type: 'client' | 'talent'',
+  onComplete: () => void;
+  onSkip: () => void;
+  className?: string;
+}
+export function OnboardingWizard({ type, onComplete, onSkip, className }: OnboardingWizardProps) {
+  const [currentStep, setCurrentStep] = useState(0);
+
+  const navigate = useNavigate();
+  const { user } = useAuth();
+  const [currentStep, setCurrentStep] = useState(0),
+  const navigate = useNavigate(),
+  const { user } = useAuth(),
+  
+  // Define steps based on user type;
+  const clientSteps: WizardStep[] = [
+    {'
+      title: "Post your first job"","
+  description: "Describe the talent you need for your project"""
+      icon: <FileText className="h-6 w-6 text-zion-purple" />"
+</FileText>"
+      icon: <Users className="h-6 w-6 text-zion-cyan" />"
+</Users>"
+      icon: <MessageSquare className="h-6 w-6 text-zion-purple" />"
+</MessageSquare>"
+      icon: <FileText className="h - 6 w - 6 text - zion - purple" />,"
+</FileText>"
+      icon: <Users className="h - 6 w - 6 text - zion - cyan" />,"
+</Users>"
+      icon: <MessageSquare className="h - 6 w - 6 text - zion - purple" />,"
+</MessageSquare>"
+      icon: <FileText className="h-6 w-6 text-zion-purple" />,"
+</FileText>"
+      icon: <Calendar className="h-6 w-6 text-zion-cyan" />"
+</Calendar>"
+      icon: <Eye className="h-6 w-6 text-zion-purple" />"
+</Eye>"
+      icon: <Rocket className="h-6 w-6 text-zion-cyan" />"
+</Rocket>
+    if (currentStep < steps.length - 1) {]
+
+      navigate(steps[currentStep].action.url);
+      setCurrentStep(currentStep + 1)) => {
+  return $3;}
+}
+    } else {
+
+  // TODO: Implement
+}
+      // Last step;
       navigate(steps[currentStep].action.url);
       onComplete()
     }
   }
   // Skip the current step
+  // Skip the current step;
   const handleSkip = () => {
+
     if (currentStep < steps.length - 1) {
-      setCurrentStep(currentStep + 1)
+      setCurrentStep(currentStep + 1)) => {
+  return $3;}
+}
     } else {
       // Last step
       onSkip()
@@ -194,6 +324,7 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
   // Skip the current step;
   const handleSkip = () => {
     if (currentStep < steps.length - 1) {
+
   // TODO: Implement
       // Last step;
       onSkip()
@@ -203,24 +334,34 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
   ],;"
 pr-12325
   const steps = type === 'client' ? clientSteps : talentSteps,;
+
+      }
+    }
+  };
+  ],;"
+  const steps = type === 'client' ? clientSteps : talentSteps,;'
   // Navigate to the specified URL;
-  const handleAction = () => {;
+  const handleAction = (;
     if (currentStep < steps.length - 1) {;
       navigate(steps[currentStep].action.url),;
-      setCurrentStep(currentStep + 1);
+      setCurrentStep(currentStep + 1);) => {
+  return $3;}
+}
     } else {;
       // Last step;
-      navigate(steps[currentStep].action.url),;
-      onComplete();
+      navigate(steps[currentStep].action.url),;}
+      onComplete();}
     }
   },;
   // Skip the current step;
-  const handleSkip = () => {;
+  const handleSkip = (;
     if (currentStep < steps.length - 1) {;
-      setCurrentStep(currentStep + 1);
+      setCurrentStep(currentStep + 1);) => {
+  return $3;}
+}
     } else {;
-      // Last step;
-      onSkip();
+      // Last step;}
+      onSkip();}
     }
   },
 
@@ -309,22 +450,55 @@ pr-12325
   ];
   // Navigate to the specified URL;
   const handleAction = () => {;
+
+
+  
+
+  
+  
+  
+  return ()'
+    <Card className={cn("border border-zion-blue-light bg-zion-blue-dark/80 backdrop-blur-sm w-full max-w-md", className)}>"
+</Card>
+      <CardHeader>
+</CardHeader>"
+        <CardTitle className="text-center text-white">"
+</CardTitle>"
+      icon: <FileText className="h-6 w-6 text-zion-purple" />,;"
+</FileText>"
+      icon: <Users className="h-6 w-6 text-zion-cyan" />,;"
+</Users>"
+      icon: <MessageSquare className="h-6 w-6 text-zion-purple" />,;"
+</MessageSquare>"
+      icon: <FileText className="h-6 w-6 text-zion-purple" />,;"
+</FileText>"
+      icon: <Calendar className="h-6 w-6 text-zion-cyan" />,;"
+</Calendar>"
+      icon: <Eye className="h-6 w-6 text-zion-purple" />,;"
+</Eye>"
+      icon: <Rocket className="h-6 w-6 text-zion-cyan" />,;"
+</Rocket>
+
     if (currentStep < steps && steps.length - 1) {;
       navigate(steps[currentStep].action && action.url);
-      setCurrentStep(currentStep + 1);
+      setCurrentStep(currentStep + 1);) => {
+  return $3;}
+}
     } else {;
       // Last step;
-      navigate(steps[currentStep].action && action.url);
-      onComplete();
+      navigate(steps[currentStep].action && action.url);}
+      onComplete();}
     }
   };
   // Skip the current step;
-  const handleSkip = () => {;
+  const handleSkip = (;
     if (currentStep < steps && steps.length - 1) {;
-      setCurrentStep(currentStep + 1);
+      setCurrentStep(currentStep + 1);) => {
+  return $3;}
+}
     } else {;
-      // Last step;
-      onSkip();
+      // Last step;}
+      onSkip();}
     }
   };
 
@@ -380,6 +554,7 @@ pr-12325
       // Last step;
   // Skip the current step;
       // Last step;
+
 
   return ()"
     <Card className={cn("border border-zion-blue-light bg-zion-blue-dark/80 backdrop-blur-sm w-full max-w-md", className)}>;"
@@ -478,3 +653,9 @@ pr-12325
           
       
 pr-12325
+          >
+</Button>
+          </Button>
+      </CardFooter>
+    </Card>"
+

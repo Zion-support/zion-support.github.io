@@ -185,6 +185,7 @@ import { AppLayout } from '@/layout/AppLayout',  return (
         </div>;
       </div>;  )
 };
+
 import React from "react";""
 import { completeSitemap, dynamicPaths } from "@/config/sitemap";""
 import { Link } from "react-router-dom";""
@@ -232,6 +233,123 @@ export const SitemapPage: React.FC = () => {
                     
 
                     
+</ChevronRight>
+
+                    </Link>
+                  </li>
+            </ul>
+
+          </div>"
+          <div className="bg-zion-blue-dark p-6 rounded-lg">"
+</div>"
+            <h2 className="text-xl font-bold mb-4 text-zion-cyan">"
+</h2>
+            </h2>"
+            <p className="text-sm text-zion-slate mb-4">"
+</p>
+            </p>"
+            <ul className="space-y-2">"
+</ul>
+                  <li key={route.path}>
+</li>
+                    <Link;
+                      to={route.path}"
+                      className="flex items-center hover:text-zion-purple""
+                    >
+</Link>"
+                      <ChevronRight className="h-4 w-4 mr-2" />"
+</ChevronRight>
+
+                    </Link>
+                  </li>
+            </ul>
+
+          </div>"
+          <div className="bg-zion-blue-dark p-6 rounded-lg">"
+</div>"
+            <h2 className="text-xl font-bold mb-4 text-zion-cyan">"
+</h2>
+            </h2>"
+            <p className="text-sm text-zion-slate mb-4">"
+</p>
+            </p>"
+            <ul className="space-y-2">"
+</ul>
+                  <li key={route.path}>
+</li>
+                    <Link;
+                      to={route.path}"
+                      className="flex items-center hover:text-zion-purple""
+                    >
+</Link>"
+                      <ChevronRight className="h-4 w-4 mr-2" />"
+</ChevronRight>
+
+                    </Link>
+                  </li>
+            </ul>
+
+          </div>"
+          <div className="bg-zion-blue-dark p-6 rounded-lg">"
+</div>"
+            <h2 className="text-xl font-bold mb-4 text-zion-cyan">"
+</h2>
+            </h2>"
+            <p className="text-sm text-zion-slate mb-4">"
+</p>
+            </p>"
+            <ul className="space-y-2">"
+</ul>
+                  <li key={route.path}>
+</li>
+                    <Link;
+                      to={route.path}"
+                      className="flex items-center hover:text-zion-purple""
+                    >
+</Link>"
+                      <ChevronRight className="h-4 w-4 mr-2" />"
+</ChevronRight>
+
+                    </Link>
+                  </li>
+            </ul>
+
+          </div>"
+          <div className="bg-zion-blue-dark p-6 rounded-lg">"
+</div>"
+            <h2 className="text-xl font-bold mb-4 text-zion-cyan">"
+</h2>
+            </h2>"
+            <p className="text-sm text-zion-slate mb-4">"
+</p>
+            </p>"
+            <ul className="space-y-2">"
+</ul>
+                  <li key={route.path}>
+</li>
+                    <Link;
+                      to={route.path}"
+                      className="flex items-center hover:text-zion-purple""
+                    >
+</Link>"
+                      <ChevronRight className="h-4 w-4 mr-2" />"
+</ChevronRight>
+
+                    </Link>
+                  </li>
+            </ul>
+
+          </div>"
+          <div className="bg-zion-blue-dark p-6 rounded-lg">"
+</div>"
+            <h2 className="text-xl font-bold mb-4 text-zion-cyan">"
+</h2>
+            </h2>"
+            <p className="text-sm text-zion-slate mb-4">"
+</p>
+            </p>"
+            <ul className="space-y-2">"
+</ul>
                 <li key={key}>
 </li>"
                   <div className="flex items-center text-zion-slate">"
@@ -239,3 +357,10 @@ export const SitemapPage: React.FC = () => {
                     {path} <span className="ml-2 text-xs italic">({key})</span>"
                   </div>
 pr-12325
+                </li>
+
+            </ul>
+          </div>
+        </div>
+      </div>
+    </AppLayout>"

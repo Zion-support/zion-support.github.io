@@ -1,13 +1,16 @@
-
 class ErrorBoundary extends React.Component {
+
+  // TODO: Implement
+}
   constructor(props) {
     super(props);
+
     this.state = { hasError: false };
   }
-  
-  static getDerivedStateFromError(error) {
+  static getDerivedStateFromError(error) {}
     return { hasError: true };
   }
+
   
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
@@ -25,7 +28,11 @@ class ErrorBoundary extends React.Component {
     console.error('Error caught by boundary:', error, errorInfo);
 pr-12325
   
+    console.error('Error caught by boundary:', error, errorInfo);'
+
+  }
   render() {
+
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
@@ -123,47 +130,56 @@ pr-12325
       case 'availability':
         setSelectedAvailability(prev =>
           prev.includes(value) ? prev.filter(item => item !== value) : [...prev, value]
+
+    return true;
+  });
+  const handleFilterChange = (filterType: string, value: string) => {
+    switch (filterType) {'
+      case 'productType':'
+        setSelectedProductTypes(prev =>)
+
+          prev.includes(value) ? prev.filter(item => item !== value) : [...prev, value]
+        );
+        break;'
+      case 'location':'
         setSelectedLocations(prev =>)
       case 'availability':
         setSelectedAvailability(prev =>)
 
 pr-12325
+          prev.includes(value) ? prev.filter(item => item !== value) : [...prev, value]
   const searchSuggestions: SearchSuggestion[] = generateSearchSuggestions(),;
   const filterOptions = generateFilterOptions();
-
   // Filter listings based on selected filters;
   const filteredListings = MARKETPLACE_LISTINGS && MARKETPLACE_LISTINGS.filter(listing => {;
     // Search filter;
+    // Search filter;)
     if (searchQuery && !listing && listing.title.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) && ;
         !listing && listing.description.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) &&;
-        !listing && listing.tags.some(tag => tag && tag.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()))) {;
-      return false;
+        !listing && listing.tags.some(tag => tag && tag.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()))) {;}
+      return false;}
     }
-
     // Product type filter;
-    if (selectedProductTypes && selectedProductTypes.length > 0 && !selectedProductTypes && selectedProductTypes.includes(listing && listing.category)) {;
-      return false;
+    if (selectedProductTypes && selectedProductTypes.length > 0 && !selectedProductTypes && selectedProductTypes.includes(listing && listing.category)) {;}
+      return false;}
     }
-
     // Location filter;
-    if (selectedLocations && selectedLocations.length > 0 && listing && listing.location && !selectedLocations && selectedLocations.includes(listing && listing.location)) {;
-      return false;
+    if (selectedLocations && selectedLocations.length > 0 && listing && listing.location && !selectedLocations && selectedLocations.includes(listing && listing.location)) {;}
+      return false;}
     }
-
     // Availability filter;
-    if (selectedAvailability && selectedAvailability.length > 0 && listing && listing.availability && !selectedAvailability && selectedAvailability.includes(listing && listing.availability)) {;
-      return false;
+    if (selectedAvailability && selectedAvailability.length > 0 && listing && listing.availability && !selectedAvailability && selectedAvailability.includes(listing && listing.availability)) {;}
+      return false;}
     }
-
     // Rating filter;
-    if (selectedRating && (!listing && listing.rating || listing && listing.rating < selectedRating)) {;
-      return false;
+    if (selectedRating && (!listing && listing.rating || listing && listing.rating < selectedRating)) {;}
+      return false;}
     }
-
     return true;
   });
-
-  const handleFilterChange = (filterType: string, value: string) => {;
+  const handleFilterChange = (;) => {
+  return $3;}
+}
     console && console.log(`Filter changed: ${filterType} = ${value}`),;
     switch (filterType) {;
       case 'productType':;
@@ -178,9 +194,22 @@ pr-12325
         break;
       case 'availability':;
         setSelectedAvailability(prev => ;
+    switch (filterType) {;'
+      case 'productType':;'
+        setSelectedProductTypes(prev => ;)
           prev && prev.includes(value) ? prev && prev.filter(item => item !== value) : [...prev, value];
         );
-        break;
+        break;'
+      case 'location':;'
+        setSelectedLocations(prev => ;)
+          prev && prev.includes(value) ? prev && prev.filter(item => item !== value) : [...prev, value];
+        );
+        break;'
+      case 'availability':;'
+        setSelectedAvailability(prev => ;)
+          prev && prev.includes(value) ? prev && prev.filter(item => item !== value) : [...prev, value];
+        );}
+        break;}
     }
     // Search filter;)
     if (searchQuery && !listing && listing.title.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) && ;
@@ -214,6 +243,7 @@ pr-12325
 
   };
 
+
   const clearAllFilters = () => {;
     setSearchQuery("");
 
@@ -223,19 +253,25 @@ pr-12325
     setSelectedLocations([]);
     setSelectedAvailability([]);
 
+'
+    setSearchQuery("");"
+
+    setSelectedProductTypes([]);
+    setSelectedLocations([]);
+    setSelectedAvailability([]);) => {
+  return $3;}
+}
   },
-    // Handle requesting a quote
-  const handleRequestQuote = (listingId: string) => {
-    const listing = MARKETPLACE_LISTINGS.find(item => item.id === listingId)
-    if (listing) {
-      toast({
-        title: "Quote Requested"
-        description: `Your quote request for ${listing.title} has been sent.`
 
 
   },
   
 
+  
+
+        );
+        break;
+  },
   
 
   const clearAllFilters = () => {"
@@ -245,6 +281,7 @@ pr-12325
     setSelectedAvailability([]),
     setSelectedRating(null)
 
+  },
   
 
 
@@ -257,6 +294,11 @@ pr-12325
   description: `Your quote request for ${listing.title} has been sent.`
 
 )
+        title: "Quote Requested"",
+  description: `Your quote request for ${listing.title} has been sent.`
+
+)
+      }),
       
 
 
@@ -282,12 +324,34 @@ pr-12325
         setSelectedLocations(prev =>;)
         setSelectedAvailability(prev =>;)
   },;
+  const handleFilterChange = (filterType: string, value: string) => {;
+    // // // console.log(`Filter changed: ${filterType} = ${value}`),;
+    switch (filterType) {;"
+      case 'productType':;'
+        setSelectedProductTypes(prev =>;)
+          prev.includes(value) ? prev.filter(item => item !== value) : [...prev, value];
+        ),;
+        break,;'
+      case 'location':;'
+        setSelectedLocations(prev =>;)
+          prev.includes(value) ? prev.filter(item => item !== value) : [...prev, value];
+        ),;
+        break,;'
+      case 'availability':;'
+        setSelectedAvailability(prev =>;)
+          prev.includes(value) ? prev.filter(item => item !== value) : [...prev, value];
+        ),;
+        break;
+    }
+  },;
+  const clearAllFilters = () => {;'
     setSearchQuery(""),;"
     setSelectedProductTypes([]),;
     setSelectedLocations([]),;
     setSelectedAvailability([]),;
 
     setSelectedRating(null);
+  };
 
   // Handle requesting a quote;
   const handleRequestQuote = (listingId: string) => {;
@@ -297,6 +361,9 @@ pr-12325
       toast({;"
         title: "Quote Requested",;"`;
         description: `Your quote request for ${listing && listing.title} has been sent.`;)
+        title: "Quote Requested",;"
+        description: `Your quote request for ${listing && listing.title} has been sent.`;)
+      });
 
       // Navigate to the quote request page with the listing information;"
       navigate("/request-quote", {;"
@@ -326,12 +393,29 @@ export default /**
 function Marketplace() {
   const navigate = use_navigate ();
   const [search_query, setSearchQuery] = useState ("");
+import React, { useState } from './react';''
+import { Header } from '@/components / Header';''
+import { Footer } from '@/components / Footer';''
+import { Button } from '@/components / ui / button';''
+import { Link } from './react-router-dom';''
+import { Grid3X3, ListFilter } from './lucide-react';''
+import { EnhancedSearchInput } from '@/components / search / EnhancedSearchInput';''
+import { FilterSidebar } from '@/components / search / FilterSidebar';''
+import { ActiveFiltersBar } from '@/components / search / ActiveFiltersBar';''
+import { ProductListingCard } from '@/components / ProductListingCard';''
+import { MARKETPLACE_LISTINGS, generateSearchSuggestions, generateFilterOptions } from '@/data / marketplace_data';''
+import { toast } from '@/hooks / use - toast';''
+import { use_navigate } from './react-router-dom';''
+import { SearchSuggestion } from '@/types / search';''
+import { AppLayout } from '@/layout / AppLayout';'
+export default /**
  * Marketplace - Function description;
  */)
 function Marketplace() {
   const navigate = use_navigate ();
   const [search_query, setSearchQuery] = useState ("");"
 pr-12325
+
   const [selectedProductTypes, setSelectedProductTypes] = useState < string[]>([]);
   const [selected_locations, setSelectedLocations] = useState < string[]>([]);
   const [selected_availability, setSelectedAvailability] = useState < string[]>([]);
@@ -345,38 +429,56 @@ pr-12325
     // Search filter;
     if (.includes (search_query.toLowerCase ()) &&) {
   $2
+
+    // Search filter;)
+    if (.includes (search_query.toLowerCase ()) &&) {
+  $2;
+
 }
         !listing.description.toLowerCase ().includes (search_query.toLowerCase ()) &&;
-        !listing.tags.some (tag => tag.toLowerCase ().includes (search_query.toLowerCase ()))) {
-      return false;
+        !listing.tags.some (tag => tag.toLowerCase ().includes (search_query.toLowerCase ()))) {}
+      return false;}
     }
     // Product type filter;
+
     if () {) {
   $2
+  $2;
+
 }
       return false;
     }
     // Location filter;
+
     if () {) {
   $2
+  $2;
+
 }
       return false;
     }
     // Availability filter;
+
     if () {) {
   $2
+  $2;
+
 }
       return false;
     }
     // Rating filter;
+
     if () {) {
   $2
+  $2;
+
 }
       return false;
     }
     return true;
   });
 ;
+
   const handleFilterChange = (filter_type: string, value: string) =>: any {
     console.log (`Filter changed: ${filter_type} = ${value}`),
     switch (filter_type) {
@@ -390,8 +492,25 @@ pr-12325
         break;
       case 'availability':;
         setSelectedAvailability (prev =>;
+  // TODO: Implement
+}
+
+    console.log (`Filter changed: ${filter_type} = ${value}`),
+    switch (filter_type) {"
+      case 'product_type':;'
+        setSelectedProductTypes (prev =>;)
+          prev.includes (value) ? prev.filter (item => item !== value) : [...prev, value]);
+        break;'
+      case 'location':;'
+        setSelectedLocations (prev =>;)
+          prev.includes (value) ? prev.filter (item => item !== value) : [...prev, value]);
+
+        break;'
+      case 'availability':;'
+        setSelectedAvailability (prev =>;)
           prev.includes (value) ? prev.filter (item => item !== value) : [...prev, value]);
         break;
+
     }
   }
 ;
@@ -422,13 +541,15 @@ pr-12325
         setSelectedLocations (prev =>;)
         setSelectedAvailability (prev =>;)
   const clearAllFilters = () =>: any {
+
   // TODO: Implement
     setSearchQuery ("");"
 pr-12325
+
     setSelectedProductTypes ([]);
     setSelectedLocations ([]);
-    setSelectedAvailability ([]);
-    setSelectedRating (null);
+    setSelectedAvailability ([]);}
+    setSelectedRating (null);}
   }
 ;
   // Handle requesting a quote;
@@ -455,6 +576,7 @@ if ( {) {
             id: listing.id,;
   // Handle requesting a quote;
   const handleRequestQuote = (listing_id: string) =>: any {
+
   // TODO: Implement
     const listing = MARKETPLACE_LISTINGS.find (item => item.id === listing_id),
     // Check condition;
@@ -476,8 +598,12 @@ pr-12325
             category: listing.category,;
             image: listing.images?.[0];
 
+            title: listing.title,;
+            category: listing.category,;}
+            image: listing.images?.[0];}
           }
         }
+        })
       });
     }
   };
@@ -538,6 +664,11 @@ pr-12325
         <div className="grid grid - cols - 1 lg:grid - cols - 4 gap-6">;
           {/* Sidebar Filters */}
           <div className="lg: col - span-1">;
+  return (
+
+
+    <AppLayout>;
+</AppLayout>"
       <main className="flex-grow container mx-auto px-4 py-8">;"
 </main>"
         <div className="max-w-4xl mx-auto mb-8">;"
@@ -574,7 +705,9 @@ pr-12325
           <div className="lg: col - span - 1">;"
 pr-12325
             <FilterSidebar;
+</div>
 
+            <FilterSidebar;
               filters={{
 
                 selectedProductTypes
@@ -598,11 +731,38 @@ pr-12325
         <div className="grid grid - cols - 1 lg:grid - cols - 4 gap-6">;
           {/* Sidebar Filters */}
           <div className="lg: col - span-1">;
+
+                selectedProductTypes;
+                selectedLocations;
+                selectedAvailability,
+
+              <EnhancedSearchInput;
+                value={searchQuery}
+                onChange={setSearchQuery}"
+                placeholder="Search the marketplace...""
+                searchSuggestions={searchSuggestions}
+              </Button>;
+</FilterSidebar>
+            </div>;
+          </div>;
+        </div>;"
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">;"
+</div>"
+          <div className="lg: col-span-1">;"
+</div>
+            <FilterSidebar;
+        {/* Main layout with sidebar and results */}"
+        <div className="grid grid - cols - 1 lg:grid - cols - 4 gap - 6">;"
+</FilterSidebar>"
+          <div className="lg: col - span - 1">;"
+</div>
+
             <FilterSidebar;
               filters={{
                 selectedProductTypes;
                 selectedLocations;
                 selectedAvailability
+                selectedAvailability;
 
                 selectedProductTypes,
                 selectedLocations,
@@ -659,6 +819,10 @@ pr-12325
             <div className="mb-6">;"
           <div className="lg:col-span-3">"
 pr-12325
+</div>
+            <ActiveFiltersBar;
+              selectedProductTypes={selectedProductTypes}
+
               selectedLocations={selectedLocations}
               selectedAvailability={selectedAvailability}
               selectedRating={selectedRating}
@@ -683,6 +847,35 @@ pr-12325
               {filteredListings && filteredListings.length > 0 ? (;
                 filteredListings && filteredListings.map((listing) => (;
                   <ProductListingCard
+
+              onRemoveFilter={handleFilterChange})
+              onRemoveRating={() => setSelectedRating(null)}
+</ActiveFiltersBar>"
+            <div className="mb-6">"
+</div>"
+              <p className="text-zion-slate-light">"
+</p>
+              </p>
+            </div>"
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">"
+</div>
+                  <ProductListingCard;
+                    key={listing.id}
+                    listing={listing}
+                    onRequestQuote={handleRequestQuote}
+                  />
+</ProductListingCard>"
+                <div className="col-span-2 text-center py-16 bg-zion-blue-dark border border-zion-blue-light rounded-lg">"
+</div>"
+                  <h2 className="text-2xl font-bold text-white mb-4">No Results Found</h2>""
+                  <p className="text-zion-slate-light max-w-md mx-auto mb-8">"
+</p>
+                  </p>
+              </p>;
+            </div>;"
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;"
+</div>
+                  <ProductListingCard;
                     key={listing && listing.id} 
                     listing={listing}
                     onRequestQuote={handleRequestQuote}
@@ -704,6 +897,27 @@ pr-12325
             <div className="mb-6">"
               <p className="text-zion-slate-light">"
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">"
+</ProductListingCard>"
+                <div className="col-span-2 text-center py-16 bg-zion-blue-dark border border-zion-blue-light rounded-lg">;"
+</div>"
+                  <h2 className="text-2xl font-bold text-white mb-4">No Results Found</h2>;""
+                  <p className="text-zion-slate-light max-w-md mx-auto mb-8">;"
+</p>
+                  </p>;
+                  <Button;
+                    onClick={clearAllFilters}"
+                    className="bg-zion-purple hover:bg-zion-purple-dark">;"
+</Button>
+                  </Button>;
+                </div>;"
+            <div className="mb - 6">;"
+</div>"
+              <p className="text - zion - slate - light">;"
+</p>
+              </p>;
+            </div>;"
+            <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 6">;"
+</div>
                   <ProductListingCard;
                     key={listing.id}
                     listing={listing}
@@ -780,3 +994,9 @@ Discover professional services and products for your AI and tech projects. Brows
 }</div> </div> </div> </main> ) 
     ;"`;
 pr-12325
+}/>) ) ) : (<div className="col-span-2 text-center py-16 bg-zion-blue-dark border border-zion-blue-light rounded-lg"> <h2 className="text-2xl font-bold text-white mb-4">No Results Found</h2> <p className="text-zion-slate-light max-w-md mx-auto mb-8"> We couldn't find any listings matching your filters. Try adjusting your search criteria. </p> <Button onClick= {'
+</ProductListingCard>)'
+}className="bg-zion-purple hover:bg-zion-purple-dark" > Clear Filters </Button> </div>)"
+}</div> </div> </div> </main> </AppLayout>) 
+    </AppLayout>;"
+

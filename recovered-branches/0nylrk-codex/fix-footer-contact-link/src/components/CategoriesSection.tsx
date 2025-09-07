@@ -134,6 +134,16 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
           <Link;
             to="/categories";
             className="text - zion - cyan border - b border - zion - cyan hover: border - zion - cyan - dark transition-colors";;
+
+import {GradientHeading} from "./GradientHeading";""
+import {Link} from "react-router-dom";""
+import {Briefcase, HardDrive, Lightbulb, Users} from "lucide-react";"
+const categories = ["
+import { GradientHeading } from './GradientHeading';''
+import { Link } from './react-router-dom';''
+import { Briefcase, HardDrive, Lightbulb, Users } from './lucide-react';'
+const categories = [;
+  {'
     title: "Services",""
     description: "On - demand IT support, consulting, development, and more";""
     icon: <Briefcase className="w - 10 h - 10" />,"
@@ -216,3 +226,10 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
 
     </section>);"`;
 pr-12325
+          >;
+</Link>
+          </Link>;
+        </div>;
+      </div>;
+    </section>);"
+

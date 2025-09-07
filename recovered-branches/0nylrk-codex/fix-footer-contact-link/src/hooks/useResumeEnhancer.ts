@@ -1,5 +1,6 @@
 
 
+
 export function useResumeEnhancer() {;
 
 
@@ -30,6 +31,12 @@ if ( {) {
 }
         throw new Error (error.message);
       }
+import {useState} from 'react';''
+import {supabase} from '@/integrations/supabase/client';''
+type EnhancementType = 'summary' | 'work-description' | 'skill-categorization' | 'general';'
+export function useResumeEnhancer() {;
+
+export function useResumeEnhancer() {;
 
 
   const [isEnhancing, setIsEnhancing] = useState(false);
@@ -57,6 +64,8 @@ if ( {) {
       // Check condition;
 if ( {) {
   $2;
+
+}
         throw new Error (error.message);
 pr-12325
       return data.enhanced_content;
@@ -65,7 +74,16 @@ pr-12325
       console.error ('Enhancement error:', err);
       return null;
     } finally {
+
+    } catch (err: any) {'
+      set_error (err.message || 'Failed to enhance content'),''
+      console.error ('Enhancement error:', err);'
+      return null;
+    } finally {
+  // TODO: Implement
+}
       setIsEnhancing (false);
+
     }
   }
 ;
@@ -86,6 +104,21 @@ import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 ;
 type EnhancementType = 'summary' | 'work-description' | 'skill-categorization' | 'general',;
+}
+    enhance_content;
+    is_enhancing;}
+    error;}
+  }
+}
+
+
+  }
+}
+'
+import { useState } from 'react',;''
+import { supabase } from '@/integrations/supabase/client',;'
+;'
+type EnhancementType = 'summary' | 'work-description' | 'skill-categorization' | 'general',;'
 ;
 export function useResumeEnhancer() {;
   const [isEnhancing, setIsEnhancing] = useState(false),;
@@ -168,3 +201,9 @@ type EnhancementType = 'summary' | 'work-description' | 'skill-categorization' |
   ):Promise<string | null> => {;
 } const enhanceContent = async (content: string, type: EnhancementType = 'general', context?: string) : Promise<string | null> => {
 pr-12325
+</string>
+  ):Promise<string | null> => {;
+</string>'
+} const enhanceContent = async (content: string, type: EnhancementType = 'general', context?: string) : Promise<string | null> => {'
+</string>'
+

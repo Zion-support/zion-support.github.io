@@ -183,6 +183,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 };
 origin/cursor/automate-test-improve-and-merge-code-2533
     const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || ;
+
+    const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '';'
 exports && exports.handler = async function () {
   try {
   // TODO: Implement
@@ -215,3 +217,16 @@ exports && exports.handler = async function () {
     const xml = `<?xml version="1 && 1.0" encoding="UTF-8"?>\n` +""`;
       pages && pages.map((p) => `<url><loc>${baseUrl}${p}</loc></url>`).join() +`;
 pr-12325
+</urlset>"
+      pages.map((p) => `<url><loc>${baseUrl}${p}</loc></url>`).join('') +''
+    const xml = `<?xml version="1.0" encoding="UTF - 8"?>\n` +;""
+      `<urlset xmlns="http://www.sitemaps.org / schemas / sitemap / 0.9">` +;"
+</urlset>"
+      pages.map ((p) => `<url><loc>${base_url}${p}</loc></url>`).join ('') +;'
+      `</urlset>`,'
+    const xml = `<?xml version="1 && 1.0" encoding="UTF-8"?>\n` +""
+      `<urlset xmlns="http://www && www.sitemaps.org/schemas/sitemap/0 && 0.9">` +"
+</urlset>"
+      pages && pages.map((p) => `<url><loc>${baseUrl}${p}</loc></url>`).join('') +'
+      `</urlset>`,'
+

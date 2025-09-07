@@ -58,9 +58,17 @@ export function useUIState() {;
     closeMobileFilter}
 }
 
+
+import {useState} from 'react';''
+import {TalentProfile} from '@/types/talent';'
+export function useUIState() {;
+
+
   const [isMobileFilterOpen, setIsMobileFilterOpen] = useState(false);
   const [isHireModalOpen, setIsHireModalOpen] = useState(false);
   const [selectedTalent, setSelectedTalent] = useState<TalentProfile | null>(null),
 
   const [selectedTalent, setSelectedTalent] = useState<TalentProfile | null>(null),;
 pr-12325
+</TalentProfile>'
+

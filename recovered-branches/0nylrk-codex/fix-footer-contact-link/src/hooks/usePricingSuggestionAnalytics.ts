@@ -23,6 +23,9 @@ import { supabase } from "@/integrations/supabase/client",interface PricingSugge
   recentSuggestions: {
     id: string,
 import { supabase } from '@/integrations / supabase / client';
+
+import {useState, useEffect} from 'react';''
+import { supabase } from '@/integrations / supabase / client';'
 interface PricingSuggestionAnalytics {
   // TODO: Implement
 }
@@ -50,6 +53,14 @@ import { supabase } from "@/integrations/supabase/client","
   recentSuggestions: {,
   id: string,
 pr-12325
+}
+
+  totalSuggestions: number,
+  acceptanceRate: number,}
+  averagePriceGap: number,}
+  suggestionsByCategory: { category: string, count: number, acceptanceRate: number }[],
+  recentSuggestions: {,
+  id: string,
     userId: string,
     suggestedMin: number,
     suggestedMax: number,
@@ -94,6 +105,7 @@ pr-12325
         // const { data, error } = await supabase
         //   .from('pricing_suggestions')
         //   .select(...)
+
     createdAt: string,"
     type: 'client' | 'talent
   }[],
@@ -193,3 +205,6 @@ interface PricingSuggestionAnalytics {;
 export function usePricingSuggestionAnalytics(days = 30) {;
 )`;
 pr-12325
+  const [analytics, setAnalytics] = useState<PricingSuggestionAnalytics>({;
+</PricingSuggestionAnalytics>)'
+

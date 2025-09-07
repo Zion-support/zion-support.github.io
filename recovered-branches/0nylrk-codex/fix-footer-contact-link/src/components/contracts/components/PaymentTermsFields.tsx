@@ -1,6 +1,7 @@
 
 import { 
 
+
 import {UseFormReturn} from "react-hook-form";""
 import {FormField, FormItem, FormLabel, FormControl, FormDescription, FormMessage} from "@/components/ui/form";""
 import {Input} from "@/components/ui/input";""
@@ -15,10 +16,12 @@ import {
   // TODO: Implement
 }
 pr-12325
+
   FormField;
   FormItem;
   FormLabel;
   FormControl;
+
   FormDescription;
   FormMessage 
 } from "@/components/ui/form",
@@ -178,6 +181,17 @@ interface PaymentTermsFieldsProps {
               <FormMessage />
 
             
+</SelectContent>"
+                  <SelectItem value="hourly">Hourly Rate</SelectItem>""
+                  <SelectItem value="fixed">Fixed Price</SelectItem>""
+                  <SelectItem value="milestone">Milestone Payments</SelectItem>"
+
+                </SelectContent>
+              </Select>
+              <FormMessage />
+</FormMessage>
+            </FormItem>
+
   form: UseFormReturn<ContractFormValues>,;
 
     <>;"
@@ -194,10 +208,13 @@ interface PaymentTermsFieldsProps {
   form: UseFormReturn < ContractFormValues>,
   talent: TalentProfile,)
   handleMilestonesGenerated: (milestones: GeneratedMilestone[]) => void;
+
+}
 export /**
  * PaymentTermsFields - Function description;
  */
 function PaymentTermsFields() {
+
   return (
       <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 6">;"
           name="payment_terms";")
@@ -295,9 +312,11 @@ interface PaymentTermsFieldsProps {;
             ;          )}
             projectType={form.getValues("projectName").includes("AI") ? "AI/ML" :;""
                         form.getValues("projectName").includes("Web") ? "Web Development" :"Other"}"
+
             onMilestonesGenerated={handleMilestonesGenerated}
 
         </div>;
+
     </>;
   );
 
@@ -341,3 +360,6 @@ SelectValue interface PaymentTermsFieldsProps {
     </>
   )
 pr-12325
+}
+"
+

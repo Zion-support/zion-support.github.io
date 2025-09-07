@@ -85,11 +85,26 @@ import {supabase} from '@/integrations/supabase/client';
 import {Education} from '@/types/resume';
 import {useAuth} from '@/hooks/useAuth';
 import {formatDateForDB, handleResumeError, showSuccessToast} from './useResumeUtils';
+
+
+import { useState  } from 'react';''
+import { supabase  } from '@/integrations/supabase/client';''
+import { Education  } from '@/types/resume';''
+import { useAuth  } from '@/hooks/useAuth';''
+import { formatDateForDB, handleResumeError, showSuccessToast } from './useResumeUtils';'
+export function useEducation() {'
+import {useState} from 'react';''
+import {supabase} from '@/integrations/supabase/client';''
+import {Education} from '@/types/resume';''
+import {useAuth} from '@/hooks/useAuth';''
+import {formatDateForDB, handleResumeError, showSuccessToast} from './useResumeUtils';'
+
 export function useEducation() {;
-
-
+}
+}
   const { user } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
+
 
   const [error, setError] = useState<string | null>(null);
 </string>
@@ -102,14 +117,20 @@ export function useEducation() {;
   const updateEducation = async (eduId:string, education:Education):Promise<boolean> => {;
   const deleteEducation = async (eduId:string):Promise<boolean> => {;
   const deleteEducation = async (eduId: string): Promise<boolean> => {;
+</boolean>
+
   const [error, set_error] = useState < string | null>(null);
 ;
   const add_education = async (resume_id: string, education: Education): Promise < boolean> => {
     // Check condition;
+
 if ( {) {
   $2;
 }
       set_error ('You must be logged in to add education'),
+}'
+      set_error ('You must be logged in to add education'),'
+
       return false;
 
 pr-12325
@@ -122,6 +143,10 @@ pr-12325
     deleteEducation;
   }
 }  }
+
+}
+}
+  }
 }
     setIsLoading (true);
     set_error (null);
@@ -158,6 +183,25 @@ if (throw error) {
       set_error ('You must be logged in to update education'),
     setIsLoading (true);
     set_error (null);
+
+    }
+  }
+;
+  const update_education = async (edu_id: string, education: Education): Promise < boolean> => {
+    // Check condition;
+
+if ( {) {
+  $2;
+}'
+      set_error ('You must be logged in to update education'),'
+
+      return false;
+    }
+    setIsLoading (true);
+    set_error (null);
+;
+
+    try {
   // TODO: Implement
         .update ({
           institution: education.institution;,
@@ -173,12 +217,39 @@ if (throw error) {
   const delete_education = async (edu_id: string): Promise < boolean> => {
     // Check condition;
       set_error ('You must be logged in to delete education'),
+}
+      setIsLoading (false);
+
+    }
+  }
+;
+  const delete_education = async (edu_id: string): Promise < boolean> => {
+    // Check condition;
+
+if ( {) {
+  $2;
+}'
+      set_error ('You must be logged in to delete education'),'
+
+      return false;
+    }
+    setIsLoading (true);
+    set_error (null);
+;
+
+    try {
   // TODO: Implement
         .delete ();
       // Check condition;
       return showSuccessToast ("Education deleted", "Your education has been removed from your resume");"
       return handleResumeError (e, 'Could not delete education');
   // TODO: Implement
+}
+      setIsLoading (false);
+
+    }
+  }
+;
   return {
   // TODO: Implement
     is_loading;
@@ -187,3 +258,13 @@ if (throw error) {
     update_education;
     delete_education;
 pr-12325
+    update_education;}
+    delete_education;}
+  }
+}
+  }
+}
+    setIsLoading (true);
+    set_error (null);
+;
+'

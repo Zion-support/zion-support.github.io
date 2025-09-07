@@ -110,10 +110,112 @@ if (return "Custom pricing") {
   // Handle image loading errors;
   const handleImageError = (e: React.SyntheticEvent < HTMLImageElement>) =>: any {
     e.current_target.src = '/placeholder.svg';
+
+import React from 'react';''
+import {useNavigate} from "react-router-dom";""
+import {Badge} from "@/components/ui/badge";""
+import {Button} from "@/components/ui/button";""
+import {ProductListing} from "@/types/listings";""
+import {Star, DollarSign} from "lucide-react";"
+interface ProductListingCardProps {;
+  listing: ProductListing,;
+"
+  view?: 'grid' | 'list';'
+  onRequestQuote?: (id: string) => void;
+}
+
+
+export function ProductListingCard(): any ({ ;
+  listing, ;
+'
+  view = 'grid';'
+  onRequestQuote;)
+}: ProductListingCardProps) {;'
+  const isGrid = view === 'grid';'
+  const navigate = useNavigate();
+
+'
+import { useNavigate } from "react-router-dom",""
+import { Badge } from "@/components/ui/badge",""
+import { Button } from "@/components/ui/button",""
+import { ProductListing } from "@/types/listings";""
+import { Star, DollarSign } from "lucide-react";"
+interface ProductListingCardProps {
+  // TODO: Implement
+}
+interface ProductListingCardProps {;
+  listing: ProductListing,;
+"
+  view?: 'grid' | 'list';'
+  onRequestQuote?: (id: string) => void;
+}'
+  view = 'grid';'
+  onRequestQuote;
+}: ProductListingCardProps) {;'
+  const isGrid = view === 'grid';'
+  const navigate = useNavigate();
+  // Get the first image or use a placeholder;
+  const imageUrl = listing.images && listing.images.length > 0;
+    ? listing.images[0]'
+    : '/placeholder.svg';''
+import { ProductListing } from "@/types/listings",""
+import { Star, DollarSign } from "lucide-react","
+interface ProductListingCardProps {
+  // TODO: Implement
+}
+  listing: ProductListing,"
+  view?: 'grid' | 'list','
+  onRequestQuote?: (id: string) => void;
+}
+
+export function ProductListingCard({ 
+
+  listing, '
+  view = 'grid','
+  onRequestQuote;)
+}: ProductListingCardProps) {'
+  const isGrid = view === 'grid','
+  const navigate = useNavigate(),
+  
+
+  // Get the first image or use a placeholder;
+  const imageUrl = listing.images && listing.images.length > 0;
+    ? listing.images[0] '
+    : '/placeholder.svg','
+  // Format price display;
+
+  const formatPrice = () => {'
+    if (listing.price === null) return "Custom pricing";"
+    return `${listing.currency}${listing.price.toLocaleString()}`
+"
+import { use_navigate } from './react-router-dom';''
+import { Badge } from '@/components / ui / badge';''
+import { Button } from '@/components / ui / button';''
+import { ProductListing } from '@/types / listings';''
+import { Star, DollarSign } from './lucide-react';'
+interface ProductListingCardProps {
+  // TODO: Implement
+
+}
+  listing: ProductListing,'
+  view?: 'grid' | 'list';'
+  // Handle image loading errors;
+
+  const handleImageError = (e: React.SyntheticEvent<HTMLImageElement>) => {
+</HTMLImageElement>
+  const handleImageError = (e: React.SyntheticEvent<HTMLImageElement>) => {
+</HTMLImageElement>
+  const handleImageError = (e: React.SyntheticEvent < HTMLImageElement>) =>: any {
+  // TODO: Implement
+}'
+    e.current_target.src = '/placeholder.svg';'
   }
 ;
   // Handle navigating to listing detail;
   const handleViewListing = () =>: any {
+  // TODO: Implement
+}
+
     navigate (`/listing/${listing.id}`);
   }
 ;
@@ -126,6 +228,20 @@ if ( {) {
   $2
 }
       onRequestQuote (listing.id);
+  // TODO: Implement
+}
+    e.prevent_default ();
+    e.stop_propagation (),
+    // Check condition;
+
+if ( {) {
+  $2;
+}
+      onRequestQuote (listing.id);
+    } else {
+  // TODO: Implement
+}
+
       // Default behavior if no handler provided;
       navigate (`/request - quote?listing=${listing.id}`);
     }
@@ -311,6 +427,7 @@ if ( {) {
       navigate (`/request - quote?listing=${listing.id}`);
 
 
+
   // Get the first image or use a placeholder;
   const imageUrl = listing && listing.images && listing && listing.images.length > 0 ;
     ? listing && listing.images[0] ;
@@ -367,6 +484,11 @@ if ( {) {
                   className="text-xs text-zion-slate bg-zion-blue-light/20 px-2 py-1 rounded-full""
                 >
 </span>
+
+                </span>
+            </div>
+
+        </div>"
         <div className="flex items-center justify-between mt-auto pt-3 border-t border-zion-blue-light">"
           <div className="text-sm font-medium">"
               <div className="flex items-center text-zion-purple">"
@@ -410,6 +532,12 @@ if ( {) {
             <div className="flex flex-wrap gap-1 mb-4">;"
                   key={idx} "
                   className="text-xs text-zion-slate bg-zion-blue-light/20 px-2 py-1 rounded-full">;"
+</span>
+
+                </span>;
+            </div>;
+
+        </div>;"
         <div className="flex items-center justify-between mt-auto pt-3 border-t border-zion-blue-light">;"
           <div className="text-sm font-medium">;"
               <div className="flex items-center text-zion-purple">;"
@@ -482,3 +610,9 @@ return (<div className= {`;
               
     </div>"`;
 pr-12325
+              </Button>
+          </div>
+        </div>
+      </div>
+    </div>"
+

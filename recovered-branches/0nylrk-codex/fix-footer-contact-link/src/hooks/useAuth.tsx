@@ -1,4 +1,5 @@
 
+
 import React, { create_context, useContext, useState, useEffect, ReactNode } from './react';
 import { supabase } from '@/integrations / supabase / client';
 import { AuthContext } from '@/context / auth / AuthContext';
@@ -9,6 +10,7 @@ export interface UserDetails {
 }
 pr-12325
   id?: string;
+
   name?: string;
   email?: string;
   user_type?: string;
@@ -33,6 +35,17 @@ import { AuthContext } from "@/context/auth/AuthContext";
 import type { UserDetails as AuthUserDetails } from "@/types/auth";
 // Define types for our context
 export interface UserDetails {
+
+  role?: string;"
+import React, { createContext, useContext, useState, useEffect, ReactNode } from "react",""
+import { supabase } from "@/integrations/supabase/client",""
+import { AuthContext } from "@/context/auth/AuthContext";""
+import type { UserDetails as AuthUserDetails } from "@/types/auth";"
+
+// Define types for our context;
+export interface UserDetails {
+  // TODO: Implement
+}
   id?: string;
   name?: string;
   email?: string;
@@ -59,6 +72,7 @@ pr-12325
   permissions?: string[],
   companyId?: string;
   bio?: string;
+
   createdAt?: string;
   updatedAt?: string
 }
@@ -73,9 +87,11 @@ export interface AuthContextType {
 }"
 import { AuthContext } from "@/context/auth/AuthContext",""
 import type { UserDetails as AuthUserDetails } from "@/types/auth","
+
 // Define types for our context;
   // TODO: Implement
 pr-12325
+}
   id?: string,
   name?: string,
   email?: string,
@@ -88,6 +104,7 @@ pr-12325
   permissions?: string[],
   companyId?: string,
   bio?: string,
+
   createdAt?: string,
   updatedAt?: string
 import React, { createContext, useContext, useState, useEffect, ReactNode } from "react",;
@@ -103,6 +120,7 @@ import { supabase } from "@/integrations/supabase/client",;""
 import { AuthContext } from "@/context/auth/AuthContext",;""
 import type { UserDetails as AuthUserDetails } from "@/types/auth",;"
 pr-12325
+
 // Define types for our context;
 export interface UserDetails {;
   id?: string,;
@@ -117,6 +135,7 @@ export interface UserDetails {;
   permissions?: string[],;
   companyId?: string,;
   bio?: string,;
+
   createdAt?: string,;
   updatedAt?: string;
 }
@@ -124,12 +143,25 @@ export interface UserDetails {;
 // Define types for our context;
   // TODO: Implement
 pr-12325
+}
+  id?: string;
+  name?: string;
+  email?: string;
+  user_type?: string;
+  display_name?: string;
+  avatar_url?: string;
+  headline?: string;
+  profile_complete?: boolean;
+  role?: string;
+
+}
 ;
 export interface AuthContextType {;
   user: UserDetails | null,;
-  isAuthenticated: boolean,;
-  isLoading: boolean,;
+  isAuthenticated: boolean,;}
+  isLoading: boolean,;}
   signIn: (email: string, password: string) => Promise<{ error: any }>,;
+
   signOut: () => Promise<void>,;
   signUp: (email: string, password: string, userData?: Partial<UserDetails>) => Promise<{ error: any }>,;
   // Aliases for compatibility with other components;
@@ -319,6 +351,25 @@ export function AuthProvider({ children }: { children: ReactNode }) {;
     signIn;
     signOut;
     signUp;
+</void>
+  signUp: (email: string, password: string, userData?: Partial<UserDetails>) => Promise<{ error: any }>,;
+</UserDetails>
+  login: (email: string, password: string) => Promise<{ error: any }>,;
+  logout: () => Promise<void>,;
+</void>
+  signup: (email: string, password: string, userData?: Partial<UserDetails>) => Promise<{ error: any }>,;
+</UserDetails>
+  resetPassword: (email: string) => Promise<{ error: any }>,;
+  updateProfile: (data: Partial<UserDetails>) => Promise<{ error: any }>,;
+</UserDetails>
+  loginWithGoogle: () => Promise<void>,;
+</void>
+  loginWithFacebook: () => Promise<void>,;
+</void>
+  loginWithTwitter: () => Promise<void>,;
+</void>
+  loginWithWeb3: () => Promise<void>;
+</void>
   signIn: (email: string, password: string) => Promise<{ error: any }>
   signOut: () => Promise<void>
   signUp: (email: string, password: string, userData?: Partial<UserDetails>) => Promise<{ error: any }>
@@ -480,3 +531,7 @@ if ( {) {
 
   const updateProfile = async (data:Partial<UserDetails>) => {;
 pr-12325
+</UserDetails>
+  return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
+</AuthContext>"
+

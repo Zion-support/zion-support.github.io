@@ -54,6 +54,7 @@ const MobileAppRoutes = () =>: any {
 ;
 export default MobileAppRoutes;
 ;
+
 import { Route, Routes } from "react-router-dom";""
 import MobileAppPage from "../pages/MobileAppPage";""
 import MobileLaunchPage from "../pages/MobileLaunchPage";""
@@ -94,3 +95,5 @@ import OpenAppRedirect from "../pages/OpenAppRedirect","
   <OpenAppRedirect /> 
 )"
 pr-12325
+</Route>)"
+

@@ -1,4 +1,4 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 /**
  * SEO Optimizer Automation;
  * Optimizes the application for search engines;
@@ -10,11 +10,19 @@ const { execSync } = require('child_process');
 class SEOOptimizer {}
     constructor() {}
         this.projectRoot = process.cwd();
+<<<<<<< HEAD
         this.logFile = path.join(this.projectRoot, 'logs', 'seo-optimizer.log');
         this.reportFile = path.join(this.projectRoot, 'seo-optimization-report.json');
         this.ensureLogsDirectory()};
     ensureLogsDirectory() {}
         const logsDir = path.join(this.projectRoot, 'logs';);
+=======
+        this.logFile = path.join(this.projectRoot,logs,seo-optimizer.log');
+        this.reportFile = path.join(this.projectRoot,seo-optimization-report.json');
+        this.ensureLogsDirectory()};
+    ensureLogsDirectory() {}
+        const logsDir = path.join(this.projectRoot,logs';);
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
         if () {}
             fs.mkdirSync(logsDir, { "recursive": true })};"
     };
@@ -27,6 +35,7 @@ class SEOOptimizer {}
         fs.appendFileSync(this.logFile, logMessage);
         console.log(message)};
     generateSitemap() {}"
+<<<<<<< HEAD
         this.log('Generating sitemap...');
         const sitemapPath = path.join(this.projectRoot, 'public', 'sitemap.xml';);
         const pages = this.findPages(;);
@@ -34,30 +43,58 @@ class SEOOptimizer {}
         const sitemap = `<?xml version="1.0" encoding="UTF-8"?>""
 <urlset xmlns=""http": //www.sitemaps.org/schemas/sitemap/0.9">"
 </urlset>`;
+=======
+        this.log('Generating sitemap...);
+        const sitemapPath = path.join(this.projectRoot,public,sitemap.xml';);
+        const pages = this.findPages(;);
+        '
+        const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns=http": //www.sitemaps.org/schemas/sitemap/0.9">"
+</urlset>
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
 ${pages.map(page => `  <url>`})
 </url>
     <loc>https://ziontechgroup.com${page}</loc>"
     <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>
     <changefreq>weekly</changefreq>
+<<<<<<< HEAD
     <priority>0.8</priority>
+=======
+    <priority>0.8</priority>'
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
   </url>").join('\n')};
 </urlset;>;";"
         fs.writeFileSync(sitemapPath, sitemap);`;
         this.log(`Sitemap generated with ${pages.length} pages`);
         "
-        return { "status": 'success', "pages": pages.length }};"
+        return { "status": success, "pages": pages.length }};"
     findPages() {}"
+<<<<<<< HEAD
         const pagesDir = path.join(this.projectRoot, 'pages';);
         const appDir = path.join(this.projectRoot, 'app';);
         const pages = ['/'];
         // Find pages from pages directory;
+=======
+        const pagesDir = path.join(this.projectRoot,pages';);
+        const appDir = path.join(this.projectRoot,app';);
+        const pages = [/];
+        // Find pages from pages directory;
+        if () {}
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
             this.findPagesInDirectory(pagesDir, , pages)};
         // Find pages from app directory (App Router);
         if (fs.existsSync(appDir)) {}
             this.findPagesInAppDirectory(appDir, , pages)};
         return [...new Set(pages)) {}]
     ) {}
+<<<<<<< HEAD
         // Find pages from app directory (App Router);
+=======
+            this.findPagesInDirectory(pagesDir, , pages)};
+        // Find pages from app directory (App Router);
+        if (fs.existsSync(appDir)) {}
+            this.findPagesInAppDirectory(appDir, , pages)};
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
         return [...new Set(pages)}]; // Remove duplicates;
     findPagesInDirectory(dir, basePath, pages) {}
         const items = fs.readdirSync(dir;);
@@ -66,6 +103,7 @@ ${pages.map(page => `  <url>`})
             const fullPath = path.join(dir, item;);
             const stat = fs.statSync(fullPath;);
             
+<<<<<<< HEAD
                 this.findPagesInDirectory(fullPath, path.join(basePath, item), pages)} else if (item.endsWith('.js') || item.endsWith('.jsx') || item.endsWith('.ts') || item.endsWith('.tsx')) {}
                 let pagePath = path.join(basePath, item) {}
                 let pagePath = path.join(basePath, item})
@@ -74,19 +112,59 @@ ${pages.map(page => `  <url>`})
                 if ( {})
                     pagePath = basePath || '/'};
                 if (pagePath !== '/index') {}
+=======
+            if () {}
+                this.findPagesInDirectory(fullPath, path.join(basePath, item), pages)} else if (item.endsWith('.js') || item.endsWith('.jsx') || item.endsWith('.ts') || item.endsWith('.tsx')) {}
+                let pagePath = path.join(basePath, item) {}
+    ) {}
+                this.findPagesInDirectory(fullPath, path.join(basePath, item), pages)} else if (item.endsWith('.js') || item.endsWith('.jsx') || item.endsWith('.ts') || item.endsWith('.tsx')) {}
+                let pagePath = path.join(basePath, item})
+});
+                pagePath = pagePath.replace(/\.(js|jsx|ts|tsx)$/, );
+                pagePath = pagePath.replace(/\\/g,/);
+                if ({})
+                    pagePath = basePath ||/};
+                if (pagePath !==/index') {}
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
                     pages.push(pagePath)};
     findPagesInAppDirectory(dir, basePath, pages) {}
         const items = fs.readdirSync(dir) {}
      {}
+<<<<<<< HEAD
+=======
+                    pagePath = basePath ||/};
+                if (pagePath !==/index') {}
+                    pages.push(pagePath)};
+            };
+        };
+    };
+    findPagesInAppDirectory(dir, basePath, pages) {}
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
         const items = fs.readdirSync(dir})
         
             
+<<<<<<< HEAD
                 this.findPagesInAppDirectory(fullPath, path.join(basePath, item), pages)} else if (item === 'page.js' || item === 'page.jsx' || item === 'page.ts' || item === 'page.tsx') {}
                 let pagePath = basePath || ') {}
                 let pagePath = basePath || '}/;';
     generateRobotsTxt() {}
         this.log('Generating robots.txt...');
         const robotsPath = path.join(this.projectRoot, 'public', 'robots.txt';);
+=======
+            if () {}
+                this.findPagesInAppDirectory(fullPath, path.join(basePath, item), pages)} else if (item ===page.js' || item ===page.jsx' || item ===page.ts' || item ===page.tsx') {}
+                let pagePath = basePath ||) {}
+    ) {}
+                this.findPagesInAppDirectory(fullPath, path.join(basePath, item), pages)} else if (item ===page.js' || item ===page.jsx' || item ===page.ts' || item ===page.tsx') {}
+                let pagePath = basePath || }/;;
+                pagePath = pagePath.replace(/\\/g,/);
+                pages.push(pagePath)};
+        };
+    };
+    generateRobotsTxt() {}
+        this.log('Generating robots.txt...);
+        const robotsPath = path.join(this.projectRoot,public,robots.txt';);
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
         const robotsContent = "User-"agent": *"
 Allow: /
 
@@ -102,6 +180,7 @@ Disallow: /_next/,
 Crawl-delay: 1;";"
         fs.writeFileSync(robotsPath, robotsContent);"
         this.log('Robots.txt generated');
+<<<<<<< HEAD
         return { "status": 'success' }};
     createSEOMetaComponent() {}
         this.log('Creating SEO meta component...');
@@ -109,6 +188,18 @@ Crawl-delay: 1;";"
             fs.mkdirSync(componentsDir, { "recursive": true })};""
         const seoMeta = "import Head from 'next/hea) {}
         const seoMeta = "import Head from 'next/hea}d;';
+=======
+        return { "status": success}};
+    createSEOMetaComponent() {}
+        this.log('Creating SEO meta component...);
+        const componentsDir = path.join(this.projectRoot,components';);
+        if () {}
+            fs.mkdirSync(componentsDir, { "recursive": true })};
+        const seoMeta = "import Head from 'next/hea) {}
+    ) {}
+            fs.mkdirSync(componentsDir, { "recursive": true })};
+        const seoMeta = "import Head from 'next/hea}d;;
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
 interface SEOProps {}
   title?: string;
   description?: string;
@@ -122,6 +213,7 @@ interface SEOProps {}
   section?: string;
   tags?: string[]};
 export default function SEO({})
+<<<<<<< HEAD
   title = 'Zion Tech Group - Advanced Technology Solutions',
   description = 'Leading provider of cutting-edge technology solutions, AI automation, and digital transformation services.',
   keywords = 'technology, AI, automation, digital transformation, software development, consulting',
@@ -136,6 +228,22 @@ export default function SEO({})
 }: SEOProps) {}`;
   const fullTitle = title.includes('Zion Tech Group') ? title : \`\${title} | Zion Tech Group;\;`;`
   const fullDescription = description.length > 160 ? description.substring(0, 157) + '...' : descripti;o;n;
+=======
+  title = 'Zion Tech Group - Advanced Technology Solutions,
+  description = 'Leading provider of cutting-edge technology solutions, AI automation, and digital transformation services.,
+  keywords = 'technology, AI, automation, digital transformation, software development, consulting,
+  image = '"https": //ziontechgroup.com/og-image.jpg,
+  url = '"https": //ziontechgroup.com,
+  type = 'website,
+  publishedTime,
+  modifiedTime,
+  author = 'Zion Tech Group,
+  section,
+  tags = [];
+}: SEOProps) {}
+  const fullTitle = title.includes('Zion Tech Group') ? title : \`\${title} | Zion Tech Group;\;`;`
+  const fullDescription = description.length > 160 ? description.substring(0, 157) +...: descripti;o;n;
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
   return (;)
     <Head>
 
@@ -148,6 +256,7 @@ export default function SEO({})
       <meta name="robots" content="index, follow" />"
       <meta name="language" content="en" />"
       <meta name="revisit-after" content="7 days" />"
+<<<<<<< HEAD
       <meta property=""og": type" content={type} />"
       <meta property=""og": title" content={fullTitle} />"
       <meta property=""og": description" content={fullDescription} />"
@@ -164,6 +273,41 @@ export default function SEO({})
       {author && <meta property=""article": author" content={author} />};"
       {section && <meta property=""article": section" content={section} />};"
         <meta key={tag} property=""article": tag" content={tag} />"
+=======
+</meta>"
+      <meta property=og": type" content={type} />"
+</meta>"
+      <meta property=og": title" content={fullTitle} />"
+</meta>"
+      <meta property=og": description" content={fullDescription} />"
+</meta>"
+      <meta property=og": image" content={image} />"
+</meta>"
+      <meta property=og": url" content={url} />"
+</meta>"
+      <meta property=og": site_name" content="Zion Tech Group" />"
+</meta>"
+      <meta property="og:locale" content="en_US" />"
+</meta>"
+      <meta name=twitter": card" content="summary_large_image" />"
+</meta>"
+      <meta name="twitter:title" content={fullTitle} />"
+</meta>"
+      <meta name=twitter": description" content={fullDescription} />"
+</meta>"
+      <meta name=twitter": image" content={image} />"
+</meta>"
+      {publishedTime && <meta property=article": published_time" content={publishedTime} />};"
+</meta>"
+      {modifiedTime && <meta property=article": modified_time" content={modifiedTime} />};"
+</meta>"
+      {author && <meta property=article": author" content={author} />};"
+</meta>"
+      {section && <meta property=article": section" content={section} />};"
+</meta>"
+        <meta key={tag} property=article": tag" content={tag} />"
+</meta>"
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
       <link rel="canonical" href={url} />"
 </link>"
       <link rel="icon" href="/favicon.ico" />"
@@ -173,25 +317,35 @@ export default function SEO({})
       <link rel="manifest" href="/site.webmanifest" />"
 </link>
       <script;"
-        type="application/ld+json""
+        type="application/ld+json
         dangerouslySetInnerHTML={{}"
-          "__html": JSON.stringify({})""
-            "@context": "https://schema.org",""
-            "@type": "Organization",""
-            "name": "Zion Tech Group",""
-            "url": ""https": //ziontechgroup.com",""
-            "logo": ""https": //ziontechgroup.com/logo.png",""
-            "description": "Leading provider of cutting-edge technology solutions",""
-            "address": {}""
-              "@type": "PostalAddress",""
-              "addressCountry": "US""
+          "__html": JSON.stringify({})
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Zion Tech Group",
+            "url": https": //ziontechgroup.com",
+            "logo": https": //ziontechgroup.com/logo.png",
+            "description": "Leading provider of cutting-edge technology solutions",
+            "address": {}
+              "@type": "PostalAddress",
+              "addressCountry": "US
             },"
+<<<<<<< HEAD
             "contactPoint": {}""
               "@type": "ContactPoint",""
               "contactType": "customer service",""
               "email": "info@ziontechgroup.com""
             "sameAs": [""https": //linkedin.com/company/zion-tech-group",]""
               ""https": //twitter.com/ziontechgroup""
+=======
+            "contactPoint": {}
+              "@type": "ContactPoint",
+              "contactType": "customer service",
+              "email": "info@ziontechgroup.com
+            },"
+            "sameAs": [https": //linkedin.com/company/zion-tech-group"]
+              https": //twitter.com/ziontechgroup
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
             ];
           }
         }};

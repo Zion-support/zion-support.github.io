@@ -105,6 +105,7 @@ import { Textarea } from "@/components/ui/textarea",;
 import { Switch } from "@/components/ui/switch",;
 import { Badge } from "@/components/ui/badge",;
 import { Separator } from "@/components/ui/separator",;
+
 import React, { useState } from "react";""
 import {useForm} from "react-hook-form";""
 import {zodResolver} from "@hookform/resolvers/zod";""
@@ -157,11 +158,13 @@ import { Switch } from "@/components/ui/switch",;""
 import { Badge } from "@/components/ui/badge",;""
 import { Separator } from "@/components/ui/separator",;"
 pr-12325
+
 import {;
   Form,;
   FormControl,;
   FormDescription,;
   FormField,;
+
   FormItem,;
   FormLabel,;
   FormMessage} from "@/components/ui/form",;
@@ -478,6 +481,18 @@ if ( {) {
 
 
 
+        }
+
+      }
+    }
+  },
+        }
+      }
+    }
+  }
+  },
+
+
   // Handle form submission;
   const onSubmit = async (values: ServiceFormValues) => {
     if (serviceTags.length === 0) {
@@ -526,6 +541,12 @@ if ( {) {
   const onSubmit = async (values: ServiceFormValues) => {;
     if (serviceTags.length === 0) {;
 
+  },;
+  // Handle form submission;
+  const onSubmit = async (values: ServiceFormValues) => {;
+    if (serviceTags.length === 0) {;
+
+
       toast({;
         title: "Services required",;""
         description: "Please add at least one service to your profile.",;")"
@@ -534,11 +555,26 @@ if ( {) {
   // Handle form submission;
   const on_submit = async (values: ServiceFormValues) => {
     // Check condition;
+
+;
+  // Handle form submission;
+  const on_submit = async (values: ServiceFormValues) => {
+    // Check condition;
+
+if ( {) {
+  $2;
+}
       toast ({"
         title: "Services required",""
         description: "Please add at least one service to your profile.",")"
         variant: "destructive"}),"
     setIsSubmitting (true);
+
+      return;
+    }
+    setIsSubmitting (true);
+;
+    try {
 
   // TODO: Implement
       // For actual implementation with Supabase;
@@ -563,20 +599,27 @@ if ( {) {
         throw new Error("User not authenticated");"
 pr-12325
 
+      }
       // Enhance profile if not already done;
       let finalSummary = values && values.bio;
       let finalServices = serviceTags;
+
 
       if (values && values.enhancedProfile && !generatedContent) {;
         try {;
           const { data: aiData } = await supabase && supabase.functions.invoke('service-profile-enhancer', {;
             body: {;
               providerData: {;
+        try {;"
+          const { data: aiData } = await supabase && supabase.functions.invoke('service-profile-enhancer', {;'
+            body: {;,
+  providerData: {;
+
                 name: values && values.name,;
                 title: values && values.title,;
                 bio: values && values.bio,;
-                services: serviceTags,;
-                location: values && values.location;
+                services: serviceTags,;}
+                location: values && values.location;}
               }
             }
           });
@@ -589,9 +632,12 @@ pr-12325
           });
 
 pr-12325
+            })
+          });
           if (aiData) {;
             finalSummary = (aiData as any).summary || values && values.bio;
             // Merge AI suggested services with user-provided services;
+
             const aiServices = (aiData as any).services || [];
             finalServices = [...new Set([...serviceTags, ...aiServices])];
 
@@ -626,6 +672,80 @@ pr-12325
       const userEmail = userData && userData.user?.email;
         .select(),
 
+
+      }
+
+
+
+      }
+
+
+        }
+      } else if (generatedContent) {
+        finalSummary = generatedContent.summary;
+        finalServices = [...new Set([...serviceTags, ...generatedContent.services])]
+      }
+      // Get user email for notification;
+      const { data: userData } = await supabase.auth.getUser()
+      const userEmail = userData.user?.email;
+        } catch (error) {;"
+          console.error("Error enhancing profile:", error),;"
+          // Continue with submission even if enhancement fails;
+        }
+      } else if (generatedContent) {;
+        finalSummary = generatedContent.summary,;
+        finalServices = [...new Set([...serviceTags, ...generatedContent.services])];
+      }
+
+      // Get user email for notification;
+      const { data: userData } = await supabase.auth.getUser(),
+      const userEmail = userData.user?.email,
+
+      // Create the service profile;
+      const { data: profileData, error } = await supabase;"
+        .from('profiles')'
+        .update({
+          display_name: values.name;,
+  bio: finalSummary;'
+          user_type: "creator", // Set as service provider;"
+          profile_complete: true;,)
+  updated_at: new Date().toISOString()
+          headline: values.title;
+          // Additional fields that might be in profiles table;
+        })"
+        .eq('id', user.id)'
+        finalSummary = generatedContent && generatedContent.summary;
+        finalServices = [...new Set([...serviceTags, ...generatedContent && generatedContent.services])];
+
+      }
+      // Get user email for notification;
+      const { data: userData } = await supabase && supabase.auth.getUser(),;
+      const userEmail = userData && userData.user?.email;
+
+
+      // Create the service profile;
+      const { data: profileData, error } = await supabase;'
+        .from('profiles');'
+        .update({;
+          display_name: values && values.name,;
+          bio: finalSummary,;'
+          user_type: "creator", // Set as service provider;"
+          profile_complete: true,;)
+          updated_at: new Date().toISOString(),;
+          headline: values && values.title,;
+          // Additional fields that might be in profiles table;
+        });"
+        .eq('id', user && user.id);'
+        .select();
+      if (error) throw error;
+
+
+      }
+
+
+
+
+        .select(),
       if (error) throw error,
 
       // Store service-specific data in service_profiles table
@@ -1125,6 +1245,7 @@ pr-12325
 
 
 
+
       // Store service-specific data in service_profiles table;
       // (This assumes you have a service_profiles table in your database)
       /*
@@ -1251,9 +1372,14 @@ if (throw service_error) {
                               <Input;"
                                 className="pl-10 bg-zion-blue border-zion-blue-light text-white"""
                                 placeholder="Your full name""
+
                                 {...field}
                               />
 
+</Input>
+                            </div>
+
+                          </FormControl>"
                           <FormMessage className="text-red-400" />"
 
                         
@@ -1266,6 +1392,20 @@ if (throw service_error) {
 
 
                         
+                                {...field}
+                              />
+</Input>
+                            </div>
+
+                          </FormControl>"
+                          <FormMessage className="text-red-400" />"
+</FormMessage>
+                        </FormItem>
+                  </div>"
+                  <div className="col-span-1">"
+</div>
+                    <FormField;
+                      control={form.control}"
                       name="location"")
 
                           <FormLabel className="text-zion-slate-light">Location"
@@ -1275,6 +1415,20 @@ if (throw service_error) {
 
 
                         
+                                {...field}
+                              />
+</Input>
+                            </div>
+
+                          </FormControl>"
+                          <FormMessage className="text-red-400" />"
+</FormMessage>
+                        </FormItem>
+                  </div>"
+                  <div className="col-span-1">"
+</div>
+                    <FormField;
+                      control={form.control}"
                       name="website"")
 
 )"
@@ -1284,6 +1438,15 @@ if (throw service_error) {
                                 placeholder="https://yourwebsite.com""
 
 
+                                {...field}
+                              />
+</Input>
+                            </div>
+
+                          </FormControl>"
+                          <FormMessage className="text-red-400" />"
+</FormMessage>
+                        </FormItem>"
               <div style="font-family: Arial, sans-serif, max-width: 600px, margin: 0 auto,">;"
                 <h2 style="color: #6D28D9,">Service Profile Created!</h2>;"
                 <p>Your service provider profile has been successfully created and published.</p>;"
@@ -1410,6 +1573,153 @@ if (throw service_error) {
 
 
                           <FormLabel className="text-zion-slate-light">Website (optional);"
+                    />;
+</Input>
+                  </div>;"
+                  <div className="col-span-1">;"
+</div>
+                    <FormField;
+                      control={form && form.control}"
+                      name="website""
+                              <Input;"
+                                className="pl-10 bg-zion-blue border-zion-blue-light text-white";""
+                                placeholder="City, State/Province, Country";"
+        <Form {...form}>;
+</FormField>)
+          <form onSubmit={form.handleSubmit(onSubmit)}>;
+</form>"
+            <CardContent className="space-y-8">;"
+</CardContent>"
+              <div className="space-y-4">"
+</div>"
+                <h3 className="text-lg font-medium text-white">Basic Information</h3>""
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">"
+</div>"
+                  <div className="col-span-1">"
+</div>
+                    <FormField;
+                      control={form.control}"
+                      name="name""
+                      render={({ field }) => (
+</FormField>
+                        <FormItem>
+</FormItem>"
+                          <FormLabel className="text-zion-slate-light">Full Name</FormLabel>"
+                          <FormControl>
+</FormControl>"
+                            <div className="relative">"
+</div>"
+                              <UserRound className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />"
+</UserRound>
+                              <Input;"
+                                className="pl-10 bg-zion-blue border-zion-blue-light text-white"""
+                                placeholder="Your full name""
+
+                                {...field}
+                              />
+</Input>
+                            </div>
+
+                          </FormControl>"
+                          <FormMessage className="text-red-400" />"
+</FormMessage>
+                        </FormItem>
+                  </div>;"
+                  <div className="col-span-1">;"
+</div>
+                    <FormField;
+                      control={form.control}"
+                      name="title"")
+                      render={({ field }) => (
+</FormField>
+                        <FormItem>
+</FormItem>"
+                          <FormLabel className="text-zion-slate-light">Business/Service Name</FormLabel>"
+                          <FormControl>
+</FormControl>"
+                            <div className="relative">"
+</div>"
+                              <Briefcase className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />"
+</Briefcase>
+                              <Input;"
+                                className="pl-10 bg-zion-blue border-zion-blue-light text-white"""
+                                placeholder="e.g., Creative Design Studio""
+                                {...field}
+                              />
+</Input>
+                            </div>
+                          </FormControl>"
+                          <FormMessage className="text-red-400" />"
+</FormMessage>
+                        </FormItem>
+                  </div>;"
+                  <div className="col-span-1">;"
+</div>
+                    <FormField;
+                      control={form.control}"
+                      name="location"")
+                      render={({ field }) => (
+</FormField>
+                        <FormItem>
+</FormItem>"
+                          <FormLabel className="text-zion-slate-light">Location</FormLabel>"
+                          <FormControl>
+</FormControl>"
+                            <div className="relative">"
+</div>"
+                              <MapPin className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />"
+</MapPin>
+                              <Input;"
+                                className="pl-10 bg-zion-blue border-zion-blue-light text-white"""
+                                placeholder="City, State/Province, Country""
+                                {...field}
+                              />
+</Input>
+                            </div>
+                          </FormControl>"
+                          <FormMessage className="text-red-400" />"
+</FormMessage>
+                        </FormItem>
+                  </div>;"
+                  <div className="col-span-1">;"
+</div>
+                    <FormField;
+                      control={form.control}"
+                      name="website"")
+                      render={({ field }) => (
+</FormField>
+                        <FormItem>
+</FormItem>)"
+                          <FormLabel className="text-zion-slate-light">Website (optional)</FormLabel>"
+                          <FormControl>
+</FormControl>"
+                            <div className="relative">"
+</div>"
+                              <Globe className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />"
+</Globe>
+                              <Input;"
+                                className="pl-10 bg-zion-blue border-zion-blue-light text-white"""
+                                placeholder="https://yourwebsite.com""
+                                {...field}
+                              />;
+</Input>
+                            </div>;
+                          </FormControl>;
+                  </div>;"
+                  <div className="col-span-1">;"
+</div>
+                    <FormField;
+                      control={form && form.control}"
+                      name="website""
+                      render={({ field }) => (;
+</FormField>
+                        <FormItem>;
+</FormItem>)"
+                          <FormLabel className="text-zion-slate-light">Website (optional)</FormLabel>;"
+                          <FormControl>;
+</FormControl>"
+                            <div className="relative">;"
+</div>"
                               <Globe className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />;"
 
                                 placeholder="https://yourwebsite && yourwebsite.com"""
@@ -1423,6 +1733,19 @@ if (throw service_error) {
 
 
                         ;                      )}
+                                {...field}
+                              />;
+</Input>
+                            </div>;
+                          </FormControl>;
+
+                  </div>;
+                </div>;"
+                          <FormMessage className="text-red-400" />;"
+</FormMessage>
+                        </FormItem>;                      )}
+                  </div>;
+                </div>;"
                 <div className="space-y-2">;"
                   <FormLabel className="text-zion-slate-light">Profile Picture;""
                   <div className="flex items-center gap-6">;"
@@ -1523,6 +1846,15 @@ if (throw service_error) {
                                 key={index}"
                                 className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none">;"
 
+</Badge>
+                              </Badge>;
+
+                          </div>;
+                        </div>;
+                    </div>;
+                  </div>;
+
+              </div>;"
               <Separator className="bg-zion-blue-light/50" />;"
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;"
                   <h3 className="text-lg font-medium text-white">Services Offered</h3>;"
@@ -1674,6 +2006,16 @@ if (throw service_error) {
                               <label html_for="unavailable" className="text - white flex items - center gap - 2">;"
                                 <div className="h - 2 w - 2 rounded - full bg - red - 500"></div>;""
                                 <div className="h-2 w-2 rounded-full bg-red-500"></div>;"
+                              </label>;
+                            </div>;
+                          </div>;
+                        </FormControl>;
+                </div>;
+              </div>;
+            </CardContent>;
+                </Button>;
+              </div>;
+            </CardFooter>;
           </form>;
     </div>);
 //Handle avatar upload const handleAvatarUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -1710,3 +2052,10 @@ max-w-4xl mx-auto p-4 md:p-6"> <Card className=" bg-zion-blue-dark border-zion-b
 }/> <FormField <FormControl> <div className=" space-y-2"> <div className=" flex items-center space-x-2"> <input /> <label htmlFor=" available"className=" text-white flex items-center gap-2"> <div className=" h-2 w-2 rounded-full bg-green-500"></div> Available for Work </label> </div> <div className=" flex items-center space-x-2"> <input /> <label htmlFor=" limited"className=" text-white flex items-center gap-2"> <div className=" h-2 w-2 rounded-full bg-yellow-500"></div> Limited Availability </label> </div> <div className=" flex items-center space-x-2"> <input /> <label htmlFor=" unavailable"className=" text-white flex items-center gap-2"> <div className=" h-2 w-2 rounded-full bg-red-500"></div> Currently Unavailable </label> </div> </div>  <FormMessage className=" text-red-400"/> )"
 }/> </div> </div>  <CardFooter className=" border-t border-zion-blue-light pt-6"> <div className=" flex flex-col sm:flex-row gap-4 w-full sm:justify-between"> <Button type=" button"variant=" outline"className=" border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white" > Save as Draft  <Button  </div>  </form>   </div>)""`;
 pr-12325
+</Badge>"
+}<button > <X className=" h-3 w-3"/> </button> </Badge>) )""
+}</div> </div> <FormItem> <FormLabel className=" text-zion-slate-light">Starting Rate (USD) </FormLabel> <FormControl> <div className=" relative"> <span className=" absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate">$</span> <Input /> </div> </FormControl> <FormDescription className=" text-zion-slate"> Your base hourly or project rate </FormDescription> <FormMessage className=" text-red-400"/> </FormItem>)""
+}/> <FormField <FormControl> <div className=" space-y-2"> <div className=" flex items-center space-x-2"> <input /> <label htmlFor=" available"className=" text-white flex items-center gap-2"> <div className=" h-2 w-2 rounded-full bg-green-500"></div> Available for Work </label> </div> <div className=" flex items-center space-x-2"> <input /> <label htmlFor=" limited"className=" text-white flex items-center gap-2"> <div className=" h-2 w-2 rounded-full bg-yellow-500"></div> Limited Availability </label> </div> <div className=" flex items-center space-x-2"> <input /> <label htmlFor=" unavailable"className=" text-white flex items-center gap-2"> <div className=" h-2 w-2 rounded-full bg-red-500"></div> Currently Unavailable </label> </div> </div> </FormControl> <FormMessage className=" text-red-400"/> </FormItem>)"
+</FormField>"
+}/> </div> </div> </CardContent> <CardFooter className=" border-t border-zion-blue-light pt-6"> <div className=" flex flex-col sm:flex-row gap-4 w-full sm:justify-between"> <Button type=" button"variant=" outline"className=" border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white" > Save as Draft </Button> <Button </Button> </div> </CardFooter> </form> </Form> </Card> </div>)""
+

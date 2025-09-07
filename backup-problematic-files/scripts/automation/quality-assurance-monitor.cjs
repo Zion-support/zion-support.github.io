@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 #!/usr/bin/env node;
+=======
+#!/usr/bin/env node
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -10,10 +14,11 @@ class QualityAssuranceMonitor {}
     this.startTime = Date.now()};
   log(message, type = 'info') {}
     const timestamp = new Date().toISOString();
-    console.log(`[${timestamp}] [${type.toUpperCase()}] ${message}`)};
+    console.log(`[${timestamp}] [${type.toUpperCase()}] ${message})};
   async runCommand(command, options = {}) {}
     try {}
       const result = execSync(command, {})
+<<<<<<< HEAD
         "cwd": this.projectRoot,""
         "encoding": 'utf8',
         "stdio": options.silent ? 'pipe' : 'inherit',
@@ -40,17 +45,59 @@ class QualityAssuranceMonitor {}
         "type": 'eslint',
         "severity": 'medium',
         "description": 'ESLint errors found',
+=======
+        "cwd": this.projectRoot,
+        "encoding": utf8,
+        "stdio": options.silent ? 'pipe: inherit,
+        ...options;
+      }
+});
+      return { "success": true, "output": result }} catch (error) {}
+      return { "success": false, "output": error.stdout || error.stderr || error.message }};"
+  };
+  async checkCodeQuality() {}"
+    this.log('Running quality assurance checks...);
+    // Check TypeScript errors;
+    const tsResult = await this.runCommand('npx tsc --noEmit, { "silent": true }")
+});
+    if (!tsResult.success) {}
+      this.issuesFound.push({})"
+        "type": typescript,
+        "severity": high,
+        "description": TypeScript compilation errors found,
+        "details": tsResult.output.substring(0, 500);"
+      })};
+    // Check ESLint errors;"
+    const eslintResult = await this.runCommand('npx eslint src/**/*.{js,jsx,ts,tsx}, { "silent": true }")
+});
+    if (!eslintResult.success) {}
+      this.issuesFound.push({})"
+        "type": eslint,
+        "severity": medium,
+        "description": ESLint errors found,
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
         "details": eslintResult.output.substring(0, 500);"
     // Check for security vulnerabilities;"
+<<<<<<< HEAD
     const auditResult = await this.runCommand('npm audit --audit-level=high', { "silent": true }")
     if (!auditResult.success) {}
         "type": 'security',
         "description": 'Security vulnerabilities found',
+=======
+    const auditResult = await this.runCommand('npm audit --audit-level=high, { "silent": true }")
+});
+    if (!auditResult.success) {}
+      this.issuesFound.push({})"
+        "type": security,
+        "severity": high,
+        "description": Security vulnerabilities found,
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
         "details": auditResult.output.substring(0, 500);"
       })};`;
     this.log(`Quality assurance check completed. Found ${this.issuesFound.length} issues.`);
     return this.issuesFound};
   async run() {}"
+<<<<<<< HEAD
     this.log('Starting Quality Assurance Monitor...');
       const issues = await this.checkCodeQuality();
       if (issues.length > 0) {}`;
@@ -61,6 +108,19 @@ class QualityAssuranceMonitor {}
         this.log('No quality issues found', 'info')};
       return { "success": true, "issuesFound": issues.length }} catch (error) {}""`;
       this.log(`Error during quality "check": ${error.message}`, 'error');
+=======
+    this.log('Starting Quality Assurance Monitor...);
+    try {}
+      const issues = await this.checkCodeQuality();
+      if (issues.length > 0) {}
+        this.log(`Found ${issues.length} quality issues that need attention`,warn');
+        for (const issue of issues) {}
+          this.log(`${issue.type.toUpperCase()}: ${issue.description},warn')};
+      } else {}
+        this.log('No quality issues found,info')};
+      return { "success": true, "issuesFound": issues.length }} catch (error) {}
+      this.log(`Error during quality "check": ${error.message},error');
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
       return { "success": false, "error": error.message }};"
 if (require.main === module) {}
   const monitor = new QualityAssuranceMonitor();

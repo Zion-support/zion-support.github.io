@@ -232,6 +232,7 @@ const productSchema = z.object({
                 </FormItem>;
               )}}
 
+
 import React from "react";""
 import {useForm} from "react-hook-form";""
 import {zodResolver} from "@hookform/resolvers/zod";""
@@ -534,6 +535,15 @@ if ( {) {
                       className="cursor-pointer""
 
 
+                    />;
+</Input>
+                  </FormControl>;
+
+                  <FormDescription>;
+</FormDescription>
+                  </FormDescription>;
+                  <FormMessage />;
+</FormMessage>"
                     <div className="mt-2 w-full max-w-md border rounded overflow-hidden">;"
                       <AspectRatio ratio={3/2}>;
 
@@ -543,6 +553,13 @@ if ( {) {
               name="image"""
                           className="w-full h-full object-cover""
 </img>
+
+                        />;
+</img>
+                      </AspectRatio>;
+                    </div>;
+
+                </FormItem>;"
             <div className="flex justify-end">;"
               <Button;"
                 type="submit""
@@ -616,3 +633,15 @@ return (<Tabs value= {
       
     "`;
 pr-12325
+}/> <FormField <FormItem> <FormLabel>Category</FormLabel> <FormControl> <select > <option value="">Select a category</option> <option value=" digital product">Digital Product</option> <option value=" service">Service</option> <option value=" ai tool">AI Tool</option> <option value=" course">Course</option> <option value=" template">Template</option> <option value=" other">Other</option> </select> </FormControl> <FormMessage /> </FormItem>)"
+</FormField>
+}/> </div> <FormField </FormControl> <FormDescription> Add relevant tags to help users find your product (e.g., ai, productivity, design) </FormDescription> <FormMessage /> </FormItem>) 
+</FormField>"
+}/> <FormField <FormItem> <FormLabel>Product Image</FormLabel> <FormControl> <Input type=" file"accept=" image/*"onChange= {"
+</FormField>"
+}className=" cursor-pointer"/> </FormControl> <FormDescription> Upload a high-quality image of your product (recommended size: 1200x800px) </FormDescription> <FormMessage /> /> </AspectRatio> </div>)"
+}</FormItem>) "
+}/> <div className=" flex justify-end"> <Button </Button> </div> </form> </Form> </TabsContent> <TabsContent value=" ai" > <AIListingGenerator /> </TabsContent> </Tabs>)"
+      </TabsContent>
+    </Tabs>"
+

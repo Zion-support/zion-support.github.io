@@ -6,6 +6,7 @@ import { Check, X } from "lucide-react";
 import {
 
 
+
 import React from "react";""
 import {Button} from "@/components/ui/button";""
 import {Check, X} from "lucide-react";""
@@ -14,6 +15,7 @@ import {Badge} from "@/components/ui/badge";""
 import React from "react",""
 import { Button } from "@/components/ui/button";""
 import { Check, X } from "lucide-react";"
+
 import {
   // TODO: Implement
 }
@@ -21,6 +23,7 @@ pr-12325
   Table;
   TableBody;
   TableCell;
+
   TableHead;
   TableHeader;
   TableRow} from "@/components/ui/table",
@@ -35,9 +38,14 @@ import { Button } from "@/components/ui/button",""
 import { Check, X } from "lucide-react","
   // TODO: Implement
 pr-12325
+
+import {
+  // TODO: Implement
+}
   Table,
   TableBody,
   TableCell,
+
   TableHead,
   TableHeader,
   TableRow} from "@/components/ui/table",
@@ -335,6 +343,16 @@ export function EnterprisePricingTable() {
 
                       ;
                     </div>;
+                        className={`mt-4 w-full ${plan && plan.popular ? 'bg-zion-purple hover:bg-zion-purple/90' : ''}`}''
+                        variant={plan && plan.popular ? 'default' : 'outline'}>;'
+</Button>
+
+                      </Button>;
+                    </div>;
+                  </TableHead>;
+              </TableRow>;
+            </TableHeader>;
+
             <TableBody>;
 
                 <TableRow key={feature && feature.name}>;
@@ -380,6 +398,19 @@ export function EnterprisePricingTable() {
 
 
                   <TableCell className="font - medium">{feature.name};""`;
+</Button>
+
+                      </Button>;
+                    </div>;
+                  </TableHead>))}
+              </TableRow>;
+            </TableHeader>;
+
+            <TableBody>;
+</TableBody>
+                <TableRow key={feature.name}>;
+</TableRow>'
+                  <TableCell className="font - medium">{feature.name}</TableCell>;""
                     <TableCell key={`${plan.name}-${feature.name}`} className="text - center">;"
 features: [ return (<section id=" pricing"className="py-20 px-4 md:px-6"> plans.map ( (plan) => (<TableHead key= {"
 }className="text-center"> <div className="flex flex-col items-center"> {"
@@ -447,3 +478,8 @@ features: [ return (<section id=" pricing"className="py-20 px-4 md:px-6"> plans.
         <div className="mt-8 text-center text-sm text-muted-foreground">"
     </section>"`;
 pr-12325
+</div>
+        </div>
+      </div>
+    </section>"
+

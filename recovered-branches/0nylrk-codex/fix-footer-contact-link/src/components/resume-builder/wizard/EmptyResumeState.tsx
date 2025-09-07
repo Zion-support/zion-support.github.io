@@ -32,6 +32,7 @@ export const EmptyResumeState = ({ onCreateClick }: EmptyResumeProps) => {
     </Card>);
 }
 ;
+
 import { Card, CardContent } from "@/components/ui/card";""
 import { Button } from "@/components/ui/button";""
 import { FilePlus } from "lucide-react";""
@@ -76,3 +77,6 @@ export const EmptyResumeState = ({ onCreateClick }: EmptyResumeProps) => {
       ;)
     );"
 pr-12325
+      </CardContent>;)
+    </Card>);"
+

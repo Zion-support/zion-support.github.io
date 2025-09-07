@@ -111,6 +111,7 @@ if ( {) {
       <Footer />;
     </ProtectedRoute>);
 }
+
 import React from "react";""
 import { Header } from "@/components/Header";""
 import { Footer } from "@/components/Footer";""
@@ -149,10 +150,16 @@ export default function EnterpriseBilling() {
 
         title="Enterprise Billing - Zion AI Marketplace";""
         description="Manage your subscription, view invoice history, and download billing statements.";"
+
       />;
 
       <Header />;
       <main className="min - h-screen bg - background">;"
+
+</Header>"
+      <main className="min - h-screen bg - background">;"
+</main>
+
         <BillingDashboard />;
 
       </main>;
@@ -161,3 +168,8 @@ export default function EnterpriseBilling() {
     );"
 }Enterprise Billing - Zion AI Marketplace"description=" Manage your subscription, view invoice history, and download billing statements."/> <Header /> <main className=" min-h-screen bg-background" > <BillingDashboard /> </main> <Footer /> )"
 pr-12325
+</Footer>
+    </ProtectedRoute>);"
+}Enterprise Billing - Zion AI Marketplace"description=" Manage your subscription, view invoice history, and download billing statements."/> <Header /> <main className=" min-h-screen bg-background" > <BillingDashboard /> </main> <Footer /> </ProtectedRoute>)"
+</Header>"
+

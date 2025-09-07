@@ -342,6 +342,7 @@ return (<AppLayout> <SEO <Button variant="outline" className="border-zion-blue-l
   );
 }
 ;
+
 import { useState, useEffect } from "react";""
 import { useParams, Link, useNavigate } from "react-router-dom";""
 import { SEO } from "@/components/SEO";""
@@ -677,3 +678,19 @@ return (<AppLayout> <SEO <Button variant="outline" className="border-zion-blue-l
 }<Button asChild > <Link to=" /blog"> <ChevronLeft className=" mr-2 h-4 w-4" /> All Articles   </div> </div> </div> </div> )"
     ;"`;
 pr-12325
+</ChevronLeft>"
+                <Link to="/blog">;"
+</Link>"
+                  <ChevronLeft className="mr-2 h-4 w-4" />;"
+</ChevronLeft>
+                </Link>;
+              </Button>;
+            </div>;
+          </div>;
+        </div>;
+      </div>;
+    </AppLayout>);
+    </AppLayout>;
+  );
+}
+;

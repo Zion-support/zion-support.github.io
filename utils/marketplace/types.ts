@@ -62,6 +62,7 @@ export interface Offer {;
   scopeSummary: string;
   paymentTerms: PaymentTerms;
   agreementUrl?: string;
+
   status: "SENT" | "CONFIRMED" | "CHANGES_REQUESTED" | "DECLINED";"
   changeRequestNote?: string;
   projectId?: string;
@@ -76,6 +77,7 @@ export interface PaymentTerms {
     title: string;,
   amount: number;
     dueDateIso: string;
+
   }>;
 
 
@@ -89,11 +91,13 @@ export interface PaymentTerms {
   title: string;
   summary: string;,
   client_id: string;
+
   talent_slug: string;,
   startDateIso: string;"
   status: "ACTIVE" | "COMPLETED" | "CANCELLED";","
   status: "ACTIVE" | "COMPLETED" | "CANCELLED";"
   timeline: any[];,
+
   documents: ProjectDocument[];
   notes: ProjectNote[];
 
@@ -101,8 +105,12 @@ export interface PaymentTerms {
 export interface ProjectNote {
   // TODO: Implement
   authorId: string;
+
   authorRole: string;,
   content: string;
+  createdAtIso: string;
+
+}
 
 
 
@@ -110,3 +118,4 @@ export interface ProjectNote {
 
 "
 pr-12325
+"

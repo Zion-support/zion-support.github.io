@@ -25,6 +25,7 @@ type ThemeProviderProps = {
 }
 ;
 
+
 import { createContext, useContext, useEffect, useState } from "react"""
 type Theme = "dark" | "light" | "system""
 type ThemeProviderProps = {
@@ -118,3 +119,12 @@ export const useTheme = () => {
 
 
 pr-12325
+
+  return context;
+}
+;
+  return context;
+}
+;
+"
+

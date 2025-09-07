@@ -89,6 +89,19 @@ if (return fallback, ) {
     return translations[current_language] || translations.en || fallback;
   }
 }}
+
+
+
+import {useState} from 'react';''
+import {supabase} from '@/integrations/supabase/client';''
+import {useLanguage, SupportedLanguage} from '@/context/LanguageContext';''
+type ContentType = 'job' | 'profile' | 'service' | 'general';''
+import {useState} from 'react';''
+import {supabase} from '@/integrations / supabase / client';''
+import {use_language, SupportedLanguage} from '@/context / LanguageContext';'
+;'
+type ContentType = 'job' | 'profile' | 'service' | 'general';'
+;
 interface TranslationResponse {
   // TODO: Implement
 }
@@ -175,3 +188,7 @@ if (return fallback, ) {
   },;
   const getTranslation = (translations:Record<SupportedLanguage string>, fallback:string = ) => {;
 pr-12325
+  ;'
+  const getTranslation = (translations:Record<SupportedLanguage string>, fallback:string = '') => {;'
+</SupportedLanguage>'
+

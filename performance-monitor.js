@@ -3,9 +3,8 @@
 pr-12325
 const fs = require('fs');
 const path = require('path');
+
 class PerformanceMonitor {
-  // TODO: Implement
-}
   constructor() {
     this.metrics = {
       bundleSize: 0,
@@ -31,6 +30,19 @@ class PerformanceMonitor {
   generateReport() {
     const report = {
 origin/cursor/automate-test-improve-and-merge-code-2533
+      }
+    } catch(error) {
+      console.error('Error measuring bundle size:', error);
+    }
+  }
+
+  async measureMemoryUsage() {
+    const usage = process.memoryUsage();
+    this.metrics.memoryUsage = usage.heapUsed / 1024 / 1024; // MB
+  }
+
+  generateReport() {
+    const report = {
       timestamp: this.metrics.timestamp,
       bundleSize: this.metrics.bundleSize,
       memoryUsage: this.metrics.memoryUsage,
@@ -44,6 +56,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       report.recommendations.push('Consider code splitting to reduce bundle size');
     if (this.metrics.memoryUsage > 100) {
       report.recommendations.push('Consider optimizing memory usage');
+    
+    if (this.metrics.bundleSize > 1000000) {
+      report.recommendations.push('Consider code splitting to reduce bundle size');
+    }
+    if (this.metrics.memoryUsage > 100) {
+      report.recommendations.push('Consider optimizing memory usage');
+    }
     
     return report;
 

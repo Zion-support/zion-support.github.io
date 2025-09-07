@@ -2,8 +2,8 @@
 
 pr-12325
   key?: string | number; // Added key prop;
+key?: string | number; // Added key prop;
 }
-
 export function FeatureCard(): any ({;
   title,;
   description,;
@@ -13,10 +13,15 @@ export function FeatureCard(): any ({;
 pr-12325
 }: FeatureCardProps) {;
 
+  icon,;
+  className,;)
+
+}: FeatureCardProps) {;
   return (
 
     <div
       className={cn(interface FeatureCardProps {
+
     <div;
       className={cn(
 
@@ -24,6 +29,7 @@ pr-12325
 interface FeatureCardProps {
   // TODO: Implement
 pr-12325
+}
   title: string,
   description: string,
   icon: React.ReactNode,
@@ -166,3 +172,4 @@ export function FeatureCard({ title, description, icon, className }: FeatureCard
   cn (</div> </div>) 
     </div>;"
 pr-12325
+

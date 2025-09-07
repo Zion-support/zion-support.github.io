@@ -5,6 +5,7 @@ pr-12325
   Select,
   SelectContent,
   SelectItem,
+
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
@@ -152,3 +153,6 @@ export function SortFilter({ sortOption, setSortOption }: SortFilterProps) {
 </div>)"
 }> <SelectTrigger className="bg-zion-blue border-zion-blue-light text-white" > <SelectValue placeholder="Sort by" /> bg-zion-blue border-zion-blue-light text-white"> <SelectItem value=" relevance">Relevance <SelectItem value=" rating">Highest Rating <SelectItem value=" experience">Most Experienced <SelectItem value=" price-low">Price: Low to High <SelectItem value=" price-high" >Price: High to Low   </div>)"
 pr-12325
+}> <SelectTrigger className="bg-zion-blue border-zion-blue-light text-white" > <SelectValue placeholder="Sort by" /> bg-zion-blue border-zion-blue-light text-white"> <SelectItem value=" relevance">Relevance</SelectItem> <SelectItem value=" rating">Highest Rating</SelectItem> <SelectItem value=" experience">Most Experienced</SelectItem> <SelectItem value=" price-low">Price: Low to High</SelectItem> <SelectItem value=" price-high" >Price: High to Low</SelectItem> </SelectContent> </Select> </div>)"
+</SelectTrigger>"
+

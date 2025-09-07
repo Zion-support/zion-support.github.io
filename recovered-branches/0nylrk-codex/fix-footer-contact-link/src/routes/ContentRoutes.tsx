@@ -15,6 +15,7 @@ import VideoCall from "@/pages/VideoCall";
 
 import ProjectRoom from "@/pages/ProjectRoom",
 import VideoCall from "@/pages/VideoCall",
+
 import { Fragment } from "react";""
 import { Route, Routes, Navigate } from "react-router-dom";""
 import Home from "@/pages/Home";""
@@ -151,6 +152,7 @@ const ContentRoutes = () =>: any {
 export default ContentRoutes;
 ;
 "
+</Routes>"
       <Route path="/" element={<Home />} />"
       <Route path="/home" element={<Home />} />"
       <Route path="/about" element={<About />} />"
@@ -217,3 +219,5 @@ export default ContentRoutes;
   <SitemapPage /> 
 )"
 pr-12325
+</Route>)"
+

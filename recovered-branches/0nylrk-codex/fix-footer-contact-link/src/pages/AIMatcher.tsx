@@ -114,6 +114,7 @@ if (|| category === "hardware") {) {
       }
     });
   }
+
 import { useState } from "react";""
 import { useNavigate } from "react-router-dom";""
 import { Header } from "@/components/Header";""
@@ -169,16 +170,45 @@ export default function AIMatcherPage() {
                   
                 
               
+</SelectValue>
+                </SelectTrigger>"
+                <SelectContent className="bg-zion-blue-dark border border-zion-blue-light">"
+</SelectContent>"
+                  <SelectItem value="all" className="text-white">"
+</SelectItem>
+                  </SelectItem>"
+                  <SelectItem value="service" className="text-white">"
+</SelectItem>
+                  </SelectItem>"
+                  <SelectItem value="talent" className="text-white">"
+</SelectItem>
+                  </SelectItem>"
+                  <SelectItem value="equipment" className="text-white">"
+</SelectItem>
+
+                  </SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
+
 
             <AIMatchmaker;"
               serviceType={selectedCategory === "all" ? "" : selectedCategory}"
+
               onMatchSelect={handleMatchSelect}
             />
 
       <Footer />
 
+</AIMatchmaker>
+          </div>
+        </div>
+      </div>
+      <Footer />
+</Footer>
     </>
   );
+
 }"
         category === "data science" || category === "development") {""
       item_type = "talent";"
@@ -195,6 +225,7 @@ if (|| category === "hardware") {) {"
   service_type: item_type,
         specific_item: match.item;
       })
+
     });
 pr-12325
 ;
@@ -229,6 +260,8 @@ pr-12325
             <AIMatchmaker;
               service_type={selected_category === "all" ? "" : selected_category}
               onMatchSelect={handleMatchSelect}
+
+</Header>"
       <div className="min - h-screen bg - zion - blue py - 12 px - 4">;"
         <div className="container mx - auto">;"
           <div className="text - center mb - 12">;"
@@ -271,3 +304,12 @@ specificItem: match.item;
 min-h-screen bg-zion-blue py-12 px-4"> <div className=" container mx-auto"> <div className=" text-center mb-12"> <GradientHeading>AI Matchmaker <p className=" mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto"> Describe your needs and our AI will match you with the perfect services, talents, or equipment. </p> </div> <div className=" max-w-4xl mx-auto"> <div className=" mb-8"> <label className=" block text-sm font-medium text-zion-slate-light mb-2"> I'm looking for: </label>  <SelectContent className=" bg-zion-blue-dark border border-zion-blue-light"> <SelectItem value=" all"className=" text-white">All Categories <SelectItem value=" service"className=" text-white">Services <SelectItem value=" talent"className=" text-white">Talent <SelectItem value=" equipment"className=" text-white" >Equipment   </div> <AIMatchmaker /> </div> </div> </div> <Footer /> </>)"
 "`;
 pr-12325
+min-h-screen bg-zion-blue py-12 px-4"> <div className=" container mx-auto"> <div className=" text-center mb-12"> <GradientHeading>AI Matchmaker</GradientHeading> <p className=" mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto"> Describe your needs and our AI will match you with the perfect services, talents, or equipment. </p> </div> <div className=" max-w-4xl mx-auto"> <div className=" mb-8"> <label className=" block text-sm font-medium text-zion-slate-light mb-2"> I'm looking for: </label> </SelectTrigger> <SelectContent className=" bg-zion-blue-dark border border-zion-blue-light"> <SelectItem value=" all"className=" text-white">All Categories</SelectItem> <SelectItem value=" service"className=" text-white">Services</SelectItem> <SelectItem value=" talent"className=" text-white">Talent</SelectItem> <SelectItem value=" equipment"className=" text-white" >Equipment</SelectItem> </SelectContent> </Select> </div> <AIMatchmaker /> </div> </div> </div> <Footer /> </>)"
+}
+    </>;
+  );
+}
+;
+;
+"
+

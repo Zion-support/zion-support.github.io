@@ -197,6 +197,11 @@ import {
 } from 'lucide-react';
 
 interface LayoutProps {
+import React, { ReactNode } from 'react';
+import Head from 'next/head';
+
+interface LayoutProps {
+  children: ReactNode;
   title?: string;
   description?: string;
   keywords?: string;
@@ -204,7 +209,6 @@ interface LayoutProps {
   ogTitle?: string;
   ogDescription?: string;
   ogUrl?: string;
-  children: React.ReactNode;
 }
 
 export default function Layout({ 
@@ -228,27 +232,11 @@ export default function Layout({
         <meta property="og:title" content={ogTitle || title} />
         <meta property="og:description" content={ogDescription || description} />
         <meta property="og:image" content={ogImage} />
-        <meta property="og:url" content={ogUrl || "https://ziontechgroup.com"} />
-        <meta property="og:type" content="website" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={ogTitle || title} />
-        <meta name="twitter:description" content={ogDescription || description} />
-        <meta name="twitter:image" content={ogImage} />
+        {ogUrl && <meta property="og:url" content={ogUrl} />}
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
-        <link rel="canonical" href={ogUrl || "https://ziontechgroup.com"} />
       </Head>
-      
-      <div className="min-h-screen flex flex-col bg-gray-50">
-        <Header />
-        
-        <main className="flex-1">
-          {children}
-        </main>
-        
-        <Footer />
-        
-        <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
-      </div>
+      {children}
     </>
   );
 }
@@ -277,3 +265,4 @@ main
 main
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 pr-12243
+}

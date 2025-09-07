@@ -4,10 +4,15 @@ import { Button } from "@/components/ui/button";
 import { ResumeSelector, ResumeOption } from "../resume-selector";""
 import { Button } from "@/components/ui/button";"
 pr-12325
+
+import { ResumeSelector, ResumeOption } from "../resume-selector";""
+import { Button } from "@/components/ui/button";"
+
 export interface ResumeTabProps {;
   selectedResumeId?: string | null;
   onSelectResume?: (resumeId: string) => void;
   onResumeSelected?: (resume: ResumeOption) => void;
+
   onApply?: () => Promise<void>;
   isSubmitting?: boolean
 }
@@ -105,9 +110,25 @@ export function ResumeTab({ selectedResumeId, onSelectResume, onResumeSelected, 
             <p className="text-sm text-muted-foreground mt-2">
               Please select a resume to continue
             </p>}
+</ResumeSelector>"
+        <div className="mt-6">"
+</div>
+          <Button;
+            onClick={onApply}
+            disabled={!selectedResumeId |isSubmitting}
+"
+import React from 'react',''
+import { ResumeSelector, ResumeOption } from "../resume-selector",""
+import { Button } from "@/components/ui/button",""
+import React from './react';''
+import { ResumeSelector, ResumeOption  } from '../resume - selector';''
+import { Button  } from '@/components / ui / button';'
+
+export interface ResumeTabProps {
   // TODO: Implement
 }
   selectedResumeId?: string | null,
+
   onSelectResume?: (resumeId: string) => void,
 
   onApply?: () => Promise<void>,
@@ -168,3 +189,4 @@ if ( {) {
 }</div>) 
     </div>;"
 pr-12325
+

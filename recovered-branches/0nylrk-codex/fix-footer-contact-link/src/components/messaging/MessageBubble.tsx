@@ -91,6 +91,15 @@ export function MessageBubble({ message, isUserMessage } MessageBubbleProps) {;
 }target="blank" rel="noopener noreferrer" className="flex items-center mt-2 p-2 bg-black/20 rounded text-xs hover:bg-black/30" > </div> </div> </div>) 
 }
 }
+
+
+  message: Message,
+  isUserMessage: boolean;
+import React from 'react',;''
+import { format } from 'date-fns',;''
+import { PaperclipIcon } from 'lucide-react',;''
+import { cn } from '@/lib/utils',;''
+import { Message } from '@/types/messaging',;'
 interface MessageBubbleProps {;
   message: Message,;
 
@@ -168,3 +177,4 @@ export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {
   message.attachment url;)"
 }target="blank" rel="noopener noreferrer" className="flex items-center mt-2 p-2 bg-black/20 rounded text-xs hover:bg-black/30" > </div> </div> </div>)""
 pr-12325
+

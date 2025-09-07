@@ -62,6 +62,7 @@ import {createJob, updateJob, getJobById} from "@/services/jobService";
   return {
 
 
+
 import {useState, useEffect} from "react";""
 import {supabase} from "@/integrations/supabase/client";""
 import {Job, JobStatus} from "@/types/jobs";""
@@ -176,14 +177,21 @@ if (throw fetch_error) {
   return {
   // TODO: Implement
 pr-12325
+      return false;
+
+    }
+  }
+  return {
+  // TODO: Implement
+}
     jobs;
     is_loading;
     error;
     refetch: fetch_jobs;
     updateJobStatus;
-
     delete_job;
     create_job;
+
     update_job,
     getJobById;
 
@@ -285,6 +293,7 @@ export const useJobs = (userId?: string, status?: JobStatus) => {;
 };
   }
 };
+"
 import { useState, useEffect } from "react",;""
 import { supabase } from "@/integrations/supabase/client",;""
 import { Job, JobStatus } from "@/types/jobs",;""
@@ -297,3 +306,4 @@ import { createJob, updateJob, getJobById } from "@/services/jobService",;"
   const [error, setError] = useState<string | null>(null),;
 </string>"
 pr-12325
+

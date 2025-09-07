@@ -5,6 +5,9 @@ import { supabase } from "@/integrations/supabase/client";
 import React, { useState, useEffect } from "react";""
 import { supabase } from "@/integrations/supabase/client";"
 pr-12325
+
+import React, { useState, useEffect } from "react";""
+import { supabase } from "@/integrations/supabase/client";"
 import {;
   Table,;
   TableBody,;
@@ -20,8 +23,33 @@ import { Button } from "@/components/ui/button";import {;
   DropdownMenuTrigger,;} from "@/components/ui/table";
 import { Button } from "@/components/ui/button";
 import {
+  TableRow,;"
+} from "@/components/ui/table";""
+import { Button } from "@/components/ui/button";"
+import {;
+  DropdownMenu,;
+  DropdownMenuContent,;
+  DropdownMenuItem,;
+  DropdownMenuTrigger,;
+
+
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+
+  TableHeader,
+
+  TableRow,;"
+} from "@/components/ui/table";""
+import { Button } from "@/components/ui/button";"
+
+import {
+  // TODO: Implement
+}
   DropdownMenu,
   DropdownMenuContent,
+
   DropdownMenuItem,
 DropdownMenuTrigger,;
   DropdownMenuTrigger,
@@ -358,6 +386,17 @@ if (throw error) {
                   
             
           
+
+                            )}
+                          </DropdownMenuItem>
+                        </DropdownMenuContent>
+                      </DropdownMenu>
+                    </TableCell>
+                  </TableRow>
+            </TableBody>
+          </Table>
+        </div>
+
     </div>;
 return (Refresh  </div> </div>) : (<div className="rounded-md border" > <Table> <TableHeader> <TableRow> <TableHead>Brand <TableHead>Subdomain <TableHead>Custom Domain <TableHead>Status <TableHead>Created At <TableHead className="text-right" >Actions   <TableBody> {"
   tenants.length === 0 ? (<TableRow> <TableCell colSpan= {
@@ -378,3 +417,5 @@ return (Refresh  </div> </div>) : (<div className="rounded-md border" > <Table> 
 }</div>) 
 </div>"`;
 pr-12325
+</div>"
+

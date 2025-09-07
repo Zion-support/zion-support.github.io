@@ -17,6 +17,9 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
   const dir = null;
           data[f.replace('.json', '')] = JSON.parse(fs.readFileSync(fp, 'utf8'))
 origin/cursor/automate-test-improve-and-merge-code-2533
+
+const dir = null;
+          data[f.replace('.json', '')] = JSON.parse(fs.readFileSync(fp, 'utf8'))
         }
       }
     }
@@ -27,3 +30,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 res.status(200).json({ ok: true, data });
 origin/cursor/automate-test-improve-and-merge-code-2533
+}
+    // ignore}
+  }
+res.status(200).json({ ok: true, data });
+

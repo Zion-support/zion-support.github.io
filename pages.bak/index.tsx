@@ -5,9 +5,19 @@ import * as React from 'react';
 
 interface IndexProps {
   // Add props here as needed
+
+import React from 'react';''
+import React from 'react';''
+import * as React from 'react';'
+interface IndexProps {
+  // TODO: Implement
 }
-export default function Index({ }: IndexProps) {
+  // Add props here as needed;
+
+}
+export default function Index({}: IndexProps) {
   return (
+
     <div>
       <h1>Index</h1>
       <p>This component is currently under development.</p>
@@ -90,3 +100,4 @@ module && module.exports = default function Home() { return (<main style={{paddi
       <p>This component is currently under development.</p>;
     </div>;"
 pr-12325
+

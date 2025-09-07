@@ -3,10 +3,12 @@
 import { Card } from "@/components/ui/card";
 import {
 
+
 import {Card} from "@/components/ui/card";""
 import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";""
 import {Badge} from "@/components/ui/badge";""
 import { Card } from "@/components/ui/card";"
+
 import {
   // TODO: Implement
 }
@@ -14,6 +16,7 @@ pr-12325
   Table;
   TableBody;
   TableCell;
+
   TableHead;
   TableHeader;
   TableRow} from "@/components/ui/table",
@@ -355,3 +358,64 @@ return (<Card> <div className="p-4" > hidden md:table-cell" >Details   <TableBod
 } ) ) 
 }  </div> ) ]"
 pr-12325
+</TableRow>"
+                <TableCell className="font - medium">{log.integration}</TableCell>;"
+                <TableCell>;
+</TableCell>
+                </TableCell>;
+                <TableCell>{getStatusBadge (log.status)}</TableCell>;
+                <TableCell>{new Date (log.timestamp).toLocaleString ()}</TableCell>;"
+                <TableCell className="hidden md:table - cell">{log.details}</TableCell>;"
+
+              </TableRow>))}
+          </TableBody>;
+        </Table>;
+      </div>;
+
+    </Card>);"
+      case "success": return <Badge className="bg-green-500">Success</Badge>,;""
+        return <Badge variant="destructive">Error</Badge>,;""
+        return <Badge className="bg-amber-500">Warning</Badge>;""
+        return <Badge variant="outline">Unknown</Badge>;"
+    <Card>;
+</Card>"
+      <div className="p-4">;"
+</div>
+        <Table>;
+</Table>
+          <TableHeader>;
+</TableHeader>
+            <TableRow>;
+</TableRow>
+              <TableHead>Integration</TableHead>;
+              <TableHead>Event</TableHead>;
+              <TableHead>Status</TableHead>;
+              <TableHead>Time</TableHead>;"
+              <TableHead className="hidden md:table-cell">Details</TableHead>;"
+            </TableRow>;
+          </TableHeader>;
+          <TableBody>;
+</TableBody>
+              <TableRow key={log.id}>;
+</TableRow>"
+                <TableCell className="font-medium">{log.integration}</TableCell>;"
+                <TableCell>;
+</TableCell>
+                </TableCell>;
+                <TableCell>{getStatusBadge(log.status)}</TableCell>;
+                <TableCell>{new Date(log.timestamp).toLocaleString()}</TableCell>;"
+                <TableCell className="hidden md:table-cell">{log.details}</TableCell>;"
+              </TableRow>;
+          </TableBody>;
+        </Table>;
+      </div>;
+    </Card>;"
+return (<Card> <div className="p-4" > hidden md:table-cell" >Details</TableHead> </TableRow> </TableHeader> <TableBody> {"
+</Card>)
+  syncLogs.map ( (log) => (<TableRow key= {
+  log.id;
+}> <TableCell> {
+</TableRow>)
+}</TableCell> </TableRow>) ) 
+}</TableBody> </Table> </div> </Card>) ]"
+

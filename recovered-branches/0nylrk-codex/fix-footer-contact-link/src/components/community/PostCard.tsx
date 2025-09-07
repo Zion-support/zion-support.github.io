@@ -139,6 +139,7 @@ export default PostCard;
 export default PostCard;
 
 
+
 import {formatDistanceToNow} from "date-fns";""
 import {Link} from "react-router-dom";""
 import {ThumbsUp, ThumbsDown, MessageSquare, Pin, Lock, CheckCircle} from "lucide-react";""
@@ -333,3 +334,12 @@ post.isFeatured && "bg-zion-purple/5")""
     
     ;"`;
 pr-12325
+  post.isFeatured && (<div> <Badge className="bg-zion-purple" >Featured</Badge> </div>)"
+
+}</CardFooter> </Card>) 
+      </CardFooter>
+    </Card>
+
+      </CardFooter>;
+    </Card>;"
+

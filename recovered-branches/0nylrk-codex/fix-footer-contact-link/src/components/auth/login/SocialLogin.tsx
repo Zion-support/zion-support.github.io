@@ -1,21 +1,9 @@
 
   const { loginWithGoogle, loginWithFacebook, loginWithTwitter, isLoading } =;
 
+const { loginWithGoogle, loginWithFacebook, loginWithTwitter, isLoading } =;
     useAuth();
-
   return (
-    <div className="mt-6">
-      <div className="relative">
-        <div className="absolute inset-0 flex items-center">
-          <div className="w-full border-t border-zion-blue-light" />
-        </div>
-        <div className="relative flex justify-center text-sm">
-          <span className="px-2 bg-zion-blue-dark text-zion-slate-light">
-            Or continue with
-          </span>
-        </div>
-      </div>
-      <div className="mt-6 grid grid-cols-4 gap-3">
 
         <Button
           type="button"
@@ -171,6 +159,15 @@ export function SocialLogin() {;
               fill="#34A853""
           </svg>;
         ;
+
+            />;
+</path>
+          </svg>;
+        </Button>;
+
+        <Button;"
+          type="button"""
+          variant="outline"""
           className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan""
           onClick={() => loginWithFacebook()}
           <span className="sr-only">Sign in with Facebook</span>;""
@@ -237,3 +234,4 @@ export function SocialLogin() {;
 
     </div>);"
 pr-12325
+;

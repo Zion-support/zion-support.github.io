@@ -5,6 +5,14 @@ export function useResumeBasic() {
 
 import {useFetchResume} from './useFetchResume';
 import {useResumeActions} from './useResumeActions';
+
+import { useFetchResume  } from './useFetchResume';''
+import { useResumeActions } from './useResumeActions';'
+export function useResumeBasic() {
+'
+import {useFetchResume} from './useFetchResume';''
+import {useResumeActions} from './useResumeActions';'
+
 export function useResumeBasic() {;
   const fetchResumeOperations = useFetchResume();
   const resumeActions = useResumeActions();
@@ -22,6 +30,7 @@ import {useFetchResume} from './useFetchResume';
 import {useResumeActions} from './useResumeActions';
 export /**
  * useResumeBasic - Function description
+
   // TODO: Implement
 }
     // From useFetchResume;
@@ -56,6 +65,7 @@ import { useResumeActions } from './useResumeActions',;
     // From useResumeActions;
     createResume: resumeActions && resumeActions.createResume;,
   updateBasicInfo: resumeActions && resumeActions.updateBasicInfo,
+
     setActiveResume: resumeActions && resumeActions.setActiveResume}
 export /**
  * useResumeBasic - Function description;
@@ -80,6 +90,24 @@ function useResumeBasic() {
 
 import { useFetchResume } from './useFetchResume',;
 import { useResumeActions } from './useResumeActions',;
+  // TODO: Implement
+}
+    // From useFetchResume;
+    is_loading: fetchResumeOperations.is_loading || resume_actions.is_loading;,
+  error: fetchResumeOperations.error || resume_actions.error;
+    resume: fetchResumeOperations.resume;,
+  fetch_resume: fetchResumeOperations.fetch_resume;
+;
+    // From useResumeActions;
+
+    create_resume: resume_actions.create_resume;,
+  updateBasicInfo: resume_actions.updateBasicInfo,
+    setActiveResume: resume_actions.setActiveResume}
+}
+'
+import { useFetchResume } from './useFetchResume',;''
+import { useResumeActions } from './useResumeActions',;'
+
 ;
 export function useResumeBasic() {;
   const fetchResumeOperations = useFetchResume(),;
@@ -105,11 +133,14 @@ pr-12325
     ;
 pr-12325
     // From useResumeActions;
-    createResume:resumeActions.createResume,;
-    updateBasicInfo:resumeActions.updateBasicInfo,;
+    createResume:resumeActions.createResume,;}
+    updateBasicInfo:resumeActions.updateBasicInfo,;}
     setActiveResume:resumeActions.setActiveResume},;
 } 
 }
     setActiveResume: resumeActions.setActiveResume}
+
 }
 pr-12325
+'
+

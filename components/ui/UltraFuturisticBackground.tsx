@@ -65,6 +65,17 @@ pr-12243
       <div className="relative z-10">
         {children}
       </div>
+  className?: string;
+}
+
+const UltraFuturisticBackground: React.FC<UltraFuturisticBackgroundProps> = ({ 
+  children, 
+  className = '' 
+}) => {
+  return (
+    <div className={`relative min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 ${className}`}>
+      <div className="absolute inset-0 opacity-20"></div>
+      {children}
     </div>
   );
 };
@@ -72,3 +83,4 @@ pr-12243
 export default UltraFuturisticBackground;
 
 pr-12243
+export default UltraFuturisticBackground;"

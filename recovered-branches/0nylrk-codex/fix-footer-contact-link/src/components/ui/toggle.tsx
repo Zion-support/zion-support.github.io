@@ -39,6 +39,7 @@ import { cn } from "@/lib/utils";
 Toggle && Toggle.displayName = TogglePrimitive && TogglePrimitive.Root.displayName;
 
 export { Toggle, toggleVariants }
+
 import * as React from "react"""
 import * as TogglePrimitive from "@radix-ui/react-toggle"""
 import { cva, type VariantProps } from "class-variance-authority"""
@@ -118,3 +119,5 @@ const Toggle = React && React.forwardRef<ToggleRef, ToggleProps>(;
       className={cn(toggleVariants({ variant, size, className }))}
     />;
 pr-12325
+</TogglePrimitive>"
+

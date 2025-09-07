@@ -18,6 +18,7 @@ export interface UpdateMilestoneStatusPayload {
 }
 
 export async function createMilestone(projectId: string, payload: CreateMilestonePayload): Promise<Milestone> {
+export async function createMilestone(projectId: string, payload: unknown) {
   const res = await fetch(`/api/projects/${projectId}/milestones`, {
     method: 'POST',
     headers: {
@@ -31,11 +32,7 @@ export async function createMilestone(projectId: string, payload: CreateMileston
   return res.json();
 }
 
-export async function updateMilestoneStatus(
-  projectId: string, 
-  milestoneId: string, 
-  body: UpdateMilestoneStatusPayload
-): Promise<Milestone> {
+export async function updateMilestoneStatus(projectId: string, milestoneId: string, body: unknown) {
   const res = await fetch(`/api/projects/${projectId}/milestones/${milestoneId}`, {
     method: 'PATCH',
     headers: {
@@ -142,3 +139,4 @@ export async function createMilestone(projectId: string, payload: CreateMileston
 
 ): Promise<Milestone> {
 pr-12325
+}

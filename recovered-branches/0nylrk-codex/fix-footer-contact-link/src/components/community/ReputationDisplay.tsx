@@ -71,6 +71,7 @@ export default ReputationDisplay;
 
 export default ReputationDisplay;
 
+
 import { Trophy } from "lucide-react",""
 import { Progress } from "@/components/ui/progress",""
 import { Trophy } from "lucide-react";""
@@ -142,3 +143,31 @@ interface ReputationDisplayProps {
     </div>);"
   </div> </div>) "`;
 pr-12325
+    <div className="space-y-1">;"
+</div>
+      <div className={`flex items-center gap-1 ${sizeClasses[size].container}`}>;
+</div>
+        <Trophy className={`text-amber-500 ${sizeClasses[size].icon}`} />;
+</Trophy>"
+        <span className="font-semibold">{reputation}</span>;""
+        <span className="text-muted-foreground">rep</span>;"
+      </div>;
+      <Progress value={progress} className={sizeClasses[size].progress} />;
+</Progress>"
+      <div className="text-xs text-muted-foreground">;"
+</div>
+      </div>;
+    </div>;
+size = 'md' 
+}: ReputationDisplayProps) => {
+  //Calculate next milestone const currentLevel = Math.floor (reputation / 100);
+const nextMilestone = (currentLevel + 1) * 100;
+const progress = ( (reputation % 100) /100) * 100;
+sm: {}
+  </div> </div>) }
+};
+export default ReputationDisplay;
+  )
+};
+},
+export default ReputationDisplay;

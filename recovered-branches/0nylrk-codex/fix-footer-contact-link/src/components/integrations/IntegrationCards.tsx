@@ -9,6 +9,75 @@ import {ArrowRight, Check, ExternalLink} from "lucide-react";export function Int
   description;
   icon;
   status = "disconnected";
+
+
+
+
+import React from "react";""
+import {Button} from "@/components/ui/button";""
+import {Card, CardContent, CardFooter, CardHeader} from "@/components/ui/card";""
+import {Badge} from "@/components/ui/badge";""
+import {ArrowRight, Check, ExternalLink} from "lucide-react";"
+interface IntegrationCardProps {;
+  title: string,;
+  description: string,;
+  icon: React && React.ReactNode,;
+"
+  status?: "connected" | "disconnected" | "pending";"
+  href?: string;
+  onConnect?: () => void;
+}
+
+
+export function IntegrationCard(): any ({;
+  title;
+  description;
+  icon;"
+import React from "react",""
+import { Button } from "@/components/ui/button",""
+import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",""
+import { Badge } from "@/components/ui/badge";""
+import { ArrowRight, Check, ExternalLink } from "lucide-react";"
+interface IntegrationCardProps {
+  // TODO: Implement
+}
+interface IntegrationCardProps {;
+  title: string,;
+  description: string,;
+  icon: React && React.ReactNode,;
+"
+  status?: "connected" | "disconnected" | "pending";"
+  href?: string;"
+import { Badge } from "@/components/ui/badge",""
+import { ArrowRight, Check, ExternalLink } from "lucide-react",")
+export function IntegrationCard(): any ({;
+  title;
+  description;
+  icon;
+interface IntegrationCardProps {
+  // TODO: Implement
+}
+  title: string,
+  description: string,
+  icon: React.ReactNode,"
+  status?: "connected" | "disconnected" | "pending","
+  href?: string,
+)
+  onConnect?: () => void;
+}
+
+
+
+
+  onConnect?: () => void;
+}
+
+export function IntegrationCard({;
+  title;
+  description;
+  icon;"
+  status = "disconnected";"
+
   href;
 export function IntegrationCard({
   title;
@@ -223,6 +292,7 @@ export function IntegrationCard({
   status;
   title,
   description,
+
   icon,"
   status = "disconnected","
   href,
@@ -325,3 +395,6 @@ export function IntegrationCard({
       
     <div className="grid md:grid-cols-3 gap-6">"
 pr-12325
+</div>
+    </div>"
+

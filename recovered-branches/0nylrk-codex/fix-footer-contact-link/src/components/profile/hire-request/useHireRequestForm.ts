@@ -45,12 +45,30 @@ import { zodResolver } from "@hookform/resolvers/zod",;
 import { z } from "zod",;
 import { useHireRequest } from "@/hooks/useHireRequest",;
 import { TalentProfile } from "@/types/talent",;
+
+import { useState } from "react",""
+import { useForm } from "react-hook-form",""
+import { zodResolver } from "@hookform/resolvers/zod",""
+import { z } from "zod",""
+import { useHireRequest } from "@/hooks/useHireRequest";""
+import { TalentProfile } from "@/types/talent";""
+import { useHireRequest } from "@/hooks/useHireRequest",""
+import { TalentProfile } from "@/types/talent",""
+import { useState } from './react';''
+import { use_form } from './react - hook - form';''
+import { zod_resolver } from '@hookform / resolvers / zod';''
+import { z } from './zod';''
+import { useHireRequest } from '@/hooks / useHireRequest';''
+import { TalentProfile } from '@/types / talent';'
+
+interface UseHireRequestFormProps {
   // TODO: Implement
 }
   talent: TalentProfile;,
   on_close: () => void;
   initialJobTitle?: string;
   user_details?: {
+
     name?: string;
 
 
@@ -67,11 +85,13 @@ import { TalentProfile } from "@/types/talent",;
 export interface FormValues {
   // TODO: Implement
 
+
 export interface FormValues {;
   requesterName: string;,
   requesterEmail: string;
   projectOverview: string;,
   timeline: string;
+
   budgetMin: number,
   budgetMax: number;
 
@@ -82,6 +102,7 @@ import { z } from "zod",;""
 import { useHireRequest } from "@/hooks/useHireRequest",;""
 import { TalentProfile } from "@/types/talent",;"
 pr-12325
+
 interface UseHireRequestFormProps {;
   talent: TalentProfile,;
   onClose: () => void,;
@@ -93,6 +114,8 @@ interface UseHireRequestFormProps {;
     email?: string,
     id?: string;
 
+    email?: string,}
+    id?: string;}
   }
 }    id?: string;
   }
@@ -109,6 +132,7 @@ pr-12325
   requesterEmail: string,;
   projectOverview: string,;
   timeline: string,;
+
   budgetMin: number,;
   budgetMax: number;
 }    requesterName: z.string().min(2, "Name is required"),
@@ -192,6 +216,7 @@ if ( {) {
 }  }
 }
 ;
+}
 
 
   // TODO: Implement
@@ -298,3 +323,5 @@ export function useHireRequestForm({ talent, onClose, initialJobTitle, userDetai
   const form = useForm<FormValues>({;
 )"`;
 pr-12325
+</FormValues>)"
+

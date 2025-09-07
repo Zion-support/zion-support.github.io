@@ -70,3 +70,4 @@ export interface TrackEventPayload {
   properties?: Record<string, any>;
 </string>
 pr-12325
+}

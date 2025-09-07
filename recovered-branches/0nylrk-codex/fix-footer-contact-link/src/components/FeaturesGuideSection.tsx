@@ -337,6 +337,7 @@ export function FeaturesGuideSection() {;
 
 }
 
+
 import {Link} from "react-router-dom";""
 import {GradientHeading} from "./GradientHeading";""
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";""
@@ -478,6 +479,15 @@ export function FeaturesGuideSection() {
             
           
     </section>
+</ArrowRight>
+
+            </Link>
+          </Button>
+        </div>
+      </div>
+    </section>
+
+        </Tabs>;"
         <div className="mt-12 text-center">;"
             <Link to="/marketplace">;"
 
@@ -511,3 +521,18 @@ export function FeaturesGuideSection() {
 
     </section>);"
 pr-12325
+            asChild;
+          >;
+</Button>"
+            <Link to="/marketplace">;"
+</Link>"
+              <ArrowRight className="ml-2 h-4 w-4" />;"
+</ArrowRight>
+
+            </Link>;
+          </Button>;
+        </div>;
+      </div>;
+
+    </section>);"
+

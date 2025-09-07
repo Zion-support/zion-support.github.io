@@ -13,6 +13,7 @@ import {
   Mail,
   MapPin,
   Video,
+
   MessageSquare,
   Building;
 } from 'lucide-react';
@@ -113,6 +114,13 @@ export default function Calendar() {
                 <span className="font-semibold">Expert Team Available</span>"
                 <span className="font-semibold">Flexible Scheduling</span>"
           </motion.div>
+
+              </div>
+            </div>
+          </motion.div>
+        </div>
+
+      </section>"
       <section className="py-20 px-4 bg-white">"
             whileInView={{ opacity: 1, y: 0 }}
             className="text-center mb-16""
@@ -145,6 +153,14 @@ export default function Calendar() {
 </button>
               </motion.div>)
             ))}
+
+                </button>
+              </motion.div>)
+            ))}
+          </div>
+        </div>
+
+      </section>"
       <section className="py-20 px-4 bg-gray-50">"
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Meet Our Experts</h2>""
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">"
@@ -162,16 +178,30 @@ export default function Calendar() {
                     : 'bg-red-100 text-red-800`;
                 }`}>
       </section>
+</div>
+
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+
+      </section>'
+      <section className="py-20 px-4 bg-white">"
+</section>"
         <div className="max-w-4xl mx-auto">"
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Available Time Slots</h2>""
             <p className="text-xl text-gray-600">"
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">"
               <motion.button;
+                key={index}
+
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.8, delay: index * 0.05 }}
                 disabled={!slot.available}`;
                 className={`p-4 rounded-lg text-center transition-all ${
+
                   slot.available;"
                     ? 'bg-blue-600 text-white hover:bg-blue-700 shadow-lg hover:shadow-xl
                     : 'bg-gray-200 text-gray-500 cursor-not-allowed`;
@@ -180,6 +210,18 @@ export default function Calendar() {
                   <CheckCircle className="w-5 h-5 mx-auto mt-2" />"
 
               </motion.button>
+</CheckCircle>
+
+              </motion.button>
+            ))}
+          </div>
+        </div>
+
+      </section>"
+      <section className="py-20 px-4 bg-gray-50">"
+</section>"
+        <div className="max-w-7xl mx-auto">"
+</div>"
           <div className="grid md:grid-cols-2 gap-12">"
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -201,6 +243,13 @@ export default function Calendar() {
 
                     <div className="font-semibold text-gray-900">Office</div>""
                     <div className="text-gray-600">123 Tech Street, San Francisco, CA</div>"
+
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+            <motion.div;
+
               initial={{ opacity: 0, x: 20 }}
               className="bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl p-8 text-white""
               <h3 className="text-2xl font-bold mb-6">Quick Contact</h3>""
@@ -223,6 +272,17 @@ export default function Calendar() {
                   <ArrowRight className="w-5 h-5 ml-2" />"
 
                 
+</ArrowRight>
+
+                </Link>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+
+      </section>"
+      <section className="py-20 px-4 bg-white">"
+</section>"
         <div className="max-w-4xl mx-auto text-center">"
             <h2 className="text-4xl font-bold text-gray-900 mb-6">"
 </h2>
@@ -238,3 +298,12 @@ export default function Calendar() {
 
               
     </div>"`;
+              >
+</Link>
+
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </div>"

@@ -174,6 +174,7 @@ export function LanguageThemeSelector() {;
 }
     </div>);
 }
+
 import React, { useState } from "react";""
 import {Button} from "@/components/ui/button";""
 import {useTheme} from "@/hooks/useTheme";""
@@ -303,6 +304,34 @@ export function LanguageThemeSelector() {;
             
           
     </div>);
+                <Check className="h - 4 w - 4 text - primary mt - 2" />)}"
+</Check>"
+            <CardContent className="p-3 flex flex-col items-center justify-center">"
+</CardContent>"
+              <Moon className="h-8 w-8 mb-2" />"
+</Moon>
+              <span>Dark</span>"
+                <Check className="h-4 w-4 text-primary mt-2" />"
+</Check>
+
+            </CardContent>
+          </Card>
+        </div>
+      </div>
+    </div>
+
+            </CardContent>;
+          </Card>;
+        </div>;
+      </div>;
+    </div>);
+    </div>);
+    </div>);
+            </CardContent>;
+          </Card>;
+        </div>;
+      </div>;
+    </div>;"
 }const languages: Language[] = [ return (<div className="space-y-8 px-4" > <div className="space-y-2" > <h2 className="text-xl font-medium" >Select your language</h2> <p className="text-muted-foreground" >Choose your preferred language</p> <div className="grid grid-cols-2 gap-3 mt-4" > {"
 </div>)
   languages.map ( (language) => (<Card language.code;
@@ -320,3 +349,8 @@ export function LanguageThemeSelector() {;
 }  </div> </div> </div>) 
     </div>);]"`;
 pr-12325
+</Card>
+}</CardContent> </Card> </div> </div> </div>) 
+    </div>;
+    </div>);]"
+

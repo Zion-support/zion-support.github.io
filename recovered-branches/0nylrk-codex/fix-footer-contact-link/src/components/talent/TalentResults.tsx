@@ -9,6 +9,7 @@ import { ResultsHeader } from "@/components/talent/ResultsHeader",
 import { TalentGrid } from "@/components/talent/TalentGrid",    selectedSkills: string[],
 
 
+
 import React from "react";""
 import {TalentProfile} from "@/types/talent";""
 import {ActiveFilters} from "@/components/talent/ActiveFilters";""
@@ -36,6 +37,7 @@ interface TalentResultsProps {
 import {TalentGrid} from "@/components/talent/TalentGrid";"
     selectedSkills: string[],
 pr-12325
+
     toggleSkill: (skill: string) => void,
     selectedAvailability: string[],
     toggleAvailability: (availability: string) => void,
@@ -46,12 +48,14 @@ pr-12325
     experienceRange: [number, number],
     setExperienceRange: (range: [number, number]) => void,
 
+
     clearFilters: () => void;
 
 
 
 
 pr-12325
+
 export function TalentResults({;
   filteredTalents;
   isLoading;
@@ -67,6 +71,7 @@ export function TalentResults({
   handleRequestHire,
   savedTalents,
   handleToggleSave,
+
   isAuthenticated,
 
 }: TalentResultsProps) {
@@ -124,3 +129,4 @@ export function TalentResults(): any ({;      />;
     </div>;)
     </div>);"
 pr-12325
+

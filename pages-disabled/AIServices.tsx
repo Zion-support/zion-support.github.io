@@ -1,14 +1,17 @@
 
 
 class ErrorBoundary extends React.Component {
+
   // TODO: Implement
 }
   constructor(props) {
     super(props);
+
     this.state = { hasError: false };
 
-  static getDerivedStateFromError(error) {
+  static getDerivedStateFromError(error) {}
     return { hasError: true };
+
 
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
@@ -86,9 +89,25 @@ class ErrorBoundary extends React.Component {
 
                       </li>
                   </ul>
+</CheckCircle>
+
+                      </li>
+                  </ul>
+                </div>
+
+                "
+                <div className="mb-6">"
+</div>"
                   <h4 className="text-lg font-semibold text-white mb-3">Benefits:</h4>""
                         <Star className="h-4 w-4 text-yellow-400 mr-2" />"
 
+</Star>
+
+                      </li>
+                  </ul>
+                </div>
+
+                "
                 <div className="flex items-center justify-between">"
                   <div className="text-2xl font-bold text-blue-400">{service.price}</div>"
                   <Link;"
@@ -98,6 +117,18 @@ class ErrorBoundary extends React.Component {
 
                   
 
+</ArrowRight>
+
+                  </Link>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+          <motion.div;
+
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.8 }}"
             className="bg-blue-600 rounded-xl p-8 text-center""
             <h2 className="text-3xl font-bold text-white mb-4">"
@@ -117,6 +148,16 @@ class ErrorBoundary extends React.Component {
 
                 <span>364 E Main St STE 1008 Middletown DE 19709</span>
     
+
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </div>
+    </MainLayout>
+
+    <Layout;"
+      title="AI Services - Zion Tech Group"""
       description="Comprehensive AI services including machine learning, computer vision, natural language processing, and more.""
 
             <h1 className="text-4xl font-bold text-gray-900 mb-4">AI Services</h1>""
@@ -149,6 +190,37 @@ class ErrorBoundary extends React.Component {
                   className="border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg text-lg font-semibold transition-colors""
 
     
+                >
+</motion>
+
+                </motion.button>
+              </div>
+            </motion.div>
+
+          </div>
+        </div>
+      </div>
+    </Layout>
+
+    <Layout;"
+      title="AI Services - Zion Tech Group"""
+      description="Comprehensive AI services including machine learning, computer vision, natural language processing, and more.">;"
+</Layout>"
+      <div className="min-h-screen bg-gray-50 py-20">;"
+</div>"
+        <div className="container mx-auto px-4">;"
+</div>"
+          <div className="text-center mb-12">;"
+</div>"
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">;"
+</h1>
+            </h1>;"
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">;"
+</p>
+            </p>;
+          </div>;"
+          <div className="text-center">;"
+</div>"
             <p className="text-gray-600">;;"
               initial={{ opacity: 0, y: 30 }}
               transition={{ duration: 0.8 }}
@@ -159,3 +231,17 @@ class ErrorBoundary extends React.Component {
     
     );
     );"
+                >
+</motion>
+
+                </motion.button>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+      </div>
+    </Layout>
+    </Layout>);
+
+    </Layout>);"
+

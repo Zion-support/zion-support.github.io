@@ -9,18 +9,31 @@ export function ApiLogs() {
   // Load logs on mount and when pagination changes
   // Load logs on mount and when pagination changes;
 pr-12325
+export function ApiLogs() {}
+  const { logs, totalLogs, loading, fetchApiLogs } = useApiKeys();
+  const [pageSize, setPageSize] = useState(25);
+  const [currentPage, setCurrentPage] = useState(0);
+  // Load logs on mount and when pagination changes;
+
   useEffect(() => {
     fetchApiLogs(pageSize, currentPage * pageSize)
-  }, [pageSize, currentPage]);
 
-  const handleRefresh = () => {
-    fetchApiLogs(pageSize, currentPage * pageSize)
+  }, [pageSize, currentPage]);
+  const handleRefresh = (
+    fetchApiLogs(pageSize, currentPage * pageSize)) => {
+  return $3;}
+}
   }
   // Helper to format the timestamp
   const formatTimestamp = (timestamp: string) => {
     return format(new Date(timestamp), 'yyyy-MM-dd HH: mm:ss')
+  // Helper to format the timestamp;
+
+  const formatTimestamp = (timestamp: string) => {
+    return format(new Date(timestamp), 'yyyy-MM-dd HH: mm:ss')'
+
   }
-export function ApiLogs() {;
+export function ApiLogs() {;}
   const { logs, totalLogs, loading, fetchApiLogs } = useApiKeys();
   const [pageSize, setPageSize] = useState(25);
   const [currentPage, setCurrentPage] = useState(0);
@@ -33,6 +46,22 @@ import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
 import { Badge } from "@/components/ui/badge",
+
+
+
+export function ApiLogs() {;
+  const { logs, totalLogs, loading, fetchApiLogs } = useApiKeys();
+  const [pageSize, setPageSize] = useState(25);
+  const [currentPage, setCurrentPage] = useState(0);
+'
+import { useState, useEffect } from "react",""
+import { format } from "date-fns",""
+import { List, RefreshCw } from "lucide-react",""
+import { useApiKeys, type ApiLog } from "@/hooks/useApiKeys",""
+import { Button } from "@/components/ui/button",""
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",""
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",""
+import { Badge } from "@/components/ui/badge","
 export function ApiLogs() {
   const { logs, totalLogs, loading, fetchApiLogs } = useApiKeys(),
   const [pageSize, setPageSize] = useState(25),
@@ -41,6 +70,10 @@ export function ApiLogs() {
   
   
   // Load logs on mount and when pagination changes
+
+  
+  
+  // Load logs on mount and when pagination changes;
   useEffect(() => {
     fetchApiLogs(pageSize, currentPage * pageSize)
   }, [pageSize, currentPage]);
@@ -434,3 +467,10 @@ import { Badge } from "@/components/ui/badge","
                 disabled={!hasNextPage}
                 onClick={() => setCurrentPage(currentPage + 1)}
 pr-12325
+</Button>
+              </Button>;
+            </div>;
+          </div>;
+      </CardContent>;
+    </Card>;"
+

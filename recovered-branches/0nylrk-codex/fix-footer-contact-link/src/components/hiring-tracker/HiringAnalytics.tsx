@@ -34,17 +34,67 @@ import { useState, useEffect } from "react",;
 import { useJobApplications } from "@/hooks/useJobApplications",;
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
 import { PieChart, Pie, Cell, ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip } from 'recharts',;
+
+import { useState, useEffect } from './react';''
+import { useJobApplications } from '@/hooks / useJobApplications';''
+import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';''
+import {PieChart, Pie, Cell, ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip} from 'recharts';'
+interface HiringAnalyticsProps {
+  // TODO: Implement
+}
+  job_id?: string;
+}
+'
+import {useState, useEffect} from "react";""
+import {useJobApplications} from "@/hooks/useJobApplications";""
+import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";""
+import {PieChart, Pie, Cell, ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip} from 'recharts';'
 interface HiringAnalyticsProps {;
   jobId?: string;
 }
 
 export function HiringAnalytics(): any ({ jobId }: HiringAnalyticsProps) {;
   const { applications, isLoading } = useJobApplications(jobId);
+      }
+      // Calculate conversion rate;
+      const conversionRate = hiredApplications.length > 0;
+        ? Math.round((hiredApplications.length / applications.length) * 100)
+        : 0;
+      // Funnel data;
+      const funnelData = ['
+        { name: 'Applied', value: applications.length }''
+        { name: 'Shortlisted', value: applications.filter(app => app.status === 'shortlisted').length }''
+        { name: 'Interview', value: applications.filter(app => app.status === 'interview').length }']'
+        { name: 'Hired', value: applications.filter(app => app.status === 'hired').length }]'
+      setAnalyticsData({
+        statusDistribution;
+        timeToHire: avgTimeToHire;
+        conversionRate;
+  })
+  if (!applications |applications.length === 0) {'
+import { useState, useEffect } from "react",""
+import { useJobApplications } from "@/hooks/useJobApplications",""
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",""
+import { PieChart, Pie, Cell, ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip } from 'recharts','
+interface HiringAnalyticsProps {
+  // TODO: Implement
+}
+  jobId?: string;'
+import { useState, useEffect } from "react",;""
+import { useJobApplications } from "@/hooks/useJobApplications",;""
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;""
+import { PieChart, Pie, Cell, ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip } from 'recharts',;'
 interface HiringAnalyticsProps {;
   jobId?: string;
+
+}
+export function HiringAnalytics(): any ({ jobId }: HiringAnalyticsProps) {;}
+  const { applications, isLoading } = useJobApplications(jobId);
+interface HiringAnalyticsProps {;}
+  jobId?: string;}
 }
 ;
-export function HiringAnalytics({ jobId }: HiringAnalyticsProps) {;
+export function HiringAnalytics({ jobId }: HiringAnalyticsProps) {;}
   const { applications, isLoading } = useJobApplications(jobId),;
       applications && applications.forEach(app => {;
         statusCounts[app && app.status] = (statusCounts[app && app.status] || 0) + 1;
@@ -124,6 +174,75 @@ export function HiringAnalytics({ jobId }: HiringAnalyticsProps) {;
                 dataKey="count"
                 label={({name, percent}) => `${name}: ${(percent * 100).toFixed(0)}%`}
               <Tooltip />;
+
+  const [analyticsData, setAnalyticsData] = useState<{;
+    statusDistribution: any[],;
+    timeToHire: number,;
+    conversionRate: number,;
+    funnelData: any[];
+  }>({;
+    statusDistribution: [],;
+    timeToHire: 0,;
+    conversionRate: 0,;)
+    funnelData: []}),;
+
+  useEffect(() => {;
+    if (applications && applications.length > 0) {;
+      // Calculate status distribution;
+      const statusCounts: Record<string, number> = {};
+</string>
+    return <div>Loading analytics data...</div>;'
+      <Card className="text-center py-16">;"
+</Card>
+        <CardContent>;
+</CardContent>"
+          <h3 className="text-lg font-semibold mb-2">No data available</h3>;""
+          <p className="text-muted-foreground mb-6">;"
+</p>
+          </p>;
+        </CardContent>;
+      </Card>;"
+      <Card className="text-center py-16">"
+</Card>
+        <CardContent>
+</CardContent>"
+          <h3 className="text-lg font-semibold mb-2">No data available</h3>""
+          <p className="text-muted-foreground mb-6">"
+</p>
+          </p>
+        </CardContent>
+      </Card>"
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;"
+</div>
+      <Card>;
+</Card>
+        <CardHeader>;
+</CardHeader>
+          <CardTitle>Application Status Distribution</CardTitle>;
+        </CardHeader>;"
+        <CardContent className="h-64">;"
+</CardContent>"
+          <ResponsiveContainer width="100%" height="100%">;"
+</ResponsiveContainer>
+            <PieChart>;
+</PieChart>
+              <Pie;
+                data={analyticsData && analyticsData.statusDistribution}
+              <Pie;
+                data={analyticsData && analyticsData.statusDistribution}"
+                cx="50%"""
+                cy="50%""
+                labelLine={false}
+                outerRadius={80}"
+                fill="#8884d8"""
+                dataKey="count""
+                label={({name, percent}) => `${name}: ${(percent * 100).toFixed(0)}%`}
+</Pie>
+                  <Cell key={`cell-${index}`} fill={COLORS[index % COLORS && COLORS.length]} />;
+</Cell>
+              </Pie>;
+              <Tooltip />;
+</Tooltip>
             </PieChart>;
           </ResponsiveContainer>;
         </CardContent>;
@@ -175,6 +294,20 @@ export function HiringAnalytics({ jobId }: HiringAnalyticsProps) {;
               </Bar>;
             </BarChart>;
           </ResponsiveContainer>;
+      <Card>;
+</Card>
+        <CardHeader>;
+</CardHeader>
+          <CardTitle>Time to Hire</CardTitle>;
+        </CardHeader>;"
+        <CardContent className="flex flex-col items-center justify-center h-64">;"
+</CardContent>"
+          <div className="text-5xl font-bold text-primary">;"
+</div>
+          </div>;"
+          <div className="text-sm text-muted-foreground mt-2">;"
+</div>
+          </div>;
         </CardContent>;
       </Card>;
 
@@ -382,6 +515,22 @@ if ( {) {
 
 
           <CardTitle > Time to Hire;
+</Cell>
+              </Pie>;
+
+              <Tooltip />;
+</Tooltip>
+            </PieChart>;
+          </ResponsiveContainer>;
+        </CardContent>;
+      </Card>;
+
+      <Card>;
+</Card>
+        <CardHeader>;
+</CardHeader>
+          <CardTitle > Time to Hire</CardTitle>;
+        </CardHeader>;"
         <CardContent className="flex flex - col items - center justify - center h - 64">;"
           <div className="text - 5xl font - bold text - primary">;"
           <div className="text - sm text - muted - foreground mt - 2">;"
@@ -448,6 +597,34 @@ if ( {) {
 
 
     </div>);
+</Bar>
+                  <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+</Cell>
+              </Bar>
+            </BarChart>
+          </ResponsiveContainer>
+        </CardContent>
+      </Card>
+    </div>
+            <BarChart;
+              data={analyticsData && analyticsData.funnelData}"
+              layout="vertical">;"
+</BarChart>"
+              <XAxis type="number" />;"
+</XAxis>"
+              <YAxis dataKey="name" type="category" width={100} />;"
+</YAxis>
+
+              <Tooltip />;
+</Tooltip>
+              </Bar>;
+            </BarChart>;
+          </ResponsiveContainer>;
+        </CardContent>;
+      </Card>;
+    </div>);
+
+    </div>;
 const [analyticsData, setAnalyticsData] = useState< {
   statusDistribution: any[];,
   timeToHire: number;
@@ -479,3 +656,11 @@ if (applications && applications.length > 0) {
 }     </div>) 
     </div>;"`;
 pr-12325
+</Cell>
+}</Pie> <Tooltip /> </PieChart> </ResponsiveContainer> </CardContent> </Card> {
+</Tooltip>"
+}<Card> <CardHeader> <CardTitle>Time to Hire</CardTitle> </CardHeader> </div> <div className="text-sm text-muted-foreground mt-2" > Average days from application to hire </div> </CardContent> </Card> {""
+}<Card> <CardHeader> <CardTitle>Application Conversion Rate</CardTitle> </CardHeader> </div> <div className="text-sm text-muted-foreground mt-2" > Applications to hired ratio </div> </CardContent> </Card> <CardHeader> <CardTitle>Hiring Funnel</CardTitle> </CardHeader> <CardContent className="h-80" > <ResponsiveContainer width="100%" height="100%" > <BarChart) )"
+}</Bar> </BarChart> </ResponsiveContainer> </CardContent> </Card> </div>) 
+    </div>;"
+

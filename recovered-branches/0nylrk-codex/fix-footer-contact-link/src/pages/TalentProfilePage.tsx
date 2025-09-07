@@ -1,13 +1,16 @@
-
 class ErrorBoundary extends React.Component {
+
+  // TODO: Implement
+}
   constructor(props) {
     super(props);
+
     this.state = { hasError: false };
   }
-  
-  static getDerivedStateFromError(error) {
+  static getDerivedStateFromError(error) {}
     return { hasError: true };
   }
+
   
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
@@ -25,7 +28,11 @@ class ErrorBoundary extends React.Component {
     console.error('Error caught by boundary:', error, errorInfo);
 pr-12325
   
+    console.error('Error caught by boundary:', error, errorInfo);'
+
+  }
   render() {
+
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
@@ -225,10 +232,19 @@ export default function TalentProfilePage() {;
           
 
     return <ProfileErrorState error={error} />;
+</ProfileErrorState>"
+    <div className="min-h-screen bg-zion-blue pb-12">;"
+</div>
+      <TalentProfile;
+        profile={profile} 
+
+        onRequestHire={handleRequestHire}
+        onMessageTalent={handleMessageTalent}
       />;
 
       <BackToDirectoryButton />;
 
+</BackToDirectoryButton>
       <StickyAction>;
         <div className="p-2 flex gap-2">;"
             onClick={handleRequestHire}>;
@@ -297,3 +313,4 @@ export default function TalentProfilePage() {;
 
 }/> </div>) "
 pr-12325
+

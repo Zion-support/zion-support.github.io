@@ -302,6 +302,7 @@ if ( {) {
           <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6 mt-8">;
             {saved_talents.map ((talent) => (
               <TalentCard;
+
 import {useState, useEffect} from "react";""
 import {AppHeader} from "@/layout/AppHeader";""
 import {Footer} from "@/components/Footer";""
@@ -390,6 +391,17 @@ if ( {) {
           <div className="text-center py-8">No talents saved yet.</div>;""
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">;"
 
+</div>
+    <>;
+      <SEO;"
+        title="Saved Talents | Zion AI Marketplace";""
+        description="View and manage your saved talents in the Zion AI Marketplace";"
+
+      />;
+</SEO>
+      <AppHeader />;
+
+</AppHeader>"
       <div className="container mx - auto px - 4 py - 8">;"
         <h1 className="text - 3xl font - bold mb - 4">Saved Talents</h1>;""
         <p className="text - muted - foreground">;"
@@ -398,6 +410,9 @@ if ( {) {
           <div className="text - center py - 8">No talents saved yet.</div>) : (""
           <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6 mt - 8">;"
 pr-12325
+</div>
+              <TalentCard;
+
                 key={talent.id}
                 talent={talent}
                 onViewProfile={handleViewProfile}
@@ -489,7 +504,9 @@ return (<> <SEO title="Saved Talents | Zion AI Marketplace" description="View an
 }</div> <Footer /> </>) 
 }
 ;
+
                 is_authenticated={!!user})
+
               />))}
 
           </div>)}
@@ -497,6 +514,8 @@ return (<> <SEO title="Saved Talents | Zion AI Marketplace" description="View an
       <Footer />;
 
     </>);
+
+}
 
         {isLoading ? (;"
                 isSaved={true}
@@ -510,7 +529,14 @@ return (<> <SEO title="Saved Talents | Zion AI Marketplace" description="View an
   );
               />;            ))}
 
+          </div>;
+      </div>;
+
+      <Footer />;
+</Footer>
+    </>;
   ),; export default function SavedTalentsPage () {
+
   const {
   // TODO: Implement
   user;
@@ -531,8 +557,11 @@ return (<> <SEO title="Saved Talents | Zion AI Marketplace" description="View an
   handleToggleSave;
 }isAuthenticated= {
   !!user;)
+
 }/>) ) 
 
 }</div>) 
 }</div> <Footer /> </>) 
 pr-12325
+}
+;

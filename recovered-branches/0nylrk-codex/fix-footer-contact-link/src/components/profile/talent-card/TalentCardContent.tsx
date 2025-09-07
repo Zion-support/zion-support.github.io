@@ -7,21 +7,29 @@ interface TalentCardContentProps {
   timezone: string | undefined;
   skills: string[] | undefined;
 }
+
 import React, { useState } from "react";""
 import { MapPin } from "lucide-react";""
 import { TalentCardSkills } from "./TalentCardSkills";"
+
 interface TalentCardContentProps {
   // TODO: Implement
 }
   summary: string | undefined;,
   bio: string;
+
   timezone: string | undefined;,
   skills: string[] | undefined;
 pr-12325
 
+}
+
+
+
 export function TalentCardContent({
   summary,
   bio,
+
   timezone,
   skills,
 }: TalentCardContentProps) {
@@ -95,8 +103,10 @@ function TalentCardContent() {
     </div>);
 }
   skills,)
+
 }: TalentCardContentProps) {
   const [isHovering, setIsHovering] = useState(false);
+
 
 
 skills: string[] | undefined;,
@@ -126,6 +136,17 @@ export function TalentCardContent({ summary, bio, timezone, skills }: TalentCard
       <TalentCardSkills skills={skills} />
 
         style={{ maxHeight: isHovering ? '8rem' : '3rem' }}
+
+      </div>
+      <TalentCardSkills skills={skills} />
+</TalentCardSkills>
+    </div>
+
+      <div;"
+        className="overflow-hidden transition-all duration-300"""
+        style={{ maxHeight: isHovering ? '8rem' : '3rem' }}'
+        onMouseEnter={() => setIsHovering(true)}
+</div>'
         <p className="text-zion-slate mb-4">;"
 </p>
         </p>;
@@ -150,3 +171,4 @@ export function TalentCardContent({ summary, bio, timezone, skills }: TalentCard
 
     </div>);"
 pr-12325
+

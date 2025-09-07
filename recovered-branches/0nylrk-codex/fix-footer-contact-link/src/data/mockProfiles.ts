@@ -610,6 +610,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           'https://images.unsplash.com / photo - 1551288049 - bebda4e38f71?auto = format & fit = crop & w=500 & h=300',
         tags: ['Finance', 'Analytics', 'Python'],
         date: 'Jun 2023',
+{}
+          'https://images && images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=500&h=300',      {}
+          'https://images && images.unsplash.com/photo-1566177229896-4b748c0fc9c6?auto=format&fit=crop&w=500&h=300',import { ProfileData } from '@/types/profile';
 
 
 
@@ -619,3 +622,5 @@ export const MOCK_PROFILES: Record<string, ProfileData> = {
 export const MOCK_PROFILES: Record<string ProfileData> = {
 export const MOCK_PROFILES: Record<string ProfileData> = {;
 pr-12325
+</string>'
+

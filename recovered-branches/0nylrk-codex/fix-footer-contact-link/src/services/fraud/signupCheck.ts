@@ -22,6 +22,10 @@ export const checkSignupPatterns = async (
 import {supabase} from '@/integrations / supabase / client';
 import {analyze_email} from './analyze_email';
 import {SignupCheckResult} from './types';
+// Signup checking functionality;
+import {supabase} from '@/integrations / supabase / client';''
+import {analyze_email} from './analyze_email';''
+import {SignupCheckResult} from './types';'
 /**;
 * Check for suspicious signup patterns;
 */;
@@ -57,6 +61,11 @@ pr-12325
 import { supabase } from '@/integrations/supabase/client',;
 import { analyzeEmail } from './analyzeEmail',;
 import { SignupCheckResult } from './types',;
+// Signup checking functionality;'
+import { supabase } from '@/integrations/supabase/client',;''
+import { analyzeEmail } from './analyzeEmail',;''
+import { SignupCheckResult } from './types',;'
+
 /**;
  * Check for suspicious signup patterns;
  */;
@@ -101,9 +110,12 @@ export const checkSignupPatterns = async (;
 if ( {) {
   $2
   email: string,;
+
   ipAddress?: string;)
 ): Promise<SignupCheckResult> => {;
 
 ):Promise<SignupCheckResult> => {;
 `;
 pr-12325
+</SignupCheckResult>'
+

@@ -85,6 +85,40 @@ export function ResumeSelector(): any ({ onResumeSelected }: ResumeSelectorProps
   const [customFile, setCustomFile] = useState<File | null>(null),
 
   const [selected_option, setSelectedOption] = useState<;
+
+import React, { useState, useEffect } from './react';''
+import { Button  } from '@/components / ui / button';''
+import { RadioGroup, RadioGroupItem  } from '@/components / ui / radio - group';''
+import { Label  } from '@/components / ui / label';''
+import { Plus, Loader2  } from './lucide-react';''
+import { use_resume  } from '@/hooks / use_resume';''
+import { exportResumeToPDF  } from '@/utils / pdf_export';''
+import { toast  } from '@/components / ui / use - toast';''
+import { ResumePreviewCard  } from './ResumePreviewCard';''
+import { UploadSection  } from './UploadSection';''
+import { SelectResumeSection  } from './SelectResumeSection';''
+import { ResumeOption, ResumeSelectorProps  } from './types';'
+export function ResumeSelector(): any ({ onResumeSelected }: ResumeSelectorProps) {;
+  const [selectedOption, setSelectedOption] = useState<;'
+    "recent" | "select" | "upload";""
+  >("recent");"
+  const [selectedResume, setSelectedResume] = useState<ResumeOption | null>(;
+</ResumeOption>)
+  const [resumeOptions, setResumeOptions] = useState<ResumeOption[]>([]);
+</ResumeOption>
+
+  const [customFile, setCustomFile] = useState<File | null>(null);
+</File>"
+  const [selectedOption, setSelectedOption] = useState<'recent' | 'select' | 'upload'>('recent'),'
+  const [selectedResume, setSelectedResume] = useState<ResumeOption | null>(null),
+</ResumeOption>
+  const [resumeOptions, setResumeOptions] = useState<ResumeOption[]>([]),
+</ResumeOption>
+  const [customFile, setCustomFile] = useState<File | null>(null),
+</File>
+  const [selected_option, setSelectedOption] = useState<;'
+    "recent" | "select" | "upload";""
+  >("recent");"
   const [selected_resume, setSelectedResume] = useState < ResumeOption | null>(
     null,)
   );
@@ -93,6 +127,7 @@ export function ResumeSelector(): any ({ onResumeSelected }: ResumeSelectorProps
   const [is_loading, setIsLoading] = useState (false);
 ;
   const { resume, fetch_resume } = use_resume ();
+;
   // Fetch resume data when component mounts;
   useEffect (() => {
     const load_resumes = async () => {
@@ -112,6 +147,20 @@ export function ResumeSelector(): any ({ onResumeSelected }: ResumeSelectorProps
     // Check condition;
 if ( {) {
   $2;
+}
+        setIsLoading (false);
+      }
+    }
+;
+    load_resumes ();
+  }, [fetch_resume]);
+;
+  // Update resume options when resume data changes;
+  useEffect (() => {
+    // Check condition;
+if ( {) {
+  $2;
+}
       const options: ResumeOption[] = [;
 
         {"
@@ -122,6 +171,11 @@ if ( {) {
   // Update resume options when resume data changes;
   useEffect(() => {;
     if (resume) {;]
+        }
+  // Update resume options when resume data changes;
+  useEffect(() => {;
+    if (resume) {;]
+      const options: ResumeOption[] = [;
         {;"
           id: resume && resume.id || "current",;"
           title: resume && resume.basic_info.title,;"
@@ -135,6 +189,8 @@ if ( {) {
       if (options && options.length > 0 && selectedOption === "recent") {;"
         setSelectedResume(options[0]);
         onResumeSelected(options[0]);
+      }
+    }
   }, [resume, selectedOption, onResumeSelected]);
 
 
@@ -431,6 +487,26 @@ export function ResumeSelector({ onResumeSelected } ResumeSelectorProps) {;
         <ResumePreviewCard
 export function ResumeSelector({ onResumeSelected } ResumeSelectorProps) {;
   const [selectedOption, setSelectedOption] = useState<'recent' | 'select' | 'upload'>('recent'),;
+"
+    if (value === "recent" && resumeOptions && resumeOptions.length > 0) {;"
+        setSelectedResume(options[0]);
+        onResumeSelected(options[0]);
+"
+import React, { useState, useEffect } from 'react',;''
+import { Button } from "@/components/ui/button",;""
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group",;""
+import { Label } from "@/components/ui/label",;""
+import { Plus, Loader2 } from 'lucide-react',;''
+import { useResume } from "@/hooks/useResume",;""
+import { exportResumeToPDF } from "@/utils/pdfExport",;""
+import { toast } from "@/components/ui/use-toast",;""
+import { ResumePreviewCard } from './ResumePreviewCard',;''
+import { UploadSection } from './UploadSection',;''
+import { SelectResumeSection } from './SelectResumeSection',;''
+import { ResumeOption, ResumeSelectorProps } from './types',;'
+;
+export function ResumeSelector({ onResumeSelected } ResumeSelectorProps) {;'
+  const [selectedOption, setSelectedOption] = useState<'recent' | 'select' | 'upload'>('recent'),;'
   const [selectedResume, setSelectedResume] = useState<ResumeOption | null>(null),;
 
   const [resumeOptions, setResumeOptions] = useState<ResumeOption[]>([]),;
@@ -508,6 +584,7 @@ pr-12325
 
       {selectedOption === "select" && (;
 
+</ResumePreviewCard>
         <SelectResumeSection;"
       {selectedOption === "select" && ("
         <SelectResumeSection;
@@ -516,6 +593,8 @@ pr-12325
 
 
 pr-12325
+        <SelectResumeSection;
+
           resumeOptions={resumeOptions}
           selectedResume={selectedResume}
           handleResumeSelect={handleResumeSelect}
@@ -561,7 +640,20 @@ pr-12325
       )}
 ;
 
-;
+</SelectResumeSection>
+        <UploadSection;'
+      {selectedOption === "upload" && ("
+        <UploadSection;
+;"
+      {selectedOption === 'upload' && (;'
+        <UploadSection;
+
+
+
+          customFile={customFile}
+          onFileUpload={handleFileUpload}
+          customFile={customFile}
+          onFileUpload={handleFileUpload}
 
           className="text-zion-purple border-zion-purple/20"
         >
@@ -664,6 +756,10 @@ return (<div className="space-y-4" > <h3 className="text-lg font-medium text-whi
 ;
 }
 
+      ;'
+      {selectedOption === 'upload' && (;'
+        <UploadSection;
+          customFile={customFile}          onFileUpload={handleFileUpload}
         <UploadSection;
       {selectedOption === "upload" && ("
       {selectedOption === 'upload' && (;
@@ -733,3 +829,8 @@ return (<div className="space-y-4" > <h3 className="text-lg font-medium text-whi
 
 }> <Plus className=" h-4 w-4 mr-2" /> Generate Resume Now  </div> </div>)"
 pr-12325
+}/>) 
+</UploadSection>'
+}> <Plus className=" h-4 w-4 mr-2" /> Generate Resume Now </Button> </div> </div>)"
+</Plus>"
+

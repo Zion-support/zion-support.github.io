@@ -9,6 +9,11 @@ import {;
 
 
 pr-12325
+import React, { useState } from \"react\";
+import { Control } from \"react-hook-form\";
+
+
+
   FormField,
   FormItem,
   FormLabel,
@@ -20,6 +25,7 @@ import {
   FormItem,
   FormLabel,
   FormControl,
+  FormMessage,;
 
 
 import React, { useState } from "react";""
@@ -34,6 +40,20 @@ import {
   FormMessage;
   FormMessage,;"
   // TODO: Implement
+  FormField,
+  FormItem,
+  FormLabel,
+  FormControl,
+  FormMessage,;"
+import React, { useState } from "react";""
+import { Control } from "react-hook-form";"
+import {
+  // TODO: Implement
+}
+FormField;
+  FormItem;
+  FormLabel;
+  FormControl;
   FormMessage;"
 } from "@/components/ui/form";""
 import { Input } from "@/components/ui/input";""
@@ -50,6 +70,31 @@ import { ClientBudgetRecommender  } from '@/components / pricing / ClientBudgetR
 import { Card, CardContent  } from '@/components / ui / card';import React, { useState } from "react",
 import { Control } from "react-hook-form",
 import { 
+import React, { useState } from './react';''
+import { Control  } from './react - hook - form';'
+
+import {
+  // TODO: Implement
+}
+  FormField,
+  FormItem,
+  FormLabel,
+  FormControl,
+
+  FormMessage,'
+} from '@/components / ui / form';''
+import { Input  } from '@/components / ui / input';''
+import { ClientBudgetRecommender  } from '@/components / pricing / ClientBudgetRecommender';''
+import { Card, CardContent  } from '@/components / ui / card';''
+} from "@/components/ui/form";""
+import { Input } from "@/components/ui/input";""
+import { ClientBudgetRecommender } from "@/components/pricing/ClientBudgetRecommender";""
+import { Card, CardContent } from "@/components/ui/card";""
+import React, { useState } from "react",""
+import { Control } from "react-hook-form","
+import {
+  // TODO: Implement
+}
   FormField,
   FormItem, 
   FormLabel, 
@@ -174,6 +219,7 @@ import { Card, CardContent  } from '@/components / ui / card';
 import React, { useState } from "react",""
 import { Control } from "react-hook-form","
   // TODO: Implement
+  FormMessage;"
 } from "@/components/ui/form",""
 import { Input } from "@/components/ui/input",""
 import { ClientBudgetRecommender } from "@/components/pricing/ClientBudgetRecommender",""
@@ -351,6 +397,18 @@ export const BasicInfoFields: React.FC < BasicInfoFieldsProps> = ({
 
           
 
+</Input>
+
+            </FormControl>
+            <FormMessage />
+</FormMessage>
+          </FormItem>
+
+      <FormField;
+      />;
+</FormField>
+      <FormField;
+        control={control}"
         name="category"")
 
 
@@ -388,6 +446,41 @@ export const BasicInfoFields: React.FC < BasicInfoFieldsProps> = ({
 
             
 
+                  value={minBudget |rest.value}
+                  onChange={(e) => {
+</Input>
+
+              </FormControl>
+              <FormMessage />
+</FormMessage>
+            </FormItem>
+
+        <FormField;
+          control={control}"
+          name="budgetMax""
+          render={({ field: { onChange, ...rest } }) => (
+</FormField>
+            <FormItem>
+</FormItem>)
+              <FormLabel>Budget (Max)</FormLabel>
+              <FormControl>
+</FormControl>
+                <Input;"
+                  type="number"""
+                  placeholder="e.g. 60""
+                  value={maxBudget |rest.value}
+                  onChange={(e) => {
+</Input>
+
+              </FormControl>
+              <FormMessage />
+</FormMessage>
+            </FormItem>
+      </div>
+
+              </FormControl>;
+              <FormMessage />;
+</FormMessage>
       
 
 <Card>
@@ -405,11 +498,20 @@ export const BasicInfoFields: React.FC < BasicInfoFieldsProps> = ({
             jobTitle={control._formValues.title || ""}""
             category={control._formValues.category || ""}""
             experienceLevel={control._formValues.experienceLevel || ""}"
+
             onSuggestionApplied={handleSuggestionApplied}
           />
 
         
       
+</ClientBudgetRecommender>
+        </CardContent>
+      </Card>
+
+        </CardContent>;
+      </Card>;
+      <FormField;
+        control={control}"
         name="location""
         name="location";"
 
@@ -428,6 +530,14 @@ export const BasicInfoFields: React.FC < BasicInfoFieldsProps> = ({
             
 
           
+</Input>
+
+            </FormControl>
+            <FormMessage />
+</FormMessage>
+          </FormItem>
+    </div>
+
     </div>;"
               <Input placeholder="e.g. Remote, San Francisco, etc." {...field} />;"
 
@@ -445,3 +555,7 @@ return (<div className="space-y-4" > <FormField control= {"
 }/> </div> <Card> <CardContent className="pt-4" > <ClientBudgetRecommender />   <FormField  <FormMessage /> )"
 }/> </div>) 
 pr-12325
+    </div>
+    </div>
+    </div>;"
+

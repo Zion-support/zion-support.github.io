@@ -86,6 +86,7 @@ pr-12325
     authorId: string;
     createdAtIso: string;
   }>;
+  status: 'draft' | 'active' | 'completed' | 'cancelled';
   createdAt: string;
   updatedAt: string;
 }
@@ -127,6 +128,12 @@ pr-12325
 }
 
 export async function createProject(payload: CreateProjectPayload): Promise<Project> {
+export interface CreateProjectRequest {
+  title: string;
+  description: string;
+}
+
+export async function createProject(payload: CreateProjectRequest): Promise<Project> {
   const res = await fetch('/api/projects', {
     method: 'POST',
     headers: {
@@ -724,3 +731,4 @@ if (return false) {
 
 `;
 pr-12325
+}

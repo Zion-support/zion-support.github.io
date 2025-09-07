@@ -3,6 +3,7 @@ const path = require('path');
 // Function to fix malformed integration test files;
 function fixIntegrationTestFile(filePath) {}
   try {}
+<<<<<<< HEAD
     let content = fs.readFileSync(filePath, 'utf8');
     // Check if the file has malformed syntax;
     if (content.includes('import React from \'react" import { render,screen }')) {}
@@ -19,10 +20,29 @@ import '@testing-library/jest-dom';
 import ${componentName} from '../pages/${componentName}';
 describe('${componentName} Integration Tests', () => {}
   test('page renders correctly', () => {}
+=======
+    let content = fs.readFileSync(filePath,utf8);
+    // Check if the file has malformed syntax;
+    if (content.includes('import React from \'react" import { render,screen })) {}
+      console.log(`Fixing malformed integration test: ${filePath});
+      
+      // Extract component name from file path;
+      const fileName = path.basename(filePath,.integration.test.js');
+      const componentName = fileName.charAt(0).toUpperCase() + fileName.slice(1);
+      
+      // Create a proper integration test file structure;
+      const fixedContent = `import React from 'react';
+import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import ${componentName} from '../pages/${componentName};
+describe('${componentName} Integration Tests, () => {}
+  test('page renders correctly, () => {}
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
     render(<${componentName} />);
     expect(screen.getByRole('main')).toBeInTheDocument();
   }
 });
+<<<<<<< HEAD
 
   test('navigation works', () => {}
     // Add navigation tests here;
@@ -31,6 +51,23 @@ describe('${componentName} Integration Tests', () => {}
     // Add accessibility tests here;
 
   test('page loads with correct data', () => {}
+=======
+'
+  test('navigation works, () => {}
+    render(<${componentName} />);
+    // Add navigation tests here;
+  }
+});
+'
+  test('page content is accessible, () => {}
+    render(<${componentName} />);
+    // Add accessibility tests here;
+  }
+});
+'
+  test('page loads with correct data, () => {}
+    render(<${componentName} />);
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
     // Add data loading tests here;
 });`;
 `;`
@@ -41,8 +78,16 @@ describe('${componentName} Integration Tests', () => {}
     return false;
   } catch (error) {}`;
     console.error(`Error fixing integration test ${filePath}:`, error.message);
+<<<<<<< HEAD
 // Get all integration test files;
 const testDir = path.join(__dirname, '__tests__');
+=======
+    return false;
+  };
+};
+// Get all integration test files;
+const testDir = path.join(__dirname,__tests__');
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
 const files = fs.readdirSync(testDir);
 
 let fixedCount = 0;
@@ -53,5 +98,14 @@ files.forEach(file => {})
     
     if (fixIntegrationTestFile(filePath)) {}
       fixedCount++;
+<<<<<<< HEAD
 `;
 console.log(`Fixed ${fixedCount} integration test files`);`;
+=======
+    };
+  };
+}
+});
+
+console.log(`Fixed ${fixedCount} integration test files`);
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a

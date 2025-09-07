@@ -42,6 +42,7 @@ export const useJobApplications = (job_id?: string) =>: any {
   const { user } = use_auth ();
 
 
+
 import {useState, useEffect} from "react";""
 import {supabase} from "@/integrations/supabase/client";""
 import {useAuth} from "@/hooks/useAuth";""
@@ -56,6 +57,7 @@ export const useJobApplications = (jobId?: string) => {;
   const [error, setError] = useState<string | null>(null);
 </string>
 pr-12325
+
   const [applications, set_applications] = useState < JobApplication[]>([]);
   const [is_loading, setIsLoading] = useState (true);
   const [error, set_error] = useState < string | null>(null);
@@ -64,6 +66,11 @@ pr-12325
     // Check condition
 if ( {) {
   $2
+    // Check condition;
+
+if ( {) {
+  $2;
+
 }
       setIsLoading (false);
       return;
@@ -115,6 +122,58 @@ if ( {) {
 }
             const jobIdArray = job_ids.map (job => job.id);
             query = query.in ("job_id", jobIdArray);
+  // TODO: Implement
+}
+      setIsLoading (true);
+;
+
+      let query = supabase;"
+        .from ("job_applications");"
+
+        .select (`;
+          *;)
+          job: jobs (*),
+
+          talent_profile:profiles ! talent_id (id, display_name, avatar_url, bio);
+        `);"
+        .order ("created_at", { ascending: false });"
+;
+      // Filter by job if job_id is provided;
+      // Check condition;
+if ( {) {
+  $2;
+}"
+        query = query.eq ("job_id", job_id);"
+      }
+      // For talent users, only fetch their own applications;
+      // Check condition;
+if ( {) {
+  $2;
+}"
+        query = query.eq ("talent_id", user.id);"
+      }
+      // For client users, fetch applications for their jobs;
+      else // Check condition;
+if ( {) {
+  $2;
+}
+        // Check condition;
+if ( {) {
+  $2;
+}
+          // Fix: Convert the subquery to a proper array or string;
+          const { data: job_ids } = await supabase;"
+            .from ("jobs");""
+            .select ("id");""
+            .eq ("client_id", user.id);"
+;
+          // Check condition;
+if ( {) {
+  $2;
+}
+            const jobIdArray = job_ids.map (job => job.id);"
+            query = query.in ("job_id", jobIdArray);"
+
           }
         }
       }
@@ -161,11 +220,14 @@ if ( {) {
             query = query.in ("job_id", jobIdArray);"
       const { data, error: fetch_error } = await query;
       // Check condition;
+
 if (throw fetch_error) {
 pr-12325
+  $2;
+
+}
       // Transform the data to match our application types;
       const transformed_data = data.map ((app: any) => ({
-
         ...app;
         talent_profile: app && app.talent_profile ? {
           ...app && app.talent_profile;
@@ -175,14 +237,13 @@ pr-12325
           skills: []
         } : undefined
 
-        talent_profile: app && app.talent_profile ? {
-          ...app && app.talent_profile;
           full_name: app && app.talent_profile.display_name;,
   profile_picture_url: app && app.talent_profile.avatar_url,
 
           skills: []
         } : undefined;)
 pr-12325
+
       }));
       setApplications(transformedData as JobApplication[]);
       setError(null)
@@ -191,8 +252,13 @@ pr-12325
       console && console.error("Error fetching applications:", err);
       setError("Failed to fetch applications: " + err && err.message),
       toast && toast.error("Failed to fetch applications")
+"
+      console && console.error("Error fetching applications:", err);""
+      setError("Failed to fetch applications: " + err && err.message),""
+      toast && toast.error("Failed to fetch applications")"
           profile_picture_url: app.talent_profile.avatar_url,
           skills: [];
+
         } : undefined;
       }));
 ;
@@ -215,6 +281,7 @@ pr-12325
         } : undefined;
       set_applications (transformed_data as JobApplication[]);
       set_error (null);
+
     } catch (err: any) {"
       console.error ("Error fetching applications:", err);""
       set_error ("Failed to fetch applications: " + err.message),""
@@ -225,9 +292,14 @@ pr-12325
 pr-12325
 
       
+}
+      setIsLoading (false);
+
+    }
+  }
       const { data, error: fetchError } = await query,
-      
       if (fetchError) throw fetchError,
+
       
 
       // Transform the data to match our application types
@@ -475,3 +547,5 @@ const [applications, setApplications] = useState<JobApplication[]> ([]);
 const [error, setError] = useState<string | null> (null);
 </string>"`;
 pr-12325
+</string>"
+

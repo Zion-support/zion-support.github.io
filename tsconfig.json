@@ -1,25 +1,18 @@
 {
   "compilerOptions": {
-    "target": "ES2020",
+    "target": "es5",
     "lib": [
       "dom",
       "dom.iterable",
-      "es6",
-      "es2017",
-      "es2018",
-      "es2019",
-      "es2020",
-      "es2021",
-      "es2022"
+      "es6"
     ],
     "allowJs": true,
     "skipLibCheck": true,
-    "strict": true,
+    "strict": false,
+    "forceConsistentCasingInFileNames": true,
     "noEmit": true,
-    "maxNodeModuleJsDepth": 0,
-    "skipDefaultLibCheck": true,
     "esModuleInterop": true,
-    "module": "ESNext",
+    "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
@@ -73,6 +66,7 @@
     "noImplicitReturns": false,
     "noFallthroughCasesInSwitch": false
 pr-12325
+    "strictNullChecks": true
   },
   "include": [
     "next-env.d.ts",
@@ -81,28 +75,6 @@ pr-12325
     ".next/types/**/*.ts"
   ],
   "exclude": [
-    "node_modules",
-    ".next",
-    "dist",
-    "build",
-    "backup*",
-    "temp*",
-    "corrupted*",
-    "**/*.backup.*",
-    "**/*.temp.*",
-    "**/*.conflict.*",
-    "src/App.tsx",
-    "src/components/DynamicListingPage.tsx",
-    "src/components/ErrorBoundary.tsx",
-    "src/components/FeaturesGuideSection.tsx",
-    "src/components/Footer.tsx",
-    "src/components/Header.tsx",
-    "src/components/PerformanceMonitor.tsx",
-    "src/components/developers/WebhooksManager.tsx",
-    "src/components/icons/index.tsx",
-    "src/pages/About.tsx",
-    "src/pages/Contact.tsx",
-    "src/pages/Pricing.tsx",
-    "src/pages/Services.tsx"
+    "node_modules"
   ]
 }

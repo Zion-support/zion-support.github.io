@@ -1,21 +1,21 @@
 #!/bin/bash
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-# Deploy and Merge Intelligent PM2 Improvements
-# This script deploys the enhanced PM2 system and merges changes to the main branch
-=======
+
 # Deploy and Merge Intelligent PM2 Improvements Script
 # This script commits all PM2 automation improvements and merges them with the main branch
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
 # Deploy and Merge Intelligent PM2 Improvements Script
 # This script commits all PM2 automation improvements and merges them with the main branch
-=======
 # Deploy and Merge Intelligent PM2 Improvements
 # This script deploys the enhanced PM2 system and merges changes to the main branch
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+# Deploy and Merge Intelligent PM2 Improvements
+# This script deploys the enhanced PM2 system and merges changes to the main branch
+
+# Deploy and Merge Intelligent PM2 Improvements Script
+# This script commits all PM2 automation improvements and merges them with the main branch
+
+# Deploy and Merge Intelligent PM2 Improvements
+# This script deploys the enhanced PM2 system and merges changes to the main branch
+
 
 set -e
 
@@ -26,8 +26,7 @@ YELLOW='\033[1;33m'
 BLUE='\033[0;34m'
 PURPLE='\033[0;35m'
 CYAN='\033[0;36m'
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 NC='\033[0m' # No Color
 
 # Configuration
@@ -375,9 +374,6 @@ show_final_status() {
     echo "  pm2 web                     - Web interface"
     echo "  ./health-check.sh           - Health check"
     echo "  ./maintenance.sh            - Maintenance"
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 BOLD='\033[1m'
 NC='\033[0m' # No Color
 
@@ -819,10 +815,7 @@ validate_deployment() {
     fi
     
     success "Deployment validation passed"
-<<<<<<< HEAD
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-=======
+
 NC='\033[0m' # No Color
 
 # Configuration
@@ -1170,14 +1163,12 @@ show_final_status() {
     echo "  pm2 web                     - Web interface"
     echo "  ./health-check.sh           - Health check"
     echo "  ./maintenance.sh            - Maintenance"
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+
 }
 
 # Main execution
 main() {
-<<<<<<< HEAD
-<<<<<<< HEAD
+
     print_header "Deploying Enhanced PM2 System"
     
     # Pre-flight checks
@@ -1205,11 +1196,8 @@ main() {
     show_final_status
 }
 
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
     banner "🚀 Deploy and Merge Intelligent PM2 Improvements"
-    banner "================================================="
+    banner ""
     echo
     
     # Pre-deployment checks
@@ -1277,10 +1265,7 @@ main() {
 # Trap to handle script interruption
 trap 'echo -e "\n${RED}Script interrupted. Current state preserved.${NC}"; exit 1' INT TERM
 
-<<<<<<< HEAD
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-=======
+
     print_header "Deploying Enhanced PM2 System"
     
     # Pre-flight checks
@@ -1308,7 +1293,5 @@ trap 'echo -e "\n${RED}Script interrupted. Current state preserved.${NC}"; exit 
     show_final_status
 }
 
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 # Run main function
 main "$@"

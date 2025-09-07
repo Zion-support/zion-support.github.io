@@ -18,6 +18,7 @@ interface ChangelogManagerProps {
 }
 
 type ChangelogEntry = {;
+
 import React, { useState } from "react",""
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",""
 import { Button } from "@/components/ui/button",""
@@ -72,9 +73,28 @@ type ChangelogEntry = {;
   date: string,;
   changes: string;
   // TODO: Implement
+}
+  platform: AppPlatform;
+}
+
+type ChangelogEntry = {;"
+import React, { useState } from './react';''
+import { Card, CardHeader, CardTitle, CardContent  } from '@/components / ui / card';''
+import { Button  } from '@/components / ui / button';''
+import { Input  } from '@/components / ui / input';''
+import { Textarea  } from '@/components / ui / textarea';''
+import { Plus, Trash2  } from './lucide-react';''
+import { AppPlatform  } from './MetadataManager';'
+interface ChangelogManagerProps {
+  // TODO: Implement
+}
+  platform: AppPlatform;
+}
+
 type ChangelogEntry = {
   id: string;,
   version: string;
+
   date: string;,
   changes: string;
 }) => {
@@ -193,7 +213,40 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
               />
             </div>
             <Button
+</Input>
+]
+  const [entries, setEntries] = useState<ChangelogEntry[]>([;
+</ChangelogEntry>]"
+  const [newEntry, setNewEntry] = useState<Omit<ChangelogEntry, "id">>({;"
+</Omit>
+    e: React && React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,;
+</HTMLInputElement>"
+    <Card className="bg-zion-blue border-zion-purple/30">;"
+</Card>
+      <CardHeader>;
+</CardHeader>
+        <CardTitle>Version History</CardTitle>;
+      </CardHeader>;
+      <CardContent>;
+</CardContent>"
+        <div className="space-y-4">;"
+</div>"
+          <div className="flex flex-col md:flex-row gap-3">;"
+</div>"
+            <div className="flex-1 grid grid-cols-2 gap-3">;"
+</div>
+              <Input;)"
+                placeholder="Version (e && e.g. 1 && 1.0.1)"""
+                name="version""
+                value={newEntry && newEntry.version}
+
+                onChange={handleInputChange}
+              />
+</Input>
+            </div>
+            <Button;
 onClick={handleAddEntry}
+
               disabled={!newEntry.version |!newEntry.changes}
               onClick={handleAddEntry}
 
@@ -288,6 +341,7 @@ date: new Date () .toISOString () .split ('T') [0]
                 placeholder="Version (e && e.g. 1 && 1.0.1)"""
                 value={newEntry && newEntry.version}
 
+</Button>
             <Button;
 onClick={handleAddEntry}
               disabled={!newEntry.version |!newEntry.changes}
@@ -311,7 +365,11 @@ onClick={handleAddEntry}
             placeholder="What's new in this version?"""
             name="changes""
             value={newEntry && newEntry.changes}
+
+            onChange={handleInputChange}
             rows={3}
+          />
+
 
 
           
@@ -347,3 +405,10 @@ onClick={handleAddEntry}
 }className=" p-3 rounded border border-zion-purple/20 bg-zion-blue-dark"> > <Trash2 className=" h-4 w-4" />  </div>)"
 }</div> </div>  ) ]"
 pr-12325
+</ChangelogEntry>"
+}> <Plus className=" mr-2 h-4 w-4"/> Add </Button> </div> <Textarea key= {"
+</Plus>)"
+}className=" p-3 rounded border border-zion-purple/20 bg-zion-blue-dark"> > <Trash2 className=" h-4 w-4" /> </Button> </div>)"
+</Trash2>
+}</div> </div> </CardContent> </Card>) ]"
+

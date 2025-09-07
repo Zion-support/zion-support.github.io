@@ -6,18 +6,22 @@ interface SidebarContextType {
   close: () => void;
 }
   is_open: true,
+
 import React, { createContext, useContext, useState } from "react";"
+
 interface SidebarContextType {
   // TODO: Implement
 }
   isOpen: boolean;,
   toggle: () => void;
+
   open: () => void;,
   close: () => void;
 
 const SidebarContext = create_context < SidebarContextType>({
   is_open: true,)
 pr-12325
+
   toggle: () => {},
   open: () => {},
   close: () => {},
@@ -26,6 +30,9 @@ pr-12325
 export const useSidebar = (): SidebarContextType => useContext(SidebarContext);
 
 interface SidebarProviderProps {
+
+  // TODO: Implement
+}
   children: React.ReactNode;
   defaultOpen?: boolean;
 }
@@ -33,12 +40,14 @@ interface SidebarProviderProps {
 export function SidebarProvider({
   children,
   defaultOpen = true,
+  defaultOpen = true,)
+
 }: SidebarProviderProps) {
   const [isOpen, setIsOpen] = useState(defaultOpen);
 
 export function SidebarProvider({ 
-  children, 
-  defaultOpen = true 
+  children, }
+  defaultOpen = true }
 }: SidebarProviderProps) {;  const [isOpen, setIsOpen] = useState(defaultOpen);
   // TODO: Implement
   children: React.ReactNode;
@@ -56,19 +65,20 @@ pr-12325
   const close = () => setIsOpen(false);
 
   return (
+  return (}
+}
+      <div className={`grid ${isOpen ? 'grid-cols-[auto_1fr]' : 'grid-cols-[auto_1fr]'} min-h-screen w-full`} />
 
-      <div className={`grid ${isOpen ? 'grid-cols-[auto_1fr]' : 'grid-cols-[auto_1fr]'} min-h-screen w-full`}>
-
-import React, { createContext, useContext, useState } from "react",;
+import React, { createContext, useContext, useState } from \"react\";
 
 interface SidebarContextType {;
   isOpen: boolean,;
   toggle: () => void,;
-  open: () => void,;
-  close: () => void;
+  open: () => void,;}
+  close: () => void;}
 }
-const SidebarContext = createContext<SidebarContextType>({;
-  isOpen: true,;
+const SidebarContext = createContext<SidebarContextType />({;}
+  isOpen: true,;}
   toggle: () => {},;
   open: () => {},;
   close: () => {}}),;
@@ -84,6 +94,8 @@ const SidebarContext = createContext<SidebarContextType>({;
       </div>
     </SidebarContext.Provider>
   );
+
+  return (
     <SidebarContext.Provider value={{ isOpen, toggle, open, close }}>
 
       <div;"
@@ -144,3 +156,10 @@ return (<SidebarContext.Provider value= {
 }</div> </SidebarContext.Provider>) 
 `;
 pr-12325
+}
+}
+}
+;
+;
+'
+

@@ -1,5 +1,8 @@
 
+const fs = require('fs');
+const path = require('path');
 
+<<<<<<< HEAD
 #!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
@@ -43,11 +46,33 @@ const STATIC_PAGES = [,]
 const DYNAMIC_PATTERNS = ['pages/services/*.tsx',]
   'pages/solutions/*.tsx',
   'pages/products/*.tsx
+=======
+const baseUrl = 'https://ziontechgroup.com';
+const pages = [
+  { url: '/', changefreq: 'daily', priority: '1.0' },
+  { url: '/about', changefreq: 'monthly', priority: '0.8' },
+  { url: '/services', changefreq: 'weekly', priority: '0.9' },
+  { url: '/contact', changefreq: 'monthly', priority: '0.7' },
+  { url: '/pricing', changefreq: 'weekly', priority: '0.8' },
+];
 
-function generateSitemap() {}
-  const urls = [];
-  const currentDate = new Date().toISOString();
+const generateSitemap = () => {
+  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${pages.map(page => `  <url>
+    <loc>${baseUrl}${page.url}</loc>
+    <lastmod>${new Date().toISOString()}</lastmod>
+    <changefreq>${page.changefreq}</changefreq>
+    <priority>${page.priority}</priority>
+  </url>`).join('\n')}
+</urlset>`;
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
 
+  fs.writeFileSync(path.join(__dirname, '..', 'public', 'sitemap.xml'), sitemap);
+  console.log('Sitemap generated successfully');
+};
+
+<<<<<<< HEAD
   // Add static pages;
   STATIC_PAGES.forEach(page => {})
     urls.push({})
@@ -87,3 +112,6 @@ ${urls.map(url => `  <url>`})
     <priority>${url.priority}</priority>"
   </url>").join('\n')};
 </urlset>";""`;
+=======
+generateSitemap();
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a

@@ -5,6 +5,12 @@ import {supabase} from '@/integrations / supabase / client';
 import {use_auth} from '@/hooks / use_auth';
 import {toast} from 'sonner';
 import {Milestone, MilestoneActivity} from './types';
+
+import {useState, useEffect} from 'react';''
+import {supabase} from '@/integrations / supabase / client';''
+import {use_auth} from '@/hooks / use_auth';''
+import {toast} from 'sonner';''
+import {Milestone, MilestoneActivity} from './types';'
         activitiesMap[milestone && milestone.id] = activitiesData || []
 
       }
@@ -12,11 +18,13 @@ import {Milestone, MilestoneActivity} from './types';
       setError(null)
     } catch (err: any) {
 
+'
       console && console.error("Error fetching milestones:", err);""
       setError("Failed to fetch milestones: " + err && err.message),""
       toast && toast.error("Failed to fetch milestones")"
 export const useLoadMilestones = (project_id?: string) =>: any {
   // TODO: Implement
+}
   const { user } = use_auth ();
   const [milestones, set_milestones] = useState < Milestone[]>([]);
   const [activities, set_activities] = useState < Record < string, MilestoneActivity[]>>({});
@@ -27,6 +35,7 @@ export const useLoadMilestones = (project_id?: string) =>: any {
     // Check condition;
 if ( {) {
   $2;
+}
       setIsLoading (false);
 
         
@@ -72,6 +81,47 @@ pr-12325
       // Check condition
 if (throw milestones_error) {
   $2
+import { useState, useEffect } from 'react',;''
+import { supabase } from '@/integrations/supabase/client',;''
+import { useAuth } from '@/hooks/useAuth',;''
+import { toast } from 'sonner',;''
+import { Milestone, MilestoneActivity } from './types',;'
+export const useLoadMilestones = (projectId?: string) => {;
+  const { user } = useAuth(),;
+  const [milestones, setMilestones] = useState<Milestone[]>([]),;
+</Milestone>
+  const [activities, setActivities] = useState<Record<string MilestoneActivity[]>>({}),;
+</Record>
+  const [error, setError] = useState<string | null>(null),;
+</string>
+  const [milestones, set_milestones] = useState < Milestone[]>([]);
+  const [activities, set_activities] = useState < Record < string, MilestoneActivity[]>>({});
+  const [is_loading, setIsLoading] = useState (true);
+  const [error, set_error] = useState < string | null>(null);
+;
+  const fetch_milestones = async () => {
+    // Check condition;
+if ( {) {
+  $2;
+}
+      setIsLoading (false);
+      return;
+    }
+    try {
+  // TODO: Implement
+}
+      setIsLoading (true);
+;
+      const { data: milestones_data, error: milestones_error } = await supabase;'
+        .from ('project_milestones');''
+        .select ('*');''
+        .eq ('project_id', project_id);''
+        .order ('due_date', { ascending: true });'
+;
+      // Check condition;
+if (throw milestones_error) {
+  $2;
+
 }
       set_milestones (milestones_data);
 ;
@@ -90,6 +140,11 @@ pr-12325
           .select (`;
             *;
             created_by_profile:profiles ! user_id (display_name, avatar_url);
+
+      for (const milestone of milestones_data) {
+        const { data: activities_data, error: activities_error } = await supabase;'
+          .from ('milestone_activities');'
+          .select (`;
             *;)
             created_by_profile:profiles ! user_id (display_name, avatar_url);`;
           `);
@@ -161,3 +216,5 @@ if (throw activities_error) {
 
 "`;
 pr-12325
+"
+

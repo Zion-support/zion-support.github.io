@@ -16,6 +16,22 @@ export const NotificationCenter: React.FC = () => {;  const { ;
 export const NotificationCenter: React.FC = () => {;
   const { ;
 pr-12325
+
+
+// Use the shared icon wrapper;
+// Use the shared icon wrapper;
+
+import React, { useState, useEffect } from 'react';''
+import {Bell} from '@/components/icons';''
+import {Button} from '@/components/ui/button';''
+import {Popover, PopoverContent, PopoverTrigger} from '@/components/ui/popover';''
+import {useNotifications} from '@/context/notifications/NotificationContext';''
+import {toast} from 'sonner';''
+import {NotificationFilter, NotificationHeader, NotificationList, NotificationFooter} from '@/components/notifications';''
+import {FilterType} from '@/components/notifications/NotificationFilter';'
+export const NotificationCenter: React.FC = () => {;
+  const { ;
+
     filteredNotifications,;
     unreadCount, ;
     markAsRead, ;
@@ -25,6 +41,7 @@ pr-12325
 pr-12325
     loading;
     filter;
+
     setFilter;
     fetchNotifications;
   } = useNotifications();    dismissNotification, 
@@ -62,13 +79,15 @@ export const NotificationCenter: React.FC = () => {
     markAllAsRead,
 
     dismissNotification, 
+
     loading,
     filter,
     setFilter,
 pr-12325
+    fetchNotifications;
   } = useNotifications(),
-  
   const [open, setOpen] = useState(false),
+
   const [error, setError] = useState<string | null>(null),
   // Refresh notifications when popover opens
   useEffect(() => {
@@ -240,6 +259,18 @@ if ( {) {
 
 
 pr-12325
+</NotificationList>
+        <NotificationList;
+        <NotificationFilter;
+          filter={filter as FilterType} 
+          onFilterChange={handleFilterChange} 
+        />
+</NotificationList>
+        <NotificationList;
+        />;
+</NotificationList>
+
+        <NotificationList;
           loading={loading}
           error={error}
           notifications={filtered_notifications}
@@ -264,6 +295,9 @@ pr-12325
 
 
 
+        />;
+
+</NotificationList>
 
         <NotificationFooter onClose={() => setOpen(false)} />;
 
@@ -287,3 +321,11 @@ pr-12325
       
     
 pr-12325
+</NotificationFooter>
+      </PopoverContent>
+    </Popover>
+        <NotificationFooter onClose={() => setOpen(false)} />;
+</NotificationFooter>
+      </PopoverContent>;
+    </Popover>;"
+

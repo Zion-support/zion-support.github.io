@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 #!/usr/bin/env node;
+=======
+#!/usr/bin/env node
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
 const fs = require('fs');
 const path = require('path');
 class CodeQualityAnalyzer {
@@ -9,6 +13,7 @@ class CodeQualityAnalyzer {
     this.issues = [];
 
   log(message) {
+<<<<<<< HEAD
     console.log(`[${new Date().toISOString()}] ${message}`);
 
   analyzeCodeQuality() {
@@ -16,6 +21,16 @@ class CodeQualityAnalyzer {
     const srcDir = path.join(this.projectRoot, 'src');
     if (!fs.existsSync(srcDir)) {
       this.log('Source directory not found', 'ERROR');
+=======
+    console.log(`[${new Date().toISOString()}] ${message});
+  }
+
+  analyzeCodeQuality() {
+    this.log('🔍 Analyzing Code Quality');
+    const srcDir = path.join(this.projectRoot,src');
+    if (!fs.existsSync(srcDir)) {
+      this.log('Source directory not found,ERROR');
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
       return;
 
     this.analyzeFiles(srcDir);
@@ -37,11 +52,17 @@ class CodeQualityAnalyzer {
   analyzeFile(filePath) {
     try {
   // TODO: Implement
+<<<<<<< HEAD
       const content = fs.readFileSync(filePath, 'utf8');
+=======
+}
+      const content = fs.readFileSync(filePath,utf8);
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
       // Check for common issues;
       if (content.includes('console.log')) {
         this.issues.push({
           file: filePath,
+<<<<<<< HEAD
           type: 'console.log',
           message: 'Console.log found - consider removing in production)
       
@@ -54,6 +75,32 @@ class CodeQualityAnalyzer {
           message: 'TypeScript any type used - consider more specific typing)
     } catch (error) {`;
       this.log(`Error analyzing file ${filePath}: ${error.message}`, 'ERROR');
+=======
+          type: console.log,
+          message: Console.log found - consider removing in production)
+        });
+      }
+      '
+      if (content.includes('TODO') || content.includes('FIXME')) {
+        this.issues.push({
+          file: filePath,
+          type: todo,
+          message: TODO or FIXME comment found)
+        });
+      }
+      '
+      if (content.includes('any')) {
+        this.issues.push({
+          file: filePath,
+          type: any,
+          message: TypeScript any type used - consider more specific typing)
+        });
+      }
+    } catch (error) {
+      this.log(`Error analyzing file ${filePath}: ${error.message},ERROR');
+    }
+  }
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
 
   generateReport() {
     const report = {
@@ -61,6 +108,7 @@ class CodeQualityAnalyzer {
       totalIssues: this.issues.length,
       issues: this.issues,
       summary: {,
+<<<<<<< HEAD
   consoleLogs: this.issues.filter(i => i.type === 'console.log').length,
         todos: this.issues.filter(i => i.type === 'todo').length,
         anyTypes: this.issues.filter(i => i.type === 'any').length;
@@ -68,6 +116,16 @@ class CodeQualityAnalyzer {
     
     fs.writeFileSync()
       path.join(this.projectRoot, 'code-quality-report.json'),
+=======
+  consoleLogs: this.issues.filter(i => i.type ===console.log').length,
+        todos: this.issues.filter(i => i.type ===todo').length,
+        anyTypes: this.issues.filter(i => i.type ===any').length;
+      }
+    };
+    
+    fs.writeFileSync()
+      path.join(this.projectRoot,code-quality-report.json'),
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
       JSON.stringify(report, null, 2)
     );
     `;

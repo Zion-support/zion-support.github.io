@@ -103,6 +103,7 @@ import { Globe } from "lucide-react",    author: {
   );
 }
 
+
 import { DynamicListingPage } from "@/components/DynamicListingPage",""
 import { ProductListing } from "@/types/listings",""
 import { AppLayout } from "@/layout/AppLayout",""
@@ -246,6 +247,23 @@ const SERVICE_FILTERS = ["
           </div>;
       <TrustedBySection />;
 
+</Globe>
+              </Button>;
+            </Link>;"
+            <Link to="/request-quote">;"
+</Link>"
+              <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">;"
+</Button>
+
+              </Button>;
+            </Link>;
+          </div>;
+        </div>;
+      </div>;
+
+      <TrustedBySection />;
+</TrustedBySection>
+    </AppLayout>;
       <DynamicListingPage;"
         title="IT & AI Services";""
         description="Find expert technology service providers for your business needs, from AI development to infrastructure management.";""
@@ -270,3 +288,18 @@ const SERVICE_FILTERS = ["
 
 
 pr-12325
+}/> <TrustedBySection /> </AppLayout>) 
+</DynamicListingPage>
+      <DynamicListingPage;"
+        title="IT & AI Services";""
+        description="Find expert technology service providers for your business needs, from AI development to infrastructure management.";""
+        categorySlug="services";"
+        listings={SERVICE_LISTINGS}
+        categoryFilters={SERVICE_FILTERS}
+        initialPrice={{ min: 3000, max: 10000 }}
+      />;
+</DynamicListingPage>
+      <TrustedBySection />;
+</TrustedBySection>
+    </AppLayout>;"
+

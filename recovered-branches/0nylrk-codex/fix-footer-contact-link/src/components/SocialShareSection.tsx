@@ -93,6 +93,7 @@ export function SocialShareSection() {
 }
 
 
+
 import { Button } from "./ui/button",""
 import { Twitter, Facebook, Linkedin, Link } from "@/components/icons";""
 import { toast } from "./ui/use-toast";"
@@ -195,6 +196,14 @@ export function SocialShareSection() {;
 
                 <span>{link.name}</span>;
               ))}
+</Button>
+                <span>{link.name}</span>;
+
+              </Button>))}
+          </div>;
+        </div>;
+      </div>;
+
     </section>);"
       icon:<Twitter className="h-5 w-5" />,;"
       icon:<Facebook className="h-5 w-5" />,;"
@@ -209,3 +218,7 @@ export function SocialShareSection() {;
 ;
 ]"`;
 pr-12325
+}
+;
+]"
+

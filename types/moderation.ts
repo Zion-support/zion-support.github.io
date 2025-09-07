@@ -1,3 +1,4 @@
+
 export interface ModerationResult {
   // TODO: Implement
 }
@@ -7,7 +8,7 @@ export interface ModerationResult {
   reason?: string;
   moderatedBy?: string;
   moderatedAt: Date;
-
+}
 
 
 
@@ -19,6 +20,7 @@ export interface ModerationAction {
   targetType: "post" | "comment" | "user";"
   adminId: string;
   createdAt: string;
+}
 
 
 
@@ -29,6 +31,9 @@ export interface ModerationFlag {;
   id: string;,"
   type: "spam" | "inappropriate" | "harassment" | "other";"
   content: string;,
+  id: string;
+type: \"spam\" | \"inappropriate\" | \"harassment\" | \"other\";
+  content: string;
   reporterId: string;
   status: ModerationStatus;,
   updatedAt: string;
@@ -42,3 +47,18 @@ export interface ModerationRule {
   pattern: string;,"
   action: 'approve' | 'reject' | 'flag';
   severity: 'low' | 'medium' | 'high';
+
+  createdAt: string;
+  updatedAt: string;}
+  adminNotes?: string;}
+}}
+
+export interface ModerationRule {
+  id: string;
+name: string;
+  pattern: string;
+  action: 'approve' | 'reject' | 'flag';
+  severity: 'low' | 'medium' | 'high';}
+}
+
+export type ModerationStatus = 'pending' | 'approved' | 'rejected';

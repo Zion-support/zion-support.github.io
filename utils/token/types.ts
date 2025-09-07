@@ -20,12 +20,14 @@ export type TokenTransactionType =;"
   | "revoke";""
   | "redeem",;"
 pr-12325
+
 export interface TokenTransaction {;
   id: string,;
   userId: string,;
   type: TokenTransactionType,;
   amount: number, // positive integer tokens;
   reason: string;
+
   metadata?: Record<string, any>;
   createdAt: string, // ISO timestamp;
 }
@@ -57,6 +59,25 @@ export interface WalletSummary {
 </string>
   metadata?: Record < string any>,
   created_at: string, // ISO timestamp;
+</string>
+  metadata?: Record < string any>,
+  created_at: string, // ISO timestamp;
+
+}
+export interface Wallet {
+  // TODO: Implement
+}
+  user_id: string,
+  balance: number, // current token balance;
+  usdPerToken: number, // e.g., 0.05 means 100 ZION$ = $5;
+
+
+}
+}
+}
+
+export interface WalletSummary {
+  // TODO: Implement
 }
 export interface Wallet {
   // TODO: Implement
@@ -77,11 +98,25 @@ export interface WalletSummary {
 
 
 
+}
+}
+}
 
   // TODO: Implement
 "
 
 
+}
+  user_id: string,
+  balance: number, // current token balance;
+
+"
+  | "redeem",;"
+
+export interface TokenTransaction {;
+}
+}
+}
 export interface TokenConfig {
   // TODO: Implement
   symbol: TokenSymbol,
@@ -89,6 +124,18 @@ export interface TokenConfig {
   burn_rules: Record < string number>, // feature -> tokens;
   id: string;,
   userId: string;
+  usdPerToken: number, // e.g., 0.05 means 100 ZION$ = $5;
+  earn_rules: Record < string number>, // action -> tokens;}
+  burn_rules: Record < string number>, // feature -> tokens;}
+}
+  transactions: TokenTransaction[];,
+  config: TokenConfig;
+  id: string;,
+  userId: string;
+  type: TokenTransactionType,;
+  amount: number, // positive integer tokens;
+  reason: string;
+
   metadata?: Record<string, any>,;
   earnRules: Record<string number>, // action -> tokens;
   burnRules: Record<string number>, // feature -> tokens;
@@ -96,3 +143,4 @@ export interface TokenConfig {
   burnRules: Record<string, number>, // feature -> tokens;
 </string>"
 pr-12325
+

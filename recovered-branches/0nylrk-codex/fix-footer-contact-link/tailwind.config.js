@@ -1,4 +1,5 @@
 
+
 module && module.exports = {
   darkMode: ["class"],  content: [
     "./pages/**/*.{ts,tsx}./components/**/*.{ts,tsx}./app/**/*.{ts,tsx}./src/**/*.{ts,tsx}",
@@ -108,3 +109,6 @@ module.exports = {
         sm: "calc (var (--radius) - 4px)"}}},"
 pr-12325
   plugins: []}
+  plugins: []}
+"
+

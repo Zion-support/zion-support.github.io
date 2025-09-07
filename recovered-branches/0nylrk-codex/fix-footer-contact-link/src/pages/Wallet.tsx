@@ -17,6 +17,37 @@ export default function WalletPage() {;  const { wallet, transactions, loading }
         <CardHeader>;
           <CardTitle className="flex items-center gap-2">;
             <BadgeDollarSign className="h-5 w-5" /> Balance;
+
+import { useWallet } from "@/hooks/useWallet";"
+import {
+  // TODO: Implement
+}
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+  CardDescription,"
+} from "@/components/ui/card";""
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";""
+import { BadgeDollarSign } from "lucide-react";"
+export default function WalletPage() {
+  const { wallet, transactions, loading } = useWallet();
+  return ("
+    <div className="container max-w-4xl py-10">;"
+</div>"
+      <h1 className="text-3xl font-bold mb-6 flex items-center gap-2">;"
+</h1>"
+        <BadgeDollarSign className="h-6 w-6" /> Wallet;"
+</BadgeDollarSign>
+      </h1>;"
+      <Card className="mb-6">;"
+</Card>
+        <CardHeader>;
+</CardHeader>"
+          <CardTitle className="flex items-center gap-2">;"
+</CardTitle>"
+            <BadgeDollarSign className="h-5 w-5" /> Balance;"
+</BadgeDollarSign>
           </CardTitle>;
           <CardDescription>Your current ZION$ balance</CardDescription>;
         </CardHeader>;
@@ -91,6 +122,8 @@ export default function WalletPage() {
   const { wallet, transactions, loading } = useWallet();
   return ("
     <div className="container max-w-4xl py-10">;"
+</CardContent>"
+            <div className="h-8 w-8 rounded-full border-4 border-primary border-t-transparent animate-spin" />;"
 </div>"
       <h1 className="text-3xl font-bold mb-6 flex items-center gap-2">;"
 </h1>"
@@ -106,6 +139,16 @@ export default function WalletPage() {
 
           ;
           <CardDescription>Your current ZION$ balance;
+</CardHeader>"
+          <CardTitle className="flex items - center gap - 2">;"
+</CardTitle>"
+            <BadgeDollarSign className="h - 5 w - 5" /> Balance;"
+</BadgeDollarSign>
+
+          </CardTitle>;
+          <CardDescription />Your current ZION$ balance</CardDescription>;
+        </CardHeader>;
+
         <CardContent>;
             <div className="h-8 w-8 rounded-full border-4 border-primary border-t-transparent animate-spin" />;"
             <p className="text-2xl font-bold">{wallet?.balance ?? 0} ZION$</p>;"
@@ -184,3 +227,5 @@ export default function WalletPage() {
   transactions.filter (t => t.transaction type === 'burn') .map (t => (</li>) )
 }  </div> </div>) 
 pr-12325
+}</TabsContent> </Tabs> </div> </div>) '
+

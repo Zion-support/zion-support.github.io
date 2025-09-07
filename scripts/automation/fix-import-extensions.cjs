@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 #!/usr/bin/env node;
+=======
+#!/usr/bin/env node
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
 const fs = require('fs');
 const path = require('path');
 const glob = require('glob');
@@ -7,20 +11,33 @@ class ImportExtensionFixer {}
     this.projectRoot = process.cwd();
     this.fixesApplied = 0};
   log(message) {}
+<<<<<<< HEAD
     console.log(`[${new Date().toISOString()}] ${message}`)};
   async fixImportExtensions() {}
     this.log('Fixing import extensions...');
     // Find all TypeScript and JavaScript files;
     const files = glob.sync('src/**/*.{ts,tsx,js,jsx}', { "cwd": this.projectRoot }")
+=======
+    console.log(`[${new Date().toISOString()}] ${message})};
+  async fixImportExtensions() {}
+    this.log('Fixing import extensions...);
+    // Find all TypeScript and JavaScript files;
+    const files = glob.sync('src/**/*.{ts,tsx,js,jsx}, { "cwd": this.projectRoot }")
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
 });
     
     for (const file of files) {}
       const filePath = path.join(this.projectRoot, file);"
+<<<<<<< HEAD
       let content = fs.readFileSync(filePath, 'utf8');
+=======
+      let content = fs.readFileSync(filePath,utf8);
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
       let modified = false;
 
       // Fix .ts extensions in import statements;
       const originalContent = content;
+<<<<<<< HEAD
       
       // Fix imports like 'react.ts' -> 'react
       content = content.replace(/from\s+['"]([^'"]+)\.ts['"]/g, "from '$1'");""
@@ -32,10 +49,26 @@ class ImportExtensionFixer {}
         fs.writeFileSync(filePath, content);
         modified = true;`;
         this.log(`Fixed import extensions in ${file}`)};
+=======
+      '
+      // Fix imports like 'react.ts' -> 'react'
+      content = content.replace(/from\s+["]([^'"]+)\.ts["]/g, "from '$1");
+      // Fix imports like 'react-router-dom.ts' -> 'react-router-dom'
+      content = content.replace(/from\s+["]([^'"]+)\.ts["]/g, "from '$1");
+      // Fix imports like 'framer-motion.ts' -> 'framer-motion'
+      content = content.replace(/from\s+["]([^'"]+)\.ts["]/g, "from '$1");
+      // Fix imports like 'lucide-react.ts' -> 'lucide-react'
+      content = content.replace(/from\s+["]([^'"]+)\.ts["]/g, "from '$1");"
+      if (content !== originalContent) {}
+        fs.writeFileSync(filePath, content);
+        modified = true;
+        this.log(`Fixed import extensions in ${file})};
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
       if (modified) {}
         this.fixesApplied++};
     };
   async run() {}"
+<<<<<<< HEAD
     this.log('Starting Import Extension Fixer...');
     try {}
       await this.fixImportExtensions();
@@ -43,16 +76,33 @@ class ImportExtensionFixer {}
       this.log("Import Extension Fixer completed successfully!");"`;
       this.log(`Fixed ${this.fixesApplied} files`)} catch (error) {`}"`;
       this.log(`Error in Import Extension "Fixer": ${error.message}`);"
+=======
+    this.log('Starting Import Extension Fixer...);
+    try {}
+      await this.fixImportExtensions();
+      '
+      this.log("Import Extension Fixer completed successfully!");"
+      this.log(`Fixed ${this.fixesApplied} files`)} catch (error) {`}"
+      this.log(`Error in Import Extension "Fixer": ${error.message});"
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
       throw error};
 // Run the automation if this script is executed directly;
 if (require.main === module) {}
   const automation = new ImportExtensionFixer();
   automation.run();
     .then(() => {}"
+<<<<<<< HEAD
       console.log('Import Extension Fixer completed successfully!');
       process.exit(0)}
     .catch(error => {})
       console.error('Import Extension Fixer "failed": ', error);
+=======
+      console.log('Import Extension Fixer completed successfully!);
+      process.exit(0)}
+});
+    .catch(error => {})
+      console.error('Import Extension Fixer "failed": , error);
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
       process.exit(1)})};
 
 `;

@@ -557,19 +557,52 @@ function QuoteFormSection() {
                     id="name"""
                     type="text"""
                     className="w-full bg-zion-blue-dark border border-zion-blue-light focus:border-zion-purple focus:ring-1 focus:ring-zion-purple text-white""
+
                     required;
                   />
 
+</Input>
+                </div>
+
+                <div>
+</div>
+                  <label;"
                     htmlFor="company"""
                     id="company"""
 
+                    type="text"""
+                    className="w-full bg-zion-blue-dark border border-zion-blue-light focus:border-zion-purple focus:ring-1 focus:ring-zion-purple text-white""
+
+                  />
+</Input>
+                </div>
+
+                <div>
+</div>
+                  <label;"
                     htmlFor="email"""
                     id="email"""
                     type="email"""
 
+                    className="w-full bg-zion-blue-dark border border-zion-blue-light focus:border-zion-purple focus:ring-1 focus:ring-zion-purple text-white""
+
+                    required;
+                  />
+</Input>
+                </div>
+
+                <div>
+</div>
+                  <label;"
                     htmlFor="phone"""
                     id="phone"""
                     type="tel"""
+                    className="w-full bg-zion-blue-dark border border-zion-blue-light focus:border-zion-purple focus:ring-1 focus:ring-zion-purple text-white""
+
+                  />
+</Input>
+                </div>
+              </div>
 
 "
               <div className="mt-6">"
@@ -597,6 +630,16 @@ function QuoteFormSection() {
 
                 
             </form>
+                >
+</Button>
+
+                </Button>
+              </div>
+            </form>
+        </div>
+      </div>
+
+    </section>"
     <section className="py - 20 bg - zion - blue">;"
       <div className="container mx - auto px - 4 sm:px - 6 lg:px - 8">;"
         <div className="text - center mb - 12">;"
@@ -665,3 +708,12 @@ function QuoteFormSection() {
             </form>)}
     </section>);"`;
 pr-12325
+                >;
+</Button>
+                </Button>;
+              </div>;
+            </form>)}
+        </div>;
+      </div>;
+    </section>);"
+

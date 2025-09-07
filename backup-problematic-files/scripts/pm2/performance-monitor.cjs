@@ -1,4 +1,4 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 /**
  * Performance Monitor Script for PM2;
  * Replaces GitHub Actions performance monitoring workflows;
@@ -14,6 +14,7 @@ const log = (message) => {}
 
 const runCommand = (command, description) => {}
   try {}
+<<<<<<< HEAD
     log(`Starting: ${description}`);
     const output = execSync(command, { })
       encoding: 'utf8',
@@ -25,12 +26,29 @@ const runCommand = (command, description) => {}
     return { success: true, output };
   } catch (error) {}`;
     log(`Failed: ${description} - ${error.message}`);
+=======
+    log(`Starting: ${description});
+    const output = execSync(command, { })
+      encoding: utf8,
+      stdio: pipe,
+      cwd: process.cwd();
+    }
+});
+    log(`Completed: ${description});
+    return { success: true, output };
+  } catch (error) {}
+    log(`Failed: ${description} - ${error.message});
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
     return { success: false, error: error.message };
 
 const checkBuildPerformance = () => {}
   log('Checking build performance');
   const startTime = Date.now();
+<<<<<<< HEAD
   const buildResult = runCommand('npm run build', 'Building project for performance check');
+=======
+  const buildResult = runCommand('npm run build,Building project for performance check');
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
   const endTime = Date.now();
   
   const buildTime = endTime - startTime;`;
@@ -39,11 +57,22 @@ const checkBuildPerformance = () => {}
   return { }
     success: buildResult.success, 
     buildTime: buildTime,
+<<<<<<< HEAD
     performance: buildTime < 60000 ? 'GOOD' : buildTime < 120000 ? 'FAIR' : 'POOR
 
 const checkMemoryUsage = () => {}
   log('Checking memory usage');
     const memInfo = execSync('free -m', { encoding: 'utf8' }')
+=======
+    performance: buildTime < 60000 ? 'GOOD: buildTime < 120000 ? 'FAIR: POOR
+  };
+};
+
+const checkMemoryUsage = () => {}
+  log('Checking memory usage');
+  try {}
+    const memInfo = execSync('free -m, { encoding: utf8})
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
 });
     const lines = memInfo.split('\n');
     const memLine = lines[1].split(/\s+/);
@@ -59,8 +88,18 @@ const checkMemoryUsage = () => {}
       total: totalMem,
       used: usedMem,
       usagePercent: memUsagePercent,
+<<<<<<< HEAD
       status: memUsagePercent < 80 ? 'GOOD' : memUsagePercent < 90 ? 'WARNING' : 'CRITICAL
     log(`Memory check failed: ${error.message}`);
+=======
+      status: memUsagePercent < 80 ? 'GOOD: memUsagePercent < 90 ? 'WARNING: CRITICAL
+    };
+  } catch (error) {}
+    log(`Memory check failed: ${error.message});
+    return { success: false, error: error.message };
+  };
+};
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
 
 const generatePerformanceReport = (results) => {}
   const report = {}
@@ -68,10 +107,15 @@ const generatePerformanceReport = (results) => {}
     build: results.build,
     memory: results.memory,
     overall: {}
+<<<<<<< HEAD
       status: 'GOOD',
+=======
+      status: GOOD,
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
       issues: 0;
   
   // Calculate overall status;
+<<<<<<< HEAD
   if (results.build && results.build.performance === 'POOR') {}
     report.overall.status = 'WARNING';
     report.overall.issues++;
@@ -81,6 +125,20 @@ const generatePerformanceReport = (results) => {}
   const reportPath = 'logs/pm2/performance-report.json';
   fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));`;
   log(`Performance report saved to ${reportPath}`);
+=======
+  if (results.build && results.build.performance ===POOR') {}
+    report.overall.status = 'WARNING';
+    report.overall.issues++;
+  };
+  if (results.memory && results.memory.status ===CRITICAL') {}
+    report.overall.status = 'CRITICAL';
+    report.overall.issues++;
+  };
+  // Save report;
+  const reportPath = 'logs/pm2/performance-report.json';
+  fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+  log(`Performance report saved to ${reportPath});
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
   
   return report;
 
@@ -98,6 +156,7 @@ const main = async () => {}
   const report = generatePerformanceReport(results);
   
   // Handle performance issues;
+<<<<<<< HEAD
   if (report.overall.status === 'CRITICAL') {}
     log('Critical performance issues detected');
   } else if (report.overall.status === 'WARNING') {}
@@ -118,3 +177,36 @@ process.on('SIGTERM', () => {}
 main().catch(error => {})`;
   log(`Performance Monitor Process failed: ${error.message}`);
   process.exit(1);
+=======
+  if (report.overall.status ===CRITICAL') {}
+    log('Critical performance issues detected');
+  } else if (report.overall.status ===WARNING') {}
+    log('Performance warnings detected, monitoring closely');
+  } else {}
+    log('Performance monitoring passed: All metrics look good');
+  };
+  log('Performance Monitor Process completed');
+};
+
+// Handle process termination;
+process.on('SIGINT, () => {}
+  log('Performance Monitor Process interrupted');
+  process.exit(0);
+}
+});
+'
+process.on('SIGTERM, () => {}
+  log('Performance Monitor Process terminated');
+  process.exit(0);
+}
+});
+
+// Run the main function;
+main().catch(error => {})
+  log(`Performance Monitor Process failed: ${error.message});
+  process.exit(1);
+}
+});
+});
+'
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a

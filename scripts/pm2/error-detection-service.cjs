@@ -1,4 +1,4 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 /**
  * Main Error Detection Service;
  * Continuously scans the project for errors and coordinates fixing;
@@ -7,6 +7,7 @@
 const fs = // // require('fs');
 const path = // // require('path');
 const { execSync, spawn } = // // require('child_process');
+<<<<<<< HEAD
 const chokidar = // // require('chokidar');
 class ErrorDetectionService {}
   constructor() {}
@@ -502,3 +503,6 @@ process.on('unhandledRejection', (reason, promise) => {}
 // Start the service;
 service.start().catch(error => {})
   service.log('error', 'Failed to start service', error);
+=======
+const chokidar = // // require('chokidar');
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a

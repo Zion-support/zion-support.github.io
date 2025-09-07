@@ -8,6 +8,7 @@ export const SkillCategory = ({ category, skills, onDelete }: SkillCategoryProps
       <div className="flex flex-wrap gap-2">
         {skills.map((skill) => (
           <SkillItem
+
 import { SkillCategoryProps } from "./types";""
 import { SkillItem } from "./SkillItem";"
 export const SkillCategory = ({
@@ -26,6 +27,7 @@ export const SkillCategory = ({
           <SkillItem;
 pr-12325
             key={skill.id}
+
             skill={skill}
             category={category}
             onDelete={onDelete}
@@ -35,6 +37,9 @@ pr-12325
     </div>
   )
 };
+</SkillItem>
+      </div>
+    </div>
 
       </div>;)
     </div>);
@@ -53,3 +58,4 @@ pr-12325
       </div>;
     </div>;"
 pr-12325
+

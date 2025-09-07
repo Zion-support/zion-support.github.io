@@ -186,14 +186,37 @@ import {AspectRatio} from '@/components/ui/aspect-ratio';
 import {useAuth} from '@/hooks/useAuth';
 import {MessageBubble} from './MessageBubble';
 import {DateDivider} from './DateDivider';
+
+
+import { format  } from 'date-fns';''
+import { MessageSquare  } from 'lucide-react';''
+import { useMessaging  } from '@/context/MessagingContext';''
+import { Button  } from '@/components/ui/button';''
+import { Avatar, AvatarFallback, AvatarImage  } from '@/components/ui/avatar';''
+import { AspectRatio  } from '@/components/ui/aspect-ratio';''
+import { useAuth  } from '@/hooks/useAuth';''
+import { MessageBubble  } from './MessageBubble';''
+import { DateDivider } from './DateDivider';'
+export function ConversationDetailView() {'
+import {format} from 'date-fns';''
+import {MessageSquare} from 'lucide-react';''
+import {useMessaging} from '@/context/MessagingContext';''
+import {Button} from '@/components/ui/button';''
+import {Avatar, AvatarFallback, AvatarImage} from '@/components/ui/avatar';''
+import {AspectRatio} from '@/components/ui/aspect-ratio';''
+import {useAuth} from '@/hooks/useAuth';''
+import {MessageBubble} from './MessageBubble';''
+import {DateDivider} from './DateDivider';'
 export function ConversationDetailView() {;
 
 
   const { user } = useAuth();
+
   const {
   // TODO: Implement
 }
     activeConversation;
+
 
     activeMessages;
     sendMessage;
@@ -313,11 +336,18 @@ export function ConversationDetailView() {;
   message;
 }isUserMessage= {
   message.sender id === user?.id;)
+
 }/>) ) 
 
 }</div> </div>) ) ) 
+
 }<div ref= {
   messagesEndRef;"
 }/> </div> placeholder="Type a message..." className="flex-1 bg-zion-blue-dark/30 border border-zion-purple/20 rounded-md p-2 min-h-[80px] text-white focus: outline-none focus:ring-2 focus:ring-zion-cyan" submit"className=" bg-zion-purple hover:bg-zion-purple-dark text-white" > Send  </form> </div> </div>)"
     </div>);"
 pr-12325
+}/> </div> placeholder="Type a message..." className="flex-1 bg-zion-blue-dark/30 border border-zion-purple/20 rounded-md p-2 min-h-[80px] text-white focus: outline-none focus:ring-2 focus:ring-zion-cyan" submit"className=" bg-zion-purple hover:bg-zion-purple-dark text-white" > Send </Button> </form> </div> </div>)"
+    </div>;
+  );
+}
+;

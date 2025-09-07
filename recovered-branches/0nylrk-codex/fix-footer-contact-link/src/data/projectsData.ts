@@ -122,6 +122,10 @@ origin/cursor/automate-test-improve-and-merge-code-20a4
 ;
 origin/cursor/automate-test-improve-and-merge-code-2533
 
+job: {
+      title: \"title\",
+    description: 'Develop dashboards using React and integrate ML models'}
+
 
     job: {,
   title: 'AI Dashboard Development
@@ -183,9 +187,26 @@ export const PROJECTS: Project[] = [;
     },;
     talent_profile: {;,"
       professional_title: "Senior AI Engineer";"
+
+    }
   }]
 
 
 ;
 "
 pr-12325
+;
+    }
+  }
+];
+
+    }
+  }
+];"
+      professional_title: "Senior AI Engineer";"
+    }
+  }
+];
+;
+"
+

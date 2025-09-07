@@ -232,27 +232,32 @@ export function buildMarkdownFromWiki(wiki: WikiContent): string {;
   const lines: string[] = [];
   lines.push(`# ${wiki.title}`);
   lines.push('');
+interface WikiContent {
+  infobox: {
+    founder: string;
+    [key: string]: any;
+  };
+  sections: Array<{
+    title: string;
+    paragraphs: string[];
+  }>;
+}
+
+export function buildMarkdownFromWiki(wiki: WikiContent): string {
+  const infobox = `| | | |---|---| | Founder | ${wiki.infobox.founder} |`;
+  
+  const lines: string[] = [];
   lines.push(infobox);
   lines.push('');
-  lines.push(wiki.intro);
-  lines.push('');
-  for (const s of wiki.sections) {;
+  
+  for (const s of wiki.sections) {
     lines.push(`## ${s.title}`);
-    for (const p of s.paragraphs) lines.push(p);
+    for (const p of s.paragraphs) {
+      lines.push(p);
+    }
     lines.push('');
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
   }
-}
-  if (wiki.references.length) {;
-    lines.push('## References');
-    wiki.references.forEach((r, i) => lines.push(`${i + 1}. ${r}`));
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+  
   return lines.join('\n');
   } catch (error) {
     console.error("Error:", error);
@@ -399,3 +404,12 @@ export function slugify(input: string): string {;
 export function slugify(input: string): string {;
 "`;
 pr-12325
+}
+
+export function slugify(input: string): string {
+  return input
+    .toLowerCase()
+    .replace(/[^a-z0-9\s-]/g, '')
+    .trim()
+    .replace(/\s+/g, '-');
+}

@@ -12,6 +12,33 @@ import { formatDate } from "@/utils/referralUtils",      case "expired":
 import { Referral, ReferralStatus } from "@/types/referrals",;
 import { Badge } from "@/components/ui/badge",;
 import { formatDate } from "@/utils/referralUtils",;
+
+
+
+import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";""
+import {Referral, ReferralStatus} from "@/types/referrals";""
+import {Badge} from "@/components/ui/badge";""
+import {formatDate} from "@/utils/referralUtils";""
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",""
+import { Referral, ReferralStatus } from "@/types/referrals",""
+import { Badge } from "@/components/ui/badge";""
+import { formatDate } from "@/utils/referralUtils";""
+import { Badge } from "@/components/ui/badge",""
+import { formatDate } from "@/utils/referralUtils","
+interface ReferralTableProps {
+  // TODO: Implement
+}
+  referrals: Referral[],
+  isLoading: boolean;
+}
+export function ReferralTable({ referrals, isLoading }: ReferralTableProps) {
+  // Helper function to render status badges;
+  const renderStatusBadge = (status: ReferralStatus) => {
+"
+import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";""
+import {Referral, ReferralStatus} from "@/types/referrals";""
+import {Badge} from "@/components/ui/badge";""
+import {formatDate} from "@/utils/referralUtils";"
 interface ReferralTableProps {;
   referrals: Referral[],;
   isLoading: boolean;
@@ -183,3 +210,10 @@ export function ReferralTable(): any ({ referrals, isLoading }: ReferralTablePro
           
       
 pr-12325
+</Badge>
+                </Badge>
+            </TableCell>
+          </TableRow>
+      </TableBody>
+    </Table>"
+

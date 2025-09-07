@@ -8,11 +8,13 @@ import { useAuth } from "@/hooks/useAuth",
 import {
 
 
+
 import { Link } from "react-router-dom",""
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";""
 import { useAuth } from "@/hooks/useAuth";""
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",""
 import { useAuth } from "@/hooks/useAuth","
+
 import {
   // TODO: Implement
 }
@@ -20,6 +22,7 @@ pr-12325
   MessageSquare;
   Briefcase;
   Code;
+
   FileText;
   Megaphone
 } from "@/components/icons",
@@ -185,3 +188,23 @@ const iconMap = {
                 <CardDescription className="text-base">{category.description};"
     </div>;]"`;
 pr-12325
+</Link>"
+            <Card className="h-full transition-all hover:shadow-md hover:border-zion-purple/50 cursor-pointer">;"
+</Card>"
+              <CardHeader className="flex flex-row items-center gap-4">;"
+</CardHeader>"
+                <div className="p-2 bg-zion-purple/10 rounded-full">;"
+</div>"
+                  <Icon className="h-6 w-6 text-zion-purple" />;"
+</Icon>
+                </div>;"
+                <CardTitle className="text-xl">{category.name}</CardTitle>;"
+              </CardHeader>;
+              <CardContent>;
+</CardContent>"
+                <CardDescription className="text-base">{category.description}</CardDescription>;"
+              </CardContent>;
+            </Card>;
+          </Link>;
+    </div>;]"
+

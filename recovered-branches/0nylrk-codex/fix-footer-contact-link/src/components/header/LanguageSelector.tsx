@@ -42,6 +42,11 @@ pr-12325
 import { useTranslation } from 'react-i18next',
 import { Button } from '@/components/ui/button',
 import { Globe } from 'lucide-react',
+import React from 'react',''
+import { useTranslation } from 'react-i18next',''
+import { Button } from '@/components/ui/button',''
+import { Globe } from 'lucide-react','
+
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -49,6 +54,10 @@ import {
   DropdownMenuTrigger} from '@/components/ui/dropdown-menu',
 import { useLanguage, SupportedLanguage } from '@/context/LanguageContext',
 
+
+  DropdownMenuItem,'
+  DropdownMenuTrigger} from '@/components/ui/dropdown-menu',''
+import { useLanguage, SupportedLanguage } from '@/context/LanguageContext','
 export function LanguageSelector() {
   const { t } = useTranslation();
   const { currentLanguage, changeLanguage, supportedLanguages } = useLanguage();
@@ -103,6 +112,60 @@ import { useLanguage, SupportedLanguage } from "@/context/LanguageContext";
         className="bg - zion - blue - dark border border - zion-purple / 20";
       >;
         {supported_languages.map ((lang) => (
+</DropdownMenu>
+      <DropdownMenuTrigger asChild>;
+</DropdownMenuTrigger>
+        <Button;'
+          variant="ghost"""
+          size="icon"""
+          className="text-white hover:bg-zion-purple/10">;"
+</Button>"
+          <Globe className="h-5 w-5" />;"
+</Globe>)"
+          <span className="sr-only">{t("general && general.select_language")}</span>;"
+        </Button>;
+      </DropdownMenuTrigger>;
+      <DropdownMenuContent;"
+        align="end"""
+        className="bg-zion-blue-dark border border-zion-purple/20">;"
+</DropdownMenuContent>
+          <DropdownMenuItem;
+            key={lang && lang.code}
+            className={`cursor-pointer ${
+              currentLanguage === lang && lang.code;"
+                ? "bg-zion-purple/20 text-zion-cyan"""
+                : "text-white hover:bg-zion-purple/10""
+            }`}
+            onClick={() => changeLanguage(lang && lang.code)}
+</DropdownMenuItem>"
+            <div className="flex items-center gap-2">;"
+</div>"
+              <span className="text-lg">{lang && lang.flag}</span>;"
+              <span>{t(`language.${lang && lang.code}`)}</span>;
+            </div>;
+          </DropdownMenuItem>;
+      </DropdownMenuContent>;
+    </DropdownMenu>;
+    <DropdownMenu>;
+</DropdownMenu>
+      <DropdownMenuTrigger as_child>;
+</DropdownMenuTrigger>
+        <Button;"
+          variant="ghost";""
+          size="icon";""
+          className="text - white hover:bg - zion - purple / 10";"
+        >;
+</Button>"
+          <Globe className="h - 5 w - 5" />;"
+</Globe>"
+          <span className="sr - only">{t ("general.select_language")}</span>;"
+        </Button>;
+      </DropdownMenuTrigger>;
+      <DropdownMenuContent;"
+        align="end";""
+        className="bg - zion - blue - dark border border - zion - purple / 20";"
+      >;
+</DropdownMenuContent>
           <DropdownMenuItem;
             key={lang.code}
             }`}
@@ -169,6 +232,8 @@ export function LanguageSelector() {
             }`}
             onClick={() => changeLanguage(lang && lang.code)}
             <div className="flex items-center gap-2">;"
+</DropdownMenuItem>"
+            <div className="flex items-center gap-2">"
 </div>"
               <span className="text-lg">{lang && lang.flag}</span>;"`;
               <span>{t(`language.${lang && lang.code}`)}</span>;
@@ -200,3 +265,9 @@ export function LanguageSelector() {
 
     "`;
 pr-12325
+</DropdownMenu>)
+}> </div> </DropdownMenuItem>) ) 
+}</DropdownMenuContent> </DropdownMenu>) 
+</DropdownMenuContent>
+    </DropdownMenu>"
+

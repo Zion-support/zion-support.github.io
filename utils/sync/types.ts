@@ -1,6 +1,8 @@
 export type SyncScope = "full" | "dao" | "marketplace",;
 export type SyncScope = "full" | "dao" | "marketplace",;"
 pr-12325
+
+export type SyncScope = "full" | "dao" | "marketplace",;"
 export interface Peer {;
   id: string,;
   baseUrl: string, // e.g., https: //zion-latam.example.org;
@@ -19,6 +21,55 @@ export interface InstanceConfig {instanceId: string;
   secretConfigured: boolean;}  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+  } catch (error) {"
+    console.error("Error:", error);""
+    return res.status(500).json({ error: "Internal server error" });"
+
+  }
+}
+export interface InstanceConfig {instanceId: string;,
+  optIn: boolean;
+  paused: boolean;,
+  scope: SyncScope;
+  peers: Peer[];,
+  secretConfigured: boolean;
+
+"
+export type SyncScope = "full" | "dao" | "marketplace","
+
+export interface Peer {
+  // TODO: Implement
+}
+  id: string,
+  base_url: string, // e.g., https: //zion - latam.example.org;
+  scope?: SyncScope,}
+  paused?: boolean;}
+}
+export interface InstanceConfig {
+  // TODO: Implement
+}
+  instance_id: string,
+  opt_in: boolean,
+  paused: boolean,
+  scope: SyncScope,
+  peers: Peer[],
+  secret_configured: boolean;
+
+}
+}
+}
+}
+;
+
+export type SyncEventType =;"
+  | "proposal";""
+  | "token_transfer";""
+  | "talent_mobility";""
+  | "dao_endorsement";"
+  } catch (error) {"
+    console.error("Error:", error);""
+    return res.status(500).json({ error: "Internal server error" });"
+
   }
 }
 ;
@@ -29,6 +80,16 @@ export interface ProposalVoteEntry {
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+
+  // TODO: Implement
+}
+  voterId: string;,
+  weight: number;
+  choice: string;
+  } catch (error) {"
+    console.error("Error:", error);""
+    return res.status(500).json({ error: "Internal server error" });"
+
   }
 }
 ;
@@ -39,6 +100,14 @@ export interface ProposalPayload extends BaseEventPayload {;
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+
+  proposalId: string;,
+  title: string;
+  votes: ProposalVoteEntry[];
+  } catch (error) {"
+    console.error("Error:", error);""
+    return res.status(500).json({ error: "Internal server error" });"
+
   }
 }
 ;
@@ -58,6 +127,22 @@ export interface TokenTransferPayload extends BaseEventPayload {;
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+  txId: string;,
+  token: string;
+  amount: number;,
+  fromSubnet: string;
+  toSubnet: string;,
+  timestamp: number;
+  fromNation: string;,
+  toNation: string;
+
+  role: string;,
+  startDate: string;
+  endDate?: string;
+  } catch (error) {"
+    console.error("Error:", error);""
+    return res.status(500).json({ error: "Internal server error" });"
+
   }
 }
 ;
@@ -73,6 +158,18 @@ export interface DaoEndorsementPayload extends BaseEventPayload {;
     return res.status(500).json({ error: "Internal server error" });
   }
 
+  fromDAO: string;,
+  toDAO: string;
+
+  resolutionId: string;,"
+  decision: "endorse" | "reject",;"
+  timestamp: number;
+
+  } catch (error) {"
+    console.error("Error:", error);""
+    return res.status(500).json({ error: "Internal server error" });"
+
+  }
 }
 ;
 export interface LeaderboardEntryPayload extends BaseEventPayload {;
@@ -153,9 +250,17 @@ export interface LeaderboardEntryPayload extends BaseEventPayload {;
   subjectId: string, // userId or teamId;
   score: number;,
   category: string, // e.g., grants, contributions;
+
   rank?: number,;
   period?: string, // e.g., 2025-Q3;
 pr-12325
+  } catch (error) {"
+    console.error("Error:", error);""
+    return res.status(500).json({ error: "Internal server error" });"
+
+  }
+}
+;
 export type SyncEventPayload =;
   | ProposalPayload;
   | TokenTransferPayload;
@@ -166,8 +271,23 @@ export type SyncEventPayload =;
   version: number;
   merkleRoot?: string, // required for proposal events;
 
+
+  } catch (error) {"
+    console.error("Error:", error);""
+    return res.status(500).json({ error: "Internal server error" });"
+  }
+}
+
+  } catch (error) {"
+    console.error("Error:", error);""
+    return res.status(500).json({ error: "Internal server error" });"
+
+  }
+}
+;
 export interface MultiverseState {;
   config: InstanceConfig,;
+
   lastSyncedAt: number;,
   seenEventIds: Record<string, true>,;
 </string>
@@ -175,3 +295,4 @@ export interface MultiverseState {;
   proposalMerkleById: Record<string, string>;
 </string>"
 pr-12325
+

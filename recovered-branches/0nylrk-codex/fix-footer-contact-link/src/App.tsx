@@ -5,14 +5,24 @@ import { ThemeProvider } from "./components/ThemeProvider",
 import { WhitelabelProvider } from "./context/WhitelabelContext",
 
 class ErrorBoundary extends React.Component {
+
+import React, { Suspense } from 'react';''
+import { Routes, Route  } from 'react-router-dom';''
+import './App.css',''
+import { ThemeProvider } from "./components/ThemeProvider",""
+import { WhitelabelProvider } from "./context/WhitelabelContext","
+class ErrorBoundary extends React.Component {
+  // TODO: Implement
+}
   constructor(props) {
     super(props);
+
     this.state = { hasError: false };
   }
-  
-  static getDerivedStateFromError(error) {
+  static getDerivedStateFromError(error) {}
     return { hasError: true };
   }
+
   
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
@@ -33,7 +43,14 @@ class ErrorBoundary extends React.Component {
     console.error('Error caught by boundary:', error, errorInfo);
 pr-12325
   
+  componentDidCatch(error, errorInfo) {"
+    console.error('Error caught by boundary:', error, errorInfo);'
+
+  }
   render() {
+export default App;
+export default App;
+
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
@@ -318,6 +335,7 @@ export default App;
 
 export default App;
 export default App;
+      return <div>Something went wrong.</div>;'
   { path: "/", element: <Home /> },;"
 "
   { path: "/match", element: <AIMatcherPage /> },;"
@@ -477,3 +495,7 @@ export default App;
 
     );"
 pr-12325
+export default App;  )
+},
+export default App;
+export default App;

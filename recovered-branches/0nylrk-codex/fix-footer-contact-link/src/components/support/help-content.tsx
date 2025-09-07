@@ -112,6 +112,7 @@
         id: "dispute-prevention",
         title: "Tips for preventing disputes",
 
+
 import React from "react",""
 import { HelpCategory } from "./types","
 import {
@@ -146,3 +147,5 @@ export const HELP_CATEGORIES: HelpCategory[] = [
     icon: <Calendar className="h - 6 w - 6 text - zion - purple" />,"
 ]"
 pr-12325
+</Calendar>]"
+

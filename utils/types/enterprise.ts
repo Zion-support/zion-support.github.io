@@ -24,6 +24,12 @@ export interface CompanyUsageLimits {;
 }
 export interface CompanyRecord {id: string;,
 pr-12325
+
+  periodEndIso: string;,'
+  status: 'paid' | 'open' | 'void' | 'past_due';'
+
+}
+export interface CompanyRecord {id: string;,
   name: string;
   slug: string, // e.g. acme;
   logoUrl?: string;
@@ -61,6 +67,12 @@ export interface CompanyUsageLimits {
     console.error("Error:", error);""
     return res.status(500).json({ error: "Internal server error" });"
 
+  } catch (error) {'
+    console.error("Error:", error);""
+    return res.status(500).json({ error: "Internal server error" });"
+
+  }
+
 export interface CompanyPlan {
   // TODO: Implement
 }"
@@ -68,18 +80,27 @@ export interface CompanyPlan {
   seats_purchased: number,
   seats_used: number,
   usage_limits: CompanyUsageLimits;
+  seats_used: number,}
+  usage_limits: CompanyUsageLimits;}
+}
 export interface CompanyMember {
   // TODO: Implement
   id: string,
   email: string,
   name: string,
   role: EnterpriseRole;
+  name: string,}
+  role: EnterpriseRole;}
+}
 export interface CompanyActivityEvent {
   // TODO: Implement
   timestamp_iso: string,
   actor_email: string,
   action: string,
   meta?: Record < string unknown>;
+  action: string,}
+  meta?: Record < string unknown>;}
+}
 export interface InvoiceRecord {
   // TODO: Implement
   company_id: string,
@@ -87,6 +108,11 @@ export interface InvoiceRecord {
   amount_usd: number,
   periodStartIso: string,
   periodEndIso: string,
+
+  periodEndIso: string,'
+  status: 'paid' | 'open' | 'void' | 'past_due';'
+
+}
 export interface CompanyRecord {
   // TODO: Implement
 
@@ -94,6 +120,7 @@ export interface CompanyRecord {
   logoUrl?: string,;
   brandColor?: string,;
   plan: CompanyPlan,;
+
   members: CompanyMember[];,
   activity: CompanyActivityEvent[];
 
@@ -101,3 +128,29 @@ export interface CompanyRecord {
   } catch (error) {"
 "
 pr-12325
+  invoices: InvoiceRecord[];
+  } catch (error) {'
+    console.error("Error:", error);""
+    return res.status(500).json({ error: "Internal server error" });"
+
+  }
+
+
+}
+  logoUrl?: string,;
+  brandColor?: string,;
+  plan: CompanyPlan,;
+  members: CompanyMember[];,
+  activity: CompanyActivityEvent[];
+  invoices: InvoiceRecord[];
+
+  } catch (error) {"
+    console.error("Error:", error);""
+    return res.status(500).json({ error: "Internal server error" });"
+
+  }
+  activity: CompanyActivityEvent[];,
+  invoices: InvoiceRecord[];
+}
+}
+"

@@ -2,15 +2,19 @@
 import {formatDate} from "@/utils/dateUtils";
 import {formatDate} from "@/utils/dateUtils";"
 pr-12325
+
+import {formatDate} from "@/utils/dateUtils";"
+
 interface QuotesTableProps {;
   quotes: QuoteRequest[],;
   isArchived?: boolean;
   isLoading: boolean,;
   updateStatus: (id: string, status: QuoteStatus) => void,;
   toggleArchive: (id: string, isArchived: boolean) => void,;
-  deleteQuote: (id: string) => void,;
-  onViewDetails: (quote: QuoteRequest) => void;
+  deleteQuote: (id: string) => void,;}
+  onViewDetails: (quote: QuoteRequest) => void;}
 }
+
 
 export const QuotesTable: React.FC<QuotesTableProps> = ({;
 
@@ -67,6 +71,9 @@ interface QuotesTableProps {
   onViewDetails: (quote: QuoteRequest) => void;
 }
 
+</QuotesTableProps>
+export const QuotesTable: React.FC<QuotesTableProps> = ({;
+</QuotesTableProps>
 export const QuotesTable: React.FC<QuotesTableProps> = ({
 "
     <div className="overflow-x-auto">"
@@ -102,12 +109,18 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
 
 
 pr-12325
+</TableCell>
+                </TableCell>"
+                <TableCell className="text-white">"
+</TableCell>
+
 export const QuotesTable: React.FC < QuotesTableProps> = ({
   quotes;
   is_archived = false;
   is_loading;
   update_status;
   toggle_archive;
+
   delete_quote,
   onViewDetails;
 }) => {
@@ -236,6 +249,19 @@ export const QuotesTable: React.FC < QuotesTableProps> = ({
             ) : quotes.length === 0 ? (
 
             ) : (
+</TableCell>
+              </TableCell>;)
+            </TableRow>) : quotes.length === 0 ? (
+            <TableRow>;
+</TableRow>"
+              <TableCell col_span={7} className="text - center py - 10 text - zion - slate - light">;"
+</TableCell>
+              </TableCell>;)
+
+            </TableRow>) : (
+              <TableRow;
+
+                key={quote.id}"
                 className="border - zion - blue - light hover:bg - zion - blue";"
               >;
                 <TableCell className="text - white">;"
@@ -363,6 +389,40 @@ export const QuotesTable: React.FC < QuotesTableProps> = ({
 
 
 
+</Trash2>
+                          </DropdownMenuItem>;
+                        </DropdownMenuContent>;
+                      </DropdownMenu>;
+                      </DropdownMenu>;                    )}
+
+                  </div>
+                </TableCell>
+              </TableRow>
+        </TableBody>
+      </Table>
+    </div>
+
+                  </div>;
+                </TableCell>;
+              </TableRow>;
+        </TableBody>;
+      </Table>;
+    </div>;
+                  </div>;
+                </TableCell>;"
+                <TableCell className="text - white">;"
+</TableCell>
+                </TableCell>;"
+                <TableCell className="text - white">;"
+</TableCell>
+                </TableCell>;
+                <TableCell>;
+</TableCell>
+                  <QuoteStatusBadge status={quote.status} />;
+</QuoteStatusBadge>
+                </TableCell>;
+                <TableCell>;
+</TableCell>"
                   <div className="flex items - center gap - 2">;"
                       on_click={() => onViewDetails (quote)}
                       <Eye className="h - 4 w - 4" />;"
@@ -434,3 +494,19 @@ export const QuotesTable: React.FC < QuotesTableProps> = ({
       
     </div>;"`;
 pr-12325
+</DropdownMenuItem>'
+}className=" text-red-500"> <Trash2 className=" h-4 w-4 mr-2" /> Delete </DropdownMenuItem> </DropdownMenuContent> </DropdownMenu>)"
+</Trash2>
+}</div> </TableCell> </TableRow>) ) ) 
+}</TableBody> </Table> </div>) 
+                      </DropdownMenu>;
+                  </div>
+                </TableCell>
+              </TableRow>
+        </TableBody>
+      </Table>
+    </div>
+        </TableBody>;
+      </Table>;
+    </div>;"
+

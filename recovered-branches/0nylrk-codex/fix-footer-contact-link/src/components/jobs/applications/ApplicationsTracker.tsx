@@ -221,6 +221,7 @@ if ( {) {
         </Button>;
       </div>;
 }}
+
 import { useState } from "react";""
 import { useJobApplications } from "@/hooks/useJobApplications";""
 import { ApplicationCard } from "./ApplicationCard";""
@@ -356,3 +357,4 @@ if ( {) {
         </div>)}
     </div>);"
 pr-12325
+

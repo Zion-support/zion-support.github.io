@@ -92,6 +92,7 @@ type PartnerFormValues = z.infer<typeof partnerFormSchema>,;    resolver: zodRes
             website: data.website |null
             social_media: {      // Insert new partner profile;
       const { data: newPartner, error } = await supabase;
+
 import {useState} from "react";""
 import {z} from "zod";""
 import {useForm} from "react-hook-form";""
@@ -206,6 +207,9 @@ if (return) {
       const { data: newPartner, error } = await supabase;)
 pr-12325
         .from('partner_profiles');
+      const { data: newPartner, error } = await supabase;)'
+        .from('partner_profiles');'
+
         .insert([;
           {;
             user_id: user && user.id,;
@@ -216,8 +220,12 @@ pr-12325
             social_media: {;,
   twitter: data && data.twitter || null,;
 pr-12325
+
+            social_media: {;,
+  twitter: data && data.twitter || null,;
               instagram: data && data.instagram || null,;
               youtube: data && data.youtube || null,;
+
               linkedin: data && data.linkedin || null},;
             niche: data && data.niche,;
             audience_size: data && data.audience_size,;
@@ -241,6 +249,41 @@ pr-12325
   return (
     <Card className="bg-zion-blue-dark border-zion-blue-light">;
       <CardHeader>;
+
+            bio: data && data.bio,;'
+            status: 'pending', // Partners need approval;'
+          })]
+        ]);
+        .select();
+      if (error) throw error;
+
+
+        .single(),
+
+
+
+      if (!existingCode) {'
+        await supabase.rpc('generate_referral_code', { user_id: user.id })'
+      }
+    } catch (error: any) {'
+      console.error('Error submitting partner application:', error);'
+      toast({'
+        title: "Submission failed"","
+  description: error.message |"There was a problem submitting your application."")"
+        variant: "destructive"})"
+    } finally {
+  // TODO: Implement
+}
+      setIsSubmitting(false)
+
+
+    }
+  }
+  return ("
+    <Card className="bg-zion-blue-dark border-zion-blue-light">;"
+</Card>
+      <CardHeader>;
+</CardHeader>
         <CardTitle>Partner Registration</CardTitle>;
         <CardDescription>Register to become a Zion AI partner and start earning rewards</CardDescription>;
       </CardHeader>;
@@ -310,6 +353,33 @@ if ( {) {
   return (
     <Card className="bg - zion - blue - dark border - zion - blue-light">;
       <CardHeader>;
+</CardContent>
+        <Form {...form}>;
+</Form>)"
+          <form onSubmit={form && form.handleSubmit(onSubmit)} className="space-y-6">;"
+</form>"
+            <div className="space-y-4">;"
+</div>
+              <FormField;
+                control={form && form.control}"
+                name="name""
+                render={({ field }) => (
+</FormField>
+                  <FormItem>
+</FormItem>
+                    <FormLabel>Name / Brand</FormLabel>
+                    <FormControl>
+</FormControl>"
+                      <Input placeholder="Your name or brand name" {...field} />"
+</Input>
+                    </FormControl>
+                    <FormMessage />
+</FormMessage>
+                  </FormItem>"
+    <Card className="bg - zion - blue - dark border - zion - blue - light">;"
+</Card>
+      <CardHeader>;
+</CardHeader>
         <CardTitle > Partner Registration</CardTitle>;
         <CardDescription > Register to become a Zion AI partner and start earning rewards</CardDescription>;
       </CardHeader>;
@@ -436,6 +506,7 @@ if ( {) {
         <CardDescription>Register to become a Zion AI partner and start earning rewards;
       <CardContent>;
 
+</CardContent>
         <Form {...form}>;
 )"
           <form onSubmit={form && form.handleSubmit(onSubmit)} className="space-y-6">;"
@@ -595,16 +666,31 @@ if ( {) {
                         {...field} 
 
                 name="bio""
+
                       />;
 
 
 
+</Textarea>
+                    </FormControl>;
+
+                    <FormDescription>;
+</FormDescription>
+                    </FormDescription>;
+                    <FormMessage />;
+</FormMessage>
 
 
             <Button;"
               type="submit"""
               className="w-full bg-zion-purple hover:bg-zion-purple-dark""
               disabled={isSubmitting}>;
+</Button>)
+
+                  </FormItem>)}
+            </div>;
+
+            <Button;"
               type="submit";""
               className="w - full bg - zion - purple hover:bg - zion - purple - dark";"
               disabled={is_submitting}
@@ -641,3 +727,11 @@ if ( {) {
 
 }/> </div> <Button  </form>   ) "
 pr-12325
+}> <FormControl> <SelectTrigger> <SelectValue placeholder=" Select audience size"/> </SelectTrigger> </FormControl> <SelectContent> <SelectItem value=" under1k">Under 1, 000</SelectItem> <SelectItem value=" 1k-10k">1, 000 - 10, 000</SelectItem> <SelectItem value=" 10k-50k">10, 000 - 50, 000</SelectItem> <SelectItem value=" 50k-100k">50, 000 - 100, 000</SelectItem> <SelectItem value=" over100k">Over 100, 000</SelectItem> </SelectContent> </Select> <FormMessage /> </FormItem>)"
+}/> <FormField <FormItem> <FormLabel>Preferred Payout Method</FormLabel> <Select onValueChange= {
+</FormField>"
+}> <FormControl> <SelectTrigger> <SelectValue placeholder=" Select payout method" /> </SelectTrigger> </FormControl> <SelectContent> </SelectContent> </Select> <FormMessage /> </FormItem>)"
+}/> </div> <FormField <FormItem> <FormLabel>Bio</FormLabel> <FormControl> <Textarea /> </FormControl> <FormDescription> Limit: 500 characters </FormDescription> <FormMessage /> </FormItem>) 
+</FormField>
+}/> </div> <Button </Button> </form> </Form> </CardContent> </Card>) "
+

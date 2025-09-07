@@ -56,6 +56,26 @@ export const useDeleteMilestone = () => {
 
 };
 
+import {useState} from 'react';''
+import {supabase} from '@/integrations / supabase / client';''
+import {use_auth} from '@/hooks / use_auth';''
+import {toast} from 'sonner';'
+export const useDeleteMilestone = () => {;
+  const { user } = useAuth();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+'
+import { useState } from 'react',''
+import { supabase } from '@/integrations/supabase/client',''
+import { useAuth } from '@/hooks/useAuth',''
+import { toast } from 'sonner','
+
+export const useDeleteMilestone = () => {
+  return $3;}
+}
+  const { user } = useAuth(),
+  const [isSubmitting, setIsSubmitting] = useState(false),
+
+
   
   const deleteMilestone = async (milestoneId: string) => {
     if (!user) return false,
@@ -142,3 +162,17 @@ if (throw error) {
     is_submitting;
 };
 pr-12325
+}
+    delete_milestone;
+    is_submitting;
+  }
+}
+;
+  }
+};
+  }
+};
+  }
+};
+"
+

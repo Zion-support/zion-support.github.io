@@ -53,6 +53,7 @@ export const MobileLaunchHero: React.FC = () => {;
         </div>;
       </div>;  )
 };
+
 import React from "react";""
 import {Link} from "react-router-dom";""
 import {ArrowRight, Smartphone} from "lucide-react";""
@@ -83,9 +84,14 @@ export const MobileLaunchHero: React.FC = () => {
 </div>
               <AppStoreButtons;
                 appStoreUrl={appStoreUrl}
+
                 googlePlayUrl={googlePlayUrl}
               />
 
+</AppStoreButtons>
+            </div>
+
+"
             <div className="flex flex-wrap gap-4">"
               <Link to="/open-app">"
 
@@ -99,6 +105,14 @@ export const MobileLaunchHero: React.FC = () => {
 
                 
               
+</Button>
+
+                  <ArrowRight size={20} />
+</ArrowRight>
+                </Button>
+              </Link>
+
+"
               <Link to="#features">"
 
                   variant="ghost"""
@@ -106,6 +120,15 @@ export const MobileLaunchHero: React.FC = () => {
 
                 
               
+                >
+</Button>
+
+                </Button>
+              </Link>
+            </div>
+          </div>
+
+"
           <div className="flex-1 flex justify-center md:justify-end">"
             <div className="relative">"
               <div className="absolute inset-0 bg-zion-cyan/20 rounded-3xl blur-xl transform translate-y-2"></div>""
@@ -154,3 +177,13 @@ export const MobileLaunchHero: React.FC = () => {
               
     </section>)"
 pr-12325
+</Smartphone>
+
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>)"

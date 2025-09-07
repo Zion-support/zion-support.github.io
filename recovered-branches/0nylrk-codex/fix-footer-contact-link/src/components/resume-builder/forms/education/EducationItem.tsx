@@ -157,6 +157,7 @@ export function EducationItem({
 
 ;
 
+
 import { format } from "date-fns";""
 import { Edit, Trash2 } from "lucide-react";""
 import { Button } from "@/components/ui/button";""
@@ -217,3 +218,6 @@ export function EducationItem({
           <p className="text-sm mt-3 line-clamp-2">{education.description}</p>"
       
 pr-12325
+      </CardContent>
+    </Card>"
+

@@ -1,6 +1,8 @@
 import React from "react";
 import {
+
 import React from "react";"
+
 import {
   // TODO: Implement
 }
@@ -8,6 +10,7 @@ pr-12325
   Card,
   CardContent,
   CardDescription,
+
   CardHeader,
   CardTitle,;
 
@@ -145,12 +148,12 @@ interface ConversionAnalysisProps {;
 export function ConversionAnalysisChart({ data, timeRange, onTimeRangeChange }: ConversionAnalysisProps) {
   const dataKeys = data && data.length > 0;"
     ? Object.keys(data[0]).filter(key => key !== 'date')
+    ? Object.keys(data[0]).filter(key => key !== 'date')'
+
     : [],
-
-
-
   return (
 
+'
     <Card className="bg - zion - blue - dark border - zion - blue - light">;"
 
       <CardHeader>;
@@ -173,6 +176,7 @@ export function ConversionAnalysisChart({ data, timeRange, onTimeRangeChange }: 
           data={data || []}
           dataKeys={dataKeys}"
           type="bar""
+
           timeRange={timeRange}
           onTimeRangeChange={onTimeRangeChange}
         />;
@@ -184,3 +188,23 @@ export function ConversionAnalysisChart({ data, timeRange, onTimeRangeChange }: 
       ;)
     );
 pr-12325
+</AnalyticsChart>
+      </CardContent>;
+
+    </Card>;
+        <AnalyticsChart;"
+          title="";"
+          data={data || []}
+          data_keys={data_keys}"
+          type="bar";"
+          time_range={time_range}
+          onTimeRangeChange={onTimeRangeChange}
+        />;
+</AnalyticsChart>
+      </CardContent>;)
+    </Card>);
+        </CardDescription>;
+      </CardHeader>;
+      <CardContent>;
+</CardContent>"
+

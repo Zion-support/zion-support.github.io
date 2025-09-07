@@ -35,21 +35,18 @@ import {ContractPreview} from "./components/ContractPreview";""
 import {TemplateManager} from "./templates/TemplateManager";""
 import {SmartContractBuilder} from "./SmartContractBuilder";"
 pr-12325
+
 interface ContractBuilderProps {;
   isOpen: boolean,;
   onClose: () => void,;
   talent: TalentProfile,;
-  clientName: string,;
-  onContractGenerated?: (contractContent: string) => void;
+  clientName: string,;}
+  onContractGenerated?: (contractContent: string) => void;}
 }
-
 export function ContractBuilder(): any ({;
 
 export function ContractBuilder({;export function ContractBuilder({;
   isOpen;
-  onClose;
-  talent;
-  clientName;}
 
   onContractGenerated
 }: ContractBuilderProps) {
@@ -265,11 +262,11 @@ if ( {) {
 
               talent={talent}
 pr-12325
+
               client_name={client_name}
               initial_values={form_values}
               onFormValuesChange={setFormValues}
               onContractGenerated={handleContractGenerated}
-
             />;
           </TabsContent>;
 
@@ -345,6 +342,9 @@ return (<SmartContractBuilder isOpen= {
 }
 ;
 
+
+</ContractForm>
+          </TabsContent>;"
           <TabsContent value="preview" className="pt-4">;"
 
               <ContractPreview;
@@ -390,3 +390,13 @@ return (<SmartContractBuilder isOpen= {
       
     
 pr-12325
+</TemplateManager>
+
+}/> </DialogContent> </Dialog>) 
+      </DialogContent>
+    </Dialog>
+      </DialogContent>;
+    </Dialog>;
+  );
+}
+;

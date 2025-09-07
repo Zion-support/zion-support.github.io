@@ -43,6 +43,7 @@ export const CreateResumeForm = ({;
               disabled={!newResumeTitle.trim() || isLoading}
 
 
+
 import {useState} from "react";""
 import {Card, CardContent} from "@/components/ui/card";""
 import {Button} from "@/components/ui/button";""
@@ -96,6 +97,12 @@ import { CreateResumeFormProps } from "./types",;"
 export const CreateResumeForm = ({;
   onCreateResume,;
   onCancel,;
+
+export const CreateResumeForm = ({;
+  onCreateResume,;
+  onCancel,;
+  isLoading;
+
 )
 }: CreateResumeFormProps) => {;
 </input>"
@@ -111,8 +118,10 @@ export const CreateResumeForm = ({;
               value={newResumeTitle}
 
 
+
               disabled={!newResumeTitle.trim() || isLoading}
 
+              value={newResumeTitle}
 
               onChange={(e) => setNewResumeTitle(e.target.value)}
 </input>
@@ -154,3 +163,11 @@ export const CreateResumeForm = ({;
     );
     );"
 pr-12325
+          >;
+</Button>
+          </Button>;
+        </div>;
+      </CardContent>;
+    </Card>);
+    </Card>);"
+

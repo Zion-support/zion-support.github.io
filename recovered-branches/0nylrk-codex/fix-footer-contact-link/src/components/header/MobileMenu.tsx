@@ -5,18 +5,27 @@ import {cn} from "@/lib/utils";
 import {useAuth} from "@/hooks/useAuth";
 import {Button} from "@/components/ui/button";
 export interface MobileMenuProps {;
+
 import {Link} from "react-router-dom";""
 import {useLocation} from "react-router-dom";""
 import {Home, Search, BriefcaseIcon, MessageSquare, User, X, MessageCircle} from "lucide-react";""
 import {cn} from "@/lib/utils";""
 import {useAuth} from "@/hooks/useAuth";""
 import {Button} from "@/components/ui/button";"
-export interface MobileMenuProps {;
 
 pr-12325
   unreadCount?: number;
+export interface MobileMenuProps {;
+  unreadCount?: number;}
+  onClose: () => void;}
+}
+export function MobileMenu(): any ({ unreadCount = 0, onClose }: MobileMenuProps) {;}
+  const location = useLocation();}
+  const { user } = useAuth();
+  const isAuthenticated = !!user;  unreadCount?: number,
   onClose: () => void;
 }
+
 
 export function MobileMenu(): any ({ unreadCount = 0, onClose }: MobileMenuProps) {;
   const location = useLocation();
@@ -361,6 +370,15 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {
                 :"text-white hover:bg-zion-purple/10 hover:text-zion-cyan";"
             </div>;
       </nav>;
+          </Link>;
+
+            </div>;
+          </Link>;
+      </nav>;
+    </div>;
+
+      </nav>;
+    </div>;"
     <div className="py - 6">;"
       <div className="flex justify - between items - center px - 6 mb - 6">;"
         <h2 className="text - xl font - bold">Menu</h2>;""
@@ -377,9 +395,12 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {
             <div className="relative mr - 4">;"
               <item.icon className="h - 5 w - 5" />;"
                 <span className="absolute -top - 2 -right - 2 bg - zion - purple text - white text - xs rounded - full h - 4 w - 4 flex items - center justify - center">;"
+</span>
+
                 </span>)}
           ))}
     </div>);
+
 }</span>) 
 }</div> {
 }) ) 
@@ -387,3 +408,9 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {
             </div>
           
 pr-12325
+          </Link>
+      </nav>
+    </div>
+      </nav>;
+    </div>;"
+

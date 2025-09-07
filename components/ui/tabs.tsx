@@ -1,49 +1,35 @@
-import React from 'react'
+import React from 'react';
 
-export function Tabs({ children, defaultValue, value, onValueChange, className = '' }) {
-  const [activeTab, setActiveTab] = React.useState(defaultValue || '')
-
-  const handleTabChange = (newValue) => {
-    setActiveTab(newValue)
-    onValueChange?.(newValue)
-  }
-
-  return (
-    <div className={`tabs ${className}`}>
-      {React.Children.map(children, child => 
-        React.cloneElement(child, { activeTab, onTabChange: handleTabChange })
-      )}
-    </div>
-  )
+export function Tabs() {const [activeTab, setActiveTab] = React.useState(defaultValue || '');
+  const handleTabChange = (setActiveTab(newValue)onValueChange?.(newValue);) => {
+  return $3;}
 }
+  return (<div className={`tabs ${className}`} />
 
-export function TabsList({ children, className = '' }) {
-  return (
-    <div className={`tabs-list ${className}`}>
+      {React.Children.map(children, child =>;}
+        React.cloneElement(child, { activeTab, onTabChange: handleTabChange }),
+}
+    </div>;
+  )}
+
+export function TabsList() {return (<div className={`tabs-list ${className}`} />
+
       {children}
-    </div>
-  )
-}
+    </div>;
+  )}
 
-export function TabsTrigger({ children, value, className = '', activeTab, onTabChange }) {
-  const isActive = activeTab === value
-  
-  return (
-    <button
+export function TabsTrigger() {const isActive = activeTab === value;}
+  return (<button;}
       className={`tabs-trigger ${isActive ? 'active' : ''} ${className}`}
-      onClick={() => onTabChange(value)}
-    >
+      onClick={() = /> onTabChange(value)}
+    >;
       {children}
-    </button>
-  )
-}
+    </button>;
+  )}
 
-export function TabsContent({ children, value, className = '', activeTab }) {
-  if (activeTab !== value) return null
-  
-  return (
-    <div className={`tabs-content ${className}`}>
+export function TabsContent() {if (activeTab !== value) return null;}
+  return (<div className={`tabs-content ${className}`} />
+
       {children}
-    </div>
-  )
-}
+    </div>;
+  )}

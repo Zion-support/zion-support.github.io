@@ -80,6 +80,7 @@ bg-zion-blue-dark border border-zion-blue-light text-center py-12"> <CardContent
 };
 
 };
+
 import React from "react";""
 import {Card, CardContent} from "@/components/ui/card";""
 import {MessageSquare, ArchiveIcon} from "lucide-react";"
@@ -132,3 +133,6 @@ bg-zion-blue-dark border border-zion-blue-light text-center py-12"> <CardContent
 
 }</div> </p>  ) "
 pr-12325
+</MessageSquare>
+}</div> </p> </CardContent> </Card>) "
+

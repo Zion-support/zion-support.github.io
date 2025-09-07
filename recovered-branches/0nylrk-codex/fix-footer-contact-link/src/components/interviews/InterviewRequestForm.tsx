@@ -65,6 +65,13 @@ interface InterviewRequestFormProps {;
   talent: TalentProfile,;
   onClose: () => void,;
 
+interface InterviewRequestFormProps {;
+  talent: TalentProfile,;
+  onClose: () => void,;}
+  userDetails?: UserProfile;}
+}
+
+
 const formSchema = z && z.object({;
   date: z && z.date({;,)"
   required_error: "Please select a date for the interview."}).refine(date => date > new Date(), {;""
@@ -78,9 +85,11 @@ const formSchema = z && z.object({;
 pr-12325
   notes: z && z.string().optional()}),;
 
-export function InterviewRequestForm(): any ({ talent, onClose, userDetails }: InterviewRequestFormProps) {;
+  notes: z && z.string().optional()}),;
+export function InterviewRequestForm(): any ({ talent, onClose, userDetails }: InterviewRequestFormProps) {;}
   const { requestInterview } = useInterviews();
   const [isSubmitting, setIsSubmitting] = useState(false);
+
 
   const form = useForm<z && z.infer<typeof formSchema>>({;
     resolver: zodResolver(formSchema),;
@@ -221,24 +230,32 @@ if ( {) {
       platform: "zoom",""
       notes: "",""
       meeting_link: ""}}),"
+
   async /**
  * on_submit - Function description;
  */
 function on_submit() {
     // Check condition;
+
 if ( {) {
   $2;
       toast ({"
         title: "Authentication required",""
         description: "Please log in to schedule an interview",")"
         variant: "destructive"}),"
+
       return;
     setIsSubmitting (true);
 ;
+
     try {
   // TODO: Implement
       // Combine date and time;"`;
       const dateTimeString = `${format (values.date, 'yyyy - MM - dd')}T${values.time}:00`;
+}
+      // Combine date and time;"
+      const dateTimeString = `${format (values.date, 'yyyy - MM - dd')}T${values.time}:00`;'
+
       const scheduled_date = new Date (dateTimeString);
       // Calculate end time based on duration;
       const duration_minutes = parse_int (values.duration);
@@ -531,6 +548,8 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
                   <PopoverContent className="w-auto p-0" align="start">
                     <Calendar
                       mode="single"
+
+        meeting_link: values.meeting_link,'
         interview_type: "video","
         title: values.title;
       });
@@ -581,8 +600,11 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
           <div className="flex-shrink-0 h-12 w-12 rounded-full overflow-hidden mr-4">;"
               src={talent && talent.profile_picture_url || "/placeholder && placeholder.svg"}"
               alt={talent && talent.full_name} "
+              className="h-full w-full object-cover""
+
             />;
           </div>;
+
           <div>;
             <h3 className="text-lg font-medium text-white">{talent && talent.full_name}</h3>;""
             <p className="text-sm text-zion-slate-light">{talent && talent.professional_title}</p>;"
@@ -599,6 +621,13 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
           <div className="flex - shrink - 0 h - 12 w - 12 rounded - full overflow - hidden mr - 4">;"
               src={talent.profile_picture_url || "/placeholder.svg"}"
               className="h - full w - full object - cover";"
+
+            />;
+</img>
+          </div>;
+
+          <div>;
+</div>"
             <h3 className="text - lg font - medium text - white">{talent.full_name}</h3>;""
             <p className="text - sm text - zion - slate - light">{talent.professional_title}</p>;"
           control={form.control}"
@@ -676,6 +705,35 @@ import { useInterviews } from "@/hooks/useInterviews",;"
 
   async function onSubmit(values: z.infer<typeof formSchema>) {;
 
+</typeof>
+    <Form {...form}>;
+</Form>"
+      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-5">;"
+</form>"
+        <div className="flex items-center mb-6">;"
+</div>"
+          <div className="flex-shrink-0 h-12 w-12 rounded-full overflow-hidden mr-4">;"
+</div>
+            <img;"
+              src={talent.profile_picture_url || "/placeholder.svg"} ;"
+              alt={talent.full_name} ;"
+              className="h-full w-full object-cover";"
+
+            />;
+</img>
+          </div>;
+
+          <div>;
+</div>"
+            <h3 className="text-lg font-medium text-white">{talent.full_name}</h3>;""
+            <p className="text-sm text-zion-slate-light">{talent.professional_title}</p>;"
+          </div>;
+        </div>;
+        <FormField;
+          control={form.control}"
+          name="title""
+          render={({ field }) => (
+</FormField>
             <FormItem>
 
               <FormLabel>Interview Title
@@ -704,6 +762,9 @@ import { useInterviews } from "@/hooks/useInterviews",;"
                   <PopoverContent className="w-auto p-0" align="start">"
 
 pr-12325
+</PopoverContent>
+                    <Calendar;"
+                      mode="single""
                       selected={field.value}
                       onSelect={field.onChange}
 
@@ -757,6 +818,97 @@ pr-12325
                     {time_slots.map ((time) => (
                       <SelectItem key={time} value={time}>;
                         {time}
+</Calendar>
+                    <Calendar;"
+                      mode="single";"
+
+                      selected={field.value}
+                      onSelect={field.onChange}
+                      disabled={(date) = /> date < new Date() || date > addDays(new Date(), 90)}
+                      initialFocus;
+                      className=\"p-3 pointer-events-auto\";                    <Calendar;
+                      mode=\"single\";
+                      selected={field.value}
+                      onSelect={field.onChange}
+                      disabled={(date) = /> date < new Date() || date > addDays(new Date(), 90)}
+                      initialFocus;
+                      className=\"p-3 pointer-events-auto\";
+                      disabled={(date) => date < new Date() || date > addDays(new Date(), 90)}
+
+</Calendar>
+                      disabled={(date) => date < new Date() || date > addDays(new Date(), 90)}
+                      initialFocus;"
+                      className="p-3 pointer-events-auto";"
+                    <Calendar;"
+                      mode="single""
+                    />;
+</Calendar>
+                  </PopoverContent>;
+                </Popover>;
+                <FormMessage />;
+</FormMessage>
+
+              </FormItem>;
+          <FormField;
+            control={form && form.control}"
+            name="time""
+            render={({ field }) => (;
+</FormField>
+              <FormItem>;
+</FormItem>
+                <FormLabel>Time</FormLabel>;
+                <Select onValueChange={field && field.onChange} defaultValue={field && field.value}>;
+</Select>)
+
+              </FormItem>)}
+          <FormField;
+
+            control={form.control}"
+            name="time";"
+            render={({ field }) => (
+</FormField>
+              <FormItem>;
+</FormItem>
+                <FormLabel > Time</FormLabel>;
+                <Select onValueChange={field.on_change} default_value={field.value}>;
+</Select>)
+              </FormItem>;            )}
+          <FormField;
+            control={form.control}"
+            name="time";"
+            render={({ field }) => (;
+</FormField>
+              <FormItem>;
+</FormItem>
+                <FormLabel>Time</FormLabel>;
+                <Select onValueChange={field.onChange} defaultValue={field.value}>;
+</Select>
+                  <FormControl>;
+</FormControl>
+                    <SelectTrigger>;
+</SelectTrigger>"
+                      <SelectValue placeholder="Select time" />;"
+</SelectValue>
+                    </SelectTrigger>;
+                  </FormControl>;
+        </div>;"
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;"
+</div>
+          <FormField;
+            control={form && form.control}"
+            name="duration"")
+            render={({ field }) => (;
+</FormField>
+              <FormItem>;
+</FormItem>
+                <FormLabel>Duration</FormLabel>;
+                <Select onValueChange={field && field.onChange} defaultValue={field && field.value}>;
+</Select>"
+                  <SelectContent className="max - h-[300px]">;"
+</SelectContent>
+                      <SelectItem key={time} value={time}>;
+</SelectItem>)
+
                       </SelectItem>))}
                   </SelectContent>;
                 </Select>;
@@ -821,6 +973,197 @@ pr-12325
           </Button>;
           <Button type="submit" disabled={is_submitting}>;
             {is_submitting ? "Scheduling..." : "Schedule Interview"}
+</FormMessage>
+              </FormItem>)}
+
+        </div>;"
+        <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">;"
+</div>
+          <FormField;
+            control={form.control}"
+            name="duration";"
+            render={({ field }) => (
+</FormField>
+              <FormItem>;
+</FormItem>
+                <FormLabel > Duration</FormLabel>;
+                <Select onValueChange={field.on_change} default_value={field.value}>;
+</Select>
+                  <FormControl>;
+</FormControl>
+                    <SelectTrigger>;
+</SelectTrigger>"
+                      <SelectValue placeholder="Select duration" />;"
+</SelectValue>
+                    </SelectTrigger>;
+                  </FormControl>;
+                  <SelectContent>;
+</SelectContent>"
+                    <SelectItem value="15">15 minutes</SelectItem>;""
+                    <SelectItem value="30">30 minutes</SelectItem>;""
+                    <SelectItem value="45">45 minutes</SelectItem>;""
+                    <SelectItem value="60">60 minutes</SelectItem>;"
+                  </SelectContent>;
+                </Select>;
+                <FormMessage />;
+</FormMessage>
+          <FormField;
+            control={form && form.control}"
+            name="platform"")
+            render={({ field }) => (;
+</FormField>
+              <FormItem>;
+</FormItem>
+                <FormLabel>Platform</FormLabel>;
+                <Select onValueChange={field && field.onChange} defaultValue={field && field.value}>;
+</Select>)
+              </FormItem>)}
+          <FormField;
+            control={form.control}"
+            name="platform";"
+            render={({ field }) => (
+</FormField>
+              <FormItem>;
+</FormItem>
+                <FormLabel > Platform</FormLabel>;
+                <Select onValueChange={field.on_change} default_value={field.value}>;
+</Select>
+                  <FormControl>;
+</FormControl>
+                    <SelectTrigger>;
+</SelectTrigger>"
+                      <SelectValue placeholder="Select platform" />;"
+</SelectValue>
+                    </SelectTrigger>;
+                  </FormControl>;
+                  <SelectContent>;
+</SelectContent>"
+                    <SelectItem value="zoom">Zoom</SelectItem>;""
+                    <SelectItem value="google - meet">Google Meet</SelectItem>;""
+                    <SelectItem value="teams">Microsoft Teams</SelectItem>;""
+                    <SelectItem value="other">Other</SelectItem>;"
+                  </SelectContent>;
+                </Select>;
+                <FormMessage />;
+</FormMessage>
+        </div>;
+          <FormField;
+            control={form && form.control}"
+            name="meetingLink""
+          <FormField;
+            control={form && form.control}"
+            name="meetingLink"")
+            render={({ field }) => (;
+</FormField>
+              <FormItem>;
+</FormItem>)
+                <FormLabel>Meeting Link (Optional)</FormLabel>;
+                <FormControl>;
+</FormControl>
+                  <Input;"
+                    placeholder={`Add your ${form && form.watch('platform')} link here`}'
+              </FormItem>)}
+</Input>
+        </div>;
+          <FormField;
+            control={form.control}'
+            name="meeting_link";"
+            render={({ field }) => (
+</FormField>
+              <FormItem>;
+</FormItem>)
+                <FormLabel > Meeting Link (Optional)</FormLabel>;
+                <FormControl>;
+</FormControl>
+                  <Input;"
+                    placeholder={`Add your ${form.watch ('platform')} link here`}'
+                  <Input;'
+                    placeholder={`Add your ${form.watch('platform')} link here`}'
+                    {...field}
+                  />;
+</Input>
+                </FormControl>;
+                <FormMessage />;
+</FormMessage>
+
+          <FormField;
+            control={form.control}'
+            name="meetingLink""
+            render={({ field }) => (
+</FormField>
+              <FormItem>
+</FormItem>)
+                <FormLabel>Meeting Link (Optional)</FormLabel>
+                <FormControl>
+</FormControl>
+                  <Input;"
+                    placeholder={`Add your ${form.watch('platform')} link here`}'
+                    {...field}
+                  />
+</Input>
+                </FormControl>
+                <FormMessage />
+</FormMessage>
+              </FormItem>
+        <FormField;
+          control={form && form.control}'
+          name="notes""
+          render={({ field }) => (;
+</FormField>
+            <FormItem>;
+</FormItem>)
+              <FormLabel>Notes (Optional)</FormLabel>;
+              <FormControl>;
+</FormControl>
+
+                <Textarea;
+                <Textarea;"
+                  placeholder="Share what you'd like to discuss in this interview"""
+                  className="h-20""
+              </FormItem>)}
+</Textarea>
+        <FormField;
+          control={form.control}"
+          name="notes";"
+          render={({ field }) => (
+</FormField>
+            <FormItem>;
+</FormItem>)
+              <FormLabel > Notes (Optional)</FormLabel>;
+              <FormControl>;
+</FormControl>
+                <Textarea;"
+                  placeholder="Share what you'd like to discuss in this interview";""
+                  className="h - 20";"
+                <Textarea ;"
+                  placeholder="Share what you'd like to discuss in this interview";""
+                  className="h-20";"
+                  {...field}
+                />;
+</Textarea>
+              </FormControl>;
+              <FormMessage />;
+</FormMessage>"
+        <div className="flex justify-end gap-4 pt-4">;"
+</div>"
+          <Button variant="outline" onClick={onClose} type="button">;"
+</Button>
+          </Button>;"
+          <Button type="submit" disabled={isSubmitting}>;"
+</Button>
+          </Button>;
+        </div>;
+      </form>;
+    </Form>;
+            </FormItem>)}"
+        <div className="flex justify - end gap - 4 pt - 4">;"
+</div>"
+          <Button variant="outline" on_click={on_close} type="button">;"
+</Button>
+          </Button>;"
+          <Button type="submit" disabled={is_submitting}>;"
+</Button>
+
           </Button>;
         </div>;
       </form>;
@@ -1025,6 +1368,7 @@ async function onSubmit (values: z.infer<typeof formSchema>) {
           <Button type="submit" disabled={is_submitting}>;"
 
     );
+
 const form = useForm<z.infer<typeof formSchema>> ({
 async function onSubmit (values: z.infer<typeof formSchema>) {
 </typeof>"
@@ -1049,3 +1393,11 @@ async function onSubmit (values: z.infer<typeof formSchema>) {
 
 }/>  </div> </form> ) `;
 pr-12325
+}<FormItem> <FormLabel>Meeting Link (Optional) </FormLabel> <FormControl> <Input placeholder= {
+</FormField>
+}/> </FormControl> <FormMessage /> </FormItem>) 
+</FormMessage>
+}<FormField <FormItem> <FormLabel>Notes (Optional) </FormLabel> <FormControl> <Textarea /> </FormControl> <FormMessage /> </FormItem>) 
+</FormField>
+}/> </Button> </div> </form> </Form>) '
+

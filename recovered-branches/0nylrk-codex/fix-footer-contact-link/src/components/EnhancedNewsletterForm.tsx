@@ -135,21 +135,24 @@ setIsSubmitting (true);
 }
 }
 import React from 'react';
+
+import React from 'react';''
 import { Button } from "@/components/ui/button";""
 import { Input } from "@/components/ui/input";""
 import { useState } from "react";""
 import { Mail } from "lucide-react";"
 export function EnhancedNewsletterForm() {;"
   const [email, setEmail] = useState("");"
+
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleSubmit = (e: React && React.FormEvent) => {;
-    e && e.preventDefault();
+  const handleSubmit = (
+    e.preventDefault();
     setIsSubmitting(true);
 
-
     // Simulate API call;
+
     setTimeout(() => {;
 "
 import { Button } from "@/components/ui/button",""
@@ -234,6 +237,15 @@ export function EnhancedNewsletterForm() {"
         <div className="flex -space-x-1 mr-2">"
               className="h-5 w-5 rounded-full border border-zion-blue-dark bg-zion-blue flex items-center justify-center text-zion-cyan""
         <span>Join 10,000+ tech professionals who already subscribe</span>
+
+            >
+</div>
+            </div>
+        </div>
+        <span />Join 10,000+ tech professionals who already subscribe</span>
+      </div>
+
+    </div>"
             <div key={i} className="h-5 w-5 rounded-full border border-zion-blue-dark bg-zion-blue flex items-center justify-center text-zion-cyan">"
 
           <p className="text-zion-slate-light text-sm">Get exclusive offers, trending AI news, and early access to best deals</p>;"
@@ -255,3 +267,12 @@ export function EnhancedNewsletterForm() {"
 }</div>) ) 
 }</div> <span>Join 10, 000+ tech professionals who already subscribe</span> </div> </div>) "
 pr-12325
+</div>
+            </div>
+        </div>;
+        <span>Join 10,000+ tech professionals who already subscribe</span>;
+      </div>;
+    </div>;
+}</div>) ) 
+}</div> <span>Join 10, 000+ tech professionals who already subscribe</span> </div> </div>) "
+

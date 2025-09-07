@@ -26,6 +26,11 @@ import * as React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+
+import * as React from 'react';''
+import Head from 'next/head';''
+import Link from 'next/link';''
+import { motion } from 'framer-motion';'
 import {
   // TODO: Implement
 }
@@ -243,3 +248,5 @@ export default function AutomationPage() {
               <span>364 E Main St STE 1008, Middletown DE 19709</span>
       </section>
 pr-12325
+    </Layout>"
+

@@ -7,8 +7,10 @@ interface SitemapUrl {
   changefreq: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';',
   priority: number;
 
-const Sitemap = () => {
-  return null;
+const Sitemap = (
+  return null;) => {
+  return $3;}
+}
 };
 
 export const getServerSideProps: GetServerSideProps = async ({ res }) => {
@@ -16,6 +18,7 @@ export const getServerSideProps: GetServerSideProps = async ({ res }) => {
   const currentDate = new Date().toISOString();
 
   // Define all pages with their metadata;
+
   const staticPages: SitemapUrl[] = [
     {
       loc: '/',
@@ -44,6 +47,11 @@ export const getServerSideProps: GetServerSideProps = async ({ res }) => {
       priority: 0.5},
       loc: '/privacy',
       changefreq: 'yearly',
+    {'
+      loc: '/privacy','
+      lastmod: currentDate,'
+      changefreq: 'yearly','
+
       priority: 0.3},
       loc: '/terms',
       priority: 0.3},]
@@ -71,6 +79,28 @@ export const getServerSideProps: GetServerSideProps = async ({ res }) => {
     'startup-solutions',
     'enterprise-solutions',
     'custom-development',
+
+  const servicePages = ['
+    'ai-development',''
+    'ai-implementation',''
+    'ai-solutions',''
+    'cloud-migration',''
+    'cloud-solutions',''
+    'cybersecurity',''
+    'cybersecurity-advanced',''
+    'data-analytics',''
+    'database-solutions',''
+    'mobile-development',''
+    'web-development',''
+    'security-solutions',''
+    'blockchain-services',''
+    'iot-solutions',''
+    'iot-edge-services',''
+    'quantum-computing',''
+    'rpa-automation',''
+    'startup-solutions',''
+    'enterprise-solutions',''
+    'custom-development',''
     'consulting',']
 
   // Add service pages;
@@ -97,6 +127,15 @@ export const getServerSideProps: GetServerSideProps = async ({ res }) => {
   industryPages.forEach(industry => {
     staticPages.push({`;
       loc: `/industries/${industry}`,
+
+  ];
+
+  industryPages.forEach(industry => {}
+    staticPages.push({}
+      loc: `/industries/${industry}`,
+
+      lastmod: currentDate,'
+      changefreq: 'monthly',')
       priority: 0.5});
 
   // Generate sitemap XML;`;
@@ -111,3 +150,7 @@ export const getServerSideProps: GetServerSideProps = async ({ res }) => {
     <priority>${page.priority}</priority>`;
   </url>``;
 </urlset>`;"`;
+    <priority>${page.priority}</priority>
+  </url>`
+</urlset>`;"
+

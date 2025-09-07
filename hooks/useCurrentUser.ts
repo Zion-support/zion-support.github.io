@@ -20,6 +20,7 @@ function useCurrentUser() {
   const { data, error, mutate } = useSWR ('/api / auth / me', fetcher);
   return {
 origin/cursor/automate-test-improve-and-merge-code-2533
+
     user: data?.user || null,
     loading: !data && !error,
     error,
@@ -33,3 +34,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     mutate}
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
+
+  };
+    mutate}
+}
+

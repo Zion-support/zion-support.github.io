@@ -1,6 +1,7 @@
 
   FormField,
 import {
+
   // TODO: Implement
 }
   FormField,
@@ -8,8 +9,10 @@ import {
 
 
 pr-12325
+FormField,
   FormItem,
   FormLabel,
+
   FormControl,
   FormMessage,
 } from '@/components / ui / form';
@@ -259,6 +262,7 @@ function CertificationFormFields() {
 }
 ;
 "
+</FormField>"
       <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">;"
           control={form.control}"
           name="name";")
@@ -379,6 +383,39 @@ function CertificationFormFields() {
               
 
             
+                  {...field}
+                />
+</Input>
+              </FormControl>
+              <FormMessage />
+</FormMessage>
+            </FormItem>
+      </div>
+    </>
+  );
+}
+
+;
+
+            <FormItem>
+</FormItem>
+              <FormLabel>Credential URL (Optional)</FormLabel>
+              <FormControl>
+</FormControl>
+                <Input;"
+                  placeholder="https://www.credential.com/verify/abc123""
+                  {...field}
+                />
+</Input>
+              </FormControl>
+              <FormMessage />
+</FormMessage>
+            </FormItem>
+      </div>
+    </>
+  );
+}
+;
 
   ),;}
   <FormMessage /> ) 
@@ -392,3 +429,13 @@ function CertificationFormFields() {
 }/> </div> </>) 
 pr-12325
 
+  );
+}
+  )
+}
+;
+}
+;
+
+
+"

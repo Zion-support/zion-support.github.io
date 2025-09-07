@@ -219,24 +219,31 @@ pr-12325
   getConfig(): DevAccessConfig {
     return { ...this.config };
   }
+export type DevRole = "admin" | "maintainer" | "contributor";
+
+export interface DevIdentity {
+  role: DevRole;
+  permissions: string[];
 }
 
-// Default configuration
-const defaultConfig: DevAccessConfig = {
-  enabled: process.env.NODE_ENV === 'development',
-  allowedIps: ['127.0.0.1', '::1', 'localhost'],
-  allowedUsers: ['*'],
-  requireAuth: false,
-  maxRequestsPerMinute: 100
-};
+export function getDevIdentity(role: DevRole): DevIdentity {
+  const permissions = getPermissionsForRole(role);
+  return {
+    role,
+    permissions
+  };
+}
 
-// Singleton instance
-export const devAccessManager = new DevAccessManager(defaultConfig);
-
-// Middleware for development access
-export function requireDevAccess(req: any, res: any, next: any) {
-  if (!devAccessManager.isDevAccessEnabled()) {
-    return res.status(404).json({ error: 'Not found' });
+function getPermissionsForRole(role: DevRole): string[] {
+  switch (role) {
+    case "admin":
+      return ["read", "write", "delete", "deploy", "manage"];
+    case "maintainer":
+      return ["read", "write", "deploy"];
+    case "contributor":
+      return ["read", "write"];
+    default:
+      return ["read"];
   }
 
   const ip = req.ip || req.connection.remoteAddress || 'unknown';
@@ -358,3 +365,4 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
   updateConfig(newConfig: Partial<DevAccessConfig>): void {
 pr-12325
+}

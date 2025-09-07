@@ -6,6 +6,7 @@ interface LazyLoadProps {
 import {useEffect, useState, useRef, ReactNode} from "react";
 import {cn} from "@/lib/utils";
 import {Skeleton} from "@/components/ui/skeleton";
+
 import { useEffect, useState, useRef, ReactNode } from "react",""
 import { cn } from "@/lib/utils";""
 import { Skeleton } from "@/components/ui/skeleton";"
@@ -16,13 +17,13 @@ import {useEffect, useState, useRef, ReactNode} from "react";""
 import {cn} from "@/lib/utils";""
 import {Skeleton} from "@/components/ui/skeleton";"
 pr-12325
+
 interface LazyLoadProps {;
   height?: string | number;
   width?: string | number;
   children: ReactNode,;
-
-  loadingComponent?: ReactNode;
-  className?: string;
+  loadingComponent?: ReactNode;}
+  className?: string;}
 }
 
 export function LazyLoad(): any ({;interface LazyLoadProps {
@@ -149,6 +150,7 @@ export function LazyLoad({;
       )}>;
       {isVisible ? (;
 
+
 export function LazyLoad(): any ({;
 "
   height = "200px";""
@@ -179,7 +181,17 @@ if ( {) {
 
       {"
         root_margin: "200px", // Start loading when element is within 200px of viewport;"
+
         threshold: 0.1}
+          setIsVisible(true),;
+          observer.disconnect(),;
+        }
+      },;
+      {;}
+        rootMargin:\"200px\", // Start loading when element is within 200px of viewport;}
+        threshold:0.1}
+    ),;
+;
 
     // Check condition;
       observer.observe (container_ref.current);
@@ -190,6 +202,15 @@ if ( {) {
 
       },
         rootMargin: "200px", // Start loading when element is within 200px of viewport;"
+
+          setIsVisible(true),
+          observer.disconnect()
+        }
+      },
+
+      {"
+        rootMargin: "200px", // Start loading when element is within 200px of viewport;"
+    }
     return () => {
       if (containerRef.current) {
         observer.unobserve(containerRef.current)
@@ -227,7 +248,9 @@ if ( {) {
         className;)
       )}>;
 pr-12325
+</div>
         <>;
+
           {!isLoaded && (loadingComponent || defaultLoadingComponent)}
           {isLoaded && children}
         </>;
@@ -287,10 +310,16 @@ return (<div)
 }
         loadingComponent || defaultLoadingComponent;)
       )}
-
-
     </div>;
 
+    <Skeleton;
+      style={{ height, width }}"
+      className="rounded-md bg-zion-blue-light/20""
+    />
+</Skeleton>
+    <div;
+      ref={containerRef}"
+      className={cn("transition-opacity duration-500",""
         isLoaded ? "opacity-100" : "opacity-0","
     >
         <>
@@ -299,13 +328,19 @@ return (<div)
       ) : (
         loadingComponent |defaultLoadingComponent;)
       className="rounded - md bg - zion - blue - light / 20";"
+
     />);
+</Skeleton>
+    <div;
 
       ref={container_ref}"
       className={cn ("transition - opacity duration - 500",""
         is_loaded ? "opacity - 100" : "opacity - 0";")
         class_name)}
     >;
+</div>
+        <>;
+
           {!is_loaded && (loading_component || defaultLoadingComponent)}
           {is_loaded && children}
         </>) : ()
@@ -314,6 +349,7 @@ return (<div)
 const defaultLoadingComponent = (<Skeleton />);
 
 return (<div) 
+
 }> {
   isVisible ? (<> {)
   !isLoaded && (loadingComponent || defaultLoadingComponent) 
@@ -322,3 +358,5 @@ return (<div)
 }</>) : (loadingComponent || defaultLoadingComponent) 
 }</div>) "
 pr-12325
+}</div>) 
+}

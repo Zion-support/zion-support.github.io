@@ -4,6 +4,7 @@ import React from "react",
 import { Badge } from "@/components/ui/badge",
 import { 
 
+
 import React from "react",""
 import { Badge } from "@/components/ui/badge","
 import {
@@ -167,3 +168,20 @@ export const RequestsHeader:React.FC<RequestsHeaderProps> = ({;
           value={archiveFilter} ;"
 
 pr-12325
+          onValueChange={(value) => setArchiveFilter(value as 'active' | 'archived' | 'all')}'
+</Select>'
+          <SelectTrigger className="bg-zion-blue-dark border-zion-blue-light text-white w-[140px]">;"
+</SelectTrigger>"
+            <SelectValue placeholder="Active Only" />;"
+</SelectValue>
+          </SelectTrigger>;
+          <SelectContent>;
+</SelectContent>"
+            <SelectItem value="active">Active Only</SelectItem>;""
+            <SelectItem value="archived">Archived Only</SelectItem>;""
+            <SelectItem value="all">All Requests</SelectItem>;"
+          </SelectContent>;
+        </Select>;
+      </div>;
+    </div>;"
+

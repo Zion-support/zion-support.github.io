@@ -8,20 +8,26 @@ pr-12325
   slug: string;
   logoUrl?: string;
   brandColor?: string;
+interface CompanyRecord {
+  id: string;
+  name: string;
+  slug: string;
+  logoUrl: string;
+  brandColor: string;
   plan: {
-    tier: 'starter' | 'business' | 'enterprise';
+    tier: string;
     seatsPurchased: number;
     seatsUsed: number;
     usageLimits: {
       monthlyJobPosts: number;
-      budgetCapUsd: number
-};
+      budgetCapUsd: number;
+    };
   };
   members: Array<{
     id: string;
     email: string;
     name: string;
-    role: 'admin' | 'manager' | 'recruiter';
+    role: string;
   }>;
   activity: Array<{
     id: string;
@@ -67,29 +73,100 @@ function generateId(): string {
 
 function generateId(): string {
   // TODO: Implement
+    meta?: any;
+  }>;
+  invoices: any[];
+}
+
+function generateId(): string {
   return Math.random().toString(36).substr(2, 9);
 pr-12325
 
 const companiesById: Record<string, CompanyRecord> = {};
 const companiesBySlug: Record<string, CompanyRecord> = {};
 
-export function createCompany(record: Omit<CompanyRecord, 'members' | 'activity' | 'invoices'>): CompanyRecord {
-  const { id, slug } = record;
-  
-  const fullRecord: CompanyRecord = {
-    ...record,
+const seedCompany: CompanyRecord = {
+  id: 'cmp-acme',
+  name: 'Acme Corporation',
+  slug: 'acme',
+  logoUrl: '/logo-acme.svg',
+  brandColor: '#4F46E5',
+  plan: {
+    tier: 'business',
+    seatsPurchased: 25,
+    seatsUsed: 3,
+    usageLimits: {
+      monthlyJobPosts: 50,
+      budgetCapUsd: 10000
+    }
+  },
+  members: [
+    {
+      id: 'mem-1',
+      email: 'admin@acme.com',
+      name: 'Avery Admin',
+      role: 'admin'
+    },
+    {
+      id: 'mem-2',
+      email: 'maria@acme.com',
+      name: 'Maria Manager',
+      role: 'manager'
+    },
+    {
+      id: 'mem-3',
+      email: 'reid@acme.com',
+      name: 'Reid Recruiter',
+      role: 'recruiter'
+    }
+  ],
+  activity: [
+    {
+      id: generateId(),
+      timestampIso: new Date().toISOString(),
+      actorEmail: 'admin@acme.com',
+      action: 'created company'
+    },
+    {
+      id: generateId(),
+      timestampIso: new Date().toISOString(),
+      actorEmail: 'maria@acme.com',
+      action: 'posted job',
+      meta: {
+        jobId: 'job-123'
+      }
+    }
+  ],
+  invoices: []
+};
+
+export function createCompany(id: string, name: string, slug: string): CompanyRecord {
+  const record: CompanyRecord = {
+    id,
+    name,
+    slug,
+    logoUrl: '',
+    brandColor: '#4F46E5',
+    plan: {
+      tier: 'business',
+      seatsPurchased: 10,
+      seatsUsed: 0,
+      usageLimits: {
+        monthlyJobPosts: 20,
+        budgetCapUsd: 5000
+      }
+    },
     members: [],
     activity: [],
     invoices: []
   };
   
-  companiesById[id] = fullRecord;
-  companiesBySlug[slug] = fullRecord;
-  
-  return fullRecord;
+  companiesById[id] = record;
+  companiesBySlug[slug] = record;
+  return record;
 }
 
-export function getCompanyById(id: string): CompanyRecord | undefined {
+export function getCompany(id: string): CompanyRecord | undefined {
   return companiesById[id];
 }
 
@@ -350,3 +427,4 @@ const companiesBySlug: Record<string, CompanyRecord> = { [seedCompany.slug]: see
   createCompany(input: Partial<CompanyRecord>): CompanyRecord {;
 `;
 pr-12325
+}

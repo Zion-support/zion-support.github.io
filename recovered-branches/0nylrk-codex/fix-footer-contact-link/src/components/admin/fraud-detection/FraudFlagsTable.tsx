@@ -32,6 +32,101 @@ import { EmptyFraudState } from "./EmptyFraudState",;      <div className="flex 
   }    <Table>;
       <TableHeader>;
         <TableRow>;
+
+
+
+import React from "react";""
+import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";""
+import {Badge} from "@/components/ui/badge";""
+import {FraudFlag} from "@/types/fraud";""
+import {SeverityDisplay} from "./SeverityDisplay";""
+import {ActionButtons} from "./ActionButtons";""
+import {EmptyFraudState} from "./EmptyFraudState";""
+import React from "react",""
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",""
+import { Badge } from "@/components/ui/badge",""
+import { FraudFlag } from "@/types/fraud",""
+import { SeverityDisplay } from "./SeverityDisplay",""
+import { ActionButtons } from "./ActionButtons";""
+import { EmptyFraudState } from "./EmptyFraudState";""
+import { ActionButtons } from "./ActionButtons",""
+import { EmptyFraudState } from "./EmptyFraudState","
+interface FraudFlagsTableProps {
+  // TODO: Implement
+}
+  flags: FraudFlag[],
+  isLoading: boolean;
+  hasFilters: boolean;,
+  resetFilters: () => void;"
+  onAction: (flagId: string, action: 'warning' | 'suspension' | 'ban' | 'ignore') => void;'
+}
+
+
+
+
+
+export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({;
+</FraudFlagsTableProps>
+export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({
+</FraudFlagsTableProps>'
+      <div className="flex justify-center items-center h-64">"
+</div>"
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-purple"></div>"
+      </div>
+export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({;
+</FraudFlagsTableProps>"
+      <div className="flex justify-center items-center h-64">;"
+</div>"
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-purple"></div>;"
+      </div>;
+    return <EmptyFraudState hasFilters={hasFilters} onResetFilters={resetFilters} />
+</EmptyFraudState>
+    <Table>
+</Table>
+      <TableHeader>
+</TableHeader>
+        <TableRow>
+</TableRow>
+          <TableHead>Severity</TableHead>
+          <TableHead>User</TableHead>
+          <TableHead>Content</TableHead>
+          <TableHead>Type</TableHead>
+          <TableHead>Reason</TableHead>
+          <TableHead>GPT Analysis</TableHead>
+          <TableHead>Timestamp</TableHead>
+          <TableHead>Status</TableHead>
+          <TableHead>Actions</TableHead>
+        </TableRow>
+      </TableHeader>
+      <TableBody>
+</TableBody>
+          <TableRow key={flag.id}>
+</TableRow>
+            <TableCell>
+</TableCell>
+              <SeverityDisplay severity={flag.severity} />
+</SeverityDisplay>
+            </TableCell>"
+            <TableCell className="font-medium">"
+</TableCell>
+            </TableCell>"
+            <TableCell className="max-w-xs truncate">"
+</TableCell>
+            </TableCell>
+            <TableCell>
+</TableCell>"
+              <Badge variant="outline">{flag.content_type}</Badge>"
+            </TableCell>"
+            <TableCell className="max-w-xs truncate">{flag.reason}</TableCell>""
+            <TableCell className="max-w-xs truncate">"
+</TableCell>"
+                <span className="text-muted-foreground text-xs">Not analyzed</span>"
+    <Table>;
+</Table>
+      <TableHeader>;
+</TableHeader>
+        <TableRow>;
+</TableRow>
           <TableHead>Severity</TableHead>;
           <TableHead>User</TableHead>;
           <TableHead>Content</TableHead>;
@@ -90,6 +185,42 @@ import { ActionButtons } from "./ActionButtons",""
 import { EmptyFraudState } from "./EmptyFraudState","
 interface FraudFlagsTableProps {
   // TODO: Implement
+</TableBody>
+          <TableRow key={flag && flag.id}>;
+</TableRow>
+            <TableCell>;
+</TableCell>
+              <SeverityDisplay severity={flag && flag.severity} />;
+</SeverityDisplay>
+            </TableCell>;"
+            <TableCell className="font-medium">;"
+</TableCell>
+            </TableCell>;"
+            <TableCell className="max-w-xs truncate">;"
+</TableCell>
+            </TableCell>;
+            <TableCell>;
+</TableCell>"
+              <Badge variant="outline">{flag && flag.content_type}</Badge>;"
+            </TableCell>;"
+            <TableCell className="max-w-xs truncate">{flag && flag.reason}</TableCell>;""
+            <TableCell className="max-w-xs truncate">;"
+</TableCell>"
+                <span className="text-muted-foreground text-xs">Not analyzed</span>;"
+            </TableCell>;
+            <TableCell>;
+</TableCell>
+            </TableCell>;
+            <TableCell>;
+</TableCell>
+              <Badgevariant={"
+                flag && flag.status === 'pending'''
+                  ? 'secondary'''
+                  : flag && flag.status === 'actioned'''
+                  ? 'destructive'''
+                  : flag && flag.status === 'ignored'''
+                  ? 'outline'''
+                  : 'default''
 }
   flags: FraudFlag[],
   isLoading: boolean;
@@ -293,3 +424,11 @@ if ( {) {
       
     
 pr-12325
+</ActionButtons>
+            </TableCell>
+          </TableRow>
+      </TableBody>
+    </Table>
+      </TableBody>;
+    </Table>;'
+

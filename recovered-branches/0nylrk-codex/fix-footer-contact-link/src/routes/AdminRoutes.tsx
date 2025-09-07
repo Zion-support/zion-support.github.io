@@ -253,6 +253,7 @@ const AdminRoutes = () =>: any {
 
 export default AdminRoutes;
 ;
+
 import { Fragment } from "react";""
 import { Route, Routes } from "react-router-dom";""
 import { ProtectedRoute } from "@/components/ProtectedRoute";"
@@ -342,6 +343,13 @@ const AdminRoutes = () => {
 
 
     "
+</Route>
+
+            <QuoteManager />;
+</QuoteManager>
+          </ProtectedRoute>;
+
+    </Routes>"
 <Routes> <Route path="/admin/quotes" element= {"
 
   <ProtectedRoute adminOnly= {
@@ -365,3 +373,22 @@ const AdminRoutes = () => {
 )
 }/> ) "
 pr-12325
+}> <QuoteManager /> </ProtectedRoute> 
+}/> <Route <ReviewsModeration /> </ProtectedRoute> 
+</Route>
+}/> <Route <WhitelabelManager /> </ProtectedRoute> 
+</Route>
+}/> <Route <PartnerManager /> </ProtectedRoute> 
+</Route>
+}/> <Route <AppMetadataManager /> </ProtectedRoute> 
+</Route>
+}/> <Route <SupportRequests /> </ProtectedRoute> 
+</Route>
+}/> <Route <FraudDetection /> </ProtectedRoute> 
+</Route>
+}/> <Route <TokenManager /> </ProtectedRoute> 
+</Route>
+}/> <Route <IntegrationsPage /> </ProtectedRoute> 
+</Route>)
+}/> </Routes>) "
+

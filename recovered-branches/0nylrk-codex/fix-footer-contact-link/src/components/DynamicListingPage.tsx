@@ -32,6 +32,8 @@ import {toast} from "@/hooks/use-toast";  min: number,;
   const [selectedRating, setSelectedRating] = useState<number | null>(null),
       listing.price <= currentPriceFilter[1]
 import React from 'react';
+
+import React from 'react';''
 import {useState, useEffect} from "react";""
 import {useNavigate} from "react-router-dom";""
 import {GradientHeading} from "@/components/GradientHeading";""
@@ -114,8 +116,10 @@ pr-12325
     return matchesSearch && matchesCategory && matchesPrice && matchesRating
     return matchesSearch && matchesCategory && matchesPrice && matchesRating;
 pr-12325
+    return matchesSearch && matchesCategory && matchesPrice && matchesRating;
+
   });
-  const handleRequestQuote = (listingId: string) => {
+  const handleRequestQuote = (
     setIsLoading(true);
     const listing = allListings.find(item => item.id === listingId);
     setTimeout(() => {
@@ -153,6 +157,7 @@ pr-12325
           state: { ;
             serviceType: categorySlug, ;
             specificItem: {;              id: listing.id,;
+
         toast({"
           title: "Quote Requested"",
   description: `Your quote request for ${listing.title} has been sent.`)
@@ -293,10 +298,10 @@ if ( {) {
               image: listing.images?.[0];,
   id: listing.id,;
 pr-12325
-              title: listing.title,;
-              category: listing.category,;
-              image: listing.images?.[0];
 
+              title: listing.title,;
+              category: listing.category,;}
+              image: listing.images?.[0];}
             }
           }
         });
@@ -331,6 +336,10 @@ pr-12325
                 <Select
             {description}                    setSelectedCategory(value);
           })
+          })
+        });
+
+      }
 
   return (
     }, 500);
@@ -390,6 +399,7 @@ pr-12325
                 <div className="mt-6 px-2">;"
                   <Slider;
 pr-12325
+
                     defaultValue={[priceRange && priceRange.min, priceRange && priceRange.max]}
                     min={priceRange && priceRange.min}
                     max={priceRange && priceRange.max}
@@ -400,6 +410,14 @@ pr-12325
                     className="mb-4"
                   />
                   <div className="flex justify-between text-sm text-zion-slate-light">
+
+                    onValueChange={handleSliderChange}"
+                    className="mb-4"""
+                    className="mb-4""
+                  />
+</Slider>"
+                  <div className="flex justify-between text-sm text-zion-slate-light">"
+</div>
                     <span>${currentPriceFilter[0].toLocaleString()}</span>
                     <span>${currentPriceFilter[1].toLocaleString()}</span>
                   </div>
@@ -419,12 +437,16 @@ pr-12325
                   <div className="flex justify-between text-sm text-zion-slate-light">"
                     <span>${currentPriceFilter[0].toLocaleString()}</span>
                     <span>${currentPriceFilter[1].toLocaleString()}</span>
+              "
               <div className="mb-6">"
                 <label className="text-sm font-medium text-zion-slate-light block mb-2">"
                 </label>"
                 <div className="mt-6 px-2">"
 pr-12325
+</div>
+                  <Slider;
                     defaultValue={[priceRange.min, priceRange.max]}
+
                     min={priceRange.min}
                     max={priceRange.max}
                     step={(priceRange.max - priceRange.min) / 100}
@@ -433,6 +455,13 @@ pr-12325
                     className="mb-4"
                   />
                   <div className="flex justify-between text-sm text-zion-slate-light">
+
+                    onValueChange={handleSliderChange}"
+                    className="mb-4""
+                  />
+</Slider>"
+                  <div className="flex justify-between text-sm text-zion-slate-light">"
+</div>
                     <span>${currentPriceFilter[0].toLocaleString()}</span>
                     <span>${currentPriceFilter[1].toLocaleString()}</span>
                   </div>
@@ -451,9 +480,15 @@ pr-12325
     initialPrice.min,
     initialPrice.max
   ]),
+  const [currentPriceFilter, setCurrentPriceFilter] = useState<[number, number]>([
+    initialPrice.min,
+    initialPrice.max;)]
 
-  const handleSliderChange = (values: number[]) => {
-    setCurrentPriceFilter([values[0], values[1]])
+  ]),
+  const handleSliderChange = (
+    setCurrentPriceFilter([values[0], values[1]])) => {
+  return $3;}
+}
   },
   const filteredListings = allListings.filter(listing => {const matchesSearch = !searchQuery || 
       listing.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
@@ -467,10 +502,22 @@ pr-12325
     const matchesPrice = listing.price === null || (
       listing.price >= currentPriceFilter[0] && 
       listing.price <= currentPriceFilter[1]
+  const filteredListings = allListings.filter(listing => {const matchesSearch = !searchQuery || )
+      listing.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
+      listing.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      (listing.tags && listing.tags.some((tag: string) => tag.toLowerCase().includes(searchQuery.toLowerCase()))),
+
+    "
+    const matchesCategory = selectedCategory === "all" || listing.category === selectedCategory,      (listing.tags && listing.tags.some((tag: string) => tag.toLowerCase().includes(searchQuery.toLowerCase())));""
+    const matchesCategory = selectedCategory === "all" || listing.category === selectedCategory;"
+
+    const matchesPrice = listing.price === null || (
+      listing.price >= currentPriceFilter[0] && 
+      listing.price <= currentPriceFilter[1])
     ),
-    
     const matchesRating = 
       selectedRating === null || 
+
       (listing.rating !== undefined && listing.rating >= selectedRating),
     
     return matchesSearch && matchesCategory && matchesPrice && matchesRating
@@ -491,14 +538,17 @@ pr-12325
   }),
 
 pr-12325
+    return matchesSearch && matchesCategory && matchesPrice && matchesRating;
+
+  }),
+  const handleRequestQuote = (
     setIsLoading(true),
-    
     const listing = allListings.find(item => item.id === listingId),
-    
     setTimeout(() => {
       setIsLoading(false),
       if (listing) {
         toast({
+
           title: &quot;Quote Requested&quot;,
           description: `Your quote request for ${listing.title} has been sent.`
         }),
@@ -512,6 +562,19 @@ pr-12325
               category: listing.category,
               image: listing.images?.[0]
             }          }
+          description: `Your quote request for ${listing.title} has been sent.`)
+        }),
+        "
+        navigate(&quot;/request-quote", {"
+          state: { ,
+  serviceType: categorySlug,
+            specificItem: {,
+  id: listing.id,
+              title: listing.title,
+              category: listing.category,
+              image: listing.images?.[0]
+            }          })
+
         })
       }
     }, 500)
@@ -663,7 +726,503 @@ value={selectedCategory}
                     key={listing && listing.id}
                   <ProductListingCard 
 
+"
+  return (_<div className="min-h-screen bg-zion-blue py-12 px-4">"
+</div>"
+      <div className="container mx-auto">"
+</div>"
+        <div className="text-center mb-12">"
+</div>
+          <GradientHeading>{title}</GradientHeading>"
+          <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">"
+</p>
+          </p>
+        </div>
+"
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">"
+</div>"
+          <div className="lg:col-span-1">"
+</div>"
+            <div className="bg-zion-blue-dark rounded-lg border border-zion-blue-light p-4 sticky top-6">"
+</div>"
+              <h3 className="text-lg font-medium text-white mb-4 flex items-center">"
+</h3>"
+                <Filter className="mr-2 h-5 w-5" /> Filters;"
+</Filter>
+              </h3>
+              "
+              <div className="mb-6">"
+</div>"
+                <label className="text-sm font-medium text-zion-slate-light block mb-2&quot;>"
+</label>
+                </label>
+                <Select,
+value={selectedCategory} )
+                  onValueChange={(value: string) => {
+</Select>"
+                  <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white&quot;>"
+</SelectTrigger>"
+                    <SelectValue placeholder=&quot;Select Category" />"
+</SelectValue>
+                  </SelectTrigger>"
+                  <SelectContent className="bg-zion-blue-dark border border-zion-blue-light&quot;>"
+</SelectContent>"
+                    <SelectItem value=&quot;all" className="text-white">All Categories</SelectItem>""
+                      <SelectItem key={filter.value} value={filter.value} className="text-white">"
+</SelectItem>
+
+                        {filter.label}                      </SelectItem>
+                  </SelectContent>
+                </Select>
+
+              </div>
+              "
+              <div className="mb-6">"
+</div>"
+                <label className="text-sm font-medium text-zion-slate-light block mb-2">"
+</label>
+                </label>"
+                <div className="mt-6 px-2">"
+</div>
+                  <Slider;
+                    defaultValue={[priceRange.min, priceRange.max]}
+                    min={priceRange.min}
+                    max={priceRange.max}
+                    step={(priceRange.max - priceRange.min) / 100}
+                    value={currentPriceFilter}
+                    onValueChange={handleSliderChange}
+
+"
+                    className="mb-4""
+                  />
+</Slider>"
+                  <div className="flex justify-between text-sm text-zion-slate-light">"
+</div>
+                    <span>${currentPriceFilter[0].toLocaleString()}</span>
+                    <span>${currentPriceFilter[1].toLocaleString()}</span>
+                  </div>
+                </div>
+                </label>
+                </label>
+              </div>"
+              <div className="mb-6">"
+</div>"
+                <label className="text-sm font-medium text-zion-slate-light block mb-2">"
+</label>
+                </label>"
+                <div className="flex flex-wrap gap-2">"
+</div>
+                    <Button;"
+                      key={rating === null ? 'any' : rating}''
+                      variant="outline"""
+                      size="sm""
+                      onClick={() => {
+</Button>"
+                        <div className="flex items-center">"
+</div>"
+                            <Star key={i} className="h-3 w-3 fill-zion-cyan text-zion-cyan" />"
+</Star>"
+                          <span className="ml-1">& Up</span>"
+                        </div>"
+                  <div className="flex justify-between text-sm text-zion-slate-light">;"
+</div>
+                    <span>${currentPriceFilter[0].toLocaleString()}</span>;
+                    <span>${currentPriceFilter[1].toLocaleString()}</span>;
+                  </div>;
+                </div>;
+              </div>;"
+              <div className="mb-6">;"
+</div>"
+                <label className="text-sm font-medium text-zion-slate-light block mb-2">;"
+</label>
+                </label>;"
+                <div className="flex flex-wrap gap-2">;"
+</div>
+                    <Button;"
+                      key={rating === null ? 'any' : rating}''
+                      variant="outline"""
+                      size="sm""
+                      onClick={() => {;
+</Button>"
+    <div className="min - h-screen bg - zion - blue py - 12 px - 4">;"
+</div>"
+      <div className="container mx - auto">;"
+</div>"
+        <div className="text - center mb - 12">;"
+</div>
+          <GradientHeading>{title}</GradientHeading>;"
+          <p className="mt - 4 text - zion - slate - light text - xl max - w-3xl mx - auto">;"
+</p>
+          </p>;
+        </div>;"
+        <div className="grid grid - cols - 1 lg:grid - cols - 4 gap - 6">;"
+</div>"
+          <div className="lg:col - span - 1">;"
+</div>"
+            <div className="bg - zion - blue - dark rounded - lg border border - zion - blue - light p - 4 sticky top - 6">;"
+</div>"
+              <h3 className="text - lg font - medium text - white mb - 4 flex items - center">;"
+</h3>"
+                <Filter className="mr - 2 h - 5 w - 5" /> Filters;"
+</Filter>
+              </h3>;"
+              <div className="mb - 6">;"
+</div>"
+                <label className="text - sm font - medium text - zion - slate - light block mb - 2">;"
+</label>
+                </label>;
+                <Select;
+                  value={selected_category}
+                  onValueChange={(value: string) => {
+</Select>"
+                  <SelectTrigger className="bg - zion - blue border border - zion - blue - light text - white">;"
+</SelectTrigger>"
+                    <SelectValue placeholder="Select Category" />;"
+</SelectValue>
+                  </SelectTrigger>;"
+                  <SelectContent className="bg - zion - blue - dark border border - zion - blue - light">;"
+</SelectContent>"
+                    <SelectItem value="all" className="text - white">All Categories</SelectItem>;""
+                      <SelectItem key={filter.value} value={filter.value} className="text - white">;"
+</SelectItem>
+                      </SelectItem>))}
+                  </SelectContent>;
+                </Select>;
+              </div>;"
+              <div className="mb - 6">;"
+</div>"
+                <label className="text - sm font - medium text - zion - slate - light block mb - 2">;"
+</label>
+                </label>;"
+                <div className="mt - 6 px - 2">;"
+</div>
+                  <Slider;
+                    default_value={[price_range.min, price_range.max]}
+                    min={price_range.min}
+                    max={price_range.max}
+                    step={(price_range.max - price_range.min) / 100}
+                    value={currentPriceFilter}
+                    onValueChange={handleSliderChange}"
+                    className="mb - 4";"
+                  />;
+</Slider>"
+                  <div className="flex justify - between text - sm text - zion - slate - light">;"
+</div>
+                    <span>${currentPriceFilter[0].toLocaleString ()}</span>;
+                    <span>${currentPriceFilter[1].toLocaleString ()}</span>;
+                  </div>;
+                </div>;
+              </div>;"
+              <div className="mb - 6">;"
+</div>"
+                <label className="text - sm font - medium text - zion - slate - light block mb - 2">;"
+</label>
+                </label>;"
+                <div className="flex flex - wrap gap - 2">;"
+</div>
+                    <Button;"
+                      key={rating === null ? 'any' : rating}''
+                      variant="outline";""
+                      size="sm";"
+                      on_click={() => {
+</Button>
+                    <Button;"
+                      key={rating === null ? 'any' :rating}''
+                      variant="outline";""
+                      size="sm";"
+                      onClick={() => {;
+</Button>"
+                        <div className="flex items-center">;"
+</div>"
+                            <Star key={i} className="h-3 w-3 fill-zion-cyan text-zion-cyan" />;"
+</Star>"
+                          <span className="ml-1">& Up</span>;"
+                        </div>;
+                        </div>;                      )}
+                    </Button>;
+                </div>;
+              </div>;
+              <Button;"
+                variant="outline""
+                      )}
+                    </Button>;
+
+                </div>
+              </div>
+                    </Button>;
+
+              <Button;"
+                variant="outline"""
+                className="w-full border-zion-purple text-zion-purple hover: bg-zion-purple/10""
+                onClick={() => {
+</Button>
+              </Button>
+            </div>
+          </div>"
+          <div className="lg:col-span-3">"
+</div>"
+            <div className="bg-zion-blue-dark rounded-lg p-4 mb-6 border border-zion-blue-light">"
+</div>"
+              <div className="flex flex-col md:flex-row gap-4">"
+</div>"
+                <div className="relative flex-grow">"
+</div>"
+                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />"
+</Search>"
+                        <div className="flex items - center">;"
+</div>"
+                            <Star key={i} className="h - 3 w - 3 fill - zion - cyan text - zion - cyan" />))}"
+</Star>"
+                          <span className="ml - 1">& Up</span>;"
+                        </div>)}
+                    </Button>))}
+                </div>;
+              </div>;
+              <Button;"
+                variant="outline";""
+                className="w - full border - zion - purple text - zion - purple hover: bg - zion - purple / 10";"
+                on_click={() => {
+</Button>
+              </Button>;
+            </div>;
+          </div>;
+                  <Button;"
+                    variant="outline"""
+                    size="icon"""
+                    onClick={() => setView("grid")}"
+</Button>"
+                    <LayoutGrid className="h-4 w-4" />"
+</LayoutGrid>
+                  </Button>
+                  <Button;"
+                    variant="outline"""
+                    size="icon"""
+                    onClick={() => setView("list")}"
+</Button>"
+                    <List className="h-4 w-4" />"
+</List>
+                  </Button>
+                </div>
+              </div>
+            </div>"
+            <div className="mb-6">"
+</div>"
+              <p className="text-zion-slate-light">"
+</p>
+              </p>
+            </div>"
+              <div className={`grid gap-6 ${view === "grid" ? "grid-cols-1 md:grid-cols-2" : "grid-cols-1"}`}>"
+</div>"
+                  <div key={i} className="rounded-lg overflow-hidden border border-zion-blue-light">"
+</div>"
+                    <Skeleton className="h-48 w-full bg-zion-blue-light/20" />"
+</Skeleton>"
+                    <div className="p-4">"
+</div>"
+                      <Skeleton className="h-6 w-1/3 mb-2 bg-zion-blue-light/20" />"
+</Skeleton>"
+                      <Skeleton className="h-8 w-5/6 mb-4 bg-zion-blue-light/20" />"
+</Skeleton>"
+                      <Skeleton className="h-4 w-full mb-2 bg-zion-blue-light/20" />"
+</Skeleton>"
+                      <Skeleton className="h-4 w-4/5 mb-4 bg-zion-blue-light/20" />"
+</Skeleton>"
+                      <div className="flex justify-between items-center pt-4">"
+</div>"
+                        <Skeleton className="h-6 w-1/4 bg-zion-blue-light/20" />"
+</Skeleton>"
+                        <Skeleton className="h-8 w-1/4 bg-zion-blue-light/20" />"
+</Skeleton>
+                      </div>
+                    </div>
+                  </div>
+              </div>"
+              <div className={`grid gap-6 ${view === "grid" ? "grid-cols-1 md:grid-cols-2" : "grid-cols-1"}`}>"
+</div>"
+                        <div className="flex items - center">;"
+</div>"
+                            <Star key={i} className="h - 3 w - 3 fill - zion - cyan text - zion - cyan" />))}"
+</Star>"
+                          <span className="ml - 1">& Up</span>;"
+                        </div>)}
+                    </Button>))}
+                </div>;
+              </div>;
+              <Button;"
+                variant="outline";""
+                className="w - full border - zion - purple text - zion - purple hover: bg - zion - purple / 10";"
+                on_click={() => {
+</Button>
+              </Button>;
+            </div>;
+          </div>;
+                </div>;"
+                <div className="flex items-center gap-2 ml-auto">;"
+</div>
+                  <Button;"
+                    variant="outline"""
+                    size="icon"""
+                    onClick={() => setView("grid")}"
+</Button>"
+                    <LayoutGrid className="h-4 w-4" />;"
+</LayoutGrid>
+                  </Button>;
+                  <Button;"
+                    variant="outline"""
+                    size="icon"""
+                    onClick={() => setView("list")}"
+</Button>"
+          <div className="lg:col - span - 3">;"
+</div>"
+            <div className="bg - zion - blue - dark rounded - lg p - 4 mb - 6 border border - zion - blue - light">;"
+</div>"
+              <div className="flex flex - col md:flex - row gap - 4">;"
+</div>"
+                <div className="relative flex - grow">;"
+</div>"
+                  <Search className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - zion - slate h - 4 w - 4" />;"
+</Search>
+                  <Input;"
+                    type="text";""
+                    placeholder="Search listings...";"
+                    value={search_query}
+                    on_change={(e: React.ChangeEvent < HTMLInputElement>) => {
+</Input>
+                </div>;"
+                <div className="flex items - center gap - 2 ml - auto">;"
+</div>
+                  <Button;"
+                    variant="outline";""
+                    size="icon";""
+                    on_click={() => set_view ("grid")}"
+</Button>"
+                    <LayoutGrid className="h - 4 w - 4" />;"
+</LayoutGrid>
+                  </Button>;
+                  <Button;"
+                    variant="outline";""
+                    size="icon";""
+                    on_click={() => set_view ("list")}"
+</Button>"
+                    <List className="h - 4 w - 4" />;"
+</List>
+                  </Button>;
+                </div>;
+              </div>;
+            </div>;"
+            <div className="mb - 6">;"
+</div>"
+              <p className="text - zion - slate - light">;"
+</p>
+              </p>;
+            </div>;"
+              <div className={`grid gap - 6 ${view === "grid" ? "grid - cols - 1 md:grid - cols - 2" : "grid - cols - 1"}`}>;"
+</div>"
+                  <div key={i} className="rounded - lg overflow - hidden border border - zion - blue - light">;"
+</div>"
+                    <Skeleton className="h - 48 w - full bg - zion - blue - light / 20" />;"
+</Skeleton>"
+                    <div className="p - 4">;"
+</div>"
+                      <Skeleton className="h - 6 w - 1/3 mb - 2 bg - zion - blue - light / 20" />;"
+</Skeleton>"
+                      <Skeleton className="h - 8 w - 5/6 mb - 4 bg - zion - blue - light / 20" />;"
+</Skeleton>"
+                      <Skeleton className="h - 4 w - full mb - 2 bg - zion - blue - light / 20" />;"
+</Skeleton>"
+                      <Skeleton className="h - 4 w - 4/5 mb - 4 bg - zion - blue - light / 20" />;"
+</Skeleton>"
+                      <div className="flex justify - between items - center pt - 4">;"
+</div>"
+                        <Skeleton className="h - 6 w - 1/4 bg - zion - blue - light / 20" />;"
+</Skeleton>"
+                        <Skeleton className="h - 8 w - 1/4 bg - zion - blue - light / 20" />;"
+</Skeleton>
+                      </div>;
+                    </div>;
+                  </div>))}
+              </div>) : filtered_listings.length > 0 ? ("
+              <div className={`grid gap - 6 ${view === "grid" ? "grid - cols - 1 md:grid - cols - 2" : "grid - cols - 1"}`}>;"
+</div>
+                  <ProductListingCard;
+
                     key={listing.id}
+                  >;
+</ProductListingCard>"
+                    <List className="h-4 w-4" />;"
+</List>
+                  </Button>;
+                </div>;
+              </div>;
+            </div>;"
+            <div className="mb-6">;"
+</div>"
+              <p className="text-zion-slate-light">;"
+</p>"
+            <div className="mb-6">;"
+</div>"
+              <p className="text-zion-slate-light">;"
+</p>"
+            <div className="mb-6">;"
+</div>"
+              <p className="text-zion-slate-light">;"
+</p>
+              </p>;
+            </div>;"
+              <div className={`grid gap-6 ${view === "grid" ? "grid-cols-1 md:grid-cols-2" :"grid-cols-1"}`}>;"
+</div>"
+              <div className={`grid gap-6 ${view === "grid" ? "grid-cols-1 md:grid-cols-2" : "grid-cols-1"}`}>;"
+</div>"
+                  <div key={i} className="rounded-lg overflow-hidden border border-zion-blue-light">;"
+</div>"
+                    <Skeleton className="h-48 w-full bg-zion-blue-light/20" />;"
+</Skeleton>"
+                    <div className="p-4">;"
+</div>"
+                      <Skeleton className="h-6 w-1/3 mb-2 bg-zion-blue-light/20" />;"
+</Skeleton>"
+                      <Skeleton className="h-8 w-5/6 mb-4 bg-zion-blue-light/20" />;"
+</Skeleton>"
+                      <Skeleton className="h-4 w-full mb-2 bg-zion-blue-light/20" />;"
+</Skeleton>"
+                      <Skeleton className="h-4 w-4/5 mb-4 bg-zion-blue-light/20" />;"
+</Skeleton>"
+                      <div className="flex justify-between items-center pt-4">;"
+</div>"
+                        <Skeleton className="h-6 w-1/4 bg-zion-blue-light/20" />;"
+</Skeleton>"
+                        <Skeleton className="h-8 w-1/4 bg-zion-blue-light/20" />;"
+</Skeleton>
+                      </div>;
+                    </div>;
+                  </div>;
+              </div>;"
+              <div className={`grid gap-6 ${view === "grid" ? "grid-cols-1 md:grid-cols-2" : "grid-cols-1"}`}>;"
+</div>
+                  <ProductListingCard;
+                    key={listing && listing.id})
+                {filteredListings && filteredListings.map((listing) => (;
+</ProductListingCard>
+                  <ProductListingCard;
+                    key={listing && listing.id}
+
+                  <ProductListingCard;
+                    key={listing.id}
+                    listing={listing}
+                    view={view}
+                    onRequestQuote={handleRequestQuote}
+
+
+                    listing={listing}
+                    view={view}
+                    onRequestQuote={handleRequestQuote})
+            ) : filteredListings.length > 0 ? (;
+</ProductListingCard>"
+              <div className={`grid gap-6 ${view === "grid" ? "grid-cols-1 md:grid-cols-2" : "grid-cols-1"}`}>;"
+</div>
+
+                  <ProductListingCard;
+key={listing.id}
                     listing={listing}
                     view={view}
                     onRequestQuote={handleRequestQuote}
@@ -693,7 +1252,30 @@ value={selectedCategory}
             ) :filteredListings.length > 0 ? (;
               <div className={`grid gap-6 ${view === "grid" ? "grid-cols-1 md:grid-cols-2" :"grid-cols-1"}`}>;
                 {filteredListings.map((listing) => (;
+
+</ProductListingCard>
+              </div>"
+              <div className="text-center py-20">"
+</div>"
+                <h3 className="text-xl font-bold text-white mb-2">No listings found</h3>""
+                <p className="text-zion-slate-light mb-6">Try adjusting your filters or search query</p>"
+                <Button;"
+                  variant="outline"")
+                  onClick={() => {
+</Button>
+              </div>;"
+              <div className="text-center py-20">;"
+</div>"
+                <h3 className="text-xl font-bold text-white mb-2">No listings found</h3>;""
+                <p className="text-zion-slate-light mb-6">Try adjusting your filters or search query</p>;"
+                <Button;"
+                  variant="outline""
+                  onClick={() => {;
+</Button>"
+              <div className={`grid gap-6 ${view === "grid" ? "grid-cols-1 md:grid-cols-2" :"grid-cols-1"}`}>;"
+</div>
                   <ProductListingCard ;
+
                     key={listing.id}                    listing={listing}
                     view={view}
                     onRequestQuote={handleRequestQuote}
@@ -717,6 +1299,20 @@ value={selectedCategory}
                 </Button>;
               </div>;
             )}
+
+</ProductListingCard>
+              </div>;"
+              <div className="text-center py-20">;"
+</div>"
+                <h3 className="text-xl font-bold text-white mb-2">No listings found</h3>;""
+                <p className="text-zion-slate-light mb-6">Try adjusting your filters or search query</p>;"
+                <Button ;"
+                  variant="outline" ;"
+                  onClick={() => {;
+</Button>
+                </Button>;
+              </div>;
+
           </div>;
         </div>;
       </div>;
@@ -731,6 +1327,8 @@ value={selectedCategory}
                   className="border - zion - purple text - zion - purple hover:bg - zion-purple / 10";
                 >;
                   Clear all filters;
+
+
                 </Button>;
               </div>)}
           </div>;
@@ -987,3 +1585,10 @@ return (<div className="min-h-screen bg-zion-blue py-12 px-4"> <div className="c
 }</div> </div> </div> </div>) 
                 
 pr-12325
+                </Button>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>"
+

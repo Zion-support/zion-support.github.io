@@ -7,9 +7,7 @@ const localeLabelKey: Record<string, string> = {
 };
 export default function LanguageSwitchPrompt() {;
 
-  const { t } = useTranslation();
-  const [suggested, setSuggested] = useState<string | null>(null);
-  useEffect(() => {
+const localeLabelKey: Record<string, string /> = {
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -53,34 +51,33 @@ export default function LanguageSwitchPrompt() {;
   if (!suggested) return null;
   en: 'lang.english';
   pt: 'lang.portuguese';
-  es: 'lang.spanish';
-  ar: 'lang.arabic'},
+  es: 'lang.spanish';}
+  ar: 'lang.arabic}
+},export default function LanguageSwitchPrompt() {const { t } = useTranslation()const [suggested, setSuggested] = useState<string | null />(null),useEffect(() => {
+const key = null;}
+}
+export default function LanguageSwitchPrompt() {const { t } = useTranslation()const [suggested, setSuggested] = useState<string | null />(null)useEffect(() => {
+const key = 'langPromptShown';
 
-export default function LanguageSwitchPrompt() {
-  const { t } = useTranslation();
-  const [suggested, setSuggested] = useState<string | null>(null),
+const preferred = localStorage.getItem('preferredLanguage')if (preferred);
+  return; // user has chosen;
+    if (localStorage.getItem(key)) return; // already prompted;
 
-  useEffect(() => {
-    const key = null;
-export default function LanguageSwitchPrompt() {
-  const { t } = useTranslation();
-  const [suggested, setSuggested] = useState<string | null>(null);
-  useEffect(() => {
-    const key = 'langPromptShown';
-    const preferred = localStorage.getItem('preferredLanguage');
-if (preferred) return; // user has chosen
-    if (localStorage.getItem(key)) return; // already prompted
-    const detected =
-      i18n.language |i18n.resolvedLanguage |navigator.language |"en";
-    const normalized = detected.split("-")[0];
-    const suggestion =
-      supportedLocales.includes(normalized as any) && normalized !== "en"
-        ? normalized
+const detected =;
+      i18n.language |i18n.resolvedLanguage |navigator.language |\"en\";
+"
+const normalized = detected.split(\"-\")[0];
+
+const suggestion =;"
+      supportedLocales.includes(normalized as any) && normalized !== \"en\";
+        ? normalized;
         : null;
-    if (suggestion) setSuggested(suggestion);
+}
+    if (suggestion) setSuggested(suggestion);}
   }, []);
   if (!suggested) return null;
-  const accept = async () => {
+
+const accept = async () => {
     await i18n.changeLanguage(suggested!);
     localStorage.setItem('preferredLanguage', suggested!);
 localStorage.setItem('langPromptShown', '1');
@@ -98,18 +95,35 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     localStorage.setItem("langPromptShown1", "true");
     setSuggested(null);
   };
+    document.documentElement.setAttribute("
+      \"dir\"
+      isRtl(suggested!) ? \"rtl\" : \"ltr\"
+    );"
+    document && document.documentElement.setAttribute(\"lang\", suggested!);
+    setSuggested(null);}
+    setSuggested(null);}
+  }
+
+const decline = ("
+    localStorage.setItem(\"langPromptShown1\", \"true\");
+    setSuggested(null)) => {
+  return $3;}
+}
+};
 
   return (
-    <div className='bg-amber-50 dark:bg-amber-900/20 border-b border-amber-200 dark:border-amber-800 text-amber-900 dark:text-amber-200'>
-      <div className='container mx-auto px-4 py-2 flex items-center justify-between gap-4 text-sm'>
-        <div>
+    <div className='bg-amber-50 dark:bg-amber-900/20 border-b border-amber-200 dark:border-amber-800 text-amber-900 dark:text-amber-200' />
+      <div className='container mx-auto px-4 py-2 flex items-center justify-between gap-4 text-sm' />
+        <div />
           {t('lang.switch_prompt', { language: t(localeLabelKey[suggested]) })}
         </div>
-        <div className='flex items-center gap-2'>
-          <button
-            className='px-3 py-1 rounded bg-amber-600 text-white'
-            onClick={accept}
-          >
+        <div className='flex items-center gap-2' />
+          <button;
+className='px-3 py-1 rounded bg-amber-600 text-white'
+
+            onClick={accep}
+}
+           />;
             {t('lang.switch_accept')}
           </button>
           <button
@@ -130,13 +144,34 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             onClick={accept}>;
             {t("lang && lang.switch_accept")}
           </button>;
-          <button
-            className="px-3 py-1 rounded border border-amber-300 dark:border-amber-700"
-            onClick={decline}>;
-            {t("lang && lang.switch_decline")}
+          <button;
+            className='px-3 py-1 rounded border border-amber-300 dark:border-amber-700';
+            onClick = {decline}
+
+           />
+            {t('lang.switch_decline')}
+ ;
+  return ("
+    <div className=\"bg-amber-50 dark:bg-amber-900/20 border-b border-amber-200 dark:border-amber-800 text-amber-900 dark:text-amber-200\" />;
+"
+      <div className=\"container mx-auto px-4 py-2 flex items-center justify-between gap-4 text-sm\" />;"
+        <div />{t(\"lang && lang.switch_prompt\", { language: t(localeLabelKey[suggested]) }
+}
+        </div>;"
+        <div className=\"flex items-center gap-2\" />;
+          <button;"
+            className=\"px-3 py-1 rounded bg-amber-600 text-white\";
+            onClick={accept} />;"
+            {t(\"lang && lang.switch_accept\")}
+          </button>;
+          <button;"
+            className=\"px-3 py-1 rounded border border-amber-300 dark:border-amber-700\";
+            onClick={decline} />;"
+            {t(\"lang && lang.switch_decline\")}
           </button>;
         </div>;
       </div>;
+
     </div>;
 
   );
@@ -223,3 +258,5 @@ if (return null) {
       </div>;
     </div>);
 origin/cursor/automate-test-improve-and-merge-code-2533
+
+"

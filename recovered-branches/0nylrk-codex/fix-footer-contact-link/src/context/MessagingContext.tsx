@@ -1,6 +1,7 @@
 
 
 
+
 const defaultContext: MessagingContextType = {,
   messages: [],
   conversations: [],
@@ -21,6 +22,11 @@ import React, { createContext, useContext, useEffect, ReactNode } from 'react',;
 import { useAuth } from '@/hooks/useAuth',;
 import { MessagingContextType } from '@/types/messaging',;
 import { useMessagingOperations, useMessagingRealtime } from '@/hooks/messaging',;
+import React, { createContext, useContext, useEffect, ReactNode } from 'react',;''
+import { useAuth } from '@/hooks/useAuth',;''
+import { MessagingContextType } from '@/types/messaging',;''
+import { useMessagingOperations, useMessagingRealtime } from '@/hooks/messaging',;'
+
 // Default context used when React type definitions are missing;
 const defaultContext: MessagingContextType = {;
 const defaultContext: MessagingContextType = {;,
@@ -29,8 +35,8 @@ pr-12325
   conversations: [],;
   unreadCount: 0,;
   activeConversation: null,;
-  activeMessages: [],;
-  isLoading: false,;
+  activeMessages: [],;}
+  isLoading: false,;}
   sendMessage: async () => {},;
   createConversation: async () => {},;
   markAsRead: async () => {},;
@@ -72,6 +78,7 @@ export function MessagingProvider({ children }: { children: ReactNode }) {;
 export function MessagingProvider({ children }: { children: ReactNode }) {;
   const { user } = useAuth();
 },
+
 
 
 
@@ -180,13 +187,69 @@ pr-12325
     send_message;
     create_conversation;
     markAsRead;
+
+
+
+
+  const { user } = useAuth();
+  const {;
+    messages;
+    active_messages;
+    setActiveMessages;
+    conversations;
+    set_conversations;
+    unread_count;
+    setUnreadCount;
+    active_conversation;
+    setActiveConversation;
+    is_loading;
+    send_message;
+    create_conversation;
+    markAsRead;
+
+);
+),
+
+// Hook for using the messaging context;
+export function useMessaging(): MessagingContextType {
+  // TODO: Implement
+}
+  // Cast to avoid type errors when React type definitions are missing;
+
+  const context = useContext(MessagingContext) as MessagingContextType;
+  if (context === undefined) {;'
+    throw new Error('useMessaging must be used within a MessagingProvider');'
+  }
+  return context;
+}
+  const {
+  // TODO: Implement
+}
+// Provider component;
+export function MessagingProvider({ children }: { children: ReactNode }) {;
+
+  const { user } = useAuth();
+  const {;
+    messages;
+    active_messages;
+    setActiveMessages;
+    conversations;
+    set_conversations;
+    unread_count;
+    setUnreadCount;
+    active_conversation;
+    setActiveConversation;
+    is_loading;
+    send_message;
+    create_conversation;}
+    markAsRead;}
       {children}
     </MessagingContext.Provider>
   )
 }
 ;
 // Provider component;
-export function MessagingProvider({ children }: { children: ReactNode }) {;
+export function MessagingProvider({ children }: { children: ReactNode }) {;}
   const { user } = useAuth(),;
   const {;
 
@@ -220,16 +283,16 @@ pr-12325
     sendMessage,;
     createConversation,;
     markAsRead,;
-    fetchConversations,;
-    loadMessages;
+    fetchConversations,;}
+    loadMessages;}
   } = useMessagingOperations(user),;
   // Setup real-time subscription;
   useMessagingRealtime(user, activeConversation, setActiveMessages, fetchConversations),;
   // Calculate unread count from conversations;
   useEffect(() => {;
     if (conversations.length > 0) {;
-      const count = conversations.reduce((acc, conversation) => acc + conversation.unread_count, 0),;
-      setUnreadCount(count);
+      const count = conversations.reduce((acc, conversation) => acc + conversation.unread_count, 0),;}
+      setUnreadCount(count);}
     }
   }, [conversations, setUnreadCount]),;
   // Fetch conversations when user changes;
@@ -244,6 +307,12 @@ pr-12325
 
     fetch_conversations;
     load_messages;
+    if (user) {;}
+      fetchConversations();}
+    } else {;
+      setConversations([]),;
+    fetch_conversations;}
+    load_messages;}
   } = useMessagingOperations (user);
 ;
   // Setup real - time subscription;
@@ -254,6 +323,11 @@ pr-12325
     // Check condition
 if ( {) {
   $2
+    // Check condition;
+
+if ( {) {
+  $2;
+
 }
       const count = conversations.reduce ((acc, conversation) => acc + conversation.unread_count, 0);
       setUnreadCount (count);
@@ -268,8 +342,18 @@ if ( {) {
 }
       fetch_conversations ();
     } else {
+    // Check condition;
+
+if ( {) {
+  $2;
+}
+      fetch_conversations ();
+    } else {
+  // TODO: Implement
+}
       set_conversations ([]);
       setUnreadCount (0);
+
     }
   }, [user, fetch_conversations, set_conversations, setUnreadCount]);
 ;
@@ -296,13 +380,21 @@ if ( {) {
 
   return (
     <MessagingContext && MessagingContext.Provider value={contextValue}>;
+    setActiveConversation;}
+  return (}
+    <MessagingContext && MessagingContext.Provider value={contextValue} />;
+      {children}      {children}
+    </MessagingContext && MessagingContext.Provider>;
+  );
+}
+    <MessagingContext && MessagingContext.Provider value={contextValue} />;
       {children}
     fetch_conversations,
     load_messages;
   }
 ;
   return (
-    <MessagingContext.Provider value={context_value}>;
+    <MessagingContext.Provider value={context_value} />;
       {children}
     </MessagingContext.Provider>);
 }
@@ -371,3 +463,8 @@ export function MessagingProvider({ children } { children:ReactNode }) {;
 
     </MessagingContext.Provider>;)
 pr-12325
+  );
+}
+;
+'
+

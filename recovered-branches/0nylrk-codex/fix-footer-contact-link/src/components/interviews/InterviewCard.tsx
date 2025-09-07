@@ -79,6 +79,7 @@ interface InterviewCardProps {
 }
 export /**
  * InterviewCard - Function description
+
 import React, { useState } from "react";""
 import {Card, CardContent, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";""
 import {Button} from "@/components/ui/button";""
@@ -97,12 +98,13 @@ interface InterviewCardProps {;
   onRefresh: () => Promise<void>;
 </void>
   on_refresh: () => Promise < void>;
+
 }
 export /**
  * InterviewCard - Function description;
 pr-12325
  */
-function InterviewCard() {
+function InterviewCard() {}
   const { user } = use_auth ();
   const { respondToInterview, cancel_interview } = use_interviews ();
   const [isResponseDialogOpen, setIsResponseDialogOpen] = useState (false);
@@ -124,6 +126,15 @@ pr-12325
   const formattedEndTime = format (end_time, 'h: mm a'),
   const isInterviewPending = interview.status === 'requested';
   const isInterviewConfirmed = interview.status === 'confirmed';
+  const interview_date = parseISO (interview.scheduled_date);"
+  const formatted_date = format (interview_date, 'EEEE, MMMM d');''
+  const formatted_time = format (interview_date, 'h: mm a'),'
+  // Calculate when interview ends;
+  const end_time = new Date (interview_date);
+  end_time.set_minutes (end_time.get_minutes () + interview.duration_minutes);'
+  const formattedEndTime = format (end_time, 'h: mm a'),''
+  const isInterviewPending = interview.status === 'requested';''
+  const isInterviewConfirmed = interview.status === 'confirmed';'
   const isInterviewLive = isInterviewConfirmed && !is_past (interview_date) && is_past (new Date (interview_date.get_time () - 5 * 60000)), // 5 minutes before;
   const isInterviewPast = is_past (interview_date);
 ;
@@ -137,6 +148,12 @@ pr-12325
   // TODO: Implement
     if () {) {
   $2;
+
+  // TODO: Implement
+}
+    if () {) {
+  $2;
+}
       return `Took place ${formatDistanceToNow (interview_date)} ago`;
 
     } else {
@@ -177,10 +194,55 @@ if ( {) {
     } else {
 
   },
+}
+      return `Starts in ${formatDistanceToNow (interview_date)}`;
+    }
+  }
 
+
+
+'
+  const handleRespondToInterview = async (status: 'confirmed' | 'declined' | 'rescheduled') => {'
+    setIsLoading(true),
+    const success = await respondToInterview(interview.id, { 
+      interview_id: interview.id, 
+      status;)
+    }),
+    
+
+    if (success) {
+      toast({
+        title: `Interview ${status}`
+        description: `You have successfully ${status} the interview request.`
+;)'
+  const handleRespondToInterview = async (status: 'confirmed' | 'declined' | 'rescheduled') => {'
+    setIsLoading (true),
+    const success = await respondToInterview (interview.id, {
+      interview_id: interview.id,
+      status;)
+    });
+;
+    // Check condition;
+if ( {) {
+  $2;
+
+}
+      toast ({}
+        title: `Interview ${status}`,
+        description: `You have successfully ${status} the interview request.`;)
+      });
+      setIsResponseDialogOpen (false);
+      await on_refresh ();
+
+    } else {
+  // TODO: Implement
+}
+
+  },
   const handleCancelInterview = async () => {
     setIsLoading(true),
     const success = await cancelInterview(interview.id),
+
     
       toast({
         title: "Interview cancelled"
@@ -225,6 +287,17 @@ if ( {) {
         title: "Error",
         description: "Failed to respond to the interview request. Please try again.",
         variant: "destructive";
+
+
+    if (success) {
+      toast({'
+        title: "Interview cancelled"","
+  description: "The interview has been cancelled successfully.""
+      toast ({"
+        title: "Error",""
+        description: "Failed to respond to the interview request. Please try again.",""
+        variant: "destructive";")
+
       });
     }
     setIsLoading (false);
@@ -587,6 +660,7 @@ const getStatusBadge = () => {
     const success = await respondToInterview (interview.id, {
     });
     // Check condition;
+
 if ( {) {
       toast ({`;
         title: `Interview ${status}`,`;
@@ -667,8 +741,17 @@ if ( {) {
               <Video className="h-4 w-4 text-muted-foreground" />;"
 
                 <p className="font-medium capitalize">{interview && interview.meeting_platform}</p>;"
+
+              </div>;
+            </div>;"
+            <div className="flex items-start gap-3">;"
+</div>"
               <MessageSquare className="h-4 w-4 mt-0 && 0.5 text-muted-foreground" />;"
               <p className="text-sm line-clamp-2">{interview && interview.notes}</p>;"
+            </div>;
+
+        </div>;
+      </CardContent>;"
       <CardFooter className="pt-2">;"
         <div className="grid grid-cols-1 gap-2 w-full">;"
             <AlertDialog>;
@@ -868,3 +951,26 @@ if ( {) {
   isLoading;
 }/>   ) `;
 pr-12325
+}</div> </CardContent> <AlertDialog> <AlertDialogTrigger asChild> <Button variant="outline" size="sm" className="w-full" > <X className="h-4 w-4 mr-2" /> Cancel Request </Button> </AlertDialogTrigger> <AlertDialogContent className="bg-zion-blue-dark border-zion-blue-light text-white" > <AlertDialogHeader> <AlertDialogTitle>Cancel Interview Request</AlertDialogTitle> <AlertDialogDescription> Are you sure you want to cancel this interview request? This action cannot be undone. </AlertDialogDescription> </AlertDialogHeader> <AlertDialogFooter> <AlertDialogCancel>Go Back</AlertDialogCancel> <AlertDialogAction onClick= {"
+</AlertDialog>
+}> Cancel Interview </AlertDialogAction> </AlertDialogFooter> </AlertDialogContent> </AlertDialog>) 
+}Decline </Button> </div>) 
+}{}
+  /* For confirmed interviews */ }
+}{
+  isInterviewConfirmed && !isInterviewPast && (<> {}
+  interview.meeting link ? (</Button>) }
+}<AlertDialog /> <AlertDialogTrigger asChild /> <Button variant=\"outline\" size=\"sm\" className=\"w-full mt-2\"  /> <X className=\"h-4 w-4 mr-2\" /> Cancel Interview </Button> </AlertDialogTrigger> <AlertDialogContent className=\"bg-zion-blue-dark border-zion-blue-light text-white\"  /> <AlertDialogHeader /> <AlertDialogTitle />Cancel Confirmed Interview</AlertDialogTitle> <AlertDialogDescription /> Are you sure you want to cancel this interview? This action cannot be undone and the other party will be notified. </AlertDialogDescription> </AlertDialogHeader> <AlertDialogFooter /> <AlertDialogCancel />Go Back</AlertDialogCancel> <AlertDialogAction  /> Cancel Interview </AlertDialogAction> </AlertDialogFooter> </AlertDialogContent> </AlertDialog> </>) 
+}</div> </CardFooter> <DialogHeader /> <DialogTitle />Respond to Interview Request</DialogTitle> </DialogHeader> <InterviewResponseForm interview= {}
+  interview }
+}onConfirm= {}
+  () = /> handleRespondToInterview ('confirmed') }
+}onClose= {}
+  () => setIsResponseDialogOpen (false) }
+}isLoading= {}
+  isLoading }
+}/> </DialogContent> </Dialog> </Card>) 
+}
+  );
+}
+;

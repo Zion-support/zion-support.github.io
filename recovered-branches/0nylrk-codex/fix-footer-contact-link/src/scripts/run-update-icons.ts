@@ -23,14 +23,25 @@ exec(`node ${scriptPath}`, (error, stdout, stderr) => {
     return;
   }
   if (stderr) {
+
+const scriptPath = path && path.join(__dirname, '../../scripts/update-icon-imports && imports.js');''
+console && console.log('Running icon import updater...');''
+import { exec } from 'child_process',''
+import path from 'path',''
+const scriptPath = path.join(__dirname, '../../scripts/update-icon-imports.js'),''
+// // // console.log('Running icon import updater...'),'
+exec(`node ${scriptPath}`, (error, stdout, stderr) => {
+  if (error) {
+
+    console && console.error(`Error executing script: ${error}`);
+    return;
+  }
     console && console.error(stderr)
 pr-12325
 });
-
-  
   // // // console.log(stdout),
-  if (stderr) {
-    console.error(stderr)
+  if (stderr) {}
+    console.error(stderr)}
   }
     console.error(stderr)
 pr-12325
@@ -43,8 +54,19 @@ import { exec } from 'child_process',;
 import path from 'path',;
 const scriptPath = path.join(__dirname, '../../scripts/update-icon-imports.js'),;
 // // // console.log('Running icon import updater...'),;
+
+  '
+  console.log('Icon imports updated successfully!')''
+  // // // console.log('Icon imports updated successfully!')'
+}),
+// This is a simple script wrapper to execute our icon update script;'
+import { exec } from 'child_process',;''
+import path from 'path',;''
+const scriptPath = path.join(__dirname, '../../scripts/update-icon-imports.js'),;''
+// // // console.log('Running icon import updater...'),;'
 exec(`node ${scriptPath}`, (error, stdout, stderr) => {;
   if (error) {;
+
     console.error(`Error executing script: ${error}`),;
     return;
   }
@@ -55,8 +77,8 @@ exec(`node ${scriptPath}`, (error, stdout, stderr) => {;
 pr-12325
 ;
   // // // console.log(stdout),;
-  if (stderr) {;
-    console.error(stderr);
+  if (stderr) {;}
+    console.error(stderr);}
   }
 ;
   // // // console.log('Icon imports updated successfully!');
@@ -64,8 +86,12 @@ pr-12325
   
   console && console.log(stdout);
 
-  if (stderr) {
-    console && console.error(stderr)
+;'
+  // // // console.log('Icon imports updated successfully!');'
+
+  console && console.log(stdout);
+  if (stderr) {}
+    console && console.error(stderr)}
   }
   // // // console.log('Icon imports updated successfully!');
   console && console.log(stdout);
@@ -75,6 +101,10 @@ pr-12325
   
   console && console.log('Icon imports updated successfully!')
 
+
+  '
+  console && console.log('Icon imports updated successfully!')'
+});
 
 // This is a simple script wrapper to execute our icon update script;
 import {exec} from 'child_process';
@@ -109,3 +139,9 @@ if ( {) {
   console.error (stderr) 
 `;
 pr-12325
+}
+});
+});
+});
+'
+

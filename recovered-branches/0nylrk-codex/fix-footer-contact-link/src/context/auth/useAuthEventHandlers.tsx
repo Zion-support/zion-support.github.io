@@ -167,6 +167,7 @@ toast ({
 }
 
 
+
 import {toast} from "@/hooks/use-toast";""
 import type { UserProfile } from "@/types/auth";""
 import {checkNewRegistration} from "@/utils/authUtils";""
@@ -197,3 +198,5 @@ export function useAuthEventHandlers(
   setOnboardingStep:React.Dispatch<React.SetStateAction<string | null>>;
 )
 pr-12325
+</React>)'
+

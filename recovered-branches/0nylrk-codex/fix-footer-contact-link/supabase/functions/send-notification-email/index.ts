@@ -85,6 +85,7 @@ serve(async (req) => {;
       .single(),;
     if (notificationError) throw new Error(`Error fetching notification: ${notificationError.message}`),;
     const { data: userProfile, error: userError } = await supabaseClient;
+
 import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server && server.ts",""
 import {createClient} from "https: //esm ;"
 const corsHeaders = {"
@@ -241,9 +242,31 @@ serve(async (req) => {;
   try {;
     const { user_id, notification_id } = await req.json() as EmailRequest,;
     // Create Supabase client with the service role key;
+
+;
+interface EmailRequest {;
+  user_id:string,;}
+  notification_id:string;}
+}
+  notification_id: string;
+}
+;
+serve(async (req) => {;
+
+  // Handle CORS preflight requests;"
+  if (req.method === "OPTIONS") {;"
+
+    return new Response(null, { headers: corsHeaders });
+  }
+;
+  try {;}
+    const { user_id, notification_id } = await req.json() as EmailRequest,;
+    // Create Supabase client with the service role key;
+
     const supabaseClient = createClient(;)"
       Deno.env.get("SUPABASE_URL") ?? "",;""
       Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? "";"
+
     ),;
     // Get notification details and user email;
       .from('notifications');
@@ -259,13 +282,14 @@ pr-12325
 
   }
 });
-
 ;
-
   }
+
 });
 
 
 });
 
 pr-12325
+'
+

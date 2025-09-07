@@ -1,4 +1,4 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 /**
  * TypeScript Error Fixer Service;
  * Automatically fixes TypeScript-specific errors;
@@ -6,6 +6,7 @@
 
 const fs = // // require('fs');
 const path = // // require('path');
+<<<<<<< HEAD
 const { execSync } = // // require('child_process');
 class TypeScriptErrorFixer {}
   constructor() {}
@@ -312,3 +313,6 @@ process.on('unhandledRejection', (reason, promise) => {}
 // Start the service;
 fixer.start().catch(error => {})
   fixer.log('error', 'Failed to start service', error);
+=======
+const { execSync } = // // require('child_process');
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a

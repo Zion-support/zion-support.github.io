@@ -27,6 +27,7 @@ export function ApplicationProgress(): any ({;
     switch (status) {;
       case "new":;
 
+
 import { ApplicationStatus } from "@/types/jobs",""
 import { Progress } from "@/components/ui/progress",""
 import { CheckCircle2, Circle, CircleDot } from "lucide-react";""
@@ -49,11 +50,11 @@ export function ApplicationProgress({ status, className }: ApplicationProgressPr
 
   // Define the progress value based on status;
   const getProgressValue = () => {
+
     switch (status) {
-
-
 export function ApplicationProgress(): any ({;
   status,;
+
   className,;)
 }: ApplicationProgressProps) {;
   // Define the progress value based on status;
@@ -66,8 +67,11 @@ import { Progress  } from '@/components / ui / progress';
 import { CheckCircle2, Circle, CircleDot  } from './lucide-react';
 import { cn  } from '@/lib / utils';
 interface ApplicationProgressProps {
+  // TODO: Implement
+}
   status: ApplicationStatus;
   class_name?: string;
+
 }
 export /**
  * ApplicationProgress - Function description
@@ -76,6 +80,7 @@ export /**
 export /**
  * ApplicationProgress - Function description;
 pr-12325
+ * ApplicationProgress - Function description;
  */
 function ApplicationProgress() {
   // Define the progress value based on status;
@@ -121,6 +126,7 @@ function ApplicationProgress() {
 function StatusIcon({ status, current }: { status: ApplicationStatus, current: ApplicationStatus }) {
   // Helper to determine if this step is active, completed, or inactive
   const statusRank: Record<ApplicationStatus number> = {
+
   // TODO: Implement
       case "new":;"
         return 20;"
@@ -335,3 +341,4 @@ return (<div className= {)"
 }current="interview" /> <span className="mt-1" >Interview</span> </div> <div className="flex flex-col items-center" > <StatusIcon status= {"
 }current="hired" /> <span className="mt-1" >Decision</span>""
 pr-12325
+

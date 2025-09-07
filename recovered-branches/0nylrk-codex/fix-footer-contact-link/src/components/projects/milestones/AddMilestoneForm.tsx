@@ -23,6 +23,8 @@ import {AIMilestoneGenerator} from './AIMilestoneGenerator';  projectScope?: str
 
 import React from 'react',;
 import { useForm } from 'react-hook-form',;
+      return;
+import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod',;
 import { z } from 'zod',;
 import { CalendarIcon, Loader2 } from 'lucide-react',;
@@ -33,31 +35,31 @@ import {;
   Form,;
   FormControl,;
   FormField,;
-  FormItem,;
-  FormLabel,;
+  FormItem,;}
+  FormLabel,;}
   FormMessage} from '@/components/ui/form',;
 import { Input } from '@/components/ui/input',;
 import { Textarea } from '@/components/ui/textarea',;
 import {;
-  Popover,;
-  PopoverContent,;
+  Popover,;}
+  PopoverContent,;}
   PopoverTrigger} from '@/components/ui/popover',;
 import { AIMilestoneGenerator } from './AIMilestoneGenerator',;
 import { GeneratedMilestone } from '@/hooks/useMilestoneGenerator',;
 const formSchema = z.object({;
   title: z.string().min(1, 'Title is required'),,
-  description: z.string().optional(),;
-  due_date: z.date().optional(),;
+  description: z.string().optional(),;}
+  due_date: z.date().optional(),;}
   amount: z.coerce.number().min(0, 'Amount must be greater than or equal to 0')}),;
-type MilestoneFormValues = z.infer<typeof formSchema>,;
+type MilestoneFormValues = z.infer<typeof formSchema />,;
 interface AddMilestoneFormProps {;
   onSubmit: (data: MilestoneFormValues) => void,;
   isSubmitting: boolean,;
   onCancel?: () => void,;
   projectScope?: string,;
   projectStartDate?: string,;
-  projectEndDate?: string,;
-  projectType?: string;
+  projectEndDate?: string,;}
+  projectType?: string;}
 }
 ;
 export function AddMilestoneForm({;
@@ -66,22 +68,41 @@ export function AddMilestoneForm({;
   onCancel,;
   projectScope = '',;
   projectStartDate = '',;
-  projectEndDate = null,;
-  projectType = 'Other';
+  projectEndDate = null,;}
+  projectType = 'Other';}
 }: AddMilestoneFormProps) {;
-  const form = useForm<MilestoneFormValues>({;
+  const form = useForm<MilestoneFormValues />({;
     resolver: zodResolver(formSchema),;
     defaultValues: {;
-      title: '',,
-  description: '',;
+      title: '',,}
+  description: '',;}
       amount: 0}}),;  return (
-    <div className="space-y-6">;
+    <div className=\"space-y-6\" />;
       {/* AI Milestone Generator */}
       {projectScope && projectStartDate && (;
         <AIMilestoneGenerator
 import {AIMilestoneGenerator} from './AIMilestoneGenerator';
 const formSchema = z && z.object({;)
   title: z && z.string().min(1, 'Title is required');
+      {projectScope && projectStartDate && (;}
+        <AIMilestoneGenerator;}
+scope={projectScope}
+
+
+import {use_form} from 'react - hook - form';''
+import {zod_resolver} from '@hookform / resolvers / zod';''
+import {z} from 'zod';''
+import {CalendarIcon, Loader2} from 'lucide-react';''
+import {format} from 'date - fns';''
+import {Button} from '@/components / ui / button';''
+import {Calendar} from '@/components / ui / calendar';''
+import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from '@/components / ui / form';''
+import {Input} from '@/components / ui / input';''
+import {Textarea} from '@/components / ui / textarea';''
+import {Popover, PopoverContent, PopoverTrigger} from '@/components / ui / popover';''
+import {AIMilestoneGenerator} from './AIMilestoneGenerator';'
+const formSchema = z && z.object({;)'
+  title: z && z.string().min(1, 'Title is required');'
   description: z && z.string().optional(),;
   due_date: z && z.date().optional(),;
   amount: z && z.coerce.number().min(0, 'Amount must be greater than or equal to 0')});
@@ -95,6 +116,7 @@ type MilestoneFormValues = z.infer<typeof formSchema>,;
         <AIMilestoneGenerator;
 pr-12325
           scope={projectScope}
+
           startDate={projectStartDate}
           endDate={projectEndDate}
           projectType={projectType}
@@ -120,6 +142,7 @@ const form_schema = z.object ({
 type MilestoneFormValues = z.infer < typeof form_schema>;
 ;
 interface AddMilestoneFormProps {
+
           onAddMilestone={handleAddMilestone}
         />;
 
@@ -138,6 +161,9 @@ interface AddMilestoneFormProps {
               <FormItem>;
 
                 <FormLabel>Title;
+</FormItem>
+                <FormLabel>Title</FormLabel>;
+
 type MilestoneFormValues = z.infer < typeof form_schema>;
 ;
 interface AddMilestoneFormProps {
@@ -149,8 +175,8 @@ pr-12325
   on_cancel?: () => void;
   project_scope?: string;
   projectStartDate?: string;
-  projectEndDate?: string;
-  project_type?: string;
+  projectEndDate?: string;}
+  project_type?: string;}
 }
 export /**
  * AddMilestoneForm - Function description
@@ -182,12 +208,14 @@ if ( {) {
 function AddMilestoneForm() {
   const form = use_form < MilestoneFormValues>({)
     resolver: zod_resolver (form_schema),
+
     default_values: {,"
   title: ,
       description: ,
       amount: 0}}),
   const handle_submit = (values: MilestoneFormValues) =>: any {
   // TODO: Implement
+}
     on_submit (values),
     form.reset ();
   const handleAddMilestones = (milestones: GeneratedMilestone[]) =>: any {
@@ -201,8 +229,16 @@ if ( {) {
         title: milestone.title,
         description: milestone.description,)
 pr-12325
+
+}
+      const milestone = milestones[0];
+      on_submit ({
+        title: milestone.title,
+
+        description: milestone.description,)
         due_date: milestone.due_date ? new Date (milestone.due_date) : undefined,
         amount: milestone.estimated_hours * 10, // Convert hours to a default payment amount;
+
       });
       return;
     }
@@ -211,8 +247,11 @@ pr-12325
       on_submit ({
         title: milestone.title,
         description: milestone.description,
+
+        description: milestone.description,)
         due_date: milestone.due_date ? new Date (milestone.due_date) : undefined,
         amount: milestone.estimated_hours * 10, // Convert hours to a default payment amount;
+
       });
     });
   }
@@ -221,6 +260,12 @@ pr-12325
     on_submit ({
       title: milestone.title,
       description: milestone.description,
+  // TODO: Implement
+}
+    on_submit ({
+      title: milestone.title,
+
+      description: milestone.description,)
       due_date: milestone.due_date ? new Date (milestone.due_date) : undefined,
       amount: milestone.estimated_hours * 10, // Convert hours to a default payment amount;
     });
@@ -238,6 +283,11 @@ pr-12325
   return (
     <div className="space - y-6">;"
 pr-12325
+  return ('
+    <div className="space - y-6">;"
+</div>
+        <AIMilestoneGenerator;
+
           scope={project_scope}
           start_date={projectStartDate}
           end_date={projectEndDate}
@@ -322,6 +372,12 @@ pr-12325
           onAddMilestone={handleAddMilestone})
         />)}
 
+          onAddMilestone={handleAddMilestone})
+        />)}
+
+</AIMilestoneGenerator>
+      <Form {...form}>;
+</Form>"
         <form on_submit={form.handle_submit (handle_submit)} className="space - y-4">;"
             control={form.control}"
             name="title";"
@@ -396,6 +452,13 @@ pr-12325
                       placeholder="0.00";"
 
 
+                      {...field}
+                    />;
+</Input>
+                  </FormControl>;
+                  <FormMessage />;
+
+</FormMessage>
           </div>;"
           <div className="flex justify-end space-x-2 pt-4">;"
                 type="button"""
@@ -412,6 +475,10 @@ pr-12325
               ) : (;"
                 "Add Milestone";")
 
+              )}
+                </FormItem>)}
+
+          </div>;"
           <div className="flex justify - end space - x-2 pt - 4">;"
                 type="button";""
                 variant="outline";"
@@ -430,3 +497,4 @@ pr-12325
         </form>;
     </div>);"
 pr-12325
+

@@ -1,6 +1,8 @@
 import { Resume } from "@/types/resume";
 import {
+
 import { Resume } from "@/types/resume";"
+
 import {
   // TODO: Implement
 }
@@ -9,6 +11,7 @@ pr-12325
   ResumeBasicInfoSection,
   WorkExperienceSection,
   EducationSection,
+
   SkillsSection,
   CertificationsSection,
 } from "./preview";
@@ -29,6 +32,19 @@ interface PreviewResumeProps {;
   resume: Resume;
   onBack: () => void;import { Resume } from "@/types/resume";
 import {
+  CertificationsSection,"
+} from "./preview";"
+interface PreviewResumeProps {
+  // TODO: Implement
+}
+  resume: Resume;,
+  onBack: () => void;
+}
+"
+import { Resume } from "@/types/resume";"
+import {
+  // TODO: Implement
+}
   PreviewHeader,
   ResumeBasicInfoSection,
   WorkExperienceSection,
@@ -39,6 +55,12 @@ import {
 
 interface PreviewResumeProps {
   resume: Resume;
+  CertificationsSection,"
+} from "./preview";"
+interface PreviewResumeProps {
+  // TODO: Implement
+}
+  resume: Resume;,
   onBack: () => void;
 }
 
@@ -92,6 +114,8 @@ export function PreviewResume({ resume, onBack }: PreviewResumeProps) {
 </div>
       <PreviewHeader resume={resume} onBack={onBack} />
       <div className="bg-white text-black p-8 rounded-lg shadow-lg print-section">"
+</div>
+
         <ResumeBasicInfoSection basicInfo={resume.basic_info} />
 
         <WorkExperienceSection workExperience={resume.work_experience} />
@@ -105,3 +129,10 @@ export function PreviewResume({ resume, onBack }: PreviewResumeProps) {
     </div>;)
  </div> </div>) "
 pr-12325
+</CertificationsSection>
+      </div>
+    </div>
+
+    </div>;)
+ </div> </div>) "
+

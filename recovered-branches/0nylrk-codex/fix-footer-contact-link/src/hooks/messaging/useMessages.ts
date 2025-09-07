@@ -15,6 +15,7 @@ type UserWithProfile = UserProfile | UserDetails | null;
   set_conversations: (updater: (prev: Conversation[]) => Conversation[]) => void;
   setUnreadCount: (updater: (prev: number) => number) => void;
 
+
 import { UserProfile, UserDetails  } from '@/types/auth';
 import { supabase  } from '@/integrations/supabase/client';
 import { Message, Conversation  } from '@/types/messaging';
@@ -30,6 +31,7 @@ type UserWithProfile = UserProfile | UserDetails | null;
  */
 export function useMessages(
   user: UserWithProfile;,
+
   active_conversation: Conversation | null;
   active_messages: Message[];,)
   setActiveMessages: (updater: (prev: Message[]) => Message[]) => void;,
@@ -50,6 +52,13 @@ pr-12325
       }
     } catch (error) {
       console && console.error('Error fetching messages:', error)
+  setIsLoading: (loading: boolean) => void;
+      if (unreadMessages && unreadMessages.length > 0) {}
+        await markAsRead(conversationId)}
+      }
+
+    } catch (error) {'
+      console && console.error('Error fetching messages:', error)'
   fetch_conversations: () => Promise < void>) {
   /**;
   * Fetch messages for a conversation;
@@ -88,6 +97,12 @@ pr-12325
 import { supabase } from '@/integrations/supabase/client',;
 import { Message, Conversation } from '@/types/messaging',;
 import { toast } from '@/hooks/use-toast',;
+        await markAsRead(conversationId)'
+import { UserProfile, UserDetails } from '@/types/auth',;''
+import { supabase } from '@/integrations/supabase/client',;''
+import { Message, Conversation } from '@/types/messaging',;''
+import { toast } from '@/hooks/use-toast',;'
+
 // Allow either UserProfile or UserDetails;
 type UserWithProfile = UserProfile | UserDetails | null,;
 /**;
@@ -102,11 +117,13 @@ export function useMessages(;
   activeConversation: Conversation | null,;
   activeMessages: Message[],;)
 pr-12325
+  activeMessages: Message[],;)
   setActiveMessages: (updater: (prev: Message[]) => Message[]) => void,;
   conversations: Conversation[],;
   setConversations: (updater: (prev: Conversation[]) => Conversation[]) => void,;
   setUnreadCount: (updater: (prev: number) => number) => void,;
   setIsLoading: (loading: boolean) => void,;
+
   fetchConversations: () => Promise<void>;
 ) {;
   /**;
@@ -278,3 +295,5 @@ if (throw error) {
   fetchConversations:() => Promise<void>;
 fetchConversations: () => Promise<void>) {
 pr-12325
+</void>'
+

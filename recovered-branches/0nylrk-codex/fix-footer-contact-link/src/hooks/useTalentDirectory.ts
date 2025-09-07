@@ -13,6 +13,7 @@ export function useTalentDirectory() {
     isLoading,
     
     // Search and filter state
+
 import { useAuthStatus } from "./talent/useAuthStatus",""
 import { useTalentData } from "./talent/useTalentData",""
 import { useFilterTalents } from "./talent/useFilterTalents";""
@@ -102,6 +103,7 @@ pr-12325
   // Manage UI state;
   // TODO: Implement
 pr-12325
+}
     isMobileFilterOpen,
     setIsMobileFilterOpen,
     isHireModalOpen,
@@ -109,14 +111,53 @@ pr-12325
     selectedTalent,
     setSelectedTalent,
     expandedSections,
+    toggleSection;
+  } = useUIState(),
+
+  return {
+  // TODO: Implement
+}
+    // Talents and loading state;
+    talents,
+    filteredTalents,
+    isLoading,
+    
+    // Search and filter state;
+    searchTerm,
+
+    setSearchTerm,
+    selectedSkills,
+    selectedAvailability,
+    selectedRegions,
+    priceRange,
+    setPriceRange,
+    experienceRange,
+    setExperienceRange,
+    sortOption,
+    setSortOption,
+
+    
+    // UI state;
+    isMobileFilterOpen,
+
+    setIsMobileFilterOpen,
+    isHireModalOpen,
+    setIsHireModalOpen,
+    selectedTalent,
+    setSelectedTalent,
+    expandedSections,
+
     
     // Auth and user state
+    // Auth and user state;
     isAuthenticated,
     userDetails,
     savedTalents,
     
 
     // Actions
+
+    // Actions;
     toggleSkill;
     toggleAvailability;
     toggleRegion;
@@ -148,23 +189,26 @@ import { useUIState } from "./talent/useUIState",;
     toggleSkill;
     toggleAvailability;
     toggleRegion;
+    handleToggleSave;
+    expanded_sections;'
 import { useAuthStatus } from "./talent/useAuthStatus",;""
 import { useTalentData } from "./talent/useTalentData",;""
 import { useFilterTalents } from "./talent/useFilterTalents",;""
 import { useUIState } from "./talent/useUIState",;"
 pr-12325
+
 export function useTalentDirectory() {;
   // Fetch auth status and saved talents;
   const {;
     isAuthenticated,;
     userDetails,;
-    savedTalents,;
-    handleToggleSave;
+    savedTalents,;}
+    handleToggleSave;}
   } = useAuthStatus(),;
   // Fetch talent data;
   const {;
-    talents,;
-    isLoading;
+    talents,;}
+    isLoading;}
   } = useTalentData(),;
   // Apply filters and sorting;
   const {;
@@ -188,8 +232,8 @@ pr-12325
     setSortOption,;
     toggleSkill,;
     toggleAvailability,;
-    toggleRegion,;
-    clearFilters;
+    toggleRegion,;}
+    clearFilters;}
   } = useFilterTalents(talents),;
   // Manage UI state;
   const {;
@@ -202,8 +246,8 @@ pr-12325
     setIsHireModalOpen,;
     selectedTalent,;
     setSelectedTalent,;
-    expandedSections,;
-    toggleSection;
+    expandedSections,;}
+    toggleSection;}
   } = useUIState(),;
   return {;
     // Talents and loading state;
@@ -245,6 +289,11 @@ pr-12325
 }
 ;
 
+    toggleSection;}
+    handleToggleSave;}
+  }
+}
+;
   }
 }
 ;
@@ -281,3 +330,9 @@ pr-12325
 ;
 "
 pr-12325
+
+  }
+}
+;
+"
+

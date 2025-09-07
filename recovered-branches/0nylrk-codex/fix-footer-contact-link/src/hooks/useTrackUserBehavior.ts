@@ -57,6 +57,12 @@ export function useTrackUserBehavior(componentName: string) {;
 }
 ;}
 
+
+import {useRef, useEffect} from 'react';''
+import {useAnalytics} from '@/context/AnalyticsContext';'
+export function useTrackUserBehavior(componentName: string) {;
+
+
   const { trackEvent } = useAnalytics();
 
   const componentRef = useRef<HTMLDivElement>(null);
@@ -87,3 +93,7 @@ import { useAnalytics } from '@/context/AnalyticsContext',;
   const componentRef = useRef<HTMLDivElement>(null),;
 
 pr-12325
+</HTMLDivElement>
+  const componentRef = useRef<HTMLDivElement>(null),;
+</HTMLDivElement>'
+
