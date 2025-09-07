@@ -5,7 +5,7 @@ import { Input } from '@/components/ui/input';
 >>>>>>> cursor/automate-test-improve-and-merge-code-6d57
 import { Button } from '@/components/ui/button';
 import { useToast } from '@/hooks/use-toast';
-import { Loader2 } from 'lucide-react'
+import { Loader2 } from 'lucide-react';
 import {logErrorToProduction} from '@/utils/productionLogger';
 export function FooterNewsletter(): React.ReactElement {
 <<<<<<< HEAD
@@ -22,8 +22,11 @@ const lastSubmit = useRef(0;
   }
   return; // ignore bots;
 
-const now = Date.now()if (now - lastSubmit.current < 1000);
-  return;
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (honeypot) return; // ignore bots
+    const now = Date.now();
+    if (now - lastSubmit.current < 1000) return;
     lastSubmit.current = now;
 
     const trimmedEmail = email.trim();
@@ -35,7 +38,7 @@ const now = Date.now()if (now - lastSubmit.current < 1000);
     }
 
     setIsSubmitting(true);
-    const uniqueToastIdBase = `newsletter-toast-${Date.now()}`, // Generate a base for unique ID
+    const uniqueToastIdBase = `newsletter-toast-${Date.now()}`; // Generate a base for unique ID
 
     try {
       const res = await fetch('/api/newsletter', {
@@ -44,7 +47,7 @@ const now = Date.now()if (now - lastSubmit.current < 1000);
         body: JSON.stringify({ email: trimmedEmail })
       });
 
-      const data = await res.json().catch(() => ({})), // Ensure data is an object even on parse error
+      const data = await res.json().catch(() => ({})); // Ensure data is an object even on parse error
 
       if (res.ok) {
 =======
@@ -68,8 +71,7 @@ const now = Date.now()if (now - lastSubmit.current < 1000);
         setEmail('');
         // setEmailError(''), // Already cleared if regex passed
       } else {
-<<<<<<< HEAD
-        logErrorToProduction('Newsletter subscription failed:', { data: data }),
+        logErrorToProduction('Newsletter subscription failed:', { data: data });
         // Use a more specific error message if available from API, otherwise generic
         const errorMessage = data.error || 'Subscription failed. Please try again.';
         toast.error(errorMessage, { id: `${uniqueToastIdBase}-api-error` })
@@ -81,7 +83,7 @@ const now = Date.now()if (now - lastSubmit.current < 1000);
 >>>>>>> cursor/automate-test-improve-and-merge-code-6d57
       }
     } catch (err: any) {
-      logErrorToProduction('Newsletter subscription error:', { data: err }),
+      logErrorToProduction('Newsletter subscription error:', { data: err });
       toast.error('Unable to subscribe right now. Please try again later.', { id: `${uniqueToastIdBase}-catch-error` })
     } finally {
       setIsSubmitting(false)
@@ -93,8 +95,8 @@ const now = Date.now()if (now - lastSubmit.current < 1000);
   },
 >>>>>>> cursor/automate-test-improve-and-merge-code-6d57
   return (
-    <form,
-  id="footer-newsletter-form"
+    <form
+      id="footer-newsletter-form"
       aria-label="Newsletter sign-up"
       onSubmit={handleSubmit}
       className="flex flex-col space-y-3 sm:flex-row sm:space-y-0 sm:space-x-2"
@@ -102,8 +104,8 @@ const now = Date.now()if (now - lastSubmit.current < 1000);
       <label htmlFor="newsletter-email" className="sr-only">
         Email address for newsletter subscription
       </label>
-      <Input,
-  type="email"
+      <Input
+        type="email"
         id="newsletter-email"
         name="newsletterEmail"
         placeholder="Enter your email"

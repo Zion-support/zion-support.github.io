@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-import { ArrowUp } from 'lucide-react'
+import { ArrowUp } from 'lucide-react';
 import { useEffect, useState } from "react";
 
 export function BackToTopButton() {
@@ -23,19 +22,18 @@ import { useEffect, useState } from 'react';
 =======
 >>>>>>> cursor/automate-test-improve-and-merge-code-6d57
   const scrollToTop = () => {
-    const opts: ScrollToOptions = { top: 0, behavior: "smooth" },
+    const opts: ScrollToOptions = { top: 0, behavior: 'smooth' };
     window.scrollTo(opts);
     document.documentElement.scrollTo(opts);
-    document.body.scrollTo(opts)
-<<<<<<< HEAD
+    document.body.scrollTo(opts);
   };
 
 =======
   },
 >>>>>>> cursor/automate-test-improve-and-merge-code-6d57
   return (
-    <button,
-  aria-label="Back to top"
+    <button
+      aria-label="Back to top"
       onClick={scrollToTop}
       className={`fixed bottom-6 right-6 z-[60] rounded-full bg-primary text-primary-foreground p-2 shadow transition-opacity md:bottom-8 md:right-8 ${
 <<<<<<< HEAD
@@ -44,7 +42,7 @@ import { useEffect, useState } from 'react';
     >
       <ArrowUp className="h-5 w-5" />
     </button>
-  )
+  );
 }
 =======
         visible ? "opacity-100" : "opacity-0 pointer-events-none",
