@@ -47,11 +47,6 @@ a {
 }
 
 @layer utilities {
-  .text-shadow {
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  .focus-visible:focus {
+    @apply outline-none ring-2 ring-blue-500 ring-offset-2;
   }
-
-  .cta-buttons {
-    @apply flex flex-col sm:flex-row gap-4 justify-center;
-  }
-}

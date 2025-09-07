@@ -1,7 +1,3 @@
-<<<<<<< HEAD:pages/jobs/new.tsx
-import React from 'react';
-import Head from 'next/head';
-=======
 
 import { useState  } from 'react';
 import EnhancedCard from '../../components/ui/EnhancedCard',
@@ -40,9 +36,7 @@ export default function NewJobPage() {
       notify('Job posted! Invite talent to get responses.success')
     }, 800)
   },
->>>>>>> b1bd2160a740f8569656e96922b453e70de0f5db:pages.disabled/jobs/new.tsx
 
-export default function New() {
   return (
 <<<<<<< HEAD:pages/jobs/new.tsx
     <>
@@ -85,4 +79,3 @@ export default function New() {
     </div>
 );
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> b1bd2160a740f8569656e96922b453e70de0f5db:pages.disabled/jobs/new.tsx

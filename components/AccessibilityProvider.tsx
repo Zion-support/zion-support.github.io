@@ -1,3 +1,43 @@
+<<<<<<< HEAD
+
+}
+const AccessibilityContext = createContext<
+  AccessibilityContextType | undefined
+>(undefined);
+=======
+<<<<<<< HEAD
+import React, { createContext, useContext, ReactNode } from 'react';
+
+interface AccessibilityContextType {
+  announceToScreenReader: (message: string) => void;
+  setFocus: (elementId: string) => void;
+  highContrast: boolean;
+  largeText: boolean;
+  reducedMotion: boolean;
+  toggleHighContrast: () => void;
+  toggleLargeText: () => void;
+  toggleReducedMotion: () => void;
+}
+
+>>>>>>> origin/chore/fix-lint-and-merge
+interface AccessibilityProviderProps {
+  children: ReactNode;
+=======
+'use client';
+
+import React, { createContext, useContext, useEffect, useState } from 'react';
+
+interface AccessibilityContextType {
+  highContrast: boolean;
+  reducedMotion: boolean;
+  fontSize: 'small' | 'medium' | 'large';
+  toggleHighContrast: () => void;
+  toggleReducedMotion: () => void;
+  setFontSize: (size: 'small' | 'medium' | 'large') => void;
+>>>>>>> 88842f44d25f20f54aaa266432fdcc276bc7a834
+}
+
+<<<<<<< HEAD
 import React, { createContext, useContext, useState } from 'react'
 interface AccessibilityContextType {
   highContrast: boolean
@@ -106,3 +146,9 @@ export default function AccessibilityProvider({ children }: AccessibilityProvide
     </AccessibilityContext.Provider>
   );
 }
+  );
+=======
+  );
+}
+>>>>>>> 88842f44d25f20f54aaa266432fdcc276bc7a834
+>>>>>>> origin/chore/fix-lint-and-merge

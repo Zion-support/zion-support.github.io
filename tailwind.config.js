@@ -1,10 +1,18 @@
+<<<<<<< HEAD
+/** @type {import('tailwindcss).Config} */
+module.exports = {
+  content: [
+
+=======
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
     './app/**/*.{js,ts,jsx,tsx,mdx}',
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
+    './app/**/*.{js,ts,jsx,tsx,mdx}',
     './src/**/*.{js,ts,jsx,tsx,mdx}',
+>>>>>>> origin/chore/fix-lint-and-merge
   ],
   theme: {
     extend: {
@@ -130,6 +138,18 @@ module.exports = {
             'background-position': 'right center',
           },
         },
+        float: {
+          '0%, 100%': { transform: 'translateY(0px)' },
+          '50%': { transform: 'translateY(-20px)' },
+        },
+        wiggle: {
+          '0%, 100%': { transform: 'rotate(-3deg)' },
+          '50%': { transform: 'rotate(3deg)' },
+        },
+        glow: {
+          '0%': { boxShadow: '0 0 5px rgba(59, 130, 246, 0.5)' },
+          '100%': { boxShadow: '0 0 20px rgba(59, 130, 246, 0.8)' },
+        },
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
@@ -161,3 +181,4 @@ module.exports = {
     require('tailwindcss-animate'),
   ],
 };
+>>>>>>> origin/chore/fix-lint-and-merge

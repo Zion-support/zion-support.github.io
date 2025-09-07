@@ -89,6 +89,8 @@ function findFilesWithConflicts(dir) {
     } catch (error) {
       // Skip directories that can't be read
 function findConflictedFiles(dir) {
+      // Skip directories that can't be read,
+  function findConflictedFiles(dir) {
   const conflictedFiles = [];
   function scanDirectory(currentDir) {
     const files = fs.readdirSync(currentDir);
@@ -169,3 +171,8 @@ console.log('🎯 Merge conflict resolution completed!');
   console.error('Error during merge conflict resolution:', error.message);
   process.exit(1);
 }
+}
+=======
+
+console.log('🎯 Merge conflict resolution completed!');
+>>>>>>> origin/chore/fix-lint-and-merge

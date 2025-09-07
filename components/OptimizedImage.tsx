@@ -1,3 +1,14 @@
+<<<<<<< HEAD
+
+import React from "react";
+import Image from "next/image";
+interface OptimizedImageProps {
+  sr: c: string,
+  al: string,
+  widt: number,
+  heigh: number,
+  className?: string,
+  priority?: boolean,
 import React from 'react'
 import Image from 'next/image'
 interface OptimizedImageProps {
@@ -29,6 +40,26 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
       priority={priority}
       quality={quality}
     />
-  )
-}
-export default OptimizedImage
+  );
+};
+export default OptimizedImage;
+<<<<<<< HEAD
+
+
+return (
+    <Image,
+  src={src}
+      alt={alt}
+      width={width}
+      height={height}
+=======
+  src, alt,
+  width, height,
+  className = '', priority = false,
+  quality = 75, placeholder = 'empty',
+  blurDataURL, sizes,
+  fill = false, style,
+  onClick, onLoad,
+  onError
+}) => {
+>>>>>>> origin/chore/fix-lint-and-merge

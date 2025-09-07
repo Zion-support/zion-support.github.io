@@ -15,6 +15,10 @@ const customJestConfig = {
     '<rootDir>/components/**/*.test.{js,jsx,ts,tsx}',
     '<rootDir>/pages/**/*.test.{js,jsx,ts,tsx}',
   ],
+  moduleNameMapper: {
+    '^@/(.*)$': '<rootDir>/$1',
+    '\\.(css|less|scss|sass)$': 'identity-obj-proxy'
+  },
   collectCoverageFrom: [
     'app/**/*.{js,jsx,ts,tsx}',
     'components/**/*.{js,jsx,ts,tsx}',

@@ -1,5 +1,42 @@
+import React from 'react';
+<<<<<<< HEAD
+import Image from 'next/image';
+
+import React from 'react';
+
+
+interface OptimizedImageProps {;
+  src: string, alt: string,;
+
+  );
+};
+
+export default OptimizedImage;
+      quality={quality}
+      style={style}
+
+  );
+};
+
+export default OptimizedImage;
+import Image from 'next / image';
+;
+
 import React from \"react\";"
 import Image from \"next/image\";
+
+export default OptimizedImage;
+      quality={quality}
+      style={style}
+
+  );
+}
+
+export default OptimizedImage;
+
+import Image from next / image';
+
+
 
 interface OptimizedImageProps {
   src: string, alt: string,
@@ -59,17 +96,6 @@ if ( {) {}
 =======
   return (
     <Image
-=======
-  src,
-  alt,
-  width,
-  height,
-  className = "",
-  priority = false,
-  quality = 75,
-  sizes = "100vw",
-}) => {
->>>>>>> cursor/automate-test-improve-and-merge-code-6d57
       src={src}
 =======
   priority?: boolean;
@@ -100,3 +126,24 @@ export default OptimizedImage;
 
 export default OptimizedImage;
 "
+export default OptimizedImage;
+'
+export default OptimizedImage;
+      sizes={sizes}
+      quality={quality}
+    />
+  );
+}
+
+
+
+export default OptimizedImage;
+
+  )
+}
+export default OptimizedImage;
+"
+export default OptimizedImage;
+=======
+export default OptimizedImage;
+>>>>>>> origin/chore/fix-lint-and-merge

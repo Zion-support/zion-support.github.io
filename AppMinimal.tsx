@@ -17,10 +17,28 @@ const AppMinimal: React.FC<AppMinimalProps> = ({
     >
       {children || (
         <div className="minimal-content">
-          <h1>Zion Tech Group - Minimal</h1>
-          <p>Building the future with innovative technology solutions</p>
+          <h1>Minimal App</h1>
+          <p>This is a minimal React component for testing purposes.</p>
         </div>
       )}
     </main>
   );
+};
+
+export default AppMinimal;
 }
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+export default function AppMinimal(): React.JSX.Element {
+  return (
+    <main>
+      <h1>Zion Tech Group - Minimal App</h1>
+      <p>Building the future with innovative technology solutions</p>
+<<<<<<< HEAD
+    </main>)
+
+=======
+    </main>
+  );
+}
+>>>>>>> origin/chore/fix-lint-and-merge

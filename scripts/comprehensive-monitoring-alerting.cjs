@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
 
 
     log('info', `CPU "usage": ${monitoringReport.metrics.cpu}%`);
@@ -45,11 +52,11 @@
 main();
 
 #!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
-const { execSync } = require('child_process')
-const os = require('os')
-
+<<<<<<< HEAD
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
+const os = require('os');
 // console.log(' Comprehensive Monitoring & Alerting v2.0')
 console.log('')
     const output = execSync('df -h /', { "encoding"})
@@ -95,4 +102,100 @@ console.log('')
     "message"
     "action"
       log('warn', 'Alerts "generated")
+<<<<<<< HEAD
       log('info', 'Monitoring "Recommendations")
+=======
+
+
+
+    log('info', `CPU "usage": ${monitoringReport.metrics.cpu}%`);
+    log('info', `Memory "usage": ${monitoringReport.metrics.memory}%`);
+    log('info', `Disk "usage": ${monitoringReport.metrics.disk}%`);
+    log('info', `Process "count": ${monitoringReport.metrics.processes}`);
+    log('info', `Build "score": ${monitoringReport.metrics.build}/100`);
+    log('info', `Runtime "score": ${monitoringReport.metrics.runtime}/100`);
+    log('info', `Total "alerts": ${monitoringReport.summary.alerts}`);
+    log('info', `Performance "score": ${monitoringReport.summary.performanceScore}/100`);
+    if (alerts.length > 0) {
+
+
+>>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+#!/usr/bin/env node;
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+const fs = require('fs')
+const path = require('path')
+const { execSync } = require('child_process')
+const os = require('os')
+<<<<<<< HEAD
+=======
+
+>>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
+=======
+const fs = require('fs')
+const path = require(path')
+const { execSync } = require('child_process')
+const os = require(os')
+// console.log(' Comprehensive Monitoring & Alerting v2.0)
+console.log(')
+    const output = execSync('df -h /, { "encoding})
+      percentage"
+    const output = execSync(cat /proc/net/dev', { "encoding})
+    const output = execSync('ps aux | wc -l, { encoding"})
+    execSync(npm run build', { "encoding: 'utf8, stdio"})
+      "stdio
+          error"
+      "type
+      level"
+      "type
+      level"
+      "type
+      level"
+      "type
+      level"
+      "type
+      level"
+      "type
+      level"
+      "type
+      level"
+      "priority
+      message"
+      "action
+      priority"
+      "message
+      action"
+      "priority
+      message"
+      "action
+      priority"
+      "message
+      action"
+      "priority
+      message"
+      "action
+    priority"
+    "message
+    action"
+    "priority
+    message"
+    "action
+      log(warn', 'Alerts generated")
+      log(info, 'Monitoring "Recommendations")
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-18b6
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
+      log('info', 'Monitoring "Recommendations")
+>>>>>>> cursor/integrate-build-improve-and-re-verify-f954
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge

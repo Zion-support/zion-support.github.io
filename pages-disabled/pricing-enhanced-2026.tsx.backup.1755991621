@@ -278,15 +278,10 @@ export default function PricingEnhanced2026Page() {
               Enhanced 2026 Pricing
 >>>>>>> b1bd2160a740f8569656e96922b453e70de0f5db:pages-disabled/pricing-enhanced-2026.tsx.backup.1755991621
             </h1>
-            <p className="text-xl text-gray-600">
-              This is the pricing-enhanced-2026 page.
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Transform your business with our comprehensive collection of innovative AI, quantum computing, and enterprise IT services. 
+              Achieve remarkable ROI with transparent, competitive pricing.
             </p>
-<<<<<<< HEAD:pages/pricing-enhanced-2026.tsx
-          </div>
-        </div>
-      </div>
-    </>
-=======
 
             {/* Billing Cycle Toggle */}
             <div className="flex items-center justify-center space-x-4 mb-8">
@@ -589,6 +584,5 @@ export default function PricingEnhanced2026Page() {
         </div>
       </div>
     </UltraFuturisticBackground>
->>>>>>> b1bd2160a740f8569656e96922b453e70de0f5db:pages-disabled/pricing-enhanced-2026.tsx.backup.1755991621
   );
 }

@@ -114,14 +114,9 @@ const Header: React.FC = () => {
                   href={item.href}
                   className="block px-4 py-2 font-medium text-gray-700 hover:text-blue-600 transition-colors duration-200"
 =======
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
-import {
-  Menu;
-  X;
-} from 'lucide-react';
+    { name: 'Contact'}
+  href: '/contact', icon: Phone}
+}];
 
 const service_categories = [;
   {"name": 'Micro SaaS',"href": '/services / micro - saas',"description": 'Innovative focused software solutions',"popular": ['AI Content Generator', 'Social Media Scheduler', 'Invoice Management', 'Time Tracking'];'
@@ -758,6 +753,101 @@ export default Header;
               Zion Tech Group;
             </Link>;
           </div>;
+          {/* Desktop Navigation */}"
+          <div className=\"hidden md:block\"    />;"
+            <div className=\"ml - 10 flex items - baseline space - x-4\"    />;
+              {navigation.map ((item) => (<Link;}
+                  key={item.name}
+                  href={item.href}"
+                  className=\"text - gray - 700 hover: text - blue - 600 px - 3 py - 2 rounded - md text - sm font - medium transition - colors\"    />
+
+                  {item.name}
+                </Link>)
+}
+            </div>;
+          </div>;
+          {/* Mobile menu button */}"
+          <div className=\"md:hidden\"    />;
+            <button              on_click={() =    /> setIsMenuOpen (!isMenuOpen)}"
+              className=\"text - gray - 700 hover: text - blue - 600 p - 2\">
+"
+              {isMenuOpen ? <X className=\"h - 6 w - 6\"    /> : <Menu className=\"h - 6 w - 6\" /}
+}
+            </button    />;
+          </div>;
+        </div>;
+        {/* Mobile Navigation */}
+        <AnimatePresence    />;
+          {isMenuOpen && (<motion.div;}
+              initial={{ opacity: 0, height: 0 }
+}
+              animate={{ opacity: 1, height: 'auto' }
+}
+              exit={{ opacity: 0, height: 0 }
+}"
+              className=\"md:hidden\"    />
+"
+              <div className=\"px - 2 pt - 2 pb - 3 space - y-1 sm:px - 3 bg - white border - t\"    />;
+                {navigation.map ((item) => (<Link;}
+                    key={item.name}
+                    href={item.href}"
+                    className=\'text - gray - 700 hover:text - blue - 600 block px - 3 py - 2 rounded - md text - base font - medium\';
+                    on_click={() =    /> setIsMenuOpen (false)}
+                  >;
+                    {item.name}
+                  </Link>))}
+              </div>;
+            </motion.div>)}
+        </AnimatePresence>;
+      </nav>;
+    </header>)}
+            </div>;
+            <span className=&quot;text-xl font-bold bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent&quot    />
+
+              Zion Tech Group;
+            </span>;
+          </a>;
+    </header>)
+};
+
+
+export default Header;
+import React, { useState, useEffect } from 'react'; import Link from 'next / link'; import { use_router } from 'next / router'; import { motion, AnimatePresence } from 'framer-motion'; import { Menu, X, Home, Users, Briefcase, Phone, Mail, ChevronDown, Brain, Shield, Cloud, Database, Network, Zap, Target, DollarSign, BookOpen, Calendar, FileText, Award, Globe, Search, ArrowRight } from 'lucide-react'; import { Button } from '../ui / Button'; import { Badge } from '../ui / Badge';
+
+const Header: React.FC = () => {;}
+  const [is_scrolled, setIsScrolled] = useState (false); useEffect (() => { const handle_scroll = () =>: any { setIsScrolled (window.scroll_y > 0)} window.addEventListener ('scroll', handle_scroll); return () => window.removeEventListener ('scroll', handle_scroll)}, []);
+
+const navigation_items = [   { name: 'Home'}
+  href: '/'}
+},
+   { name: 'Services'}
+  href: '/services'}
+},
+   { name: 'Solutions'}
+  href: '/solutions'}
+},
+   { name: 'About'}
+  href: '/about'}
+},
+   { name: 'Careers'}
+  href: '/careers'}
+},
+ { name: 'Contact'}
+  href: '/contact'}"
+} ]; return ( <header className = \"sticky top - 0 z - 50 bg - slate - 900 / 95 backdrop - blur border - b border - slate - 800\"    /> <div className=\"max - w-7xl mx - auto px - 4 sm: px - 6 lg:px - 8 h - 14 flex items - center justify - between\"    /> <Link href=\"/\" className=\"text - white font - bold\"    />Zion Tech Group</Link> <nav className=\"hidden md:flex items - center gap - 6 text - sm\"    /> {navigation_items.map ((item) => ( <Link key={item.name} href={item.href} className=\"text - gray - 300 hover:text - white\"    /> {item.name} </Link> )
+} </nav> </div> </header> ;
+}
+
+export default Header;
+
+export default Header;
+;
+            </div>
+            <span className=&quot;text-xl font-bold bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent&quot;    />
+              Zion Tech Group;
+            </span>
+          </a>
+
           {/* Desktop Navigation */}
           <nav className=&quot;hidden md:flex items-center space-x-8&quot />
 
@@ -1048,14 +1138,16 @@ export default Header;
           </div>
         )}
       </nav>
-=======
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
->>>>>>> ecc7d9f9794e0ded6a8fec40c9673b04874eb1ff
+>>>>>>> origin/chore/fix-lint-and-merge
     </header>
   );
+};
+
+<<<<<<< HEAD
+export default Header;
+=======
+
+export default Header;
 }
 export default Header;
 import React,{ useState,useEffect } from 'react'; import Link from 'next/link'; import { useRouter } from 'next/router'; import { motion,AnimatePresence } from 'framer-motion'; import { Menu,X,Home,Users,Briefcase,Phone,Mail,ChevronDown,Brain,Shield,Cloud,Database,Network,Zap,Target,DollarSign,BookOpen,Calendar,FileText,Award,Globe,Search,ArrowRight } from 'lucide-react'; import { Button } from '../ui/Button'; import { Badge } from '../ui/Badge'; const Header: React.FC = () => { const [isScrolled,setIsScrolled] = useState(false); useEffect(() => { const handleScroll = () => { setIsScrolled(window.scrollY > 0)}; window.addEventListener('scroll',handleScroll); return () => window.removeEventListener('scroll',handleScroll)},[]); const navigationItems = [ { name: 'Home',href: '/' },{ name: 'Services',href: '/services' },{ name: 'Solutions',href: '/solutions' },{ name: 'About',href: '/about' },{ name: 'Careers',href: '/careers' },{ name: 'Contact',href: '/contact' },]; return ( <header className="sticky top-0 z-50 bg-slate-900/95 backdrop-blur border-b border-slate-800"> <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-14 flex items-center justify-between"> <Link href="/" className="text-white font-bold">Zion Tech Group</Link> <nav className="hidden md:flex items-center gap-6 text-sm"> {navigationItems.map((item) => ( <Link key={item.name} href={item.href} className="text-gray-300 hover:text-white"> {item.name} </Link> ))} </nav> </div> </header> )} export default Header;
@@ -1084,3 +1176,4 @@ export default Header;
 
 export default Header;
 "
+>>>>>>> origin/chore/fix-lint-and-merge

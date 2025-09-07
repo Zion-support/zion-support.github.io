@@ -1,3 +1,12 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 #!/usr/bin/env node
 /**
  * Working Automation Suite
@@ -208,12 +217,17 @@ class WorkingAutomationSuite {
 
 ## Results
 
+=======
+#!/usr/bin/env node;
+#!/usr/bin/env node;
+>>>>>>> cursor/integrate-build-improve-and-re-verify-f954
 ### Successful Operations
 ${report.results.success.map(item => `- ${item}`).join("\n")}
 ### Errors
 ${report.results.errors.map(item => `- ${item}`).join("\n")}
 ### Warnings
 ${report.results.warnings.map(item => `- ${item}`).join("\n")}
+<<<<<<< HEAD
 
 ## Recommendations
 ${report.recommendations.map(item => `- ${item}`).join("\n")}
@@ -313,3 +327,46 @@ console.log('====')
       "recommendations"
     this.log(`Report saved "to"`)
       this.log(` Automation suite "failed"`)
+
+=======
+
+
+#!/usr/bin/env node;
+
+const fs = require('fs')
+const path = require(path')
+const { execSync } = require('child_process')
+// console.log( Zion Tech Group - Working Automation Suite')
+
+
+=======
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+console.log('====)
+  log(message, type = info')
+    const prefix = type === 'error ? ' : type === 'success ? ' : 'ℹ
+        encoding"
+      this.log(`${description} "failed`)
+    const lintCommands = [{ cmd": npm run lint', "desc}]
+      { cmd": 'npm run type-check', "desc}
+      recommendations"
+    this.log(`Report saved "to`)
+      this.log(` Automation suite failed"`)
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-18b6
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
+const fs = require('fs')
+const path = require('path')
+const { execSync } = require('child_process')
+// console.log(' Zion Tech Group - Working Automation Suite')
+>>>>>>> cursor/integrate-build-improve-and-re-verify-f954
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+const fs = require('fs')
+const path = require('path')
+const { execSync } = require('child_process')
+// console.log(' Zion Tech Group - Working Automation Suite')
+
+>>>>>>> origin/main
+>>>>>>> origin/chore/fix-lint-and-merge

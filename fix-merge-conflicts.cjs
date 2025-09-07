@@ -1,5 +1,20 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
+
+#!/usr/bin/env node
+
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+const fs = require('fs');
+<<<<<<< HEAD
+=======
 #!/usr/bin/env node,
   const fs = require('fs');
+>>>>>>> cursor/integrate-build-improve-and-re-verify-f954
 const path = require('path');
 const { execSync } = require('child_process');
 function fixMergeConflicts(filePath) {
@@ -146,4 +161,114 @@ class MergeConflictFixer {
       process.exit(1);
     });
 }
+<<<<<<< HEAD
+
 module.exports = MergeConflictFixer;
+=======
+
+console.log('🔧 Fixing merge conflicts in TypeScript files...');
+
+const filesToFix = [
+  'lib/integrations/connectors.ts',
+  'lib/integrations/registry.ts', 
+  'lib/integrations/types.ts',
+  'src/data/enhancedServices.ts',
+  'types/disputes.ts',
+  'vite.config.ts'
+];
+=======
+
+function findFilesWithConflicts(dir) {
+  const files = [];
+  
+  function traverse(currentDir) {
+    const items = fs.readdirSync(currentDir);
+    
+    for (const item of items) {
+      const fullPath = path.join(currentDir, item);
+      const stat = fs.statSync(fullPath);
+      
+      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+        traverse(fullPath);
+      } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js'))) {
+        const content = fs.readFileSync(fullPath, 'utf8');
+        if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>>')) {
+          files.push(fullPath);
+        }
+      }
+    }
+  }
+  
+  traverse(dir);
+  return files;
+}
+>>>>>>> origin/chore/fix-lint-and-merge
+
+function fixMergeConflicts(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    
+<<<<<<< HEAD
+    // Remove merge conflict markers and keep the HEAD version
+    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
+    content = content.replace(/<<<<<<< HEAD[\s\S]*?>>>>>>> [^\n]+/g, '');
+    content = content.replace(/=======[\s\S]*?>>>>>>> [^\n]+/g, '');
+=======
+const path = require(path');
+
+    content = content.replace(/
+>>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
+    
+    // Clean up any remaining merge conflict markers
+    content = content.replace(/
+    
+    // Remove empty lines and clean up syntax
+    content = content.replace(/\n\s*\n\s*\n/g, '\n\n);
+    content = content.replace(/;\s*;/g, ;');
+    content = content.replace(/,\s*,/g, ',);
+    
+    // Fix common syntax issues
+    content = content.replace(/export type DisputeStatus = Open' \| 'Under Review \| Resolved',/g, "export type DisputeStatus = 'Open | Under Review' | 'Resolved;);
+    content = content.replace(/export type DisputeReason =;/g, export type DisputeReason = Scope Disagreement' | 'Quality Issues | Delivery Delay' | 'Payment Issue | Communication Breakdown' | 'Other;");
+=======
+    // Remove all merge conflict markers and keep only the HEAD version
+    content = content.replace(/<<<<<<< HEAD\n?/g, '');
+    content = content.replace(/=======.*?\n?/g, '');
+    content = content.replace(/>>>>>>> [^\n]+\n?/g, '');
+    
+    // Clean up any remaining artifacts
+    content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
+    content = content.replace(/^\s*\n/g, '');
+>>>>>>> origin/chore/fix-lint-and-merge
+    
+    // Write the cleaned content back
+    fs.writeFileSync(filePath, content);
+    console.log(`Fixed: ${filePath}`);
+    return true;
+  } catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message);
+    return false;
+  }
+}
+
+// Find all files with merge conflicts
+const conflictedFiles = findFilesWithConflicts('./app');
+
+<<<<<<< HEAD
+console.log(🎉 Merge conflict fixing completed!');
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+=======
+module.exports = MergeConflictFixer;
+>>>>>>> cursor/integrate-build-improve-and-re-verify-f954
+=======
+console.log(`Found ${conflictedFiles.length} files with merge conflicts`);
+
+let fixedCount = 0;
+for (const file of conflictedFiles) {
+  if (fixMergeConflicts(file)) {
+    fixedCount++;
+  }
+}
+
+console.log(`Fixed ${fixedCount} out of ${conflictedFiles.length} files`);
+>>>>>>> origin/chore/fix-lint-and-merge
