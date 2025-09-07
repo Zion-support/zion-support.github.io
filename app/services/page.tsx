@@ -1,9 +1,9 @@
 import Link from "next/link";
 export const metadata = {
-  title: "Services | Zion Tech Group",
+  title: "Services | Zion Tech Group"
   description:
-    "Comprehensive AI,micro SaaS,and IT services to help your business scale and succeed.",
-};
+    "Comprehensive AI,micro SaaS,and IT services to help your business scale and succeed."
+}
 export default function ServicesOverviewPage() {
   return (
     <div className="animate-fade-in">
@@ -26,9 +26,9 @@ export default function ServicesOverviewPage() {
           title="Micro SaaS"
           description="End-to-end product development with billing,auth,and analytics"
           bullets={[
-            "Foundational architecture",
-            "Billing + subscriptions",
-            "Growth analytics",
+            "Foundational architecture"
+            "Billing + subscriptions"
+            "Growth analytics"
           ]}
           icon="🚀"
         />{" "}
@@ -52,11 +52,11 @@ export default function ServicesOverviewPage() {
   );
 }
 function ServiceCard({
-  href,
-  title,
-  description,
-  bullets,
-  icon,
+  href
+  title
+  description
+  bullets
+  icon
 }: {
   href: string;
   title: string;

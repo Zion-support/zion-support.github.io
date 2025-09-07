@@ -1,34 +1,45 @@
 
+<<<<<<< HEAD
+import {
+  Carousel;
+  CarouselContent;
+  CarouselItem;
+  CarouselNext;
+  CarouselPrevious} from "@/components/ui/carousel",
+import { Card, CardContent } from "@/components/ui/card",
+import { Avatar } from "@/components/ui/avatar";
+import { Quote } from "lucide-react";
+const testimonials = null;
+=======
 import {Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious} from "@/components/ui/carousel";
 import {Card, CardContent} from "@/components/ui/card";
 import {Avatar} from "@/components/ui/avatar";
 import {Quote} from "lucide-react";
 const testimonials = [
   {
-    quote: "Zion has revolutionized how we source AI talent. We found three machine learning specialists within just one week!",
-    author: "Sarah Chen",
+    quote: "Zion has revolutionized how we source AI talent. We found three machine learning specialists within just one week!"
+    author: "Sarah Chen"
     role: "CTO, DataMind Solutions";
-    avatar: "https://i.pravatar.cc/150?img=32",
-    company: "DataMind"},
+    avatar: "https://i.pravatar.cc/150?img=32"
+    company: "DataMind"}
   {
-    quote: "The IT equipment rentals saved us thousands compared to buying outright. Their 24/7 support is unmatched in the industry.",
-    author: "Michael Rodriguez",
+    quote: "The IT equipment rentals saved us thousands compared to buying outright. Their 24/7 support is unmatched in the industry."
+    author: "Michael Rodriguez"
     role: "IT Director, GlobalTech";
-    avatar: "https://i.pravatar.cc/150?img=12",
-    company: "GlobalTech"},
+    avatar: "https://i.pravatar.cc/150?img=12"
+    company: "GlobalTech"}
   {
     quote: "As an AI developer, Zion has become my primary platform for showcasing work and finding new clients. The free publishing is a game-changer.";
-    author: "Aanya Patel",
-    role: "Independent AI Consultant",
-    avatar: "https://i.pravatar.cc/150?img=28",
-    company: "AI Systems"},
+    author: "Aanya Patel"
+    role: "Independent AI Consultant"
+    avatar: "https://i.pravatar.cc/150?img=28"
+    company: "AI Systems"}
   {
-    quote: "Their green IT recycling program helped us meet our sustainability goals while upgrading our server infrastructure.",
-    author: "Thomas Klein",
+    quote: "Their green IT recycling program helped us meet our sustainability goals while upgrading our server infrastructure."
+    author: "Thomas Klein"
     role: "Operations Manager, EcoTech Systems";
-    avatar: "https://i.pravatar.cc/150?img=67",
-    company: "EcoTech"}],
-
+    avatar: "https://i.pravatar.cc/150?img=67"
+    company: "EcoTech"}]
 export function TestimonialCarousel() {
   return (
     <section className="py-20 bg-zion-blue-dark">
@@ -39,11 +50,11 @@ export function TestimonialCarousel() {
             Discover how Zion is transforming the tech and AI marketplace ecosystem
           </p>
         </div>
-        
         <div className="max-w-5xl mx-auto px-8">
           <Carousel
             opts={{
-              align: "start",
+              align: "start"
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
               loop: true}}
             className="w-full"
           >
@@ -80,4 +91,3 @@ export function TestimonialCarousel() {
     </section>
   )
 }
-;

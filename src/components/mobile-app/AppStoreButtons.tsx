@@ -1,6 +1,7 @@
 
-import React from "react";
-import { Apple, GithubIcon } from 'lucide-react'import { cn } from "@/lib/utils";
+import React from "react",
+import { Apple, GithubIcon } from 'lucide-react'
+import { cn } from "@/lib/utils";
 import { logInfo } from '@/utils/productionLogger';
 interface AppStoreButtonsProps {
   className?: string;
@@ -9,33 +10,36 @@ interface AppStoreButtonsProps {
   onAppStoreClick?: () => void;
   onGooglePlayClick?: () => void
 }
+<<<<<<< HEAD
 
 export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({ 
   className;
-  appStoreUrl = "#";
-  googlePlayUrl = "#";
-};  className,
-  appStoreUrl = "#",
-  googlePlayUrl = "#",
-  onAppStoreClick,
+  appStoreUrl;
+=======
+export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({
+  className
+  appStoreUrl = "#"
+  googlePlayUrl = "#"
+};  className
+  appStoreUrl = "#"
+  googlePlayUrl = "#"
+  onAppStoreClick
   onGooglePlayClick
 },) => {
   const handleAppStoreClick = (e: React.MouseEvent<HTMLAnchorElement>,) => {
-    if (!appStoreUrl || appStoreUrl === "#") {
-      e.preventDefault(),
-      logInfo("App Store download clicked"),
+    if (!appStoreUrl |appStoreUrl === "#") {
+      e.preventDefault()
+      logInfo("App Store download clicked")
       onAppStoreClick?.()
     }
-  },
-
+  }
   const handleGooglePlayClick = (e: React.MouseEvent<HTMLAnchorElement>,) => {
-    if (!googlePlayUrl || googlePlayUrl === "#") {
-      e.preventDefault(),
-      logInfo("Google Play download clicked"),
+    if (!googlePlayUrl |googlePlayUrl === "#") {
+      e.preventDefault()
+      logInfo("Google Play download clicked")
       onGooglePlayClick?.()
     }
-  },
-
+  }
   return (
     <div className={cn("flex flex-col sm:flex-row gap-4", className)}>
       <a
@@ -52,7 +56,6 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({
           <div className="text-xl font-semibold">App Store</div>
         </div>
       </a>
-
       <a
         href = {googlePlayUrl,}
         className="flex items-center bg-black text-white rounded-lg px-4 py-2 hover:bg-gray-900 transition-colors"
@@ -80,5 +83,5 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({
       </a>
     </div>
   )
-},
-;
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

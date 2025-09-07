@@ -7,62 +7,93 @@ export interface FilterSidebarProps {
   selectedAvailability: string[];
   toggleAvailability: (availability: string) => void;
   selectedRegions: string[];
-  toggleRegion: (region: string) => void,
+<<<<<<< HEAD
+  toggleRegion: (region: string) => void;
+  priceRange: [number, number],
+=======
+  toggleRegion: (region: string) => void
   priceRange: [number, number];
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   setPriceRange: (range: [number, number]) => void;
-  experienceRange: [number, number];
+  experienceRange: [number, number],
   setExperienceRange: (range: [number, number]) => void;
   expandedSections: {
     skills: boolean;
     availability: boolean;
     region: boolean;
-    experience: boolean,
+<<<<<<< HEAD
+    experience: boolean;
     price: boolean
-  };
+  },
   toggleSection: (sectionName: string) => void;
   sortOption: string;
   setSortOption: (option: string) => void;
-  clearFilters: () => void,
+  clearFilters: () => void;
+=======
+    experience: boolean
+    price: boolean
+  }
+  toggleSection: (sectionName: string) => void;
+  sortOption: string;
+  setSortOption: (option: string) => void;
+  clearFilters: () => void
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   isMobileFilterOpen?: boolean
 }
-
 export interface FilterComponentProps {
   expanded: boolean;
-  toggleSection: () => void,
+<<<<<<< HEAD
+  toggleSection: () => void;
+=======
+  toggleSection: () => void
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   isMobileFilterOpen?: boolean
 }
-
 export interface SkillsFilterProps extends FilterComponentProps {
-  selectedSkills: string[],
+<<<<<<< HEAD
+  selectedSkills: string[];
+=======
+  selectedSkills: string[]
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   toggleSkill: (skill: string) => void
 }
-
 export interface AvailabilityFilterProps extends FilterComponentProps {
-  selectedAvailability: string[],
+<<<<<<< HEAD
+  selectedAvailability: string[];
+=======
+  selectedAvailability: string[]
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   toggleAvailability: (availability: string) => void
 }
-
 export interface RegionFilterProps extends FilterComponentProps {
-  selectedRegions: string[],
+<<<<<<< HEAD
+  selectedRegions: string[];
+=======
+  selectedRegions: string[]
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   toggleRegion: (region: string) => void
 }
-
 export interface ExperienceFilterProps extends FilterComponentProps {
   experienceRange: [number, number];
   setExperienceRange: (range: [number, number]) => void
 }
-
 export interface PriceFilterProps extends FilterComponentProps {
   priceRange: [number, number];
   setPriceRange: (range: [number, number]) => void
 }
-
 export interface SearchFilterProps {
-  searchTerm: string,
+<<<<<<< HEAD
+  searchTerm: string;
+=======
+  searchTerm: string
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   setSearchTerm: (term: string) => void
 }
-
 export interface SortFilterProps {
-  sortOption: string,
+<<<<<<< HEAD
+  sortOption: string;
+=======
+  sortOption: string
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   setSortOption: (option: string) => void
 }

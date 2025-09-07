@@ -1,23 +1,24 @@
-import { useState } from 'react';
-import { Button } from '@/components/ui/button';
-import { Facebook } from 'lucide-react';
+import { useState  } from 'react';
+import { Button  } from '@/components/ui/button';
+import { Facebook } from 'lucide-react'
+<<<<<<< HEAD
 import { signIn } from 'next-auth/react';
-
-type Provider = 'google' | 'github' | 'facebook' | 'credentials';
+type Provider = any;
+=======
+import { signIn } from 'next-auth/react'
+type Provider = 'google' | 'github' | 'facebook' | 'credentials'
 interface AuthButtonsProps {
-  providers?: Provider[];
-
+  providers?: Provider[]
 export function AuthButtons({
-  providers = ['google', 'github', 'facebook', 'credentials'],
+  providers = ['google', 'github', 'facebook', 'credentials']
 }: AuthButtonsProps) {
-  const [loadingProvider, setLoadingProvider] = useState<string | null>(null);
-
+  const [loadingProvider, setLoadingProvider] = useState<string | null>(null)
   const handleSignIn = async (provider: Provider) => {
-    setLoadingProvider(provider);
-    await signIn(provider);
-  };
-  const gridCols = `grid-cols-${providers.length}`;
-
+    setLoadingProvider(provider)
+    await signIn(provider)
+  }
+  const gridCols = `grid-cols-${providers.length}`
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   return (
     <div className={`mt-6 grid ${gridCols} gap-3`}>
       {providers.includes('google') && (
@@ -108,6 +109,5 @@ export function AuthButtons({
         </Button>
       )}
     </div>
-  );
+  )
 }
-;

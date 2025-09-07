@@ -1,5 +1,20 @@
-};
+<<<<<<< HEAD
+import fs from 'fs',
+import path from 'path';
+import type { GetStaticProps } from 'next';
+interface AuditReport {
+  generatedAt?: string;
+  metadata?: any;
+  vulnerabilities?: any;
+  error?: string;
+  raw?: string
+}
+
+type Props = any;
+=======
+}
 </pre> </div>)
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 export default function SecurityAudit({ report }: Props) {
   return (
     <div className="space-y-4">

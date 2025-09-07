@@ -1,40 +1,42 @@
 import React from "react";
-import { ServiceLandingTemplate } from "../components/services/ServiceLandingTemplate";
-import { Bot, Users, TrendingUp, Star } from 'lucide-react';
+import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate";
+import { Bot, Users, TrendingUp } from 'lucide-react'
+
 export default function AITalentMatchingPage() {
+<<<<<<< HEAD
+  const benefits = null;
+=======
   const benefits = [
     {
-      icon: Bot,
-      title: "AI-Powered Matching",
+      icon: Bot
+      title: "AI-Powered Matching"
       description: "Advanced algorithms match the right talent with the right opportunities"
-    },
+    }
     {
-      icon: Users,
-      title: "Verified Professionals",
+      icon: Users
+      title: "Verified Professionals"
       description: "All candidates are pre-screened and verified for quality"
-    },
+    }
     {
-      icon: TrendingUp,
-      title: "Success Tracking",
+      icon: TrendingUp
+      title: "Success Tracking"
       description: "Monitor performance and success rates of placements"
     }
-  ];
-
+  ]
   const features = [
-    "Machine learning-based candidate matching",
-    "Comprehensive skill assessment tools",
-    "Real-time market analysis",
-    "Automated interview scheduling",
-    "Performance analytics dashboard",
+    "Machine learning-based candidate matching"
+    "Comprehensive skill assessment tools"
+    "Real-time market analysis"
+    "Automated interview scheduling"
+    "Performance analytics dashboard"
     "Custom matching criteria"
-  ];
-
+  ]
   const stats = [
-    { label: "Successful Placements", value: "95%" },
-    { label: "Client Satisfaction", value: "98%" },
+    { label: "Successful Placements", value: "95%" }
+    { label: "Client Satisfaction", value: "98%" }
     { label: "Time to Hire", value: "50% faster" }
-  ];
-
+  ]
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   return (
     <ServiceLandingTemplate
       title="AI Talent Matching"
@@ -46,5 +48,5 @@ export default function AITalentMatchingPage() {
       ctaText="Start Matching Talent"
       ctaLink="/contact"
     />
-);
+  )
 }

@@ -1,28 +1,38 @@
-import React from 'react';
+import React from 'react',
 import Link from 'next/link';
-import { MessageSquare } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,;
-} from '@/components/ui/tooltip';
-import { Button } from '@/components/ui/button';
+import { MessageSquare } from 'lucide-react'
+<<<<<<< HEAD
+import { Button  } from '@/components/ui/button';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
+=======
+import { Button } from '@/components/ui/button'
+import {
+  Tooltip
+  TooltipContent
+  TooltipProvider
+  TooltipTrigger
+} from '@/components/ui/tooltip'
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip'
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 interface EmptyStateProps {
   title: string;
   subtitle: string;
   cta: string;
   href: string;
-  hasSession: boolean;
+  hasSession: boolean
+<<<<<<< HEAD
+}
 
+const EmptyState: React.FC<EmptyStateProps> = ({ title, subtitle, cta, href, hasSession }) => {
+  return (
+    <div className;
+=======
 const EmptyState: React.FC<EmptyStateProps> = ({
-  title,
-  subtitle,
-  cta,
-  href,
-  hasSession,
+  title
+  subtitle
+  cta
+  href
+  hasSession
 }) => {  return (
     <div className='text-center py-16'>
       <div className='bg-zion-blue/30 p-6 rounded-full mb-6 inline-flex'>
@@ -46,6 +56,7 @@ const EmptyState: React.FC<EmptyStateProps> = ({
         </Tooltip>
       </TooltipProvider>
     </div>
-);
-};
-export default EmptyState;
+  )
+}
+export default EmptyState
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

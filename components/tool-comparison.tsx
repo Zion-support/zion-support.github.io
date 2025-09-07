@@ -1,27 +1,35 @@
-import React from 'react';
-import Head from 'next/head';
+import React from 'react',
+import Head from 'next/head',
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
+<<<<<<< HEAD
+import { Search;
+  Filter;
+  TrendingUp;
+  DollarSign;
+  Users;
+=======
 import {
-  Search,
-  Filter,
-  TrendingUp,
-  DollarSign,
-  Users,
-  Star,
-  Check,
-  X,
-  ArrowRight,
-  ExternalLink,
-  Zap,
-  Brain,
-  Globe,
-  Rocket,;} from 'lucide-react';import { 
+  Search
+  Filter
+  TrendingUp
+  DollarSign
+  Users
+  Star
+  Check
+  X
+  ArrowRight
+  ExternalLink
+  Zap
+  Brain
+  Globe
+  Rocket;} from 'lucide-react';import {
   Search;
-  Filter, 
-  TrendingUp, 
-  DollarSign, 
-  Users, 
+  Filter
+  TrendingUp
+  DollarSign
+  Users
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   Star;
   Check;
   X;
@@ -31,259 +39,261 @@ import {
   Brain;
   Globe;
   Rocket
-
+<<<<<<< HEAD
+ } from 'lucide-react';
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 export default function ToolComparisonPage() {
   const [searchTerm, setSearchTerm] = React.useState('');
   const [selectedCategory, setSelectedCategory] = React.useState('All');
   const [sortBy, setSortBy] = React.useState('rating');
-
+<<<<<<< HEAD
+  const allTools = null;
+=======
   const allTools = [
     // AI Tools
     {
-      name: 'ChatGPT',
-      category: 'AI Assistant',
-      pricing: 'Free - $20/month',
-      rating: 4.8,
-      users: '100M+',
-      bestFor: 'Content creators, developers, researchers',
+      name: 'ChatGPT'
+      category: 'AI Assistant'
+      pricing: 'Free - $20/month'
+      rating: 4.8
+      users: '100M+'
+      bestFor: 'Content creators, developers, researchers'
       pros: [
-        'Powerful capabilities',
-        'Easy to use',
-        'Regular updates',
-        'Good free tier',
-      ],
-      cons: ['Sometimes inaccurate', 'Limited context', 'Privacy concerns'],
-      website: 'https://chat.openai.com',
-      icon: <Brain className='w-6 h-6' />,
-      color: 'text-green-400',
-    },    {      bestFor: 'Content creators, developers, researchers';
-      pros: ['Powerful capabilitiesEasy to useRegular updatesGood free tier'],
-      cons: ['Sometimes inaccurateLimited contextPrivacy concerns'],
-      website: 'https://chat.openai.com',
-      icon: <Brain className="w-6 h-6" />,
+        'Powerful capabilities'
+        'Easy to use'
+        'Regular updates'
+        'Good free tier'
+      ]
+      cons: ['Sometimes inaccurate', 'Limited context', 'Privacy concerns']
+      website: 'https://chat.openai.com'
+      icon: <Brain className='w-6 h-6' />
       color: 'text-green-400'
-    };
+    },    {      bestFor: 'Content creators, developers, researchers';
+      pros: ['Powerful capabilitiesEasy to useRegular updatesGood free tier']
+      cons: ['Sometimes inaccurateLimited contextPrivacy concerns']
+      website: 'https://chat.openai.com'
+      icon: <Brain className="w-6 h-6" />
+      color: 'text-green-400'
+    }
     {
-      name: 'Midjourney',
-      category: 'AI Art',
-      pricing: '$10 - $30/month',
-      rating: 4.7,
-      users: '1M+',
-      bestFor: 'Designers, marketers, content creators',
+      name: 'Midjourney'
+      category: 'AI Art'
+      pricing: '$10 - $30/month'
+      rating: 4.7
+      users: '1M+'
+      bestFor: 'Designers, marketers, content creators'
       pros: [
-        'High-quality output',
-        'Creative control',
-        'Commercial rights',
-        'Active community',
-      ],
+        'High-quality output'
+        'Creative control'
+        'Commercial rights'
+        'Active community'
+      ]
       cons: [
-        'Discord-only interface',
-        'Limited customization',
-        'Monthly subscription',
-      ],
-      website: 'https://midjourney.com',
-      icon: <Zap className='w-6 h-6' />,
-      color: 'text-purple-400',
-    },    {      bestFor: 'Designers, marketers, content creators';
-      pros: ['High-quality outputCreative controlCommercial rightsActive community'],
-      cons: ['Discord-only interfaceLimited customizationMonthly subscription'],
-      website: 'https://midjourney.com',
-      icon: <Zap className="w-6 h-6" />,
+        'Discord-only interface'
+        'Limited customization'
+        'Monthly subscription'
+      ]
+      website: 'https://midjourney.com'
+      icon: <Zap className='w-6 h-6' />
       color: 'text-purple-400'
-    };
+    },    {      bestFor: 'Designers, marketers, content creators';
+      pros: ['High-quality outputCreative controlCommercial rightsActive community']
+      cons: ['Discord-only interfaceLimited customizationMonthly subscription']
+      website: 'https://midjourney.com'
+      icon: <Zap className="w-6 h-6" />
+      color: 'text-purple-400'
+    }
     {
-      name: 'Jasper',
-      category: 'AI Writing',
-      pricing: '$39 - $125/month',
-      rating: 4.6,
-      users: '100K+',
-      bestFor: 'Marketing teams, content creators, businesses',
+      name: 'Jasper'
+      category: 'AI Writing'
+      pricing: '$39 - $125/month'
+      rating: 4.6
+      users: '100K+'
+      bestFor: 'Marketing teams, content creators, businesses'
       pros: [
-        'Specialized for marketing',
-        'Brand voice training',
-        'SEO optimization',
-        'Team features',
-      ],
-      cons: ['Expensive', 'Limited free trial', 'Can be repetitive'],
-      website: 'https://jasper.ai',
-      icon: <Brain className='w-6 h-6' />,
-      color: 'text-blue-400',
-    },    // SaaS Tools      bestFor: 'Marketing teams, content creators, businesses';
-      pros: ['Specialized for marketingBrand voice trainingSEO optimizationTeam features'],
-      cons: ['ExpensiveLimited free trialCan be repetitive'],
-      website: 'https://jasper.ai',
-      icon: <Brain className="w-6 h-6" />,
+        'Specialized for marketing'
+        'Brand voice training'
+        'SEO optimization'
+        'Team features'
+      ]
+      cons: ['Expensive', 'Limited free trial', 'Can be repetitive']
+      website: 'https://jasper.ai'
+      icon: <Brain className='w-6 h-6' />
       color: 'text-blue-400'
-    };
+    },    // SaaS Tools      bestFor: 'Marketing teams, content creators, businesses';
+      pros: ['Specialized for marketingBrand voice trainingSEO optimizationTeam features']
+      cons: ['ExpensiveLimited free trialCan be repetitive']
+      website: 'https://jasper.ai'
+      icon: <Brain className="w-6 h-6" />
+      color: 'text-blue-400'
+    }
     // SaaS Tools
     {
-      name: 'Zapier',
-      category: 'Automation',
-      pricing: 'Free - $19.99/month',
-      rating: 4.8,
-      users: '2M+',
-      bestFor: 'Businesses looking to automate workflows',
+      name: 'Zapier'
+      category: 'Automation'
+      pricing: 'Free - $19.99/month'
+      rating: 4.8
+      users: '2M+'
+      bestFor: 'Businesses looking to automate workflows'
       pros: [
-        'Easy to use',
-        'Extensive integrations',
-        'Reliable',
-        'Great support',
-      ],
-      cons: ['Can get expensive', 'Limited customization'],
-      website: 'https://zapier.com',
-      icon: <Zap className='w-6 h-6' />,
-      color: 'text-orange-400',
-    },    {      pros: ['Easy to useExtensive integrationsReliableGreat support'],
-      cons: ['Can get expensiveLimited customization'],
-      website: 'https://zapier.com',
-      icon: <Zap className="w-6 h-6" />,
+        'Easy to use'
+        'Extensive integrations'
+        'Reliable'
+        'Great support'
+      ]
+      cons: ['Can get expensive', 'Limited customization']
+      website: 'https://zapier.com'
+      icon: <Zap className='w-6 h-6' />
       color: 'text-orange-400'
-    };
-      name: 'Notion',
-      category: 'Productivity',
-      pricing: 'Free - $8/month',
-      rating: 4.7,
-      users: '20M+',
-      bestFor: 'Teams that need flexible workspace',
+    },    {      pros: ['Easy to useExtensive integrationsReliableGreat support']
+      cons: ['Can get expensiveLimited customization']
+      website: 'https://zapier.com'
+      icon: <Zap className="w-6 h-6" />
+      color: 'text-orange-400'
+    }
+      name: 'Notion'
+      category: 'Productivity'
+      pricing: 'Free - $8/month'
+      rating: 4.7
+      users: '20M+'
+      bestFor: 'Teams that need flexible workspace'
       pros: [
-        'Highly flexible',
-        'Beautiful interface',
-        'Great templates',
-        'Free tier',
-      ],
-      cons: ['Learning curve', 'Limited offline access', 'Can be overwhelming'],
-      website: 'https://notion.so',
-      icon: <Globe className='w-6 h-6' />,
-      color: 'text-gray-400',
-    },    {      pros: ['Highly flexibleBeautiful interfaceGreat templatesFree tier'],
-      cons: ['Learning curveLimited offline accessCan be overwhelming'],
-      website: 'https://notion.so',
-      icon: <Globe className="w-6 h-6" />,
+        'Highly flexible'
+        'Beautiful interface'
+        'Great templates'
+        'Free tier'
+      ]
+      cons: ['Learning curve', 'Limited offline access', 'Can be overwhelming']
+      website: 'https://notion.so'
+      icon: <Globe className='w-6 h-6' />
       color: 'text-gray-400'
-    };
-      name: 'Stripe',
-      category: 'Payments',
-      pricing: '2.9% + 30¢ per transaction',
-      rating: 4.9,
-      users: '1M+',
-      bestFor: 'Online businesses, SaaS companies, e-commerce',
+    },    {      pros: ['Highly flexibleBeautiful interfaceGreat templatesFree tier']
+      cons: ['Learning curveLimited offline accessCan be overwhelming']
+      website: 'https://notion.so'
+      icon: <Globe className="w-6 h-6" />
+      color: 'text-gray-400'
+    }
+      name: 'Stripe'
+      category: 'Payments'
+      pricing: '2.9% + 30¢ per transaction'
+      rating: 4.9
+      users: '1M+'
+      bestFor: 'Online businesses, SaaS companies, e-commerce'
       pros: [
-        'Developer-friendly',
-        'Global reach',
-        'Excellent docs',
-        'Reliable',
-      ],
+        'Developer-friendly'
+        'Global reach'
+        'Excellent docs'
+        'Reliable'
+      ]
       cons: [
-        'Higher fees than some alternatives',
-        'Complex for beginners',
-        'Strict requirements',
-      ],
-      website: 'https://stripe.com',
-      icon: <DollarSign className='w-6 h-6' />,
-      color: 'text-blue-400',
-    },    // Startup Tools      bestFor: 'Online businesses, SaaS companies, e-commerce';
-      pros: ['Developer-friendlyGlobal reachExcellent docsReliable'],
-      cons: ['Higher fees than some alternativesComplex for beginnersStrict requirements'],
-      website: 'https://stripe.com',
-      icon: <DollarSign className="w-6 h-6" />,
+        'Higher fees than some alternatives'
+        'Complex for beginners'
+        'Strict requirements'
+      ]
+      website: 'https://stripe.com'
+      icon: <DollarSign className='w-6 h-6' />
       color: 'text-blue-400'
-    };
+    },    // Startup Tools      bestFor: 'Online businesses, SaaS companies, e-commerce';
+      pros: ['Developer-friendlyGlobal reachExcellent docsReliable']
+      cons: ['Higher fees than some alternativesComplex for beginnersStrict requirements']
+      website: 'https://stripe.com'
+      icon: <DollarSign className="w-6 h-6" />
+      color: 'text-blue-400'
+    }
     // Startup Tools
     {
-      name: 'HubSpot',
-      category: 'Marketing & Sales',
-      pricing: 'Free - $45/month',
-      rating: 4.7,
-      users: '135K+',
-      bestFor: 'B2B startups, SaaS companies, marketing teams',
+      name: 'HubSpot'
+      category: 'Marketing & Sales'
+      pricing: 'Free - $45/month'
+      rating: 4.7
+      users: '135K+'
+      bestFor: 'B2B startups, SaaS companies, marketing teams'
       pros: [
-        'Free tier',
-        'All-in-one solution',
-        'Great for beginners',
-        'Excellent support',
-      ],
+        'Free tier'
+        'All-in-one solution'
+        'Great for beginners'
+        'Excellent support'
+      ]
       cons: [
-        'Can get expensive',
-        'Complex for small teams',
-        'Limited customization',
-      ],
-      website: 'https://hubspot.com',
-      icon: <TrendingUp className='w-6 h-6' />,
-      color: 'text-orange-400',
-    },    {      bestFor: 'B2B startups, SaaS companies, marketing teams';
-      pros: ['Free tierAll-in-one solutionGreat for beginnersExcellent support'],
-      cons: ['Can get expensiveComplex for small teamsLimited customization'],
-      website: 'https://hubspot.com',
-      icon: <TrendingUp className="w-6 h-6" />,
+        'Can get expensive'
+        'Complex for small teams'
+        'Limited customization'
+      ]
+      website: 'https://hubspot.com'
+      icon: <TrendingUp className='w-6 h-6' />
       color: 'text-orange-400'
-    };
+    },    {      bestFor: 'B2B startups, SaaS companies, marketing teams';
+      pros: ['Free tierAll-in-one solutionGreat for beginnersExcellent support']
+      cons: ['Can get expensiveComplex for small teamsLimited customization']
+      website: 'https://hubspot.com'
+      icon: <TrendingUp className="w-6 h-6" />
+      color: 'text-orange-400'
+    }
     {
-      name: 'Mailchimp',
-      category: 'Email Marketing',
-      pricing: 'Free - $59/month',
-      rating: 4.5,
-      users: '12M+',
-      bestFor: 'E-commerce, content creators, small businesses',
-      pros: ['Free tier', 'Easy to use', 'Good templates', 'Affordable'],
-      cons: ['Limited free features', 'Basic automation', 'Can be expensive'],
-      website: 'https://mailchimp.com',
-      icon: <Users className='w-6 h-6' />,
-      color: 'text-yellow-400',
-    },    {      bestFor: 'E-commerce, content creators, small businesses';
-      pros: ['Free tierEasy to useGood templatesAffordable'],
-      cons: ['Limited free featuresBasic automationCan be expensive'],
-      website: 'https://mailchimp.com',
-      icon: <Users className="w-6 h-6" />,
+      name: 'Mailchimp'
+      category: 'Email Marketing'
+      pricing: 'Free - $59/month'
+      rating: 4.5
+      users: '12M+'
+      bestFor: 'E-commerce, content creators, small businesses'
+      pros: ['Free tier', 'Easy to use', 'Good templates', 'Affordable']
+      cons: ['Limited free features', 'Basic automation', 'Can be expensive']
+      website: 'https://mailchimp.com'
+      icon: <Users className='w-6 h-6' />
       color: 'text-yellow-400'
-    };
+    },    {      bestFor: 'E-commerce, content creators, small businesses';
+      pros: ['Free tierEasy to useGood templatesAffordable']
+      cons: ['Limited free featuresBasic automationCan be expensive']
+      website: 'https://mailchimp.com'
+      icon: <Users className="w-6 h-6" />
+      color: 'text-yellow-400'
+    }
     {
-      name: 'Calendly',
-      category: 'Productivity',
-      pricing: 'Free - $12/month',
-      rating: 4.8,
-      users: '10M+',
-      bestFor: 'Sales teams, consultants, remote teams',
+      name: 'Calendly'
+      category: 'Productivity'
+      pricing: 'Free - $12/month'
+      rating: 4.8
+      users: '10M+'
+      bestFor: 'Sales teams, consultants, remote teams'
       pros: [
-        'Free tier',
-        'Easy integration',
-        'Professional appearance',
-        'Time-saving',
-      ],
+        'Free tier'
+        'Easy integration'
+        'Professional appearance'
+        'Time-saving'
+      ]
       cons: [
-        'Limited free features',
-        'Basic customization',
-        'Can be expensive',
-      ],
-      icon: <Globe className='w-6 h-6' />,
-      color: 'text-blue-400',
-    },
+        'Limited free features'
+        'Basic customization'
+        'Can be expensive'
+      ]
+      icon: <Globe className='w-6 h-6' />
+      color: 'text-blue-400'
+    }
   ];
-
   const categories = [
-    'All',
-    'AI Assistant',
-    'AI Art',
-    'AI Writing',
-    'Automation',
-    'Productivity',
-    'Payments',
-    'Marketing & Sales',
-    'Email Marketing',
+    'All'
+    'AI Assistant'
+    'AI Art'
+    'AI Writing'
+    'Automation'
+    'Productivity'
+    'Payments'
+    'Marketing & Sales'
+    'Email Marketing'
   ];
-
   const filteredTools = allTools.filter(tool => {
     const matchesSearch =
-      tool.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      tool.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      tool.name.toLowerCase().includes(searchTerm.toLowerCase()) |
+      tool.category.toLowerCase().includes(searchTerm.toLowerCase()) |
       tool.bestFor.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesCategory =
-      selectedCategory === 'All' || tool.category === selectedCategory;
-    return matchesSearch && matchesCategory;  });    const matchesSearch = tool.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         tool.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      selectedCategory === 'All' |tool.category === selectedCategory;
+    return matchesSearch && matchesCategory;  });    const matchesSearch = tool.name.toLowerCase().includes(searchTerm.toLowerCase()) |
+                         tool.category.toLowerCase().includes(searchTerm.toLowerCase()) |
                          tool.bestFor.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesCategory = selectedCategory === 'All' || tool.category === selectedCategory;
+    const matchesCategory = selectedCategory === 'All' |tool.category === selectedCategory;
     return matchesSearch && matchesCategory
-
   const sortedTools = [...filteredTools].sort((a, b) => {
     switch (sortBy) {
       case 'rating':
@@ -301,13 +311,12 @@ export default function ToolComparisonPage() {
         return a.name.localeCompare(b.name);
       default: return 0
   });
-
   const getPricingColor = (pricing: string) => {
     if (pricing.includes('Free')) return 'text-green-400';
     if (pricing.includes('$')) return 'text-blue-400';
     return 'text-gray-400';  };    return 'text-gray-400'
-  };
-
+  }
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   return (
     <>
       <Head>
@@ -322,7 +331,6 @@ export default function ToolComparisonPage() {
           content='Comprehensive comparison of SaaS tools and AI services to help you make informed decisions.'
         />
         <meta name='twitter:card' content='summary_large_image' />
-
       {/* Hero Section */}
       <section className='relative min-h-screen flex items-center justify-center overflow-hidden bg-black'>
         <div className='absolute inset-0'>
@@ -330,9 +338,7 @@ export default function ToolComparisonPage() {
           <div className='absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(34,197,94,0.08),transparent_50%)]' />
           <div className='absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(168,85,247,0.06),transparent_50%)]' />
         </div>
-
         <div className='absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.1)_1px,transparent_1px)] bg-[size:50px_50px] opacity-20' />
-
         <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
           <div className='mb-20 animate-fade-in'>
             <div className='mb-8'>
@@ -341,7 +347,6 @@ export default function ToolComparisonPage() {
                 Smart Tool Selection
               </div>
             </div>
-
             <h1 className='text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-8 text-white leading-tight tracking-tight'>
               Tool Comparison
             </h1>
@@ -350,7 +355,6 @@ export default function ToolComparisonPage() {
               informed decisions with our comprehensive analysis and expert
               insights.
             </p>
-
             <div className='flex flex-col sm:flex-row gap-6 justify-center items-center mb-20'>
               <Button
                 href='#comparison'
@@ -374,7 +378,6 @@ export default function ToolComparisonPage() {
               </Button>
             </div>
           </div>
-
           {/* Stats */}
           <div
             className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto animate-fade-in'
@@ -427,7 +430,6 @@ export default function ToolComparisonPage() {
           </div>
         </div>
       </section>
-
       {/* Filters and Search */}
       <section className='py-16 bg-gray-900'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -442,7 +444,6 @@ export default function ToolComparisonPage() {
                 onChange={e => setSearchTerm(e.target.value)}
                 className='w-full pl-10 pr-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent'              />
             </div>
-
             {/* Category Filter */}
             <div className='flex flex-wrap gap-2'>
               {categories.map(category => (                <button            {/* Search */}
@@ -456,7 +457,6 @@ export default function ToolComparisonPage() {
                 className="w-full pl-10 pr-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
               />
             </div>
-
             {/* Category Filter */}
             <div className='flex flex-wrap gap-2'>
               {categories.map(category => (            <div className="flex flex-wrap gap-2">
@@ -474,7 +474,6 @@ export default function ToolComparisonPage() {
                 </button>
               ))}
             </div>
-
             {/* Sort */}
             <div className='flex items-center space-x-2'>
               <Filter className='w-5 h-5 text-gray-400' />
@@ -498,7 +497,6 @@ export default function ToolComparisonPage() {
           </div>
         </div>
       </section>
-
       {/* Comparison Table */}
       <section id='comparison' className='py-24 bg-black'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -510,7 +508,6 @@ export default function ToolComparisonPage() {
               tools for your business needs.
             </p>
           </div>
-
           <div className='overflow-x-auto'>
             <table className='w-full'>
               <thead>
@@ -618,7 +615,6 @@ export default function ToolComparisonPage() {
               </tbody>
             </table>
           </div>
-
           {sortedTools.length === 0 && (
             <div className='text-center py-20'>
               <Search className='w-16 h-16 text-gray-600 mx-auto mb-4' />
@@ -634,7 +630,6 @@ export default function ToolComparisonPage() {
           )}
         </div>
       </section>
-
       {/* Detailed Comparison Cards */}
       <section className='py-24 bg-gray-900'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -646,7 +641,6 @@ export default function ToolComparisonPage() {
               best decision for your business.
             </p>
           </div>
-
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
             {sortedTools.slice(0, 6).map((tool, index) => (
               <Card
@@ -677,14 +671,12 @@ export default function ToolComparisonPage() {
                     </div>
                   </div>
                 </div>
-
                 <div className='mb-4'>
                   <h4 className='text-sm font-semibold text-gray-300 mb-2'>
                     Best For:
                   </h4>
                   <p className='text-sm text-gray-400'>{tool.bestFor}</p>
                 </div>
-
                 <div className='grid grid-cols-1 md:grid-cols-2 gap-4 mb-4'>
                   <div>
                     <h4 className='text-sm font-semibold text-green-400 mb-2 flex items-center'>
@@ -698,7 +690,6 @@ export default function ToolComparisonPage() {
                           className='text-xs text-gray-400 flex items-start'
                         >
                           <span className='w-1 h-1 bg-green-400 rounded-full mr-2 mt-2 flex-shrink-0' />                          {pro}                </div>
-
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                   <div>
                     <h4 className="text-sm font-semibold text-green-400 mb-2 flex items-center">
@@ -737,7 +728,6 @@ export default function ToolComparisonPage() {
                     </ul>
                   </div>
                 </div>
-
                 <div className='flex items-center justify-between'>
                   <span
                     className={`text-sm font-medium ${getPricingColor(tool.pricing)}`}
@@ -767,7 +757,6 @@ export default function ToolComparisonPage() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className='py-24 bg-gradient-to-r from-purple-600 to-purple-700 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />

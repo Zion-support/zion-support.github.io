@@ -1,11 +1,16 @@
 
-import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",
+<<<<<<< HEAD
+import { serve } from "https: //deno.land/std@0.190.0/http/server.ts";
+import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0";
+// Initialize Supabase client
+const supabaseUrl = null;
+=======
+import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0";
 // Initialize Supabase client
 const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
-const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,
+const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!
 const supabase = createClient(supabaseUrl, supabaseServiceKey);
-
 serve(async (req) => {
   // Parse the URL to get the tracking parameters
   const url = new URL(req.url);
@@ -13,12 +18,10 @@ serve(async (req) => {
   const campaignId = url.searchParams.get("cid");
   const userId = url.searchParams.get("uid");
   const redirectUrl = url.searchParams.get("redirect");
-
   // Validate required parameters
-  if (!type || !campaignId || !userId) {
+  if (!type |!campaignId |!userId) {
     return new Response("Missing required parameters", { status: 400 })
   }
-
   try {
     // Update the email campaign record based on event type
     if (type === "open") {
@@ -27,7 +30,6 @@ serve(async (req) => {
         .update({ opened_at: new Date().toISOString() })
         .eq("id", campaignId)
         .eq("user_id", userId);
-
       // Return a 1x1 transparent GIF
       return new Response(
         new Uint8Array([
@@ -37,7 +39,7 @@ serve(async (req) => {
           0x00, 0x02, 0x02, 0x44, 0x01, 0x00, 0x3B]);
         {
           headers: {
-            "Content-Type": "image/gif",
+            "Content-Type": "image/gif"
             "Cache-Control": "no-store, no-cache, must-revalidate, proxy-revalidate";
             "Pragma": "no-cache";
             "Expires": "0"}}
@@ -48,27 +50,24 @@ serve(async (req) => {
         .update({ clicked_at: new Date().toISOString() })
         .eq("id", campaignId)
         .eq("user_id", userId);
-
       // Redirect to the specified URL or default to dashboard
-      const destination = redirectUrl || `${supabaseUrl}/dashboard`;
+      const destination = redirectUrl |`${supabaseUrl}/dashboard`;
       return new Response(null, {
-        status: 302,
+        status: 302
         headers: {
           Location: destination}})
     }
-
     return new Response("Invalid event type", { status: 400 })
   } catch (error) {
     console.error("Error tracking email event:", error);
-    
     // If it was a click event, still try to redirect the user
     if (type === "click" && redirectUrl) {
       return new Response(null, {
-        status: 302,
+        status: 302
         headers: {
           Location: redirectUrl}})
     }
-    
     return new Response("Error processing event", { status: 500 })
   }
 });
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

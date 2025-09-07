@@ -1,6 +1,9 @@
-import type { NextPage } from 'next',;
-import Head from 'next/head',;
-import Link from 'next/link',;
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
+<<<<<<< HEAD
+const LanguageSync: NextPage;
+=======
 const LanguageSync: NextPage = () => {
   return (
     <div>
@@ -20,6 +23,6 @@ const LanguageSync: NextPage = () => {
       </main>
     </div>
   )
-},
-
-export default LanguageSync,;
+}
+export default LanguageSync;
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

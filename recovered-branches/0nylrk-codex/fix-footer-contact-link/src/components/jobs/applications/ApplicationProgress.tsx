@@ -1,17 +1,20 @@
-import { ApplicationStatus } from "@/types/jobs";
-import { Progress } from "@/components/ui/progress";
+
+import { ApplicationStatus } from "@/types/jobs",
+import { Progress } from "@/components/ui/progress",
 import { CheckCircle2, Circle, CircleDot } from "lucide-react";
 import { cn } from "@/lib/utils";
 interface ApplicationProgressProps {
   status: ApplicationStatus;
-  className?: string;
+  className?: string
 }
-
 export function ApplicationProgress({
-  status,
-  className,
+  status
+  className
 }: ApplicationProgressProps) {
   // Define the progress value based on status
+<<<<<<< HEAD
+  const getProgressValue = null;
+=======
   const getProgressValue = () => {
     switch (status) {
       case "new":
@@ -29,14 +32,11 @@ export function ApplicationProgress({
       default:
         return 0;
     }
-  };
-
+  }
   const progressValue = getProgressValue();
-
   return (
     <div className={cn("w-full space-y-2", className)}>
       <Progress value={progressValue} className="h-2" />
-
       <div className="flex justify-between text-xs text-muted-foreground">
         <div className="flex flex-col items-center">
           <StatusIcon status={status} current="new" />
@@ -62,27 +62,25 @@ export function ApplicationProgress({
     </div>
   );
 }
-
 function StatusIcon({
-  status,
-  current,
+  status
+  current
 }: {
   status: ApplicationStatus;
   current: ApplicationStatus;
 }) {
   // Helper to determine if this step is active, completed, or inactive
   const statusRank: Record<ApplicationStatus, number> = {
-    new: 1,
-    viewed: 2,
-    shortlisted: 3,
-    interview: 4,
-    hired: 5,
-    rejected: 5,
-  };
-
+    new: 1
+    viewed: 2
+    shortlisted: 3
+    interview: 4
+    hired: 5
+    rejected: 5
+  }
   const currentRank = statusRank[current];
   const statusRank_ = statusRank[status];
-
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   if (currentRank < statusRank_) {
     // This step is complete
     return <CheckCircle2 className="h-4 w-4 text-green-500" />;
@@ -94,4 +92,3 @@ function StatusIcon({
     return <Circle className="h-4 w-4 text-muted-foreground/50" />;
   }
 }
-;

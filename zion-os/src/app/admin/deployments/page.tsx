@@ -1,30 +1,29 @@
 'use client';
 import { useState, useEffect } from 'react';
 import {
-  Rocket,
-  Clock,
-  CheckCircle,
-  AlertCircle,
-  Play,
-  Eye,
-  Settings,
-  Globe,
-  Activity,
-  Calendar,
-  User,
-  Building2,
-  Shield,
-  TrendingUp,
-  Users,
-  Zap,
-  Sparkles,
-  ArrowRight,
-  RefreshCw,
-  Pause,
-  StopCircle,
-  MapPin,;
+  Rocket
+  Clock
+  CheckCircle
+  AlertCircle
+  Play
+  Eye
+  Settings
+  Globe
+  Activity
+  Calendar
+  User
+  Building2
+  Shield
+  TrendingUp
+  Users
+  Zap
+  Sparkles
+  ArrowRight
+  RefreshCw
+  Pause
+  StopCircle
+  MapPin
 } from 'lucide-react';
-
 interface Deployment {
   id: string;
   instanceName: string;
@@ -39,59 +38,56 @@ interface Deployment {
   subdomain?: string;
   region?: string;
   country?: string;
-
 // Mock data - replace with actual API calls
 const mockDeployments: Deployment[] = [
   {
-    id: 'deploy-001',
-    instanceName: 'Zion Health Network',
-    status: 'completed',
-    createdAt: '2024-01-15T10:30:00Z',
-    updatedAt: '2024-01-15T11:45:00Z',
-    progress: 100,
-    features: ['marketplace', 'zion_gpt', 'kyc_aml', 'dao_voting'],
-    vertical: 'HEALTH',
-    governanceType: 'DAO_FULL',
-    domain: 'health.zion.network',
-    region: 'North America',
-    country: 'United States',
-  },
+    id: 'deploy-001'
+    instanceName: 'Zion Health Network'
+    status: 'completed'
+    createdAt: '2024-01-15T10:30:00Z'
+    updatedAt: '2024-01-15T11:45:00Z'
+    progress: 100
+    features: ['marketplace', 'zion_gpt', 'kyc_aml', 'dao_voting']
+    vertical: 'HEALTH'
+    governanceType: 'DAO_FULL'
+    domain: 'health.zion.network'
+    region: 'North America'
+    country: 'United States'
+  }
   {
-    id: 'deploy-002',
-    instanceName: 'EduDAO Academy',
-    status: 'deploying',
-    createdAt: '2024-01-15T14:20:00Z',
-    updatedAt: '2024-01-15T15:10:00Z',
-    progress: 65,
-    features: ['academy', 'zion_gpt', 'incubator_grants'],
-    vertical: 'EDUCATION',
-    governanceType: 'DAO_LITE',
-    subdomain: 'edu',
-    region: 'Europe',
-    country: 'Germany',
-  },
+    id: 'deploy-002'
+    instanceName: 'EduDAO Academy'
+    status: 'deploying'
+    createdAt: '2024-01-15T14:20:00Z'
+    updatedAt: '2024-01-15T15:10:00Z'
+    progress: 65
+    features: ['academy', 'zion_gpt', 'incubator_grants']
+    vertical: 'EDUCATION'
+    governanceType: 'DAO_LITE'
+    subdomain: 'edu'
+    region: 'Europe'
+    country: 'Germany'
+  }
   {
-    id: 'deploy-003',
-    instanceName: 'LegalTech DAO',
-    status: 'pending',
-    createdAt: '2024-01-15T16:00:00Z',
-    updatedAt: '2024-01-15T16:00:00Z',
-    progress: 0,
-    features: ['marketplace', 'onchain_contracts', 'web3_login'],
-    vertical: 'LAW',
-    governanceType: 'DAO_FULL',
-    domain: 'legal.zion.network',
-    region: 'Asia Pacific',
-    country: 'Singapore',
-  },
+    id: 'deploy-003'
+    instanceName: 'LegalTech DAO'
+    status: 'pending'
+    createdAt: '2024-01-15T16:00:00Z'
+    updatedAt: '2024-01-15T16:00:00Z'
+    progress: 0
+    features: ['marketplace', 'onchain_contracts', 'web3_login']
+    vertical: 'LAW'
+    governanceType: 'DAO_FULL'
+    domain: 'legal.zion.network'
+    region: 'Asia Pacific'
+    country: 'Singapore'
+  }
 ];
-
 export default function DeploymentsPage() {
   const [deployments, setDeployments] = useState<Deployment[]>(mockDeployments);
   const [filter, setFilter] = useState<
     'all' | 'pending' | 'deploying' | 'completed' | 'failed'
   >('all');
-
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'completed':
@@ -108,7 +104,6 @@ export default function DeploymentsPage() {
         return 'text-gray-400';
     }
   ];
-
   const getStatusIcon = (status: string) => {
     switch (status) {
       case 'completed':
@@ -124,8 +119,7 @@ export default function DeploymentsPage() {
       default:
         return <Clock className='w-5 h-5' />;
     }
-  };
-
+  }
 const getVerticalIcon = (vertical: string) => {
     switch (vertical) {
       case 'HEALTH':
@@ -139,8 +133,7 @@ const getVerticalIcon = (vertical: string) => {
       default:
         return <Globe className='w-4 h-4 text-gray-400' />;
     }
-  };
-
+  }
   const getGovernanceIcon = (type: string) => {
     switch (type) {
       case 'ADMIN':
@@ -152,26 +145,22 @@ const getVerticalIcon = (vertical: string) => {
       default:
         return <User className='w-4 h-4 text-gray-400' />;
     }
-  };
-
+  }
   const formatDate = (dateString: string) => {
     return new Date(dateString).toLocaleDateString('en-US', {
-      month: 'short',
-      day: 'numeric',
-      hour: '2-digit',
-      minute: '2-digit',
+      month: 'short'
+      day: 'numeric'
+      hour: '2-digit'
+      minute: '2-digit'
     });
-  };
-
+  }
   const filteredDeployments = deployments.filter(
-    deployment => filter === 'all' || deployment.status === filter
+    deployment => filter === 'all' |deployment.status === filter
   );  const deployments = []; // This should be populated from your data source
   const filter = 'all'; // This should be managed with state
-  
-  const filteredDeployments = deployments.filter(deployment => filter === 'all' || deployment.status === filter);
+  const filteredDeployments = deployments.filter(deployment => filter === 'all' |deployment.status === filter);
     return deployments.filter(d => d.status === status).length;
-  };
-
+  }
   return (
     <div className='space-y-8'>
       {/* Header Section */}
@@ -183,7 +172,6 @@ const getVerticalIcon = (vertical: string) => {
           Monitor and manage your Zion ecosystem deployments
         </p>
       </div>
-
       {/* Stats Overview */}
       <div className='grid grid-cols-1 md:grid-cols-5 gap-4 mb-8'>
         <div className='bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10'>
@@ -197,7 +185,6 @@ const getVerticalIcon = (vertical: string) => {
             </div>
           </div>
         </div>
-
         <div className='bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10'>
           <div className='flex items-center gap-3'>
             <div className='p-2 bg-yellow-500/20 rounded-lg'>
@@ -209,7 +196,6 @@ const getVerticalIcon = (vertical: string) => {
             </div>
           </div>
         </div>
-
         <div className='bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10'>
           <div className='flex items-center gap-3'>
             <div className='p-2 bg-blue-500/20 rounded-lg'>
@@ -223,7 +209,6 @@ const getVerticalIcon = (vertical: string) => {
             </div>
           </div>
         </div>
-
         <div className='bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10'>
           <div className='flex items-center gap-3'>
             <div className='p-2 bg-green-500/20 rounded-lg'>
@@ -237,7 +222,6 @@ const getVerticalIcon = (vertical: string) => {
             </div>
           </div>
         </div>
-
         <div className='bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10'>
           <div className='flex items-center gap-3'>
             <div className='p-2 bg-red-500/20 rounded-lg'>
@@ -254,7 +238,6 @@ const getVerticalIcon = (vertical: string) => {
         </h1>
         <p className="text-white/70 mt-2">Monitor and manage your Zion ecosystem deployments</p>
       </div>
-
       {/* Stats Overview */}
       <div className="grid grid-cols-1 md:grid-cols-5 gap-4 mb-8">
         <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10">
@@ -313,26 +296,25 @@ const getVerticalIcon = (vertical: string) => {
           </div>
         </div>
       </div>
-
       {/* Filter Tabs */}
       <div className='flex flex-wrap gap-2'>
-          { key: 'all', label: 'All Deployments', count: deployments.length },
+          { key: 'all', label: 'All Deployments', count: deployments.length }
           {
-            key: 'pending',
-            label: 'Pending',
-            count: getStatusCount('pending'),
-          },
+            key: 'pending'
+            label: 'Pending'
+            count: getStatusCount('pending')
+          }
           {
-            key: 'deploying',
-            label: 'Deploying',
-            count: getStatusCount('deploying'),
-          },
+            key: 'deploying'
+            label: 'Deploying'
+            count: getStatusCount('deploying')
+          }
           {
-            key: 'completed',
-            label: 'Completed',
-            count: getStatusCount('completed'),
-          },
-          { key: 'failed', label: 'Failed', count: getStatusCount('failed') },
+            key: 'completed'
+            label: 'Completed'
+            count: getStatusCount('completed')
+          }
+          { key: 'failed', label: 'Failed', count: getStatusCount('failed') }
         ].map(({ key, label, count }) => (
           <button
             key={key}
@@ -347,7 +329,6 @@ const getVerticalIcon = (vertical: string) => {
           </button>
         ))}
       </div>
-
       {/* Deployments Grid */}
       <div className='grid grid-cols-1 xl:grid-cols-2 gap-6'>
         {filteredDeployments.map(deployment => (
@@ -395,7 +376,6 @@ const getVerticalIcon = (vertical: string) => {
                     </div>
                   </div>
                 </div>
-
                 <div className='flex items-center gap-2'>
                   {getStatusIcon(deployment.status)}
                   <span
@@ -408,7 +388,6 @@ const getVerticalIcon = (vertical: string) => {
                     {deployment.status.charAt(0).toUpperCase() + deployment.status.slice(1)}
                 </div>
               </div>
-
               {/* Progress Bar for Active Deployments */}
               {deployment.status === 'deploying' && (
                 <div className='space-y-2'>
@@ -430,7 +409,6 @@ const getVerticalIcon = (vertical: string) => {
                 </div>
               )}
             </div>
-
             {/* Deployment Details */}
             <div className='p-6 space-y-4'>
               {/* Domain & Location */}
@@ -438,12 +416,12 @@ const getVerticalIcon = (vertical: string) => {
                 <div className='flex items-center gap-2 text-white/70'>
                   <Globe className='w-4 h-4' />
                   <span className='font-mono'>
-                    {deployment.domain ||
-                      deployment.subdomain ||
+                    {deployment.domain |
+                      deployment.subdomain |
                       'No domain set'}
                   </span>
                 </div>
-                {(deployment.region || deployment.country) && (
+                {(deployment.region |deployment.country) && (
                   <div className='flex items-center gap-2 text-white/70'>
                     <MapPin className='w-4 h-4' />
                     <span>
@@ -455,17 +433,16 @@ const getVerticalIcon = (vertical: string) => {
                 <div className="flex items-center gap-2 text-white/70">
                   <span>🌐</span>
                   <span className="font-mono">
-                    {deployment.domain || deployment.subdomain || 'No domain set'}
+                    {deployment.domain |deployment.subdomain |'No domain set'}
                   </span>
                 </div>
-                {(deployment.region || deployment.country) && (
+                {(deployment.region |deployment.country) && (
                   <div className="flex items-center gap-2 text-white/70">
                     <span>📍</span>
                     <span>{deployment.region} {deployment.country}</span>
                   </div>
                 )}
               </div>
-
               {/* Features */}
               <div className='space-y-2'>
                 <div className='text-sm font-medium text-white/80'>
@@ -495,7 +472,6 @@ const getVerticalIcon = (vertical: string) => {
                   )}
                 </div>
               </div>
-
               {/* Timestamps */}
               <div className='flex items-center justify-between text-xs text-white/60 pt-2 border-t border-white/10'>
                 <div className='flex items-center gap-1'>
@@ -516,7 +492,6 @@ const getVerticalIcon = (vertical: string) => {
                 )}
               </div>
             </div>
-
             {/* Action Buttons */}
             <div className='p-6 pt-0'>
               <div className='flex gap-2'>
@@ -526,7 +501,6 @@ const getVerticalIcon = (vertical: string) => {
                     Start Deployment
                   </button>
                 )}
-
                 {deployment.status === 'deploying' && (
                   <>
                     <button className='flex-1 flex items-center justify-center gap-2 px-3 py-2 bg-orange-600 hover:bg-orange-700 text-white text-sm font-medium rounded-lg transition-colors duration-200'>
@@ -539,21 +513,18 @@ const getVerticalIcon = (vertical: string) => {
                     </button>
                   </>
                 )}
-
                 {deployment.status === 'completed' && (
                   <button className='flex-1 flex items-center justify-center gap-2 px-3 py-2 bg-green-600 hover:bg-green-700 text-white text-sm font-medium rounded-lg transition-colors duration-200'>
                     <Eye className='w-4 h-4' />
                     View Instance
                   </button>
                 )}
-
                 {deployment.status === 'failed' && (
                   <button className='flex-1 flex items-center justify-center gap-2 px-3 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-lg transition-colors duration-200'>
                     <RefreshCw className='w-4 h-4' />
                     Retry
                   </button>
                 )}
-
                 <button className='flex items-center justify-center px-3 py-2 bg-white/10 hover:bg-white/20 text-white/80 text-sm font-medium rounded-lg transition-colors duration-200'>
                   <Settings className='w-4 h-4' />                </button>                {deployment.status === 'pending' && (
                   <button className="flex-1 flex items-center justify-center gap-2 px-3 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-lg transition-colors duration-200">
@@ -588,7 +559,6 @@ const getVerticalIcon = (vertical: string) => {
           </div>
         ))}
       </div>
-
       {/* Empty State */}
       {filteredDeployments.length === 0 && (
         <div className='text-center py-16'>
@@ -614,8 +584,8 @@ const getVerticalIcon = (vertical: string) => {
         </div>          </div>
           <h3 className="text-lg font-medium text-white/60 mb-2">No deployments found</h3>
           <p className="text-white/40 mb-6">
-            {filter === 'all' 
-              ? 'Start by creating your first Zion ecosystem deployment' 
+            {filter === 'all'
+              ? 'Start by creating your first Zion ecosystem deployment'
               : `No deployments with status "${filter}" found`
             }
           </p>
@@ -630,7 +600,6 @@ const getVerticalIcon = (vertical: string) => {
           )}
         </div>
       </div>
-
       {/* Deployments Table */}
       <div className="bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 overflow-hidden">
         <div className="p-6 border-b border-white/10">

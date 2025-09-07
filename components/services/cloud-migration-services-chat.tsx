@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
+const CloudMigrationServicesChat: NextPage;
+=======
 import type { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
@@ -11,7 +17,6 @@ const CloudMigrationServicesChat: NextPage = () => {
           content="CloudMigrationServicesChat service"
         />{" "}
       </Head>
-
       <main>
         <h1>CloudMigrationServicesChat</h1>
         <p>Service details coming soon...</p>
@@ -19,6 +24,6 @@ const CloudMigrationServicesChat: NextPage = () => {
       </main>
     </div>
   );
-};
-
+}
 export default CloudMigrationServicesChat;
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

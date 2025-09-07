@@ -1,142 +1,142 @@
-import React from 'react';
+import React from 'react',
 import Head from 'next/head';
 import Link from 'next/link';
 export default function AISolutionsPage() {
+<<<<<<< HEAD
+  const aiSolutions = null;
+=======
   const aiSolutions = [
     {
-      id: 'machine-learning',
-      title: 'Machine Learning Solutions',
+      id: 'machine-learning'
+      title: 'Machine Learning Solutions'
       description:
-        'Custom ML models for predictive analytics, pattern recognition, and intelligent decision making.',
+        'Custom ML models for predictive analytics, pattern recognition, and intelligent decision making.'
       features: [
-        'Predictive Analytics',
-        'Pattern Recognition',
-        'Anomaly Detection',
-        'Recommendation Systems',
-      ],      icon: '🧠',
-      category: 'Core AI',
+        'Predictive Analytics'
+        'Pattern Recognition'
+        'Anomaly Detection'
+        'Recommendation Systems'
+      ],      icon: '🧠'
+      category: 'Core AI'
       complexity: 'Advanced'
-    };
+    }
     {
-      id: 'natural-language-processing',
-      title: 'Natural Language Processing',
+      id: 'natural-language-processing'
+      title: 'Natural Language Processing'
       description: 'Advanced NLP solutions for text analysis, sentiment analysis, and language understanding.';
-      features: ['Text AnalysisSentiment AnalysisLanguage TranslationChatbot Development'],
-      icon: '💬',
-      category: 'Language AI',
+      features: ['Text AnalysisSentiment AnalysisLanguage TranslationChatbot Development']
+      icon: '💬'
+      category: 'Language AI'
       complexity: 'Advanced'
-    };
+    }
     {
-      id: 'computer-vision',
-      title: 'Computer Vision',
+      id: 'computer-vision'
+      title: 'Computer Vision'
       description: 'Computer vision solutions for image recognition, object detection, and visual analytics.';
-      features: ['Image RecognitionObject DetectionFacial RecognitionQuality Control'],
-      icon: '👁️',
-      category: 'Visual AI',
+      features: ['Image RecognitionObject DetectionFacial RecognitionQuality Control']
+      icon: '👁️'
+      category: 'Visual AI'
       complexity: 'Advanced'
-    };
+    }
     {
-      id: 'autonomous-systems',
-      title: 'Autonomous Systems',
-      description: 'Self-operating systems that can make decisions and take actions independently.',
-      features: ['Decision MakingSelf-LearningAdaptive BehaviorContinuous Improvement'],
-      icon: '🤖',
-      category: 'Autonomy',
+      id: 'autonomous-systems'
+      title: 'Autonomous Systems'
+      description: 'Self-operating systems that can make decisions and take actions independently.'
+      features: ['Decision MakingSelf-LearningAdaptive BehaviorContinuous Improvement']
+      icon: '🤖'
+      category: 'Autonomy'
       complexity: 'Expert'
-    };
+    }
     {
-      id: 'predictive-analytics',
-      title: 'Predictive Analytics',
-      description: 'Data-driven insights that help predict future trends and behaviors.',
-      features: ['Trend AnalysisRisk AssessmentForecastingBehavioral Prediction'],
-      icon: '📊',
-      category: 'Analytics',
-      complexity: 'Intermediate',
+      id: 'predictive-analytics'
+      title: 'Predictive Analytics'
+      description: 'Data-driven insights that help predict future trends and behaviors.'
+      features: ['Trend AnalysisRisk AssessmentForecastingBehavioral Prediction']
+      icon: '📊'
+      category: 'Analytics'
+      complexity: 'Intermediate'
     },      complexity: 'Intermediate'
-    };
+    }
     {
-      id: 'ai-automation',
-      title: 'AI-Powered Automation',
-      description: 'Intelligent automation that learns and improves over time.',
+      id: 'ai-automation'
+      title: 'AI-Powered Automation'
+      description: 'Intelligent automation that learns and improves over time.'
       features: [
-        'Process Automation',
-        'Workflow Optimization',
-        'Intelligent Routing',
-        'Adaptive Workflows',
-      ],
-      icon: '⚡',
-      category: 'Automation',
-      complexity: 'Intermediate',
-    },  ];      features: ['Process AutomationWorkflow OptimizationIntelligent RoutingAdaptive Workflows'],
-      icon: '⚡',
-      category: 'Automation',
+        'Process Automation'
+        'Workflow Optimization'
+        'Intelligent Routing'
+        'Adaptive Workflows'
+      ]
+      icon: '⚡'
+      category: 'Automation'
+      complexity: 'Intermediate'
+    },  ];      features: ['Process AutomationWorkflow OptimizationIntelligent RoutingAdaptive Workflows']
+      icon: '⚡'
+      category: 'Automation'
       complexity: 'Intermediate'
     }
-
   const useCases = [
     {
-      industry: 'Manufacturing',
+      industry: 'Manufacturing'
       solutions: [
-        'Quality Control',
-        'Predictive Maintenance',
-        'Supply Chain Optimization',
-      ],
-      icon: '🏭',
-    },
+        'Quality Control'
+        'Predictive Maintenance'
+        'Supply Chain Optimization'
+      ]
+      icon: '🏭'
+    }
     {
-      industry: 'Healthcare',
+      industry: 'Healthcare'
       solutions: [
-        'Diagnostic Support',
-        'Patient Care Optimization',
-        'Drug Discovery',
-      ],
-      icon: '🏥',
-    },
-    {
-      industry: 'Finance',
-      solutions: ['Fraud Detection', 'Risk Assessment', 'Algorithmic Trading'],
-      icon: '💳',
-    },
-    {
-      industry: 'Retail',
-      solutions: [
-        'Customer Segmentation',
-        'Inventory Management',
-        'Personalized Marketing',
-      ],
-      icon: '🛍️',
-    },
-  ];
-
-  const technologies = [
-    'TensorFlow',
-    'PyTorch',
-    'Scikit-learn',
-    'OpenAI GPT',
-    'BERT',
-    'YOLO',
-    'Keras',
-    'Pandas',  ];    {
-      industry: 'Healthcare',
-      solutions: ['Diagnostic SupportPatient Care OptimizationDrug Discovery'],
+        'Diagnostic Support'
+        'Patient Care Optimization'
+        'Drug Discovery'
+      ]
       icon: '🏥'
-    };
+    }
     {
-      industry: 'Finance',
-      solutions: ['Fraud DetectionRisk AssessmentAlgorithmic Trading'],
+      industry: 'Finance'
+      solutions: ['Fraud Detection', 'Risk Assessment', 'Algorithmic Trading']
       icon: '💳'
-    };
+    }
     {
-      industry: 'Retail',
-      solutions: ['Customer SegmentationInventory ManagementPersonalized Marketing'],
+      industry: 'Retail'
+      solutions: [
+        'Customer Segmentation'
+        'Inventory Management'
+        'Personalized Marketing'
+      ]
       icon: '🛍️'
     }
   ];
-
+  const technologies = [
+    'TensorFlow'
+    'PyTorch'
+    'Scikit-learn'
+    'OpenAI GPT'
+    'BERT'
+    'YOLO'
+    'Keras'
+    'Pandas',  ];    {
+      industry: 'Healthcare'
+      solutions: ['Diagnostic SupportPatient Care OptimizationDrug Discovery']
+      icon: '🏥'
+    }
+    {
+      industry: 'Finance'
+      solutions: ['Fraud DetectionRisk AssessmentAlgorithmic Trading']
+      icon: '💳'
+    }
+    {
+      industry: 'Retail'
+      solutions: ['Customer SegmentationInventory ManagementPersonalized Marketing']
+      icon: '🛍️'
+    }
+  ];
   const technologies = [
     'TensorFlowPyTorchScikit-learnOpenAI GPTBERTYOLOKerasPandas'
   ];
-
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   return (
     <>
       <Head>
@@ -154,7 +154,6 @@ export default function AISolutionsPage() {
         />
         <meta name='twitter:card' content='summary_large_image' />
       </Head>
-
       <div className='min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white'>
         <main className='container mx-auto px-6 py-12'>
           <section className='text-center mb-16'>
@@ -166,7 +165,6 @@ export default function AISolutionsPage() {
               businesses and drive innovation
             </p>
           </section>
-
           <section className='mx-auto max-w-7xl'>
             {/* AI Solutions Grid */}
             <div className='mb-16'>
@@ -203,7 +201,6 @@ export default function AISolutionsPage() {
                       ))}
                     </ul>
                     <Link      </Head>
-      
       <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
         <main className="container mx-auto px-6 py-12">
           <section className="text-center mb-16">
@@ -214,7 +211,6 @@ export default function AISolutionsPage() {
               Cutting-edge artificial intelligence solutions that transform businesses and drive innovation
             </p>
           </section>
-
           <section className="mx-auto max-w-7xl">
             {/* AI Solutions Grid */}
             <div className="mb-16">
@@ -250,7 +246,6 @@ export default function AISolutionsPage() {
                 ))}
               </div>
             </div>
-
             {/* Industry Use Cases */}
             <div className='mb-16'>
               <h2 className='text-3xl font-bold mb-8 text-center text-fuchsia-400'>
@@ -286,7 +281,6 @@ export default function AISolutionsPage() {
                 ))}
               </div>
             </div>
-
             {/* Technologies */}
             <div className='mb-16'>
               <h2 className='text-3xl font-bold mb-8 text-center text-green-400'>
@@ -298,7 +292,7 @@ export default function AISolutionsPage() {
                     <span
                       key={index}
                       className='px-4 py-2 bg-gradient-to-r from-cyan-400/20 to-fuchsia-400/20 text-white rounded-lg border border-white/20'                    >                  {technologies.map((tech, index) => (
-                    <span 
+                    <span
                       key={index}
                       className="px-4 py-2 bg-gradient-to-r from-cyan-400/20 to-fuchsia-400/20 text-white rounded-lg border border-white/20"
                     >
@@ -308,7 +302,6 @@ export default function AISolutionsPage() {
                 </div>
               </div>
             </div>
-
             {/* Success Stories */}
             <div className='mb-16'>
               <h2 className='text-3xl font-bold mb-8 text-center text-blue-400'>
@@ -336,7 +329,7 @@ export default function AISolutionsPage() {
                   <p className="text-white/70 mb-4">
                     Implemented computer vision and ML solutions that improved quality control by 85% and reduced defects by 60%.
                   </p>
-                  <Link 
+                  <Link
                     href="/case-studies#ai-automation-manufacturing"
                     className="text-fuchsia-400 hover:text-fuchsia-300 transition-colors"
                     Read Case Study →
@@ -357,7 +350,7 @@ export default function AISolutionsPage() {
                   <p className="text-white/70 mb-4">
                     Built autonomous content generation systems that increased output by 10x while maintaining quality standards.
                   </p>
-                  <Link 
+                  <Link
                     href="/case-studies#content-generation-scale"
                     className="text-cyan-400 hover:text-cyan-300 transition-colors"
                     Read Case Study →
@@ -365,7 +358,6 @@ export default function AISolutionsPage() {
                 </div>
               </div>
             </div>
-
             {/* Call to Action */}
             <div className='bg-gradient-to-r from-cyan-400/20 to-fuchsia-400/20 backdrop-blur-xl rounded-2xl p-8 text-center'>
               <h2 className='text-3xl font-bold mb-4 text-white'>
@@ -386,13 +378,13 @@ export default function AISolutionsPage() {
                   href='/automation-insights'
                   className='px-8 py-3 bg-white/10 text-white font-bold rounded-lg border border-white/20 hover:bg-white/20 transition-all duration-200'                >              </p>
               <div className="flex flex-wrap justify-center gap-4">
-                <Link 
+                <Link
                   href="/contact"
                   className="px-8 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-bold rounded-lg hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-200 transform hover:scale-105"
                 >
                   Start Your AI Journey
                 </Link>
-                <Link 
+                <Link
                   href="/automation-insights"
                   className="px-8 py-3 bg-white/10 text-white font-bold rounded-lg border border-white/20 hover:bg-white/20 transition-all duration-200"
                 >

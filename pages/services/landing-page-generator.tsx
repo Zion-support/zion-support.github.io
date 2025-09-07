@@ -1,7 +1,10 @@
-import type { NextPage } from 'next',;
-import Head from 'next/head',;
-import Link from 'next/link',;
-import UseTokensButton from '../../components/tokens/UseTokensButton',;
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
+import UseTokensButton from '../../components/tokens/UseTokensButton';
+<<<<<<< HEAD
+const LandingPageGenerator: NextPage;
+=======
 const LandingPageGenerator: NextPage = () => {
   return (
     <div>
@@ -9,7 +12,6 @@ const LandingPageGenerator: NextPage = () => {
         <title>LandingPageGenerator - Zion Tech Solutions</title>
         <meta name="description" content="LandingPageGenerator service" />
       </Head>
-      
       <main className="space-y-4">
         <h1>LandingPageGenerator</h1>
         <p>Service details coming soon...</p>
@@ -18,6 +20,6 @@ const LandingPageGenerator: NextPage = () => {
       </main>
     </div>
   )
-},
-
-export default LandingPageGenerator,;
+}
+export default LandingPageGenerator;
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

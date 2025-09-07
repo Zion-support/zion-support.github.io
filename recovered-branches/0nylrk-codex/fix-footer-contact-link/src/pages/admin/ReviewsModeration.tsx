@@ -1,19 +1,21 @@
 
-import {AppHeader} from "@/layout/AppHeader";
-import {Footer} from "@/components/Footer";
-import {SEO} from "@/components/SEO";
-import {ReviewsModerationTable} from "@/components/admin/reviews/ReviewsModerationTable";
-import {ProtectedRoute} from "@/components/ProtectedRoute";
-import {useState, useEffect} from "react";
-import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
-import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
-import {Star, AlertTriangle} from "lucide-react";
-import {toast} from "@/components/ui/use-toast";
+import { AppHeader } from "@/layout/AppHeader",
+import { Footer } from "@/components/Footer",
+import { SEO } from "@/components/SEO",
+import { ReviewsModerationTable } from "@/components/admin/reviews/ReviewsModerationTable",
+import { ProtectedRoute } from "@/components/ProtectedRoute",
+import { useState, useEffect } from "react",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { Star, AlertTriangle } from "lucide-react";
+import { toast } from "@/components/ui/use-toast";
 function ReviewsModerationContent() {
   const [activeTab, setActiveTab] = useState("pending");
   const [reviews, setReviews] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
-  
+<<<<<<< HEAD
+  const fetchReviews = null;
+=======
   const fetchReviews = async () => {
     setIsLoading(true);
     try {
@@ -25,21 +27,19 @@ function ReviewsModerationContent() {
     } catch (error) {
       console.error("Error fetching reviews:", error);
       toast({
-        title: "Error",
-        description: "Failed to load reviews. Please try again later.",
-        variant: "destructive"}),
+        title: "Error"
+        description: "Failed to load reviews. Please try again later."
+        variant: "destructive"})
       setIsLoading(false)
     }
-  };
-
+  }
   useEffect(() => {
     fetchReviews()
   }, [activeTab]);
-
   const handleRefresh = () => {
     fetchReviews()
-  };
-  
+  }
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   return (
     <>
       <SEO
@@ -54,7 +54,6 @@ function ReviewsModerationContent() {
             <p className="text-muted-foreground mt-1">Manage, approve, or reject reviews</p>
           </div>
         </div>
-        
         <Card>
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
@@ -71,15 +70,13 @@ function ReviewsModerationContent() {
                 <TabsTrigger value="pending">Pending Reviews</TabsTrigger>
                 <TabsTrigger value="reported">Reported Reviews</TabsTrigger>
               </TabsList>
-              
               <TabsContent value="pending" className="mt-0">
-                <ReviewsModerationTable 
+                <ReviewsModerationTable
                   reviews={reviews}
                   isLoading={isLoading}
                   onRefresh={handleRefresh}
                 />
               </TabsContent>
-              
               <TabsContent value="reported" className="mt-0">
                 <div className="text-center py-12 border rounded-lg">
                   <AlertTriangle className="h-10 w-10 text-amber-500 mx-auto mb-2" />
@@ -97,7 +94,6 @@ function ReviewsModerationContent() {
     </>
   )
 }
-
 export default function ReviewsModeration() {
   return (
     <ProtectedRoute>
@@ -105,4 +101,3 @@ export default function ReviewsModeration() {
     </ProtectedRoute>
   )
 }
-;

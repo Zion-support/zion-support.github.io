@@ -1,16 +1,22 @@
-import React from 'react';
-import Head from 'next/head';
-import Card from '../components/ui/Card';
+import React from 'react',
+import Head from 'next/head',
+import Card from '../components/ui/Card',
 import Button from '../components/ui/Button';
+<<<<<<< HEAD
+import { GitBranch, Zap, Shield, BarChart3, Check, Star, GitPullRequest, Cpu } from 'lucide-react';
+export default function DevOpsAutomationPage() {
+  const features = null;
+              and intelligent security automation. Deploy faster, safer, and more reliably.
+=======
 import {
-  GitBranch,
-  Zap,
-  Shield,
-  BarChart3,
-  Check,
-  Star,
-  GitPullRequest,
-  Cpu,;
+  GitBranch
+  Zap
+  Shield
+  BarChart3
+  Check
+  Star
+  GitPullRequest
+  Cpu;
 } from 'lucide-react';
 export default function DevOpsAutomationPage() {
   const features = [
@@ -19,249 +25,244 @@ export default function DevOpsAutomationPage() {
 export default function DevOpsAutomationPage() {
   const features = [
     {
-      icon: <GitBranch className='w-6 h-6' />,      title: 'CI/CD Pipelines',
+      icon: <GitBranch className='w-6 h-6' />,      title: 'CI/CD Pipelines'
       description: 'Automated build, test, and deployment workflows';
       color: 'bg-gradient-to-br from-blue-500 to-cyan-600'
-    };
+    }
     {
-      icon: <Zap className="w-6 h-6" />,
-      title: 'Infrastructure as Code',
+      icon: <Zap className="w-6 h-6" />
+      title: 'Infrastructure as Code'
       description: 'Terraform, CloudFormation, and Kubernetes automation';
       color: 'bg-gradient-to-br from-green-500 to-emerald-600'
-    };
+    }
     {
-      icon: <Shield className="w-6 h-6" />,
-      title: 'Security Automation',
-      description: 'Automated security scanning and compliance checks',
+      icon: <Shield className="w-6 h-6" />
+      title: 'Security Automation'
+      description: 'Automated security scanning and compliance checks'
       color: 'bg-gradient-to-br from-purple-500 to-indigo-600'
-    };
+    }
     {
-      icon: <BarChart3 className="w-6 h-6" />,
-      title: 'Performance Monitoring',
-      description: 'Real-time performance insights and optimization',
-      color: 'bg-gradient-to-br from-orange-500 to-red-600',
-    },
-      title: 'CI/CD Pipelines',
-      description: 'Automated build, test, and deployment workflows',
-      color: 'bg-gradient-to-br from-blue-500 to-cyan-600',
-    },
+      icon: <BarChart3 className="w-6 h-6" />
+      title: 'Performance Monitoring'
+      description: 'Real-time performance insights and optimization'
+      color: 'bg-gradient-to-br from-orange-500 to-red-600'
+    }
+      title: 'CI/CD Pipelines'
+      description: 'Automated build, test, and deployment workflows'
+      color: 'bg-gradient-to-br from-blue-500 to-cyan-600'
+    }
     {
-      icon: <Zap className='w-6 h-6' />,
-      title: 'Infrastructure as Code',
-      description: 'Terraform, CloudFormation, and Kubernetes automation',
-      color: 'bg-gradient-to-br from-green-500 to-emerald-600',
-    },
+      icon: <Zap className='w-6 h-6' />
+      title: 'Infrastructure as Code'
+      description: 'Terraform, CloudFormation, and Kubernetes automation'
+      color: 'bg-gradient-to-br from-green-500 to-emerald-600'
+    }
     {
-      icon: <Shield className='w-6 h-6' />,
-      title: 'Security Automation',
-      description: 'Automated security scanning and compliance checks',
-      color: 'bg-gradient-to-br from-purple-500 to-indigo-600',
-    },
+      icon: <Shield className='w-6 h-6' />
+      title: 'Security Automation'
+      description: 'Automated security scanning and compliance checks'
+      color: 'bg-gradient-to-br from-purple-500 to-indigo-600'
+    }
     {
-      icon: <BarChart3 className='w-6 h-6' />,
-      title: 'Performance Monitoring',
-      description: 'Real-time performance insights and optimization',
-      color: 'bg-gradient-to-br from-orange-500 to-red-600',
+      icon: <BarChart3 className='w-6 h-6' />
+      title: 'Performance Monitoring'
+      description: 'Real-time performance insights and optimization'
+      color: 'bg-gradient-to-br from-orange-500 to-red-600'
     },  ];      color: 'bg-gradient-to-br from-orange-500 to-red-600'
     }
   ];
-
   const pricingPlans = [
     {
-      name: 'Starter',
-      price: '$39',
-      period: '/month',
-      description: 'Perfect for small teams and startups',
+      name: 'Starter'
+      price: '$39'
+      period: '/month'
+      description: 'Perfect for small teams and startups'
       features: [
-        'Up to 5 repositories',
-        'Basic CI/CD pipelines',
-        'GitHub integration',
-        'Email notifications',
-        'Basic security scanning',
-        'Community support',
-      ],
-      popular: false,
-      cta: 'Start Free Trial',
-      color: 'border-gray-600 hover:border-blue-500',
+        'Up to 5 repositories'
+        'Basic CI/CD pipelines'
+        'GitHub integration'
+        'Email notifications'
+        'Basic security scanning'
+        'Community support'
+      ]
+      popular: false
+      cta: 'Start Free Trial'
+      color: 'border-gray-600 hover:border-blue-500'
     },    {        'Up to 5 repositoriesBasic CI/CD pipelinesGitHub integrationEmail notificationsBasic security scanningCommunity support'
       ];
-      popular: false,
-      cta: 'Start Free Trial',
-      color: 'border-gray-600 hover:border-blue-500'
-    };
-      name: 'Professional',
-      price: '$129',
-      period: '/month',
-      description: 'Ideal for growing development teams',
-      features: [
-        'Up to 25 repositories',
-        'Advanced CI/CD workflows',
-        'Multi-cloud deployment',
-        'Slack & Teams integration',
-        'Advanced security suite',
-        'Priority support',
-        'Custom pipelines',
-        'Team collaboration',
-      ],
-      popular: true,
-      cta: 'Start Free Trial',
-      color: 'border-blue-500 hover:border-blue-400',
-    },    {        'Up to 25 repositoriesAdvanced CI/CD workflowsMulti-cloud deploymentSlack & Teams integrationAdvanced security suitePriority supportCustom pipelinesTeam collaboration'
-      ];
-      popular: true,
-      cta: 'Start Free Trial',
-      color: 'border-blue-500 hover:border-blue-400'
-    };
-      name: 'Enterprise',
-      price: '$399',
-      period: '/month',
-      description: 'For large-scale development operations',
-      features: [
-        'Unlimited repositories',
-        'Enterprise CI/CD',
-        'Advanced IaC automation',
-        'Custom integrations',
-        '24/7 dedicated support',
-        'SLA guarantees',
-        'On-premise options',
-        'Custom security policies',
-      ],
-      popular: false,
-      cta: 'Contact Sales',
-      color: 'border-gray-600 hover:border-blue-500',
-    },  ];        'Unlimited repositoriesEnterprise CI/CDAdvanced IaC automationCustom integrations24/7 dedicated supportSLA guaranteesOn-premise optionsCustom security policies'
-      ];
-      popular: false,
-      cta: 'Contact Sales',
+      popular: false
+      cta: 'Start Free Trial'
       color: 'border-gray-600 hover:border-blue-500'
     }
-
+      name: 'Professional'
+      price: '$129'
+      period: '/month'
+      description: 'Ideal for growing development teams'
+      features: [
+        'Up to 25 repositories'
+        'Advanced CI/CD workflows'
+        'Multi-cloud deployment'
+        'Slack & Teams integration'
+        'Advanced security suite'
+        'Priority support'
+        'Custom pipelines'
+        'Team collaboration'
+      ]
+      popular: true
+      cta: 'Start Free Trial'
+      color: 'border-blue-500 hover:border-blue-400'
+    },    {        'Up to 25 repositoriesAdvanced CI/CD workflowsMulti-cloud deploymentSlack & Teams integrationAdvanced security suitePriority supportCustom pipelinesTeam collaboration'
+      ];
+      popular: true
+      cta: 'Start Free Trial'
+      color: 'border-blue-500 hover:border-blue-400'
+    }
+      name: 'Enterprise'
+      price: '$399'
+      period: '/month'
+      description: 'For large-scale development operations'
+      features: [
+        'Unlimited repositories'
+        'Enterprise CI/CD'
+        'Advanced IaC automation'
+        'Custom integrations'
+        '24/7 dedicated support'
+        'SLA guarantees'
+        'On-premise options'
+        'Custom security policies'
+      ]
+      popular: false
+      cta: 'Contact Sales'
+      color: 'border-gray-600 hover:border-blue-500'
+    },  ];        'Unlimited repositoriesEnterprise CI/CDAdvanced IaC automationCustom integrations24/7 dedicated supportSLA guaranteesOn-premise optionsCustom security policies'
+      ];
+      popular: false
+      cta: 'Contact Sales'
+      color: 'border-gray-600 hover:border-blue-500'
+    }
   const marketComparison = [
     {
-      competitor: 'GitHub Actions',
-      pricing: 'Free + $0.008/min',
-      repositories: 'Unlimited',
-      rating: '4.6/5',
-      pros: ['GitHub native', 'Good free tier'],
-      cons: ['Expensive for teams', 'Limited features'],
-    },    {      pros: ['GitHub nativeGood free tier'],
+      competitor: 'GitHub Actions'
+      pricing: 'Free + $0.008/min'
+      repositories: 'Unlimited'
+      rating: '4.6/5'
+      pros: ['GitHub native', 'Good free tier']
+      cons: ['Expensive for teams', 'Limited features']
+    },    {      pros: ['GitHub nativeGood free tier']
       cons: ['Expensive for teamsLimited features']
-    };
+    }
     {
-      competitor: 'GitLab CI/CD',
-      pricing: '$19/user/month',
-      repositories: 'Unlimited',
-      rating: '4.4/5',
-      pros: ['Integrated platform', 'Good CI/CD'],
-      cons: ['User-based pricing', 'Limited integrations'],
-    },    {      pros: ['Integrated platformGood CI/CD'],
+      competitor: 'GitLab CI/CD'
+      pricing: '$19/user/month'
+      repositories: 'Unlimited'
+      rating: '4.4/5'
+      pros: ['Integrated platform', 'Good CI/CD']
+      cons: ['User-based pricing', 'Limited integrations']
+    },    {      pros: ['Integrated platformGood CI/CD']
       cons: ['User-based pricingLimited integrations']
-    };
+    }
     {
-      competitor: 'Jenkins',
-      pricing: 'Free',
-      repositories: 'Unlimited',
-      rating: '4.2/5',
-      pros: ['Completely free', 'Highly customizable'],
-      cons: ['Requires maintenance', 'No managed service'],
-    },  ];      pros: ['Completely freeHighly customizable'],
+      competitor: 'Jenkins'
+      pricing: 'Free'
+      repositories: 'Unlimited'
+      rating: '4.2/5'
+      pros: ['Completely free', 'Highly customizable']
+      cons: ['Requires maintenance', 'No managed service']
+    },  ];      pros: ['Completely freeHighly customizable']
       cons: ['Requires maintenanceNo managed service']
     }
   ];
-
   const testimonials = [
     {
-      name: 'Michael Chen',
-      role: 'DevOps Lead',
-      company: 'TechStart Inc.',
+      name: 'Michael Chen'
+      role: 'DevOps Lead'
+      company: 'TechStart Inc.'
       content:
-        'Zion DevOps reduced our deployment time from 2 hours to 15 minutes. The automation is incredible and the pricing is fair.',
-      rating: 5,
-    },    {
-      name: 'Sarah Johnson',
-      role: 'Engineering Manager',
-      company: 'CloudWorks',
-      content:
-        'We switched from GitHub Actions to Zion and saved $200/month while getting better automation features.',
-      rating: 5,
-    },    {
-      name: 'Robert Davis',
-      role: 'Site Reliability Engineer',
-      company: 'ScaleTech',
-      content:
-        'The infrastructure automation features are game-changing. We can now deploy to multiple clouds with a single click.',
-      rating: 5,
-    },  ];      content: 'Zion DevOps reduced our deployment time from 2 hours to 15 minutes. The automation is incredible and the pricing is fair.',
+        'Zion DevOps reduced our deployment time from 2 hours to 15 minutes. The automation is incredible and the pricing is fair.'
       rating: 5
-    };
-    {
-      name: 'Sarah Johnson',
-      role: 'Engineering Manager',
-      company: 'CloudWorks',
+    },    {
+      name: 'Sarah Johnson'
+      role: 'Engineering Manager'
+      company: 'CloudWorks'
       content:
-        'We switched from GitHub Actions to Zion and saved $200/month while getting better automation features.',
-      rating: 5,
-    },      content: 'We switched from GitHub Actions to Zion and saved $200/month while getting better automation features.',
+        'We switched from GitHub Actions to Zion and saved $200/month while getting better automation features.'
       rating: 5
-    };
-    {
-      name: 'Robert Davis',
-      role: 'Site Reliability Engineer',
-      company: 'ScaleTech',
+    },    {
+      name: 'Robert Davis'
+      role: 'Site Reliability Engineer'
+      company: 'ScaleTech'
       content:
-        'The infrastructure automation features are game-changing. We can now deploy to multiple clouds with a single click.',
-      rating: 5,
-    },      content: 'The infrastructure automation features are game-changing. We can now deploy to multiple clouds with a single click.',
+        'The infrastructure automation features are game-changing. We can now deploy to multiple clouds with a single click.'
+      rating: 5
+    },  ];      content: 'Zion DevOps reduced our deployment time from 2 hours to 15 minutes. The automation is incredible and the pricing is fair.'
+      rating: 5
+    }
+    {
+      name: 'Sarah Johnson'
+      role: 'Engineering Manager'
+      company: 'CloudWorks'
+      content:
+        'We switched from GitHub Actions to Zion and saved $200/month while getting better automation features.'
+      rating: 5
+    },      content: 'We switched from GitHub Actions to Zion and saved $200/month while getting better automation features.'
+      rating: 5
+    }
+    {
+      name: 'Robert Davis'
+      role: 'Site Reliability Engineer'
+      company: 'ScaleTech'
+      content:
+        'The infrastructure automation features are game-changing. We can now deploy to multiple clouds with a single click.'
+      rating: 5
+    },      content: 'The infrastructure automation features are game-changing. We can now deploy to multiple clouds with a single click.'
       rating: 5
     }
   ];
-
   const automationExamples = [
     {
-      title: 'Automated Testing',
-      description: 'Run comprehensive test suites on every commit',
-      icon: '🧪',
-      color: 'from-green-500 to-emerald-600',
+      title: 'Automated Testing'
+      description: 'Run comprehensive test suites on every commit'
+      icon: '🧪'
+      color: 'from-green-500 to-emerald-600'
     },    {
-      title: 'Security Scanning',
-      description: 'Automated vulnerability detection and compliance checks',
-      icon: '🔒',
-      color: 'from-red-500 to-pink-600',
+      title: 'Security Scanning'
+      description: 'Automated vulnerability detection and compliance checks'
+      icon: '🔒'
+      color: 'from-red-500 to-pink-600'
     },    {
-      title: 'Deployment Automation',
-      description: 'Zero-downtime deployments with rollback capabilities',
-      icon: '🚀',
-      color: 'from-blue-500 to-cyan-600',
+      title: 'Deployment Automation'
+      description: 'Zero-downtime deployments with rollback capabilities'
+      icon: '🚀'
+      color: 'from-blue-500 to-cyan-600'
     },    {
-      title: 'Infrastructure Management',
-      description: 'Automated scaling and resource optimization',
-      icon: '🏗️',
-      color: 'from-purple-500 to-indigo-600',
+      title: 'Infrastructure Management'
+      description: 'Automated scaling and resource optimization'
+      icon: '🏗️'
+      color: 'from-purple-500 to-indigo-600'
     },  ];      color: 'from-green-500 to-emerald-600'
-    };
+    }
     {
-      title: 'Security Scanning',
-      description: 'Automated vulnerability detection and compliance checks',
-      icon: '🔒',
-      color: 'from-red-500 to-pink-600',
+      title: 'Security Scanning'
+      description: 'Automated vulnerability detection and compliance checks'
+      icon: '🔒'
+      color: 'from-red-500 to-pink-600'
     },      color: 'from-red-500 to-pink-600'
-    };
+    }
     {
-      title: 'Deployment Automation',
-      description: 'Zero-downtime deployments with rollback capabilities',
-      icon: '🚀',
-      color: 'from-blue-500 to-cyan-600',
+      title: 'Deployment Automation'
+      description: 'Zero-downtime deployments with rollback capabilities'
+      icon: '🚀'
+      color: 'from-blue-500 to-cyan-600'
     },      color: 'from-blue-500 to-cyan-600'
-    };
+    }
     {
-      title: 'Infrastructure Management',
-      description: 'Automated scaling and resource optimization',
-      icon: '🏗️',
-      color: 'from-purple-500 to-indigo-600',
+      title: 'Infrastructure Management'
+      description: 'Automated scaling and resource optimization'
+      icon: '🏗️'
+      color: 'from-purple-500 to-indigo-600'
     },      color: 'from-purple-500 to-indigo-600'
     }
   ];
-
   return (
     <>
       <Head>
@@ -282,7 +283,6 @@ export default function DevOpsAutomationPage() {
           content='Professional DevOps automation starting at $39/month. CI/CD pipelines, infrastructure as code, and security automation.'
         />
         <meta name='twitter:card' content='summary_large_image' />
-
       <div className='min-h-screen bg-black'>
         {/* Hero Section */}
         <section className='pt-32 pb-20 bg-gradient-to-br from-blue-900/20 to-cyan-900/20'>
@@ -300,6 +300,7 @@ export default function DevOpsAutomationPage() {
               Streamline your development workflow with automated CI/CD
               pipelines, infrastructure as code, and intelligent security
               automation. Deploy faster, safer, and more reliably.
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <Button
@@ -332,7 +333,6 @@ export default function DevOpsAutomationPage() {
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className='py-24 bg-gray-900'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -381,7 +381,6 @@ export default function DevOpsAutomationPage() {
             </div>
           </div>
         </section>
-
         {/* Automation Examples Section */}
         <section className='py-24 bg-gray-800'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -429,7 +428,6 @@ export default function DevOpsAutomationPage() {
             </div>
           </div>
         </section>
-
         {/* Pricing Section */}
         <section id='pricing' className='py-24 bg-gray-900'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -502,8 +500,8 @@ export default function DevOpsAutomationPage() {
                         plan.popular
                           ? 'bg-blue-600 hover:bg-blue-700 text-white'                          : 'border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white'                      size="lg"
                       className={`w-full ${
-                        plan.popular 
-                          ? 'bg-blue-600 hover:bg-blue-700 text-white' 
+                        plan.popular
+                          ? 'bg-blue-600 hover:bg-blue-700 text-white'
                       }`}
                     >
                       {plan.cta}
@@ -514,7 +512,6 @@ export default function DevOpsAutomationPage() {
             </div>
           </div>
         </section>
-
         {/* Market Comparison Section */}
         <section className='py-24 bg-gray-800'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -605,7 +602,6 @@ export default function DevOpsAutomationPage() {
             </div>
           </div>
         </section>
-
         {/* Testimonials Section */}
         <section className='py-24 bg-gray-900'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -657,7 +653,6 @@ export default function DevOpsAutomationPage() {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className='py-24 bg-gradient-to-r from-blue-600 to-cyan-600'>
           <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
@@ -702,4 +697,3 @@ export default function DevOpsAutomationPage() {
     </>
   );
 }
-;

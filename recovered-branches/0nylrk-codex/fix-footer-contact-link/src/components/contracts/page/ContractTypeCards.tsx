@@ -1,21 +1,26 @@
+<<<<<<< HEAD
+
+import { Button } from "@/components/ui/button",
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+=======
 import { Button } from "@/components/ui/button";
 import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
+  Card
+  CardContent
+  CardDescription
+  CardFooter
+  CardHeader
+  CardTitle
 } from "@/components/ui/card";
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 import { FileText, ShieldCheck } from "lucide-react";
 interface ContractTypeCardsProps {
   onStandardClick: () => void;
-  onSmartClick: () => void;
+  onSmartClick: () => void
 }
-
 export function ContractTypeCards({
-  onStandardClick,
-  onSmartClick,
+  onStandardClick
+  onSmartClick
 }: ContractTypeCardsProps) {
   return (
     <div className="grid md:grid-cols-2 gap-6 mb-10">
@@ -43,7 +48,6 @@ export function ContractTypeCards({
           </Button>
         </CardFooter>
       </Card>
-
       <Card>
         <CardHeader className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-t-lg">
           <div className="flex justify-between items-center">

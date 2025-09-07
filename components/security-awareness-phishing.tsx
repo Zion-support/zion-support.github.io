@@ -1,16 +1,19 @@
-import React from 'react';
+import React from 'react',
 import Head from 'next/head';
-import {Phone, Mail, MapPin, Check, ArrowRight, Shield} from 'lucide-react';
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+import { Phone, Mail, MapPin, Check, ArrowRight, Shield  } from 'lucide-react';
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
 import Button from '../components/ui/Button';
 import { extraServices } from '../data/extra-services';
 export default function SecurityAwarenessPhishingPage() {
+<<<<<<< HEAD
+  const service = null;
+=======
   const service = extraServices.find(s =>
     s.link.endsWith('/security-awareness-phishing')
   );  if (!service) return null;export default function SecurityAwarenessPhishingPage() {
   const service = extraServices.find(s => s.link.endsWith('/security-awareness-phishing'));
   if (!service) return null;
-
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   return (
     <UltraAdvancedFuturisticBackground>
       <Head>
@@ -97,5 +100,3 @@ export default function SecurityAwarenessPhishingPage() {
     </UltraAdvancedFuturisticBackground>
   );
 }
-
-;

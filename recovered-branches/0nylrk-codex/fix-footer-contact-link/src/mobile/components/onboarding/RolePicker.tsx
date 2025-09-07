@@ -1,33 +1,35 @@
 
+<<<<<<< HEAD
+import React, { useState } from "react",
+import { Button } from "@/components/ui/button",
+import { Card, CardContent } from "@/components/ui/card";
+import { Briefcase, Users, Check } from "lucide-react";
+type UserRole = any;
+=======
 import React, { useState } from "react";
 import {Button} from "@/components/ui/button";
 import {Card, CardContent} from "@/components/ui/card";
 import {Briefcase, Users, Check} from "lucide-react";
-
 type UserRole = "talent" | "client" | null;
-
 interface RolePickerProps {
   onSelect: (role: UserRole) => void
 }
-
 export function RolePicker({ onSelect }: RolePickerProps) {
   const [selectedRole, setSelectedRole] = useState<UserRole>(null);
-
   const handleSelect = (role: UserRole) => {
-    setSelectedRole(role),
+    setSelectedRole(role)
     onSelect(role)
-  };
-
+  }
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   return (
     <div className="space-y-4 px-4">
       <h2 className="text-xl font-medium">What brings you to Zion?</h2>
       <p className="text-muted-foreground">Choose how you want to use our platform</p>
-
       <div className="space-y-3 mt-6">
-        <Card 
+        <Card
           className={`cursor-pointer transition-all ${
-            selectedRole === 'talent' 
-              ? "border-primary bg-primary/5" 
+            selectedRole === 'talent'
+              ? "border-primary bg-primary/5"
               : "border-border hover:border-primary/40"
           }`}
           onClick={() => handleSelect('talent')}
@@ -47,11 +49,10 @@ export function RolePicker({ onSelect }: RolePickerProps) {
             </div>
           </CardContent>
         </Card>
-
-        <Card 
+        <Card
           className={`cursor-pointer transition-all ${
-            selectedRole === 'client' 
-              ? "border-primary bg-primary/5" 
+            selectedRole === 'client'
+              ? "border-primary bg-primary/5"
               : "border-border hover:border-primary/40"
           }`}
           onClick={() => handleSelect('client')}
@@ -75,4 +76,3 @@ export function RolePicker({ onSelect }: RolePickerProps) {
     </div>
   )
 }
-;

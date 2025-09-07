@@ -1,12 +1,13 @@
+
 import React from 'react';
-import { Button } from '@/components/ui/button';
-import { Upload, FileText } from 'lucide-react';
+import { Button } from "@/components/ui/button";
+import { Upload, FileText } from 'lucide-react'
 interface UploadSectionProps {
   customFile: File | null;
-  onFileUpload: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  onFileUpload: (e: React.ChangeEvent<HTMLInputElement>) => void
 export function UploadSection({
-  customFile,
-  onFileUpload,
+  customFile
+  onFileUpload
 }: UploadSectionProps) {
   return (
     <div className='space-y-3'>
@@ -26,7 +27,6 @@ export function UploadSection({
           />
         </Button>
       </div>
-
             type="file"
             className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
             accept=".pdf"
@@ -34,7 +34,6 @@ export function UploadSection({
           />
         </Button>
       </div>
-
       {customFile && (
         <div className='p-3 bg-zion-blue-dark/30 rounded-md'>
           <div className='flex items-center justify-between'>
@@ -56,5 +55,5 @@ export function UploadSection({
         </div>
       )}
     </div>
-  );
+  )
 }

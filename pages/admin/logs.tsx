@@ -1,51 +1,84 @@
-import {useState, useEffect} from 'react';
-import {GetServerSideProps} from 'next';
-import fs from 'fs';
+import { useState, useEffect  } from 'react';
+import { GetServerSideProps  } from 'next';
+import fs from 'fs',
 import path from 'path';
+<<<<<<< HEAD
+import { Card, CardContent, CardHeader, CardTitle  } from '@/components/ui/card';
+import { Badge  } from '@/components/ui/badge';
+import { Button  } from '@/components/ui/button';
+import { Input  } from '@/components/ui/input';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue  } from '@/components/ui/select';
+import { AlertTriangle, Info, AlertCircle, XCircle, Search, Download, RefreshCw  } from 'lucide-react';
+=======
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,;
+  Select
+  SelectContent
+  SelectItem
+  SelectTrigger
+  SelectValue;
 } from '@/components/ui/select';
 import {
-  AlertTriangle,
-  Info,
-  AlertCircle,
-  XCircle,
-  Search,
-  Download,
-  RefreshCw,;
+  AlertTriangle
+  Info
+  AlertCircle
+  XCircle
+  Search
+  Download
+  RefreshCw;
 } from 'lucide-react';
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 import { logErrorToProduction } from '@/utils/productionLogger';
 interface LogEntry {
   id: string;
+  timestamp: string;
   level: 'debug' | 'info' | 'warn' | 'error' | 'critical';
   message: string;
   category: string;
-  component?: string;
-  timestamp: string;
-  sessionId?: string;
+  context?: Record<string, unknown>,
+  stack?: string;
+  url?: string;
+  userAgent?: string;
   userId?: string;
+  sessionId: string;
+  source: 'client' | 'server' | 'middleware' | 'api';
+  component?: string;
+  feature?: string;
   error?: {
     name: string;
+    message: string;
     stack?: string;
-  };
+<<<<<<< HEAD
+    cause?: unknown
+  },
+=======
+  }
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   performance?: {
-    duration: number;
     memory?: number;
-  };
+<<<<<<< HEAD
+    timing?: number;
+    fps?: number
+  }
+}
 
+=======
+  }
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 interface LogsPageProps {
   logs: LogEntry[];
   errorCount: number;
   warningCount: number;
   totalCount: number;
+<<<<<<< HEAD
+  lastUpdated: string
+}
+
+const LogLevelIcon = null;
+=======
   lastUpdated: string;
 const LogLevelIcon = ({ level }: { level: LogEntry['level'] }) => {
   switch (level) {
@@ -65,22 +98,20 @@ const LogLevelIcon = ({ level }: { level: LogEntry['level'] }) => {
 ];
 const LogLevelBadge = ({ level }: { level: LogEntry['level'] }) => {
   const colors = {
-    debug: 'bg-blue-100 text-blue-800',
-    info: 'bg-green-100 text-green-800',
-    warn: 'bg-yellow-100 text-yellow-800',
-    error: 'bg-red-100 text-red-800',
-    critical: 'bg-red-200 text-red-900',
-  };
-
+    debug: 'bg-blue-100 text-blue-800'
+    info: 'bg-green-100 text-green-800'
+    warn: 'bg-yellow-100 text-yellow-800'
+    error: 'bg-red-100 text-red-800'
+    critical: 'bg-red-200 text-red-900'
+  }
   return <Badge className={colors[level]}>{level.toUpperCase()}</Badge>;
-};
-
+}
 export default function LogsPage({
-  logs: initialLogs,
-  errorCount,
-  warningCount,
-  totalCount,
-  lastUpdated,
+  logs: initialLogs
+  errorCount
+  warningCount
+  totalCount
+  lastUpdated
 }: LogsPageProps) {  const [logs, setLogs] = useState<LogEntry[]>(initialLogs);
   const [filteredLogs, setFilteredLogs] = useState<LogEntry[]>(initialLogs);
   const [searchTerm, setSearchTerm] = useState('');
@@ -88,14 +119,12 @@ export default function LogsPage({
   const [categoryFilter, setCategoryFilter] = useState<string>('all');
   const [sourceFilter, setSourceFilter] = useState<string>('all');
   const [isLoading, setIsLoading] = useState(false);
-
   const categories = Array.from(new Set(logs.map(log => log.category))).filter(
     Boolean
   );
   const sources = Array.from(new Set(logs.map(log => log.source))).filter(
     Boolean
   );
-
   useEffect(() => {
     // Simulate loading logs
     setTimeout(() => {
@@ -104,31 +133,25 @@ export default function LogsPage({
       setLoading(false);
     }, 1000);
   }, []);
-
   useEffect(() => {
     let filtered = [...logs];
-
     if (searchTerm) {
       filtered = filtered.filter(
         log =>
-          log.message.toLowerCase().includes(searchTerm.toLowerCase()) ||
-          log.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
+          log.message.toLowerCase().includes(searchTerm.toLowerCase()) |
+          log.category.toLowerCase().includes(searchTerm.toLowerCase()) |
           (log.component &&
             log.component.toLowerCase().includes(searchTerm.toLowerCase()))
       );
     }
-
     if (levelFilter !== 'all') {
       filtered = filtered.filter(log => log.level === levelFilter);
     }
-
     if (categoryFilter !== 'all') {
       filtered = filtered.filter(log => log.category === categoryFilter);
     }
-
     setFilteredLogs(filtered);
   }, [logs, searchTerm, levelFilter, categoryFilter]);
-
   const getLevelColor = (level: string) => {
     switch (level) {
       case 'debug': return 'bg-blue-100 text-blue-800';
@@ -137,27 +160,21 @@ export default function LogsPage({
       case 'error': return 'bg-red-100 text-red-800';
       case 'critical': return 'bg-red-200 text-red-900';
       default: return 'bg-gray-100 text-gray-800';    }
-  };
-
+  }
   const exportLogs = () => {
     const dataStr = JSON.stringify(filteredLogs, null, 2);
     const dataUri =
       'data:application/json;charset=utf-8,' + encodeURIComponent(dataStr);
-
     const exportFileDefaultName = `logs-${new Date().toISOString().slice(0, 10)}.json`;
-
     const linkElement = document.createElement('a');
     linkElement.setAttribute('href', dataUri);
     linkElement.setAttribute('download', exportFileDefaultName);
     linkElement.click();
-  };
-
+  }
   const formatTimestamp = (timestamp: string) => {
-    return new Date(timestamp).toLocaleString();  };
-
+    return new Date(timestamp).toLocaleString();  }
   const formatPerformance = (performance?: LogEntry['performance']) => {
     if (!performance) return null;
-
     const parts = [];
     if (performance.memory) {
       parts.push(`Memory: ${(performance.memory / 1024 / 1024).toFixed(1)}MB`);
@@ -168,14 +185,11 @@ export default function LogsPage({
     if (performance.fps) {
       parts.push(`FPS: ${performance.fps}`);
     }
-
     return parts.length > 0 ? parts.join(', ') : null;
-  };
-
-  const errorCount = logs.filter(log => log.level === 'error' || log.level === 'critical').length;
+  }
+  const errorCount = logs.filter(log => log.level === 'error' |log.level === 'critical').length;
   const warningCount = logs.filter(log => log.level === 'warn').length;
   const totalCount = logs.length;
-
   return (
     <div className='container mx-auto p-6 space-y-6'>
       <div className='flex items-center justify-between'>
@@ -192,7 +206,6 @@ export default function LogsPage({
             Export
           </Button>
         </div>
-
       {/* Summary Cards */}
       <div className='grid grid-cols-1 md:grid-cols-4 gap-4'>
         <Card>
@@ -204,7 +217,6 @@ export default function LogsPage({
             <div className='text-2xl font-bold'>{totalCount}</div>
             <p className='text-xs text-muted-foreground'>All log entries</p>          </CardContent>
         </Card>
-
         <Card>
           <CardHeader className='flex flex-row items-center justify-between space-y-0 pb-2'>
             <CardTitle className='text-sm font-medium'>Errors</CardTitle>
@@ -216,7 +228,6 @@ export default function LogsPage({
               Critical & error logs
             </p>          </CardContent>
         </Card>
-
         <Card>
           <CardHeader className='flex flex-row items-center justify-between space-y-0 pb-2'>
             <CardTitle className='text-sm font-medium'>Warnings</CardTitle>
@@ -228,7 +239,6 @@ export default function LogsPage({
             </div>
             <p className='text-xs text-muted-foreground'>Warning logs</p>          </CardContent>
         </Card>
-
         <Card>
           <CardHeader className='flex flex-row items-center justify-between space-y-0 pb-2'>
             <CardTitle className='text-sm font-medium'>Last Updated</CardTitle>
@@ -241,7 +251,6 @@ export default function LogsPage({
             <p className='text-xs text-muted-foreground'>Data freshness</p>          </CardContent>
         </Card>
       </div>
-
       {/* Filters */}
       <Card>
         <CardHeader>
@@ -258,7 +267,6 @@ export default function LogsPage({
                 onChange={e => setSearchTerm(e.target.value)}
               />
             </div>
-
             <Select value={levelFilter} onValueChange={setLevelFilter}>
               <SelectTrigger>
                 <SelectValue placeholder='All levels' />
@@ -271,7 +279,6 @@ export default function LogsPage({
                 <SelectItem value='error'>Error</SelectItem>
                 <SelectItem value='critical'>Critical</SelectItem>              </SelectContent>
             </Select>
-
             <Select value={categoryFilter} onValueChange={setCategoryFilter}>
               <SelectTrigger>
                 <SelectValue placeholder='All categories' />
@@ -284,7 +291,6 @@ export default function LogsPage({
                   </SelectItem>                ))}
               </SelectContent>
             </Select>
-
             <Select value={sourceFilter} onValueChange={setSourceFilter}>
               <SelectTrigger>
                 <SelectValue placeholder='All sources' />
@@ -323,9 +329,7 @@ export default function LogsPage({
                       {formatTimestamp(log.timestamp)}
                     </span>
                   </div>
-
                   <div className='text-sm font-medium'>{log.message}</div>
-
                   {log.context && Object.keys(log.context).length > 0 && (
                     <details className='text-xs'>
                       <summary className='cursor-pointer text-muted-foreground hover:text-foreground'>
@@ -335,7 +339,6 @@ export default function LogsPage({
                       </pre>
                     </details>
                   )}
-
                   {log.error && (
                     <details className='text-xs'>
                       <summary className='cursor-pointer text-red-600 hover:text-red-800'>
@@ -373,13 +376,11 @@ export default function LogsPage({
                       </div>
                     </details>
                   )}
-
                   <div className='flex items-center justify-between text-xs text-muted-foreground'>                    <div>
                       Session: {log.sessionId}
                       {log.userId && ` • User: ${log.userId}`}
                     </div>
                   </div>
-
                   {log.url && (
                     <div className='text-xs text-muted-foreground truncate'>                      URL: {log.url}
                     </div>
@@ -395,7 +396,7 @@ export default function LogsPage({
       </main>
     </>
   );
-};
+}
 export const getServerSideProps: GetServerSideProps = async () => {
   try {
     const logsDir = path.join(process.cwd(), 'logs');
@@ -408,37 +409,35 @@ export const getServerSideProps: GetServerSideProps = async () => {
         }
       }
     }
-
     // Sort logs by timestamp (newest first)
     logs.sort(
       (a, b) =>
         new Date(b.timestamp).getTime() - new Date(a.timestamp).getTime()
     );
-
     // Calculate statistics
     const errorCount = logs.filter(
-      log => log.level === 'error' || log.level === 'critical'
+      log => log.level === 'error' |log.level === 'critical'
     ).length;    const warningCount = logs.filter(log => log.level === 'warn').length;
     const totalCount = logs.length;
-
     return {
       props: {
         logs: logs.slice(0, 1000), // Limit to most recent 1000 logs
-        errorCount,
-        warningCount,
-        totalCount,
-        lastUpdated: new Date().toISOString(),
-      },
-    };
+        errorCount
+        warningCount
+        totalCount
+        lastUpdated: new Date().toISOString()
+      }
+    }
   } catch (error) {
     logErrorToProduction('Error reading logs:', error);    return {
       props: {
-        logs: [],
-        errorCount: 0,
-        warningCount: 0,
-        totalCount: 0,
-        lastUpdated: new Date().toISOString(),
-      },
-    };
+        logs: []
+        errorCount: 0
+        warningCount: 0
+        totalCount: 0
+        lastUpdated: new Date().toISOString()
+      }
+    }
   }
-};
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

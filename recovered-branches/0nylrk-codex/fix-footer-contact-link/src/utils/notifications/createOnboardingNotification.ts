@@ -1,6 +1,6 @@
 
-import {createNotification} from './createNotification';
-import {OnboardingNotificationParams} from './types';
+import { createNotification  } from './createNotification';
+import { OnboardingNotificationParams } from './types';
 /**
  * Creates an onboarding notification for a user
  */
@@ -9,11 +9,13 @@ export async function createOnboardingNotification({
   missingMilestone;
   userRole
 }: OnboardingNotificationParams) {
+<<<<<<< HEAD
+  let title = null;
+=======
   let title = '';
   let message = '';
   let actionUrl = '';
   let actionText = '';
-  
   if (userRole === 'talent') {
     switch (missingMilestone) {
       case 'profile_completed':
@@ -57,15 +59,14 @@ export async function createOnboardingNotification({
         break
     }
   }
-  
   return createNotification({
     userId;
     title;
     message;
     type: 'onboarding';
     sendEmail: false;
-    actionUrl,
+    actionUrl
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
     actionText
   })
 }
-;

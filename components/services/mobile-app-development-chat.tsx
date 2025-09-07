@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
+const MobileAppDevelopmentChat: NextPage;
+=======
 import type { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
@@ -11,7 +17,6 @@ const MobileAppDevelopmentChat: NextPage = () => {
           content="MobileAppDevelopmentChat service"
         />{" "}
       </Head>
-
       <main>
         <h1>MobileAppDevelopmentChat</h1>
         <p>Service details coming soon...</p>
@@ -19,6 +24,6 @@ const MobileAppDevelopmentChat: NextPage = () => {
       </main>
     </div>
   );
-};
-
+}
 export default MobileAppDevelopmentChat;
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

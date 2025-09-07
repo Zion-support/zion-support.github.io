@@ -4,121 +4,85 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
-class MergeConflictResolver {
-  constructor() {
-    this.resolvedFiles = [];
-    this.errors = [];
-  }
+console.log('🔧 Resolving merge conflicts automatically...');
 
-  log(message, type = 'INFO') {
-    const timestamp = new Date().toISOString();
-    const prefix = {
-      'INFO': 'ℹ️',
-      'SUCCESS': '✅',
-      'ERROR': '❌',
-      'WARNING': '⚠️',
-      'PROGRESS': '🔄'
-    }[type] || 'ℹ️';
-    console.log(`${prefix} [${timestamp}] ${message}`);
-  }
-
-  async resolveConflicts() {
-    this.log('🚀 Starting merge conflict resolution...', 'PROGRESS');
-    
-    try {
-      // Get list of conflicted files
-      const conflictedFiles = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' })
-        .trim()
-        .split('\n')
-        .filter(file => file.length > 0);
-
-      this.log(`Found ${conflictedFiles.length} conflicted files`, 'INFO');
-
-      for (const filePath of conflictedFiles) {
-        try {
-          await this.resolveFile(filePath);
-        } catch (error) {
-          this.errors.push({ filePath, error: error.message });
-          this.log(`  ❌ Failed to resolve ${filePath}: ${error.message}`, 'ERROR');
-        }
-      }
-
-      this.log('\n📊 Merge Conflict Resolution Report', 'INFO');
-      this.log('='.repeat(60));
-      this.log(`Resolved ${this.resolvedFiles.length} files.`, 'SUCCESS');
-      if (this.errors.length > 0) {
-        this.log(`Encountered ${this.errors.length} errors:`, 'WARNING');
-        this.errors.forEach(err => this.log(`  - ${err.filePath}: ${err.error}`, 'ERROR'));
-      } else {
-        this.log('No errors encountered during resolution.', 'SUCCESS');
-      }
-
-      // Add resolved files to git
-      if (this.resolvedFiles.length > 0) {
-        this.log('Adding resolved files to git...', 'PROGRESS');
-        execSync(`git add ${this.resolvedFiles.join(' ')}`, { stdio: 'inherit' });
-        this.log('Files added to git successfully', 'SUCCESS');
-      }
-
-    } catch (error) {
-      this.log(`Error during conflict resolution: ${error.message}`, 'ERROR');
-      throw error;
-    }
-  }
-
-  async resolveFile(filePath) {
+// Function to resolve conflicts in a file by accepting incoming changes
+function resolveConflictsInFile(filePath) {
+  try {
     if (!fs.existsSync(filePath)) {
-      this.log(`  ⚠️ File ${filePath} does not exist, skipping`, 'WARNING');
-      return;
+      console.log(`⚠️  File not found: ${filePath}`);
+      return false;
     }
 
-    let content = fs.readFileSync(filePath, 'utf8');
+    const content = fs.readFileSync(filePath, 'utf8');
     
     // Check if file has merge conflicts
-    if (!content.includes('<<<<<<< HEAD') || !content.includes('>>>>>>>')) {
-      this.log(`  ℹ️ No conflicts in ${filePath}, skipping`, 'INFO');
-      return;
+    if (!content.includes('') || !content.includes('>>>>>>>')) {
+      return false; // No conflicts in this file
     }
 
-    // Strategy: Choose incoming changes (from remote) for most files
-    // This means we'll take the version after ======= and before >>>>>>>
-    let resolvedContent = content;
-    
-    // Handle different conflict patterns
-    const conflictPatterns = [
-      // Standard conflict markers
-      /<<<<<<< HEAD[\s\S]*?=======([\s\S]*?)>>>>>>> [^\n]+/g,
-      // Modified/delete conflicts
-      /<<<<<<< HEAD[\s\S]*?=======([\s\S]*?)>>>>>>> [^\n]+/g
-    ];
+    console.log(`🔧 Resolving conflicts in: ${filePath}`);
 
-    for (const pattern of conflictPatterns) {
-      resolvedContent = resolvedContent.replace(pattern, (match, incoming) => {
-        return incoming ? incoming.trim() : '';
-      });
-    }
+    // Strategy: Accept incoming changes (from PR branch)
+    // Remove conflict markers and keep only the incoming changes
+    let resolvedContent = content
+      .replace(/\n?/g, '') // Remove HEAD section and separator
+      .replace(/      .replace(/\n{3,}/g, '\n\n'); // Clean up excessive newlines
 
-    // Clean up any remaining conflict markers
-    resolvedContent = resolvedContent
-      .replace(/<<<<<<< HEAD[\s\S]*?=======/g, '')
-      .replace(/>>>>>>> [^\n]+/g, '')
-      .replace(/^<<<<<<< HEAD$/gm, '')
-      .replace(/^=======$/gm, '')
-      .replace(/^>>>>>>> [^\n]+$/gm, '');
-
-    // Write resolved content
+    // Write the resolved content back
     fs.writeFileSync(filePath, resolvedContent, 'utf8');
-    this.resolvedFiles.push(filePath);
-    this.log(`  ✅ Resolved ${filePath}`);
+    console.log(`✅ Resolved conflicts in: ${filePath}`);
+    return true;
+  } catch (error) {
+    console.error(`❌ Error resolving conflicts in ${filePath}:`, error.message);
+    return false;
   }
 }
 
-if (require.main === module) {
-  const resolver = new MergeConflictResolver();
-  resolver.resolveConflicts().catch(error => {
-    console.error('Merge conflict resolution failed:', error);
-    process.exit(1);
-  });
+// Function to find all files with merge conflicts
+function findConflictedFiles() {
+  try {
+    const result = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' });
+    return result.trim().split('\n').filter(file => file.length > 0);
+  } catch (error) {
+    console.error('Error finding conflicted files:', error.message);
+    return [];
+  }
 }
 
-module.exports = MergeConflictResolver;
+// Main execution
+function main() {
+  console.log('🔍 Finding files with merge conflicts...');
+  const conflictedFiles = findConflictedFiles();
+  
+  if (conflictedFiles.length === 0) {
+    console.log('✅ No merge conflicts found!');
+    return;
+  }
+
+  console.log(`📁 Found ${conflictedFiles.length} files with conflicts:`);
+  conflictedFiles.forEach(file => console.log(`  - ${file}`));
+
+  let resolvedCount = 0;
+  let totalCount = conflictedFiles.length;
+
+  // Resolve conflicts in each file
+  for (const file of conflictedFiles) {
+    if (resolveConflictsInFile(file)) {
+      resolvedCount++;
+    }
+  }
+
+  console.log(`\n📊 Resolution Summary:`);
+  console.log(`  - Total files: ${totalCount}`);
+  console.log(`  - Successfully resolved: ${resolvedCount}`);
+  console.log(`  - Failed: ${totalCount - resolvedCount}`);
+
+  if (resolvedCount > 0) {
+    console.log('\n🎉 Merge conflicts resolved! You can now commit the changes.');
+  } else {
+    console.log('\n⚠️  No conflicts were resolved. Manual intervention may be required.');
+  }
+}
+
+main();

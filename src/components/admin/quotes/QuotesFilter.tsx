@@ -1,25 +1,35 @@
-import React from 'react';
-import { Calendar, RefreshCw } from 'lucide-react';
-import { Card, CardContent } from '@/components/ui/card';
-import { Input } from '@/components/ui/input';
+import React from 'react'
+import { Calendar, RefreshCw } from 'lucide-react'
+<<<<<<< HEAD
+import { Card, CardContent } from "@/components/ui/card",
+import { Input } from "@/components/ui/input",
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover",
+import { Button } from "@/components/ui/button",
+import { Calendar as CalendarComponent } from "@/components/ui/calendar",
+import { format } from "date-fns";
+import type { DateRange } from "react-day-picker";
+import type { QuoteStatus } from "@/types/quotes";
+=======
+import { Card, CardContent } from '@/components/ui/card'
+import { Input } from '@/components/ui/input'
 import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,;
-} from '@/components/ui/select';
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,;
-} from '@/components/ui/popover';
-import { Button } from '@/components/ui/button';
-import { Calendar as CalendarComponent } from '@/components/ui/calendar';
-import { format } from 'date-fns';
-import type { DateRange } from 'react-day-picker';
-import type { QuoteStatus } from '@/types/quotes';
-
+  Select
+  SelectContent
+  SelectItem
+  SelectTrigger
+  SelectValue
+} from '@/components/ui/select'
+  Popover
+  PopoverContent
+  PopoverTrigger
+} from '@/components/ui/popover'
+import { Button } from '@/components/ui/button'
+import { Calendar as CalendarComponent } from '@/components/ui/calendar'
+import { format } from 'date-fns'
+import type { DateRange } from 'react-day-picker'
+import type { QuoteStatus } from '@/types/quotes'
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 interface QuotesFilterProps {
   searchQuery: string;
   setSearchQuery: (value: string) => void;
@@ -29,16 +39,30 @@ interface QuotesFilterProps {
   setArchiveFilter: (value: 'active' | 'archived' | 'all') => void;
   dateRange: DateRange | undefined;
   setDateRange: (range: DateRange | undefined) => void;
-  onReset: () => void;
+  onReset: () => void
 export const QuotesFilter: React.FC<QuotesFilterProps> = ({
-  searchQuery,
-  setSearchQuery,
-  statusFilter,
-  setStatusFilter,
-  archiveFilter,
-  setArchiveFilter,
-  dateRange,
-  setDateRange,
+<<<<<<< HEAD
+  searchQuery;
+  setSearchQuery;
+  statusFilter;
+  setStatusFilter;
+  archiveFilter;
+  setArchiveFilter;
+  dateRange;
+  setDateRange;
+  onReset
+},) => {
+  return (
+    <Card className;
+=======
+  searchQuery
+  setSearchQuery
+  statusFilter
+  setStatusFilter
+  archiveFilter
+  setArchiveFilter
+  dateRange
+  setDateRange
   onReset,}) => {
   onReset
 },) => {
@@ -53,7 +77,6 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
               value={searchQuery}
               onChange={e => setSearchQuery(e.target.value)}            />
           </div>
-
           <div>
             <p className='text-zion-slate-light text-sm mb-2'>Status</p>
             <Select
@@ -72,7 +95,6 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
               </SelectContent>
             </Select>
           </div>
-
           <div>
             <p className='text-zion-slate-light text-sm mb-2'>Archive</p>
             <Select
@@ -88,7 +110,6 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
               </SelectContent>
             </Select>
           </div>
-
           <div>
             <p className='text-zion-slate-light text-sm mb-2'>Date Range</p>
             <Popover>
@@ -134,7 +155,6 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
             </Popover>
           </div>
         </div>
-
         <div className='mt-4 flex justify-end'>
           <Button
             variant='outline'
@@ -144,8 +164,8 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
         </div>
       </CardContent>
     </Card>
-  );
-};
+  )
+}
             <RefreshCw className="mr-2 h-4 w-4" /> Reset Filters
             onClick={onReset}
             className="border-zion-blue-light text-zion-slate-light"
@@ -155,6 +175,7 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
         </div>
       </CardContent>
     </Card>
-);
+  )
 };  )
-};
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

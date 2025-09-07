@@ -1,24 +1,39 @@
-import React from 'react';
+import React from 'react'
+<<<<<<< HEAD
 
-const About: React.FC = () => {
+import { SEO } from "@/components/SEO",
+import { GradientHeading } from "@/components/GradientHeading",
+import { ContactSection } from "@/components/ContactSection";
+import Link from "next/link";
+export default function About() {
+  const team = null;
+=======
+const About = () => {
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   return (
-    <div className="min-h-screen bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <h1 className="text-4xl font-bold text-gray-900 mb-8">About Us</h1>
-        <div className="prose max-w-none">
-          <p className="text-lg text-gray-600 mb-6">
-            Zion Tech is a leading technology company specializing in innovative solutions
-            for businesses of all sizes. We combine cutting-edge technology with deep
-            industry expertise to deliver exceptional results.
-          </p>
-          <p className="text-lg text-gray-600">
-            Our team of experienced professionals is dedicated to helping our clients
-            achieve their technology goals and drive business growth.
-          </p>
+    <div className="min-h-screen bg-gray-50 py-12">
+      <div className="container mx-auto px-4">
+        <div className="max-w-4xl mx-auto">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">About Zion Tech Group</h1>
+          <div className="bg-white rounded-lg shadow-lg p-8">
+            <p className="text-lg text-gray-600 mb-6">
+              Zion Tech Group is a leading provider of AI and technology solutions
+              empowering businesses with cutting-edge technology to drive innovation and growth.
+            </p>
+            <p className="text-gray-600 mb-6">
+              Our team of experts specializes in artificial intelligence, cloud computing
+              cybersecurity, and digital transformation services. We help organizations
+              leverage technology to achieve their business objectives.
+            </p>
+            <h2 className="text-2xl font-semibold text-gray-900 mb-4">Our Mission</h2>
+            <p className="text-gray-600">
+              To deliver innovative technology solutions that transform businesses and
+              create lasting value for our clients.
+            </p>
+          </div>
         </div>
       </div>
     </div>
-  );
-};
-
-export default About;
+  )
+}
+export default About
