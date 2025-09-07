@@ -16,6 +16,106 @@ import {
   MessageSquare
 } from 'lucide-react';
 
+const features = [
+  {
+    title: 'Strategic Technology Planning',
+    description: 'Comprehensive technology roadmaps aligned with your business objectives and growth plans.',
+    color: 'from-blue-500 to-cyan-500',
+    icon: Target
+  },
+  {
+    title: 'Digital Transformation',
+    description: 'End-to-end guidance for modernizing your technology infrastructure and processes.',
+    color: 'from-purple-500 to-pink-500',
+    icon: Rocket
+  },
+  {
+    title: 'Cloud Strategy & Migration',
+    description: 'Expert guidance on cloud adoption, migration strategies, and optimization.',
+    color: 'from-cyan-500 to-blue-500',
+    icon: Cloud
+  },
+  {
+    title: 'Cybersecurity & Compliance',
+    description: 'Comprehensive security assessments and compliance frameworks for your business.',
+    color: 'from-red-500 to-orange-500',
+    icon: Shield
+  },
+  {
+    title: 'Data Analytics & BI',
+    description: 'Transform your data into actionable insights with advanced analytics solutions.',
+    color: 'from-green-500 to-emerald-500',
+    icon: BarChart3
+  },
+  {
+    title: 'IT Infrastructure Optimization',
+    description: 'Optimize your IT infrastructure for performance, scalability, and cost efficiency.',
+    color: 'from-indigo-500 to-purple-500',
+    icon: Server
+  }
+];
+
+const consultingServices = [
+  {
+    title: 'Technology Assessment',
+    description: 'Comprehensive evaluation of your current technology stack and recommendations for improvement.',
+    icon: Cpu,
+    features: ['Infrastructure analysis', 'Performance evaluation', 'Security assessment', 'Cost optimization']
+  },
+  {
+    title: 'Digital Strategy',
+    description: 'Strategic planning for digital transformation initiatives and technology adoption.',
+    icon: Brain,
+    features: ['Technology roadmap', 'Digital maturity assessment', 'Innovation strategy', 'Change management']
+  },
+  {
+    title: 'Cloud Consulting',
+    description: 'Expert guidance on cloud architecture, migration, and optimization strategies.',
+    icon: Cloud,
+    features: ['Cloud strategy', 'Migration planning', 'Architecture design', 'Cost optimization']
+  },
+  {
+    title: 'Security & Compliance',
+    description: 'Comprehensive security assessments and compliance framework implementation.',
+    icon: Shield,
+    features: ['Security audit', 'Compliance framework', 'Risk assessment', 'Security policies']
+  },
+  {
+    title: 'Data Strategy',
+    description: 'Strategic planning for data management, analytics, and business intelligence.',
+    icon: Database,
+    features: ['Data governance', 'Analytics strategy', 'BI implementation', 'Data quality']
+  },
+  {
+    title: 'IT Operations',
+    description: 'Optimization of IT operations, processes, and service delivery.',
+    icon: Server,
+    features: ['Process optimization', 'Service delivery', 'Automation', 'Performance monitoring']
+  },
+  {
+    title: 'Change Management',
+    description: 'Strategic guidance for managing technology change and organizational transformation.',
+    icon: Users,
+    features: ['Change strategy', 'Training programs', 'Communication plans', 'Success metrics']
+  },
+  {
+    title: 'Vendor Management',
+    description: 'Expert guidance on technology vendor selection and relationship management.',
+    icon: Building,
+    features: ['Vendor evaluation', 'Contract negotiation', 'Performance monitoring', 'Risk management']
+  }
+];
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1
+    }
+  }
+};
+
 export default function ITConsulting() {
   const consultingServices = [
     {
@@ -98,10 +198,10 @@ export default function ITConsulting() {
   return (
     <div className="min-h-screen bg-futuristic">
       {/* Hero Section */}
-      <section className="relative py-32 bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-blue overflow-hidden">
+      <section className="relative py-32 bg-gradient-to-br from-slate-800 via-blue-900 to-slate-800 overflow-hidden">
         <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-20 left-20 w-64 h-64 border border-zion-cyan rounded-full animate-pulse"></div>
-          <div className="absolute bottom-20 right-20 w-48 h-48 border border-zion-purple rounded-full animate-pulse delay-1000"></div>
+          <div className="absolute top-20 left-20 w-64 h-64 border border-cyan-400 rounded-full animate-pulse"></div>
+          <div className="absolute bottom-20 right-20 w-48 h-48 border border-purple-400 rounded-full animate-pulse delay-1000"></div>
         </div>
         
         <div className="container mx-auto px-4 text-center relative z-10">
@@ -147,7 +247,7 @@ export default function ITConsulting() {
       </section>
 
       {/* Consulting Services Grid */}
-      <section className="py-20 bg-zion-slate-dark">
+      <section className="py-20 bg-slate-800">
         <div className="container mx-auto px-4">
           <motion.div 
             className="text-center mb-16"
@@ -188,8 +288,8 @@ export default function ITConsulting() {
                 
                 <ul className="space-y-3">
                   {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center gap-3 text-zion-slate-light text-sm">
-                      <CheckCircle className="w-4 h-4 text-zion-cyan flex-shrink-0" />
+                    <li key={featureIndex} className="flex items-center gap-3 text-gray-300 text-sm">
+                      <CheckCircle className="w-4 h-4 text-cyan-400 flex-shrink-0" />
                       {feature}
                     </li>
                   ))}

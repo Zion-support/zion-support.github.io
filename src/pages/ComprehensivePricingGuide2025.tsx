@@ -82,8 +82,6 @@ const ComprehensivePricingGuide2025 = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [viewMode, setViewMode] = useState('grid');
 
-  const allServices = INNOVATIVE_MICRO_SAAS_SERVICES_2025;
-  
   const categories = [
     { id: 'all', name: 'All Services', icon: <Grid className="w-4 h-4" /> },
     { id: 'ai', name: 'AI & Machine Learning', icon: <Brain className="w-4 h-4" /> },

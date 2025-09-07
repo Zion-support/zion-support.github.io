@@ -411,13 +411,6 @@ export default function ComprehensiveServicesShowcase2025() {
       default:
         return 0;
     }
-    
-    if (activeCategory !== 'all') {
-      filtered = filtered.filter(service => service.category.toLowerCase().includes(activeCategory));
-    }
-    
-    return filtered;
-  }, [searchTerm, activeCategory]);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -515,7 +508,7 @@ export default function ComprehensiveServicesShowcase2025() {
         <div className="absolute inset-0 bg-gradient-to-br from-zion-purple/20 via-zion-blue to-zion-cyan/20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center"
@@ -794,6 +787,45 @@ export default function ComprehensiveServicesShowcase2025() {
                       </span>
                     ))}
                   </div>
+                  <span className="px-3 py-1 rounded-full text-xs font-medium bg-green-500 text-white">
+                    {service.innovationLevel}
+                  </span>
+                </div>
+                
+                <p className="text-gray-300 mb-4">{service.description}</p>
+
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-4">
+                  <div className="text-center">
+                    <div className="text-lg font-semibold text-cyan-400">{service.aiScore}%</div>
+                    <div className="text-xs text-gray-400">AI Score</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-lg font-semibold text-green-400">{service.roi}</div>
+                    <div className="text-xs text-gray-400">ROI</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-lg font-semibold text-purple-400">{service.marketSize}</div>
+                    <div className="text-xs text-gray-400">Market Size</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-lg font-semibold text-blue-400">{service.currency}{service.price}</div>
+                    <div className="text-xs text-gray-400">Price</div>
+                  </div>
+                </div>
+
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center space-x-1">
+                    <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                    <span className="text-white text-sm">{service.rating}</span>
+                    <span className="text-gray-400 text-sm">({service.reviewCount})</span>
+                  </div>
+                  <Link
+                    to={`/services/${service.id}`}
+                    className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-lg font-medium hover:from-blue-600 hover:to-purple-600 transition-all duration-300"
+                  >
+                    Learn More
+                    <ArrowRight className="w-4 h-4 ml-2" />
+                  </Link>
                 </div>
 
                 <div className="flex justify-between items-center">
@@ -815,6 +847,19 @@ export default function ComprehensiveServicesShowcase2025() {
                 </div>
               </motion.div>
             ))}
+          </div>
+        )}
+
+        {/* Empty State */}
+        {filteredServices.length === 0 && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            className="text-center py-12"
+          >
+            <Search className="w-16 h-16 text-gray-400 mx-auto mb-4" />
+            <h3 className="text-xl font-semibold text-white mb-2">No services found</h3>
+            <p className="text-gray-400">Try adjusting your search criteria or filters</p>
           </motion.div>
 
           {/* No Results Message */}
@@ -961,4 +1006,6 @@ export default function ComprehensiveServicesShowcase2025() {
       </section>
     </div>
   );
-}
+};
+
+export default ComprehensiveServicesShowcase2025;
