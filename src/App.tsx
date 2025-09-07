@@ -26,6 +26,8 @@ const LoadingFallback = () => (
 );
 
 function App() {
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+
   return (
     <Router>
       <div className="min-h-screen bg-background text-foreground">

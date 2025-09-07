@@ -23,7 +23,6 @@ import { Link } from "react-router-dom";
 import { Globe, Shield, Brain, Cloud, Lock, Zap, Users, BarChart3, FileImage, Code, Shield as ShieldIcon, Server, TrendingUp, MessageCircle, Video, FileText, Heart } from "lucide-react";
 import { useEffect, useState } from "react";
 import { EXPANDED_SERVICES } from "@/data/expandedServices";
-=======
 import { ProductListing } from "@/types/listings";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -760,7 +759,5 @@ export default function ServicesPage() {
       />
       <TrustedBySection />
     </>
-=======
   );
 }
->>>>>>> origin/cursor/expand-services-and-deploy-updates-4e39
