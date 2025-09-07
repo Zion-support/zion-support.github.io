@@ -1,8 +1,11 @@
-import { render, screen } from '@testing-library/react';
+import { render, screen, waitFor } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import HomePage from './app/page';
 
-it('renders without crashing', () => {
+it('renders without crashing', async () => {
   render(<HomePage />);
-  expect(screen.getByText('Welcome to Zion Tech Group')).toBeInTheDocument();
+  // Wait for the lazy-loaded components to render
+  await waitFor(() => {
+    expect(screen.getByText('Welcome to Zion Tech Group')).toBeInTheDocument();
+  });
 });

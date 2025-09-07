@@ -1,10 +1,10 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import Home from '../pages/index';
+import HomePage from '../app/page';
 
 describe('Smoke Tests', () => {
   test('Home page renders without crashing', () => {
-    render(<Home />);
+    render(<HomePage />);
     expect(screen.getByText(/Zion Tech Group/i)).toBeInTheDocument();
   });
 
@@ -12,7 +12,7 @@ describe('Smoke Tests', () => {
     // This test passes if the file can be imported without errors
     expect(() => {
       // Dynamic import for ES modules
-      import('../pages/index');
+      import('../app/page');
     }).not.toThrow();
   });
 
