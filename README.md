@@ -185,6 +185,19 @@ npm start
 ## 🏗️ Build for Production
 
 ```bash
+# Clone the repository
+git clone <repository-url>
+
+# Navigate to project directory
+cd zion-tech-group
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Build for production
 npm run build
 ```
 
