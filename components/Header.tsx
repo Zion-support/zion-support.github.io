@@ -28,6 +28,15 @@ export default function Header() {
             <Link href="/services" className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">
               Services
             </Link>
+            <Link href="/portfolio" className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">
+              Portfolio
+            </Link>
+            <Link href="/blog" className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">
+              Blog
+            </Link>
+            <Link href="/careers" className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">
+              Careers
+            </Link>
             <Link href="/contact" className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">
               Contact
             </Link>
@@ -58,6 +67,15 @@ export default function Header() {
               </Link>
               <Link href="/services" className="text-gray-700 hover:text-blue-600 block px-3 py-2 text-base font-medium">
                 Services
+              </Link>
+              <Link href="/portfolio" className="text-gray-700 hover:text-blue-600 block px-3 py-2 text-base font-medium">
+                Portfolio
+              </Link>
+              <Link href="/blog" className="text-gray-700 hover:text-blue-600 block px-3 py-2 text-base font-medium">
+                Blog
+              </Link>
+              <Link href="/careers" className="text-gray-700 hover:text-blue-600 block px-3 py-2 text-base font-medium">
+                Careers
               </Link>
               <Link href="/contact" className="text-gray-700 hover:text-blue-600 block px-3 py-2 text-base font-medium">
                 Contact

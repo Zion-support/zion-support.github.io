@@ -3,6 +3,8 @@ import Head from 'next/head';
 import Header from './Header';
 import Footer from './Footer';
 import PerformanceMonitor from './PerformanceMonitor';
+import Analytics from './Analytics';
+import ErrorBoundary from './ErrorBoundary';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -40,12 +42,15 @@ export default function Layout({
       </Head>
       
       <div className="min-h-screen flex flex-col">
+        <Analytics />
         <PerformanceMonitor />
-        <Header />
-        <main className="flex-grow">
-          {children}
-        </main>
-        <Footer />
+        <ErrorBoundary>
+          <Header />
+          <main className="flex-grow">
+            {children}
+          </main>
+          <Footer />
+        </ErrorBoundary>
       </div>
     </>
   );
