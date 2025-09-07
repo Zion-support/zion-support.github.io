@@ -1,7 +1,9 @@
-' export const AIChatbot = ({ welcomeMessage = 'Hello! I&apos;m Zion Tech Group&apos;s AI assistant.How can I help you today?', maxMessages = 50, enableSuggestions = true, enableContext = true, responseDelay = 1000    }) => {
+' export const AIChatbot = (
 
-
- const { trackEvent } = useAnalytics({ enableTracking: true, enableUserBehaviorTracking: true,
+) => {
+  return $3;}
+}
+ const { trackEvent } = useAnalytics({ enableTracking: true, enableUserBehaviorTracking: true,}
 }) const [isOpen, setIsOpen] =;
   useState(false);
   const [isMinimized, setIsMinimized] = useState(false);

@@ -4,8 +4,8 @@ export interface ModerationResult  {id: string;
   status: 'approved' | 'rejected' | 'pending';
   reason?: string;moderatedBy?: string;
   moderatedAt: Date;
-<<<<<<< HEAD
-  flagId: string;
+<<<<<<< HEAD;
+flagId: string;
   action: ModerationStatus;
   adminNotes?: string;
   adminId: string;
@@ -17,44 +17,44 @@ export type ModerationStatus  = 'pending' | 'approved' | 'removed' | 'warned' | 
 export interface ModerationAction  {id: string;
 
 ;
-
-=======
+}
+=======}
 }
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-53a1
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-53a1;
 export interface ModerationAction {
   id: string;
-  type: "approve" | "remove" | "warn" | "ban";
+  type: \"approve\" | \"remove\" | \"warn\" | \"ban\";
   targetId: string;
-  targetType: "post" | "comment" | "user";
+  targetType: \"post\" | \"comment\" | \"user\";
   adminId: string;
   reason?: string;
   createdAt: string;
-<<<<<<< HEAD
-  created_at: string;
-
+<<<<<<< HEAD;
+created_at: string;}
 }
 }
+}
 
-export interface ModerationFlag  {export interface ModerationFlag  {id: string;
-=======
+export interface ModerationFlag  {export interface ModerationFlag  {id: string;}
+=======}
 }
 
 export interface ModerationFlag {
   id: string;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-53a1
-  type: "spam" | "inappropriate" | "harassment" | "other";
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-53a1;
+type: \"spam\" | \"inappropriate\" | \"harassment\" | \"other\";
   content: string;
   reporterId: string;
   targetId: string;
-  targetType: "post" | "comment" | "user";
+  targetType: \"post\" | \"comment\" | \"user\";
   status: ModerationStatus;
   createdAt: string;
-  updatedAt: string;
-  adminNotes?: string;
+  updatedAt: string;}
+  adminNotes?: string;}
 }}
 
-<<<<<<< HEAD
+<<<<<<< HEAD;
 export interface ModerationFlag  {}
 
 export interface ModerationFlag {}
@@ -63,12 +63,12 @@ export interface ModerationRule  {id: string;
 =======
 export interface ModerationRule {
   id: string;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-53a1
-  name: string;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-53a1;
+name: string;
   pattern: string;
   action: 'approve' | 'reject' | 'flag';
-  severity: 'low' | 'medium' | 'high';
-<<<<<<< HEAD
+  severity: 'low' | 'medium' | 'high';}
+<<<<<<< HEAD}
 }type: 'spam' | 'inappropriate' | 'harassment' | 'other';
   content: string;
   reporter_id: string;
@@ -80,4 +80,4 @@ ursor/automate-test-improve-and-merge-code-646c;
 }
 
 export type ModerationStatus = 'pending' | 'approved' | 'rejected';
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-53a1
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-53a1;

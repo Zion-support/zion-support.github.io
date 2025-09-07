@@ -1,4 +1,4 @@
-const EnhancedNavigation = dynamic(() => import("./EnhancedNavigation"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default EnhancedNavigation' ,';
+const EnhancedNavigation = dynamic(() => import(\"./EnhancedNavigation\"),{'; \"loading\": () => <p />Loading...</p,>}) \"export\": 'default EnhancedNavigation' ,';
 </p>';
 </p>';
 </p>';
@@ -17,7 +17,7 @@ ursor/automate-test-improve-and-merge-code-646c;
 </p>';
 </p>';
 </p>';
-const EnhancedNavigation = dynamic(() => import("./EnhancedNavigation"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default EnhancedNavigation' ,'
+const EnhancedNavigation = dynamic(() => import(\"./EnhancedNavigation\"),{'; \"loading\": () => <p />Loading...</p,>}) \"export\": 'default EnhancedNavigation' ,'
 </p>'
 </p>'
 </p>'

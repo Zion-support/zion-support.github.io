@@ -3,14 +3,14 @@ import { IntegrationProviderMeta } from './types';
 export const PROVIDERS: IntegrationProviderMeta[] = [
   {
     id: 'salesforce',
-    name: 'Salesforce',
+  name: 'Salesforce',
     category: 'crm',
-    description: 'Enterprise CRM platform',
+  description: 'Enterprise CRM platform',
     icon: 'salesforce',
-    isActive: true,
+  isActive: true,
     configSchema: {
-      type: 'object',
-      properties: {
+      type: 'object',}
+  properties: {}
         apiKey: { type: 'string' },
         instanceUrl: { type: 'string' }
       },
@@ -19,14 +19,14 @@ export const PROVIDERS: IntegrationProviderMeta[] = [
   },
   {
     id: 'hubspot',
-    name: 'HubSpot',
+  name: 'HubSpot',
     category: 'crm',
-    description: 'Inbound marketing and sales platform',
+  description: 'Inbound marketing and sales platform',
     icon: 'hubspot',
-    isActive: true,
+  isActive: true,
     configSchema: {
-      type: 'object',
-      properties: {
+      type: 'object',}
+  properties: {}
         apiKey: { type: 'string' },
         portalId: { type: 'string' }
       },
@@ -35,14 +35,14 @@ export const PROVIDERS: IntegrationProviderMeta[] = [
   },
   {
     id: 'slack',
-    name: 'Slack',
+  name: 'Slack',
     category: 'communication',
-    description: 'Team communication platform',
+  description: 'Team communication platform',
     icon: 'slack',
-    isActive: true,
+  isActive: true,
     configSchema: {
-      type: 'object',
-      properties: {
+      type: 'object',}
+  properties: {}
         token: { type: 'string' },
         channel: { type: 'string' }
       },
@@ -51,14 +51,14 @@ export const PROVIDERS: IntegrationProviderMeta[] = [
   },
   {
     id: 'discord',
-    name: 'Discord',
+  name: 'Discord',
     category: 'communication',
-    description: 'Voice and text communication platform',
+  description: 'Voice and text communication platform',
     icon: 'discord',
-    isActive: true,
+  isActive: true,
     configSchema: {
-      type: 'object',
-      properties: {
+      type: 'object',}
+  properties: {}
         token: { type: 'string' },
         channelId: { type: 'string' }
       },
@@ -67,14 +67,14 @@ export const PROVIDERS: IntegrationProviderMeta[] = [
   },
   {
     id: 'github',
-    name: 'GitHub',
+  name: 'GitHub',
     category: 'development',
-    description: 'Code repository and collaboration platform',
+  description: 'Code repository and collaboration platform',
     icon: 'github',
-    isActive: true,
+  isActive: true,
     configSchema: {
-      type: 'object',
-      properties: {
+      type: 'object',}
+  properties: {}
         token: { type: 'string' },
         repository: { type: 'string' }
       },
@@ -83,14 +83,14 @@ export const PROVIDERS: IntegrationProviderMeta[] = [
   }
 ];
 
-export function getProviderById(id: string): IntegrationProviderMeta | undefined {
-  return PROVIDERS.find(provider => provider.id === id);
+export function getProviderById(id: string): IntegrationProviderMeta | undefined {}
+  return PROVIDERS.find(provider => provider.id === id);}
 }
 
-export function getProvidersByCategory(category: string): IntegrationProviderMeta[] {
-  return PROVIDERS.filter(provider => provider.category === category);
+export function getProvidersByCategory(category: string): IntegrationProviderMeta[] {}
+  return PROVIDERS.filter(provider => provider.category === category);}
 }
 
-export function getActiveProviders(): IntegrationProviderMeta[] {
-  return PROVIDERS.filter(provider => provider.isActive);
+export function getActiveProviders(): IntegrationProviderMeta[] {}
+  return PROVIDERS.filter(provider => provider.isActive);}
 }

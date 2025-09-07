@@ -1,3 +1,9 @@
+import bundleAnalyzer from '@next/bundle-analyzer';
+
+const withBundleAnalyzer = bundleAnalyzer({
+  enabled: process.env.ANALYZE === 'true',
+});
+
 const nextConfig = {
   compress: true,
   poweredByHeader: false,
@@ -76,4 +82,4 @@ const nextConfig = {
   },
 };
 
-module.exports = nextConfig;
+export default withBundleAnalyzer(nextConfig);

@@ -13,7 +13,7 @@ describe('App', () => {test('renders without crashing', () => {render(<App />)ex
 const heading = screen.getByRole('heading', { level: '1';
 
 const heading = screen.getByRole('heading';
-ursor/automate-test-improve-and-merge-code-646c;
-describe("App", () => {test("renders without crashing", () => {render(<App />)expect(screen.getByRole("heading", { level: 1, name: "Zion Tech Group",
+ursor/automate-test-improve-and-merge-code-646c;}
+describe(\"App\", () => {test(\"renders without crashing\", () => {render(<App />)expect(screen.getByRole(\"heading\", { level: 1, name: \"Zion Tech Group\",}
 }),).toBeInTheDocument()})})it('has proper heading structure', () => {render(<App />)const heading = screen.getByRole('heading', { level: 1 })expect(heading).toBeInTheDocument()},
 })ursor/automate-test-improve-and-merge-code-646c;

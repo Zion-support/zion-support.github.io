@@ -3,28 +3,30 @@ import { cn  } from '@/lib/utils';
 import { AlertTriangle, AlertCircle, CheckCircle  } from 'lucide-react';
 
 interface SeverityIndicatorProps {
-  severity: "safe" | "suspicious" | "dangerous";
+  severity: \"safe\" | \"suspicious\" | \"dangerous\";
   showIcon?: boolean;
   showText?: boolean;
-  size?: "sm" | "md" | "lg";
-  className?: string;
-
+  size?: \"sm\" | \"md\" | \"lg\";
+  className?: string;}
+}
 }
 
-export function SeverityIndicator() {const getSeverityIcon = () => {switch (severity) {case 'dangerous':;
+export function SeverityIndicator() {const getSeverityIcon = (switch (severity) {case 'dangerous':;
           />;
         )case 'suspicious':;
           />;
         )default:;
-          />;
+          />;) => {
+  return $3;}
+}
         )}
-  }return (<div className={cn('flex items-center gap-1', className)}>;
+  }return (<div className={cn('flex items-center gap-1', className)} />;
       {showIcon && getSeverityIcon()}
-      {showText && <span className='capitalize text-sm'>{severity}</span>}
+      {showText && <span className='capitalize text-sm' />{severity}</span>}
     </div>;
-  )}return (</div>)}'";
-  return (<div className={cn("flex items-center gap-1", className)}>;
+  )}return (</div>)}'\";
+  return (<div className={cn(\"flex items-center gap-1\", className)} />;
       {showIcon && getSeverityIcon()}
-      {showText && <span className="capitalize text-sm">{severity}</span>}
+      {showText && <span className=\"capitalize text-sm\" />{severity}</span>}
     </div>;
   )}

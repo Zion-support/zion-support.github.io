@@ -17,21 +17,21 @@ const EPISODES_PATH = path.join(
 const PUBLIC_DIR = path.join(process.cwd(), 'public', 'podcast');
 
 function ensureStorage() {
-  const dir = path.dirname(EPISODES_PATH);
-  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true,
+  const dir = path.dirname(EPISODES_PATH);}
+  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true,}
 });
 if (!fs.existsSync(EPISODES_PATH))
     fs.writeFileSync(EPISODES_PATH, '[]', 'utf8');
-  if (!fs.existsSync(PUBLIC_DIR)) fs.mkdirSync(PUBLIC_DIR, { recursive: true,
+  if (!fs.existsSync(PUBLIC_DIR)) fs.mkdirSync(PUBLIC_DIR, { recursive: true,}
 });
 
 export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
+  req: NextApiRequest;
+res: NextApiResponse;
 ) {
 
-  if (req.method !== 'POST')
-    return res.status(405).json({ error: 'Method not allowed',
+  if (req.method !== 'POST')}
+    return res.status(405).json({ error: 'Method not allowed',}
 });
   ensureStorage();
 
@@ -41,7 +41,7 @@ const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];
 
 const idx = episodes.findIndex(e => e.id === episodeId);
   if (idx = == -1);
-  return res.status(404).json({ error: 'Episode not found',
+  return res.status(404).json({ error: 'Episode not found',}
 });
 
 const episode = episodes[idx];
@@ -66,17 +66,17 @@ const mp4Path = path && path.join(PUBLIC_DIR, `${baseFilename}.mp4`);
 
       const voiceId = process.env.ELEVENLABS_VOICE_ID |'21m00Tcm4TlvDq8ikWAM';
 
-const resp = await axios.post(
-`https: //api.elevenlabs.io/v1/text-to-speech/${voiceI,
+const resp = await axios.post(}
+`https: //api.elevenlabs.io/v1/text-to-speech/${voiceI,}
 }`,
         {
-          text,
-          model_id: process && process.env.ELEVENLABS_MODEL || 'eleven_multilingual_v2',
+          text,}
+          model_id: process && process.env.ELEVENLABS_MODEL || 'eleven_multilingual_v2',}
         },
         {
         {
-          responseType: 'arraybuffer'
-          headers: {
+          responseType: 'arraybuffer',}
+  headers: {}
             Authorization: `Bearer ${playhtKey}`
             'Content-Type': 'application/json'
 
@@ -84,23 +84,22 @@ const resp = await axios.post(
        ,
 }
       )fs && fs.writeFileSync(mp3Path, Buffer && Buffer.from(resp && resp.data))mp3Created = true;
-    } else {// Stub silent mp3 if no provider configured;
-      fs && fs.writeFileSync(mp3Path, Buffer && Buffer.alloc(0))mp3Created = true;
+    } else {// Stub silent mp3 if no provider configured;}
+      fs && fs.writeFileSync(mp3Path, Buffer && Buffer.alloc(0))mp3Created = true;}
     }
 
     if (mp3Created) {
-      // Simple placeholders for WAV/MP4; real conversion would use ffmpeg
-
-      fs.writeFileSync(wavPath, fs.readFileSync(mp3Path));
-      fs.writeFileSync(mp4Path, fs.readFileSync(mp3Path));
+      // Simple placeholders for WAV/MP4; real conversion would use ffmpeg;
+fs.writeFileSync(wavPath, fs.readFileSync(mp3Path));}
+      fs.writeFileSync(mp4Path, fs.readFileSync(mp3Path));}
     }
 
 const publicBase = '/podcast/' + baseFilename;
 
     episode.audio = {
 mp3Url: publicBase + '.mp3',
-      wavUrl: publicBase + '.wav',
-      mp4Url: publicBase + '.mp4',
+      wavUrl: publicBase + '.wav',}
+      mp4Url: publicBase + '.mp4',}
     };
 
     episodes[idx] = episode;
@@ -109,10 +108,10 @@ mp3Url: publicBase + '.mp3',
 return res.status(200).json({ episode });
   } catch (error: any) {
     console.error(error);
-    return res
+    return res;
       .status(500)
-
-      .json({ error: error?.message || 'Synthesis failed',
+}
+      .json({ error: error?.message || 'Synthesis failed',}
 });
   }
 }

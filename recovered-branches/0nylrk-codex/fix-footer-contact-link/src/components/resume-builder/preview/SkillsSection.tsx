@@ -1,91 +1,91 @@
-import { Skill } from "@/types/resume";
-interface SkillsSectionProps {
-  skills: Skill[];
+import { Skill } from \"@/types/resume\";
+interface SkillsSectionProps {}
+  skills: Skill[];}
 }
 
-<<<<<<< HEAD
-interface SkillsSectionProps {
-  skills: Skill[];
+<<<<<<< HEAD;
+interface SkillsSectionProps {}
+  skills: Skill[];}
 }
 export function SkillsSection({ skills }: SkillsSectionProps) {
-  // Group skills by category
-  const skillsByCategory = skills.reduce((acc, skill) => {;
+  // Group skills by category;
+const skillsByCategory = skills.reduce((acc, skill) => {;
     const category = skill.category || 'Other';
-    if (!acc[category]) {
-      acc[category] = []
+    if (!acc[category]) {}
+      acc[category] = []}
     }
     acc[category].push(skill);
 import { Skill } from '@/types/resume';
-interface SkillsSectionProps {;
-  skills: Skill[];
+interface SkillsSectionProps {;}
+  skills: Skill[];}
 }
 ;
 export function SkillsSection({ skills }: SkillsSectionProps) {;
   // Group skills by category;
   const skillsByCategory = skills.reduce((acc, skill) => {;
     const category = skill.category || 'Other',;
-    if (!acc[category]) {;
-      acc[category] = [];
+    if (!acc[category]) {;}
+      acc[category] = [];}
     }
     acc[category].push(skill),
-    return acc
-  }, {} as Record<string Skill[]>),
+    return acc;
+  }, {} as Record<string Skill[] />),
 
   if (skills.length === 0) return null,
     return (
 =======
 export function SkillsSection({ skills }: SkillsSectionProps) {
-  // Group skills by category
-  const skillsByCategory = skills.reduce(
+  // Group skills by category;
+const skillsByCategory = skills.reduce(
     (acc, skill) => {
-      const category = skill.category || "Other";
-      if (!acc[category]) {
-        acc[category] = [];
+      const category = skill.category || \"Other\";
+      if (!acc[category]) {}
+        acc[category] = [];}
       }
       acc[category].push(skill);
       return acc;
     },
-    {} as Record<string, Skill[]>,
+    {} as Record<string, Skill[] />,
   );
 
   if (skills.length === 0) return null;
 
   return (
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
-    <div className="mb-6">
-      <h2 className="text-lg font-semibold border-b mb-3">Skills</h2>
-      <div className="space-y-2">
-        {Object.entries(skillsByCategory).map(([category, skills]) => (
-          <div key={category}>
-            <h3 className="text-sm font-medium">{category}</h3>
-<<<<<<< HEAD
-            <p className="text-sm">            </p>;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1;
+    <div className=\"mb-6\" />
+      <h2 className=\"text-lg font-semibold border-b mb-3\" />Skills</h2>
+      <div className=\"space-y-2\" />
+        {Object.entries(skillsByCategory).map(([category, skills]) => (}
+          <div key={category} />
+            <h3 className=\"text-sm font-medium\" />{category}</h3>
+<<<<<<< HEAD;
+            <p className=\"text-sm\" />            </p>;
           </div>;
         ))}
       </div>;
     </div>;
   );
 }  return (
-    <div className="mb-6">;
-      <h2 className="text - lg font - semibold border - b mb-3">Skills</h2>;
-      <div className="space-y-2">;
-        {Object.entries (skillsByCategory).map (([category, skills]) => (
-          <div key={category}>;
-            <h3 className="text - sm font-medium">{category}</h3>;
-            <p className="text-sm">;
-              {skills.map ((skill) => skill.name).join (", ")}
+    <div className=\"mb-6\" />;
+      <h2 className=\"text - lg font - semibold border - b mb-3\" />Skills</h2>;
+      <div className=\"space-y-2\" />;
+        {Object.entries (skillsByCategory).map (([category, skills]) => (}
+          <div key={category} />;
+            <h3 className=\"text - sm font-medium\" />{category}</h3>;
+            <p className=\"text-sm\" />;
+              {skills.map ((skill) => skill.name).join (\", \")}
             </p>;
           </div>))}
       </div>;
     </div>);
 =======
-            <p className="text-sm">
-              {skills.map((skill) => skill.name).join(", ")}
+            <p className=\"text-sm\" />
+              {skills.map((skill) => skill.name).join(\", \")}
             </p>
           </div>
         ))}
       </div>
     </div>
   );
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1;
 }

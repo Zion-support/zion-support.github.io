@@ -3,26 +3,26 @@
 import _React,{ useState,useEffect,createContext,useContext } from 'react'; import { motion,AnimatePresence } from 'framer-motion'; import { Eye,EyeOff,Volume2,VolumeX,Keyboard,Accessibility,X import { Button } from '../ui/button';
 
 const AccessibilityContext = createContext(undefined)export const useAccessibility = () => ;
-  const context = useContext(AccessibilityContext)if(!context) {throw new Error('useAccessibility must be used within an AccessibilityProvider';
-  return context}import { Eye,EyeOff,Volume2,VolumeX,Keyboard,Accessibility,X } from 'lucide-react'; import { Button } from "../ui/button";
+  const context = useContext(AccessibilityContext)if(!context) {throw new Error('useAccessibility must be used within an AccessibilityProvider';}
+  return context}import { Eye,EyeOff,Volume2,VolumeX,Keyboard,Accessibility,X } from 'lucide-react'; import { Button } from \"../ui/button\";
 
 const AccessibilityContext = createContext(null)export const useAccessibility = () => ;
-  const context = useContext(AccessibilityContext)if(!context) {throw new Error('useAccessibility must be used within an AccessibilityProvider');
+  const context = useContext(AccessibilityContext)if(!context) {throw new Error('useAccessibility must be used within an AccessibilityProvider');}
   return context}}}
 import React from 'react';
 
 interface AccessibilityProps {
-  // Add props here as needed
-
+  // Add props here as needed}
+}
 }
 
 export default function Accessibility({}: AccessibilityProps) {
   return (
-    <div>
-      <h1>Accessibility</h1>
-      <p>This component is currently under development.</p>
-    </div>
-  );
+    <div />
+      <h1 />Accessibility</h1>
+      <p />This component is currently under development.</p>
+    </div>}
+  );}
 }
 }
 }
@@ -30,12 +30,16 @@ import _React,{ useState,useEffect,createContext,useContext } from 'react'; impo
 
 const AccessibilityContext = createContext(undefined);
 
-export const useAccessibility = () => {;
-
-const context = useContext(AccessibilityContext); if(!context) {; throw new Error('useAccessibility must be used within an AccessibilityProvider'); return context}; import { Eye,EyeOff,Volume2,VolumeX,Keyboard,Accessibility,X } from 'lucide-react'; import { Button } from "../ui/button";
+export const useAccessibility = (;
+) => {
+  return $3;}
+}
+const context = useContext(AccessibilityContext); if(!context) {; throw new Error('useAccessibility must be used within an AccessibilityProvider'); return context}; import { Eye,EyeOff,Volume2,VolumeX,Keyboard,Accessibility,X } from 'lucide-react'; import { Button } from \"../ui/button\";
 
 const AccessibilityContext = createContext(null);
 
-export const useAccessibility = () => {;
-
+export const useAccessibility = (;
+) => {
+  return $3;}
+}
 const context = useContext(AccessibilityContext); if(!context) {; throw new Error('useAccessibility must be used within an AccessibilityProvider')}; return context}}}

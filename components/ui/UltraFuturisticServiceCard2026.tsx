@@ -9,8 +9,8 @@
     yearly?: number;
     currency?: string;
     trialDays?: number;
-
-    setupTime?: string
+}
+    setupTime?: string}
   },
   period?: string;
   pricing?: any;
@@ -29,9 +29,10 @@
 
 interface ServiceCardProps {
   service: Service;
-  variant?: 'ai' | 'quantum' | 'space' | 'cybersecurity' | 'enterprise' | 'automation' | 'it' | 'emerging' | 'premium' | 'default'
-
+  variant?: 'ai' | 'quantum' | 'space' | 'cybersecurity' | 'enterprise' | 'automation' | 'it' | 'emerging' | 'premium' | 'default'}
+}
 }
 
-const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, variant;
-
+const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps /> = ({ service, variant;
+}
+}

@@ -1,8 +1,8 @@
 
 
 type Props = {
-  region?: string;
-  service?: string
+  region?: string;}
+  service?: string}
 };
 
 
@@ -18,8 +18,8 @@ function matchesService(profile: TalentProfile, service?: string) {
 const s = service.toLowerCase();
 return (
     profile.title.toLowerCase().includes(s) ||
-    profile.skills.some(sk => sk.toLowerCase().includes(s))
-  );
+    profile.skills.some(sk => sk.toLowerCase().includes(s))}
+  );}
 }
 
 export default function TalentGrid({ region, service }: Props) {
@@ -33,37 +33,37 @@ export default function TalentGrid({ region, service }: Props) {
   );
   if (items.length = == 0) {;
   return (
-      <div className='text-sm text-gray-400'>
+      <div className='text-sm text-gray-400' />
         No matching talent found. Try broadening filters.
-      </div>
-    );
+      </div>}
+    );}
   }
   return (
-    <div className="grid grid - cols - 1 sm:grid - cols - 2 lg:grid - cols - 3 gap - 4">;
+    <div className=\"grid grid - cols - 1 sm:grid - cols - 2 lg:grid - cols - 3 gap - 4\" />;
       {items.map ((p) => (
-        <div;
-
+        <div;}
+}
           key={p.slug}
-          className="rounded - lg border border - gray - 200 dark:border - gray - 800 bg - white dark:bg - gray - 900 p - 4">
+          className=\"rounded - lg border border - gray - 200 dark:border - gray - 800 bg - white dark:bg - gray - 900 p - 4\" />
 
-          <div className="flex items - start justify - between">;
-            <div>;
-              <div className="font - semibold">{p.name}</div>;
-              <div className="text - sm text - gray - 500 dark:text - gray - 400">;
+          <div className=\"flex items - start justify - between\" />;
+            <div />;
+              <div className=\"font - semibold\" />{p.name}</div>;
+              <div className=\"text - sm text - gray - 500 dark:text - gray - 400\" />;
                 {p.title}
               </div>;
             </div>;
-            <div className="text - xs px - 2 py - 1 rounded bg - gray - 100 dark:bg - gray - 800 text - gray - 600 dark:text - gray - 300">;
+            <div className=\"text - xs px - 2 py - 1 rounded bg - gray - 100 dark:bg - gray - 800 text - gray - 600 dark:text - gray - 300\" />;
               {p.location}
             </div>;
           </div>;
-          <div className="mt - 3 text - sm text - gray - 700 dark:text - gray - 300">;
+          <div className=\"mt - 3 text - sm text - gray - 700 dark:text - gray - 300\" />;
             {p.bio}
           </div>;
-          <div className="mt - 3 flex flex - wrap gap - 2">;
-            {p.skills.slice (0, 6).map ((sk) => (<span;
+          <div className=\"mt - 3 flex flex - wrap gap - 2\" />;
+            {p.skills.slice (0, 6).map ((sk) => (<span;}
                 key={sk}
-                className="text - xs px - 2 py - 1 rounded bg - gray - 100 dark: bg - gray - 800 text - gray - 600 dark:text - gray - 300">
+                className=\"text - xs px - 2 py - 1 rounded bg - gray - 100 dark: bg - gray - 800 text - gray - 600 dark:text - gray - 300\" />
 
                 {sk}
 
@@ -73,7 +73,7 @@ export default function TalentGrid({ region, service }: Props) {
             ),
 }
           </div>;
-          <div className="mt-3 text-sm">;
+          <div className=\"mt-3 text-sm\" />;
             ${p.hourlyRateUsd}/hr • {p.availability}
           </div>;
         </div>;

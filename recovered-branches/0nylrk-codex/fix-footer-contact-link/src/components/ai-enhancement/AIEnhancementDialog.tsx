@@ -3,7 +3,7 @@ title: string,
   onClose: () => void,
   onApply: (content: string) => void,
   defaultOptions: AIEnhancementOptions,
-  initialContent?: string
+  initialContent?: string;
 }
 export function AIEnhancementDialog({;
 import React from 'react';
@@ -14,8 +14,8 @@ import React from 'react';
   defaultOptions;import React from 'react';
 import {;
   Dialog,;
-  DialogContent,;
-  DialogHeader,;
+  DialogContent,;}
+  DialogHeader,;}
   DialogTitle} from '@/components/ui/dialog',;
 import { AIEnhancementPanel } from './AIEnhancementPanel';
 import { AIEnhancementOptions } from '@/hooks/useAIContentEnhancer',;
@@ -24,23 +24,25 @@ interface AIEnhancementDialogProps {;
   isOpen: boolean,;
   onClose: () => void,;
   onApply: (content: string) => void,;
-  defaultOptions: AIEnhancementOptions,;
-  initialContent?: string;
+  defaultOptions: AIEnhancementOptions,;}
+  initialContent?: string;}
 }
 }: AIEnhancementDialogProps) {;
-  const handleApply = (content: string) => {;
+  const handleApply = (;
     onApply(content),;
-    onClose()
+    onClose()) => {
+  return $3;}
+}
 };
   },
   return (
-    <Dialog open={isOpen} onOpenChange={() => onClose()}>;
-      <DialogContent className="max-w-3xl">;
-        <DialogHeader>;
-          <DialogTitle>{title}</DialogTitle>;
+    <Dialog open={isOpen} onOpenChange={() = /> onClose()}>;
+      <DialogContent className=\"max-w-3xl\" />;
+        <DialogHeader />;
+          <DialogTitle />{title}</DialogTitle>;
         </DialogHeader>;
-        <AIEnhancementPanel
-          title={title}
+        <AIEnhancementPanel;
+title={title}
           defaultOptions={defaultOptions}
           onApply={handleApply}
           initialContent={initialContent}

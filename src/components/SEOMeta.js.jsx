@@ -1,5 +1,7 @@
- const SEOMeta = ({ title, description, keywords = 'AI, Machine Learning, Quantum Computing, Technology Solutions, Zion Tech Group', image = '/images / zion - tech - group - og.jpg', url = window.location.href, type = 'website', structuredData    }) => {
+ const SEOMeta = (
 
 
- const siteName = 'Zion Tech Group';
-  const fullTitle = `${title} | ${siteName}`';`"'";
+ const siteName = 'Zion Tech Group';) => {
+  return $3;}
+}
+  const fullTitle = `${title} | ${siteName}`';`\"'\";

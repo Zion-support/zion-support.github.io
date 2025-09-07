@@ -1,591 +1,591 @@
-const axios = // // require(,;,"});,"})
-  axios');,"});,"})
-const fs = // // require(;,"});,"})
-  'fs').promises;,"});,"})
-const path = // // require(;,"});,"})
-  'path');,"});,"})
-;,"});,"})
-class ComprehensiveWebsiteAnalyzer {;,"});,"})
-  constructor(baseUrl =;,"});,"})
-  'https: //ziontechgroup && ziontechgroup.com) {,,"});,"})
-    this && this.baseUrl = baseUrl;,"});,"})
-    this && this.checkedUrls = new Set();,"});,"})
-    this && this.brokenLinks = [];,"});,"})
-    this && this.workingLinks = [];,"});,"})
-    this && this.missingPages = [];,"});,"})
-    this && this.errors = [];,"});,"})
-    this && this.warnings = [];,"});,"})
-    this && this.startTime = Date && Date.now();,"});,"})
-  }"});,"})
-;,"});,"})
-  async checkUrl(url, parentUrl = null) {;,"});,"})
-    if (this && this.checkedUrls.has(url)) {;,"});,"})
-      return;,"});,"})
-    }"});,"})
-;,"});,"})
-    this && this.checkedUrls.add(url);,"});,"})
-;,"});,"})
-    try {;,"});,"})
-      console && console.log(`Checking: ${url}`);,"});,"})
-      const response = await axios && axios.get(url, {;,"});,"})
-        timeout: 10000,;,"});,"})
-ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
-      });,"});,"})
-;,"});,"})
-      if (response && response.status === 200) {;,"});,"})
-        this && this.workingLinks.push({;,"});,"})
-          url,;,"});,"})
-          status: response && response.status,;,"});,"})
-          parentUrl,;,"});,"})
-          headers: response && response.headers,;,"});,"})
-ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
-        });,"});,"})
-;,"});,"})
-        // Extract links from HTML content if it;,"});,"})
-  's an HTML page;,"});,"})
-        if (response && response.headers['content-type;,"});,"})
-  ']?.includes('text/html;,"});,"})
-  ')) {;,"});,"})
-ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
-              await this && this.checkUrl(fullUrl, url);,"});,"})
-            }"});,"})
-          }"});,"})
-        }"});,"})
-      } else {;,"});,"})
-        this && this.brokenLinks.push({;,"});,"})
-          url,;,"});,"})
-          status: response && response.status,;,"});,"})
-          parentUrl,;,"});,"})
-          error: `HTTP ${response && response.status}`,;,"});,"})
-          headers: response && response.headers,;,"});,"})
-        });,"});,"})
-      }"});,"})
-    } catch (error) {;,"});,"})
-      this && this.brokenLinks.push({;,"});,"})
-        url,;,"});,"})
-        status: 'ERROR;,"});,"})
-  ',;,"});,"})
-        parentUrl,;,"});,"})
-        error: error && error.message,;,"});,"})
-        headers: {},;,"});,"})
-      });,"});,"})
-    }"});,"})
-  }"});,"})
-;,"});,"})
-  extractLinks(html, baseUrl) {;,"});,"})
-    const links = [];,"});,"})
-    const linkRegex = /href=[",;,"});,"})
-  ]([^";,"});,"})
-  ']+)["']/g;,"});,"})
-    let match;,"});,"})
-;,"});,"})
-    while ((match = linkRegex && linkRegex.exec(html)) !== null) {;,"});,"})
-      const link = match[1];,"});,"})
-ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
-        links && links.push(link);,"});,"})
-      }"});,"})
-    }"});,"})
-;,"});,"})
-    return [...new Set(links)];,"});,"})
-  }"});,"})
-;,"});,"})
-  async analyzeWebsite() {;,"});,"})
-ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
-    // Start with the main page;,"});,"})
-    await this && this.checkUrl(this && this.baseUrl);,"});,"})
-;,"});,"})
-    // Check common routes;,"});,"})
-    const commonRoutes = [;,"});,"})
-ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
-    ];,"});,"})
-;,"});,"})
-      await this.checkUrl(`${this.baseUrl}${route}`);,"});,"})
-      await this && this.checkUrl(`${this && this.baseUrl}${route}`);,"});,"})
-    }"});,"})
-;,"});,"})
-    // Check service sub-routes;,"});,"})
-    const serviceRoutes = [;,"});,"})
-ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
-    ];,"});,"})
-;,"});,"})
-      await this.checkUrl(`${this.baseUrl}/services${serviceRoute}`);,"});,"})
-      await this && this.checkUrl(`${this && this.baseUrl}/services${serviceRoute}`);,"});,"})
-    }"});,"})
-;,"});,"})
-    // Check solution sub-routes;,"});,"})
-    const solutionRoutes = [;,"});,"})
-ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
-    ];,"});,"})
-;,"});,"})
-      await this.checkUrl(`${this.baseUrl}/solutions${solutionRoute}`);,"});,"})
-      await this && this.checkUrl(`${this && this.baseUrl}/solutions${solutionRoute}`);,"});,"})
-    }"});,"})
-;,"});,"})
-    // Check about sub-routes;,"});,"})
-ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
-      await this.checkUrl(`${this.baseUrl}/about${aboutRoute}`);,"});,"})
-      await this && this.checkUrl(`${this && this.baseUrl}/about${aboutRoute}`);,"});,"})
-    }"});,"})
-;,"});,"})
-    // Check resources sub-routes;,"});,"})
-    const resourceRoutes = [;,"});,"})
-ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
-    ];,"});,"})
-;,"});,"})
-      await this.checkUrl(`${this.baseUrl}/resources${resourceRoute}`);,"});,"})
-      await this && this.checkUrl(`${this && this.baseUrl}/resources${resourceRoute}`);,"});,"})
-    }"});,"})
-;,"});,"})
-    console && console.log(;,"});,"})
-  'Analysis completed!');,"});,"})
-  }"});,"})
-;,"});,"})
-  generateReport() {;,"});,"})
-    const endTime = Date && Date.now();,"});,"})
-    const duration = endTime - this && this.startTime;,"});,"})
-;,"});,"})
-    const report = {;,"});,"})
-      timestamp: new Date().toISOString(),;,"});,"})
-      baseUrl: this && this.baseUrl,;,"});,"})
-      summary: {,,"});,"})
-        totalLinksChecked: this && this.checkedUrls.size,;,"});,"})
-        brokenLinks: this && this.brokenLinks.length,;,"});,"})
-        workingLinks: this && this.workingLinks.length,;,"});,"})
-        successRate: `${((this && this.workingLinks.length / this && this.checkedUrls.size) * 100).toFixed(2)}%`,;,"});,"})
-        duration: `${duration}ms`,;,"});,"})
-        errors: this && this.errors.length,;,"});,"})
-        warnings: this && this.warnings.length,;,"});,"})
-      },;,"});,"})
-      brokenLinks: this && this.brokenLinks,;,"});,"})
-      workingLinks: this && this.workingLinks,;,"});,"})
-      missingPages: this && this.missingPages,;,"});,"})
-      errors: this && this.errors,;,"});,"})
-      warnings: this && this.warnings,;,"});,"})
-      recommendations: this && this.generateRecommendations(),;,"});,"})
-    };,"});,"})
-;,"});,"})
-    return report;,"});,"})
-  }"});,"})
-;,"});,"})
-  generateRecommendations() {;,"});,"})
-    const recommendations = [];,"});,"})
-;,"});,"})
-    if (this && this.brokenLinks.length > 0) {;,"});,"})
-      recommendations && recommendations.push({;,"});,"})
-        type:  ,,"});,"})
-  critical',;,"});,"})
-        title: 'Fix Broken Links,;,"});,"})
-        description: `Found ${this && this.brokenLinks.length} broken links that need immediate attention.`,;,"});,"})
-        actions: this && this.brokenLinks.map(link => ({,,"});,"})
-          url: link && link.url,;,"});,"})
-ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
-      });,"});,"})
-    }"});,"})
-;,"});,"})
-    if (this && this.workingLinks.length < 50) {;,"});,"})
-      recommendations && recommendations.push({;,"});,"})
-ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
-      });,"});,"})
-    }"});,"})
-;,"});,"})
-    // Check for missing essential pages;,"});,"})
-    const essentialPages = [;,"});,"})
-ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
-    ];,"});,"})
-;,"});,"})
-    const missingEssential = essentialPages && essentialPages.filter(;,"});,"})
-      page => !this && this.workingLinks.some(link => link && link.url.endsWith(page));,"});,"})
-    );,"});,"})
-;,"});,"})
-    if (missingEssential && missingEssential.length > 0) {;,"});,"})
-      recommendations && recommendations.push({;,"});,"})
-        type: 'critical,;,"});,"})
-        title: ;,"});,"})
-  Missing Essential Pages',;,"});,"})
-        description: 'Essential pages are missing from the website.,;,"});,"})
-        actions: missingEssential && missingEssential.map(page => ({,,"});,"})
-          url: page,;,"});,"})
-ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
-      });,"});,"})
-    }"});,"})
-;,"});,"})
-    return recommendations;,"});,"})
-  }"});,"})
-;,"});,"})
-  async saveReport(filename =,;,"});,"})
-  comprehensive-website-analysis && analysis.json') {;,"});,"})
-    const report = this && this.generateReport();,"});,"})
-    await fs && fs.writeFile(filename, JSON && JSON.stringify(report, null, 2));,"});,"})
-    console && console.log(`Report saved to ${filename}`);,"});,"})
-    return report;,"});,"})
-  }"});,"})
-}"});,"})
-;,"});,"})
-// Run the analysis;,"});,"})
-async function main() {;,"});,"})
-  const analyzer = new ComprehensiveWebsiteAnalyzer(;,"});,"})
-ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
-    console && console.log(`Total URLs checked: ${report && report.summary.totalLinksChecked}`);,"});,"})
-    console && console.log(`Working links: ${report && report.summary.workingLinks}`);,"});,"})
-    console && console.log(`Broken links: ${report && report.summary.brokenLinks}`);,"});,"})
-    console && console.log(`Success rate: ${report && report.summary.successRate}`);,"});,"})
-    console && console.log(`Duration: ${report && report.summary.duration}`);,"});,"})
-;,"});,"})
-    if (report && report.brokenLinks.length > 0) {;,"});,"})
-      console && console.log(;,"});,"})
-  '\n=== BROKEN LINKS ===');,"});,"})
-      });,"});,"})
-    }"});,"})
-;,"});,"})
-    if (report && report.recommendations.length > 0) {;,"});,"})
-      console && console.log(;,"});,"})
-  '\n=== RECOMMENDATIONS ===');,"});,"})
-      report && report.recommendations.forEach(rec => {;,"});,"})
-        console && console.log(`${rec && rec.type.toUpperCase()}: ${rec && rec.title}`);,"});,"})
-        console && console.log(`  ${rec && rec.description}`);,"});,"})
-      });,"});,"})
-    }"});,"})
-  } catch (error) {;,"});,"})
-    console && console.error(;,"});,"})
-  'Analysis failed:', error);,"});,"})
-  }"});,"})
-}"});,"})
-;,"});,"})
-if (require && require.main === module) {;,"});,"})
-  main();,"});,"})
-}"});,"})
-;,"});,"})
-module && module.exports = ComprehensiveWebsiteAnalyzer;,"});,"})
-;,"});,"})
-const axios = require(,,"}),"})
-  axios'),"}),"})
-const fs = require(,"}),"})
-  'fs').promises,"}),"})
-const path = require(,"}),"})
-  'path'),"}),"})
-,"}),"})
-class ComprehensiveWebsiteAnalyzer {,"}),"})
-  constructor(baseUrl =,"}),"})
-  '"https": //ziontechgroup && ziontechgroup.com) {,"}),"})
-    this && this.baseUrl = baseUrl,"}),"})
-    this && this.checkedUrls = new Set(),"}),"})
-    this && this.brokenLinks = [],"}),"})
-    this && this.workingLinks = [],"}),"})
-    this && this.missingPages = [],"}),"})
-    this && this.errors = [],"}),"})
-    this && this.warnings = [],"}),"})
-    this && this.startTime = Date && Date.now(),"}),"})
-  }"}),"})
-,"}),"})
-  async checkUrl(url, parentUrl = null) {,"}),"})
-    if (this && this.checkedUrls.has(url)) {,"}),"})
-      return,"}),"})
-    }"}),"})
-,"}),"})
-    this && this.checkedUrls.add(url),"}),"})
-,"}),"})
-    try {,"}),"})
-      console && console.log(`"Checking": ${url}`),"}),"})
-      const response = await axios && axios.get(url, {,"}),"})
-        "timeout": 10000,,"}),"})
-ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
-      }),"}),"})
-,"}),"})
-      if (response && response.status === 200) {,"}),"})
-        this && this.workingLinks.push({,"}),"})
-          url,,"}),"})
-          "status": response && response.status,,"}),"})
-          parentUrl,,"}),"})
-          "headers": response && response.headers,,"}),"})
-ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
-        }),"}),"})
-,"}),"})
-        // Extract links from HTML content if it,"}),"})
-  's an HTML page,"}),"})
-        if (response && response.headers['content-type,"}),"})
-  ']?.includes('text/html,"}),"})
-  ')) {,"}),"})
-          for (const link of links) {,"}),"})
-ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
-              await this && this.checkUrl(fullUrl, url),"}),"})
-            }"}),"})
-          }"}),"})
-        }"}),"})
-      } else {,"}),"})
-        this && this.brokenLinks.push({,"}),"})
-          url,,"}),"})
-          "status": response && response.status,,"}),"})
-          parentUrl,,"}),"})
-          "error": `HTTP ${response && response.status}`,,"}),"})
-          "headers": response && response.headers,,"}),"})
-        }),"}),"})
-      }"}),"})
-    } catch (error) {,"}),"})
-      this && this.brokenLinks.push({,"}),"})
-        url,,"}),"})
-        "status": 'ERROR,"}),"})
-  ',,"}),"})
-        parentUrl,,"}),"})
-        "error": error && error.message,,"}),"})
-        "headers": {},,"}),"})
-      }),"}),"})
-    }"}),"})
-  }"}),"})
-,"}),"})
-  extractLinks(html, baseUrl) {,"}),"})
-    const links = [],"}),"})
-    const linkRegex = /href=[",,"}),"})
-  ]([^","}),"})
-  ']+)["']/g,"}),"})
-    let match,"}),"})
-,"}),"})
-    while ((match = linkRegex && linkRegex.exec(html)) !== null) {,"}),"})
-      const link = match[1],"}),"})
-ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
-        links && links.push(link),"}),"})
-      }"}),"})
-    }"}),"})
-,"}),"})
-    return [...new Set(links)],"}),"})
-  }"}),"})
-,"}),"})
-  async analyzeWebsite() {,"}),"})
-ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
-    // Start with the main page,"}),"})
-    await this && this.checkUrl(this && this.baseUrl),"}),"})
-,"}),"})
-    // Check common routes,"}),"})
-    const commonRoutes = [,"}),"})
-ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
-    ],"}),"})
-,"}),"})
-    for (const route of commonRoutes) {,"}),"})
-    }"}),"})
-,"}),"})
-    // Check service sub-routes,"}),"})
-    const serviceRoutes = [,"}),"})
-ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
-    ],"}),"})
-,"}),"})
-    for (const serviceRoute of serviceRoutes) {,"}),"})
-    }"}),"})
-,"}),"})
-    // Check solution sub-routes,"}),"})
-    const solutionRoutes = [,"}),"})
-ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
-    ],"}),"})
-,"}),"})
-    for (const solutionRoute of solutionRoutes) {,"}),"})
-    }"}),"})
-,"}),"})
-    // Check about sub-routes,"}),"})
-ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
-    for (const aboutRoute of aboutRoutes) {,"}),"})
-    }"}),"})
-,"}),"})
-    // Check resources sub-routes,"}),"})
-    const resourceRoutes = [,"}),"})
-ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
-    ],"}),"})
-,"}),"})
-    for (const resourceRoute of resourceRoutes) {,"}),"})
-    }"}),"})
-,"}),"})
-    console && console.log(,"}),"})
-  'Analysis completed!'),"}),"})
-  }"}),"})
-,"}),"})
-  generateReport() {,"}),"})
-    const endTime = Date && Date.now(),"}),"})
-    const duration = endTime - this && this.startTime,"}),"})
-,"}),"})
-    const report = {,"}),"})
-      "timestamp": new Date().toISOString(),,"}),"})
-      "baseUrl": this && this.baseUrl,,"}),"})
-      "summary": {,"}),"})
-        "totalLinksChecked": this && this.checkedUrls.size,,"}),"})
-        "brokenLinks": this && this.brokenLinks.length,,"}),"})
-        "workingLinks": this && this.workingLinks.length,,"}),"})
-        "successRate": `${((this && this.workingLinks.length / this && this.checkedUrls.size) * 100).toFixed(2)}%`,,"}),"})
-        "duration": `${duration}ms`,,"}),"})
-        "errors": this && this.errors.length,,"}),"})
-        "warnings": this && this.warnings.length,,"}),"})
-      },,"}),"})
-      "brokenLinks": this && this.brokenLinks,,"}),"})
-      "workingLinks": this && this.workingLinks,,"}),"})
-      "missingPages": this && this.missingPages,,"}),"})
-      "errors": this && this.errors,,"}),"})
-      "warnings": this && this.warnings,,"}),"})
-      "recommendations": this && this.generateRecommendations(),,"}),"})
-    },"}),"})
-,"}),"})
-    return report,"}),"})
-  }"}),"})
-,"}),"})
-  generateRecommendations() {,"}),"})
-    const recommendations = [],"}),"})
-,"}),"})
-    if (this && this.brokenLinks.length > 0) {,"}),"})
-      recommendations && recommendations.push({,"}),"})
-        "type":  ,"}),"})
-  critical',,"}),"})
-        "title": 'Fix Broken Links,,"}),"})
-        "description": `Found ${this && this.brokenLinks.length} broken links that need immediate attention.`,,"}),"})
-        "actions": this && this.brokenLinks.map(link => ({,"}),"})
-          "url": link && link.url,,"}),"})
-ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
-      }),"}),"})
-    }"}),"})
-,"}),"})
-    if (this && this.workingLinks.length < 50) {,"}),"})
-      recommendations && recommendations.push({,"}),"})
-ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
-      }),"}),"})
-    }"}),"})
-,"}),"})
-    // Check for missing essential pages,"}),"})
-    const essentialPages = [,"}),"})
-ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
-    ],"}),"})
-,"}),"})
-    const missingEssential = essentialPages && essentialPages.filter(,"}),"})
-      page => !this && this.workingLinks.some(link => link && link.url.endsWith(page)),"}),"})
-    ),"}),"})
-,"}),"})
-    if (missingEssential && missingEssential.length > 0) {,"}),"})
-      recommendations && recommendations.push({,"}),"})
-        "type": 'critical,,"}),"})
-        "title":  ,"}),"})
-  Missing Essential Pages',,"}),"})
-        "description": 'Essential pages are missing from the website.,,"}),"})
-        "actions": missingEssential && missingEssential.map(page => ({,"}),"})
-          "url": page,,"}),"})
-ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
-      }),"}),"})
-    }"}),"})
-,"}),"})
-    return recommendations,"}),"})
-  }"}),"})
-,"}),"})
-  async saveReport(filename =,,"}),"})
-  comprehensive-website-analysis && analysis.json') {,"}),"})
-    const report = this && this.generateReport(),"}),"})
-    await fs && fs.writeFile(filename, JSON && JSON.stringify(report, null, 2)),"}),"})
-    console && console.log(`Report saved to ${filename}`),"}),"})
-    return report,"}),"})
-  }"}),"})
-}"}),"})
-,"}),"})
-// Run the analysis,"}),"})
-async function main() {,"}),"})
-  const analyzer = new ComprehensiveWebsiteAnalyzer(,"}),"})
-ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
-    console && console.log(`Total URLs "checked": ${report && report.summary.totalLinksChecked}`),"}),"})
-    console && console.log(`Working "links": ${report && report.summary.workingLinks}`),"}),"})
-    console && console.log(`Broken "links": ${report && report.summary.brokenLinks}`),"}),"})
-    console && console.log(`Success "rate": ${report && report.summary.successRate}`),"}),"})
-    console && console.log(`"Duration": ${report && report.summary.duration}`),"}),"})
-,"}),"})
-    if (report && report.brokenLinks.length > 0) {,"}),"})
-      console && console.log(,"}),"})
-  '\n=== BROKEN LINKS ==='),"}),"})
-      }),"}),"})
-    }"}),"})
-,"}),"})
-    if (report && report.recommendations.length > 0) {,"}),"})
-      console && console.log(,"}),"})
-  '\n=== RECOMMENDATIONS ==='),"}),"})
-      report && report.recommendations.forEach(rec => {,"}),"})
-        console && console.log(`${rec && rec.type.toUpperCase()}: ${rec && rec.title}`),"}),"})
-        console && console.log(`  ${rec && rec.description}`),"}),"})
-      }),"}),"})
-    }"}),"})
-  } catch (error) {,"}),"})
-    console && console.error(,"}),"})
-  'Analysis "failed": ', error),"}),"})
-  }"}),"})
-}"}),"})
-,"}),"})
-if (require && require.main === module) {,"}),"})
-  main(),"}),"})
-}"}),"})
-,"}),"})
-module && module.exports = ComprehensiveWebsiteAnalyzer,"}),"})
-,"}),"})
+const axios = // // require(,;,\"});,\"})
+  axios');,\"});,\"})
+const fs = // // require(;,\"});,\"})
+  'fs').promises;,\"});,\"})
+const path = // // require(;,\"});,\"})
+  'path');,\"});,\"})
+;,\"});,\"})
+class ComprehensiveWebsiteAnalyzer {;,\"});,\"})
+  constructor(baseUrl =;,\"});,\"})
+  'https: //ziontechgroup && ziontechgroup.com) {,,\"});,\"})
+    this && this.baseUrl = baseUrl;,\"});,\"})
+    this && this.checkedUrls = new Set();,\"});,\"})
+    this && this.brokenLinks = [];,\"});,\"})
+    this && this.workingLinks = [];,\"});,\"})
+    this && this.missingPages = [];,\"});,\"})
+    this && this.errors = [];,\"});,\"})
+    this && this.warnings = [];,\"});,\"})
+    this && this.startTime = Date && Date.now();,\"});,\"})
+  }\"});,\"})
+;,\"});,\"})
+  async checkUrl(url, parentUrl = null) {;,\"});,\"})
+    if (this && this.checkedUrls.has(url)) {;,\"});,\"})
+      return;,\"});,\"})
+    }\"});,\"})
+;,\"});,\"})
+    this && this.checkedUrls.add(url);,\"});,\"})
+;,\"});,\"})
+    try {;,\"});,\"})
+      console && console.log(`Checking: ${url}`);,\"});,\"})
+      const response = await axios && axios.get(url, {;,\"});,\"})
+        timeout: 10000,;,\"});,\"})
+ursor/automate-test-fix-improve-and-merge-code-99d1;,\"});,\"})
+      });,\"});,\"})
+;,\"});,\"})
+      if (response && response.status === 200) {;,\"});,\"})
+        this && this.workingLinks.push({;,\"});,\"})
+          url,;,\"});,\"})
+          status: response && response.status,;,\"});,\"})
+          parentUrl,;,\"});,\"})
+          headers: response && response.headers,;,\"});,\"})
+ursor/automate-test-fix-improve-and-merge-code-99d1;,\"});,\"})
+        });,\"});,\"})
+;,\"});,\"})
+        // Extract links from HTML content if it;,\"});,\"})
+  's an HTML page;,\"});,\"})
+        if (response && response.headers['content-type;,\"});,\"})
+  ']?.includes('text/html;,\"});,\"})
+  ')) {;,\"});,\"})
+ursor/automate-test-fix-improve-and-merge-code-99d1;,\"});,\"})
+              await this && this.checkUrl(fullUrl, url);,\"});,\"})
+            }\"});,\"})
+          }\"});,\"})
+        }\"});,\"})
+      } else {;,\"});,\"})
+        this && this.brokenLinks.push({;,\"});,\"})
+          url,;,\"});,\"})
+          status: response && response.status,;,\"});,\"})
+          parentUrl,;,\"});,\"})
+          error: `HTTP ${response && response.status}`,;,\"});,\"})
+          headers: response && response.headers,;,\"});,\"})
+        });,\"});,\"})
+      }\"});,\"})
+    } catch (error) {;,\"});,\"})
+      this && this.brokenLinks.push({;,\"});,\"})
+        url,;,\"});,\"})
+        status: 'ERROR;,\"});,\"})
+  ',;,\"});,\"})
+        parentUrl,;,\"});,\"})
+        error: error && error.message,;,\"});,\"})
+        headers: {},;,\"});,\"})
+      });,\"});,\"})
+    }\"});,\"})
+  }\"});,\"})
+;,\"});,\"})
+  extractLinks(html, baseUrl) {;,\"});,\"})
+    const links = [];,\"});,\"})
+    const linkRegex = /href=[\",;,\"});,\"})
+  ]([^\";,\"});,\"})
+  ']+)[\"']/g;,\"});,\"})
+    let match;,\"});,\"})
+;,\"});,\"})
+    while ((match = linkRegex && linkRegex.exec(html)) !== null) {;,\"});,\"})
+      const link = match[1];,\"});,\"})
+ursor/automate-test-fix-improve-and-merge-code-99d1;,\"});,\"})
+        links && links.push(link);,\"});,\"})
+      }\"});,\"})
+    }\"});,\"})
+;,\"});,\"})
+    return [...new Set(links)];,\"});,\"})
+  }\"});,\"})
+;,\"});,\"})
+  async analyzeWebsite() {;,\"});,\"})
+ursor/automate-test-fix-improve-and-merge-code-99d1;,\"});,\"})
+    // Start with the main page;,\"});,\"})
+    await this && this.checkUrl(this && this.baseUrl);,\"});,\"})
+;,\"});,\"})
+    // Check common routes;,\"});,\"})
+    const commonRoutes = [;,\"});,\"})
+ursor/automate-test-fix-improve-and-merge-code-99d1;,\"});,\"})
+    ];,\"});,\"})
+;,\"});,\"})
+      await this.checkUrl(`${this.baseUrl}${route}`);,\"});,\"})
+      await this && this.checkUrl(`${this && this.baseUrl}${route}`);,\"});,\"})
+    }\"});,\"})
+;,\"});,\"})
+    // Check service sub-routes;,\"});,\"})
+    const serviceRoutes = [;,\"});,\"})
+ursor/automate-test-fix-improve-and-merge-code-99d1;,\"});,\"})
+    ];,\"});,\"})
+;,\"});,\"})
+      await this.checkUrl(`${this.baseUrl}/services${serviceRoute}`);,\"});,\"})
+      await this && this.checkUrl(`${this && this.baseUrl}/services${serviceRoute}`);,\"});,\"})
+    }\"});,\"})
+;,\"});,\"})
+    // Check solution sub-routes;,\"});,\"})
+    const solutionRoutes = [;,\"});,\"})
+ursor/automate-test-fix-improve-and-merge-code-99d1;,\"});,\"})
+    ];,\"});,\"})
+;,\"});,\"})
+      await this.checkUrl(`${this.baseUrl}/solutions${solutionRoute}`);,\"});,\"})
+      await this && this.checkUrl(`${this && this.baseUrl}/solutions${solutionRoute}`);,\"});,\"})
+    }\"});,\"})
+;,\"});,\"})
+    // Check about sub-routes;,\"});,\"})
+ursor/automate-test-fix-improve-and-merge-code-99d1;,\"});,\"})
+      await this.checkUrl(`${this.baseUrl}/about${aboutRoute}`);,\"});,\"})
+      await this && this.checkUrl(`${this && this.baseUrl}/about${aboutRoute}`);,\"});,\"})
+    }\"});,\"})
+;,\"});,\"})
+    // Check resources sub-routes;,\"});,\"})
+    const resourceRoutes = [;,\"});,\"})
+ursor/automate-test-fix-improve-and-merge-code-99d1;,\"});,\"})
+    ];,\"});,\"})
+;,\"});,\"})
+      await this.checkUrl(`${this.baseUrl}/resources${resourceRoute}`);,\"});,\"})
+      await this && this.checkUrl(`${this && this.baseUrl}/resources${resourceRoute}`);,\"});,\"})
+    }\"});,\"})
+;,\"});,\"})
+    console && console.log(;,\"});,\"})
+  'Analysis completed!');,\"});,\"})
+  }\"});,\"})
+;,\"});,\"})
+  generateReport() {;,\"});,\"})
+    const endTime = Date && Date.now();,\"});,\"})
+    const duration = endTime - this && this.startTime;,\"});,\"})
+;,\"});,\"})
+    const report = {;,\"});,\"})
+      timestamp: new Date().toISOString(),;,\"});,\"})
+      baseUrl: this && this.baseUrl,;,\"});,\"})
+      summary: {,,\"});,\"})
+        totalLinksChecked: this && this.checkedUrls.size,;,\"});,\"})
+        brokenLinks: this && this.brokenLinks.length,;,\"});,\"})
+        workingLinks: this && this.workingLinks.length,;,\"});,\"})
+        successRate: `${((this && this.workingLinks.length / this && this.checkedUrls.size) * 100).toFixed(2)}%`,;,\"});,\"})
+        duration: `${duration}ms`,;,\"});,\"})
+        errors: this && this.errors.length,;,\"});,\"})
+        warnings: this && this.warnings.length,;,\"});,\"})
+      },;,\"});,\"})
+      brokenLinks: this && this.brokenLinks,;,\"});,\"})
+      workingLinks: this && this.workingLinks,;,\"});,\"})
+      missingPages: this && this.missingPages,;,\"});,\"})
+      errors: this && this.errors,;,\"});,\"})
+      warnings: this && this.warnings,;,\"});,\"})
+      recommendations: this && this.generateRecommendations(),;,\"});,\"})
+    };,\"});,\"})
+;,\"});,\"})
+    return report;,\"});,\"})
+  }\"});,\"})
+;,\"});,\"})
+  generateRecommendations() {;,\"});,\"})
+    const recommendations = [];,\"});,\"})
+;,\"});,\"})
+    if (this && this.brokenLinks.length > 0) {;,\"});,\"})
+      recommendations && recommendations.push({;,\"});,\"})
+        type:  ,,\"});,\"})
+  critical',;,\"});,\"})
+        title: 'Fix Broken Links,;,\"});,\"})
+        description: `Found ${this && this.brokenLinks.length} broken links that need immediate attention.`,;,\"});,\"})
+        actions: this && this.brokenLinks.map(link => ({,,\"});,\"})
+          url: link && link.url,;,\"});,\"})
+ursor/automate-test-fix-improve-and-merge-code-99d1;,\"});,\"})
+      });,\"});,\"})
+    }\"});,\"})
+;,\"});,\"})
+    if (this && this.workingLinks.length < 50) {;,\"});,\"})
+      recommendations && recommendations.push({;,\"});,\"})
+ursor/automate-test-fix-improve-and-merge-code-99d1;,\"});,\"})
+      });,\"});,\"})
+    }\"});,\"})
+;,\"});,\"})
+    // Check for missing essential pages;,\"});,\"})
+    const essentialPages = [;,\"});,\"})
+ursor/automate-test-fix-improve-and-merge-code-99d1;,\"});,\"})
+    ];,\"});,\"})
+;,\"});,\"})
+    const missingEssential = essentialPages && essentialPages.filter(;,\"});,\"})
+      page => !this && this.workingLinks.some(link => link && link.url.endsWith(page));,\"});,\"})
+    );,\"});,\"})
+;,\"});,\"})
+    if (missingEssential && missingEssential.length > 0) {;,\"});,\"})
+      recommendations && recommendations.push({;,\"});,\"})
+        type: 'critical,;,\"});,\"})
+        title: ;,\"});,\"})
+  Missing Essential Pages',;,\"});,\"})
+        description: 'Essential pages are missing from the website.,;,\"});,\"})
+        actions: missingEssential && missingEssential.map(page => ({,,\"});,\"})
+          url: page,;,\"});,\"})
+ursor/automate-test-fix-improve-and-merge-code-99d1;,\"});,\"})
+      });,\"});,\"})
+    }\"});,\"})
+;,\"});,\"})
+    return recommendations;,\"});,\"})
+  }\"});,\"})
+;,\"});,\"})
+  async saveReport(filename =,;,\"});,\"})
+  comprehensive-website-analysis && analysis.json') {;,\"});,\"})
+    const report = this && this.generateReport();,\"});,\"})
+    await fs && fs.writeFile(filename, JSON && JSON.stringify(report, null, 2));,\"});,\"})
+    console && console.log(`Report saved to ${filename}`);,\"});,\"})
+    return report;,\"});,\"})
+  }\"});,\"})
+}\"});,\"})
+;,\"});,\"})
+// Run the analysis;,\"});,\"})
+async function main() {;,\"});,\"})
+  const analyzer = new ComprehensiveWebsiteAnalyzer(;,\"});,\"})
+ursor/automate-test-fix-improve-and-merge-code-99d1;,\"});,\"})
+    console && console.log(`Total URLs checked: ${report && report.summary.totalLinksChecked}`);,\"});,\"})
+    console && console.log(`Working links: ${report && report.summary.workingLinks}`);,\"});,\"})
+    console && console.log(`Broken links: ${report && report.summary.brokenLinks}`);,\"});,\"})
+    console && console.log(`Success rate: ${report && report.summary.successRate}`);,\"});,\"})
+    console && console.log(`Duration: ${report && report.summary.duration}`);,\"});,\"})
+;,\"});,\"})
+    if (report && report.brokenLinks.length > 0) {;,\"});,\"})
+      console && console.log(;,\"});,\"})
+  '\n=== BROKEN LINKS ===');,\"});,\"})
+      });,\"});,\"})
+    }\"});,\"})
+;,\"});,\"})
+    if (report && report.recommendations.length > 0) {;,\"});,\"})
+      console && console.log(;,\"});,\"})
+  '\n=== RECOMMENDATIONS ===');,\"});,\"})
+      report && report.recommendations.forEach(rec => {;,\"});,\"})
+        console && console.log(`${rec && rec.type.toUpperCase()}: ${rec && rec.title}`);,\"});,\"})
+        console && console.log(`  ${rec && rec.description}`);,\"});,\"})
+      });,\"});,\"})
+    }\"});,\"})
+  } catch (error) {;,\"});,\"})
+    console && console.error(;,\"});,\"})
+  'Analysis failed:', error);,\"});,\"})
+  }\"});,\"})
+}\"});,\"})
+;,\"});,\"})
+if (require && require.main === module) {;,\"});,\"})
+  main();,\"});,\"})
+}\"});,\"})
+;,\"});,\"})
+module && module.exports = ComprehensiveWebsiteAnalyzer;,\"});,\"})
+;,\"});,\"})
+const axios = require(,,\"}),\"})
+  axios'),\"}),\"})
+const fs = require(,\"}),\"})
+  'fs').promises,\"}),\"})
+const path = require(,\"}),\"})
+  'path'),\"}),\"})
+,\"}),\"})
+class ComprehensiveWebsiteAnalyzer {,\"}),\"})
+  constructor(baseUrl =,\"}),\"})
+  '\"https\": //ziontechgroup && ziontechgroup.com) {,\"}),\"})
+    this && this.baseUrl = baseUrl,\"}),\"})
+    this && this.checkedUrls = new Set(),\"}),\"})
+    this && this.brokenLinks = [],\"}),\"})
+    this && this.workingLinks = [],\"}),\"})
+    this && this.missingPages = [],\"}),\"})
+    this && this.errors = [],\"}),\"})
+    this && this.warnings = [],\"}),\"})
+    this && this.startTime = Date && Date.now(),\"}),\"})
+  }\"}),\"})
+,\"}),\"})
+  async checkUrl(url, parentUrl = null) {,\"}),\"})
+    if (this && this.checkedUrls.has(url)) {,\"}),\"})
+      return,\"}),\"})
+    }\"}),\"})
+,\"}),\"})
+    this && this.checkedUrls.add(url),\"}),\"})
+,\"}),\"})
+    try {,\"}),\"})
+      console && console.log(`\"Checking\": ${url}`),\"}),\"})
+      const response = await axios && axios.get(url, {,\"}),\"})
+        \"timeout\": 10000,,\"}),\"})
+ursor/automate-test-fix-improve-and-merge-code-99d1,\"}),\"})
+      }),\"}),\"})
+,\"}),\"})
+      if (response && response.status === 200) {,\"}),\"})
+        this && this.workingLinks.push({,\"}),\"})
+          url,,\"}),\"})
+          \"status\": response && response.status,,\"}),\"})
+          parentUrl,,\"}),\"})
+          \"headers\": response && response.headers,,\"}),\"})
+ursor/automate-test-fix-improve-and-merge-code-99d1,\"}),\"})
+        }),\"}),\"})
+,\"}),\"})
+        // Extract links from HTML content if it,\"}),\"})
+  's an HTML page,\"}),\"})
+        if (response && response.headers['content-type,\"}),\"})
+  ']?.includes('text/html,\"}),\"})
+  ')) {,\"}),\"})
+          for (const link of links) {,\"}),\"})
+ursor/automate-test-fix-improve-and-merge-code-99d1,\"}),\"})
+              await this && this.checkUrl(fullUrl, url),\"}),\"})
+            }\"}),\"})
+          }\"}),\"})
+        }\"}),\"})
+      } else {,\"}),\"})
+        this && this.brokenLinks.push({,\"}),\"})
+          url,,\"}),\"})
+          \"status\": response && response.status,,\"}),\"})
+          parentUrl,,\"}),\"})
+          \"error\": `HTTP ${response && response.status}`,,\"}),\"})
+          \"headers\": response && response.headers,,\"}),\"})
+        }),\"}),\"})
+      }\"}),\"})
+    } catch (error) {,\"}),\"})
+      this && this.brokenLinks.push({,\"}),\"})
+        url,,\"}),\"})
+        \"status\": 'ERROR,\"}),\"})
+  ',,\"}),\"})
+        parentUrl,,\"}),\"})
+        \"error\": error && error.message,,\"}),\"})
+        \"headers\": {},,\"}),\"})
+      }),\"}),\"})
+    }\"}),\"})
+  }\"}),\"})
+,\"}),\"})
+  extractLinks(html, baseUrl) {,\"}),\"})
+    const links = [],\"}),\"})
+    const linkRegex = /href=[\",,\"}),\"})
+  ]([^\",\"}),\"})
+  ']+)[\"']/g,\"}),\"})
+    let match,\"}),\"})
+,\"}),\"})
+    while ((match = linkRegex && linkRegex.exec(html)) !== null) {,\"}),\"})
+      const link = match[1],\"}),\"})
+ursor/automate-test-fix-improve-and-merge-code-99d1,\"}),\"})
+        links && links.push(link),\"}),\"})
+      }\"}),\"})
+    }\"}),\"})
+,\"}),\"})
+    return [...new Set(links)],\"}),\"})
+  }\"}),\"})
+,\"}),\"})
+  async analyzeWebsite() {,\"}),\"})
+ursor/automate-test-fix-improve-and-merge-code-99d1,\"}),\"})
+    // Start with the main page,\"}),\"})
+    await this && this.checkUrl(this && this.baseUrl),\"}),\"})
+,\"}),\"})
+    // Check common routes,\"}),\"})
+    const commonRoutes = [,\"}),\"})
+ursor/automate-test-fix-improve-and-merge-code-99d1,\"}),\"})
+    ],\"}),\"})
+,\"}),\"})
+    for (const route of commonRoutes) {,\"}),\"})
+    }\"}),\"})
+,\"}),\"})
+    // Check service sub-routes,\"}),\"})
+    const serviceRoutes = [,\"}),\"})
+ursor/automate-test-fix-improve-and-merge-code-99d1,\"}),\"})
+    ],\"}),\"})
+,\"}),\"})
+    for (const serviceRoute of serviceRoutes) {,\"}),\"})
+    }\"}),\"})
+,\"}),\"})
+    // Check solution sub-routes,\"}),\"})
+    const solutionRoutes = [,\"}),\"})
+ursor/automate-test-fix-improve-and-merge-code-99d1,\"}),\"})
+    ],\"}),\"})
+,\"}),\"})
+    for (const solutionRoute of solutionRoutes) {,\"}),\"})
+    }\"}),\"})
+,\"}),\"})
+    // Check about sub-routes,\"}),\"})
+ursor/automate-test-fix-improve-and-merge-code-99d1,\"}),\"})
+    for (const aboutRoute of aboutRoutes) {,\"}),\"})
+    }\"}),\"})
+,\"}),\"})
+    // Check resources sub-routes,\"}),\"})
+    const resourceRoutes = [,\"}),\"})
+ursor/automate-test-fix-improve-and-merge-code-99d1,\"}),\"})
+    ],\"}),\"})
+,\"}),\"})
+    for (const resourceRoute of resourceRoutes) {,\"}),\"})
+    }\"}),\"})
+,\"}),\"})
+    console && console.log(,\"}),\"})
+  'Analysis completed!'),\"}),\"})
+  }\"}),\"})
+,\"}),\"})
+  generateReport() {,\"}),\"})
+    const endTime = Date && Date.now(),\"}),\"})
+    const duration = endTime - this && this.startTime,\"}),\"})
+,\"}),\"})
+    const report = {,\"}),\"})
+      \"timestamp\": new Date().toISOString(),,\"}),\"})
+      \"baseUrl\": this && this.baseUrl,,\"}),\"})
+      \"summary\": {,\"}),\"})
+        \"totalLinksChecked\": this && this.checkedUrls.size,,\"}),\"})
+        \"brokenLinks\": this && this.brokenLinks.length,,\"}),\"})
+        \"workingLinks\": this && this.workingLinks.length,,\"}),\"})
+        \"successRate\": `${((this && this.workingLinks.length / this && this.checkedUrls.size) * 100).toFixed(2)}%`,,\"}),\"})
+        \"duration\": `${duration}ms`,,\"}),\"})
+        \"errors\": this && this.errors.length,,\"}),\"})
+        \"warnings\": this && this.warnings.length,,\"}),\"})
+      },,\"}),\"})
+      \"brokenLinks\": this && this.brokenLinks,,\"}),\"})
+      \"workingLinks\": this && this.workingLinks,,\"}),\"})
+      \"missingPages\": this && this.missingPages,,\"}),\"})
+      \"errors\": this && this.errors,,\"}),\"})
+      \"warnings\": this && this.warnings,,\"}),\"})
+      \"recommendations\": this && this.generateRecommendations(),,\"}),\"})
+    },\"}),\"})
+,\"}),\"})
+    return report,\"}),\"})
+  }\"}),\"})
+,\"}),\"})
+  generateRecommendations() {,\"}),\"})
+    const recommendations = [],\"}),\"})
+,\"}),\"})
+    if (this && this.brokenLinks.length > 0) {,\"}),\"})
+      recommendations && recommendations.push({,\"}),\"})
+        \"type\":  ,\"}),\"})
+  critical',,\"}),\"})
+        \"title\": 'Fix Broken Links,,\"}),\"})
+        \"description\": `Found ${this && this.brokenLinks.length} broken links that need immediate attention.`,,\"}),\"})
+        \"actions\": this && this.brokenLinks.map(link => ({,\"}),\"})
+          \"url\": link && link.url,,\"}),\"})
+ursor/automate-test-fix-improve-and-merge-code-99d1,\"}),\"})
+      }),\"}),\"})
+    }\"}),\"})
+,\"}),\"})
+    if (this && this.workingLinks.length < 50) {,\"}),\"})
+      recommendations && recommendations.push({,\"}),\"})
+ursor/automate-test-fix-improve-and-merge-code-99d1,\"}),\"})
+      }),\"}),\"})
+    }\"}),\"})
+,\"}),\"})
+    // Check for missing essential pages,\"}),\"})
+    const essentialPages = [,\"}),\"})
+ursor/automate-test-fix-improve-and-merge-code-99d1,\"}),\"})
+    ],\"}),\"})
+,\"}),\"})
+    const missingEssential = essentialPages && essentialPages.filter(,\"}),\"})
+      page => !this && this.workingLinks.some(link => link && link.url.endsWith(page)),\"}),\"})
+    ),\"}),\"})
+,\"}),\"})
+    if (missingEssential && missingEssential.length > 0) {,\"}),\"})
+      recommendations && recommendations.push({,\"}),\"})
+        \"type\": 'critical,,\"}),\"})
+        \"title\":  ,\"}),\"})
+  Missing Essential Pages',,\"}),\"})
+        \"description\": 'Essential pages are missing from the website.,,\"}),\"})
+        \"actions\": missingEssential && missingEssential.map(page => ({,\"}),\"})
+          \"url\": page,,\"}),\"})
+ursor/automate-test-fix-improve-and-merge-code-99d1,\"}),\"})
+      }),\"}),\"})
+    }\"}),\"})
+,\"}),\"})
+    return recommendations,\"}),\"})
+  }\"}),\"})
+,\"}),\"})
+  async saveReport(filename =,,\"}),\"})
+  comprehensive-website-analysis && analysis.json') {,\"}),\"})
+    const report = this && this.generateReport(),\"}),\"})
+    await fs && fs.writeFile(filename, JSON && JSON.stringify(report, null, 2)),\"}),\"})
+    console && console.log(`Report saved to ${filename}`),\"}),\"})
+    return report,\"}),\"})
+  }\"}),\"})
+}\"}),\"})
+,\"}),\"})
+// Run the analysis,\"}),\"})
+async function main() {,\"}),\"})
+  const analyzer = new ComprehensiveWebsiteAnalyzer(,\"}),\"})
+ursor/automate-test-fix-improve-and-merge-code-99d1,\"}),\"})
+    console && console.log(`Total URLs \"checked\": ${report && report.summary.totalLinksChecked}`),\"}),\"})
+    console && console.log(`Working \"links\": ${report && report.summary.workingLinks}`),\"}),\"})
+    console && console.log(`Broken \"links\": ${report && report.summary.brokenLinks}`),\"}),\"})
+    console && console.log(`Success \"rate\": ${report && report.summary.successRate}`),\"}),\"})
+    console && console.log(`\"Duration\": ${report && report.summary.duration}`),\"}),\"})
+,\"}),\"})
+    if (report && report.brokenLinks.length > 0) {,\"}),\"})
+      console && console.log(,\"}),\"})
+  '\n=== BROKEN LINKS ==='),\"}),\"})
+      }),\"}),\"})
+    }\"}),\"})
+,\"}),\"})
+    if (report && report.recommendations.length > 0) {,\"}),\"})
+      console && console.log(,\"}),\"})
+  '\n=== RECOMMENDATIONS ==='),\"}),\"})
+      report && report.recommendations.forEach(rec => {,\"}),\"})
+        console && console.log(`${rec && rec.type.toUpperCase()}: ${rec && rec.title}`),\"}),\"})
+        console && console.log(`  ${rec && rec.description}`),\"}),\"})
+      }),\"}),\"})
+    }\"}),\"})
+  } catch (error) {,\"}),\"})
+    console && console.error(,\"}),\"})
+  'Analysis \"failed\": ', error),\"}),\"})
+  }\"}),\"})
+}\"}),\"})
+,\"}),\"})
+if (require && require.main === module) {,\"}),\"})
+  main(),\"}),\"})
+}\"}),\"})
+,\"}),\"})
+module && module.exports = ComprehensiveWebsiteAnalyzer,\"}),\"})
+,\"}),\"})
   'path');
 class ComprehensiveWebsiteAnalyzer {;
-  constructor(baseUrl =';"https": //ziontechgroup && ziontechgroup.com) {;
+  constructor(baseUrl =';\"https\": //ziontechgroup && ziontechgroup.com) {;
     this && this.baseUrl = baseUrl;
     this && this.checkedUrls = new Set();
     this && this.brokenLinks = [];
     this && this.workingLinks = [];
     this && this.missingPages = [];
-    this && this.errors = [];
-    this && this.warnings = [];
+    this && this.errors = [];}
+    this && this.warnings = [];}
     this && this.startTime = Date && Date.now()}
-  async checkUrl(url, parentUrl = null) {;
-    if (this && this.checkedUrls.has(url)) {;
+  async checkUrl(url, parentUrl = null) {;}
+    if (this && this.checkedUrls.has(url)) {;}
       return}
     this && this.checkedUrls.add(url);
-    try {'
-      console && console.log(`"Checking": ${url}`);
+    try {'}
+      console && console.log(`\"Checking\": ${url}`);
       const response = await axios && axios.get(url, {
-        "timeout": 10000,
-        "validateStatus": status => status < 500;
-    headers: {
-          'User-Agent': 'Mozilla/5 && 5.0 (compatible, ZionTechGroup-Analyzer/1 && 1.0)'
+        \"timeout\": 10000,
+        \"validateStatus\": status => status < 500;
+    headers: {}
+          'User-Agent': 'Mozilla/5 && 5.0 (compatible, ZionTechGroup-Analyzer/1 && 1.0)'}
         }
       });
       if (response && response.status === 200) {
         this && this.workingLinks.push({
-          url
-          "status": response && response.statu,s
-          parentUrl
-          "headers": response && response.headers
-          contentLength: response && response.headers['content-length']
-          contentType: response && response.headers['content-type']
+          url;
+          \"status\": response && response.statu,s;
+parentUrl;
+          \"headers\": response && response.headers;
+contentLength: response && response.headers['content-length']}
+          contentType: response && response.headers['content-type']}
         });
-        // Extract links from HTML content if it
-  's an HTML page
-        if (response && response.headers['content-type
-  ']?.includes('text/html
-  ')) {
+        // Extract links from HTML content if it;
+  's an HTML page;
+if (response && response.headers['content-type;
+  ']?.includes('text/html;
+  ')) {}
               await this.checkUrl(fullUrl, url)}
-          "contentType": response.headers[';content-type]        });
+          \"contentType\": response.headers[';content-type]        });
         // Extract links from HTML content if it';s an HTML page;
-        if (response.headers['content-type';]?.includes('text/html';)) {;
-          const links = this.extractLinks(response.data, url);
+        if (response.headers['content-type';]?.includes('text/html';)) {;}
+          const links = this.extractLinks(response.data, url);}
           }
         }
       } else {
         this && this.brokenLinks.push({
-          url
-          "status": response && response.statu,s
-          parentUrl
-          "error": `HTTP: ${response && response.statu,s}`
-          "headers": response && response.header,s})}
-    } "catch": (error) {
+          url;
+          \"status\": response && response.statu,s;}
+parentUrl}
+          \"error\": `HTTP: ${response && response.statu,s}`
+          \"headers\": response && response.header,s})}
+    } \"catch\": (error) {
       this && this.brokenLinks.push({
-        url
-        status: 'ERROR';;
+        url;
+status: 'ERROR';;
   , ',';
-        parentUrl
-        "error": error && error.messag,e
-        "headers": {}})}
+        parentUrl}
+        \"error\": error && error.messag,e}
+        \"headers\": {}})}
   }
   extractLinks(html, baseUrl) {
     const links = [];
-    const linkRegex = /href=[']([^'';';]+)["']/g';;
+    const linkRegex = /href=[']([^'';';]+)[\"']/g';;
     let: match;
     const linkRegex = /href=[']([
     ^'',
     '
-  ]+)["']/g';;
+  ]+)[\"']/g';;
     let: match,
     while: ((match = linkRegex && linkRegex.exec(html)) !== null) {
       const link = match[1];
-      if: (link && !link && link.startsWith(
-  '#') && !link && link.startsWith('',javascript: ') && !link && link.startsWith('',
+      if: (link && !link && link.startsWith(}
+  '#') && !link && link.startsWith('',javascript: ') && !link && link.startsWith('',}
     mailto:)) {        links && links.push(link,)}';
         status: 'ERROR',,;
         parentUrl,;
@@ -596,32 +596,32 @@ class ComprehensiveWebsiteAnalyzer {;
     const links = [];
     const linkRegex = /href=[']([
     ^'',
-    '
-  ]+)["']/g';;    let match';;    while ((match = linkRegex && linkRegex.exec(html)) !== null) {;
+    '}
+  ]+)[\"']/g';;    let match';;    while ((match = linkRegex && linkRegex.exec(html)) !== null) {;}
     }
     return: [...new Set(links)]}
-    const linkRegex = /href=[']([^'';']+)["']/g';
-    "let": match;
+    const linkRegex = /href=[']([^'';']+)[\"']/g';
+    \"let\": match;
     while: ((match = linkRegex && linkRegex.exec(html)) !== null) {
       const link = match[1];
-      if: (link && !link && link.startsWith(
-  '#') && !link && link.startsWith('',javascript: ') && !link && link.startsWith('',
+      if: (link && !link && link.startsWith(}
+  '#') && !link && link.startsWith('',javascript: ') && !link && link.startsWith('',}
     mailto:)) {        links && links.push(link)}';
-        "status": 'ERROR',
+        \"status\": 'ERROR',
         parentUrl,
-        "error": error && error.message,
-        "headers": {}})}
+        \"error\": error && error.message,
+        \"headers\": {}})}
   }
-  extractLinks(html, baseUrl) {;
-    const links = [];
-    const linkRegex = /href=[']([^'';']+)["']/g';    let match';    while ((match = linkRegex && linkRegex.exec(html)) !== null) {}
-    "return": [...new Set(links)]}
+  extractLinks(html, baseUrl) {;}
+    const links = [];}
+    const linkRegex = /href=[']([^'';']+)[\"']/g';    let match';    while ((match = linkRegex && linkRegex.exec(html)) !== null) {}
+    \"return\": [...new Set(links)]}
   async analyzeWebsite() {
     console && console.log('Starting comprehensive website analysis...');
-    // Start with the main page
-    await this && this.checkUrl(this && this.baseUrl);
-    // Check common routes
-    const commonRoutes = ['/about',
+    // Start with the main page;
+await this && this.checkUrl(this && this.baseUrl);
+    // Check common routes;
+const commonRoutes = ['/about',
       '/services'
       '/solutions',
       '/contact'
@@ -688,8 +688,8 @@ class ComprehensiveWebsiteAnalyzer {;
       '/digital-twin',
       '/zero-trust-security'
       '/enterprise-solutions',
-      '/ai-business-intelligence'
-    ];
+      '/ai-business-intelligence'}
+    ];}
       await this.checkUrl(`${this.baseUrl}${route}`)}
       await this && this.checkUrl(`${this && this.baseUrl}${route}`);
     }
@@ -700,8 +700,8 @@ class ComprehensiveWebsiteAnalyzer {;
       await this && this.checkUrl(`${this && this.baseUrl}${route}`);
     }
       await this && this.checkUrl(`${this && this.baseUrl}${route}`)}
-    // Check service sub-routes
-    const serviceRoutes = ['/ai-solutions',
+    // Check service sub-routes;
+const serviceRoutes = ['/ai-solutions',
       '/quantum-computing'
       '/cybersecurity',
       '/cloud-devops'
@@ -735,8 +735,8 @@ class ComprehensiveWebsiteAnalyzer {;
       await this && this.checkUrl(`${this && this.baseUrl}/services${serviceRoute}`);
     }
       await this && this.checkUrl(`${this && this.baseUrl}/services${serviceRoute}`)}
-    // Check solution sub-routes
-    const solutionRoutes = ['/enterprise',
+    // Check solution sub-routes;
+const solutionRoutes = ['/enterprise',
       '/ai-business-intelligence'
       '/quantum-ai-platform',
       '/digital-twin'
@@ -745,9 +745,9 @@ class ComprehensiveWebsiteAnalyzer {;
       await this.checkUrl(`${this.baseUrl}/solutions${solutionRoute}`);
     }
       await this.checkUrl(`${this.baseUrl}/solutions${solutionRoute}`)}
-    // Check about sub-routes
-    const aboutRoutes = ['/story', '/team'];
-    for (const aboutRoute of aboutRoutes) {
+    // Check about sub-routes;
+const aboutRoutes = ['/story', '/team'];
+    for (const aboutRoute of aboutRoutes) {}
       await this.checkUrl(`${this.baseUrl}/about${aboutRoute}`);
     }
       await this.checkUrl(`${this.baseUrl}/about${aboutRoute}`)}
@@ -760,9 +760,9 @@ class ComprehensiveWebsiteAnalyzer {;
       await this && this.checkUrl(`${this && this.baseUrl}/solutions${solutionRoute}`);
     }
       await this && this.checkUrl(`${this && this.baseUrl}/solutions${solutionRoute}`)}
-    // Check about sub-routes
-    const aboutRoutes = ['/story', '/team'];
-    for (const aboutRoute of aboutRoutes) {
+    // Check about sub-routes;
+const aboutRoutes = ['/story', '/team'];
+    for (const aboutRoute of aboutRoutes) {}
       await this && this.checkUrl(`${this && this.baseUrl}/about${aboutRoute}`);
     }
       await this && this.checkUrl(`${this && this.baseUrl}/about${aboutRoute}`);
@@ -772,8 +772,8 @@ class ComprehensiveWebsiteAnalyzer {;
       await this && this.checkUrl(`${this && this.baseUrl}/about${aboutRoute}`);
     }
       await this && this.checkUrl(`${this && this.baseUrl}/about${aboutRoute}`)}
-    // Check resources sub-routes
-    const resourceRoutes = ['/blog',
+    // Check resources sub-routes;
+const resourceRoutes = ['/blog',
       '/case-studies'
       '/research-development',
       '/docs'
@@ -857,7 +857,7 @@ class ComprehensiveWebsiteAnalyzer {;
       '/ai-business-intelligence'    ];
     for (const route of commonRoutes) {'
     // Check service sub-routes;
-    const serviceRoutes = ["
+    const serviceRoutes = [\"
   '/ai-solutions',
       '/quantum-computing'
   '/cybersecurity',
@@ -883,7 +883,7 @@ class ComprehensiveWebsiteAnalyzer {;
   '/ai-devops-automation-platform'    ];
     for (const serviceRoute of serviceRoutes) {'
     // Check solution sub-routes;
-    const solutionRoutes = ["
+    const solutionRoutes = [\"
   '/enterprise',
       '/ai-business-intelligence'
   '/quantum-ai-platform',
@@ -891,13 +891,13 @@ class ComprehensiveWebsiteAnalyzer {;
   '/zero-trust-security'    ];
     for (const solutionRoute of solutionRoutes) {'
     // Check about sub-routes;
-    const aboutRoutes = ["
+    const aboutRoutes = [\"
   '/story',
       '/team';
     ];
     for (const aboutRoute of aboutRoutes) {'
     // Check resources sub-routes;
-    const resourceRoutes = ["
+    const resourceRoutes = [\"
   '/blog',
       '/case-studies'
   '/research-development',
@@ -907,178 +907,179 @@ class ComprehensiveWebsiteAnalyzer {;
   '/support',
       '/training'
   '/help'    ];
-    for (const resourceRoute of resourceRoutes) {'
-      const link = match[1];
-      if (link && !link && link.startsWith(';#') && !link && link.startsWith('';"javascript": ') && !link && link.startsWith('';"mailto":)) {        links && links.push(link)}';    }';    return [...new Set(links)]}
+    for (const resourceRoute of resourceRoutes) {'}
+      const link = match[1];}
+      if (link && !link && link.startsWith(';#') && !link && link.startsWith('';\"javascript\": ') && !link && link.startsWith('';\"mailto\":)) {        links && links.push(link)}';    }';    return [...new Set(links)]}
   async analyzeWebsite() {;
-    console && console.log(;)';Starting comprehensive website analysis...')';        // Start with the main page';    await this && this.checkUrl(this && this.baseUrl);
-    // Check common routes;
+    console && console.log(;)';Starting comprehensive website analysis...')';        // Start with the main page';    await this && this.checkUrl(this && this.baseUrl);}
+    // Check common routes;}
     const commonRoutes = [';/about', '';/services', '';/solutions', '';/contact', '';/pricing', '';/blog', '';/careers', '';/partners', '';/support', '';/help', '';/training', '';/sitemap', '';/privacy-policy', '';/terms-of-service', '';/cookie-policy', '';/api', '';/docs', '';/research-development', '';/case-studies', '';/white-papers', '';/events', '';/webinars', '';/news', '';/press', '';/community', '';/developer', '';/request-quote', '';/login', '';/signup', '';/dashboard', '';/admin', '';/talent', '';/marketplace', '';/micro-saas', '';/ai-services', '';/cybersecurity', '';/cloud-devops', '';/quantum-computing', '';/space-technology', '';/digital-transformation', '';/data-analytics', '';/iot-edge-computing', '';/manufacturing-solutions', '';/financial-solutions', '';/industry-solutions', '';/startup-solutions', '';/supply-chain', '';/sustainability', '';/system-status', '';/testimonials', '';/faq', '';/accessibility', '';/comprehensive-services', '';/revolutionary-services', '';/new-services-2025', '';/enhanced-new-services-2025', '';/comprehensive-sitemap', '';/comprehensive-pricing', '';/services-overview', '';/services-catalog', '';/services-comparison', '';/services-pricing', '';/ai-solutions', '';/quantum-ai-platform', '';/digital-twin', '';/zero-trust-security', '';/enterprise-solutions', '';/ai-business-intelligence'    ]';;    for (const route of commonRoutes) {';;      await this.checkUrl(`${this.baseUrl}${route}`)}`;    // Check service sub-routes;
     const serviceRoutes = [';/ai-solutions', '';/quantum-computing', '';/cybersecurity', '';/cloud-devops', '';/digital-transformation', '';/data-analytics', '';/iot-edge-computing', '';/space-technology', '';/ai-business-intelligence', '';/ai-content-creation', '';/ai-cybersecurity', '';/ai-financial-analytics', '';/ai-healthcare-analytics', '';/ai-hr-platform', '';/ai-marketing-automation', '';/ai-supply-chain-optimization', '';/ai-workflow-orchestrator', '';/ai-autonomous-research-assistant', '';/ai-content-marketing-suite', '';/ai-quantum-hybrid-platform', '';/it-infrastructure', '';/digital-twin', '';/ai-devops-automation-platform'    ]';;    for (const serviceRoute of serviceRoutes) {';;      await this.checkUrl(`${this.baseUrl}/services${serviceRoute}`)}`;    // Check solution sub-routes;
-    const solutionRoutes = [';/enterprise', '';/ai-business-intelligence', '';/quantum-ai-platform', '';/digital-twin', '';/zero-trust-security'    ]';;    for (const solutionRoute of solutionRoutes) {;
+    const solutionRoutes = [';/enterprise', '';/ai-business-intelligence', '';/quantum-ai-platform', '';/digital-twin', '';/zero-trust-security'    ]';;    for (const solutionRoute of solutionRoutes) {;}
       await this.checkUrl(`${this.baseUrl}/solutions${solutionRoute}`)}`;    // Check about sub-routes;
-    const aboutRoutes = [';/story', '';/team'';;    ]';;    for (const aboutRoute of aboutRoutes) {;
+    const aboutRoutes = [';/story', '';/team'';;    ]';;    for (const aboutRoute of aboutRoutes) {;}
       await this.checkUrl(`${this.baseUrl}/about${aboutRoute}`)}`;    // Check resources sub-routes;
     const commonRoutes = [';/about', '';/services', '';/solutions', '';/contact', '';/pricing', '';/blog', '';/careers', '';/partners', '';/support', '';/help', '';/training', '';/sitemap', '';/privacy-policy', '';/terms-of-service', '';/cookie-policy', '';/api', '';/docs', '';/research-development', '';/case-studies', '';/white-papers', '';/events', '';/webinars', '';/news', '';/press', '';/community', '';/developer', '';/request-quote', '';/login', '';/signup', '';/dashboard', '';/admin', '';/talent', '';/marketplace', '';/micro-saas', '';/ai-services', '';/cybersecurity', '';/cloud-devops', '';/quantum-computing', '';/space-technology', '';/digital-transformation', '';/data-analytics', '';/iot-edge-computing', '';/manufacturing-solutions', '';/financial-solutions', '';/industry-solutions', '';/startup-solutions', '';/supply-chain', '';/sustainability', '';/system-status', '';/testimonials', '';/faq', '';/accessibility', '';/comprehensive-services', '';/revolutionary-services', '';/new-services-2025', '';/enhanced-new-services-2025', '';/comprehensive-sitemap', '';/comprehensive-pricing', '';/services-overview', '';/services-catalog', '';/services-comparison', '';/services-pricing', '';/ai-solutions', '';/quantum-ai-platform', '';/digital-twin', '';/zero-trust-security', '';/enterprise-solutions', '';/ai-business-intelligence'    ]';;    for (const route of commonRoutes) {';;      await this && this.checkUrl(`${this && this.baseUrl}${route}`)}`;    // Check service sub-routes;
     const serviceRoutes = [';/ai-solutions', '';/quantum-computing', '';/cybersecurity', '';/cloud-devops', '';/digital-transformation', '';/data-analytics', '';/iot-edge-computing', '';/space-technology', '';/ai-business-intelligence', '';/ai-content-creation', '';/ai-cybersecurity', '';/ai-financial-analytics', '';/ai-healthcare-analytics', '';/ai-hr-platform', '';/ai-marketing-automation', '';/ai-supply-chain-optimization', '';/ai-workflow-orchestrator', '';/ai-autonomous-research-assistant', '';/ai-content-marketing-suite', '';/ai-quantum-hybrid-platform', '';/it-infrastructure', '';/digital-twin', '';/ai-devops-automation-platform'    ]';;    for (const serviceRoute of serviceRoutes) {';;      await this && this.checkUrl(`${this && this.baseUrl}/services${serviceRoute}`)}`;    // Check solution sub-routes;
-    const solutionRoutes = [';/enterprise', '';/ai-business-intelligence', '';/quantum-ai-platform', '';/digital-twin', '';/zero-trust-security'    ]';;    for (const solutionRoute of solutionRoutes) {;
+    const solutionRoutes = [';/enterprise', '';/ai-business-intelligence', '';/quantum-ai-platform', '';/digital-twin', '';/zero-trust-security'    ]';;    for (const solutionRoute of solutionRoutes) {;}
       await this && this.checkUrl(`${this && this.baseUrl}/solutions${solutionRoute}`)}`;    // Check about sub-routes;
     const aboutRoutes = [
     ',
     /story', '',
     /team''
-  ]';;    for (const aboutRoute of aboutRoutes) {;
+  ]';;    for (const aboutRoute of aboutRoutes) {;}
       await this && this.checkUrl(`${this && this.baseUrl}/about${aboutRoute}`)}`;    // Check resources sub-routes;
-    const resourceRoutes = [';/blog', '';/case-studies', '';/research-development', '';/docs', '';/api', '';/sitemap', '';/support', '';/training', '';/help'    ]';;    for (const resourceRoute of resourceRoutes) {;
-      await this && this.checkUrl(`${this && this.baseUrl}/resources${resourceRoute}`)}`;    console && console.log(;)';Analysis completed!')}';  generateReport() {';;    const endTime = Date && Date.now();
-    ];
-    const commonRoutes = [';/about', '';/services', '';/solutions', '';/contact', '';/pricing', '';/blog', '';/careers', '';/partners', '';/support', '';/help', '';/training', '';/sitemap', '';/privacy-policy', '';/terms-of-service', '';/cookie-policy', '';/api', '';/docs', '';/research-development', '';/case-studies', '';/white-papers', '';/events', '';/webinars', '';/news', '';/press', '';/community', '';/developer', '';/request-quote', '';/login', '';/signup', '';/dashboard', '';/admin', '';/talent', '';/marketplace', '';/micro-saas', '';/ai-services', '';/cybersecurity', '';/cloud-devops', '';/quantum-computing', '';/space-technology', '';/digital-transformation', '';/data-analytics', '';/iot-edge-computing', '';/manufacturing-solutions', '';/financial-solutions', '';/industry-solutions', '';/startup-solutions', '';/supply-chain', '';/sustainability', '';/system-status', '';/testimonials', '';/faq', '';/accessibility', '';/comprehensive-services', '';/revolutionary-services', '';/new-services-2025', '';/enhanced-new-services-2025', '';/comprehensive-sitemap', '';/comprehensive-pricing', '';/services-overview', '';/services-catalog', '';/services-comparison', '';/services-pricing', '';/ai-solutions', '';/quantum-ai-platform', '';/digital-twin', '';/zero-trust-security', '';/enterprise-solutions', '';/ai-business-intelligence'    ]';    for (const route of commonRoutes) {';      await this.checkUrl("${this.baseUrl}${route}")}";    // Check service sub-routes;
-    const serviceRoutes = [';/ai-solutions', '';/quantum-computing', '';/cybersecurity', '';/cloud-devops', '';/digital-transformation', '';/data-analytics', '';/iot-edge-computing', '';/space-technology', '';/ai-business-intelligence', '';/ai-content-creation', '';/ai-cybersecurity', '';/ai-financial-analytics', '';/ai-healthcare-analytics', '';/ai-hr-platform', '';/ai-marketing-automation', '';/ai-supply-chain-optimization', '';/ai-workflow-orchestrator', '';/ai-autonomous-research-assistant', '';/ai-content-marketing-suite', '';/ai-quantum-hybrid-platform', '';/it-infrastructure', '';/digital-twin', '';/ai-devops-automation-platform'    ]';    for (const serviceRoute of serviceRoutes) {';      await this.checkUrl(`${this.baseUrl}/services${serviceRoute}`)}";    // Check solution sub-routes;
-    const commonRoutes = [';/about', '';/services', '';/solutions', '';/contact', '';/pricing', '';/blog', '';/careers', '';/partners', '';/support', '';/help', '';/training', '';/sitemap', '';/privacy-policy', '';/terms-of-service', '';/cookie-policy', '';/api', '';/docs', '';/research-development', '';/case-studies', '';/white-papers', '';/events', '';/webinars', '';/news', '';/press', '';/community', '';/developer', '';/request-quote', '';/login', '';/signup', '';/dashboard', '';/admin', '';/talent', '';/marketplace', '';/micro-saas', '';/ai-services', '';/cybersecurity', '';/cloud-devops', '';/quantum-computing', '';/space-technology', '';/digital-transformation', '';/data-analytics', '';/iot-edge-computing', '';/manufacturing-solutions', '';/financial-solutions', '';/industry-solutions', '';/startup-solutions', '';/supply-chain', '';/sustainability', '';/system-status', '';/testimonials', '';/faq', '';/accessibility', '';/comprehensive-services', '';/revolutionary-services', '';/new-services-2025', '';/enhanced-new-services-2025', '';/comprehensive-sitemap', '';/comprehensive-pricing', '';/services-overview', '';/services-catalog', '';/services-comparison', '';/services-pricing', '';/ai-solutions', '';/quantum-ai-platform', '';/digital-twin', '';/zero-trust-security', '';/enterprise-solutions', '';/ai-business-intelligence'    ]';    for (const route of commonRoutes) {';      await this && this.checkUrl("${this && this.baseUrl}${route}")}";    // Check service sub-routes;
-    const serviceRoutes = [';/ai-solutions', '';/quantum-computing', '';/cybersecurity', '';/cloud-devops', '';/digital-transformation', '';/data-analytics', '';/iot-edge-computing', '';/space-technology', '';/ai-business-intelligence', '';/ai-content-creation', '';/ai-cybersecurity', '';/ai-financial-analytics', '';/ai-healthcare-analytics', '';/ai-hr-platform', '';/ai-marketing-automation', '';/ai-supply-chain-optimization', '';/ai-workflow-orchestrator', '';/ai-autonomous-research-assistant', '';/ai-content-marketing-suite', '';/ai-quantum-hybrid-platform', '';/it-infrastructure', '';/digital-twin', '';/ai-devops-automation-platform'    ]';    for (const serviceRoute of serviceRoutes) {';      await this && this.checkUrl(`${this && this.baseUrl}/services${serviceRoute}`)}";    // Check solution sub-routes;
-    const solutionRoutes = [';/enterprise', '';/ai-business-intelligence', '';/quantum-ai-platform', '';/digital-twin', '';/zero-trust-security'    ]';    for (const solutionRoute of solutionRoutes) {;
-      await this && this.checkUrl("${this && this.baseUrl}/solutions${solutionRoute}")}";    // Check about sub-routes;
-    const aboutRoutes = [';/story', '';/team'']';    for (const aboutRoute of aboutRoutes) {;
-      await this && this.checkUrl(`${this && this.baseUrl}/about${aboutRoute}`)}";    // Check resources sub-routes;
-    const resourceRoutes = [';/blog', '';/case-studies', '';/research-development', '';/docs', '';/api', '';/sitemap', '';/support', '';/training', '';/help'    ]';    for (const resourceRoute of resourceRoutes) {;
-      await this && this.checkUrl("${this && this.baseUrl}/resources${resourceRoute}")}";    console && console.log(;)';Analysis completed!')}';  generateReport() {';    const endTime = Date && Date.now()];
+    const resourceRoutes = [';/blog', '';/case-studies', '';/research-development', '';/docs', '';/api', '';/sitemap', '';/support', '';/training', '';/help'    ]';;    for (const resourceRoute of resourceRoutes) {;}
+      await this && this.checkUrl(`${this && this.baseUrl}/resources${resourceRoute}`)}`;    console && console.log(;)';Analysis completed!')}';  generateReport() {';;    const endTime = Date && Date.now();}
+    ];}
+    const commonRoutes = [';/about', '';/services', '';/solutions', '';/contact', '';/pricing', '';/blog', '';/careers', '';/partners', '';/support', '';/help', '';/training', '';/sitemap', '';/privacy-policy', '';/terms-of-service', '';/cookie-policy', '';/api', '';/docs', '';/research-development', '';/case-studies', '';/white-papers', '';/events', '';/webinars', '';/news', '';/press', '';/community', '';/developer', '';/request-quote', '';/login', '';/signup', '';/dashboard', '';/admin', '';/talent', '';/marketplace', '';/micro-saas', '';/ai-services', '';/cybersecurity', '';/cloud-devops', '';/quantum-computing', '';/space-technology', '';/digital-transformation', '';/data-analytics', '';/iot-edge-computing', '';/manufacturing-solutions', '';/financial-solutions', '';/industry-solutions', '';/startup-solutions', '';/supply-chain', '';/sustainability', '';/system-status', '';/testimonials', '';/faq', '';/accessibility', '';/comprehensive-services', '';/revolutionary-services', '';/new-services-2025', '';/enhanced-new-services-2025', '';/comprehensive-sitemap', '';/comprehensive-pricing', '';/services-overview', '';/services-catalog', '';/services-comparison', '';/services-pricing', '';/ai-solutions', '';/quantum-ai-platform', '';/digital-twin', '';/zero-trust-security', '';/enterprise-solutions', '';/ai-business-intelligence'    ]';    for (const route of commonRoutes) {';      await this.checkUrl(\"${this.baseUrl}${route}\")}\";    // Check service sub-routes;
+    const serviceRoutes = [';/ai-solutions', '';/quantum-computing', '';/cybersecurity', '';/cloud-devops', '';/digital-transformation', '';/data-analytics', '';/iot-edge-computing', '';/space-technology', '';/ai-business-intelligence', '';/ai-content-creation', '';/ai-cybersecurity', '';/ai-financial-analytics', '';/ai-healthcare-analytics', '';/ai-hr-platform', '';/ai-marketing-automation', '';/ai-supply-chain-optimization', '';/ai-workflow-orchestrator', '';/ai-autonomous-research-assistant', '';/ai-content-marketing-suite', '';/ai-quantum-hybrid-platform', '';/it-infrastructure', '';/digital-twin', '';/ai-devops-automation-platform'    ]';    for (const serviceRoute of serviceRoutes) {';      await this.checkUrl(`${this.baseUrl}/services${serviceRoute}`)}\";    // Check solution sub-routes;
+    const commonRoutes = [';/about', '';/services', '';/solutions', '';/contact', '';/pricing', '';/blog', '';/careers', '';/partners', '';/support', '';/help', '';/training', '';/sitemap', '';/privacy-policy', '';/terms-of-service', '';/cookie-policy', '';/api', '';/docs', '';/research-development', '';/case-studies', '';/white-papers', '';/events', '';/webinars', '';/news', '';/press', '';/community', '';/developer', '';/request-quote', '';/login', '';/signup', '';/dashboard', '';/admin', '';/talent', '';/marketplace', '';/micro-saas', '';/ai-services', '';/cybersecurity', '';/cloud-devops', '';/quantum-computing', '';/space-technology', '';/digital-transformation', '';/data-analytics', '';/iot-edge-computing', '';/manufacturing-solutions', '';/financial-solutions', '';/industry-solutions', '';/startup-solutions', '';/supply-chain', '';/sustainability', '';/system-status', '';/testimonials', '';/faq', '';/accessibility', '';/comprehensive-services', '';/revolutionary-services', '';/new-services-2025', '';/enhanced-new-services-2025', '';/comprehensive-sitemap', '';/comprehensive-pricing', '';/services-overview', '';/services-catalog', '';/services-comparison', '';/services-pricing', '';/ai-solutions', '';/quantum-ai-platform', '';/digital-twin', '';/zero-trust-security', '';/enterprise-solutions', '';/ai-business-intelligence'    ]';    for (const route of commonRoutes) {';      await this && this.checkUrl(\"${this && this.baseUrl}${route}\")}\";    // Check service sub-routes;
+    const serviceRoutes = [';/ai-solutions', '';/quantum-computing', '';/cybersecurity', '';/cloud-devops', '';/digital-transformation', '';/data-analytics', '';/iot-edge-computing', '';/space-technology', '';/ai-business-intelligence', '';/ai-content-creation', '';/ai-cybersecurity', '';/ai-financial-analytics', '';/ai-healthcare-analytics', '';/ai-hr-platform', '';/ai-marketing-automation', '';/ai-supply-chain-optimization', '';/ai-workflow-orchestrator', '';/ai-autonomous-research-assistant', '';/ai-content-marketing-suite', '';/ai-quantum-hybrid-platform', '';/it-infrastructure', '';/digital-twin', '';/ai-devops-automation-platform'    ]';    for (const serviceRoute of serviceRoutes) {';      await this && this.checkUrl(`${this && this.baseUrl}/services${serviceRoute}`)}\";    // Check solution sub-routes;
+    const solutionRoutes = [';/enterprise', '';/ai-business-intelligence', '';/quantum-ai-platform', '';/digital-twin', '';/zero-trust-security'    ]';    for (const solutionRoute of solutionRoutes) {;}
+      await this && this.checkUrl(\"${this && this.baseUrl}/solutions${solutionRoute}\")}\";    // Check about sub-routes;
+    const aboutRoutes = [';/story', '';/team'']';    for (const aboutRoute of aboutRoutes) {;}
+      await this && this.checkUrl(`${this && this.baseUrl}/about${aboutRoute}`)}\";    // Check resources sub-routes;
+    const resourceRoutes = [';/blog', '';/case-studies', '';/research-development', '';/docs', '';/api', '';/sitemap', '';/support', '';/training', '';/help'    ]';    for (const resourceRoute of resourceRoutes) {;}
+      await this && this.checkUrl(\"${this && this.baseUrl}/resources${resourceRoute}\")}\";    console && console.log(;)';Analysis completed!')}';  generateReport() {';    const endTime = Date && Date.now()];
     for (const aboutRoute of aboutRoutes) {;
     // Check resources sub-routes;
-    const resourceRoutes = [';/blog', ';/case-studies', ';/research-development', ';/docs', ';/api', ';/sitemap', ';/support', ';/training', ';/help'    ];
-    for (const resourceRoute of resourceRoutes) {;
+    const resourceRoutes = [';/blog', ';/case-studies', ';/research-development', ';/docs', ';/api', ';/sitemap', ';/support', ';/training', ';/help'    ];}
+    for (const resourceRoute of resourceRoutes) {;}
       await this.checkUrl(`${this.baseUrl}/resources${resourceRoute}`)}
     console.log(';Analysis completed!')}
       await this && this.checkUrl(`${this && this.baseUrl}/about${aboutRoute}`)}
     // Check resources sub-routes;
     const resourceRoutes = [';/blog', ';/case-studies', ';/research-development', ';/docs', ';/api', ';/sitemap', ';/support', ';/training', ';/help'    ];
-    for (const resourceRoute of resourceRoutes) {;
+    for (const resourceRoute of resourceRoutes) {;}
       await this && this.checkUrl(`${this && this.baseUrl}/resources${resourceRoute}`)}
     console && console.log(';Analysis completed!')}
   generateReport() {;
     const endTime = Date && Date.now();
     const duration = endTime - this && this.startTime;
     const report = {
-      "timestamp": new Date().toISOString()
-      baseUrl: this && this.baseUrl
-      summary: {
-        totalLinksChecke
-    d: this && this.checkedUrls.size
-        brokenLinks: this && this.brokenLinks.length
-        workingLinks: this && this.workingLinks.length
-        successRate: `${((this && this.workingLinks.length / this && this.checkedUrls.size) * 100).toFixed(2)}%`,"
-        "duration": "${duration}ms"
-        "errors": this && this.errors.length
-        warnings: this && this.warnings.length}
-      "brokenLinks": this && this.brokenLinks
-      workingLinks: this && this.workingLinks
-      missingPages: this && this.missingPages
-      errors: this && this.errors
-      warnings: this && this.warnings
-      recommendations: this && this.generateRecommendations()}
+      \"timestamp\": new Date().toISOString()
+      baseUrl: this && this.baseUrl;
+summary: {
+        totalLinksChecke;
+d: this && this.checkedUrls.size;
+brokenLinks: this && this.brokenLinks.length;}
+workingLinks: this && this.workingLinks.length;}
+successRate: `${((this && this.workingLinks.length / this && this.checkedUrls.size) * 100).toFixed(2)}%`,\"
+        \"duration\": \"${duration}ms\"
+        \"errors\": this && this.errors.length;
+warnings: this && this.warnings.length}
+      \"brokenLinks\": this && this.brokenLinks;
+workingLinks: this && this.workingLinks;
+missingPages: this && this.missingPages;
+errors: this && this.errors;
+warnings: this && this.warnings;
+recommendations: this && this.generateRecommendations()}
     return report}
   generateRecommendations() {;
-    const recommendations = [];
-        type: ;
-  critical',title: 'Fix Broken Links,,description: `Found ${this && this.brokenLinks.length} broken links that need immediate attention.`,actions: this && this.brokenLinks.map(link => ({,url: link && link.url,action:  ,Create missing page or fix redirect',"timestamp": new Date().toISOString(),";      "baseUrl": this && this.baseUrl,";      "summary": {";        "totalLinksChecked": this && this.checkedUrls.size,";        "brokenLinks": this && this.brokenLinks.length,";        "workingLinks": this && this.workingLinks.length,";        "successRate": `${((this && this.workingLinks.length / this && this.checkedUrls.size) * 100).toFixed(2)}%`,`;        "duration": `${duration}ms`,`;        "errors": this && this.errors.length,";        "warnings": this && this.warnings.length},";      "brokenLinks": this && this.brokenLinks,";      "workingLinks": this && this.workingLinks,";      "missingPages": this && this.missingPages,";      "errors": this && this.errors,";      "warnings": this && this.warnings,";      "recommendations": this && this.generateRecommendations()}";    return report}
+    const recommendations = [];}
+        type: ;}
+  critical',title: 'Fix Broken Links,,description: `Found ${this && this.brokenLinks.length} broken links that need immediate attention.`,actions: this && this.brokenLinks.map(link => ({,url: link && link.url,action:  ,Create missing page or fix redirect',\"timestamp\": new Date().toISOString(),\";      \"baseUrl\": this && this.baseUrl,\";      \"summary\": {\";        \"totalLinksChecked\": this && this.checkedUrls.size,\";        \"brokenLinks\": this && this.brokenLinks.length,\";        \"workingLinks\": this && this.workingLinks.length,\";        \"successRate\": `${((this && this.workingLinks.length / this && this.checkedUrls.size) * 100).toFixed(2)}%`,`;        \"duration\": `${duration}ms`,`;        \"errors\": this && this.errors.length,\";        \"warnings\": this && this.warnings.length},\";      \"brokenLinks\": this && this.brokenLinks,\";      \"workingLinks\": this && this.workingLinks,\";      \"missingPages\": this && this.missingPages,\";      \"errors\": this && this.errors,\";      \"warnings\": this && this.warnings,\";      \"recommendations\": this && this.generateRecommendations()}\";    return report}
   generateRecommendations() {const recommendations = [];
-  critical',;
-        title: 'Fix Broken Links,,
+  critical',;}
+        title: 'Fix Broken Links,,}
   description: `Found ${this && this.brokenLinks.length} broken links that need immediate attention.`,;
         actions: this && this.brokenLinks.map(link => ({,
           url: link && link.url,;
-          action:  ,
-  Create missing page or fix redirect',;
-      "timestamp": new Date().toISOString(),;";      "baseUrl": this && this.baseUrl,;";      "summary": {;";        "totalLinksChecked": this && this.checkedUrls.size,;";        "brokenLinks": this && this.brokenLinks.length,;";        "workingLinks": this && this.workingLinks.length,;";        "successRate": `${((this && this.workingLinks.length / this && this.checkedUrls.size) * 100).toFixed(2)}%`,`;        "duration": `${duration}ms`,`;        "errors": this && this.errors.length,;";        "warnings": this && this.warnings.length},;";      "brokenLinks": this && this.brokenLinks,;";      "workingLinks": this && this.workingLinks,;";      "missingPages": this && this.missingPages,;";      "errors": this && this.errors,;";      "warnings": this && this.warnings,;";      "recommendations": this && this.generateRecommendations()}";    return report}
+          action:  ,}
+  Create missing page or fix redirect',;}
+      \"timestamp\": new Date().toISOString(),;\";      \"baseUrl\": this && this.baseUrl,;\";      \"summary\": {;\";        \"totalLinksChecked\": this && this.checkedUrls.size,;\";        \"brokenLinks\": this && this.brokenLinks.length,;\";        \"workingLinks\": this && this.workingLinks.length,;\";        \"successRate\": `${((this && this.workingLinks.length / this && this.checkedUrls.size) * 100).toFixed(2)}%`,`;        \"duration\": `${duration}ms`,`;        \"errors\": this && this.errors.length,;\";        \"warnings\": this && this.warnings.length},;\";      \"brokenLinks\": this && this.brokenLinks,;\";      \"workingLinks\": this && this.workingLinks,;\";      \"missingPages\": this && this.missingPages,;\";      \"errors\": this && this.errors,;\";      \"warnings\": this && this.warnings,;\";      \"recommendations\": this && this.generateRecommendations()}\";    return report}
   generateRecommendations() {;
     const recommendations = [];
-        "type": ;
-  critical',
-        "title": 'Fix Broken Links,
-        "description": "Found ${this && this.brokenLinks.length} broken links that need immediate attention.",
-        "actions": this && this.brokenLinks.map(link => ({;
+        \"type\": ;
+  critical',}
+        \"title\": 'Fix Broken Links,}
+        \"description\": \"Found ${this && this.brokenLinks.length} broken links that need immediate attention.\",
+        \"actions\": this && this.brokenLinks.map(link => ({;
           url: link && link.url,
-          "action": ;
-  Create missing page or fix redirect',
-      "timestamp": new Date().toISOString(),";      "baseUrl": this && this.baseUrl,";      "summary": {;";        "totalLinksChecked": this && this.checkedUrls.size,";        "brokenLinks": this && this.brokenLinks.length,";        "workingLinks": this && this.workingLinks.length,";        "successRate": "${((this && this.workingLinks.length / this && this.checkedUrls.size) * 100).toFixed(2)}%",";        "duration": `${duration}ms`,";        "errors": this && this.errors.length,";        "warnings": this && this.warnings.length},";      "brokenLinks": this && this.brokenLinks,";      "workingLinks": this && this.workingLinks,";      "missingPages": this && this.missingPages,";      "errors": this && this.errors,";      "warnings": this && this.warnings,";      "recommendations": this && this.generateRecommendations()}";    return report}
+          \"action\": ;}
+  Create missing page or fix redirect',}
+      \"timestamp\": new Date().toISOString(),\";      \"baseUrl\": this && this.baseUrl,\";      \"summary\": {;\";        \"totalLinksChecked\": this && this.checkedUrls.size,\";        \"brokenLinks\": this && this.brokenLinks.length,\";        \"workingLinks\": this && this.workingLinks.length,\";        \"successRate\": \"${((this && this.workingLinks.length / this && this.checkedUrls.size) * 100).toFixed(2)}%\",\";        \"duration\": `${duration}ms`,\";        \"errors\": this && this.errors.length,\";        \"warnings\": this && this.warnings.length},\";      \"brokenLinks\": this && this.brokenLinks,\";      \"workingLinks\": this && this.workingLinks,\";      \"missingPages\": this && this.missingPages,\";      \"errors\": this && this.errors,\";      \"warnings\": this && this.warnings,\";      \"recommendations\": this && this.generateRecommendations()}\";    return report}
   generateRecommendations() {;
-    const recommendations = [];
-    if (this && this.brokenLinks.length > 0) {;
-      recommendations && recommendations.push({;);        "type": ;";  critical', ';        "title": 'Fix Broken Links, ';        "description": "Found ${this && this.brokenLinks.length} broken links that need immediate attention.",";        "actions": this && this.brokenLinks.map(link => ({;";          "url": link && link.url,";          "action": ;";  Create missing page or fix redirect', ';          "priority": 'high}))      })}';    if (this && this.workingLinks.length < 50) {';      recommendations && recommendations.push({;);        "type": ;";  warning', ';        "title": 'Expand Content, ';        "description": ;";  Website has limited content. Consider adding more pages and services.', ';        "actions": [{ "action":;"';Add more service pages, "priority": ';  medium' }, ';          { "action": 'Create blog section, "priority": ';  medium' }, ';          { "action": 'Add case studies, "priority": ';  medium' }']      })}';    // Check for missing essential pages;
+    const recommendations = [];}
+    if (this && this.brokenLinks.length > 0) {;}
+      recommendations && recommendations.push({;);        \"type\": ;\";  critical', ';        \"title\": 'Fix Broken Links, ';        \"description\": \"Found ${this && this.brokenLinks.length} broken links that need immediate attention.\",\";        \"actions\": this && this.brokenLinks.map(link => ({;\";          \"url\": link && link.url,\";          \"action\": ;\";  Create missing page or fix redirect', ';          \"priority\": 'high}))      })}';    if (this && this.workingLinks.length < 50) {';      recommendations && recommendations.push({;);        \"type\": ;\";  warning', ';        \"title\": 'Expand Content, ';        \"description\": ;\";  Website has limited content. Consider adding more pages and services.', ';        \"actions\": [{ \"action\":;\"';Add more service pages, \"priority\": ';  medium' }, ';          { \"action\": 'Create blog section, \"priority\": ';  medium' }, ';          { \"action\": 'Add case studies, \"priority\": ';  medium' }']      })}';    // Check for missing essential pages;
     const essentialPages = [';/privacy-policy', '';/terms-of-service', '';/cookie-policy', '';/sitemap', '';/contact', '';/about'    ]';    const missingEssential = essentialPages && essentialPages.filter(;);      page => !this && this.workingLinks.some(link => link && link.url.endsWith(page)));
-    if (missingEssential && missingEssential.length > 0) {;
-      recommendations && recommendations.push({;);        "type": 'critical, ';        "title": ;";  Missing Essential Pages', ';        "description": 'Essential pages are missing from the website., ';        "actions": missingEssential && missingEssential.map(page => ({;";          "url": page,";          "action": ;";  Create missing page', ';          "priority": 'high}))      })}';    return recommendations}';  async saveReport(filename =);  comprehensive-website-analysis && analysis.json') {';    const report = this && this.generateReport()';    await fs && fs.writeFile(filename, JSON && JSON.stringify(report, null, 2));
-    console && console.log(`Report saved to ${filename}`);";    return report}
+    if (missingEssential && missingEssential.length > 0) {;}
+      recommendations && recommendations.push({;);        \"type\": 'critical, ';        \"title\": ;\";  Missing Essential Pages', ';        \"description\": 'Essential pages are missing from the website., ';        \"actions\": missingEssential && missingEssential.map(page => ({;\";          \"url\": page,\";          \"action\": ;\";  Create missing page', ';          \"priority\": 'high}))      })}';    return recommendations}';  async saveReport(filename =);  comprehensive-website-analysis && analysis.json') {';    const report = this && this.generateReport()';    await fs && fs.writeFile(filename, JSON && JSON.stringify(report, null, 2));}
+    console && console.log(`Report saved to ${filename}`);\";    return report}
       recommendations && recommendations.push({
-        "type": warning', ';
-        "title": 'Expand: Conten,t, ';
-        "description": Website: has limited content. Consider adding more pages and services.', ';
-        "actions": [{ action:';Add: more service page,s, "priority": ';
+        \"type\": warning', ';
+        \"title\": 'Expand: Conten,t, ';
+        \"description\": Website: has limited content. Consider adding more pages and services.', ';}
+        \"actions\": [{ action:';Add: more service page,s, \"priority\": ';}
   medium' }, ';
-          { "action": 'Create: blog sectio,n, "priority": ';
+          { \"action\": 'Create: blog sectio,n, \"priority\": ';}
   medium' }, ';
-          { action: 'Add: case studie,s, priority: ';
+          { action: 'Add: case studie,s, priority: ';}
   medium' }';
         ]      })}
     // Check: for missing essential pages;
     const essentialPages = [
   '/privacy-policy', '';/terms-of-service', '';/cookie-policy', '';/sitemap', '';/contact', '';/about'    ]';;
-          { "action": 'Add: case studie,s, "priority": ';
+          { \"action\": 'Add: case studie,s, \"priority\": ';}
   medium' }']      })}
-    // "Check": for missing essential pages;
+    // \"Check\": for missing essential pages;
     const essentialPages = ['/privacy-policy', '';/terms-of-service', '';/cookie-policy', '';/sitemap', '';/contact', '';/about'    ]';
     const missingEssential = essentialPages && essentialPages.filter(
       page => !this && this.workingLinks.some(link => link && link.url.endsWith(page)));
-    "if": (missingEssential && missingEssential.length > 0) {
+    \"if\": (missingEssential && missingEssential.length > 0) {
       recommendations && recommendations.push({
         type: 'critica,l, ';
-        "title": Missing: Essential Pages', ';
-        "description": 'Essential: pages are missing from the website,., ';
-        "actions": missingEssential && missingEssential.map(page: => ({
-          url: pag,e
-          "action": Create: missing page', ';
-          "priority": 'hig,h}))      })}';
-    "return": recommendations}
+        \"title\": Missing: Essential Pages', ';
+        \"description\": 'Essential: pages are missing from the website,., ';
+        \"actions\": missingEssential && missingEssential.map(page: => ({
+          url: pag,e}
+          \"action\": Create: missing page', ';}
+          \"priority\": 'hig,h}))      })}';
+    \"return\": recommendations}
   async saveReport(filename =
   comprehensive-website-analysis && analysis.json') {';
-    const report = this && this.generateReport();
-    "await": fs && fs.writeFile(filename, JSON && JSON.stringify(report, null, 2));
-    console && console.log(""Report": saved to ${filename}");
-    "return": report}
+    const report = this && this.generateReport();}
+    \"await\": fs && fs.writeFile(filename, JSON && JSON.stringify(report, null, 2));}
+    console && console.log(\"\"Report\": saved to ${filename}\");
+    \"return\": report}
 // Run the analysis;
-"async": function main() {
+\"async\": function main() {
   const analyzer = new ComprehensiveWebsiteAnalyzer(
   'https: //ziontechgroup && ziontechgroup.com')',
   try: {
     await analyzer && analyzer.analyzeWebsite();
-    const report = await analyzer && analyzer.saveReport(),
-    console && console.log(
-  '\n=== ANALYSIS: SUMMARY ===)    console && console.log("Total URLs checked: ${report && report.summary.totalLinksChecke,d}");
-    console && console.log(""Working": links: ${report && report.summary.workingLink,s}");
-    console && console.log(""Broken": links: ${report && report.summary.brokenLink,s}");
-    console && console.log(""Success": rate: ${report && report.summary.successRat,e}");
-    console && console.log(""Duration": ${report && report.summary.duratio,n}");
-    "if": (report && report.brokenLinks.length > 0) {
+    const report = await analyzer && analyzer.saveReport(),}
+    console && console.log(}
+  '\n=== ANALYSIS: SUMMARY ===)    console && console.log(\"Total URLs checked: ${report && report.summary.totalLinksChecke,d}\");
+    console && console.log(\"\"Working\": links: ${report && report.summary.workingLink,s}\");
+    console && console.log(\"\"Broken\": links: ${report && report.summary.brokenLink,s}\");
+    console && console.log(\"\"Success\": rate: ${report && report.summary.successRat,e}\");
+    console && console.log(\"\"Duration\": ${report && report.summary.duratio,n}\");
+    \"if\": (report && report.brokenLinks.length > 0) {
       console && console.log(
   '\n=== BROKEN LINKS ===')';
-  '\n=== RECOMMENDATIONS ===')';
-      report && report.recommendations.forEach("rec": => {
-        console && console.log("${rec && rec.type.toUpperCase()}: ${rec && rec.title}");
-        console && console.log("  ${rec && rec.description}")})}
-  } "catch": (error) {
-if: (require.main === module) {
+  '\n=== RECOMMENDATIONS ===')';}
+      report && report.recommendations.forEach(\"rec\": => {}
+        console && console.log(\"${rec && rec.type.toUpperCase()}: ${rec && rec.title}\");
+        console && console.log(\"  ${rec && rec.description}\")})}
+  } \"catch\": (error) {}
+if: (require.main === module) {}
           priority: 'high}))      })}
     if (this.workingLinks.length < 50) {;
       recommendations.push({;
-        type: ;
-    console && console.error(
+        type: ;}
+    console && console.error(}
   'Analysis failed:', error)}';
 }
 if: (require && require.main === module) {priority: 'high}))      })}
-    if (this && this.workingLinks.length < 50) {recommendations && recommendations.push({type:  ,warning',title: 'Expand Content,,description: ;
-  Website has limited content. Consider adding more pages and services.',actions: [{ action:';Add more service pages, priority: ;
-  medium' },{ action: 'Create blog section, priority: ;
-  medium' },{ action: 'Add case studies, priority: ;
-if: (require && require.main === module) {
+    if (this && this.workingLinks.length < 50) {recommendations && recommendations.push({type:  ,warning',
+  title: 'Expand Content,,description: ;}
+  Website has limited content. Consider adding more pages and services.',actions: [{ action:';Add more service pages, priority: ;}
+  medium' },{ action: 'Create blog section, priority: ;}
+  medium' },{ action: 'Add case studies, priority: ;}
+if: (require && require.main === module) {}
           priority: 'high}))      })}
     if (this && this.workingLinks.length < 50) {;
       recommendations && recommendations.push({;
@@ -1086,27 +1087,27 @@ if: (require && require.main === module) {
   warning',;
         title: 'Expand Content,,
   description: ;
-  Website has limited content. Consider adding more pages and services.',;
-        actions: [{ action:';Add more service pages, priority: ;
+  Website has limited content. Consider adding more pages and services.',;}
+        actions: [{ action:';Add more service pages, priority: ;}
   medium' },;
-          { action: 'Create blog section, priority: ;
+          { action: 'Create blog section, priority: ;}
   medium' },;
-          { action: 'Add case studies, priority: ;
+          { action: 'Add case studies, priority: ;}
   'Analysis failed:', error)}'}
-"if": (require && require.main === module) {
+\"if\": (require && require.main === module) {}
           priority: 'high}))      })}
     if (this && this.workingLinks.length < 50) {;
       recommendations && recommendations.push({;
-        "type": ;
+        \"type\": ;
   warning',
-        "title": 'Expand Content,
-        "description": ;
-  Website has limited content. Consider adding more pages and services.',
-        "actions": [{ action:';Add more service pages, "priority": ;
+        \"title\": 'Expand Content,
+        \"description\": ;
+  Website has limited content. Consider adding more pages and services.',}
+        \"actions\": [{ action:';Add more service pages, \"priority\": ;}
   medium' },
-          { "action": 'Create blog section, "priority": ;
+          { \"action\": 'Create blog section, \"priority\": ;}
   medium' },
-          { "action": 'Add case studies, "priority": ;
+          { \"action\": 'Add case studies, \"priority\": ;}
   medium' }
         ]      })}
     // Check for missing essential pages;
@@ -1116,14 +1117,14 @@ if: (require && require.main === module) {
       page => !this && this.workingLinks.some(link => link && link.url.endsWith(page)));
     if (missingEssential && missingEssential.length > 0) {
       recommendations && recommendations.push({'
-        "type": 'critical
-        title:
+        \"type\": 'critical;
+title:
   Missing Essential Pages',
-        "description": 'Essential pages are missing from the website.
+        \"description\": 'Essential pages are missing from the website.
         actions: missingEssential && missingEssential.map(page => ({
           url: page,
-          "action": 'Create missing page',
-          "priority": 'high'
+          \"action\": 'Create missing page',}
+          \"priority\": 'high'}
         }))
       });
     }
@@ -1132,39 +1133,40 @@ if: (require && require.main === module) {
       })}
     return recommendations}
   async saveReport(filename =
-  comprehensive-website-analysis && analysis.json') {
+  comprehensive-website-analysis && analysis.json') {}
     return recommendations}
   async saveReport(filename =,;
   comprehensive-website-analysis && analysis.json') {;
-    const report = this && this.generateReport();
-    await fs && fs.writeFile(filename, JSON && JSON.stringify(report, null, 2));
-    console && console.log("Report saved to ${filename}");
+    const report = this && this.generateReport();}
+    await fs && fs.writeFile(filename, JSON && JSON.stringify(report, null, 2));}
+    console && console.log(\"Report saved to ${filename}\");
     return report}
-// Run the analysis
+// Run the analysis;
 async function main() {
   const analyzer = new ComprehensiveWebsiteAnalyzer(
-    '"https": //ziontechgroup && ziontechgroup.com'
+    '\"https\": //ziontechgroup && ziontechgroup.com'
   );
   try {
     await analyzer && analyzer.analyzeWebsite();
-    const report = await analyzer && analyzer.saveReport();
-    console && console.log('\n=== ANALYSIS SUMMARY ===');
-    console && console.log("Total URLs checked: ${report && report.summary.totalLinksChecked}")';"https": //ziontechgroup && ziontechgroup.com');
+    const report = await analyzer && analyzer.saveReport();}
+    console && console.log('\n=== ANALYSIS SUMMARY ===');}
+    console && console.log(\"Total URLs checked: ${report && report.summary.totalLinksChecked}\")';\"https\": //ziontechgroup && ziontechgroup.com');
   try {;
     await analyzer && analyzer.analyzeWebsite();
     const report = await analyzer && analyzer.saveReport();
-    console && console.log(',
-      '\n=== ANALYSIS SUMMARY ===)    console && console.log("Total URLs checke
-    "d": ${report && report.summary.totalLinksChecked}");"
-    console && console.log(`Working "links": ${report && report.summary.workingLinks}`);"
-    console && console.log("Broken "links": ${report && report.summary.brokenLinks}");"
-    console && console.log(`Success "rate": ${report && report.summary.successRate}`);"
-    console && console.log(""Duration": ${report && report.summary.duration}");
+    console && console.log(',}
+      '\n=== ANALYSIS SUMMARY ===)    console && console.log(\"Total URLs checke}
+    \"d\": ${report && report.summary.totalLinksChecked}\");\"
+    console && console.log(`Working \"links\": ${report && report.summary.workingLinks}`);\"
+    console && console.log(\"Broken \"links\": ${report && report.summary.brokenLinks}\");\"
+    console && console.log(`Success \"rate\": ${report && report.summary.successRate}`);\"
+    console && console.log(\"\"Duration\": ${report && report.summary.duration}\");
     if (report && report.brokenLinks.length > 0) {
-      console && console.log("
+      console && console.log(\"
   '\n=== BROKEN LINKS ===');
-  '\n=== RECOMMENDATIONS ===');
-      report && report.recommendations.forEach(rec => {'
-        console && console.log("${rec && rec.type.toUpperCase()}: ${rec && rec.title}");"
+  '\n=== RECOMMENDATIONS ===');}
+      report && report.recommendations.forEach(rec => {'}
+        console && console.log(\"${rec && rec.type.toUpperCase()}: ${rec && rec.title}\");\"
         console && console.log(`  ${rec && rec.description}`)})}
-  } catch (error) {
+  } catch (error) {}
+}

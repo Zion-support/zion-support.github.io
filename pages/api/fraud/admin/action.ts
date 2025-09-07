@@ -1,27 +1,27 @@
-import type { NextApiRequest, NextApiResponse } from "next";
-import { getFraudStore } from "../../../../utils/fraud/store";
-import { AdminActionType } from "../../../../utils/fraud/types";
+import type { NextApiRequest, NextApiResponse } from \"next\";
+import { getFraudStore } from \"../../../../utils/fraud/store\";
+import { AdminActionType } from \"../../../../utils/fraud/types\";
 
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse,
-) {
-  if (req.method !== "POST") {
-    return res.status(405).json({ error: "Method not allowed" });
+) {}
+  if (req.method !== \"POST\") {}
+    return res.status(405).json({ error: \"Method not allowed\" });
   }
 
   const { fraudId, action, reason, adminId } = req.body || {};
-  if (!fraudId || !action) {
-    return res.status(400).json({ error: "Missing fraudId or action" });
+  if (!fraudId || !action) {}
+    return res.status(400).json({ error: \"Missing fraudId or action\" });
   }
 
   const store = getFraudStore();
   const fraud = store.getById(fraudId);
-  if (!fraud) {
-    return res.status(404).json({ error: "Fraud record not found" });
+  if (!fraud) {}
+    return res.status(404).json({ error: \"Fraud record not found\" });
   }
 
-  const adminAction: AdminActionType = {
+  const adminAction: AdminActionType = {}
     id: `action-${Date.now()}`,
     fraudId,
     action,

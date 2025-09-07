@@ -1,42 +1,42 @@
-export function useResumeEnhancer() {;
+export function useResumeEnhancer() {;}
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 type EnhancementType = 'summary' | 'work-description' | 'skill-categorization' | 'general';
-export function useResumeEnhancer() {;          context
+export function useResumeEnhancer() {;          context}
         }
       });
-      if (error) {      return null
-    } finally {
-      setIsEnhancing(false)
+      if (error) {      return null}
+    } finally {}
+      setIsEnhancing(false)}
     }
   }
   return {
     enhanceContent;
-    isEnhancing;
-    error          context;
+    isEnhancing;}
+    error          context;}
         }
       });
 ;
-      // Check condition
-if ( {) {
-  $2
+      // Check condition;
+if ( {) {}
+  $2}
 }
         throw new Error (error.message);
       }
       return data.enhanced_content;
     } catch (err: any) {
       set_error (err.message || 'Failed to enhance content'),
-      console.error ('Enhancement error:', err);
-      return null;
-    } finally {
-      setIsEnhancing (false);
+      console.error ('Enhancement error:', err);}
+      return null;}
+    } finally {}
+      setIsEnhancing (false);}
     }
   }
 ;
   return {
     enhance_content;
-    is_enhancing;
-    error;
+    is_enhancing;}
+    error;}
   }
 }
 import { useState } from 'react';
@@ -46,68 +46,68 @@ type EnhancementType = 'summary' | 'work-description' | 'skill-categorization' |
 ;
 export function useResumeEnhancer() {;
   const [isEnhancing, setIsEnhancing] = useState(false),;
-  const [error, setError] = useState<string | null>(null),;
+  const [error, setError] = useState<string | null />(null),;
   ;
   const enhanceContent = async (;
     content:string, ;
     type:EnhancementType = 'general',;
     context?:string;
-  ):Promise<string | null> => {;
+  ):Promise<string | null /> => {;
     setIsEnhancing(true),;
     setError(null),;
-    ;
-    try {;
+    ;}
+    try {;}
       const { data, error } = await supabase.functions.invoke('resume-enhancer', {;
         body:{ ;
           content, ;
-          enhancementType:type,;
-          context;
+          enhancementType:type,;}
+          context;}
         }
       }),;
       ;
-      if (error) {;
-        throw new Error(error.message),;
+      if (error) {;}
+        throw new Error(error.message),;}
       }
       ;
       return data.enhancedContent,;
     } catch (err:any) {;
       setError(err.message || 'Failed to enhance content'),;
-      console.error('Enhancement error:', err),;
-      return null,;
-    } finally {;
-      setIsEnhancing(false),;
+      console.error('Enhancement error:', err),;}
+      return null,;}
+    } finally {;}
+      setIsEnhancing(false),;}
     }
   },;
   ;
   return {;
     enhanceContent,;
-    isEnhancing,;
-    error;
+    isEnhancing,;}
+    error;}
   },;
-} const enhanceContent = async (content: string, type: EnhancementType = 'general', context?: string) : Promise<string | null> => {
+} const enhanceContent = async (content: string, type: EnhancementType = 'general', context?: string) : Promise<string | null /> => {
   setIsEnhancing (true);
-setError (null);
-try {
+setError (null);}
+try {}
 }
           context;
         }
       }),;
-      if (error) {;
-        throw new Error(error.message);
+      if (error) {;}
+        throw new Error(error.message);}
       }
 ;
       return data.enhancedContent;
     } catch (err: any) {;
       setError(err.message || 'Failed to enhance content'),;
-      console.error('Enhancement error:', err),;
-      return null;
-    } finally {;
-      setIsEnhancing(false);
+      console.error('Enhancement error:', err),;}
+      return null;}
+    } finally {;}
+      setIsEnhancing(false);}
     }
   },;
   return {;
     enhanceContent;
-    isEnhancing;
-    error;
+    isEnhancing;}
+    error;}
   }
 }

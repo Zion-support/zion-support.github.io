@@ -7,13 +7,13 @@ const iconSizes = ,
 export function EnhancedLoading({ size = 'md', variant = 'default', text = 'Loading...', showIcons = true, className = '' }) ;
 }
 
-const containerVariants = {} hidden: { opacity: 0,
+const containerVariants = {} hidden: { opacity: 0,}
 }, visible:  ,
 } opacity: 1, transition:  ,
 } staggerChildren: 0.1, delayChildren: 0.2,
 }
 ;
-  const iconVariants = {} hidden: { scale: 0, opacity: 0,
+  const iconVariants = {} hidden: { scale: 0, opacity: 0,}
 }, visible:  ,
 } scale: 1, opacity: 1, transition:  ,
 } duration: 0.5, ease: 'easeOut''',
@@ -30,13 +30,13 @@ const iconSizes = ,
 export function EnhancedLoading({ size = 'md', variant = 'default', text = 'Loading...', showIcons = true, className = '' }) ;
 }
 
-const containerVariants = {} hidden: { opacity: 0,
+const containerVariants = {} hidden: { opacity: 0,}
 }, visible:  ,
 } opacity: 1, transition:  ,
 } staggerChildren: 0.1, delayChildren: 0.2,
 }
 ;
-  const iconVariants = {} hidden: { scale: 0, opacity: 0,
+  const iconVariants = {} hidden: { scale: 0, opacity: 0,}
 }, visible:  ,
 } scale: 1, opacity: 1, transition:  ,
 } duration: 0.5, ease: 'easeOut''',

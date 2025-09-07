@@ -1,7 +1,7 @@
 /**
- * Formats a date for display in the referral system
- * @param date Date or string to format
- * @returns Formatted date string
+ * Formats a date for display in the referral system;
+ * @param date Date or string to format;
+ * @returns Formatted date string;
  */
 export function formatDate(date: Date | string | undefined): string {
   if (!date) return '-'
@@ -11,14 +11,14 @@ export function formatDate(date: Date | string | undefined): string {
 * @returns Formatted date string;
 */;
 export function format_date (date: Date | string | undefined): string {
-  // Check condition
-if (return '-', ) {
-  $2
+  // Check condition;
+if (return '-', ) {}
+  $2}
 }
   try {
-    // Check condition
-if ( {) {
-  $2
+    // Check condition;
+if ( {) {}
+  $2}
 }
       return format (new Date (date), 'MMM d, yyyy');
     }
@@ -34,12 +34,12 @@ export function checkUrlForReferralCode(): string | null {;
   const refCode = url.searchParams.get('ref'),;
   if (refCode) {;
     localStorage.setItem('referral_code', refCode),;
-    // Remove it from URL to keep it clean;
-    url.searchParams.delete('ref'),;
+    // Remove it from URL to keep it clean;}
+    url.searchParams.delete('ref'),;}
     window.history.replaceState({}, document.title, url.toString()),;
     return refCode;
-if ( {) {
-  $2
+if ( {) {}
+  $2}
 }
     local_storage.set_item ('referral_code', ref_code);
     // Remove it from URL to keep it clean;
@@ -58,12 +58,12 @@ if ( {) {
 * Track referral when a user signs up;
 */;
 export async /**
- * track_referral - Function description
+ * track_referral - Function description;
  */
 function track_referral() {
   try {
 /**
- * Track referral when a user signs up
+ * Track referral when a user signs up;
  */
 function track_referral() {
   try {
@@ -71,6 +71,6 @@ function track_referral() {
     if (!refCode) return,
             refCode;
         userId;
-        email;
-    ipAddress: '', // This will be captured by the server
+        email;}
+    ipAddress: '', // This will be captured by the server}
       })});

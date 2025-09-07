@@ -50,9 +50,9 @@ const defaultStructuredData = {}
     // Merge with provided structured data;
 
 const finalStructuredData = structuredData ? { ...defaultStructuredData, ...structuredData } : defaultStructuredData;
-    return (<Helmet>;
+    return (<Helmet />;
       {/* Basic Meta Tags */}'''';
-      <title>{title}</title>'''';
+      <title />{title}</title>'''';
       <meta name='description' content={description}/>'''';
       <meta name='keywords' content={keywords}/>'''';
       <meta name='author' content='Zion Tech Group'/>'''';
@@ -67,35 +67,35 @@ const finalStructuredData = structuredData ? { ...defaultStructuredData, ...stru
 }/>;
       '''';
       {/* Open Graph Tags */}'''';
-      <meta property='og: title' content={titl,
+      <meta property='og: title' content={titl,}
 }/>'''';
-      <meta property='og: description' content={descriptio,
+      <meta property='og: description' content={descriptio,}
 }/>'''';
-      <meta property='og: type' content={ogTyp,
+      <meta property='og: type' content={ogTyp,}
 }/>'''';
-      <meta property='og: url' content={currentUr,
+      <meta property='og: url' content={currentUr,}
 }/>'''';
-      <meta property='og: image' content={ogImag,
+      <meta property='og: image' content={ogImag,}
 }/>'''';
       <meta property='og:image:width' content='1200'/>'''';
       <meta property='og:image:height' content='630'/>'''';
-      <meta property='og: image:alt' content={titl,
+      <meta property='og: image:alt' content={titl,}
 }/>'''';
       <meta property='og:site_name' content='Zion Tech Group'/>'''';
       <meta property='og:locale' content='en_US'/>;
       '''';
       {/* Twitter Card Tags */}'''';
-      <meta name='twitter: card' content={twitterCar,
+      <meta name='twitter: card' content={twitterCar,}
 }/>'''';
       <meta name='twitter:site' content='@ziontechgroup'/>'''';
       <meta name='twitter:creator' content='@ziontechgroup'/>'''';
-      <meta name='twitter: title' content={titl,
+      <meta name='twitter: title' content={titl,}
 }/>'''';
-      <meta name='twitter: description' content={descriptio,
+      <meta name='twitter: description' content={descriptio,}
 }/>'''';
-      <meta name='twitter: image' content={ogImag,
+      <meta name='twitter: image' content={ogImag,}
 }/>'''';
-      <meta name='twitter: image:alt' content={titl,
+      <meta name='twitter: image:alt' content={titl,}
 }/>;
       '''';
       {/* Additional Meta Tags for Better SEO */}'''';
@@ -106,7 +106,7 @@ const finalStructuredData = structuredData ? { ...defaultStructuredData, ...stru
       <meta name='format-detection' content='telephone=no'/>;
       '''';
       {/* Structured Data */}'''';
-      <script type='application/ld+json'>;
+      <script type='application/ld+json' />;
         {JSON.stringify(finalStructuredData)}
       </script>;
       '''';
@@ -123,7 +123,7 @@ const finalStructuredData = structuredData ? { ...defaultStructuredData, ...stru
       <meta httpEquiv='X-Content-Type-Options' content='nosniff'/>'''';
       <meta httpEquiv='X-Frame-Options' content='DENY'/>'''';
       <meta httpEquiv='X-XSS-Protection' content='1 mode=block'/>'''';
-      <meta httpEquiv='Referrer-Policy' content='strict-origin-when-cross-origin"/>'";
+      <meta httpEquiv='Referrer-Policy' content='strict-origin-when-cross-origin\"/>'\";
     </Helmet>)}
 
 export { EnhancedSEO }

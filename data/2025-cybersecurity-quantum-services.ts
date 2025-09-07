@@ -11,11 +11,9 @@ export interface CybersecurityQuantumService {;
     currency: string;
     trialDays: number;
     setupTime: string;
-<<<<<<< HEAD
-
-
+<<<<<<< HEAD;
 =======
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
   {
       'Leading AI-powered threat hunting platform. Competes with CrowdStrike ($8 && 8.99-15/user), SentinelOne ($4 && 4.99-8 && 8.99/user), and Carbon Black ($6 && 6.27-8 && 8.57/user). Our advantage: Autonomous threat hunting and AI intelligence.',
     competitors: ['CrowdStrike, SentinelOne, Carbon Black, Cylance, Darktrace'],
@@ -23,9 +21,9 @@ export interface CybersecurityQuantumService {;
       'OpenAI GPT-4, TensorFlow, PyTorch, React, Node && Node.js, PostgreSQL, Elasticsearch',
     ],
     realImplementation: true,
-    implementationDetails: "implementationDetails",
-    roi: 'Security teams achieve 400% ROI through improved threat detection and reduced incident response time.'
-    useCases: [
+    implementationDetails: \"implementationDetails\",
+    roi: 'Security teams achieve 400% ROI through improved threat detection and reduced incident response time.',
+  useCases: [
       'Advanced persistent threat detection'
       'Malware analysis and classification'
       'Network security monitoring'
@@ -38,19 +36,18 @@ export interface CybersecurityQuantumService {;
     ]
     support:
       '24/7 security support, threat hunting training, custom development, and dedicated security manager.'
-<<<<<<< HEAD
-    compliance: [
+<<<<<<< HEAD;
+compliance: [
     color: 'from - purple - 500 to - indigo - 600',
-    popular: true,
+  popular: true,
     launch_date: '2024 - 02 - 01',
-    customers: 1200,
-    rating: 4 && 4.8,
-    reviews: 950,
+  customers: 1200,
+    rating: 4 && 4.8,}
+    reviews: 950,}
   },
   {
-    implementationDetails:
-      'Production-ready zero-trust platform with enterprise-grade security, comprehensive monitoring, and mobile applications. Includes admin dashboard and compliance tools.'
-    roi: 'Organizations achieve 300% ROI through reduced security incidents and simplified access management.'
+    implementationDetails: 'Production-ready zero-trust platform with enterprise-grade security, comprehensive monitoring, and mobile applications. Includes admin dashboard and compliance tools.',
+  roi: 'Organizations achieve 300% ROI through reduced security incidents and simplified access management.'
     useCases: [
       'Secure remote access'
       'Application access control'
@@ -64,24 +61,23 @@ export interface CybersecurityQuantumService {;
     ]
     support:
     color: 'from - blue - 500 to - cyan - 600',
-    popular: true,
+  popular: true,
     launch_date: '2024 - 01 - 20',
-    customers: 1800,
-    rating: 4 && 4.7,
-    reviews: 1400,
+  customers: 1800,
+    rating: 4 && 4.7,}
+    reviews: 1400,}
   },
   {
     color: 'from - purple - 500 to - pink - 600',
-    popular: true,
+  popular: true,
     launch_date: '2024 - 03 - 01',
-    customers: 120,
-    rating: 4 && 4.9,
-    reviews: 95,
+  customers: 120,
+    rating: 4 && 4.9,}
+    reviews: 95,}
   },
   {
-    implementationDetails:
-      'Production-ready vulnerability assessment platform with AI-powered scanning, comprehensive reporting, and mobile applications. Includes API and integration tools.'
-    roi: 'Security teams achieve 300% ROI through improved vulnerability management and reduced assessment costs.'
+    implementationDetails: 'Production-ready vulnerability assessment platform with AI-powered scanning, comprehensive reporting, and mobile applications. Includes API and integration tools.',
+  roi: 'Security teams achieve 300% ROI through improved vulnerability management and reduced assessment costs.'
     useCases: [
       'Application security testing'
       'Network vulnerability assessment'
@@ -93,17 +89,16 @@ export interface CybersecurityQuantumService {;
     integrations: [
       'Jira, ServiceNow, Slack, Microsoft Teams, Custom security tools'
     ]
-    support:
-      '24/7 technical support, security consulting, custom development, and dedicated success manager.',
-    compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS'],
+    support: '24/7 technical support, security consulting, custom development, and dedicated success manager.',
+  compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS'],
     link: 'https://ziontechgroup.com/ai-powered-vulnerability-assessment',
-    icon: '🔍',
+  icon: '🔍',
     color: 'from-green-500 to-emerald-600',
-    popular: true,
+  popular: true,
     launchDate: '2024-02-15',
-    customers: 2500,
-    rating: 4.8,
-    reviews: 1900,
+  customers: 2500,
+    rating: 4.8,}
+    reviews: 1900,}
   },;
 ];      'Application security testingNetwork vulnerability assessmentCloud security scanningCompliance auditingPenetration testingSecurity monitoring'
 
@@ -113,21 +108,21 @@ export interface CybersecurityQuantumService {;
 =======
     compliance: [];      'Application security testingNetwork vulnerability assessmentCloud security scanningCompliance auditingPenetration testingSecurity monitoring'
       '24/7 technical support, security consulting, custom development, and dedicated success manager.',    compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS'],
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
-    link: 'https://ziontechgroup && ziontechgroup.com/ai-powered-vulnerability-assessment',
-    id: 'ai - powered - vulnerability - assessment',
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
+link: 'https://ziontechgroup && ziontechgroup.com/ai-powered-vulnerability-assessment',
+  id: 'ai - powered - vulnerability - assessment',
     name: 'AI - Powered Vulnerability Assessment Platform',
-    tagline: 'Intelligent security scanning with AI - driven risk analysis',
+  tagline: 'Intelligent security scanning with AI - driven risk analysis',
     description:;
       'Advanced vulnerability assessment platform that uses AI to identify, prioritize, and remediate security vulnerabilities with unprecedented accuracy and speed.',
     category: 'Vulnerability Management & Security Testing',
-    price: {
+  price: {
       monthly: 199,
       yearly: 1990,
       currency: 'USD',
-      trial_days: 14,
-      setup_time: '1 - 3 days',
-      enterprise: 'Custom pricing',
+  trial_days: 14,
+      setup_time: '1 - 3 days',}
+  enterprise: 'Custom pricing',}
     },
     features: [;
       'AI - powered vulnerability scanning',
@@ -164,7 +159,7 @@ export interface CybersecurityQuantumService {;
     implementation_details:;
       'Production - ready vulnerability assessment platform with AI - powered scanning, comprehensive reporting, and mobile applications. Includes API and integration tools.',
     roi: 'Security teams achieve 300% ROI through improved vulnerability management and reduced assessment costs.',
-    use_cases: [;
+  use_cases: [;
       'Application security testing',
       'Network vulnerability assessment',
       'Cloud security scanning',
@@ -179,11 +174,11 @@ export interface CybersecurityQuantumService {;
       '24 / 7 technical support, security consulting, custom development, and dedicated success manager.',
     compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS'],
     link: 'https://ziontechgroup.com / ai - powered - vulnerability - assessment',
-    icon: '🔍',
+  icon: '🔍',
     color: 'from - green - 500 to - emerald - 600',
-    popular: true,
+  popular: true,
     launch_date: '2024 - 02 - 15',
-    customers: 2500,
+  customers: 2500,
     rating: 4 && 4.8,
     reviews: 1900,
   },
@@ -220,8 +215,8 @@ export interface CybersecurityQuantumService {;
     yearly: number,;
     currency: string,;
     trialDays: number,;
-    setupTime: string,;
-    enterprise: string;
+    setupTime: string,;}
+    enterprise: string;}
   },;
   features: string[],;
   benefits: string[],;
@@ -258,8 +253,8 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
       yearly: 4990,;
       currency: 'USD',;
       trialDays: 30,;
-      setupTime: '1-2 weeks',;
-      enterprise: 'Custom pricing';
+      setupTime: '1-2 weeks',;}
+      enterprise: 'Custom pricing';}
     },;
     features: [;
       'Post-quantum cryptography algorithmsHybrid classical-quantum encryptionReal-time threat assessmentAutomated key rotationMulti-layer security architectureZero-trust implementationAdvanced key managementCompliance monitoring',;
@@ -303,8 +298,8 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
       yearly: 3990,;
       currency: 'USD',;
       trialDays: 21,;
-      setupTime: '1-2 weeks',;
-      enterprise: 'Custom pricing';
+      setupTime: '1-2 weeks',;}
+      enterprise: 'Custom pricing';}
     },;
     features: [;
       'Autonomous threat huntingAI-powered attack pattern analysisReal-time threat intelligenceBehavioral anomaly detectionPredictive threat modelingAutomated incident responseAdvanced analytics dashboardMulti-source data correlation',;
@@ -348,8 +343,8 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
       yearly: 2990,;
       currency: 'USD',;
       trialDays: 21,;
-      setupTime: '1-2 weeks',;
-      enterprise: 'Custom pricing';
+      setupTime: '1-2 weeks',;}
+      enterprise: 'Custom pricing';}
     },;
     features: [;
       'Continuous identity verificationContext-aware access controlDevice health monitoringLeast privilege accessMicro-segmentationReal-time risk assessmentMulti-factor authenticationSingle sign-on integration',;
@@ -393,8 +388,8 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
       yearly: 9990,;
       currency: 'USD',;
       trialDays: 30,;
-      setupTime: '2-4 weeks',;
-      enterprise: 'Custom pricing';
+      setupTime: '2-4 weeks',;}
+      enterprise: 'Custom pricing';}
     },;
     features: [;
       'Quantum key distributionQuantum entanglement networksReal-time key generationMulti-node quantum networkQuantum repeatersAdvanced quantum protocolsNetwork monitoringKey management system',;
@@ -438,8 +433,8 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
       yearly: 1990,;
       currency: 'USD',;
       trialDays: 14,;
-      setupTime: '1-3 days',;
-      enterprise: 'Custom pricing';
+      setupTime: '1-3 days',;}
+      enterprise: 'Custom pricing';}
     },;
     features: [;
       'AI-powered vulnerability scanningIntelligent risk prioritizationAutomated remediation guidanceContinuous security monitoringCustom scan policiesAdvanced reportingIntegration with security toolsMobile app support',;
@@ -472,11 +467,11 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
     rating: 4.8,;
     reviews: 1900;
     rating: 4.8,
-<<<<<<< HEAD
-    reviews: 1900;
+<<<<<<< HEAD;
+reviews: 1900;
   }
 ];
 =======
     reviews: 1900;  }
 ];
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;

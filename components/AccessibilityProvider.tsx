@@ -1,48 +1,52 @@
-import React, { createContext, useContext, ReactNode } from "react";
+import React, { createContext, useContext, ReactNode } from \"react\";
 
 interface AccessibilityContextType {
-  announceToScreenReader: (message: string) => void;
-  setFocus: (elementId: string) => void;
+  announceToScreenReader: (message: string) => void;}
+  setFocus: (elementId: string) => void;}
 }
 
 const AccessibilityContext = createContext<
-  AccessibilityContextType | undefined
+  AccessibilityContextType | undefined;
 >(undefined);
 
-interface AccessibilityProviderProps {
-  children: ReactNode;
+interface AccessibilityProviderProps {}
+  children: ReactNode;}
 }
 
-export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({
-  children,
+export const AccessibilityProvider: React.FC<AccessibilityProviderProps /> = ({}
+  children,}
 }) => {
-  const announceToScreenReader = (message: string) => {
-    const liveRegion = document.getElementById("live-region");
+  const announceToScreenReader = (
+    const liveRegion = document.getElementById(\"live-region\");
     if (liveRegion) {
-      liveRegion.textContent = message;
+      liveRegion.textContent = message;) => {
+  return $3;}
+}
     }
   };
 
-  const setFocus = (elementId: string) => {
+  const setFocus = (
     const element = document.getElementById(elementId);
     if (element) {
-      element.focus();
+      element.focus();) => {
+  return $3;}
+}
     }
   };
 
   return (
-    <AccessibilityContext.Provider value={{ announceToScreenReader, setFocus }}>
+    <AccessibilityContext.Provider value={{ announceToScreenReader, setFocus }} />
       {children}
     </AccessibilityContext.Provider>
   );
   return context;
 }
 ;
-interface AccessibilityProviderProps {
-  children: React.ReactNode;
+interface AccessibilityProviderProps {}
+  children: React.ReactNode;}
 }
-export const AccessibilityProvider: React.FC < AccessibilityProviderProps> = ({
-  children,
+export const AccessibilityProvider: React.FC < AccessibilityProviderProps> = ({}
+  children,}
 }) => {
   const [high_contrast, setHighContrast] = useState (false);
   const [large_text, setLargeText] = useState (false);
@@ -58,4 +62,5 @@ export const AccessibilityProvider: React.FC < AccessibilityProviderProps> = ({
     reduced_motion,
     toggleHighContrast,
     toggleLargeText,
-    toggleReducedMotion,
+    toggleReducedMotion,}
+}

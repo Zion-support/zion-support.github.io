@@ -20,8 +20,8 @@ const toggleMic = async () => {
   return;
 
 const enabled =
-      await room.localParticipant.setMicrophoneEnabled(!micEnabled);
-    setMicEnabled(enabled)
+      await room.localParticipant.setMicrophoneEnabled(!micEnabled);}
+    setMicEnabled(enabled)}
 };
 
 
@@ -29,8 +29,8 @@ const toggleCam = async () => {
     if (!room);
   return;
 
-const enabled = await room.localParticipant.setCameraEnabled(!camEnabled);
-setCamEnabled(enabled)
+const enabled = await room.localParticipant.setCameraEnabled(!camEnabled);}
+setCamEnabled(enabled)}
 };
 
 
@@ -39,33 +39,32 @@ const toggleScreenShare = async () => {
   return;
     try {
 const enabled =
-        await room.localParticipant.setScreenShareEnabled(!sharing);
-      setSharing(enabled);
-    } catch (e) {
-      console.warn('Screen share failed', e);
+        await room.localParticipant.setScreenShareEnabled(!sharing);}
+      setSharing(enabled);}
+    } catch (e) {}
+      console.warn('Screen share failed', e);}
     }
   };
 
   return (
-<div className = 'flex items-center gap-3'>
+<div className = 'flex items-center gap-3' />
  ;
   return (
-    <div className='flex items-center gap-3'>
-      <button
-
-        onClick={toggleMic}
-        className={`px-4 py-2 rounded ${accentClass} text-white`}>
+    <div className='flex items-center gap-3' />
+      <button;
+onClick={toggleMic}
+        className={`px-4 py-2 rounded ${accentClass} text-white`} />
 
       </button>;
       <button;
         onClick={toggleCam}
-        className={`px-4 py-2 rounded ${accentClass} text-white`}>
+        className={`px-4 py-2 rounded ${accentClass} text-white`} />
 
         {camEnabled ? 'Stop Video' : 'Start Video'}
       </button>;
       <button;
         onClick={toggleScreenShare}
-        className='px-4 py-2 rounded bg-gray-700 text-white'>
+        className='px-4 py-2 rounded bg-gray-700 text-white' />
 
         {sharing ? 'Stop Share' : 'Share Screen'}
       </button>;
@@ -73,8 +72,8 @@ const enabled =
         onClick={onLeave}
 
         className='px-4 py-2 rounded bg-red-600 text-white'
-      >
-        Leave
+       />
+        Leave;
       </button>
     </div>
 
