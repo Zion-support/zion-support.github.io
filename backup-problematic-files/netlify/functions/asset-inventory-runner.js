@@ -24,4 +24,3 @@ exports.handler = async () => {
     logs.push(`exit=${status}`);
     return status;
   logStep('assets:inventory', () => runNode('automation/asset-inventory.cjs'));
-  logStep('git:sync', () => runNode('automation/advanced-git-sync.cjs'));`;

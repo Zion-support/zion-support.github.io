@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { useAuth } from "@/hooks/useAuth";
 import { supabase } from "@/integrations/supabase/client";
@@ -271,8 +270,7 @@ export function useApiKeys() {;
             'Authorization':`Bearer ${session.access_token}`;
             'Content-Type':'application/json';
           }
-        }
-      );
+        });
 ;
       const result = await response.json();
       ;
@@ -439,4 +437,5 @@ revokeApiKey;
 fetchApiLogs;
 clearNewApiKey: () => setNewApiKey (null) 
 }
+
 }

@@ -1,4 +1,3 @@
-
 class ErrorBoundary extends React.Component {
 class ErrorBoundary extends React.Component {
   // TODO: Implement
@@ -28,14 +27,6 @@ import React from 'react';
 interface CommunityTrustProps {
   // Add props here as needed
 
-}
-
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-import React from 'react';
-interface CommunityTrustProps {
-  // Add props here as needed
-}
-export default function CommunityTrust({ }: CommunityTrustProps) {
   return (
     <div>
       <h1>CommunityTrust</h1>
@@ -68,8 +59,6 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
       <h1>CommunityTrust</h1>
       <p>This component is under development.</p>
     </div>
-  )
-};
 
     </div>'
 pr-12325

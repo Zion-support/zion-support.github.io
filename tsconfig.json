@@ -1,27 +1,40 @@
 {
   "compilerOptions": {
+<<<<<<< HEAD
     "target": "ES2017",
+=======
+    "target": "ES2020",
+>>>>>>> 874273566b5ab11cb4989ad42a33c826f8981b98
     "lib": [
       "dom",
       "dom.iterable",
-      "esnext"
+      "es6",
+      "es2017",
+      "es2018",
+      "es2019",
+      "es2020",
+      "es2021",
+      "es2022"
     ],
     "allowJs": true,
     "skipLibCheck": true,
-    "strict": false,
+    "strict": true,
     "noEmit": true,
-    "incremental": true,
-    "module": "esnext",
     "esModuleInterop": true,
+    "module": "ESNext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
+<<<<<<< HEAD
     "plugins": [
       {
         "name": "next"
       }
     ],
+=======
+    "incremental": true,
+>>>>>>> 874273566b5ab11cb4989ad42a33c826f8981b98
     "baseUrl": ".",
     "paths": {
       "@/*": [
@@ -50,39 +63,56 @@
       ]
     },
     "allowSyntheticDefaultImports": true,
+<<<<<<< HEAD
     "strictNullChecks": true,
     "maxNodeModuleJsDepth": 0,
     "disableSourceOfProjectReferenceRedirect": true
+=======
+    "forceConsistentCasingInFileNames": true,
+    "sourceMap": true,
+    "declaration": false,
+    "declarationMap": false,
+    "removeComments": true,
+    "noImplicitAny": false,
+    "noImplicitReturns": false,
+    "noImplicitThis": false,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "exactOptionalPropertyTypes": false,
+    "noImplicitOverride": false,
+    "noPropertyAccessFromIndexSignature": false,
+    "noUncheckedIndexedAccess": false,
+    "noFallthroughCasesInSwitch": false,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
+>>>>>>> 874273566b5ab11cb4989ad42a33c826f8981b98
   },
   "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "vite.config.ts",
     ".next/types/**/*.ts"
   ],
   "exclude": [
     "node_modules",
-    ".next",
-    "out",
     "dist",
-    "api-backup",
-    "pages.disabled",
+    "build",
+    "pages_backup*",
+    "pages.*",
+    "pages-*",
+    "pages_disabled*",
+    "pages.disabled*",
+    "pages.broken*",
+    "pages.corrupted*",
+    "pages.old*",
+    "pages._*",
+    "pages.__*",
     "backup-pages",
-    "automation/backups",
-    "automation_backup",
-    "broken_files_backup",
-    "contracts",
-    "cypress",
-    "temp_working",
-    "supabase/functions",
-    "**/*.test.ts",
-    "**/*.test.tsx",
-    "**/*.spec.ts",
-    "**/*.spec.tsx",
-    "**/*.backup",
-    "**/*.disabled",
-    "src",
     "src.pages.disabled",
+<<<<<<< HEAD
     "src.pages.disabled.auto",
     "components.disabled",
     "src.disabled",
@@ -98,3 +128,21 @@
     "files": true
   }
 }
+=======
+    "lib_backup*",
+    "src_backup*",
+    "corrupted-files-backup*",
+    "performance-reports*",
+    "log-analysis-reports*",
+    "link-reports*",
+    "lint-target*",
+    "monitoring*",
+    "pm2-automation*",
+    "automation/logs*",
+    "automation/backup*",
+    "api-backup",
+    "contracts",
+    "hardhat"
+  ]
+}
+>>>>>>> 874273566b5ab11cb4989ad42a33c826f8981b98

@@ -1,26 +1,48 @@
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components / ui / card';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components / ui / avatar';
+import { Badge } from '@/components / ui / badge';
+
+import { Crown, Medal, Trophy } from './lucide-react';
+
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 import { Badge } from "@/components/ui/badge";
 import { Crown, Medal, Trophy } from "lucide-react";
 
+interface LeaderboardEntry {
 
+interface LeaderboardEntry {}
+  id: string;
+  rank: number;
+  name: string;
+
+  avatar?: string;
+
+interface LeaderboardEntry {
+
+  id: string,
+  rank: number,
+  name: string,
+  avatar?: string,
+  referrals: number,
+  earnings: number,
 
   badges: string[]
 }
-export function PartnerLeaderboard() {
-  // Placeholder data - would come from API in real implementation
-  const leaderboard: LeaderboardEntry[] = [
-    {
-
+export function PartnerLeaderboard() {};
+  // Placeholder data - would come from API in real implementation;
+  const leaderboard: LeaderboardEntry[] = []
+    {}
       id: "1"
-      rank: 1
-      name: "AI Tech Guru"
-      avatar: "", // URL would be here
 
       referrals: 178,
-      earnings: 4500,
+      earnings: 4500,"
+      badges: ["gold", "trending"];
+    };"
+      badges: ["gold", "trending"]
+    }
+    },
 
-referrals: 178
       earnings: 4500
       referrals: 178,
       earnings: 4500,
@@ -29,26 +51,20 @@ referrals: 178
       badges: ["gold", "trending"]
     }
     },
-referrals: 178,
-      earnings: 4500,
+
     {
-      avatar: "", // URL would be here    {
 
+    {}
+"
       id: "2"
-      rank: 2
-      name: "Machine Learning Hub"
+      rank: 2"
+      name: "Machine Learning Hub""
       avatar: ""
-      referrals: 145
-      earnings: 3625
-
+      referrals: 145;
+      earnings: 3625;
+"
       badges: ["silver"]
 
-    },
-
-},
-
-    }
-    },
     {
 
       id: "3"
@@ -64,71 +80,30 @@ referrals: 178,
 
 },
 
-
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components / ui / card';''
-import { Avatar, AvatarFallback, AvatarImage } from '@/components / ui / avatar';''
-import { Badge } from '@/components / ui / badge';''
-import { Crown, Medal, Trophy } from './lucide-react';'
-interface LeaderboardEntry {
-  // TODO: Implement
-}
-  id: string;,
-  rank: number;
-  name: string;
-  avatar?: string;
-
-
-
-interface LeaderboardEntry {
-  // TODO: Implement
-}
-  id: string,
-  rank: number,
-  name: string,
-  avatar?: string,
-  referrals: number,
-  earnings: number,
-
-
-  badges: string[]
-}
-export function PartnerLeaderboard() {
-  // Placeholder data - would come from API in real implementation;
-
-  const leaderboard: LeaderboardEntry[] = [
-    {
-'
-      id: "1"",
-  rank: 1;"
-      name: "AI Tech Guru"","
-  avatar: "", // URL would be here;"
-      referrals: 178,
-      earnings: 4500,
-
-
-      referrals: 178;,
-  earnings: 4500;
-      referrals: 178,
-      earnings: 4500,]"
-      badges: ["gold", "trending"];"
-    };"
-      badges: ["gold", "trending"]"
-    }
-
-    },
     {
 
-      id: "4"
-      rank: 4
-      name: "AI Career Insights"
+    {}
+"
+      id: "3"
+      rank: 3"
+      name: "Neural Networks Pro""
       avatar: ""
-      referrals: 98
-      earnings: 2450
+      referrals: 124;
+      earnings: 3100;
+"
+      badges: ["bronze"]
 
-      badges: []
-
-}
     {
+
+    {}
+"
+      id: "4"
+      rank: 4"
+      name: "AI Career Insights""
+      avatar: ""
+      referrals: 98;
+      earnings: 2450;
+      badges: []
 
       id: "5"
       rank: 5
@@ -138,62 +113,57 @@ export function PartnerLeaderboard() {
       earnings: 2175
 
       badges: ["newcomer"]
+
     }
   ];
   // Function to render rank badge
 
-
   return (
     <div className="space-y-6">
+
       <Card className="bg-zion-blue-dark border-zion-blue-light">
-        <CardHeader>
-          <CardTitle className="flex items-center gap-2">
+        <CardHeader>"
+          <CardTitle className="flex items-center gap-2">"
             <Crown className="h-5 w-5 text-yellow-500" />
-            Top Partners
-          </CardTitle>
+            Top Partners;
+          </CardTitle>'
           <CardDescription>This month's top-performing partners</CardDescription>
         </CardHeader>
-        <CardContent>
+        <CardContent>"
           <div className="space-y-4">
             {leaderboard.length > 0 ? (
               leaderboard.map(entry => (
-                <div
+                <div;
                   key={entry.id}
-                  className={`flex items-center justify-between p-3 rounded-md ${
-                    entry.rank === 1 ? 'bg-yellow-500/10 border border-yellow-500/30' :
+                  className={`flex items-center justify-between p-3 rounded-md ${'
+                    entry.rank === 1 ? 'bg-yellow-500/10 border border-yellow-500/30' :'
                     entry.rank <= 3 ? 'bg-zion-blue-light/20' : 'bg-zion-blue/10'
     },
-    {
+    {"
       id: "5",
-      rank: 5,
-      name: "Deep Learning Daily",
+      rank: 5,"
+      name: "Deep Learning Daily","
       avatar: "",
       referrals: 87,
-      earnings: 2175,
-      badges: ["newcomer"]
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
-import { Badge } from "@/components/ui/badge",;
+      earnings: 2175,"
+      badges: ["newcomer"]"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;"
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;"
+import { Badge } from "@/components/ui/badge",;"
 import { Crown, Medal, Trophy } from "lucide-react",;
-
-import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
-import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
-import {Badge} from "@/components/ui/badge";
-import {Crown, Medal, Trophy} from "lucide-react";
 
 interface LeaderboardEntry {;
   id: string,;
   rank: number,;
   name: string,;
+
   avatar?: string;
-avatar?: string,;
-  avatar?: string;
+
   referrals: number,;
   earnings: number,;
   badges: string[];
 }
 
-;
 export function PartnerLeaderboard() {;
   // Placeholder data - would come from API in real implementation;
   const leaderboard: LeaderboardEntry[] = [;
@@ -204,356 +174,198 @@ export function PartnerLeaderboard() {;
       avatar: "", // URL would be here;
       referrals: 178,;
       earnings: 4500,;
-      badges: ["gold", "trending"];
-    };
-},;
-    };
       badges: ["gold", "trending"]
 };    };
     {;
+
       id: "2",;
-      rank: 2,;
-      name: "Machine Learning Hub",;
+      rank: 2,;"
+      name: "Machine Learning Hub",;"
       avatar: "",;
       referrals: 145,;
-      earnings: 3625,;
-      badges: ["silver"];
-    };
-},;
-    };
-      badges: ["silver"]
-};    };
-    {;
+
       id: "3",;
-      rank: 3,;
-      name: "Neural Networks Pro",;
+      rank: 3,;"
+      name: "Neural Networks Pro",;"
       avatar: "",;
       referrals: 124,;
-      earnings: 3100,;
-      badges: ["bronze"];
-    };
-},;
-    };
-      badges: ["bronze"]
-};    };
-    {;
+
       id: "4",;
-      rank: 4,;
-      name: "AI Career Insights",;
+      rank: 4,;"
+      name: "AI Career Insights",;"
       avatar: "",;
       referrals: 98,;
       earnings: 2450,;
-      badges: [];
-    };
-},;
-    };
-      badges: []
-};    };
-    {;
+
       id: "5",;
-      rank: 5,;
-      name: "Deep Learning Daily",;
+      rank: 5,;"
+      name: "Deep Learning Daily",;"
       avatar: "",;
       referrals: 87,;
-      earnings: 2175,;
+      earnings: 2175,;"
       badges: ["newcomer"];
-    }
-  ];
 
-],;
+    }
+
   ];
+  // Function to render rank badge
 
   // Function to render rank badge;
   const renderRankBadge = (rank: number) => {;
     switch(rank) {;
       case 1:;
 
+"
         return <Trophy className="h-5 w-5 text-yellow-500" />;
-      case 2:;
+      case 2:;"
         return <Medal className="h-5 w-5 text-gray-400" />;
 
-return <Trophy className="h-5 w-5 text-yellow-500" />;
-      case 2:;
-        return <Medal className="h-5 w-5 text-gray-400" />;
   referrals: number,
   earnings: number,
   badges: string[];
 }
-export /**
- * PartnerLeaderboard - Function description
+export /**;
+ * PartnerLeaderboard - Function description;
  */
-function PartnerLeaderboard() {
+function PartnerLeaderboard() {}
   // Placeholder data - would come from API in real implementation;
   const leaderboard: LeaderboardEntry[] = [;
-    {
+    {"
       id: "1",
-      rank: 1,
-      name: "AI Tech Guru",
+      rank: 1,"
+      name: "AI Tech Guru","
       avatar: "", // URL would be here;
       referrals: 178,
-      earnings: 4500,
+      earnings: 4500,"
       badges: ["gold", "trending"];
     }
-    {
+    {"
       id: "2",
-      rank: 2,
-      name: "Machine Learning Hub",
+      rank: 2,"
+      name: "Machine Learning Hub","
       avatar: "",
       referrals: 145,
-      earnings: 3625,
+      earnings: 3625,"
       badges: ["silver"];
     }
-    {
+    {"
       id: "3",
-      rank: 3,
-      name: "Neural Networks Pro",
+      rank: 3,"
+      name: "Neural Networks Pro","
       avatar: "",
       referrals: 124,
-      earnings: 3100,
+      earnings: 3100,"
       badges: ["bronze"];
     }
-    {
+    {"
       id: "4",
-      rank: 4,
-      name: "AI Career Insights",
+      rank: 4,"
+      name: "AI Career Insights","
       avatar: "",
       referrals: 98,
       earnings: 2450,
       badges: [];
     }
-    {
+    {"
       id: "5",
-      rank: 5,
-      name: "Deep Learning Daily",
+      rank: 5,"
+      name: "Deep Learning Daily","
       avatar: "",
       referrals: 87,
-      earnings: 2175,
+      earnings: 2175,"
       badges: ["newcomer"];
     }
   ];
 ;
   // Function to render rank badge;
-  const renderRankBadge = (rank: number) =>: any {
-    switch (rank) {
-      case 1:;
+  const renderRankBadge = (rank: number) =>: any {}
+    switch (rank) {}
+      case 1:;"
         return <Trophy className="h - 5 w - 5 text - yellow - 500" />;
-      case 2:;
+      case 2:;"
         return <Medal className="h - 5 w - 5 text - gray - 400" />;
-      case 3:;
+      case 3:;"
         return <Medal className="h - 5 w - 5 text - amber - 700" />,
-      default:;
+      default:;"
         return <span className="text - sm font - semibold">{rank}</span>;
     }
   }
 ;
 
   return (
-    <div className="space - y-6">;
+
       <Card className="bg - zion - blue - dark border - zion - blue - light">;
-        <CardHeader>;
-          <CardTitle className="flex items - center gap - 2">;
+        <CardHeader>;"
+          <CardTitle className="flex items - center gap - 2">;"
             <Crown className="h - 5 w - 5 text - yellow - 500" />;
             Top Partners;
-          </CardTitle>;
+          </CardTitle>;'
           <CardDescription > This month's top - performing partners</CardDescription>;
         </CardHeader>;
-        <CardContent>;
+        <CardContent>;"
           <div className="space - y-4">;
             {leaderboard.length > 0 ? (
 
+`
                   }`}
-  ];                  }`}
-                >
-                  <div className="flex items-center gap-3">
+
                     <div className="flex items-center justify-center h-8 w-8 rounded-full bg-zion-blue-light">
                       {renderRankBadge(entry.rank)}
-                    </div>
+                    </div>"
                     <Avatar className="h-10 w-10 border border-zion-blue-light">
-                      <AvatarImage src={entry.avatar} />
+                      <AvatarImage src={entry.avatar} />"
                       <AvatarFallback className="bg-zion-blue text-zion-cyan">
                         {entry.name.substring(0, 2).toUpperCase()}
                       </AvatarFallback>
                     </Avatar>
-                    <div>
-                      <div className="font-medium text-white">{entry.name}</div>
+                    <div>"
+                      <div className="font-medium text-white">{entry.name}</div>"
                       <div className="text-xs text-zion-slate-light">{entry.referrals} referrals</div>
                     </div>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <div className="text-right">
-                      <div className="font-semibold text-white">${entry.earnings}</div>
+                  </div>"
+                  <div className="flex items-center gap-3">"
+                    <div className="text-right">"
+                      <div className="font-semibold text-white">${entry.earnings}</div>"
                       <div className="text-xs text-zion-slate-light">earned</div>
-                    </div>
-                    <div className="flex gap-1">
-                      {entry.badges.includes("gold") && (
+                    </div>"
+                    <div className="flex gap-1">"
+                      {entry.badges.includes("gold") && ("
                         <Badge variant="outline" className="bg-yellow-500/20 border-yellow-500 text-yellow-400">
-                          Elite
+
                         </Badge>
 
-      case 3:;
+      case 3:;"
         return <Medal className="h-5 w-5 text-amber-700" />,;
-      default:;
+      default:;"
         return <span className="text-sm font-semibold">{rank}</span>;
     }
   };
-
-  return (
-return (
-
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
-import { Badge } from "@/components/ui/badge",;
-import { Crown, Medal, Trophy } from "lucide-react",;
-;
-interface LeaderboardEntry {;
-  id:string,;
-  rank:number,;
-  name:string,;
-  avatar?:string,;
-  referrals:number,;
-  earnings:number,;
-  badges:string[];
-}
-;
-export function PartnerLeaderboard() {;
-  // Placeholder data - would come from API in real implementation;
-  const leaderboard:LeaderboardEntry[] = [;
-    {;
-      id:"1",;
-      rank:1,;
-      name:"AI Tech Guru",;
-      avatar:"", // URL would be here;
-      referrals:178,;
-      earnings:4500,;
-      badges:["gold", "trending"];
-    },;
-    {;
-      id:"2",;
-      rank:2,;
-      name:"Machine Learning Hub",;
-      avatar:"",;
-      referrals:145,;
-      earnings:3625,;
-      badges:["silver"];
-    },;
-    {;
-      id:"3",;
-      rank:3,;
-      name:"Neural Networks Pro",;
-      avatar:"",;
-      referrals:124,;
-      earnings:3100,;
-      badges:["bronze"];
-    },;
-    {;
-      id:"4",;
-      rank:4,;
-      name:"AI Career Insights",;
-      avatar:"",;
-      referrals:98,;
-      earnings:2450,;
-      badges:[];
-    },;
-    {;
-      id:"5",;
-      rank:5,;
-      name:"Deep Learning Daily",;
-      avatar:"",;
-      referrals:87,;
-      earnings:2175,;
-      badges:["newcomer"];
-    }
-  ],;
-  ;
-  // Function to render rank badge;
-  const renderRankBadge = (rank:number) => {;
-    switch(rank) {;
-      case 1:;
-        return <Trophy className="h-5 w-5 text-yellow-500" />,;
-      case 2:;
-        return <Medal className="h-5 w-5 text-gray-400" />,;
-      case 3:;
-        return <Medal className="h-5 w-5 text-amber-700" />,;
-      default:;
-        return <span className="text-sm font-semibold">{rank}</span>,;
-    }
-  },;
-  ;
-  return (;
-    <div className="space-y-6">;
+"
+    <div className="space-y-6">;"
       <Card className="bg-zion-blue-dark border-zion-blue-light">;
-        <CardHeader>;
-          <CardTitle className="flex items-center gap-2">;
+        <CardHeader>;"
+          <CardTitle className="flex items-center gap-2">;"
             <Crown className="h-5 w-5 text-yellow-500" />;
             Top Partners;
-          </CardTitle>;
+          </CardTitle>;'
           <CardDescription>This month's top-performing partners</CardDescription>;
         </CardHeader>;
-        <CardContent>;
+        <CardContent>;"
           <div className="space-y-4">;
-            {leaderboard && leaderboard.length > 0 ? (;
-              leaderboard && leaderboard.map(entry => (;
-                <div
-                  key={entry && entry.id} 
-                  className={`flex items-center justify-between p-3 rounded-md ${
-                    entry && entry.rank === 1 ? 'bg-yellow-500/10 border border-yellow-500/30' : 
-                    entry && entry.rank <= 3 ? 'bg-zion-blue-light/20' : 'bg-zion-blue/10'
-                  }`}>;
-                  <div className="flex items-center gap-3">;
-                    <div className="flex items-center justify-center h-8 w-8 rounded-full bg-zion-blue-light">;
-                      {renderRankBadge(entry && entry.rank)}
-                    </div>;
-                    <Avatar className="h-10 w-10 border border-zion-blue-light">;
-                      <AvatarImage src={entry && entry.avatar} />;
-                      <AvatarFallback className="bg-zion-blue text-zion-cyan">;
-                        {entry && entry.name.substring(0, 2).toUpperCase()}
-                      </AvatarFallback>;
-                    </Avatar>;
-                    <div>;
-                      <div className="font-medium text-white">{entry && entry.name}</div>;
-                      <div className="text-xs text-zion-slate-light">{entry && entry.referrals} referrals</div>;
-{leaderboard.length > 0 ? (;
-              leaderboard.map(entry => (;
-                <div ;
-                  key={entry.id} ;
-                  className={`flex items-center justify-between p-3 rounded-md ${;
-                    entry.rank === 1 ? 'bg-yellow-500/10 border border-yellow-500/30' :;
-                    entry.rank <= 3 ? 'bg-zion-blue-light/20' :'bg-zion-blue/10';
-                  }`}
-                >;
-                  <div className="flex items-center gap-3">;
-                    <div className="flex items-center justify-center h-8 w-8 rounded-full bg-zion-blue-light">;
-                      {renderRankBadge(entry.rank)}
-                    </div>;
-                    <Avatar className="h-10 w-10 border border-zion-blue-light">;
-                      <AvatarImage src={entry.avatar} />;
-                      <AvatarFallback className="bg-zion-blue text-zion-cyan">;
-                        {entry.name.substring(0, 2).toUpperCase()}
-                      </AvatarFallback>;
-                    </Avatar>;
-                    <div>;
-                      <div className="font-medium text-white">{entry.name}</div>;
-                      <div className="text-xs text-zion-slate-light">{entry.referrals} referrals</div>;
-                    </div>;
-                  </div>;
-                  <div className="flex items-center gap-3">;
-                    <div className="text-right">;
-                      <div className="font-semibold text-white">${entry && entry.earnings}</div>;
-                      <div className="text-xs text-zion-slate-light">earned</div>;
-                    </div>;
-                    <div className="flex gap-1">;
-                      {entry && entry.badges.includes("gold") && (;
-                        <Badge variant="outline" className="bg-yellow-500/20 border-yellow-500 text-yellow-400">;
-                          Elite;
-                        </Badge>;
 
-                      )}
-                      {entry && entry.badges.includes("trending") && (;
+                    </div>;
+                  </div>;"
+                  <div className="flex items-center gap-3">;"
+                    <div className="text-right">;
+
+                      )}"
+                      {entry && entry.badges.includes("trending") && (;"
+
                         <Badge variant="outline" className="bg-blue-500/20 border-blue-500 text-blue-400">;
                           Trending;
                         </Badge>;
                       )}
-<div className="font-semibold text-white">${entry.earnings}</div>;
+
                       <div className="text-xs text-zion-slate-light">earned</div>;
                     </div>;
                     <div className="flex gap-1">;
@@ -562,6 +374,12 @@ export function PartnerLeaderboard() {;
                           Elite;
                         </Badge>;
                       )}
+
+                        <Badge variant="outline" className="bg-blue-500/20 border-blue-500 text-blue-400">
+                          Trending;
+                        </Badge>
+                      )}
+
                       )}
                       {entry.badges.includes("trending") && (
                         <Badge variant="outline" className="bg-blue-500/20 border-blue-500 text-blue-400">
@@ -581,14 +399,12 @@ export function PartnerLeaderboard() {;
                   Start referring to earn your spot on the leaderboard
                 </p>
               </div>
+
                     </div>;
                   </div>;
                 </div>;
               ));
-            ) : (;
-              <div className="text-center p-12 border border-dashed border-zion-blue-light rounded-lg">;
-                <Trophy className="h-16 w-16 mx-auto text-zion-slate-light mb-4" />;
-                <p className="text-zion-slate-light mb-2">Leaderboard will appear here</p>;
+
                 <p className="text-xs text-zion-slate-light">;
                   Start referring to earn your spot on the leaderboard;
                 </p>;
@@ -601,10 +417,10 @@ export function PartnerLeaderboard() {;
       </Card>;
 
             )}
-                        </Badge>            )}
+
           </div>
         </CardContent>
-      </Card>
+      </Card>"
       <Card className="bg-zion-blue-dark border-zion-blue-light">
         <CardHeader>
 "
@@ -617,7 +433,6 @@ export function PartnerLeaderboard() {;
       badges: ["silver"]"
     },
 
-
     {
 "
       id: "3"",
@@ -629,7 +444,6 @@ export function PartnerLeaderboard() {;
       badges: ["bronze"]"
     },
 
-
     {
 "
       id: "4"",
@@ -639,10 +453,6 @@ export function PartnerLeaderboard() {;
       referrals: 98;,
   earnings: 2450;
       badges: []
-
-
-
-
 
     }
   ];
@@ -918,30 +728,30 @@ export function PartnerLeaderboard() {;
           <CardTitle>Your Ranking</CardTitle>
           <CardDescription>How you compare to other partners</CardDescription>
         </CardHeader>
-        <CardContent>
-          <div className="text-center p-12 border border-dashed border-zion-blue-light rounded-lg">
+        <CardContent>"
+          <div className="text-center p-12 border border-dashed border-zion-blue-light rounded-lg">"
             <p className="text-zion-slate-light mb-4">
-              Start referring to appear on the leaderboard
-            </p>
+              Start referring to appear on the leaderboard;
+            </p>"
             <Badge variant="outline" className="bg-zion-purple/20 border-zion-purple text-zion-purple">
-              New Partner
+              New Partner;
             </Badge>
           </div>
         </CardContent>
-      </Card>
+      </Card>"
       <Card className="bg-zion-blue-dark border-zion-blue-light">
         <CardHeader>
           <CardTitle>Rewards Program</CardTitle>
           <CardDescription>Exclusive perks for top partners</CardDescription>
-        </CardHeader>
-        <CardContent className="space-y-4">
-          <div className="p-4 bg-zion-blue rounded-md">
-            <div className="flex items-center gap-2 mb-2">
+        </CardHeader>"
+        <CardContent className="space-y-4">"
+          <div className="p-4 bg-zion-blue rounded-md">"
+            <div className="flex items-center gap-2 mb-2">"
               <Badge variant="outline" className="bg-yellow-500/20 border-yellow-500 text-yellow-400">
-                Elite Partner
-              </Badge>
+                Elite Partner;
+              </Badge>"
               <span className="text-xs text-zion-slate-light">(Top 3)</span>
-            </div>
+            </div>"
             <ul className="list-disc list-inside text-sm text-zion-slate-light space-y-1">
 interface LeaderboardEntry {
   // TODO: Implement
@@ -950,8 +760,6 @@ interface LeaderboardEntry {
   rank: number;
   name: string;
   avatar?: string;
-
-
 
   // TODO: Implement
   id: string,
@@ -974,7 +782,6 @@ export function PartnerLeaderboard() {
       referrals: 178,
       earnings: 4500,
 
-
       referrals: 178;,
   earnings: 4500;
       earnings: 4500,]"
@@ -982,9 +789,6 @@ export function PartnerLeaderboard() {
     };"
       badges: ["gold", "trending"]"
     },
-
-
-
 
 "
       id: "2"",
@@ -995,7 +799,6 @@ export function PartnerLeaderboard() {
   earnings: 3625;"
       badges: ["silver"]"
 
-
       id: "3"",
   rank: 3;"
       name: "Neural Networks Pro"","
@@ -1003,17 +806,12 @@ export function PartnerLeaderboard() {
   earnings: 3100;"
       badges: ["bronze"]"
 
-
       id: "4"",
   rank: 4;"
       name: "AI Career Insights"","
       referrals: 98;,
   earnings: 2450;
       badges: []
-
-
-
-
 
   ];
   // Function to render rank badge;
@@ -1097,7 +895,6 @@ export function PartnerLeaderboard() {;
       referrals: 87,;
       earnings: 2175,;"
       badges: ["newcomer"];"
-
 
   // Function to render rank badge;
   const renderRankBadge = (rank: number) => {;
@@ -1184,14 +981,11 @@ export function PartnerLeaderboard() {;
                 <p className="text-xs text-zion-slate-light">;"
                 </p>;
 
-
           <CardTitle>Your Ranking
           <CardDescription>How you compare to other partners
             <p className="text-zion-slate-light mb-4">"
             </p>"
             <Badge variant="outline" className="bg-zion-purple/20 border-zion-purple text-zion-purple">"
-
-
 
           <CardTitle>Rewards Program
           <CardDescription>Exclusive perks for top partners
@@ -1208,14 +1002,14 @@ pr-12325
               <li>Early access to new Zion AI features</li>
               <li>Monthly strategy call with Zion AI team</li>
             </ul>
-          </div>
-          <div className="p-4 bg-zion-blue rounded-md">
-            <div className="flex items-center gap-2 mb-2">
+          </div>"
+          <div className="p-4 bg-zion-blue rounded-md">"
+            <div className="flex items-center gap-2 mb-2">"
               <Badge variant="outline" className="bg-gray-400/20 border-gray-400 text-gray-300">
-                Premier Partner
-              </Badge>
+                Premier Partner;
+              </Badge>"
               <span className="text-xs text-zion-slate-light">(Top 10)</span>
-            </div>
+            </div>"
             <ul className="list-disc list-inside text-sm text-zion-slate-light space-y-1">
           </div>"
           <div className="p-4 bg-zion-blue rounded-md">"
@@ -1242,6 +1036,7 @@ pr-12325
 }
 }
 ;
+
             )}
           </div>;
         </CardContent>;
@@ -1266,167 +1061,19 @@ pr-12325
               Start referring to appear on the leaderboard;
             </p>;
             <Badge variant="outline" className="bg-zion-purple/20 border-zion-purple text-zion-purple">;
-leaderboard.map (entry => (
-                <div;
-                  key={entry.id}
-                  className={`flex items - center justify - between p - 3 rounded - md ${
-                    entry.rank === 1 ? 'bg - yellow - 500 / 10 border border - yellow - 500 / 30' :;
-                    entry.rank <= 3 ? 'bg - zion - blue - light / 20' : 'bg - zion - blue / 10';
-                  }`}
-                >;
-                  <div className="flex items - center gap - 3">;
-                    <div className="flex items - center justify - center h - 8 w - 8 rounded - full bg - zion - blue - light">;
-                      {renderRankBadge (entry.rank)}
-                    </div>;
-                    <Avatar className="h - 10 w - 10 border border - zion - blue - light">;
-                      <AvatarImage src={entry.avatar} />;
-                      <AvatarFallback className="bg - zion - blue text - zion - cyan">;
-                        {entry.name.substring (0, 2).toUpperCase ()}
-                      </AvatarFallback>;
-                    </Avatar>;
-                    <div>;
-                      <div className="font - medium text - white">{entry.name}</div>;
-                      <div className="text - xs text - zion - slate - light">{entry.referrals} referrals</div>;
-                    </div>;
-                  </div>;
-                  <div className="flex items - center gap - 3">;
-                    <div className="text - right">;
-                      <div className="font - semibold text - white">${entry.earnings}</div>;
-                      <div className="text - xs text - zion - slate - light">earned</div>;
-                    </div>;
-                    <div className="flex gap - 1">;
-                      {entry.badges.includes ("gold") && (
-                        <Badge variant="outline" className="bg - yellow - 500 / 20 border - yellow - 500 text - yellow - 400">;
-                          Elite;
-                        </Badge>)}
-                      {entry.badges.includes ("trending") && (
-                        <Badge variant="outline" className="bg - blue - 500 / 20 border - blue - 500 text - blue - 400">;
-                          Trending;
-                        </Badge>)}
-                    </div>;
-                  </div>;
-                </div>))) : (
-              <div className="text - center p - 12 border border - dashed border - zion - blue - light rounded - lg">;
-                <Trophy className="h - 16 w - 16 mx - auto text - zion - slate - light mb - 4" />;
-                <p className="text - zion - slate - light mb - 2">Leaderboard will appear here</p>;
-                <p className="text - xs text - zion - slate - light">;
-                  Start referring to earn your spot on the leaderboard;
-                </p>;
-              </div>)}
-          </div>;
-        </CardContent>;
-      </Card>;
-      <Card className="bg - zion - blue - dark border - zion - blue - light">;
-        <CardHeader>;
-          <CardTitle > Your Ranking</CardTitle>;
-          <CardDescription > How you compare to other partners</CardDescription>;
-        </CardHeader>;
-        <CardContent>;
-          <div className="text - center p - 12 border border - dashed border - zion - blue - light rounded - lg">;
-            <p className="text - zion - slate - light mb - 4">;
-              Start referring to appear on the leaderboard;
-            </p>;
-            <Badge variant="outline" className="bg - zion - purple / 20 border - zion - purple text - zion - purple">;
+
               New Partner;
             </Badge>;
           </div>;
         </CardContent>;
-      </Card>;            </ul>;
-          </div>;
-        </CardContent>;
-      </Card>;
-
-    </div>);
-}
-              <Badge variant="outline" className="bg-gray-400/20 border-gray-400 text-gray-300">"
-
-              <span className="text-xs text-zion-slate-light">(Top 10)</span>"
-              <li>Increased commission rate (30%)</li>
-              <li>Custom landing page for your referrals</li>
-              <li>Co-marketing opportunities</li>
-
-
-          <CardTitle>Your Ranking;
-          <CardDescription>How you compare to other partners;
-</CardContent>"
-          <div className="text-center p-12 border border-dashed border-zion-blue-light rounded-lg">;"
-</div>"
-            <p className="text-zion-slate-light mb-4">;"
-            </p>;"
-            <Badge variant="outline" className="bg-zion-purple/20 border-zion-purple text-zion-purple">;"
-
-
-
-          <CardTitle > Rewards Program;
-          <CardDescription > Exclusive perks for top partners;
-        <CardContent className="space - y-4">;"
-          <div className="p - 4 bg - zion - blue rounded - md">;"
-            <div className="flex items - center gap - 2 mb - 2">;"
-              <Badge variant="outline" className="bg - yellow - 500 / 20 border - yellow - 500 text - yellow - 400">;"
-
-              <span className="text - xs text - zion - slate - light">(Top 3)</span>;"
-            <ul className="list - disc list - inside text - sm text - zion - slate - light space - y-1">;"
-              <li > Increased commission rate (35%)</li>;
-              <li > Featured on Zion AI home page</li>;
-              <li > Early access to new Zion AI features</li>;
-              <li > Monthly strategy call with Zion AI team</li>;
-            </ul>;
-              <Badge variant="outline" className="bg - gray - 400 / 20 border - gray - 400 text - gray - 300">;"
-
-              <span className="text - xs text - zion - slate - light">(Top 10)</span>;"
-              <li > Increased commission rate (30%)</li>;
-              <li > Custom landing page for your referrals</li>;
-              <li > Co - marketing opportunities</li>;
-    </div>);
-            </ul>;
-
-;
-      <Card className="bg-zion-blue-dark border-zion-blue-light">;
-        <CardHeader>;
-          <CardTitle>Rewards Program</CardTitle>;
-          <CardDescription>Exclusive perks for top partners</CardDescription>;
-        </CardHeader>;
-        <CardContent className="space-y-4">;
-          <div className="p-4 bg-zion-blue rounded-md">;
-            <div className="flex items-center gap-2 mb-2">;
-              <Badge variant="outline" className="bg-yellow-500/20 border-yellow-500 text-yellow-400">;
-                Elite Partner;
-              </Badge>;
-              <span className="text-xs text-zion-slate-light">(Top 3)</span>;
-            </div>;
-            <ul className="list-disc list-inside text-sm text-zion-slate-light space-y-1">;
-              <li>Increased commission rate (35%)</li>;
-              <li>Featured on Zion AI home page</li>;
-              <li>Early access to new Zion AI features</li>;
-              <li>Monthly strategy call with Zion AI team</li>;
-            </ul>;
-          </div>;
-          ;
-          <div className="p-4 bg-zion-blue rounded-md">;
-            <div className="flex items-center gap-2 mb-2">;
-              <Badge variant="outline" className="bg-gray-400/20 border-gray-400 text-gray-300">;
-                Premier Partner;
-              </Badge>;
-              <span className="text-xs text-zion-slate-light">(Top 10)</span>;
-            </div>;
-            <ul className="list-disc list-inside text-sm text-zion-slate-light space-y-1">;
-              <li>Increased commission rate (30%)</li>;
-              <li>Custom landing page for your referrals</li>;
-              <li>Co-marketing opportunities</li>;
-            </ul>;
-          </div>;
-        </CardContent>;
-      </Card>;
 
           </div>;
         </CardContent>;
       </Card>;
-    </div>);
 
-}
-;
     </div>;
-  ),; interface LeaderboardEntry {
+  ),; interface LeaderboardEntry {}
+
   id: string;
 rank: number;
 name: string;
@@ -1434,65 +1081,15 @@ avatar?: string;
 referrals: number;
 earnings: number;
 badges: string[] 
-}//Placeholder data - would come from API in real implementation const leaderboard: LeaderboardEntry[] = [ {
-  //Function to render rank badge const renderRankBadge = (rank: number) => {
-  switch (rank) {
-  case 1: return <Trophy className="h-5 w-5 text-yellow-500" />;
-case 2: return <Medal className="h-5 w-5 text-gray-400" />;
-case 3: return <Medal className="h-5 w-5 text-amber-700" />;
-default: return <span className="text-sm font-semibold"> {
-  rank 
+
 }</span> 
 }
 
 }
 ;
 
-};
-return (<div className="space-y-6"> <Card className="bg-zion-blue-dark border-zion-blue-light"> <CardHeader> <CardTitle className="flex items-center gap-2"> <Crown className="h-5 w-5 text-yellow-500" /> Top Partners </CardTitle> <CardDescription>This month's top-performing partners</CardDescription> </CardHeader> <CardContent> <div className="space-y-4"> {
-    </div>;"
-  case 1: return <Trophy className="h-5 w-5 text-yellow-500" />;"
-case 2: return <Medal className="h-5 w-5 text-gray-400" />;"
-case 3: return <Medal className="h-5 w-5 text-amber-700" />;"
-default: return <span className="text-sm font-semibold"> {"
-</span>
-}</span> "
-return (<div className="space-y-6"> <Card className="bg-zion-blue-dark border-zion-blue-light"> <CardHeader> <CardTitle className="flex items-center gap-2"> <Crown className="h-5 w-5 text-yellow-500" /> Top Partners  <CardDescription>This month's top-performing partners  <CardContent> <div className="space-y-4"> {"
-  leaderboard.length > 0 ? (leaderboard.map (entry => (<div key= {
-  entry.id;
-}className= {`;
-  `flex items-center justify-between p-3 rounded-md $ {"
-  entry.rank === 1 ? 'bg-yellow-500/10 border border-yellow-500/30': entry.rank <= 3 ? 'bg-zion-blue-light/20': 'bg-zion-blue/10`;
-}` 
-}> <div className="flex items-center gap-3"> <div className="flex items-center justify-center h-8 w-8 rounded-full bg-zion-blue-light"> {
-  renderRankBadge (entry.rank) 
-}</div> <Avatar className="h-10 w-10 border border-zion-blue-light"> <AvatarImage src= {
-  entry.avatar 
-}/> <AvatarFallback className="bg-zion-blue text-zion-cyan"> {
-  entry.name.substring (0, 2) .toUpperCase () 
-}</AvatarFallback> </Avatar> <div> <div className="font-medium text-white"> {
-  entry.name 
-}</div> <div className="text-xs text-zion-slate-light"> {
-  entry.referrals 
-}referrals</div> </div> </div> <div className="flex items-center gap-3"> <div className="text-right"> <div className="font-semibold text-white">$ {
-  entry.earnings 
-}</div> <div className="text-xs text-zion-slate-light">earned</div> </div> Trending </Badge>) 
-}</div> </div> </div>) ) ) : (<div className="text-center p-12 border border-dashed border-zion-blue-light rounded-lg"> <Trophy className="h-16 w-16 mx-auto text-zion-slate-light mb-4" /> <p className="text-zion-slate-light mb-2">Leaderboard will appear here</p> <p className="text-xs text-zion-slate-light"> Start referring to earn your spot on the leaderboard </p> </div>) 
 }</div> </CardContent> </Card> <Card className="bg-zion-blue-dark border-zion-blue-light"> <CardHeader> <CardTitle>Your Ranking</CardTitle> <CardDescription>How you compare to other partners</CardDescription> </CardHeader> <CardContent> <div className="text-center p-12 border border-dashed border-zion-blue-light rounded-lg"> <p className="text-zion-slate-light mb-4" > Start referring to appear on the leaderboard </p> <Badge variant="outline" className="bg-zion-purple/20 border-zion-purple text-zion-purple"> New Partner </Badge> </div> </CardContent> </Card> <Card className="bg-zion-blue-dark border-zion-blue-light"> <CardHeader> <CardTitle>Rewards Program</CardTitle> <CardDescription>Exclusive perks for top partners</CardDescription> </CardHeader> <CardContent className="space-y-4"> <div className="p-4 bg-zion-blue rounded-md"> <div className="flex items-center gap-2 mb-2" > <Badge variant="outline" className="bg-yellow-500/20 border-yellow-500 text-yellow-400"> Elite Partner </Badge> <span className="text-xs text-zion-slate-light"> (Top 3) </span> </div> <ul className="list-disc list-inside text-sm text-zion-slate-light space-y-1"> <li>Increased commission rate (35%) </li> <li>Featured on Zion AI home page</li> <li>Early access to new Zion AI features</li> <li>Monthly strategy call with Zion AI team</li> </ul> </div> <div className="p-4 bg-zion-blue rounded-md"> <div className="flex items-center gap-2 mb-2" > <Badge variant="outline" className="bg-gray-400/20 border-gray-400 text-gray-300"> Premier Partner </Badge> <span className="text-xs text-zion-slate-light"> (Top 10) </span> </div> <ul className="list-disc list-inside text-sm text-zion-slate-light space-y-1"> <li>Increased commission rate (30%) </li> <li>Custom landing page for your referrals</li> <li>Co-marketing opportunities</li> </ul> </div> </CardContent> </Card> </div>) 
 }
 }
 }
 ;
-}> <div className="flex items-center gap-3"> <div className="flex items-center justify-center h-8 w-8 rounded-full bg-zion-blue-light"> {"
-}</div> <Avatar className="h-10 w-10 border border-zion-blue-light"> <AvatarImage src= {"
-}/> <AvatarFallback className="bg-zion-blue text-zion-cyan"> {"
-}  <div> <div className="font-medium text-white"> {"
-}</div> <div className="text-xs text-zion-slate-light"> {"
-}referrals</div> </div> </div> <div className="flex items-center gap-3"> <div className="text-right"> <div className="font-semibold text-white">$ {"
-</div>)"
-}</div> <div className="text-xs text-zion-slate-light">earned</div> </div> Trending )""
-}</div> </div> </div>) ) ) : (<div className="text-center p-12 border border-dashed border-zion-blue-light rounded-lg"> <Trophy className="h-16 w-16 mx-auto text-zion-slate-light mb-4" /> <p className="text-zion-slate-light mb-2">Leaderboard will appear here</p> <p className="text-xs text-zion-slate-light"> Start referring to earn your spot on the leaderboard </p> </div>)""
-}</div>   <Card className="bg-zion-blue-dark border-zion-blue-light"> <CardHeader> <CardTitle>Your Ranking <CardDescription>How you compare to other partners  <CardContent> <div className="text-center p-12 border border-dashed border-zion-blue-light rounded-lg"> <p className="text-zion-slate-light mb-4" > Start referring to appear on the leaderboard </p> <Badge variant="outline" className="bg-zion-purple/20 border-zion-purple text-zion-purple"> New Partner  </div>   <Card className="bg-zion-blue-dark border-zion-blue-light"> <CardHeader> <CardTitle>Rewards Program <CardDescription>Exclusive perks for top partners  <CardContent className="space-y-4"> <div className="p-4 bg-zion-blue rounded-md"> <div className="flex items-center gap-2 mb-2" > <Badge variant="outline" className="bg-yellow-500/20 border-yellow-500 text-yellow-400"> Elite Partner  <span className="text-xs text-zion-slate-light"> (Top 3) </span> </div> <ul className="list-disc list-inside text-sm text-zion-slate-light space-y-1"> <li>Increased commission rate (35%) </li> <li>Featured on Zion AI home page</li> <li>Early access to new Zion AI features</li> <li>Monthly strategy call with Zion AI team</li> </ul> </div> <div className="p-4 bg-zion-blue rounded-md"> <div className="flex items-center gap-2 mb-2" > <Badge variant="outline" className="bg-gray-400/20 border-gray-400 text-gray-300"> Premier Partner  <span className="text-xs text-zion-slate-light"> (Top 10) </span> </div> <ul className="list-disc list-inside text-sm text-zion-slate-light space-y-1"> <li>Increased commission rate (30%) </li> <li>Custom landing page for your referrals</li> <li>Co-marketing opportunities</li> </ul> </div>   </div>)""`;
-pr-12325
-}</div> </CardContent> </Card> <Card className="bg-zion-blue-dark border-zion-blue-light"> <CardHeader> <CardTitle>Your Ranking</CardTitle> <CardDescription>How you compare to other partners</CardDescription> </CardHeader> <CardContent> <div className="text-center p-12 border border-dashed border-zion-blue-light rounded-lg"> <p className="text-zion-slate-light mb-4" > Start referring to appear on the leaderboard </p> <Badge variant="outline" className="bg-zion-purple/20 border-zion-purple text-zion-purple"> New Partner </Badge> </div> </CardContent> </Card> <Card className="bg-zion-blue-dark border-zion-blue-light"> <CardHeader> <CardTitle>Rewards Program</CardTitle> <CardDescription>Exclusive perks for top partners</CardDescription> </CardHeader> <CardContent className="space-y-4"> <div className="p-4 bg-zion-blue rounded-md"> <div className="flex items-center gap-2 mb-2" > <Badge variant="outline" className="bg-yellow-500/20 border-yellow-500 text-yellow-400"> Elite Partner </Badge> <span className="text-xs text-zion-slate-light"> (Top 3) </span> </div> <ul className="list-disc list-inside text-sm text-zion-slate-light space-y-1"> <li>Increased commission rate (35%) </li> <li>Featured on Zion AI home page</li> <li>Early access to new Zion AI features</li> <li>Monthly strategy call with Zion AI team</li> </ul> </div> <div className="p-4 bg-zion-blue rounded-md"> <div className="flex items-center gap-2 mb-2" > <Badge variant="outline" className="bg-gray-400/20 border-gray-400 text-gray-300"> Premier Partner </Badge> <span className="text-xs text-zion-slate-light"> (Top 10) </span> </div> <ul className="list-disc list-inside text-sm text-zion-slate-light space-y-1"> <li>Increased commission rate (30%) </li> <li>Custom landing page for your referrals</li> <li>Co-marketing opportunities</li> </ul> </div> </CardContent> </Card> </div>)""
-

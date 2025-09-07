@@ -1,4 +1,3 @@
-import React from 'react';'
 const AdminLayout.js = ({ className }) => {
   return ('
     <div className={className || ''}>'
@@ -8,6 +7,3 @@ const AdminLayout.js = ({ className }) => {
     </div>
   )
 };
-
-    </div>)'
-pr-12325

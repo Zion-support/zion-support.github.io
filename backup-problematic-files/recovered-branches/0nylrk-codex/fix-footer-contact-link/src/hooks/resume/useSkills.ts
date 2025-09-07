@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { supabase } from '@/integrations/supabase/client';
 import { Skill } from '@/types/resume';
@@ -43,6 +42,7 @@ export function useSkills() {;
     if (!user) {;
       setError('You must be logged in to delete skills');
       return false;
+
     }
     ;
     setIsLoading(true);

@@ -1,10 +1,90 @@
-import React, { createContext, useContext, useEffect, ReactNode } from 'react';
-import { useAuth  } from '@/hooks/useAuth';
-import { MessagingContextType  } from '@/types/messaging';
-import { useMessagingOperations, useMessagingRealtime } from '@/hooks/messaging';
-// Default context used when React type definitions are missing
 const defaultContext: MessagingContextType = {
 
+  messages: [],
+  conversations: [],
+  unreadCount: 0,
+  activeConversation: null,
+  activeMessages: [],
+  isLoading: false,
+  sendMessage: async () => {},
+  createConversation: async () => {},
+  markAsRead: async () => {},
+  setActiveConversation: () => {},
+  fetchConversations: async () => {},
+  loadMessages: async () => {}
+};
+
+import React, { createContext, useContext, useEffect, ReactNode } from 'react',;
+import { useAuth } from '@/hooks/useAuth',;
+import { MessagingContextType } from '@/types/messaging',;
+
+import { useMessagingOperations, useMessagingRealtime } from '@/hooks/messaging',;
+// Default context used when React type definitions are missing;
+const defaultContext: MessagingContextType = {;
+  messages: [],;
+  conversations: [],;
+  unreadCount: 0,;
+  activeConversation: null,;
+  activeMessages: [],;
+  isLoading: false,;
+  sendMessage: async () => {},;
+  createConversation: async () => {},;
+  markAsRead: async () => {},;
+  setActiveConversation: () => {},;
+  fetchConversations: async () => {},;
+  loadMessages: async () => {}
+},
+
+const defaultContext: MessagingContextType = {}
+  messages: []
+  conversations: []
+  unreadCount: 0;
+  activeConversation: null;
+  activeMessages: []
+  isLoading: false;
+
+  defaultContext as MessagingContextType;
+// Hook for using the messaging context;
+export function useMessaging(): MessagingContextType {};
+  // Cast to avoid type errors when React type definitions are missing;
+
+// Hook for using the messaging context
+export function useMessaging(): MessagingContextType {
+
+  if (context === undefined) {
+
+    throw new Error('useMessaging must be used within a MessagingProvider')
+
+  }
+  return context;
+}
+
+  const context = useContext(MessagingContext) as MessagingContextType;
+  if (context === undefined) {;
+    throw new Error('useMessaging must be used within a MessagingProvider');
+  }
+  return context;
+}
+  const {
+
+// Provider component
+export function MessagingProvider({ children }: { children: ReactNode }) {;
+
+  const { user } = useAuth();
+  const {;
+    messages;
+    active_messages;
+    setActiveMessages;
+    conversations;
+    set_conversations;
+    unread_count;
+    setUnreadCount;
+    active_conversation;
+    setActiveConversation;
+    is_loading;
+    send_message;
+    create_conversation;
+    markAsRead;
 
       {children}
     </MessagingContext.Provider>
@@ -12,11 +92,9 @@ const defaultContext: MessagingContextType = {
 }
 ;
 // Provider component;
-export function MessagingProvider({ children }: { children: ReactNode }) {;}
+
   const { user } = useAuth(),;
   const {;
-
-
 
 ),
 
@@ -69,15 +147,11 @@ pr-12325
       setConversations([]),;
 
       setConversations([]);
+
       setUnreadCount(0);
     }
   }, [user, fetchConversations, setConversations, setUnreadCount]);
 
-  // Create context value with all the methods and states;
-  const contextValue: MessagingContextType = {;
-
-// Create context value with all the methods and states;
-  const contextValue: MessagingContextType = {;
     fetch_conversations;
     load_messages;
     if (user) {;}
@@ -92,14 +166,6 @@ pr-12325
   useMessagingRealtime (user, active_conversation, setActiveMessages, fetch_conversations);
 ;
   // Calculate unread count from conversations;
-  useEffect (() => {
-    // Check condition
-if ( {) {
-  $2
-    // Check condition;
-
-if ( {) {
-  $2;
 
 }
       const count = conversations.reduce ((acc, conversation) => acc + conversation.unread_count, 0);
@@ -108,22 +174,13 @@ if ( {) {
   }, [conversations, setUnreadCount]);
 ;
   // Fetch conversations when user changes;
-  useEffect (() => {
-    // Check condition
-if ( {) {
-  $2
-}
-      fetch_conversations ();
-    } else {
+  useEffect (() => {}
     // Check condition;
-
-if ( {) {
+if ( {) {}
   $2;
 }
       fetch_conversations ();
-    } else {
-  // TODO: Implement
-}
+
       set_conversations ([]);
       setUnreadCount (0);
 
@@ -131,7 +188,7 @@ if ( {) {
   }, [user, fetch_conversations, set_conversations, setUnreadCount]);
 ;
   // Create context value with all the methods and states;
-  const context_value: MessagingContextType = {
+
     messages;
     active_messages;
     conversations;
@@ -143,22 +200,11 @@ if ( {) {
     markAsRead;
     setActiveConversation;
 
-    fetchConversations,;
-    loadMessages;
-  };
-
       {children}
-  return (
+
     <MessagingContext && MessagingContext.Provider value={contextValue}>;
-      {children}      {children}
+      {children}
 
-    </MessagingContext && MessagingContext.Provider>;
-  );
-}
-
-fetchConversations,;
-    loadMessages;
-  };
   return (
     <MessagingContext && MessagingContext.Provider value={contextValue}>;
     setActiveConversation;}
@@ -172,55 +218,12 @@ fetchConversations,;
     <MessagingContext && MessagingContext.Provider value={contextValue}>;
     <MessagingContext && MessagingContext.Provider value={contextValue} />;
       {children}
+
     fetch_conversations,
     load_messages;
   }
 ;
-  return (
-    <MessagingContext.Provider value={context_value} />;
-      {children}
-    </MessagingContext.Provider>);
-}
 
-      setConversations([]);
-      setUnreadCount(0);
-  }, [user, fetchConversations, setConversations, setUnreadCount]);
-
-
-  // Create context value with all the methods and states;
-  const contextValue: MessagingContextType = {;
-
-    fetch_conversations;
-    load_messages;
-  } = useMessagingOperations (user);
-  // Setup real - time subscription;
-  useMessagingRealtime (user, active_conversation, setActiveMessages, fetch_conversations);
-  // Calculate unread count from conversations;
-  useEffect (() => {
-    // Check condition;
-      const count = conversations.reduce ((acc, conversation) => acc + conversation.unread_count, 0);
-      setUnreadCount (count);
-  }, [conversations, setUnreadCount]);
-  // Fetch conversations when user changes;
-    // Check condition;
-      fetch_conversations ();
-    } else {
-  // TODO: Implement
-      set_conversations ([]);
-      setUnreadCount (0);
-  }, [user, fetch_conversations, set_conversations, setUnreadCount]);
-  // Create context value with all the methods and states;
-  const context_value: MessagingContextType = {
-
-
-
-    </MessagingContext && MessagingContext.Provider>;
-
-  return (
-    <MessagingContext && MessagingContext.Provider value={contextValue}>;
-
-    <MessagingContext.Provider value={context_value}>;
-    </MessagingContext.Provider>);
 ),;
 // Hook for using the messaging context;
 export function useMessaging():MessagingContextType {;
@@ -249,5 +252,3 @@ pr-12325
   );
 }
 ;
-'
-

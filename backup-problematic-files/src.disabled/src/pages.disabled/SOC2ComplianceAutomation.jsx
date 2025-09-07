@@ -1,4 +1,3 @@
-import React from 'react';'
 const SOC2ComplianceAutomation = ({ className }) => {
   return ('
     <div className={className || ''}>'
@@ -8,6 +7,3 @@ const SOC2ComplianceAutomation = ({ className }) => {
     </div>
   )
 };
-
-    </div>)'
-pr-12325

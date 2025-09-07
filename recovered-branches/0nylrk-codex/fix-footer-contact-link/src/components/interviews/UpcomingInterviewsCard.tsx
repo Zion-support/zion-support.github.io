@@ -1,10 +1,255 @@
+import React, { useEffect, useState } from "react";
+import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
+import {Button} from "@/components/ui/button";
+import {useInterviews} from "@/hooks/useInterviews";
+import {Interview} from "@/types/interview";
+import {format, isPast, parseISO} from "date-fns";
+import {Link} from "react-router-dom";
+import {Calendar, Clock, Video} from "lucide-react";
+import {Avatar} from "@/components/ui/avatar";
+export function UpcomingInterviewsCard() {;
+
+  const { fetchInterviews } = useInterviews();
+  const [upcomingInterviews, setUpcomingInterviews] = useState<Interview[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+
+import React, { useEffect, useState } from "react",
+
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
+import { Button } from "@/components/ui/button",
+import { useInterviews } from "@/hooks/useInterviews",
+import { Interview } from "@/types/interview",
+import { format, isPast, parseISO } from "date-fns",
+import { Link } from "react-router-dom",
 
 import { Calendar, Clock, Video } from "lucide-react";
+
 import { Avatar } from "@/components/ui/avatar";
-export function UpcomingInterviewsCard() {
+export function UpcomingInterviewsCard() {};
   const { fetchInterviews } = useInterviews();
   const [upcomingInterviews, setUpcomingInterviews] = useState<Interview[]>([]),
-  const [isLoading, setIsLoading] = useState(true);
+
+  const [upcomingInterviews, setUpcomingInterviews] = useState<Interview[]>([]),
+  const [isLoading, setIsLoading] = useState(true),
+
+      try {;
+        const interviews = await fetchInterviews();
+        const now = new Date();
+
+        const interviews = await fetchInterviews(),
+        const now = new Date(),
+
+        const interviews = await fetchInterviews();
+        const now = new Date();
+        const interviews = await fetchInterviews(),
+        const now = new Date(),
+
+        // Filter for confirmed interviews in the future
+        const upcoming = interviews
+
+          .filter(interview =>
+            interview.status === 'confirmed' &&
+            !isPast(parseISO(interview.scheduled_date))
+          )
+          .sort((a, b) =>
+            parseISO(a.scheduled_date).getTime() - parseISO(b.scheduled_date).getTime()
+          )
+
+  const { fetch_interviews } = use_interviews ();
+  const [upcoming_interviews, setUpcomingInterviews] = useState < Interview[]>([]);
+  const [is_loading, setIsLoading] = useState (true);
+;
+
+      } catch (error) {
+
+        console.error("Error loading upcoming interviews:", error)
+      } finally {}
+        setIsLoading(false)
+      }
+
+    },
+
+    loadInterviews()
+  }, []),
+
+  if (isLoading) {
+    return (
+
+      <Card className="bg-zion-blue-dark/40 border-zion-blue-light">
+        <CardHeader>"
+          <CardTitle className="text-lg flex items-center">"
+            <Video className="h-5 w-5 mr-2 text-zion-purple" />
+            Upcoming Interviews;
+          </CardTitle>
+        </CardHeader>
+        <CardContent>"
+          <div className="space-y-4">
+            {[1, 2].map(i => ("
+              <div key={i} className="flex items-center gap-3 animate-pulse">"
+                <div className="w-10 h-10 bg-zion-blue-light/30 rounded-full"></div>"
+                <div className="flex-1">"
+                  <div className="h-4 w-3/4 bg-zion-blue-light/30 rounded mb-2"></div>"
+                  <div className="h-3 w-1/2 bg-zion-blue-light/30 rounded"></div>
+                </div>
+              </div>
+
+import React, { useEffect, useState } from "react",;
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Button } from "@/components/ui/button",;
+import { useInterviews } from "@/hooks/useInterviews",;
+import { Interview } from "@/types/interview",;
+import { format, isPast, parseISO } from "date-fns",;
+import { Link } from "react-router-dom",;
+import { Calendar, Clock, Video } from "lucide-react",;
+
+import { Avatar } from "@/components/ui/avatar",;
+export function UpcomingInterviewsCard() { return null; }
+  const { fetchInterviews } = useInterviews(),;
+  const [upcomingInterviews, setUpcomingInterviews] = useState<Interview[]>([]),;
+  const [isLoading, setIsLoading] = useState(true),;
+  useEffect(() => {;
+    const loadInterviews = async () => {;
+      setIsLoading(true),;
+      try {;
+        const interviews = await fetchInterviews(),;
+        const now = new Date(),;
+
+        console.error ("Error loading upcoming interviews:", error);
+      } finally {}
+        setIsLoading (false);
+      }
+    }
+
+            interview && interview.status === 'confirmed' && ;
+            !isPast(parseISO(interview && interview.scheduled_date));
+          );
+          .sort((a, b) => ;
+            parseISO(a && a.scheduled_date).getTime() - parseISO(b && b.scheduled_date).getTime();
+
+          );
+          .slice(0, 3), // Take only the next 3 interviews;
+
+        setUpcomingInterviews(upcoming);
+      } catch (error) {;
+
+      <Card className="bg-zion-blue-dark/40 border-zion-blue-light">;
+        <CardHeader>;"
+          <CardTitle className="text-lg flex items-center">;"
+            <Video className="h-5 w-5 mr-2 text-zion-purple" />;
+            Upcoming Interviews;
+          </CardTitle>;
+        </CardHeader>;
+        <CardContent>;"
+          <div className="space-y-4">;
+            {[1, 2].map(i => (;"
+              <div key={i} className="flex items-center gap-3 animate-pulse">;"
+                <div className="w-10 h-10 bg-zion-blue-light/30 rounded-full"></div>;"
+                <div className="flex-1">;"
+                  <div className="h-4 w-3/4 bg-zion-blue-light/30 rounded mb-2"></div>;"
+                  <div className="h-3 w-1/2 bg-zion-blue-light/30 rounded"></div>;
+                </div>;
+
+            ))}
+
+          </div>;
+        </CardContent>;
+      </Card>;
+    );
+  }
+
+  if (upcomingInterviews.length === 0) {}
+    return (
+
+      <Card className="bg-zion-blue-dark/40 border-zion-blue-light">;
+        <CardHeader>;"
+          <CardTitle className="text-lg flex items-center">;"
+            <Video className="h-5 w-5 mr-2 text-zion-purple" />;
+            Upcoming Interviews;
+          </CardTitle>;
+        </CardHeader>;
+        <CardContent>;"
+          <div className="text-center py-6">;"
+            <Calendar className="h-10 w-10 mx-auto mb-2 text-muted-foreground" />;"
+            <p className="text-sm text-muted-foreground">No upcoming interviews scheduled</p>;"
+            <Button asChild className="mt-4" variant="outline" size="sm">;"
+              <Link to="/interviews">Schedule Interview</Link>;
+            </Button>;
+          </div>;
+        </CardContent>;
+      </Card>;
+
+          <Video className="h-5 w-5 mr-2 text-zion-purple" />
+          Upcoming Interviews;
+        </CardTitle>
+      </CardHeader>
+      <CardContent>"
+        <div className="space-y-4">
+
+            const formattedTime = format(interviewDate, 'h: mm a'),
+            
+            // Determine if interview is happening soon (within 30 minutes)
+            const now = new Date(),
+            const isStartingSoon = 
+              interviewDate.getTime() - now.getTime() < 30 * 60 * 1000 &&
+              interviewDate.getTime() > now.getTime(),
+
+    );
+  }
+  return (
+
+                <Avatar className="h-10 w-10 bg-zion-purple/10">
+                  {interview.client_avatar |interview.talent_avatar ? (
+                    <img;
+                      src={interview.client_avatar |interview.talent_avatar}
+                      alt={interview.client_name |interview.talent_name}
+                    />
+                  ) : ("
+                    <div className="flex h-full w-full items-center justify-center bg-zion-purple/20 text-zion-purple font-medium">"
+                      {(interview.client_name |interview.talent_name |"U").charAt(0)}
+                    </div>
+                  )}
+                </Avatar>"
+                <div className="flex-1">"
+                  <div className="flex justify-between items-start">"
+                    <p className="font-medium line-clamp-1">"
+                      {interview.title |"Interview"}
+                    </p>
+                    {isStartingSoon && ("
+                      <span className="text-xs px-1.5 py-0.5 bg-green-600/20 text-green-400 rounded-full animate-pulse">
+                        Soon;
+                      </span>
+
+    <Card className="bg-zion-blue-dark/40 border-zion-blue-light">;
+      <CardHeader>;"
+        <CardTitle className="text-lg flex items-center">;"
+
+          <Video className="h-5 w-5 mr-2 text-zion-purple" />;
+          Upcoming Interviews;
+        </CardTitle>;
+      </CardHeader>;
+
+          {upcomingInterviews.map(interview => {;
+            const interviewDate = parseISO(interview.scheduled_date),;
+            const formattedDate = format(interviewDate, 'EEE, MMM d'),;
+            const formattedTime = format(interviewDate, 'h:mm a'),;
+            ;
+            // Determine if interview is happening soon (within 30 minutes);
+            const now = new Date(),;
+            const isStartingSoon = ;
+              interviewDate.getTime() - now.getTime() < 30 * 60 * 1000 &&;
+              interviewDate.getTime() > now.getTime(),;
+            ;
+            return (;
+              <div key={interview.id} className="flex items-center gap-3">;
+                <Avatar className="h-10 w-10 bg-zion-purple/10">;
+                  {interview.client_avatar || interview.talent_avatar ? (;
+                    <img ;
+                      src={interview.client_avatar || interview.talent_avatar} ;
+                      alt={interview.client_name || interview.talent_name}
+                    />;
+                  ) :(;
+                    <div className="flex h-full w-full items-center justify-center bg-zion-purple/20 text-zion-purple font-medium">;
+                      {(interview.client_name || interview.talent_name || "U").charAt(0)}
 
                   )}
                 </Avatar>;
@@ -29,148 +274,67 @@ export function UpcomingInterviewsCard() {
                       </span>;
                   </div>;
                   <div className="flex items-center text-sm text-muted-foreground">;
+
                     <Clock className="h-3 w-3 mr-1" />;
                     {formattedDate} at {formattedTime}
                   </div>;
                 </div>;
               </div>;
-            );
-          })}
 
         </div>;
-
-        <div className="mt-4 pt-3 border-t border-zion-blue-light/40">;
+"
+        <div className="mt-4 pt-3 border-t border-zion-blue-light/40">;"
           <Button asChild size="sm" variant="outline" className="w-full">;
+
 ;
     load_interviews ();
   }, []);
 ;
-  // Check condition
-if ( {) {
-  $2
-}
-    return (
-      <Card className="bg - zion - blue - dark / 40 border - zion - blue - light">;
 
-  if (isLoading) {
-    return ("
-      <Card className="bg-zion-blue-dark/40 border-zion-blue-light">"
+            <Video className="h - 5 w - 5 mr - 2 text - zion - purple" />;
+            Upcoming Interviews;
+          </CardTitle>;
+        </CardHeader>;
 
-        <CardHeader>
-"
-          <CardTitle className="text-lg flex items-center">"
-            <Video className="h-5 w-5 mr-2 text-zion-purple" />"
-
-        <CardContent>
-          <div className="space-y-4">"
-</div>"
-              <div key={i} className="flex items-center gap-3 animate-pulse">"
-                <div className="w-10 h-10 bg-zion-blue-light/30 rounded-full"></div>""
-                <div className="flex-1">"
-                  <div className="h-4 w-3/4 bg-zion-blue-light/30 rounded mb-2"></div>""
-                  <div className="h-3 w-1/2 bg-zion-blue-light/30 rounded"></div>"
-                </div>
-              </div>)
-  const [upcomingInterviews, setUpcomingInterviews] = useState<Interview[]>([]),;
-      <Card className="bg-zion-blue-dark/40 border-zion-blue-light">;"
-
-        <CardHeader>;
-          <CardTitle className="text-lg flex items-center">;"
-            <Video className="h-5 w-5 mr-2 text-zion-purple" />;"
-
-        <CardContent>;
-          <div className="space-y-4">;"
-              <div key={i} className="flex items-center gap-3 animate-pulse">;"
-                <div className="w-10 h-10 bg-zion-blue-light/30 rounded-full"></div>;""
-                <div className="flex-1">;"
-                  <div className="h-4 w-3/4 bg-zion-blue-light/30 rounded mb-2"></div>;""
-                  <div className="h-3 w-1/2 bg-zion-blue-light/30 rounded"></div>;"
+                  <div className="h - 3 w - 1/2 bg - zion - blue - light / 30 rounded"></div>;
                 </div>;
-      ;"
-
-
-          <div className="text-center py-6">;"
-            <Calendar className="h-10 w-10 mx-auto mb-2 text-muted-foreground" />;"
-            <p className="text-sm text-muted-foreground">No upcoming interviews scheduled</p>;""
-            <Button asChild className="mt-4" variant="outline" size="sm">;"
-              <Link to="/interviews">Schedule Interview;"
-
-
-              interviewDate.getTime() - now.getTime() < 30 * 60 * 1000 &&
-              interviewDate.getTime() > now.getTime(),
-
-
-    );
-  return (
-              <div key={interview.id} className="flex items-center gap-3">"
-                <Avatar className="h-10 w-10 bg-zion-purple/10">"
-
-                    <img;
-                      src={interview.client_avatar |interview.talent_avatar}
-                      alt={interview.client_name |interview.talent_name}
-                    />
-</img>"
-                    <div className="flex h-full w-full items-center justify-center bg-zion-purple/20 text-zion-purple font-medium">"
-                  <div className="flex justify-between items-start">"
-                    <p className="font-medium line-clamp-1">"
-</p>
-                    </p>"
-                      <span className="text-xs px-1.5 py-0.5 bg-green-600/20 text-green-400 rounded-full animate-pulse">"
-</span>
-                      </span>"
-
-
-              interviewDate.getTime() - now.getTime() < 30 * 60 * 1000 &&;
-              interviewDate.getTime() > now.getTime(),;
-            return (;"
-              <div key={interview.id} className="flex items-center gap-3">;"
-                <Avatar className="h-10 w-10 bg-zion-purple/10">;"
-
-                    <img ;
-                      src={interview.client_avatar || interview.talent_avatar} ;
-                      alt={interview.client_name || interview.talent_name}
-                    />;
-                    <div className="flex h-full w-full items-center justify-center bg-zion-purple/20 text-zion-purple font-medium">;"
-                  <div className="flex justify-between items-start">;"
-                    <p className="font-medium line-clamp-1">;"
-                    </p>;"
-                      <span className="text-xs px-1 && 1.5 py-0 && 0.5 bg-green-600/20 text-green-400 rounded-full animate-pulse">;"
-                      </span>;
-                  </div>;"
-                  <div className="flex items-center text-sm text-muted-foreground">;"
-                    <Clock className="h-3 w-3 mr-1" />;"
-
-        <div className="mt-4 pt-3 border-t border-zion-blue-light/40">;"
-          <Button asChild size="sm" variant="outline" className="w-full">;"
-      <Card className="bg - zion - blue - dark / 40 border - zion - blue - light">;"
-
-          <CardTitle className="text - lg flex items - center">;"
-            <Video className="h - 5 w - 5 mr - 2 text - zion - purple" />;"
-
-          <div className="space - y-4">;"
-              <div key={i} className="flex items - center gap - 3 animate - pulse">;"
-                <div className="w - 10 h - 10 bg - zion - blue - light / 30 rounded - full"></div>;""
-                <div className="flex - 1">;"
-                  <div className="h - 4 w - 3/4 bg - zion - blue - light / 30 rounded mb - 2"></div>;""
-                  <div className="h - 3 w - 1/2 bg - zion - blue - light / 30 rounded"></div>;"
-                </div>;)
               </div>))}
-      );"
+          </div>;
+        </CardContent>;
+      </Card>);
+  }
 
+            <Video className="h - 5 w - 5 mr - 2 text - zion - purple" />;
+            Upcoming Interviews;
+          </CardTitle>;
+        </CardHeader>;
 
-          <div className="text - center py - 6">;"
-            <Calendar className="h - 10 w - 10 mx - auto mb - 2 text - muted - foreground" />;"
-            <p className="text - sm text - muted - foreground">No upcoming interviews scheduled</p>;""
-            <Button as_child className="mt - 4" variant="outline" size="sm">;"
+              <Link to="/interviews">Schedule Interview</Link>;
+            </Button>;
+          </div>;
+        </CardContent>;
+      </Card>);
+  }
 
+          <Video className="h - 5 w - 5 mr - 2 text - zion - purple" />;
+          Upcoming Interviews;
+        </CardTitle>;
+      </CardHeader>;
 
+            const formatted_time = format (interview_date, 'h: mm a'),
+            // Determine if interview is happening soon (within 30 minutes);
+            const now = new Date ();
+            const isStartingSoon =;
               interview_date.get_time () - now.get_time () < 30 * 60 * 1000 &&;
               interview_date.get_time () > now.get_time ();
-              <div key={interview.id} className="flex items - center gap - 3">;"
-                <Avatar className="h - 10 w - 10 bg - zion - purple / 10">;"
+;
 
+                <Avatar className="h - 10 w - 10 bg - zion - purple / 10">;
+                  {interview.client_avatar || interview.talent_avatar ? (
+                    <img;
                       src={interview.client_avatar || interview.talent_avatar}
-                      alt={interview.client_name || interview.talent_name})
+                      alt={interview.client_name || interview.talent_name}
+
                     />) : (
                     <div className="flex h - full w - full items - center justify - center bg - zion - purple / 20 text - zion - purple font - medium">;"
                     </div>)}
@@ -178,23 +342,10 @@ if ( {) {
                     <p className="font - medium line - clamp - 1">;"
                       <span className="text - xs px - 1.5 py - 0.5 bg - green - 600 / 20 text - green - 400 rounded - full animate - pulse">;"
                       </span>)}
-                  <div className="flex items - center text - sm text - muted - foreground">;"
-                    <Clock className="h - 3 w - 3 mr - 1" />;"
 
               </div>);
           })}
-        </div>;
-        <div className="mt - 4 pt - 3 border - t border - zion - blue - light / 40">;
-          <Button as_child size="sm" variant="outline" className="w - full">;
 
-),;
-          })}
-        </div>;
-        ;
-        <div className="mt-4 pt-3 border-t border-zion-blue-light/40">;
-          <Button asChild size="sm" variant="outline" className="w-full">;
-            );
-          })}
             <Link to="/interviews">;
               View All Interviews;
             </Link>;
@@ -202,24 +353,14 @@ if ( {) {
         </div>;
       </CardContent>;
 
-    </Card>);
+  setIsLoading (false) 
 }
 
 }
 ;
-    </Card>;
-  ),; export function UpcomingInterviewsCard () {
-  const {
-  fetchInterviews 
-}= useInterviews ();
-        <div className="mt - 4 pt - 3 border - t border - zion - blue - light / 40">;"
-          <Button as_child size="sm" variant="outline" className="w - full">;"
-            <Link to="/interviews">;"
 
-const [upcomingInterviews, setUpcomingInterviews] = useState<Interview[]> ([]);
-<CardHeader> <CardTitle className="text-lg flex items-center" > <Video className="h-5 w-5 mr-2 text-zion-purple" /> Upcoming Interviews   <CardContent> </div> </div>) )"
-}</div>  ) "
-}<CardHeader> <CardTitle className="text-lg flex items-center" > <Video className="h-5 w-5 mr-2 text-zion-purple" /> Upcoming Interviews   <CardContent> <div className="text-center py-6" > <Calendar className="h-10 w-10 mx-auto mb-2 text-muted-foreground" /> <p className="text-sm text-muted-foreground" >No upcoming interviews scheduled</p> <Button asChild className="mt-4" variant="outline" size="sm" > <Link to="/interviews" >Schedule Interview  </div>   return (<Card className="bg-zion-blue-dark/40 border-zion-blue-light" > <CardHeader> <CardTitle className="text-lg flex items-center" > <Video className="h-5 w-5 mr-2 text-zion-purple" /> Upcoming Interviews   <CardContent> interviewDate.getTime () - now.getTime () < 30 * 60 * 1000 && interviewDate.getTime () > now.getTime ();"
+};
+
 return (<img src= {
   interview.client avatar || interview.talent avatar;
 }alt= {
@@ -227,14 +368,9 @@ return (<img src= {
 }/>) : (Soon </span>) 
 }</div> </div> </div> </div>) 
 }) 
+
 }</div> <div className="mt-4 pt-3 border-t border-zion-blue-light/40" > <Button asChild size="sm" variant="outline" className="w-full" > <Link to="/interviews" > View All Interviews </Link> </Button> </div> </CardContent> </Card>) 
 }
 }
 }
 ;
-</img>
-}</div> </div> </div> </div>) "
-}</div> <div className="mt-4 pt-3 border-t border-zion-blue-light/40" > <Button asChild size="sm" variant="outline" className="w-full" > <Link to="/interviews" > View All Interviews   </div>  )""
-pr-12325
-}</div> <div className="mt-4 pt-3 border-t border-zion-blue-light/40" > <Button asChild size="sm" variant="outline" className="w-full" > <Link to="/interviews" > View All Interviews </Link> </Button> </div> </CardContent> </Card>)""
-

@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "@/hooks/use-toast";
@@ -143,39 +142,20 @@ export function useHireRequest() {_const [isSubmitting, _setIsSubmitting] = useS
       
       const errorMessage = error instanceof Error 
         ? error.message 
-        : &quot;There was a problem submitting your request. Please try again.&quot;;
+        : &quot;There was a problem submitting your request. Please try again.&quot;
       
       setError(errorMessage),
-      
-      toast({
-        title: &quot;Error&quot;,
-        description: errorMessage,
-        variant: "destructive"}),      
+
       return { success: false, error: errorMessage }
     } finally {
       setIsSubmitting(false)
     }
-  },
-  
-  return {
-    submitHireRequest,
-    isSubmitting,
-    error
-  }
-        title: "Error", _description: errorMessage, _variant: "destructive"});
-      
-      return {_success: false, _error: errorMessage};
-    } finally {_setIsSubmitting(false);}
-  };
-  
-  return {_submitHireRequest, _isSubmitting, _error};
-}finally {
-  setIsSubmitting (false) 
+
 }
 };
 return {
   submitHireRequest;
 isSubmitting;
-error 
+
 }
 }

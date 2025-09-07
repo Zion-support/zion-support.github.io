@@ -1,4 +1,3 @@
-import React from 'react';'
 const Quantum-neural-network-platform = ({ className }) => {
   return ('
     <div className={className || ''}>'
@@ -8,6 +7,3 @@ const Quantum-neural-network-platform = ({ className }) => {
     </div>
   )
 };
-
-    </div>)'
-pr-12325

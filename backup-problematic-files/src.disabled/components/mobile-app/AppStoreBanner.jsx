@@ -1,4 +1,3 @@
-
 class ErrorBoundary extends React.Component {
 class ErrorBoundary extends React.Component {
   // TODO: Implement
@@ -70,6 +69,3 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
     </div>
   )
 };
-
-    </div>'
-pr-12325

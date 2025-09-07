@@ -1,25 +1,24 @@
+import { useState } from "react",;
+import { useParams } from "react-router-dom",;
+import { Header } from "@/components/Header",;
+import { Footer } from "@/components/Footer",;
+import { Badge } from "@/components/ui/badge",;
+import { Button } from "@/components/ui/button",;
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
+import { AspectRatio } from "@/components/ui/aspect-ratio",;
+import { ShoppingCart, Star, Truck, Shield, RotateCcw, Clock } from "lucide-react",;
+import { toast } from "@/hooks/use-toast",;
 
-import { useState } from "react";""
-import { useParams } from "react-router-dom";""
-import { Header } from "@/components/Header";""
-import { Footer } from "@/components/Footer";""
-import { Badge } from "@/components/ui/badge";""
-import { Button } from "@/components/ui/button";""
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";""
-import { AspectRatio } from "@/components/ui/aspect-ratio";""
-import { ShoppingCart, Star, Truck, Shield, RotateCcw, Clock } from "lucide-react";""
-import { toast } from "@/hooks/use-toast";"
 ;
 interface EquipmentSpecification {;
   name: string;,;
   value:string;}
 interface EquipmentDetails {;
-  id: string;,;
-  name: string;,,
-pr-12325
-  description: string;,;
-  brand: string;,;
-  category: string;,;
+
+  description:string,;
+  brand:string,;
+  category:string,;
+
   subcategory?:string,;
   images: string[];,;
   price: number;,;
@@ -36,12 +35,11 @@ pr-12325
 // Sample data - in a real app this would come from an API;
 const SAMPLE_EQUIPMENT: { [key:string]:EquipmentDetails ;} = {;
   "pro-camera-x1000":{;
-    id: "pro-camera-x1000";,;
-    name: "Pro Camera X1000";,,
-  description: "Professional-grade cinema camera with 8K resolution;, advanced color science, and exceptional low-light window.window.window.performance. Designed for feature films, high-end commercials, and documentary production. Includes comprehensive shooting modes, customizable settings, and industry-leading dynamic range.",;
-    brand: "CineTech";,;
-    category: "Equipment";,;
-    subcategory: "Cameras";,;
+
+    brand:"CineTech",;
+    category:"Equipment",;
+    subcategory:"Cameras",;
+
     images:[;
       "https: //images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=1200&h=800";,;
       "https: //images.unsplash.com/photo-1502920917128-1aa500764cbd?auto=format&fit=crop&w=1200&h=800";,;
@@ -94,12 +92,11 @@ pr-12325
     returnPolicy:"30-day return policy for unused items in original packaging";
   },;
   "audio-mixer-pro":{;
-    id: "audio-mixer-pro";,;
-    name: "AudioMixer Pro Digital Mixing Console";,,
-  description: "Professional digital mixing console designed for studio recording;, live sound mixing, and post-production applications. Features 32 channels, premium preamps, extensive routing options, and intuitive control interface.",;
-    brand: "AudioTech";,;
-    category: "Equipment";,;
-    subcategory: "Audio";,;
+
+    brand:"AudioTech",;
+    category:"Equipment",;
+    subcategory:"Audio",;
+
     images:[;
       "https: //images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=1200&h=800";,;
       "https://images.unsplash.com/photo-1583121274602-3e2820c69888?auto=format&fit=crop&w=1200&h=800";
@@ -197,23 +194,19 @@ export default function EquipmentDetail() {;
     setTimeout(() => {;
       setIsAdding(false),;
       toast({;
-        title: "Added to cart";,,
-  description: `${quantity;}x ${equipment.name} added to your cart.`}),;
-        title: "Added to cart";,;")
-        description: `${quantity;}x ${equipment.name} added to your cart.`}),;
-pr-12325
+
     }, 800),;
   const handleBuyNow = () => {;
     // Simulate API call;
     setTimeout(() => {;
       setIsAdding(false),;
       toast({;
-        title: "Proceeding to checkout";,,
-  description: `Preparing your order for ${equipment.name;}.`}),;
+
     }, 800),;
   },;
 ;
   return (;
+
     <>;
       <Header />;
       <div className="min-h-screen bg-zion-blue py-12 px-4">;
@@ -224,15 +217,7 @@ pr-12325
               <div className="bg-zion-blue-dark rounded-lg overflow-hidden border border-zion-blue-light">;
                 {/* Main Image */}
                 <div className="aspect-video w-full relative">;
-      toast({;"
-        title: "Proceeding to checkout";,;")`;
-        description: `Preparing your order for ${equipment.name;}.`}),;
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">;"
-            <div className="lg:col-span-2">;"
-              <div className="bg-zion-blue-dark rounded-lg overflow-hidden border border-zion-blue-light">;"
-                <div className="aspect-video w-full relative">;"
-</div>
-pr-12325
+
                   <img ;
                     src={equipment.images[selectedImageIndex]} ;
                     alt={equipment.name} ;"
@@ -248,56 +233,15 @@ pr-12325
                           alt={`${equipment.name} - image ${index + 1}`} ;"
                           className="w-full h-full object-cover";"
                       </div>;                    ))}
-              <div className="mt-8">;"
-                <Tabs defaultValue="description" className="w-full">;"
-                  <TabsList className="bg-zion-blue-dark border border-zion-blue-light grid grid-cols-3 h-auto">;"
-                    <TabsTrigger value="description" className="py-3 data-[state=active]:bg-zion-purple/10">;"
 
-                    ;"
-                    <TabsTrigger value="specifications" className="py-3 data-[state=active]:bg-zion-purple/10">;"
-
-                    <TabsTrigger value="features" className="py-3 data-[state=active]:bg-zion-purple/10">;"
-
-                  <TabsContent value="description" className="mt-4">;"
-                    <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6">;"
-                      <p className="text-zion-slate-light whitespace-pre-line">;"
-</p>
-                      </p>;
-                  <TabsContent value="specifications" className="mt-4">;"
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;"
-                          <div key={index} className="border-b border-zion-blue-light pb-2 mb-2 last:border-0 last:mb-0 last:pb-0">;"
-                            <div className="flex justify-between">;"
-                              <span className="text-zion-slate-light">{spec.name}</span>;""
-                              <span className="text-white font-medium">{spec.value}</span>;"
-                  <TabsContent value="features" className="mt-4">;"
-                      <ul className="space-y-2">;"
-</ul>"
-                          <li key={index} className="flex items-start gap-2">;"
-</li>"
-                            <div className="text-zion-cyan mt-1 flex-shrink-0"></div>;""
-                            <span className="text-zion-slate-light">{feature}</span>;"
                           </li>;                        ))}
+
                       </ul>;
-            <div className="lg:col-span-1">;"
-              <div className="bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light sticky top-6">;"
-                <div className="flex flex-wrap gap-2 mb-3">;"
-                  <Badge variant="outline" className="text-zion-slate-light border-zion-blue-light">;"
 
-
-                    ;                  )}
-                <h1 className="text-2xl font-bold text-white mb-1">{equipment.name}</h1>;""
-                <p className="text-zion-cyan mb-4">Brand: {equipment.brand;}</p>;""
-                  <div className="flex items-center gap-2 mb-4">;"
-                    <div className="flex items-center">;"
                         <Star;
                           key={i}`;
                           className={`h-5 w-5 ${;
-                            i < Math.floor(equipment.rating!) ;"
-                              ? "text-zion-cyan fill-zion-cyan" ;""`;
-                              :"text-zion-slate-light";                          }`}"
 
-                    <span className="text-sm text-zion-slate-light">;"
-</span>
                     </span>;
                   </div>;                )}"
                 <div className="text-3xl font-bold text-white mb-4">;                  {equipment.currency}{equipment.price.toLocaleString()}"
@@ -310,10 +254,7 @@ pr-12325
                       <span className="w-2 h-2 bg-rose-400 rounded-full"></span>;"
                       <span>Out of Stock</span>;
                     </div>;                  )}
-                  <label className="text-sm text-zion-slate-light block mb-2">Quantity</label>;""
-                  <div className="flex items-center border border-zion-blue-light rounded-md w-32">;"
-                    <button ;"
-                      className="px-3 py-1 text-zion-slate-light hover:text-white disabled:opacity-50";"
+
                       onClick={() => setQuantity(prev => Math.max(1, prev - 1))}
 </button>
                       disabled={quantity <= 1 || !equipment.inStock}
@@ -327,33 +268,42 @@ pr-12325
                       readOnly;
 </input>
                       onClick={() => setQuantity(prev => prev + 1)}
-                <div className="space-y-3 mb-6">;"
+
                   <Button ;
                     onClick={handleBuyNow}
                     disabled={isAdding || !equipment.inStock}"
                     className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6";"
 
                     onClick={handleAddToCart}
-                    variant="outline";""
-                    className="w-full border-zion-purple text-zion-cyan hover:bg-zion-purple/10";"
-                    <ShoppingCart className="h-4 w-4 mr-2" />;"
 
-                <div className="space-y-4 border-t border-zion-blue-light pt-4">;"
-                  <div className="flex gap-3 text-zion-slate-light">;"
-                    <Truck className="h-5 w-5 text-zion-cyan flex-shrink-0" />;"
-
+                {/* Additional Info */}
+                <div className="space-y-4 border-t border-zion-blue-light pt-4">;
+                  {/* Shipping */}
+                  <div className="flex gap-3 text-zion-slate-light">;
+                    <Truck className="h-5 w-5 text-zion-cyan flex-shrink-0" />;
                     <div>;
-                      <p className="text-white text-sm font-medium">Free Shipping</p>;""
-                      <p className="text-xs">For orders over $100 within the US</p>;"
-                      <Shield className="h-5 w-5 text-zion-cyan flex-shrink-0" />;"
+                      <p className="text-white text-sm font-medium">Free Shipping</p>;
+                      <p className="text-xs">For orders over $100 within the US</p>;
+                    </div>;
+                  </div>;
 
-                        <p className="text-white text-sm font-medium">Warranty</p>;""
-                        <p className="text-xs">{equipment.warranty}</p>;"
-                    </div>;                  )}"
-                      <RotateCcw className="h-5 w-5 text-zion-cyan flex-shrink-0" />;"
+                    <div className="flex gap-3 text-zion-slate-light">;
+                      <Shield className="h-5 w-5 text-zion-cyan flex-shrink-0" />;
+                      <div>;
+                        <p className="text-white text-sm font-medium">Warranty</p>;
 
-                        <p className="text-white text-sm font-medium">Returns</p>;""
-                        <p className="text-xs">{equipment.returnPolicy}</p>;"
+                    <div className="flex gap-3 text-zion-slate-light">;
+                      <RotateCcw className="h-5 w-5 text-zion-cyan flex-shrink-0" />;
+                      <div>;
+                        <p className="text-white text-sm font-medium">Returns</p>;
+
+                </div>;
+              </div>;
+            </div>;
+          </div>;
+        </div>;
+      </div>;
+      <Footer />;
 
     </>;
   ),; interface EquipmentSpecification {
@@ -529,5 +479,4 @@ if (!equipment) {"
 }</p> </div> </div>) "
 }<div> <p className="text-white text-sm font-medium" >Returns</p> <p className="text-xs" > {"
 }</p> </div> </div>) 
-}</div> </div> </div> </div> </div> </div> <Footer /> </>) 
-"`;
+}</div> </div> </div> </div> </div> </div> <Footer /> </>)

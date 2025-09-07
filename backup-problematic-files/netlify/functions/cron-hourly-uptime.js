@@ -52,9 +52,6 @@ exports.handler = async function () {
         const content = JSON.stringify([log], null, 2);
           message: 'chore(automation): init uptime log
     return {
-  // TODO: Implement
-      statusCode: 200;,
-  body: JSON.stringify({ ok: true, count: results.length })
+
     return { statusCode: 200, body: JSON.stringify({ ok: true, count: results.length }) }
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
-`;

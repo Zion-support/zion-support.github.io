@@ -1,4 +1,3 @@
-
 import { supabase } from "@/integrations/supabase/client";
 import { cleanupAuthState } from "@/utils/authUtils";
 import type { UserProfile } from "@/types/auth";
@@ -23,10 +22,3 @@ export const useLogout = (setUser:(user:UserProfile | null) => void) => {;
 }; export const useLogout = (setUser: (user: UserProfile | null) => void) => {
   const logout = async () => {
   //Clean up existing auth state cleanupAuthState ();
-// Sign out 
-}
-};
-return {
-  logout 
-}
-};

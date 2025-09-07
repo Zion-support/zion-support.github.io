@@ -1,19 +1,21 @@
-import React from 'react';
-import { useRouter } from 'next/router';
-import { Badge } from "@/components/ui/badge";""
-import { Button } from "@/components/ui/button";""
-import { Card, CardContent, CardFooter } from "@/components/ui/card";""
+import React from 'react',;
+import { useRouter } from 'next/router',;
+import { Badge } from "@/components/ui/badge",;
+import { Button } from "@/components/ui/button",;
+import { Card, CardContent, CardFooter } from "@/components/ui/card",;
 import { MapPin, Clock, ArrowRight, CheckCircle2 } from 'lucide-react';
-import { FavoriteButton } from "@/components/FavoriteButton";""
-import { TalentProfile } from "@/types/talent";""
-import { RatingStars } from '@/components/RatingStars';
-import { useAuth } from '@/context/auth/AuthProvider';
-import { useCart } from '@/context/CartContext';
+import { FavoriteButton } from "@/components/FavoriteButton",;
+import { TalentProfile } from "@/types/talent",;
+import { RatingStars } from '@/components/RatingStars',;
+import { useAuth } from '@/context/auth/AuthProvider',;
+import { useCart } from '@/context/CartContext',;
+
 ;
 export interface TalentCardProps {;
-  talent: TalentProfile;,;
-  onViewProfile: (id:string) => void;,;
-  onRequestHire: (talent:TalentProfile) => void;,;
+  talent:TalentProfile,;
+  onViewProfile:(id:string) => void,;
+  onRequestHire:(talent:TalentProfile) => void,;
+
   isAuthenticated:boolean;
 }
 const TalentCardComponent = ({;
@@ -26,6 +28,9 @@ const TalentCardComponent = ({;
   const handleViewProfile = () => {;
     // Navigate directly to the talent profile;
     router.push(`/talent/${talent.id}`),;
+
+    ;
+
     // Also call the onViewProfile callback if provided;
     if (onViewProfile) {;
       onViewProfile(talent.id),;    }
@@ -35,21 +40,23 @@ const TalentCardComponent = ({;
     e.stopPropagation(),;
     if (onRequestHire) {;
       onRequestHire(talent);
+
   // Extract skills - limit to 5 for display;
   const skills = talent.skills?.slice(0, 5) || [],;
   return (;
+
     <Card;
       className="overflow-hidden transition-all hover:shadow-lg border-zion-blue-light bg-zion-blue cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zion-purple";"
       onClick={handleViewProfile}
       tabIndex={0}
     >;
-"
-      <div className="p-6">;"
-</div>"
-        <div className="flex items-start">;"
-          <div className="relative mr-4">;"
-            <div className="w-16 h-16 rounded-full overflow-hidden bg-zion-blue-dark border border-zion-blue-light">;"
-</div>
+
+      <div className="p-6">;
+        <div className="flex items-start">;
+          {/* Avatar */}
+          <div className="relative mr-4">;
+            <div className="w-16 h-16 rounded-full overflow-hidden bg-zion-blue-dark border border-zion-blue-light">;
+
                 <img;
                   src={talent.profile_picture_url}
                   alt={talent.full_name}"
@@ -89,21 +96,64 @@ const TalentCardComponent = ({;
                 </span>;"
                 <span className="px-2 py-1 text-xs rounded-full bg-zion-purple/20 text-zion-cyan">;"
                 </span>;              )}
-        <div className="mt-5 flex items-center justify-between">;"
-          <div>;
-              <div className="text-white font-bold">;"
-                <span className="text-zion-slate-light font-normal">/hr</span>;"
-              <div className="text-zion-slate-light">Rate not specified</div>;"
-          <div className="flex items-center gap-2">;"
-              <Button;"
-                size="sm";""
-                variant="secondary";"
-                onClick={handleRequestHire}"
-                className="bg-zion-purple hover:bg-zion-purple-light text-white";"
 
-              variant="ghost";"
+            {talent.hourly_rate ? (;
+              <div className="text-white font-bold">;
+                ${talent.hourly_rate}
+                <span className="text-zion-slate-light font-normal">/hr</span>;
+              </div>;
+            ) :(;
+              <div className="text-zion-slate-light">Rate not specified</div>;
+            )}
+          </div>;
+          ;
+          <div className="flex items-center gap-2">;
+            {isAuthenticated && (;
+              <Button;
+                size="sm";
+                variant="secondary";
+                onClick={handleRequestHire}
+                className="bg-zion-purple hover:bg-zion-purple-light text-white";
+              >;
+                Hire;
+              </Button>;
+            )}
+            <Button;
+              size="sm";
+              variant="ghost";
               onClick={(e) => {;
-              View <ArrowRight className="ml-1 h-4 w-4" />;"
+                e.stopPropagation(),;
+                handleViewProfile(),;
+              }}
+              className="text-zion-cyan hover:text-white hover:bg-zion-blue-light";
+            >;
+              View <ArrowRight className="ml-1 h-4 w-4" />;
+
+            </Button>;
+          </div>;
+        </div>;
+      </div>;
+
+    </Card>;
+  );
+},;
+;
+export const TalentCard = React.memo(TalentCardComponent),;
+TalentCard.displayName = 'TalentCard',; export interface TalentCardProps {;
+  talent: TalentProfile;
+onViewProfile: (id: string) => void;
+onRequestHire: (talent: TalentProfile) => void;
+isAuthenticated: boolean ;
+}const TalentCardComponent = ({;
+  talent;
+onViewProfile;
+onRequestHire;
+isAuthenticated ;
+}: TalentCardProps) => {;
+  const router = useRouter ();
+//Navigate directly to the talent profile router.push (`/talent/$ {;
+  talent.id ;
+}`);
 
 //Also call the onViewProfile callback if provided </div>) ;
 }</div> <span >{;
@@ -115,7 +165,7 @@ const TalentCardComponent = ({;
 }more </span>) ;
 }</div> </div>) ;
 :temp_broken_files/talent/TalentCard.tsx
-}$ {;"  talent.hourly rate ";"}<span className="text-zion-slate-light font-normal" >/hr</span> </div>) : (<div className="text-zion-slate-light" >Rate not specified</div>) ";"}</div> <Button size="sm" variant="secondary" onClick={;"  handleRequestHire ";"}className="bg-zion-purple hover:bg-zion-purple-light text-white" > Hire </Button>) ";"}<Button ml-1 h-4 w-4" /> </Button> </div> </div> </div> </Card>) 
+
 };""
 }$ {;
   talent.hourly rate ";
@@ -123,15 +173,3 @@ const TalentCardComponent = ({;
 }</div> <Button size="sm" variant="secondary" onClick={;
   handleRequestHire ";
 }className="bg-zion-purple hover:bg-zion-purple-light text-white" > Hire </Button>) ";
-}<Button ml-1 h-4 w-4" /> </Button> </div> </div> </div> </Card>) 
-};
-"
-ursor/fix-lint-push-and-merge-to-main-e10e: src/components/talent/TalentCard.tsx;
-}</div> </div>) ;"
-}$ {;"  talent.hourly rate ";"}<span className="text-zion-slate-light font-normal" >/hr</span> </div>) : (<div className="text-zion-slate-light" >Rate not specified</div>) ";"}</div> <Button size="sm" variant="secondary" onClick={;"  handleRequestHire ";"}className="bg-zion-purple hover:bg-zion-purple-light text-white" > Hire ) ";"}<Button ml-1 h-4 w-4" />  </div> </div> </div> ) ;""
-}<span className="text-zion-slate-light font-normal" >/hr</span> </div>) : (<div className="text-zion-slate-light" >Rate not specified</div>) ";""
-}</div> <Button size="sm" variant="secondary" onClick={;""
-  handleRequestHire ";""
-}className="bg-zion-purple hover:bg-zion-purple-light text-white" > Hire ) ";""
-}<Button ml-1 h-4 w-4" />  </div> </div> </div> ) ;""`;
-pr-12325

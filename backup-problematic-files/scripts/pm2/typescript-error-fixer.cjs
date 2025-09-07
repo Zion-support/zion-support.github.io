@@ -6,6 +6,21 @@
 const fs = // // require('fs');
 const path = // // require('path');
 const { execSync } = // // require('child_process');
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+
+<<<<<<< HEAD
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 class TypeScriptErrorFixer {}
   constructor() {}
     this.projectRoot = process.cwd();
@@ -23,13 +38,67 @@ class TypeScriptErrorFixer {}
       level,
       message,
       data,
+<<<<<<< HEAD
+      service: 'typescript-error-fixer'
+    };
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+<<<<<<< HEAD
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+    if (level === 'error') {}
+      console.error(`[${timestamp}] ERROR: ${message}`, data)} else if (level === 'warn') {`}
+      console.warn(`[${timestamp}] WARN: ${message}`, data)} else if (level === 'info') {`}
+      console.log(`[${timestamp}] INFO: ${message}`, data)} else if (level === 'debug') {`}
+      console.log(`[${timestamp}] DEBUG: ${message}`, data)};
+    this.writeToLog(logEntry)};
+  writeToLog(logEntry) {}
+    const logDir = path.join(this.projectRoot, 'logs', 'pm2');
+    if (!fs.existsSync(logDir)) {}
+      fs.mkdirSync(logDir, { recursive: true })};
+    const logFile = path.join(logDir, 'typescript-error-fixer.log');
+    fs.appendFileSync(logFile, JSON.stringify(logEntry) + '\n')};
+  async start() {}
+    this.log('info', 'Starting TypeScript Error Fixer Service...');
+    
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     try {}
       this.ensureDirectories();
       await this.performTypeScriptFixes();
       this.startContinuousFixing();
       this.setupSignalHandlers();
+<<<<<<< HEAD
+      
+      this.log('info', 'TypeScript Error Fixer Service started successfully');
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+      
+      
+      
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+      setInterval(async () => {}
+        await this.performTypeScriptFixes()}, this.fixInterval)} catch (error) {}
+      this.log('error', 'Failed to start TypeScript Error Fixer Service', error);
+      process.exit(1)};
+  };
+  ensureDirectories() {}
+    const dirs = ['logs/pm2', 'backups/typescript-fixes', 'temp', 'fixed-files'];
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     dirs.forEach(dir => {})
       const fullPath = path.join(this.projectRoot, dir);
       if (!fs.existsSync(fullPath)) {}
@@ -40,7 +109,19 @@ class TypeScriptErrorFixer {}
   resetCounters() {}
     this.fixedFiles.clear()};
   async getTypeScriptErrors() {}
+<<<<<<< HEAD
+    try {}
+      const result = execSync('npx tsc --noEmit --json', { })
+<<<<<<< HEAD
+        cwd: this.projectRoot,
+=======
+        cwd: this.projectRoot, 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+        encoding: 'utf8',
+        stdio: 'pipe'
+=======
 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       }
 });
       if (result) {}
@@ -83,7 +164,39 @@ class TypeScriptErrorFixer {}
 
         this.fixesApplied++;
         this.fixedFiles.add(error.file);
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+<<<<<<< HEAD
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+        
+        
+        
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+        this.log('info', `Successfully fixed TypeScript error in: ${error.file}:${error.line}`)} else {`}
+        this.fixesSkipped++};
+    } catch (error) {}
+      this.log('error', `Error fixing TypeScript error in ${error.file}`, error);
+      this.fixesFailed++};
+  };
+  shouldSkipLine(line) {}
+    const trimmed = line.trim();
+<<<<<<< HEAD
+    return !trimmed ||
+           trimmed.startsWith('//') ||
+           trimmed.startsWith('/*') ||
+=======
+    return !trimmed || 
+           trimmed.startsWith('//') || 
+           trimmed.startsWith('/*') || 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+           trimmed.startsWith('*') ||
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
            trimmed.startsWith('import') ||
            trimmed.startsWith('export')};
   async fixTypeScriptLine(line, error, allLines, lineIndex) {}
@@ -100,7 +213,23 @@ class TypeScriptErrorFixer {}
 
     if (!nameMatch) return line;
     const undefinedName = nameMatch[1];
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+<<<<<<< HEAD
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+    
+    
+    
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+    // Try to find the name in the file;
+    const namePattern = new RegExp(`\\b${undefinedName}\\b`, 'g');
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     const matches = line.match(namePattern);
     if (matches) {}
       // Check if it should be imported;
@@ -120,10 +249,49 @@ class TypeScriptErrorFixer {}
 
     if (!moduleMatch) return line;
     const moduleName = moduleMatch[1];
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+    
+    
+    
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+    // Try to fix common module issues;
+    if (moduleName.startsWith('@/')) {}
+      const fixedModule = moduleName.replace('@/', './src/');
+      return line.replace(moduleName, fixedModule)};
+    if (moduleName.startsWith('./') && !moduleName.endsWith('.ts') && !moduleName.endsWith('.js')) {}
+      return line.replace(moduleName, `${moduleName}.ts`)};
+    return line};
+  fixPropertyError(line, error, allLines, lineIndex) {}
+    const propertyMatch = error.message.match(/Property '([^']+)' does not exist on type/);
+    if (!propertyMatch) return line;
+    
+    const propertyName = propertyMatch[1];
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+    
+    
+    
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
     // Try to fix common module issues;
 
     if (!propertyMatch) return line;
     const propertyName = propertyMatch[1];
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     // Add type assertion;
 
       if (paramMatch) {}
@@ -132,6 +300,21 @@ class TypeScriptErrorFixer {}
 
     let firstUsage = -1;
     let declaration = -1;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+    
+    
+    
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     allLines.forEach((line, index) => {}
       if (namePattern.test(line)) {}
         if (firstUsage === -1) firstUsage = index;
@@ -175,4 +358,43 @@ class TypeScriptErrorFixer {}
 // Start the service;
 const fixer = new TypeScriptErrorFixer();
 // Handle graceful shutdown;
+<<<<<<< HEAD
+process.on('SIGINT', () => {}
+  fixer.log('info', 'Received SIGINT, shutting down gracefully...');
+  process.exit(0)}
+});
 
+process.on('SIGTERM', () => {}
+  fixer.log('info', 'Received SIGTERM, shutting down gracefully...');
+  process.exit(0)}
+});
+
+// Handle uncaught errors;
+process.on('uncaughtException', (error) => {}
+  fixer.log('error', 'Uncaught exception', error);
+  process.exit(1)}
+});
+
+process.on('unhandledRejection', (reason, promise) => {}
+  fixer.log('error', 'Unhandled rejection', { reason, promise }
+});
+  process.exit(1)}
+});
+
+// Start the service;
+fixer.start().catch(error => {})
+  fixer.log('error', 'Failed to start service', error);
+  process.exit(1)}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+});
+});
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

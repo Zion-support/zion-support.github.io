@@ -1,4 +1,3 @@
-import React from 'react';'
 const AIAutonomousInfrastructureSecurity = ({ className }) => {
   return ('
     <div className={className || ''}>'
@@ -8,6 +7,3 @@ const AIAutonomousInfrastructureSecurity = ({ className }) => {
     </div>
   )
 };
-
-    </div>)'
-pr-12325

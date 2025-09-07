@@ -1,4 +1,3 @@
-import React from 'react';'
 const ForumCategories = ({ className }) => {
   return ('
     <div className={className || ''}>'
@@ -8,6 +7,3 @@ const ForumCategories = ({ className }) => {
     </div>
   )
 };
-
-    </div>)'
-pr-12325

@@ -387,8 +387,17 @@ this.log("📄 Dashboard "generated": ${dashboardFile}");"
         ...counts;)
     return trends}
   analyzeFixSuccessRates(reports) {
+<<<<<<< HEAD
+    const fixReports = reports.filter(report =>
+=======
     const fixReports = reports.filter(report => 
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+      report.fixesApplied !== undefined || report.resolutionsApplied !== undefined
+    );
+=======
       report.fixesApplied !== undefined || report.resolutionsApplied !== undefined;)
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     const successRates = [];
     for (const report of fixReports) {
       const totalIssues = report.initialErrors || report.initialIssues || 0;
@@ -449,6 +458,208 @@ this.log("📄 Dashboard "generated": ${dashboardFile}");"
 </div>
             <h1>🚨 Error Analytics Dashboard</h1>
             <p>Real-time insights into project error patterns and automation effectiveness</p>
+<<<<<<< HEAD
+        </div>
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-number">${analyticsData.totalErrors}</div>
+                <div class="stat-label">Total Errors</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">${analyticsData.fixSuccessRate}%</div>
+                <div class="stat-label">Fix Success Rate</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">${analyticsData.errorTypes.typescript}</div>
+                <div class="stat-label">TypeScript Errors</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">${analyticsData.errorTypes.eslint}</div>
+                <div class="stat-label">ESLint Errors</div>
+            </div>
+        </div>
+        <div class="chart-container">
+            <div class="chart-title">Error Trends Over Time</div>
+            <canvas id="trendsChart"></canvas>
+        </div>
+        <div class="chart-container">
+            <div class="chart-title">Error Types Distribution</div>
+            <canvas id="typesChart"></canvas>
+        </div>
+        <div class="chart-container">
+            <div class="chart-title">Fix Success Rates</div>
+            <canvas id="successChart"></canvas>
+        </div>
+        <div class="last-updated">
+            Last "updated": ${new Date().toLocaleString()}
+        </div>
+    </div>
+    <script>
+        // Error Trends Chart
+        const trendsCtx = document.getElementById('trendsChart').getContext('2d');
+        new Chart(trendsCtx, {
+            "type": 'line',
+            "data": {
+                labels: ${JSON.stringify(analyticsData.errorTrends.map(t => t.date))},
+                "datasets": [{
+                    label: 'Total Errors',
+                    "data": ${JSON.stringify(analyticsData.errorTrends.map(t => t.total))},
+                    "borderColor": '#667eea',
+                    "backgroundColor": 'rgba(102, 126, 234, 0.1)',
+                    "tension": 0.4
+                }]
+            },
+            "options": {
+                responsive: true,
+                "scales": {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+        // Error Types Chart
+        const typesCtx = document.getElementById('typesChart').getContext('2d');
+        new Chart(typesCtx, {
+            "type": 'doughnut',
+            "data": {
+                labels: ['TypeScript', 'ESLint', 'Build', 'Dependency'],
+                "datasets": [{
+                    data: [
+                        ${analyticsData.errorTypes.typescript},
+                        ${analyticsData.errorTypes.eslint},
+                        ${analyticsData.errorTypes.build},
+                        ${analyticsData.errorTypes.dependency}
+                    ],
+                    "backgroundColor": ['#667eea',
+                        '#764ba2',
+                        '#f093fb',
+                        '#f5576c'
+                    ]
+                }]
+            },
+            "options": {
+                responsive: true
+            }
+        });
+        // Success Rates Chart
+        const successCtx = document.getElementById('successChart').getContext('2d');
+        new Chart(successCtx, {
+            "type": 'bar',
+            "data": {
+                labels: ${JSON.stringify(analyticsData.fixSuccessRates.map(r => r.timestamp.split('T')[0]))},
+                "datasets": [{
+                    label: 'Success Rate (%)',
+                    "data": ${JSON.stringify(analyticsData.fixSuccessRates.map(r => parseFloat(r.successRate)))},
+                    "backgroundColor": '#667eea'
+                }]
+            },
+            "options": {
+                responsive: true,
+                "scales": {
+                    y: {
+                        beginAtZero: true,
+                        "max": 100
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>`;
+    return html}
+  async generateAnalyticsReport() {
+    this.log('Generating analytics report...');
+    try {
+      const reports = await this.collectErrorReports();
+      if (reports.length === 0) {
+        this.log('No reports found for analytics', 'INFO');
+        return}
+      // Analyze data
+      const errorTrends = this.analyzeErrorTrends(reports);
+      const fixSuccessRates = this.analyzeFixSuccessRates(reports);
+      const errorTypes = this.analyzeErrorTypes(reports);
+      const timeDistribution = this.analyzeTimeDistribution(reports);
+      const fileDistribution = this.analyzeFileDistribution(reports);
+      // Calculate summary statistics
+      const totalErrors = Object.values(errorTypes).reduce((sum, count) => sum + count, 0);
+<<<<<<< HEAD
+      const avgSuccessRate = fixSuccessRates.length > 0
+=======
+      const avgSuccessRate = fixSuccessRates.length > 0 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+        ? fixSuccessRates.reduce((sum, rate) => sum + parseFloat(rate.successRate), 0) / fixSuccessRates.length
+        : 0;
+      const analyticsData = {
+        totalErrors,
+        "fixSuccessRate": avgSuccessRate.toFixed(1),
+        errorTypes,
+        timeDistribution,
+        fileDistribution,
+        errorTrends,
+        fixSuccessRates,
+        "lastUpdated": new Date().toISOString()
+      };
+      // Save analytics data
+      const analyticsPath = path.join(this.dashboardDir, 'analytics-data.json');
+      fs.writeFileSync(analyticsPath, JSON.stringify(analyticsData, null, 2));
+      // Generate HTML dashboard
+      const html = this.generateDashboardHTML(analyticsData);
+      const dashboardPath = path.join(this.dashboardDir, 'index.html');
+      fs.writeFileSync(dashboardPath, html);
+      // Update analytics data
+      this.analyticsData = analyticsData;
+      this.log(`Analytics report "generated": ${dashboardPath}`, 'INFO')} catch (error) {
+      this.log(`Failed to generate analytics "report": ${error.message}`, 'ERROR')}
+  }
+  async startDashboard() {
+    this.log('Starting error analytics dashboard...');
+    // Generate initial report
+    await this.generateAnalyticsReport();
+    // Set up periodic updates
+    setInterval(async () => {
+      try {
+        await this.generateAnalyticsReport()} catch (error) {
+        this.log(`Error in periodic analytics "update": ${error.message}`, 'ERROR')}
+    }, this.updateInterval);
+    this.log(`Error analytics dashboard started. Updating every ${this.updateInterval / 1000} seconds.`);
+    this.log(`Dashboard available "at": ${path.join(this.dashboardDir, 'index.html')}`)}
+  getStatus() {
+    return {
+      "running": true,
+      "dashboardPath": path.join(this.dashboardDir, 'index.html'),
+      "updateInterval": this.updateInterval,
+      "analyticsEnabled": this.analyticsEnabled,
+      "lastUpdate": this.analyticsData.lastUpdated
+    }}
+}
+;
+// Run the automation if called directly;
+// Main execution
+if (require.main === module) {
+  const dashboard = new ErrorAnalyticsDashboard();
+  // Handle graceful shutdown
+  process.on('SIGINT', () => {
+    dashboard.log('Shutting down error analytics dashboard...');
+    process.exit(0)});
+  process.on('SIGTERM', () => {
+    dashboard.log('Shutting down error analytics dashboard...');
+    process.exit(0)});
+  // Start dashboard
+  dashboard.startDashboard().catch(error => {
+    dashboard.log(`Failed to start "dashboard": ${error.message}`, 'ERROR');
+    process.exit(1)})}
+;
+<<<<<<< HEAD
+module.exports = ErrorAnalyticsDashboard
+<<<<<<< HEAD
+=======
+module.exports = ErrorAnalyticsDashboard
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
         <div class="stats-grid">"
             <div class="stat-card">"
 
@@ -461,3 +672,4 @@ this.log("📄 Dashboard "generated": ${dashboardFile}");"
 </script>
 </body>`;
 </html>`;"`;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

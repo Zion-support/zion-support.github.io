@@ -1,7 +1,5 @@
+import type { QuoteRequest } from "@/types/quotes",;
 
-import { Button } from "@/components/ui/button";""
-import { Download } from 'lucide-react';
-import type { QuoteRequest } from "@/types/quotes";"
 ;
 interface ExportToCSVProps {;
   quotes: QuoteRequest[];,;
@@ -64,15 +62,8 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" } ExportToCSVP
   },;
   return (;
     <Button ;
-      variant="outline" ;"
-      onClick={handleExport}"
-      className="flex items-center gap-2";"
+
       disabled={quotes.length === 0}
     >;
 
       <Download size={16} />;
-
-}> <Download size= {;
-  16 ;)
-}/> Export CSV ) ;
-"`;

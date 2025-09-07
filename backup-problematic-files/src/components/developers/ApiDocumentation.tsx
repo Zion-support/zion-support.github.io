@@ -1,5 +1,5 @@
+import { useState } from "react",;
 
-import { useState } from "react";""
 import { BookOpen, Terminal } from 'lucide-react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";""
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";""
@@ -9,18 +9,16 @@ import { Badge } from "@/components/ui/badge";"
 import CodeBlock from "./CodeBlock";""
 import { logInfo } from '@/utils/productionLogger';
 interface EndpointParam {;
-  name: string;,;
-  type: string;,,
-  description: string;,;
+
+  description:string,;
+
   required?:boolean;
 }
 ;
 interface EndpointSectionProps {;
-  method: string;,;
-  endpoint: string;,,
-  description: string;,;
-  endpoint: string;,;
-pr-12325
+
+  description:string,;
+
   note?:string,;
   params?:EndpointParam[],;
   codeExamples?:Record<string string>,;
@@ -148,17 +146,13 @@ job_id = 'job_abc123';
     'Authorization':'Bearer YOUR_API_KEYContent-Type':'application/json';
   },;
   body:JSON.stringify({;
-    title: 'Senior React Developer';,,
-  description: 'We need an experienced React developer...';,;
-  body: JSON.stringify({;,
-  title: 'Senior React Developer';,;
-    description: 'We need an experienced React developer...';,;
-pr-12325
-    category: 'development';,;
-    skills: ['reacttypescript';, 'node.js'],;
-    budget: {;,
-  min: 5000;,;
-      max: 10000;,;
+
+    category:'development',;
+    skills:['reacttypescript', 'node.js'],;
+    budget:{;
+      min:5000,;
+      max:10000,;
+
       currency:'USD';
     deadline:'2025-06-30T23:59:59Z';')
   });
@@ -243,12 +237,8 @@ export function ApiDocumentation() {
 
           <BookOpen className=&quot;mr-2&quot; size={20} /> API Documentation;
 
-        
         <CardDescription className=&quot;text-zinc-400&quot;>
 
-        
-      
-      
       <CardContent>
 
         <Alert className=&quot;bg-blue-900/30 border-blue-800 mb-6&quot;>
@@ -256,9 +246,6 @@ export function ApiDocumentation() {
           <Terminal className=&quot;h-4 w-4&quot; />
 
           <AlertDescription>
-
-          
-        
 
         <Tabs defaultValue=&quot;jobs&quot; className=&quot;space-y-4&quot;>
 
@@ -269,8 +256,7 @@ export function ApiDocumentation() {
             <TabsTrigger value=&quot;quotes&quot;>Quotes
             <TabsTrigger value=&quot;webhooks&quot;>Webhooks
             <TabsTrigger value=&quot;errors&quot;>Errors
-          
-          
+
           <TabsContent value=&quot;jobs&quot; className=&quot;space-y-6&quot;>
 
             <EndpointSection,
@@ -333,7 +319,6 @@ print(data)`
   }}`
             />
 
-            
               endpoint=&quot;/api/jobs/:id&quot;
               description=&quot;Get detailed information about a specific job.&quot;
               params={[
@@ -371,7 +356,6 @@ jobid = 'jobabc123
     &quot;applicationcount&quot;: 12  }`;
 }`
 
-            
 method=&quot;POST&quot;
               description=&quot;Create a new job listing.&quot;
               note=&quot;Requires jobs:write scope&quot;
@@ -402,7 +386,6 @@ method=&quot;POST&quot;
       currency: 'USD;
     },    deadline: '2025-06-30T23:59:59Z)
 
-
 payload = {
     'title': 'Senior React Developerdescription': 'We need an experienced React developer...category': 'developmentskills': ['reacttypescriptnode.js'],
     'budget': {
@@ -421,8 +404,6 @@ response = requests.post(
     &quot;createdat&quot;: &quot;2025-05-16T14:22:10Z&quot;,
     &quot;deadline&quot;: &quot;2025-06-30T23: 59:59Z&quot  ;}`;
 
-          
-          
           <TabsContent value=&quot;talent&quot; className=&quot;space-y-6&quot;>
 
               endpoint=&quot;/api/talent&quot;
@@ -432,7 +413,6 @@ response = requests.post(
                 { name: &quot;availability&quot;, type: &quot;string&quot;, description: &quot;Filter by availability status&quot }
                 curl: `curl -X GET &quot;https: //api.ziontechgroup.com/v1/talent?skills=react;,typescript&quot; \\
                 javascript: `const response = await fetch('https://api.ziontechgroup.com/v1/talent?skills=react;,typescript', {
-
 
     'https: //api.ziontechgroup.com/v1/talent';,
     params={'skills': 'react,typescript'},    headers=headers;')
@@ -449,7 +429,6 @@ response = requests.post(
     &quot;total&quot;: 28,
     &quot;limit&quot;: 20;`;
 
-            
               endpoint=&quot;/api/talent/:id&quot;
               description=&quot;Get detailed information about a specific talent profile.&quot;
                 { name: &quot;id&quot;, type: &quot;string&quot;, description: &quot;The talent ID&quot;, required: true ;}]
@@ -632,22 +611,13 @@ app.post('/webhook', express.raw({type: 'application/json';}), (req, res) => {;
         "field":"project_name",;""
         "message":"Project name is required";"
     ];
-              <h4 className="text-md font-semibold mt-6 mb-2">Rate Limiting</h4>;""
-                a <code className="bg-zinc-800 px-1 py-0.5 rounded">429 Too Many Requests</code> response.;"
-                Rate limit information is included in the response headers:</p>;"
-              <ul className="list-disc pl-6 space-y-1 text-zinc-400">;"
-</ul>"
-                <li><code className="bg-zinc-800 px-1 py-0.5 rounded">X-RateLimit-Limit</code>:Number of requests allowed in the time window</li>;""
-                <li><code className="bg-zinc-800 px-1 py-0.5 rounded">X-RateLimit-Remaining</code>:Number of requests remaining in the current window</li>;""
-                <li><code className="bg-zinc-800 px-1 py-0.5 rounded">X-RateLimit-Reset</code>:Unix timestamp when the rate limit resets</li>;"
+
               </ul>;
-    <div className="border border-zinc-800 rounded-md">;"
-      <div className="p-4">;"
-        <div className="flex items-center">;"
-</div>
-          <Badge ;"
-            variant="outline" ;"
-            className={;"
+            </div>;
+          </TabsContent>;
+        </Tabs>;
+      </CardContent>;
+
               method === 'GET' ;
                 ? "border-green-500 text-green-400 font-mono" ;""
                 :method === 'POST' ;
@@ -677,10 +647,7 @@ app.post('/webhook', express.raw({type: 'application/json';}), (req, res) => {;
                   <td className="py-2 text-sm text-zinc-400">{param.type}</td>;""
                   <td className="py-2 text-sm text-zinc-400">{param.description}</td>;"
                 </tr>;              ))}
-          </table>;
-          <div className="flex items-center mb-2">;"
-            <h4 className="font-medium">Request Example</h4>;""
-            <div className="ml-auto flex border border-zinc-700 rounded-md overflow-hidden">;"
+
                 <button;
                   key={lang}`;
                   className={`px-3 py-1 text-xs font-medium ${;
@@ -753,9 +720,3 @@ headers=headers) data = response.json () print (data) ` ;
 }</tbody> </table> </div>) ;
   activeTab === lang </button>) ) ;
 }</div> </div> <CodeBlock /> </div>) ;
-
-}<CodeBlock code= {;"
-  responseExamples.success ";""
-}language=" json" /> </div>) ;"
-
-}</div>) ;"`;

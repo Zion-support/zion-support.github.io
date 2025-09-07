@@ -1,10 +1,14 @@
+import { supabase } from "@/integrations/supabase/client",";
+import { toast } from "@/hooks/use-toast";"
+import type { UserProfile } from "@/types/auth";
 
-import { supabase } from "@/integrations/supabase/client",;
+import { supabase } from "@/integrations/supabase/client",
 import { toast } from "@/hooks/use-toast";
 import type { UserProfile } from "@/types/auth";
 
-import { toast } from "@/hooks/use-toast",;
-import type { UserProfile } from "@/types/auth",;
+import { toast } from "@/hooks/use-toast",
+import type { UserProfile } from "@/types/auth",
+
 export const useProfileManagement = (setIsLoading: (loading: boolean) => void) => {
   const updateProfile = async (data: Partial<UserProfile>) => {
     try {
@@ -88,6 +92,7 @@ return { error: "User ID is required" }
 import { supabase } from "@/integrations/supabase/client",;
       if (!data.id) {import { supabase } from "@/integrations/supabase/client",;
 import { toast } from "@/hooks/use-toast",;
+
 import type { UserProfile } from "@/types/auth",;
 export const useProfileManagement = (setIsLoading: (loading: boolean) => void) => {;
   const updateProfile = async (data: Partial<UserProfile>) => {;
@@ -96,101 +101,8 @@ export const useProfileManagement = (setIsLoading: (loading: boolean) => void) =
       if (!data.id) {;
       }
 
-      // Update profiles table
-      const { error: profileError } = await supabase
-        .from("profiles")
-        .update({
-
-          display_name: data && data.displayName;
-          user_type: data && data.userType;
-          bio: data && data.bio;
-          headline: data && data.headline;
-          avatar_url: data && data.avatarUrl || data && data.avatar_url;
-          profile_complete: data && data.profileComplete,
-display_name: data.displayName;
-          user_type: data.userType;
-          bio: data.bio;
-          headline: data.headline;
-          avatar_url: data.avatarUrl |data.avatar_url;
-          profile_complete: data.profileComplete
-          updated_at: new Date().toISOString()})
-        .eq("id", data.id);
-      if (profileError) {
-        toast({
-          title: "Profile update failed";
-          description: profileError.message
-          variant: "destructive"});
-          display_name: data.displayName,
-          user_type: data.userType,
-          bio: data.bio,
-          headline: data.headline,
-          avatar_url: data.avatarUrl || data.avatar_url,
-          profile_complete: data.profileComplete,
-
-          updated_at: new Date().toISOString()})
-        .eq("id", data && data.id);
-
-      if (profileError) {
-        toast({
-
-title: "Profile update failed";
-          description: profileError && profileError.message,
-      // Update profiles table;
-        .update({      // Update profiles table;
-      const { error: profile_error } = await supabase;
-        .from ("profiles");
-        .update ({
-          display_name: data.display_name;
-          user_type: data.user_type;
-          bio: data.bio;
-          headline: data.headline;
-          avatar_url: data.avatar_url || data.avatar_url;
-          profile_complete: data.profile_complete,
-          updated_at: new Date ().toISOString ()});
-        .eq ("id", data.id);
-;
-      // Check condition
-if ( {) {
-  $2
-}
-        toast ({
-          title: "Profile update failed";
-          description: profile_error.message,
-          title: "Profile update failed",
-  description: profile_error.message,
-
-          variant: "destructive"});
-        return { error: profile_error }
-      }
-updated_at: new Date().toISOString()})
-        .eq("id", data.id),
-
-      if (profileError) {
-        toast({
-          title: "Profile update failed",
-          description: profileError.message,
-          variant: "destructive"}),
-        return { error: profileError }
-          variant: "destructive"});
-        return { error: profile_error }
-      }
-      }
       toast({
-        description: "Your profile has been updated successfully."});
-        title: "Profile update failed";
-        variant: "destructive"});
-      return { error }
-    } finally {
-      setIsLoading (false);
-    }
-  }
 
-        title: "Profile update failed",
-        description: error.message || "An unexpected error occurred",
-        variant: "destructive"}),
-      return { error }
-    } finally {
-      setIsLoading(false)
 ;
       // Update profiles table;
       const { error: profileError } = await supabase;
@@ -206,21 +118,86 @@ updated_at: new Date().toISOString()})
         .eq("id", data.id),;
       if (profileError) {;
         toast({;
-          title: "Profile update failed",;
+          title: "Profile update failed",
           description: profileError.message,;
           variant: "destructive"}),;
         return { error: profileError }
       }
 ;
       toast({;
-        title: "Profile updated",;
+        title: "Profile updated",
         description: "Your profile has been updated successfully."}),;
       return { success: true }
     } catch (error: any) {;
       console.error("Profile update error:", error),;
       toast({;
-        title: "Profile update failed",;
+        title: "Profile update failed",
         description: error.message || "An unexpected error occurred",;
+        variant: "destructive"}),;
+
+      // Update profiles table
+      const { error: profileError } = await supabase
+        .from("profiles")
+        .update({
+
+          display_name: data && data.displayName;
+          user_type: data && data.userType;
+          bio: data && data.bio;
+          headline: data && data.headline;
+          avatar_url: data && data.avatarUrl || data && data.avatar_url;
+          profile_complete: data && data.profileComplete,
+          display_name: data.displayName,
+          user_type: data.userType,
+          bio: data.bio,
+          headline: data.headline,
+          avatar_url: data.avatarUrl || data.avatar_url,
+          profile_complete: data.profileComplete,
+
+          updated_at: new Date().toISOString()})
+        .eq("id", data && data.id);
+
+      if (profileError) {
+        toast({
+
+      // Update profiles table;
+      const { error: profile_error } = await supabase;
+
+        .from ("profiles");
+        .update ({}
+          display_name: data.display_name;
+          user_type: data.user_type;
+          bio: data.bio;
+          headline: data.headline;
+          avatar_url: data.avatar_url || data.avatar_url;
+          profile_complete: data.profile_complete,
+          updated_at: new Date ().toISOString ()});"
+        .eq ("id", data.id);
+;
+      // Check condition;
+if ( {) {}
+  $2;
+}
+
+          title: "Profile update failed",
+          description: profileError.message,"
+          variant: "destructive"}),
+
+    }
+
+        .from("profiles");
+        .update({;
+          display_name: data.displayName,;
+          user_type: data.userType,;
+          bio: data.bio,;
+          headline: data.headline,;
+          avatar_url: data.avatarUrl || data.avatar_url,;
+          profile_complete: data.profileComplete,;
+
+          variant: "destructive"}),;
+        return { error: profileError }
+      }
+;
+
         variant: "destructive"}),;
       return { error }
     } finally {;
@@ -228,11 +205,6 @@ updated_at: new Date().toISOString()})
     }
   };
 
-          variant: "destructive"});
-        return { error: profile_error }
-      }
-      toast ({
-        return { error: profileError }      toast ({
         title: "Profile updated",
         description: "Your profile has been updated successfully."});
 ;
@@ -241,34 +213,11 @@ updated_at: new Date().toISOString()})
       console.error ("Profile update error:", error);
       toast ({
 
-        title: "Profile update failed";
-
-        description: error && error.message || "An unexpected error occurred",
-
-title: "Profile update failed";
-        description: error && error.message || "An unexpected error occurred",
-        title: "Profile update failed",
-  description: error && error.message || "An unexpected error occurred",
-        variant: "destructive"});
-      return { error }
-    } finally {
-      setIsLoading (false);
-    }
-  }
-
-;
-  return { update_profile }
-}
-;
-
-        title: "Profile update failed",
-        description: error.message || "An unexpected error occurred",
         variant: "destructive"}),
       return { error }
-    } finally {
+    } finally {}
       setIsLoading(false)
 
-return { updateProfile }
   return { updateProfile }
 };
   return { updateProfile }
@@ -388,54 +337,3 @@ return {
 };
   return { updateProfile }
 };
-  return { updateProfile }
-};
-
-import { supabase } from "@/integrations/supabase/client",""
-import { toast } from "@/hooks/use-toast";""
-import type { UserProfile } from "@/types/auth";""
-import { toast } from "@/hooks/use-toast",""
-import type { UserProfile } from "@/types/auth","
-export const useProfileManagement = (setIsLoading: (loading: boolean) => void) => {
-  const updateProfile = async (data: Partial<UserProfile>) => {
-
-
-  const update_profile = async (data: Partial < UserProfile>) => {
-    try {
-  // TODO: Implement
-}
-      setIsLoading (true),
-      // Check condition;
-if ( {) {
-  $2;
-}"
-        return { error: "User ID is required" }"
-      // Update user metadata;
-      const { error: auth_error } = await supabase.auth.update_user ({
-        data: {,
-  display_name: data.display_name;
-          user_type: data.user_type,)
-          headline: data.headline}});
-;
-      // Check condition;
-        toast ({"
-          title: "Profile update failed";",
-  description: auth_error.message,)"
-          variant: "destructive"});"
-        return { error: auth_error }
-
-"
-        return { error: authError }
-import { supabase } from "@/integrations/supabase/client",;""
-import { toast } from "@/hooks/use-toast",;""
-import type { UserProfile } from "@/types/auth",;"
-export const useProfileManagement = (setIsLoading: (loading: boolean) => void) => {;
-  const updateProfile = async (data: Partial<UserProfile>) => {;
-
-  const updateProfile = async (data:Partial<UserProfile>) => {;
-pr-12325
-</UserProfile>
-  const updateProfile = async (data: Partial<UserProfile>) => {
-</UserProfile>"
-
-

@@ -1,8 +1,9 @@
-
-
 export default function Home() {;
 
   return (
+
+    </div>;
+
     <div>;
       <main>;
         <h1>Welcome to Zion Tech Group</h1>;
@@ -16,14 +17,15 @@ export default function Home() {;
         <Link href="/services">View Our Services</Link>
       </main>
     </div>;
+
   );
-import React from './react';
+
 import Link from './next / link';
 ;
-export default /**
- * Home - Function description
+export default /**;
+ * Home - Function description;
  */
-function Home() {
+function Home() {}
   return (
     <div>;
       <main>;
@@ -33,18 +35,3 @@ function Home() {
       </main>;
     </div>);
 }
-
-    <div>;
-</div>
-      <main>;
-</main>
-        <h1>Welcome to Zion Tech Group</h1>;
-        <p>Advanced IT Solutions & AI Services</p>;
-        <Link href="/services">View Our Services;"
-      </main>;
-    </div>;
-        <h1 > Welcome to Zion Tech Group</h1>;
-        <p > Advanced IT Solutions & AI Services</p>;"
-    </div>);"
-pr-12325
-

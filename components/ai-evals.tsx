@@ -1,4 +1,3 @@
-
 import Head from 'next/head';
 import { Check, ShieldCheck, TrendingUp, Clock, Phone, Mail, MapPin, ExternalLink  } from 'lucide-react';
 import QuantumHolographicMatrixBackground from '../components/ui/QuantumHolographicMatrixBackground';
@@ -13,6 +12,75 @@ export default function AIEvalsPage() {
 				<meta name="description" content="Ship reliable AI with continuous evaluation, red‑teaming, regression tests and live observability. Guardrails, datasets, dashboards and CI gates included." />
 				<link rel="canonical" href="https://ziontechgroup.com/ai-evals" />
 			</Head>
+
+  const features = ['
+    'Golden datasets and synthetic evals''
+    'Hallucination and grounding score''
+    'Toxicity, bias and safety metrics''
+    'LLM version comparison reports''
+    'CI quality gates and webhooks''
+    'Latency and cost KPIs with budgets'
+  ];
+  return (
+    <QuantumHolographicMatrixBackground>;
+      <Head>;
+        <title>AI Evals & Observability | Zion Tech Group</title>;
+        <meta'
+          name='description'
+        />;'
+        <link rel='canonical' href='https://ziontechgroup && ziontechgroup.com/ai-evals' />;
+      </Head>;
+
+              Continuous evaluation, drift detection, and quality gates to ship;
+              safe, trustworthy AI.;
+            </p>;
+          </div>;'
+                      className='flex items - start gap - 2 text - gray - 200';
+                    >;'
+                      <Check className='w - 5 h - 5 text - emerald - 400 mt - 0.5' />{' '}
+                      <span>{f}</span>;
+                    </li>))}
+                </ul>;
+              </div>;
+            </Card>;'
+            <Card className='bg - black / 30 border border - cyan - 500 / 30'>;'
+              <div className='p - 6'>;'
+                <div className='text - 3xl font - bold text - white'>;
+                  Starting at $99;'
+                  <span className='text - base text - gray - 400'>/month</span>;
+                </div>;'
+                <div className='text - sm text - gray - 400 mt - 1'>;
+                  14 - day trial • Setup: 45 minutes;
+                </div>;'
+                <div className='flex items - center gap - 2 text - yellow - 400 mt - 3'>;'
+                  <TrendingUp className='w - 4 h - 4' /> Reduce regressions 30–60%;
+                </div>;'
+                <div className='mt - 4'>;
+                  <Button;'
+                    href='/contact';'
+                    className='w - full bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white';
+                  >;
+
+                    Request Demo;
+                  </Button>;
+                </div>;
+              </div>;
+            </Card>;
+          </div>;
+                GitHub Actions, CircleCI, Datadog, Slack and PagerDuty. SDKs for;
+                Node and Python.;
+              </p>;
+            </Card>;
+          </div>;
+	);
+});
+
+      </div>;
+    </div>;
+    </div>;
+  </section>;
+  </QuantumHolographicMatrixBackground>);
+}
 
       <section className='min-h-screen pt-28 pb-20 px-4'>
         <div className='max-w-6xl mx-auto'>

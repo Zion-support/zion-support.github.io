@@ -1,4 +1,148 @@
+interface File extends Blob {
+  name: string;
+  lastModified: number;
 
+}
+
+}
+interface Blob {
+  size: number;
+  type: string;
+  slice(start?: number, end?: number, contentType?: string): Blob;
+}
+interface FormData {
+  append(name: string, value: string | Blob): void;
+  delete(name: string): void;
+  get(name: string): string | File | null;
+  getAll(name: string): (string | File)[];
+  has(name: string): boolean;
+  set(name: string, value: string | Blob): void;
+}
+interface URLSearchParams {
+  append(name: string, value: string): void;
+  delete(name: string): void;
+  get(name: string): string | null;
+  getAll(name: string): string[];
+  has(name: string): boolean;
+  set(name: string, value: string): void;
+  toString(): string;
+}
+type BodyInit = string | Blob | ArrayBuffer | FormData | URLSearchParams;
+
+interface Headers {
+  append(name: string, value: string): void;
+  delete(name: string): void;
+  get(name: string): string | null;
+  has(name: string): boolean;
+  set(name: string, value: string): void;
+}
+type HeadersInit = Headers | string[][] | Record<string, string>;
+
+interface RequestInit {
+
+  body?: BodyInit | null;
+  cache?: RequestCache;
+  credentials?: RequestCredentials;
+  headers?: HeadersInit;
+  integrity?: string;
+  keepalive?: boolean;
+  method?: string;
+  mode?: RequestMode;
+  redirect?: RequestRedirect;
+  referrer?: string;
+
+  signal?: AbortSignal | null;
+  window?: any;
+  timeout?: number;
+}
+
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'https://api.ziontechgroup.com';
+export class ApiClient {
+  private baseURL: string;
+  private defaultHeaders: Record<string, string>;
+  constructor(baseURL: string = API_BASE_URL) {
+    this.baseURL = baseURL;
+    this.defaultHeaders = {
+      'Content-Type': 'application/json',
+    };
+  }
+  private async request<T>(
+    endpoint: string,
+    options: RequestInit = {}
+  ): Promise<T> {
+    const url = `${this.baseURL}${endpoint}`;
+    const config: RequestInit = {
+      ...options,
+      headers: {
+        ...this.defaultHeaders,
+        ...options.headers,
+      },
+    };
+    try {
+      const response = await fetch(url, config);
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      return await response.json();
+    } catch (error) {
+      console.error('API request failed:', error);
+      throw error;
+    }
+  }
+  async get<T>(endpoint: string, options?: RequestInit): Promise<T> {
+    return this.request<T>(endpoint, {
+      ...options,
+      method: 'GET',
+    });
+  }
+  async post<T>(endpoint: string, data?: any, options?: RequestInit): Promise<T> {
+    return this.request<T>(endpoint, {
+      ...options,
+      method: 'POST',
+      body: data ? JSON.stringify(data) : undefined,
+    });
+  }
+  async put<T>(endpoint: string, data?: any, options?: RequestInit): Promise<T> {
+    return this.request<T>(endpoint, {
+      ...options,
+      method: 'PUT',
+      body: data ? JSON.stringify(data) : undefined,
+    });
+  }
+  async delete<T>(endpoint: string, options?: RequestInit): Promise<T> {
+    return this.request<T>(endpoint, {
+      ...options,
+      method: 'DELETE',
+    });
+  }
+}
+
+// Define AbortSignal if not available
+interface AbortSignal extends EventTarget {
+  aborted: boolean;
+  onabort: ((this: AbortSignal, ev: Event) => any) | null;
+
+}
+
+interface ApiResponse<T = unknown> {
+  data?: T;
+
+}
+interface RequestOptions extends RequestInit {
+  timeout?: number;
+}
+
+// Add global type definitions for Node && Node.js environment
+
+declare global {
+  interface RequestInit {
+    timeout?: number;
+  }
+}
+class ApiClient {
+  private baseURL: string;
+
+export type { ApiResponse, RequestOptions }
 
   body?: BodyInit | null;
   cache?: RequestCache;
@@ -20,38 +164,13 @@ export interface ApiResponse<T = any> {
   error?: string;
 }
 
-
-export interface RequestOptions {
   method?: 'GET' | 'POST' | 'PUT' | 'DELETE';
   headers?: Record<string, string>;
   body?: any;
 }
 
-class ApiClient {
+class ApiClient {}
   private baseUrl: string;
-
-  constructor(baseUrl: string = '/api') {
-    this.baseUrl = baseUrl;
-  }
-
-
-      });
-
-      const data = await response.json();
-
-      if (!response.ok) {
-        return {
-          data: null,
-          success: false,
-          error: data.message || 'Request failed',
-        };
-      }
-
-      return {
-
-}
-
-export const apiClient = new ApiClient();
 
 export type { ApiResponse, RequestOptions };
 ursor/integrate-build-improve-and-re-verify-8f7d
@@ -66,12 +185,3 @@ origin/cursor/fix-syntax-push-and-merge-to-main-ba45
 origin/cursor/integrate-build-improve-and-re-verify-242d
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
-export type { ApiResponse, RequestOptions }
-
-export interface ApiResponse<T = any> {
-
-  headers?: Record<string, string>;
-</string>
-  async request<T = any>(endpoint: string, options: RequestOptions = {}): Promise<ApiResponse<T>> {
-pr-12325
-export const apiClient = new ApiClient();

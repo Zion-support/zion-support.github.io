@@ -9,7 +9,3 @@ export default function FeatureHighlights({ }: FeatureHighlightsProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-}
-
-}
-}

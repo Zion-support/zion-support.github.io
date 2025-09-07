@@ -1,4 +1,3 @@
-import React from 'react';'
 const RequestQuote = ({ className }) => {
   return ('
     <div className={className || ''}>'
@@ -8,6 +7,3 @@ const RequestQuote = ({ className }) => {
     </div>
   )
 };
-
-    </div>)'
-pr-12325

@@ -1,4 +1,3 @@
-
 // Content flagging functionality;
 import { supabase } from '@/integrations/supabase/client';
 import { FraudSeverity, FraudFlag } from '@/types/fraud';
@@ -60,10 +59,7 @@ ipAddress?: string userId;
 contentType;
 contentId;
 reason;
-severity 
-});
-const {
-  error 
+
 }= await supabase.from ('fraud flags') .insert ({
   user id: userId;
 user email: userEmail;
@@ -73,7 +69,3 @@ content excerpt: contentExcerpt.substring (0, 200), // Limit excerpt length seve
 reason;
 ip address: ipAddress;
 timestamp: new Date () .toISOString ();
-status: 'pending' 
-});
-}
-};

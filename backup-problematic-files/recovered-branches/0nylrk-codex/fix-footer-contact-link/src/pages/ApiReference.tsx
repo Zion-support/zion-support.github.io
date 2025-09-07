@@ -1,26 +1,25 @@
+import React, { useState } from "react",;
+import ApiDocsLayout from "@/components/developers/ApiDocsLayout",;
+import { CodeBlock } from "@/components/developers/CodeBlock",;
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
+;
+export function ApiReference() {;
+  const [activeEndpoint, setActiveEndpoint] = useState("get-jobs"),;
 
-import React, { useState } from "react";""
-import ApiDocsLayout from "@/components/developers/ApiDocsLayout";""
-import { CodeBlock } from "@/components/developers/CodeBlock";""
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";"
 ;
 export function ApiReference() {;"
   const [activeEndpoint, setActiveEndpoint] = useState("get-jobs"),;"
   // Sample endpoint data;
   const endpoints = [;
     {;
-      id: "get-jobs";,;
-      method: "GET";,;
-      path: "/api/jobs";,,
-  description: "Retrieve a list of job postings with optional filtering";,;
+
       parameters:[;
         { name: "status";, type: "string";, description: "Filter by job status (open;, closed, draft)" },;
         { name: "category";, type: "string";, description: "Filter by job category" ;},;
         { name: "limit";, type: "integer";, description: "Number of results per page (default:20;, max: 100)" ;},;
         { name: "offset";, type: "integer";, description: "Pagination offset (default:0)" ;}],;
       responses:{;
-        "200":{,
-  description: "A list of jobs";,;
+
           example:`{;
   "jobs":[;
     {;
@@ -43,15 +42,13 @@ export function ApiReference() {;"
   "offset":0;
 }`;
         },;
-        "401":{,
-  description: "Unauthorized";,;
+
           example:`{;
   "error":"invalid_token",;
   "message":"The provided API key is invalid or expired";
 }`;
         },;
-        "429":{,
-  description: "Rate limit exceeded";,;
+
           example:`{;
   "error":"rate_limit_exceeded",;
   "message":"Rate limit exceeded. Please try again in 60 seconds",;
@@ -106,10 +103,7 @@ pr-12325
   -H "Authorization:Bearer YOUR_API_KEY"`;
     },;
     {;
-      id: "post-jobs";,;
-      method: "POST";,;
-      path: "/api/jobs";,,
-  description: "Create a new job posting";,;
+
       parameters:[;
         { name: "title";, type: "string";, required: true;, description: "Job title" ;},;
         { name: "description";, type: "string";, required: true;, description: "Detailed job description" ;},;
@@ -118,8 +112,7 @@ pr-12325
         { name: "skills";, type: "array";, description: "Array of required skills" ;},;
         { name: "deadline";, type: "string";, description: "Application deadline (ISO date format)" ;}],;
       responses:{;
-        "201":{,
-  description: "Job created successfully";,;
+
           example:`{;
   "id":"job-456",;
   "title":"UX Designer",;
@@ -134,8 +127,7 @@ pr-12325
   "created_at":"2023-05-15T10:12:00Z";
 }`;
         },;
-        "400":{,
-  description: "Bad request";,;
+
           example:`{;
   "error":"validation_error",;
   "message":"Invalid input",;
@@ -193,10 +185,7 @@ pr-12325
     "deadline":"2023-07-01T00:00:00Z";""`;
   }'`;
     {;
-      id: "get-talent";,;
-      method: "GET";,;
-      path: "/api/talent";,,
-  description: "Search for talent profiles with optional filtering";,;
+
       parameters:[;
         { name: "skills";, type: "string";, description: "Comma-separated list of skills" ;},;
         { name: "category";, type: "string";, description: "Filter by talent category" ;},;
@@ -206,8 +195,7 @@ pr-12325
         { name: "limit";, type: "integer";, description: "Number of results per page (default:20;, max: 100)" ;},;
         { name: "offset";, type: "integer";, description: "Pagination offset (default:0)" ;}],;
       responses:{;
-        "200":{,
-  description: "A list of talent profiles";,;
+
           example:`{;
   "talent":[;
     {;
@@ -248,54 +236,36 @@ pr-12325
   // Find the active endpoint data;
   const activeEndpointData = endpoints.find(e => e.id === activeEndpoint),;
   return (;
+
     <ApiDocsLayout>;
-"
-      <div className="grid md:grid-cols-5 gap-8">;"
-</div>"
-        <div className="md:col-span-1">;"
-          <div className="sticky top-8">;"
-            <h3 className="text-lg font-semibold text-white mb-4">Endpoints</h3>;""
-            <ul className="space-y-2">;"
-</ul>
+
                 <li key={endpoint.id}>;
 </li>
                   <button;)
                     onClick={() => setActiveEndpoint(endpoint.id)}
-</button>"`;
-                    <span className={`inline-block w-16 font-mono ${endpoint.method === "GET" ? "text-green-500" :endpoint.method === "POST" ? "text-blue-500" :"text-yellow-500"}`}>;"
-</span>
-                    </span>;"
-                    <span className="truncate">{endpoint.path}</span>;"
+
                   </button>;
-                </li>;              ))}
-            </ul>;
-          </div>;
-        </div>;"
-        <div className="md:col-span-4">;"
-</div>
+
+        <div className="md:col-span-4">;
+          {activeEndpointData ? (;
             <div>;
-              <div className="flex items-center mb-6">;"
-</div>`;
-                <span className={`inline-block px-2 py-1 text-xs font-medium rounded mr-3 ${;"
-                  activeEndpointData.method === "GET" ? "bg-green-950 text-green-500" :;""
-                  activeEndpointData.method === "POST" ? "bg-blue-950 text-blue-500" :;""
-                  "bg-yellow-950 text-yellow-500";"`;
-                }`}>;
-                <span className="font-mono text-lg text-white">{activeEndpointData.path}</span>;"
-              <p className="text-zinc-400 mb-8">{activeEndpointData.description}</p>;""
-              <Tabs defaultValue="docs">;"
-                <TabsList className="mb-6">;"
-                  <TabsTrigger value="docs">Documentation;""
-                  <TabsTrigger value="try">Try It;"
-                ;"
-                <TabsContent value="docs">;"
-                  <div className="mb-8">;"
-                    <h3 className="text-xl font-semibold text-white mb-4">Request</h3>;"
-                      <>;"
-                        <h4 className="text-lg font-medium text-white mb-3">Parameters</h4>;""
-                        <div className="overflow-x-auto mb-6">;"
-                          <table className="w-full border-collapse">;"
-</table>
+              <div className="flex items-center mb-6">;
+
+              <Tabs defaultValue="docs">;
+                <TabsList className="mb-6">;
+                  <TabsTrigger value="docs">Documentation</TabsTrigger>;
+                  <TabsTrigger value="try">Try It</TabsTrigger>;
+                </TabsList>;
+                <TabsContent value="docs">;
+                  {/* Request section */}
+                  <div className="mb-8">;
+                    <h3 className="text-xl font-semibold text-white mb-4">Request</h3>;
+
+                      <>;
+                        <h4 className="text-lg font-medium text-white mb-3">Parameters</h4>;
+                        <div className="overflow-x-auto mb-6">;
+                          <table className="w-full border-collapse">;
+
                             <thead>;
 </thead>"
                               <tr className="border-b border-zinc-800">;"
@@ -307,18 +277,14 @@ pr-12325
                               </tr>;
                             </thead>;
                             <tbody>;
-</tbody>"
-                                <tr key={param.name} className={index < activeEndpointData.parameters.length - 1 ? "border-b border-zinc-800" :""}>;"
-                                  <td className="py-2 px-4 text-white font-mono">{param.name}</td>;""
-                                  <td className="py-2 px-4 text-blue-400 font-mono">{param.type}</td>;""
-                                  <td className="py-2 px-4 text-zinc-300">{param.required ? "Yes" :"No"}</td>;""
-                                  <td className="py-2 px-4 text-zinc-300">{param.description}</td>;"
+
                                 </tr>;                              ))}
+
                             </tbody>;
                           </table>;
                       </>;
                     )}
-                    <h4 className="text-lg font-medium text-white mb-3">Example Request</h4>;"
+
                     <CodeBlock ;
                       code={activeEndpointData.requestExample} ;"
                       language="bash";"
@@ -338,6 +304,7 @@ pr-12325
                         <CodeBlock ;
                           code={response.example} ;
                           language="json";
+
                           showLineNumbers={true}
                         />;
                       </div>;
@@ -349,71 +316,3 @@ pr-12325
                     <div className="text-center">;
                       <p className="text-zinc-400 mb-3">Interactive API tester coming soon</p>;
                       <p className="text-zinc-600 text-sm">Try the Postman collection in the meantime</p>;
-                    </div>;
-                  </div>;
-                </TabsContent>;
-              </Tabs>;
-            </div>;
-          ) :(;
-            <div className="p-8 border border-zinc-800 rounded-lg text-center">;
-              <p className="text-zinc-400">Select an endpoint from the list to view details</p>;
-            </div>;
-          )}
-        </div>;
-      </div>;
-    </ApiDocsLayout>;
-  ),;}
-;
-export default ApiReference,
-};
-//More jobs... ];
-"count" : 42;
-"limit" : 20;
-"offset" : 0 
-}` 
-};
-}
-};
-requestExample: `curl -X GET \\ https://api.zionai.com/v1/api/jobs?status=open&limit=10 \\ -H "Authorization: Bearer YOUR API KEY" ` ;
-};
-] 
-}` 
-}
-};
-requestExample: `curl -X POST \\ https://api.zionai.com/v1/api/jobs \\ //More talent profiles... ];
-"count" : 38;
-"limit" : 20;
-"offset" : 0 
-}` 
-}
-};
-requestExample: `curl -X GET \\ https://api.zionai.com/v1/api/talent?skills=React;, Node.js&limit=10 \\ -H "Authorization: Bearer YOUR API KEY" ` ;
-}];
-                          <span className="text-white">{response.description}</span>;"
-                          code={response.example} ;"
-                          language="json";"
-
-                <TabsContent value="try">;"
-                  <div className="p-8 border border-zinc-800 rounded-lg flex items-center justify-center">;"
-                    <div className="text-center">;"
-                      <p className="text-zinc-400 mb-3">Interactive API tester coming soon</p>;""
-                      <p className="text-zinc-600 text-sm">Try the Postman collection in the meantime</p>;"
-            <div className="p-8 border border-zinc-800 rounded-lg text-center">;"
-              <p className="text-zinc-400">Select an endpoint from the list to view details</p>;"
-pr-12325
-//Find the active endpoint data <button onClick= {
-  () => setActiveEndpoint (endpoint.id) 
-</button>
-  activeEndpoint === endpoint.id </button> </li>) ) "
-}</ul> </div> </div> <Tabs defaultValue="docs" > <TabsList className="mb-6" > <TabsTrigger value="docs" >Documentation <TabsTrigger value="try" >Try It  {"
-  activeEndpointData.parameters && activeEndpointData.parameters.length > 0 && (<> <h4 className="text-lg font-medium text-white mb-3" >Parameters</h4> <div className="overflow-x-auto mb-6" > <table className="w-full border-collapse" > <thead> <tr className="border-b border-zinc-800" > <th className="text-left py-2 px-4 text-zinc-400 font-medium" >Name</th> <th className="text-left py-2 px-4 text-zinc-400 font-medium" >Type</th> <th className="text-left py-2 px-4 text-zinc-400 font-medium" >Required</th> <th className="text-left py-2 px-4 text-zinc-400 font-medium" >Description</th> </tr> </thead> <tbody> </tr>) )"
-}</tbody> </table> </div> </>) "
-}<h4 className="text-lg font-medium text-white mb-3" >Example Request</h4> <CodeBlock /> </div> {""
-}<div> <h3 className="text-xl font-semibold text-white mb-4">Responses</h3> {"
-  Object.entries (activeEndpointData.responses) .map ( ([status, response]) => (<div key= {
-  status;"
-}className="mb-6"> <div className="flex items-center mb-3"> <span className= {"
-</div>)
-}</span> /> </div>) ) "
-}</div>  <TabsContent value="try"> <div className="p-8 border border-zinc-800 rounded-lg flex items-center justify-center"> <div className="text-center"> <p className="text-zinc-400 mb-3">Interactive API tester coming soon</p> <p className="text-zinc-600 text-sm">Try the Postman collection in the meantime</p> </div> </div>   </div>) : (<div className="p-8 border border-zinc-800 rounded-lg text-center"> <p className="text-zinc-400">Select an endpoint from the list to view details</p> </div>)"
-}</div> </div> ) "`;

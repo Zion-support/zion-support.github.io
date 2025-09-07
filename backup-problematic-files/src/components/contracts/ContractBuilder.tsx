@@ -1,7 +1,3 @@
-import { useState } from "react";""
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";""
-import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";""
-import { Button } from "@/components/ui/button";""
 import { Save } from 'lucide-react';
 import { TalentProfile } from "@/types/talent";""
 import { ContractForm, ContractFormValues } from "./components/ContractForm";""
@@ -38,29 +34,17 @@ export function ContractBuilder({;
 
         <DialogHeader>;
 
-          <DialogTitle>Contract Builder;
-        ;"
-        <Tabs value={activeTab} onValueChange={setActiveTab} className="mt-4">;"
-          <div className="flex justify-between items-center">;"
-</div>"
-            <TabsList className="grid grid-cols-2">;"
-              <TabsTrigger value="form">Contract Details;""
-              <TabsTrigger value="preview" disabled={!generatedContract}>Preview;"
-            <div className="flex gap-2">;"
-</div>
-              <Button ;"
-                variant="outline" ;""
-                size="sm";"
-                onClick={() => setTemplateManagerOpen(true)}
-                <Save className="h-4 w-4" />;"
+                className="flex gap-1";
+              >;
+                <Save className="h-4 w-4" />;
+                Templates;
+              </Button>;
 
-              <Button;"
-                variant="secondary";""
-                onClick={() => setShowSmartContractBuilder(true)}
-
+              >;
+                Smart Contract Builder;
+              </Button>;
             </div>;
-          </div>;"
-          <TabsContent value="form" className="pt-4">;"
+          </div>;
 
             <ContractForm ;
               talent={talent}              clientName={clientName}
@@ -74,8 +58,6 @@ export function ContractBuilder({;
               <ContractPreview ;
                 contractContent={generatedContract}
                 talent={talent}
-                onClose={onClose}"
-                status="ready";"
 
         <TemplateManager;
           isOpen={templateManagerOpen}
@@ -112,5 +94,3 @@ return (<SmartContractBuilder isOpen= {;
   templateManagerOpen ;
 }onClose= {;
   () => setTemplateManagerOpen (false) ;
-
-}/>  ) ;"

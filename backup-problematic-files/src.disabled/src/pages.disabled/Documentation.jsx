@@ -1,4 +1,3 @@
-import React from 'react';'
 const Documentation = ({ className }) => {
   return ('
     <div className={className || ''}>'
@@ -8,6 +7,3 @@ const Documentation = ({ className }) => {
     </div>
   )
 };
-
-    </div>)'
-pr-12325

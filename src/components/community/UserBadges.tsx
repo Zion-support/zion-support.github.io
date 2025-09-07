@@ -1,8 +1,0 @@
-
-
-
-interface UserBadgesProps {
-  badges: Badge[]
-}
-;
-

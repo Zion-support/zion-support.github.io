@@ -27,4 +27,3 @@ exports.handler = async () => {
   logStep('components:generate-docs', () =>
     runNode('automation/component-props-docs.cjs')
   );
-  logStep('git:sync', () => runNode('automation/advanced-git-sync.cjs'));`;

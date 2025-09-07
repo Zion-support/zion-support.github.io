@@ -1,52 +1,17 @@
 /* eslint-env node */
 /** @type {import('tailwindcss').Config} */
-module.exports = {
 
-
-
-
-
-
-
-
-
-  content: [;
-    './src / pages/**/*.{js, ts, jsx, tsx, mdx}./src / components/**/*.{js, ts, jsx, tsx, mdx}./src / app/**/*.{js, ts, jsx, tsx, mdx}'],
-  theme: {
-    extend: {
-      colors: {
-        background: 'hsl (var (--background))',
-        foreground: 'hsl (var (--foreground))'},
-      font_family: {
-        sans: ['Intersans - serif']}}},
-
-
-
-
-
-
-
-
-
-  plugins: []}
-
-
-  content: [
-    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
-  theme: {
-    extend: {
-      colors: {
-        background: 'hsl(var(--background))',
+  theme: {}
+    extend: {}
+      colors: {'
+        background: 'hsl(var(--background))','
         foreground: 'hsl(var(--foreground))',
       },
-      fontFamily: {
+      fontFamily: {'
         sans: ['Inter', 'sans-serif'],
       },
     },
   },
   plugins: [],
-};
-

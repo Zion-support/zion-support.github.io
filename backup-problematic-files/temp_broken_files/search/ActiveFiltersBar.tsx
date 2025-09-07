@@ -1,4 +1,27 @@
-import React from 'react';
+>;
+          {type}
+          <X className="h-3 w-3" />;
+        </ClickableBadge>;
+      ))}
+
+        >;
+          {location}
+          <X className="h-3 w-3" />;
+        </ClickableBadge>;
+      ))}
+
+        >;
+          {availability}
+          <X className="h-3 w-3" />;
+        </ClickableBadge>;
+      ))}
+
+          {selectedRating}+ Stars;
+          <X className="h-3 w-3" />;
+        </ClickableBadge>;
+      )}
+    </div>;
+
 import { X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -72,7 +95,3 @@ export default ActiveFiltersBar;"'"
 export default ActiveFiltersBar;
 '"
 ursor/fix-lint-push-and-merge-to-main-e10e:src/components/search/ActiveFiltersBar.tsx
-  filter.key ;)"
-}variant="secondary" className="flex items-center gap-1 pl-2 pr-1" > > <X className="h-3 w-3" />  ) ) ;"
-}<Button > Clear all  </div>) ;"`;
-pr-12325

@@ -1,4 +1,3 @@
-
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.45.0";
 ;
@@ -41,8 +40,7 @@ serve(async (req) => {;
             "Content-Type":"image/gif";
             "Cache-Control":"no-store, no-cache, must-revalidate, proxy-revalidate";
             "Pragma":"no-cache";
-            "Expires":"0"}}
-      );
+            "Expires":"0"}});
     } else if (type === "click") {;
       await supabase;
         .from("email_campaigns");

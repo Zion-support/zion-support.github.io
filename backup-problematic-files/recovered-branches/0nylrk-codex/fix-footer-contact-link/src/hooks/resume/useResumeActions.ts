@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { supabase } from '@/integrations/supabase/client';
 import { Resume, ResumeBasicInfo } from '@/types/resume';
@@ -164,4 +163,5 @@ createResume;
 updateBasicInfo;
 setActiveResume 
 }
+
 }

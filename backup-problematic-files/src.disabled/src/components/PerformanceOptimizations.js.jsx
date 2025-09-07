@@ -1,4 +1,3 @@
-import React from 'react';'
 const PerformanceOptimizations.js = ({ className }) => {
   return ('
     <div className={className || ''}>'
@@ -8,6 +7,3 @@ const PerformanceOptimizations.js = ({ className }) => {
     </div>
   )
 };
-
-    </div>)'
-pr-12325

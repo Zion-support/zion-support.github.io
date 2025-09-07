@@ -4,6 +4,7 @@ interface UseIntersectionObserverProps {
   threshold?: number;
   root?: Element | null;
   rootMargin?: string;
+
   }, [node, threshold, root, rootMargin, frozen]);
   const prevNode = useRef<Element | null>(null);
 
@@ -12,4 +13,3 @@ interface UseIntersectionObserverProps {
   const [node, setNode] = useState<Element | null>(null),;
 
   const observer = useRef<IntersectionObserver | null>(null),;
-

@@ -1,5 +1,5 @@
-// Auto-generated module;
 export {};
+
 origin/main
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';

@@ -36,9 +36,12 @@ if (theme === 'system') {'
   }, []);
 
     const root = window.document.documentElement;
-    
+
     if (theme === 'system') {
-      const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      const systemTheme = window.matchMedia('(prefers-color-scheme: dark)')
+        .matches
+        ? 'dark'
+        : 'light';
       setActualTheme(systemTheme);
       root.classList.remove('light', 'dark');
       root.classList.add(systemTheme);
@@ -62,7 +65,3 @@ if (theme === 'system') {'
     localStorage.setItem('theme', newTheme);
 
   return (
-    <ThemeContext.Provider value={{ theme, setTheme: handleSetTheme, actualTheme }}>
-      {children}
-    </ThemeContext.Provider>
-  );

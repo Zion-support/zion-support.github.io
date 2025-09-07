@@ -1,4 +1,3 @@
-import React from 'react';'
 const ProductSubmissionForm.js = ({ className }) => {
   return ('
     <div className={className || ''}>'
@@ -8,6 +7,3 @@ const ProductSubmissionForm.js = ({ className }) => {
     </div>
   )
 };
-
-    </div>)'
-pr-12325

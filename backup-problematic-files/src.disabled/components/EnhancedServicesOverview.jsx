@@ -1,4 +1,3 @@
-import React from 'react';'
 const EnhancedServicesOverview = ({ className }) => {
   return ('
     <div className={className || ''}>'

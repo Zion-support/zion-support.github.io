@@ -1,6 +1,6 @@
+import React from "react",;
+import { SearchSuggestion, SearchHighlight } from "@/types/search",;
 
-import React from "react";""
-import { SearchSuggestion, SearchHighlight } from "@/types/search";"
 ;
 interface AutocompleteSuggestionsProps {;
   suggestions: SearchSuggestion[];,;
@@ -48,4 +48,3 @@ export function AutocompleteSuggestions({ ;
 </span>
                 </span>;
               </div>;
-            </li>;"`;

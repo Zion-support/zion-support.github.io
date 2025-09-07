@@ -1,6 +1,6 @@
+import React from "react",;
+import { Card } from "@/components/ui/card",;
 
-import React from "react";""
-import { Card } from "@/components/ui/card";"
 import {;
   Table,;
   TableBody,;
@@ -47,8 +47,8 @@ const syncLogs = [;
 ],;
 export function IntegrationsSyncLog() {;
   const getStatusBadge = (status:string) => {;
-    switch (status) {;"
-      case "success":return <Badge className="bg-green-500">Success,;""
-        return <Badge variant="destructive">Error,;""
-        return <Badge className="bg-amber-500">Warning,;""
-        return <Badge variant="outline">Unknown;""
+
+      case "warning":;
+        return <Badge className="bg-amber-500">Warning</Badge>,;
+      default:;
+        return <Badge variant="outline">Unknown</Badge>;

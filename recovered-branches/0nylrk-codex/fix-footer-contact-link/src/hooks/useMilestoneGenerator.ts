@@ -4,62 +4,92 @@ scope: string;
 pr-12325
   startDate: string;
 
-
 import { useState  } from 'react';
 import { supabase  } from '@/integrations/supabase/client';
+
 import { toast } from 'sonner';
-export interface MilestoneInput {
+
+  scope: string;
+  start_date: string;
+  end_date: string | null,
+  project_type: string;
 
 }
-  scope: string;,
-  start_date: string;
-  end_date: string | null,}
-  project_type: string;}
-}
+
 export interface GeneratedMilestone {;
 
-
-  title: string;,
-pr-12325
   description: string;
-
-      setIsGenerating(true),
 
       const { data, error } = await supabase && supabase.functions.invoke('generate-milestones', {
 
-import { useState  } from 'react';
-import { supabase  } from '@/integrations/supabase/client';
-import { toast } from 'sonner';
-export interface MilestoneInput {
-import {useState} from 'react';
-import {supabase} from '@/integrations/supabase/client';
-import {toast} from 'sonner';
+export function useMilestoneGenerator() {};
+  const [isGenerating, setIsGenerating] = useState(false);
+
+  const [generatedMilestones, setGeneratedMilestones] = useState<GeneratedMilestone[]>([]);
+
+        body: input
+      });
+      if (error) throw error;
+      // Mark each milestone as AI generated
+
+  due_date: string;
+  estimated_hours: number,
+  isAiGenerated: boolean;
+}
+
+        isAiGenerated: true}));
+
+;
+      setGeneratedMilestones (milestonesWithFlag);
+      return milestonesWithFlag;
+
+import { useState } from 'react',;
+import { supabase } from '@/integrations/supabase/client',;
+
+import { toast } from 'sonner',;
 export interface MilestoneInput {;
-  scope: string;
-  startDate: string;
-
-  endDate: string | null
-
-  projectType: string
+  scope: string,;
+  startDate: string,;
+  endDate: string | null,;
+  projectType: string;
 }
-export interface GeneratedMilestone {
-
+;
 export interface GeneratedMilestone {;
-  title: string;
-  description: string;
-  dueDate: string;
-
-  estimatedHours: number
-
-  isAiGenerated: boolean
+  title: string,;
+  description: string,;
+  dueDate: string,;
+  estimatedHours: number,;
+  isAiGenerated: boolean;
 }
-  const [isGenerating, setIsGenerating] = useState(false);
+;
 
-      setIsGenerating(true),
-      const { data, error } = await supabase && supabase.functions.invoke('generate-milestones', {')
-pr-12325
-export function useMilestoneGenerator() {
+      const { data, error } = await supabase.functions.invoke('generate-milestones', {;
+        body: input;
+      }),;
+      if (error) throw error,;
+      // Mark each milestone as AI generated;
+      const milestonesWithFlag = data.milestones.map((milestone: any) => ({;
+        ...milestone,;
+        isAiGenerated: true})),;
+      setGeneratedMilestones(milestonesWithFlag),;
+      return milestonesWithFlag;
 
-export function useMilestoneGenerator() {
-  const [isGenerating, setIsGenerating] = useState(false);
+      toast.error('Failed to generate milestones'),;
+      return [];
+    } finally {;
+      setIsGenerating(false);
+    }
+  },;
+  const clearGeneratedMilestones = () => {;
+    setGeneratedMilestones([]);
+  },;
+  return {;
+    generateMilestones,;
 
+    generatedMilestones;
+    isGenerating;
+
+    clearGeneratedMilestones}
+}
+
+}

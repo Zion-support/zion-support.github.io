@@ -1,22 +1,22 @@
+import React, { useState } from "react",;
+import { Button } from "@/components/ui/button",;
+import { Form, FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",;
+import { Input } from "@/components/ui/input",;
+import { Textarea } from "@/components/ui/textarea",;
+import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "@/components/ui/select",;
+import { Calendar } from "@/components/ui/calendar",;
+import { Popover, PopoverTrigger, PopoverContent } from "@/components/ui/popover",;
+import { TalentProfile } from "@/types/talent",;
+import { UserProfile } from "@/types/auth",;
+import { cn } from "@/lib/utils",;
+import { zodResolver } from "@hookform/resolvers/zod",;
+import { useForm } from "react-hook-form",;
+import { z } from "zod",;
+import { format, addDays } from "date-fns",;
+import { CalendarIcon, Check, Clock } from "lucide-react",;
+import { toast } from "@/components/ui/use-toast",;
+import { useInterviews } from "@/hooks/useInterviews",;
 
-import React, { useState } from "react";""
-import { Button } from "@/components/ui/button";""
-import { Form, FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form";""
-import { Input } from "@/components/ui/input";""
-import { Textarea } from "@/components/ui/textarea";""
-import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "@/components/ui/select";""
-import { Calendar } from "@/components/ui/calendar";""
-import { Popover, PopoverTrigger, PopoverContent } from "@/components/ui/popover";""
-import { TalentProfile } from "@/types/talent";""
-import { UserProfile } from "@/types/auth";""
-import { cn } from "@/lib/utils";""
-import { zodResolver } from "@hookform/resolvers/zod";""
-import { useForm } from "react-hook-form";""
-import { z } from "zod";""
-import { format, addDays } from "date-fns";""
-import { CalendarIcon, Check, Clock } from "lucide-react";""
-import { toast } from "@/components/ui/use-toast";""
-import { useInterviews } from "@/hooks/useInterviews";"
 ;
 interface InterviewRequestFormProps {;
   talent: TalentProfile;,;
@@ -42,9 +42,9 @@ export function InterviewRequestForm({ talent, onClose, userDetails } InterviewR
   async function onSubmit(values:z.infer<typeof formSchema>) {;
     if (!userDetails?.id) {;
       toast({;
-        title: "Authentication required";,,
-  description: "Please log in to schedule an interview";,;
-        variant: "destructive";}),;
+
+        variant:"destructive"}),;
+
       return,;
     }
 ;
@@ -71,15 +71,14 @@ export function InterviewRequestForm({ talent, onClose, userDetails } InterviewR
       }),;
 ;
       toast({;
-        title: "Interview requested";,,
-  description: `Your interview request with ${talent.full_name;} has been sent.`}),;
+
       onClose(),;
     } catch (error) {;
       console.error("Failed to schedule interview: ";, error),;
       toast({;
-        title: "Failed to schedule interview";,,
-  description: "An error occurred while scheduling the interview. Please try again.";,;
-        variant: "destructive";}),;
+
+        variant:"destructive"}),;
+
     } finally {;
       setIsSubmitting(false),;
     }
@@ -120,57 +119,40 @@ pr-12325
 
             <FormItem>;
 
-              <FormLabel>Interview Title;
               <FormControl>;
                 <Input placeholder="Brief title for the interview" {...field} />;"
 
               <FormMessage />;
 
-            ;"
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;"
-            name="date";")
-              <FormItem className="flex flex-col">;"
+            render={({ field }) => (;
+              <FormItem className="flex flex-col">;
+                <FormLabel>Date</FormLabel>;
 
-                <FormLabel>Date;
                 <Popover>;
 
                   <PopoverTrigger asChild>;
 
+                      <Button;
+                        variant="outline";
+                        className={cn(;
+                          "w-full pl-3 text-left font-normal",;
+                          !field.value && "text-muted-foreground";
 
-                      <Button;"
-                        variant="outline";"
-                        className={cn(;"
-                          "w-full pl-3 text-left font-normal",;""
-                          !field.value && "text-muted-foreground";")
                         )}
                       >;
 
                           <span>Pick a date</span>;
 
-                          <span>Pick a date</span>;"
-                        <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />;"
+                    />;
+                  </PopoverContent>;
+                </Popover>;
+                <FormMessage />;
 
-                  <PopoverContent className="w-auto p-0" align="start">;"
-
-                    <Calendar;"
-                      mode="single";"
-                      selected={field.value}
-                      onSelect={field.onChange}
-                      disabled={(date) => date < new Date() || date > addDays(new Date(), 90)}
-
-
-              ;            )}
-            name="time";"
-
-
-                <FormLabel>Time;
-                <Select onValueChange={field.onChange} defaultValue={field.value}>;
-
-
+                  <FormControl>;
                     <SelectTrigger>;
-                      <SelectValue placeholder="Select time" />;"
-
-                  <SelectContent className="max-h-[300px]">;"
+                      <SelectValue placeholder="Select time" />;
+                    </SelectTrigger>;
+                  </FormControl>;
 
                       <SelectItem key={time} value={time}>;
 )
@@ -179,55 +161,37 @@ pr-12325
         </div>;"
             name="duration";"
 
-
                 <FormLabel>Duration;
-
 
                       <SelectValue placeholder="Select duration" />;"
 
                   <SelectContent>;
-                    <SelectItem value="15">15 minutes;""
-                    <SelectItem value="30">30 minutes;""
-                    <SelectItem value="45">45 minutes;""
-                    <SelectItem value="60">60 minutes;"
-            name="platform";"
 
-
-                <FormLabel>Platform;
-
-
-                      <SelectValue placeholder="Select platform" />;"
-
-                    <SelectItem value="zoom">Zoom;""
-                    <SelectItem value="google-meet">Google Meet;""
-                    <SelectItem value="teams">Microsoft Teams;""
-                    <SelectItem value="other">Other;"
-
-            name="meetingLink";")
-
-                <FormLabel>Meeting Link (Optional);
-
-                  <Input;"
                     placeholder={`Add your ${form.watch('platform')} link here`}
+
                     {...field}
 
+          render={({ field }) => (;
+            <FormItem>;
+              <FormLabel>Notes (Optional)</FormLabel>;
+              <FormControl>;
 
-          control={form.control}
-          name="notes";"
+                  {...field}
+                />;
+              </FormControl>;
+              <FormMessage />;
 
-              <FormLabel>Notes (Optional);
+        <div className="flex justify-end gap-4 pt-4">;
+          <Button variant="outline" onClick={onClose} type="button">;
+            Cancel;
+          </Button>;
+          <Button type="submit" disabled={isSubmitting}>;
 
-                <Textarea ;"
-                  placeholder="Share what you'd like to discuss in this interview";""
-                  className="h-20";"
-
-
-        <div className="flex justify-end gap-4 pt-4">;"
-          <Button variant="outline" onClick={onClose} type="button">;"
-
-          <Button type="submit" disabled={isSubmitting}>;"
-
+          </Button>;
+        </div>;
       </form>;
+    </Form>;
+
 const form = useForm<z.infer<typeof formSchema>> ({
 async function onSubmit (values: z.infer<typeof formSchema>) {
 </typeof>"
@@ -243,11 +207,3 @@ async function onSubmit (values: z.infer<typeof formSchema>) {
 }> <FormControl> <SelectTrigger> <SelectValue placeholder="Select platform" />   <SelectContent> <SelectItem value="zoom" >Zoom <SelectItem value="google-meet" >Google Meet <SelectItem value="teams" >Microsoft Teams <SelectItem value="other" >Other   <FormMessage /> )"
 }/> </div> {"
   form.watch ('platform') !== 'in-app' && (<FormField control= {
-  form.control;)
-}<FormItem> <FormLabel>Meeting Link (Optional)  <FormControl> <Input placeholder= {
-
-}/>  <FormMessage /> ) 
-
-}<FormField <FormItem> <FormLabel>Notes (Optional)  <FormControl> <Textarea />  <FormMessage /> ) 
-
-}/>  </div> </form> ) `;

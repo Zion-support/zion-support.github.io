@@ -1,5 +1,3 @@
-  translations: Record<string, string>;
-</string>
-  const [translations, setTranslations] = useState<Record<string, string>>({});
+translations: Record<string, string>;
 
-  const [error, setError] = useState<string | undefined>(undefined);
+  const [translations, setTranslations] = useState<Record<string, string>>({});

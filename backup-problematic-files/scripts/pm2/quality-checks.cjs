@@ -12,6 +12,27 @@ const log = (message) => {}
 };
 const runCommand = (command, description) => {}
   try {}
+<<<<<<< HEAD
+    log(`Starting: ${description}`);
+    const output = execSync(command, { })
+<<<<<<< HEAD
+      encoding: 'utf8',
+=======
+      encoding: 'utf8', 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+      stdio: 'pipe',
+      cwd: process.cwd();
+    }
+});
+    log(`Completed: ${description}`);
+    return { success: true, output };
+  } catch (error) {}
+    log(`Failed: ${description} - ${error.message}`);
+    return { success: false, error: error.message };
+  };
+};
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
     if (result.success) {}
       lintPassed++;
@@ -42,9 +63,15 @@ const generateQualityReport = (results) => {}
     codeQuality: results.codeQuality,
     coverage: results.coverage,
     overall: {}
+<<<<<<< HEAD
+      passed: results.linting.passed + results.typeChecking.passed +
+              results.codeQuality.passed + results.coverage.passed,
+      failed: results.linting.failed + results.typeChecking.failed +
+=======
       passed: results.linting.passed + results.typeChecking.passed + 
               results.codeQuality.passed + results.coverage.passed,
       failed: results.linting.failed + results.typeChecking.failed + 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               results.codeQuality.failed + results.coverage.failed;
 
 const main = async () => {}
@@ -76,6 +103,24 @@ const main = async () => {}
 process.on('SIGTERM', () => {}
   log('Quality Checks Process terminated');
 // Run the main function;
+<<<<<<< HEAD
+main().catch(error => {})
+  log(`Quality Checks Process failed: ${error.message}`);
+  process.exit(1);
+}
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+});
+});
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
 
   process.exit(1);
 `;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -12,6 +12,16 @@ function fixMergeConflicts(filePath) {
       let inConflict = false;
       let takeHead = true;
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+      // Remove merge conflict markers
+            files.push(fullPath);
+          }
+        } catch (error) {
+          // Skip files that can't be read
+=======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       for (let i = 0; i < lines.length; i++) {
         const line = lines[i];
 
@@ -19,7 +29,13 @@ function fixMergeConflicts(filePath) {
         } else if (line.includes('>>>>>>>')) {
           inConflict = false;
 
+<<<<<<< HEAD
+        if (!inConflict || (inConflict && takeHead)) {
+          resolvedLines.push(line);
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+=======
 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         }
       }
       fs.writeFileSync(filePath, resolvedLines.join('\n'),utf8);

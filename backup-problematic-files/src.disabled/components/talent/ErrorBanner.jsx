@@ -2,12 +2,5 @@
 :backup-merge-conflicts/ErrorBanner.js.jsx.backup"export function ErrorBanner({ msg }) {" return (); <div className="p-4 bg-red-500/20 text-red-400 text-center rounded-md">" {msg}" </div> )} ";"""
 
 "export function ErrorBanner({ msg }) {" return (); <div className="p-4 bg-red-500/20 text-red-400 text-center rounded-md">" {msg}" </div> )} ";"""
-"export function ErrorBanner({ msg }) {\" return (); <div className=\"p-4 bg-red-500/20 text-red-400 text-center rounded-md\">\" {msg}\" </div> )} \";\"
-"export function ErrorBanner({ msg }) {" return (); <div className="p-4 bg-red-500/20 text-red-400 text-center rounded-md">" {msg}" </div> )} ";"""
-"export function ErrorBanner({ msg }) {" return (); <div className="p-4 bg-red-500/20 text-red-400 text-center rounded-md">" {msg}" </div> )} ";"""
-"export function ErrorBanner({ msg }) {\" return (); <div className=\"p-4 bg-red-500/20 text-red-400 text-center rounded-md\">\" {msg}\" </div> )} \";\"
-"export function ErrorBanner({ msg }) {" return (); <div className="p-4 bg-red-500/20 text-red-400 text-center rounded-md">" {msg}" </div> )} ";"""
-"export function ErrorBanner({ msg }) {\" return (); <div className=\"p-4 bg-red-500/20 text-red-400 text-center rounded-md\">\" {msg}\" </div> )} \";\"
-"export function ErrorBanner({ msg }) {" return (); <div className="p-4 bg-red-500/20 text-red-400 text-center rounded-md">" {msg}" </div> )} ";"""
-"export function ErrorBanner({ msg }) {\" return (); <div className=\"p-4 bg-red-500/20 text-red-400 text-center rounded-md\">\" {msg}\" </div> )} \";\"
+
 "export function ErrorBanner({ msg }) {" return (); <div className="p-4 bg-red-500/20 text-red-400 text-center rounded-md">" {msg}" </div> )} ";"""

@@ -1,4 +1,3 @@
-
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
 import { Configuration, OpenAIApi } from "npm:openai@4.28.0";
 ;
@@ -22,8 +21,7 @@ serve(async (req) => {;
         { ;
           status:400, ;
           headers:{ ...corsHeaders, "Content-Type":"application/json" } ;
-        }
-      );
+        });
     }
 ;
     const configuration = new Configuration({;
@@ -53,8 +51,7 @@ The description should:1. Be approximately 200-300 words;
       JSON.stringify({ description:generatedDescription });
       { ;
         headers:{ ...corsHeaders, "Content-Type":"application/json" } ;
-      }
-    );
+      });
   } catch (error) {;
     console.error("Error in generate-service-description:", error);
     ;
@@ -66,8 +63,7 @@ The description should:1. Be approximately 200-300 words;
       { ;
         status:500, ;
         headers:{ ...corsHeaders, "Content-Type":"application/json" } ;
-      }
-    );  }
+      });  }
 });
  
 }try {

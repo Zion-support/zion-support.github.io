@@ -1,4 +1,3 @@
-import React from 'react';'
 const ServicesBenefitsShowcase = ({ className }) => {
   return ('
     <div className={className || ''}>'

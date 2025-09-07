@@ -1,4 +1,3 @@
-
 "use client",;
 import { useTheme } from "@/components/theme-provider",;
 import { Moon, Sun, Monitor } from "lucide-react",;
@@ -6,10 +5,10 @@ export function ThemeToggle() {;
   const { theme, setTheme } = useTheme();
 
   return (;
-    <div className="flex items-center gap-2">;
-      <span className="sr-only">Theme</span>;
+    <div className="flex items-center gap-2">;"
+      <span className="sr-only">Theme</span>;"
       <div className="flex rounded-lg border border-white/10 bg-zinc-900/50 p-1">;
-        <button;
+        <button;"
           onClick={() => setTheme("light")}
 
           className={`rounded px-2 py-1 text-sm transition-colors ${;
@@ -17,105 +16,66 @@ export function ThemeToggle() {;
 
               ? "bg-zion-blue text-white";
               : "text-zinc-400 hover:text-zinc-100";
+
 "use client",
-import { use_theme  } from '@/components / theme - provider';,;
-import { Moon, Sun, Monitor  } from './lucide-react';,;
-export /**
- * ThemeToggle - Function description
+import { use_theme  } from '@/components / theme - provider';,'
+import { Moon, Sun, Monitor  } from './lucide-react';,
+export /**;
+ * ThemeToggle - Function description;
+
  */
-function ThemeToggle() {
+function ThemeToggle() {}
   const { theme, set_theme } = use_theme ();
-  return (
-    <div className="flex items - center gap-2">;
-      <span className="sr-only">Theme</span>;
-      <div className="flex rounded - lg border border - white / 10 bg - zinc - 900 / 50 p-1">;
+
         <button;
+
           on_click={() => set_theme ("light")}
-          className={`rounded px - 2 py - 1 text - sm transition - colors ${
-            theme === "light";
-              ? "bg - zion - blue text - white";
+          className={`rounded px - 2 py - 1 text - sm transition - colors ${"
+            theme === "light";"
+              ? "bg - zion - blue text - white";"
               : "text - zinc - 400 hover:text - zinc - 100";
+
 "use client";
 import { useTheme } from "@/components/theme-provider";
 import { Moon, Sun, Monitor } from "lucide-react";
 export function ThemeToggle() {const { theme, setTheme } = useTheme();
+
 "use client",;
 import { useTheme } from "@/components/theme-provider",;
 import { Moon, Sun, Monitor } from "lucide-react",;
 export function ThemeToggle() {;
   const { theme, setTheme } = useTheme();
+
   return (;
+
     <div className="flex items-center gap-2">;
       <span className="sr-only">Theme</span>;
+
       <div className="flex rounded-lg border border-white/10 bg-zinc-900/50 p-1">;
-        <button;
+        <button;"
           onClick={() => setTheme("light")}
-          className={`rounded px-2 py-1 text-sm transition-colors ${theme === "light";
-          className={`rounded px-2 py-1 text-sm transition-colors ${;
-            theme === "light";
+
               ? "bg-zion-blue text-white";
-          className={`rounded px-2 py-1 text-sm transition-colors ${theme === "light";              ? "bg-zion-blue text-white";
               : "text-zinc-400 hover:text-zinc-100";
-          }`}
-          aria - label="Switch to light theme";
-          aria - pressed={theme === "light"}
-        >;
-          <Sun className="h - 4 w-4" />;
-        </button>;
-        <button;
-
-          on_click={() => set_theme ("system")}
-          className={`rounded px - 2 py - 1 text - sm transition - colors ${
-            theme === "system";
-              ? "bg - zion - blue text - white";
-              : "text - zinc - 400 hover:text - zinc - 100";
 
           }`}
-          aria - label="Switch to system theme";
-          aria - pressed={theme === "system"}
-        >;
-          <Monitor className="h - 4 w-4" />;
-        </button>;
-        <button;
-
-          on_click={() => set_theme ("dark")}
-          className={`rounded px - 2 py - 1 text - sm transition - colors ${
-            theme === "dark";
-              ? "bg - zion - blue text - white";
-              : "text - zinc - 400 hover:text - zinc - 100";
-
-          }`}
-          aria - label="Switch to dark theme";
-          aria - pressed={theme === "dark"}
-        >;
-          <Moon className="h - 4 w-4" />;
-        </button>;
-      </div>;
-    </div>);
-}
           aria-label="Switch to light theme";
           aria-pressed={theme === "light"}
         >;
-          <Sun className="h-4 w-4" />;
-        </button>;
-        <button;
-          onClick={() => setTheme("system")}
-          className={`rounded px-2 py-1 text-sm transition-colors ${;
+
             theme === "system";
-              ? "bg-zion-blue text-white";
-              : "text-zinc-400 hover:text-zinc-100";
+              ? "bg - zion - blue text - white";
+              : "text - zinc - 400 hover:text - zinc - 100";
+
           }`}
           aria-label="Switch to system theme";
           aria-pressed={theme === "system"}
         >;
-          <Monitor className="h-4 w-4" />;
-        </button>;
-        <button;
-          onClick={() => setTheme("dark")}
-          className={`rounded px-2 py-1 text-sm transition-colors ${;
+
             theme === "dark";
-              ? "bg-zion-blue text-white";
-              : "text-zinc-400 hover:text-zinc-100";
+              ? "bg - zion - blue text - white";
+              : "text - zinc - 400 hover:text - zinc - 100";
+
           }`}
           aria-label="Switch to dark theme";
           aria-pressed={theme === "dark"}
@@ -123,37 +83,13 @@ export function ThemeToggle() {;
           <Moon className="h-4 w-4" />;
         </button>;
       </div>;
-    </div>;
-  );
-}
-    <div className="flex items-center gap-2">;"
-</div>"
-      <span className="sr-only">Theme</span>;""
-      <div className="flex rounded-lg border border-white/10 bg-zinc-900/50 p-1">;"
-</div>
-        <button;)"
-          onClick={() => setTheme("light")}"
-</button>"
-    <div className="flex items - center gap - 2">;"
-      <span className="sr - only">Theme</span>;""
-      <div className="flex rounded - lg border border - white / 10 bg - zinc - 900 / 50 p - 1">;"
-        <button;"
-          on_click={() => set_theme ("light")}"
-          <Sun className="h - 4 w - 4" />;"
+
+          }`}
+          aria - label="Switch to dark theme";
+          aria - pressed={theme === "dark"}
+        >;
 
         </button>;
-        <button;
-          }`}"
-          aria - label="Switch to system theme";""
-          aria - pressed={theme === "system"}"
-        >;
-          <Monitor className="h - 4 w - 4" />;"
-
-        <button;`;
-          aria - label="Switch to dark theme";""
-          aria - pressed={theme === "dark"}"
-          <Moon className="h - 4 w - 4" />;"
-
       </div>;
-    </div>);"`;
-pr-12325
+    </div>);
+}

@@ -1,36 +1,15 @@
-
-
-
-import React from 'react';import {useState} from "react";
-import {Header} from "@/components/Header";
-import {Footer} from "@/components/Footer";
-import {GradientHeading} from "@/components/GradientHeading";
-import {ListingScoreCard} from "@/components/ListingScoreCard";
-import {Button} from "@/components/ui/button";
-import {Input} from "@/components/ui/input";
-import {Select, SelectTrigger, SelectContent, SelectItem} from "@/components/ui/select";
-import {Search, Filter, ArrowDownAZ, ArrowUpZA} from "lucide-react";
-
-// Example listing type;
-interface Listing {;
-  id: string,;
-  title: string,;
-  description: string,;
-  category: string,;
-
-import { useState } from './react';
-import { Header } from '@/components / Header';
-import { Footer } from '@/components / Footer';
-import { GradientHeading } from '@/components / GradientHeading';
-import { ListingScoreCard } from '@/components / ListingScoreCard';
-import { Button } from '@/components / ui / button';
-import { Input } from '@/components / ui / input';
-import { Select, SelectTrigger, SelectContent, SelectItem } from '@/components / ui / select';
-import { Search, Filter, ArrowDownAZ, ArrowUpZA } from './lucide-react';
-// Example listing type;
-// Example listing type
-// Example listing type
 import { useState } from "react",
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+import { GradientHeading } from "@/components/GradientHeading",
+import { ListingScoreCard } from "@/components/ListingScoreCard",
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+
+import {useState} from "react";
+
+import { useState } from "react",
+
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
 import { GradientHeading } from "@/components/GradientHeading",
@@ -46,9 +25,8 @@ import { Button } from "@/components/ui/button",;
 import { Input } from "@/components/ui/input",;
 
 import { Select, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select";
+
 import { Search, Filter, ArrowDownAZ, ArrowUpZA } from "lucide-react";
-// Example listing type
-interface Listing {
 
   subcategory?: string;
 
@@ -60,20 +38,9 @@ interface Listing {
   rating?: number;
   reviewCount?: number;
   price?: number | null;
-  createdAt: string
-}
-interface CategoryListingPageProps {
-
-  title: string
-  description: string
-
-  price?: number | null;
   createdAt: string;
 }
-interface CategoryListingPageProps {
-  // TODO: Implement
-}
-  title: string;,
+
   description: string;
   listings: Listing[]
 
@@ -81,26 +48,241 @@ interface CategoryListingPageProps {
   filterOptions?: { label: string, value: string }[]
 }
 
+// Example listing type;
+interface Listing {;
+  id: string,;
+  title: string,;
+  description: string,;
+  category: string,;
+'
+import { useState } from './react';'
+import { Header } from '@/components / Header';'
+import { Footer } from '@/components / Footer';'
+import { GradientHeading } from '@/components / GradientHeading';'
+import { ListingScoreCard } from '@/components / ListingScoreCard';'
+import { Button } from '@/components / ui / button';'
+import { Input } from '@/components / ui / input';'
+import { Select, SelectTrigger, SelectContent, SelectItem } from '@/components / ui / select';'
+import { Search, Filter, ArrowDownAZ, ArrowUpZA } from './lucide-react';
+// Example listing type;
+
+interface Listing {
+
+  id: string,
+  title: string,
+  description: string,
+  category: string,
+
+  subcategory?: string,
+  image?: string,
+  tags?: string[],
+  author?: string,
+  authorImage?: string,
+  aiScore?: number,
+  rating?: number,
+  reviewCount?: number,
+  price?: number | null,
+
+import { Search, Filter, ArrowDownAZ, ArrowUpZA } from "lucide-react",;
+// Example listing type;
+interface Listing {;
+  id: string,;
+  title: string,;
+  description: string,;
+  category: string,;
+  subcategory?: string,;
+  image?: string,;
+  tags?: string[],;
+  author?: string,;
+  authorImage?: string,;
+  aiScore?: number,;
+  rating?: number,;
+  reviewCount?: number,;
+  price?: number | null,;
+  createdAt: string;
+
+;
+
+}
+;
+
+interface CategoryListingPageProps {;
+  title: string,;
+  description: string,;
+  listings: Listing[],;
+  sortOptions?: { label: string, value: string }[],;
+  filterOptions?: { label: string, value: string }[];
+}
+
+  return (
+    <>
+      <Header />"
+      <div className="min-h-screen bg-zion-blue py-12 px-4">"
+        <div className="container mx-auto">"
+          <div className="text-center mb-12">
+            <GradientHeading>{title}</GradientHeading>"
+            <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">
+;
+export function CategoryListingPage() { return null; }
+    });
+    .sort((a, b) => {;
+      // Apply sorting;
+      switch (selectedSort) {;'
+        case 'newest':;
+          return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime(),;'
+        case 'oldest':;
+          return new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime(),;'
+        case 'rating-high':;
+          return (b.rating || 0) - (a.rating || 0),;'
+        case 'ai-match':;
+          return (b.aiScore || 0) - (a.aiScore || 0),;'
+        case 'a-z':;
+          return a.title.localeCompare(b.title),;'
+        case 'z-a':;
+          return b.title.localeCompare(a.title),;
+        default: return 0;
+      }
+    });
+  return (;
+  subcategory?: string;
+  image?: string;
+  tags?: string[];
+  author?: string;
+  author_image?: string;
+  ai_score?: number;
+  rating?: number;
+  review_count?: number;
+  price?: number | null;
+      }
+    });
+  return (
+    <>;
+      <Header />;"
+      <div className="min-h-screen bg-zion-blue py-12 px-4">;"
+        <div className="container mx-auto">;"
+          <div className="text-center mb-12">;
+            <GradientHeading>{title}</GradientHeading>;"
+            <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">;
+
+              {description}
+
+                    ) : null}
+                    <span>'
+                      {sortOptions.find(option => option.value === selectedSort)?.label |'Sort By'}
+                    </span>
+                  </div>
+                </SelectTrigger>"
+                <SelectContent className="bg-zion-blue-dark border border-zion-blue-light">
+                  {sortOptions.map((option) => ("
+
+                    <SelectItem key={option.value} value={option.value} className="text-white">
+                      {option.label}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
+
+                    <SelectItem key={option.value} value={option.value} className="text-white">
+                      {option.label}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
+            </div>
+          </div>
+
+              <Select value={selectedSort} onValueChange={setSelectedSort}>;"
+                <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white">;"
+                  <div className="flex items-center">;'
+                    {selectedSort === 'a-z' ? (;"
+                      <ArrowDownAZ className="mr-2 h-4 w-4" />;
+
+                    </span>;
+                  </div>;
+                </SelectTrigger>;"
+                <SelectContent className="bg-zion-blue-dark border border-zion-blue-light">;
+
+                    </SelectItem>;
+                  ))}
+                </SelectContent>;
+              </Select>;
+
+                </SelectContent>;
+              </Select>;
+            </div>;
+          </div>;
+
+          {/* Listings Grid */}
+          {processedListings.length > 0 ? ("
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {processedListings.map((listing) => (
+
+                <ListingScoreCard;
+;
+
+          {/* Results Count */}"
+          <div className="mb-6">;"
+            <p className="text-zion-slate-light">;
+              Showing {processedListings && processedListings.length} results;"`
+              {searchQuery && ` for "${searchQuery}"`}
+
+            </p>;
+          </div>;
+;
+          {/* Listings Grid */}
+          {processedListings.length > 0 ? (;
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
+              {processedListings.map((listing) => (;
+                <ListingScoreCard ;
+                  key={listing.id}                  title={listing.title}
+
+                  description={listing.description}
+                  category={listing.subcategory || listing.category}
+                  image={listing.image}
+                  tags={listing.tags}
+                  author={listing.author}
+                  author_image={listing.author_image}
+                  ai_score={listing.ai_score}
+                  rating={listing.rating}
+
+                  key={listing.id}
+                  title={listing.title}
+
+                  description={listing.description}
+                  category={listing.subcategory |listing.category}
+                  image={listing.image}
+                  tags={listing.tags}
+                  author={listing.author}
+
+            </p>;
+          </div>;
+
+          {/* Listings Grid */}
+          {processedListings && processedListings.length > 0 ? (;"
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
+              {processedListings && processedListings.map((listing) => (;
+                <ListingScoreCard;
+                  key={listing && listing.id}
+                  title={listing && listing.title}
+                  description={listing && listing.description}
+                  category={listing && listing.subcategory || listing && listing.category}
+                  image={listing && listing.image}
+                  tags={listing && listing.tags}
+                  author={listing && listing.author}
+                  authorImage={listing && listing.authorImage}
+                  aiScore={listing && listing.aiScore}
+                  rating={listing && listing.rating}
+                  reviewCount={listing && listing.reviewCount}
+                />;
+              ))}
+"
+                  setSearchQuery(""),
 
                 className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
               >
                 Clear all filters
               </Button>
-            </div>
 
-            </div>;
-          ) : (;
-            <div className="text-center py-20">;
-              <h3 className="text-xl font-bold text-white mb-2">No listings found</h3>;
-              <p className="text-zion-slate-light mb-6">Try adjusting your filters or search query</p>;
-              <Button
-                variant="outline" 
-                onClick={() => {;
-                  setSearchQuery("");
-                  setSelectedFilter(filterOptions[0].value);
-                }}
-
-reviewCount={listing.reviewCount}
                 />;
               ))}
             </div>;
@@ -121,73 +303,21 @@ reviewCount={listing.reviewCount}
                   setSearchQuery("");
                   setSelectedFilter(filterOptions[0].value);
                 }}
-                }}
+
                 className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
               >
                 Clear all filters
               </Button>
             </div>
 
-}}
-                className="border-zion-purple text-zion-purple hover:bg-zion-purple/10";
-              >;
                 Clear all filters;
-              </Button>;
+              </Button>
+            </div>
+
             </div>;
+
           )}
-            </div>          )}
-        </div>;
-      </div>;
-      <Footer />;
 
-
-</ListingScoreCard>
-              </Button>
-            </div>
-
-
-            <div className="text-center py-20">;"
-              <h3 className="text-xl font-bold text-white mb-2">No listings found</h3>;""
-              <p className="text-zion-slate-light mb-6">Try adjusting your filters or search query</p>;"
-              <Button;"
-                variant="outline""
-                onClick={() => {;
-
-              <Button ;"
-                variant="outline" ;"
-
-                variant="outline";"
-
-      <Footer />;
-
-pr-12325
-                onClick={() => {;
-</Button>
-              </Button>
-            </div>
-              </Button>;
-            </div>;
-
-        </div>;
-      </div>;
-      <Footer />;
-</Footer>
-    </>;
-  );
-                  review_count={listing.review_count}
-                />))}
-            </div>) : (
-            <div className="text - center py-20">;
-              <h3 className="text - xl font - bold text - white mb-2">No listings found</h3>;
-              <p className="text - zion - slate - light mb-6">Try adjusting your filters or search query</p>;
-              <Button;
-                variant="outline";
-                on_click={() => {
-                  setSearchQuery ("");
-                  setSelectedFilter (filter_options[0].value);
-                }}
-                className="border - zion - purple text - zion - purple hover:bg - zion - purple / 10";
-                className="border - zion - purple text - zion - purple hover:bg - zion-purple / 10";
               >;
                 Clear all filters;
 
@@ -207,7 +337,9 @@ pr-12325
       </div>;
       <Footer />;
     </>);
-),; //Example listing type interface Listing {
+
+  ),; //Example listing type interface Listing {
+
   id: string;
 title: string;
 description: string;
@@ -335,7 +467,5 @@ case 'z-a': return (<> <Header /> <div className="min-h-screen bg-zion-blue py-1
 
     </>
   )
-}
-}"
-pr-12325
 
+}

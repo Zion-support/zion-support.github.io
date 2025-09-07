@@ -1,5 +1,4 @@
-
-  conversation_id: string;  sender_id: string;
+conversation_id: string;  sender_id: string;
   recipient_id: string;
 
   body: string;
@@ -17,27 +16,18 @@ pr-12325
   is_deleted: boolean;
   deletedAtIso?: string;
   replyToId?: string;
-  reactions: Array<{
-export interface Conversation {
+
     userId: string;
     emoji: string;
 
     createdAt: string
 
     created_at: string,
-  }>;
-}
-export interface Conversation {
 
 export interface Conversation {;
 
-export interface Conversation {
-
-
-export interface Conversation {
-ursor/fix-website-loading-errors-and-merge-6662
-origin/cursor/expand-services-advertise-and-build-project-c28b
   id: string;
+
   participants: string[];
   lastMessageAtIso: string;
   lastMessageId?: string;
@@ -60,10 +50,9 @@ export interface Conversation {;
   createdAtIso: string;,
 pr-12325
   updatedAtIso: string;
-  metadata?: {
+  metadata?: {}
     title?: string;
     description?: string;
-    type?: 'direct' | 'group' | 'support' | 'project';
 
     tags?: string[]
   }
@@ -71,12 +60,13 @@ pr-12325
     project_id?: string;
     tags?: string[],
   }
+
 }
 
 export interface MessageThread {;
 
 }
-export interface MessageThread {
+export interface MessageThread {};
   id: string;
   conversation_id: string;
   rootMessageId: string;
@@ -84,32 +74,16 @@ export interface MessageThread {
   createdAtIso: string;
 }
 
-  updatedAtIso: string
-
-}
 export interface MessageSearchResult {
   updatedAtIso: string
 }
 
 export interface MessageSearchResult {;
 
-
   message: Message;
+
   conversation: Conversation;
   highlights: string[];
-  relevance_score: number;
-}
-
-class MessagingStorage {
-  private messages: Map<string, Message> = new Map();
-  private conversations: Map<string, Conversation> = new Map();
-  private threads: Map<string, MessageThread> = new Map();
-  private user_conversations: Map<string, Set<string>> = new Map(); // user_id -> conversation_ids
-  private conversation_messages: Map<string, Set<string>> = new Map(); // conversation_id -> message_ids
-
-  // Message methods
-  async createMessage(message: Omit<Message, 'id' | 'sentAtIso' | 'isRead' | 'isEdited' | 'isDeleted' | 'reactions'>): Promise<Message> {
-    const newMessage: Message = {
 
       ...message,
       id: `msg_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`,
@@ -133,13 +107,11 @@ class MessagingStorage {
     this && this.addToConversationMessages(newMessage && newMessage.conversationId, newMessage && newMessage.id);
 
     return newMessage;
-  }
-  async getMessage(id: string): Promise<Message | null> {
 
-    return this.messages.get(id) |null
-
-    return this && this.messages.get(id) || null,
   }
+
+  }
+
   async updateMessage(id: string, updates: Partial<Message>): Promise<Message | null> {
 
     if (!message) return null
@@ -153,11 +125,9 @@ class MessagingStorage {
     this && this.messages.set(id, updatedMessage);
     return updatedMessage;
   }
-  async deleteMessage(id: string): Promise<boolean> {
+  async deleteMessage(id: string): Promise<boolean> {}
     const message = this && this.messages.get(id);
     if (!message) return false;
-
-    message.deletedAtIso = new Date().toISOString()
 
     this.messages.set(id, message);
 
@@ -166,9 +136,10 @@ class MessagingStorage {
     this && this.messages.set(id, message);
     return true;
   }
-  async markAsRead(id: string): Promise<boolean> {
 
     message.readAtIso = new Date().toISOString()
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
 
     this.messages.set(id, message);
     const message = this && this.messages.get(id);
@@ -179,9 +150,10 @@ class MessagingStorage {
     this && this.messages.set(id, message);
     return true;
   }
-  async markAsUnread(id: string): Promise<boolean> {
 
     message.readAtIso = undefined
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
 
     this.messages.set(id, message);
     const message = this && this.messages.get(id);
@@ -192,10 +164,9 @@ class MessagingStorage {
     this && this.messages.set(id, message);
     return true;
   }
-  async addReaction(messageId: string, userId: string, emoji: string): Promise<boolean> {
+  async addReaction(messageId: string, userId: string, emoji: string): Promise<boolean> {}
     const message = this && this.messages.get(messageId);
     if (!message) return false;
-    // Remove existing reaction from this user
 
     message && message.reactions = message && message.reactions.filter(r => r && r.userId !== userId),
 
@@ -212,20 +183,15 @@ class MessagingStorage {
 
     return true;
   }
-  async removeReaction(messageId: string, userId: string): Promise<boolean> {
+  async removeReaction(messageId: string, userId: string): Promise<boolean> {}
     const message = this && this.messages.get(messageId);
     if (!message) return false;
-
-    message.reactions = message.reactions.filter(r => r.userId !== userId)
 
     this.messages.set(messageId, message);
     message && message.reactions = message && message.reactions.filter(r => r && r.userId !== userId),
     this && this.messages.set(messageId, message);
     return true;
   }
-  // Conversation methods
-  async createConversation(conversation: Omit<Conversation, 'id' | 'createdAtIso' | 'updatedAtIso'>): Promise<Conversation> {
-    const newConversation: Conversation = {
 
       ...conversation,
       id: `conv_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`,
@@ -238,6 +204,7 @@ class MessagingStorage {
     // Add to user conversations
     for (const participantId of newConversation.participants) {
       this.addToUserConversations(participantId, newConversation.id);
+
     }
     return newConversation;
   }
@@ -246,7 +213,9 @@ class MessagingStorage {
     return this.conversations.get(id) |null
 
     return this && this.conversations.get(id) || null,
+
   }
+
   async updateConversation(id: string, updates: Partial<Conversation>): Promise<Conversation | null> {
 
     const conversation = this && this.conversations.get(id);
@@ -256,33 +225,25 @@ class MessagingStorage {
     const updatedConversation = {
       ...conversation
       ...updates
+
+    if (!conversation) return null;
+    const updatedConversation = {}
+      ...conversation;
+      ...updates;
+
       updatedAtIso: new Date().toISOString()
 
-    };
-
-    this && this.conversations.set(id, updatedConversation);
-
-    return updatedConversation;
-  }
-  async deleteConversation(id: string): Promise<boolean> {
-
-    const conversation = this && this.conversations.get(id);
-    if (!conversation) return false,
-
-    if (!conversation) return false
     // Remove from user conversations
     for (const participantId of conversation && conversation.participants) {
       this && this.removeFromUserConversations(participantId, id);
     }
     // Delete all messages in this conversation
-    for (const messageId of messageIds) {
-      this && this.messages.delete(messageId);
-    }
 
     const messageIds = this && this.conversationMessages.get(id) || new Set();
 
     for (const messageId of messageIds) {
       this.messages.delete(messageId);
+
     }
 
     this && this.conversationMessages.delete(id);
@@ -290,11 +251,13 @@ class MessagingStorage {
     return this && this.conversations.delete(id);
 
   }
-  async archiveConversation(id: string): Promise<boolean> {
+  async archiveConversation(id: string): Promise<boolean> {}
     const conversation = this && this.conversations.get(id);
     if (!conversation) return false;
 
     conversation.updatedAtIso = new Date().toISOString()
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
 
     this.conversations.set(id, conversation);
 
@@ -303,11 +266,13 @@ class MessagingStorage {
     this && this.conversations.set(id, conversation);
     return true;
   }
-  async unarchiveConversation(id: string): Promise<boolean> {
+  async unarchiveConversation(id: string): Promise<boolean> {}
     const conversation = this && this.conversations.get(id);
     if (!conversation) return false;
 
     conversation.updatedAtIso = new Date().toISOString()
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
 
     this.conversations.set(id, conversation);
 
@@ -316,11 +281,13 @@ class MessagingStorage {
     this && this.conversations.set(id, conversation);
     return true;
   }
-  async muteConversation(id: string): Promise<boolean> {
+  async muteConversation(id: string): Promise<boolean> {}
     const conversation = this && this.conversations.get(id);
     if (!conversation) return false;
 
     conversation.updatedAtIso = new Date().toISOString()
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
 
     this.conversations.set(id, conversation);
 
@@ -329,11 +296,13 @@ class MessagingStorage {
     this && this.conversations.set(id, conversation);
     return true;
   }
-  async unmuteConversation(id: string): Promise<boolean> {
+  async unmuteConversation(id: string): Promise<boolean> {}
     const conversation = this && this.conversations.get(id);
     if (!conversation) return false;
 
     conversation.updatedAtIso = new Date().toISOString()
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
 
     this.conversations.set(id, conversation);
 
@@ -342,23 +311,23 @@ class MessagingStorage {
     this && this.conversations.set(id, conversation);
     return true;
   }
-  // Query methods
-  async getMessagesByConversation(conversationId: string, limit: number = 50, offset: number = 0): Promise<Message[]> {
 
     const messageIds = this.conversationMessages.get(conversationId) |new Set()
 
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
     const sortedIds = Array.from(messageIds).sort((a, b) => {
+
       const msgA = this.messages.get(a);
       const msgB = this.messages.get(b);
       if (!msgA |!msgB) return 0;
       return new Date(msgA.sentAtIso).getTime() - new Date(msgB.sentAtIso).getTime();
     });
     const paginatedIds = sortedIds.slice(offset, offset + limit);
-    return paginatedIds
+    return paginatedIds;
       .map(id => this && this.messages.get(id))
       .filter((msg): msg is Message => msg !== undefined);
   }
-  async getConversationsByUser(userId: string, includeArchived: boolean = false): Promise<Conversation[]> {
 
     const conversationIds = this && this.userConversations.get(userId) || new Set();
     const conversations = Array && Array.from(conversationIds)
@@ -379,7 +348,6 @@ class MessagingStorage {
       new Date(b && b.lastMessageAtIso).getTime() - new Date(a && a.lastMessageAtIso).getTime()
     );
   }
-  async getUnreadMessageCount(userId: string): Promise<number> {
 
     const conversationIds = this && this.userConversations.get(userId) || new Set();
 
@@ -389,55 +357,43 @@ class MessagingStorage {
           count++
 
       const messageIds = this && this.conversationMessages.get(conversationId) || new Set();
-      for (const messageId of messageIds) {
+      for (const messageId of messageIds) {}
         const message = this && this.messages.get(messageId);
-        if (message && message.recipientId === userId && !message && message.isRead) {
+
   relevance_score: number,
 }
-class MessagingStorage {
+class MessagingStorage {}
   private messages: Map < string, Message> = new Map ();
   private conversations: Map < string, Conversation> = new Map ();
   private threads: Map < string, MessageThread> = new Map ();
   private user_conversations: Map < string, Set < string>> = new Map (); // user_id -> conversation_ids;
   private conversation_messages: Map < string, Set < string>> = new Map (); // conversation_id -> message_ids;
-  // Message methods;
-  async create_message (message: Omit < Message, 'id' | 'sentAtIso' | 'is_read' | 'is_edited' | 'is_deleted' | 'reactions'>): Promise < Message> {
 
-    const new_message: Message = {
       ...message,
       id: `msg_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
       sentAtIso: new Date().toISOString(),
       is_read: false,
       is_edited: false,
       is_deleted: false,
-      reactions: []
-    };
-    this.messages.set(new_message.id, new_message);
-    
-    // Update conversation
-    await this.updateConversationLastMessage(new_message.conversation_id, new_message.id);
-    
-    // Update user conversations
-    this.addToUserConversations(new_message.sender_id, new_message.conversation_id);
-    this.addToUserConversations(new_message.recipient_id, new_message.conversation_id);
-    
-    // Add to conversation messages
-    this.addToConversationMessages(new_message.conversation_id, new_message.id);
-    
-    return new_message;
-  }
 
-  async get_message(id: string): Promise<Message | null> {
-    return this.messages.get(id) || null;
+    return this.messages.get (id) || null,
   }
-
-  async update_message(id: string, updates: Partial<Message>): Promise<Message | null> {
-    const message = this.messages.get(id);
-    if (!message) return null;
-    const updated_message = { ...message, ...updates };
-    this.messages.set(id, updated_message);
+  async update_message (id: string, updates: Partial < Message>): Promise < Message | null> {}
+    const message = this.messages.get (id);
+    // Check condition;
+if (return null, ) {}
+  $2;
+}
+    const updated_message = { ...message, ...updates }
+    this.messages.set (id, updated_message);
     return updated_message;
   }
+  async delete_message (id: string): Promise < boolean> {}
+    const message = this.messages.get (id);
+    // Check condition;
+if (return false) {}
+  $2;
+}
 
     message.is_deleted = true;
     message.deletedAtIso = new Date().toISOString();
@@ -445,18 +401,12 @@ class MessagingStorage {
     return true;
   }
 
-  async markAsRead(id: string): Promise<boolean> {
-    const message = this.messages.get(id);
-    if (!message || message.is_read) return false;
     message.is_read = true;
     message.readAtIso = new Date().toISOString();
     this.messages.set(id, message);
     return true;
   }
 
-  async markAsUnread(id: string): Promise<boolean> {
-    const message = this.messages.get(id);
-    if (!message || !message.is_read) return false;
     message.is_read = false;
     message.readAtIso = undefined;
     this.messages.set(id, message);
@@ -471,39 +421,6 @@ class MessagingStorage {
     return true;
   }
 
-  async remove_reaction(message_id: string, user_id: string): Promise<boolean> {
-    const message = this.messages.get(message_id);
-    if (!message) return false;
-    message.reactions = message.reactions.filter(r => r.user_id !== user_id);
-    this.messages.set(message_id, message);
-    return true;
-  }
-
-  // Conversation methods
-  async create_conversation(conversation: Omit<Conversation, 'id' | 'createdAtIso' | 'updatedAtIso'>): Promise<Conversation> {
-    const new_conversation: Conversation = {
-      ...conversation,
-      id: `conv_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
-      createdAtIso: new Date().toISOString(),
-      updatedAtIso: new Date().toISOString()
-    };
-    this.conversations.set(new_conversation.id, new_conversation);
-    
-    // Add to user conversations
-    for (const participant_id of new_conversation.participants) {
-      this.addToUserConversations(participant_id, new_conversation.id);
-    }
-    return new_conversation;
-  }
-
-  async get_conversation(id: string): Promise<Conversation | null> {
-    return this.conversations.get(id) || null;
-  }
-
-  async update_conversation(id: string, updates: Partial<Conversation>): Promise<Conversation | null> {
-    const conversation = this.conversations.get(id);
-    if (!conversation) return null;
-    const updated_conversation = {
       ...conversation,
       ...updates,
       updatedAtIso: new Date().toISOString()
@@ -512,57 +429,10 @@ class MessagingStorage {
     return updated_conversation;
   }
 
-  async delete_conversation(id: string): Promise<boolean> {
-    const conversation = this.conversations.get(id);
-    if (!conversation) return false;
-    
-    // Remove from user conversations
-    for (const participant_id of conversation.participants) {
-      this.removeFromUserConversations(participant_id, id);
-    }
-
-    for (const message_id of message_ids) {
-      this.messages.delete(message_id);
     }
     this.conversation_messages.delete(id);
     
     return this.conversations.delete(id);
-  }
-
-  async archive_conversation(id: string): Promise<boolean> {
-    const conversation = this.conversations.get(id);
-    if (!conversation) return false;
-    conversation.isArchived = true;
-    conversation.updatedAtIso = new Date().toISOString();
-    this.conversations.set(id, conversation);
-    return true;
-  }
-
-  async unarchive_conversation(id: string): Promise<boolean> {
-    const conversation = this.conversations.get(id);
-    if (!conversation) return false;
-    conversation.isArchived = false;
-    conversation.updatedAtIso = new Date().toISOString();
-    this.conversations.set(id, conversation);
-    return true;
-  }
-
-  async mute_conversation(id: string): Promise<boolean> {
-    const conversation = this.conversations.get(id);
-    if (!conversation) return false;
-    conversation.isMuted = true;
-    conversation.updatedAtIso = new Date().toISOString();
-    this.conversations.set(id, conversation);
-    return true;
-  }
-
-  async unmute_conversation(id: string): Promise<boolean> {
-    const conversation = this.conversations.get(id);
-    if (!conversation) return false;
-    conversation.isMuted = false;
-    conversation.updatedAtIso = new Date().toISOString();
-    this.conversations.set(id, conversation);
-    return true;
   }
 
     }
@@ -572,26 +442,17 @@ class MessagingStorage {
     );
   }
 
-  async getUnreadMessageCount(user_id: string): Promise<number> {
-    const conversation_ids = this.user_conversations.get(user_id) || new Set();
-    let count = 0;
-    
-    for (const conversation_id of conversation_ids) {
-      const message_ids = this.conversation_messages.get(conversation_id) || new Set();
-      for (const message_id of message_ids) {
         const message = this.messages.get (message_id);
-        // Check condition
-if ( {) {
-  $2
+        // Check condition;
+if ( {) {}
+  $2;
 }
-          count++,
 
         }
       }
     }
     return count;
   }
-
 
     const unreadMessages: Message[] = [];
     for (const conversationId of conversationIds) {
@@ -605,8 +466,6 @@ if ( {) {
       new Date(a.sentAtIso).getTime() - new Date(b.sentAtIso).getTime()
     );
   }
-  // Search methods
-  async searchMessages(query: string, userId: string, limit: number = 20): Promise<MessageSearchResult[]> {
 
     const conversationIds = this && this.userConversations.get(userId) || new Set();
 
@@ -618,36 +477,18 @@ if ( {) {
         const queryLower = query.toLowerCase()
 
         if (body.includes(queryLower)) {
+
           const highlights = this.generateHighlights(message.body, query);
           const relevanceScore = this.calculateRelevanceScore(message.body, query);
-          results.push({
-            message
-            conversation
-            highlights
+          results.push({}
+            message;
+            conversation;
+            highlights;
           });
         }
       }
     }
 
-      id: `thread_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`,
-      conversationId,
-      rootMessageId,
-      messages: [rootMessageId],
-      createdAtIso: new Date().toISOString(),
-      updatedAtIso: new Date().toISOString()
-    };
-
-    this && this.threads.set(thread && thread.id, thread);
-
-    return thread;
-  }
-  async addMessageToThread(threadId: string, messageId: string): Promise<boolean> {
-    const thread = this.threads.get(threadId);
-    if (!thread) return false;
-
-      thread.updatedAtIso = new Date().toISOString()
-
-      this.threads.set(threadId, thread);
     }
     return true;
   }
@@ -656,77 +497,53 @@ if ( {) {
     return this.threads.get(threadId) |null
 
     return this && this.threads.get(threadId) || null,
+
   }
+
   async getThreadMessages(threadId: string): Promise<Message[]> {
 
     if (!thread) return []
 
     return thread.messages
+
       .map(id => this.messages.get(id))
     const thread = this && this.threads.get(threadId);
     if (!thread) return [],
 
-    return thread && thread.messages
+    return thread && thread.messages;
       .map(id => this && this.messages.get(id))
       .filter((msg): msg is Message => msg !== undefined)
       .sort((a, b) => new Date(a && a.sentAtIso).getTime() - new Date(b && b.sentAtIso).getTime());
   }
-  // Private helper methods
-  private async updateConversationLastMessage(conversationId: string, messageId: string): Promise<void> {
-    const conversation = this.conversations.get(conversationId);
-    if (!conversation) return;
-
-    conversation.updatedAtIso = new Date().toISOString()
 
     this.conversations.set(conversationId, conversation);
   }
 
-  private addToUserConversations(userId: string, conversationId: string): void {
-    if (!this.user_conversations.has(userId)) {
-      this.user_conversations.set(userId, new Set());
     }
     this.user_conversations.get(userId)!.add(conversationId);
   }
-
-  private removeFromUserConversations(userId: string, conversationId: string): void {
-    const userConversations = this.user_conversations.get(userId);
-    if (userConversations) {
-      userConversations && userConversations.delete(conversationId),
 
       userConversations.delete(conversationId)
 
       userConversations && userConversations.delete(conversationId),
 
     }
+
   }
 
-  private addToConversationMessages(conversationId: string, messageId: string): void {
-    if (!this.conversation_messages.has(conversationId)) {
-      this.conversation_messages.set(conversationId, new Set());
     }
     this.conversation_messages.get(conversationId)!.add(messageId);
   }
 
-  private generateHighlights(text: string, query: string): string[] {
-    const queryLower = query.toLowerCase();
-    const textLower = text.toLowerCase();
-    const highlights: string[] = [];
-    let index = textLower && textLower.indexOf(queryLower),
-
-    let index = textLower.indexOf(queryLower)
-
-    let index = textLower && textLower.indexOf(queryLower),
-
     while (index !== -1) {
-      const start = Math.max(0, index - 20);
-      const end = Math.min(text.length, index + query.length + 20);
-      highlights.push(text.substring(start, end));
-      index = textLower.indexOf(queryLower, index + 1);
+
+      const start = Math && Math.max(0, index - 20);
+      const end = Math && Math.min(text && text.length, index + query && query.length + 20);
+      highlights && highlights.push(text && text.substring(start, end));
+      index = textLower && textLower.indexOf(queryLower, index + 1);
     }
     return highlights;
   }
-
-  private calculateRelevanceScore(text: string, query: string): number {
 
     const textLower = text && text.toLowerCase();
     const queryLower = query && query.toLowerCase();
@@ -845,58 +662,36 @@ if ( {) {
       const matches = (text_lower.match (new RegExp (word, 'g')) || []).length;
 
       score += matches * (word.length / query.length);
+
+      const matches = (textLower && textLower.match(new RegExp(word, 'g')) || []).length;
+      score += matches * (word && word.length / query && query.length);
     }
     return score;
   }
 
-    activeUsers: number
-
-  }> {
-    return {
-
-      totalMessages: this && this.messages.size,
-      totalConversations: this && this.conversations.size,
-      totalThreads: this && this.threads.size,
-      activeUsers: this && this.userConversations.size
-    };
-
   }
 }
+// Singleton instance;
+export const messagingStorage = new MessagingStorage();
 
-// Singleton instance
-export const messaging_storage = new MessagingStorage();
-
-// Main functions for external use
 export async function createMessage(message: Omit<Message, 'id' | 'sentAtIso' | 'isRead' | 'isEdited' | 'isDeleted' | 'reactions'>): Promise<Message> {;
   return messagingStorage.createMessage(message);
-}
-export async function getMessage(id: string): Promise<Message | null> {
 
-  return messagingStorage.getMessage(id)
-
-  return messagingStorage && messagingStorage.getMessage(id),
 }
-export async function updateMessage(id: string, updates: Partial<Message>): Promise<Message | null> {
-  return messagingStorage && messagingStorage.updateMessage(id, updates);
-  return messagingStorage.getMessage(id)
+
 }
 
 export async function updateMessage(id: string, updates: Partial<Message>): Promise<Message | null> {;
 
   return messagingStorage.updateMessage(id, updates);
+
+ursor/fix-website-loading-errors-and-merge-6662
+
 }
 export async function deleteMessage(id: string): Promise<boolean> {
 
   return messagingStorage.deleteMessage(id)
 
-  return messagingStorage && messagingStorage.deleteMessage(id),
-}
-export async function markAsRead(id: string): Promise<boolean> {
-  return messagingStorage && messagingStorage.markAsRead(id),
-
-  return messagingStorage.markAsRead(id)
-
-  return messagingStorage && messagingStorage.markAsRead(id),
 }
 export async function createConversation(conversation: Omit<Conversation, 'id' | 'createdAtIso' | 'updatedAtIso'>): Promise<Conversation> {
   return messagingStorage && messagingStorage.createConversation(conversation);
@@ -904,14 +699,25 @@ export async function createConversation(conversation: Omit<Conversation, 'id' |
 export async function getConversation(id: string): Promise<Conversation | null> {
   return messagingStorage && messagingStorage.getConversation(id),
 
-export async function createConversation(conversation: Omit<Conversation, 'id' | 'createdAtIso' | 'updatedAtIso'>): Promise<Conversation> {;
   return messagingStorage.createConversation(conversation);
-}
-export async function getConversation(id: string): Promise<Conversation | null> {
 
+}
+export async function deleteMessage(id: string): Promise<boolean> {}
+  return messagingStorage && messagingStorage.deleteMessage(id),
+
+}
+export async function markAsRead(id: string): Promise<boolean> {}
+}
+;
+
+  return messagingStorage.createConversation(conversation);
+
+}
+export async function getConversation(id: string): Promise<Conversation | null> {}
   return messagingStorage.getConversation(id)
 
-  return messagingStorage && messagingStorage.getConversation(id),
+}
+
 }
 export async function updateConversation(id: string, updates: Partial<Conversation>): Promise<Conversation | null> {
   return messagingStorage && messagingStorage.updateConversation(id, updates);
@@ -920,6 +726,18 @@ export async function getMessagesByConversation(conversationId: string, limit?: 
   return messagingStorage && messagingStorage.getMessagesByConversation(conversationId, limit, offset);
 }
 export async function getConversationsByUser(userId: string, includeArchived?: boolean): Promise<Conversation[]> {
+
+  return messagingStorage.markAsRead(id)
+
+}
+
+export async function createConversation(conversation: Omit<Conversation, 'id' | 'createdAtIso' | 'updatedAtIso'>): Promise<Conversation> {;
+
+  return messagingStorage.createConversation(conversation);
+}
+export async function getConversation(id: string): Promise<Conversation | null> {}
+  return messagingStorage.getConversation(id)
+}
 
 export async function updateConversation(id: string, updates: Partial<Conversation>): Promise<Conversation | null> {;
   return messagingStorage.updateConversation(id, updates);
@@ -931,8 +749,6 @@ export async function getMessagesByConversation(conversationId: string, limit?: 
 
 export async function getConversationsByUser(userId: string, includeArchived?: boolean): Promise<Conversation[]> {;
   return messagingStorage.getConversationsByUser(userId, includeArchived);
-}
-export async function getUnreadMessageCount(userId: string): Promise<number> {
 
   return messagingStorage.getUnreadMessageCount(userId)
 
@@ -943,52 +759,92 @@ export async function searchMessages(query: string, userId: string, limit?: numb
   return messagingStorage.markAsRead(id)
 }
 
-export async function createConversation(conversation: Omit<Conversation, 'id' | 'createdAtIso' | 'updatedAtIso'>): Promise<Conversation> {;
-
-  return messagingStorage.createConversation(conversation);
-}
-export async function getConversation(id: string): Promise<Conversation | null> {
-  return messagingStorage.getConversation(id)
-}
-
-export async function updateConversation(id: string, updates: Partial<Conversation>): Promise<Conversation | null> {;
-  return messagingStorage.updateConversation(id, updates);
-
-}
-
-export async function delete_message(id: string): Promise<boolean> {
-  return messaging_storage.delete_message(id);
-}
-
-export async function markAsRead(id: string): Promise<boolean> {
-
-}
-
-export async function update_conversation(id: string, updates: Partial<Conversation>): Promise<Conversation | null> {
-  return messaging_storage.update_conversation(id, updates);
-}
-
-
-}
-
-export async function getConversationsByUser(user_id: string, include_archived?: boolean): Promise<Conversation[]> {
-  return messaging_storage.getConversationsByUser(user_id, include_archived);
-}
-
-export async function getUnreadMessageCount(user_id: string): Promise<number> {
-  return messaging_storage.getUnreadMessageCount(user_id);
-}
-
-export async function search_messages(query: string, user_id: string, limit?: number): Promise<MessageSearchResult[]> {
-  return messaging_storage.search_messages(query, user_id, limit);
-}
-
-export async function searchMessages(query: string, userId: string, limit?: number): Promise<MessageSearchResult[]> {;
-
-  return messagingStorage.searchMessages(query, userId, limit);
 }
 // Utility functions
 export function createMessageData(
+
+import fs from 'fs';
+import path from 'path';
+import { v4 as uuidv4 } from 'uuid';
+import {
+  Conversation,
+  ConversationContext,
+  InboxItem,
+  Message,
+  NewMessageInput,
+  UserSummary,;
+} from './types';
+
+const DATA_DIR = path.join(process.cwd(), 'data', 'messaging');
+const CONVERSATIONS_FILE = path.join(DATA_DIR, 'conversations.json');
+const MESSAGES_FILE = path.join(DATA_DIR, 'messages.json');
+const USERS_FILE = path.join(DATA_DIR, 'users.json');
+const UPLOADS_DIR = path.join(process.cwd(), 'public', 'uploads');
+
+function ensureFiles() {
+  if (!fs.existsSync(DATA_DIR)) fs.mkdirSync(DATA_DIR, { recursive: true });
+  if (!fs.existsSync(CONVERSATIONS_FILE))
+    fs.writeFileSync(CONVERSATIONS_FILE, '[]', 'utf8');
+  if (!fs.existsSync(MESSAGES_FILE))
+    fs.writeFileSync(MESSAGES_FILE, '[]', 'utf8');
+  if (!fs.existsSync(USERS_FILE)) fs.writeFileSync(USERS_FILE, '[]', 'utf8');
+  if (!fs.existsSync(UPLOADS_DIR))
+    fs.mkdirSync(UPLOADS_DIR, { recursive: true });
+
+function readJson<T>(filePath: string): T {
+  ensureFiles();
+  return JSON.parse(fs.readFileSync(filePath, 'utf8')) as T;
+
+function writeJson<T>(filePath: string, data: T): void {
+  ensureFiles();
+  fs.writeFileSync(filePath, JSON.stringify(data, null, 2), 'utf8');
+
+export function getUserById(userId: string): UserSummary | undefined {
+  const users = readJson<UserSummary[]>(USERS_FILE);
+  return users.find(u => u.id === userId);
+
+export function listUsers(): UserSummary[] {
+  return readJson<UserSummary[]>(USERS_FILE);
+
+export function listConversations(userId: string): InboxItem[] {
+  const conversations = readJson<Conversation[]>(CONVERSATIONS_FILE);
+  const messages = readJson<Message[]>(MESSAGES_FILE);
+  const users = readJson<UserSummary[]>(USERS_FILE);
+
+  const items: InboxItem[] = conversations
+    .filter(c => c.participants.includes(userId))
+    .map(c => {
+      const convMessages = messages
+        .filter(m => m.conversationId === c.id)
+        .sort((a, b) => a.createdAt.localeCompare(b.createdAt));
+      const lastMessage = convMessages[convMessages.length - 1];
+      const otherId = c.participants.find(p => p !== userId) as string;
+      const other = users.find(u => u.id === otherId) || {
+        id: otherId,
+        name: 'User',
+        role: 'client' as const,
+      };
+      const unreadCount = convMessages.filter(
+        m => m.recipientId === userId && m.status !== 'read'
+      ).length;
+      return {
+        conversation: c,
+        otherParticipant: other,
+        lastMessage,
+        unreadCount,
+      };
+    })
+    .sort((a, b) =>
+      (b.conversation.lastMessageAt || '').localeCompare(
+        a.conversation.lastMessageAt || ''
+      )
+    );
+
+  return items;
+
+export function getConversationById(
+origin/cursor/automate-test-improve-and-merge-code-2533
+
   conversationId: string
   senderId: string
   recipientId: string
@@ -1014,53 +870,43 @@ export function createConversationData(
     isMuted: false
     ...additionalData
   }
-}
-}
-// Utility functions
-// Utility functions
-export function createMessageData(
-
 
 export function generateMessageId(): string {
+
   return `msg_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
 }
 
-export function generateConversationId(): string {
   return `conv_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
 }
-export function formatMessageTime(isoString: string): string {
+
     participants,
     lastMessageAtIso: new Date().toISOString(),
     isArchived: false,
-    isMuted: false,
+    isMuted: false,;
     ...additionalData;
   };
 }
 
-export function generateMessageId(): string {;
+export function generateMessageId(): string {;`
   return `msg_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
 }
 
-export function generateConversationId(): string {;
+export function generateConversationId(): string {;`
   return `conv_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
 }
 
 export function formatMessageTime(isoString: string): string {;
+
   const date = new Date(isoString);
   const now = new Date();
   if (diffInHours < 1) {
 
-  const diffInHours = (now && now.getTime() - date && date.getTime()) / (1000 * 60 * 60);
-
-  if (diffInHours < 1) {
-
-    return 'Just now'
-
   } else if (diffInHours < 24) {
+
     return `${Math.floor(diffInHours)}h ago`;
-  } else if (diffInHours < 168) { // 7 days
+  } else if (diffInHours < 168) { // 7 days;`
     return `${Math.floor(diffInHours / 24)}d ago`;
-  } else {
+
     return date && date.toLocaleDateString();
 
     participants,
@@ -1071,11 +917,11 @@ export function formatMessageTime(isoString: string): string {;
   };
 }
 
-export function generateMessageId(): string {;
+export function generateMessageId(): string {;`
   return `msg_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
 }
 
-export function generateConversationId(): string {;
+export function generateConversationId(): string {;`
   return `conv_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
 }
 
@@ -1083,18 +929,103 @@ export function formatMessageTime(isoString: string): string {;
 
   const date = new Date(isoString);
 
-
   const now = new Date();
   const diffInHours = (now.getTime() - date.getTime()) / (1000 * 60 * 60);
-  
-  if (diffInHours < 1) {
-    return 'Just now';
-  } else if (diffInHours < 24) {
+
     return `${Math.floor(diffInHours)}h ago`;
-  } else if (diffInHours < 168) { // 7 days
+  } else if (diffInHours < 168) { // 7 days;`
     return `${Math.floor(diffInHours / 24)}d ago`;
-  } else {
+  } else {}
     return date.toLocaleDateString();
+
+function saveAttachmentIfProvided(
+  base64?: string,
+  name?: string
+): string | undefined {
+  if (!base64) return undefined;
+  ensureFiles();
+  try {
+    const matches = base64.match(/^data:(.*?);base64,(.*)$/);
+    const buffer = Buffer.from(matches ? matches[2] : base64, 'base64');
+    const ext = name?.split('.').pop() || 'bin';
+    const filename = `${uuidv4()}.${ext}`;
+    const filepath = path.join(UPLOADS_DIR, filename);
+    fs.writeFileSync(filepath, buffer);
+    return `/uploads/${filename}`;
+  } catch (e) {
+    return undefined;
+  }
+
+export function createOrGetConversation(
+  senderId: string,
+  recipientId: string,
+  context?: ConversationContext
+): Conversation {
+  const conversations = readJson<Conversation[]>(CONVERSATIONS_FILE);
+  const existing = conversations.find(
+    c =>
+      c.participants.includes(senderId) &&
+      c.participants.includes(recipientId) &&
+      JSON.stringify(c.context || {}) === JSON.stringify(context || {})
+  );
+  if (existing) return existing;
+
+  const conv: Conversation = {
+    id: uuidv4(),
+    participants: [senderId, recipientId],
+    context,
+    lastMessageAt: new Date().toISOString(),
+    unreadBy: [recipientId],
+  };
+  conversations.push(conv);
+  writeJson(CONVERSATIONS_FILE, conversations);
+  return conv;
+
+export function sendMessage(input: NewMessageInput): {
+  conversation: Conversation;
+  message: Message;
+} {
+  const conversations = readJson<Conversation[]>(CONVERSATIONS_FILE);
+  const messages = readJson<Message[]>(MESSAGES_FILE);
+
+  let conversation: Conversation | undefined;
+  if (input.conversationId) {
+    conversation = conversations.find(c => c.id === input.conversationId);
+  }
+  if (!conversation) {
+    conversation = createOrGetConversation(
+      input.senderId,
+      input.recipientId,
+      input.context
+    );
+  }
+
+  const attachmentUrl = saveAttachmentIfProvided(
+    input.attachmentBase64,
+    input.attachmentName
+  );
+
+  const message: Message = {
+    id: uuidv4(),
+    conversationId: conversation.id,
+    senderId: input.senderId,
+    recipientId: input.recipientId,
+    body: input.body,
+    linkUrl: input.linkUrl,
+    attachmentUrl,
+    createdAt: new Date().toISOString(),
+    status: 'sent',
+  };
+  messages.push(message);
+  writeJson(MESSAGES_FILE, messages);
+
+  conversation.lastMessageAt = message.createdAt;
+  if (!conversation.unreadBy.includes(input.recipientId)) {
+    conversation.unreadBy.push(input.recipientId);
+  }
+  writeJson(CONVERSATIONS_FILE, conversations);
+
+  return { conversation, message };
 
   }
   // Cleanup methods;
@@ -1393,4 +1324,3 @@ export function sendMessage(input: NewMessageInput): { conversation: Conversatio
   return { conversation, message }
 }
   }
-

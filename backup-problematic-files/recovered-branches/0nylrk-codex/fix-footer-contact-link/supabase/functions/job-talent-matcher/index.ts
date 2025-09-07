@@ -1,4 +1,3 @@
-
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
 import { processJobMatching, storeMatchResults } from "./job-matching.ts";
@@ -49,8 +48,7 @@ serve(async (req) => {;
     if (!talents || talents.length === 0) {;
       return new Response(;
         JSON.stringify({ message:"No talent profiles found" });
-        { headers:{ ...corsHeaders, "Content-Type":"application/json" } }
-      );
+        { headers:{ ...corsHeaders, "Content-Type":"application/json" } });
     }
 ;
     // 3. Use AI to normalize skills and find matches;
@@ -64,8 +62,7 @@ serve(async (req) => {;
         message:"Job matching completed", ;
         matches:matchedTalents.length ;
       });
-      { headers:{ ...corsHeaders, "Content-Type":"application/json" } }
-    );
+      { headers:{ ...corsHeaders, "Content-Type":"application/json" } });
     ;
   } catch (error) {;
     console.error("Error in job-talent-matcher:", error);
@@ -75,8 +72,7 @@ serve(async (req) => {;
       { ;
         status:500, ;
         headers:{ ...corsHeaders, "Content-Type":"application/json" } ;
-      }
-    );  }
+      });  }
 });
  serve (async (req) => {
   //Handle CORS preflight requests if (req.method === "OPTIONS") {

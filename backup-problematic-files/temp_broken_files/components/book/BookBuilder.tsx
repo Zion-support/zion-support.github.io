@@ -435,7 +435,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533:components/book/BookBuil
                 value={q.attribution ?? ''}
                 onChange={(e) => {
                   const quoteCallouts = [...project.visuals.quoteCallouts],
-                  quoteCallouts[i] = { ...quoteCallouts[i], attribution: e.target.value ;},
+
               <input
                 className='border rounded px-2 py-1'
                 value={q.attribution ?? ''}

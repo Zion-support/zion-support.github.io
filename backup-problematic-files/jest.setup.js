@@ -1,6 +1,6 @@
-import "@testing-library/jest-dom";"
-// Mock Next.js router;"
-jest.mock("next/router", () => ({")
+// Mock Next.js router
+jest.mock("next/router", () => ({
+
   useRouter() {
     return {
   // TODO: Implement
@@ -18,12 +18,13 @@ jest.mock("next/router", () => ({")
       events: {,
   on: jest.fn(),
         off: jest.fn(),
+
+:backup-problematic-files/jest.setup.js
+
     };
   },
 }));
 
-// Mock Next.js Image component;"
-jest.mock("next/image", () => {"
   return function MockedImage({ src, alt, ...props }) {
     return <img src={src} alt={alt} {...props} />
 };
@@ -36,9 +37,6 @@ jest.mock("next/link", () => {
       <a href={href} {...props}>
         {children}
       </a>
-    )
-};
-});
 
 // Mock window.matchMedia
 Object.defineProperty(window, 'matchMedia', {
@@ -47,8 +45,7 @@ Object.defineProperty(window, 'matchMedia', {
     matches: false,
     media: query,
     onchange: null,
-    addListener: jest.fn(), // deprecated
-    removeListener: jest.fn(), // deprecated
+
     addEventListener: jest.fn(),
     removeEventListener: jest.fn(),
     dispatchEvent: jest.fn()
@@ -69,9 +66,11 @@ global.ResizeObserver = class ResizeObserver {
   disconnect() {}
   observe() {}
   unobserve() {}
-    return <img src={src} alt={alt} {...props} />;
-</img>
-      <a href={href} {...props}>
-</a>
-      </a>"
-pr-12325
+
+    "media": query,
+    "onchange": null,
+    "addListener": jest.fn(), // deprecated
+    "removeListener": jest.fn(), // deprecated
+    "addEventListener": jest.fn(),
+    "removeEventListener": jest.fn(),
+    "dispatchEvent": jest.fn()}))});

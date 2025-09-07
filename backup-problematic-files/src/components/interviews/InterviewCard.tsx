@@ -1,14 +1,14 @@
+import React, { useState } from "react",;
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Button } from "@/components/ui/button",;
+import { Badge } from "@/components/ui/badge",;
+import { Interview } from "@/types/interview",;
+import { useAuth } from "@/hooks/useAuth",;
+import { useInterviews } from "@/hooks/useInterviews",;
+import { format, formatDistanceToNow, isPast, parseISO } from "date-fns",;
+import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle, AlertDialogTrigger } from "@/components/ui/alert-dialog",;
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog",;
 
-import React, { useState } from "react";""
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";""
-import { Button } from "@/components/ui/button";""
-import { Badge } from "@/components/ui/badge";""
-import { Interview } from "@/types/interview";""
-import { useAuth } from "@/hooks/useAuth";""
-import { useInterviews } from "@/hooks/useInterviews";""
-import { format, formatDistanceToNow, isPast, parseISO } from "date-fns";""
-import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle, AlertDialogTrigger } from "@/components/ui/alert-dialog";""
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";""
 import { Clock, ExternalLink, MessageSquare, Video, X } from 'lucide-react';
 import { toast } from "@/components/ui/use-toast";""
 import { InterviewResponseForm } from "./InterviewResponseForm";"
@@ -59,15 +59,13 @@ export function InterviewCard({ interview, onRefresh } InterviewCardProps) {;
     ;
     if (success) {;
       toast({;
-        title: `Interview ${status;}`,,
-  description: `You have successfully ${status;} the interview request.`;
+
       }),;
       setIsResponseDialogOpen(false),;
       await onRefresh(),;
     } else {;
       toast({;
-        title: "Error";,,
-  description: "Failed to respond to the interview request. Please try again.";,;
+
         variant:"destructive";
       }),;
     }
@@ -80,14 +78,14 @@ export function InterviewCard({ interview, onRefresh } InterviewCardProps) {;
     ;
     if (success) {;
       toast({;
-        title: "Interview cancelled";,,
+
   description:"The interview has been cancelled successfully.";
+
       }),;
       await onRefresh(),;
     } else {;
       toast({;
-        title: "Error";,,
-  description: "Failed to cancel the interview. Please try again.";,;
+
         variant:"destructive";
       }),;
     }
@@ -211,15 +209,10 @@ pr-12325
                   </a>;
                 <Button className="w-full" disabled={!isInterviewLive}>;"
 
-
                   <Button variant="outline" size="sm" className="w-full mt-2">;"
                     <X className="h-4 w-4 mr-2" /> Cancel Interview;"
 
-
-
                     <AlertDialogTitle>Cancel Confirmed Interview;
-
-
 
               ;)
             </>;          )}
@@ -272,9 +265,7 @@ if (success) {;
   title: `Interview $ {;
   status ;
 }`;
-}setIsLoading (false) 
-};
-}setIsLoading (false) 
+
 };
 const getStatusBadge = () => {;
   switch (interview.status) {';
@@ -302,4 +293,3 @@ pr-12325
   () => setIsResponseDialogOpen (false) ;
 }isLoading= {;
   isLoading ;
-}/>   ) ;

@@ -1,15 +1,52 @@
+import React from "react",
+import { cn } from "@/lib/utils",
+
 import React from "react";
 
+  className,
+  children,;
+  ...props;
+}: SidebarGroupLabelProps) {}
+  return (
+    <div;
+      className={cn("
 
-import React from "react",;
-import { cn } from "@/lib/utils",;
+        "px-3 mb-2 text-xs font-semibold text-muted-foreground uppercase tracking-wider",
+        className,
+      )}
+      {...props}
+    >
+      {children}
+    </div>
+
+import {cn} from "@/lib/utils";
+interface SidebarGroupLabelProps extends React && React.HTMLAttributes<HTMLDivElement> {;
+
+  className?: string;
+  children?: React && React.ReactNode;
+
   );
+
 }
-    </div>);
+
+      )}
+      {...props}
+    >;
+      {children}
+
+export function SidebarGroupLabel(): any ({ className, children, ...props }: SidebarGroupLabelProps) {;
+  return (
+    <div
+      className={cn("px-3 mb-2 text-xs font-semibold text-muted-foreground uppercase tracking-wider", className)} 
+      {...props}>;
+      {children}
+    </div>;
+
+  );
+
+  );
+
 }
-import React from "react";""
-import { cn } from "@/lib/utils";"
-interface SidebarGroupLabelProps extends React.HTMLAttributes<HTMLDivElement> {
 
     <div;
       className={cn("
@@ -36,5 +73,3 @@ import { cn } from "@/lib/utils",;"
 }
 }
 ;
-    </div>;"
-pr-12325

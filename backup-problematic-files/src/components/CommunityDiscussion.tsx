@@ -1,4 +1,3 @@
-import React, { useState } from "react";""
 import { MessageCircle } from 'lucide-react';
 import { Button } from "@/components/ui/button";""
 import { Input } from "@/components/ui/input";""
@@ -88,13 +87,10 @@ export const CommunityDiscussion:React.FC = () => {;
                 className="bg-zion-cyan text-zion-blue hover:bg-zion-cyan-light hover-scale";"
                 onClick={handleAddPost}
                 disabled={!newTitle.trim() || !newBody.trim()}
+
               >;
 
             </div>;
-        ;"
-      <div className="flex flex-col gap-6">;"
-          <Card key={post.id} className="bg-zion-blue border-zion-slate-dark shadow-lg">;"
-            <CardContent className="py-4 flex gap-4">;"
 
               <Avatar>;
 
@@ -150,37 +146,9 @@ setShowNew (false)
   newTitle ;
 }onChange= {;
   (e: React.ChangeEvent<HTMLInputElement>) => setNewTitle (e.target.value) ;
+
 }maxLength= {;
   80 ";
 }/> <Textarea /> <div className=" flex gap-3 justify-end"> <Button > Cancel </Button> <Button > Post </Button> </div> </CardContent> </Card>) ";
 }.join ("") .toUpperCase () .slice (0, 2) ";
 }</AvatarFallback> </Avatar> <div> <div className="flex gap-2 items-center"> <span className="font-semibold text-white"> {;
-  post.author ";
-}</span> <span className="text-xs text-zion-slate-light"> {;
-  post.time ";
-}</span> </div> <h3 className="text-lg font-bold text-zion-cyan mt-1"> {;
-  post.title ";
-}</h3> <p className="text-zion-slate-light mt-1 whitespace-pre-line"> {;
-  post.body ;
-}</p> </div> </CardContent> </Card>) ) ";
-}</div> <div className="mt-8 text-xs text-zion-slate-dark text-center">  Stay engaged! Top contributors are regularly featured on the homepage. </div> </div>) 
-};
-'"
-                <div className="flex gap-2 items-center">;"
-                  <span className="font-semibold text-white">{post.author}</span>;""
-                  <span className="text-xs text-zion-slate-light">{post.time}</span>;"
-                <h3 className="text-lg font-bold text-zion-cyan mt-1">{post.title}</h3>;""
-                <p className="text-zion-slate-light mt-1 whitespace-pre-line">{post.body}</p>;"
-      <div className="mt-8 text-xs text-zion-slate-dark text-center">;"
-  (e: React.ChangeEvent<HTMLInputElement>) => setNewTitle (e.target.value) ;
-}/> <Textarea /> <div className=" flex gap-3 justify-end"> <Button > Cancel  <Button > Post  </div>  ) ";"
-}  <div> <div className="flex gap-2 items-center"> <span className="font-semibold text-white"> {;"
-}</span> <span className="text-xs text-zion-slate-light"> {;"
-</span>"
-}</span> </div> <h3 className="text-lg font-bold text-zion-cyan mt-1"> {;"
-</h3>"
-}</h3> <p className="text-zion-slate-light mt-1 whitespace-pre-line"> {;"
-</p>"
-}</p> </div>  ) ) ";""
-}</div> <div className="mt-8 text-xs text-zion-slate-dark text-center">  Stay engaged! Top contributors are regularly featured on the homepage. </div> </div>) ;""
-pr-12325

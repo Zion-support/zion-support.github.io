@@ -1,14 +1,3 @@
-
-
-
-import { useState  } from 'react';
-import { SmartContractBuilder  } from '@/components/contracts/SmartContractBuilder';
-import { ContractBuilder  } from '@/components/contracts/ContractBuilder';
-import { ContractHeader  } from './ContractHeader';
-import { ContractTypeCards  } from './ContractTypeCards';
-import { RecentContractsTable  } from './RecentContractsTable';
-import { TalentProfile  } from '@/types/talent';
-import { useAuth } from '@/hooks/useAuth';
 import {useState} from 'react';
 import {SmartContractBuilder} from '@/components/contracts/SmartContractBuilder';
 import {ContractBuilder} from '@/components/contracts/ContractBuilder';
@@ -23,54 +12,123 @@ import {useAuth} from '@/hooks/useAuth';
 export function ContractBuilderContent() {;
 
 // Mock data for demo purposes
-import { useAuth } from '@/hooks/useAuth';// Mock data for demo purposes
 
 const mockTalent: TalentProfile = {
   id: 'talent-123'
   user_id: 'user-abc-123'
   full_name: 'Alex Chen'
+
   professional_title: 'Full Stack Developer'
-  hourly_rate: 85
-  profile_picture_url: ''
+  hourly_rate: 85'
+  profile_picture_url: '''
   skills: ['ReactNode.jsSmart Contracts']}
-export function ContractBuilderContent() {
-export function ContractBuilderContent() {;
+
 // Mock data for demo purposes
 
 export function ContractBuilderContent() {;
+
   const { user } = useAuth();
+
   const [showBuilderType, setShowBuilderType] = useState<'none' | 'standard' | 'smart'>('none');
-  const [recentContracts, setRecentContracts] = useState([
-    {
-      id: 'contract-1'
-      title: 'Website Redesign'
-      client: 'Acme Corp'
-      talent: 'Alex Chen'
+  const [recentContracts, setRecentContracts] = useState([]
+    {'
+      id: 'contract-1''
+      title: 'Website Redesign''
+      client: 'Acme Corp''
+      talent: 'Alex Chen''
       date: '2025-05-15'
-      isSmartContract: true
+      isSmartContract: true;
     }
-    {
-      id: 'contract-2'
-      title: 'Mobile App Development'
-      client: 'TechStart Inc'
-      talent: 'Sarah Williams'
+    {'
+      id: 'contract-2''
+      title: 'Mobile App Development''
+      client: 'TechStart Inc''
+      talent: 'Sarah Williams''
       date: '2025-05-10'
-      isSmartContract: false
+      isSmartContract: false;
     }
-  ]);  const handleViewContract = (contractId: string) => {
+
+import { useState } from 'react',;
+import { SmartContractBuilder } from '@/components/contracts/SmartContractBuilder',;
+import { ContractBuilder } from '@/components/contracts/ContractBuilder',;
+import { ContractHeader } from './ContractHeader',;
+import { ContractTypeCards } from './ContractTypeCards',;
+import { RecentContractsTable } from './RecentContractsTable',;
+import { TalentProfile } from '@/types/talent',;
+
+import { useAuth } from '@/hooks/useAuth',;
+// Mock data for demo purposes;
+const mockTalent: TalentProfile = {;'
+  id: 'talent-123',;'
+  user_id: 'user-abc-123',;'
+  full_name: 'Alex Chen',;'
+  professional_title: 'Full Stack Developer',;
+  hourly_rate: 85,;'
+  profile_picture_url: '',;'
+  skills: ['ReactNode.jsSmart Contracts']},;
+export function ContractBuilderContent() { return null; }
+  const { user } = useAuth(),;'
+  const [showBuilderType, setShowBuilderType] = useState<'none' | 'standard' | 'smart'>('none'),;
+  const [recentContracts, setRecentContracts] = useState([;
+    {;'
+      id: 'contract-1',;'
+      title: 'Website Redesign',;'
+      client: 'Acme Corp',;'
+      talent: 'Alex Chen',;'
+      date: '2025-05-15',;
+      isSmartContract: true;
+    },;
+    {;'
+      id: 'contract-2',;'
+      title: 'Mobile App Development',;'
+      client: 'TechStart Inc',;'
+      talent: 'Sarah Williams',;'
+
+      date: '2025-05-10',;
+      isSmartContract: false;
+    }
+  ]),
+
+  const handleContractGenerated = (content: string) => {'
+    // // // console.log('Contract generated:', content.substring(0, 100) + '...')
+  },
+
+  const handleViewContract = (contractId: string) => {
+    console.log('Viewing contract:', contractId);
+    // Future implementation: View specific contract details
+
+  return (
+    <>'
+      <ContractHeader onCreateClick={() => setShowBuilderType('smart')} />
+
+  ]),;
+  const handleContractGenerated = (content: string) => {;'
+    // // // console.log('Contract generated:', content.substring(0, 100) + '...');
+  },;
+  const handleViewContract = (contractId: string) => {;'
+    // // // console.log('Viewing contract:', contractId);
+    // Future implementation: View specific contract details;
+  };
+  return (;
+    <>;'
+      <ContractHeader onCreateClick={() => setShowBuilderType('smart')} />;
+      <ContractTypeCards;
+
     console.log('Viewing contract:', contractId);
     // Future implementation: View specific contract details
 
       <ContractTypeCards 
 
         onStandardClick={() => setShowBuilderType('standard')}
+
         onSmartClick={() => setShowBuilderType('smart')}
       />
-      <RecentContractsTable
+      <RecentContractsTable;
         contracts={recentContracts}
         onViewContract={handleViewContract}
-      />
+      />'
       {showBuilderType === 'standard' && (
+
 import {useState} from 'react';
 import {SmartContractBuilder} from '@/components / contracts / SmartContractBuilder';
 import {ContractBuilder} from '@/components / contracts / ContractBuilder';
@@ -100,7 +158,6 @@ import {RecentContractsTable} from './RecentContractsTable';
     </>;
   );
 }
-import { useAuth } from '@/hooks/useAuth';
 
   return (
     <>)
@@ -253,56 +310,25 @@ function ContractBuilderContent() {
       title: 'Mobile App Development',
       client: 'TechStart Inc',
       talent: 'Sarah Williams',
+
       date: '2025 - 05 - 10',
 ;
-  const handleContractGenerated = (content: string) =>: any {
-  // TODO: Implement
-    console.log ('Contract generated:', content.substring (0, 100) + '...');
-  const handleViewContract = (contract_id: string) =>: any {
-  // TODO: Implement
+
     console.log ('Viewing contract:', contract_id);
     // Future implementation: View specific contract details;
-    <>;)
+  }
+;
+  return (
+
       <ContractHeader onCreateClick={() => setShowBuilderType ('smart')} />;
 
         onStandardClick={() => setShowBuilderType ('standard')}
 
-        contracts={recent_contracts}
       />;
 
         <ContractBuilder;
           is_open={true}
           on_close={() => setShowBuilderType ('none')}
 
-
     </>);
 }
-  ),;}
- //Future implementation: View specific contract details;
-};
-() => setShowBuilderType ('smart')
-}/> <ContractTypeCards onStandardClick= {
-  () => setShowBuilderType ('standard')
-
-}/> <RecentContractsTable contracts= {
-  recentContracts;
-}onViewContract= {
-  handleViewContract;
-}/> {
-
-  showBuilderType === 'standard' && (<ContractBuilder isOpen= {
-  true;
-}onClose= {)
-  () => setShowBuilderType ('none')
-
-  showBuilderType === 'smart' && (<SmartContractBuilder isOpen= {
-
-}</>) 
-
-
-    </>
-  )
-pr-12325
-}
-'
-

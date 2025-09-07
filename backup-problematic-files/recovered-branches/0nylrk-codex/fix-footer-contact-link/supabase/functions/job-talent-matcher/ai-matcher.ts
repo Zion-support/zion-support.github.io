@@ -1,4 +1,3 @@
-
 import { JobData, TalentProfile, MatchResult } from "./types.ts";
 ;
 // Get openAI API key from environment variables;

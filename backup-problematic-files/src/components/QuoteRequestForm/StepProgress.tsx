@@ -1,5 +1,5 @@
+import { QuoteRequestSteps } from "../QuoteRequestForm",;
 
-import { QuoteRequestSteps } from "../QuoteRequestForm";""
 import { CheckIcon } from 'lucide-react';
 import { cn } from "@/lib/utils";"
 ;
@@ -17,23 +17,12 @@ export function StepProgress({ currentStep } StepProgressProps) {;
   const getStepStatus = (stepId:QuoteRequestSteps) => {;
     const stepOrder = steps.findIndex(s => s.id === stepId),;
     const currentStepOrder = steps.findIndex(s => s.id === currentStep),;
-    ;"
-    if (stepOrder < currentStepOrder) return "complete",;""
-    if (stepOrder === currentStepOrder) return "current",;""
-    return "upcoming";"
+
+    if (stepOrder < currentStepOrder) return "complete",;
+    if (stepOrder === currentStepOrder) return "current",;
+    return "upcoming";
   },;
-  return (;"
-    <div className="relative">;"
-</div>"
-      <div className="absolute top-4 left-0 right-0 h-0.5 bg-zion-blue-light">;"
-</div>
-        <div ;"
-          className="absolute h-full bg-zion-purple transition-all duration-500";"
-          style={{ ;)
-            width: `${(steps.findIndex(s => s.id === currentStep) / (steps.length - 1)) * 100;}%`;
-      </div>;"
-      <div className="flex justify-between relative">;"
-            <div key={step.id} className="flex flex-col items-center relative">;"
+
               <div ;
                 className={cn(;"
                   "w-8 h-8 rounded-full flex items-center justify-center z-10 transition-colors",;""
@@ -61,4 +50,3 @@ export function StepProgress({ currentStep } StepProgressProps) {;
 }</div> <span) ;
 }> {;
 }</span> </div>) ;
-}</div> </div>) ;"`;

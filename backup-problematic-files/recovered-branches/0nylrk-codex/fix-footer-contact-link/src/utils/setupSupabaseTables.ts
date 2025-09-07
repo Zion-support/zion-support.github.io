@@ -1,4 +1,3 @@
-
 import { supabase } from "@/integrations/supabase/client";
 ;
 /**;
@@ -80,6 +79,7 @@ export const ensureProfilesTableExists = async () => {;
       END;
       $$ LANGUAGE plpgsql SECURITY DEFINER;
       ;
+
       -- Check if trigger exists before creating it;
       DO $$;
       BEGIN;
@@ -110,9 +110,7 @@ export const initializeDatabase = async () => {;
   await ensureProfilesTableExists();
 };   try {
   //Try to execute a simple query to check if the table exists const {
-  error 
-}= await supabase.rpc ('exec', {
-  sql: `SELECT EXISTS (SELECT FROM information schema.tables WHERE table schema = 'public'AND table name = 'profiles' 
+
 }display name TEXT;
 user type TEXT;
 profile complete BOOLEAN DEFAULT FALSE;
@@ -139,12 +137,3 @@ $$ LANGUAGE plpgsql SECURITY DEFINER;
 END IF;
 END $$;
 `;
-//Execute the creation query using RPC to avoid TypeScript errors 
-}
-}catch (error) {
-  console.error ('Error setting up profiles table:', error) 
-}
-};
-// Call this when the app starts to ensure the table exists export const initializeDatabase = async () => {
-  await ensureProfilesTableExists () 
-};

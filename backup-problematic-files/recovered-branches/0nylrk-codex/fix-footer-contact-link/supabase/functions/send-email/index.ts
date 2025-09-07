@@ -1,4 +1,3 @@
-
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
 import { Resend } from "npm:resend@2.0.0";
 ;
@@ -33,16 +32,9 @@ serve(async (req) => {;
  
 }try {
   const {
-  to, subject, html 
+
 }= await req.json ();
 const emailResponse = await resend.emails.send ({
   from: "Lovable <onboarding@resend.dev>";
 to: [to];
 subject;
-html 
-});
-return new Response (JSON.stringify (emailResponse), {
-  status: 500 
-});
-}
-});

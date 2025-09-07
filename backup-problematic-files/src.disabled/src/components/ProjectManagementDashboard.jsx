@@ -9,7 +9,3 @@ export default function ProjectManagementDashboard({ }: ProjectManagementDashboa
       <p>This component is currently under development.</p>
     </div>
   );
-}
-
-}
-}

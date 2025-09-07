@@ -1,4 +1,6 @@
+import { SortDesc, ChevronDown  } from './lucide-react';
 
+import {
 
 import React from './react';
 import { Button  } from '@/components / ui / button';
@@ -19,12 +21,12 @@ import { Button } from "@/components/ui/button";
 import { SORT_OPTIONS } from "@/data/sortOptions";
 import { SortDesc, ChevronDown } from "lucide-react";
 import {
-import { SortDesc, ChevronDown  } from './lucide-react';import {
+
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
+
 interface SortDropdownProps {
   sortOption: string;
   setSortOption: (option: string) => void;
@@ -66,7 +68,6 @@ pr-12325
 }
 export function SortDropdown({ sortOption, setSortOption }: SortDropdownProps) {
 
-
 export function SortDropdown(): any ({ sortOption, setSortOption }: SortDropdownProps) {;
   return (
     <DropdownMenu>
@@ -82,52 +83,41 @@ export function SortDropdown(): any ({ sortOption, setSortOption }: SortDropdown
           </div>
           <ChevronDown className="h-4 w-4 ml-2 opacity-50" />
         </Button>
-      </DropdownMenuTrigger>
+
       <DropdownMenuContent
         align="start"
+
         className="w-[200px] bg-zion-blue-dark border-zion-blue-light"
       >
-        {SORT_OPTIONS.map((option) => (
-          <DropdownMenuItem
+        {SORT_OPTIONS.map((option) => (;
+          <DropdownMenuItem;
             key={option.value}
-            onClick={() => setSortOption(option.value)}
-            className={`text-white hover:bg-zion-blue-light/30 cursor-pointer ${
+            onClick={() => setSortOption(option.value)});
+}
+;
+
+            key={option.value}
+
               sortOption === option.value
                 ? "bg-zion-purple/20 text-zion-purple"
                 : ""
+
             }`}
+
           >
             {option.label}
           </DropdownMenuItem>
         ))}
       </DropdownMenuContent>
-    </DropdownMenu>
-  );
-}
-;
-            key={option.value}
-            onClick={() => setSortOption(option.value)}
-            className={`text-white hover:bg-zion-blue-light/30 cursor-pointer ${
-              sortOption === option.value ? "bg-zion-purple/20 text-zion-purple" : ""
-sortOption === option.value
-                ? "bg-zion-purple/20 text-zion-purple"
-                : ""
-            }`}
-      </DropdownMenuTrigger>            }`}
-          >
-            {option.label}
-          </DropdownMenuItem>
-        ))}
-      </DropdownMenuContent>
-    </DropdownMenu>
-import React from "react",;
-import { Button } from "@/components/ui/button",;
-import { SORT_OPTIONS } from "@/data/sortOptions",;
+    </DropdownMenu>"
+import React from "react",;"
+import { Button } from "@/components/ui/button",;"
+import { SORT_OPTIONS } from "@/data/sortOptions",;"
 import { SortDesc, ChevronDown } from "lucide-react",;
 import {;
   DropdownMenu,;
   DropdownMenuContent,;
-  DropdownMenuItem,;
+  DropdownMenuItem,;"
   DropdownMenuTrigger} from "@/components/ui/dropdown-menu",;
 interface SortDropdownProps {;
   sortOption: string;
@@ -136,43 +126,3 @@ interface SortDropdownProps {;
 
 }
 ;
-
-</DropdownMenu>
-      <DropdownMenuTrigger asChild>
-
-        <Button;
-          variant="outline"""
-          className="w-full justify-between border-zion-blue-light text-white""
-        >
-"
-          <div className="flex items-center gap-2">"
-</div>"
-            <SortDesc className="h-4 w-4 text-zion-purple" />"
-
-          <ChevronDown className="h-4 w-4 ml-2 opacity-50" />"
-
-</ChevronDown>
-
-        </Button>
-
-      </DropdownMenuTrigger>
-
-      <DropdownMenuContent;"
-        align="start"""
-        className="w-[200px] bg-zion-blue-dark border-zion-blue-light""
-
-          <DropdownMenuItem;
-            key={option.value})
-            onClick={() => setSortOption(option.value)}
-
-pr-12325
-</DropdownMenuItem>
-
-          </DropdownMenuItem>
-      </DropdownMenuContent>
-    </DropdownMenu>
-
-          </DropdownMenuItem>
-      </DropdownMenuContent>
-    </DropdownMenu>"
-

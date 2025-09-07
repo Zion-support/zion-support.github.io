@@ -1,8 +1,5 @@
+import { useResumeEnhancer } from '@/hooks/useResumeEnhancer',;
 
-import { useState } from 'react';
-import { Button } from '@/components/ui/button';
-import { Sparkles, Loader2 } from 'lucide-react';
-import { useResumeEnhancer } from '@/hooks/useResumeEnhancer';
 ;
 interface AIEnhancementButtonProps {;
   currentContent: string;,;
@@ -42,12 +39,8 @@ export function AIEnhancementButton({;
       onClick={handleEnhance}
       disabled={isEnhancing}
     >;
-"
-        <Loader2 className="h-3 w-3 animate-spin" />;"
-</Loader2>"
-        <Sparkles className="h-3 w-3" />;"
-      <span className="text-xs">{buttonText}</span>;"
-    ;)"
-) : (<Sparkles className="h-3 w-3" />) ;"
-}) ;"}""
-}) ;"`;
+
+        <Sparkles className="h-3 w-3" />;
+      )}
+      <span className="text-xs">{buttonText}</span>;
+    </Button>;

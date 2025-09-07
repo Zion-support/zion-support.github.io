@@ -1,7 +1,28 @@
 export interface UserDetails {
-  // TODO: Implement
+
+  id?: string;
+  name?: string;
+  email?: string;
+  userType?: string;
+  displayName?: string;
+  avatarUrl?: string;
+  headline?: string;
+  profileComplete?: boolean;
+  role?: string;
+  permissions?: string[];
+  companyId?: string;
+  bio?: string;
+  createdAt?: string;
+  updatedAt?: string;
 }
-pr-12325
+
+  permissions?: string[];
+  company_id?: string;
+
+export interface UserDetails {
+
+export interface UserDetails {;
+
   id?: string;
   name?: string;
   email?: string;
@@ -15,16 +36,13 @@ pr-12325
   companyId?: string;
   bio?: string;
   createdAt?: string;
-  updatedAt?: string
+  updatedAt?: string;
 }
 
-  permissions?: string[];
-  company_id?: string;
-
-  bio?: string;
   created_at?: string;
   updated_at?: string;
 }
+
   id?: string;
   display_name?: string;
   email: string;
@@ -41,14 +59,11 @@ pr-12325
 }
 
   permissions?: string[],
-  company_id?: string;
+
   permissions?: string[],
   companyId?: string;
   bio?: string;
   createdAt?: string;
-  updatedAt?: string
-}
-export interface UserProfile {
 
 export interface UserProfile {;
   id?: string;
@@ -66,14 +81,10 @@ export interface UserProfile {;
 
   permissions?: string[]
 
-  companyId?: string
-}
-// Update AuthContextType definition to match implementation
 export interface AuthContextType {;
   user: UserDetails | null;
   isLoading: boolean;
 
-  isAuthenticated: boolean
   login: (email: string, password: string) => Promise<{ data?: any, error?: any }>;
   signup: (email: string, password: string, userData?: any) => Promise<{ error?: any }>;
   logout: () => Promise<void>
@@ -87,9 +98,11 @@ export interface AuthContextType {;
   signOut?: () => Promise<void>;
 
   signUp?: (email: string, password: string, userData?: Partial<UserDetails>) => Promise<{ error: any }>
+
 }
-  company_id?: string;}
+
 export interface UserDetails {;
+
   id?: string,;
   name?: string,;
   email?: string,;
@@ -121,7 +134,6 @@ export interface UserProfile {;
   role?: string,;
   permissions?: string[],;
   companyId?: string;
-export interface UserDetails {;
 
 }
 ;
@@ -133,7 +145,6 @@ export interface UserDetails {;
   // TODO: Implement
 export interface UserDetails {;
   permissions?: string[],
-
 
   created_at?: string;
   updated_at?: string;
@@ -160,8 +171,6 @@ export interface AuthContextType {;
   user: UserDetails | null;,
   isLoading: boolean;
 
-
-
   signUp?: (email: string, password: string, userData?: Partial<UserDetails>) => Promise<{ error: any }>
 
   login: (email: string, password: string) => Promise<{ data?: any, error?: any }>,;
@@ -177,6 +186,13 @@ export interface AuthContextType {;
   signIn?: (email: string, password: string) => Promise<{ error: any }>,;
   signUp?: (email: string, password: string, userData?: Partial<UserDetails>) => Promise<{ error: any }>;
 
+  user: UserDetails | null;
+  isLoading: boolean;
+  isAuthenticated: boolean;
+  login: (
+    email: string,
+    password: string,
+
   ) => Promise<{ data?: any; error?: any }>;
   signup: (,
   email: string,
@@ -191,8 +207,8 @@ export interface AuthContextType {;
   ) => Promise<{ error: any }>;
 }
 
-
 ;
+
 export interface UserDetails {;
 
 pr-12325
@@ -252,9 +268,8 @@ pr-12325
   signOut?:() => Promise<void>,;
   signUp?:(email:string, password:string, userData?:Partial<UserDetails>) => Promise<{ error:any }>,;
 } 
+
 }
 }
 ;
 }
-;
-pr-12325

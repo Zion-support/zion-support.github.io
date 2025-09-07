@@ -1,17 +1,19 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-pr-12243
-import type { NextApiRequest, NextApiResponse } from 'next'
 ;
+
+import type { NextApiRequest, NextApiResponse } from 'next'
+main
+;
+
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
-    res.setHeader('AllowPOST')
+    res.setHeader('AllowPOST'),
     return res.status(405).end('Method Not Allowed')
   }
 
-  const { prompt } = req.body || {}
-  if (!prompt) return res.status(400).json({ error: 'prompt required' })
+  try {
 
   try {
+
     const apiKey = process.env.OPENAI_API_KEY
 import type { NextApiRequest, NextApiResponse } from 'next';
 
@@ -29,18 +31,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     if (apiKey) {
       const { OpenAI } = await import('openai');
       const openai = new OpenAI({ apiKey });
+
       const resp = await openai.chat.completions.create({
         model: 'gpt-4o-mini';
         messages: [
+
           { role: 'system', content: 'You are ZionGPT Coach, a helpful and concise AI tutor for Zion Academy courses. Provide short, actionable guidance.' }
-          { role: 'system', content: 'You are ZionGPT Coach, a helpful and concise AI tutor for Zion Academy courses. Provide short, actionable guidance.' };
-          { role: 'system', content: 'You are ZionGPT Coach, a helpful and concise AI tutor for Zion Academy courses. Provide short, actionable guidance.' }
-main
-pr-12243
+
           { role: 'user', content: String(prompt) }
         ]
       })
       const text = resp.choices?.[0]?.message?.content |'No response'
+
 {
             role: 'system';
             content:
@@ -61,13 +63,11 @@ pr-12243
     return res.status(500).json({ error: e?.message ?? 'Coach error' });
   }
 
-origin/cursor/automate-test-improve-and-merge-code-2533
-pr-12243
       return res.status(200).json({ text })
     }
     // Fallback without API key
     return res.status(200).json({ text: 'Tip: Break complex topics into small steps. Revisit objectives and test your understanding with quick quizzes.' })
-pr-12243
+
   };
 };
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -75,9 +75,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default async function handler(req, res) {
-import type { NextApiRequest, NextApiResponse } from 'next';
-pr-12243
-import type { NextApiRequest, NextApiResponse } from 'next'
+
+import type { NextApiRequest, NextApiResponse } from 'next',
+
 ;
 export default async /**
  * handler - Function description
@@ -87,6 +87,7 @@ function handler() {
 if ( {) {
   $2
 }
+
   try {
     const api_key = process.env.OPENAI_API_KEY;
     // Check condition
@@ -107,6 +108,11 @@ if ( {) {
     }
     // Fallback without API key;
     return res.status (200).json ({ text: 'Tip: Break complex topics into small steps. Revisit objectives and test your understanding with quick quizzes.' });
+
+    res.set_header ('AllowPOST'),
+    return res.status (405).end ('Method Not Allowed');
+  }
+
   } catch (e: any) {
     return res.status (500).json ({ error: e?.message ?? 'Coach error' });
   }
@@ -119,8 +125,6 @@ if ( {) {
 }
   }
 }
-
-
 
     res.set_header ('AllowPOST')
     return res.status (405).end ('Method Not Allowed');

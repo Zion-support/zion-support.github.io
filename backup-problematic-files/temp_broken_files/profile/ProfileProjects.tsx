@@ -1,9 +1,10 @@
+import { Card, CardContent } from "@/components/ui/card",;
+import { Badge } from "@/components/ui/badge",;
+import { ProfileProject } from "@/types/profile",;
+import { AspectRatio } from "@/components/ui/aspect-ratio",;
 
-import { Card, CardContent } from "@/components/ui/card";""
-import { Badge } from "@/components/ui/badge";""
-import { ProfileProject } from "@/types/profile";""
-import { AspectRatio } from "@/components/ui/aspect-ratio";""
 import { FileText } from 'lucide-react';
+
 ;
 interface ProfileProjectsProps {;
   projects:ProfileProject[];
@@ -24,26 +25,35 @@ export function ProfileProjects({ projects } ProfileProjectsProps) {;
                   className="w-full h-full object-cover";""
                   loading="lazy";"
                 />;
-</img>
-              ;"
-              <div className="h-40 w-full flex items-center justify-center bg-zion-blue">;"
-                <FileText className="text-zion-purple h-12 w-12 opacity-50" />;"
 
-              </div>;"
-            <CardContent className="p-4">;"
-"
-              <h4 className="text-white font-medium mb-2">{project.title}</h4>;""
-              <p className="text-zion-slate text-sm mb-3 line-clamp-2">{project.description}</p>;""
-                <div className="flex flex-wrap gap-1 mb-2">;"
-                    <Badge key={i} variant="outline" className="text-xs border-zion-slate-dark text-zion-slate-light">;"
-)
-                    ;                  ))}
-              <div className="text-xs text-zion-slate-light mt-2">;"
-</div>
+              <div className="h-40 w-full flex items-center justify-center bg-zion-blue">;
+                <FileText className="text-zion-purple h-12 w-12 opacity-50" />;
               </div>;
-  return (<div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8" > <h3 className="text-xl font-bold text-white mb-4" >Projects</h3> grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"> {";"  projects.map ( (project) => (/> ) : (<div className=" h-40 w-full flex items-center justify-center bg-zion-blue"> <FileText className=" text-zion-purple h-12 w-12 opacity-50" /> </div>) ;"
-}) ) ;
+            )}
+
+              </div>;
+            </CardContent>;
+          </Card>;
+        ))}
+      </div>;
+    </div>;
+
+  ),;}
+ import {;
+  {;
+  {;
+  FileText ;
+}from 'lucide-react' interface ProfileProjectsProps {;
+  projects: ProfileProject[] ;
+}export function ProfileProjects ({;
+  projects ;
+}: ProfileProjectsProps) {;
+  return (<div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8" > <h3 className="text-xl font-bold text-white mb-4" >Projects</h3> grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"> {";"  projects.map ( (project) => (/> </AspectRatio>) : (<div className=" h-40 w-full flex items-center justify-center bg-zion-blue"> <FileText className=" text-zion-purple h-12 w-12 opacity-50" /> </div>) ;
+}</Badge>) ) ;
 }</div>) ;
-}</div>  ) ) ;"
-}</div> </div>) ;"}'""
-}</div> </div>) ;"
+}</div> </CardContent> </Card>) ) ;
+:temp_broken_files/profile/ProfileProjects.tsx
+}</div> </div>) ;"}'"
+}</div> </div>) ;
+}'"
+ursor/fix-lint-push-and-merge-to-main-e10e:src/components/profile/ProfileProjects.tsx

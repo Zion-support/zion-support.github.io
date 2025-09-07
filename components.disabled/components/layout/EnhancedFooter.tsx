@@ -1,4 +1,3 @@
-origin/main
 import React from 'react';
 // Common interfaces for better type safety
 interface ApiResponse<T = unknown> {

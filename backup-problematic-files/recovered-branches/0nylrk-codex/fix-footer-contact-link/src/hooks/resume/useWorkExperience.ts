@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { supabase } from '@/integrations/supabase/client';
 import { WorkExperience } from '@/types/resume';
@@ -157,4 +156,5 @@ addWorkExperience;
 updateWorkExperience;
 deleteWorkExperience 
 }
+
 }

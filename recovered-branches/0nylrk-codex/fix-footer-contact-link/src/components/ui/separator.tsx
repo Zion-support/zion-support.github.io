@@ -1,6 +1,14 @@
 import * as React from 'react';
 import * as SeparatorPrimitive from '@radix-ui/react-separator';
 import {cn} from '@/lib/utils';
+
+import * as React from "react"
+import * as SeparatorPrimitive from "@radix-ui/react-separator"
+import * as React from "react"
+import * as SeparatorPrimitive from "@radix-ui/react-separator"
+
+"
+
 import {cn} from '@/lib/utils';
 import * as React from "react"
 import * as SeparatorPrimitive from "@radix-ui/react-separator"
@@ -26,7 +34,6 @@ const Separator = React.forwardRef<
 import React from 'react';
 import * as React from 'react';import React from 'react';
 
-
 import {cn} from '@/lib/utils';
 import * as React from "react"""
 import * as SeparatorPrimitive from "@radix-ui/react-separator"""
@@ -36,12 +43,16 @@ const Separator = React.forwardRef<
 </typeof>
   React.ComponentPropsWithoutRef<typeof SeparatorPrimitive.Root>
 ></typeof>(
-  (
 
-import { cn } from "@/lib/utils"
+    ref
+  ) => (
+    <SeparatorPrimitive.Root
+
+"
     { className, orientation = "horizontal", decorative = true, ...props },
 
     ref
+
   ) => (
     <SeparatorPrimitive.Root
 
@@ -92,31 +103,46 @@ className
         "shrink-0 bg-border",;
         orientation === "horizontal" ? "h-[1px] w-full" :"h-full w-[1px]",;
         className;
+
+;
+    ref;
+  ) => (
+    <SeparatorPrimitive.Root;
+      ref={ref}
+      decorative={decorative}
+      orientation={orientation}
+      className={cn(
+
+"
+        "shrink-0 bg-border","
+        orientation === "horizontal" ? "h-[1px] w-full" : "h-full w-[1px]",
+
+        className;
+      className={cn(;"
+        "shrink-0 bg-border",;"
+        orientation === "horizontal" ? "h-[1px] w-full" :"h-full w-[1px]",;
+        className;
+
       )}
       {...props}
     />;
   );
 );
 export { Separator }
-export { Separator }
-;
 
-Separator && Separator.displayName = SeparatorPrimitive && SeparatorPrimitive.Root.displayName;
-
-export { Separator }
-;
-
-Separator && Separator.displayName = SeparatorPrimitive && SeparatorPrimitive.Root.displayName;
-      className={cn(        className;
-        \"shrink-0 bg-border\",;
-        orientation === \"horizontal\" ? \"h-[1px] w-full\" :\"h-full w-[1px]\",;}
-        className;}
 export { Separator };
-import * as SeparatorPrimitive from '@radix - ui / react - separator';
 ;
+
+Separator && Separator.displayName = SeparatorPrimitive && SeparatorPrimitive.Root.displayName;
+
+export { Separator };
+;
+
+export { Separator };'
+import * as SeparatorPrimitive from '@radix - ui / react - separator';
+;'
 import {cn} from '@/lib / utils';
 ;
-
 
 import {cn} from '@/lib/utils';''
 import * as React from "react"""
@@ -162,29 +188,26 @@ const Separator = React.forward_ref<;
   React.ElementRef < typeof SeparatorPrimitive.Root />,
   React.ComponentPropsWithoutRef < typeof SeparatorPrimitive.Root>;
 ></typeof>(
-  (
+  ('
     { class_name, orientation = 'horizontal', decorative = true, ...props },
     ref) => (
     <SeparatorPrimitive.Root;
       ref={ref}
       decorative={decorative}
       orientation={orientation}
-      className={cn (
-        'shrink - 0 bg - border',
+      className={cn ('
+        'shrink - 0 bg - border','
         orientation === 'horizontal' ? 'h-[1px] w - full' : 'h - full w-[1px]',
         class_name)}
       {...props}
     />));
 Separator.display_name = SeparatorPrimitive.Root.display_name;
 ;
-export { Separator }
-;
+
 Separator.displayName = SeparatorPrimitive.Root.displayName;
 ;
 export { Separator }import * as React from "react" import * as SeparatorPrimitive from "@radix-ui/react-separator" const Separator = React.forwardRef< React.ElementRef<typeof SeparatorPrimitive.Root>;
       className={cn(
-
-
 
       className={cn ("
         'shrink - 0 bg - border',''
@@ -201,21 +224,19 @@ const Separator = React.forwardRef<
   React.ElementRef<typeof SeparatorPrimitive.Root>
 </typeof>
   React.ComponentPropsWithoutRef<typeof SeparatorPrimitive.Root>
-</typeof>
-    <SeparatorPrimitive.Root;
+
       ref={ref}
       decorative={decorative}
       orientation={orientation}
-      className={cn("
-        'shrink-0 bg-border'''
-        orientation === 'horizontal' ? 'h-[1px] w-full' : 'h-full w-[1px]'''
-        "shrink-0 bg-border",""
-        orientation === "horizontal" ? "h-[1px] w-full" : "h-full w-[1px]","
-        className;
-      className={cn(;"
-        "shrink-0 bg-border",;""
-        orientation === "horizontal" ? "h-[1px] w-full" :"h-full w-[1px]",;"
-        className;)
+      className={cn(
+
+        'shrink-0 bg-border'
+        orientation === 'horizontal' ? 'h-[1px] w-full' : 'h-full w-[1px]'
+        "shrink-0 bg-border",
+        orientation === "horizontal" ? "h-[1px] w-full" : "h-full w-[1px]",
+
+        className
+
       )}
       {...props}
     />;
@@ -235,10 +256,10 @@ React.ComponentPropsWithoutRef<typeof SeparatorPrimitive.Root>)
         'shrink-0 bg-border
         orientation === 'horizontal' ? 'h-[1px] w-full' : 'h-full w-[1px]
     />
-"
-pr-12325
-</SeparatorPrimitive>"
+
+export { Separator }
+export { Separator }
+;
 
 export { Separator };
-export { Separator }
 ;

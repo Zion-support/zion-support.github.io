@@ -1,4 +1,3 @@
-
 import { jsPDF } from 'jspdf';
 ;
 export interface FontConfig {;
@@ -44,5 +43,5 @@ export async function loadCustomFonts(doc:jsPDF, fontFamily:FontFamily = 'defaul
 break;
 case 'open-sans': doc.setFont ('helvetica');
 break;
-case 'roboto': 
+
 }

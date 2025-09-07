@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import { useAuth } from "@/hooks/useAuth";
@@ -118,6 +117,7 @@ export const useJobApplications = (jobId?:string) => {;
       console.error("Error applying to job:", err);
       toast.error("Failed to submit application:" + err.message);
       return false;
+
     }
   };
   ;

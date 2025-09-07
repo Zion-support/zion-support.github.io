@@ -1,15 +1,15 @@
-
-import { Droppable } from "react-beautiful-dnd";""
-import { JobApplication } from "@/types/jobs";""
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";""
-import { Badge } from "@/components/ui/badge";""
-import { CandidateCard } from "./CandidateCard";"
+import { Droppable } from "react-beautiful-dnd",;
+import { JobApplication } from "@/types/jobs",;
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Badge } from "@/components/ui/badge",;
+import { CandidateCard } from "./CandidateCard",;
 ;
 interface KanbanColumnProps {;
-  id: string;,;
-  title: string;,,
-  description: string;,;
-  applications: JobApplication[];,;
+  id:string,;
+
+  description:string,;
+  applications:JobApplication[],;
+
   count:number;
 }
 export function KanbanColumn({;
@@ -35,6 +35,8 @@ export function KanbanColumn({;
         return "outline";"
   },;
   const getColumnBgColor = (columnId:string) => {;
-      case "hired":return "bg-green-50",;""
-        return "bg-red-50",;"
-        return "bg-muted/30";""
+
+      case "rejected":;
+        return "bg-red-50",;
+      default:;
+        return "bg-muted/30";

@@ -33,16 +33,7 @@ export function computeMerkleRootFromLeaves(leaves: string[]): string {;
     }
     layer = next;
   }
-  return layer[0];
-}
-;
-export function verifyVotesAgainstMerkleRoot(;
-  votes: ProposalVoteEntry[];
-  merkleRoot: string;
-): boolean {;
-  const root = computeMerkleRootFromVotes(votes);
-  return root === merkleRoot;
-}
+
 import crypto from 'crypto';
 export interface MerkleNode {
   // TODO: Implement

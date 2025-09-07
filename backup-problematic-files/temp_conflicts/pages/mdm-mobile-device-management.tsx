@@ -1,5 +1,6 @@
-import React from "react";""
-import Head from "next/head";"
+import React from "react";
+import Head from "next/head";
+
 import {
   // TODO: Implement
 }
@@ -9,13 +10,10 @@ import {
   Check,
   ArrowRight,
   Shield,
-  Star,;"
-} from "lucide-react";""
-import UltraAdvancedFuturisticBackground from "../components/ui/UltraAdvancedFuturisticBackground";""
-import Button from "../components/ui/Button";""
-import { enhancedRealMicroSaasServices } from "../data/enhanced-real-micro-saas-services";"
+
 export default function QuantumInternetSecurityPage() {
   const service = enhancedRealMicroSaasServices.find((s) =>
+
   );
   if (!service) return null;
 
@@ -64,28 +62,29 @@ export default function QuantumInternetSecurityPage() {
               <div className="flex items-end justify-between mb-3">"
 </div>
                 <div>
-                  <div className="text-3xl font-bold text-white">"
-                    <span className="text-slate-400 text-base">"
-</span>
-                  <div className="text-slate-400">"
-                <div className="flex items-center text-yellow-400">"
-                  <Star className="w-4 h-4 mr-1" />"
 
-              <Button;"
-                href="/contact"""
-                variant="quantum"""
-                size="lg"""
-                className="w-full""
-                <ArrowRight className="w-5 h-5 ml-2" />"
-
-              <div className="mt-6 space-y-3 text-sm text-slate-300">"
-                <div className="flex items-center space-x-2">"
-                  <Phone className="w-4 h-4 text-cyan-400" />"
+                    {service.setupTime}
+                  </div>
+                </div>
+                <div className="flex items-center text-yellow-400">
+                  <Star className="w-4 h-4 mr-1" />
+                  {service.rating.toFixed(1)}
+                </div>
+              </div>
+              <Button
+                href="/contact"
+                variant="quantum"
+                size="lg"
+                className="w-full"
+              >
+                Request a Security Demo
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Button>
+              <div className="mt-6 space-y-3 text-sm text-slate-300">
+                <div className="flex items-center space-x-2">
+                  <Phone className="w-4 h-4 text-cyan-400" />
 
                   <span>{service.contactInfo.mobile}</span>
                   <Mail className="w-4 h-4 text-purple-400" />"
 
                   <span>{service.contactInfo.email}</span>
-                  <MapPin className="w-4 h-4 text-green-400" />"
-                  <span className="text-xs">{service.contactInfo.address}</span>"
-    )"

@@ -4,11 +4,12 @@
  * Generate README;
  * Creates or updates the main README.md file;
  */;
+
 const fs = require('fs'),;
 const path = require('path'),;
 const README_TEMPLATE = `# Zion Tech Group  Autonomous Innovation Hub;
 Leading-edge technology solutions and autonomous innovation systems.;
-;`;
+
 \`\`\`bash;
 # Install dependencies;
 npm install;
@@ -19,15 +20,18 @@ npm run build;
 # Start automation systems;
 npm run automation:all;`;
 \`\`\`;
-- \`pages/\` - Next.js pages and routing;`;
-- \`styles/\` - Global CSS and Tailwind configuration;`;
-- \`automation/\` - Autonomous automation systems;`;
-- \`scripts/\` - Utility scripts and build tools;`;
+
+- \`styles/\` - Global CSS and Tailwind configuration;
+- \`automation/\` - Autonomous automation systems;
+- \`scripts/\` - Utility scripts and build tools;
 - \`public/\` - Static assets and generated content;
-##  Available Scripts;
-### Development;`;
-- \`npm run dev\` - Start development server;`;
-- \`npm run build\` - Build for production;`;
+;
+
+;
+### Development;
+- \`npm run dev\` - Start development server;
+- \`npm run build\` - Build for production;
+
 - \`npm run start\` - Start production server;
 ### Automation;`;
 - \`npm run automation:all\` - Start all automation systems;`;
@@ -37,12 +41,15 @@ npm run automation:all;`;
 - \`npm run lint\` - Run ESLint;`;
 - \`npm run type-check\` - Run TypeScript type checking;`;
 - \`npm run fix:all\` - Fix linting issues;
-##  Features;
+
+;
+
 - **Autonomous Content Generation** - AI-powered content creation;
 - **Intelligent Automation** - Self-healing automation systems;
 - **Redundancy Management** - High-availability infrastructure;
 - **Performance Optimization** - Continuous performance monitoring;
 - **Modern UI/UX** - Responsive design with Tailwind CSS;
+
 - [Architecture](./ARCHITECTURE.md) - System architecture overview;
 - [API Reference](./API.md) - API documentation;
 - [Deployment](./DEPLOYMENT.md) - Deployment instructions;
@@ -53,9 +60,10 @@ npm run automation:all;`;
 - Real-time performance metrics;
 - Automated health checks;
 - Comprehensive logging;
+
 This project is proprietary software. All rights reserved.;
 ---;
-*Generated on ${new Date().toISOString()}*;`;
+
 `,;
 function generateReadme() {;
   const outputPath = path.join(__dirname, '..README.md'),;
@@ -70,4 +78,3 @@ function generateReadme() {;
   // // // console.log(` README generated at:${outputPath}`),;
 if (require.main === module) {;
   generateReadme(),;
-module.exports = { generateReadme },// Simple README maintenance: append an automation run footer with timestamp;`;

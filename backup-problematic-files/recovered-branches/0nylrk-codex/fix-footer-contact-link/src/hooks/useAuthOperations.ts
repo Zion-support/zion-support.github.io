@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import type { UserProfile } from "@/types/auth";
@@ -496,4 +495,5 @@ loginWithFacebook;
 loginWithTwitter;
 loginWithWeb3 
 }
+
 }

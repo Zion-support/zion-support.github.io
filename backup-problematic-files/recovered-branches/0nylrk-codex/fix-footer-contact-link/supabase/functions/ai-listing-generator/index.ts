@@ -1,4 +1,3 @@
-
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
 import { Configuration, OpenAIApi } from "npm:openai@4.28.0";
 ;
@@ -22,8 +21,7 @@ serve(async (req) => {;
         { ;
           status:400, ;
           headers:{ ...corsHeaders, "Content-Type":"application/json" } ;
-        }
-      );
+        });
     }
 ;
     const configuration = new Configuration({;
@@ -87,8 +85,7 @@ Format the response as a JSON object with the following structure:;
       });
       { ;
         headers:{ ...corsHeaders, "Content-Type":"application/json" } ;
-      }
-    );
+      });
   } catch (error) {;
     console.error("Error in AI listing generator:", error);
     ;
@@ -100,8 +97,7 @@ Format the response as a JSON object with the following structure:;
       { ;
         status:500, ;
         headers:{ ...corsHeaders, "Content-Type":"application/json" } ;
-      }
-    );  }
+      });  }
 });
  
 }try {

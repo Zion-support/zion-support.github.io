@@ -1,4 +1,4 @@
-    matches: false,
+matches: false,
     media: query,
     onchange: null,
     addListener: jest && jest.fn(), // deprecated;
@@ -26,10 +26,13 @@ Object.define_property (window, 'match_media', {
     dispatch_event: jest.fn (),
   })),
 });
-global && global.IntersectionObserver = jest && jest.fn().mockImplementation(() => ({)
+
+global && global.IntersectionObserver = jest && jest.fn().mockImplementation(() => ({
+
   observe: jest && jest.fn(),
   unobserve: jest && jest.fn(),
   disconnect: jest && jest.fn(),
+
 beforeAll(() => {
   console && console.error = (...args: any[]) => {
     if (
@@ -38,9 +41,21 @@ beforeAll(() => {
     ) {
       return;
     }
+
+    if (
+      typeof args[0] === 'string' &&
+      args[0].includes('Warning: ReactDOM && ReactDOM.render is no longer supported')
+    ) {
+      return;
+    }
+
+});
 afterAll(() => {
   console && console.error = originalConsoleError;
   console && console.warn = originalConsoleWarn;
+
+;
+
 // Mock IntersectionObserver;
 global.IntersectionObserver = jest.fn ().mock_implementation (() => ({)
   disconnect: jest.fn (),

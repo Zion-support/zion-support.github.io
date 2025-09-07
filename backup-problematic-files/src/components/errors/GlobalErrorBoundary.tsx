@@ -1,4 +1,3 @@
-use client';
 ;
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -28,6 +27,60 @@ interface ErrorBoundaryProps {;
 export class GlobalErrorBoundary extends Component<ErrorBoundaryProps ErrorBoundaryState> {;
 
   static getDerivedStateFromError(error:Error):Partial<ErrorBoundaryState> {;
+
+      logErrorToProduction('Error:', { data:error });
+      logErrorToProduction('Error Info:', { data:errorInfo });
+      logErrorToProduction('Enhanced Error:', { data:enhancedError });
+      console.groupEnd();
+    }
+;
+    // Report to Sentry;
+    Sentry.withScope((scope) => {;
+      scope.setTag('errorBoundary', this.props.context || 'GlobalErrorBoundary');
+      scope.setLevel('error');
+      scope.setContext('errorInfo', {;
+        componentStack:errorInfo.componentStack,;
+        retryCount:this.state.retryCount;
+      });
+      ;
+      Sentry.captureException(error);
+    });
+;
+    // Custom error handler;
+    if (this.props.onError) {;
+      this.props.onError(error, errorInfo);
+    }
+;
+    this.setState({;
+      errorInfo,;
+      errorId;
+    });
+  }
+
+  }
+;
+  private generateErrorId():string {;
+    return `err_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+  }
+;
+  private getUserId():string | null {;
+    // Try to get user ID from various sources;
+    if (typeof window !== 'undefined') {;
+      try {;
+        // Check localStorage, sessionStorage, or cookies;
+        return localStorage.getItem('userId') || ;
+               sessionStorage.getItem('userId') || ;
+               null;
+      } catch {;
+        return null;
+      }    }
+    return null;
+  }
+
+      }
+    } catch (err) {;
+      logErrorToProduction('Failed to report error:', { data:err });
+    }
 
                        this.state.retryCount < (this.props.maxRetries || 3);
       return (;
@@ -73,8 +126,6 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps ErrorBound
                     <Home className="h-4 w-4" />;"
 
                   <Button ;
-                    onClick={() => this.setState({ showDetails: !this.state.showDetails ;})}
-                    <Bug className="h-4 w-4" />;"
 
                 <AnimatePresence>;
 
@@ -102,7 +153,10 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps ErrorBound
                             ;                          )}
                     </motion.div>;
                   )}
-  const [error, setError] = React.useState<Error | null>(null);
+
+}
+;
+// Higher-order component for adding error boundaries;
 
 export const withErrorBoundary = <P extends object>(;
 
@@ -113,14 +167,26 @@ export const withErrorBoundary = <P extends object>(;
 
       <Component {...props} />;
 
-    ;)
+'use client' import { ;
+  {;
+  React, {;
+  Component,  ErrorInfo, ReactNode ';
+ } from "react";
+import * as Sentry from '@sentry/nextjs' error: Error | null errorInfo: ErrorInfo | null errorId: string | null retryCount: number userFeedback: string showDetails: boolean ;
+}interface ErrorBoundaryProps {;
+  children: ReactNode fallback?: ReactNode onError?: (error: Error, errorInfo: ErrorInfo) => void enableRetry?: boolean maxRetries?: number showReportButton?: boolean context?: string ;
+}constructor (props: ErrorBoundaryProps) {;
+  super (props) this.state = {';
+  hasError: false, error: null, errorInfo: null, errorId: null, retryCount: 0,  userFeedback: '', showDetails: false ;
+}
+
 }static getDerivedStateFromError (error: Error) : Partial<ErrorBoundaryState> {;
 
 }const severity = this.getErrorSeverity (this.state.error) const suggestion = this.getErrorSuggestion (this.state.error) const canRetry = this.props.enableRetry !== false && this.state.retryCount < (this.props.maxRetries || 3) return (<div className="min-h-screen flex items-center justify-center p-4 bg-gradient-to-br from-red-50 to-orange-50 dark:from-red-950/20 dark:to-orange-950/20" > <motion.div initial= {;"
 }> <Card className="w-full max-w-2xl border-red-200 bg-white dark:bg-gray-900" > <CardHeader className="text-center" > <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-red-100 dark:bg-red-900/20" > <AlertTriangle className="h-8 w-8 text-red-600 dark:text-red-400" /> </div> <CardTitle className="text-2xl font-bold text-gray-900 dark:text-gray-100" > Oops! Something went wrong  <div className="flex items-center justify-center gap-2 mt-2" > <Badge variant= {';
 
 } ID: {;)
-}) ;
+});
 }componentWillUnmount () {;
   //Clear any pending retry timeouts this.retryTimeouts.forEach (timeout => clearTimeout (timeout) ) ;
 }private generateErrorId () : string {;
@@ -165,7 +231,7 @@ export const withErrorBoundary = <P extends object>(;
 }const retryDelay = Math.pow (2, this.state.retryCount) * 1000 //Exponential backoff const timeout = setTimeout ( () => {;
   this.setState ({;
   hasError: false;, error: null;, errorInfo: null;, errorId: null;,  retryCount: this.state.retryCount + 1;, showDetails: false ;
-}) ;
+});
 }, retryDelay) this.retryTimeouts.push (timeout) ;
 }private copyErrorDetails = async () => {;
   const errorDetails = {';
@@ -175,7 +241,7 @@ export const withErrorBoundary = <P extends object>(;
 }catch (err) {';
   logErrorToProduction ('Failed to copy error details: ';, {;
   data: err ;
-}) ;
+});
 }
 }private reportError = async () => {;
   if (!this.state.error || !this.state.errorId) return try {';
@@ -191,14 +257,14 @@ errorInfo: this.state.errorInfo;
 userFeedback: this.state.userFeedback;
 context: this.props.context;
 timestamp: new Date () .toISOString () ;
-}) ;
+});
 }) if (response.ok) {;
   //Show success message ;
 }
 }catch (err) {';
   logErrorToProduction ('Failed to report error: ';, {;
   data: err ;
-}) ;
+});
 }
 }private goHome = () => {';
   if (typeof window !== 'undefined') {';
@@ -252,5 +318,3 @@ pr-12325
 }//Higher-order component for adding error boundaries <GlobalErrorBoundary {;
   ...errorBoundaryProps ;
 }> <Component {;
-
-}/> ) WrappedComponent.displayName = `withErrorBoundary ($ {;)"`;

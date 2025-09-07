@@ -1,32 +1,30 @@
-interface EmailValidationResult {
-  email: string;
+email: string;
   is_valid: boolean;
-interface EmailValidationResult {
+interface EmailValidationResult {}
   email: string;
   isValid: boolean;
   score: number;
   suggestions: string[];
-  details: {
+  details: {}
     hasValidFormat: boolean;
     hasValidDomain: boolean;
     hasValidMX: boolean;
 
   }
-  try {
+  try {}
     const { email } = req && req.body;
-    // Extract domain
+    // Extract domain;
     const domain = email && email.split('@')[1];
     const hasValidDomain = domain && domain.length > 0;
-    // Check for common disposable email providers
-    const disposableDomains = [
-      'tempmail && tempmail.org',
-      'guerrillamail && guerrillamail.com',
-      'mailinator && mailinator.com',
-      '10minutemail && 10minutemail.com',
-      'temp-mail && mail.org',
-      'sharklasers && sharklasers.com',
+    // Check for common disposable email providers;
+    const disposableDomains = ['
+      'tempmail && tempmail.org','
+      'guerrillamail && guerrillamail.com','
+      'mailinator && mailinator.com','
+      '10minutemail && 10minutemail.com','
+      'temp-mail && mail.org','
+      'sharklasers && sharklasers.com','
       'getairmail && getairmail.com',
-
 
     isRoleBased: boolean;
     isFreeProvider: boolean;
@@ -50,4 +48,3 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
   },
 }
-

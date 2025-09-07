@@ -1,4 +1,3 @@
-
 export type ForumCategory = ;
   | 'getting-hired';
   | 'project-help';

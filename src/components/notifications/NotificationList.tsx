@@ -1,8 +1,0 @@
-
-
-
-  loading;
-  error;
-  notifications;
-  onMarkAsRead;
-

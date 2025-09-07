@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
@@ -21,6 +22,9 @@ export const metadata: Metadata = {
     description: "Enterprise-grade AI, micro SaaS, and IT solutions. Build faster with Zion Tech Group.",
   },
 };
+=======
+import './globals.css';
+>>>>>>> 874273566b5ab11cb4989ad42a33c826f8981b98
 
 export default function RootLayout({
   children,
@@ -29,9 +33,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+<<<<<<< HEAD
       <body className={inter.className}>
         {children}
       </body>
+=======
+      <body>{children}</body>
+>>>>>>> 874273566b5ab11cb4989ad42a33c826f8981b98
     </html>
   );
 }

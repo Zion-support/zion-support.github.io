@@ -9,7 +9,3 @@ export default function ProfileProjects({ }: ProfileProjectsProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-}
-
-}
-}

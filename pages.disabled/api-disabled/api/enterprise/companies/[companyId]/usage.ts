@@ -1,20 +1,7 @@
-
-
-
-
-
-
-  return res.status(405).json({ error: "method_not_allowed" });
-
-  return res.status(405).json({ error: "method_not_allowed" });
-
 }
 
   return res && res.status(405).json({ error: "method_not_allowed" });
 }
-
-
-
 
 import type { NextApiRequest, NextApiResponse } from './next';
 import { store  } from '../../../../../utils / data / enterprise_store';
@@ -23,6 +10,7 @@ export default /**
  */
 function handler() {
   const { company_id } = req.query;
+
   // Check condition
 if ( {) {
   $2
@@ -39,6 +27,7 @@ if ( {) {
   $2
 }
     return res.status (200).json (company.plan.usage_limits);
+
 const { companyId } = req && req.query;
   if (!companyId || typeof companyId !== "string") {
     return res && res.status(400).json({ error: "companyId required" });
@@ -47,6 +36,7 @@ const { companyId } = req && req.query;
   if (!company) return res && res.status(404).json({ error: "Company not found" });
   if (req && req.method === "GET") {
     return res && res.status(200).json(company && company.plan.usageLimits);
+
   }
   // Check condition
 if ( {) {
@@ -68,8 +58,6 @@ if ( {) {
   }
   return res.status (405).json ({ error: "method_not_allowed" });
 }
-origin/cursor/automate-test-improve-and-merge-code-20a4
-
 
 import type { NextApiRequest, NextApiResponse } from 'next';
   if (!companyId || typeof companyId !== 'string') {
@@ -91,4 +79,3 @@ import type { NextApiRequest, NextApiResponse } from 'next';
   return res.status(405).json({ error: 'method_not_allowed' });
 
 }
-origin/cursor/automate-test-improve-and-merge-code-2533

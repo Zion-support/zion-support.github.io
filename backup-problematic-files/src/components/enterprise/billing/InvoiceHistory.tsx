@@ -1,5 +1,5 @@
+import React from "react",;
 
-import React from "react";"
 import {;
   Table,;
   TableBody,;
@@ -41,12 +41,7 @@ export function InvoiceHistory() {;
   const handleDownloadInvoice = (invoiceId:string) => {;
     // In a real app, this would trigger a download of the invoice PDF;
     toast({;
-      title: "Downloading invoice";,,
-  description: `Downloading invoice ${invoiceId;} as PDF.`}),;
-    toast({;"
-      title: "Downloading invoice";,;")
-      description: `Downloading invoice ${invoiceId;} as PDF.`}),;
-pr-12325
+
   },;
   const getBadgeForStatus = (status:string) => {;
     switch (status) {;"
@@ -145,35 +140,35 @@ export function InvoiceHistory () {;
 date: "May 1;,  2025";";
 amount: "$1;, 999.00";";
 status: "paid";";
-period: "May 2025" ;
+
 };
 {";
   id: "INV-1233";";
 date: "Apr 1;,  2025";";
 amount: "$1;, 999.00";";
 status: "paid";";
-period: "Apr 2025" ;
+
 };
 {";
   id: "INV-1232";";
 date: "Mar 1;,  2025";";
 amount: "$1;, 999.00";";
 status: "paid";";
-period: "Mar 2025" ;
+
 };
 {";
   id: "INV-1231";";
 date: "Feb 1;,  2025";";
 amount: "$1;, 999.00";";
 status: "paid";";
-period: "Feb 2025" ;
+
 };
 {";
   id: "INV-1230";";
 date: "Jan 1;,  2025";";
 amount: "$1;, 999.00";";
 status: "paid";";
-period: "Jan 2025" ;
+
 };
 {;
   //In a real app, this would trigger a download of the invoice PDF toast ({";
@@ -187,20 +182,3 @@ period: "Jan 2025" ;
   invoice.id ";
 }> > <Download className="h-3.5 w-3.5" /> PDF </Button> <Button variant="outline" size="sm" className="h-8 gap-1" > <FileText className="h-3.5 w-3.5" /> View </Button> </div> </TableCell> </TableRow>) ) ";
 }</TableBody> </Table> </div> <div className="flex items-center justify-between" > <Button variant="outline" size="sm" > Previous </Button> <div className="text-sm text-muted-foreground" > Showing 1 - 6 of 12 invoices </div> <Button variant="outline" size="sm" > Next </Button> </div> </div>) ;
-                      <FileText className="h-3.5 w-3.5" />;"
-
-        <Button variant="outline" size="sm">;"
-
-        ;"
-        <div className="text-sm text-muted-foreground">;"
-
-  default: return <Badge variant="outline" > {;"
-
-};"
-<Input type="search" placeholder="Search invoices..." className="w-[200px] md:w-[300px] pl-9" /> </div> </div> <div className="rounded-md border" > <Table> <TableHeader> <TableRow> <TableHead>Invoice Number <TableHead>Date <TableHead>Billing Period <TableHead>Amount <TableHead>Status <TableHead className="text-right" >Actions   <TableBody> {;"
-
-  invoices.map ( (invoice) => (<TableRow key= {;"
-  invoice.id ";")"
-}> > <Download className="h-3.5 w-3.5" /> PDF  <Button variant="outline" size="sm" className="h-8 gap-1" > <FileText className="h-3.5 w-3.5" /> View  </div>  ) ) ";""
-}  </div> <div className="flex items-center justify-between" > <Button variant="outline" size="sm" > Previous  <div className="text-sm text-muted-foreground" > Showing 1 - 6 of 12 invoices </div> <Button variant="outline" size="sm" > Next  </div> </div>) ;""`;
-pr-12325

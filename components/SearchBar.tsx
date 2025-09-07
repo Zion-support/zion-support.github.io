@@ -1,6 +1,3 @@
-interface SearchResult {
-  title: string;, description: string
-  url: string;, type: 'service' | 'page' | 'category'
 import React, { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
 
@@ -10,6 +7,7 @@ interface SearchResult {
   url: string;
   type: 'service' | 'page' | 'category';
 }
+
 const SearchBar: React.FC = () => {
 interface SearchResult {;
   title: string;, description: string;,;
@@ -39,10 +37,13 @@ const SearchBar: React.FC = () => {
       type: 'category';,
     },
     {
-      title: 'IT Services';,
-      description: 'Comprehensive IT solutions including Cloud Migration;, Cybersecurity, and more',
-      url: '/it-services';,
-      type: 'category';,
+
+    {
+      title: 'Cloud Cost Guard',
+      description: 'FinOps Assistant for anomaly detection and cost optimization',
+      url: '/services',
+      type: 'service',
+
     },
     {
       title: 'Cloud Cost Guard';,
@@ -192,11 +193,7 @@ const SearchBar: React.FC = () => {
 };
 
 export default SearchBar;
-interface SearchResult {
-  title: string, description: string
-  url: string, type: 'service' | 'page' | 'category'
-  title: string;, description: string
-  url: string;, type: 'service' | 'page' | 'category'
+
 pr-12243
 import React, { useState } from 'react';
 import { Search, X } from 'lucide-react';
@@ -207,6 +204,7 @@ interface SearchBarProps {
   onSearch?: (query: string) => void;
   placeholder?: string;
   className?: string;
+
 }
 
 const SearchBar: React.FC<SearchBarProps> = ({
@@ -238,7 +236,7 @@ const SearchBar: React.FC<SearchBarProps> = ({
     setResults(filteredResults);
     setIsOpen(true);
     setIsLoading(false);
-pr-12243
+
   };
 
   const handleClear = () => {
@@ -263,6 +261,7 @@ pr-12243
               type="button"
               onClick={handleClear}
               className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600"
+
   const [results, setResults] = useState<SearchResult[]>([]);
   const [isOpen, setIsOpen] = useState(false);
   const [selectedIndex, setSelectedIndex] = useState(-1);
@@ -375,6 +374,7 @@ origin/cursor/automate-test-fix-improve-and-merge-code-a7a7
               aria-selected={index === selectedIndex}
               tabIndex={-1}
 origin/cursor/analyze-improve-and-deploy-application-0a01
+
             >
               <X className="w-4 h-4" />
             </button>
@@ -386,6 +386,3 @@ origin/cursor/analyze-improve-and-deploy-application-0a01
 };
 
 export default SearchBar;
-export default SearchBar;
-main
-pr-12243

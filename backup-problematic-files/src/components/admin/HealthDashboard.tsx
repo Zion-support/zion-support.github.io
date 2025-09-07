@@ -1,8 +1,3 @@
-import React, { useState, useEffect } from 'react';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { AlertTriangle, CheckCircle, XCircle, Clock, TrendingUp, Activity } from 'lucide-react';
 ;
 interface HealthData {;
@@ -79,24 +74,26 @@ const HealthDashboard:React.FC = () => {;
             size="sm";"
             onClick={() => setAutoRefresh(!autoRefresh)}
 
-          <Button onClick={fetchHealthData} size="sm">;"
+              </div>;
+            </div>;
+          </CardContent>;
+        </Card>;
 
-        </div>;
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-4">;"
-        <Card>;
-              <div className="ml-2">;"
-                <p className="text-sm font-medium text-gray-600">Overall Health</p>;""
-                <p className="text-2xl font-bold">{healthData.health.score}/100</p>;"
-              <Clock className="w-5 h-5 text-blue-500" />;"
-                <p className="text-sm font-medium text-gray-600">Uptime</p>;""
-                <p className="text-2xl font-bold">{formatUptime(healthData.uptime)}</p>;"
-              <TrendingUp className="w-5 h-5 text-orange-500" />;"
-                <p className="text-sm font-medium text-gray-600">Error Rate</p>;""
-                <p className="text-2xl font-bold">{healthData.metrics.errorRate.toFixed(1)}%</p>;"
-              <Activity className="w-5 h-5 text-purple-500" />;"
-                <p className="text-sm font-medium text-gray-600">Response Time</p>;""
-                <p className="text-2xl font-bold">{healthData.metrics.responseTime.toFixed(0)}ms</p>;"
-      <Tabs defaultValue="overview" className="space-y-4">;"
+              </div>;
+            </div>;
+          </CardContent>;
+        </Card>;
+
+              </div>;
+            </div>;
+          </CardContent>;
+        </Card>;
+
+              </div>;
+            </div>;
+          </CardContent>;
+        </Card>;
+      </div>;
 
         <TabsList>;
           <TabsTrigger value="overview">Overview;""
@@ -110,76 +107,32 @@ const HealthDashboard:React.FC = () => {;
 
                 <CardTitle>System Information;
               <CardContent>;
-                <div className="space-y-2">;"
-                  <div className="flex justify-between">;"
-                    <span className="text-sm text-gray-600">Environment:</span>;""
-                    <Badge variant="outline">{healthData.environment};"
-                    <span className="text-sm text-gray-600">Version:</span>;""
-                    <span className="text-sm font-mono">{healthData.version}</span>;"
-                    <span className="text-sm text-gray-600">Memory Usage:</span>;""
-                    <span className="text-sm">{formatBytes(healthData.metrics.memoryUsage)}</span>;"
-                    <span className="text-sm text-gray-600">Last Updated:</span>;""
-                    <span className="text-sm">{new Date(healthData.timestamp).toLocaleTimeString()}</span>;"
 
-                <CardTitle className="flex items-center">;"
-                  <AlertTriangle className="w-4 h-4 mr-2" />;"
+              </CardContent>;
+            </Card>;
+          </div>;
+        </TabsContent>;
 
-                  <ul className="space-y-2">;"
-</ul>"
-                      <li key={index} className="text-sm text-red-600 flex items-start">;"
-</li>"
-                        <span className="w-2 h-2 bg-red-400 rounded-full mt-1.5 mr-2 flex-shrink-0"></span>;"
-                      </li>;
-                  </ul>;"
-                  <p className="text-green-600 text-sm">No issues detected</p>;"
-        <TabsContent value="errors" className="space-y-4">;"
+                  </div>;
+                </div>;
+              </CardContent>;
+            </Card>;
 
+              </CardContent>;
+            </Card>;
+          </div>;
+        </TabsContent>;
 
-                <CardTitle>Error Summary;
-                <div className="grid grid-cols-2 gap-4">;"
-                  <div className="text-center">;"
-                    <p className="text-2xl font-bold text-red-600">{healthData.errors.summary.critical}</p>;""
-                    <p className="text-sm text-gray-600">Critical</p>;"
-                    <p className="text-2xl font-bold text-orange-600">{healthData.errors.summary.high}</p>;""
-                    <p className="text-sm text-gray-600">High</p>;"
-                    <p className="text-2xl font-bold text-yellow-600">{healthData.errors.summary.medium}</p>;""
-                    <p className="text-sm text-gray-600">Medium</p>;"
-                    <p className="text-2xl font-bold text-gray-600">{healthData.errors.summary.low}</p>;""
-                    <p className="text-sm text-gray-600">Low</p>;"
+              </CardContent>;
+            </Card>;
+          </div>;
+        </TabsContent>;
 
+            </CardContent>;
+          </Card>;
+        </TabsContent>;
+      </Tabs>;
 
-                <CardTitle>Top Errors;
-                      <div key={index} className="border-l-4 border-red-400 pl-3 py-1">;"
-                        <p className="text-sm font-medium">{error.description}</p>;""
-                        <p className="text-xs text-gray-600">;"
-</p>
-                        </p>;
-                  <p className="text-gray-600 text-sm">No recurring errors</p>;"
-        <TabsContent value="metrics" className="space-y-4">;"
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">;"
-              <CardHeader className="pb-2">;"
-                <CardTitle className="text-sm">Error Rate;"
-                <p className="text-2xl font-bold">{healthData.metrics.errorRate.toFixed(2)}%</p>;""
-                <p className="text-xs text-gray-600">Errors per request</p>;"
-                <CardTitle className="text-sm">Critical Errors;"
-                <p className="text-2xl font-bold text-red-600">{healthData.metrics.criticalErrors}</p>;""
-                <p className="text-xs text-gray-600">In last hour</p>;"
-                <CardTitle className="text-sm">Avg Response;"
-                <p className="text-2xl font-bold">{healthData.metrics.responseTime.toFixed(0)}ms</p>;""
-                <p className="text-xs text-gray-600">API response time</p>;"
-                <CardTitle className="text-sm">Memory Usage;"
-                <p className="text-2xl font-bold">{formatBytes(healthData.metrics.memoryUsage)}</p>;""
-                <p className="text-xs text-gray-600">JavaScript heap</p>;"
-        <TabsContent value="recommendations" className="space-y-4">;"
-
-
-
-              <CardTitle>Improvement Recommendations;
-                <ul className="space-y-3">;"
-                    <li key={index} className="flex items-start">;"
-                      <CheckCircle className="w-4 h-4 text-green-500 mt-0.5 mr-2 flex-shrink-0" />;"
-                      <span className="text-sm">{rec}</span>;"
-                <p className="text-gray-600">No specific recommendations at this time</p>;"
 return (<Badge variant= {;
   variant ;"
 }className="ml-2" > {;"
@@ -197,12 +150,3 @@ return (</div> <div className="flex items-center space-x-2" > <Button > {';
 };
 export default HealthDashboard;
 '"
-</div>)
-}Auto-refresh  Refresh  </div> </div> </div> </div>   <Card> </div> </div>   <Card> </div> </div>   <Card> </div> </div>   </div> <TabsList> <TabsTrigger value="overview" >Overview <TabsTrigger value="errors" >Error Analysis <TabsTrigger value="metrics" >Metrics <TabsTrigger value="recommendations" >Recommendations  <TabsContent value="overview" className="space-y-4" > <div className="grid grid-cols-1 lg:grid-cols-2 gap-4" > <Card> <CardHeader> <CardTitle>System Information  <CardContent> </div> </div>   <Card> <CardHeader> </li>) ) ";""
-}</ul>) : (<p className="text-green-600 text-sm" >No issues detected</p>) ";""
-}  </div>  <TabsContent value="errors" className="space-y-4" > <div className="grid grid-cols-1 lg:grid-cols-2 gap-4" > <Card> <CardHeader> <CardTitle>Error Summary  <CardContent> </div> </div>   <Card> <CardHeader> <CardTitle>Top Errors  <CardContent> </p> </div>) ) ";"
-}</div>) : (<p className="text-gray-600 text-sm" >No recurring errors</p>) ";""
-}  </div>  <TabsContent value="metrics" className="space-y-4" > <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4" > <Card> <CardHeader className="pb-2" > <CardTitle className="text-sm" >Error Rate  <CardContent>   <Card> <CardHeader className="pb-2" > <CardTitle className="text-sm" >Critical Errors  <CardContent>   <Card> <CardHeader className="pb-2" > <CardTitle className="text-sm" >Avg Response  <CardContent>   <Card> <CardHeader className="pb-2" > <CardTitle className="text-sm" >Memory Usage  <CardContent>   </div>  <TabsContent value="recommendations" className="space-y-4" > <Card> <CardHeader> <CardTitle>Improvement Recommendations  <CardContent> </li>) ) ";""
-}</ul>) : (<p className="text-gray-600" >No specific recommendations at this time</p>) ;"
-}    </div>) ;"
-pr-12325

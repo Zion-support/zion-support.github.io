@@ -1,15 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-;
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
 import React from 'react';
 import Head from 'next/head';
-
-<<<<<<< HEAD
-=======
 
 import React from 'react';
 import Head from 'next/head';
@@ -20,7 +10,6 @@ interface LayoutProps {
   description?: string;
 }
 
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
 export default function Layout({ children, title = "Zion Tech Group", description = "Leading technology solutions provider" }: LayoutProps) {
 
 class ErrorBoundary extends React.Component {
@@ -196,9 +185,6 @@ const Layout: React.FC<LayoutProps> = ({ children ;}) => {
 };
 export default Layout;
 
-
-
-pr-12243
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Header from './Header';
@@ -232,19 +218,12 @@ interface LayoutProps {
   ogTitle?: string;
   ogDescription?: string;
   ogUrl?: string;
-<<<<<<< HEAD
-=======
-interface LayoutProps {
->>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
+
   children: React.ReactNode;
   title?: string;
   description?: string;
 }
-<<<<<<< HEAD
-=======
-}
 
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
 export default function Layout({ 
   children, 
   title = "Zion Tech Group - Leading AI & Technology Solutions",
@@ -261,99 +240,13 @@ export default function Layout({
       <Head>
         <title>{title}</title>
         <meta name="description" content={description} />
-<<<<<<< HEAD
-=======
 
-export default function Layout({ children, title, description }: LayoutProps) {
-  return (
-    <>
-      <Head>
-        <title>{title || 'Zion Tech Group'}</title>
-        <meta name="description" content={description || 'Leading provider of AI-powered solutions and digital transformation services.'} />
->>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
-=======
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="min-h-screen bg-gray-50">
         {children}
+
       </div>
     </>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
-        <meta name="description" content={description} />
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
-=======
-}
->>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
-=======
-}
-        <meta name="keywords" content={keywords} />
-        <meta name="keywords" content={keywords} />
-
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-        
-        {/* Open Graph */}
-        <meta property="og:title" content={ogTitle || title} />
-        <meta property="og:description" content={ogDescription || description} />
-        <meta property="og:image" content={ogImage} />
-        <meta property="og:url" content={ogUrl || "https://ziontechgroup.com"} />
-        <meta property="og:type" content="website" />
-        
-        {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={ogTitle || title} />
-        <meta name="twitter:description" content={ogDescription || description} />
-        <meta name="twitter:image" content={ogImage} />
-        
-        <link rel="canonical" href={ogUrl || "https://ziontechgroup.com"} />
-        <meta property="og: title" content={ogTitle || title;} />
-        <meta property="og: description" content={ogDescription || description;} />
-        <meta property="og: image" content={ogImage;} />
-        {ogUrl && <meta property="og: url" content={ogUrl;} />}
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      {children}
-    </>
-  );
-}
-import React, { ReactNode } from 'react';
-
-}
-
-interface LayoutProps {
-  children: ReactNode;
-}
-
-const Layout: React.FC<LayoutProps> = ({ children ;}) => {
-  return (
-    <main className="min-h-screen">
-      {children}
-    </main>
-    <div className="min-h-screen flex flex-col">
-      <Navigation />
-      <main className="flex-1">{children}</main>
-      <Footer />
-    </div>
-origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
-  );
-};
-
-export default Layout;
-
-
-
-
-
-main
-main
-origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
-pr-12243
-}
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee

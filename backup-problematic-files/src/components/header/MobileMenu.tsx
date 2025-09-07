@@ -1,5 +1,3 @@
-import Link from 'next/link';
-import { useRouter } from 'next/router';
 import { Home, Search, BriefcaseIcon, MessageSquare, User, X, MessageCircle } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { useAuth } from '@/hooks/useAuth';
@@ -138,6 +136,3 @@ const baseItems = [ {';
 
 pr-12325
 }</span>) ;
-}</div> {;"
-}) ) ";""
-}</nav> <div className="mt-6 px-6" > <ModeToggle /> </div> </div>) ;""`;

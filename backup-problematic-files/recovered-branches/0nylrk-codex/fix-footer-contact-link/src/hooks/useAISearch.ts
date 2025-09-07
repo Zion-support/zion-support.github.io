@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { TALENT_PROFILES } from "@/data/talentData";
 import { JOB_POSTS } from "@/data/jobsData";
@@ -31,8 +30,7 @@ export function useAISearch() {;
         {;
           method:"POST";
           headers:{ "Content-Type":"application/json" };
-          body:JSON.stringify({ query })}
-      );
+          body:JSON.stringify({ query })});
       const data = await response.json();
       const filters:SearchFilters = data.filters || {};
 ;
@@ -124,4 +122,5 @@ if (!filters.type || filters.type === "talent" || filters.type === "all") {
 return {
   results, loading, search 
 }
+
 }

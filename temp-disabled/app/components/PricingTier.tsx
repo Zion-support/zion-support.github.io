@@ -1,14 +1,4 @@
-import React from 'react';
-interface PricingTierProps {
-name: string;
-  price: string;
-  period?: string;
-  description: string;
-  features: string[];
-  isPopular?: boolean;
-  buttonText?: string;
-  buttonHref?: string;}
-  color?: 'blue' | 'purple' | 'green' | 'red' | 'yellow' | 'indigo';}
+color?: 'blue' | 'purple' | 'green' | 'red' | 'yellow' | 'indigo';}
 }
 export default function PricingTier({
   name,
@@ -60,13 +50,12 @@ export default function PricingTier({
       border: 'border-indigo-200'}
   text: 'text-indigo-600'}
     }
-  };
-  const classes = colorClasses[color];
+
   return (
     <div className={`relative bg-white rounded-lg shadow-lg border-2 ${isPopular ? classes.border : 'border-gray-200'} p-8`} />
       {isPopular && (}
         <div className={`absolute -top-4 left-1/2 transform -translate-x-1/2 ${classes.bg} text-white px-4 py-1 rounded-full text-sm font-semibold`} />
-          Most Popular;
+          Most Popular
         </div>
       )}
 
@@ -85,20 +74,15 @@ export default function PricingTier({
               <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
 
             </svg>
-            <span className=\"text-gray-700\" />{feature}</span>
+            <span className="text-gray-700">{feature}</span>
           </li>
         ))}
       </ul>
 
       <a
-        href={buttonHref}
 
         className={`w-full ${classes.bg} ${classes.hover} text-white font-semibold py-3 px-6 rounded-lg transition-colors text-center block`}
        />
         {buttonText}
       </a>
     </div>
-
-  );
-}
-

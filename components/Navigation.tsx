@@ -29,7 +29,17 @@ const Navigation = () => {
     { name: 'Contact';, href: '#contact' ;},
   ];
 
-
+  return (
+    <nav className="bg-slate-900/95 backdrop-blur-sm border-b border-gray-800 sticky top-0 z-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-16">
+          {/* Logo */}
+          <Link href="/" className="flex items-center space-x-2">
+            <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+              <span className="text-white font-bold text-lg">Z</span>
+            </div>
+            <span className="text-white text-xl font-bold">Zion Tech Group</span>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
@@ -170,7 +180,7 @@ const Navigation = () => {
 };
 
 export default Navigation;
-pr-12243
+
 import React, { useState } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
@@ -201,6 +211,7 @@ origin/automation-improvements-final
 import SearchModal from "./SearchModal";
 
 export default function Navigation() {
+
 export default function Navigation() {;
 export default function Navigation() {;
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -924,7 +935,6 @@ export default function Navigation() {;
     </>);
 }
 
-
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { 
@@ -1189,54 +1199,8 @@ const Navigation: React.FC = () => {
         </div>
       )}
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+
     </nav>
-  );
-};
-
-export default Navigation;
-
-main
-origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
-pr-12243
-
-        {/* Mobile Navigation */}
-        <AnimatePresence>
-          {isOpen && (
-            <motion.div
-              className="md:hidden overflow-hidden"
-              variants={mobileMenuVariants}
-              initial="closed"
-              animate="open"
-              exit="closed"
-            >
-              <div className="py-4 space-y-2">
-                {navItems.map((item, index) => (
-                  <motion.a
-                    key={item.name}
-                    href={item.href}
-                    className={`block py-3 px-4 rounded-lg font-medium transition-colors duration-200 hover:bg-gray-100 ${
-                      scrolled ? 'text-gray-700' : 'text-white hover: bg-white/10';
-                    }`}
-                    variants={mobileItemVariants}
-                    onClick={() => setIsOpen(false)}
-                  >
-                    {item.name}
-                  </motion.a>
-                ))}
-                <motion.button
-                  className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-4 rounded-lg transition-all duration-200 flex items-center justify-center gap-2 group mt-4"
-                  variants={mobileItemVariants}
-                  whileTap={{ scale: 0.95 ;}}
-                >
-                  Get Started
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </motion.button>
-              </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
-      </div>
-    </motion.nav>
   );
 };
 

@@ -1,4 +1,4 @@
-  test('contact form is accessible', async ({ page }) => {
+test('contact form is accessible', async ({ page }) => {
     await page.goto('/contact');
     const accessibilityScanResults = await new AxeBuilder({ page }).analyze(;);
     expect(accessibilityScanResults.violations).toEqual([])});
@@ -30,4 +30,3 @@ export default function A11y.spec({ }: A11y.specProps) {
 </div>
       <h1>A11y.spec</h1>
       <p>This component is currently under development.</p>
-    </div>)

@@ -1,26 +1,44 @@
-
-
 import Layout from './layout/Layout';
 import { motion } from 'framer-motion';
 
-import { ArrowRight, Play, TrendingUp, Brain, Shield, Rocket, Globe, Cpu, Database, Atom, Target, Star, Sparkles as SparklesIcon;
-  Brain as BrainIcon, Atom as AtomIcon, Shield as ShieldIcon, Rocket as RocketIcon, Zap, Eye, Heart, Infinity;}
-  ChevronDown, CheckCircle, Users, Award, Clock;}
-  } from 'lucide-react';
-import { Service   } from '../types';
-// Import our new revolutionary services;
-import { revolutionary2044AdvancedMicroSaas   } from '../data/revolutionary-2044-advanced-micro-saas';
-import { revolutionary2044ITServices   } from '../data/revolutionary-2044-it-services';
-import { revolutionary2044AIServices   } from '../data/revolutionary-2044-ai-services';
-import { innovative2025AIAutonomousEcosystemV3   } from '../data/2025-innovative-ai-autonomous-ecosystem-v3';
-import { emerging2025TechBreakthroughsV4   } from '../data/2025-emerging-tech-breakthroughs-v4';
-import { advanced2025ITInfrastructureServicesV2   } from '../data/2025-advanced-it-infrastructure-services-v2';
-// Import our new 2025 real enterprise AI services;
-import { realEnterpriseAIServices2025   } from '../data/2025-real-enterprise-ai-services';
-import { innovativeITInfrastructureServices2025   } from '../data/2025-innovative-it-infrastructure-services';
-import { innovativeMicroSaasSolutions2025  } from '../data/2025-innovative-micro-saas-solutions';
-// Lazy load new components for better performance;
+}%`;
+}/>) );
+}</div> </div> {}
+  /* Floating geometric shapes - optimized animations */;
+}<motion.div /> </div> </div> </Layout>);"
+}return (<> <Head> <title > Zion Tech Group - Revolutionary 2044 Technology Solutions | AI Consciousness & Quantum Computing</title> <meta name="description" content="Pioneering the future of technology with revolutionary AI consciousness, quantum computing, and autonomous solutions that transform businesses worldwide. Experience the future with Zion Tech Group." /> <meta name="keywords" content="AI consciousness, quantum computing, space technology, cybersecurity, autonomous solutions, business intelligence, Zion Tech Group" /> <meta name="author" content="Zion Tech Group" /> <meta name="robots" content="index, follow" /> {}
+  /* Structured Data */;
+}<script;
 
-const ServiceCard = null;
+  category.id;
+}on_click= {}
+  () => handleCategoryChange (category.id);
+}className= {}`
+  `px - 6 py - 3 rounded - full border transition - all duration - 300 flex items - center gap - 2 $ {}`
+  selected_category === category.id ? `bg - gradient - to - r $ {}
+  category.color;'`
+}text - white border - transparent shadow - lg`: 'bg - gray - 900 / 50 text - gray - 300 border - gray - 600 hover:border - gray - 500 hover:text - white';`
+}`;
+}> </button>) );
+}</div> key= {}
+  service.id;
+}className= {}`
+  `relative group cursor - pointer $ {'
+  index === currentServiceIndex ? 'scale - 105' : 'scale - 100';`
+}transition - transform duration - 500`;
+}on_click= {}
+  () => handleServiceClick (service);
+}while_hover= {}
+  {}
+  scale: 1.05;
+}while_tap= {}
+  {}
+  scale: 0.95;
 
-
+  opacity: 0, coordinate_y: 30;
+}whileInView= {}
+  {}
+  opacity: 1, coordinate_y: 0;
+}transition= {}
+  {}
+  duration: 0.8;

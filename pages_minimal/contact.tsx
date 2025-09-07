@@ -1,8 +1,9 @@
-
-
 export default function Contact() {;
 
   return (
+
+    </div>;
+
     <div>;
       <main>;
         <h1>Contact Us</h1>;
@@ -14,13 +15,15 @@ export default function Contact() {;
         <p>Get in touch with our team for your IT and AI service needs.</p>
       </main>
     </div>;
+
   );
+
 import React from './react';
 ;
-export default /**
- * Contact - Function description
+export default /**;
+ * Contact - Function description;
  */
-function Contact() {
+function Contact() {}
   return (
     <div>;
       <main>;
@@ -29,17 +32,3 @@ function Contact() {
       </main>;
     </div>);
 }
-
-    <div>;
-</div>
-      <main>;
-</main>
-        <h1>Contact Us</h1>;
-        <p>Get in touch with our team for your IT and AI service needs.</p>;
-      </main>;
-    </div>;
-        <h1 > Contact Us</h1>;
-        <p > Get in touch with our team for your IT and AI service needs.</p>;
-    </div>);
-pr-12325
-

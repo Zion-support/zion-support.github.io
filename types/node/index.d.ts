@@ -1,6 +1,5 @@
-
-
 // eslint-disable-next-line @typescript-eslint/no-empty-object-type;
+interface Buffer {}
 
 declare const __dirname: string;
 declare const __filename: string;
@@ -8,8 +7,8 @@ export {}
 declare const __dirname: string,;
 declare const __filename: string,;
 
-
-
+declare const __dirname: string,;
+declare const __filename: string,;
 
 interface Buffer {  } catch (error) {
     console.error("Error:", error);
@@ -19,45 +18,13 @@ interface Buffer {  } catch (error) {
 declare const __dirname: string;
 declare const __filename: string;
 
-
-
 export {};
-
 
 export {};
 export {};
 export {};
-
-// eslint - disable - next - line @typescript - eslint / no - empty - object - type;
-interface Buffer {}
-export {}
-
-
-
-
-
-export {};
-// eslint - disable - next - line @typescript - eslint / no - empty - object - type;
-interface Buffer {}
-export {}
-
 
 declare module 'node:*' {
   const value: any;
   export = value;
 }
-
-interface Buffer {  } catch (error) {
-    console.error("Error:", error);""
-    return res.status(500).json({ error: "Internal server error" });"
-  }
-// eslint - disable - next - line @typescript - eslint / no - empty - object - type;
-interface Buffer {}
-"
-// eslint-disable-next-line @typescript-eslint/no-empty-object-type
-interface Buffer {}
-
-declare const __dirname: string;
-declare const __filename: string;
-
-export {};

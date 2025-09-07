@@ -1,3 +1,280 @@
+export interface TokenSet {
+
+export interface TokenSet {;
+
+export type DesignMapSection = {
+  id: string;
+  title: string;
+  description?: string;
+  items: { id: string; title: string; description?: string }[];
+};
+
+export type DesignMap = {
+  route: string;
+  products: {
+    foundations: DesignMapSection[];
+    talent: DesignMapSection[];
+    client: DesignMapSection[];
+    aiTools: DesignMapSection[];
+    dao: DesignMapSection[];
+    admin: DesignMapSection[];
+    mobile: DesignMapSection[];
+  };
+};
+
+export function getZionDesignMap(): DesignMap {
+  return {
+    route: '/design-map',
+    products: {
+      foundations: [
+        {
+          id: 'foundations-colors',
+          title: 'Color system',
+          items: [
+            { id: 'light', title: 'Light' },
+            { id: 'dark', title: 'Dark' },
+          ],
+        },
+        {
+          id: 'foundations-typography',
+          title: 'Typography',
+          items: [
+            { id: 'heading-scale', title: 'Heading scale' },
+            { id: 'body-text', title: 'Body text' },
+            { id: 'mono', title: 'Monospace' },
+          ],
+        },
+        {
+          id: 'foundations-icons',
+          title: 'Icon set',
+          items: [
+            { id: 'system', title: 'System icons' },
+            { id: 'product', title: 'Product icons' },
+          ],
+        },
+        {
+          id: 'foundations-components',
+          title: 'Component library',
+          items: [
+            { id: 'buttons', title: 'Buttons' },
+            { id: 'cards', title: 'Cards' },
+            { id: 'badges', title: 'Badges' },
+            { id: 'tags', title: 'Tags' },
+          ],
+        },
+      ],
+      talent: [
+        {
+          id: 'talent-resume',
+          title: 'Resume builder',
+          items: [
+            { id: 'sections', title: 'Sections' },
+            { id: 'templates', title: 'Templates' },
+            { id: 'export', title: 'Export' },
+          ],
+        },
+        {
+          id: 'talent-apply',
+          title: 'Job application flow',
+          items: [
+            { id: 'job-list', title: 'Job list' },
+            { id: 'apply-form', title: 'Apply form' },
+            { id: 'status', title: 'Status' },
+          ],
+        },
+        {
+          id: 'talent-portfolio',
+          title: 'Portfolio / project cards',
+          items: [
+            { id: 'grid', title: 'Grid' },
+            { id: 'detail', title: 'Detail' },
+          ],
+        },
+        {
+          id: 'talent-interview',
+          title: 'Interview & chat UI',
+          items: [
+            { id: 'chat', title: 'Chat' },
+            { id: 'interview', title: 'Interview' },
+          ],
+        },
+        {
+          id: 'talent-dashboard',
+          title: 'Dashboard with stats',
+          items: [
+            { id: 'overview', title: 'Overview' },
+            { id: 'charts', title: 'Charts' },
+          ],
+        },
+      ],
+      client: [
+        {
+          id: 'client-job-post',
+          title: 'Job post flow',
+          items: [
+            { id: 'draft', title: 'Draft' },
+            { id: 'publish', title: 'Publish' },
+          ],
+        },
+        {
+          id: 'client-team-builder',
+          title: 'Team builder',
+          items: [
+            { id: 'roles', title: 'Roles' },
+            { id: 'invite', title: 'Invite' },
+          ],
+        },
+        {
+          id: 'client-shortlist-offer',
+          title: 'Shortlist + offer page',
+          items: [
+            { id: 'shortlist', title: 'Shortlist' },
+            { id: 'offer', title: 'Offer' },
+          ],
+        },
+        {
+          id: 'client-milestone-quote',
+          title: 'Milestone + quote view',
+          items: [
+            { id: 'milestones', title: 'Milestones' },
+            { id: 'quotes', title: 'Quotes' },
+          ],
+        },
+      ],
+      aiTools: [
+        {
+          id: 'ai-gpt-prompts',
+          title: 'GPT prompt modals',
+          items: [
+            { id: 'prompt-modal', title: 'Prompt modal' },
+            { id: 'history', title: 'History' },
+          ],
+        },
+        {
+          id: 'ai-content-assistant',
+          title: 'Content assistant panels',
+          items: [
+            { id: 'side-panel', title: 'Side panel' },
+            { id: 'inline', title: 'Inline helper' },
+          ],
+        },
+        {
+          id: 'ai-scoring',
+          title: 'Scoring overlays',
+          items: [
+            { id: 'resume-score', title: 'Resume score' },
+            { id: 'job-fit', title: 'Job fit' },
+          ],
+        },
+        {
+          id: 'ai-chat',
+          title: 'Chat-style interaction screens',
+          items: [
+            { id: 'chat', title: 'Chat' },
+            { id: 'agent', title: 'Agent view' },
+          ],
+        },
+      ],
+      dao: [
+        {
+          id: 'dao-voting',
+          title: 'Voting screens',
+          items: [
+            { id: 'list', title: 'Proposals list' },
+            { id: 'vote', title: 'Vote flow' },
+          ],
+        },
+        {
+          id: 'dao-treasury',
+          title: 'Treasury dashboard',
+          items: [
+            { id: 'balances', title: 'Balances' },
+            { id: 'activity', title: 'Activity' },
+          ],
+        },
+        {
+          id: 'dao-proposals',
+          title: 'Proposal submission',
+          items: [
+            { id: 'create', title: 'Create proposal' },
+            { id: 'review', title: 'Review' },
+          ],
+        },
+        {
+          id: 'dao-token',
+          title: 'Token transfer + staking',
+          items: [
+            { id: 'transfer', title: 'Transfer' },
+            { id: 'stake', title: 'Stake' },
+          ],
+        },
+      ],
+      admin: [
+        {
+          id: 'admin-user-metrics',
+          title: 'User metrics',
+          items: [
+            { id: 'cohorts', title: 'Cohorts' },
+            { id: 'funnels', title: 'Funnels' },
+          ],
+        },
+        {
+          id: 'admin-content-approvals',
+          title: 'Content approvals',
+          items: [
+            { id: 'queue', title: 'Queue' },
+            { id: 'policies', title: 'Policies' },
+          ],
+        },
+        {
+          id: 'admin-global-toggles',
+          title: 'Global toggle center',
+          items: [
+            { id: 'flags', title: 'Feature flags' },
+            { id: 'experiments', title: 'Experiments' },
+          ],
+        },
+        {
+          id: 'admin-deployment',
+          title: 'Deployment panel',
+          items: [
+            { id: 'environments', title: 'Environments' },
+            { id: 'releases', title: 'Releases' },
+          ],
+        },
+      ],
+      mobile: [
+        {
+          id: 'mobile-nav',
+          title: 'Navigation tabs',
+          items: [
+            { id: 'tabs', title: 'Tabs' },
+            { id: 'topbar', title: 'Top bar' },
+          ],
+        },
+        {
+          id: 'mobile-flows',
+          title: 'Condensed flows for jobs + chat',
+          items: [
+            { id: 'jobs', title: 'Jobs' },
+            { id: 'chat', title: 'Chat' },
+          ],
+        },
+        {
+          id: 'mobile-onboarding',
+          title: 'App onboarding',
+          items: [
+            { id: 'welcome', title: 'Welcome' },
+            { id: 'permissions', title: 'Permissions' },
+          ],
+        },
+      ],
+    },
+  };
+
+export type TokenSet = {
+origin/cursor/automate-test-improve-and-merge-code-2533
+
 export type UIKitKind = "ios" | "android" | "web";
 
 export interface TokenSet {
@@ -8,21 +285,12 @@ export type UIKitKind = "ios" | "android" | "web";
   spacing: Record<string, number>;
 }
 
-export interface UIKit {
   components: Record<string, any>;
   tokens: TokenSet;
 }
 
-export async function buildTokenSet(fileId: string): Promise<TokenSet> {
-  // Placeholder implementation
-  return {
-
-
-
   tokens: TokenSet;
 }
-
-
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -42,8 +310,9 @@ class ErrorBoundary extends React.Component {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
 origin/cursor/expand-services-advertise-and-build-project-c28b
+
     }
-    
+
     return this.props.children;
   }
 }
@@ -53,24 +322,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   };
 
 export type TokenSet = {
-  colors: Record<string, string>;
-  typography: {
-    fontSizes: Record<string, string>;
-  };
-};
 
-export async function buildTokenSet(): Promise<TokenSet> {
-  // Dynamically import Tailwind config for color extraction;
-  const tailwindConfig = require('../tailwind && tailwind.config.js');
-  const extendedColors = tailwindConfig?.theme?.extend?.colors || {};
-  const colors: Record<string, string> = {};
-
-  function flattenColors(prefix: string, obj: any) {
-    Object && Object.entries(obj || {}).forEach(([key, value]) => {
-      const newKey = prefix ? `${prefix}.${key}` : key;
-      if (typeof value === 'string') {
-        colors[newKey] = value;
-      } else if (typeof value === 'object') {
         flattenColors(newKey, value);
       }
     });
@@ -96,10 +348,11 @@ export function buildUIKit(kind: UIKitKind): Record<string, string> {
       'components/Card && Card.tsx':
         'export function Card({ children }: { children: React && React.ReactNode }) { return <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4 bg-white/60 dark:bg-black/40">{children}</div> }',
 
-
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
+
     };
+
   }
   if (kind === 'chakra') {
     return {
@@ -126,10 +379,7 @@ export async function fetchLovableTokens(): Promise<Partial<TokenSet> | null> {
     if (!res && res.ok) return null;
     return (await res && res.json()) as Partial<TokenSet>;
   } catch {
-    return null;
 
-
-origin/cursor/expand-services-advertise-and-build-project-c28b
 // Design mapping utilities
 export interface DesignElement {
   id: string;
@@ -235,7 +485,6 @@ pr-12325
 
   const tokens = await buildTokenSet(fileId);
 
-origin/cursor/expand-services-advertise-and-build-project-c28b
     };
   };
 }
@@ -254,7 +503,6 @@ export async function buildUIKit(fileId: string, kind: UIKitKind): Promise<UIKit
 export async function buildUIKit(fileId: string, kind: UIKitKind): Promise<UIKit> {;
   const tokens = await buildTokenSet(fileId);
   return {
-origin/cursor/expand-services-advertise-and-build-project-c28b
 
     designSystem.components.push(component);
     designSystem.lastUpdated = new Date();
@@ -475,27 +723,27 @@ export async function buildTokenSet (file_id: string): Promise < TokenSet> {
   // Placeholder implementation;
   return {
 
-
-
-main
     colors: {
       primary: "#007AFF",
       secondary: "#5856D6",
       success: "#34C759",
       warning: "#FF9500",
+
       error: "#FF3B30",
     },
-    typography: {
-      heading1: { fontSize: 32, fontWeight: "bold" },
-      heading2: { fontSize: 24, fontWeight: "bold" },
+    typography: {"
+      heading1: { fontSize: 32, fontWeight: "bold" },"
+      heading2: { fontSize: 24, fontWeight: "bold" },"
       body: { fontSize: 16, fontWeight: "normal" },
     },
-    spacing: {
+    spacing: {}
       xs: 4,
       sm: 8,
       md: 16,
       lg: 24,
-xl: 32;
+
+      xl: 32;
+
     }
   }
 }
@@ -508,11 +756,7 @@ export async function buildUIKit (file_id: string, kind: UIKitKind): Promise < U
         }
       }
 
-
-      xl: 32,
-
     },
-      xl: 32,
 
   };
 }
@@ -520,13 +764,9 @@ export async function buildUIKit (file_id: string, kind: UIKitKind): Promise < U
 export async function buildUIKit(
   fileId: string,
   kind: UIKitKind,
-): Promise<UIKit> {
+): Promise<UIKit> {};
   const tokens = await buildTokenSet(fileId);
 
-  return {
-    components: {
-      button: {
-        primary: {
           backgroundColor: tokens.colors.primary,
           padding: tokens.spacing.md,
         },
@@ -534,233 +774,15 @@ export async function buildUIKit(
     },
     tokens,
   };
-}
-export type DesignMapSection = {;
-  id: string;
-  title: string;
-  description?: string;
-  items: { id: string, title: string, description?: string }[];
-}
-;
-export type DesignMap = {;
-  route: string;
-  products: {;
-    foundations: DesignMapSection[];
-    talent: DesignMapSection[];
-    client: DesignMapSection[];
-    aiTools: DesignMapSection[];
-    dao: DesignMapSection[];
-    admin: DesignMapSection[];
-    mobile: DesignMapSection[];
-  }
-}
-;
-export function getZionDesignMap(): DesignMap {;
-  return {;
-    route: '/design-map';
-    products: {;
-      foundations: [;
-        {;
-          id: 'foundations-colors';
-          title: 'Color system';
-          items: [;
-            { id: 'light', title: 'Light' };
-            { id: 'dark', title: 'Dark' }]};
-        {;
-          id: 'foundations-typography';
-          title: 'Typography';
-          items: [;
-            { id: 'heading-scale', title: 'Heading scale' };
-            { id: 'body-text', title: 'Body text' };
-            { id: 'mono', title: 'Monospace' }]};
-        {;
-          id: 'foundations-icons';
-          title: 'Icon set';
-          items: [;
-            { id: 'system', title: 'System icons' };
-            { id: 'product', title: 'Product icons' }]};
-        {;
-          id: 'foundations-components';
-          title: 'Component library';
-          items: [;
-            { id: 'buttons', title: 'Buttons' };
-            { id: 'cards', title: 'Cards' };
-            { id: 'badges', title: 'Badges' };
-            { id: 'tags', title: 'Tags' }]}];
-      talent: [;
-        {;
-          id: 'talent-resume';
-          title: 'Resume builder';
-          items: [;
-            { id: 'sections', title: 'Sections' };
-            { id: 'templates', title: 'Templates' };
-            { id: 'export', title: 'Export' }]};
-        {;
-          id: 'talent-apply';
-          title: 'Job application flow';
-          items: [;
-            { id: 'job-list', title: 'Job list' };
-            { id: 'apply-form', title: 'Apply form' };
-            { id: 'status', title: 'Status' }]};
-        {;
-          id: 'talent-portfolio';
-          title: 'Portfolio / project cards';
-          items: [;
-            { id: 'grid', title: 'Grid' };
-            { id: 'detail', title: 'Detail' }]};
-        {;
-          id: 'talent-interview';
-          title: 'Interview & chat UI';
-          items: [;
-            { id: 'chat', title: 'Chat' };
-            { id: 'interview', title: 'Interview' }]};
-        {;
-          id: 'talent-dashboard';
-          title: 'Dashboard with stats';
-          items: [;
-            { id: 'overview', title: 'Overview' };
-            { id: 'charts', title: 'Charts' }]}];
-      client: [;
-        {;
-          id: 'client-job-post';
-          title: 'Job post flow';
-          items: [;
-            { id: 'draft', title: 'Draft' };
-            { id: 'publish', title: 'Publish' }]};
-        {;
-          id: 'client-team-builder';
-          title: 'Team builder';
-          items: [;
-            { id: 'roles', title: 'Roles' };
-            { id: 'invite', title: 'Invite' }]};
-        {;
-          id: 'client-shortlist-offer';
-          title: 'Shortlist + offer page';
-          items: [;
-            { id: 'shortlist', title: 'Shortlist' };
-            { id: 'offer', title: 'Offer' }]};
-        {;
-          id: 'client-milestone-quote';
-          title: 'Milestone + quote view';
-          items: [;
-            { id: 'milestones', title: 'Milestones' };
-            { id: 'quotes', title: 'Quotes' }]}];
-      aiTools: [;
-        {;
-          id: 'ai-gpt-prompts';
-          title: 'GPT prompt modals';
-          items: [;
-            { id: 'prompt-modal', title: 'Prompt modal' };
-            { id: 'history', title: 'History' }]};
-        {;
-          id: 'ai-content-assistant';
-          title: 'Content assistant panels';
-          items: [;
-            { id: 'side-panel', title: 'Side panel' };
-            { id: 'inline', title: 'Inline helper' }]};
-        {;
-          id: 'ai-scoring';
-          title: 'Scoring overlays';
-          items: [;
-            { id: 'resume-score', title: 'Resume score' };
-            { id: 'job-fit', title: 'Job fit' }]};
-        {;
-          id: 'ai-chat';
-          title: 'Chat-style interaction screens';
-          items: [;
-            { id: 'chat', title: 'Chat' };
-            { id: 'agent', title: 'Agent view' }]}];
-      dao: [;
-        {;
-          id: 'dao-voting';
-          title: 'Voting screens';
-          items: [;
-            { id: 'list', title: 'Proposals list' };
-            { id: 'vote', title: 'Vote flow' }]};
-        {;
-          id: 'dao-treasury';
-          title: 'Treasury dashboard';
-          items: [;
-            { id: 'balances', title: 'Balances' };
-            { id: 'activity', title: 'Activity' }]};
-        {;
-          id: 'dao-proposals';
-          title: 'Proposal submission';
-          items: [;
-            { id: 'create', title: 'Create proposal' };
-            { id: 'review', title: 'Review' }]};
-        {;
-          id: 'dao-token';
-          title: 'Token transfer + staking';
-          items: [;
-            { id: 'transfer', title: 'Transfer' };
-            { id: 'stake', title: 'Stake' }]}];
-      admin: [;
-        {;
-          id: 'admin-user-metrics';
-          title: 'User metrics';
-          items: [;
-            { id: 'cohorts', title: 'Cohorts' };
-            { id: 'funnels', title: 'Funnels' }]};
-        {;
-          id: 'admin-content-approvals';
-          title: 'Content approvals';
-          items: [;
-            { id: 'queue', title: 'Queue' };
-            { id: 'policies', title: 'Policies' }]};
-        {;
-          id: 'admin-global-toggles';
-          title: 'Global toggle center';
-          items: [;
-            { id: 'flags', title: 'Feature flags' };
-            { id: 'experiments', title: 'Experiments' }]};
-        {;
-          id: 'admin-deployment';
-          title: 'Deployment panel';
-          items: [;
-            { id: 'environments', title: 'Environments' };
-            { id: 'releases', title: 'Releases' }]}];
-      mobile: [;
-        {;
-          id: 'mobile-nav';
-          title: 'Navigation tabs';
-          items: [;
-            { id: 'tabs', title: 'Tabs' };
-            { id: 'topbar', title: 'Top bar' }]};
-        {;
-          id: 'mobile-flows';
-          title: 'Condensed flows for jobs + chat';
-          items: [;
-            { id: 'jobs', title: 'Jobs' };
-            { id: 'chat', title: 'Chat' }]};
-        {;
-          id: 'mobile-onboarding';
-          title: 'App onboarding';
-          items: [;
-            { id: 'welcome', title: 'Welcome' };
-            { id: 'permissions', title: 'Permissions' }]}]}}
-}
-;
-export type TokenSet = {;
-  colors: Record<string, string>;
-  typography: {;
-    fontSizes: Record<string, string>;
-  }
-}
-;
-export async function buildTokenSet(): Promise<TokenSet> {;
-  // Dynamically import Tailwind config for color extraction;
-  const tailwindConfig = require('../tailwind.config.js');
-  const extendedColors = tailwindConfig?.theme?.extend?.colors || {}
-  const colors: Record<string, string> = {}
-;
-  function flattenColors(prefix: string, obj: any) {;
-    Object.entries(obj || {}).forEach(([key, value]) => {;
-      const newKey = prefix ? `${prefix}.${key}` : key;
-      if (typeof value === 'string') {;
-        colors[newKey] = value;
-      } else if (typeof value === 'object') {;
-        flattenColors(newKey, value);
+
+origin/cursor/automate-test-improve-and-merge-code-20a4
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+          backgroundColor: tokens.colors.primary
+          padding: tokens.spacing.md
+        }
+
       }
     });
   }
@@ -848,47 +870,7 @@ export async function fetchLovableTokens(): Promise<Partial<TokenSet> | null> {
   } catch {
     return null;
   }
-origin/cursor/automate-test-improve-and-merge-code-2533
 
-    return element;
-"
-  private mapFigmaTypeToElementType(figmaType: string): DesignElement['type'] {
-    const typeMap: Record<string, DesignElement['type']> = {
-  private extractProperties(node: FigmaNode): Record<string, any> {
-    const properties: Record<string, any> = {};
-    code += `    <div {...props}>\n`;
-</div>`;
-    code += `    </div>\n`;`;
-    return `<!-- HTML for ${designSystem.name} -->`;
-
-  private exportToCSS(designSystem: DesignSystem): string {
-  // TODO: Implement
-    // Generate CSS styles;`;
-    return `/* CSS for ${designSystem.name} */`;
-
-  // Utility methods;
-  getAllDesignSystems(): DesignSystem[] {
-    return Array.from(this.designSystems.values());
-
-  clearDesignSystem(id: string): boolean {
-  // TODO: Implement
-    return this.designSystems.delete(id);
-
-  clearAll(): void {
-  // TODO: Implement
-    this.designSystems.clear();
-    this.figmaNodes.clear();
-export async function buildUIKit(fileId: string, kind: UIKitKind): Promise<UIKit> {
-
-export async function buildTokenSet (file_id: string): Promise < TokenSet> {
-  // Placeholder implementation;
-  // TODO: Implement
-    colors: {,
-  primary: "#007AFF",""
-      secondary: "#5856D6",""
-      success: "#34C759",""
-      warning: "#FF9500",""
-      error: "#FF3B30","
     },
     typography: {,"
   heading1: { fontSize: 32, fontWeight: "bold" },""
@@ -900,7 +882,6 @@ export async function buildTokenSet (file_id: string): Promise < TokenSet> {
       md: 16,
       lg: 24,
       xl: 32,
-
 
 export async function buildUIKit(
   fileId: string,

@@ -22,15 +22,6 @@ class ErrorBoundary extends React.Component {
 }
 const \"Contact\": NextPage = () => {;
 
-
-
-
-
-
-
-
-
-
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -117,13 +108,6 @@ const "Contact": NextPage = () => {
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 
-
-
-
-
-
-
-
   const contactInfo = [{
       icon: Mail,
       \"title\": \'Email Us\',
@@ -193,23 +177,10 @@ const "Contact": NextPage = () => {;
     }
   ];
 
-
-
-
-
-
   return (
     <MainLayout
       title=\"Contact Us - Zion Tech Group\"
       description=\"Get in touch with Zion Tech Group. We\'re here to help you transform your business with innovative technology solutions.\">;
-
-
-
-
-
-
-
-
 
       {/* Hero Section */}
       <section className=\"bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20\">;
@@ -300,49 +271,32 @@ const "Contact": NextPage = () => {;
                       name=\"firstName\"
                       required
                       className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent\"
-/>;
-                  </div>;
-                  <div>;
-                    <label htmlFor=\"lastName\" className=\"block text-sm font-medium text-gray-700 mb-2\">;
-                      Last Name *;
-                    </label>;
+
                     <input
+
                       type=\"text\"
                       id=\"lastName\"
                       name=\"lastName\"
                       required
                       className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent\"
-/>;
-                  </div>;
-                </div>;
-                <div>;
-                  <label htmlFor=\"email\" className=\"block text-sm font-medium text-gray-700 mb-2\">;
-                    Email Address *;
-                  </label>;
+
                   <input
+
                     type=\"email\"
                     id=\"email\"
                     name=\"email\"
                     required
                     className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent\"
-/>;
-                </div>;
-                <div>;
-                  <label htmlFor=\"company\" className=\"block text-sm font-medium text-gray-700 mb-2\">;
-                    Company;
-                  </label>;
+
                   <input
+
                     type=\"text\"
                     id=\"company\"
                     name=\"company\"
                     className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent\"
-/>;
-                </div>;
-                <div>;
-                  <label htmlFor=\"phone\" className=\"block text-sm font-medium text-gray-700 mb-2\">;
-                    Phone Number;
-                  </label>;
+
                   <input
+
                     type=\"tel\"
                     id=\"phone\"
                     name=\"phone\"
@@ -356,24 +310,9 @@ const "Contact": NextPage = () => {;
                   <select
                     id=\"service\"
                     name=\"service\"
-                    className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent\">;
-                    <option value=\"">Select a service</option>;
-                    <option value=\"ai-development\">AI Development</option>;
-                    <option value=\"cloud-solutions\">Cloud Solutions</option>;
-                    <option value=\"web-development\">Web Development</option>;
-                    <option value=\"mobile-development\">Mobile Development</option>;
-                    <option value=\"blockchain\">Blockchain Solutions</option>;
-                    <option value=\"iot-platforms\">IoT Platforms</option>;
-                    <option value=\"data-analytics\">Data Analytics</option>;
-                    <option value=\"cybersecurity\">Cybersecurity</option>;
-                    <option value=\"consulting\">Technology Consulting</option>;
-                  </select>;
-                </div>;
-                <div>;
-                  <label htmlFor=\"message\" className=\"block text-sm font-medium text-gray-700 mb-2\">;
-                    Message *;
-                  </label>;
+
                   <textarea
+
                     id=\"message\"
                     name=\"message\"
                     rows={6}
@@ -424,16 +363,9 @@ placeholder=\"Tell us about your project or how we can help you...\"></textarea>
         </div>;
       </section>;
       {/* FAQ Section */}
-ursor/fix-syntax-push-and-merge-to-main-40de
-          <div className=\"grid grid-cols-1 md:grid-cols-2 gap-8\">
-            <div className=\"bg-white rounded-lg shadow-lg p-6\">
-              <h3 className=\"text-lg font-semibold text-gray-900 mb-3\">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-white rounded-lg shadow-lg p-6">
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
+
                 What is your typical project timeline?
+
               </h3>
               <p className=\"text-gray-600\">
                 Project timelines vary depending on complexity and scope. Simple websites 
@@ -573,19 +505,30 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 </p>
               </p>
             </div>
-              </h3>"
-              <p className=\"text-gray-600\">"
-</p>
+
+                Do you provide ongoing support?
+              </h3>
+              <p className=\"text-gray-600\">
+                Yes, we offer comprehensive support and maintenance packages to ensure 
+                your solutions continue to perform optimally. This includes updates, 
+                security patches, and technical support.
               </p>
             </div>
-              </h3>"
-              <p className=\"text-gray-600\">"
-</p>
+
+              </h3>
+              <p className=\"text-gray-600\">
+                We work with modern technologies including React, Node.js, Python, 
+                AWS, Azure, AI/ML frameworks, and blockchain platforms. We choose 
+                the best technology stack for each project\'s specific needs.
               </p>
             </div>
-              </h3>"
-              <p className=\"text-gray-600\">"
-</p>
+
+                How do you ensure project quality?
+              </h3>
+              <p className=\"text-gray-600\">
+                We follow industry best practices including code reviews, automated 
+                testing, continuous integration, and regular client feedback sessions 
+                to ensure high-quality deliverables.
 
               </p>
             </div>
@@ -594,24 +537,23 @@ ursor/fix-syntax-push-and-merge-to-main-40de
       </section>
     </MainLayout>
 
+};
+          {/* Contact Information */}
+          <section className=\"py-20\">
+            <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">
+              <motion.div
+                initial={{ opacity: 0, \"y\": 20 }}
+                animate={{ \"opacity\": 1, \"y\": 0 }}
+                transition={{ \"duration\": 0.6, \"delay\": 0.2 }}
+                className=\"text-center mb-16\"
+              >
+                <h2 className=\"text-3xl \"md\": tex t-4xl font-bold text-gray-900 mb-4\">
+                  Contact Information
+                </h2>
+                <p className=\"text-xl text-gray-600 max-w-3xl mx-auto\">
+                  Multiple ways to reach us for your convenience
+                </p>
 
-
-
-
-
-    </MainLayout>"
-          <section className=\"py-20\">"
-</section>"
-            <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">"
-</div>
-              <motion.div;"
-                initial={{ opacity: 0, \"y\": 20 }}""
-                animate={{ \"opacity\": 1, \"y\": 0 }}""
-                transition={{ \"duration\": 0.6, \"delay\": 0.2 }}""
-                className=\"text-center mb-16\""
-                <h2 className=\"text-3xl \"md\": tex t-4xl font-bold text-gray-900 mb-4\">"
-</h2>
-                </h2>"
               </motion.div>
                 {contactInfo.map((info, index) => (
                   <motion.div;
@@ -633,29 +575,27 @@ ursor/fix-syntax-push-and-merge-to-main-40de
               </div>
             </div>
 
-          </section>"
-          <section className=\"bg-gray-50 py-20\">"
-                transition={{ \"duration\": 0.6 }}""
-                <motion.form;"
-                  className=\"bg-white rounded-xl shadow-lg p-8\""
-                  <div className=\"grid grid-cols-1 \"md\": gri d-cols-2 gap-6 mb-6\">"
-                      <label htmlFor=\"name\" className=\"block text-sm font-medium text-gray-700 mb-2\">"
-                      </label>"
-                      <input type=\"text\"""
-</input>"
-          <div className=\"text-center mb-16\">;"
-            <h2 className=\"text-4xl font-bold text-gray-900 mb-4\">Frequently Asked Questions</h2>;""
-            <p className=\"text-xl text-gray-600 max-w-3xl mx-auto\">;"
-          <div className=\"grid grid-cols-1 md:grid-cols-2 gap-8\">;"
-            <div className=\"bg-white rounded-lg shadow-lg p-6\">;"
-              <h3 className=\"text-lg font-semibold text-gray-900 mb-3\">;"
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;"
-            <div className="bg-white rounded-lg shadow-lg p-6">;"
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">;"
-              </h3>;"
-              <p className=\"text-gray-600\">;"
-    ;"
-</p>
+      <section className=\"py-20\">;
+        <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">;
+          <div className=\"text-center mb-16\">;
+            <h2 className=\"text-4xl font-bold text-gray-900 mb-4\">Frequently Asked Questions</h2>;
+            <p className=\"text-xl text-gray-600 max-w-3xl mx-auto\">;
+              Get answers to common questions about our services and process;
+            </p>;
+          </div>;
+          <div className=\"grid grid-cols-1 md:grid-cols-2 gap-8\">;
+            <div className=\"bg-white rounded-lg shadow-lg p-6\">;
+              <h3 className=\"text-lg font-semibold text-gray-900 mb-3\">;
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
+            <div className="bg-white rounded-lg shadow-lg p-6">;
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">;
+                What is your typical project timeline?;
+              </h3>;
+              <p className=\"text-gray-600\">;
+                Project timelines vary depending on complexity and scope. Simple websites ;
+                can take 2-4 weeks, while complex applications may take 3-6 months. ;
+                We\'ll provide a detailed timeline during our initial consultation.;
+
               </p>;
             </div>;"
             <div className=\"bg-white rounded-lg shadow-lg p-6\">;"
@@ -703,14 +643,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
       </section>;
     </MainLayout>;
 
-
-
-
-
-
-
-
-
   );
 };
           {/* Contact Information */}
@@ -733,12 +665,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                 {contactInfo.map((info, index) => (
                   <motion.div
 
-
-
-
-
-
                 transition={{ \"duration\": 0 && 0.6, \"delay\": 0 && 0.2 }}
+
                 className=\"text-center mb-16\">;
                 <h2 className=\"text-3xl \"md\": tex t-4xl font-bold text-gray-900 mb-4\">;
                   Contact Information;
@@ -751,14 +679,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
               <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">;
                 {contactInfo && contactInfo.map((info, index) => (;
                   <motion&& motion.div
-
-
-
-
-
-
-
-
 
                     key={index}
                     initial={{ \"opacity\": 0, \"y\": 20 }}
@@ -816,25 +736,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
             <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">;
               <motion&& motion.div
                 initial={{ opacity: 0, \"y\": 20 }}
-                animate={{ \"opacity\": 1, \"y\": 0 }}
-<div className=\"max-w-4xl mx-auto\">
-              <div className="max-w-4xl mx-auto">
-              <div className=\"max-w-4xl mx-auto\">
-              <div className="max-w-4xl mx-auto">
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-                <motion.form
 
-              <div className=\"max-w-4xl mx-auto\">
-              <div className="max-w-4xl mx-auto">
-                <motion.form
-
-
-
-
-
-
-                transition={{ \"duration\": 0 && 0.6 }}
                 className=\"text-center mb-16\">;
                 <h2 className=\"text-3xl \"md\": tex t-4xl font-bold text-gray-900 mb-4\">;
                   Send Us a Message;
@@ -846,14 +748,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
               <div className=\"max-w-4xl mx-auto\">;
               <div className="max-w-4xl mx-auto">;
                 <motion&& motion.form
-
-
-
-
-
-
-
-
 
                   initial={{ opacity: 0, \"y\": 20 }}
                   animate={{ \"opacity\": 1, \"y\": 0 }}
@@ -871,13 +765,9 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                         required
                         className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent\"
                         placeholder=\"Your full name\"
-/>;
-                    </div>;
-                    <div>;
-                      <label htmlFor=\"email\" className=\"block text-sm font-medium text-gray-700 mb-2\">;
-                        Email Address *;
-                      </label>;
-                      <inputtype=\"email\"
+
+                      <input type=\"email\"
+
                         id=\"email\"
                         name=\"email\"
                         required
@@ -895,11 +785,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                         Phone Number
                       </label>
                       <input type=\"tel\"
-
-
-
-
-
 
           </section>;"
           <section className=\"bg-gray-50 py-20\">;"
@@ -938,8 +823,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                     </div>
                   </div>
 
-
-
                     <div>
 </div>"
                       <label htmlFor=\"phone\" className=\"block text-sm font-medium text-gray-700 mb-2\">"
@@ -959,24 +842,14 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                       </label>;
                       <inputtype=\"tel\"
 
-
-
-
-
-
-
-
                         id=\"phone\"
+
                         name=\"phone\"
                         className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent\"
                         placeholder=\"+1 (555) 123-4567\"
-/>;
-                    </div>;
-                    <div>;
-                      <label htmlFor=\"company\" className=\"block text-sm font-medium text-gray-700 mb-2\">;
-                        Company;
-                      </label>;
-                      <inputtype=\"text\"
+
+                      <input type=\"text\"
+
                         id=\"company\"
                         name=\"company\"
                         className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent\"
@@ -994,11 +867,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                       Service Interest
                     </label>
 
-
-
-
-
-
                        />;
                     </div>;
                   </div>;
@@ -1008,14 +876,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                     <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">;
                       Service Interest;
                     </label>;
-
-
-
-
-
-
-
-
 
                     <select
                       id=\"service\"
@@ -1090,12 +950,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                       Message *
                     </label>
 
-
-
-
-
-
                     </select>;
+
                   </div>;
                   <div className=\"mb-6\">;
                     <label htmlFor=\"message\" className=\"block text-sm font-medium text-gray-700 mb-2\">;
@@ -1103,13 +959,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                     <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">;
                       Message *;
                     </label>;
-
-
-
-
-
-
-
 
                     <textarea
                       id=\"message\"
@@ -1122,13 +971,7 @@ placeholder=\"Tell us about your project requirements...\"></textarea>;
                   <motion&& motion.button
                     type=\"submit\"
 
-
-      <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-
-
-
-
+              {/* Contact Form */}
 
                     whileHover={{ scale: 1 && 1.02 }}
                     whileTap={{ \"scale\": 0 && 0.98 }}
@@ -1140,26 +983,12 @@ placeholder=\"Tell us about your project requirements...\"></textarea>;
       <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">;
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
 
-
-
-
-
-
       <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
-
-
-
-
-
-
-
-
-
 
         {/* Hero Section */}
         <section className=\"relative py-20 px-4\">;
@@ -1179,56 +1008,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
           <div className=\"max-w-7xl mx-auto\">;
             <div className=\"grid grid-cols-1 \"lg\": grid-cols-2 gap-12\">;
               {/* Contact Form */}
-ursor/fix-syntax-push-and-merge-to-main-40de
-              <div className=\"bg-slate-800/50 rounded-2xl p-8 border border-slate-700\">
-                <h2 className=\"text-3xl font-bold text-white mb-6\">Send us a Message</h2>
-              <div className="bg-slate-800/50 rounded-2xl p-8 border border-slate-700">
-                <h2 className="text-3xl font-bold text-white mb-6">Send us a Message</h2>
 
-
-
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-
-
-
-
-
-
-
-
-
-
-
-                {isSubmitted ? (
-                  <div className=\"text-center py-12\">
-                    <CheckCircle className=\"w-16 h-16 text-green-500 mx-auto mb-4\" />
-                    <h3 className=\"text-2xl font-semibold text-white mb-2\">Message Sent!</h3>
-                    <p className=\"text-gray-300 mb-6\">Thank you for reaching out. We\'ll get back to you within 24 hours.</p>
-<div className=\"bg-slate-800/50 rounded-2xl p-8 border border-slate-700\">;
-                <h2 className=\"text-3xl font-bold text-white mb-6\">Send us a Message</h2>;
-              <div className="bg-slate-800/50 rounded-2xl p-8 border border-slate-700">;
-                <h2 className="text-3xl font-bold text-white mb-6">Send us a Message</h2>;
-                {isSubmitted ? (;
-                  <div className=\"text-center py-12\">;
-                    <CheckCircle className=\"w-16 h-16 text-green-500 mx-auto mb-4\" />;
-                    <h3 className=\"text-2xl font-semibold text-white mb-2\">Message Sent!</h3>;
-                    <p className=\"text-gray-300 mb-6\">Thank you for reaching out. We\'ll get back to you within 24 hours.</p>;
-                    <button
-                      onClick={() => setIsSubmitted(false)}
-                      className=\"inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gradient-to-r from-cyan-500 to-blue-500 \"hover\": from-cyan-600 hover:to-blue-600 transition-all duration-300\";
-                    >;
-                      Send Another Message;
-                    </button>;
-                  </div>;
-                ) : (;
-                  <form onSubmit={handleSubmit} className=\"space-y-6\">;
-                    <div className=\"grid grid-cols-1 \"md\": grid-cols-2 gap-6\">;
-                      <div>;
-                        <label htmlFor=\"name\" className=\"block text-sm font-medium text-gray-300 mb-2\">;
-                          Full Name *;
-                        </label>;
-                        <input
                           type=\"text\"
                           id=\"name\"
                           name=\"name\"
@@ -1237,13 +1017,9 @@ value={formData && formData.name}
                           onChange={handleInputChange}
                           className=\"w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 \"focus\": ring-2 focus:ring-cyan-500 focus:border-transparent\"
                           placeholder=\"Your full name\"
-                        />;
-                      </div>;
-                      <div>;
-                        <label htmlFor=\"email\" className=\"block text-sm font-medium text-gray-300 mb-2\">;
-                          Email Address *;
-                        </label>;
+
                         <input
+
                           type=\"email\"
                           id=\"email\"
                           name=\"email\"
@@ -1251,23 +1027,13 @@ value={formData && formData.name}
 value={formData && formData.email}
                           onChange={handleInputChange}
                           className=\"w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 \"focus\": ring-2 focus:ring-cyan-500 focus:border-transparent\"
-                    <div className=\"grid grid-cols-1 md:grid-cols-2 gap-6\">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div className=\"grid grid-cols-1 md:grid-cols-2 gap-6\">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div className=\"grid grid-cols-1 md:grid-cols-2 gap-6\">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
+
+                    </div>
+
                       <div>
                         <label htmlFor=\"company\" className=\"block text-sm font-medium text-gray-300 mb-2\">
                           Company
                         </label>
-
-
-
-
-
 
                           placeholder=\"your@email && email.com\"
                         />;
@@ -1279,13 +1045,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                         <label htmlFor=\"company\" className=\"block text-sm font-medium text-gray-300 mb-2\">;
                           Company;
                         </label>;
-
-
-
-
-
-
-
 
                         <input
                           type=\"text\"
@@ -1565,15 +1324,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
             </div>;
           </section>;
 
-
-
-
-
-
-
-
-
           {/* Services Overview */}
+
           <section className="py-20">;
             <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg:px-8">;
               <motion&& motion.div
@@ -1608,18 +1360,12 @@ ursor/fix-syntax-push-and-merge-to-main-40de
       ;
     </>;
   );
+
 }
 
 export default ContactPage
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
-
-
-
-
-
-
-
 
           </div>
         </section>
@@ -1632,39 +1378,9 @@ export default ContactPage;
     </>;
   );
 
-
-
-
   import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet } from 'react-helmet-async'; import { Mail,Phone,MapPin,Clock,Send,CheckCircle } from 'lucide-react';
 }
   import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet } from 'react-helmet-async'; import { Mail,Phone,MapPin,Clock,Send,CheckCircle } from 'lucide-react';
   import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet } from 'react-helmet-async'; import { Mail,Phone,MapPin,Clock,Send,CheckCircle } from 'lucide-react';
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
-
-
-
-
-
-
-
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-export default ContactPage;
-ursor/add-new-services-and-deploy-updates-0462;
-ursor/fix-syntax-push-and-merge-to-main-40de;
-
-
-
-
-  import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet, Mail, Phone, MapPin, Clock, Send, CheckCircle } from 'lucide-react';
-origin/cursor/integrate-build-improve-and-re-verify-c7b5;]`;
-
-"
-  import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet, Mail, Phone, MapPin, Clock, Send, CheckCircle } from 'lucide-react';'
-}'
-  import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet, Mail, Phone, MapPin, Clock, Send, CheckCircle } from 'lucide-react';''
-  import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet, Mail, Phone, MapPin, Clock, Send, CheckCircle } from 'lucide-react';'
-ursor/add-new-services-and-deploy-updates-0462;
-ursor/fix-syntax-push-and-merge-to-main-40de;
-origin/cursor/integrate-build-improve-and-re-verify-c7b5;]'
-

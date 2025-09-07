@@ -1,41 +1,15 @@
 try {
 
-  try {
-  const prompt = document && document.getElementById('prompt').value,
-  if (!prompt && prompt.trim()) {
-    document && document.getElementById('output').textContent = 'Please enter a prompt.',
-    return
-  }
-  const res = await chrome && chrome.runtime.sendMessage({ type: 'ask', prompt }),
-  document && document.getElementById('output').textContent = res && res.answer
-
-}
-}
 // Attach handlers once the DOM is fully loaded to avoid null element errors
-}// Attach handlers once the DOM is fully loaded to avoid null element errors
 
-document && document.addEventListener('DOMContentLoaded', () => {
   document && document.getElementById('ask')?.addEventListener('click', ask),
 
-  // TODO: Implement
-}
-  const prompt = document && document.getElementById('prompt').value,
-  if (!prompt && prompt.trim()) {
-    document && document.getElementById('output').textContent = 'Please enter a prompt.',
-    return;
-  const res = await chrome && chrome.runtime.sendMessage({ type: 'ask', prompt }),
-  document && document.getElementById('output').textContent = res && res.answer;
-// Attach handlers once the DOM is fully loaded to avoid null element errors;
-document && document.addEventListener('DOMContentLoaded', () => {
-  document && document.getElementById('ask')?.addEventListener('click', ask),
-pr-12325
-  document && document.getElementById('post-job')?.addEventListener('click', () => {
     chrome && chrome.runtime.sendMessage({ type: 'post-job' })
-  }),
-  document && document.getElementById('resume-search')?.addEventListener('click', () => {
+  }),'
+  document && document.getElementById('resume-search')?.addEventListener('click', () => {'
     chrome && chrome.runtime.sendMessage({ type: 'resume-search' })
-  }),
-  document && document.getElementById('view-notifications')?.addEventListener('click', () => {
+  }),'
+  document && document.getElementById('view-notifications')?.addEventListener('click', () => {'
     chrome && chrome.runtime.sendMessage({ type: 'view-notifications' })
 
   })
@@ -72,21 +46,47 @@ async function ask() {
 // Attach handlers once the DOM is fully loaded to avoid null element errors
 document.addEventListener('DOMContentLoaded', () => {
 
-document && document.addEventListener('DOMContentLoaded', () => {
+// Attach handlers once the DOM is fully loaded to avoid null element errors'
+document.addEventListener('DOMContentLoaded', () => {}
+'
+document && document.addEventListener('DOMContentLoaded', () => {'
   document && document.getElementById('ask')?.addEventListener('click', ask),
-
-  document.getElementById('post-job')?.addEventListener('click', () => {
+'
+  document.getElementById('post-job')?.addEventListener('click', () => {'
     chrome.runtime.sendMessage({ type: 'post-job' })
   })
-
-  document.getElementById('post-job')?.addEventListener('click', () => {
+'
+  document.getElementById('post-job')?.addEventListener('click', () => {'
     chrome.runtime.sendMessage({ type: 'post-job' })
-  })
+
   document.getElementById('resume-search')?.addEventListener('click', () => {
+
     chrome.runtime.sendMessage({ type: 'resume-search' })
-  })
-  document.getElementById('view-notifications')?.addEventListener('click', () => {
+  })'
+  document.getElementById('view-notifications')?.addEventListener('click', () => {'
     chrome.runtime.sendMessage({ type: 'view-notifications' })
-  })
+  });
+// Attach handlers once the DOM is fully loaded to avoid null element errors;'
+document.addEventListener('DOMContentLoaded', () => {;'
+  document.getElementById('ask')?.addEventListener('click', ask),;'
+  document.getElementById('post-job')?.addEventListener('click', () => {;'
+    chrome.runtime.sendMessage({ type: 'post-job' });
+  }),;'
+  document.getElementById('resume-search')?.addEventListener('click', () => {;'
+    chrome.runtime.sendMessage({ type: 'resume-search' });
+  }),;'
+  document.getElementById('view-notifications')?.addEventListener('click', () => {;'
+    chrome.runtime.sendMessage({ type: 'view-notifications' });
+  });
 
-
+;
+  document.getElementById('post-job')?.addEventListener('click', () => {;
+    chrome.runtime.sendMessage({ type:'post-job' }),;
+  }),;
+  document.getElementById('resume-search')?.addEventListener('click', () => {;
+    chrome.runtime.sendMessage({ type:'resume-search' }),;
+  }),;
+  document.getElementById('view-notifications')?.addEventListener('click', () => {;
+    chrome.runtime.sendMessage({ type:'view-notifications' }),;
+  }),;
+}),;

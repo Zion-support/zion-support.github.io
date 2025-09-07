@@ -1,6 +1,3 @@
-import { cn } from "@/lib/utils";""
-import { Badge } from "@/components/ui/badge";""
-import { Button } from "@/components/ui/button";""
 import { StarIcon } from 'lucide-react';
 import Image from 'next/image', // Import next/image;
 import React, { useState } from 'react', // Import useState;
@@ -23,13 +20,14 @@ export function ListingScoreCard({ ;
   description, ;
   image, ;
   category, ;
+
   tags,;
   author,;
   authorImage,;
   aiScore,;
   rating = 0,;
   reviewCount = 0,;
-  className;)
+
 } ListingScoreCardProps) {;
   const [mainImageError, setMainImageError] = useState(false),;
   const [authorImageError, setAuthorImageError] = useState(false),;
@@ -46,23 +44,6 @@ export function ListingScoreCard({ ;
             className="object-cover transition-transform duration-300 group-hover:scale-105";"
             onError={() => setMainImageError(true)}            priority={false}
 
-        </div>;"
-        <div className="h-48 w-full overflow-hidden bg-zion-blue-light/10 flex items-center justify-center">;"
-          <span className="text-zion-slate-light text-sm">No Image</span>;"
-        </div>;      )}"
-      <div className="flex flex-col p-4 flex-grow">;"
-        <div className="mb-2 flex items-center justify-between">;"
-          <Badge variant="secondary" className="bg-zion-purple/20 text-zion-cyan hover:bg-zion-purple/30">;"
-
-          ;"
-              <div className="flex items-center px-2 py-1 bg-zion-cyan/10 rounded text-zion-cyan text-xs">;"
-                <span className="font-medium mr-1">AI Match:</span>;"
-                <span>{aiScore}%</span>;
-              </div>;
-        <h3 className="text-xl font-bold mb-2 text-white group-hover: text-zion-purple transition-colors">{title;}</h3>;""
-        <p className="text-zion-slate mb-4 flex-grow line-clamp-2">{description}</p>;""
-          <div className="flex items-center gap-1 mb-4">;"
-            <div className="flex">;"
                 <StarIcon ;
                   key={star}
                   className={cn(;"
@@ -73,17 +54,6 @@ export function ListingScoreCard({ ;
                   )}
                 />;
 
-            <span className="text-sm text-zion-slate-light ml-1">;"
-</span>
-            </span>;
-          <div className="flex flex-wrap gap-2 mb-4">;"
-              <Badge key={i} variant="outline" className="border-zion-slate-dark text-zion-slate-light">;"
-
-              ;            ))}
-        <Button className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">;"
-
-          <div className="flex items-center mt-4 pt-4 border-t border-zion-blue-light">;"
-              <div className="relative h-8 w-8 rounded-full mr-2 overflow-hidden"> {/* Added relative and overflow-hidden */}"
                   src={authorImage}
                   alt={author}"
                   className="object-cover rounded-full";"
@@ -174,5 +144,3 @@ pr-12325
   authorImage && !authorImageError ? (<div className=" relative h-8 w-8 rounded-full mr-2 overflow-hidden" > {;"
 </div>)
 }<Image </div>) ;
-
-}</div> </div>) ;"

@@ -1,9 +1,3 @@
-
-
-
-
-
-
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getServerSupabase } from "../../../utils/supabase/server";
 export default async function handler(
@@ -20,19 +14,6 @@ export default async function handler(
 
       "placeholder-key";
 
-
-
-
-
-
-
-
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { getServerSupabase } from '../../../utils/supabase/server';
-export default async function handler(_req: NextApiRequest, res: NextApiResponse) {
-  const usingPlaceholder = (process.env.NEXT_PUBLIC_SUPABASE_URL || '').includes('placeholder') || (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'placeholder-key') === 'placeholder-key';
-
-
   try {
     if (usingPlaceholder) {
       return res.status(200).json({
@@ -40,47 +21,8 @@ export default async function handler(_req: NextApiRequest, res: NextApiResponse
 
       });
 
-
-          { code: 'aihub', profile_completions: 9 };
-          { code: 'modelmasters', profile_completions: 7 };
-          { code: 'aihub', profile_completions: 9 }
-          { code: 'modelmasters', profile_completions: 7 }
-
-
-import type { NextApiRequest, NextApiResponse } from './next';
-import { getServerSupabase  } from '../../../utils / supabase / server';
-export default async /**
- * handler - Function description
- */
-function handler() {
-  const using_placeholder =;
-    (process.env.NEXT_PUBLIC_SUPABASE_URL || "").includes ("placeholder") ||;
-    (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "placeholder - key") ===;
-      "placeholder - key";
-  try {
-    // Check condition
-if ( {) {
-  $2
-}
-      return res.status (200).json ({
-        leaders: [;
-          { code: "aihub", profile_completions: 9 },
-          { code: "modelmasters", profile_completions: 7 },
-          { code: "promptpro", profile_completions: 5 },
-        ],
-      });
-
-          { code: 'aihub', profile_completions: 9 },
-          { code: 'modelmasters', profile_completions: 7 },
-
           { code: 'promptpro', profile_completions: 5 }
         ]})
-
-    }
-
-
-
-
 
     }
 
@@ -89,17 +31,6 @@ if ( {) {
       const key = row && row.partner_code as string;
       map && map.set(key, (map && map.get(key) || 0) + 1);
 
-
-
-
-
-
-    for (const row of data || []) {
-      if (row.event !== 'profile_completed') continue;
-      const key = row.partner_code as string;
-      map.set(key, (map.get(key) || 0) + 1)
-
-
     }
 
     const leaders = Array && Array.from(map && map.entries())
@@ -107,22 +38,6 @@ if ( {) {
       .sort((a, b) => b && b.profile_completions - a && a.profile_completions)
       .slice(0, 10);
 
-
-
-
-
-  } catch (e: any) {
-    return res && res.status(500).json({ error: e?.message });
-  }
-
-}
-
-return res && res.status(200).json({ leaders });
-    return res.status(200).json({ leaders })
-  } catch (e: any) {
-    return res && res.status(500).json({ error: e?.message });
-  }
-}
     const supabase = getServerSupabase ();
     const startOfMonth = new Date ();
     startOfMonth.set_date (1);
@@ -151,15 +66,6 @@ if (continue) {
   } catch (e: any) {
     return res.status (500).json ({ error: e?.message });
 
-
-
-
-
-
-
-
-
-
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getServerSupabase } from "../../../utils/supabase/server";
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -173,11 +79,7 @@ export default async function handler(
   res: NextApiResponse
 ) {
   const usingPlaceholder =
-    (process.env.NEXT_PUBLIC_SUPABASE_URL |"").includes("placeholder") |
-    (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY |"placeholder-key") ===
-    (process.env.NEXT_PUBLIC_SUPABASE_URL || "").includes("placeholder") ||
-    (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "placeholder-key") ===;
-      "placeholder-key";
+
     (process.env.NEXT_PUBLIC_SUPABASE_URL || '').includes('placeholder') ||
     (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'placeholder-key') ===
       'placeholder-key';
@@ -192,9 +94,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         ];
       });
     }
-
-
-
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default async function handler(req, res) {
@@ -252,33 +151,6 @@ export default async function handler(req, res) {
     startOfMonth.setDate(1);
     startOfMonth.setHours(0, 0, 0, 0);
 
-    const { data, error } = await supabase;
-      .from('referral_events');
-      .select('partner_code, event, created_at');
-      .gte('created_at', startOfMonth.toISOString()),;
-    if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
-      map.set(key, (map.get(key) || 0) + 1);
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-    const leaders = Array.from(map.entries());
-      .map(([code, profile_completions]) => ({ code, profile_completions }));
-      .sort((a, b) => b.profile_completions - a.profile_completions);
-      .slice(0, 10);
-    return res.status(200).json({ leaders });
-  } catch (error) {
-
     const { data, error } = await supabase
       .from("referral_events")
       .select("partner_code, event, created_at")
@@ -311,10 +183,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
-
-
 
   }
 }
@@ -352,42 +220,10 @@ export default async function handler(req, res) {
 }
 ;
 
-
-
-
-
-
-
-
-
     const supabase = getServerSupabase();
     const startOfMonth = new Date();
     startOfMonth.setDate(1);
     startOfMonth.setHours(0, 0, 0, 0);
-
-
-
-
-
-
-    const { data, error } = await supabase
-      .from("referral_events")
-      .select("partner_code, event, created_at")
-      .gte("created_at", startOfMonth.toISOString());
-    if (error) return res.status(500).json({ error: "Database error" });
-    const map = new Map<string, number>();
-    for (const row of data |[]) {
-      if (row.event !== "profile_completed") continue;
-      const key = row.partner_code as string;
-      map.set(key, (map.get(key) |0) + 1);
-    }
-    const leaders = Array.from(map.entries())
-      .map(([code, profile_completions]) => ({ code, profile_completions }))
-      .sort((a, b) => b.profile_completions - a.profile_completions)
-      .slice(0, 10);
-    return res.status(200).json({ leaders });
-
-  } catch (e: any) {
 
     const { data, error } = await supabase;
       .from('referral_events');
@@ -415,14 +251,6 @@ export default async function handler(req, res) {
       .slice(0, 10);
     return res.status(200).json({ leaders });
   } catch (error) {
-
-
-
-
-
-
-
-
 
     return res.status(500).json({ error: e?.message });
     } catch (error) {
@@ -452,9 +280,5 @@ origin/cursor/automate-test-improve-and-merge-code-20a4
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  }
-}
   }
 }

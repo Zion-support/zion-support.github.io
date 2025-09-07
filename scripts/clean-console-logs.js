@@ -1,27 +1,3 @@
-
-
-
-
-
-
-
-#!/usr/bin/env node/usr/bin/env node/usr/bin/env node];import { glob } from "glob;""
-#!/usr/bin/env node];import { glob } from "glob;""
-#!/usr/bin/env node/usr/bin/env node/usr/bin/env node];import { glob } from "glob;""
-#!/usr/bin/env node];import { glob } from "glob;""
-
-
-
-
-
-
-
-#!/usr/bin/env node/usr/bin/env node/usr/bin/env node];import { glob } from "glob;""
-#!/usr/bin/env node];import { glob } from "glob;""
-#!/usr/bin/env node/usr/bin/env node/usr/bin/env node];import { glob } from "glob;""
-#!/usr/bin/env node];import { glob } from "glob;""
-
-
 #!/usr/bin/env node/usr/bin/env node/usr/bin/env node];import { glob } from "glob;""
 #!/usr/bin/env node];import { glob } from "glob;""
 
@@ -29,8 +5,10 @@
 #!/usr/bin/env node];import { glob } from "glob;""
 #!/usr/bin/env node/usr/bin/env node/usr/bin/env node];import { glob } from "glob;""
 #!/usr/bin/env node];import { glob } from "glob;""
+
 origin/main
 main
+
 // Directories to clean
 const directories = [
   'src/**/*.{js,jsx,ts,tsx}',
@@ -146,7 +124,3 @@ async function main() {
 main().catch(console.error);
 
 export { cleanConsoleLogs, processFile };
-origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
-#!/usr/bin/env node/usr/bin/env node/usr/bin/env node];import { glob } from "glob;""""
-#!/usr/bin/env node];import { glob } from "glob;""""
-pr-12325

@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 ;
 export function useAuthStatus() {;
@@ -58,4 +57,5 @@ savedTalents;
 handleToggleSave;
 toggleAuth 
 }
+
 }

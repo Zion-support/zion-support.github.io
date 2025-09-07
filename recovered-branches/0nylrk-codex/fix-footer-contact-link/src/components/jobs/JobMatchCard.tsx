@@ -1,40 +1,38 @@
+import React from 'react';
+import {Badge} from "@/components/ui/badge";
+import {Button} from "@/components/ui/button";
+import {Card, CardContent} from "@/components/ui/card";
+import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
+import {Building, MapPin, Clock, DollarSign, Star} from "lucide-react";
+import {formatDistanceToNow} from "date-fns";
+import {JobMatch} from "@/types/jobs";
 
 import React from 'react',
-import { Badge } from "@/components/ui/badge",
-import { Button } from "@/components/ui/button",
-import { Card, CardContent } from "@/components/ui/card",
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
-import { Building, MapPin, Clock, DollarSign, Star } from "lucide-react",
-
-import React from 'react',;
-import { Badge } from "@/components/ui/badge",;
-import { Button } from "@/components/ui/button",;
-import { Card, CardContent } from "@/components/ui/card",;
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
-import { Building, MapPin, Clock, DollarSign, Star } from "lucide-react",;
-import { formatDistanceToNow } from "date-fns";
+import { Badge } from "@/components/ui/badge","
+import { Button } from "@/components/ui/button","
+import { Card, CardContent } from "@/components/ui/card","
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar","
+import { Building, MapPin, Clock, DollarSign, Star } from "lucide-react",";
+import { formatDistanceToNow } from "date-fns";"
 import { JobMatch } from "@/types/jobs";
+interface JobMatchProps {}
+  matchId: string;
+  talentId: string;
+  name: string;
+  title: string;
+  company: string;
+  avatar: string;
+  location: string;
+  category: string;
+  matchPercent: number;
 
-interface JobMatchProps {
-
-  matchId: string
-  talentId: string
-  name: string
-  title: string
-  company: string
-  avatar: string
-  location: string
-  category: string
-  matchPercent: number
   skills: string[]
-  onApply?: (matchId: string) => void
-  onViewDetails?: (matchId: string) => void
-
-  onInvite?: (matchId: string) => void
+  onApply?: (matchId: string) => void;
+  onViewDetails?: (matchId: string) => void;
+  onInvite?: (matchId: string) => void;
 }
-export function JobMatchCard({
+export function JobMatchCard({};
   matchId;
-
 
   talentId;
   name;
@@ -47,19 +45,116 @@ export function JobMatchCard({
   skills;
   onApply;
   onViewDetails;
-  onInvite;)
-pr-12325
-}: JobMatchProps) {
+
+export function JobMatchCard({ ;
+  matchId;
+  talentId, 
+  name, 
+  title, 
+  company, 
+  avatar, 
+  location, 
+  category, 
+  matchPercent, 
+  skills;
+  onApply, 
+  onViewDetails, 
+
+      onApply(matchId)
+    }
+  };
+
+      onViewDetails(matchId)
+    }
+  };
+
+import { JobMatch } from "@/types/jobs",;
+interface JobMatchProps {;
+  matchId: string,;
+  talentId: string,;
+  name: string,;
+  title: string,;
+  company: string,;
+  avatar: string,;
+  location: string,;
+  category: string,;
+  matchPercent: number,;
+  skills: string[],;
+  onApply?: (matchId: string) => void,;
+  onViewDetails?: (matchId: string) => void,;
+  onInvite?: (matchId: string) => void;
+}
+      on_apply (match_id);
+    }
+  }
+;
+
+    }
+  },;
+  const handleViewDetails = () => {;
+    if (onViewDetails) {;
+      onViewDetails(matchId);
+    }
+  },;
+  const handleInvite = () => {;
+    if (onInvite) {;
+      onInvite(matchId);
+    }
+  },
 
   return (
-    <Card className="overflow-hidden">"
-      <CardContent className="p-0">"
+    <Card className="overflow-hidden">
+
+      <CardContent className="p-0">
+        {/* Match score indicator */}"
         <div className="bg-gradient-to-r from-primary/10 to-primary/5 p-3 flex justify-between items-center">"
-</div>"
           <div className="flex items-center gap-1">"
             <Star className="h-4 w-4 text-yellow-500 fill-yellow-500" />"
-            <span className="font-medium">{matchPercent}% Match</span>"
-          <Badge variant="outline" className="bg-background">"
+            <span className="font-medium">{matchPercent}% Match</span>
+          </div>"
+          <Badge variant="outline" className="bg-background">
+            {formatDistanceToNow(postedDate, { addSuffix: true })}
+
+  return (
+
+          </div>;
+        </div>;
+      </CardContent>;
+    </Card>;
+  );
+
+}
+
+import { Badge } from '@/components / ui / badge';
+import { Button } from '@/components / ui / button';
+import { Card, CardContent } from '@/components / ui / card';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components / ui / avatar';
+import { Building, MapPin, Clock, DollarSign, Star } from './lucide-react';
+import { formatDistanceToNow } from './date - fns';
+
+import { JobMatch } from '@/types / jobs';
+interface JobMatchProps {}
+
+  match_id: string,
+  talent_id: string,
+  name: string,
+  title: string,
+  company: string,
+  avatar: string,
+  location: string,
+  category: string,
+  match_percent: number,
+  skills: string[],
+  on_apply?: (match_id: string) => void,
+  onViewDetails?: (match_id: string) => void,
+  on_invite?: (match_id: string) => void;
+}
+
+}
+      on_apply (match_id);
+    }
+  }
+;
 
           </div>;
           <Badge variant="outline" className="bg - background">;
@@ -70,90 +165,12 @@ pr-12325
         <div className="p - 4">;
           <div className="flex justify - between items - start gap - 2 mb - 3">;
             <h3 className="text - lg font - bold line - clamp - 2">{name}</h3>;
-import React from 'react',;
-import { Badge } from "@/components/ui/badge",;
-import { Button } from "@/components/ui/button",;
-import { Card, CardContent } from "@/components/ui/card",;
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
-import { Building, MapPin, Clock, DollarSign, Star } from "lucide-react",;
-import { formatDistanceToNow } from "date-fns",;
-import { JobMatch } from "@/types/jobs",;
-;
-interface JobMatchProps {;
-  matchId:string,;
-  talentId:string,;
-  name:string,;
-  title:string,;
-  company:string,;
-  avatar:string,;
-  location:string,;
-  category:string,;
-  matchPercent:number,;
-  skills:string[],;
-  onApply?:(matchId:string) => void,;
-  onViewDetails?:(matchId:string) => void,;
-  onInvite?:(matchId:string) => void;
-}
-;
-export function JobMatchCard({ ;
-  matchId,;
-  talentId, ;
-  name, ;
-  title, ;
-  company, ;
-  avatar, ;
-  location, ;
-  category, ;
-  matchPercent, ;
-  skills,;
-  onApply, ;
-  onViewDetails, ;
-  onInvite ;
-} JobMatchProps) {;
-  const handleApply = () => {;
-    if (onApply) {;
-      onApply(matchId),;
-    }
-  },;
-;
-  const handleViewDetails = () => {;
-    if (onViewDetails) {;
-      onViewDetails(matchId),;
-    }
-  },;
-;
-  const handleInvite = () => {;
-    if (onInvite) {;
-      onInvite(matchId),;
-    }
-  },;
-;
-  // Generate a formatted date for display;
-  const postedDate = new Date(),;
-  postedDate.setDate(postedDate.getDate() - Math.floor(Math.random() * 14)), // Random date within last 2 weeks;
-  ;
-  return (;
-    <Card className="overflow-hidden">;
-      <CardContent className="p-0">;
-        {/* Match score indicator */}
-        <div className="bg-gradient-to-r from-primary/10 to-primary/5 p-3 flex justify-between items-center">;
-          <div className="flex items-center gap-1">;
-            <Star className="h-4 w-4 text-yellow-500 fill-yellow-500" />;
-            <span className="font-medium">{matchPercent}% Match</span>;
-          </div>;
-          <Badge variant="outline" className="bg-background">;
-            {formatDistanceToNow(postedDate, { addSuffix:true })}
-          </Badge>;
-        </div>;
-        ;
-        {/* Talent details */}
-        <div className="p-4">;
-          <div className="flex justify-between items-start gap-2 mb-3">;
-            <h3 className="text-lg font-bold line-clamp-2">{name}</h3>;
+
             <Badge variant="default">;
               Available;
             </Badge>;
           </div>;
+
           <div className="text - lg font - medium mb - 2">{title}</div>;
           <div className="flex flex - wrap gap - 2 mb - 3">;
             <Badge variant="outline">{category}</Badge>;
@@ -217,6 +234,7 @@ export function JobMatchCard({ ;
       </CardContent>;
     </Card>);
 }
+
           ;
           <div className="text-lg font-medium mb-2">{title}</div>;
           ;
@@ -286,5 +304,3 @@ pr-12325
 ;
 }
 ;
-}</div> </div> </CardContent> </Card>) "
-

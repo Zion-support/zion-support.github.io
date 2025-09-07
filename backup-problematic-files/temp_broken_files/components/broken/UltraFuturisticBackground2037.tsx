@@ -4,6 +4,7 @@ interface UltraFuturisticBackground2037Props {intensity?: 'low' | 'medium' | 'hi
   theme?: 'quantum' | 'neon' | 'holographic' | 'cyberpunk' | 'quantum-neon';
   children?: React.ReactNode;
 }
+
 ;
 export default function UltraFuturisticBackground2037({;
   intensity = 'medium',;
@@ -316,7 +317,6 @@ ctx.fillStyle = `${color}${Math.floor(hologramOpacity * 100).toString(16).padSta
   // TODO: Implement
           ctx.lineTo(waveX, waveY)
         }      }
-      
 
     const drawNeonParticle = (particle: any) => {
       const { x, y, size, color, neonIntensity } = particle,      
@@ -415,6 +415,7 @@ if (theme === 'quantum-neon' || theme === 'quantum') {
               ctx.strokeStyle = `${particle1.color}20`,
               ctx.moveTo(particle1.x, particle1.y),
               ctx.lineTo(particle2.x, particle2.y),
+
       requestAnimationFrame(animate);
     animate(0);
     const handleResize = () => {if (typeof window !== 'undefined') {;
@@ -432,5 +433,3 @@ if (theme === 'quantum-neon' || theme === 'quantum') {
 ref={canvasRef}
         className=&quot;w-full h-full&quot;
         style={{
-          background: 'transparent,)
-  filter: theme === 'neon' ? 'brightness(1.2) contrast(1.1)' : 'none`;

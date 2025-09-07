@@ -1,4 +1,3 @@
-import React from 'react';'
 const Sonner = ({ className }) => {
   return ('
     <div className={className || ''}>'
@@ -8,6 +7,3 @@ const Sonner = ({ className }) => {
     </div>
   )
 };
-
-    </div>)'
-pr-12325

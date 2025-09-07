@@ -1,4 +1,3 @@
-
 import { useState, useCallback } from 'react';
 import { PortfolioProject } from '@/types/resume';
 import { supabase } from '@/integrations/supabase/client';

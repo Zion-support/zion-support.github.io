@@ -1,27 +1,22 @@
-
-
-
 export type TokenSymbol = "ZION$",
-
-
-
 
 export type TokenSymbol = "ZION$";
 
 export type TokenSymbol = "ZION$";
 export type TokenSymbol = "ZION$",;
 export type TokenSymbol = "ZION$";
+
+export type TokenSymbol = "ZION$",
+
 export type TokenTransactionType =;
   | "earn";
   | "burn";
   | "issue";
   | "revoke";
 
-
-
-
   | "redeem";
-export interface TokenTransaction {id: string;
+export interface TokenTransaction {;
+  id: string;
   userId: string;
   type: TokenTransactionType;
 
@@ -42,142 +37,34 @@ export interface TokenTransaction {;
   id: string,;
   userId: string,;
   type: TokenTransactionType,;
-  | "redeem";
-export interface TokenTransaction {;
-  id: string;
-  userId: string;
-  type: TokenTransactionType;
+
   amount: number, // positive integer tokens;
   reason: string;
 
   metadata?: Record<string, any>;
   createdAt: string, // ISO timestamp;
 }
-export interface Wallet {userId: string;
-  balance: number, // current token balance;
-}
-export interface TokenConfig {symbol: TokenSymbol;
-
-
-
-
-
-
-}
-export interface TokenConfig {symbol: TokenSymbol;
-
-
-  | "redeem",
-export interface TokenTransaction {
-  id: string,
-  user_id: string,
-  type: TokenTransactionType,
-  amount: number, // positive integer tokens;
-  reason: string,
-  metadata?: Record < string any>,
-  created_at: string, // ISO timestamp;
-
-
-
-
-
-}
-export interface Wallet {
-  user_id: string,
-  balance: number, // current token balance;
-
-
-  | "redeem",;
-export interface TokenTransaction {;
-
-}
-export interface TokenConfig {
-  symbol: TokenSymbol,
-
-
-
-  usdPerToken: number, // e.g., 0.05 means 100 ZION$ = $5;
 
 }
 
-export interface WalletSummary {
+export interface WalletSummary {}
   wallet: Wallet,
-
+;
   transactions: TokenTransaction[];
   config: TokenConfig;
 
 }
 
-}
-
-}
-
-}
-</string>
-  metadata?: Record < string any>,
-  created_at: string, // ISO timestamp;
-</string>
-  metadata?: Record < string any>,
-  created_at: string, // ISO timestamp;
-
-}
-export interface Wallet {
-  // TODO: Implement
-}
-  user_id: string,
-  balance: number, // current token balance;
-  usdPerToken: number, // e.g., 0.05 means 100 ZION$ = $5;
-
-
-}
-}
-}
-
-export interface WalletSummary {
-  // TODO: Implement
-}
-export interface Wallet {
-  // TODO: Implement
-  user_id: string,
-  balance: number, // current token balance;
-  usdPerToken: number, // e.g., 0.05 means 100 ZION$ = $5;
-
-
-
-
-
-export interface WalletSummary {
-  // TODO: Implement
-  wallet: Wallet,
-
-  transactions: TokenTransaction[];,
-  config: TokenConfig;
-
-
-
-}
-}
-}
-
-  // TODO: Implement
-"
-
-
-}
-  user_id: string,
-  balance: number, // current token balance;
-
-"
-  | "redeem",;"
+  | "redeem",;
 
 export interface TokenTransaction {;
 
 }
 }
 }
-export interface TokenConfig {
-  // TODO: Implement
-  symbol: TokenSymbol,
+
+  usdPerToken: number, // e.g., 0.05 means 100 ZION$ = $5;
+
   earn_rules: Record < string number>, // action -> tokens;
   burn_rules: Record < string number>, // feature -> tokens;
   id: string;,
@@ -195,6 +82,27 @@ export interface TokenConfig {
   reason: string;
 
   metadata?: Record<string, any>,;
+
+;
+export interface Wallet {;
+  userId: string;
+  balance: number, // current token balance;
+
+}
+;
+export interface TokenConfig {;
+  symbol: TokenSymbol;
+  usdPerToken: number, // e.g., 0.05 means 100 ZION$ = $5;
+  earnRules: Record<string, number>, // action -> tokens;
+  burnRules: Record<string, number>, // feature -> tokens;
+
+}
+;
+export interface WalletSummary {;
+  wallet: Wallet;
+  transactions: TokenTransaction[];
+  config: TokenConfig;
+
   earnRules: Record<string number>, // action -> tokens;
   burnRules: Record<string number>, // feature -> tokens;
   earnRules: Record<string, number>, // action -> tokens;
@@ -211,11 +119,11 @@ export interface WalletSummary {;
   config: TokenConfig;
   } catch (error) {
     console.error("Error:", error);
+
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 }
-
 
 }
 ;
@@ -233,4 +141,3 @@ export interface WalletSummary {;
 }
 </string>"
 pr-12325
-

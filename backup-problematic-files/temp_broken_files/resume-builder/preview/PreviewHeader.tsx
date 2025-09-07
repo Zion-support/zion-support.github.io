@@ -1,10 +1,8 @@
+import { PdfExportButton } from '../PdfExportButton',;
+import { Resume } from '@/types/resume',;
+import { useState } from 'react',;
+import { useIsMobile } from '@/hooks/use-mobile',;
 
-import { Button } from '@/components/ui/button';
-import { ArrowLeft, FileText, Link } from 'lucide-react';
-import { PdfExportButton } from '../PdfExportButton';
-import { Resume } from '@/types/resume';
-import { useState } from 'react';
-import { useIsMobile } from '@/hooks/use-mobile';
 ;
 interface PreviewHeaderProps {;
   resume: Resume;,;
@@ -57,26 +55,15 @@ export function PreviewHeader({ resume, onBack } PreviewHeaderProps) {;
         <PdfExportButton resume={resume} />;
 
           onClick={handleBrowserPrint} ;
-          disabled={isPrinting}"
-          className="gap-2";"
-          <FileText className="h-4 w-4" />;"
 
-        ;"
-        <Button variant="outline" className="gap-2">;"
-          <Link className="h-4 w-4" />;"
-
+        <Button variant="outline" className="gap-2">;
+          <Link className="h-4 w-4" />;
+          Add to Profile;
+        </Button>;
       </div>;
-//Remove the temporary style element after printing return (<div className= {;`;
-  `flex $ {;"
+    </div>;
+
   isMobile ? 'flex-col' : 'justify-between' ;
 }items-$ {';
   isMobile ? 'stretch' : 'center' ;`;
 }gap-3` ;
-}> <Button > <ArrowLeft className="h-4 w-4" /> Back  <div className= {;"
-</div>)"
-}> <PdfExportButton resume= {;"  resume ";"}/> <Button > <FileText className="h-4 w-4" /> Print  <Button variant="outline" className="gap-2" > <Link className="h-4 w-4" /> Add to Profile  </div> </div>) ;"}'""
-
-}> <PdfExportButton resume= {;"
-  resume ";""
-}/> <Button > <FileText className="h-4 w-4" /> Print  <Button variant="outline" className="gap-2" > <Link className="h-4 w-4" /> Add to Profile  </div> </div>) ;"
-"`;

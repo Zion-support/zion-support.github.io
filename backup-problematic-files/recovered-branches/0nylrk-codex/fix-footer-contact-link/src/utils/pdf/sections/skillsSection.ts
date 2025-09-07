@@ -1,4 +1,3 @@
-
 import { jsPDF } from 'jspdf';
 import { Skill } from '@/types/resume';
 import { PdfThemeColors } from '../themeConfig';

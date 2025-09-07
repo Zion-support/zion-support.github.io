@@ -1,4 +1,3 @@
-import React from 'react';'
 const AIAutonomousDataSecurity = ({ className }) => {
   return ('
     <div className={className || ''}>'
@@ -8,6 +7,3 @@ const AIAutonomousDataSecurity = ({ className }) => {
     </div>
   )
 };
-
-    </div>)'
-pr-12325

@@ -70,6 +70,6 @@ export async function trackReferral(userId:string, email:string) {;
 }return localStorage.getItem ('referral code') 
 }/** * Track referral when a user signs up */ // Call API to record the referral const response = await fetch ('/api/track-referral', {
   method: 'POST', headers: {
-  'Content-Type': 'application/json' 
+
 };
 }

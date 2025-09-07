@@ -1,18 +1,20 @@
+target_institution
+
+      type
+      regionalScope
+      budgetOrResolution
+
+import type { NextApiRequest, NextApiResponse } from 'next';
 
   try {
     const {
-      target_institution;
-      type;
-      regional_scope;
-      budgetOrResolution;
-      target_institution
-      type
-      regional_scope
-      budgetOrResolution
+
       language = 'en'
+
     } = req.body || {};
 
     const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+
     const userPrompt = promptAssist ||
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { OpenAI } from '[^']*';
@@ -42,26 +44,26 @@ language = 'en';
     const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
     const userPrompt =
       promptAssist ||
-origin/cursor/automate-test-improve-and-merge-code-2533
+
       `Write a proposal for ${targetInstitution} on ${type} in ${regionalScope}. Budget/Resolution: ${budgetOrResolution}. Include metrics, social outcomes, and DAO-based governance logic.`;
 
     const completion = await openai.chat.completions.create({
-      model: process.env.OPENAI_MODEL || 'gpt-4o-mini'
+      model: process.env.OPENAI_MODEL || "gpt-4o-mini",
       messages: [
-      ];
-      temperature: 0.3
-    });
-      title;
-      target_institution;
-      type;
-      regional_scope;
-      budgetOrResolution;
+
+      title,
+      target_institution,
+      type,
+      regional_scope,
+      budgetOrResolution,
+
       ]
       temperature: 0.3
-        { role: 'system', content: SYSTEM_PROMPT };
-{ role: 'user', content: userPrompt };
-      ];
-      temperature: 0.3;
+        { role: 'system', content: SYSTEM_PROMPT },
+{ role: 'user', content: userPrompt },
+      ],
+      temperature: 0.3,
+
 origin/cursor/automate-test-improve-and-merge-code-2533
     });
       title
@@ -70,8 +72,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       regional_scope
       budgetOrResolution
 
-
     return res.status(200).json({ meta, markdown: contentMarkdown })
+
       supportingMultiverses
       contentMarkdown
       language
@@ -83,14 +85,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
 
-  }
-}
-      supporting_multiverses;
-      content_markdown;
-      language;
+      supporting_multiverses,
+      content_markdown,
+      language,
+
       supporting_multiverses
       content_markdown
       language
+
     });
 ;
     return res.status (200).json ({ meta, markdown: content_markdown });
@@ -105,11 +107,23 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
   }
 }
-    return res
-      .status(500)
-      .json({ error: error?.message || "Failed to generate proposal" });
+
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
-
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
-origin/cursor/automate-test-improve-and-merge-code-2533
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+
+  }
+}

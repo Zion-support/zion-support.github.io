@@ -1,7 +1,3 @@
-import React, { createContext, useState, useContext, useEffect, ReactNode } from 'react';
-import { useTranslation } from 'react-i18next';
-import { supabase } from '../integrations/supabase/client';
-import { toast } from '../components/ui/use-toast';
 ;
 export type SupportedLanguage = 'en' | 'es' | 'pt' | 'ar',;
 export type LanguageContextType = {;
@@ -38,6 +34,7 @@ export const LanguageProvider:React.FC<LanguageProviderProps> = ({ ;
     }
   }, [currentLanguage, i18n]),;
   ;
+
   // Sync language preference with user profile when authenticated;
   useEffect(() => {;
     const syncLanguageWithProfile = async () => {;
@@ -45,7 +42,7 @@ export const LanguageProvider:React.FC<LanguageProviderProps> = ({ ;
         try {;
           const { error } = await supabase;
             .from('profiles');
-            .update({ preferred_language: currentLanguage ;});
+
             .eq('id', user.id),;
             ;
           if (error) {;
@@ -116,4 +113,4 @@ const [currentLanguage, setCurrentLanguage] = useState<SupportedLanguage> ( (i18
 }
 }> {
 )
-}</LanguageContext.Provider>) 
+}</LanguageContext.Provider>)

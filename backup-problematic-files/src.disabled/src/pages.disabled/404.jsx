@@ -1,4 +1,3 @@
-import React from 'react';'
 const 404 = ({ className }) => {
   return ('
     <div className={className || ''}>'
@@ -8,6 +7,3 @@ const 404 = ({ className }) => {
     </div>
   )
 };
-
-    </div>)'
-pr-12325

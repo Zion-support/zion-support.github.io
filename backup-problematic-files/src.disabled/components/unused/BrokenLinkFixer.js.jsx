@@ -1,4 +1,3 @@
-import React from 'react';'
 const BrokenLinkFixer.js = ({ className }) => {
   return ('
     <div className={className || ''}>'
@@ -8,6 +7,3 @@ const BrokenLinkFixer.js = ({ className }) => {
     </div>
   )
 };
-
-    </div>)'
-pr-12325

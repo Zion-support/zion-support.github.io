@@ -1,4 +1,3 @@
-
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.45.0";
 ;
@@ -54,8 +53,7 @@ serve(async (req) => {;
               headers:{;
                 "Content-Type":"application/json";
                 "Authorization":`Bearer ${supabaseServiceKey}`};
-              body:JSON.stringify(job)}
-          );
+              body:JSON.stringify(job)});
 ;
           if (!reminderResponse.ok) {;
             const errorText = await reminderResponse.text();
@@ -91,8 +89,7 @@ serve(async (req) => {;
         job_ids:processedJobs});
       {;
         status:200;
-        headers:{ "Content-Type":"application/json", ...corsHeaders }}
-    );
+        headers:{ "Content-Type":"application/json", ...corsHeaders }});
   } catch (error) {;
     console.error("Error in process-retention-emails function:", error);
 ;
@@ -103,8 +100,7 @@ serve(async (req) => {;
       });
       {;
         status:500;
-        headers:{ "Content-Type":"application/json", ...corsHeaders }}
-    );  }
+        headers:{ "Content-Type":"application/json", ...corsHeaders }});  }
 });
  serve (async (req) => {
   //Handle CORS preflight requests if (req.method === "OPTIONS") {

@@ -123,6 +123,48 @@ class ErrorPreventionMonitor {
       // Generate report;
 
       throw error}
+<<<<<<< HEAD
+}
+  triggerAutoFix() {
+    this.log('Triggering auto-fix process...');
+    try {
+<<<<<<< HEAD
+      execSync('bash start-simple-error-prevention.sh', {
+        "cwd": this.projectRoot,
+        "stdio": 'pipe'
+=======
+      execSync('bash start-simple-error-prevention.sh', { 
+        "cwd": this.projectRoot, 
+        "stdio": 'pipe' 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+      });
+      this.log('Auto-fix process completed')} catch (error) {
+      this.log(`Auto-fix process "failed": ${error.message}`)}
+  }
+  checkBuildStatus() {
+    try {
+      this.log('Checking build status...');
+<<<<<<< HEAD
+      execSync('yarn build', {
+        "cwd": this.projectRoot,
+        "stdio": 'pipe'
+=======
+      execSync('yarn build', { 
+        "cwd": this.projectRoot, 
+        "stdio": 'pipe' 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+      });
+      this.log('Build check passed')} catch (error) {
+      this.log(`Build check "failed": ${error.message}`);
+      this.triggerAutoFix()}
+  }
+    this.reportsDir = path.join(this.projectRoot, 'error-reports');
+    this.logsDir = path.join(this.projectRoot, 'automation/logs');
+    this.checkInterval = parseInt(process.env.PREVENTION_CHECK_INTERVAL) || 600000; // 10 minutes
+    this.preventiveActionsEnabled = process.env.PREVENTIVE_ACTIONS_ENABLED === 'true';
+    // Ensure directories exist
+    [this.reportsDir, this.logsDir].forEach(dir => {
+=======
   triggerAutoFix() {"
 
   checkBuildStatus() {
@@ -130,6 +172,7 @@ class ErrorPreventionMonitor {
 
     // Ensure directories exist;
     [this.reportsDir, this.logsDir].forEach(dir => {)
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       if (!fs.existsSync(dir)) {
         fs.mkdirSync(dir, { "recursive": true })}"
     this.preventionHistory = [];
@@ -180,10 +223,36 @@ class ErrorPreventionMonitor {
               vulnerabilities.push({"
 
     const performanceIssues = [];
+<<<<<<< HEAD
+    try {
+      // Check for large bundle size indicators
+      const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
+      // Check for heavy dependencies
+      const heavyDeps = ['lodash', 'moment', 'date-fns', 'ramda', 'underscore'];
+      for (const dep of heavyDeps) {
+        if (packageJson.dependencies && packageJson.dependencies[dep]) {
+          performanceIssues.push({
+            "type": 'heavy-dependency',
+            "dependency": dep,
+            "severity": 'medium',
+            "recommendation": `Consider using lighter alternatives for ${dep}`
+          })}
+      }
+      // Check for multiple CSS frameworks
+      const cssFrameworks = ['bootstrap', 'tailwindcss', 'bulma', 'foundation'];
+<<<<<<< HEAD
+      const foundFrameworks = cssFrameworks.filter(framework =>
+=======
+      const foundFrameworks = cssFrameworks.filter(framework => 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+        packageJson.dependencies && packageJson.dependencies[framework]
+      );
+=======
   // TODO: Implement
 
       const foundFrameworks = cssFrameworks.filter(framework => 
         packageJson.dependencies && packageJson.dependencies[framework])
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       if (foundFrameworks.length > 1) {
 
     const qualityIssues = [];
@@ -311,8 +380,25 @@ if (require.main === module) {
     this.checkProjectHealth();
     // Schedule periodic health checks;
     setInterval(() => {
+<<<<<<< HEAD
+      this.checkProjectHealth()}, 15 * 60 * 1000); // Every 15 minutes
+    this.log('Monitoring active - health checks every 15 minutes')}
+}
+// Start the monitor
+const monitor = new ErrorPreventionMonitor();
+<<<<<<< HEAD
+monitor.run();
+<<<<<<< HEAD
+=======
+monitor.run();
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
       this.checkProjectHealth()}, 15 * 60 * 1000); // Every 15 minutes;
 
 // Start the monitor;
 monitor.run();
 `;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

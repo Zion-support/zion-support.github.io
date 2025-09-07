@@ -37,5 +37,8 @@ exports.handler = async function () {
     const cachePath = path.join(process.cwd(), 'datadaometrics.json')
     const content = fs.readFileSync(cachePath, 'utf-8')
       await upsertFile({ owner, repo, path: 'data/dao/metrics.json', content, message: 'chore(automation): weekly DAO metrics update', token })
+
     return { statusCode: 200, body: JSON.stringify({ ok: true, updatedAt: data.updatedAt }) }
-`;
+  } catch (e) {
+    return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
+  }

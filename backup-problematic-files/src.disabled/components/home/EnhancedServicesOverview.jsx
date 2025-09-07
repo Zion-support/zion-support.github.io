@@ -1,9 +1,3 @@
-import _React from';react''';'';
-import React from\';react\''\';\'';
-const React from";react""";"";''"
-import _React from';react''';'';
-
-
 import React from\';react\''\';\'';
 const React from";react""";"";''"
 import React from\';react\''\';\'';
@@ -29,6 +23,3 @@ const EnhancedServicesOverview = ({ className }) => {
     </div>
   )
 };
-
-    </div>)'
-pr-12325

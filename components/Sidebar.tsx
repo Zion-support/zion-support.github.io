@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -83,9 +82,8 @@ const quickLinks = [
   { name: 'Get Quote', href: '/quote' },
   { name: 'Support', href: '/support' },
 ];
-pr-12243
 
-interface SidebarProps {
+interface SidebarProps {}
   isOpen: boolean;
   onClose: () => void;
 }
@@ -126,42 +124,21 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     );
   };
 
-export function Sidebar({ isOpen, onClose }: SidebarProps) {
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-
-  useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'unset';
-    }
-    return () => {
-      document.body.style.overflow = 'unset';
-    };
-  }, [isOpen]);
-
-  const handleDropdownToggle = (item: string) => {
-    setActiveDropdown(activeDropdown === item ? null : item);
-  };
-
   return (
     <AnimatePresence>
       {isOpen && (
         <>
           {/* Backdrop */}
-          <motion.div
-            initial={{ opacity: 0 ;}}
-            animate={{ opacity: 1 ;}}
-            exit={{ opacity: 0 ;}}
+
             className="fixed inset-0 bg-black bg-opacity-50 z-40"
             onClick={onClose}
           />
           {/* Sidebar */}
-          <motion.div
+          <motion.div;
             initial={{ x: '-100%' }}
-            animate={{ x: 0 }}
+            animate={{ x: 0 }}'
             exit={{ x: '-100%' }}
-            className="fixed left-0 top-0 h-full w-80 bg-white shadow-xl z-50 overflow-y-auto"
+
             transition={{ type: 'tween', duration: 0.3 }}
             className="fixed top-0 left-0 h-full w-80 bg-white shadow-xl z-50 overflow-y-auto"
             initial={{ x: '-100%' ;}}
@@ -171,35 +148,33 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
             className="fixed top-0 left-0 h-full w-80 bg-white shadow-xl z-50 overflow-y-auto"
 
 pr-12243
+
           >
+
             <div className="p-6">
-              {/* Header */}
-              <div className="flex items-center justify-between mb-8">
-                <div className="flex items-center space-x-2">
-                  <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-2 rounded-lg">
+              {/* Header */}"
+              <div className="flex items-center justify-between mb-8">"
+                <div className="flex items-center space-x-2">"
+                  <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-2 rounded-lg">"
                     <Building2 className="w-8 h-8 text-white" />
-                  </div>
+                  </div>"
                   <span className="text-xl font-bold text-gray-900">Zion Tech Group</span>
                 </div>
-                <button
+                <button;
                   onClick={onClose}
-                  className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
-                  className="p-2 text-gray-500 hover:text-gray-700 transition-colors"
-                  className="p-2 text-gray-500 hover:text-gray-700 transition-colors"
 
-pr-12243
                 >
+
                   <X className="w-6 h-6" />
                 </button>
               </div>
 
-pr-12243
-              {/* Navigation */}
               <nav className="space-y-4">
                 {Object.entries(navigation).map(([title, links]) => (
                   <div key={title}>
-                    <button
+                    <button;
                       onClick={() => handleDropdownToggle(title)}
+
                       className="flex items-center justify-between w-full text-left py-2 px-3 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-lg transition-colors"
                     >
                       <span className="font-medium">{title}</span>
@@ -230,36 +205,7 @@ pr-12243
                         </motion.div>
                       )}
                     </AnimatePresence>
-                  </div>
-                ))}
-              </nav>
 
-                      className="flex items-center justify-between w-full text-left text-lg font-semibold text-gray-900 py-2 hover:text-blue-600 transition-colors"
-                    >
-                      <span>{title}</span>
-                      <ChevronDown className={`w-5 h-5 transition-transform ${
-                        activeDropdown === title ? 'rotate-180' : ''
-                      }`} />
-                    </button>
-                    {activeDropdown === title && (
-                      <motion.div
-                        initial={{ opacity: 0;, height: 0 ;}}
-                        animate={{ opacity: 1;, height: 'auto' ;}}
-                        exit={{ opacity: 0;, height: 0 ;}}
-                        className="ml-4 space-y-2 mt-2"
-                      >
-                        {links.map((link) => (
-                          <Link
-                            key={link.name}
-                            href={link.href}
-                            className="block text-gray-600 hover:text-blue-600 transition-colors py-1"
-                            onClick={onClose}
-                          >
-                            {link.name}
-                          </Link>
-                        ))}
-                      </motion.div>
-                    )}
                   </div>
                 ))}
               </nav>
@@ -268,11 +214,12 @@ pr-12243
               {/* Quick Links */}
               <div className="mt-8 pt-8 border-t border-gray-200">
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">Quick Links</h3>
+
                 <div className="space-y-2">
                   {quickLinks.map((link) => (
-                    <Link
+                    <Link;
                       key={link.name}
-                      href={link.href}
+                      href={link.href}"
                       className="block text-gray-600 hover:text-blue-600 transition-colors py-1"
                       onClick={onClose}
                     >
@@ -282,14 +229,6 @@ pr-12243
                 </div>
               </div>
 
-              {/* Contact Info */}
-              <div className="mt-8 pt-8 border-t border-gray-200">
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">Contact Us</h3>
-                <div className="space-y-2 text-sm text-gray-600">
-                  <p>+1 302 464 0950</p>
-                  <p>kleber@ziontechgroup.com</p>
-                  <p>24/7 Support Available</p>
-                </div>
               {/* Contact Info */}
               <div className="mt-8 pt-8 border-t border-gray-200">
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">Contact Info</h3>
@@ -312,7 +251,6 @@ pr-12243
                   <span className="font-medium">Sign Out</span>
                 </button>
 
-pr-12243
               </div>
             </div>
           </motion.div>
@@ -320,6 +258,7 @@ pr-12243
       )}
     </AnimatePresence>
   );
+
 };
 
 export default Sidebar;
@@ -360,6 +299,7 @@ import {
   Factory,
   Truck,
   CreditCard,
+  LogOut,
   Phone,
   Mail,
   ExternalLink;
@@ -555,7 +495,6 @@ const Sidebar: React.FC < SidebarProps> = ({ is_open;, on_close }) => {
 export default Sidebar;
 ;
 
-pr-12243
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
   X, 
@@ -595,70 +534,46 @@ const navigation = {
 import React from 'react';
 import { Home, Settings, User, LogOut } from 'lucide-react';
 
-pr-12243
-
 interface SidebarProps {
   isOpen: boolean;
   onClose: () => void;
 }
 
 const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
-const Sidebar: React.FC<SidebarProps> = ({ isOpen;, onClose }) => {
-  const menuItems = [
-    { href: '/dashboard';, label: 'Dashboard';, icon: Home ;},
-    { href: '/profile';, label: 'Profile';, icon: User ;},
-    { href: '/settings';, label: 'Settings';, icon: Settings ;},
-  ];
 
   return (
-    <>
+    <AnimatePresence>
       {isOpen && (
-        <div
-          className="fixed inset-0 bg-black bg-opacity-50 z-40 md:hidden"
-          onClick={onClose}
-        />
+        <>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 bg-black bg-opacity-50 z-40"
+            onClick={onClose}
+          />
+          
+          {/* Sidebar */}
+          <motion.div
+            initial={{ x: '-100%' }}
+            animate={{ x: 0 }}
+            exit={{ x: '-100%' }}
+            transition={{ type: 'tween', duration: 0.3 }}
+            className="fixed left-0 top-0 h-full w-80 bg-white shadow-xl z-50 overflow-y-auto"
+          >
+            <div className="p-6">
+              <div className="flex items-center justify-between mb-8">
+
+              </nav>
+
+              <div className="mt-8 pt-8 border-t border-gray-200">
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </>
       )}
-
-      <div
-        className={'fixed top-0 left-0 h-full w-64 bg-white shadow-lg transform transition-transform duration-300 ease-in-out z-50 ' + (isOpen ? 'translate-x-0' : '-translate-x-full')}
-      >
-        <div className="p-4">
-          <div className="flex items-center justify-between mb-8">
-            <h2 className="text-xl font-bold text-gray-800">Menu</h2>
-            <button
-              onClick={onClose}
-              className="p-2 rounded-md hover:bg-gray-100"
-            >
-              <LogOut className="w-5 h-5" />
-            </button>
-          </div>
-
-          <nav className="space-y-2">
-            {menuItems.map((item) => {
-              const Icon = item.icon;
-              return (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  className="flex items-center space-x-3 px-3 py-2 rounded-md text-gray-700 hover:bg-gray-100 hover:text-blue-600"
-                  onClick={onClose}
-                >
-                  <Icon className="w-5 h-5" />
-                  <span>{item.label}</span>
-                </Link>
-              );
-            })}
-          </nav>
-        </div>
-      </div>
-    </>
+    </AnimatePresence>
   );
-};
-
-export default Sidebar;
-
-
-
-
-
-pr-12243

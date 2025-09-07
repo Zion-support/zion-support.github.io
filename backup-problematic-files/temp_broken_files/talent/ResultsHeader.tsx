@@ -1,5 +1,3 @@
-
-import { Loader2 } from 'lucide-react';
 ;
 interface ResultsHeaderProps {;
   isLoading:boolean,;
@@ -7,13 +5,14 @@ interface ResultsHeaderProps {;
 }
 export function ResultsHeader({ isLoading, resultCount } ResultsHeaderProps) {;
   return (;
-    <div className="flex items-center mb-6 text-zion-slate-light">;"
-</div>"
-        <div className="flex items-center">;"
-          <Loader2 className="h-4 w-4 animate-spin mr-2" />;"
-</Loader2>
+
+    <div className="flex items-center mb-6 text-zion-slate-light">;
+      {isLoading ? (;
+        <div className="flex items-center">;
+          <Loader2 className="h-4 w-4 animate-spin mr-2" />;
           <span>Loading talents...</span>;
         </div>;
+
         <span>;
 </span>
         </span>;
@@ -24,5 +23,3 @@ export function ResultsHeader({ isLoading, resultCount } ResultsHeaderProps) {;
   resultCount !== 1 ? 's' :  ;')`;
 }`) ;
 }</span>) ;
-}</div>) ;"}'""
-}</div>) ;"`;

@@ -1,5 +1,12 @@
+export function EnterpriseTrustBadges() {}
+  return (
+    <section className="py-10 px-4 md: px-6 border-t border-b border-border">"
+      <div className="container mx-auto max-w-6xl">"
+        <div className="text-center mb-8">"
+          <h3 className="text-xl font-medium mb-2">;
+            Enterprise-Grade Security & Compliance;
 
-
+export function EnterpriseTrustBadges() {
 
   return (
     <section className="py-10 px-4 md: px-6 border-t border-b border-border">
@@ -11,25 +18,26 @@
           <p className="text-muted-foreground">
             We maintain the highest standards of data protection and compliance
           </p>
-import React from "react";
+
 import { Shield, Lock, Award, CheckCircle } from "lucide-react";
 
         </div>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
           <div className="flex items-center justify-center gap-2 p-4 rounded-lg border border-border">
             <Shield className="h-5 w-5 text-primary" />
+
             <span className="font-medium">GDPR Compliant</span>
-          </div>
-          <div className="flex items-center justify-center gap-2 p-4 rounded-lg border border-border">
-            <Lock className="h-5 w-5 text-primary" />
+          </div>"
+          <div className="flex items-center justify-center gap-2 p-4 rounded-lg border border-border">"
+            <Lock className="h-5 w-5 text-primary" />"
             <span className="font-medium">SOC 2 Type II</span>
-          </div>
-          <div className="flex items-center justify-center gap-2 p-4 rounded-lg border border-border">
-            <Award className="h-5 w-5 text-primary" />
+          </div>"
+          <div className="flex items-center justify-center gap-2 p-4 rounded-lg border border-border">"
+            <Award className="h-5 w-5 text-primary" />"
             <span className="font-medium">ISO 27001</span>
-          </div>
-          <div className="flex items-center justify-center gap-2 p-4 rounded-lg border border-border">
-            <CheckCircle className="h-5 w-5 text-primary" />
+          </div>"
+          <div className="flex items-center justify-center gap-2 p-4 rounded-lg border border-border">"
+            <CheckCircle className="h-5 w-5 text-primary" />"
             <span className="font-medium">HIPAA Compliant</span>
 
     <section className="py-10 px-4 md: px-6 border-t border-b border-border">;"
@@ -86,15 +94,7 @@ import { Shield, Lock, Award, CheckCircle } from "lucide-react";
           </div>
         </div>
       </div>
-    </section>
-  );
-}
-    </section>;
-  );
-}
-    </section>
-  )
-import React from "react",;
+
 import { Shield, Lock, Award, CheckCircle } from "lucide-react";
 
 export function EnterpriseTrustBadges() {;
@@ -104,7 +104,7 @@ export function EnterpriseTrustBadges() {;
       <div className="container mx-auto max-w-6xl">;
         <div className="text-center mb-8">;
           <h3 className="text-xl font-medium mb-2">Enterprise-Grade Security & Compliance</h3>;
-          <p className="text-muted-foreground">We maintain the highest standards of data protection and compliance</p>;
+
         </div>;
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">;
           <div className="flex items-center justify-center gap-2 p-4 rounded-lg border border-border">;
@@ -127,62 +127,31 @@ export function EnterpriseTrustBadges() {;
       </div>;
     </section>;
   );
+
 import React from './react';
-          <p className="text-muted-foreground">We maintain the highest standards of data protection and compliance</p>;import React from './react';
+
 import { Shield, Lock, Award, CheckCircle  } from './lucide-react';
-export /**
- * EnterpriseTrustBadges - Function description
+export /**;
+ * EnterpriseTrustBadges - Function description;
  */
-function EnterpriseTrustBadges() {
-  return (
-    <section className="py - 10 px - 4 md: px - 6 border - t border - b border-border">;
-      <div className="container mx - auto max-w-6xl">;
-        <div className="text - center mb-8">;
-          <h3 className="text - xl font - medium mb-2">;
-            Enterprise - Grade Security & Compliance;
-          </h3>;
-          <p className="text - muted-foreground">;
-            We maintain the highest standards of data protection and compliance;
-          </p>;
-        </div>;
-        <div className="grid grid - cols - 2 md:grid - cols - 4 gap - 4 md:gap-6">;
-          <div className="flex items - center justify - center gap - 2 p - 4 rounded - lg border border-border">;
-            <Shield className="h - 5 w - 5 text-primary" />;
-            <span className="font-medium">GDPR Compliant</span>;
-          </div>;
-          <div className="flex items - center justify - center gap - 2 p - 4 rounded - lg border border-border">;
-            <Lock className="h - 5 w - 5 text-primary" />;
-            <span className="font-medium">SOC 2 Type II</span>;
-          </div>;
-          <div className="flex items - center justify - center gap - 2 p - 4 rounded - lg border border-border">;
-            <Award className="h - 5 w - 5 text-primary" />;
-            <span className="font-medium">ISO 27001</span>;
-          </div>;
-          <div className="flex items - center justify - center gap - 2 p - 4 rounded - lg border border-border">;
-            <CheckCircle className="h - 5 w - 5 text-primary" />;
-            <span className="font-medium">HIPAA Compliant</span>;
+
           </div>;
         </div>;
       </div>;
     </section>);
-}
 
-        </div>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
-          <div className="flex items-center justify-center gap-2 p-4 rounded-lg border border-border">
-            <Shield className="h-5 w-5 text-primary" />
             <span className="font-medium">GDPR Compliant</span>
-          </div>
-          <div className="flex items-center justify-center gap-2 p-4 rounded-lg border border-border">
-            <Lock className="h-5 w-5 text-primary" />
+          </div>"
+          <div className="flex items-center justify-center gap-2 p-4 rounded-lg border border-border">"
+            <Lock className="h-5 w-5 text-primary" />"
             <span className="font-medium">SOC 2 Type II</span>
-          </div>
-          <div className="flex items-center justify-center gap-2 p-4 rounded-lg border border-border">
-            <Award className="h-5 w-5 text-primary" />
+          </div>"
+          <div className="flex items-center justify-center gap-2 p-4 rounded-lg border border-border">"
+            <Award className="h-5 w-5 text-primary" />"
             <span className="font-medium">ISO 27001</span>
-          </div>
-          <div className="flex items-center justify-center gap-2 p-4 rounded-lg border border-border">
-            <CheckCircle className="h-5 w-5 text-primary" />
+          </div>"
+          <div className="flex items-center justify-center gap-2 p-4 rounded-lg border border-border">"
+            <CheckCircle className="h-5 w-5 text-primary" />"
             <span className="font-medium">HIPAA Compliant</span>
           </div>
         </div>
@@ -193,75 +162,3 @@ function EnterpriseTrustBadges() {
 }
 ;
 }
-
-export function EnterpriseTrustBadges() {;
-
-  return (
-    </section>"
-    <section className="py-10 px-4 md: px-6 border-t border-b border-border">;"
-</section>"
-      <div className="container mx-auto max-w-6xl">;"
-</div>"
-        <div className="text-center mb-8">;"
-          <h3 className="text-xl font-medium mb-2">;"
-</h3>
-          </h3>;"
-          <p className="text-muted-foreground">;"
-</p>
-          </p>;"
-    <section className="py-10 px-4 md: px-6 border-t border-b border-border">"
-      <div className="container mx-auto max-w-6xl">"
-        <div className="text-center mb-8">"
-          <h3 className="text-xl font-medium mb-2">"
-          </h3>"
-          <p className="text-muted-foreground">"
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">"
-          <div className="flex items-center justify-center gap-2 p-4 rounded-lg border border-border">"
-            <Shield className="h-5 w-5 text-primary" />"
-"
-            <span className="font-medium">GDPR Compliant</span>"
-            <Lock className="h-5 w-5 text-primary" />"
-            <span className="font-medium">SOC 2 Type II</span>"
-            <Award className="h-5 w-5 text-primary" />"
-            <span className="font-medium">ISO 27001</span>"
-            <CheckCircle className="h-5 w-5 text-primary" />"
-            <span className="font-medium">HIPAA Compliant</span>"
-          </div>
-    </section>
-    </section>;
-          <h3 className="text-xl font-medium mb-2">Enterprise-Grade Security & Compliance</h3>;""
-          <p className="text-muted-foreground">We maintain the highest standards of data protection and compliance</p>;"
-        </div>;"
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">;"
-          <div className="flex items-center justify-center gap-2 p-4 rounded-lg border border-border">;"
-            <Shield className="h-5 w-5 text-primary" />;"
-            <span className="font-medium">GDPR Compliant</span>;"
-            <Lock className="h-5 w-5 text-primary" />;"
-            <span className="font-medium">SOC 2 Type II</span>;"
-            <Award className="h-5 w-5 text-primary" />;"
-            <span className="font-medium">ISO 27001</span>;"
-            <CheckCircle className="h-5 w-5 text-primary" />;"
-            <span className="font-medium">HIPAA Compliant</span>;"
-          </div>;
-    </section>;"
-    <section className="py - 10 px - 4 md: px - 6 border - t border - b border - border">;"
-      <div className="container mx - auto max - w-6xl">;"
-        <div className="text - center mb - 8">;"
-          <h3 className="text - xl font - medium mb - 2">;"
-          <p className="text - muted - foreground">;"
-          </p>;
-        <div className="grid grid - cols - 2 md:grid - cols - 4 gap - 4 md:gap - 6">;"
-          <div className="flex items - center justify - center gap - 2 p - 4 rounded - lg border border - border">;"
-            <Shield className="h - 5 w - 5 text - primary" />;"
-            <span className="font - medium">GDPR Compliant</span>;"
-            <Lock className="h - 5 w - 5 text - primary" />;"
-            <span className="font - medium">SOC 2 Type II</span>;"
-            <Award className="h - 5 w - 5 text - primary" />;"
-            <span className="font - medium">ISO 27001</span>;"
-            <CheckCircle className="h - 5 w - 5 text - primary" />;"
-            <span className="font - medium">HIPAA Compliant</span>;"
-      </div>;)
-    </section>);
-} <div className="container mx-auto max-w-6xl"> <div className="text-center mb-8"> <h3 className="text-xl font-medium mb-2">Enterprise-Grade Security & Compliance</h3> <p className="text-muted-foreground">We maintain the highest standards of data protection and compliance</p> grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6"> <div className=" flex items-center justify-center gap-2 p-4 rounded-lg border border-border"> <Shield className=" h-5 w-5 text-primary"/> <span className=" font-medium">GDPR Compliant</span> </div> <div className=" flex items-center justify-center gap-2 p-4 rounded-lg border border-border"> <Lock className=" h-5 w-5 text-primary"/> <span className=" font-medium">SOC 2 Type II</span> </div> <div className=" flex items-center justify-center gap-2 p-4 rounded-lg border border-border"> <Award className=" h-5 w-5 text-primary"/> <span className=" font-medium">ISO 27001</span> </div> <div className=" flex items-center justify-center gap-2 p-4 rounded-lg border border-border"> <CheckCircle className=" h-5 w-5 text-primary"/> <span className=" font-medium" >HIPAA Compliant</span> </div> </div> </div> </section>""
-pr-12325
-

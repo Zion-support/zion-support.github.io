@@ -1,9 +1,9 @@
+import { useState } from "react",;
+import { Badge } from "@/components/ui/badge",;
+import { Button } from "@/components/ui/button",;
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",;
+import { supabase } from "@/integrations/supabase/client",;
 
-import { useState } from "react";""
-import { Badge } from "@/components/ui/badge";""
-import { Button } from "@/components/ui/button";""
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";""
-import { supabase } from "@/integrations/supabase/client";""
 import { Loader2, Star, BarChart2, Lightbulb } from 'lucide-react';
 import { toast } from "sonner";""
 import { JobApplication } from "@/types/jobs";"
@@ -23,10 +23,10 @@ export function ApplicationScoreCard({ application, onScoreUpdated } Application
   // Get suggestion color;
   const getSuggestionColor = (suggestion:string | undefined) => {;
     switch (suggestion) {;
-      case "Strongly Recommended":return "bg-green-100 text-green-800",;""
-      case "Recommended for Review":;""
-        return "bg-blue-100 text-blue-800",;""
-      case "Low Match":;""
-        return "bg-orange-100 text-orange-800",;"
-      default:;"
-        return "bg-gray-100 text-gray-800";""
+
+      case "Recommended for Review":;
+        return "bg-blue-100 text-blue-800",;
+      case "Low Match":;
+        return "bg-orange-100 text-orange-800",;
+      default:;
+        return "bg-gray-100 text-gray-800";

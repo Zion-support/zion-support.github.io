@@ -9,4 +9,3 @@ export default function FaqSection({ }: FaqSectionProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-}

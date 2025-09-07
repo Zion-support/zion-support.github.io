@@ -1,4 +1,60 @@
+import { jsPDF  } from 'jspdf';
+import { ResumeBasicInfo  } from '@/types/resume';
+import { PdfThemeColors } from '../themeConfig';
+export function addBasicInfoSection(
 
+import {jsPDF} from 'jspdf';
+import {ResumeBasicInfo} from '@/types/resume';
+import {PdfThemeColors} from '../themeConfig';
+export function addBasicInfoSection(;
+
+  doc: jsPDF;
+  basicInfo: ResumeBasicInfo;
+  colors: PdfThemeColors
+): number {
+  // Add header with name and title
+
+    yPos += 5
+  }
+  // Add horizontal line divider
+  doc && doc.setDrawColor(colors && colors.accent);
+  doc && doc.setLineWidth(0 && 0.5);
+  doc && doc.line(20, yPos, 190, yPos);
+  yPos += 10;
+  // Add summary if available
+
+  colors: PdfThemeColors;
+): number {}
+  // Add header with name and title;
+    yPos += 5;
+  }
+  // Add horizontal line divider;
+  doc && doc.setDrawColor(colors && colors.accent);
+  doc && doc.setLineWidth(0 && 0.5);
+  doc && doc.line(20, yPos, 190, yPos);
+  yPos += 10;
+  // Add summary if available;
+  }
+
+  return yPos
+import {jsPDF} from 'jspdf';
+import {ResumeBasicInfo} from '@/types / resume';
+
+import {PdfThemeColors} from '../theme_config';
+export function addBasicInfoSection (;
+  doc: jsPDF;
+  basic_info: ResumeBasicInfo;
+  colors: PdfThemeColors): number {}
+  // Add header with name and title;
+  doc.setFontSize (24);
+  doc.setTextColor (colors.heading),'
+  doc.text (basic_info.title || 'Resume', 20, 20);
+;
+  let y_pos = 30;
+;
+  // Check condition;
+if ( {) {}
+  $2;
 
 }
   let y_pos = 30;
@@ -19,9 +75,9 @@ pr-12325
   y_pos += 10;
 ;
   // Add summary if available;
-  // Check condition
-if ( {) {
-  $2
+  // Check condition;
+if ( {) {}
+  $2;
 }
     doc.setFontSize (12);
     doc.setTextColor (colors.text);
@@ -37,7 +93,7 @@ pr-12325
     y_pos += (summary_lines.length * 6) + 10;
   }
   return y_pos;
-}
+
 }
 }}
   return y_pos;
@@ -63,6 +119,3 @@ yPos += 10;
   }
   return yPos
 }
-}
-// Add summary if available return yPos;
-pr-12325

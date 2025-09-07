@@ -1,23 +1,42 @@
-
 export interface Message {;
 
 export interface Message {;
 
 export interface Message {
 export interface Message {;
+
   id: string;
 
+}
+
+export interface Recipient {
+  id: string;
+  name: string;
+
+export interface Recipient {;
+  id: string;
+  name: string;
+  avatarUrl?: string;
+  role?: string;
+}
+
 export interface Message {;
+  id: string,;'
+  role: 'user' | 'assistant',;
+  message: string,;
+  timestamp: Date,;
+  read?: boolean;
+}
+;
+export interface Recipient {;
+  id: string,;
 
-export interface Message {export interface Message {;
+  avatarUrl?: string;
 
-export interface Message {
+  role?: string;
+}
 
-  role: 'user' | 'assistant';
-  message: string;
-  timestamp: Date;
-  read?: boolean
-
+  role?: string;
 }
 
   avatar_url?: string;
@@ -35,4 +54,3 @@ name: string;
 export interface Recipient {
   id: string;
   name: string;
-

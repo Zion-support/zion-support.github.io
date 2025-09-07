@@ -1,4 +1,3 @@
-
 :components/AccessibilityEnhancer.tsx
 pr-12243
       }
@@ -89,9 +88,8 @@ import React, { useState, useEffect } from 'react';
 export default AccessibilityEnhancer;
 export default AccessibilityEnhancer;
 
-
-
 pr-12243
+
 import React, { useEffect, useState } from 'react';
 
 interface AccessibilitySettings {
@@ -183,7 +181,7 @@ export default function AccessibilityEnhancer({ children }: AccessibilityEnhance
     </div>
   );
 }
-}
+
       }
       if (liveRegion && liveRegion.parentNode) {;
         liveRegion && liveRegion.parentNode.removeChild(liveRegion);
@@ -290,29 +288,4 @@ pr-12325
 export default AccessibilityEnhancer;
 export default AccessibilityEnhancer;
 
-
-
-
-
 pr-12243
-        .high-contrast * {
-          color: var(--text-color) !important;
-          background-color: var(--bg-color) !important;
-          border-color: var(--border-color) !important;
-
-        .reduced-motion * {
-          animation-duration: 0.01ms !important;
-          animation-iteration-count: 1 !important;
-          transition-duration: 0.01ms !important;
-
-        .accessibility-enhanced {
-          font-size: calc(1rem * var(--font-size-multiplier, 1));
-        }`;
-      `}</style>
-    </>
-  );
-:components/AccessibilityEnhancer.tsx
-pr-12325
-}
-
-:temp-disabled/components/AccessibilityEnhancer.tsx

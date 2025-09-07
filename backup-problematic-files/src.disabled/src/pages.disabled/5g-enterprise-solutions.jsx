@@ -1,4 +1,3 @@
-import React from 'react';'
 const 5g-enterprise-solutions = ({ className }) => {
   return ('
     <div className={className || ''}>'
@@ -8,6 +7,3 @@ const 5g-enterprise-solutions = ({ className }) => {
     </div>
   )
 };
-
-    </div>)'
-pr-12325

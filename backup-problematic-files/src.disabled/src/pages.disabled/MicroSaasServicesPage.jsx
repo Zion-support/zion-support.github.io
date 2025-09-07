@@ -1,4 +1,3 @@
-import React from 'react';'
 const MicroSaasServicesPage = ({ className }) => {
   return ('
     <div className={className || ''}>'
@@ -8,6 +7,3 @@ const MicroSaasServicesPage = ({ className }) => {
     </div>
   )
 };
-
-    </div>)'
-pr-12325

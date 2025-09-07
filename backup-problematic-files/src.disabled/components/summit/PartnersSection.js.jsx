@@ -1,8 +1,3 @@
-const partners = [ { name: "Partner: A,",logo: "https:"""";",;'"'"
-const partners = [ { \"name\": \'Partner: A,\',\"logo\": \'https:\''\'";\",;
-const partners = [ { name: "Partner: A,",logo: "https:"""";",;'"'"
-
-
 const partners = [ { \"name\": \'Partner: A,\',\"logo\": \'https:\''\'";\",;
 const partners = [ { \"name\": \'Partner: A,\',\"logo\": \'https:\''\'";\",;
 const partners = [ { \"name\": \'Partner: A,\',\"logo\": \'https:\''\'";\",;
@@ -27,6 +22,3 @@ const PartnersSection.js = ({ className }) => {
     </div>
   )
 };
-
-    </div>)'
-pr-12325

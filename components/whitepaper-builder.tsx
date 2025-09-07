@@ -1,6 +1,4 @@
-
-
-  return (
+return (
     <div className="space-y-6">
       <div className="flex flex-col gap-2">
         <h1 className="text-3xl font-bold">Zion Protocol Whitepaper</h1>
@@ -42,28 +40,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </section>
         ))}
       </div>
-    </div>
-      <div className='rounded border p - 4 bg - gray - 50 dark:bg - gray - 900'>;
-        <h2 className='text - xl font - semibold mb - 2'>Operator Prompt</h2>;
+
         <pre className='whitespace - pre - wrap text - sm text - gray - 700 dark:text - gray - 200'>;
           {OPERATOR_PROMPT}
         </pre>;
-      </div>;
+      </div>;'
       <div className='space - y-10'>;
-        {sections.map (string => (
-          <section key={s.id} className='space - y-2'>;
-            <h2 className='text - 2xl font - bold'>{s.title}</h2>;
-            {s.subtitle ? <p className='text - gray - 500'>{s.subtitle}</p> : null}
+        {sections.map (string => ('
+          <section key={s.id} className='space - y-2'>;'
+            <h2 className='text - 2xl font - bold'>{s.title}</h2>;'
+            {s.subtitle ? <p className='text - gray - 500'>{s.subtitle}</p> : null}'
             <article className='prose dark:prose - invert max - w-none whitespace - pre - wrap'>;
-              {s.content_md}
-            </article>          </section>      <div className="space-y-10">;
-        {sections.map ((s) => (
-          <section key={s.id} className="space-y-2">;
-            <h2 className="text-2xl font-bold">{s.title}</h2>;
-            {s.subtitle ? <p className="text-gray-500">{s.subtitle}</p> : null}
-            <article className="prose dark: prose - invert max - w-none whitespace-pre-wrap">{s.content_md;}</article>))}
+
       </div>;
     </div>);
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
 }
+'"`

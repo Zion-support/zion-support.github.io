@@ -1,4 +1,5 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
+
 import fs from 'fs';
 import path from 'path';
 import { glob } from 'glob';
@@ -42,7 +43,7 @@ interface User {
   role: 'admin' | 'user' | 'guest'}
 interface Service {
   "id": string;
-  name: string,
+
   description: string;
   price: number;
   category: string}
@@ -108,4 +109,67 @@ pr-12325
   const useStateMatches = improved.match(useStateRegex);
   if (useStateMatches) {
     improved = improved.replace(useStateRegex, 'useState<unknown>');
-</unknown>
+
+  // Add proper typing for event handlers
+  const eventHandlerRegex =
+    /const\s+(\w+)\s*=\s*\(\s*event\s*:\s*any\s*\)\s*=>/g;
+  const eventHandlerMatches = improved.match(eventHandlerRegex);
+  if (eventHandlerMatches) {
+    improved = improved.replace(eventHandlerRegex, (match, handlerName) => {
+      return match.replace('"event": any', '"event": React.SyntheticEvent')});
+    changes += eventHandlerMatches.length}
+  // Add proper typing for API calls
+  const apiCallRegex =
+    /fetch\s*\(\s*['"][^'"]+['"]\s*\)\s*\.then\s*\(\s*\(\s*response\s*:\s*any\s*\)/g;
+  const apiCallMatches = improved.match(apiCallRegex);
+  if (apiCallMatches) {
+    improved = improved.replace(apiCallRegex, match => {
+      return match.replace('"response": any', '"response": Response')});
+    changes += apiCallMatches.length}
+  return { "content": improved, changes }}
+// Process individual file
+function processFile(filePath) {
+  try {
+    const content = fs.readFileSync(filePath, 'utf8');
+    const result = improveTypeScriptFile(content, filePath);
+    if (result.changes > 0) {
+      fs.writeFileSync(filePath, result.content, 'utf8');
+      totalImprovements += result.changes;
+      console.log(
+
+// Generate TypeScript improvement report
+function generateTypeScriptReport() {
+  const report = {
+    "timestamp": new Date().toISOString(),
+    "improvements": {
+      totalFilesProcessed: filesProcessed,
+      "totalTypeImprovements": totalImprovements,
+      "recommendations": ['Consider using strict TypeScript configuration',
+        'Add proper error handling with typed error objects',
+        'Use discriminated unions for better type safety',
+        'Implement proper API response typing',
+        'Add JSDoc comments for complex functions',
+        'Use const assertions for immutable data',
+        'Consider using branded types for IDs',
+      ]}};
+  fs.writeFileSync(
+    'typescript-improvement-report.json',
+    JSON.stringify(report, null, 2)
+  );
+  console.log(
+
+  const patterns = ['src/**/*.{ts,tsx}',
+    'pages/**/*.{ts,tsx}',
+    'components/**/*.{ts,tsx}',
+  ];
+  const excludeDirs = ['node_modules',
+    '.next',
+      'build'
+    'dist',
+      'scripts'
+    'automation',
+      'automation_backup'
+    'src.disabled',
+    'pages.disabled',
+    'components.disabled',
+  ];

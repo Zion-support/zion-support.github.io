@@ -13,14 +13,13 @@ class ErrorBoundary extends React.Component {
   }
   render() {
     if (this.state.hasError) {
-      return <div>Something went wrong.</div>;'
-    <div className={className || ''}>'
-</div>
+
+  return (
+    <div className={className || ''}>
+
       <h1>EnterpriseTestimonials</h1>
       <p>This component is under development.</p>
     </div>
-  )
-};
 
     </div>'
 pr-12325

@@ -1,8 +1,22 @@
+}}}};
+;
+;
+
+}
+}
+}
+},
+
 export const messageChannelHandler = {
   sendMessage: (message: string) => {},
   receiveMessage: (callback: (message: string) => void) => {},
   sendMessage: (message: any) => {},
   receiveMessage: (callback: any) => {},
+
+type MessageHandler = {
+  sendMessage: (message: unknown) => void;
+  receiveMessage: (callback: (message: unknown) => void) => void
+
 };
 export const messageChannelHandler: MessageHandler = {
   sendMessage: (_message) => {
@@ -20,32 +34,16 @@ export const messageChannelHandler: MessageHandler = {
     console.log('Setting up message receiver');
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
   }
+
 };
 };
 };
 };
 ,
+
 // Message channel handler for real-time communication
-export interface MessageChannel {
-  id: string;
-  name: string;
-  type: 'direct' | 'group' | 'channel';
-  participants: string[];
-  createdAt: string;
-  lastMessageAt?: string;
-}
+export class MessageChannelHandler {;
 
-export interface Message {
-  id: string;
-  channelId: string;
-  senderId: string;
-  content: string;
-  timestamp: string;
-  type: 'text' | 'image' | 'file';
-  metadata?: any;
-}
-
-export class MessageChannelHandler {
   private channels: Map<string, MessageChannel> = new Map();
   private messages: Map<string, Message[]> = new Map();
 
@@ -63,6 +61,12 @@ export class MessageChannelHandler {
     
     return channel;
   }
+
+      }
+    });
+  }
+}
+export default MessageChannelHandler;
 
   sendMessage(channelId: string, senderId: string, content: string, type: Message['type'] = 'text'): Message {
     const message: Message = {
@@ -91,14 +95,9 @@ export class MessageChannelHandler {
     return this.messages.get(channelId) || [];
   }
 
-
 }}}};
+
 ;
 
 },;
 ,;
-;
-  getChannel(channelId: string): MessageChannel | undefined {
-    return this.channels.get(channelId);
-  }
-}

@@ -1,19 +1,19 @@
-
 import { Project } from "@/types/projects";
 export const PROJECTS: Project[] = [
   {
 
+    job: {}
+      title: 'AI Dashboard Development''
 
-    job: {
-      title: 'AI Dashboard Development'
       description: 'Develop dashboards using React and integrate ML models'
     }
-    talent_profile: {
-      full_name: 'Alexandra Chen'
+    talent_profile: {'
+      full_name: 'Alexandra Chen''
       professional_title: 'Senior AI Engineer'
     }
   }
 ];
+
     id: "project-1";
     client_id: "client-1";
     talent_id: "t-001";
@@ -31,61 +31,87 @@ export const PROJECTS: Project[] = [
 origin/cursor/automate-test-improve-and-merge-code-2533
     talent_profile: {
 
+      professional_title: "Senior AI Engineer"
+    }
+  }
+
+import { Project } from "@/types/projects",
+export const PROJECTS: Project[] = [';
+import { Project } from '@/types/projects';"
+import { Project } from "@/types/projects",
+
+  {
+    id: "project-1",
+    client_id: "client-1",
+    talent_id: "t-001",
+    job_id: "job-1",
+    start_date: "2024-05-15",
+    scope_summary: "Build an AI powered dashboard for sales metrics",
+    payment_terms: "fixed",
+    status: "in_progress",
+    created_at: "2024-05-15",
+
+    updated_at: "2024-05-20",
+    job: {"
+      title: "AI Dashboard Development","
+      description: "Develop dashboards using React and integrate ML models"
+    },
+
+      full_name: 'Alexandra Chen',
+      professional_title: 'Senior AI Engineer',
+    },
+  },
+];
+}];      title: "AI Dashboard Development";
+      description: "Develop dashboards using React and integrate ML models"
+    };
+    talent_profile: {
       full_name: "Alexandra Chen";
       professional_title: "Senior AI Engineer"
+
       full_name: "Alexandra Chen",
       professional_title: "Senior AI Engineer"
+
 import { Project } from "@/types/projects",;
 export const PROJECTS: Project[] = [;
-  {;
-    id: "project-1",;
-    client_id: "client-1",;
-    talent_id: "t-001",;
-    job_id: "job-1",;
-    start_date: "2024-05-15",;
-    scope_summary: "Build an AI powered dashboard for sales metrics",;
-    payment_terms: "fixed",;
-    status: "in_progress",;
-    created_at: "2024-05-15",;
+  {;"
+    id: "project-1",;"
+    client_id: "client-1",;"
+    talent_id: "t-001",;"
+    job_id: "job-1",;"
+    start_date: "2024-05-15",;"
+    scope_summary: "Build an AI powered dashboard for sales metrics",;"
+    payment_terms: "fixed",;"
+    status: "in_progress",;"
+    created_at: "2024-05-15",;"
     updated_at: "2024-05-20",;
-    job: {;
-      title: "AI Dashboard Development",;
+    job: {;"
+      title: "AI Dashboard Development","
       description: "Develop dashboards using React and integrate ML models";
     },;
-    talent_profile: {;
-      full_name: "Alexandra Chen";
+    talent_profile: {;"
+      full_name: "Alexandra Chen";"
       professional_title: "Senior AI Engineer";
 
     }
+
   }
 ];
 
 ;
 
-;
-origin/cursor/automate-test-improve-and-merge-code-20a4
-;
     }
   }
 ];
+
     }
   }
-];
+];"
       professional_title: "Senior AI Engineer";
     }
   }
 ];
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
-
-job: {
-      title: \"title\",
-    description: 'Develop dashboards using React and integrate ML models'}
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
-
 
     job: {,
   title: 'AI Dashboard Development
@@ -142,7 +168,7 @@ export const PROJECTS: Project[] = [;
     created_at: "2024-05-15",;""
     updated_at: "2024-05-20",;"
     job: {;,"
-  title: "AI Dashboard Development",;""
+  title: "AI Dashboard Development",""
       description: "Develop dashboards using React and integrate ML models";"
     },;
     talent_profile: {;,"
@@ -151,7 +177,6 @@ export const PROJECTS: Project[] = [;
     }
   }]
 
-
 ;
 "
 pr-12325
@@ -159,20 +184,3 @@ pr-12325
     }
   }
 ];
-<<<<<<< HEAD
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
-=======
-
-    }
-  }
-];"
-      professional_title: "Senior AI Engineer";"
-    }
-  }
-];
-;
-"
-
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee

@@ -1,4 +1,3 @@
-import React from 'react';'
 const Ai-powered-it-asset-management = ({ className }) => {
   return ('
     <div className={className || ''}>'
@@ -8,6 +7,3 @@ const Ai-powered-it-asset-management = ({ className }) => {
     </div>
   )
 };
-
-    </div>)'
-pr-12325

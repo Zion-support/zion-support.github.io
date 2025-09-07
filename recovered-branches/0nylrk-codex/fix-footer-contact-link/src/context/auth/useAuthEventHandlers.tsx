@@ -2,53 +2,159 @@ import {toast} from "@/hooks/use-toast";
 import type { UserProfile } from "@/types/auth";
 import {checkNewRegistration} from "@/utils/authUtils";
 import {useNavigate} from 'react-router-dom';
+
 import { toast } from "@/hooks/use-toast",
 import type { UserProfile } from "@/types/auth";
 import { checkNewRegistration } from "@/utils/authUtils";
 import { useNavigate } from 'react-router-dom';
 import type { UserProfile } from "@/types/auth",
 import { checkNewRegistration } from "@/utils/authUtils",
-import { useNavigate } from 'react-router-dom',
+
 /**
  * Custom hook for auth event handling
+
  */
 export function useAuthEventHandlers(
 
   setUser: React.Dispatch<React.SetStateAction<UserProfile | null>>
   setOnboardingStep: React.Dispatch<React.SetStateAction<string | null>>
-) {
-  const navigate = useNavigate()
-  const handleSignedIn = (mappedUser: UserProfile) => {
-    toast({
-      title: "Welcome back!"
-      description: `You're now signed in as ${mappedUser.displayName |mappedUser.email}`
-      variant: "default"})
-    // Check for new registration and send welcome email if needed
-    setTimeout(() => {
-      if (mappedUser) {
-        checkNewRegistration(mappedUser)
 
       }
 
-    // Check if user needs to complete onboarding
-    if (!mappedUser.profileComplete && navigate) {
-      setOnboardingStep('profile');
-};
+      }
+
     }, 0);
-      }
+    }, 0),
 
+      setOnboardingStep('profile'),
 
+      toast({"
+        title: "Complete your profile""
+        description: "Please complete your profile information to get started""
+        variant: "default"})'
+      navigate('/onboarding')
+    }
 
-
-    handleSignedOut
   },
 
-  return {
-    handleSignedIn,
-    handleSignedOut
+  const handleSignedOut = () => {
+    toast({
+      title: "Signed out"
+      description: "You have been successfully logged out"
+
+      variant: "default"})
+"
+import {checkNewRegistration} from "@/utils/authUtils";'
+
+import {useNavigate} from 'react-router-dom';
+/**;
+ * Custom hook for auth event handling;
+ */;
+export function useAuthEventHandlers(): any (;
+  setUser: React && React.Dispatch<React && React.SetStateAction<UserProfile | null>>,;
+  setOnboardingStep: React && React.Dispatch<React && React.SetStateAction<string | null>>;
+
 import { toast } from "@/hooks/use-toast",;
 import type { UserProfile } from "@/types/auth",;
 import { checkNewRegistration } from "@/utils/authUtils",;
+import { useNavigate } from 'react-router-dom',;
+
+) {;
+  const navigate = useNavigate(),;
+
+  const handleSignedIn = (mappedUser: UserProfile) => {;
+
+      variant: "default"}),;
+
+    // Check for new registration and send welcome email if needed;
+    setTimeout(() => {;
+      if (mappedUser) {;
+        checkNewRegistration(mappedUser);
+      }
+
+      toast({;
+        title: "Complete your profile",
+        description: "Please complete your profile information to get started",;
+        variant: "default"}),;
+      navigate('/onboarding');
+    }
+  };
+
+  };
+
+  const handleSignedOut = () => {;
+    toast({;
+      title: "Signed out",
+      description: "You have been successfully logged out",;
+      variant: "default"});
+  };
+
+  return {;
+    handleSignedIn;
+    handleSignedOut;
+
+import { toast } from '@/hooks / use - toast';
+import type { UserProfile } from "@/types / auth";
+import { checkNewRegistration } from '@/utils / auth_utils';
+
+import {use_navigate} from 'react-router-dom';
+/**;
+* Custom hook for auth event handling;
+*/;
+export /**;
+ * useAuthEventHandlers - Function description;
+ */
+function useAuthEventHandlers() {}
+  const navigate = use_navigate (),
+  const handleSignedIn = (mapped_user: UserProfile) =>: any {}
+    toast ({"
+      title: "Welcome back!",'`
+      description: `You're now signed in as ${mapped_user.display_name || mapped_user.email}`,"
+      variant: "default"}),
+    // Check for new registration and send welcome email if needed;
+    set_timeout (() => {}
+      // Check condition;
+if ( {) {}
+  $2;
+}
+        checkNewRegistration (mapped_user);
+      }
+    }, 0);
+;
+    // Check if user needs to complete onboarding;
+    // Check condition;
+if ( {) {}
+  $2;
+}'
+      setOnboardingStep ('profile');
+      toast ({"
+        title: "Complete your profile","
+        description: "Please complete your profile information to get started","
+        variant: "default"}),'
+      navigate ('/onboarding');
+    }
+  }
+;
+  const handleSignedOut = () =>: any {}
+    toast ({"
+      title: "Signed out","
+      description: "You have been successfully logged out","
+      variant: "default"});
+  }
+;
+  return {}
+    handleSignedIn;
+    handleSignedOut;
+
+    handleSignedOut;
+  },
+
+  return {}
+    handleSignedIn,
+    handleSignedOut"
+import { toast } from "@/hooks/use-toast",;"
+import type { UserProfile } from "@/types/auth",;"
+import { checkNewRegistration } from "@/utils/authUtils",;'
 import { useNavigate } from 'react-router-dom',;
 /**;
  * Custom hook for auth event handling;
@@ -61,28 +167,23 @@ export function useAuthEventHandlers(): any (;
 
   }
 }
+
   }
 }  }
 }
 
-import { toast } from "@/hooks/use-toast",;
-import type { UserProfile } from "@/types/auth",;
-import { checkNewRegistration } from "@/utils/authUtils",;
+  }
+}
+"
+import { toast } from "@/hooks/use-toast",;"
+import type { UserProfile } from "@/types/auth",;"
+import { checkNewRegistration } from "@/utils/authUtils",;'
 import { useNavigate } from 'react-router-dom',;
 ;
 /**;
  * Custom hook for auth event handling;
  */;
-export function useAuthEventHandlers(;
-  setUser:React.Dispatch<React.SetStateAction<UserProfile | null>>,;
-  setOnboardingStep:React.Dispatch<React.SetStateAction<string | null>>;
-) {;
-  const navigate = useNavigate(),;
-;
-  const handleSignedIn = (mappedUser:UserProfile) => {;
-    toast({;
-      title:"Welcome back!",,
-  description:`You're now signed in as ${mappedUser.displayName || mappedUser.email}`,;
+
       variant:"default"}),;
     ;
     // Check for new registration and send welcome email if needed;
@@ -93,20 +194,15 @@ export function useAuthEventHandlers(;
     }, 0),;
 ;
     // Check if user needs to complete onboarding;
-    if (!mappedUser.profileComplete && navigate) {;
+    if (!mappedUser.profileComplete && navigate) {;'
       setOnboardingStep('profile'),;
-      toast({;
-        title:"Complete your profile",,
-  description:"Please complete your profile information to get started",;
-        variant:"default"}),;
+
       navigate('/onboarding'),;
     }
   },;
 ;
   const handleSignedOut = () => {;
-    toast({;
-      title:"Signed out",,
-  description:"You have been successfully logged out",;
+
       variant:"default"}),;
   },;
 ;
@@ -114,15 +210,15 @@ export function useAuthEventHandlers(;
     handleSignedIn,;
     handleSignedOut;
   },;
-}   toast ({
-  //Check for new registration and send welcome email if needed setTimeout ( () => {
-  if (mappedUser) {
+}   toast ({}
+  //Check for new registration and send welcome email if needed setTimeout ( () => {}
+  if (mappedUser) {}
   checkNewRegistration (mappedUser) 
 }
 }, 0);
-//Check if user needs to complete onboarding if (!mappedUser.profileComplete && navigate) {
+//Check if user needs to complete onboarding if (!mappedUser.profileComplete && navigate) {'
   setOnboardingStep ('profile');
-toast ({
+toast ({'
   navigate ('/onboarding');
 }
 }
@@ -130,38 +226,3 @@ toast ({
 }
   }
 }
-
-
-
-import {toast} from "@/hooks/use-toast";""
-import type { UserProfile } from "@/types/auth";""
-import {checkNewRegistration} from "@/utils/authUtils";""
-import {useNavigate} from 'react-router-dom';
-import { toast } from "@/hooks/use-toast",""
-import { checkNewRegistration } from "@/utils/authUtils";""
-import { useNavigate } from 'react-router-dom';
-import type { UserProfile } from "@/types/auth",""
-import { checkNewRegistration } from "@/utils/authUtils",""
-import { useNavigate } from 'react-router-dom',;
-/**
- * Custom hook for auth event handling;
- */
-export function useAuthEventHandlers(
-
-  setUser: React.Dispatch<React.SetStateAction<UserProfile | null>>
-
-  setOnboardingStep: React.Dispatch<React.SetStateAction<string | null>>
-
-  setUser: React && React.Dispatch<React && React.SetStateAction<UserProfile | null>>,;
-
-  setOnboardingStep: React && React.Dispatch<React && React.SetStateAction<string | null>>;
-
-
-
-  setUser:React.Dispatch<React.SetStateAction<UserProfile | null>>,;
-
-  setOnboardingStep:React.Dispatch<React.SetStateAction<string | null>>;
-)
-pr-12325
-</React>)'
-

@@ -1,4 +1,3 @@
-import React from 'react';'
 const Advanced-cybersecurity-suite = ({ className }) => {
   return ('
     <div className={className || ''}>'
@@ -8,6 +7,3 @@ const Advanced-cybersecurity-suite = ({ className }) => {
     </div>
   )
 };
-
-    </div>)'
-pr-12325

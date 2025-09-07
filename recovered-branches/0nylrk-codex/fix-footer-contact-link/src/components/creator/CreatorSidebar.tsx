@@ -1,16 +1,17 @@
-
-
+import {
 
 import {
 
+import {
+  Sidebar
+  SidebarContent
+  SidebarGroup
+  SidebarMenu
+  SidebarMenuItem
+  SidebarMenuButton
+  SidebarGroupLabel
+  SidebarGroupContent
 
-  Users,;
-} from "lucide-react";
-import { Bell, FileText, Home, Mail, Search, Settings, Users } from "lucide-react",;
-
-  Users,;
-} from "lucide-react";  Bell,
-} from "lucide-react";"
   Bell,
 
   FileText,
@@ -18,11 +19,8 @@ import { Bell, FileText, Home, Mail, Search, Settings, Users } from "lucide-reac
   Mail,
   Search,
   Settings,
-  Users,;
-} from "lucide-react";
 
-  Users,;"
-} from "lucide-react";"
+  Bell,
 
 import {;
 } from "lucide-react";"
@@ -35,7 +33,6 @@ pr-12325
   SidebarMenuItem,;
   SidebarMenuButton,;
   SidebarGroupLabel,;
-  SidebarGroupContent,;
 
 } from "@/components/ui/sidebar";
 
@@ -100,203 +97,16 @@ import {
                   <a href="/publish">
                     <FileText size={16} />
                     <span>My Content</span>
-                  </a>
-                  </Link>
-</Link>
-                  </Link>                  </Link>
-                </SidebarMenuButton>
-              </SidebarMenuItem>
-              <SidebarMenuItem>
-                <SidebarMenuButton asChild>
-                  <a href="/analytics">
-                    <Search size={16} />
-                    <span>Analytics</span>
-                  </a>
-                  </Link>
-</Link>
-                  </Link>                  </Link>
-
-
-"
-} from "@/components/ui/sidebar";"
-export function AppSidebar() {;
-  return (
-
-
-
-"
-} from "@/components/ui/sidebar";")
-export function AppSidebar() {;
-  return (
-  Users,;"
-} from "lucide-react";"
-import {
-  // TODO: Implement
-}
-  Sidebar,
-  SidebarContent,
-  SidebarGroup,
-  SidebarMenu,
-  SidebarMenuItem,
-  SidebarMenuButton,
-  SidebarGroupLabel,
-  SidebarGroupContent,;"
-} from "@/components/ui/sidebar";""
-import { Bell, FileText, Home, Mail, Search, Settings, Users } from "lucide-react","
-import {
-  // TODO: Implement
-}
-  Sidebar,
-  SidebarContent,
-  SidebarGroup,
-  SidebarMenu,
-  SidebarMenuItem,
-  SidebarMenuButton,
-  SidebarGroupLabel,"
-  SidebarGroupContent} from "@/components/ui/sidebar","
-                </SidebarMenuButton>
-              </SidebarMenuItem>
-              <SidebarMenuItem>
-</SidebarMenuItem>
-                <SidebarMenuButton asChild>
-</SidebarMenuButton>"
-                  <a href="/messaging">"
-</a>
-                    <Mail size={16} />
-</Mail>
-                    <span>Messages</span>
-                  </Link>
-                </SidebarMenuButton>
-              </SidebarMenuItem>
-              <SidebarMenuItem>
-</SidebarMenuItem>
-                <SidebarMenuButton asChild>
-</SidebarMenuButton>"
-                  <a href="/notifications">"
-</a>
-                    <Bell size={16} />
-</Bell>
-                    <span>Notifications</span>
-                  </Link>
-                </SidebarMenuButton>
-              </SidebarMenuItem>
-            </SidebarMenu>
-          </SidebarGroupContent>
-        </SidebarGroup>
-
 
         <SidebarGroup>
           <SidebarGroupLabel>Settings</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
               <SidebarMenuItem>
-                <SidebarMenuButton asChild>
-                  <a href="/profile">
-                    <Users size={16} />
-                    <span>Profile</span>
-                  </a>
-                  </Link>
-</Link>
-                </SidebarMenuButton>
-        </SidebarGroup>                </SidebarMenuButton>
-              </SidebarMenuItem>
-              <SidebarMenuItem>
-                <SidebarMenuButton asChild>
-                  <a href="/settings">
-                    <Settings size={16} />
-                    <span>Settings</span>
-                  </a>
-                  </Link>
-</Link>
-                  </Link>                  </Link>
-        </SidebarGroup>
 
-
-        <SidebarGroup>
-</SidebarGroup>
-          <SidebarGroupLabel>Content</SidebarGroupLabel>
-          <SidebarGroupContent>
-</SidebarGroupContent>
-            <SidebarMenu>
-</SidebarMenu>
-              <SidebarMenuItem>
-</SidebarMenuItem>
-                <SidebarMenuButton asChild>
-</SidebarMenuButton>"
-                  <a href="/publish">"
-</a>
-                    <FileText size={16} />
-</FileText>
-                    <span>My Content</span>
-                  </a>
-                  </Link>
-                </SidebarMenuButton>
-              </SidebarMenuItem>
-              <SidebarMenuItem>
-</SidebarMenuItem>
-                <SidebarMenuButton asChild>
-</SidebarMenuButton>"
-                  <a href="/analytics">"
-</a>
-                    <Search size={16} />
-</Search>
-                    <span>Analytics</span>
-                  </a>
-                  </Link>
-
-                </SidebarMenuButton>
-              </SidebarMenuItem>
-            </SidebarMenu>
-          </SidebarGroupContent>
-
-        </SidebarGroup>
-
-
-
-
-        <SidebarGroup>
-</SidebarGroup>
-          <SidebarGroupLabel>Settings</SidebarGroupLabel>
-          <SidebarGroupContent>
-</SidebarGroupContent>
-            <SidebarMenu>
-</SidebarMenu>
-              <SidebarMenuItem>
-</SidebarMenuItem>
-                <SidebarMenuButton asChild>
-</SidebarMenuButton>"
-                  <a href="/profile">"
-</a>
-                    <Users size={16} />
-</Users>
-                    <span>Profile</span>
-                  </a>
-                  </Link>
-                </SidebarMenuButton>
-              </SidebarMenuItem>
-              <SidebarMenuItem>
-</SidebarMenuItem>
-                <SidebarMenuButton asChild>
-</SidebarMenuButton>"
-                  <a href="/settings">"
-</a>
-                    <Settings size={16} />
-</Settings>
-                    <span>Settings</span>
-                  </a>
-                  </Link>
-
-                </SidebarMenuButton>
-              </SidebarMenuItem>
-            </SidebarMenu>
-          </SidebarGroupContent>
-        </SidebarGroup>
-      </SidebarContent>
-
-</Sidebar>
   );
 }
-  )
+  )"
 import { Bell, FileText, Home, Mail, Search, Settings, Users } from "lucide-react",;
 import {;
   Sidebar,;
@@ -305,14 +115,14 @@ import {;
   SidebarMenu,;
   SidebarMenuItem,;
   SidebarMenuButton,;
-  SidebarGroupLabel,;
+  SidebarGroupLabel,;"
   SidebarGroupContent} from "@/components/ui/sidebar";
-export function AppSidebar() {;
-  return (;
+
   SidebarGroupContent} from "@/components/ui/sidebar",;
 ;
 export function AppSidebar() {;
   return (;
+
     <Sidebar>;
       <SidebarContent>;
         <SidebarGroup>;
@@ -321,6 +131,80 @@ export function AppSidebar() {;
             <SidebarMenu>;
               <SidebarMenuItem>;
                 <SidebarMenuButton asChild>;
+
+                  </a>;
+                </SidebarMenuButton>;
+              </SidebarMenuItem>;
+              <SidebarMenuItem>;
+
+                  </a>;
+                </SidebarMenuButton>;
+              </SidebarMenuItem>;
+              <SidebarMenuItem>;
+
+                  </a>;
+                </SidebarMenuButton>;
+              </SidebarMenuItem>;
+            </SidebarMenu>;
+          </SidebarGroupContent>;
+        </SidebarGroup>;
+
+                  </a>;
+                </SidebarMenuButton>;
+              </SidebarMenuItem>;
+              <SidebarMenuItem>;
+
+                  </a>;
+                </SidebarMenuButton>;
+              </SidebarMenuItem>;
+            </SidebarMenu>;
+          </SidebarGroupContent>;
+        </SidebarGroup>;
+
+                  </a>;
+                </SidebarMenuButton>;
+              </SidebarMenuItem>;
+              <SidebarMenuItem>;
+
+                  </a>;
+                </SidebarMenuButton>;
+              </SidebarMenuItem>;
+            </SidebarMenu>;
+          </SidebarGroupContent>;
+        </SidebarGroup>;
+      </SidebarContent>;
+
+    </Sidebar>
+
+    </Sidebar>;
+  );
+
+}
+
+    </Sidebar>);
+}
+    </Sidebar>);
+}
+    </Sidebar>;
+  ),;}
+ import {};
+  Sidebar;
+SidebarContent;
+SidebarGroup;
+SidebarMenu;
+SidebarMenuItem;
+SidebarMenuButton;
+SidebarGroupLabel;"
+return (<Sidebar> <SidebarContent> <SidebarGroup> <SidebarGroupLabel>Dashboard</SidebarGroupLabel> <SidebarGroupContent> <SidebarMenu> <SidebarMenuItem> <SidebarMenuButton asChild> <a href="/creator-dashboard" > <Home size= {}
+  16;
+}/> <span>Home</span> </Link> </SidebarMenuButton> </SidebarMenuItem> <SidebarMenuItem> <SidebarMenuButton asChild> <span>Messages</span> </Link> </SidebarMenuButton> </SidebarMenuItem> <SidebarMenuItem> <SidebarMenuButton asChild> <span>Notifications</span> </Link> </SidebarMenuButton> </SidebarMenuItem> </SidebarMenu> </SidebarGroupContent> </SidebarGroup> <SidebarGroup> <SidebarGroupLabel>Content</SidebarGroupLabel> <SidebarGroupContent> <SidebarMenu> <SidebarMenuItem> <SidebarMenuButton asChild> <span>My Content</span> </Link> </SidebarMenuButton> </SidebarMenuItem> <SidebarMenuItem> <SidebarMenuButton asChild> <span>Analytics</span> </Link> </SidebarMenuButton> </SidebarMenuItem> </SidebarMenu> </SidebarGroupContent> </SidebarGroup> <SidebarGroup> <SidebarGroupLabel>Settings</SidebarGroupLabel> <SidebarGroupContent> <SidebarMenu> <SidebarMenuItem> <SidebarMenuButton asChild> <span>Profile</span> </Link> </SidebarMenuButton> </SidebarMenuItem> <SidebarMenuItem> <SidebarMenuButton asChild> <span>Settings</span> </Link> </SidebarMenuButton> </SidebarMenuItem> </SidebarMenu> </SidebarGroupContent> </SidebarGroup> </SidebarContent> </Sidebar>) 
+}
+
+    </Sidebar>;
+  );
+}
+;
+
                   <a href="/creator-dashboard">;
                     <Home size={16} />;
                     <span>Home</span>;
@@ -342,8 +226,6 @@ import {
 } from "@/components/ui/sidebar";"
 export function AppSidebar() {;
   return (
-
-
 
 } from "@/components/ui/sidebar";")
   // TODO: Implement
@@ -391,14 +273,12 @@ import { Bell, FileText, Home, Mail, Search, Settings, Users } from "lucide-reac
 
                     <span>Notifications</span>
 
-
         <SidebarGroup>
 
           <SidebarGroupLabel>Content
           <SidebarGroupContent>
 
             <SidebarMenu>
-
 
                   <a href="/publish">"
                     <FileText size={16} />
@@ -410,13 +290,7 @@ import { Bell, FileText, Home, Mail, Search, Settings, Users } from "lucide-reac
 
                     <span>Analytics</span>
 
-
-
-
-
           <SidebarGroupLabel>Settings
-
-
 
                   <a href="/profile">"
                     <Users size={16} />
@@ -453,7 +327,6 @@ import { Bell, FileText, Home, Mail, Search, Settings, Users } from "lucide-reac
                   </a>;
                 ;
 
-
                 <SidebarMenuButton as_child>;
                   <a href="/messaging">;"
                     <Mail size={16} />;
@@ -485,8 +358,6 @@ import { Bell, FileText, Home, Mail, Search, Settings, Users } from "lucide-reac
           </SidebarGroupContent>;
         </SidebarGroup>;
           <SidebarGroupLabel > Content;
-
-
 
                   <a href="/publish">;"
                     <FileText size={16} />;
@@ -524,8 +395,6 @@ import { Bell, FileText, Home, Mail, Search, Settings, Users } from "lucide-reac
           </SidebarGroupContent>;
         </SidebarGroup>;
           <SidebarGroupLabel > Settings;
-
-
 
                   <a href="/profile">;"
                     <Users size={16} />;
@@ -571,7 +440,6 @@ import { Bell, FileText, Home, Mail, Search, Settings, Users } from "lucide-reac
 </Sidebar>);
 }
 
-
     ;)
     );
     ;"
@@ -594,5 +462,3 @@ return (<Sidebar> <SidebarContent> <SidebarGroup> <SidebarGroupLabel>Dashboard</
   );
 }
 ;
-    </Sidebar>;"
-

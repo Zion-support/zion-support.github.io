@@ -1,4 +1,3 @@
-import React from 'react';'
 const AdvancedServicePortfolioDashboard.js = ({ className }) => {
   return ('
     <div className={className || ''}>'
@@ -8,6 +7,3 @@ const AdvancedServicePortfolioDashboard.js = ({ className }) => {
     </div>
   )
 };
-
-    </div>)'
-pr-12325

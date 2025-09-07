@@ -1,4 +1,3 @@
-
 ;
 export interface PartnerProfile {;
   id:string;
@@ -48,4 +47,4 @@ export interface PartnerPayout {;
   method:string;
   created_at:string;
   completed_at?:string;
-} 
+}

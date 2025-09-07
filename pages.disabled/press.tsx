@@ -1,3 +1,25 @@
+import React from 'react',
+import SEO from '../components / SEO',
+export default /**
+ * PressPage - Function description
+ */
+function PressPage() {
+return (
+  <>;
+  <SEO title="Press | Zion Tech Group" description="News, media resources, and press inquiries." canonical="/press" />;
+  <div className="container mx - auto px - 4 py - 16">;
+    <h1 className="text - 4xl font - bold mb - 4">Press</h1>;
+    <p className="text - gray - 300">Media kit and announcements coming soon.</p>;
+  </div>;
+  </>);
+}
+
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
 
 import * as React from 'react';
 import Link from 'next/link';
@@ -70,10 +92,6 @@ const contactInfo = {
   email: "kleber@ziontechgroup.com",
   address: "364 E Main St STE 1008 Middletown DE 19709"
 };
-
-
-
-}
 
 export default function Press() {
   const pressReleases = [
@@ -149,9 +167,9 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
 }
 
-}
-import React from 'react',;
-import SEO from '../components / SEO',;
+import React from 'react',
+import SEO from '../components / SEO',
+
 export default /**
  * PressPage - Function description
  */
@@ -165,12 +183,6 @@ return (
   </div>;
   </>);
 }
-origin/cursor/automate-test-improve-and-merge-code-20a4
-
-
-
-import React from 'react';
-import SEO from '../components/SEO';
 
 export default function PressPage() {
 	return (
@@ -184,10 +196,6 @@ export default function PressPage() {
 	)
 }
 
-
-
-
-
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -195,22 +203,9 @@ export default function PressPage() {
 }
 ;
 
-
-ursor/fix-website-loading-errors-and-merge-6662
   return (
     <>
-      <SEO
-        title='Press | Zion Tech Group'
-        description='News, media resources, and press inquiries.'
-        canonical='/press'
-      />
-      <div className='container mx-auto px-4 py-16'>
-        <h1 className='text-4xl font-bold mb-4'>Press</h1>
-        <p className='text-gray-300'>
-          Media kit and announcements coming soon.
-        </p>
-      </div>
-    </>
+
       <Head>
         <title>Press - Zion Tech Group</title>
         <meta name="description" content="Latest news, press releases, and media coverage about Zion Tech Group. Stay updated on our innovations and achievements." />
@@ -417,4 +412,3 @@ ursor/fix-website-loading-errors-and-merge-6662
 </>
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
   );
-origin/cursor/automate-test-improve-and-merge-code-2533

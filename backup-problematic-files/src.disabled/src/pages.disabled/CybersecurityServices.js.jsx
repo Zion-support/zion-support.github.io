@@ -1,4 +1,3 @@
-import React from 'react';'
 const CybersecurityServices.js = ({ className }) => {
   return ('
     <div className={className || ''}>'
@@ -8,6 +7,3 @@ const CybersecurityServices.js = ({ className }) => {
     </div>
   )
 };
-
-    </div>)'
-pr-12325

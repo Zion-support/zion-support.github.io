@@ -1,27 +1,14 @@
-export type ModerationStatus = 'pending' | 'approved' | 'removed' | 'warned' | 'banned';
-export interface ModerationAction {
-
-export interface ModerationAction {;
-
-
-
-
-
+id: string;
 
   id: string;
-  flagId: string;
-  action: ModerationStatus;
-  adminNotes?: string;
-  adminId: string;
+
+  content: string;
+  status: 'approved' | 'rejected' | 'pending';
   reason?: string;
-  createdAt: string;
-
-export type ModerationStatus = 'pending' | 'approved' | 'removed' | 'warned' | 'banned';
-
-
-
+  moderatedBy?: string;
 
 ;
+
 export interface ModerationAction {
   id: string;
   type: "approve" | "remove" | "warn" | "ban";
@@ -29,10 +16,9 @@ export interface ModerationAction {
   targetType: "post" | "comment" | "user";
   adminId: string;
   reason?: string;
-created_at: string,
-
 
 }
+
 }
 export interface ModerationFlag {
 
@@ -48,15 +34,33 @@ export interface ModerationFlag {;
   updatedAt: string;
   adminNotes?: string;
 
-
-
-
+export interface ModerationRule {};
+  id: string;
 
 }
 export interface ModerationFlag {
 
+export interface ModerationFlag {;
+  id: string;
+  type: 'spam' | 'inappropriate' | 'harassment' | 'other';
+  content: string;
+  reporter_id: string;
+  target_id: string;
+  target_type: 'post' | 'comment' | 'user';
+  status: ModerationStatus;
 
-export interface ModerationResult {
+  created_at: string;
+  updated_at: string;
+  admin_notes?: string,
+}
+
+}
+
+export interface ModerationFlag {;
+
   id: string;
 
-
+  name: string;
+  pattern: string;'
+  action: 'approve' | 'reject' | 'flag';'
+  severity: 'low' | 'medium' | 'high';

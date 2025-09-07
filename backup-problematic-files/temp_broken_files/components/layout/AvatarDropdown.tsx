@@ -1,6 +1,4 @@
-
-
-    <div className=&quot;relative&quot;>
+<div className=&quot;relative&quot;>
 </div>
       <button onClick={() => setOpen(o => !o)} className=&quot;h-8 w-8 rounded-full bg-gradient-to-br from-indigo-500 to-cyan-500 text-white text-xs font-semibold grid place-items-center ring-1 ring-white/40&quot;>
 </button>
@@ -11,4 +9,3 @@
           <Link href=&quot;/onboarding&quot;><a className=&quot;block px-3 py-2 hover:bg-gray-50/60 dark:hover:bg-white/5&quot;>Onboarding</a></a>
 
           <button onClick={logout} className=&quot;w-full text-left px-3 py-2 hover:bg-gray-50/60 dark:hover:bg-white/5&quot;>Logout</button>        </div>
-    </div>;

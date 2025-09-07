@@ -1,4 +1,3 @@
-
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.7.1";
 ;
@@ -33,8 +32,7 @@ serve(async (req:Request) => {;
         JSON.stringify({ error:"Failed to create scheduled reminders", details:error });
         {;
           status:500;
-          headers:{ "Content-Type":"application/json", ...corsHeaders }}
-      );
+          headers:{ "Content-Type":"application/json", ...corsHeaders }});
     }
     ;
     // Process pending reminder jobs;
@@ -51,8 +49,7 @@ serve(async (req:Request) => {;
         JSON.stringify({ error:"Failed to fetch pending jobs", details:jobsError });
         {;
           status:500;
-          headers:{ "Content-Type":"application/json", ...corsHeaders }}
-      );
+          headers:{ "Content-Type":"application/json", ...corsHeaders }});
     }
     ;
     const processedJobs = [];
@@ -67,8 +64,7 @@ serve(async (req:Request) => {;
             headers:{;
               "Content-Type":"application/json";
               "Authorization":`Bearer ${supabaseServiceKey}`};
-            body:JSON.stringify(job.payload)}
-        );
+            body:JSON.stringify(job.payload)});
         ;
         if (reminderResponse.ok) {;
           // Update job status to completed;
@@ -103,16 +99,14 @@ serve(async (req:Request) => {;
         job_ids:processedJobs});
       {;
         status:200;
-        headers:{ "Content-Type":"application/json", ...corsHeaders }}
-    );
+        headers:{ "Content-Type":"application/json", ...corsHeaders }});
   } catch (error) {;
     console.error(error);
     return new Response(;
       JSON.stringify({ error:"Internal server error", details:error.message });
       {;
         status:500;
-        headers:{ "Content-Type":"application/json", ...corsHeaders }}
-    );  }
+        headers:{ "Content-Type":"application/json", ...corsHeaders }});  }
 });
  serve (async (req: Request) => {
   //Handle CORS if (req.method === "OPTIONS") {

@@ -1,12 +1,12 @@
+import React, { useState } from "react",;
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",;
+import { Button } from "@/components/ui/button",;
+import { Input } from "@/components/ui/input",;
+import { Send, PaperclipIcon, ChevronLeft, MoreVertical, Video, Phone } from "lucide-react",;
+import { cn } from "@/lib/utils",;
+import { useNavigate } from "react-router-dom",;
+import { toast } from "sonner",;
 
-import React, { useState } from "react";""
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";""
-import { Button } from "@/components/ui/button";""
-import { Input } from "@/components/ui/input";""
-import { Send, PaperclipIcon, ChevronLeft, MoreVertical, Video, Phone } from "lucide-react";""
-import { cn } from "@/lib/utils";""
-import { useNavigate } from "react-router-dom";""
-import { toast } from "sonner";"
 ;
 interface Message {;
   id: string;,;
@@ -42,8 +42,7 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage } Mobi
   ;
   const startVideoCall = () => {;
     const roomId = `mobile-${contact.id}`,;
-    toast.success("Starting video call", {,
-  description: `Connecting with ${contact.name;}...`;
+
     }),;
     ;
     // Navigate to video call page;
@@ -52,8 +51,7 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage } Mobi
   ;
   const startAudioCall = () => {;
     const roomId = `mobile-audio-${contact.id}`,;
-    toast.success("Starting audio call", {,
-  description: `Connecting with ${contact.name;}...`;
+
     }),;
     ;
     // Navigate to video call page with audio-only flag;
@@ -61,51 +59,26 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage } Mobi
   },;
   ;
   return (;
+
     <div className="flex flex-col h-full pb-safe">;
       <header className="sticky top-0 z-10 bg-background border-b border-border">;
         <div className="flex items-center h-14 px-4">;
           <Button variant="ghost" size="icon" onClick={onBack}>;
             <ChevronLeft className="h-5 w-5" />;
           </Button>;
-          ;
-          <div className="flex items-center flex-1 gap-3 mx-2">;
-"
-    <div className="flex flex-col h-full pb-safe">;"
-</div>"
-      <header className="sticky top-0 z-10 bg-background border-b border-border">;"
-</header>"
-        <div className="flex items-center h-14 px-4">;"
-          <Button variant="ghost" size="icon" onClick={onBack}>;"
-            <ChevronLeft className="h-5 w-5" />;"
 
-          ;"
-          <div className="flex items-center flex-1 gap-3 mx-2">;"
-</div>
-pr-12325
-            <Avatar>;
+          <div className="flex">;
+            <Button variant="ghost" size="icon" onClick={startAudioCall}>;
+              <Phone className="h-5 w-5" />;
+            </Button>;
 
-              <AvatarImage src={contact.avatar} alt={contact.name} />;
+            <Button variant="ghost" size="icon">;
+              <MoreVertical className="h-5 w-5" />;
+            </Button>;
+          </div>;
+        </div>;
+      </header>;
 
-              <AvatarFallback>{contact.name.charAt(0).toUpperCase()};
-            <div>;
-              <h3 className="font-medium">{contact.name}</h3>;""
-              <p className="text-xs text-muted-foreground">;"
-</p>
-              </p>;
-            </div>;
-          </div>;"
-          <div className="flex">;"
-            <Button variant="ghost" size="icon" onClick={startAudioCall}>;"
-              <Phone className="h-5 w-5" />;"
-
-            <Button variant="ghost" size="icon" onClick={startVideoCall}>;"
-              <Video className="h-5 w-5" />;"
-
-            <Button variant="ghost" size="icon">;"
-              <MoreVertical className="h-5 w-5" />;"
-
-      </header>;"
-      <div className="flex-1 overflow-y-auto p-4 space-y-4">;"
           <div ;
             key={message.id} ;
             className={cn(;"
@@ -122,23 +95,23 @@ pr-12325
                 "text-xs mt-1 flex justify-end",;""
                 message.isMe ? "text-primary-foreground/80" :"text-muted-foreground";")
               )}>;                {message.timestamp}
-                  <span className="ml-1">;"
-</span>
-                  </span>;
-      <div className="sticky bottom-0 bg-background border-t border-border p-2">;"
-        <div className="flex items-center gap-2">;"
-            <PaperclipIcon className="h-5 w-5" />;"
+
+      <div className="sticky bottom-0 bg-background border-t border-border p-2">;
+        <div className="flex items-center gap-2">;
+          <Button variant="ghost" size="icon">;
+            <PaperclipIcon className="h-5 w-5" />;
+          </Button>;
 
           <Input;
+
             value={newMessage}
             onChange={(e) => setNewMessage(e.target.value)}
 
-          <Button ;"
-            size="icon" ;"
-            onClick={handleSend}
-            disabled={!newMessage.trim()}"
-            className={!newMessage.trim() ? "opacity-50" :""}"
-            <Send className="h-5 w-5" />;"
+            <Send className="h-5 w-5" />;
+          </Button>;
+        </div>;
+      </div>;
+    </div>;
 
 }/> <AvatarFallback> {
 }  <div> </p> </div> </div>  <Button variant=" ghost"size=" icon"> <MoreVertical className="h-5 w-5"/>  </div> </div> </header> <div className="flex-1 overflow-y-auto p-4 space-y-4"> {"
@@ -148,6 +121,4 @@ pr-12325
 }> {
   message.isMe && message.status && (<span className="ml-1"> {"
 </span>)
-}</span>) 
-}</div> </div> </div>) ) "
-}</div> <div className="sticky bottom-0 bg-background border-t border-border p-2"> <div className="flex items-center gap-2"> <Button variant=" ghost"size=" icon"> <PaperclipIcon className="h-5 w-5"/>  <Input > <Send className=" h-5 w-5" />  </div> </div> </div>)""
+}</span>)

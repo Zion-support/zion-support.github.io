@@ -1,6 +1,13 @@
+import {ReactNode} from 'react';
+
+// Extend FeatureCardProps to include key for mapping
+declare module '@/components/FeatureCard' {
+
+import {ReactNode} from 'react';
 
 // Extend FeatureCardProps to include key for mapping
 declare module "@/components/FeatureCard" {
+
   export interface FeatureCardProps {
     title: string,
   description: string;
@@ -10,9 +17,10 @@ declare module "@/components/FeatureCard" {
     title: string;,
   description: string;
     icon: ReactNode;
+
     className?: string;
     key?: number | string;
-// Extend ListingScoreCardProps to include key for mapping;"
+
 declare module '@/components / ListingScoreCard' {
 
 // Extend ListingScoreCardProps to include key for mapping
@@ -27,27 +35,25 @@ declare module '@/components/FeatureCard' {
   export interface FeatureCardProps {;
     title: string;
     description: string;
-    icon: ReactNode;
 
-    className?: string
-
-    key?: number | string
-  }
-}
-// Extend ListingScoreCardProps to include key for mapping
-declare module '@/components/ListingScoreCard' {
-  export interface ListingScoreCardProps {;
-    title: string;
-    description: string;
-// Extend ListingScoreCardProps to include key for mapping;
-declare module "@/components/ListingScoreCard" {"
-  export interface ListingScoreCardProps {
-  // TODO: Implement
-pr-12325
     category: string;
     image?: string;
     tags?: string[];
     author?: string;
+
+    review_count?: number;
+    key?: string | number,
+
+    variant?: string;
+
+  }
+}
+
+    key?: string | number;
+
+  }
+}
+
     author_image?: string;
     ai_score?: number;
     rating?: number;
@@ -57,16 +63,3 @@ pr-12325
     rating?: number;
   }
 }
-    reviewCount?: number;
-
-
-// Extend ChatMessageProps to include key for mapping;"
-declare module "@/components/ChatAssistant/ChatMessage" {"
-  export interface ChatMessageProps {
-
-
-
-// Extend ProductListingCardProps to include key for mapping;"
-declare module "@/components/ProductListingCard" {"
-  export interface ProductListingCardProps {
-

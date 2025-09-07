@@ -1,10 +1,17 @@
+name: string,
+  level: number, // 1 - 5;
+
 export interface ProfileSkill {
   name: string;
   level: number; // 1-5
+
   endorsements?: number;
 }
 
 }
+
+}
+
   id: string;
   title: string,
 
@@ -33,7 +40,7 @@ export interface ProfileSkill {
   date: string;
 
 }
-export interface ProfileExperience {
+
 export interface ProfileSkill {
 
   name: string
@@ -57,35 +64,60 @@ export interface ProfileProject {;
 export interface ProfileExperience {
 
 export interface ProfileExperience {;
+
   id: string;
   role: string;
   company: string,
   description: string;
 
+  startDate: string;
+  endDate?: string;
+  current?: boolean;
 }
-export interface ProfileData {
+
+  start_date: string;
+  end_date?: string,
+  current?: boolean;
+}
+
+  status: 'available' | 'limited' | 'unavailable';
+  next_available?: string;
+  message?: string,
+  available_hours?: { day: string, hours: string }[];
+
+}
+
+  id: string;
+  name: string;
+  title: string;
+  avatar_url: string;
+
+  status: "available" | "limited" | "unavailable";
+  nextAvailable?: string;
+  message?: string;
+  availableHours?: { day: string; hours: string }[];
+}
+
+}
+export interface ProfileData {};
   id: string;
   name: string;
   title: string;
   avatar_url: string;
   startDate: string;
 
-  endDate?: string
-
-  current?: boolean
+  endDate?: string;
+  current?: boolean;
 }
-export interface Availability {
-
+export interface Availability {};
 export interface Availability {;
   status: 'available' | 'limited' | 'unavailable';
   nextAvailable?: string;
 
-  message?: string
-
+  message?: string;
   availableHours?: { day: string, hours: string }[]
 }
-export interface ProfileData {
-
+export interface ProfileData {};
 export interface ProfileData {;
   id: string;
   name: string;
@@ -111,14 +143,12 @@ export interface Availability {
   message?: string;
   availableHours?: { day: string; hours: string }[];
 
-
 }
 export interface ProfileData {
   // TODO: Implement
   name: string;
   title: string;,
   avatar_url: string;
-
 
   endDate?: string;
   current?: boolean;
@@ -143,41 +173,29 @@ pr-12325
   name: string;
   title: string;,
   avatarUrl: string;
+
   coverImageUrl?: string;
   bio: string;
   location?: string;
   rating?: number;
   reviewCount?: number;
-  aiScore?: number;
+  aiScore?: number;"
   profileType: "service" | "talent";
   skills: ProfileSkill[];
   projects: ProfileProject[];
   experience: ProfileExperience[];
   availability: Availability;
 
-
   contactEmail?: string
 };
-export interface ProfileProject {;
-  id: string,;
-  title: string,,
 
-  aiScore?: number;'
-  profileType: "service" | "talent";",
+}
 
-  skills: ProfileSkill[];
-  projects: ProfileProject[];,
-  experience: ProfileExperience[];
-  availability: Availability;
-
-  hourlyRate?: number;
-  contactEmail?: string;
 export interface ProfileSkill {;
   name: string,;
   level: number, // 1-5;
   endorsements?: number;
 }
-;
 
 export interface ProfileProject {;
   id: string,;
@@ -201,13 +219,7 @@ export interface ProfileExperience {;
   current?: boolean;}
 }
 ;
-export interface Availability {;
-export interface ProfileExperience {;
-  role: string,;
-  company: string,;
-  startDate: string,;
-  endDate?: string,;
-pr-12325
+
   status: 'available' | 'limited' | 'unavailable',;
 
 export interface Availability {;"
@@ -229,7 +241,7 @@ pr-12325
   location?: string,;
   rating?: number,;
   reviewCount?: number,;
-  aiScore?: number,;
+  aiScore?: number,;'
   profileType: 'service' | 'talent',;
   aiScore?: number,;'
   profileType: 'service' | 'talent',;'
@@ -241,11 +253,3 @@ pr-12325
   contactEmail?: string;
 }
 ;
-}
-pr-12325
-  hourlyRate?: number;}
-  contactEmail?: string;}
-}
-
-'
-

@@ -1,4 +1,3 @@
-origin/main
 import React, { useEffect } from 'react';
 
 const SecurityHeaders: React.FC = () => {

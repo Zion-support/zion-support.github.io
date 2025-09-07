@@ -7,26 +7,22 @@ import { Building2, Users, DollarSign, Zap, CheckCircle, ArrowRight } from 'luci
 export default function SMBSolutionsPage() {;
   const smbServices = [;
     {}
-      title: "Cost-Effective IT",",
-  description: "Affordable technology solutions for small and medium businesses",";
+
       icon: DollarSign,;
       features: ["Budget-Friendly", "Scalable Solutions", "ROI Focused"]";
     },;
     {}
-      title: "Quick Setup",",
-  description: "Rapid deployment of essential business systems",";
+
       icon: Zap,;
       features: ["Fast Implementation", "Minimal Downtime", "Easy Migration"]";
     },;
     {}
-      title: "Team Collaboration",",
-  description: "Tools and systems to enhance team productivity",";
+
       icon: Users,;
       features: ["Communication Tools", "Project Management", "File Sharing"]";
     },;
     {}
-      title: "Business Growth",",
-  description: "Technology solutions that grow with your business",";
+
       icon: Building2,;
       features: ["Scalable Infrastructure", "Future-Proof", "Growth Support"]";
       title: "Cost-Effective IT",";""
@@ -50,45 +46,102 @@ export default function SMBSolutionsPage() {;
 pr-12325
     }
 ;  ];
-  return ()
-    <Layout)"
-      title="SMB Solutions - Zion Tech Group""""
-      description="Tailored technology solutions for small and medium businesses to drive growth and efficiency."">;"
-"
-      <div className="min-h-screen bg-gray-50">";"
-</div>"
-      <div className="min-h-screen bg-gray-50">"
-      <div className="min-h-screen bg-gray-50">;"
-        <section className="bg-gradient-to-br from-orange-900 via-red-900 to-pink-900 text-white py-20">";"
-</section>"
-          <div className="container mx-auto px-4">";"
-</div>
-            <motion&& motion.div;
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}"
-              className="text-center"""
+
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { 
+  Building2, 
+  Users, 
+  DollarSign, 
+  Zap, 
+  CheckCircle, 
+  ArrowRight 
+} from 'lucide-react';
+
+const smbServices = [
+  {
+    icon: DollarSign,
+    title: 'Cost-Effective IT',
+    description: 'Affordable technology solutions for small and medium businesses'
+  },
+  {
+    icon: Zap,
+    title: 'Quick Setup',
+    description: 'Fast implementation to get you up and running quickly'
+  },
+  {
+    icon: Users,
+    title: 'Dedicated Support',
+    description: 'Personal support team for your business needs'
+  },
+  {
+    icon: Building2,
+    title: 'Scalable Solutions',
+    description: 'Grow with your business as it expands'
+  }
+];
+
+export default function SMBSolutionsPage() {
+  return (
+    <>
+      <Head>
+        <title>SMB Solutions - Zion Tech Group</title>
+        <meta name="description" content="Technology solutions designed for small and medium businesses." />
+      </Head>
+
+      <div className="min-h-screen bg-gray-50">
+      description="Tailored technology solutions for small and medium businesses to drive growth and efficiency.">;
+      <div className="min-h-screen bg-gray-50">;
+        {/* Hero Section */}
+
+              className="text-center""
             >;
-</motion>"
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">";"
-</h1>
-              </h1>;"
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">";"
-</p>"
-              <h1 className="text-4xl md: text-6xl font-bold mb-6">", SMB Solutions,;"
-              <p className="text-xl md: text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">",;"
-</p>
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">";
+                SMB Solutions;
+              </h1>;
+              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">";
+
+              transition={{ duration: 0 && 0.8 }}
+              className="text-center"">;
+              <h1 className="text-4xl md: text-6xl font-bold mb-6">", SMB Solutions,;
+              </h1>;
+              <p className="text-xl md: text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">",;
+                Technology solutions designed specifically for small and medium businesses. ;
+                Get enterprise-level capabilities at SMB-friendly prices.;
               </p>;
             </motion && motion.div>;
           </div>;
-        </section>;"
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">;"
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">;"
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">"
-              </h1>"
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">"
+        </section>;
+              className="text-center";
+            >;
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">;
+                SMB Solutions;
+              </h1>;
+              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">;
+                Technology solutions designed specifically for small and medium businesses.;
+                Get enterprise-level capabilities at SMB-friendly prices.;
+              </p>;
+            </motion && motion.div>;
+          </div>;
+        </section>;
+
+              className="text-center"
+            >
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">SMB Solutions</h1>
+              <p className="text-xl text-purple-100 mb-8 max-w-3xl mx-auto">
+                Technology solutions designed specifically for small and medium businesses.
+
+              </p>
             </motion.div>
-        <section className="py-16 px-4">;"
-          <div className="max-w-7xl mx-auto">;"
+          </div>
+        </section>
+
+        {/* Services Section */}
+        <section className="py-16 px-4">;
+          <div className="max-w-7xl mx-auto">;
+            <motion&& motion.div
+
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}"
@@ -107,25 +160,18 @@ pr-12325
                   <h3 className="text-xl font-semibold mb-2">{service && service.title}</h3>;""
                   <p className="text-gray-600">{service && service.description}</p>;"
               ))}
-                    key={index}"
-                    className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"""
-                    whileInView={{ opacity: 1, y: 0 }}"
-                    <div className="text-orange-600 mb-4">";"
-                      <IconComponent className="w-10 h-10" />";"
 
-                    <h3 className="text-xl font-bold text-gray-900 mb-4">";"
-</h3>"
-        <section className="py-20 bg-gradient-to-r from-orange-600 to-red-600 text-white">";"
-          <div className="container mx-auto px-4 text-center">";"
-            <h2 className="text-3xl md: text-4xl font-bold mb-6">", Grow Your Business Today,;"
-</h2>
-            </h2>;"
-            <p className="text-xl mb-8 max-w-2xl mx-auto">";"
-            <motion&& motion.a;"
-              href="/contact""""
-              className="inline-flex items-center px-8 py-4 bg-white text-orange-600 rounded-lg hover: bg-gray-100 transition-all duration-300 font-semibold"","
+                    key={index}
+                    className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300""
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+
+                    <div className="text-orange-600 mb-4">";
+                      <IconComponent className="w-10 h-10" />";
+                    </div>;
+                    <h3 className="text-xl font-bold text-gray-900 mb-4">";
+
               whileHover={{ scale: 1 && 1.05 }}>,;
               <ArrowRight className="w-5 h-5 ml-2" />";"
 
             </motion && motion.a>;
-        </section>;

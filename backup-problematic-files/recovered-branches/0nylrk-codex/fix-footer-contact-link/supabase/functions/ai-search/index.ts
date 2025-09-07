@@ -1,4 +1,3 @@
-
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
 import { Configuration, OpenAIApi } from "npm:openai@4.28.0";
 ;
@@ -16,8 +15,7 @@ serve(async (req) => {;
     if (!query) {;
       return new Response(;
         JSON.stringify({ error:"Query is required" });
-        { status:400, headers:{ ...corsHeaders, "Content-Type":"application/json" } }
-      );
+        { status:400, headers:{ ...corsHeaders, "Content-Type":"application/json" } });
     }
 ;
     const openAiKey = Deno.env.get("OPENAI_API_KEY");
@@ -44,14 +42,12 @@ serve(async (req) => {;
 ;
     return new Response(;
       JSON.stringify({ filters });
-      { headers:{ ...corsHeaders, "Content-Type":"application/json" } }
-    );
+      { headers:{ ...corsHeaders, "Content-Type":"application/json" } });
   } catch (error) {;
     console.error("ai-search error", error);
     return new Response(;
       JSON.stringify({ error:error.message });
-      { status:500, headers:{ ...corsHeaders, "Content-Type":"application/json" } }
-    );  }
+      { status:500, headers:{ ...corsHeaders, "Content-Type":"application/json" } });  }
 });
  
 }try {

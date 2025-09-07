@@ -1,12 +1,12 @@
 import React from 'react';
 import MainLayout from '../components/layout/MainLayout';
 
-
 import React from './react';
 import Link from './next / link';
 import { motion  } from './framer-motion';
 import {
 export default Page;
+
   Brain,
   Network,
   Cloud,
@@ -31,7 +31,7 @@ import Layout from "../components/Layout";
 const serviceCategories = [
   {
     title: "AI Services",
-    description:;
+    description:
       "Cutting - edge artificial intelligence solutions for modern businesses",
     icon: Brain,
     services: [;
@@ -58,7 +58,7 @@ const serviceCategories = [
   },
   {
     title: "Micro SAAS",
-    description:;
+    description:
       "Innovative micro software solutions for specific business needs",
     icon: Cloud,
     services: [;
@@ -118,9 +118,7 @@ const stats = [;
   { number: "50+", label: "Countries Served" },
 import React from 'react';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { Brain, Network, Cloud, Shield, Zap, Target, Users, BarChart3, ArrowRight, CheckCircle, Star, Award, Clock, Globe } from 'lucide-react';
-import Layout from '../components/Layout';
+
 import {
   Activity,
   ArrowRight,
@@ -276,27 +274,6 @@ title: "Expert Team"
 ];
 export default function ServicesOverviewPage() {
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
   return (
     <PageTransition>
       {/* Hero Section */}
@@ -2564,8 +2541,8 @@ import Layout from "../components/Layout";
 
 const serviceCategories = [;
   {;
-    title: "AI Services",;
-    description:;
+    title: "AI Services",
+    description:
       "Cutting-edge artificial intelligence solutions for modern businesses",;
     icon: Brain,;
     services: [;
@@ -2578,7 +2555,7 @@ const serviceCategories = [;
     color: "from-blue-500 to-purple-600",;
   },;
   {;
-    title: "IT Services",;
+    title: "IT Services",
     description: "Comprehensive IT solutions and infrastructure management",;
     icon: Network,;
     services: [;
@@ -2591,8 +2568,8 @@ const serviceCategories = [;
     color: "from-green-500 to-blue-600",;
   },;
   {;
-    title: "Micro SAAS",;
-    description:;
+    title: "Micro SAAS",
+    description:
       "Innovative micro software solutions for specific business needs",;
     icon: Cloud,;
     services: [;
@@ -2605,7 +2582,7 @@ const serviceCategories = [;
     color: "from-purple-500 to-pink-600",;
   },;
   {;
-    title: "Security",;
+    title: "Security",
     description: "Advanced cybersecurity and data protection solutions",;
     icon: Shield,;
     services: [;
@@ -2618,7 +2595,7 @@ const serviceCategories = [;
     color: "from-red-500 to-orange-600",;
   },;
   {;
-    title: "Automation",;
+    title: "Automation",
     description: "Intelligent automation solutions to streamline operations",;
     icon: Zap,;
     services: [;
@@ -2631,7 +2608,7 @@ const serviceCategories = [;
     color: "from-yellow-500 to-red-600",;
   },;
   {;
-    title: "Analytics",;
+    title: "Analytics",
     description: "Data-driven insights and business intelligence solutions",;
     icon: BarChart3,;
     services: [;
@@ -2644,7 +2621,6 @@ const serviceCategories = [;
     color: "from-indigo-500 to-purple-600",;
   },;
 ];
-
 
           <div className="container mx-auto px-4 relative z-10">
             <motion.div
@@ -2813,12 +2789,10 @@ We offer a comprehensive range of technology services to meet all your business 
                     <category.icon className="w-16 h-16 text-white" />
                   </div>
 
-
                   <div className="p-6">
                     <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
                       {category.title}
                     </h3>
-
 
                     <p className="text-gray-600 mb-4 leading-relaxed">
                       {category.description}
@@ -2855,42 +2829,6 @@ We offer a comprehensive range of technology services to meet all your business 
                 all your business needs.;
               </p>;
             </motion && motion.div>;
-
-<div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">;
-              {serviceCategories && serviceCategories.map((category, index) => (;
-                <motion&& motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
-                  className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group">;
-                  <div
-                    className={`h-32 bg-gradient-to-r ${category && category.color} flex items-center justify-center`}>;
-                    <category && category.icon className="w-16 h-16 text-white" />;
-                  </div>;
-                  <div className="p-6">;
-                    <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">;
-                      {category && category.title}
-                    </h3>;
-                    <p className="text-gray-600 mb-4 leading-relaxed">;
-                      {category && category.description}
-                    </p>;
-                    <div className="space-y-2 mb-6">;
-                      <h4 className="font-semibold text-gray-900 text-sm">;
-                        Key Services:;
-                      </h4>;
-                      <ul className="space-y-1">;
-                        {category && category.services.map((service, idx) => (;
-                          <li
-                            key={idx}
-                            className="flex items-center text-sm text-gray-600">;
-                            <CheckCircle className="w-3 h-3 text-green-500 mr-2 flex-shrink-0" />;
-                            {service}
-                          </li>;
-                        ))}
-
-                      </ul>;
-                    </div>;
 
                     <Link
                       href={category && category.link}
@@ -3116,6 +3054,7 @@ className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white 
       </div>;
     </Layout>);
 }
+
 import React from 'react';
 import MainLayout from '../components/layout/MainLayout';
 
@@ -3134,5 +3073,3 @@ const Page = () => {
     </MainLayout>
   );
 };
-
-export default Page;

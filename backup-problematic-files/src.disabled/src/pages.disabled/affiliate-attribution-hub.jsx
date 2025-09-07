@@ -1,4 +1,3 @@
-import React from 'react';'
 const Affiliate-attribution-hub = ({ className }) => {
   return ('
     <div className={className || ''}>'
@@ -8,6 +7,3 @@ const Affiliate-attribution-hub = ({ className }) => {
     </div>
   )
 };
-
-    </div>)'
-pr-12325

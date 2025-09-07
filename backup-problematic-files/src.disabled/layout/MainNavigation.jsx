@@ -1,4 +1,3 @@
-
 class ErrorBoundary extends React.Component {
 class ErrorBoundary extends React.Component {
   // TODO: Implement
@@ -28,9 +27,6 @@ import React from 'react';
 interface MainNavigationProps {
   // Add props here as needed
 
-}
-
-export default function MainNavigation({ }: MainNavigationProps) {
   return (
     <div>
       <h1>MainNavigation</h1>
@@ -56,8 +52,6 @@ export default function MainNavigation({ }: MainNavigationProps) {
       <h1>MainNavigation</h1>
       <p>This component is under development.</p>
     </div>
-  )
-};
 
     </div>'
 pr-12325

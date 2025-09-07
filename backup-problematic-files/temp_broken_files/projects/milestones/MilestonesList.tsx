@@ -1,14 +1,15 @@
+import React, { useState } from 'react',;
+import { Milestone, MilestoneStatus, MilestoneActivity } from '@/hooks/useMilestones',;
+import { useAuth } from '@/hooks/useAuth',;
+import { MilestoneCard } from './MilestoneCard',;
+import { AddMilestoneForm } from './AddMilestoneForm',;
+import { Button } from '@/components/ui/button',;
+import { Card, CardContent } from '@/components/ui/card',;
 
-import React, { useState } from 'react';
-import { Milestone, MilestoneStatus, MilestoneActivity } from '@/hooks/useMilestones';
-import { useAuth } from '@/hooks/useAuth';
-import { MilestoneCard } from './MilestoneCard';
-import { AddMilestoneForm } from './AddMilestoneForm';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
 // lucide-react doesn't export PlusIcon, use our icon wrapper;
-import { Plus } from 'lucide-react';
-import { EmptyState } from '@/components/ui/empty-state';
+
+import { EmptyState } from '@/components/ui/empty-state',;
+
 ;
 interface MilestonesListProps {;
   milestones: Milestone[];,;
@@ -26,8 +27,9 @@ interface MilestonesListProps {;
   onReject?:(id:string) => Promise<void>;
 export const MilestonesList:React.FC<MilestonesListProps> = ({;
 
-      <div className="space-y-4">;"
-</div>
+      <div className="space-y-4">;
+        {[1, 2, 3].map((i) => (;
+
           <Card key={i}>;
 "
             <CardContent className="p-6">;"
@@ -35,24 +37,32 @@ export const MilestonesList:React.FC<MilestonesListProps> = ({;
               <div className="h-4 bg-muted rounded animate-pulse w-full mb-2"></div>;""
               <div className="h-4 bg-muted rounded animate-pulse w-3/4"></div>;"
       </div>;
-      <EmptyState;"
-        icon={<span className="text-3xl"></span>}"
-    <div className="space-y-6">;"
-</div>"
-        <div className="flex justify-end">;"
-</div>)
-          <Button onClick={() => setShowAddForm(true)}>;
-            <Plus className="h-4 w-4 mr-2" />;"
 
+    <div className="space-y-6">;
+      {isClient && !showAddForm && (;
+        <div className="flex justify-end">;
+          <Button onClick={() => setShowAddForm(true)}>;
+            <Plus className="h-4 w-4 mr-2" />;
+            Add Milestone;
+          </Button>;
+        </div>;
+      )}
+
+      {showAddForm && (;
         <Card>;
-          <CardContent className="pt-6">;"
-            <h3 className="text-lg font-medium mb-4">Create New Milestone</h3>;"
+          <CardContent className="pt-6">;
+            <h3 className="text-lg font-medium mb-4">Create New Milestone</h3>;
+
             <AddMilestoneForm ;
+
               onSubmit={handleSubmit}
               isSubmitting={isSubmitting}
               onCancel={() => setShowAddForm(false)}
 
-        ;"
+      ;
+      <div className="space-y-4">;
+        {milestones.map((milestone) => (;
+
           <MilestoneCard;
             key={milestone.id}            id={milestone.id}
             projectId={milestone.projectid}
@@ -61,9 +71,12 @@ export const MilestonesList:React.FC<MilestonesListProps> = ({;
             amount={parseFloat(milestone.amount.toString())}
             status={milestone.status}
             dueDate={milestone.duedate}
+
             onApprove={onApprove}
             onReject={onReject}
           />;
+
+  ),;
 
 },; <Card key= {;
   i ;"
@@ -98,5 +111,3 @@ export const MilestonesList:React.FC<MilestonesListProps> = ({;
 }onReject= {;
   onReject ;
 }/>) ) ;
-
-}</div> </div>) ;"

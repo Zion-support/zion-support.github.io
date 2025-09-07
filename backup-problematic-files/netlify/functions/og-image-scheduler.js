@@ -33,4 +33,3 @@ exports.handler = async () => {
   headers: { 'content-type': 'text/plain' }
     body: logs.join('\n')
 };function runNode(relPath, args = []) {
-`;

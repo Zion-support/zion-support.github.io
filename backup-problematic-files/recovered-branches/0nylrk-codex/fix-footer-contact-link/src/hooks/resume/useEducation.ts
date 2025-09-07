@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { supabase } from '@/integrations/supabase/client';
 import { Education } from '@/types/resume';
@@ -66,6 +65,7 @@ export function useEducation() {;
           description:education.description;
           institution_logo_url:education.institution_logo_url;
           location:education.location;
+
         });
         .eq('id', eduId);
       ;

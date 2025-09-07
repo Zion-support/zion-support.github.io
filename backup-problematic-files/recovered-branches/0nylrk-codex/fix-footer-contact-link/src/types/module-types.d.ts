@@ -1,4 +1,3 @@
-
 // Type declarations for modules used in Vite configuration;
 declare module 'vitest/config' {;
   export { defineConfig } from 'vite';
@@ -17,4 +16,4 @@ declare module 'path' {;
 declare module 'lovable-tagger' {;
   import { Plugin } from 'vite';
   export function componentTagger():Plugin;
-} // Type declarations for modules used in Vite configuration 
+} // Type declarations for modules used in Vite configuration

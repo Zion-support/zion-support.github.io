@@ -1,4 +1,3 @@
-
 export interface TenantInfo {;
   id:string;
   brand_name:string;
@@ -18,4 +17,4 @@ export interface TenantInfo {;
 export interface TenantResponse {;
   tenant:TenantInfo | null;
   error?:string;
-} 
+}

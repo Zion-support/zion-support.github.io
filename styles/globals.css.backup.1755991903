@@ -23,7 +23,11 @@
   --ring: #3b82f6;
   --radius: 0.75rem;
   --shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+<<<<<<< HEAD
+
+=======
   
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   /* Futuristic color palette */
   --neon-blue: #00d4ff;
   --neon-purple: #8b5cf6;
@@ -183,7 +187,11 @@ h3 {
   left: 0;
   width: 100%;
   height: 100%;
+<<<<<<< HEAD
+  background:
+=======
   background: 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     radial-gradient(circle at 20% 80%, rgba(0, 255, 255, 0.2) 0%, transparent 50%),
     radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.2) 0%, transparent 50%),
     radial-gradient(circle at 40% 40%, rgba(236, 73, 153, 0.2) 0%, transparent 50%),
@@ -206,7 +214,11 @@ body::after {
   left: 0;
   width: 100%;
   height: 100%;
+<<<<<<< HEAD
+  background-image:
+=======
   background-image: 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     radial-gradient(2px 2px at 20px 30px, rgba(0, 255, 255, 0.8), transparent),
     radial-gradient(2px 2px at 40px 70px, rgba(139, 92, 246, 0.8), transparent),
     radial-gradient(1px 1px at 90px 40px, rgba(236, 73, 153, 0.8), transparent),
@@ -231,7 +243,11 @@ body::after {
   left: 0;
   width: 100%;
   height: 100%;
+<<<<<<< HEAD
+  background-image:
+=======
   background-image: 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
     linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px);
   background-size: 50px 50px;
@@ -247,7 +263,11 @@ body::after {
   left: 0;
   width: 100%;
   height: 100%;
+<<<<<<< HEAD
+  background:
+=======
   background: 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     repeating-linear-gradient(
       0deg,
       transparent,
@@ -275,7 +295,11 @@ body::after {
   left: 0;
   width: 100%;
   height: 100%;
+<<<<<<< HEAD
+  background:
+=======
   background: 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     radial-gradient(circle at 25% 25%, rgba(16, 185, 129, 0.2) 0%, transparent 50%),
     radial-gradient(circle at 75% 75%, rgba(16, 185, 129, 0.2) 0%, transparent 50%),
     radial-gradient(circle at 50% 50%, rgba(16, 185, 129, 0.1) 0%, transparent 50%);
@@ -291,7 +315,11 @@ body::after {
   left: 0;
   width: 100%;
   height: 100%;
+<<<<<<< HEAD
+  background:
+=======
   background: 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     linear-gradient(45deg, transparent 30%, rgba(236, 73, 153, 0.1) 50%, transparent 70%),
     linear-gradient(-45deg, transparent 30%, rgba(236, 73, 153, 0.1) 50%, transparent 70%);
   pointer-events: none;
@@ -321,7 +349,11 @@ body::after {
   left: 0;
   width: 100%;
   height: 100%;
+<<<<<<< HEAD
+  background:
+=======
   background: 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     radial-gradient(ellipse at center, rgba(139, 92, 246, 0.1) 0%, transparent 70%);
   pointer-events: none;
   z-index: -1;
@@ -335,7 +367,11 @@ body::after {
   left: 0;
   width: 100%;
   height: 100%;
+<<<<<<< HEAD
+  background:
+=======
   background: 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     radial-gradient(circle at 30% 70%, rgba(236, 73, 153, 0.1) 0%, transparent 60%),
     radial-gradient(circle at 70% 30%, rgba(236, 73, 153, 0.1) 0%, transparent 60%);
   pointer-events: none;
@@ -351,6 +387,23 @@ body::after {
   75% { transform: translateY(-15px) rotate(0.5deg); }
 }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+>>>>>>> main
+=======
+
+
+
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 @keyframes particleFloat {
   0% { transform: translateY(0px); }
   100% { transform: translateY(-100px); }
@@ -709,6 +762,17 @@ body::after {
   .quantum-grid {
     background-size: 25px 25px;
   }
+<<<<<<< HEAD
+
+  .holographic-matrix {
+    background-size: 50px 50px;
+  }
+
+  .neural-network {
+    background-size: 75px 75px;
+  }
+
+=======
   
   .holographic-matrix {
     background-size: 50px 50px;
@@ -718,6 +782,7 @@ body::after {
     background-size: 75px 75px;
   }
   
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   .cyberpunk-elements {
     background-size: 100px 100px;
   }
@@ -728,7 +793,11 @@ body::after {
   .futuristic-card {
     border-width: 2px;
   }
+<<<<<<< HEAD
+
+=======
   
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   .futuristic-btn {
     border: 2px solid white;
   }
@@ -769,33 +838,61 @@ body::after {
   .cyberpunk-pulse {
     display: none;
   }
+<<<<<<< HEAD
+
+=======
   
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   body {
     background: white;
     color: black;
   }
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+=======
+/* Advanced Holographic Effects */
+.holographic-bg {
+  background: 
+    linear-gradient(45deg, transparent 30%, rgba(59, 130, 246, 0.1) 50%, transparent 70%),
+    linear-gradient(-45deg, transparent 30%, rgba(147, 51, 234, 0.1) 50%, transparent 70%),
+    linear-gradient(90deg, transparent 30%, rgba(16, 185, 129, 0.1) 50%, transparent 70%);
+  background-size: 200% 200%, 200% 200%, 200% 200%;
+  animation: holographicShift 15s ease-in-out infinite;
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+}
+=======
 }
 }
 }
 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 @keyframes holographicShift {
   0%, 100% { 
     background-position: 0% 0%, 100% 100%, 50% 50%; 
   }
   33% { 
     background-position: 100% 0%, 0% 100%, 50% 50%; 
+<<<<<<< HEAD
+  66% { 
+    background-position: 0% 100%, 100% 0%, 50% 50%; 
+=======
   }
   66% { 
     background-position: 0% 100%, 100% 0%, 50% 50%; 
   }
 }
 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 /* Quantum Particle System */
 .quantum-particles {
   position: relative;
   overflow: hidden;
+<<<<<<< HEAD
+=======
 }
 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 .quantum-particles::before {
   content: '';
   position: absolute;
@@ -810,6 +907,22 @@ body::after {
     radial-gradient(circle at 80% 10%, rgba(239, 68, 68, 0.2) 0%, transparent 30%),
     radial-gradient(circle at 20% 90%, rgba(245, 158, 11, 0.2) 0%, transparent 30%);
   animation: quantumFloat 40s ease-in-out infinite;
+<<<<<<< HEAD
+@keyframes quantumFloat {
+    transform: translate(0, 0) scale(1) rotate(0deg);
+    opacity: 0.8;
+  25% { 
+    transform: translate(20px, -20px) scale(1.1) rotate(90deg);
+    opacity: 1;
+  50% { 
+    transform: translate(-20px, 20px) scale(0.9) rotate(180deg);
+    opacity: 0.6;
+  75% { 
+    transform: translate(20px, 20px) scale(1.05) rotate(270deg);
+    opacity: 0.9;
+/* Neural Network Grid */
+.neural-grid {
+=======
 }
 
 @keyframes quantumFloat {
@@ -834,12 +947,19 @@ body::after {
 /* Neural Network Grid */
 .neural-grid {
   background-image: 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     radial-gradient(circle at 25% 25%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
     radial-gradient(circle at 75% 75%, rgba(147, 51, 234, 0.1) 0%, transparent 50%),
     linear-gradient(45deg, transparent 40%, rgba(16, 185, 129, 0.05) 50%, transparent 60%),
     linear-gradient(-45deg, transparent 40%, rgba(239, 68, 68, 0.05) 50%, transparent 60%);
   background-size: 100px 100px, 100px 100px, 200px 200px, 200px 200px;
   animation: neuralPulse 20s ease-in-out infinite;
+<<<<<<< HEAD
+@keyframes neuralPulse {
+    background-size: 100px 100px, 100px 100px, 200px 200px, 200px 200px;
+    opacity: 0.5;
+    background-size: 120px 120px, 120px 120px, 240px 240px, 240px 240px;
+=======
 }
 
 @keyframes neuralPulse {
@@ -853,6 +973,7 @@ body::after {
   }
 }
 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 /* Futuristic Glow Effects */
 .futuristic-glow {
   text-shadow: 
@@ -860,14 +981,27 @@ body::after {
     0 0 20px rgba(147, 51, 234, 0.3),
     0 0 30px rgba(16, 185, 129, 0.2);
   animation: glowPulse 3s ease-in-out infinite;
+<<<<<<< HEAD
+@keyframes glowPulse {
+=======
 }
 
 @keyframes glowPulse {
   0%, 100% { 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     text-shadow: 
       0 0 10px rgba(59, 130, 246, 0.5),
       0 0 20px rgba(147, 51, 234, 0.3),
       0 0 30px rgba(16, 185, 129, 0.2);
+<<<<<<< HEAD
+      0 0 15px rgba(59, 130, 246, 0.7),
+      0 0 25px rgba(147, 51, 234, 0.5),
+      0 0 35px rgba(16, 185, 129, 0.4);
+/* Advanced Card Hover Effects */
+.futuristic-card {
+  transition: all 0.3s ease;
+.futuristic-card::before {
+=======
   }
   50% { 
     text-shadow: 
@@ -888,22 +1022,33 @@ body::after {
   content: '';
   position: absolute;
   top: 0;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   left: -100%;
   width: 100%;
   height: 100%;
   background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.2), transparent);
   transition: left 0.5s ease;
+<<<<<<< HEAD
+.futuristic-card:hover::before {
+  left: 100%;
+=======
 }
 
 .futuristic-card:hover::before {
   left: 100%;
 }
 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 .futuristic-card:hover {
   transform: translateY(-5px) scale(1.02);
   box-shadow: 
     0 20px 40px rgba(59, 130, 246, 0.2),
     0 10px 20px rgba(147, 51, 234, 0.1);
+<<<<<<< HEAD
+/* Quantum Wave Animation */
+.quantum-wave {
+.quantum-wave::after {
+=======
 }
 
 /* Quantum Wave Animation */
@@ -919,6 +1064,7 @@ body::after {
   left: 0;
   right: 0;
   bottom: 0;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   background: linear-gradient(90deg, 
     transparent 0%, 
     rgba(59, 130, 246, 0.1) 25%, 
@@ -926,6 +1072,21 @@ body::after {
     rgba(16, 185, 129, 0.1) 75%, 
     transparent 100%);
   animation: waveMove 8s linear infinite;
+<<<<<<< HEAD
+@keyframes waveMove {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+/* Enhanced Particle Float */
+@keyframes particleFloat {
+    transform: translate(0, 0) scale(1);
+    transform: translate(30px, -30px) scale(1.2);
+    transform: translate(-30px, 30px) scale(0.8);
+    opacity: 0.4;
+    transform: translate(30px, 30px) scale(1.1);
+/* Advanced Button Hover Effects */
+.futuristic-button {
+.futuristic-button::before {
+=======
 }
 
 @keyframes waveMove {
@@ -963,12 +1124,25 @@ body::after {
 .futuristic-button::before {
   content: '';
   position: absolute;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   top: 50%;
   left: 50%;
   width: 0;
   height: 0;
   background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, transparent 70%);
   transform: translate(-50%, -50%);
+<<<<<<< HEAD
+.futuristic-button:hover::before {
+  width: 300px;
+  height: 300px;
+.futuristic-button:hover {
+  transform: translateY(-2px);
+    0 10px 20px rgba(59, 130, 246, 0.3),
+    0 5px 10px rgba(147, 51, 234, 0.2);
+/* Neural Network Connection Lines */
+.neural-connections {
+.neural-connections::before {
+=======
   transition: all 0.3s ease;
 }
 
@@ -997,17 +1171,30 @@ body::after {
   right: 0;
   bottom: 0;
   background-image: 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     linear-gradient(45deg, transparent 40%, rgba(59, 130, 246, 0.1) 50%, transparent 60%),
     linear-gradient(-45deg, transparent 40%, rgba(147, 51, 234, 0.1) 50%, transparent 60%),
     linear-gradient(90deg, transparent 40%, rgba(16, 185, 129, 0.05) 50%, transparent 60%);
   background-size: 150px 150px, 150px 150px, 150px 150px;
   animation: neuralFlow 25s linear infinite;
+<<<<<<< HEAD
+=======
 }
 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 @keyframes neuralFlow {
   0% { 
     background-position: 0% 0%, 100% 100%, 50% 50%;
     opacity: 0.3;
+<<<<<<< HEAD
+    background-position: 100% 0%, 0% 100%, 50% 50%;
+    opacity: 0.7;
+  100% { 
+/* Quantum Entanglement Effect */
+.quantum-entanglement {
+.quantum-entanglement::before,
+.quantum-entanglement::after {
+=======
   }
   50% { 
     background-position: 100% 0%, 0% 100%, 50% 50%;
@@ -1028,17 +1215,42 @@ body::after {
 .quantum-entanglement::after {
   content: '';
   position: absolute;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   width: 100px;
   height: 100px;
   border: 2px solid rgba(59, 130, 246, 0.3);
   border-radius: 50%;
   animation: entanglement 6s ease-in-out infinite;
+<<<<<<< HEAD
+=======
 }
 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 .quantum-entanglement::before {
   top: -50px;
   left: -50px;
   animation-delay: 0s;
+<<<<<<< HEAD
+  bottom: -50px;
+  right: -50px;
+  animation-delay: 3s;
+@keyframes entanglement {
+    transform: scale(1) rotate(0deg);
+    border-color: rgba(59, 130, 246, 0.3);
+    transform: scale(1.5) rotate(180deg);
+    border-color: rgba(147, 51, 234, 0.6);
+/* Advanced Loading Animation */
+.quantum-loader {
+  width: 60px;
+  height: 60px;
+.quantum-loader::before,
+.quantum-loader::after {
+  border: 3px solid transparent;
+  animation: quantumSpin 2s linear infinite;
+.quantum-loader::before {
+  border-top-color: rgba(59, 130, 246, 0.8);
+  animation-duration: 1.5s;
+=======
 }
 
 .quantum-entanglement::after {
@@ -1086,6 +1298,7 @@ body::after {
 }
 
 .quantum-loader::after {
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   top: 10px;
   left: 10px;
   right: 10px;
@@ -1093,6 +1306,22 @@ body::after {
   border-bottom-color: rgba(147, 51, 234, 0.8);
   animation-duration: 2s;
   animation-direction: reverse;
+<<<<<<< HEAD
+@keyframes quantumSpin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+/* Enhanced Scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+::-webkit-scrollbar-track {
+  background: rgba(31, 41, 55, 0.5);
+  border-radius: 6px;
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #3b82f6, #8b5cf6, #06b6d4);
+  border: 2px solid rgba(31, 41, 55, 0.5);
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #2563eb, #7c3aed, #0891b2);
+=======
 }
 
 @keyframes quantumSpin {
@@ -1120,10 +1349,17 @@ body::after {
   background: linear-gradient(180deg, #2563eb, #7c3aed, #0891b2);
 }
 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 /* Advanced Text Selection */
 ::selection {
   background: rgba(59, 130, 246, 0.3);
   color: #ffffff;
+<<<<<<< HEAD
+::-moz-selection {
+/* Enhanced Focus States */
+.futuristic-focus:focus {
+  outline: none;
+=======
 }
 
 ::-moz-selection {
@@ -1135,10 +1371,21 @@ body::after {
 .futuristic-focus:focus {
   outline: none;
   box-shadow: 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     0 0 0 3px rgba(59, 130, 246, 0.3),
     0 0 0 6px rgba(147, 51, 234, 0.2),
     0 0 0 9px rgba(16, 185, 129, 0.1);
   transform: scale(1.02);
+<<<<<<< HEAD
+/* Quantum State Transitions */
+.quantum-transition {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+.quantum-transition:hover {
+  transform: translateY(-2px) scale(1.02);
+  filter: brightness(1.1) contrast(1.05);
+/* Advanced Background Patterns */
+.cyber-pattern {
+=======
 }
 
 /* Quantum State Transitions */
@@ -1154,6 +1401,7 @@ body::after {
 /* Advanced Background Patterns */
 .cyber-pattern {
   background-image: 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     linear-gradient(45deg, rgba(59, 130, 246, 0.05) 25%, transparent 25%),
     linear-gradient(-45deg, rgba(147, 51, 234, 0.05) 25%, transparent 25%),
     linear-gradient(45deg, transparent 75%, rgba(16, 185, 129, 0.05) 75%),
@@ -1161,9 +1409,37 @@ body::after {
   background-size: 20px 20px;
   background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
   animation: cyberMove 30s linear infinite;
+<<<<<<< HEAD
+@keyframes cyberMove {
+  0% { background-position: 0 0, 0 10px, 10px -10px, -10px 0px; }
+  100% { background-position: 20px 20px, 20px 30px, 30px 10px, 10px 20px; }
+<<<<<<< HEAD
+=======
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+>>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-a01f
+}
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+>>>>>>> main
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+
+
+}
+}
+
+
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
 }
 
 @keyframes cyberMove {
   0% { background-position: 0 0, 0 10px, 10px -10px, -10px 0px; }
   100% { background-position: 20px 20px, 20px 30px, 30px 10px, 10px 20px; }
 }
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

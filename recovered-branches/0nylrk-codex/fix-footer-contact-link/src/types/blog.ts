@@ -1,6 +1,4 @@
-export interface BlogAuthor {
-  name: string;
-
+name: string;
 
   // TODO: Implement
 }
@@ -9,32 +7,25 @@ export interface BlogAuthor {
   avatarUrl: string;
 
 }
-  // TODO: Implement
-}
-  name: string;,
-  title: string;
-  avatarUrl: string;
-pr-12325
 
   title: string,
   avatar_url: string;
 
-}
-export interface BlogPost {
 export interface BlogAuthor {
+
   name: string;
 }export interface BlogAuthor {
   name: string;
 }
-export interface BlogPost {
 
-export interface BlogPost {;
   id: string;
+
   title: string;
   slug: string;
   excerpt: string;
   content: string;
   author: BlogAuthor;
+
   published_date: string;
   read_time: string;
   category: string;
@@ -54,8 +45,6 @@ export interface BlogPost {;
 }
 // Type for generated blog content;
 
-export interface GeneratedBlogContent {
-  title: string;
   meta_description: string;
   body: string;
   tags: string[];
@@ -66,7 +55,7 @@ export interface GeneratedBlogContent {
 
   tweet_summary?: string,
   image_prompt?: string;
-}
+
   publishedDate: string;
   readTime: string;
   category: string;
@@ -75,67 +64,24 @@ export interface GeneratedBlogContent {
   isFeatured?: boolean;
   isPublished?: boolean;
 
-  createdBy?: string
-
-  updatedAt?: string
-}
-// Type for generated blog content
 export interface GeneratedBlogContent {;
   title: string;
   metaDescription: string;
   body: string;
   tags: string[];
 
-  tweetSummary?: string
-
-  imagePrompt?: string
-}
-// Type for generated newsletter content
-export interface GeneratedNewsletterContent {;
   subject: string;
   previewText: string;
 
-  body: string
-
-  cta: string
 }
+
 export interface BlogAuthor {;
-  name: string,;
-}  name: string,;
-  title: string,;
-  avatarUrl: string;
+
+// Type for generated newsletter content;
+export interface GeneratedNewsletterContent {;
+  subject: string,;
+  previewText: string,;
+  body: string;
+  cta: string;
 }
 ;
-export interface BlogPost {;
-  id: string,;
-  title: string,;
-export interface BlogPost {
-  // TODO: Implement
-  // TODO: Implement
-  name: string;
-
-}
-export interface BlogPost {
-  // TODO: Implement
-export interface BlogPost {;
-
-  id: string;,
-
-  title: string;
-  slug: string;,
-  excerpt: string;
-  content: string;,
-  author: BlogAuthor;
-
-  published_date: string;,
-  read_time: string;
-  category: string;,
-  tags: string[];
-  featuredImage: string;
-  isFeatured?: boolean;
-  isPublished?: boolean;
-
-
-export interface GeneratedBlogContent {
-
-}

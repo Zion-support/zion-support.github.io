@@ -1,4 +1,3 @@
-// Security-audit utility;
 export const Security-audit = () => {
   // Implementation here
   return null
@@ -6,4 +5,3 @@ export const Security-audit = () => {
   return null;
 pr-12325
 };
-

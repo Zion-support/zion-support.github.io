@@ -1,4 +1,3 @@
-// Analytics utility;
 export const Analytics = () => {
   // Implementation here
   return null
@@ -6,4 +5,3 @@ export const Analytics = () => {
   return null;
 pr-12325
 };
-

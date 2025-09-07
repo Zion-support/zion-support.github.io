@@ -4,6 +4,7 @@ interface Event {
   type: string;,
   target: EventTarget | null;
 type EventListener = (event: Event) => void;
+
 interface EventTarget {
   // TODO: Implement
   addEventListener (type: string, listener: EventListener): void;
@@ -16,7 +17,9 @@ interface MessagePort {
   post_message (message: any): void;
   start (): void;
   close (): void;
-  data: T;,
+
+  data: T;
+
   origin: string;
   lastEventId: string;,
   source: MessageEventSource | null;
@@ -25,6 +28,12 @@ interface MessageChannelHandlerProps {
   // TODO: Implement
   on_message?: (message: unknown) => void;
   on_error?: (error: Error) => void;
+
+  onError
+}: MessageChannelHandlerProps = {}) {
+  const handleMessage = useCallback(
+    (event: MessageEvent<unknown>) => {
+
       try {
   // TODO: Implement
         // Check condition;
@@ -34,8 +43,12 @@ if ( {) {
       } catch (error) {
         // Check condition;
           on_error (error as Error);
+
+      }
+    } catch (error) {
       if (onError) {
         onError(error as Error);
+
     [onMessage, onError]
   );
   useEffect(() => {

@@ -1,4 +1,3 @@
-
 // Signup checking functionality;
 import { supabase } from '@/integrations/supabase/client';
 import { analyzeEmail } from './analyzeEmail';
@@ -45,4 +44,4 @@ export const checkSignupPatterns = async (;
   try {
   const {
   data: recentSignups, error 
-}= await supabase .from ('profiles') .select ('created at') .eq ('ip address', ipAddress) .gte ('created at', new Date (Date.now () - 24 * 60 * 60 * 1000) .toISOString () ) // Last 24 hours 
+}= await supabase .from ('profiles') .select ('created at') .eq ('ip address', ipAddress) .gte ('created at', new Date (Date.now () - 24 * 60 * 60 * 1000) .toISOString () ) // Last 24 hours

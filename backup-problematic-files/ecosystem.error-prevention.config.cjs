@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 module.exports = {
   apps: [
     {
@@ -25,5 +31,102 @@ module.exports = {
     }]
   ]
 };
+<<<<<<< HEAD
+module.exports = { apps: [{ name: "error-prevention-linter","" script: "scripts/error-prevention/linter-watcher.cjs"," instances: 1," autorestart: true," watch: false,"" max_memory_restart: "1G"," env: {" NODE_ENV: "production" },"" log_file: "logs/error-prevention-linter.log","" out_file: "logs/error-prevention-linter-out.log","" error_file: "logs/error-prevention-linter-error.log","" log_date_format: "YYYY-MM-DD HH:mm:ss Z" }, {"" name: "error-prevention-build-monitor","" script: "scripts/error-prevention/build-monitor.cjs"," instances: 1," autorestart: true," watch: false,"" max_memory_restart: "1G"," env: {" NODE_ENV: "production" },"" log_file: "logs/error-prevention-build.log","" out_file: "logs/error-prevention-build-out.log","" error_file: "logs/error-prevention-build-error.log","" log_date_format: "YYYY-MM-DD HH:mm:ss Z" }, {"" name: "error-prevention-security-audit","" script: "scripts/error-prevention/security-auditor.cjs"," instances: 1," autorestart: true," watch: false,"" max_memory_restart: "1G"," env: {" NODE_ENV: "production" },"" log_file: "logs/error-prevention-security.log","" out_file: "logs/error-prevention-security-out.log","" error_file: "logs/error-prevention-security-error.log","" log_date_format: "YYYY-MM-DD HH:mm:ss Z" }, {"" name: "error-prevention-dependency-monitor","" script: "scripts/error-prevention/dependency-monitor.cjs"," instances: 1," autorestart: true," watch: false,"" max_memory_restart: "1G"," env: {" NODE_ENV: "production" },"" log_file: "logs/error-prevention-dependency.log","" out_file: "logs/error-prevention-dependency-out.log","" error_file: "logs/error-prevention-dependency-error.log","" log_date_format: "YYYY-MM-DD HH:mm:ss Z" }, {"" name: "error-prevention-type-checker","" script: "scripts/error-prevention/type-checker.cjs"," instances: 1," autorestart: true," watch: false,"" max_memory_restart: "1G"," env: {" NODE_ENV: "production" },"" log_file: "logs/error-prevention-type.log","" out_file: "logs/error-prevention-type-out.log","" error_file: "logs/error-prevention-type-error.log","" log_date_format: "YYYY-MM-DD HH:mm:ss Z" } ]};"""
+<<<<<<< HEAD
+
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+module.exports = {}
+  "apps": [{}]
+      name: 'error-prevention-linter',
+      "script": 'scripts/error-prevention/linter-watcher.cjs',
+      "instances": 1,
+      "autorestart": true,
+      "watch": false,
+      "max_memory_restart": '1G',
+      "env": {}
+        NODE_ENV: 'production'
+      },
+      "log_file": 'logs/error-prevention-linter.log',
+      "out_file": 'logs/error-prevention-linter-out.log',
+      "error_file": 'logs/error-prevention-linter-error.log',
+      "log_date_format": 'YYYY-MM-DD HH:mm:ss Z'
+    },
+    {}
+      "name": 'error-prevention-build-monitor',
+      "script": 'scripts/error-prevention/build-monitor.cjs',
+      "instances": 1,
+      "autorestart": true,
+      "watch": false,
+      "max_memory_restart": '1G',
+      "env": {}
+        NODE_ENV: 'production'
+      },
+      "log_file": 'logs/error-prevention-build.log',
+      "out_file": 'logs/error-prevention-build-out.log',
+      "error_file": 'logs/error-prevention-build-error.log',
+      "log_date_format": 'YYYY-MM-DD HH:mm:ss Z'
+    },
+    {}
+      "name": 'error-prevention-security-audit',
+      "script": 'scripts/error-prevention/security-auditor.cjs',
+      "instances": 1,
+      "autorestart": true,
+      "watch": false,
+      "max_memory_restart": '1G',
+      "env": {}
+        NODE_ENV: 'production'
+      },
+      "log_file": 'logs/error-prevention-security.log',
+      "out_file": 'logs/error-prevention-security-out.log',
+      "error_file": 'logs/error-prevention-security-error.log',
+      "log_date_format": 'YYYY-MM-DD HH:mm:ss Z'
+    },
+    {}
+      "name": 'error-prevention-dependency-monitor',
+      "script": 'scripts/error-prevention/dependency-monitor.cjs',
+      "instances": 1,
+      "autorestart": true,
+      "watch": false,
+      "max_memory_restart": '1G',
+      "env": {}
+        NODE_ENV: 'production'
+      },
+      "log_file": 'logs/error-prevention-dependency.log',
+      "out_file": 'logs/error-prevention-dependency-out.log',
+      "error_file": 'logs/error-prevention-dependency-error.log',
+      "log_date_format": 'YYYY-MM-DD HH:mm:ss Z'
+    },
+    {}
+      "name": 'error-prevention-type-checker',
+      "script": 'scripts/error-prevention/type-checker.cjs',
+      "instances": 1,
+      "autorestart": true,
+      "watch": false,
+      "max_memory_restart": '1G',
+      "env": {}
+        NODE_ENV: 'production'
+      },
+      "log_file": 'logs/error-prevention-type.log',
+      "out_file": 'logs/error-prevention-type-out.log',
+      "error_file": 'logs/error-prevention-type-error.log',
+      "log_date_format": 'YYYY-MM-DD HH:mm:ss Z'
+    };
+  ];
+<<<<<<< HEAD
+
+};
+};
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
 
   ];
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

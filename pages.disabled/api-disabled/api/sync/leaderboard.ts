@@ -1,18 +1,3 @@
-import type { NextApiRequest, NextApiResponse } from "next",;
-import { readState, writeState, upsertEvent } from "../../../utils/sync/storage",;
-import { signPayload } from "../../../utils/sync/signature",;
-import axios from "axios",;
-import { v4 as uuidv4 } from "uuid",;
-import { nextVersionFor } from "../../../utils/sync/versioning",;
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" });
-
-
-import type { NextApiRequest, NextApiResponse } from "next";
-import { readState, writeState, upsertEvent } from "../../../utils/sync/storage";
-
-import type { NextApiRequest, NextApiResponse } from "next";
-import { readState, writeState, upsertEvent } from "../../../utils/sync/storage";
 origin/cursor/automate-test-improve-and-merge-code-2533
 import { signPayload } from "../../../utils/sync/signature";
 import axios from "axios";
@@ -34,19 +19,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const entityKey = `${subjectId}:${period |"global"}:${category}`
   const version = nextVersionFor(state, entityKey)
   const event = {
-    eventId: uuidv4();
-    type: "leaderboard_entry" as const;
-    payload: { id: entityKey, subjectId, score, category, period, rank };
-    originInstanceId: state.config.instanceId;
-    version;
-    timestamp: Date.now()};
+
     eventId: uuidv4()
     type: "leaderboard_entry" as const
     payload: { id: entityKey, subjectId, score, category, period, rank }
     originInstanceId: state.config.instanceId
     version
     timestamp: Date.now()}
-
 
   upsertEvent(state, event);
   writeState(state);
@@ -59,8 +38,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     state.config.peers
       .filter((p) => !p.paused)
       .map(async (peer) => {
-        const url = new URL("/api/sync/publish", peer.baseUrl).toString()
-        const url = new URL("/api/sync/publish", peer.baseUrl).toString();
+
         try {
           await axios.post(url, body, { headers, timeout: 5000 })
         } catch {}
@@ -98,13 +76,12 @@ export default async function handler(req, res) {
 
         const url = new URL("/api/sync/publish", peer.baseUrl).toString();
         const url = new URL("/api/sync/publish", peer.baseUrl).toString()
-main
-pr-12243
+
         try {
           await axios.post(url, body, { headers, timeout: 5000 })
         } catch {}
       })
-  );
+
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" });
   const state = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -201,7 +178,7 @@ export default async function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-pr-12243
+
   )
 
   return res.status(200).json({ status: "created", version, eventId: event.eventId })

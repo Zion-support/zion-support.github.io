@@ -111,6 +111,7 @@ export default function AdvancedServicesShowcase() {
         if (selectedCategory === 'quantum') return category.includes('quantum') || category.includes('quantum-resistant'),
         return false
       })
+
     }
 
     // Filter by search term
@@ -120,8 +121,7 @@ export default function AdvancedServicesShowcase() {
         service.tagline.toLowerCase().includes(searchTerm.toLowerCase()) ||
         getServiceCategory(service).toLowerCase().includes(searchTerm.toLowerCase())
       )
-    }
-      );}
+    });}
 
     setFilteredServices(filtered)
   }, [selectedCategory, searchTerm]),
@@ -140,22 +140,22 @@ export default function AdvancedServicesShowcase() {
           Popular
         </div>
       )}
-      
+
       <div className={_`h-32 bg-gradient-to-br ${service.color} flex items-center justify-center`}>
         <span className="text-4xl">{_service.icon}</span>
       </div>
-      
+
       <div className="p-6">
         <div className="flex items-start justify-between mb-3">
           <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
             {_service.name}
           </h3>
         </div>
-        
+
         <p className="text-gray-600 dark:text-gray-300 mb-4 line-clamp-2">
           {_service.tagline}
         </p>
-        
+
         <div className="flex items-center justify-between mb-4">
           <span className="text-2xl font-bold text-gray-900 dark:text-white">
             {_getServicePricing(service)}
@@ -164,7 +164,7 @@ export default function AdvancedServicesShowcase() {
             {_service.trialDays} day trial
           </span>
         </div>
-        
+
         <div className="space-y-3 mb-6">
           <div className="flex items-center gap-2">
             <CheckCircle className="w-4 h-4 text-green-500" />
@@ -185,7 +185,7 @@ export default function AdvancedServicesShowcase() {
             </span>
           </div>
         </div>
-        
+
         <div className="mb-6">
           <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Key Features:</h4>
           <div className="space-y-1">
@@ -202,21 +202,21 @@ export default function AdvancedServicesShowcase() {
             )}
           </div>
         </div>
-        
+
         <div className="mb-6">
           <h4 className="font-semibold text-gray-900 dark:text-white mb-2">ROI & Benefits:</h4>
           <p className="text-sm text-gray-600 dark:text-gray-400">
             {_service.roi}
           </p>
         </div>
-        
+
         <div className="mb-6">
           <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Market Position:</h4>
           <p className="text-sm text-gray-600 dark:text-gray-400">
             {_service.marketPosition}
           </p>
         </div>
-        
+
         <div className="flex items-center justify-between">
           <a
             href={_service.link}
@@ -225,7 +225,7 @@ export default function AdvancedServicesShowcase() {
             Learn More
             <ArrowRight className="w-4 h-4" />
           </a>
-          
+
           <a
             href={`mailto:${contactInfo.email}?subject=Inquiry about ${service.name}`}
             className="inline-flex items-center gap-2 bg-gray-100 dark: bg-gray-700 text-gray-700 dark:text-gray-300 px-4 py-3 rounded-lg font-semibold hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-300"
@@ -250,7 +250,7 @@ export default function AdvancedServicesShowcase() {
           <div className={_`w-20 h-20 bg-gradient-to-br ${service.color} rounded-xl flex items-center justify-center flex-shrink-0`}>
             <span className="text-3xl">{_service.icon}</span>
           </div>
-          
+
           <div className="flex-1">
             <div className="flex items-start justify-between mb-3">
               <div>
@@ -266,7 +266,7 @@ export default function AdvancedServicesShowcase() {
                   {_service.tagline}
                 </p>
               </div>
-              
+
               <div className="text-right">
                 <div className="text-2xl font-bold text-gray-900 dark:text-white">
                   {_getServicePricing(service)}
@@ -276,7 +276,7 @@ export default function AdvancedServicesShowcase() {
                 </div>
               </div>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
               <div className="flex items-center gap-2">
                 <CheckCircle className="w-4 h-4 text-green-500" />
@@ -297,7 +297,7 @@ export default function AdvancedServicesShowcase() {
                 </span>
               </div>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4">
               <div>
                 <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Key Features:</h4>
@@ -310,20 +310,20 @@ export default function AdvancedServicesShowcase() {
                   ))}
                 </div>
               </div>
-              
+
               <div>
                 <h4 className="font-semibold text-gray-900 dark:text-white mb-2">ROI & Benefits:</h4>
                 <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">
                   {_service.roi}
                 </p>
-                
+
                 <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Market Position:</h4>
                 <p className="text-sm text-gray-600 dark:text-gray-400">
                   {_service.marketPosition}
                 </p>
               </div>
             </div>
-            
+
             <div className="flex items-center gap-4">
               <a
                 href={_service.link}
@@ -332,7 +332,7 @@ export default function AdvancedServicesShowcase() {
                 Learn More
                 <ArrowRight className="w-4 h-4" />
               </a>
-              
+
               <a
                 href={`mailto:${contactInfo.email}?subject=Inquiry about ${service.name}`}
                 className="inline-flex items-center gap-2 bg-gray-100 dark: bg-gray-700 text-gray-700 dark:text-gray-300 px-4 py-3 rounded-lg font-semibold hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-300"
@@ -347,18 +347,18 @@ export default function AdvancedServicesShowcase() {
   ),
 
   return (_<div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800">
-      <SEO 
+
         title="2025 Advanced Services Showcase - Zion Tech Group"
         description="Discover our comprehensive portfolio of advanced AI services, _micro SAAS solutions, _and cutting-edge IT infrastructure. Real, _innovative, _and market-ready solutions for modern businesses."
         keywords={_["AI services", _"micro SAAS", _"IT infrastructure", _"quantum computing", _"enterprise solutions", _"Zion Tech Group"]}
       />
-      
+
       {_/* Hero Section */}
       <div className="relative overflow-hidden bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-700">
         <div className="absolute inset-0 bg-black opacity-20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <div className="text-center">
-            <motion.h1 
+
               initial={_{ opacity: 0, _y: 20}}
               animate={_{ opacity: 1, _y: 0}}
               transition={_{ duration: 0.8}}
@@ -366,16 +366,18 @@ export default function AdvancedServicesShowcase() {
             >
               2025 Advanced Services Showcase
             </motion.h1>
-            <motion.p 
+
               initial={_{ opacity: 0, _y: 20}}
               animate={_{ opacity: 1, _y: 0}}
               transition={_{ duration: 0.8, _delay: 0.2}}
               className="text-xl md:text-2xl text-blue-100 mb-8 max-w-4xl mx-auto"
             >
+
               Discover our comprehensive portfolio of real, _innovative, _and market-ready solutions. 
               From AI-powered enterprise services to cutting-edge quantum computing platforms.
             </motion.p>
             <motion.div 
+
               initial={_{ opacity: 0, _y: 20}}
               animate={_{ opacity: 1, _y: 0}}
               transition={_{ duration: 0.8, _delay: 0.4}}
@@ -454,14 +456,13 @@ export default function AdvancedServicesShowcase() {
                 />
               </div>
             </div>
-            
+
             <div className="flex items-center gap-4">
               <div className="flex items-center gap-2">
                 <button
                   onClick={_() => setViewMode('grid')}
                   className={_`p-2 rounded-lg transition-all duration-300 ${
-                    viewMode === 'grid' 
-                      ? 'bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400' 
+
                       : 'bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-600'}`}
                 >
                   <Grid className="w-5 h-5" />
@@ -469,8 +470,7 @@ export default function AdvancedServicesShowcase() {
                 <button
                   onClick={_() => setViewMode('list')}
                   className={_`p-2 rounded-lg transition-all duration-300 ${
-                    viewMode === 'list' 
-                      ? 'bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400' 
+
                       : 'bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-600'}`}
                 >
                   <List className="w-5 h-5" />
@@ -478,7 +478,7 @@ export default function AdvancedServicesShowcase() {
               </div>
             </div>
           </div>
-          
+
           {_/* Category Filters */}
           <div className="mt-6">
             <div className="flex flex-wrap gap-3">
@@ -508,10 +508,10 @@ export default function AdvancedServicesShowcase() {
                 </h2>
                 <p className="text-gray-600 dark:text-gray-400">
                   {_selectedCategory !== 'all' && `Filtered by: ${categories.find(c => c.id === selectedCategory)?.name}`}
-                  {_searchTerm && ` • Search: "${searchTerm}"`}
+
                 </p>
               </div>
-              
+
               <div className="flex items-center gap-4 text-sm text-gray-600 dark:text-gray-400">
                 <div className="flex items-center gap-2">
                   <TrendingUp className="w-4 h-4 text-green-500" />
@@ -530,7 +530,7 @@ export default function AdvancedServicesShowcase() {
         <div className="space-y-6">
           {_filteredServices.length === 0 ? (
             <div className="text-center py-12">
-              <div className="text-gray-400 dark:text-gray-500 text-6xl mb-4">🔍</div>
+
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
                 No services found
               </h3>
@@ -562,7 +562,7 @@ export default function AdvancedServicesShowcase() {
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-              Our team of experts is ready to help you implement these cutting-edge solutions. 
+
               Get in touch today to discuss your specific needs and discover how we can drive your success.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">

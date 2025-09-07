@@ -1,14 +1,31 @@
+import { FormValues } from "./useHireRequestForm";
+interface BudgetFieldsProps {}
 
-interface BudgetFieldsProps {
+  form: UseFormReturn<FormValues>;
+  talent?: TalentProfile;
+
+}
+
+}
+
+;
+
+export function BudgetFields(): any ({ form, talent }: BudgetFieldsProps) {;
   form: UseFormReturn<FormValues>;
   talent?: TalentProfile;
 }
 
 export function BudgetFields(): any ({ form, talent }: BudgetFieldsProps) {;
+  form: UseFormReturn<FormValues>;
+  talent?: TalentProfile;
+}
+
+export function BudgetFields(): any ({ form, talent }: BudgetFieldsProps) {;
+
   return (
-    <>;
+    <>
       <FormField
-        control={form && form.control}
+        control={form.control}
         name="budgetMin"
         render={({ field }) => (
           <FormItem>
@@ -29,11 +46,9 @@ export function BudgetFields(): any ({ form, talent }: BudgetFieldsProps) {;
           </FormItem>
         )}
       />
-
       <FormField
         control={form.control}
-        name="budget_min";
-
+        name="budgetMax"
         render={({ field }) => (
           <FormItem>
             <FormLabel className="text-white">Budget (Max)</FormLabel>
@@ -53,199 +68,101 @@ export function BudgetFields(): any ({ form, talent }: BudgetFieldsProps) {;
           </FormItem>
         )}
       />
-
-import React from "react";""
-import { UseFormReturn } from "react-hook-form";"
-
-import {
-  // TODO: Implement
-}
-  FormField,
-  FormItem,
-  FormLabel,
-
-  FormControl,
-  FormMessage,"
-} from "@/components/ui/form";""
-import { Input } from "@/components/ui/input";""
-import { TalentProfile } from "@/types/talent";""
-import { FormValues } from "./useHireRequestForm";"
-interface BudgetFieldsProps {
-  // TODO: Implement
-}
-  form: UseFormReturn<FormValues>;
-</FormValues>
-    <>;
-      <FormField;
-        control={form && form.control}"
-        name="budgetMin""
-        render={({ field }) => (
-</FormField>
-          <FormItem>
-</FormItem>)"
-            <FormLabel className="text-white">Budget (Min)</FormLabel>"
-            <FormControl>
-</FormControl>"
-              <div className="relative">"
-</div>"
-                <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate">"
-</span>
-                </span>
-                <Input;"
-                  type="number"""
-                  className="pl-7 bg-zion-blue border-zion-blue-light text-white""
-
-                  {...field}
-                />
-</Input>
-              </div>
-
-            </FormControl>"
-            <FormMessage className="text-red-400" />"
-</FormMessage>
-          </FormItem>
-      <FormField;
-        control={form.control}"
-        name="budget_min";"
-        render={({ field }) => (
-</FormField>
-          <FormItem>
-</FormItem>)"
-            <FormLabel className="text-white">Budget (Max)</FormLabel>"
-            <FormControl>
-</FormControl>"
-              <div className="relative">"
-</div>"
-                <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate">"
-</span>
-                </span>
-                <Input;"
-                  type="number"""
-                  className="pl-7 bg-zion-blue border-zion-blue-light text-white""
-
-                  {...field}
-                />
-</Input>
-              </div>
-
-            </FormControl>"
-            <FormMessage className="text-red-400" />"
-</FormMessage>
-
-          </FormItem>
     </>
   );
 }
 
-;
-
-export function BudgetFields(): any ({ form, talent }: BudgetFieldsProps) {;
-  form: UseFormReturn<FormValues>;
-  talent?: TalentProfile;
 }
 
 export function BudgetFields(): any ({ form, talent }: BudgetFieldsProps) {;
-  form: UseFormReturn<FormValues>;
-  talent?: TalentProfile;
-}
 
-export function BudgetFields(): any ({ form, talent }: BudgetFieldsProps) {;
   return (
-    <>
-      <FormField
-        control={form.control}
+    <>;
+      <FormField;
+        control={form && form.control}"
         name="budgetMin"
         render={({ field }) => (
-          <FormItem>
+          <FormItem>"
             <FormLabel className="text-white">Budget (Min)</FormLabel>
-            <FormControl>
-              <div className="relative">
+            <FormControl>"
+              <div className="relative">"
                 <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate">
                   $
                 </span>
-                <Input
-                  type="number"
+                <Input"
+                  type="number""
                   className="pl-7 bg-zion-blue border-zion-blue-light text-white"
                   {...field}
                 />
               </div>
-            </FormControl>
+            </FormControl>"
             <FormMessage className="text-red-400" />
           </FormItem>
         )}
       />
-      <FormField
-        control={form.control}
-  )
-}
-;
-import React from "react";""
-import { UseFormReturn } from "react-hook-form";"
-import {
-  // TODO: Implement
-}
-  FormField,
-  FormItem,
-  FormLabel,
-  FormControl,
-  FormMessage,"
-} from "@/components/ui/form";""
-import { Input } from "@/components/ui/input";""
-import { TalentProfile } from "@/types/talent";""
-import { FormValues } from "./useHireRequestForm";"
-interface BudgetFieldsProps {
-  // TODO: Implement
-  form: UseFormReturn<FormValues>;
 
-    <>;
       <FormField;
-        control={form && form.control}"
-        name="budgetMin""
-        render={({ field }) => (
+        control={form.control}"
+        name="budget_min";
 
-          <FormItem>
-)"
-            <FormLabel className="text-white">Budget (Min)"
-            <FormControl>
-"
+        render={({ field }) => (
+          <FormItem>"
+            <FormLabel className="text-white">Budget (Max)</FormLabel>
+            <FormControl>"
               <div className="relative">"
-</div>"
-                <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate">"
-</span>
-                <Input;"
-                  type="number"""
-                  className="pl-7 bg-zion-blue border-zion-blue-light text-white""
+                <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate">
+                  $
+                </span>
+
+                  className="pl-7 bg-zion-blue border-zion-blue-light text-white"
+
                   {...field}
                 />
-
               </div>
-            <FormMessage className="text-red-400" />"
-
-        control={form.control}"
-        name="budget_min";"
-
-            <FormLabel className="text-white">Budget (Max)"
-
-
+            </FormControl>"
+            <FormMessage className="text-red-400" />
+          </FormItem>
+        )}
+      />
     </>
   );
+}
+
 ;
 
+  form: UseFormReturn<FormValues>;
+  talent?: TalentProfile;
+}
 
+export function BudgetFields(): any ({ form, talent }: BudgetFieldsProps) {;
 
+  return (
     <>
-
-
-
-        control={form.control}
-  )
-pr-12325
-</FormMessage>
+      <FormField;
+        control={form.control}"
+        name="budgetMin"
+        render={({ field }) => (
+          <FormItem>"
+            <FormLabel className="text-white">Budget (Min)</FormLabel>
+            <FormControl>"
+              <div className="relative">"
+                <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate">
+                  $
+                </span>
+                <Input"
+                  type="number""
+                  className="pl-7 bg-zion-blue border-zion-blue-light text-white"
+                  {...field}
+                />
+              </div>
+            </FormControl>"
+            <FormMessage className="text-red-400" />
           </FormItem>
+        )}
+      />
+
       <FormField;
         control={form.control}
   )
 }
 ;
-"
-

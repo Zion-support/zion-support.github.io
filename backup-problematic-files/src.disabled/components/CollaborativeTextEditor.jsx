@@ -1,4 +1,3 @@
-import React from 'react';'
 const CollaborativeTextEditor = ({ className }) => {
   return ('
     <div className={className || ''}>'
@@ -8,6 +7,3 @@ const CollaborativeTextEditor = ({ className }) => {
     </div>
   )
 };
-
-    </div>)'
-pr-12325

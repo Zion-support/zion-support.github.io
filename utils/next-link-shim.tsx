@@ -1,5 +1,53 @@
-import React from "react";
+};
+  return (;
+    <a href={resolved} className={className} {...rest}>;
+      {children}
+};
+}
+};
 
+};
+};
+  return (;
+    <a href={resolved} className={className} {...rest}>;
+      {children};
+};
+};
+};
+
+import React from 'react';
+
+};
+
+}
+
+};
+};
+  return (;
+    <a href={resolved} className={className} {...rest}>;
+      {children};
+};
+};
+};
+ursor/integrate-build-improve-and-re-verify-8f7d
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/main
+
+import React from 'react';
+
+type Href = string | { pathname?: string; href?: string };
+
+type LinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
+  href: Href;
+
+};
+};
+  return (;
+    <a href={resolved} className={className} {...rest}>;
+
+};
+}
+};
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -35,8 +83,39 @@ interface HTMLElement {;
   style: { [key: string]: string }
 }
 
-interface HTMLAnchorElement extends HTMLElement {
-  tagName: "A";
+  href: string;
+
+  target: string;
+}
+type Href = string | { pathname?: string; href?: string }
+type LinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
+  href: Href;
+  children: React.ReactNode;
+}}; return (; <a href = {resolved} className = {className} {...rest}>; {children}}}};
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+}
+};
+  return (;
+    <a href={resolved} className={className} {...rest}>;
+      {children}
+};
+};
+ursor/integrate-build-improve-and-re-verify-8f7d
+};
+}
+
+};
+};
+  return (;
+    <a href={resolved} className={className} {...rest}>;
+
+}
+
+function resolveHref(href: Href): string {
+
+}
+};
+
 import React from 'react';
 import Link from 'next/link';
 
@@ -46,9 +125,7 @@ interface NextLinkShimProps {
   children: React.ReactNode;
   [key: string]: any;
 }
-function resolveHref(href: Href): string {
-  if (typeof href === "string") return href;
-  return href?.pathname || (href as { href?: string })?.href || "#";
+
 }
 
 export default function Link({
@@ -59,9 +136,22 @@ export default function Link({
 }: LinkProps) {
   const resolved = resolveHref(href);
 
+import React from 'react';
+type Href = string | { pathname?: string; href?: string };
+type LinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
+  "href": Href;
+
+};
+function resolveHref("href": Href): string {
+  if (typeof href === 'string') return href;
+  return href?.pathname || (href as { href?: string })?.href || '#';
+
+  return (
+    <a href={resolved} className={className} {...rest}>
+
+}
 
 export default function Link({ href, children, className, ...rest }: LinkProps) {;
-
 
   const resolved = resolveHref(href);
   if (React.isValidElement(children)) {
@@ -82,27 +172,7 @@ export default function Link({ href, children, className, ...rest }: LinkProps) 
   }
   return (
     <a href={resolved} className={class_name} {...rest}>;
+
       {children}
     </a>
   );
-}
-
-export function NextLinkShim({ href, className, children, ...rest }: NextLinkShimProps) {
-  // Check if it's an external link
-  const isExternal = href.startsWith('http') || href.startsWith('//');
-  
-  if (isExternal) {
-    return (
-      <a href={href} className={className} {...rest}>
-        {children}
-      </a>
-    );
-  }
-  
-  // Internal link - use Next.js Link
-  return (
-    <Link href={href} className={className} {...rest}>
-      {children}
-    </Link>
-  );
-}

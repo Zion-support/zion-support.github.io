@@ -1,4 +1,3 @@
-import React from 'react';'
 const HeroSection.js = ({ className }) => {
   return ('
     <div className={className || ''}>'
@@ -8,6 +7,3 @@ const HeroSection.js = ({ className }) => {
     </div>
   )
 };
-
-    </div>)'
-pr-12325

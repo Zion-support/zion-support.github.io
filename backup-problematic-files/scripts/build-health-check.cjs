@@ -89,7 +89,25 @@ if (require.main === module) {;}
   // Run once immediately, then every 15 minutes;
   checker.run();
   setInterval(() => checker.run(), 15 * 60 * 1000);
+<<<<<<< HEAD
+  // Keep process alive;
+  process.on("SIGINT", () => {;}
+    checker.log("Build health checker shutting down", "INFO');
+    process.exit(0),}),};
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+module.exports = BuildHealthCheck;
+module.exports = BuildHealthCheck;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
   // Keep process alive;"
 
 module.exports = BuildHealthCheck;
 `;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

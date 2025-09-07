@@ -1,4 +1,3 @@
-import * as React from 'react';
 class ErrorBoundary extends React.Component {
   // TODO: Implement
 }
@@ -20,6 +19,7 @@ import React from 'react';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
+
 const ServicesIndex: NextPage = () => {
   const services = [
     {
@@ -35,8 +35,9 @@ const ServicesIndex: NextPage = () => {
         'Fraud Detection & Risk Assessment'
       ],
       pricing: 'Starting at $2,500/month',
-      icon: '🧠',
+
       icon: '',
+
       link: '/services/ai-development'
     },
     {
@@ -52,8 +53,9 @@ const ServicesIndex: NextPage = () => {
         'Disaster Recovery & Backup'
       ],
       pricing: 'Starting at $1,800/month',
-      icon: '☁️',
+
       icon: '',
+
       link: '/services/cloud-solutions'
     },
     {
@@ -69,8 +71,9 @@ const ServicesIndex: NextPage = () => {
         'Blockchain Security Audits'
       ],
       pricing: 'Starting at $3,500/month',
-      icon: '🔗',
+
       icon: '',
+
       link: '/services/blockchain'
     },
     {
@@ -86,8 +89,9 @@ const ServicesIndex: NextPage = () => {
         'Remote Device Control'
       ],
       pricing: 'Starting at $2,200/month',
-      icon: '🌐',
+
       icon: '',
+
       link: '/services/iot-platforms'
     },
     {
@@ -103,8 +107,9 @@ const ServicesIndex: NextPage = () => {
         'Third-party Integrations'
       ],
       pricing: 'Starting at $1,500/month',
-      icon: '⚡',
+
       icon: '',
+
       link: '/products/micro-saas'
     },
     {
@@ -120,8 +125,9 @@ const ServicesIndex: NextPage = () => {
         'Vulnerability Management'
       ],
       pricing: 'Starting at $2,000/month',
-      icon: '🔒',
+
       icon: '',
+
       link: '/services/cybersecurity'
     },
     {
@@ -137,8 +143,9 @@ const ServicesIndex: NextPage = () => {
         'Performance Optimization'
       ],
       pricing: 'Starting at $1,200/month',
-      icon: '💻',
+
       icon: '',
+
       link: '/services/web-development'
     },
     {
@@ -154,8 +161,9 @@ const ServicesIndex: NextPage = () => {
         'Custom Reporting Solutions'
       ],
       pricing: 'Starting at $1,800/month',
-      icon: '📊',
+
       icon: '',
+
       link: '/services/data-analytics'
   const microSaasServices = [
     {
@@ -270,8 +278,7 @@ const ServicesIndex: NextPage = () => {;
   const services = [;
     {;
       id: 'ai-development',;
-      title: 'AI Development & Machine Learning',,
-  description: 'Custom AI solutions, machine learning models, and intelligent automation systems tailored to your business needs.',;
+
       features: [;
         'Natural Language Processing (NLP)',;
         'Computer Vision & Image Recognition',;
@@ -286,8 +293,7 @@ const ServicesIndex: NextPage = () => {;
     },;
     {;
       id: 'cloud-solutions',;
-      title: 'Cloud Solutions & Infrastructure',,
-  description: 'Scalable cloud infrastructure, migration services, and DevOps automation for modern applications.',;
+
       features: [;
         'AWS, Azure, GCP Migration',;
         'Container Orchestration (Kubernetes)',;
@@ -302,8 +308,7 @@ const ServicesIndex: NextPage = () => {;
     },;
     {;
       id: 'blockchain',;
-      title: 'Blockchain & Cryptocurrency Solutions',,
-  description: 'Secure blockchain development, smart contracts, and DeFi applications for the decentralized future.',;
+
       features: [;
         'Smart Contract Development',;
         'DeFi Applications & Protocols',;
@@ -318,8 +323,7 @@ const ServicesIndex: NextPage = () => {;
     },;
     {;
       id: 'iot-platforms',;
-      title: 'IoT Platforms & Connected Solutions',,
-  description: 'Connected device solutions, sensor networks, and real-time data processing for smart environments.',;
+
       features: [;
         'Device Management & Monitoring',;
         'Real-time Analytics & Dashboards',;
@@ -334,8 +338,7 @@ const ServicesIndex: NextPage = () => {;
     },;
     {;
       id: 'micro-saas',;
-      title: 'Micro SAAS Solutions',,
-  description: 'Custom micro SAAS platforms and automation tools designed to streamline business processes.',;
+
       features: [;
         'Workflow Automation Tools',;
         'Data Processing & Analytics',;
@@ -350,8 +353,7 @@ const ServicesIndex: NextPage = () => {;
     },;
     {;
       id: 'cybersecurity',;
-      title: 'Cybersecurity & Compliance',,
-  description: 'Comprehensive security solutions and compliance services to protect your digital assets.',;
+
       features: [;
         'Security Audits & Assessments',;
         'Penetration Testing',;
@@ -366,8 +368,7 @@ const ServicesIndex: NextPage = () => {;
     },;
     {;
       id: 'web-development',;
-      title: 'Web & Mobile Development',,
-  description: 'Modern web applications, mobile apps, and progressive web apps built with cutting-edge technologies.',;
+
       features: [;
         'React, Vue && Vue.js, Angular Development',;
         'Native & Cross-platform Mobile Apps',;
@@ -382,8 +383,7 @@ const ServicesIndex: NextPage = () => {;
     },;
     {;
       id: 'data-analytics',;
-      title: 'Data Analytics & Business Intelligence',,
-  description: 'Transform your data into actionable insights with advanced analytics and business intelligence solutions.',;
+
       features: [;
         'Data Warehousing & ETL',;
         'Business Intelligence Dashboards',;
@@ -397,36 +397,31 @@ const ServicesIndex: NextPage = () => {;
       link: '/services/data-analytics';
   const microSaasServices = [;
     {;
-      name: "AI-Powered Analytics Dashboard",,
-  description: "Real-time business intelligence with predictive analytics and automated reporting",;
+
       features: ["Custom dashboards", "Predictive modeling", "Automated alerts", "Multi-platform integration"],;
       pricing: "Starting at $299/month",;
       link: "/services/ai-analytics-dashboard";
     },;
     {;
-      name: "Smart Document Processor",,
-  description: "Automated document processing with OCR, classification, and data extraction",;
+
       features: ["OCR technology", "Document classification", "Data extraction", "API integration"],;
       pricing: "Starting at $199/month",;
       link: "/services/smart-document-processor";
     },;
     {;
-      name: "Customer Experience Optimizer",,
-  description: "AI-driven customer journey mapping and optimization platform",;
+
       features: ["Journey mapping", "Sentiment analysis", "A/B testing", "ROI tracking"],;
       pricing: "Starting at $399/month",;
       link: "/services/customer-experience-optimizer";
     },;
     {;
-      name: "Automated Social Media Manager",,
-  description: "AI-powered social media scheduling, content creation, and engagement tracking",;
+
       features: ["Content generation", "Optimal timing", "Engagement tracking", "Multi-platform support"],;
       pricing: "Starting at $149/month",;
       link: "/services/automated-social-media-manager";
     },;
     {;
-      name: "Intelligent Inventory Manager",,
-  description: "Smart inventory optimization with demand forecasting and automated reordering",;
+
       features: ["Demand forecasting", "Automated reordering", "Cost optimization", "Multi-location support"],;
       pricing: "Starting at $249/month",;
       link: "/services/intelligent-inventory-manager";
@@ -434,36 +429,31 @@ const ServicesIndex: NextPage = () => {;
   ];
   const itServices = [;
     {;
-      name: "Cloud Migration & Architecture",,
-  description: "Complete cloud transformation with AWS, Azure, and Google Cloud expertise",;
+
       features: ["Multi-cloud strategy", "Security implementation", "Cost optimization", "24/7 monitoring"],;
       pricing: "Starting at $5,000/project",;
       link: "/services/cloud-migration";
     },;
     {;
-      name: "Cybersecurity Solutions",,
-  description: "Comprehensive security assessment, implementation, and ongoing protection",;
+
       features: ["Security audits", "Penetration testing", "Compliance management", "Incident response"],;
       pricing: "Starting at $3,000/month",;
       link: "/services/cybersecurity-solutions";
     },;
     {;
-      name: "DevOps & CI/CD Implementation",,
-  description: "Automated deployment pipelines and infrastructure as code solutions",;
+
       features: ["CI/CD pipelines", "Infrastructure automation", "Monitoring setup", "Performance optimization"],;
       pricing: "Starting at $4,000/month",;
       link: "/services/devops-implementation";
     },;
     {;
-      name: "Database Design & Optimization",,
-  description: "High-performance database architecture and optimization services",;
+
       features: ["Database design", "Performance tuning", "Backup strategies", "Scalability planning"],;
       pricing: "Starting at $2,500/project",;
       link: "/services/database-optimization";
     },;
     {;
-      name: "API Development & Integration",,
-  description: "Custom API development and third-party system integration",;
+
       features: ["RESTful APIs", "GraphQL", "Microservices", "Documentation"],;
       pricing: "Starting at $3,500/project",;
       link: "/services/api-development";
@@ -471,94 +461,51 @@ const ServicesIndex: NextPage = () => {;
   ];
   const aiServices = [;
     {;
-      name: "Custom AI Model Development",,
-  description: "Tailored machine learning models for your specific business needs",;
+
       features: ["Custom model training", "Data preprocessing", "Model deployment", "Performance monitoring"],;
       pricing: "Starting at $8,000/project",;
       link: "/services/custom-ai-models";
     },;
     {;
-      name: "Natural Language Processing",,
-  description: "Advanced NLP solutions for text analysis, chatbots, and content generation",;
+
       features: ["Text analysis", "Chatbot development", "Content generation", "Sentiment analysis"],;
       pricing: "Starting at $4,500/project",;
       link: "/services/nlp-solutions";
     },;
     {;
-      name: "Computer Vision Solutions",,
-  description: "Image and video analysis with object detection and recognition capabilities",;
+
       features: ["Object detection", "Image classification", "Video analysis", "Real-time processing"],;
       pricing: "Starting at $6,000/project",;
       link: "/services/computer-vision";
     },;
     {;
-      name: "Predictive Analytics Platform",,
-  description: "Advanced forecasting and predictive modeling for business intelligence",;
+
       features: ["Time series forecasting", "Risk assessment", "Trend analysis", "Automated insights"],;
       pricing: "Starting at $5,500/month",;
       link: "/services/predictive-analytics";
     },;
     {;
-      name: "AI-Powered Automation",,
-  description: "Intelligent process automation to streamline business operations",;
+
       features: ["Process mapping", "Workflow automation", "Decision trees", "Integration capabilities"],;
       pricing: "Starting at $3,000/month",;
       link: "/services/ai-automation";
     }
   ];
+
 import { motion } from 'framer-motion';
 import { Brain, Network, Cloud, Shield, Zap, Target, Users, BarChart3, ArrowRight, CheckCircle, Star, Award, Clock, Globe } from 'lucide-react';
 
-const services = [
-  {
-    id: 'ai-development',
-    title: 'AI Development',
-    description: 'Custom AI solutions tailored to your business needs',
-    icon: Brain,
-    features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'],
-    pricing: 'Starting at $5,000/month',
-    icon: '🤖',
-    link: '/ai-services'
-  },
-  {
-    id: 'cloud-services',
-    title: 'Cloud Services',
-    description: 'Scalable cloud infrastructure and migration services',
-    icon: Cloud,
-    features: ['Cloud Migration', 'Infrastructure Setup', 'Auto-scaling', 'Cost Optimization'],
-    pricing: 'Starting at $2,000/month',
-    icon: '☁️',
-    link: '/services/cloud'
-  },
-  {
-    id: 'cybersecurity',
-    title: 'Cybersecurity',
-    description: 'Comprehensive security solutions to protect your business',
-    icon: Shield,
-    features: ['Threat Detection', 'Security Audits', 'Data Protection', 'Compliance'],
-    pricing: 'Starting at $1,500/month',
-    icon: '🔒',
-    link: '/services/cybersecurity'
-  },
-  {
-    id: 'data-analytics',
-    title: 'Data Analytics',
-    description: 'Transform data into actionable business insights',
-    icon: BarChart3,
-    features: ['Business Intelligence', 'Predictive Analytics', 'Data Visualization', 'Reporting'],
-    pricing: 'Starting at $1,800/month',
-    icon: '📊',
-    link: '/services/data-analytics'
-  }
-];
+interface IndexProps {
+  className?: string;
+}
 
 export default function ServicesIndex() {
   return (
     <>
       <Head>
-        <title>Services - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive technology services including AI development, cloud services, cybersecurity, and data analytics solutions." />
+
       </Head>
+
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
         <div className="container mx-auto px-4">
@@ -733,15 +680,56 @@ export default function ServicesIndex() {
                   {service.features.map((feature, idx) => (
                     <li key={idx} className="mb-1">• {feature}</li>
                   ))}
-                </ul>
-                <div className="flex justify-between items-center">
-                  <span className="text-lg font-semibold text-green-600">{service.pricing}</span>
-                  <Link href={service.link} className="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700 transition-colors">
+
+        {/* Hero Section */}
+        <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">;
+          <div className="max-w-7xl mx-auto px-4">;
+            <motion&& motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0 && 0.8 }}
+              className="text-center">;
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">Our Services</h1>;
+              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">;
+                Comprehensive technology solutions designed to transform your business ;
+                with AI, cloud services, cybersecurity, and data analytics.;
+              </p>;
+            </motion && motion.div>;
+          </div>;
+        </section>;
+        {/* Services Grid */}
+        <section className="py-16 px-4">;
+          <div className="max-w-7xl mx-auto">;
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
+              {services && services.map((service, index) => (;
+                <motion&& motion.div
+                  key={service && service.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
+                  className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6">;
+                  <div className="text-center mb-6">;
+                    <div className="text-4xl mb-4">{service && service.icon}</div>;
+                    <h3 className="text-xl font-semibold mb-2">{service && service.title}</h3>;
+                    <p className="text-gray-600 mb-4">{service && service.description}</p>;
+                    <div className="text-lg font-semibold text-blue-600 mb-4">{service && service.pricing}</div>;
+                  </div>;
+                  <div className="space-y-2 mb-6">;
+                    {service && service.features.map((feature, featureIndex) => (;
+                      <div key={featureIndex} className="flex items-center text-sm text-gray-600">;
+                        <CheckCircle className="w-4 h-4 text-green-500 mr-2" />;
+                        {feature}
+                      </div>;
+                    ))}
+                  </div>;
+                  <Link
+
                     Learn More
                   </Link>
                 </div>
               </div>
             ))}
+
           </div>
         </section>
         {/* AI Services */}
@@ -822,6 +810,7 @@ export default function ServicesIndex() {
         </section>
 
         {/* CTA Section */}
+
         <section className="py-20 bg-blue-600">
           <div className="max-w-7xl mx-auto px-4 text-center">
             <motion.div
@@ -851,6 +840,7 @@ export default function ServicesIndex() {
                 </Link>
               </div>
             </motion.div>
+
           </div>
         </section>
       </main>
@@ -1024,12 +1014,9 @@ pr-12325
 
             <Link href="/about" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">"
 
-            
         </section>
       </main>
     </div>
   )
 };
 export default ServicesIndex;
-      </main>
-pr-12325

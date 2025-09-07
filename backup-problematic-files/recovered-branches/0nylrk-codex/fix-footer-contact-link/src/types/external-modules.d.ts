@@ -331,5 +331,3 @@ declare module 'react-redux';
 declare module 'semver';
 declare module 'ws';
 declare module 'recharts';
-declare module 'next-themes';
-declare module 'tailwind-merge';

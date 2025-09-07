@@ -1,4 +1,3 @@
-
 import { useAuth } from './useAuth';
 import { getAccessibleRoutes } from '@/config/sitemap';
 import type { SitemapItem } from '@/config/sitemap';
@@ -33,6 +32,7 @@ export function useSitemap() {;
       if (!user || !user.userType) return false;
       const userTypeEnum = isValidUserType(user.userType) ? user.userType as UserType :undefined;
       return userTypeEnum ? route.requiredRoles.includes(userTypeEnum) :false;
+
     }
     ;
     return true;

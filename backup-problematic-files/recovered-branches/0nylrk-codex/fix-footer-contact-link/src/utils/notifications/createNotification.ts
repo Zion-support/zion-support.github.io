@@ -1,4 +1,3 @@
-
 import { supabase } from "@/integrations/supabase/client";
 import { CreateNotificationParams, CreateNotificationResult } from './types';
 ;
@@ -43,4 +42,5 @@ export async function createNotification({;
     return { success:false, error };
   } // If sendEmail is true, call the edge function to send an email 
 }
+
 }

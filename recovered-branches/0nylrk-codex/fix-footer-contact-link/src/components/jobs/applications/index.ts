@@ -11,7 +11,6 @@ export { ApplicationCard } from "./ApplicationCard";
 export { ApplicationProgress } from "./ApplicationProgress";
 export { ApplicationRow } from "./ApplicationRow";
 
-
 pr-12325
 export { ApplicationsTracker } from './ApplicationsTracker',;
 export { ApplicationsTable } from './ApplicationsTable',;
@@ -25,6 +24,3 @@ export { ApplicationActions } from './ApplicationActions',;
 export { ApplicationCard } from './ApplicationCard',;
 export { ApplicationProgress } from './ApplicationProgress',;
 export { ApplicationRow } from './ApplicationRow';
-
-export { ApplicationRow } from './ApplicationRow';
-pr-12325

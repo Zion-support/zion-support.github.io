@@ -169,19 +169,39 @@ export default function Comprehensive2025InnovativeServicesShowcase() {;
                 <div className="text-3xl font-bold text-green-400 mb-2 group-hover:text-green-300 transition-colors"></div>;""
                 <div className="text-gray-300 text-sm">Future Possibilities</div>;"
               </div>;
-      </section>;"
-      <section className="py-20 px-4 bg-black/30 relative">;"
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5"></div>;""
-        <div className="max-w-7xl mx-auto relative z-10">;"
-            whileInView={{ opacity: 1;, y: 0 ;}}
-            transition={{ duration: 0.8 ;}}
-            viewport={{ once: true ;}}"
-            className="text-center mb-16";"
-            <h2 className="text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">;"
-</h2>
-            </h2>;"
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto">;"
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;"
+
+                <div className="text-gray-300 text-sm">Future Possibilities</div>;
+              </div>;
+            </motion.div>;
+          </motion.div>;
+        </div>;
+      </section>;
+;
+      {/* Services Categories */}
+      <section className="py-20 px-4 bg-black/30 relative">;
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5"></div>;
+        <div className="max-w-7xl mx-auto relative z-10">;
+          <motion.div;
+            initial={{ opacity:0, y:20 }}
+            whileInView={{ opacity:1, y:0 }}
+            transition={{ duration:0.8 }}
+            viewport={{ once:true }}
+            className="text-center mb-16";
+          >;
+            <h2 className="text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">;
+              Service Categories;
+            </h2>;
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto">;
+              Explore our comprehensive range of innovative services across cutting-edge technology domains;
+            </p>;
+          </motion.div>;
+          ;
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
+            {categories.map((category, index) => {;
+              const IconComponent = category.icon,;
+              return (;
+                <motion.div;
+
                   key={category.name}
                   transition={{ duration: 0.6;, delay: index * 0.1 ;}}
                   className="group relative";"
@@ -275,4 +295,3 @@ export default function Comprehensive2025InnovativeServicesShowcase() {;
               <p>Address: 364 E Main St STE 1008;, Middletown DE 19709</p>;"
               <p>Website:<a href="https://ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300">https://ziontechgroup.com</a></p>;"
       </section>;
-    ;"`;

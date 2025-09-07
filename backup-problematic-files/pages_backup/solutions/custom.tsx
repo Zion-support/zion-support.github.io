@@ -3,9 +3,10 @@ import Link from 'next/link';
 import Layout from '../../components/Layout';
 import { Settings, Code, Zap, Users } from 'lucide-react';
 import React from 'react';
+
 import Link from 'next/link';';
 import { Settings, Code, Zap, Users, ArrowRight, CheckCircle, Clock, Target, Wrench } from 'lucide-react';
-import Layout from "../../components/Layout";";"
+
 const Custom: React.FC<CustomProps> = ({ className }) => {
 "
     <div className={className || }>
@@ -15,6 +16,3 @@ const Custom: React.FC<CustomProps> = ({ className }) => {
     </div>
   )
 };
-
-      <p>This component is under development.</p>
-pr-12325

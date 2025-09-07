@@ -1,4 +1,3 @@
-import React from 'react';'
 const AIAutonomousReasoning = ({ className }) => {
   return ('
     <div className={className || ''}>'
@@ -8,6 +7,3 @@ const AIAutonomousReasoning = ({ className }) => {
     </div>
   )
 };
-
-    </div>)'
-pr-12325

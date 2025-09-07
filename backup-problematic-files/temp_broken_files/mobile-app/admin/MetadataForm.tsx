@@ -1,13 +1,14 @@
+import React from "react",;
+import { UseFormReturn } from "react-hook-form",;
+import { AppMetadataValues } from "./MetadataManager",;
+import { Input } from "@/components/ui/input",;
+import { Textarea } from "@/components/ui/textarea",;
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",;
+import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form",;
+import { Badge } from "@/components/ui/badge",;
 
-import React from "react";""
-import { UseFormReturn } from "react-hook-form";""
-import { AppMetadataValues } from "./MetadataManager";""
-import { Input } from "@/components/ui/input";""
-import { Textarea } from "@/components/ui/textarea";""
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";""
-import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";""
-import { Badge } from "@/components/ui/badge";""
 import { X } from 'lucide-react';
+
 ;
 interface MetadataFormProps {;
   form:UseFormReturn<AppMetadataValues>;
@@ -16,7 +17,7 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form ;}) => {;
 
   const addKeyword = (e:React.KeyboardEvent<HTMLInputElement>) => {;
 
-    <Card className="bg-zion-blue border-zion-purple/30">;"
+    <Card className="bg-zion-blue border-zion-purple/30">;
 
       <CardHeader>;
 
@@ -24,9 +25,7 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form ;}) => {;
       <CardContent>;
 
         <Form {...form}>;
-"
-          <div className="space-y-4">;"
-</div>
+
             <FormField;
               control={control}"
               name="appTitle";"
@@ -37,35 +36,60 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form ;}) => {;
                   <FormLabel>App Title;
                   <FormControl>;
 
-                    <Input ;"
-                      placeholder="Enter app title";""
-                      maxLength={platform === "ios" ? 30 :50}"
                       {...field}
                     />;
 
                   <FormDescription>;
 
-                  ;)
-                ;              )}
-              name="shortDescription";"
+                    Max {platform === "ios" ? "30" :"50"} characters;
+                  </FormDescription>;
+                </FormItem>;              )}
+            />;
+            ;
+            <FormField;
+              control={control}
+              name="shortDescription";
+              render={({ field } { field:any }) => (;
+                <FormItem>;
+                  <FormLabel>Short Description</FormLabel>;
+                  <FormControl>;
+                    <Input ;
+                      placeholder="Brief description of your app";
+                      maxLength={platform === "ios" ? 170 :80}
 
+                      {...field}
+                    />;
+                  </FormControl>;
+                  <FormDescription>;
 
-                  <FormLabel>Short Description;
+                    Max {platform === "ios" ? "170" :"80"} characters;
+                  </FormDescription>;
+                </FormItem>;              )}
+            />;
+            ;
+            <FormField;
+              control={control}
+              name="longDescription";
+              render={({ field } { field:any }) => (;
+                <FormItem>;
+                  <FormLabel>Long Description</FormLabel>;
+                  <FormControl>;
+                    <Textarea ;
+                      placeholder="Detailed description of your app";
+                      className="min-h-32";
 
-                      placeholder="Brief description of your app";""
-                      maxLength={platform === "ios" ? 170 :80}"
-
-
-              name="longDescription";"
-
-
-                  <FormLabel>Long Description;
-
-                    <Textarea ;"
-                      placeholder="Detailed description of your app";""
-                      className="min-h-32";"
                       maxLength={maxDescriptionLength}
+                      {...field}
+                    />;
+                  </FormControl>;
+                  <FormDescription>;
 
+                    {longDescription.length}/{maxDescriptionLength} characters;
+                  </FormDescription>;
+                </FormItem>;
+              )}
+            />;
+            ;
 
             <div>;
 </div>"
@@ -80,29 +104,47 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form ;}) => {;
                     <button;"
                       type="button";"
                       onClick={() => removeKeyword(keyword)}
-</button>"
-                      <X className="h-3 w-3" />;"
 
+                    >;
+                      <X className="h-3 w-3" />;
                     </button>;
-              </div>;"
-              <FormDescription className="mt-2">;"
+                  </Badge>;
+                ))}
+              </div>;
+              <FormDescription className="mt-2">;
 
+                Add keywords to improve discoverability (max 100 characters total);
+              </FormDescription>;
             </div>;
-              name="version";"
+            ;
+            <FormField;
+              control={control}
+              name="version";
+              render={({ field } { field:any }) => (;
+                <FormItem>;
+                  <FormLabel>App Version</FormLabel>;
+                  <FormControl>;
+                    <Input ;
+                      placeholder="e.g., 1.0.0";
+                      {...field}
+                    />;
+                  </FormControl>;
+                </FormItem>;
+              )}
 
+            />;
+          </div>;
+        </Form>;
+      </CardContent>;
 
-                  <FormLabel>App Version;
-
-                      placeholder="e.g., 1.0.0";"
+    </Card>;
+  ),;
+},; import {;
+  {;
+  {;
+  X ;
+}from 'lucide-react' interface MetadataFormProps {;
 
   form: UseFormReturn<AppMetadataValues> ;
 
 }export const MetadataForm: React.FC<MetadataFormProps> = ({;
-)
-}/> <FormField <FormItem> <FormLabel>Short Description <FormControl> <Input  ) ;
-
-}/> <FormField <FormItem> <FormLabel>Long Description <FormControl> <Textarea />  <FormDescription> {;
-
-}characters  ) ;"
-}/> <div> <FormLabel htmlFor="keywords" >Keywords <Input className="mb-2" /> <div className="flex flex-wrap gap-2 mt-2"> > <X className="h-3 w-3" /> </button> ) ) ";"}</div> <FormDescription className="mt-2" > Add keywords to improve discoverability (max 100 characters total)  </div> <FormField <FormItem> <FormLabel>App Version <FormControl> <Input />  ) ;"
-}/> </div>   ) ;"

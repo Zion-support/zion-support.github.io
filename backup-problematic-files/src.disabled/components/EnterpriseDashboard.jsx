@@ -1,4 +1,3 @@
-import React from 'react';'
 const EnterpriseDashboard = ({ className }) => {
   return ('
     <div className={className || ''}>'
@@ -8,6 +7,3 @@ const EnterpriseDashboard = ({ className }) => {
     </div>
   )
 };
-
-    </div>)'
-pr-12325

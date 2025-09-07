@@ -1,5 +1,9 @@
 import { supabase } from "@/integrations/supabase/client";
 import { CreateNotificationParams, CreateNotificationResult } from './types';
+
+import {supabase} from "@/integrations/supabase/client";
+import {CreateNotificationParams, CreateNotificationResult} from './types';
+
 import {supabase} from "@/integrations/supabase/client";
 import {CreateNotificationParams, CreateNotificationResult} from './types';
 /**
@@ -23,75 +27,114 @@ import { CreateNotificationParams, CreateNotificationResult } from './types',
 import { supabase } from "@/integrations/supabase/client",
 import { CreateNotificationParams, CreateNotificationResult } from './types',
 
-
-/**
- * Creates a notification for a user and optionally sends an email notification
- */
-export async function createNotification({
-
-
-import {supabase} from "@/integrations/supabase/client";""
-import {CreateNotificationParams, CreateNotificationResult} from './types';
 /**
  * Creates a notification for a user and optionally sends an email notification;
  */
 export async function createNotification({;
-pr-12325
   userId;
   title;
   message;
   type;
-
   relatedId = null;
   sendEmail = false;
   actionUrl = null;
+
+/**
+ * Creates a notification for a user and optionally sends an email notification;
+ */
+
+  actionText = null
+}: CreateNotificationParams): Promise<CreateNotificationResult> {
+  void actionUrl;
+  void actionText;
+  try {
+    // Call the create_notification database function
+
+    const { data, error } = await supabase.rpc('create_notification', {
+
   actionText = null
 }: CreateNotificationParams): Promise<CreateNotificationResult> {
   void actionUrl,
   void actionText,
   try {
     // Call the create_notification database function
-  relatedId = null;
-  sendEmail = false;
-  actionUrl = null;
 
+      _user_id: userId,
+      _title: title,
+      _message: message,
+      _type: type,
+      _related_id: relatedId
+    }),
+    
+    if (error) throw error,
 
-/**
-export async function createNotification({
+    // If sendEmail is true, call the edge function to send an email
+    if (sendEmail && data) {
+      const notificationId = data,
+      await supabase.functions.invoke('send-notification-email', {
 
+import { supabase } from "@/integrations/supabase/client",;
 
+import { CreateNotificationParams, CreateNotificationResult } from './types',;
+/**;
+ * Creates a notification for a user and optionally sends an email notification;
+ */;
+export async function createNotification({;
+  userId,;
+  title,;
+  message,;
+  type,;
+  relatedId = null,;
+  sendEmail = false,;
+  actionUrl = null,;
+  actionText = null;
+}: CreateNotificationParams): Promise<CreateNotificationResult> {;
+  void actionUrl,;
+  void actionText,;
+  try {;
+    // Call the create_notification database function;'
+    const { data, error } = await supabase.rpc('create_notification', {;
+      _user_id: userId,;
+      _title: title,;
+      _message: message,;
+      _type: type,;
+      _related_id: relatedId;
+    }),;
+    if (error) throw error,;
+    // If sendEmail is true, call the edge function to send an email;
+    if (sendEmail && data) {;
+      const notificationId = data;'
+      await supabase.functions.invoke('send-notification-email', {;
 
-pr-12325
-  userId,
-  userId;
+        body: { user_id: userId, notification_id: notificationId }
+      })
+    }
+    return { success: true, notificationId: data }
+
+  } catch (error) {;
+
+import {CreateNotificationParams, CreateNotificationResult} from './types';
+/**;
+* Creates a notification for a user and optionally sends an email notification;
+*/;
+
+  user_id;
   title;
   message;
   type;
-  relatedId = null;
-  sendEmail = false;
-  actionUrl = null;
+  related_id = null;
+  send_email = false;
+  action_url = null;
+  action_text = null;
 
-
-/**
- * Creates a notification for a user and optionally sends an email notification;
-
- */
-export async function createNotification({
-  userId;
-  title;
-  message;
-
-}
-    // Call the create_notification database function;
-    const { data, error } = await supabase.rpc ('create_notification', {
-      _user_id: user_id;,
-  _title: title;
-      _message: message;,
-  _type: type,
-      _related_id: related_id;)
+      _user_id: user_id;
+      _title: title;
+      _message: message;
+      _type: type,
+      _related_id: related_id;
     });
 ;
-    // Check condition;
+
 if (throw error) {
   $2;
     // If send_email is true, call the edge function to send an email;
@@ -99,9 +142,9 @@ if (throw error) {
 if ( {) {
       const notification_id = data;
       await supabase.functions.invoke ('send - notification - email', {
-        body: { user_id: user_id, notification_id: notification_id })
+
     return { success: true, notification_id: data }
-  } catch (error) {
+
     console.error ('Error creating notification:', error);
     return { success: false, error }
   }
@@ -117,10 +160,3 @@ if ( {) {
 }
 }
 ;
-
-
-
-
-pr-12325
-'
-

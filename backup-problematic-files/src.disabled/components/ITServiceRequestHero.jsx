@@ -1,4 +1,3 @@
-import React from 'react';'
 const ITServiceRequestHero = ({ className }) => {
   return ('
     <div className={className || ''}>'

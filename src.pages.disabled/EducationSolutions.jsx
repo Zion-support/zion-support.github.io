@@ -44,14 +44,22 @@ export default function EducationSolutions({ }: EducationSolutionsProps) {
 :src.pages.disabled/EducationSolutions.jsx
 }
 }
+ursor/add-new-services-and-deploy-updates-0462
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+:src.pages.disabled/EducationSolutions.jsx
 }
 }
 }
-:temp_exclude/src.pages.disabled/EducationSolutions.jsx
-:temp_exclude/src.pages.disabled/EducationSolutions.jsx
-    <div>
-</div>
-      <h1>EducationSolutions</h1>
-      <p>This component is currently under development.</p>
-    </div>'
-pr-12325
+}
+}
+
+}
+
+:src.pages.disabled/EducationSolutions.jsx
+}
+}
+}
+}
+}

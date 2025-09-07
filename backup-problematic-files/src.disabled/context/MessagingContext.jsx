@@ -1,4 +1,3 @@
-import React from 'react';'
 const MessagingContext = ({ className }) => {
   return ('
     <div className={className || ''}>'

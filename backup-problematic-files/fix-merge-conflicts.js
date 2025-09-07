@@ -1,18 +1,11 @@
-
-;
-  };
-  traverse(dir),;
+traverse(dir),;
   return files};
 // Find and fix files with merge conflicts,;
 const conflictedFiles = findFilesWithConflicts('.'),;
-console.log(`Found ${conflictedFiles.length} files with merge conflicts`),;
-for (const file of conflictedFiles) {,;
-  fixMergeConflicts(file)};
-console.log('Merge conflict resolution complete!'),;
-;  };
+
   traverse(dir),
 // Find and fix files with merge conflicts,
-const conflictedFiles = findFilesWithConflicts('.'),`;
+
 console.log(`Found ${conflictedFiles.length} files with merge conflicts`),
 for (const file of conflictedFiles) {,
 console.log('Merge conflict resolution complete!'),
@@ -28,4 +21,3 @@ console.log('\nMerge conflict fixing complete!'),
 ,`;
 console.log(`Fixed merge conflicts in ${fixedCount} files`),
 ,),
-`;

@@ -39,6 +39,7 @@ import {
   Smartphone;
 } from 'lucide-react';
 import PageTransition from '../src/components/PageTransition';
+
 	const description = 'AI autonomous systems, cloud platforms, cybersecurity, and micro SaaS delivery.';
 	return (
 		<Layout>;
@@ -121,7 +122,6 @@ import PageTransition from '../src/components/PageTransition';
 									className='inline-flex items-center text-sm font-semibold text-green-600 hover:text-green-500 transition-colors group
 									aria-label='Get started with cloud services'>;
 
-
 						<div id='cybersecurity' className='group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover:shadow-lg transition-all duration-300 hover:border-purple-300'>;
 								<div className='flex h-12 w-12 items-center justify-center rounded-lg bg-purple-600 group-hover:bg-purple-700 transition-colors'>;
 									<Shield className='h-7 w-7 text-white' />;
@@ -142,7 +142,6 @@ import PageTransition from '../src/components/PageTransition';
 									className='inline-flex items-center text-sm font-semibold text-purple-600 hover:text-purple-500 transition-colors group
 									aria-label='Get started with cybersecurity services'>;
 
-
 						<div id='saas' className='group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover:shadow-lg transition-all duration-300 hover:border-orange-300'>;
 								<div className='flex h-12 w-12 items-center justify-center rounded-lg bg-orange-600 group-hover:bg-orange-700 transition-colors'>;
 									<Code className='h-7 w-7 text-white' />;
@@ -162,7 +161,6 @@ import PageTransition from '../src/components/PageTransition';
 									<span>6-12 weeks delivery</span>;
 									className='inline-flex items-center text-sm font-semibold text-orange-600 hover:text-orange-500 transition-colors group
 									aria-label='Get started with custom software services'>;
-
 
 			<section className='py-16 sm:py-24 bg-white'>;
 					<div className='mx-auto max-w-4xl text-center mb-14'>;
@@ -191,6 +189,9 @@ import PageTransition from '../src/components/PageTransition';
 						<p className='mt-6 text-sm text-gray-500'>;
 							<Link href='/pricing' className='text-blue-600 hover:text-blue-500 underline'>Enterprise Pricing Guide.;
 					<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>;
+
+						Need something custom? Visit our website at{' '}
+
 						<a href='https://ziontechgroup && ziontechgroup.com' className='text-blue-600 hover:text-blue-500 underline' target='_blank' rel='noreferrer'>ziontechgroup && ziontechgroup.com</a>{' '}
 						<a href='mailto:kleber@ziontechgroup && ziontechgroup.com' className='text-blue-600 hover:text-blue-500'>kleber@ziontechgroup && ziontechgroup.com</a>{' '}
 						<a href='tel:+13024640950' className='text-blue-600 hover:text-blue-500'>+1 302 464 0950</a>{' '}
@@ -198,8 +199,8 @@ import PageTransition from '../src/components/PageTransition';
 					<div className='mx-auto max-w-3xl text-center mb-16'>;
 						<h2 className='text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl'>Innovative AI & Automation Services</h2>;
 							Visit <a href='https://ziontechgroup && ziontechgroup.com' className='text-blue-600 hover:text-blue-500 underline' target='_blank' rel='noreferrer'>ziontechgroup && ziontechgroup.com</a> for live demos.;
-								href='https://ziontechgroup && ziontechgroup.com
-								target='_blank
-								rel='noreferrer
-							
-)
+
+							<Link
+								href='https://ziontechgroup && ziontechgroup.com'
+								target='_blank'
+								rel='noreferrer'

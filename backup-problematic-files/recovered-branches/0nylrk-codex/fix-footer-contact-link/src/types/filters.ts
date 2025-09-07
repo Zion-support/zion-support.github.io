@@ -1,4 +1,3 @@
-
 export interface FilterSidebarProps {;
   searchTerm:string;
   setSearchTerm:(term:string) => void;
@@ -64,4 +63,4 @@ export interface SearchFilterProps {;
 export interface SortFilterProps {;
   sortOption:string;
   setSortOption:(option:string) => void;
-} 
+}

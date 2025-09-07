@@ -1,4 +1,3 @@
-
 import React from 'react',
 import Head from 'next/head',
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground',
@@ -47,6 +46,7 @@ const service = useMemo(() => {
         augmentedServicesBatch3 as any
         real2025Q3Additions as any
         realQ4Services2025 as any,        require('../data/real-2025-q4-additions-batch2').real2025Q4AdditionsBatch2 as any
+
         enhancedRealMicroSaasServices as any,
         extraServices as any,
         additionalEnhancedServices as any,
@@ -97,55 +97,45 @@ const service = useMemo(() => {
         real2025Q3Additions as any,
         realQ4Services2025 as any,
         require('../data/real-2025-q4-additions-batch2').real2025Q4AdditionsBatch2 as any
-origin/cursor/automate-test-improve-and-merge-code-2533
+
       );
     const byLink = all.find(s => {
       try {
         const url = new URL(s.link);
-        return url.pathname.replace(/^\/+|\/+$/g, '') === slug.replace(/^\/+|\/+$/g, '');
-      } catch {
 
 return url.pathname.replace(/^\/+|\/+$/g, '') === slug.replace(/^\/+|\/+$/g, '');
       } catch {
 
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
+
     super(props);
     this.state = { hasError: false };
   }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
+
       return <div>Something went wrong.</div>;
     }
     return this.props.children;
   }
-}
-import React, { useMemo } from 'react';
-import Head from 'next / head';
+}'
+import React, { useMemo } from 'react';'
+import Head from 'next / head';'
 import {GetStaticPaths, GetStaticProps} from 'next';
 
         return false;
       }
     });
-    // Check condition
-if (return by_link) {
-  $2
+    // Check condition;
+if (return by_link) {}
+  $2;
 }
-  }, [slug]);
-import React, { useMemo } from 'react';
+  }, [slug]);'
+import React, { useMemo } from 'react';'
 import Head from 'next/head';
 
-type Service = typeof enhancedRealMicroSaasServices[number];
+function getAllServices(): Service[] {}
+  return enhancedRealMicroSaasServices;
 
-function getAllServices(): Service[] {
-  return enhancedRealMicroSaasServices
     .concat(extraServices as Service[], additionalEnhancedServices as Service[])
     .concat(newlyAddedServices as unknown as Service[])
     .concat(curatedMarketServices as Service[])
@@ -162,10 +152,6 @@ function getAllServices(): any (): Service[] {;
 		.concat(verified2025Additions as unknown as Service[]);
 		.concat(realServicesQ12025 as unknown as Service[]);
 		.concat(realEnterpriseServices2025 as unknown as Service[]);
-    if (byLink) return byLink;
-  }, [slug]);
-import React, { useMemo } from 'react';
-import Head from 'next/head';
 
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import Button from '../components/ui/Button';
@@ -185,21 +171,26 @@ import fs from 'fs';
 import path from 'path';
 
 type Service = typeof enhancedRealMicroSaasServices[number];
+
 function getAllServices(): Service[] {
   return enhancedRealMicroSaasServices
+
     .concat(extraServices as Service[], additionalEnhancedServices as Service[])
     .concat(newlyAddedServices as unknown as Service[])
     .concat(curatedMarketServices as Service[])
     .concat(new2025Services as unknown as Service[])
 		.concat(marketValidatedServices as unknown as Service[]);
+
 		.concat(moreRealServices2025 as unknown as Service[]);
 		.concat(verified2025Additions as unknown as Service[]);
 		.concat(realServicesQ12025 as unknown as Service[]);
 		.concat(realEnterpriseServices2025 as unknown as Service[]);
+
 		.concat(moreRealServices2025 as unknown as Service[])
 		.concat(verified2025Additions as unknown as Service[])
 		.concat(realServicesQ12025 as unknown as Service[])
 		.concat(realEnterpriseServices2025 as unknown as Service[])
+
 		.concat(verifiedRealServices2025Batch2 as unknown as Service[]);
 		.concat(realMarketAugmentations2025 as unknown as Service[]);
 		.concat(additionalLiveServices2025 as unknown as Service[]);
@@ -209,307 +200,57 @@ function getAllServices(): Service[] {
 		.concat(realServicesQ32025 as unknown as Service[]);
 		.concat(realQ4Services2025 as unknown as Service[]);
 		.concat(real2025Q4Additions as unknown as Service[]);
-		.concat(realMarketServicesExtended as unknown as Service[]);
-		.concat(real2026Q1Additions as unknown as Service[]);
-
 
 	const services = getAllServices(),
 	const slugs = new Set<string>(),
 	 })),;
 
-
 		fallback: false;
 	}
-export async function getStaticProps() {
-	const services = getAllServices()
-	const incomingSlug = (params?.slug |'').replace(/^\/+|\/+$/g, '')
+export async function getStaticProps() {}
+	const services = getAllServices()'
+	const incomingSlug = (params?.slug |'').replace(/^\/+|\/+$/g, '')'
 	let service: Service | undefined = services.find((s) => toSlug(s.id |'') === incomingSlug |toSlug(s.name |'') === incomingSlug)
 	if (!service) {return { notFound: true }
-	}
-	return {props: { service }
-	}
-
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-function toSlug(value: string): string {
-	return value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-function getExistingRootPageSlugs(): Set<string> {
-	const pagesDir = path.join(process.cwd(), 'pages');
-	const entries = fs.readdirSync(pagesDir, { withFileTypes: true });
-	const reserved = new Set<string>(['apireports', 'services']);
-	const slugs = new Set<string>();
-	for (const entry of entries) {
-		if (entry.name.startsWith('_')) continue;
-		if (reserved.has(entry.name)) continue;
-		// Files at root
-		if (entry.isFile()) {
-			const m = entry.name.match(/^(.*)\.(tsx|ts|jsx|js)$/);
-			if (m) {
-				const base = m[1];
-				if (base !== 'index' && base !== '404' && base !== '500' && base !== '[slug]') {
-					slugs.add(base);
-				  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-			  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-		  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-		// Directories at root (folder routes)
-		if (entry.isDirectory()) {
-			slugs.add(entry.name);
-		  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-	  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-	return slugs;
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-export async function getStaticPaths(req, res) {
-  try {
-	const services = getAllServices();
-	const slugs = new Set<string>();
-	for (const s of services) {
-		if (s.id) slugs.add(toSlug(s.id));
-		else if (s.name) slugs.add(toSlug(s.name));
-	  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-	const existing = getExistingRootPageSlugs();
-	const filtered = Array.from(slugs).filter((slug) => !existing.has(slug));
-	return {
-		paths: filtered.map((slug) => ({ params: { slug } })),
-		fallback: false
-	};
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-export async function getStaticProps(req, res) {
-  try {
-	const services = getAllServices();
-	const incomingSlug = (params?.slug || '').replace(/^\/+|\/+$/g, '');
-	let service: Service | undefined = services.find((s) => toSlug(s.id || '') === incomingSlug || toSlug(s.name || '') === incomingSlug);
-	if (!service) {
-		return { notFound: true };
-	  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-	return {
-		props: { service   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-	};
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-export default function RootServiceDetailPage({ service }: { service: Service }) {
-	const canonical = `https://ziontechgroup.com/${toSlug(service.id || service.name || '')}`;
-	return (
-
-function toSlug(): any (value: string): string {;
-	return value && value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
-function getExistingRootPageSlugs(): any (): Set<string> {;
-	const pagesDir = path && path.join(process && process.cwd(), 'pages'),;
-	const entries = fs && fs.readdirSync(pagesDir, { withFileTypes: true }),;
-	const reserved = new Set<string>(['apireportsservices']),;
-	const slugs = new Set<string>(),;
-		}
-		// Directories at root (folder routes);
-		if (entry && entry.isDirectory()) {;
-			slugs && slugs.add(entry && entry.name);
-	}
-	return slugs;
-export async function getStaticPaths() {;
-	const services = getAllServices(),;
-	const slugs = new Set<string>(),;
-	 })),;
-		fallback: false;
-	}
-export async function getStaticProps(): any ({ params }: { params: { slug: string } }) {;
-	const services = getAllServices(),;
-	const incomingSlug = (params?.slug || '').replace(/^\/+|\/+$/g, ''),;
-	let service: Service | undefined = services && services.find((s) => toSlug(s && s.id || '') === incomingSlug || toSlug(s && s.name || '') === incomingSlug),;
-	if (!service) {;
-		return { notFound: true }
-	}
-	return {props: { service }
-	}
-
 
 ;
 export default function RootServiceDetailPage({ service }: { service: Service }) {;
 	const canonical = `https://ziontechgroup.com/${toSlug(service.id || service.name || '')}`,
 	return (
-origin/cursor/automate-test-improve-and-merge-code-2533
+
 		<UltraFuturisticBackground variant="quantum" intensity="high">
 			<Head>
-				<title>{service.name} | Zion Tech Group</title>
-				<meta name="description" content={service.tagline |service.description} />
+				<title>{service.name} | Zion Tech Group</title>"
+				<meta name="description" content={service.tagline |service.description} />"
 				<link rel="canonical" href={canonical} />
 
-
-export default function RootServiceDetailPage(): any ({ service }: { service: Service }) {;
-	const canonical = `https://ziontechgroup && ziontechgroup.com/${toSlug(service && service.id || service && service.name || '')}`,	return (
+;
+export default function RootServiceDetailPage(): any ({ service }: { service: Service }) {;'
+	const canonical = `https://ziontechgroup && ziontechgroup.com/${toSlug(service && service.id || service && service.name || '')}`,	return ("
 		<UltraFuturisticBackground variant="quantum" intensity="high">;
 			<Head>;
-				<title>{service && service.name} | Zion Tech Group</title>;
-				<meta name="description" content={service && service.tagline || service && service.description} />;
+				<title>{service && service.name} | Zion Tech Group</title>;"
+				<meta name="description" content={service && service.tagline || service && service.description} />;"
 				<link rel="canonical" href={canonical} />;
 
 				<script
+
 					type="application/ld+json"
-					dangerouslySetInnerHTML={{
+					dangerouslySetInnerHTML={{}
 						__html: JSON && JSON.stringify(
-							{
+
 								},
 								offers: {
 									"@type": "Offer",
 									price: (service.price || '').replace(/[^0-9.]/g, ''),
 									priceCurrency: "USD",
 									availability: "https://schema.org/InStock"
+
 								}
 								offers: {
 									"@type": "Offer"
 									price: (service.price |'').replace(/[^0-9.]/g, ''),									priceCurrency: "USD"
+
 "@context": "https://schema.org",
 								"@type": "Service",
 								name: service.name,
@@ -525,19 +266,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 									"@type": "Offer",
 									price: (service.price || '').replace(/[^0-9.]/g, ''),
 									priceCurrency: "USD",
+
 									availability: "https://schema.org/InStock"
 								}
 							}
 							null;
-							2;
-							);}
-				/>;			</Head>
+
 2;
 							);}
-				/>;			</Head>
+
 				/>;
 			</Head>
-
 
 			<div className="container mx-auto px-4 py-16">
 				<div className="text-center mb-10">
@@ -554,7 +293,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 							<p className="text-gray-300 leading-relaxed">{service.description}</p>
 						</Card>
 
-origin/cursor/automate-test-improve-and-merge-code-2533
           {/* Service Details */}
           <div className="grid md:grid-cols-2 gap-12 mb-16">
             <Card className="p-8">
@@ -666,7 +404,30 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 										<Check className="w-4 h-4 mt-0.5 text-emerald-400" />
 										<span>{f}</span>
 									</li>
+
 								))}
+
+								))  } catch (error) {
+    console.error("Error:", error);
+
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+							</ul>
+						</Card>
+						<Card className="p-6 bg-black/40 border border-gray-700/50">
+							<h3 className="text-white text-lg font-semibold mb-4">Integrations</h3>
+							<div className="flex flex-wrap gap-2">
+
 								))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -680,11 +441,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-							</ul>
-						</Card>
-						<Card className="p-6 bg-black/40 border border-gray-700/50">
-							<h3 className="text-white text-lg font-semibold mb-4">Integrations</h3>
-							<div className="flex flex-wrap gap-2">
 
 								{(service.integrations || []).slice(0, 12).map((i: string) => (
 									<span key={i} className="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-gray-200">{i}</span>
@@ -702,21 +458,23 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 								</a>
 
-								</a>
-
 								<a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200">
 									<Mail className="w-4 h-4" /> kleber@ziontechgroup.com
 								</a>
+								<div className="flex items-start gap-2 text-gray-300">
+
 </Link>
 								<a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200">
 									<Mail className="w-4 h-4" /> kleber@ziontechgroup.com
 								</Link>
 origin/cursor/automate-test-improve-and-merge-code-2533
 								<div className="flex items-start gap-2 text-gray-300">
+
 									<MapPin className="w-4 h-4 mt-1" /> 364 E Main St STE 1008 Middletown DE 19709
+
 								</div>
-							</div>
-							<div className="mt-6">
+							</div>"
+							<div className="mt-6">"
 								<Button href="/contact" className="w-full">Talk to Sales</Button>
 							</div>
 						</Card>
@@ -724,10 +482,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 						<Card className="p-6 bg-black/40 border border-gray-700/50">
 							<h3 className="text-white text-lg font-semibold mb-3">Learn More</h3>
 
-							<a href={service.link || canonical} className="inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200">
-
-							<a href={service.link |canonical} className="inline-flex items-center gap-2 text-cyan-300 hover: text-cyan-200">
-origin/cursor/automate-test-improve-and-merge-code-2533
 								Open canonical page <ExternalLink className="w-4 h-4" />
 							</a>
 						</Card>
@@ -840,10 +594,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 		</UltraFuturisticBackground>;
 	);
 
-	)
-}
 ;
-function getAllServices (): Service[] {
+function getAllServices (): Service[] {}
   return enhancedRealMicroSaasServices;
     .concat (extra_services as Service[], additionalEnhancedServices as Service[]);
     .concat (newlyAddedServices as unknown as Service[]);
@@ -873,12 +625,12 @@ function getAllServices (): Service[] {
   .concat (real2027Q1Additions as unknown as Service[]);
   .concat (newSaasItAiServices2025 as unknown as Service[]);
 ;
-function to_slug (value: string): string {
+function to_slug (value: string): string {'
 return value.toLowerCase ().replace (/[^a - z0 - 9]+/g, '-').replace (/(^-|-$)/g, '');
 ;
-function getExistingRootPageSlugs (): Set < string> {
+function getExistingRootPageSlugs (): Set < string> {'
 const pages_dir = path.join (process.cwd (), 'pages'),
-const entries = fs.readdir_sync (pages_dir, { withFileTypes: true }),
+const entries = fs.readdir_sync (pages_dir, { withFileTypes: true }),'
 const reserved = new Set < string>(['apireportsservices']),
 const slugs = new Set < string>(),
 
@@ -887,51 +639,44 @@ const slugs = new Set < string>(),
 }
 }
 }
-}
+});
+  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
 
-	);
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
   }
   // Directories at root (folder routes);
-  if () {) {
-  $2
+  if () {) {}
+  $2;
 }
   slugs.add (entry.name);
 }
   return slugs;
 ;
 ;
-export async /**
- * getStaticPaths - Function description
+export async /**;
+ * getStaticPaths - Function description;
  */
-function getStaticPaths() {
+function getStaticPaths() {}
 const services = getAllServices (),
 const slugs = new Set < string>(),
   })),
   fallback: false;
 }
 ;
-export async /**
- * getStaticProps - Function description
+export async /**;
+ * getStaticProps - Function description;
  */
-function getStaticProps() {
-const services = getAllServices (),
-const incoming_slug = (params?.slug || '').replace (/^\/+|\/+$/g, ''),
+function getStaticProps() {}
+const services = getAllServices (),'
+const incoming_slug = (params?.slug || '').replace (/^\/+|\/+$/g, ''),'
 let service: Service | undefined = services.find ((s) => to_slug (s.id || '') === incoming_slug || to_slug (s.name || '') === incoming_slug),
-// Check condition
-if ( {) {
-  $2
+// Check condition;
+if ( {) {}
+  $2;
 }
   return { not_found: true }
   }
-
-}
-
-	);
-;
-origin/cursor/automate-test-improve-and-merge-code-2533

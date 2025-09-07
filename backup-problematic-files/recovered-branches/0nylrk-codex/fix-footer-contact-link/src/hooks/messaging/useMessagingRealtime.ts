@@ -1,4 +1,3 @@
-
 import { useEffect } from 'react';
 import { supabase } from '@/integrations/supabase/client';
 import { UserProfile, UserDetails } from '@/types/auth';
@@ -43,8 +42,7 @@ export function useMessagingRealtime(;
             title:`New message from ${payload.new.sender_name || 'Someone'}`;
             description:payload.new.content.substring(0, 50) + (payload.new.content.length > 50 ? '...' :'');
           });
-        }
-      );
+        });
       .subscribe();
 ;
     return () => {;

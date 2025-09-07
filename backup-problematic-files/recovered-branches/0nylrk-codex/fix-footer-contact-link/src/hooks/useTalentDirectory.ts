@@ -1,4 +1,3 @@
-
 import { useAuthStatus } from "./talent/useAuthStatus";
 import { useTalentData } from "./talent/useTalentData";
 import { useFilterTalents } from "./talent/useFilterTalents";
@@ -162,4 +161,5 @@ clearFilters;
 toggleSection;
 handleToggleSave 
 }
+
 }

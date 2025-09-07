@@ -1,7 +1,6 @@
+import { Checkbox } from "@/components/ui/checkbox",;
+import { RegionFilterProps } from "@/types/filters",;
 
-import { ChevronDown, ChevronUp } from 'lucide-react';
-import { Checkbox } from "@/components/ui/checkbox";""
-import { RegionFilterProps } from "@/types/filters";"
 ;
 const REGION_OPTIONS = [;"
   { id: "North America";, label: "North America" ;},;""
@@ -41,12 +40,19 @@ export function RegionFilter({ selectedRegions, toggleRegion, expanded, toggleSe
               </label>;
             </div>;          ))}
         </div>;
-    </div>;"
-}className="flex w-full items-center justify-between text-white font-medium" > <span>Region</span>) : (<ChevronDown className="h-4 w-4 text-zion-slate-light" />) ;"
-}</button> {;"
-  REGION OPTIONS.map (region => (<div key= {;"  region.id ";"}className="flex items-center" > <Checkbox > {;"
-</div>)
+
+:temp_broken_files/talent/filters/RegionFilter.tsx
+
+ursor/fix-lint-push-and-merge-to-main-e10e:src/components/talent/filters/RegionFilter.tsx
+  toggleSection ;
+}className="flex w-full items-center justify-between text-white font-medium" > <span>Region</span>) : (<ChevronDown className="h-4 w-4 text-zion-slate-light" />) ;
+}</button> {;
+  REGION OPTIONS.map (region => (<div key= {;"  region.id ";"}className="flex items-center" > <Checkbox > {;
+  region.label ;
 }</label> </div>) ) ;
-}</div>) ;"
-}</div>) ;"}""
-}</div>) ;"`;
+}</div>) ;
+:temp_broken_files/talent/filters/RegionFilter.tsx
+}</div>) ;"}"
+}</div>) ;
+}"
+ursor/fix-lint-push-and-merge-to-main-e10e:src/components/talent/filters/RegionFilter.tsx

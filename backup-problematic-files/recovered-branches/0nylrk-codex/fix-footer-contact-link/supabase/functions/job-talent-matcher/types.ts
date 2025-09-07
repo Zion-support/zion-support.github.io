@@ -1,4 +1,3 @@
-
 export interface JobData {;
   id:string;
   title:string;
@@ -36,4 +35,4 @@ export interface MatchResult {;
   score:number;
   matchedSkills:string[];
   reason?:string;
-} 
+}

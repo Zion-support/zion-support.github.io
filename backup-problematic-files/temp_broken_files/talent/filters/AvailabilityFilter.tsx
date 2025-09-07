@@ -1,7 +1,6 @@
+import { Checkbox } from "@/components/ui/checkbox",;
+import { AvailabilityFilterProps } from "@/types/filters",;
 
-import { ChevronDown, ChevronUp } from 'lucide-react';
-import { Checkbox } from "@/components/ui/checkbox";""
-import { AvailabilityFilterProps } from "@/types/filters";"
 ;
 const AVAILABILITY_OPTIONS = [;"
   { id: "full_time";, label: "Full-time" ;},;""
@@ -38,12 +37,19 @@ export function AvailabilityFilter({ selectedAvailability, toggleAvailability, e
               </label>;
             </div>;          ))}
         </div>;
-    </div>;"
-}className="flex w-full items-center justify-between text-white font-medium" > <span>Availability</span>) : (<ChevronDown className="h-4 w-4 text-zion-slate-light" />) ;"
-}</button> {;"
-  AVAILABILITY OPTIONS.map (option => (<div key= {;"  option.id ";"}className="flex items-center" > <Checkbox > {;"
-</div>)
+
+:temp_broken_files/talent/filters/AvailabilityFilter.tsx
+
+ursor/fix-lint-push-and-merge-to-main-e10e:src/components/talent/filters/AvailabilityFilter.tsx
+  toggleSection ;
+}className="flex w-full items-center justify-between text-white font-medium" > <span>Availability</span>) : (<ChevronDown className="h-4 w-4 text-zion-slate-light" />) ;
+}</button> {;
+  AVAILABILITY OPTIONS.map (option => (<div key= {;"  option.id ";"}className="flex items-center" > <Checkbox > {;
+  option.label ;
 }</label> </div>) ) ;
-}</div>) ;"
-}</div>) ;"}""
-}</div>) ;"`;
+}</div>) ;
+:temp_broken_files/talent/filters/AvailabilityFilter.tsx
+}</div>) ;"}"
+}</div>) ;
+}"
+ursor/fix-lint-push-and-merge-to-main-e10e:src/components/talent/filters/AvailabilityFilter.tsx

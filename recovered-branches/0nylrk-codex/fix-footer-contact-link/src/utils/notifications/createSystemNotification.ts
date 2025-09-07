@@ -1,18 +1,9 @@
-
-
-
-
-/**
- * Creates a system notification for a user
- */
-export async function createSystemNotification({  title;
-
-
-import {createNotification} from './createNotification';
 import {SystemNotificationParams} from './types';
+
 /**
  * Creates a system notification for a user;
  */
+
 export async function createSystemNotification({
 
 import { createNotification  } from './createNotification';
@@ -21,21 +12,15 @@ import { SystemNotificationParams } from './types';
 export async function createSystemNotification({;
   userId;
   title;
-pr-12325
-'
-import { createNotification  } from './createNotification';''
-import { SystemNotificationParams } from './types';''
-import {createNotification} from './createNotification';''
-import {SystemNotificationParams} from './types';'
 
-/**
- * Creates a system notification for a user;
- */
-export async function createSystemNotification({  title;
-  message;
+    userId;
+    title;
+    message;'
+    type: 'system';
+    sendEmail;
+    actionUrl;
+    actionText;
 
-
-    actionText
   })
 
 import {create_notification} from './create_notification';
@@ -44,7 +29,6 @@ import {SystemNotificationParams} from './types';
 import {create_notification} from './create_notification';
 import {SystemNotificationParams} from './types';
 
-import { createNotification } from './createNotification',;
 import { SystemNotificationParams } from './types',;
   sendEmail = false;)
 }: SystemNotificationParams) {
@@ -76,15 +60,14 @@ import { SystemNotificationParams } from './types',;'
 /**;
 * Creates a system notification for a user;
 */;
-export async /**
- * createSystemNotification - Function description
+
  * createSystemNotification - Function description;
  */
-function createSystemNotification() {
-  return create_notification ({
+function createSystemNotification() {}
+  return create_notification ({}
     user_id;
     title;
-    message;
+    message;'
     type: 'system';
     send_email;
     action_url,
@@ -93,6 +76,7 @@ function createSystemNotification() {
 
 }
 ;
+
 }
 ;
 }
@@ -139,9 +123,6 @@ function createSystemNotification() {
 
   });
 
-
-
-
 ;
 
 }
@@ -181,25 +162,3 @@ pr-12325
   });
 }
 ;
-
-}
-;
-}: SystemNotificationParams) {;
-  return createNotification({;
-    type: 'system',;
-
-pr-12325
-    message,;'
-    type: 'system',;'
-    sendEmail;
-
-    actionUrl;
-    actionText;)
-  });
-}
-;
-
-}
-;
-'
-

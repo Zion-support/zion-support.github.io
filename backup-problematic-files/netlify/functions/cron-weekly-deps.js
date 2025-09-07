@@ -53,6 +53,11 @@ exports.handler = async function () {
     const resp = await fetch(`https://registry.npmjs.org/${encodeURIComponent(pkg)}/latest`)
     const json = await resp.json()
 
+    if (owner && repo && token) {
       await upsertFile({ owner, repo, path: 'data/reports/deps/weekly-dependencies.json', content: JSON.stringify(report, null, 2), message: 'chore(automation): weekly dependency insights', token })
+    }
+
     return { statusCode: 200, body: JSON.stringify({ ok: true, count: entries.length }) }
-`;
+  } catch (e) {
+    return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
+  }

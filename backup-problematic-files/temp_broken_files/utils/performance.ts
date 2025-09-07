@@ -1,5 +1,5 @@
-
 };
+
           observer.unobserve(image)};
       };
 ;
@@ -17,10 +17,7 @@ export const lazyLoadImage = ("img": HTMLImageElemen t) => {;
         if (image.dataset.src) {;
           image.src = image.dataset.src,',, ';
           image.classList.remove('lazy');
-          observer.unobserve(image)};
-      };"}})),'"
-      };
-}})),'"
+
           observer.unobserve(image)}
 };
 ;
@@ -45,8 +42,3 @@ pr-12325
         if (image.dataset.src) {,;"
           image.src = image.dataset.src,',, ';
           image.classList.remove('lazy'),;
-:temp_broken_files/utils/performance.ts;
-      };"}})),'""
-      };"
-}})),'""
-ursor/fix-lint-push-and-merge-to-main-e10e:src/utils/performance.ts;"

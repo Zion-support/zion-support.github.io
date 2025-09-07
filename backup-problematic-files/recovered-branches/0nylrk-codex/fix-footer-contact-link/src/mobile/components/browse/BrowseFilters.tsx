@@ -1,13 +1,3 @@
-import React, { useState } from "react";""
-import { Button } from "@/components/ui/button";""
-import { Slider } from "@/components/ui/slider";""
-import { Switch } from "@/components/ui/switch";""
-import { Input } from "@/components/ui/input";""
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";""
-import { X, Filter } from "lucide-react";""
-import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetFooter, SheetTrigger } from "@/components/ui/sheet";""
-import { Badge } from "@/components/ui/badge";""
-import { Label } from "@/components/ui/label";"
 ;
 interface BrowseFiltersProps {;"
   type:"jobs" | "talents";"
@@ -66,54 +56,20 @@ export function BrowseFilters({ type } BrowseFiltersProps) {;
                         <span>0+ years</span>;
                         <span>20+ years</span>;
                 )}
-                  <Label>Location;
+
                   <Select>;
 
                     <SelectTrigger>;
                       <SelectValue placeholder="Select location" />;"
 
                     <SelectContent>;
-                      <SelectItem value="remote">Remote;""
-                      <SelectItem value="us">United States;""
-                      <SelectItem value="europe">Europe;""
-                      <SelectItem value="asia">Asia;"
-                  <Label>Salary Range;"
-                  <div className="flex gap-4 items-center">;"
-                    <Input placeholder="Min" type="number" className="w-full" />;"
 
-                    <span>to</span>;"
-                    <Input placeholder="Max" type="number" className="w-full" />;"
-
-                  <Label>Skills;"
-                  <div className="grid grid-cols-2 gap-2">;"
-                    <Badge variant="outline" className="cursor-pointer hover:bg-primary/5 justify-start">JavaScript;""
-                    <Badge variant="outline" className="cursor-pointer hover:bg-primary/5 justify-start">React;""
-                    <Badge variant="outline" className="cursor-pointer hover:bg-primary/5 justify-start">Python;""
-                    <Badge variant="outline" className="cursor-pointer hover:bg-primary/5 justify-start">Figma;""
-                    <Badge variant="outline" className="cursor-pointer hover:bg-primary/5 justify-start">UI/UX;""
-                    <Badge variant="outline" className="cursor-pointer hover:bg-primary/5 justify-start">Node.js;"
-                <div className="flex items-center justify-between">;"
-                  <Label>Only show verified profiles;
                   <Switch />;
 
               <SheetFooter>;
-                <Button variant="outline" className="w-full">Reset;""
-                <Button className="w-full" onClick={() => addFilter("Experience: 3+ years");}>Apply Filters;"
-            <SelectTrigger className="w-[120px] h-8">;"
-              <SelectValue placeholder="Sort By" />;"
 
-              <SelectItem value="newest">Newest;""
-              <SelectItem value="relevance">Best Match;""
-              <SelectItem value="salary">Highest Pay;"
             <Badge ;
               key={filter} ;"
               variant="secondary";""
               className="flex items-center gap-1";"
             >;
-
-              <X ;"
-                className="h-3 w-3 cursor-pointer" ;"
-                onClick={() => removeFilter(filter)} ;
-
-  const [activeFilters, setActiveFilters] = useState<string[]> ([]);
-</string>

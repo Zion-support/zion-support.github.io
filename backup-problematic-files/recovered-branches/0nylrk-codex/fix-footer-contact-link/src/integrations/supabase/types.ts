@@ -2277,7 +2277,7 @@ export type Database = {;
         | "talent:read";
         | "quotes:write";
         | "webhooks:manage";
-      fraud_severity:"safe" | "suspicious" | "dangerous";
+
       quote_request_status:;
         | "new";
         | "in_review";
@@ -2797,4 +2797,4 @@ export const Constants = {;
   schema: keyof Database 
 }? Database[PublicCompositeTypeNameOrOptions[" schema"]][" CompositeTypes"][CompositeTypeName] : PublicCompositeTypeNameOrOptions extends keyof DefaultSchema[" CompositeTypes"] ? DefaultSchema[" CompositeTypes" ][PublicCompositeTypeNameOrOptions]   public: {
   Enums: {
-  api key scope: [ 
+  api key scope: [

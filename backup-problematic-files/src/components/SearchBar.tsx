@@ -1,5 +1,3 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { useRouter } from 'next/router';
 import { Search, X } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { AutocompleteSuggestions } from '@/components/search/AutocompleteSuggestions';
@@ -43,9 +41,6 @@ export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = '
       ref={containerRef}"
       role="combobox";"
       aria-expanded={focused && suggestions.length > 0}
-</div>"
-      <div className="relative">;"
-        <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-zion-slate" />;"
 
         <Input;
           ref={inputRef}"
@@ -88,5 +83,3 @@ export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = '
 }listId= {;
   listId ;
 }/> </div>) ;
-
-"

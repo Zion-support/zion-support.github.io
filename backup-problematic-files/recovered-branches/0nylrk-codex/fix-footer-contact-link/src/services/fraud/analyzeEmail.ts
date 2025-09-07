@@ -1,4 +1,3 @@
-
 // Email analysis functionality;
 import { suspiciousEmailDomains } from './constants';
 import { EmailAnalysisResult } from './types';
@@ -24,4 +23,4 @@ export const analyzeEmail = (email:string):EmailAnalysisResult => {;
     isSuspicious:reasons.length > 0;
     reasons;
   };
-}; // Email analysis functionality 
+}; // Email analysis functionality

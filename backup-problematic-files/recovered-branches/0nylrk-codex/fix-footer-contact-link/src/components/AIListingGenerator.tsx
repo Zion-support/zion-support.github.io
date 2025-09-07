@@ -1,19 +1,21 @@
-import React, { useState } from "react";""
-import { useToast } from "@/hooks/use-toast";""
-import { Button } from "@/components/ui/button";""
-import { Input } from "@/components/ui/input";""
-import { Textarea } from "@/components/ui/textarea";""
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";""
-import { Skeleton } from "@/components/ui/skeleton";""
-import { Sparkles, ArrowRight } from "@/components/icons";""
-import { supabase } from "@/integrations/supabase/client";""
-import { Badge } from "@/components/ui/badge";"
+import React, { useState } from "react",;
+import { useToast } from "@/hooks/use-toast",;
+import { Button } from "@/components/ui/button",;
+import { Input } from "@/components/ui/input",;
+import { Textarea } from "@/components/ui/textarea",;
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Skeleton } from "@/components/ui/skeleton",;
+import { Sparkles, ArrowRight } from "@/components/icons",;
+import { supabase } from "@/integrations/supabase/client",;
+import { Badge } from "@/components/ui/badge",;
+
 ;
-interface GeneratedContent {,
-  description: string;,;
-  tags: string[];,;
-  suggestedPrice: {;,
-  min: number;,;
+
+  description:string,;
+  tags:string[],;
+  suggestedPrice:{;
+    min:number,;
+
     max:number;
   },;
   keyPoints:string[];
@@ -48,8 +50,7 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} } AILi
   const handleGenerate = async () => {;
     if (!title || !category) {;
       toast({;
-        title: "Missing required fields";,,
-  description: "Please provide at least a title and category.";,;
+
         variant:"destructive";
         title: "Missing required fields";,;""
         description: "Please provide at least a title and category.";,;""
@@ -67,14 +68,14 @@ pr-12325
         throw new Error(data.error),;
       setGeneratedContent(data.generated),;
       toast({;
-        title: "Content Generated";,,
+
   description:"AI has created optimized listing content for you.";
+
       }),;
     } catch (error) {;
       console.error("Error generating content: ";, error),;
       toast({;
-        title: "Generation Failed";,,
-  description: error instanceof Error ? error.message :"Failed to generate content. Please try again.";,;
+
         variant:"destructive";
       }),;
         title: "Content Generated";,;""
@@ -91,8 +92,9 @@ pr-12325
     if (generatedContent && onApplyGenerated) {;
       onApplyGenerated(generatedContent),;
       toast({;
-        title: "Content Applied";,,
+
   description:"The generated content has been applied to your listing.";
+
       }),;
     }
   },;

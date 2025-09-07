@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { supabase } from '@/integrations/supabase/client';
 import { Certification } from '@/types/resume';
@@ -60,6 +59,7 @@ export function useCertifications() {;
           expiration_date:cert.expiration_date ? formatDateForDB(cert.expiration_date) :null;
           credential_id:cert.credential_id;
           credential_url:cert.credential_url;
+
         });
         .eq('id', certId);
       ;

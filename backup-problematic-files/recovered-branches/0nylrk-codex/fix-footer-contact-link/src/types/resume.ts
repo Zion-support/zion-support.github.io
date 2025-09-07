@@ -1,4 +1,3 @@
-
 export interface ResumeBasicInfo {;
   id?:string;
   title:string;
@@ -70,4 +69,4 @@ export interface Resume {;
   certifications:Certification[];
   portfolio_projects?:PortfolioProject[];
   is_active:boolean;
-} 
+}

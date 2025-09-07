@@ -1,3 +1,126 @@
+import React, { useState } from "react",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { Input } from "@/components/ui/input",
+import { Button } from "@/components/ui/button",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",
+import { Badge } from "@/components/ui/badge",
+import { Search, Filter } from "lucide-react",
+import { AppLayout } from "@/layout/AppLayout";
+import { SEO } from "@/components/SEO";
+import { AppLayout } from "@/layout/AppLayout",
+import { SEO } from "@/components/SEO",
+
+// Mock data for support requests
+
+const MOCK_SUPPORT_REQUESTS = [
+  {
+    id: "SR-1001"
+    user: "john.doe@example.com"
+    userId: "user-123"
+    issue: "Cannot access account after password reset"
+    status: "open"
+    priority: "high"
+    createdAt: "2023-12-15T14:30:00Z"
+    lastUpdated: "2023-12-15T15:45:00Z"
+    category: "authentication"
+
+  {
+    id: "SR-1002"
+    user: "sarah.smith@company.co"
+    userId: "user-456"
+    issue: "Payment failed but funds were deducted"
+    status: "in-progress"
+    priority: "high"
+    createdAt: "2023-12-14T09:15:00Z"
+    lastUpdated: "2023-12-15T13:20:00Z"
+    category: "billing"
+
+  {
+    id: "SR-1003"
+    user: "tech.guru@startup.io"
+    userId: "user-789"
+    issue: "Unable to download invoice PDF"
+    status: "open"
+    priority: "medium"
+    createdAt: "2023-12-15T11:00:00Z"
+    lastUpdated: "2023-12-15T11:00:00Z"
+    category: "billing"
+
+  {
+    id: "SR-1004"
+    user: "developer@codelab.dev"
+    userId: "user-235"
+    issue: "API integration documentation is outdated"
+    status: "open"
+    priority: "low"
+    createdAt: "2023-12-13T16:45:00Z"
+    lastUpdated: "2023-12-13T16:45:00Z"
+    category: "api"
+
+  {
+    id: "SR-1005"
+    user: "maria.rodriguez@design.co"
+    userId: "user-567"
+    issue: "Dispute with freelancer over delivered work quality"
+    status: "in-progress"
+    priority: "high"
+    createdAt: "2023-12-12T10:30:00Z"
+    lastUpdated: "2023-12-15T09:15:00Z"
+    category: "disputes"
+
+  {
+    id: "SR-1006"
+    user: "alex.wong@datacompany.com"
+    userId: "user-890"
+    issue: "Profile verification pending for over 7 days"
+    status: "resolved"
+    priority: "medium"
+    createdAt: "2023-12-08T13:20:00Z"
+    lastUpdated: "2023-12-15T08:30:00Z"
+    category: "verification"
+
+  {
+    id: "SR-1007"
+    user: "jamie.taylor@tech.org"
+    userId: "user-345"
+    issue: "Cannot upload portfolio images"
+    status: "resolved"
+    priority: "medium"
+    createdAt: "2023-12-10T15:10:00Z"
+    lastUpdated: "2023-12-13T11:25:00Z"
+    category: "profile"
+  }
+
+  // Apply filters to the request data
+  const filteredRequests = MOCK_SUPPORT_REQUESTS.filter(request => {
+    // Apply search query filter
+    if (searchQuery &&
+        !request.issue.toLowerCase().includes(searchQuery.toLowerCase()) &&
+        !request.user.toLowerCase().includes(searchQuery.toLowerCase()) &&
+        !request.id.toLowerCase().includes(searchQuery.toLowerCase())) {
+      return false
+
+    }
+    // Apply status filter
+    if (statusFilter && request.status !== statusFilter) {
+      return false
+    }
+    // Apply priority filter
+    if (priorityFilter && request.priority !== priorityFilter) {
+      return false
+    }
+    // Apply category filter
+    if (categoryFilter && request.category !== categoryFilter) {
+      return false
+    }
+
+  return (
+    <AppLayout>
+      <SEO
+        title="Support Requests | Admin Dashboard"
+        description="Manage and track user support requests and issues"
 
       />
       <div className=\"container mx-auto px-4 py-8\" />
@@ -50,7 +173,7 @@
             <TabsTrigger value=\"ai-flagged\" />AI Flagged</TabsTrigger>
             <TabsTrigger value=\"need-response\" />Need Response</TabsTrigger>
           </TabsList>
-          <TabsContent value=\"all\" className=\"mt-6\" />
+
   // Apply filters to the request data;
   const filteredRequests = MOCK_SUPPORT_REQUESTS && MOCK_SUPPORT_REQUESTS.filter(request => {;
     // Apply search query filter;
@@ -141,6 +264,7 @@ title=\"Support Requests | Admin Dashboard\"
             <TabsTrigger value=\"ai-flagged\" />AI Flagged</TabsTrigger>;
             <TabsTrigger value=\"need-response\" />Need Response</TabsTrigger>;
           </TabsList>;
+
             {/* Search and Filters */}
             <div className=\"flex flex-col md:flex-row gap-4 mb-6\" />;
               <div className=\"relative flex-1\" />;
@@ -148,9 +272,15 @@ title=\"Support Requests | Admin Dashboard\"
                 <Input;
 placeholder=\"Search by ID, user or issue...\"
                   value={searchQuery}
-              <Select value={statusFilter || \"\"} onValueChange={value = /> setStatusFilter(value || null)}>
-                <SelectTrigger className=\"w-[180px]\" />
-                  <SelectValue placeholder=\"Status\" />
+
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="pl-10"
+                />
+              </div>
+
+                <SelectTrigger className="w-[180px]">
+                  <SelectValue placeholder="Status" />
+
                 </SelectTrigger>
                 <SelectContent />
                   <SelectItem value=\"\" />All Statuses</SelectItem>
@@ -159,9 +289,10 @@ placeholder=\"Search by ID, user or issue...\"
                   <SelectItem value=\"resolved\" />Resolved</SelectItem>
                 </SelectContent>
               </Select>
-              <Select value={priorityFilter || \"\"} onValueChange={value = /> setPriorityFilter(value || null)}>
-                <SelectTrigger className=\"w-[180px]\" />
-                  <SelectValue placeholder=\"Priority\" />
+
+                <SelectTrigger className="w-[180px]">
+                  <SelectValue placeholder="Priority" />
+
                 </SelectTrigger>
                 <SelectContent />
                   <SelectItem value=\"\" />All Priorities</SelectItem>
@@ -170,9 +301,10 @@ placeholder=\"Search by ID, user or issue...\"
                   <SelectItem value=\"low\" />Low</SelectItem>
                 </SelectContent>
               </Select>
-              <Select value={categoryFilter || \"\"} onValueChange={value = /> setCategoryFilter(value || null)}>
-                <SelectTrigger className=\"w-[180px]\" />
-                  <SelectValue placeholder=\"Category\" />
+
+                <SelectTrigger className="w-[180px]">
+                  <SelectValue placeholder="Category" />
+
                 </SelectTrigger>
                 <SelectContent />
                   <SelectItem value=\"\" />All Categories</SelectItem>
@@ -216,9 +348,7 @@ placeholder=\"Search by ID, user or issue...\"
                             request.status === 'open'
                               ? 'default'
                               : request.status === 'in-progress'
-                              ? 'secondary'}
-                              : 'outline'}
-                          } />
+
                             {request.status}
                           </Badge>
                         </TableCell>
@@ -227,9 +357,10 @@ placeholder=\"Search by ID, user or issue...\"
                             request.priority === 'high'
                               ? 'destructive'
                               : request.priority === 'medium'
-                              ? 'default'}
-                              : 'outline'}
-                          } />;
+
+                              : 'outline'
+                          }>;
+
                             {request && request.status}
                           </Badge>;
                         </TableCell>;
@@ -238,16 +369,16 @@ placeholder=\"Search by ID, user or issue...\"
                             request && request.priority === 'high' 
                               ? 'destructive' 
                               : request && request.priority === 'medium' 
-                              ? 'default' }
-                              : 'outline'}
-                          } />;
+
+                              : 'outline'
+                          }>;
                             {request && request.priority}
                           </Badge>;
                         </TableCell>;
-                        <TableCell />{request && request.category}</TableCell>;
-                        <TableCell />{new Date(request && request.createdAt).toLocaleDateString()}</TableCell>;
-                        <TableCell />{new Date(request && request.lastUpdated).toLocaleDateString()}</TableCell>;
-                        <TableCell />;
-                          <Button variant=\"ghost\" size=\"sm\" />View</Button>;
-                          <Button variant=\"ghost\" size=\"sm\" />Assign</Button>;
+                        <TableCell>{request && request.category}</TableCell>;
+                        <TableCell>{new Date(request && request.createdAt).toLocaleDateString()}</TableCell>;
+                        <TableCell>{new Date(request && request.lastUpdated).toLocaleDateString()}</TableCell>;
+                        <TableCell>;
+                          <Button variant="ghost" size="sm">View</Button>;
+                          <Button variant="ghost" size="sm">Assign</Button>;
                         </TableCell>;

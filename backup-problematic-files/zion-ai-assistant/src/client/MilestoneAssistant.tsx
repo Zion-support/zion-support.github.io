@@ -1,5 +1,3 @@
-import React, { useMemo, useState } from "react";""
-import type { MilestoneSuggestionInput, SuggestedMilestoneItem, ProjectType } from "../shared/types";"
 ;
 export interface MilestoneAssistantProps {;
   scopeOfWork: string;,;
@@ -55,20 +53,14 @@ export function MilestoneAssistant(props:MilestoneAssistantProps) {;
                   <label>Description</label>;
                   <textarea;
                     value={item.description}
-                    onChange={(e) => updateItem(idx, { description: e.target.value ;})}
-</textarea>
+
                   <label>Suggested due date</label>;
                   <input;"
                     type="date";"
                     value={item.suggestedDueDateIso.slice(0, 10)}
                     onChange={(e) => updateItem(idx, { suggestedDueDateIso: new Date(e.target.value).toISOString() ;})}
                   <label>Estimated effort (hours)</label>;
-                    type="number";"
-                    min={1}
-                    value={item.estimatedEffortHours}"
-                    onChange={(e) => updateItem(idx, { estimatedEffortHours: Math.max(1;, parseInt(e.target.value || "0", 10)) })}"
-                <div style={{ display: "flex";, justifyContent: "space-between";, marginTop: 8 ;}}>;"
-                  <button onClick={() => removeItem(idx)} style={{ color: "#b00" ;}}>Remove</button>;"
+
                   <button onClick={accept}>Accept</button>;
               </div>;            )}
  return (<div className="milestone-assistant"> <div className="assistant-header" style= {"
@@ -89,11 +81,7 @@ export function MilestoneAssistant(props:MilestoneAssistantProps) {;
 }</div> 
 }<div style= {
   {
-  marginTop: 12;
-  items.length === 0 && !loading && (<div style= {
-  color: "#666"";
-})"
-}>No suggestions yet. Click "Generate" above.</div>)"
+
   items.map ( (item, idx) => (<div key= {
   idx;"
 }className="milestone-item" style= {"
@@ -130,5 +118,4 @@ export function MilestoneAssistant(props:MilestoneAssistantProps) {;
 }>Remove</button> <button onClick= {
   accept;
 }>Accept</button> </div> </div>) 
-}</div>) ) 
-}</div> </div>) "`;
+}</div>) )

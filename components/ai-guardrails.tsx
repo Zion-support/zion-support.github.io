@@ -1,4 +1,3 @@
-
 import Head from 'next/head';
 import { Check, Shield, ShieldAlert, Lock, Phone, Mail, MapPin, ExternalLink  } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
@@ -13,6 +12,99 @@ export default function AIGuardrailsPage() {
 				<meta name="description" content="Production-grade safety and governance for AI apps: policy enforcement;, jailbreak detection, PII/PHI controls and audit logs with SDKs and proxies." />
 				<link rel="canonical" href="https://ziontechgroup.com/ai-guardrails" />
 			</Head>
+
+  const features = ['
+    'Prompt/output policy engine with allow/deny lists''
+    'Jailbreak and prompt injection detection''
+    'PII/PHI detection and redaction''
+    'Toxicity, bias and safety classifiers''
+    'Human handoff flows and escalation policies''
+    'Audit logs, alerting and exportable evidence'
+
+class ErrorBoundary extends React.Component {}
+  constructor(props) {}
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {}
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {'
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {}
+    if (this.state.hasError) {}
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}'
+import React from 'react';'
+import Head from 'next/head';
+
+  ];
+  return (
+    <UltraAdvancedFuturisticBackground>;
+      <Head>;
+        <title>AI Guardrails Suite | Zion Tech Group</title>;
+        <meta'
+          name='description''
+          content='Production-grade safety and governance for AI apps: policy enforcement, jailbreak detection, PII/PHI controls and audit logs with SDKs and proxies.'
+        />;'
+        <link rel='canonical' href='https://ziontechgroup && ziontechgroup.com/ai-guardrails' />;
+      </Head>;
+
+              Safety and governance for LLM apps with minimal integration and;
+              strong guarantees.;
+            </p>;
+          </div>;'
+                      className='flex items - start gap - 2 text - gray - 200';
+                    >;'
+                      <Check className='w - 5 h - 5 text - emerald - 400 mt - 0.5' />{' '}
+                      <span>{f}</span>;
+                    </li>))}
+                </ul>;
+              </div>;
+            </Card>;'
+            <Card className='bg - black / 30 border border - rose - 500 / 30'>;'
+              <div className='p - 6'>;'
+                <div className='text - 3xl font - bold text - white'>;
+                  Starting at $199;'
+                  <span className='text - base text - gray - 400'>/month</span>;
+                </div>;'
+                <div className='text - sm text - gray - 400 mt - 1'>;
+                  14 - day trial • Setup: 30 minutes;
+                </div>;'
+                <div className='mt - 4'>;
+                  <Button;'
+                    href='/contact';'
+                    className='w - full bg - gradient - to - r from - rose - 500 to - orange - 600 text - white';
+                  >;
+
+                    Request Demo;
+                  </Button>;
+                </div>;
+              </div>;
+            </Card>;
+          </div>;
+                Slack, PagerDuty, Datadog and SIEM integrations for alerting and;
+                incident response.;
+              </p>;
+            </Card>;
+          </div>;
+	);
+});
+
+      </div>;
+    </div>;
+    </div>;
+  </section>;
+  </UltraAdvancedFuturisticBackground>);
+}
 
       <section className='min-h-screen pt-28 pb-20 px-4'>
         <div className='max-w-6xl mx-auto'>

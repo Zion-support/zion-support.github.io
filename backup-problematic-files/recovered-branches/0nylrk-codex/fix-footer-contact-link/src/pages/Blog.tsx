@@ -1,16 +1,16 @@
+import { useState } from "react",;
+import { Link } from "react-router-dom",;
+import { Header } from "@/components/Header",;
+import { Footer } from "@/components/Footer",;
+import { GradientHeading } from "@/components/GradientHeading",;
+import { SEO } from "@/components/SEO",;
+import { Card, CardContent, CardFooter } from "@/components/ui/card",;
+import { Button } from "@/components/ui/button",;
+import { Input } from "@/components/ui/input",;
+import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select",;
+import { BlogPost } from "@/types/blog",;
+import { Search } from "lucide-react",;
 
-import { useState } from "react";""
-import { Link } from "react-router-dom";""
-import { Header } from "@/components/Header";""
-import { Footer } from "@/components/Footer";""
-import { GradientHeading } from "@/components/GradientHeading";""
-import { SEO } from "@/components/SEO";""
-import { Card, CardContent, CardFooter } from "@/components/ui/card";""
-import { Button } from "@/components/ui/button";""
-import { Input } from "@/components/ui/input";""
-import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select";""
-import { BlogPost } from "@/types/blog";""
-import { Search } from "lucide-react";"
 ;
 // Sample blog data - in a real app this would come from an API or CMS;
 const BLOG_POSTS:BlogPost[] = [;
@@ -69,7 +69,9 @@ const BLOG_POSTS:BlogPost[] = [;
 <h2>Building Internal Talent Pipelines</h2>;
 <p>Forward-thinking organizations are creating robust upskilling programs to develop AI capabilities within their existing workforce. Structured mentorship, educational stipends, and dedicated learning time can transform motivated employees into valuable AI contributors.</p>;
 <h2>Creating Compelling AI Missions</h2>;
-<p>Top AI talent is increasingly mission-driven, seeking roles where their work creates meaningful impact. Articulating how your AI initiatives address important challengeswhether in sustainability, healthcare, education, or other domainscan be a powerful recruitment tool.</p>;
+
+;
+
 <h2>Remote-First Talent Strategies</h2>;
 <p>The most successful AI employers have embraced truly global talent strategies, creating distributed teams that leverage expertise regardless of location. This approach requires investing in collaboration tools, asynchronous workflows, and inclusive management practices.</p>;
 <h2>Retention Through Growth Paths</h2>;`;
@@ -87,10 +89,7 @@ const BLOG_POSTS:BlogPost[] = [;
 <p>The deployment architecture for AI models dramatically impacts both performance and cost. Consider batching strategies, hardware acceleration options, and scaling policies that align with your application's latency requirements and traffic patterns.</p>`,;
     <>;
       <SEO ;
-        title="Blog - AI & Tech Insights" ;""
-        description="Stay updated with the latest trends in AI technology, marketplace strategies, and IT services. Expert articles on innovation, sustainability, and digital transformation." ;""
-        keywords="AI blog, tech trends, IT services blog, artificial intelligence news, technology innovation, digital transformation, sustainable IT";""
-        canonical="https://app.ziontechgroup.com/blog";"
+
       />;
 
       <Header />;
@@ -104,25 +103,26 @@ const BLOG_POSTS:BlogPost[] = [;
             <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">;"
 </p>
             </p>;
-          </div>;"
-            <div className="mb-16">;"
-              <h2 className="text-2xl font-bold text-white mb-6">Featured Article</h2>;""
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">;"
-                <div className="aspect-video overflow-hidden rounded-lg">;"
-                  <img ;]
-                    src={featuredPosts[0].featuredImage} ;                    alt={featuredPosts[0].title}"
-                    className="object-cover w-full h-full hover:scale-105 transition-transform duration-300";"
-</img>
-                <div className="flex flex-col justify-center">;"
-                  <span className="text-sm text-zion-cyan bg-zion-blue-dark px-3 py-1 rounded-full inline-block mb-2">;"
-</span>
-                  </span>;"
-                  <h3 className="text-3xl font-bold text-white mb-4">;"
-</h3>
-                  </h3>;"
-                  <p className="text-zion-slate-light mb-6">;"
-                  </p>;"
-                  <div className="flex items-center mb-6">;"
+
+            <div className="mb-16">;
+              <h2 className="text-2xl font-bold text-white mb-6">Featured Article</h2>;
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">;
+                <div className="aspect-video overflow-hidden rounded-lg">;
+
+                  />;
+                </div>;
+                <div className="flex flex-col justify-center">;
+                  <span className="text-sm text-zion-cyan bg-zion-blue-dark px-3 py-1 rounded-full inline-block mb-2">;
+                    {featuredPosts[0].category}
+                  </span>;
+                  <h3 className="text-3xl font-bold text-white mb-4">;
+                    {featuredPosts[0].title}
+                  </h3>;
+                  <p className="text-zion-slate-light mb-6">;
+                    {featuredPosts[0].excerpt}
+                  </p>;
+                  <div className="flex items-center mb-6">;
+
                     <img ;
                       src={featuredPosts[0].author.avatarUrl} ;                      alt={featuredPosts[0].author.name}"
                       className="w-10 h-10 rounded-full mr-3";"
@@ -137,26 +137,23 @@ const BLOG_POSTS:BlogPost[] = [;
 `;
                     <Link to={`/blog/${featuredPosts[0].slug}`}>;
 
-          <div className="bg-zion-blue-dark rounded-lg p-6 mb-8 border border-zion-blue-light">;"
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;"
-              <div className="relative">;"
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate" />;"
-
-                <Input;"
-                  type="text";""
-                  placeholder="Search articles...";"
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
+          {/* Filters and Search */}
+          <div className="bg-zion-blue-dark rounded-lg p-6 mb-8 border border-zion-blue-light">;
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
+              <div className="relative">;
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate" />;
 
               <Select value={selectedCategory} onValueChange={setSelectedCategory}>;
-                <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white">;"
-                  <SelectValue placeholder="Select Category" />;"
+                <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white">;
+                  <SelectValue placeholder="Select Category" />;
+                </SelectTrigger>;
+                <SelectContent className="bg-zion-blue-dark border border-zion-blue-light">;
 
-                ;"
-                <SelectContent className="bg-zion-blue-dark border border-zion-blue-light">;"
-                    <SelectItem key={category} value={category} className="text-white">;                      {category}"
+                </SelectContent>;
+              </Select>;
+            </div>;
+          </div>;
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;"
                 <Card ;
                   key={post.id} ;"
                   className="bg-zion-blue-dark border border-zion-blue-light hover:border-zion-purple transition-all duration-300";"
@@ -192,31 +189,7 @@ const BLOG_POSTS:BlogPost[] = [;
       <Footer />;
 
     </>;
-  ),; }];"
-//Categories for filtering "All Categories";""
-"Trends";""
-"Marketing";""
-"Sustainability";""
-"Ethics";""
-"Recruitment";""
-"Infrastructure" ];"
-export default function Blog () {"
-  const [searchQuery, setSearchQuery] = useState ("");""
-const [selectedCategory, setSelectedCategory] = useState ("All Categories");""
-Blog - AI & Tech Insights" description="Stay updated with the latest trends in AI technology, marketplace strategies, and IT services. Expert articles on innovation, sustainability, and digital transformation." keywords="AI blog, tech trends, IT services blog, artificial intelligence news, technology innovation, digital transformation, sustainable IT" canonical="https: //app.ziontechgroup.com/blog" /> <Header /> <div className="min-h-screen bg-zion-blue pt-12 pb-20 px-4"> <div className="container mx-auto"> <div className="text-center mb-12"> <GradientHeading>AI & Tech Insights <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto"> Expert perspectives on artificial intelligence;, tech innovation, and digital transformation </p> </div> {"
-  featuredPosts.length > 0 && (<div className="mb-16"> <h2 className="text-2xl font-bold text-white mb-6">Featured Article</h2> <div className="grid grid-cols-1 lg: grid-cols-2 gap-8"> <div className="aspect-video overflow-hidden rounded-lg"> <img src= {";
-}className="object-cover w-full h-full hover: scale-105 transition-transform duration-300" /> </div> <div className="flex flex-col justify-center"> <span className="text-sm text-zion-cyan bg-zion-blue-dark px-3 py-1 rounded-full inline-block mb-2"> {";
-}</span> <h3 className="text-3xl font-bold text-white mb-4"> {"
-</h3>"
-}</h3> <p className="text-zion-slate-light mb-6"> {"
-</p>"
-}</p> <div className="flex items-center mb-6"> <img src= {"
-}className="w-10 h-10 rounded-full mr-3" /> <div> <p className="text-white font-medium"> {"
-}</p> <p className="text-sm text-zion-slate-light"> {"
-}</p> </div> </div> <Button asChild className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple w-fit" > <Link to= {"
-)
-}> Read Article   </div> </div> </div>) "
-}<div className="bg-zion-blue-dark rounded-lg p-6 mb-8 border border-zion-blue-light"> <div className="grid grid-cols-1 md:grid-cols-2 gap-4"> <div className="relative"> <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate" /> <Input className="pl-10 bg-zion-blue border border-zion-blue-light text-white" /> </div>  <SelectContent className="bg-zion-blue-dark border border-zion-blue-light"> {"
+
   CATEGORIES.map ( (category) => (<SelectItem key= {
   category;
 }value= {
@@ -239,5 +212,4 @@ Blog - AI & Tech Insights" description="Stay updated with the latest trends in A
 }</span> </div>  <CardFooter className="p-6 pt-0" > <Button variant="link" className="text-zion-cyan p-0 hover: text-zion-purple" asChild > <Link to= {";
 }> Read More     ) ) "
 }</div>) : (<div className="text-center py-16"> <h3 className="text-xl font-bold text-white mb-2">No articles found</h3> <p className="text-zion-slate-light mb-6" >Try adjusting your search or filter criteria</p> <Button;"
-}</div> </div> <Footer /> </>) 
-"`;
+}</div> </div> <Footer /> </>)

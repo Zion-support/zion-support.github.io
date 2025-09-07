@@ -1,11 +1,23 @@
-
-
 interface FeatureCardProps {;
   icon: string,;
   title: string,;
   description: string,;
   features: string[],;
   gradient: string,;
+
+  className?: string;
+}
+
+export default function FeatureCard({ 
+  icon, 
+  title, 
+  description, 
+  features, 
+  gradient, 
+  className = '' 
+}: FeatureCardProps) {
+
+  className?: string;
 
   className?: string;
 }
@@ -18,13 +30,6 @@ export default function FeatureCard({
   className = ''
 }: FeatureCardProps) {
 
-interface FeatureCardProps {
-  icon: string,
-  title: string,
-  description: string,
-  features: string[],
-  gradient: string,
-  class_name?: string;
 interface FeatureCardProps {icon: string;
   title: string;
   description: string;
@@ -59,10 +64,25 @@ pr-12325
  */
 function FeatureCard() {
 
-  return (
-      </ul>;
-    </div>);
+  className?: string;
 }
+export default function FeatureCard({};
+  icon;
+  title;
+  description;
+  features;
+  gradient;
+  className = ''
+}: FeatureCardProps) {}
+  className?: string;
+
+}
+export default /**;
+ * FeatureCard - Function description;
+ */
+function FeatureCard() {}
+  return (
+
     <div className={`feature - card group ${class_name}`}>;
 </div>`;
       <div className={`w - 12 h - 12 ${gradient} rounded - lg flex items - center justify - center mb - 4`}>;
@@ -74,27 +94,10 @@ function FeatureCard() {
       <ul className=&quot;text - sm text - white / 60 space - y-1 & quot;>;
 </ul>)
           <li key={index}>• {feature}</li>))}
-  return (
-    <div className={`feature-card group ${className}`}>
 
       <div className={`w-12 h-12 ${gradient} rounded-lg flex items-center justify-center mb-4`}>
         <span className="text-white text-xl">{icon}</span>
 
-  className?: string;
-}
-
-export default function FeatureCard({ 
-  icon, 
-  title, 
-  description, 
-  features, 
-  gradient, 
-  className = '' 
-}: FeatureCardProps) {
-  return (
-    <div className={`feature-card group ${className}`}>
-      <div className={`w-12 h-12 ${gradient} rounded-lg flex items-center justify-center mb-4`}>
-        <span className="text-white text-xl">{icon}</span>
       </div>
       <h3 className="text-xl font-semibold mb-3">{title}</h3>
       <p className="text-white/70 mb-4">{description}</p>
@@ -102,12 +105,7 @@ export default function FeatureCard({
         {features.map((feature, index) => (
           <li key={index}>• {feature}</li>
         ))}
+
       </ul>;
     </div>);
 }
-    </div>;
-  );
-}
-      </ul>;
-    </div>);`;
-pr-12325

@@ -1,4 +1,3 @@
-import React from 'react';'
 const PricingGuidePage = ({ className }) => {
   return ('
     <div className={className || ''}>'
@@ -8,6 +7,3 @@ const PricingGuidePage = ({ className }) => {
     </div>
   )
 };
-
-    </div>)'
-pr-12325

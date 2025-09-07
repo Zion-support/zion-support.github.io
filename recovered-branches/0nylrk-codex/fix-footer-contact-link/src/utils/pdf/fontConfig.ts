@@ -6,13 +6,52 @@ export interface FontConfig {
 import {jsPDF} from 'jspdf';
 export interface FontConfig {;
 
+  regular: ArrayBuffer;
+  bold?: ArrayBuffer;
+
+  italic?: ArrayBuffer;
+  boldItalic?: ArrayBuffer;
+}'
+export type FontFamily = 'default' | 'montserrat' | 'open-sans' | 'roboto';
+/**
+
+      case 'montserrat':
+        doc && doc.setFont('helvetica');
+        break;
+      case 'open-sans':
+        doc && doc.setFont('helvetica');
+        break;
+      case 'roboto':
+        doc && doc.setFont('helvetica');
+        break;
+      default: doc && doc.setFont('helvetica')
+    }
+  } catch (error) {
+
+    console && console.error('Error loading custom fonts:', error);
+
+    // Fall back to default font
+
+        doc.setFont('helvetica');
+        break;'
+      case 'roboto':'
+        doc.setFont('helvetica');
+        break;'
+      default: doc.setFont('helvetica')
+    }
+  } catch (error) {}
+    // Fall back to default font;
+}'
+
+export interface FontConfig {
+import {jsPDF} from 'jspdf';
+export interface FontConfig {;
 
   }
 }
 
 import {jsPDF} from 'jspdf';
 export interface FontConfig {;
-
 
   regular: ArrayBuffer;
   bold?: ArrayBuffer;
@@ -22,12 +61,7 @@ export interface FontConfig {;
   italic?: ArrayBuffer;
   boldItalic?: ArrayBuffer;
 }
-export type FontFamily = 'default' | 'montserrat' | 'open-sans' | 'roboto';
-/**
- * Loads and registers custom fonts for PDF documents;
- */
-export async function loadCustomFonts(doc: jsPDF, fontFamily: FontFamily = 'default'): Promise<void> {
-</void>
+
 export async function loadCustomFonts (doc: jsPDF, font_family: FontFamily = 'default'): Promise < void> {
   // Check condition;
 if (return, ) {
@@ -51,7 +85,3 @@ if (return, ) {
 
   }
 }
-doc.set_font ('helvetica');
-  }
-}
-pr-12325

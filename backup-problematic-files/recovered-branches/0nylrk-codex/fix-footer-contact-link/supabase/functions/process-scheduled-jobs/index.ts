@@ -13,8 +13,7 @@ serve(async (req) => {;
   const supabaseAdmin = createClient(;
     Deno.env.get("SUPABASE_URL") ?? "";
     Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? "";
-    { auth:{ persistSession:false } }
-  );
+    { auth:{ persistSession:false } });
 ;
   try {;
     // Get pending jobs;
@@ -123,8 +122,7 @@ async function processResumeScoring(supabase, applicationId) {;
         headers:{;
           "Content-Type":"application/json";
           "Authorization":`Bearer ${Deno.env.get("SUPABASE_ANON_KEY")}`};
-        body:JSON.stringify({ applicationId })}
-    );
+        body:JSON.stringify({ applicationId })});
 ;
     if (!response.ok) {;
       const errorData = await response.json();
@@ -180,8 +178,7 @@ async function processContentGeneration(supabase, contentType) {;
           contentType;
           autoPublish:contentType === 'blog' ? true :false;
           includeImage:contentType === 'blog' ? true :false;
-        })}
-    );
+        })});
 ;
     if (!response.ok) {;
       const errorData = await response.json();
@@ -217,8 +214,7 @@ async function processContentGeneration(supabase, contentType) {;
               body:contentData.body;
               testMode:true;
               testEmail:adminEmail;
-            })}
-        );
+            })});
         ;
         // Create notification for admin;
         await supabase.from('notifications').insert({;
@@ -237,50 +233,7 @@ async function processContentGeneration(supabase, contentType) {;
   }
 }}
 });
-async function processOnboardingReminder (supabase, userId, milestone, role) {
-  try {
-    // // // console.log(`Starting scheduled content generation for ${contentType}`),    
-    // Call the content generation function
-    const response = await fetch(
-      `${Deno.env.get(&quot;SUPABASE_URL&quot;)}/functions/v1/generate-content`,
-      {
-        method: &quot;POST&quot;,
-        headers: {
-          &quot;Content-Type&quot;: &quot;application/json&quot;,
-          &quot;Authorization&quot;: `Bearer ${Deno.env.get(&quot;SUPABASE_ANON_KEY&quot;)}`},
-        body: JSON.stringify({ 
-          contentType,
-          autoPublish: contentType === 'blog' ? true : false,
-          includeImage: contentType === 'blog' ? true : false
-        })}
-    ),
 
-    if (!response.ok) {
-      const errorData = await response.json(),
-      throw new Error(`Content generation failed: ${JSON.stringify(errorData)}`)
-    }
-
-    const contentData = await response.json(),
-    // // // console.log(`Successfully generated ${contentType} content`),  } catch (error) {}
-}
-
-async function processContentGeneration(_supabase, _contentType) {_try {
-    
-    
-    // Call the content generation function
-    const _response = await fetch(_`${Deno.env.get("SUPABASE_URL")}/functions/v1/generate-content`,
-      {_method: "POST", _headers: {
-          "Content-Type": "application/json", _"Authorization": `Bearer ${Deno.env.get("SUPABASE_ANON_KEY")}`},
-        body: JSON.stringify({_contentType, _autoPublish: contentType === 'blog' ? true : false, _includeImage: contentType === 'blog' ? true : false})}
-    );
-
-    if (!response.ok) {_const _errorData = await response.json();
-      throw new Error(`Content generation failed: ${JSON.stringify(errorData)}`);
-    }
-
-    const _contentData = await response.json();
-    
-    
     // If it's a newsletter, send a test email to the admin
     if (contentType === 'newsletter') {_// Get admin email from profiles
       const { data: adminProfiles} = await supabase
@@ -288,39 +241,13 @@ async function processContentGeneration(_supabase, _contentType) {_try {
         .select('email')
         .eq('roleadmin')
         .limit(1),
-      
-      if (adminProfiles && adminProfiles.length > 0) {
-        const adminEmail = adminProfiles[0].email,
-        
-        // Send test newsletter to admin
-        await fetch(
-          `${Deno.env.get(&quot;SUPABASE_URL&quot;)}/functions/v1/send-newsletter`,
-          {
-            method: &quot;POST&quot;,
-            headers: {
-              &quot;Content-Type&quot;: &quot;application/json&quot;,
-              &quot;Authorization&quot;: `Bearer ${Deno.env.get(&quot;SUPABASE_ANON_KEY&quot;)}`},
-            body: JSON.stringify({
-              subject: contentData.subject,
-              previewText: contentData.previewText,
-              body: contentData.body,
+
               testMode: true,
               testEmail: adminEmail
             })}
         ),
-        
-        // Create notification for admin
-        await supabase.from('notifications').insert({
-          user_id: null, // System notification visible to admins
-          title: &quot;Newsletter Draft Ready&quot;,
-          message: &quot;AI-generated newsletter draft has been sent to your email for review.&quot;,
-          type: &quot;system&quot;,
+
           read: false
         })
       }
     }
-    
-    return contentData
-  } catch (error) {
-    console.error(`Error processing ${contentType} generation:`, error)
-  }}

@@ -1,16 +1,6 @@
-
-}
-
-import {Certification} from '@/types/resume';
-import {format} from 'date-fns';
-interface CertificationsSectionProps {
-  certifications: Certification[]
-import {Certification} from '@/types / resume';
-import {format} from 'date - fns';
-
-
 interface CertificationsSectionProps {
   certifications: Certification[];
+
 }
 
 import { Certification  } from '@/types/resume';
@@ -20,14 +10,14 @@ interface CertificationsSectionProps {
 }
 export function CertificationsSection({ certifications }: CertificationsSectionProps) {
 
-  const formatDate = (date: Date | string | undefined) => {
-    if (!date) return ''
-    if (typeof date === 'string') {
-      return format(new Date(date), 'MMM yyyy')
-    }
-    return format(date, 'MMM yyyy')
-  }
-  if (certifications.length === 0) return null;
+import {Certification} from '@/types / resume';
+
+import {format} from 'date - fns';
+
+interface CertificationsSectionProps {}
+  certifications: Certification[];
+}
+
 import {Certification} from '@/types/resume';
 import {format} from 'date-fns';
 interface CertificationsSectionProps {
@@ -45,17 +35,25 @@ export function CertificationsSection({ certifications }: CertificationsSectionP
     if (!date) return '',;
     if (typeof date === 'string') {;
       return format(new Date(date), 'MMM yyyy');
+
     }
 
-    return format(date, 'MMM yyyy')
-  },
-
-if (certifications.length === 0) return null,
     return format(date, 'MMM yyyy');
   };
     return format(date, 'MMM yyyy')
   },
   if (certifications.length === 0) return null,
+
+  return (
+    <div>
+      <h2 className="text-lg font-semibold border-b mb-3">Certifications</h2>"
+      <div className="space-y-2">
+        {certifications.map((cert, index) => ("
+          <div key={cert.id |index} className="space-y-1">"
+            <div className="flex justify-between">"
+              <h3 className="text-sm font-medium">{cert.name}</h3>
+              {cert.issue_date && ("
+
   return (
     <div>
       <h2 className="text-lg font-semibold border-b mb-3">Certifications</h2>
@@ -65,10 +63,12 @@ if (certifications.length === 0) return null,
             <div className="flex justify-between">
               <h3 className="text-sm font-medium">{cert.name}</h3>
               {cert.issue_date && (
+
                 <span className="text-sm">
                   {formatDate(cert.issue_date)}
                   {cert.expiration_date && ` - ${formatDate(cert.expiration_date)}`}
                 </span>
+
 import {Certification} from '@/types/resume';
 import {format} from 'date-fns';
 interface CertificationsSectionProps {;
@@ -99,11 +99,19 @@ export function CertificationsSection(): any ({ certifications }: Certifications
                   {formatDate(cert && cert.issue_date)}
                   {cert && cert.expiration_date && ` - ${formatDate(cert && cert.expiration_date)}`}
                 </span>;
+
+              )}
+            </div>;"
+            <p className="text-sm">{cert && cert.issuing_organization}</p>;
+            {cert && cert.credential_url && (;"
+              <p className="text-sm">;"
+
               )}
             </div>;
             <p className="text-sm">{cert && cert.issuing_organization}</p>;
             {cert && cert.credential_url && (;
               <p className="text-sm">;
+
                 <a href={cert && cert.credential_url} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">;
                   View Credential;
                 </a>;
@@ -118,313 +126,24 @@ export function CertificationsSection(): any ({ certifications }: Certifications
 }
 
 import { Certification } from '@/types/resume',;
+
 import { format } from 'date-fns',;
 ;
 interface CertificationsSectionProps {;
   certifications:Certification[];
 }
 ;
-export function CertificationsSection({ certifications } CertificationsSectionProps) {;
-  const formatDate = (date:Date | string | undefined) => {;
-    if (!date) return '',;
-    if (typeof date === 'string') {;
-      return format(new Date(date), 'MMM yyyy'),;
-    }
+
     return format(date, 'MMM yyyy'),;
   },;
 ;
   if (certifications.length === 0) return null,;
   ;
   return (;
-    <div>;
-      <h2 className="text-lg font-semibold border-b mb-3">Certifications</h2>;
-      <div className="space-y-2">;
-        {certifications.map((cert, index) => (;
-          <div key={cert.id || index} className="space-y-1">;
-            <div className="flex justify-between">;
-              <h3 className="text-sm font-medium">{cert.name}</h3>;
-              {cert.issue_date && (;
-                <span className="text-sm">;
-                  {formatDate(cert.issue_date)}
-                  {cert.expiration_date && ` - ${formatDate(cert.expiration_date)}`}
-                </span>;
-                </span>;
-interface CertificationsSectionProps {
-  certifications: Certification[];
-}
-              )}
-    }              )}
-            </div>;
+
             <p className="text-sm">{cert.issuing_organization}</p>;
-            {cert.credential_url && (;
-              <p className="text-sm">;
+            {cert.credential_url && (;"
+              <p className="text-sm">;"
                 <a href={cert.credential_url} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">;
                   View Credential;
                 </a>;
-              </p>;            )}
-          </div>;
-        ))}
-      </div>;
-    </div>;
-export /**
- * CertificationsSection - Function description
- */
-function CertificationsSection() {
-  const format_date = (date: Date | string | undefined) =>: any {
-    // Check condition
-if (return '', ) {
-  $2
-}
-    // Check condition
-if ( {) {
-  $2
-}
-      return format (new Date (date), 'MMM yyyy');
-    }
-    return format (date, 'MMM yyyy');
-  }
-;
-  // Check condition
-if (return null) {
-  $2
-}
-  return (
-    <div>;
-      <h2 className="text - lg font - semibold border - b mb - 3">Certifications</h2>;
-      <div className="space - y-2">;
-        {certifications.map ((cert, index) => (
-          <div key={cert.id || index} className="space - y-1">;
-            <div className="flex justify - between">;
-              <h3 className="text - sm font - medium">{cert.name}</h3>;
-              {cert.issue_date && (
-                <span className="text - sm">;
-                  {format_date (cert.issue_date)}
-                  {cert.expiration_date && ` - ${format_date (cert.expiration_date)}`}
-                </span>)}
-            </div>;
-            <p className="text - sm">{cert.issuing_organization}</p>;
-            {cert.credential_url && (
-              <p className="text - sm">;
-                <a href={cert.credential_url} target="_blank" rel="noopener noreferrer" className="text - blue - 600 hover:underline">;
-                  View Credential;
-                </a>;
-              </p>)}
-          </div>))}
-      </div>;
-    </div>);
-}
-  ),;}
- if (certifications.length === 0) return null;
-{
-  formatDate (cert.issue date) 
-}{
-  cert.expiration date && ` - $ {
-  formatDate (cert.expiration date) 
-}` 
-
-
-}
-
-
-  return (
-    <div>
-</div>'
-      <h2 className="text-lg font-semibold border-b mb-3">Certifications</h2>""
-      <div className="space-y-2">"
-</div>"
-          <div key={cert.id |index} className="space-y-1">"
-</div>"
-            <div className="flex justify-between">"
-</div>"
-              <h3 className="text-sm font-medium">{cert.name}</h3>""
-                <span className="text-sm">"
-</span>
-                </span>
-            </div>;"
-            <p className="text-sm">{cert && cert.issuing_organization}</p>;""
-              <p className="text-sm">;"
-</p>"
-                <a href={cert && cert.credential_url} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">;"
-</a>
-                </a>;
-              </p>;
-          </div>;
-      </div>;
-    </div>;
-    <div>;
-</div>"
-      <h2 className="text-lg font-semibold border-b mb-3">Certifications</h2>;""
-      <div className="space-y-2">;"
-</div>"
-          <div key={cert.id || index} className="space-y-1">;"
-</div>"
-            <div className="flex justify-between">;"
-</div>"
-              <h3 className="text-sm font-medium">{cert.name}</h3>;""
-                <span className="text-sm">;"
-</span>
-                </span>;
-                </span>;
-            </div>;"
-            <p className="text-sm">{cert.issuing_organization}</p>;""
-              <p className="text-sm">;"
-</p>"
-                <a href={cert.credential_url} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">;"
-</a>
-                </a>;)
-
-              </p>;            )}
-          </div>;
-      </div>;
-    </div>;
-
-    <div>;
-</div>"
-      <h2 className="text - lg font - semibold border - b mb - 3">Certifications</h2>;""
-      <div className="space - y-2">;"
-</div>"
-          <div key={cert.id || index} className="space - y-1">;"
-</div>"
-            <div className="flex justify - between">;"
-</div>"
-              <h3 className="text - sm font - medium">{cert.name}</h3>;""
-                <span className="text - sm">;"
-</span>
-                </span>)}
-            </div>;"
-            <p className="text - sm">{cert.issuing_organization}</p>;""
-              <p className="text - sm">;"
-</p>"
-                <a href={cert.credential_url} target="_blank" rel="noopener noreferrer" className="text - blue - 600 hover:underline">;"
-</a>
-                </a>;
-              </p>)}
-          </div>))}
-      </div>;
-    </div>);
-
-}</span>) 
-}</div> View Credential </Link> </p>) 
-}</div>) ) 
-}</div> </div>) 
-}
-              )}
-            </div>
-            <p className="text-sm">{cert.issuing_organization}</p>
-            {cert.credential_url && (
-              <p className="text-sm">
-                <a href={cert.credential_url} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
-                  View Credential
-                </Link>
-              </p>
-            )}
-          </div>
-        ))}
-      </div>
-    </div>
-  )
-}
-
-}
-
-
-import {Certification} from '@/types/resume';
-import {format} from 'date-fns';
-interface CertificationsSectionProps {
-  // TODO: Implement
-  certifications: Certification[]
-import {Certification} from '@/types / resume';
-import {format} from 'date - fns';
-  // TODO: Implement
-  certifications: Certification[];
-
-
-
-  // TODO: Implement
-
-import { Certification } from '@/types/resume',;
-import { format } from 'date-fns',;
-interface CertificationsSectionProps {;
-
-
-
-;
-export function CertificationsSection({ certifications }: CertificationsSectionProps) {;
-  const formatDate = (date: Date | string | undefined) => {;
-    if (!date) return ,;
-    if (typeof date === 'string') {;
-      return format(new Date(date), 'MMM yyyy');
-
-    return format(date, 'MMM yyyy')
-  },
-
-
-  if (certifications.length === 0) return null,
-    return format(date, 'MMM yyyy');
-  };
-
-  return (
-    <div>
-</div>
-      <h2 className="text-lg font-semibold border-b mb-3">Certifications</h2>""
-      <div className="space-y-2">"
-</div>"
-          <div key={cert.id |index} className="space-y-1">"
-            <div className="flex justify-between">"
-              <h3 className="text-sm font-medium">{cert.name}</h3>""
-                <span className="text-sm">"
-</span>
-            </div>;"
-            <p className="text-sm">{cert && cert.issuing_organization}</p>;""
-              <p className="text-sm">;"
-</p>"
-                <a href={cert && cert.credential_url} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">;"
-</a>
-                </a>;
-              </p>;
-          </div>;
-    <div>;
-      <h2 className="text-lg font-semibold border-b mb-3">Certifications</h2>;""
-      <div className="space-y-2">;"
-          <div key={cert.id || index} className="space-y-1">;"
-            <div className="flex justify-between">;"
-              <h3 className="text-sm font-medium">{cert.name}</h3>;""
-                <span className="text-sm">;"
-                </span>;
-            <p className="text-sm">{cert.issuing_organization}</p>;""
-                <a href={cert.credential_url} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">;"
-                </a>;)
-              </p>;            )}
-      <h2 className="text - lg font - semibold border - b mb - 3">Certifications</h2>;""
-      <div className="space - y-2">;"
-          <div key={cert.id || index} className="space - y-1">;"
-            <div className="flex justify - between">;"
-              <h3 className="text - sm font - medium">{cert.name}</h3>;""
-                <span className="text - sm">;"
-                </span>)}
-            <p className="text - sm">{cert.issuing_organization}</p>;""
-              <p className="text - sm">;"
-                <a href={cert.credential_url} target="_blank" rel="noopener noreferrer" className="text - blue - 600 hover:underline">;"
-              </p>)}
-          </div>))}
-    </div>);
-}</span>) 
-}</div> View Credential  </p>) 
-}</div>) ) 
-}</div> </div>) 
-
-            </div>"
-            <p className="text-sm">{cert.issuing_organization}</p>""
-              <p className="text-sm">"
-                <a href={cert.credential_url} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">"
-              </p>
-pr-12325
-</a>
-
-                </Link>
-              </p>
-          </div>
-      </div>
-    </div>
-  )
-}

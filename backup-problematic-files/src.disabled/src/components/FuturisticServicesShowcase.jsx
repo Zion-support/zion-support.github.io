@@ -1,4 +1,3 @@
-import React from 'react';'
 const FuturisticServicesShowcase = ({ className }) => {
   return ('
     <div className={className || ''}>'
@@ -8,6 +7,3 @@ const FuturisticServicesShowcase = ({ className }) => {
     </div>
   )
 };
-
-    </div>)'
-pr-12325
