@@ -1,4 +1,8 @@
 import React from 'react';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
 interface AppMinimalProps {
   className?: string;
@@ -23,6 +27,21 @@ const AppMinimal: React.FC<AppMinimalProps> = ({
       )}
     </main>
   );
+<<<<<<< HEAD
 };
 
 export default AppMinimal;
+=======
+}
+=======
+export default function AppMinimal(): React.JSX.Element {
+  // TODO: Implement
+}
+  return (
+    <main>
+</main>
+      <h1>Zion Tech Group - Minimal App</h1>
+      <p>Building the future with innovative technology solutions</p>
+    </main>)
+>>>>>>> main
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

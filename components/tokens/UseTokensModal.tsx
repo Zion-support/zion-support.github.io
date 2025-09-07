@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 export type RedemptionType =;
@@ -29,12 +30,23 @@ export type RedemptionType =
 >>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 export default function UseTokensModal({
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+=======
+
+<<<<<<< HEAD
+export type RedemptionType =
+  | "boost_profile"
+  | "promote_listing"
+  | "premium_support";
+export default function UseTokensModal({
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   isOpen
   onClose
   serviceId
   defaultType
 }: {
 
+<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 import { connectMetaMask, getAccounts } from '../../utils/wallet';
 export type RedemptionType = $2;
@@ -60,19 +72,66 @@ export default function UseTokensModal({
     })()
   }, []),
 
-  }
-  async function redeem() {
-    setIsSubmitting(true);
-    try {
+=======
+=======
+  isOpen;
+  onClose;
+  serviceId;
+  defaultType;
+}: {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+  isOpen,
+  onClose,
+  serviceId,
+  defaultType,
+}: {;
+  isOpen: boolean;
+  onClose: () => void;
+  serviceId?: string;
+  defaultType?: RedemptionType;
+}) {;
+  const [account, setAccount] = useState<string | null>(null);
+  const [tokens, setTokens] = useState<number>(100);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const usdValue = (tokens * 0.01).toFixed(2);
+  useEffect(() => {}
+    (async () => {}
+  const [tokens, setTokens] = useState<number>(100);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const usdValue = (tokens * 0 && 0.01).toFixed(2);
 
+  useEffect(() => {;
+    (async () => {;
+      const accs = await getAccounts();
+if (accs && accs.length > 0) setAccount(accs[0]);
+    })();
+  }, []);
+  async function connect() {
+    const accs = await connectMetaMask();
+if (accs && accs.length > 0) setAccount(accs[0]);
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+  }
+  async function redeem() {}
+    setIsSubmitting(true);
+<<<<<<< HEAD
+    try {
       const res = await fetch('/api/tokens/redeem', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
 body: JSON.stringify({ account, amount: tokens, type, serviceId }),
+<<<<<<< HEAD
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+    try {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       });
       const data = await res && res.json();
       if (data?.ok) {;
         onClose();
+<<<<<<< HEAD
   async function connect() {
     const accs = await connectMetaMask($2);
     if (accs && accs.length > 0) setAccount(accs[0])
@@ -130,6 +189,28 @@ export default function UseTokensModal({isOpen;
       <div className='relative w-full sm:max-w-md rounded-2xl bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 shadow-xl m-0 sm:m-4 p-4'>;
         <div className='flex items-center justify-between mb-3'>;
           <div className='font-semibold'>Use ZION Tokens</div>;
+=======
+      }
+    } finally {;
+      setIsSubmitting(false);
+    }
+  }
+
+  if (!isOpen) return null;
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+  return (
+            >;
+              <option value="boost_profile">Boost profile</option>;"
+              <option value="promote_listing">Promote listing</option>;"
+              <option value="premium_support">Get premium support</option>;
+
+<div className='fixed inset-0 z-[60] flex items-end sm: items-center justify-center' />
+      <div className='absolute inset-0 bg-black/40' onClick={onClose} />
+      <div className='relative w-full sm:max-w-md rounded-2xl bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 shadow-xl m-0 sm:m-4 p-4' />
+        <div className='flex items-center justify-between mb-3' />
+          <div className='font-semibold' />Use ZION Tokens</div>
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
           <button;
             onClick={onClose}
             className='px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-gray-800';
@@ -151,8 +232,21 @@ export default function UseTokensModal({isOpen;
               <option value='premium_support'>Get premium support</option>;
             </select>;
           </div>;
+<<<<<<< HEAD
           <div className='text-sm'>;
             <div className='mb-1'>Amount (ZION)</div>;
+=======
+<<<<<<< HEAD
+              <button;
+                onClick={connect}"
+                className="enhanced-button enhanced-button-primary">;
+                Connect MetaMask;
+              </button>;
+<<<<<<< HEAD
+=======
+          <div className='text-sm' />;
+            <div className='mb-1' />Amount (ZION)</div>;
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
             <input;
               type='number';
               min={1}
@@ -173,6 +267,61 @@ export default function UseTokensModal({isOpen;
               >;
                 Connect MetaMask;
               </button>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+<div className='fixed inset-0 z-[60] flex items-end sm:items-center justify-center'>
+      <div className='absolute inset-0 bg-black/40' onClick={onClose} />
+      <div className='relative w-full sm:max-w-md rounded-2xl bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 shadow-xl m-0 sm:m-4 p-4'>
+        <div className='flex items-center justify-between mb-3'>
+          <div className='font-semibold'>Use ZION Tokens</div>
+          <button
+            onClick={onClose}
+            className='px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-gray-800'
+          >
+            Close
+          </button>
+        </div>
+
+        <div className='text-sm mb-3'>Conversion rate: 1 ZION = $0.01</div>
+
+        <div className='space-y-3'>
+          <div className='text-sm'>
+            <div className='mb-1'>Redemption type</div>
+            <select
+              value={type}
+              onChange={e => setType(e.target.value as RedemptionType)}
+              className='w-full rounded border border-gray-300 dark:border-gray-700 bg-transparent px-2 py-2'
+            >
+              <option value='boost_profile'>Boost profile</option>
+              <option value='promote_listing'>Promote listing</option>
+              <option value='premium_support'>Get premium support</option>
+            </select>
+          </div>
+
+          <div className='text-sm'>
+            <div className='mb-1'>Amount (ZION)</div>
+            <input
+              type='number'
+              min={1}
+              value={tokens}
+              onChange={e => setTokens(parseInt(e.target.value || '0', 10))}
+              className='w-full rounded border border-gray-300 dark:border-gray-700 bg-transparent px-2 py-2'
+            />
+            <div className='opacity-70 mt-1'>Approx. ${usdValue} USD</div>
+          </div>
+
+          <div className='text-sm'>
+            <div className='mb-1'>Wallet</div>
+            {account ? (
+              <div className='rounded border border-green-600 text-green-700 dark:text-green-400 px-2 py-2'>
+                Connected: {account.slice(0, 6)}…{account.slice(-4)}
+              </div>
+            ) : (
+              <button
+                onClick={connect}
+                className='enhanced-button enhanced-button-primary'
+              >
+                Connect MetaMask
+              </button>
             )}
           <button
           </div>;
@@ -180,8 +329,22 @@ export default function UseTokensModal({isOpen;
 <div className='mt-4 flex items-center justify-between'>;
           <div className='text-xs opacity-70'>;
             You can spend tokens to boost visibility, promote listings, or;
+<<<<<<< HEAD
             access premium support.;
           </div>;
+=======
+access premium support.
+          </div>
+origin/cursor/automate-test-improve-and-merge-code-2533
+          <button
+            disabled={!account |isSubmitting |tokens <= 0}
+            onClick={redeem}
+            className="enhanced-button enhanced-button-primary disabled: opacity-50">;
+          <div className="text-sm">;
+            <div className="mb-1">Amount (ZION)</div>;
+            <input;
+              type="number";
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
           <button;
             disabled={!account |isSubmitting |tokens <= 0}
             onClick={redeem}
@@ -210,6 +373,51 @@ export default function UseTokensModal({isOpen;
             <div className="mb-1">Wallet</div>;
             {account ? (<div className="rounded border border - green - 600 text - green - 700 dark:text - green - 400 px-2 py-2">;
                 Connected: {account.slice (0, 6)}…{account.slice (-4)}
+<<<<<<< HEAD
+              </div>) : (
+              <button;
+                on_click={connect}
+                className="enhanced - button enhanced-button-primary";
+=======
+          <button;
+            disabled={!account |isSubmitting |tokens <= 0}
+            onClick={redeem}"
+            className="enhanced-button enhanced-button-primary disabled: opacity-50">;"
+          <div className="text - sm">;"
+            <div className="mb - 1">Amount (ZION)</div>;
+            <input;"
+              type="number";
+              min={1}
+              value={tokens}"
+              on_change={(e) => set_tokens (parse_int (e.target.value || "0", 10))}"
+              className="w - full rounded border border - gray - 300 dark:border - gray - 700 bg - transparent px - 2 py - 2";
+            />;"
+            <div className="opacity - 70 mt - 1">Approx. ${usd_value} USD</div>;
+          </div>;"
+          <div className="text - sm">;"
+            <div className="mb - 1">Wallet</div>;
+            {account ? ("
+              <div className="rounded border border - green - 600 text - green - 700 dark:text - green - 400 px - 2 py - 2">;
+                Connected: {account.slice (0, 6)}…{account.slice (-4)}
+              </div>) : (
+              <button;
+                on_click={connect}"
+                className="enhanced - button enhanced - button - primary";
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+              >;
+                Connect MetaMask;
+              </button>)}
+          </div>;
+<<<<<<< HEAD
+        </div>;
+        <div className="mt - 4 flex items-center justify-between">;
+          <div className="text-xs opacity-70">;
+=======
+        </div>;"
+        <div className="mt - 4 flex items - center justify - between">;"
+          <div className="text - xs opacity - 70">;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
               </div>) : (<button;
                 on_click={connect}
                 className="enhanced - button enhanced - button - primary";
@@ -218,20 +426,47 @@ export default function UseTokensModal({isOpen;
                 Connect MetaMask;
               </button>)}
           </div>;
+<<<<<<< HEAD
         </div>;
         <div className="mt - 4 flex items - center justify - between">;
           <div className="text - xs opacity - 70">;
         <div className="mt - 4 flex items-center justify-between">;
           <div className="text-xs opacity-70">;
+=======
+        </div>;"
+        <div className=\"mt - 4 flex items - center justify - between\" />;"
+          <div className=\"text - xs opacity - 70\" />;"
+        <div className=\"mt - 4 flex items-center justify-between\" />;"
+          <div className=\"text-xs opacity-70\" />;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
             You can spend tokens to boost visibility, promote listings, or;
             access premium support.;
           </div>;
           <button;
             disabled={!account || is_submitting || tokens <= 0}
+<<<<<<< HEAD
             on_click={redeem}
             className="enhanced - button enhanced - button - primary disabled: opacity - 50";
             className="enhanced - button enhanced - button-primary disabled: opacity-50";
           >;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+            on_click={redeem}
+            className="enhanced - button enhanced - button-primary disabled: opacity-50";
+=======
+            on_click={redeem}"
+            className="enhanced - button enhanced - button - primary disabled: opacity - 50";
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+          >;
+=======
+            on_click={redeem}"
+            className=\"enhanced - button enhanced - button - primary disabled: opacity - 50\";"
+            className=\"enhanced - button enhanced - button-primary disabled: opacity-50\" />
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
             Redeem;
           </button>;
         </div>;
@@ -240,6 +475,11 @@ export default function UseTokensModal({isOpen;
           <button disabled={!account || isSubmitting || tokens <= 0} onClick={redeem} className="enhanced-button enhanced-button-primary disabled: opacity-50">Redeem</button>;
         </div>;
       </div>;
+<<<<<<< HEAD
+"
+        <div className="mt-4 flex items-center justify-between">"
+          <div className="text-xs opacity-70">You can spend tokens to boost visibility, promote listings, or access premium support.</div>"
+=======
     </div>;
   )}
     </div>)}
@@ -248,6 +488,7 @@ export default function UseTokensModal({isOpen;
 =======
   if (!isOpen) return null;
 
+<<<<<<< HEAD
   if (!isOpen) return null
   return (
 
@@ -441,3 +682,26 @@ export type RedemptionType = 'boost profile' | 'promote listing' | 'premium supp
 =======
 >>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+=======
+        <div className="mt-4 flex items-center justify-between">
+          <div className="text-xs opacity-70">You can spend tokens to boost visibility, promote listings, or access premium support.</div>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+          <button disabled={!account || isSubmitting || tokens <= 0} onClick={redeem} className="enhanced-button enhanced-button-primary disabled: opacity-50">Redeem</button>
+        </div>
+      </div>
+    </div>
+  );
+}
+    </div>);
+}
+<<<<<<< HEAD
+<<<<<<< HEAD
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

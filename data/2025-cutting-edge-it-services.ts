@@ -1,3 +1,23 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+
+
+<<<<<<< HEAD
+export const cuttingEdgeITServices2025 = [
+  {
+    id: 'quantum-cloud-infrastructure-platform'
+    name: 'Quantum Cloud Infrastructure Platform'
+=======
+<<<<<<< HEAD
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+id: 'quantum-cloud-infrastructure-platform',
+    name: 'Quantum Cloud Infrastructure Platform',
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+
 
 ;
 export const cuttingEdgeITServices2025 = [;
@@ -476,12 +496,16 @@ export const cuttingEdgeITServices2025 = [
   {
     id: 'quantum-cloud-infrastructure-platform'
     name: 'Quantum Cloud Infrastructure Platform'
+<<<<<<< HEAD
 id: 'quantum-cloud-infrastructure-platform',
     name: 'Quantum Cloud Infrastructure Platform',
 origin/cursor/automate-test-improve-and-merge-code-2533
 
 id: 'quantum-cloud-infrastructure-platform',
     name: 'Quantum Cloud Infrastructure Platform',
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     description:
       'Next-generation cloud infrastructure that leverages quantum computing principles for enhanced security, performance, and scalability across distributed systems.'
       'Quantum-enhanced security protocols'
@@ -894,19 +918,38 @@ id: 'quantum-cloud-infrastructure-platform',
       'Google Cloud'
     ]
     compliance: [
+<<<<<<< HEAD
       'DevOps Best Practices'
       'Security Standards'
       'Quality Assurance Protocols'
     ]
   }
+<<<<<<< HEAD
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+<<<<<<< HEAD
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+=======
+      'DevOps Best Practices'
+      'Security Standards'
+      'Quality Assurance Protocols'
+    ]
+  }
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 export const cuttingEdgeITServices2025 = [
   {
 
 
+<<<<<<< HEAD
 
 
 ];      'Software development automationContinuous deployment pipelinesPerformance monitoring and optimizationIncident response automationQuality assurance automation'
@@ -997,6 +1040,156 @@ origin/cursor/automate-test-improve-and-merge-code-20a4
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+<<<<<<< HEAD
+];      'Software development automationContinuous deployment pipelinesPerformance monitoring and optimizationIncident response automationQuality assurance automation'
+    id: 'quantum-cloud-infrastructure-platform', name: 'Quantum Cloud Infrastructure Platform',
+    description: 'Next-generation cloud infrastructure that leverages quantum computing principles for enhanced security, performance, and scalability across distributed systems.',
+    features: [
+      'Quantum-enhanced security protocolsDistributed quantum computing nodesReal-time infrastructure optimizationQuantum-resistant encryptionAdvanced load balancing algorithmsPredictive scaling capabilitiesMulti-cloud quantum orchestrationReal-time performance monitoring';
+      'Quantum-enhanced data processingAutomated infrastructure management'
+    market_size: '$25.6B',
+    target_audience:;
+      'Software development companies, enterprises, DevOps teams, IT operations teams, development agencies',
+    competitive_advantage:;
+      'AI - powered DevOps automation, predictive monitoring, intelligent incident response',
+    use_cases: [;
+      'Software development automation',
+      'Continuous deployment pipelines',
+      'Performance monitoring and optimization',
+      'Incident response automation',
+      'Quality assurance automation',
+    ],
+    integrations: [;
+      'GitHub',
+      'GitLab',
+      'Jenkins',
+      'Docker',
+      'Kubernetes',
+      'AWS',
+      'Azure',
+      'Google Cloud',
+    ],
+    compliance: [;
+=======
+<<<<<<< HEAD
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+origin/cursor/expand-services-advertise-and-build-project-c28b
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+];      'Software development automationContinuous deployment pipelinesPerformance monitoring and optimizationIncident response automationQuality assurance automation'
+    id: 'quantum-cloud-infrastructure-platform', name: 'Quantum Cloud Infrastructure Platform',
+    description: 'Next-generation cloud infrastructure that leverages quantum computing principles for enhanced security, performance, and scalability across distributed systems.',
+    features: [
+      'Quantum-enhanced security protocolsDistributed quantum computing nodesReal-time infrastructure optimizationQuantum-resistant encryptionAdvanced load balancing algorithmsPredictive scaling capabilitiesMulti-cloud quantum orchestrationReal-time performance monitoring';
+      'Quantum-enhanced data processingAutomated infrastructure management'
+    market_size: '$25.6B',
+    target_audience:;
+      'Software development companies, enterprises, DevOps teams, IT operations teams, development agencies',
+    competitive_advantage:;
+      'AI - powered DevOps automation, predictive monitoring, intelligent incident response',
+    use_cases: [;
+      'Software development automation',
+      'Continuous deployment pipelines',
+      'Performance monitoring and optimization',
+      'Incident response automation',
+      'Quality assurance automation',
+    ],
+    integrations: [;
+      'GitHub',
+      'GitLab',
+      'Jenkins',
+      'Docker',
+      'Kubernetes',
+      'AWS',
+      'Azure',
+      'Google Cloud',
+    ],
+    compliance: [;
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+      'DevOps Best Practices',
+      'Security Standards',
+=======
+
+
+export const cuttingEdgeITServices2025 = []
+  {}
+      'DevOps Best Practices','
+      'Security Standards','
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+      'Quality Assurance Protocols',
+    ],
+<<<<<<< HEAD
+;
+  },;
+
+'
+];      'Software development automationContinuous deployment pipelinesPerformance monitoring and optimizationIncident response automationQuality assurance automation'
+<<<<<<< HEAD
+];      'Software development automation_continuous deployment pipelines_performance monitoring and optimization_incident response automation_quality assurance automation';
+];      'Software development automation_continuous deployment pipelines_performance monitoring and optimization_incident response automation_quality assurance automation';
+=======
+<<<<<<< HEAD
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+];      'Software development automation_continuous deployment pipelines_performance monitoring and optimization_incident response automation_quality assurance automation';
+origin/cursor/automate-test-improve-and-merge-code-20a4
+origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+=======
+
+  },;
+
+
+];      'Software development automationContinuous deployment pipelinesPerformance monitoring and optimizationIncident response automationQuality assurance automation'
+];      'Software development automation_continuous deployment pipelines_performance monitoring and optimization_incident response automation_quality assurance automation';
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+    ];
+    integrations: ['GitHubGitLabJenkinsDockerKubernetesAWSAzureGoogle Cloud'];
+
+
+;
+<<<<<<< HEAD
+    compliance: ['DevOps Best PracticesSecurity StandardsQuality Assurance Protocols']
+
+
+;
+=======
+<<<<<<< HEAD
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+origin/cursor/automate-test-improve-and-merge-code-20a4
+    compliance: ['DevOps Best PracticesSecurity StandardsQuality Assurance Protocols']
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+<<<<<<< HEAD
+=======
+    compliance: ['DevOps Best PracticesSecurity StandardsQuality Assurance Protocols']
+
+
+    compliance: ['DevOps Best PracticesSecurity StandardsQuality Assurance Protocols']
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+
+
+
+    ];'
+    integrations: ['GitHubGitLabJenkinsDockerKubernetesAWSAzureGoogle Cloud'];
+
+
+
+'
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+    compliance: ['DevOps Best PracticesSecurity StandardsQuality Assurance Protocols']
+
+
+
+
+<<<<<<< HEAD
     compliance: ['DevOps Best PracticesSecurity StandardsQuality Assurance Protocols']
 
 
@@ -1005,22 +1198,21 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     compliance: ['DevOps Best PracticesSecurity StandardsQuality Assurance Protocols']
 
 
-
-
-    compliance: ['DevOps Best PracticesSecurity StandardsQuality Assurance Protocols']
-
-
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 export const cuttingEdgeITServices2025 = [;
-  {;
-    id: 'quantum-cloud-infrastructure-platform',;
-    name: 'Quantum Cloud Infrastructure Platform',;
+  {;'
+    id: 'quantum-cloud-infrastructure-platform',;'
+    name: 'Quantum Cloud Infrastructure Platform',;'
     description: 'Next-generation cloud infrastructure that leverages quantum computing principles for enhanced security, performance, and scalability across distributed systems.',;
-    features: [;
-      'Quantum-enhanced security protocolsDistributed quantum computing nodesReal-time infrastructure optimizationQuantum-resistant encryptionAdvanced load balancing algorithmsPredictive scaling capabilitiesMulti-cloud quantum orchestrationReal-time performance monitoring',;
+    features: [;'
+      'Quantum-enhanced security protocolsDistributed quantum computing nodesReal-time infrastructure optimizationQuantum-resistant encryptionAdvanced load balancing algorithmsPredictive scaling capabilitiesMulti-cloud quantum orchestrationReal-time performance monitoring',;'
       'Quantum-enhanced data processingAutomated infrastructure management';
     ],;
     pricing: {;
       starter: {;
+<<<<<<< HEAD
         price: 399,;
         period: 'month',;
         features: ['Basic quantum infrastructureStandard security protocolsEmail support'];
@@ -1033,35 +1225,59 @@ export const cuttingEdgeITServices2025 = [;
       enterprise: {;
         price: 2499,;
         period: 'month',;
+=======
+        price: 399,;'
+        period: 'month',;'
+        features: ['Basic quantum infrastructureStandard security protocolsEmail support'];
+      },;
+      professional: {;
+        price: 999,;'
+        period: 'month',;'
+        features: ['Advanced quantum featuresEnhanced security protocolsPriority supportPerformance optimization'];
+      },;
+      enterprise: {;
+        price: 2499,;'
+        period: 'month',;'
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
         features: ['Full quantum platformCustom security protocolsDedicated specialists24/7 support'];
       }
-    },;
-    category: 'Quantum IT',;
-    tags: ['Quantum ComputingCloud InfrastructureSecurityPerformanceScalability'],;
+    },;'
+    category: 'Quantum IT',;'
+    tags: ['Quantum ComputingCloud InfrastructureSecurityPerformanceScalability'],;'
     website: 'https://ziontechgroup.com/quantum-cloud-infrastructure-platform',;
+<<<<<<< HEAD
     contact: {;
       phone: '+1 302 464 0950',;
       email: 'kleber@ziontechgroup.com';
     },;
     marketSize: '$22.1B',;
     targetAudience: 'Cloud providers, enterprises, financial institutions, government agencies, research institutions',;
+=======
+    contact: {;'
+      phone: '+1 302 464 0950',;'
+      email: 'kleber@ziontechgroup.com';
+    },;'
+    marketSize: '$22.1B',;'
+    targetAudience: 'Cloud providers, enterprises, financial institutions, government agencies, research institutions',;'
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     competitiveAdvantage: 'First quantum-enhanced cloud infrastructure, quantum-resistant security, real-time optimization',;
-    useCases: [;
+    useCases: [;'
       'High-security cloud deploymentsFinancial services infrastructureGovernment cloud systemsResearch computing platformsEnterprise cloud migration';
-    ],;
-    integrations: ['AWSAzureGoogle CloudKubernetesDockerTerraform'],;
+    ],;'
+    integrations: ['AWSAzureGoogle CloudKubernetesDockerTerraform'],;'
     compliance: ['SOC2ISO 27001FedRAMPQuantum Security Standards'];
   },;
-  {;
-    id: 'edge-computing-orchestration-platform',;
-    name: 'Edge Computing Orchestration Platform',;
+  {;'
+    id: 'edge-computing-orchestration-platform',;'
+    name: 'Edge Computing Orchestration Platform',;'
     description: 'Advanced platform for managing and orchestrating edge computing resources across distributed networks, enabling real-time processing and low-latency applications.',;
-    features: [;
-      'Distributed edge node managementReal-time resource orchestrationIntelligent workload distributionEdge AI model deploymentDynamic scaling and optimizationEdge security and complianceReal-time monitoring and analyticsAutomated edge deployment',;
+    features: [;'
+      'Distributed edge node managementReal-time resource orchestrationIntelligent workload distributionEdge AI model deploymentDynamic scaling and optimizationEdge security and complianceReal-time monitoring and analyticsAutomated edge deployment',;'
       'Edge-to-cloud synchronizationPerformance optimization algorithms';
     ],;
     pricing: {;
       starter: {;
+<<<<<<< HEAD
         price: 299,;
         period: 'month',;
         features: ['Basic edge orchestrationStandard monitoringEmail support'];
@@ -1074,35 +1290,59 @@ export const cuttingEdgeITServices2025 = [;
       enterprise: {;
         price: 1999,;
         period: 'month',;
+=======
+        price: 299,;'
+        period: 'month',;'
+        features: ['Basic edge orchestrationStandard monitoringEmail support'];
+      },;
+      professional: {;
+        price: 799,;'
+        period: 'month',;'
+        features: ['Advanced orchestrationAI model deploymentPriority supportPerformance optimization'];
+      },;
+      enterprise: {;
+        price: 1999,;'
+        period: 'month',;'
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
         features: ['Full edge platformCustom AI modelsDedicated specialists24/7 support'];
       }
-    },;
-    category: 'Edge Computing',;
-    tags: ['Edge ComputingOrchestrationReal-time ProcessingAI DeploymentLow Latency'],;
+    },;'
+    category: 'Edge Computing',;'
+    tags: ['Edge ComputingOrchestrationReal-time ProcessingAI DeploymentLow Latency'],;'
     website: 'https://ziontechgroup.com/edge-computing-orchestration-platform',;
+<<<<<<< HEAD
     contact: {;
       phone: '+1 302 464 0950',;
       email: 'kleber@ziontechgroup.com';
     },;
     marketSize: '$18.7B',;
     targetAudience: 'IoT companies, telecommunications providers, manufacturing companies, smart city developers',;
+=======
+    contact: {;'
+      phone: '+1 302 464 0950',;'
+      email: 'kleber@ziontechgroup.com';
+    },;'
+    marketSize: '$18.7B',;'
+    targetAudience: 'IoT companies, telecommunications providers, manufacturing companies, smart city developers',;'
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     competitiveAdvantage: 'Advanced edge orchestration, AI model deployment, real-time optimization',;
-    useCases: [;
+    useCases: [;'
       'IoT device managementSmart city infrastructureManufacturing automationAutonomous vehicle systemsReal-time analytics platforms';
-    ],;
-    integrations: ['KubernetesDockerIoT PlatformsAI FrameworksCloud Platforms'],;
+    ],;'
+    integrations: ['KubernetesDockerIoT PlatformsAI FrameworksCloud Platforms'],;'
     compliance: ['IoT Security StandardsEdge Computing ProtocolsData Privacy Regulations'];
   },;
-  {;
-    id: 'zero-trust-security-platform',;
-    name: 'Zero Trust Security Platform',;
+  {;'
+    id: 'zero-trust-security-platform',;'
+    name: 'Zero Trust Security Platform',;'
     description: 'Comprehensive zero-trust security platform that implements advanced authentication, authorization, and monitoring across all network resources and applications.',;
-    features: [;
-      'Multi-factor authentication (MFA)Identity and access management (IAM)Continuous security monitoringBehavioral analyticsThreat detection and responseSecure access service edge (SASE)Micro-segmentationReal-time risk assessment',;
+    features: [;'
+      'Multi-factor authentication (MFA)Identity and access management (IAM)Continuous security monitoringBehavioral analyticsThreat detection and responseSecure access service edge (SASE)Micro-segmentationReal-time risk assessment',;'
       'Automated security responsesComprehensive audit logging';
     ],;
     pricing: {;
       starter: {;
+<<<<<<< HEAD
         price: 499,;
         period: 'month',;
         features: ['Basic zero-trust featuresStandard authenticationEmail support'];
@@ -1115,35 +1355,59 @@ export const cuttingEdgeITServices2025 = [;
       enterprise: {;
         price: 2999,;
         period: 'month',;
+=======
+        price: 499,;'
+        period: 'month',;'
+        features: ['Basic zero-trust featuresStandard authenticationEmail support'];
+      },;
+      professional: {;
+        price: 1299,;'
+        period: 'month',;'
+        features: ['Advanced security featuresBehavioral analyticsPriority supportCustom policies'];
+      },;
+      enterprise: {;
+        price: 2999,;'
+        period: 'month',;'
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
         features: ['Full security platformCustom security policiesDedicated specialists24/7 support'];
       }
-    },;
-    category: 'Cybersecurity',;
-    tags: ['Zero TrustSecurityAuthenticationIAMThreat Detection'],;
+    },;'
+    category: 'Cybersecurity',;'
+    tags: ['Zero TrustSecurityAuthenticationIAMThreat Detection'],;'
     website: 'https://ziontechgroup.com/zero-trust-security-platform',;
+<<<<<<< HEAD
     contact: {;
       phone: '+1 302 464 0950',;
       email: 'kleber@ziontechgroup.com';
     },;
     marketSize: '$31.2B',;
     targetAudience: 'Enterprises, government agencies, financial institutions, healthcare organizations, educational institutions',;
+=======
+    contact: {;'
+      phone: '+1 302 464 0950',;'
+      email: 'kleber@ziontechgroup.com';
+    },;'
+    marketSize: '$31.2B',;'
+    targetAudience: 'Enterprises, government agencies, financial institutions, healthcare organizations, educational institutions',;'
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     competitiveAdvantage: 'Comprehensive zero-trust platform, behavioral analytics, automated threat response',;
-    useCases: [;
+    useCases: [;'
       'Enterprise security implementationGovernment security complianceFinancial services securityHealthcare data protectionRemote workforce security';
-    ],;
-    integrations: ['Active DirectoryLDAPSAMLOAuthSIEM SystemsSecurity Tools'],;
+    ],;'
+    integrations: ['Active DirectoryLDAPSAMLOAuthSIEM SystemsSecurity Tools'],;'
     compliance: ['SOC2ISO 27001FedRAMPHIPAAPCI DSS'];
   },;
-  {;
-    id: 'blockchain-enterprise-platform',;
-    name: 'Blockchain Enterprise Platform',;
+  {;'
+    id: 'blockchain-enterprise-platform',;'
+    name: 'Blockchain Enterprise Platform',;'
     description: 'Enterprise-grade blockchain platform that enables secure, transparent, and efficient business processes through distributed ledger technology and smart contracts.',;
-    features: [;
-      'Enterprise blockchain networksSmart contract developmentConsensus mechanism managementBlockchain analytics and monitoringIntegration with legacy systemsScalable blockchain architectureSecurity and compliance toolsReal-time transaction processing',;
+    features: [;'
+      'Enterprise blockchain networksSmart contract developmentConsensus mechanism managementBlockchain analytics and monitoringIntegration with legacy systemsScalable blockchain architectureSecurity and compliance toolsReal-time transaction processing',;'
       'Multi-party workflow automationComprehensive reporting and analytics';
     ],;
     pricing: {;
       starter: {;
+<<<<<<< HEAD
         price: 599,;
         period: 'month',;
         features: ['Basic blockchain featuresStandard smart contractsEmail support'];
@@ -1156,35 +1420,59 @@ export const cuttingEdgeITServices2025 = [;
       enterprise: {;
         price: 3499,;
         period: 'month',;
+=======
+        price: 599,;'
+        period: 'month',;'
+        features: ['Basic blockchain featuresStandard smart contractsEmail support'];
+      },;
+      professional: {;
+        price: 1499,;'
+        period: 'month',;'
+        features: ['Advanced blockchain featuresCustom smart contractsPriority supportPerformance optimization'];
+      },;
+      enterprise: {;
+        price: 3499,;'
+        period: 'month',;'
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
         features: ['Full blockchain platformCustom developmentDedicated specialists24/7 support'];
       }
-    },;
-    category: 'Blockchain',;
-    tags: ['BlockchainSmart ContractsDistributed LedgerEnterpriseAutomation'],;
+    },;'
+    category: 'Blockchain',;'
+    tags: ['BlockchainSmart ContractsDistributed LedgerEnterpriseAutomation'],;'
     website: 'https://ziontechgroup.com/blockchain-enterprise-platform',;
+<<<<<<< HEAD
     contact: {;
       phone: '+1 302 464 0950',;
       email: 'kleber@ziontechgroup.com';
     },;
     marketSize: '$19.9B',;
     targetAudience: 'Financial institutions, supply chain companies, healthcare organizations, government agencies, manufacturing companies',;
+=======
+    contact: {;'
+      phone: '+1 302 464 0950',;'
+      email: 'kleber@ziontechgroup.com';
+    },;'
+    marketSize: '$19.9B',;'
+    targetAudience: 'Financial institutions, supply chain companies, healthcare organizations, government agencies, manufacturing companies',;'
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     competitiveAdvantage: 'Enterprise-grade blockchain platform, smart contract automation, legacy system integration',;
-    useCases: [;
+    useCases: [;'
       'Supply chain transparencyFinancial transaction processingHealthcare data managementGovernment record keepingManufacturing process tracking';
-    ],;
-    integrations: ['ERP SystemsCRM PlatformsFinancial SystemsSupply Chain ToolsLegacy Systems'],;
+    ],;'
+    integrations: ['ERP SystemsCRM PlatformsFinancial SystemsSupply Chain ToolsLegacy Systems'],;'
     compliance: ['Blockchain StandardsFinancial RegulationsData Privacy Laws'];
   },;
-  {;
-    id: 'ai-powered-devops-platform',;
-    name: 'AI-Powered DevOps Platform',;
+  {;'
+    id: 'ai-powered-devops-platform',;'
+    name: 'AI-Powered DevOps Platform',;'
     description: 'Intelligent DevOps platform that leverages artificial intelligence to automate development, testing, deployment, and monitoring processes for faster and more reliable software delivery.',;
-    features: [;
-      'AI-powered code analysisAutomated testing and quality assuranceIntelligent deployment strategiesPredictive performance monitoringAutomated incident responseContinuous integration/continuous deployment (CI/CD)Infrastructure as code (IaC)Real-time performance optimization',;
+    features: [;'
+      'AI-powered code analysisAutomated testing and quality assuranceIntelligent deployment strategiesPredictive performance monitoringAutomated incident responseContinuous integration/continuous deployment (CI/CD)Infrastructure as code (IaC)Real-time performance optimization',;'
       'Automated security scanningComprehensive analytics and reporting';
     ],;
     pricing: {;
       starter: {;
+<<<<<<< HEAD
         price: 399,;
         period: 'month',;
         features: ['Basic AI DevOps featuresStandard automationEmail support'];
@@ -1197,26 +1485,54 @@ export const cuttingEdgeITServices2025 = [;
       enterprise: {;
         price: 2499,;
         period: 'month',;
+=======
+        price: 399,;'
+        period: 'month',;'
+        features: ['Basic AI DevOps featuresStandard automationEmail support'];
+      },;
+      professional: {;
+        price: 999,;'
+        period: 'month',;'
+        features: ['Advanced AI featuresCustom automationPriority supportPerformance optimization'];
+      },;
+      enterprise: {;
+        price: 2499,;'
+        period: 'month',;'
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
         features: ['Full AI DevOps platformCustom developmentDedicated specialists24/7 support'];
       }
-    },;
-    category: 'DevOps',;
-    tags: ['AI DevOpsAutomationCI/CDMonitoringPerformance'],;
+    },;'
+    category: 'DevOps',;'
+    tags: ['AI DevOpsAutomationCI/CDMonitoringPerformance'],;'
     website: 'https://ziontechgroup.com/ai-powered-devops-platform',;
+<<<<<<< HEAD
     contact: {;
       phone: '+1 302 464 0950',;
       email: 'kleber@ziontechgroup.com';
     },;
     marketSize: '$25.6B',;
     targetAudience: 'Software development companies, enterprises, DevOps teams, IT operations teams, development agencies',;
+=======
+    contact: {;'
+      phone: '+1 302 464 0950',;'
+      email: 'kleber@ziontechgroup.com';
+    },;'
+    marketSize: '$25.6B',;'
+    targetAudience: 'Software development companies, enterprises, DevOps teams, IT operations teams, development agencies',;'
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     competitiveAdvantage: 'AI-powered DevOps automation, predictive monitoring, intelligent incident response',;
-    useCases: [;
+    useCases: [;'
       'Software development automationContinuous deployment pipelinesPerformance monitoring and optimizationIncident response automationQuality assurance automation';
-    ],;
-    integrations: ['GitHubGitLabJenkinsDockerKubernetesAWSAzureGoogle Cloud'],;
+    ],;'
+    integrations: ['GitHubGitLabJenkinsDockerKubernetesAWSAzureGoogle Cloud'],;'
     compliance: ['DevOps Best PracticesSecurity StandardsQuality Assurance Protocols'];
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   }
 ];
   }
@@ -1246,14 +1562,32 @@ ursor/fix-website-loading-errors-and-merge-6662;
 ];
 ];
 ;
+<<<<<<< HEAD
+  }
+];
+=======
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+
+
+  }
+];
+ursor/fix-website-loading-errors-and-merge-6662
+origin/cursor/expand-services-advertise-and-build-project-c28b
+  },
+];
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+<<<<<<< HEAD
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+
   }
 ];
 
-  }
-];
 
 
-
+<<<<<<< HEAD
 
   },
 ];
@@ -1422,3 +1756,25 @@ ursor/fix-website-loading-errors-and-merge-6662;
     compliance: ['DevOps Best PracticesSecurity StandardsQuality Assurance Protocols']
   }
 ],
+=======
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+  }
+];
+  },
+    ];
+    integrations: ['GitHubGitLabJenkinsDockerKubernetesAWSAzureGoogle Cloud'];
+    compliance: ['DevOps Best PracticesSecurity StandardsQuality Assurance Protocols'];
+  }
+];
+;
+  }
+];
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

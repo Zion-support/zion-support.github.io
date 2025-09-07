@@ -1,7 +1,227 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
 
+<<<<<<< HEAD
+=======
+class SecurityAudit {
+  constructor() {
+    this.projectRoot = process.cwd();
+    this.reportsDir = path.join(this.projectRoot, "security-reports");
+    this.vulnerabilities = [];
+    this.securityIssues = [];
+    this.recommendations = [];
+    
+    // Ensure reports directory exists
+    if (!fs.existsSync(this.reportsDir)) {
+      fs.mkdirSync(this.reportsDir, { recursive: true });
+    }
+  }
+
+  log(message, type = "info") {
+    const timestamp = new Date().toISOString();
+    const prefix = type === "error" ? "❌" : type === "success" ? "✅" : "ℹ️";
+    console.log(`[${timestamp}] ${prefix} ${message}`);
+  }
+
+  async runNpmAudit() {
+    this.log("🔍 Running npm audit...");
+    
+    try {
+      const auditOutput = execSync("npm audit --json", { 
+        cwd: this.projectRoot,
+        encoding: "utf8",
+        timeout: 120000
+      });
+      
+      const auditData = JSON.parse(auditOutput);
+      
+      if (auditData.vulnerabilities) {
+        Object.entries(auditData.vulnerabilities).forEach(([name, vuln]) => {
+          this.vulnerabilities.push({
+            name,
+            severity: vuln.severity,
+            title: vuln.title,
+            description: vuln.description,
+            recommendation: vuln.recommendation,
+            type: "dependency"
+          });
+        });
+      }
+      
+      this.log(`Found ${this.vulnerabilities.length} vulnerabilities`);
+      
+    } catch (error) {
+      this.log(`npm audit failed: ${error.message}`, "error");
+    }
+  }
+
+  async scanForSecrets() {
+    this.log("🔐 Scanning for secrets and sensitive data...");
+    
+    const secretPatterns = [
+      { pattern: /password\s*=\s*["'][^"']+["']/gi, type: "password", severity: "high" },
+      { pattern: /api[_-]?key\s*=\s*["'][^"']+["']/gi, type: "api_key", severity: "high" },
+      { pattern: /secret\s*=\s*["'][^"']+["']/gi, type: "secret", severity: "high" },
+      { pattern: /token\s*=\s*["'][^"']+["']/gi, type: "token", severity: "high" },
+      { pattern: /private[_-]?key\s*=\s*["'][^"']+["']/gi, type: "private_key", severity: "critical" },
+      { pattern: /aws[_-]?access[_-]?key[_-]?id/gi, type: "aws_key", severity: "high" },
+      { pattern: /mongodb[_-]?uri/gi, type: "database_uri", severity: "high" },
+      { pattern: /jwt[_-]?secret/gi, type: "jwt_secret", severity: "high" }
+    ];
+    
+    const filesToScan = this.findSourceFiles();
+    
+    filesToScan.forEach(file => {
+      try {
+        const content = fs.readFileSync(file, "utf8");
+        
+        secretPatterns.forEach(({ pattern, type, severity }) => {
+          const matches = content.match(pattern);
+          if (matches) {
+            matches.forEach(match => {
+              this.securityIssues.push({
+                file: path.relative(this.projectRoot, file),
+                type,
+                severity,
+                match: match.substring(0, 50) + "...",
+                description: `Potential ${type} found in source code`
+              });
+            });
+          }
+        });
+      } catch (error) {
+        // Ignore file read errors
+      }
+    });
+    
+    this.log(`Found ${this.securityIssues.length} potential security issues`);
+  }
+
+  findSourceFiles() {
+    const files = [];
+    const extensions = [".js", ".ts", ".jsx", ".tsx", ".json", ".env", ".config.js"];
+    const excludeDirs = ["node_modules", ".next", "dist", "build", ".git"];
+    
+    const scanDirectory = (dir) => {
+      try {
+        const items = fs.readdirSync(dir);
+        for (const item of items) {
+          const fullPath = path.join(dir, item);
+          const stat = fs.statSync(fullPath);
+          
+          if (stat.isDirectory()) {
+            if (!excludeDirs.includes(item)) {
+              scanDirectory(fullPath);
+            }
+          } else if (extensions.some(ext => item.endsWith(ext))) {
+            files.push(fullPath);
+          }
+        }
+      } catch (error) {
+        // Ignore permission errors
+      }
+    };
+    
+    scanDirectory(this.projectRoot);
+    return files;
+  }
+
+  async checkDependencies() {
+    this.log("📦 Checking dependency security...");
+    
+    try {
+      const packageJsonPath = path.join(this.projectRoot, "package.json");
+      const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, "utf8"));
+      
+      const allDeps = {
+        ...packageJson.dependencies || {},
+        ...packageJson.devDependencies || {}
+      };
+      
+      // Check for known vulnerable packages
+      const vulnerablePackages = [
+        "lodash", "moment", "jquery", "express", "request"
+      ];
+      
+      Object.keys(allDeps).forEach(dep => {
+        if (vulnerablePackages.includes(dep)) {
+          this.securityIssues.push({
+            file: "package.json",
+            type: "vulnerable_package",
+            severity: "medium",
+            match: dep,
+            description: `Package ${dep} has known security vulnerabilities`
+          });
+        }
+      });
+      
+      // Check for packages with no version specified
+      Object.entries(allDeps).forEach(([name, version]) => {
+        if (version === "*" || version === "latest") {
+          this.securityIssues.push({
+            file: "package.json",
+            type: "unpinned_dependency",
+            severity: "medium",
+            match: `${name}: ${version}`,
+            description: `Dependency ${name} is not pinned to a specific version`
+          });
+        }
+      });
+      
+    } catch (error) {
+      this.log(`Dependency check failed: ${error.message}`, "error");
+    }
+  }
+
+  async checkEnvironmentFiles() {
+    this.log("🌍 Checking environment file security...");
+    
+    const envFiles = [".env", ".env.local", ".env.development", ".env.production"];
+    
+    envFiles.forEach(envFile => {
+      const envPath = path.join(this.projectRoot, envFile);
+      if (fs.existsSync(envPath)) {
+        try {
+          const content = fs.readFileSync(envPath, "utf8");
+          
+          // Check for hardcoded secrets
+          if (content.includes("password=") || content.includes("secret=")) {
+            this.securityIssues.push({
+              file: envFile,
+              type: "hardcoded_secret",
+              severity: "high",
+              match: "Hardcoded secrets found",
+              description: "Environment file contains hardcoded secrets"
+            });
+          }
+          
+          // Check if .env is in .gitignore
+          const gitignorePath = path.join(this.projectRoot, ".gitignore");
+          if (fs.existsSync(gitignorePath)) {
+            const gitignoreContent = fs.readFileSync(gitignorePath, "utf8");
+            if (!gitignoreContent.includes(".env")) {
+              this.securityIssues.push({
+                file: ".gitignore",
+                type: "missing_gitignore",
+                severity: "medium",
+                match: ".env not in .gitignore",
+                description: "Environment files should be in .gitignore"
+              });
+            }
+          }
+          
+        } catch (error) {
+          // Ignore file read errors
+        }
+      }
+    });
+=======
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 <<<<<<< HEAD
 
 #!/usr/bin/env node
@@ -313,18 +533,64 @@ function runSecurityAudit() {
       criticalIssues: 0,
       warnings: 0
     }
+<<<<<<< HEAD
   };
 
   // Calculate summary
   if (audit.npmAudit.vulnerabilities) {
     audit.summary.totalIssues += Object.keys(audit.npmAudit.vulnerabilities).length;
+=======
+>>>>>>> main
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   }
   
   audit.summary.totalIssues += audit.sensitiveData.length;
   audit.summary.warnings = audit.sensitiveData.length;
 
+<<<<<<< HEAD
   return audit;
 }
+=======
+<<<<<<< HEAD
+  async checkCodeSecurity() {
+    this.log("🔍 Checking code security patterns...");
+    
+    const files = this.findSourceFiles();
+    
+    files.forEach(file => {
+      try {
+        const content = fs.readFileSync(file, "utf8");
+        
+        // Check for dangerous patterns
+        const dangerousPatterns = [
+          { pattern: /eval\s*\(/gi, type: "eval_usage", severity: "high", description: "Use of eval() is dangerous" },
+          { pattern: /innerHTML\s*=/gi, type: "innerhtml_usage", severity: "medium", description: "innerHTML can lead to XSS" },
+          { pattern: /document\.write/gi, type: "document_write", severity: "medium", description: "document.write can lead to XSS" },
+          { pattern: /dangerouslySetInnerHTML/gi, type: "dangerous_innerhtml", severity: "medium", description: "dangerouslySetInnerHTML requires careful sanitization" },
+          { pattern: /process\.env\./gi, type: "process_env", severity: "low", description: "Direct process.env usage should be validated" }
+        ];
+        
+        dangerousPatterns.forEach(({ pattern, type, severity, description }) => {
+          const matches = content.match(pattern);
+          if (matches) {
+            matches.forEach(match => {
+              this.securityIssues.push({
+                file: path.relative(this.projectRoot, file),
+                type,
+                severity,
+                match: match.substring(0, 50) + "...",
+                description
+              });
+            });
+          }
+        });
+        
+      } catch (error) {
+        // Ignore file read errors
+      }
+    });
+  }
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
 // Save audit results
 function saveAuditResults(audit) {
@@ -342,14 +608,38 @@ function saveAuditResults(audit) {
 }
 
 // Main execution
+<<<<<<< HEAD
 try {
   const audit = runSecurityAudit();
   saveAuditResults(audit);
   console.log('✅ Security audit completed');
 } catch (error) {
   console.error('❌ Security audit failed:', error.message);
+=======
+if (require.main === module) {
+  const audit = new SecurityAudit();
+  audit.run().catch(error => {
+    console.error("Security audit failed:", error);
+    process.exit(1);
+  });
+}
+
+module.exports = SecurityAudit;
+=======
+<<<<<<< HEAD
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+console.log(`\n📊 Security Results:`);
+console.log(`✅ Passed: ${passed}`);
+console.log(`❌ Failed: ${failed}`);
+console.log(`🚨 Critical Failed: ${criticalFailed}`);
+
+if (criticalFailed > 0) {
+  console.log('\n⚠️  Critical security issues found. Please fix before proceeding.');
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   process.exit(1);
 }
+<<<<<<< HEAD
 =======
 class SecurityAuditor {
   constructor() {
@@ -541,3 +831,7 @@ if (require.main === module) {
 
 module.exports = SecurityAuditor;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+=======
+>>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
+>>>>>>> main
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

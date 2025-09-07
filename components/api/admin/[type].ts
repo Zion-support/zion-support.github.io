@@ -135,9 +135,21 @@ function toCsv(rows: any[]): string {
   return lines.join('\n')
 }
 
+<<<<<<< HEAD
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const type = (req.query.type as AdminType) || '';
   if (!ADMIN_TYPES.includes(type)) return res.status(400).json({ error: 'Invalid type' });
+=======
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { type } = req.query as { type: AdminType };
+
+  if (!Object.values(ADMIN_TYPES).includes(type)) {
+    return res.status(400).json({ error: 'Invalid type' });
+  }
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
   const useSupabase = isSupabaseConfigured();
 

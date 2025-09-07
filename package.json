@@ -274,11 +274,14 @@
     "automation:comprehensive": "node automation/comprehensive-app-improvement-suite.cjs",
 <<<<<<< HEAD
     "automation:continuous": "node automation/continuous-improvement-orchestrator.cjs"
+<<<<<<< HEAD
 =======
     "automation:continuous": "node automation/continuous-improvement-orchestrator.cjs",
     "automation:test": "node automation/intelligent-test-automation.cjs",
     "automation:ultimate": "node automation/ultimate-automation-runner.cjs"
 >>>>>>> origin/main
+=======
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   },
   "pm2": {
     "ecosystem": "ecosystem.maintenance.cjs"
@@ -453,6 +456,7 @@
     "@typescript-eslint/parser": "^8.42.0",
     "eslint": "^9.35.0",
     "eslint-config-next": "^15.5.2",
+<<<<<<< HEAD
     "eslint-config-prettier": "^10.1.8",
 =======
     "@types/jest": "^29.5.8",
@@ -471,6 +475,8 @@
     "eslint-config-next": "^14.2.32",
     "eslint-formatter-junit": "^8.40.0",
 >>>>>>> origin/main
+=======
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     "eslint-plugin-jsx-a11y": "^6.10.2",
     "eslint-plugin-prettier": "^5.5.4",
     "eslint-plugin-react": "^7.37.5",

@@ -65,6 +65,7 @@ export default [
       '*.config.js',
       '*.config.cjs',
       '*.config.mjs',
+<<<<<<< HEAD
       'scripts/**',
       'automation/**',
       'automation_backup/**',
@@ -500,11 +501,39 @@ module.exports = [
       'components/layout/**',
       'components/ui/**',
       '*.cjs',
+=======
+      'scripts/',
+      'ultimate-*.cjs',
+      'automation/',
+      'pm2-automation/',
+      'pages.disabled/',
+      'pages.disabled_auto/',
+      'pages.disabled_full/',
+      'pages.corrupted.*/',
+      'pages.broken/',
+      'pages.bak/',
+      'pages.blog.disabled/',
+      'pages._archive_corrupted/',
+      'pages._quarantine/',
+      'pages-disabled/',
+      'pages-quarantine/',
+      'pages.__backup/',
+      'pages-backup/',
+      'tests.disabled/',
+      'components.disabled/',
+      'zion-os.disabled/',
+      'zion_academy/',
+      'temp_backup/',
+      'temp_broken_files/',
+      'temp_exclude/',
+      'test_build/',
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       '*.test.js',
       '*.test.ts',
       '*.test.tsx',
       '*.spec.js',
       '*.spec.ts',
+<<<<<<< HEAD
       '*.spec.tsx',
       'pm2-automation/**',
       'services/**',
@@ -519,6 +548,118 @@ module.exports = [
       'syntax-fixer.js';
       'performance-monitor.js']}];
 =======
+=======
+      '*.spec.tsx'
+    ]
+  },
+  js.configs.recommended,
+  {
+    files: ['**/*.{js,jsx}'],
+    languageOptions: {
+      ecmaVersion: 2021,
+      sourceType: 'module',
+      globals: {
+        ...globals.browser,
+        ...globals.node,
+        React: 'readonly',
+        jest: 'readonly',
+        describe: 'readonly',
+        it: 'readonly',
+        test: 'readonly',
+        expect: 'readonly',
+        vi: 'readonly',
+        Deno: 'readonly',
+        require: 'readonly',
+        module: 'readonly',
+        HTMLDivElement: 'readonly',
+        HTMLParagraphElement: 'readonly',
+        HTMLHeadingElement: 'readonly',
+        HTMLAnchorElement: 'readonly',
+        HTMLElement: 'readonly',
+        Performance: 'readonly',
+        PerformanceNavigationTiming: 'readonly',
+        MessageEvent: 'readonly',
+        RequestInit: 'readonly',
+        AbortController: 'readonly',
+        __dirname: 'readonly',
+        __filename: 'readonly',
+        exports: 'readonly',
+        beforeEach: 'readonly',
+        afterEach: 'readonly',
+        beforeAll: 'readonly',
+        afterAll: 'readonly'
+      },
+      parserOptions: {
+        ecmaFeatures: {
+          jsx: true
+        }
+      }
+    },
+    plugins: {
+      react,
+      'react-hooks': reactHooks
+    },
+    rules: {
+      ...react.configs.recommended.rules,
+      ...reactHooks.configs.recommended.rules,
+      'no-unused-vars': 'warn',
+      'no-console': 'warn',
+      'prefer-const': 'error',
+      'no-var': 'error',
+      'react/prop-types': 'off',
+      'react/react-in-jsx-scope': 'off'
+    }
+  },
+  {
+    files: ['**/*.{ts,tsx}'],
+    languageOptions: {
+      ecmaVersion: 2021,
+      sourceType: 'module',
+      globals: {
+        ...globals.browser,
+        ...globals.node,
+        React: 'readonly',
+        jest: 'readonly',
+        describe: 'readonly',
+        it: 'readonly',
+        test: 'readonly',
+        expect: 'readonly',
+        vi: 'readonly',
+        Deno: 'readonly',
+        HTMLElement: 'readonly',
+        HTMLDivElement: 'readonly',
+        HTMLParagraphElement: 'readonly',
+        HTMLHeadingElement: 'readonly',
+        HTMLAnchorElement: 'readonly',
+        Performance: 'readonly',
+        PerformanceNavigationTiming: 'readonly',
+        MessageEvent: 'readonly',
+        RequestInit: 'readonly',
+        AbortController: 'readonly',
+        beforeEach: 'readonly',
+        afterEach: 'readonly',
+        beforeAll: 'readonly',
+        afterAll: 'readonly'
+      },
+      parser: tsparser,
+      parserOptions: {
+        ecmaFeatures: {
+          jsx: true
+        }
+      }
+    },
+    plugins: {
+      '@typescript-eslint': tseslint,
+      react,
+      'react-hooks': reactHooks,
+      'react-refresh': reactRefresh,
+      'jsx-a11y': jsxA11y
+    },
+    rules: {
+      ...tseslint.configs.recommended.rules,
+      ...react.configs.recommended.rules,
+      ...reactHooks.configs.recommended.rules,
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       ...jsxA11y.configs.recommended.rules,
       "react-refresh/only-export-components": [
         "warn",
@@ -532,6 +673,7 @@ module.exports = [
       'no-console': 'warn',
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
       'react/prop-types': 'off',
+<<<<<<< HEAD
       '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
       ...typescript.configs.recommended.rules,
       ...react.configs.recommended.rules,
@@ -549,6 +691,9 @@ module.exports = [
       'no-debugger': 'warn',
       'react-hooks/rules-of-hooks': 'error',
       'react-hooks/exhaustive-deps': 'warn'
+=======
+      'react/react-in-jsx-scope': 'off'
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     },
     settings: {
       react: {

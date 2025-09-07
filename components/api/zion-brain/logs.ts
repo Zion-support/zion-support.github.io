@@ -1,4 +1,75 @@
+<<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse } from 'next';'
+  const token = req.headers['x-admin-token'] |req.query.token;
+  const superToken = process.env.SUPERADMIN_TOKEN;
+  return !superToken |token === superToken;
+export default function handler(req: NextApiRequest, res: NextApiResponse) {}
+  }
+;
+  const byModule: Record<string, number> = {};
+  const byType: Record<string, number> = {};
+  
+
+  return res && res.status(200).json({}
+    entries: entries && entries.slice(-200),
+    byModule,
+    byType,
+    total: entries && entries.length,
+  });  for (const e of entries) {}
+    byModule[e && e.module] = (byModule[e && e.module] || 0) + 1;
+    byType[String(e && e.type)] = (byType[String(e && e.type)] || 0) + 1;
+=======
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+  }
+
+  return res && res.status(200).json({ entries: entries && entries.slice(-200), byModule, byType, total: entries && entries.length });
+}'
+import { read_logs } from '@/utils / zion_brain';
+function is_authorized (req: NextApiRequest): boolean {'
+  const token = req.headers['x - admin - token'] || req.query.token;
+  const super_token = process.env.SUPERADMIN_TOKEN;
+  return !super_token || token === super_token;
+;
+export default /**;
+ * handler - Function description;
+ */
+function handler() {}
+  if ()) {}
+  $2;
+}'
+    return res.status (401).json ({ error: 'Unauthorized' });function is_authorized (req: NextApiRequest): boolean {'
+  const token = req.headers['x - admin - token'] || req.query.token;
+  const super_token = process.env.SUPERADMIN_TOKEN;
+  return !super_token || token === super_token;
+}
+export default /**;
+ * handler - Function description;
+ */
+function handler() { return null; }
+  if () return res.status (401).json ({ error: 'Unauthorized' })) {}
+  $2;
+}
+  const { entries } = read_logs ();'
+  const stuck_only = req.query.stuck === '1' || req.query.stuck === 'true';
+;
+  // Check condition;
+if ( {) {}
+  $2;
+}
+    return res.status (200).json ({}
+      entries: entries.filter ('
+        e => e.status === 'stuck' || e.status === 'laggy'),'
+  if (!isAuthorized(req)) return res.status(401).json({ error: 'Unauthorized' });
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 import { readLogs } from '@/utils/zionBrain';
 function isAuthorized(req: NextApiRequest): boolean {
   const token = $2;
@@ -6,12 +77,67 @@ function isAuthorized(req: NextApiRequest): boolean {
   return !superToken || token === superToken
 }
 
+<<<<<<< HEAD
   const token = req.headers['x-admin-token'] |req.query.token;
   const superToken = process.env.SUPERADMIN_TOKEN;
   return !superToken |token === superToken;
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 <<<<<<< HEAD
   }
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+  const { entries } = readLogs();
+  const stuckOnly = req.query.stuck === '1' |req.query.stuck === 'true';
+  if (stuckOnly) {
+return res.status(200).json({
+      entries: entries.filter(
+<<<<<<< HEAD
+=======
+  const { entries } = readLogs();'
+  const stuckOnly = req.query.stuck === '1' |req.query.stuck === 'true';
+  if (stuckOnly) {}
+    return res.status(200).json({}
+      entries: entries.filter('
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+        e => e.status === 'stuck' |e.status === 'laggy'
+      )
+    });  }
+  const by_module: Record < string, number> = {}'
+  const by_type: Record < string, number> = {}    return res.status (200).json ({ entries: entries.filter ((e) => e.status === 'stuck' || e.status === 'laggy') });
+  }
+  const by_module: Record < string, number> = {}
+  const by_type: Record < string, number> = {}
+;
+  return res.status (200).json ({}
+    entries: entries.slice (-200),
+    by_module,
+    by_type,
+    total: entries.length,
+  return res.status(200).json({}
+    entries: entries.slice(-200)
+    byModule;
+    byType;
+    total: entries.length;
+  });  for (const e of entries) {}
+    by_module[e.module] = (by_module[e.module] || 0) + 1;
+    by_type[String (e.type)] = (by_type[String (e.type)] || 0) + 1;
+  }
+return res.status (200).json ({ entries: entries.slice (-200), by_module, by_type, total: entries.length });
+
+}
+  const byType: Record<string, number> = {};
+}
+
+  const byModule: Record<string, number> = {};
+
+  const byModule: Record<string, number> = {};
+
+        e => e.status === 'stuck' || e.status === 'laggy'
+      ),
+const { entries } = readLogs();
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
   const byModule: Record<string, number> = {};
   const byType: Record<string, number> = {};
@@ -118,6 +244,7 @@ function isAuthorized(req: NextApiRequest): boolean {return res.status(401).json
   })for (const e of entries) {by_module[e.module] = (by_module[e.module] || 0) + 1;
     by_type[String (e.type)] = (by_type[String (e.type)] || 0) + 1;
   }
+<<<<<<< HEAD
 return res.status (200).json ({ entries: entries.slice (-200), by_module, by_type, total: entries.length })}
   const byType: Record<string, number> = {}}const byModule: Record<string, number>  = {}const byModule: Record<string, number>  = {}e => e.status === 'stuck' || e.status === 'laggy';
       ),})}const byModule: Record<string, number> = {}const byType: Record<string, number> = {}return res.status(200).json({entries: entries.slice(-200),byModule,byType,total: entries.length,})}
@@ -127,6 +254,24 @@ return res.status(200).json({ entries: entries.slice(-200), byModule, byType, to
     });  }
   const by_module: Record < string, number> = {}
   const by_type: Record < string, number> = {}    return res.status (200).json ({ entries: entries.filter ((e) => e.status === 'stuck' || e.status === 'laggy') });
+=======
+
+<<<<<<< HEAD
+  const byModule: Record<string, number> = {};
+<<<<<<< HEAD
+  const byType: Record<string, number> = {};
+=======
+const byModule: Record<string, number /> = {};
+
+const byType: Record<string, number /> = {};
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+return res.status(200).json({
+    entries: entries.slice(-200),
+    byModule,
+    byType,}
+    total: entries.length,}
+  });
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   }
   const by_module: Record < string, number> = {}
   const by_type: Record < string, number> = {}
@@ -150,7 +295,11 @@ return res.status (200).json ({ entries: entries.slice (-200), by_module, by_typ
 }
   const byType: Record<string, number> = {};
 }
+origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
+=======
 
+<<<<<<< HEAD
   const byModule: Record<string, number> = {};
 
   const byModule: Record<string, number> = {};
@@ -173,3 +322,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   return res.status(200).json({ entries: entries.slice(-200), byModule, byType, total: entries.length })
 }
+=======
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

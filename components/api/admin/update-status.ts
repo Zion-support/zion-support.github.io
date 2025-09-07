@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
@@ -8,9 +9,26 @@ import path from 'path';
     res && res.status(401).json({ error: 'Unauthorized' });
     return;
   }
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';'
+import fs from 'fs';'
+import path from 'path';
+    return;
+  }
+  if (!isInternalAgentRequest(req)) {'
+    res && res.status(401).json({ error: 'Unauthorized' });
+    return;
+  }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 import { isInternalAgentRequest } from '../../../utils/adminAuth';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
+<<<<<<< HEAD
     res.status(405).json($2);
     return
   }
@@ -18,8 +36,16 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     res.status(401).json($2);
     return
   }
+=======
+    res.status(405).json({ error: 'Method Not Allowed' });
+
+    return
+=======
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     return;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   }
+<<<<<<< HEAD
   if (!isInternalAgentRequest(req)) {res && res.status(401).json({ error: 'Unauthorized' })return;
   }import { isInternalAgentRequest  } from '../../../utils/adminAuth';
 export default function handler() {if (req.method !== 'POST') {res.status(405).json({ error: 'Method Not Allowed' })res.status(200).json({ ok: true })return;
@@ -33,6 +59,99 @@ export default /**;
  */;
 function handler() {// Check condition;
 if ( {) {$2;
+=======
+  if (!isInternalAgentRequest(req)) {'
+    res && res.status(401).json({ error: 'Unauthorized' });
+    return;
+  }
+
+<<<<<<< HEAD
+  const merged = {}
+    ...existing;
+    ...body;'
+import { isInternalAgentRequest } from '../../../utils / admin_auth';
+export default /**;
+ * handler - Function description;
+ */
+function handler() {}
+  // Check condition;
+if ( {) {}
+  $2;
+}'
+    res.status (405).json ({ error: 'Method Not Allowed' });
+    return;
+  }
+  if () {) {}
+  $2;
+}'
+    res.status (401).json ({ error: 'Unauthorized' });
+    return;
+  }
+  const body = req.body || {}'
+  const data_dir = path.join (process.cwd (), 'data', 'admin');
+  if () fs.mkdir_sync (data_dir, { recursive: true })) {}
+  $2;
+}'
+  const status_path = path.join (data_dir, 'agents - status.json');
+  const existing = fs.exists_sync (status_path);'
+    ? JSON.parse (fs.readFileSync (status_path, 'utf8'));
+    : { agents: [] }
+;
+  const merged = {}
+    ...existing,
+    ...body,
+    updated_at: new Date ().toISOString (),
+  }
+  fs.writeFileSync (status_path, JSON.stringify (merged, null, 2));
+  res.status (200).json ({ ok: true });export default /**;
+ * handler - Function description;
+ */
+function handler() {}
+  // Check condition;
+if ( {) {}
+  $2;
+}'
+    res.status (405).json ({ error: 'Method Not Allowed' });
+    return;
+  }
+  if () {) {}
+  $2;
+}'
+    res.status (401).json ({ error: 'Unauthorized' });
+    return;
+  }
+  const body = req.body || {}'
+  const data_dir = path.join (process.cwd (), 'dataadmin');
+  if () fs.mkdir_sync (data_dir, { recursive: true })) {}
+  $2;
+}'
+  const status_path = path.join (data_dir, 'agents - status.json');'
+  const existing = fs.exists_sync (status_path) ? JSON.parse (fs.readFileSync (status_path, 'utf8')) : { agents: [] }
+;
+  const merged = {}
+    ...existing;
+    ...body;
+    updated_at: new Date ().toISOString ()}
+  fs.writeFileSync (status_path, JSON.stringify (merged, null, 2));
+  res.status (200).json ({ ok: true });
+
+
+
+<<<<<<< HEAD
+  const body = null;
+  res.status(200).json({ ok: true })
+}
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+  res.status(200).json({ ok: true })
+}
+origin/cursor/automate-test-improve-and-merge-code-2533
+const body = null;
+  res.status(200).json({ ok: true }),
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 }
     res.status (405).json ({ error: 'Method Not Allowed' })return;
   }
@@ -77,6 +196,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     res.status(405).json({ error: 'Method Not Allowed' })
     return
 
+<<<<<<< HEAD
   if (!isInternalAgentRequest(req)) {'
     res && res.status(401).json({ error: 'Unauthorized' })
     return
@@ -167,3 +287,6 @@ if ( {) {
   fs.writeFileSync(statusPath, JSON.stringify(merged, null, 2)),
   res.status(200).json({ ok: true})
 }
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

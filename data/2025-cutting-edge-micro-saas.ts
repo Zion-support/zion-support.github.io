@@ -1,3 +1,23 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+
+
+<<<<<<< HEAD
+export const cuttingEdgeMicroSaasServices2025 = [
+  {
+    id: 'customer-success-ai-pro'
+    name: 'Customer Success AI Pro'
+=======
+<<<<<<< HEAD
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+id: 'customer-success-ai-pro',
+    name: 'Customer Success AI Pro',
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+
 
 
 ;
@@ -492,9 +512,13 @@ export const cuttingEdgeMicroSaasServices2025 = [
   {
     id: 'customer-success-ai-pro'
     name: 'Customer Success AI Pro'
+<<<<<<< HEAD
 id: 'customer-success-ai-pro',
     name: 'Customer Success AI Pro',
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     description:
       'Intelligent customer success platform that uses AI to predict customer churn, optimize engagement strategies, and maximize customer lifetime value through predictive analytics.'
       'AI-powered churn prediction with 92% accuracy'
@@ -916,6 +940,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       'Financial Data Providers'
     ]
     compliance: [
+<<<<<<< HEAD
       'Basel III'
       'Solvency II'
       'Dodd-Frank'
@@ -923,11 +948,31 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       'Risk Management Standards'
     ]
   }
+<<<<<<< HEAD
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+=======
+<<<<<<< HEAD
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+      'Basel III'
+      'Solvency II'
+      'Dodd-Frank'
+      'Financial Regulations'
+      'Risk Management Standards'
+    ]
+  }
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 export const cuttingEdgeMicroSaasServices2025 = [
   {
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
+<<<<<<< HEAD
 
 ];      'Portfolio risk assessmentInvestment strategy optimizationRegulatory compliance reportingRisk model developmentPerformance analysis and attribution'
     id: 'customer-success-ai-pro', name: 'Customer Success AI Pro',
@@ -940,18 +985,75 @@ export const cuttingEdgeMicroSaasServices2025 = $2;
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
+=======
 
+export const cuttingEdgeMicroSaasServices2025 = []
+  {};
+];      'Portfolio risk assessmentInvestment strategy optimizationRegulatory compliance reportingRisk model developmentPerformance analysis and attribution''
+    id: 'customer-success-ai-pro', name: 'Customer Success AI Pro','
+    description: 'Intelligent customer success platform that uses AI to predict customer churn, optimize engagement strategies, and maximize customer lifetime value through predictive analytics.',
+    features: ['
+      'AI-powered churn prediction with 92% accuracyPersonalized engagement recommendationsCustomer health scoring and monitoringAutomated success playbook creationReal-time customer sentiment analysisPredictive analytics dashboardIntegration with CRM and support toolsAutomated customer onboarding workflows';'
+      'Performance metrics and reportingCustom AI model training''
+    market_size: '$28.9B',
+    target_audience:;'
+      'Investment firms, banks, hedge funds, asset management companies, financial institutions',
+    competitive_advantage:;'
+      'Quantum - enhanced risk modeling, real - time optimization, advanced analytics',
+    use_cases: [;'
+      'Portfolio risk assessment','
+      'Investment strategy optimization','
+      'Regulatory compliance reporting','
+      'Risk model development','
+      'Performance analysis and attribution',
+    ],
+    integrations: [;'
+      'Bloomberg Terminal','
+      'Reuters Eikon','
+      'Trading Platforms','
+      'Risk Management Systems','
+      'Financial Data Providers',
+    ],
+    compliance: [;'
+      'Basel III','
+      'Solvency II','
+      'Dodd - Frank','
+      'Financial Regulations','
+      'Risk Management Standards',
+    ],'
+];      'Portfolio risk assessmentInvestment strategy optimizationRegulatory compliance reportingRisk model developmentPerformance analysis and attribution''
+];      'Portfolio risk assessment_investment strategy optimization_regulatory compliance reporting_risk model development_performance analysis and attribution';
+    ];'
+    integrations: ['Bloomberg TerminalReuters EikonTrading PlatformsRisk Management SystemsFinancial Data Providers'];
+
+
+;'
+    compliance: ['Basel IIISolvency IIDodd-FrankFinancial RegulationsRisk Management Standards']
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+
+
+<<<<<<< HEAD
+origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export const cuttingEdgeMicroSaasServices2025 = [;
-  {;
-    id: 'customer-success-ai-pro',;
-    name: 'Customer Success AI Pro',;
+  {;'
+    id: 'customer-success-ai-pro',;'
+    name: 'Customer Success AI Pro',;'
     description: 'Intelligent customer success platform that uses AI to predict customer churn, optimize engagement strategies, and maximize customer lifetime value through predictive analytics.',;
-    features: [;
-      'AI-powered churn prediction with 92% accuracyPersonalized engagement recommendationsCustomer health scoring and monitoringAutomated success playbook creationReal-time customer sentiment analysisPredictive analytics dashboardIntegration with CRM and support toolsAutomated customer onboarding workflows',;
+    features: [;'
+      'AI-powered churn prediction with 92% accuracyPersonalized engagement recommendationsCustomer health scoring and monitoringAutomated success playbook creationReal-time customer sentiment analysisPredictive analytics dashboardIntegration with CRM and support toolsAutomated customer onboarding workflows',;'
       'Performance metrics and reportingCustom AI model training';
     ],;
     pricing: {;
       starter: {;
+<<<<<<< HEAD
         price: 199,;
         period: 'month',;
         features: ['Up to 1,000 customersBasic AI featuresEmail support'];
@@ -964,35 +1066,59 @@ export const cuttingEdgeMicroSaasServices2025 = [;
       enterprise: {;
         price: 1299,;
         period: 'month',;
+=======
+        price: 199,;'
+        period: 'month',;'
+        features: ['Up to 1,000 customersBasic AI featuresEmail support'];
+      },;
+      professional: {;
+        price: 499,;'
+        period: 'month',;'
+        features: ['Up to 10,000 customersAdvanced AI featuresPriority supportCustom workflows'];
+      },;
+      enterprise: {;
+        price: 1299,;'
+        period: 'month',;'
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
         features: ['Unlimited customersFull AI platformDedicated specialists24/7 support'];
       }
-    },;
-    category: 'Customer Success',;
-    tags: ['Customer SuccessAIChurn PredictionEngagementAnalytics'],;
+    },;'
+    category: 'Customer Success',;'
+    tags: ['Customer SuccessAIChurn PredictionEngagementAnalytics'],;'
     website: 'https://ziontechgroup.com/customer-success-ai-pro',;
+<<<<<<< HEAD
     contact: {;
       phone: '+1 302 464 0950',;
       email: 'kleber@ziontechgroup.com';
     },;
     marketSize: '$11.8B',;
     targetAudience: 'SaaS companies, subscription businesses, customer success teams, growth companies',;
+=======
+    contact: {;'
+      phone: '+1 302 464 0950',;'
+      email: 'kleber@ziontechgroup.com';
+    },;'
+    marketSize: '$11.8B',;'
+    targetAudience: 'SaaS companies, subscription businesses, customer success teams, growth companies',;'
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     competitiveAdvantage: 'AI-powered churn prediction, personalized engagement, predictive analytics',;
-    useCases: [;
+    useCases: [;'
       'Customer churn preventionEngagement strategy optimizationCustomer health monitoringSuccess playbook automationCustomer lifetime value optimization';
-    ],;
-    integrations: ['SalesforceHubSpotIntercomZendeskSlackMicrosoft Teams'],;
+    ],;'
+    integrations: ['SalesforceHubSpotIntercomZendeskSlackMicrosoft Teams'],;'
     compliance: ['GDPRCCPASOC2Data Privacy Standards'];
   },;
-  {;
-    id: 'quantum-supply-chain-optimizer',;
-    name: 'Quantum Supply Chain Optimizer',;
+  {;'
+    id: 'quantum-supply-chain-optimizer',;'
+    name: 'Quantum Supply Chain Optimizer',;'
     description: 'Advanced supply chain optimization platform that leverages quantum computing principles to solve complex logistics problems, reduce costs, and improve efficiency across global supply networks.',;
-    features: [;
-      'Quantum-enhanced route optimizationReal-time supply chain monitoringPredictive demand forecastingInventory optimization algorithmsSupplier performance analyticsRisk assessment and mitigationCost optimization modelingSustainability impact analysis',;
+    features: [;'
+      'Quantum-enhanced route optimizationReal-time supply chain monitoringPredictive demand forecastingInventory optimization algorithmsSupplier performance analyticsRisk assessment and mitigationCost optimization modelingSustainability impact analysis',;'
       'Multi-modal transportation planningReal-time collaboration tools';
     ],;
     pricing: {;
       starter: {;
+<<<<<<< HEAD
         price: 299,;
         period: 'month',;
         features: ['Basic optimization featuresStandard analyticsEmail support'];
@@ -1005,35 +1131,59 @@ export const cuttingEdgeMicroSaasServices2025 = [;
       enterprise: {;
         price: 1999,;
         period: 'month',;
+=======
+        price: 299,;'
+        period: 'month',;'
+        features: ['Basic optimization featuresStandard analyticsEmail support'];
+      },;
+      professional: {;
+        price: 799,;'
+        period: 'month',;'
+        features: ['Advanced optimizationQuantum algorithmsPriority supportCustom modeling'];
+      },;
+      enterprise: {;
+        price: 1999,;'
+        period: 'month',;'
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
         features: ['Full quantum platformCustom algorithmsDedicated specialists24/7 support'];
       }
-    },;
-    category: 'Supply Chain',;
-    tags: ['Supply ChainQuantum ComputingLogisticsOptimizationAnalytics'],;
+    },;'
+    category: 'Supply Chain',;'
+    tags: ['Supply ChainQuantum ComputingLogisticsOptimizationAnalytics'],;'
     website: 'https://ziontechgroup.com/quantum-supply-chain-optimizer',;
+<<<<<<< HEAD
     contact: {;
       phone: '+1 302 464 0950',;
       email: 'kleber@ziontechgroup.com';
     },;
     marketSize: '$15.4B',;
     targetAudience: 'Manufacturing companies, logistics providers, retail chains, e-commerce companies, distribution networks',;
+=======
+    contact: {;'
+      phone: '+1 302 464 0950',;'
+      email: 'kleber@ziontechgroup.com';
+    },;'
+    marketSize: '$15.4B',;'
+    targetAudience: 'Manufacturing companies, logistics providers, retail chains, e-commerce companies, distribution networks',;'
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     competitiveAdvantage: 'Quantum-enhanced optimization, real-time monitoring, predictive analytics',;
-    useCases: [;
+    useCases: [;'
       'Route optimization and planningInventory management optimizationSupplier selection and managementCost reduction and efficiency improvementRisk management and mitigation';
-    ],;
-    integrations: ['ERP SystemsWMS PlatformsTMS SolutionsE-commerce PlatformsAnalytics Tools'],;
+    ],;'
+    integrations: ['ERP SystemsWMS PlatformsTMS SolutionsE-commerce PlatformsAnalytics Tools'],;'
     compliance: ['Supply Chain StandardsLogistics RegulationsData Privacy Laws'];
   },;
-  {;
-    id: 'blockid-verify-pro',;
-    name: 'BlockID Verify Pro',;
+  {;'
+    id: 'blockid-verify-pro',;'
+    name: 'BlockID Verify Pro',;'
     description: 'Revolutionary identity verification platform that combines blockchain technology with advanced biometric authentication to provide secure, tamper-proof digital identity verification.',;
-    features: [;
-      'Blockchain-based identity verificationMulti-factor biometric authenticationReal-time identity validationFraud detection and preventionCompliance with global regulationsAPI integration capabilitiesCustom verification workflowsAudit trail and reporting',;
+    features: [;'
+      'Blockchain-based identity verificationMulti-factor biometric authenticationReal-time identity validationFraud detection and preventionCompliance with global regulationsAPI integration capabilitiesCustom verification workflowsAudit trail and reporting',;'
       'Mobile and web applicationsWhite-label solutions';
     ],;
     pricing: {;
       starter: {;
+<<<<<<< HEAD
         price: 149,;
         period: 'month',;
         features: ['Up to 1,000 verificationsBasic verification featuresEmail support'];
@@ -1046,35 +1196,59 @@ export const cuttingEdgeMicroSaasServices2025 = [;
       enterprise: {;
         price: 999,;
         period: 'month',;
+=======
+        price: 149,;'
+        period: 'month',;'
+        features: ['Up to 1,000 verificationsBasic verification featuresEmail support'];
+      },;
+      professional: {;
+        price: 399,;'
+        period: 'month',;'
+        features: ['Up to 10,000 verificationsAdvanced verification featuresPriority supportCustom workflows'];
+      },;
+      enterprise: {;
+        price: 999,;'
+        period: 'month',;'
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
         features: ['Unlimited verificationsFull verification platformDedicated specialists24/7 support'];
       }
-    },;
-    category: 'Identity Verification',;
-    tags: ['Identity VerificationBlockchainBiometricsSecurityCompliance'],;
+    },;'
+    category: 'Identity Verification',;'
+    tags: ['Identity VerificationBlockchainBiometricsSecurityCompliance'],;'
     website: 'https://ziontechgroup.com/blockid-verify-pro',;
+<<<<<<< HEAD
     contact: {;
       phone: '+1 302 464 0950',;
       email: 'kleber@ziontechgroup.com';
     },;
     marketSize: '$13.7B',;
     targetAudience: 'Financial institutions, healthcare organizations, government agencies, e-commerce companies, fintech startups',;
+=======
+    contact: {;'
+      phone: '+1 302 464 0950',;'
+      email: 'kleber@ziontechgroup.com';
+    },;'
+    marketSize: '$13.7B',;'
+    targetAudience: 'Financial institutions, healthcare organizations, government agencies, e-commerce companies, fintech startups',;'
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     competitiveAdvantage: 'Blockchain-based verification, biometric authentication, global compliance',;
-    useCases: [;
+    useCases: [;'
       'Customer onboarding and verificationEmployee identity verificationGovernment ID verificationHealthcare patient verificationFinancial services compliance';
-    ],;
-    integrations: ['CRM SystemsBanking PlatformsHealthcare SystemsE-commerce PlatformsGovernment APIs'],;
+    ],;'
+    integrations: ['CRM SystemsBanking PlatformsHealthcare SystemsE-commerce PlatformsGovernment APIs'],;'
     compliance: ['KYC/AMLGDPRCCPASOC2Global Identity Standards'];
   },;
-  {;
-    id: 'hr-analytics-ai-suite',;
-    name: 'HR Analytics AI Suite',;
+  {;'
+    id: 'hr-analytics-ai-suite',;'
+    name: 'HR Analytics AI Suite',;'
     description: 'Comprehensive HR analytics platform that uses artificial intelligence to provide insights into employee performance, engagement, retention, and organizational effectiveness.',;
-    features: [;
-      'AI-powered performance analyticsEmployee engagement monitoringPredictive turnover analysisRecruitment optimization algorithmsWorkforce planning and forecastingDiversity and inclusion analyticsReal-time performance dashboardsCustom reporting and analytics',;
+    features: [;'
+      'AI-powered performance analyticsEmployee engagement monitoringPredictive turnover analysisRecruitment optimization algorithmsWorkforce planning and forecastingDiversity and inclusion analyticsReal-time performance dashboardsCustom reporting and analytics',;'
       'Integration with HR systemsPredictive modeling capabilities';
     ],;
     pricing: {;
       starter: {;
+<<<<<<< HEAD
         price: 249,;
         period: 'month',;
         features: ['Up to 500 employeesBasic analytics featuresEmail support'];
@@ -1087,35 +1261,59 @@ export const cuttingEdgeMicroSaasServices2025 = [;
       enterprise: {;
         price: 1699,;
         period: 'month',;
+=======
+        price: 249,;'
+        period: 'month',;'
+        features: ['Up to 500 employeesBasic analytics featuresEmail support'];
+      },;
+      professional: {;
+        price: 649,;'
+        period: 'month',;'
+        features: ['Up to 5,000 employeesAdvanced analytics featuresPriority supportCustom reporting'];
+      },;
+      enterprise: {;
+        price: 1699,;'
+        period: 'month',;'
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
         features: ['Unlimited employeesFull analytics platformDedicated specialists24/7 support'];
       }
-    },;
-    category: 'HR Analytics',;
-    tags: ['HR AnalyticsAIPerformance ManagementEmployee EngagementPredictive Analytics'],;
+    },;'
+    category: 'HR Analytics',;'
+    tags: ['HR AnalyticsAIPerformance ManagementEmployee EngagementPredictive Analytics'],;'
     website: 'https://ziontechgroup.com/hr-analytics-ai-suite',;
+<<<<<<< HEAD
     contact: {;
       phone: '+1 302 464 0950',;
       email: 'kleber@ziontechgroup.com';
     },;
     marketSize: '$9.8B',;
     targetAudience: 'HR departments, enterprises, consulting firms, recruitment agencies, talent management companies',;
+=======
+    contact: {;'
+      phone: '+1 302 464 0950',;'
+      email: 'kleber@ziontechgroup.com';
+    },;'
+    marketSize: '$9.8B',;'
+    targetAudience: 'HR departments, enterprises, consulting firms, recruitment agencies, talent management companies',;'
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     competitiveAdvantage: 'AI-powered HR analytics, predictive modeling, comprehensive insights',;
-    useCases: [;
+    useCases: [;'
       'Employee performance analysisTalent retention optimizationRecruitment process improvementWorkforce planning and forecastingOrganizational effectiveness analysis';
-    ],;
-    integrations: ['WorkdayBambooHRADPSuccessFactorsSlackMicrosoft Teams'],;
+    ],;'
+    integrations: ['WorkdayBambooHRADPSuccessFactorsSlackMicrosoft Teams'],;'
     compliance: ['HR Data PrivacyEmployment LawsData Protection Regulations'];
   },;
-  {;
-    id: 'quantum-risk-financial-manager',;
-    name: 'Quantum Risk Financial Manager',;
+  {;'
+    id: 'quantum-risk-financial-manager',;'
+    name: 'Quantum Risk Financial Manager',;'
     description: 'Advanced financial risk management platform that leverages quantum computing to provide real-time risk assessment, portfolio optimization, and financial modeling for complex investment strategies.',;
-    features: [;
-      'Quantum-enhanced risk modelingReal-time portfolio optimizationAdvanced financial analyticsRisk assessment and monitoringPortfolio stress testingRegulatory compliance reportingCustom risk modelsReal-time market data integration',;
+    features: [;'
+      'Quantum-enhanced risk modelingReal-time portfolio optimizationAdvanced financial analyticsRisk assessment and monitoringPortfolio stress testingRegulatory compliance reportingCustom risk modelsReal-time market data integration',;'
       'Performance attribution analysisComprehensive risk reporting';
     ],;
     pricing: {;
       starter: {;
+<<<<<<< HEAD
         price: 399,;
         period: 'month',;
         features: ['Basic risk managementStandard analyticsEmail support'];
@@ -1128,26 +1326,54 @@ export const cuttingEdgeMicroSaasServices2025 = [;
       enterprise: {;
         price: 2499,;
         period: 'month',;
+=======
+        price: 399,;'
+        period: 'month',;'
+        features: ['Basic risk managementStandard analyticsEmail support'];
+      },;
+      professional: {;
+        price: 999,;'
+        period: 'month',;'
+        features: ['Advanced risk managementQuantum algorithmsPriority supportCustom models'];
+      },;
+      enterprise: {;
+        price: 2499,;'
+        period: 'month',;'
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
         features: ['Full risk management platformCustom algorithmsDedicated specialists24/7 support'];
       }
-    },;
-    category: 'Financial Risk Management',;
-    tags: ['Risk ManagementQuantum ComputingFinancial AnalyticsPortfolio OptimizationCompliance'],;
+    },;'
+    category: 'Financial Risk Management',;'
+    tags: ['Risk ManagementQuantum ComputingFinancial AnalyticsPortfolio OptimizationCompliance'],;'
     website: 'https://ziontechgroup.com/quantum-risk-financial-manager',;
+<<<<<<< HEAD
     contact: {;
       phone: '+1 302 464 0950',;
       email: 'kleber@ziontechgroup.com';
     },;
     marketSize: '$28.9B',;
     targetAudience: 'Investment firms, banks, hedge funds, asset management companies, financial institutions',;
+=======
+    contact: {;'
+      phone: '+1 302 464 0950',;'
+      email: 'kleber@ziontechgroup.com';
+    },;'
+    marketSize: '$28.9B',;'
+    targetAudience: 'Investment firms, banks, hedge funds, asset management companies, financial institutions',;'
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     competitiveAdvantage: 'Quantum-enhanced risk modeling, real-time optimization, advanced analytics',;
-    useCases: [;
+    useCases: [;'
       'Portfolio risk assessmentInvestment strategy optimizationRegulatory compliance reportingRisk model developmentPerformance analysis and attribution';
-    ],;
-    integrations: ['Bloomberg TerminalReuters EikonTrading PlatformsRisk Management SystemsFinancial Data Providers'],;
+    ],;'
+    integrations: ['Bloomberg TerminalReuters EikonTrading PlatformsRisk Management SystemsFinancial Data Providers'],;'
     compliance: ['Basel IIISolvency IIDodd-FrankFinancial RegulationsRisk Management Standards'];
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   }
 ];
   }
@@ -1220,6 +1446,7 @@ ursor/fix-website-loading-errors-and-merge-6662;
 ];
 ];
 ;
+<<<<<<< HEAD
   }
 ];
 
@@ -1384,3 +1611,51 @@ ursor/fix-website-loading-errors-and-merge-6662;
     compliance: ['Basel IIISolvency IIDodd-FrankFinancial RegulationsRisk Management Standards']
   }
 ],
+=======
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+
+
+  }
+];
+ursor/fix-website-loading-errors-and-merge-6662
+origin/cursor/expand-services-advertise-and-build-project-c28b
+      'Basel III',
+      'Solvency II',
+      'Dodd-Frank',
+      'Financial Regulations',
+      'Risk Management Standards',
+    ],
+  },
+];
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+<<<<<<< HEAD
+
+  }
+];
+
+
+
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+  }
+];
+  },
+    ];
+    integrations: ['Bloomberg TerminalReuters EikonTrading PlatformsRisk Management SystemsFinancial Data Providers'];
+    compliance: ['Basel IIISolvency IIDodd - FrankFinancial RegulationsRisk Management Standards'];
+  }
+];
+;
+  }
+];
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

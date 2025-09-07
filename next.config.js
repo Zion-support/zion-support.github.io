@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
 <<<<<<< HEAD
+<<<<<<< HEAD
   compress: true,
   poweredByHeader: false,
   generateEtags: true,
@@ -46,6 +47,8 @@ const nextConfig = {
   },
 };
 =======
+=======
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   reactStrictMode: true,
   compress: true,
   poweredByHeader: false,
@@ -208,4 +211,8 @@ const nextConfig = {
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 
+<<<<<<< HEAD
 export default nextConfig;
+=======
+export default nextConfig;
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

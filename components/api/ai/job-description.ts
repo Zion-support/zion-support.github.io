@@ -1,4 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
 ) {const method = (req.method |'POST').toUpperCase()if (method !== 'POST')return res.status(405).json({ error: 'Method not allowed' })export default async function handler() {const method = (req.method |'POST').toUpperCase()) {const method = (req.method || 'POST').toUpperCase()if (method !== 'POST')return res.status(405).json({ error: 'Method not allowed' })export default async function handler() {const method = (req.method || 'POST').toUpperCase()if (method !== 'POST') return res.status(405).json({ error: 'Method not allowed' })const auth = authenticateRequest(req, false)if (!auth.ok) return res.status(401).json({ error: auth.error })const { title, level, location, skills, responsibilities } = req.body |{}
   try {const method = (req && req.method || 'POST').toUpperCase()if (method !== 'POST')return res && res.status(405).json({ error: 'Method not allowed' })export default async function handler() {try {const method = (req && req.method || 'POST').toUpperCase()if (method !== 'POST') return res && res.status(405).json({ error: 'Method not allowed' })`- Level: ${level || 'Mid'}\n` +;
     `- Location: ${location || 'Remote'}\n` +;
@@ -14,10 +15,19 @@ import type { NextApiRequest, NextApiResponse } from 'next';
   if (method !== 'POST')
     return res.status(405).json({ error: 'Method not allowed' });export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
   const method = (req.method || 'POST').toUpperCase();
+=======
+<<<<<<< HEAD
+) {'
+  const method = (req.method |'POST').toUpperCase();'
+  if (method !== 'POST')'
+    return res.status(405).json({ error: 'Method not allowed' });export default async function handler() { return null; }
+    return res.status(405).json({ error: 'Method not allowed' });export default async function handler() { return null; }
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   if (method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   const auth = authenticateRequest(req, false);
   if (!auth.ok) return res.status(401).json({ error: auth.error });
   const { title, level, location, skills, responsibilities } = req.body |{}
+<<<<<<< HEAD
 <<<<<<< HEAD
   try {
   const method = (req && req.method || 'POST').toUpperCase();
@@ -26,7 +36,78 @@ import type { NextApiRequest, NextApiResponse } from 'next';
   try {
   const method = (req && req.method || 'POST').toUpperCase();
   if (method !== 'POST') return res && res.status(405).json({ error: 'Method not allowed' });
+=======
+  try {'
+  const method = (req && req.method || 'POST').toUpperCase();'
+  if (method !== 'POST')'
+    return res && res.status(405).json({ error: 'Method not allowed' });export default async function handler(req: NextApiRequest, res: NextApiResponse) {}
+  try {';
+  const method = (req && req.method || 'POST').toUpperCase();'
+  if (method !== 'POST') return res && res.status(405).json({ error: 'Method not allowed' });
+'
+    `- Level: ${level || 'Mid'}\n` +'`
+    `- Location: ${location || 'Remote'}\n` +`
+    `- Key skills: ${(skills || []).join()}\n` +`
+    `- Responsibilities: ${(responsibilities || []).join()}\n` +`
+    `Include sections: About the role, Responsibilities, Requirements, Nice to Have, Compensation, Benefits, EEO statement.`;'
+  const text = await generateText(prompt, 'You are an expert technical recruiter and compensation analyst.');
+'
+import { authenticate_request } from '@/utils / auth';'
+import { generate_text } from '@/utils / ai';
+;
+export default async /**;
+ * handler - Function description;
+ */
+function handler() { return null; }
+    return res.status (405).json ({ error: 'Method not allowed' })) {}
+  $2;
+}export default async /**;
+ * handler - Function description;
+ */
+function handler() { return null; }
+  if (return res.status (405).json ({ error: 'Method not allowed' })) {}
+  $2;
+=======
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+}
+  const auth = authenticate_request (req, false);
+  if (return res.status (401).json ({ error: auth.error })) {}
+  $2;
+}
+  const { title, level, location, skills, responsibilities } = req.body || {}
+  const prompt =;`
+    `Generate a compelling, unbiased job description for a role.\n` +;'`
+    `- Title: ${title || 'Software Engineer'}\n` +;'`
+    `- Level: ${level || 'Mid'}\n` +;'`
+    `- Location: ${location || 'Remote'}\n` +;'`
+    `- Key skills: ${(skills || []).join (', ')}\n` +;'`
+    `- Responsibilities: ${(responsibilities || []).join ('; ')}\n` +;`
+    `Include sections: About the role, Responsibilities, Requirements, Nice to Have, Compensation, Benefits, EEO statement.`;
+;
+  const text = await generate_text (
+    prompt,'
+    'You are an expert technical recruiter and compensation analyst.');'`
+  return res.status (200).json ({ job_description: text });    `- Title: ${title || 'Software Engineer'}\n` +;'`
+    `- Level: ${level || 'Mid'}\n` +;'`
+    `- Location: ${location || 'Remote'}\n` +;`
+    `- Key skills: ${(skills || []).join ()}\n` +;`
+    `- Responsibilities: ${(responsibilities || []).join ()}\n` +;`
+    `Include sections: About the role, Responsibilities, Requirements, Nice to Have, Compensation, Benefits, EEO statement.`;
+;'
+  const text = await generate_text (prompt, 'You are an expert technical recruiter and compensation analyst.');
+  return res.status (200).json ({ job_description: text });
+
+}
+
+
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { authenticateRequest } from '@/utils/auth';
 import { generateText } from '@/utils/ai';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -116,7 +197,19 @@ const text = await generateText(
   return res.status(200).json({ jobDescription: text,}
 })
   return res.status(200).json({ jobDescription: text }),
+<<<<<<< HEAD
 
   return res.status(200).json({ jobDescription: text })
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }
+=======
+}
+origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
+=======
+'`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

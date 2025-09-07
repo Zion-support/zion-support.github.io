@@ -18,10 +18,57 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
+<<<<<<< HEAD
+=======
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ],
+      "@/components/*": [
+        "./src/components/*"
+      ],
+      "@/pages/*": [
+        "./src/pages/*"
+      ],
+      "@/utils/*": [
+        "./src/utils/*"
+      ],
+      "@/hooks/*": [
+        "./src/hooks/*"
+      ],
+      "@/types/*": [
+        "./src/types/*"
+      ],
+      "@/styles/*": [
+        "./src/styles/*"
+      ],
+      "@/assets/*": [
+        "./src/assets/*"
+      ]
+    },
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "sourceMap": true,
+    "declaration": false,
+    "declarationMap": false,
+    "removeComments": true,
+    "noImplicitAny": false,
+    "noImplicitReturns": false,
+    "noImplicitThis": false,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "exactOptionalPropertyTypes": false,
+    "noImplicitOverride": false,
+    "noPropertyAccessFromIndexSignature": false,
+    "noUncheckedIndexedAccess": false,
+    "noFallthroughCasesInSwitch": false,
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     "plugins": [
       {
         "name": "next"
       }
+<<<<<<< HEAD
     ],
     "baseUrl": ".",
     "paths": {
@@ -51,4 +98,62 @@
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
   "exclude": ["node_modules", "apps/**", "apps.backup/**", "api-backup/**", "backup-merge-conflicts/**", "browserstack.config.ts", "cypress.config.ts", "jest.config.*", "*.config.ts", "types/**", "netlify/**", "components/**"]
+=======
+    ]
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "pages/**/*.ts",
+    "pages/**/*.tsx",
+    "app/**/*.ts",
+    "app/**/*.tsx",
+    "components/**/*.ts",
+    "components/**/*.tsx",
+    "data/**/*.ts",
+    "data/**/*.tsx",
+    "types/**/*.ts",
+    "types/**/*.tsx",
+    "zion/**/*.ts",
+    "zion/**/*.tsx",
+    "protocol/**/*.ts",
+    "protocol/**/*.tsx",
+    "App.tsx",
+    "middleware.ts",
+    "jest.setup.ts",
+    "vite.config.ts",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "build",
+    "pages_backup*",
+    "pages.*",
+    "pages-*",
+    "pages_disabled*",
+    "pages.disabled*",
+    "pages.broken*",
+    "pages.corrupted*",
+    "pages.old*",
+    "pages._*",
+    "pages.__*",
+    "backup-pages",
+    "src.pages.disabled",
+    "lib_backup*",
+    "src_backup*",
+    "corrupted-files-backup*",
+    "performance-reports*",
+    "log-analysis-reports*",
+    "link-reports*",
+    "lint-target*",
+    "monitoring*",
+    "pm2-automation*",
+    "automation/logs*",
+    "automation/backup*",
+    "api-backup",
+    "contracts",
+    "hardhat"
+  ]
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 }
