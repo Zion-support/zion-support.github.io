@@ -416,7 +416,7 @@ class ComprehensiveAutomationSuite {
       JSON.stringify(report, null, 2)
     );
     this.log(
-
+      '\n📄 Detailed report saved to comprehensive-automation-report.json'
     );
   }
 
