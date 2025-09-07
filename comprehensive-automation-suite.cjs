@@ -1,14 +1,15 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
+
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
-;
-/**;
- * Comprehensive Automation Suite;
- * Fixes issues and runs all automation tasks;
- */;
-class ComprehensiveAutomationSuite {;
-  constructor() {;
+
+/**
+ * Comprehensive Automation Suite
+ * Fixes issues and runs all automation tasks
+ */
+class ComprehensiveAutomationSuite {
+  constructor() {
     this.projectRoot = process.cwd();
     this.startTime = new Date();
     this.results = {
@@ -42,8 +43,8 @@ class ComprehensiveAutomationSuite {;
       deployment: { success: false, duration: 0, errors: [], warnings: [] },
     };
   }
-;
-  log(message, type = 'INFO') {;
+
+  log(message, type = 'INFO') {
     const timestamp = new Date().toISOString();
     const prefix =
       type === 'ERROR'
@@ -76,8 +77,8 @@ class ComprehensiveAutomationSuite {;
       };
     }
   }
-;
-  async fixDependencies() {;
+
+  async fixDependencies() {
     const startTime = Date.now();
     this.log('\n🔧 FIXING DEPENDENCIES');
 
@@ -124,8 +125,8 @@ class ComprehensiveAutomationSuite {;
       };
     }
   }
-;
-  async improveCodeQuality() {;
+
+  async improveCodeQuality() {
     const startTime = Date.now();
     this.log('\n🔍 IMPROVING CODE QUALITY');
 
@@ -166,8 +167,8 @@ class ComprehensiveAutomationSuite {;
       };
     }
   }
-;
-  async performSecurityAudit() {;
+
+  async performSecurityAudit() {
     const startTime = Date.now();
     this.log('\n🔒 PERFORMING SECURITY AUDIT');
 
@@ -199,13 +200,13 @@ class ComprehensiveAutomationSuite {;
       };
     }
   }
-;
-  async optimizeBuild() {;
+
+  async optimizeBuild() {
     const startTime = Date.now();
     this.log('\n🏗️ OPTIMIZING BUILD');
-;
-    try {;
-      // Clean build;
+
+    try {
+      // Clean build
       const cleanBuild = await this.runCommand('npm run clean', 'Clean Build');
 
       // Production build
@@ -238,8 +239,8 @@ class ComprehensiveAutomationSuite {;
       };
     }
   }
-;
-  async optimizeSEO() {;
+
+  async optimizeSEO() {
     const startTime = Date.now();
     this.log('\n🔍 OPTIMIZING SEO');
 
@@ -274,8 +275,8 @@ class ComprehensiveAutomationSuite {;
       };
     }
   }
-;
-  async improveAccessibility() {;
+
+  async improveAccessibility() {
     const startTime = Date.now();
     this.log('\n♿ IMPROVING ACCESSIBILITY');
 
@@ -309,8 +310,8 @@ class ComprehensiveAutomationSuite {;
       };
     }
   }
-;
-  async optimizePerformance() {;
+
+  async optimizePerformance() {
     const startTime = Date.now();
     this.log('\n⚡ OPTIMIZING PERFORMANCE');
 
@@ -342,20 +343,20 @@ class ComprehensiveAutomationSuite {;
       };
     }
   }
-;
-  async deployChanges() {;
+
+  async deployChanges() {
     const startTime = Date.now();
     this.log('\n🚀 DEPLOYING CHANGES');
-;
-    try {;
-      // Add all changes;
+
+    try {
+      // Add all changes
       await this.runCommand('git add .', 'Git Add');
 
       // Commit changes
       const commitMessage = `feat: Comprehensive automation improvements and fixes - ${new Date().toISOString()}`;
       await this.runCommand(`git commit -m "${commitMessage}"`, 'Git Commit');
-;
-      // Push changes;
+
+      // Push changes
       await this.runCommand('git push origin HEAD', 'Git Push');
 
       this.results.deployment = {
@@ -373,21 +374,21 @@ class ComprehensiveAutomationSuite {;
       };
     }
   }
-;
-  generateDetailedReport() {;
+
+  generateDetailedReport() {
     const totalDuration = Date.now() - this.startTime;
     const successfulTasks = Object.values(this.results).filter(
       r => r.success
     ).length;
     const totalTasks = Object.keys(this.results).length;
-;
+
     this.log('\n📊 COMPREHENSIVE AUTOMATION REPORT');
     this.log('='.repeat(60));
     this.log(`Total Duration: ${totalDuration}ms`);
     this.log(`Successful Tasks: ${successfulTasks}/${totalTasks}`);
     this.log('');
-;
-    Object.entries(this.results).forEach(([task, result]) => {;
+
+    Object.entries(this.results).forEach(([task, result]) => {
       const status = result.success ? '✅' : '❌';
       const duration = `${result.duration}ms`;
       this.log(`${status} ${task}: ${duration}`);
@@ -418,34 +419,34 @@ class ComprehensiveAutomationSuite {;
       '\n📄 Detailed report saved to comprehensive-automation-report.json'
     );
   }
-;
-  generateRecommendations() {;
+
+  generateRecommendations() {
     const recommendations = [];
-;
-    if (!this.results.codeQuality.success) {;
+
+    if (!this.results.codeQuality.success) {
       recommendations.push('Review and fix code quality issues');
     }
-    if (!this.results.securityAudit.success) {;
+    if (!this.results.securityAudit.success) {
       recommendations.push('Address security vulnerabilities');
     }
-    if (!this.results.performanceOptimization.success) {;
+    if (!this.results.performanceOptimization.success) {
       recommendations.push('Optimize application performance');
     }
-    if (!this.results.seoOptimization.success) {;
+    if (!this.results.seoOptimization.success) {
       recommendations.push('Improve SEO optimization');
     }
-    if (!this.results.accessibilityImprovements.success) {;
+    if (!this.results.accessibilityImprovements.success) {
       recommendations.push('Enhance accessibility features');
     }
-;
+
     return recommendations;
   }
-;
-  async run() {;
+
+  async run() {
     this.log('🚀 Starting Comprehensive Automation Suite');
     this.log('='.repeat(60));
-;
-    try {;
+
+    try {
       await this.fixDependencies();
       await this.improveCodeQuality();
       await this.performSecurityAudit();
@@ -458,17 +459,14 @@ class ComprehensiveAutomationSuite {;
       this.log(`Fatal error: ${error.message}`, 'ERROR');
     } finally {
       this.generateDetailedReport();
-    } catch (error) {
-      this.log(`Automation suite failed: ${error.message}`, 'ERROR');
-      process.exit(1);
     }
   }
 }
-;
-// Run the comprehensive automation suite;
-if (require.main === module) {;
+
+// Run the comprehensive automation suite
+if (require.main === module) {
   const suite = new ComprehensiveAutomationSuite();
   suite.run().catch(console.error);
 }
-;
+
 module.exports = ComprehensiveAutomationSuite;
