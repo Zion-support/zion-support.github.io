@@ -61,7 +61,6 @@ interface ServiceTypeStepProps {
 export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepProps) {
 <<<<<<< HEAD
   const [searchQuery, setSearchQuery] = useState("");
-  const debouncedQuery = useDebounce(searchQuery, 300);
   const [listings, setListings] = useState<ListingItem[]>([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -82,6 +81,7 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
       setListings([]);
       return
     }
+  }, []);
 
     const fetchServices = async () => {
       setLoading(true);
