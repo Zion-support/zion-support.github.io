@@ -253,7 +253,7 @@ const ComprehensivePricingGuide2025 = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <>
       <SEO 
         title="Comprehensive Pricing Guide 2025 - Zion Tech Group"
         description="Explore our transparent pricing for AI-powered solutions, quantum computing platforms, blockchain services, and innovative micro SAAS products. Find the perfect plan for your business needs."

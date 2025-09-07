@@ -404,7 +404,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2025: ProductListing[] = [
     }
   },
 
-  // IoT Edge Computing Platform
+  // Quantum Computing Solutions
   {
     id: "iot-edge-computing-platform",
     name: "IoT Edge Computing Platform",
@@ -654,7 +654,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2025: ProductListing[] = [
     }
   },
 
-  // Sustainable Technology Platform
+  // FinTech AI Platform
   {
     id: "sustainable-technology-platform",
     name: "Sustainable Technology Platform",
