@@ -1,15 +1,25 @@
 # Automation Report
 
+<<<<<<< HEAD
 **Timestamp:** 2025-09-07T02:53:54.838Z
 **Duration:** 23172ms
 
 ## Summary
 - ✅ Successful: 5
 - ❌ Errors: 4
+=======
+**Timestamp:** 2025-09-07T02:51:20.034Z
+**Duration:** 9764ms
+
+## Summary
+- ✅ Successful: 1
+- ❌ Errors: 8
+>>>>>>> fc9e555998eb59b8e7a598af5aaae6093b04ae4e
 - ⚠️ Warnings: 0
 
 ## Successful Operations
 - Operation
+<<<<<<< HEAD
 - scripts/auto-fixer.js
 - scripts/advanced-build-optimizer.js
 - scripts/performance-monitor-enhanced.js
@@ -31,6 +41,81 @@ SyntaxError: Invalid regular expression flags
     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)
     at node:internal/main/run_main_module:36:49
+=======
+
+## Errors
+- scripts/comprehensive-error-fixer.cjs: Command failed: node scripts/comprehensive-error-fixer.cjs
+Error fixing failed: Error: ENOENT: no such file or directory, stat '/workspace/media/docu-script/requirements.txt'
+    at Object.statSync (node:fs:1740:25)
+    at scanDirectory (/workspace/scripts/comprehensive-error-fixer.cjs:86:25)
+    at scanDirectory (/workspace/scripts/comprehensive-error-fixer.cjs:91:13)
+    at scanDirectory (/workspace/scripts/comprehensive-error-fixer.cjs:91:13)
+    at ComprehensiveErrorFixer.getAllJSFiles (/workspace/scripts/comprehensive-error-fixer.cjs:99:5)
+    at ComprehensiveErrorFixer.fixSyntaxErrors (/workspace/scripts/comprehensive-error-fixer.cjs:26:24)
+    at ComprehensiveErrorFixer.run (/workspace/scripts/comprehensive-error-fixer.cjs:157:18)
+    at Object.<anonymous> (/workspace/scripts/comprehensive-error-fixer.cjs:177:9)
+    at Module._compile (node:internal/modules/cjs/loader:1730:14)
+    at Object..js (node:internal/modules/cjs/loader:1895:10) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'stat',
+  path: '/workspace/media/docu-script/requirements.txt'
+}
+
+- scripts/auto-fixer.js: Command failed: node scripts/auto-fixer.js
+file:///workspace/scripts/auto-fixer.js:3
+#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { execSync } from 'child_process'; import { fileURLToPath } from 'url';
+^
+
+SyntaxError: Invalid or unexpected token
+    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)
+    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)
+    at #translate (node:internal/modules/esm/loader:534:12)
+    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)
+    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)
+
+Node.js v22.16.0
+
+- scripts/advanced-build-optimizer.js: Command failed: node scripts/advanced-build-optimizer.js
+file:///workspace/scripts/advanced-build-optimizer.js:3
+ursor/integrate-build-improve-and-re-verify-8f7d;
+                                            ^
+
+SyntaxError: Invalid or unexpected token
+    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)
+    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)
+    at #translate (node:internal/modules/esm/loader:534:12)
+    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)
+    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)
+
+Node.js v22.16.0
+
+- scripts/performance-monitor-enhanced.js: Command failed: node scripts/performance-monitor-enhanced.js
+file:///workspace/scripts/performance-monitor-enhanced.js:3
+ursor/fix-syntax-push-and-merge-to-main-40de;
+                                        ^^
+
+SyntaxError: Invalid or unexpected token
+    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)
+    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)
+    at #translate (node:internal/modules/esm/loader:534:12)
+    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)
+    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)
+
+Node.js v22.16.0
+
+- scripts/performance-optimizer.js: Command failed: node scripts/performance-optimizer.js
+file:///workspace/scripts/performance-optimizer.js:2
+const fs = require('fs');
+           ^
+
+ReferenceError: require is not defined in ES module scope, you can use import instead
+This file is being treated as an ES module because it has a '.js' file extension and '/workspace/package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.
+    at file:///workspace/scripts/performance-optimizer.js:2:12
+    at ModuleJob.run (node:internal/modules/esm/module_job:274:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:117:5)
+>>>>>>> fc9e555998eb59b8e7a598af5aaae6093b04ae4e
 
 Node.js v22.16.0
 
