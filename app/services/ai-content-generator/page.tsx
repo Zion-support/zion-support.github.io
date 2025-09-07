@@ -84,12 +84,13 @@ export default function AIContentGeneratorPage() {
               period="month"
               description="Perfect for small businesses and content creators"
               features={[
-                "10,000 words/month"}
-            "5 languages"
-            "Basic SEO optimization"
-            "Email support"
-            "Standard templates"
-              popular={false
+                "10,000 words/month",
+                "5 languages",
+                "Basic SEO optimization",
+                "Email support",
+                "Standard templates"
+              ]}
+              popular={false}
             />
             <PricingCard title="Professional"
               price="$399"
