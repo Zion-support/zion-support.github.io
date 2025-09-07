@@ -4,6 +4,7 @@ const createJestConfig = nextJest({
   dir: './'
 });
 
+const config = {
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
   testEnvironment: 'jsdom',
   moduleNameMapper: {
@@ -104,7 +105,6 @@ const createJestConfig = nextJest({
     '<rootDir>/automation/logs*/',
     '<rootDir>/automation/backup*/'
   ],
-
   coverageThreshold: {
     global: {
       branches: 70,
@@ -117,7 +117,6 @@ const createJestConfig = nextJest({
   verbose: true,
   collectCoverage: false,
   testTimeout: 30000
-  testPathIgnorePatterns: ['<rootDir>/.next/', '<rootDir>/node_modules/']
 };
 
 module.exports = createJestConfig(config);
