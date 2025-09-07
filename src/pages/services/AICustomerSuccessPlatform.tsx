@@ -357,7 +357,22 @@ const AICustomerSuccessPlatform: React.FC = () => {
                     <span className="text-4xl font-bold text-white">{plan.price}</span>
                     <span className="text-gray-400 ml-1">{plan.period}</span>
                   </div>
-                  <p className="text-slate-300">{plan.description}</p>
+                  
+                  <div className="space-y-3 mb-8">
+                    {plan.features.map((feature, idx) => (
+                      <div key={idx} className="flex items-center text-sm text-slate-300">
+                        <CheckCircle className="w-4 h-4 text-pink-400 mr-2 flex-shrink-0" />
+                        {feature}
+                      </div>
+                    ))}
+                  </div>
+                  
+                  <a 
+                    href="/contact" 
+                    className="w-full block text-center px-6 py-3 bg-gradient-to-r from-pink-500 to-rose-600 text-white font-semibold rounded-lg hover:from-pink-600 hover:to-rose-700 transition-all duration-300 transform hover:scale-105"
+                  >
+                    Get Started
+                  </a>
                 </div>
 
                 <ul className="space-y-3 mb-8">

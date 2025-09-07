@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { 
+  Brain, 
   Workflow, 
   Zap, 
   Brain, 
@@ -8,6 +9,8 @@ import {
   CheckCircle, 
   ArrowRight, 
   Users, 
+  TrendingUp, 
+  Shield, 
   Clock, 
   TrendingUp, 
   Shield,
@@ -117,7 +120,6 @@ export default function AIWorkflowOrchestrator() {
         'Workflow templates library',
         'API access'
       ],
-      cta: 'Start Free Trial',
       popular: true
     },
     {
@@ -135,7 +137,6 @@ export default function AIWorkflowOrchestrator() {
         'Advanced security features',
         'SLA guarantees'
       ],
-      cta: 'Contact Sales',
       popular: false
     }
   ];
