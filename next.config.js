@@ -4,6 +4,7 @@ const nextConfig = {
   // next@15 uses SWC by default; remove deprecated swcMinify flag
   compress: true,
   poweredByHeader: false,
+  output: 'standalone',
   eslint: { 
     ignoreDuringBuilds: true 
   },
@@ -39,7 +40,7 @@ const nextConfig = {
         /broken_files_backup/,
         /contracts/,
         /hardhat/,
-        /^components\//, // Exclude root components directory
+        // Do not exclude the entire components directory; it contains real components
       ]
     });
 
