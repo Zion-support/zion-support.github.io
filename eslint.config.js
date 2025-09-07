@@ -1,17 +1,6 @@
 import { FlatCompat } from '@eslint/eslintrc';
 import js from '@eslint/js';
-<<<<<<< HEAD
-import path from 'path';
-import { fileURLToPath } from 'url';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-const compat = new FlatCompat({
-  baseDirectory: __dirname,
-  recommendedConfig: js.configs.recommended,
-});
-=======
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
 import typescript from '@typescript-eslint/eslint-plugin';
@@ -20,7 +9,7 @@ import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
 // import nextPlugin from '@next/eslint-plugin-next'; // Not needed for Vite project
 import globals from 'globals';
->>>>>>> cursor/expand-services-advertise-and-build-project-e77d
+
 
 const compat = new FlatCompat({
   baseDirectory: import.meta.dirname,
@@ -29,35 +18,7 @@ const compat = new FlatCompat({
 });
 
 export default [
-<<<<<<< HEAD
-  ...compat.extends('next/core-web-vitals'),
-  {
-    rules: {
-      'react/no-unescaped-entities': 'off',
-      'react-hooks/exhaustive-deps': 'warn',
-      'no-console': 'warn'
-    }
-  },
-  {
-    ignores: [
-      'node_modules/**',
-      '.next/**',
-      'out/**',
-      'dist/**',
-      '*.config.js',
-      '*.config.cjs',
-      '*.config.mjs',
-      'automation/**',
-      'backup-problematic-files/**',
-      'tests/**',
-      '*.test.js',
-      '*.test.ts',
-      '*.test.tsx',
-      '*.spec.js',
-      '*.spec.ts',
-      '*.spec.tsx'
-    ]
-=======
+
   js.configs.recommended,
   {
     files: ['**/*.{js,jsx}'],
@@ -285,6 +246,6 @@ export default [
   }
       'no-console': 'off'
     }
->>>>>>> cursor/expand-services-advertise-and-build-project-e77d
+
   }
 ];
