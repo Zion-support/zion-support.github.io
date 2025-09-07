@@ -1,6 +1,8 @@
-import React, { Suspense } from 'react';
+import React from 'react';
 import Link from 'next/link';
 import { Metadata } from 'next';
+import ServicesGrid from './components/ServicesGrid';
+import HeroSection from './components/HeroSection';
 
 export const metadata: Metadata = {
   title: 'Zion Tech Group - Leading AI and Technology Solutions',
@@ -13,23 +15,15 @@ export const metadata: Metadata = {
   },
 };
 
-// Lazy load components for better performance
-const ServicesGrid = React.lazy(() => import('./components/ServicesGrid'));
-const HeroSection = React.lazy(() => import('./components/HeroSection'));
-
 export default function HomePage() {
   return (
     <main className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
-        <Suspense fallback={<div className="animate-pulse bg-white/10 h-64 rounded-lg" />}>
-          <HeroSection />
-        </Suspense>
+        <HeroSection />
 
         {/* Services Grid */}
-        <Suspense fallback={<div className="animate-pulse bg-white/10 h-48 rounded-lg" />}>
-          <ServicesGrid />
-        </Suspense>
+        <ServicesGrid />
 
         {/* Research Section */}
         <div className="text-center">
