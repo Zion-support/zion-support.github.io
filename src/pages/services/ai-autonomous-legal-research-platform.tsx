@@ -130,7 +130,7 @@ export default function AIAutonomousLegalResearchPlatform() {
     }
   ];
 
-  const useCases = [
+  const pricing = [
     {
       title: "Case Law Research",
       description: "Find relevant precedents and analyze case outcomes across jurisdictions.",
@@ -187,8 +187,7 @@ export default function AIAutonomousLegalResearchPlatform() {
               </Link>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
       {/* Features Section */}
       <section className="py-20">
@@ -213,8 +212,7 @@ export default function AIAutonomousLegalResearchPlatform() {
               </div>
             ))}
           </div>
-        </div>
-      </section>
+        </section>
 
       {/* Benefits Section */}
       <section className="py-20 bg-zion-slate-dark/30">
@@ -329,8 +327,7 @@ export default function AIAutonomousLegalResearchPlatform() {
               </div>
             ))}
           </div>
-        </div>
-      </section>
+        </section>
 
       {/* CTA Section */}
       <section className="py-20">
