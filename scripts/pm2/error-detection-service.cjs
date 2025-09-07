@@ -1,13 +1,46 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+#!/usr/bin/env node;
+=======
 #!/usr/bin/env node
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 /**
  * Main Error Detection Service;
  * Continuously scans the project for errors and coordinates fixing;
  */
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 const fs = // // require('fs');
 const path = // // require('path');
 const { execSync, spawn } = // // require('child_process');
+<<<<<<< HEAD
+const chokidar = // // require('chokidar');
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+
+
+<<<<<<< HEAD
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 class ErrorDetectionService {}
   constructor() {}
     this.projectRoot = process.cwd();
@@ -16,7 +49,30 @@ class ErrorDetectionService {}
     this.logLevel = process.env.LOG_LEVEL || 'info';
     this.maxRetries = parseInt(process.env.MAX_RETRIES) || 3;
     this.backupBeforeFix = process.env.BACKUP_BEFORE_FIX === 'true';
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+    
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+    
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+<<<<<<< HEAD
+    
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     this.errorTypes = {}
       "syntax": [],""
       "typescript": [],""
@@ -25,6 +81,13 @@ class ErrorDetectionService {}
       "dependency": [],""
       "configuration": [];"
     };
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     this.fixAttempts = new Map();
     this.isRunning = false};
   log(level, message, data = null) {}
@@ -34,7 +97,31 @@ class ErrorDetectionService {}
       level,
       message,
       data,
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+      "service": 'error-detection-service'
+    };
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+      "service": 'error-detection-service'
+    };
+
+
+<<<<<<< HEAD
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     if (level === 'error') {}
       console.error(`[${timestamp}] "ERROR": ${message}`, data)} else if (level === 'warn') {`}`;
       console.warn(`[${timestamp}] "WARN": ${message}`, data)} else if (level === 'info') {`}`;
@@ -50,6 +137,27 @@ class ErrorDetectionService {}
     fs.appendFileSync(logFile, JSON.stringify(logEntry) + '\n')};
   async start() {}
     this.log('info', 'Starting Error Detection Service...');
+<<<<<<< HEAD
+<<<<<<< HEAD
+    try {}
+      // Create necessary directories;
+      this.ensureDirectories();
+      // Initial scan;
+      await this.performFullScan();
+      // Start continuous monitoring;
+      this.startContinuousMonitoring();
+      // Start file watching for real-time detection;
+      this.startFileWatching();
+      this.log('info', 'Error Detection Service started successfully');
+<<<<<<< HEAD
+
+=======
+      
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+    
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     try {}
       // Create necessary directories;
       this.ensureDirectories();
@@ -61,6 +169,20 @@ class ErrorDetectionService {}
       this.startFileWatching();
       this.log('info', 'Error Detection Service started successfully');
 
+<<<<<<< HEAD
+      
+<<<<<<< HEAD
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+      
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       // Keep the process alive;
       setInterval(() => {}
         if (!this.isRunning) {}
@@ -74,10 +196,26 @@ class ErrorDetectionService {}
       'backups',
       'temp
     ];
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 
+<<<<<<< HEAD
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
 
+<<<<<<< HEAD
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     dirs.forEach(dir => {})
       const fullPath = path.join(this.projectRoot, dir);
       if (!fs.existsSync(fullPath)) {}
@@ -89,21 +227,43 @@ class ErrorDetectionService {}
       return};
     this.isRunning = true;
     this.log('info', 'Starting full project error scan...');
+<<<<<<< HEAD
+<<<<<<< HEAD
+    try {}
+      // Clear previous error data;
+      this.clearErrorData();
+=======
+
+    try {}
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       // Clear previous error data;
       this.clearErrorData();
 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       // Perform various scans;
       await Promise.all([this.scanForSyntaxErrors(),]
         this.scanForTypeScriptErrors(),
         this.scanForESLintErrors(),
         this.scanForBuildErrors(),
         this.scanForDependencyErrors(),
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+        this.scanForConfigurationErrors();
+      ]);
+      // Generate comprehensive report;
+      await this.generateErrorReport();
+=======
         this.scanForConfigurationErrors();
       ]);
 
       // Generate comprehensive report;
       await this.generateErrorReport();
 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       // Trigger fixes if auto-fix is enabled;
       if (this.autoFix) {}
         await this.triggerErrorFixes()};
@@ -114,12 +274,30 @@ class ErrorDetectionService {}
       this.errorTypes[key] = []})};
   async scanForSyntaxErrors() {}
     this.log('info', 'Scanning for syntax errors...');
+<<<<<<< HEAD
+<<<<<<< HEAD
+    try {}
+      const sourceFiles = this.findSourceFiles();
+      let syntaxErrors = 0;
+=======
+    
+    try {}
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       const sourceFiles = this.findSourceFiles();
       let syntaxErrors = 0;
 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       for (const file of sourceFiles) {}
           // Try to parse the file;
           const content = fs.readFileSync(file, 'utf8');
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+          
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           // Check for common syntax issues;
           if (this.hasSyntaxIssues(content, file)) {}
             this.errorTypes.syntax.push({})
@@ -142,8 +320,22 @@ class ErrorDetectionService {}
       this.log('error', 'Error during syntax scan', error)};
   async scanForTypeScriptErrors() {}
     this.log('info', 'Scanning for TypeScript errors...');
+<<<<<<< HEAD
+<<<<<<< HEAD
+    try {}
       // Run TypeScript compiler check;
       const result = this.runTypeScriptCheck();
+=======
+    
+    try {}
+      // Run TypeScript compiler check;
+      const result = this.runTypeScriptCheck();
+      
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+      // Run TypeScript compiler check;
+      const result = this.runTypeScriptCheck();
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       if (result.errors && result.errors.length > 0) {}
         this.errorTypes.typescript = result.errors.map(error => ({})
           "file": error.file,""
@@ -158,8 +350,23 @@ class ErrorDetectionService {}
       this.log('error', 'Error during TypeScript scan', error)};
   async scanForESLintErrors() {}
     this.log('info', 'Scanning for ESLint errors...');
+<<<<<<< HEAD
+<<<<<<< HEAD
+    try {}
       // Run ESLint check;
       const result = this.runESLintCheck();
+=======
+    
+    try {}
+      // Run ESLint check;
+      const result = this.runESLintCheck();
+      
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+      if (result.errors && result.errors.length > 0) {}
+=======
+      // Run ESLint check;
+      const result = this.runESLintCheck();
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         this.errorTypes.eslint = result.errors.map(error => ({})
           "file": error.filePath,""
           "type": 'eslint',
@@ -170,8 +377,23 @@ class ErrorDetectionService {}
       this.log('error', 'Error during ESLint scan', error)};
   async scanForBuildErrors() {}
     this.log('info', 'Scanning for build errors...');
+<<<<<<< HEAD
+<<<<<<< HEAD
+    try {}
       // Try to build the project;
       const result = this.runBuildCheck();
+=======
+    
+    try {}
+      // Try to build the project;
+      const result = this.runBuildCheck();
+      
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+      if (result.errors && result.errors.length > 0) {}
+=======
+      // Try to build the project;
+      const result = this.runBuildCheck();
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         this.errorTypes.build = result.errors.map(error => ({})
           "file": error.file || 'build',
           "type": 'build',
@@ -181,8 +403,23 @@ class ErrorDetectionService {}
       this.log('error', 'Error during build scan', error)};
   async scanForDependencyErrors() {}
     this.log('info', 'Scanning for dependency errors...');
+<<<<<<< HEAD
+<<<<<<< HEAD
+    try {}
       // Check for dependency issues;
       const result = this.runDependencyCheck();
+=======
+    
+    try {}
+      // Check for dependency issues;
+      const result = this.runDependencyCheck();
+      
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+      if (result.errors && result.errors.length > 0) {}
+=======
+      // Check for dependency issues;
+      const result = this.runDependencyCheck();
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         this.errorTypes.dependency = result.errors.map(error => ({})
           "package": error.package,""
           "type": 'dependency',
@@ -192,15 +429,41 @@ class ErrorDetectionService {}
       this.log('error', 'Error during dependency scan', error)};
   async scanForConfigurationErrors() {}
     this.log('info', 'Scanning for configuration errors...');
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+    try {}
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       const configFiles = ['package.json',]
         'tsconfig.json',
         'eslint.config.js',
         'vite.config.ts',
+<<<<<<< HEAD
+        'tailwind.config.js'
+      ];
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
         'tailwind.config.js
 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
+<<<<<<< HEAD
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
 
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       for (const configFile of configFiles) {}
         const filePath = path.join(this.projectRoot, configFile);
         if (fs.existsSync(filePath)) {}
@@ -220,13 +483,42 @@ class ErrorDetectionService {}
     const sourceDirs = ['src', 'components', 'pages', 'utils', 'hooks', 'types'];
     const extensions = ['.js', '.jsx', '.ts', '.tsx'];
     const files = [];
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 
+<<<<<<< HEAD
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
 
+<<<<<<< HEAD
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     sourceDirs.forEach(dir => {})
       if (fs.existsSync(fullPath)) {}
         this.walkDirectory(fullPath, extensions, files)};
+<<<<<<< HEAD
+    }
+});
+<<<<<<< HEAD
+    return files};
+  walkDirectory(dir, extensions, files) {}
+    const items = fs.readdirSync(dir);
+    items.forEach(item => {})
+      const fullPath = path.join(dir, item);
+      const stat = fs.statSync(fullPath);
+=======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
     return files};
   walkDirectory(dir, extensions, files) {}
@@ -234,6 +526,11 @@ class ErrorDetectionService {}
     items.forEach(item => {})
       const fullPath = path.join(dir, item);
       const stat = fs.statSync(fullPath);
+<<<<<<< HEAD
+      
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       if (stat.isDirectory()) {}
         this.walkDirectory(fullPath, extensions, files)} else if (stat.isFile()) {}
         const ext = path.extname(item);
@@ -242,14 +539,30 @@ class ErrorDetectionService {}
   hasSyntaxIssues(content, filename) {}
     // Check for common syntax issues;
     const issues = [];
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     // Check for unterminated strings;
     const stringRegex = /(["'"])((?:(?!\1)[^\\]|\\.)*\1)/g;"
     const matches = content.match(stringRegex);
     if (matches && matches.length > 0) {}
       // Count quotes to check for balance;"
       const singleQuotes = (content.match(/'/g) || []).length;
+<<<<<<< HEAD
+      const doubleQuotes = (content.match(/"/g) || []).length;
+      const backticks = (content.match(/"/g) || []).length;
+<<<<<<< HEAD
+=======
+      
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
       const doubleQuotes = (content.match(/"/g) || []).length;""
       const backticks = (content.match(/"/g) || []).length;"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       if (singleQuotes % 2 !== 0 || doubleQuotes % 2 !== 0 || backticks % 2 !== 0) {}
         return true};
     // Check for unterminated comments;
@@ -257,19 +570,52 @@ class ErrorDetectionService {}
     const blockComments = content.match(commentRegex) || [];
     const openComments = (content.match(/\/\*/g) || []).length;
     const closeComments = (content.match(/\*\//g) || []).length;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+    
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+    
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+    
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
 
 
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     if (openComments !== closeComments) {}
     // Check for missing semicolons in certain contexts;"
     const lines = content.split('\n');
     for (let i = 0; i < lines.length; i++) {}
       const line = lines[i].trim();
+<<<<<<< HEAD
+<<<<<<< HEAD
       if (line && !line.endsWith(';') && !line.endsWith('{') && !line.endsWith('}') &&
+=======
+      if (line && !line.endsWith(';') && !line.endsWith('{') && !line.endsWith('}') && 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+      if (line && !line.endsWith(';') && !line.endsWith('{') && !line.endsWith('}') &&
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           !line.endsWith('[') && !line.endsWith(']') && !line.endsWith('(') && !line.endsWith(')') &&
           !line.startsWith('//') && !line.startsWith('/*') && !line.startsWith('*') &&
           !line.includes('function') && !line.includes('class') && !line.includes('const') &&
           !line.includes('let') && !line.includes('var') && !line.includes('import') &&
           !line.includes('export') && !line.includes('return') && !line.includes('if') &&
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
           !line.includes('for') && !line.includes('while') && !line.includes('switch')) {}
         // This might be a missing semicolon;
     return false};
@@ -280,9 +626,25 @@ class ErrorDetectionService {}
     return 1};
   runTypeScriptCheck() {}
       const result = execSync('npx tsc --noEmit --json', { })
+<<<<<<< HEAD
+<<<<<<< HEAD
+        "cwd": this.projectRoot,
+=======
+        "cwd": this.projectRoot, 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+        "encoding": 'utf8',
+        "stdio": 'pipe'
+      }
+});
+<<<<<<< HEAD
+=======
+      
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
         "cwd": this.projectRoot,""
         "encoding": 'utf8',
         "stdio": 'pipe
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       if (result) {}
         return JSON.parse(result)};
       return { "errors": [] }} catch (error) {}"
@@ -291,14 +653,71 @@ class ErrorDetectionService {}
       return this.parseTypeScriptErrors(stderr)};
   runESLintCheck() {}
       const result = execSync('npx eslint . --format json', { })
+<<<<<<< HEAD
+<<<<<<< HEAD
+        "cwd": this.projectRoot,
+=======
+        "cwd": this.projectRoot, 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+        "encoding": 'utf8',
+        "stdio": 'pipe'
+      }
+});
+<<<<<<< HEAD
+=======
+      
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+      if (result) {}
+        return JSON.parse(result)};
+      return { "errors": [] }} catch (error) {}
+      // ESLint check failed, extract errors from stderr;
+      const stderr = error.stderr ? error.stderr.toString() : '';
+=======
       // ESLint check failed, extract errors from stderr;"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       return this.parseESLintErrors(stderr)};
   runBuildCheck() {}
       const result = execSync('npm run build', { })
+<<<<<<< HEAD
+<<<<<<< HEAD
+        "cwd": this.projectRoot,
+=======
+        "cwd": this.projectRoot, 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+        "encoding": 'utf8',
+        "stdio": 'pipe'
+      }
+});
+<<<<<<< HEAD
+=======
+      
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+      return { "errors": [] }} catch (error) {}
+      // Build failed, extract errors from stderr;
+      const stderr = error.stderr ? error.stderr.toString() : '';
+=======
       // Build failed, extract errors from stderr;"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       return this.parseBuildErrors(stderr)};
   runDependencyCheck() {}
       const result = execSync('npm audit --json', { })
+<<<<<<< HEAD
+<<<<<<< HEAD
+        "cwd": this.projectRoot,
+=======
+        "cwd": this.projectRoot, 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+        "encoding": 'utf8',
+        "stdio": 'pipe'
+      }
+});
+<<<<<<< HEAD
+=======
+      
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+      if (result) {}
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         const audit = JSON.parse(result);
         return this.parseDependencyErrors(audit)};
       return { "errors": [] }} catch (error) {}""
@@ -306,10 +725,66 @@ class ErrorDetectionService {}
   parseTypeScriptErrors(stderr) {}
     const errors = [];"
     const lines = stderr.split('\n');
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     lines.forEach(line => {})
       const match = line.match(/([^(]+)\((\d+),(\d+)\):\s+(.+)/);
       if (match) {}
         errors.push({})
+<<<<<<< HEAD
+          "file": match[1].trim(),
+          "line": parseInt(match[2]),
+          "column": parseInt(match[3]),
+          "message": match[4].trim(),
+          "code": 'TS_ERROR'
+        })};
+    }
+});
+<<<<<<< HEAD
+=======
+    
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+    return { errors }};
+  parseESLintErrors(stderr) {}
+    const errors = [];
+    const lines = stderr.split('\n');
+<<<<<<< HEAD
+=======
+    
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+    lines.forEach(line => {})
+      const match = line.match(/([^(]+)\((\d+),(\d+)\):\s+(.+)/);
+      if (match) {}
+        errors.push({})
+          "filePath": match[1].trim(),
+          "line": parseInt(match[2]),
+          "column": parseInt(match[3]),
+          "message": match[4].trim(),
+          "ruleId": 'ESLINT_ERROR',
+          "severity": 2,
+          "fix": false;
+        })};
+    }
+});
+<<<<<<< HEAD
+=======
+    
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+    return { errors }};
+  parseBuildErrors(stderr) {}
+    const errors = [];
+    const lines = stderr.split('\n');
+<<<<<<< HEAD
+=======
+    
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+    lines.forEach(line => {})
+=======
           "file": match[1].trim(),""
           "line": parseInt(match[2]),""
           "column": parseInt(match[3]),""
@@ -323,12 +798,31 @@ class ErrorDetectionService {}
           "severity": 2,""
           "fix": false;"
   parseBuildErrors(stderr) {}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       if (line.includes('"Error": ') || line.includes('error:')) {}
           file: 'build',
           "message": line.trim(),""
           "phase": 'build',
+<<<<<<< HEAD
+          "severity": 'high'
+        })};
+    }
+});
+<<<<<<< HEAD
+    return { errors }};
+  parseDependencyErrors(audit) {}
+    const errors = [];
+=======
+    
+    return { errors }};
+  parseDependencyErrors(audit) {}
+    const errors = [];
+    
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
           "severity": 'high
   parseDependencyErrors(audit) {}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     if (audit.vulnerabilities) {}
       Object.keys(audit.vulnerabilities).forEach(pkg => {})
         const vuln = audit.vulnerabilities[pkg];
@@ -338,10 +832,24 @@ class ErrorDetectionService {}
           "version": vuln.installedVersion,""
           "resolution": vuln.recommendation;"
         })})};
+<<<<<<< HEAD
+    return { errors }};
+  categorizeTypeScriptSeverity(error) {}
+<<<<<<< HEAD
+    if (error.message.includes('Cannot find module') ||
+        error.message.includes('Module not found')) {}
+      return 'critical'} else if (error.message.includes('Type') ||
+=======
+    if (error.message.includes('Cannot find module') || 
+        error.message.includes('Module not found')) {}
+      return 'critical'} else if (error.message.includes('Type') || 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
   categorizeTypeScriptSeverity(error) {}"
     if (error.message.includes('Cannot find module') ||
         error.message.includes('Module not found')) {}
       return 'critical'} else if (error.message.includes('Type') ||
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                error.message.includes('Interface')) {}
       return 'medium'} else {}
       return 'low'};
@@ -353,6 +861,16 @@ class ErrorDetectionService {}
           return false; // Looks like valid config;
       return false} catch (error) {}
   extractConfigurationIssues(content, filename) {}
+<<<<<<< HEAD
+    const issues = [];
+<<<<<<< HEAD
+=======
+    
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+    try {}
+      if (filename.endsWith('.json')) {}
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         JSON.parse(content)};
       issues.push({})
         "type": 'json_parse_error',
@@ -361,6 +879,24 @@ class ErrorDetectionService {}
     return issues};
   async generateErrorReport() {}
     const report = {}
+<<<<<<< HEAD
+      "timestamp": new Date().toISOString(),
+      "summary": {}
+        totalErrors: 0,
+        "errorsByType": {},
+        "severityBreakdown": {}
+          critical: 0,
+          "high": 0,
+          "medium": 0,
+          "low": 0;
+        };
+      },
+      "errors": this.errorTypes,
+      "recommendations": this.generateRecommendations();
+    };
+<<<<<<< HEAD
+=======
+=======
       "timestamp": new Date().toISOString(),""
       "summary": {}"
         totalErrors: 0,"
@@ -373,16 +909,53 @@ class ErrorDetectionService {}
       },"
       "errors": this.errorTypes,""
       "recommendations": this.generateRecommendations();"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     // Calculate totals;
     Object.keys(this.errorTypes).forEach(type => {})
       const count = this.errorTypes[type].length;
       report.summary.totalErrors += count;
       report.summary.errorsByType[type] = count;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+      
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+      
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+      
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
 
 
+<<<<<<< HEAD
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+      this.errorTypes[type].forEach(error => {})
         const severity = error.severity || 'medium';
         report.summary.severityBreakdown[severity]++})}
+});
+<<<<<<< HEAD
+    // Write report to file;
+    const reportPath = path.join(this.projectRoot, 'error-reports', `error-scan-${Date.now()}.json`);
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+    this.log('info', `Error report "generated": ${reportPath}`);
+    this.log('info', `Total errors "found": ${report.summary.totalErrors}`);
+    return report};
+  generateRecommendations() {}
+    const recommendations = [];
+=======
+=======
+        const severity = error.severity || 'medium';
+        report.summary.severityBreakdown[severity]++})}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
     // Write report to file;`;
     const reportPath = path.join(this.projectRoot, 'error-reports', `error-scan-${Date.now()}.json`);
@@ -394,6 +967,7 @@ class ErrorDetectionService {}
   generateRecommendations() {}
     const recommendations = [];
 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     if (this.errorTypes.syntax.length > 0) {}
       recommendations.push({})"
         "priority": 'high',
@@ -412,6 +986,14 @@ class ErrorDetectionService {}
     return recommendations};
   async triggerErrorFixes() {}"
     this.log('info', 'Triggering automatic error fixes...');
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+    try {}
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       // Trigger syntax error fixes;
         await this.triggerService('syntax-error-fixer')};
       // Trigger TypeScript error fixes;
@@ -428,17 +1010,53 @@ class ErrorDetectionService {}
       this.log('warn', `Failed to trigger "service": ${serviceName}`, error.message)};"
   startContinuousMonitoring() {}"
     this.log('info', 'Starting continuous error monitoring...');
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     // Monitor for new errors every minute;
     setInterval(async () => {}
         await this.performFullScan()};
     }, 60000); // 1 minute;
   startFileWatching() {}
     this.log('info', 'Starting file watching for real-time error detection...');
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     const watcher = chokidar.watch(['src/**/*.{js,jsx,ts,tsx}',)]
       'components/**/*.{js,jsx,ts,tsx}',
       'pages/**/*.{js,jsx,ts,tsx}',
       'utils/**/*.{js,jsx,ts,tsx}',
       'hooks/**/*.{js,jsx,ts,tsx}',
+<<<<<<< HEAD
+      'types/**/*.{js,jsx,ts,tsx}'
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+    ], {}
+      "ignored": /node_modules|\.git|\.next|dist|build/,
+      "persistent": true;
+    }
+});
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+    watcher;
+      .on('change', (filePath) => {}
+        this.log('debug', `File "changed": ${filePath}`);
+=======
       'types/**/*.{js,jsx,ts,tsx}
     ], {}
       "ignored": /node_modules|\.git|\.next|dist|build/,""
@@ -447,6 +1065,7 @@ class ErrorDetectionService {}
     watcher;"
       .on('change', (filePath) => {}`;
         this.log('debug', `File "changed": ${filePath}`);"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         this.handleFileChange(filePath)}
 });"
       .on('add', (filePath) => {}`;
@@ -455,15 +1074,39 @@ class ErrorDetectionService {}
         this.log('debug', `File "removed": ${filePath}`);"
         this.handleFileRemoval(filePath)})};
   async handleFileChange(filePath) {}
+<<<<<<< HEAD
+    try {}
+      // Quick check for syntax issues in the changed file;
+      const content = fs.readFileSync(filePath, 'utf8');
+<<<<<<< HEAD
+      if (this.hasSyntaxIssues(content, filePath)) {}
+        this.log('warn', `Syntax issues detected "in": ${filePath}`);
+=======
+      
+      if (this.hasSyntaxIssues(content, filePath)) {}
+        this.log('warn', `Syntax issues detected "in": ${filePath}`);
+        
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
       // Quick check for syntax issues in the changed file;"
       if (this.hasSyntaxIssues(content, filePath)) {}`;
         this.log('warn', `Syntax issues detected "in": ${filePath}`);"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         // Add to syntax errors;
         this.errorTypes.syntax.push({})"
           "file": filePath,""
           "description": 'Syntax error detected in real-time',
+<<<<<<< HEAD
+          "timestamp": new Date().toISOString();
+        }
+});
+<<<<<<< HEAD
+=======
+=======
           "timestamp": new Date().toISOString();"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
         // Trigger immediate fix if auto-fix is enabled;
         if (this.autoFix) {}"
     } catch (error) {}`;
@@ -473,25 +1116,86 @@ class ErrorDetectionService {}
       this.errorTypes[type] = this.errorTypes[type].filter(error => error.file !== filePath)})};
 // Start the service;
 const service = new ErrorDetectionService();
+<<<<<<< HEAD
+=======
 
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+// Handle graceful shutdown;
+process.on('SIGINT', () => {}
+  service.log('info', 'Received SIGINT, shutting down gracefully...');
+  process.exit(0)}
+});
+<<<<<<< HEAD
+=======
+=======
 // Handle graceful shutdown;"
 process.on('SIGINT', () => {}
   service.log('info', 'Received SIGINT, shutting down gracefully...');
   process.exit(0)}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 process.on('SIGTERM', () => {}
   service.log('info', 'Received SIGTERM, shutting down gracefully...');
+<<<<<<< HEAD
+  process.exit(0)}
+});
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 // Handle uncaught errors;
 process.on('uncaughtException', (error) => {}
   service.log('error', 'Uncaught exception', error);
   process.exit(1)}
+<<<<<<< HEAD
+});
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 process.on('unhandledRejection', (reason, promise) => {}
+<<<<<<< HEAD
+  service.log('error', 'Unhandled rejection', { reason, promise }
+});
+  process.exit(1)}
+});
+<<<<<<< HEAD
+=======
+=======
   service.log('error', 'Unhandled rejection', { reason, promise }')
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 // Start the service;
 service.start().catch(error => {})
   service.log('error', 'Failed to start service', error);
+<<<<<<< HEAD
+  process.exit(1)}
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+});
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+});
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+});
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

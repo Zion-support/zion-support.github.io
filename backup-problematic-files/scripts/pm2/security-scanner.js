@@ -1,6 +1,10 @@
 #!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
+<<<<<<< HEAD
+const { execSync } = require('child_process');
+
+=======
 const { execSync } = require('child_process')
 };
   async scanDependencies() {;
@@ -761,5 +765,12 @@ pr-12325
 pr-12325
 // Run the security scanner,
 const scanner = new SecurityScanner(),
+<<<<<<< HEAD
+scanner.run().catch(error => {,
+  process.exit(1)
+}),);
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
 scanner.run().catch(error => {,)
 `;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

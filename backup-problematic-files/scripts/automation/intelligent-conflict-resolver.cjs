@@ -268,6 +268,53 @@ class $1 {}
       ); // Every 30 minutes;"
       this.log("Intelligent conflict resolver started successfully");"
       // Keep the process running;
+<<<<<<< HEAD
+      setInterval(() => {}
+  this.log("Conflict resolver heartbeat...")}, 60000); // Every minute} catch (error) {  this.log(`Failed to start conflict "resolver": ${error.message  }`, "ERROR");
+      throw error};
+  };
+};
+;
+// Main execution;
+if (require.main === module) {}
+  const resolver = new IntelligentConflictResolver();
+  // Handle graceful shutdown;
+  process.on("SIGINT", () => {}
+  resolver.log("Shutting down gracefully...");
+    process.exit(0)}
+});
+  process.on("SIGTERM", () => {}
+  resolver.log("Shutting down gracefully...");
+    process.exit(0)}
+});
+  resolver.start().catch(error => {resolver.log(`Fatal "error": ${error.message}`, "ERROR");
+// Main execution;
+if (require.main === module) {}
+  const resolver = new IntelligentConflictResolver();
+  // Handle graceful shutdown;
+  process.on("SIGINT", () => {}
+  resolver.log("Shutting down gracefully...");
+    process.exit(0)}
+});
+  process.on("SIGTERM", () => {}
+  resolver.log("Shutting down gracefully...");
+    process.exit(0)}
+});
+  resolver.start().catch(error => {resolver.log(`Fatal "error": ${error.message}`, "ERROR");
+    process.exit(1)})};
+;
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+module.exports = IntelligentConflictResolver;
+module.exports = IntelligentConflictResolver;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
 
 // Main execution;
 if (require.main === module) {}
@@ -283,3 +330,4 @@ if (require.main === module) {}
     process.exit(1)})};
 module.exports = IntelligentConflictResolver;
 "`;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

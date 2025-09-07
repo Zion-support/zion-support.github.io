@@ -1,7 +1,14 @@
 
 
 }
+<<<<<<< HEAD
+}
+<<<<<<< HEAD
+=======
+import React, { useState } from 'react',;
+=======
 import React, { useState } from 'react';
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { useRouter } from 'next/router', // Changed from useParams;
 import { Header } from '@/components/Header';
 import { SEO } from '@/components/SEO';
@@ -223,4 +230,8 @@ pr-12325
     </>)
   )
 ;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
 "`;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

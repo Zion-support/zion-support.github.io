@@ -395,10 +395,14 @@ export default function MainFrontIndex() {
            </div>
 
           <div className="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+<<<<<<< HEAD
+
+=======
                         <a
                href="/.netlify/functions/front-enhancer"
                className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo"
             >
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
               <div className="text-lg font-semibold">Internal Link Graph</div>
               <p className="mt-1 text-sm text-white/75">Live graph of internal navigation across pages.</p>
@@ -423,6 +427,9 @@ export default function MainFrontIndex() {
               <div className="mt-3 text-xs text-cyan-300/90">Run now →</div>
             </a>
             <a
+<<<<<<< HEAD
+
+=======
               href="/.netlify/functions/autonomous-cloud-trigger"
               className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo"
             >
@@ -434,6 +441,7 @@ export default function MainFrontIndex() {
             <a
               href="https://github.com/Zion-Holdings/zion.app/tree/main/automation"
               target="_blank" rel="noopener"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover"
             >
               <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
@@ -588,8 +596,17 @@ export default function MainFrontIndex() {
               { label: 'Homepage Advertiser', desc: 'Curates and updates the home explore section.', href: '/.netlify/functions/homepage_advertiser' },
               { label: 'Autonomous Meta Orchestrator', desc: 'Intelligently triggers cloud functions and syncs to main every minute.', href: '/.netlify/functions/autonomous-meta-orchestrator' },
               { label: 'Cloud Orchestrator', desc: 'Runs fast improvement cycle and git sync.', href: '/.netlify/functions/cloud_orchestrator' },
+<<<<<<< HEAD
+<<<<<<< HEAD:components/main/front/index.tsx.backup.1755991433.backup.1756001155
+              { label: 'Autonomous Cloud Meta Orchestrator (1m)', desc: 'Triggers high‑impact cloud jobs and stamps commits for rapid sync.', href: '/.netlify/functions/autonomous-cloud-meta-orchestrator' },
+=======
               { label: 'Autonomous Meta Orchestrator (1m)', desc: 'Curates and triggers critical cloud functions, then syncs.', href: '/.netlify/functions/autonomous-meta-orchestrator' },
               { label: 'Cloud Trigger Hub (2m)', desc: 'Triggers most functions concurrently, then rebuilds/stamps.', href: '/.netlify/functions/cloud-trigger-hub' },
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:components/main/front/index.tsx.backup.1755991483.backup.1756001155
+=======
+              { label: 'Autonomous Meta Orchestrator (1m)', desc: 'Curates and triggers critical cloud functions, then syncs.', href: '/.netlify/functions/autonomous-meta-orchestrator' },
+              { label: 'Cloud Trigger Hub (2m)', desc: 'Triggers most functions concurrently, then rebuilds/stamps.', href: '/.netlify/functions/cloud-trigger-hub' },
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               { label: 'Sitemap Runner', desc: 'Keeps sitemap fresh for SEO visibility.', href: '/.netlify/functions/sitemap_runner' },
               { label: 'SEO Audit Runner', desc: 'Analyzes meta and content signals; writes public report.', href: '/.netlify/functions/seo-audit-runner' },
               { label: 'AI Trends Radar', desc: 'Builds AI trends report from curated sources.', href: '/.netlify/functions/ai-trends-radar-runner' },
@@ -1863,6 +1880,9 @@ export default function MainFrontIndex() {
         </motion.section>
 
         {/* AUTO-GENERATED: FRONT_ADS_START */}
+<<<<<<< HEAD
+
+=======
         <section className="mx-auto max-w-7xl px-6 pb-16">
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Explore more</h2>
           <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
@@ -1882,6 +1902,7 @@ export default function MainFrontIndex() {
           </div>
         </section>
         {/* AUTO-GENERATED: FRONT_ADS_END */}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
         <section id="auto-ads" className="mx-auto max-w-7xl px-6 pb-16">
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Auto‑advertised Highlights</h2>
@@ -2047,4 +2068,8 @@ export default function MainFrontIndex() {
               </a>
   </div>
 </section>
+<<<<<<< HEAD
 /* AUTO-GENERATED: FRONT_ACTIONS_END */
+=======
+/* AUTO-GENERATED: FRONT_ACTIONS_END */
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

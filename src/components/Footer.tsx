@@ -1,4 +1,27 @@
 import React from 'react';
+<<<<<<< HEAD
+import { motion } from 'framer-motion';
+import { 
+  Twitter,
+  Linkedin,
+  Facebook,
+  Instagram,
+  Github,
+  ChevronUp,
+} from 'lucide-react';
+import Link from 'next/link';
+
+const Footer: React.FC = () => {
+  return (
+    <motion.footer
+      className="bg-slate-900 text-gray-300"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+      viewport={{ once: true }}
+    >
+      <div className="container mx-auto px-4 py-12">
+=======
 import { Link } from 'react-router-dom';
 
 
@@ -13,19 +36,106 @@ export function Footer() {
   return (
     <footer className="bg-slate-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
-              <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center">
+              <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-lg">Z</span>
               </div>
-              <span className="text-xl font-bold">Zion Tech Group</span>
+              <span className="text-xl font-bold text-white">Zion Tech Group</span>
             </div>
-            <p className="text-gray-300 mb-4 max-w-md">
-              Leading technology solutions provider specializing in AI, cybersecurity, 
-              cloud infrastructure, and digital transformation services.
+            <p className="text-gray-400 mb-4 max-w-md">
+              Leading AI & Technology Solutions for a Smarter Future. We deliver cutting-edge
+              technology solutions that transform businesses and drive innovation.
             </p>
+<<<<<<< HEAD
+            <div className="flex space-x-4">
+              <a
+                href="https://twitter.com/ziontechgroup"
+                className="text-gray-400 hover:text-white transition-colors"
+                aria-label="Twitter"
+              >
+                <Twitter className="h-5 w-5" />
+              </a>
+              <a
+                href="https://linkedin.com/company/ziontechgroup"
+                className="text-gray-400 hover:text-white transition-colors"
+                aria-label="LinkedIn"
+              >
+                <Linkedin className="h-5 w-5" />
+              </a>
+              <a
+                href="https://facebook.com/ziontechgroup"
+                className="text-gray-400 hover:text-white transition-colors"
+                aria-label="Facebook"
+              >
+                <Facebook className="h-5 w-5" />
+              </a>
+              <a
+                href="https://instagram.com/ziontechgroup"
+                className="text-gray-400 hover:text-white transition-colors"
+                aria-label="Instagram"
+              >
+                <Instagram className="h-5 w-5" />
+              </a>
+              <a
+                href="https://github.com/ziontechgroup"
+                className="text-gray-400 hover:text-white transition-colors"
+                aria-label="GitHub"
+              >
+                <Github className="h-5 w-5" />
+              </a>
+            </div>
+          </div>
+
+          {/* Quick Links */}
+          <div>
+            <h3 className="text-lg font-semibold text-white mb-4">Quick Links</h3>
+            <ul className="space-y-2">
+              <li>
+                <Link href="/about" className="text-gray-400 hover:text-white transition-colors">
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link href="/services" className="text-gray-400 hover:text-white transition-colors">
+                  Services
+                </Link>
+              </li>
+              <li>
+                <Link href="/contact" className="text-gray-400 hover:text-white transition-colors">
+                  Contact
+                </Link>
+              </li>
+              <li>
+                <Link href="/pricing" className="text-gray-400 hover:text-white transition-colors">
+                  Pricing
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Newsletter */}
+          <div>
+            <h3 className="text-lg font-semibold text-white mb-4">Stay Updated</h3>
+            <div className="space-y-4">
+              <p className="text-gray-400 text-sm">
+                Subscribe to our newsletter for the latest updates and insights.
+              </p>
+              <div className="flex">
+                <input
+                  type="email"
+                  placeholder="Enter your email"
+                  className="flex-1 px-3 py-2 bg-gray-800 border border-gray-700 rounded-l-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+                <button className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-r-lg transition-colors">
+                  Subscribe
+                </button>
+              </div>
+            </div>
+=======
             <div className="space-y-2">
               <div className="flex items-center space-x-2 text-gray-300">
                 <Phone size={16} />
@@ -62,6 +172,7 @@ export function Footer() {
               <li><Link to="/pricing" className="text-gray-300 hover:text-white transition-colors">Pricing</Link></li>
               <li><Link to="/privacy" className="text-gray-300 hover:text-white transition-colors">Privacy</Link></li>
             </ul>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           </div>
         </div>
 <div className="border-t border-slate-700 mt-8 pt-8 text-center">"
@@ -75,8 +186,18 @@ export function Footer() {
           </p>
           <button
             type="button"
+<<<<<<< HEAD
+            onClick={() => {
+              window.scrollTo({
+                top: 0,
+                behavior: 'smooth',
+              });
+            }}
+            className="flex items-center space-x-1 text-gray-400 hover:text-white text-sm transition-colors cursor-pointer"
+=======
             onClick={scrollToTop}
             className="flex items-center space-x-1 text-foreground/80 hover:text-primary text-sm transition-colors cursor-pointer"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             aria-label="Back to top"
           >
             <ChevronUp className="h-4 w-4" aria-hidden="true" />
@@ -84,9 +205,11 @@ export function Footer() {
           </button>
         </div>
       </div>
-    </footer>
+    </motion.footer>
   );
 };
+<<<<<<< HEAD
+=======
 export default Footer;
 import { FooterNewsletter } from "@/components/FooterNewsletter",
 import { Twitter, Linkedin, Facebook, Instagram, Github, ChevronUp } from 'lucide-react'
@@ -506,5 +629,6 @@ export function Footer() {;
 }
 ;
 }
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 export default Footer;

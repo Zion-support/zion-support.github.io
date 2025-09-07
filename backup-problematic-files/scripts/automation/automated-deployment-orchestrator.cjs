@@ -335,6 +335,31 @@ const main = async () => {}"
     // Check for deployment requests;
 
     throw error};
+<<<<<<< HEAD
+};
+const checkDeploymentRequests = async () => {}
+<<<<<<< HEAD
+
+=======
+  
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+} else {log(`Deployment to ${request.environment} "failed": ${result.error}`, "ERROR");
+          // Consider automatic rollback;
+          if (CONFIG.ROLLBACK_ENABLED && request.environment !== "production") {log(`Initiating automatic rollback for ${request.environment}`);
+            await deploymentSystem.rollback(request.environment, {"reason": `Automatic rollback due to failed deployment: ${result.error}`})};
+        };
+        } catch (error) {log(`Error processing deployment request for ${request.environment}: ${error.message}`, "ERROR")};
+    };
+    ;
+    // Generate deployment report;
+    const report = await generateDeploymentReport(deploymentSystem);
+    log("Automated Deployment Orchestrator completed successfully");
+    return report} catch (error) {log(`Automated Deployment Orchestrator "failed": ${error.message}`, "ERROR");log(`Stack "trace": ${error.stack}`, "ERROR");
+    throw error};
+};
+;
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const checkDeploymentRequests = async () => {}
 
   // This would typically check for deployment triggers;
@@ -373,4 +398,18 @@ module.exports = {}
   DeploymentSystem,
   HealthCheckSystem,
   DeploymentState,
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
   main};
+  main};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+  main};
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

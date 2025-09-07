@@ -1,10 +1,29 @@
 
+<<<<<<< HEAD
 export type Json =;
   | string;
   | number;
   | boolean;
   | null;
   | { [key: string]: Json | undefined }
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+  | Json[];
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+
+export type Database = {}
+  public: {}
+    Tables: {}
+      ai_chats: {}
+        Row: {}
+        }
+        Insert: {};
+=======
+=======
   | Json[];          api_key_id: string | null;
           created_at: string;
           endpoint: string;
@@ -18,6 +37,7 @@ export type Json =;
         }
         Insert: {        Insert: {
 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   | Json[];
 
 export type Json =;
@@ -54,13 +74,18 @@ export type Database = {
           user_id: string;
         }
         Insert: {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           created_at?: string;
           id?: string;
           message: string;,
   response: string;
           user_id: string;
         }
+<<<<<<< HEAD
+        Update: {}
+=======
         Update: {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           created_at?: string;
           id?: string;
           message?: string;
@@ -68,6 +93,18 @@ export type Database = {
           user_id?: string;
         }
         Relationships: [;
+<<<<<<< HEAD
+          {}
+            foreignKeyName: "ai_chats_user_id_fkey";"
+            columns: ["user_id"];
+            isOneToOne: false;"
+            referenced_relation: "user_metrics";"
+            referenced_columns: ["user_id"];
+          }];
+      }
+      analytics_events: {}
+        Row: {}
+=======
           {
             foreignKeyName: "ai_chats_user_id_fkey";",]"
   columns: ["user_id"];"
@@ -76,6 +113,17 @@ export type Database = {
             referenced_columns: ["user_id"];"
           }];
       }
+<<<<<<< HEAD
+      analytics_events: {
+        Row: {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+          created_at: string | null;
+          event_type: string;
+          id: string;
+          metadata: Json | null;
+          path: string | null;
+          session_id: string | null;
+=======
       analytics_events: {,
   Row: {
           created_at: string | null;,
@@ -84,9 +132,14 @@ export type Database = {
   metadata: Json | null;
           path: string | null;,
   session_id: string | null;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           user_id: string | null;
         }
+<<<<<<< HEAD
+        Insert: {}
+=======
         Insert: {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           created_at?: string | null;
           event_type: string;
           id?: string;
@@ -95,7 +148,11 @@ export type Database = {
           session_id?: string | null;
           user_id?: string | null;
         }
+<<<<<<< HEAD
+        Update: {}
+=======
         Update: {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           created_at?: string | null;
           event_type?: string;
           id?: string;
@@ -105,6 +162,48 @@ export type Database = {
           user_id?: string | null;
         }
         Relationships: [;
+<<<<<<< HEAD
+<<<<<<< HEAD
+          {"
+            foreignKeyName: "analytics_events_user_id_fkey";"
+            columns: ["user_id"];
+            isOneToOne: false;"
+            referenced_relation: "user_metrics";"
+            referenced_columns: ["user_id"];
+          }];
+      }
+      api_keys: {}
+        Row: {}
+=======
+          {
+            foreignKeyName: "analytics_events_user_id_fkey";
+            columns: ["user_id"];
+            isOneToOne: false;
+            referenced_relation: "user_metrics";
+            referenced_columns: ["user_id"];
+          }];
+      }
+      api_keys: {
+        Row: {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+          created_at: string;
+          expires_at: string | null;
+          id: string;
+          is_active: boolean;
+          key_hash: string;
+          key_prefix: string;
+          last_used_at: string | null;
+<<<<<<< HEAD
+          name: string;"
+          scopes: Database["public"]["Enums"]["api_key_scope"][];
+          user_id: string;
+        }
+        Insert: {}
+=======
+          name: string;
+          scopes: Database["public"]["Enums"]["api_key_scope"][];
+          user_id: string;
+=======
           {"
             foreignKeyName: "analytics_events_user_id_fkey";",]"
   columns: ["user_id"];"
@@ -125,8 +224,10 @@ export type Database = {
   name: string;"
           scopes: Database["public"]["Enums"]["api_key_scope"][];",
   user_id: string;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         }
         Insert: {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           created_at?: string;
           expires_at?: string | null;
           id?: string;
@@ -134,11 +235,24 @@ export type Database = {
           key_hash: string;,
   key_prefix: string;
           last_used_at?: string | null;
+<<<<<<< HEAD
+<<<<<<< HEAD
+          name: string;"
+          scopes?: Database["public"]["Enums"]["api_key_scope"][];
+          user_id: string;
+        }
+        Update: {}
+=======
+          name: string;
+          scopes?: Database["public"]["Enums"]["api_key_scope"][];
+=======
           name: string;"
           scopes?: Database["public"]["Enums"]["api_key_scope"][];"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           user_id: string;
         }
         Update: {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           created_at?: string;
           expires_at?: string | null;
           id?: string;
@@ -146,6 +260,31 @@ export type Database = {
           key_hash?: string;
           key_prefix?: string;
           last_used_at?: string | null;
+<<<<<<< HEAD
+<<<<<<< HEAD
+          name?: string;"
+=======
+          name?: string;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+          scopes?: Database["public"]["Enums"]["api_key_scope"][];
+          user_id?: string;
+        }
+        Relationships: [;
+<<<<<<< HEAD
+          {"
+            foreignKeyName: "api_keys_user_id_fkey";"
+            columns: ["user_id"];
+            isOneToOne: false;"
+            referenced_relation: "user_metrics";"
+=======
+          {
+            foreignKeyName: "api_keys_user_id_fkey";
+            columns: ["user_id"];
+            isOneToOne: false;
+            referenced_relation: "user_metrics";
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+            referenced_columns: ["user_id"];
+=======
           name?: string;"
           scopes?: Database["public"]["Enums"]["api_key_scope"][];"
           user_id?: string;
@@ -157,9 +296,21 @@ export type Database = {
             isOneToOne: false;,"
   referenced_relation: "user_metrics";""
             referenced_columns: ["user_id"];"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           }];
       }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
       api_logs: {;,
   Row: {;
@@ -314,7 +465,183 @@ created_at: string
           user_id?: string | null
       api_logs: {;
         Row: {;
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+          created_at: string
+          id: string
+          message: string
+          response: string
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          message: string
+          response: string
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          message?: string
+          response?: string
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "ai_chats_user_id_fkey"
+            columns: ["user_id"]
+            isOneToOne: false
+            referencedRelation: "user_metrics"
+            referencedColumns: ["user_id"]
+          }]
+      }
+      analytics_events: {
+        Row: {
+          created_at: string | null
+          event_type: string
+          id: string
+          metadata: Json | null
+          path: string | null
+          session_id: string | null
+          user_id: string | null
+        }
+        Insert: {
+          created_at?: string | null
+          event_type: string
+          id?: string
+          metadata?: Json | null
+          path?: string | null
+          session_id?: string | null
+          user_id?: string | null
+        }
+        Update: {
+          created_at?: string | null
+          event_type?: string
+          id?: string
+          metadata?: Json | null
+          path?: string | null
+          session_id?: string | null
+          user_id?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "analytics_events_user_id_fkey"
+            columns: ["user_id"]
+            isOneToOne: false
+            referencedRelation: "user_metrics"
+            referencedColumns: ["user_id"]
+          }]
+      }
+      api_keys: {
+        Row: {
+          created_at: string
+          expires_at: string | null
+          id: string
+          is_active: boolean
+          key_hash: string
+          key_prefix: string
+          last_used_at: string | null
+          name: string
+          scopes: Database["public"]["Enums"]["api_key_scope"][]
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          expires_at?: string | null
+          id?: string
+          is_active?: boolean
+          key_hash: string
+          key_prefix: string
+          last_used_at?: string | null
+          name: string
+          scopes?: Database["public"]["Enums"]["api_key_scope"][]
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          expires_at?: string | null
+          id?: string
+          is_active?: boolean
+          key_hash?: string
+          key_prefix?: string
+          last_used_at?: string | null
+          name?: string
+          scopes?: Database["public"]["Enums"]["api_key_scope"][]
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "api_keys_user_id_fkey"
+            columns: ["user_id"]
+            isOneToOne: false
+            referencedRelation: "user_metrics"
+            referencedColumns: ["user_id"]
+          }]
+      }
+      api_logs: {
+        Row: {
+          api_key_id: string | null
+          created_at: string
+          endpoint: string
+          id: string
+          ip_address: string | null
+          method: string
+          response_time_ms: number | null
+          status_code: number
+          user_agent: string | null
+          user_id: string | null
+        }
+        Insert: {
+          api_key_id?: string | null
+          created_at?: string
+          endpoint: string
+          id?: string
+          ip_address?: string | null
+          method: string
+          response_time_ms?: number | null
+          status_code: number
+          user_agent?: string | null
+          user_id?: string | null
+        }
+        Update: {
+          api_key_id?: string | null
+          created_at?: string
+          endpoint?: string
+          id?: string
+          ip_address?: string | null
+          method?: string
+          response_time_ms?: number | null
+          status_code?: number
+          user_agent?: string | null
+          user_id?: string | null
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+      api_logs: {;
+        Row: {;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           api_key_id: string | null;
+=======
+  | Json[];          api_key_id: string | null;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  | Json[];          api_key_id: string | null;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+          api_key_id: string | null;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           created_at: string;
           endpoint: string;
           id: string;
@@ -325,9 +652,21 @@ created_at: string
           user_agent: string | null;
           user_id: string | null;
         }
+<<<<<<< HEAD
+<<<<<<< HEAD
+        Insert: {        Insert: {
+=======
+
+
+        Insert: {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
         Insert: {
 Insert: {;
         Insert: {
+<<<<<<< HEAD
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
           api_key_id: string | null;,
   created_at: string;
           endpoint: string;,
@@ -342,6 +681,7 @@ Insert: {;
         Insert: {,
   Insert: {
 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           api_key_id?: string | null;
           created_at?: string;
           endpoint: string;
@@ -353,6 +693,19 @@ Insert: {;
 
           user_agent?: string | null;
           user_id?: string | null;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+        }
+
+
+
+=======
+        }
+        Update: {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
         }            foreignKeyName: "api_logs_api_key_id_fkey"
             columns: ["api_key_id"]
             isOneToOne: false
@@ -398,6 +751,7 @@ Insert: {;
         }
         Update: {
 Update: {;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           api_key_id?: string | null;
           created_at?: string;
           endpoint?: string;
@@ -408,6 +762,10 @@ Update: {;
           status_code?: number;
           user_agent?: string | null;
           user_id?: string | null;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
         }
         Relationships: [;
@@ -421,10 +779,1120 @@ Update: {;
         }
         Relationships: [
           {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         }
         Relationships: [;
           {
             foreignKeyName: "api_logs_api_key_id_fkey"
+<<<<<<< HEAD
+            columns: ["api_key_id"]
+            isOneToOne: false
+            referencedRelation: "api_keys"
+            referencedColumns: ["id"];
+          };
+            referencedColumns: ["id"]
+          }
+          },
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+        }
+        Relationships: [;
+          {
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+        }
+        Relationships: [;
+          {
+=======
+        }
+        Relationships: [
+          {
+=======
+        }
+        Relationships: [;
+          {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+            foreignKeyName: "api_logs_api_key_id_fkey"
+=======
+"
+            foreignKeyName: "api_logs_api_key_id_fkey""
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+            columns: ["api_key_id"]
+            isOneToOne: false"
+            referencedRelation: "api_keys"
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+
+
+          }
+"
+            referencedColumns: ["id"]
+
+
+"
+            referencedColumns: ["id"];
+          };"
+            referencedColumns: ["id"]
+          }
+          },
+        }
+        Relationships: [;
+          {}
+          }
+<<<<<<< HEAD
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+          {
+            foreignKeyName: "api_logs_user_id_fkey";
+=======
+
+          {"
+            foreignKeyName: "api_logs_user_id_fkey";"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+            columns: ["user_id"];
+            isOneToOne: false;"
+            referenced_relation: "user_metrics";"
+            referenced_columns: ["user_id"];
+          }];
+      }
+      certifications: {}
+        Row: {}
+          created_at: string;
+          credential_id: string | null;
+          credential_url: string | null;
+          expiration_date: string | null;
+          id: string;
+          issue_date: string | null;
+          issuing_organization: string;
+          name: string;
+          resume_id: string;
+        }
+        Insert: {}
+          created_at?: string;
+          credential_id?: string | null;
+          credential_url?: string | null;
+          expiration_date?: string | null;
+          id?: string;
+          issue_date?: string | null;
+          issuing_organization: string;
+          name: string;
+          resume_id: string;
+        }
+        Update: {}
+          created_at?: string;
+          credential_id?: string | null;
+          credential_url?: string | null;
+          expiration_date?: string | null;
+          id?: string;
+          issue_date?: string | null;
+          issuing_organization?: string;
+          name?: string;
+          resume_id?: string;
+        }
+        Relationships: [;
+          {"
+            foreignKeyName: "certifications_resume_id_fkey";"
+            columns: ["resume_id"];
+            isOneToOne: false;"
+            referenced_relation: "talent_resumes";"
+            referenced_columns: ["id"];
+          }];
+      }
+      content: {}
+        Row: {}
+          content_type: string;
+          content_url: string | null;
+          created_at: string;
+          creator_id: string;
+          description: string | null;
+          id: string;
+          published: boolean | null;
+          thumbnail_url: string | null;
+          title: string;
+          updated_at: string;
+          views: number | null;
+        }
+        Insert: {}
+          content_type: string;
+          content_url?: string | null;
+          created_at?: string;
+          creator_id: string;
+          description?: string | null;
+          id?: string;
+          published?: boolean | null;
+          thumbnail_url?: string | null;
+          title: string;
+          updated_at?: string;
+          views?: number | null;
+        }
+        Update: {}
+          content_type?: string;
+          content_url?: string | null;
+          created_at?: string;
+          creator_id?: string;
+          description?: string | null;
+          id?: string;
+          published?: boolean | null;
+          thumbnail_url?: string | null;
+          title?: string;
+          updated_at?: string;
+          views?: number | null;
+        }
+        Relationships: [;
+          {"
+            foreignKeyName: "content_creator_id_fkey";"
+            columns: ["creator_id"];
+            isOneToOne: false;"
+            referenced_relation: "profiles";"
+            referenced_columns: ["id"];
+          }];
+      }
+      contract_templates: {}
+        Row: {}
+          created_at: string;
+          id: string;
+          is_default: boolean | null;
+          template_data: Json;
+          title: string;
+          updated_at: string;
+          user_id: string;
+        }
+        Insert: {}
+          created_at?: string;
+          id?: string;
+          is_default?: boolean | null;
+          template_data: Json;
+          title: string;
+          updated_at?: string;
+          user_id: string;
+        }
+        Update: {}
+          created_at?: string;
+          id?: string;
+          is_default?: boolean | null;
+          template_data?: Json;
+          title?: string;
+          updated_at?: string;
+          user_id?: string;
+        }
+        Relationships: [;
+          {"
+            foreignKeyName: "contract_templates_user_id_fkey";"
+            columns: ["user_id"];
+            isOneToOne: false;"
+            referenced_relation: "user_metrics";"
+            referenced_columns: ["user_id"];
+          }];
+      }
+      education: {}
+        Row: {}
+          created_at: string;
+          degree: string;
+          description: string | null;
+          end_date: string | null;
+          field_of_study: string | null;
+          id: string;
+          institution: string;
+          institution_logo_url: string | null;
+          is_current: boolean;
+          location: string | null;
+          resume_id: string;
+          start_date: string;
+          updated_at: string;
+        }
+        Insert: {}
+          created_at?: string;
+          degree: string;
+          description?: string | null;
+          end_date?: string | null;
+          field_of_study?: string | null;
+          id?: string;
+          institution: string;
+          institution_logo_url?: string | null;
+          is_current?: boolean;
+          location?: string | null;
+          resume_id: string;
+          start_date: string;
+          updated_at?: string;
+        }
+        Update: {}
+          created_at?: string;
+          degree?: string;
+          description?: string | null;
+          end_date?: string | null;
+          field_of_study?: string | null;
+          id?: string;
+          institution?: string;
+          institution_logo_url?: string | null;
+          is_current?: boolean;
+          location?: string | null;
+          resume_id?: string;
+          start_date?: string;
+          updated_at?: string;
+        }
+        Relationships: [;
+          {"
+            foreignKeyName: "education_resume_id_fkey";"
+            columns: ["resume_id"];
+            isOneToOne: false;"
+            referenced_relation: "talent_resumes";"
+            referenced_columns: ["id"];
+          }];
+      }
+      fraud_detection_reports: {}
+        Row: {}
+          action_taken_count: number;
+          dangerous_count: number;
+          false_positive_count: number;
+          generated_at: string;
+          id: string;
+          report_data: Json | null;
+          report_month: string;
+          suspicious_count: number;
+          total_flags: number;
+        }
+        Insert: {}
+          action_taken_count?: number;
+          dangerous_count?: number;
+          false_positive_count?: number;
+          generated_at?: string;
+          id?: string;
+          report_data?: Json | null;
+          report_month: string;
+          suspicious_count?: number;
+          total_flags?: number;
+        }
+        Update: {}
+          action_taken_count?: number;
+          dangerous_count?: number;
+          false_positive_count?: number;
+          generated_at?: string;
+          id?: string;
+          report_data?: Json | null;
+          report_month?: string;
+          suspicious_count?: number;
+          total_flags?: number;
+        }
+        Relationships: [];
+      }
+      fraud_flags: {}
+        Row: {}
+          action_taken: string | null;
+          content_excerpt: string;
+          content_id: string;
+          content_type: string;
+          gpt_classification: string | null;
+          gpt_explanation: string | null;
+          id: string;
+          ip_address: string | null;
+          is_false_positive: boolean | null;
+          reason: string;
+          reviewed_at: string | null;
+          reviewed_by: string | null;"
+          severity: Database["public"]["Enums"]["fraud_severity"];
+          status: string;
+          timestamp: string;
+          updated_at: string | null;
+          user_email: string | null;
+          user_id: string | null;
+        }
+        Insert: {}
+          action_taken?: string | null;
+          content_excerpt: string;
+          content_id: string;
+          content_type: string;
+          gpt_classification?: string | null;
+          gpt_explanation?: string | null;
+          id?: string;
+          ip_address?: string | null;
+          is_false_positive?: boolean | null;
+          reason: string;
+          reviewed_at?: string | null;
+          reviewed_by?: string | null;"
+          severity?: Database["public"]["Enums"]["fraud_severity"];
+          status?: string;
+          timestamp?: string;
+          updated_at?: string | null;
+          user_email?: string | null;
+          user_id?: string | null;
+        }
+        Update: {}
+          action_taken?: string | null;
+          content_excerpt?: string;
+          content_id?: string;
+          content_type?: string;
+          gpt_classification?: string | null;
+          gpt_explanation?: string | null;
+          id?: string;
+          ip_address?: string | null;
+          is_false_positive?: boolean | null;
+          reason?: string;
+          reviewed_at?: string | null;
+          reviewed_by?: string | null;"
+          severity?: Database["public"]["Enums"]["fraud_severity"];
+          status?: string;
+          timestamp?: string;
+          updated_at?: string | null;
+          user_email?: string | null;
+          user_id?: string | null;
+        }
+        Relationships: [;
+<<<<<<< HEAD
+          {
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+            referencedColumns: ["id"];
+          };
+            referencedColumns: ["id"]
+          }
+          },
+          {
+            foreignKeyName: "api_logs_user_id_fkey"
+            columns: ["user_id"]
+            isOneToOne: false
+            referencedRelation: "user_metrics"
+            referencedColumns: ["user_id"]
+          }]
+      }
+      certifications: {
+        Row: {
+          created_at: string
+          credential_id: string | null
+          credential_url: string | null
+          expiration_date: string | null
+          id: string
+          issue_date: string | null
+          issuing_organization: string
+          name: string
+          resume_id: string
+        }
+        Insert: {
+          created_at?: string
+          credential_id?: string | null
+          credential_url?: string | null
+          expiration_date?: string | null
+          id?: string
+          issue_date?: string | null
+          issuing_organization: string
+          name: string
+          resume_id: string
+        }
+        Update: {
+          created_at?: string
+          credential_id?: string | null
+          credential_url?: string | null
+          expiration_date?: string | null
+          id?: string
+          issue_date?: string | null
+          issuing_organization?: string
+          name?: string
+          resume_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "certifications_resume_id_fkey"
+            columns: ["resume_id"]
+            isOneToOne: false
+            referencedRelation: "talent_resumes"
+            referencedColumns: ["id"]
+          }]
+      }
+      content: {
+        Row: {
+          content_type: string
+          content_url: string | null
+          created_at: string
+          creator_id: string
+          description: string | null
+          id: string
+          published: boolean | null
+          thumbnail_url: string | null
+          title: string
+          updated_at: string
+          views: number | null
+        }
+        Insert: {
+          content_type: string
+          content_url?: string | null
+          created_at?: string
+          creator_id: string
+          description?: string | null
+          id?: string
+          published?: boolean | null
+          thumbnail_url?: string | null
+          title: string
+          updated_at?: string
+          views?: number | null
+        }
+        Update: {
+          content_type?: string
+          content_url?: string | null
+          created_at?: string
+          creator_id?: string
+          description?: string | null
+          id?: string
+          published?: boolean | null
+          thumbnail_url?: string | null
+          title?: string
+          updated_at?: string
+          views?: number | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "content_creator_id_fkey"
+            columns: ["creator_id"]
+            isOneToOne: false
+            referencedRelation: "profiles"
+            referencedColumns: ["id"]
+          }]
+      }
+      contract_templates: {
+        Row: {
+          created_at: string
+          id: string
+          is_default: boolean | null
+          template_data: Json
+          title: string
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          is_default?: boolean | null
+          template_data: Json
+          title: string
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          is_default?: boolean | null
+          template_data?: Json
+          title?: string
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "contract_templates_user_id_fkey"
+            columns: ["user_id"]
+            isOneToOne: false
+            referencedRelation: "user_metrics"
+            referencedColumns: ["user_id"]
+          }]
+      }
+      education: {
+        Row: {
+          created_at: string
+          degree: string
+          description: string | null
+          end_date: string | null
+          field_of_study: string | null
+          id: string
+          institution: string
+          institution_logo_url: string | null
+          is_current: boolean
+          location: string | null
+          resume_id: string
+          start_date: string
+          updated_at: string
+        }
+        Insert: {
+          created_at?: string
+          degree: string
+          description?: string | null
+          end_date?: string | null
+          field_of_study?: string | null
+          id?: string
+          institution: string
+          institution_logo_url?: string | null
+          is_current?: boolean
+          location?: string | null
+          resume_id: string
+          start_date: string
+          updated_at?: string
+        }
+        Update: {
+          created_at?: string
+          degree?: string
+          description?: string | null
+          end_date?: string | null
+          field_of_study?: string | null
+          id?: string
+          institution?: string
+          institution_logo_url?: string | null
+          is_current?: boolean
+          location?: string | null
+          resume_id?: string
+          start_date?: string
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "education_resume_id_fkey"
+            columns: ["resume_id"]
+            isOneToOne: false
+            referencedRelation: "talent_resumes"
+            referencedColumns: ["id"]
+          }]
+      }
+      fraud_detection_reports: {
+        Row: {
+          action_taken_count: number
+          dangerous_count: number
+          false_positive_count: number
+          generated_at: string
+          id: string
+          report_data: Json | null
+          report_month: string
+          suspicious_count: number
+          total_flags: number
+        }
+        Insert: {
+          action_taken_count?: number
+          dangerous_count?: number
+          false_positive_count?: number
+          generated_at?: string
+          id?: string
+          report_data?: Json | null
+          report_month: string
+          suspicious_count?: number
+          total_flags?: number
+        }
+        Update: {
+          action_taken_count?: number
+          dangerous_count?: number
+          false_positive_count?: number
+          generated_at?: string
+          id?: string
+          report_data?: Json | null
+          report_month?: string
+          suspicious_count?: number
+          total_flags?: number
+        }
+        Relationships: []
+      }
+      fraud_flags: {
+        Row: {
+          action_taken: string | null
+          content_excerpt: string
+          content_id: string
+          content_type: string
+          gpt_classification: string | null
+          gpt_explanation: string | null
+          id: string
+          ip_address: string | null
+          is_false_positive: boolean | null
+          reason: string
+          reviewed_at: string | null
+          reviewed_by: string | null
+          severity: Database["public"]["Enums"]["fraud_severity"]
+          status: string
+          timestamp: string
+          updated_at: string | null
+          user_email: string | null
+          user_id: string | null
+        }
+        Insert: {
+          action_taken?: string | null
+          content_excerpt: string
+          content_id: string
+          content_type: string
+          gpt_classification?: string | null
+          gpt_explanation?: string | null
+          id?: string
+          ip_address?: string | null
+          is_false_positive?: boolean | null
+          reason: string
+          reviewed_at?: string | null
+          reviewed_by?: string | null
+          severity?: Database["public"]["Enums"]["fraud_severity"]
+          status?: string
+          timestamp?: string
+          updated_at?: string | null
+          user_email?: string | null
+          user_id?: string | null
+        }
+        Update: {
+          action_taken?: string | null
+          content_excerpt?: string
+          content_id?: string
+          content_type?: string
+          gpt_classification?: string | null
+          gpt_explanation?: string | null
+          id?: string
+          ip_address?: string | null
+          is_false_positive?: boolean | null
+          reason?: string
+          reviewed_at?: string | null
+          reviewed_by?: string | null
+          severity?: Database["public"]["Enums"]["fraud_severity"]
+          status?: string
+          timestamp?: string
+          updated_at?: string | null
+          user_email?: string | null
+          user_id?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "fraud_flags_reviewed_by_fkey"
+            columns: ["reviewed_by"]
+            isOneToOne: false
+            referencedRelation: "user_metrics"
+            referencedColumns: ["user_id"]
+<<<<<<< HEAD
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+            foreignKeyName: "fraud_flags_reviewed_by_fkey";
+=======
+          {}
+"
+            foreignKeyName: "fraud_flags_reviewed_by_fkey";"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+            columns: ["reviewed_by"];
+            isOneToOne: false;"
+            referenced_relation: "user_metrics";"
+            referenced_columns: ["user_id"];
+
+
+          }
+
+          },
+
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+          {
+            foreignKeyName: "fraud_flags_user_id_fkey";
+=======
+
+
+
+          {"
+            foreignKeyName: "fraud_flags_user_id_fkey";"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+            columns: ["user_id"];
+            isOneToOne: false;"
+            referenced_relation: "user_metrics";"
+            referenced_columns: ["user_id"];
+          }];
+      }
+      hire_requests: {}
+        Row: {}
+          attachments: Json | null;
+          budget_display: string | null;
+          budget_max: number | null;
+          budget_min: number | null;
+          created_at: string;
+          expiry_date: string | null;
+          id: string;
+          project_overview: string;
+          project_summary: string | null;
+          project_type: string | null;
+          requester_email: string;
+          requester_id: string | null;
+          requester_name: string;
+          status: string;
+          talent_id: string;
+          timeline: string;
+          updated_at: string;
+        }
+        Insert: {}
+          attachments?: Json | null;
+          budget_display?: string | null;
+          budget_max?: number | null;
+          budget_min?: number | null;
+          created_at?: string;
+          expiry_date?: string | null;
+          id?: string;
+          project_overview: string;
+          project_summary?: string | null;
+          project_type?: string | null;
+          requester_email: string;
+          requester_id?: string | null;
+          requester_name: string;
+          status?: string;
+          talent_id: string;
+          timeline: string;
+          updated_at?: string;
+        }
+        Update: {}
+          attachments?: Json | null;
+          budget_display?: string | null;
+          budget_max?: number | null;
+          budget_min?: number | null;
+          created_at?: string;
+          expiry_date?: string | null;
+          id?: string;
+          project_overview?: string;
+          project_summary?: string | null;
+          project_type?: string | null;
+          requester_email?: string;
+          requester_id?: string | null;
+          requester_name?: string;
+          status?: string;
+          talent_id?: string;
+          timeline?: string;
+          updated_at?: string;
+        }
+        Relationships: [];
+      }
+      interviews: {}
+        Row: {}
+          client_id: string;
+          created_at: string;
+          duration_minutes: number;
+          end_time: string | null;
+          id: string;
+          interview_type: string;
+          meeting_link: string | null;
+          meeting_platform: string | null;
+          notes: string | null;
+          reminder_sent: string | null;
+          scheduled_date: string;
+          status: string;
+          talent_id: string;
+          title: string | null;
+          updated_at: string;
+        }
+        Insert: {}
+          client_id: string;
+          created_at?: string;
+          duration_minutes?: number;
+          end_time?: string | null;
+          id?: string;
+          interview_type?: string;
+          meeting_link?: string | null;
+          meeting_platform?: string | null;
+          notes?: string | null;
+          reminder_sent?: string | null;
+          scheduled_date: string;
+          status?: string;
+          talent_id: string;
+          title?: string | null;
+          updated_at?: string;
+        }
+        Update: {}
+          client_id?: string;
+          created_at?: string;
+          duration_minutes?: number;
+          end_time?: string | null;
+          id?: string;
+          interview_type?: string;
+          meeting_link?: string | null;
+          meeting_platform?: string | null;
+          notes?: string | null;
+          reminder_sent?: string | null;
+          scheduled_date?: string;
+          status?: string;
+          talent_id?: string;
+          title?: string | null;
+          updated_at?: string;
+        }
+        Relationships: [];
+      }
+      job_applications: {}
+        Row: {}
+          cover_letter: string | null;
+          created_at: string | null;
+          id: string;
+          is_shortlisted: boolean | null;
+          job_id: string;
+          match_breakdown: Json | null;
+          match_score: number | null;
+          match_suggestion: string | null;
+          match_summary: string | null;
+          resume_id: string | null;
+          scored_at: string | null;
+          status: string;
+          talent_id: string;
+          viewed_at: string | null;
+        }
+        Insert: {}
+          cover_letter?: string | null;
+          created_at?: string | null;
+          id?: string;
+          is_shortlisted?: boolean | null;
+          job_id: string;
+          match_breakdown?: Json | null;
+          match_score?: number | null;
+          match_suggestion?: string | null;
+          match_summary?: string | null;
+          resume_id?: string | null;
+          scored_at?: string | null;
+          status?: string;
+          talent_id: string;
+          viewed_at?: string | null;
+        }
+        Update: {}
+          cover_letter?: string | null;
+          created_at?: string | null;
+          id?: string;
+          is_shortlisted?: boolean | null;
+          job_id?: string;
+          match_breakdown?: Json | null;
+          match_score?: number | null;
+          match_suggestion?: string | null;
+          match_summary?: string | null;
+          resume_id?: string | null;
+          scored_at?: string | null;
+          status?: string;
+          talent_id?: string;
+          viewed_at?: string | null;
+        }
+        Relationships: [;
+<<<<<<< HEAD
+          {
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+          }
+          },
+          {
+            foreignKeyName: "fraud_flags_user_id_fkey"
+            columns: ["user_id"]
+            isOneToOne: false
+            referencedRelation: "user_metrics"
+            referencedColumns: ["user_id"]
+          }]
+      }
+      hire_requests: {
+        Row: {
+          attachments: Json | null
+          budget_display: string | null
+          budget_max: number | null
+          budget_min: number | null
+          created_at: string
+          expiry_date: string | null
+          id: string
+          project_overview: string
+          project_summary: string | null
+          project_type: string | null
+          requester_email: string
+          requester_id: string | null
+          requester_name: string
+          status: string
+          talent_id: string
+          timeline: string
+          updated_at: string
+        }
+        Insert: {
+          attachments?: Json | null
+          budget_display?: string | null
+          budget_max?: number | null
+          budget_min?: number | null
+          created_at?: string
+          expiry_date?: string | null
+          id?: string
+          project_overview: string
+          project_summary?: string | null
+          project_type?: string | null
+          requester_email: string
+          requester_id?: string | null
+          requester_name: string
+          status?: string
+          talent_id: string
+          timeline: string
+          updated_at?: string
+        }
+        Update: {
+          attachments?: Json | null
+          budget_display?: string | null
+          budget_max?: number | null
+          budget_min?: number | null
+          created_at?: string
+          expiry_date?: string | null
+          id?: string
+          project_overview?: string
+          project_summary?: string | null
+          project_type?: string | null
+          requester_email?: string
+          requester_id?: string | null
+          requester_name?: string
+          status?: string
+          talent_id?: string
+          timeline?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
+      interviews: {
+        Row: {
+          client_id: string
+          created_at: string
+          duration_minutes: number
+          end_time: string | null
+          id: string
+          interview_type: string
+          meeting_link: string | null
+          meeting_platform: string | null
+          notes: string | null
+          reminder_sent: string | null
+          scheduled_date: string
+          status: string
+          talent_id: string
+          title: string | null
+          updated_at: string
+        }
+        Insert: {
+          client_id: string
+          created_at?: string
+          duration_minutes?: number
+          end_time?: string | null
+          id?: string
+          interview_type?: string
+          meeting_link?: string | null
+          meeting_platform?: string | null
+          notes?: string | null
+          reminder_sent?: string | null
+          scheduled_date: string
+          status?: string
+          talent_id: string
+          title?: string | null
+          updated_at?: string
+        }
+        Update: {
+          client_id?: string
+          created_at?: string
+          duration_minutes?: number
+          end_time?: string | null
+          id?: string
+          interview_type?: string
+          meeting_link?: string | null
+          meeting_platform?: string | null
+          notes?: string | null
+          reminder_sent?: string | null
+          scheduled_date?: string
+          status?: string
+          talent_id?: string
+          title?: string | null
+          updated_at?: string
+        }
+        Relationships: []
+      }
+      job_applications: {
+        Row: {
+          cover_letter: string | null
+          created_at: string | null
+          id: string
+          is_shortlisted: boolean | null
+          job_id: string
+          match_breakdown: Json | null
+          match_score: number | null
+          match_suggestion: string | null
+          match_summary: string | null
+          resume_id: string | null
+          scored_at: string | null
+          status: string
+          talent_id: string
+          viewed_at: string | null
+        }
+        Insert: {
+          cover_letter?: string | null
+          created_at?: string | null
+          id?: string
+          is_shortlisted?: boolean | null
+          job_id: string
+          match_breakdown?: Json | null
+          match_score?: number | null
+          match_suggestion?: string | null
+          match_summary?: string | null
+          resume_id?: string | null
+          scored_at?: string | null
+          status?: string
+          talent_id: string
+          viewed_at?: string | null
+        }
+        Update: {
+          cover_letter?: string | null
+          created_at?: string | null
+          id?: string
+          is_shortlisted?: boolean | null
+          job_id?: string
+          match_breakdown?: Json | null
+          match_score?: number | null
+          match_suggestion?: string | null
+          match_summary?: string | null
+          resume_id?: string | null
+          scored_at?: string | null
+          status?: string
+          talent_id?: string
+          viewed_at?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "job_applications_job_id_fkey"
+            columns: ["job_id"]
+            isOneToOne: false
+            referencedRelation: "jobs"
+            referencedColumns: ["id"]
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+
+          },
+
+
+<<<<<<< HEAD
+=======
+          }
+          },
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+          {
+            foreignKeyName: "job_applications_resume_id_fkey"
+=======
+          {}
+          },
+
+
+
+
+
+          {"
+            foreignKeyName: "job_applications_resume_id_fkey""
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+            columns: ["resume_id"]
+            isOneToOne: false"
+            referencedRelation: "talent_resumes""
+            referencedColumns: ["id"]
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+        }            foreignKeyName: "api_logs_api_key_id_fkey"
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             columns: ["api_key_id"]
             isOneToOne: false
             referencedRelation: "api_keys"
@@ -1464,6 +2932,16 @@ referencedColumns: ["id"];
             isOneToOne: false
             referencedRelation: "talent_resumes"
             referencedColumns: ["id"]
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        }            foreignKeyName: "api_logs_api_key_id_fkey"
+            columns: ["api_key_id"]
+            isOneToOne: false
+            referencedRelation: "api_keys"            columns: ["resume_id"]
+            isOneToOne: false
+            referencedRelation: "talent_resumes"
+            referencedColumns: ["id"]
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
           },
@@ -1496,21 +2974,55 @@ foreignKeyName: "job_applications_job_id_fkey";
             isOneToOne: false;
             referenced_relation: "jobs";
             referenced_columns: ["id"];
+<<<<<<< HEAD
+          }          },
+=======
+=======
           }
           },
 
+<<<<<<< HEAD
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+
+          },
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+          {"
+            foreignKeyName: "job_applications_resume_id_fkey";"
+=======
           {
             foreignKeyName: "job_applications_resume_id_fkey";
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             columns: ["resume_id"];
-            isOneToOne: false;
-            referenced_relation: "talent_resumes";
+            isOneToOne: false;"
+            referenced_relation: "talent_resumes";"
             referenced_columns: ["id"];
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           }
-          {
-            foreignKeyName: "job_applications_talent_id_fkey";
+          {"
+            foreignKeyName: "job_applications_talent_id_fkey";"
             columns: ["talent_id"];
-            isOneToOne: false;
-            referenced_relation: "user_metrics";
+            isOneToOne: false;"
+            referenced_relation: "user_metrics";"
             referenced_columns: ["user_id"];
           {"
             foreignKeyName: "job_applications_talent_id_fkey";","
@@ -1520,6 +3032,20 @@ foreignKeyName: "job_applications_job_id_fkey";
             referenced_columns: ["user_id"];"
           }];
       }
+<<<<<<< HEAD
+      jobs: {}
+        Row: {}
+          budget: Json;
+          category: string;
+          client_id: string;
+          created_at: string;
+          deadline: string | null;
+          description: string;
+          id: string;
+          skills: string[];
+          status: string;
+          title: string;
+=======
       jobs: {,
   Row: {
           budget: Json;,
@@ -1532,10 +3058,11 @@ foreignKeyName: "job_applications_job_id_fkey";
   skills: string[];
           status: string;,
   title: string;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           updated_at: string;
 
         }
-        Insert: {
+        Insert: {}
           budget?: Json;
           category: string;
           client_id: string;
@@ -1550,7 +3077,7 @@ foreignKeyName: "job_applications_job_id_fkey";
           title: string;}
           updated_at?: string;}
         }
-        Update: {
+        Update: {}
           budget?: Json;
           category?: string;
           client_id?: string;
@@ -1564,16 +3091,16 @@ foreignKeyName: "job_applications_job_id_fkey";
           updated_at?: string;}
         }
         Relationships: [;
-          {
-            foreignKeyName: "jobs_client_id_fkey";
+          {"
+            foreignKeyName: "jobs_client_id_fkey";"
             columns: ["client_id"];
-            isOneToOne: false;
-            referenced_relation: "user_metrics";
+            isOneToOne: false;"
+            referenced_relation: "user_metrics";"
             referenced_columns: ["user_id"];
           }];
       }
-      milestone_activities: {
-        Row: {
+      milestone_activities: {}
+        Row: {}
           action: string;
           comment: string | null;
           created_at: string;
@@ -1583,7 +3110,7 @@ foreignKeyName: "job_applications_job_id_fkey";
           previous_status: string | null;
           user_id: string;
         }
-        Insert: {
+        Insert: {}
           action: string;
           comment?: string | null;
           created_at?: string;
@@ -1623,7 +3150,7 @@ foreignKeyName: "job_applications_job_id_fkey";
           user_id: string;
 
         }
-        Update: {
+        Update: {}
           action?: string;
           comment?: string | null;
           created_at?: string;
@@ -1634,7 +3161,17 @@ foreignKeyName: "job_applications_job_id_fkey";
           user_id?: string;}
         }
         Relationships: [;
+<<<<<<< HEAD
           {
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+=======
 }
           },
           {
@@ -1732,6 +3269,7 @@ foreignKeyName: "job_applications_job_id_fkey";
             isOneToOne: false
             referencedRelation: "project_milestones"
             referencedColumns: ["id"]
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
             foreignKeyName: "milestone_activities_milestone_id_fkey";
             columns: ["milestone_id"];
@@ -2880,7 +4418,1331 @@ foreignKeyName: "job_applications_job_id_fkey";
             referenced_relation: "user_metrics";","
   referenced_columns: ["user_id"];"
           }
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           }
+<<<<<<< HEAD
+          },
+          {
+            foreignKeyName: "job_applications_talent_id_fkey"
+            columns: ["talent_id"]
+            isOneToOne: false
+            referencedRelation: "user_metrics"
+            referencedColumns: ["user_id"]
+          }]
+      }
+      jobs: {
+        Row: {
+          budget: Json
+          category: string
+          client_id: string
+          created_at: string
+          deadline: string | null
+          description: string
+          id: string
+          skills: string[]
+          status: string
+          title: string
+          updated_at: string
+        }
+        Insert: {
+          budget?: Json
+          category: string
+          client_id: string
+          created_at?: string
+          deadline?: string | null
+          description: string
+          id?: string
+          skills?: string[]
+          status?: string
+          title: string
+          updated_at?: string
+        }
+        Update: {
+          budget?: Json
+          category?: string
+          client_id?: string
+          created_at?: string
+          deadline?: string | null
+          description?: string
+          id?: string
+          skills?: string[]
+          status?: string
+          title?: string
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "jobs_client_id_fkey"
+            columns: ["client_id"]
+            isOneToOne: false
+            referencedRelation: "user_metrics"
+            referencedColumns: ["user_id"]
+          }]
+      }
+      milestone_activities: {
+        Row: {
+          action: string
+          comment: string | null
+          created_at: string
+          id: string
+          milestone_id: string
+          new_status: string
+          previous_status: string | null
+          user_id: string
+        }
+        Insert: {
+          action: string
+          comment?: string | null
+          created_at?: string
+          id?: string
+          milestone_id: string
+          new_status: string
+          previous_status?: string | null
+          user_id: string
+        }
+        Update: {
+          action?: string
+          comment?: string | null
+          created_at?: string
+          id?: string
+          milestone_id?: string
+          new_status?: string
+          previous_status?: string | null
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "milestone_activities_milestone_id_fkey"
+            columns: ["milestone_id"]
+            isOneToOne: false
+            referencedRelation: "project_milestones"
+            referencedColumns: ["id"]
+<<<<<<< HEAD
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+            foreignKeyName: "milestone_activities_milestone_id_fkey";
+=======
+          {}
+"
+            foreignKeyName: "milestone_activities_milestone_id_fkey";"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+            columns: ["milestone_id"];
+            isOneToOne: false;"
+            referenced_relation: "project_milestones";"
+            referenced_columns: ["id"];
+
+<<<<<<< HEAD
+          }          }
+
+          },
+=======
+
+          }
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+          },
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+          {
+            foreignKeyName: "milestone_activities_user_id_fkey";
+=======
+
+
+
+          {"
+            foreignKeyName: "milestone_activities_user_id_fkey";"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+            columns: ["user_id"];
+            isOneToOne: false;"
+            referenced_relation: "user_metrics";"
+            referenced_columns: ["user_id"];
+          }];
+      }
+      notification_preferences: {}
+        Row: {}
+          created_at: string;
+          id: string;
+          marketing_emails: boolean | null;
+          system_notifications: boolean | null;
+          updated_at: string;
+          user_id: string;
+        }
+        Insert: {}
+          created_at?: string;
+          id?: string;
+          marketing_emails?: boolean | null;
+          system_notifications?: boolean | null;
+          updated_at?: string;
+          user_id: string;
+        }
+        Update: {}
+          created_at?: string;
+          id?: string;
+          marketing_emails?: boolean | null;
+          system_notifications?: boolean | null;
+          updated_at?: string;
+          user_id?: string;
+        }
+        Relationships: [;
+          {}
+      }
+      notifications: {}
+        Row: {}
+          created_at: string | null;
+          id: string;
+          message: string;
+          read: boolean | null;
+          related_id: string | null;
+          title: string;
+          type: string;
+          updated_at: string | null;
+          user_id: string;
+        }
+        Insert: {}
+          created_at?: string | null;
+          id?: string;
+          message: string;
+          read?: boolean | null;
+          related_id?: string | null;
+          title: string;
+          type: string;
+          updated_at?: string | null;
+          user_id: string;
+        }
+        Update: {}
+          created_at?: string | null;
+          id?: string;
+          message?: string;
+          read?: boolean | null;
+          related_id?: string | null;
+          title?: string;
+          type?: string;
+          updated_at?: string | null;
+          user_id?: string;
+        }
+        Relationships: [;
+          {}
+      }
+      partner_payouts: {}
+        Row: {}
+          amount: number;
+          completed_at: string | null;
+          created_at: string;
+          id: string;
+          method: string;
+          partner_id: string;
+          payout_details: Json | null;
+          status: string;
+          updated_at: string;
+        }
+        Insert: {}
+          amount: number;
+          completed_at?: string | null;
+          created_at?: string;
+          id?: string;
+          method: string;
+          partner_id: string;
+          payout_details?: Json | null;
+          status?: string;
+          updated_at?: string;
+        }
+        Update: {}
+          amount?: number;
+          completed_at?: string | null;
+          created_at?: string;
+          id?: string;
+          method?: string;
+          partner_id?: string;
+          payout_details?: Json | null;
+          status?: string;
+          updated_at?: string;
+        }
+        Relationships: [;
+<<<<<<< HEAD
+          {
+<<<<<<< HEAD
+            foreignKeyName: "partner_payouts_partner_id_fkey";
+            columns: ["partner_id"];
+            isOneToOne: false;
+            referenced_relation: "partner_profiles";
+            referenced_columns: ["id"];
+          }];
+      }
+      partner_profiles: {
+        Row: {
+          audience_size: string;
+          bio: string;
+          commission_rate: number | null;
+          created_at: string;
+          fraud_flags: number | null;
+          id: string;
+          name: string;
+          niche: string;
+          payout_method: string;
+          social_media: Json | null;
+          status: string;
+          updated_at: string;
+          user_id: string;
+          website: string | null;
+        }
+        Insert: {
+          audience_size: string;
+          bio: string;
+          commission_rate?: number | null;
+          created_at?: string;
+          fraud_flags?: number | null;
+          id?: string;
+          name: string;
+          niche: string;
+          payout_method: string;
+          social_media?: Json | null;
+          status?: string;
+          updated_at?: string;
+          user_id: string;
+          website?: string | null;
+        }
+        Update: {
+          audience_size?: string;
+          bio?: string;
+          commission_rate?: number | null;
+          created_at?: string;
+          fraud_flags?: number | null;
+          id?: string;
+          name?: string;
+          niche?: string;
+          payout_method?: string;
+          social_media?: Json | null;
+          status?: string;
+          updated_at?: string;
+          user_id?: string;
+          website?: string | null;
+        }
+        Relationships: [;
+          {
+            foreignKeyName: "partner_profiles_user_id_fkey";
+            columns: ["user_id"];
+            isOneToOne: false;
+            referenced_relation: "user_metrics";
+            referenced_columns: ["user_id"];
+          }];
+      }
+      partner_referral_links: {
+        Row: {
+          campaign: string | null;
+          clicks: number | null;
+          conversions: number | null;
+          created_at: string;
+          id: string;
+          name: string;
+          partner_id: string;
+          source: string | null;
+          updated_at: string;
+        }
+        Insert: {
+          campaign?: string | null;
+          clicks?: number | null;
+          conversions?: number | null;
+          created_at?: string;
+          id?: string;
+          name: string;
+          partner_id: string;
+          source?: string | null;
+          updated_at?: string;
+        }
+        Update: {
+          campaign?: string | null;
+          clicks?: number | null;
+          conversions?: number | null;
+          created_at?: string;
+          id?: string;
+          name?: string;
+          partner_id?: string;
+          source?: string | null;
+          updated_at?: string;
+        }
+        Relationships: [;
+          {
+            foreignKeyName: "partner_referral_links_partner_id_fkey";
+            columns: ["partner_id"];
+            isOneToOne: false;
+            referenced_relation: "partner_profiles";
+            referenced_columns: ["id"];
+          }];
+      }
+      portfolio_projects: {
+        Row: {
+          created_at: string;
+          demo_url: string | null;
+          description: string | null;
+          github_url: string | null;
+          id: string;
+          image_url: string | null;
+          pdf_url: string | null;
+          technologies: string[] | null;
+          title: string;
+          updated_at: string;
+          user_id: string;
+        }
+        Insert: {
+          created_at?: string;
+          demo_url?: string | null;
+          description?: string | null;
+          github_url?: string | null;
+          id?: string;
+          image_url?: string | null;
+          pdf_url?: string | null;
+          technologies?: string[] | null;
+          title: string;
+          updated_at?: string;
+          user_id: string;
+        }
+        Update: {
+          created_at?: string;
+          demo_url?: string | null;
+          description?: string | null;
+          github_url?: string | null;
+          id?: string;
+          image_url?: string | null;
+          pdf_url?: string | null;
+          technologies?: string[] | null;
+          title?: string;
+          updated_at?: string;
+          user_id?: string;
+        }
+        Relationships: [;
+          {
+            foreignKeyName: "portfolio_projects_user_id_fkey";
+            columns: ["user_id"];
+            isOneToOne: false;
+            referenced_relation: "user_metrics";
+            referenced_columns: ["user_id"];
+          }];
+      }
+      profiles: {
+        Row: {
+          avatar_url: string | null;
+          average_rating: number | null;
+          bio: string | null;
+          created_at: string;
+          display_name: string | null;
+          headline: string | null;
+          id: string;
+          ip_address: string | null;
+          last_login_ip: string | null;
+          profile_complete: boolean;
+          rating_count: number | null;
+          rating_sum: number | null;
+          role: string | null;
+          signup_timestamp: string | null;
+          tenant_id: string | null;
+          updated_at: string;
+          user_type: string | null;
+        }
+        Insert: {
+          avatar_url?: string | null;
+          average_rating?: number | null;
+          bio?: string | null;
+          created_at?: string;
+          display_name?: string | null;
+          headline?: string | null;
+          id: string;
+          ip_address?: string | null;
+          last_login_ip?: string | null;
+          profile_complete?: boolean;
+          rating_count?: number | null;
+          rating_sum?: number | null;
+          role?: string | null;
+          signup_timestamp?: string | null;
+          tenant_id?: string | null;
+          updated_at?: string;
+          user_type?: string | null;
+        }
+        Update: {
+          avatar_url?: string | null;
+          average_rating?: number | null;
+          bio?: string | null;
+          created_at?: string;
+          display_name?: string | null;
+          headline?: string | null;
+          id?: string;
+          ip_address?: string | null;
+          last_login_ip?: string | null;
+          profile_complete?: boolean;
+          rating_count?: number | null;
+          rating_sum?: number | null;
+          role?: string | null;
+          signup_timestamp?: string | null;
+          tenant_id?: string | null;
+          updated_at?: string;
+          user_type?: string | null;
+        }
+        Relationships: [;
+          {
+<<<<<<< HEAD
+=======
+          }
+          },
+          {
+            foreignKeyName: "milestone_activities_user_id_fkey"
+            columns: ["user_id"]
+            isOneToOne: false
+            referencedRelation: "user_metrics"
+            referencedColumns: ["user_id"]
+          }]
+      }
+      notification_preferences: {
+        Row: {
+          created_at: string
+          id: string
+          marketing_emails: boolean | null
+          system_notifications: boolean | null
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          marketing_emails?: boolean | null
+          system_notifications?: boolean | null
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          marketing_emails?: boolean | null
+          system_notifications?: boolean | null
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "notification_preferences_user_id_fkey"
+            columns: ["user_id"]
+            isOneToOne: true
+            referencedRelation: "user_metrics"
+            referencedColumns: ["user_id"]
+          }]
+      }
+      notifications: {
+        Row: {
+          created_at: string | null
+          id: string
+          message: string
+          read: boolean | null
+          related_id: string | null
+          title: string
+          type: string
+          updated_at: string | null
+          user_id: string
+        }
+        Insert: {
+          created_at?: string | null
+          id?: string
+          message: string
+          read?: boolean | null
+          related_id?: string | null
+          title: string
+          type: string
+          updated_at?: string | null
+          user_id: string
+        }
+        Update: {
+          created_at?: string | null
+          id?: string
+          message?: string
+          read?: boolean | null
+          related_id?: string | null
+          title?: string
+          type?: string
+          updated_at?: string | null
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "notifications_user_id_fkey"
+            columns: ["user_id"]
+            isOneToOne: false
+            referencedRelation: "user_metrics"
+            referencedColumns: ["user_id"]
+          }]
+      }
+      partner_payouts: {
+        Row: {
+          amount: number
+          completed_at: string | null
+          created_at: string
+          id: string
+          method: string
+          partner_id: string
+          payout_details: Json | null
+          status: string
+          updated_at: string
+        }
+        Insert: {
+          amount: number
+          completed_at?: string | null
+          created_at?: string
+          id?: string
+          method: string
+          partner_id: string
+          payout_details?: Json | null
+          status?: string
+          updated_at?: string
+        }
+        Update: {
+          amount?: number
+          completed_at?: string | null
+          created_at?: string
+          id?: string
+          method?: string
+          partner_id?: string
+          payout_details?: Json | null
+          status?: string
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "partner_payouts_partner_id_fkey"
+            columns: ["partner_id"]
+            isOneToOne: false
+            referencedRelation: "partner_profiles"
+            referencedColumns: ["id"]
+          }]
+      }
+      partner_profiles: {
+        Row: {
+          audience_size: string
+          bio: string
+          commission_rate: number | null
+          created_at: string
+          fraud_flags: number | null
+          id: string
+          name: string
+          niche: string
+          payout_method: string
+          social_media: Json | null
+          status: string
+          updated_at: string
+          user_id: string
+          website: string | null
+        }
+        Insert: {
+          audience_size: string
+          bio: string
+          commission_rate?: number | null
+          created_at?: string
+          fraud_flags?: number | null
+          id?: string
+          name: string
+          niche: string
+          payout_method: string
+          social_media?: Json | null
+          status?: string
+          updated_at?: string
+          user_id: string
+          website?: string | null
+        }
+        Update: {
+          audience_size?: string
+          bio?: string
+          commission_rate?: number | null
+          created_at?: string
+          fraud_flags?: number | null
+          id?: string
+          name?: string
+          niche?: string
+          payout_method?: string
+          social_media?: Json | null
+          status?: string
+          updated_at?: string
+          user_id?: string
+          website?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "partner_profiles_user_id_fkey"
+            columns: ["user_id"]
+            isOneToOne: false
+            referencedRelation: "user_metrics"
+            referencedColumns: ["user_id"]
+          }]
+      }
+      partner_referral_links: {
+        Row: {
+          campaign: string | null
+          clicks: number | null
+          conversions: number | null
+          created_at: string
+          id: string
+          name: string
+          partner_id: string
+          source: string | null
+          updated_at: string
+        }
+        Insert: {
+          campaign?: string | null
+          clicks?: number | null
+          conversions?: number | null
+          created_at?: string
+          id?: string
+          name: string
+          partner_id: string
+          source?: string | null
+          updated_at?: string
+        }
+        Update: {
+          campaign?: string | null
+          clicks?: number | null
+          conversions?: number | null
+          created_at?: string
+          id?: string
+          name?: string
+          partner_id?: string
+          source?: string | null
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "partner_referral_links_partner_id_fkey"
+            columns: ["partner_id"]
+            isOneToOne: false
+            referencedRelation: "partner_profiles"
+            referencedColumns: ["id"]
+          }]
+      }
+      portfolio_projects: {
+        Row: {
+          created_at: string
+          demo_url: string | null
+          description: string | null
+          github_url: string | null
+          id: string
+          image_url: string | null
+          pdf_url: string | null
+          technologies: string[] | null
+          title: string
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          demo_url?: string | null
+          description?: string | null
+          github_url?: string | null
+          id?: string
+          image_url?: string | null
+          pdf_url?: string | null
+          technologies?: string[] | null
+          title: string
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          demo_url?: string | null
+          description?: string | null
+          github_url?: string | null
+          id?: string
+          image_url?: string | null
+          pdf_url?: string | null
+          technologies?: string[] | null
+          title?: string
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "portfolio_projects_user_id_fkey"
+            columns: ["user_id"]
+            isOneToOne: false
+            referencedRelation: "user_metrics"
+            referencedColumns: ["user_id"]
+          }]
+      }
+      profiles: {
+        Row: {
+          avatar_url: string | null
+          average_rating: number | null
+          bio: string | null
+          created_at: string
+          display_name: string | null
+          headline: string | null
+          id: string
+          ip_address: string | null
+          last_login_ip: string | null
+          profile_complete: boolean
+          rating_count: number | null
+          rating_sum: number | null
+          role: string | null
+          signup_timestamp: string | null
+          tenant_id: string | null
+          updated_at: string
+          user_type: string | null
+        }
+        Insert: {
+          avatar_url?: string | null
+          average_rating?: number | null
+          bio?: string | null
+          created_at?: string
+          display_name?: string | null
+          headline?: string | null
+          id: string
+          ip_address?: string | null
+          last_login_ip?: string | null
+          profile_complete?: boolean
+          rating_count?: number | null
+          rating_sum?: number | null
+          role?: string | null
+          signup_timestamp?: string | null
+          tenant_id?: string | null
+          updated_at?: string
+          user_type?: string | null
+        }
+        Update: {
+          avatar_url?: string | null
+          average_rating?: number | null
+          bio?: string | null
+          created_at?: string
+          display_name?: string | null
+          headline?: string | null
+          id?: string
+          ip_address?: string | null
+          last_login_ip?: string | null
+          profile_complete?: boolean
+          rating_count?: number | null
+          rating_sum?: number | null
+          role?: string | null
+          signup_timestamp?: string | null
+          tenant_id?: string | null
+          updated_at?: string
+          user_type?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "profiles_id_fkey"
+            columns: ["id"]
+            isOneToOne: true
+            referencedRelation: "user_metrics"
+            referencedColumns: ["user_id"]
+<<<<<<< HEAD
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+            foreignKeyName: "profiles_id_fkey";
+=======
+          {}
+"
+            foreignKeyName: "profiles_id_fkey";"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+            columns: ["id"];
+            isOneToOne: true;"
+            referenced_relation: "user_metrics";"
+            referenced_columns: ["user_id"];
+
+
+          }
+
+          },
+
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+          {
+            foreignKeyName: "profiles_tenant_id_fkey";
+=======
+
+
+
+          {"
+            foreignKeyName: "profiles_tenant_id_fkey";"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+            columns: ["tenant_id"];
+            isOneToOne: false;"
+            referenced_relation: "whitelabel_tenants";"
+            referenced_columns: ["id"];
+          }];
+      }
+      project_milestones: {}
+        Row: {}
+          amount: number;
+          created_at: string;
+          created_by: string;
+          deliverables: Json | null;
+          description: string | null;
+          due_date: string | null;
+          id: string;
+          project_id: string;
+          status: string;
+          title: string;
+          updated_at: string;
+        }
+        Insert: {}
+          amount: number;
+          created_at?: string;
+          created_by: string;
+          deliverables?: Json | null;
+          description?: string | null;
+          due_date?: string | null;
+          id?: string;
+          project_id: string;
+          status?: string;
+          title: string;
+          updated_at?: string;
+        }
+        Update: {}
+          amount?: number;
+          created_at?: string;
+          created_by?: string;
+          deliverables?: Json | null;
+          description?: string | null;
+          due_date?: string | null;
+          id?: string;
+          project_id?: string;
+          status?: string;
+          title?: string;
+          updated_at?: string;
+        }
+        Relationships: [;
+<<<<<<< HEAD
+          {
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+          }
+          },
+          {
+            foreignKeyName: "profiles_tenant_id_fkey"
+            columns: ["tenant_id"]
+            isOneToOne: false
+            referencedRelation: "whitelabel_tenants"
+            referencedColumns: ["id"]
+          }]
+      }
+      project_milestones: {
+        Row: {
+          amount: number
+          created_at: string
+          created_by: string
+          deliverables: Json | null
+          description: string | null
+          due_date: string | null
+          id: string
+          project_id: string
+          status: string
+          title: string
+          updated_at: string
+        }
+        Insert: {
+          amount: number
+          created_at?: string
+          created_by: string
+          deliverables?: Json | null
+          description?: string | null
+          due_date?: string | null
+          id?: string
+          project_id: string
+          status?: string
+          title: string
+          updated_at?: string
+        }
+        Update: {
+          amount?: number
+          created_at?: string
+          created_by?: string
+          deliverables?: Json | null
+          description?: string | null
+          due_date?: string | null
+          id?: string
+          project_id?: string
+          status?: string
+          title?: string
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "project_milestones_created_by_fkey"
+            columns: ["created_by"]
+            isOneToOne: false
+            referencedRelation: "user_metrics"
+            referencedColumns: ["user_id"]
+<<<<<<< HEAD
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+            foreignKeyName: "project_milestones_created_by_fkey";
+=======
+          {}
+"
+            foreignKeyName: "project_milestones_created_by_fkey";"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+            columns: ["created_by"];
+            isOneToOne: false;"
+            referenced_relation: "user_metrics";"
+            referenced_columns: ["user_id"];
+
+
+          }
+
+          },
+
+
+
+          }
+
+          },
+<<<<<<< HEAD
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+          }          }
+
+          },
+
+          },
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+          {
+            foreignKeyName: "project_milestones_project_id_fkey";
+=======
+
+          {"
+            foreignKeyName: "project_milestones_project_id_fkey";"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+            columns: ["project_id"];
+            isOneToOne: false;"
+            referenced_relation: "projects";"
+            referenced_columns: ["id"];
+<<<<<<< HEAD
+          {
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+          }
+          },
+          {
+            foreignKeyName: "project_milestones_project_id_fkey"
+            columns: ["project_id"]
+            isOneToOne: false
+            referencedRelation: "projects"
+            referencedColumns: ["id"]
+          }]
+      }
+      project_notes: {
+        Row: {
+          content: string
+          created_at: string
+          id: string
+          project_id: string
+          user_id: string
+        }
+        Insert: {
+          content: string
+          created_at?: string
+          id?: string
+          project_id: string
+          user_id: string
+        }
+        Update: {
+          content?: string
+          created_at?: string
+          id?: string
+          project_id?: string
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "project_notes_project_id_fkey"
+            columns: ["project_id"]
+            isOneToOne: false
+            referencedRelation: "projects"
+            referencedColumns: ["id"]
+<<<<<<< HEAD
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+            foreignKeyName: "project_notes_project_id_fkey";
+=======
+          {}
+"
+            foreignKeyName: "project_notes_project_id_fkey";"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+            columns: ["project_id"];
+            isOneToOne: false;"
+            referenced_relation: "projects";"
+            referenced_columns: ["id"];
+
+<<<<<<< HEAD
+          }          }
+
+          },
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+          }
+
+          },
+
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+          {
+            foreignKeyName: "project_notes_user_id_fkey";
+=======
+
+
+
+          {"
+            foreignKeyName: "project_notes_user_id_fkey";"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+            columns: ["user_id"];
+            isOneToOne: false;"
+            referenced_relation: "user_metrics";"
+            referenced_columns: ["user_id"];
+          }];
+      }
+      projects: {}
+        Row: {}
+          agreement_url: string | null;
+          client_id: string;
+          created_at: string;
+          id: string;
+          job_id: string;
+          payment_terms: string;
+          scope_summary: string;
+          start_date: string;
+          status: string;
+          talent_id: string;
+          updated_at: string;
+        }
+        Insert: {}
+          agreement_url?: string | null;
+          client_id: string;
+          created_at?: string;
+          id?: string;
+          job_id: string;
+          payment_terms: string;
+          scope_summary: string;
+          start_date: string;
+          status?: string;
+          talent_id: string;
+          updated_at?: string;
+        }
+        Update: {}
+          agreement_url?: string | null;
+          client_id?: string;
+          created_at?: string;
+          id?: string;
+          job_id?: string;
+          payment_terms?: string;
+          scope_summary?: string;
+          start_date?: string;
+          status?: string;
+          talent_id?: string;
+          updated_at?: string;
+        }
+        Relationships: [;
+<<<<<<< HEAD
+          {
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+          }
+          },
+          {
+            foreignKeyName: "project_notes_user_id_fkey"
+            columns: ["user_id"]
+            isOneToOne: false
+            referencedRelation: "user_metrics"
+            referencedColumns: ["user_id"]
+          }]
+      }
+      projects: {
+        Row: {
+          agreement_url: string | null
+          client_id: string
+          created_at: string
+          id: string
+          job_id: string
+          payment_terms: string
+          scope_summary: string
+          start_date: string
+          status: string
+          talent_id: string
+          updated_at: string
+        }
+        Insert: {
+          agreement_url?: string | null
+          client_id: string
+          created_at?: string
+          id?: string
+          job_id: string
+          payment_terms: string
+          scope_summary: string
+          start_date: string
+          status?: string
+          talent_id: string
+          updated_at?: string
+        }
+        Update: {
+          agreement_url?: string | null
+          client_id?: string
+          created_at?: string
+          id?: string
+          job_id?: string
+          payment_terms?: string
+          scope_summary?: string
+          start_date?: string
+          status?: string
+          talent_id?: string
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "projects_client_id_fkey"
+            columns: ["client_id"]
+            isOneToOne: false
+            referencedRelation: "user_metrics"
+            referencedColumns: ["user_id"]
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+
+          },
+
+
+<<<<<<< HEAD
+=======
+          }
+          },
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+          {
+            foreignKeyName: "projects_job_id_fkey"
+=======
+          {}
+          },
+
+
+
+
+
+          {"
+            foreignKeyName: "projects_job_id_fkey""
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+            columns: ["job_id"]
+            isOneToOne: false"
+            referencedRelation: "jobs""
+            referencedColumns: ["id"]
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+          {
+            foreignKeyName: "projects_job_id_fkey";
+            columns: ["job_id"];
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+            foreignKeyName: "projects_client_id_fkey";
+            columns: ["client_id"];
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+            isOneToOne: false;
+            referenced_relation: "user_metrics";
+=======
+"
+            foreignKeyName: "projects_client_id_fkey";"
+            columns: ["client_id"];
+            isOneToOne: false;"
+            referenced_relation: "user_metrics";"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+            referenced_columns: ["user_id"];
+
+
+          }
+=======
+            columns: ["job_id"]
+            isOneToOne: false
+            referencedRelation: "jobs"
+            referencedColumns: ["id"]          }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+            columns: ["job_id"]
+            isOneToOne: false
+            referencedRelation: "jobs"
+            referencedColumns: ["id"]          }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+          }
+          {"
+            foreignKeyName: "projects_talent_id_fkey";"
+            columns: ["talent_id"];
+            isOneToOne: false;"
+            referenced_relation: "user_metrics";"
+            referenced_columns: ["user_id"];
+          }];
+      }
+      quote_requests: {}
+        Row: {}
+          budget_display: string | null;
+          budget_max: number | null;
+          budget_min: number | null;
+          created_at: string;
+          id: string;
+          is_archived: boolean;
+          project_description: string | null;
+          project_name: string;
+          project_summary: string;
+          replied_at: string | null;
+          requester_email: string;
+          requester_id: string | null;
+          requester_name: string;
+          start_date: string | null;"
+          status: Database["public"]["Enums"]["quote_request_status"];
+          talent_id: string | null;
+          timeline: string;
+          updated_at: string;
+=======
           {"
             foreignKeyName: "projects_talent_id_fkey";","
   columns: ["talent_id"];"
@@ -2909,10 +5771,11 @@ foreignKeyName: "job_applications_job_id_fkey";
   talent_id: string | null;
           timeline: string;,
   updated_at: string;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           viewed_at: string | null;
 
         }
-        Insert: {
+        Insert: {}
           budget_display?: string | null;
           budget_max?: number | null;
           budget_min?: number | null;
@@ -2928,7 +5791,7 @@ foreignKeyName: "job_applications_job_id_fkey";
           requester_email: string;
           requester_id?: string | null;
           requester_name: string;
-          start_date?: string | null;
+          start_date?: string | null;"
           status?: Database["public"]["Enums"]["quote_request_status"];
 
           start_date?: string | null;"
@@ -2939,6 +5802,7 @@ foreignKeyName: "job_applications_job_id_fkey";
           updated_at?: string;}
           viewed_at?: string | null;}
         }
+<<<<<<< HEAD
         Update: {
           budget_display?: string | null;
           budget_max?: number | null;
@@ -2966,7 +5830,16 @@ foreignKeyName: "job_applications_job_id_fkey";
         }
         Relationships: [;
           {
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+          }
+=======
 }
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           },
           {
             foreignKeyName: "projects_talent_id_fkey"
@@ -3047,29 +5920,131 @@ foreignKeyName: "job_applications_job_id_fkey";
             isOneToOne: false
             referencedRelation: "profiles"
             referencedColumns: ["id"]
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             foreignKeyName: "quote_requests_requester_id_fkey";
+=======
+        Update: {}
+"
+            foreignKeyName: "quote_requests_requester_id_fkey";"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             columns: ["requester_id"];
-            isOneToOne: false;
-            referenced_relation: "profiles";
+            isOneToOne: false;"
+            referenced_relation: "profiles";"
             referenced_columns: ["id"];
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
           }
 
           },
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           {
             foreignKeyName: "quote_requests_talent_id_fkey";
+=======
+
+
+          {"
+            foreignKeyName: "quote_requests_talent_id_fkey";"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             columns: ["talent_id"];
-            isOneToOne: false;
-            referenced_relation: "profiles";
+            isOneToOne: false;"
+            referenced_relation: "profiles";"
             referenced_columns: ["id"];
           }];
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+      }
+
+=======
+<<<<<<< HEAD
+
+
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+          }
+          },
+          {
+            foreignKeyName: "quote_requests_talent_id_fkey"
+            columns: ["talent_id"]
+            isOneToOne: false
+            referencedRelation: "profiles"
+            referencedColumns: ["id"]
+          }]
+      }
+      referral_codes: {
+        Row: {
+          code: string
+          created_at: string
+          id: string
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          code: string
+          created_at?: string
+          id?: string
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          code?: string
+          created_at?: string
+          id?: string
+          updated_at?: string
+          user_id?: string
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+      referral_codes: {;
+        Row: {;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
       }
 
       referral_codes: {;
         Row: {;
 
+<<<<<<< HEAD
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
 }
           },
           {
@@ -3103,12 +6078,65 @@ foreignKeyName: "job_applications_job_id_fkey";
           user_id?: string
       referral_codes: {;
         Row: {;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           code: string;
           created_at: string;
           id: string;
           updated_at: string;
           user_id: string;
         }
+<<<<<<< HEAD
+
+
+        Insert: {}
+          code: string;
+          created_at?: string;
+          id?: string;
+          updated_at?: string;
+          user_id: string;
+        }
+
+
+
+          code?: string;
+          created_at?: string;
+          id?: string;
+          updated_at?: string;
+          user_id?: string;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+        }
+        Relationships: [;
+=======
+      }          code?: string;
+          created_at?: string;
+          id?: string;
+          updated_at?: string;
+          user_id?: string;        Relationships: [;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      }          code?: string;
+          created_at?: string;
+          id?: string;
+          updated_at?: string;
+          user_id?: string;        Relationships: [;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
         Insert: {
 Insert: {;
         Insert: {
@@ -3128,21 +6156,32 @@ Update: {;
 
         }
         Relationships: [;
+<<<<<<< HEAD
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
       }          code?: string;
           created_at?: string;
           id?: string;
           updated_at?: string;
           user_id?: string;        Relationships: [;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           {
             foreignKeyName: "referral_codes_user_id_fkey";
+=======
+
+        }
+        Relationships: [;
+          {"
+            foreignKeyName: "referral_codes_user_id_fkey";"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             columns: ["user_id"];
-            isOneToOne: true;
-            referenced_relation: "user_metrics";
+            isOneToOne: true;"
+            referenced_relation: "user_metrics";"
             referenced_columns: ["user_id"];
           }];
       }
-      referral_rewards: {
-        Row: {
+      referral_rewards: {}
+        Row: {}
           amount: number | null;
           created_at: string;
           expires_at: string | null;
@@ -3220,7 +6259,7 @@ Update: {;
   user_id: string;
 
         }
-        Insert: {
+        Insert: {}
           amount?: number | null;
           created_at?: string;
           expires_at?: string | null;
@@ -3234,7 +6273,7 @@ Update: {;
           user_id: string;
 
         }
-        Update: {
+        Update: {}
           amount?: number | null;
           created_at?: string;
           expires_at?: string | null;
@@ -3245,6 +6284,59 @@ Update: {;
           user_id?: string;}
         }
         Relationships: [;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+          {
+<<<<<<< HEAD
+=======
+        }
+        Relationships: [
+          {
+            foreignKeyName: "referral_codes_user_id_fkey"
+            columns: ["user_id"]
+            isOneToOne: true
+            referencedRelation: "user_metrics"
+            referencedColumns: ["user_id"]
+          }]
+      }
+      referral_rewards: {
+        Row: {
+          amount: number | null
+          created_at: string
+          expires_at: string | null
+          id: string
+          partner_id: string | null
+          referral_id: string
+          reward_type: string
+          user_id: string
+        }
+        Insert: {
+          amount?: number | null
+          created_at?: string
+          expires_at?: string | null
+          id?: string
+          partner_id?: string | null
+          referral_id: string
+          reward_type: string
+          user_id: string
+        }
+        Update: {
+          amount?: number | null
+          created_at?: string
+          expires_at?: string | null
+          id?: string
+          partner_id?: string | null
+          referral_id?: string
+          reward_type?: string
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "referral_rewards_partner_id_fkey"
+            columns: ["partner_id"]
+=======
           {
 }
         Relationships: [
@@ -3303,9 +6395,17 @@ Update: {;
             foreignKeyName: "referral_rewards_referral_id_fkey"
           {            foreignKeyName: "referral_rewards_referral_id_fkey"
             columns: ["referral_id"]
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             isOneToOne: false
-            referencedRelation: "referrals"
+            referencedRelation: "partner_profiles"
             referencedColumns: ["id"]
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+=======
 
             foreignKeyName: "referral_rewards_partner_id_fkey";
             columns: ["partner_id"];
@@ -3459,13 +6559,21 @@ Update: {;
             isOneToOne: false
             referencedRelation: "referral_codes"
             referencedColumns: ["code"]
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
           },
 
 },
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+=======
           }
           },
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           {
             foreignKeyName: "referrals_referred_id_fkey"
             columns: ["referred_id"]
@@ -3495,15 +6603,362 @@ Update: {;
             isOneToOne: false;
             referenced_relation: "user_metrics";
             referenced_columns: ["user_id"];
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           }
+          },
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           {
-            foreignKeyName: "referrals_referrer_id_fkey";
-            columns: ["referrer_id"];
-            isOneToOne: false;
-            referenced_relation: "user_metrics";
+            foreignKeyName: "referral_rewards_referral_id_fkey"
+=======
+          {            foreignKeyName: "referral_rewards_referral_id_fkey"
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+          {            foreignKeyName: "referral_rewards_referral_id_fkey"
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+          {}
+          },
+
+
+
+
+
+          {"
+            foreignKeyName: "referral_rewards_referral_id_fkey""
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+            columns: ["referral_id"]
+            isOneToOne: false"
+            referencedRelation: "referrals""
+            referencedColumns: ["id"]
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+            foreignKeyName: "referral_rewards_partner_id_fkey";
+=======
+"
+            foreignKeyName: "referral_rewards_partner_id_fkey";"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+            columns: ["partner_id"];
+            isOneToOne: false;"
+            referenced_relation: "partner_profiles";"
+            referenced_columns: ["id"];
+          }
+
+          },
+
+
+          {"
+            foreignKeyName: "referral_rewards_referral_id_fkey";"
+            columns: ["referral_id"];
+            isOneToOne: false;"
+            referenced_relation: "referrals";"
+            referenced_columns: ["id"];
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+          }
+          {"
+            foreignKeyName: "referral_rewards_user_id_fkey";"
+            columns: ["user_id"];
+            isOneToOne: false;"
+            referenced_relation: "user_metrics";"
             referenced_columns: ["user_id"];
           }];
       }
+<<<<<<< HEAD
+      referrals: {}
+        Row: {}
+          completed_at: string | null;
+          created_at: string;
+          email: string | null;
+          id: string;
+          ip_address: string | null;
+          partner_id: string | null;
+          referral_code: string;
+          referred_id: string | null;
+          referred_user_type: string | null;
+          referrer_id: string;
+          referrer_user_type: string | null;
+          reward_issued: boolean;
+          reward_issued_at: string | null;"
+          status: Database["public"]["Enums"]["referral_status"];
+        }
+        Insert: {}
+          completed_at?: string | null;
+          created_at?: string;
+          email?: string | null;
+          id?: string;
+          ip_address?: string | null;
+          partner_id?: string | null;
+          referral_code: string;
+          referred_id?: string | null;
+          referred_user_type?: string | null;
+          referrer_id: string;
+          referrer_user_type?: string | null;
+          reward_issued?: boolean;
+          reward_issued_at?: string | null;"
+          status?: Database["public"]["Enums"]["referral_status"];
+        }
+        Update: {}
+          completed_at?: string | null;
+          created_at?: string;
+          email?: string | null;
+          id?: string;
+          ip_address?: string | null;
+          partner_id?: string | null;
+          referral_code?: string;
+          referred_id?: string | null;
+          referred_user_type?: string | null;
+          referrer_id?: string;
+          referrer_user_type?: string | null;
+          reward_issued?: boolean;
+          reward_issued_at?: string | null;"
+          status?: Database["public"]["Enums"]["referral_status"];
+        }
+        Relationships: [;
+<<<<<<< HEAD
+          {
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+          }
+          },
+          {
+            foreignKeyName: "referral_rewards_user_id_fkey"
+            columns: ["user_id"]
+            isOneToOne: false
+            referencedRelation: "user_metrics"
+            referencedColumns: ["user_id"]
+          }]
+      }
+      referrals: {
+        Row: {
+          completed_at: string | null
+          created_at: string
+          email: string | null
+          id: string
+          ip_address: string | null
+          partner_id: string | null
+          referral_code: string
+          referred_id: string | null
+          referred_user_type: string | null
+          referrer_id: string
+          referrer_user_type: string | null
+          reward_issued: boolean
+          reward_issued_at: string | null
+          status: Database["public"]["Enums"]["referral_status"]
+        }
+        Insert: {
+          completed_at?: string | null
+          created_at?: string
+          email?: string | null
+          id?: string
+          ip_address?: string | null
+          partner_id?: string | null
+          referral_code: string
+          referred_id?: string | null
+          referred_user_type?: string | null
+          referrer_id: string
+          referrer_user_type?: string | null
+          reward_issued?: boolean
+          reward_issued_at?: string | null
+          status?: Database["public"]["Enums"]["referral_status"]
+        }
+        Update: {
+          completed_at?: string | null
+          created_at?: string
+          email?: string | null
+          id?: string
+          ip_address?: string | null
+          partner_id?: string | null
+          referral_code?: string
+          referred_id?: string | null
+          referred_user_type?: string | null
+          referrer_id?: string
+          referrer_user_type?: string | null
+          reward_issued?: boolean
+          reward_issued_at?: string | null
+          status?: Database["public"]["Enums"]["referral_status"]
+        }
+        Relationships: [
+          {
+            foreignKeyName: "referrals_partner_id_fkey"
+            columns: ["partner_id"]
+            isOneToOne: false
+            referencedRelation: "partner_profiles"
+            referencedColumns: ["id"]
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+
+          },
+
+
+<<<<<<< HEAD
+=======
+          }
+          },
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+          {
+            foreignKeyName: "referrals_referral_code_fkey"
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+          {}
+          },
+
+
+
+
+
+          {"
+            foreignKeyName: "referrals_referral_code_fkey""
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+            columns: ["referral_code"]
+            isOneToOne: false"
+            referencedRelation: "referral_codes""
+            referencedColumns: ["code"]
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+          },
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+
+
+<<<<<<< HEAD
+
+          }
+          },
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+          {
+            foreignKeyName: "referrals_referred_id_fkey"
+=======
+          {"
+            foreignKeyName: "referrals_referred_id_fkey""
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+            columns: ["referred_id"]
+            isOneToOne: false"
+            referencedRelation: "user_metrics""
+            referencedColumns: ["user_id"]
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+            foreignKeyName: "referrals_partner_id_fkey";
+=======
+"
+            foreignKeyName: "referrals_partner_id_fkey";"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+            columns: ["partner_id"];
+            isOneToOne: false;"
+            referenced_relation: "partner_profiles";"
+            referenced_columns: ["id"];
+          }
+
+          },
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+
+          {"
+            foreignKeyName: "referrals_referral_code_fkey";"
+            columns: ["referral_code"];
+            isOneToOne: false;"
+            referenced_relation: "referral_codes";"
+            referenced_columns: ["code"];
+          }
+          {"
+            foreignKeyName: "referrals_referred_id_fkey";"
+            columns: ["referred_id"];
+            isOneToOne: false;"
+            referenced_relation: "user_metrics";"
+            referenced_columns: ["user_id"];
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+          },
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+          },
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+          }
+          {"
+            foreignKeyName: "referrals_referrer_id_fkey";"
+            columns: ["referrer_id"];
+            isOneToOne: false;"
+            referenced_relation: "user_metrics";"
+            referenced_columns: ["user_id"];
+          }];
+<<<<<<< HEAD
+<<<<<<< HEAD
+      }
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+<<<<<<< HEAD
+
+
+
+          clicked_at: string | null;
+=======
+      }          clicked_at: string | null;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      }          clicked_at: string | null;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
 
       reminder_logs: {;
         Row: {;
@@ -3551,7 +7006,11 @@ Update: {;
       reminder_logs: {;
         Row: {;
           clicked_at: string | null;
+<<<<<<< HEAD
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
       }          clicked_at: string | null;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           email_body: string;
           email_subject: string;
           id: string;
@@ -3560,10 +7019,23 @@ Update: {;
           sent_at: string | null;
           user_id: string;
         }
+<<<<<<< HEAD
+<<<<<<< HEAD
+        Insert: {        Insert: {
+=======
+
+
+        Insert: {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
         Insert: {
 Insert: {;
         Insert: {
+<<<<<<< HEAD
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
         Insert: {        Insert: {
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           clicked_at?: string | null;
           email_body: string;
           email_subject: string;
@@ -3572,9 +7044,21 @@ Insert: {;
           reminder_type: string;
           sent_at?: string | null;
           user_id: string;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+        }
+
+
+
+=======
         }
         Update: {
+<<<<<<< HEAD
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
 Update: {;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           clicked_at?: string | null;
           email_body?: string;
           email_subject?: string;
@@ -3584,20 +7068,52 @@ Update: {;
           sent_at?: string | null;
           user_id?: string;
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+        }
+        Relationships: [;
+=======
+        }        Relationships: [;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        }        Relationships: [;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+        }
+        Relationships: [;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
         }
         Relationships: [;
         }        Relationships: [;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           {
           {
             foreignKeyName: "resume_skills_resume_id_fkey";
+=======
+        }
+        Relationships: [;
+          {}
+          {"
+            foreignKeyName: "resume_skills_resume_id_fkey";"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             columns: ["resume_id"];
-            isOneToOne: false;
-            referenced_relation: "talent_resumes";
+            isOneToOne: false;"
+            referenced_relation: "talent_resumes";"
             referenced_columns: ["id"];
           }];
       }
-      review_reports: {
-        Row: {
+      review_reports: {}
+        Row: {}
           created_at: string;
           id: string;
           reason: string;
@@ -3792,7 +7308,7 @@ Update: {;
           status: string;
 
         }
-        Insert: {
+        Insert: {}
           created_at?: string;
           id?: string;
           reason: string;
@@ -3803,7 +7319,7 @@ Update: {;
           review_id: string;}
           status?: string;}
         }
-        Update: {
+        Update: {}
           created_at?: string;
           id?: string;
           reason?: string;
@@ -3813,8 +7329,18 @@ Update: {;
           status?: string;}
         }
         Relationships: [;
+<<<<<<< HEAD
           {
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+        }
+=======
 }
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         Relationships: [
           {
             foreignKeyName: "reminder_logs_user_id_fkey"
@@ -3896,13 +7422,73 @@ Update: {;
             isOneToOne: false
             referencedRelation: "user_metrics"
             referencedColumns: ["user_id"]
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             foreignKeyName: "review_reports_reporter_id_fkey";
+=======
+          {}
+"
+            foreignKeyName: "review_reports_reporter_id_fkey";"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             columns: ["reporter_id"];
-            isOneToOne: false;
-            referenced_relation: "user_metrics";
+            isOneToOne: false;"
+            referenced_relation: "user_metrics";"
             referenced_columns: ["user_id"];
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+          }          }
+
+          },
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+          }
+
+          },
+
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+          {
+            foreignKeyName: "review_reports_review_id_fkey";
+=======
+
+
+
+          {"
+            foreignKeyName: "review_reports_review_id_fkey";"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+            columns: ["review_id"];
+            isOneToOne: false;"
+            referenced_relation: "reviews";"
+            referenced_columns: ["id"];
+          }];
+      }
+      reviews: {}
+        Row: {}
+=======
           }
 },
 
@@ -3919,6 +7505,7 @@ Update: {;
       }
       reviews: {
         Row: {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           communication_rating: number | null;
           created_at: string;
           id: string;
@@ -3936,7 +7523,11 @@ Update: {;
           updated_at: string;
           would_work_again: boolean | null;
         }
+<<<<<<< HEAD
+        Insert: {}
+=======
         Insert: {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           communication_rating?: number | null;
           created_at?: string;
           id?: string;
@@ -3954,7 +7545,11 @@ Update: {;
           updated_at?: string;
           would_work_again?: boolean | null;
         }
+<<<<<<< HEAD
+        Update: {}
+=======
         Update: {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           communication_rating?: number | null;
           created_at?: string;
           id?: string;
@@ -3973,8 +7568,17 @@ Update: {;
           would_work_again?: boolean | null;
         }
         Relationships: [;
+<<<<<<< HEAD
+<<<<<<< HEAD
           {
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+          }
+=======
 }
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           },
           {
             foreignKeyName: "review_reports_review_id_fkey"
@@ -4046,6 +7650,50 @@ Update: {;
             isOneToOne: false
             referencedRelation: "projects"
             referencedColumns: ["id"]
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+          {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+
+
+          },
+
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+          }
+          },
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+          {
+            foreignKeyName: "reviews_reviewee_id_fkey"
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+          {}
+          },
+
+
+
+
+
+          {"
+            foreignKeyName: "reviews_reviewee_id_fkey""
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+          {
+            foreignKeyName: "reviews_reviewee_id_fkey"
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
 
           },
 
@@ -4057,10 +7705,378 @@ Update: {;
 
           },
 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             columns: ["reviewee_id"]
+            isOneToOne: false"
+            referencedRelation: "user_metrics""
+            referencedColumns: ["user_id"]
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+            foreignKeyName: "reviews_project_id_fkey";
+=======
+"
+            foreignKeyName: "reviews_project_id_fkey";"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+            columns: ["project_id"];
+            isOneToOne: false;"
+            referenced_relation: "projects";"
+            referenced_columns: ["id"];
+          }
+
+          },
+
+
+          {"
+            foreignKeyName: "reviews_reviewee_id_fkey";"
+            columns: ["reviewee_id"];
+            isOneToOne: false;"
+            referenced_relation: "user_metrics";"
+            referenced_columns: ["user_id"];
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+          }
+          {"
+            foreignKeyName: "reviews_reviewer_id_fkey";"
+            columns: ["reviewer_id"];
+            isOneToOne: false;"
+            referenced_relation: "user_metrics";"
+            referenced_columns: ["user_id"];
+          }];
+      }
+      scheduled_jobs: {}
+        Row: {}
+          completed_at: string | null;
+          created_at: string;
+          id: string;
+          job_type: string;
+          payload: Json | null;
+          scheduled_for: string;
+          status: string;
+          updated_at: string;
+        }
+        Insert: {}
+          completed_at?: string | null;
+          created_at?: string;
+          id?: string;
+          job_type: string;
+          payload?: Json | null;
+          scheduled_for: string;
+          status: string;
+          updated_at?: string;
+        }
+        Update: {}
+          completed_at?: string | null;
+          created_at?: string;
+          id?: string;
+          job_type?: string;
+          payload?: Json | null;
+          scheduled_for?: string;
+          status?: string;
+          updated_at?: string;
+        }
+        Relationships: [];
+      }
+      subscriptions: {}
+        Row: {}
+          created_at: string;
+          current_period_end: string | null;
+          current_period_start: string | null;
+          id: string;
+          plan_type: string;
+          status: string;
+          stripe_customer_id: string | null;
+          stripe_subscription_id: string | null;
+          updated_at: string;
+          user_id: string;
+        }
+        Insert: {}
+          created_at?: string;
+          current_period_end?: string | null;
+          current_period_start?: string | null;
+          id?: string;
+          plan_type: string;
+          status: string;
+          stripe_customer_id?: string | null;
+          stripe_subscription_id?: string | null;
+          updated_at?: string;
+          user_id: string;
+        }
+        Update: {}
+          created_at?: string;
+          current_period_end?: string | null;
+          current_period_start?: string | null;
+          id?: string;
+          plan_type?: string;
+          status?: string;
+          stripe_customer_id?: string | null;
+          stripe_subscription_id?: string | null;
+          updated_at?: string;
+          user_id?: string;
+        }
+        Relationships: [;
+          {"
+            foreignKeyName: "subscriptions_user_id_fkey";"
+            columns: ["user_id"];
+            isOneToOne: false;"
+            referenced_relation: "user_metrics";"
+            referenced_columns: ["user_id"];
+          }];
+      }
+      talent_resumes: {}
+        Row: {}
+          created_at: string;
+          headline: string | null;
+          id: string;
+          is_active: boolean;
+          summary: string | null;
+          title: string;
+          updated_at: string;
+          user_id: string;
+        }
+        Insert: {}
+          created_at?: string;
+          headline?: string | null;
+          id?: string;
+          is_active?: boolean;
+          summary?: string | null;
+          title?: string;
+          updated_at?: string;
+          user_id: string;
+        }
+        Update: {}
+          created_at?: string;
+          headline?: string | null;
+          id?: string;
+          is_active?: boolean;
+          summary?: string | null;
+          title?: string;
+          updated_at?: string;
+          user_id?: string;
+        }
+        Relationships: [;
+          {"
+            foreignKeyName: "talent_resumes_user_id_fkey";"
+            columns: ["user_id"];
+            isOneToOne: false;"
+            referenced_relation: "user_metrics";"
+            referenced_columns: ["user_id"];
+          }];
+      }
+      tenant_administrators: {}
+        Row: {}
+          created_at: string | null;
+          id: string;
+          tenant_id: string;
+          user_id: string;
+        }
+        Insert: {}
+          created_at?: string | null;
+          id?: string;
+          tenant_id: string;
+          user_id: string;
+        }
+        Update: {}
+          created_at?: string | null;
+          id?: string;
+          tenant_id?: string;
+          user_id?: string;
+        }
+        Relationships: [;
+<<<<<<< HEAD
+          {
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+          }
+          },
+          {
+            foreignKeyName: "reviews_reviewer_id_fkey"
+            columns: ["reviewer_id"]
             isOneToOne: false
             referencedRelation: "user_metrics"
             referencedColumns: ["user_id"]
+<<<<<<< HEAD
+          }]
+      }
+      scheduled_jobs: {
+        Row: {
+          completed_at: string | null
+          created_at: string
+          id: string
+          job_type: string
+          payload: Json | null
+          scheduled_for: string
+          status: string
+          updated_at: string
+        }
+        Insert: {
+          completed_at?: string | null
+          created_at?: string
+          id?: string
+          job_type: string
+          payload?: Json | null
+          scheduled_for: string
+          status: string
+          updated_at?: string
+        }
+        Update: {
+          completed_at?: string | null
+          created_at?: string
+          id?: string
+          job_type?: string
+          payload?: Json | null
+          scheduled_for?: string
+          status?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
+      subscriptions: {
+        Row: {
+          created_at: string
+          current_period_end: string | null
+          current_period_start: string | null
+          id: string
+          plan_type: string
+          status: string
+          stripe_customer_id: string | null
+          stripe_subscription_id: string | null
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          current_period_end?: string | null
+          current_period_start?: string | null
+          id?: string
+          plan_type: string
+          status: string
+          stripe_customer_id?: string | null
+          stripe_subscription_id?: string | null
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          current_period_end?: string | null
+          current_period_start?: string | null
+          id?: string
+          plan_type?: string
+          status?: string
+          stripe_customer_id?: string | null
+          stripe_subscription_id?: string | null
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "subscriptions_user_id_fkey"
+            columns: ["user_id"]
+            isOneToOne: false
+            referencedRelation: "user_metrics"
+            referencedColumns: ["user_id"]
+          }]
+      }
+      talent_resumes: {
+        Row: {
+          created_at: string
+          headline: string | null
+          id: string
+          is_active: boolean
+          summary: string | null
+          title: string
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          headline?: string | null
+          id?: string
+          is_active?: boolean
+          summary?: string | null
+          title?: string
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          headline?: string | null
+          id?: string
+          is_active?: boolean
+          summary?: string | null
+          title?: string
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "talent_resumes_user_id_fkey"
+            columns: ["user_id"]
+            isOneToOne: false
+            referencedRelation: "user_metrics"
+            referencedColumns: ["user_id"]
+          }]
+      }
+      tenant_administrators: {
+        Row: {
+          created_at: string | null
+          id: string
+          tenant_id: string
+          user_id: string
+        }
+        Insert: {
+          created_at?: string | null
+          id?: string
+          tenant_id: string
+          user_id: string
+        }
+        Update: {
+          created_at?: string | null
+          id?: string
+          tenant_id?: string
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "tenant_administrators_tenant_id_fkey"
+            columns: ["tenant_id"]
+            isOneToOne: false
+            referencedRelation: "whitelabel_tenants"
+            referencedColumns: ["id"]
+<<<<<<< HEAD
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+            foreignKeyName: "tenant_administrators_tenant_id_fkey";
+=======
+          {}
+"
+            foreignKeyName: "tenant_administrators_tenant_id_fkey";"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+            columns: ["tenant_id"];
+            isOneToOne: false;"
+            referenced_relation: "whitelabel_tenants";"
+=======
 
             foreignKeyName: "reviews_project_id_fkey";
             columns: ["project_id"];
@@ -4386,12 +8402,35 @@ Update: {;
             columns: ["tenant_id"];
             isOneToOne: false;
             referenced_relation: "whitelabel_tenants";
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             referenced_columns: ["id"];
 
           }
 
           },
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+          {
+            foreignKeyName: "tenant_administrators_user_id_fkey";
+=======
+
+
+          {"
+            foreignKeyName: "tenant_administrators_user_id_fkey";"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+            columns: ["user_id"];
+            isOneToOne: false;"
+            referenced_relation: "user_metrics";"
+            referenced_columns: ["user_id"];
+          }];
+      }
+      user_onboarding: {}
+        Row: {}
+=======
           {
             foreignKeyName: "tenant_administrators_user_id_fkey";
             columns: ["user_id"];
@@ -4402,6 +8441,7 @@ Update: {;
       }
       user_onboarding: {
         Row: {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           application_sent: boolean | null;
           application_sent_at: string | null;
           availability_set: boolean | null;
@@ -4428,7 +8468,11 @@ Update: {;
           updated_at: string;
           user_id: string | null;
         }
+<<<<<<< HEAD
+        Insert: {}
+=======
         Insert: {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           application_sent?: boolean | null;
           application_sent_at?: string | null;
           availability_set?: boolean | null;
@@ -4455,7 +8499,11 @@ Update: {;
           updated_at?: string;
           user_id?: string | null;
         }
+<<<<<<< HEAD
+        Update: {}
+=======
         Update: {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           application_sent?: boolean | null;
           application_sent_at?: string | null;
           availability_set?: boolean | null;
@@ -4483,6 +8531,18 @@ Update: {;
           user_id?: string | null;
         }
         Relationships: [;
+<<<<<<< HEAD
+          {"
+            foreignKeyName: "user_onboarding_user_id_fkey";"
+            columns: ["user_id"];
+            isOneToOne: false;"
+            referenced_relation: "user_metrics";"
+            referenced_columns: ["user_id"];
+          }];
+      }
+      user_privacy_settings: {}
+        Row: {}
+=======
           {
             foreignKeyName: "user_onboarding_user_id_fkey";
             columns: ["user_id"];
@@ -4493,20 +8553,29 @@ Update: {;
       }
       user_privacy_settings: {
         Row: {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           activity_monitoring_enabled: boolean | null;
           ai_analysis_enabled: boolean | null;
           id: string;
           message_scanning_enabled: boolean | null;
           updated_at: string | null;
         }
+<<<<<<< HEAD
+        Insert: {}
+=======
         Insert: {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           activity_monitoring_enabled?: boolean | null;
           ai_analysis_enabled?: boolean | null;
           id: string;
           message_scanning_enabled?: boolean | null;
           updated_at?: string | null;
         }
+<<<<<<< HEAD
+        Update: {}
+=======
         Update: {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           activity_monitoring_enabled?: boolean | null;
           ai_analysis_enabled?: boolean | null;
           id?: string;
@@ -4514,6 +8583,18 @@ Update: {;
           updated_at?: string | null;
         }
         Relationships: [;
+<<<<<<< HEAD
+          {"
+            foreignKeyName: "user_privacy_settings_id_fkey";"
+            columns: ["id"];
+            isOneToOne: true;"
+            referenced_relation: "user_metrics";"
+            referenced_columns: ["user_id"];
+          }];
+      }
+      webhook_configs: {}
+        Row: {}
+=======
           {
             foreignKeyName: "user_privacy_settings_id_fkey";
             columns: ["id"];
@@ -4524,6 +8605,7 @@ Update: {;
       }
       webhook_configs: {
         Row: {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           created_at: string;
           event_types: string[];
           id: string;
@@ -4535,7 +8617,11 @@ Update: {;
           url: string;
           user_id: string;
         }
+<<<<<<< HEAD
+        Insert: {}
+=======
         Insert: {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           created_at?: string;
           event_types: string[];
           id?: string;
@@ -4547,7 +8633,11 @@ Update: {;
           url: string;
           user_id: string;
         }
+<<<<<<< HEAD
+        Update: {}
+=======
         Update: {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           created_at?: string;
           event_types?: string[];
           id?: string;
@@ -4560,6 +8650,18 @@ Update: {;
           user_id?: string;
         }
         Relationships: [;
+<<<<<<< HEAD
+          {"
+            foreignKeyName: "webhook_configs_user_id_fkey";"
+            columns: ["user_id"];
+            isOneToOne: false;"
+            referenced_relation: "user_metrics";"
+            referenced_columns: ["user_id"];
+          }];
+      }
+      whitelabel_tenants: {}
+        Row: {}
+=======
           {
             foreignKeyName: "webhook_configs_user_id_fkey";
             columns: ["user_id"];
@@ -4570,6 +8672,7 @@ Update: {;
       }
       whitelabel_tenants: {
         Row: {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           account_manager_id: string | null;
           brand_name: string;
           created_at: string | null;
@@ -4585,7 +8688,11 @@ Update: {;
           theme_preset: string;
           updated_at: string | null;
         }
+<<<<<<< HEAD
+        Insert: {}
+=======
         Insert: {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           account_manager_id?: string | null;
           brand_name: string;
           created_at?: string | null;
@@ -4601,7 +8708,11 @@ Update: {;
           theme_preset?: string;
           updated_at?: string | null;
         }
+<<<<<<< HEAD
+        Update: {}
+=======
         Update: {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           account_manager_id?: string | null;
           brand_name?: string;
           created_at?: string | null;
@@ -4618,6 +8729,18 @@ Update: {;
           updated_at?: string | null;
         }
         Relationships: [;
+<<<<<<< HEAD
+          {"
+            foreignKeyName: "whitelabel_tenants_account_manager_id_fkey";"
+            columns: ["account_manager_id"];
+            isOneToOne: false;"
+            referenced_relation: "user_metrics";"
+            referenced_columns: ["user_id"];
+          }];
+      }
+      work_history: {}
+        Row: {}
+=======
           {
             foreignKeyName: "whitelabel_tenants_account_manager_id_fkey";
             columns: ["account_manager_id"];
@@ -4628,6 +8751,7 @@ Update: {;
       }
       work_history: {
         Row: {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           company_logo_url: string | null;
           company_name: string;
           created_at: string;
@@ -4641,7 +8765,11 @@ Update: {;
           start_date: string;
           updated_at: string;
         }
+<<<<<<< HEAD
+        Insert: {}
+=======
         Insert: {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           company_logo_url?: string | null;
           company_name: string;
           created_at?: string;
@@ -4655,7 +8783,11 @@ Update: {;
           start_date: string;
           updated_at?: string;
         }
+<<<<<<< HEAD
+        Update: {}
+=======
         Update: {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           company_logo_url?: string | null;
           company_name?: string;
           created_at?: string;
@@ -4670,6 +8802,28 @@ Update: {;
           updated_at?: string;
         }
         Relationships: [;
+<<<<<<< HEAD
+          {"
+            foreignKeyName: "work_history_resume_id_fkey";"
+            columns: ["resume_id"];
+            isOneToOne: false;"
+            referenced_relation: "talent_resumes";"
+            referenced_columns: ["id"];
+          }];
+
+
+
+      }
+    }
+    Views: {}
+      conversion_rates: {}
+        Row: {}
+        }
+        Relationships: [];
+      }
+      daily_page_views: {}
+        Row: {}
+=======
           {
             foreignKeyName: "work_history_resume_id_fkey";
             columns: ["resume_id"];
@@ -4979,28 +9133,42 @@ Update: {;
       }
       daily_page_views: {
         Row: {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           date: string | null;
           path: string | null;
           view_count: number | null;
         }
         Relationships: [];
       }
+<<<<<<< HEAD
+      user_metrics: {}
+        Row: {}
+=======
       user_metrics: {
         Row: {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           job_applications: number | null;
           profile_views: number | null;
           quote_invites: number | null;
           success_rate: number | null;
           user_id: string | null;
         }
+<<<<<<< HEAD
+        Insert: {}
+=======
         Insert: {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           job_applications?: never;
           profile_views?: never;
           quote_invites?: never;
           success_rate?: never;
           user_id?: string | null;
         }
+<<<<<<< HEAD
+        Update: {}
+=======
         Update: {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           job_applications?: never;
           profile_views?: never;
           quote_invites?: never;
@@ -5011,7 +9179,19 @@ Update: {;
       }
     }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+=======
+
+          conversion_count: number | null
+=======
 conversion_count: number | null
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           conversion_rate: number | null
           conversion_type: string | null
           date: string | null
@@ -5065,12 +9245,32 @@ conversion_count: number | null
           days_since_login: number
           onboarding_status: Json
         }[]
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     Functions: {;
       check_users_needing_reminders: {;
         Args: Record<PropertyKey never>;
         Returns: {;
 
+<<<<<<< HEAD
+
+
           user_id: string;
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+          user_id: string;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           email: string;
           display_name: string;
           user_type: string;
@@ -5079,14 +9279,50 @@ conversion_count: number | null
           days_since_login: number;
           onboarding_status: Json;
         }[];
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+<<<<<<< HEAD
+
+
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       }
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+      }
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       complete_referral: {
+=======
+
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+      }
+      complete_referral: {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         Args: { _referred_id: string, _user_type: string }
         Returns: undefined;
       }
-      create_notification: {
-        Args: {
+      create_notification: {}
+        Args: {}
           _user_id: string;
           _title: string;
           _message: string;
@@ -5095,14 +9331,44 @@ conversion_count: number | null
         }
         Returns: string;
       }
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
       create_scheduled_reminders: {;
         Args: Record<PropertyKey never>;
+<<<<<<< HEAD
+
         Args: Record < PropertyKey, never>;
+<<<<<<< HEAD
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+        Args: Record < PropertyKey, never>;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         Returns: undefined;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       }
-      flag_suspicious_content: {
-        Args: {
+      flag_suspicious_content: {}
+        Args: {}
           p_user_id: string;
           p_user_email: string;
           p_content_type: string;
@@ -5114,24 +9380,57 @@ conversion_count: number | null
         }
         Returns: string;
       }
-      generate_api_key: {
+      generate_api_key: {}
         Args: { prefix: string }
         Returns: string;
       }
-      generate_fraud_report: {
+      generate_fraud_report: {}
         Args: { year: number, month: number }
         Returns: string;
       }
-      generate_referral_code: {
+      generate_referral_code: {}
         Args: { user_id: string }
         Returns: string;
       }
-      get_api_key_user_id: {
+      get_api_key_user_id: {}
         Args: { key_prefix: string, provided_key: string }
         Returns: string;
       }
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
       get_current_tenant_id: {
+=======
+      get_current_tenant_id: {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         Args: Record < PropertyKey, never>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+        Returns: string;
+
+
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+      }
+      get_event_distribution: {}
+        Args: { days_back?: number }
+        Returns: {}
+      }
+      hash_api_key: {}
+=======
         Returns: string;
       get_current_tenant_id: {;
         Args: Record<PropertyKey never>;
@@ -5147,10 +9446,46 @@ conversion_count: number | null
         }[];
       }
       hash_api_key: {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         Args: { api_key: string }
         Returns: string;
       }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+      schedule_email_reminders: {;
+        Args: Record<PropertyKey never>;
+
+        Args: Record < PropertyKey, never>;
+
+        Returns: number;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+      }
+      trigger_resume_scoring: {}
+        Args: { application_id: string }
+        Returns: undefined;
+      }
+      update_onboarding_milestone: {}
+        Args: { _user_id: string, _milestone: string, _status: boolean }
+        Returns: undefined;
+      }
+      verify_api_key: {}
+=======
+
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       schedule_email_reminders: {;
         Args: Record<PropertyKey never>;
         Args: Record < PropertyKey, never>;
@@ -5165,10 +9500,2296 @@ conversion_count: number | null
         Returns: undefined;
       }
       verify_api_key: {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         Args: { provided_key: string, stored_hash: string }
         Returns: boolean;
       }
     }
+<<<<<<< HEAD
+<<<<<<< HEAD
+    Enums: {
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  | { [key:string]:Json | undefined }
+  | Json[];
+;
+export type Database = {;
+  public:{;
+    Tables:{;
+      ai_chats:{;
+        Row:{;
+          created_at:string;
+          id:string;
+          message:string;
+          response:string;
+          user_id:string;
+        }
+        Insert:{;
+          created_at?:string;
+          id?:string;
+          message:string;
+          response:string;
+          user_id:string;
+        }
+        Update:{;
+          created_at?:string;
+          id?:string;
+          message?:string;
+          response?:string;
+          user_id?:string;
+        }
+        Relationships:[;
+          {;
+            foreignKeyName:"ai_chats_user_id_fkey";
+            columns:["user_id"];
+            isOneToOne:false;
+            referencedRelation:"user_metrics";
+            referencedColumns:["user_id"];
+          }];
+      }
+      analytics_events:{;
+        Row:{;
+          created_at:string | null;
+          event_type:string;
+          id:string;
+          metadata:Json | null;
+          path:string | null;
+          session_id:string | null;
+          user_id:string | null;
+        }
+        Insert:{;
+          created_at?:string | null;
+          event_type:string;
+          id?:string;
+          metadata?:Json | null;
+          path?:string | null;
+          session_id?:string | null;
+          user_id?:string | null;
+        }
+        Update:{;
+          created_at?:string | null;
+          event_type?:string;
+          id?:string;
+          metadata?:Json | null;
+          path?:string | null;
+          session_id?:string | null;
+          user_id?:string | null;
+        }
+        Relationships:[;
+          {;
+            foreignKeyName:"analytics_events_user_id_fkey";
+            columns:["user_id"];
+            isOneToOne:false;
+            referencedRelation:"user_metrics";
+            referencedColumns:["user_id"];
+          }];
+      }
+      api_keys:{;
+        Row:{;
+          created_at:string;
+          expires_at:string | null;
+          id:string;
+          is_active:boolean;
+          key_hash:string;
+          key_prefix:string;
+          last_used_at:string | null;
+          name:string;
+          scopes:Database["public"]["Enums"]["api_key_scope"][];
+          user_id:string;
+        }
+        Insert:{;
+          created_at?:string;
+          expires_at?:string | null;
+          id?:string;
+          is_active?:boolean;
+          key_hash:string;
+          key_prefix:string;
+          last_used_at?:string | null;
+          name:string;
+          scopes?:Database["public"]["Enums"]["api_key_scope"][];
+          user_id:string;
+        }
+        Update:{;
+          created_at?:string;
+          expires_at?:string | null;
+          id?:string;
+          is_active?:boolean;
+          key_hash?:string;
+          key_prefix?:string;
+          last_used_at?:string | null;
+          name?:string;
+          scopes?:Database["public"]["Enums"]["api_key_scope"][];
+          user_id?:string;
+        }
+        Relationships:[;
+          {;
+            foreignKeyName:"api_keys_user_id_fkey";
+            columns:["user_id"];
+            isOneToOne:false;
+            referencedRelation:"user_metrics";
+            referencedColumns:["user_id"];
+          }];
+      }
+      api_logs:{;
+        Row:{;
+          api_key_id:string | null;
+          created_at:string;
+          endpoint:string;
+          id:string;
+          ip_address:string | null;
+          method:string;
+          response_time_ms:number | null;
+          status_code:number;
+          user_agent:string | null;
+          user_id:string | null;
+        }
+        Insert:{;
+          api_key_id?:string | null;
+          created_at?:string;
+          endpoint:string;
+          id?:string;
+          ip_address?:string | null;
+          method:string;
+          response_time_ms?:number | null;
+          status_code:number;
+          user_agent?:string | null;
+          user_id?:string | null;
+        }
+        Update:{;
+          api_key_id?:string | null;
+          created_at?:string;
+          endpoint?:string;
+          id?:string;
+          ip_address?:string | null;
+          method?:string;
+          response_time_ms?:number | null;
+          status_code?:number;
+          user_agent?:string | null;
+          user_id?:string | null;
+        }
+        Relationships:[;
+          {;
+            foreignKeyName:"api_logs_api_key_id_fkey";
+            columns:["api_key_id"];
+            isOneToOne:false;
+            referencedRelation:"api_keys";
+            referencedColumns:["id"];
+          },;
+          {;
+            foreignKeyName:"api_logs_user_id_fkey";
+            columns:["user_id"];
+            isOneToOne:false;
+            referencedRelation:"user_metrics";
+            referencedColumns:["user_id"];
+          }];
+      }
+      certifications:{;
+        Row:{;
+          created_at:string;
+          credential_id:string | null;
+          credential_url:string | null;
+          expiration_date:string | null;
+          id:string;
+          issue_date:string | null;
+          issuing_organization:string;
+          name:string;
+          resume_id:string;
+        }
+        Insert:{;
+          created_at?:string;
+          credential_id?:string | null;
+          credential_url?:string | null;
+          expiration_date?:string | null;
+          id?:string;
+          issue_date?:string | null;
+          issuing_organization:string;
+          name:string;
+          resume_id:string;
+        }
+        Update:{;
+          created_at?:string;
+          credential_id?:string | null;
+          credential_url?:string | null;
+          expiration_date?:string | null;
+          id?:string;
+          issue_date?:string | null;
+          issuing_organization?:string;
+          name?:string;
+          resume_id?:string;
+        }
+        Relationships:[;
+          {;
+            foreignKeyName:"certifications_resume_id_fkey";
+            columns:["resume_id"];
+            isOneToOne:false;
+            referencedRelation:"talent_resumes";
+            referencedColumns:["id"];
+          }];
+      }
+      content:{;
+        Row:{;
+          content_type:string;
+          content_url:string | null;
+          created_at:string;
+          creator_id:string;
+          description:string | null;
+          id:string;
+          published:boolean | null;
+          thumbnail_url:string | null;
+          title:string;
+          updated_at:string;
+          views:number | null;
+        }
+        Insert:{;
+          content_type:string;
+          content_url?:string | null;
+          created_at?:string;
+          creator_id:string;
+          description?:string | null;
+          id?:string;
+          published?:boolean | null;
+          thumbnail_url?:string | null;
+          title:string;
+          updated_at?:string;
+          views?:number | null;
+        }
+        Update:{;
+          content_type?:string;
+          content_url?:string | null;
+          created_at?:string;
+          creator_id?:string;
+          description?:string | null;
+          id?:string;
+          published?:boolean | null;
+          thumbnail_url?:string | null;
+          title?:string;
+          updated_at?:string;
+          views?:number | null;
+        }
+        Relationships:[;
+          {;
+            foreignKeyName:"content_creator_id_fkey";
+            columns:["creator_id"];
+            isOneToOne:false;
+            referencedRelation:"profiles";
+            referencedColumns:["id"];
+          }];
+      }
+      contract_templates:{;
+        Row:{;
+          created_at:string;
+          id:string;
+          is_default:boolean | null;
+          template_data:Json;
+          title:string;
+          updated_at:string;
+          user_id:string;
+        }
+        Insert:{;
+          created_at?:string;
+          id?:string;
+          is_default?:boolean | null;
+          template_data:Json;
+          title:string;
+          updated_at?:string;
+          user_id:string;
+        }
+        Update:{;
+          created_at?:string;
+          id?:string;
+          is_default?:boolean | null;
+          template_data?:Json;
+          title?:string;
+          updated_at?:string;
+          user_id?:string;
+        }
+        Relationships:[;
+          {;
+            foreignKeyName:"contract_templates_user_id_fkey";
+            columns:["user_id"];
+            isOneToOne:false;
+            referencedRelation:"user_metrics";
+            referencedColumns:["user_id"];
+          }];
+      }
+      education:{;
+        Row:{;
+          created_at:string;
+          degree:string;
+          description:string | null;
+          end_date:string | null;
+          field_of_study:string | null;
+          id:string;
+          institution:string;
+          institution_logo_url:string | null;
+          is_current:boolean;
+          location:string | null;
+          resume_id:string;
+          start_date:string;
+          updated_at:string;
+        }
+        Insert:{;
+          created_at?:string;
+          degree:string;
+          description?:string | null;
+          end_date?:string | null;
+          field_of_study?:string | null;
+          id?:string;
+          institution:string;
+          institution_logo_url?:string | null;
+          is_current?:boolean;
+          location?:string | null;
+          resume_id:string;
+          start_date:string;
+          updated_at?:string;
+        }
+        Update:{;
+          created_at?:string;
+          degree?:string;
+          description?:string | null;
+          end_date?:string | null;
+          field_of_study?:string | null;
+          id?:string;
+          institution?:string;
+          institution_logo_url?:string | null;
+          is_current?:boolean;
+          location?:string | null;
+          resume_id?:string;
+          start_date?:string;
+          updated_at?:string;
+        }
+        Relationships:[;
+          {;
+            foreignKeyName:"education_resume_id_fkey";
+            columns:["resume_id"];
+            isOneToOne:false;
+            referencedRelation:"talent_resumes";
+            referencedColumns:["id"];
+          }];
+      }
+      fraud_detection_reports:{;
+        Row:{;
+          action_taken_count:number;
+          dangerous_count:number;
+          false_positive_count:number;
+          generated_at:string;
+          id:string;
+          report_data:Json | null;
+          report_month:string;
+          suspicious_count:number;
+          total_flags:number;
+        }
+        Insert:{;
+          action_taken_count?:number;
+          dangerous_count?:number;
+          false_positive_count?:number;
+          generated_at?:string;
+          id?:string;
+          report_data?:Json | null;
+          report_month:string;
+          suspicious_count?:number;
+          total_flags?:number;
+        }
+        Update:{;
+          action_taken_count?:number;
+          dangerous_count?:number;
+          false_positive_count?:number;
+          generated_at?:string;
+          id?:string;
+          report_data?:Json | null;
+          report_month?:string;
+          suspicious_count?:number;
+          total_flags?:number;
+        }
+        Relationships:[];
+      }
+      fraud_flags:{;
+        Row:{;
+          action_taken:string | null;
+          content_excerpt:string;
+          content_id:string;
+          content_type:string;
+          gpt_classification:string | null;
+          gpt_explanation:string | null;
+          id:string;
+          ip_address:string | null;
+          is_false_positive:boolean | null;
+          reason:string;
+          reviewed_at:string | null;
+          reviewed_by:string | null;
+          severity:Database["public"]["Enums"]["fraud_severity"];
+          status:string;
+          timestamp:string;
+          updated_at:string | null;
+          user_email:string | null;
+          user_id:string | null;
+        }
+        Insert:{;
+          action_taken?:string | null;
+          content_excerpt:string;
+          content_id:string;
+          content_type:string;
+          gpt_classification?:string | null;
+          gpt_explanation?:string | null;
+          id?:string;
+          ip_address?:string | null;
+          is_false_positive?:boolean | null;
+          reason:string;
+          reviewed_at?:string | null;
+          reviewed_by?:string | null;
+          severity?:Database["public"]["Enums"]["fraud_severity"];
+          status?:string;
+          timestamp?:string;
+          updated_at?:string | null;
+          user_email?:string | null;
+          user_id?:string | null;
+        }
+        Update:{;
+          action_taken?:string | null;
+          content_excerpt?:string;
+          content_id?:string;
+          content_type?:string;
+          gpt_classification?:string | null;
+          gpt_explanation?:string | null;
+          id?:string;
+          ip_address?:string | null;
+          is_false_positive?:boolean | null;
+          reason?:string;
+          reviewed_at?:string | null;
+          reviewed_by?:string | null;
+          severity?:Database["public"]["Enums"]["fraud_severity"];
+          status?:string;
+          timestamp?:string;
+          updated_at?:string | null;
+          user_email?:string | null;
+          user_id?:string | null;
+        }
+        Relationships:[;
+          {;
+            foreignKeyName:"fraud_flags_reviewed_by_fkey";
+            columns:["reviewed_by"];
+            isOneToOne:false;
+            referencedRelation:"user_metrics";
+            referencedColumns:["user_id"];
+          },;
+          {;
+            foreignKeyName:"fraud_flags_user_id_fkey";
+            columns:["user_id"];
+            isOneToOne:false;
+            referencedRelation:"user_metrics";
+            referencedColumns:["user_id"];
+          }];
+      }
+      hire_requests:{;
+        Row:{;
+          attachments:Json | null;
+          budget_display:string | null;
+          budget_max:number | null;
+          budget_min:number | null;
+          created_at:string;
+          expiry_date:string | null;
+          id:string;
+          project_overview:string;
+          project_summary:string | null;
+          project_type:string | null;
+          requester_email:string;
+          requester_id:string | null;
+          requester_name:string;
+          status:string;
+          talent_id:string;
+          timeline:string;
+          updated_at:string;
+        }
+        Insert:{;
+          attachments?:Json | null;
+          budget_display?:string | null;
+          budget_max?:number | null;
+          budget_min?:number | null;
+          created_at?:string;
+          expiry_date?:string | null;
+          id?:string;
+          project_overview:string;
+          project_summary?:string | null;
+          project_type?:string | null;
+          requester_email:string;
+          requester_id?:string | null;
+          requester_name:string;
+          status?:string;
+          talent_id:string;
+          timeline:string;
+          updated_at?:string;
+        }
+        Update:{;
+          attachments?:Json | null;
+          budget_display?:string | null;
+          budget_max?:number | null;
+          budget_min?:number | null;
+          created_at?:string;
+          expiry_date?:string | null;
+          id?:string;
+          project_overview?:string;
+          project_summary?:string | null;
+          project_type?:string | null;
+          requester_email?:string;
+          requester_id?:string | null;
+          requester_name?:string;
+          status?:string;
+          talent_id?:string;
+          timeline?:string;
+          updated_at?:string;
+        }
+        Relationships:[];
+      }
+      interviews:{;
+        Row:{;
+          client_id:string;
+          created_at:string;
+          duration_minutes:number;
+          end_time:string | null;
+          id:string;
+          interview_type:string;
+          meeting_link:string | null;
+          meeting_platform:string | null;
+          notes:string | null;
+          reminder_sent:string | null;
+          scheduled_date:string;
+          status:string;
+          talent_id:string;
+          title:string | null;
+          updated_at:string;
+        }
+        Insert:{;
+          client_id:string;
+          created_at?:string;
+          duration_minutes?:number;
+          end_time?:string | null;
+          id?:string;
+          interview_type?:string;
+          meeting_link?:string | null;
+          meeting_platform?:string | null;
+          notes?:string | null;
+          reminder_sent?:string | null;
+          scheduled_date:string;
+          status?:string;
+          talent_id:string;
+          title?:string | null;
+          updated_at?:string;
+        }
+        Update:{;
+          client_id?:string;
+          created_at?:string;
+          duration_minutes?:number;
+          end_time?:string | null;
+          id?:string;
+          interview_type?:string;
+          meeting_link?:string | null;
+          meeting_platform?:string | null;
+          notes?:string | null;
+          reminder_sent?:string | null;
+          scheduled_date?:string;
+          status?:string;
+          talent_id?:string;
+          title?:string | null;
+          updated_at?:string;
+        }
+        Relationships:[];
+      }
+      job_applications:{;
+        Row:{;
+          cover_letter:string | null;
+          created_at:string | null;
+          id:string;
+          is_shortlisted:boolean | null;
+          job_id:string;
+          match_breakdown:Json | null;
+          match_score:number | null;
+          match_suggestion:string | null;
+          match_summary:string | null;
+          resume_id:string | null;
+          scored_at:string | null;
+          status:string;
+          talent_id:string;
+          viewed_at:string | null;
+        }
+        Insert:{;
+          cover_letter?:string | null;
+          created_at?:string | null;
+          id?:string;
+          is_shortlisted?:boolean | null;
+          job_id:string;
+          match_breakdown?:Json | null;
+          match_score?:number | null;
+          match_suggestion?:string | null;
+          match_summary?:string | null;
+          resume_id?:string | null;
+          scored_at?:string | null;
+          status?:string;
+          talent_id:string;
+          viewed_at?:string | null;
+        }
+        Update:{;
+          cover_letter?:string | null;
+          created_at?:string | null;
+          id?:string;
+          is_shortlisted?:boolean | null;
+          job_id?:string;
+          match_breakdown?:Json | null;
+          match_score?:number | null;
+          match_suggestion?:string | null;
+          match_summary?:string | null;
+          resume_id?:string | null;
+          scored_at?:string | null;
+          status?:string;
+          talent_id?:string;
+          viewed_at?:string | null;
+        }
+        Relationships:[;
+          {;
+            foreignKeyName:"job_applications_job_id_fkey";
+            columns:["job_id"];
+            isOneToOne:false;
+            referencedRelation:"jobs";
+            referencedColumns:["id"];
+          },;
+          {;
+            foreignKeyName:"job_applications_resume_id_fkey";
+            columns:["resume_id"];
+            isOneToOne:false;
+            referencedRelation:"talent_resumes";
+            referencedColumns:["id"];
+          },;
+          {;
+            foreignKeyName:"job_applications_talent_id_fkey";
+            columns:["talent_id"];
+            isOneToOne:false;
+            referencedRelation:"user_metrics";
+            referencedColumns:["user_id"];
+          }];
+      }
+      jobs:{;
+        Row:{;
+          budget:Json;
+          category:string;
+          client_id:string;
+          created_at:string;
+          deadline:string | null;
+          description:string;
+          id:string;
+          skills:string[];
+          status:string;
+          title:string;
+          updated_at:string;
+        }
+        Insert:{;
+          budget?:Json;
+          category:string;
+          client_id:string;
+          created_at?:string;
+          deadline?:string | null;
+          description:string;
+          id?:string;
+          skills?:string[];
+          status?:string;
+          title:string;
+          updated_at?:string;
+        }
+        Update:{;
+          budget?:Json;
+          category?:string;
+          client_id?:string;
+          created_at?:string;
+          deadline?:string | null;
+          description?:string;
+          id?:string;
+          skills?:string[];
+          status?:string;
+          title?:string;
+          updated_at?:string;
+        }
+        Relationships:[;
+          {;
+            foreignKeyName:"jobs_client_id_fkey";
+            columns:["client_id"];
+            isOneToOne:false;
+            referencedRelation:"user_metrics";
+            referencedColumns:["user_id"];
+          }];
+      }
+      milestone_activities:{;
+        Row:{;
+          action:string;
+          comment:string | null;
+          created_at:string;
+          id:string;
+          milestone_id:string;
+          new_status:string;
+          previous_status:string | null;
+          user_id:string;
+        }
+        Insert:{;
+          action:string;
+          comment?:string | null;
+          created_at?:string;
+          id?:string;
+          milestone_id:string;
+          new_status:string;
+          previous_status?:string | null;
+          user_id:string;
+        }
+        Update:{;
+          action?:string;
+          comment?:string | null;
+          created_at?:string;
+          id?:string;
+          milestone_id?:string;
+          new_status?:string;
+          previous_status?:string | null;
+          user_id?:string;
+        }
+        Relationships:[;
+          {;
+            foreignKeyName:"milestone_activities_milestone_id_fkey";
+            columns:["milestone_id"];
+            isOneToOne:false;
+            referencedRelation:"project_milestones";
+            referencedColumns:["id"];
+          },;
+          {;
+            foreignKeyName:"milestone_activities_user_id_fkey";
+            columns:["user_id"];
+            isOneToOne:false;
+            referencedRelation:"user_metrics";
+            referencedColumns:["user_id"];
+          }];
+      }
+      notification_preferences:{;
+        Row:{;
+          created_at:string;
+          id:string;
+          marketing_emails:boolean | null;
+          system_notifications:boolean | null;
+          updated_at:string;
+          user_id:string;
+        }
+        Insert:{;
+          created_at?:string;
+          id?:string;
+          marketing_emails?:boolean | null;
+          system_notifications?:boolean | null;
+          updated_at?:string;
+          user_id:string;
+        }
+        Update:{;
+          created_at?:string;
+          id?:string;
+          marketing_emails?:boolean | null;
+          system_notifications?:boolean | null;
+          updated_at?:string;
+          user_id?:string;
+        }
+        Relationships:[;
+          {;
+            foreignKeyName:"notification_preferences_user_id_fkey";
+            columns:["user_id"];
+            isOneToOne:true;
+            referencedRelation:"user_metrics";
+            referencedColumns:["user_id"];
+          }];
+      }
+      notifications:{;
+        Row:{;
+          created_at:string | null;
+          id:string;
+          message:string;
+          read:boolean | null;
+          related_id:string | null;
+          title:string;
+          type:string;
+          updated_at:string | null;
+          user_id:string;
+        }
+        Insert:{;
+          created_at?:string | null;
+          id?:string;
+          message:string;
+          read?:boolean | null;
+          related_id?:string | null;
+          title:string;
+          type:string;
+          updated_at?:string | null;
+          user_id:string;
+        }
+        Update:{;
+          created_at?:string | null;
+          id?:string;
+          message?:string;
+          read?:boolean | null;
+          related_id?:string | null;
+          title?:string;
+          type?:string;
+          updated_at?:string | null;
+          user_id?:string;
+        }
+        Relationships:[;
+          {;
+            foreignKeyName:"notifications_user_id_fkey";
+            columns:["user_id"];
+            isOneToOne:false;
+            referencedRelation:"user_metrics";
+            referencedColumns:["user_id"];
+          }];
+      }
+      partner_payouts:{;
+        Row:{;
+          amount:number;
+          completed_at:string | null;
+          created_at:string;
+          id:string;
+          method:string;
+          partner_id:string;
+          payout_details:Json | null;
+          status:string;
+          updated_at:string;
+        }
+        Insert:{;
+          amount:number;
+          completed_at?:string | null;
+          created_at?:string;
+          id?:string;
+          method:string;
+          partner_id:string;
+          payout_details?:Json | null;
+          status?:string;
+          updated_at?:string;
+        }
+        Update:{;
+          amount?:number;
+          completed_at?:string | null;
+          created_at?:string;
+          id?:string;
+          method?:string;
+          partner_id?:string;
+          payout_details?:Json | null;
+          status?:string;
+          updated_at?:string;
+        }
+        Relationships:[;
+          {;
+            foreignKeyName:"partner_payouts_partner_id_fkey";
+            columns:["partner_id"];
+            isOneToOne:false;
+            referencedRelation:"partner_profiles";
+            referencedColumns:["id"];
+          }];
+      }
+      partner_profiles:{;
+        Row:{;
+          audience_size:string;
+          bio:string;
+          commission_rate:number | null;
+          created_at:string;
+          fraud_flags:number | null;
+          id:string;
+          name:string;
+          niche:string;
+          payout_method:string;
+          social_media:Json | null;
+          status:string;
+          updated_at:string;
+          user_id:string;
+          website:string | null;
+        }
+        Insert:{;
+          audience_size:string;
+          bio:string;
+          commission_rate?:number | null;
+          created_at?:string;
+          fraud_flags?:number | null;
+          id?:string;
+          name:string;
+          niche:string;
+          payout_method:string;
+          social_media?:Json | null;
+          status?:string;
+          updated_at?:string;
+          user_id:string;
+          website?:string | null;
+        }
+        Update:{;
+          audience_size?:string;
+          bio?:string;
+          commission_rate?:number | null;
+          created_at?:string;
+          fraud_flags?:number | null;
+          id?:string;
+          name?:string;
+          niche?:string;
+          payout_method?:string;
+          social_media?:Json | null;
+          status?:string;
+          updated_at?:string;
+          user_id?:string;
+          website?:string | null;
+        }
+        Relationships:[;
+          {;
+            foreignKeyName:"partner_profiles_user_id_fkey";
+            columns:["user_id"];
+            isOneToOne:false;
+            referencedRelation:"user_metrics";
+            referencedColumns:["user_id"];
+          }];
+      }
+      partner_referral_links:{;
+        Row:{;
+          campaign:string | null;
+          clicks:number | null;
+          conversions:number | null;
+          created_at:string;
+          id:string;
+          name:string;
+          partner_id:string;
+          source:string | null;
+          updated_at:string;
+        }
+        Insert:{;
+          campaign?:string | null;
+          clicks?:number | null;
+          conversions?:number | null;
+          created_at?:string;
+          id?:string;
+          name:string;
+          partner_id:string;
+          source?:string | null;
+          updated_at?:string;
+        }
+        Update:{;
+          campaign?:string | null;
+          clicks?:number | null;
+          conversions?:number | null;
+          created_at?:string;
+          id?:string;
+          name?:string;
+          partner_id?:string;
+          source?:string | null;
+          updated_at?:string;
+        }
+        Relationships:[;
+          {;
+            foreignKeyName:"partner_referral_links_partner_id_fkey";
+            columns:["partner_id"];
+            isOneToOne:false;
+            referencedRelation:"partner_profiles";
+            referencedColumns:["id"];
+          }];
+      }
+      portfolio_projects:{;
+        Row:{;
+          created_at:string;
+          demo_url:string | null;
+          description:string | null;
+          github_url:string | null;
+          id:string;
+          image_url:string | null;
+          pdf_url:string | null;
+          technologies:string[] | null;
+          title:string;
+          updated_at:string;
+          user_id:string;
+        }
+        Insert:{;
+          created_at?:string;
+          demo_url?:string | null;
+          description?:string | null;
+          github_url?:string | null;
+          id?:string;
+          image_url?:string | null;
+          pdf_url?:string | null;
+          technologies?:string[] | null;
+          title:string;
+          updated_at?:string;
+          user_id:string;
+        }
+        Update:{;
+          created_at?:string;
+          demo_url?:string | null;
+          description?:string | null;
+          github_url?:string | null;
+          id?:string;
+          image_url?:string | null;
+          pdf_url?:string | null;
+          technologies?:string[] | null;
+          title?:string;
+          updated_at?:string;
+          user_id?:string;
+        }
+        Relationships:[;
+          {;
+            foreignKeyName:"portfolio_projects_user_id_fkey";
+            columns:["user_id"];
+            isOneToOne:false;
+            referencedRelation:"user_metrics";
+            referencedColumns:["user_id"];
+          }];
+      }
+      profiles:{;
+        Row:{;
+          avatar_url:string | null;
+          average_rating:number | null;
+          bio:string | null;
+          created_at:string;
+          display_name:string | null;
+          headline:string | null;
+          id:string;
+          ip_address:string | null;
+          last_login_ip:string | null;
+          profile_complete:boolean;
+          rating_count:number | null;
+          rating_sum:number | null;
+          role:string | null;
+          signup_timestamp:string | null;
+          tenant_id:string | null;
+          updated_at:string;
+          user_type:string | null;
+        }
+        Insert:{;
+          avatar_url?:string | null;
+          average_rating?:number | null;
+          bio?:string | null;
+          created_at?:string;
+          display_name?:string | null;
+          headline?:string | null;
+          id:string;
+          ip_address?:string | null;
+          last_login_ip?:string | null;
+          profile_complete?:boolean;
+          rating_count?:number | null;
+          rating_sum?:number | null;
+          role?:string | null;
+          signup_timestamp?:string | null;
+          tenant_id?:string | null;
+          updated_at?:string;
+          user_type?:string | null;
+        }
+        Update:{;
+          avatar_url?:string | null;
+          average_rating?:number | null;
+          bio?:string | null;
+          created_at?:string;
+          display_name?:string | null;
+          headline?:string | null;
+          id?:string;
+          ip_address?:string | null;
+          last_login_ip?:string | null;
+          profile_complete?:boolean;
+          rating_count?:number | null;
+          rating_sum?:number | null;
+          role?:string | null;
+          signup_timestamp?:string | null;
+          tenant_id?:string | null;
+          updated_at?:string;
+          user_type?:string | null;
+        }
+        Relationships:[;
+          {;
+            foreignKeyName:"profiles_id_fkey";
+            columns:["id"];
+            isOneToOne:true;
+            referencedRelation:"user_metrics";
+            referencedColumns:["user_id"];
+          },;
+          {;
+            foreignKeyName:"profiles_tenant_id_fkey";
+            columns:["tenant_id"];
+            isOneToOne:false;
+            referencedRelation:"whitelabel_tenants";
+            referencedColumns:["id"];
+          }];
+      }
+      project_milestones:{;
+        Row:{;
+          amount:number;
+          created_at:string;
+          created_by:string;
+          deliverables:Json | null;
+          description:string | null;
+          due_date:string | null;
+          id:string;
+          project_id:string;
+          status:string;
+          title:string;
+          updated_at:string;
+        }
+        Insert:{;
+          amount:number;
+          created_at?:string;
+          created_by:string;
+          deliverables?:Json | null;
+          description?:string | null;
+          due_date?:string | null;
+          id?:string;
+          project_id:string;
+          status?:string;
+          title:string;
+          updated_at?:string;
+        }
+        Update:{;
+          amount?:number;
+          created_at?:string;
+          created_by?:string;
+          deliverables?:Json | null;
+          description?:string | null;
+          due_date?:string | null;
+          id?:string;
+          project_id?:string;
+          status?:string;
+          title?:string;
+          updated_at?:string;
+        }
+        Relationships:[;
+          {;
+            foreignKeyName:"project_milestones_created_by_fkey";
+            columns:["created_by"];
+            isOneToOne:false;
+            referencedRelation:"user_metrics";
+            referencedColumns:["user_id"];
+          },;
+          {;
+            foreignKeyName:"project_milestones_project_id_fkey";
+            columns:["project_id"];
+            isOneToOne:false;
+            referencedRelation:"projects";
+            referencedColumns:["id"];
+          }];
+      }
+      project_notes:{;
+        Row:{;
+          content:string;
+          created_at:string;
+          id:string;
+          project_id:string;
+          user_id:string;
+        }
+        Insert:{;
+          content:string;
+          created_at?:string;
+          id?:string;
+          project_id:string;
+          user_id:string;
+        }
+        Update:{;
+          content?:string;
+          created_at?:string;
+          id?:string;
+          project_id?:string;
+          user_id?:string;
+        }
+        Relationships:[;
+          {;
+            foreignKeyName:"project_notes_project_id_fkey";
+            columns:["project_id"];
+            isOneToOne:false;
+            referencedRelation:"projects";
+            referencedColumns:["id"];
+          },;
+          {;
+            foreignKeyName:"project_notes_user_id_fkey";
+            columns:["user_id"];
+            isOneToOne:false;
+            referencedRelation:"user_metrics";
+            referencedColumns:["user_id"];
+          }];
+      }
+      projects:{;
+        Row:{;
+          agreement_url:string | null;
+          client_id:string;
+          created_at:string;
+          id:string;
+          job_id:string;
+          payment_terms:string;
+          scope_summary:string;
+          start_date:string;
+          status:string;
+          talent_id:string;
+          updated_at:string;
+        }
+        Insert:{;
+          agreement_url?:string | null;
+          client_id:string;
+          created_at?:string;
+          id?:string;
+          job_id:string;
+          payment_terms:string;
+          scope_summary:string;
+          start_date:string;
+          status?:string;
+          talent_id:string;
+          updated_at?:string;
+        }
+        Update:{;
+          agreement_url?:string | null;
+          client_id?:string;
+          created_at?:string;
+          id?:string;
+          job_id?:string;
+          payment_terms?:string;
+          scope_summary?:string;
+          start_date?:string;
+          status?:string;
+          talent_id?:string;
+          updated_at?:string;
+        }
+        Relationships:[;
+          {;
+            foreignKeyName:"projects_client_id_fkey";
+            columns:["client_id"];
+            isOneToOne:false;
+            referencedRelation:"user_metrics";
+            referencedColumns:["user_id"];
+          },;
+          {;
+            foreignKeyName:"projects_job_id_fkey";
+            columns:["job_id"];
+            isOneToOne:false;
+            referencedRelation:"jobs";
+            referencedColumns:["id"];
+          },;
+          {;
+            foreignKeyName:"projects_talent_id_fkey";
+            columns:["talent_id"];
+            isOneToOne:false;
+            referencedRelation:"user_metrics";
+            referencedColumns:["user_id"];
+          }];
+      }
+      quote_requests:{;
+        Row:{;
+          budget_display:string | null;
+          budget_max:number | null;
+          budget_min:number | null;
+          created_at:string;
+          id:string;
+          is_archived:boolean;
+          project_description:string | null;
+          project_name:string;
+          project_summary:string;
+          replied_at:string | null;
+          requester_email:string;
+          requester_id:string | null;
+          requester_name:string;
+          start_date:string | null;
+          status:Database["public"]["Enums"]["quote_request_status"];
+          talent_id:string | null;
+          timeline:string;
+          updated_at:string;
+          viewed_at:string | null;
+        }
+        Insert:{;
+          budget_display?:string | null;
+          budget_max?:number | null;
+          budget_min?:number | null;
+          created_at?:string;
+          id?:string;
+          is_archived?:boolean;
+          project_description?:string | null;
+          project_name:string;
+          project_summary:string;
+          replied_at?:string | null;
+          requester_email:string;
+          requester_id?:string | null;
+          requester_name:string;
+          start_date?:string | null;
+          status?:Database["public"]["Enums"]["quote_request_status"];
+          talent_id?:string | null;
+          timeline:string;
+          updated_at?:string;
+          viewed_at?:string | null;
+        }
+        Update:{;
+          budget_display?:string | null;
+          budget_max?:number | null;
+          budget_min?:number | null;
+          created_at?:string;
+          id?:string;
+          is_archived?:boolean;
+          project_description?:string | null;
+          project_name?:string;
+          project_summary?:string;
+          replied_at?:string | null;
+          requester_email?:string;
+          requester_id?:string | null;
+          requester_name?:string;
+          start_date?:string | null;
+          status?:Database["public"]["Enums"]["quote_request_status"];
+          talent_id?:string | null;
+          timeline?:string;
+          updated_at?:string;
+          viewed_at?:string | null;
+        }
+        Relationships:[;
+          {;
+            foreignKeyName:"quote_requests_requester_id_fkey";
+            columns:["requester_id"];
+            isOneToOne:false;
+            referencedRelation:"profiles";
+            referencedColumns:["id"];
+          },;
+          {;
+            foreignKeyName:"quote_requests_talent_id_fkey";
+            columns:["talent_id"];
+            isOneToOne:false;
+            referencedRelation:"profiles";
+            referencedColumns:["id"];
+          }];
+      }
+      referral_codes:{;
+        Row:{;
+          code:string;
+          created_at:string;
+          id:string;
+          updated_at:string;
+          user_id:string;
+        }
+        Insert:{;
+          code:string;
+          created_at?:string;
+          id?:string;
+          updated_at?:string;
+          user_id:string;
+        }
+        Update:{;
+          code?:string;
+          created_at?:string;
+          id?:string;
+          updated_at?:string;
+          user_id?:string;
+        }
+        Relationships:[;
+          {;
+            foreignKeyName:"referral_codes_user_id_fkey";
+            columns:["user_id"];
+            isOneToOne:true;
+            referencedRelation:"user_metrics";
+            referencedColumns:["user_id"];
+          }];
+      }
+      referral_rewards:{;
+        Row:{;
+          amount:number | null;
+          created_at:string;
+          expires_at:string | null;
+          id:string;
+          partner_id:string | null;
+          referral_id:string;
+          reward_type:string;
+          user_id:string;
+        }
+        Insert:{;
+          amount?:number | null;
+          created_at?:string;
+          expires_at?:string | null;
+          id?:string;
+          partner_id?:string | null;
+          referral_id:string;
+          reward_type:string;
+          user_id:string;
+        }
+        Update:{;
+          amount?:number | null;
+          created_at?:string;
+          expires_at?:string | null;
+          id?:string;
+          partner_id?:string | null;
+          referral_id?:string;
+          reward_type?:string;
+          user_id?:string;
+        }
+        Relationships:[;
+          {;
+            foreignKeyName:"referral_rewards_partner_id_fkey";
+            columns:["partner_id"];
+            isOneToOne:false;
+            referencedRelation:"partner_profiles";
+            referencedColumns:["id"];
+          },;
+          {;
+            foreignKeyName:"referral_rewards_referral_id_fkey";
+            columns:["referral_id"];
+            isOneToOne:false;
+            referencedRelation:"referrals";
+            referencedColumns:["id"];
+          },;
+          {;
+            foreignKeyName:"referral_rewards_user_id_fkey";
+            columns:["user_id"];
+            isOneToOne:false;
+            referencedRelation:"user_metrics";
+            referencedColumns:["user_id"];
+          }];
+      }
+      referrals:{;
+        Row:{;
+          completed_at:string | null;
+          created_at:string;
+          email:string | null;
+          id:string;
+          ip_address:string | null;
+          partner_id:string | null;
+          referral_code:string;
+          referred_id:string | null;
+          referred_user_type:string | null;
+          referrer_id:string;
+          referrer_user_type:string | null;
+          reward_issued:boolean;
+          reward_issued_at:string | null;
+          status:Database["public"]["Enums"]["referral_status"];
+        }
+        Insert:{;
+          completed_at?:string | null;
+          created_at?:string;
+          email?:string | null;
+          id?:string;
+          ip_address?:string | null;
+          partner_id?:string | null;
+          referral_code:string;
+          referred_id?:string | null;
+          referred_user_type?:string | null;
+          referrer_id:string;
+          referrer_user_type?:string | null;
+          reward_issued?:boolean;
+          reward_issued_at?:string | null;
+          status?:Database["public"]["Enums"]["referral_status"];
+        }
+        Update:{;
+          completed_at?:string | null;
+          created_at?:string;
+          email?:string | null;
+          id?:string;
+          ip_address?:string | null;
+          partner_id?:string | null;
+          referral_code?:string;
+          referred_id?:string | null;
+          referred_user_type?:string | null;
+          referrer_id?:string;
+          referrer_user_type?:string | null;
+          reward_issued?:boolean;
+          reward_issued_at?:string | null;
+          status?:Database["public"]["Enums"]["referral_status"];
+        }
+        Relationships:[;
+          {;
+            foreignKeyName:"referrals_partner_id_fkey";
+            columns:["partner_id"];
+            isOneToOne:false;
+            referencedRelation:"partner_profiles";
+            referencedColumns:["id"];
+          },;
+          {;
+            foreignKeyName:"referrals_referral_code_fkey";
+            columns:["referral_code"];
+            isOneToOne:false;
+            referencedRelation:"referral_codes";
+            referencedColumns:["code"];
+          },;
+          {;
+            foreignKeyName:"referrals_referred_id_fkey";
+            columns:["referred_id"];
+            isOneToOne:false;
+            referencedRelation:"user_metrics";
+            referencedColumns:["user_id"];
+          },;
+          {;
+            foreignKeyName:"referrals_referrer_id_fkey";
+            columns:["referrer_id"];
+            isOneToOne:false;
+            referencedRelation:"user_metrics";
+            referencedColumns:["user_id"];
+          }];
+      }
+      reminder_logs:{;
+        Row:{;
+          clicked_at:string | null;
+          email_body:string;
+          email_subject:string;
+          id:string;
+          opened_at:string | null;
+          reminder_type:string;
+          sent_at:string | null;
+          user_id:string;
+        }
+        Insert:{;
+          clicked_at?:string | null;
+          email_body:string;
+          email_subject:string;
+          id?:string;
+          opened_at?:string | null;
+          reminder_type:string;
+          sent_at?:string | null;
+          user_id:string;
+        }
+        Update:{;
+          clicked_at?:string | null;
+          email_body?:string;
+          email_subject?:string;
+          id?:string;
+          opened_at?:string | null;
+          reminder_type?:string;
+          sent_at?:string | null;
+          user_id?:string;
+        }
+        Relationships:[;
+          {;
+            foreignKeyName:"reminder_logs_user_id_fkey";
+            columns:["user_id"];
+            isOneToOne:false;
+            referencedRelation:"user_metrics";
+            referencedColumns:["user_id"];
+          }];
+      }
+      resume_skills:{;
+        Row:{;
+          category:string | null;
+          created_at:string;
+          id:string;
+          name:string;
+          proficiency:number | null;
+          resume_id:string;
+          years_experience:number | null;
+        }
+        Insert:{;
+          category?:string | null;
+          created_at?:string;
+          id?:string;
+          name:string;
+          proficiency?:number | null;
+          resume_id:string;
+          years_experience?:number | null;
+        }
+        Update:{;
+          category?:string | null;
+          created_at?:string;
+          id?:string;
+          name?:string;
+          proficiency?:number | null;
+          resume_id?:string;
+          years_experience?:number | null;
+        }
+        Relationships:[;
+          {;
+            foreignKeyName:"resume_skills_resume_id_fkey";
+            columns:["resume_id"];
+            isOneToOne:false;
+            referencedRelation:"talent_resumes";
+            referencedColumns:["id"];
+          }];
+      }
+      review_reports:{;
+        Row:{;
+          created_at:string;
+          id:string;
+          reason:string;
+          reporter_id:string;
+          resolved_at:string | null;
+          review_id:string;
+          status:string;
+        }
+        Insert:{;
+          created_at?:string;
+          id?:string;
+          reason:string;
+          reporter_id:string;
+          resolved_at?:string | null;
+          review_id:string;
+          status?:string;
+        }
+        Update:{;
+          created_at?:string;
+          id?:string;
+          reason?:string;
+          reporter_id?:string;
+          resolved_at?:string | null;
+          review_id?:string;
+          status?:string;
+        }
+        Relationships:[;
+          {;
+            foreignKeyName:"review_reports_reporter_id_fkey";
+            columns:["reporter_id"];
+            isOneToOne:false;
+            referencedRelation:"user_metrics";
+            referencedColumns:["user_id"];
+          },;
+          {;
+            foreignKeyName:"review_reports_review_id_fkey";
+            columns:["review_id"];
+            isOneToOne:false;
+            referencedRelation:"reviews";
+            referencedColumns:["id"];
+          }];
+      }
+      reviews:{;
+        Row:{;
+          communication_rating:number | null;
+          created_at:string;
+          id:string;
+          is_anonymous:boolean;
+          is_visible:boolean;
+          project_id:string;
+          quality_rating:number | null;
+          rating:number;
+          report_count:number;
+          review_text:string;
+          reviewee_id:string;
+          reviewer_id:string;
+          status:string;
+          timeliness_rating:number | null;
+          updated_at:string;
+          would_work_again:boolean | null;
+        }
+        Insert:{;
+          communication_rating?:number | null;
+          created_at?:string;
+          id?:string;
+          is_anonymous?:boolean;
+          is_visible?:boolean;
+          project_id:string;
+          quality_rating?:number | null;
+          rating:number;
+          report_count?:number;
+          review_text:string;
+          reviewee_id:string;
+          reviewer_id:string;
+          status?:string;
+          timeliness_rating?:number | null;
+          updated_at?:string;
+          would_work_again?:boolean | null;
+        }
+        Update:{;
+          communication_rating?:number | null;
+          created_at?:string;
+          id?:string;
+          is_anonymous?:boolean;
+          is_visible?:boolean;
+          project_id?:string;
+          quality_rating?:number | null;
+          rating?:number;
+          report_count?:number;
+          review_text?:string;
+          reviewee_id?:string;
+          reviewer_id?:string;
+          status?:string;
+          timeliness_rating?:number | null;
+          updated_at?:string;
+          would_work_again?:boolean | null;
+        }
+        Relationships:[;
+          {;
+            foreignKeyName:"reviews_project_id_fkey";
+            columns:["project_id"];
+            isOneToOne:false;
+            referencedRelation:"projects";
+            referencedColumns:["id"];
+          },;
+          {;
+            foreignKeyName:"reviews_reviewee_id_fkey";
+            columns:["reviewee_id"];
+            isOneToOne:false;
+            referencedRelation:"user_metrics";
+            referencedColumns:["user_id"];
+          },;
+          {;
+            foreignKeyName:"reviews_reviewer_id_fkey";
+            columns:["reviewer_id"];
+            isOneToOne:false;
+            referencedRelation:"user_metrics";
+            referencedColumns:["user_id"];
+          }];
+      }
+      scheduled_jobs:{;
+        Row:{;
+          completed_at:string | null;
+          created_at:string;
+          id:string;
+          job_type:string;
+          payload:Json | null;
+          scheduled_for:string;
+          status:string;
+          updated_at:string;
+        }
+        Insert:{;
+          completed_at?:string | null;
+          created_at?:string;
+          id?:string;
+          job_type:string;
+          payload?:Json | null;
+          scheduled_for:string;
+          status:string;
+          updated_at?:string;
+        }
+        Update:{;
+          completed_at?:string | null;
+          created_at?:string;
+          id?:string;
+          job_type?:string;
+          payload?:Json | null;
+          scheduled_for?:string;
+          status?:string;
+          updated_at?:string;
+        }
+        Relationships:[];
+      }
+      subscriptions:{;
+        Row:{;
+          created_at:string;
+          current_period_end:string | null;
+          current_period_start:string | null;
+          id:string;
+          plan_type:string;
+          status:string;
+          stripe_customer_id:string | null;
+          stripe_subscription_id:string | null;
+          updated_at:string;
+          user_id:string;
+        }
+        Insert:{;
+          created_at?:string;
+          current_period_end?:string | null;
+          current_period_start?:string | null;
+          id?:string;
+          plan_type:string;
+          status:string;
+          stripe_customer_id?:string | null;
+          stripe_subscription_id?:string | null;
+          updated_at?:string;
+          user_id:string;
+        }
+        Update:{;
+          created_at?:string;
+          current_period_end?:string | null;
+          current_period_start?:string | null;
+          id?:string;
+          plan_type?:string;
+          status?:string;
+          stripe_customer_id?:string | null;
+          stripe_subscription_id?:string | null;
+          updated_at?:string;
+          user_id?:string;
+        }
+        Relationships:[;
+          {;
+            foreignKeyName:"subscriptions_user_id_fkey";
+            columns:["user_id"];
+            isOneToOne:false;
+            referencedRelation:"user_metrics";
+            referencedColumns:["user_id"];
+          }];
+      }
+      talent_resumes:{;
+        Row:{;
+          created_at:string;
+          headline:string | null;
+          id:string;
+          is_active:boolean;
+          summary:string | null;
+          title:string;
+          updated_at:string;
+          user_id:string;
+        }
+        Insert:{;
+          created_at?:string;
+          headline?:string | null;
+          id?:string;
+          is_active?:boolean;
+          summary?:string | null;
+          title?:string;
+          updated_at?:string;
+          user_id:string;
+        }
+        Update:{;
+          created_at?:string;
+          headline?:string | null;
+          id?:string;
+          is_active?:boolean;
+          summary?:string | null;
+          title?:string;
+          updated_at?:string;
+          user_id?:string;
+        }
+        Relationships:[;
+          {;
+            foreignKeyName:"talent_resumes_user_id_fkey";
+            columns:["user_id"];
+            isOneToOne:false;
+            referencedRelation:"user_metrics";
+            referencedColumns:["user_id"];
+          }];
+      }
+      tenant_administrators:{;
+        Row:{;
+          created_at:string | null;
+          id:string;
+          tenant_id:string;
+          user_id:string;
+        }
+        Insert:{;
+          created_at?:string | null;
+          id?:string;
+          tenant_id:string;
+          user_id:string;
+        }
+        Update:{;
+          created_at?:string | null;
+          id?:string;
+          tenant_id?:string;
+          user_id?:string;
+        }
+        Relationships:[;
+          {;
+            foreignKeyName:"tenant_administrators_tenant_id_fkey";
+            columns:["tenant_id"];
+            isOneToOne:false;
+            referencedRelation:"whitelabel_tenants";
+            referencedColumns:["id"];
+          },;
+          {;
+            foreignKeyName:"tenant_administrators_user_id_fkey";
+            columns:["user_id"];
+            isOneToOne:false;
+            referencedRelation:"user_metrics";
+            referencedColumns:["user_id"];
+          }];
+      }
+      user_onboarding:{;
+        Row:{;
+          application_sent:boolean | null;
+          application_sent_at:string | null;
+          availability_set:boolean | null;
+          availability_set_at:string | null;
+          created_at:string;
+          id:string;
+          job_posted:boolean | null;
+          job_posted_at:string | null;
+          last_reminder_sent:string | null;
+          match_received:boolean | null;
+          match_received_at:string | null;
+          match_viewed:boolean | null;
+          match_viewed_at:string | null;
+          profile_completed:boolean | null;
+          profile_completed_at:string | null;
+          quote_received:boolean | null;
+          quote_received_at:string | null;
+          reminder_count:number | null;
+          role:string;
+          skills_added:boolean | null;
+          skills_added_at:string | null;
+          talent_invited:boolean | null;
+          talent_invited_at:string | null;
+          updated_at:string;
+          user_id:string | null;
+        }
+        Insert:{;
+          application_sent?:boolean | null;
+          application_sent_at?:string | null;
+          availability_set?:boolean | null;
+          availability_set_at?:string | null;
+          created_at?:string;
+          id?:string;
+          job_posted?:boolean | null;
+          job_posted_at?:string | null;
+          last_reminder_sent?:string | null;
+          match_received?:boolean | null;
+          match_received_at?:string | null;
+          match_viewed?:boolean | null;
+          match_viewed_at?:string | null;
+          profile_completed?:boolean | null;
+          profile_completed_at?:string | null;
+          quote_received?:boolean | null;
+          quote_received_at?:string | null;
+          reminder_count?:number | null;
+          role:string;
+          skills_added?:boolean | null;
+          skills_added_at?:string | null;
+          talent_invited?:boolean | null;
+          talent_invited_at?:string | null;
+          updated_at?:string;
+          user_id?:string | null;
+        }
+        Update:{;
+          application_sent?:boolean | null;
+          application_sent_at?:string | null;
+          availability_set?:boolean | null;
+          availability_set_at?:string | null;
+          created_at?:string;
+          id?:string;
+          job_posted?:boolean | null;
+          job_posted_at?:string | null;
+          last_reminder_sent?:string | null;
+          match_received?:boolean | null;
+          match_received_at?:string | null;
+          match_viewed?:boolean | null;
+          match_viewed_at?:string | null;
+          profile_completed?:boolean | null;
+          profile_completed_at?:string | null;
+          quote_received?:boolean | null;
+          quote_received_at?:string | null;
+          reminder_count?:number | null;
+          role?:string;
+          skills_added?:boolean | null;
+          skills_added_at?:string | null;
+          talent_invited?:boolean | null;
+          talent_invited_at?:string | null;
+          updated_at?:string;
+          user_id?:string | null;
+        }
+        Relationships:[;
+          {;
+            foreignKeyName:"user_onboarding_user_id_fkey";
+            columns:["user_id"];
+            isOneToOne:false;
+            referencedRelation:"user_metrics";
+            referencedColumns:["user_id"];
+          }];
+      }
+      user_privacy_settings:{;
+        Row:{;
+          activity_monitoring_enabled:boolean | null;
+          ai_analysis_enabled:boolean | null;
+          id:string;
+          message_scanning_enabled:boolean | null;
+          updated_at:string | null;
+        }
+        Insert:{;
+          activity_monitoring_enabled?:boolean | null;
+          ai_analysis_enabled?:boolean | null;
+          id:string;
+          message_scanning_enabled?:boolean | null;
+          updated_at?:string | null;
+        }
+        Update:{;
+          activity_monitoring_enabled?:boolean | null;
+          ai_analysis_enabled?:boolean | null;
+          id?:string;
+          message_scanning_enabled?:boolean | null;
+          updated_at?:string | null;
+        }
+        Relationships:[;
+          {;
+            foreignKeyName:"user_privacy_settings_id_fkey";
+            columns:["id"];
+            isOneToOne:true;
+            referencedRelation:"user_metrics";
+            referencedColumns:["user_id"];
+          }];
+      }
+      webhook_configs:{;
+        Row:{;
+          created_at:string;
+          event_types:string[];
+          id:string;
+          is_active:boolean;
+          last_triggered_at:string | null;
+          name:string;
+          secret:string | null;
+          updated_at:string;
+          url:string;
+          user_id:string;
+        }
+        Insert:{;
+          created_at?:string;
+          event_types:string[];
+          id?:string;
+          is_active?:boolean;
+          last_triggered_at?:string | null;
+          name:string;
+          secret?:string | null;
+          updated_at?:string;
+          url:string;
+          user_id:string;
+        }
+        Update:{;
+          created_at?:string;
+          event_types?:string[];
+          id?:string;
+          is_active?:boolean;
+          last_triggered_at?:string | null;
+          name?:string;
+          secret?:string | null;
+          updated_at?:string;
+          url?:string;
+          user_id?:string;
+        }
+        Relationships:[;
+          {;
+            foreignKeyName:"webhook_configs_user_id_fkey";
+            columns:["user_id"];
+            isOneToOne:false;
+            referencedRelation:"user_metrics";
+            referencedColumns:["user_id"];
+          }];
+      }
+      whitelabel_tenants:{;
+        Row:{;
+          account_manager_id:string | null;
+          brand_name:string;
+          created_at:string | null;
+          custom_domain:string | null;
+          dns_verified:boolean;
+          email_template_override:Json | null;
+          id:string;
+          is_active:boolean;
+          landing_page_copy:Json | null;
+          logo_url:string | null;
+          primary_color:string;
+          subdomain:string;
+          theme_preset:string;
+          updated_at:string | null;
+        }
+        Insert:{;
+          account_manager_id?:string | null;
+          brand_name:string;
+          created_at?:string | null;
+          custom_domain?:string | null;
+          dns_verified?:boolean;
+          email_template_override?:Json | null;
+          id?:string;
+          is_active?:boolean;
+          landing_page_copy?:Json | null;
+          logo_url?:string | null;
+          primary_color?:string;
+          subdomain:string;
+          theme_preset?:string;
+          updated_at?:string | null;
+        }
+        Update:{;
+          account_manager_id?:string | null;
+          brand_name?:string;
+          created_at?:string | null;
+          custom_domain?:string | null;
+          dns_verified?:boolean;
+          email_template_override?:Json | null;
+          id?:string;
+          is_active?:boolean;
+          landing_page_copy?:Json | null;
+          logo_url?:string | null;
+          primary_color?:string;
+          subdomain?:string;
+          theme_preset?:string;
+          updated_at?:string | null;
+        }
+        Relationships:[;
+          {;
+            foreignKeyName:"whitelabel_tenants_account_manager_id_fkey";
+            columns:["account_manager_id"];
+            isOneToOne:false;
+            referencedRelation:"user_metrics";
+            referencedColumns:["user_id"];
+          }];
+      }
+      work_history:{;
+        Row:{;
+          company_logo_url:string | null;
+          company_name:string;
+          created_at:string;
+          description:string | null;
+          end_date:string | null;
+          id:string;
+          is_current:boolean;
+          location:string | null;
+          resume_id:string;
+          role_title:string;
+          start_date:string;
+          updated_at:string;
+        }
+        Insert:{;
+          company_logo_url?:string | null;
+          company_name:string;
+          created_at?:string;
+          description?:string | null;
+          end_date?:string | null;
+          id?:string;
+          is_current?:boolean;
+          location?:string | null;
+          resume_id:string;
+          role_title:string;
+          start_date:string;
+          updated_at?:string;
+        }
+        Update:{;
+          company_logo_url?:string | null;
+          company_name?:string;
+          created_at?:string;
+          description?:string | null;
+          end_date?:string | null;
+          id?:string;
+          is_current?:boolean;
+          location?:string | null;
+          resume_id?:string;
+          role_title?:string;
+          start_date?:string;
+          updated_at?:string;
+        }
+        Relationships:[;
+          {;
+            foreignKeyName:"work_history_resume_id_fkey";
+            columns:["resume_id"];
+            isOneToOne:false;
+            referencedRelation:"talent_resumes";
+            referencedColumns:["id"];
+          }];
+      }
+    }
+    Views:{;
+      conversion_rates:{;
+        Row:{;
+          conversion_count:number | null;
+          conversion_rate:number | null;
+          conversion_type:string | null;
+          date:string | null;
+          view_count:number | null;
+        }
+        Relationships:[];
+      }
+      daily_page_views:{;
+        Row:{;
+          date:string | null;
+          path:string | null;
+          view_count:number | null;
+        }
+        Relationships:[];
+      }
+      user_metrics:{;
+        Row:{;
+          job_applications:number | null;
+          profile_views:number | null;
+          quote_invites:number | null;
+          success_rate:number | null;
+          user_id:string | null;
+        }
+        Insert:{;
+          job_applications?:never;
+          profile_views?:never;
+          quote_invites?:never;
+          success_rate?:never;
+          user_id?:string | null;
+        }
+        Update:{;
+          job_applications?:never;
+          profile_views?:never;
+          quote_invites?:never;
+          success_rate?:never;
+          user_id?:string | null;
+        }
+        Relationships:[];
+      }
+    }
+    Functions:{;
+      check_users_needing_reminders:{;
+        Args:Record<PropertyKey never>;
+        Returns:{;
+          user_id:string;
+          email:string;
+          display_name:string;
+          user_type:string;
+          last_login:string;
+          reminder_type:string;
+          days_since_login:number;
+          onboarding_status:Json;
+        }[];
+      }
+      complete_referral:{;
+        Args:{ _referred_id:string, _user_type:string }
+        Returns:undefined;
+      }
+      create_notification:{;
+        Args:{;
+          _user_id:string;
+          _title:string;
+          _message:string;
+          _type:string;
+          _related_id?:string;
+        }
+        Returns:string;
+      }
+      create_scheduled_reminders:{;
+        Args:Record<PropertyKey never>;
+        Returns:undefined;
+      }
+      flag_suspicious_content:{;
+        Args:{;
+          p_user_id:string;
+          p_user_email:string;
+          p_content_type:string;
+          p_content_id:string;
+          p_content_excerpt:string;
+          p_severity:string;
+          p_reason:string;
+          p_ip_address:string;
+        }
+        Returns:string;
+      }
+      generate_api_key:{;
+        Args:{ prefix:string }
+        Returns:string;
+      }
+      generate_fraud_report:{;
+        Args:{ year:number, month:number }
+        Returns:string;
+      }
+      generate_referral_code:{;
+        Args:{ user_id:string }
+        Returns:string;
+      }
+      get_api_key_user_id:{;
+        Args:{ key_prefix:string, provided_key:string }
+        Returns:string;
+      }
+      get_current_tenant_id:{;
+        Args:Record<PropertyKey never>;
+        Returns:string;
+      }
+      get_event_distribution:{;
+        Args:{ days_back?:number }
+        Returns:{;
+          date:string;
+          event_type:string;
+          count:number;
+        }[];
+      }
+      hash_api_key:{;
+        Args:{ api_key:string }
+        Returns:string;
+      }
+      schedule_email_reminders:{;
+        Args:Record<PropertyKey never>;
+        Returns:number;
+      }
+      trigger_resume_scoring:{;
+        Args:{ application_id:string }
+        Returns:undefined;
+      }
+      update_onboarding_milestone:{;
+        Args:{ _user_id:string, _milestone:string, _status:boolean }
+        Returns:undefined;
+      }
+      verify_api_key:{;
+        Args:{ provided_key:string, stored_hash:string }
+        Returns:boolean;
+      }
+    }
+    Enums:{;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+      api_key_scope:;
+=======
+        Returns: string;      api_key_scope:;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        Returns: string;      api_key_scope:;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
     Enums: {
 | { [key:string]:Json | undefined }
   | Json[];
@@ -7439,7 +14060,11 @@ export type Database = {;
     }
     Enums:{;
       api_key_scope:;
+<<<<<<< HEAD
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
         Returns: string;      api_key_scope:;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         | "jobs:read";
         | "jobs:write";
         | "talent:read";
@@ -7456,6 +14081,71 @@ fraud_severity:"safe" | "suspicious" | "dangerous";
         | "responded";
         | "closed";
         | "archived";
+<<<<<<< HEAD
+=======
+    Enums: {}
+      api_key_scope:;"
+        | "jobs:read";"
+        | "jobs:write";"
+        | "talent:read";"
+        | "quotes:write";"
+        | "webhooks:manage";
+
+"
+      fraud_severity: "safe" | "suspicious" | "dangerous";
+
+      quote_request_status:;"
+        | "new";"
+        | "in_review";"
+        | "accepted";"
+        | "responded";"
+        | "closed";"
+        | "archived";
+"
+      referral_status: "pending" | "completed" | "expired";
+    }
+    CompositeTypes: {}
+      [_ in never]: never;
+    }
+  }
+}
+"
+type DefaultSchema = Database[Extract < keyof Database, "public">];
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+export type Tables<;
+  DefaultSchemaTableNameOrOptions extends;"
+    | keyof (DefaultSchema["Tables"] & DefaultSchema["Views"]);
+<<<<<<< HEAD
+=======
+
+    | { schema: keyof Database }
+  TableName extends DefaultSchemaTableNameOrOptions extends {}
+    schema: keyof Database;
+  }"
+    ? keyof (Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"] &;"
+        Database[DefaultSchemaTableNameOrOptions["schema"]]["Views"]);
+    : never = never;
+> = DefaultSchemaTableNameOrOptions extends { schema: keyof Database }"
+  ? (Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"] &;"
+      Database[DefaultSchemaTableNameOrOptions["schema"]]["Views"])[TableName] extends {}
+      Row: infer R;
+    }
+    ? R;
+    : never;"
+  : DefaultSchemaTableNameOrOptions extends keyof (DefaultSchema["Tables"] &;"
+        DefaultSchema["Views"]);"
+    ? (DefaultSchema["Tables"] &;"
+        DefaultSchema["Views"])[DefaultSchemaTableNameOrOptions] extends {}
+        Row: infer R;
+      }
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+
+          date: string;
+          event_type: string;
+          count: number;
+=======
       referral_status: "pending" | "completed" | "expired";
     }
     CompositeTypes: {
@@ -7497,68 +14187,134 @@ export type Tables<;
           date: string
           event_type: string
           count: number
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         }[]
       }
-      hash_api_key: {
+      hash_api_key: {}
         Args: { api_key: string }
-        Returns: string
+        Returns: string;
       }
-      schedule_email_reminders: {
+      schedule_email_reminders: {}
         Args: Record<PropertyKey, never>
-        Returns: number
+        Returns: number;
       schedule_email_reminders: {;
         Args: Record<PropertyKey never>;
         Returns: number;
       }
-      trigger_resume_scoring: {
+      trigger_resume_scoring: {}
         Args: { application_id: string }
-        Returns: undefined
+        Returns: undefined;
       }
-      update_onboarding_milestone: {
+      update_onboarding_milestone: {}
         Args: { _user_id: string, _milestone: string, _status: boolean }
-        Returns: undefined
+        Returns: undefined;
       }
-      verify_api_key: {
+      verify_api_key: {}
         Args: { provided_key: string, stored_hash: string }
-        Returns: boolean
+        Returns: boolean;
       }
     }
-    Enums: {
-      api_key_scope:
-        | "jobs:read"
-        | "jobs:write"
-        | "talent:read"
-        | "quotes:write"
-        | "webhooks:manage"
+    Enums: {}
+      api_key_scope:"
+        | "jobs:read""
+        | "jobs:write""
+        | "talent:read""
+        | "quotes:write""
+        | "webhooks:manage""
       fraud_severity: "safe" | "suspicious" | "dangerous"
-      quote_request_status:
-        | "new"
-        | "in_review"
-        | "accepted"
-        | "responded"
-        | "closed"
-        | "archived"
+      quote_request_status:"
+        | "new""
+        | "in_review""
+        | "accepted""
+        | "responded""
+        | "closed""
+        | "archived""
       referral_status: "pending" | "completed" | "expired"
     }
-    CompositeTypes: {
-      [_ in never]: never
+    CompositeTypes: {}
+      [_ in never]: never;
     }
   }
 }
-
+"
 type DefaultSchema = Database[Extract<keyof Database, "public">]
 export type Tables<
+<<<<<<< HEAD
   DefaultSchemaTableNameOrOptions extends
-    | keyof (DefaultSchema["Tables"] & DefaultSchema["Views"]);
-    | { schema: keyof Database };
-    | keyof (DefaultSchema["Tables"] & DefaultSchema["Views"])
+<<<<<<< HEAD
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+=======
+  DefaultSchemaTableNameOrOptions extends";
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+    | keyof (DefaultSchema["Tables"] & DefaultSchema["Views"]);
+    | { schema: keyof Database };"
+    | keyof (DefaultSchema["Tables"] & DefaultSchema["Views"])
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+=======
+    | { schema: keyof Database }
+    | { schema: keyof Database },
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
 | { schema: keyof Database }
     | { schema: keyof Database },
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   TableName extends DefaultSchemaTableNameOrOptions extends {
     schema: keyof Database
   }
     ? keyof (Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"] &
+<<<<<<< HEAD
+=======
+
+
+
+  TableName extends DefaultSchemaTableNameOrOptions extends {}
+    schema: keyof Database;
+  }"
+    ? keyof (Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"] &"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+        Database[DefaultSchemaTableNameOrOptions["schema"]]["Views"])
+    : never = never> = DefaultSchemaTableNameOrOptions extends { schema: keyof Database }"
+  ? (Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"] &"
+      Database[DefaultSchemaTableNameOrOptions["schema"]]["Views"])[TableName] extends {}
+      Row: infer R;
+    }
+    ? R;
+    : never"
+  : DefaultSchemaTableNameOrOptions extends keyof (DefaultSchema["Tables"] &"
+        DefaultSchema["Views"])"
+    ? (DefaultSchema["Tables"] &"
+        DefaultSchema["Views"])[DefaultSchemaTableNameOrOptions] extends {}
+        Row: infer R;
+      }
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
         Database[DefaultSchemaTableNameOrOptions["schema"]]["Views"])
     : never = never> = DefaultSchemaTableNameOrOptions extends { schema: keyof Database }
   ? (Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"] &
@@ -7573,17 +14329,36 @@ export type Tables<
         DefaultSchema["Views"])[DefaultSchemaTableNameOrOptions] extends {
         Row: infer R
       }
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       ? R
       : never
     : never
 export type TablesInsert<
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
   DefaultSchemaTableNameOrOptions extends
+<<<<<<< HEAD
+
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+
+=======
+  DefaultSchemaTableNameOrOptions extends
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
       ? R;
       : never;
     : never;
 export type TablesInsert<;
   DefaultSchemaTableNameOrOptions extends;
+<<<<<<< HEAD
+=======
     | keyof DefaultSchema["Tables"];
 
     | { schema: keyof Database }
@@ -7781,10 +14556,20 @@ export type Tables<;
         DefaultSchema["Views"])[DefaultSchemaTableNameOrOptions] extends {;
         Row: infer R;
       }
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       ? R;
       : never;
     : never;
 export type TablesInsert<;
+<<<<<<< HEAD
+  DefaultSchemaTableNameOrOptions extends;"
+    | keyof DefaultSchema["Tables"];
+
+
+
+    | { schema: keyof Database }
+  TableName extends DefaultSchemaTableNameOrOptions extends {}
+=======
   DefaultSchemaTableNameOrOptions extends;
     | keyof DefaultSchema["Tables"];
     | { schema: keyof Database },;
@@ -7834,10 +14619,422 @@ export type Enums<;
     | { schema: keyof Database }
   DefaultSchemaTableNameOrOptions extends    | { schema: keyof Database }
   EnumName extends DefaultSchemaEnumNameOrOptions extends {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     schema: keyof Database;
+  }"
+    ? keyof Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"];
+    : never = never;
+> = DefaultSchemaTableNameOrOptions extends { schema: keyof Database }"
+  ? Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"][TableName] extends {}
+      Insert: infer I;
+    }
+    ? I;
+    : never;"
+  : DefaultSchemaTableNameOrOptions extends keyof DefaultSchema["Tables"];"
+    ? DefaultSchema["Tables"][DefaultSchemaTableNameOrOptions] extends {}
+        Insert: infer I;
+      }
+
+
+"
+    | keyof DefaultSchema["Tables"]
+
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    | keyof DefaultSchema["Tables"];
+    | { schema: keyof Database };
+    | keyof DefaultSchema["Tables"]
+    | { schema: keyof Database }
+    | { schema: keyof Database },
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+  TableName extends DefaultSchemaTableNameOrOptions extends {
+    schema: keyof Database
   }
+=======
+
+
+
+  TableName extends DefaultSchemaTableNameOrOptions extends {}
+    schema: keyof Database;
+  }"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+    ? keyof Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"]
+    : never = never> = DefaultSchemaTableNameOrOptions extends { schema: keyof Database }"
+  ? Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"][TableName] extends {}
+      Insert: infer I;
+    }
+    ? I;
+    : never"
+  : DefaultSchemaTableNameOrOptions extends keyof DefaultSchema["Tables"]"
+    ? DefaultSchema["Tables"][DefaultSchemaTableNameOrOptions] extends {}
+        Insert: infer I;
+      }
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+      ? I
+      : never
+    : never
+export type TablesUpdate<
+  DefaultSchemaTableNameOrOptions extends
+<<<<<<< HEAD
+
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+
+
+      ? I;
+      : never;
+    : never;
+export type TablesUpdate<;
+  DefaultSchemaTableNameOrOptions extends;
+      ? I;
+      : never;
+    : never;
+export type TablesUpdate<;
+  DefaultSchemaTableNameOrOptions extends;"
+    | keyof DefaultSchema["Tables"];
+
+
+
+    | { schema: keyof Database }
+  TableName extends DefaultSchemaTableNameOrOptions extends {}
+    schema: keyof Database;
+  }"
+    ? keyof Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"];
+    : never = never;
+> = DefaultSchemaTableNameOrOptions extends { schema: keyof Database }"
+  ? Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"][TableName] extends {}
+      Update: infer U;
+    }
+    ? U;
+    : never;"
+  : DefaultSchemaTableNameOrOptions extends keyof DefaultSchema["Tables"];"
+    ? DefaultSchema["Tables"][DefaultSchemaTableNameOrOptions] extends {}
+        Update: infer U;
+      }
+
+
+"
+    | keyof DefaultSchema["Tables"]
+
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    | keyof DefaultSchema["Tables"];
+    | { schema: keyof Database };
+    | keyof DefaultSchema["Tables"]
+    | { schema: keyof Database }
+    | { schema: keyof Database },
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+  TableName extends DefaultSchemaTableNameOrOptions extends {
+    schema: keyof Database
+  }
+=======
+
+
+
+  TableName extends DefaultSchemaTableNameOrOptions extends {}
+    schema: keyof Database;
+  }"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+    ? keyof Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"]
+    : never = never> = DefaultSchemaTableNameOrOptions extends { schema: keyof Database }"
+  ? Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"][TableName] extends {}
+      Update: infer U;
+    }
+    ? U;
+    : never"
+  : DefaultSchemaTableNameOrOptions extends keyof DefaultSchema["Tables"]"
+    ? DefaultSchema["Tables"][DefaultSchemaTableNameOrOptions] extends {}
+        Update: infer U;
+      }
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+      ? U
+      : never
+    : never
+export type Enums<
+  DefaultSchemaEnumNameOrOptions extends
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+    | keyof DefaultSchema["Enums"];
+    | { schema: keyof Database };
+    | keyof DefaultSchema["Enums"]
+    | { schema: keyof Database }
+    | { schema: keyof Database },
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+  EnumName extends DefaultSchemaEnumNameOrOptions extends {
+    schema: keyof Database
+  }
+=======
+
+
+
+      ? U;
+      : never;
+    : never;
+export type Enums<;
+  DefaultSchemaEnumNameOrOptions extends;
+  EnumName extends DefaultSchemaEnumNameOrOptions extends {}
+    schema: keyof Database;
+  }"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+    ? keyof Database[DefaultSchemaEnumNameOrOptions["schema"]]["Enums"]
+    : never = never> = DefaultSchemaEnumNameOrOptions extends { schema: keyof Database }"
+  ? Database[DefaultSchemaEnumNameOrOptions["schema"]]["Enums"][EnumName]"
+  : DefaultSchemaEnumNameOrOptions extends keyof DefaultSchema["Enums"]"
+    ? DefaultSchema["Enums"][DefaultSchemaEnumNameOrOptions]
+    : never;
+export type CompositeTypes<
+  PublicCompositeTypeNameOrOptions extends";
+    | keyof DefaultSchema["CompositeTypes"];
+    | { schema: keyof Database };"
+    | keyof DefaultSchema["CompositeTypes"]
+    | { schema: keyof Database }
+    | { schema: keyof Database },
+  CompositeTypeName extends PublicCompositeTypeNameOrOptions extends {}
+    schema: keyof Database;
+  }"
+    ? keyof Database[PublicCompositeTypeNameOrOptions["schema"]]["CompositeTypes"]
+    : never = never> = PublicCompositeTypeNameOrOptions extends { schema: keyof Database }"
+  ? Database[PublicCompositeTypeNameOrOptions["schema"]]["CompositeTypes"][CompositeTypeName]"
+  : PublicCompositeTypeNameOrOptions extends keyof DefaultSchema["CompositeTypes"]"
+    ? DefaultSchema["CompositeTypes"][PublicCompositeTypeNameOrOptions]
+    : never;
+export const Constants = {}
+  public: {}
+    Enums: {};
+      api_key_scope: [;"
+        "jobs:read";"
+        "jobs:write";"
+        "talent:read";"
+        "quotes:write";
+      api_key_scope: ["
+        "jobs:read";"
+        "jobs:write";"
+        "talent:read";"
+        "quotes:write";"
+        "webhooks:manage"]"
+      fraud_severity: ["safe", "suspicious", "dangerous"];
+      quote_request_status: ["
+        "new";"
+        "in_review";"
+        "accepted";"
+        "responded";"
+        "closed";"
+        "archived"]
+<<<<<<< HEAD
+
+  EnumName extends DefaultSchemaEnumNameOrOptions extends {
+    schema: keyof Database
+  }
+    ? keyof Database[DefaultSchemaEnumNameOrOptions["schema"]]["Enums"]
+    : never = never> = DefaultSchemaEnumNameOrOptions extends { schema: keyof Database }
+  ? Database[DefaultSchemaEnumNameOrOptions["schema"]]["Enums"][EnumName]
+  : DefaultSchemaEnumNameOrOptions extends keyof DefaultSchema["Enums"]
+    ? DefaultSchema["Enums"][DefaultSchemaEnumNameOrOptions]
+    : never
+export type CompositeTypes<
+  PublicCompositeTypeNameOrOptions extends
+
+  CompositeTypeName extends PublicCompositeTypeNameOrOptions extends {
+    schema: keyof Database
+  }
+    ? keyof Database[PublicCompositeTypeNameOrOptions["schema"]]["CompositeTypes"]
+    : never = never> = PublicCompositeTypeNameOrOptions extends { schema: keyof Database }
+  ? Database[PublicCompositeTypeNameOrOptions["schema"]]["CompositeTypes"][CompositeTypeName]
+  : PublicCompositeTypeNameOrOptions extends keyof DefaultSchema["CompositeTypes"]
+    ? DefaultSchema["CompositeTypes"][PublicCompositeTypeNameOrOptions]
+    : never
+export const Constants = {
+  public: {
+    Enums: {
+
+        "webhooks:manage"],
+      fraud_severity: ["safe", "suspicious", "dangerous"],
+      quote_request_status: [
+
+        "new",
+        "in_review",
+        "accepted",
+        "responded",
+        "closed",
+        "archived"],
+      referral_status: ["pending", "completed", "expired"]}}} as const
+;
+=======
+"
+      referral_status: ["pending", "completed", "expired"]}}} as const;
+;"
+        "jobs:read","
+        "jobs:write","
+        "talent:read","
+        "quotes:write","
+        "webhooks:manage"],"
+      fraud_severity: ["safe", "suspicious", "dangerous"],
+      quote_request_status: ["
+        "new";"
+        "in_review";"
+        "accepted";"
+        "responded";"
+        "closed";"
+        "archived"],"
+      referral_status: ["pending", "completed", "expired"]}}} as const;
+;"
+        "new","
+        "in_review","
+        "accepted","
+        "responded","
+        "closed","
+        "archived"],"
+      referral_status: ["pending", "completed", "expired"]}}} as const;
+;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+type DefaultSchema = Database[Extract<keyof Database, "public">];
+export type Tables<;
+  DefaultSchemaTableNameOrOptions extends;"
+    | keyof (DefaultSchema["Tables"] & DefaultSchema["Views"]);
+    | { schema: keyof Database },;
+  TableName extends DefaultSchemaTableNameOrOptions extends {;
+    schema: keyof Database;
+  }"
+    ? keyof (Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"] &;"
+        Database[DefaultSchemaTableNameOrOptions["schema"]]["Views"]);
+    : never = never> = DefaultSchemaTableNameOrOptions extends { schema: keyof Database }"
+  ? (Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"] &;"
+      Database[DefaultSchemaTableNameOrOptions["schema"]]["Views"])[TableName] extends {;
+      Row: infer R;
+    }
+    ? R;
+    : never;"
+  : DefaultSchemaTableNameOrOptions extends keyof (DefaultSchema["Tables"] &;"
+        DefaultSchema["Views"]);"
+    ? (DefaultSchema["Tables"] &;"
+        DefaultSchema["Views"])[DefaultSchemaTableNameOrOptions] extends {;
+        Row: infer R;
+      }
+      ? R;
+      : never;
+    : never;
+export type TablesInsert<;
+  DefaultSchemaTableNameOrOptions extends;"
+    | keyof DefaultSchema["Tables"];
+    | { schema: keyof Database },;
+  TableName extends DefaultSchemaTableNameOrOptions extends {;
+    schema: keyof Database;
+  }"
+    ? keyof Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"];
+    : never = never> = DefaultSchemaTableNameOrOptions extends { schema: keyof Database }"
+  ? Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"][TableName] extends {;
+      Insert: infer I;
+    }
+    ? I;
+    : never;"
+  : DefaultSchemaTableNameOrOptions extends keyof DefaultSchema["Tables"];"
+    ? DefaultSchema["Tables"][DefaultSchemaTableNameOrOptions] extends {;
+        Insert: infer I;
+      }
+      ? I;
+      : never;
+    : never;
+export type TablesUpdate<;
+  DefaultSchemaTableNameOrOptions extends;"
+    | keyof DefaultSchema["Tables"];
+    | { schema: keyof Database },;
+  TableName extends DefaultSchemaTableNameOrOptions extends {;
+    schema: keyof Database;
+  }"
+    ? keyof Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"];
+    : never = never> = DefaultSchemaTableNameOrOptions extends { schema: keyof Database }"
+  ? Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"][TableName] extends {;
+      Update: infer U;
+    }
+    ? U;
+    : never;"
+  : DefaultSchemaTableNameOrOptions extends keyof DefaultSchema["Tables"];"
+    ? DefaultSchema["Tables"][DefaultSchemaTableNameOrOptions] extends {;
+        Update: infer U;
+      }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+      ? U;
+      : never;
+    : never;
+export type Enums<;
+  DefaultSchemaEnumNameOrOptions extends;"
+    | keyof DefaultSchema["Enums"];
+
+
+
+    | { schema: keyof Database }
+<<<<<<< HEAD
+=======
+  DefaultSchemaTableNameOrOptions extends    | { schema: keyof Database }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  DefaultSchemaTableNameOrOptions extends    | { schema: keyof Database }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+  EnumName extends DefaultSchemaEnumNameOrOptions extends {
+=======
+  EnumName extends DefaultSchemaEnumNameOrOptions extends {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+    schema: keyof Database;
+  }"
     ? keyof Database[DefaultSchemaEnumNameOrOptions["schema"]]["Enums"];
     : never = never;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+> = DefaultSchemaEnumNameOrOptions extends { schema: keyof Database }
+
+  }"
+    ? keyof Database[DefaultSchemaEnumNameOrOptions["schema"]]["Enums"];
+    : never = never> = DefaultSchemaEnumNameOrOptions extends { schema: keyof Database }
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
 > = DefaultSchemaEnumNameOrOptions extends { schema: keyof Database }
 
     | keyof DefaultSchema["Enums"]
@@ -7850,6 +15047,7 @@ export type Enums<;
   }
     ? keyof Database[DefaultSchemaEnumNameOrOptions["schema"]]["Enums"];
     : never = never> = DefaultSchemaEnumNameOrOptions extends { schema: keyof Database }
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   ? Database[DefaultSchemaEnumNameOrOptions["schema"]]["Enums"][EnumName]
   : DefaultSchemaEnumNameOrOptions extends keyof DefaultSchema["Enums"]
     ? DefaultSchema["Enums"][DefaultSchemaEnumNameOrOptions]
@@ -7857,6 +15055,33 @@ export type Enums<;
 export type CompositeTypes<
   PublicCompositeTypeNameOrOptions extends
 
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+  ? Database[DefaultSchemaEnumNameOrOptions["schema"]]["Enums"][EnumName];
+  : DefaultSchemaEnumNameOrOptions extends keyof DefaultSchema["Enums"];
+=======
+"
+  ? Database[DefaultSchemaEnumNameOrOptions["schema"]]["Enums"][EnumName];"
+  : DefaultSchemaEnumNameOrOptions extends keyof DefaultSchema["Enums"];"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+    ? DefaultSchema["Enums"][DefaultSchemaEnumNameOrOptions];
+    : never;
+export type CompositeTypes<;
+  PublicCompositeTypeNameOrOptions extends;"
+    | keyof DefaultSchema["CompositeTypes"];
+
+
+
+    | { schema: keyof Database }
+<<<<<<< HEAD
+=======
+> = DefaultSchemaEnumNameOrOptions extends { schema: keyof Database }    | { schema: keyof Database }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+> = DefaultSchemaEnumNameOrOptions extends { schema: keyof Database }    | { schema: keyof Database }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
   ? Database[DefaultSchemaEnumNameOrOptions["schema"]]["Enums"][EnumName];
   : DefaultSchemaEnumNameOrOptions extends keyof DefaultSchema["Enums"];
     ? DefaultSchema["Enums"][DefaultSchemaEnumNameOrOptions];
@@ -7866,14 +15091,29 @@ export type CompositeTypes<;
     | keyof DefaultSchema["CompositeTypes"];
 
     | { schema: keyof Database }
+<<<<<<< HEAD
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
 > = DefaultSchemaEnumNameOrOptions extends { schema: keyof Database }    | { schema: keyof Database }
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   CompositeTypeName extends PublicCompositeTypeNameOrOptions extends {
+=======
+  CompositeTypeName extends PublicCompositeTypeNameOrOptions extends {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     schema: keyof Database;
-  }
+  }"
     ? keyof Database[PublicCompositeTypeNameOrOptions["schema"]]["CompositeTypes"];
     : never = never;
 > = PublicCompositeTypeNameOrOptions extends { schema: keyof Database }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     | keyof DefaultSchema["CompositeTypes"]
 
   CompositeTypeName extends PublicCompositeTypeNameOrOptions extends {
@@ -7889,6 +15129,56 @@ export type CompositeTypes<;
   : PublicCompositeTypeNameOrOptions extends keyof DefaultSchema["CompositeTypes"]
     ? DefaultSchema["CompositeTypes"][PublicCompositeTypeNameOrOptions]
     : never
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+  ? Database[PublicCompositeTypeNameOrOptions["schema"]]["CompositeTypes"][CompositeTypeName];
+  : PublicCompositeTypeNameOrOptions extends keyof DefaultSchema["CompositeTypes"];
+=======
+  }"
+    ? keyof Database[PublicCompositeTypeNameOrOptions["schema"]]["CompositeTypes"];
+    : never = never> = PublicCompositeTypeNameOrOptions extends { schema: keyof Database }
+"
+  ? Database[PublicCompositeTypeNameOrOptions["schema"]]["CompositeTypes"][CompositeTypeName];"
+  : PublicCompositeTypeNameOrOptions extends keyof DefaultSchema["CompositeTypes"];"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+    ? DefaultSchema["CompositeTypes"][PublicCompositeTypeNameOrOptions];
+    : never;
+
+
+
+export const Constants = {}
+  public: {}
+    Enums: {};
+      api_key_scope: [;"
+        "jobs:read";"
+        "jobs:write";"
+        "talent:read";"
+        "quotes:write";"
+        "webhooks:manage"]"
+      fraud_severity: ["safe", "suspicious", "dangerous"];
+      quote_request_status: [;"
+        "new";"
+        "in_review";"
+        "accepted";"
+        "responded";"
+        "closed";
+
+<<<<<<< HEAD
+        "archived"],
+      referral_status: ["pending", "completed", "expired"]}}} as const;
+<<<<<<< HEAD
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
 
   ? Database[PublicCompositeTypeNameOrOptions["schema"]]["CompositeTypes"][CompositeTypeName];
   : PublicCompositeTypeNameOrOptions extends keyof DefaultSchema["CompositeTypes"];
@@ -7915,6 +15205,7 @@ export const Constants = {
         "archived"],
       referral_status: ["pending", "completed", "expired"]}}} as const;
 
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ;
 ;
 
@@ -9246,7 +16537,37 @@ export const Constants = {;
         "closed",;
         "archived"];
       referral_status: ["pending", "completed", "expired"]}}} as const;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
 ;
+<<<<<<< HEAD
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+;
+
+export const Constants = {}
+  public: {}
+    Enums: {}
+      api_key_scope: []
+;
+;
+
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
   | Json[];
 
 export type Database = {
@@ -10370,3 +17691,4 @@ pr-12325
 "
 
 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

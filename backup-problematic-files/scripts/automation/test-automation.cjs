@@ -28,10 +28,28 @@ class $1 {}
     console.log("logEntry);"
     // Append to log file;"
 
+<<<<<<< HEAD
+  log(message, level = "INFO") {}
+  const timestamp = new Date().toISOString();
+    const logEntry = "[${timestamp}] [${level}] ${message}";
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+    
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+
+    // Append to log file;
+    fs.appendFileSync(this.logFile, logEntry + "\n")};
+;
+=======
   const timestamp = new Date().toISOString();"
     const logEntry = "[${timestamp}] [${level}] ${message}";"
     // Append to log file;"
     fs.appendFileSync(this.logFile, logEntry + "\n")};"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   async runCommand(command, cwd = this.projectRoot) {}
   // Append to log file;"
     fs.appendFileSync(this.logFile, logEntry + "\n");")}");
@@ -199,5 +217,20 @@ if (require.main === module) {}
   test.run().catch(error => {})"
   console.error("Test automation "failed": ", error);"
     process.exit(1)})};
+<<<<<<< HEAD
+;
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+module.exports = TestAutomation;
+module.exports = TestAutomation;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
 module.exports = TestAutomation;
 "`;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

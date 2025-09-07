@@ -1,4 +1,13 @@
 }};
+<<<<<<< HEAD
+
+    };
+  };
+,;
+  async checkSystemResources() {,;
+    try {,;
+      this.log('💻 Checking system resources...'),;
+=======
 ; const memInfo = execSync('free -m', _{ encoding: 'utf8'}); const diskInfo = execSync('df -h', {encoding: 'utf8'}); const cpuInfo = execSync('top -bn1 | grep "Cpu(s)"', {encoding: 'utf8'});
 ; // Parse memory info; const memLines = memInfo.split('\n'); const memTotal = memLines[1].split(/\s+/)[1]; const memUsed = memLines[1].split(/\s+/)[2]; const memFree = memLines[1].split(/\s+/)[3];
 ; // Parse disk info; const diskLines = diskInfo.split('\n'); const rootDisk = diskLines.find(line = > line.includes('/')); const diskUsage = rootDisk ? rootDisk.split(/\s+/)[4].replace('%', ): '0';
@@ -533,6 +542,11 @@ pr-12325
   async checkSystemResources() {,;
     try {,;
       this.log(' Checking system resources...'),;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+,;
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       const memInfo = execSync('free -m', { encodin:g:'utf8' }),;
       const diskInfo = execSync('df -h', { encodin:g:'utf8' }),;
       const cpuInfo = execSync('top -bn1 | grep "Cpu(s)"', { encodin:g:'utf8' }),;
@@ -559,16 +573,35 @@ pr-12325
         dis:k:{,;
           usagePercen:t:parseInt(diskUsage),;
         cp:u:{,;
+<<<<<<< HEAD
+          usagePercen:t:Math.round(cpuUsage),;
+        };
+      };
+=======
           usagePercen:t:Math.round(cpuUsage),
 }
 };
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
           usagePercen:t:Math.round(cpuUsage),;
 pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     } catch (error) {,;
         succes:s:false,;
         erro:r:error.message,;
         memor:y:null,;
         dis:k:null,;
+<<<<<<< HEAD
+        cp:u:null,;
+      };
+    };
+  };
+,;
+  async checkProcessHealth() {,;
+    try {,;
+      this.log('🔄 Checking process health...'),;
+=======
         cp:u:null,
 };
     }
@@ -578,6 +611,11 @@ pr-12325
 pr-12325
   async checkProcessHealth() {,;
       this.log(' Checking process health...'),;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+,;
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       const pm2List = execSync('pm2 list --json', { encodin:g:'utf8' }),;
       const processes = JSON.parse(pm2List),;
       const processHealth = {,;
@@ -585,8 +623,13 @@ pr-12325
         onlin:e:0,;
         stoppe:d:0,;
         errore:d:0,;
+<<<<<<< HEAD
+        processe:s:[],;
+      };
+=======
         processe:s:[],
 };
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ,;
         processe:s:[],;
 pr-12325
@@ -606,12 +649,27 @@ pr-12325
 ,;
       return {,;
         succes:s:true,;
+<<<<<<< HEAD
+        healt:h:processHealth,;
+      };
+=======
         healt:h:processHealth,
 };
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     } catch (error) {,;
       return {,;
         succes:s:false,;
         erro:r:error.message,;
+<<<<<<< HEAD
+        healt:h:null,;
+      };
+    };
+  };
+,;
+  async checkApplicationHealth() {,;
+    try {,;
+      this.log('🌐 Checking application health...'),;
+=======
         healt:h:null,
 };
     }
@@ -622,6 +680,11 @@ pr-12325
 pr-12325
   async checkApplicationHealth() {,;
       this.log(' Checking application health...'),;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+,;
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       const healthChecks = [],;
       // Check if the application is running,;
         const pm2List = execSync('pm2 list', { encodin:g:'utf8' }),;
@@ -632,8 +695,13 @@ pr-12325
           messag:e:hasRunningApp ? 'Application is running' :'Application is not running',;')
           statu:s:'error',;
           messag:e:'Could not check PM2 status',;
+<<<<<<< HEAD
+        }),;
+      };
+=======
         }),
 };
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ,;
           messag:e:'Could not check PM2 status',;')
 pr-12325
@@ -649,6 +717,15 @@ pr-12325
           messag:e:'Package.json is valid',;')
           statu:s:'unhealthy',;
           messag:e:'Package.json is invalid or missing',;
+<<<<<<< HEAD
+        }),;
+      };
+,;
+      return {,;
+        succes:s:true,;
+        check:s:healthChecks,;
+      };
+=======
         }),
 };
 ,;
@@ -656,10 +733,21 @@ pr-12325
         succes:s:true,;
         check:s:healthChecks,
 };
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     } catch (error) {,;
       return {,;
         succes:s:false,;
         erro:r:error.message,;
+<<<<<<< HEAD
+        check:s:[],;
+      };
+    };
+  };
+,;
+  async checkLogHealth() {,;
+    try {,;
+      this.log('📝 Checking log health...'),;
+=======
         check:s:[],
 };
     }
@@ -671,6 +759,11 @@ pr-12325
 pr-12325
   async checkLogHealth() {,;
       this.log(' Checking log health...'),;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+,;
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       const logsDir = path.join(this.projectRoot, 'logs/pm2'),;
       const logFiles = [],;
       if (fs.existsSync(logsDir)) {,;
@@ -684,25 +777,44 @@ pr-12325
               siz:e:stats.size,;)
               sizeM:B:Math.round(stats.size / (1024 * 1024) * 100) / 100,;
               lastModifie:d:stats.mtime,;
+<<<<<<< HEAD
+            }),;
+          };
+        }),;
+      };
+=======
             }),
 };
         }),
 };
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ,;
       return {,;
         succes:s:true,;
         logFile:s:logFiles,;
+<<<<<<< HEAD
+        totalSiz:e:logFiles.reduce((sum, file) => sum + file.size, 0),;
+      };
+=======
         totalSiz:e:logFiles.reduce((sum, file) => sum + file.size, 0),
 };
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     } catch (error) {,;
       return {,;
         succes:s:false,;
         erro:r:error.message,;
         logFile:s:[],;
+<<<<<<< HEAD
+        totalSiz:e:0,;
+      };
+    };
+  };
+=======
         totalSiz:e:0,
 };
     }
 };
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ,;
         logFile:s:logFiles,;
         totalSiz:e:logFiles.reduce((sum, file) => sum + file.size, 0),;
@@ -725,8 +837,13 @@ pr-12325
         applicatio:n:appInfo,;
         log:s:logInfo,;
       },;
+<<<<<<< HEAD
+      recommendation:s:[],;
+    };
+=======
       recommendation:s:[],
 };
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ,;
       recommendation:s:[],;
 pr-12325
@@ -746,11 +863,20 @@ pr-12325
         totalScore += 15,;
       } else {,;
         report.summary.systemHealth = 'unhealthy',;
+<<<<<<< HEAD
+        totalScore += 5,;
+      };
+    };
+=======
         totalScore += 5,
 }
 };
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
         totalScore += 5,;
 pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     maxScore += 25,;
     // Process health,;
     if (processInfo.success && processInfo.health) {,;
@@ -760,9 +886,15 @@ pr-12325
       } else if (health.errored === 0) {,;
         report.summary.processHealth = 'warning',;
         report.summary.processHealth = 'unhealthy',;
+<<<<<<< HEAD
+        totalScore += 5,;
+      };
+    };
+=======
         totalScore += 5,
 }
 };
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     maxScore += 25,;
 ,;
 pr-12325
@@ -775,9 +907,15 @@ pr-12325
       } else if (healthyChecks >= totalChecks * 0.5) {,;
         report.summary.applicationHealth = 'warning',;
         report.summary.applicationHealth = 'unhealthy',;
+<<<<<<< HEAD
+        totalScore += 5,;
+      };
+    };
+=======
         totalScore += 5,
 }
 };
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     maxScore += 25,;
 ,;
 pr-12325
@@ -789,9 +927,15 @@ pr-12325
       } else if (totalLogSize < 500) {,;
         report.summary.logHealth = 'warning',;
         report.summary.logHealth = 'unhealthy',;
+<<<<<<< HEAD
+        totalScore += 5,;
+      };
+    };
+=======
         totalScore += 5,
 }
 };
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     maxScore += 25,;
 ,;
 pr-12325
@@ -802,8 +946,13 @@ pr-12325
     } else if (report.summary.healthScore >= 60) {,;
       report.summary.overallHealth = 'warning',;
     } else {,;
+<<<<<<< HEAD
+      report.summary.overallHealth = 'unhealthy',;
+    };
+=======
       report.summary.overallHealth = 'unhealthy',
 };
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ,;
       report.summary.overallHealth = 'unhealthy',;
 pr-12325
@@ -813,16 +962,30 @@ pr-12325
           priorit:y:'high',;
           messag:e:'High memory usage detected',;
           actio:n:'Consider restarting processes or increasing memory',;
+<<<<<<< HEAD
+        }),;
+      };
+=======
         }),
 };
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
           actio:n:'Consider restarting processes or increasing memory',;')
 pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       if (systemInfo.disk?.usagePercent > 80) {,;
           messag:e:'High disk usage detected',;
           actio:n:'Clean up logs and temporary files',;
+<<<<<<< HEAD
+        }),;
+      };
+    };
+=======
         }),
 }
 };
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ,;
           actio:n:'Clean up logs and temporary files',;')
 pr-12325
@@ -830,8 +993,13 @@ pr-12325
         priorit:y:'critical',;
         messag:e:'Errored processes detected',;
         actio:n:'Restart errored processes and investigate logs',;
+<<<<<<< HEAD
+      }),;
+    };
+=======
       }),
 };
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ,;
         actio:n:'Restart errored processes and investigate logs',;')
 pr-12325
@@ -839,11 +1007,19 @@ pr-12325
         priorit:y:'medium',;
         messag:e:'Large log files detected',;
         actio:n:'Implement log rotation or cleanup',;
+<<<<<<< HEAD
+      }),;
+    };
+,;
+    return report,;
+  };
+=======
       }),
 };
 ,;
     return report,
 };
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ,;
         actio:n:'Implement log rotation or cleanup',;')
     return report,;
@@ -851,12 +1027,25 @@ pr-12325
   async saveReport(report) {,;
       const reportDir = path.dirname(this.reportFile),;
       if (!fs.existsSync(reportDir)) {,;
+<<<<<<< HEAD
+        fs.mkdirSync(reportDir, { recursiv:e:true }),;
+      };
+=======
         fs.mkdirSync(reportDir, { recursiv:e:true }),
 };
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ,;
       fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2)),;
       this.log(`Report saved:to:${this.reportFile}`),;
     } catch (error) {,;
+<<<<<<< HEAD
+      this.log(`Error saving:report:${error.message}`),;
+    };
+  };
+,;
+  async run() {,;
+    this.log('🏥 Starting Health Monitor...'),;
+=======
       this.log(`Error saving:report:${error.message}`),
 }
 };
@@ -868,13 +1057,23 @@ pr-12325
       this.log(`Error saving:report:${error.message}`),;
 pr-12325
   async run() {,;
+<<<<<<< HEAD
+    this.log(' Starting Health Monitor...'),;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
     this.log(' Starting Health Monitor...'),;`;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     this.log(`Project:root:${this.projectRoot}`),;
       // Create logs directory if it doesn't exist,;
       const logsDir = path.dirname(this.logFile),;
       if (!fs.existsSync(logsDir)) {,;
+<<<<<<< HEAD
+        fs.mkdirSync(logsDir, { recursiv:e:true }),;
+      };
+=======
         fs.mkdirSync(logsDir, { recursiv:e:true }),
 };
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ,;
         fs.mkdirSync(logsDir, { recursiv:e:true }),;
 pr-12325
@@ -884,12 +1083,29 @@ pr-12325
       const appInfo = await this.checkApplicationHealth(),;
       const logInfo = await this.checkLogHealth(),;
       // Generate report,;
+<<<<<<< HEAD
+      this.log('📊 Generating health report...'),;
+=======
       this.log(' Generating health report...'),;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       const report = await this.generateReport(systemInfo, processInfo, appInfo, logInfo),;
       // Save report,;
       await this.saveReport(report),;
       const duration = Date.now() - this.startTime,;
       // Log summary,;
+<<<<<<< HEAD
+<<<<<<< HEAD
+      this.log('\n📊 Health Monitor:Summary:'),;
+=======
+      this.log('\n Health Monitor:Summary:'),;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+      this.log(`Syste:m:${report.summary.systemHealth}`),;
+      this.log(`Processe:s:${report.summary.processHealth}`),;
+      this.log(`Applicatio:n:${report.summary.applicationHealth}`),;
+      this.log(`Log:s:${report.summary.logHealth}`),;
+      this.log(`Overal:l:${report.summary.overallHealth}`),;
+      this.log(`Health:Score:${report.summary.healthScore}/100`),;
+=======
       this.log('\n Health Monitor:Summary:'),;`;
       this.log(`Syste:m:${report.summary.systemHealth}`),;`;
       this.log(`Processe:s:${report.summary.processHealth}`),;`;
@@ -897,14 +1113,34 @@ pr-12325
       this.log(`Log:s:${report.summary.logHealth}`),;`;
       this.log(`Overal:l:${report.summary.overallHealth}`),;`;
       this.log(`Health:Score:${report.summary.healthScore}/100`),;`;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       this.log(`Duratio:n:${duration}ms`),;
       if (report.recommendations.length > 0) {,;
+<<<<<<< HEAD
+        this.log('\n💡 Recommendation:s:'),;
+=======
         this.log('\n Recommendation:s:'),;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+        report.recommendations.forEach(rec => {,;
+          this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`),;
+=======
         report.recommendations.forEach(rec => {,;)`;
           this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`),;`;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           this.log(`    Actio:n:${rec.action}`),;
         }),;
       } else {,;
+<<<<<<< HEAD
+        this.log('\n✨ All systems are healthy!'),;
+      };
+,;
+    } catch (error) {,;
+      this.log(`❌ Error running health:monitor:${error.message}`),;
+      process.exit(1),;
+    };
+  };
+=======
         this.log('\n All systems are healthy!'),
 };
 ,;
@@ -913,6 +1149,7 @@ pr-12325
       process.exit(1),
 };
   }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 };
 ,;
         this.log('\n All systems are healthy!'),;
@@ -956,7 +1193,15 @@ healthMonitor.run().catch(error => {,;)
     }  };
   async checkProcessHealth() {,
     try {,
+<<<<<<< HEAD
+      this.log('🔄 Checking process health...'),
+=======
       this.log(' Checking process health...'),
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+,
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       const pm2List = execSync('pm2 list --json', { encoding: 'utf8' }),
       const processes = JSON.parse(pm2List),
       const processHealth = {,
@@ -979,7 +1224,17 @@ healthMonitor.run().catch(error => {,;)
         healt: h: processHealth;
         healt: h: null;
   async checkApplicationHealth() {,
+<<<<<<< HEAD
+    try {,
+<<<<<<< HEAD
+      this.log('🌐 Checking application health...'),
+=======
       this.log(' Checking application health...'),
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+,
+=======
+      this.log(' Checking application health...'),
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       const healthChecks = [],
       // Check if the application is running,
         const pm2List = execSync('pm2 list', { encoding: 'utf8' }),
@@ -1005,7 +1260,17 @@ healthMonitor.run().catch(error => {,;)
         check: s: healthChecks;
         check: s: []
   async checkLogHealth() {,
+<<<<<<< HEAD
+    try {,
+<<<<<<< HEAD
+      this.log('📝 Checking log health...'),
+=======
       this.log(' Checking log health...'),
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+,
+=======
+      this.log(' Checking log health...'),
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       const logsDir = path.join(this.projectRoot, 'logs/pm2'),
       const logFiles = [],
       if (fs.existsSync(logsDir)) {,
@@ -1117,7 +1382,15 @@ healthMonitor.run().catch(error => {,;)
     } catch (error) {,`;
       this.log(`Error saving: report: ${error.message}`)
   async run() {,
+<<<<<<< HEAD
+<<<<<<< HEAD
+    this.log('🏥 Starting Health Monitor...'),
+=======
+    this.log(' Starting Health Monitor...'),
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
     this.log(' Starting Health Monitor...'),`;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     this.log(`Project root: ${this.projectRoot}`),
       // Create logs directory if it doesn't exist,
       const logsDir = path.dirname(this.logFile),
@@ -1129,12 +1402,29 @@ healthMonitor.run().catch(error => {,;)
       const appInfo = await this.checkApplicationHealth(),
       const logInfo = await this.checkLogHealth(),
       // Generate report,
+<<<<<<< HEAD
+      this.log('📊 Generating health report...'),
+=======
       this.log(' Generating health report...'),
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       const report = await this.generateReport(systemInfo, processInfo, appInfo, logInfo),
       // Save report,
       await this.saveReport(report),
       const duration = Date.now() - this.startTime,
       // Log summary,
+<<<<<<< HEAD
+<<<<<<< HEAD
+      this.log('\n📊 Health Monitor Summary: '),
+=======
+      this.log('\n Health Monitor Summary: '),
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+      this.log(`System: ${report.summary.systemHealth}`),
+      this.log(`Processes: ${report.summary.processHealth}`),
+      this.log(`Application: ${report.summary.applicationHealth}`),
+      this.log(`Logs: ${report.summary.logHealth}`),
+      this.log(`Overall: ${report.summary.overallHealth}`),
+      this.log(`Health Score: ${report.summary.healthScore}/100`),
+=======
       this.log('\n Health Monitor Summary: '),`;
       this.log(`System: ${report.summary.systemHealth}`),`;
       this.log(`Processes: ${report.summary.processHealth}`),`;
@@ -1142,18 +1432,58 @@ healthMonitor.run().catch(error => {,;)
       this.log(`Logs: ${report.summary.logHealth}`),`;
       this.log(`Overall: ${report.summary.overallHealth}`),`;
       this.log(`Health Score: ${report.summary.healthScore}/100`),`;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       this.log(`Duration: ${duration}ms`),
       if (report.recommendations.length > 0) {,
+<<<<<<< HEAD
+        this.log('\n💡 Recommendations: '),
+=======
         this.log('\n Recommendations: '),
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+        report.recommendations.forEach(rec => {,
+          this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`),
+          this.log(`    Actio: n: ${rec.action}`)
+        })
+      } else {,
+<<<<<<< HEAD
+        this.log('\n✨ All systems are healthy!')
+      }
+
+    } catch (error) {,
+      this.log(`❌ Error running health: monitor: ${error.message}`),
+=======
+=======
         report.recommendations.forEach(rec => {,)`;
           this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`),`;
           this.log(`    Actio: n: ${rec.action}`)
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         this.log('\n All systems are healthy!')
 
       this.log(` Error running health: monitor: ${error.message}`),
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+      process.exit(1)
+    }
+  }};
+,
+// Run the health monitor,
+const healthMonitor = new HealthMonitor(),
+healthMonitor.run().catch(error => {,
+  process.exit(1)
+}),
+<<<<<<< HEAD
+
+=======
+const healthMonitor = new HealthMonitor();
+healthMonitor.run().catch(error => {_;
+  process.exit(1)});
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
 // Run the health monitor,
 const healthMonitor = new HealthMonitor(),
 healthMonitor.run().catch(error => {,)
 healthMonitor.run().catch(error => {_;)
   process.exit(1)});
 `;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

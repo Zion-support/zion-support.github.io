@@ -1,3 +1,6 @@
+<<<<<<< HEAD:src/pages/About.tsx
+<<<<<<< HEAD
+=======
 import React from 'react';
 import Card from '../components/Card';
 const About: React.FC = () => {,
@@ -9,6 +12,7 @@ const About: React.FC = () => {,
             About Zion Tech Group
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/pages.disabled/About.tsx
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import Card from '../components/Card';
@@ -82,6 +86,101 @@ const About: React.FC = () => {
             About Zion Tech Group
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+<<<<<<< HEAD:src/pages/About.tsx
+<<<<<<< HEAD
+            We are a leading technology company specializing in AI solutions, cybersecurity,
+=======
+            We are a leading technology company specializing in AI solutions, cybersecurity, 
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+            and cloud infrastructure. Our mission is to transform businesses through
+            innovative technology solutions.
+          </p>
+        </motion.div>
+
+        {/* Tab Navigation */}
+        <motion.div className="flex flex-wrap justify-center mb-12" variants={itemVariants}>
+          {[
+            { id: 'mission', label: 'Our Mission' },
+            { id: 'team', label: 'Our Team' },
+            { id: 'values', label: 'Our Values' },
+          ].map(tab => (
+            <button
+              key={tab.id}
+              onClick={() => setActiveTab(tab.id)}
+              className={`px-6 py-3 mx-2 mb-2 rounded-lg transition-all duration-300 ${
+                activeTab === tab.id
+                  ? 'bg-cyan-600 text-white'
+                  : 'bg-slate-700 text-gray-300 hover:bg-slate-600'
+              }`}
+            >
+              {tab.label}
+            </button>
+          ))}
+        </motion.div>
+
+        {/* Tab Content */}
+        <motion.div className="max-w-6xl mx-auto" variants={itemVariants}>
+          {activeTab === 'mission' && (
+            <motion.div className="grid grid-cols-1 md:grid-cols-2 gap-8" variants={itemVariants}>
+              <Card
+                title="Our Mission"
+                description="To empower businesses with cutting-edge AI and technology solutions that drive innovation, efficiency, and growth in the digital age."
+                icon="🎯"
+              />
+              <Card
+                title="Our Vision"
+                description="To be the global leader in AI-powered technology solutions, transforming industries and creating a smarter, more connected world."
+                icon="🚀"
+              />
+            </motion.div>
+          )}
+
+          {activeTab === 'team' && (
+            <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" variants={itemVariants}>
+              {teamMembers.map((member, index) => (
+                <Card
+                  key={index}
+                  title={member.name}
+                  description={member.description}
+                  icon={member.image}
+                  className="text-center"
+                >
+                  <div className="mt-4">
+                    <p className="text-cyan-400 font-semibold">{member.role}</p>
+                    <p className="text-sm text-gray-400">{member.expertise}</p>
+                  </div>
+                </Card>
+              ))}
+            </motion.div>
+          )}
+
+          {activeTab === 'values' && (
+            <motion.div className="grid grid-cols-1 md:grid-cols-3 gap-8" variants={itemVariants}>
+              <Card
+                title="Innovation"
+                description="We constantly push the boundaries of what's possible with technology, always seeking new and better ways to solve complex problems."
+                icon="💡"
+              />
+              <Card
+                title="Excellence"
+                description="We maintain the highest standards in everything we do, from our code quality to our customer service and support."
+                icon="⭐"
+              />
+              <Card
+                title="Integrity"
+                description="We conduct business with honesty, transparency, and ethical practices, building trust with our clients and partners."
+                icon="🤝"
+              />
+            </motion.div>
+          )}
+        </motion.div>
+      </div>
+    </motion.div>
+=======
+import React from 'react';
+
+const About: React.FC = () => {
+=======
             We are a leading technology company specializing in AI solutions, cybersecurity,
             and cloud infrastructure. Our mission is to transform businesses through
             innovative technology solutions.
@@ -580,6 +679,7 @@ export default function About() {;
 import React from 'react';
 
 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/pages.disabled/About.tsx
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
@@ -591,6 +691,10 @@ import React from 'react';
           </p>
         </div>
 
+<<<<<<< HEAD:src/pages/About.tsx
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/pages.disabled/About.tsx
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
           <div>
             <h2 className="text-3xl font-bold text-white mb-6">Our Mission</h2>
@@ -615,6 +719,95 @@ import React from 'react';
               <li>• Enterprise-grade security</li>
             </ul>
           </div>
+<<<<<<< HEAD:src/pages/About.tsx
+=======
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <Card
+            title="Our Mission"
+            description="To empower businesses with cutting-edge technology solutions that drive innovation, efficiency, and growth in the digital age."
+          />
+          <Card
+            title="Our Vision"
+            description="To be the global leader in AI and technology solutions, creating a smarter, more connected world for future generations."
+          />
+          <Card
+            title="Our Values"
+            description="Innovation, integrity, excellence, and customer success are the core values that guide everything we do at Zion Tech Group."
+          />
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+        </div>
+
+        <div className="mt-16">
+          <h2 className="text-3xl font-bold text-center mb-12">Our Team</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="text-center">
+              <div className="w-32 h-32 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full mx-auto mb-4 flex items-center justify-center">
+                <span className="text-white text-2xl font-bold">JD</span>
+              </div>
+              <h3 className="text-xl font-semibold mb-2">John Doe</h3>
+              <p className="text-gray-400">CEO & Founder</p>
+            </div>
+            <div className="text-center">
+              <div className="w-32 h-32 bg-gradient-to-r from-green-500 to-blue-600 rounded-full mx-auto mb-4 flex items-center justify-center">
+                <span className="text-white text-2xl font-bold">JS</span>
+              </div>
+              <h3 className="text-xl font-semibold mb-2">Jane Smith</h3>
+              <p className="text-gray-400">CTO</p>
+            </div>
+            <div className="text-center">
+              <div className="w-32 h-32 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full mx-auto mb-4 flex items-center justify-center">
+                <span className="text-white text-2xl font-bold">MJ</span>
+              </div>
+              <h3 className="text-xl font-semibold mb-2">Mike Johnson</h3>
+              <p className="text-gray-400">Lead Developer</p>
+            </div>
+            <div className="text-center">
+              <div className="w-32 h-32 bg-gradient-to-r from-orange-500 to-red-600 rounded-full mx-auto mb-4 flex items-center justify-center">
+                <span className="text-white text-2xl font-bold">SB</span>
+              </div>
+              <h3 className="text-xl font-semibold mb-2">Sarah Brown</h3>
+              <p className="text-gray-400">Head of Design</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-16">
+          <h2 className="text-3xl font-bold text-center mb-12">Why Choose Us?</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <Card
+              title="Expert Team"
+              description="Our team consists of industry experts with years of experience in AI, cybersecurity, and cloud technologies."
+            />
+            <Card
+              title="Proven Track Record"
+              description="We have successfully delivered 500+ projects for clients across various industries worldwide."
+            />
+            <Card
+              title="24/7 Support"
+              description="Our dedicated support team is available around the clock to ensure your systems run smoothly."
+            />
+            <Card
+              title="Cutting-Edge Technology"
+              description="We stay ahead of the curve by adopting the latest technologies and best practices in the industry."
+            />
+            <Card
+              title="Custom Solutions"
+              description="Every solution we deliver is tailored to meet the specific needs and requirements of our clients."
+            />
+            <Card
+              title="Competitive Pricing"
+              description="We offer competitive pricing without compromising on quality, ensuring the best value for your investment."
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+>>>>>>> pr-12243
+  );
+};
+
+export default About;
+=======
         </div>
       </div>
     </div>
@@ -694,3 +887,4 @@ const About: React.FC = () => {
 ursor/fix-syntax-push-and-merge-to-main-f9ca
     </div>)"
 pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/pages.disabled/About.tsx

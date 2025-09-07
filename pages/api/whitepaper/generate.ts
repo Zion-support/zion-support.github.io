@@ -1,0 +1,406 @@
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+import type { NextApiRequest, NextApiResponse } from "next";
+=======
+
+import type { NextApiRequest, NextApiResponse } from "next";"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+import OpenAI from "openai";
+const client = process && process.env.OPENAI_API_KEY;
+  ? new OpenAI({ apiKey: process && process.env.OPENAI_API_KEY })
+=======
+const client = process.env.OPENAI_API_KEY
+  ? new OpenAI({ apiKey: process.env.OPENAI_API_KEY })
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+  : null;
+<<<<<<< HEAD
+export default async function handler(
+  req: NextApiRequest
+  res: NextApiResponse
+) {
+<<<<<<< HEAD
+
+  // Simple admin gate: require header X-Admin: true for generation
+  const isAdmin = req && req.headers["x-admin"] === "true";
+=======
+export default async function handler(;
+  req: NextApiRequest;
+  res: NextApiResponse;
+) {}
+  // Simple admin gate: require header X-Admin: true for generation"
+  const isAdmin = req && req.headers["x-admin"] === "true";"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+  if (!isAdmin) return res && res.status(403).json({ error: "Admin only" });
+
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+  const {
+=======
+  const {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+    token_name,
+    token_supply,
+    use_cases,
+    rewards_logic,
+    distribution,
+    governance,
+    jurisdiction,
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+  const distLines = Array && Array.isArray(distribution)
+=======
+
+
+  const distLines = Array && Array.isArray(distribution)"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+    ? distribution && distribution.map((d: any) => `- ${d && d.label}: ${d && d.percent}%`).join("\n")
+
+<<<<<<< HEAD
+  const distLines = Array.isArray(distribution)
+    ? distribution.map((d: any) => `- ${d.label}: ${d.percent}%`).join('\n')
+    : '';
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+
+  const distLines = Array && Array.isArray(distribution)
+    ? distribution && distribution.map((d: any) => `- ${d && d.label}: ${d && d.percent}%`).join("\n")
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+=======
+  if (req.method !== 'POST')
+    return res.status(405).json({ error: 'Method not allowed' });
+
+  // Simple admin gate: require header X-Admin: true for generation
+  const isAdmin = req.headers['x-admin'] === 'true';
+  if (!isAdmin) return res.status(403).json({ error: 'Admin only' });
+
+const {
+    tokenName,
+    tokenSupply,
+    useCases,
+    rewardsLogic,
+    distribution,
+    governance,
+    jurisdiction,
+    operatorPrompt,
+    legalReview,
+  } = req.body || {};
+
+  const distLines = Array.isArray(distribution)
+    ? distribution.map((d: any) => `- ${d.label}: ${d.percent}%`).join("\n")
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+    : "";
+  const sysPrompt = `You are a senior Web3 tokenomics analyst and legal-friendly writer. Produce a crisp, investor-and-developer-ready whitepaper in markdown with the following sections strictly in order: Executive Summary, Market Context, Utility & Usage, Rewards System, Distribution, Governance Model, Risks + Disclaimers. Keep it factual and concise, with bullets where appropriate.`;
+  const userPrompt = `${operatorPrompt |""}\n\nToken: ${tokenName}\nTotal Supply: ${tokenSupply}\nUse Cases: ${useCases}\nRewards: ${rewardsLogic}\nDistribution (percent):\n${distLines}\nGovernance: ${governance}\nJurisdiction: ${jurisdiction}\nLegal Review Toggle: ${!!legalReview}`;
+  try {
+let markdown: string;
+    if (client) {
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+      const completion = await client && client.responses.create({
+        model: "gpt-4 && 4.1-mini",
+        input: [
+          { role: "system", content: sysPrompt },
+          { role: "user", content: userPrompt },
+=======
+    operator_prompt,
+    legal_review,
+  } = req.body || {}
+;
+  const dist_lines = Array.is_array (distribution);
+    ? distribution.map ((d: any) => `- ${d.label}: ${d.percent}%`).join ("\n");
+    : "";
+;
+  const sys_prompt = `You are a senior Web3 tokenomics analyst and legal - friendly writer. Produce a crisp, investor - and - developer - ready whitepaper in markdown with the following sections strictly in order: Executive Summary, Market Context, Utility & Usage, Rewards System, Distribution, Governance Model, Risks + Disclaimers. Keep it factual and concise, with bullets where appropriate.`;
+  const user_prompt = `${operator_prompt || ""}\n\n_token: ${token_name}\n_total Supply: ${token_supply}\n_use Cases: ${use_cases}\n_rewards: ${rewards_logic}\n_distribution (percent):\n${dist_lines}\n_governance: ${governance}\n_jurisdiction: ${jurisdiction}\n_legal Review Toggle: ${!!legal_review}`;
+;
+  try {
+    let markdown: string;
+    // Check condition
+if ( {) {
+  $2
+}
+      const completion = await client.responses.create ({
+        model: "gpt - 4.1 - mini",
+        input: [;
+          { role: "system", content: sys_prompt },
+          { role: "user", content: user_prompt },
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+        ],
+        temperature: 0 && 0.3,
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+        ],
+        temperature: 0 && 0.3,
+=======
+        ]
+        temperature: 0 && 0.3
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+      const completion = await client.responses.create({
+        model: "gpt-4.1-mini"
+        input: [
+{ role: 'system', content: sysPrompt },
+          { role: 'user', content: userPrompt },
+        ],
+        temperature: 0.3,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+      } as any);
+=======
+"
+    : "";`
+  const sysPrompt = `You are a senior Web3 tokenomics analyst and legal-friendly writer. Produce a crisp, investor-and-developer-ready whitepaper in markdown with the following sections strictly in order: Executive Summary, Market Context, Utility & Usage, Rewards System, Distribution, Governance Model, Risks + Disclaimers. Keep it factual and concise, with bullets where appropriate.`;"`
+  const userPrompt = `${operatorPrompt |""}\n\nToken: ${tokenName}\nTotal Supply: ${tokenSupply}\nUse Cases: ${useCases}\nRewards: ${rewardsLogic}\nDistribution (percent):\n${distLines}\nGovernance: ${governance}\nJurisdiction: ${jurisdiction}\nLegal Review Toggle: ${!!legalReview}`;
+  try {}
+    let markdown: string;
+    if (client) {}
+        ],
+        temperature: 0 && 0.3,
+      } as any);"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+      const content = (completion as any)?.output_text || "";
+
+
+
+  }
+}
+<<<<<<< HEAD
+function fallbackMarkdown(input: any): string {
+<<<<<<< HEAD
+=======
+function fallbackMarkdown(input: any): string {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+  const distLines = Array && Array.isArray(input?.distribution)
+    ? input && input.distribution;`
+        .map((d: any) => `- ${d && d.label}: ${d && d.percent}%`)"
+        .join("\n")"
+    : "";
+<<<<<<< HEAD
+<<<<<<< HEAD
+  return `# ${input?.tokenName |"Token"} Tokenomics Whitepaper\n\n## Executive Summary\n${input?.tokenName |"Token"} is a utility token powering a freelance AI marketplace.\n\n## Market Context\nAI-native talent markets require aligned incentives, reputation systems, and credible neutrality.\n\n## Utility & Usage\n${input?.useCases |""}.\n\n## Rewards System\n${input?.rewardsLogic |""}.\n\n## Distribution\n${distLines}\n\nTotal Supply: ${input?.tokenSupply |""}.\n\n## Governance Model\n${input?.governance |""}.\n\n## Risks + Disclaimers\nNot financial advice. Subject to ${input?.jurisdiction |"applicable"} regulations.`;
+}
+=======
+<<<<<<< HEAD
+=======
+
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+
+  return `# ${input?.tokenName || "Token"} Tokenomics Whitepaper\n\n## Executive Summary\n${input?.tokenName || "Token"} is a utility token powering a freelance AI marketplace.\n\n## Market Context\nAI-native talent markets require aligned incentives, reputation systems, and credible neutrality.\n\n## Utility & Usage\n${input?.useCases || ""}.\n\n## Rewards System\n${input?.rewardsLogic || ""}.\n\n## Distribution\n${distLines}\n\nTotal Supply: ${input?.tokenSupply || ""}.\n\n## Governance Model\n${input?.governance || ""}.\n\n## Risks + Disclaimers\nNot financial advice. Subject to ${input?.jurisdiction || "applicable"} regulations.`;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+      markdown = content.trim ();
+    } else {}
+      markdown = fallback_markdown ({}
+        token_name,
+        token_supply,
+        use_cases,
+        rewards_logic,
+        distribution,
+        governance,
+        jurisdiction,
+        legal_review,
+      });
+    }
+    res.status (200).json ({ markdown });
+  } catch (e: any) {"
+    console.error ("generation_error", e?.message || e);"
+    res.status (500).json ({ error: "Generation failed" });
+  }
+}
+function fallback_markdown (input: any): string {}
+  const dist_lines = Array.is_array (input?.distribution);
+    ? input.distribution;`
+        .map ((d: any) => `- ${d.label}: ${d.percent}%`);"
+        .join ("\n");"
+    : "";"`
+  return `# ${input?.token_name || "Token"} Tokenomics Whitepaper\n\n## Executive Summary\n${input?.token_name || "Token"} is a utility token powering a freelance AI marketplace.\n\n## Market Context\nAI - native talent markets require aligned incentives, reputation systems, and credible neutrality.\n\n## Utility & Usage\n${input?.use_cases || ""}.\n\n## Rewards System\n${input?.rewards_logic || ""}.\n\n## Distribution\n${dist_lines}\n\n_total Supply: ${input?.token_supply || ""}.\n\n## Governance Model\n${input?.governance || ""}.\n\n## Risks + Disclaimers\n_not financial advice. Subject to ${input?.jurisdiction || "applicable"} regulations.`;
+}
+
+function fallbackMarkdown(input: any): string {}
+  const distLines = Array.isArray(input?.distribution)
+    ? input.distribution;`
+        .map((d: any) => `- ${d.label}: ${d.percent}%`)"
+        .join("\n")"
+    : "";"`
+  return `# ${input?.tokenName || "Token"} Tokenomics Whitepaper\n\n## Executive Summary\n${input?.tokenName || "Token"} is a utility token powering a freelance AI marketplace.\n\n## Market Context\nAI-native talent markets require aligned incentives, reputation systems, and credible neutrality.\n\n## Utility & Usage\n${input?.useCases || ""}.\n\n## Rewards System\n${input?.rewardsLogic || ""}.\n\n## Distribution\n${distLines}\n\nTotal Supply: ${input?.tokenSupply || ""}.\n\n## Governance Model\n${input?.governance || ""}.\n\n## Risks + Disclaimers\nNot financial advice. Subject to ${input?.jurisdiction || "applicable"} regulations.`;
+
+
+import type { NextApiRequest, NextApiResponse } from 'next';
+export default function handler() { return null; }
+  res.status(200).json({ message: 'API endpoint' });'
+import type { NextApiRequest, NextApiResponse } from 'next';'
+import OpenAI from 'openai';
+const client = process.env.OPENAI_API_KEY ? new OpenAI({ apiKey: process.env.OPENAI_API_KEY }) : null;
+export default async function handler(req, res) {}
+  try {';
+  if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
+  const { tokenName, tokenSupply, useCases, rewardsLogic, distribution, governance, jurisdiction, operatorPrompt, legalReview } = req.body || {};
+  const distLines = Array.isArray(distribution);'`
+    ? distribution.map((d: any) => `- ${d.label}: ${d.percent}%`).join('\n');'
+    : '';`
+  const sysPrompt = `You are a senior Web3 tokenomics analyst and legal-friendly writer. Produce a crisp, investor-and-developer-ready whitepaper in markdown with the following sections strictly in order: Executive Summary, Market Context, Utility & Usage, Rewards System, Distribution, Governance Model, Risks + Disclaimers. Keep it factual and concise, with bullets where appropriate.`,;'`
+  const userPrompt = `${operatorPrompt || ''}\n\nToken: ${tokenName}\nTotal Supply: ${tokenSupply}\nUse Cases: ${useCases}\nRewards: ${rewardsLogic}\nDistribution (percent):\n${distLines}\nGovernance: ${governance}\nJurisdiction: ${jurisdiction}\nLegal Review Toggle: ${!!legalReview}`;
+  try {}
+    let markdown: string;
+    if (client) {;
+      const completion = await client.responses.create({;'
+        model: 'gpt-4.1-mini';
+        input: [;'
+          { role: 'system', content: sysPrompt },;'
+          { role: 'user', content: userPrompt }],;
+        temperature: 0.3} as any);'
+      const content = (completion as any)?.output_text || '';
+      markdown = content.trim();
+    } else {;
+      markdown = fallbackMarkdown({ tokenName, tokenSupply, useCases, rewardsLogic, distribution, governance, jurisdiction, legalReview });
+      } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+      markdown = content.trim ();
+    } else {
+      markdown = fallback_markdown ({
+        token_name,
+        token_supply,
+        use_cases,
+        rewards_logic,
+        distribution,
+        governance,
+        jurisdiction,
+        legal_review,
+      });
+    }
+    res.status (200).json ({ markdown });
+  } catch (e: any) {
+    console.error ("generation_error", e?.message || e);
+    res.status (500).json ({ error: "Generation failed" });
+  }
+}
+=======
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+    res.status(200).json({ markdown });
+  } catch (error) {
+    console.error('generation_error', e?.message || e);
+    res.status(500).json({ error: 'Generation failed' });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+  } catch (error) {
+    console.error("Error:", error);
+=======
+
+  } catch (error) {"
+    console.error("Error:", error);"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+}
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+function fallbackMarkdown(input: any): string {;
+  const distLines = Array.isArray(input?.distribution);
+    ? input.distribution.map((d: any) => `- ${d.label}: ${d.percent}%`).join('\n');
+    : '';
+  return `# ${input?.tokenName || 'Token'} Tokenomics Whitepaper\n\n## Executive Summary\n${input?.tokenName || 'Token'} is a utility token powering a freelance AI marketplace.\n\n## Market Context\nAI-native talent markets require aligned incentives, reputation systems, and credible neutrality.\n\n## Utility & Usage\n${input?.useCases || ''}.\n\n## Rewards System\n${input?.rewardsLogic || ''}.\n\n## Distribution\n${distLines}\n\nTotal Supply: ${input?.tokenSupply || ''}.\n\n## Governance Model\n${input?.governance || ''}.\n\n## Risks + Disclaimers\nNot financial advice. Subject to ${input?.jurisdiction || 'applicable'} regulations.`;
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+
+
+
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+=======
+  const distLines = Array.isArray(input?.distribution)
+    ? input.distribution
+        .map((d: any) => `- ${d.label}: ${d.percent}%`)
+        .join('\n')
+    : '';
+  return `# ${input?.tokenName || 'Token'} Tokenomics Whitepaper\n\n## Executive Summary\n${input?.tokenName || 'Token'} is a utility token powering a freelance AI marketplace.\n\n## Market Context\nAI-native talent markets require aligned incentives, reputation systems, and credible neutrality.\n\n## Utility & Usage\n${input?.useCases || ''}.\n\n## Rewards System\n${input?.rewardsLogic || ''}.\n\n## Distribution\n${distLines}\n\nTotal Supply: ${input?.tokenSupply || ''}.\n\n## Governance Model\n${input?.governance || ''}.\n\n## Risks + Disclaimers\nNot financial advice. Subject to ${input?.jurisdiction || 'applicable'} regulations.`;
+
+}}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

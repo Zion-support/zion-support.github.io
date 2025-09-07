@@ -1,3 +1,67 @@
+<<<<<<< HEAD
+<<<<<<< HEAD:backup-problematic-files/pages_backup/solutions/retail.tsx
+import Layout from '../../components/Layout';
+import { ShoppingCart, Users, BarChart, Smartphone, Package } from 'lucide-react';
+import React from 'react';
+import Layout from '../../components/Layout';';
+import { ShoppingCart, Users, BarChart, Smartphone, Package, CheckCircle, ArrowRight } from 'lucide-react';
+import Layout from '../../components/Layout';
+import { ShoppingCart, Users, BarChart3, Smartphone, CheckCircle, ArrowRight } from 'lucide-react';
+const features = [;
+  {}
+    icon: ShoppingCart,;
+    title: 'E-commerce Platforms,',;
+    description: 'Custom e-commerce solutions that provide seamless shopping experiences across all devices.'';
+  },;
+  {}
+    icon: Users,;
+    title: 'Customer Analytics,',;
+    description: 'Advanced customer behavior analytics to optimize marketing and improve conversion rates.'';
+  },;
+  {}
+    icon: BarChart,;
+    title: 'Inventory Management,',;
+    description: 'Real-time inventory tracking and management systems to optimize stock levels and reduce costs.'';
+  },;
+  {}
+    icon: Smartphone,;
+    title: 'Mobile Commerce,',;
+    description: 'Mobile-first shopping experiences with native apps and progressive web applications.'';
+  },;
+  {}
+    icon: Package,;
+    title: 'Supply Chain Optimization,',;
+    description: 'End-to-end supply chain visibility and optimization using AI and machine learning.'';
+import React from 'react';
+=======
+import * as React from 'react';
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/solutions/retail.tsx
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { 
+  ShoppingCart, 
+  Users, 
+  BarChart3, 
+  Smartphone, 
+  CheckCircle, 
+  ArrowRight 
+} from 'lucide-react';
+
+const features = [
+  {
+    icon: ShoppingCart,
+    title: 'E-commerce Platform',
+    description: 'Complete online store solution with payment processing'
+  },
+  {
+    icon: Users,
+    title: 'Customer Analytics',
+    description: 'Deep insights into customer behavior and preferences'
+  },
+  {
+    icon: BarChart3,
+=======
 import Layout from '../../components/Layout';
 import { ShoppingCart, Users, BarChart, Smartphone, Package } from 'lucide-react';
 import React from 'react';
@@ -121,8 +185,18 @@ pr-12325
     title: 'Mobile Commerce',
     description: 'Mobile-first shopping experience and mobile app solutions
     icon: CheckCircle,
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     title: 'Inventory Management',
+<<<<<<< HEAD
+    description: 'Real-time inventory tracking and automated reordering'
+  },
+  {
+<<<<<<< HEAD
+<<<<<<< HEAD:backup-problematic-files/pages_backup/solutions/retail.tsx
+=======
+=======
     description: 'Real-time inventory tracking and automated reordering
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     icon: ArrowRight,
     title: 'Omnichannel',
     description: 'Seamless integration across all sales channels'
@@ -327,6 +401,7 @@ const benefits = [;
   'Streamlined operations',;
   'Mobile-first customer engagement';
 ];
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     icon: ArrowRight,
     title: 'Omnichannel',
     description: 'Seamless integration across all sales channels'
@@ -362,7 +437,11 @@ export default function RetailSolutionsPage() {
                 </span>;
               </h1>;
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">";
+<<<<<<< HEAD
+                Revolutionize retail operations with our comprehensive technology solutions.
+=======
                 Revolutionize retail operations with our comprehensive technology solutions. 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 From e-commerce platforms to inventory management, we help retailers deliver;
                 exceptional customer experiences and optimize business operations.;
               </p>;
@@ -386,7 +465,11 @@ export default function RetailSolutionsPage() {
                 Comprehensive Retail Technology Solutions;
               </h2>;
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">";
+<<<<<<< HEAD
+                Our retail solutions are designed to enhance customer experience,
+=======
                 Our retail solutions are designed to enhance customer experience, 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 optimize operations, and drive business growth across all channels.,
               </p>;
             </div>;
@@ -408,6 +491,12 @@ const benefits = [
   'Mobile-first customer engagement'
 ];
 export default function RetailSolutions() {
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/solutions/retail.tsx
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     icon: Smartphone,
     title: 'Mobile Commerce',
     description: 'Mobile-optimized shopping experience'
@@ -415,6 +504,7 @@ export default function RetailSolutions() {
 ];
 
 export default function RetailSolutionsPage() {
+<<<<<<< HEAD
   return (
     <>
       <Head>
@@ -437,10 +527,52 @@ export default function RetailSolutionsPage() {
                 Transform your retail business with cutting-edge technology solutions.
               </p>
             </motion.div>
+=======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+  return (
+    <>
+      <Head>
+        <title>Retail Solutions - Zion Tech Group</title>
+        <meta name="description" content="Comprehensive retail technology solutions for modern commerce." />
+      </Head>
+
+      <div className="min-h-screen bg-gray-50">
+        {/* Hero Section */}
+        <section className="bg-gradient-to-r from-green-600 to-blue-600 text-white py-20">
+          <div className="max-w-7xl mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center"
+            >
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">Retail Solutions</h1>
+              <p className="text-xl text-green-100 mb-8 max-w-3xl mx-auto">
+                Transform your retail business with cutting-edge technology solutions.
+              </p>
+<<<<<<< HEAD
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                  Get Started
+                </button>
+                <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors">
+                  View Demo
+                </button>
+              </div>
+            </div>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+            </motion.div>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           </div>
         </section>
 
         {/* Features Section */}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
             <motion.div
@@ -452,13 +584,48 @@ export default function RetailSolutionsPage() {
               <h2 className="text-3xl md:text-4xl font-bold mb-4">Retail Features</h2>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
                 Everything you need to succeed in modern retail.
+<<<<<<< HEAD
               </p>
+<<<<<<< HEAD:backup-problematic-files/pages_backup/solutions/retail.tsx
+=======
+        <section className="py-20 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Retail Technology Features
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Comprehensive solutions designed to enhance every aspect of your retail business.
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+              </p>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<<<<<<< HEAD
+=======
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/solutions/retail.tsx
+            </motion.div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+              {features.map((feature, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 text-center"
+                >
+                  <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                    <feature.icon className="w-6 h-6 text-green-600" />
+                  </div>
+<<<<<<< HEAD:backup-problematic-files/pages_backup/solutions/retail.tsx
+=======
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
@@ -472,6 +639,7 @@ export default function RetailSolutionsPage() {
                   <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mx-auto mb-4">
                     <feature.icon className="w-6 h-6 text-green-600" />
                   </div>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">
                     {feature.title}
                   </h3>
@@ -557,7 +725,12 @@ export default function RetailSolutionsPage() {
                 </button>;
                 <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-medium">";
                   Download Retail Guide;
+<<<<<<< HEAD
+<<<<<<< HEAD
+                </ul>;
+=======
                 </button>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               </div>;
             </div>;
           </div>;
@@ -596,15 +769,29 @@ export default function RetailSolutionsPage() {
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </button>
               </div>
+<<<<<<< HEAD
+=======
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/solutions/retail.tsx
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
                   <p className="text-gray-600">{feature.description}</p>
                 </motion.div>
               ))}
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         <section className="py-20 bg-green-600">
           <div className="max-w-7xl mx-auto px-4 text-center">
             <motion.div
@@ -634,12 +821,48 @@ export default function RetailSolutionsPage() {
                 </Link>
               </div>
             </motion.div>
+<<<<<<< HEAD
+          </div>
+        </section>
+      </div>
+<<<<<<< HEAD:backup-problematic-files/pages_backup/solutions/retail.tsx
+    </Layout>
+    </Layout>
+    </>
+=======
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/solutions/retail.tsx
+    </>
+<<<<<<< HEAD
+
+=======
+        <section className="py-20 bg-gray-900 text-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              Ready to Transform Your Retail Business?
+            </h2>
+            <p className="text-xl mb-8 max-w-3xl mx-auto">
+              Contact our retail solutions team to discuss your specific requirements
+              and discover how we can help grow your retail business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors">
+                Contact Retail Team
+              </button>
+              <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-colors">
+                Download Retail Brochure
+              </button>
+            </div>
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           </div>
         </section>
       </div>
     </Layout>
     </Layout>
     </>
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
     </>
   );
 }
@@ -747,3 +970,4 @@ pr-12325
     
     
     </>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -1,5 +1,56 @@
+<<<<<<< HEAD:pages_backup/proposals/international/index.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD:pages/proposals/international/index.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react',;
+;
+export default function InternationalProposals() {
+=======
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/proposals/international/index.tsx
 
 
+<<<<<<< HEAD:pages_backup/proposals/international/index.tsx
+      setLoading(false)
+    })()
+  }, [])
+<<<<<<< HEAD:pages_backup/proposals/international/index.tsx
+  async function updateStatus(id: string, status: string) {
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+    await fetch('/api/proposals/status', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ id, status }) })
+=======
+  async function updateStatus() { return null; }
+    await fetch('/api/proposals/status', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ id, status }) })'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/proposals/international/index.tsx
+    const res = await fetch('/api/proposals/list')
+    const data = await res.json()
+    setItems(data.proposals |[])
+
+<<<<<<< HEAD:pages_backup/proposals/international/index.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/proposals/international/index.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+import React, { useEffect, useState } from 'react';
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/proposals/international/index.tsx
 export default function InternationalProposals() {
       const res = await fetch('/api/proposals/list');
       const data = await res.json();
@@ -94,7 +145,20 @@ setLoading(false);
       )}
     </div>
   );
+<<<<<<< HEAD:pages_backup/proposals/international/index.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD:pages/proposals/international/index.tsx
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
 origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/proposals/international/index.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/proposals/international/index.tsx
   }
     await fetch('/api/proposals/status', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ id, status }) }),
     const res = await fetch('/api/proposals/list'),
@@ -121,6 +185,17 @@ export default function InternationalProposals(req, res) {
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+<<<<<<< HEAD:pages_backup/proposals/international/index.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD
+  }
+}
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+=======
+=======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/proposals/international/index.tsx
 import React, { useEffect, useState } from 'react',
 ;
 export default /**
@@ -146,36 +221,87 @@ function update_status() {
     const data = await res.json (),
     set_items (data.proposals || []);
   }
+<<<<<<< HEAD:pages_backup/proposals/international/index.tsx
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/proposals/international/index.tsx
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/proposals/international/index.tsx
 
 
   }
 }
+<<<<<<< HEAD:pages_backup/proposals/international/index.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/proposals/international/index.tsx
   return (
-    <div className="space - y-6">;
+    <div className="space - y-6">;"
       <h1 className="text - 2xl font - semibold">International Proposals</h1>;
       {loading ? (
+<<<<<<< HEAD:pages_backup/proposals/international/index.tsx
+<<<<<<< HEAD:pages_backup/proposals/international/index.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/proposals/international/index.tsx
                 {p.artifacts?.markdownPath && <a href={p.artifacts.markdownPath} target="_blank" rel="noreferrer" className="underline">Markdown</Link>  } catch (error) {
     console.error("Error:", error);
+=======
+"
+                {p.artifacts?.markdownPath && <a href={p.artifacts.markdownPath} target="_blank" rel="noreferrer" className="underline">Markdown</Link>  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}"
+                {p.artifacts?.pdfPath && <a href={p.artifacts.pdfPath} target="_blank" rel="noreferrer" className="underline">PDF</Link>  } catch (error) {"
+    console.error("Error:", error);"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/proposals/international/index.tsx
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-                {p.artifacts?.pdfPath && <a href={p.artifacts.pdfPath} target="_blank" rel="noreferrer" className="underline">PDF</Link>  } catch (error) {
-    console.error("Error:", error);
+                {p.artifacts?.ipfsCid && <span>IPFS: {p.artifacts.ipfsCid}</span>  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-                {p.artifacts?.ipfsCid && <span>IPFS: {p.artifacts.ipfsCid}</span>  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                {p.artifacts?.ensRecordHash && <span>ENS: {p.artifacts.ensRecordHash.slice(0, 16)}…</span>  } catch (error) {
-    console.error("Error:", error);
+                {p.artifacts?.ensRecordHash && <span>ENS: {p.artifacts.ensRecordHash.slice(0, 16)}…</span>  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 
+<<<<<<< HEAD:pages_backup/proposals/international/index.tsx
+
+<<<<<<< HEAD:pages_backup/proposals/international/index.tsx
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/proposals/international/index.tsx
               </div>
               <div className="mt-3 flex items-center gap-2 text-xs">
                 <button onClick={() => updateStatus(p.id, 'Under Review')} className="px-2 py-1 border rounded">Mark Under Review</button>
@@ -183,6 +309,44 @@ function update_status() {
                 <button onClick={() => updateStatus(p.id, 'Rejected')} className="px-2 py-1 border rounded">Mark Rejected</button>
               </div>
             </div>
+<<<<<<< HEAD
+<<<<<<< HEAD
+          ))}
+          {!items.length && <div className="opacity-70">No proposals yet.</div>}
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+<<<<<<< HEAD
+=======
+=======
+              </div>"
+              <div className="mt-3 flex items-center gap-2 text-xs">'"
+                <button onClick={() => updateStatus(p.id, 'Under Review')} className="px-2 py-1 border rounded">Mark Under Review</button>'"
+                <button onClick={() => updateStatus(p.id, 'Accepted')} className="px-2 py-1 border rounded">Mark Accepted</button>'"
+                <button onClick={() => updateStatus(p.id, 'Rejected')} className="px-2 py-1 border rounded">Mark Rejected</button>
+              </div>
+            </div>
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/proposals/international/index.tsx
+
+
+
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+        </div>
+      )}
+    </div>
+  );
+};
+<<<<<<< HEAD:pages_backup/proposals/international/index.tsx
+=======
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+<<<<<<< HEAD
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
 
 }
 
@@ -245,9 +409,18 @@ function update_status() {
         </div>
       )}
     </div>
+<<<<<<< HEAD:pages_backup/proposals/international/index.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD:pages/proposals/international/index.tsx
+<<<<<<< HEAD
+  );
+};
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
   );
 };
 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/proposals/international/index.tsx
           ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -258,21 +431,79 @@ function update_status() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+          ))  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}"
+          {!items.length && <div className="opacity-70">No proposals yet.</div>  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/proposals/international/index.tsx
         </div>
-      )  } catch (error) {
-    console.error("Error:", error);
+      )  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
     </div>;
   );
-  } catch (error) {
-    console.error("Error:", error);
+  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD:pages_backup/proposals/international/index.tsx
+<<<<<<< HEAD:pages_backup/proposals/international/index.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/proposals/international/index.tsx
+
+
+<<<<<<< HEAD:pages_backup/proposals/international/index.tsx
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+  )
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  )
+}
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/proposals/international/index.tsx
+=======
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/proposals/international/index.tsx
+=======
+  )
+}
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
 
 }
 
   )
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/proposals/international/index.tsx

@@ -71,8 +71,37 @@ class ContinuousLinter {}
 // Run if called directly;
 if (require.main === module) {}
   const linter = new ContinuousLinter();
+<<<<<<< HEAD
+  
+  const command = process.argv[2];
+  
+  if (command === 'watch') {}
+    linter.run();
+  } else if (command === 'fix') {}
+    linter.runFullLint().then(success => {})
+      process.exit(success ? 0 : 1);
+    }
+});
+  } else {}
+    console.log('"Usage": node continuous-linter.cjs [watch|fix]');
+    process.exit(1);
+  };
+};
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+module.exports = ContinuousLinter;
+module.exports = ContinuousLinter;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
   const command = process.argv[2];"
 
     process.exit(1);
 module.exports = ContinuousLinter;
 `;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

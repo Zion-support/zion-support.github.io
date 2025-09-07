@@ -1,6 +1,17 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+interface SearchResult {
+  title: string, description: string
+  url: string, type: 'service' | 'page' | 'category'
+=======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
 interface SearchResult {
   title: string;, description: string
   url: string;, type: 'service' | 'page' | 'category'
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React, { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
 
@@ -10,11 +21,21 @@ interface SearchResult {
   url: string;
   type: 'service' | 'page' | 'category';
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const SearchBar: React.FC = () => {
 interface SearchResult {;
   title: string;, description: string;,;
   url: string;, type: 'service' | 'page' | 'category';,;
 }
+<<<<<<< HEAD
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 const SearchBar: React.FC = () => {
   const [query, setQuery] = useState('');
@@ -39,10 +60,30 @@ const SearchBar: React.FC = () => {
       type: 'category';,
     },
     {
+<<<<<<< HEAD
+      title: 'IT Services',
+      description: 'Comprehensive IT solutions including Cloud Migration, Cybersecurity, and more',
+      url: '/it-services',
+      type: 'category',
+    },
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+    {
+      title: 'Cloud Cost Guard',
+      description: 'FinOps Assistant for anomaly detection and cost optimization',
+      url: '/services',
+      type: 'service',
+=======
       title: 'IT Services';,
       description: 'Comprehensive IT solutions including Cloud Migration;, Cybersecurity, and more',
       url: '/it-services';,
       type: 'category';,
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     },
     {
       title: 'Cloud Cost Guard';,
@@ -192,11 +233,18 @@ const SearchBar: React.FC = () => {
 };
 
 export default SearchBar;
+<<<<<<< HEAD
+<<<<<<< HEAD
+interface SearchResult {
+  title: string, description: string
+  url: string, type: 'service' | 'page' | 'category'
+=======
 interface SearchResult {
   title: string, description: string
   url: string, type: 'service' | 'page' | 'category'
   title: string;, description: string
   url: string;, type: 'service' | 'page' | 'category'
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 pr-12243
 import React, { useState } from 'react';
 import { Search, X } from 'lucide-react';
@@ -207,6 +255,15 @@ interface SearchBarProps {
   onSearch?: (query: string) => void;
   placeholder?: string;
   className?: string;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+main
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
 
 const SearchBar: React.FC<SearchBarProps> = ({
@@ -216,6 +273,14 @@ const SearchBar: React.FC<SearchBarProps> = ({
 }) => {
   const [query, setQuery] = useState('');
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (onSearch && query.trim()) {
@@ -238,7 +303,15 @@ const SearchBar: React.FC<SearchBarProps> = ({
     setResults(filteredResults);
     setIsOpen(true);
     setIsLoading(false);
+<<<<<<< HEAD
+<<<<<<< HEAD
 pr-12243
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+pr-12243
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   };
 
   const handleClear = () => {
@@ -263,6 +336,10 @@ pr-12243
               type="button"
               onClick={handleClear}
               className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600"
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   const [results, setResults] = useState<SearchResult[]>([]);
   const [isOpen, setIsOpen] = useState(false);
   const [selectedIndex, setSelectedIndex] = useState(-1);
@@ -375,6 +452,11 @@ origin/cursor/automate-test-fix-improve-and-merge-code-a7a7
               aria-selected={index === selectedIndex}
               tabIndex={-1}
 origin/cursor/analyze-improve-and-deploy-application-0a01
+<<<<<<< HEAD
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             >
               <X className="w-4 h-4" />
             </button>
@@ -386,6 +468,20 @@ origin/cursor/analyze-improve-and-deploy-application-0a01
 };
 
 export default SearchBar;
+<<<<<<< HEAD
+<<<<<<< HEAD
+main
+pr-12243
+=======
+
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
 export default SearchBar;
 main
 pr-12243
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

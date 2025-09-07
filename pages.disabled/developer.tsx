@@ -1,3 +1,168 @@
+<<<<<<< HEAD:pages_backup/developer.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD:pages/developer.tsx
+<<<<<<< HEAD
+
+
+<<<<<<< HEAD
+import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
+import Link from 'next/link';
+import React from 'react',;
+import Head from 'next/head',;
+import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground',;
+import Link from 'next/link',;
+import React from 'react'
+import Head from 'next/head'
+import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground'
+import Link from 'next/link'
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+export default function DeveloperPage() {
+  return (
+    <>
+      <Head>
+        <title>Developer Portal | Zion Tech Group</title>
+        <meta name="description" content="Developer resources, API keys, examples, and SDKs." />
+        <link rel="canonical" href="https://ziontechgroup.com/developer" />
+      </Head>
+      <div className="container mx-auto px-4 py-16 text-gray-200">
+        <h1 className="text-4xl md:text-6xl font-bold mb-4">Developer Portal</h1>
+        <p className="text-gray-300 mb-6">Access docs, SDKs, and quickstarts for all services. Contact us for enterprise onboarding.</p>
+              <div className="space-x-4">
+
+
+        <a href="/api-docs" className="text-cyan-400 underline">API Docs</Link>
+        <a href="/docs" className="text-cyan-400 underline">Guides</Link>
+        <a href="/support" className="text-cyan-400 underline">Support</Link>
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+
+
+      </div>
+      </div>
+    </>
+  )
+
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+import React from 'react';
+import Head from 'next/head';
+import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
+import Link from 'next/link';
+export default function DeveloperPage() {_return (
+    <>
+      <Head>
+        <title>Developer Portal | Zion Tech Group</title>
+        <meta name="description" content="Developer resources, _API keys, _examples, _and SDKs." />
+        <link rel="canonical" href="https://ziontechgroup.com/developer" />
+      </Head>
+      <div className="container mx-auto px-4 py-16 text-gray-200">
+        <h1 className="text-4xl md:text-6xl font-bold mb-4">Developer Portal</h1>
+        <p className="text-gray-300 mb-6">Access docs, _SDKs, _and quickstarts for all services. Contact us for enterprise onboarding.</p>
+              <div className="space-x-4">
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+        <a href="/api-docs" className="text-cyan-400 underline">API Docs</a>
+        <a href="/docs" className="text-cyan-400 underline">Guides</a>
+        <a href="/support" className="text-cyan-400 underline">Support</a>
+      </div>
+      </div>
+    </>
+  )
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+<<<<<<< HEAD
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+}
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+import React from 'react',
+import Head from 'next / head',
+import UltraFuturisticBackground from '../components / ui / UltraFuturisticBackground',
+import Link from 'next / link',
+export default /**
+ * DeveloperPage - Function description
+ */
+function DeveloperPage() {
+  return (
+    <>;
+      <Head>;
+        <title > Developer Portal | Zion Tech Group</title>;
+        <meta name="description" content="Developer resources, API keys, examples, and SDKs." />;
+        <link rel="canonical" href="https://ziontechgroup.com / developer" />;
+      </Head>;
+      <div className="container mx - auto px - 4 py - 16 text - gray - 200">;
+        <h1 className="text - 4xl md:text - 6xl font - bold mb - 4">Developer Portal</h1>;
+        <p className="text - gray - 300 mb - 6">Access docs, SDKs, and quickstarts for all services. Contact us for enterprise onboarding.</p>;
+              <div className="space - x-4">;
+        <a href="/api - docs" className="text - cyan - 400 underline">API Docs</a>;
+        <a href="/docs" className="text - cyan - 400 underline">Guides</a>;
+        <a href="/support" className="text - cyan - 400 underline">Support</a>;
+      </div>;
+      </div>;
+    </>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+=======
+
+
+
+import React from 'react';
+import Head from 'next/head';
+
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
+import Link from 'next/link';
+=======
+=======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/developer.tsx
+import React from 'react',
+import Head from 'next/head',
+origin/cursor/automate-test-improve-and-merge-code-2533
+import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
+import Link from 'next/link';
+<<<<<<< HEAD:pages/developer.tsx
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
 
 
 
@@ -6,6 +171,7 @@ import Head from 'next/head',;
 origin/cursor/automate-test-improve-and-merge-code-2533
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import Link from 'next/link';
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/developer.tsx
 import React from 'react',;
 import Head from 'next/head',;
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground',;
@@ -20,14 +186,27 @@ export default function DeveloperPage() {
     <>
       <Head>
         <title>Developer Portal | Zion Tech Group</title>
+<<<<<<< HEAD:pages_backup/developer.tsx
+<<<<<<< HEAD
         <meta name="description" content="Developer resources, API keys, examples, and SDKs." />
         <link rel="canonical" href="https://ziontechgroup.com/developer" />
+      </Head>
+=======
+=======
+        <meta name="description" content="Developer resources, API keys, examples, and SDKs." />
+        <link rel="canonical" href="https://ziontechgroup.com/developer" />
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/developer.tsx
 <meta
           name='description'
           content='Developer resources, API keys, examples, and SDKs.'
         />
         <link rel='canonical' href='https://ziontechgroup.com/developer' />
       </Head>
+<<<<<<< HEAD:pages_backup/developer.tsx
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/developer.tsx
       <div className="container mx-auto px-4 py-16 text-gray-200">
         <h1 className="text-4xl md:text-6xl font-bold mb-4">Developer Portal</h1>
         <p className="text-gray-300 mb-6">Access docs, SDKs, and quickstarts for all services. Contact us for enterprise onboarding.</p>
@@ -63,11 +242,36 @@ export default function DeveloperPage() {_return (
       </div>
     </>
   )
+<<<<<<< HEAD:pages_backup/developer.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/developer.tsx
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD:pages_backup/developer.tsx
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/developer.tsx
+=======
+import React from 'react',
+import Head from 'next/head',
+origin/cursor/automate-test-improve-and-merge-code-2533
+import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
+import Link from 'next/link';
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/developer.tsx
       <div className='container mx-auto px-4 py-16 text-gray-200'>
         <h1 className='text-4xl md:text-6xl font-bold mb-4'>
           Developer Portal
@@ -561,4 +765,17 @@ export default function DeveloperPortal() {
     </>
   );
 }
+<<<<<<< HEAD:pages_backup/developer.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD:pages/developer.tsx
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/developer.tsx
+=======
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/developer.tsx

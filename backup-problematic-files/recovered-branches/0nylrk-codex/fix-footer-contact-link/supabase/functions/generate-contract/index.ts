@@ -176,12 +176,21 @@ interface Milestone {title: string,
 
 serve(async (req) => {_// Handle CORS preflight requests,
 if (req.method === 'OPTIONS') {
+<<<<<<< HEAD
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     return new Response(null, { headers: corsHeaders })
   }
 
   try {
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
     // Get the OpenAI API key from environment variables,
 const apiKey = Deno.env.get('OPENAIAPI_KEY'),
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     if (!apiKey) {
       throw new Error('OPENAIAPI_KEY is not set')
     }
@@ -198,19 +207,30 @@ const {
       paymentAmount,
       additionalClauses,
       milestones
+<<<<<<< HEAD
+
+=======
     } = await req.json(),
     // Create the contract prompt for OpenAI,
 let prompt = `
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     Please generate a professional contractual agreement between ${clientName} (Client) and ${talentName} (Talent) for the following project:
 
     Project Name: ${projectName}
     Project Scope: ${scopeSummary}
     Start Date: ${new Date(startDate).toLocaleDateString()}
     ${endDate ? `End Date: ${new Date(endDate).toLocaleDateString()}` : 'End Date: To be determined based on project completion'}
+<<<<<<< HEAD
+
+    Payment Terms: ${paymentTerms}
+    Payment Amount: ${paymentAmount}
+
+=======
     
     Payment Terms: ${paymentTerms}
     Payment Amount: ${paymentAmount}
     
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     The contract should include standard sections like: - Parties involved
     - Project scope
     - Timeline
@@ -219,6 +239,11 @@ let prompt = `
     `,
 
     if (additionalClauses && additionalClauses.length > 0) {prompt += `
+<<<<<<< HEAD
+
+      Please also include the following additional clauses:
+
+=======
       
       Please also include the following additional clauses:
       ${additionalClauses.includes('nda') ? '- Confidentiality/Non-disclosure agreement' : ''}
@@ -233,20 +258,36 @@ if (milestones && milestones.length > 0) {prompt += `
       The project will be divided into the following milestones: `,
       
       milestones.forEach(_(milestone: Milestone, index: number) => {
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         prompt += `
         Milestone ${index + 1}: ${milestone.title}
         - Description: ${milestone.description}
         - Due Date: ${new Date(milestone.dueDate).toLocaleDateString()}
         - Estimated Work: ${milestone.estimatedHours} hours
         `
+<<<<<<< HEAD
+      }),
+      prompt += `
+
+=======
       }),      
       prompt += `
       
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       Please structure the contract to include these milestones in the payment schedule, with payments tied to the completion and approval of each milestone.
       `
     }
 
     prompt += `
+<<<<<<< HEAD
+
+    Format the contract professionally with proper sections, numbering, and formatting. Use markdown formatting.
+
+    }), {
+      headers: { ...corsHeaders, 'Content-Type': 'application/json' }})
+  } catch (error) {
+
+=======
     
     Format the contract professionally with proper sections, numbering, and formatting. Use markdown formatting.
     `,
@@ -292,3 +333,4 @@ const response = await fetch('https://api.openai.com/v1/chat/completions', {
         headers: { ...corsHeaders, 'Content-Type': 'application/json' }}
     )  }
 }),
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

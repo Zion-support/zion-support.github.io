@@ -1,4 +1,21 @@
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+import React, { useState } from "react",;
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Button } from "@/components/ui/button",;
+import { Badge } from "@/components/ui/badge",;
+import { Interview } from "@/types/interview",;
+import { useAuth } from "@/hooks/useAuth",;
+import { useInterviews } from "@/hooks/useInterviews",;
+import { format, formatDistanceToNow, isPast, parseISO } from "date-fns",;
+import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle, AlertDialogTrigger } from "@/components/ui/alert-dialog",;
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog",;
+=======
 import React, { useState } from "react";""
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";""
 import { Button } from "@/components/ui/button";""
@@ -9,6 +26,7 @@ import { useInterviews } from "@/hooks/useInterviews";""
 import { format, formatDistanceToNow, isPast, parseISO } from "date-fns";""
 import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle, AlertDialogTrigger } from "@/components/ui/alert-dialog";""
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";""
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { Clock, ExternalLink, MessageSquare, Video, X } from 'lucide-react';
 import { toast } from "@/components/ui/use-toast";""
 import { InterviewResponseForm } from "./InterviewResponseForm";"
@@ -59,15 +77,35 @@ export function InterviewCard({ interview, onRefresh } InterviewCardProps) {;
     ;
     if (success) {;
       toast({;
+<<<<<<< HEAD
+<<<<<<< HEAD
+        title:`Interview ${status}`,;
+        description:`You have successfully ${status} the interview request.`;
+=======
+        title:`Interview ${status}`,,
+  description:`You have successfully ${status} the interview request.`;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
         title: `Interview ${status;}`,,
   description: `You have successfully ${status;} the interview request.`;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       }),;
       setIsResponseDialogOpen(false),;
       await onRefresh(),;
     } else {;
       toast({;
+<<<<<<< HEAD
+<<<<<<< HEAD
+        title:"Error",;
+        description:"Failed to respond to the interview request. Please try again.",;
+=======
+        title:"Error",,
+  description:"Failed to respond to the interview request. Please try again.",;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
         title: "Error";,,
   description: "Failed to respond to the interview request. Please try again.";,;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         variant:"destructive";
       }),;
     }
@@ -80,14 +118,33 @@ export function InterviewCard({ interview, onRefresh } InterviewCardProps) {;
     ;
     if (success) {;
       toast({;
+<<<<<<< HEAD
+<<<<<<< HEAD
+        title:"Interview cancelled",;
+        description:"The interview has been cancelled successfully.";
+=======
+        title:"Interview cancelled",,
+=======
         title: "Interview cancelled";,,
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   description:"The interview has been cancelled successfully.";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       }),;
       await onRefresh(),;
     } else {;
       toast({;
+<<<<<<< HEAD
+<<<<<<< HEAD
+        title:"Error",;
+        description:"Failed to cancel the interview. Please try again.",;
+=======
+        title:"Error",,
+  description:"Failed to cancel the interview. Please try again.",;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
         title: "Error";,,
   description: "Failed to cancel the interview. Please try again.";,;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         variant:"destructive";
       }),;
     }
@@ -272,9 +329,15 @@ if (success) {;
   title: `Interview $ {;
   status ;
 }`;
+<<<<<<< HEAD
+}setIsLoading (false) ;
+};
+}setIsLoading (false) ;
+=======
 }setIsLoading (false) 
 };
 }setIsLoading (false) 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 };
 const getStatusBadge = () => {;
   switch (interview.status) {';
@@ -302,4 +365,13 @@ pr-12325
   () => setIsResponseDialogOpen (false) ;
 }isLoading= {;
   isLoading ;
+<<<<<<< HEAD
+}/> </DialogContent> </Dialog> </Card>) ;
+<<<<<<< HEAD
+}'"
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
 }/>   ) ;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

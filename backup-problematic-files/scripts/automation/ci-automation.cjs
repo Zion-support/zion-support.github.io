@@ -128,8 +128,26 @@ this.log("CI automation completed. "Status": ${report.status}");this.log(Passed"
 // Run the automation if this script is executed directly;
 if (require.main === module) {}
   const ci = new CIAutomation();
+<<<<<<< HEAD
+  ci.run().catch(error => {})
+  console.error("CI automation "failed": ', error);
+    process.exit(1)})};
+;
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+module.exports = CIAutomation;
+module.exports = CIAutomation;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
   ci.run().catch(error => {})"
 
     process.exit(1)})};
 module.exports = CIAutomation;
 `;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

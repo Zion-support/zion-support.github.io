@@ -1,5 +1,10 @@
 [
   {
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
     "route": "/2025-advanced-services-showcase",
     "title": "",
     "h1": ""
@@ -78,10 +83,17 @@
     "route": "/comprehensive-2025-services-showcase",
   {    "route": "/comprehensive-2025-services-showcase",
   {    "route": "/comprehensive-2025-services-showcase",
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     "title": "Comprehensive 2025 Innovative Services Showcase — Zion Tech Group",
     "h1": "2025 Innovative Services Showcase"
   },
   {
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+]
+=======
     "route": "/comprehensive-pricing",
     "title": "Comprehensive Pricing | Zion Tech Group - Micro SaaS Services Pricing & Plans",
     "h1": ""
@@ -221,3 +233,4 @@
   {  }
   {  }
 ]
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -20,10 +20,23 @@ class AutomationSuiteRunner {
       fs.mkdirSync(this.reportsDir, { recursive: true });
   log(message) {
     const timestamp = new Date().toISOString();
+<<<<<<< HEAD
+    const logMessage = `[${timestamp}] ${message}`;
+<<<<<<< HEAD
+
+=======
+    
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+    fs.appendFileSync(this.logFile, logMessage + "\n");
+  }
+  async runCommand(command, description) {
+    this.log(`🚀 "Starting": ${description}`);
+=======
     const logMessage = `[${timestamp}] ${message};
     "
     fs.appendFileSync(this.logFile, logMessage + "\n");"
 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     try {
   // TODO: Implement
       const result = execSync(command, {"
@@ -126,9 +139,23 @@ class AutomationSuiteRunner {
 
         const lines = content.split('\n');
         qualityMetrics.totalLines += lines.length;
+<<<<<<< HEAD
+        // Count comments
+<<<<<<< HEAD
+        const commentLines = lines.filter(line =>
+          line.trim().startsWith('//') ||
+          line.trim().startsWith('/*') ||
+=======
+        const commentLines = lines.filter(line => 
+          line.trim().startsWith('//') || 
+          line.trim().startsWith('/*') || 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+          line.trim().startsWith('*')
+=======
         // Count comments;
         const commentLines = lines.filter(line => )
 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         ).length;
         totalComments += commentLines;
         // Count functions;
@@ -203,5 +230,14 @@ class AutomationSuiteRunner {
 if (require.main === module) {
   const runner = new AutomationSuiteRunner();
   runner.run().catch(console.error);
+<<<<<<< HEAD
+}
+module.exports = AutomationSuiteRunner;
+<<<<<<< HEAD
+=======
+module.exports = AutomationSuiteRunner;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
 module.exports = AutomationSuiteRunner;
 "`;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

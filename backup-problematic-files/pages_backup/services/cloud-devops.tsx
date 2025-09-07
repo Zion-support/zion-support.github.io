@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+<<<<<<< HEAD:backup-problematic-files/pages_backup/services/cloud-devops.tsx
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import Layout from '../../components/Layout';
 import { Cloud, Server, Database, Shield, Zap } from 'lucide-react';
 import React from 'react';
@@ -5,6 +9,25 @@ import Layout from '../../components/Layout';';
 import { Cloud, Server, Database, Shield, Zap, ArrowRight, CheckCircle } from 'lucide-react';
 const features = [;
   {}
+<<<<<<< HEAD
+    icon: Cloud,;
+<<<<<<< HEAD
+    title: 'Cloud Migration,',;
+    description: 'Seamlessly migrate your infrastructure to AWS, Azure, or Google Cloud with zero downtime.',;
+import Layout from '../../components/Layout';
+import { Cloud, Server, GitBranch, Shield, Zap, CheckCircle, ArrowRight } from 'lucide-react';
+import React from 'react';
+=======
+import * as React from 'react';
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/services/cloud-devops.tsx
+=======
+    title: 'Cloud Migration,',,
+  description: 'Seamlessly migrate your infrastructure to AWS, Azure, or Google Cloud with zero downtime.',;
+import Layout from '../../components/Layout';
+import { Cloud, Server, GitBranch, Shield, Zap, CheckCircle, ArrowRight } from 'lucide-react';
+import React from 'react';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
     icon: Cloud,
     title: 'Cloud Migration,',
     description: 'Seamlessly migrate your infrastructure to AWS, Azure, or Google Cloud with zero downtime.',
@@ -12,17 +35,67 @@ import Layout from '../../components/Layout';
 import { Cloud, Server, GitBranch, Shield, Zap, CheckCircle, ArrowRight } from 'lucide-react';
 import React from 'react';
 import * as React from 'react';
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Cloud, Server, Database, Shield, Zap, ArrowRight, CheckCircle } from 'lucide-react';
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const features = [
   {
     icon: Cloud,
     title: 'Cloud Migration',
+<<<<<<< HEAD
+<<<<<<< HEAD:backup-problematic-files/pages_backup/services/cloud-devops.tsx
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     description: 'Seamless migration to cloud platforms with zero downtime'
   },
+<<<<<<< HEAD
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import {motion} from 'framer-motion';
+import {Cloud,, Server,, Database,, Shield,, Zap,, ArrowRight,, CheckCircle} from 'lucide-react';
+const features = [;
+  {;
+    icon: Cloud,;
+<<<<<<< HEAD
+    title: 'Cloud Migration',;
+    description: 'Seamless migration to cloud platforms with zero downtime';
+  },;
+  {}
+    icon: Server,;
+    title: 'Infrastructure as Code,',;
+    description: 'Automate infrastructure provisioning and management using Terraform, Ansible, and CloudFormation.',;
+  },;
+  {}
+    icon: Database,;
+    title: 'Database Management,',;
+    description: 'Optimize database performance, implement backup strategies, and ensure data integrity.',;
+  },;
+  {}
+    icon: Shield,;
+    title: 'Security & Compliance,',;
+    description: 'Implement robust security measures and maintain compliance with industry standards.'',;
+  },;
+  {}
+    icon: Zap,;
+    title: 'CI/CD Pipelines,',;
+    description: 'Build automated deployment pipelines for faster, more reliable software delivery.',;
+=======
+    title: 'Cloud Migration',,
+  description: 'Seamless migration to cloud platforms with zero downtime';
+  },;
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   {}
     icon: Server,
     title: 'Infrastructure as Code,',
@@ -39,9 +112,16 @@ const features = [
     description: 'Implement robust security measures and maintain compliance with industry standards.'';
   },
   {}
+<<<<<<< HEAD
+    icon: Zap,;
+    title: 'CI/CD Pipelines,',,
+  description: 'Build automated deployment pipelines for faster, more reliable software delivery.',;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
     icon: Zap,
     title: 'CI/CD Pipelines,',
     description: 'Build automated deployment pipelines for faster, more reliable software delivery.',
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   }
 ;];
 const services = [;
@@ -154,10 +234,17 @@ export default function CloudDevOpsPage() {
         </section>;
       </div>;
     </Layout>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     title: 'Infrastructure as Code',
     description: 'Automated infrastructure provisioning and management'
     description: 'Seamless migration to cloud platforms with minimal downtime and maximum efficiency.',
     benefits: ['Zero-downtime migration', 'Cost optimization', 'Performance improvement', 'Scalability']
+<<<<<<< HEAD
+=======
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/services/cloud-devops.tsx
     description: 'Seamless migration to cloud platforms with minimal downtime and maximum efficiency.',
     benefits: ['Zero-downtime migration', 'Cost optimization', 'Performance improvement', 'Scalability']
   },
@@ -172,10 +259,34 @@ export default function CloudDevOpsPage() {
     title: 'Database Management',
     description: 'Comprehensive database administration and optimization services.',
     benefits: ['Performance tuning', 'Backup & recovery', 'Security hardening', 'Monitoring']
+=======
+  {
+    icon: GitBranch,
+    title: 'CI/CD Pipelines',
+    description: 'Automated build, test, and deployment processes'
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    description: 'Seamless migration to cloud platforms with minimal downtime and maximum efficiency.',
+    benefits: ['Zero-downtime migration', 'Cost optimization', 'Performance improvement', 'Scalability']
+  },
+  {
+    icon: Server,
+    title: 'Infrastructure as Code',
+    description: 'Manage your infrastructure using code for better consistency and automation.',
+    benefits: ['Version control', 'Automated provisioning', 'Consistent environments', 'Disaster recovery']
+  },
+  {
+    icon: Database,
+    title: 'Database Management',
+    description: 'Comprehensive database administration and optimization services.',
+    benefits: ['Performance tuning', 'Backup & recovery', 'Security hardening', 'Monitoring']
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   },
   {
     icon: Shield,
     title: 'Security & Compliance',
+<<<<<<< HEAD
+<<<<<<< HEAD
     description: 'Implement security best practices and maintain compliance standards.',
     benefits: ['Security audits', 'Compliance reporting', 'Vulnerability scanning', 'Access control']
   },
@@ -192,6 +303,28 @@ export default function CloudDevOpsPage() {
     benefits: ['Real-time monitoring', 'Custom dashboards', 'Automated alerts', 'Performance metrics']
   }
 ];
+<<<<<<< HEAD:backup-problematic-files/pages_backup/services/cloud-devops.tsx
+=======
+    description: 'Enterprise-grade security and compliance frameworks'
+=======
+    description: 'Implement security best practices and maintain compliance standards.',
+    benefits: ['Security audits', 'Compliance reporting', 'Vulnerability scanning', 'Access control']
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+  },
+  {
+    icon: Zap,
+    title: 'CI/CD Pipelines',
+    description: 'Automated continuous integration and deployment pipelines for faster delivery.',
+    benefits: ['Automated testing', 'Deployment automation', 'Quality gates', 'Rollback capabilities']
+  },
+  {
+    icon: Server,
+    title: 'Monitoring & Alerting',
+    description: 'Comprehensive monitoring and alerting systems for proactive issue resolution.',
+    benefits: ['Real-time monitoring', 'Custom dashboards', 'Automated alerts', 'Performance metrics']
+  }
+];
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 const benefits = [
   'Reduced infrastructure costs by up to 50%',
   'Improved deployment speed and reliability',
@@ -201,6 +334,12 @@ const benefits = [
   'Faster time-to-market for applications'
 ];
 export default function CloudDevOpsServices() {
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/services/cloud-devops.tsx
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 const tools = [
   { name: 'AWS', description: 'Amazon Web Services cloud platform' },
@@ -214,6 +353,81 @@ const tools = [
 ];
 
 export default function CloudDevOpsPage() {
+<<<<<<< HEAD
+  return (
+    <>
+      <Head>
+        <title>Cloud & DevOps Services - Zion Tech Group</title>
+        <meta name="description" content="Comprehensive cloud and DevOps services including migration, infrastructure as code, CI/CD pipelines, and monitoring solutions." />
+      </Head>
+
+      <div className="min-h-screen bg-gray-50">
+        {/* Hero Section */}
+        <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
+          <div className="max-w-7xl mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center"
+            >
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">Cloud & DevOps</h1>
+              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+                Transform your infrastructure with our comprehensive cloud and DevOps services 
+                designed for scalability, reliability, and efficiency.
+              </p>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Services</h2>
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                Comprehensive cloud and DevOps solutions to modernize your infrastructure.
+              </p>
+<<<<<<< HEAD:backup-problematic-files/pages_backup/services/cloud-devops.tsx
+            </div>
+            </div>
+            </motion.div>
+=======
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/services/cloud-devops.tsx
+            </motion.div>
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {features.map((feature, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6"
+                >
+                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                    <feature.icon className="w-6 h-6 text-blue-600" />
+                  </div>
+                  <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
+                  <p className="text-gray-600 mb-4">{feature.description}</p>
+                  <div className="space-y-2">
+                    {feature.benefits.map((benefit, benefitIndex) => (
+                      <div key={benefitIndex} className="flex items-center text-sm text-gray-600">
+                        <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                        {benefit}
+                      </div>
+                    ))}
+                  </div>
+                </motion.div>
+=======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return (
     <>
       <Head>
@@ -269,6 +483,16 @@ export default function CloudDevOpsPage() {
                   <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
                     <feature.icon className="w-6 h-6 text-blue-600" />
                   </div>
+<<<<<<< HEAD
+                  <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                    {feature.title}
+                  </h3>
+                  <p className="text-gray-600">
+                    {feature.description}
+                  </p>
+                </div>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
                   <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
                   <p className="text-gray-600 mb-4">{feature.description}</p>
                   <div className="space-y-2">
@@ -280,11 +504,33 @@ export default function CloudDevOpsPage() {
                     ))}
                   </div>
                 </motion.div>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               ))}
             </div>
           </div>
         </section>
+<<<<<<< HEAD
+<<<<<<< HEAD:backup-problematic-files/pages_backup/services/cloud-devops.tsx
         {/* Benefits Section */}
+<<<<<<< HEAD
+        <section className="py-20">;
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">;
+              <div>;
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">;
+                  Why Choose Our Cloud & DevOps Services?;
+                </h2>;
+                <p className="text-xl text-gray-600 mb-8">;
+                  Our cloud and DevOps experts help you modernize your infrastructure,;
+                  improve deployment processes, and optimize costs while maintaining security.;
+                </p>;
+                <ul className="space-y-4">;
+                  {benefits && benefits.map((benefit, index) => (;
+                    <li key={index} className="flex items-start">;
+                      <CheckCircle className="w-6 h-6 text-green-500 mr-3 mt-1 flex-shrink-0" />;
+                      <span className="text-gray-700">{benefit}</span>;
+                    </li>;
+=======
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -302,6 +548,7 @@ export default function CloudDevOpsPage() {
                       <CheckCircle className="w-6 h-6 text-green-500 mr-3 mt-1 flex-shrink-0" />
                       <span className="text-gray-700">{benefit}</span>
                     </li>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   ))}
                 </ul>
               </div>
@@ -316,7 +563,17 @@ export default function CloudDevOpsPage() {
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </button>
               </div>
+<<<<<<< HEAD
+=======
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/services/cloud-devops.tsx
 
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+        {/* Benefits Section */}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         {/* Tools Section */}
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4">
@@ -388,6 +645,10 @@ export default function CloudDevOpsPage() {
         </section>
 
         {/* CTA Section */}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         <section className="py-20 bg-blue-600">
           <div className="max-w-7xl mx-auto px-4 text-center">
             <motion.div
@@ -417,12 +678,48 @@ export default function CloudDevOpsPage() {
                 </Link>
               </div>
             </motion.div>
+<<<<<<< HEAD
+          </div>
+        </section>
+      </div>
+<<<<<<< HEAD:backup-problematic-files/pages_backup/services/cloud-devops.tsx
+    </Layout>
+    </Layout>
+    </>
+=======
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/services/cloud-devops.tsx
+    </>
+<<<<<<< HEAD
+
+=======
+        <section className="py-20 bg-gray-900 text-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              Ready to Transform Your Infrastructure?
+            </h2>
+            <p className="text-xl mb-8 max-w-3xl mx-auto">
+              Contact our cloud and DevOps team to discuss your specific requirements
+              and discover how we can help modernize your infrastructure.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+                Contact Cloud Team
+              </button>
+              <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-colors">
+                Download Cloud Brochure
+              </button>
+            </div>
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           </div>
         </section>
       </div>
     </Layout>
     </Layout>
     </>
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
     </>
   );
 }
@@ -614,3 +911,4 @@ export default function CloudDevOpsPage() {;
     
     
     </>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -1,3 +1,5 @@
+<<<<<<< HEAD:pages_backup/api/enterprise/companies/[companyId]/members.ts
+=======
 if (req.method === "PATCH") {
     const { memberId, role } = req.body || {};
     if (!memberId || !role)
@@ -19,12 +21,18 @@ if (req.method === "PATCH") {
   }
 
   return res.status(405).json({ error: "method_not_allowed" });
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api-disabled/api/enterprise/companies/[companyId]/members.ts
 }
 
   return res && res.status(405).json({ error: "method_not_allowed" });
 }
 
 origin/cursor/integrate-build-improve-and-re-verify-2156
+<<<<<<< HEAD:pages_backup/api/enterprise/companies/[companyId]/members.ts
+
+
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api-disabled/api/enterprise/companies/[companyId]/members.ts
 import type { NextApiRequest, NextApiResponse } from './next';
 import { store  } from '../../../../../utils / data / enterprise_store';
 import type { EnterpriseRole } from "../../../../../utils / types / enterprise";
@@ -127,6 +135,11 @@ import { store } from "../../../../../utils/data/enterpriseStore";
 import type { EnterpriseRole } from "../../../../../utils/types/enterprise";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   const { companyId } = req.query;
+<<<<<<< HEAD:pages_backup/api/enterprise/companies/[companyId]/members.ts
+    const member = store.add_member (company_id, name, email, r);
+    return res.status (201).json (member);
+
+=======
 
   if (!companyId |typeof companyId !== "string") {
     return res.status(400).json({ error: "companyId required" });
@@ -212,11 +225,17 @@ const member = store.add_member (company_id, name, email, r);
 
     const member = store.add_member (company_id, name, email, r);
     return res.status (201).json (member);
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api-disabled/api/enterprise/companies/[companyId]/members.ts
   }
   // Check condition
 if ( {) {
   $2
 }
+<<<<<<< HEAD:pages_backup/api/enterprise/companies/[companyId]/members.ts
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+
+=======
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 
@@ -250,6 +269,7 @@ if ( {) {
   return res.status (405).json ({ error: "method_not_allowed" });
 }
 import type { NextApiRequest, NextApiResponse } from 'next';
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api-disabled/api/enterprise/companies/[companyId]/members.ts
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ members: [] });
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -316,9 +336,16 @@ if ( {) {
       .status (ok ? 200 : 404);
       .json (ok ? { success: true } : { error: "member_not_found" });
   }
+<<<<<<< HEAD:pages_backup/api/enterprise/companies/[companyId]/members.ts
+  return res.status (405).json ({ error: "method_not_allowed" });
+}
+
+
+=======
 return res.status (405).json ({ error: "method_not_allowed" });
   return res.status (405).json ({ error: "method_not_allowed" });
 }
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api-disabled/api/enterprise/companies/[companyId]/members.ts
 
 
 
@@ -362,10 +389,13 @@ return res.status (405).json ({ error: "method_not_allowed" });
   }
 }
 
+<<<<<<< HEAD:pages_backup/api/enterprise/companies/[companyId]/members.ts
+=======
 
 
 
 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api-disabled/api/enterprise/companies/[companyId]/members.ts
 ;
   if (req.method === 'GET') {
     const { memberId, role } = req.body || {};
@@ -394,6 +424,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 ;
   if (req.method === 'GET') {
     const { memberId } = req.query;
+<<<<<<< HEAD:pages_backup/api/enterprise/companies/[companyId]/members.ts
+ursor/fix-website-loading-errors-and-merge-6662
+}
+}
+
+
+
+=======
     if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
     const ok = store.removeMember(companyId, memberId);
     return res.status(ok ? 200 : 404).json(ok ? { success: true } : { error: 'member_not_found' });
@@ -439,6 +477,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 ursor/fix-website-loading-errors-and-merge-6662
 }
 }
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api-disabled/api/enterprise/companies/[companyId]/members.ts
 if (!memberId || typeof memberId !== 'string')
       return res.status(400).json({ error: 'memberId required' });
     const ok = store.removeMember(companyId, memberId);

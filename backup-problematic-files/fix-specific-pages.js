@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+
+=======
 #!/usr/bin/env node;
 ;
 const fs = require('fs'),;
@@ -143,4 +146,9 @@ if (!isCorrupted) {
 }//Generate summary //Save detailed report const reportPath = path.join (process.cwd (), 'targeted-page-restoration-report.json');
 fs.writeFileSync (reportPath, JSON.stringify (results, null, 2) );
 return results;
+<<<<<<< HEAD
+}// Run the restoration if this script is executed directly 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
 }// Run the restoration if this script is executed directly;`;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

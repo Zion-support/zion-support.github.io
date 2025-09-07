@@ -1,3 +1,54 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+#!/usr/bin/env node;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+const fs = require('fs');
+const path = require('path');
+=======
+const fs = require('fs');'
+const path = require('path');'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+const { execSync } = require('child_process');
+
+class GitWorkflow {}
+  constructor() {}
+    this.projectRoot = process.cwd();'
+    this.logFile = path.join(this.projectRoot, 'logs/pm2/git-workflow.log');'
+    this.reportFile = path.join(this.projectRoot, 'logs/pm2/git-workflow-report.json');
+    this.startTime = Date.now();
+  }
+
+  log(message) {}
+    const timestamp = new Date().toISOString();
+    const logMessage = `[${timestamp}] ${message}\n`;
+    try {}
+      fs.appendFileSync(this.logFile, logMessage);
+    } catch (error) {'
+      console.error('Error writing to log file: ', error.message);
+=======
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+=======
+>>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             }).trim(),
 ,
             const commitCount = execSync(`git rev-list --count origin/${branchName}`, {,
@@ -44,6 +95,14 @@
         succes: s: false,;
         erro: r: error.message,;
         branche: s: [];
+<<<<<<< HEAD
+      }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+    }
+  },;
+,;
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   async checkMergeConflicts() {,;
       this.log('🔀 Checking for merge conflicts...'),;
       const status = execSync('git status --porcelain', {,;
@@ -175,6 +234,12 @@
         this.log('\n✨ Git workflow is healthy!');
 ;
       this.log(`❌ Error running git workflow: monitor: ${error.message}`),;
+<<<<<<< HEAD
+<<<<<<< HEAD
+      process.exit(1);    }
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       process.exit(1);
 origin/cursor/automate-test-improve-and-merge-code-2533
 #!/usr/bin/env node;
@@ -182,6 +247,29 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
+<<<<<<< HEAD
+    }
+<<<<<<< HEAD
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+  }
+
+  async checkGitStatus() {}
+    try {'
+      this.log('📋 Checking git status...');'
+      const status = execSync('git status --porcelain', {}
+        cwd: this.projectRoot,'
+        encoding: 'utf8'
+      });'
+      const branches = execSync('git branch -a', {}
+        cwd: this.projectRoot,'
+        encoding: 'utf8'
+      });'
+      const currentBranch = execSync('git branch --show-current', {}
+        cwd: this.projectRoot,'
+        encoding: 'utf8'
+=======
 class GitWorkflow {
   constructor() {
     this.projectRoot = process.cwd();
@@ -210,62 +298,125 @@ async checkGitStatus() {
         encoding: 'utf8)
       const branches = execSync('git branch -a', {
       const currentBranch = execSync('git branch --show-current', {
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       }).trim();
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+gitWorkflow.run().catch(error = > {; process.exit(1)});
+
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+=======
       return {
+<<<<<<< HEAD
+=======
+      return {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
   // TODO: Implement
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         success: true,
-        hasChanges: status.trim().length > 0,
-        changes: status.trim().split('\n').filter(line => line.trim()),
+        hasChanges: status.trim().length > 0,'
+        changes: status.trim().split('\n').filter(line => line.trim()),'
         branches: branches.trim().split('\n'),
         currentBranch: currentBranch;
       };
+<<<<<<< HEAD
+    } catch (error) {}
+      return {}
+=======
     } catch (error) {
   // TODO: Implement
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         success: false,
         error: error.message,
         hasChanges: false,
         changes: [],
         branches: [],
         currentBranch: null;
+<<<<<<< HEAD
+      };
+    }
+  }
+
+  async checkBranchHealth() {}
+    try {'
+      this.log('🌿 Checking branch health...');'
+      const branches = execSync('git branch -r', {}
+        cwd: this.projectRoot,'
+        encoding: 'utf8''
+=======
 
   async checkBranchHealth() {
   // TODO: Implement
       this.log('🌿 Checking branch health...');
       const branches = execSync('git branch -r', {
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       }).trim().split('\n');
       const branchInfo = [];
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       for (const branch of branches) {
         const branchName = branch.replace('origin/', '').trim();
         if (branchName && !branchName.includes('HEAD')) {
           try {
             const lastCommit = execSync(`git log -1 --format="%H %s %an %ad" origin/${branchName}`, {
               cwd: this.projectRoot,
+=======
+      for (const branch of branches) {'
+        const branchName = branch.replace('origin/', '').trim();'
+        if (branchName && !branchName.includes('HEAD')) {}
+          try {}`
+            const lastCommit = execSync(`git log -1 --format="%H %s %an %ad" origin/${branchName}`, {}
+              cwd: this.projectRoot,'
+              encoding: 'utf8'
+            }).trim();`
+            const commitCount = execSync(`git rev-list --count origin/${branchName}`, {}
+              cwd: this.projectRoot,'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               encoding: 'utf8'
             }).trim();
-            const commitCount = execSync(`git rev-list --count origin/${branchName}`, {
-              cwd: this.projectRoot,
-              encoding: 'utf8'
-            }).trim();
-            branchInfo.push({
+            branchInfo.push({}
               name: branchName,
               lastCommit: lastCommit,
               commitCount: parseInt(commitCount),
-              isActive: true
+              isActive: true;
             });
-          } catch (error) {
-            // Skip if can't access branch
+          } catch (error) {'
+            // Skip if can't access branch;
           }
         }
       }
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 
-      return {
+      return {}
         success: true,
-        branches: branchInfo
+        branches: branchInfo;
       };
-    } catch (error) {
-      return {
+    } catch (error) {}
+      return {}
         success: false,
         error: error.message,
         branches: []
@@ -273,25 +424,33 @@ async checkGitStatus() {
     }
   }
 
-  async checkMergeConflicts() {
-    try {
-      this.log('🔀 Checking for merge conflicts...');
-      const status = execSync('git status --porcelain', {
-        cwd: this.projectRoot,
+  async checkMergeConflicts() {}
+    try {'
+      this.log('🔀 Checking for merge conflicts...');'
+      const status = execSync('git status --porcelain', {}
+        cwd: this.projectRoot,'
         encoding: 'utf8'
       });
-      const conflictFiles = status
-        .split('\n')
+      const conflictFiles = status'
+        .split('\n')'
         .filter(line => line.includes('UU') || line.includes('AA') || line.includes('DD'))
         .map(line => line.trim().split(/\s+/)[1]);
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
       return {
+=======
+      return {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         success: true,
         hasConflicts: conflictFiles.length > 0,
-        conflictFiles: conflictFiles
+        conflictFiles: conflictFiles;
       };
-    } catch (error) {
-      return {
+    } catch (error) {}
+      return {}
         success: false,
         error: error.message,
         hasConflicts: false,
@@ -300,46 +459,46 @@ async checkGitStatus() {
     }
   }
 
-  async checkStaleBranches() {
-    try {
-      this.log('🍂 Checking for stale branches...');
-      const branches = execSync('git branch -r', {
-        cwd: this.projectRoot,
-        encoding: 'utf8'
+  async checkStaleBranches() {}
+    try {'
+      this.log('🍂 Checking for stale branches...');'
+      const branches = execSync('git branch -r', {}
+        cwd: this.projectRoot,'
+        encoding: 'utf8''
       }).trim().split('\n');
-      const staleBranches = [];
+      const staleBranches = [];'
       const mainBranch = 'main';
 
-      for (const branch of branches) {
-        const branchName = branch.replace('origin/', '').trim();
-        if (branchName && !branchName.includes('HEAD') && branchName !== mainBranch) {
-          try {
-            const lastCommit = execSync(`git log -1 --format="%ad" origin/${branchName}`, {
-              cwd: this.projectRoot,
+      for (const branch of branches) {'
+        const branchName = branch.replace('origin/', '').trim();'
+        if (branchName && !branchName.includes('HEAD') && branchName !== mainBranch) {}
+          try {"`
+            const lastCommit = execSync(`git log -1 --format="%ad" origin/${branchName}`, {}
+              cwd: this.projectRoot,'
               encoding: 'utf8'
             }).trim();
             const lastCommitDate = new Date(lastCommit);
             const daysSinceLastCommit = (Date.now() - lastCommitDate.getTime()) / (1000 * 60 * 60 * 24);
 
-            if (daysSinceLastCommit > 30) {
-              staleBranches.push({
+            if (daysSinceLastCommit > 30) {}
+              staleBranches.push({}
                 name: branchName,
                 lastCommit: lastCommit,
                 daysSinceLastCommit: Math.floor(daysSinceLastCommit)
               });
             }
-          } catch (error) {
-            // Skip if can't access branch
+          } catch (error) {'
+            // Skip if can't access branch;
           }
         }
       }
 
-      return {
+      return {}
         success: true,
-        staleBranches: staleBranches
+        staleBranches: staleBranches;
       };
-    } catch (error) {
-      return {
+    } catch (error) {}
+      return {}
         success: false,
         error: error.message,
         staleBranches: []
@@ -347,27 +506,27 @@ async checkGitStatus() {
     }
   }
 
-  async generateReport(statusInfo, branchInfo, conflictInfo, staleInfo) {
-    const report = {
+  async generateReport(statusInfo, branchInfo, conflictInfo, staleInfo) {}
+    const report = {}
       timestamp: new Date().toISOString(),
-      summary: {
+      summary: {}
         hasChanges: statusInfo.hasChanges,
         currentBranch: statusInfo.currentBranch,
         totalBranches: branchInfo.branches?.length || 0,
         hasConflicts: conflictInfo.hasConflicts,
         staleBranches: staleInfo.staleBranches?.length || 0,
-        healthScore: 0
+        healthScore: 0;
       },
-      details: {
+      details: {}
         status: statusInfo,
         branches: branchInfo,
         conflicts: conflictInfo,
-        stale: staleInfo
+        stale: staleInfo;
       },
       recommendations: []
     };
 
-    // Calculate health score
+    // Calculate health score;
     let score = 100;
     if (statusInfo.hasChanges) score -= 10;
     if (conflictInfo.hasConflicts) score -= 30;
@@ -376,35 +535,35 @@ async checkGitStatus() {
 
     report.summary.healthScore = Math.max(score, 0);
 
-    // Generate recommendations
-    if (statusInfo.hasChanges) {
-      report.recommendations.push({
-        priority: 'medium',
-        message: 'Uncommitted changes detected',
+    // Generate recommendations;
+    if (statusInfo.hasChanges) {}
+      report.recommendations.push({'
+        priority: 'medium','
+        message: 'Uncommitted changes detected','
         action: 'Commit or stash changes before switching branches'
       });
     }
 
-    if (conflictInfo.hasConflicts) {
-      report.recommendations.push({
-        priority: 'high',
-        message: 'Merge conflicts detected',
+    if (conflictInfo.hasConflicts) {}
+      report.recommendations.push({'
+        priority: 'high','
+        message: 'Merge conflicts detected','
         action: 'Resolve merge conflicts before continuing'
       });
     }
 
-    if (staleInfo.staleBranches?.length > 0) {
-      report.recommendations.push({
-        priority: 'low',
-        message: `${staleInfo.staleBranches.length} stale branches found`,
+    if (staleInfo.staleBranches?.length > 0) {}
+      report.recommendations.push({'
+        priority: 'low',`
+        message: `${staleInfo.staleBranches.length} stale branches found`,'
         action: 'Consider deleting or updating stale branches'
       });
     }
 
-    if (branchInfo.branches?.length > 10) {
-      report.recommendations.push({
-        priority: 'low',
-        message: 'Many branches detected',
+    if (branchInfo.branches?.length > 10) {}
+      report.recommendations.push({'
+        priority: 'low','
+        message: 'Many branches detected','
         action: 'Consider cleaning up unused branches'
       });
     }
@@ -412,84 +571,102 @@ async checkGitStatus() {
     return report;
   }
 
-  async saveReport(report) {
-    try {
+  async saveReport(report) {}
+    try {}
       const reportDir = path.dirname(this.reportFile);
-      if (!fs.existsSync(reportDir)) {
+      if (!fs.existsSync(reportDir)) {}
         fs.mkdirSync(reportDir, { recursive: true });
       }
-      fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
+      fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));`
       this.log(`Report saved to: ${this.reportFile}`);
-    } catch (error) {
+    } catch (error) {}`
       this.log(`Error saving report: ${error.message}`);
     }
   }
 
-  async run() {
-    this.log('🌿 Starting Git Workflow Monitor...');
+  async run() {'
+    this.log('🌿 Starting Git Workflow Monitor...');`
     this.log(`Project root: ${this.projectRoot}`);
 
-    try {
-      // Create logs directory if it doesn't exist
+    try {'
+      // Create logs directory if it doesn't exist;
       const logsDir = path.dirname(this.logFile);
-      if (!fs.existsSync(logsDir)) {
+      if (!fs.existsSync(logsDir)) {}
         fs.mkdirSync(logsDir, { recursive: true });
       }
 
-      // Run all git checks
+      // Run all git checks;
       const statusInfo = await this.checkGitStatus();
       const branchInfo = await this.checkBranchHealth();
       const conflictInfo = await this.checkMergeConflicts();
       const staleInfo = await this.checkStaleBranches();
 
-      // Generate report
+      // Generate report'
       this.log('📊 Generating git workflow report...');
       const report = await this.generateReport(statusInfo, branchInfo, conflictInfo, staleInfo);
 
-      // Save report
+      // Save report;
       await this.saveReport(report);
 
-      // Log summary
-      this.log(`✅ Git workflow check completed`);
-      this.log(`📈 Health Score: ${report.summary.healthScore}/100`);
-      this.log(`📋 Current Branch: ${report.summary.currentBranch}`);
-      this.log(`🌿 Total Branches: ${report.summary.totalBranches}`);
-      this.log(`⚠️  Conflicts: ${report.summary.hasConflicts ? 'Yes' : 'No'}`);
+      // Log summary;`
+      this.log(`✅ Git workflow check completed`);`
+      this.log(`📈 Health Score: ${report.summary.healthScore}/100`);`
+      this.log(`📋 Current Branch: ${report.summary.currentBranch}`);`
+      this.log(`🌿 Total Branches: ${report.summary.totalBranches}`);'`
+      this.log(`⚠️  Conflicts: ${report.summary.hasConflicts ? 'Yes' : 'No'}`);`
       this.log(`🍂 Stale Branches: ${report.summary.staleBranches}`);
 
-      if (report.recommendations.length > 0) {
+      if (report.recommendations.length > 0) {'
         this.log('💡 Recommendations:');
-        report.recommendations.forEach((rec, index) => {
-          this.log(`   ${index + 1}. [${rec.priority.toUpperCase()}] ${rec.message}`);
+        report.recommendations.forEach((rec, index) => {}`
+          this.log(`   ${index + 1}. [${rec.priority.toUpperCase()}] ${rec.message}`);`
           this.log(`      Action: ${rec.action}`);
         });
       }
 
       return report;
-    } catch (error) {
+    } catch (error) {}`
       this.log(`❌ Git workflow check failed: ${error.message}`);
       throw error;
     }
   }
 }
 
-// Run the git workflow monitor
-async function main() {
+// Run the git workflow monitor;
+async function main() {}
   const workflow = new GitWorkflow();
-  try {
+  try {}
     await workflow.run();
     process.exit(0);
-  } catch (error) {
+  } catch (error) {'
     console.error('Git workflow failed:', error.message);
     process.exit(1);
   }
 }
 
-if (require.main === module) {
+if (require.main === module) {}
   main();
 }
 
+<<<<<<< HEAD
 module.exports = GitWorkflow;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+=======
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 ;
 class GitWorkflow {; constructor() {; this.projectRoot = process.cwd(); this.logFile = path.join(this.projectRoot, 'logs/pm2/git-workflow.log'); this.reportFile = path.join(this.projectRoot, 'logs/pm2/git-workflow-report.json'); this.startTime = Date.now()};
 ; log(message) {; const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] ${message}\n`;
@@ -541,6 +718,20 @@ class GitWorkflow {; constructor() {; this.projectRoot = process.cwd(); this.log
 // Run the git workflow monitor;
 const gitWorkflow = new GitWorkflow();
 gitWorkflow.run().catch(error = > {; process.exit(1)});
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+module.exports = GitWorkflow;'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
 `;
 pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -68,6 +68,43 @@ serve(async (req) => {;
 });
  interface EmailRequest {
   user id: string;
+<<<<<<< HEAD
+notification id: string
+}serve (async (req) => {
+  //Handle CORS preflight requests
+}try {
+  const {
+  user id, notification id
+}= await req.json () as EmailRequest;
+//Create Supabase client with the service role key const supabaseClient = createClient (Deno.env.get ("SUPABASE URL") ?? "";
+Deno.env.get ("SUPABASE SERVICE ROLE KEY") ?? "");
+data: notification, error: notificationError
+}= await supabaseClient .from ('notifications') .select ('title, message, type') .eq ('id', notification id) .single ();
+const {
+  data: userProfile, error: userError
+}= await supabaseClient .from ('profiles') .select ('display name, email') .eq ('id', user id) .single ();
+return new Response (JSON.stringify ({
+  success: true
+});
+{
+  headers: {
+  ...corsHeaders, " Content-Type": " application/json"
+};
+}) return new Response (JSON.stringify ({
+  error: error.message
+});
+{
+  headers: {
+  ...corsHeaders, " Content-Type": " application/json"
+};
+})
+}
+});
+<<<<<<< HEAD
+
+=======
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
 notification id: string 
 }serve (async (req) => {
   //Handle CORS preflight requests 
@@ -99,3 +136,4 @@ return new Response (JSON.stringify ({
 }) 
 }
 });
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

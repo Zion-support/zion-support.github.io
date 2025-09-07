@@ -1,4 +1,8 @@
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 // Content monitoring functionality;
 import { FraudFlag, FraudSeverity } from '@/types/fraud';
 import { analyzeContent } from './analyzeContent';
@@ -62,7 +66,14 @@ content;
 severity;
 analysis.reasons.join ();
 undefined //IP address would be added in a real implementation);
+<<<<<<< HEAD
+//If this is a 'dangerous' flag, automatically hide content //This would be implemented in a real system with appropriate flags // Code to hide content would go here
+}
+<<<<<<< HEAD
+
+=======
 //If this is a 'dangerous' flag, automatically hide content //This would be implemented in a real system with appropriate flags // Code to hide content would go here 
 }
 }
 };
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

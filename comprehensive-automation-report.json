@@ -1,10 +1,34 @@
 {
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+  "timestamp": "2025-09-06T17:31:43.872Z",
+  "duration": "46s",
+  "timestamp": "2025-09-06T20:40:15.907Z",
+  "duration": "124s",
+origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+<<<<<<< HEAD
+  "timestamp": "2025-09-06T20:12:12.008Z",
+  "duration": "82s",
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+<<<<<<< HEAD
+  "timestamp": "2025-09-06T17:31:43.872Z",
+  "duration": "46s",
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
 "timestamp": "2025-09-06T19:13:30.116Z",
   "duration": "56s",
 
   "timestamp": "2025-09-06T20:31:43.598Z",
   "duration": "72s",
 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   "results": {
     "syntaxFixes": 0,
     "buildSuccess": false,
@@ -14,7 +38,11 @@
       {
         "command": "npm run lint:fix",
         "description": "ESLint Auto-fix",
+<<<<<<< HEAD
+        "error": "Command failed: npm run lint:fix\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n"
+=======
 "error": "Command failed: npm run lint:fix\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       },
       {
         "command": "npm run format",
@@ -24,18 +52,58 @@
       {
         "command": "npm run type-check",
         "description": "TypeScript Type Checking",
+<<<<<<< HEAD
+<<<<<<< HEAD
+        "error": "spawnSync /bin/sh ETIMEDOUT"
+<<<<<<< HEAD
+      },
+      {
+        "command": "npm run build",
+        "description": "Application Build",
+        "error": "spawnSync /bin/sh ETIMEDOUT"
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+        "error": "spawnSync /bin/sh ENOBUFS"
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
         "error": "spawnSync /bin/sh ETIMEDOUT"
 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       },
       {
         "command": "npm run test:smoke",
         "description": "Smoke Tests",
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+        "error": "Command failed: npm run test:smoke\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n[napi-postinstall@0.3.3] Trying to install package \"@unrs/resolver-binding-linux-x64-gnu\" using npm\nError: Cannot parse /workspace/backup-problematic-files/temp-exclude/zion-os/package.json as JSON: Expected property name or '}' in JSON at position 2 (line 2 column 1)\n    at Object.worker (/workspace/node_modules/jest-haste-map/build/worker.js:267:13)\n    at execFunction (/workspace/node_modules/jest-worker/build/processChild.js:297:17)\n    at execHelper (/workspace/node_modules/jest-worker/build/processChild.js:285:5)\n    at execMethod (/workspace/node_modules/jest-worker/build/processChild.js:288:5)\n    at process.messageListener (/workspace/node_modules/jest-worker/build/processChild.js:196:7)\n    at process.emit (node:events:518:28)\n    at emit (node:internal/child_process:949:14)\n    at process.processTicksAndRejections (node:internal/process/task_queues:91:21)\n"
+=======
+        "error": "Command failed: npm run test:smoke\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n ⚠ Mismatching @next/swc version, detected: 15.5.2 while Next.js is on 14.2.32. Please ensure these match\n[napi-postinstall@0.3.3] Trying to install package \"@unrs/resolver-binding-linux-x64-gnu\" using npm\nFAIL ./App.smoke.test.tsx\n  ● Test suite failed to run\n\n      \u001b[31mx\u001b[0m Expression expected\n        ,-[\u001b[36;1;4m/workspace/App.smoke.test.tsx\u001b[0m:15:1]\n     \u001b[2m12\u001b[0m |     expect(container.firstChild).toBeTruthy();\n     \u001b[2m13\u001b[0m |   });\n     \u001b[2m14\u001b[0m | });\n     \u001b[2m15\u001b[0m | });\n        : \u001b[35;1m^\u001b[0m\n        `----\n\n\n    Caused by:\n        Syntax Error\n\n      at Object.transformSync (node_modules/next/src/build/swc/index.ts:1433:25)\n      at transformSync (node_modules/next/src/build/swc/index.ts:1550:19)\n      at Object.process (node_modules/next/src/build/swc/jest-transformer.ts:104:25)\n      at ScriptTransformer.transformSource (node_modules/@jest/transform/build/index.js:422:31)\n      at ScriptTransformer._transformAndBuildScript (node_modules/@jest/transform/build/index.js:519:40)\n      at ScriptTransformer.transform (node_modules/@jest/transform/build/index.js:558:19)\n\nTest Suites: 1 failed, 1 total\nTests:       0 total\nSnapshots:   0 total\nTime:        1.01 s\nRan all test suites.\n"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+        "error": "Command failed: npm run test:smoke\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nSyntaxError: Unexpected token '}'\n    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)\n    at #translate (node:internal/modules/esm/loader:534:12)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)\n    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)\n"
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
 "error": "Command failed: npm run test:smoke\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nSyntaxError: Unexpected identifier 'reactStrictMode'\n    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)\n    at #translate (node:internal/modules/esm/loader:534:12)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)\n    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)\n"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       },
       {
         "command": "npm test -- --passWithNoTests",
         "description": "Jest Tests",
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+        "error": "Command failed: npm test -- --passWithNoTests\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nError: Cannot parse /workspace/backup-problematic-files/temp-exclude/zion-os/package.json as JSON: Expected property name or '}' in JSON at position 2 (line 2 column 1)\n    at Object.worker (/workspace/node_modules/jest-haste-map/build/worker.js:267:13)\n    at execFunction (/workspace/node_modules/jest-worker/build/processChild.js:297:17)\n    at execHelper (/workspace/node_modules/jest-worker/build/processChild.js:285:5)\n    at execMethod (/workspace/node_modules/jest-worker/build/processChild.js:288:5)\n    at process.messageListener (/workspace/node_modules/jest-worker/build/processChild.js:196:7)\n    at process.emit (node:events:518:28)\n    at emit (node:internal/child_process:949:14)\n    at process.processTicksAndRejections (node:internal/process/task_queues:91:21)\n"
+=======
+        "error": "Command failed: npm test -- --passWithNoTests\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n ⚠ Mismatching @next/swc version, detected: 15.5.2 while Next.js is on 14.2.32. Please ensure these match\n ⚠ Mismatching @next/swc version, detected: 15.5.2 while Next.js is on 14.2.32. Please ensure these match\n ⚠ Mismatching @next/swc version, detected: 15.5.2 while Next.js is on 14.2.32. Please ensure these match\nFAIL __tests__/AIChatbotSystem.test.js\n  ● Test suite failed to run\n\n      \u001b[31mx\u001b[0m Unterminated regexp literal\n       ,-[\u001b[36;1;4m/workspace/__tests__/AIChatbotSystem.test.js\u001b[0m:2:1]\n     \u001b[2m1\u001b[0m |     <h1>AI Chatbot System Test</h1>\n     \u001b[2m2\u001b[0m |   </div>\n       : \u001b[35;1m   ^^^^^\u001b[0m\n     \u001b[2m3\u001b[0m | );\n     \u001b[2m4\u001b[0m | \n     \u001b[2m5\u001b[0m | describe('AIChatbotSystem', () => {\n       `----\n      \u001b[31mx\u001b[0m Expression expected\n       ,-[\u001b[36;1;4m/workspace/__tests__/AIChatbotSystem.test.js\u001b[0m:2:1]\n     \u001b[2m1\u001b[0m |     <h1>AI Chatbot System Test</h1>\n     \u001b[2m2\u001b[0m |   </div>\n       : \u001b[35;1m    ^^^^\u001b[0m\n     \u001b[2m3\u001b[0m | );\n     \u001b[2m4\u001b[0m | \n     \u001b[2m5\u001b[0m | describe('AIChatbotSystem', () => {\n       `----\n\n\n    Caused by:\n        Syntax Error\n\n      at Object.transformSync (node_modules/next/src/build/swc/index.ts:1433:25)\n      at transformSync (node_modules/next/src/build/swc/index.ts:1550:19)\n      at Object.process (node_modules/next/src/build/swc/jest-transformer.ts:104:25)\n      at ScriptTransformer.transformSource (node_modules/@jest/transform/build/index.js:422:31)\n      at ScriptTransformer._transformAndBuildScript (node_modules/@jest/transform/build/index.js:519:40)\n      at ScriptTransformer.transform (node_modules/@jest/transform/build/index.js:558:19)\n\n ⚠ Mismatching @next/swc version, detected: 15.5.2 while Next.js is on 14.2.32. Please ensure these match\nFAIL __tests__/AICodeGenerator.test.js\n  ● Test suite failed to run\n\n      \u001b[31mx\u001b[0m Unterminated regexp literal\n       ,-[\u001b[36;1;4m/workspace/__tests__/AICodeGenerator.test.js\u001b[0m:2:1]\n     \u001b[2m1\u001b[0m |     <h1>AI Code Generator Test</h1>\n     \u001b[2m2\u001b[0m |   </div>\n       : \u001b[35;1m   ^^^^^\u001b[0m\n     \u001b[2m3\u001b[0m | );\n     \u001b[2m4\u001b[0m | \n     \u001b[2m5\u001b[0m | describe('AICodeGenerator', () => {\n       `----\n      \u001b[31mx\u001b[0m Expression expected\n       ,-[\u001b[36;1;4m/workspace/__tests__/AICodeGenerator.test.js\u001b[0m:2:1]\n     \u001b[2m1\u001b[0m |     <h1>AI Code Generator Test</h1>\n     \u001b[2m2\u001b[0m |   </div>\n       : \u001b[35;1m    ^^^^\u001b[0m\n     \u001b[2m3\u001b[0m | );\n     \u001b[2m4\u001b[0m | \n     \u001b[2m5\u001b[0m | describe('AICodeGenerator', () => {\n       `----\n\n\n    Caused by:\n        Syntax Error\n\n      at Object.transformSync (node_modules/next/src/build/swc/index.ts:1433:25)\n      at transformSync (node_modules/next/src/build/swc/index.ts:1550:19)\n      at Object.process (node_modules/next/src/build/swc/jest-transformer.ts:104:25)\n      at ScriptTransformer.transformSource (node_modules/@jest/transform/build/index.js:422:31)\n      at ScriptTransformer._transformAndBuildScript (node_modules/@jest/transform/build/index.js:519:40)\n      at ScriptTransformer.transform (node_modules/@jest/transform/build/index.js:558:19)\n\nFAIL __tests__/index.test.tsx\n  ● Test suite failed to run\n\n      \u001b[31mx\u001b[0m Expression expected\n        ,-[\u001b[36;1;4m/workspace/pages/index.tsx\u001b[0m:33:1]\n     \u001b[2m30\u001b[0m |           dangerouslySetInnerHTML={{\n     \u001b[2m31\u001b[0m |             __html: JSON.stringify({\n     \u001b[2m32\u001b[0m | \n     \u001b[2m33\u001b[0m |               </div>\n        : \u001b[35;1m              ^\u001b[0m\n     \u001b[2m34\u001b[0m |             </div>\n     \u001b[2m35\u001b[0m |           </div>\n     \u001b[2m36\u001b[0m |         </section>\n        `----\n      \u001b[31mx\u001b[0m Unterminated regexp literal\n        ,-[\u001b[36;1;4m/workspace/pages/index.tsx\u001b[0m:33:1]\n     \u001b[2m30\u001b[0m |           dangerouslySetInnerHTML={{\n     \u001b[2m31\u001b[0m |             __html: JSON.stringify({\n     \u001b[2m32\u001b[0m | \n     \u001b[2m33\u001b[0m |               </div>\n        : \u001b[35;1m               ^^^^^\u001b[0m\n     \u001b[2m34\u001b[0m |             </div>\n     \u001b[2m35\u001b[0m |           </div>\n     \u001b[2m36\u001b[0m |         </section>\n        `----\n\n\n    Caused by:\n        Syntax Error\n\n       5 |   it(\"renders the main heading\", () => {\n       6 |     render(<Home />);\n    >  7 |     expect(screen.getByText(\"Zion Tech Group\")).toBeInTheDocument();\n         |                                                       ^\n       8 |   });\n       9 |\n      10 |   it(\"renders the description\", () => {\n\n      at Object.transformSync (node_modules/next/src/build/swc/index.ts:1433:25)\n      at transformSync (node_modules/next/src/build/swc/index.ts:1550:19)\n      at Object.process (node_modules/next/src/build/swc/jest-transformer.ts:104:25)\n      at ScriptTransformer.transformSource (node_modules/@jest/transform/build/index.js:422:31)\n      at ScriptTransformer._transformAndBuildScript (node_modules/@jest/transform/build/index.js:519:40)\n      at ScriptTransformer.transform (node_modules/@jest/transform/build/index.js:558:19)\n      at Object.<anonymous> (__tests__/index.test.tsx:7:55)\n\nTest Suites: 3 failed, 3 total\nTests:       0 total\nSnapshots:   0 total\nTime:        0.718 s\nRan all test suites.\n"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+        "error": "Command failed: npm test -- --passWithNoTests\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nSyntaxError: Unexpected token '}'\n    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)\n    at #translate (node:internal/modules/esm/loader:534:12)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)\n    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)\n"
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
 "error": "Command failed: npm test -- --passWithNoTests\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nSyntaxError: Unexpected identifier 'reactStrictMode'\n    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)\n    at #translate (node:internal/modules/esm/loader:534:12)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)\n    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)\n"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       }
     ]
   "timestamp": "2025-09-06T17:31:43.872Z",
@@ -57,9 +125,14 @@ pr-12325
     "syntaxFixes": 0,
     "buildSuccess": false,
     "testsPassed": 0,
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
   "timestamp": "2025-09-06T10:44:46.097Z",
   "totalDuration": 76866,
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     "totalErrors": 5
+<<<<<<< HEAD
   "timestamp": "2025-09-06T10:42:27.266Z",
   "totalDuration": 60241,
   "successfulTasks": 6,
@@ -72,6 +145,12 @@ pr-12325
       "success": true,
 "duration": 22421,
       "duration": 7037,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       "duration": 22421,
 ursor/automate-test-improve-and-merge-code-e883
   "timestamp": "2025-09-06T08:34:04.724Z",
@@ -81,19 +160,58 @@ ursor/automate-test-improve-and-merge-code-e883
       "success": true,
       "duration": 84429,
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+=======
+    "totalErrors": 5
+  "timestamp": "2025-09-06T10:42:27.266Z",
+  "totalDuration": 60241,
+  "successfulTasks": 6,
+  "totalTasks": 8,
+  "results": {
+    "dependencyFix": {
+      "success": true,
+      "duration": 7037,
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
       "duration": 20258,
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       "errors": [],
       "warnings": []
     },
     "codeQuality": {
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       "success": false,
 "duration": 27631,
       "duration": 27333,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       "duration": 27631,
 ursor/automate-test-improve-and-merge-code-e883
       "success": true,
       "duration": 56422,
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+=======
+      "success": false,
+      "duration": 27333,
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       "errors": [],
       "duration": 44450,
       "errors": [
@@ -104,26 +222,62 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     },
     "securityAudit": {
       "success": true,
+<<<<<<< HEAD
+<<<<<<< HEAD
+      "duration": 1719,
+=======
+<<<<<<< HEAD
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
 "duration": 1683,
       "duration": 1719,
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       "duration": 1683,
 ursor/automate-test-improve-and-merge-code-e883
       "duration": 1450,
 origin/cursor/automate-test-improve-and-merge-code-2533
       "duration": 1719,
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+=======
+      "duration": 1719,
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
       "duration": 1545,
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       "errors": [],
       "warnings": []
     },
     "buildOptimization": {
       "success": true,
+<<<<<<< HEAD
+<<<<<<< HEAD
+      "duration": 6250,
+=======
+<<<<<<< HEAD
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
 "duration": 6198,
       "duration": 6250,
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       "duration": 6198,
 ursor/automate-test-improve-and-merge-code-e883
       "duration": 11039,
 origin/cursor/automate-test-improve-and-merge-code-2533
       "duration": 6250,
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+=======
+      "duration": 6250,
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       "errors": [],
       "success": false,
       "duration": 4541,
@@ -133,6 +287,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       "warnings": []
     },
     "seoOptimization": {
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
 "success": true,
       "duration": 43,
       "errors": [],
@@ -141,45 +304,102 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       "duration": 46,
       "errors": [],
 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       "success": false,
       "duration": 39,
 "errors": [],
       "success": true,
       "duration": 46,
       "errors": [],
+<<<<<<< HEAD
+<<<<<<< HEAD
 ursor/automate-test-improve-and-merge-code-e883
+=======
+<<<<<<< HEAD
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+ursor/automate-test-improve-and-merge-code-e883
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       "success": false,
       "duration": 0,
       "errors": [],
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
       "duration": 41,
       "errors": [
         "Command failed: node scripts/generate-sitemap.cjs\n/workspace/scripts/generate-sitemap.cjs:1\n\n^^\n\nSyntaxError: Unexpected token '<<'\n    at wrapSafe (node:internal/modules/cjs/loader:1662:18)\n    at Module._compile (node:internal/modules/cjs/loader:1704:20)\n    at Object..js (node:internal/modules/cjs/loader:1895:10)\n    at Module.load (node:internal/modules/cjs/loader:1465:32)\n    at Function._load (node:internal/modules/cjs/loader:1282:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)\n    at node:internal/main/run_main_module:36:49\n\nNode.js v22.16.0\n",
         "Command failed: node scripts/generate-search-index.cjs\n/workspace/scripts/generate-search-index.cjs:21\n        'Home';\n        ^^^^^^\n\nSyntaxError: missing ) after argument list\n    at wrapSafe (node:internal/modules/cjs/loader:1662:18)\n    at Module._compile (node:internal/modules/cjs/loader:1704:20)\n    at Object..js (node:internal/modules/cjs/loader:1895:10)\n    at Module.load (node:internal/modules/cjs/loader:1465:32)\n    at Function._load (node:internal/modules/cjs/loader:1282:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)\n    at node:internal/main/run_main_module:36:49\n\nNode.js v22.16.0\n"
       ],
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       "warnings": []
     },
     "accessibilityImprovements": {
       "success": false,
+<<<<<<< HEAD
+<<<<<<< HEAD
+      "duration": 9508,
+=======
+<<<<<<< HEAD
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
 "duration": 9692,
       "duration": 9508,
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       "duration": 9692,
 ursor/automate-test-improve-and-merge-code-e883
       "duration": 0,
 origin/cursor/automate-test-improve-and-merge-code-2533
       "duration": 9508,
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+=======
+      "duration": 9508,
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       "errors": [],
       "warnings": []
     },
     "performanceOptimization": {
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       "success": true,
 "duration": 7154,
       "duration": 6736,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       "duration": 7154,
 ursor/automate-test-improve-and-merge-code-e883
       "success": false,
       "duration": 0,
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+=======
+      "success": true,
+      "duration": 6736,
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       "errors": [],
       "duration": 1419,
       "errors": [
@@ -196,6 +416,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       "warnings": []
     },
     "deployment": {
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       "success": true,
 "duration": 2037,
       "errors": [],
@@ -212,8 +436,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       "warnings": []
     }
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+<<<<<<< HEAD
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     "totalErrors": 6
 origin/cursor/automate-test-improve-and-merge-code-646c
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   }
 }
       "success": false,
@@ -233,6 +465,26 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   ]
 }
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+<<<<<<< HEAD
+=======
+      "success": true,
+      "duration": 1612,
+      "errors": [],
+      "warnings": []
+    }
+  }
+=======
+  "timestamp": "2025-09-06T22:31:53.549Z",
+  "totalDuration": 106111,
+  "successfulTasks": 3,
+  "totalTasks": 3,
+  "results": {
+    "Comprehensive Automation Suite": true,
+    "Final Automation Suite": true,
+    "Execute All Scripts": true
+  },
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   "errors": [],
   "fixes": [
     "Fixed memory issues with Node.js heap size",
@@ -241,6 +493,9 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
     "Added comprehensive error handling"
   ]
 }
+<<<<<<< HEAD
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+=======
 pr-12325
   "recommendations": [
     "Review and fix code quality issues",
@@ -249,3 +504,4 @@ pr-12325
     "Enhance accessibility features"
   ]
 }
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

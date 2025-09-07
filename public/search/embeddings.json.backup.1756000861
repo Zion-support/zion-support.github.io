@@ -522,6 +522,10 @@
     ]
   },
   {
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
     "route": "/about",
     "vector": [
       0,
@@ -811,6 +815,7 @@
       0,
   {    "vector": [
   {    "vector": [
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       0,
       0,
       0,
@@ -1047,6 +1052,11 @@
   },
   {
     "route": "/contact",
+<<<<<<< HEAD
+=======
+      3,      0,
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+=======
     "vector": [
       0,
       0,
@@ -1135,15 +1145,19 @@
       0,
       0,
       3,      0,
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       4,
       0,
       0,
       0,
       5,
       1,
+<<<<<<< HEAD
+=======
       3,
       1,
       1,
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       0,
       3,      0,
       4,
@@ -1152,13 +1166,22 @@
       0,
       5,
       1,      0,
+<<<<<<< HEAD
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
       1,      0,
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       0,
       0,
       4,
       0,
       0,
       0,
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
       0,
       0,
       0,
@@ -1218,10 +1241,16 @@
       0,
       1,      0,
       1,      0,
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       0,
       0,
       0,
       4,
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
       1,
       5,
       3,
@@ -1236,11 +1265,16 @@
       0,
       1,      0,
       1,      0,
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       2,
       3,
       0,
       1,
       0,
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
       1,
       6,
       0,
@@ -1250,6 +1284,7 @@
       2,
       0,
       0,
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       0,
       0,
       0,
@@ -1258,14 +1293,24 @@
       0,
       0,
       1,
+<<<<<<< HEAD
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
       3,
       1,
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       0,
       0,
       0,
       3,
       0,
       0,
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
       0,
       0,
       1,
@@ -1335,6 +1380,7 @@
       0,
       2,
       2,      1,
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       2,
       0,
       0,
@@ -1357,6 +1403,9 @@
       0,
       2,
       0,
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-4816
+=======
       1,
       2,
       0,
@@ -1367,6 +1416,7 @@
       0    ]
       0,
       0    ]
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   },
   {
     "route": "/",
@@ -1898,13 +1948,23 @@
     "route": "/resources",
     "vector": [
       1,      0,
+<<<<<<< HEAD
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
     "route": "/resources",
     "vector": [
       1,      0,
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       0,
       1,
       1,
       1,
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       1,
       0,
       0,
@@ -1929,6 +1989,18 @@
       2,
       2,
       0,
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-4816
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+      11,
+      0,
+      0,
+      0,
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
       0,
       0,
       0,
@@ -1936,12 +2008,22 @@
       0,
       0,
       1,
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       0,
       0,
       0,
       0,
       0,
       0,
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+      0,
+      0,      0,
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
       4,
       0,
       1,
@@ -2366,12 +2448,17 @@
       0,
       0,
       0,
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       0,
       5,
       0,
       0,
       0,
       1,
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
       1,
       0,
       0,
@@ -2651,6 +2738,7 @@
       0,
       7,
       0,
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       0,
       0,
       2,
@@ -2659,6 +2747,12 @@
       0,
       2,
       1,
+<<<<<<< HEAD
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+  }
+]
+=======
       0,
       0,
       0,
@@ -2751,3 +2845,4 @@
       0    ]
   }
 ]
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

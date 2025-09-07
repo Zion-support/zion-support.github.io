@@ -1,17 +1,36 @@
+<<<<<<< HEAD
+
+=======
 #!/usr/bin/env node;
 ;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 /**;
  * Generate Search Index;
  * Creates a search index for the website content;
  */;
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+;
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const fs = require('fs'),;
 const path = require('path'),;
 const PAGES_DIR = path.join(__dirname, '..pages'),;
 const OUTPUT_DIR = path.join(__dirname, '..public', 'search'),;
+<<<<<<< HEAD
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 // Content types to index;
 const CONTENT_TYPES = {;
   'pages':{;
     path:PAGES_DIR,;
+<<<<<<< HEAD
+
+=======
     extensions:['.tsx.ts', '.jsx.js'],;
     exclude:['_app_document', 'api'];
   },;
@@ -60,6 +79,17 @@ function generateSearchIndex() {;
                 lastModified:stats.mtime.toISOString();
               searchIndex[type].push(entry),;
             } catch (error) {;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+            }
+          }
+        }
+      }
+<<<<<<< HEAD
+
+=======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     }),;
   // Ensure output directory exists;
   if (!fs.existsSync(OUTPUT_DIR)) {;
@@ -72,4 +102,11 @@ function generateSearchIndex() {;
   // // // console.log(` Indexed ${searchIndex.pages.length} pages and ${searchIndex.blog.length} blog posts`),;
 if (require.main === module) {;
   generateSearchIndex(),;
+<<<<<<< HEAD
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+;
+module.exports = { generateSearchIndex },
+=======
 module.exports = { generateSearchIndex },`;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

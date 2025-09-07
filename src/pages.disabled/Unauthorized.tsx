@@ -1,3 +1,11 @@
+<<<<<<< HEAD:src_backup/pages/Unauthorized.tsx
+import Link from 'next/link';
+import { Button } from '@/components/ui/button';
+import { Header } from '@/components/Header';
+import { ShieldAlert } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/pages.disabled/Unauthorized.tsx
 
 
 export default function Unauthorized() {
@@ -19,9 +27,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </p>
           <div className="flex flex-col gap-3">
             <Link
+<<<<<<< HEAD:src_backup/pages/Unauthorized.tsx
+=======
               href="/"
               className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-4 py-2 rounded inline-flex items-center justify-center"
               className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-4 py-2 rounded inline-flex items-center justify-center"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/pages.disabled/Unauthorized.tsx
               href='/'
               className='w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-4 py-2 rounded inline-flex items-center justify-center'
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -29,6 +40,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               {t('errors.return_home')}
             </Link>
             <Link
+<<<<<<< HEAD:src_backup/pages/Unauthorized.tsx
+=======
               href="/auth/login"
               className="w-full border border-zion-blue-light text-zion-slate-light hover:bg-zion-blue hover:text-white px-4 py-2 rounded inline-flex items-center justify-center"
 
@@ -41,6 +54,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 };
               href="/auth/login"
               className="w-full border border-zion-blue-light text-zion-slate-light hover:bg-zion-blue hover:text-white px-4 py-2 rounded inline-flex items-center justify-center"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/pages.disabled/Unauthorized.tsx
 href='/auth/login'
               className='w-full border border-zion-blue-light text-zion-slate-light hover:bg-zion-blue hover:text-white px-4 py-2 rounded inline-flex items-center justify-center'
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -96,6 +110,8 @@ export default function Unauthorized() {;
               className="w-full border border-zion-blue-light text-zion-slate-light hover:bg-zion-blue hover:text-white px-4 py-2 rounded inline-flex items-center justify-center";
             >;
               {t('errors.login_different_account')}
+<<<<<<< HEAD:src_backup/pages/Unauthorized.tsx
+=======
             </Link>;
           </div>;
         </div>;
@@ -105,6 +121,7 @@ export default function Unauthorized() {;
   );
 }
 ;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/pages.disabled/Unauthorized.tsx
             </Link>
           </div>
         </div>

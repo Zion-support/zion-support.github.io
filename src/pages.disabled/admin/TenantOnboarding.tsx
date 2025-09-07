@@ -1,3 +1,32 @@
+<<<<<<< HEAD:src_backup/pages/admin/TenantOnboarding.tsx
+import React, { useState } from 'react';
+import { Header } from '@/components/Header';
+import { SEO } from '@/components/SEO';
+import { useAuth } from '@/hooks/useAuth';
+import { useRouter } from 'next/router';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,;
+} from '@/components/ui/card';
+import { Input } from '@/components/ui/input';
+import { Label } from '@/components/ui/label';
+import { Button } from '@/components/ui/button';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,;
+} from '@/components/ui/select';
+import { toast } from 'sonner';
+import { supabase } from '@/integrations/supabase/client';
+import { Switch } from '@/components/ui/switch';
+import { logErrorToProduction } from '@/utils/productionLogger';
+=======
 const [formData, setFormData] = useState({
     brand_name: """,
     subdomain: """,
@@ -62,6 +91,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       // Submit to Supabase
       const { data, error } = await supabase
         .from('whitelabel_tenants')'
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/pages.disabled/admin/TenantOnboarding.tsx
 
 import React, { useState } from "react",
 import { Header } from "@/components/Header",
@@ -83,6 +113,17 @@ export default function TenantOnboarding() {
   const [activeTab, setActiveTab] = useState("company"),
   const [isSubmitting, setIsSubmitting] = useState(false),
   const [formData, setFormData] = useState({
+<<<<<<< HEAD:src_backup/pages/admin/TenantOnboarding.tsx
+    brand_name: "";
+    subdomain: "";
+    logo_url: "";
+    primary_color: "#9b87f5";
+    theme_preset: "light";
+    company_size: "";
+    industry: "";
+    custom_domain: "";
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
     brand_name: "",
     subdomain: "",
     logo_url: "",
@@ -91,6 +132,7 @@ export default function TenantOnboarding() {
     company_size: "",
     industry: "",
     custom_domain: "",
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/pages.disabled/admin/TenantOnboarding.tsx
     is_co_branded: true
 
   }),
@@ -463,6 +505,8 @@ export default function TenantOnboarding() {
         </div>
       </main>
     </>
+<<<<<<< HEAD:src_backup/pages/admin/TenantOnboarding.tsx
+=======
   )
 
 
@@ -823,6 +867,7 @@ export default function TenantOnboarding() {;
   );
 }
 ;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/pages.disabled/admin/TenantOnboarding.tsx
   );
 
 };'";

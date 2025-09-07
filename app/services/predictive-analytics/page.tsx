@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export const metadata = {
   title: "Predictive Analytics | Zion Tech Group",
   description:
@@ -91,6 +92,125 @@ export default function PredictiveAnalyticsPage() {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
+=======
+export const metadata = {}
+  title: "Predictive Analytics | Zion Tech Group",
+  description:"
+    "Forecast the future with AI-powered predictive analytics. Make data-driven decisions with accurate predictions and trend analysis.",;
+};
+
+export default function PredictiveAnalyticsPage() {}
+  return ("
+    <section className="max-w-6xl mx-auto px-4 py-16">"
+      <h1 className="text-4xl font-bold text-gray-900 mb-6">;
+        Predictive Analytics;
+      </h1>"
+      <p className="text-xl text-gray-600 mb-12">
+        Forecast the future with AI-powered predictive analytics. Make;
+        data-driven decisions with accurate predictions and trend analysis.
+      </p>
+"
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+        <FeatureCard"
+          title="Forecasting & Predictions"
+          features={["
+            "Sales forecasting","
+            "Demand prediction","
+            "Risk assessment","
+            "Trend analysis",
+          ]}
+        />
+        <FeatureCard"
+          title="Machine Learning Models"
+          features={["
+            "Custom model development","
+            "Model training & validation","
+            "Automated retraining","
+            "Performance monitoring",
+          ]}
+        />
+        <FeatureCard"
+          title="Business Intelligence"
+          features={["
+            "Interactive dashboards","
+            "Automated reporting","
+            "Alert systems","
+            "ROI tracking",
+          ]}
+        />
+      </div>
+"
+      <div className="bg-gradient-to-r from-violet-50 to-purple-50 border border-violet-200 rounded-xl p-8 mb-16">"
+        <h2 className="text-2xl font-bold text-gray-900 mb-4">
+          Why Choose Our Predictive Analytics?
+        </h2>"
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">"
+          <div className="flex items-start">"
+            <span className="text-violet-500 mr-3 text-xl">✓</span>
+            <div>"
+              <h3 className="font-semibold text-gray-900">95%+ Accuracy</h3>"
+              <p className="text-gray-600">
+                Advanced ML models deliver highly accurate predictions across;
+                industries;
+              </p>
+            </div>
+          </div>"
+          <div className="flex items-start">"
+            <span className="text-violet-500 mr-3 text-xl">✓</span>
+            <div>"
+              <h3 className="font-semibold text-gray-900">
+                Real-Time Insights;
+              </h3>"
+              <p className="text-gray-600">
+                Get instant predictions and recommendations as data changes;
+              </p>
+            </div>
+          </div>"
+          <div className="flex items-start">"
+            <span className="text-violet-500 mr-3 text-xl">✓</span>
+            <div>"
+              <h3 className="font-semibold text-gray-900">Custom Solutions</h3>"
+              <p className="text-gray-600">
+                Tailored models for your specific business needs and industry;
+              </p>
+            </div>
+          </div>"
+          <div className="flex items-start">"
+            <span className="text-violet-500 mr-3 text-xl">✓</span>
+            <div>"
+              <h3 className="font-semibold text-gray-900">Proven ROI</h3>"
+              <p className="text-gray-600">
+                Average 300% ROI within 6 months of implementation;
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <Pricing />
+"
+      <div className="mt-16 text-center">"
+        <h2 className="text-2xl font-bold text-gray-900 mb-4">
+          Ready to Predict Your Future Success?
+        </h2>"
+        <p className="text-gray-600 mb-6">
+          Start with a free data assessment and see what predictions can do for;
+          your business.
+        </p>"
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <a"
+            href="tel:+13024640950""
+            className="bg-violet-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-violet-700 transition-colors"
+          >
+            Call +1 302 464 0950;
+          </a>
+          <a"
+            href="mailto:kleber@ziontechgroup.com""
+            className="border-2 border-violet-600 text-violet-600 px-8 py-3 rounded-lg font-semibold hover:bg-violet-600 hover:text-white transition-colors"
+          >
+            Email Us;
+=======
 
       <Pricing />
 
@@ -114,6 +234,7 @@ export default function PredictiveAnalyticsPage() {
             className="border-2 border-violet-600 text-violet-600 px-8 py-3 rounded-lg font-semibold hover:bg-violet-600 hover:text-white transition-colors"
           >
             Email Us
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           </a>
         </div>
       </div>
@@ -121,6 +242,21 @@ export default function PredictiveAnalyticsPage() {
   );
 }
 
+<<<<<<< HEAD
+function FeatureCard({}
+  title,
+  features,
+}: {}
+  title: string;
+  features: string[];
+}) {}
+  return ("
+    <div className="border border-gray-200 rounded-xl p-6 bg-white shadow-sm">"
+      <h3 className="text-xl font-bold text-gray-900 mb-4">{title}</h3>"
+      <ul className="space-y-2 text-gray-600">
+        {features.map((f) => ("
+          <li key={f} className="flex items-center">"
+=======
 function FeatureCard({
   title,
   features,
@@ -134,6 +270,7 @@ function FeatureCard({
       <ul className="space-y-2 text-gray-600">
         {features.map((f) => (
           <li key={f} className="flex items-center">
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             <span className="text-violet-500 mr-2">•</span> {f}
           </li>
         ))}
@@ -142,6 +279,33 @@ function FeatureCard({
   );
 }
 
+<<<<<<< HEAD
+function Pricing() {}
+  return ("
+    <div className="mt-16">"
+      <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+        Pricing Plans;
+      </h2>"
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <Plan"
+          name="Starter""
+          price="$3,999/mo"
+          features={["
+            "Basic forecasting models","
+            "Up to 1M data points","
+            "Standard support","
+            "Cloud deployment",
+          ]}
+        />
+        <Plan"
+          name="Professional""
+          price="$9,999/mo"
+          features={["
+            "Advanced ML models","
+            "Up to 10M data points","
+            "Custom model development","
+            "Priority support","
+=======
 function Pricing() {
   return (
     <div className="mt-16">
@@ -167,10 +331,21 @@ function Pricing() {
             "Up to 10M data points",
             "Custom model development",
             "Priority support",
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             "API access",
           ]}
           popular={true}
         />
+<<<<<<< HEAD
+        <Plan"
+          name="Enterprise""
+          price="$24,999/mo"
+          features={["
+            "Unlimited data points","
+            "Custom model development","
+            "On-premise deployment","
+            "Dedicated support","
+=======
         <Plan
           name="Enterprise"
           price="$24,999/mo"
@@ -179,6 +354,7 @@ function Pricing() {
             "Custom model development",
             "On-premise deployment",
             "Dedicated support",
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             "White-label solution",
           ]}
         />
@@ -187,16 +363,41 @@ function Pricing() {
   );
 }
 
+<<<<<<< HEAD
+function Plan({}
+=======
 function Plan({
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   name,
   price,
   features,
   popular = false,
+<<<<<<< HEAD
+}: {}
+=======
 }: {
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   name: string;
   price: string;
   features: string[];
   popular?: boolean;
+<<<<<<< HEAD
+}) {}
+  return (
+    <div"
+      className={`border rounded-xl p-6 bg-white shadow-sm ${popular ? "border-violet-500 ring-2 ring-violet-200" : "border-gray-200"}`}
+    >
+      {popular && ("
+        <div className="bg-violet-500 text-white text-sm font-semibold px-3 py-1 rounded-full inline-block mb-4">
+          Most Popular;
+        </div>
+      )}"
+      <h4 className="text-xl font-bold text-gray-900 mb-2">{name}</h4>"
+      <div className="text-3xl font-bold text-violet-600 mb-4">{price}</div>"
+      <ul className="space-y-2 text-gray-600 mb-6">
+        {features.map((f) => ("
+          <li key={f} className="flex items-center">"
+=======
 }) {
   return (
     <div
@@ -212,10 +413,28 @@ function Plan({
       <ul className="space-y-2 text-gray-600 mb-6">
         {features.map((f) => (
           <li key={f} className="flex items-center">
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             <span className="text-green-500 mr-2">✓</span> {f}
           </li>
         ))}
       </ul>
+<<<<<<< HEAD
+      <a"
+        href="tel:+13024640950"`
+        className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors text-center block ${}
+          popular"
+            ? "bg-violet-600 text-white hover:bg-violet-700""
+            : "bg-gray-100 text-gray-900 hover:bg-gray-200"`
+        }`}
+      >
+        Get Started;
+      </a>
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+    </div>
+  );
+}
+"`
+=======
       <a
         href="tel:+13024640950"
         className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors text-center block ${
@@ -229,3 +448,4 @@ function Plan({
     </div>
   );
 }
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

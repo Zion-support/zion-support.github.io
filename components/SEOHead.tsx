@@ -1,7 +1,16 @@
 import React from 'react';
 import Head from 'next/head';
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+pr-12243
+=======
 interface SEOHeadProps {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+interface SEOHeadProps {
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   title?: string;
   description?: string;
   keywords?: string;
@@ -14,6 +23,14 @@ interface SEOHeadProps {
   nofollow?: boolean;
 }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+pr-12243
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const SEOHead: React.FC<SEOHeadProps> = ({
   title = 'Zion Tech Group - Technology Solutions',
   description = 'Leading provider of AI services, IT solutions, and micro SaaS development. Transform your business with cutting-edge technology solutions.',
@@ -128,6 +145,9 @@ const SEOHead: React.FC<SEOHeadProps> = ({
 };
 
 export default SEOHead;
+<<<<<<< HEAD
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
 
 pr-12243
   title?: string;
@@ -168,3 +188,4 @@ pr-12243
 ;
 
 pr-12243
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -1,4 +1,63 @@
+<<<<<<< HEAD:src_backup/components/listing/AIListingGenerator.tsx
+<<<<<<< HEAD:src/components/listing/AIListingGenerator.tsx
+<<<<<<< HEAD
+import React, { useState } from "react",
+import { useToast } from "@/hooks/use-toast",
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
+import { Sparkles } from 'lucide-react'
+import { supabase } from "@/integrations/supabase/client",
+import { AIListingForm } from "./AIListingForm",
+import { GeneratedContentDisplay } from "./GeneratedContentDisplay",
+import { LoadingContentSkeleton } from "./LoadingContentSkeleton",
+import {logErrorToProduction} from '@/utils/productionLogger',
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+interface GeneratedContent {
+<<<<<<< HEAD
+<<<<<<< HEAD
+  description: string,
+  tags: string[],
+  suggestedPrice: {
+    min: number,
+    max: number
+  },
+  keyPoints: string[]
+import React, { useState } from "react",;
+import { useToast } from "@/hooks/use-toast",;
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Sparkles } from 'lucide-react';
+import { supabase } from "@/integrations/supabase/client",;
+import { AIListingForm } from "./AIListingForm",;
+import { GeneratedContentDisplay } from "./GeneratedContentDisplay",;
+import { LoadingContentSkeleton } from "./LoadingContentSkeleton",;
+import {logErrorToProduction} from '@/utils/productionLogger',;
+interface GeneratedContent {;
+=======
 
+  description: string
+  tags: string[]
+  suggestedPrice: {
+    min: number
+
+<<<<<<< HEAD
+    max: number  }
+=======
+=======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/listing/AIListingGenerator.tsx
+import React, { useState } from 'react';
+import { useToast } from '@/hooks/use-toast';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Sparkles } from 'lucide-react';
+import { supabase } from '@/integrations/supabase/client';
+import { AIListingForm } from './AIListingForm';
+import { GeneratedContentDisplay } from './GeneratedContentDisplay';
+import { LoadingContentSkeleton } from './LoadingContentSkeleton';
+import { logErrorToProduction } from '@/utils/productionLogger';
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/listing/AIListingGenerator.tsx
 
 interface GeneratedContent {
   description: string;
@@ -7,27 +66,266 @@ interface GeneratedContent {
     min: number;
 origin/cursor/automate-test-improve-and-merge-code-2533
     max: number
+<<<<<<< HEAD:src/components/listing/AIListingGenerator.tsx
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+=======
   description: string,
   tags: string[],
   suggested_price: {,
     min: number,
     max: number;
+<<<<<<< HEAD:src_backup/components/listing/AIListingGenerator.tsx
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/listing/AIListingGenerator.tsx
+  }
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+  keyPoints: string[]
+=======
   }
   keyPoints: string[],
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/listing/AIListingGenerator.tsx
 }
 interface AIListingGeneratorProps {
+<<<<<<< HEAD:src/components/listing/AIListingGenerator.tsx
+<<<<<<< HEAD
 
+<<<<<<< HEAD
+interface GeneratedContent {,
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+<<<<<<< HEAD:src_backup/components/listing/AIListingGenerator.tsx
+interface GeneratedContent {;
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/listing/AIListingGenerator.tsx
+  description: string,;
+  tags: string[],;
+  suggestedPrice: {;
+    min: number,;
+<<<<<<< HEAD
+    max: number;
+  },;
+=======
+    max: number
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+  keyPoints: string[];
+}
+;
+interface AIListingGeneratorProps {;
+  onApplyGenerated?: (content: GeneratedContent) => void,;
+  initialValues?: {;
+<<<<<<< HEAD
+    title?: string,;
+    category?: string,;
+    keyFeatures?: string,;
+    targetAudience?: string;
+=======
+
+
+  onApplyGenerated?: (content: GeneratedContent) => void;
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/listing/AIListingGenerator.tsx
   initialValues?: {
 origin/cursor/automate-test-improve-and-merge-code-2533
     title?: string;
     category?: string;
     keyFeatures?: string;
     targetAudience?: string
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   }
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+;
+export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIListingGeneratorProps) {;
+  const { toast } = useToast(),;
+  const [isLoading, setIsLoading] = useState(false),;
+  const [generatedContent, setGeneratedContent] = useState<GeneratedContent | null>(null),;
+  const handleGenerate = async ({;
+    title,;
+    category,;
+    keyFeatures,;
+    targetAudience;
+  }: {;
+    title: string,;
+    category: string,;
+    keyFeatures: string,;
+    targetAudience: string;
+  }) => {;
+    setIsLoading(true),;
+    try {;
+      const { data, error } = await supabase.functions.invoke('ai-listing-generator', {;
+        body: { title, category, keyFeatures, targetAudience }
+      }),;
+      if (error) {;
+        throw new Error(error.message);
+=======
+
+<<<<<<< HEAD:src/components/listing/AIListingGenerator.tsx
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIListingGeneratorProps) {
+  const { toast } = useToast()
+  const [isLoading, setIsLoading] = useState(false)
+  const [generatedContent, setGeneratedContent] = useState<GeneratedContent | null>(null)
+  const handleGenerate = async ({
+    title
+    category
+    keyFeatures
+    targetAudience
+  }: {
+    title: string
+    category: string
+    keyFeatures: string
+    targetAudience: string  }) => {
+    setIsLoading(true)
+    try {
+      const { data, error } = await supabase.functions.invoke ('ai - listing - generator', {
+        body: { title, category, key_features, target_audience }
+      });
+      // Check condition
+if ( {) {
+  $2
+}
+        throw new Error (error.message);
+      }
+      if (data && (data as any).error) {
+        throw new Error((data as any).error)
+      }
+
+      setGeneratedContent((data as any)?.generated || null)
+import React, { useState } from "react",
+import { useToast } from "@/hooks/use-toast",
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
+import { Sparkles } from 'lucide-react'
+import { supabase } from "@/integrations/supabase/client",
+import { AIListingForm } from "./AIListingForm",
+import { GeneratedContentDisplay } from "./GeneratedContentDisplay",
+import { LoadingContentSkeleton } from "./LoadingContentSkeleton",
+import {logErrorToProduction} from '@/utils/productionLogger',      toast({
+=======
+    title?: string;
+    category?: string;
+    keyFeatures?: string;
+    targetAudience?: string
+  }
+}
+=======
+
+
+<<<<<<< HEAD:src_backup/components/listing/AIListingGenerator.tsx
+
+  }) => {
+    setIsLoading(true)
+    try {
+      const { data, error } = await supabase.functions.invoke('ai-listing-generator', {
+        body: { title, category, keyFeatures, targetAudience }
+      })
+      if (error) {
+        throw new Error(error.message)
+      }
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/listing/AIListingGenerator.tsx
+
+  }) => {
+    setIsLoading(true)
+    try {
+
+<<<<<<< HEAD:src/components/listing/AIListingGenerator.tsx
+=======
 
 
 
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/listing/AIListingGenerator.tsx
+      toast({
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+        title: "Content Generated"
+        description: "AI has created optimized listing content for you."
+      })
+    } catch (error) {
+      logErrorToProduction('Error generating content:', { data: error })
+      toast({
+        title: "Generation Failed"
+        description: error instanceof Error ? error.message : "Failed to generate content. Please try again."
+        variant: "destructive"
+      })
+      // Check condition
+if (.error) {) {
+  $2
+}
+        throw new Error ((data as any).error);
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+      }
+;
+      if (data && (data as any).error) {;
+        throw new Error((data as any).error);
+      }
+
+      setGeneratedContent((data as any)?.generated || null),
+      toast({
+        title: "Content Generated",
+        description: "AI has created optimized listing content for you."
+      })
+    } catch (error) {
+      logErrorToProduction('Error generating content:', { data: error }),
+      toast({
+        title: "Generation Failed",
+        description: error instanceof Error ? error.message : "Failed to generate content. Please try again.",
+        variant: "destructive"
+      })
+    } finally {
+      setIsLoading(false)
+    }
+<<<<<<< HEAD:src/components/listing/AIListingGenerator.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/listing/AIListingGenerator.tsx
+  },
+
+  const handleApply = () => {
+    if (generatedContent && onApplyGenerated) {
+      onApplyGenerated(generatedContent),
+=======
+
+<<<<<<< HEAD:src/components/listing/AIListingGenerator.tsx
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/listing/AIListingGenerator.tsx
+      toast({
+        title: "Content Applied",
+        description: "The generated content has been applied to your listing."
+      })
+<<<<<<< HEAD:src/components/listing/AIListingGenerator.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+    }
+  },
+
+=======
+=======
+export function AIListingGenerator({ onApplyGenerated, initialValues;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+export function AIListingGenerator({ onApplyGenerated, initialValues;
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/listing/AIListingGenerator.tsx
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/listing/AIListingGenerator.tsx
   return (
     <div className="space-y-6">
       <Card className="border border-zion-blue-light bg-zion-blue-dark">
@@ -41,12 +339,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </p>
         </CardHeader>
         <CardContent>
-            onSubmit = {handleGenerate,}
-            isLoading = {isLoading,}
-            initialValues = {initialValues,}
-          />
-        </CardContent>
-      </Card>
+          <AIListingForm 
             onSubmit={handleGenerate} 
             isLoading={isLoading} 
 ;
@@ -146,6 +439,17 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
         throw new Error((data as any).error);
       }
 
+<<<<<<< HEAD:src_backup/components/listing/AIListingGenerator.tsx
+      setGeneratedContent((data as any)?.generated || null);
+<<<<<<< HEAD:src/components/listing/AIListingGenerator.tsx
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/listing/AIListingGenerator.tsx
+=======
       setGeneratedContent((data as any)?.generated || null),
       toast({
         title: "Content Generated",
@@ -191,6 +495,7 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
             isLoading={isLoading} 
 ;
       setGeneratedContent((data as any)?.generated || null),;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/listing/AIListingGenerator.tsx
       toast({;
         title: "Content Generated",;
         description: "AI has created optimized listing content for you.";
@@ -199,14 +504,52 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
       logErrorToProduction('Error generating content:', { data: error }),;
       toast({;
         title: "Generation Failed",;
-        description: error instanceof Error ? error && error.message : "Failed to generate content. Please try again.",;
+<<<<<<< HEAD:src/components/listing/AIListingGenerator.tsx
+<<<<<<< HEAD
         description: error instanceof Error ? error.message : "Failed to generate content. Please try again.",;
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+        description: error instanceof Error ? error && error.message : "Failed to generate content. Please try again.",;
+<<<<<<< HEAD:src_backup/components/listing/AIListingGenerator.tsx
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/listing/AIListingGenerator.tsx
+=======
+        description: error instanceof Error ? error.message : "Failed to generate content. Please try again.",;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/listing/AIListingGenerator.tsx
         variant: "destructive";
       });
     } finally {;
       setIsLoading(false);
     }
+<<<<<<< HEAD:src/components/listing/AIListingGenerator.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD
+  },;
+=======
   };
+<<<<<<< HEAD:src_backup/components/listing/AIListingGenerator.tsx
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/listing/AIListingGenerator.tsx
+  const handleApply = () => {;
+    if (generatedContent && onApplyGenerated) {;
+      onApplyGenerated(generatedContent),;
+      toast({;
+        title: "Content Applied";
+        description: "The generated content has been applied to your listing.";
+      });
+    }
+  };
+  return (;
+=======
+
+<<<<<<< HEAD:src/components/listing/AIListingGenerator.tsx
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+=======
   const handleApply = () => {;
     if (generatedContent &&,  onApplyGenerated) {;
       onApplyGenerated(generatedContent);
@@ -226,9 +569,15 @@ if ( {) {
       });
     }
   },
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/listing/AIListingGenerator.tsx
     }
   },
   return (
+<<<<<<< HEAD:src_backup/components/listing/AIListingGenerator.tsx
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/listing/AIListingGenerator.tsx
+=======
   },;
   const handleApply = () => {;
     if (generatedContent && onApplyGenerated) {;
@@ -240,7 +589,10 @@ if ( {) {
     }
   };
   return (;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/listing/AIListingGenerator.tsx
     <div className="space-y-6">;
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       <Card className="border border-zion-blue-light bg-zion-blue-dark">;
         <CardHeader>;
           <CardTitle className="flex items-center text-white">;
@@ -252,31 +604,74 @@ if ( {) {
           </p>;
         </CardHeader>;
         <CardContent>;
+<<<<<<< HEAD:src_backup/components/listing/AIListingGenerator.tsx
+<<<<<<< HEAD:src/components/listing/AIListingGenerator.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/listing/AIListingGenerator.tsx
           <AIListingForm;
             onSubmit={handleGenerate} ;
             isLoading={isLoading} ;
             initialValues={initialValues}
+<<<<<<< HEAD:src_backup/components/listing/AIListingGenerator.tsx
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/listing/AIListingGenerator.tsx
+=======
           />;
         </CardContent>;
       </Card>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/listing/AIListingGenerator.tsx
 
           <AIListingForm
             onSubmit = {handleGenerate,}
             isLoading = {isLoading,}
             initialValues = {initialValues,}
+<<<<<<< HEAD:src_backup/components/listing/AIListingGenerator.tsx
+
+
+          <AIListingForm 
+
+
+<<<<<<< HEAD:src/components/listing/AIListingGenerator.tsx
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/listing/AIListingGenerator.tsx
+=======
           <AIListingForm
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/listing/AIListingGenerator.tsx
       {isLoading && <LoadingContentSkeleton />}
+=======
+          />;
+        </CardContent>;
+      </Card>;      {isLoading && <LoadingContentSkeleton />}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       {generatedContent && !isLoading && (
         <GeneratedContentDisplay content={generatedContent} onApply={handleApply} />
       )}
+<<<<<<< HEAD:src_backup/components/listing/AIListingGenerator.tsx
+
+<<<<<<< HEAD
+    <div className="space-y-6">;
+      <Card className="border border - zion - blue - light bg - zion - blue-dark">;
+=======
     <div className="space - y-6">;
       <Card className="border border - zion - blue - light bg - zion - blue - dark">;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/listing/AIListingGenerator.tsx
         <CardHeader>;
-          <CardTitle className="flex items - center text - white">;
-            <Sparkles className="h - 5 w - 5 mr - 2 text - zion - cyan" />;
+          <CardTitle className="flex items - center text-white">;
+            <Sparkles className="h - 5 w - 5 mr - 2 text - zion-cyan" />;
             AI Listing Optimizer;
           </CardTitle>;
-          <p className="text - sm text - zion - slate - light">;
+          <p className="text - sm text - zion - slate-light">;
             Provide basic information and let AI generate optimized, SEO - friendly content for your listing;
           </p>;
         </CardHeader>;
@@ -308,12 +703,30 @@ target_audience;
 category: string;,
 key_features: string;,
 target_audience: string;
+<<<<<<< HEAD:src_backup/components/listing/AIListingGenerator.tsx
+
+<<<<<<< HEAD:src/components/listing/AIListingGenerator.tsx
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/listing/AIListingGenerator.tsx
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/listing/AIListingGenerator.tsx
 }) => {
   setIsLoading (true)
 try {
   const {
+<<<<<<< HEAD:src_backup/components/listing/AIListingGenerator.tsx
+<<<<<<< HEAD:src/components/listing/AIListingGenerator.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/listing/AIListingGenerator.tsx
+=======
 }catch (error) {';
   logErrorToProduction ('Error generating content:', {
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/listing/AIListingGenerator.tsx
 
   data, error;
 }= await supabase.functions.invoke ('ai - listing - generator', {'
@@ -332,12 +745,19 @@ if (.error) {) {
   throw new Error ( (data as,  any) .error);
 }setGeneratedContent ( (data as,  any) ?.generated || null);
 toast ({
+<<<<<<< HEAD:src_backup/components/listing/AIListingGenerator.tsx
+}catch (error) {'
+  logErrorToProduction ('Error generating content:', {
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
 }catch (error) {''
   logErrorToProduction ('Error generating content:', {'
           <AIListingForm;
             onSubmit={handleGenerate} ;
             isLoading={isLoading} ;
             initialValues={initialValues}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/listing/AIListingGenerator.tsx
           />;
         </CardContent>;
       </Card>;
@@ -348,6 +768,15 @@ toast ({
       )}
     </div>;
   );
+<<<<<<< HEAD:src_backup/components/listing/AIListingGenerator.tsx
+=======
+}catch (error) {';
+  logErrorToProduction ('Error generating content:', {  data: error;
+=======
+
+<<<<<<< HEAD:src/components/listing/AIListingGenerator.tsx
+=======
+=======
 }: AIListingGeneratorProps) {;
   const {;
   toast ;
@@ -384,6 +813,7 @@ toast ({;
   data: error ;
 });
 toast ({;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/listing/AIListingGenerator.tsx
 }finally {;
   setIsLoading (false) ;
 };
@@ -408,12 +838,26 @@ return (<div className="space-y-6" > <Card className="border border-zion-blue-li
 }/>) ;
 }</div>) ;
 }'";
+<<<<<<< HEAD:src_backup/components/listing/AIListingGenerator.tsx
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/listing/AIListingGenerator.tsx
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/listing/AIListingGenerator.tsx
   data: error;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 });
 toast ({
 }finally {
   setIsLoading (false);
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
+<<<<<<< HEAD:src_backup/components/listing/AIListingGenerator.tsx
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/listing/AIListingGenerator.tsx
 const handle_apply = () =>: any {
   // Check condition
 if ( {) {
@@ -422,9 +866,26 @@ if ( {) {
   onApplyGenerated (generated_content);
 toast ({
 }
+<<<<<<< HEAD:src/components/listing/AIListingGenerator.tsx
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
 }'";
 };
 }
+<<<<<<< HEAD:src_backup/components/listing/AIListingGenerator.tsx
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/listing/AIListingGenerator.tsx
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/listing/AIListingGenerator.tsx
 }
 }
 }
@@ -432,11 +893,29 @@ toast ({
     </div>;
   );
 }
+<<<<<<< HEAD:src/components/listing/AIListingGenerator.tsx
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
+=======
+<<<<<<< HEAD
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+=======
+;
+<<<<<<< HEAD:src_backup/components/listing/AIListingGenerator.tsx
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/listing/AIListingGenerator.tsx
+=======
 }}}}}}}
 }
 ;
 ;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/listing/AIListingGenerator.tsx
 return (<div className="space-y-6" > <Card className="border border-zion-blue-light bg-zion-blue-dark" > <CardHeader> <CardTitle className="flex items-center text-white" > <Sparkles className="h-5 w-5 mr-2 text-zion-cyan" /> AI Listing Optimizer </CardTitle> <p className="text-sm text-zion-slate-light" > Provide basic information and let AI generate optimized, SEO-friendly content for your listing </p> </CardHeader> <CardContent> <AIListingForm onSubmit= {
   handleGenerate
 }isLoading= {
@@ -453,4 +932,9 @@ return (<div className="space-y-6" > <Card className="border border-zion-blue-li
 }/>)
 }</div>)
 }'"
+<<<<<<< HEAD:src/components/listing/AIListingGenerator.tsx
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
 origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/listing/AIListingGenerator.tsx

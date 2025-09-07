@@ -1,3 +1,14 @@
+<<<<<<< HEAD:src_backup/pages/ProjectDetails.tsx
+import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
+import { useRouter  } from 'next/router';
+import { format } from "date-fns",
+import { useAuth } from "@/hooks/useAuth",
+import { useProjects } from "@/hooks/useProjects",
+import { SEO } from "@/components/SEO",
+import { ProtectedRoute } from "@/components/ProtectedRoute",
+import { Project, ProjectStatus } from "@/types/projects",
+=======
 
 import Link from 'next/link';
 import { useRouter  } from 'next/router';
@@ -7,6 +18,7 @@ import { useProjects } from "@/hooks/useProjects",;
 import { SEO } from "@/components/SEO",;
 import { ProtectedRoute } from "@/components/ProtectedRoute",;
 import { Project, ProjectStatus } from "@/types/projects",;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/pages.disabled/ProjectDetails.tsx
 import { Button } from "@/components/ui/button";
 import {logErrorToProduction} from '@/utils/productionLogger';
 import {
@@ -41,7 +53,11 @@ import { AlertCircle, Calendar, CheckCircle2, Clock, FileText, Layers, MessageSq
 
 function ProjectDetailsContent() {
   const router = null;
+<<<<<<< HEAD:src_backup/pages/ProjectDetails.tsx
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/pages.disabled/ProjectDetails.tsx
   return (
     <>
       <SEO 
@@ -1168,6 +1184,8 @@ function ProjectDetailsContent() {
         </div>
       </main>
     </>
+<<<<<<< HEAD:src_backup/pages/ProjectDetails.tsx
+=======
   )
 }
 setIsSubmittingNote (true)
@@ -1317,6 +1335,7 @@ export default function ProjectDetails() {;
   );
 }
 ;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/pages.disabled/ProjectDetails.tsx
   );
 
 };

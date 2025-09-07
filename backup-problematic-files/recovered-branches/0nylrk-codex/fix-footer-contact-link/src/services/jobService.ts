@@ -51,6 +51,10 @@ export async function getJobById(jobId:string) {;
     return null;
   } export async function createJob (jobData: any) {
   try {
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
   const {
   data, error 
 }= await supabase 
@@ -67,4 +71,5 @@ export async function getJobById(jobId:string) {;
   data, error 
 }= await supabase .from ('jobs') .select ('*') .eq ('id', jobId) .single ();
 }
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
