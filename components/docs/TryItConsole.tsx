@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  const [baseUrl, setBaseUrl] = useState('https://api.zion.os');  const [token, setToken] = useState('');  method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE'
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 
 interface TryItProps {'
   method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE',
@@ -195,17 +190,9 @@ className='w-full h-32 px-2 py-1 rounded bg-high-contrast-tertiary border border
         <pre className=&quot;p-3 rounded bg-high-contrast-tertiary overflow-auto text-sm max-h-80&quot;    /><code    />{response}</code></pre>
       </div>
     </div>
-<<<<<<< HEAD
 
   );
 
 "
-=======
-</div> </div> {
-  (method === 'POST' || method === 'PUT' || method === 'PATCH') && (<div> </div> </div>) 
-}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
 );
 }
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 #!/usr/bin/env node
 /**
  * Security Audit Script
@@ -223,17 +220,7 @@ class SecurityAudit {
         }
       }
     });
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 #!/usr/bin/env node
-=======
-<<<<<<< HEAD
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -426,33 +413,15 @@ if (require.main === module) {
   auditor.runAudit().catch(console.error);
 }
 
-<<<<<<< HEAD
 module.exports = SecurityAuditor;
-=======
-module.exports = SecurityAuditor;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
-<<<<<<< HEAD
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
 
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-=======
 
 
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
 
-=======
 ];
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
 
 let passed = 0;
 let failed = 0;
@@ -481,10 +450,8 @@ securityChecks.forEach(check => {
     if (check.critical) {
       criticalFailed++;
     }
->>>>>>> main
   }
 
-<<<<<<< HEAD
   async checkCodeSecurity() {
     this.log("🔍 Checking code security patterns...");
     
@@ -744,10 +711,6 @@ if (require.main === module) {
 }
 
 module.exports = SecurityAudit;
-=======
-<<<<<<< HEAD
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-=======
 console.log(`\n📊 Security Results:`);
 console.log(`✅ Passed: ${passed}`);
 console.log(`❌ Failed: ${failed}`);
@@ -763,6 +726,3 @@ if (criticalFailed > 0) {
   console.log('\n🎉 All security checks passed!');
   process.exit(0);
 }
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
->>>>>>> main
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

@@ -102,32 +102,9 @@ async log(message, type = "INFO")
         await new Promise(resolve => setTimeout(resolve, interval))} catch (error) {  await this.log(` Error in continuous "run": ${error.message  }`, "ERROR"`)
   const continuous = args.includes("--continuous") || args.includes("-c")
   const interval = parseInt(args.find(arg => arg.startsWith("--interval="))?.split("=")
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
   console.error(""Error": ")
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
   console.error(""Error": ")
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
   console.error(""Error": ")
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-=======
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
           this.fixes.push({ file, "type": "export", "description": "Added missing default export" }")"
 

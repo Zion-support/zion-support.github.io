@@ -1,22 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
-import { useState  } from 'react';
-import Head from 'next/head',
-export default function OffworldDeploy() {
-  const [cid, setCid] = useState<string | null>(null),
-  const [status, setStatus] = useState<string>(''),
-  const [error, setError] = useState<string>('');
-  const [provider, setProvider] = useState<string>('');
-  async function handleDeploy() {
-    setStatus('Exporting and deploying to IPFS...');
-    setError('');
-    setCid(null);
-    setProvider('');
-    try {
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
       const res = null;
       setStatus('')
     }
@@ -104,20 +87,6 @@ function handle_deploy() { return null; }
 );
 }
 
-<<<<<<< HEAD
-=======
-async function handleDeploy () {
-  setStatus ('Exporting and deploying to IPFS...')
-setError ('')
-setCid (null)
-setProvider ('')
-try {
-  
-}return (<div className="min-h-screen p-8" > <Head> <title>Zion Offworld Deploy</title> </Head> </div>) 
-}</div>) 
-}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
     }
   }
 
@@ -127,4 +96,3 @@ try {
       )}
     </div>
   );
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

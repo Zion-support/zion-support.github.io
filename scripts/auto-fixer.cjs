@@ -1,17 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-=======
 
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 #!/usr/bin/env node;
 const fs = require("child_process");
 const path = require("child_process");
@@ -112,19 +100,7 @@ class AutoFixer {}
       importErrors: await this.fixImportErrors();
       typescriptErrors: await this.fixTypeScriptErrors();
       totalFixes: 0;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       duration: 0};
     const results = {"timestamp": new Date().toISOString(),"mergeConflicts": await this.fixMergeConflicts(),"syntaxErrors": await this.fixSyntaxErrors();}"
       importErrors: await this.fixImportErrors();,
@@ -150,33 +126,10 @@ if (require.main === module) {}
     .catch(error => {})"
       console.error("Auto-fixer "failed": ", error);"
       process.exit(1)})};
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
 module.exports = AutoFixer;
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 module.exports = AutoFixer;
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
 module.exports = AutoFixer;
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
 
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2

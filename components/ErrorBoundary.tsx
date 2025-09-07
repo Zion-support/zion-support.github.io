@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 class ErrorBoundary extends Component<Props, State> {
   constructor (props: Props) {
   super (props)
@@ -9,7 +8,6 @@ this.state = {
   return {
   hasError: true, error 
 }
-}> Reload Page </button> >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 console.error ('Error caught by boundary:', error, errorInfo)
 this.setState ({
   error
 errorInfo 
@@ -21,7 +19,6 @@ errorInfo
   extra: errorInfo 
 })
 }
-=======
 'use client';
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 interface Props {
@@ -455,4 +452,3 @@ export default ErrorBoundary;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

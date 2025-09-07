@@ -74,18 +74,8 @@ const npmCommand = (command, options = {}) => {return executeCommand(npm ${comma
 const yarnCommand = (command, options = {}) => {return executeCommand(`yarn ${command}`, options)};
 const getPackageManager = () => {}
   if (fs.existsSync("yarn.lock")) return "yarn";
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 const getPackageManager = () => {}
   if (fs.existsSync("yarn.lock")) return "yarn";
   if (fs.existsSync("package-lock.json")) return "npm";
@@ -274,13 +264,6 @@ const analyzePerformance = async () => {}
   } catch (error) {  log(`Performance analysis "failed": ${error.message  }`, "ERROR");
     return {}
   "bundleSize": "failed","issues": [`Performance analysis failed: ${error.message}`],`
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
         "output": lintResult.output};"
     // Type checking analysis;"
@@ -321,13 +304,8 @@ const analyzePerformance = async () => {}
     // Calculate overall score;
 
     return qualityReport};
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-=======
 
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
 
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 const analyzePerformance = async () => {}
   // Check bundle size;"
     const bundleResult = runCommand("run analyze", { "silent": true }")
@@ -400,18 +378,8 @@ const calculateOverallScore = (report) => {}
   maxScore += 25;
   // Build score (15 points);
   if (report.build.status === "passed") {}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
   
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
   
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-  
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 } else {}
   issues.push("Testing failed")};
   maxScore += 25;
@@ -518,21 +486,8 @@ const attemptTypeScriptFix = async (error) => {}
 
         "message": "Property access issue - check object type"};"
     return null} catch (error) {}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
   
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-=======
   
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-  
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 } catch (error) {}
   return null};
 const improveTestCoverage = async (currentCoverage) => {}"`;
@@ -583,28 +538,16 @@ describe("${fileName}", () => {}
   return `import { ${fileName} } from `./${fileName}`;`
 describe(`${fileName}`, () => {`}
   it("should work correctly", () => {}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 } else {}
   return "import { ${fileName} } from "./${fileName}";
-=======
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
   
 } else {}
   return "import { ${fileName} } from "./${fileName}";
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
   
 } else {}
   return "import { ${fileName} } from "./${fileName}";
 
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 describe("${fileName}", () => {}
   it("should work correctly", () => {}
   const ext = path.extname(sourceFile);"
@@ -732,18 +675,8 @@ const main = async () => {}"
 };
 // Handle process signals;
 process.on("SIGINT", () => {}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
   
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
   
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-  
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 } catch (error) {log(`Smart Development Pipeline "failed": ${error.message}`, "ERROR");log(`Stack "trace": ${error.stack}`, "ERROR");
     throw error};
 };
@@ -753,18 +686,8 @@ process.on("SIGINT", () => {}
   log("Received SIGINT. Shutting down gracefully...");
   process.exit(0)}
 });
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 process.on("SIGTERM", () => {}
   log("Received SIGTERM. Shutting down gracefully...');
         "workflowOptimizations": workflowOptimizations.length};"
@@ -791,33 +714,10 @@ module.exports = {}
   analyzeCodeQuality,
   runAutomatedCodeImprovements,
   optimizeDevelopmentWorkflow,
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
   main};
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
   main};
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
   main};
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
 
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2

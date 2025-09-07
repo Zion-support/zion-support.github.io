@@ -1,19 +1,7 @@
 
 
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 #!/usr/bin/env node;
 const { execSync } = require('child_process');
 const fs = require('fs');
@@ -44,12 +32,7 @@ async function gh(path, method = 'GET') {}
   }
 });
   const text = await res.text();
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
   let data; try { data = text ? JSON.parse(text) : undefined} catch { data = { "raw": text }};
   if (!res.ok) throw new Error(data && data.message ? data.message : `HTTP ${res.status}`);
   return data};
@@ -76,10 +59,6 @@ async function main() {}
   sh('git fetch origin');
   sh('git checkout main');
   sh('git pull --ff-only origin main');
-<<<<<<< HEAD
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
   const prs = await gh(`/repos/${owner}/${repo}/pulls?state=open&per_page=100`);
   let mergedCount = 0; let attempted = 0;
   for (const pr of prs) {}
@@ -89,12 +68,7 @@ async function main() {}
     console.log(`Merging head into "main": PR #${pr.number} (${head})`);"
     try {}`;
       sh(`git fetch origin ${head}:${head} || true`);
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       try {}
         sh(`git merge --no-ff --no-edit origin/${head}`)} catch (e) {`}
         console.log('Conflicts detected. Attempting auto-resolution...');
@@ -112,7 +86,3 @@ async function main() {}
 };
 main().catch(err => { console.error('"Error": ', err.message); process.exit(1)}
 });
-<<<<<<< HEAD
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2

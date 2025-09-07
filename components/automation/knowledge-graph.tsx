@@ -1,11 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
 import fs from 'fs';,
-=======
-import fs from 'fs',
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 import path from 'path';
 import type { GetStaticProps } from 'next';
 interface Node { id: string, tokens: string[] }
@@ -61,16 +56,5 @@ function KnowledgeGraph() {}
     </div>
 );
 }
-<<<<<<< HEAD
 
 "
-=======
-}
-}
-) ) 
-}</ul> </section> <section>) ) 
-}</ul> </section> </div>) 
-}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

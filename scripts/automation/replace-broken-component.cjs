@@ -19,12 +19,6 @@ class ComponentReplacer {}
     console.log(`[${new Date().toISOString()}] ${message}`)};
   replaceComponent() {}
     this.log('Replacing broken AIChatbotSystem component with working version...');
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
     const workingComponent = "import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { }
@@ -39,17 +33,7 @@ import { }
   ThumbsUp,
   ThumbsDown,
   Sparkles,
-<<<<<<< HEAD
-=======
     
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-=======
-    
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
     const workingComponent = "import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { }
@@ -69,22 +53,10 @@ import { }
   HelpCircle,
   Star;
 } from 'lucide-react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 interface ChatMessage {}
   "id": string;"
   content: string;,"
 
-=======
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
 interface ChatMessage {}
   "id": string;
@@ -93,10 +65,6 @@ interface ChatMessage {}
   timestamp: Date;
   type: 'text' | 'file';
   status: 'sending' | 'sent' | 'error';
-<<<<<<< HEAD
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
   metadata?: {}
     confidence?: number;
     suggestions?: string[];
@@ -112,19 +80,8 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})"
   const [messages, setMessages] = useState<ChatMessage[]>([]);
 
   const messagesEndRef = useRef<HTMLDivElement>(null);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
   // Sample welcome message;
   useEffect(() => {}
     if (isOpen && messages.length === 0) {}
@@ -144,39 +101,19 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})"
       };
       setMessages([welcomeMessage])};
   }, [isOpen, messages.length]);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
   // Auto-scroll to bottom;
   useEffect(() => {}
     if (autoScroll && messagesEndRef.current) {}
       messagesEndRef.current.scrollIntoView({ "behavior": 'smooth' })};
   }, [messages, autoScroll]);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
   // Simulate AI response;
   const simulateAIResponse = useCallback(async ("userInput": string) => {}
     setIsTyping(true);
     
     // Simulate processing delay;
     await new Promise(resolve => setTimeout(resolve, 1000 + Math.random() * 2000));
-<<<<<<< HEAD
-=======
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
   // Simulate AI response;
   const simulateAIResponse = useCallback(async ("userInput": string) => {}
@@ -185,13 +122,7 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})"
     // Simulate processing delay;
     await new Promise(resolve => setTimeout(resolve, 1000 + Math.random() * 2000));
     
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
     
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
     const responses = [{}]
         "content": "I'd be happy to help you with that! Our team specializes in cutting-edge technology solutions.",
         "suggestions": ['Tell me more', 'Get a quote', 'View services', 'Contact us'],
@@ -208,25 +139,13 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})"
         "relatedServices": ['Digital Transformation', 'Process Optimization', 'Change Management'];
       };
     ];
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     const randomResponse = responses[Math.floor(Math.random() * responses.length)];
-=======
 
     const randomResponse = responses[Math.floor(Math.random() * responses.length)];
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
     const randomResponse = responses[Math.floor(Math.random() * responses.length)];
 
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-
-    const randomResponse = responses[Math.floor(Math.random() * responses.length)];
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
     const "botMessage": ChatMessage = {}
       id: Date.now().toString(),
       "content": randomResponse.content,
@@ -241,44 +160,22 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})"
         "estimatedResponseTime": 1 + Math.random() * 2;
       };
     };
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     setMessages(prev => [...prev, botMessage]);
     setIsTyping(false)}, []);
-=======
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
     setMessages(prev => [...prev, botMessage]);
     setIsTyping(false)}, []);
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
     setMessages(prev => [...prev, botMessage]);
     setIsTyping(false)}, []);
 
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
   // Handle message submission;
   const handleSubmit = useCallback(async ("e": React.FormEvent) => {}
     e.preventDefault();
     if (!inputValue.trim() || isTyping) return;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
     const userMessage: ChatMessage = {}
       id: Date.now().toString(),
       "content": inputValue.trim(),
@@ -287,12 +184,6 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})"
       "type": 'text',
       "status": 'sent'
     };
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
     setMessages(prev => [...prev, userMessage]);
     setInputValue('');
     
@@ -301,10 +192,6 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})"
   // Handle suggestion clicks;
   const handleSuggestionClick = useCallback(("suggestion": string) => {}
     setInputValue(suggestion)}, []);
-<<<<<<< HEAD
-=======
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
     setMessages(prev => [...prev, userMessage]);
     setInputValue('');
@@ -315,13 +202,7 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})"
   const handleSuggestionClick = useCallback(("suggestion": string) => {}
     setInputValue(suggestion)}, []);
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
   // Handle file upload;
   const handleFileUpload = useCallback(("e": React.ChangeEvent<HTMLInputElement>) => {}
     const file = e.target.files?.[0];
@@ -336,52 +217,26 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})"
       };
       setMessages(prev => [...prev, fileMessage])};
   }, []);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   // Toggle voice input;
   const toggleVoiceInput = useCallback(() => {}
     setIsListening(!isListening)}, [isListening]);
 
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
   // Toggle voice input;
   const toggleVoiceInput = useCallback(() => {}
     setIsListening(!isListening)}, [isListening]);
 
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   // Rate response;
   const rateResponse = useCallback(("messageId": string, "rating": 'positive' | 'negative') => {}
     console.log(\"Rated message \${messageId} as \${rating}\")}, []);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-=======
 
   // Toggle voice input;
   const toggleVoiceInput = useCallback(() => {}
     setIsListening(!isListening)}, [isListening]);
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
   return ()
 "
   const handleFileUpload = useCallback(("e": React.ChangeEvent<HTMLInputElement>) => {}"
@@ -395,18 +250,8 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})"
       >
         {isOpen ? <X className="w-6 h-6" /> : <MessageCircle className="w-6 h-6" />};
       </button>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       {/* Chat Interface */};
 </button>"
         {isOpen ? <X className="w-6 h-6" /> : <MessageCircle className="w-6 h-6" />};"
@@ -476,34 +321,14 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})"
                       </div>
                     )};
                   </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
                   {/* Message Content */};
                   <div className={\"max-w-[80%] \${message.sender === 'user' ? 'text-right' : 'text-left'}\"}>
                     <div className={\"p-3 rounded-lg \${message.sender === 'user' ? 'bg-zion-cyan text-white' : 'bg-zinc-800 text-zinc-100'}\"}>
                       <p className="text-sm whitespace-pre-wrap">{message.content}</p>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
                       
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
                       
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-                      
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
                       {/* Message Metadata */};
                       {message.metadata && (})
                         <div className="mt-2 space-y-2">
@@ -546,35 +371,15 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})"
                         </div>
                       )};
                     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
                     {/* Message Actions */};
                     <div className={\"flex items-center gap-2 mt-2 \${message.sender === 'user' ? 'justify-end' : 'justify-start'}\"}>
                       <span className="text-xs text-zinc-500">
                         {message.timestamp.toLocaleTimeString()};
                       </span>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
                       {message.sender === 'bot' && (})
                         <div className="flex items-center gap-1">
                           <button;
@@ -616,18 +421,8 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})"
               )};
               <div ref={messagesEndRef} />
             </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
             {/* Input Area */};
             <div className="p-4 border-t border-zinc-700/50">
               <form onSubmit={handleSubmit} className="flex items-center gap-2">
@@ -640,18 +435,8 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})"
                     className="w-full px-4 py-3 bg-zinc-800/50 border border-zinc-600/50 rounded-lg text-white placeholder-zinc-400 "focus": outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent resize-none"
                     disabled={isTyping};
                   />
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
                   {/* File Upload */};
                   <label className="absolute right-3 top-1/2 transform -translate-y-1/2 cursor-pointer">
                     <input;
@@ -676,18 +461,8 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})"
                     <Paperclip className="w-4 h-4 text-zinc-400 "hover": text-zinc-300 transition-colors" />
                   </label>
                 </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
                 {/* Voice Input */};
                 {settings.voiceEnabled && (})
                   <button;
@@ -709,18 +484,8 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})"
                   <Send className="w-4 h-4" />
                 </button>
               </form>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
               {/* Quick Actions */};
               <div className="flex items-center justify-between mt-3 text-xs text-zinc-500">
                 <div className="flex items-center gap-2">
@@ -739,34 +504,14 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})"
     </>
   )};
 ";
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
     
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
     
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-    
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
     fs.writeFileSync(this.filePath, workingComponent);
     this.log('AIChatbotSystem component replaced successfully!')};
   async run() {}
     this.log('Starting Component Replacer...');
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
     
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
     
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-    
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
     try {}
       this.replaceComponent();
       this.log('Component Replacer completed successfully!')} catch (error) {}
@@ -785,33 +530,10 @@ if (require.main === module) {}
     .then(() => {}"
 
       process.exit(1)})};
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
 module.exports = ComponentReplacer;
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 module.exports = ComponentReplacer;
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
 module.exports = ComponentReplacer;
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
 
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2

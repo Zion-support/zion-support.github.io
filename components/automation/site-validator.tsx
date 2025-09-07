@@ -1,11 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
 import fs from 'fs';,
-=======
-import fs from 'fs',
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 import path from 'path';
 import type { GetStaticProps } from 'next';
 type Broken = any;
@@ -79,19 +74,5 @@ export default function SiteValidator({ report }: Props) {
     </div>
 );
 }
-<<<<<<< HEAD
 
 "
-=======
-}
-}
-return (<div className="space-y-6" > <header className="space-y-1" > <h1 className="text-3xl font-bold" >Site Validator</h1> <p className="text-gray-600 dark:text-gray-300" >Broken links and Open Graph checks from exported site.</p> </header> </div> {
-  report.brokenLinks.length > 0 && (<section>) ) 
-}</ul> </section>) 
-}) ) 
-}</ul> </section>) 
-}</div>) 
-}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

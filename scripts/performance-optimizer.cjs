@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 #!/usr/bin/env node
 /**
-<<<<<<< HEAD
  * Performance Optimizer
  * Analyzes and optimizes application performance
  * Provides comprehensive performance monitoring and optimization recommendations
@@ -11,27 +7,13 @@
 const fs = require("fs");
 const path = require("path");
 const { execSync } = require("child_process");
-=======
- * Performance Optimization Script
- * Optimizes the app for better performance
- */
-const fs = require("fs");
-const path = require("path");
-=======
 
-
-const fs = require('fs');
-const path = require('path');
->>>>>>> main
-
->>>>>>> origin/main
 
 class PerformanceOptimizer {
   // TODO: Implement
 }
   constructor() {
     this.projectRoot = process.cwd();
-<<<<<<< HEAD
     this.reportsDir = path.join(this.projectRoot, "performance-reports");
     this.optimizations = [];
     this.metrics = {
@@ -433,8 +415,6 @@ if (require.main === module) {
     process.exit(1);
   });
 }
-=======
-<<<<<<< HEAD
   }
 
   log(message, type = "info") {
@@ -471,9 +451,6 @@ if (require.main === module) {
 
 const optimizer = new PerformanceOptimizer();
 optimizer.run().catch(console.error);
-=======
-    this.optimizations = [];
->>>>>>> main
 
 
   getAllFiles(dir, extensions) {
@@ -484,7 +461,6 @@ optimizer.run().catch(console.error);
     return files;
 
 
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')

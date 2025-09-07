@@ -12,21 +12,9 @@ const fs = require("fs");
 const path = require("path");
 const { execSync, spawn } = require("child_process");
 const os = require("os");
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 const os = require("os");"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-=======
 
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
 
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 class $1 {}
   constructor() {}
   this.projectRoot = process.cwd();
@@ -104,62 +92,27 @@ class $1 {}
     if (this.autoFixEnabled) {}
   await this.autoFixCriticalIssues(issues)};
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     // Store metrics in history;
     this.performanceHistory.push(metrics);
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
     // Store metrics in history;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
     // Store metrics in history;
     this.performanceHistory.push(metrics);
 
-<<<<<<< HEAD
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
     // Keep only last 100 entries;
     // Analyze metrics for issues;
     const issues = await this.analyzeMetrics(metrics);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
 
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
     // Generate alerts for critical issues;
     // Auto-fix critical issues if enabled;
     // Save metrics;
     await this.saveMetrics(metrics);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
     return metrics};
   async collectSystemMetrics() {}
   "cpu": {}"
@@ -214,20 +167,9 @@ class $1 {}
     } catch (error) {}
   this.log(Failed to collect application "metrics": ${error.message  }",)
         "WARN`;`
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
 
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
   async collectApplicationMetrics() {}
   "pm2": {}"
   processes: 0,"
@@ -279,18 +221,8 @@ class $1 {}
       // For now, we"ll use placeholder values;
       metrics.responseTime = Math.random() * 1000; // Simulated response time;
       metrics.throughput = Math.random() * 1000000; // Simulated throughput} catch (error) {  this.log(`Failed to collect network "metrics": ${error.message  }`, "WARN");
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
     try {}
   // This would typically involve monitoring actual network requests;
       // For now, we"ll use placeholder values;
@@ -311,29 +243,16 @@ class $1 {}
         "encoding": "utf8",
         "stdio": "pipe"}"
 });
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
       const lines = result.split("\n");
       const data = lines[1].split(/\s+/);
-=======
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
       const lines = result.split("\n");
       const data = lines[1].split(/\s+/);
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
       const lines = result.split("\n");
       const data = lines[1].split(/\s+/);
 
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       return {}
 "
       const lines = result.split("\n");"
@@ -359,50 +278,25 @@ class $1 {}
         "encoding": "utf8",
         "stdio": "pipe"}
 });
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
       const processes = JSON.parse(result);
       let totalMemory = 0;
       let totalCPU = 0;
-=======
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
       const processes = JSON.parse(result);
       let totalMemory = 0;
       let totalCPU = 0;
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
       const processes = JSON.parse(result);
       let totalMemory = 0;
       let totalCPU = 0;
 
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       processes.forEach(proc => {})
   totalMemory += proc.monit.memory || 0;
         totalCPU += proc.monit.cpu || 0}
 });
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       return {}
   "processes": processes.length,
         "memory": totalMemory,
@@ -438,69 +332,31 @@ class $1 {}
   async measureBundleSize() {}
   try {}
   const distPath = path.join(this.projectRoot, "dist");
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
   const viteConfigPath = path.join(this.projectRoot, "vite.config.ts");"
       if (fs.existsSync(viteConfigPath)) {}"
   const config = fs.readFileSync(viteConfigPath, "utf8");"
 
     return { "treeShaking": false, "codeSplitting": false, "minification": true };"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-=======
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-  async measureBundleSize() {}
-  const distPath = path.join(this.projectRoot, "dist");"
-      if (!fs.existsSync(distPath)) return 0;
-<<<<<<< HEAD
-<<<<<<< HEAD
-      let totalSize = 0;
-      const files = this.getAllFilesRecursive(distPath);
-=======
-=======
 
   async measureBundleSize() {}
   const distPath = path.join(this.projectRoot, "dist");"
       if (!fs.existsSync(distPath)) return 0;
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+      let totalSize = 0;
+      const files = this.getAllFilesRecursive(distPath);
 
       let totalSize = 0;
       const files = this.getAllFilesRecursive(distPath);
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
       let totalSize = 0;
       const files = this.getAllFilesRecursive(distPath);
 
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       for (const file of files) {}
   const stats = fs.statSync(file);
         totalSize += stats.size};
       return totalSize} catch (error) {}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
   
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-=======
   
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-  
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 } catch (error) {}
   return 0} catch (error) {}
   async countDependencies() {}
@@ -512,32 +368,14 @@ class $1 {}
           Object.keys(pkg.devDependencies || {}).length;
   getAllFilesRecursive(dir, files = []) {}
   const items = fs.readdirSync(dir);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     for (const item of items) {}
   const fullPath = path.join(dir, "item);
       const stat = fs.statSync(fullPath);
-=======
-
-    for (const item of items) {}"
-  const fullPath = path.join(dir, "item);"
-      const stat = fs.statSync(fullPath);
-
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
     for (const item of items) {}
   const fullPath = path.join(dir, "item);
       const stat = fs.statSync(fullPath);
 
-<<<<<<< HEAD
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       if (stat.isDirectory()) {}
   this.getAllFilesRecursive(fullPath", files)} else {}
       if (stat.isDirectory()) {}"
@@ -576,22 +414,9 @@ class $1 {}
 ;
       this.alertHistory.push(alert);this.log(`"ALERT": ${issue.type} - ${issue.description}`, issue.severity)};
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-  const alert = {}"
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
     // Save alerts;
     await this.saveAlerts()};
   getRecommendations(issue) {}
@@ -612,22 +437,9 @@ class $1 {}
   const criticalIssues = issues.filter(;)
       issue => issue.severity === "CRITICAL";
     );
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-  const criticalIssues = issues.filter(;)"
-      issue => issue.severity === "CRITICAL";"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
 
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
     for (const issue of criticalIssues) {}
   const result = await this.applyAutoFix(issue);
         if (result.success) {}
@@ -679,18 +491,8 @@ class $1 {}
   "cwd": this.projectRoot,
         "stdio": "pipe"}
 });
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       return { "success": true, "message": "Disk space cleaned up successfully" };
     } catch (error) {}
   return { "success": false, "message": error.message   };
@@ -752,19 +554,8 @@ if (metrics.system.cpu.usage > 95) {}"
       this.log("Performance monitoring stopped")};"
   getPerformanceSummary() {}
   const recentMetrics = this.performanceHistory.slice(-10);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
     if (recentMetrics.length === 0) {}
   return { "message": "No performance data available" };
     };
@@ -779,18 +570,8 @@ if (metrics.system.cpu.usage > 95) {}"
     const avgDisk =;
       recentMetrics.reduce((sum, m) => sum + m.system.disk.usage, 0) /;
       recentMetrics.length;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
     return {}
   "timestamp": new Date().toISOString(),
       "averages": {}
@@ -828,30 +609,9 @@ if (require.main === module) {}
   console.error("Advanced Performance Monitor "failed": ", error);"
       process.exit(1)})};
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
 module.exports = AdvancedPerformanceMonitor;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 module.exports = AdvancedPerformanceMonitor;
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-module.exports = AdvancedPerformanceMonitor;
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
 module.exports = AdvancedPerformanceMonitor;
 

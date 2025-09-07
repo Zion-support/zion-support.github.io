@@ -4,16 +4,10 @@
  * Orchestrates all automation scripts for maximum efficiency
  * Enhanced with parallel execution, better error handling, and comprehensive monitoring
  */
-<<<<<<< HEAD
 const fs = require("fs")
 const path = require("path")
 const { execSync, spawn } = require("child_process")
 const os = require("os")
-=======
-const fs = require("fs");
-const path = require("path");
-const { execSync, spawn } = require("child_process");
->>>>>>> main
 
 class AutomationOrchestrator {
   constructor() {
@@ -55,7 +49,6 @@ class AutomationOrchestrator {
   log(message, type = "info") {
     const timestamp = new Date().toISOString();
     const prefix = type === "error" ? "❌" : type === "success" ? "✅" : "ℹ️";
-<<<<<<< HEAD
     const logMessage = `[${timestamp}] ${prefix} ${message}`;
     console.log(logMessage);
     
@@ -90,9 +83,6 @@ class AutomationOrchestrator {
     }
     
     this.log(`Completed ${category} scripts execution`);
-=======
-    console.log(`[${timestamp}] ${prefix} ${message}`);
->>>>>>> main
   }
 
   async runScript(scriptName, category) {
@@ -332,7 +322,6 @@ ${report.nextSteps.map(item => `- ${item}`).join("\n")}
     ];
   }
 
-<<<<<<< HEAD
   generateMarkdownReport(report) {
     return `# Automation Report
 
@@ -394,35 +383,12 @@ ${report.nextSteps.map(item => `- ${item}`).join('\n')}
       this.log("🎉 Comprehensive automation completed successfully!", "success");
       this.log(`⏱️ Total orchestration time: ${(report.duration / 1000).toFixed(2)}s`);
       this.log(`💾 Memory usage: ${(this.results.metrics.memoryUsage.end.heapUsed / 1024 / 1024).toFixed(2)}MB`);
-=======
-  async orchestrate() {
-    try {
-      this.log("🚀 Starting Comprehensive Automation Orchestration...");
-      this.log("🏢 Zion Tech Group - Advanced Automation System");
-      
-      await this.preAutomationChecks();
-      await this.runErrorFixing();
-      await this.runBuildOptimization();
-      await this.runPerformanceMonitoring();
-      await this.runSecurityAudit();
-      await this.runSEOOptimization();
-      await this.runQualityChecks();
-      
-      this.generateReport();
-      
-      this.log("🎉 Comprehensive automation completed successfully!", "success");
-      this.log(`⏱️ Total orchestration time: ${Date.now() - this.startTime}ms`);
->>>>>>> main
       
     } catch (error) {
       this.log(`❌ Orchestration failed: ${error.message}`, "error");
-<<<<<<< HEAD
       this.results.metrics.endTime = Date.now();
       this.results.metrics.duration = this.results.metrics.endTime - this.results.metrics.startTime;
       throw error;
-=======
-      process.exit(1);
->>>>>>> main
     }
   }
 }
@@ -585,36 +551,10 @@ ${report.nextSteps.map(item => `- ${item}`).join("\n"`)
         "Monitor application performance"
     const reportPath = path.join(this.reportsDir, "comprehensive-automation-report.json")
     this.log(" Starting Comprehensive Automation Orchestrator")
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
       this.log(")
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
       this.log(")
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
       this.log(")
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
->>>>>>> origin/main
-=======
 
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2

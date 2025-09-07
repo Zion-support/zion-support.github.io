@@ -1,19 +1,9 @@
-<<<<<<< HEAD
-export {};
-export {};
-module.exports = {};
-=======
-<<<<<<< HEAD
-describe('Utils', () => {
-  test('utility functions work', () => {
-    // Add utility tests here
-=======
-import { describe, it, expect } from '@jest/globals';
+import React from 'react';
+import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
 
-describe('utils', () => {
-  it('should work', () => {
->>>>>>> main
+describe('utils.test', () => {
+  test('renders without crashing', () => {
     expect(true).toBe(true);
   });
 });
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

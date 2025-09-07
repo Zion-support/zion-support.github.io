@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
-=======
-import React, { useState } from 'react';
-import Link from 'next/link';
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Menu, 
@@ -1045,7 +1039,6 @@ const Navigation: React.FC = () => {
       )}
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
-<<<<<<< HEAD
         {/* Mobile Navigation */}
         <AnimatePresence>
           {isOpen && (
@@ -1088,11 +1081,7 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 };
 
 export default Navigation;
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
     </nav>
   )
 }
 export default Navigation
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

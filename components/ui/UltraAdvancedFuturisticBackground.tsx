@@ -1,11 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
 let animationFrameId: number;
-=======
-let animationFrameId: number
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 let particles: Array< {
   resizeCanvas ();
 window.addEventListener ('resize', resizeCanvas);
@@ -312,32 +307,12 @@ if (particle.type === 'holographic' && Math.random() > 0.95) {
         ref={canvasRef}
         className='absolute inset-0 w-full h-full pointer-events-none'
         style={{ zIndex: -1 }}
-<<<<<<< HEAD
       {/* Additional CSS-based effects *,}
-=======
-let animationFrameId: number
-let particles: Array< {
-  resizeCanvas ()
-window.addEventListener ('resize', resizeCanvas)
-//Color schemes Math.random () > 0.5 ? 'holographic' : Math.random () > 0.3 ? 'neon' : 'fusion'
-particles.push ({
-  x: Math.random () * canvas.width, y: Math.random () * canvas.height, vx: (Math.random () - 0.5) * 2 * animationSpeed, vy: (Math.random () - 0.5) * 2 * animationSpeed, size: Math.random () * 3 + 1, opacity: Math.random () * 0.8 + 0.2, color: type === 'quantum' ? colors.quantum : type === 'holographic' ? colors.holographic : 
-}
-}
-//Quantum entanglement effect 
-}
-}
-}
-}
-//Holographic grid effect 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
 }
       <div className='absolute inset-0 pointer-events-none' />;
-=======
       />
       {/* Additional CSS-based effects */}
       <div className='absolute inset-0 pointer-events-none'>
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
         {/* Floating geometric shapes */}
         <div className='absolute top-20 left-20 w-32 h-32 border border-cyan-500/20 rounded-full animate-pulse'></div>
         <div className='absolute top-40 right-32 w-24 h-24 border border-purple-500/20 rounded-full animate-pulse delay-1000'></div>
@@ -371,52 +346,9 @@ particles.push ({
     </div>
   );
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 export default UltraAdvancedFuturisticBackground;
 
-=======
-}
-}
-//Animation loop //Create effects createHolographicGrid ()
-createQuantumEntanglement ()
-createNeuralNetwork ()
-//Update and draw particles particles.forEach ( (particle, index) => {
-  //Update position particle.x += particle.vx
-particle.y += particle.vy
-//Bounce off edges if (particle.x < 0 || particle.x > canvas.width) particle.vx *= -1
-if (particle.y < 0 || particle.y > canvas.height) particle.vy *= -1
-//Wrap around edges if (particle.x < 0) particle.x = canvas.width
-if (particle.x > canvas.width) particle.x = 0
-if (particle.y < 0) particle.y = canvas.height
-if (particle.y > canvas.height) particle.y = 0
-//Draw particle ctx.fillStyle = glowGradient
-ctx.fill ()
-//Add sparkle effect for holographic particles 
-}
-})
-//Add intensity-based effects 
-}
-}animationFrameId = requestAnimationFrame (animate) 
-}
-initParticles ()
-animate ()
-{
-  /* Quantum particles */ 
-}{
-  enableQuantumEffects && (<> <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-cyan-400 rounded-full animate-ping" ></div> <div className="absolute top-3/4 right-1/4 w-1 h-1 bg-purple-400 rounded-full animate-ping delay-300" ></div> <div className="absolute bottom-1/4 right-1/3 w-1.5 h-1.5 bg-green-400 rounded-full animate-ping delay-700" ></div> </>) 
-}{
-  /* Holographic elements */ 
-}{
-  enableHolographic && (<> </>) 
-}</div> {
-  children 
-}</div>) 
-}
-export default UltraAdvancedFuturisticBackground
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
 export default UltraAdvancedFuturisticBackground;
   return (
     <div ref={containerRef} className="relative w-full h-full overflow-hidden">
@@ -452,4 +384,3 @@ export default UltraAdvancedFuturisticBackground;
   )
 }
 export default UltraAdvancedFuturisticBackground;
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import Link from 'next/link';
 export default function ReportProblemButton({ projectId, entityType, entityId }: { projectId: string, entityType?: 'milestone' | 'contract' | 'thread', entityId?: string }) {
   const query = null;
@@ -109,7 +108,6 @@ export default function ReportProblemButton({ projectId, entityType, entityId }:
     </Link>
   );
 }
-<<<<<<< HEAD
 
 export default /**
  * ReportProblemButton - Function description;
@@ -131,9 +129,3 @@ function ReportProblemButton() {
   );
 
 "
-=======
-Report a Problem </a> </Link>) 
-}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

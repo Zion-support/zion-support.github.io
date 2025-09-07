@@ -3,24 +3,12 @@
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-=======
 
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
 
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 class QualityAssuranceMonitor {}
   constructor() {}
     this.projectRoot = process.cwd();
@@ -45,18 +33,8 @@ class QualityAssuranceMonitor {}
   };
   async checkCodeQuality() {}
     this.log('Running quality assurance checks...');
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
     
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
     
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-    
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
     // Check TypeScript errors;
     const tsResult = await this.runCommand('npx tsc --noEmit', { "silent": true }
 });
@@ -91,28 +69,16 @@ class QualityAssuranceMonitor {}
     return this.issuesFound};
   async run() {}
     this.log('Starting Quality Assurance Monitor...');
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     try {}
       const issues = await this.checkCodeQuality();
-=======
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
     
     try {}
       const issues = await this.checkCodeQuality();
       
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
     
     try {}
       const issues = await this.checkCodeQuality();
       
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       if (issues.length > 0) {}
         this.log(`Found ${issues.length} quality issues that need attention`, 'warn');
         for (const issue of issues) {}
@@ -142,33 +108,10 @@ class QualityAssuranceMonitor {}
 if (require.main === module) {}
   const monitor = new QualityAssuranceMonitor();
   monitor.run().catch(console.error)};
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
 module.exports = QualityAssuranceMonitor;
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 module.exports = QualityAssuranceMonitor;
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
 module.exports = QualityAssuranceMonitor;
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
 
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2

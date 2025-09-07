@@ -108,40 +108,16 @@ class ErrorPreventionOrchestrator {}
   runCommand(command, args) {}
     return new Promise((resolve, reject) => {;}
       const child = spawn(command, args, { "stdio": 'inherit' };);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
       
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
       
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-=======
 
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
       
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
       process.exit(1)};
   runCommand(command, args) {}
     return new Promise((resolve, reject) => {;}"
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       child.on('close', (code) => {}
         if ( {})
           resolve()} else {}`;
@@ -172,42 +148,18 @@ switch (command) {}
   case 'logs':
     orchestrator.logs();
     break;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-  "default": console.log('Usage: node master-orchestrator.cjs [start|stop|restart|status|check|logs]');
-    process.exit(1)};
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-  "default": console.log('Usage: node master-orchestrator.cjs [start|stop|restart|status|check|logs]');
-    process.exit(1)};
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-  "default": console.log('Usage: node master-orchestrator.cjs [start|stop|restart|status|check|logs]');
-    process.exit(1)};
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
   "default": console.log('Usage: node master-orchestrator.cjs [start|stop|restart|status|check|logs]');
     process.exit(1)};
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
+  "default": console.log('Usage: node master-orchestrator.cjs [start|stop|restart|status|check|logs]');
+    process.exit(1)};
 
   "default": console.log('Usage: node master-orchestrator.cjs [start|stop|restart|status|check|logs]');
     process.exit(1)};
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
+
 
   "default": console.log('Usage: node master-orchestrator.cjs [start|stop|restart|status|check|logs]');
     process.exit(1)};
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+
+  "default": console.log('Usage: node master-orchestrator.cjs [start|stop|restart|status|check|logs]');
+    process.exit(1)};

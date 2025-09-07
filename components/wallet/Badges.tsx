@@ -1,12 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
 import React from \"react\";
 
-=======
-import React from "react";
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 export type Badge = any;
 import React from 'react';
 
@@ -77,37 +72,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       )}
     </div>
   );
-<<<<<<< HEAD
 
 "
-=======
-export type Badge = {
-  id: string
-label: string
-threshold: number, //token balance threshold 
 }
-const BADGES: Badge[] = [ export function currentBadge (balance: number) : Badge | null {
-  let current: Badge | null = null
-for (const b of BADGES) {
-  if (balance >= b.threshold) current = b 
-}return current
-}export default function Badges ({
-  balance 
-}: {
-  balance: number 
-}) {
-  const active = currentBadge (balance)
-return (<div className="flex gap-2 items-center flex-wrap" > BADGES.map ( (b) => (<span key= {
-  b.id 
-}className= {
-  `px-3 py-1 rounded-full text-xs border $ {
-  balance >= b.threshold > {
-  b.label 
-}</span>) ) 
-}) 
-}</div>) 
-}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
-}
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

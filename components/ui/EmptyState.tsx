@@ -1,11 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
 import React from 'react';,
-=======
-import React from 'react',
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 import Link from 'next/link';
 import EnhancedButton from './EnhancedButton';
 export type EmptyStateProps = any;
@@ -48,18 +43,5 @@ return (<div className='w-full border border-dashed border-gray-300 dark:border-
   primaryAction?: { label: string, href: string }
   secondaryAction?: { label: string, href: string }
 }
-<<<<<<< HEAD
 
 "
-=======
-</a> </a>) 
-}{
-  secondaryAction && (<Link href= {
-  secondaryAction.href 
-}> <a> </a> </a>) 
-}</div>) 
-}</div>) 
-}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

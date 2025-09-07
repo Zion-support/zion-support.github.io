@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 import React, { useEffect, useRef } from 'react';
 import { motion  } from 'framer-motion';
 interface UltraFuturisticBackground2038Props {
@@ -469,24 +465,7 @@ ref={canvasRef}
             {[...Array(20)].map((_, i) => (<motion&& motion.div
         // Regenerate particles
         // Check condition;}
-<<<<<<< HEAD
 if ( {) {$2;}
-=======
-resizeCanvas ()
-window.addEventListener ('resize', resizeCanvas)
-// Enhanced theme-based color schemes for 2038 const getThemeColors = () => {
-  switch (theme) {
-  case 'consciousness': return {
-  
-}
-}
-Math.random () > 0.5 ? 'quantum-field' : Math.random () > 0.3 ? 'hologram' : 'particle'
-particles.push ({
-  
-}
-}
-// Enhanced animation loop with consciousness and quantum effects 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
 }
           particle.coordinate_x = Math.random () * canvas.width;
           particle.coordinate_y = Math.random () * canvas.height;
@@ -498,7 +477,6 @@ particles.push ({
       })requestAnimationFrame (animate)init_particles ()animate ()return () = /> {window.removeEventListener ('resize', resize_canvas)}
   }, [intensity, theme])return (<div ref={container_ref} className='fixed inset - 0 pointer - events - none' />;
       <canvas;
-=======
   if($2) {$2;}
 
           particle.coordinate_x = Math.random () * canvas.width
@@ -509,7 +487,6 @@ particles.push ({
       })requestAnimationFrame (animate)init_particles ()animate ()return () =    /> {window.removeEventListener ('resize', resize_canvas)}
   }, [intensity, theme])return (<div ref={container_ref} className='fixed inset - 0 pointer - events - none'    />
       <canvas
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
         ref={canvas_ref}
         className='w - full h - full'
         style={{background:
@@ -674,7 +651,6 @@ particle && particle.y - hologramSize / 2
 }
 // Enhanced animation loop with consciousness and quantum effects
 }// Update and draw particles // Quantum entanglement effects if (particle.type === 'quantum-field') {
-<<<<<<< HEAD
   particles.forEach ( (otherParticle, otherIndex) => {}
   if (index !== otherIndex && Math.random () > 0.99) {}
 })
@@ -686,7 +662,6 @@ hologramSize
       </div>
       {children}
     </div>)}
-<<<<<<< HEAD
 // Enhanced animation loop with consciousness and quantum effects;
 }// Update and draw particles // Quantum entanglement effects // Check condition;
 if ( {) {$2;}
@@ -708,28 +683,6 @@ if (}) {$2;}
 
 init_particles ();
 animate ();
-=======
-  particles.forEach ( (otherParticle, otherIndex) => {
-  if (index !== otherIndex && Math.random () > 0.99) {
-  
-}
-}
-}) 
-}// Consciousness wave effects ctx.strokeRect (particle.x - hologramSize / 2
-particle.y - hologramSize / 2
-hologramSize
-hologramSize) 
-}// Quantum field effects ctx.fillStyle = gradient
-ctx.fillRect (particle.x - fieldSize / 2
-particle.y - fieldSize / 2
-fieldSize
-fieldSize) 
-}// Standard particle rendering 
-}// Boundary wrapping with quantum tunneling effect if (particle.x < 0 || particle.x > canvas.width || requestAnimationFrame (animate) 
-}
-initParticles ()
-animate ()
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
 />) ) 
 }</div>) 
 }/>) ) 
@@ -739,7 +692,6 @@ animate ()
 }</div> {
   children }
 }
-=======
 // Enhanced animation loop with consciousness and quantum effects
 }// Update and draw particles // Quantum entanglement effects // Check condition
 })}// Consciousness wave effects ctx.stroke_rect (particle.x - hologram_size / 2
@@ -756,7 +708,6 @@ animate ()
 }/>) )
 }</div>)
 }/>) )
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 }</div>)
 
 }</div>)   )

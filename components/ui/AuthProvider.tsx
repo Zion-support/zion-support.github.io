@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 import React, { createContext, useContext, useEffect, useState } from 'react';
 type UserRole = any;
 type UserRole = 'talent' | 'client';
@@ -53,22 +49,4 @@ return useContext(AuthContext);
 }
 return useContext(AuthContext);
 }
-<<<<<<< HEAD
 }
-=======
-type UserRole = 'talent' | 'client'
-useEffect ( () => {
-  try {
-  
-}catch {
-  
-}
-}, [])
-}catch {
-  
-}
-}
-return (
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

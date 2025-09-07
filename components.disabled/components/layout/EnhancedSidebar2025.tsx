@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -463,13 +461,5 @@ const EnhancedSidebar2025: React.FC<EnhancedSidebar2025Props> = ({
 
 export default EnhancedSidebar2025;
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
-=======
 
 
-
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2

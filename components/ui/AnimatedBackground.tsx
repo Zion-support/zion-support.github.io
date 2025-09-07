@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default function AnimatedBackground() {return (<div className='pointer-events-none fixed inset-0 -z-10 overflow-hidden' />;
       <div;
         className='absolute -inset-[20%] opacity-40 blur-3xl animate-[bgflow_20s_linear_infinite]';
@@ -18,15 +16,6 @@ export default function AnimatedBackground() {return (<div className='pointer-ev
         }
 
       `}</style />
-=======
-import React from 'react';
-export default function AnimatedBackground() {
-          50% {
-            transform: translateY(-20px) rotate(10deg)
-          100% {
-            transform: translateY(0px) rotate(0deg)
-      `}</style>
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
     </div>
   );  return (
     <div className="fixed inset-0 -z-10 overflow-hidden">
@@ -105,14 +94,6 @@ function AnimatedBackground() {}
       />
     </div>;
   );
-<<<<<<< HEAD
 
-=======
-}` 
-}</style> </div>) 
-}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
 }
 export default AnimatedBackground;
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

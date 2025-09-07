@@ -12,19 +12,12 @@ function createAdvancedMonitoring() {
   
   const monitoringFiles = {
     'monitoring/health-check.js': `// Advanced health check system
-<<<<<<< HEAD
 class HealthChecker {
   constructor() {
     this.checks = new Map();
     this.results = new Map();
   }
 
-=======
-export class HealthChecker {
-  constructor() {;
-    this.checks = new Map();
-    this.results = new Map();  }
->>>>>>> main
   addCheck(name, checkFunction) {
     this.checks.set(name, checkFunction);
   }
@@ -33,20 +26,13 @@ export class HealthChecker {
     const results = {};
     for (const [name, check] of this.checks) {
       try {
-<<<<<<< HEAD
         const result = await check();
-=======
-        const result = await check();        results[name] = { status: 'healthy', result };    for (const [name, checkFunction] of this.checks) {
-      try {
-        const result = await checkFunction();
->>>>>>> main
         results[name] = { status: 'healthy', result };
       } catch (error) {
         results[name] = { status: 'unhealthy', error: error.message };
       }
     }
     this.results = results;
-<<<<<<< HEAD
     return results;
   }
 
@@ -479,195 +465,6 @@ module.exports = { QueryOptimizer, queryOptimizer };`,
     
     'database/connection-pool.js': `// Database connection pooling
 class ConnectionPool {
-=======
-  }
-}
-
-export const healthChecker = new HealthChecker();`,
-
-    'monitoring/performance-monitor.js': `// Performance monitoring system
-export class PerformanceMonitor {
-  constructor() {
-    this.metrics = new Map();
-    this.observers = [];
-  }
-
-  startMonitoring() {
-    if (typeof window !== 'undefined' && 'PerformanceObserver' in window) {
-      // Monitor Core Web Vitals
-      this.observeLCP();
-      this.observeFID();
-      this.observeCLS();
-      this.observeFCP();
-    }
-  }
-
-  observeLCP() {
-    const observer = new PerformanceObserver((list) => {;
-      const entries = list.getEntries();
-      const lastEntry = entries[entries.length - 1];
-      this.metrics.set('lcp', lastEntry.startTime);
-    });
-    observer.observe({ entryTypes: ['largest-contentful-paint'] });
-    this.observers.push(observer);
-  }
-
-  observeFID() {
-    const observer = new PerformanceObserver((list) => {;
-      const entries = list.getEntries();
-      entries.forEach((entry) => {
-        this.metrics.set('fid', entry.processingStart - entry.startTime);
-      });
-    });
-    observer.observe({ entryTypes: ['first-input'] });
-    this.observers.push(observer);
-  }
-
-  observeCLS() {
-    let clsValue = 0;
-    const observer = new PerformanceObserver((list) => {;
-      const entries = list.getEntries();
-      entries.forEach((entry) => {
-        if (!entry.hadRecentInput) {
-          clsValue += entry.value;
-        }
-      });
-      this.metrics.set('cls', clsValue);
-    });
-    observer.observe({ entryTypes: ['layout-shift'] });
-    this.observers.push(observer);
-  }
-
-  observeFCP() {
-    const observer = new PerformanceObserver((list) => {;
-      const entries = list.getEntries();
-      entries.forEach((entry) => {
-        if (entry.name === 'first-contentful-paint') {
-          this.metrics.set('fcp', entry.startTime);
-        }
-      });
-    });
-    observer.observe({ entryTypes: ['paint'] });
-    this.observers.push(observer);
-  }
-
-  getMetrics() {
-    return Object.fromEntries(this.metrics);
-  }
-
-  stopMonitoring() {
-    this.observers.forEach(observer => observer.disconnect());
-    this.observers = [];
-  }
-}
-
-export const performanceMonitor = new PerformanceMonitor();`,
-
-    'monitoring/error-tracker.js': `// Error tracking system
-export class ErrorTracker {
-  constructor() {
-    this.errors = [];
-    this.errorCounts = new Map();  }
-  trackError(error, context = {}) {
-    const errorInfo = {
-      message: error.message,
-
-      stack: error.stack;
-      timestamp: new Date().toISOString();
-      context,
-      userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : 'unknown';
-
-      url: typeof window !== 'undefined' ? window.location.href : 'unknown'
-    };
-
-    this.errors.push(errorInfo);
-    
-    // Track error frequency
-    const errorKey = error.message;
-    this.errorCounts.set(errorKey, (this.errorCounts.get(errorKey) || 0) + 1);
-  }
-
-  getErrorStats() {
-    const recentErrors = this.errors.filter(
-      error => new Date(error.timestamp) > new Date(Date.now() - 24 * 60 * 60 * 1000)
-    );
-
-    return {
-      total: this.errors.length;
-      recent: recentErrors.length;
-      topErrors: Array.from(this.errorCounts.entries())
-        .sort((a, b) => b[1] - a[1])
-
-        .slice(0, 10);
-    };
-
-  }
-}
-
-export const errorTracker = new ErrorTracker();
-
-// Global error handler
-if (=> {
-    errorTracker.trackError(event.error, {
-      filename: event.filename);
-      lineno: event.lineno);
-      colno: event.colno
-    });
-  });
-
-  window.addEventListener('unhandledrejection', (event) => {
-    errorTracker.trackError(new Error(event.reason), {
-      type: 'unhandledrejection'
-    });
-  });
-}`,
-
-    'monitoring/analytics.js': `// Analytics tracking system
-export class AnalyticsTracker {
-  constructor() {
-    this.events = [];
-    this.sessionId = this.generateSessionId();
-  }
-
-  generateSessionId() {
-    return 'session_' + Math.random().toString(36).substr(2, 9) + '_' + Date.now();
-  }
-
-  track(event, properties = {}) {
-    const eventData = {
-      event,
-
-      properties;
-      timestamp: new Date().toISOString();
-      sessionId: this.sessionId;
-      url: typeof window !== 'undefined' ? window.location.href : 'unknown'
-
-    };
-
-    this.events.push(eventData);
-    
-    // Send to analytics service (implement as needed)
-    this.sendToAnalytics(eventData);
-  }
-
-  sendToAnalytics(eventData) {
-    // Implement your analytics service integration here
-    console.log('Analytics event:', eventData);
-  }
-
-  getEvents() {
-    return this.events;
-  }
-
-  getSessionEvents() {
-    return this.events.filter(event => event.sessionId === this.sessionId);
-  }
-
-export const queryOptimizer = new QueryOptimizer();`,
-    
-    'database/connection-pool.js': `// Database connection pooling
-export class ConnectionPool {
->>>>>>> main
   constructor(options = {}) {
     this.maxConnections = options.maxConnections || 10;
     this.minConnections = options.minConnections || 2;
@@ -676,11 +473,7 @@ export class ConnectionPool {
     this.usedConnections = new Set();
   }
 
-<<<<<<< HEAD
   async getConnection() {
-=======
-async getConnection() {
->>>>>>> main
     if (this.availableConnections.length > 0) {
       const connection = this.availableConnections.pop();
       this.usedConnections.add(connection);
@@ -710,7 +503,6 @@ async getConnection() {
 });
   }
 
-<<<<<<< HEAD
   releaseConnection(connection) {
     this.usedConnections.delete(connection);
     this.availableConnections.push(connection);
@@ -737,68 +529,6 @@ async getConnection() {
 
 const connectionPool = new ConnectionPool();
 module.exports = { ConnectionPool, connectionPool };
-=======
-
-export function debounce(func, wait) {
-  let timeout = null;
-  return function executedFunction(...args) {
-    const later = () => {
-      clearTimeout(timeout);
-      func(...args);
-
-    };
-  }
-
-
-export function throttle(func, limit) {
-  let inThrottle = null;
-  return function(...args) {
-    if (!inThrottle) {
-      func.apply(this, args);
-      inThrottle = true;
-      setTimeout(() => inThrottle = false, limit);
-    }
-  };
-}`,
-
-    'utils/optimization.js': `// General optimization utilities
-export function optimizeImages() {
-  if (typeof window === 'undefined') return;
-
-  const images = document.querySelectorAll('img');
-  images.forEach(img => {
-    // Add loading="lazy" if not present
-    if (!img.hasAttribute('loading')) {
-      img.setAttribute('loading', 'lazy');
-    }
-    
-    // Add proper alt text if missing
-    if (!img.alt) {
-      img.alt = 'Image';
-    }
-  });
-}
-
-export function preloadCriticalResources() {
-  if (typeof window === 'undefined') return;
-
-  const criticalResources = [
-    '/fonts/main.woff2';
-    '/css/critical.css'
-  ];
-
-  criticalResources.forEach(resource => {
-    const link = document.createElement('link');
-    link.rel = 'preload';
-    link.href = resource;
-    link.as = resource.endsWith('.css') ? 'style' : 'font';
-    document.head.appendChild(link);
-  });
-}`
-
-
-export const connectionPool = new ConnectionPool();
->>>>>>> main
   };
 
   Object.entries(dbFiles).forEach(([filename, content]) => {
@@ -808,32 +538,19 @@ export const connectionPool = new ConnectionPool();
     console.log(`[OK] Created ${filename}`);
   });
 });
-<<<<<<< HEAD
 }
 
-=======
->>>>>>> main
 // Main execution
 async function main() {
   try {
     console.log('🚀 Starting advanced app improvements...');
     
     // Create all improvement systems
-<<<<<<< HEAD
     createAdvancedMonitoring();
-=======
-// Main execution
-async function main() {
-  try {
-    console.log('🚀 Starting advanced app improvements...');
-    
-    // Create all improvement systems
->>>>>>> main
     createAdvancedCaching();
     createAPIOptimization();
     createDatabaseOptimization();
     
-<<<<<<< HEAD
     // Create PM2 ecosystem configuration
     const pm2Config = {
       apps: [{
@@ -877,28 +594,8 @@ async function main() {
     
   } catch (error) {
     console.error('❌ Error during advanced improvements:', error.message);
-=======
-    console.log('\n✅ Advanced app improvements completed successfully!');
-    console.log('\n📋 Summary:');
-    console.log('  - Advanced monitoring system created');
-    console.log('  - Performance optimization utilities added');
-    console.log('  - Accessibility improvements implemented');
-    console.log('\n🚀 Your app is now enhanced with advanced features!');
-    
-  } catch (error) {
-    console.error('❌ Error during app improvements:', error);
->>>>>>> main
     process.exit(1);
   }
 }
 
-<<<<<<< HEAD
 main();
-=======
-main();// Run if called directly
-if (import.meta.url === `file://${process.argv[1]}`) {
-  main();
-}
-
-export { createAdvancedMonitoring, createPerformanceOptimizations, createAccessibilityImprovements };
->>>>>>> main

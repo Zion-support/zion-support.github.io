@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 import React, { useState } from 'react';
 export default function CoachWidget() {
   const [input, setInput] = useState('');
@@ -57,18 +53,7 @@ export default function CoachWidget() {
         </div>
       )}
     </div>
-<<<<<<< HEAD
   );
 
-=======
-async function ask () {
-  if (!input.trim () ) return
-setLoading (true)
-try {
-  </div>) 
-}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
 );
 }
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

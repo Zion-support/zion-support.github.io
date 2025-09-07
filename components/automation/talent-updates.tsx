@@ -1,11 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
 import fs from 'fs';,
-=======
-import fs from 'fs',
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 import path from 'path';
 import { TALENT_PROFILES } from '../../data/talent';
 type TalentSummary = any;
@@ -34,7 +29,6 @@ export default function TalentUpdatesPage({ generatedAt, summaries }: { generate
   const map = new Map(summaries.map(s => [s.slug, s.summary]));
 
   return (
-<<<<<<< HEAD
     <div className=\"space-y-6\" />"
       <h1 className=\"text-2xl font-semibold\" />AI Automation: Talent Summaries</h1>"
       <p className=\"text-gray-600\" />Profiles are periodically enriched with AI-generated summaries.</p>"
@@ -54,14 +48,7 @@ export default function TalentUpdatesPage({ generatedAt, summaries }: { generate
 }
 
 "
-=======
-</div>) ) 
-}</div> </div>) 
-}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
     <div className="space-y-6">
       <h1 className="text-2xl font-semibold">AI Automation: Talent Summaries</h1>
       <p className="text-gray-600">Profiles are periodically enriched with AI-generated summaries.</p>
       <div className="text-xs text-gray-500">Last updated: {generatedAt ? new Date(generatedAt).toLocaleString() : '—'}</div>
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

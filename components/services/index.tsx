@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 import type { NextPage } from 'next',
 import Head from 'next/head',
 import React from 'react',
@@ -26,33 +22,18 @@ import { realServicesQ12025 } from '../../data/real-services-q1-2025'
 import { newVerifiedServicesQ22025 } from '../../data/real-verified-services-q2-2025'
 
 export default function ServicesIndexPage () {
-<<<<<<< HEAD
  export default function ServicesIndexPage () {}
   const all = (enhancedRealMicroSaasServices as unknown[]) .concat (}
 }React;
   useEffect ( () => {
-=======
 export default function ServicesIndexPage () {
   const all = (enhancedRealMicroSaasServices as unknown[]) .concat (
 }React.useEffect ( () => {
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
-export default function ServicesIndexPage () {
-  const all = (enhancedRealMicroSaasServices as unknown[]) .concat (
-}React.useEffect ( () => {
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
   const next = services.filter ( (s) => {
   //Category const handleSubmit = async (values: QuoteFormValues) => {
   const res = await fetch ('/api/quote-request', {
-<<<<<<< HEAD
-<<<<<<< HEAD
   method: 'POST',
   headers: {
-=======
-  method: 'POST', headers: {
-  'Content-Type': 'application/json'
-}
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 body: JSON.stringify ({
   service: values.serviceTitle, description: values.projectDescription, timeline: {
   start: values.timelineStart, end: values.timelineEnd
@@ -65,42 +46,16 @@ budgetRange: values.budgetRange;
 }onClose= {}
   () => setModalOpen (false)
 }service= {}
-<<<<<<< HEAD
   selected}
-=======
-  method: 'POST', headers: {
-  'Content-Type': 'application/json' 
-}
-body: JSON.stringify ({
-  service: values.serviceTitle, description: values.projectDescription, timeline: {
-  start: values.timelineStart, end: values.timelineEnd 
-}
-budgetRange: values.budgetRange
-}
-}
-<Head> <title>Zion AI Marketplace - Services</title> <meta name="description" content="Discover curated IT services. Request quotes with AI-assisted summaries." /> </Head>) ) 
-}</div> </div> </div> </div> <QuoteRequestModal open= {
-  modalOpen 
-}onClose= {
-  () => setModalOpen (false) 
-}service= {
-  selected 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
 }onSubmit= {
 }
   handleSubmit }
 }/> </div>) 
-<<<<<<< HEAD
 };
 
 export default ServicesPage;
 
 "
-=======
-}
-export default ServicesPage
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
   selected
 }onSubmit= {}
   handleSubmit
@@ -228,4 +183,3 @@ export default ServicesPage
   )
 }
 export default ServicesPage;
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

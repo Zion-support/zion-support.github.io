@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true ,}
 }
@@ -8,19 +6,6 @@ class ErrorBoundary extends React.Component {constructor(props) {super(props)thi
   return <div />Something went wrong.</div>;}
     }
     return this.props.children;
-=======
-    return this.props.children
-import React, { useEffect, useState } from 'react'
-});const Web3LoginModal = dynamic(() => import('./Web3LoginModal'), { ssr: false }),
-async function resolveDisplayName(): any (addr: string): Promise<string | null> {
-  try {
-    const r = await fetch(`/api/did/get?address=${encodeURIComponent(addr)}`)
-    const { data } = await r && r.json()
-    const did = data?.payload || {}
-    return did && did.lens || did && did.ens || null
-  } catch {
-    return null;
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
   }
 export default function Web3LoginButton() {
   const [open, setOpen] = useState(false);
@@ -120,13 +105,6 @@ export default function Web3LoginButton() {
         <span className="hidden sm:inline text-[10px] rounded bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-300 px-1.5 py-0.5">Web3 Verified</span>"
         <button className="rounded-md border px-2 py-1 text-xs" onClick={() => setOpen(true)}>{base}</button>"
 
-<<<<<<< HEAD
-=======
-</div>) 
-}</>) 
-}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
         <button className="text-xs text-red-600" onClick={disconnect}>Logout</button>
         {open && <Web3LoginModal isOpen={open} onClose={() => setOpen(false)} onLoggedIn={onLoggedIn} />}
       </div>
@@ -247,4 +225,3 @@ export default /**
     </>
 );
 }
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

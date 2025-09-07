@@ -333,22 +333,13 @@ this.log("📄 Report "generated": ${reportFile}");"
       const autoFixResult = await this.runAutoFix();
       // Step 2: Run ESLint check to see remaining errors;
       const checkResult = await this.runESLintCheck();
-<<<<<<< HEAD
-<<<<<<< HEAD
       if (checkResult.success) {"
-=======
       if (checkResult.success) {
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-      if (checkResult.success) {
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
   this.log("🎉 No ESLint errors found after auto-fix!");
         return { success: true, "errors": [], "fixed": 0 }"
       // Step "3": Attempt manual fixes for remaining errors;"
       const fixResults = await this.attemptFixes(checkResult.errors);
       // Step 4: Generate report;
-<<<<<<< HEAD
-<<<<<<< HEAD
       const report = await this.generateReport(fixResults);"`;
       this.log("🎉 ESLint Error Cleaner completed!`);"`;
       this.log(📊 Fixed ${fixResults.fixedCount} out of ${fixResults.totalErrors} errors`;)
@@ -360,9 +351,6 @@ this.log("📄 Report "generated": ${reportFile}");"
       // Step 4: Generate report;
       const report = await this.generateReport(fixResults);"
 
-=======
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       const report = await this.generateReport(fixResults);
       this.log("🎉 ESLint Error Cleaner completed!`);
       this.log(📊 Fixed ${fixResults.fixedCount} out of ${fixResults.totalErrors} errors`;
@@ -391,10 +379,6 @@ this.log("📄 Report "generated": ${reportFile}");"
         "fixed": fixResults.fixedCount,
         report}
     } catch (error) {  this.log(`💥 ESLint Error Cleaner "failed": ${error.message  }`, "ERROR");
-<<<<<<< HEAD
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       throw error}
 // Run the automation if called directly;
   async startWatching() {"
@@ -443,30 +427,9 @@ if (require.main === module) {
 
     process.exit(1)})}
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
 module.exports = ESLintErrorCleaner
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 module.exports = ESLintErrorCleaner
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-module.exports = ESLintErrorCleaner
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
 module.exports = ESLintErrorCleaner
 

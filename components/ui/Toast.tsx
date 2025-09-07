@@ -1,37 +1,22 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence  } from 'framer-motion';
 import { CheckCircle, AlertCircle, X, Info } from 'lucide-react';
 export type ToastType = any;
 
-<<<<<<< HEAD
 const getIcon = (
-=======
-export type ToastType = 'success' | 'error' | 'info' | 'warning'
-return () => clearTimeout (timer) 
-}, [toast.id, toast.duration, onRemove])
-const getIcon = () => {
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
 export type ToastType = 'success' | 'error' | 'info' | 'warning';
 }, [toast.id, toast.duration, onRemove]);
 const getIcon = () => {
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
   switch (toast.type) {
   case 'success':
 interface ToastProps {
   toast: Toast;
-<<<<<<< HEAD
 onRemove: (id: string) => void,) => {
   return $3;}
 }
 }
-<<<<<<< HEAD
 
 import React from 'react';
 
@@ -48,8 +33,6 @@ const getIcon = (;
 
 interface ToastProps {;
   toast: Toast;
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
   onRemove: (id: string) => void;
 export type ToastType = 'success' | 'error' | 'info' | 'warning';
 export interface Toast {
@@ -251,40 +234,9 @@ export const useToast = () => {
     showWarning
     removeToast
   }
-<<<<<<< HEAD
 };
 
 "
-=======
-switch (toast.type) {
-  case 'success': return 'border-green-500/20'
-case 'error': return 'border-red-500/20'
-case 'warning': return 'border-yellow-500/20'
-case 'info': const getBackgroundColor = () => {
-  switch (toast.type) {
-  case 'success': return 'bg-green-500/10'
-case 'error': return 'bg-red-500/10'
-case 'warning': return 'bg-yellow-500/10'
-case 'info': {
-  toast.message 
-}</p>) 
-}</div> <button > <X className="w-4 h-4 text-white/60 hover:text-white" /> </button> </div> <motion.div className= {
-  `h-full $ {
-  toast.type === 'success' ? 'bg-green-400' : toast.type === 'error' ? 'bg-red-400' : toast.type === 'warning' ? 'bg-yellow-400' : /> </div> </motion.div>) 
-}
-<AnimatePresence> {
-  toasts.map ( (toast) => (<ToastItem key= {
-  toast.id 
-}toast= {
-  toast 
-}onRemove= {
-  onRemove 
-}/>) ) 
-}</AnimatePresence> </div>) 
-}
-// Hook for managing toasts
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
 };    toasts;
     showSuccess;
     showError;
@@ -292,4 +244,3 @@ case 'info': {
     showWarning;
     removeToast}
 }
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

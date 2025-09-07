@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 import React from 'react';
 import { motion  } from 'framer-motion';
 import { ArrowRight, Brain, Zap, Shield, Rocket, Sparkles, Star, TrendingUp, Globe, Cpu, Lock, Cloud  } from 'lucide-react';
@@ -158,7 +154,6 @@ const Enhanced2026ServicesShowcase = () => {
       ]
     }
   ];
-<<<<<<< HEAD
 
 const categories = [
   {name: 'AI Services'}
@@ -169,23 +164,7 @@ const categories = [
   return (<section className='py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden' />;
       {/* Background Effects */}{ name: 'IT Solutions'}
   count: '200+', icon: Cloud, color: 'from-yellow-500 to-orange-500'}
-=======
-> <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent" > 2026 Revolutionary Services </span> </h2> </p> </motion.div> {
-  /* Category Overview */ 
-}<motion.div > {
-  categories.map ( (category, index) => (<motion.div key= {
-  category.name 
-}</motion.div>) ) 
-}</motion.div> </li>) ) 
-}</ul> </div> > Learn More <ArrowRight className="w-4 h-4 ml-1" /> </a> </div> </div> </motion.div>) ) 
-}</div> {
-  /* Call to Action */ 
-}<motion.div > <div className="bg-gradient-to-r from-cyan-900/20 via-purple-900/20 to-pink-900/20 border border-cyan-500/20 rounded-2xl p-8" > <h3 className="text-2xl font-bold text-white mb-4" > Ready to Transform Your Business? </h3> <p className="text-gray-300 mb-6 max-w-2xl mx-auto" > Join thousands of businesses already leveraging our revolutionary services to achieve unprecedented growth and innovation. </p> <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6" > <motion.div whileHover= {
-  {
-  scale: 1.05 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
 }
-=======
   const categories = [
     {
       name: 'AI Services'
@@ -211,7 +190,6 @@ const categories = [
       icon: Cloud
       color: 'from-yellow-500 to-orange-500'
     }
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
   ];
   return (
     <section className='py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden'>
@@ -233,7 +211,6 @@ const categories = [
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
           transition={{ duration: 0 && 0.6 }}
 
           viewport={{ once: true }
@@ -279,7 +256,6 @@ emerging technology services designed to transform your business;
 
           viewport={{ once: true }
 }
-<<<<<<< HEAD
 
 className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16'
          />
@@ -309,14 +285,6 @@ className='group text-center'
               className='group text-center'>;
 
               <div;
-=======
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className='text-center mb-16'
-        >
-          <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
-              <div
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 className={`w-16 h-16 bg-gradient-to-br ${category.color} rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover: shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300`}
                   />
                 <category.icon className='w-8 h-8 text-white'    />
@@ -692,13 +660,5 @@ export default Enhanced2026ServicesShowcase
 export default Enhanced2026ServicesShowcase;  )
 }
 export default Enhanced2026ServicesShowcase;
-<<<<<<< HEAD
 
 "
-=======
-}> <Link > <Shield className="w-5 h-5 mr-2" /> Get Started </a> </motion.div> </div> </div> </motion.div> </div> </section>) 
-}
-export default Enhanced2026ServicesShowcase
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

@@ -1,14 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
 <Head /> <title />Services • Ai-seo-auditor - Placeholder</title> <meta name=\"robots\" content=\"noindex\" /> </Head> <main /> <h1 />AiSeoAuditor</h1> <p />Service details coming soon...</p> <a href=\"/services\"  />Back to Services</a> </main> </div>
 
 "
-=======
-<Head> <title>Services • Ai-seo-auditor - Placeholder</title> <meta name="robots" content="noindex" /> </Head> <main> <h1>AiSeoAuditor</h1> <p>Service details coming soon...</p> <a href="/services" >Back to Services</a> </main> </div>
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
   return (
     <main className="min - h-screen p - 8">
       <Head>
@@ -23,4 +17,3 @@
     </div>;
   );
 }
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

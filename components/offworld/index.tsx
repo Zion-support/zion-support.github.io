@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 import { useState  } from 'react';
 import Head from 'next/head';
 export default function OffworldConsole() {
@@ -69,15 +65,8 @@ export default function OffworldConsole() {
 '
       {status && <p className='text-sm text-gray-700'>{status}</p>}
     </div>
-<<<<<<< HEAD
 
   );
 
-=======
-}return (<div className="min-h-screen p-8 space-y-8" > <Head> <title>Zion Offworld Console</title> </Head> <h1 className="text-2xl font-bold" >Offworld Console</h1> </div>) 
-}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
 );
 }
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

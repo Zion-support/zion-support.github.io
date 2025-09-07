@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 import React, { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 interface LazyImageProps {
@@ -97,39 +93,4 @@ className='w-full h-full object-cover'
 export default LazyImage;  )
 }
 export default LazyImage;
-<<<<<<< HEAD
 
-=======
-useEffect ( () => {
-  const observer = new IntersectionObserver ( ([entry]) => {
-  if (entry.isIntersecting) {
-  return () => observer.disconnect () 
-}, [threshold])
-return (<div className= {
-  `relative overflow-hidden $ {
-  className 
-}` 
-}> {
-  /* Placeholder */ 
-}<img src= {
-  placeholder 
-}alt="" className= {
-  `absolute inset-0 w-full h-full object-cover transition-opacity duration-500 $ {
-  isLoaded ? 'opacity-0' : 'opacity-100' 
-}` 
-}style= {
-  {
-  width, height 
-}
-}/> {
-  /* Actual Image */ 
-}{
-  isInView && (<motion.img ref= {
-  imgRef 
-}/>) 
-}</div>) 
-}
-export default LazyImage
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

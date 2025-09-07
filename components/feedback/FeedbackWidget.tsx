@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }
 }componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}
@@ -9,8 +7,6 @@ class ErrorBoundary extends React.Component {constructor(props) {super(props)thi
     return this.props.children;
   }
 }
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 import React, { useMemo, useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 export type FeedbackWidgetProps = any;
@@ -228,22 +224,4 @@ aiModel}
 );
 }
 }
-<<<<<<< HEAD
 })}"
-=======
-const submit = async () => {
-  if (!rating) {
-  <button type="button" onClick= {
-  () => setRating (rating === 'up' ? null : 'up') 
-}className= {
-  `inline-flex items-center gap-1 rounded-md border px-2 py-1 text-sm $ {
-  rating === 'up' ? 'bg-emerald-600 text-white border-emerald-600' : '' 
-}` 
-}aria-pressed= {
-  rating === 'up' 
-}> <span>👍</span> <span>Yes</span> </button> <button > <span>👎</span> <span>No</span> </button> </div> <textarea </button> </div> </div>) 
-}</div>) 
-}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

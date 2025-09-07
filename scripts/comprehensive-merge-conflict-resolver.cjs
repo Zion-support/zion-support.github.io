@@ -28,13 +28,8 @@ class ComprehensiveMergeConflictResolver {}
         if (file) {}
           filesWithConflicts.push(path.join(this.projectRoot, file))};
       };
-<<<<<<< HEAD
-<<<<<<< HEAD
 
       const entries = await fs.readdir(dir, { "withFileTypes": true }")
-=======
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
     } catch (error) {}
       await this.log(`Git command failed, scanning files "manually": ${error.message}`, 'WARN')};
     // Also scan for files with merge conflict markers;
@@ -55,10 +50,6 @@ class ComprehensiveMergeConflictResolver {}
     const files = [];
     try {}
       const entries = await fs.readdir(dir, { "withFileTypes": true }
-<<<<<<< HEAD
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 });
       for (const entry of entries) {}
         const fullPath = path.join(dir, entry.name);
@@ -98,34 +89,10 @@ class ComprehensiveMergeConflictResolver {}
 if (require.main === module) {}
   const resolver = new ComprehensiveMergeConflictResolver();
   resolver.run().catch(console.error)};
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
 module.exports = ComprehensiveMergeConflictResolver;
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 module.exports = ComprehensiveMergeConflictResolver;
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
 module.exports = ComprehensiveMergeConflictResolver;
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
 
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2

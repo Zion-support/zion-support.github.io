@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 'use client';
 
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 import React from 'react';
 import Link from 'next/link';
 import { Phone, Mail, MapPin, Facebook, Twitter, Linkedin, Instagram, ArrowRight } from 'lucide-react';
@@ -93,7 +88,6 @@ export default function Footer() {
           </div>
 
           {/* Services */}
-=======
 import React from 'react';
 import Link from 'next/link';
 
@@ -116,11 +110,9 @@ export default function Footer() {
           </div>
 
           {/* Quick Links */}
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
           <div>
             <h4 className="text-lg font-semibold text-white mb-4">Quick Links</h4>
             <ul className="space-y-2">
-<<<<<<< HEAD
               {footerLinks.services.map((link) => (
                 <li key={link.name}>
                   <Link
@@ -268,88 +260,15 @@ export default function Footer() {
               >
                 Cookie Policy
               </Link>
-=======
-              <li>
-                <Link href="/" className="text-slate-400 hover:text-white transition-colors">
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link href="/services" className="text-slate-400 hover:text-white transition-colors">
-                  Services
-                </Link>
-              </li>
-              <li>
-                <Link href="/about" className="text-slate-400 hover:text-white transition-colors">
-                  About
-                </Link>
-              </li>
-              <li>
-                <Link href="/contact" className="text-slate-400 hover:text-white transition-colors">
-                  Contact
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Services */}
-          <div>
-            <h4 className="text-lg font-semibold text-white mb-4">Services</h4>
-            <ul className="space-y-2">
-              <li>
-                <Link href="/ai-services" className="text-slate-400 hover:text-white transition-colors">
-                  AI Services
-                </Link>
-              </li>
-              <li>
-                <Link href="/cloud-solutions" className="text-slate-400 hover:text-white transition-colors">
-                  Cloud Solutions
-                </Link>
-              </li>
-              <li>
-                <Link href="/micro-saas" className="text-slate-400 hover:text-white transition-colors">
-                  Micro SaaS
-                </Link>
-              </li>
-              <li>
-                <Link href="/blockchain" className="text-slate-400 hover:text-white transition-colors">
-                  Blockchain
-                </Link>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div className="border-t border-slate-800 mt-8 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-slate-400 text-sm">
-              © 2024 Zion Tech Group. All rights reserved.
-            </p>
-            <div className="flex space-x-6 mt-4 md:mt-0">
-              <Link href="/privacy" className="text-slate-400 hover:text-white text-sm transition-colors">
-                Privacy Policy
-              </Link>
-              <Link href="/terms" className="text-slate-400 hover:text-white text-sm transition-colors">
-                Terms of Service
-              </Link>
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
             </div>
           </div>
         </div>
       </div>
     </footer>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
 };
 
 export default Footer;
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
 }
 }
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
-=======
 }
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

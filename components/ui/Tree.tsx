@@ -1,12 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
 import React, { useState } from 'react';
 
-=======
-import React, { useState } from "react";
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 export interface TreeNode {
   name: string;
   path: string;
@@ -177,56 +172,17 @@ export default Tree
 }node= {}
   n}
 }depth= {}
-<<<<<<< HEAD
   0}
-=======
-export interface TreeNode {
-  name: string
-path: string
-type: "folder" | "file"
-exists?: boolean
-}
-
-}</div> </div> {
-  hasChildren && open && (<div className="ml-4 border-l pl-2"> {
-  node.children!.map ( (child) => (<NodeItem key= {
-  child.path 
-}node= {
-  child 
-}depth= {
-  depth + 1 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
 }onDeploy= {
   onDeploy }
 }
 }/>) ) 
-<<<<<<< HEAD
 }</div>) ;
 }
 
 export default Tree;
 
 "
-=======
-}</div>) 
-}</div>) 
-}export function Tree ({
-  nodes, onDeploy 
-}: TreeProps) {
-  return (<div className="w-full"> {
-  nodes.map ( (n) => (<NodeItem key= {
-  n.path 
-}node= {
-  n 
-}depth= {
-  0 
-}onDeploy= {
-  onDeploy 
-}/>) ) 
-}</div>) 
-}export default Tree
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
   0
 }onDeploy= {}
   onDeploy
@@ -271,4 +227,3 @@ export default Tree;
 export default Tree;
 }export default Tree;}
 export default Tree;
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

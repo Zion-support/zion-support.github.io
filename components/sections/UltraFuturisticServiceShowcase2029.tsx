@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import React from 'react',
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 import Link from 'next/link';
 import { motion  } from 'framer-motion';
 import { ArrowRight, Star, Zap, Shield, Brain } from 'lucide-react';
@@ -130,7 +125,6 @@ className='text-center mb-16'
                 Get Started
                 <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
             </motion.div>
-<<<<<<< HEAD
 
           )
 }
@@ -161,12 +155,6 @@ href='/services'
 }
 
 "
-=======
-> <div className="flex items-center justify-between mb-4" > <div className="flex items-center space-x-2" > <div className="w-3 h-3 bg-cyan-400 rounded-full animate-pulse" /> <span className="text-sm text-cyan-400 font-medium" >NEW</span> </div> <div className="flex items-center space-x-1" > <Star className="w-4 h-4 text-yellow-400 fill-current" /> <span className="text-sm text-gray-300" >5.0</span> </div> </div> </div> </div> <Link > Get Started <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" /> </a> </motion.div>) ) 
-}</div> <motion.div > <Link > View All Services <ArrowRight className="w-4 h-4 ml-2" /> </a> </motion.div> </div> </section>) 
-}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
           ))}
         </div>
         <motion.div
@@ -174,4 +162,3 @@ href='/services'
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}
           className='text-center mt-12'
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

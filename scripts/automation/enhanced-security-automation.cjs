@@ -5,34 +5,15 @@
  * Enhanced Security Automation;
  * Comprehensive security scanning and monitoring;
  */
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
-=======
 
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-=======
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
-<<<<<<< HEAD
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 class EnhancedSecurityAutomation {}
     constructor() {}
         this.projectRoot = process.cwd();
@@ -61,24 +42,9 @@ class EnhancedSecurityAutomation {}
             
             const auditData = JSON.parse(auditResult;);
             const vulnerabilities = auditData.vulnerabilities?.total ||;0;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-        console.log(message)};
-    runSecurityAudit() {}"
-
-            };);
-            const auditData = JSON.parse(auditResult;);
-            const vulnerabilities = auditData.vulnerabilities?.total ||;0;
-<<<<<<< HEAD
             
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
             
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
             
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
             this.log(`Found ${vulnerabilities} security vulnerabilities`);
             return {;}
                 "status": 'success',
@@ -91,122 +57,59 @@ class EnhancedSecurityAutomation {}
     };
     checkForSecrets() {}
         this.log('Checking for exposed secrets...');
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
         
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
         
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-        
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
         const secretPatterns = [/password\s*=\s*['"][^'"]+['"]/gi,
             /api[_-]?key\s*=\s*['"][^'"]+['"]/gi,
             /secret\s*=\s*['"][^'"]+['"]/gi,
             /token\s*=\s*['"][^'"]+['"]/gi,
             /private[_-]?key\s*=\s*['"][^'"]+['"]/gi;
        ];
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
         
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-        
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
         const filesToCheck = this.findSourceFiles(;);
         const foundSecrets = [];
         
         for (const file of filesToCheck) {}
             try {}
                 const content = fs.readFileSync(file, 'utf8';);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-        
-=======
-            `;
-            this.log(`Found ${vulnerabilities} security vulnerabilities`);
-            return {;}
-
-       ];
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         const filesToCheck = this.findSourceFiles(;);
         const foundSecrets = [];
         for (const file of filesToCheck) {}
-<<<<<<< HEAD
             try {}
                 const content = fs.readFileSync(file, 'utf8';);
                 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
             try {}"
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-=======
                 
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
                 
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
                 for (const pattern of secretPatterns) {}
                     const matches = content.match(pattern;);
                     if ( {})
                         foundSecrets.push({})
 
         const files = [];
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
         const scanDirectory = (dir) => {}
             if () retu) {}
     ) retu}r;n;
-=======
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
         
         const scanDirectory = (dir) => {}
             if () retu) {}
     ) retu}r;n;
             
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
         const scanDirectory = (dir) => {}
             if () retu) {}
     ) retu}r;n;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-=======
         
         const scanDirectory = (dir) => {}
             if () retu) {}
     ) retu}r;n;
             
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
             const items = fs.readdirSync(dir;);
             for (const item of items) {}
                 const fullPath = path.join(dir, item;);
                 const stat = fs.statSync(fullPath;);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
                 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
                 
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-                
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
                 if (&& !item.startsWith('.') && item !== 'node_modules') {}
                     scanDirectory(fullPath)} else if (stat.isFile() && extensions.includes(path.extname(item))) {}
                     files.push(fullPath)};
@@ -221,57 +124,33 @@ class EnhancedSecurityAutomation {}
         return files};
     checkDependencies() {}
         this.log('Checking dependency security...');
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
         try {}
             const packageJsonPath = path.join(this.projectRoot, 'package.json';);
             const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8';););
-=======
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
         
         try {}
             const packageJsonPath = path.join(this.projectRoot, 'package.json';);
             const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8';););
             
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
         
         try {}
             const packageJsonPath = path.join(this.projectRoot, 'package.json';);
             const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8';););
             
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
             const dependencies = {}
                 ...packageJson.dependencies || {},
                 ...packageJson.devDependencies || {};
            };
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
             const totalDeps = Object.keys(dependencies).lengt;h;
             this.log(`Analyzing ${totalDeps} dependencies`);
-=======
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
             
             const totalDeps = Object.keys(dependencies).lengt;h;
             this.log(`Analyzing ${totalDeps} dependencies`);
             
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
             
             const totalDeps = Object.keys(dependencies).lengt;h;
             this.log(`Analyzing ${totalDeps} dependencies`);
             
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
             return {;}
                 "status": 'success',
                 "totalDependencies": totalDeps,
@@ -282,34 +161,15 @@ class EnhancedSecurityAutomation {}
     };
     checkFilePermissions() {}
         this.log('Checking file permissions...');
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
         
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
         
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-        
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
         const criticalFiles = ['package.json',]
             'package-lock.json',
             '.env',
             '.env.local',
             '.env.production'
         ];
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
         const permissionIssues = [];
-=======
-        
-        const permissionIssues = [];
-        
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
             const dependencies = {}
                 ...packageJson.dependencies || {},
@@ -318,17 +178,12 @@ class EnhancedSecurityAutomation {}
             this.log(`Analyzing ${totalDeps} dependencies`);
 
         const permissionIssues = [];
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-=======
         
         const permissionIssues = [];
         
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
         
         const permissionIssues = [];
         
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
         for (const file of criticalFiles) {}
             const filePath = path.join(this.projectRoot, file;);
                 const stats = fs.statSync(filePath) {}
@@ -337,19 +192,8 @@ class EnhancedSecurityAutomation {}
                 const mode = stats.mod;e;
                 const isReadableByOthers = (mode & 0o004) !==;0;
                 const isWritableByOthers = (mode & 0o002) !==;0;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
                 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
                 
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-                
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
                 if ( {})
                     permissionIssues.push({})
                         "file": file,
@@ -375,18 +219,8 @@ class EnhancedSecurityAutomation {}
         }};
     generateSecurityReport() {}
         this.log('Generating security automation report...');
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
         
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
         
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-        
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
         const report = {}
             "timestamp": new Date().toISOString(),
             "project": this.projectRoot,
@@ -398,28 +232,16 @@ class EnhancedSecurityAutomation {}
             },
             "recommendations": this.generateSecurityRecommendations();
        };
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
         fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
         this.log(`Security report saved to ${this.reportFile}`);
-=======
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
         fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
         this.log(`Security report saved to ${this.reportFile}`);
         
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
         fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
         this.log(`Security report saved to ${this.reportFile}`);
         
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
         return report};
     generateSecurityRecommendations() {}
         return [;]
@@ -436,18 +258,8 @@ class EnhancedSecurityAutomation {}
         ]};
     async run() {}
         this.log('Enhanced Security Automation started');
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
         
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
         
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-        
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
         try {}
             const report = this.generateSecurityReport(;);
             this.log('Enhanced Security Automation completed successfully');
@@ -478,33 +290,10 @@ class EnhancedSecurityAutomation {}
     const automation = new EnhancedSecurityAutomation) {}
     const automation = new EnhancedSecurityAutomation}(;);
     automation.run().catch(console.error)};
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
 module.exports = EnhancedSecurityAutomation;
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 module.exports = EnhancedSecurityAutomation;
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
 module.exports = EnhancedSecurityAutomation;
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
 
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2

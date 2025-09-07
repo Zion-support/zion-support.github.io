@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 export default function EpisodePage() {
@@ -31,16 +27,8 @@ export default function EpisodePage() { return null; }
         <pre className="whitespace-pre-wrap bg-gray-50 p-3 rounded">{episode.transcript}</pre>
       </div>
     </div>
-<<<<<<< HEAD
 
   );
 
-=======
-if (!episode) return <div>Loading…</div>
-return (</div> </div>) 
-}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
 );
 }
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

@@ -1,12 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
-import React, { useState } from 'react';
-import UseTokensModal, { RedemptionType } from './UseTokensModal';
-export default function UseTokensButton({ serviceId, defaultType }: { serviceId?: string, defaultType?: RedemptionType }) {
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 export default function UseTokensButton({
   serviceId
   defaultType
@@ -34,14 +27,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       />
     </>
   );
-<<<<<<< HEAD
 
 "
-=======
-</>) 
-}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
   const [open, setOpen] = useState(false);
   return (
       <UseTokensModal
@@ -53,4 +40,3 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </>
   );
 }
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

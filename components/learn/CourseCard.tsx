@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 import Link from 'next/link';
 export type Course = any;
 
@@ -81,11 +77,4 @@ export default function CourseCard() {return (<div className='border rounded-lg 
     </div>
   );
 }
-<<<<<<< HEAD
 
-=======
-</Link> 
-}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

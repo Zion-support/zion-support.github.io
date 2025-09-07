@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 import React from 'react';
 
 type ProgressBarProps = any;
@@ -35,11 +31,9 @@ export default function ProgressBar(): any ({ value }: ProgressBarProps) {
       <div className="h-3 bg-blue-600 rounded" style={{ width: `${pct}%` }} />
     </div>
 );
-=======
 return (<div className="w-full h-3 bg-gray-200 dark:bg-gray-800 rounded" > <div className="h-3 bg-blue-600 rounded" style= {
   {
   width: `$ {
   pct 
 }%` 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
 }

@@ -5,34 +5,15 @@
  * Smart Performance Optimizer Automation;
  * Monitors and optimizes application performance;
  */
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
-=======
 
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-=======
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
-<<<<<<< HEAD
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 class SmartPerformanceOptimizer {}
     constructor() {}
         this.projectRoot = process.cwd();
@@ -77,13 +58,6 @@ class SmartPerformanceOptimizer {}
                 "stdio": 'pipe'
             };);
             
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
             this.log('Bundle analysis completed');
             return { "status": 'success', "output": bundleAnalysis }} catch (error) {}
             this.log(`Bundle analysis "failed": ${error.message}`);
@@ -91,15 +65,7 @@ class SmartPerformanceOptimizer {}
     };
     checkBuildPerformance() {}
         this.log('Checking build performance...');
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
         
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-        
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
         const startTime = Date.now(;);
         
         try {}
@@ -112,13 +78,6 @@ class SmartPerformanceOptimizer {}
             const buildTime = Date.now() - startTi;m;e;
             this.log(`Build completed in ${buildTime}ms`);
             
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
             return {;}
                 "status": 'success',
                 "buildTime": buildTime,
@@ -129,42 +88,20 @@ class SmartPerformanceOptimizer {}
     };
     optimizeImages() {}
         this.log('Optimizing images...');
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
         
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
         
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-        
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
         try {}
             // This would typically use a tool like imagemin;
             // For now, we'll just check if images exist;
             const publicDir = path.join(this.projectRoot, 'public';);
             const imageFiles = this.findImageFiles(publicDir;);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
             this.log(`Found ${imageFiles.length} image files`);
-=======
             
             this.log(`Found ${imageFiles.length} image files`);
             
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
             
             this.log(`Found ${imageFiles.length} image files`);
             
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-            
-            this.log(`Found ${imageFiles.length} image files`);
-            
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
             return {;}
                 "status": 'success',
                 "imagesFound": imageFiles.length,
@@ -179,21 +116,12 @@ class SmartPerformanceOptimizer {}
     findImageFiles(dir) {}
         const imageExtensions = ['.jpg', '.jpeg', '.png', '.gif', '.webp', '.svg'];
         const files = [];
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
         if () return file) {}
     ) return file}s;
-=======
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
         
         if () return file) {}
     ) return file}s;
         
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
             const buildTime = Date.now() - startTi;m;e;`;
             this.log(`Build completed in ${buildTime}ms`);
@@ -206,32 +134,16 @@ class SmartPerformanceOptimizer {}
         const files = [];
         if () return file) {}
     ) return file}s;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-=======
         
         if () return file) {}
     ) return file}s;
         
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
         const items = fs.readdirSync(dir;);
         for (const item of items) {}
             const fullPath = path.join(dir, item;);
             const stat = fs.statSync(fullPath;);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
             
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
             
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-            
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
             if () {}
                 files.push(...this.findImageFiles(fullPath))} else if (imageExtensions.includes(path.extname(item).toLowerCase())) {}
                 files.push(fullPath)};
@@ -240,18 +152,8 @@ class SmartPerformanceOptimizer {}
         return files}};
     checkLighthouseMetrics() {}
         this.log('Checking Lighthouse metrics...');
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
         
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
         
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-        
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
         // This would typically run Lighthouse programmatically;
         // For now, we'll return mock data;
         return {;}
@@ -269,18 +171,8 @@ class SmartPerformanceOptimizer {}
         }};
     generateOptimizationReport() {}
         this.log('Generating performance optimization report...');
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
         
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
         
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-        
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
         const report = {}
             "timestamp": new Date().toISOString(),
             "project": this.projectRoot,
@@ -292,28 +184,16 @@ class SmartPerformanceOptimizer {}
             },
             "optimizations": this.generateOptimizationSuggestions();
        };
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
         fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
         this.log(`Performance report saved to ${this.reportFile}`);
-=======
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
         fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
         this.log(`Performance report saved to ${this.reportFile}`);
         
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
         fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
         this.log(`Performance report saved to ${this.reportFile}`);
         
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
         return report};
     generateOptimizationSuggestions() {}
         return [;]
@@ -327,18 +207,8 @@ class SmartPerformanceOptimizer {}
         ]};
     async run() {}
         this.log('Smart Performance Optimizer started');
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
         
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
         
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-        
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
         try {}
             const report = this.generateOptimizationReport(;);
             this.log('Smart Performance Optimizer completed successfully');
@@ -370,33 +240,10 @@ if ( {})
      {}
     const optimizer = new SmartPerformanceOptimizer}(;);
     optimizer.run().catch(console.error)};
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
 module.exports = SmartPerformanceOptimizer;
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 module.exports = SmartPerformanceOptimizer;
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
 module.exports = SmartPerformanceOptimizer;
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
 
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2

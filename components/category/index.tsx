@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 <div className=\"container mx-auto px-4 py-10\" />;
 "
@@ -50,10 +48,6 @@ function CategoryIndexPage() {return (<div className='container mx-auto px-4 py-
 
   );
 
-=======
-<div className="container mx-auto px-4 py-10">
-export default function CategoryIndexPage() {
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 export default /**
  * CategoryIndexPage - Function description
  */
@@ -75,12 +69,7 @@ function CategoryIndexPage() {
     </div>
   );
 }
-<<<<<<< HEAD
 }
 }
 }
 "
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

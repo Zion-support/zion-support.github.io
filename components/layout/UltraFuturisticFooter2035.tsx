@@ -1,11 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
 import React from 'react';,
-=======
-import React from 'react',
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Zap, Globe, Phone, Mail, MapPin, ArrowRight;
@@ -717,7 +712,6 @@ onClick={scrollToTop}
 }</a>) )
 }</div> </motion.div> </div> {}
   /* Footer Sections */}
-=======
 ] 
 }]
 ]
@@ -728,7 +722,6 @@ onClick={scrollToTop}
 }</a>) ) 
 }</div> </motion.div> </div> {
   /* Footer Sections */ 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
 }{
   footerSections.map ( (section, index) => (<motion.div key= {}
   section.title}
@@ -758,17 +751,10 @@ onClick={scrollToTop}
   link && link.href }
 }className= {
   `text-sm transition-colors duration-200 $ {
-<<<<<<< HEAD
-<<<<<<< HEAD
                 <p className='text - gray - 300 leading - relaxed max - w-md' />;
 
                   Leading the future with cutting - edge AI consciousness, quantum;
                   computing, and innovative micro SAAS solutions. Transform your;
-=======
-                <p className='text - gray - 300 leading - relaxed max - w-md'    />
-                  Leading the future with cutting - edge AI consciousness, quantum
-                  computing, and innovative micro SAAS solutions. Transform your
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
                   business with our revolutionary technology.;}
                 </p>;}
                 {/* Contact Info */}
@@ -960,19 +946,5 @@ export default UltraFuturisticFooter2035)
 export default UltraFuturisticFooter2035;  )
 }
 export default UltraFuturisticFooter2035;
-<<<<<<< HEAD
 
 "
-=======
-  link.featured ? 'text-cyan-400 hover:text-cyan-300' : 'text-gray-400 hover:text-white' 
-}` 
-}> </li>) ) 
-}</ul> </motion.div>) ) 
-}</div> {
-  /* Bottom Section */ 
-}<motion.div > <div className="flex flex-col md:flex-row items-center justify-between gap-4" > <div className="text-sm text-gray-400" > © 2025 Zion Tech Group. All rights reserved. </div> <div className="flex items-center gap-6 text-sm text-gray-400" > <Link href="/privacy" className="hover:text-white transition-colors duration-200" > Privacy Policy </a> <Link href="/terms" className="hover:text-white transition-colors duration-200" > Terms of Service </a> <Link href="/cookies" className="hover:text-white transition-colors duration-200" > Cookie Policy </a> </div> <button aria-label="Scroll to top" w-5 h-5" /> </button> </div> </motion.div> </div> </div> </footer>) 
-}
-export default UltraFuturisticFooter2035
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

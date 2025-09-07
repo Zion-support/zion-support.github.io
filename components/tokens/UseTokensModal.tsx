@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
 export type RedemptionType =;
@@ -7,17 +5,6 @@ export type RedemptionType =;
   | \"promote_listing\";"
   | \"premium_support\";
 
-=======
-import React, { useEffect, useState } from 'react';
-import { connectMetaMask, getAccounts } from '../../utils/wallet';
-export type RedemptionType = any;
-import React, { useEffect, useState } from "react";
-import { connectMetaMask, getAccounts } from "../../utils/wallet";
-export type RedemptionType =
-  | "boost_profile"
-  | "promote_listing";
-  | "premium_support";
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 export default function UseTokensModal({
   isOpen
   onClose
@@ -218,15 +205,5 @@ disabled={!account |isSubmitting |tokens <= 0}
   );
 }
 }
-<<<<<<< HEAD
 
 "
-=======
-export type RedemptionType = 'boost profile' | 'promote listing' | 'premium support'
-}if (!isOpen) return null
-</div> <div className="text-sm mb-3" >Conversion rate: 1 ZION = $0.01</div>) 
-}</div> </div> 
-}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

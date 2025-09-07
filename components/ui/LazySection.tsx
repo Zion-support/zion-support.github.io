@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 interface LazySectionProps {
@@ -104,24 +100,4 @@ const getAnimatePosition = (switch (direction) {case 'up':
   )
 }
 export default LazySection;
-<<<<<<< HEAD
 
-=======
-const getInitialPosition = () => {
-  switch (direction) {
-  case 'up': 
-}
-}
-const getAnimatePosition = () => {
-  switch (direction) {
-  case 'up': 
-}
-}
-return (<motion.div > {
-  children 
-}</motion.div>) 
-}
-export default LazySection
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

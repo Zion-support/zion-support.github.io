@@ -21,34 +21,14 @@ class ComprehensiveSyntaxErrorFixer {}
     try {}
 
       let fixedContent = content;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       // Fix common syntax errors;
       const fixes = [// Fix malformed imports;]
 
       ];
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       let hasChanges = false;
       for (const fix of fixes) {}
         if (fixedContent.includes(fix.from)) {}
@@ -57,38 +37,15 @@ class ComprehensiveSyntaxErrorFixer {}
   };
   async run() {}
     await this.log('Starting comprehensive syntax error fixing...');
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
     
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
     
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-    
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
     const filesToFix = ['components/layout/ModernLayout.tsx',]
       'pages/partners.tsx',
       'pages/services/index.route.tsx'
     ];
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-  async run() {}"
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
     let fixedCount = 0;
     for (const file of filesToFix) {}
       const fullPath = path.join(this.projectRoot, file);
@@ -99,33 +56,10 @@ class ComprehensiveSyntaxErrorFixer {}
 if (require.main === module) {}
   const fixer = new ComprehensiveSyntaxErrorFixer();
   fixer.run().catch(console.error)};
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
 module.exports = ComprehensiveSyntaxErrorFixer;
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 module.exports = ComprehensiveSyntaxErrorFixer;
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
 module.exports = ComprehensiveSyntaxErrorFixer;
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
 
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2

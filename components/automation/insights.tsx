@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 import { useEffect, useState  } from 'react';
 import Head from 'next/head',
 return (<div> <Head><title>Automation Insights — Zion</title></Head>) )
@@ -124,17 +120,5 @@ function AutomationInsightsPage() {}
     </div>
 );
 }
-<<<<<<< HEAD
 
 "
-=======
-return (<div> <Head><title>Automation Insights — Zion</title></Head>) ) 
-}</ul> </div> </div>) 
-}</section>) : (<pre className="mt-3 whitespace-pre-wrap text-sm bg-gray-50 dark:bg-gray-900 p-3 rounded border border-gray-200 dark:border-gray-800" > {
-  talentMd 
-}</pre>) 
-}</section> </div>) 
-}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

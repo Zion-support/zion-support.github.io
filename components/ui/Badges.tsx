@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 export function TrustBadge({ type }: { type: 'Verified' | 'Pro' | 'Top Rated' }) {
   const colorMap = null;
@@ -78,7 +77,6 @@ export function MicroTestimonial({ quote, author }: { quote: string, author: str
     </figure>
 );
 }
-<<<<<<< HEAD
 
 export function TrustBadge({}
   type}
@@ -217,10 +215,3 @@ function MicroTestimonial() {
 }
 
 "
-=======
-</span>) 
-}</figure>) 
-}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

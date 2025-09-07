@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 import React, { useEffect, useRef } from 'react';
 import type { RemoteParticipant, LocalParticipant, TrackPublication, Track } from 'livekit-client';
 type Props = any;
@@ -101,17 +97,5 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </div>
 );
 }
-<<<<<<< HEAD
 
 "
-=======
-useEffect ( () => {
-  const handleTrackSubscribed = (pub: TrackPublication, track: Track) => {
-  if (track.kind === 'video' && videoRef.current) {
-  participant.on ('trackSubscribed', handleTrackSubscribed)
-participant.on ('trackUnsubscribed', handleTrackUnsubscribed)
-</div> </div>) 
-}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

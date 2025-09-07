@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 import React from 'react';
 export default function GlowCard({ title, children }: { title: string, children: React.ReactNode }) {
 
@@ -37,12 +33,5 @@ children}
     </div>
   );
 }
-<<<<<<< HEAD
 
 "
-=======
-</div> </div>) 
-}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

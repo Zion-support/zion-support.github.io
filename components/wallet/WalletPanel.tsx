@@ -1,14 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
 import React, { useEffect, useMemo, useState } from \"react\";"
 import Badges from \"./Badges\";
 
-=======
-import React, { useEffect, useMemo, useState } from "react";
-import Badges from "./Badges";
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 type Tx = any;
       refresh()
 import React, { useEffect, useMemo, useState } from 'react';
@@ -132,47 +126,8 @@ export default function WalletPanel() {
     } catch (e) {
       console.error(e)
     }
-<<<<<<< HEAD
     try {const accounts = await eth.request({ method: 'eth_requestAccounts' })setEthAddress(accounts?.[0] |null)} catch (e) {console.error(e)}
  
-=======
-type Summary = {
-  wallet: {
-  userId: string, balance: number 
-}
-transactions: Tx[]
-config: {
-  usdPerToken: number, symbol: string 
-}
-}
-function getUserId () : string {
-  const userId = useMemo ( () => getUserId (), [])
-async function refresh () {
-  const res = await fetch (`/api/wallet?userId=$ {
-  encodeURIComponent (userId) 
-}`)
-const data = await res.json ()
-setSummary (data) 
-}useEffect ( () => {
-  refresh () 
-}, [])
-["burn", "revoke", "redeem"].includes (t.type) )
-}catch (e) {
-  console.error (e) 
-}
-}async function redeem (amount: number) {
-  if (data.error) {
-  alert (data.error) 
-}else {
-  alert (`Redeemed $ {
-  amount 
-}$ {
-  symbol 
-}for $$ {
-  data.usd 
-}credit.`)
-refresh () 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
 }
   async function redeem() {if (!amount || amount <= 0);
   return;
@@ -180,8 +135,6 @@ refresh ()
 const res = await fetch('/api/wallet/redeem', {method: 'POST'}
   headers: { 'Content-Type': 'application/json'}
 },body: JSON.stringify({ userId, amount })})if (data.error) {alert(data.error)} else {alert(`Redeemed ${amount} ${symbol} for $${data.usd} credit.`)refresh()}
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
   }
   async function redeem(amount: number) {
     if (!amount |amount <= 0) return;

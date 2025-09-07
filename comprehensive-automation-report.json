@@ -1,431 +1,70 @@
 {
-<<<<<<< HEAD
-=======
-  "timestamp": "2025-09-07T02:33:22.872Z",
-  "duration": "1285ms",
-  "summary": {
-    "successful": 3,
-    "errors": 14,
-    "warnings": 3
-  },
-  "results": {
-    "success": [
-      "Pre-automation checks passed",
-      {
-        "script": "scripts/performance-monitor-enhanced.js",
-        "category": "performance-monitoring",
-        "output": "ℹ️ Starting enhanced performance monitoring...\nℹ️ Monitoring build performance...\n❌ Build performance monitoring failed: Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n ⨯ Failed to load next.config.js, see more info here https://nextjs.org/docs/messages/next-config-error\n\n> Build error occurred\nReferenceError: module is not defined in ES module scope\nThis file is being treated as an ES module because it has a '.js' file extension and '/workspace/package.json' contains \"type\": \"module\". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.\n    at <unknown> (next.config.js:58:1)\n\n❌ Performance monitoring failed: Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n ⨯ Failed to load next.config.js, see more info here https://nextjs.org/docs/messages/next-config-error\n\n> Build error occurred\nReferenceError: module is not defined in ES module scope\nThis file is being treated as an ES module because it has a '.js' file extension and '/workspace/package.json' contains \"type\": \"module\". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.\n    at <unknown> (next.config.js:58:1)\n\n"
-      },
-      {
-        "script": "scripts/auto-fixer.js",
-        "category": "error-fixing",
-        "output": "[INFO] Starting auto-fixer...\n[INFO] Checking for merge conflicts...\n[INFO] No merge conflicts found\n[INFO] Fixing import errors...\n[INFO] Fixing TypeScript errors...\n[ERROR] Failed to fix TypeScript errors\n[INFO] Fixing syntax errors...\n[ERROR] Failed to fix syntax errors\n[INFO] Report saved to /workspace/error-reports/auto-fixer-report.json\n[INFO] Auto-fixer completed. Applied: 1, Failed: 1\n"
-      }
-    ],
-    "errors": [
-      {
-        "script": "scripts/comprehensive-error-fixer.cjs",
-        "category": "error-fixing",
-        "error": "Command failed: node scripts/comprehensive-error-fixer.cjs\nError fixing failed: Error: ENOENT: no such file or directory, stat '/workspace/media/docu-script/requirements.txt'\n    at Object.statSync (node:fs:1740:25)\n    at scanDirectory (/workspace/scripts/comprehensive-error-fixer.cjs:86:25)\n    at scanDirectory (/workspace/scripts/comprehensive-error-fixer.cjs:91:13)\n    at scanDirectory (/workspace/scripts/comprehensive-error-fixer.cjs:91:13)\n    at ComprehensiveErrorFixer.getAllJSFiles (/workspace/scripts/comprehensive-error-fixer.cjs:99:5)\n    at ComprehensiveErrorFixer.fixSyntaxErrors (/workspace/scripts/comprehensive-error-fixer.cjs:26:24)\n    at ComprehensiveErrorFixer.run (/workspace/scripts/comprehensive-error-fixer.cjs:157:18)\n    at Object.<anonymous> (/workspace/scripts/comprehensive-error-fixer.cjs:177:9)\n    at Module._compile (node:internal/modules/cjs/loader:1730:14)\n    at Object..js (node:internal/modules/cjs/loader:1895:10) {\n  errno: -2,\n  code: 'ENOENT',\n  syscall: 'stat',\n  path: '/workspace/media/docu-script/requirements.txt'\n}\n"
-      },
-      {
-<<<<<<< HEAD
-        "script": "scripts/auto-fixer.js",
-        "category": "error-fixing",
-        "error": "Command failed: node scripts/auto-fixer.js\n/workspace/scripts/auto-fixer.js:3\n#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { execSync } from 'child_process'; import { fileURLToPath } from 'url';\n^\n\nSyntaxError: Invalid or unexpected token\n    at wrapSafe (node:internal/modules/cjs/loader:1662:18)\n    at Module._compile (node:internal/modules/cjs/loader:1704:20)\n    at Object..js (node:internal/modules/cjs/loader:1895:10)\n    at Module.load (node:internal/modules/cjs/loader:1465:32)\n    at Function._load (node:internal/modules/cjs/loader:1282:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)\n    at node:internal/main/run_main_module:36:49\n\nNode.js v22.16.0\n"
-      },
-      {
-        "script": "scripts/advanced-build-optimizer.js",
-        "category": "build-optimization",
-        "error": "Command failed: node scripts/advanced-build-optimizer.js\n/workspace/scripts/advanced-build-optimizer.js:3\nursor/integrate-build-improve-and-re-verify-8f7d;\n                                            ^\n\nSyntaxError: Invalid or unexpected token\n    at wrapSafe (node:internal/modules/cjs/loader:1662:18)\n    at Module._compile (node:internal/modules/cjs/loader:1704:20)\n    at Object..js (node:internal/modules/cjs/loader:1895:10)\n    at Module.load (node:internal/modules/cjs/loader:1465:32)\n    at Function._load (node:internal/modules/cjs/loader:1282:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)\n    at node:internal/main/run_main_module:36:49\n\nNode.js v22.16.0\n"
-      },
-      {
-        "script": "scripts/performance-monitor-enhanced.js",
-        "category": "performance-monitoring",
-        "error": "Command failed: node scripts/performance-monitor-enhanced.js\n/workspace/scripts/performance-monitor-enhanced.js:3\nursor/fix-syntax-push-and-merge-to-main-40de;\n                                        ^^\n\nSyntaxError: Invalid or unexpected token\n    at wrapSafe (node:internal/modules/cjs/loader:1662:18)\n    at Module._compile (node:internal/modules/cjs/loader:1704:20)\n    at Object..js (node:internal/modules/cjs/loader:1895:10)\n    at Module.load (node:internal/modules/cjs/loader:1465:32)\n    at Function._load (node:internal/modules/cjs/loader:1282:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)\n    at node:internal/main/run_main_module:36:49\n\nNode.js v22.16.0\n"
-=======
-        "script": "scripts/advanced-build-optimizer.js",
-        "category": "build-optimization",
-        "error": "spawnSync /bin/sh ENOBUFS"
-      },
-      {
-        "check": "ESLint",
-        "error": "Command failed: npm run lint\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n"
->>>>>>> b547502a01c5baa88ddb8f82513787a696ec0950
-      },
-      {
-        "check": "TypeScript",
-        "error": "spawnSync /bin/sh ENOBUFS"
-<<<<<<< HEAD
-=======
-      },
-      {
-        "check": "Build",
-        "error": "Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n ⨯ Failed to load next.config.js, see more info here https://nextjs.org/docs/messages/next-config-error\n\n> Build error occurred\nReferenceError: module is not defined in ES module scope\nThis file is being treated as an ES module because it has a '.js' file extension and '/workspace/package.json' contains \"type\": \"module\". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.\n    at <unknown> (next.config.js:58:1)\n"
->>>>>>> b547502a01c5baa88ddb8f82513787a696ec0950
-      }
-    ],
-    "warnings": [],
-    "metrics": {
-      "startTime": 1757221718615,
-      "endTime": 1757221756275,
-      "duration": 37660,
-      "memoryUsage": {
-        "start": {
-          "rss": 48332800,
-          "heapTotal": 5570560,
-          "heapUsed": 4468160,
-          "external": 1574360,
-          "arrayBuffers": 10515
-        },
-        "end": {
-          "rss": 54534144,
-          "heapTotal": 7516160,
-          "heapUsed": 5846928,
-          "external": 2623888,
-          "arrayBuffers": 1060003
-        }
-      },
-      "systemInfo": {
-        "platform": "linux",
-        "arch": "x64",
-        "nodeVersion": "v22.16.0",
-        "cpus": 4,
-        "totalMemory": 16795742208,
-        "freeMemory": 14595481600
-      }
-    }
-=======
-      "performance-monitor.cjs (performance-monitoring) completed",
-      "security-audit.cjs (security-audit) completed"
-    ],
-    "errors": [
-      "comprehensive-error-fixer.cjs failed: Command failed: node scripts/comprehensive-error-fixer.cjs\n/workspace/scripts/comprehensive-error-fixer.cjs:10\n  constructor() {}\n                ^\n\nSyntaxError: Unexpected token '{'\n    at wrapSafe (node:internal/modules/cjs/loader:1662:18)\n    at Module._compile (node:internal/modules/cjs/loader:1704:20)\n    at Object..js (node:internal/modules/cjs/loader:1895:10)\n    at Module.load (node:internal/modules/cjs/loader:1465:32)\n    at Function._load (node:internal/modules/cjs/loader:1282:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)\n    at node:internal/main/run_main_module:36:49\n\nNode.js v22.16.0\n",
-      "auto-fixer.js failed: Command failed: node scripts/auto-fixer.js\nfile:///workspace/scripts/auto-fixer.js:3\n#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { execSync } from 'child_process'; import { fileURLToPath } from 'url';\n^\n\nSyntaxError: Invalid or unexpected token\n    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)\n    at #translate (node:internal/modules/esm/loader:534:12)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)\n    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)\n\nNode.js v22.16.0\n",
-      "syntax-fixer.cjs failed: Command failed: node scripts/syntax-fixer.cjs\n/workspace/scripts/syntax-fixer.cjs:9\n  async log(message, level = \"INFO\")\n        ^^^\n\nSyntaxError: Unexpected identifier 'log'\n    at wrapSafe (node:internal/modules/cjs/loader:1662:18)\n    at Module._compile (node:internal/modules/cjs/loader:1704:20)\n    at Object..js (node:internal/modules/cjs/loader:1895:10)\n    at Module.load (node:internal/modules/cjs/loader:1465:32)\n    at Function._load (node:internal/modules/cjs/loader:1282:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)\n    at node:internal/main/run_main_module:36:49\n\nNode.js v22.16.0\n",
-      "fix-all-syntax-errors.cjs failed: Command failed: node scripts/fix-all-syntax-errors.cjs\n/workspace/scripts/fix-all-syntax-errors.cjs:6\n        search: \"\n                ^\n\nSyntaxError: Invalid or unexpected token\n    at wrapSafe (node:internal/modules/cjs/loader:1662:18)\n    at Module._compile (node:internal/modules/cjs/loader:1704:20)\n    at Object..js (node:internal/modules/cjs/loader:1895:10)\n    at Module.load (node:internal/modules/cjs/loader:1465:32)\n    at Function._load (node:internal/modules/cjs/loader:1282:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)\n    at node:internal/main/run_main_module:36:49\n\nNode.js v22.16.0\n",
-      "advanced-build-optimizer.js failed: Command failed: node scripts/advanced-build-optimizer.js\nfile:///workspace/scripts/advanced-build-optimizer.js:3\nursor/integrate-build-improve-and-re-verify-8f7d;\n                                            ^\n\nSyntaxError: Invalid or unexpected token\n    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)\n    at #translate (node:internal/modules/esm/loader:534:12)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)\n    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)\n\nNode.js v22.16.0\n",
-      "build-optimizer.cjs failed: Command failed: node scripts/build-optimizer.cjs\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nsh: 1: next: not found\n❌ Build optimization failed: Command failed: npm run build\n",
-      "optimize-performance.js failed: Command failed: node scripts/optimize-performance.js\nfile:///workspace/scripts/optimize-performance.js:3\nconst OPTIMIZATIONS = { images: { enabled: true,formats: ['webp','avif'],quality: 85,sizes: [640,750,828,1080,1200,1920,2048,3840]},bundle: { enabled: true,chunkSize: 244000,maxChunks:  ,}\n                                                                                                                                                                                          ^\n\nSyntaxError: Unexpected token ','\n    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)\n    at #translate (node:internal/modules/esm/loader:534:12)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)\n    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)\n\nNode.js v22.16.0\n",
-      "performance-monitor-enhanced.js failed: Command failed: node scripts/performance-monitor-enhanced.js\nfile:///workspace/scripts/performance-monitor-enhanced.js:3\nursor/fix-syntax-push-and-merge-to-main-40de;\n                                        ^^\n\nSyntaxError: Invalid or unexpected token\n    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)\n    at #translate (node:internal/modules/esm/loader:534:12)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)\n    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)\n\nNode.js v22.16.0\n",
-      "performance-optimizer.js failed: Command failed: node scripts/performance-optimizer.js\nfile:///workspace/scripts/performance-optimizer.js:2\nursor/automate-test-improve-and-merge-code-646c;\n                                           ^^^\n\nSyntaxError: Invalid or unexpected token\n    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)\n    at #translate (node:internal/modules/esm/loader:534:12)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)\n    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)\n\nNode.js v22.16.0\n",
-      "security-auditor.js failed: Command failed: node scripts/security-auditor.js\nfile:///workspace/scripts/security-auditor.js:2\nursor/automate-test-improve-and-merge-code-646c;\n                                           ^^^\n\nSyntaxError: Invalid or unexpected token\n    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)\n    at #translate (node:internal/modules/esm/loader:534:12)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)\n    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)\n\nNode.js v22.16.0\n",
-      "security-enhancer.js failed: Command failed: node scripts/security-enhancer.js\nfile:///workspace/scripts/security-enhancer.js:2\nursor/automate-test-improve-and-merge-code-646c;\n                                           ^^^\n\nSyntaxError: Invalid or unexpected token\n    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)\n    at #translate (node:internal/modules/esm/loader:534:12)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)\n    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)\n\nNode.js v22.16.0\n",
-      "seo-optimizer.js failed: Command failed: node scripts/seo-optimizer.js\nfile:///workspace/scripts/seo-optimizer.js:3\nursor/fix-syntax-push-and-merge-to-main-40de;\n                                        ^^\n\nSyntaxError: Invalid or unexpected token\n    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)\n    at #translate (node:internal/modules/esm/loader:534:12)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)\n    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)\n\nNode.js v22.16.0\n",
-      "seo-enhancer.js failed: Command failed: node scripts/seo-enhancer.js\nfile:///workspace/scripts/seo-enhancer.js:2\nursor/automate-test-improve-and-merge-code-646c;\n                                           ^^^\n\nSyntaxError: Invalid or unexpected token\n    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)\n    at #translate (node:internal/modules/esm/loader:534:12)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)\n    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)\n\nNode.js v22.16.0\n",
-      "generate-dynamic-sitemap.js failed: Command failed: node scripts/generate-dynamic-sitemap.js\nfile:///workspace/scripts/generate-dynamic-sitemap.js:5\nconst __filename = fileURLToPath(import.meta.url;\n                                             ^^^\n\nSyntaxError: missing ) after argument list\n    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)\n    at #translate (node:internal/modules/esm/loader:534:12)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)\n    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)\n\nNode.js v22.16.0\n"
-    ],
-    "warnings": [
-      "ESLint had issues: Command failed: npm run lint\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnode:internal/modules/cjs/loader:1404\n  throw err;\n  ^\n\nError: Cannot find module '/workspace/node_modules/.bin/eslint'\n    at Function._resolveFilename (node:internal/modules/cjs/loader:1401:15)\n    at defaultResolveImpl (node:internal/modules/cjs/loader:1057:19)\n    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1062:22)\n    at Function._load (node:internal/modules/cjs/loader:1211:37)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)\n    at node:internal/main/run_main_module:36:49 {\n  code: 'MODULE_NOT_FOUND',\n  requireStack: []\n}\n\nNode.js v22.16.0\n",
-      "TypeScript had issues: Command failed: npm run type-check\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnode:internal/modules/cjs/loader:1404\n  throw err;\n  ^\n\nError: Cannot find module '/workspace/node_modules/.bin/tsc'\n    at Function._resolveFilename (node:internal/modules/cjs/loader:1401:15)\n    at defaultResolveImpl (node:internal/modules/cjs/loader:1057:19)\n    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1062:22)\n    at Function._load (node:internal/modules/cjs/loader:1211:37)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)\n    at node:internal/main/run_main_module:36:49 {\n  code: 'MODULE_NOT_FOUND',\n  requireStack: []\n}\n\nNode.js v22.16.0\n",
-      "Smoke Tests had issues: Command failed: npm run test:smoke\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nsh: 1: jest: not found\n"
-    ],
-    "metrics": {}
->>>>>>> main
-  },
-  "recommendations": [
-    "Address all errors before deployment",
-    "Review and address warnings for better code quality",
-    "Implement continuous integration for automated testing",
-    "Set up automated deployment pipeline",
-    "Monitor performance metrics in production",
-    "Regular security audits and dependency updates"
-  ],
-  "nextSteps": [
-    "Review the comprehensive automation report",
-    "Address any critical errors identified",
-    "Implement recommended optimizations",
-    "Set up monitoring for production environment",
-    "Schedule regular automation runs",
-    "Document any custom automation workflows"
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-
-<<<<<<< HEAD
-
-
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
-      "warnings": []
-    },
-    "accessibilityImprovement": {
-      "success": false,
-
-      "duration": 9692,
-
-      "errors": [],
-      "warnings": []
-    },
-    "performanceOptimization": {
-      "success": true,
-
-      "duration": 7154,
-
-      "errors": [],
-      "warnings": []
-    },
-    "deployment": {
-      "success": true,
-
-      "duration": 2037,
-
-      "errors": [],
-      "warnings": []
-    }
-
-  "timestamp": "2025-09-06T17:31:43.872Z",
-  "duration": "46s",
-  "timestamp": "2025-09-06T20:40:15.907Z",
-  "duration": "124s",
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
-  "timestamp": "2025-09-06T17:31:43.872Z",
-  "duration": "46s",
-  "results": {
-    "syntaxFixes": 0,
-    "buildSuccess": true,
-    "testsPassed": 0,
-    "optimizations": 0,
-    "errors": [
-      {
-        "command": "npm run lint:fix",
-        "description": "ESLint Auto-fix",
-        "error": "spawnSync /bin/sh ETIMEDOUT"
-      },
-      {
-        "command": "npm run format",
-        "description": "Prettier Code Formatting",
-        "error": "spawnSync /bin/sh ENOBUFS"
-      },
-      {
-        "command": "npm run type-check",
-        "description": "TypeScript Type Checking",
-        "error": "spawnSync /bin/sh ENOBUFS"
-      },
-      {
-        "command": "npm run test:smoke",
-        "description": "Smoke Tests",
-        "error": "Command failed: npm run test:smoke\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nSyntaxError: Unexpected token '}'\n    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)\n    at #translate (node:internal/modules/esm/loader:534:12)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)\n    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)\n"
-      },
-      {
-        "command": "npm test -- --passWithNoTests",
-        "description": "Jest Tests",
-        "error": "Command failed: npm test -- --passWithNoTests\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nSyntaxError: Unexpected token '}'\n    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)\n    at #translate (node:internal/modules/esm/loader:534:12)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)\n    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)\n"
-      }
-    ]
-  },
-  "summary": {
-    "syntaxFixes": 0,
-    "buildSuccess": true,
-    "testsPassed": 0,
-    "totalErrors": 5
-  "timestamp": "2025-09-06T10:42:27.266Z",
-  "totalDuration": 60241,
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
-  "successfulTasks": 6,
+  "timestamp": "2025-09-07T11:22:04.239Z",
+  "totalDuration": 107267,
+  "successfulTasks": 4,
   "totalTasks": 8,
   "results": {
     "dependencyFix": {
       "success": true,
-      "duration": 7037,
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
-      "duration": 22421,
-ursor/automate-test-improve-and-merge-code-e883
-  "timestamp": "2025-09-06T08:34:04.724Z",
-  "duration": 397290,
-  "results": {
-    "dependencyFix": {
-      "success": true,
-      "duration": 84429,
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+      "duration": 56995,
       "errors": [],
       "warnings": []
     },
     "codeQuality": {
       "success": false,
-      "duration": 27333,
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
-      "duration": 27631,
-ursor/automate-test-improve-and-merge-code-e883
-      "success": true,
-      "duration": 56422,
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
-      "errors": [],
+      "duration": 37658,
+      "errors": [
+        "spawnSync /bin/sh ENOBUFS",
+        "Command failed: npx eslint . --max-warnings 1000\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n(node:3218) ESLintIgnoreWarning: The \".eslintignore\" file is no longer supported. Switch to using the \"ignores\" property in \"eslint.config.js\": https://eslint.org/docs/latest/use/configure/migration-guide#ignoring-files\n(Use `node --trace-warnings ...` to show where the warning was created)\n\nOops! Something went wrong! :(\n\nESLint: 9.35.0\n\nSyntaxError: Unexpected token '<<'\n    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)\n    at #translate (node:internal/modules/esm/loader:534:12)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)\n    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)\n"
+      ],
       "warnings": []
     },
     "securityAudit": {
       "success": true,
-      "duration": 1719,
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
-      "duration": 1683,
-ursor/automate-test-improve-and-merge-code-e883
-      "duration": 1450,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-      "duration": 1683,
-ursor/automate-test-improve-and-merge-code-e883
-      "duration": 1450,
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
-      "duration": 1719,
+      "duration": 2219,
       "errors": [],
       "warnings": []
     },
     "buildOptimization": {
-      "success": true,
-      "duration": 6250,
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
-      "duration": 6198,
-ursor/automate-test-improve-and-merge-code-e883
-      "duration": 11039,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-      "duration": 6198,
-ursor/automate-test-improve-and-merge-code-e883
-      "duration": 11039,
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
-      "duration": 6250,
-      "errors": [],
+      "success": false,
+      "duration": 1152,
+      "errors": [
+        "Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n ⨯ Conflicting app and page files were found, please remove the conflicting files to continue:\n ⨯   \"pages/about.tsx\" - \"app/about/page.tsx\"\n ⨯   \"pages/blog/index.tsx\" - \"app/blog/page.tsx\"\n ⨯   \"pages/contact.tsx\" - \"app/contact/page.tsx\"\n ⨯   \"pages/index.tsx\" - \"app/page.tsx\"\n ⨯   \"pages/services/cybersecurity.tsx\" - \"app/services/cybersecurity/page.tsx\"\n ⨯   \"pages/services/index.tsx\" - \"app/services/page.tsx\"\n ⨯   \"pages/solutions/index.tsx\" - \"app/solutions/page.tsx\"\n"
+      ],
       "warnings": []
     },
     "seoOptimization": {
-      "success": false,
-      "duration": 39,
-"errors": [],
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       "success": true,
-      "duration": 46,
+      "duration": 113,
       "errors": [],
-ursor/automate-test-improve-and-merge-code-e883
-      "success": false,
-      "duration": 0,
-      "errors": [],
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       "warnings": []
     },
     "accessibilityImprovements": {
       "success": false,
-      "duration": 9508,
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
-      "duration": 9692,
-ursor/automate-test-improve-and-merge-code-e883
-      "duration": 0,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-      "duration": 9692,
-ursor/automate-test-improve-and-merge-code-e883
-      "duration": 0,
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
-      "duration": 9508,
-      "errors": [],
+      "duration": 1092,
+      "errors": [
+        "Command failed: npx eslint . --rule \"jsx-a11y/alt-text: warn\" --rule \"jsx-a11y/aria-role: warn\"\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n(node:3393) ESLintIgnoreWarning: The \".eslintignore\" file is no longer supported. Switch to using the \"ignores\" property in \"eslint.config.js\": https://eslint.org/docs/latest/use/configure/migration-guide#ignoring-files\n(Use `node --trace-warnings ...` to show where the warning was created)\n\nOops! Something went wrong! :(\n\nESLint: 9.35.0\n\nSyntaxError: Unexpected token '<<'\n    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)\n    at #translate (node:internal/modules/esm/loader:534:12)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)\n    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)\n"
+      ],
       "warnings": []
     },
     "performanceOptimization": {
-      "success": true,
-      "duration": 6736,
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
-      "duration": 7154,
-ursor/automate-test-improve-and-merge-code-e883
       "success": false,
-      "duration": 0,
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
-      "errors": [],
+      "duration": 1174,
+      "errors": [
+        "Command failed: npm run build:analyze\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm error Missing script: \"build:analyze\"\nnpm error\nnpm error To see a list of scripts, run:\nnpm error   npm run\nnpm error A complete log of this run can be found in: /home/ubuntu/.npm/_logs/2025-09-07T11_21_56_242Z-debug-0.log\n"
+      ],
       "warnings": []
     },
     "deployment": {
       "success": true,
-      "duration": 1612,
-      "errors": [],
-      "warnings": []
-    }
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-    "totalErrors": 6
-ursor/automate-test-improve-and-merge-code-646c
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-      "errors": [],
-      "warnings": []
-    }
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
-=======
-    "totalErrors": 6
-ursor/automate-test-improve-and-merge-code-646c
-      "errors": [],
-      "warnings": []
-    }
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
-  }
-}
-      "success": false,
-      "duration": 0,
+      "duration": 6860,
       "errors": [],
       "warnings": []
     }
   },
-  "summary": {
-    "totalTasks": 8,
-    "successfulTasks": 4,
-    "failedTasks": 4
-  }
-}
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
-  }
-  "timestamp": "2025-09-06T22:31:53.549Z",
-  "totalDuration": 106111,
-  "successfulTasks": 3,
-  "totalTasks": 3,
-  "results": {
-    "Comprehensive Automation Suite": true,
-    "Final Automation Suite": true,
-    "Execute All Scripts": true
-  },
-  "errors": [],
-  "fixes": [
-    "Fixed memory issues with Node.js heap size",
-    "Created missing automation scripts",
-    "Fixed ESLint configuration",
-    "Added comprehensive error handling"
+  "recommendations": [
+    "Review and fix code quality issues",
+    "Optimize application performance",
+    "Enhance accessibility features"
   ]
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2

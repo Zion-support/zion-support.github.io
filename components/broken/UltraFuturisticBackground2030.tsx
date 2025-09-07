@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 import React, { useEffect, useRef } from 'react';
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
@@ -139,41 +135,9 @@ const UltraFuturisticBackground2030: React.FC<UltraFuturisticBackground2030Props
           className='absolute top-20 left-20 w-32 h-32 border border-cyan-400/30'
           style={{
             clipPath:
-<<<<<<< HEAD
-=======
-canvas.width = window.innerWidth
-canvas.height = window.innerHeight
-let animationId: number
-let particles: Array< {
-  
-}
-}
-// Wrap around edges if (particle.x < 0) particle.x = canvas.width
-if (particle.x > canvas.width) particle.x = 0
-if (particle.y < 0) particle.y = canvas.height
-if (particle.y > canvas.height) particle.y = 0
-// Draw particle // Draw connections particles.forEach ( (otherParticle, otherIndex) => {
-  if (index !== otherIndex) {
-  
-}
-}) 
-})
-ctx.globalAlpha = 1
-animationId = requestAnimationFrame (animate) 
-}
-initParticles ()
-animate ()
-window.addEventListener ('resize', handleResize)
-/> {
-  /* Floating Circles */ 
-}<motion.div /> {
-  /* Animated Lines */ 
-}<motion.div 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
 }
               'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)'}
           }}
-=======
               'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)',  }, []);
   return (
     <div className="relative min-h-screen bg-black overflow-hidden">
@@ -189,7 +153,6 @@ window.addEventListener ('resize', handleResize)
         <motion.div
           className="absolute top-20 left-20 w-32 h-32 border border-cyan-400/30"
           style={{ clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)' }}
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
           animate={{
             rotate: 360
             scale: [1, 1.1, 1];
@@ -309,7 +272,6 @@ scale: [1, 1.1, 1]}
 
           }}
 
-<<<<<<< HEAD
         />
 
             duration: 10;
@@ -318,18 +280,8 @@ ease: 'easeInOut',
   ease: \"easeInOut\"
         {/* Animated Lines *}
 }
-<<<<<<< HEAD
 
         <motion.div;
-=======
-            duration: 8,
-            repeat: Infinity,'"
-            ease: 'easeInOut',            ease: "easeInOut"
-          }}
-      {/* Gradient Overlays */}'
-      <div className='fixed inset-0 pointer-events-none z-20'>
-        <motion.div
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 className='absolute top-32 left-1/2 w-1 h-32 bg-gradient-to-b from-cyan-400 to-transparent'
           animate={{
             height: [32, 64, 32],
@@ -446,14 +398,5 @@ className='absolute top-32 left-1/2 w-1 h-32 bg-gradient-to-b from-cyan-400 to-t
   )
 }
 export default UltraFuturisticBackground2030;
-<<<<<<< HEAD
 
 "
-=======
-}/>) ) 
-}</div> </div> </div>) 
-}
-export default UltraFuturisticBackground2030
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

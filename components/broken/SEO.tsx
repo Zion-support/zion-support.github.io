@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 import React, { useEffect } from 'react';
 import Head from 'next/head';
 interface SEOProps {
@@ -20,73 +16,10 @@ interface SEOProps {
   tags?: string[],
   structuredData?: any;
   noindex?: boolean;
-<<<<<<< HEAD
 
   nofollow?: boolean}
-=======
-{
-  /* Robots Meta */ 
-}{
-  noindex && <meta name="robots" content="noindex" /> 
-}{
-  nofollow && <meta name="robots" content="nofollow" /> 
-}{
-  !noindex && !nofollow && <meta name="robots" content="index, follow" /> 
-}{
-  /* Open Graph Meta Tags */ 
-}<meta property="og:title" content= {
-  fullTitle 
-}/> <meta property="og:description" content= {
-  description 
-}/> <meta property="og:type" content= {
-  type 
-}/> <meta property="og:url" content= {
-  fullUrl 
-}/> <meta property="og:image" content= {
-  fullImage 
-}/> <meta property="og:site name" content="Zion Tech Group" /> <meta property="og:locale" content="en US" /> {
-  /* Twitter Card Meta Tags */ 
-}<meta name="twitter:card" content="summary large image" /> <meta name="twitter:site" content="@ziontechgroup" /> <meta name="twitter:creator" content="@ziontechgroup" /> <meta name="twitter:title" content= {
-  fullTitle 
-}/> <meta name="twitter:description" content= {
-  description 
-}/> <meta name="twitter:image" content= {
-  fullImage 
-}/> {
-  /* Article Specific Meta Tags */ 
-}{
-  type === 'article' && (<> {
-  publishedTime && <meta property="article:published time" content= {
-  publishedTime 
-}/> 
-}{
-  modifiedTime && <meta property="article:modified time" content= {
-  modifiedTime 
-}/> 
-}{
-  author && <meta property="article:author" content= {
-  author 
-}/> 
-}{
-  section && <meta property="article:section" content= {
-  section 
-}/> 
-}{
-  tags.map ( (tag, index) => (<meta key= {
-  index 
-}property="article:tag" content= {
-  tag 
-}/> 
-}</>) 
-}{
-  /* Structured Data */ 
-}<script 
-}] 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
 }
-=======
   nofollow?: boolean
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 }
 
 const SEO: React.FC<SEOProps> = ({
@@ -131,12 +64,10 @@ const SEO: React.FC<SEOProps> = ({
   author && <meta property="article:author" content= {
   author
 }/>
-<<<<<<< HEAD
 }{"
   section && <meta property=\"article:section\" content= {
   section}
 }
-<<<<<<< HEAD
 }
 import React from 'react';
  {/* Robots Meta */ ;}"
@@ -173,27 +104,6 @@ const SEO: React.FC<SEOProps /> = ({title = 'Zion Tech Group - Revolutionary AI,
     : `${title} | Zion Tech Group`;
 
 const fullUrl = url && url.startsWith('http')? url;
-=======
-}{
-  section && <meta property="article:section" content= {
-  section
-}/>
-}{
-  tags.map ( (tag, index) => (<meta key= {
-  index
-}property="article:tag" content= {
-  tag
-}/>
-}</>)
-}{
-  /* Structured Data */
-}<script
-}]
-const SEO: React.FC<SEOProps    /> = ({title = 'Zion Tech Group - Revolutionary AI, Quantum Computing & Space Technology Solutions',description = 'Pioneering the future of technology with revolutionary AI consciousness, quantum computing, and autonomous solutions that transform businesses worldwide. Leading-edge services in AI, cybersecurity, space tech, and quantum solutions.',keywords = 'AI, artificial intelligence, quantum computing, space technology, cybersecurity, machine learning, automation, Zion Tech Group, technology solutions, enterprise software, cloud computing, blockchain, IoT, robotics',image = '/images/zion-tech-group-og-image && image.jpg',url = 'https://ziontechgroup && ziontechgroup.com',type = 'website',publishedTime,modifiedTime,author = 'Zion Tech Group',section,tags = [],structuredData,noindex = false,nofollow = false}) =>
-  const fullTitle = title && title.includes('Zion Tech Group')? title
-    : `${title} | Zion Tech Group`
-const fullUrl = url && url.startsWith('http')? url
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
     : `https: //ziontechgroup && ziontechgroup.com${ur}
 }`
 const fullImage = image && image.startsWith('http')? image
@@ -449,14 +359,5 @@ export default SEO;            __html: JSON.stringify (structured_data)
 export default SEO;  )
 }
 export default SEO;
-<<<<<<< HEAD
 
 "
-=======
-}/>) 
-}</Head>) 
-}
-export default SEO
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

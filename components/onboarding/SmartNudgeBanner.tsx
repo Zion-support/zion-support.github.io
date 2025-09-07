@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 import React from 'react';
 import { X } from 'lucide-react';
 export type SmartNudgeBannerProps = any;
@@ -141,15 +137,7 @@ onClick={dismiss}
       <div className='text-sm'    />{messag,}
 }</div>
     </div>
-<<<<<<< HEAD
   );
 
-=======
-if (hidden) return null
-return (</div> </div>) 
-}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
 );
 }
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

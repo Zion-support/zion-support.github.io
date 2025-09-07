@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 ;
 }
@@ -40,9 +38,6 @@ export const StarRating: React.FC<Props />  = ({ value, onChange, size = 24, rea
 }import React, {;}
   useState } from 'react';
 
-=======
-import React, { useState } from 'react';
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 type Props = any;
   const stars = [1, 2, 3, 4, 5];
   return (
@@ -97,17 +92,7 @@ export default StarRating;              width={size}
   )
 }
 export default StarRating;
-<<<<<<< HEAD
 
 ;
 
 "
-=======
-> <polygon points="12 2 15 9 22 9 17 14 19 22 12 18 5 22 7 14 2 9 9 9 12 2" /> </svg> </button>) 
-}) 
-}</div>) 
-}
-export default StarRating
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

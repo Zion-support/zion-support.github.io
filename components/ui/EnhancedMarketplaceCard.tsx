@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import Link from 'next/link'
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 interface EnhancedMarketplaceCardProps {
   title: string
   description: string
@@ -196,11 +191,9 @@ export default function EnhancedMarketplaceCard({ title, subtitle, description, 
     </EnhancedCard>
   )
 }
-=======
 <div className="h-12 w-12 rounded bg-gray-200" />)}
         <h3 className="text-lg font-semibold text-gray-900">{title}</h3>
       </div>
       <p className="text-sm text-gray-600 mb-4">{description}</p>
       <div className="mt-auto flex items-center justify-between">
         {price && <span className="text-sm font-medium text-blue-600">{price}</span>}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef

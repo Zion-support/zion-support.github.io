@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 import { useEffect, useState  } from 'react';
 import { useRouter  } from 'next/router';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
@@ -115,16 +111,4 @@ className={`mt-1 inline-block h-3 w-3 rounded-full ${m && m.completed ? 'bg-emer
 );
 }
 }
-<<<<<<< HEAD
 
-=======
-}
-}
-if (loading) return <EnhancedLayout><div>Loading...</div></EnhancedLayout>
-if (!item) return <EnhancedLayout><div>Not found</div></EnhancedLayout>
-</ul> </div>) 
-}</section> </div> </div> </section> </div> </section> </aside> </div> </EnhancedLayout>) 
-}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

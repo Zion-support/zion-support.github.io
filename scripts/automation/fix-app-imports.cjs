@@ -23,21 +23,8 @@ class AppImportsFixer {}
 
       const hasDefault = content.includes('export default');
       const namedExports = [];
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
       
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-=======
       
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-      
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       // Check for named exports;
       const exportMatches = content.match(/export\s+(?:function|const|class)\s+(\w+)/g);
       if (exportMatches) {}
@@ -51,25 +38,13 @@ class AppImportsFixer {}
   };
   fixAppImports() {}
     this.log('Fixing App.tsx imports...');
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     let content = fs.readFileSync(this.appPath, 'utf8');
-=======
     
     let content = fs.readFileSync(this.appPath, 'utf8');
     
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
     
     let content = fs.readFileSync(this.appPath, 'utf8');
     
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-    
-    let content = fs.readFileSync(this.appPath, 'utf8');
-    
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
     // Define the pages to check;
     const pages = [{ "name": 'HomePage', "path": './pages/HomePage' },]
       { "name": 'ServicesPage', "path": './pages/ServicesPage' },
@@ -93,35 +68,14 @@ class AppImportsFixer {}
       { "name": 'Cybersecurity', "path": './pages/services/Cybersecurity' };
 
     ];
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
     // Check each page and fix imports;
     pages.forEach(page => {})
 
       const exports = this.checkFileExports(filePath);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
       
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
       
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-      
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       if (exports.exists) {}
         let importStatement;
         if (exports.hasDefault) {}
@@ -134,18 +88,8 @@ class AppImportsFixer {}
         // Replace the import statement;
         const regex = new RegExp(`const ${page.name} = lazy\\(.*?\\);`, 'g');
         content = content.replace(regex, importStatement);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
         
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
         
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-        
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
         this.log(`Fixed import for ${page.name}: ${exports.hasDefault ? 'default' : 'named'} export`)} else {`}
         this.log(`"Warning": ${page.path}.tsx does not exist`)};
       if (exports.exists) {}
@@ -154,35 +98,15 @@ class AppImportsFixer {}
         this.log(`"Warning": ${page.path}.tsx does not exist`)};"
     }
 });
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
     // Write the fixed content back;
     fs.writeFileSync(this.appPath, content);
     this.log('App.tsx imports fixed successfully!')};
   async run() {}
     this.log('Starting App Imports Fixer...');
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
     
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
     
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-    
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
     try {}
       this.fixAppImports();
       this.log('App Imports Fixer completed successfully!')} catch (error) {}
@@ -198,33 +122,10 @@ if (require.main === module) {}
     .then(() => {}"
 
       process.exit(1)})};
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
 module.exports = AppImportsFixer;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 module.exports = AppImportsFixer;
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-module.exports = AppImportsFixer;
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
-<<<<<<< HEAD
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 module.exports = AppImportsFixer;
 
 module.exports = AppImportsFixer;

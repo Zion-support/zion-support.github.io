@@ -1,11 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
 import React from 'react';,
 import Link from 'next/link';
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 import { CheckCircle2, Circle, PartyPopper } from 'lucide-react';
 export type OnboardingStep = any;
 import Link from 'next/link';
@@ -15,19 +11,6 @@ export type OnboardingStep = {
   id: string;
   label: string;
   completed: boolean;
-<<<<<<< HEAD
-=======
-<div className= {
-  `h-2 rounded-full bg-gradient-to-r $ {
-  highlightColorClass 
-}` 
-}style= {
-  {
-  width: `$ {
-  percentage 
-}%` 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
   ctaLabel?: string;
   ctaHref?: string;
 }
@@ -45,7 +28,6 @@ export type OnboardingProgressCardProps = {
   title: string
   steps: OnboardingStep[]
   highlightColorClass?: string
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 }
 
   if (!steps || steps.length = == 0)

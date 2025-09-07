@@ -1,11 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useEffect, useState, useCallback } from 'react';
 
-=======
-import React, { useEffect, useMemo, useState } from 'react';
-export type AdminNotesPanelProps = any;
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 export type AdminNotesPanelProps = {
   targetType: string; // e.g., 'user' | 'listing'
   targetId: string; // unique identifier for the target
@@ -145,17 +139,8 @@ export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPane
         )}
       </div>
     </div>
-<<<<<<< HEAD
   );
-=======
-</div> <div className="text-xs opacity-60 mt-2" >Admin-only notes hidden.</div> </div>) 
-}</li>) ) 
-}</ul>) 
-}</div> </div>) 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
 }
-=======
 );
 }
 }
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

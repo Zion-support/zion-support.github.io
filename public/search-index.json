@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated": "2025-09-07T11:21:55.105Z",
+  "generated": "2025-09-07T11:29:59.276Z",
   "pages": [
     {
       "url": "/",
@@ -16,7 +16,7 @@
         "technology",
         "provider"
       ],
-      "lastModified": "2025-09-07T11:21:55.105Z"
+      "lastModified": "2025-09-07T11:29:59.276Z"
     },
     {
       "url": "/about",
@@ -30,7 +30,7 @@
         "mission",
         "team"
       ],
-      "lastModified": "2025-09-07T11:21:55.105Z"
+      "lastModified": "2025-09-07T11:29:59.276Z"
     },
     {
       "url": "/services",
@@ -42,7 +42,7 @@
         "comprehensive",
         "technology"
       ],
-      "lastModified": "2025-09-07T11:21:55.105Z"
+      "lastModified": "2025-09-07T11:29:59.276Z"
     },
     {
       "url": "/contact",
@@ -56,7 +56,7 @@
         "touch",
         "team"
       ],
-      "lastModified": "2025-09-07T11:21:55.105Z"
+      "lastModified": "2025-09-07T11:29:59.276Z"
     },
     {
       "url": "/portfolio",
@@ -70,7 +70,7 @@
         "case",
         "studies"
       ],
-      "lastModified": "2025-09-07T11:21:55.105Z"
+      "lastModified": "2025-09-07T11:29:59.276Z"
     },
     {
       "url": "/blog",
@@ -84,7 +84,7 @@
         "updates",
         "team"
       ],
-      "lastModified": "2025-09-07T11:21:55.105Z"
+      "lastModified": "2025-09-07T11:29:59.276Z"
     }
   ]
 }

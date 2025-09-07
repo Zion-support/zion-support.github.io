@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   return (return (}<div className=\"py - 10\" />;"
       <h1 className=\"text - 2xl font - semibold text - white\" />Services Schema</h1>;"
@@ -34,9 +32,6 @@
 }
   return (
 "
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
 return (
     <div className="py-10">
       <h1 className="text-2xl font-semibold text-white">Services Schema</h1>
@@ -45,4 +40,3 @@ return (
     </div>
   );
 }
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

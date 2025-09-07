@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import { Room, RoomEvent, RemoteParticipant, LocalParticipant, createLocalTracks, VideoPresets  } from 'livekit-client';
 import ParticipantTile from './ParticipantTile';
@@ -313,34 +309,8 @@ key={String((p as any).sid || (p as any).identity) + idx}
     </div>
 );
 }
-<<<<<<< HEAD
 
-=======
-setRoom (r)
-setConnectedAt (Date.now () )
-rebuild (r)
-// eslint-disable-next-line react-hooks/exhaustive-deps 
-}, [serverUrl, token, startMode])
-</div> <div className= {
-  `flex-1 p-4 grid gap-4 $ {
-  gridCols 
-}` 
-}> {
-  participants.map ( (p, idx) => (<ParticipantTile key= {
-  String ( (p as any) .sid || (p as any) .identity) + idx 
-}participant= {
-  p 
-}isLocal= {
-  p instanceof LocalParticipant 
-}displayName= {
-  (p as any) .name || (p instanceof LocalParticipant ? 'You' : undefined) 
-}/>) ) 
-}</div> </div>) 
-}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
         ))}
       </div>
     </div>
   );
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

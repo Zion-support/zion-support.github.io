@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}
   static getDerivedStateFromError(error) {return { hasError: true }
@@ -10,8 +8,6 @@ class ErrorBoundary extends React.Component {constructor(props) {super(props)thi
     return this.props.children;
   }
 }
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 import React, { useState } from 'react';
 import { Milestone } from '../../utils/types/milestones';
 type Props = any;
@@ -231,28 +227,5 @@ className='px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-70
 );
 }
 }
-<<<<<<< HEAD
 
 "
-=======
-return (<div className="border rounded-lg p-4 bg-white shadow-sm" > <div className="flex items-start justify-between" > <div> <div className= {
-  'h-2 w-2 rounded-full ' + (idx <= currentIndex ? 'bg-green-600' : 'bg-gray-300') 
-}title= {
-  step 
-}/> {
-  idx < statusSteps.length - 1 && (<div className= {
-  'h-0.5 w-8 ' + (idx < currentIndex ? 'bg-green-600' : 'bg-gray-300') 
-}/>) 
-}</div>) ) 
-}</div> </a> </li>) ) 
-}</ul> </div>) 
-}</div>) 
-}> Mark In Progress </button>) 
-}> Submit Work </button>) 
-}> Approve </button>) 
-}> Mark as Paid </button>) 
-}</div> </div>) 
-}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

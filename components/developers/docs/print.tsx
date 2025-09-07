@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 import React, { useEffect } from 'react';
   return {
     props: {
@@ -59,7 +55,6 @@ export default function PrintDocs({ docs }: PageProps) {
     return () => clearTimeout(id);
   }, []);
   return (
-<<<<<<< HEAD
     <div className='p-8 max-w-4xl mx-auto' />;
 
       <h1 className='text-3xl font-bold mb-6' />{docs && docs.title}</h1>;
@@ -67,12 +62,6 @@ export default function PrintDocs({ docs }: PageProps) {
         {docs && docs.sections.map(s => (<section key={s && s.id} />;
             <h2 className='text-2xl font-semibold mb-2' />{s && s.title}</h2>;
             {s && s.html && <div dangerouslySetInnerHTML={{ __html: s && s.html }} /
-=======
-export const getStaticProps: GetStaticProps<PageProps> = async () => {
-  return {
-  props: {
-  docs: content as DocsContent 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
 }
             {s && s.code &&;
 
@@ -80,7 +69,6 @@ export const getStaticProps: GetStaticProps<PageProps> = async () => {
                 <pre;}
 key = {i}
 
-=======
     <div className='p-8 max-w-4xl mx-auto'>
       <h1 className='text-3xl font-bold mb-6'>{docs.title}</h1>
       <div className='space-y-8'>
@@ -92,7 +80,6 @@ key = {i}
               s.code.map((c, i) => (
                 <pre
                   key={i}
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
                   className='mt-4 p-4 bg-gray-100 text-xs whitespace-pre-wrap'
                 >
                   {c.content}
@@ -110,9 +97,7 @@ key = {i}
             {s.code && s.code.map((c, i) => (
               <pre key={i} className="mt-4 p-4 bg-gray-100 text-xs whitespace-pre-wrap">{c.content}</pre>
             ))}
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
 
 export default /**;
  * PrintDocs - Function description;
@@ -144,24 +129,11 @@ function PrintDocs() {useEffect (() => {const id = set_timeout (() => window.pri
       </div>;
     </div>)))}
           </section>;
-=======
-          </section>
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
         ))}
 
       </div>
     </div>
 );
 }
-<<<<<<< HEAD
 
 "
-=======
-}
-) ) 
-}</section>) ) 
-}</div> </div>) 
-}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

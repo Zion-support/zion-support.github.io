@@ -1,7 +1,6 @@
 const fs = require('fs');
 const path = require('path');
 function fixFile(filePath) {
-<<<<<<< HEAD
 
 // Function to fix remaining syntax errors in a file;
 function fixRemainingSyntax(filePath) {}
@@ -101,26 +100,6 @@ function fixFilesInDirectory(dirPath) {}
     // Fix malformed object destructuring;
     content = content.replace(/const\s+\{\s*([^}]+)\s*\}\s*=\s*useAuth\(\);\s*const\s+\[([^\]]+)\]\s*=\s*useState\(\[\]\);\s*const\s+\[([^\]]+)\]\s*=\s*useState\(true\);\s*const\s+navigate\s*=\s*useNavigate\(\);\s*useEffect\(\(\)\s*=>\s*\{[^}]*\},\s*\[user\]\);\s*const\s+handleRequestHire\s*=\s*\([^)]*\)\s*=>\s*\{[^}]*\};\s*return\s*\(<div[^>]*>([^<]*)<\/div>\);\s*}/g, (match, user, savedTalents, isLoading, content) => {
 </div>'
-=======
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    
-    // Skip if already properly formatted
-    if (content.includes('export default function handler') && 
-        content.includes('import { NextApiRequest, NextApiResponse }') &&
-        !content.includes('>>>>>>>') &&
-        !content.includes('<<<<<<<') &&
-        !content.includes('=======')) {
-      return;
-    }
-    
-    // Fix common patterns
-    content = content
-      .replace(/^[\s\n]*<<<<<<< HEAD[\s\S]*?>>>>>>> [^\n]+\s*$/gm, '')
-      .replace(/^[\s\n]*=======[\s\S]*?>>>>>>> [^\n]+\s*$/gm, '')
-      .replace(/^[\s\n]*<<<<<<< [^\n]+\s*$/gm, '')
-      .replace(/^[\s\n]*=======\s*$/gm, '')
-      .replace(/^[\s\n]*>>>>>>> [^\n]+\s*$/gm, '')
       .replace(/^[\s\n]*return[^;]*;[\s\S]*$/gm, '')
       .replace(/^[\s\n]*try\s*\{[\s\S]*$/gm, '')
       .replace(/^[\s\n]*\}\s*catch[^}]*\}\s*$/gm, '')
@@ -136,7 +115,6 @@ function fixFilesInDirectory(dirPath) {}
     if (content.length < 100 || 
         content.includes('>>>>>>>') || 
         content.includes('<<<<<<<') ||
-        content.includes('=======') ||
         content.split('\n').length < 3) {
       
       const newContent = `import { NextApiRequest, NextApiResponse } from 'next';
@@ -175,4 +153,3 @@ function walkDir(dir) {
 
 walkDir('/workspace/pages/api');
 console.log('Remaining syntax fixes complete!');
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef

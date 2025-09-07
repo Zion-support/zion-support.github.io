@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 import React, { useEffect, useRef } from 'react';
 import { motion  } from 'framer-motion';
 import { motion } from 'framer-motion';
@@ -17,33 +13,9 @@ interface UltraAdvancedFuturisticBackground2026Props {
   enableQuantumEffects?: boolean;
   enableNeuralNetworks?: boolean;
   enableMultidimensional?: boolean;
-<<<<<<< HEAD
   children?: React.ReactNode;}
 }
-=======
-let animationFrameId: number
-let particles: Particle[] = []
-let neuralNodes: NeuralNode[] = []
-let quantumFields: QuantumField[] = []
-let holographicLayers: HolographicLayer[] = []
-//Set canvas size const resizeCanvas = () => {
-  if (containerRef.current) {
-  resizeCanvas ()
-window.addEventListener ('resize', resizeCanvas)
-//Particle class //Bounce off edges if (this.x <= 0 || this.x >= canvas.width) this.vx *= -1
-if (this.y <= 0 || this.y >= canvas.height) this.vy *= -1
-//Wrap around if (this.x < 0) this.x = canvas.width
-if (this.x > canvas.width) this.x = 0
-if (this.y < 0) this.y = canvas.height
-if (this.y > canvas.height) this.y = 0
-//Fade out 
-}
-})
-ctx.restore () 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
   children?: React.ReactNode
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 }
 
   children?: React.ReactNode;
@@ -82,23 +54,8 @@ const UltraAdvancedFuturisticBackground2026: React.FC<
     let neuralNodes: NeuralNode[] = [];
     let quantumFields: QuantumField[] = [];
     let holographicLayers: HolographicLayer[] = [];
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
 }
-=======
-    let animationFrameId: number
-    let particles: Particle[] = []
-    let neuralNodes: NeuralNode[] = []
-    let quantumFields: QuantumField[] = []
-    let holographicLayers: HolographicLayer[] = []
-    // Set canvas size
-    const resizeCanvas = () => {
-      if (containerRef.current) {
-        const rect = containerRef.current.getBoundingClientRect();
-        canvas.width = rect.width;
-        canvas.height = rect.height;        canvas.height = rect.height
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
       }
     }
     resizeCanvas();
@@ -805,34 +762,8 @@ export default UltraAdvancedFuturisticBackground2026;      {children}
 }
 export default UltraAdvancedFuturisticBackground2026;
 
-<<<<<<< HEAD
 "
-=======
-}//Holographic layer class //Create connections neuralNodes.forEach (node => {
-  neuralNodes.forEach (otherNode => {
-  if (node !== otherNode && Math.random () < 0.3) {
-  ctx.fillStyle = gradient
-ctx.fillRect (0, 0, canvas.width, canvas.height)
-//Update and draw quantum fields //Remove dead particles and create new ones if (particle.life <= 0) {
-  particles[index] = new Particle (//Draw particle connections if (intensity === 'extreme' || intensity === 'high') {
-  particles.forEach ( (particle, i) => {
-  particles.slice (i + 1) .forEach (otherParticle => {
-  
-}animationFrameId = requestAnimationFrame (animate) 
-}
-animate ()
-<motion.div className="absolute top-1/4 left-1/4 w-64 h-64 border border-cyan-400/20 rounded-full" animate= {
-  {
-  /> </div>) 
-}{
-  children 
-}</div>) 
-}
-export default UltraAdvancedFuturisticBackground2026
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
             }}
           />
         </div>
       )}
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

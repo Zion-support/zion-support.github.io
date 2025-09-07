@@ -58,7 +58,6 @@ export default [
       sourceType: "module",
       globals: {
         ...globals.browser,
-<<<<<<< HEAD
         ...globals.node},
       parser: tsparser,
       parserOptions: {
@@ -68,49 +67,12 @@ export default [
       'react-hooks': reactHooks,
       'react-refresh': reactRefresh,
       '@typescript-eslint': tseslint},
-=======
-        ...globals.node,
-        React: "readonly",
-        jest: "readonly",
-        describe: "readonly",
-        it: "readonly",
-        test: "readonly",
-        expect: "readonly",
-        beforeEach: "readonly",
-        afterEach: "readonly",
-        beforeAll: "readonly",
-        afterAll: "readonly"
-      },
-      parserOptions: {
-        ecmaVersion: 'latest',
-        sourceType: 'module',
-        ecmaFeatures: {
-          jsx: true
-        }
-      }
-    },
-    plugins: {
-      react,
-      "react-hooks": reactHooks
-    },
-    rules: {
-      ...react.configs.recommended.rules,
-      ...reactHooks.configs.recommended.rules,
-<<<<<<< HEAD
       "no-unused-vars": "warn",
       "no-console": "warn",
       "prefer-const": "error",
       "no-var": "error",
       "react/prop-types": "off",
       "react/react-in-jsx-scope": "off"
-=======
-      'no-unused-vars': 'warn',
-      'no-console': 'warn',
-      'prefer-const': 'error',
-      'no-var': 'error',
-      'react/prop-types': 'off',
-      'react/react-in-jsx-scope': 'off'
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     }
   },
   {
@@ -159,12 +121,10 @@ export default [
       "react-refresh": reactRefresh,
       "jsx-a11y": jsxA11y
     },
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
     rules: {
       ...tseslint.configs.recommended.rules,
       ...react.configs.recommended.rules,
       ...reactHooks.configs.recommended.rules,
-<<<<<<< HEAD
       'react-refresh/only-export-components': [
         'warn',
         { allowConstantExport: true }],
@@ -316,56 +276,3 @@ export default [
       'simple-test.js';
       'syntax-fixer.js';
       'performance-monitor.js']}];
-=======
-      ...jsxA11y.configs.recommended.rules,
-      "react-refresh/only-export-components": [
-        "warn",
-        { allowConstantExport: true }
-      ],
-      '@typescript-eslint/no-unused-vars': 'warn',
-      '@typescript-eslint/no-explicit-any': 'warn',
-      'react-hooks/exhaustive-deps': 'warn',
-      'no-undef': 'off',
-      'no-unused-vars': 'off',
-      'no-console': 'warn',
-      'react/prop-types': 'off',
-      'react/react-in-jsx-scope': 'off'
-    },
-    settings: {
-      react: {
-        version: "detect"
-      }
-    }
-  },
-  {
-    files: [
-      "**/*.cjs",
-      "**/scripts/**/*.js",
-      "**/automation/**/*.js",
-      "**/pm2/**/*.js"
-    ],
-    languageOptions: {
-      ecmaVersion: 2021,
-      sourceType: "script",
-      globals: {
-        ...globals.node,
-        console: "readonly",
-        process: "readonly",
-        require: "readonly",
-        module: "readonly",
-        exports: "readonly",
-        __dirname: "readonly",
-        __filename: "readonly",
-        Buffer: "readonly",
-        global: "readonly"
-      }
-    },
-    rules: {
-      "no-unused-vars": "warn",
-      "no-console": "warn",
-      "no-undef": "error",
-      "prefer-const": "error"
-    }
-  }
-];
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

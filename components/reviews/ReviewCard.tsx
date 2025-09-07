@@ -1,18 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 type Props = any;
 
 export default ReviewCard;
       <div className='flex items-center justify-between mb-2' />;
         <div className='flex items-center gap-2' />;
           <StarRating;
-=======
-type Props = any
-export default ReviewCard
-      <div className='flex items-center justify-between mb-2'    />
-        <div className='flex items-center gap-2'    />
-          <StarRating
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
             value={review.rating}
             onChange={() =    /> {}}
             readOnly
@@ -55,14 +46,5 @@ export default ReviewCard
     </div>
   )}
 
-<<<<<<< HEAD
 export default ReviewCard;
-=======
-> Report abuse </button> </div>) 
-}</div> </div>) 
-}
 export default ReviewCard
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
-export default ReviewCard
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

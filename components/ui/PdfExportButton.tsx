@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 import React from 'react';
 export type PdfExportButtonProps = any;
   return (
@@ -64,14 +60,5 @@ export default function PdfExportButton({ targetRef, fileName = 'resume.pdf' }: 
     </button>
 );
 }
-<<<<<<< HEAD
 
 "
-=======
-html2pdf () .set (opt) .from (element) .save () 
-}
-return (<button aria-label="Download as PDF" 
-}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

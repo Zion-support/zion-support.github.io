@@ -4,7 +4,6 @@ const fs = require('fs');
 const { execSync } = require('child_process');
 
 console.log('🚀 Zion Tech Group - Master Automation Runner');
-console.log('==============================================');
 
 const automationScripts = [
   { name: 'Health Check', script: 'scripts/quick-health-check.js' },
@@ -47,7 +46,6 @@ async function runAutomation() {
 
 function generateFinalReport() {
   console.log('📊 Automation Summary');
-  console.log('====================');
   console.log(`Total Scripts: ${results.summary.total}`);
   console.log(`Passed: ${results.summary.passed}`);
   console.log(`Failed: ${results.summary.failed}`);

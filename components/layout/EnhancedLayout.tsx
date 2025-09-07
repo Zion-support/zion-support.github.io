@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 import React, { useEffect } from 'react',
 import EnhancedNavigation from './EnhancedNavigation',
 import EnhancedFooter from './EnhancedFooter',
@@ -60,11 +56,4 @@ export default function EnhancedLayout({ children }: EnhancedLayoutProps) {
 }
   );
 }
-<<<<<<< HEAD
 
-=======
-return (<div className="min-h-screen flex flex-col" > <header> <EnhancedNavigation /> <LanguageSwitchPrompt /> </header> <footer> <EnhancedFooter /> </footer> </div>) 
-}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

@@ -1,6 +1,5 @@
 const fs = require('fs');
 const path = require('path');
-<<<<<<< HEAD
 function fixJSXSyntax(filePath) {
   try {
   // TODO: Implement
@@ -32,21 +31,7 @@ function fixJSXSyntax(filePath) {
     }
 
     return modified;
-=======
-
-function fixJsxFile(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    
-    // Fix JSX syntax issues
-    content = content
-      // Remove semicolons after JSX elements
-      .replace(/;\s*$/gm, '')
-      // Fix merge conflict markers
-      .replace(/^<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+\s*$/gm, '')
       .replace(/^<<<<<<< [^\n]+\s*$/gm, '')
-      .replace(/^=======\s*$/gm, '')
-      .replace(/^>>>>>>> [^\n]+\s*$/gm, '')
       // Fix interface syntax
       .replace(/interface\s+(\w+)\s*\{;/g, 'interface $1 {')
       .replace(/;\s*$/gm, '')
@@ -58,7 +43,6 @@ function fixJsxFile(filePath) {
     
     fs.writeFileSync(filePath, content);
     console.log(`Fixed JSX: ${filePath}`);
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
   }
@@ -78,15 +62,8 @@ function walkDir(dir) {
     }
   }
 }
-<<<<<<< HEAD
 '
 console.log('Starting JSX syntax fixes...);
 const fixedCount = processDirectory('./pages');
 console.log(`Fixed ${fixedCount} files`);
 '
-=======
-
-walkDir('/workspace/components');
-walkDir('/workspace/pages');
-console.log('JSX syntax fixing complete!');
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef

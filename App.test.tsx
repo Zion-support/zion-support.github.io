@@ -1,15 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import { render, screen } from '@testing-library/react';
-<<<<<<< HEAD
 import App from './App';
-=======
-import '@testing-library/jest-dom';
-import HomePage from './app/page';
->>>>>>> b547502a01c5baa88ddb8f82513787a696ec0950
-=======
-<<<<<<< HEAD
 import { describe, it, expect } from '@jest/globals';
 
 describe('App', () => {
@@ -17,14 +6,11 @@ describe('App', () => {
     expect(true).toBe(true);
   });
 });
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-=======
 import { render, screen } from '@testing-library/react'
 import { describe, it, expect } from 'vitest'
 import App from './App'
 import { render,screen } from \'@testing-library/react\'; import { describe,it,expect } from \'vitest\'; import App from \'./App\'; describe(\'App\',() => { it(\'renders without crashing\',() => { render(<App />); expect(screen.getByRole(\'main\')).toBeInTheDocument()}); it(\'displays correct content\',() => { render(<App />)}); it(\'handles user interactions\',() => { render(<App />)})});
 const { render,screen } from "@testing-library/react"; import { describe,it,expect } from "vitest"; import App from "./App"; describe("App",() => { it("renders without crashing",() => { render(<App />); expect(screen.getByRole("main")).toBeInTheDocument()}); it("displays correct content",() => { render(<App />)}); it("handles user interactions",() => { render(<App />)})});''"
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 import { render, screen } from '@testing-library/react';
 import { describe, it, expect } from 'vitest';
 import App from './App';
@@ -32,45 +18,19 @@ import React from 'react';
 describe('App', () => {
   it('renders without crashing', () => {
     render(<App />);
-<<<<<<< HEAD
     expect(screen.getByRole('main')).toBeInTheDocument();
-=======
-    expect(screen.getByText('Hello App')).toBeInTheDocument();
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
   });
   it('displays correct content', () => {
     render(<App />);
-<<<<<<< HEAD
     expect(screen.getByText('Welcome to Zion Tech Group')).toBeInTheDocument();
   });
 
   it('handles user interactions', () => {
     render(<App />);
     expect(screen.getByText(/Welcome to Zion Tech/i)).toBeInTheDocument();
-=======
-  });
-  it('handles user interactions', () => {
-    render(<App />);
   });
 });
-  it('displays correct content', () => {
-    render(<App />);
-    // Add specific content assertions here
-  });
-  it('handles user interactions', () => {
-    render(<App />);
-    // Add interaction tests here
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
-  });
-<<<<<<< HEAD
 });
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-});
-=======
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 const { render,screen } from "@testing-library/react"; import { describe,it,expect } from "vitest"; import App from "./App"; describe('App', () => { it('renders without crashing', () => { render(<App />); expect(screen.getByRole("main")).toBeInTheDocument()}); it('displays correct content', () => { render(<App />)}); it("handles user interactions"
@@ -78,7 +38,6 @@ const { render,screen } from "@testing-library/react"; import { describe,it,expe
 });
 origin/cursor/expand-services-advertise-and-build-project-c28b
 });
-=======
 });
 const { render,screen } from "@testing-library/react"; import { describe,it,expect } from "vitest"; import App from "./App"; describe('App', () => { it('renders without crashing', () => { render(<App />); expect(screen.getByRole("main")).toBeInTheDocument()}); it('displays correct content', () => { render(<App />)}); it("handles user interactions"
 
@@ -90,7 +49,6 @@ const { render,screen } from "@testing-library/react"; import { describe,it,expe
 
 });
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React from 'react';
 import { render } from '@testing-library/react';
 
@@ -103,43 +61,12 @@ describe("App", () => {
     expect(true).toBe(true);
   });
 });
-<<<<<<< HEAD
 });
 main
 main
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 });
-<<<<<<< HEAD
-=======
-import { render, screen } from "@testing-library/react";"
-import { describe, it, expect } from "vitest";"
-import App from "./src/App";
-"
-import { render, screen } from "@testing-library/react";"
-import { describe, it, expect } from "vitest";"
-import App from "./App";
-"
-import { render, screen } from "@testing-library/react";"
-import { describe, it, expect } from "vitest";"
-import App from "./src/App";
-"
-import React from "react";
-"
-import { render, screen } from "@testing-library/react";"
-import { describe, it, expect } from "vitest";"
-import App from "./src/App";
-"
-describe("App", () => {"
-  it("renders without crashing", () => {}
-    render(<App />);
-  });
-});
-"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
-=======
-=======
 
 
 
@@ -161,7 +88,6 @@ describe('App', () => {
     render(<App />);
     expect(screen.getByText(/Welcome to Zion Tech/i)).toBeInTheDocument();
   });
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 });
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
@@ -171,15 +97,10 @@ const { render,screen } from "@testing-library/react"; import { describe,it,expe
 origin/cursor/expand-services-advertise-and-build-project-c28b
 });
 import '@testing-library/jest-dom';
->>>>>>> main
 
 describe('App', () => {
   it('renders without crashing', () => {
-<<<<<<< HEAD
     render(<App />);
-=======
-    render(<HomePage />);
->>>>>>> cursor/automate-test-improve-and-merge-code-3e92
     expect(screen.getByRole('main')).toBeInTheDocument();
   });
 });
@@ -194,32 +115,12 @@ const { render,screen } from "@testing-library/react"; import { describe,it,expe
 pr-12325
 
   it('displays correct content', () => {
-<<<<<<< HEAD
     render(<App />);
-=======
-    render(<HomePage />);
->>>>>>> cursor/automate-test-improve-and-merge-code-3e92
     expect(screen.getByText('Welcome to Zion Tech Group')).toBeInTheDocument();
   });
 
   it('handles user interactions', () => {
-<<<<<<< HEAD
     render(<App />);
-<<<<<<< HEAD
     expect(screen.getByText(/Welcome to Zion Tech/i)).toBeInTheDocument();
-=======
-    // Add interaction tests here
-=======
-    render(<HomePage />);
-    expect(screen.getByText(/Welcome to Zion Tech/i)).toBeInTheDocument();
->>>>>>> cursor/automate-test-improve-and-merge-code-3e92
->>>>>>> b547502a01c5baa88ddb8f82513787a696ec0950
   });
 });
-<<<<<<< HEAD
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> origin/main
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

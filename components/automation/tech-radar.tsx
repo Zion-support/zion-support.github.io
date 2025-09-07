@@ -1,11 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
 import fs from 'fs';,
-=======
-import fs from 'fs',
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 import path from 'path';
 import type { GetStaticProps } from 'next';
 type Item = any;
@@ -67,22 +62,5 @@ type Item = any
     </div>
 );
 }
-<<<<<<< HEAD
 
 "
-=======
-}
-}
-return (<div className="space-y-8" > <header className="space-y-2" > <h1 className="text-3xl font-bold" >Tech Radar</h1> <p className="text-gray-600 dark:text-gray-300" >Trending packages and projects across ecosystems.</p> </header> <section>) 
-}</li>) ) 
-}</ul> </section> <section> </li>) ) 
-}</ul> </section> {
-  langs.map ( (lang) => (<section key= {
-  lang 
-}> </li>) ) 
-}</ul> </section>) ) 
-}</div>) 
-}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

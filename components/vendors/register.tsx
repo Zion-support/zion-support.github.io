@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 import { FormEvent, useState } from 'react';
 export default function VendorRegisterPage() {
   const [loading, setLoading] = useState(false);
@@ -137,12 +133,6 @@ export default function VendorRegisterPage() {
       setLoading(false)
   return (
 
-<<<<<<< HEAD
-=======
-<div> <label className="block text-sm mb-1" >Agency Name</label> <input name="name" required className="w-full border rounded px-3 py-2 bg-transparent" /> </div> <div> </div> <div> <label className="block text-sm mb-1" >Services Offered</label> <input name="servicesOffered" placeholder="AI prototyping, Data labeling, MLOps" className="w-full border rounded px-3 py-2 bg-transparent" /> </div> <div> </div> <div> <label className="block text-sm mb-1" >Verification Docs (URLs, comma-separated) </label> <input name="verificationDocs" className="w-full border rounded px-3 py-2 bg-transparent" /> </div> </div>) 
-}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
 '
     <div className='max-w-2xl mx-auto space-y-6'>;'
       <h1 className='text-2xl font-semibold'>
@@ -244,4 +234,3 @@ export default function VendorRegisterPage() {
     </div>
 );
 }
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

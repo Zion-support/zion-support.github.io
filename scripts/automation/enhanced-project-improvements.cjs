@@ -218,33 +218,10 @@ export * from "@testing-"library/react""
   const BundleAnalyzerPlugin = require("webpack-bundle-analyzer")
   "analyzerMode": "static"
           "openAnalyzer"
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
     fs.writeFileSync(path.join(this.projectRoot, ")
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
     fs.writeFileSync(path.join(this.projectRoot, ")
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
     fs.writeFileSync(path.join(this.projectRoot, ")
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-=======
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
 </p>"
         <div className="min-h-screen flex items-center justify-center bg-gray-50"

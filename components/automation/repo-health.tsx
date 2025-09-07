@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import fs from 'fs',
-import path from 'path';
-import type { GetStaticProps } from 'next';
-interface Report {
-  generatedAt: string;
-  commits: { last7d: number, last30d: number },
-  changes: { last7dFiles: string[] },
-  largestFiles: { file: string, bytes: number }[],
-  stalePages: { file: string, lastCommitAt: string }[]
-}
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 
 }
 type Props = { report: Report | null }
@@ -69,16 +55,5 @@ function RepoHealth() {}
     </div>
 );
 }
-<<<<<<< HEAD
 
 "
-=======
-}
-}
-return (<div className="space-y-6" > <header className="space-y-1" > <h1 className="text-3xl font-bold" >Repo Health</h1> <p className="text-gray-600 dark:text-gray-300" >Automated activity and maintenance snapshot.</p> </header>) ) 
-}</ul> </section> <section>) ) 
-}</ul> </section> </div>) 
-}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

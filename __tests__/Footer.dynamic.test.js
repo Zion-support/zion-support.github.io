@@ -1,21 +1,26 @@
 import React from 'react';
-import { render, screen, fireEvent } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import Footerdynamic from '../components/Footer.dynamic';
-describe('Footerdynamic', () => {
+import Footer.dynamic from '../components/Footer.dynamic';
+
+describe('Footer.dynamic', () => {
   test('renders without crashing', () => {
-    render(<Footerdynamic />);
+    render(<Footer.dynamic />);
     expect(screen.getByTestId('footer.dynamic')).toBeInTheDocument();
   });
+
   test('displays correct content', () => {
-    render(<Footerdynamic />);
+    render(<Footer.dynamic />);
+    // Add specific content tests here
   });
+
   test('handles user interactions', () => {
-    render(<Footerdynamic />);
+    render(<Footer.dynamic />);
+    // Add interaction tests here
   });
+
   test('applies correct styling', () => {
-    render(<Footerdynamic />);
+    render(<Footer.dynamic />);
+    // Add styling tests here
   });
 });
-const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import Footerdynamic from "./components/Footer.dynamic"; describe("Footerdynamic",() => { test("renders without crashing",() => { render(<Footerdynamic />); expect(screen.getByTestId("footer.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<Footerdynamic />)}); test("handles user interactions",() => { render(<Footerdynamic />)}); test("applies correct styling",() => { render(<Footerdynamic />)})});''"
-import _React from 'react';  import '@testing-library/jest-dom'; import Footerdynamic from '../components/Footer.dynamic'; describe('Footerdynamic',() => { test('renders without crashing',() => { render(<Footerdynamic />); expect(screen.getByTestId('footer.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<Footerdynamic />)}); test('handles user interactions',() => { render(<Footerdynamic />)}); test('applies correct styling',() => { render(<Footerdynamic />)})});

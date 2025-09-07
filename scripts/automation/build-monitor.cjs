@@ -49,57 +49,22 @@ setupSignalHandlers() {}
     process.on('SIGINT', () => this.shutdown())};
   log(level, ...args) {}
     const timestamp = new Date().toISOString();
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-    const message = `[${timestamp}] [${level.toUpperCase()}] ${args.join(' ')}`;`
-    console.log(message);
-    
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-    const message = `[${timestamp}] [${level.toUpperCase()}] ${args.join(' ')}`;`
-    console.log(message);
-    
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
     const message = `[${timestamp}] [${level.toUpperCase()}] ${args.join(' ')}`;`
     console.log(message);
     
-<<<<<<< HEAD
-=======
-  async fixBuildIssues(buildError) {}"
-  this.log("Attempting to fix build issues...");"
-    // Try to install dependencies first;"
-    const installResult = await this.runCommand("npm install");"
-    if (installResult.success) {}"
-  this.fixesApplied.push("Installed missing dependencies")};"
-
-setupSignalHandlers() {}"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
+    const message = `[${timestamp}] [${level.toUpperCase()}] ${args.join(' ')}`;`
+    console.log(message);
+    
 
     const message = `[${timestamp}] [${level.toUpperCase()}] ${args.join(' ')}`;`
     console.log(message);
     
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+
+
+    const message = `[${timestamp}] [${level.toUpperCase()}] ${args.join(' ')}`;`
+    console.log(message);
+    
     const logFile = path.join(this.logDir, 'build-monitor.log');
     fs.appendFileSync(logFile, message + '\n')};
   async runCommand(command, options = {}) {}
@@ -289,33 +254,10 @@ const monitor = new BuildMonitor();
 monitor.start().catch(error => {})
 
   process.exit(1)}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
 });
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 });
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-});
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
-<<<<<<< HEAD
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 });
 
 });

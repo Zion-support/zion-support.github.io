@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 import React from 'react';
 export default function CertificatePreview({ courseId, userId;
 
@@ -36,14 +32,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </a>
     </div>
   );
-<<<<<<< HEAD
 
 "
-=======
-return (<div className="border rounded p-4" > <div className="text-sm text-gray-600" >Zion Certificate</div> <div className="mt-2 h-40 bg-gradient-to-br from-slate-800 to-slate-900 text-white flex items-center justify-center rounded" > <div className="text-center" > <div className="text-xl font-semibold" >Certificate of Completion</div> <div className="text-xs opacity-80" >Preview</div> </div> </div> </div>) 
-}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
   );
   const url = `/api/learn/certificates/${courseId}?userId=${encodeURIComponent(userId)}`;
   return (
@@ -64,4 +54,3 @@ return (<div className="border rounded p-4" > <div className="text-sm text-gray-
     </div>
   );
 }
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 import React, { useState } from 'react';
 type Question = any;
 type Question = {
@@ -93,25 +89,11 @@ onClick={submit}
         </div>
       )}
     </div>
-<<<<<<< HEAD
   );
 
 "
-=======
-/> <span> {
-  opt 
-}</span> </label>) ) 
-}</div> {
-  answers[q.id] === q.answerIndex ? (<span className="text-green-600" >Correct</span>) : (<span className="text-red-600" >Incorrect</span>) 
-}</div>) 
-}</div>) ) 
-}</div>) 
-}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
   );      <button onClick={submit} className="px-4 py-2 bg-blue-600 text-white rounded">Submit Quiz</button>
       {submitted && <div className="text-sm">Score: {score} / {questions.length}</div>}
     </div>
 );
 }
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

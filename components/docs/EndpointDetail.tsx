@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-import React from 'react',
-import CodeSamples from './CodeSamples',
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 import TryItConsole from './TryItConsole';
 import { EndpointSpec } from '../../data/api-docs/types';
 export default function EndpointDetail({ endpoint }: { endpoint: EndpointSpec }) {
@@ -124,26 +118,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </div>
   );
 }
-<<<<<<< HEAD
 
 "
-=======
-</div> </div> <div>) ) 
-}</ul> </div>) 
-}{
-  endpoint.errors.map ( (e) => (<li key= {
-  e.code 
-}><strong> {
-  e.code 
-}</strong> ({
-  e.httpStatus 
-}) - {
-  e.message 
-}</li>) ) 
-}</ul> </div>) 
-}</div>) 
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
-}
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

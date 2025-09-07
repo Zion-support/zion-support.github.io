@@ -1,20 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useEffect, useState  } from 'react';
 import Head from 'next/head';
-=======
-import { useEffect, useState } from "react";
-import Head from "next/head";
-export default function PartnerDashboard() {;
-  const [apiKey, setApiKey] = useState("");
-  const [token, setToken] = useState<string | null>(null),
-  const [usage, setUsage] = useState<any>(null),
-  const [loading, setLoading] = useState(false);
-  useEffect(() => {
-    const saved = null;
-  const [usage, setUsage] = useState<any>(null);
-  const [loading, setLoading] = useState(false);
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 
 export default function PartnerDashboard() {
   const [apiKey, setApiKey] = useState('');  const [token, setToken] = useState<string | null>(null);
@@ -64,18 +49,13 @@ const data = await res.json()
   async function regenerateKey() {
     const res = await fetch('/api/partners/key', {
       method: 'POST'}
-<<<<<<< HEAD
 }
       headers: token ? { Authorization: `Bearer ${token}` } : {}
    
 };
   const data = await res.json()if (data.apiKey) {alert(`New API Key: ${data.apiKey}`)if (data.apiKey) {alert(`New API Key: ${data.apiKey}`)}
  
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
 }
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 
       headers: token ? { Authorization: `Bearer ${token}` } : {}
 
@@ -142,22 +122,12 @@ onClick={regenerateKey}
               Old key becomes inactive.
             </p>
           </div>
-<<<<<<< HEAD
           <div className='bg-white p-6 rounded-lg shadow md:col-span-2' />
             <h3 className='font-medium mb-2' />Usage</h3>
             <button;
 onClick={fetchUsag}
 }
-<<<<<<< HEAD
               className='bg-gray-900 text-white px-3 py-2 rounded text-sm mb-3' />;
-=======
-          <div className='bg-white p-6 rounded-lg shadow md:col-span-2'>
-            <h3 className='font-medium mb-2'>Usage</h3>
-origin/cursor/automate-test-improve-and-merge-code-2533
-            <button
-              onClick={fetchUsage}
-              className='bg-gray-900 text-white px-3 py-2 rounded text-sm mb-3'>
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
               {loading ? 'Loading...' : 'Refresh'}
           <div className="bg-white p-6 rounded-lg shadow md:col-span-2">
             <h3 className="font-medium mb-2">Usage</h3>
@@ -211,15 +181,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
       </div>
     </div>
-<<<<<<< HEAD
   );
-=======
-})
-const data = await res.json ()
-setUsage (data.summary || null)
-setLoading (false)
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
 );
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 }

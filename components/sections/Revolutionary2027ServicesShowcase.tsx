@@ -1,215 +1,19 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 import React from 'react';
 import { motion  } from 'framer-motion';
 import { ArrowRight, Brain, Zap, Shield, Rocket, Sparkles, Star, TrendingUp, Globe, Cpu, Lock, Cloud, Atom, Microscope, Satellite, DollarSign, Factory, Earth, TestTube, Megaphone, Scale, Network  } from 'lucide-react';
 import Link from 'next/link';
 const Revolutionary2027ServicesShowcase = null;
-<<<<<<< HEAD
 
 const containerVariants = {}
     hidden: { opacity: 0}
-=======
-const containerVariants = {
-  hidden: {
-  opacity: 0 
-}
-visible: {
-  opacity: 1, transition: {
-  staggerChildren: 0.1 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
 }
     visible: {
       opacity: 1;
 transition: {
 }
-<<<<<<< HEAD
 staggerChildren: 0.1}
-=======
-import { motion } from 'framer-motion';
-import {
-  ArrowRight
-  Brain
-  Zap
-  Shield
-  Rocket
-  Sparkles
-  Star
-  TrendingUp
-  Globe
-  Cpu
-  Lock
-  Cloud
-  Atom
-  Microscope
-  Satellite
-  DollarSign
-  Factory
-  Earth
-  TestTube
-  Megaphone
-  Scale
-  Network;
-} from 'lucide-react';
-import Link from 'next/link';import { ArrowRight, Brain, Zap, Shield, Rocket, Sparkles, Star, TrendingUp, Globe, Cpu, Lock, Cloud, Atom, Microscope, Satellite, DollarSign, Factory, Earth, TestTube, Megaphone, Scale, Network } from 'lucide-react';
-import Link from 'next/link';
-const Revolutionary2027ServicesShowcase = () => {
-  const featuredServices = [
-    {
-      id: 'quantum-ai-consciousness-platform'
-      name: 'Quantum AI Consciousness Platform'
-      description:
-        'Simulate human consciousness with quantum computing - the first platform to combine quantum computing with advanced AI for breakthrough neuroscience research.'
-      price: '$9,999'
-      icon: Brain
-      color: 'from-purple-600 to-indigo-700'
-      category: 'Quantum AI & Neuroscience'
-      features: [
-        'Quantum consciousness simulation'
-        'Neural pattern recognition'
-        'Emotional intelligence modeling'
-        'Real-time brain-computer interface'
-      ]
-      marketSize: '$15B research market'
-      growthRate: '300% annual growth'
-    }
-    {
-      id: 'autonomous-space-mining-ai'
-      name: 'Autonomous Space Mining AI'
-      description:
-        'AI-powered autonomous mining operations in space - extract rare minerals from asteroids and celestial bodies without human intervention.'
-      price: '$15,999'
-      period: '/month'
-      icon: Rocket
-      color: 'from-blue-600 to-cyan-700'
-      category: 'Space Technology & AI'
-      features: [
-        'Autonomous mining operations'
-        'Resource detection algorithms'
-        'Risk assessment AI'
-        'Mission planning automation'
-      ]
-      marketSize: '$3.8T space economy'
-      growthRate: '400% annual growth'
-    }
-    {
-      id: 'dna-computing-platform'
-      name: 'DNA Computing Platform'
-      description:
-        'Molecular computing for complex problem solving - use DNA-based computation to solve problems exponentially faster than traditional computers.'
-      price: '$7,999'
-      period: '/month'
-      icon: TestTube
-      color: 'from-green-600 to-emerald-700'
-      category: 'Biotechnology & Computing'
-      features: [
-        'DNA-based computation'
-        'Molecular algorithm optimization'
-        'Real-time molecular analysis'
-        'Algorithm library (100+ algorithms)'
-      ]
-      marketSize: '$2.1T biotechnology market'
-      growthRate: '250% annual growth'
-    }
-    {
-      id: 'holographic-metaverse-platform'
-      name: 'Holographic Metaverse Platform'
-      description:
-        'Create immersive 3D holographic experiences - build next-generation virtual worlds with realistic holographic projections.'
-      price: '$3,999'
-      period: '/month'
-      icon: Globe
-      color: 'from-pink-600 to-rose-700'
-      category: 'Metaverse & Holographics'
-      features: [
-        '3D holographic rendering'
-        'Real-time 3D modeling'
-        'Holographic projection systems'
-        'AI-powered content generation'
-      ]
-      marketSize: '$800B metaverse market'
-      growthRate: '350% annual growth'
-    }
-    {
-      id: 'autonomous-healthcare-ai'
-      name: 'Autonomous Healthcare AI'
-      description:
-        'Self-learning AI for autonomous healthcare decisions - make independent diagnoses and treatment recommendations without human intervention.'
-      price: '$5,999'
-      period: '/month'
-      icon: Microscope
-      color: 'from-red-600 to-orange-700'
-      category: 'Healthcare & AI'
-      features: [
-        'Autonomous diagnosis'
-        'Treatment recommendation AI'
-        'Continuous learning algorithms'
-        'Predictive health analytics'
-      ]
-      marketSize: '$4.1T healthcare market'
-      growthRate: '280% annual growth'
-    }
-    {
-      id: 'quantum-internet-security-gateway'
-      name: 'Quantum Internet Security Gateway'
-      description:
-        'Unbreakable encryption for the quantum internet - protect data transmission with quantum key distribution and quantum-resistant algorithms.'
-      price: '$8,999'
-      period: '/month'
-      icon: Lock
-      color: 'from-indigo-600 to-purple-700'
-      category: 'Quantum Security'
-      features: [
-        'Quantum key distribution'
-        'Unbreakable encryption'
-        'Real-time threat detection'
-        'Zero-trust architecture'
-      ]
-      marketSize: '$500B cybersecurity market'
-      growthRate: '500% annual growth'
-    }
-  ];
-  const categories = [
-    {
-      name: 'Quantum AI Services'
-      count: '25+'
-      icon: Atom
-      color: 'from-purple-500 to-indigo-600'
-    }
-    {
-      name: 'Space Technology'
-      count: '15+'
-      icon: Satellite
-      color: 'from-blue-500 to-cyan-600'
-    }
-    {
-      name: 'Biotechnology'
-      count: '20+'
-      icon: TestTube
-      color: 'from-green-500 to-emerald-600'
-    }
-    {
-      name: 'Emerging Tech'
-      count: '30+'
-      icon: Sparkles
-      color: 'from-pink-500 to-rose-600'
-    },  ];    { name: 'Quantum AI Services', count: '25+', icon: Atom, color: 'from-purple-500 to-indigo-600' }
-    { name: 'Space Technology', count: '15+', icon: Satellite, color: 'from-blue-500 to-cyan-600' }
-    { name: 'Biotechnology', count: '20+', icon: TestTube, color: 'from-green-500 to-emerald-600' }
-    { name: 'Emerging Tech', count: '30+', icon: Sparkles, color: 'from-pink-500 to-rose-600' }
-  const containerVariants = {
-    hidden: { opacity: 0 }
-    visible: {
-      opacity: 1
-      transition: {
-        staggerChildren: 0.1
-      }
-    },  };        staggerChildren: 0.1
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
       }
     }
   }
@@ -361,31 +165,5 @@ href='https://ziontechgroup.com/contact'
 export default Revolutionary2027ServicesShowcase;  )
 }
 export default Revolutionary2027ServicesShowcase;
-<<<<<<< HEAD
 
 "
-=======
-}
-}
-}
-return (> <h2 className="text-5xl md:text-6xl font-bold text-white mb-8" > <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent" > 2027 Revolutionary Services </span> </h2> <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed" > Experience the future of technology with our cutting-edge AI, quantum computing, and emerging technology services. Transform your business with solutions that were once science fiction. </p> </motion.div> {
-  /* Category Overview */ 
-}<motion.div > {
-  categories.map ( (category, index) => (<motion.div key= {
-  category.name 
-}</div> </motion.div>) ) 
-}</motion.div> {
-  /* Featured Services Grid */ 
-}<motion.div > {
-  featuredServices.map ( (service, index) => (<motion.div key= {
-  service.id 
-}</div>) ) 
-}</div> > <span>Explore</span> <ArrowRight className="w-4 h-4" /> </a> </div> </div> </div> </motion.div>) ) 
-}</motion.div> {
-  /* Call to Action */ 
-}<motion.div > Ready to Transform Your Business? </h3> <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto" > Join the future of technology with our revolutionary 2027 services. Get in touch to discover how we can accelerate your digital transformation. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center" > <Link href="https://ziontechgroup.com/contact" className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg transform transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-xl hover:shadow-purple-500/25" > <span>Get Started Today</span> <ArrowRight className="w-5 h-5" /> </a> <a href="tel:+13024640950" className="inline-flex items-center space-x-2 bg-gradient-to-r from-gray-700 to-gray-800 text-white px-8 py-4 rounded-xl font-semibold text-lg transform transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-xl" > <span>Call +1 302 464 0950</span> </a> </div> </div> </motion.div> </div> </section>) 
-}
-export default Revolutionary2027ServicesShowcase
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

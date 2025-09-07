@@ -1,13 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
-import { useEffect, useState } from 'react';
-function useCounter(target: number, durationMs: number) {
-  const [value, setValue] = useState(0);
-  useEffect(() => {
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
     let start: number | null;
     let start: number | null = null;
     let raf: number;    const step = (ts: number) => {
@@ -76,14 +68,6 @@ function Stat({
       <div className='text-sm text-gray-600 dark:text-gray-300'>{label}</div>
     </div>
   );
-<<<<<<< HEAD
 
 "
-=======
-</div>) 
-}</div>) 
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
-}
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

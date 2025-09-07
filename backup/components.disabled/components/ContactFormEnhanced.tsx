@@ -1,24 +1,14 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 export {};
 
 origin/main
-=======
-
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
 
 // Auto-generated module
 export {};
 
-<<<<<<< HEAD
 
 
 
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import {
@@ -225,20 +215,10 @@ const ContactFormEnhanced: React.FC = () => {
 };
 
 export default ContactFormEnhanced;
-<<<<<<< HEAD
-<<<<<<< HEAD
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 // Auto-generated module
 export {};
-=======
-
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
 // Auto-generated module
 export {};
 
-<<<<<<< HEAD
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2

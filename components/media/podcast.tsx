@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 type EpisodeListItem = any;
@@ -103,19 +99,6 @@ href={ep.audio.wavUrl}
     </div>
   );
 }
-<<<<<<< HEAD
 
 "
-=======
-useEffect ( () => {
-  const load = async () => {
-  try {
-  if (loading) return <div>Loading episodes…</div>
-MP4 </a>) 
-}</div> </div> </div> </li>) ) 
-}</ul> </div>) 
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
-}
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { ReactNode } from 'react';
 
 interface FuturisticCardProps {
@@ -20,11 +18,6 @@ function FuturisticCard() {return (<div className=\"futuristic-card\" />;"
         {cta && <div className=\"mt-3\" />{cta}</div>}
       </div>;
     </div>)"
-=======
-</div> </div>) 
-}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
 import React from "react";
 type Props = {
   title: string;
@@ -43,4 +36,3 @@ export default function FuturisticCard({ title, description, cta }: Props) {
     </div>;
   );
 }
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

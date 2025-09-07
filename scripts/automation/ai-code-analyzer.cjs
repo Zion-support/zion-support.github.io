@@ -5,34 +5,15 @@
  * AI Code Analyzer Automation;
  * Analyzes code quality, patterns, and provides intelligent suggestions;
  */
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
-=======
 
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-=======
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
-<<<<<<< HEAD
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 class AICodeAnalyzer {}
     constructor() {}
         this.projectRoot = process.cwd();
@@ -71,13 +52,6 @@ class AICodeAnalyzer {}
                 "stdio": 'pipe'
             };);
             
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
             this.log('ESLint analysis completed successfully');
             return { "eslint": 'passed', "output": eslintResult }} catch (error) {}
             this.log(`ESLint analysis "failed": ${error.message}`);
@@ -85,22 +59,12 @@ class AICodeAnalyzer {}
     };
     analyzeTypeScript() {}
         this.log('Starting TypeScript analysis...');
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-        
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
         try {}
             const typeCheckResult = execSync('npm run type-check', { })
                 "cwd": this.projectRoot,
                 "encoding": 'utf8',
                 "stdio": 'pipe'
             };);
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
         
         try {}
             const typeCheckResult = execSync('npm run type-check', { })
@@ -109,13 +73,7 @@ class AICodeAnalyzer {}
                 "stdio": 'pipe'
             };);
             
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
             
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
             this.log('TypeScript analysis completed successfully');
             return { "typescript": 'passed', "output": typeCheckResult }} catch (error) {}
             this.log(`TypeScript analysis "failed": ${error.message}`);
@@ -123,24 +81,14 @@ class AICodeAnalyzer {}
     };
     analyzeDependencies() {}
         this.log('Analyzing dependencies...');
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-        
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
         try {}
             const auditResult = execSync('npm audit --json', { })
                 "cwd": this.projectRoot,
                 "encoding": 'utf8',
                 "stdio": 'pipe'
             };);
-<<<<<<< HEAD
             const auditData = JSON.parse(auditResult;);
             this.log(`Found ${auditData.vulnerabilities?.total || 0} vulnerabilities`);
-=======
-=======
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
         
         try {}
             const auditResult = execSync('npm audit --json', { })
@@ -148,19 +96,10 @@ class AICodeAnalyzer {}
                 "encoding": 'utf8',
                 "stdio": 'pipe'
             };);
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
             
             const auditData = JSON.parse(auditResult;);
             this.log(`Found ${auditData.vulnerabilities?.total || 0} vulnerabilities`);
             
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
             return {;}
                 "vulnerabilities": auditData.vulnerabilities?.total || 0,
                 "dependencies": auditData.metadata?.dependencies || 0,
@@ -171,18 +110,8 @@ class AICodeAnalyzer {}
     };
     generateReport() {}
         this.log('Generating comprehensive analysis report...');
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
         
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
         
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-        
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
         const report = {}
             "timestamp": new Date().toISOString(),
             "project": this.projectRoot,
@@ -193,28 +122,16 @@ class AICodeAnalyzer {}
             },
             "recommendations": this.generateRecommendations();
        };
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
         fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
         this.log(`Analysis report saved to ${this.reportFile}`);
-=======
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
         fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
         this.log(`Analysis report saved to ${this.reportFile}`);
         
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
         fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
         this.log(`Analysis report saved to ${this.reportFile}`);
         
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
         return report};
     generateRecommendations() {}
         return [;]
@@ -226,18 +143,8 @@ class AICodeAnalyzer {}
         ]};
     async run() {}
         this.log('AI Code Analyzer started');
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
         
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
         
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-        
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
         try {}
             const report = this.generateReport(;);
             this.log('AI Code Analyzer completed successfully');
@@ -270,33 +177,10 @@ if ( {})
      {}
     const analyzer = new AICodeAnalyzer}(;);
     analyzer.run().catch(console.error)};
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
 module.exports = AICodeAnalyzer;
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 module.exports = AICodeAnalyzer;
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
 module.exports = AICodeAnalyzer;
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
 
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2

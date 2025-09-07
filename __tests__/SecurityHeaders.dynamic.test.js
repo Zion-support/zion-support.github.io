@@ -1,32 +1,26 @@
-import React from 'react'
-import { render, screen, fireEvent } from '@testing-library/react'
-import '@testing-library/jest-dom'
-import SecurityHeadersdynamic from '../components/SecurityHeaders.dynamic'
-describe('SecurityHeadersdynamic'
-  test('renders without crashing'
-    expect(screen.getByTestId('securityheaders.dynamic'
-  test('displays correct content'
-  test('handles user interactions'
-  test('applies correct styling'
-const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import SecurityHeadersdynamic from "./components/SecurityHeaders.dynamic"; describe('SecurityHeadersdynamic', () => { test("renders without crashing",() => { render(<SecurityHeadersdynamic />); expect(screen.getByTestId("securityheaders.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<SecurityHeadersdynamic />)}); test("handles user interactions",() => { render(<SecurityHeadersdynamic />)}); test("applies correct styling"
 import React from 'react';
-import { render, screen, fireEvent } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import SecurityHeadersdynamic from '../components/SecurityHeaders.dynamic';
-describe('SecurityHeadersdynamic', () => {
+import SecurityHeaders.dynamic from '../components/SecurityHeaders.dynamic';
+
+describe('SecurityHeaders.dynamic', () => {
   test('renders without crashing', () => {
-    render(<SecurityHeadersdynamic />);
+    render(<SecurityHeaders.dynamic />);
     expect(screen.getByTestId('securityheaders.dynamic')).toBeInTheDocument();
   });
+
   test('displays correct content', () => {
-    render(<SecurityHeadersdynamic />);
+    render(<SecurityHeaders.dynamic />);
+    // Add specific content tests here
   });
+
   test('handles user interactions', () => {
-    render(<SecurityHeadersdynamic />);
+    render(<SecurityHeaders.dynamic />);
+    // Add interaction tests here
   });
+
   test('applies correct styling', () => {
-    render(<SecurityHeadersdynamic />);
+    render(<SecurityHeaders.dynamic />);
+    // Add styling tests here
   });
 });
-const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import SecurityHeadersdynamic from "./components/SecurityHeaders.dynamic"; describe("SecurityHeadersdynamic",() => { test("renders without crashing",() => { render(<SecurityHeadersdynamic />); expect(screen.getByTestId("securityheaders.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<SecurityHeadersdynamic />)}); test("handles user interactions",() => { render(<SecurityHeadersdynamic />)}); test("applies correct styling",() => { render(<SecurityHeadersdynamic />)})});''"
-import _React from 'react';  import '@testing-library/jest-dom'; import SecurityHeadersdynamic from '../components/SecurityHeaders.dynamic'; describe('SecurityHeadersdynamic',() => { test('renders without crashing',() => { render(<SecurityHeadersdynamic />); expect(screen.getByTestId('securityheaders.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<SecurityHeadersdynamic />)}); test('handles user interactions',() => { render(<SecurityHeadersdynamic />)}); test('applies correct styling',() => { render(<SecurityHeadersdynamic />)})});

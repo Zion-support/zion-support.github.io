@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 import React, { useEffect, useRef } from 'react';
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
@@ -14,28 +10,12 @@ if (particle && particle.y < 0) particle && particle.y = canvas && canvas.height
 if (particle && particle.y > canvas && canvas.height) particle && particle.y = 0
 // Draw particle requestAnimationFrame (animate)
 }
-<<<<<<< HEAD
 // Draw particle requestAnimationFrame (animate)}
 }
 animate ();
 // Handle resize window.addEventListener ('resize', handle_resize);
-=======
-canvas.width = window.innerWidth
-canvas.height = window.innerHeight
-// Particle system const particles: Array< {
-  // Wrap around edges if (particle.x < 0) particle.x = canvas.width
-if (particle.x > canvas.width) particle.x = 0
-if (particle.y < 0) particle.y = canvas.height
-if (particle.y > canvas.height) particle.y = 0
-// Draw particle requestAnimationFrame (animate) 
-}
-animate ()
-// Handle resize window.addEventListener ('resize', handleResize)
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
 animate ();'
 // Handle resize window && window.addEventListener ('resize', handleResize)
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 /> {
   /* Floating Circles */
 }<motion.div

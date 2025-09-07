@@ -1,14 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
 const localeToFlag: Record<string, string /> = {
 
-=======
-import React, { useState } from 'react';
-import { useTranslation  } from 'react-i18next';
-import i18n from '../../utils/i18n';
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
   en: 'us';
   pt: 'br';
   es: 'es';
@@ -94,20 +87,5 @@ export default function LanguageSwitcher() {
     </div>
 );
 }
-<<<<<<< HEAD
 
 "
-=======
-> <span className= {
-  `fi fi-$ {
-  localeToFlag[lng] 
-}` 
-}></span> <span> {
-  t (localeLabelKey[lng]) 
-}</span> </button> </li>) ) 
-}</ul>) 
-}</div>) 
-}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

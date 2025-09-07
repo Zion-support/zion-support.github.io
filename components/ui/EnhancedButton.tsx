@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 ;
 class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}
@@ -12,9 +10,6 @@ class ErrorBoundary extends React.Component {constructor(props) {super(props)thi
     return this.props.children;
   }
 }import React from 'react';
-=======
-import React from 'react';
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 import clsx from 'clsx';
 export type EnhancedButtonProps = any;
 import React from "react";
@@ -142,7 +137,6 @@ export type EnhancedButtonProps =
     size?: \"sm\" | \"md\" | \'lg\';}
     fullWidth?: boolean;}
 
-<<<<<<< HEAD
 const baseStyles ="
   \"inline-flex items-center justify-center font-semibold rounded-md transition focus:outline-none focus:ring-2 focus:ring-offset-2 min-h-[44px]\";
 "
@@ -170,13 +164,7 @@ variant = \"primary\"
   fullWidth;
 }
   ...props}
-=======
-export default function EnhancedButton ({
-  className, variant = 'primary', size = 'md', fullWidth, ...props 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
   ...props
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 }: EnhancedButtonProps) {
   return (
     <button

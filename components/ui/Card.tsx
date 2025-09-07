@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
 
-=======
-import React from 'react'
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 interface CardProps {
   children: React.ReactNode
   className?: string;}
@@ -150,7 +145,6 @@ const Card: React.FC<CardProps> = ({
     </div>
   )
 }
-<<<<<<< HEAD
 "
 export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent }<div className=\"absolute inset - 0 rounded - xl bg - gradient - to - r from - blue - 500 / 0 via - blue - 500 / 5 to - blue - 500 / 0 opacity - 0 hover: opacity - 100 transition - opacity duration - 300 pointer - events - none\" />
 }"
@@ -174,19 +168,5 @@ const Card: React.FC<CardProps /> = ({export {Card,CardHeader,CardFooter,CardTit
   );
 }
 "
-=======
-return (<div className= {
-  classes 
-}style= {
-  style 
-}onClick= {
-  onClick 
-}>) 
-}</div>) 
-}
-export default Card
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
 export default Card;
 export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent }
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

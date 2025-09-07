@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 export default function Page() {export default function Page() {return (<div className='min-h-screen bg-slate-950 text-white' />;
       <Head />;
@@ -20,15 +18,6 @@ export default function Page() {return (<div className='min-h-screen bg-slate-95
           property='og:description';
           content='Actionable architectural pattern synthesized from live site signals.';
 
-=======
-export default function Page() {
-export default function Page() {
-pr-12243
-  return($2) {
-  return($2) {
-  return($2) {}
-  return($2) {
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
   return (
     <div className='min-h-screen bg-slate-950 text-white'>
       <Head>
@@ -129,12 +118,5 @@ export default function Page(req, res) {
   }
 }
 ;
-<<<<<<< HEAD
 
 "
-=======
-<Head> <title>Pattern — Cloud Improving Continuously</title> <meta name="description" content="Actionable architectural pattern synthesized from live site signals." /> <meta property="og:title" content="Pattern — Cloud Improving Continuously" /> <meta property="og:description" content="Actionable architectural pattern synthesized from live site signals." /> <meta name="twitter:card" content="summary large image" /> </Head> 
-}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

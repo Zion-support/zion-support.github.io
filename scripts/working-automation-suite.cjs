@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 #!/usr/bin/env node
 /**
  * Working Automation Suite
@@ -53,7 +51,6 @@ class WorkingAutomationSuite {
     }
   }
 
-<<<<<<< HEAD
   async preAutomationChecks() {
     this.log("Running pre-automation checks...");
     
@@ -68,18 +65,12 @@ class WorkingAutomationSuite {
     
     this.results.success.push("Pre-automation checks passed");
   }
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/main
 
   async installDependencies() {
     this.log("📦 Installing dependencies...");
     await this.runCommand("npm install", "Dependency Installation");
   }
 
-<<<<<<< HEAD
   async runLinting() {
     this.log("🔍 Running linting...");
     await this.runCommand("npm run lint:fix", "ESLint Fix");
@@ -299,33 +290,21 @@ ${report.nextSteps.map(item => `- ${item}`).join("\n")}
 // Run the automation suite
 const suite = new WorkingAutomationSuite();
 suite.run().catch(console.error);
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
 
 
 
 
 
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
 
 
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 #!/usr/bin/env node;
 
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
 // console.log(' Zion Tech Group - Working Automation Suite')
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> origin/main
-=======
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 console.log('====')
   log(message, type = 'info')
     const prefix = type === 'error' ? '' : type === 'success' ? '' : 'ℹ'
@@ -336,7 +315,3 @@ console.log('====')
       "recommendations"
     this.log(`Report saved "to"`)
       this.log(` Automation suite "failed"`)
-<<<<<<< HEAD
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2

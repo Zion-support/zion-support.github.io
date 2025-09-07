@@ -1,15 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
 const localeLabelKey: Record<string, string /> = {
 
-=======
-import React, { useEffect, useState } from 'react';
-import { useTranslation  } from 'react-i18next';
-import i18n, { supportedLocales, isRtl } from '../../utils/i18n';
-const localeLabelKey: Record<string, string> = {
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
   en: 'lang.english';
   pt: 'lang.portuguese';
   es: 'lang.spanish';
@@ -97,18 +89,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   );
   );
 }
-<<<<<<< HEAD
 
 "
-=======
-if (!suggested) return null
-return (<div className="bg-amber-50 dark:bg-amber-900/20 border-b border-amber-200 dark:border-amber-800 text-amber-900 dark:text-amber-200" > <div className="container mx-auto px-4 py-2 flex items-center justify-between gap-4 text-sm" > <div> {
-  t ('lang.switch prompt', {
-  language: t (localeLabelKey[suggested]) 
-}) 
-}</div> </div> </div> </div>) 
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
-}
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

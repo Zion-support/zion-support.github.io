@@ -19,62 +19,23 @@
  * - Performance monitoring and optimization;
  * - Better permission handling;
  */
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 "
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-=======
 
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
 
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 const chokidar = require('chokidar');
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-=======
 
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 class ImprovedPM2SyncAutomation {}
   constructor() {}
     this.config = {}
 
       "securityInterval": 1800000 // 30 minutes;"
     };
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
     
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-=======
     
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-    
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
     this.isRunning = false;
     this.pendingChanges = new Set();
     this.changeTimeout = null;
@@ -94,39 +55,20 @@ class ImprovedPM2SyncAutomation {}
   async initialize() {}
     try {}
       this.log('Initializing Improved PM2 Sync Automation System...');
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
       
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
       
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-      
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       // Check if git repository exists;
       if (!this.isGitRepository()) {}
         this.log('Not a git repository. Initializing...', 'WARN');
         this.initializeGitRepository()};
       // Setup file watcher;
       this.setupFileWatcher();
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
       // Start automation loops;
       this.startAutomationLoops();
-=======
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       
       // Start automation loops;
       this.startAutomationLoops();
       
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
     const logEntry = `[${timestamp}] [${level}] ${message};`
     console.log(logEntry)};
   async initialize() {}
@@ -137,33 +79,17 @@ class ImprovedPM2SyncAutomation {}
       this.setupFileWatcher();
       // Start automation loops;
       this.startAutomationLoops();
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-=======
       
       // Start automation loops;
       this.startAutomationLoops();
       
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       // Initial sync and build;
       await this.performFullSync();
       await this.performBuild();
       await this.runTests();
       await this.runSecurityScan();
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
       
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
       
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-      
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       this.log('Improved PM2 Sync Automation System initialized successfully');
       this.isRunning = true} catch (error) {}
       this.log(`Initialization "failed": ${error.message}`, 'ERROR');
@@ -189,18 +115,8 @@ class ImprovedPM2SyncAutomation {}
   };
   setupFileWatcher() {}
     this.log('Setting up file watcher...');
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
     
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
     
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-    
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
     this.watcher = chokidar.watch(this.config.watchPatterns, {})
       "ignored": this.config.ignorePatterns,
       "persistent": true,
@@ -211,18 +127,8 @@ class ImprovedPM2SyncAutomation {}
       };
     }
 });
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
     this.watcher;
       .on('add', (filePath) => this.handleFileChange(filePath, 'add'));
       .on('change', (filePath) => this.handleFileChange(filePath, 'change'));
@@ -231,13 +137,6 @@ class ImprovedPM2SyncAutomation {}
       .on('ready', () => this.log('File watcher ready'))};
   handleFileChange(filePath, event) {}
     const relativePath = path.relative(this.config.projectRoot, filePath);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
       return false};
   initializeGitRepository() {}
@@ -250,31 +149,16 @@ class ImprovedPM2SyncAutomation {}
 
   handleFileChange(filePath, event) {}
     const relativePath = path.relative(this.config.projectRoot, filePath);
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-=======
-    
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-    if (this.shouldIgnoreFile(relativePath)) {}
-
-    this.pendingChanges.add(relativePath);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-=======
-    
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
     
     if (this.shouldIgnoreFile(relativePath)) {}
 
     this.pendingChanges.add(relativePath);
     
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+    
+    if (this.shouldIgnoreFile(relativePath)) {}
+
+    this.pendingChanges.add(relativePath);
+    
     // Debounce changes;
     clearTimeout(this.changeTimeout);
     this.changeTimeout = setTimeout(() => {}
@@ -290,16 +174,7 @@ class ImprovedPM2SyncAutomation {}
       /\.next/,
       /coverage/
     ];
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
     
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-    
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
     return ignorePatterns.some(pattern => pattern.test(filePath))};
   async processPendingChanges() {}
     if (this.pendingChanges.size === 0) return;
@@ -334,12 +209,6 @@ class ImprovedPM2SyncAutomation {}
       this.log('Changes pushed to repository');
       this.lastSync = Date.now();
       this.successCount++;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     return ignorePatterns.some(pattern => pattern.test(filePath))};
   async processPendingChanges() {}
     if (this.pendingChanges.size === 0) return;
@@ -350,32 +219,16 @@ class ImprovedPM2SyncAutomation {}
       this.log('Changes pushed to repository');
       this.lastSync = Date.now();
       this.successCount++;
-<<<<<<< HEAD
       
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-=======
       
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
       
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       // Clear pending changes;
 
       this.errorCount++};
   async performFullSync() {}
     try {}
       this.log('Performing full repository sync...');
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
       
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-      
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       // Fetch latest changes;
       execSync('git fetch origin', { "cwd": this.config.projectRoot, "stdio": 'pipe' }
 });
@@ -390,13 +243,6 @@ class ImprovedPM2SyncAutomation {}
       if (status.trim()) {}
         this.log(`Found ${status.trim().split('\n').length} changed files, handling sync...`);
         
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
         // Add all changes;
         try {}
           execSync('git add -A', { "cwd": this.config.projectRoot, "stdio": 'pipe' }
@@ -436,13 +282,6 @@ class ImprovedPM2SyncAutomation {}
         }
 });
         
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
         if (aheadStatus.includes('ahead')) {}
           execSync('git push origin main', { "cwd": this.config.projectRoot, "stdio": 'pipe' }
 });
@@ -457,30 +296,14 @@ class ImprovedPM2SyncAutomation {}
   async resolveConflicts() {}
     try {}
       this.log('Resolving merge conflicts...');
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
       
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
       
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-      
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       // Abort any ongoing merge;
       try {}
         execSync('git merge --abort', { "cwd": this.config.projectRoot, "stdio": 'pipe' })} catch {};
       // Reset to clean state;
       execSync('git reset --hard HEAD', { "cwd": this.config.projectRoot, "stdio": 'pipe' }
 });
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-      
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
       // Clean untracked files;
       execSync('git clean -fd', { "cwd": this.config.projectRoot, "stdio": 'pipe' }
 });
@@ -488,10 +311,6 @@ class ImprovedPM2SyncAutomation {}
       // Pull again;
       execSync('git pull origin main', { "cwd": this.config.projectRoot, "stdio": 'pipe' }
 });
-<<<<<<< HEAD
-=======
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       
       // Clean untracked files;
       execSync('git clean -fd', { "cwd": this.config.projectRoot, "stdio": 'pipe' }
@@ -501,13 +320,7 @@ class ImprovedPM2SyncAutomation {}
       execSync('git pull origin main', { "cwd": this.config.projectRoot, "stdio": 'pipe' }
 });
       
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
       
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       this.log('Conflicts resolved successfully')} catch (error) {}
       this.log(`Failed to resolve "conflicts": ${error.message}`, 'ERROR');
       throw error};
@@ -515,18 +328,8 @@ class ImprovedPM2SyncAutomation {}
   async performBuild() {}
     try {}
       this.log('Starting build process...');
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
       
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
       
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-      
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       // Install dependencies if needed;
       if (!fs.existsSync('node_modules')) {}
         this.log('Installing dependencies...');
@@ -535,18 +338,8 @@ class ImprovedPM2SyncAutomation {}
       this.log('Building application...');
       execSync('npm run build', { "cwd": this.config.projectRoot, "stdio": 'pipe' }
 });
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
       
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
       
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-      
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       this.log('Build completed successfully');
       this.lastBuild = Date.now()} catch (error) {}
       this.log(`Build "failed": ${error.message}`, 'ERROR');
@@ -555,18 +348,8 @@ class ImprovedPM2SyncAutomation {}
   async fixBuildIssues() {}
     try {}
       this.log('Attempting to fix build issues...');
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
       
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
       
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-      
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       // Clear build cache (skip if permission issues);
       const cacheDirs = ['.next', 'dist', 'build', 'node_modules/.cache'];
       cacheDirs.forEach(dir => {})
@@ -579,18 +362,8 @@ class ImprovedPM2SyncAutomation {}
         };
       }
 });
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
       
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
       
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-      
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       // Reinstall dependencies (skip if permission issues);
       try {}
         this.log('Reinstalling dependencies...');
@@ -608,18 +381,8 @@ class ImprovedPM2SyncAutomation {}
   async runTests() {}
     try {}
       this.log('Running tests...');
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
       
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
       
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-      
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       // Check if test script exists;
       const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
       if (!packageJson.scripts.test) {}
@@ -627,18 +390,8 @@ class ImprovedPM2SyncAutomation {}
         return};
       execSync('npm test', { "cwd": this.config.projectRoot, "stdio": 'pipe' }
 });
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
       
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
       
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-      
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       this.log('Tests completed successfully');
       this.lastTest = Date.now()} catch (error) {}
       this.log(`Tests "failed": ${error.message}`, 'ERROR');
@@ -647,18 +400,8 @@ class ImprovedPM2SyncAutomation {}
   async fixTestIssues() {}
     try {}
       this.log('Attempting to fix test issues...');
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
       
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
       
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-      
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       // Clear test cache;
       const testCacheDirs = ['.nyc_output', 'coverage', 'test-results'];
       testCacheDirs.forEach(dir => {})
@@ -669,18 +412,8 @@ class ImprovedPM2SyncAutomation {}
         };
       }
 });
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
       
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
       
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-      
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       // Try tests again;
       await this.runTests()} catch (error) {}
       this.log(`Failed to fix test "issues": ${error.message}`, 'ERROR');
@@ -689,31 +422,19 @@ class ImprovedPM2SyncAutomation {}
   async runSecurityScan() {}
     try {}
       this.log('Running security scan...');
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
       // Check for security vulnerabilities;
       execSync('npm audit', { "cwd": this.config.projectRoot, "stdio": 'pipe' }
 });
-=======
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       
       // Check for security vulnerabilities;
       execSync('npm audit', { "cwd": this.config.projectRoot, "stdio": 'pipe' }
 });
       
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
       
       // Check for security vulnerabilities;
       execSync('npm audit', { "cwd": this.config.projectRoot, "stdio": 'pipe' }
 });
       
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       // Try to fix vulnerabilities;
       try {}
         execSync('npm audit fix', { "cwd": this.config.projectRoot, "stdio": 'pipe' }
@@ -732,50 +453,20 @@ class ImprovedPM2SyncAutomation {}
       if (this.isRunning && this.pendingChanges.size > 0) {}
         await this.processPendingChanges()};
     }, this.config.syncInterval);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
     // Build loop;
       if (this.isRunning && Date.now() - this.lastBuild > this.config.buildInterval) {}
         await this.performBuild()};
     }, this.config.buildInterval);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
     // Test loop;
       if (this.isRunning && Date.now() - this.lastTest > this.config.testInterval) {}
         await this.runTests()};
     }, this.config.testInterval);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
     // Security loop;
       if (this.isRunning && Date.now() - this.lastSecurity > this.config.securityInterval) {}
         await this.runSecurityScan()};
@@ -783,21 +474,9 @@ class ImprovedPM2SyncAutomation {}
   async stop() {}
     this.log('Stopping Improved PM2 Sync Automation System...');
     this.isRunning = false;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-=======
     
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
     
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
     if (this.watcher) {}
       await this.watcher.close()};
     // Process any remaining changes;
@@ -827,18 +506,8 @@ process.on('SIGINT', async () => {}
     await global.improvedPm2SyncAutomation.stop()};
   process.exit(0)}
 });
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 process.on('SIGTERM', async () => {}
   console.log('\nReceived SIGTERM, shutting down gracefully...');
   if (global.improvedPm2SyncAutomation) {}
@@ -853,53 +522,17 @@ process.on('SIGTERM', async () => {}
 // Start the automation system;
 if (require.main === module) {}
   global.improvedPm2SyncAutomation = new ImprovedPM2SyncAutomation();
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
   
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-=======
   
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-  
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
   // Keep the process alive;
   setInterval(() => {}
     if (global.improvedPm2SyncAutomation && global.improvedPm2SyncAutomation.isRunning) {}
       // Process is healthy;
   }, 60000)};
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
 module.exports = ImprovedPM2SyncAutomation;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 module.exports = ImprovedPM2SyncAutomation;
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-module.exports = ImprovedPM2SyncAutomation;
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
-<<<<<<< HEAD
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 module.exports = ImprovedPM2SyncAutomation;
 
 module.exports = ImprovedPM2SyncAutomation;

@@ -18,62 +18,28 @@
  * Features:;
  */;
 #!/usr/bin/env node;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 /**;
  * Uses remote-first strategy for conflict resolution;
  * - Automated issue resolution with remote-first strategy;
  * - Status dashboard;
  * - Alert system;
  */;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 const fs = require("fs");
 const path = require("path");
 const { execSync } = require("child_process");
 const http = require("http");
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 "
 const fs = require("fs");
 const path = require("path");
 const { execSync } = require("child_process");
 const http = require("http");"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-=======
 
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
 
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 class $1 {}
   constructor() {}
   this.config = {}"
@@ -110,29 +76,14 @@ class $1 {}
     this.log = (message, level = "INFO") => {}"
   const timestamp = new Date().toISOString();
 
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       const logMessage = `[${timestamp}] [${level}] ${message}`;`
       console.log("logMessage);
-<<<<<<< HEAD
-=======
-      const logMessage = `[${timestamp}] [${level}] ${message}`;`
-      console.log("logMessage);
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
       const logMessage = `[${timestamp}] [${level}] ${message};`"
       console.log("logMessage);"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-=======
 
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
       const logMessage = `[${timestamp}] [${level}] ${message}`;`
       console.log("logMessage);
 
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       try {}
   console.log(logMessage);
       try {}"
@@ -156,15 +107,7 @@ class $1 {}
   async initialize() {}
   try {}
   this.log("Initializing PM2 Sync Monitor System...");
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       // Start monitoring loops;
       this.startMonitoringLoops();
 
@@ -173,11 +116,6 @@ class $1 {}
 
       // Initial health check;
       await this.performHealthCheck();
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
       // Start monitoring loops;
 
@@ -187,14 +125,8 @@ class $1 {}
       await this.performHealthCheck();
       this.log("PM2 Sync Monitor System initialized successfully");"
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
 
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       this.log("PM2 Sync Monitor System initialized successfully");
       this.isRunning = true} catch (error) {}
   this.log(`Initialization "failed": ${error.message}`, "ERROR");
@@ -204,15 +136,7 @@ class $1 {}
   // Health check loop;
     setInterval(async () => {}
   await this.performHealthCheck()}, this.config.monitorInterval);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
     // Metrics collection loop;
     setInterval(async () => {}
   await this.collectMetrics()}, this.config.monitorInterval * 2);
@@ -220,75 +144,34 @@ class $1 {}
     // Performance monitoring loop;
     setInterval(async () => {}
   await this.monitorPerformance()}, this.config.monitorInterval * 3);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-    // Metrics collection loop;
-  await this.collectMetrics()}, this.config.monitorInterval * 2);
 
-    // Performance monitoring loop;
-  await this.monitorPerformance()}, this.config.monitorInterval * 3);
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
     // Cleanup loop;
   await this.cleanupOldData()}, this.config.monitorInterval * 10);
     // Cleanup loop;
   if (this.isRunning) {}
   await this.cleanup()};
     }, 300000); // 5 minutes};
-<<<<<<< HEAD
-<<<<<<< HEAD
   async performHealthCheck() {}
-<<<<<<< HEAD
   try {}
   this.log("Performing health check...");
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 ;
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
   async performHealthCheck() {}
   try {}
   this.log("Performing health check...");
 
-<<<<<<< HEAD
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
   async performHealthCheck() {}
   try {}
   this.log("Performing health check...");
   this.log("Performing health check...");"
       this.metrics.healthChecks++;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
       const healthStatus = await this.checkSystemHealth();
-=======
 
       const healthStatus = await this.checkSystemHealth();
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
       const healthStatus = await this.checkSystemHealth();
 
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-
-      const healthStatus = await this.checkSystemHealth();
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       if (healthStatus.isHealthy) {}
   this.metrics.successfulChecks++;"
         this.metrics.systemStatus = "healthy";
@@ -297,18 +180,8 @@ class $1 {}
         this.metrics.systemStatus = "unhealthy";
         this.log(Health check "failed": ${healthStatus.issues.join(", ")}",WARN";"
         );
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
         // Attempt to fix issues;
         await this.attemptIssueResolution(healthStatus.issues);
       this.metrics.totalChecks++;
@@ -317,19 +190,8 @@ class $1 {}
       this.metrics.failedChecks++};
   async checkSystemHealth() {}
   const issues = [];
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
     try {}
   // Check PM2 processes;
       const pm2Status = await this.checkPM2Status();
@@ -337,20 +199,9 @@ class $1 {}
   issues.push(...pm2Status.issues);
         isHealthy = false};
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
 
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       // Check file system;
       const fsStatus = await this.checkFileSystem();
       if (!fsStatus.isHealthy) {}
@@ -361,20 +212,9 @@ class $1 {}
   issues.push(...gitStatus.issues);
         isHealthy = false};
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
 
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       // Check build status;
       const buildStatus = await this.checkBuildStatus();
       if (!buildStatus.isHealthy) {}
@@ -383,10 +223,6 @@ class $1 {}
       const depsStatus = await this.checkDependencies();
       if (!depsStatus.isHealthy) {}
   issues.push(...depsStatus.issues);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       return {}"
 
         "issues": issues}};"
@@ -394,10 +230,6 @@ class $1 {}
   const output = execSync("pm2 jlist", { "encoding": "utf8" }")
 });
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
         isHealthy = false};
 ;
       return {}
@@ -409,76 +241,38 @@ class $1 {}
         "issues": issues}};
   };
 ;
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
   async checkPM2Status() {}
   try {}
   const output = execSync("pm2 jlist", { "encoding": "utf8" }
 });
-<<<<<<< HEAD
 
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
   async checkPM2Status() {}
   try {}
   const output = execSync("pm2 jlist", { "encoding": "utf8" }
 });
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       const processes = JSON.parse(output);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
       const processes = JSON.parse(output);
 
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       const issues = [];
       let isHealthy = true;
 
       // Check if all required processes are running;
       const requiredProcesses = ["pm2-sync-automation", "pm2-sync-monitor", "zion-app", "];
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-      let isHealthy = true;
-
-<<<<<<< HEAD
       // Check if all required processes are running;
       const requiredProcesses = ["pm2-sync-automation", "pm2-sync-monitor", "zion-app", "];
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
       // Check if all required processes are running;"
       const requiredProcesses = ["pm2-sync-automation", "pm2-sync-monitor", "zion-app", "];"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-=======
 
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
 
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       requiredProcesses.forEach(processName => {})
   const process = processes.find(p => p.name === processName);"`;
         if (!process || process.pm2_env.status !== "online") {issues.push(`Process ${processName} is not running`);          isHealthy = false};"
       }
 });
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
 
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       return { isHealthy, issues };
     } catch (error) {}
 
@@ -512,18 +306,8 @@ class $1 {}
       // Check if git repository exists;
       if (!fs.existsSync(".git")) {}
   issues.push("Git repository not found");
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       // Check if git repository exists;
       if (diskUsage.usagePercent > 90) {}"`;
   issues.push(`Disk usage "high": ${diskUsage.usagePercent}%`);"
@@ -540,18 +324,8 @@ class $1 {}
   "cwd": this.config.projectRoot,
         "encoding": "utf8"}
 });
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       if (status.trim()) {}
   issues.push("Uncommitted changes detected");
         isHealthy = false};
@@ -576,20 +350,9 @@ class $1 {}
       let isHealthy = true;
       // Check if build artifacts exist;
       const buildDirs = [".next", "dist", "build"];
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
       // Check if build artifacts exist;
       const buildDirs = [".next", "dist", "build"];
       const hasBuildArtifacts = buildDirs.some(dir => fs.existsSync(dir));
-=======
-=======
-        "encoding": "utf8"}"
-
-      if (status.trim()) {}"
-  issues.push("Uncommitted changes detected");"
-      // Check remote connection;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
   async checkBuildStatus() {}
       // Check if build artifacts exist;"
@@ -597,20 +360,11 @@ class $1 {}
       // Check if build artifacts exist;"
       const hasBuildArtifacts = buildDirs.some(dir => fs.existsSync(dir));
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
       // Check if build artifacts exist;
       const buildDirs = [".next", "dist", "build"];
       const hasBuildArtifacts = buildDirs.some(dir => fs.existsSync(dir));
 
-<<<<<<< HEAD
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       if (!hasBuildArtifacts) {}
   issues.push("No build artifacts found");
         isHealthy = false};
@@ -649,18 +403,8 @@ class $1 {}
       // Check if node_modules exists;
       if (!fs.existsSync("node_modules")) {}
   issues.push("Dependencies not installed");
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       // Check if node_modules exists;
       if (!hasBuildArtifacts) {}"
   issues.push("No build artifacts found");"
@@ -734,37 +478,16 @@ class $1 {}
   async collectMetrics() {}
   // Collect system metrics;
       this.metrics.performance = await this.getSystemPerformance();
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       // Calculate success rate;
       if (this.metrics.healthChecks > 0) {}
   this.metrics.successRate =;
           (this.metrics.successfulChecks / this.metrics.healthChecks) * 100};
       // Calculate uptime;
       this.metrics.uptime = Date.now() - this.metrics.startTime;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
   async collectMetrics() {}
   try {}
   // Collect system metrics;
@@ -778,36 +501,16 @@ class $1 {}
   // Get CPU usage (simplified);
       const cpuUsage = process.cpuUsage();
       const cpuPercent = (cpuUsage.user + cpuUsage.system) / 1000000;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       // Get memory usage;
       const memoryUsage = process.memoryUsage();
       const memoryPercent =;
         (memoryUsage.heapUsed / memoryUsage.heapTotal) * 100;
       // Get disk usage;
       const diskUsage = await this.getDiskUsage();
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       return {}
   "cpu": Math.round(cpuPercent * 100) / 100,
         "memory": Math.round(memoryPercent * 100) / 100,
@@ -844,33 +547,17 @@ class $1 {}
       const lines = output.trim().split("\n");
       const [", "usageLine"] = lines;
       const [", "used", "available"] = usageLine.split(/\s+/);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
       const total = parseInt(used) + parseInt(available);
       const usagePercent = Math.round((parseInt(used) / total) * 100);
-=======
-=======
-  const output = execSync("df .", { "encoding": "utf8" })} catch (error) {}"
-  // Ignore timeout errors from pm2 monit;"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
       const [", "used", "available"] = usageLine.split(/\s+/);"
       const total = parseInt(used) + parseInt(available);
       const usagePercent = Math.round((parseInt(used) / total) * 100);
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
       const total = parseInt(used) + parseInt(available);
       const usagePercent = Math.round((parseInt(used) / total) * 100);
 
-<<<<<<< HEAD
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       return { usagePercent };
   return { "usagePercent": 0   };"
   async monitorPerformance() {}
@@ -882,18 +569,8 @@ class $1 {}
 });
       // Parse memory usage and restart if necessary;
       if (output.includes("Memory usage high")) {}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
   
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
   
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-  
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 } catch (error) {}
   return { "usagePercent": 0 };
     };
@@ -906,18 +583,8 @@ class $1 {}
   "encoding": "utf8",
         "timeout": 5000}
 });
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       // Parse memory usage and restart if necessary;
       if (output.includes("Memory usage high")) {}
   this.log("High memory usage detected, restarting processes...", "WARN");
@@ -951,19 +618,8 @@ execSync("pm2 restart all", { "stdio": "pipe" })};
   // Clean up old log files;"
   const filePath = path.join(logDir, "file);"
           const stats = fs.statSync(filePath);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
           if (now - stats.mtime.getTime() > maxAge) {}
   fs.unlinkSync(filePath);this.log("Cleaned up old log "file": ${file}");
           if (now - stats.mtime.getTime() > maxAge) {}"
@@ -1002,18 +658,8 @@ execSync("pm2 restart all", { "stdio": "pipe" })};
         res.end("Not Found")};
     }
 });
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
     server.listen(this.config.healthCheckPort, () => {}
   this.log(Health check server listening on port ${this.config.healthCheckPort}";)
             "restarts": this.metrics.restarts}"
@@ -1031,18 +677,8 @@ execSync("pm2 restart all", { "stdio": "pipe" })};
       "stack": error.stack,
       "timestamp": Date.now()}
 });
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
     if (this.metrics.errors.length > this.config.maxErrors) {}
       "timestamp": Date.now()}"
 
@@ -1088,25 +724,12 @@ execSync("pm2 restart all", { "stdio": "pipe" })};
 ;
 // Handle process signals;
 
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-process.on("SIGINT", async () => {}
-  console.log("\nReceived SIGINT, shutting down gracefully...");
-<<<<<<< HEAD
-=======
 process.on("SIGINT", async () => {}
   console.log("\nReceived SIGINT, shutting down gracefully...");
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
 process.on("SIGINT", async () => {}
   console.log("\nReceived SIGINT, shutting down gracefully...");
 
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 // Handle process signals;
 process.on("SIGINT", async () => {}
   console.log("\nReceived SIGINT, shutting down gracefully...");
@@ -1114,18 +737,8 @@ process.on("SIGINT", async () => {}
   await global.pm2SyncMonitor.stop()};
   process.exit(0)}
 });
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 process.on("SIGTERM", async () => {}
   console.log("\nReceived SIGTERM, shutting down gracefully...");
   if (global.pm2SyncMonitor) {}
@@ -1150,30 +763,9 @@ if (require.main === module) {}
   }, 60000)};
 ;
 module.exports = PM2SyncMonitor;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
 module.exports = PM2SyncMonitor;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 module.exports = PM2SyncMonitor;
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-module.exports = PM2SyncMonitor;
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
 module.exports = PM2SyncMonitor;
 

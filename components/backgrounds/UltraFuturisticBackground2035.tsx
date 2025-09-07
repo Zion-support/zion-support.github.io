@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 export default function UltraFuturisticBackground2035() {
@@ -30,23 +26,6 @@ export default function UltraFuturisticBackground2035() {
       vy: number;
       size: number;
       opacity: number;
-<<<<<<< HEAD
-=======
-canvas.width = window.innerWidth * (window.devicePixelRatio || 1)
-canvas.height = window.innerHeight * (window.devicePixelRatio || 1)
-if (ctx) {
-  
-}
-}
-//Update and draw particles //Wrap around edges if (particle.x < 0) particle.x = canvas.width / (window.devicePixelRatio || 1)
-if (particle.x > canvas.width / (window.devicePixelRatio || 1) ) particle.x = 0
-if (particle.y < 0) particle.y = canvas.height / (window.devicePixelRatio || 1)
-if (particle.y > canvas.height / (window.devicePixelRatio || 1) ) particle.y = 0
-//Draw particle if (maxDistance > 0) {
-  particles.forEach ( (otherParticle, otherIndex) => {
-  if (index !== otherIndex) {
-  
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
 }
       color: string;}
     }> = [];
@@ -75,7 +54,6 @@ color: ['#8b5cf6', '#06b6d4', '#ec4899', '#10b981'][
           ],) => {
   return $3;}
 }
-<<<<<<< HEAD
         });
       }
     }
@@ -126,15 +104,6 @@ ctx.globalAlpha =
                   ((maxDistance - distance) / maxDistance) * 0.08;
                 ctx.lineWidth = 1;) => {
   return $3;}
-=======
-})
-initParticles ()
-updateParticles ()
-window.addEventListener ('resize', handleResize)
-return (<> {
-  /* Fixed Background Canvas */ 
-}<canvas backgroundImage: `linear-gradient (rgba (139, 92, 246, 0.3) 1px, transparent 1px), linear-gradient (90deg, rgba (139, 92, 246, 0.3) 1px, transparent 1px) `, backgroundSize: '50px 50px' 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
 }
                 ctx.stroke()}
             }
@@ -199,10 +168,8 @@ className='absolute bottom-32 left-1/4 w-20 h-20 border border-pink-500/20 round
             duration: 12,
             repeat: Infinity}
 ease: 'easeInOut'}
-=======
       color: string;    }> = [];      x: number
       y: number
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
           }}
         />
         {/* Neon Glow Effects */}

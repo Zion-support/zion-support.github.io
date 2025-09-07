@@ -1,11 +1,5 @@
 @tailwind base;
 @tailwind components;
-<<<<<<< HEAD
-<<<<<<< HEAD
-@tailwind utilities;
-=======
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 @tailwind utilities;
 
 @layer base {
@@ -239,8 +233,3 @@
     transform: rotateZ(0);
   }
 }
-<<<<<<< HEAD
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-@tailwind utilities;
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2

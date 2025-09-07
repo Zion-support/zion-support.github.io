@@ -13,21 +13,9 @@ const fs = require("fs");
 const path = require("path");
 const { execSync, spawn } = require("child_process");
 const glob = require("glob");
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 const glob = require("glob");"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-=======
 
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
 
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 class $1 {}
   constructor() {}
   this.projectRoot = process.cwd();"
@@ -58,20 +46,9 @@ class $1 {}
   "cwd": this.projectRoot,
         "stdio": "pipe",
         "timeout": 60000;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
 
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
   async runTypeCheck() {}
   try {}"
   this.log("Running TypeScript type check...");
@@ -103,18 +80,8 @@ class $1 {}
   "cwd": this.projectRoot,
         "stdio": "pipe",
         "timeout": 120000;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
   async runBuild() {}
   try {}
   this.log("Running build process...");
@@ -185,18 +152,8 @@ class $1 {}
         const missingSemicolonRegex = /import\s*{[^}]+}\s*from\s*["][^"]+[""](?!\s*)/g;
         if (missingSemicolonRegex.test(content)) {}
   content = content.replace(missingSemicolonRegex, "$&;");
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
   fixImportIssues() {}
   this.log("Fixing import issues...");
     const tsFiles = glob.sync("src/**/*.{ts,tsx}", { "cwd": this.projectRoot }
@@ -206,18 +163,8 @@ class $1 {}
   const fullPath = path.join(this.projectRoot, "filePath);
         let content = fs.readFileSync(fullPath", "utf8");
         let modified = false;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
         // Fix broken import statements;
         const brokenImportRegex = /import\s*{\s*([^}]+)\s*}\s*from\s*[""]([^"]+)["]\s*;?\s*$/gm;
         if (brokenImportRegex.test(content)) {}
@@ -280,18 +227,8 @@ class $1 {}
         // Fix missing closing tags;
         const selfClosingTags = ["img", "input", "br", "hr", "meta", "link"];
         selfClosingTags.forEach(tag => {const regex = new RegExp(`<${tag}([^>]*)(?<!\\/>)>`, "g");
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
         // Fix missing closing tags;
         const selfClosingTags = ["img", "input", "br", "hr", "meta", "link"];
         selfClosingTags.forEach(tag => {const regex = new RegExp(`<${tag}([^>]*)(?<!\\/>)>`, "g");
@@ -302,18 +239,8 @@ class $1 {}
           if (regex.test(content)) {content = content.replace(regex, `<${tag}$1 />`);
         }
 });
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
         if (modified) {}
   fs.writeFileSync(fullPath, content);this.log(`Fixed component issues in ${filePath}`);
           this.fixCount++};
@@ -336,18 +263,8 @@ class $1 {}
       for (const dep of essentialDeps) {}
   try {execSync(`npx ${dep} --version`, { "stdio": "pipe" })} catch (error) {  this.log(`Installing missing "dependency": ${dep  }`);execSync(`npm install --save-dev ${dep}`, { "cwd": this.projectRoot, "stdio": "pipe" }
 });this.log(`${dep} installed`);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       // Check if other essential dependencies are available;
       const essentialDeps = ["@"types/react"", "@"types/react-dom"", "@"types/node""];
       for (const dep of essentialDeps) {}
@@ -399,18 +316,8 @@ class $1 {}
 });this.log(`Removed ${dir} directory`)};
       }
 });
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       // Remove TypeScript build info;
       const tsBuildInfo = path.join(this.projectRoot, "tsconfig.tsbuildinfo");
 
@@ -464,29 +371,13 @@ class $1 {}
         this.errorCount++};
       ;
       this.log("PM2 Error Prevention Automation completed")} catch (error) {  this.log(`Fatal error in "automation": ${error.message  }`, true);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
   async run() {}
   this.log("Starting PM2 Error Prevention Automation...");
     try {}
   // Step "1": Install missing dependencies;
       await this.installMissingDependencies();
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-  // Step "1": Install missing dependencies;"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       // Step 2: Fix common syntax errors;
       // Step 3: Fix import issues;
       // Step 4: Fix component issues;
@@ -495,9 +386,6 @@ class $1 {}
       // Step 7: Run lint;
       // Step 8: Run build;
       // Step 9: Run tests;
-=======
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       // Step 2: Fix common syntax errors;
       this.fixCommonSyntaxErrors();
       // Step 3: Fix import issues;
@@ -514,10 +402,6 @@ class $1 {}
       const buildPassed = await this.runBuild();
       // Step 9: Run tests;
       const testsPassed = await this.runTests();
-<<<<<<< HEAD
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       // Generate report;
 
   return files};
@@ -528,34 +412,14 @@ process.on("SIGINT", () => {}
   automation.log("Received SIGINT, shutting down gracefully...");"
   process.exit(0)}
 });
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 process.on("SIGTERM", () => {}
   automation.log("Received SIGTERM, shutting down gracefully...");
   process.exit(0)}
 });
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 // Run the automation;
 automation.run().catch(error => {automation.log(`Unhandled "error": ${error.message}`, true);
 "
@@ -563,33 +427,10 @@ process.on("SIGTERM", () => {}
   automation.log("Received SIGTERM, shutting down gracefully...");"
 
   process.exit(1)}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
 });
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 });
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
 });
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
 
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2

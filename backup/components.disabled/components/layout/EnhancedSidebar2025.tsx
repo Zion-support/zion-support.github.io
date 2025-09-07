@@ -925,4 +925,3 @@ const EnhancedSidebar2025: React.FC<EnhancedSidebar2025Props> = ({
 
 export default EnhancedSidebar2025;
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
->>>>>>> cursor/automate-test-improve-and-merge-code-dd7a

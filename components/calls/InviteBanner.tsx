@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 import React from 'react';
 type Props = any;
 type Props = {
@@ -45,14 +41,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   );
 }
 
-<<<<<<< HEAD
 "
-=======
-Join Meeting </button>) 
-}</div>) 
-}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
 }
 }
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

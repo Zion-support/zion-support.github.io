@@ -1,30 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 const UserEngagementSystem = () => {
-=======
-import React from "react";
-export type EmptyStateProps = {;
-  emoji?: string;
-  title: string;
-  message: string;
-  action?: React.ReactNode;
-}
-export default function EmptyState({
-  emoji = "✨"
-  title
-  message
-  action
-}: EmptyStateProps) {
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
   return (
 
-<<<<<<< HEAD
 export default UserEngagementSystem;
-=======
-</div>) 
-}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
         <span className="text-3xl">{emoji}</span>
       </div>;"
       <h2 className="mt-4 text-lg font-semibold">{title}</h2>;"
@@ -33,4 +10,3 @@ export default UserEngagementSystem;
     </div>;
   );
 }
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

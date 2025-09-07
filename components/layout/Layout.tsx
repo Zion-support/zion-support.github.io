@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { ReactNode } from 'react';
 import Head from 'next/head';
-=======
-import React from 'react';
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 import Header from '../Header';
 import Footer from '../Footer';
 
@@ -42,28 +37,7 @@ export default function Layout({
       <Footer />
     </div>;
   );
-<<<<<<< HEAD
-=======
-import React, { ReactNode } from 'react'
-import Header from '../Header'
-import Footer from './Footer'
-interface LayoutProps {
-  children: ReactNode
 }
-
-export default function Layout({ children }: LayoutProps) {
-  return (
-    <div className="min-h-screen bg-gray-50">
-      <Header />
-      <main className="pt-20">
-        {children}
-      </main>
-      <Footer />
-    </div>
-  )
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-}
-=======
 }
 export default Layout;
 import React from 'react;
@@ -81,4 +55,3 @@ export default function Layout({ children }: LayoutProps) {return (;
     </div>;
   )"; type: LayoutProps = { children: React.ReactNode, }; export default function Layout({ children }: LayoutProps) { return <div>{children}</div>; type LayoutProps = { children: React.ReactNode, }; export default function Layout({ children }: LayoutProps) { return <div>{children}</div> } " ;
 }}
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

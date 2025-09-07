@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 import fs from 'fs';
 import path from 'path';
 type RouteInfo = any;
@@ -53,13 +49,5 @@ export default function SiteMapIntelPage({ routes, generatedAt }: { routes: Rout
     </div>
 );
 }
-<<<<<<< HEAD
 
 "
-=======
-<tr> <th className="text-left p-2" >Route</th> <th className="text-left p-2" >Last Modified</th> </tr> </thead> <tbody> </tr>) ) 
-}</tbody> </table> </div> </div>) 
-}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

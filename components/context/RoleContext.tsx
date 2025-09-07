@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';
 export type UserRole = any;
   return ctx
@@ -56,25 +52,4 @@ const ctx = useContext(RoleContext);
   if (!ctx) throw new Error('useRole must be used within RoleProvider');
   return ctx;  return ctx
 }
-<<<<<<< HEAD
 }
-=======
-export type UserRole = 'client' | 'talent'
-useEffect ( () => {
-  try {
-  
-}catch {
-  
-}
-}, [])
-useEffect ( () => {
-  try {
-  if (typeof window !== 'undefined') {
-  
-}catch {
-  
-}
-}, [role])
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
