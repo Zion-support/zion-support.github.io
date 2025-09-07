@@ -58,6 +58,35 @@
     ".next/types/**/*.ts"
   ],
   "exclude": [
+<<<<<<< HEAD
     "node_modules"
+=======
+    "node_modules",
+    ".next",
+    "out",
+    "dist",
+    "api-backup",
+    "pages.disabled",
+    "backup-pages",
+    "automation/backups",
+    "automation_backup",
+    "broken_files_backup",
+    "contracts",
+    "cypress",
+    "temp_working",
+    "supabase/functions",
+    "**/*.test.ts",
+    "**/*.test.tsx",
+    "**/*.spec.ts",
+    "**/*.spec.tsx",
+    "**/*.backup",
+    "**/*.disabled",
+    "src",
+    "src.pages.disabled",
+    "src.pages.disabled.auto",
+    "components.disabled",
+    "src.disabled",
+    "src.pages.disabled"
+>>>>>>> origin/chore/fix-automation-and-build
   ]
 }
