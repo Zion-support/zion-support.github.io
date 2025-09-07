@@ -2,187 +2,122 @@
 
 const fs = require('fs');
 const path = require('path');
-const glob = require('glob');
 
 console.log('🔧 Fixing remaining syntax errors...');
 
-// Function to fix remaining syntax issues
-function fixRemainingSyntax(filePath) {
+// List of files with known syntax errors
+const filesToFix = [;
+  '/workspace/src/components/Footer.tsx',
+  '/workspace/src/components/Header.tsx',
+  '/workspace/src/components/HeroSection.tsx',
+  '/workspace/src/components/LoadingSpinner.tsx',
+  '/workspace/src/components/Navigation.tsx',
+  '/workspace/src/components/ServicesSection.tsx'
+];
+
+function fixFile(filePath) {
   try {
+    if (!fs.existsSync(filePath)) {
+      console.log(`⚠️  File not found: ${filePath}`);
+      return false;
+    }
+
     let content = fs.readFileSync(filePath, 'utf8');
-    let originalContent = content;
-    let changesMade = false;
-
-    // Fix type definitions with extra commas
-    const syntaxFixes = [
-      // Fix type definitions
-      { from: /type (\w+) = \{;/g, to: 'type $1 = {' },
-      { from: /type (\w+) = \{([^}]+)\},;/g, to: 'type $1 = {$2};' },
-      
-      // Fix const declarations with extra commas
-      { from: /const (\w+) = ([^,]+),;/g, to: 'const $1 = $2;' },
-      { from: /const (\w+) = path\.join\(([^)]+)\),;/g, to: 'const $1 = path.join($2);' },
-      
-      // Fix function parameters with extra commas
-      { from: /function (\w+)\([^)]*\),;/g, to: 'function $1(req, res) {' },
-      { from: /export default function (\w+)\([^)]*\),;/g, to: 'export default function $1(req, res) {' },
-      { from: /export default async function (\w+)\([^)]*\),;/g, to: 'export default async function $1(req, res) {' },
-      
-      // Fix object type definitions
-      { from: /Record<string, (\w+)>;/g, to: 'Record<string, $1>;' },
-      { from: /Record<string (\w+)>;/g, to: 'Record<string, $1>;' },
-      
-      // Fix return statements with extra commas
-      { from: /return res\.status\(\d+\)\.json\(\{([^}]+)\}\),;/g, to: 'return res.status($1).json({$2});' },
-      { from: /return res\.status\(\d+\)\.json\(\{([^}]+)\}\),;/g, to: 'return res.status($1).json({$2});' },
-      
-      // Fix if statements with extra commas
-      { from: /if \([^)]+\) return [^,]+;/g, to: 'if ($1) return $2;' },
-      { from: /if \([^)]+\) return res\.status\(\d+\)\.json\(\{([^}]+)\}\),;/g, to: 'if ($1) return res.status($2).json({$3});' },
-      
-      // Fix destructuring with extra commas
-      { from: /const \{([^}]+)\} = req\.query,;/g, to: 'const {$1} = req.query;' },
-      { from: /const \{([^}]+)\} = req\.body \|\| \{\} as \{([^}]+)\},;/g, to: 'const {$1} = req.body || {} as {$2};' },
-      
-      // Fix method checks with extra commas
-      { from: /if \(req\.method !== '[^']+'\) {;/g, to: 'if (req.method !== \'$1\') {' },
-      
-      // Fix try-catch blocks
-      { from: /try {;/g, to: 'try {' },
-      { from: /} catch \([^)]+\) {;/g, to: '} catch (error) {' },
-      
-      // Fix object property definitions
-      { from: /(\w+): string,;/g, to: '$1: string;' },
-      { from: /(\w+): string\?,;/g, to: '$1?: string;' },
-      { from: /(\w+): number,;/g, to: '$1: number;' },
-      { from: /(\w+): boolean,;/g, to: '$1: boolean;' },
-      
-      // Fix array type definitions
-      { from: /(\w+): (\w+)\[\],;/g, to: '$1: $2[];' },
-      
-      // Fix function calls with extra commas
-      { from: /(\w+)\(([^)]+)\),;/g, to: '$1($2);' },
-      
-      // Fix variable assignments
-      { from: /(\w+) = ([^,]+),;/g, to: '$1 = $2;' },
-      
-      // Fix object destructuring in function parameters
-      { from: /\{([^}]+)\} as \{([^}]+)\},;/g, to: '{$1} as {$2};' },
-      
-      // Fix action map definitions
-      { from: /const actionMap: Record<string (\w+)> = \{;/g, to: 'const actionMap: Record<string, $1> = {' },
-      
-      // Fix method checks
-      { from: /if \(req\.method === '[^']+'\) {;/g, to: 'if (req.method === \'$1\') {' },
-      
-      // Fix async function declarations
-      { from: /export default async function (\w+)\([^)]*\) {;/g, to: 'export default async function $1(req, res) {\n  try {' },
-      { from: /export default function (\w+)\([^)]*\) {;/g, to: 'export default function $1(req, res) {\n  try {' },
-      
-      // Fix error handling
-      { from: /} catch \([^)]+\) {;/g, to: '  } catch (error) {\n    console.error("Error:", error);\n    return res.status(500).json({ error: "Internal server error" });\n  }\n}' },
-      
-      // Fix JSON responses
-      { from: /res\.json\(\{([^}]+)\}\),;/g, to: 'res.json({$1});' },
-      { from: /res\.status\(\d+\)\.json\(\{([^}]+)\}\),;/g, to: 'res.status($1).json({$2});' },
-      
-      // Fix file path operations
-      { from: /path\.join\(([^)]+)\),;/g, to: 'path.join($1);' },
-      
-      // Fix data loading functions
-      { from: /function load\(\): Record<string (\w+)> {;/g, to: 'function load(): Record<string, $1> {' },
-      
-      // Fix try-catch in data loading
-      { from: /try {;/g, to: 'try {' },
-      { from: /} catch \([^)]+\) {;/g, to: '} catch (error) {' },
-      
-      // Fix return statements in data loading
-      { from: /return \{\},;/g, to: 'return {};' },
-      { from: /return JSON\.parse\(([^)]+)\),;/g, to: 'return JSON.parse($1);' },
-    ];
-
-    syntaxFixes.forEach(fix => {
-      if (fix.from.test(content)) {
-        content = content.replace(fix.from, fix.to);
-        changesMade = true;
-      }
-    });
-
-    // Clean up extra whitespace and newlines
-    content = content.replace(/\n{3,}/g, '\n\n');
-    content = content.replace(/\s+$/gm, '');
-    
-    if (changesMade || content !== originalContent) {
-      fs.writeFileSync(filePath, content);
-      console.log(`✅ Fixed syntax in: ${filePath}`);
-      return true;
+    let modified = false;
+;
+    // Fix common syntax errors;
+    // Fix unnecessary escape characters;
+    content = content.replace(/\\:/g, ':');
+    content = content.replace(/\\,/g, ',');
+    content = content.replace(/\\;/g, ';');
+    content = content.replace(/\\}/g, '}');
+    content = content.replace(/\\{/g, '{');
+    content = content.replace(/\\\[/g, '[');
+    content = content.replace(/\\\]/g, ']');
+    content = content.replace(/\\\(/g, '(');
+    content = content.replace(/\\\)/g, ')');
+;
+    // Fix missing semicolons;
+    content = content.replace(/([^;])\s*$/gm, '$1;');
+;
+    // Fix missing commas in objects;
+    content = content.replace(/(\w+):\s*([^,}]+)\s*}/g, '$"1": $2,}');
+;
+    // Fix missing closing braces;
+    const openBraces = (content.match(/\{/g) || []).length;
+    const closeBraces = (content.match(/\}/g) || []).length;
+;
+    if (openBraces > closeBraces) {;
+      const missingBraces = openBraces - closeBraces;
+      content += '\n' + '}'.repeat(missingBraces);
+      modified = true;
     }
-    
-    return false;
-  } catch (error) {
-    console.error(`❌ Error processing ${filePath}:`, error.message);
+;
+    // Fix missing closing parentheses;
+    const openParens = (content.match(/\(/g) || []).length;
+    const closeParens = (content.match(/\)/g) || []).length;
+;
+    if (openParens > closeParens) {;
+      const missingParens = openParens - closeParens;
+      content += ')'.repeat(missingParens);
+      modified = true;
+    }
+;
+    // Fix missing closing brackets;
+    const openBrackets = (content.match(/\[/g) || []).length;
+    const closeBrackets = (content.match(/\]/g) || []).length;
+;
+    if (openBrackets > closeBrackets) {;
+      const missingBrackets = openBrackets - closeBrackets;
+      content += ']'.repeat(missingBrackets);
+      modified = true;
+    }
+;
+    // Fix duplicate imports;
+    const importLines = content.split('\n').filter(line => line.trim().startsWith('import'));
+    const uniqueImports = [...new Set(importLines)];
+    if (importLines.length !== uniqueImports.length) {;
+      const nonImportLines = content.split('\n').filter(line => !line.trim().startsWith('import'));
+      content = uniqueImports.join('\n') + '\n' + nonImportLines.join('\n');
+      modified = true;
+    }
+;
+    // Fix missing React import;
+    if (content.includes('React') && !content.includes("import React")) {;
+      content = "import React from 'react';\n" + content;
+      modified = true;
+    }
+;
+    if (content !== fs.readFileSync(filePath, 'utf8')) {;
+      fs.writeFileSync(filePath, content, 'utf8');
+      modified = true;
+    }
+;
+    return modified;
+  } catch (error) {;
+    console.error(`Error processing ${filePath}:`, error.message);
     return false;
   }
 }
-
-// Function to find all TypeScript files
-function getAllTypeScriptFiles() {
-  const patterns = [
-    'pages/**/*.ts',
-    'pages/**/*.tsx',
-    'components/**/*.ts',
-    'components/**/*.tsx',
-    'utils/**/*.ts',
-    'types/**/*.ts',
-    'lib/**/*.ts',
-    '*.ts',
-    '*.tsx'
-  ];
-
-  let allFiles = [];
-  patterns.forEach(pattern => {
-    try {
-      const files = glob.sync(pattern, { cwd: process.cwd() });
-      allFiles = allFiles.concat(files);
-    } catch (error) {
-      // Pattern not found, continue
-    }
-  });
-
-  return [...new Set(allFiles)]; // Remove duplicates
-}
-
-// Main execution
-function main() {
-  console.log('🚀 Starting remaining syntax fix...\n');
-  
-  const allFiles = getAllTypeScriptFiles();
-  console.log(`Found ${allFiles.length} TypeScript files to check`);
-  
+;
+function processDirectory(dirPath) {;
+  const files = fs.readdirSync(dirPath);
   let fixedCount = 0;
-  
-  allFiles.forEach(filePath => {
-    if (fs.existsSync(filePath)) {
-      if (fixRemainingSyntax(filePath)) {
-        fixedCount++;
-      }
+;
+  for (const file of files) {;
+    const filePath = path.join(dirPath, file);
+    const stat = fs.statSync(filePath);
+;
+    if (stat.isDirectory()) {;
+      fixedCount += processDirectory(filePath);
+    } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.jsx') || file.endsWith('.js')) {;
+      if (fixSyntaxErrors(filePath)) fixedCount++;
     }
-  });
-
-  console.log(`\n📊 Fix Summary:`);
-  console.log(`   Total files checked: ${allFiles.length}`);
-  console.log(`   Files fixed: ${fixedCount}`);
-  
-  if (fixedCount > 0) {
-    console.log('\n✅ Remaining syntax fixes completed!');
-  } else {
-    console.log('\n✅ No remaining syntax issues found!');
   }
+;
+  return fixedCount;
 }
-
-// Run the script
-if (require.main === module) {
-  main();
-}
-
-module.exports = { fixRemainingSyntax };
+;
+console.log('Starting syntax error fixes...');
+const fixedCount = processDirectory('.');
+console.log(`Fixed ${fixedCount} files`);

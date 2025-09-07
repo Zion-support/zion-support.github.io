@@ -1,6 +1,50 @@
 const fs = require('fs')
 const { execSync } = require('child_process')
 
+const fs = require('fs');
+const { execSync } = require('child_process');
+
+:scripts/resolve-final-conflicts.cjs
+:backup-problematic-files/scripts/final-build-fix.cjs
+:scripts/resolve-final-conflicts.cjs
+
+
+console.log('🔧 Resolving Final Conflicts');
+console.log('');
+
+// Function to resolve merge conflicts by keeping the first version
+function resolveMergeConflicts(content) {
+  return content
+
+
+// Function to resolve merge conflicts by keeping the first version
+function resolveMergeConflicts(content) {
+  return content
+    .replace(/[a-f0-9]+/g, '');
+}
+console.log('🔧 Final Build Fix');
+console.log('====');
+:backup-problematic-files/scripts/final-build-fix.cjs
+:scripts/resolve-final-conflicts.cjs
+console.log('🔧 Resolving Final Conflicts');
+console.log('
+}
+    .replace(/
+}
+:backup-problematic-files/scripts/final-build-fix.cjs
+
+console.log('🔧 Final Build Fix');
+console.log('====');
+
+
+
+console.log('🔧 Resolving Final Conflicts');
+console.log('
+}
+console.log('🔧 Resolving Final Conflicts');
+console.log('
+}
+
 // Function to fix all remaining syntax errors
 function fixAllSyntax(content) {
   return content
@@ -12,63 +56,64 @@ function fixAllSyntax(content) {
     .replace(/<span([^>]*)>([^<]+)><\/span>/gm, '<span$1>$2</span>')
     .replace(/<div([^>]*)>([^<]+)><\/div>/gm, '<div$1>$2</div>')
     .replace(/<motion\.div([^>]*)>([^<]+)><\/motion\.div>/gm, '<motion.div$1>$2</motion.div>')
-
+    
     // Fix malformed meta tags
     .replace(/<meta([^>]+) \/ \/>/gm, '<meta$1 />')
     .replace(/<meta([^>]+) \/>/gm, '<meta$1 />')
-
+    
     // Fix object literal syntax
     .replace(/\{\s*$/gm, '{')
     .replace(/\[\s*$/gm, '[')
     .replace(/\(\s*$/gm, '(')
-
+    
     // Fix semicolons in wrong places
     .replace(/;\s*$/gm, '')
     .replace(/;\s*}/g, '}')
     .replace(/;\s*]/g, ']')
     .replace(/;\s*\)/g, ')')
-
+    
     // Fix array and object syntax
     .replace(/\[\s*\{\s*$/gm, '[{')
     .replace(/\{\s*\[\s*$/gm, '{[')
     .replace(/\}\s*\]\s*$/gm, '}]')
     .replace(/\]\s*\}\s*$/gm, ']}')
-
+    
     // Fix empty objects and arrays
     .replace(/\{\s*\}/g, '{}')
     .replace(/\[\s*\]/g, '[]')
-
+    
     // Fix trailing commas
     .replace(/,\s*}/g, '}')
     .replace(/,\s*]/g, ']')
     .replace(/,\s*\)/g, ')')
-
+    
     // Clean up extra semicolons
-    .replace(/;+/g, ';')
+    .replace(/;;+/g, ';')
     .replace(/;\s*;/g, ';')
-// Clean up whitespace
+    
+    // Clean up whitespace
     .replace(/\n\s*\n\s*\n/g, '\n\n')
-    .replace(/\s+$/gm, '')
-console.log('🔧 Resolving Final Conflicts')
+    .replace(/\s+$/gm, '');
+console.log('🔧 Resolving Final Conflicts');
 console.log(
+}
 
-let totalFixed = 0
-console.log('🔍 Resolving merge conflicts and fixing syntax errors...')
-  for($2) {
-  try {
-    if (!fs.existsSync(file)) {
-      console.log(`⚠️  File not found: ${file}`)
-      continue
-    let content = fs.readFileSync(file, 'utf8')
 
-const originalContent = content
-    content = fixAllSyntax(content)
-    const originalContent = content
-    content = fixAllSyntax(content)
-  if($2) {
-      fs.writeFileSync(file, content)
-      console.log(`✅ Fixed ${file}`)
-      totalFixed++
+:backup-problematic-files/scripts/final-build-fix.cjs
+:scripts/resolve-final-conflicts.cjs
+    let modified = false;
+
+    // Check for merge conflict markers
+
+    const originalContent = content;
+    
+    content = fixAllSyntax(content);
+    
+    if (content !== originalContent) {
+      fs.writeFileSync(file, content);
+      console.log(`✅ Fixed ${file}`);
+      totalFixed++;
+    }
   } catch (error) {
     console.log(`❌ Error fixing ${file}: ${error.message}`)
 console.log(`\n✅ Fixed ${totalFixed} files`)
@@ -85,9 +130,10 @@ try {
 console.log('\n📝 Committing syntax fixes...')
 try {
   execSync('git add .', { cwd: '/workspace' }
-})
-  execSync('git commit -m "fix: Ultimate syntax fix for all remaining errors"', { cwd: '/workspace' }})
-  console.log('✅ Syntax fixes committed')
+});
+  execSync('git commit -m "fix: Final build fix for all remaining syntax errors"', { cwd: '/workspace' }
+});
+  console.log('✅ Syntax fixes committed');
 } catch (error) {
   console.log('⚠️  Failed to commit syntax fixes:', error.message)
 // Push changes
@@ -97,11 +143,25 @@ try {
 })
   console.log('✅ Syntax fixes pushed to main branch')
 } catch (error) {
-console.log('⚠️  Failed to push syntax fixes:', error.message)
-console.log('\n🎉 Ultimate syntax fix completed!')
-    let modified = false
+  console.log('⚠️  Failed to push syntax fixes:', error.message);
+}
+
+console.log('\n🎉 Final build fix completed!');
+    let modified = false;
+
     // Check for merge conflict markers
+:backup-problematic-files/scripts/final-build-fix.cjs
+    let modified = false;
 
     let modified = false
     // Check for merge conflict markers
 :scripts/resolve-final-conflicts.cjs
+
+
+
+    let modified = false;
+
+    // Check for merge conflict markers
+
+
+

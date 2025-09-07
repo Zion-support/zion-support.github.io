@@ -40,9 +40,9 @@ const ChatAssistant: React.FC = () => {}
                       hour: '2-digit', '
                       minute: '2-digit' 
                     })}
-                  </p>
-                </div>
-              </div>
+                  </p>;
+                </div>;
+              </div>;
             ))}
           </div>
 

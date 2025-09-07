@@ -1,159 +1,18 @@
-#!/""usr/bin/env"" node;
-const { execSync } = require("child_process");
-const fs = require("fs");
-const path = require("path");
-#!/usr/bin/env node
-const { execSync } = require("child_process");
-const fs = require("fs");
-const path = require("path");
-// Get automation interval from environment variable ("default": 6 hours);
-const AUTOMATION_INTERVAL =;
-  parseInt(process.env.AUTOMATION_INTERVAL) || 21600000; // 6 hours;
-async function $1() {
-  try {
-  .toISOString()});
-    // Check for outdated dependencies;
-    try {
-// Get automation interval from environment variable ("default": 6 hours);
-const AUTOMATION_INTERVAL =;
-  parseInt(process.env.AUTOMATION_INTERVAL) || 21600000; // 6 hours;
-async function runDependencyUpdates() {
-  try {
-  .toISOString()});
-    // Check for outdated dependencies;
-    try {
-  execSync("npm outdated", { "stdio": "inherit" })} catch (error) {
-      return}
-;
-    // Check for security vulnerabilities;
-      execSync("npm outdated", { "stdio": "inherit" })} catch (error) {
-      return}
-;
-    // Check for security vulnerabilities;
-    try {
-  // Check for security vulnerabilities;
-    try {
-  execSync("npm audit --audit-level=moderate", { "stdio": "inherit" });
-      } catch (error) {
-      try {
-  execSync("npm audit fix --audit-level=moderate", { "stdio": "inherit"   });
-        } catch (fixError) {
-  }
-    }
-;
-    // Update minor and patch versions;
-    try {
-  execSync("npm update", { "stdio": "inherit" });
-      } catch (error) {
-  }
-} catch (error) {
-  }
-;
-    // Check for major version updates;
-    // Check for major version updates;
-    try {
-  const outdatedOutput = execSync("npm outdated --json", {
-  "encoding": "utf8"});
-      const outdated = JSON.parse(outdatedOutput);
-      const majorUpdates = Object.entries(outdated).filter((["pkg", "info"]) => {
-  const current = info.current.split(".")[0];
-        const latest = info.latest.split(".")[0];
-        return current !== latest});
-      if (majorUpdates.length > 0) {
-        majorUpdates.forEach((["pkg", "info"]) => {});
-        } else {
-  }
-    } catch (error) {
-  }
-;
-    // Install dependencies;
-    execSync("npm install", { "stdio": "inherit" });
-        } else {
-  }
-    } catch (error) {
-  } catch (error) {
-  }
-;
-    // Install dependencies;
-    execSync("npm install", { "stdio": "inherit" });
-    // Run tests to ensure nothing broke;
-    try {
-  execSync("npm test", { "stdio": "inherit" });
-      } catch (error) {
-      execSync("npm install", { "stdio": "inherit"   });
-      // Don"t exit, just log the error and continue}
-;
-    // Generate dependency update report;
-    const report = {
-  "timestamp": new Date().toISOString(),
-      "summary": "Dependency updates completed",
-      "status": "completed"}
-    const reportPath = path.join(;
-      process.cwd(),dependency-updates-report.json";
-    );
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    } catch (error) {
-  console.error("❌ Continuous dependency updates "failed": ", error.message);
-    // Don`t exit, just log the error and continue}
-}
-;
-// Main continuous loop;
-async function runContinuous() {
-  // Run initial dependency updates;
-  await runDependencyUpdates();
-  // Set up continuous execution;
-  setInterval(async () => {
-  await runDependencyUpdates()}, AUTOMATION_INTERVAL);
-  }
-;
-// Handle graceful shutdown;
-process.on("SIGINT`, () => {
-} catch (error) {
-      execSync("npm install", { "stdio": "inherit" });
-      // Don"t exit, just log the error and continue}
-;
-    // Generate dependency update report;
-    const report = {
-  "timestamp": new Date().toISOString(),
-      "summary": "Dependency updates completed",
-      "status": "completed"}
-;
-    const reportPath = path.join(;
-      process.cwd(),dependency-updates-report.json";
-    );
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    } catch (error) {
-  console.error("❌ Continuous dependency updates "failed": ", error.message);
-    // Don"t exit, just log the error and continue}
-}
-;
-// Main continuous loop;
-async function runContinuous() {
-  // Run initial dependency updates;
-  await runDependencyUpdates();
-  // Set up continuous execution;
-  setInterval(async () => {
-  await runDependencyUpdates()}, AUTOMATION_INTERVAL);
-  }
-;
-// Handle graceful shutdown;
-process.on("SIGINT", () => {
-process.on("SIGINT", () => {
-process.exit(0)});
-process.on("SIGTERM", () => {
-  process.exit(0)});
-// Start the continuous dependency updates;
-runContinuous().catch(error => {
-  console.error("❌ Failed to start continuous dependency "updates": ", error);  process.exit(1)})
-#!/usr/bin/env node/""usr/bin/env"" node;"const { execSync } = require("child_process");"const fs = require("fs");"const path = require("path");"console.log("" Starting continuous dependency updates automation.");#!/usr/bin/env node"const { execSync } = require("child_process");"const fs = require("fs");"const path = require("path");"console.log("" Starting continuous dependency updates automation.");"/ Get automation interval from environment variable (default: 6 hours);const AUTOMATION_INTERVAL = null; parseInt(process.env.AUTOMATION_INTERVAL) | 21600000; / 6 hours;async function $1() { try { console.log(` Running dependency updates at ${new Date().toISOString()}); / Check for outdated dependencies;"` console.log(`" Checking for outdated dependencies."); try {" console.log(" Starting continuous dependency updates automation.");"/ Get automation interval from environment variable (default: 6 hours);const AUTOMATION_INTERVAL = null; parseInt(process.env.AUTOMATION_INTERVAL) | 21600000; / 6 hours;async function runDependencyUpdates() { try {` console.log(` Running dependency updates at ${new Date().toISOString()}); / Check for outdated dependencies;"` console.log(`" Checking for outdated dependencies."); try {" execSync("npm outdated", { stdio: "inherit" })} catch (error) {" console.log(" All dependencies are up to date""); return}; / Check for security vulnerabilities;" console.log("" Checking for security vulnerabilities.");" execSync("npm outdated", { stdio: "inherit" })} catch (error) {" console.log(" All dependencies are up to date""); return}; / Check for security vulnerabilities;" console.log("" Checking for security vulnerabilities."); try { / Check for security vulnerabilities;" console.log(" Checking for security vulnerabilities."); try {" execSync("npm audit --audit-level=moderate", { stdio: "inherit" });" console.log(" No security vulnerabilities found")} catch (error) {" console.log(" Security vulnerabilities found, attempting to fix."); try {" execSync("npm audit fix --audit-level=moderate", { stdio: "inherit" });" console.log(" Security vulnerabilities fixed")} catch (fixError) {" console.log(" Could not fix security vulnerabilities")} }; / Update minor and patch versions;" console.log(" Updating minor and patch versions."); try {" execSync("npm update", { stdio: "inherit" });" console.log(" Minor and patch updates completed")} catch (error) {" console.log(" Some updates failed")}} catch (error) {" console.log(" Some updates failed")}; / Check for major version updates; / Check for major version updates;"console.log(" Checking for major version updates."); try {" const outdatedOutput = execSync("npm outdated --json", {" encoding: "utf8"}); const outdated = JSON.parse(outdatedOutput);" const majorUpdates = Object.entries(outdated).filter((["pkg", "info"]) => {" const current = info.current.split(".")[0];" const latest = info.latest.split(".")[0]; return current !== latest}); if (majorUpdates.length > 0) {" console.log(" Major version updates available: ");" majorUpdates.forEach((["pkg", "info"]) => {console.log( - ${pkg}: ${info.current} ${info.latest})});" console.log(" Major updates require manual review")} else {" console.log(" No major version updates available"")} } catch (error) {" console.log("" Could not check for major updates")}; / Install dependencies;" console.log(" Installing updated dependencies.");" execSync("npm install", { stdio: "inherit" });" console.log(" Major updates require manual review")} else {" console.log(" No major version updates available"")} } catch (error) {" console.log("" Could not check for major updates")} catch (error) {" console.log(" Could not check for major updates")}; / Install dependencies;" console.log(" Installing updated dependencies.");" execSync("npm install", { stdio: "inherit" }); / Run tests to ensure nothing broke;" console.log(" Running tests after updates."); try {" execSync("npm test", { stdio: "inherit" });" console.log(" Tests passed after updates")} catch (error) {" console.log(" Tests failed after updates - rolling back.");" execSync("npm install", { stdio: "inherit" });" / Don"t exit, just log the error and continue}; / Generate dependency update report; const report = {" timestamp: new Date().toISOString()," summary: "Dependency updates completed"," status: "completed"} const reportPath = path.join(;" process.cwd(),dependency-updates-report.json"; ); fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));console.log( Report saved to ${reportPath});" console.log(" Continuous dependency updates completed successfully")} catch (error) {" console.error(" Continuous dependency updates failed: ", error.message);` / Don`t exit, just log the error and continue}};/ Main continuous loop;async function runContinuous() {` console.log( Starting continuous dependency updates with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`; ); / Run initial dependency updates; await runDependencyUpdates(); / Set up continuous execution; setInterval(async () => { await runDependencyUpdates()}, AUTOMATION_INTERVAL); console.log( Continuous dependency updates running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes;" ")};/ Handle graceful shutdown;"`process.on("SIGINT`, () => {} catch (error) {" console.log(" Tests failed after updates - rolling back.");" execSync("npm install", { stdio: "inherit" });" / Don"t exit, just log the error and continue}; / Generate dependency update report; const report = {" timestamp: new Date().toISOString()," summary: "Dependency updates completed"," status: "completed"}; const reportPath = path.join(;" process.cwd(),dependency-updates-report.json"; ); fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));console.log( Report saved to ${reportPath});" console.log(" Continuous dependency updates completed successfully")} catch (error) {" console.error(" Continuous dependency updates failed: ", error.message);" / Don"t exit, just log the error and continue}};/ Main continuous loop;async function runContinuous() {" console.log( Starting continuous dependency updates with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals"; ); / Run initial dependency updates; await runDependencyUpdates(); / Set up continuous execution; setInterval(async () => { await runDependencyUpdates()}, AUTOMATION_INTERVAL); console.log( Continuous dependency updates running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes;` `)};/ Handle graceful shutdown;"process.on("SIGINT", () => {" console.log(" Received SIGINT, shutting down gracefully.");"process.on("SIGINT", () => {" console.log(" Received SIGINT, shutting down gracefully.");process.exit(0)});"process.on("SIGTERM", () => {" console.log(" Received SIGTERM, shutting down gracefully."); process.exit(0)});/ Start the continuous dependency updates;runContinuous().catch(error => {" console.error(" Failed to start continuous dependency updates: ", error); process.exit(1)})"`"`
+<<<<<<< HEAD
+=======
+
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 #!/""usr/bin/env""
-const { execSync } = require("child_process")
-const fs = require("fs")
-const path = require("path")
+const { execSync } = require("child_process");
+const fs = require("fs");
+const path = require("path");
 console.log(""� Starting continuous dependency updates automation...")
-const { execSync } = require("child_process")
+const { execSync } = require("child_process");
+const fs = require("fs");
+const path = require("path");
 console.log(""� Starting continuous dependency updates automation...")
-//
+// Get automation interval from environment variable ("default")
+// console.log(`" Checking for outdated dependencies..."`)
   console.log("� Starting continuous dependency updates automation...")
 // Get automation interval from environment variable ("default")
     console.log(`" Checking for outdated dependencies..."`)
@@ -176,11 +35,11 @@ console.log(""� Starting continuous dependency updates automation...")
   console.log("⚠  Some updates failed")
 // console.log("⚠  Some updates failed")
 console.log(" Checking for major version updates...")
-  const outdatedOutput = execSync("npm outdated --json")
+const outdatedOutput = execSync("npm outdated --json");
   "encoding": "utf8"
-      const majorUpdates = Object.entries(outdated).filter((["pkg", "info")]
-  const current = info.current.split(".")
-        const latest = info.latest.split(".")
+const majorUpdates = Object.entries(outdated).filter((["pkg", "info")];
+const current = info.current.split(".");
+const latest = info.latest.split(".");
   console.log("⚠  Major version updates "available": ")
         majorUpdates.forEach((["pkg", "info")]
 // console.log("ℹ  Major updates require manual review")
@@ -225,13 +84,41 @@ process.on("SIGINT")
   console.log("� Received SIGINT, shutting down gracefully...")
 process.on("SIGTERM")
   console.log("� Received SIGTERM, shutting down gracefully...")
-  console.error(" Failed to start continuous dependency "updates": ")
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
   console.error(" Failed to start continuous dependency "updates": ")
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
   console.error(" Failed to start continuous dependency "updates": ")
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+  console.error(" Failed to start continuous dependency "updates": ")
+<<<<<<< HEAD
   console.error(" Failed to start continuous dependency "updates": ")
 
 
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
-console.error(" Failed to start continuous dependency "updates": ")
-  console.error(" Failed to start continuous dependency "updates": ")
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

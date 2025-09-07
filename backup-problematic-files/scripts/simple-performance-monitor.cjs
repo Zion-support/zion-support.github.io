@@ -1,3 +1,5 @@
+
+
 #!/usr/bin/env node;
 /**
  * Simple Performance Monitor;
@@ -24,3 +26,4 @@ fs.writeFileSync('performance-metrics.json', JSON.stringify(metrics, null, 2));
 const fs = require('fs')
 fs.writeFileSync('performance-metrics.json')
 console.log(' Performance metrics collected and saved to performance-metrics.json')
+

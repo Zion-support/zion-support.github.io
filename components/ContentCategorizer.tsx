@@ -74,396 +74,412 @@ item.id
 export default ContentCategorizer
 =======
 import React, { useState, useEffect, useMemo } from 'react';
-import {Search, Filter, Calendar, Tag, TrendingUp, Shield, Code;
-  BookOpen, Zap, AlertTriangle, Lightbulb, Settings;
-  BarChart3, Globe, Database, Cpu, Rocket, Brain;
-} from 'lucide-react';
-interface ContentItem {id: string;
-  title: string;
-  href: string;
-  desc: string;
-  category: string;
-  subcategory?: string;
-  date: string;
-  relevance: 'high' | 'medium' | 'low';
-  tags: string[];
-  source: string;
-  type: 'report' | 'update' | 'insight' | 'guide' | 'security' | 'feature';
+import { 
+  Search, Filter, Calendar, Tag, TrendingUp, Shield, Code, 
+  BookOpen, Zap, AlertTriangle, Lightbulb, Settings, 
+  BarChart3, Globe, Database, Cpu, Rocket, Brain
+} from 'lucide-react',
+
+return (<div className=&quot;space - y-6 & quot>;
+
+interface ContentCategory {
+  id: string,
+  name: string,
+  icon: any,
+  description: string,
+  color: string,
+  count: number,
+  subcategories?: string[]
 }
-interface ContentCategory {id: string;
-  name: string;
-  icon: any;
-  description: string;
-  color: string;
-  count: number;
-  subcategories?: string[];
-}
-const ContentCategorizer: React.FC = () => {const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [selectedSubcategory, setSelectedSubcategory] = useState('all');
-  const [selectedType, setSelectedType] = useState('all');
-  const [selectedDateRange, setSelectedDateRange] = useState('all');
-  const [selectedRelevance, setSelectedRelevance] = useState('all');
-  const [sortBy, setSortBy] = useState<'date' | 'relevance' | 'title'>('date');
-  const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('desc');
-  // Sample content data - in a real implementation, this would come from an API;
-  const contentItems: ContentItem[] = [;
-    {;
-      id: '1';
-      title: 'Structured Data Audit Report';
-      href: '/reports/structured-data-audit.json';
-      desc: 'Comprehensive JSON-LD coverage analysis and optimization recommendations.';
-      category: 'seo';
-      subcategory: 'structured-data';
-      date: '2025-08-19';
-      relevance: 'high';
-      tags: ['seojson-ldschemaaudit'];
-      source: 'autonomous-auditor';
-      type: 'report';
+
+const ContentCategorizer: React.FC = () => {
+  const [searchTerm, setSearchTerm] = useState($2);
+  const [selectedCategory, setSelectedCategory] = useState($2);
+  const [selectedSubcategory, setSelectedSubcategory] = useState($2);
+  const [selectedType, setSelectedType] = useState($2);
+  const [selectedDateRange, setSelectedDateRange] = useState($2);
+  const [selectedRelevance, setSelectedRelevance] = useState($2);
+  const [sortBy, setSortBy] = useState<'date' | 'relevance' | 'title'>('date'),
+  const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('desc'),
+
+  // Sample content data - in a real implementation, this would come from an API
+  const contentItems: ContentItem[] = [
+    {
+      id: '1',
+      title: 'Structured Data Audit Report',
+      href: '/reports/structured-data-audit.json',
+      desc: 'Comprehensive JSON-LD coverage analysis and optimization recommendations.',
+      category: 'seo',
+      subcategory: 'structured-data',
+      date: '2025-08-19',
+      relevance: 'high',
+      tags: ['seojson-ldschemaaudit'],
+      source: 'autonomous-auditor',
+      type: 'report'
+    },
+    {
+      id: '2',
+      title: 'Security Vulnerability Scan Results',
+      href: '/reports/security-scan-2025-08-19',
+      desc: 'Automated security assessment revealing potential vulnerabilities and remediation steps.',
+      category: 'security',
+      subcategory: 'vulnerability-scan',
+      date: '2025-08-19',
+      relevance: 'high',
+      tags: ['securityvulnerabilityscanremediation'],
+      source: 'security-scanner',
+      type: 'security'
+    },
+    {
+      id: '3',
+      title: 'AI Model Performance Update',
+      href: '/reports/ai-model-performance-2025-08-19',
+      desc: 'Latest performance metrics and optimization insights for deployed AI models.',
+      category: 'ai',
+      subcategory: 'performance',
+      date: '2025-08-19',
+      relevance: 'high',
+      tags: ['aiperformanceoptimizationmetrics'],
+      source: 'ai-monitor',
+      type: 'update'
+    },
+    {
+      id: '4',
+      title: 'Feature Deployment Summary',
+      href: '/reports/feature-deployment-2025-08-19',
+      desc: 'Overview of newly deployed features and their impact on user experience.',
+      category: 'features',
+      subcategory: 'deployment',
+      date: '2025-08-19',
+      relevance: 'medium',
+      tags: ['featuresdeploymentuximpact'],
+      source: 'deployment-tracker',
+      type: 'feature'
+    },
+    {
+      id: '5',
+      title: 'System Health Dashboard',
+      href: '/reports/system-health-2025-08-19',
+      desc: 'Real-time system performance metrics and infrastructure health status.',
+      category: 'monitoring',
+      subcategory: 'system-health',
+      date: '2025-08-19',
+      relevance: 'medium',
+      tags: ['monitoringperformanceinfrastructurehealth'],
+      source: 'health-monitor',
+      type: 'report'
+    },
+    {
+      id: '6',
+      title: 'User Behavior Insights',
+      href: '/reports/user-behavior-2025-08-19',
+      desc: 'Analysis of user interaction patterns and engagement optimization opportunities.',
+      category: 'analytics',
+      subcategory: 'user-behavior',
+      date: '2025-08-19',
+      relevance: 'high',
+      tags: ['analyticsuser-behaviorengagementoptimization'],
+      source: 'behavior-analyzer',
+      type: 'insight'
     }
-    {id: '2';
-      title: 'Security Vulnerability Scan Results';
-      href: '/reports/security-scan-2025-08-19';
-      desc: 'Automated security assessment revealing potential vulnerabilities and remediation steps.';
-      category: 'security';
-      subcategory: 'vulnerability-scan';
-      date: '2025-08-19';
-      relevance: 'high';
-      tags: ['securityvulnerabilityscanremediation'];
-      source: 'security-scanner';
-      type: 'security';
+  ],
+
+  const categories: ContentCategory[] = [
+    {
+      id: 'all',
+      name: 'All Content',
+      icon: Globe,
+      description: 'Complete collection of autonomous content',
+      color: 'from-blue-500 to-cyan-500',
+      count: contentItems.length
+    },
+    {
+      id: 'seo',
+      name: 'SEO & Analytics',
+      icon: BarChart3,
+      description: 'Search optimization and performance analytics',
+      color: 'from-green-500 to-emerald-500',
+      count: contentItems.filter(item = $2;
+      subcategories: ['structured-dataperformancetechnical-seo']
+    },
+    {
+      id: 'security',
+      name: 'Security & Compliance',
+      icon: Shield,
+      description: 'Security assessments and compliance reports',
+      color: 'from-red-500 to-orange-500',
+      count: contentItems.filter(item = $2;
+      subcategories: ['vulnerability-scancompliancethreat-detection']
+    },
+    {
+      id: 'ai',
+      name: 'AI & Machine Learning',
+      icon: Brain,
+      description: 'AI model performance and insights',
+      color: 'from-purple-500 to-pink-500',
+      count: contentItems.filter(item = $2;
+      subcategories: ['performancetrainingdeployment']
+    },
+    {
+      id: 'features',
+      name: 'Feature Updates',
+      icon: Zap,
+      description: 'New features and system updates',
+      color: 'from-yellow-500 to-orange-500',
+      count: contentItems.filter(item = $2;
+      subcategories: ['deploymentenhancementsroadmap']
+    },
+    {
+      id: 'monitoring',
+      name: 'System Monitoring',
+      icon: Cpu,
+      description: 'Infrastructure and system health',
+      color: 'from-indigo-500 to-purple-500',
+      count: contentItems.filter(item = $2;
+      subcategories: ['system-healthperformanceinfrastructure']
+    },
+    {
+      id: 'analytics',
+      name: 'User Analytics',
+      icon: TrendingUp,
+      description: 'User behavior and engagement insights',
+      color: 'from-teal-500 to-cyan-500',
+      count: contentItems.filter(item = $2;
+      subcategories: ['user-behaviorengagementconversion']
     }
-    {id: '3';
-      title: 'AI Model Performance Update';
-      href: '/reports/ai-model-performance-2025-08-19';
-      desc: 'Latest performance metrics and optimization insights for deployed AI models.';
-      category: 'ai';
-      subcategory: 'performance';
-      date: '2025-08-19';
-      relevance: 'high';
-      tags: ['aiperformanceoptimizationmetrics'];
-      source: 'ai-monitor';
-      type: 'update';
-    }
-    {id: '4';
-      title: 'Feature Deployment Summary';
-      href: '/reports/feature-deployment-2025-08-19';
-      desc: 'Overview of newly deployed features and their impact on user experience.';
-      category: 'features';
-      subcategory: 'deployment';
-      date: '2025-08-19';
-      relevance: 'medium';
-      tags: ['featuresdeploymentuximpact'];
-      source: 'deployment-tracker';
-      type: 'feature';
-    }
-    {id: '5';
-      title: 'System Health Dashboard';
-      href: '/reports/system-health-2025-08-19';
-      desc: 'Real-time system performance metrics and infrastructure health status.';
-      category: 'monitoring';
-      subcategory: 'system-health';
-      date: '2025-08-19';
-      relevance: 'medium';
-      tags: ['monitoringperformanceinfrastructurehealth'];
-      source: 'health-monitor';
-      type: 'report';
-    }
-    {id: '6';
-      title: 'User Behavior Insights';
-      href: '/reports/user-behavior-2025-08-19';
-      desc: 'Analysis of user interaction patterns and engagement optimization opportunities.';
-      category: 'analytics';
-      subcategory: 'user-behavior';
-      date: '2025-08-19';
-      relevance: 'high';
-      tags: ['analyticsuser-behaviorengagementoptimization'];
-      source: 'behavior-analyzer';
-      type: 'insight';
-    }
-  ];
-  const categories: ContentCategory[] = [;
-    {id: 'all';
-      name: 'All Content';
-      icon: Globe;
-      description: 'Complete collection of autonomous content';
-      color: 'from-blue-500 to-cyan-500';
-      count: contentItems.length;
-    }
-    {id: 'seo';
-      name: 'SEO & Analytics';
-      icon: BarChart3;
-      description: 'Search optimization and performance analytics';
-      color: 'from-green-500 to-emerald-500';
-      count: contentItems.filter(item => item.category === 'seo').length;
-      subcategories: ['structured-dataperformancetechnical-seo'];
-    }
-    {id: 'security';
-      name: 'Security & Compliance';
-      icon: Shield;
-      description: 'Security assessments and compliance reports';
-      color: 'from-red-500 to-orange-500';
-      count: contentItems.filter(item => item.category === 'security').length;
-      subcategories: ['vulnerability-scancompliancethreat-detection'];
-    }
-    {id: 'ai';
-      name: 'AI & Machine Learning';
-      icon: Brain;
-      description: 'AI model performance and insights';
-      color: 'from-purple-500 to-pink-500';
-      count: contentItems.filter(item => item.category === 'ai').length;
-      subcategories: ['performancetrainingdeployment'];
-    }
-    {id: 'features';
-      name: 'Feature Updates';
-      icon: Zap;
-      description: 'New features and system updates';
-      color: 'from-yellow-500 to-orange-500';
-      count: contentItems.filter(item => item.category === 'features').length;
-      subcategories: ['deploymentenhancementsroadmap'];
-    }
-    {id: 'monitoring';
-      name: 'System Monitoring';
-      icon: Cpu;
-      description: 'Infrastructure and system health';
-      color: 'from-indigo-500 to-purple-500';
-      count: contentItems.filter(item => item.category === 'monitoring').length;
-      subcategories: ['system-healthperformanceinfrastructure'];
-    }
-    {id: 'analytics';
-      name: 'User Analytics';
-      icon: TrendingUp;
-      description: 'User behavior and engagement insights';
-      color: 'from-teal-500 to-cyan-500';
-      count: contentItems.filter(item => item.category === 'analytics').length;
-      subcategories: ['user-behaviorengagementconversion'];
-    }
-  ];
-  const contentTypes = [;
-    { id: 'all', name: 'All Types', icon: Globe }
-    { id: 'report', name: 'Reports', icon: BookOpen }
-    { id: 'update', name: 'Updates', icon: Zap }
-    { id: 'insight', name: 'Insights', icon: Lightbulb }
-    { id: 'guide', name: 'Guides', icon: Code }
-    { id: 'security', name: 'Security', icon: Shield }
-    { id: 'feature', name: 'Features', icon: TrendingUp }
-  ];
-  const dateRanges = [;
-    { id: 'all', name: 'All Time' }
-    { id: 'today', name: 'Today' }
-    { id: 'week', name: 'This Week' }
-    { id: 'month', name: 'This Month' }
+  ],
+
+  const contentTypes = [
+    { id: 'all', name: 'All Types', icon: Globe},
+    { id: 'report', name: 'Reports', icon: BookOpen},
+    { id: 'update', name: 'Updates', icon: Zap},
+    { id: 'insight', name: 'Insights', icon: Lightbulb},
+    { id: 'guide', name: 'Guides', icon: Code},
+    { id: 'security', name: 'Security', icon: Shield},
+    { id: 'feature', name: 'Features', icon: TrendingUp}
+  ],
+
+  const dateRanges = [
+    { id: 'all', name: 'All Time' },
+    { id: 'today', name: 'Today' },
+    { id: 'week', name: 'This Week' },
+    { id: 'month', name: 'This Month' },
     { id: 'quarter', name: 'This Quarter' }
-  ];
-  const relevanceLevels = [;
-    { id: 'all', name: 'All Relevance', color: 'text-gray-400' }
-    { id: 'high', name: 'High Priority', color: 'text-green-400' }
-    { id: 'medium', name: 'Medium Priority', color: 'text-yellow-400' }
+  ],
+
+  const relevanceLevels = [
+    { id: 'all', name: 'All Relevance', color: 'text-gray-400' },
+    { id: 'high', name: 'High Priority', color: 'text-green-400' },
+    { id: 'medium', name: 'Medium Priority', color: 'text-yellow-400' },
     { id: 'low', name: 'Low Priority', color: 'text-red-400' }
-  ];
-  const filteredItems = useMemo(() => {const filtered = contentItems.filter(item => {;
-      const matchesSearch = item.title.toLowerCase().includes(searchTerm.toLowerCase()) |;
-                           item.desc.toLowerCase().includes(searchTerm.toLowerCase()) |;
-                           item.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-      const matchesCategory = selectedCategory === 'all' |item.category === selectedCategory;
-      const matchesSubcategory = selectedSubcategory === 'all' |item.subcategory === selectedSubcategory;
-      const matchesType = selectedType === 'all' |item.type === selectedType;
-      const matchesRelevance = selectedRelevance === 'all' |item.relevance === selectedRelevance;
-      return matchesSearch && matchesCategory && matchesSubcategory && matchesType && matchesRelevance;
-    });
-    // Sort items;
-    filtered.sort((a, b) => {let comparison = 0;
-      switch (sortBy) {;
-        case 'date':;
-          comparison = new Date(a.date).getTime() - new Date(b.date).getTime();
-          break;
-        case 'relevance':;
-          const relevanceOrder = { high: 3, medium: 2, low: 1 }
-          comparison = relevanceOrder[a.relevance] - relevanceOrder[b.relevance];
-          break;
-        case 'title':;
-          comparison = a.title.localeCompare(b.title);
-          break;
+  ],
+
+  const filteredItems = $2;
+      const matchesCategory = $2;
+      const matchesSubcategory = $2;
+      const matchesType = $2;
+      const matchesRelevance = $2;
+      return matchesSearch && matchesCategory && matchesSubcategory && matchesType && matchesRelevance
+    }),
+
+    // Sort items
+    filtered.sort((a, b) => {
+      let comparison = $2;
+      switch (sortBy) {
+        case 'date':
+          comparison = new Date(a.date).getTime() - new Date(b.date).getTime($2);
+          break,
+        case 'relevance':
+          const relevanceOrder = { high: 3, medium: 2, low: 1},
+          comparison = $2;
+          break,
+        case 'title':
+          comparison = a.title.localeCompare($2);
+          break
       }
-      return sortOrder === 'asc' ? comparison : -comparison;
-    });
-    return filtered;
-  }, [searchTerm, selectedCategory, selectedSubcategory, selectedType, selectedRelevance, sortBy, sortOrder]);
-  const getCategoryIcon = (category: string) => {const cat = categories.find(c => c.id === category);
-    return cat ? cat.icon : Globe;
-  }
-  const getRelevanceColor = (relevance: string) => {switch (relevance) {;
-      case 'high': return 'text-green-400';
-      case 'medium': return 'text-yellow-400';
-      case 'low': return 'text-red-400';
-      default: return 'text-gray-400';
+      return sortOrder = $2;
+    return filtered
+  }, [searchTerm, selectedCategory, selectedSubcategory, selectedType, selectedRelevance, sortBy, sortOrder]),
+
+  const getCategoryIcon = (category: string) => {
+    const cat = categories.find($2);
+    return cat ? cat.icon : Globe
+  },
+
+  const getRelevanceColor = $2;
+      case 'medium': return 'text-yellow-400',
+      case 'low': return 'text-red-400',
+      default: return 'text-gray-400'
     }
-}
+  },
+
   const getTypeIcon = (type: string) => {
-    const typeInfo = contentTypes.find(t => t.id === type)
+    const typeInfo = contentTypes.find($2);
     return typeInfo ? typeInfo.icon : Globe
-  }
+  },
+
   const clearAllFilters = () => {
-    setSearchTerm('')
-    setSelectedCategory('all')
-    setSelectedSubcategory('all')
-    setSelectedType('all')
-    setSelectedDateRange('all')
+    setSearchTerm($2);
+    setSelectedCategory($2);
+    setSelectedSubcategory($2);
+    setSelectedType($2);
+    setSelectedDateRange($2);
     setSelectedRelevance('all')
-  }
+  },
+
   return (
-    <div className=&quot;space-y-6&quot;>
+    <div className="space-y-6">
       {/* Search and Advanced Filters */}
-      <div className=&quot;space-y-4&quot;>
+      <div className="space-y-4">
         {/* Search Bar */}
-        <div className=&quot;relative&quot;>
-          <Search className=&quot;absolute left-3 top-1/2 transform -translate-y-1/2 text-white/50 w-5 h-5&quot; />
+        <div className="relative">
+          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-white/50 w-5 h-5" />
           <input
-            type=&quot;text&quot;
-            placeholder=&quot;Search content by title, description, tags, or keywords...&quot;
+            type="text"
+            placeholder="Search content by title, description, tags, or keywords..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            className=&quot;w-full pl-10 pr-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 transition-all duration-200&quot;
+            className="w-full pl-10 pr-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 transition-all duration-200"
           />
         </div>
+
         {/* Advanced Filter Controls */}
-        <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4&quot;>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
           {/* Category Filter */}
           <div>
-            <label className=&quot;block text-sm font-medium text-white/70 mb-2&quot;>Category</label>
+            <label className="block text-sm font-medium text-white/70 mb-2">Category</label>
             <select
               value={selectedCategory}
-              onChange={(e) => {setSelectedCategory(e.target.value);
-                setSelectedSubcategory('all');
+              onChange={(e) => {
+                setSelectedCategory($2);
+                setSelectedSubcategory('all')
               }}
-className=&quot;w-full px-3 py-2 bg-white/5 border border-white/10 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 transition-all duration-200&quot;
-            >
-              {categories.map(category => (
-                <option key={category.id} value={category.id}>
-                  {category.name} ({category.count})
-                </option>
-              ))}
+className=&quot;w - full px - 3 py - 2 bg - white / 5 border border - white / 10 rounded - lg text - white "focus": outline - none "focus":ring - 2 "focus":ring - cyan - 500 / 50 "focus":border - cyan - 500 / 50 transition - all duration - 200 & quot>
+
+              {categories.map (category => (<option key={category.id} value={category.i
+}>;
+                  {category.name} ({category.count})</option>))}
             </select>;
           </div>;
           {/* Subcategory Filter */}
-<div>
-            <label className=&quot;block text-sm font-medium text-white/70 mb-2&quot;>Subcategory</label>
-            <select
-              value={selectedSubcategory}
-              onChange={(e) => setSelectedSubcategory(e.target.value)}
-              className=&quot;w-full px-3 py-2 bg-white/5 border border-white/10 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 transition-all duration-200&quot;
-            >
-              <option value=&quot;all&quot;>All Subcategories</option>
-              {selectedCategory !== 'all' && categories.find(c => c.id === selectedCategory)?.subcategories?.map(sub => (
-                <option key={sub} value={sub}>
-                  {sub.replace('- ').replace(/\b\w/g, l => l.toUpperCase())}
-                </option>;
-              ))}
-            </select>;
+<div>;
+            <label className=&quot;block text - sm font - medium text - white / 70 mb - 2&quot;>Subcategory</label>;<select;
+              value={selected_subcategory}
+              on_change={(e) => setSelectedSubcategory (e.target.value)}
+              className=&quot;w - full px - 3 py - 2 bg - white / 5 border border - white / 10 rounded - lg text - white "focus":outline - none "focus":ring - 2 "focus":ring - cyan - 500 / 50 "focus":border - cyan - 500 / 50 transition - all duration - 200 & quot>
+
+              <option value=&quot;all & quot;>All Subcategories</option>;
+              {selected_category !== 'all' && categories.find (c => c.id === selected_category)?.subcategories?.map (sub => (<option key={sub} value={sub}>;{sub.replace ('- ').replace (/\b\w / g, l => { return l.toUpperCase ())}'
+                </option>))}
+            </select>; }
           </div>;
           {/* Content Type Filter */}
-<div>
-            <label className=&quot;block text-sm font-medium text-white/70 mb-2&quot;>Content Type</label>
-            <select
-              value={selectedType}
-              onChange={(e) => setSelectedType(e.target.value)}
-              className=&quot;w-full px-3 py-2 bg-white/5 border border-white/10 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 transition-all duration-200&quot;
-            >
-              {contentTypes.map(type => (
-                <option key={type.id} value={type.id}>
-                  {type.name}
-                </option>;
-              ))}
+<div>;
+            <label className=&quot;block text - sm font - medium text - white / 70 mb - 2&quot;>Content Type</label>;<select;
+              value={selected_type}
+              on_change={(e) => setSelectedType (e.target.value)}
+              className=&quot;w - full px - 3 py - 2 bg - white / 5 border border - white / 10 rounded - lg text - white "focus": outline - none "focus":ring - 2 "focus":ring - cyan - 500 / 50 "focus":border - cyan - 500 / 50 transition - all duration - 200 & quot>
+
+              {content_types.map (type => (<option key={type.id} value={type.i
+}>;{type.name}
+                </option>))}
             </select>;
           </div>;
-          {/* Relevance Filter */}
-<div>
-            <label className=&quot;block text-sm font-medium text-white/70 mb-2&quot;>Relevance</label>
-            <select
-              value={selectedRelevance}
-              onChange={(e) => setSelectedRelevance(e.target.value)}
-              className=&quot;w-full px-3 py-2 bg-white/5 border border-white/10 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 transition-all duration-200&quot;
-            >
-              {relevanceLevels.map(level => (
-                <option key={level.id} value={level.id}>
-                  {level.name}
-                </option>;
-              ))}
+          {/* Relevance Filter */}<div>;
+            <label className=&quot;block text - sm font - medium text - white / 70 mb - 2&quot;>Relevance</label>;<select;
+              value={selected_relevance}
+              on_change={(e) => setSelectedRelevance (e.target.value)}
+              className=&quot;w - full px - 3 py - 2 bg - white / 5 border border - white / 10 rounded - lg text - white "focus": outline - none "focus":ring - 2 "focus":ring - cyan - 500 / 50 "focus":border - cyan - 500 / 50 transition - all duration - 200 & quot>
+
+              {relevance_levels.map (level => (<option key={level.id} value={level.i
+}>;{level.name}
+                </option>))}
             </select>;
           </div>;
         </div>;
-        {/* Sort Controls and Clear Filters */}
-<div className=&quot;flex flex-wrap items-center justify-between gap-4&quot;>
-          <div className=&quot;flex items-center gap-4&quot;>
-            <div className=&quot;flex items-center gap-2&quot;>
-              <label className=&quot;text-sm text-white/70&quot;>Sort by:</label>
-              <select
-                value={sortBy}
-                onChange={(e) => setSortBy(e.target.value as 'date' | 'relevance' | 'title')}
-                className=&quot;px-3 py-1 bg-white/5 border border-white/10 rounded text-white text-sm focus:outline-none focus:ring-2 focus:ring-cyan-500/50&quot;
-              >
-                <option value=&quot;date&quot;>Date</option>
-                <option value=&quot;relevance&quot;>Relevance</option>
-                <option value=&quot;title&quot;>Title</option>
-              </select>
-              <button
-                onClick={() => setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc')}
-                className=&quot;p-1 bg-white/5 border border-white/10 rounded hover:bg-white/10 transition-colors duration-200&quot;
-              >
-                {sortOrder === 'asc' ? '↑' : '↓'}
-              </button>;
+        {/* Sort Controls and Clear Filters */}<div className=&quot;flex flex - wrap items - center justify - between gap - 4&quot>
+
+          <div className=&quot;flex items - center gap - 4&quot>
+
+            <div className=&quot;flex items - center gap - 2&quot>
+
+              <label className=&quot;text - sm text - white / 70 & quot;>Sort "by":</label>;<select;
+                value={sort_by}
+                on_change={(e) => setSortBy (e.target.value as 'date' | 'relevance' | 'title')}'
+                className=&quot;px - 3 py - 1 bg - white / 5 border border - white / 10 rounded text - white text - sm "focus":outline - none "focus":ring - 2 "focus":ring - cyan - 500 / 50 & quot>
+
+                <option value=&quot;date & quot;>Date</option>;
+                <option value=&quot;relevance & quot;>Relevance</option>;
+                <option value=&quot;title & quot;>Title</option>;
+              </select>;
+              <button;
+                on_click={() => setSortOrder (sort_order === 'asc' ? 'desc' : 'asc')}'
+                className=&quot;p - 1 bg - white / 5 border border - white / 10 rounded "hover":bg - white / 10 transition - colors duration - 200 & quot>
+</button>;
             </div>;
           </div>;
-          <button;
-            onClick={clearAllFilters}
-className=&quot;px-4 py-2 bg-white/5 border border-white/10 rounded-lg text-white/70 hover:text-white hover:bg-white/10 transition-all duration-200&quot;
-          >
-            Clear All Filters
-          </button>
+          <button;{/* Category Pills */}
+      <div>;
+        <div className=&quot;flex flex - wrap gap - 2&quot>
+
+          {categories.map (category => { return (<button; }key={category.id}
+              }`}>;`              <category.icon className=&quot;w - 4 h - 4&quot; />;
+              {category.name}
+              <span className="text-xs bg-white/10 px-2 py-1 rounded-full">
+                {category.count}
+              </span>
+            </button>
+          ))}
         </div>
       </div>
-      {/* Category Pills */}
-      <div>
-        <div className=&quot;flex flex-wrap gap-2&quot;>
-          {categories.map(category => (
-            <button
-              key={category.id}
-              onClick={() => setSelectedCategory(category.id)}
-              className={`flex items-center gap-2 px-4 py-2 rounded-full border transition-all duration-200 ${selectedCategory === category.id;
-                  ? 'border-cyan-500 bg-cyan-500/20 text-cyan-300';
-                  : 'border-white/10 bg-white/5 text-white/70 hover:border-white/20 hover:bg-white/10';
-              }`}
->
-              <category.icon className=&quot;w-4 h-4&quot; />
-              {category.name}
-              <span className=&quot;text-xs bg-white/10 px-2 py-1 rounded-full&quot;>
-                {category.count}
-              </span>;
-            </button>;
-          ))}
-        </div>;
-      </div>;
-      {/* Results Summary */}
-<div className=&quot;text-sm text-white/60&quot;>
-        Showing {filteredItems.length} of {contentItems.length} items
-        {searchTerm && ` matching &quot;${searchTerm}&quot;`}
-        {selectedCategory !== 'all' && ` in ${categories.find(c => c.id === selectedCategory)?.name}`}
-        {selectedType !== 'all' && ` of type ${contentTypes.find(t => t.id === selectedType)?.name}`}
-      </div>;
-      {/* Content Grid */}
-                  {item.type}
+
+        Showing {filtered_items.length} of {content_items.length} items;
+        {search_term && ` matching &quot;${search_term}&quot;`}`        {selected_category !== 'all' && ` in ${categories.find (c => c.id === selected_category)?.name}`}`        {selected_type !== 'all' && ` of type ${content_types.find (t => { return t.id === selected_type)?.name}`}`
+      </div>; }
+      {/* Content Grid */}{item.type}
                 </div>;
               </div>;
+              {/* Title and Description */}<h3 className=&quot;text - lg font - semibold text - white mb - 2 group - "hover": text - cyan - 300 transition - colors duration - 200 & quot>
+
+      {/* Content Grid */}
+      <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">
+        {filteredItems.map((item) => {
+          const CategoryIcon = getCategoryIcon($2);
+          const TypeIcon = getTypeIcon($2);
+          const category = categories.find($2);
+          return (
+            <div key={item.id} className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 p-6 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105">
+              <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
+              
+              {/* Header with Category and Type */}
+              <div className="flex items-center justify-between mb-3">
+                <div className="flex items-center gap-2">
+                  <div className={`w-8 h-8 rounded-lg bg-gradient-to-br ${category?.color || 'from-gray-500 to-gray-600'} p-2 flex items-center justify-center`}>
+                    <CategoryIcon className="w-4 h-4 text-white" />
+                  </div>
+                  <span className="text-xs text-white/60 uppercase tracking-wider">
+                    {category?.name}
+                  </span>
+                </div>
+                <div className="flex items-center gap-1 text-xs text-white/50">
+                  <TypeIcon className="w-3 h-3" />
+                  {item.type}
+                </div>
+              </div>
+
               {/* Title and Description */}
-<h3 className=&quot;text-lg font-semibold text-white mb-2 group-hover:text-cyan-300 transition-colors duration-200&quot;>
+              <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-cyan-300 transition-colors duration-200">
                 {item.title}
-              </h3>
-              <p className=&quot;text-sm text-white/75 mb-4 leading-relaxed&quot;>
-                {item.desc}
+                {item.des
+}
               </p>;
               {/* Tags */}
-<div className=&quot;flex flex-wrap gap-1 mb-4&quot;>
+              <div className="flex flex-wrap gap-1 mb-4">
                 {item.tags.slice(0, 3).map((tag, index) => (
+<<<<<<< HEAD
+                  <span key = $2;
+export default ContentCategorizer,
+=======
                   <span key={index} className=&quot;px-2 py-1 bg-white/5 border border-white/10 rounded text-xs text-white/60&quot;>
                     {tag}
                   </span>;
@@ -486,13 +502,14 @@ className=&quot;px-4 py-2 bg-white/5 border border-white/10 rounded-lg text-whit
                 </span>
               </div>
               {/* Source and Action */}
-              <div className=&quot;flex items-center justify-between&quot;>
-                <span className=&quot;text-xs text-white/40&quot;>
-                  Source: {item.source}
-                </span>
-                <a
+              <div className=&quot;flex items - center justify - between & quot>
+
+                <span className=&quot;text - xs text - white / 40 & quot>
+
+                  "Source": {item.source}
                   href={item.href}
-        })}
+        }
+}
       </div>;
       {/* No Results */}
 {filteredItems.length === 0 && (
@@ -515,3 +532,4 @@ className=&quot;px-4 py-2 bg-white/5 border border-white/10 rounded-lg text-whit
 }
 export default ContentCategorizer;
 >>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

@@ -3,7 +3,7 @@
 ) => {
   return $3;}
 }
- return ( <div className=\"w-full\" />\"\" <div className=\"flex space-x-1 border-b border-gray-200\" /> {tabs.map((tab) => ( <button key={tab.id} onClick={() = /> onTabChange(tab.id)} className={`px-4 py-2 text-sm font-medium rounded-t-lg transition-colors ${ activeTab === tab.id ? 'bg-white text-blue-600 border-b-2 border-blue-600' : 'text-gray-500 hover: text-gray-700 hover:bg-gray-50' }`} > {tab.label} </button> ))} </div> <div\" key={activeTab}\"\" className=\"mt-4\"  /> {tabs.find(tab => tab.id === activeTab)?.content} </div> </div> ),
+ return ( <div className="w-full" />"" <div className="flex space-x-1 border-b border-gray-200" /> {tabs.map((tab) => ( <button key={tab.id} onClick={() = /> onTabChange(tab.id)} className={`px-4 py-2 text-sm font-medium rounded-t-lg transition-colors ${ activeTab === tab.id ? 'bg-white text-blue-600 border-b-2 border-blue-600' : 'text-gray-500 hover: text-gray-700 hover:bg-gray-50' }`} > {tab.label} </button> ))} </div> <div" key={activeTab}"" className="mt-4"  /> {tabs.find(tab => tab.id === activeTab)?.content} </div> </div> ),
 }
 
 const TabsList = (
@@ -36,7 +36,7 @@ const TabsTrigger = (
 export { Tabs, TabsContent, TabsList, TabsTrigger;}
 }
 
-export default Tabs';'\"`;
+export default Tabs';'"`;
 
 const Tabs = (
 
@@ -76,14 +76,14 @@ const TabsTrigger = (
 export { Tabs, TabsContent, TabsList, TabsTrigger;}
 }
 
-export default Tabs';';'`\"\";
+export default Tabs';';'`"";
 
 const Tabs = (
 
 ) => {
   return $3;}
 }
- return ( <div className=\"w-full\" />\"\" <div className=\"flex space-x-1 border-b border-gray-200\" /> {tabs.map((tab) => ( <button key={tab.id} onClick={() = /> onTabChange(tab.id)} className={`px-4 py-2 text-sm font-medium rounded-t-lg transition-colors ${ activeTab === tab.id ? 'bg-white text-blue-600 border-b-2 border-blue-600' : 'text-gray-500 hover: text-gray-700 hover:bg-gray-50' }`} > {tab.label} </button> ))} </div> <div\" key={activeTab}\"\" className=\"mt-4\"  /> {tabs.find(tab => tab.id === activeTab)?.content} </div> </div> ),
+ return ( <div className="w-full" />"" <div className="flex space-x-1 border-b border-gray-200" /> {tabs.map((tab) => ( <button key={tab.id} onClick={() = /> onTabChange(tab.id)} className={`px-4 py-2 text-sm font-medium rounded-t-lg transition-colors ${ activeTab === tab.id ? 'bg-white text-blue-600 border-b-2 border-blue-600' : 'text-gray-500 hover: text-gray-700 hover:bg-gray-50' }`} > {tab.label} </button> ))} </div> <div" key={activeTab}"" className="mt-4"  /> {tabs.find(tab => tab.id === activeTab)?.content} </div> </div> ),
 }
 
 const TabsList = (
@@ -116,7 +116,7 @@ const TabsTrigger = (
 export { Tabs, TabsContent, TabsList, TabsTrigger;}
 }
 
-export default Tabs';';\"`;
+export default Tabs';';"`;
 
 const Tabs = (
 
@@ -156,4 +156,4 @@ const TabsTrigger = (
 export { Tabs, TabsContent, TabsList, TabsTrigger;}
 }
 
-export default Tabs';';'`\"\";
+export default Tabs';';'`"";

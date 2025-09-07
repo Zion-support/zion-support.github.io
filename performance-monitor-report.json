@@ -1,21 +1,18 @@
 {
-  "timestamp": "2025-09-07T10:14:29.207Z",
-  "buildTime": 0,
-  "bundleSize": 185617814,
-  "pageLoadTime": 0,
-  "memoryUsage": {
-    "rss": 44457984,
-    "heapTotal": 5308416,
-    "heapUsed": 3656592,
-    "external": 1178203,
-    "arrayBuffers": 10515
+  "timestamp": "2025-09-07T02:53:44.975Z",
+  "metrics": {
+    "bundleSize": 0,
+    "loadTime": 0,
+    "memoryUsage": 4937776,
+    "fileCount": 1834
   },
   "recommendations": [
-    {
-      "type": "bundle_size",
-      "priority": "high",
-      "message": "Bundle size is large (>5MB). Consider code splitting and lazy loading.",
-      "action": "Implement dynamic imports and optimize dependencies"
-    }
-  ]
+    "Large number of source files. Consider organizing into smaller modules."
+  ],
+  "summary": {
+    "bundleSizeMB": "0.00",
+    "memoryUsageMB": "4.71",
+    "fileCount": 1834,
+    "recommendationsCount": 1
+  }
 }

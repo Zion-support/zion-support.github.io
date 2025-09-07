@@ -1,60 +1,33 @@
-const fs = require("child_process");"const path = require("path")class SEOImprover { constructor() { this.projectRoot = process.cwd()} async generateSitemap() {" console.log(" Generating sitemap.")" const sitemapContent = `<?xml version="1.0" encoding="UTF-8"?>"<urlset xmlns="http: /www.sitemaps.org/schemas/sitemap/0.9"> <url> <loc>https:/bolt.new.zion.app/</loc> <lastmod>${new Date().toISOString()}</lastmod> <changefreq>daily</changefreq> <priority>1.0</priority> </url> <url>" <loc>https: /bolt.new.zion.app/about</loc> <lastmod>${new Date().toISOString()}</lastmod> <changefreq>weekly</changefreq> <priority>0.8</priority> </url> <url>" <loc>https: /bolt.new.zion.app/services</loc> <lastmod>${new Date().toISOString()}</lastmod> <changefreq>weekly</changefreq> <priority>0.8</priority> </url> <url>" <loc>https: /bolt.new.zion.app/contact</loc> <lastmod>${new Date().toISOString()}</lastmod> <changefreq>monthly</changefreq> <priority>0.6</priority> </url>`</urlset>`" fs.writeFileSync(path.join(this.projectRoot, "public/sitemap.xml"), sitemapContent)" console.log(" Sitemap generated")} async generateRobotsTxt() {" console.log(" Generating robots.txt.")" const robotsContent = "User-agent:Allow:Sitemap: https:/bolt.new.zion.app/sitemap.xml# Block access to admin areasDisallow: /adminDisallow: /apiDisallow: /_nextDisallow: /private# Allow access to important pagesAllow:Allow: /aboutAllow: /services"Allow: /contact"" fs.writeFileSync(path.join(this.projectRoot, "public/robots.txt"), robotsContent)" console.log(" robots.txt generated")} async addMetaTags() {" console.log(" Adding meta tags.")" const metaConfig = "/ Meta tags configurationmodule.exports = const metaTags = {" title: "Bolt.new Zion App - Advanced Web Development Solutions";" description: "Professional web development services with cutting-edge technology and innovative solutions.";" keywords: "web development, react, nextjs, typescript, full-stack development";" author: "Zion Tech Group";" viewport: "width=device-width, initial-scale=1";" robots: "index, follow";" og: {title: "Bolt.new Zion App - Advanced Web Development Solutions",description: "Professional web development services with cutting-edge technology and innovative solutions.",type: "website";" url: "https:/bolt.new.zion.app";" image: "https:/bolt.new.zion.app/og-image.jpg"};" twitter: {card: "summary_large_image",title: "Bolt.new Zion App - Advanced Web Development Solutions",description: "Professional web development services with cutting-edge technology and innovative solutions.";" image: "https:/bolt.new.zion.app/og-image.jpg"}}module.exports = default metaTags""" fs.writeFileSync(path.join(this.projectRoot, "config/meta-tags.js"), metaConfig)" console.log(" Meta tags configuration created")} async run() { await this.generateSitemap() await this.generateRobotsTxt() await this.addMetaTags()" console.log(" SEO improvement completed!")}}const improver = new SEOImprover()improver.run().catch(console.error)"`"`
+<<<<<<< HEAD
 const fs = require("child_process")
 const path = require("path")
-class SEOImprover {
-  constructor() {
-    this.projectRoot = process.cwd()}
-  async generateSitemap() {
-    const sitemapContent = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns=""http": //www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://bolt.new.zion.app/</loc>
-    <lastmod>${new Date().toISOString()}</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>"https": //bolt.new.zion.app/about</loc>
-    <lastmod>${new Date().toISOString()}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>"https": //bolt.new.zion.app/services</loc>
-    <lastmod>${new Date().toISOString()}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>"https": //bolt.new.zion.app/contact</loc>
-    <lastmod>${new Date().toISOString()}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-</urlset>`
-    fs.writeFileSync(path.join(this.projectRoot, "public/sitemap.xml"), sitemapContent)
-    }
-  async generateRobotsTxt() {
-    const robotsContent = "User-"agent": *
-Allow: /
-Sitemap: https://bolt.new.zion.app/sitemap.xml
-# Block access to admin areas
-Disallow: /admin/
-Disallow: /api/
-Disallow: /_next/
-Disallow: /private/
-# Allow access to important pages
-Allow: /
-Allow: /about
-Allow: /services
-Allow: /contact"
-    fs.writeFileSync(path.join(this.projectRoot, "public/robots.txt"), robotsContent)
-    }
-  async addMetaTags() {
-    console.log("� Generating sitemap...")
+
+
+
 
 const fs = require("child_process")
 const path = require("path")
+const fs = require("child_process")
+const path = require("path")
+    console.log("� Generating sitemap...")
+
+    console.log("� Generating sitemap...")
+=======
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+const fs = require("child_process")
+const path = require("path")
+    console.log("� Generating sitemap...")
     const sitemapContent = `<?xml version="1.0" encoding="UTF-8"
 <urlset xmlns=""http": //www.sitemaps.org/schemas/sitemap/0.9"
     <loc>"https"
@@ -81,33 +54,58 @@ Allow: /contact"
   "twitter": {card: "summary_large_image","title": "Bolt.new Zion App - Advanced Web Development Solutions","description": "Professional web development services with cutting-edge technology and innovative solutions."}
     image: "https://bolt.new.zion.app/og-image.jpg"
 "
-    fs.writeFileSync(path.join(this.projectRoot, "config/meta-tags.js"), metaConfig)
-    }
-  async run() {
-    await this.generateSitemap()
-    await this.generateRobotsTxt()
-    await this.addMetaTags()
-    }
-}
-const improver = new SEOImprover()
-improver.run().catch(console.error)
+<<<<<<< HEAD
     fs.writeFileSync(path.join(this.projectRoot, "config/meta-tags.js")
 // console.log(" Meta tags configuration created")
     console.log(" SEO improvement completed!")
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
     fs.writeFileSync(path.join(this.projectRoot, "config/meta-tags.js")
 // console.log(" Meta tags configuration created")
     console.log(" SEO improvement completed!")
-fs.writeFileSync(path.join(this.projectRoot, "config/meta-tags.js")
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+    fs.writeFileSync(path.join(this.projectRoot, "config/meta-tags.js")
 // console.log(" Meta tags configuration created")
     console.log(" SEO improvement completed!")
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 
     fs.writeFileSync(path.join(this.projectRoot, "config/meta-tags.js")
 // console.log(" Meta tags configuration created")
     console.log(" SEO improvement completed!")
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
 
     fs.writeFileSync(path.join(this.projectRoot, "config/meta-tags.js")
 // console.log(" Meta tags configuration created")
     console.log(" SEO improvement completed!")
-fs.writeFileSync(path.join(this.projectRoot, "config/meta-tags.js")
+<<<<<<< HEAD
+    fs.writeFileSync(path.join(this.projectRoot, "config/meta-tags.js")
 // console.log(" Meta tags configuration created")
     console.log(" SEO improvement completed!")
+=======
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

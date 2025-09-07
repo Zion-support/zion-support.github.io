@@ -270,6 +270,7 @@ if (require.main === module) {
   const auditor = new SecurityAuditor();
   auditor.run()
     .then((report) => {
+
       
       
       
@@ -279,6 +280,7 @@ if (require.main === module) {
       process.exit(1)})}
 
 module.exports = SecurityAuditor;
+
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')

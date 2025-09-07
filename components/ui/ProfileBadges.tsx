@@ -1,57 +1,51 @@
 <<<<<<< HEAD
+import React from 'react';
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
-import React from 'react';
-import type { KycProfile } from '../../utils / kyc';
-import { getBadgeLabels  } from '../../utils / kyc';
-import { VerifiedBadge  } from './VerifiedBadge';
+import React from 'react';'
+import type { KycProfile } from '../../utils / kyc';'
+import { getBadgeLabels  } from '../../utils / kyc';'
+import { VerifiedBadge  } from './VerifiedBadge';'
 
 export /**;
  * ProfileBadges - Function description;
  */;
-function ProfileBadges() {const labels = getBadgeLabels (profile || undefined;}
+function ProfileBadges() {const labels = getBadgeLabels (profile || undefined;
+  }
   return <VerifiedBadge labels={labels} />;
-
 export /**;
  * ProfileBadges - Function description;
  */;
-function ProfileBadges() {const labels = getBadgeLabels (profile || undefined;}
-  return <VerifiedBadge labels={labels} />;}import type { KycProfile } from '../../utils/kyc';
-import { getBadgeLabels  } from '../../utils/kyc';
+function ProfileBadges() {const labels = getBadgeLabels (profile || undefined;
+  }
+  return <VerifiedBadge labels={labels} />;}import type { KycProfile } from '../../utils/kyc';'
+import { getBadgeLabels  } from '../../utils/kyc';'
 
-export function ProfileBadges() {const labels = getBadgeLabels(profile || undefined;}
+export function ProfileBadges() {const labels = getBadgeLabels(profile || undefined;
+  }
   return <VerifiedBadge labels={labels} />;
 
-export function ProfileBadges() {const labels = getBadgeLabels(profile || undefined);}
+export function ProfileBadges() {const labels = getBadgeLabels(profile || undefined);
+  }
   return <VerifiedBadge labels={labels} />;
 }
 
-export function ProfileBadges() {const labels = null;}
+export function ProfileBadges() {const labels = null;
+  }
   return <VerifiedBadge labels={labels} />;
 
 }
 
-import React from 'react';
+import React from 'react';'
 
-=======
-import React from 'react',
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
-import type { KycProfile } from '../../utils/kyc';
-import { getBadgeLabels } from '../../utils/kyc';
-import { VerifiedBadge } from './VerifiedBadge';
-export function ProfileBadges({ profile }: { profile?: KycProfile | null }) {
-export function ProfileBadges({ profile }: { profile?: KycProfile | null }) {
+import type { KycProfile } from '../../utils/kyc';'
+import { getBadgeLabels } from '../../utils/kyc';'
+import { VerifiedBadge } from './VerifiedBadge';'
 
-  const labels = getBadgeLabels(profile |undefined);
-  return <VerifiedBadge labels={labels} />;export function ProfileBadges({ profile }: { profile?: KycProfile | null }) {
-  const labels = getBadgeLabels(profile |undefined);
-
+export function ProfileBadges() {
+  }
+  const labels = null;
   return <VerifiedBadge labels={labels} />
 }
-<<<<<<< HEAD
-
-=======
-}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

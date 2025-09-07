@@ -1,0 +1,3 @@
+ const ContactForm = () => { const [formData, setFormData] = useState ({ "firstName": ', "lastName": ', "email": ', "comp": ', "phone": ', "service": ', "message":  ,'
+})  const [isSubmitting, setIsSubmitting] = useState (false)  const [submitStatus, setSubmitStatus] =;
+  useState ('idle')  const handleSubmit = async (e) => { e.preventDefault ()  setIsSubmitting (true)  setSubmitStatus ('idle')  try {'''"";

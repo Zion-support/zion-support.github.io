@@ -9,4 +9,4 @@ export const LoadingOverlay = (
 }
 }
 
-export default LoadingOverlay';'''\"'\";
+export default LoadingOverlay';'''"'";

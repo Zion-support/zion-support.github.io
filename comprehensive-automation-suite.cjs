@@ -1,7 +1,13 @@
+#!/usr/bin/env node
 
 const { execSync } = require('child_process');
 const fs = require('fs');
+const path = require('path');
 
+/**
+ * Comprehensive Automation Suite
+ * Fixes issues and runs all automation tasks
+ */
 class ComprehensiveAutomationSuite {
   constructor() {
     this.projectRoot = process.cwd();
@@ -436,10 +442,10 @@ class ComprehensiveAutomationSuite {
     return recommendations;
   }
 
-
   async run() {
-    console.log('🚀 Running Comprehensive Automation Suite...');
-    
+    this.log('🚀 Starting Comprehensive Automation Suite');
+    this.log('='.repeat(60));
+
     try {
       await this.fixDependencies();
       await this.improveCodeQuality();
@@ -449,19 +455,18 @@ class ComprehensiveAutomationSuite {
       await this.improveAccessibility();
       await this.optimizePerformance();
       await this.deployChanges();
-      this.generateDetailedReport();
     } catch (error) {
-      this.log(`Automation suite failed: ${error.message}`, 'ERROR');
-      process.exit(1);
+      this.log(`Fatal error: ${error.message}`, 'ERROR');
+    } finally {
+      this.generateDetailedReport();
     }
   }
 }
 
-// Run the automation suite
+// Run the comprehensive automation suite
 if (require.main === module) {
   const suite = new ComprehensiveAutomationSuite();
   suite.run().catch(console.error);
 }
 
 module.exports = ComprehensiveAutomationSuite;
-

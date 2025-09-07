@@ -1,56 +1,53 @@
-#!/usr/bin/env node
+<<<<<<< HEAD
+=======
+
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+#!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
-class DeploymentAutomation {
-  constructor() {
-    this.steps = []}
-  async deploy() {
-    const deploymentSteps = [{ "name": 'Install Dependencies', "cmd": 'npm install' },
-      { "name": 'Run Tests', "cmd": 'npm test' },
-      { "name": 'Build Project', "cmd": 'npm run build' },
-      { "name": 'Lint Check', "cmd": 'npm run lint' }
-    ];
-    for (const step of deploymentSteps) {
-      try {
-        execSync(step.cmd, { "stdio": 'inherit' });
-        this.steps.push({
-          "name": step.name,
-          "status": 'completed'
-        });
-        } catch (error) {
-        this.steps.push({
-          "name": step.name,
-          "status": 'failed',
-          "error": error.message
-        });
-        throw error}
-    }
-    }
-}
-if (require.main === module) {
-  const deployment = new DeploymentAutomation();
-  deployment.deploy().catch(console.error)}
-module.exports = DeploymentAutomation;
-#!/usr/bin/env node/usr/bin/env nodeconst fs = require("fs");"const path = require("path");"const { execSync } = require("child_process");class DeploymentAutomation { constructor() { this.steps = []} async deploy() {" console.log(" Starting deployment automation."); " const deploymentSteps = [{ name: "Install Dependencies", cmd: "npm install" },"" { name: "Run Tests", cmd: "npm test" },"" { name: "Build Project", cmd: "npm run build" },"" { name: "Lint Check", cmd: "npm run lint" } ]; for (const step of deploymentSteps) { try { console.log(` ${step.name}.`);"" execSync(step.cmd, { stdio: "inherit" }); this.steps.push({" name: step.name,"" status: "completed" });` console.log(` ${step.name} completed`)} catch (error) { this.steps.push({" name: step.name,"" status: "failed"," error: error.message });"` console.log(` ${step.name} failed: ${error.message}`); throw error} }" console.log(" Deployment automation completed successfully!")}}if (require.main === module) { const deployment = new DeploymentAutomation(); deployment.deploy().catch(console.error)}module.exports = DeploymentAutomation;""`"`
-#!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
-const { execSync } = require('child_process')
     console.log(' Starting deployment automation...')
-    const deploymentSteps = [{ "name": 'Install Dependencies', "cmd"}]
+const deploymentSteps = [{ "name": 'Install Dependencies', "cmd"}];
       { "name": 'Run Tests', "cmd"}
       { "name": 'Build Project', "cmd"}
       { "name": 'Lint Check', "cmd"}
         execSync(step.cmd, { "stdio"})
           "status"
-          "status"
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
           "status"
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
           "status"
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+          "status"
+<<<<<<< HEAD
           "status"
 
 
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
-"status"
-          "status"
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

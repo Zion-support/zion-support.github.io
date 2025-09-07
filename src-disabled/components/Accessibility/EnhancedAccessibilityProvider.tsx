@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useState, useEffect } from 'react' interface AccessibilitySettings  {highContrast: boolean;
-   reducedMotion: boolean;\"\";
+   reducedMotion: boolean;"";
    fontSize: 'small' | 'medium' | 'large';
    focusVisible: boolean;}
    screenReader: boolea}
@@ -7,11 +7,11 @@ import React, { createContext, useContext, useState, useEffect } from 'react' in
 
 interface AccessibilityContextType {
   settings: AccessibilitySettings;"
-   updateSettings: (settings: Partial<AccessibilitySettings />) => void\"\";}
+   updateSettings: (settings: Partial<AccessibilitySettings />) => void"";}
    resetSettings: () => void}
 }
 "
-const AccessibilityContext = createContext<AccessibilityContextType | undefined\"  />(undefined) const defaultSettings: AccessibilitySettings = { highContrast: false, reducedMotion: false, fontSize: 'medium'}
+const AccessibilityContext = createContext<AccessibilityContextType | undefined"  />(undefined) const defaultSettings: AccessibilitySettings = { highContrast: false, reducedMotion: false, fontSize: 'medium'}
   focusVisible: true, screenReader: fals;}
 }
 
@@ -28,5 +28,5 @@ export const AccessibilityProvider: React.FC<{ children: React.ReactNode }> = ({
   return $3;}
 };
   useEffect(() => {}"
-''\";}
+''";}
 }}"

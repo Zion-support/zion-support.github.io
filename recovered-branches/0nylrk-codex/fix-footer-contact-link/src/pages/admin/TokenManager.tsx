@@ -1,3 +1,6 @@
+import {useEffect, useState} from 'react';
+
+=======import { useEffect, useState  } from 'react';
 import { useEffect, useState  } from 'react';
 import { Header  } from '@/components/Header';
 import { Footer  } from '@/components/Footer';
@@ -11,45 +14,77 @@ import { ProtectedRoute  } from '@/components/ProtectedRoute';
 import { Tabs, TabsList, TabsTrigger, TabsContent  } from '@/components/ui/tabs';
 import { useToast } from '@/hooks/use-toast';
 export default function TokenManager() {
-  const { user } = useAuth();
-  const { toast } = useToast();
+  const { user } = useAuth($2);
+  const { toast } = useToast($2);
   const [transactions, setTransactions] = useState<TokenTransaction[]>([]),
-  const [userId, setUserId] = useState('');
-  const [amount, setAmount] = useState(0);
-
-  const isAdmin = user?.userType === 'admin';
+  const [userId, setUserId] = useState($2);
+  const [amount, setAmount] = useState($2);
+  const isAdmin = $2;
   useEffect(() => {
     if (isAdmin) fetchTransactions()
-  }, [isAdmin]);
+  }, [isAdmin]),
+
   const fetchTransactions = async () => {
     const { data, error } = await supabase
       .from('token_transactions')
       .select('*')
-      .order('created_at', { ascending: false })
-      .limit(100);
-    if (!error) setTransactions(data |[])
-  }
-  const handleIssue = async (type: 'earn' | 'burn') => {
-    if (!userId |amount <= 0) return
+      .order('created_at', { ascending: false})
+      .limit($2);
+    if (!error) setTransactions(data || [])
+  },
+
+  const handleIssue = $2;
     const res = await fetch(`/functions/v1/token-manager/${type === 'earn' ? 'earn' : 'burn'}`, {
-      method: 'POST'
-      headers: { 'Content-Type': 'application/json' }
-      body: JSON.stringify({ userId, amount })});
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ userId, amount })}),
     if (res.ok) {
-      toast({
-        title: 'Success'
-        description: 'Transaction processed'
-      });
+      toast($2);
       fetchTransactions()
     } else {
-      const err = await res.json();
+      const err = await res.json($2);
       toast({
         title: 'Error'
         description: err.error |'Failed'
         variant: 'destructive'
       })
     }
-  }
+export default function TokenManager() {;      .limit(100);
+    if (!error) setTransactions(data || []);
+  const handleIssue = async (type: 'earn' | 'burn') => {;
+    if (!userId || amount <= 0) return,;
+    const res = await fetch(`/functions/v1/token-manager/${type === 'earn' ? 'earn' : 'burn'}`, {;
+      method: 'POST',;
+      headers: { 'Content-Type': 'application/json' },;
+      body: JSON && JSON.stringify({ userId, amount })});
+    if (res && res.ok) {;      toast({;
+        title: 'Success',,
+  description: 'Transaction processed';
+      });
+      fetchTransactions();
+    } else {;
+      const err = await res && res.json();
+      toast({;
+        title: 'Error',,
+  description: err && err.error || 'Failed',;
+        variant: 'destructive';
+      });
+    }
+
+  },
+
+  return (
+              <TabsList>;
+                <TabsTrigger value="history">Transaction History</TabsTrigger>;
+              </TabsList>;
+              <TabsContent value="history">;
+                <ul className="space-y-2">;
+                  {transactions.map (tx => (
+                    <li key={tx.id} className="flex justify - between border - b py - 2 text-white">;
+                      <span>{tx.user_id}</span>;
+                      <span>{tx.transaction_type === 'earn' ? '+' : '-'}{tx.amount}</span>;
+                    </li>))}}
+  },
 
   return (
     <ProtectedRoute adminOnly>

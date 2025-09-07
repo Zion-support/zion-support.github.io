@@ -10,24 +10,22 @@ interface UseLocalStorageProps {
   // Add props here as needed
 }
 
-export const useLocalStorage = <T>(key: string, initialValue: T) => {
-    try {;
-    try {
-      const item = window.localStorage.getItem(key);
-      return item ? JSON.parse(item) : initialValue;
-    } catch (error) {
-      // Error reading localStorage key
-      return initialValue;
+export const useLocalStorage = <T>("key": string, "initialValue": T) => {
     }
   });
 
-  const setValue = (value: T | ((val: T) => T)) => {
+  const setValue = ("value": T | (("val": T) => T)) => {
+    }
     try {
-      const valueToStore =
+}
+const valueToStore =;
         value instanceof Function ? value(storedValue) : value;
+      setStoredValue(valueToStore)if (typeof window !== 'undefined') {window.localStorage.setItem(key, JSON.stringify(valueToStore))}'
+    } catch (error) {}return [storedValue, setValue] as const;
       setStoredValue(valueToStore);
 
-      if (typeof window !== 'undefined') {
+      if (typeof window !== 'undefined') {'
+        }
         window.localStorage.setItem(key, JSON.stringify(valueToStore));
       }
     } catch (error) {
@@ -51,22 +49,8 @@ export const useLocalStorage = <T>(key: string, initialValue: T) => {,
 
   return [storedValue, setValue] as const;
 }
-},;
-export const useLocalStorage = <T>(ke: y: string, initialValu: e: T) => {,;
-  const [storedValue, setStoredValue] = useState<T>(() => {,;
-    try {,;
-      const item = window.localStorage.getItem(key),;
-      return item ? JSON.parse(item) : initialValue} catch (error) {,;
-      console.error(`Error reading localStorage key "${key}":`, error),;
-      return initialValue}
-  }),;
-  const setValue = (valu: e: T | ((va: l: T) => T)) => {,;
-    try {,;
-      const valueToStore = value instanceof Function ? value(storedValue) : value,;
-      setStoredValue(valueToStore),;
-      window.localStorage.setItem(key, JSON.stringify(valueToStore))} catch (error) {,;
-      console.error(`Error setting localStorage key "${key}":`, error)}
-  },;
+      console.error(`Error setting localStorage key "${key}":`, error)}`
+};
   return [storedValue, setValue] as const}
 }
 }

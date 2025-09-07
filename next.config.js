@@ -1,12 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  // next@15 uses SWC by default; remove deprecated swcMinify flag
-  compress: true,
-  poweredByHeader: false,
-  eslint: { 
-    ignoreDuringBuilds: true 
+  eslint: {
+    ignoreDuringBuilds: true,
   },
+<<<<<<< HEAD
   typescript: { 
     ignoreBuildErrors: true 
   },
@@ -21,9 +19,15 @@ const nextConfig = {
   },
   
   // Image optimization
+=======
+  typescript: {
+    ignoreBuildErrors: true,
+  },
+>>>>>>> 716160b064bcc2ca60645a7e5c009cf722f6fb29
   images: {
-    domains: ["localhost", "ziontechgroup.com", "images.unsplash.com", "via.placeholder.com"],
+    domains: ['ziontechgroup.com', 'images.unsplash.com', 'via.placeholder.com'],
     formats: ['image/webp', 'image/avif'],
+<<<<<<< HEAD
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     minimumCacheTTL: 31536000, // 1 year
@@ -53,26 +57,71 @@ const nextConfig = {
         ]
       }
     ];
+=======
+    unoptimized: true,
+    minimumCacheTTL: 60,
+    dangerouslyAllowSVG: true,
+    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production'
+>>>>>>> 716160b064bcc2ca60645a7e5c009cf722f6fb29
+  },
+  experimental: {
+    optimizePackageImports: ['@heroicons/react'],
+  },
+  turbopack: {
+    rules: {
+      '*.svg': {
+        loaders: ['@svgr/webpack'],
+        as: '*.js',
+      },
+    },
+  },
+  poweredByHeader: false,
+  generateEtags: false,
+  compress: true,
   webpack: (config, { dev, isServer }) => {
-    // Completely exclude problematic directories from the build
-    config.module.rules.push({
-      test: /\.(ts|tsx)$/,
-      exclude: [
-        /node_modules/,
-        /api-backup/,
-        /pages\.disabled/,
-        /backup-pages/,
-        /\.backup/,
-        /\.disabled/,
-        /automation\/backups/,
-        /automation_backup/,
-        /broken_files_backup/,
-        /contracts/,
-        /hardhat/,
-        /^components\//, // Exclude root components directory
-      ]
-    });
+    // Exclude problematic directories from webpack compilation
+    config.watchOptions = {
+      ...config.watchOptions,
+      ignored: [
+        '**/node_modules/**',
+        '**/.git/**',
+        '**/pages_backup*/**',
+        '**/pages.*/**',
+        '**/pages-*/**',
+        '**/pages_disabled*/**',
+        '**/pages.disabled*/**',
+        '**/pages.broken*/**',
+        '**/pages.corrupted*/**',
+        '**/pages.old*/**',
+        '**/pages._*/**',
+        '**/pages.__*/**',
+        '**/backup-pages/**',
+        '**/src.pages.disabled/**',
+        '**/lib_backup*/**',
+        '**/src_backup*/**',
+        '**/corrupted-files-backup*/**',
+        '**/performance-reports*/**',
+        '**/log-analysis-reports*/**',
+        '**/link-reports*/**',
+        '**/lint-target*/**',
+        '**/monitoring*/**',
+        '**/pm2-automation*/**',
+        '**/automation/logs*/**',
+        '**/automation/backup*/**',
+        '**/performance-*.json',
+        '**/performance-*.js',
+        '**/performance-*.cjs',
+        '**/performance-*.sh',
+        '**/performance-*.html',
+        '**/performance-*.md',
+        '**/performance-*.txt'
+      ],
+      poll: 1000,
+      aggregateTimeout: 300
+    };
 
     // Add fallback for problematic modules
     config.resolve.fallback = {
@@ -81,6 +130,7 @@ const nextConfig = {
       net: false,
       tls: false
     };
+<<<<<<< HEAD
     
     // Development watch options
     if (dev) {
@@ -129,6 +179,14 @@ const nextConfig = {
     // period (in ms) where the server will keep pages in the buffer
     maxInactiveAge: 25 * 1000,
     // number of pages that should be kept simultaneously without being disposed
+=======
+
+    return config;
+  },
+  pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
+  onDemandEntries: {
+    maxInactiveAge: 25 * 1000,
+>>>>>>> 716160b064bcc2ca60645a7e5c009cf722f6fb29
     pagesBufferLength: 2
   }
 };

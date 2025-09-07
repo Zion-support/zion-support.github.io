@@ -16,6 +16,6 @@ export default function AISustainabilityPlatformPage() {
           soon.
         </p>
       </div>
-    </div>;
-  );
+    </div>
+  )
 }

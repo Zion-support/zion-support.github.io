@@ -44,7 +44,7 @@ const [activeTab, setActiveTab] = useState('overview');
 }`'';
                 }';';
                 await mintNFT(contracts[1]?.address || '', metadata)';';
-                setNftForm({ name: '',}
+                setNftForm({name: ''}
   description: '', image: '',}
 })'';
                 setShowMintNFT(false)';';
@@ -59,7 +59,7 @@ const [activeTab, setActiveTab] = useState('overview');
         if(transactionForm.to.trim() && transactionForm.value && wallet) {}
             try {}
                 await sendTransaction(transactionForm.to, transactionForm.value, transactionForm.data || null)'';
-                setTransactionForm({ to: '',}
+                setTransactionForm({to: ''}
   value: '', data: '',}
 })setShowSendTransaction(false)'';
                 trackEvent('blockchain', dashboard',transaction_sent')}
@@ -447,7 +447,7 @@ const [activeTab, setActiveTab] = useState('overview');
       </div>;
       {/* Mint NFT Modal */}'''';
       <AnimatePresence />'''';
-        {showMintNFT && (<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 ,}
+        {showMintNFT && (<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{opacity: 0 }
 } className='fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50' />;
             <motion.div initial = {}
   { scale: 0.9, opacity: 0;}
@@ -506,7 +506,7 @@ const [activeTab, setActiveTab] = useState('overview');
       </AnimatePresence>;
       {/* Send Transaction Modal */}'''';
       <AnimatePresence />'''';
-        {showSendTransaction && (<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 ,}
+        {showSendTransaction && (<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{opacity: 0 }
 } className='fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50' />;
             <motion.div initial = {}
   { scale: 0.9, opacity: 0;}

@@ -1,3 +1,4 @@
+const CommunityRoutes = () => {import { Fragment } from "react",
 import { Fragment } from "react",
 import { Route, Routes } from "react-router-dom",
 import { ProtectedRoute } from "../components/ProtectedRoute",
@@ -7,9 +8,8 @@ import ForumPostPage from "../pages/ForumPostPage",
 import CreatePostPage from "../pages/CreatePostPage",
 import EditPostPage from "../pages/EditPostPage";
 import CommunityProfilePage from "../pages/CommunityProfilePage";
-
 const CommunityRoutes = () => {
-  return (
+const CommunityRoutes = () => {;  return (
     <Routes>
       {/* Public routes */}
       <Route path="/community" element={<CommunityPage />} />
@@ -17,6 +17,24 @@ const CommunityRoutes = () => {
       <Route path="/community/category/:categoryId" element={<ForumCategoryPage />} />
       <Route path="/community/post/:postId" element={<ForumPostPage />} />
       <Route path="/community/profile/:userId" element={<CommunityProfilePage />} />
+
+const CommunityRoutes = () => {
+=======const CommunityRoutes = () => {;
+  return (
+    <Routes>;
+      {/* Public routes */}
+      <Route path="/community" element={<CommunityPage />} />
+      <Route path="/forum" element={<CommunityPage />} />
+      <Route
+        path="/community/category/:categoryId"
+        element={<ForumCategoryPage />}
+      />
+      <Route path="/community/post/:postId" element={<ForumPostPage />} />
+      <Route
+        path="/community/profile/:userId"
+        element={<CommunityProfilePage />}
+      />
+
       {/* Protected routes */}
       <Route
         path="/community/create"
@@ -36,5 +54,13 @@ const CommunityRoutes = () => {
       />
     </Routes>
   )
-}
-export default CommunityRoutes;
+};
+
+          </ProtectedRoute>;
+        }
+
+      />;
+    </Routes>;
+  );
+const CommunityRoutes = $2;
+export default CommunityRoutes,

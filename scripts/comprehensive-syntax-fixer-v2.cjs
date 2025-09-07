@@ -1,264 +1,172 @@
-:backup-problematic-files/scripts/comprehensive-syntax-fixer-v2.cjs
-#!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
-const { execSync } = require('child_process')
-///usr/bin/env node/usr/bin/env nodeconst fs = require("fs")"const path = require("path")"const { execSync } = require("child_process")"console.log(" Comprehensive Syntax Fixer v2.0")"console.log("==")class ComprehensiveSyntaxFixer { constructor() { this.fixedFiles = [] this.errors = [] this.patterns = [/ Fix corrupted import statements {" pattern: /const React = dynamic\(\(\) => import\("react"\), \{ ssr: false \}\)\s*return \(/g;"" replacement: "import React from "react"\nimport dynamic from "next/dynamic"\n\nconst Component = () => {\n return (" }; / Fix missing function declarations {"" pattern: /^const React = dynamic\(\(\) => import\("react"\), \{ ssr: false \}\)\s*$/gm;"" replacement: "import React from "react"\nimport dynamic from "next/dynamic"\n\nconst Component = () => {" }; / Fix corrupted JSX attributes"" {pattern: /content="([^"]*)"\s*\/>/g,replacement: "content="$1" />"}; / Fix malformed meta tags"" {pattern: /<meta name\s*=\s*"description\s*content="([^"]*)"\s*\/>/g,replacement: "<meta name="description" content="$1" />"}; / Fix viewport meta tags"" {pattern: /<meta name="viewport\s*content="width=device-width,"\s*initial-scale=1"\s*\/>/g,replacement: "<meta name="viewport" content="width=device-width, initial-scale=1" />"}; / Fix canonical links"" {pattern: /<link rel="canonical\s*href="https:"\s*\/\/[^"]*"\s*\/>/g,replacement: "<link rel="canonical" href="https:/ziontechgroup.com" />"}; / Fix corrupted Layout components {" pattern: /const Layout: React\.FCimport Layout from "\.\.\/components\/Layout",\s*<LayoutProps>/g;"" replacement: "import Layout from "./components/Layout"\n\ninterface LayoutProps {\n children: React.ReactNode\n title?: string\n description?: string\n}\n\nconst Component: React.FC<LayoutProps>" }; / Fix missing closing braces and parentheses {" pattern: /}\s*$/gm;"" replacement: "}\n}" }; / Fix corrupted array declarations"" {pattern: /import React from "react"\s*\]\s*$/gm,replacement: "import React from "react""}; / Fix corrupted function parameters {" pattern: /=\s*\(\{\s*,\s*children,/g;"" replacement: "= ({ children," }; / Fix corrupted string literals"" {pattern: /title\s*=\s*"([^"]*)",\s*$/gm,replacement: "title="$1","}; / Fix corrupted description strings"" {pattern: /description\s*=\s*"([^"]*)",\s*$/gm,replacement: "description="$1","}; / Fix corrupted JSX closing tags"" {pattern: /"\s*$/gm,replacement: """}; / Fix corrupted component declarations {"" pattern: /const\s+(\w+)\s*=\s*\(\{\s*children,\s*title\s*=\s*"([^"]*)",\s*description\s*=\s*"([^"]*)"\s*\}\s*\)\s*=>\s*\{/g;"" replacement: "const $1 = ({ children, title = "$2", description = "$3" }) => {" }; / Fix corrupted export statements"" {pattern: /export default\s*$/gm,replacement: "export default Component"}; / Fix corrupted TypeScript interfaces {" pattern: /interface\s+(\w+)\s*\{\s*children\?: React\.ReactNode,\s*title\?\: string,\s*description\?\: string,\s*\}/g;"" replacement: "interface $1 {\n children?: React.ReactNode\n title?: string\n description?: string\n}" }; / Fix corrupted import statements in utils {"" pattern: /^import\s+.*\s*from\s*[""][^""]*[""]\s*$/gm; replacement: (match) => {" if (match.includes("{") && match.includes("}")) { return match }"" return match.replace(/import\s+(\w+)\s*from\s*[""]([^""]*)[""]/, "import $1 from "$2"") } }; / Fix corrupted function declarations in utils {" pattern: /^const\s+(\w+)\s*=\s*\([^)]*\)\s*=>\s*\{$/gm;" replacement: "const $1 = () => {" }; / Fix corrupted object declarations {" pattern: /const\s+(\w+)\s*=\s*\{[^}]*\}/g;"" replacement: "const $1 = {}" }; / Fix corrupted array declarations"" {pattern: /const\s+(\w+)\s*=\s*\[[^\]]*\]/g,replacement: "const $1 = []"}; / Fix corrupted string concatenations"" {pattern: /"([^"]*)"\s*\+\s*"([^"]*)"/g,replacement: ""$1$2""}; / Fix corrupted template literals"" {pattern: /"([^"]*)"/g,replacement: ""$1""}; / Fix corrupted JSX expressions {" pattern: /\{([^}]*)\}/g;"" replacement: "{$1}" }; / Fix corrupted component props"" {pattern: /<(\w+)\s+([^>]*)\s*>/g,replacement: "<$1 $2>"}; / Fix corrupted closing tags"" {pattern: /<\/(\w+)>/g,replacement: "</$1>"}; / Fix corrupted self-closing tags"" {pattern: /<(\w+)\s+([^>]*)\s*\/>/g,replacement: "<$1 $2 />"}; / Fix corrupted comments"" {pattern: /\/\*([^*]|\*[^/])*\*\/g,replacement: ""}; / Fix corrupted single-line comments"" {pattern: /\/\/.*$/gm,replacement: "/ comment"}; / Fix corrupted semicolons"" {pattern: /,\s*$/gm,replacement: ","}; / Fix corrupted commas"" {pattern: /,\s*$/gm,replacement: ","}; / Fix corrupted parentheses"" {pattern: /\(\s*\)/g,replacement: "()"}; / Fix corrupted brackets"" {pattern: /\[\s*\]/g,replacement: "[]"}; / Fix corrupted braces {" pattern: /\{\s*\}/g;"" replacement: "{}" }; / Fix corrupted quotes"" {pattern: /"([^"]*)"/g,replacement: ""$1""}; / Fix corrupted double quotes"" {pattern: /"([^"]*)"/g,replacement: ""$1""}; / Fix corrupted backticks"" {pattern: /"([^"]*)"/g,replacement: ""$1""}; / Fix corrupted escape sequences"" {pattern: /\n/g,replacement: "\n"}; / Fix corrupted escape sequences"" {pattern: /\t/g,replacement: "\t"}; / Fix corrupted escape sequences"" {pattern: /\r/g,replacement: "\r"}; / Fix corrupted escape sequences"" {pattern: /\"/g,replacement: """}; / Fix corrupted escape sequences"" {pattern: /\"/g,replacement: """}; / Fix corrupted escape sequences"" {pattern: /\/g,replacement: "\"} ] } async fixFile(filePath) { try {" const content = fs.readFileSync(filePath, "utf8") let fixedContent = content let hasChanges = false / Apply all patterns for (const { pattern, replacement } of this.patterns) { const before = fixedContent" if (typeof replacement === "function") { fixedContent = fixedContent.replace(pattern, replacement) } else { fixedContent = fixedContent.replace(pattern, replacement) } if (before !== fixedContent) { hasChanges = true } } / Additional specific fixes fixedContent = this.applySpecificFixes(fixedContent, filePath) if (hasChanges) {" fs.writeFileSync(filePath, fixedContent, "utf8") this.fixedFiles.push(filePath)" console.log(` Fixed: ${filePath}`) return true } return false } catch (error) {" this.errors.push({ file: filePath, error: error.message })` console.log(` Error fixing ${filePath}: ${error.message}`) return false } } applySpecificFixes(content, filePath) { / Fix specific file types" if (filePath.endsWith(".tsx") | filePath.endsWith(".jsx")) { / Fix React component structure" if (!content.includes("import React") && content.includes("return (")) {"" content = "import React from "react"\n" + content } / Fix missing export default" if (content.includes("return (") && !content.includes("export default")) {" content += "\n\nexport default Component" } / Fix missing function declaration" if (content.includes("return (") && !content.includes("const ") && !content.includes("function ")) {" content = "const Component = () => {\n" + content } }" if (filePath.endsWith(".ts") | filePath.endsWith(".js")) { / Fix missing imports" if (content.includes("React.") && !content.includes("import React")) {"" content = "import React from "react"\n" + content } } return content } async fixDirectory(dirPath) {" const files = fs.readdirSync(dirPath, { withFileTypes: true }) for (const file of files) { const fullPath = path.join(dirPath, file.name) if (file.isDirectory()) { await this.fixDirectory(fullPath) } else if (file.isFile() && this.shouldFixFile(fullPath)) { await this.fixFile(fullPath) } } } shouldFixFile(filePath) { const ext = path.extname(filePath)" return [".tsx", ".jsx", ".ts", ".js"].includes(ext) &&" !filePath.includes("node_modules") &&" !filePath.includes(".next") &&" !filePath.includes("dist") } async run() {" console.log(" Starting comprehensive syntax fixing.")" const directories = ["components","pages","src";" "utils";" "services"] for (const dir of directories) { if (fs.existsSync(dir)) {"` console.log(` Processing directory: ${dir}`) await this.fixDirectory(dir) } }"" console.log("\n Summary: ")` console.log(` Files fixed: ${this.fixedFiles.length}`)"` console.log(` Errors: ${this.errors.length}`) if (this.fixedFiles.length > 0) {"" console.log("\n Fixed files: ")` this.fixedFiles.forEach(file => console.log(` - ${file}`)) } if (this.errors.length > 0) {"" console.log("\n Errors: ")` this.errors.forEach(({ file, error }) => console.log(` - ${file}: ${error}`)) } / Save report const report = {" timestamp: new Date().toISOString(); fixedFiles: this.fixedFiles; errors: this.errors;" summary: {totalFixed: this.fixedFiles.length,totalErrors: this.errors.length} }" fs.writeFileSync("syntax-fix-report.json", JSON.stringify(report, null, 2))"" console.log("\n Report saved to: syntax-fix-report.json") }}/ Run the fixerconst fixer = new ComprehensiveSyntaxFixer()fixer.run().catch(console.error)'"`'"`
+#!/usr/bin/env node
 
-///usr/bin/env node/usr/bin/env node""const { execSync } = require("child_process")"console.log(" Comprehensive Syntax Fixer v2.0")"console.log("==")class ComprehensiveSyntaxFixer { constructor() { this.fixedFiles = [] this.errors = [] this.patterns = [/ Fix corrupted import statements {" pattern: /const React = dynamic\(\(\) => import\("react"\), \{ ssr: false \}\)\s*return \(/g;"" replacement: "import React from "react"\nimport dynamic from "next/dynamic"\n\nconst Component = () => {\n return (" }; / Fix missing function declarations {"" pattern: /^const React = dynamic\(\(\) => import\("react"\), \{ ssr: false \}\)\s*$/gm;"" replacement: "import React from "react"\nimport dynamic from "next/dynamic"\n\nconst Component = () => {" }; / Fix corrupted JSX attributes"" {pattern: /content="([^"]*)"\s*\/>/g,replacement: "content="$1" />"}; / Fix malformed meta tags"" {pattern: /<meta name\s*=\s*"description\s*content="([^"]*)"\s*\/>/g,replacement: "<meta name="description" content="$1" />"}; / Fix viewport meta tags"" {pattern: /<meta name="viewport\s*content="width=device-width,"\s*initial-scale=1"\s*\/>/g,replacement: "<meta name="viewport" content="width=device-width, initial-scale=1" />"}; / Fix canonical links"" {pattern: /<link rel="canonical\s*href="https:"\s*\/\/[^"]*"\s*\/>/g,replacement: "<link rel="canonical" href="https:/ziontechgroup.com" />"}; / Fix corrupted Layout components {" pattern: /const Layout: React\.FCimport Layout from "\.\.\/components\/Layout",\s*<LayoutProps>/g;"" replacement: "import Layout from "./components/Layout"\n\ninterface LayoutProps {\n children: React.ReactNode\n title?: string\n description?: string\n}\n\nconst Component: React.FC<LayoutProps>" }; / Fix missing closing braces and parentheses {" pattern: /}\s*$/gm;"" replacement: "}\n}" }; / Fix corrupted array declarations"" {pattern: /import React from "react"\s*\]\s*$/gm,replacement: "import React from "react""}; / Fix corrupted function parameters {" pattern: /=\s*\(\{\s*,\s*children,/g;"" replacement: "= ({ children," }; / Fix corrupted string literals"" {pattern: /title\s*=\s*"([^"]*)",\s*$/gm,replacement: "title="$1","}; / Fix corrupted description strings"" {pattern: /description\s*=\s*"([^"]*)",\s*$/gm,replacement: "description="$1","}; / Fix corrupted JSX closing tags"" {pattern: /"\s*$/gm,replacement: """}; / Fix corrupted component declarations {"" pattern: /const\s+(\w+)\s*=\s*\(\{\s*children,\s*title\s*=\s*"([^"]*)",\s*description\s*=\s*"([^"]*)"\s*\}\s*\)\s*=>\s*\{/g;"" replacement: "const $1 = ({ children, title = "$2", description = "$3" }) => {" }; / Fix corrupted export statements"" {pattern: /export default\s*$/gm,replacement: "export default Component"}; / Fix corrupted TypeScript interfaces {" pattern: /interface\s+(\w+)\s*\{\s*children\?: React\.ReactNode,\s*title\?\: string,\s*description\?\: string,\s*\}/g;"" replacement: "interface $1 {\n children?: React.ReactNode\n title?: string\n description?: string\n}" }; / Fix corrupted import statements in utils {"" pattern: /^import\s+.*\s*from\s*[""][^""]*[""]\s*$/gm; replacement: (match) => {" if (match.includes("{") && match.includes("}")) { return match }"" return match.replace(/import\s+(\w+)\s*from\s*[""]([^""]*)[""]/, "import $1 from "$2"") } }; / Fix corrupted function declarations in utils {" pattern: /^const\s+(\w+)\s*=\s*\([^)]*\)\s*=>\s*\{$/gm;" replacement: "const $1 = () => {" }; / Fix corrupted object declarations {" pattern: /const\s+(\w+)\s*=\s*\{[^}]*\}/g;"" replacement: "const $1 = {}" }; / Fix corrupted array declarations"" {pattern: /const\s+(\w+)\s*=\s*\[[^\]]*\]/g,replacement: "const $1 = []"}; / Fix corrupted string concatenations"" {pattern: /"([^"]*)"\s*\+\s*"([^"]*)"/g,replacement: ""$1$2""}; / Fix corrupted template literals"" {pattern: /"([^"]*)"/g,replacement: ""$1""}; / Fix corrupted JSX expressions {" pattern: /\{([^}]*)\}/g;"" replacement: "{$1}" }; / Fix corrupted component props"" {pattern: /<(\w+)\s+([^>]*)\s*>/g,replacement: "<$1 $2>"}; / Fix corrupted closing tags"" {pattern: /<\/(\w+)>/g,replacement: "</$1>"}; / Fix corrupted self-closing tags"" {pattern: /<(\w+)\s+([^>]*)\s*\/>/g,replacement: "<$1 $2 />"}; / Fix corrupted comments"" {pattern: /\/\*([^*]|\*[^/])*\*\/g,replacement: ""}; / Fix corrupted single-line comments"" {pattern: /\/\/.*$/gm,replacement: "/ comment"}; / Fix corrupted semicolons"" {pattern: /,\s*$/gm,replacement: ","}; / Fix corrupted commas"" {pattern: /,\s*$/gm,replacement: ","}; / Fix corrupted parentheses"" {pattern: /\(\s*\)/g,replacement: "()"}; / Fix corrupted brackets"" {pattern: /\[\s*\]/g,replacement: "[]"}; / Fix corrupted braces {" pattern: /\{\s*\}/g;"" replacement: "{}" }; / Fix corrupted quotes"" {pattern: /"([^"]*)"/g,replacement: ""$1""}; / Fix corrupted double quotes"" {pattern: /"([^"]*)"/g,replacement: ""$1""}; / Fix corrupted backticks"" {pattern: /"([^"]*)"/g,replacement: ""$1""}; / Fix corrupted escape sequences"" {pattern: /\n/g,replacement: "\n"}; / Fix corrupted escape sequences"" {pattern: /\t/g,replacement: "\t"}; / Fix corrupted escape sequences"" {pattern: /\r/g,replacement: "\r"}; / Fix corrupted escape sequences"" {pattern: /\"/g,replacement: """}; / Fix corrupted escape sequences"" {pattern: /\"/g,replacement: """}; / Fix corrupted escape sequences"" {pattern: /\/g,replacement: "\"} ] } async fixFile(filePath) { try {" const content = fs.readFileSync(filePath, "utf8") let fixedContent = content let hasChanges = false / Apply all patterns for (const { pattern, replacement } of this.patterns) { const before = fixedContent" if (typeof replacement === "function") { fixedContent = fixedContent.replace(pattern, replacement) } else { fixedContent = fixedContent.replace(pattern, replacement) } if (before !== fixedContent) { hasChanges = true } } / Additional specific fixes fixedContent = this.applySpecificFixes(fixedContent, filePath) if (hasChanges) {" fs.writeFileSync(filePath, fixedContent, "utf8") this.fixedFiles.push(filePath)" console.log(` Fixed: ${filePath}`) return true } return false } catch (error) {" this.errors.push({ file: filePath, error: error.message })` console.log(` Error fixing ${filePath}: ${error.message}`) return false } } applySpecificFixes(content, filePath) { / Fix specific file types" if (filePath.endsWith(".tsx") | filePath.endsWith(".jsx")) { / Fix React component structure" if (!content.includes("import React") && content.includes("return (")) {"" content = "import React from "react"\n" + content } / Fix missing export default" if (content.includes("return (") && !content.includes("export default")) {" content += "\n\nexport default Component" } / Fix missing function declaration" if (content.includes("return (") && !content.includes("const ") && !content.includes("function ")) {" content = "const Component = () => {\n" + content } }" if (filePath.endsWith(".ts") | filePath.endsWith(".js")) { / Fix missing imports" if (content.includes("React.") && !content.includes("import React")) {"" content = "import React from "react"\n" + content } } return content } async fixDirectory(dirPath) {" const files = fs.readdirSync(dirPath, { withFileTypes: true }) for (const file of files) { const fullPath = path.join(dirPath, file.name) if (file.isDirectory()) { await this.fixDirectory(fullPath) } else if (file.isFile() && this.shouldFixFile(fullPath)) { await this.fixFile(fullPath) } } } shouldFixFile(filePath) { const ext = path.extname(filePath)" return [".tsx", ".jsx", ".ts", ".js"].includes(ext) &&" !filePath.includes("node_modules") &&" !filePath.includes(".next") &&" !filePath.includes("dist") } async run() {" console.log(" Starting comprehensive syntax fixing.")" const directories = ["components","pages","src";" "utils";" "services"] for (const dir of directories) { if (fs.existsSync(dir)) {"` console.log(` Processing directory: ${dir}`) await this.fixDirectory(dir) } }"" console.log("\n Summary: ")` console.log(` Files fixed: ${this.fixedFiles.length}`)"` console.log(` Errors: ${this.errors.length}`) if (this.fixedFiles.length > 0) {"" console.log("\n Fixed files: ")` this.fixedFiles.forEach(file => console.log(` - ${file}`)) } if (this.errors.length > 0) {"" console.log("\n Errors: ")` this.errors.forEach(({ file, error }) => console.log(` - ${file}: ${error}`)) } / Save report const report = {" timestamp: new Date().toISOString(); fixedFiles: this.fixedFiles; errors: this.errors;" summary: {totalFixed: this.fixedFiles.length,totalErrors: this.errors.length} }" fs.writeFileSync("syntax-fix-report.json", JSON.stringify(report, null, 2))"" console.log("\n Report saved to: syntax-fix-report.json") }}/ Run the fixerconst fixer = new ComprehensiveSyntaxFixer()fixer.run().catch(console.error)'"`'"`
-
-///usr/bin/env node
-const { execSync } = require('child_process')
+const fs = require('fs');
+const path = require('path');
 
 class ComprehensiveSyntaxFixer {
-class AutoGeneratedClass {
-  constructor($2) {
-    this.fixedFiles = []
-    this.errors = []
-    this.patterns = [// Fix corrupted import statements
-      {
-        "pattern": /const React = dynamic\(\(\) => import\('react'\), \{ "ssr": false \}\)\s*return \(/g
-        "replacement": 'import React from "react"\nimport dynamic from "next/dynamic"\n\nconst Component = () => {\n  return ('
-      }
-      // Fix missing function declarations
-      {
-        "pattern": /^const React = dynamic\(\(\) => import\('react'\), \{ "ssr": false \}\)\s*$/gm
-        "replacement": 'import React from "react"\nimport dynamic from "next/dynamic"\n\nconst Component = () => {'
-      }
-      // Fix corrupted JSX attributes
-      {"pattern": /content="([^"]*)"\s*\/>/g,"replacement": 'content="$1" />'}
-      // Fix malformed meta tags
-      {"pattern": /<meta name\s*=\s*"description\s*content="([^"]*)"\s*\/>/g,"replacement": '<meta name="description" content="$1" />'}
-      // Fix viewport meta tags
-      {"pattern": /<meta name="viewport\s*content="width=device-width,"\s*initial-scale=1"\s*\/>/g,"replacement": '<meta name="viewport" content="width=device-width, initial-scale=1" />'}
-      // Fix canonical links
-      {"pattern": /<link rel="canonical\s*href="https:"\s*\/\/[^"]*"\s*\/>/g,"replacement": '<link rel="canonical" href="https://ziontechgroup.com" />'}
-      // Fix corrupted Layout components
-      {
-        "pattern": /const Layout: React\.FCimport Layout from "\.\.\/components\/Layout",\s*<LayoutProps>/g
-        "replacement": 'import Layout from "../components/Layout"\n\ninterface LayoutProps {\n  children: React.ReactNode\n  title?: string\n  description?: string\n}\n\nconst "Component": React.FC<LayoutProps>'
-      }
-      // Fix missing closing braces and parentheses
-      {
-        "pattern": /}\s*$/gm
-        "replacement": '}\n}'
-      }
-      // Fix corrupted array declarations
-      {"pattern": /import React from "react"\s*\]\s*$/gm,"replacement": 'import React from "react"'}
-      // Fix corrupted function parameters
-      {
-        "pattern": /=\s*\(\{\s*,\s*children,/g
-        "replacement": '= ({ children,'
-      }
-      // Fix corrupted string literals
-      {"pattern": /title\s*=\s*'([^']*)',\s*$/gm,"replacement": 'title="$1",'}
-      // Fix corrupted description strings
-      {"pattern": /description\s*=\s*'([^']*)',\s*$/gm,"replacement": 'description="$1",'}
-      // Fix corrupted JSX closing tags
-      {"pattern": /"\s*$/gm,"replacement": '"'}
-      // Fix corrupted component declarations
-      {
-        "pattern": /const\s+(\w+)\s*=\s*\(\{\s*children,\s*title\s*=\s*'([^']*)',\s*description\s*=\s*'([^']*)'\s*\}\s*\)\s*=>\s*\{/g
-        "replacement": 'const $1 = ({ children, title = "$2", description = "$3" }) => {'
-      }
-      // Fix corrupted export statements
-      {"pattern": /export default\s*$/gm,"replacement": 'export default Component'}
-      // Fix corrupted TypeScript interfaces
-      {
-        "pattern": /interface\s+(\w+)\s*\{\s*children\?: React\.ReactNode,\s*title\?\: string,\s*description\?\: string,\s*\}/g
-        "replacement": 'interface $1 {\n  children?: React.ReactNode\n  title?: string\n  description?: string\n}'
-      }
-      // Fix corrupted import statements in utils
-      {
-        "pattern": /^import\s+.*\s*from\s*['"][^'"]*['"]\s*$/gm
-        replacement: (match) => {
-          if (match.includes('{') && match.includes('}')) {
-            return match
+  constructor() {
+    this.reportsDir = path.join(__dirname, '..', 'syntax-fix-reports-v2');
+    this.logFile = path.join(this.reportsDir, 'syntax-fix.log');
+    this.fixedFiles = [];
+    this.errors = [];
+    
+    if (!fs.existsSync(this.reportsDir)) {
+      fs.mkdirSync(this.reportsDir, { recursive: true });
+    }
+  }
 
-          return match.replace(/import\s+(\w+)\s*from\s*['"]([^'"]*)['"]/, 'import $1 from "$2"')
+  log(message, type = 'info') {
+    const timestamp = new Date().toISOString();
+    const prefix = type === 'error' ? '❌' : type === 'success' ? '✅' : 'ℹ️';
+    const logMessage = `[${timestamp}] ${prefix} ${message}\n`;
+    console.log(logMessage.trim());
+    fs.appendFileSync(this.logFile, logMessage);
+  }
 
+  async findFilesWithSyntaxErrors() {
+    this.log('🔍 Scanning for files with syntax errors...');
+    
+    const extensions = ['.js', '.jsx', '.ts', '.tsx'];
+    const files = [];
+    
+    const scanDirectory = (dir) => {
+      try {
+        const items = fs.readdirSync(dir);
+        for (const item of items) {
+          const fullPath = path.join(dir, item);
+          const stat = fs.statSync(fullPath);
+          
+          if (stat.isDirectory()) {
+            if (!['node_modules', '.git', '.next', 'dist', 'build', 'coverage'].includes(item)) {
+              scanDirectory(fullPath);
+            }
+          } else if (stat.isFile()) {
+            const ext = path.extname(item);
+            if (extensions.includes(ext)) {
+              files.push(fullPath);
+            }
+          }
+        }
+      } catch (error) {
+        this.log(`Error scanning directory ${dir}: ${error.message}`, 'error');
       }
-      // Fix corrupted function declarations in utils
-      {
-        "pattern": /^const\s+(\w+)\s*=\s*\([^)]*\)\s*=>\s*\{$/gm
-        replacement: 'const $1 = () => {'
-      }
-      // Fix corrupted object declarations
-      {
-        "pattern": /const\s+(\w+)\s*=\s*\{[^}]*\}/g
-        "replacement": 'const $1 = {}'
-      }
-      // Fix corrupted array declarations
-      {"pattern": /const\s+(\w+)\s*=\s*\[[^\]]*\]/g,"replacement": 'const $1 = []'}
-      // Fix corrupted string concatenations
-      {"pattern": /'([^']*)'\s*\+\s*'([^']*)'/g,"replacement": '"$1$2"'}
-      // Fix corrupted template literals
-      {"pattern": /"([^"]*)"/g,"replacement": '"$1"'}
-      // Fix corrupted JSX expressions
-      {
-        "pattern": /\{([^}]*)\}/g
-        "replacement": '{$1}'
-      }
-      // Fix corrupted component props
-      {"pattern": /<(\w+)\s+([^>]*)\s*>/g,"replacement": '<$1 $2>'}
-      // Fix corrupted closing tags
-      {"pattern": /<\/(\w+)>/g,"replacement": '</$1>'}
-      // Fix corrupted self-closing tags
-      {"pattern": /<(\w+)\s+([^>]*)\s*\/>/g,"replacement": '<$1 $2 />'}
-      // Fix corrupted comments
-      {"pattern": /\/\*([^*]|\*[^/])*\*\//g,"replacement": '/* comment */'}
-      // Fix corrupted single-line comments
-      {"pattern": /\/\/.*$/gm,"replacement": '// comment'}
-      // Fix corrupted semicolons
-      {"pattern": /,\s*$/gm,"replacement": ','}
-      // Fix corrupted commas
-      {"pattern": /,\s*$/gm,"replacement": ','}
-      // Fix corrupted parentheses
-      {"pattern": /\(\s*\)/g,"replacement": '()'}
-      // Fix corrupted brackets
-      {"pattern": /\[\s*\]/g,"replacement": '[]'}
-      // Fix corrupted braces
-      {
-        "pattern": /\{\s*\}/g
-        "replacement": '{}'
-      }
-      // Fix corrupted quotes
-      {"pattern": /'([^']*)'/g,"replacement": '"$1"'}
-      // Fix corrupted double quotes
-      {"pattern": /"([^"]*)"/g,"replacement": '"$1"'}
-      // Fix corrupted backticks
-      {"pattern": /"([^"]*)"/g,"replacement": '"$1"'}
-      // Fix corrupted escape sequences
-      {"pattern": /\\n/g,"replacement": '\n'}
-      // Fix corrupted escape sequences
-      {"pattern": /\\t/g,"replacement": '\t'}
-      // Fix corrupted escape sequences
-      {"pattern": /\\r/g,"replacement": '\r'}
-      // Fix corrupted escape sequences
-      {"pattern": /\\"/g,"replacement": '"'}
-      // Fix corrupted escape sequences
-      {"pattern": /\\'/g,"replacement": "'"}
-      // Fix corrupted escape sequences
-      {"pattern": /\\\\/g,"replacement": '\\'}
-    ]
+    };
+    
+    scanDirectory(process.cwd());
+    return files;
+  }
 
-  async fixFile(filePath) {
+  fixCommonSyntaxIssues(content) {
+    let fixed = content;
+    
+    // Fix common syntax issues
+    fixed = fixed
+      // Fix missing semicolons
+      .replace(/(\w+)\s*$/gm, (match, word) => {
+        if (word.match(/^(const|let|var|return|throw|break|continue)$/)) {
+          return match + ';';
+        }
+        return match;
+      })
+      // Fix unterminated strings
+      .replace(/(['"`])([^'"`]*?)(\n)/g, '$1$2$1$3')
+      // Fix missing commas in objects
+      .replace(/(\w+)\s*\n\s*(\w+)/g, '$1,\n$2')
+      // Fix missing closing braces
+      .replace(/(\{[^}]*?)(\n\s*)(\w+)/g, '$1$2}$2$3')
+      // Fix duplicate imports
+      .replace(/import\s+([^;]+);\s*import\s+\1;/g, 'import $1;')
+      // Fix malformed JSX
+      .replace(/<(\w+)([^>]*?)(\s*\/>)/g, '<$1$2 />')
+      // Fix missing quotes in object keys
+      .replace(/(\w+):/g, '"$1":')
+      // Fix trailing commas
+      .replace(/,(\s*[}\]])/g, '$1')
+      // Fix missing parentheses
+      .replace(/(\w+)\s*=>\s*{/g, '($1) => {')
+      // Fix malformed template literals
+      .replace(/`([^`]*?)\n([^`]*?)`/g, '`$1$2`')
+      // Fix missing return statements
+      .replace(/(\w+)\s*=>\s*([^;{]+);/g, '$1 => { return $2; }')
+      // Fix duplicate declarations
+      .replace(/(const|let|var)\s+(\w+)[^;]*;\s*\1\s+\2/g, '$1 $2')
+      // Fix malformed function declarations
+      .replace(/function\s+(\w+)\s*\([^)]*\)\s*{/g, 'function $1() {')
+      // Fix missing semicolons after statements
+      .replace(/(\w+)\s*$/gm, (match, word) => {
+        if (word.match(/^(import|export|const|let|var|return|throw|break|continue)$/)) {
+          return match + ';';
+        }
+        return match;
+      });
+    
+    return fixed;
+  }
+
+  async fixFileSyntax(filePath) {
     try {
-      const content = fs.readFileSync(filePath, 'utf8')
-      let fixedContent = content
-      let hasChanges = false
-      // Apply all patterns
-  for($2) {
-        const before = fixedContent
-  if($2) {
-          fixedContent = fixedContent.replace(pattern, replacement)
-        } else {
-          fixedContent = fixedContent.replace(pattern, replacement)
-  if($2) {
-          hasChanges = true
-
-      // Additional specific fixes
-      fixedContent = this.applySpecificFixes(fixedContent, filePath)
-  if($2) {
-        fs.writeFileSync(filePath, fixedContent, 'utf8')
-        this.fixedFiles.push(filePath)
-        return true
-
-      return false
+      const content = fs.readFileSync(filePath, 'utf8');
+      const fixedContent = this.fixCommonSyntaxIssues(content);
+      
+      if (fixedContent !== content) {
+        fs.writeFileSync(filePath, fixedContent, 'utf8');
+        this.fixedFiles.push(filePath);
+        this.log(`Fixed syntax issues in ${filePath}`, 'success');
+        return true;
+      }
+      
+      return false;
     } catch (error) {
-      this.errors.push({ "file": filePath, "error": error.message })
-      return false
-  applySpecificFixes($2) {
-    // Fix specific file types
-    if (filePath.endsWith('.tsx') || filePath.endsWith('.jsx')) {
-      // Fix React component structure
-      if (!content.includes('import React') && content.includes('return (')) {
-        content = 'import React from "react"\n' + content
-
-      // Fix missing export default
-      if (content.includes('return (') && !content.includes('export default')) {
-        content += '\n\nexport default Component'
-
-      // Fix missing function declaration
-      if (content.includes('return (') && !content.includes('const ') && !content.includes('function ')) {
-        content = 'const Component = () => {\n' + content
-
-    if (filePath.endsWith('.ts') || filePath.endsWith('.js')) {
-      // Fix missing imports
-      if (content.includes('React.') && !content.includes('import React')) {
-        content = 'import React from "react"\n' + content
-
-    return content
-
-  async fixDirectory(dirPath) {
-    const files = fs.readdirSync(dirPath, { "withFileTypes": true })
-  for($2) {
-      const fullPath = path.join(dirPath, file.name)
-      if (file.isDirectory()) {
-        await this.fixDirectory(fullPath)
-      } else if (file.isFile() && this.shouldFixFile(fullPath)) {
-        await this.fixFile(fullPath)
-  shouldFixFile($2) {
-    const ext = path.extname(filePath)
-    return ['.tsx', '.jsx', '.ts', '.js'].includes(ext) &&
-           !filePath.includes('node_modules') &&
-           !filePath.includes('.next') &&
-           !filePath.includes('dist')
+      this.log(`Error fixing file ${filePath}: ${error.message}`, 'error');
+      this.errors.push({ file: filePath, error: error.message });
+      return false;
+    }
+  }
 
   async run() {
-    const directories = ['components','pages','src'
-      'utils'
-      'services']
-  for($2) {
-      if (fs.existsSync(dir)) {
-        await this.fixDirectory(dir)
-  if($2) {
-      this.fixedFiles.forEach(file => )
-  if($2) {
-      this.errors.forEach(({ file, error }) => )
+    this.log('🚀 Starting Comprehensive Syntax Fixer v2...');
+    this.log('Zion Tech Group - Advanced Syntax Error Resolution');
+    
+    try {
+      const files = await this.findFilesWithSyntaxErrors();
+      this.log(`Found ${files.length} files to check`);
+      
+      let totalFixed = 0;
+      
+      for (const file of files) {
+        const fixed = await this.fixFileSyntax(file);
+        if (fixed) {
+          totalFixed++;
+        }
+      }
+      
+      this.log(`✅ Syntax fixing completed!`);
+      this.log(`📊 Summary:`);
+      this.log(`   - Files checked: ${files.length}`);
+      this.log(`   - Files fixed: ${totalFixed}`);
+      this.log(`   - Errors encountered: ${this.errors.length}`);
+      
+      const report = {
+        timestamp: new Date().toISOString(),
+        filesChecked: files.length,
+        filesFixed: totalFixed,
+        fixedFiles: this.fixedFiles,
+        errors: this.errors
+      };
+      
+      fs.writeFileSync(
+        path.join(this.reportsDir, 'syntax-fix-report.json'),
+        JSON.stringify(report, null, 2)
+      );
+      
+      this.log(`📄 Report saved to ${this.reportsDir}/syntax-fix-report.json`);
+      
+    } catch (error) {
+      this.log(`Fatal error: ${error.message}`, 'error');
+      process.exit(1);
+    }
+  }
+}
 
-    // Save report
-    const report = {
-      "timestamp": new Date().toISOString()
-      fixedFiles: this.fixedFiles
-      errors: this.errors
-      summary: {totalFixed: this.fixedFiles.length,"totalErrors": this.errors.length}
-
-    fs.writeFileSync('syntax-fix-report.json', JSON.stringify(report, null, 2))
-
-// Run the fixer
-const fixer = new ComprehensiveSyntaxFixer()
-fixer.run().catch(console.error)
-:backup-problematic-files/scripts/comprehensive-syntax-fixer-v2.cjs
-
-// console.log(' Comprehensive Syntax Fixer v2.0')
-console.log('==')
-        "pattern"
-        "replacement": 'import React from "react"\nimport dynamic from "next/dynamic"
-        "pattern"
-        "replacement": 'import React from "react"\nimport dynamic from "next/dynamic"
-      {"pattern": /content="([^"]*)"\s*\/>/g,"replacement": 'content="$1"}
-      {"pattern": /<meta name\s*=\s*"description\s*content="([^"]*)"\s*\/>/g,"replacement": '<meta name="description" content="$1"}
-      {"pattern": /<meta name="viewport\s*content="width=device-width,"\s*initial-scale=1"\s*\/>/g,"replacement": '<meta name="viewport" content="width=device-width, initial-scale=1"}
-      {"pattern": /<link rel="canonical\s*href="https:"\s*\/\/[^"]*"\s*\/>/g,"replacement": '<link rel="canonical" href="https://ziontechgroup.com"}
-        "replacement": 'import Layout from "../components/Layout"\n\ninterface LayoutProps {\n  children: React.ReactNode\n  title?: string\n  description?: string\n}\n\nconst "Component"
-        "replacement"
-      {"pattern": /import React from "react"\s*\]\s*$/gm,"replacement": 'import React from "react"}
-        "replacement"
-      {"pattern": /title\s*=\s*'([^']*)',\s*$/gm,"replacement": 'title="$1"}
-      {"pattern": /description\s*=\s*'([^']*)',\s*$/gm,"replacement": 'description="$1"}
-      {"pattern": /"\s*$/gm,"replacement": ''}
-        "pattern"
-        "replacement": 'const $1 = ({ children, title = "$2", description = "$3"})
-      {"pattern"}
-        content = 'import React from "react"
-// console.log('\n "Summary")
-      console.log('\n� Fixed "files")
-
-</link>"
-
-// console.log('\n� "Errors")
-:backup-problematic-files/scripts/comprehensive-syntax-fixer-v2.cjs
-    console.log('\n� Report saved "to")    console.log('\n� Report saved "to")
-
-    console.log('\n� Report saved "to")
+const fixer = new ComprehensiveSyntaxFixer();
+fixer.run().catch(console.error);

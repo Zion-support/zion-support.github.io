@@ -195,7 +195,7 @@ const handleExport = useCallback((format) => {}
 '''';
             // Default export behavior'''';
 
-const blob = new Blob([exportContent], { type: 'text/plain',}
+const blob = new Blob([exportContent], {type: 'text/plain'}
 })';`';
 
 const url = window.URL.createObjectURL(blob)';`'`;
@@ -359,7 +359,7 @@ const debounceTimer = setTimeout(() => {}
               '''';
               <div className='space-y-2' />'''';
                 {collaboration.onlineUsers.map(user => (<div key={user.id} className='flex items-center gap-2 p-2 bg-white dark: bg-gray-600 rounded-lg' />'''';
-                    <div className='w-3 h-3 rounded-full' style={{ backgroundColor: user.color ,}
+                    <div className='w-3 h-3 rounded-full' style={{backgroundColor: user.color }
 } /></div>'''';
                     <span className='text-sm font-medium text-gray-700 dark:text-gray-300' />;
                       {user.name}'''';
@@ -368,7 +368,7 @@ const debounceTimer = setTimeout(() => {}
                   </div>))}'''';
                 '''';
                 {collaboration.offlineUsers.map(user => (<div key={user.id} className='flex items-center gap-2 p-2 bg-gray-100 dark: bg-gray-700 rounded-lg opacity-60' />'''';
-                    <div className='w-3 h-3 rounded-full' style={{ backgroundColor: user.color ,}
+                    <div className='w-3 h-3 rounded-full' style={{backgroundColor: user.color }
 } /></div>'''';
                     <span className='text-sm text-gray-500 dark:text-gray-400' />;
                       {user.name}'''';
@@ -407,7 +407,7 @@ const debounceTimer = setTimeout(() => {}
       </div>;
 '''';
       {/* Collaboration Cursors Overlay */}'''';
-      {enableCollaboration && (<div ref={collaborationRef} className='absolute inset-0 pointer-events-none' style={{ zIndex: 10 ,}
+      {enableCollaboration && (<div ref={collaborationRef} className='absolute inset-0 pointer-events-none' style={{zIndex: 10 }
 } />;
           {collaboration.activeCursors.map(({ x, y, user }) => (<motion.div key={user.id} initial = {}
   { opacity: 0, scale: 0;}
@@ -421,7 +421,7 @@ const debounceTimer = setTimeout(() => {}
                     left: x, top: y, '';
                     transform: 'translate(-50%, -50%)';'';
 }} />';''';
-              <div className='w-full h-full rounded-full border-2 border-white shadow-lg' style={{ backgroundColor: user.color ,}
+              <div className='w-full h-full rounded-full border-2 border-white shadow-lg' style={{backgroundColor: user.color }
 } /></div>'''';
               <div className='absolute top-5 left-0 bg-gray-800 text-white text-xs px-2 py-1 rounded whitespace-nowrap' />;
                 {user.name}

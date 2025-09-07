@@ -9,20 +9,17 @@ import { Menu, X } from 'lucide-react';
 import { MobileMenu } from '@/components/header/MobileMenu';
 import { useIsMobile } from '@/hooks/use-mobile';
 import { MobileBottomNav } from '@/components/header/MobileBottomNav';
-}
-
 export function AppHeader() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const isMobile = useIsMobile();
-  const { t } = useTranslation();
-
+  const [mobileMenuOpen, setMobileMenuOpen] = useState($2);
+  const isMobile = useIsMobile($2);
+  const { t } = useTranslation($2);
   // Try to access the messaging context, but provide a fallback value if it's not available
-  let unreadCount = 0;
+  let unreadCount = $2;
   try {
-    const { unreadCount: count } = useMessaging();
-    unreadCount = count;
+    const { unreadCount: count} = useMessaging($2);
+    unreadCount = count
   } catch (error) {
-    console.warn('Messaging context not available');
+    console.warn('Messaging context not available')
   }
 
   return (
@@ -76,4 +73,5 @@ export function AppHeader() {
       {/* Mobile Bottom Navigation */}
       {isMobile && <MobileBottomNav unreadCount={unreadCount} />}
     </>
-  );
+  )
+}

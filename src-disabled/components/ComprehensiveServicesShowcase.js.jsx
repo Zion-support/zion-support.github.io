@@ -41,7 +41,7 @@ export function ComprehensiveServicesShowcase() {}
 const [selectedCategory, setSelectedCategory] = useState('micro-saas');
   const [selectedService, setSelectedService] = useState(null);
   const containerVariants = {}
-    hidden: { opacity: 0,}
+    hidden: {opacity: 0}
 }, visible:  ,
 }
       opacity: 1, transition:  ,
@@ -88,7 +88,7 @@ const cardVariants = {}
           animate = {}
   { opacity: 1, y: 0;}
 }}
-          transition={{ duration: 0.6 ,}
+          transition={{duration: 0.6 }
 }'''';
          />'''';
           <h2 className='text-4xl md:text-5xl font-bold text-white mb-6' />;
@@ -391,4 +391,4 @@ const cardVariants = {}
       </AnimatePresence>;
     </section>;
   )}''`;
-''`'\"`'\";
+''`'"`'";

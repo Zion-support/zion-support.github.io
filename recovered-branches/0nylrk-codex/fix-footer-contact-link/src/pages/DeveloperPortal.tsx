@@ -1,24 +1,42 @@
-import { ProtectedRoute } from "@/components/ProtectedRoute",
-import { ApiKeysManager } from "@/components/developers/ApiKeysManager",
-import { WebhooksManager } from "@/components/developers/WebhooksManager",
+import { useState } from "react",
+import { useAuth } from "@/hooks/useAuth",
+
+import { useState } from "react";
+import { useAuth } from "@/hooks/useAuth";
+import { 
+  BookOpen,
+  Code, 
+  Key, 
+  List, 
+  LucideIcon, 
+  Terminal, 
+  Webhook 
+} from "lucide-react",
+
+import { ProtectedRoute } from "@/components/ProtectedRoute";
+import { ApiKeysManager } from "@/components/developers/ApiKeysManager";
+import { WebhooksManager } from "@/components/developers/WebhooksManager";
 import { ApiDocumentation } from "@/components/developers/ApiDocumentation";
 import { ApiLogs } from "@/components/developers/ApiLogs";
 interface TabDefinition {
-  id: string;
-  label: string;
-import {useState} from "react";
-import {useAuth} from "@/hooks/useAuth";
-import {BookOpen, Code, Key, List, LucideIcon, Terminal, Webhook} from "lucide-react";
-import {ProtectedRoute} from "@/components/ProtectedRoute";
-import {ApiKeysManager} from "@/components/developers/ApiKeysManager";
-import {WebhooksManager} from "@/components/developers/WebhooksManager";
-import {ApiDocumentation} from "@/components/developers/ApiDocumentation";
-import {ApiLogs} from "@/components/developers/ApiLogs";
+  id: string,
+  label: string,
+  icon: LucideIcon}
 
 import { ProtectedRoute } from "@/components/ProtectedRoute",
 import { ApiKeysManager } from "@/components/developers/ApiKeysManager",
 import { WebhooksManager } from "@/components/developers/WebhooksManager",
 import { ApiDocumentation } from "@/components/developers/ApiDocumentation",
+export function DeveloperPortal() {;
+  const { user } = useAuth();
+  const [activeTab, setActiveTab] = useState<string>("documentation");
+export function DeveloperPortal() {
+  const { user } = useAuth();
+
+  const { user } = useAuth();
+
+  const [activeTab, setActiveTab] = useState<string>("documentation");
+
 import { ApiLogs } from "@/components/developers/ApiLogs",
 interface TabDefinition {
   id: string
@@ -27,18 +45,16 @@ interface TabDefinition {
   icon: LucideIcon
 }
 export function DeveloperPortal() {
-  const { user } = useAuth();
-export function DeveloperPortal() {
-  const { user } = useAuth();
-
-  const [activeTab, setActiveTab] = useState<string>("documentation");
-
+  const { user } = useAuth($2);
+  const [activeTab, setActiveTab] = useState<string>("documentation"),
+  
   // Define the tabs
   const tabs: TabDefinition[] = [
-    { id: "documentation", label: "Documentation", icon: BookOpen }
-    { id: "api-keys", label: "API Keys", icon: Key }
-    { id: "webhooks", label: "Webhooks", icon: Webhook }
-    { id: "logs", label: "Logs", icon: List }]
+    { id: "documentation", label: "Documentation", icon: BookOpen},
+    { id: "api-keys", label: "API Keys", icon: Key},
+    { id: "webhooks", label: "Webhooks", icon: Webhook},
+    { id: "logs", label: "Logs", icon: List}],
+
   return (
 
     <div className="w-full max-w-7xl mx-auto p-4 md:p-8">
@@ -51,12 +67,11 @@ export function DeveloperPortal() {
           Access the Zion API, manage your API keys, and set up webhooks.
         </p>
       </div>
+  const { user } = useAuth(),
+  const [activeTab, setActiveTab] = useState<string>("documentation"),
+              return (
       {/* Tabs */}
-      <div className="border-b border-zinc-800 mb-8">
-        <div className="flex flex-wrap -mb-px">
-          {tabs.map((tab) => {
-            const Icon = tab.icon;
-
+      <div className = $2;
             return (
               <button
                 key={tab.id}
@@ -91,3 +106,7 @@ export default function ProtectedDeveloperPortal() {
     </ProtectedRoute>
   )
 }
+      <div className="border - b border - zinc - 800 mb-8">;
+        <div className="flex flex - wrap -mb-px">;
+          {tabs.map ((tab) => {
+            const Icon = tab.icon;

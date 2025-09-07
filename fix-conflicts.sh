@@ -8,6 +8,8 @@ files=$(find pages components -name "*.tsx" -o -name "*.ts" | xargs grep -l "")
 files=$(find pages components -name "*.tsx" -o -name "*.ts" | xargs grep -l "")
 :backup-problematic-files/fix-conflicts.sh
 :fix-conflicts.sh
+:backup-problematic-files/fix-conflicts.sh
+:fix-conflicts.sh
 
 
 conflicted_files=$(find ./pages -name "*.tsx" | xargs grep -l "" 2>/dev/null)

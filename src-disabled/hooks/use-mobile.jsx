@@ -2,4 +2,4 @@ import { useState, useEffect } from 'react' export function useIsMobile() { cons
  const checkIsMobile = ( setIsMobile(window.innerWidth < 768)) => {
   return $3;}
 } checkIsMobile() window.addEventListener('resize', checkIsMobile) return () => window.removeEventListener('resize', checkIsMobile)}, []);
-  return isMobile}\"\";
+  return isMobile}"";

@@ -1,27 +1,26 @@
+
+/** @type {import ('next').NextConfig} */;
+const next_config = {
+
+
+  reactStrictMode: true,
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true
-  compress: true
-  poweredByHeader: false
-  eslint: { ignoreDuringBuilds: true }
-  typescript: { ignoreBuildErrors: true }
-  pageExtensions: ['tsx', 'ts', 'jsx', 'js']
+const nextConfig = $2;
+  compress: true,
+  poweredByHeader: false,
+  eslint: { ignoreDuringBuilds: true},
+  typescript: { ignoreBuildErrors: true},
+  pageExtensions: ['tsxtsjsxjs'],
+  
   // Image optimization
   images: {
-    domains: ["localhost", "ziontechgroup.com", "images.unsplash.com", "via.placeholder.com"]
-    formats: ['image/webp', 'image/avif']
-  }
-  // Image optimization
-  images: {
-    domains: [
-      "localhost",
-      "ziontechgroup.com",
-      "images.unsplash.com",
-      "via.placeholder.com",
-    ],
-    formats: ["image/webp", "image/avif"],
+    domains: ["localhost", "ziontechgroup.com", "images.unsplash.com", "via.placeholder.com"],
+    formats: ['image/webpimage/avif']
   },
   // Output configuration
+  // Output configuration
+  output: 'standalone',
+
   output: 'standalone'
   // Trailing slash
   trailingSlash: false
@@ -33,10 +32,6 @@ const nextConfig = {
   generateEtags: true
   // Dist directory
   distDir: '.next'
-}
-  // Dist directory
-  distDir: ".next",
-};
+},
 
-module.exports = nextConfig;
-module.exports = nextConfig;
+module.exports = $2;

@@ -1,5 +1,23 @@
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
+  "timestamp": "2025-09-06T01:51:10.744Z",
+  "duration": "0s",
+  "improvements": 3,
+  "errors": 0,
+  "warnings": 0,
+  "details": {
+    "improvements": [
+      "Created performance optimization script",
+      "Created security audit script",
+      "Updated package.json with new scripts"
+    ],
+    "errors": [],
+    "warnings": []
+  }
+}
+=======
+<<<<<<< HEAD
   "timestamp": "2025-09-07T06:47:09.752Z",
   "summary": {
     "totalImprovements": 1,
@@ -26,6 +44,8 @@
     "Keep dependencies updated"
   ]
 =======
+=======
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
   "timestamp": "2025-09-06T23:55:31.812Z",
   "duration": 2,
   "improvements": [
@@ -41,5 +61,10 @@
     "totalImprovements": 6,
     "totalErrors": 0
   }
+<<<<<<< HEAD
 >>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+=======
+}
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

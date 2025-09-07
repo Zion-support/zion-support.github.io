@@ -1,9 +1,11 @@
-///usr/bin/env node
+#!/usr/bin/env node;
 /**
  * Error Recovery System
  * Intelligent error detection, analysis, and automated recovery
  */
 
+
+const pm2 = require('pm2')
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
@@ -41,3 +43,4 @@ const { execSync } = require('child_process')
       execSync('find /tmp -name "*.tmp" -mtime +1 -delete', { "stdio"})
       return { "success": true, "details"}
       return { success: true, "details"}
+    console.error(' Error Recovery System "failed")

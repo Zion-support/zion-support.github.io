@@ -30,6 +30,7 @@ import React from 'react';
 interface PartnersProps {
   // Add props here as needed
 
+
 }
 
 export default function Partners({ }: PartnersProps) {
@@ -39,3 +40,27 @@ export default function Partners({ }: PartnersProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+
+
+}
+
+}
+:src.pages.disabled/Partners.jsx
+}
+}
+}
+}
+}
+
+
+
+
+
+
+:src.pages.disabled/Partners.jsx
+}
+}
+}
+}
+}
+:temp_exclude/src.pages.disabled/Partners.jsx;

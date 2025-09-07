@@ -1,0 +1,98 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+// Security Configuration;
+export const security_config = {// Content Security Policy;
+// Security Configuration;
+<<<<<<< HEAD
+export const security_config = {
+  // Content Security Policy;
+=======
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+  csp: {
+    directives: {
+
+      defaultSrc: ["'self'"],
+      styleSrc: ["'self'", "'unsafe-inline'", "https://fonts && fonts.googleapis.com"],
+      fontSrc: ["'self'", "https://fonts && fonts.gstatic.com"],
+      imgSrc: ["'self'", "data:", "https:"],
+      scriptSrc: ["'self'"],
+      connectSrc: ["'self'"],
+      frameSrc: ["'none'"],
+      objectSrc: ["'none'"],
+      baseUri: ["'self'"],
+      formAction: ["'self'"],
+<<<<<<< HEAD
+=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+      upgradeInsecureRequests: [],
+    },
+  },
+
+  // Security Headers
+  headers: {
+    "X-Frame-Options": "DENY",
+    "X-Content-Type-Options": "nosniff",
+    "Referrer-Policy": "strict-origin-when-cross-origin",
+    "Permissions-Policy": "camera=(), microphone=(), geolocation=()",
+  },
+
+  // Rate Limiting
+  rateLimit: {
+    windowMs: 15 * 60 * 1000, // 15 minutes
+    max: 100, // limit each IP to 100 requests per windowMs
+  },
+};
+
+export default securityConfig;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+=======
+export const security_config = {// Content Security Policy;
+// Security Configuration;
+export const securityConfig = {// Content Security Policy;
+  csp: {directives: {defaultSrc: ["'self'"],styleSrc: ["'self'", "'unsafe-inline'", "https://fonts && fonts.googleapis.com"],fontSrc: ["'self'", "https://fonts && fonts.gstatic.com"],imgSrc: ["'self'", "data:", "https:"],scriptSrc: ["'self'"],connectSrc: ["'self'"],frameSrc: ["'none'"],objectSrc: ["'none'"],baseUri: ["'self'"],formAction: ["'self'"],upgradeInsecureRequests: [];
+    }
+  },upgradeInsecureRequests: [];
+    }upgradeInsecureRequests: [];
+    }
+  },// Security Headers;
+  headers: {"X-Frame-Options": "DENY","X-Content-Type-Options": "nosniff","Referrer-Policy": "strict-origin-when-cross-origin","Permissions-Policy": "camera=(), microphone=(), geolocation=()";
+    "Permissions-Policy": "camera=(), microphone=(), geolocation=()";
+    "Permissions-Policy": "camera=(), microphone=(), geolocation=()";
+  },// Rate Limiting;
+  rateLimit: {windowMs: 15 * 60 * 1000, // 15 minutes;
+    max: 100, // limit each IP to 100 requests per windowMs;
+  }
+}export default securityConfig;upgradeInsecureRequests: [];
+    }
+  }
+  // Security Headers;
+  headers: {'X-Frame-Options': 'DENY';
+    'X-Content-Type-Options': 'nosniff';
+    'Referrer-Policy': 'strict-origin-when-cross-origin';
+    'Permissions-Policy': 'camera=(), microphone=(), geolocation=()';
+  }
+  // Rate Limiting;
+  rateLimit: {windowMs: 15 * 60 * 1000, // 15 minutes;
+    max: 100 // limit each IP to 100 requests per windowMs;
+      default_src: ["'self'"],style_src: ["'self'", "'unsafe - inline'", "https://fonts.googleapis.com"],font_src: ["'self'", "https://fonts.gstatic.com"],img_src: ["'self'", "data:", "https:"],script_src: ["'self'"],connect_src: ["'self'"],frame_src: ["'none'"],object_src: ["'none'"],base_uri: ["'self'"],form_action: ["'self'"],upgradeInsecureRequests: [];
+    }
+  },// Security Headers;
+  headers: {'X - Frame - Options': 'DENY','X - Content - Type - Options': 'nosniff','Referrer - Policy': 'strict - origin - when - cross - origin','Permissions - Policy': 'camera=(), microphone=(), geolocation=()';
+  },// Rate Limiting;
+  rate_limit: {window_ms: 15 * 60 * 1000, // 15 minutes;
+    max: 100 // limit each IP to 100 requests per window_ms;
+  }
+}export default securityConfig;ursor/automate-test-improve-and-merge-code-646c;
+  }
+}export default securityConfig;
+  }
+}export default securityConfig;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

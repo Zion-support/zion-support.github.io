@@ -1,11 +1,21 @@
 <<<<<<< HEAD
-{description && <meta name="description" content={description} />}
-      </Head>
-      {children}
-    </>)
+<<<<<<< HEAD
+import React from 'react';
+import Head from 'next/head';
+
+interface SimpleLayoutProps {
+  title: string,
+  description?: string;
+  children: React.ReactNode,
 }
-=======
-import React from 'react;';
-import * as React from 'react';
-import Head from next/head';
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+export default /**
+ * SimpleLayout - Function description
+ */
+function SimpleLayout() {
+}
+return (,;
+    <>,
+      <Head>,
+        <title>{title}</title>,
+        {description && <meta name="description" content={description} />}"
+      </Head>,

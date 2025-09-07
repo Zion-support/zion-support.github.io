@@ -1,343 +1,281 @@
 #!/usr/bin/env node
+
 /**
- * Security Enhancement Script
- * Enhances app security
+ * Security Enhancer
+ * Comprehensive security improvements and monitoring
  */
-const fs = require("fs")
-const path = require("path")
-class SecurityEnhancer {
-  constructor() {
-    this.securityImprovements = [];
-    this.errors = [];
-    this.projectRoot = process.cwd();
+
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
+
+console.log('🔒 Starting security enhancement...');
+
+// Configuration
+const config = {
+  outputDir: path.join(__dirname, '..', 'security-reports'),
+  securityFeatures: {
+    csp: true,
+    headers: true,
+    rateLimiting: true,
+    inputValidation: true,
+    authentication: true,
+    monitoring: true
   }
+};
 
-  log(message) {
-    console.log(`[${new Date().toISOString()}] ${message}`);
-  }
+// Ensure output directory exists
+if (!fs.existsSync(config.outputDir)) {
+  fs.mkdirSync(config.outputDir, { recursive: true });
+}
 
-  // Add security headers
-  async addSecurityHeaders() {
-    this.log('🔒 Adding security headers...');
-    try {
-      const securityHeadersScript = `
-// Security headers configuration
-export const securityHeaders = [
-  {
-    key: 'X-DNS-Prefetch-Control',
-    value: 'on'
-  },
-  {
-    key: 'Strict-Transport-Security',
-    value: 'max-age=63072000; includeSubDomains; preload'
-  },
-  {
-    key: 'X-XSS-Protection',
-    value: '1; mode=block'
-  },
-  {
-    key: 'X-Frame-Options',
-    value: 'SAMEORIGIN'
-  },
-  {
-    key: 'X-Content-Type-Options',
-    value: 'nosniff'
-  },
-  {
-    key: 'Referrer-Policy',
-    value: 'origin-when-cross-origin'
-  },
-  {
-    key: 'Permissions-Policy',
-    value: 'camera=(), microphone=(), geolocation=()'
-  },
-  {
-    key: 'Content-Security-Policy',
-    value: "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https:; frame-ancestors 'self';"
-  }
-];
-
-export const getSecurityHeaders = () => securityHeaders;
-`;
-
-      fs.writeFileSync(path.join(this.projectRoot, 'utils/security-headers.js'), securityHeadersScript);
-      this.log('✅ Security headers added');
-      this.securityImprovements.push('Security headers');
-    } catch (error) {
-      this.errors.push(`Security headers failed: ${error.message}`);
-    }
-  }
-
-  // Add input validation
-  async addInputValidation() {
-    this.log('🛡️ Adding input validation...');
-    try {
-      const validationScript = `
-// Input validation utilities
-export const sanitizeInput = (input) => {
-  if (typeof input !== 'string') return input;
+// Content Security Policy setup
+function setupCSP() {
+  console.log('🛡️ Setting up Content Security Policy...');
   
-  return input
-    .replace(/[<>]/g, '') // Remove potential HTML tags
-    .replace(/javascript:/gi, '') // Remove javascript: protocol
-    .replace(/on\w+=/gi, '') // Remove event handlers
-    .trim();
-};
-
-export const validateEmail = (email) => {
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  return emailRegex.test(email);
-};
-
-export const validatePhone = (phone) => {
-  const phoneRegex = /^[\+]?[1-9][\d]{0,15}$/;
-  return phoneRegex.test(phone.replace(/[\s\-\(\)]/g, ''));
-};
-
-export const validateUrl = (url) => {
   try {
-    new URL(url);
-    return true;
-  } catch {
-    return false;
-  }
-};
-
-export const sanitizeHtml = (html) => {
-  if (typeof html !== 'string') return html;
-  
-  return html
-    .replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '')
-    .replace(/<iframe\b[^<]*(?:(?!<\/iframe>)<[^<]*)*<\/iframe>/gi, '')
-    .replace(/on\w+\s*=\s*["'][^"']*["']/gi, '');
-};
-`;
-
-      fs.writeFileSync(path.join(this.projectRoot, 'utils/input-validation.js'), validationScript);
-      this.log('✅ Input validation added');
-      this.securityImprovements.push('Input validation');
-    } catch (error) {
-      this.errors.push(`Input validation failed: ${error.message}`);
-    }
-  }
-
-  // Add rate limiting
-  async addRateLimiting() {
-    this.log('⏱️ Adding rate limiting...');
-    try {
-      const rateLimitScript = `
-// Rate limiting utilities
-class RateLimiter {
-  constructor(maxRequests = 100, windowMs = 15 * 60 * 1000) {
-    this.maxRequests = maxRequests;
-    this.windowMs = windowMs;
-    this.requests = new Map();
-  }
-
-  isAllowed(identifier) {
-    const now = Date.now();
-    const windowStart = now - this.windowMs;
+    const cspConfig = {
+      directives: {
+        defaultSrc: ["'self'"],
+        scriptSrc: ["'self'", "'unsafe-inline'", "https://cdn.jsdelivr.net"],
+        styleSrc: ["'self'", "'unsafe-inline'", "https://fonts.googleapis.com"],
+        fontSrc: ["'self'", "https://fonts.gstatic.com"],
+        imgSrc: ["'self'", "data:", "https:"],
+        connectSrc: ["'self'", "https://api.zion.app"],
+        frameSrc: ["'none'"],
+        objectSrc: ["'none'"],
+        baseUri: ["'self'"],
+        formAction: ["'self'"],
+        upgradeInsecureRequests: []
+      }
+    };
     
-    if (!this.requests.has(identifier)) {
-      this.requests.set(identifier, []);
-    }
+    const cspPath = path.join(__dirname, '..', 'middleware', 'csp.js');
+    fs.writeFileSync(cspPath, `module.exports = ${JSON.stringify(cspConfig, null, 2)};`);
     
-    const userRequests = this.requests.get(identifier);
-    
-    // Remove old requests outside the window
-    const validRequests = userRequests.filter(time => time > windowStart);
-    this.requests.set(identifier, validRequests);
-    
-    if (validRequests.length >= this.maxRequests) {
-      return false;
-    }
-    
-    validRequests.push(now);
-    return true;
+    console.log('✅ CSP configuration created');
+    return { success: true, message: 'CSP configured' };
+  } catch (error) {
+    console.log(`❌ CSP setup failed: ${error.message}`);
+    return { success: false, error: error.message };
   }
 }
 
-export const rateLimiter = new RateLimiter();
-export { RateLimiter };
-`;
-
-      fs.writeFileSync(path.join(this.projectRoot, 'utils/rate-limiting.js'), rateLimitScript);
-      this.log('✅ Rate limiting added');
-      this.securityImprovements.push('Rate limiting');
-    } catch (error) {
-      this.errors.push(`Rate limiting failed: ${error.message}`);
-    }
-  }
-
-  // Add CSRF protection
-  async addCSRFProtection() {
-    this.log('🔐 Adding CSRF protection...');
-    try {
-      const csrfScript = `
-// CSRF protection utilities
-export const generateCSRFToken = () => {
-  const array = new Uint8Array(32);
-  crypto.getRandomValues(array);
-  return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join('');
-};
-
-export const validateCSRFToken = (token, sessionToken) => {
-  return token && sessionToken && token === sessionToken;
-};
-
-export const getCSRFTokenFromCookie = (cookieHeader) => {
-  if (!cookieHeader) return null;
+// Security headers setup
+function setupSecurityHeaders() {
+  console.log('🔐 Setting up security headers...');
   
-  const cookies = cookieHeader.split(';').reduce((acc, cookie) => {
-    const [key, value] = cookie.trim().split('=');
-    acc[key] = value;
-    return acc;
-  }, {});
+  try {
+    const securityHeaders = `
+// Security headers middleware
+export const securityHeaders = (req, res, next) => {
+  // Prevent clickjacking
+  res.setHeader('X-Frame-Options', 'DENY');
   
-  return cookies.csrfToken;
+  // Prevent MIME type sniffing
+  res.setHeader('X-Content-Type-Options', 'nosniff');
+  
+  // Enable XSS protection
+  res.setHeader('X-XSS-Protection', '1; mode=block');
+  
+  // Strict Transport Security
+  res.setHeader('Strict-Transport-Security', 'max-age=31536000; includeSubDomains');
+  
+  // Referrer Policy
+  res.setHeader('Referrer-Policy', 'strict-origin-when-cross-origin');
+  
+  // Permissions Policy
+  res.setHeader('Permissions-Policy', 'camera=(), microphone=(), geolocation=()');
+  
+  next();
 };
 `;
-
-      fs.writeFileSync(path.join(this.projectRoot, 'utils/csrf-protection.js'), csrfScript);
-      this.log('✅ CSRF protection added');
-      this.securityImprovements.push('CSRF protection');
-    } catch (error) {
-      this.errors.push(`CSRF protection failed: ${error.message}`);
-    }
+    
+    const headersPath = path.join(__dirname, '..', 'middleware', 'security-headers.js');
+    fs.writeFileSync(headersPath, securityHeaders);
+    
+    console.log('✅ Security headers middleware created');
+    return { success: true, message: 'Security headers configured' };
+  } catch (error) {
+    console.log(`❌ Security headers setup failed: ${error.message}`);
+    return { success: false, error: error.message };
   }
+}
 
-  // Add security middleware
-  async addSecurityMiddleware() {
-    this.log('🛡️ Adding security middleware...');
-    try {
-      const middlewareScript = `
-// Security middleware
-import { NextResponse } from 'next/server';
-import { getSecurityHeaders } from '../utils/security-headers';
-
-export function securityMiddleware(request) {
-  const response = NextResponse.next();
+// Rate limiting setup
+function setupRateLimiting() {
+  console.log('⏱️ Setting up rate limiting...');
   
-  // Add security headers
-  const headers = getSecurityHeaders();
-  headers.forEach(({ key, value }) => {
-    response.headers.set(key, value);
+  try {
+    const rateLimitConfig = `
+// Rate limiting configuration
+export const rateLimitConfig = {
+  windowMs: 15 * 60 * 1000, // 15 minutes
+  max: 100, // limit each IP to 100 requests per windowMs
+  message: 'Too many requests from this IP, please try again later.',
+  standardHeaders: true,
+  legacyHeaders: false,
+};
+
+// API rate limiting
+export const apiRateLimit = {
+  windowMs: 15 * 60 * 1000,
+  max: 50,
+  message: 'API rate limit exceeded',
+};
+`;
+    
+    const rateLimitPath = path.join(__dirname, '..', 'middleware', 'rate-limiting.js');
+    fs.writeFileSync(rateLimitPath, rateLimitConfig);
+    
+    console.log('✅ Rate limiting configuration created');
+    return { success: true, message: 'Rate limiting configured' };
+  } catch (error) {
+    console.log(`❌ Rate limiting setup failed: ${error.message}`);
+    return { success: false, error: error.message };
+  }
+}
+
+// Input validation setup
+function setupInputValidation() {
+  console.log('✅ Setting up input validation...');
+  
+  try {
+    const validationSchema = `
+// Input validation schemas
+import Joi from 'joi';
+
+export const userSchema = Joi.object({
+  email: Joi.string().email().required(),
+  password: Joi.string().min(8).required(),
+  name: Joi.string().min(2).max(50).required(),
+});
+
+export const sanitizeInput = (input) => {
+  if (typeof input === 'string') {
+    return input.replace(/<script\\b[^<]*(?:(?!<\\/script>)<[^<]*)*<\\/script>/gi, '');
+  }
+  return input;
+};
+
+export const validateInput = (schema, data) => {
+  const { error, value } = schema.validate(data);
+  if (error) {
+    throw new Error(\`Validation error: \${error.details[0].message}\`);
+  }
+  return value;
+};
+`;
+    
+    const validationPath = path.join(__dirname, '..', 'src', 'utils', 'validation.js');
+    fs.writeFileSync(validationPath, validationSchema);
+    
+    console.log('✅ Input validation utilities created');
+    return { success: true, message: 'Input validation configured' };
+  } catch (error) {
+    console.log(`❌ Input validation setup failed: ${error.message}`);
+    return { success: false, error: error.message };
+  }
+}
+
+// Security monitoring setup
+function setupSecurityMonitoring() {
+  console.log('📊 Setting up security monitoring...');
+  
+  try {
+    const securityMonitor = `
+// Security monitoring and logging
+export const securityLogger = {
+  logAttempt: (type, details) => {
+    console.log(\`[SECURITY] \${type}:\`, details);
+    // In production, send to security monitoring service
+  },
+  
+  logSuspiciousActivity: (activity) => {
+    console.warn(\`[SECURITY ALERT] Suspicious activity:\`, activity);
+    // Send alert to security team
+  },
+  
+  logAuthFailure: (ip, userAgent) => {
+    console.log(\`[SECURITY] Auth failure from IP: \${ip}, UA: \${userAgent}\`);
+  }
+};
+
+export const securityMiddleware = (req, res, next) => {
+  // Log all requests
+  securityLogger.logAttempt('REQUEST', {
+    ip: req.ip,
+    userAgent: req.get('User-Agent'),
+    url: req.url,
+    method: req.method
   });
   
-  // Add HSTS header for HTTPS
-  if (request.nextUrl.protocol === 'https:') {
-    response.headers.set(
-      'Strict-Transport-Security',
-      'max-age=31536000; includeSubDomains; preload'
-    );
-  }
-  
-  return response;
-}
-`;
-
-      fs.writeFileSync(path.join(this.projectRoot, 'middleware/security.js'), middlewareScript);
-      this.log('✅ Security middleware added');
-      this.securityImprovements.push('Security middleware');
-    } catch (error) {
-      this.errors.push(`Security middleware failed: ${error.message}`);
-    }
-  }
-
-  // Add environment security
-  async addEnvironmentSecurity() {
-    this.log('🔧 Adding environment security...');
-    try {
-      const envSecurityScript = `
-// Environment security configuration
-export const securityConfig = {
-  // Ensure sensitive environment variables are not exposed
-  validateEnvVars: () => {
-    const requiredVars = ['NEXT_PUBLIC_API_URL'];
-    const missingVars = requiredVars.filter(varName => !process.env[varName]);
-    
-    if (missingVars.length > 0) {
-      console.warn('Missing required environment variables:', missingVars);
-    }
-    
-    return missingVars.length === 0;
-  },
-  
-  // Sanitize environment variables for client-side use
-  getClientEnvVars: () => {
-    const clientVars = {};
-    const allowedClientVars = ['NEXT_PUBLIC_API_URL', 'NEXT_PUBLIC_APP_NAME'];
-    
-    allowedClientVars.forEach(varName => {
-      if (process.env[varName]) {
-        clientVars[varName] = process.env[varName];
-      }
-    });
-    
-    return clientVars;
-  }
+  next();
 };
 `;
-
-      fs.writeFileSync(path.join(this.projectRoot, 'utils/env-security.js'), envSecurityScript);
-      this.log('✅ Environment security added');
-      this.securityImprovements.push('Environment security');
-    } catch (error) {
-      this.errors.push(`Environment security failed: ${error.message}`);
-    }
-  }
-
-  // Run all security enhancements
-  async runAllSecurityEnhancements() {
-    this.log('🚀 Starting Security Enhancement...\n');
     
-    try {
-      await this.addSecurityHeaders();
-      await this.addInputValidation();
-      await this.addRateLimiting();
-      await this.addCSRFProtection();
-      await this.addSecurityMiddleware();
-      await this.addEnvironmentSecurity();
-
-      // Generate report
-      const report = {
-        timestamp: new Date().toISOString(),
-        securityImprovements: this.securityImprovements,
-        errors: this.errors,
-        success: this.errors.length === 0
-      };
-
-      fs.writeFileSync(
-        path.join(this.projectRoot, 'security-enhancement-report.json'),
-        JSON.stringify(report, null, 2)
-      );
-
-      this.log('\n📊 Security Enhancement Summary:');
-      this.log(`- Security improvements applied: ${this.securityImprovements.length}`);
-      this.log(`- Errors: ${this.errors.length}`);
-      
-      if (this.securityImprovements.length > 0) {
-        this.log('\n✅ Applied security improvements:');
-        this.securityImprovements.forEach(improvement => this.log(`  - ${improvement}`));
-      }
-
-      if (this.errors.length > 0) {
-        this.log('\n❌ Errors encountered:');
-        this.errors.forEach(error => this.log(`  - ${error}`));
-      }
-
-      return report;
-    } catch (error) {
-      this.log(`❌ Security enhancement failed: ${error.message}`);
-      throw error;
-    }
+    const monitorPath = path.join(__dirname, '..', 'middleware', 'security-monitor.js');
+    fs.writeFileSync(monitorPath, securityMonitor);
+    
+    console.log('✅ Security monitoring setup created');
+    return { success: true, message: 'Security monitoring configured' };
+  } catch (error) {
+    console.log(`❌ Security monitoring setup failed: ${error.message}`);
+    return { success: false, error: error.message };
   }
 }
 
-// Run if called directly
-if (require.main === module) {
-  const enhancer = new SecurityEnhancer();
-  enhancer.runAllSecurityEnhancements().catch(console.error);
+// Main security enhancement function
+function runSecurityEnhancement() {
+  const results = {
+    timestamp: new Date().toISOString(),
+    securityFeatures: {
+      csp: setupCSP(),
+      headers: setupSecurityHeaders(),
+      rateLimiting: setupRateLimiting(),
+      inputValidation: setupInputValidation(),
+      monitoring: setupSecurityMonitoring()
+    },
+    summary: {
+      totalFeatures: 5,
+      successfulFeatures: 0,
+      failedFeatures: 0
+    }
+  };
+
+  // Calculate summary
+  Object.values(results.securityFeatures).forEach(feature => {
+    if (feature.success) {
+      results.summary.successfulFeatures++;
+    } else {
+      results.summary.failedFeatures++;
+    }
+  });
+
+  return results;
 }
 
-module.exports = SecurityEnhancer;
+// Save security report
+function saveSecurityReport(results) {
+  const filename = `security-enhancement-${Date.now()}.json`;
+  const filepath = path.join(config.outputDir, filename);
+  
+  fs.writeFileSync(filepath, JSON.stringify(results, null, 2));
+  console.log(`🔒 Security enhancement report saved to: ${filename}`);
+  
+  // Print summary
+  console.log(`📊 Security Enhancement Summary:`);
+  console.log(`   Total Features: ${results.summary.totalFeatures}`);
+  console.log(`   Successful: ${results.summary.successfulFeatures}`);
+  console.log(`   Failed: ${results.summary.failedFeatures}`);
+}
+
+// Main execution
+try {
+  const results = runSecurityEnhancement();
+  saveSecurityReport(results);
+  console.log('✅ Security enhancement completed');
+} catch (error) {
+  console.error('❌ Security enhancement failed:', error.message);
+  process.exit(1);
+}

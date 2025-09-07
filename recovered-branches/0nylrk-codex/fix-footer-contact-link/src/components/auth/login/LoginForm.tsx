@@ -4,9 +4,14 @@ import {zodResolver} from "@hookform/resolvers/zod";
 import {z} from "zod";
 import {LogIn, User, Eye, EyeOff} from "lucide-react";
 
-import { useAuth } from "@/hooks/useAuth",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
+import { useState } from "react";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { z } from "zod";
+import { LogIn, User, Eye, EyeOff } from "lucide-react";
+import { useAuth } from "@/hooks/useAuth";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 import {
   Form,
   FormControl,
@@ -14,31 +19,42 @@ import {
   FormItem,
   FormLabel,
   FormMessage} from "@/components/ui/form",
-import { Link } from "react-router-dom",
-// Form validation schema
-const loginSchema = z.object({
-  email: z.string().email("Please enter a valid email").min(1, "Email is required");
-  password: z.string().min(6, "Password must be at least 6 characters")});
-type LoginFormValues = z.infer<typeof loginSchema>;
-export function LoginForm() {
-  const { login, isLoading } = useAuth();
-  const [showPassword, setShowPassword] = useState(false);
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  
-  const form = useForm<LoginFormValues>({
-    resolver: zodResolver(loginSchema)
-    defaultValues: {
-      email: ""
-      password: ""}})
-  const onSubmit = async (data: LoginFormValues) => {
-    if (isSubmitting) return;
+import { useForm } from "react-hook-form",
+import { zodResolver } from "@hookform/resolvers/zod",
+import { z } from "zod",
+import { LogIn, User, Eye, EyeOff } from "lucide-react",  password: z.string().min(6, "Password must be at least 6 characters")}),
+
+type LoginFormValues = z.infer<typeof loginSchema>,
+
     try {
       setIsSubmitting(true)
       await login(data.email, data.password)
     } finally {
+import { Link } from "react-router-dom";
+// Form validation schema
+const loginSchema = z.object({
+  email: z.string().email("Please enter a valid email").min($2);
+  password: z.string().min(6, "Password must be at least 6 characters")}),
+
+type LoginFormValues = $2;
+export function LoginForm() {
+  const { login, isLoading } = useAuth($2);
+  const [showPassword, setShowPassword] = useState($2);
+  const [isSubmitting, setIsSubmitting] = useState($2);
+  const form = useForm<LoginFormValues>({
+    resolver: zodResolver($2);
+    defaultValues: {
+      email: "",
+      password: ""}}),
+
+  const onSubmit = $2;
+    try {
+      setIsSubmitting($2);
+      await login(data.email, data.password)
+    } finally {
       setIsSubmitting(false)
     }
-  }
+  },
 
   return (
     <Form {...form}>
@@ -66,6 +82,13 @@ export function LoginForm() {
               </FormControl>
               <FormMessage className="text-red-400" />
             </FormItem>
+      setIsSubmitting(false)                  />;
+                  <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />;
+                </div>;
+              </FormControl>;
+              <FormMessage className="text-red-400" />;
+            </FormItem>;
+
           )}
         />
         <FormField
@@ -89,6 +112,9 @@ export function LoginForm() {
                     variant="ghost"
                     size="sm"
                     className="absolute right-1 top-1/2 transform -translate-y-1/2 text-zion-slate h-8 hover:text-zion-cyan"
+        <FormField
+          control={form && form.control}
+          name="password"
                     onClick={() => setShowPassword(!showPassword)}
                   >
                     {showPassword ? (

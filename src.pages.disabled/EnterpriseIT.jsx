@@ -30,6 +30,7 @@ import React from 'react';
 interface EnterpriseITProps {
   // Add props here as needed
 
+
 }
 
 export default function EnterpriseIT({ }: EnterpriseITProps) {
@@ -39,3 +40,27 @@ export default function EnterpriseIT({ }: EnterpriseITProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+
+
+}
+
+}
+:src.pages.disabled/EnterpriseIT.jsx
+}
+}
+}
+}
+}
+
+
+
+
+
+
+:src.pages.disabled/EnterpriseIT.jsx
+}
+}
+}
+}
+}
+:temp_exclude/src.pages.disabled/EnterpriseIT.jsx;

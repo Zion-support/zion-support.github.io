@@ -7,13 +7,55 @@ console.log('🚀 Starting comprehensive merge conflict resolution...');
 
 // Function to resolve merge conflicts in a file
 function resolveMergeConflicts(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    
+    // Check if file has merge conflict markers
+return false; // No conflicts in this file;
+    }
+    
+    console.log(`Resolving conflicts in: ${filePath}`);
+    
+    // Split content by conflict markers
+    const lines = content.split('\n');
+    const resolvedLines = [];
+    let inConflict = false;
+    let conflictBuffer = [];
+let conflictType = null; // 'ours' or 'theirs';
+    
+    for (let i = 0; i < lines.length; i++) {
+      const line = lines[i];
+      
+      if (line.startsWith('')) {
+        inConflict = true;
+        conflictType = 'ours';
+        conflictBuffer = [];
+        continue;
+      } else if (line.startsWith('')) {
+        conflictType = 'theirs';
+        continue;
+      } else if (line.startsWith('>>>>>>>')) {
+        inConflict = false;
     try {
         console.log(`🔧 Processing: ${filePath}`);
         let content = fs.readFileSync(filePath, 'utf8');
         
-        // Check if file has merge conflicts
-        if (!content.includes('')) {
-            return false; // No conflicts to resolve
+        // For most files, prefer the HEAD version (our changes)
+        // But for certain file types, prefer the incoming changes
+const preferTheirs = filePath.includes('yarn.lock') ||;
+                           filePath.includes('package-lock.json') ||
+                           filePath.includes('tsconfig.tsbuildinfo') ||
+                           filePath.includes('temp_exclude/') ||
+                           filePath.includes('src_backup/') ||
+                           filePath.includes('temp_components/');
+        
+        if (preferTheirs) {
+          // Use the incoming changes (theirs) - but we need to get them from the conflict
+          // For now, let's just use our changes and handle these special cases separately
+          resolvedLines.push(...conflictBuffer);
+        } else {
+          // Use our changes (HEAD) - this is the default
+          resolvedLines.push(...conflictBuffer);
         }
         
         // Strategy: Keep HEAD version (current branch) for most conflicts
@@ -34,62 +76,69 @@ function resolveMergeConflicts(filePath) {
         console.error(`❌ Error processing ${filePath}:`, error.message);
         return false;
     }
+    
+    // Write resolved content
+    const resolvedContent = resolvedLines.join('\n');
+    fs.writeFileSync(filePath, resolvedContent, 'utf8');
+    
+return true; // Conflicts were resolved;
+  } catch (error) {
+    console.error(`Error resolving conflicts in ${filePath}:`, error.message);
+    return false;
+  }
 }
 
-// Function to get all files with merge conflicts
-function getConflictFiles() {
-    try {
-        const result = execSync('grep -l "" . -r --include="*.js" --include="*.ts" --include="*.tsx" --include="*.json" --include="*.cjs" --include="*.mjs" --include="*.yml" --include="*.yaml" --include="*.sh" --include="*.css" --include="*.jsx"', { encoding: 'utf8' });
-        return result.trim().split('\n').filter(file => file.length > 0);
-    } catch (error) {
-        return [];
+// Function to find all files with merge conflicts
+function findConflictedFiles() {
+  try {
+    const result = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' });
+    return result.trim().split('\n').filter(file => file.length > 0);
+  } catch (error) {
+    console.log('No conflicted files found or git diff failed');
+    return [];
+  }
+}
+
+// Function to handle special file types
+function handleSpecialFiles() {
+const specialFiles = [;
+    'yarn.lock',
+    'tsconfig.tsbuildinfo'
+  ];
+  
+  specialFiles.forEach(file => {
+    if (fs.existsSync(file)) {
+      console.log(`Handling special file: ${file}`);
+      try {
+        // For these files, let's use the incoming version
+        execSync(`git checkout --theirs ${file}`, { stdio: 'inherit' });
+        execSync(`git add ${file}`, { stdio: 'inherit' });
+        console.log(`✓ Resolved special file: ${file}`);
+      } catch (error) {
+        console.log(`⚠ Could not resolve special file ${file}: ${error.message}`);
+      }
     }
 }
 
 // Function to handle deleted files conflicts
 function handleDeletedFiles() {
-    try {
-        console.log('🗑️  Handling deleted files conflicts...');
-        
-        // Get list of files that were deleted in our branch but modified in HEAD
-        const deletedFiles = [
-            'accessibility-improvement-report.json',
-            'advanced-app-improvement-report.json',
-            'app-improvement-report.json',
-            'comprehensive-fix-and-test-report.json',
-            'final-automation-report.json',
-            'health-check-report.json',
-            'health-report.json',
-            'master-automation-report.json',
-            'merge-conflict-resolution-report.json',
-            'performance-metrics.json',
-            'performance-monitor-report.json',
-            'performance-optimization-report.json',
-            'performance-report.json',
-            'resolve-all-conflicts.sh',
-            'security-audit-report.json',
-            'security-enhancement-report.json',
-            'security-report.json',
-            'seo-optimization-report.json',
-            'scripts/simple-merge-resolver.cjs'
-        ];
-        
-        for (const file of deletedFiles) {
-            if (fs.existsSync(file)) {
-                console.log(`🗑️  Removing deleted file: ${file}`);
-                fs.unlinkSync(file);
-            }
-        }
-        
-        // Handle backup-problematic-files directory
-        if (fs.existsSync('backup-problematic-files')) {
-            console.log('🗑️  Removing backup-problematic-files directory');
-            execSync('rm -rf backup-problematic-files', { stdio: 'pipe' });
-        }
-        
-        console.log('✅ Deleted files conflicts resolved');
-    } catch (error) {
-        console.error('❌ Error handling deleted files:', error.message);
+const deletedFiles = [;
+    'temp_exclude/pages-disabled/api.tsx',
+    'temp_exclude/pages.disabled_full/services.tsx',
+    'temp_exclude/server/src/index.ts',
+    'temp_exclude/services/apiDocGeneratorService.ts',
+    'temp_exclude/setupTests.ts'
+  ];
+  
+  deletedFiles.forEach(file => {
+    if (fs.existsSync(file)) {
+      console.log(`Removing deleted file: ${file}`);
+      try {
+        execSync(`git rm ${file}`, { stdio: 'inherit' });
+        console.log(`✓ Removed deleted file: ${file}`);
+      } catch (error) {
+        console.log(`⚠ Could not remove file ${file}: ${error.message}`);
+      }
     }
 }
 
