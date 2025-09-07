@@ -17,8 +17,8 @@ const AppMinimal: React.FC<AppMinimalProps> = ({
     >
       {children || (
         <div className="minimal-content">
-          <h1>Minimal App</h1>
-          <p>This is a minimal React component for testing purposes.</p>
+          <h1>Zion Tech Group - Minimal</h1>
+          <p>Building the future with innovative technology solutions</p>
         </div>
       )}
     </main>
