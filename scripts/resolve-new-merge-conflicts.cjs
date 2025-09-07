@@ -1,15 +1,24 @@
-#!/usr/bin/env node;
+
 const fs = require('fs');
 const { execSync } = require('child_process');
 console.log('🔧 Resolving New Merge Conflicts');
-console.log(
+
+:scripts/resolve-new-merge-conflicts.cjs
+// Function to resolve merge conflicts by keeping the first version
+function resolveMergeConflicts(content) {
+  return content
+    .replace(/[a-f0-9]+/g, '');
+console.log('
+
+
 }
 
 // Function to fix common syntax errors;)
 function fixSyntaxErrors(content) {
 
-  return content;
-    // Fix malformed JSX tags;
+  return content
+    // Fix malformed JSX tags
+
     .replace(/<h3([^>]*)>([^<]+)><\/h3>/gm, '<h3$1>$2</h3>')
     .replace(/<h2([^>]*)>([^<]+)><\/h2>/gm, '<h2$1>$2</h2>')
     .replace(/<h1([^>]*)>([^<]+)><\/h1>/gm, '<h1$1>$2</h1>')
@@ -21,3 +30,6 @@ function fixSyntaxErrors(content) {
     .replace(/<meta([^>]+) \/ \/>/gm, '<meta$1 />')
 </meta>
     .replace(/<meta([^>]+) \/>/gm, '<meta$1 />')
+
+
+

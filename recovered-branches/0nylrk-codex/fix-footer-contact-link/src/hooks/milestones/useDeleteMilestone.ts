@@ -1,103 +1,33 @@
 
-
-import {useState} from 'react';
-import {supabase} from '@/integrations / supabase / client';
-import {use_auth} from '@/hooks / use_auth';
-import {toast} from 'sonner';
-export const useDeleteMilestone = () => {;
-  const { user } = useAuth();
-  const [isSubmitting, setIsSubmitting] = useState(false);
-
-import { useState } from 'react',
-import { supabase } from '@/integrations/supabase/client',
-import { useAuth } from '@/hooks/useAuth',
-import { toast } from 'sonner',
+import { useState } from 'react';
+import { supabase } from '@/integrations/supabase/client';
+import { useAuth } from '@/hooks/useAuth';
+import { toast } from 'sonner';
 export const useDeleteMilestone = () => {
-  const { user } = useAuth(),
-  const [isSubmitting, setIsSubmitting] = useState(false),
-
-  
-  const deleteMilestone = async (milestoneId: string) => {
-    if (!user) return false,
-    
+  const { user } = useAuth($2);
+  const [isSubmitting, setIsSubmitting] = useState($2);
+  const deleteMilestone = $2;
     try {
-  // TODO: Implement
-}
-      setIsSubmitting(true)
-      const { error } = await supabase;
+      setIsSubmitting($2);
+      const { error } = await supabase
         .from('project_milestones')
         .delete()
-      return false;
-export const useDeleteMilestone = () =>: any {
-  // TODO: Implement
-  const { user } = use_auth ();
-  const [is_submitting, setIsSubmitting] = useState (false);
-;
-  const delete_milestone = async (milestone_id: string) => {
-    // Check condition;
-if (return false) {
-  $2;
-    } finally {
-  // TODO: Implement
-      setIsSubmitting (false);
-import { useState } from 'react',;
-import { supabase } from '@/integrations/supabase/client',;
-import { useAuth } from '@/hooks/useAuth',;
-import { toast } from 'sonner',;
-  const { user } = useAuth(),;
-  const [isSubmitting, setIsSubmitting] = useState(false),;
-  const deleteMilestone = async (milestoneId: string) => {;
-    if (!user) return false,;
-    try {;
-      setIsSubmitting(true),;
-        .from('project_milestones');
-        .delete();
-        .eq('id', milestoneId),;
-      if (error) throw error,;
-      toast.success("Milestone deleted successfully"),;"
-      return true;
-    } catch (err: any) {;"
-      console.error("Error deleting milestone:", err),;""
-      toast.error("Failed to delete milestone: " + err.message),;"
-    } finally {;
-      setIsSubmitting(false);
-  },;
-  return {;
-    deleteMilestone;
-    isSubmitting;
-
-      "
-      toast && toast.success("Milestone deleted successfully");"
-    } catch (err: any) {"
-      console && console.error("Error deleting milestone:", err);""
-      toast && toast.error("Failed to delete milestone: " + err && err.message),"
-  // TODO: Implement
-    // Check condition;
-  // TODO: Implement
-      setIsSubmitting (true),
-      const { error } = await supabase;"
-        .from ('project_milestones');
-        .delete ();
-        .eq ('id', milestone_id);
-      // Check condition;
-if (throw error) {
-      toast.success ("Milestone deleted successfully");"
-      console.error ("Error deleting milestone:", err);""
-      toast.error ("Failed to delete milestone: " + err.message),"
-  // TODO: Implement
-
-        .eq('id', milestoneId),
+        .eq($2);
       if (error) throw error,
       
-      toast.success("Milestone deleted successfully"),"
-      console.error("Error deleting milestone:", err),""
-      toast.error("Failed to delete milestone: " + err.message),"
-  // TODO: Implement
+      toast.success($2);
+      return true
+    } catch (err: any) {
+      console.error($2);
+      toast.error($2);
+      return false
+    } finally {
       setIsSubmitting(false)
-
-
+    }
+  },
+  
   return {
-  // TODO: Implement
-    delete_milestone;
-    is_submitting;
-};
+    deleteMilestone,
+    isSubmitting
+  }
+},

@@ -1,5 +1,14 @@
 import React from 'react';
 import Link from 'next/link';
+
+      </div>;
+      <p className="text-sm text-gray-600 mb-4">{description}</p>;
+      <div className="mt-auto flex items-center justify-between">;
+        {price && <span className="text-sm font-medium text-blue-600">{price}</span>}
+import Image from 'next/image';
+interface EnhancedMarketplaceCardProps  {title: string, description: string;
+  price?: string;
+
 interface EnhancedMarketplaceCardProps {
   // TODO: Implement
 }
@@ -60,11 +69,18 @@ const EnhancedMarketplaceCard: React.FC<EnhancedMarketplaceCardProps> = ({
                       i < Math.floor(rating) ? 'text-yellow-400' : 'text-gray-300`;
                     }`}
                   >
-              <span className="text-xs text-gray-500 ml-2">"
-          <div className="mt-4 flex items-center justify-between">"
-              <span className="text-lg font-bold text-blue-600">"
-            <span className="text-sm text-blue-600 group-hover:text-blue-800 transition-colors">"
-    
+
+interface MarketplaceCardProps {
+  title: string;
+  description: string;
+  price: number;
+  rating: number;
+  image: string;
+  onAddToCart?: () => void;
+  onFavorite?: () => void;
+
+export default EnhancedMarketplaceCard;
+
 const EnhancedMarketplaceCard: React.FC<MarketplaceCardProps> = ({
     <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">"
       <div className="relative">"

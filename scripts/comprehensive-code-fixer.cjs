@@ -1,29 +1,43 @@
 
-
 #!/usr/bin/env node;
+
+
+
+
+
+
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
 // console.log(' Comprehensive Code Fixer')
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 console.log()
+
+=======
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+console.log('')
   console.log('� Fixing common linting issues...')
   const filesToFix = ['components/ContactForm.tsx']
-    'components/ErrorBoundary.tsx
-    'components/PerformanceMonitor.tsx
-    'components/SearchBar.tsx
-    'components/ThemeToggle.tsx
-    'pages/404.tsx
-    'pages/_app.tsx
-    'pages/about.tsx
-    'pages/ai-services.tsx
-    'pages/contact.tsx
-    'pages/cybersecurity.tsx
-    'pages/faq.tsx
-    'pages/index.tsx
-    'pages/micro-saas.tsx
-    'pages/pricing.tsx
-    'pages/services.tsx
-    'pages/terms.tsx
+    'components/ErrorBoundary.tsx'
+    'components/PerformanceMonitor.tsx'
+    'components/SearchBar.tsx'
+    'components/ThemeToggle.tsx'
+    'pages/404.tsx'
+    'pages/_app.tsx'
+    'pages/about.tsx'
+    'pages/ai-services.tsx'
+    'pages/contact.tsx'
+    'pages/cybersecurity.tsx'
+    'pages/faq.tsx'
+    'pages/index.tsx'
+    'pages/micro-saas.tsx'
+    'pages/pricing.tsx'
+    'pages/services.tsx'
+    'pages/terms.tsx'
+        let content = fs.readFileSync(filePath, 'utf8')
         let content = fs.readFileSync(filePath, 'utf8')
         content = content.replace(/'/g, '&apos;')
           content = content.replace(/import Image from 'next\/image')
@@ -36,9 +50,17 @@ console.log()
           content = content.replace(/import Link from 'next\/link'}/, '// import Link from \'next/link\';')
         content = content.replace(/} catch \(error\) {/, '} catch (error) {'}
         content = content.replace(/} catch \(e\) {/, '} catch (e) {'}
-          content = content.replace(/const "PerformanceMonitor": React\.FC = \(\) => {/, 'const "PerformanceMonitor"}""
-    execSync('npm run "lint": fix', { "stdio"})""
-    execSync('npx tsc --noEmit', { "stdio"})""
-    execSync('npm run build', { "stdio"})""
-    console.log('\n Final "Report")""');
-    console.error(' Comprehensive Code Fixer "failed")""
+          content = content.replace(/const "PerformanceMonitor": React\.FC = \(\) => {/, 'const "PerformanceMonitor"}
+          content = content.replace(/const "PerformanceMonitor": React\.FC = \(\) => {/, 'const "PerformanceMonitor"}
+    execSync('npm run "lint": fix', { "stdio"})
+    execSync('npx tsc --noEmit', { "stdio"})
+    execSync('npm run build', { "stdio"})
+    console.log('\n Final "Report")
+    console.error(' Comprehensive Code Fixer "failed")
+<<<<<<< HEAD
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+console.log()
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58

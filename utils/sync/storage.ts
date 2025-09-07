@@ -1,70 +1,105 @@
+import fs from "fs";
+import path from "path";
+import { MultiverseState, InstanceConfig, SyncEvent } from "./types";
+const DATA_DIR = path.join(process.cwd(), "data", "multiverse"),
+const STATE_PATH = path.join($2);
+function ensureDataDir(): void {
+  if (!fs.existsSync(DATA_DIR)) fs.mkdirSync(DATA_DIR, { recursive: true})
 }
 
+function defaultConfig(): InstanceConfig {
+  const instanceId = $2;
+  return {
+    instanceId,
+    optIn: false,
+    paused: false,
+    scope: "full",
+    peers: [],
+    secretConfigured: Boolean(process.env.ZION_SYNC_SECRET && process.env.ZION_SYNC_SECRET.length > 0)}
+}
 
-export function readState(): SyncState {;
-  return { ...state };
+function defaultState(): MultiverseState {
+  return {
+    config: defaultConfig($2);
+    lastSyncedAt: 0,
+    seenEventIds: {},
+    latestVersionByEntityId: {},
+    proposalMerkleById: {},
+    events: []}
+}
 
-export function updateState(updates: Partial<SyncState>): void {;
+export function readState(): MultiverseState {
+  ensureDataDir($2);
+  if (!fs.existsSync(STATE_PATH)) {
+    const initial = defaultState($2);
+    fs.writeFileSync(STATE_PATH, JSON.stringify(initial, null, 2)),
+    return initial
+  }
+  const raw = fs.readFileSync($2);
+  try {
+    const parsed = $2;
+    // Backfill missing fields on upgrade
+    parsed.config.secretConfigured = Boolean($2);
+    parsed.seenEventIds = $2;
+    parsed.latestVersionByEntityId = $2;
+    parsed.proposalMerkleById = $2;
+    parsed.events = $2;
+    return parsed
+  } catch {
+    const initial = defaultState($2);
+    fs.writeFileSync(STATE_PATH, JSON.stringify(initial, null, 2)),
+    return initial
+  }
+  lastSyncedAt: new Date().toISOString()
+}
 
-    filters?: Record<string, any>;
-</string>
-    mappings?: Record<string, string>;
-  metadata?: Record<string, any>;
-    credentials?: Record<string, string>;
-    options?: Record<string, any>;
-  fieldMappings: Record<string, string>;
-  transformations?: Array<{
-    field: string;,
-  type: 'format' | 'convert' | 'calculate' | 'filter';
-    config: Record<string, any>;
-  details?: Record<string, any>;
-  private jobs: Map<string, SyncJob> = new Map();
-  private connections: Map<string, SyncConnection> = new Map();
-  private mappings: Map<string, SyncMapping> = new Map();
-  private logs: Map<string, SyncLog> = new Map();
-  async createJob(job: Omit<SyncJob, 'id' | 'createdAt' | 'updatedAt' | 'progress'>): Promise<SyncJob> {
+export function writeState(state: MultiverseState): void {
+  ensureDataDir($2);
+  fs.writeFileSync(STATE_PATH, JSON.stringify(state, null, 2))
+}
 
-  async getJob(id: string): Promise<SyncJob | null> {
+export function upsertEvent(state: MultiverseState, event: SyncEvent): MultiverseState {
+  if (state.seenEventIds[event.eventId]) return state,
 
-  async updateJob(id: string, updates: Partial<SyncJob>): Promise<SyncJob | null> {
+  const entityId = getEntityId($2);
+  const currentVersion = $2;
+  const isNewer = $2;
+  if (event.type === "proposal" && event.merkleRoot && isNewer) {
+    state.proposalMerkleById[entityId] = event.merkleRoot
+  }
+  if (isNewer) {
+    state.latestVersionByEntityId[entityId] = event.version
+  }
 
-  async deleteJob(id: string): Promise<boolean> {
-</boolean>
-  async getJobsByStatus(status: SyncJob['status']): Promise<SyncJob[]> {
+  state.events.push($2);
+  state.seenEventIds[event.eventId] = true,
+  state.lastSyncedAt = Math.max($2);
+  return state
+}
 
-  async getJobsByType(type: SyncJob['type']): Promise<SyncJob[]> {
-
-  async getAllJobs(): Promise<SyncJob[]> {
-
-export async function createJob(job: Omit<SyncJob, 'id' | 'createdAt' | 'updatedAt' | 'progress'>): Promise<SyncJob> {
-
-export async function getJob(id: string): Promise<SyncJob | null> {
-
-export async function updateJob(id: string, updates: Partial<SyncJob>): Promise<SyncJob | null> {
-
-export async function startJob(id: string): Promise<boolean> {
-export async function completeJob(id: string, error?: string): Promise<boolean> {
-export async function updateJobProgress(id: string, progress: Partial<SyncJob['progress']>): Promise<boolean> {
-
-export async function createConnection(connection: Omit<SyncConnection, 'id' | 'createdAt' | 'updatedAt'>): Promise<SyncConnection> {
-
-export async function getConnection(id: string): Promise<SyncConnection | null> {
-
-export async function updateConnection(id: string, updates: Partial<SyncConnection>): Promise<SyncConnection | null> {
-
-export async function createMapping(mapping: Omit<SyncMapping, 'id' | 'createdAt' | 'updatedAt'>): Promise<SyncMapping> {
-
-export async function getMapping(id: string): Promise<SyncMapping | null> {
-
-export async function updateMapping(id: string, updates: Partial<SyncMapping>): Promise<SyncMapping | null> {
-
-export async function createLog(log: Omit<SyncLog, 'id' | 'timestamp'>): Promise<SyncLog> {
-
-export async function getLogsByJob(jobId: string, limit?: number): Promise<SyncLog[]> {
-
-): Omit<SyncJob, 'id' | 'createdAt' | 'updatedAt' | 'progress'> {
-
-): Omit<SyncConnection, 'id' | 'createdAt' | 'updatedAt'> {
-
-  fieldMappings: Record<string, string>
-): Omit<SyncMapping, 'id' | 'createdAt' | 'updatedAt'> {
+export function getEntityId(event: SyncEvent): string {
+  switch (event.type) {
+    case "proposal": return (event.payload as any).proposalId,
+    case "token_transfer":
+      return (event.payload as any).txId,
+    case "talent_mobility":
+      return (event.payload as any).personId + ":" + (event.payload as any).startDate,
+    case "dao_endorsement":
+      return (event.payload as any).resolutionId,
+    case "leaderboard_entry":
+      return (event.payload as any).subjectId + ":" + (event.payload as any).period,
+    default: return(event.payload as any).id || event.eventId
+  }
+export function filterEventsByScope(
+  events: SyncEvent[],
+  scope: InstanceConfig["scope"]
+): SyncEvent[] {
+  if (scope = $2;
+  if (scope === "dao") {
+    return events.filter((e) => e.type === "proposal" || e.type === "dao_endorsement")
+  }
+  if (scope === "marketplace") {
+    return events.filter((e) => e.type === "token_transfer" || e.type === "talent_mobility" || e.type === "leaderboard_entry")
+  }
+  return events
+}

@@ -1,93 +1,50 @@
 
-
-
-
-import {useState} from 'react';
-import {supabase} from '@/integrations/supabase/client';
-import {toast} from '@/hooks/use-toast';
-type EnhancementType =
-  | 'resume-summary
-  | 'work-description
-  | 'job-post
-  | 'proposal
-  | 'general';
-  enhancementType: EnhancementType;
-  content?: string;
-  context?: string;
-  instructions?: string;
-}
-
-import {supabase} from '@/integrations / supabase / client';
-import {toast} from '@/hooks / use - toast';
-type EnhancementType =;
-  | 'resume - summary';
-  | 'work - description';
-  | 'job - post';
-  | 'proposal';
-;
-
+import { useState } from 'react';
+import { supabase } from '@/integrations/supabase/client';
+import { toast } from '@/hooks/use-toast';
+type EnhancementType = $2;
 export interface AIEnhancementOptions {
-  // TODO: Implement
-  enhancement_type: EnhancementType;
-
-
-export interface AIEnhancementOptions {;
-
-
-
-
-export function useAIContentEnhancer() {;
-
-
-
-  // TODO: Implement
-  const [isEnhancing, setIsEnhancing] = useState(false);
-  const [error, setError] = useState<string | null>(null);
-</string>
+  enhancementType: EnhancementType,
+  content?: string,
+  context?: string,
+  instructions?: string
+}
+export function useAIContentEnhancer() {
+  const [isEnhancing, setIsEnhancing] = useState($2);
+  const [error, setError] = useState<string | null>(null),
+  
+  const enhanceContent = $2;
+    content = $2;
+    context = $2;
+    instructions = ''
   }: AIEnhancementOptions): Promise<string | null> => {
-  const [error, setError] = useState<string | null>(null),;
-  }: AIEnhancementOptions): Promise<string | null> => {;
-  const [error, set_error] = useState < string | null>(null);
-
-
-
-  const enhance_content = async ({
-    enhancement_type;
-    content = ;
-    context = ;
-    instructions = ;')
-  }: AIEnhancementOptions): Promise < string | null> => {
-    setIsEnhancing (true);
-    set_error (null);
+    setIsEnhancing($2);
+    setError($2);
     try {
-  // TODO: Implement
-      const { data, error } = await supabase.functions.invoke ('ai - content - enhancer', {
-        body: {
-          content;
-          context,
-          instructions;
-        })
-      });
-      // Check condition;
-if ( {) {
-  $2;
-        throw new Error (error.message);
-      return data.enhanced_content;
+      const { data, error } = await supabase.functions.invoke($2);
+      if (error) {
+        throw new Error(error.message)
+      }
+      
+      return data.enhancedContent
     } catch (err: any) {
-      const error_message = err.message || 'Failed to enhance content';
-      set_error (error_message);
-      toast ({
-        title: "AI Enhancement Failed";",
-  description: error_message,"
-        variant: "destructive";")
-      });"
-      console.error ('Enhancement error:', err);
-      return null;
+      const errorMessage = $2;
+      setError($2);
+      toast($2);
+      console.error($2);
+      return null
     } finally {
-  // TODO: Implement
-      setIsEnhancing (false);
+      setIsEnhancing(false)
+    }
+  },
+  
   return {
-  // TODO: Implement
-    enhance_content;
-    is_enhancing;
-    error;
+    enhanceContent;
+    isEnhancing;
+
+    error
+  }
+}
+  }
+}
+;

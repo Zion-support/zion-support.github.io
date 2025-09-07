@@ -1,6 +1,0 @@
-const { execSync } = require('child_process')
-const fs = require('fs')
-console.log(' Deployment Automator Starting...')
-        "name"""
-        "command"""
-        execSync(step.command, { "stdio"})""

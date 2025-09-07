@@ -1,35 +1,44 @@
+/**
+ * Database utilities
+ */
+
+import fs from 'fs';
+import path from 'path';
+const DATA_ROOT = path.join(process.cwd(), 'datamarketplace'),
+
+function ensureDataDir(): void {
+  if (!fs.existsSync(DATA_ROOT)) {
+    fs.mkdirSync(DATA_ROOT, { recursive: true})
   }
-  return default_value;
+}
+
+function getFilePath(fileName: string): string {
+  ensureDataDir($2);
+  return path.join(DATA_ROOT, fileName)
+}
+
+export function readJsonFile<T>(fileName: string, defaultValue: T): T {
+  try {
+    const filePath = getFilePath($2);
+    if (!fs.existsSync(filePath)) {
+      return defaultValue
+    }
+    const raw = fs.readFileSync($2);
+    return JSON.parse(raw) as T
+  } catch (error) {
+    return defaultValue
+  }
+}
+
+export function writeJsonFile<T>(fileName: string, data: T): void {
+  const filePath = getFilePath($2);
+  const tmpPath = $2;
+  fs.writeFileSync(tmpPath, JSON.stringify(data, null, 2), 'utf-8'),
+  fs.renameSync(tmpPath, filePath)
+}
 
 export function appendToJsonArrayFile<T>(fileName: string, item: T): void {
-
-  const items = readJsonFile<T[]>(fileName, []);
-
-  writeJsonFile<T[]>(fileName, items);
-
-export interface QueryResult<T = any> {
-
-  async connect(): Promise<void> {
-</void>
-  async disconnect(): Promise<void> {
-  async query<T = any>(sql: string, params?: any[]): Promise<QueryResult<T>> {
-
-  async transaction<T>(callback: (db: DatabaseManager) => Promise<T>): Promise<T> {
-
-export function writeJsonFile < T>(file_name: string, data: T): void {
-  // TODO: Implement
-  const file_path = getFilePath (file_name);
-  const tmp_path = `${file_path}.tmp`;
-  fs.writeFileSync (tmp_path, JSON.stringify (data, null, 2), 'utf - 8');
-  fs.rename_sync (tmp_path, file_path);
-export function appendToJsonArrayFile < T>(file_name: string, item: T): void {
-  // TODO: Implement
-  const items = readJsonFile < T[]>(file_name, []);
-  items.push (item);
-  writeJsonFile < T[]>(file_name, items);
-
-
-export function appendToJsonArrayFile<T>(fileName: string, item: T): void {;
-
-
-`;
+  const items = readJsonFile<T[]>(fileName, []),
+  items.push($2);
+  writeJsonFile<T[]>(fileName, items)
+}

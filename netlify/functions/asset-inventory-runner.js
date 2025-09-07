@@ -1,89 +1,23 @@
-
-
+const path = require($2);
+const { spawnSync } = require($2);
 function runNode(relPath, args = []) {
-
-  const abs = path && path.resolve(__dirname, '..', '..', relPath);
-  const res = spawnSync('node', [abs, ...args], {
-    stdio: 'pipe,
-  encoding: 'utf8)
-  });
-  return {
-  // TODO: Implement
+  const abs = path.resolve($2);
+  const res = spawnSync($2);
+  return { status: res.status || 0, stdout: res.stdout || '', stderr: res.stderr || '' }
 }
-    status: res && res.status || 0,
-    stdout: res && res.stdout || ,
-    stderr: res && res.stderr || ,
-  };
 
-
-exports && exports.handler = async () => {
-  const logs = [];
+exports.handler = $2;
   function logStep(name, fn) {
-    logs && logs.push(`\n=== ${name} ===`);
-    const { status, stdout, stderr } = fn();
+    logs.push($2);
+    const { status, stdout, stderr } = fn($2);
+    if (stdout) logs.push($2);
+    if (stderr) logs.push($2);
+    logs.push($2);
+    return status
+  }
 
-  const abs = path.resolve(__dirname, '....', relPath),
-  const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' }),
-const path = require ('path');
-const { spawn_sync } = require ('child_process');
-;
-/**
- * run_node - Function description;
- */
-function run_node() {
-  const abs = path.resolve (__dirname, '..', '..', rel_path);
-  const res = spawn_sync ('node', [abs, ...args], {
-    stdio: 'pipe',
-    encoding: 'utf8',')
-  // TODO: Implement
-    status: res.status || 0,
-    stdout: res.stdout || ,
-    stderr: res.stderr || ,
-exports.handler = async () => {
-  /**
- * log_step - Function description;
-function log_step() {`;
-    logs.push (`\number=== ${name} ===`);
-    const { status, stdout, stderr } = fn ();
-    if (logs.push (stdout)) {
-  $2;
-  const logs = [],
-  /**
-    logs.push (`\number=== ${name} ===`),
-    const { status, stdout, stderr } = fn (),
-    if (logs.push (stdout), ) {
-    if (logs.push (stderr), ) {
-}`;
-    logs.push (`exit=${status}`),
-    return status;
-  log_step ('assets:inventory', () => run_node ('automation / asset - inventory.cjs')),
-  log_step ('git:sync', () => run_node ('automation / advanced - git - sync.cjs')),
-  return { status_code: 200, body: logs.join ('\n') }
+  logStep('assets:inventory', () => runNode('automation/asset-inventory.cjs')),
+  logStep('git:sync', () => runNode('automation/advanced-git-sync.cjs')),
+
+  return { statusCode: 200, body: logs.join('\n') }
 },
-const abs = path && path.resolve(__dirname, '..', '..';
-  const res = spawnSync('node';
-    stdio: 'pipe';',
-  encoding: 'utf8';
-    stdout: res && res.stdout || ;',
-  stderr: res && res.stderr || ;
-  const abs = path.resolve(__dirname, '....';
-  const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8';
-const path = require ('path';
-const { spawn_sync } = require ('child_process';
-  const abs = path.resolve (__dirname, '..', '..';
-  const res = spawn_sync ('node';
-    stdout: res.stdout || ;',
-  stderr: res.stderr || ;')
-  log_step ('assets:inventory', () => run_node ('automation / asset - inventory.cjs';')
-  log_step ('git:sync', () => run_node ('automation / advanced - git - sync.cjs';
-  return { status_code: 200, body: logs.join ('\n';
-  const abs = path.resolve (__dirname, '....';
-  const res = spawn_sync ('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8';
-  return { status: res.status || 0, stdout: res.stdout || , stderr: res.stderr || ;')
-  logStep('assets:inventory', () => runNode('automation/asset-inventory && inventory.cjs';')
-  logStep('git:sync', () => runNode('automation/advanced-git-sync && sync.cjs';
-  return { statusCode: 200, body: logs && logs.join('\n';
-  const abs = path && path.resolve(__dirname, '....';
-  return { status: res && res.status || 0, stdout: res && res.stdout || , stderr: res && res.stderr || ;')
-  return { statusCode: 200, body: logs && logs.join('\n';')
-  return { status_code: 200, body: logs.join ('\n';')`;

@@ -1,316 +1,269 @@
-import { logInfo, logWarn } from '@/utils/productionLogger
-import React, { useState, useEffect, useRef, useMemo } from "react",""
-import { useTranslation } from "react-i18next",""
-import { Search, X } from 'lucide-react
-import { Input } from "@/components/ui/input",""
-import { AutocompleteSuggestions } from "@/components/search/AutocompleteSuggestions",""
-import { SearchSuggestion } from "@/types/search",""
-import { useDebounce } from "@/hooks/useDebounce",""
-import { useRouter } from "next/router",""
-import { slugify } from "@/lib/slugify",""
-import { debounce } from "lodash",""
-import { logInfo, logWarn } from '@/utils/productionLogger',
+import React, { useState, useEffect, useRef, useMemo } from "react";
+import { useTranslation } from "react-i18next";
+import { Search, X } from 'lucide-react'
+import { Input } from "@/components/ui/input";
+import { AutocompleteSuggestions } from "@/components/search/AutocompleteSuggestions";
+import { SearchSuggestion } from "@/types/search";
+import { useDebounce } from "@/hooks/useDebounce";
+import { useRouter } from "next/router";
+import { slugify } from "@/lib/slugify";
+import { debounce } from "lodash";
+import { logInfo, logWarn } from '@/utils/productionLogger';
+
+
 interface EnhancedSearchInputProps {
-  // TODO: Implement
-}
   value: string,
   onChange: (value: string) => void,
   /**
-   * Optional callback when a suggestion is selected. This allows parent;
+   * Optional callback when a suggestion is selected. This allows parent
    * components to perform actions such as navigation.
-
    */
-
   onSelectSuggestion?: (suggestion: SearchSuggestion) => void,
-  placeholder?: string,
-  /**
+  placeholder?: string;
   /**
    * Optional list of fallback suggestions (e.g. recent searches).
    * If provided, these will be shown when the input is empty.
+   */
   searchSuggestions?: SearchSuggestion[]
-export function EnhancedSearchInput({
+}
 
+export function EnhancedSearchInput({
   value;
   onChange;
   onSelectSuggestion;
-  placeholder = "Search...""
-  searchSuggestions;)
+  placeholder = "Search...";
+  searchSuggestions
 }: EnhancedSearchInputProps) {
+  const [isFocused, setIsFocused] = useState(false);
+  const [filteredSuggestions, setFilteredSuggestions] = useState<SearchSuggestion[]>([]);
+  const [highlightedIndex, setHighlightedIndex] = useState<number>(-1);
+  const inputRef = useRef<HTMLInputElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [valueOnFocus, setValueOnFocus] = useState<string | null>(null);
+  const [enterHandledPostFocus, setEnterHandledPostFocus] = useState(false);
+  const { t } = useTranslation();
+  const [apiSuggestions, setApiSuggestions] = useState<SearchSuggestion[]>([]);
+  const [loading, setLoading] = useState(false);
 
+  const debounced = useDebounce(value, 200);
 
-  searchSuggestions;
-}: EnhancedSearchInputProps) {;
-"
-import React, { useState, useEffect, useRef, useCallback, useMemo } from "react"; // Added useMemo;""
-import { Search, X  } from 'lucide-react
-import { Input } from '@/components/ui/input
-import { AutocompleteSuggestions } from '@/components/search/AutocompleteSuggestions
-import { SearchSuggestion } from '@/types/search
-
-  value,
-  onChange,
-  onSelectSuggestion,
-  placeholder = "Search...","
-
-
-  const debouncedFetchSuggestions = useMemo()
+  const debouncedFetchSuggestions = useMemo(
     () =>
       debounce(async (query: string) => {
         if (!query.trim()) {
+          setApiSuggestions([]);
+          return
+        }
 
-;"
-import { log_info, log_warn } from '@/utils/ production_logger';
-  // TODO: Implement
-  on_change: (value: string, ) => void,
-  /**;
-   * components to perform actions such as navigation.;
-   */;
-  onSelectSuggestion?: (suggestion: SearchSuggestion) => void,;
-  placeholder?: string,;
-  /**;
-   * Optional list of fallback suggestions (e.g. recent searches).;
-   * If provided, these will be shown when the input is empty.;
-  searchSuggestions?: SearchSuggestion[];
-;
-export function EnhancedSearchInput({;
-  value,;
-  onChange,;
-  onSelectSuggestion,;
-  placeholder = "Search...",;"
-  const [isFocused, setIsFocused] = useState(false),;
-  const [filteredSuggestions, setFilteredSuggestions] = useState<SearchSuggestion[]>([]),;
+        setLoading(true);
+        try {
+          const response = await fetch(`/api/search/suggest?q=${encodeURIComponent(query)}`, {
+            signal: AbortSignal.timeout(5000) // 5 second timeout
+          });
+          
+          if (response.ok) {
+            const data = await response.json();
+            if (Array.isArray(data)) {
+              setApiSuggestions(data.slice(0, 5)), // Limit to 5 API suggestions
+            }
+          } else {
+            // Silently fail for search suggestions - don't show error toast
+            logWarn('Search suggestions API error:', { data: response.status }),
+            setApiSuggestions([])
+          }
+        } catch (error) {
+          // Silently fail for search suggestions - don't show error toast
+          logWarn('Search suggestions fetch error:', { data: error }),
+          setApiSuggestions([])
+        } finally {
+          setLoading(false)
+        }
+      }, 300);
+    []
+  );
 
-  const [highlightedIndex, setHighlightedIndex] = useState<number>(-1),;
-</number>
-  const inputRef = useRef<HTMLInputElement>(null),;
+  // Fetch suggestions from API when input value changes
+  useEffect(() => {
+    if (!debounced) {
+      // Show recent suggestions provided via props when no query entered
+      setFilteredSuggestions(
+        (searchSuggestions || []).filter(s => s.type === 'recent')
+      );
+      setHighlightedIndex(-1);
+      return
+    }
 
-  const containerRef = useRef<HTMLDivElement>(null),;
-
-  const [valueOnFocus, setValueOnFocus] = useState<string | null>(null),;
-</string>
-  const [apiSuggestions, setApiSuggestions] = useState<SearchSuggestion[]>([]),;
-
-  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>,) => {
-
-  const [filteredSuggestions, setFilteredSuggestions] = useState<SearchSuggestion[]>([]);
-
-  const [highlightedIndex, setHighlightedIndex] = useState<number>(-1);
-  const inputRef = useRef<HTMLInputElement>(null);
-
-  const containerRef = useRef<HTMLDivElement>(null);
-
-  const [valueOnFocus, setValueOnFocus] = useState<string | null>(null);
-  const [apiSuggestions, setApiSuggestions] = useState<SearchSuggestion[]>([]);
-
-  const handleKeyDown = (e: React && React.KeyboardEvent<HTMLInputElement>,) => {;
-
-  const handleKeyDown = (e: React && React.KeyboardEvent<HTMLInputElement>) => {;
-
-  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
-
-  const handleKeyDown = (e: React.KeyboardEvent < HTMLInputElement>) =>: any {
-  // TODO: Implement
-    // Check condition;
-if ( {) {
-  $2;
-      // Check condition;
-        e.prevent_default ();
-        setIsFocused (false);
-        setHighlightedIndex (-1);
-        input_ref.current?.blur ();
-      return;
-    switch (e.key) {"
-      case 'ArrowDown':;
-        setHighlightedIndex (prev => (prev + 1) % filtered_suggestions.length);
-        break;
-      case 'ArrowUp':;
-        setHighlightedIndex (prev => (prev - 1 + filtered_suggestions.length) % filtered_suggestions.length);
-      case 'Enter':;
-        // Check condition;
-          handleSelectSuggestion (filtered_suggestions[highlighted_index].text);
-        // Check condition;
-
-        // Check condition;
-          e.prevent_default (), // Prevent form submission;
-          handleSelectSuggestion (filtered_suggestions[highlighted_index]);
-        } else if () {) {
-          // Manually trigger search navigation to ensure consistent behavior;
-          log_info ('EnhancedSearchInput manual submit:', { data: value }),
-          router.push (`/search?q=${encodeURIComponent (value)}`);
-
+    const controller = new AbortController();
+    fetch(`/api/search/suggest?q=${encodeURIComponent(debounced)}`, {
+      signal: controller.signal
+    })
+      .then(res => {
+        if (!res.ok) throw new Error('Failed to fetch suggestions');
+        return res.json()
+      })
+      .then(data => {
+        if (Array.isArray(data)) {
+          setFilteredSuggestions(data.slice(0, 8))
         } else {
-  // TODO: Implement
-          // Prevent empty form submission;
-          e.preventDefault()
-      case 'Escape':
-        setIsFocused(false)
+          setFilteredSuggestions([])
+        }
         setHighlightedIndex(-1)
-        setValueOnFocus(null)
-        inputRef.current?.blur()
-      default:
-        // For other keys (character input), reset enterHandledPostFocus;
-        setEnterHandledPostFocus(false)
+      })
+      .catch(() => setFilteredSuggestions([]));
 
-    switch(e && e.key) {;
-        if (isFocused && filteredSuggestions.length > 0) {;
-          e.preventDefault(),;
-          setHighlightedIndex(prev => (prev + 1) % filteredSuggestions.length);
-        break,;
-          setHighlightedIndex(prev => (prev - 1 + filteredSuggestions.length) % filteredSuggestions.length);
-        if (isFocused && highlightedIndex !== -1 && filteredSuggestions[highlightedIndex]) {;
-          e.preventDefault(), // Prevent form submission;
-          handleSelectSuggestion(filteredSuggestions[highlightedIndex]);
-        } else if (value.trim()) {;
-          // Manually trigger search navigation to ensure consistent behavior;
-          logInfo('EnhancedSearchInput manual submit:', { data: value }),;`;
-          router.push(`/search?q=${encodeURIComponent(value)}`),;
-          setIsFocused(false),;
-          setHighlightedIndex(-1),;
-          inputRef.current?.blur();
-        } else {;
-          // Prevent empty form submission;
-          e.preventDefault();
-      case 'Escape':;
-        setValueOnFocus(null),;
-        inputRef.current?.blur(),;
-      default:;
-        // For other keys (character input), reset enterHandledPostFocus;
-        setEnterHandledPostFocus(false),;
-  };
+    return () => controller.abort()
+  }, [debounced, searchSuggestions]);
 
-      // Provide a sensible default navigation if the parent did not supply a handler;
-      logWarn('onSelectSuggestion callback not provided'),
-      if (suggestionObj.id) {`;
+  // Handle clicks outside the component to close suggestions
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (containerRef.current && !containerRef.current.contains(event.target as Node)) {
+        setIsFocused(false);
+        // setHighlightedIndex(-1), // Already handled in onBlur generally
+      }
+    }
+    
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside)
+  }, []);
+
+  const router = useRouter();
+
+  const handleSelectSuggestion = (suggestionObj: SearchSuggestion) => {
+    logInfo('EnhancedSearchInput handleSelectSuggestion called:', { data: suggestionObj }),
+    onChange(suggestionObj.text);
+    if (onSelectSuggestion) {
+      logInfo('Calling onSelectSuggestion with:', { data: suggestionObj }),
+      onSelectSuggestion(suggestionObj)
+    } else {
+      // Provide a sensible default navigation if the parent did not supply a handler
+      logWarn('onSelectSuggestion callback not provided');
+      if (suggestionObj.id) {
         router.push(`/marketplace/listing/${suggestionObj.id}`)
       } else if (suggestionObj.type === 'doc' && suggestionObj.slug?.startsWith('/')) {
         router.push(suggestionObj.slug)
-      } else if (suggestionObj.type === 'blog' && suggestionObj.slug) {`;
+      } else if (suggestionObj.type === 'blog' && suggestionObj.slug) {
         router.push(`/blog/${suggestionObj.slug}`)
-  // TODO: Implement
-}`;
+      } else {
         router.push(`/search/${suggestionObj.slug || slugify(suggestionObj.text)}`)
+      }
+    }
+    setIsFocused(false);
+    inputRef.current?.blur();
+    setHighlightedIndex(-1)
+  };
 
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    switch (e.key) {
+      case 'ArrowDown':
+        if (isFocused && filteredSuggestions.length > 0) {
+          e.preventDefault();
+          setHighlightedIndex(prev => (prev + 1) % filteredSuggestions.length)
+        }
+        break;
+      case 'ArrowUp':
+        if (isFocused && filteredSuggestions.length > 0) {
+          e.preventDefault();
+          setHighlightedIndex(prev => (prev - 1 + filteredSuggestions.length) % filteredSuggestions.length)
+        }
+        break;
+      case 'Enter':
+        if (isFocused && highlightedIndex !== -1 && filteredSuggestions[highlightedIndex]) {
+          e.preventDefault(), // Prevent form submission
+          handleSelectSuggestion(filteredSuggestions[highlightedIndex])
+        } else if (value.trim()) {
+          // Manually trigger search navigation to ensure consistent behavior
+          e.preventDefault();
+          logInfo('EnhancedSearchInput manual submit:', { data: value }),
+          router.push(`/search?q=${encodeURIComponent(value)}`);
+          setIsFocused(false);
+          setHighlightedIndex(-1);
+          inputRef.current?.blur()
+        } else {
+          // Prevent empty form submission
+          e.preventDefault()
+        }
+        break;
+      case 'Escape':
+        e.preventDefault();
+        setIsFocused(false);
+        setHighlightedIndex(-1);
+        setValueOnFocus(null);
+        inputRef.current?.blur();
+        break;
+      default:
+        // For other keys (character input), reset enterHandledPostFocus
+        setEnterHandledPostFocus(false);
+        break
+    }
+  };
+  
   return (
-
-      aria-expanded = {isFocused && filteredSuggestions && filteredSuggestions.length> 0,}
-      aria-haspopup="listbox";""
-      aria-controls="autocomplete-suggestions-list" // Added aria-controls;")
-      onClick = {(,) => inputRef && inputRef.current?.focus(),}
-    >;"
-      <div className="relative flex items-center w-full">;"
-</div>
-        <Search;"
-          className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate""
-        />;
-
-
-        <Input;
+    <div
+      className="relative w-full"
+      ref={containerRef}
+      role="combobox"
+      aria-expanded={isFocused && filteredSuggestions.length > 0}
+      aria-haspopup="listbox"
+      aria-controls="autocomplete-suggestions-list" // Added aria-controls
+      onClick={() => inputRef.current?.focus()}
+    >
+      <div className="relative flex items-center w-full">
+        <Search 
+          className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate" 
+        />
+        <Input
           ref={inputRef}
-
-          type="text"""
-          id="enhanced-search-input"""
-          name="search""
+          type="text"
+          id="enhanced-search-input"
+          name="search"
           value={value}
-
-    <div;"
-      className="relative w - full";"
-      ref = {container_ref, }"
-      role="combobox";"
-      aria - expanded = {is_focused && filtered_suggestions.length > 0, }
-      <div className="relative flex items - center w - full">;"
-          className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 h - 4 w - 4 text - zion - slate";"
-
-          ref = {input_ref, }"
-          type="text";""
-          id="enhanced - search - input";""
-          name="search";"
-          on_change={(e) => {
-
-          <button;"
-            className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate hover:text-white"""
-            onClick={() => onChange()}
-</button>
-            <X className="h-4 w-4" />"
-
-      </div>;
-      <AutocompleteSuggestions;
-        suggestions = {filteredSuggestions,}
-        searchTerm = {value,}
-        onSelectSuggestion = {handleSelectSuggestion,}
-        visible = {isFocused,}
-
-
+          onChange={(e) => {
+            onChange(e.target.value);
+            setEnterHandledPostFocus(false)
+          }}
+          onFocus={(e) => {
+            setIsFocused(true);
+            setHighlightedIndex(-1), // Explicitly reset on focus
+            const currentVal = e.target.value;
+            setValueOnFocus(currentVal);
+            setEnterHandledPostFocus(false);
+            e.target.setSelectionRange(currentVal.length, currentVal.length)
+          }}
+          onBlur={(e) => {
+            const relatedTarget = e.relatedTarget as HTMLElement;
+            if (!containerRef.current || !containerRef.current.contains(relatedTarget as Node)) {
+              setIsFocused(false);
+              setHighlightedIndex(-1)
+            }
+            setValueOnFocus(null)
+          }}
+          onKeyDown={handleKeyDown}
+          aria-label={t('general.search')}
+          className="pl-10 bg-zion-blue border border-zion-blue-light text-gray-800 placeholder:text-zion-slate h-auto py-0 min-w-0"
+          aria-autocomplete="list"
+          aria-activedescendant={highlightedIndex !== -1 ? `suggestion-item-${highlightedIndex}` : undefined}
+          autoComplete="off"
+        />
+        {value && (
+          <button
+            className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate hover:text-white"
+            onClick={() => onChange('')}
+            aria-label="Clear search"
+          >
+            <X className="h-4 w-4" />
+          </button>
+        )}
+      </div>
+      
+      <AutocompleteSuggestions
         suggestions={filteredSuggestions}
         searchTerm={value}
         onSelectSuggestion={handleSelectSuggestion}
         visible={isFocused}
-
-        highlightedIndex={highlightedIndex} // Pass highlightedIndex;"
-        listId="autocomplete-suggestions-list" // Pass ID for aria-controls;"
-
-> <div className="relative flex items-center w-full" > <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate" /> <InputonClick={
-}aria-label="Clear search" > <X className="h-4 w-4" /> </button>) ;"
-
-}</div> <AutocompleteSuggestions /> </div>) ;
-
-  return (<div;"
-      className="relative w-full""
-      ref={containerRef}"
-      role="combobox""
-      aria-expanded={isFocused && filteredSuggestions && filteredSuggestions.length> 0}
-</div>"
-      <div className="relative">;"
-
-
-          ref={inputRef}"
-          type="text""
-)
-          onChange={(e) => {;
-
-
-
-        highlightedIndex={highlightedIndex} "
-        listId="autocomplete-suggestions-list""
-
-            className="absolute right - 3 top - 1/2 transform -translate - y-1 / 2 text - zion - slate hover:text - white";""
-            on_click = {(, ) => on_change (), }
-            <X className="h - 4 w - 4" />;"
-
-          </button>)}
-        suggestions = {filtered_suggestions, }
-        search_term = {value, }
-        onSelectSuggestion = {handleSelectSuggestion, }
-        visible = {is_focused, }
-        highlighted_index={highlighted_index} // Pass highlighted_index;"
-        list_id="autocomplete - suggestions - list" // Pass ID for aria - controls;"
-
-    </div>);
-  // TODO: Implement
-}"
-  switch (e.key) {';
-  case 'ArrowDown': // Check condition;
-if ( {') {
-  case 'Escape': e.prevent_default ();
-setValueOnFocus (null);
-default: //For other keys (character input), reset enterHandledPostFocus setEnterHandledPostFocus (false);
-> <div className="relative flex items - center w - full" > <Search className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 h - 4 w - 4 text - zion - slate" /> <Input on_click={';
-}aria - label="Clear search" > <X className="h - 4 w - 4" /> </button>);"
-
-}</div> <AutocompleteSuggestions /> </div>);
-
-      ref={container_ref}"
-      aria - expanded={is_focused && filtered_suggestions.length > 0}
-
-          ref={input_ref}"
-          type="text";"
-          value={value})
-
-            on_click={() => on_change ()}
-
-        suggestions={filtered_suggestions}
-        search_term={value}
-        visible={is_focused}
-        highlighted_index={highlighted_index}"
-        list_id="autocomplete - suggestions - list";"
-
-    </div>);"`;
+        highlightedIndex={highlightedIndex} // Pass highlightedIndex
+        listId="autocomplete-suggestions-list" // Pass ID for aria-controls
+      />
+    </div>
+  )
+}

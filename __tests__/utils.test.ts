@@ -1,12 +1,6 @@
-// Mock test for utils;
 describe('Utils', () => {
-  it('should work correctly', () => {
+  test('utility functions work', () => {
+    // Add utility tests here
     expect(true).toBe(true);
   });
-
-describe("Utils", () => {""
-  it("should work correctly", () => {"
-});"
-export {};
-
-module.exports = {};
+});

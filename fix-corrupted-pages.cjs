@@ -1,76 +1,74 @@
-#!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
-console.log('🔧 Fixing Corrupted Pages');
-console.log('====');
-// List of corrupted pages that need to be recreated;
-const corruptedPages = [
-  'pages/about.tsx',
-  'pages/compliance.tsx',
-  'pages/index.tsx',
-  'pages/micro-saas.tsx',
-  'pages/newsletter.tsx]
+
+const corruptedFiles = [
+  'app/services/analytics-dashboard/page.tsx',
+  'app/services/automation-solutions/page.tsx',
+  'app/services/cloud-services/page.tsx',
+  'app/services/crm-platform/page.tsx',
+  'app/services/crm-solution/page.tsx'
 ];
 
-// Template for a basic React page;
-const createBasicPage = (pageName, title, description) => `import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-export default function ${pageName}() {
+const basicPageTemplate = (title, description, keywords) => `import React from 'react';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: '${title} - Zion Tech Group',
+  description: '${description}',
+  keywords: '${keywords}'
+};
+
+export default function ${title.replace(/\s+/g, '')}Page() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
-</div>
-      <Head>
+    <div className="max-w-6xl mx-auto px-4 py-12">
+      <div className="text-center mb-16">
+        <h1 className="text-4xl font-bold text-gray-900 mb-6">
+          ${title}
+        </h1>
+        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          ${description}
+        </p>
+      </div>
+      <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-xl p-8 mb-16">
+        <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">
+          Coming Soon
+        </h2>
+        <p className="text-lg text-gray-600 text-center">
+          This service is currently under development. Please contact us for more information.
+        </p>
+      </div>
+      <div className="text-center">
+        <a
+          href="mailto:kleber@ziontechgroup.com?subject=${title} Inquiry"
+          className="inline-block px-8 py-4 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+        >
+          Contact Us
+        </a>
+      </div>
+    </div>
+  );
+}`;
 
-        <title>${title} - Zion Tech Group</title>"
-        <meta name="description" content="${description}" />"
-</meta>)"
-        <meta name="keywords" content="${pageName.toLowerCase()},zion tech group,technology solutions" />"
-</meta>
-      
-      "
-      <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">"
-</section>"
-        <div className="absolute inset-0">"
-</div>"
-          <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>""
-          <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>"
-        <div className="container mx-auto px-4 relative z-10">"
-          <motion.div;
-            initial={{ opacity: 0, y: 30 }} 
-            animate={{ opacity: 1, y: 0 }} 
-            transition={{ duration: 0.8 }} "
-            className="text-center""
-          >
-</motion>"
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">"
-</h1>
-            </h1>"
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">"
-</p>
-            </p>"
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">"
-              <Link;"
-                href="/contact"""
-                className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold""
+corruptedFiles.forEach(filePath => {
+  const fullPath = path.join(__dirname, filePath);
+  const dir = path.dirname(fullPath);
+  
+  // Ensure directory exists
+  if (!fs.existsSync(dir)) {
+    fs.mkdirSync(dir, { recursive: true });
+  }
+  
+  // Extract service name from path
+  const serviceName = path.basename(path.dirname(filePath)).replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+  
+  const content = basicPageTemplate(
+    serviceName,
+    `Professional ${serviceName.toLowerCase()} services to help your business grow and succeed.`,
+    `${serviceName.toLowerCase()}, business solutions, professional services`
+  );
+  
+  fs.writeFileSync(fullPath, content);
+  console.log(`Fixed: ${filePath}`);
+});
 
-              
-                href="/services"""
-                className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold""
-
-              
-          </motion.div>
-      </section>
-      <section className="py-20 bg-gray-50">"
-        <div className="container mx-auto px-4">"
-          <motion.div;"
-            className="text-center mb-16""
-            whileInView={{ opacity: 1, y: 0 }} 
-            transition={{ duration: 0.8 }} 
-            viewport={{ once: true }}
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">"
-</h2>
-            </h2>"
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">"
-    </div>"`;
+console.log('All corrupted pages have been fixed!');

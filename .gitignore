@@ -3,35 +3,57 @@ node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
 
-# Production builds
+# Next.js
+.next/
+out/
 dist/
 build/
-out/
 
-# Environment variables
+# Production
+/build
+
+# Misc
+.DS_Store
+*.pem
+
+# Debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Local env files
+.env*.local
 .env
-.env.local
 .env.development.local
 .env.test.local
 .env.production.local
 
-# IDE files
+# Vercel
+.vercel
+
+# TypeScript
+*.tsbuildinfo
+next-env.d.ts
+
+# IDE
 .vscode/
 .idea/
 *.swp
 *.swo
 
-# OS files
+# OS
 .DS_Store
 Thumbs.db
 
 # Logs
-logs/
+logs
 *.log
 
 # Runtime data
-pids/
+pids
 *.pid
 *.seed
 *.pid.lock
@@ -44,6 +66,7 @@ coverage/
 .nyc_output
 
 # Dependency directories
+node_modules/
 jspm_packages/
 
 # Optional npm cache directory
@@ -67,6 +90,10 @@ jspm_packages/
 # Yarn Integrity file
 .yarn-integrity
 
+# dotenv environment variables file
+.env
+.env.test
+
 # parcel-bundler cache (https://parceljs.org/)
 .cache
 .parcel-cache
@@ -76,6 +103,7 @@ jspm_packages/
 
 # Nuxt.js build / generate output
 .nuxt
+dist
 
 # Gatsby files
 .cache/
@@ -98,16 +126,6 @@ temp/
 *.njsproj
 *.sln
 *.sw?
-
-# Automation logs and data (continuously changing)
-automation/logs/*.log
-automation/logs/*.runtime.log
-automation/data/*.json
-!automation/data/autonomous-config.json
-
-# Test results
-test-results/
-coverage/
 
 # Generated reports
 automation-reports/
@@ -165,5 +183,3 @@ health-check-report.json
 performance-metrics.json
 security-scan-report.json
 
-# Core files
-core

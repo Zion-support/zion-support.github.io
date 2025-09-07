@@ -1,8 +1,6 @@
-// Mock test for profile page;
 describe('Profile Page', () => {
-  it('should render without crashing', () => {
+  test('renders profile page', () => {
+    // Add profile page tests here
     expect(true).toBe(true);
-
-
+  });
 });
-module.exports = {};

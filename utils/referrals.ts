@@ -1,36 +1,24 @@
+export type ReferralEvent = $2;
+export async function triggerReferralEvent(event: ReferralEvent, code?: string) {
+  try {
+    const refCode = $2;
+    if (!refCode) return,
+    await fetch('/api/referrals/track', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ code: refCode, event, url: typeof window !== 'undefined' ? window.location.href : '', referrer: typeof document !== 'undefined' ? document.referrer : '' })})
+  } catch {}
     await fetch('/api/referrals/track', {;
       method: 'POST',;
-      headers: { 'Content-Type': 'application/json' };')
-      body: JSON.stringify({ code: refCode, event, url: typeof window !== 'undefined' ? window.location.href : , referrer: typeof document !== 'undefined' ? document.referrer :  })});
+      headers: { 'Content-Type': 'application/json' };
+      body: JSON.stringify({ code: refCode, event, url: typeof window !== 'undefined' ? window.location.href : '', referrer: typeof document !== 'undefined' ? document.referrer : '' })});
   } catch {  } catch (error) {
-    console.error("Error:", error);""
-    return res.status(500).json({ error: "Internal server error" });"
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
-}"
-export type ReferralEvent = 'visit' | 'signup' | 'profile_completed' | 'job_created' | 'hire';
-export async function triggerReferralEvent() {
-  try {const refCode = code |(typeof window !== 'undefined' ? (localStorage.getItem('ref_code') |) : );
-    if (!refCode) return;
-      method: 'POST';',
-  headers: { 'Content-Type': 'application/json' }')
-  } catch {}
-export async function triggerReferralEvent(event: ReferralEvent, code?: string) {;
-  try {
-  // TODO: Implement
-    const refCode = code || (typeof window !== 'undefined' ? (localStorage.getItem('ref_code') || ) : );
-
-export type ReferralEvent = 'visit' | 'signup' | 'profile_completed' | 'job_created' | 'hire',
-export async /**
- * triggerReferralEvent - Function description;
- */
-function triggerReferralEvent() {
-  // TODO: Implement
-    const ref_code = code || (typeof window !== 'undefined' ? (local_storage.get_item ('ref_code') || ) : ),
-    // Check condition;
-if (return, ) {
-  $2;
-    await fetch ('/api / referrals / track', {
-      method: 'POST',
-      headers: { 'Content - Type': 'application / json' }')
-      body: JSON.stringify ({ code: ref_code, event, url: typeof window !== 'undefined' ? window.location.href : , referrer: typeof document !== 'undefined' ? document.referrer :  })});
-"
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}

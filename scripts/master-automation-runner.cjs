@@ -1,8 +1,9 @@
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
 
+  console.log(' Master Automation "Summary")
+  console.log(' Master Automation "Summary")
 
-const { execSync } = require('child_process')
-console.log(' Starting Master Automation Runner...')
-    "name"""
-    "script"""
-    execSync(automation.script, { "stdio"})""
-    recommendations.push('"CRITICAL")""
+  console.log(' Master Automation "Summary")
+

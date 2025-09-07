@@ -1,94 +1,42 @@
-
-
-import {useState, useEffect} from 'react';
-import {supabase} from '@/integrations/supabase/client';
-export function useJobDetails(jobId: string | undefined) {;
-
-
-  const [job, setJob] = useState(null);
-  const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState(null);
+import { useState, useEffect  } from 'react';
+import { supabase } from '@/integrations/supabase/client';
+export function useJobDetails(jobId: string | undefined) {
+  const [job, setJob] = useState($2);
+  const [isLoading, setIsLoading] = useState($2);
+  const [error, setError] = useState($2);
   async function loadJobDetails() {
     if (!jobId) {
-      setIsLoading(false);
-      return;
+      setIsLoading($2);
+      return
     }
     try {
-  // TODO: Implement
-      setIsLoading(true);
-      const { data, error } = await supabase;
+      setIsLoading($2);
+      const { data, error } = await supabase
         .from('jobs')
         .select('*')
         .eq('id', jobId)
-        .single();
-      if (error) throw error;
-      setJob(data);
+        .single($2);
+      if (error) throw error,
+      setJob($2);
       setError(null)
     } catch (err) {
-      console && console.error('Error loading job details:', err);
-      setError(err && err.message)
+      console.error($2);
+      setError(err.message)
     } finally {
-  // TODO: Implement
-      setIsLoading (false);
-
-  // Load job details when component mounts or job_id changes;
-  useEffect (() => {
-    loadJobDetails ();
-  }, [job_id]);
-;
+      setIsLoading(false)
+    }
+  }
+  // Load job details when component mounts or jobId changes
+  useEffect(() => {
+    loadJobDetails()
+  }, [jobId]),
 
   return {
-  // TODO: Implement
     job;
-
     isLoading;
     error;
-    loadJobDetails;
+    loadJobDetails
+  }
+}
 
-
-
-import { useState, useEffect } from 'react',;
-import { supabase } from '@/integrations/supabase/client',;
-  const [job, setJob] = useState(null),;
-  const [isLoading, setIsLoading] = useState(true),;
-  const [error, setError] = useState(null),;
-  async function loadJobDetails() {;
-    if (!jobId) {;
-      setIsLoading(false),;
-    try {;
-      setIsLoading(true),;
-        .from('jobs');
-        .select('*');
-        .eq('id', jobId);
-        .single(),;
-      if (error) throw error,;
-      setJob(data),;
-      setError(null);
-    } catch (err) {;
-      console.error('Error loading job details:', err),;
-      setError(err.message);
-    } finally {;
-  // Load job details when component mounts or jobId changes;
-  useEffect(() => {;
-    loadJobDetails();
-  }, [jobId]),;
-  return {;
-    job,;
-    isLoading,;
-
-
-
-
-export default useJobDetails;
-
-
-export function useJobDetails(jobId:string | undefined) {;
-      return,;
-      setError(null),;
-      setError(err.message),;
-  // Load job details when component mounts or jobId changes;
-    loadJobDetails(),;
-    error,;
-  },;
-export default useJobDetails,; .from ('jobs') .select ('*') .eq ('id', jobId) .single ();
-}export default useJobDetails;
+export default useJobDetails,

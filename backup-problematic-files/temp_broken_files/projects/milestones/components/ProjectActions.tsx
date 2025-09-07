@@ -1,4 +1,3 @@
-
 import React from 'react',;
 import { Button } from '@/components/ui/button',;
 import Link from 'next/link',;
@@ -12,36 +11,42 @@ interface ProjectActionsProps {;
   isTalent:boolean,;
   onAddMilestone:() => void;
 }
+;
 export function ProjectActions({;
   projectId,;
   isUnderDispute,;
   disputeId,;
   isTalent,;
-  onAddMilestone;)
+  onAddMilestone;
 } ProjectActionsProps) {;
   return (;
-    <div className="flex gap-2">;"
-</div>"
-        <Button variant="outline" asChild>;"
-
+    <div className="flex gap-2">;
+      {isUnderDispute && disputeId ? (;
+        <Button variant="outline" asChild>;
           <Link href={`/dashboard/disputes/${disputeId}`}>;
-"
-            <ShieldAlert className="h-4 w-4 mr-2" />;"
-
+            <ShieldAlert className="h-4 w-4 mr-2" />;
+            View Active Dispute;
+          </Link>;
+        </Button>;
+      ) :(;
         <RaiseDisputeButton ;
-          projectId={projectId}"
-          variant="outline";"
+          projectId={projectId}
+          variant="outline";
         />;
-
+      )}
+      {isTalent && !isUnderDispute && (;
         <Button onClick={onAddMilestone}>;
-
-    </div>;"
-  isUnderDispute && disputeId ? (<Button variant="outline" asChild> <Link href= {;"
-)"`;
-  disputeId ;"}` ";"}> <ShieldAlert className="h-4 w-4 mr-2" /> View Active Dispute  ) : (<RaiseDisputeButton />) ;"
-
+          Add Milestone;
+        </Button>;
+      )}
+    </div>;
+  ),;}
+ {;
+  isUnderDispute && disputeId ? (<Button variant="outline" asChild> <Link href= {;
+  `/dashboard/disputes/$ {;
+  disputeId ;"}` ";"}> <ShieldAlert className="h-4 w-4 mr-2" /> View Active Dispute </Link> </Button>) : (<RaiseDisputeButton />) ;
+}{;
   isTalent && !isUnderDispute && (<Button onClick={;
-  onAddMilestone ;)
-}> Add Milestone ) ;"
-}</div>) ;"}""
-}</div>) ;"`;
+  onAddMilestone ;
+}> Add Milestone </Button>) ;
+}</div>) ;"}"

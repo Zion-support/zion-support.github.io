@@ -1,8 +1,6 @@
-// Mock test for signup auto login;
 describe('Signup Auto Login', () => {
-  it('should render without crashing', () => {
+  test('renders signup auto login', () => {
+    // Add signup auto login tests here
     expect(true).toBe(true);
-
-
+  });
 });
-module.exports = {};

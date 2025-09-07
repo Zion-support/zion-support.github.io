@@ -10,15 +10,49 @@ const { execSync } = require('child_process')
         const files = this.getAllFiles(srcDir, ['.js', '.jsx', '.ts', '.tsx')]
           let content = fs.readFileSync(file, 'utf8')
           if (content.includes('console.log(') && !content.includes('// eslint-disable-next-line')
-              '// console.log(')');
-            '$1;\n
+              '// console.log(')
+            '$1;\n'
               if (!body.includes('return') && !body.includes('console.log')
                 return match.replace('{', '{ return '})
-              "type"""
-              "action"""
-              "status"""
-    console.error('Error caught by "boundary")""
-          <details style={{ "whiteSpace"}""
-        "file"""
+              "type"
+              "action"
+              "status"
+          "type"
+          "action"
+          "status"
+          "type"
+          "action"
+          "status"
+    console.error('Error caught by "boundary")
+          <details style={{ "whiteSpace"}
+        "type"
+        "file"
+        "action"
+        "status"
+        "type"
+        "file"
+        "action"
+        "status"
             /<img([^>]*?)(?:\s+alt\s*=\s*["'][^"']*[')]
-</details>
+              "type"
+              "action"
+              "status"
+          "type"
+          "action"
+          "status"
+          "type"
+          "action"
+          "status"
+        "type"
+        "file"
+        "action"
+        "status"
+        "type"
+        "file"
+        "action"
+        "status"
+        "successful"
+        "failed"
+        "failed"
+
+

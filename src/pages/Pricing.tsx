@@ -1,172 +1,124 @@
 import React from 'react';
-import Button from '../components/Button';
+
 const Pricing: React.FC = () => {
-  const pricingTiers = [
-<<<<<<< HEAD
+  const plans = [
     {
-      name: 'Basic',
-      price: '$29',
-      frequency: '/month',
-      features: [
-        '5 AI Models',
-        '1000 API Calls',
-        'Basic Analytics',
-        'Email Support',']
-      ],
-      buttonText: 'Start Free Trial',
-      highlight: false,
-    },
-      name: 'Pro',
+      name: 'Starter',
       price: '$99',
-        '20 AI Models',
-        '10000 API Calls',
-        'Advanced Analytics',
-        'Priority Support',
-        'Custom Integrations',']
-      buttonText: 'Get Started',
-      highlight: true,
-      name: 'Enterprise',
-      price: 'Custom',
-      frequency: ,
-        'Unlimited AI Models',
-        'Unlimited API Calls',
-        'Dedicated Support',
-        'On-premise Deployment',
-        'SLA Guarantee',']
-      buttonText: 'Contact Sales',
-=======
-      name: "Starter",
-      price: "$99",
-      period: "per month",
-      description: "Perfect for small businesses getting started",
-        "Basic AI Solutions",
-        "Cloud Storage (100GB)",
-        "Email Support",
-        "Basic Analytics",
-        "Standard Security"
+      period: '/month',
+      description: 'Perfect for small businesses getting started',
+      features: [
+        'Basic AI Solutions',
         'Email Support',
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-f9ca
-      name: "Professional",
-      price: "$299",
-      description: "Ideal for growing businesses with advanced needs",
-        "Advanced AI Solutions",
-        "Cloud Storage (1TB)",
-        "Priority Support",
-        "Advanced Analytics",
-        "Enhanced Security",
-        "Custom Integrations",
-        "24/7 Monitoring"
+        '5GB Storage',
+        'Basic Analytics',
+        'Standard Security'
+      ],
+      popular: false
+    },
+    {
+      name: 'Professional',
+      price: '$299',
+      period: '/month',
+      description: 'Ideal for growing businesses with advanced needs',
+      features: [
+        'Advanced AI Solutions',
+        'Priority Support',
+        '50GB Storage',
+        'Advanced Analytics',
+        'Enhanced Security',
         'Custom Integrations',
-      name: "Enterprise",
-      price: "Custom",
-      period: "contact us",
-      description: "Tailored solutions for large organizations",
-        "Custom AI Solutions",
-        "Unlimited Cloud Storage",
-        "Dedicated Support",
-        "Custom Analytics",
-        "Enterprise Security",
-        "24/7 Monitoring",
-        "SLA Guarantee",
-        "On-site Support"
-        'SLA Guarantee',
->>>>>>> a2c6a2cc86d6e83a9083c45bfcf5a35f741b3208
+        'Monthly Reports'
+      ],
+      popular: true
+    },
+    {
+      name: 'Enterprise',
+      price: '$799',
+      period: '/month',
+      description: 'Complete solution for large organizations',
+      features: [
+        'Full AI Suite',
+        '24/7 Dedicated Support',
+        'Unlimited Storage',
+        'Real-time Analytics',
+        'Enterprise Security',
+        'Custom Development',
+        'Dedicated Account Manager',
+        'SLA Guarantee'
+      ],
+      popular: false
+    }
   ];
 
   return (
-    <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white min-h-screen pt-20">"
-</div>"
-      <div className="container mx-auto px-4 py-16">"
-        <div className="text-center mb-16">"
-          <h1 className="text-5xl font-extrabold mb-6 animate-fade-in">"
-</h1>
-          </h1>"
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto animate-slide-up">"
-</p>
-    <div className="min-h-screen bg-background">
-      <div className="container mx-auto px-4 py-16">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold text-foreground mb-4">Pricing Plans</h1>
-          <p className="text-lg text-foreground/80 max-w-2xl mx-auto">
-            Choose the perfect plan for your business needs
+          <h1 className="text-5xl font-bold text-gray-900 mb-6">Simple, Transparent Pricing</h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Choose the perfect plan for your business. All plans include our core features with no hidden fees.
+          </p>
         </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+
+        <div className="grid md:grid-cols-3 gap-8">
           {plans.map((plan, index) => (
-            <div 
-              key={index} 
-              className={`bg-card p-8 rounded-lg border relative ${
-                plan.popular ? 'border-primary shadow-lg scale-105' : `;
+            <div
+              key={index}
+              className={`relative bg-white rounded-2xl shadow-lg p-8 ${
+                plan.popular ? 'ring-2 ring-blue-500 scale-105' : ''
               }`}
             >
               {plan.popular && (
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                  <span className="bg-primary text-primary-foreground px-4 py-1 rounded-full text-sm font-medium">
+                  <span className="bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
                     Most Popular
                   </span>
+                </div>
               )}
               
-              <div className="text-center mb-6">
-                <h3 className="text-2xl font-bold text-foreground mb-2">{plan.name}</h3>
-                <p className="text-foreground/70 mb-4">{plan.description}</p>
-                <div className="mb-4">
-                  <span className="text-4xl font-bold text-foreground">{plan.price}</span>
-                  <span className="text-foreground/60 ml-2">{plan.period}</span>
-              
-              <ul className="space-y-3 mb-8">
-                {plan.features.map((feature, featureIndex) => (
-                  <li key={featureIndex} className="flex items-center text-foreground/80">
-                    <span className="w-5 h-5 bg-primary/20 rounded-full mr-3 flex items-center justify-center">
-                      <span className="w-2 h-2 bg-primary rounded-full"></span>
-    <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white min-h-screen pt-20">
-          <h1 className="text-5xl font-extrabold mb-6 animate-fade-in">
-            Flexible Pricing Plans
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto animate-slide-up">
-            Choose the plan that best fits your business needs, from startups to large enterprises.
-"
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">"
-            <div;
-              key={index}`;
-              className={`bg-slate-800 rounded-lg shadow-lg p-8 border ${"
-                tier.highlight ? 'border-blue-500 transform scale-105' : 'border-slate-700`;
-              } transition-all duration-300 hover:shadow-2xl`}
-              <h2 className="text-3xl font-bold mb-4 text-white">{tier.name}</h2>""
-              <p className="text-5xl font-extrabold text-blue-500 mb-6">"
-</p>"
-                {tier.frequency && <span className="text-xl text-gray-400">{tier.frequency}</span>}"
-              <ul className="text-gray-300 text-lg mb-8 space-y-3">"
-</ul>"
-                  <li key={featureIndex} className="flex items-center">"
-</li>"
-                    <svg className="w-5 h-5 text-green-400 mr-2" fill="currentColor" viewBox="0 0 20 20">"
-</svg>
-                      <path;"
-                        fillRule="evenodd"""
-                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"""
-                        clipRule="evenodd""
-                      />
-</path>
-                  </li>
-              <Button variant={tier.highlight ? 'primary' : 'outline'} size="large" className="w-full">"
+              <div className="text-center mb-8">
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>
+                <p className="text-gray-600 mb-4">{plan.description}</p>
+                <div className="flex items-baseline justify-center">
+                  <span className="text-5xl font-bold text-gray-900">{plan.price}</span>
+                  <span className="text-gray-600 ml-2">{plan.period}</span>
+                </div>
+              </div>
 
-                    {feature}
+              <ul className="space-y-4 mb-8">
+                {plan.features.map((feature, featureIndex) => (
+                  <li key={featureIndex} className="flex items-center">
+                    <svg className="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                    <span className="text-gray-700">{feature}</span>
+                  </li>
                 ))}
               </ul>
-              `;
-              <button className={`w-full py-3 px-6 rounded-lg font-medium transition-colors ${
-                plan.popular 
-                  ? 'bg-primary text-primary-foreground hover:bg-primary/90' 
-                  : 'bg-muted text-foreground hover:bg-muted/80`;
-              }`}>
-                {plan.name === 'Enterprise' ? 'Contact Sales' : 'Get Started'}
-              </button>
-              <Button variant={tier.highlight ? 'primary' : 'outline'} size="large" className="w-full">
-                {tier.buttonText}
-              
-        <div className="mt-16 text-center">"
-          <h2 className="text-4xl font-bold mb-8">Need a Custom Solution?</h2>""
-          <p className="text-lg text-gray-400 max-w-3xl mx-auto mb-8">"
-          <Button variant="primary" size="large">"
 
-          
-    </div>)"`;
+              <button
+                className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors ${
+                  plan.popular
+                    ? 'bg-blue-600 text-white hover:bg-blue-700'
+                    : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
+                }`}
+              >
+                Get Started
+              </button>
+            </div>
+          ))}
+        </div>
+
+        <div className="text-center mt-16">
+          <p className="text-gray-600 mb-4">Need a custom solution?</p>
+          <button className="bg-gray-900 text-white px-8 py-3 rounded-lg hover:bg-gray-800 transition-colors font-semibold">
+            Contact Sales
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Pricing;

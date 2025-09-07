@@ -1,62 +1,26 @@
-
-import {render, screen} from '@testing-library/react',;
-import {MemoryRouter} from 'react-router-dom',;
-import {CategoryCard} from '@/components/CategoryCard',;
-import {render, screen} from '@testing-library/react',
-import {MemoryRouter} from 'react-router-dom',
-import {CategoryCard} from '@/components/CategoryCard',
-import {render, screen} from '@testing-library/react';
-import {MemoryRouter} from 'react-router-dom';
-import {CategoryCard} from '@/components/CategoryCard';
+import { render, screen } from '@testing-library/react';
+import { MemoryRouter } from 'react-router-dom';
+import { CategoryCard } from '@/components/CategoryCard';
 it('renders category card with link to slug', () => {
-  render(
-    <MemoryRouter>
+  render($2);
+  const link = screen.getByRole($2);
+  expect(link).toHaveAttribute('href/category/test-category')
+}),
 
-      <CategoryCard title="Test Category" description="desc" icon="*" />"
+it('normalizes slug with special characters', () => {
+  render($2);
+  const link = screen.getByRole($2);
+  expect(link).toHaveAttribute('href/category/rd-tools')
+}),
 
-    
-    <MemoryRouter>;
-"
-      <CategoryCard title='R&D Tools!' description='desc' icon='*' />;
+it('removes accents from slug', () => {
+  render($2);
+  const link = screen.getByRole($2);
+  expect(link).toHaveAttribute('href/category/creme-brulee')
+}),
 
-    ;
-
-      <CategoryCard title='Crème Brûlée' description='desc' icon='*' />;
-
-
-      <CategoryCard title='AI_Tools' description='desc' icon='*' />;
-
-
-      <CategoryCard title='Test Category' description='desc' icon='*' />;
-)
-    );
-      <CategoryCard title='R & D Tools!' description='desc' icon='*' />;
-
-
-
-
-
-
-
-
-
-
-
-      <CategoryCard title="Test Category" description="desc" icon="*" />;"
-
-      <CategoryCard title="R&D Tools!" description="desc" icon="*" />;"
-
-      <CategoryCard title="Crème Brûlée" description="desc" icon="*" />;"
-
-      <CategoryCard title="AI_Tools" description="desc" icon="*" />;"
-
-    ;"
-}),; <MemoryRouter> <CategoryCard title="Test Category" description="desc" icon="*" /> );""
-  render (<MemoryRouter> <CategoryCard title="R&D Tools!" description="desc" icon="*" /> );""
-  render (<MemoryRouter> <CategoryCard title="Crème Brûlée" description="desc" icon="*" /> );""
-  render (<MemoryRouter> <CategoryCard title="AI Tools" description="desc" icon="*" /> );""
-      <CategoryCard title='R&D Tools!' description='desc' icon='*' />
-
-      <CategoryCard title='Crème Brûlée' description='desc' icon='*' />
-
-      <CategoryCard title='AI_Tools' description='desc' icon='*' />
+it('treats underscores as spaces in slug', () => {
+  render($2);
+  const link = screen.getByRole($2);
+  expect(link).toHaveAttribute('href/category/ai-tools')
+}),

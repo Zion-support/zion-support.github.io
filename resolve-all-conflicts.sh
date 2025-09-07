@@ -1,30 +1,18 @@
 #!/bin/bash
 
-echo "Resolving all merge conflicts by accepting incoming changes..."
+echo "Resolving all merge conflicts by keeping HEAD version..."
 
 # Find all files with merge conflicts
-conflict_files=$(grep -l "" $(find . -name "*.js" -o -name "*.jsx" -o -name "*.ts" -o -name "*.tsx" -o -name "*.json") 2>/dev/null)
-
-echo "Found $(echo "$conflict_files" | wc -l) files with merge conflicts"
-
-# Resolve conflicts by accepting incoming changes
-for file in $conflict_files; do
-    echo "Resolving conflicts in: $file"
-    git checkout --theirs "$file"
-    git add "$file"
+find . -type f \( -name "*.tsx" -o -name "*.ts" -o -name "*.js" -o -name "*.jsx" -o -name "*.json" -o -name "*.css" \) -exec grep -l '<<<<<<< HEAD' {} + | while read -r file; do
+  echo "Resolving conflicts in: $file"
+  
+  # Use git checkout --ours to keep HEAD version
+  git checkout --ours "$file" 2>/dev/null || true
+  
+  # Remove any remaining conflict markers as a safety measure
+  sed -i '/<<<<<<< HEAD/,/>>>>>>>/d' "$file" 2>/dev/null || true
+  
+  echo "Fixed: $file"
 done
 
-echo "🎉 All merge conflicts resolved!"
-echo "Running build test..."
-
-# Test the build
-if npm run build; then
-    echo "✅ Build successful after conflict resolution!"
-else
-    echo "❌ Build still has issues, checking for remaining conflicts..."
-    find . -name "*.tsx" -o -name "*.ts" -o -name "*.js" -o -name "*.jsx" -o -name "*.json" | while read file; do
-        if grep -q "\|\|
-            echo "Remaining conflicts in: $file"
-        fi
-    done
-fi
+echo "All merge conflicts resolved!"

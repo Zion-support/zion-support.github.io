@@ -1,77 +1,34 @@
 {
-  "timestamp": "2025-09-07T05:50:01.677Z",
-  "summary": {
-    "totalScripts": 8,
-    "successful": 4,
-    "failed": 4,
-    "filesProcessed": 6678,
-    "newScriptsCreated": 8,
-    "enhancements": [
-      "Performance Optimization",
-      "Security Enhancement",
-      "SEO Optimization",
-      "Accessibility Enhancement",
-      "Conflict Resolution",
-      "Syntax Fixing",
-      "File Cleanup",
-      "Configuration Fixes"
+  "timestamp": "2025-09-06T04:57:07.377Z",
+  "duration": "20s",
+  "results": {
+    "tests": {
+      "passed": 0,
+      "failed": 2,
+      "errors": [
+        "Command failed: npm run type-check\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n"
+      ]
+    },
+    "builds": {
+      "success": false,
+      "errors": [
+        "Command failed: npm run lint\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nWarning: React version not specified in eslint-plugin-react settings. See https://github.com/jsx-eslint/eslint-plugin-react#configuration .\n"
+      ]
+    },
+    "security": {
+      "issues": [],
+      "fixed": 0
+    },
+    "improvements": [
+      "Created performance monitoring script"
     ]
   },
-  "nextSteps": [
-    "Review and test all automation scripts",
-    "Set up monitoring dashboards",
-    "Configure deployment pipelines",
-    "Implement automated testing",
-    "Set up performance monitoring",
-    "Configure security scanning",
-    "Set up backup procedures"
-  ],
-  "scripts": [
-    "run-automation-suite.cjs",
-    "resolve-all-conflicts.cjs",
-    "comprehensive-syntax-fixer.cjs",
-    "jsx-syntax-fixer.cjs",
-    "fix-minified-files.cjs",
-    "cleanup-services-directory.cjs",
-    "cleanup-all-corrupted-files.cjs",
-    "scripts/performance-optimizer.cjs",
-    "scripts/security-enhancer.cjs",
-    "scripts/seo-optimizer.cjs",
-    "scripts/accessibility-enhancer.cjs"
-  ],
-  "improvements": [
-    "Resolved 6,678+ files with merge conflicts",
-    "Fixed syntax issues in JSX and TypeScript files",
-    "Created comprehensive automation scripts",
-    "Enhanced performance optimization",
-    "Improved security configurations",
-    "Added SEO optimization features",
-    "Enhanced accessibility support",
-    "Fixed PostCSS and ESLint configurations"
-  ],
-  "errors": [
-    {
-      "action": "Fixing linting issues",
-      "error": "Command failed: npm run lint:fix\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n(node:4390) ESLintIgnoreWarning: The \".eslintignore\" file is no longer supported. Switch to using the \"ignores\" property in \"eslint.config.js\": https://eslint.org/docs/latest/use/configure/migration-guide#ignoring-files\n(Use `node --trace-warnings ...` to show where the warning was created)\n\nOops! Something went wrong! :(\n\nESLint: 9.35.0\n\nReferenceError: module is not defined in ES module scope\nThis file is being treated as an ES module because it has a '.js' file extension and '/workspace/package.json' contains \"type\": \"module\". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.\n    at file:///workspace/eslint.config.js?mtime=1757224154721:1:1\n    at ModuleJob.run (node:internal/modules/esm/module_job:274:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26)\n    at async dynamicImportConfig (/workspace/node_modules/eslint/lib/config/config-loader.js:186:17)\n    at async loadConfigFile (/workspace/node_modules/eslint/lib/config/config-loader.js:276:9)\n    at async ConfigLoader.calculateConfigArray (/workspace/node_modules/eslint/lib/config/config-loader.js:589:23)\n    at async #calculateConfigArray (/workspace/node_modules/eslint/lib/config/config-loader.js:743:23)\n    at async directoryFilter (/workspace/node_modules/eslint/lib/eslint/eslint-helpers.js:308:5)\n    at async NodeHfs.<anonymous> (file:///workspace/node_modules/@humanfs/core/src/hfs.js:586:29)\n    at async NodeHfs.walk (file:///workspace/node_modules/@humanfs/core/src/hfs.js:614:3)\n"
-    },
-    {
-      "action": "Type checking",
-      "error": "Command failed: npm run type-check\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n/workspace/node_modules/typescript/lib/_tsc.js:44009\n  function checkStrictModeBinaryExpression(node) {\n                                          ^\n\nRangeError: Maximum call stack size exceeded\n    at checkStrictModeBinaryExpression (/workspace/node_modules/typescript/lib/_tsc.js:44009:43)\n    at bindWorker (/workspace/node_modules/typescript/lib/_tsc.js:44254:16)\n    at bind (/workspace/node_modules/typescript/lib/_tsc.js:44117:5)\n    at visitNode2 (/workspace/node_modules/typescript/lib/_tsc.js:28191:18)\n    at forEachChildInBinaryExpression (/workspace/node_modules/typescript/lib/_tsc.js:28389:12)\n    at forEachChild (/workspace/node_modules/typescript/lib/_tsc.js:28712:35)\n    at bindEachChild (/workspace/node_modules/typescript/lib/_tsc.js:42717:5)\n    at bindChildren (/workspace/node_modules/typescript/lib/_tsc.js:42726:7)\n    at bind (/workspace/node_modules/typescript/lib/_tsc.js:44123:9)\n    at visitNode2 (/workspace/node_modules/typescript/lib/_tsc.js:28191:18)\n\nNode.js v22.16.0\n"
-    },
-    {
-      "action": "Running smoke tests",
-      "error": "Command failed: npm run test:smoke\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n/workspace/jest.config.smoke.cjs:7\n<<<<<<< HEAD\n^^\n\nSyntaxError: Unexpected token '<<'\n    at wrapSafe (node:internal/modules/cjs/loader:1662:18)\n    at Module._compile (node:internal/modules/cjs/loader:1704:20)\n    at Object..js (node:internal/modules/cjs/loader:1895:10)\n    at Module.load (node:internal/modules/cjs/loader:1465:32)\n    at Function._load (node:internal/modules/cjs/loader:1282:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n    at Module.require (node:internal/modules/cjs/loader:1487:12)\n    at require (node:internal/modules/helpers:135:16)\n    at requireOrImportModule (/workspace/node_modules/jest-config/node_modules/jest-util/build/index.js:1010:28)\n"
-    },
-    {
-      "action": "Pushing to main branch",
-      "error": "Command failed: git push origin main\nTo https://github.com/Zion-Holdings/zion.app\n ! [rejected]                main -> main (fetch first)\nerror: failed to push some refs to 'https://github.com/Zion-Holdings/zion.app'\nhint: Updates were rejected because the remote contains work that you do not\nhint: have locally. This is usually caused by another repository pushing to\nhint: the same ref. If you want to integrate the remote changes, use\nhint: 'git pull' before pushing again.\nhint: See the 'Note about fast-forwards' in 'git push --help' for details.\n"
-    }
-  ],
-  "recommendations": [
-    "Continue monitoring build process",
-    "Regularly run automation scripts",
-    "Keep dependencies updated",
-    "Monitor performance metrics",
-    "Regular security audits"
-  ]
+  "summary": {
+    "testsPassed": 0,
+    "testsFailed": 2,
+    "buildSuccess": false,
+    "lintingSuccess": false,
+    "securityIssuesFixed": 0,
+    "improvementsCreated": 1
+  }
 }

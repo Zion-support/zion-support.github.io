@@ -1,116 +1,78 @@
-<<<<<<< HEAD
 import React from 'react';
-import ServiceCard from '../components/ServiceCard';
-import Card from '../components/Card';
+
 const Services: React.FC = () => {
   const services = [
     {
       title: 'AI Solutions',
-      description: 'Cutting-edge artificial intelligence solutions for your business needs.',
-      icon: '🤖',']
-      features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics']
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-f9ca
-
-      title: "AI Solutions",
-      description: "Cutting-edge artificial intelligence solutions for modern businesses.",
-      features: ["Machine Learning", "Natural Language Processing", "Computer Vision", "Predictive Analytics"]
-    },
-      title: "Cloud Services",
-      description: "Scalable cloud infrastructure and deployment solutions.",
-      features: ["Cloud Migration", "Infrastructure as Code", "DevOps", "Monitoring"]
-      title: "Digital Transformation",
-      description: "Complete digital transformation strategies and implementation.",
-      features: ["Process Automation", "Data Analytics", "Integration", "Change Management"]
-      title: "Cybersecurity",
-      description: "Advanced security solutions to protect your digital assets.",
-      features: ["Security Assessment", "Threat Detection", "Compliance", "Incident Response"]
-      title: "Blockchain Solutions",
-      description: "Blockchain technology solutions for various industries.",
-      features: ["Smart Contracts", "DeFi", "NFTs", "Supply Chain"]
-      title: "IoT Solutions",
-      description: "Internet of Things solutions for connected devices.",
-      features: ["Device Management", "Data Collection", "Analytics", "Integration"]
+      description: 'Cutting-edge artificial intelligence solutions for your business needs. From machine learning to natural language processing.',
       icon: '🤖',
->>>>>>> a2c6a2cc86d6e83a9083c45bfcf5a35f741b3208
-      title: 'Cybersecurity',
-      description: 'Comprehensive security solutions to protect your digital assets.',
-      icon: '🔒',
-      features: ['Threat Detection', 'Security Audits', 'Compliance Management', 'Incident Response']
-      title: 'Cloud Infrastructure',
-      description: 'Scalable cloud solutions for modern businesses.',
+      features: ['Machine Learning', 'NLP', 'Computer Vision', 'Predictive Analytics']
+    },
+    {
+      title: 'IT Services',
+      description: 'Comprehensive IT services and infrastructure management. Keep your systems running smoothly and securely.',
+      icon: '💻',
+      features: ['System Administration', 'Network Security', 'Cloud Migration', '24/7 Support']
+    },
+    {
+      title: 'Cloud Solutions',
+      description: 'Scalable cloud infrastructure and migration services. Modernize your infrastructure with our cloud expertise.',
       icon: '☁️',
-      features: ['Cloud Migration', 'Infrastructure as Code', 'DevOps Automation', 'Cost Optimization']
+      features: ['AWS/Azure/GCP', 'DevOps', 'Containerization', 'Auto-scaling']
+    },
+    {
+      title: 'Cybersecurity',
+      description: 'Advanced security solutions to protect your business from evolving threats and ensure compliance.',
+      icon: '🔒',
+      features: ['Threat Detection', 'Compliance', 'Penetration Testing', 'Security Audits']
+    },
+    {
+      title: 'Data Analytics',
+      description: 'Transform your data into actionable insights with our advanced analytics and business intelligence solutions.',
+      icon: '📊',
+      features: ['Data Visualization', 'Business Intelligence', 'Real-time Analytics', 'Custom Dashboards']
+    },
+    {
       title: 'Digital Transformation',
-      description: 'Transform your business processes with digital solutions.',
-      icon: '🔄',
-      features: ['Process Automation', 'Data Analytics', 'Workflow Optimization', 'Change Management']
-      title: 'IT Consulting',
-      description: 'Expert guidance for your technology strategy.',
-      icon: '💼',
-      features: ['Technology Assessment', 'Strategic Planning', 'Vendor Management', 'Implementation Support']
-      title: 'Support & Maintenance',
-      description: 'Ongoing support to keep your systems running smoothly.',
-      icon: '🛠️',
-      features: ['24/7 Monitoring', 'Proactive Maintenance', 'Performance Optimization', 'Technical Support']
+      description: 'Complete digital transformation services to modernize your business processes and improve efficiency.',
+      icon: '🚀',
+      features: ['Process Automation', 'Workflow Optimization', 'Digital Strategy', 'Change Management']
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white pt-20">"
-</div>"
-      <div className="container mx-auto px-4 py-16">"
-        <div className="text-center mb-16">"
-          <h1 className="text-5xl font-extrabold mb-6">Our Services</h1>""
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">"
-</p>
-
-    <div className="min-h-screen bg-background">
+    <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white min-h-screen">
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold text-foreground mb-4">Our Services</h1>
-          <p className="text-lg text-foreground/80 max-w-2xl mx-auto">
-            Comprehensive technology solutions designed to meet your business needs
+          <h1 className="text-5xl font-extrabold mb-6">
+            Our Services
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            We offer comprehensive technology solutions to help your business thrive in the digital age.
+            From AI and cybersecurity to cloud infrastructure and digital transformation.
+          </p>
         </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
           {services.map((service, index) => (
-            <div key={index} className="bg-card p-6 rounded-lg border hover:shadow-lg transition-shadow">
-              <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
-              <p className="text-foreground/70 mb-4">{service.description}</p>
+            <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-8 hover:bg-white/20 transition-all duration-300 border border-white/20">
+              <div className="text-4xl mb-4">{service.icon}</div>
+              <h3 className="text-2xl font-bold mb-4 text-white">{service.title}</h3>
+              <p className="text-gray-300 mb-6">{service.description}</p>
               <ul className="space-y-2">
                 {service.features.map((feature, featureIndex) => (
-                  <li key={featureIndex} className="text-sm text-foreground/60 flex items-center">
-                    <span className="w-2 h-2 bg-primary rounded-full mr-2"></span>
+                  <li key={featureIndex} className="text-gray-300 flex items-center">
+                    <span className="w-2 h-2 bg-blue-400 rounded-full mr-3"></span>
                     {feature}
                   </li>
                 ))}
               </ul>
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white pt-20">
-          <h1 className="text-5xl font-extrabold mb-6">Our Services</h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            We offer a comprehensive range of technology solutions to help your business thrive in the digital age.
-"
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">"
-            <ServiceCard;
-              key={index}
-              title={service.title}
-              description={service.description}
-              icon={service.icon}
-              features={service.features}
-            />
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
 
-        <Card className="text-center">"
-          <h2 className="text-3xl font-bold mb-6">Ready to Get Started?</h2>""
-          <p className="text-lg text-gray-300 mb-8">"
-          </p>"
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">"
-            <a href="/contact" className="inline-block">"
-</a>"
-              <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors">"
-</button>
-            <a href="/pricing" className="inline-block">"
-              <button className="border border-blue-600 text-blue-400 hover:bg-blue-600 hover:text-white font-semibold py-3 px-8 rounded-lg transition-colors">"
-            </a>
-        
-    </div>)"
+export default Services;

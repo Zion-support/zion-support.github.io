@@ -1,82 +1,24 @@
-
-import React from "react",""
-import { QuoteRequestCard } from "./QuoteRequestCard",""
-import { EmptyStateCard } from "./EmptyStateCard";""
-import type { QuoteRequest } from "@/types/quotes";""
-import { EmptyStateCard } from "./EmptyStateCard",""
-import type { QuoteRequest } from "@/types/quotes","
-type QuoteRequestsListProps = {
-  quotes: QuoteRequest[],
+import React from "react",
+import { QuoteRequestCard } from "./QuoteRequestCard",
+import { EmptyStateCard } from "./EmptyStateCard";
+import type { QuoteRequest } from "@/types/quotes";
+type QuoteRequestsListProps = $2;
   isLoading: boolean,
   isArchived: boolean,
   onViewDetails: (quote: QuoteRequest) => void,
   onMarkAsResponded: (id: string) => void,
-  onToggleArchive: (id: string, isArchived: boolean) => void;
+  onToggleArchive: (id: string, isArchived: boolean) => void
 },
 
-
-
-
-export const QuoteRequestsList: React.FC<QuoteRequestsListProps> = ({;
-
 export const QuoteRequestsList: React.FC<QuoteRequestsListProps> = ({
-"
-      <div className="text-center py-20">"
-</div>"
-        <p className="text-zion-slate-light">Loading {isArchived ? 'archived' : 'your'} hire requests...</p>
-      </div>
-
-export const QuoteRequestsList: React.FC < QuoteRequestsListProps> = ({
   quotes;
-  is_loading;
-  is_archived;
+  isLoading;
+  isArchived;
   onViewDetails;
-    return (
-      <div className="text-center py-20">;"
-        <p className="text-zion-slate-light">Loading {isArchived ? 'archived' : 'your'} hire requests...</p>;
-      </div>;
-    return <EmptyStateCard type={isArchived ? 'archived' : 'active'} />;
-
-    return <EmptyStateCard type={isArchived ? 'archived' : 'active'} />
-
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">"
-        <QuoteRequestCard;
-          key={quote.id}
-          quote={quote}
-          onViewDetails={onViewDetails}
-          onMarkAsResponded={!isArchived ? onMarkAsResponded : undefined}
-          onToggleArchive={onToggleArchive}
-        />
-
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">;"
-          key={quote && quote.id}
+  onMarkAsResponded
   onMarkAsResponded,
-  onToggleArchive;)
+  onToggleArchive
 }) => {
-      <div className="text - center py - 20">;"
-        <p className="text - zion - slate - light">Loading {is_archived ? 'archived' : 'your'} hire requests...</p>;
-      </div>);
-    return <EmptyStateCard type={is_archived ? 'archived' : 'active'} />;
-
-    <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 5">;"
-          onMarkAsResponded={!is_archived ? onMarkAsResponded : undefined}
-
-
-
-
-    </div>;"
-  return (<div className="text-center py-20" > <p className="text-zion-slate-light" >Loading {"
-</div>)
-}hire requests...</p> </div>) 
-}<QuoteRequestCard key= {
-  quote.id;
-}quote= {
-  quote;
-}onViewDetails= {
-}onMarkAsResponded= {
-  !isArchived ? onMarkAsResponded : undefined;
-}onToggleArchive= {
-  onToggleArchive;
-}/>) ) 
-
-}</div>) 
+  if (isLoading) {
+    return (
+      <div className = $2;

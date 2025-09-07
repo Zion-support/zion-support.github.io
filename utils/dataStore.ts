@@ -1,66 +1,60 @@
-
-
-  getData: () => [],
-  setData: (data: any) => null;,
-  updateData: (id: string, data: any) => null;,
-  deleteData: (id: string) => null;
+import fs from 'fs-extra';
+import path from 'path';
+import { Project, Review } from '../types/reviews';
+const DATA_DIR = path.join(process.cwd(), 'data'),
+const PROJECTS_PATH = path.join($2);
+const REVIEWS_PATH = path.join($2);
+async function ensureFilesExist(): Promise<void> {
+  await fs.ensureDir($2);
+  if (!(await fs.pathExists(PROJECTS_PATH))) {
+    await fs.writeJson(PROJECTS_PATH, [], { spaces: 2})
+  }
+  if (!(await fs.pathExists(REVIEWS_PATH))) {
+    await fs.writeJson(REVIEWS_PATH, [], { spaces: 2})
+  }
 }
 
-
-  setData: (data: any) => null,
-  updateData: (id: string, data: any) => null,
-};
-
-
-interface Project {
-  // TODO: Implement
-  id: string;,
-  title: string;
-  description: string;,
-  status: string;
-  createdAt: Date;,
-  updatedAt: Date;
-
-interface Review {
-  // TODO: Implement
-  projectId: string;
-  fromRole: "client" | "talent";",
-  fromId: string;"
-  toRole: "client" | "talent";",
-  toId: string;
-  rating: number;,
-  text: string;
-  categories?: any;
-  anonymous: boolean;,
-  approved: boolean;
-  removed: boolean;,
-  createdAt: Date;
-
-class DataStore {
-  // TODO: Implement
-  private projects: Project[] = [];
-  private reviews: Review[] = [];
-
-  // Project methods;
-  findProjectById(id: string): Project | undefined {
-  // TODO: Implement
-    return this.projects.find((project) => project.id === id);
-
-  createProject(data: Partial<Project>): Project {
-
-  upsertReview(data: Partial<Review>): Review {
-
-
-
-export const createProject = (data: Partial<Project>) => store && store.createProject(data);
-
-export const upsertReview = (data: Partial<Review>) => store && store.upsertReview(data);
-
 export async function readProjects(): Promise<Project[]> {
+  await ensureFilesExist($2);
+  return fs.readJson(PROJECTS_PATH)
+}
 
 export async function writeProjects(projects: Project[]): Promise<void> {
-</void>
-export const createProject = (data: Partial<Project>) =>
+  await fs.writeJson(PROJECTS_PATH, projects, { spaces: 2})
+}
 
-export const upsertReview = (data: Partial<Review>) => store.upsertReview(data);
-"
+export async function readReviews(): Promise<Review[]> {
+  await ensureFilesExist($2);
+  return fs.readJson(REVIEWS_PATH)
+}
+
+export async function writeReviews(reviews: Review[]): Promise<void> {
+  await fs.writeJson(REVIEWS_PATH, reviews, { spaces: 2})
+}
+
+export async function findProjectById(projectId: string): Promise<Project | undefined> {
+  const projects = await readProjects($2);
+  return projects.find((p) => p.id === projectId)
+}
+
+export async function upsertReview(newReview: Review): Promise<void> {
+  const reviews = await readReviews($2);
+  const idx = $2;
+  if (idx >= 0) {
+    reviews[idx] = newReview
+  } else {
+    reviews.push(newReview)
+  }
+  await writeReviews(reviews)
+}
+
+export async function getProjectReviews(projectId: string): Promise<Review[]> {
+  const reviews = await readReviews($2);
+  return reviews.filter((r) => r.projectId = $2;
+  fromRole: 'client' | 'talent',
+  fromId: string): Promise<boolean> {
+  const reviews = await readReviews($2);
+  return reviews.some(
+    (r) => r.projectId = $2;
+  )
+}

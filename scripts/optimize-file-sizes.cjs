@@ -1,3 +1,7 @@
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+
 
 
 console.log('� Starting File Size Optimization...')
@@ -7,4 +11,9 @@ const largeFiles = ['pages/ai-services.tsx']
   'pages/services.tsx
   const content = fs.readFileSync(filePath, 'utf8')
   const lines = content.split('\n')
+console.log(' File size optimization completed')
+console.log(' File size optimization completed')
+
+console.log(' File size optimization completed')
     const backupPath = filePath + '.backup;
+

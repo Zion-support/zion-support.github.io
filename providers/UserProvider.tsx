@@ -1,31 +1,62 @@
-import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';
-export type UserRole = 'client' | 'talent';
-export type User = {
-  id: string;,
-  name: string;
-  email: string;,
-  role: UserRole;
-  avatar?: string;
-  createdAt: string;,
-  updatedAt: string;
-};
+export type User = {;
 
-export interface UserContextType {
-  // TODO: Implement
+export type UserRole = $2;
+  name: 'Jordan Lee',
+  role: 'client',
+  onboardingCompleted: false}
+
+export function UserProvider({ children }: { children: React.ReactNode }) {
+  const [user, setUser] = useState<User | null>(null)
+
+  useEffect(() => {
+    try {
+  completeOnboarding: () => void;
 }
-  user: User | null;,
-  loading: boolean;
-  login: (email: string, password: string) => Promise<void>;
-</void>
-  updateUser: (userData: Partial<User>) => Promise<void>;
-
-const UserContext = createContext<UserContextType | undefined>(undefined);
-
-export const UserProvider: React.FC<UserProviderProps> = ({ children }) => {
-
+;
+const UserContext = createContext<UserContextValue | undefined>(undefined);
+const DEFAULT_USER: User = {;
+  id: 'u_001',;
+  name: 'Jordan Lee',;
+  role: 'client',;
+  onboardingCompleted: false}
+;
+export function UserProvider({ children }: { children: React.ReactNode }) {;
   const [user, setUser] = useState<User | null>(null);
 
-  const login = async (email: string, password: string): Promise<void> => {
-  const updateUser = async (userData: Partial<User>): Promise<void> => {
+    const storedUser = localStorage.getItem('user');
+    if (storedUser) {}
+      try {}
+        setUser(JSON.parse(storedUser));
+      } catch (error) {'
+        console.error('Error parsing stored user:', error);'
+        localStorage.removeItem('user');
+      }
+    } catch {
+      // Ignore localStorage errors
+    }
+  }, []);
+  useEffect(() => {
+    try {
+      if (user) localStorage.setItem('zion.user', JSON.stringify(user));
+      else localStorage.removeItem('zion.user');
+    } catch {}
+  }, [user]);
 
-  return <UserContext.Provider value={contextValue}>{children}</UserContext.Provider>;
+  const value = $2;
+    setUser,
+    logout: () => setUser($2);
+    completeOnboarding: () => setUser(prev => prev ? { ...prev, onboardingCompleted: true} : prev)}), [user])
+
+return <UserContext.Provider value={value}>{children}</UserContext.Provider>;
+
+export function useUser() {
+  const ctx = useContext(UserContext);
+  if (!ctx) throw new Error('useUser must be used within UserProvider');
+  return ctx;
+  return <UserContext.Provider value={value}>{children}</UserContext.Provider>;
+
+export function useUser() {;
+  const ctx = useContext(UserContext);
+  if (!ctx) throw new Error('useUser must be used within UserProvider');
+  return ctx;
+}

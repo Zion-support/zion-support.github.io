@@ -1,114 +1,268 @@
 
-
-
-
-import {useState} from "react";""
-import {useAuth} from "@/hooks/useAuth";""
-import {supabase} from "@/integrations/supabase/client";""
-import {toast} from "@/hooks/use-toast";""
-export type ApiKeyScope = 'jobs: read' | 'jobs:write' | 'talent:read' | 'quotes:write' | 'webhooks:manage';
-import { useState } from './react';
-import { use_auth } from '@/hooks / use_auth';
-import { supabase } from '@/integrations / supabase / client';
-import { toast } from '@/hooks / use - toast';
-;
-
+import { useState } from "react";
+import { useAuth } from "@/hooks/useAuth";
+import { supabase } from "@/integrations/supabase/client";
+import { toast } from "@/hooks/use-toast";
+export type ApiKeyScope = $2;
 export interface ApiKey {
-  // TODO: Implement
-}
-export interface ApiKey {;
-
-  // TODO: Implement
-
-  // TODO: Implement
-  id: string;,
-  name: string;
-  key_prefix: string;,
-  scopes: ApiKeyScope[];
-  created_at: string;,
-  last_used_at: string | null;
-
+  id: string,
+  name: string,
+  key_prefix: string,
+  scopes: ApiKeyScope[],
+  created_at: string,
+  last_used_at: string | null,
   expires_at: string | null,
-  is_active: boolean;
-
-
-export interface ApiLog {;
-
+  is_active: boolean}
 
 export interface ApiLog {
-  // TODO: Implement
-  endpoint: string;
-  method: string;,
-  status_code: number;
-  created_at: string;
-
-
+  id: string,
+  endpoint: string,
+  method: string,
+  status_code: number,
+  created_at: string,
   ip_address?: string,
-  response_time_ms?: number;
+  response_time_ms?: number
+}
+export function useApiKeys() {
+  const { user } = useAuth($2);
+  const [keys, setKeys] = useState<ApiKey[]>([]),
+  const [logs, setLogs] = useState<ApiLog[]>([]),
+  const [totalLogs, setTotalLogs] = useState($2);
+  const [loading, setLoading] = useState($2);
+  const [error, setError] = useState<string | null>(null),
+  const [newApiKey, setNewApiKey] = useState<string | null>(null),
 
-export function useApiKeys() {;
+  // Helper to get the base URL for API functions
+  const getApiUrl = $2;
+    const url = $2;
+    return `${url}/functions/v1/api-key-manager`
+  },
 
-
-  const { user } = useAuth();
-  const [keys, setKeys] = useState<ApiKey[]>([]);
-
-  const [logs, setLogs] = useState<ApiLog[]>([]);
-
-  const [error, setError] = useState<string | null>(null);
-</string>
-  const [newApiKey, setNewApiKey] = useState<string | null>(null);
-  const [keys, set_keys] = useState < ApiKey[]>([]);
-  const [logs, set_logs] = useState < ApiLog[]>([]);
-  const [total_logs, setTotalLogs] = useState (0);
-  const [loading, set_loading] = useState (false);
-  const [error, set_error] = useState < string | null>(null);
-  const [newApiKey, setNewApiKey] = useState < string | null>(null);
-  // Helper to get the base URL for API functions;
-  const getApiUrl = () =>: any {
-  // TODO: Implement
-    // Using optional chaining ensures this function works both in the browser;
-    // (where import.meta.env is injected by Vite) and in Node environments;
-    // such as tests or server side rendering.;
-    const env = (import.meta as any)?.env ?? process.env;
-    const url = env.VITE_SUPABASE_URL || env.SUPABASE_URL;
-    return `${url}/functions / v1 / api - key - manager`;
-  // Fetch user's API keys;
-  const fetchApiKeys = async () => {
-    // Check condition;
-if (return) {
-  $2;
-    set_loading (true);
-    set_error (null);
+  // Fetch user's API keys
+  const fetchApiKeys = $2;
+    setLoading($2);
+    setError($2);
     try {
-  // TODO: Implement
-      const { data: { session } } = await supabase.auth.get_session ();
-      // Check condition;
-if ( {) {
-        set_error ("Authentication required");"
-        return;
-      }`;
-      const response = await fetch (`${getApiUrl ()}/keys`, {"
-        method: 'GET',
-        headers: {`;
+      const { data: { session } } = await supabase.auth.getSession($2);
+      if (!session) {
+        setError($2);
+        return
+      }
+      const response = await fetch(`${getApiUrl()}/keys`, {
+        method: 'GET'
+        headers: {
           'Authorization': `Bearer ${session.access_token}`;
-          'Content - Type': 'application / json';
-      });
-      const result = await response.json ();
-      // Check condition;
-        throw new Error (result.error || 'Failed to fetch API keys');`;
-          'Content-Type': 'application/json
-      const result = await response.json();
+          'Content-Type': 'application/json'
+        }
+      }),
+
+      const result = await response.json($2);
       if (!response.ok) {
-        throw new Error(result.error |'Failed to fetch API keys')
-      setKeys(result.keys |[])
+        throw new Error(result.error || 'Failed to fetch API keys')
+      }
 
-  const { user } = useAuth(),;
-  const [keys, setKeys] = useState<ApiKey[]>([]),;
+      setKeys(result.keys || [])
+    } catch (err) {
+      console.error($2);
+      setError($2);
+      toast({
+        variant: "destructive",
+        title: "Error fetching API keys",
+        description: err instanceof Error ? err.message : 'An unknown error occurred'})
+    } finally {
+      setLoading(false)
+    }
+  },
 
-  const [logs, setLogs] = useState<ApiLog[]>([]),;
+  // Create new API key
+  const createApiKey = async (name: string, scopes: ApiKeyScope[], expiresAt?: Date | null) => {
+    if (!user) return,
+    
+    setLoading($2);
+    setError($2);
+    setNewApiKey($2);
+    try {
+      const { data: { session } } = await supabase.auth.getSession($2);
+      if (!session) {
+        setError($2);
+        return
+      }
+      const response = await fetch(`${getApiUrl()}/create`, {
+        method: 'POST'
+        headers: {
+          'Authorization': `Bearer ${session.access_token}`;
+          'Content-Type': 'application/json'
+        }
+        body: JSON.stringify({
+          name;
+          scopes
+          expiresAt: expiresAt ? expiresAt.toISOString() : null
+        })
+      }),
 
-  const [error, setError] = useState<string | null>(null),;
-  const [newApiKey, setNewApiKey] = useState<string | null>(null),;
+      const result = await response.json($2);
+      if (!response.ok) {
+        throw new Error(result.error || 'Failed to create API key')
+      }
+      // Add the new key to the list
+      setKeys($2);
+      // Store the actual key value temporarily so it can be displayed once
+      setNewApiKey($2);
+      toast($2);
+      return result
+    } catch (err) {
+      console.error($2);
+      setError($2);
+      toast({
+        variant: "destructive",
+        title: "Error creating API key",
+        description: err instanceof Error ? err.message : 'An unknown error occurred'})
+    } finally {
+      setLoading(false)
+    }
+  },
 
+  // Regenerate API key
+  const regenerateApiKey = $2;
+    setLoading($2);
+    setError($2);
+    setNewApiKey($2);
+    try {
+      const { data: { session } } = await supabase.auth.getSession($2);
+      if (!session) {
+        setError($2);
+        return
+      }
+      const response = await fetch(`${getApiUrl()}/regenerate`, {
+        method: 'POST'
+        headers: {
+          'Authorization': `Bearer ${session.access_token}`;
+          'Content-Type': 'application/json'
+        }
+        body: JSON.stringify({ keyId })
+      }),
 
-</string>`;
+      const result = await response.json($2);
+      if (!response.ok) {
+        throw new Error(result.error || 'Failed to regenerate API key')
+      }
+      // Update the key in the list
+      setKeys(prev => prev.map(key => 
+        key.id === keyId ? { ...result, key: undefined} : key
+      )),
+      
+      // Store the new key value
+      setNewApiKey($2);
+      toast($2);
+      return result
+    } catch (err) {
+      console.error($2);
+      setError($2);
+      toast({
+        variant: "destructive",
+        title: "Error regenerating API key",
+        description: err instanceof Error ? err.message : 'An unknown error occurred'})
+    } finally {
+      setLoading(false)
+    }
+  },
+
+  // Revoke API key
+  const revokeApiKey = $2;
+    setLoading($2);
+    setError($2);
+    try {
+      const { data: { session } } = await supabase.auth.getSession($2);
+      if (!session) {
+        setError($2);
+        return
+      }
+      const response = await fetch(`${getApiUrl()}/revoke`, {
+        method: 'POST'
+        headers: {
+          'Authorization': `Bearer ${session.access_token}`;
+          'Content-Type': 'application/json'
+        }
+        body: JSON.stringify({ keyId })
+      }),
+
+      const result = await response.json($2);
+      if (!response.ok) {
+        throw new Error(result.error || 'Failed to revoke API key')
+      }
+      // Update the key's active status in the list
+      setKeys(prev => prev.map(key => 
+        key.id === keyId ? { ...key, is_active: false} : key
+      )),
+      
+      toast($2);
+      return result
+    } catch (err) {
+      console.error($2);
+      setError($2);
+      toast({
+        variant: "destructive",
+        title: "Error revoking API key",
+        description: err instanceof Error ? err.message : 'An unknown error occurred'})
+    } finally {
+      setLoading(false)
+    }
+  },
+
+  // Fetch API usage logs
+  const fetchApiLogs = async (limit = 50, offset = $2;
+    setLoading($2);
+    setError($2);
+    try {
+      const { data: { session } } = await supabase.auth.getSession($2);
+      if (!session) {
+        setError($2);
+        return
+      }
+
+      const response = $2;
+        {
+          method: 'GET'
+          headers: {
+            'Authorization': `Bearer ${session.access_token}`;
+            'Content-Type': 'application/json'
+          }
+        }
+      ),
+
+      const result = await response.json($2);
+      if (!response.ok) {
+        throw new Error(result.error || 'Failed to fetch API logs')
+      }
+
+      setLogs($2);
+      setTotalLogs($2);
+      return result
+    } catch (err) {
+      console.error($2);
+      setError($2);
+      toast({
+        variant: "destructive",
+        title: "Error fetching API logs",
+        description: err instanceof Error ? err.message : 'An unknown error occurred'})
+    } finally {
+      setLoading(false)
+    }
+  },
+
+  return {
+    keys,
+    logs,
+    totalLogs,
+    loading,
+    error,
+    newApiKey,
+    fetchApiKeys,
+    createApiKey,
+    regenerateApiKey,
+    revokeApiKey,
+    fetchApiLogs,
+    clearNewApiKey: () => setNewApiKey(null)
+  }
+}
+;

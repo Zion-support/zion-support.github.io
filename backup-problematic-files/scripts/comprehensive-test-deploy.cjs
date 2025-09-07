@@ -1,30 +1,30 @@
-    this.log(`Tests: ${this.results.tests.passed}/${this.results.tests.total} passed`);`;
-    this.log(`Builds: ${this.results.builds.success} successful, ${this.results.builds.failed} failed`);`;
+    this.log(`Tests: ${this.results.tests.passed}/${this.results.tests.total} passed`);
+    this.log(`Builds: ${this.results.builds.success} successful, ${this.results.builds.failed} failed`);
     this.log(`Errors: ${this.results.errors.length}`);
     
     const recommendations = this.generateRecommendations();
     this.log('\n💡 Recommendations:');
-    recommendations.forEach((rec, index) => {`;
+    recommendations.forEach((rec, index) => {
       this.log(`  ${index + 1}. ${rec}`);
     });
 
     this.log('\\n🎉 Comprehensive test & deploy suite completed!');
   }
+}
 
-// Run the comprehensive suite;
+// Run the comprehensive suite
 const suite = new ComprehensiveTestDeploy();
-suite.runComprehensiveSuite().catch(console.error);
-#!/usr/bin/env node;
 suite.runComprehensiveSuite().catch(console.error);#!/usr/bin/env node;
+#!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
 // console.log(' Comprehensive Test & Deploy Suite')
 console.log('=')
   log(message, type = 'info')
-        encoding: 'utf8,
-  stdio: 'pipe`;
-      this.log(` ${description} completed successfully`, 'success'`)`;
+        encoding: 'utf8'
+        stdio: 'pipe'
+      this.log(` ${description} completed successfully`, 'success'`)
       this.log(` ${description} failed: ${error.message}`, 'error'`)
     this.log('🧪 Running comprehensive tests...')
       { cmd: 'npm run lint', desc: 'ESLint linting'}
@@ -43,7 +43,7 @@ console.log('=')
       { cmd: 'node scripts/seo-optimizer.cjs', desc: 'SEO optimization'}
       { cmd: 'node scripts/link-checker.cjs', desc: 'Link checking'}
     this.log(' Generating comprehensive reports...')
-    const reportPath = path.join(process.cwd(), 'comprehensive-reports', 'test-deploy-report.json
+    const reportPath = path.join(process.cwd(), 'comprehensive-reports', 'test-deploy-report.json'
       recommendations.push('Fix failing tests before deployment')
       recommendations.push('Fix build issues before deployment')
       recommendations.push('Address multiple errors before deployment')
@@ -53,4 +53,3 @@ console.log('=')
     this.log('===')
     this.log('\n Recommendations:')
     this.log('\\n� Comprehensive test & deploy suite completed!')
-    this.log('\\n� Comprehensive test & deploy suite completed!')`;

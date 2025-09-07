@@ -1,68 +1,30 @@
-
-
-import {Navigate} from 'react-router-dom';
-export interface ProtectedRouteProps {
-  // TODO: Implement
-}
-  children: React.ReactNode,;
 import React from 'react';
-  adminOnly?: boolean;
-  tenantAdminAllowed?: boolean;
-  requiredUserType?: "creator" | "jobSeeker" | "employer" | "buyer" | "admin";"
-
-
-export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ ;
-
-
-
+import { Navigate  } from 'react-router-dom';
+import { useAuth  } from '@/hooks/useAuth';
+import { useTenantAdminStatus  } from '@/hooks/useWhitelabelTenant';
+import { useWhitelabel } from '@/context/WhitelabelContext';
+export interface ProtectedRouteProps {
+  children: React.ReactNode,
+  adminOnly?: boolean,
+  tenantAdminAllowed?: boolean,
+  requiredUserType?: "creator" | "jobSeeker" | "employer" | "buyer" | "admin"
+}
+export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({
+  children;
 
 export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ 
-"
-    return <div className="flex h-screen w-full items-center justify-center">"
-</div>"
-      <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-zion-cyan"></div>"
-    return <Navigate to="/login" />"
-      return <Navigate to="/unauthorized" />"
-
-export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({;
-
-export const ProtectedRoute: React.FC < ProtectedRouteProps> = ({
-  children;
-  admin_only = false;
-  tenantAdminAllowed = false,
-  requiredUserType;)
+  children,
+  adminOnly = $2;
+  tenantAdminAllowed = $2;
+  requiredUserType
 }) => {
-  const { user, is_loading } = use_auth ();
-  const { tenant } = use_whitelabel ();
-  const { is_admin: isTenantAdmin, is_loading: isCheckingTenantAdmin } = useTenantAdminStatus (tenant?.id),
-  const isCheckingPermissions = is_loading || isCheckingTenantAdmin;
-;
-  // Show loading state if auth or tenant admin status is still being checked;
-  // Check condition;
-if ( {) {
-  $2;
-}"
-    return <div className="flex h - screen w - full items - center justify - center">;"
-      <div className="animate - spin rounded - full h - 12 w - 12 border - t-2 border - b-2 border - zion - cyan"></div>;"
-    </div>;"
-    return <Navigate to="/login" />;"
-      return <Navigate to="/unauthorized" />;"
-
-  return <>{children}</>;
-export default ProtectedRoute;
-import React from 'react',;
-import { Navigate } from 'react-router-dom',;
-import { useAuth } from '@/hooks/useAuth',;
-import { useTenantAdminStatus } from '@/hooks/useWhitelabelTenant',;
-import { useWhitelabel } from '@/context/WhitelabelContext',;
-export interface ProtectedRouteProps {;
-  children:React.ReactNode,;
-  adminOnly?:boolean,;
-  tenantAdminAllowed?:boolean,;
-  requiredUserType?:"creator" | "jobSeeker" | "employer" | "buyer" | "admin";"
-export const ProtectedRoute:React.FC<ProtectedRouteProps> = ({ ;
-    return <div className="flex h-screen w-full items-center justify-center">;"
-      <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-zion-cyan"></div>;"
-
-};
-)"
+  const { user, isLoading } = useAuth($2);
+  const { tenant } = useWhitelabel($2);
+  const { isAdmin: isTenantAdmin, isLoading: isCheckingTenantAdmin} = useTenantAdminStatus($2);
+  const isCheckingPermissions = $2;
+  // Show loading state if auth or tenant admin status is still being checked
+  if (isCheckingPermissions) {
+    return <div className = $2;
+    if (!hasAdminAccess) {
+      return <Navigate to = $2;
+export default ProtectedRoute,

@@ -1,83 +1,40 @@
-
+import { Badge } from "@/components/ui/badge",
+import { ShieldAlert } from "lucide-react";
+import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 interface DisputeStatusBadgeProps {
-  // TODO: Implement
+  status: 'open' | 'under_review' | 'resolved' | 'closed'
 }
-  status: 'open' | 'under_review' | 'resolved' | 'closed
 export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {
-import { Badge } from '@/components / ui / badge';
-import { ShieldAlert } from './lucide-react';
-import { Tooltip, TooltipContent, TooltipTrigger } from '@/components / ui / tooltip';
-import { Badge } from "@/components/ui/badge","
-  // TODO: Implement
-}"
-
-  let variant: "default" | "destructive" | "secondary" | "outline" = "destructive",;""
-  let message = "This item has an open dispute";"
-  switch (status) {"
+  let variant: "default" | "destructive" | "secondary" | "outline" = "destructive",
+  let message = $2;
+  switch (status) {
     case 'under_review':
-import {Badge} from "@/components/ui/badge";""
-import {ShieldAlert} from "lucide-react";""
-import {Tooltip, TooltipContent, TooltipTrigger} from "@/components/ui/tooltip";"
-interface DisputeStatusBadgeProps {;"
-  status: 'open' | 'under_review' | 'resolved' | 'closed';
-
-export function DisputeStatusBadge(): any ({ status }: DisputeStatusBadgeProps) {;
-  switch (status) {;"
-    case 'under_review':;
-export /**
- * DisputeStatusBadge - Function description;
- */
-function DisputeStatusBadge() {"
-  let variant: "default" | "destructive" | "secondary" | "outline" = "destructive","
-      variant = "secondary";""
-      message = "This dispute is under review by our team";"
-      break;"
-    case 'resolved':;
-      variant = "outline";""
-      message = "This dispute has been resolved";"
-    case 'closed':;
-      message = "This dispute has been closed";"
-      break;
-"
-      variant = "secondary",""
-      message = "This dispute is under review by our team","
-      break,"
-    case 'resolved':
-      variant = "outline",""
-      message = "This dispute has been resolved","
-    case 'closed':
-      message = "This dispute has been closed","
+      variant = $2;
+      message = $2;
       break,
-
-
-    default:
+    case 'resolved':
+      variant = $2;
+      message = $2;
+      break,
+    case 'closed':
+      variant = $2;
+      message = $2;
+      break,
+    default: break}
+  
   return (
     <Tooltip>
-
       <TooltipTrigger asChild>
-        <Badge variant={variant} className="flex items-center gap-1">"
-          <ShieldAlert className="h-3 w-3" />"
-
+        <Badge variant={variant} className="flex items-center gap-1">
+          <ShieldAlert className="h-3 w-3" />
           <span>Under Dispute</span>
-        
-      
+        </Badge>
+      </TooltipTrigger>
       <TooltipContent>
-
         <p>{message}</p>
-      
-    
-    <Tooltip>;
-
-      <TooltipTrigger asChild>;
-        <Badge variant={variant} className="flex items-center gap-1">;"
-          <ShieldAlert className="h-3 w-3" />;"
-
-          <span>Under Dispute</span>;
-        ;
-      <TooltipContent>;
-
-        <p>{message}</p>;
-      ;)
-    );
-}</p>  ) 
-    );"
+      </TooltipContent>
+    </Tooltip>
+  )
+}
+}
+;

@@ -1,142 +1,85 @@
 import {
-  // TODO: Implement
-}
+  FormField
+  FormItem
+  FormLabel
+  FormControl
+  FormMessage
+} from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+
+import { Control } from "react-hook-form";
+import { BasicInfoFormData } from "./schema";
+import {
   FormField,
   FormItem,
   FormLabel,
   FormControl,
   FormMessage,
-} from "@/components/ui/form";""
-import { Input } from "@/components/ui/input";""
-import { Control } from "react-hook-form";""
-import { BasicInfoFormData } from "./schema";"
+} from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+import { Control } from "react-hook-form";
+import { BasicInfoFormData } from "./schema";
 interface ContactFieldsProps {
-  // TODO: Implement
-  control: Control<BasicInfoFormData>;
-
-
-
-"
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;"
-</div>
-      <FormField;
-        control={control}"
-        name="location""
-export /**
- * ContactFields - Function description;
- */
-function ContactFields() {
-  return ("
-    <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 6">;"
-
-        name="location";")
+  control: Control<BasicInfoFormData>
+}
+export function ContactFields({ control }: ContactFieldsProps) {
+  return (
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <FormField
+        control={control}
+        name="location"
         render={({ field }) => (
-
-          <FormItem>;
-
-            <FormLabel > Location;
- */)
-
-
-
-  control:Control<BasicInfoFormData>;
-        render={({ field }) => (;
-
-
-            <FormLabel>Location;
-            <FormControl>;
-              <Input placeholder="San Francisco, CA" {...field} />;"
-
-            ;
-            <FormMessage />;
-
           <FormItem>
-
-            <FormLabel>Location
+            <FormLabel>Location</FormLabel>
             <FormControl>
-              <Input placeholder="San Francisco, CA" {...field} />"
-
-            
+              <Input placeholder="San Francisco, CA" {...field} />
+            </FormControl>
             <FormMessage />
-
-          
-        name="website"")
-
-
-            <FormLabel>Website;
-              <Input placeholder="https://yourwebsite && yourwebsite.com" {...field} />;"
-
-
-          ;)
-          )}
-        name="website";"
-
-
-            <FormLabel > Website;
-              <Input placeholder="https://yourwebsite.com" {...field} />;"
-
-)
-
-        name="linkedin";"
-
-
-            <FormLabel > LinkedIn;
-
-              <Input;"
-                placeholder="https://linkedin.com / in / username";"
+          </FormItem>
+        )}
+      />
+      <FormField
+        control={control}
+        name="website"
+        render={({ field }) => (
+          <FormItem>
+            <FormLabel>Website</FormLabel>
+            <FormControl>
+              <Input placeholder="https://yourwebsite.com" {...field} />
+            </FormControl>
+            <FormMessage />
+          </FormItem>
+        )}
+      />
+      <FormField
+        control={control}
+        name="linkedin"
+        render={({ field }) => (
+          <FormItem>
+            <FormLabel>LinkedIn</FormLabel>
+            <FormControl>
+              <Input
+                placeholder="https://linkedin.com/in/username"
                 {...field}
-
-      />;
-
-
-        name="linkedin"")
-
-
-            <FormLabel>LinkedIn
-
-                placeholder="https://linkedin.com/in/username""
               />
-
-            
-
-          
-        name="github"")
-
-
-            <FormLabel>GitHub;
-              <Input placeholder="https://github && github.com/username" {...field} />;"
-
-
-  control: Control<BasicInfoFormData> 
-  return (<div className="grid grid-cols-1 md:grid-cols-2 gap-6" > <FormField control= {"
-</div>)"
-}) => (<FormItem> <FormLabel>Location <FormControl> <Input placeholder="San Francisco, CA" {"
-}/> <FormField  <FormMessage /> ) 
-
-
-
-}/> </div>) 
-        name="website""
-
-
-            <FormLabel>Website
-              <Input placeholder="https://yourwebsite.com" {...field} />"
-
-            
-
-          
-
-
-
-
-            
-
-          
-
-
-            <FormLabel>GitHub
-              <Input placeholder="https://github.com/username" {...field} />"
-
-            
-
-          
+            </FormControl>
+            <FormMessage />
+          </FormItem>
+        )}
+      />
+      <FormField
+        control={control}
+        name="github"
+        render={({ field }) => (
+          <FormItem>
+            <FormLabel>GitHub</FormLabel>
+            <FormControl>
+              <Input placeholder="https://github.com/username" {...field} />
+            </FormControl>
+            <FormMessage />
+          </FormItem>
+        )}
+      />
+    </div>
+  )
+}

@@ -1,291 +1,281 @@
-=======
 #!/usr/bin/env node
+
+/**
+ * Security Enhancer
+ * Comprehensive security improvements and monitoring
+ */
 
 const fs = require('fs');
 const path = require('path');
->>>>>>> cursor/automate-test-improve-and-merge-code-a45b
-
-#!/usr/bin/env node;
 const { execSync } = require('child_process');
-class SecurityEnhancer {
-  // TODO: Implement
+
+console.log('🔒 Starting security enhancement...');
+
+// Configuration
+const config = {
+  outputDir: path.join(__dirname, '..', 'security-reports'),
+  securityFeatures: {
+    csp: true,
+    headers: true,
+    rateLimiting: true,
+    inputValidation: true,
+    authentication: true,
+    monitoring: true
+  }
+};
+
+// Ensure output directory exists
+if (!fs.existsSync(config.outputDir)) {
+  fs.mkdirSync(config.outputDir, { recursive: true });
 }
-  constructor() {
-    this.projectRoot = process.cwd();
-    this.enhancements = [];
-<<<<<<< HEAD
 
-  log(message, type = 'INFO') {
-    const timestamp = new Date().toISOString();
-    const prefix = {
-      'INFO': 'ℹ️',
-      'SUCCESS': '✅',
-      'ERROR': '❌',
-      'WARNING': '⚠️',
-      'PROGRESS': '🔄
-    }[type] || 'ℹ️';
-    console.log(`${prefix} [${timestamp}] ${message}`);
-
-  async runSecurityAudit() {
-    this.log('🔒 Running security audit...');
-    try {
-  // TODO: Implement
-      const auditResult = execSync('npm audit --json', {
-        cwd: this.projectRoot,
-        stdio: 'pipe',
-        encoding: 'utf8)
-      });
-      
-      const auditData = JSON.parse(auditResult);
-      
-      if (auditData.vulnerabilities) {
-        Object.entries(auditData.vulnerabilities).forEach(([packageName, vuln]) => {
-          this.securityIssues.push({
-            type: 'vulnerability',
-            package: packageName,
-            severity: vuln.severity,
-            description: vuln.description,
-            recommendation: 'Update package to fix vulnerability)
-      `;
-      this.log(`✅ Security audit completed - found ${this.securityIssues.length} vulnerabilities`, 'SUCCESS');
-    } catch (error) {
-      this.log('⚠️ Security audit failed, continuing...', 'WARNING');
-
-  async checkEnvironmentVariables() {
-    this.log('🔐 Checking environment variables...');
-    const envFiles = ['.env', '.env.local', '.env.production', '.env.development'];
-    for (const envFile of envFiles) {
-      const envPath = path.join(this.projectRoot, envFile);
-      if (fs.existsSync(envPath)) {
-  // TODO: Implement
-          const content = fs.readFileSync(envPath, 'utf8');
-          const lines = content.split('\n');
-          lines.forEach((line, index) => {
-            if (line.includes('PASSWORD') || line.includes('SECRET') || line.includes('KEY')) {
-              if (line.includes('=') && !line.includes('#')) {
-                const [key] = line.split('=');
-                  type: 'sensitive-env',
-                  file: envFile,
-                  line: index + 1,)
-                  key: key.trim(),
-                  recommendation: 'Ensure sensitive environment variables are properly secured
-          // Skip files that can't be read;
-    
-    this.log('✅ Environment variables check completed', 'SUCCESS');
-
-  async checkDependencies() {
-    this.log('📦 Checking dependencies for security issues...');
-    const packageJsonPath = path.join(this.projectRoot, 'package.json');
-    if (fs.existsSync(packageJsonPath)) {
-  // TODO: Implement
-        const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
-        const dependencies = { ...packageJson.dependencies, ...packageJson.devDependencies };
-        
-        // Check for known vulnerable packages;
-        const vulnerablePackages = [
-          'lodash', 'moment', 'jquery', 'express', 'mongoose]
-        ];
-        
-        Object.keys(dependencies).forEach(dep => {)
-          if (vulnerablePackages.includes(dep)) {
-              type: 'potentially-vulnerable',
-              package: dep,
-              version: dependencies[dep],
-              recommendation: 'Check for security updates and consider alternatives)
-        
-        this.log('✅ Dependencies check completed', 'SUCCESS');
-        this.log('❌ Failed to check dependencies', 'ERROR');
-
-  async checkCodeSecurity() {
-    this.log('🔍 Checking code for security issues...');
-    const srcDir = path.join(this.projectRoot, 'src');
-    const pagesDir = path.join(this.projectRoot, 'pages');
-    const appDir = path.join(this.projectRoot, 'app');
-    const directories = [srcDir, pagesDir, appDir].filter(dir => fs.existsSync(dir));
-    
-    for (const dir of directories) {
-      const files = this.getAllFiles(dir, ['.js', '.jsx', '.ts', '.tsx']);
-      for (const file of files) {
-  // TODO: Implement
-          const content = fs.readFileSync(file, 'utf8');
-          // Check for dangerous patterns;
-          const dangerousPatterns = [
-            { pattern: /eval\s*\(/, message: 'eval() usage detected - security risk' },
-            { pattern: /innerHTML\s*=/, message: 'innerHTML usage detected - XSS risk' },
-            { pattern: /document\.write/, message: 'document.write usage detected - XSS risk' },
-            { pattern: /localStorage\.setItem.*password/i, message: 'Password stored in localStorage - security risk' },
-            { pattern: /sessionStorage\.setItem.*password/i, message: 'Password stored in sessionStorage - security risk' }']
-          
-          dangerousPatterns.forEach(({ pattern, message }) => {
-            if (pattern.test(content)) {
-                type: 'code-security',
-                file: file,
-                issue: message,
-                recommendation: 'Review and fix security vulnerability)
-          
-          // Check for proper input validation;
-          if (content.includes('useState') && !content.includes('validation')) {
-              type: 'input-validation',
-              issue: 'Missing input validation',
-              recommendation: 'Add proper input validation for user inputs)
-          
-          // Skip files that can't be read;
-    
-    this.log('✅ Code security check completed', 'SUCCESS');
-
-  getAllFiles(dir, extensions) {
-    const files = [];
-    if (!fs.existsSync(dir)) return files;
-    
-    const items = fs.readdirSync(dir);
-    
-    for (const item of items) {
-      const fullPath = path.join(dir, item);
-      const stat = fs.statSync(fullPath);
-      
-      if (stat.isDirectory()) {
-        files.push(...this.getAllFiles(fullPath, extensions));
-      } else if (stat.isFile()) {
-        const ext = path.extname(item).toLowerCase();
-        if (extensions.includes(ext)) {
-          files.push(fullPath);
-    
-    return files;
-
-  async createSecurityConfigurations() {
-    this.log('🛡️ Creating security configurations...');
-    // Create Content Security Policy;
-    const cspConfig = {
-      "directives": {""
-        "default-src": ["'self'"],""
-        "script-src": ["'self'", "'unsafe-inline'"],""
-        "style-src": ["'self'", "'unsafe-inline'"],""
-        "img-src": ["'self'", "data:", "https:"],""
-        "connect-src": ["'self'"],""
-        "font-src": ["'self'"],""
-        "object-src": ["'none'"],""
-        "media-src": ["'self'"],""
-        "frame-src": ["'none'"]"
-    };
-    "
-    fs.writeFileSync('csp-config.json', JSON.stringify(cspConfig, null, 2));
-    // Create security headers configuration;
-    const securityHeaders = {
-      "X-Frame-Options": "DENY",""
-      "X-Content-Type-Options": "nosniff",""
-      "Referrer-Policy": "origin-when-cross-origin",""
-      "Permissions-Policy": "camera=(), microphone=(), geolocation=()""
-    fs.writeFileSync('security-headers.json', JSON.stringify(securityHeaders, null, 2));
-    this.improvements.push({
-      type: 'configuration',
-      name: 'Content Security Policy',
-      status: 'created)
-
-export const validateEmail = (email: string): boolean => {
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  return emailRegex.test(email);
-
-export const generateCSRFToken = (): string => {
-  return Math.random().toString(36).substring(2, 15) + 
-         Math.random().toString(36).substring(2, 15);
-
-export const hashPassword = async (password: string): Promise<string> => {
-  const encoder = new TextEncoder();
-  const data = encoder.encode(password);
-  const hashBuffer = await crypto.subtle.digest('SHA-256', data);
-  const hashArray = Array.from(new Uint8Array(hashBuffer));
-  return hashArray.map(b => b.toString(16).padStart(2, '0')).join();
-
-export const rateLimit = (() => {
-  const requests = new Map();
+// Content Security Policy setup
+function setupCSP() {
+  console.log('🛡️ Setting up Content Security Policy...');
   
-  return (ip: string, limit: number = 100, windowMs: number = 900000) => {
-    const now = Date.now();
-    const windowStart = now - windowMs;
+  try {
+    const cspConfig = {
+      directives: {
+        defaultSrc: ["'self'"],
+        scriptSrc: ["'self'", "'unsafe-inline'", "https://cdn.jsdelivr.net"],
+        styleSrc: ["'self'", "'unsafe-inline'", "https://fonts.googleapis.com"],
+        fontSrc: ["'self'", "https://fonts.gstatic.com"],
+        imgSrc: ["'self'", "data:", "https:"],
+        connectSrc: ["'self'", "https://api.zion.app"],
+        frameSrc: ["'none'"],
+        objectSrc: ["'none'"],
+        baseUri: ["'self'"],
+        formAction: ["'self'"],
+        upgradeInsecureRequests: []
+      }
+    };
     
-      name: 'Security Headers',
+    const cspPath = path.join(__dirname, '..', 'middleware', 'csp.js');
+    fs.writeFileSync(cspPath, `module.exports = ${JSON.stringify(cspConfig, null, 2)};`);
     
-    this.log('✅ Security configurations created', 'SUCCESS');
+    console.log('✅ CSP configuration created');
+    return { success: true, message: 'CSP configured' };
+  } catch (error) {
+    console.log(`❌ CSP setup failed: ${error.message}`);
+    return { success: false, error: error.message };
+  }
+}
 
-  async generateSecurityReport() {
-    this.log('📊 Generating security report...');
-    const report = {
-      timestamp: new Date().toISOString(),
-      securityIssues: this.securityIssues,
-      improvements: this.improvements,
-      summary: {,
-  totalIssues: this.securityIssues.length,
-        vulnerabilities: this.securityIssues.filter(i => i.type === 'vulnerability').length,
-        codeIssues: this.securityIssues.filter(i => i.type === 'code-security').length,
-        envIssues: this.securityIssues.filter(i => i.type === 'sensitive-env').length,
-        improvements: this.improvements.length;
-      },
-      recommendations: this.generateRecommendations()
+// Security headers setup
+function setupSecurityHeaders() {
+  console.log('🔐 Setting up security headers...');
+  
+  try {
+    const securityHeaders = `
+// Security headers middleware
+export const securityHeaders = (req, res, next) => {
+  // Prevent clickjacking
+  res.setHeader('X-Frame-Options', 'DENY');
+  
+  // Prevent MIME type sniffing
+  res.setHeader('X-Content-Type-Options', 'nosniff');
+  
+  // Enable XSS protection
+  res.setHeader('X-XSS-Protection', '1; mode=block');
+  
+  // Strict Transport Security
+  res.setHeader('Strict-Transport-Security', 'max-age=31536000; includeSubDomains');
+  
+  // Referrer Policy
+  res.setHeader('Referrer-Policy', 'strict-origin-when-cross-origin');
+  
+  // Permissions Policy
+  res.setHeader('Permissions-Policy', 'camera=(), microphone=(), geolocation=()');
+  
+  next();
+};
+`;
     
-    fs.writeFileSync('security-enhancement-report.json', JSON.stringify(report, null, 2));
-    this.log('✅ Security report generated', 'SUCCESS');
+    const headersPath = path.join(__dirname, '..', 'middleware', 'security-headers.js');
+    fs.writeFileSync(headersPath, securityHeaders);
+    
+    console.log('✅ Security headers middleware created');
+    return { success: true, message: 'Security headers configured' };
+  } catch (error) {
+    console.log(`❌ Security headers setup failed: ${error.message}`);
+    return { success: false, error: error.message };
+  }
+}
 
-  generateRecommendations() {
-    const recommendations = [];
-    
-    const vulnerabilities = this.securityIssues.filter(i => i.type === 'vulnerability');
-    if (vulnerabilities.length > 0) {`;
-      recommendations.push(`Fix ${vulnerabilities.length} security vulnerabilities`);
-    
-    const codeIssues = this.securityIssues.filter(i => i.type === 'code-security');
-    if (codeIssues.length > 0) {`;
-      recommendations.push(`Address ${codeIssues.length} code security issues`);
-    
-    const envIssues = this.securityIssues.filter(i => i.type === 'sensitive-env');
-    if (envIssues.length > 0) {`;
-      recommendations.push(`Secure ${envIssues.length} sensitive environment variables`);
-    
-    recommendations.push('Implement Content Security Policy');
-    recommendations.push('Add security headers');
-    recommendations.push('Regular security audits');
-    recommendations.push('Input validation and sanitization');
-    return recommendations;
+// Rate limiting setup
+function setupRateLimiting() {
+  console.log('⏱️ Setting up rate limiting...');
+  
+  try {
+    const rateLimitConfig = `
+// Rate limiting configuration
+export const rateLimitConfig = {
+  windowMs: 15 * 60 * 1000, // 15 minutes
+  max: 100, // limit each IP to 100 requests per windowMs
+  message: 'Too many requests from this IP, please try again later.',
+  standardHeaders: true,
+  legacyHeaders: false,
+};
 
-  async run() {
-    this.log('🚀 Starting Security Enhancer');
-    this.log('='.repeat(50));
-    await this.runSecurityAudit();
-    await this.checkEnvironmentVariables();
-    await this.checkDependencies();
-    await this.checkCodeSecurity();
-    await this.createSecurityConfigurations();
-    await this.generateSecurityReport();
+// API rate limiting
+export const apiRateLimit = {
+  windowMs: 15 * 60 * 1000,
+  max: 50,
+  message: 'API rate limit exceeded',
+};
+`;
     
-    this.log('\n📊 Security Enhancement Summary');`;
-    this.log(`Total security issues: ${this.securityIssues.length}`);`;
-    this.log(`Vulnerabilities: ${this.securityIssues.filter(i => i.type === 'vulnerability').length}`);`;
-    this.log(`Code issues: ${this.securityIssues.filter(i => i.type === 'code-security').length}`);`;
-    this.log(`Environment issues: ${this.securityIssues.filter(i => i.type === 'sensitive-env').length}`);`;
-    this.log(`Improvements made: ${this.improvements.length}`);
+    const rateLimitPath = path.join(__dirname, '..', 'middleware', 'rate-limiting.js');
+    fs.writeFileSync(rateLimitPath, rateLimitConfig);
     
-    this.log('\n✅ Security enhancement completed!');
+    console.log('✅ Rate limiting configuration created');
+    return { success: true, message: 'Rate limiting configured' };
+  } catch (error) {
+    console.log(`❌ Rate limiting setup failed: ${error.message}`);
+    return { success: false, error: error.message };
+  }
+}
 
-// Run the enhancer
-if (require.main === module) {
-  const enhancer = new SecurityEnhancer();
-  enhancer.run().catch(console.error);
+// Input validation setup
+function setupInputValidation() {
+  console.log('✅ Setting up input validation...');
+  
+  try {
+    const validationSchema = `
+// Input validation schemas
+import Joi from 'joi';
 
-module.exports = SecurityEnhancer;
+export const userSchema = Joi.object({
+  email: Joi.string().email().required(),
+  password: Joi.string().min(8).required(),
+  name: Joi.string().min(2).max(50).required(),
+});
 
+export const sanitizeInput = (input) => {
+  if (typeof input === 'string') {
+    return input.replace(/<script\\b[^<]*(?:(?!<\\/script>)<[^<]*)*<\\/script>/gi, '');
+  }
+  return input;
+};
 
-const fs = require('fs')
-const path = require('path')
-    this.reportFile = path.join(__dirname, '../logs/security-enhancement-report.json')
-    console.log('� Enhancing security...')
-    const files = this.getAllFiles(this.projectRoot, ['.js', '.jsx', '.ts', '.tsx')]
-        const content = fs.readFileSync(file, 'utf8')
-    if (content.includes('eval(')
-      issues.push('Use of eval() - potential security risk
-    if (content.includes('innerHTML')
-      issues.push('Use of innerHTML - consider using textContent for security')
-    if (content.includes('document.write')
-      issues.push('Use of document.write - potential XSS risk')
-    if (content.includes('localStorage.setItem')
-      issues.push('Use of localStorage - ensure sensitive data is not stored')
-        if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules
-      // Skip directories that can
+export const validateInput = (schema, data) => {
+  const { error, value } = schema.validate(data);
+  if (error) {
+    throw new Error(\`Validation error: \${error.details[0].message}\`);
+  }
+  return value;
+};
+`;
+    
+    const validationPath = path.join(__dirname, '..', 'src', 'utils', 'validation.js');
+    fs.writeFileSync(validationPath, validationSchema);
+    
+    console.log('✅ Input validation utilities created');
+    return { success: true, message: 'Input validation configured' };
+  } catch (error) {
+    console.log(`❌ Input validation setup failed: ${error.message}`);
+    return { success: false, error: error.message };
+  }
+}
+
+// Security monitoring setup
+function setupSecurityMonitoring() {
+  console.log('📊 Setting up security monitoring...');
+  
+  try {
+    const securityMonitor = `
+// Security monitoring and logging
+export const securityLogger = {
+  logAttempt: (type, details) => {
+    console.log(\`[SECURITY] \${type}:\`, details);
+    // In production, send to security monitoring service
+  },
+  
+  logSuspiciousActivity: (activity) => {
+    console.warn(\`[SECURITY ALERT] Suspicious activity:\`, activity);
+    // Send alert to security team
+  },
+  
+  logAuthFailure: (ip, userAgent) => {
+    console.log(\`[SECURITY] Auth failure from IP: \${ip}, UA: \${userAgent}\`);
+  }
+};
+
+export const securityMiddleware = (req, res, next) => {
+  // Log all requests
+  securityLogger.logAttempt('REQUEST', {
+    ip: req.ip,
+    userAgent: req.get('User-Agent'),
+    url: req.url,
+    method: req.method
+  });
+  
+  next();
+};
+`;
+    
+    const monitorPath = path.join(__dirname, '..', 'middleware', 'security-monitor.js');
+    fs.writeFileSync(monitorPath, securityMonitor);
+    
+    console.log('✅ Security monitoring setup created');
+    return { success: true, message: 'Security monitoring configured' };
+  } catch (error) {
+    console.log(`❌ Security monitoring setup failed: ${error.message}`);
+    return { success: false, error: error.message };
+  }
+}
+
+// Main security enhancement function
+function runSecurityEnhancement() {
+  const results = {
+    timestamp: new Date().toISOString(),
+    securityFeatures: {
+      csp: setupCSP(),
+      headers: setupSecurityHeaders(),
+      rateLimiting: setupRateLimiting(),
+      inputValidation: setupInputValidation(),
+      monitoring: setupSecurityMonitoring()
+    },
+    summary: {
+      totalFeatures: 5,
+      successfulFeatures: 0,
+      failedFeatures: 0
+    }
+  };
+
+  // Calculate summary
+  Object.values(results.securityFeatures).forEach(feature => {
+    if (feature.success) {
+      results.summary.successfulFeatures++;
+    } else {
+      results.summary.failedFeatures++;
+    }
+  });
+
+  return results;
+}
+
+// Save security report
+function saveSecurityReport(results) {
+  const filename = `security-enhancement-${Date.now()}.json`;
+  const filepath = path.join(config.outputDir, filename);
+  
+  fs.writeFileSync(filepath, JSON.stringify(results, null, 2));
+  console.log(`🔒 Security enhancement report saved to: ${filename}`);
+  
+  // Print summary
+  console.log(`📊 Security Enhancement Summary:`);
+  console.log(`   Total Features: ${results.summary.totalFeatures}`);
+  console.log(`   Successful: ${results.summary.successfulFeatures}`);
+  console.log(`   Failed: ${results.summary.failedFeatures}`);
+}
+
+// Main execution
+try {
+  const results = runSecurityEnhancement();
+  saveSecurityReport(results);
+  console.log('✅ Security enhancement completed');
+} catch (error) {
+  console.error('❌ Security enhancement failed:', error.message);
+  process.exit(1);
+}

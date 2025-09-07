@@ -1,4 +1,3 @@
-
 import { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
 import { Sparkles, Loader2 } from 'lucide-react';
@@ -12,42 +11,55 @@ interface AIEnhancementButtonProps {;
   buttonText?:string,;
   className?:string;
 }
+;
 export function AIEnhancementButton({;
   currentContent,;
   enhancementType,;
   context,;
   onEnhanced,;
-  buttonText = "Enhance with AI",;"
-  className;)
+  buttonText = "Enhance with AI",;
+  className;
 } AIEnhancementButtonProps) {;
   const { enhanceContent, isEnhancing } = useResumeEnhancer(),;
   const [error, setError] = useState<string | null>(null),;
-</string>
-    if (!currentContent || currentContent.trim().length < 10) {;"
+  ;
+  const handleEnhance = async () => {;
+    if (!currentContent || currentContent.trim().length < 10) {;
       setError('Please enter at least some basic content before enhancing'),;
       return,;
+    }
+    ;
     setError(null),;
     const enhancedContent = await enhanceContent(;
-      context;)
+      currentContent,;
+      enhancementType,;
+      context;
     ),;
+    ;
     if (enhancedContent) {;
       onEnhanced(enhancedContent),;
+    }
   },;
+  ;
   return (;
     <Button;
-      type="button";""
-      variant="ghost";""
-      size="sm";"
+      type="button";
+      variant="ghost";
+      size="sm";
       className={`h-6 gap-1 text-primary hover:text-primary ${className}`}
       onClick={handleEnhance}
       disabled={isEnhancing}
     >;
-"
-        <Loader2 className="h-3 w-3 animate-spin" />;"
-</Loader2>"
-        <Sparkles className="h-3 w-3" />;"
-      <span className="text-xs">{buttonText}</span>;"
-    ;)"
-) : (<Sparkles className="h-3 w-3" />) ;"
-}) ;"}""
-}) ;"`;
+      {isEnhancing ? (;
+        <Loader2 className="h-3 w-3 animate-spin" />;
+      ) :(;
+        <Sparkles className="h-3 w-3" />;
+      )}
+      <span className="text-xs">{buttonText}</span>;
+    </Button>;
+  ),;}
+ currentContent;
+enhancementType;
+context);
+) : (<Sparkles className="h-3 w-3" />) ;
+}</Button>) ;"}"

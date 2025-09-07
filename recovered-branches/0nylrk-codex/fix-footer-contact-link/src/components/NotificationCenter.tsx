@@ -1,8 +1,15 @@
-
-// Use the shared icon wrapper;
-// Use the shared icon wrapper;
-
-import React, { useState, useEffect } from 'react';
+import { Bell  } from '@/components/icons';
+import { Button  } from '@/components/ui/button';
+import { Popover, PopoverContent, PopoverTrigger  } from '@/components/ui/popover';
+import { useNotifications  } from '@/context/notifications/NotificationContext';
+import { toast } from 'sonner';
+import { NotificationFilter;
+  NotificationHeader;
+  NotificationList;
+  NotificationFooter 
+ } from '@/components/notifications';
+import { FilterType } from '@/components/notifications/NotificationFilter';
+export const NotificationCenter: React.FC;
 import {Bell} from '@/components/icons';
 import {Button} from '@/components/ui/button';
 import {Popover, PopoverContent, PopoverTrigger} from '@/components/ui/popover';
@@ -10,172 +17,74 @@ import {useNotifications} from '@/context/notifications/NotificationContext';
 import {toast} from 'sonner';
 import {NotificationFilter, NotificationHeader, NotificationList, NotificationFooter} from '@/components/notifications';
 import {FilterType} from '@/components/notifications/NotificationFilter';
-export const NotificationCenter: React.FC = () => {;
-  const { ;
-    filteredNotifications,;
-    unreadCount, ;
-    markAsRead, ;
+export const NotificationCenter: React.FC = () => {
+  const {
+    filteredNotifications
+    unreadCount
+    markAsRead
     markAllAsRead;
-    dismissNotification, ;
-
+    dismissNotification
     loading;
     filter;
     setFilter;
-    fetchNotifications;
+    fetchNotifications
   } = useNotifications();
-
-
-
-import React, { useState, useEffect } from 'react',
-// Use the shared icon wrapper;
+  const [open, setOpen] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+// Use the shared icon wrapper
 import { Bell } from '@/components/icons',
 import { Button } from '@/components/ui/button',
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover',
 import { useNotifications } from '@/context/notifications/NotificationContext',
 import { toast } from 'sonner',
-import {
-  // TODO: Implement
-}
+import { 
   NotificationFilter,
   NotificationHeader, 
   NotificationList, 
-  NotificationFooter;
+  NotificationFooter 
 } from '@/components/notifications',
-import { FilterType } from '@/components/notifications/NotificationFilter',
-export const NotificationCenter: React.FC = () => {
-  const {
-  // TODO: Implement
-    filteredNotifications,
+import { FilterType } from '@/components/notifications/NotificationFilter';
+export const NotificationCenter: React.FC = $2;
     unreadCount, 
-
-    markAsRead, 
-    markAllAsRead,
-
+    markAsRead, ;
+    markAllAsRead;
     dismissNotification, 
     loading,
     filter,
     setFilter,
-  } = useNotifications(),
-  
-  const [open, setOpen] = useState(false),
+    fetchNotifications
+  } = useNotifications($2);
+  const [open, setOpen] = useState($2);
   const [error, setError] = useState<string | null>(null),
-</string>
-  const [error, setError] = useState<string | null>(null);
-  const [error, setError] = useState<string | null>(null),;
-    <Popover open={open} onOpenChange={setOpen}>
 
-      <PopoverTrigger asChild>
-
-        <Button variant="ghost" size="icon" className="relative">"
-"
-          <Bell className="h-5 w-5 text-zion-slate-light" />"
-            <span className="absolute -top-0.5 -right-0.5 flex h-5 w-5 items-center justify-center rounded-full bg-zion-cyan text-[10px] text-white font-medium">"
-</span>
-    <Popover open={open} onOpenChange={setOpen}>;
-
-      <PopoverTrigger asChild>;
-        <Button variant="ghost" size="icon" className="relative">;"
-          <Bell className="h-5 w-5 text-zion-slate-light" />;"
-
-            </span>;
-        ;
-      ;"
-      <PopoverContent className="w-[350px] p-0 bg-zion-blue border-zion-blue-light max-h-[500px] flex flex-col">;"
-
-        <NotificationHeader;
-          unreadCount={unreadCount} 
-          onMarkAllAsRead={handleMarkAllAsRead} 
-        />;
-
-
-        <NotificationFilter;
-          filter={filter as FilterType} 
-          onFilterChange={handleFilterChange} 
-
-
-
-        <NotificationList;
-// Use the shared icon wrapper;"
-import {Bell} from '@/components / icons';
-import {Button} from '@/components / ui / button';
-import {Popover, PopoverContent, PopoverTrigger} from '@/components / ui / popover';
-import {use_notifications} from '@/context / notifications / NotificationContext';
-import {NotificationFilter, NotificationHeader, NotificationList, NotificationFooter} from '@/components / notifications';
-import {FilterType} from '@/components / notifications / NotificationFilter';
-
-  const [error, set_error] = useState < string | null>(null);
-  // Refresh notifications when popover opens;
-  useEffect (() => {
-    // Check condition;
-if ( {) {
-  $2;
-      const load_notifications = async () => {
+  // Refresh notifications when popover opens
+  useEffect(() => {
+    if (open) {
+      const loadNotifications = async () => {
         try {
-  // TODO: Implement
-          await fetch_notifications ();
-          set_error (null);
+          await fetchNotifications($2);
+          setError(null)
         } catch (err) {
-          console.error ("Failed to fetch notifications:", err);""
-          set_error ("Couldn't load notifications");""
-          toast.error ("Failed to load notifications");"
-      load_notifications ();
-  }, [open, fetch_notifications]);
-  const handleMarkAllAsRead = async () => {
-  // TODO: Implement
-      await markAllAsRead ();"
-      toast.success ("All notifications marked as read");"
-    } catch (err) {"
-      console.error ("Failed to mark notifications as read:", err);""
-      toast.error ("Failed to update notifications");"
-  const handleFilterChange = (new_filter: FilterType) =>: any {
-  // TODO: Implement
-    set_filter (new_filter as any);
-  return (
-    <Popover open={open} onOpenChange={set_open}>;
-
-      <PopoverTrigger as_child>;
-          <Bell className="h - 5 w - 5 text - zion - slate - light" />;"
-            <span className="absolute -top - 0.5 -right - 0.5 flex h - 5 w - 5 items - center justify - center rounded - full bg - zion - cyan text-[10px] text - white font - medium">;"
-</span>)
-            </span>)}
-      <PopoverContent className="w-[350px] p - 0 bg - zion - blue border - zion - blue - light max - h-[500px] flex flex - col">;"
-
-          unread_count={unread_count}
-
-
-
-        />
-
-
-
-          loading={loading}
-          error={error}
-          notifications={filtered_notifications}
-          onMarkAsRead={markAsRead}
-
-
-
-
-
-
-        <NotificationFooter onClose={() => setOpen(false)} />;
-
-        <NotificationFooter on_close={() => set_open (false)} />;
-
-    );
-
-            <span className="absolute -top-0.5 -right-0.5 flex h-5 w-5 items-center justify-center rounded-full bg-zion-cyan text-[10px] text-white font-medium">;"
-        
-      <PopoverContent className="w-[350px] p-0 bg-zion-blue border-zion-blue-light max-h-[500px] flex flex-col">"
-
-
-
-
-          notifications={filteredNotifications}
-          onDismiss={dismissNotification}
-          onRetry={fetchNotifications}
-
-        <NotificationFooter onClose={() => setOpen(false)} />
-
+          console.error($2);
+          setError($2);
+          toast.error("Failed to load notifications")
+        }
+      },
       
-    
+      loadNotifications()
+    }
+  }, [open, fetchNotifications]),
+
+  const handleMarkAllAsRead = async () => {
+    try {
+      await markAllAsRead($2);
+      toast.success("All notifications marked as read")
+    } catch (err) {
+      console.error($2);
+      toast.error("Failed to update notifications")
+    }
+  },
+
+  const handleFilterChange = $2;
+  return (
+    <Popover open = $2;

@@ -1,101 +1,73 @@
-  kind: "document" | 'government_id_back' | 'selfie' | 'business_registration' | 'tax_certificate' | 'proof_of_address';',
-  url: string;
-  uploaded_at: string;,
-  status: 'pending' | 'approved' | 'rejected';
+export type KycRole = $2;
+export type KycStatus = $2;
+export type AmlStatus = $2;
+export interface KycDocumentMeta {
+  id: string,
+  kind:
+    | 'government_id_front'
+    | 'government_id_back'
+    | 'selfie'
+    | 'business_registration'
+    | 'tax_certificate'
+    | 'proof_of_address'
+    | 'academic_certificate',
+  filename: string,
+  url?: string,
+  checksumSha256?: string,
+  uploadedAt: string, // ISO
 }
+
 export interface KycProfile {
-  // TODO: Implement
-  user_id: string;
+  userId: string,
+  role: KycRole,
+  fullLegalName?: string,
+  dateOfBirth?: string, // ISO
+  country?: string,
+  businessName?: string,
+  businessRegistrationNumber?: string,
+  documents: KycDocumentMeta[],
+  status: KycStatus,
+  amlStatus: AmlStatus,
+  riskScore?: number, // 0-100
+  flags?: string[], // e.g., ["mismatch","duplicate_ip"]
+  lastUpdatedAt: string, // ISO
+  createdAt: string, // ISO
+  auditTrail: Array<{ at: string, by: string, action: string, details?: Record<string, unknown> }>
+}
 
+export function getRequiredDocuments(role: KycRole): Array<KycDocumentMeta['kind']> {
+  if (role === 'client') {
+    return ['government_id_frontgovernment_id_backselfie']
+  }
+  if (role === 'enterprise') {
+    return ['government_id_frontgovernment_id_backselfiebusiness_registrationtax_certificate']
+  }
+  return ['government_id_frontgovernment_id_back'], // talent
+}
 
-export interface KycProfile {;
+export function getOptionalDocuments(role: KycRole): Array<KycDocumentMeta['kind']> {
+  if (role = $2;
+  const labels: string[] = [],
+  if (profile.status === 'approved') labels.push($2);
+  if (profile.role === 'enterprise' && profile.status === 'approved') labels.push($2);
+  return labels
+}
 
-  userId: string;
-  // TODO: Implement
-  user_id: string;,
-  role: KycRole;
-  fullLegalName?: string;
-  business_name?: string;
-  businessRegistrationNumber?: string;
-  country?: string;
-  dateOfBirth?: string;
-  documents: KycDocumentMeta[];,
-  status: 'in_progress' | 'submitted' | 'approved' | 'rejected';
-  aml_status: 'unknown' | 'clear' | 'match' | 'review';
-  flags?: string[];
-  risk_score?: number;
-  created_at: string;,
-  lastUpdatedAt: string;
-  audit_trail: Array<{,
-  at: string;
-    by: string;,
-  action: string;
-    return ['government_id', 'proof_of_address'];
-  } else {
-  // TODO: Implement
-    return ['business_registration', 'proof_of_address', 'beneficial_ownership'];
-    return ['bank_statement', 'utility_bill'];
-  // TODO: Implement
-    return ['bank_statement', 'utility_bill', 'tax_certificate'];
-  const missing: string[] = [];
-  
-  if (!profile && profile.fullLegalName && !profile && profile.businessName) {
-    missing && missing.push('name'),
-  if (!profile && profile.country) {
-    missing && missing.push('country');
-  if (!profile.fullLegalName && !profile.businessName) {
-    missing.push('name');
-  
-  if (profile.role === 'enterprise' && !profile.businessRegistrationNumber) {
-    missing.push('businessRegistrationNumber');
-  if (profile && profile.role === 'individual' && !profile && profile.dateOfBirth) {
-    missing && missing.push('dateOfBirth');
-  return { ok: missing && missing.length === 0, missing };  
-  if (profile && profile.role === 'enterprise' && !profile && profile.businessRegistrationNumber) {
-    missing && missing.push('businessRegistrationNumber');
-  return {
-  // TODO: Implement
-export interface KycDocumentMeta {;
-  uploadedAt: string;,
-  // TODO: Implement
-  userId: string;,
-  businessName?: string;
-  amlStatus: 'unknown' | 'clear' | 'match' | 'review';
-  riskScore?: number;
-  createdAt: string;,
-  auditTrail: Array<{,
-    details?: any;
-  }>;
-export function generateKycDocumentId(): string {
-  // TODO: Implement
-  return `doc_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-export function isKycProfileComplete(profile: KycProfile): boolean {
-  // TODO: Implement
-  return profile.status === 'approved' &&
-         profile.documents.length > 0 && 
-         profile.fullLegalName.length > 0;
-export function isKycProfileExpired(profile: KycProfile): boolean {
-  // TODO: Implement
-  if (!profile.expiresAt) return false;
-  return new Date(profile.expiresAt) < new Date();
-
-export function validateKycSubmission (profile: KycProfile): { ok: boolean, missing: string[] } {
-;
-  // Check condition;
-if ( {) {
-  $2;
-    missing.push ('name');
-  // Check condition;
-    missing.push ('country');
-  // Check condition;
-    missing.push ('dateOfBirth');
-  // Check condition;
-    missing.push ('businessRegistrationNumber');
-  // TODO: Implement
-    ok: missing.length === 0,
-    missing;
-
-
-
-
-`;
+export function validateKycSubmission(profile: Partial<KycProfile>): { ok: boolean, missing: string[] } {
+  const missing: string[] = [],
+  if (!profile.userId) missing.push($2);
+  if (!profile.role) missing.push($2);
+  const required = $2;
+  const uploadedKinds = $2;
+  for (const req of required) {
+    if (!uploadedKinds.has(req)) missing.push(`document:${req}`)
+  }
+  if (profile.role === 'client' || profile.role === 'enterprise') {
+    if (!profile.fullLegalName) missing.push('fullLegalName')
+  }
+  if (profile.role === 'enterprise') {
+    if (!profile.businessName) missing.push($2);
+    if (!profile.businessRegistrationNumber) missing.push('businessRegistrationNumber')
+  }
+  return { ok: missing.length === 0, missing }
+}

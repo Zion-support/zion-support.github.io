@@ -1,13 +1,17 @@
+<<<<<<< HEAD:pages_minimal/_app.tsx
+import React from 'react';
+import type { AppProps } from 'next/app';
+import '../styles/globals.css';
 
-
-
-export default MyApp,
-;
-:pages_minimal/_app && _app.tsx;
-export default function App(): any ({ Component, pageProps }: AppProps) {;
+export default function App({ Component, pageProps }: AppProps) {
   return <Component {...pageProps} />;
-
-  return <Component {...page_props} />;
-
-
+}
+=======
+import type { AppProps } from 'next/app';
+import '../styles/globals.css';
+function MyApp({ Component, pageProps }: AppProps) {
   return <Component {...pageProps} />
+}
+
+export default MyApp;
+>>>>>>> pr-11992:components/_app.tsx

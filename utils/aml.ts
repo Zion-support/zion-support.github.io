@@ -1,73 +1,52 @@
-interface AmlMatch {
-  // TODO: Implement
+export type WatchlistMatch = $2;
+  name: string,
+  score: number, // 0-1 match confidence
+  referenceId?: string,
+  detailsUrl?: string
+},
+
+export type AmlCheckResult = $2;
+  matches: WatchlistMatch[],
+  checkedAt: string, // ISO
+  provider: 'mock' | 'remote'
+},
+
+export interface AmlProvider {
+  checkPerson(input: { fullLegalName: string, country?: string, dob?: string }): Promise<AmlCheckResult>,
+  checkBusiness(input: { businessName: string, country?: string, registrationNumber?: string }): Promise<AmlCheckResult>
 }
-  list: string;,
-  name: string;
-  score: number;
 
-interface AmlResult {
-  // TODO: Implement
-  status: 'review' | 'clear';',
-  matches: AmlMatch[];
-  checkedAt: string;,
-  provider: string;
-
-interface AmlProvider {
-  // TODO: Implement
-  checkBusiness(businessName: string): Promise<AmlResult>;
-
-  async checkBusiness(businessName: string): Promise<AmlResult> {
-
-  }): Promise<AmlResult>;
-
-
-  check_person (params: { fullLegalName: string; country: string, dob?: string }): Promise < AmlResult>;
-  check_business (params: { business_name: string, country: string }): Promise < AmlResult>;
 class MockAmlProvider implements AmlProvider {
-  // TODO: Implement
-  async checkPerson(params: {,
-  fullLegalName: string;
-    country: string;
-    dob?: string;)
-  }): Promise<AmlResult> {
+  async checkPerson({ fullLegalName }: { fullLegalName: string}): Promise<AmlCheckResult> {
+    const lowered = fullLegalName.toLowerCase($2);
+    const isPep = lowered.includes('minister') || lowered.includes($2);
+    const isOfac = lowered.includes($2);
+    const matches: WatchlistMatch[] = [],
+    if (isPep) matches.push($2);
+    if (isOfac) matches.push($2);
+    return {
+      status: matches.length ? 'review' : 'clear',
+      matches,
+      checkedAt: new Date().toISOString($2);
+      provider: 'mock'}
+  }
 
-  private profiles: Map<string, AmlProfile> = new Map();
-</string>
-  private checks: Map<string, AmlCheck> = new Map();
-  async createProfile(userId: string, fullName: string, additionalData?: Partial<AmlProfile>): Promise<AmlProfile> {
+  async checkBusiness({ businessName }: { businessName: string}): Promise<AmlCheckResult> {
+    const lowered = businessName.toLowerCase($2);
+    const isSanction = lowered.includes($2);
+    return {
+      status: isSanction ? 'review' : 'clear',
+      matches: isSanction ? [{ list: 'Sanctions', name: businessName, score: 0.8 }] : [],
+      checkedAt: new Date().toISOString($2);
+      provider: 'mock'}
+  }
+}
 
-  async getProfile(userId: string): Promise<AmlProfile | null> {
+let provider: AmlProvider = new MockAmlProvider($2);
+export function setAmlProvider(custom: AmlProvider) {
+  provider = custom
+}
 
-  async updateProfile(userId: string, updates: Partial<AmlProfile>): Promise<AmlProfile | null> {
-
-  async runAmlCheck(userId: string, checkType: AmlCheck['checkType']): Promise<AmlCheck> {
-
-  async checkBusiness(params: { businessName: string, country: string }): Promise<AmlResult> {
-
-
-): Omit<AmlCheck, 'id' | 'createdAt' | 'expiresAt'> {
-
-  return new Date(check.expiresAt) < new Date();
-export function getRiskLevelColor(riskLevel: AmlProfile['riskLevel']): string {
-  // TODO: Implement
-  const colors = {
-    low: 'green',
-    medium: 'yellow',
-    high: 'orange',
-    critical: 'red
-  };
-  return colors[riskLevel];
-  async check_person (params: { fullLegalName: string; country: string, dob?: string }): Promise < AmlResult> {
-    // Mock implementation - in production, this would call a real AML service;
-    const name = params.fullLegalName.toLowerCase ();
-    if (|| name.includes ('demo')) {) {
-  $2;
-      return { status: 'match', details: { reason: 'Test name detected' } }
-    return { status: 'clear' }
-  async check_business (params: { business_name: string, country: string }): Promise < AmlResult> {
-    // Mock implementation - in production, this would call a real AML service;
-    const name = params.business_name.toLowerCase ();
-      return { status: 'match', details: { reason: 'Test business name detected' } }
-export function getAmlProvider (): AmlProvider {
-  // TODO: Implement
-  return new MockAmlProvider ();
+export function getAmlProvider(): AmlProvider {
+  return provider
+}

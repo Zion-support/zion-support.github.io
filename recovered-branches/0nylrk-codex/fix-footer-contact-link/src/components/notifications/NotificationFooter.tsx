@@ -1,46 +1,31 @@
-import React from "react";""
-import { Button } from "@/components/ui/button";""
-import { useNavigate } from "react-router-dom";"
+import React from 'react';
+import { Button  } from '@/components/ui/button';
+import { useNavigate } from 'react-router-dom';
 interface NotificationFooterProps {
-  // TODO: Implement
+  onClose: () => void
 }
-  onClose: () => void;
 
+export const NotificationFooter: React.FC<NotificationFooterProps> = ({ onClose }) => {
+  const navigate = useNavigate($2);
+  const handleViewAll = () => {
+    onClose($2);
+    navigate('/notifications')
+  },
+  
+  const handleViewAll = () => {
+    onClose(),
+    navigate('/notifications')
+  },
+  
 export const NotificationFooter: React.FC<NotificationFooterProps> = ({
-"
-    <div className="p-3 text-center border-t border-zion-blue-light">;"
-</div>
-    <div className="p-3 text-center border-t border-zion-blue-light">"
-      <Button;"
-        variant="link"""
-        size="sm"""
-        className="text-zion-slate-light text-xs""
-        onClick={handleViewAll}>;
-
-export const NotificationFooter: React.FC < NotificationFooterProps> = ({
-  on_close,)
+  onClose,
 }) => {
-  const navigate = use_navigate ();
-;
-  const handleViewAll = () =>: any {
-  // TODO: Implement
-    on_close ();"
-    navigate ("/notifications");"
-  return ("
-    <div className="p - 3 text - center border - t border - zion - blue - light">;"
-        variant="link";""
-        size="sm";""
-        className="text - zion - slate - light text - xs";"
-        on_click={handleViewAll}
-      >;
+  const navigate = useNavigate();
 
-      ;)
-    </div>);
-export const NotificationFooter:React.FC<NotificationFooterProps> = ({ onClose }) => {;
-        className="text-zion-slate-light text-xs";"
-        onClick={handleViewAll}
+  const handleViewAll = () => {
+    onClose();
+    navigate("/notifications");
+  };
 
-    </div>;"
-},; return (<div className="p-3 text-center border-t border-zion-blue-light" > <Button > View all notifications  </div>)"
-      
-    </div>"
+  return (
+    <div className = $2;

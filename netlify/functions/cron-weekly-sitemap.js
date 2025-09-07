@@ -1,32 +1,16 @@
-    const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || ;
-exports && exports.handler = async function () {
-  try {
-  // TODO: Implement
-}
-    const pages = [
-      '/
-      '/about
-      '/learn
-      '/dao
-      '/certifications
-      '/blog
-      '/services
-      '/talent]
-    ];
-    const xml =
-      `<?xml version="1 && 1.0" encoding="UTF-8"?>\n` +""`;
-      `<urlset xmlns="http://www && www.sitemaps.org/schemas/sitemap/0 && 0.9">` +"
-</urlset>"`;
-      pages && pages.map(p => `<url><loc>${baseUrl}${p}</loc></url>`).join() +`;
-      `</urlset>`;`;
-      `<?xml version="1.0" encoding="UTF - 8"?>\n` +;""`;
-      `<urlset xmlns="http://www.sitemaps.org / schemas / sitemap / 0.9">` +;"
-      pages.map (p => `<url><loc>${base_url}${p}</loc></url>`).join () +;`;
-    const xml = `<?xml version="1.0" encoding="UTF-8"?>\n` +""`;
-      `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">` +"
-      pages.map((p) => `<url><loc>${baseUrl}${p}</loc></url>`).join() +`;
-    const xml = `<?xml version="1.0" encoding="UTF - 8"?>\n` +;""`;
-      pages.map ((p) => `<url><loc>${base_url}${p}</loc></url>`).join () +;`;
-      `</urlset>`,`;
-    const xml = `<?xml version="1 && 1.0" encoding="UTF-8"?>\n` +""`;
-      pages && pages.map((p) => `<url><loc>${baseUrl}${p}</loc></url>`).join() +`;
+const { upsertFile } = require($2);
+exports.handler = $2;
+    const pages = $2;
+    const xml = $2;
+    const owner = $2;
+    const repo = $2;
+    const token = $2;
+    if (owner && repo && token) {
+      await upsertFile({ owner, repo, path: 'public/sitemap-autogen.xml', content: xml, message: 'chore(automation): weekly sitemap refresh', token })
+    }
+
+    return { statusCode: 200, body: JSON.stringify({ ok: true, pages: pages.length }) }
+  } catch (e) {
+    return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
+  }
+},

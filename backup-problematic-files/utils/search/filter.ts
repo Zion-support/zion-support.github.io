@@ -1,13 +1,9 @@
-export type AccessLevel = 'public' | 'private' | 'admin';
-export interface SearchResult {
-  // TODO: Implement
+// Search filter utilities
+export const filterResults = (results: any[], filters: any) => {
+  // Add search filtering functionality here;
+  return results;
 }
-  id: string;,
-  title: string;
-  description: string;,
-  type: string;
-  rating?: number;
-  price?: number;
-  location?: string;
-  skills?: string[];
-  keywords?: string[];
+export const sortResults = (results: any[], sortBy: string) => {
+  // Add search sorting functionality here;
+  return results;
+}

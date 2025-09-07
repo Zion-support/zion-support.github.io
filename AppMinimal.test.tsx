@@ -1,23 +1,36 @@
+<<<<<<< HEAD
+import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
 
-
+import AppMinimal from './AppMinimal';
+import React from 'react';
+=======
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import { describe, it, expect } from 'vitest';
-import AppMinimal from './AppMinimal';
+import AppMinimal from './AppMinimal.tsx';
+>>>>>>> cursor/automate-test-improve-and-merge-code-aa0d
+
 describe('AppMinimal', () => {
   it('renders without crashing', () => {
     render(<AppMinimal />);
+    expect(screen.getByRole('main')).toBeInTheDocument();
+  });
 
+<<<<<<< HEAD
+  it('displays correct content', () => {
+    render(<AppMinimal />);
+    // Add content tests here
+  });
 
-
-import { render, screen, describe, it, expect } from 'lucide-react'; import AppMinimal from './AppMinimal'; describe('AppMinimal',() => { it('renders without crashing',() => { render(<AppMinimal />); expect(screen.getByRole('main')).toBeInTheDocument()}
-
-}); it('displays correct content',() => { render(<AppMinimal />)}
-
-}); it('handles user interactions',() => { render(<AppMinimal />)})}
-
-import { render,screen } from \'@testing-library/react\'; import { describe,it,expect } from \'vitest\'; import AppMinimal from \'./AppMinimal\'; describe(\'AppMinimal\',() => { it(\'renders without crashing\',() => { render(<AppMinimal />); expect(screen.getByRole(\'main\')).toBeInTheDocument()}); it(\'displays correct content\',() => { render(<AppMinimal />)}); it(\'handles user interactions\',() => { render(<AppMinimal />)})});
-
-const { render,screen } from "@testing-library/react"; import { describe,it,expect } from "vitest"; import AppMinimal from "./AppMinimal"; describe('AppMinimal', () => { it('renders without crashing', () => { render(<AppMinimal />); expect(screen.getByRole("main")).toBeInTheDocument()}); it('displays correct content', () => { render(<AppMinimal />)}); it("handles user interactions""
-"
-)
+  it('handles user interactions', () => {
+    render(<AppMinimal />);
+    // Add interaction tests here
+  });
+});
+=======
+  it('has correct structure', () => {
+    render(<AppMinimal />);
+    // Add more specific tests here
+  });
+});
+>>>>>>> cursor/automate-test-improve-and-merge-code-aa0d

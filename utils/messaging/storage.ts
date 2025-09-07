@@ -1,401 +1,159 @@
-  body: string;
-  link_url?: string;
-  attachmentBase64?: string;
-  attachment_name?: string;
-  context?: string;
-  sentAtIso: string;
-  readAtIso?: string;
-  is_read: boolean;,
-  is_edited: boolean;
-  editedAtIso?: string;
-  is_deleted: boolean;
-  deletedAtIso?: string;
-  replyToId?: string;
-  reactions: Array<{
-export interface Conversation {
-  // TODO: Implement
+import fs from 'fs';
+import path from 'path';
+import { v4 as uuidv4 } from 'uuid';
+import {
+  Conversation,
+  ConversationContext,
+  InboxItem,
+  Message,
+  NewMessageInput,
+  UserSummary} from './types',
+
+const DATA_DIR = path.join(process.cwd(), 'datamessaging'),
+const CONVERSATIONS_FILE = path.join($2);
+const MESSAGES_FILE = path.join($2);
+const USERS_FILE = path.join($2);
+const UPLOADS_DIR = path.join(process.cwd(), 'publicuploads'),
+
+function ensureFiles() {
+  if (!fs.existsSync(DATA_DIR)) fs.mkdirSync($2);
+  if (!fs.existsSync(CONVERSATIONS_FILE)) fs.writeFileSync($2);
+  if (!fs.existsSync(MESSAGES_FILE)) fs.writeFileSync($2);
+  if (!fs.existsSync(USERS_FILE)) fs.writeFileSync($2);
+  if (!fs.existsSync(UPLOADS_DIR)) fs.mkdirSync(UPLOADS_DIR, { recursive: true})
 }
-  }>;
-  // TODO: Implement
-export interface Conversation {;
 
-  // TODO: Implement
-  id: string;,
-  participants: string[];
-  lastMessageAtIso: string;
-  lastMessageId?: string;
-  isArchived: boolean;,
-  isMuted: boolean;
-  createdAtIso: string;,
-  updatedAtIso: string;
-  metadata?: {
-    title?: string;
-    description?: string;
-    type?: 'direct' | 'group' | 'support' | 'project';
+function readJson<T>(filePath: string): T {
+  ensureFiles($2);
+  return JSON.parse(fs.readFileSync(filePath, 'utf8')) as T
+}
 
+function writeJson<T>(filePath: string, data: T): void {
+  ensureFiles($2);
+  fs.writeFileSync(filePath, JSON.stringify(data, null, 2), 'utf8')
+}
 
+export function getUserById(userId: string): UserSummary | undefined {
+  const users = $2;
+  return users.find((u) => u.id = $2;
+  const messages = $2;
+  const users = $2;
+  const items: InboxItem[] = conversations
+    .filter((c) => c.participants.includes(userId))
+    .map((c) => {
+      const convMessages = messages
+        .filter((m) => m.conversationId === c.id)
+        .sort((a, b) => a.createdAt.localeCompare(b.createdAt)),
+      const lastMessage = $2;
+      const otherId = $2;
+      const other = $2;
+        name: 'User',
+        role: 'client' as const},
+      const unreadCount = $2;
+      return {
+        conversation: c,
+        otherParticipant: other,
+        lastMessage,
+        unreadCount}
+    })
+    .sort((a, b) => (b.conversation.lastMessageAt || '').localeCompare(a.conversation.lastMessageAt || '')),
 
-export interface MessageThread {;
+  return items
+}
 
+export function getConversationById(conversationId: string): Conversation | undefined {
+  const conversations = $2;
+  return conversations.find((c) => c.id = $2;
+  return messages
+    .filter((m) => m.conversationId === conversationId)
+    .sort((a, b) => a.createdAt.localeCompare(b.createdAt))
+}
 
-export interface MessageThread {
-  // TODO: Implement
-  conversation_id: string;
-  rootMessageId: string;,
-  messages: string[]; // message IDs;
-  createdAtIso: string;
+export function markAsRead(conversationId: string, userId: string): void {
+  const conversations = $2;
+  const messages = $2;
+  const now = new Date().toISOString($2);
+  // Update message statuses
+  let changed = $2;
+  for (const m of messages) {
+    if (m.conversationId = $2;
+      changed = true
+    }
+  }
+  if (changed) writeJson($2);
+  // Update conversation unreadBy
+  const conv = $2;
+  if (conv) {
+    conv.unreadBy = $2;
+    conv.lastMessageAt = now, // keep order fresh
+    writeJson(CONVERSATIONS_FILE, conversations)
+  }
+}
 
-export interface MessageSearchResult {
-  // TODO: Implement
-export interface MessageSearchResult {;
+function saveAttachmentIfProvided(base64?: string, name?: string): string | undefined {
+  if (!base64) return undefined,
+  ensureFiles($2);
+  try {
+    const matches = base64.match(/^data: (.*?),base64,(.*)$/),
+    const buffer = Buffer.from($2);
+    const ext = $2;
+    const filename = $2;
+    const filepath = path.join($2);
+    fs.writeFileSync($2);
+    return `/uploads/${filename}`
+  } catch (e) {
+    return undefined
+  }
+}
 
-  message: Message;,
-  conversation: Conversation;
-  highlights: string[];,
-  relevanceScore: number;
-class MessagingStorage {
-  // TODO: Implement
-  private messages: Map<string, Message> = new Map();
-</string>
-  private conversations: Map<string, Conversation> = new Map();
-  private threads: Map<string, MessageThread> = new Map();
-  private userConversations: Map<string, Set<string>> = new Map(); // userId -> conversationIds;
-  private conversationMessages: Map<string, Set<string>> = new Map(); // conversationId -> messageIds;
-  async createMessage(message: Omit<Message, 'id' | 'sentAtIso' | 'isRead' | 'isEdited' | 'isDeleted' | 'reactions'>): Promise<Message> {
+export function createOrGetConversation(
+  senderId: string,
+  recipientId: string,
+  context?: ConversationContext
+): Conversation {
+  const conversations = $2;
+  const existing = $2;
+  if (existing) return existing,
 
-  async updateMessage(id: string, updates: Partial<Message>): Promise<Message | null> {
+  const conv: Conversation = {
+    id: uuidv4($2);
+    participants: [senderId, recipientId],
+    context,
+    lastMessageAt: new Date().toISOString($2);
+    unreadBy: [recipientId]},
+  conversations.push($2);
+  writeJson($2);
+  return conv
+}
 
-  async deleteMessage(id: string): Promise<boolean> {
-</boolean>
-  async markAsRead(id: string): Promise<boolean> {
-  async markAsUnread(id: string): Promise<boolean> {
-  async addReaction(messageId: string, userId: string, emoji: string): Promise<boolean> {
-  async removeReaction(messageId: string, userId: string): Promise<boolean> {
-  async createConversation(conversation: Omit<Conversation, 'id' | 'createdAtIso' | 'updatedAtIso'>): Promise<Conversation> {
+export function sendMessage(input: NewMessageInput): { conversation: Conversation, message: Message} {
+  const conversations = $2;
+  const messages = $2;
+  let conversation: Conversation | undefined,
+  if (input.conversationId) {
+    conversation = conversations.find((c) => c.id === input.conversationId)
+  }
+  if (!conversation) {
+    conversation = createOrGetConversation(input.senderId, input.recipientId, input.context)
+  }
 
-  async getConversation(id: string): Promise<Conversation | null> {
-
-  async updateConversation(id: string, updates: Partial<Conversation>): Promise<Conversation | null> {
-
-  async archiveConversation(id: string): Promise<boolean> {
-  async unarchiveConversation(id: string): Promise<boolean> {
-  async muteConversation(id: string): Promise<boolean> {
-  async unmuteConversation(id: string): Promise<boolean> {
-  async getMessagesByConversation(conversationId: string, limit: number = 50, offset: number = 0): Promise<Message[]> {
-
-  async getConversationsByUser(userId: string, includeArchived: boolean = false): Promise<Conversation[]> {
-
-  async getUnreadMessageCount(userId: string): Promise<number> {
-</number>
-  private messages: Map < string, Message> = new Map ();
-  private conversations: Map < string, Conversation> = new Map ();
-  private threads: Map < string, MessageThread> = new Map ();
-  private user_conversations: Map < string, Set < string>> = new Map (); // user_id -> conversation_ids;
-  private conversation_messages: Map < string, Set < string>> = new Map (); // conversation_id -> message_ids;
-  // Message methods;
-  async create_message (message: Omit < Message, 'id' | 'sentAtIso' | 'is_read' | 'is_edited' | 'is_deleted' | 'reactions'>): Promise < Message> {
-    const new_message: Message = {
-      ...message,
-      id: `msg_${Date.now ()}_${Math.random ().to_string (36).substr (2, 9)}`,
-      sentAtIso: new Date ().toISOString (),
-      is_read: false,
-      is_edited: false,
-      is_deleted: false,
-      reactions: [];
-;
-    this.messages.set (new_message.id, new_message);
-    // Update conversation;
-    await this.updateConversationLastMessage (new_message.conversation_id, new_message.id);
-    // Update user conversations;
-    this.addToUserConversations (new_message.sender_id, new_message.conversation_id);
-    this.addToUserConversations (new_message.recipient_id, new_message.conversation_id);
-    // Add to conversation messages;
-    this.addToConversationMessages (new_message.conversation_id, new_message.id);
-    return new_message;
-  async get_message (id: string): Promise < Message | null> {
-    return this.messages.get (id) || null,
-  async update_message (id: string, updates: Partial < Message>): Promise < Message | null> {
-    const message = this.messages.get (id);
-    // Check condition;
-if (return null, ) {
-  $2;
-    const updated_message = { ...message, ...updates }
-    this.messages.set (id, updated_message);
-    return updated_message;
-  async delete_message (id: string): Promise < boolean> {
-    // Check condition;
-if (return false) {
-    message.is_deleted = true;
-    message.deletedAtIso = new Date ().toISOString (),
-    this.messages.set (id, message);
-    return true;
-  async markAsRead (id: string): Promise < boolean> {
-    // Check condition;
-    message.is_read = true;
-    message.readAtIso = new Date ().toISOString (),
-  async markAsUnread (id: string): Promise < boolean> {
-    // Check condition;
-    message.is_read = false;
-    message.readAtIso = undefined,
-  async add_reaction (message_id: string, user_id: string, emoji: string): Promise < boolean> {
-    const message = this.messages.get (message_id);
-    // Check condition;
-    // Remove existing reaction from this user;
-    message.reactions = message.reactions.filter (r => r.user_id !== user_id),
-    // Add new reaction;
-    message.reactions.push ({
-      user_id,
-      emoji,)
-      created_at: new Date ().toISOString ();
-    });
-    this.messages.set (message_id, message);
-  async remove_reaction (message_id: string, user_id: string): Promise < boolean> {
-    // Check condition;
-  // Conversation methods;
-  async create_conversation (conversation: Omit < Conversation, 'id' | 'createdAtIso' | 'updatedAtIso'>): Promise < Conversation> {
-    const new_conversation: Conversation = {
-      ...conversation,`;
-      id: `conv_${Date.now ()}_${Math.random ().to_string (36).substr (2, 9)}`,
-      createdAtIso: new Date ().toISOString (),
-      updatedAtIso: new Date ().toISOString ();
-    this.conversations.set (new_conversation.id, new_conversation);
-    // Add to user conversations;
-    for (const participant_id of new_conversation.participants) {
-      this.addToUserConversations (participant_id, new_conversation.id);
-    return new_conversation;
-  async get_conversation (id: string): Promise < Conversation | null> {
-    return this.conversations.get (id) || null,
-  async update_conversation (id: string, updates: Partial < Conversation>): Promise < Conversation | null> {
-    const conversation = this.conversations.get (id);
-    // Check condition;
-    const updated_conversation = {
-      ...conversation,
-      ...updates,
-    this.conversations.set (id, updated_conversation);
-    return updated_conversation;
-  async delete_conversation (id: string): Promise < boolean> {
-    // Check condition;
-if (return false, ) {
-    // Remove from user conversations;
-    for (const participant_id of conversation.participants) {
-      this.removeFromUserConversations (participant_id, id);
-    // Delete all messages in this conversation;
-    const message_ids = this.conversation_messages.get (id) || new Set ();
-    for (const message_id of message_ids) {
-      this.messages.delete (message_id);
-    this.conversation_messages.delete (id);
-    return this.conversations.delete (id);
-  async archive_conversation (id: string): Promise < boolean> {
-    // Check condition;
-    conversation.is_archived = true;
-    conversation.updatedAtIso = new Date ().toISOString (),
-    this.conversations.set (id, conversation);
-  async unarchive_conversation (id: string): Promise < boolean> {
-    // Check condition;
-    conversation.is_archived = false;
-  async mute_conversation (id: string): Promise < boolean> {
-    // Check condition;
-    conversation.is_muted = true;
-  async unmute_conversation (id: string): Promise < boolean> {
-    // Check condition;
-    conversation.is_muted = false;
-  // Query methods;
-  async getMessagesByConversation (conversation_id: string, limit: number = 50, offset: number = 0): Promise < Message[]> {
-    const message_ids = this.conversation_messages.get (conversation_id) || new Set (),
-    const sorted_ids = Array.from (message_ids).sort ((a, b) => {
-      const msg_a = this.messages.get (a);
-      const msg_b = this.messages.get (b);
-      // Check condition;
-if (return 0) {
-      return new Date (msg_a.sentAtIso).get_time () - new Date (msg_b.sentAtIso).get_time ();
-    const paginated_ids = sorted_ids.slice (offset, offset + limit);
-    return paginated_ids;
-      .map (id => this.messages.get (id));
-      .filter ((msg): msg is Message => msg !== undefined);
-  async getConversationsByUser (user_id: string, include_archived: boolean = false): Promise < Conversation[]> {
-    const conversation_ids = this.user_conversations.get (user_id) || new Set ();
-    const conversations = Array.from (conversation_ids);
-      .map (id => this.conversations.get (id));
-      .filter ((conv): conv is Conversation => conv !== undefined);
-    // Check condition;
-if ( {) {
-      return conversations.filter (conv => !conv.is_archived),
-    return conversations.sort ((a, b) =>;
-      new Date (b.lastMessageAtIso).get_time () - new Date (a.lastMessageAtIso).get_time ());
-  async getUnreadMessageCount (user_id: string): Promise < number> {
-    let count = 0;
-    for (const conversation_id of conversation_ids) {
-      const message_ids = this.conversation_messages.get (conversation_id) || new Set ();
-        // Check condition;
-          count++,
-    return count;
-    return unreadMessages.sort((a, b) =>
-      new Date(a.sentAtIso).getTime() - new Date(b.sentAtIso).getTime()
-    );
-  // Search methods;
-  async searchMessages(query: string, userId: string, limit: number = 20): Promise<MessageSearchResult[]> {
-
-  async getThread(threadId: string): Promise<MessageThread | null> {
-
-  async getThreadMessages(threadId: string): Promise<Message[]> {
-
-  private async updateConversationLastMessage(conversationId: string, messageId: string): Promise<void> {
-</void>
-export async function updateMessage(id: string, updates: Partial<Message>): Promise<Message | null> {
-
-export async function updateMessage(id: string, updates: Partial<Message>): Promise<Message | null> {;
-
-export async function deleteMessage(id: string): Promise<boolean> {
-export async function markAsRead(id: string): Promise<boolean> {
-export async function createConversation(conversation: Omit<Conversation, 'id' | 'createdAtIso' | 'updatedAtIso'>): Promise<Conversation> {
-
-export async function getConversation(id: string): Promise<Conversation | null> {
-
-
-export async function updateConversation(id: string, updates: Partial<Conversation>): Promise<Conversation | null> {
-
-export async function getMessagesByConversation(conversationId: string, limit?: number, offset?: number): Promise<Message[]> {
-
-export async function getConversationsByUser(userId: string, includeArchived?: boolean): Promise<Conversation[]> {
-
-export async function getUnreadMessageCount(userId: string): Promise<number> {
-export async function searchMessages(query: string, userId: string, limit?: number): Promise<MessageSearchResult[]> {
-
-export async function createConversation(conversation: Omit<Conversation, 'id' | 'createdAtIso' | 'updatedAtIso'>): Promise<Conversation> {;
-
-
-export async function updateConversation(id: string, updates: Partial<Conversation>): Promise<Conversation | null> {;
-
-export async function getMessagesByConversation(conversationId: string, limit?: number, offset?: number): Promise<Message[]> {;
-
-export async function getConversationsByUser(userId: string, includeArchived?: boolean): Promise<Conversation[]> {;
-
-export async function searchMessages(query: string, userId: string, limit?: number): Promise<MessageSearchResult[]> {;
-
-  additionalData?: Partial<Message>
-
-): Omit<Message, 'id' | 'sentAtIso' | 'isRead' | 'isEdited' | 'isDeleted' | 'reactions'> {
-
-  additionalData?: Partial<Conversation>
-
-): Omit<Conversation, 'id' | 'createdAtIso' | 'updatedAtIso'> {
-
-  if (diffInHours < 1) {
-  } else if (diffInHours < 24) {`;
-    return `${Math.floor(diffInHours)}h ago`;
-  } else if (diffInHours < 168) { // 7 days;`;
-    return `${Math.floor(diffInHours / 24)}d ago`;
-  } else {
-  // TODO: Implement
-    participants,
-    lastMessageAtIso: new Date().toISOString(),
-    isArchived: false,
-    isMuted: false,
-    ...additionalData;
-  };
-
-export function generateMessageId(): string {;`;
-  return `msg_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-
-export function generateConversationId(): string {;`;
-  return `conv_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-
-export function formatMessageTime(isoString: string): string {;
-
-  const date = new Date(isoString);
-  const now = new Date();
-  const diffInHours = (now.getTime() - date.getTime()) / (1000 * 60 * 60);
-    return 'Just now
-  // TODO: Implement
-    return date.toLocaleDateString();
-
-  // Cleanup methods;
-  async clear_all (): Promise < void> {
-    this.messages.clear ();
-    this.conversations.clear ();
-    this.threads.clear ();
-    this.user_conversations.clear ();
-    this.conversation_messages.clear ();
-  // Statistics;
-  async get_stats (): Promise<{
-    total_messages: number;,
-  total_conversations: number;
-    total_threads: number;,
-  active_users: number,
-  }> {
-    return {
-  // TODO: Implement
-      total_messages: this.messages.size,
-      total_conversations: this.conversations.size,
-      total_threads: this.threads.size,
-      active_users: this.user_conversations.size;
-// Singleton instance;
-export const messaging_storage = new MessagingStorage ();
-// Main functions for external use;
-export async function create_message (message: Omit < Message, 'id' | 'sentAtIso' | 'is_read' | 'is_edited' | 'is_deleted' | 'reactions'>): Promise < Message> {
-  return messaging_storage.create_message (message);
-export async function get_message (id: string): Promise < Message | null> {
-  return messaging_storage.get_message (id),
-export async function update_message (id: string, updates: Partial < Message>): Promise < Message | null> {
-  return messaging_storage.update_message (id, updates);
-export async function delete_message (id: string): Promise < boolean> {
-  return messaging_storage.delete_message (id),
-export async function markAsRead (id: string): Promise < boolean> {
-  return messaging_storage.markAsRead (id),
-export async function create_conversation (conversation: Omit < Conversation, 'id' | 'createdAtIso' | 'updatedAtIso'>): Promise < Conversation> {
-  return messaging_storage.create_conversation (conversation);
-export async function get_conversation (id: string): Promise < Conversation | null> {
-  return messaging_storage.get_conversation (id),
-export async function update_conversation (id: string, updates: Partial < Conversation>): Promise < Conversation | null> {
-  return messaging_storage.update_conversation (id, updates);
-export async function getMessagesByConversation (conversation_id: string, limit?: number, offset?: number): Promise < Message[]> {
-  return messaging_storage.getMessagesByConversation (conversation_id, limit, offset);
-export async function getConversationsByUser (user_id: string, include_archived?: boolean): Promise < Conversation[]> {
-  return messaging_storage.getConversationsByUser (user_id, include_archived);
-export async function getUnreadMessageCount (user_id: string): Promise < number> {
-  return messaging_storage.getUnreadMessageCount (user_id),
-export async function search_messages (query: string, user_id: string, limit?: number): Promise < MessageSearchResult[]> {
-  return messaging_storage.search_messages (query, user_id, limit);
-// Utility functions;
-export function createMessageData (
-  conversation_id: string,
-  sender_id: string,
-  recipient_id: string,
-  body: string,)
-  additional_data?: Partial < Message>): Omit < Message, 'id' | 'sentAtIso' | 'is_read' | 'is_edited' | 'is_deleted' | 'reactions'> {
-  // TODO: Implement
-    conversation_id,
-    sender_id,
-    recipient_id,
-    body,
-    ...additional_data;
-export function createConversationData (
-  participants: string[],)
-  additional_data?: Partial < Conversation>): Omit < Conversation, 'id' | 'createdAtIso' | 'updatedAtIso'> {
-  // TODO: Implement
-    lastMessageAtIso: new Date ().toISOString (),
-    is_archived: false,
-    is_muted: false,
-export function generateMessageId (): string {
-  // TODO: Implement
-}`;
-  return `msg_${Date.now ()}_${Math.random ().to_string (36).substr (2, 9)}`;
-export function generateConversationId (): string {
-  // TODO: Implement
-  return `conv_${Date.now ()}_${Math.random ().to_string (36).substr (2, 9)}`;
-export function formatMessageTime (iso_string: string): string {
-  // TODO: Implement
-  const date = new Date (iso_string);
-  const now = new Date ();
-  const diffInHours = (now.get_time () - date.get_time ()) / (1000 * 60 * 60);
-  // Check condition;
-    return 'Just now',
-  } else // Check condition;
-    return `${Math.floor (diffInHours)}h ago`;
-if ( { // 7 days) {
-    return `${Math.floor (diffInHours / 24)}d ago`;
-  // TODO: Implement
-    return date.toLocaleDateString ();
-
-
-`;
+  const attachmentUrl = saveAttachmentIfProvided($2);
+  const message: Message = {
+    id: uuidv4($2);
+    conversationId: conversation.id,
+    senderId: input.senderId,
+    recipientId: input.recipientId,
+    body: input.body,
+    linkUrl: input.linkUrl,
+    attachmentUrl,
+    createdAt: new Date().toISOString($2);
+    status: 'sent'},
+  messages.push($2);
+  writeJson($2);
+  conversation.lastMessageAt = $2;
+  if (!conversation.unreadBy.includes(input.recipientId)) {
+    conversation.unreadBy.push(input.recipientId)
+  }
+  writeJson($2);
+  return { conversation, message }
+}

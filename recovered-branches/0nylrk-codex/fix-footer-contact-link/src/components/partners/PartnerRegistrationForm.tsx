@@ -1,365 +1,303 @@
+import { useState } from "react";
+import { z } from "zod";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { Textarea } from "@/components/ui/textarea";
+import { toast } from "@/hooks/use-toast";
+import { useAuth } from "@/hooks/useAuth";
+import { supabase } from "@/integrations/supabase/client";
+const partnerFormSchema = z.object({
+  name: z.string().min($2);
+  website: z.string().url({ message: "Please enter a valid URL." }).optional().or(z.literal("")),
+  twitter: z.string().optional($2);
+  instagram: z.string().optional($2);
+  youtube: z.string().optional($2);
+  linkedin: z.string().optional($2);
+  niche: z.string().min($2);
+  audience_size: z.string($2);
+  payout_method: z.string($2);
+  bio: z.string().min(10, { message: "Bio must be at least 10 characters." }).max(500)}),
 
-import {useState} from "react";""
-import {z} from "zod";""
-import {useForm} from "react-hook-form";""
-import {zodResolver} from "@hookform/resolvers/zod";""
-import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";""
-import {Button} from "@/components/ui/button";""
-import {Input} from "@/components/ui/input";""
-import {Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";""
-import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";""
-import {Textarea} from "@/components/ui/textarea";""
-import {toast} from "@/hooks/use-toast";""
-import {useAuth} from "@/hooks/useAuth";""
-import {supabase} from "@/integrations/supabase/client";""
-import { useState } from "react",""
-import { z } from "zod",""
-import { useForm } from "react-hook-form",""
-import { zodResolver } from "@hookform/resolvers/zod",""
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",""
-import { Button } from "@/components/ui/button",""
-import { Input } from "@/components/ui/input",""
-import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form",""
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",""
-import { Textarea } from "@/components/ui/textarea",""
-import { toast } from "@/hooks/use-toast",""
-import { useAuth } from "@/hooks/useAuth",""
-import { supabase } from "@/integrations/supabase/client","
-const partnerFormSchema = z.object({)"
-  name: z.string().min(2, { message: "Name must be at least 2 characters." }),""
-  website: z.string().url({ message: "Please enter a valid URL." }).optional().or(z.literal("")),"
-  twitter: z.string().optional(),
-  instagram: z.string().optional(),
-  youtube: z.string().optional(),
-  linkedin: z.string().optional(),"
-  niche: z.string().min(2, { message: "Please specify your niche." }),"
-  audience_size: z.string(),
-  payout_method: z.string(),"
-  bio: z.string().min(10, { message: "Bio must be at least 10 characters." }).max(500)}),"
-type PartnerFormValues = z.infer<typeof partnerFormSchema>,
-</typeof>
+type PartnerFormValues = $2;
+export function PartnerRegistrationForm() {
+  const [isSubmitting, setIsSubmitting] = useState($2);
+  const { user } = useAuth($2);
   const form = useForm<PartnerFormValues>({
+    resolver: zodResolver($2);
+    defaultValues: {
+      name: "",
+      website: "",
+      twitter: "",
+      instagram: "",
+      youtube: "",
+      linkedin: "",
+      niche: "",
+      audience_size: "",
+      payout_method: "paypal",
+      bio: ""}}),
 
-type PartnerFormValues = z.infer<typeof partnerFormSchema>,;
-type PartnerFormValues = z && z.infer<typeof partnerFormSchema>;
-  const form = useForm<PartnerFormValues>({;
-
-type PartnerFormValues = z.infer < typeof partnerFormSchema>;
-;
-export /**
- * PartnerRegistrationForm - Function description;
- */)
-function PartnerRegistrationForm() {
-  const [is_submitting, setIsSubmitting] = useState (false);
-  const { user } = use_auth ();
-  const form = use_form < PartnerFormValues>({)
-    resolver: zod_resolver (partnerFormSchema),
-    default_values: {,"
-  name: "",""
-      website: "",""
-      twitter: "",""
-      instagram: "",""
-      youtube: "",""
-      linkedin: "",""
-      niche: "",""
-      audience_size: "",""
-      payout_method: "paypal",""
-      bio: ""}}),"
   const checkExistingPartner = async () => {
-    const { data: existing_partner } = await supabase;"
-      .from ('partner_profiles');
-      .select ('id');
-      .eq ('user_id', user.id);
-      .single ();
-    // Check condition;
-if ( {) {
-  $2;
-}
-      toast ({
-        title: "Already registered",""
-        description: "You have already registered as a partner.",")"
-        variant: "destructive"}),"
-      setIsSubmitting (false);
-      return true;
-    return false;
-  async /**
- * on_submit - Function description;
- */
-function on_submit() {
-    // Check condition;
-      toast ({"
-        title: "Authentication required",""
-        description: "You must be logged in to register as a partner.",")"
-      return;
-    setIsSubmitting (true);
+    const { data: existingPartner} = await supabase
+      .from('partner_profiles')
+      .select('id')
+      .eq('user_id', user.id)
+      .single($2);
+    if (existingPartner) {
+      toast($2);
+      setIsSubmitting($2);
+      return true
+    }
+    return false
+  },
+
+  async function onSubmit(data: PartnerFormValues) {
+    if (!user) {
+      toast($2);
+      return
+    }
+
+    setIsSubmitting($2);
     try {
-  // TODO: Implement
-      // Check if they already have a partner profile;
-      const hasExistingPartner = await checkExistingPartner ();
-      // Check condition;
-if (return) {
-      // Insert new partner profile;
-      const { data: new_partner, error } = await supabase;"
-        .insert ([;
+      // Check if they already have a partner profile
+      const hasExistingPartner = await checkExistingPartner($2);
+      if (hasExistingPartner) return,
 
+      // Insert new partner profile
+      const { data: newPartner, error } = await supabase
+        .from('partner_profiles')
+        .insert([
           {
-            user_id: user.id;,
-  name: data.name;
-            website: data.website |null;,
-  social_media: {
+            user_id: user.id
+            name: data.name
+            website: data.website |null
+            social_media: {
+              twitter: data.twitter |null
+              instagram: data.instagram |null
+              youtube: data.youtube |null
+              linkedin: data.linkedin |null}
+            niche: data.niche
+            audience_size: data.audience_size
+            payout_method: data.payout_method
+            bio: data.bio
+            status: 'pending', // Partners need approval
+          }
+        ])
+        .select($2);
+      if (error) throw error,
 
-
-      // Insert new partner profile;
-      const { data: newPartner, error } = await supabase;)
-        .from('partner_profiles');
-        .insert([;
-          {;
-            user_id: user && user.id,;
-            name: data && data.name,;
-            website: data && data.website || null,;
-            social_media: {;,
-  twitter: data && data.twitter || null,;
-              instagram: data && data.instagram || null,;
-              youtube: data && data.youtube || null,;
-              linkedin: data && data.linkedin || null},;
-            niche: data && data.niche,;
-            audience_size: data && data.audience_size,;
-            payout_method: data && data.payout_method,;
-            bio: data && data.bio,;
-            status: 'pending', // Partners need approval;
-          })]
-        ]);
-        .select();
-      if (error) throw error;
-
-
-        .single(),
-
-
-
+      toast($2);
+      // Create a referral code if they don't have one already
+      const { data: existingCode} = await supabase
+        .from('referral_codes')
+        .select('code')
+        .eq('user_id', user.id)
+        .single($2);
       if (!existingCode) {
         await supabase.rpc('generate_referral_code', { user_id: user.id })
+      }
     } catch (error: any) {
-      console.error('Error submitting partner application:', error);
+      console.error($2);
       toast({
-        title: "Submission failed"","
-  description: error.message |"There was a problem submitting your application."")"
-        variant: "destructive"})"
+        title: "Submission failed",
+        description: error.message || "There was a problem submitting your application.",
+        variant: "destructive"})
     } finally {
-  // TODO: Implement
       setIsSubmitting(false)
-
-
-  return ("
-    <Card className="bg-zion-blue-dark border-zion-blue-light">;"
-
-      <CardHeader>;
-
-        <CardTitle>Partner Registration;
-        <CardDescription>Register to become a Zion AI partner and start earning rewards;
-      <CardContent>;
-
-        <Form {...form}>;
-)"
-          <form onSubmit={form && form.handleSubmit(onSubmit)} className="space-y-6">;"
-</form>"
-            <div className="space-y-4">;"
-</div>
-              <FormField;
-                control={form && form.control}"
-                name="name""
+    }
+  }
+  return (
+    <Card className="bg-zion-blue-dark border-zion-blue-light">
+      <CardHeader>
+        <CardTitle>Partner Registration</CardTitle>
+        <CardDescription>Register to become a Zion AI partner and start earning rewards</CardDescription>
+      </CardHeader>
+      <CardContent>
+        <Form {...form}>
+          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+            <div className="space-y-4">
+              <FormField
+                control={form.control}
+                name="name"
                 render={({ field }) => (
-
                   <FormItem>
-
-                    <FormLabel>Name / Brand
+                    <FormLabel>Name / Brand</FormLabel>
                     <FormControl>
-"
-                      <Input placeholder="Your name or brand name" {...field} />"
-
-                    
+                      <Input placeholder="Your name or brand name" {...field} />
+                    </FormControl>
                     <FormMessage />
-
-    <Card className="bg - zion - blue - dark border - zion - blue - light">;"
-
-
-        <CardTitle > Partner Registration;
-        <CardDescription > Register to become a Zion AI partner and start earning rewards;
-
-          <form on_submit={form.handle_submit (on_submit)} className="space - y-6">;"
-            <div className="space - y-4">;"
-
-
-                control={form.control}"
-                name="name";"
-
-                  <FormItem>;
-
-                    <FormLabel > Name / Brand;
-                    <FormControl>;
-                      <Input placeholder="Your name or brand name" {...field} />;"
-
-                    <FormMessage />;
-
-                name="website"""
-                name="website"")
-                render={({ field }) => (;
-
-)
-                    <FormLabel>Website (Optional);
-                      <Input placeholder="https://yourwebsite && yourwebsite.com" {...field} />;"
-
-
-                  ;"
-              <div className="grid sm:grid-cols-2 gap-4">;"
-                  name="twitter""
-
-                      <FormLabel>Twitter (Optional);
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="website"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Website (Optional)</FormLabel>
+                    <FormControl>
+                      <Input placeholder="https://yourwebsite.com" {...field} />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <div className="grid sm:grid-cols-2 gap-4">
+                <FormField
+                  control={form.control}
+                  name="twitter"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Twitter (Optional)</FormLabel>
+                      <FormControl>
+                        <Input placeholder="@username" {...field} />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
                   )}
-                name="website";"
-
-                    <FormLabel > Website (Optional);
-                      <Input placeholder="https://yourwebsite.com" {...field} />;"
-
-
-                  )}"
-              <div className="grid sm:grid - cols - 2 gap - 4">;"
-                  name="twitter";"
-
-                      <FormLabel > Twitter (Optional);"
-
-                        <Input placeholder="@username" {...field} />;"
-
-
-                  name="instagram""
-
-                      <FormLabel>Instagram (Optional);
-
-                  name="instagram";"
-
-                      <FormLabel > Instagram (Optional);
-
-
-              </div>;"
-                  name="youtube""
-
-                      <FormLabel>YouTube (Optional);
-                  name="youtube";"
-
-                      <FormLabel > YouTube (Optional);
-                        <Input placeholder="Channel name or URL" {...field} />;"
-
-
-                  name="linkedin""
-
-                      <FormLabel>LinkedIn (Optional);
-                  name="linkedin";"
-
-                      <FormLabel > LinkedIn (Optional);
-
-
-
-                    ;                  )}
-
-                        <Input placeholder="Profile URL or username" {...field} />;"
-
-
-              </div>;
-                name="niche""
-
-
-                    <FormLabel>Your Niche;)
-                name="niche";"
-
-                      <Input placeholder="AI development, machine learning, tech tutorials, etc." {...field} />;"
-
-                    <FormDescription>;
-
-                  name="audience_size"")
-
-
-                      <FormLabel>Audience Size;
-                      <Select onValueChange={field && field.onChange} defaultValue={field && field.value}>;
-                  name="audience_size";"
-
-
-                          <SelectTrigger>;
-                            <SelectValue placeholder="Select audience size" />;"
-
-                        <SelectContent>;
-
-                  name="payout_method"")
-
-
-                      <FormLabel>Preferred Payout Method;
-                          <SelectItem value="under1k">Under 1, 000;""
-                          <SelectItem value="1k - 10k">1, 000 - 10, 000;""
-                          <SelectItem value="10k - 50k">10, 000 - 50, 000;""
-                          <SelectItem value="50k - 100k">50, 000 - 100, 000;""
-                          <SelectItem value="over100k">Over 100, 000;"
-                  name="payout_method";"
-
-
-                            <SelectValue placeholder="Select payout method" />;"
-
-                          <SelectItem value="paypal">PayPal;""
-                          <SelectItem value="bank">Bank Transfer;""
-                          <SelectItem value="crypto">Cryptocurrency;""
-                          <SelectItem value="platform_credit">Platform Credit;"
-
-                name="bio"")
-
-
-                    <FormLabel>Bio;
-
-                      <Textarea;"
-                        placeholder="Tell us about yourself and how you plan to promote Zion AI""
-                        rows={4} 
-                        {...field} 
-
-                name="bio""
-                      />;
-
-
-
-
-
-            <Button;"
-              type="submit"""
-              className="w-full bg-zion-purple hover:bg-zion-purple-dark""
-              disabled={isSubmitting}>;
-              type="submit";""
-              className="w - full bg - zion - purple hover:bg - zion - purple - dark";"
-              disabled={is_submitting}
-            >;
-
-          </form>;
-    );
-            
-          </form>
-        
-      
-    
-              type="submit""
+                />
+                <FormField
+                  control={form.control}
+                  name="instagram"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Instagram (Optional)</FormLabel>
+                      <FormControl>
+                        <Input placeholder="@username" {...field} />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+              </div>
+              <div className="grid sm:grid-cols-2 gap-4">
+                <FormField
+                  control={form.control}
+                  name="youtube"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>YouTube (Optional)</FormLabel>
+                      <FormControl>
+                        <Input placeholder="Channel name or URL" {...field} />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                <FormField
+                  control={form.control}
+                  name="linkedin"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>LinkedIn (Optional)</FormLabel>
+                      <FormControl>
+                        <Input placeholder="Profile URL or username" {...field} />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+              </div>
+              <FormField
+                control={form.control}
+                name="niche"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Your Niche</FormLabel>
+                    <FormControl>
+                      <Input placeholder="AI development, machine learning, tech tutorials, etc." {...field} />
+                    </FormControl>
+                    <FormDescription>
+                      What topics do you focus on in your content?
+                    </FormDescription>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <div className="grid sm:grid-cols-2 gap-4">
+                <FormField
+                  control={form.control}
+                  name="audience_size"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Audience Size</FormLabel>
+                      <Select onValueChange={field.onChange} defaultValue={field.value}>
+                        <FormControl>
+                          <SelectTrigger>
+                            <SelectValue placeholder="Select audience size" />
+                          </SelectTrigger>
+                        </FormControl>
+                        <SelectContent>
+                          <SelectItem value="under1k">Under 1,000</SelectItem>
+                          <SelectItem value="1k-10k">1,000 - 10,000</SelectItem>
+                          <SelectItem value="10k-50k">10,000 - 50,000</SelectItem>
+                          <SelectItem value="50k-100k">50,000 - 100,000</SelectItem>
+                          <SelectItem value="over100k">Over 100,000</SelectItem>
+                        </SelectContent>
+                      </Select>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                <FormField
+                  control={form.control}
+                  name="payout_method"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Preferred Payout Method</FormLabel>
+                      <Select onValueChange={field.onChange} defaultValue={field.value}>
+                        <FormControl>
+                          <SelectTrigger>
+                            <SelectValue placeholder="Select payout method" />
+                          </SelectTrigger>
+                        </FormControl>
+                        <SelectContent>
+                          <SelectItem value="paypal">PayPal</SelectItem>
+                          <SelectItem value="bank">Bank Transfer</SelectItem>
+                          <SelectItem value="crypto">Cryptocurrency</SelectItem>
+                          <SelectItem value="platform_credit">Platform Credit</SelectItem>
+                        </SelectContent>
+                      </Select>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+              </div>
+              <FormField
+                control={form.control}
+                name="bio"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Bio</FormLabel>
+                    <FormControl>
+                      <Textarea
+                        placeholder="Tell us about yourself and how you plan to promote Zion AI"
+                        rows={4}
+                        {...field}
+                      />
+                    </FormControl>
+                    <FormDescription>
+                      Limit: 500 characters
+                    </FormDescription>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+            </div>
+            <Button
+              type="submit"
+              className="w-full bg-zion-purple hover:bg-zion-purple-dark"
               disabled={isSubmitting}
             >
-
-            
-        
-      
-    
-}return (<Card className=" bg-zion-blue-dark border-zion-blue-light"> <CardHeader> <CardTitle>Partner Registration <CardDescription>Register to become a Zion AI partner and start earning rewards  <CardContent>  <FormMessage /> )"
-
-}/> <FormField  <FormMessage /> ) 
-}/> <div className=" grid sm:grid-cols-2 gap-4"> <FormField  <FormMessage /> )"
-}/> </div> <div className=" grid sm:grid-cols-2 gap-4"> <FormField  <FormMessage /> )"
-
-}/> </div> <FormField  <FormDescription> What topics do you focus on in your content?  <FormMessage /> ) 
-}/> <div className=" grid sm:grid-cols-2 gap-4"> <FormField <FormItem> <FormLabel>Audience Size <Select onValueChange= {"
-</div>"
-}> <FormControl> <SelectTrigger> <SelectValue placeholder=" Select audience size"/>   <SelectContent> <SelectItem value=" under1k">Under 1, 000 <SelectItem value=" 1k-10k">1, 000 - 10, 000 <SelectItem value=" 10k-50k">10, 000 - 50, 000 <SelectItem value=" 50k-100k">50, 000 - 100, 000 <SelectItem value=" over100k">Over 100, 000   <FormMessage /> )"
-}/> <FormField <FormItem> <FormLabel>Preferred Payout Method <Select onValueChange= {
-}> <FormControl> <SelectTrigger> <SelectValue placeholder=" Select payout method" />   <SelectContent>   <FormMessage /> )"
-}/> </div> <FormField <FormItem> <FormLabel>Bio <FormControl> <Textarea />  <FormDescription> Limit: 500 characters  <FormMessage /> ) 
-
-}/> </div> <Button  </form>   ) "
+              {isSubmitting ? "Submitting..." : "Submit Application"}
+            </Button>
+          </form>
+        </Form>
+      </CardContent>
+    </Card>
+  )
+}
