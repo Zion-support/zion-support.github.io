@@ -1,5 +1,6 @@
 import Link from "next/link";
 
+
 export const metadata = {
   title: "AI Inventory Management | Zion Tech Group",
   description: "Professional AI inventory management services for your business needs.",

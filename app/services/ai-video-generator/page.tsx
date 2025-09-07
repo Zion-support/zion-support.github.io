@@ -1,5 +1,6 @@
 import Link from "next/link";
 
+
 export const metadata = {
   title: "AI Video Generator | Zion Tech Group",
   description: "Professional AI video generator services for your business needs.",

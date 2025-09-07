@@ -1,5 +1,6 @@
 import Link from "next/link";
 
+
 export const metadata = {
   title: "AI HR Management | Zion Tech Group",
   description: "Professional AI HR management services for your business needs.",
