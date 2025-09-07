@@ -5,9 +5,7 @@ import AccessibilityEnhancerdynamic from '../components/AccessibilityEnhancer.dy
 describe('AccessibilityEnhancerdynamic', () => {
   test('renders without crashing', () => {
     render(<AccessibilityEnhancerdynamic />);
-    expect(
-      screen.getByTestId('accessibilityenhancer.dynamic')
-    ).toBeInTheDocument();
+    expect(screen.getByTestId('accessibilityenhancer.dynamic')).toBeInTheDocument();
   });
   test('displays correct content', () => {
     render(<AccessibilityEnhancerdynamic />);

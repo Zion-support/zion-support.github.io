@@ -18,17 +18,17 @@ export default function PerformanceMonitor() {
     const measurePerformance = () => {
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       const loadTime = navigation.loadEventEnd - navigation.loadEventStart;
-      
+
       const memory = (performance as any).memory;
       const memoryUsage = memory ? memory.usedJSHeapSize / 1024 / 1024 : 0;
-      
+
       const connection = (navigator as any).connection;
       const connectionType = connection ? connection.effectiveType : 'unknown';
 
       setMetrics({
         loadTime,
         memoryUsage,
-        connectionType
+        connectionType,
       });
     };
 

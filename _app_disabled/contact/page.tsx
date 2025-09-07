@@ -1,14 +1,14 @@
-'use client'
-import React, { useState } from 'react'
-import { 
+'use client';
+import React, { useState } from 'react';
+import {
   EnvelopeIcon,
   PhoneIcon,
   MapPinIcon,
   ClockIcon,
   CheckCircleIcon,
-  ExclamationTriangleIcon
-} from '@heroicons/react/24/outline'
-import Link from 'next/link'
+  ExclamationTriangleIcon,
+} from '@heroicons/react/24/outline';
+import Link from 'next/link';
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -16,36 +16,36 @@ export default function ContactPage() {
     email: '',
     company: '',
     service: '',
-    message: ''
-  })
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
+    message: '',
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
-    })
-  }
+      [e.target.name]: e.target.value,
+    });
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsSubmitting(true)
-    
+    e.preventDefault();
+    setIsSubmitting(true);
+
     // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000))
-    
-    setSubmitStatus('success')
-    setIsSubmitting(false)
-    setFormData({ 
-      name: '', 
-      email: '', 
-      company: '', 
-      phone: '', 
-      service: '', 
-      message: '' 
-    })
-  }
+    await new Promise((resolve) => setTimeout(resolve, 2000));
+
+    setSubmitStatus('success');
+    setIsSubmitting(false);
+    setFormData({
+      name: '',
+      email: '',
+      company: '',
+      phone: '',
+      service: '',
+      message: '',
+    });
+  };
 
   return (
     <div className="min-h-screen bg-white">
@@ -53,12 +53,9 @@ export default function ContactPage() {
       <div className="bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Get in Touch
-            </h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">Get in Touch</h1>
             <p className="text-xl text-blue-100 mb-8">
-              Ready to transform your business with AI and technology? 
-              Let's discuss your project.
+              Ready to transform your business with AI and technology? Let's discuss your project.
             </p>
           </div>
         </div>
@@ -70,17 +67,13 @@ export default function ContactPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Form */}
             <div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">
-                Send us a Message
-              </h2>
-              
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">Send us a Message</h2>
+
               {submitStatus === 'success' && (
                 <div className="bg-green-50 border border-green-200 rounded-lg p-4 mb-6">
                   <div className="flex items-center">
                     <CheckCircleIcon className="h-5 w-5 text-green-600 mr-2" />
-                    <p className="text-green-800 font-medium">
-                      Thank you! Your message has been sent successfully.
-                    </p>
+                    <p className="text-green-800 font-medium">Thank you! Your message has been sent successfully.</p>
                   </div>
                 </div>
               )}
@@ -112,7 +105,7 @@ export default function ContactPage() {
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     />
                   </div>
-                  
+
                   <div>
                     <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
                       Email *
@@ -143,7 +136,7 @@ export default function ContactPage() {
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     />
                   </div>
-                  
+
                   <div>
                     <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
                       Phone
@@ -207,10 +200,8 @@ export default function ContactPage() {
 
             {/* Contact Information */}
             <div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">
-                Contact Information
-              </h2>
-              
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">Contact Information</h2>
+
               <div className="space-y-6">
                 <div className="flex items-start">
                   <EnvelopeIcon className="h-6 w-6 text-blue-600 mr-4 mt-1" />
@@ -233,7 +224,8 @@ export default function ContactPage() {
                   <div>
                     <h3 className="text-lg font-semibold text-gray-900">Address</h3>
                     <p className="text-gray-600">
-                      123 Tech Street<br />
+                      123 Tech Street
+                      <br />
                       San Francisco, CA 94105
                     </p>
                   </div>
@@ -244,8 +236,10 @@ export default function ContactPage() {
                   <div>
                     <h3 className="text-lg font-semibold text-gray-900">Business Hours</h3>
                     <p className="text-gray-600">
-                      Monday - Friday: 9:00 AM - 6:00 PM<br />
-                      Saturday: 10:00 AM - 4:00 PM<br />
+                      Monday - Friday: 9:00 AM - 6:00 PM
+                      <br />
+                      Saturday: 10:00 AM - 4:00 PM
+                      <br />
                       Sunday: Closed
                     </p>
                   </div>
@@ -253,9 +247,7 @@ export default function ContactPage() {
               </div>
 
               <div className="mt-8 p-6 bg-gray-50 rounded-lg">
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">
-                  Why Choose Zion Tech Group?
-                </h3>
+                <h3 className="text-lg font-semibold text-gray-900 mb-4">Why Choose Zion Tech Group?</h3>
                 <ul className="space-y-2 text-gray-600">
                   <li>• 500+ successful projects delivered</li>
                   <li>• 24/7 technical support</li>
@@ -268,5 +260,5 @@ export default function ContactPage() {
         </div>
       </div>
     </div>
-  )
+  );
 }

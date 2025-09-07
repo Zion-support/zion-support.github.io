@@ -8,13 +8,7 @@ interface CaseStudyProps {
   metrics: string[];
 }
 
-export default function CaseStudy({
-  company,
-  industry,
-  result,
-  description,
-  metrics
-}: CaseStudyProps) {
+export default function CaseStudy({ company, industry, result, description, metrics }: CaseStudyProps) {
   return (
     <div className="bg-white p-6 rounded-lg shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
       <div className="mb-4">

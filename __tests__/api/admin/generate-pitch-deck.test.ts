@@ -13,20 +13,20 @@ describe('/api/admin/generate-pitch-deck API Endpoint', () => {
     targetRaiseAmount: '100k',
     activeUsers30d: '1000',
     gmv: '50k',
-    notableClients: '[]'
+    notableClients: '[]',
   };
 
   it('should return 401 for unauthorized requests', async () => {
     const { req, res } = createMocks<NextApiRequest, NextApiResponse>({
       method: 'POST' as RequestMethod,
-      body: mockRequestData
+      body: mockRequestData,
     });
 
     await handler(req, res);
 
     expect(res._getStatusCode()).toBe(401);
     expect(JSON.parse(res._getData())).toEqual({
-      error: 'Unauthorized'
+      error: 'Unauthorized',
     });
   });
 
@@ -34,16 +34,16 @@ describe('/api/admin/generate-pitch-deck API Endpoint', () => {
     const { req, res } = createMocks<NextApiRequest, NextApiResponse>({
       method: 'POST' as RequestMethod,
       headers: {
-        authorization: 'Bearer invalid-token'
+        authorization: 'Bearer invalid-token',
       },
-      body: mockRequestData
+      body: mockRequestData,
     });
 
     await handler(req, res);
 
     expect(res._getStatusCode()).toBe(403);
     expect(JSON.parse(res._getData())).toEqual({
-      error: 'Forbidden'
+      error: 'Forbidden',
     });
   });
 
@@ -51,9 +51,9 @@ describe('/api/admin/generate-pitch-deck API Endpoint', () => {
     const { req, res } = createMocks<NextApiRequest, NextApiResponse>({
       method: 'POST' as RequestMethod,
       headers: {
-        authorization: 'Bearer valid-token'
+        authorization: 'Bearer valid-token',
       },
-      body: mockRequestData
+      body: mockRequestData,
     });
 
     await handler(req, res);

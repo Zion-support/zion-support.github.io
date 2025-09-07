@@ -1,0 +1,12 @@
+[build]
+  command = "npm ci && npm run build"
+  publish = ".next"
+  functions = "netlify/functions"
+
+# Next.js runtime for SSR/ISR on Netlify
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+# Cloudinary plugin (already used in Netlify UI)
+[[plugins]]
+  package = "netlify-plugin-cloudinary"

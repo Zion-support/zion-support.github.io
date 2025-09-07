@@ -11,10 +11,10 @@
     "build:netlify": "node scripts/build-with-error-handling.js",
     "prebuild": "echo \"Starting build...\"",
     "postbuild": "echo \"Build completed\"",
-    "lint": "node --max-old-space-size=4096 ./node_modules/.bin/eslint . --max-warnings 1000",
-    "lint:fix": "node --max-old-space-size=4096 ./node_modules/.bin/eslint . --fix --max-warnings 1000",
-    "lint:check": "eslint . --max-warnings 0",
-    "type-check": "node --max-old-space-size=8192 ./node_modules/.bin/tsc --noEmit --skipLibCheck",
+    "lint": "node --max-old-space-size=4096 ./node_modules/.bin/eslint app --max-warnings 1000",
+    "lint:fix": "node --max-old-space-size=4096 ./node_modules/.bin/eslint app --fix --max-warnings 1000",
+    "lint:check": "eslint app --max-warnings 0",
+    "type-check": "node --max-old-space-size=8192 ./node_modules/.bin/tsc -p tsconfig.typecheck.json",
     "test": "jest --config jest.config.cjs",
     "test:smoke": "jest --config jest.config.smoke.cjs --passWithNoTests",
     "test:watch": "jest --watch --config jest.config.ts",
@@ -388,6 +388,7 @@
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.20",
+    "globals": "^16.3.0",
     "identity-obj-proxy": "^3.0.0",
     "imagemin": "^9.0.1",
     "imagemin-mozjpeg": "^10.0.0",
@@ -429,5 +430,6 @@
     "zion-tech-group"
   ],
   "author": "Zion Tech Group",
-  "license": "MIT"
+  "license": "MIT",
+  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
 }
