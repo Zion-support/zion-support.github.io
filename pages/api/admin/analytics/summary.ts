@@ -4,6 +4,7 @@ import fs from 'fs';
 import path from 'path';
 import { ensureAdminFromApi } from '../../../../utils/auth';
 
+interface AnalyticsEvent {
   name: string
   page?: string
   userType?: string
@@ -40,18 +41,14 @@ function parseLines(startIso?: string, endIso?: string): EventRow[] {
 
   const pagesMostUsed = Object.entries(byFeature)
     .map(([label, value]) => ({ label, value }))
-    .sort((a, b) => b.value - a.value),
+    .sort((a, b) => b.value - a.value);
 
   const events = Object.entries(byEvent)
     .map(([label, value]) => ({ label, value }))
+    .sort((a, b) => b.value - a.value);
 
-    .sort((a, b) => b.value - a.value),
-
-  const days = Object.keys(byDay).sort($2);
-  const line = days.map((d) => ({ date: d, value: byDay[d] })),
-
-  const days = Object.keys(byDay).sort()
-  const line = days.map((d) => ({ date: d, value: byDay[d] }))
+  const days = Object.keys(byDay).sort();
+  const line = days.map((d) => ({ date: d, value: byDay[d] }));
 
   const funnelStages = ['VisitAI Prompt UsedPost CreatedMessage Sent']
   const funnel = funnelStages.map((stage) => ({ label: stage, value: byEvent[stage] || 0 }))

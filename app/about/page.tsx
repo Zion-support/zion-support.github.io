@@ -69,6 +69,7 @@ export default function AboutPage() {
               </div>
             </div>
           </div>
+        </div>
 
           <div className="text-center">
             <Link 
