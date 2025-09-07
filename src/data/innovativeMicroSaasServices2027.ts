@@ -123,7 +123,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2027: InnovativeMicroSaasService2027
     tags: ["Business Automation", "AI Operations", "Autonomous Systems", "Efficiency", "Innovation"],
     aiScore: 97,
     rating: 4.8,
-    reviewCount: 234,
+    reviews: 67,
     featured: true,
     location: "Global",
     availability: "Immediate",
