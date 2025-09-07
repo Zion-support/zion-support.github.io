@@ -1,8 +1,8 @@
 <<<<<<< HEAD
 export const metadata = {
-  title: "Automation Solutions | Zion Tech Group",
+  title: 'Automation Solutions | Zion Tech Group',
   description:
-    "Intelligent automation solutions including RPA, workflow automation, AI-powered automation, and business process optimization. Streamline your operations.",
+    'Intelligent automation solutions including RPA, workflow automation, AI-powered automation, and business process optimization. Streamline your operations.',
 };
 
 export default function AutomationSolutionsPage() {
@@ -654,11 +654,11 @@ function ContactSection() {}
             title="Robotic Process Automation (RPA)"
             description="Automate repetitive tasks and business processes with intelligent bots"
             features={[
-              "Process discovery & analysis",
-              "Bot development & deployment",
-              "Exception handling",
-              "Monitoring & reporting",
-              "Scalable automation",
+              'Process discovery & analysis',
+              'Bot development & deployment',
+              'Exception handling',
+              'Monitoring & reporting',
+              'Scalable automation',
             ]}
             price="$15k–$50k"
             icon="🤖"
@@ -667,11 +667,11 @@ function ContactSection() {}
             title="Workflow Automation"
             description="End-to-end workflow automation with intelligent decision making"
             features={[
-              "Workflow design",
-              "Integration management",
-              "Approval processes",
-              "Notification systems",
-              "Performance analytics",
+              'Workflow design',
+              'Integration management',
+              'Approval processes',
+              'Notification systems',
+              'Performance analytics',
             ]}
             price="$10k–$35k"
             icon="⚡"
@@ -680,11 +680,11 @@ function ContactSection() {}
             title="AI-Powered Automation"
             description="Intelligent automation using AI and machine learning for complex tasks"
             features={[
-              "AI decision making",
-              "Natural language processing",
-              "Predictive automation",
-              "Learning algorithms",
-              "Cognitive automation",
+              'AI decision making',
+              'Natural language processing',
+              'Predictive automation',
+              'Learning algorithms',
+              'Cognitive automation',
             ]}
             price="$25k–$80k"
             icon="🧠"
@@ -693,11 +693,11 @@ function ContactSection() {}
             title="Document Processing Automation"
             description="Automated document handling, extraction, and processing"
             features={[
-              "OCR & text extraction",
-              "Document classification",
-              "Data validation",
-              "Workflow routing",
-              "Compliance checking",
+              'OCR & text extraction',
+              'Document classification',
+              'Data validation',
+              'Workflow routing',
+              'Compliance checking',
             ]}
             price="$12k–$40k"
             icon="📄"
@@ -706,11 +706,11 @@ function ContactSection() {}
             title="Customer Service Automation"
             description="Automated customer support with chatbots and intelligent routing"
             features={[
-              "Chatbot development",
-              "Ticket routing",
-              "Response automation",
-              "Sentiment analysis",
-              "Escalation management",
+              'Chatbot development',
+              'Ticket routing',
+              'Response automation',
+              'Sentiment analysis',
+              'Escalation management',
             ]}
             price="$18k–$60k"
             icon="💬"
@@ -719,11 +719,11 @@ function ContactSection() {}
             title="Financial Process Automation"
             description="Automated financial processes including invoicing, payments, and reporting"
             features={[
-              "Invoice processing",
-              "Payment automation",
-              "Financial reporting",
-              "Reconciliation",
-              "Compliance automation",
+              'Invoice processing',
+              'Payment automation',
+              'Financial reporting',
+              'Reconciliation',
+              'Compliance automation',
             ]}
             price="$20k–$70k"
             icon="💰"
@@ -1020,34 +1020,34 @@ function ContactSection() {}
           <Item
             title="RPA & Process Automation"
             details={[
-              "UiPath, Automation Anywhere, Blue Prism",
-              "Process mining and discovery tools",
-              "Screen scraping and data extraction",
-              "API integration and orchestration",
-              "Exception handling and error recovery",
-              "Performance monitoring and analytics",
+              'UiPath, Automation Anywhere, Blue Prism',
+              'Process mining and discovery tools',
+              'Screen scraping and data extraction',
+              'API integration and orchestration',
+              'Exception handling and error recovery',
+              'Performance monitoring and analytics',
             ]}
           />
           <Item
             title="AI & Machine Learning"
             details={[
-              "Natural language processing (NLP)",
-              "Computer vision and image recognition",
-              "Predictive analytics and forecasting",
-              "Decision trees and rule engines",
-              "Machine learning model integration",
-              "Cognitive automation platforms",
+              'Natural language processing (NLP)',
+              'Computer vision and image recognition',
+              'Predictive analytics and forecasting',
+              'Decision trees and rule engines',
+              'Machine learning model integration',
+              'Cognitive automation platforms',
             ]}
           />
           <Item
             title="Integration & Orchestration"
             details={[
-              "API management and integration",
-              "Workflow orchestration engines",
-              "Event-driven automation",
-              "Microservices architecture",
-              "Cloud-native automation",
-              "Real-time monitoring and alerting",
+              'API management and integration',
+              'Workflow orchestration engines',
+              'Event-driven automation',
+              'Microservices architecture',
+              'Cloud-native automation',
+              'Real-time monitoring and alerting',
             ]}
           />
         </div>
@@ -1126,12 +1126,12 @@ function Pricing() {
           price="$5k–$15k"
           duration="2–4 weeks"
           features={[
-            "Process discovery and analysis",
-            "Automation opportunity identification",
-            "ROI calculation and business case",
-            "Technology recommendations",
-            "Implementation roadmap",
-            "Pilot process selection",
+            'Process discovery and analysis',
+            'Automation opportunity identification',
+            'ROI calculation and business case',
+            'Technology recommendations',
+            'Implementation roadmap',
+            'Pilot process selection',
           ]}
         />
         <Plan
@@ -1139,12 +1139,12 @@ function Pricing() {
           price="$20k–$80k"
           duration="8–16 weeks"
           features={[
-            "End-to-end automation development",
-            "Integration with existing systems",
-            "Testing and quality assurance",
-            "User training and documentation",
-            "Deployment and go-live support",
-            "Performance monitoring setup",
+            'End-to-end automation development',
+            'Integration with existing systems',
+            'Testing and quality assurance',
+            'User training and documentation',
+            'Deployment and go-live support',
+            'Performance monitoring setup',
           ]}
         />
         <Plan
@@ -1152,12 +1152,12 @@ function Pricing() {
           price="$3k+/mo"
           duration="Ongoing"
           features={[
-            "24/7 monitoring and maintenance",
-            "Continuous optimization",
-            "Exception handling and support",
-            "Performance reporting",
-            "Process improvements",
-            "Scalability management",
+            '24/7 monitoring and maintenance',
+            'Continuous optimization',
+            'Exception handling and support',
+            'Performance reporting',
+            'Process improvements',
+            'Scalability management',
           ]}
         />
       </div>

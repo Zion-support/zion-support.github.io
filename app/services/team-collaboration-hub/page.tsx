@@ -1,13 +1,17 @@
 <<<<<<< HEAD
+import Link from 'next/link';
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 import Link from "next/link";
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export const metadata = {
-  title: "Team Collaboration Hub | Zion Tech Group",
+  title: 'Team Collaboration Hub | Zion Tech Group',
   description:
-    "AI-powered team collaboration platform with intelligent project management, communication tools, and productivity analytics for remote and hybrid teams.",
+    'AI-powered team collaboration platform with intelligent project management, communication tools, and productivity analytics for remote and hybrid teams.',
 };
 
 export default function TeamCollaborationHubPage() {
@@ -67,11 +71,11 @@ export default function TeamCollaborationHubPage() {
               price="$19/month"
               description="Perfect for small teams and startups"
               features={[
-                "Up to 10 team members",
-                "Basic project management",
-                "Email support",
-                "Standard integrations",
-                "5GB storage",
+                'Up to 10 team members',
+                'Basic project management',
+                'Email support',
+                'Standard integrations',
+                '5GB storage',
               ]}
             />
             <PricingCard
@@ -79,12 +83,12 @@ export default function TeamCollaborationHubPage() {
               price="$49/month"
               description="Ideal for growing teams"
               features={[
-                "Up to 50 team members",
-                "Advanced AI features",
-                "Priority support",
-                "All integrations",
-                "100GB storage",
-                "Advanced analytics",
+                'Up to 50 team members',
+                'Advanced AI features',
+                'Priority support',
+                'All integrations',
+                '100GB storage',
+                'Advanced analytics',
               ]}
             />
             <PricingCard
@@ -92,13 +96,13 @@ export default function TeamCollaborationHubPage() {
               price="$149/month"
               description="For large organizations"
               features={[
-                "Unlimited team members",
-                "Custom AI models",
-                "24/7 dedicated support",
-                "On-premise deployment",
-                "Unlimited storage",
-                "Custom integrations",
-                "SLA guarantees",
+                'Unlimited team members',
+                'Custom AI models',
+                '24/7 dedicated support',
+                'On-premise deployment',
+                'Unlimited storage',
+                'Custom integrations',
+                'SLA guarantees',
               ]}
             />
           </div>

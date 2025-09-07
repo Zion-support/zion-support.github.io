@@ -47,6 +47,9 @@ const Services = ({ className }) => {}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 <<<<<<< HEAD
+export default Services;
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/src.disabled/components/ui/NeonGlow.jsx
 =======
@@ -58,3 +61,4 @@ export default Services;
 =======
 export default Services;'
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172

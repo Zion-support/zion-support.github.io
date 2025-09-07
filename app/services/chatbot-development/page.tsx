@@ -1,13 +1,23 @@
 <<<<<<< HEAD
 export const metadata = {
+  title: 'Chatbot Development | Zion Tech Group',
+  description: 'Build intelligent chatbots with AI-powered natural language understanding, multi-platform deployment, and seamless human handoff.',
+=======
+<<<<<<< HEAD
+export const metadata = {
   title: "Chatbot Development | Zion Tech Group",
   description:
     "Build intelligent chatbots with AI-powered natural language understanding, multi-platform deployment, and seamless human handoff.",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
 };
 
 export default function ChatbotDevelopmentPage() {
   return (
     <section className="max-w-6xl mx-auto px-4 py-16">
+<<<<<<< HEAD
+      <h1 className="text-4xl font-bold text-gray-900 mb-6">Chatbot Development</h1>
+      <p className="text-xl text-gray-600 mb-12">Build intelligent chatbots with AI-powered natural language understanding, multi-platform deployment, and seamless human handoff.</p>
+=======
       <h1 className="text-4xl font-bold text-gray-900 mb-6">
         Chatbot Development
       </h1>
@@ -15,33 +25,55 @@ export default function ChatbotDevelopmentPage() {
         Build intelligent chatbots with AI-powered natural language
         understanding, multi-platform deployment, and seamless human handoff.
       </p>
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
         <FeatureCard
           title="AI-Powered Conversations"
           features={[
+<<<<<<< HEAD
+            'Natural language understanding',
+            'Context-aware responses',
+            'Multi-language support',
+            'Sentiment analysis',
+=======
             "Natural language understanding",
             "Context-aware responses",
             "Multi-language support",
             "Sentiment analysis",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
         />
         <FeatureCard
           title="Multi-Platform Deployment"
           features={[
+<<<<<<< HEAD
+            'Website integration',
+            'Mobile app integration',
+            'Social media platforms',
+            'Voice assistants',
+=======
             "Website integration",
             "Mobile app integration",
             "Social media platforms",
             "Voice assistants",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
         />
         <FeatureCard
           title="Advanced Features"
           features={[
+<<<<<<< HEAD
+            'Human handoff',
+            'Analytics & insights',
+            'Custom integrations',
+            'A/B testing',
+=======
             "Human handoff",
             "Analytics & insights",
             "Custom integrations",
             "A/B testing",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
         />
       </div>
@@ -96,6 +128,10 @@ export default function ChatbotDevelopmentPage() {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
+
+      <Pricing />
+=======
 <<<<<<< HEAD
 =======
 export const metadata = {}
@@ -221,6 +257,7 @@ export default function ChatbotDevelopmentPage() {}
 =======
 
       <Pricing />
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
 
       <div className="mt-16 text-center">
         <h2 className="text-2xl font-bold text-gray-900 mb-4">
@@ -325,16 +362,33 @@ function Pricing() {
           name="Basic"
           price="$1,999/mo"
           features={[
+<<<<<<< HEAD
+            'Simple Q&A chatbot',
+            'Up to 1,000 conversations/month',
+            'Basic integrations',
+            'Email support',
+=======
             "Simple Q&A chatbot",
             "Up to 1,000 conversations/month",
             "Basic integrations",
             "Email support",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
         />
         <Plan
           name="Professional"
           price="$4,999/mo"
           features={[
+<<<<<<< HEAD
+            'Advanced AI capabilities',
+            'Up to 10,000 conversations/month',
+            'Custom integrations',
+            'Priority support',
+            'Analytics dashboard',
+          ]}
+          popular={true}
+        />
+=======
             "Advanced AI capabilities",
             "Up to 10,000 conversations/month",
             "Custom integrations",
@@ -354,16 +408,25 @@ function Pricing() {
             "White-label solution","
             "Dedicated support","
 =======
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
         <Plan
           name="Enterprise"
           price="$12,999/mo"
           features={[
+<<<<<<< HEAD
+            'Unlimited conversations',
+            'Custom AI training',
+            'White-label solution',
+            'Dedicated support',
+            'Multi-platform deployment',
+=======
             "Unlimited conversations",
             "Custom AI training",
             "White-label solution",
             "Dedicated support",
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             "Multi-platform deployment",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
         />
       </div>
@@ -427,6 +490,8 @@ function Plan({
         ))}
       </ul>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
       <a"
         href="tel:+13024640950"`
         className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors text-center block ${}
@@ -443,12 +508,18 @@ function Plan({
 }
 "`
 =======
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
       <a
         href="tel:+13024640950"
         className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors text-center block ${
           popular
+<<<<<<< HEAD
+            ? 'bg-amber-600 text-white hover:bg-amber-700'
+            : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
+=======
             ? "bg-amber-600 text-white hover:bg-amber-700"
             : "bg-gray-100 text-gray-900 hover:bg-gray-200"
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
         }`}
       >
         Get Started
@@ -456,4 +527,7 @@ function Plan({
     </div>
   );
 }
+<<<<<<< HEAD
+=======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172

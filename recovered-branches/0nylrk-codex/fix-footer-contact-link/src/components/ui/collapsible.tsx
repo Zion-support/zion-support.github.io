@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+export { Collapsible, CollapsibleTrigger, CollapsibleContent };
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -53,6 +56,7 @@ const CollapsibleContent = CollapsiblePrimitive.CollapsibleContent
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export { Collapsible, CollapsibleTrigger, CollapsibleContent }
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
 
 export { Collapsible, CollapsibleTrigger, CollapsibleContent }
 ;
@@ -107,6 +111,11 @@ export { Collapsible, CollapsibleTrigger, CollapsibleContent }
 ;
 
 <<<<<<< HEAD
+export { Collapsible, CollapsibleTrigger, CollapsibleContent }
+;
+export { Collapsible, CollapsibleTrigger, CollapsibleContent };
+=======
+<<<<<<< HEAD
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export { Collapsible, CollapsibleTrigger, CollapsibleContent }
@@ -139,3 +148,4 @@ export { Collapsible, CollapsibleTrigger, CollapsibleContent };
 "
 pr-12325
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172

@@ -1,4 +1,6 @@
 import React from 'react';
+<<<<<<< HEAD
+=======
 import React, { useEffect, useCallback } from 'react';
 import { useLocation } from 'react-router-dom';
 
@@ -206,3 +208,4 @@ target.style.backgroundImage = `url (${target.dataset.src}) `              targe
 }
 "`"
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172

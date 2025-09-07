@@ -3,11 +3,17 @@
 =======
 import Link from "next/link";
 
+<<<<<<< HEAD
+export const metadata = {
+  title: 'Website Analyzer | Zion Tech Group',
+  description: 'Comprehensive website analysis tool. SEO audit, performance monitoring, security scanning, and competitive analysis.',
+=======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export const metadata = {
   title: "Website Analyzer | Zion Tech Group",
   description:
     "Comprehensive website analysis tool. SEO audit, performance monitoring, security scanning, and competitive analysis.",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
 };
 
 export default function WebsiteAnalyzerPage() {
@@ -78,9 +84,14 @@ export default function WebsiteAnalyzerPage() {}
         </h1>
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+<<<<<<< HEAD
+          Comprehensive website analysis tool that provides SEO audits, performance monitoring,
+          security scanning, and competitive analysis. Optimize your website for maximum impact.
+=======
           Comprehensive website analysis tool that provides SEO audits,
           performance monitoring, security scanning, and competitive analysis.
           Optimize your website for maximum impact.
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
         </p>
       </div>
 <<<<<<< HEAD
@@ -119,37 +130,69 @@ export default function WebsiteAnalyzerPage() {}
         <FeatureCard
           title="SEO Analysis"
           details={[
+<<<<<<< HEAD
+            'Technical SEO audit',
+            'Keyword ranking tracking',
+            'Backlink analysis',
+            'Content optimization suggestions',
+            'Core Web Vitals monitoring',
+=======
             "Technical SEO audit",
             "Keyword ranking tracking",
             "Backlink analysis",
             "Content optimization suggestions",
             "Core Web Vitals monitoring",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
         />
         <FeatureCard
           title="Performance Monitoring"
           details={[
+<<<<<<< HEAD
+            'Page speed analysis',
+            'Mobile performance testing',
+            'Uptime monitoring',
+            'Load time optimization',
+            'Performance alerts',
+=======
             "Page speed analysis",
             "Mobile performance testing",
             "Uptime monitoring",
             "Load time optimization",
             "Performance alerts",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
         />
         <FeatureCard
           title="Security & Compliance"
           details={[
+<<<<<<< HEAD
+            'Security vulnerability scanning',
+            'SSL certificate monitoring',
+            'GDPR compliance check',
+            'Malware detection',
+            'Security recommendations',
+=======
             "Security vulnerability scanning",
             "SSL certificate monitoring",
             "GDPR compliance check",
             "Malware detection",
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             "Security recommendations",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
         />
       </div>
 
       <PricingSection />
+<<<<<<< HEAD
+
+      <div className="mt-16 bg-gradient-to-r from-amber-50 to-yellow-50 border border-amber-200 rounded-xl p-8 text-center">
+        <h3 className="text-2xl font-bold text-gray-900 mb-4">Ready to Optimize Your Website?</h3>
+        <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
+          Get comprehensive insights into your website's performance, SEO, and security.
+          Perfect for web developers, marketers, and business owners.
+=======
 <<<<<<< HEAD
 "
       <div className="mt-16 bg-gradient-to-r from-amber-50 to-yellow-50 border border-amber-200 rounded-xl p-8 text-center">"
@@ -183,6 +226,7 @@ export default function WebsiteAnalyzerPage() {}
         <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
           Get comprehensive insights into your website's performance, SEO, and
           security. Perfect for web developers, marketers, and business owners.
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
@@ -273,17 +317,35 @@ function PricingSection() {
           name="Basic"
           price="$19/mo"
           features={[
+<<<<<<< HEAD
+            '5 websites',
+            'Monthly SEO reports',
+            'Basic performance monitoring',
+            'Email support',
+            'Standard security scan',
+=======
             "5 websites",
             "Monthly SEO reports",
             "Basic performance monitoring",
             "Email support",
             "Standard security scan",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
         />
         <PricingPlan
           name="Professional"
           price="$79/mo"
           features={[
+<<<<<<< HEAD
+            '25 websites',
+            'Weekly SEO reports',
+            'Advanced performance monitoring',
+            'Priority support',
+            'Comprehensive security analysis',
+          ]}
+          featured={true}
+        />
+=======
             "25 websites",
             "Weekly SEO reports",
             "Advanced performance monitoring",
@@ -303,16 +365,25 @@ function PricingSection() {
             "White-label reports","
             "API access","
 =======
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
         <PricingPlan
           name="Agency"
           price="$199/mo"
           features={[
+<<<<<<< HEAD
+            'Unlimited websites',
+            'Real-time monitoring',
+            'White-label reports',
+            'API access',
+            'Dedicated account manager',
+=======
             "Unlimited websites",
             "Real-time monitoring",
             "White-label reports",
             "API access",
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             "Dedicated account manager",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
         />
       </div>
@@ -321,19 +392,27 @@ function PricingSection() {
 }
 
 <<<<<<< HEAD
+function PricingPlan({
+=======
+<<<<<<< HEAD
 function PricingPlan({}
 =======
 function PricingPlan({
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
   name,
   price,
   features,
   featured = false,
 <<<<<<< HEAD
+}: {
+=======
+<<<<<<< HEAD
 }: {}
 =======
 }: {
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
   name: string;
   price: string;
   features: string[];
@@ -356,6 +435,13 @@ function PricingPlan({
 =======
 }) {
   return (
+<<<<<<< HEAD
+    <div className={`border rounded-xl p-6 ${
+      featured
+        ? 'border-amber-500 bg-amber-50 shadow-lg'
+        : 'border-gray-200 bg-white shadow-sm'
+    }`}>
+=======
     <div
       className={`border rounded-xl p-6 ${
         featured
@@ -363,6 +449,7 @@ function PricingPlan({
           : "border-gray-200 bg-white shadow-sm"
       }`}
     >
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
       <h4 className="text-xl font-bold text-gray-900 mb-2">{name}</h4>
       <div className="text-3xl font-bold text-gray-900 mb-4">{price}</div>
       <ul className="space-y-2 text-gray-600 mb-6">
@@ -374,6 +461,8 @@ function PricingPlan({
         ))}
       </ul>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
       <a"
         href="tel:+13024640950"`
         className={`w-full block text-center py-3 rounded-lg font-semibold transition-colors ${}
@@ -384,6 +473,7 @@ function PricingPlan({
       >
         Get Started;
 =======
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
       <a
         href="tel:+13024640950"
         className={`w-full block text-center py-3 rounded-lg font-semibold transition-colors ${
@@ -399,7 +489,10 @@ function PricingPlan({
   );
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172

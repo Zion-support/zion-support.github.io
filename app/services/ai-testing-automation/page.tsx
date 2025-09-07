@@ -1,13 +1,17 @@
 <<<<<<< HEAD
+import Link from 'next/link';
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 import Link from "next/link";
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export const metadata = {
-  title: "AI Testing Automation | Zion Tech Group",
+  title: 'AI Testing Automation | Zion Tech Group',
   description:
-    "Intelligent test automation with AI-powered test generation, execution, and maintenance for faster, more reliable software delivery.",
+    'Intelligent test automation with AI-powered test generation, execution, and maintenance for faster, more reliable software delivery.',
 };
 
 export default function AITestingAutomationPage() {
@@ -67,11 +71,11 @@ export default function AITestingAutomationPage() {
               price="$49/month"
               description="Perfect for small teams starting with test automation"
               features={[
-                "Up to 1,000 test executions per month",
-                "Basic AI test generation",
-                "Web testing support",
-                "Email support",
-                "Basic reporting",
+                'Up to 1,000 test executions per month',
+                'Basic AI test generation',
+                'Web testing support',
+                'Email support',
+                'Basic reporting',
               ]}
             />
             <PricingCard
@@ -79,12 +83,12 @@ export default function AITestingAutomationPage() {
               price="$149/month"
               description="Ideal for growing development teams"
               features={[
-                "Up to 10,000 test executions per month",
-                "Advanced AI test generation",
-                "All platform support",
-                "Self-healing tests",
-                "Priority support",
-                "Advanced analytics",
+                'Up to 10,000 test executions per month',
+                'Advanced AI test generation',
+                'All platform support',
+                'Self-healing tests',
+                'Priority support',
+                'Advanced analytics',
               ]}
             />
             <PricingCard
@@ -92,13 +96,13 @@ export default function AITestingAutomationPage() {
               price="$399/month"
               description="For large organizations with complex testing needs"
               features={[
-                "Unlimited test executions",
-                "Custom AI model training",
-                "24/7 dedicated support",
-                "On-premise deployment",
-                "Custom integrations",
-                "SLA guarantees",
-                "Advanced security testing",
+                'Unlimited test executions',
+                'Custom AI model training',
+                '24/7 dedicated support',
+                'On-premise deployment',
+                'Custom integrations',
+                'SLA guarantees',
+                'Advanced security testing',
               ]}
             />
           </div>

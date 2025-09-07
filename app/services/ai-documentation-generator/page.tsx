@@ -1,13 +1,17 @@
 <<<<<<< HEAD
+import Link from 'next/link';
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 import Link from "next/link";
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export const metadata = {
-  title: "AI Documentation Generator | Zion Tech Group",
+  title: 'AI Documentation Generator | Zion Tech Group',
   description:
-    "Automated documentation generation with AI-powered analysis, intelligent formatting, and multi-format output for comprehensive project documentation.",
+    'Automated documentation generation with AI-powered analysis, intelligent formatting, and multi-format output for comprehensive project documentation.',
 };
 
 export default function AIDocumentationGeneratorPage() {
@@ -67,11 +71,11 @@ export default function AIDocumentationGeneratorPage() {
               price="$39/month"
               description="Perfect for small projects and individual developers"
               features={[
-                "Up to 5 projects",
-                "Basic documentation generation",
-                "Email support",
-                "Standard templates",
-                "PDF export",
+                'Up to 5 projects',
+                'Basic documentation generation',
+                'Email support',
+                'Standard templates',
+                'PDF export',
               ]}
             />
             <PricingCard
@@ -79,12 +83,12 @@ export default function AIDocumentationGeneratorPage() {
               price="$99/month"
               description="Ideal for growing teams and larger projects"
               features={[
-                "Up to 25 projects",
-                "Advanced AI generation",
-                "Priority support",
-                "Custom templates",
-                "Interactive documentation",
-                "API integration",
+                'Up to 25 projects',
+                'Advanced AI generation',
+                'Priority support',
+                'Custom templates',
+                'Interactive documentation',
+                'API integration',
               ]}
             />
             <PricingCard
@@ -92,13 +96,13 @@ export default function AIDocumentationGeneratorPage() {
               price="$249/month"
               description="For large organizations with complex documentation needs"
               features={[
-                "Unlimited projects",
-                "Custom AI models",
-                "24/7 dedicated support",
-                "On-premise deployment",
-                "Custom integrations",
-                "SLA guarantees",
-                "White-label options",
+                'Unlimited projects',
+                'Custom AI models',
+                '24/7 dedicated support',
+                'On-premise deployment',
+                'Custom integrations',
+                'SLA guarantees',
+                'White-label options',
               ]}
             />
           </div>

@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+export const metadata = { title: 'AI Analytics Platform | Zion Tech Group' };
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -6,6 +9,7 @@ export const metadata = { title: "AI Analytics Platform | Zion Tech Group" };
 >>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
 =======
 >>>>>>> 96a1f382319a97880a21e7ceb65ec0821c9ac17f
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
 
 
 
@@ -150,6 +154,16 @@ export default function ServicePage() {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
         <FeatureCard"
           title="Data Integration & Processing"
+<<<<<<< HEAD
+          features={[
+            'Connect to 100+ data sources',
+            'Real-time data ingestion & ETL',
+            'Data cleaning & transformation',
+            'Data quality monitoring',
+            'Automated data pipelines',
+            'Cloud & on-premise support',
+          ]}
+=======
           features={["
             "Connect to 100+ data sources","
             "Real-time data ingestion & ETL","
@@ -158,10 +172,21 @@ export default function ServicePage() {
             "Automated data pipelines","
             "Cloud & on-premise support",
           ]}"
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           icon="📊"
         />
         <FeatureCard"
           title="AI-Powered Analytics"
+<<<<<<< HEAD
+          features={[
+            'Predictive modeling & forecasting',
+            'Anomaly detection & alerts',
+            'Natural language query interface',
+            'Automated insight generation',
+            'Machine learning model deployment',
+            'Custom algorithm development',
+          ]}
+=======
           features={["
             "Predictive modeling & forecasting","
             "Anomaly detection & alerts","
@@ -170,10 +195,21 @@ export default function ServicePage() {
             "Machine learning model deployment","
             "Custom algorithm development",
           ]}"
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           icon="🧠"
         />
         <FeatureCard"
           title="Visualization & Reporting"
+<<<<<<< HEAD
+          features={[
+            'Interactive dashboards & charts',
+            'Automated report generation',
+            'Mobile-responsive design',
+            'Real-time data visualization',
+            'Custom KPI tracking',
+            'Scheduled report delivery',
+          ]}
+=======
           features={["
             "Interactive dashboards & charts","
             "Automated report generation","
@@ -182,6 +218,7 @@ export default function ServicePage() {
             "Custom KPI tracking","
             "Scheduled report delivery",
           ]}"
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           icon="📈"
         />
       </div>
@@ -337,6 +374,15 @@ function PricingSection() {}
           name="Starter Analytics""
           price="$199/mo""
           duration="Up to 5 users"
+<<<<<<< HEAD
+          features={[
+            'Basic data visualization',
+            '5 data source connections',
+            'Standard reporting',
+            'Email support',
+            'Mobile app access',
+            'Basic AI insights',
+=======
           features={["
             "Basic data visualization","
             "5 data source connections","
@@ -344,6 +390,7 @@ function PricingSection() {}
             "Email support","
             "Mobile app access","
             "Basic AI insights",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
           popular={false}
         />
@@ -351,6 +398,16 @@ function PricingSection() {}
           name="Professional Analytics""
           price="$499/mo""
           duration="Up to 25 users"
+<<<<<<< HEAD
+          features={[
+            'Everything in Starter Analytics',
+            'Advanced AI & ML models',
+            'Unlimited data sources',
+            'Custom dashboards',
+            'API access & integrations',
+            'Predictive analytics',
+            'Priority support',
+=======
           features={["
             "Everything in Starter Analytics","
             "Advanced AI & ML models","
@@ -359,6 +416,7 @@ function PricingSection() {}
             "API access & integrations","
             "Predictive analytics","
             "Priority support",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
           popular={true}
         />
@@ -366,6 +424,16 @@ function PricingSection() {}
           name="Enterprise Analytics""
           price="$1,299/mo""
           duration="Unlimited users"
+<<<<<<< HEAD
+          features={[
+            'Everything in Professional Analytics',
+            'Custom AI model development',
+            'Advanced security & compliance',
+            'Dedicated data scientist',
+            'Custom integrations',
+            'White-label options',
+            '24/7 phone support',
+=======
           features={["
             "Everything in Professional Analytics","
             "Custom AI model development","
@@ -374,6 +442,7 @@ function PricingSection() {}
             "Custom integrations","
             "White-label options","
             "24/7 phone support",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
           popular={false}
         />
@@ -396,8 +465,13 @@ function PricingCard({}
   popular: boolean;
 }) {}
   return (
+<<<<<<< HEAD
+    <div
+      className={`relative bg-white border-2 rounded-xl p-8 ${popular ? 'border-teal-500 shadow-lg' : 'border-gray-200'}`}
+=======
     <div"
       className={`relative bg-white border-2 rounded-xl p-8 ${popular ? "border-teal-500 shadow-lg" : "border-gray-200"}`}
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
     >
       {popular && ("
         <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">"
@@ -417,12 +491,21 @@ function PricingCard({}
           </li>
         ))}
       </ul>
+<<<<<<< HEAD
+      <a
+        href="tel:+13024640950"
+        className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
+          popular
+            ? 'bg-teal-600 text-white hover:bg-teal-700'
+            : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
+=======
       <a"
         href="tel:+13024640950"`
         className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${}
           popular"
             ? "bg-teal-600 text-white hover:bg-teal-700""
             : "bg-gray-100 text-gray-900 hover:bg-gray-200"`
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
         }`}
       >
         Get Started;

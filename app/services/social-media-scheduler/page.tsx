@@ -3,11 +3,17 @@
 =======
 import Link from "next/link";
 
+<<<<<<< HEAD
+export const metadata = {
+  title: 'Social Media Scheduler | Zion Tech Group',
+  description: 'AI-powered social media management platform. Schedule, analyze, and optimize social media content across all platforms.',
+=======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export const metadata = {
   title: "Social Media Scheduler | Zion Tech Group",
   description:
     "AI-powered social media management platform. Schedule, analyze, and optimize social media content across all platforms.",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
 };
 
 export default function SocialMediaSchedulerPage() {
@@ -112,9 +118,14 @@ export default function SocialMediaSchedulerPage() {}
           Social Media Scheduler
         </h1>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+<<<<<<< HEAD
+          AI-powered social media management platform that schedules, analyzes, and optimizes
+          social media content across all major platforms with intelligent automation.
+=======
           AI-powered social media management platform that schedules, analyzes,
           and optimizes social media content across all major platforms with
           intelligent automation.
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
         </p>
       </div>
 
@@ -122,37 +133,69 @@ export default function SocialMediaSchedulerPage() {}
         <FeatureCard
           title="Content Management"
           details={[
+<<<<<<< HEAD
+            'Multi-platform posting',
+            'Content calendar',
+            'Bulk upload & scheduling',
+            'Content library',
+            'Hashtag optimization',
+=======
             "Multi-platform posting",
             "Content calendar",
             "Bulk upload & scheduling",
             "Content library",
             "Hashtag optimization",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
         />
         <FeatureCard
           title="AI Optimization"
           details={[
+<<<<<<< HEAD
+            'Optimal posting times',
+            'Content performance prediction',
+            'Audience engagement analysis',
+            'Trend identification',
+            'Content recommendation engine',
+=======
             "Optimal posting times",
             "Content performance prediction",
             "Audience engagement analysis",
             "Trend identification",
             "Content recommendation engine",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
         />
         <FeatureCard
           title="Analytics & Insights"
           details={[
+<<<<<<< HEAD
+            'Cross-platform analytics',
+            'Engagement tracking',
+            'ROI measurement',
+            'Competitor analysis',
+            'Custom reporting',
+=======
             "Cross-platform analytics",
             "Engagement tracking",
             "ROI measurement",
             "Competitor analysis",
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             "Custom reporting",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
         />
       </div>
 
       <PricingSection />
+<<<<<<< HEAD
+
+      <div className="mt-16 bg-gradient-to-r from-fuchsia-50 to-purple-50 border border-fuchsia-200 rounded-xl p-8 text-center">
+        <h3 className="text-2xl font-bold text-gray-900 mb-4">Ready to Master Social Media?</h3>
+        <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
+          Streamline your social media strategy with AI-powered scheduling and optimization.
+          Perfect for influencers, agencies, and businesses of all sizes.
+=======
 <<<<<<< HEAD
 "
       <div className="mt-16 bg-gradient-to-r from-fuchsia-50 to-purple-50 border border-fuchsia-200 rounded-xl p-8 text-center">"
@@ -188,6 +231,7 @@ export default function SocialMediaSchedulerPage() {}
           Streamline your social media strategy with AI-powered scheduling and
           optimization. Perfect for influencers, agencies, and businesses of all
           sizes.
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
@@ -278,17 +322,35 @@ function PricingSection() {
           name="Individual"
           price="$19/mo"
           features={[
+<<<<<<< HEAD
+            '3 social media accounts',
+            '30 posts/month',
+            'Basic scheduling',
+            'Email support',
+            'Standard analytics',
+=======
             "3 social media accounts",
             "30 posts/month",
             "Basic scheduling",
             "Email support",
             "Standard analytics",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
         />
         <PricingPlan
           name="Professional"
           price="$79/mo"
           features={[
+<<<<<<< HEAD
+            '10 social media accounts',
+            'Unlimited posts',
+            'AI optimization',
+            'Priority support',
+            'Advanced analytics & insights',
+          ]}
+          featured={true}
+        />
+=======
             "10 social media accounts",
             "Unlimited posts",
             "AI optimization",
@@ -308,16 +370,25 @@ function PricingSection() {
             "White-label solution","
             "Dedicated support","
 =======
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
         <PricingPlan
           name="Agency"
           price="$199/mo"
           features={[
+<<<<<<< HEAD
+            'Unlimited accounts',
+            'Team collaboration',
+            'White-label solution',
+            'Dedicated support',
+            'Custom reporting & API access',
+=======
             "Unlimited accounts",
             "Team collaboration",
             "White-label solution",
             "Dedicated support",
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             "Custom reporting & API access",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
         />
       </div>
@@ -326,19 +397,27 @@ function PricingSection() {
 }
 
 <<<<<<< HEAD
+function PricingPlan({
+=======
+<<<<<<< HEAD
 function PricingPlan({}
 =======
 function PricingPlan({
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
   name,
   price,
   features,
   featured = false,
 <<<<<<< HEAD
+}: {
+=======
+<<<<<<< HEAD
 }: {}
 =======
 }: {
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
   name: string;
   price: string;
   features: string[];
@@ -361,6 +440,13 @@ function PricingPlan({
 =======
 }) {
   return (
+<<<<<<< HEAD
+    <div className={`border rounded-xl p-6 ${
+      featured
+        ? 'border-fuchsia-500 bg-fuchsia-50 shadow-lg'
+        : 'border-gray-200 bg-white shadow-sm'
+    }`}>
+=======
     <div
       className={`border rounded-xl p-6 ${
         featured
@@ -368,6 +454,7 @@ function PricingPlan({
           : "border-gray-200 bg-white shadow-sm"
       }`}
     >
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
       <h4 className="text-xl font-bold text-gray-900 mb-2">{name}</h4>
       <div className="text-3xl font-bold text-gray-900 mb-4">{price}</div>
       <ul className="space-y-2 text-gray-600 mb-6">
@@ -379,6 +466,8 @@ function PricingPlan({
         ))}
       </ul>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
       <a"
         href="tel:+13024640950"`
         className={`w-full block text-center py-3 rounded-lg font-semibold transition-colors ${}
@@ -389,6 +478,7 @@ function PricingPlan({
       >
         Get Started;
 =======
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
       <a
         href="tel:+13024640950"
         className={`w-full block text-center py-3 rounded-lg font-semibold transition-colors ${
@@ -404,7 +494,10 @@ function PricingPlan({
   );
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 "`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172

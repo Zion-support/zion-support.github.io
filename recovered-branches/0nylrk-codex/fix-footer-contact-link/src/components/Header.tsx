@@ -1,4 +1,9 @@
 <<<<<<< HEAD
+
+import { Header, as, HeaderComponent } from './header/Header';
+export { HeaderComponent as Header };
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -34,6 +39,7 @@ export { HeaderComponent as Header };
 =======
 
 export { HeaderComponent as Header }
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
 
 export { HeaderComponent as Header };
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

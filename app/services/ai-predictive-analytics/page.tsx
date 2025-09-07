@@ -3,11 +3,17 @@
 =======
 import Link from "next/link";
 
+<<<<<<< HEAD
+export const metadata = {
+  title: 'AI Predictive Analytics | Zion Tech Group',
+  description: 'Advanced predictive analytics platform. Forecast trends, predict outcomes, and make data-driven decisions with AI.',
+=======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export const metadata = {
   title: "AI Predictive Analytics | Zion Tech Group",
   description:
     "Advanced predictive analytics platform. Forecast trends, predict outcomes, and make data-driven decisions with AI.",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
 };
 
 export default function AIPredictiveAnalyticsPage() {
@@ -112,9 +118,14 @@ export default function AIPredictiveAnalyticsPage() {}
           AI Predictive Analytics
         </h1>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+<<<<<<< HEAD
+          Advanced predictive analytics platform that forecasts trends, predicts outcomes,
+          and enables data-driven decision making with cutting-edge AI and machine learning.
+=======
           Advanced predictive analytics platform that forecasts trends, predicts
           outcomes, and enables data-driven decision making with cutting-edge AI
           and machine learning.
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
         </p>
       </div>
 
@@ -122,37 +133,69 @@ export default function AIPredictiveAnalyticsPage() {}
         <FeatureCard
           title="Forecasting Models"
           details={[
+<<<<<<< HEAD
+            'Time series forecasting',
+            'Demand prediction',
+            'Revenue forecasting',
+            'Market trend analysis',
+            'Seasonal pattern detection',
+=======
             "Time series forecasting",
             "Demand prediction",
             "Revenue forecasting",
             "Market trend analysis",
             "Seasonal pattern detection",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
         />
         <FeatureCard
           title="Machine Learning"
           details={[
+<<<<<<< HEAD
+            'Automated model selection',
+            'Feature engineering',
+            'Model performance optimization',
+            'A/B testing for predictions',
+            'Continuous learning algorithms',
+=======
             "Automated model selection",
             "Feature engineering",
             "Model performance optimization",
             "A/B testing for predictions",
             "Continuous learning algorithms",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
         />
         <FeatureCard
           title="Business Intelligence"
           details={[
+<<<<<<< HEAD
+            'Interactive dashboards',
+            'Automated insights generation',
+            'Alert systems',
+            'Scenario planning tools',
+            'ROI impact analysis',
+=======
             "Interactive dashboards",
             "Automated insights generation",
             "Alert systems",
             "Scenario planning tools",
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             "ROI impact analysis",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
         />
       </div>
 
       <PricingSection />
+<<<<<<< HEAD
+
+      <div className="mt-16 bg-gradient-to-r from-rose-50 to-pink-50 border border-rose-200 rounded-xl p-8 text-center">
+        <h3 className="text-2xl font-bold text-gray-900 mb-4">Ready to Predict the Future?</h3>
+        <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
+          Harness the power of AI to make accurate predictions and drive business growth.
+          Perfect for finance, retail, manufacturing, and data-driven organizations.
+=======
 <<<<<<< HEAD
 "
       <div className="mt-16 bg-gradient-to-r from-rose-50 to-pink-50 border border-rose-200 rounded-xl p-8 text-center">"
@@ -188,6 +231,7 @@ export default function AIPredictiveAnalyticsPage() {}
           Harness the power of AI to make accurate predictions and drive
           business growth. Perfect for finance, retail, manufacturing, and
           data-driven organizations.
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
@@ -278,17 +322,35 @@ function PricingSection() {
           name="Starter"
           price="$199/mo"
           features={[
+<<<<<<< HEAD
+            'Up to 5 prediction models',
+            'Basic forecasting algorithms',
+            'Monthly model updates',
+            'Email support',
+            'Standard data connectors',
+=======
             "Up to 5 prediction models",
             "Basic forecasting algorithms",
             "Monthly model updates",
             "Email support",
             "Standard data connectors",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
         />
         <PricingPlan
           name="Professional"
           price="$599/mo"
           features={[
+<<<<<<< HEAD
+            'Up to 20 prediction models',
+            'Advanced ML algorithms',
+            'Real-time model updates',
+            'Priority support',
+            'Custom model development',
+          ]}
+          featured={true}
+        />
+=======
             "Up to 20 prediction models",
             "Advanced ML algorithms",
             "Real-time model updates",
@@ -308,16 +370,25 @@ function PricingSection() {
             "White-label solution","
             "Dedicated data scientist","
 =======
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
         <PricingPlan
           name="Enterprise"
           price="$1,999/mo"
           features={[
+<<<<<<< HEAD
+            'Unlimited prediction models',
+            'Custom AI model training',
+            'White-label solution',
+            'Dedicated data scientist',
+            'API access & custom integrations',
+=======
             "Unlimited prediction models",
             "Custom AI model training",
             "White-label solution",
             "Dedicated data scientist",
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             "API access & custom integrations",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
         />
       </div>
@@ -326,19 +397,27 @@ function PricingSection() {
 }
 
 <<<<<<< HEAD
+function PricingPlan({
+=======
+<<<<<<< HEAD
 function PricingPlan({}
 =======
 function PricingPlan({
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
   name,
   price,
   features,
   featured = false,
 <<<<<<< HEAD
+}: {
+=======
+<<<<<<< HEAD
 }: {}
 =======
 }: {
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
   name: string;
   price: string;
   features: string[];
@@ -361,6 +440,13 @@ function PricingPlan({
 =======
 }) {
   return (
+<<<<<<< HEAD
+    <div className={`border rounded-xl p-6 ${
+      featured
+        ? 'border-rose-500 bg-rose-50 shadow-lg'
+        : 'border-gray-200 bg-white shadow-sm'
+    }`}>
+=======
     <div
       className={`border rounded-xl p-6 ${
         featured
@@ -368,6 +454,7 @@ function PricingPlan({
           : "border-gray-200 bg-white shadow-sm"
       }`}
     >
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
       <h4 className="text-xl font-bold text-gray-900 mb-2">{name}</h4>
       <div className="text-3xl font-bold text-gray-900 mb-4">{price}</div>
       <ul className="space-y-2 text-gray-600 mb-6">
@@ -379,6 +466,8 @@ function PricingPlan({
         ))}
       </ul>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
       <a"
         href="tel:+13024640950"`
         className={`w-full block text-center py-3 rounded-lg font-semibold transition-colors ${}
@@ -389,6 +478,7 @@ function PricingPlan({
       >
         Get Started;
 =======
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
       <a
         href="tel:+13024640950"
         className={`w-full block text-center py-3 rounded-lg font-semibold transition-colors ${
@@ -404,7 +494,10 @@ function PricingPlan({
   );
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 "`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172

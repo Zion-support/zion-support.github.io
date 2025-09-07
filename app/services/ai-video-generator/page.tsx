@@ -3,11 +3,17 @@
 =======
 import Link from "next/link";
 
+<<<<<<< HEAD
+export const metadata = {
+  title: 'AI Video Generator | Zion Tech Group',
+  description: 'Create professional videos with AI. Generate marketing videos, explainer content, and social media videos automatically.',
+=======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export const metadata = {
   title: "AI Video Generator | Zion Tech Group",
   description:
     "Create professional videos with AI. Generate marketing videos, explainer content, and social media videos automatically.",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
 };
 
 export default function AIVideoGeneratorPage() {
@@ -112,9 +118,14 @@ export default function AIVideoGeneratorPage() {}
           AI Video Generator
         </h1>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+<<<<<<< HEAD
+          Create professional videos with AI in minutes. Generate marketing videos, explainer content,
+          and social media videos automatically from text, images, or scripts.
+=======
           Create professional videos with AI in minutes. Generate marketing
           videos, explainer content, and social media videos automatically from
           text, images, or scripts.
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
         </p>
       </div>
 
@@ -122,37 +133,69 @@ export default function AIVideoGeneratorPage() {}
         <FeatureCard
           title="Video Creation"
           details={[
+<<<<<<< HEAD
+            'Text-to-video generation',
+            'Image-to-video conversion',
+            'Script-based video creation',
+            'Multiple video formats',
+            'HD/4K quality output',
+=======
             "Text-to-video generation",
             "Image-to-video conversion",
             "Script-based video creation",
             "Multiple video formats",
             "HD/4K quality output",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
         />
         <FeatureCard
           title="AI Features"
           details={[
+<<<<<<< HEAD
+            'Voice synthesis (20+ languages)',
+            'Automatic scene generation',
+            'Smart transitions & effects',
+            'Background music generation',
+            'Subtitle generation',
+=======
             "Voice synthesis (20+ languages)",
             "Automatic scene generation",
             "Smart transitions & effects",
             "Background music generation",
             "Subtitle generation",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
         />
         <FeatureCard
           title="Templates & Customization"
           details={[
+<<<<<<< HEAD
+            'Professional templates',
+            'Brand customization',
+            'Logo integration',
+            'Color scheme matching',
+            'Custom animations',
+=======
             "Professional templates",
             "Brand customization",
             "Logo integration",
             "Color scheme matching",
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             "Custom animations",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
         />
       </div>
 
       <PricingSection />
+<<<<<<< HEAD
+
+      <div className="mt-16 bg-gradient-to-r from-pink-50 to-rose-50 border border-pink-200 rounded-xl p-8 text-center">
+        <h3 className="text-2xl font-bold text-gray-900 mb-4">Ready to Create Amazing Videos?</h3>
+        <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
+          Transform your ideas into engaging videos with our AI-powered platform.
+          Perfect for marketers, content creators, and businesses of all sizes.
+=======
 <<<<<<< HEAD
 "
       <div className="mt-16 bg-gradient-to-r from-pink-50 to-rose-50 border border-pink-200 rounded-xl p-8 text-center">"
@@ -188,6 +231,7 @@ export default function AIVideoGeneratorPage() {}
           Transform your ideas into engaging videos with our AI-powered
           platform. Perfect for marketers, content creators, and businesses of
           all sizes.
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
@@ -278,17 +322,35 @@ function PricingSection() {
           name="Starter"
           price="$39/mo"
           features={[
+<<<<<<< HEAD
+            '10 videos/month (up to 2 min each)',
+            'Basic templates',
+            'Standard quality (1080p)',
+            'Email support',
+            'Basic customization',
+=======
             "10 videos/month (up to 2 min each)",
             "Basic templates",
             "Standard quality (1080p)",
             "Email support",
             "Basic customization",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
         />
         <PricingPlan
           name="Professional"
           price="$129/mo"
           features={[
+<<<<<<< HEAD
+            '50 videos/month (up to 5 min each)',
+            'Premium templates',
+            '4K quality output',
+            'Priority support',
+            'Advanced customization & branding',
+          ]}
+          featured={true}
+        />
+=======
             "50 videos/month (up to 5 min each)",
             "Premium templates",
             "4K quality output",
@@ -308,16 +370,25 @@ function PricingSection() {
             "White-label solution","
             "Dedicated support","
 =======
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
         <PricingPlan
           name="Enterprise"
           price="$399/mo"
           features={[
+<<<<<<< HEAD
+            'Unlimited videos',
+            'Custom template creation',
+            'White-label solution',
+            'Dedicated support',
+            'API access & integrations',
+=======
             "Unlimited videos",
             "Custom template creation",
             "White-label solution",
             "Dedicated support",
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             "API access & integrations",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
         />
       </div>
@@ -326,19 +397,27 @@ function PricingSection() {
 }
 
 <<<<<<< HEAD
+function PricingPlan({
+=======
+<<<<<<< HEAD
 function PricingPlan({}
 =======
 function PricingPlan({
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
   name,
   price,
   features,
   featured = false,
 <<<<<<< HEAD
+}: {
+=======
+<<<<<<< HEAD
 }: {}
 =======
 }: {
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
   name: string;
   price: string;
   features: string[];
@@ -361,6 +440,13 @@ function PricingPlan({
 =======
 }) {
   return (
+<<<<<<< HEAD
+    <div className={`border rounded-xl p-6 ${
+      featured
+        ? 'border-pink-500 bg-pink-50 shadow-lg'
+        : 'border-gray-200 bg-white shadow-sm'
+    }`}>
+=======
     <div
       className={`border rounded-xl p-6 ${
         featured
@@ -368,6 +454,7 @@ function PricingPlan({
           : "border-gray-200 bg-white shadow-sm"
       }`}
     >
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
       <h4 className="text-xl font-bold text-gray-900 mb-2">{name}</h4>
       <div className="text-3xl font-bold text-gray-900 mb-4">{price}</div>
       <ul className="space-y-2 text-gray-600 mb-6">
@@ -379,6 +466,8 @@ function PricingPlan({
         ))}
       </ul>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
       <a"
         href="tel:+13024640950"`
         className={`w-full block text-center py-3 rounded-lg font-semibold transition-colors ${}
@@ -389,6 +478,7 @@ function PricingPlan({
       >
         Get Started;
 =======
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
       <a
         href="tel:+13024640950"
         className={`w-full block text-center py-3 rounded-lg font-semibold transition-colors ${
@@ -404,7 +494,10 @@ function PricingPlan({
   );
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 "`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172

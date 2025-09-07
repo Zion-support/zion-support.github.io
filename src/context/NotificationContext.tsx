@@ -19,17 +19,66 @@ interface NotificationContextType {
   removeNotification: (id:,  string) => void;,
   clearAllNotifications: () => void;
 }
+<<<<<<< HEAD
+
+const NotificationContext = createContext<NotificationContextType | undefined>(
+  undefined,
+);
+
+export const useNotifications = () => {
+  const context = useContext(NotificationContext);
+  if (context === undefined) {
+    throw new Error(
+      'useNotifications must be used within a NotificationProvider',
+    );
+=======
 const NotificationContext = createContext<NotificationContextType | undefined>(undefined);
 export const useNotifications = () => {
   const context = useContext(NotificationContext);
   if (context ===,  undefined) {
     throw new Error('useNotifications must be used within a NotificationProvider');
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
   }
   return context;
 };
 interface NotificationProviderProps {
   children: React.ReactNode;
 }
+<<<<<<< HEAD
+
+export const NotificationProvider: React.FC<NotificationProviderProps> = ({
+  children,
+}) => {
+  const [notifications, setNotifications] = useState<Notification[]>([]);
+
+  const addNotification = useCallback(
+    (notification: Omit<Notification, 'id'>) => {
+      const id = Math.random().toString(36).substr(2, 9);
+      const newNotification: Notification = {
+        id,
+        duration: 5000,
+        ...notification,
+      };
+
+      setNotifications(prev => [...prev, newNotification]);
+
+      // Auto remove notification after duration
+      if (newNotification.duration && newNotification.duration > 0) {
+        setTimeout(() => {
+          removeNotification(id);
+        }, newNotification.duration);
+      }
+    },
+    [],
+  );
+
+  const removeNotification = useCallback((id: string) => {
+    setNotifications(prev =>
+      prev.filter(notification => notification.id !== id),
+    );
+  }, []);
+
+=======
 export const NotificationProvider: React.FC<NotificationProviderProps> = ({ children }) => {,
   const [notifications, setNotifications] = useState<Notification[]>([]);,
   const addNotification = useCallback((notification: Omit<Notification, 'id'>) => {'
@@ -50,6 +99,7 @@ export const NotificationProvider: React.FC<NotificationProviderProps> = ({ chil
   const removeNotification = useCallback((id:,  string) => {,
     setNotifications(prev => prev.filter(notification => notification.id !==,  id));
   }, []);,
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
   const clearAllNotifications = useCallback(() => {
     setNotifications([]);,
   }, []);,
@@ -101,8 +151,13 @@ export const NotificationProvider: React.FC<NotificationProviderProps> = ({ chil
               initial={{ opacity: 0, x: 300, scale: 0.8 }}
               animate={{ opacity: 1, x: 0, scale: 1 }}
               exit={{ opacity: 0, x: 300, scale: 0.8 }}
+<<<<<<< HEAD
+              transition={{ duration: 0.3, ease: 'easeInOut' }}
+              className={`max-w-sm w-full ${getBgColor(notification.type)} backdrop-blur-sm rounded-lg border p-4 shadow-lg`}
+=======
 transition={{ duration: 0.3, ease: "easeInOut" }}"
               className={`max-w-sm w-full ${getBgColor(notification.type)} backdrop-blur-sm rounded-lg border p-4 shadow-lg`}`
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
             >
               <div className="flex items-start">"
                 <div className="flex-shrink-0 mr-3">"

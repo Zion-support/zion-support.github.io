@@ -1,10 +1,10 @@
 <<<<<<< HEAD
 export const metadata = {
-  title: "Healthcare IT Solutions | Zion Tech Group",
+  title: 'Healthcare IT Solutions | Zion Tech Group',
   description:
-    "HIPAA-compliant healthcare technology solutions including telemedicine platforms, medical imaging systems, patient data management, and healthcare AI applications.",
+    'HIPAA-compliant healthcare technology solutions including telemedicine platforms, medical imaging systems, patient data management, and healthcare AI applications.',
   keywords:
-    "healthcare IT, HIPAA compliance, telemedicine, medical imaging, healthcare AI, patient data management, healthcare software",
+    'healthcare IT, HIPAA compliance, telemedicine, medical imaging, healthcare AI, patient data management, healthcare software',
 };
 
 export default function HealthcareSolutionsPage() {
@@ -30,12 +30,12 @@ export default function HealthcareSolutionsPage() {
             title="Telemedicine Platform"
             description="Complete virtual care solution with video consultations, appointment scheduling, and patient management"
             features={[
-              "Video consultations",
-              "Appointment scheduling",
-              "Patient records",
-              "Prescription management",
-              "HIPAA compliance",
-              "Mobile app",
+              'Video consultations',
+              'Appointment scheduling',
+              'Patient records',
+              'Prescription management',
+              'HIPAA compliance',
+              'Mobile app',
             ]}
             price="$25,000-75,000"
             icon="🏥"
@@ -44,12 +44,12 @@ export default function HealthcareSolutionsPage() {
             title="Medical Imaging AI"
             description="AI-powered medical image analysis for faster and more accurate diagnoses"
             features={[
-              "X-ray analysis",
-              "MRI interpretation",
-              "CT scan analysis",
-              "AI diagnostics",
-              "Integration APIs",
-              "Radiologist tools",
+              'X-ray analysis',
+              'MRI interpretation',
+              'CT scan analysis',
+              'AI diagnostics',
+              'Integration APIs',
+              'Radiologist tools',
             ]}
             price="$40,000-120,000"
             icon="🔬"
@@ -58,12 +58,12 @@ export default function HealthcareSolutionsPage() {
             title="Patient Portal System"
             description="Comprehensive patient engagement platform with health records and communication tools"
             features={[
-              "Health records",
-              "Appointment booking",
-              "Prescription refills",
-              "Lab results",
-              "Secure messaging",
-              "Health tracking",
+              'Health records',
+              'Appointment booking',
+              'Prescription refills',
+              'Lab results',
+              'Secure messaging',
+              'Health tracking',
             ]}
             price="$15,000-45,000"
             icon="👤"
@@ -72,12 +72,12 @@ export default function HealthcareSolutionsPage() {
             title="Electronic Health Records (EHR)"
             description="Modern EHR system with interoperability and advanced analytics capabilities"
             features={[
-              "Patient records",
-              "Clinical notes",
-              "Medication tracking",
-              "Interoperability",
-              "Analytics dashboard",
-              "Mobile access",
+              'Patient records',
+              'Clinical notes',
+              'Medication tracking',
+              'Interoperability',
+              'Analytics dashboard',
+              'Mobile access',
             ]}
             price="$50,000-150,000"
             icon="📋"
@@ -86,12 +86,12 @@ export default function HealthcareSolutionsPage() {
             title="Healthcare Analytics Platform"
             description="Advanced analytics for population health, outcomes tracking, and operational efficiency"
             features={[
-              "Population health",
-              "Outcomes tracking",
-              "Cost analysis",
-              "Quality metrics",
-              "Predictive analytics",
-              "Reporting tools",
+              'Population health',
+              'Outcomes tracking',
+              'Cost analysis',
+              'Quality metrics',
+              'Predictive analytics',
+              'Reporting tools',
             ]}
             price="$30,000-80,000"
             icon="📊"
@@ -100,12 +100,12 @@ export default function HealthcareSolutionsPage() {
             title="Pharmacy Management System"
             description="Complete pharmacy operations management with inventory and prescription tracking"
             features={[
-              "Inventory management",
-              "Prescription tracking",
-              "Insurance verification",
-              "Patient profiles",
-              "Reporting",
-              "Compliance tools",
+              'Inventory management',
+              'Prescription tracking',
+              'Insurance verification',
+              'Patient profiles',
+              'Reporting',
+              'Compliance tools',
             ]}
             price="$20,000-60,000"
             icon="💊"
@@ -114,12 +114,12 @@ export default function HealthcareSolutionsPage() {
             title="Healthcare AI Chatbot"
             description="Intelligent patient support with symptom checking and appointment scheduling"
             features={[
-              "Symptom checking",
-              "Appointment scheduling",
-              "Medication reminders",
-              "Health education",
-              "Triage assistance",
-              "Multi-language",
+              'Symptom checking',
+              'Appointment scheduling',
+              'Medication reminders',
+              'Health education',
+              'Triage assistance',
+              'Multi-language',
             ]}
             price="$12,000-35,000"
             icon="🤖"
@@ -128,12 +128,12 @@ export default function HealthcareSolutionsPage() {
             title="Remote Patient Monitoring"
             description="IoT-based patient monitoring with real-time health data collection and alerts"
             features={[
-              "Vital signs monitoring",
-              "Wearable integration",
-              "Alert systems",
-              "Data visualization",
-              "Provider dashboard",
-              "Mobile app",
+              'Vital signs monitoring',
+              'Wearable integration',
+              'Alert systems',
+              'Data visualization',
+              'Provider dashboard',
+              'Mobile app',
             ]}
             price="$35,000-90,000"
             icon="📱"
@@ -142,12 +142,12 @@ export default function HealthcareSolutionsPage() {
             title="Healthcare Compliance Management"
             description="Automated compliance monitoring for HIPAA, HITECH, and other healthcare regulations"
             features={[
-              "HIPAA compliance",
-              "Audit trails",
-              "Risk assessment",
-              "Policy management",
-              "Training modules",
-              "Incident reporting",
+              'HIPAA compliance',
+              'Audit trails',
+              'Risk assessment',
+              'Policy management',
+              'Training modules',
+              'Incident reporting',
             ]}
             price="$18,000-50,000"
             icon="⚖️"
@@ -192,11 +192,11 @@ export default function HealthcareSolutionsPage() {
             title="Diagnostic AI"
             description="Machine learning models for medical diagnosis and treatment recommendations"
             applications={[
-              "Radiology",
-              "Pathology",
-              "Cardiology",
-              "Dermatology",
-              "Ophthalmology",
+              'Radiology',
+              'Pathology',
+              'Cardiology',
+              'Dermatology',
+              'Ophthalmology',
             ]}
             icon="🧠"
           />
@@ -204,11 +204,11 @@ export default function HealthcareSolutionsPage() {
             title="Predictive Analytics"
             description="AI-powered prediction of patient outcomes and health risks"
             applications={[
-              "Readmission risk",
-              "Sepsis prediction",
-              "Fall risk",
-              "Medication adherence",
-              "Chronic disease management",
+              'Readmission risk',
+              'Sepsis prediction',
+              'Fall risk',
+              'Medication adherence',
+              'Chronic disease management',
             ]}
             icon="📈"
           />
@@ -216,10 +216,10 @@ export default function HealthcareSolutionsPage() {
             title="Natural Language Processing"
             description="AI for processing clinical notes and extracting meaningful insights"
             applications={[
-              "Clinical documentation",
-              "Coding assistance",
-              "Quality measures",
-              "Research data extraction",
+              'Clinical documentation',
+              'Coding assistance',
+              'Quality measures',
+              'Research data extraction',
             ]}
             icon="💬"
           />
@@ -322,7 +322,7 @@ function HealthcareServiceCard({
         <div className="text-sm text-gray-500">Starting price</div>
       </div>
       <ul className="text-gray-600 space-y-2">
-        {features.map((feature) => (
+        {features.map(feature => (
           <li key={feature} className="flex items-center">
             <span className="text-blue-500 mr-2">•</span> {feature}
           </li>
@@ -373,7 +373,7 @@ function AICard({
       <h3 className="text-xl font-bold text-gray-900 mb-3">{title}</h3>
       <p className="text-gray-600 mb-4">{description}</p>
       <ul className="text-gray-600 space-y-2">
-        {applications.map((app) => (
+        {applications.map(app => (
           <li key={app} className="flex items-center">
             <span className="text-blue-500 mr-2">•</span> {app}
           </li>
@@ -432,11 +432,11 @@ function Pricing() {
           name="Compliance Assessment"
           price="$5k–$15k"
           features={[
-            "HIPAA audit",
-            "Risk assessment",
-            "Compliance roadmap",
-            "Security review",
-            "Recommendations",
+            'HIPAA audit',
+            'Risk assessment',
+            'Compliance roadmap',
+            'Security review',
+            'Recommendations',
           ]}
           popular={false}
         />
@@ -444,11 +444,11 @@ function Pricing() {
           name="Solution Development"
           price="$25k–$100k"
           features={[
-            "Custom development",
-            "HIPAA compliance",
-            "Integration",
-            "Testing",
-            "Training",
+            'Custom development',
+            'HIPAA compliance',
+            'Integration',
+            'Testing',
+            'Training',
           ]}
           popular={true}
         />
@@ -456,11 +456,11 @@ function Pricing() {
           name="Managed Services"
           price="$3k+/mo"
           features={[
-            "24/7 monitoring",
-            "Compliance management",
-            "Updates",
-            "Support",
-            "Security",
+            '24/7 monitoring',
+            'Compliance management',
+            'Updates',
+            'Support',
+            'Security',
           ]}
           popular={false}
         />
@@ -482,7 +482,7 @@ function Plan({
 }) {
   return (
     <div
-      className={`border rounded-xl p-8 relative ${popular ? "border-blue-500 bg-blue-50" : "border-gray-200 bg-white"}`}
+      className={`border rounded-xl p-8 relative ${popular ? 'border-blue-500 bg-blue-50' : 'border-gray-200 bg-white'}`}
     >
       {popular && (
         <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
@@ -494,7 +494,7 @@ function Plan({
       <h4 className="text-xl font-bold text-gray-900 mb-2">{name}</h4>
       <div className="text-3xl font-bold text-blue-600 mb-4">{price}</div>
       <ul className="space-y-3 mb-6">
-        {features.map((feature) => (
+        {features.map(feature => (
           <li key={feature} className="flex items-center">
             <span className="text-blue-500 mr-3">✓</span> {feature}
           </li>
@@ -504,8 +504,8 @@ function Plan({
         href="tel:+13024640950"
         className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
           popular
-            ? "bg-blue-600 text-white hover:bg-blue-700"
-            : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+            ? 'bg-blue-600 text-white hover:bg-blue-700'
+            : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
         }`}
       >
         Get Started

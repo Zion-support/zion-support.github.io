@@ -1,4 +1,4 @@
-export const metadata = { title: "AI Financial Analyzer | Zion Tech Group" };
+export const metadata = { title: 'AI Financial Analyzer | Zion Tech Group' };
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -23,36 +23,36 @@ export default function AIFinancialAnalyzerPage() {
         <FeatureCard
           title="Financial Intelligence"
           features={[
-            "AI-powered financial forecasting",
-            "Cash flow analysis & optimization",
-            "Risk assessment & management",
-            "Investment opportunity analysis",
-            "Market trend predictions",
-            "Portfolio optimization",
+            'AI-powered financial forecasting',
+            'Cash flow analysis & optimization',
+            'Risk assessment & management',
+            'Investment opportunity analysis',
+            'Market trend predictions',
+            'Portfolio optimization',
           ]}
           icon="💰"
         />
         <FeatureCard
           title="Automated Reporting"
           features={[
-            "Real-time financial dashboards",
-            "Automated report generation",
-            "Compliance & regulatory reporting",
-            "Custom KPI tracking",
-            "Executive summaries",
-            "Multi-currency support",
+            'Real-time financial dashboards',
+            'Automated report generation',
+            'Compliance & regulatory reporting',
+            'Custom KPI tracking',
+            'Executive summaries',
+            'Multi-currency support',
           ]}
           icon="📊"
         />
         <FeatureCard
           title="Smart Analytics"
           features={[
-            "Anomaly detection & alerts",
-            "Cost optimization recommendations",
-            "Revenue growth analysis",
-            "Profit margin optimization",
-            "Budget variance analysis",
-            "Financial health scoring",
+            'Anomaly detection & alerts',
+            'Cost optimization recommendations',
+            'Revenue growth analysis',
+            'Profit margin optimization',
+            'Budget variance analysis',
+            'Financial health scoring',
           ]}
           icon="🧠"
         />
@@ -297,6 +297,14 @@ function PricingSection() {
           price="$299/mo"
           duration="Up to $1M revenue"
           features={[
+<<<<<<< HEAD
+            'Basic financial analysis',
+            'Standard reporting',
+            'Email support',
+            'Mobile app access',
+            'Basic forecasting',
+            'Single currency support',
+=======
             "Basic financial analysis",
             "Standard reporting",
             "Email support",
@@ -304,6 +312,7 @@ function PricingSection() {
             "Basic forecasting",
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             "Single currency support",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
           popular={false}
         />
@@ -324,6 +333,14 @@ function PricingSection() {
           price="$799/mo"
           duration="Up to $10M revenue"
           features={[
+<<<<<<< HEAD
+            'Everything in Basic Financial',
+            'Advanced AI analytics',
+            'Multi-currency support',
+            'Custom reporting',
+            'API access & integrations',
+            'Priority support',
+=======
             "Everything in Basic Financial",
             "Advanced AI analytics",
             "Multi-currency support",
@@ -331,6 +348,7 @@ function PricingSection() {
             "API access & integrations",
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             "Priority support",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
           popular={true}
         />
@@ -351,6 +369,14 @@ function PricingSection() {
           price="$1,999/mo"
           duration="Unlimited revenue"
           features={[
+<<<<<<< HEAD
+            'Everything in Professional Financial',
+            'Custom AI model development',
+            'Advanced security & compliance',
+            'Dedicated financial analyst',
+            'Custom integrations',
+            '24/7 phone support',
+=======
             "Everything in Professional Financial",
             "Custom AI model development",
             "Advanced security & compliance",
@@ -358,6 +384,7 @@ function PricingSection() {
             "Custom integrations",
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             "24/7 phone support",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
           popular={false}
         />
@@ -410,7 +437,7 @@ function PricingCard({
 }) {
   return (
     <div
-      className={`relative bg-white border-2 rounded-xl p-8 ${popular ? "border-amber-500 shadow-lg" : "border-gray-200"}`}
+      className={`relative bg-white border-2 rounded-xl p-8 ${popular ? 'border-amber-500 shadow-lg' : 'border-gray-200'}`}
     >
       {popular && (
         <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
@@ -446,8 +473,8 @@ function PricingCard({
         href="tel:+13024640950"
         className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
           popular
-            ? "bg-amber-600 text-white hover:bg-amber-700"
-            : "bg-gray-100 text-gray-900 hover:bg-gray-200"
+            ? 'bg-amber-600 text-white hover:bg-amber-700'
+            : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
         }`}
       >
         Get Started

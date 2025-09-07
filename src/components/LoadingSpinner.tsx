@@ -22,6 +22,8 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ ,
       {text && (
         <p className="text-gray-600 text-sm font-medium">{text}</p>"
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD:src_backup/components/LoadingSpinner.tsx
 <<<<<<< HEAD
 =======
@@ -54,21 +56,38 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
 =======
 ursor/fix-syntax-push-and-merge-to-main-54a3
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/LoadingSpinner.tsx
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
 const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   size = 'md',
   text = 'Loading...',
   className = '',
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD:src_backup/components/LoadingSpinner.tsx
 <<<<<<< HEAD
 =======
 >>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
 >>>>>>> pr-12243
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
 }) => {
   const sizeClasses = {
 <<<<<<< HEAD
     sm: 'w-4 h-4',
     md: 'w-8 h-8',
     lg: 'w-12 h-12',
+<<<<<<< HEAD
+  };
+
+  return (
+    <div
+      className={`flex flex-col items-center justify-center space-y-4 ${className}`}
+    >
+      <div
+        className={`${sizeClasses[size]} border-4 border-gray-200 border-t-blue-500 rounded-full animate-spin`}
+      ></div>
+      {text && <p className="text-gray-600 text-sm font-medium">{text}</p>}
+    </div>
+=======
 =======
     sm: 'w-4 h-4', md: 'w-8 h-8',
     lg: 'w-12 h-12'
@@ -138,12 +157,15 @@ pr-12325
         <p className="mt-2 text-sm text-gray-600">{text}</p>
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/LoadingSpinner.tsx
       )}
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
   );
 };
 <<<<<<< HEAD:src_backup/components/LoadingSpinner.tsx
 <<<<<<< HEAD
 
 export default LoadingSpinner;
+<<<<<<< HEAD
+=======
 =======
 =======
 
@@ -162,3 +184,4 @@ export default LoadingSpinner;
 `;
 pr-12325
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/LoadingSpinner.tsx
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172

@@ -1,8 +1,8 @@
 <<<<<<< HEAD
 export const metadata = {
-  title: "Blockchain Development & Web3 Solutions | Zion Tech Group",
+  title: 'Blockchain Development & Web3 Solutions | Zion Tech Group',
   description:
-    "Build secure, scalable blockchain applications, smart contracts, and Web3 solutions with expert blockchain development services.",
+    'Build secure, scalable blockchain applications, smart contracts, and Web3 solutions with expert blockchain development services.',
 };
 
 export default function BlockchainDevelopmentPage() {
@@ -131,72 +131,80 @@ export default function BlockchainDevelopmentPage() {}
       <h1 style={{ fontSize: 26, fontWeight: 800 }}>
         Blockchain Development & Web3 Solutions
       </h1>
-      <p style={{ marginTop: 8, color: "#374151" }}>
+      <p style={{ marginTop: 8, color: '#374151' }}>
         Build the future with secure, scalable blockchain applications, smart
         contracts, and Web3 solutions that revolutionize business processes and
         create new revenue streams.
       </p>
 
-      <div style={{ display: "grid", gap: 12, marginTop: 16 }}>
+      <div style={{ display: 'grid', gap: 12, marginTop: 16 }}>
         <Item
           title="Smart Contract Development"
           details={[
-            "Ethereum, Polygon, BSC smart contracts",
-            "Solidity, Rust, and Vyper development",
-            "Security auditing and testing",
-            "Gas optimization and efficiency",
-            "Upgradeable contract patterns",
+            'Ethereum, Polygon, BSC smart contracts',
+            'Solidity, Rust, and Vyper development',
+            'Security auditing and testing',
+            'Gas optimization and efficiency',
+            'Upgradeable contract patterns',
           ]}
         />
         <Item
           title="DeFi Applications"
           details={[
-            "DEX (Decentralized Exchange) development",
-            "Yield farming and staking protocols",
-            "Lending and borrowing platforms",
-            "Automated market makers (AMM)",
-            "Cross-chain bridge solutions",
+            'DEX (Decentralized Exchange) development',
+            'Yield farming and staking protocols',
+            'Lending and borrowing platforms',
+            'Automated market makers (AMM)',
+            'Cross-chain bridge solutions',
           ]}
         />
         <Item
           title="NFT Marketplaces"
           details={[
-            "Custom NFT marketplace development",
-            "Minting and metadata management",
-            "Royalty and commission systems",
-            "Auction and bidding mechanisms",
-            "Multi-chain NFT support",
+            'Custom NFT marketplace development',
+            'Minting and metadata management',
+            'Royalty and commission systems',
+            'Auction and bidding mechanisms',
+            'Multi-chain NFT support',
           ]}
         />
         <Item
           title="Web3 Integration"
           details={[
-            "Wallet integration (MetaMask, WalletConnect)",
-            "Web3 authentication and authorization",
-            "IPFS integration for decentralized storage",
-            "Oracle integration for real-world data",
-            "Multi-signature wallet solutions",
+            'Wallet integration (MetaMask, WalletConnect)',
+            'Web3 authentication and authorization',
+            'IPFS integration for decentralized storage',
+            'Oracle integration for real-world data',
+            'Multi-signature wallet solutions',
           ]}
         />
         <Item
           title="Enterprise Blockchain"
           details={[
-            "Private blockchain networks",
-            "Consortium blockchain solutions",
-            "Supply chain traceability",
-            "Identity management systems",
-            "Document verification and notarization",
+            'Private blockchain networks',
+            'Consortium blockchain solutions',
+            'Supply chain traceability',
+            'Identity management systems',
+            'Document verification and notarization',
           ]}
         />
         <Item
           title="Token Economics"
           details={[
+<<<<<<< HEAD
+            'Tokenomics design and modeling',
+            'Token launch and distribution',
+            'Governance token implementation',
+            'Vesting and lock-up mechanisms',
+            'Token utility and use cases',
+=======
             "Tokenomics design and modeling",
             "Token launch and distribution",
             "Governance token implementation",
             "Vesting and lock-up mechanisms",
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             "Token utility and use cases",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
         />
       </div>
@@ -221,9 +229,9 @@ export default function BlockchainDevelopmentPage() {}
         style={{
           marginTop: 24,
           padding: 20,
-          backgroundColor: "#f0fdf4",
+          backgroundColor: '#f0fdf4',
           borderRadius: 12,
-          border: "1px solid #bbf7d0",
+          border: '1px solid #bbf7d0',
         }}
       >
         <h3
@@ -231,8 +239,12 @@ export default function BlockchainDevelopmentPage() {}
             fontSize: 18,
             fontWeight: 700,
             marginBottom: 12,
+<<<<<<< HEAD
+            color: '#14532d',
+=======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             color: "#14532d",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           }}
         >
           Why Choose Our Blockchain Services?
@@ -260,7 +272,7 @@ export default function BlockchainDevelopmentPage() {}
             services;
 =======
         </h3>
-        <ul style={{ color: "#166534", lineHeight: 1.6 }}>
+        <ul style={{ color: '#166534', lineHeight: 1.6 }}>
           <li>
             • <strong>Security First:</strong> All smart contracts undergo
             rigorous security auditing
@@ -311,19 +323,25 @@ function Item({ title, details }: { title: string; details: string[] }) {
   return (
     <div
       style={{
-        border: "1px solid #e5e7eb",
+        border: '1px solid #e5e7eb',
         borderRadius: 12,
         padding: 16,
-        backgroundColor: "#ffffff",
+        backgroundColor: '#ffffff',
       }}
     >
-      <h3 style={{ fontWeight: 700, color: "#1f2937", marginBottom: 8 }}>
+      <h3 style={{ fontWeight: 700, color: '#1f2937', marginBottom: 8 }}>
         {title}
       </h3>
+<<<<<<< HEAD
+      <ul style={{ paddingLeft: 18, color: '#4b5563', margin: 0 }}>
+        {details.map(d => (
+          <li key={d} style={{ listStyle: 'disc', marginBottom: 4 }}>
+=======
       <ul style={{ paddingLeft: 18, color: "#4b5563", margin: 0 }}>
         {details.map((d) => (
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           <li key={d} style={{ listStyle: "disc", marginBottom: 4 }}>
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
             {d}
           </li>
         ))}
@@ -392,50 +410,58 @@ function Pricing() {
           fontSize: 24,
           fontWeight: 700,
           marginBottom: 20,
-          color: "#1f2937",
+          color: '#1f2937',
         }}
       >
         Blockchain Development Pricing
       </h2>
       <div
         style={{
-          display: "grid",
+          display: 'grid',
           gap: 16,
-          gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+          gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
         }}
       >
         <Plan
           name="Smart Contract Development"
           price="$5,000–$15,000"
           features={[
-            "2-4 weeks development",
-            "Basic smart contract",
-            "Security audit included",
-            "Gas optimization",
-            "Deployment and testing",
+            '2-4 weeks development',
+            'Basic smart contract',
+            'Security audit included',
+            'Gas optimization',
+            'Deployment and testing',
           ]}
         />
         <Plan
           name="DeFi Application"
           price="$15,000–$50,000"
           features={[
-            "6-12 weeks development",
-            "Full DeFi protocol",
-            "Frontend and backend",
-            "Security auditing",
-            "Multi-chain deployment",
+            '6-12 weeks development',
+            'Full DeFi protocol',
+            'Frontend and backend',
+            'Security auditing',
+            'Multi-chain deployment',
           ]}
         />
         <Plan
           name="Enterprise Blockchain"
           price="$50,000+"
           features={[
+<<<<<<< HEAD
+            'Custom blockchain solution',
+            'Private network setup',
+            'Integration with existing systems',
+            'Dedicated blockchain specialist',
+            'Ongoing maintenance & support',
+=======
             "Custom blockchain solution",
             "Private network setup",
             "Integration with existing systems",
             "Dedicated blockchain specialist",
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             "Ongoing maintenance & support",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
         />
       </div>
@@ -485,11 +511,11 @@ function Pricing() {
       <div
         style={{
           marginTop: 24,
-          textAlign: "center",
+          textAlign: 'center',
           padding: 20,
-          backgroundColor: "#fef3c7",
+          backgroundColor: '#fef3c7',
           borderRadius: 12,
-          border: "1px solid #fbbf24",
+          border: '1px solid #fbbf24',
         }}
       >
         <h3
@@ -497,33 +523,41 @@ function Pricing() {
             fontSize: 18,
             fontWeight: 600,
             marginBottom: 8,
-            color: "#92400e",
+            color: '#92400e',
           }}
         >
           Free Blockchain Consultation
         </h3>
-        <p style={{ color: "#a16207", marginBottom: 16 }}>
+        <p style={{ color: '#a16207', marginBottom: 16 }}>
           Get expert advice on your blockchain project. We'll analyze your
           requirements and provide a detailed roadmap with cost estimates and
           timeline.
         </p>
         <div
           style={{
-            display: "flex",
+            display: 'flex',
             gap: 12,
-            justifyContent: "center",
-            flexWrap: "wrap",
+            justifyContent: 'center',
+            flexWrap: 'wrap',
           }}
         >
           <a
             href="tel:+13024640950"
             style={{
+<<<<<<< HEAD
+              display: 'inline-block',
+              padding: '12px 24px',
+              backgroundColor: '#f59e0b',
+              color: 'white',
+              textDecoration: 'none',
+=======
               display: "inline-block",
               padding: "12px 24px",
               backgroundColor: "#f59e0b",
               color: "white",
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               textDecoration: "none",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
               borderRadius: 8,
               fontWeight: 600,
             }}
@@ -546,14 +580,18 @@ function Pricing() {
           <a
             href="mailto:kleber@ziontechgroup.com"
             style={{
-              display: "inline-block",
-              padding: "12px 24px",
-              backgroundColor: "transparent",
-              color: "#f59e0b",
-              textDecoration: "none",
+              display: 'inline-block',
+              padding: '12px 24px',
+              backgroundColor: 'transparent',
+              color: '#f59e0b',
+              textDecoration: 'none',
               borderRadius: 8,
+<<<<<<< HEAD
+              border: '2px solid #f59e0b',
+=======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               border: "2px solid #f59e0b",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
               fontWeight: 600,
             }}
           >
@@ -613,19 +651,23 @@ function Plan({
   return (
     <div
       style={{
-        border: "2px solid #e5e7eb",
+        border: '2px solid #e5e7eb',
         borderRadius: 12,
         padding: 20,
-        backgroundColor: "#ffffff",
-        position: "relative",
+        backgroundColor: '#ffffff',
+        position: 'relative',
       }}
     >
       <h4
         style={{
           fontWeight: 700,
           fontSize: 18,
+<<<<<<< HEAD
+          color: '#1f2937',
+=======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           color: "#1f2937",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           marginBottom: 8,
         }}
       >
@@ -637,8 +679,12 @@ function Plan({
 =======
       <div
         style={{
+<<<<<<< HEAD
+          color: '#111827',
+=======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           color: "#111827",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           fontWeight: 800,
           fontSize: 24,
           marginBottom: 16,
@@ -651,10 +697,16 @@ function Plan({
         {features.map((f) => ("
 =======
       </div>
+<<<<<<< HEAD
+      <ul style={{ paddingLeft: 18, color: '#4b5563', marginBottom: 20 }}>
+        {features.map(f => (
+          <li key={f} style={{ listStyle: 'disc', marginBottom: 6 }}>
+=======
       <ul style={{ paddingLeft: 18, color: "#4b5563", marginBottom: 20 }}>
         {features.map((f) => (
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           <li key={f} style={{ listStyle: "disc", marginBottom: 6 }}>
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
             {f}
           </li>
         ))}
@@ -673,6 +725,15 @@ function Plan({
       <a
         href="mailto:kleber@ziontechgroup.com?subject=Blockchain Development Services Inquiry"
         style={{
+<<<<<<< HEAD
+          display: 'inline-block',
+          width: '100%',
+          textAlign: 'center',
+          padding: '12px 16px',
+          backgroundColor: '#3b82f6',
+          color: 'white',
+          textDecoration: 'none',
+=======
           display: "inline-block",
           width: "100%",
           textAlign: "center",
@@ -681,6 +742,7 @@ function Plan({
           color: "white",
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           textDecoration: "none",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           borderRadius: 8,
           fontWeight: 600,
         }}

@@ -25,9 +25,13 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   keywords = 'IT services, AI solutions, cybersecurity, cloud migration, software development, digital transformation, micro SaaS, mobile development',
   canonical,
   ogImage = '/og-image.jpg',
+<<<<<<< HEAD
+  canonical = 'https://ziontechgroup.com',
+=======
   ogType = 'website',
   twitterCard = 'summary_large_image',
   structuredData
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
 }) => {
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
   const canonicalUrl = canonical || (typeof window !== 'undefined' ? window.location.href : 'https://ziontechgroup.com');
@@ -59,16 +63,27 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
+<<<<<<< HEAD
+      <link rel="canonical" href={canonical} />
+
+=======
       <link rel="canonical" href={canonicalUrl} />
       
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
       {/* Open Graph */}
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={ogImage} />
+<<<<<<< HEAD
+      <meta property="og:url" content={canonical} />
+      <meta property="og:type" content="website" />
+
+=======
       <meta property="og:url" content={canonicalUrl} />
       <meta property="og:type" content={ogType} />
       <meta property="og:site_name" content="Zion Tech Group" />
       
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
       {/* Twitter */}
       <meta name="twitter:card" content={twitterCard} />
       <meta name="twitter:title" content={fullTitle} />
@@ -152,6 +167,9 @@ const SEOHead: React.FC<SEOHeadProps> = ({,
 <<<<<<< HEAD
 export default SEOHead;
 =======
+<<<<<<< HEAD
+export default SEOHead;
+=======
  import { Helmet } from 'react - helmet - async'  interface SEOHeadProps {;
    title?: string;
    description?: string;
@@ -190,3 +208,4 @@ export default SEOHead;'"
 };
 export default SEOHead;
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172

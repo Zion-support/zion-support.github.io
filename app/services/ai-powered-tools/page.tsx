@@ -1,6 +1,14 @@
 <<<<<<< HEAD
+export const metadata = {
+  title: 'AI-Powered Tools | Zion Tech Group',
+  description:
+    'Cutting-edge AI-powered micro SAAS tools for content creation, automation, analytics, and business optimization. Leverage artificial intelligence to transform your workflow.',
+};
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
 
 
 <<<<<<< HEAD
@@ -84,6 +92,15 @@ export default function AIPoweredToolsPage() {}
             title="Content Generation""
             icon="✍️""
             description="AI-powered content creation and optimization tools"
+<<<<<<< HEAD
+            tools={[
+              'AI Blog Writer Pro',
+              'Social Media Content Generator',
+              'Email Marketing AI',
+              'SEO Content Optimizer',
+              'Video Script Generator',
+              'Product Description AI',
+=======
             tools={["
               "AI Blog Writer Pro","
               "Social Media Content Generator","
@@ -91,12 +108,22 @@ export default function AIPoweredToolsPage() {}
               "SEO Content Optimizer","
               "Video Script Generator","
               "Product Description AI",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
             ]}
           />
           <AIToolCategory"
             title="Business Automation""
             icon="🤖""
             description="Intelligent automation for business processes"
+<<<<<<< HEAD
+            tools={[
+              'Smart Document Processor',
+              'AI Customer Support Bot',
+              'Automated Lead Scoring',
+              'Invoice Processing AI',
+              'Meeting Scheduler AI',
+              'Workflow Automation Engine',
+=======
             tools={["
               "Smart Document Processor","
               "AI Customer Support Bot","
@@ -104,12 +131,22 @@ export default function AIPoweredToolsPage() {}
               "Invoice Processing AI","
               "Meeting Scheduler AI","
               "Workflow Automation Engine",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
             ]}
           />
           <AIToolCategory"
             title="Analytics & Insights""
             icon="📈""
             description="AI-driven analytics and business intelligence"
+<<<<<<< HEAD
+            tools={[
+              'Predictive Analytics Dashboard',
+              'Customer Behavior AI',
+              'Sales Forecasting Tool',
+              'Market Trend Analyzer',
+              'Competitor Intelligence AI',
+              'ROI Optimization Engine',
+=======
             tools={["
               "Predictive Analytics Dashboard","
               "Customer Behavior AI","
@@ -117,6 +154,7 @@ export default function AIPoweredToolsPage() {}
               "Market Trend Analyzer","
               "Competitor Intelligence AI","
               "ROI Optimization Engine",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
             ]}
           />
         </div>
@@ -130,6 +168,19 @@ export default function AIPoweredToolsPage() {}
             <AITool"
               title="AI Content Studio""
               description="Complete content creation suite with AI writing, editing, and optimization"
+<<<<<<< HEAD
+              features={[
+                'Multi-format content generation',
+                'Brand voice training',
+                'SEO optimization',
+                'Plagiarism detection',
+                'Content calendar integration',
+                'Performance analytics',
+              ]}
+              price="$29-99/month"
+              category="Content Creation"
+              useCase="Marketing teams, agencies, content creators"
+=======
               features={["
                 "Multi-format content generation","
                 "Brand voice training","
@@ -141,11 +192,25 @@ export default function AIPoweredToolsPage() {}
               price="$29-99/month""
               category="Content Creation""
               useCase="Marketing teams, agencies, content creators""
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
               demoUrl="https://demo.ziontechgroup.com/ai-content-studio"
             />
             <AITool"
               title="Smart CRM Assistant""
               description="AI-powered CRM with intelligent lead scoring and automated follow-ups"
+<<<<<<< HEAD
+              features={[
+                'Predictive lead scoring',
+                'Automated email sequences',
+                'Meeting transcription',
+                'Deal probability analysis',
+                'Customer sentiment tracking',
+                'Sales forecasting',
+              ]}
+              price="$49-149/month"
+              category="Sales & CRM"
+              useCase="Sales teams, small businesses, startups"
+=======
               features={["
                 "Predictive lead scoring","
                 "Automated email sequences","
@@ -157,11 +222,25 @@ export default function AIPoweredToolsPage() {}
               price="$49-149/month""
               category="Sales & CRM""
               useCase="Sales teams, small businesses, startups""
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
               demoUrl="https://demo.ziontechgroup.com/smart-crm"
             />
             <AITool"
               title="AI Analytics Pro""
               description="Advanced business intelligence with natural language queries"
+<<<<<<< HEAD
+              features={[
+                'Natural language queries',
+                'Automated insights generation',
+                'Anomaly detection',
+                'Custom dashboard creation',
+                'Data visualization',
+                'Mobile app access',
+              ]}
+              price="$39-119/month"
+              category="Analytics"
+              useCase="Data analysts, executives, business owners"
+=======
               features={["
                 "Natural language queries","
                 "Automated insights generation","
@@ -173,11 +252,25 @@ export default function AIPoweredToolsPage() {}
               price="$39-119/month""
               category="Analytics""
               useCase="Data analysts, executives, business owners""
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
               demoUrl="https://demo.ziontechgroup.com/ai-analytics"
             />
             <AITool"
               title="Document AI Processor""
               description="Intelligent document processing and data extraction"
+<<<<<<< HEAD
+              features={[
+                'OCR with 99% accuracy',
+                'Smart data extraction',
+                'Document classification',
+                'Automated workflows',
+                'API integration',
+                'Bulk processing',
+              ]}
+              price="$19-79/month"
+              category="Document Processing"
+              useCase="Legal firms, accounting, healthcare, insurance"
+=======
               features={["
                 "OCR with 99% accuracy","
                 "Smart data extraction","
@@ -189,11 +282,25 @@ export default function AIPoweredToolsPage() {}
               price="$19-79/month""
               category="Document Processing""
               useCase="Legal firms, accounting, healthcare, insurance""
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
               demoUrl="https://demo.ziontechgroup.com/document-ai"
             />
             <AITool"
               title="AI Email Marketing""
               description="Intelligent email marketing with personalization and optimization"
+<<<<<<< HEAD
+              features={[
+                'AI subject line optimization',
+                'Send time optimization',
+                'Content personalization',
+                'A/B testing automation',
+                'Unsubscribe prediction',
+                'Revenue attribution',
+              ]}
+              price="$25-89/month"
+              category="Email Marketing"
+              useCase="E-commerce, SaaS, marketing agencies"
+=======
               features={["
                 "AI subject line optimization","
                 "Send time optimization","
@@ -205,11 +312,25 @@ export default function AIPoweredToolsPage() {}
               price="$25-89/month""
               category="Email Marketing""
               useCase="E-commerce, SaaS, marketing agencies""
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
               demoUrl="https://demo.ziontechgroup.com/ai-email"
             />
             <AITool"
               title="Smart Inventory Manager""
               description="AI-powered inventory optimization and demand forecasting"
+<<<<<<< HEAD
+              features={[
+                'Demand forecasting',
+                'Reorder point optimization',
+                'Price optimization',
+                'Supplier performance analysis',
+                'Seasonal trend analysis',
+                'Multi-location management',
+              ]}
+              price="$35-129/month"
+              category="Inventory Management"
+              useCase="Retail, e-commerce, manufacturing, distribution"
+=======
               features={["
                 "Demand forecasting","
                 "Reorder point optimization","
@@ -221,6 +342,7 @@ export default function AIPoweredToolsPage() {}
               price="$35-129/month""
               category="Inventory Management""
               useCase="Retail, e-commerce, manufacturing, distribution""
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
               demoUrl="https://demo.ziontechgroup.com/smart-inventory"
             />
           </div>
@@ -234,42 +356,78 @@ export default function AIPoweredToolsPage() {}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <AITechnology"
               category="Language Models"
+<<<<<<< HEAD
+              technologies={[
+                'GPT-4',
+                'Claude',
+                'Gemini',
+                'Llama',
+                'Custom Models',
+=======
               technologies={["
                 "GPT-4","
                 "Claude","
                 "Gemini","
                 "Llama","
                 "Custom Models",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
               ]}
             />
             <AITechnology"
               category="Machine Learning"
+<<<<<<< HEAD
+              technologies={[
+                'TensorFlow',
+                'PyTorch',
+                'Scikit-learn',
+                'XGBoost',
+                'AutoML',
+=======
               technologies={["
                 "TensorFlow","
                 "PyTorch","
                 "Scikit-learn","
                 "XGBoost","
                 "AutoML",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
               ]}
             />
             <AITechnology"
               category="NLP & Processing"
+<<<<<<< HEAD
+              technologies={[
+                'spaCy',
+                'NLTK',
+                'Transformers',
+                'BERT',
+                'RoBERTa',
+=======
               technologies={["
                 "spaCy","
                 "NLTK","
                 "Transformers","
                 "BERT","
                 "RoBERTa",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
               ]}
             />
             <AITechnology"
               category="Computer Vision"
+<<<<<<< HEAD
+              technologies={[
+                'OpenCV',
+                'YOLO',
+                'ResNet',
+                'EfficientNet',
+                'Custom CNNs',
+=======
               technologies={["
                 "OpenCV","
                 "YOLO","
                 "ResNet","
                 "EfficientNet","
                 "Custom CNNs",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
               ]}
             />
           </div>
@@ -284,34 +442,61 @@ export default function AIPoweredToolsPage() {}
             <Integration"
               title="CRM & Sales Tools""
               description="Seamless integration with popular CRM platforms"
+<<<<<<< HEAD
+              platforms={[
+                'Salesforce',
+                'HubSpot',
+                'Pipedrive',
+                'Zoho',
+                'Custom APIs',
+=======
               platforms={["
                 "Salesforce","
                 "HubSpot","
                 "Pipedrive","
                 "Zoho","
                 "Custom APIs",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
               ]}
             />
             <Integration"
               title="Marketing Platforms""
               description="Connect with marketing automation tools"
+<<<<<<< HEAD
+              platforms={[
+                'Mailchimp',
+                'Constant Contact',
+                'ActiveCampaign',
+                'Marketo',
+                'Pardot',
+=======
               platforms={["
                 "Mailchimp","
                 "Constant Contact","
                 "ActiveCampaign","
                 "Marketo","
                 "Pardot",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
               ]}
             />
             <Integration"
               title="Business Applications""
               description="Integrate with essential business software"
+<<<<<<< HEAD
+              platforms={[
+                'Slack',
+                'Microsoft Teams',
+                'Google Workspace',
+                'Office 365',
+                'Zapier',
+=======
               platforms={["
                 "Slack","
                 "Microsoft Teams","
                 "Google Workspace","
                 "Office 365","
                 "Zapier",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
               ]}
             />
           </div>
@@ -327,6 +512,15 @@ export default function AIPoweredToolsPage() {}
               name="Starter""
               price="$29/month""
               description="Perfect for individuals and small teams"
+<<<<<<< HEAD
+              features={[
+                '1 AI tool access',
+                'Basic AI features',
+                'Email support',
+                'Standard integrations',
+                'Monthly usage limits',
+                'Basic analytics',
+=======
               features={["
                 "1 AI tool access","
                 "Basic AI features","
@@ -334,6 +528,7 @@ export default function AIPoweredToolsPage() {}
                 "Standard integrations","
                 "Monthly usage limits","
                 "Basic analytics",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
               ]}
               popular={false}
             />
@@ -341,6 +536,16 @@ export default function AIPoweredToolsPage() {}
               name="Professional""
               price="$99/month""
               description="Ideal for growing businesses"
+<<<<<<< HEAD
+              features={[
+                '3 AI tools access',
+                'Advanced AI features',
+                'Priority support',
+                'All integrations',
+                'Higher usage limits',
+                'Advanced analytics',
+                'Custom workflows',
+=======
               features={["
                 "3 AI tools access","
                 "Advanced AI features","
@@ -349,6 +554,7 @@ export default function AIPoweredToolsPage() {}
                 "Higher usage limits","
                 "Advanced analytics","
                 "Custom workflows",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
               ]}
               popular={true}
             />
@@ -356,6 +562,17 @@ export default function AIPoweredToolsPage() {}
               name="Enterprise""
               price="$299/month""
               description="For large organizations"
+<<<<<<< HEAD
+              features={[
+                'Unlimited AI tools',
+                'Premium AI features',
+                '24/7 dedicated support',
+                'Custom integrations',
+                'Unlimited usage',
+                'Custom analytics',
+                'White-label options',
+                'SLA guarantee',
+=======
               features={["
                 "Unlimited AI tools","
                 "Premium AI features","
@@ -365,6 +582,7 @@ export default function AIPoweredToolsPage() {}
                 "Custom analytics","
                 "White-label options","
                 "SLA guarantee",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
               ]}
               popular={false}
             />
@@ -730,7 +948,7 @@ function AIPricingPlan({
 }) {
   return (
     <div
-      className={`bg-white rounded-xl p-8 shadow-lg border-2 ${popular ? "border-purple-500" : "border-gray-200"} relative`}
+      className={`bg-white rounded-xl p-8 shadow-lg border-2 ${popular ? 'border-purple-500' : 'border-gray-200'} relative`}
     >
       {popular && (
         <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
@@ -766,8 +984,8 @@ function AIPricingPlan({
         href="tel:+13024640950"
         className={`w-full mt-6 py-3 rounded-lg font-semibold text-center block transition-colors ${
           popular
-            ? "bg-purple-600 text-white hover:bg-purple-700"
-            : "bg-gray-100 text-gray-900 hover:bg-gray-200"
+            ? 'bg-purple-600 text-white hover:bg-purple-700'
+            : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
         }`}
       >
         Get Started

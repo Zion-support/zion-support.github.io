@@ -1,3 +1,20 @@
+<<<<<<< HEAD
+import { Form } from '@/components/ui/form';
+import {
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+} from '@/components/ui/dialog';
+import { useToast } from '@/hooks/use-toast';
+import { TalentProfile } from '@/types/talent';
+import { GeneratedMilestone } from '@/hooks/useMilestoneGenerator';
+import { generateContract } from '../utils/contractUtils';
+import { ProjectDetailsFields } from './ProjectDetailsFields';
+import { PaymentTermsFields } from './PaymentTermsFields';
+import { AdditionalClausesFields } from './AdditionalClausesFields';
+import { logErrorToProduction } from '@/utils/productionLogger';
+=======
 import { Form } from "@/components/ui/form";
 import { DialogDescription, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { useToast } from "@/hooks/use-toast";
@@ -237,3 +254,4 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 ;"
 pr-12325
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172

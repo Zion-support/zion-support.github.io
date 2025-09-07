@@ -1,13 +1,23 @@
 <<<<<<< HEAD
 export const metadata = {
+  title: 'Computer Vision Solutions | Zion Tech Group',
+  description: 'Transform your business with AI-powered computer vision solutions including object detection, image recognition, and automated visual analysis.',
+=======
+<<<<<<< HEAD
+export const metadata = {
   title: "Computer Vision Solutions | Zion Tech Group",
   description:
     "Transform your business with AI-powered computer vision solutions including object detection, image recognition, and automated visual analysis.",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
 };
 
 export default function ComputerVisionSolutionsPage() {
   return (
     <section className="max-w-6xl mx-auto px-4 py-16">
+<<<<<<< HEAD
+      <h1 className="text-4xl font-bold text-gray-900 mb-6">Computer Vision Solutions</h1>
+      <p className="text-xl text-gray-600 mb-12">Transform your business with AI-powered computer vision solutions including object detection, image recognition, and automated visual analysis.</p>
+=======
       <h1 className="text-4xl font-bold text-gray-900 mb-6">
         Computer Vision Solutions
       </h1>
@@ -16,33 +26,55 @@ export default function ComputerVisionSolutionsPage() {
         including object detection, image recognition, and automated visual
         analysis.
       </p>
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
         <FeatureCard
           title="Object Detection & Recognition"
           features={[
+<<<<<<< HEAD
+            'Real-time object detection',
+            'Facial recognition systems',
+            'Product identification',
+            'Quality control automation',
+=======
             "Real-time object detection",
             "Facial recognition systems",
             "Product identification",
             "Quality control automation",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
         />
         <FeatureCard
           title="Image Processing & Analysis"
           features={[
+<<<<<<< HEAD
+            'Medical image analysis',
+            'Document digitization',
+            'Content moderation',
+            'Visual search capabilities',
+=======
             "Medical image analysis",
             "Document digitization",
             "Content moderation",
             "Visual search capabilities",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
         />
         <FeatureCard
           title="Video Analytics"
           features={[
+<<<<<<< HEAD
+            'Motion detection',
+            'Behavioral analysis',
+            'Traffic monitoring',
+            'Security surveillance',
+=======
             "Motion detection",
             "Behavioral analysis",
             "Traffic monitoring",
             "Security surveillance",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
         />
       </div>
@@ -101,6 +133,10 @@ export default function ComputerVisionSolutionsPage() {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
+
+      <Pricing />
+=======
 <<<<<<< HEAD
 =======
 export const metadata = {}
@@ -231,6 +267,7 @@ export default function ComputerVisionSolutionsPage() {}
 =======
 
       <Pricing />
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
 
       <div className="mt-16 text-center">
         <h2 className="text-2xl font-bold text-gray-900 mb-4">
@@ -335,16 +372,33 @@ function Pricing() {
           name="Starter"
           price="$2,999/mo"
           features={[
+<<<<<<< HEAD
+            'Basic object detection',
+            'Up to 10,000 images/month',
+            'Standard support',
+            'Cloud deployment',
+=======
             "Basic object detection",
             "Up to 10,000 images/month",
             "Standard support",
             "Cloud deployment",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
         />
         <Plan
           name="Professional"
           price="$7,999/mo"
           features={[
+<<<<<<< HEAD
+            'Advanced recognition models',
+            'Up to 100,000 images/month',
+            'Custom model training',
+            'Priority support',
+            'API access',
+          ]}
+          popular={true}
+        />
+=======
             "Advanced recognition models",
             "Up to 100,000 images/month",
             "Custom model training",
@@ -364,16 +418,25 @@ function Pricing() {
             "On-premise deployment","
             "Dedicated support","
 =======
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
         <Plan
           name="Enterprise"
           price="$19,999/mo"
           features={[
+<<<<<<< HEAD
+            'Unlimited processing',
+            'Custom model development',
+            'On-premise deployment',
+            'Dedicated support',
+            'White-label solution',
+=======
             "Unlimited processing",
             "Custom model development",
             "On-premise deployment",
             "Dedicated support",
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             "White-label solution",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
         />
       </div>
@@ -437,6 +500,8 @@ function Plan({
         ))}
       </ul>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
       <a"
         href="tel:+13024640950"`
         className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors text-center block ${}
@@ -453,12 +518,18 @@ function Plan({
 }
 "`
 =======
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
       <a
         href="tel:+13024640950"
         className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors text-center block ${
           popular
+<<<<<<< HEAD
+            ? 'bg-cyan-600 text-white hover:bg-cyan-700'
+            : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
+=======
             ? "bg-cyan-600 text-white hover:bg-cyan-700"
             : "bg-gray-100 text-gray-900 hover:bg-gray-200"
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
         }`}
       >
         Get Started
@@ -466,4 +537,7 @@ function Plan({
     </div>
   );
 }
+<<<<<<< HEAD
+=======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172

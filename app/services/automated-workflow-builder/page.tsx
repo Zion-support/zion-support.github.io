@@ -3,11 +3,17 @@
 =======
 import Link from "next/link";
 
+<<<<<<< HEAD
+export const metadata = {
+  title: 'Automated Workflow Builder | Zion Tech Group',
+  description: 'Visual workflow automation platform. Create, manage, and optimize business processes with drag-and-drop automation.',
+=======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export const metadata = {
   title: "Automated Workflow Builder | Zion Tech Group",
   description:
     "Visual workflow automation platform. Create, manage, and optimize business processes with drag-and-drop automation.",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
 };
 
 export default function AutomatedWorkflowBuilderPage() {
@@ -112,9 +118,14 @@ export default function AutomatedWorkflowBuilderPage() {}
           Automated Workflow Builder
         </h1>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+<<<<<<< HEAD
+          Visual workflow automation platform that helps you create, manage, and optimize
+          business processes with drag-and-drop automation and intelligent triggers.
+=======
           Visual workflow automation platform that helps you create, manage, and
           optimize business processes with drag-and-drop automation and
           intelligent triggers.
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
         </p>
       </div>
 
@@ -122,37 +133,69 @@ export default function AutomatedWorkflowBuilderPage() {}
         <FeatureCard
           title="Visual Builder"
           details={[
+<<<<<<< HEAD
+            'Drag-and-drop interface',
+            'Pre-built workflow templates',
+            'Conditional logic',
+            'Multi-step processes',
+            'Real-time testing',
+=======
             "Drag-and-drop interface",
             "Pre-built workflow templates",
             "Conditional logic",
             "Multi-step processes",
             "Real-time testing",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
         />
         <FeatureCard
           title="Integration Hub"
           details={[
+<<<<<<< HEAD
+            '500+ app integrations',
+            'API connectors',
+            'Custom webhooks',
+            'Database connections',
+            'Third-party services',
+=======
             "500+ app integrations",
             "API connectors",
             "Custom webhooks",
             "Database connections",
             "Third-party services",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
         />
         <FeatureCard
           title="Intelligence & Analytics"
           details={[
+<<<<<<< HEAD
+            'Performance monitoring',
+            'Bottleneck identification',
+            'Optimization suggestions',
+            'Success rate tracking',
+            'Cost analysis',
+=======
             "Performance monitoring",
             "Bottleneck identification",
             "Optimization suggestions",
             "Success rate tracking",
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             "Cost analysis",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
         />
       </div>
 
       <PricingSection />
+<<<<<<< HEAD
+
+      <div className="mt-16 bg-gradient-to-r from-lime-50 to-green-50 border border-lime-200 rounded-xl p-8 text-center">
+        <h3 className="text-2xl font-bold text-gray-900 mb-4">Ready to Automate Your Business?</h3>
+        <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
+          Streamline your business processes with powerful workflow automation.
+          Perfect for operations teams, HR, finance, and any process-heavy department.
+=======
 <<<<<<< HEAD
 "
       <div className="mt-16 bg-gradient-to-r from-lime-50 to-green-50 border border-lime-200 rounded-xl p-8 text-center">"
@@ -188,6 +231,7 @@ export default function AutomatedWorkflowBuilderPage() {}
           Streamline your business processes with powerful workflow automation.
           Perfect for operations teams, HR, finance, and any process-heavy
           department.
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
@@ -278,17 +322,35 @@ function PricingSection() {
           name="Starter"
           price="$39/mo"
           features={[
+<<<<<<< HEAD
+            '5 active workflows',
+            '1,000 executions/month',
+            'Basic integrations',
+            'Email support',
+            'Standard templates',
+=======
             "5 active workflows",
             "1,000 executions/month",
             "Basic integrations",
             "Email support",
             "Standard templates",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
         />
         <PricingPlan
           name="Professional"
           price="$129/mo"
           features={[
+<<<<<<< HEAD
+            '25 active workflows',
+            '10,000 executions/month',
+            'All integrations',
+            'Priority support',
+            'Advanced analytics',
+          ]}
+          featured={true}
+        />
+=======
             "25 active workflows",
             "10,000 executions/month",
             "All integrations",
@@ -308,16 +370,25 @@ function PricingSection() {
             "Custom integrations","
             "White-label solution","
 =======
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
         <PricingPlan
           name="Enterprise"
           price="$399/mo"
           features={[
+<<<<<<< HEAD
+            'Unlimited workflows',
+            'Unlimited executions',
+            'Custom integrations',
+            'White-label solution',
+            'Dedicated support',
+=======
             "Unlimited workflows",
             "Unlimited executions",
             "Custom integrations",
             "White-label solution",
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             "Dedicated support",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
         />
       </div>
@@ -326,19 +397,27 @@ function PricingSection() {
 }
 
 <<<<<<< HEAD
+function PricingPlan({
+=======
+<<<<<<< HEAD
 function PricingPlan({}
 =======
 function PricingPlan({
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
   name,
   price,
   features,
   featured = false,
 <<<<<<< HEAD
+}: {
+=======
+<<<<<<< HEAD
 }: {}
 =======
 }: {
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
   name: string;
   price: string;
   features: string[];
@@ -361,6 +440,13 @@ function PricingPlan({
 =======
 }) {
   return (
+<<<<<<< HEAD
+    <div className={`border rounded-xl p-6 ${
+      featured
+        ? 'border-lime-500 bg-lime-50 shadow-lg'
+        : 'border-gray-200 bg-white shadow-sm'
+    }`}>
+=======
     <div
       className={`border rounded-xl p-6 ${
         featured
@@ -368,6 +454,7 @@ function PricingPlan({
           : "border-gray-200 bg-white shadow-sm"
       }`}
     >
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
       <h4 className="text-xl font-bold text-gray-900 mb-2">{name}</h4>
       <div className="text-3xl font-bold text-gray-900 mb-4">{price}</div>
       <ul className="space-y-2 text-gray-600 mb-6">
@@ -379,6 +466,8 @@ function PricingPlan({
         ))}
       </ul>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
       <a"
         href="tel:+13024640950"`
         className={`w-full block text-center py-3 rounded-lg font-semibold transition-colors ${}
@@ -389,6 +478,7 @@ function PricingPlan({
       >
         Get Started;
 =======
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
       <a
         href="tel:+13024640950"
         className={`w-full block text-center py-3 rounded-lg font-semibold transition-colors ${
@@ -404,7 +494,10 @@ function PricingPlan({
   );
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 "`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172

@@ -1,4 +1,7 @@
 import React from 'react';
+<<<<<<< HEAD
+export default Profile;
+=======
 
 <<<<<<< HEAD
 const Profile = () => {
@@ -34,3 +37,4 @@ const Profile = () =>: any {}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 export default Profile;'"
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172

@@ -7,9 +7,22 @@ import React, { useRef, useEffect, useState } from 'react';'
 import { motion, useInView, useAnimation } from 'framer-motion';
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
+<<<<<<< HEAD
+interface ScrollAnimationProps {
+  children: React.ReactNode;
+  animation?:
+    | 'fadeIn'
+    | 'slideUp'
+    | 'slideDown'
+    | 'slideLeft'
+    | 'slideRight'
+    | 'scale'
+    | 'rotate';
+=======
 interface ScrollAnimationProps {}
   children: React.ReactNode;'
   animation?: 'fadeIn' | 'slideUp' | 'slideDown' | 'slideLeft' | 'slideRight' | 'scale' | 'rotate';
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
   delay?: number;
   duration?: number;
   className?: string;
@@ -22,8 +35,13 @@ const ScrollAnimation: React.FC<ScrollAnimationProps> = ({}
   delay = 0,
   duration = 0.6,
 <<<<<<< HEAD
+  threshold = 0.1,
+  className = '',
+=======
+<<<<<<< HEAD
   className = '',
   threshold = 0.1
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
 }) => {
 =======
   threshold = 0.1,'
@@ -95,9 +113,9 @@ const ScrollAnimation: React.FC<ScrollAnimationProps> = ({}
         transition: {}
           duration,
           delay,
-          ease: "easeOut"
-        }
-      }
+          ease: 'easeOut',
+        },
+      },
     };
 
     switch (animation) {'
@@ -105,42 +123,75 @@ const ScrollAnimation: React.FC<ScrollAnimationProps> = ({}
         return {}
           ...baseVariants,
           hidden: { opacity: 0 },
+<<<<<<< HEAD
+          visible: { ...baseVariants.visible, opacity: 1 },
+        };
+=======
           visible: { ...baseVariants.visible, opacity: 1 }
         };'
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
       case 'slideUp':
         return {}
           ...baseVariants,
           hidden: { opacity: 0, y: 50 },
+<<<<<<< HEAD
+          visible: { ...baseVariants.visible, opacity: 1, y: 0 },
+        };
+=======
           visible: { ...baseVariants.visible, opacity: 1, y: 0 }
         };'
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
       case 'slideDown':
         return {}
           ...baseVariants,
           hidden: { opacity: 0, y: -50 },
+<<<<<<< HEAD
+          visible: { ...baseVariants.visible, opacity: 1, y: 0 },
+        };
+=======
           visible: { ...baseVariants.visible, opacity: 1, y: 0 }
         };'
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
       case 'slideLeft':
         return {}
           ...baseVariants,
           hidden: { opacity: 0, x: 50 },
+<<<<<<< HEAD
+          visible: { ...baseVariants.visible, opacity: 1, x: 0 },
+        };
+=======
           visible: { ...baseVariants.visible, opacity: 1, x: 0 }
         };'
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
       case 'slideRight':
         return {}
           ...baseVariants,
           hidden: { opacity: 0, x: -50 },
+<<<<<<< HEAD
+          visible: { ...baseVariants.visible, opacity: 1, x: 0 },
+        };
+=======
           visible: { ...baseVariants.visible, opacity: 1, x: 0 }
         };'
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
       case 'scale':
         return {}
           ...baseVariants,
           hidden: { opacity: 0, scale: 0.8 },
+<<<<<<< HEAD
+          visible: { ...baseVariants.visible, opacity: 1, scale: 1 },
+        };
+=======
           visible: { ...baseVariants.visible, opacity: 1, scale: 1 }
         };'
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
       case 'rotate':
         return {}
           ...baseVariants,
           hidden: { opacity: 0, rotate: -180 },
+<<<<<<< HEAD
+          visible: { ...baseVariants.visible, opacity: 1, rotate: 0 },
+=======
           visible: { ...baseVariants.visible, opacity: 1, rotate: 0 }
 =======
 import React, { useRef, useEffect, useState } from 'react';
@@ -223,6 +274,7 @@ ease: "easeOut""
           hidden: { opacity: 0, rotate: -180 },
           visible: { ...baseVariants.visible, opacity: 1, rotate: 0 },
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
         };
       default:
         return baseVariants;
@@ -261,7 +313,11 @@ ease: "easeOut""
 };
 
 <<<<<<< HEAD
+export default ScrollAnimation;
+=======
+<<<<<<< HEAD
 export default ScrollAnimation;'"
 =======
 export default ScrollAnimation;
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172

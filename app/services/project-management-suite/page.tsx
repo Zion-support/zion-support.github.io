@@ -1,4 +1,4 @@
-export const metadata = { title: "Project Management Suite | Zion Tech Group" };
+export const metadata = { title: 'Project Management Suite | Zion Tech Group' };
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -23,36 +23,36 @@ export default function ProjectManagementSuitePage() {
         <FeatureCard
           title="Project Planning & Tracking"
           features={[
-            "Gantt charts & timeline management",
-            "Task dependencies & critical path analysis",
-            "Resource allocation & capacity planning",
-            "Milestone tracking & progress monitoring",
-            "Risk assessment & mitigation planning",
-            "Budget tracking & cost management",
+            'Gantt charts & timeline management',
+            'Task dependencies & critical path analysis',
+            'Resource allocation & capacity planning',
+            'Milestone tracking & progress monitoring',
+            'Risk assessment & mitigation planning',
+            'Budget tracking & cost management',
           ]}
           icon="📋"
         />
         <FeatureCard
           title="Team Collaboration"
           features={[
-            "Real-time team communication",
-            "File sharing & document management",
-            "Comment threads & @mentions",
-            "Video conferencing integration",
-            "Team calendars & scheduling",
-            "Activity feeds & notifications",
+            'Real-time team communication',
+            'File sharing & document management',
+            'Comment threads & @mentions',
+            'Video conferencing integration',
+            'Team calendars & scheduling',
+            'Activity feeds & notifications',
           ]}
           icon="👥"
         />
         <FeatureCard
           title="AI-Powered Insights"
           features={[
-            "Predictive project completion times",
-            "Resource optimization recommendations",
-            "Risk prediction & early warnings",
-            "Performance analytics & reporting",
-            "Automated status updates",
-            "Smart task prioritization",
+            'Predictive project completion times',
+            'Resource optimization recommendations',
+            'Risk prediction & early warnings',
+            'Performance analytics & reporting',
+            'Automated status updates',
+            'Smart task prioritization',
           ]}
           icon="🤖"
         />
@@ -297,6 +297,14 @@ function PricingSection() {
           price="$29/mo"
           duration="Up to 10 users"
           features={[
+<<<<<<< HEAD
+            'Basic project management',
+            'Task tracking & assignments',
+            'Team collaboration tools',
+            'Mobile app access',
+            'Basic reporting',
+            'Email support',
+=======
             "Basic project management",
             "Task tracking & assignments",
             "Team collaboration tools",
@@ -304,6 +312,7 @@ function PricingSection() {
             "Basic reporting",
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             "Email support",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
           popular={false}
         />
@@ -325,6 +334,15 @@ function PricingSection() {
           price="$79/mo"
           duration="Up to 50 users"
           features={[
+<<<<<<< HEAD
+            'Everything in Starter',
+            'Advanced Gantt charts',
+            'Resource management',
+            'Time tracking & billing',
+            'Advanced analytics',
+            'API access & integrations',
+            'Priority support',
+=======
             "Everything in Starter",
             "Advanced Gantt charts",
             "Resource management",
@@ -333,6 +351,7 @@ function PricingSection() {
             "API access & integrations",
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             "Priority support",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
           popular={true}
         />
@@ -354,6 +373,15 @@ function PricingSection() {
           price="$199/mo"
           duration="Unlimited users"
           features={[
+<<<<<<< HEAD
+            'Everything in Professional',
+            'AI-powered insights',
+            'Custom workflows',
+            'Advanced security & compliance',
+            'Dedicated account manager',
+            'Custom integrations',
+            '24/7 phone support',
+=======
             "Everything in Professional",
             "AI-powered insights",
             "Custom workflows",
@@ -362,6 +390,7 @@ function PricingSection() {
             "Custom integrations",
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             "24/7 phone support",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
           popular={false}
         />
@@ -414,7 +443,7 @@ function PricingCard({
 }) {
   return (
     <div
-      className={`relative bg-white border-2 rounded-xl p-8 ${popular ? "border-orange-500 shadow-lg" : "border-gray-200"}`}
+      className={`relative bg-white border-2 rounded-xl p-8 ${popular ? 'border-orange-500 shadow-lg' : 'border-gray-200'}`}
     >
       {popular && (
         <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
@@ -450,8 +479,8 @@ function PricingCard({
         href="tel:+13024640950"
         className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
           popular
-            ? "bg-orange-600 text-white hover:bg-orange-700"
-            : "bg-gray-100 text-gray-900 hover:bg-gray-200"
+            ? 'bg-orange-600 text-white hover:bg-orange-700'
+            : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
         }`}
       >
         Get Started

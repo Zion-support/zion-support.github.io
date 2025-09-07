@@ -1,4 +1,4 @@
-export const metadata = { title: "AI HR Management | Zion Tech Group" };
+export const metadata = { title: 'AI HR Management | Zion Tech Group' };
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -23,36 +23,36 @@ export default function AIHRManagementPage() {
         <FeatureCard
           title="AI Recruitment"
           features={[
-            "Intelligent resume screening",
-            "Candidate matching & scoring",
-            "Automated interview scheduling",
-            "Skills assessment & testing",
-            "Background check automation",
-            "Diversity & inclusion analytics",
+            'Intelligent resume screening',
+            'Candidate matching & scoring',
+            'Automated interview scheduling',
+            'Skills assessment & testing',
+            'Background check automation',
+            'Diversity & inclusion analytics',
           ]}
           icon="👥"
         />
         <FeatureCard
           title="Employee Analytics"
           features={[
-            "Performance prediction models",
-            "Employee satisfaction tracking",
-            "Retention risk analysis",
-            "Skills gap identification",
-            "Career path recommendations",
-            "Engagement trend analysis",
+            'Performance prediction models',
+            'Employee satisfaction tracking',
+            'Retention risk analysis',
+            'Skills gap identification',
+            'Career path recommendations',
+            'Engagement trend analysis',
           ]}
           icon="📊"
         />
         <FeatureCard
           title="HR Automation"
           features={[
-            "Automated onboarding workflows",
-            "Leave management & approval",
-            "Performance review automation",
-            "Payroll integration",
-            "Compliance monitoring",
-            "Employee self-service portal",
+            'Automated onboarding workflows',
+            'Leave management & approval',
+            'Performance review automation',
+            'Payroll integration',
+            'Compliance monitoring',
+            'Employee self-service portal',
           ]}
           icon="⚙️"
         />
@@ -285,6 +285,14 @@ function PricingSection() {
           price="$49/mo"
           duration="Up to 50 employees"
           features={[
+<<<<<<< HEAD
+            'Basic employee management',
+            'Simple recruitment tools',
+            'Standard reporting',
+            'Email support',
+            'Mobile app access',
+            'Basic analytics',
+=======
             "Basic employee management",
             "Simple recruitment tools",
             "Standard reporting",
@@ -292,6 +300,7 @@ function PricingSection() {
             "Mobile app access",
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             "Basic analytics",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
           popular={false}
         />
@@ -312,6 +321,14 @@ function PricingSection() {
           price="$149/mo"
           duration="Up to 250 employees"
           features={[
+<<<<<<< HEAD
+            'Everything in Basic HR',
+            'AI recruitment features',
+            'Advanced analytics',
+            'Performance management',
+            'API access & integrations',
+            'Priority support',
+=======
             "Everything in Basic HR",
             "AI recruitment features",
             "Advanced analytics",
@@ -319,6 +336,7 @@ function PricingSection() {
             "API access & integrations",
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             "Priority support",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
           popular={true}
         />
@@ -339,6 +357,14 @@ function PricingSection() {
           price="$399/mo"
           duration="Unlimited employees"
           features={[
+<<<<<<< HEAD
+            'Everything in Professional HR',
+            'Custom AI model training',
+            'Advanced security & compliance',
+            'Dedicated HR specialist',
+            'Custom integrations',
+            '24/7 phone support',
+=======
             "Everything in Professional HR",
             "Custom AI model training",
             "Advanced security & compliance",
@@ -346,6 +372,7 @@ function PricingSection() {
             "Custom integrations",
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             "24/7 phone support",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
           popular={false}
         />
@@ -398,7 +425,7 @@ function PricingCard({
 }) {
   return (
     <div
-      className={`relative bg-white border-2 rounded-xl p-8 ${popular ? "border-violet-500 shadow-lg" : "border-gray-200"}`}
+      className={`relative bg-white border-2 rounded-xl p-8 ${popular ? 'border-violet-500 shadow-lg' : 'border-gray-200'}`}
     >
       {popular && (
         <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
@@ -434,8 +461,8 @@ function PricingCard({
         href="tel:+13024640950"
         className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
           popular
-            ? "bg-violet-600 text-white hover:bg-violet-700"
-            : "bg-gray-100 text-gray-900 hover:bg-gray-200"
+            ? 'bg-violet-600 text-white hover:bg-violet-700'
+            : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
         }`}
       >
         Get Started

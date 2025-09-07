@@ -1,13 +1,23 @@
 <<<<<<< HEAD
 export const metadata = {
+  title: 'Social Media Automation | Zion Tech Group',
+  description: 'Automate your social media presence with AI-powered content creation, scheduling, and engagement. Boost your reach and save time.',
+=======
+<<<<<<< HEAD
+export const metadata = {
   title: "Social Media Automation | Zion Tech Group",
   description:
     "Automate your social media presence with AI-powered content creation, scheduling, and engagement. Boost your reach and save time.",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
 };
 
 export default function SocialMediaAutomationPage() {
   return (
     <section className="max-w-6xl mx-auto px-4 py-16">
+<<<<<<< HEAD
+      <h1 className="text-4xl font-bold text-gray-900 mb-6">Social Media Automation</h1>
+      <p className="text-xl text-gray-600 mb-12">Automate your social media presence with AI-powered content creation, intelligent scheduling, and engagement optimization.</p>
+=======
       <h1 className="text-4xl font-bold text-gray-900 mb-6">
         Social Media Automation
       </h1>
@@ -15,33 +25,55 @@ export default function SocialMediaAutomationPage() {
         Automate your social media presence with AI-powered content creation,
         intelligent scheduling, and engagement optimization.
       </p>
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
         <FeatureCard
           title="AI Content Creation"
           features={[
+<<<<<<< HEAD
+            'Auto-generated posts',
+            'Trend-based content',
+            'Brand voice consistency',
+            'Multi-platform adaptation',
+=======
             "Auto-generated posts",
             "Trend-based content",
             "Brand voice consistency",
             "Multi-platform adaptation",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
         />
         <FeatureCard
           title="Smart Scheduling"
           features={[
+<<<<<<< HEAD
+            'Optimal timing analysis',
+            'Cross-platform posting',
+            'Content calendar management',
+            'Automated reposting',
+=======
             "Optimal timing analysis",
             "Cross-platform posting",
             "Content calendar management",
             "Automated reposting",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
         />
         <FeatureCard
           title="Engagement Analytics"
           features={[
+<<<<<<< HEAD
+            'Performance tracking',
+            'Audience insights',
+            'ROI measurement',
+            'Growth recommendations',
+=======
             "Performance tracking",
             "Audience insights",
             "ROI measurement",
             "Growth recommendations",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
         />
       </div>
@@ -97,6 +129,10 @@ export default function SocialMediaAutomationPage() {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
+
+      <Pricing />
+=======
 <<<<<<< HEAD
 =======
 export const metadata = {}
@@ -223,6 +259,7 @@ export default function SocialMediaAutomationPage() {}
 =======
 
       <Pricing />
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
 
       <div className="mt-16 text-center">
         <h2 className="text-2xl font-bold text-gray-900 mb-4">
@@ -327,16 +364,33 @@ function Pricing() {
           name="Starter"
           price="$199/mo"
           features={[
+<<<<<<< HEAD
+            '3 social media accounts',
+            '50 posts per month',
+            'Basic analytics',
+            'Email support',
+=======
             "3 social media accounts",
             "50 posts per month",
             "Basic analytics",
             "Email support",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
         />
         <Plan
           name="Professional"
           price="$499/mo"
           features={[
+<<<<<<< HEAD
+            '10 social media accounts',
+            'Unlimited posts',
+            'Advanced AI content',
+            'Priority support',
+            'Custom hashtag research',
+          ]}
+          popular={true}
+        />
+=======
             "10 social media accounts",
             "Unlimited posts",
             "Advanced AI content",
@@ -356,16 +410,25 @@ function Pricing() {
             "Client management","
             "Dedicated support","
 =======
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
         <Plan
           name="Agency"
           price="$999/mo"
           features={[
+<<<<<<< HEAD
+            'Unlimited accounts',
+            'White-label dashboard',
+            'Client management',
+            'Dedicated support',
+            'Custom integrations',
+=======
             "Unlimited accounts",
             "White-label dashboard",
             "Client management",
             "Dedicated support",
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             "Custom integrations",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
         />
       </div>
@@ -429,6 +492,8 @@ function Plan({
         ))}
       </ul>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
       <a"
         href="tel:+13024640950"`
         className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors text-center block ${}
@@ -445,12 +510,18 @@ function Plan({
 }
 "`
 =======
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
       <a
         href="tel:+13024640950"
         className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors text-center block ${
           popular
+<<<<<<< HEAD
+            ? 'bg-purple-600 text-white hover:bg-purple-700'
+            : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
+=======
             ? "bg-purple-600 text-white hover:bg-purple-700"
             : "bg-gray-100 text-gray-900 hover:bg-gray-200"
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
         }`}
       >
         Get Started
@@ -458,4 +529,7 @@ function Plan({
     </div>
   );
 }
+<<<<<<< HEAD
+=======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172

@@ -1,13 +1,17 @@
 <<<<<<< HEAD
+import Link from 'next/link';
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 import Link from "next/link";
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export const metadata = {
-  title: "Real-time Data Processing | Zion Tech Group",
+  title: 'Real-time Data Processing | Zion Tech Group',
   description:
-    "High-performance real-time data processing with stream analytics, event processing, and instant insights for data-driven decision making.",
+    'High-performance real-time data processing with stream analytics, event processing, and instant insights for data-driven decision making.',
 };
 
 export default function RealTimeDataProcessingPage() {
@@ -67,11 +71,11 @@ export default function RealTimeDataProcessingPage() {
               price="$89/month"
               description="Perfect for small applications and proof of concepts"
               features={[
-                "Up to 1M events per day",
-                "Basic stream processing",
-                "Email support",
-                "Standard dashboards",
-                "5 data sources",
+                'Up to 1M events per day',
+                'Basic stream processing',
+                'Email support',
+                'Standard dashboards',
+                '5 data sources',
               ]}
             />
             <PricingCard
@@ -79,12 +83,12 @@ export default function RealTimeDataProcessingPage() {
               price="$249/month"
               description="Ideal for growing businesses with real-time needs"
               features={[
-                "Up to 10M events per day",
-                "Advanced stream processing",
-                "Priority support",
-                "Custom dashboards",
-                "Unlimited data sources",
-                "ML integration",
+                'Up to 10M events per day',
+                'Advanced stream processing',
+                'Priority support',
+                'Custom dashboards',
+                'Unlimited data sources',
+                'ML integration',
               ]}
             />
             <PricingCard
@@ -92,13 +96,13 @@ export default function RealTimeDataProcessingPage() {
               price="$699/month"
               description="For large organizations with high-volume data processing"
               features={[
-                "Unlimited events",
-                "Custom stream processing",
-                "24/7 dedicated support",
-                "On-premise deployment",
-                "Custom integrations",
-                "SLA guarantees",
-                "Advanced ML features",
+                'Unlimited events',
+                'Custom stream processing',
+                '24/7 dedicated support',
+                'On-premise deployment',
+                'Custom integrations',
+                'SLA guarantees',
+                'Advanced ML features',
               ]}
             />
           </div>

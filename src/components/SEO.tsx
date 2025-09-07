@@ -146,12 +146,21 @@ export function SEO({
       ]
 
 const SEO: React.FC<SEOProps> = ({
+<<<<<<< HEAD
+  title = 'Zion Tech Group - Leading AI & Technology Solutions',
+  description = 'Transform your business with cutting-edge AI solutions, cybersecurity, and cloud infrastructure. Leading technology solutions for a smarter future.',
+  keywords = 'AI services, cybersecurity, cloud infrastructure, digital transformation, machine learning, technology solutions, business automation',
+  image = 'https://ziontechgroup.com/og-image.jpg',
+  url = 'https://ziontechgroup.com',
+  type = 'website',
+=======
   title,
   description,
   keywords = '',
   url = '',
   image = '/og-image.jpg',
   type = 'website'
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
 }) => {
   const siteName = 'Zion Tech Group';
   const fullTitle = title.includes(siteName) ? title : `${title} | ${siteName}`;
@@ -448,12 +457,19 @@ pr-12325
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
+<<<<<<< HEAD
+      <meta name="robots" content="index,follow" />
+      <link rel="canonical" href={url} />
+
+      {/* Open Graph */}
+=======
 <<<<<<< HEAD:src_backup/components/SEO.tsx
 <<<<<<< HEAD
       <link rel="canonical" href={fullUrl} />
 
       {/* Open Graph / Facebook */}
 <<<<<<< HEAD
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
       <meta property="og:type" content={type} />
       <meta property="og:url" content={fullUrl} />
       <meta property="og:title" content={fullTitle} />
@@ -472,7 +488,10 @@ pr-12325
 >>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
       <meta property="og:description" content={description} />
       <meta property="og:image" content={image} />
+<<<<<<< HEAD
+=======
       <meta property="og:site_name" content={siteName} />
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
 
       {/* Twitter */}
       <meta property="twitter:card" content="summary_large_image" />
@@ -481,8 +500,12 @@ pr-12325
       <meta property="twitter:description" content={description} />
       <meta property="twitter:image" content={image} />
 
+<<<<<<< HEAD
+      {/* Additional SEO */}
+=======
       {/* Additional Meta Tags */}
       <meta name="robots" content="index, follow" />
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
       <meta name="author" content="Zion Tech Group" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
@@ -528,6 +551,8 @@ pr-12325
 <<<<<<< HEAD
 
 export default SEO;
+<<<<<<< HEAD
+=======
 =======
 =======
 
@@ -681,3 +706,4 @@ origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4210
     )"
 pr-12325
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/SEO.tsx
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172

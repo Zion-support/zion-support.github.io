@@ -1,8 +1,14 @@
 <<<<<<< HEAD
 export const metadata = {
+  title: 'Social Media Management Platform | Zion Tech Group',
+  description: 'Build comprehensive social media management tools with scheduling, analytics, and content creation. Professional social media solutions starting at $15k.',
+=======
+<<<<<<< HEAD
+export const metadata = {
   title: "Social Media Management Platform | Zion Tech Group",
   description:
     "Build comprehensive social media management tools with scheduling, analytics, and content creation. Professional social media solutions starting at $15k.",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
 };
 
 export default function SocialMediaManagementPage() {
@@ -21,6 +27,15 @@ export default function SocialMediaManagementPage() {
           <Item
             title="Content Management"
             details={[
+<<<<<<< HEAD
+              'Multi-platform posting',
+              'Content calendar',
+              'Bulk upload & scheduling',
+              'Hashtag research tools',
+              'Content templates',
+              'Media library',
+              'Content approval workflows',
+=======
               "Multi-platform posting",
               "Content calendar",
               "Bulk upload & scheduling",
@@ -28,11 +43,21 @@ export default function SocialMediaManagementPage() {
               "Content templates",
               "Media library",
               "Content approval workflows",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
             ]}
           />
           <Item
             title="Analytics & Insights"
             details={[
+<<<<<<< HEAD
+              'Cross-platform analytics',
+              'Engagement tracking',
+              'ROI measurement',
+              'Audience insights',
+              'Competitor analysis',
+              'Custom reporting',
+              'Real-time monitoring',
+=======
               "Cross-platform analytics",
               "Engagement tracking",
               "ROI measurement",
@@ -40,11 +65,21 @@ export default function SocialMediaManagementPage() {
               "Competitor analysis",
               "Custom reporting",
               "Real-time monitoring",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
             ]}
           />
           <Item
             title="Team Collaboration"
             details={[
+<<<<<<< HEAD
+              'User roles & permissions',
+              'Content approval system',
+              'Team messaging',
+              'Client management',
+              'White-label options',
+              'API access',
+              'Custom integrations',
+=======
               "User roles & permissions",
               "Content approval system",
               "Team messaging",
@@ -52,6 +87,7 @@ export default function SocialMediaManagementPage() {
               "White-label options",
               "API access",
               "Custom integrations",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
             ]}
           />
         </div>
@@ -298,6 +334,15 @@ function Pricing() {
           price="$15k–$30k"
           duration="6–8 weeks"
           features={[
+<<<<<<< HEAD
+            '3 platform connections',
+            'Basic scheduling',
+            'Content calendar',
+            'Simple analytics',
+            'Team management',
+            'Mobile app',
+            'Basic support',
+=======
             "3 platform connections",
             "Basic scheduling",
             "Content calendar",
@@ -305,6 +350,7 @@ function Pricing() {
             "Team management",
             "Mobile app",
             "Basic support",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
         />
         <Plan
@@ -312,6 +358,15 @@ function Pricing() {
           price="$30k–$60k"
           duration="8–12 weeks"
           features={[
+<<<<<<< HEAD
+            'All major platforms',
+            'Advanced scheduling',
+            'AI content tools',
+            'Comprehensive analytics',
+            'Client management',
+            'White-label options',
+            'Priority support',
+=======
             "All major platforms",
             "Advanced scheduling",
             "AI content tools",
@@ -319,6 +374,7 @@ function Pricing() {
             "Client management",
             "White-label options",
             "Priority support",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
         />
         <Plan
@@ -326,6 +382,21 @@ function Pricing() {
           price="$60k+"
           duration="10–16 weeks"
           features={[
+<<<<<<< HEAD
+            'Everything in Professional',
+            'Custom integrations',
+            'Advanced AI features',
+            'Custom reporting',
+            'Dedicated support',
+            'SLA guarantees',
+            'Custom development',
+          ]}
+        />
+      </div>
+
+      <div className="mt-12 text-center">
+        <h3 className="text-2xl font-bold text-gray-900 mb-4">Ready to Build Your Social Platform?</h3>
+=======
             "Everything in Professional",
             "Custom integrations",
             "Advanced AI features",
@@ -343,6 +414,7 @@ function Pricing() {
         <h3 className="text-2xl font-bold text-gray-900 mb-4">
           Ready to Build Your Social Platform?
         </h3>"
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
         <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
           Let's create a powerful social media management platform that;
           streamlines your content strategy and drives engagement.
@@ -390,6 +462,9 @@ function Pricing() {
 }
 
 <<<<<<< HEAD
+function Plan({ name, price, duration, features }: {
+=======
+<<<<<<< HEAD
 function Plan({}
 =======
 function Plan({
@@ -403,10 +478,13 @@ function Plan({
 =======
 }: {
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
   name: string;
   price: string;
   duration: string;
   features: string[];
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 }) {}
   return ("
@@ -419,6 +497,7 @@ function Plan({
           <li key={index} className="flex items-start">"
             <span className="text-green-500 mr-2 mt-1">✓</span>"
 =======
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
 }) {
   return (
     <div className="border border-gray-200 rounded-xl p-6 bg-white hover:shadow-lg transition-shadow">
@@ -435,6 +514,8 @@ function Plan({
         ))}
       </ul>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
       <a"
         href="mailto:kleber@ziontechgroup.com?subject=Social Media Management Platform Inquiry""
         className="block w-full mt-6 bg-pink-600 text-white text-center py-3 rounded-lg font-semibold hover:bg-pink-700 transition-colors"
@@ -447,6 +528,7 @@ function Plan({
 }
 '"
 =======
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
       <a
         href="mailto:kleber@ziontechgroup.com?subject=Social Media Management Platform Inquiry"
         className="block w-full mt-6 bg-pink-600 text-white text-center py-3 rounded-lg font-semibold hover:bg-pink-700 transition-colors"
@@ -456,4 +538,7 @@ function Plan({
     </div>
   );
 }
+<<<<<<< HEAD
+=======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172

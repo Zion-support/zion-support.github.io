@@ -1,8 +1,14 @@
 <<<<<<< HEAD
 export const metadata = {
+  title: 'AI Data Analysis Platform | Zion Tech Group',
+  description: 'Build AI-powered data analysis platforms with automated insights, predictive analytics, and business intelligence. Professional data AI solutions starting at $18k.',
+=======
+<<<<<<< HEAD
+export const metadata = {
   title: "AI Data Analysis Platform | Zion Tech Group",
   description:
     "Build AI-powered data analysis platforms with automated insights, predictive analytics, and business intelligence. Professional data AI solutions starting at $18k.",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
 };
 
 export default function AIDataAnalysisPage() {
@@ -21,6 +27,15 @@ export default function AIDataAnalysisPage() {
           <Item
             title="Automated Insights"
             details={[
+<<<<<<< HEAD
+              'Pattern recognition',
+              'Anomaly detection',
+              'Trend analysis',
+              'Correlation discovery',
+              'Automated reporting',
+              'Natural language queries',
+              'Insight recommendations',
+=======
               "Pattern recognition",
               "Anomaly detection",
               "Trend analysis",
@@ -28,11 +43,21 @@ export default function AIDataAnalysisPage() {
               "Automated reporting",
               "Natural language queries",
               "Insight recommendations",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
             ]}
           />
           <Item
             title="Predictive Analytics"
             details={[
+<<<<<<< HEAD
+              'Forecasting models',
+              'Risk assessment',
+              'Customer behavior prediction',
+              'Demand forecasting',
+              'Churn prediction',
+              'Revenue optimization',
+              'Scenario planning',
+=======
               "Forecasting models",
               "Risk assessment",
               "Customer behavior prediction",
@@ -40,11 +65,21 @@ export default function AIDataAnalysisPage() {
               "Churn prediction",
               "Revenue optimization",
               "Scenario planning",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
             ]}
           />
           <Item
             title="Data Processing"
             details={[
+<<<<<<< HEAD
+              'Real-time data ingestion',
+              'Data cleaning automation',
+              'Feature engineering',
+              'Model training',
+              'Data validation',
+              'ETL pipelines',
+              'Data quality monitoring',
+=======
               "Real-time data ingestion",
               "Data cleaning automation",
               "Feature engineering",
@@ -52,6 +87,7 @@ export default function AIDataAnalysisPage() {
               "Data validation",
               "ETL pipelines",
               "Data quality monitoring",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
             ]}
           />
         </div>
@@ -298,6 +334,15 @@ function Pricing() {
           price="$18k–$35k"
           duration="8–12 weeks"
           features={[
+<<<<<<< HEAD
+            'Basic data analysis',
+            'Automated insights',
+            'Simple dashboards',
+            'Data visualization',
+            'Basic ML models',
+            'API access',
+            'Standard support',
+=======
             "Basic data analysis",
             "Automated insights",
             "Simple dashboards",
@@ -305,6 +350,7 @@ function Pricing() {
             "Basic ML models",
             "API access",
             "Standard support",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
         />
         <Plan
@@ -312,6 +358,15 @@ function Pricing() {
           price="$35k–$70k"
           duration="12–20 weeks"
           features={[
+<<<<<<< HEAD
+            'Everything in Insights',
+            'Advanced ML models',
+            'Predictive forecasting',
+            'Real-time processing',
+            'Custom algorithms',
+            'Advanced visualizations',
+            'Priority support',
+=======
             "Everything in Insights",
             "Advanced ML models",
             "Predictive forecasting",
@@ -319,6 +374,7 @@ function Pricing() {
             "Custom algorithms",
             "Advanced visualizations",
             "Priority support",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
         />
         <Plan
@@ -326,6 +382,21 @@ function Pricing() {
           price="$70k+"
           duration="16–28 weeks"
           features={[
+<<<<<<< HEAD
+            'Everything in Predictive',
+            'Custom AI development',
+            'Advanced security',
+            'Multi-tenant architecture',
+            'Dedicated support',
+            'SLA guarantees',
+            'On-premise deployment',
+          ]}
+        />
+      </div>
+
+      <div className="mt-12 text-center">
+        <h3 className="text-2xl font-bold text-gray-900 mb-4">Ready to Build Your AI Data Platform?</h3>
+=======
             "Everything in Predictive",
             "Custom AI development",
             "Advanced security",
@@ -343,6 +414,7 @@ function Pricing() {
         <h3 className="text-2xl font-bold text-gray-900 mb-4">
           Ready to Build Your AI Data Platform?
         </h3>"
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
         <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
           Let's create a powerful AI data analysis platform that transforms your;
           data into actionable business insights.
@@ -390,6 +462,9 @@ function Pricing() {
 }
 
 <<<<<<< HEAD
+function Plan({ name, price, duration, features }: {
+=======
+<<<<<<< HEAD
 function Plan({}
 =======
 function Plan({
@@ -403,10 +478,13 @@ function Plan({
 =======
 }: {
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
   name: string;
   price: string;
   duration: string;
   features: string[];
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 }) {}
   return ("
@@ -419,6 +497,7 @@ function Plan({
           <li key={index} className="flex items-start">"
             <span className="text-green-500 mr-2 mt-1">✓</span>"
 =======
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
 }) {
   return (
     <div className="border border-gray-200 rounded-xl p-6 bg-white hover:shadow-lg transition-shadow">
@@ -435,6 +514,8 @@ function Plan({
         ))}
       </ul>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
       <a"
         href="mailto:kleber@ziontechgroup.com?subject=AI Data Analysis Platform Inquiry""
         className="block w-full mt-6 bg-green-600 text-white text-center py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors"
@@ -447,6 +528,7 @@ function Plan({
 }
 '"
 =======
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
       <a
         href="mailto:kleber@ziontechgroup.com?subject=AI Data Analysis Platform Inquiry"
         className="block w-full mt-6 bg-green-600 text-white text-center py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors"
@@ -456,4 +538,7 @@ function Plan({
     </div>
   );
 }
+<<<<<<< HEAD
+=======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172

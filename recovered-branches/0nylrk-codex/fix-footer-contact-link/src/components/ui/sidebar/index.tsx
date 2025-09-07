@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+export * from './sidebar-context';
+export * from './sidebar-trigger';
+export * from './sidebar-main';
+export * from './sidebar-content';
+export * from './sidebar-group';
+export * from './sidebar-menu';
+=======
 
 import * as React from "react"
 ;
@@ -166,3 +174,4 @@ export type { SafeRef } from &quot;../sidebar.types&quot;
 export type { SafeRef } from "../sidebar.types"""
 pr-12325
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172

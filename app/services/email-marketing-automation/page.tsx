@@ -1,13 +1,23 @@
 <<<<<<< HEAD
 export const metadata = {
+  title: 'Email Marketing Automation | Zion Tech Group',
+  description: 'Boost your email marketing ROI with AI-powered automation, personalized campaigns, and advanced analytics.',
+=======
+<<<<<<< HEAD
+export const metadata = {
   title: "Email Marketing Automation | Zion Tech Group",
   description:
     "Boost your email marketing ROI with AI-powered automation, personalized campaigns, and advanced analytics.",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
 };
 
 export default function EmailMarketingAutomationPage() {
   return (
     <section className="max-w-6xl mx-auto px-4 py-16">
+<<<<<<< HEAD
+      <h1 className="text-4xl font-bold text-gray-900 mb-6">Email Marketing Automation</h1>
+      <p className="text-xl text-gray-600 mb-12">Boost your email marketing ROI with AI-powered automation, personalized campaigns, and advanced analytics.</p>
+=======
       <h1 className="text-4xl font-bold text-gray-900 mb-6">
         Email Marketing Automation
       </h1>
@@ -15,33 +25,55 @@ export default function EmailMarketingAutomationPage() {
         Boost your email marketing ROI with AI-powered automation, personalized
         campaigns, and advanced analytics.
       </p>
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
         <FeatureCard
           title="AI-Powered Campaigns"
           features={[
+<<<<<<< HEAD
+            'Personalized content generation',
+            'Optimal send time prediction',
+            'Subject line optimization',
+            'A/B testing automation',
+=======
             "Personalized content generation",
             "Optimal send time prediction",
             "Subject line optimization",
             "A/B testing automation",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
         />
         <FeatureCard
           title="Advanced Segmentation"
           features={[
+<<<<<<< HEAD
+            'Behavioral targeting',
+            'Demographic analysis',
+            'Engagement scoring',
+            'Dynamic lists',
+=======
             "Behavioral targeting",
             "Demographic analysis",
             "Engagement scoring",
             "Dynamic lists",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
         />
         <FeatureCard
           title="Comprehensive Analytics"
           features={[
+<<<<<<< HEAD
+            'ROI tracking',
+            'Engagement metrics',
+            'Conversion analysis',
+            'Predictive insights',
+=======
             "ROI tracking",
             "Engagement metrics",
             "Conversion analysis",
             "Predictive insights",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
         />
       </div>
@@ -98,6 +130,10 @@ export default function EmailMarketingAutomationPage() {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
+
+      <Pricing />
+=======
 <<<<<<< HEAD
 =======
 export const metadata = {}
@@ -225,6 +261,7 @@ export default function EmailMarketingAutomationPage() {}
 =======
 
       <Pricing />
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
 
       <div className="mt-16 text-center">
         <h2 className="text-2xl font-bold text-gray-900 mb-4">
@@ -329,16 +366,33 @@ function Pricing() {
           name="Starter"
           price="$49/mo"
           features={[
+<<<<<<< HEAD
+            'Up to 5,000 subscribers',
+            'Basic automation',
+            'Email templates',
+            'Email support',
+=======
             "Up to 5,000 subscribers",
             "Basic automation",
             "Email templates",
             "Email support",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
         />
         <Plan
           name="Professional"
           price="$149/mo"
           features={[
+<<<<<<< HEAD
+            'Up to 25,000 subscribers',
+            'Advanced AI features',
+            'A/B testing',
+            'Priority support',
+            'Custom integrations',
+          ]}
+          popular={true}
+        />
+=======
             "Up to 25,000 subscribers",
             "Advanced AI features",
             "A/B testing",
@@ -358,16 +412,25 @@ function Pricing() {
             "White-label solution","
             "Dedicated support","
 =======
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
         <Plan
           name="Enterprise"
           price="$399/mo"
           features={[
+<<<<<<< HEAD
+            'Unlimited subscribers',
+            'Custom AI models',
+            'White-label solution',
+            'Dedicated support',
+            'Advanced analytics',
+=======
             "Unlimited subscribers",
             "Custom AI models",
             "White-label solution",
             "Dedicated support",
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             "Advanced analytics",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
         />
       </div>
@@ -431,6 +494,8 @@ function Plan({
         ))}
       </ul>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
       <a"
         href="tel:+13024640950"`
         className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors text-center block ${}
@@ -447,12 +512,18 @@ function Plan({
 }
 "`
 =======
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
       <a
         href="tel:+13024640950"
         className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors text-center block ${
           popular
+<<<<<<< HEAD
+            ? 'bg-pink-600 text-white hover:bg-pink-700'
+            : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
+=======
             ? "bg-pink-600 text-white hover:bg-pink-700"
             : "bg-gray-100 text-gray-900 hover:bg-gray-200"
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
         }`}
       >
         Get Started
@@ -460,4 +531,7 @@ function Plan({
     </div>
   );
 }
+<<<<<<< HEAD
+=======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172

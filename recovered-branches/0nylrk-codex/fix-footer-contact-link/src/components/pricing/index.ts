@@ -19,6 +19,8 @@ export const Index = () => {
   return null
 };
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 export * from './PricingSuggestionBox',;
@@ -72,3 +74,4 @@ export * from \"./PricingSuggestionBox\";
 export * from \"./ClientBudgetRecommender\";
 export * from \"./TalentRateRecommender\";
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172

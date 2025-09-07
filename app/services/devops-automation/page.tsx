@@ -1,4 +1,9 @@
 <<<<<<< HEAD
+export const metadata = {
+  title: 'DevOps Automation Services | Zion Tech Group',
+  description: 'Professional DevOps automation with CI/CD pipelines, infrastructure as code, and monitoring solutions. DevOps services starting at $12k.',
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 import Link from 'next/link';
@@ -19,10 +24,57 @@ export const metadata = {
   description:
     "Streamline your development workflow with comprehensive DevOps automation solutions. CI/CD, infrastructure as code, and monitoring.",
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
 };
 
 export default function ServicePage() {
   return (
+<<<<<<< HEAD
+    <div className="max-w-6xl mx-auto px-4 py-8">
+      <section className="mb-12">
+        <h1 className="text-4xl font-bold text-gray-900 mb-6">DevOps Automation Services</h1>
+        <p className="text-xl text-gray-600 mb-8">
+          Professional DevOps automation with CI/CD pipelines, infrastructure as code, monitoring, and deployment automation solutions.
+        </p>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+          <Item
+            title="CI/CD Pipelines"
+            details={[
+              'Automated testing',
+              'Build automation',
+              'Deployment pipelines',
+              'Quality gates',
+              'Rollback automation',
+              'Multi-environment support',
+              'Performance testing',
+            ]}
+          />
+          <Item
+            title="Infrastructure as Code"
+            details={[
+              'Terraform automation',
+              'Ansible playbooks',
+              'Kubernetes deployment',
+              'Docker containerization',
+              'Server provisioning',
+              'Configuration management',
+              'Environment replication',
+            ]}
+          />
+          <Item
+            title="Monitoring & Observability"
+            details={[
+              'Application monitoring',
+              'Infrastructure monitoring',
+              'Log aggregation',
+              'Alerting systems',
+              'Performance metrics',
+              'Error tracking',
+              'Uptime monitoring',
+            ]}
+          />
+=======
 <<<<<<< HEAD
     <div className="animate-fade-in">
       <section className="py-12">
@@ -33,6 +85,7 @@ export default function ServicePage() {
           <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
             Service description goes here.
           </p>
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
         </div>
 
         {/* Key Features */}
@@ -81,6 +134,83 @@ export default function ServicePage() {
           </a>
         </div>
       </section>
+<<<<<<< HEAD
+
+      <Pricing />
+    </div>
+  );
+}
+
+function Item({ title, details }: { title: string; details: string[] }) {
+  return (
+    <div className="border border-gray-200 rounded-xl p-6 bg-white">
+      <h3 className="text-lg font-semibold text-gray-900 mb-4">{title}</h3>
+      <ul className="space-y-2">
+        {details.map((detail, index) => (
+          <li key={index} className="flex items-start">
+            <span className="text-green-500 mr-2 mt-1">•</span>
+            <span className="text-gray-600">{detail}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+function Pricing() {
+  return (
+    <section>
+      <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">DevOps Automation Pricing</h2>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <Plan
+          name="Basic DevOps"
+          price="$12k–$25k"
+          duration="4–8 weeks"
+          features={[
+            'Basic CI/CD pipeline',
+            'Docker containerization',
+            'Simple monitoring',
+            'Automated testing',
+            'Basic documentation',
+            'Email support',
+            '30-day warranty',
+          ]}
+        />
+        <Plan
+          name="Professional DevOps"
+          price="$25k–$50k"
+          duration="8–16 weeks"
+          features={[
+            'Everything in Basic',
+            'Advanced CI/CD',
+            'Infrastructure as Code',
+            'Comprehensive monitoring',
+            'Security automation',
+            'Priority support',
+            '90-day warranty',
+          ]}
+        />
+        <Plan
+          name="Enterprise DevOps"
+          price="$50k+"
+          duration="12–24 weeks"
+          features={[
+            'Everything in Professional',
+            'Custom automation',
+            'Multi-cloud deployment',
+            'Advanced security',
+            'Dedicated support',
+            'SLA guarantees',
+            'Ongoing optimization',
+          ]}
+        />
+      </div>
+
+      <div className="mt-12 text-center">
+        <h3 className="text-2xl font-bold text-gray-900 mb-4">Ready to Automate Your DevOps?</h3>
+        <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
+          Let's implement DevOps automation that accelerates your development cycle and improves reliability.
+=======
 =======
 <div className="animate-fade-in">
       <div className="text-center mb-16">
@@ -330,6 +460,7 @@ export default function ServicePage() {
         <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
           Let us help you implement DevOps best practices and automation to
           accelerate your development process.
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
@@ -353,6 +484,13 @@ className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semi
   );
 }
 
+<<<<<<< HEAD
+function Plan({ name, price, duration, features }: {
+  name: string;
+  price: string;
+  duration: string;
+  features: string[];
+=======
 function FeatureItem({
   icon,
   title,
@@ -361,6 +499,7 @@ function FeatureItem({
   icon: string;
   title: string;
   description: string;
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
 }) {
   return (
     <div className="flex items-start space-x-4">
@@ -411,6 +550,14 @@ function PricingCard({
           </li>
         ))}
       </ul>
+<<<<<<< HEAD
+      <a
+        href="mailto:kleber@ziontechgroup.com?subject=DevOps Automation Services Inquiry"
+        className="block w-full mt-6 bg-green-600 text-white text-center py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors"
+      >
+        Get Started
+      </a>
+=======
 </div>
   );
 }
@@ -432,6 +579,7 @@ function StepCard({
       <h3 className="text-lg font-semibold text-gray-900 mb-2">{title}</h3>
       <p className="text-gray-600">{description}</p>
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
     </div>
   );
 }

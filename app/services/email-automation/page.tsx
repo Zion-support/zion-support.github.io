@@ -1,8 +1,14 @@
 <<<<<<< HEAD
 export const metadata = {
+  title: 'Email Automation Platform | Zion Tech Group',
+  description: 'Build powerful email automation platforms with drip campaigns, personalization, and analytics. Professional email marketing solutions starting at $12k.',
+=======
+<<<<<<< HEAD
+export const metadata = {
   title: "Email Automation Platform | Zion Tech Group",
   description:
     "Build powerful email automation platforms with drip campaigns, personalization, and analytics. Professional email marketing solutions starting at $12k.",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
 };
 
 export default function EmailAutomationPage() {
@@ -21,6 +27,15 @@ export default function EmailAutomationPage() {
           <Item
             title="Campaign Management"
             details={[
+<<<<<<< HEAD
+              'Visual email builder',
+              'Drip campaign sequences',
+              'A/B testing framework',
+              'Send time optimization',
+              'List segmentation',
+              'Template library',
+              'Mobile-responsive design',
+=======
               "Visual email builder",
               "Drip campaign sequences",
               "A/B testing framework",
@@ -28,11 +43,21 @@ export default function EmailAutomationPage() {
               "List segmentation",
               "Template library",
               "Mobile-responsive design",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
             ]}
           />
           <Item
             title="Personalization & AI"
             details={[
+<<<<<<< HEAD
+              'Dynamic content blocks',
+              'AI-powered subject lines',
+              'Behavioral triggers',
+              'Customer journey mapping',
+              'Predictive analytics',
+              'Smart recommendations',
+              'Real-time personalization',
+=======
               "Dynamic content blocks",
               "AI-powered subject lines",
               "Behavioral triggers",
@@ -40,11 +65,21 @@ export default function EmailAutomationPage() {
               "Predictive analytics",
               "Smart recommendations",
               "Real-time personalization",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
             ]}
           />
           <Item
             title="Analytics & Insights"
             details={[
+<<<<<<< HEAD
+              'Open & click tracking',
+              'Revenue attribution',
+              'Engagement scoring',
+              'Deliverability monitoring',
+              'ROI reporting',
+              'Heatmap analysis',
+              'Custom dashboards',
+=======
               "Open & click tracking",
               "Revenue attribution",
               "Engagement scoring",
@@ -52,6 +87,7 @@ export default function EmailAutomationPage() {
               "ROI reporting",
               "Heatmap analysis",
               "Custom dashboards",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
             ]}
           />
         </div>
@@ -294,6 +330,15 @@ function Pricing() {
           price="$12k–$25k"
           duration="4–6 weeks"
           features={[
+<<<<<<< HEAD
+            'Basic email builder',
+            'Drip campaigns',
+            'List management',
+            'Basic analytics',
+            'Template library',
+            'API integration',
+            'Email testing',
+=======
             "Basic email builder",
             "Drip campaigns",
             "List management",
@@ -301,6 +346,7 @@ function Pricing() {
             "Template library",
             "API integration",
             "Email testing",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
         />
         <Plan
@@ -308,6 +354,15 @@ function Pricing() {
           price="$25k–$50k"
           duration="6–10 weeks"
           features={[
+<<<<<<< HEAD
+            'Everything in Starter',
+            'Advanced personalization',
+            'A/B testing suite',
+            'Behavioral triggers',
+            'Advanced analytics',
+            'CRM integration',
+            'White-label options',
+=======
             "Everything in Starter",
             "Advanced personalization",
             "A/B testing suite",
@@ -315,6 +370,7 @@ function Pricing() {
             "Advanced analytics",
             "CRM integration",
             "White-label options",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
         />
         <Plan
@@ -322,6 +378,21 @@ function Pricing() {
           price="$50k+"
           duration="8–12 weeks"
           features={[
+<<<<<<< HEAD
+            'Everything in Professional',
+            'AI-powered features',
+            'Advanced segmentation',
+            'Custom integrations',
+            'Dedicated support',
+            'SLA guarantees',
+            'Custom development',
+          ]}
+        />
+      </div>
+
+      <div className="mt-12 text-center">
+        <h3 className="text-2xl font-bold text-gray-900 mb-4">Ready to Build Your Email Platform?</h3>
+=======
             "Everything in Professional",
             "AI-powered features",
             "Advanced segmentation",
@@ -339,6 +410,7 @@ function Pricing() {
         <h3 className="text-2xl font-bold text-gray-900 mb-4">
           Ready to Build Your Email Platform?
         </h3>"
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
         <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
           Let's create a powerful email automation platform that drives;
           engagement and revenue for your business.
@@ -386,6 +458,9 @@ function Pricing() {
 }
 
 <<<<<<< HEAD
+function Plan({ name, price, duration, features }: {
+=======
+<<<<<<< HEAD
 function Plan({}
 =======
 function Plan({
@@ -399,10 +474,13 @@ function Plan({
 =======
 }: {
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
   name: string;
   price: string;
   duration: string;
   features: string[];
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 }) {}
   return ("
@@ -415,6 +493,7 @@ function Plan({
           <li key={index} className="flex items-start">"
             <span className="text-green-500 mr-2 mt-1">✓</span>"
 =======
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
 }) {
   return (
     <div className="border border-gray-200 rounded-xl p-6 bg-white hover:shadow-lg transition-shadow">
@@ -431,6 +510,8 @@ function Plan({
         ))}
       </ul>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
       <a"
         href="mailto:kleber@ziontechgroup.com?subject=Email Automation Platform Inquiry""
         className="block w-full mt-6 bg-green-600 text-white text-center py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors"
@@ -443,6 +524,7 @@ function Plan({
 }
 '"
 =======
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
       <a
         href="mailto:kleber@ziontechgroup.com?subject=Email Automation Platform Inquiry"
         className="block w-full mt-6 bg-green-600 text-white text-center py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors"
@@ -452,4 +534,7 @@ function Plan({
     </div>
   );
 }
+<<<<<<< HEAD
+=======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172

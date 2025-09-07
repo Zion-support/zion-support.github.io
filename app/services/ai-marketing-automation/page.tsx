@@ -1,7 +1,11 @@
+<<<<<<< HEAD
+export const metadata = { title: 'AI Marketing Automation | Zion Tech Group' };
+=======
 import React from 'react';
 import Link from 'next/link';
 
 
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
 
 export default function AIMarketingAutomationPage() {
   return (
@@ -15,6 +19,90 @@ export default function AIMarketingAutomationPage() {
           Transform your marketing with AI-driven personalization, predictive analytics, and automated campaign optimization. 
           Our platform increases conversion rates by 60% and reduces marketing costs by 40%.
         </p>
+<<<<<<< HEAD
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+        <FeatureCard
+          title="AI-Powered Campaigns"
+          features={[
+            'Automated email marketing sequences',
+            'Social media content generation',
+            'Personalized ad targeting',
+            'A/B testing optimization',
+            'Cross-channel campaign orchestration',
+            'Real-time campaign adjustments',
+          ]}
+          icon="📧"
+        />
+        <FeatureCard
+          title="Customer Segmentation"
+          features={[
+            'AI-driven customer profiling',
+            'Behavioral segmentation',
+            'Predictive customer scoring',
+            'Dynamic audience creation',
+            'Lifecycle stage identification',
+            'Churn prediction & prevention',
+          ]}
+          icon="🎯"
+        />
+        <FeatureCard
+          title="Analytics & Optimization"
+          features={[
+            'Real-time performance tracking',
+            'ROI analysis & attribution',
+            'Predictive analytics & forecasting',
+            'Automated optimization recommendations',
+            'Customer journey mapping',
+            'Competitive intelligence',
+          ]}
+          icon="📊"
+        />
+      </div>
+
+      <div className="bg-gradient-to-r from-yellow-50 to-orange-50 border border-yellow-200 rounded-xl p-8 mb-16">
+        <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">
+          Marketing Automation Results
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="text-center">
+            <div className="text-4xl mb-4">📈</div>
+            <h3 className="text-lg font-semibold text-gray-900 mb-2">
+              300% ROI Increase
+            </h3>
+            <p className="text-gray-600">
+              AI optimization boosts marketing returns
+            </p>
+          </div>
+          <div className="text-center">
+            <div className="text-4xl mb-4">⚡</div>
+            <h3 className="text-lg font-semibold text-gray-900 mb-2">
+              75% Time Savings
+            </h3>
+            <p className="text-gray-600">
+              Automated workflows reduce manual tasks
+            </p>
+          </div>
+          <div className="text-center">
+            <div className="text-4xl mb-4">🎯</div>
+            <h3 className="text-lg font-semibold text-gray-900 mb-2">
+              45% Higher Engagement
+            </h3>
+            <p className="text-gray-600">
+              Personalized content drives better results
+            </p>
+          </div>
+          <div className="text-center">
+            <div className="text-4xl mb-4">💰</div>
+            <h3 className="text-lg font-semibold text-gray-900 mb-2">
+              50% Cost Reduction
+            </h3>
+            <p className="text-gray-600">
+              Efficient automation reduces ad spend waste
+            </p>
+          </div>
+=======
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
             href="mailto:kleber@ziontechgroup.com?subject=AI Marketing Automation Platform Inquiry"
@@ -28,6 +116,7 @@ export default function AIMarketingAutomationPage() {
           >
             Call +1 302 464 0950
           </a>
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
         </div>
       </section>
 
@@ -299,7 +388,73 @@ function FeatureCard({ icon, title, description, benefits }: FeatureCardProps) {
   );
 }
 
+<<<<<<< HEAD
+function PricingSection() {
+  return (
+    <div className="mb-16">
+      <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+        Marketing Automation Pricing
+      </h2>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <PricingCard
+          name="Starter Marketing"
+          price="$149/mo"
+          duration="Up to 10,000 contacts"
+          features={[
+            'Basic email automation',
+            'Simple segmentation',
+            'Standard templates',
+            'Basic analytics',
+            'Email support',
+            'Mobile app access',
+          ]}
+          popular={false}
+        />
+        <PricingCard
+          name="Professional Marketing"
+          price="$399/mo"
+          duration="Up to 50,000 contacts"
+          features={[
+            'Everything in Starter Marketing',
+            'AI-powered personalization',
+            'Advanced automation workflows',
+            'Multi-channel campaigns',
+            'Advanced analytics & reporting',
+            'API access & integrations',
+            'Priority support',
+          ]}
+          popular={true}
+        />
+        <PricingCard
+          name="Enterprise Marketing"
+          price="$999/mo"
+          duration="Unlimited contacts"
+          features={[
+            'Everything in Professional Marketing',
+            'Custom AI model development',
+            'Advanced security & compliance',
+            'Dedicated marketing strategist',
+            'Custom integrations',
+            'White-label options',
+            '24/7 phone support',
+          ]}
+          popular={false}
+        />
+      </div>
+    </div>
+  );
+}
+
+function PricingCard({
+  name,
+  price,
+  duration,
+  features,
+  popular,
+}: {
+=======
 function PricingCard({ name, price, period, description, features, popular }: {
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
   name: string;
   price: string;
   period: string;
@@ -308,6 +463,11 @@ function PricingCard({ name, price, period, description, features, popular }: {
   popular: boolean;
 }) {
   return (
+<<<<<<< HEAD
+    <div
+      className={`relative bg-white border-2 rounded-xl p-8 ${popular ? 'border-yellow-500 shadow-lg' : 'border-gray-200'}`}
+    >
+=======
     <div className={`relative p-8 rounded-lg border-2 ${popular ? 'border-blue-500 bg-blue-50' : 'border-gray-200 bg-white'} shadow-lg`}>
 function PricingTier({ 
   name, 
@@ -326,6 +486,7 @@ function PricingTier({
 }) {
   return (
     <div className={`border rounded-xl p-8 relative ${popular ? 'border-blue-500 bg-blue-50' : 'border-gray-200 bg-white'}`}>
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
       {popular && (
         <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
           <span className="bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
@@ -355,8 +516,13 @@ function PricingTier({
         href="mailto:kleber@ziontechgroup.com?subject=AI Marketing Automation - {name} Plan"
         className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
           popular
+<<<<<<< HEAD
+            ? 'bg-yellow-600 text-white hover:bg-yellow-700'
+            : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
+=======
             ? 'bg-blue-600 text-white hover:bg-blue-700'
             : 'bg-gray-900 text-white hover:bg-gray-800'
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
         }`}
       >
         Get Started

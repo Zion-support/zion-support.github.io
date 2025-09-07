@@ -1,8 +1,14 @@
 <<<<<<< HEAD
 export const metadata = {
+  title: 'AI Chatbot Development | Zion Tech Group',
+  description: 'Build intelligent AI chatbots with natural language processing, multi-channel support, and custom integrations. Professional chatbot solutions starting at $8k.',
+=======
+<<<<<<< HEAD
+export const metadata = {
   title: "AI Chatbot Development | Zion Tech Group",
   description:
     "Build intelligent AI chatbots with natural language processing, multi-channel support, and custom integrations. Professional chatbot solutions starting at $8k.",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
 };
 
 export default function AIChatbotPage() {
@@ -21,6 +27,15 @@ export default function AIChatbotPage() {
           <Item
             title="Natural Language Processing"
             details={[
+<<<<<<< HEAD
+              'Intent recognition',
+              'Entity extraction',
+              'Context understanding',
+              'Multi-language support',
+              'Sentiment analysis',
+              'Conversation flow',
+              'Fallback handling',
+=======
               "Intent recognition",
               "Entity extraction",
               "Context understanding",
@@ -28,11 +43,21 @@ export default function AIChatbotPage() {
               "Sentiment analysis",
               "Conversation flow",
               "Fallback handling",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
             ]}
           />
           <Item
             title="Multi-Channel Integration"
             details={[
+<<<<<<< HEAD
+              'Website chat widget',
+              'Facebook Messenger',
+              'WhatsApp Business',
+              'Slack integration',
+              'Telegram support',
+              'Voice interfaces',
+              'Mobile apps',
+=======
               "Website chat widget",
               "Facebook Messenger",
               "WhatsApp Business",
@@ -40,11 +65,21 @@ export default function AIChatbotPage() {
               "Telegram support",
               "Voice interfaces",
               "Mobile apps",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
             ]}
           />
           <Item
             title="Advanced Features"
             details={[
+<<<<<<< HEAD
+              'Human handoff',
+              'Knowledge base integration',
+              'API connections',
+              'Analytics dashboard',
+              'A/B testing',
+              'Custom training',
+              'White-label options',
+=======
               "Human handoff",
               "Knowledge base integration",
               "API connections",
@@ -52,6 +87,7 @@ export default function AIChatbotPage() {
               "A/B testing",
               "Custom training",
               "White-label options",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
             ]}
           />
         </div>
@@ -298,6 +334,15 @@ function Pricing() {
           price="$8k–$15k"
           duration="4–6 weeks"
           features={[
+<<<<<<< HEAD
+            'Basic NLP capabilities',
+            'Single channel integration',
+            'Pre-built responses',
+            'Simple analytics',
+            'Basic customization',
+            'Email support',
+            'Standard hosting',
+=======
             "Basic NLP capabilities",
             "Single channel integration",
             "Pre-built responses",
@@ -305,6 +350,7 @@ function Pricing() {
             "Basic customization",
             "Email support",
             "Standard hosting",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
         />
         <Plan
@@ -312,6 +358,15 @@ function Pricing() {
           price="$15k–$35k"
           duration="6–10 weeks"
           features={[
+<<<<<<< HEAD
+            'Everything in Basic',
+            'Multi-channel support',
+            'Custom training',
+            'Advanced analytics',
+            'API integrations',
+            'Human handoff',
+            'Priority support',
+=======
             "Everything in Basic",
             "Multi-channel support",
             "Custom training",
@@ -319,6 +374,7 @@ function Pricing() {
             "API integrations",
             "Human handoff",
             "Priority support",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
         />
         <Plan
@@ -326,6 +382,21 @@ function Pricing() {
           price="$35k+"
           duration="8–16 weeks"
           features={[
+<<<<<<< HEAD
+            'Everything in Professional',
+            'Custom development',
+            'Advanced AI models',
+            'White-label options',
+            'Dedicated support',
+            'SLA guarantees',
+            'On-premise deployment',
+          ]}
+        />
+      </div>
+
+      <div className="mt-12 text-center">
+        <h3 className="text-2xl font-bold text-gray-900 mb-4">Ready to Build Your AI Chatbot?</h3>
+=======
             "Everything in Professional",
             "Custom development",
             "Advanced AI models",
@@ -343,6 +414,7 @@ function Pricing() {
         <h3 className="text-2xl font-bold text-gray-900 mb-4">
           Ready to Build Your AI Chatbot?
         </h3>"
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
         <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
           Let's create an intelligent chatbot that enhances customer experience;
           and reduces support workload.
@@ -390,6 +462,9 @@ function Pricing() {
 }
 
 <<<<<<< HEAD
+function Plan({ name, price, duration, features }: {
+=======
+<<<<<<< HEAD
 function Plan({}
 =======
 function Plan({
@@ -403,10 +478,13 @@ function Plan({
 =======
 }: {
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
   name: string;
   price: string;
   duration: string;
   features: string[];
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 }) {}
   return ("
@@ -419,6 +497,7 @@ function Plan({
           <li key={index} className="flex items-start">"
             <span className="text-green-500 mr-2 mt-1">✓</span>"
 =======
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
 }) {
   return (
     <div className="border border-gray-200 rounded-xl p-6 bg-white hover:shadow-lg transition-shadow">
@@ -435,6 +514,8 @@ function Plan({
         ))}
       </ul>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
       <a"
         href="mailto:kleber@ziontechgroup.com?subject=AI Chatbot Development Inquiry""
         className="block w-full mt-6 bg-blue-600 text-white text-center py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
@@ -447,6 +528,7 @@ function Plan({
 }
 '"
 =======
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
       <a
         href="mailto:kleber@ziontechgroup.com?subject=AI Chatbot Development Inquiry"
         className="block w-full mt-6 bg-blue-600 text-white text-center py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
@@ -456,4 +538,7 @@ function Plan({
     </div>
   );
 }
+<<<<<<< HEAD
+=======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172

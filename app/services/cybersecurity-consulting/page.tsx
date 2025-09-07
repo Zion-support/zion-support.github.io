@@ -1,13 +1,23 @@
 <<<<<<< HEAD
 export const metadata = {
+  title: 'Cybersecurity Consulting | Zion Tech Group',
+  description: 'Protect your business with comprehensive cybersecurity consulting, risk assessment, and security implementation services.',
+=======
+<<<<<<< HEAD
+export const metadata = {
   title: "Cybersecurity Consulting | Zion Tech Group",
   description:
     "Protect your business with comprehensive cybersecurity consulting, risk assessment, and security implementation services.",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
 };
 
 export default function CybersecurityConsultingPage() {
   return (
     <section className="max-w-6xl mx-auto px-4 py-16">
+<<<<<<< HEAD
+      <h1 className="text-4xl font-bold text-gray-900 mb-6">Cybersecurity Consulting</h1>
+      <p className="text-xl text-gray-600 mb-12">Protect your business with comprehensive cybersecurity consulting, risk assessment, and security implementation services.</p>
+=======
       <h1 className="text-4xl font-bold text-gray-900 mb-6">
         Cybersecurity Consulting
       </h1>
@@ -15,33 +25,55 @@ export default function CybersecurityConsultingPage() {
         Protect your business with comprehensive cybersecurity consulting, risk
         assessment, and security implementation services.
       </p>
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
         <FeatureCard
           title="Security Assessment"
           features={[
+<<<<<<< HEAD
+            'Vulnerability scanning',
+            'Penetration testing',
+            'Risk analysis',
+            'Compliance auditing',
+=======
             "Vulnerability scanning",
             "Penetration testing",
             "Risk analysis",
             "Compliance auditing",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
         />
         <FeatureCard
           title="Security Implementation"
           features={[
+<<<<<<< HEAD
+            'Firewall configuration',
+            'Endpoint protection',
+            'Network security',
+            'Access controls',
+=======
             "Firewall configuration",
             "Endpoint protection",
             "Network security",
             "Access controls",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
         />
         <FeatureCard
           title="Incident Response"
           features={[
+<<<<<<< HEAD
+            '24/7 monitoring',
+            'Threat detection',
+            'Incident handling',
+            'Recovery planning',
+=======
             "24/7 monitoring",
             "Threat detection",
             "Incident handling",
             "Recovery planning",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
         />
       </div>
@@ -96,6 +128,10 @@ export default function CybersecurityConsultingPage() {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
+
+      <Pricing />
+=======
 <<<<<<< HEAD
 =======
 export const metadata = {}
@@ -221,6 +257,7 @@ export default function CybersecurityConsultingPage() {}
 =======
 
       <Pricing />
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
 
       <div className="mt-16 text-center">
         <h2 className="text-2xl font-bold text-gray-900 mb-4">
@@ -324,16 +361,32 @@ function Pricing() {
           name="Assessment"
           price="$5,999"
           features={[
+<<<<<<< HEAD
+            'Security audit',
+            'Vulnerability scan',
+            'Risk assessment report',
+            'Recommendations',
+=======
             "Security audit",
             "Vulnerability scan",
             "Risk assessment report",
             "Recommendations",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
         />
         <Plan
           name="Implementation"
           price="$15,999"
           features={[
+<<<<<<< HEAD
+            'Security setup',
+            'Tool configuration',
+            'Staff training',
+            '3 months support',
+          ]}
+          popular={true}
+        />
+=======
             "Security setup",
             "Tool configuration",
             "Staff training",
@@ -351,15 +404,23 @@ function Pricing() {
             "Incident response","
             "Regular assessments","
 =======
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
         <Plan
           name="Managed Security"
           price="$4,999/mo"
           features={[
+<<<<<<< HEAD
+            '24/7 monitoring',
+            'Incident response',
+            'Regular assessments',
+            'Dedicated support',
+=======
             "24/7 monitoring",
             "Incident response",
             "Regular assessments",
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             "Dedicated support",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
         />
       </div>
@@ -423,6 +484,8 @@ function Plan({
         ))}
       </ul>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
       <a"
         href="tel:+13024640950"`
         className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors text-center block ${}
@@ -439,12 +502,18 @@ function Plan({
 }
 "`
 =======
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
       <a
         href="tel:+13024640950"
         className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors text-center block ${
           popular
+<<<<<<< HEAD
+            ? 'bg-red-600 text-white hover:bg-red-700'
+            : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
+=======
             ? "bg-red-600 text-white hover:bg-red-700"
             : "bg-gray-100 text-gray-900 hover:bg-gray-200"
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
         }`}
       >
         Get Started
@@ -452,4 +521,7 @@ function Plan({
     </div>
   );
 }
+<<<<<<< HEAD
+=======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172

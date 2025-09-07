@@ -1,8 +1,14 @@
 <<<<<<< HEAD
 export const metadata = {
+  title: 'Helpdesk Platform Development | Zion Tech Group',
+  description: 'Build comprehensive helpdesk platforms with ticket management, knowledge base, and customer support tools. Professional helpdesk solutions starting at $14k.',
+=======
+<<<<<<< HEAD
+export const metadata = {
   title: "Helpdesk Platform Development | Zion Tech Group",
   description:
     "Build comprehensive helpdesk platforms with ticket management, knowledge base, and customer support tools. Professional helpdesk solutions starting at $14k.",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
 };
 
 export default function HelpdeskPlatformPage() {
@@ -21,6 +27,15 @@ export default function HelpdeskPlatformPage() {
           <Item
             title="Ticket Management"
             details={[
+<<<<<<< HEAD
+              'Multi-channel ticket creation',
+              'Priority & status tracking',
+              'Auto-assignment rules',
+              'SLA monitoring',
+              'Ticket routing',
+              'Escalation workflows',
+              'Bulk operations',
+=======
               "Multi-channel ticket creation",
               "Priority & status tracking",
               "Auto-assignment rules",
@@ -28,11 +43,21 @@ export default function HelpdeskPlatformPage() {
               "Ticket routing",
               "Escalation workflows",
               "Bulk operations",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
             ]}
           />
           <Item
             title="Knowledge Base"
             details={[
+<<<<<<< HEAD
+              'Article management',
+              'Search functionality',
+              'Category organization',
+              'Version control',
+              'Feedback system',
+              'Analytics tracking',
+              'Multi-language support',
+=======
               "Article management",
               "Search functionality",
               "Category organization",
@@ -40,11 +65,21 @@ export default function HelpdeskPlatformPage() {
               "Feedback system",
               "Analytics tracking",
               "Multi-language support",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
             ]}
           />
           <Item
             title="Customer Support"
             details={[
+<<<<<<< HEAD
+              'Live chat integration',
+              'Customer portal',
+              'Self-service options',
+              'Satisfaction surveys',
+              'Agent performance tracking',
+              'Reporting & analytics',
+              'Mobile app support',
+=======
               "Live chat integration",
               "Customer portal",
               "Self-service options",
@@ -52,6 +87,7 @@ export default function HelpdeskPlatformPage() {
               "Agent performance tracking",
               "Reporting & analytics",
               "Mobile app support",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
             ]}
           />
         </div>
@@ -298,6 +334,15 @@ function Pricing() {
           price="$14k–$28k"
           duration="6–10 weeks"
           features={[
+<<<<<<< HEAD
+            'Basic ticket management',
+            'Email integration',
+            'Simple knowledge base',
+            'Agent dashboard',
+            'Basic reporting',
+            'Mobile responsive',
+            'Standard support',
+=======
             "Basic ticket management",
             "Email integration",
             "Simple knowledge base",
@@ -305,6 +350,7 @@ function Pricing() {
             "Basic reporting",
             "Mobile responsive",
             "Standard support",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
         />
         <Plan
@@ -312,6 +358,15 @@ function Pricing() {
           price="$28k–$55k"
           duration="10–16 weeks"
           features={[
+<<<<<<< HEAD
+            'Everything in Basic',
+            'Live chat integration',
+            'Advanced automation',
+            'Customer portal',
+            'Advanced analytics',
+            'API integrations',
+            'Priority support',
+=======
             "Everything in Basic",
             "Live chat integration",
             "Advanced automation",
@@ -319,6 +374,7 @@ function Pricing() {
             "Advanced analytics",
             "API integrations",
             "Priority support",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
         />
         <Plan
@@ -326,6 +382,21 @@ function Pricing() {
           price="$55k+"
           duration="14–22 weeks"
           features={[
+<<<<<<< HEAD
+            'Everything in Professional',
+            'Custom development',
+            'Advanced security',
+            'Multi-tenant architecture',
+            'Dedicated support',
+            'SLA guarantees',
+            'White-label options',
+          ]}
+        />
+      </div>
+
+      <div className="mt-12 text-center">
+        <h3 className="text-2xl font-bold text-gray-900 mb-4">Ready to Build Your Helpdesk?</h3>
+=======
             "Everything in Professional",
             "Custom development",
             "Advanced security",
@@ -343,6 +414,7 @@ function Pricing() {
         <h3 className="text-2xl font-bold text-gray-900 mb-4">
           Ready to Build Your Helpdesk?
         </h3>"
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
         <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
           Let's create a powerful helpdesk platform that streamlines your;
           customer support and improves satisfaction.
@@ -390,6 +462,9 @@ function Pricing() {
 }
 
 <<<<<<< HEAD
+function Plan({ name, price, duration, features }: {
+=======
+<<<<<<< HEAD
 function Plan({}
 =======
 function Plan({
@@ -403,10 +478,13 @@ function Plan({
 =======
 }: {
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
   name: string;
   price: string;
   duration: string;
   features: string[];
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 }) {}
   return ("
@@ -419,6 +497,7 @@ function Plan({
           <li key={index} className="flex items-start">"
             <span className="text-green-500 mr-2 mt-1">✓</span>"
 =======
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
 }) {
   return (
     <div className="border border-gray-200 rounded-xl p-6 bg-white hover:shadow-lg transition-shadow">
@@ -435,6 +514,8 @@ function Plan({
         ))}
       </ul>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
       <a"
         href="mailto:kleber@ziontechgroup.com?subject=Helpdesk Platform Development Inquiry""
         className="block w-full mt-6 bg-yellow-600 text-white text-center py-3 rounded-lg font-semibold hover:bg-yellow-700 transition-colors"
@@ -447,6 +528,7 @@ function Plan({
 }
 '"
 =======
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
       <a
         href="mailto:kleber@ziontechgroup.com?subject=Helpdesk Platform Development Inquiry"
         className="block w-full mt-6 bg-yellow-600 text-white text-center py-3 rounded-lg font-semibold hover:bg-yellow-700 transition-colors"
@@ -456,4 +538,7 @@ function Plan({
     </div>
   );
 }
+<<<<<<< HEAD
+=======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172

@@ -5,12 +5,22 @@ interface ToastProps {
   duration?: number;
   onClose: () => void;
 }
+<<<<<<< HEAD
+
+const Toast: React.FC<ToastProps> = ({
+  message,
+  type = 'info',
+  duration = 3000,
+  onClose,
+}) => {
+=======
 const Toast: React.FC<ToastProps> = ({ ,
   message,
   type = 'info', '
   duration = 3000,
   onClose
 }) => {,
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
   const [isVisible, setIsVisible] = useState(true);
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -20,16 +30,30 @@ const Toast: React.FC<ToastProps> = ({ ,
     return () => clearTimeout(timer);
   }, [duration, onClose]);
   const typeStyles = {
+<<<<<<< HEAD
+    success: 'bg-green-500 text-white',
+    error: 'bg-red-500 text-white',
+    warning: 'bg-yellow-500 text-black',
+    info: 'bg-blue-500 text-white',
+=======
 success: 'bg-green-500 text-white','
     error: 'bg-red-500 text-white','
     warning: 'bg-yellow-500 text-black','
     info: 'bg-blue-500 text-white''
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
   };
   const icons = {
+<<<<<<< HEAD
+    success: '✓',
+    error: '✕',
+    warning: '⚠',
+    info: 'ℹ',
+=======
 success: '✓','
     error: '✕','
     warning: '⚠','
     info: 'ℹ''
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
   };
   return (
     <div

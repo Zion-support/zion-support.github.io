@@ -12,21 +12,15 @@ const ScrollToTop: React.FC = () => {
         setIsVisible(false);
       }
     };
-<<<<<<< HEAD:src_backup/components/ScrollToTop.tsx
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/ScrollToTop.tsx
     window.addEventListener('scroll', toggleVisibility);
     return () => window.removeEventListener('scroll', toggleVisibility);
   }, []);
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: 'smooth'
+      behavior: 'smooth',
     });
   };
 
@@ -43,14 +37,6 @@ const ScrollToTop: React.FC = () => {
       )}
     </>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 };
 
 export default ScrollToTop;

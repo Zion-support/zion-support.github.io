@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+import React from 'react';
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -35,6 +38,7 @@ export function ProfileLoadingState() {
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from "react";
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
 export function ProfileLoadingState() {
   return (
     <div className="min-h-screen bg-zion-blue flex justify-center items-center p-4">

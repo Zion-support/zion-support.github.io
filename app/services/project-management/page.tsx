@@ -1,8 +1,14 @@
 <<<<<<< HEAD
 export const metadata = {
+  title: 'Project Management Platform | Zion Tech Group',
+  description: 'Build comprehensive project management tools with task tracking, team collaboration, and reporting. Professional PM solutions starting at $18k.',
+=======
+<<<<<<< HEAD
+export const metadata = {
   title: "Project Management Platform | Zion Tech Group",
   description:
     "Build comprehensive project management tools with task tracking, team collaboration, and reporting. Professional PM solutions starting at $18k.",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
 };
 
 export default function ProjectManagementPage() {
@@ -21,6 +27,15 @@ export default function ProjectManagementPage() {
           <Item
             title="Task Management"
             details={[
+<<<<<<< HEAD
+              'Kanban boards',
+              'Gantt charts',
+              'Task dependencies',
+              'Priority management',
+              'Custom workflows',
+              'Recurring tasks',
+              'Task templates',
+=======
               "Kanban boards",
               "Gantt charts",
               "Task dependencies",
@@ -28,11 +43,21 @@ export default function ProjectManagementPage() {
               "Custom workflows",
               "Recurring tasks",
               "Task templates",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
             ]}
           />
           <Item
             title="Team Collaboration"
             details={[
+<<<<<<< HEAD
+              'Real-time chat',
+              'File sharing',
+              'Comment threads',
+              'Team calendars',
+              'Video meetings',
+              'Notification system',
+              'Activity feeds',
+=======
               "Real-time chat",
               "File sharing",
               "Comment threads",
@@ -40,11 +65,21 @@ export default function ProjectManagementPage() {
               "Video meetings",
               "Notification system",
               "Activity feeds",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
             ]}
           />
           <Item
             title="Reporting & Analytics"
             details={[
+<<<<<<< HEAD
+              'Progress tracking',
+              'Time tracking',
+              'Resource allocation',
+              'Budget management',
+              'Custom dashboards',
+              'Export reports',
+              'Performance metrics',
+=======
               "Progress tracking",
               "Time tracking",
               "Resource allocation",
@@ -52,6 +87,7 @@ export default function ProjectManagementPage() {
               "Custom dashboards",
               "Export reports",
               "Performance metrics",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
             ]}
           />
         </div>
@@ -298,6 +334,15 @@ function Pricing() {
           price="$18k–$35k"
           duration="6–10 weeks"
           features={[
+<<<<<<< HEAD
+            'Basic task management',
+            'Team collaboration tools',
+            'Simple reporting',
+            'Mobile app',
+            'Basic integrations',
+            'User management',
+            'Cloud hosting',
+=======
             "Basic task management",
             "Team collaboration tools",
             "Simple reporting",
@@ -305,6 +350,7 @@ function Pricing() {
             "Basic integrations",
             "User management",
             "Cloud hosting",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
         />
         <Plan
@@ -312,6 +358,15 @@ function Pricing() {
           price="$35k–$70k"
           duration="8–14 weeks"
           features={[
+<<<<<<< HEAD
+            'Everything in Team',
+            'Advanced workflows',
+            'Time tracking',
+            'Resource management',
+            'Client portal',
+            'Advanced analytics',
+            'Custom integrations',
+=======
             "Everything in Team",
             "Advanced workflows",
             "Time tracking",
@@ -319,6 +374,7 @@ function Pricing() {
             "Client portal",
             "Advanced analytics",
             "Custom integrations",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
         />
         <Plan
@@ -326,6 +382,21 @@ function Pricing() {
           price="$70k+"
           duration="12–20 weeks"
           features={[
+<<<<<<< HEAD
+            'Everything in Professional',
+            'Custom development',
+            'White-label options',
+            'Advanced security',
+            'Dedicated support',
+            'SLA guarantees',
+            'On-premise deployment',
+          ]}
+        />
+      </div>
+
+      <div className="mt-12 text-center">
+        <h3 className="text-2xl font-bold text-gray-900 mb-4">Ready to Build Your PM Platform?</h3>
+=======
             "Everything in Professional",
             "Custom development",
             "White-label options",
@@ -343,6 +414,7 @@ function Pricing() {
         <h3 className="text-2xl font-bold text-gray-900 mb-4">
           Ready to Build Your PM Platform?
         </h3>"
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
         <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
           Let's create a powerful project management platform that streamlines'
           your team's workflow and boosts productivity.
@@ -390,6 +462,9 @@ function Pricing() {
 }
 
 <<<<<<< HEAD
+function Plan({ name, price, duration, features }: {
+=======
+<<<<<<< HEAD
 function Plan({}
 =======
 function Plan({
@@ -403,10 +478,13 @@ function Plan({
 =======
 }: {
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
   name: string;
   price: string;
   duration: string;
   features: string[];
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 }) {}
   return ("
@@ -419,6 +497,7 @@ function Plan({
           <li key={index} className="flex items-start">"
             <span className="text-green-500 mr-2 mt-1">✓</span>"
 =======
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
 }) {
   return (
     <div className="border border-gray-200 rounded-xl p-6 bg-white hover:shadow-lg transition-shadow">
@@ -435,6 +514,8 @@ function Plan({
         ))}
       </ul>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
       <a"
         href="mailto:kleber@ziontechgroup.com?subject=Project Management Platform Inquiry""
         className="block w-full mt-6 bg-orange-600 text-white text-center py-3 rounded-lg font-semibold hover:bg-orange-700 transition-colors"
@@ -447,6 +528,7 @@ function Plan({
 }
 '"
 =======
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
       <a
         href="mailto:kleber@ziontechgroup.com?subject=Project Management Platform Inquiry"
         className="block w-full mt-6 bg-orange-600 text-white text-center py-3 rounded-lg font-semibold hover:bg-orange-700 transition-colors"
@@ -456,4 +538,7 @@ function Plan({
     </div>
   );
 }
+<<<<<<< HEAD
+=======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172

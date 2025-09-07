@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+export const metadata = {
+  title: 'AI-Powered Analytics Dashboard | Zion Tech Group',
+  description: 'Transform your data into actionable insights with our AI-powered analytics dashboard. Real-time visualization, predictive analytics, and automated reporting.',
+};
+=======
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
 
 
 <<<<<<< HEAD
@@ -29,6 +36,40 @@ export const metadata = {
 
 export default function ServicePage() {
   return (
+<<<<<<< HEAD
+    <section className="max-w-6xl mx-auto px-4 py-16">
+      <h1 className="text-4xl font-bold text-gray-900 mb-6">AI-Powered Analytics Dashboard</h1>
+      <p className="text-xl text-gray-600 mb-12">Transform your data into actionable insights with intelligent analytics, real-time visualization, and predictive modeling.</p>
+
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+        <FeatureCard
+          title="Real-Time Analytics"
+          features={[
+            'Live data streaming',
+            'Interactive dashboards',
+            'Custom KPI tracking',
+            'Automated alerts',
+          ]}
+        />
+        <FeatureCard
+          title="AI-Powered Insights"
+          features={[
+            'Predictive modeling',
+            'Anomaly detection',
+            'Trend analysis',
+            'Smart recommendations',
+          ]}
+        />
+        <FeatureCard
+          title="Advanced Visualization"
+          features={[
+            'Custom charts & graphs',
+            'Drill-down capabilities',
+            'Mobile-responsive design',
+            'Export & sharing options',
+          ]}
+        />
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -120,8 +161,9 @@ export default function ServicePage() {
             </li>
           </ul>
         </div>
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
       </div>
-      
+
       <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-xl p-8 mb-16">
         <h2 className="text-2xl font-bold text-gray-900 mb-4">Key Benefits</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -242,6 +284,12 @@ export default function ServicePage() {
       </div>
 
       <Pricing />
+<<<<<<< HEAD
+
+      <div className="mt-16 text-center">
+        <h2 className="text-2xl font-bold text-gray-900 mb-4">Ready to Transform Your Data?</h2>
+        <p className="text-gray-600 mb-6">Get started with a free consultation and see how AI analytics can boost your business performance.</p>
+=======
 "
       <div className="mt-16 text-center">"
         <h2 className="text-2xl font-bold text-gray-900 mb-4">
@@ -251,6 +299,7 @@ export default function ServicePage() {
           Get started with a free consultation and see how AI analytics can;
           boost your business performance.
         </p>"
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a"
             href="tel:+13024640950""
@@ -299,6 +348,39 @@ function Pricing() {}
         Pricing Plans;
       </h2>"
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+<<<<<<< HEAD
+        <Plan
+          name="Starter"
+          price="$299/mo"
+          features={[
+            'Up to 5 data sources',
+            'Basic dashboards',
+            'Email reports',
+            'Standard support',
+          ]}
+        />
+        <Plan
+          name="Professional"
+          price="$799/mo"
+          features={[
+            'Up to 20 data sources',
+            'Advanced AI insights',
+            'Real-time alerts',
+            'Priority support',
+            'Custom visualizations',
+          ]}
+          popular={true}
+        />
+        <Plan
+          name="Enterprise"
+          price="$1,999/mo"
+          features={[
+            'Unlimited data sources',
+            'Custom AI models',
+            'White-label solution',
+            'Dedicated support',
+            'On-premise deployment',
+=======
         <Plan"
           name="Starter""
           price="$299/mo"
@@ -330,6 +412,7 @@ function Pricing() {}
             "White-label solution","
             "Dedicated support","
             "On-premise deployment",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
         />
       </div>
@@ -366,12 +449,21 @@ function Plan({}
           </li>
         ))}
       </ul>
+<<<<<<< HEAD
+      <a
+        href="tel:+13024640950"
+        className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors text-center block ${
+          popular
+            ? 'bg-blue-600 text-white hover:bg-blue-700'
+            : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
+=======
       <a"
         href="tel:+13024640950"`
         className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors text-center block ${}
           popular"
             ? "bg-blue-600 text-white hover:bg-blue-700""
             : "bg-gray-100 text-gray-900 hover:bg-gray-200"`
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
         }`}
       >
         Get Started;
@@ -380,6 +472,9 @@ function Plan({}
     </div>
   );
 }
+<<<<<<< HEAD
+=======
 "`
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172

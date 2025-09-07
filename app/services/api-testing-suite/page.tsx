@@ -1,13 +1,17 @@
 <<<<<<< HEAD
+import Link from 'next/link';
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 import Link from "next/link";
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export const metadata = {
-  title: "API Testing Suite | Zion Tech Group",
+  title: 'API Testing Suite | Zion Tech Group',
   description:
-    "Comprehensive API testing platform with automated testing, monitoring, and documentation. Ensure your APIs are reliable and performant.",
+    'Comprehensive API testing platform with automated testing, monitoring, and documentation. Ensure your APIs are reliable and performant.',
 };
 
 export default function APITestingSuitePage() {
@@ -72,11 +76,11 @@ export default function APITestingSuitePage() {
               period="per month"
               description="Perfect for individual developers and small projects"
               features={[
-                "Up to 10 APIs",
-                "Basic testing suite",
-                "Standard monitoring",
-                "Email support",
-                "Basic documentation",
+                'Up to 10 APIs',
+                'Basic testing suite',
+                'Standard monitoring',
+                'Email support',
+                'Basic documentation',
               ]}
               popular={false}
             />
@@ -86,12 +90,12 @@ export default function APITestingSuitePage() {
               period="per month"
               description="Ideal for development teams and growing companies"
               features={[
-                "Up to 50 APIs",
-                "Advanced testing",
-                "Performance testing",
-                "Priority support",
-                "Team collaboration",
-                "Custom integrations",
+                'Up to 50 APIs',
+                'Advanced testing',
+                'Performance testing',
+                'Priority support',
+                'Team collaboration',
+                'Custom integrations',
               ]}
               popular={true}
             />
@@ -101,12 +105,12 @@ export default function APITestingSuitePage() {
               period="per month"
               description="For large organizations with complex API ecosystems"
               features={[
-                "Unlimited APIs",
-                "Custom test frameworks",
-                "Advanced security testing",
-                "24/7 support",
-                "Custom integrations",
-                "On-premise deployment",
+                'Unlimited APIs',
+                'Custom test frameworks',
+                'Advanced security testing',
+                '24/7 support',
+                'Custom integrations',
+                'On-premise deployment',
               ]}
               popular={false}
             />
@@ -591,7 +595,7 @@ function PricingCard({
 }) {
   return (
     <div
-      className={`border rounded-xl p-6 ${popular ? "border-indigo-500 bg-indigo-50" : "border-gray-200 bg-white"}`}
+      className={`border rounded-xl p-6 ${popular ? 'border-indigo-500 bg-indigo-50' : 'border-gray-200 bg-white'}`}
     >
       {popular && (
         <div className="bg-indigo-500 text-white text-sm font-semibold px-3 py-1 rounded-full inline-block mb-4">
@@ -626,8 +630,8 @@ function PricingCard({
       <button
         className={`w-full mt-6 py-3 px-4 rounded-lg font-semibold transition-colors ${
           popular
-            ? "bg-indigo-600 text-white hover:bg-indigo-700"
-            : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+            ? 'bg-indigo-600 text-white hover:bg-indigo-700'
+            : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
         }`}
       >
         Start Free Trial

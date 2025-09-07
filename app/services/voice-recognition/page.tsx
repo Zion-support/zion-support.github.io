@@ -1,13 +1,23 @@
 <<<<<<< HEAD
 export const metadata = {
+  title: 'Voice Recognition Solutions | Zion Tech Group',
+  description: 'Transform speech into actionable data with advanced voice recognition, speech-to-text, and voice command processing.',
+=======
+<<<<<<< HEAD
+export const metadata = {
   title: "Voice Recognition Solutions | Zion Tech Group",
   description:
     "Transform speech into actionable data with advanced voice recognition, speech-to-text, and voice command processing.",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
 };
 
 export default function VoiceRecognitionPage() {
   return (
     <section className="max-w-6xl mx-auto px-4 py-16">
+<<<<<<< HEAD
+      <h1 className="text-4xl font-bold text-gray-900 mb-6">Voice Recognition Solutions</h1>
+      <p className="text-xl text-gray-600 mb-12">Transform speech into actionable data with advanced voice recognition, speech-to-text, and voice command processing.</p>
+=======
       <h1 className="text-4xl font-bold text-gray-900 mb-6">
         Voice Recognition Solutions
       </h1>
@@ -15,33 +25,55 @@ export default function VoiceRecognitionPage() {
         Transform speech into actionable data with advanced voice recognition,
         speech-to-text, and voice command processing.
       </p>
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
         <FeatureCard
           title="Speech-to-Text"
           features={[
+<<<<<<< HEAD
+            'Real-time transcription',
+            'Multi-language support',
+            'Noise cancellation',
+            'Speaker identification',
+=======
             "Real-time transcription",
             "Multi-language support",
             "Noise cancellation",
             "Speaker identification",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
         />
         <FeatureCard
           title="Voice Commands"
           features={[
+<<<<<<< HEAD
+            'Voice control systems',
+            'Command processing',
+            'Intent recognition',
+            'Custom wake words',
+=======
             "Voice control systems",
             "Command processing",
             "Intent recognition",
             "Custom wake words",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
         />
         <FeatureCard
           title="Voice Analytics"
           features={[
+<<<<<<< HEAD
+            'Emotion detection',
+            'Speaker verification',
+            'Call analytics',
+            'Quality assessment',
+=======
             "Emotion detection",
             "Speaker verification",
             "Call analytics",
             "Quality assessment",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
         />
       </div>
@@ -91,6 +123,10 @@ export default function VoiceRecognitionPage() {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
+
+      <Pricing />
+=======
 <<<<<<< HEAD
 =======
 export const metadata = {}
@@ -211,6 +247,7 @@ export default function VoiceRecognitionPage() {}
 =======
 
       <Pricing />
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
 
       <div className="mt-16 text-center">
         <h2 className="text-2xl font-bold text-gray-900 mb-4">
@@ -315,16 +352,33 @@ function Pricing() {
           name="Starter"
           price="$2,499/mo"
           features={[
+<<<<<<< HEAD
+            'Basic speech-to-text',
+            'Up to 100 hours/month',
+            'Standard support',
+            'Cloud deployment',
+=======
             "Basic speech-to-text",
             "Up to 100 hours/month",
             "Standard support",
             "Cloud deployment",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
         />
         <Plan
           name="Professional"
           price="$6,999/mo"
           features={[
+<<<<<<< HEAD
+            'Advanced voice recognition',
+            'Up to 1,000 hours/month',
+            'Custom model training',
+            'Priority support',
+            'API access',
+          ]}
+          popular={true}
+        />
+=======
             "Advanced voice recognition",
             "Up to 1,000 hours/month",
             "Custom model training",
@@ -344,16 +398,25 @@ function Pricing() {
             "On-premise deployment","
             "Dedicated support","
 =======
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
         <Plan
           name="Enterprise"
           price="$17,999/mo"
           features={[
+<<<<<<< HEAD
+            'Unlimited processing',
+            'Custom voice models',
+            'On-premise deployment',
+            'Dedicated support',
+            'White-label solution',
+=======
             "Unlimited processing",
             "Custom voice models",
             "On-premise deployment",
             "Dedicated support",
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             "White-label solution",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
         />
       </div>
@@ -417,6 +480,8 @@ function Plan({
         ))}
       </ul>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
       <a"
         href="tel:+13024640950"`
         className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors text-center block ${}
@@ -433,12 +498,18 @@ function Plan({
 }
 "`
 =======
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
       <a
         href="tel:+13024640950"
         className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors text-center block ${
           popular
+<<<<<<< HEAD
+            ? 'bg-emerald-600 text-white hover:bg-emerald-700'
+            : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
+=======
             ? "bg-emerald-600 text-white hover:bg-emerald-700"
             : "bg-gray-100 text-gray-900 hover:bg-gray-200"
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
         }`}
       >
         Get Started
@@ -446,4 +517,7 @@ function Plan({
     </div>
   );
 }
+<<<<<<< HEAD
+=======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172

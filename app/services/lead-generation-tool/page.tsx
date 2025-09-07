@@ -3,11 +3,17 @@
 =======
 import Link from "next/link";
 
+<<<<<<< HEAD
+export const metadata = {
+  title: 'Lead Generation Tool | Zion Tech Group',
+  description: 'AI-powered lead generation platform. Find, qualify, and nurture leads automatically with advanced targeting and CRM integration.',
+=======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export const metadata = {
   title: "Lead Generation Tool | Zion Tech Group",
   description:
     "AI-powered lead generation platform. Find, qualify, and nurture leads automatically with advanced targeting and CRM integration.",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
 };
 
 export default function LeadGenerationToolPage() {
@@ -112,9 +118,14 @@ export default function LeadGenerationToolPage() {}
           Lead Generation Tool
         </h1>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+<<<<<<< HEAD
+          AI-powered lead generation platform that finds, qualifies, and nurtures leads automatically.
+          Boost your sales pipeline with intelligent targeting and CRM integration.
+=======
           AI-powered lead generation platform that finds, qualifies, and
           nurtures leads automatically. Boost your sales pipeline with
           intelligent targeting and CRM integration.
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
         </p>
       </div>
 
@@ -122,37 +133,69 @@ export default function LeadGenerationToolPage() {}
         <FeatureCard
           title="Lead Discovery"
           details={[
+<<<<<<< HEAD
+            'AI-powered prospect research',
+            'Contact information enrichment',
+            'Company data verification',
+            'Social media intelligence',
+            'Email finder & verification',
+=======
             "AI-powered prospect research",
             "Contact information enrichment",
             "Company data verification",
             "Social media intelligence",
             "Email finder & verification",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
         />
         <FeatureCard
           title="Qualification & Scoring"
           details={[
+<<<<<<< HEAD
+            'Lead scoring algorithms',
+            'Intent detection',
+            'BANT qualification',
+            'Behavioral analysis',
+            'Custom qualification rules',
+=======
             "Lead scoring algorithms",
             "Intent detection",
             "BANT qualification",
             "Behavioral analysis",
             "Custom qualification rules",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
         />
         <FeatureCard
           title="Outreach & Nurturing"
           details={[
+<<<<<<< HEAD
+            'Automated email sequences',
+            'LinkedIn outreach automation',
+            'Personalized messaging',
+            'Follow-up scheduling',
+            'CRM integration (Salesforce, HubSpot)',
+=======
             "Automated email sequences",
             "LinkedIn outreach automation",
             "Personalized messaging",
             "Follow-up scheduling",
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             "CRM integration (Salesforce, HubSpot)",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
         />
       </div>
 
       <PricingSection />
+<<<<<<< HEAD
+
+      <div className="mt-16 bg-gradient-to-r from-teal-50 to-cyan-50 border border-teal-200 rounded-xl p-8 text-center">
+        <h3 className="text-2xl font-bold text-gray-900 mb-4">Ready to Generate More Leads?</h3>
+        <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
+          Start generating qualified leads automatically with our AI-powered platform.
+          Perfect for sales teams, agencies, and B2B businesses.
+=======
 <<<<<<< HEAD
 "
       <div className="mt-16 bg-gradient-to-r from-teal-50 to-cyan-50 border border-teal-200 rounded-xl p-8 text-center">"
@@ -186,6 +229,7 @@ export default function LeadGenerationToolPage() {}
         <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
           Start generating qualified leads automatically with our AI-powered
           platform. Perfect for sales teams, agencies, and B2B businesses.
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
@@ -276,17 +320,35 @@ function PricingSection() {
           name="Starter"
           price="$49/mo"
           features={[
+<<<<<<< HEAD
+            '500 leads/month',
+            'Basic contact data',
+            'Email verification',
+            'Standard CRM integration',
+            'Email support',
+=======
             "500 leads/month",
             "Basic contact data",
             "Email verification",
             "Standard CRM integration",
             "Email support",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
         />
         <PricingPlan
           name="Professional"
           price="$149/mo"
           features={[
+<<<<<<< HEAD
+            '2,000 leads/month',
+            'Advanced contact enrichment',
+            'Lead scoring & qualification',
+            'Automated outreach sequences',
+            'Priority support',
+          ]}
+          featured={true}
+        />
+=======
             "2,000 leads/month",
             "Advanced contact enrichment",
             "Lead scoring & qualification",
@@ -306,16 +368,25 @@ function PricingSection() {
             "Advanced AI targeting","
             "White-label solution","
 =======
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
         <PricingPlan
           name="Enterprise"
           price="$399/mo"
           features={[
+<<<<<<< HEAD
+            '10,000 leads/month',
+            'Custom data sources',
+            'Advanced AI targeting',
+            'White-label solution',
+            'Dedicated account manager',
+=======
             "10,000 leads/month",
             "Custom data sources",
             "Advanced AI targeting",
             "White-label solution",
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             "Dedicated account manager",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
         />
       </div>
@@ -324,19 +395,27 @@ function PricingSection() {
 }
 
 <<<<<<< HEAD
+function PricingPlan({
+=======
+<<<<<<< HEAD
 function PricingPlan({}
 =======
 function PricingPlan({
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
   name,
   price,
   features,
   featured = false,
 <<<<<<< HEAD
+}: {
+=======
+<<<<<<< HEAD
 }: {}
 =======
 }: {
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
   name: string;
   price: string;
   features: string[];
@@ -359,6 +438,13 @@ function PricingPlan({
 =======
 }) {
   return (
+<<<<<<< HEAD
+    <div className={`border rounded-xl p-6 ${
+      featured
+        ? 'border-teal-500 bg-teal-50 shadow-lg'
+        : 'border-gray-200 bg-white shadow-sm'
+    }`}>
+=======
     <div
       className={`border rounded-xl p-6 ${
         featured
@@ -366,6 +452,7 @@ function PricingPlan({
           : "border-gray-200 bg-white shadow-sm"
       }`}
     >
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
       <h4 className="text-xl font-bold text-gray-900 mb-2">{name}</h4>
       <div className="text-3xl font-bold text-gray-900 mb-4">{price}</div>
       <ul className="space-y-2 text-gray-600 mb-6">
@@ -377,6 +464,8 @@ function PricingPlan({
         ))}
       </ul>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
       <a"
         href="tel:+13024640950"`
         className={`w-full block text-center py-3 rounded-lg font-semibold transition-colors ${}
@@ -387,6 +476,7 @@ function PricingPlan({
       >
         Get Started;
 =======
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
       <a
         href="tel:+13024640950"
         className={`w-full block text-center py-3 rounded-lg font-semibold transition-colors ${
@@ -402,7 +492,10 @@ function PricingPlan({
   );
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 "`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172

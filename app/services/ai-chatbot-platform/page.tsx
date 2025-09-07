@@ -1,8 +1,8 @@
 <<<<<<< HEAD
 export const metadata = {
-  title: "AI Chatbot Platform | Zion Tech Group",
+  title: 'AI Chatbot Platform | Zion Tech Group',
   description:
-    "Build intelligent chatbots with natural language processing, multi-channel deployment, and advanced conversation management. No coding required.",
+    'Build intelligent chatbots with natural language processing, multi-channel deployment, and advanced conversation management. No coding required.',
 };
 
 export default function AIChatbotPlatformPage() {
@@ -26,10 +26,10 @@ export default function AIChatbotPlatformPage() {
             title="Natural Language Processing"
             description="Advanced NLP for human-like conversations"
             features={[
-              "Intent recognition",
-              "Entity extraction",
-              "Sentiment analysis",
-              "Context awareness",
+              'Intent recognition',
+              'Entity extraction',
+              'Sentiment analysis',
+              'Context awareness',
             ]}
           />
           <FeatureCard
@@ -37,10 +37,10 @@ export default function AIChatbotPlatformPage() {
             title="Multi-Channel Deployment"
             description="Deploy across all your customer touchpoints"
             features={[
-              "Website chat",
-              "Mobile apps",
-              "Social media",
-              "Voice assistants",
+              'Website chat',
+              'Mobile apps',
+              'Social media',
+              'Voice assistants',
             ]}
           />
           <FeatureCard
@@ -48,10 +48,10 @@ export default function AIChatbotPlatformPage() {
             title="Machine Learning"
             description="Self-improving chatbots that learn from interactions"
             features={[
-              "Conversation learning",
-              "Performance optimization",
-              "A/B testing",
-              "Analytics insights",
+              'Conversation learning',
+              'Performance optimization',
+              'A/B testing',
+              'Analytics insights',
             ]}
           />
           <FeatureCard
@@ -59,10 +59,10 @@ export default function AIChatbotPlatformPage() {
             title="Visual Builder"
             description="Drag-and-drop interface for easy chatbot creation"
             features={[
-              "No-code builder",
-              "Pre-built templates",
-              "Custom workflows",
-              "Rich media support",
+              'No-code builder',
+              'Pre-built templates',
+              'Custom workflows',
+              'Rich media support',
             ]}
           />
           <FeatureCard
@@ -70,10 +70,10 @@ export default function AIChatbotPlatformPage() {
             title="Analytics & Insights"
             description="Comprehensive analytics for chatbot performance"
             features={[
-              "Conversation analytics",
-              "User satisfaction",
-              "Conversion tracking",
-              "Custom reports",
+              'Conversation analytics',
+              'User satisfaction',
+              'Conversion tracking',
+              'Custom reports',
             ]}
           />
           <FeatureCard
@@ -81,10 +81,10 @@ export default function AIChatbotPlatformPage() {
             title="Integrations"
             description="Connect with your existing business tools"
             features={[
-              "CRM integration",
-              "Help desk systems",
-              "Payment processing",
-              "Database connections",
+              'CRM integration',
+              'Help desk systems',
+              'Payment processing',
+              'Database connections',
             ]}
           />
         </div>
@@ -326,64 +326,70 @@ function UseCasesSection() {}
 function UseCasesSection() {
   const useCases = [
     {
-      title: "Customer Support",
-      description: "24/7 automated customer support with instant responses",
-      icon: "🎧",
+      title: 'Customer Support',
+      description: '24/7 automated customer support with instant responses',
+      icon: '🎧',
       benefits: [
-        "Reduce support costs by 60%",
-        "Instant response times",
-        "Handle 80% of queries automatically",
+        'Reduce support costs by 60%',
+        'Instant response times',
+        'Handle 80% of queries automatically',
       ],
     },
     {
-      title: "Sales Assistant",
-      description: "Qualify leads and guide prospects through the sales funnel",
-      icon: "💼",
+      title: 'Sales Assistant',
+      description: 'Qualify leads and guide prospects through the sales funnel',
+      icon: '💼',
       benefits: [
-        "Increase lead conversion by 40%",
-        "Qualify leads 24/7",
-        "Schedule meetings automatically",
+        'Increase lead conversion by 40%',
+        'Qualify leads 24/7',
+        'Schedule meetings automatically',
       ],
     },
     {
-      title: "E-commerce Assistant",
-      description: "Help customers find products and complete purchases",
-      icon: "🛒",
+      title: 'E-commerce Assistant',
+      description: 'Help customers find products and complete purchases',
+      icon: '🛒',
       benefits: [
-        "Boost sales by 25%",
-        "Reduce cart abandonment",
-        "Personalized recommendations",
+        'Boost sales by 25%',
+        'Reduce cart abandonment',
+        'Personalized recommendations',
       ],
     },
     {
-      title: "HR Assistant",
-      description: "Answer employee questions and streamline HR processes",
-      icon: "👥",
+      title: 'HR Assistant',
+      description: 'Answer employee questions and streamline HR processes',
+      icon: '👥',
       benefits: [
-        "Reduce HR workload by 50%",
-        "Instant policy answers",
-        "Automated onboarding",
+        'Reduce HR workload by 50%',
+        'Instant policy answers',
+        'Automated onboarding',
       ],
     },
     {
-      title: "Lead Generation",
-      description: "Capture and qualify leads through engaging conversations",
-      icon: "📈",
+      title: 'Lead Generation',
+      description: 'Capture and qualify leads through engaging conversations',
+      icon: '📈',
       benefits: [
-        "Generate 3x more leads",
-        "Qualify prospects automatically",
-        "Nurture leads effectively",
+        'Generate 3x more leads',
+        'Qualify prospects automatically',
+        'Nurture leads effectively',
       ],
     },
     {
-      title: "Appointment Booking",
-      description: "Automate appointment scheduling and reminders",
-      icon: "📅",
+      title: 'Appointment Booking',
+      description: 'Automate appointment scheduling and reminders',
+      icon: '📅',
       benefits: [
+<<<<<<< HEAD
+        'Reduce no-shows by 30%',
+        '24/7 availability',
+        'Automatic confirmations',
+=======
         "Reduce no-shows by 30%",
         "24/7 availability",
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         "Automatic confirmations",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
       ],
     },
   ];
@@ -497,12 +503,20 @@ function PricingSection() {
           period="month"
           description="Perfect for small businesses getting started with chatbots"
           features={[
+<<<<<<< HEAD
+            '1 chatbot',
+            '1,000 conversations/month',
+            'Basic templates',
+            'Email support',
+            'Website integration',
+=======
             "1 chatbot",
             "1,000 conversations/month",
             "Basic templates",
             "Email support",
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             "Website integration",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
           popular={false}
         />
@@ -525,6 +539,14 @@ function PricingSection() {
           period="month"
           description="Advanced features for growing businesses"
           features={[
+<<<<<<< HEAD
+            '5 chatbots',
+            '10,000 conversations/month',
+            'Advanced NLP',
+            'Priority support',
+            'Multi-channel deployment',
+            'Analytics dashboard',
+=======
             "5 chatbots",
             "10,000 conversations/month",
             "Advanced NLP",
@@ -532,6 +554,7 @@ function PricingSection() {
             "Multi-channel deployment",
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             "Analytics dashboard",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
           popular={true}
         />
@@ -554,6 +577,14 @@ function PricingSection() {
           period=""
           description="Full-scale solution for large organizations"
           features={[
+<<<<<<< HEAD
+            'Unlimited chatbots',
+            'Unlimited conversations',
+            'Custom integrations',
+            '24/7 support',
+            'Dedicated account manager',
+            'White-label solution',
+=======
             "Unlimited chatbots",
             "Unlimited conversations",
             "Custom integrations",
@@ -561,6 +592,7 @@ function PricingSection() {
             "Dedicated account manager",
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             "White-label solution",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
           popular={false}
         />
@@ -628,7 +660,7 @@ function PricingCard({
 }) {
   return (
     <div
-      className={`relative border-2 rounded-xl p-8 ${popular ? "border-indigo-500 bg-indigo-50" : "border-gray-200"}`}
+      className={`relative border-2 rounded-xl p-8 ${popular ? 'border-indigo-500 bg-indigo-50' : 'border-gray-200'}`}
     >
       {popular && (
         <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
@@ -677,8 +709,8 @@ function PricingCard({
         href="tel:+13024640950"
         className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
           popular
-            ? "bg-indigo-600 text-white hover:bg-indigo-700"
-            : "bg-gray-900 text-white hover:bg-gray-800"
+            ? 'bg-indigo-600 text-white hover:bg-indigo-700'
+            : 'bg-gray-900 text-white hover:bg-gray-800'
         }`}
       >
         Get Started

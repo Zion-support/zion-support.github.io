@@ -26,6 +26,8 @@ export type { ExportOptions } from './pdf/pdfExport',; // This file now re-expor
 
 // This file now re-exports from the refactored PDF export utility;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -77,3 +79,4 @@ export type { ExportOptions } from './pdf/pdfExport';
 =======
 pr-12325
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172

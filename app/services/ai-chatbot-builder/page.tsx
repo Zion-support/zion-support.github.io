@@ -12,6 +12,10 @@ import Link from "next/link";
 >>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
 
 export const metadata = {
+<<<<<<< HEAD
+  title: 'AI Chatbot Builder | Zion Tech Group',
+  description: 'Build intelligent chatbots with no-code platform. Custom AI assistants for customer support, sales, and engagement.',
+=======
   title: "AI Chatbot Builder | Zion Tech Group",
   description:
     "Build intelligent chatbots with no-code platform. Custom AI assistants for customer support, sales, and engagement.",
@@ -24,6 +28,7 @@ export const metadata = {
   description:
     "Build intelligent chatbots with no-code platform. Custom AI assistants for customer support, sales, and engagement.",
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
 };
 
 export default function AIChatbotBuilderPage() {
@@ -54,9 +59,14 @@ import { ArrowRightIcon } from '@heroicons/react/24/outline';
           AI Chatbot Builder
         </h1>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+<<<<<<< HEAD
+          Build intelligent chatbots with our no-code platform. Create custom AI assistants
+          for customer support, sales, and engagement that understand context and provide human-like responses.
+=======
           Build intelligent chatbots with our no-code platform. Create custom AI
           assistants for customer support, sales, and engagement that understand
           context and provide human-like responses.
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
         </p>
       </div>
 <<<<<<< HEAD
@@ -256,31 +266,55 @@ import { ArrowRightIcon } from '@heroicons/react/24/outline';
         <FeatureCard
           title="No-Code Builder"
           details={[
+<<<<<<< HEAD
+            'Drag-and-drop interface',
+            'Pre-built conversation flows',
+            'Multi-language support',
+            'Visual flow designer',
+            'Template library',
+=======
             "Drag-and-drop interface",
             "Pre-built conversation flows",
             "Multi-language support",
             "Visual flow designer",
             "Template library",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
         />
         <FeatureCard
           title="AI Intelligence"
           details={[
+<<<<<<< HEAD
+            'GPT-4 integration',
+            'Context-aware responses',
+            'Sentiment analysis',
+            'Intent recognition',
+            'Learning from conversations',
+=======
             "GPT-4 integration",
             "Context-aware responses",
             "Sentiment analysis",
             "Intent recognition",
             "Learning from conversations",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
         />
         <FeatureCard
           title="Integration & Analytics"
           details={[
+<<<<<<< HEAD
+            'CRM integration (Salesforce, HubSpot)',
+            'Live chat handoff',
+            'Conversation analytics',
+            'Performance metrics',
+            'A/B testing tools',
+=======
             "CRM integration (Salesforce, HubSpot)",
             "Live chat handoff",
             "Conversation analytics",
             "Performance metrics",
             "A/B testing tools",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
         />
       </div>
@@ -430,17 +464,35 @@ function PricingSection() {
           name="Starter"
           price="$29/mo"
           features={[
+<<<<<<< HEAD
+            'Up to 1,000 conversations/month',
+            'Basic AI responses',
+            'Email support',
+            'Standard integrations',
+            'Basic analytics',
+=======
             "Up to 1,000 conversations/month",
             "Basic AI responses",
             "Email support",
             "Standard integrations",
             "Basic analytics",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
         />
         <PricingPlan
           name="Professional"
           price="$99/mo"
           features={[
+<<<<<<< HEAD
+            'Up to 10,000 conversations/month',
+            'Advanced AI with context',
+            'Priority support',
+            'All integrations',
+            'Advanced analytics & A/B testing',
+          ]}
+          featured={true}
+        />
+=======
             "Up to 10,000 conversations/month",
             "Advanced AI with context",
             "Priority support",
@@ -460,16 +512,25 @@ function PricingSection() {
             "Dedicated support","
             "White-label solution","
 =======
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
         <PricingPlan
           name="Enterprise"
           price="$299/mo"
           features={[
+<<<<<<< HEAD
+            'Unlimited conversations',
+            'Custom AI training',
+            'Dedicated support',
+            'White-label solution',
+            'Custom integrations & SLA',
+=======
             "Unlimited conversations",
             "Custom AI training",
             "Dedicated support",
             "White-label solution",
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             "Custom integrations & SLA",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
         />
       </div>
@@ -478,19 +539,27 @@ function PricingSection() {
 }
 
 <<<<<<< HEAD
+function PricingPlan({
+=======
+<<<<<<< HEAD
 function PricingPlan({}
 =======
 function PricingPlan({
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
   name,
   price,
   features,
   featured = false,
 <<<<<<< HEAD
+}: {
+=======
+<<<<<<< HEAD
 }: {}
 =======
 }: {
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
   name: string;
   price: string;
   features: string[];
@@ -513,6 +582,13 @@ function PricingPlan({
 =======
 }) {
   return (
+<<<<<<< HEAD
+    <div className={`border rounded-xl p-6 ${
+      featured
+        ? 'border-orange-500 bg-orange-50 shadow-lg'
+        : 'border-gray-200 bg-white shadow-sm'
+    }`}>
+=======
     <div
       className={`border rounded-xl p-6 ${
         featured
@@ -520,6 +596,7 @@ function PricingPlan({
           : "border-gray-200 bg-white shadow-sm"
       }`}
     >
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
       <h4 className="text-xl font-bold text-gray-900 mb-2">{name}</h4>
       <div className="text-3xl font-bold text-gray-900 mb-4">{price}</div>
       <ul className="space-y-2 text-gray-600 mb-6">
@@ -531,6 +608,8 @@ function PricingPlan({
         ))}
       </ul>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
       <a"
         href="tel:+13024640950"`
         className={`w-full block text-center py-3 rounded-lg font-semibold transition-colors ${}
@@ -541,6 +620,7 @@ function PricingPlan({
       >
         Get Started;
 =======
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
       <a
         href="tel:+13024640950"
         className={`w-full block text-center py-3 rounded-lg font-semibold transition-colors ${
@@ -556,7 +636,10 @@ function PricingPlan({
   );
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 "`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172

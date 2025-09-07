@@ -1,8 +1,14 @@
 <<<<<<< HEAD
 export const metadata = {
+  title: 'CRM Platform Development | Zion Tech Group',
+  description: 'Build powerful CRM platforms with lead management, sales tracking, and customer insights. Professional CRM solutions starting at $20k.',
+=======
+<<<<<<< HEAD
+export const metadata = {
   title: "CRM Platform Development | Zion Tech Group",
   description:
     "Build powerful CRM platforms with lead management, sales tracking, and customer insights. Professional CRM solutions starting at $20k.",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
 };
 
 export default function CRMPlatformPage() {
@@ -21,6 +27,15 @@ export default function CRMPlatformPage() {
           <Item
             title="Lead Management"
             details={[
+<<<<<<< HEAD
+              'Lead capture forms',
+              'Lead scoring system',
+              'Lead assignment rules',
+              'Lead nurturing workflows',
+              'Lead source tracking',
+              'Conversion analytics',
+              'Lead qualification tools',
+=======
               "Lead capture forms",
               "Lead scoring system",
               "Lead assignment rules",
@@ -28,11 +43,21 @@ export default function CRMPlatformPage() {
               "Lead source tracking",
               "Conversion analytics",
               "Lead qualification tools",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
             ]}
           />
           <Item
             title="Sales Pipeline"
             details={[
+<<<<<<< HEAD
+              'Deal tracking',
+              'Pipeline visualization',
+              'Sales forecasting',
+              'Activity tracking',
+              'Quote generation',
+              'Contract management',
+              'Revenue reporting',
+=======
               "Deal tracking",
               "Pipeline visualization",
               "Sales forecasting",
@@ -40,11 +65,21 @@ export default function CRMPlatformPage() {
               "Quote generation",
               "Contract management",
               "Revenue reporting",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
             ]}
           />
           <Item
             title="Customer Management"
             details={[
+<<<<<<< HEAD
+              'Contact management',
+              'Communication history',
+              'Customer segmentation',
+              'Support ticket integration',
+              'Customer health scoring',
+              'Lifetime value tracking',
+              'Retention analytics',
+=======
               "Contact management",
               "Communication history",
               "Customer segmentation",
@@ -52,6 +87,7 @@ export default function CRMPlatformPage() {
               "Customer health scoring",
               "Lifetime value tracking",
               "Retention analytics",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
             ]}
           />
         </div>
@@ -298,6 +334,15 @@ function Pricing() {
           price="$20k–$40k"
           duration="8–12 weeks"
           features={[
+<<<<<<< HEAD
+            'Basic contact management',
+            'Lead tracking',
+            'Simple pipeline',
+            'Email integration',
+            'Basic reporting',
+            'Mobile app',
+            'User management',
+=======
             "Basic contact management",
             "Lead tracking",
             "Simple pipeline",
@@ -305,6 +350,7 @@ function Pricing() {
             "Basic reporting",
             "Mobile app",
             "User management",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
         />
         <Plan
@@ -312,6 +358,15 @@ function Pricing() {
           price="$40k–$80k"
           duration="12–18 weeks"
           features={[
+<<<<<<< HEAD
+            'Everything in Starter',
+            'Advanced automation',
+            'Custom fields & workflows',
+            'Advanced analytics',
+            'API integrations',
+            'White-label options',
+            'Priority support',
+=======
             "Everything in Starter",
             "Advanced automation",
             "Custom fields & workflows",
@@ -319,6 +374,7 @@ function Pricing() {
             "API integrations",
             "White-label options",
             "Priority support",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
         />
         <Plan
@@ -326,6 +382,21 @@ function Pricing() {
           price="$80k+"
           duration="16–24 weeks"
           features={[
+<<<<<<< HEAD
+            'Everything in Professional',
+            'Custom development',
+            'Advanced security',
+            'Multi-tenant architecture',
+            'Dedicated support',
+            'SLA guarantees',
+            'On-premise deployment',
+          ]}
+        />
+      </div>
+
+      <div className="mt-12 text-center">
+        <h3 className="text-2xl font-bold text-gray-900 mb-4">Ready to Build Your CRM?</h3>
+=======
             "Everything in Professional",
             "Custom development",
             "Advanced security",
@@ -343,6 +414,7 @@ function Pricing() {
         <h3 className="text-2xl font-bold text-gray-900 mb-4">
           Ready to Build Your CRM?
         </h3>"
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
         <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
           Let's create a powerful CRM platform that streamlines your sales;
           process and drives revenue growth.
@@ -390,6 +462,9 @@ function Pricing() {
 }
 
 <<<<<<< HEAD
+function Plan({ name, price, duration, features }: {
+=======
+<<<<<<< HEAD
 function Plan({}
 =======
 function Plan({
@@ -403,10 +478,13 @@ function Plan({
 =======
 }: {
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
   name: string;
   price: string;
   duration: string;
   features: string[];
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 }) {}
   return ("
@@ -419,6 +497,7 @@ function Plan({
           <li key={index} className="flex items-start">"
             <span className="text-green-500 mr-2 mt-1">✓</span>"
 =======
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
 }) {
   return (
     <div className="border border-gray-200 rounded-xl p-6 bg-white hover:shadow-lg transition-shadow">
@@ -435,6 +514,8 @@ function Plan({
         ))}
       </ul>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
       <a"
         href="mailto:kleber@ziontechgroup.com?subject=CRM Platform Development Inquiry""
         className="block w-full mt-6 bg-indigo-600 text-white text-center py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors"
@@ -447,6 +528,7 @@ function Plan({
 }
 '"
 =======
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
       <a
         href="mailto:kleber@ziontechgroup.com?subject=CRM Platform Development Inquiry"
         className="block w-full mt-6 bg-indigo-600 text-white text-center py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors"
@@ -456,4 +538,7 @@ function Plan({
     </div>
   );
 }
+<<<<<<< HEAD
+=======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172

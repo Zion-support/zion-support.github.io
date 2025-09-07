@@ -1,8 +1,14 @@
 <<<<<<< HEAD
 export const metadata = {
+  title: 'E-commerce Platform Development | Zion Tech Group',
+  description: 'Build powerful e-commerce platforms with payment processing, inventory management, and customer features. Professional e-commerce solutions starting at $25k.',
+=======
+<<<<<<< HEAD
+export const metadata = {
   title: "E-commerce Platform Development | Zion Tech Group",
   description:
     "Build powerful e-commerce platforms with payment processing, inventory management, and customer features. Professional e-commerce solutions starting at $25k.",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
 };
 
 export default function EcommercePlatformPage() {
@@ -21,6 +27,15 @@ export default function EcommercePlatformPage() {
           <Item
             title="Product Management"
             details={[
+<<<<<<< HEAD
+              'Product catalog',
+              'Inventory tracking',
+              'Variants & options',
+              'Bulk import/export',
+              'SEO optimization',
+              'Image management',
+              'Product reviews',
+=======
               "Product catalog",
               "Inventory tracking",
               "Variants & options",
@@ -28,11 +43,21 @@ export default function EcommercePlatformPage() {
               "SEO optimization",
               "Image management",
               "Product reviews",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
             ]}
           />
           <Item
             title="Payment & Checkout"
             details={[
+<<<<<<< HEAD
+              'Multiple payment gateways',
+              'Secure checkout process',
+              'Tax calculation',
+              'Shipping integration',
+              'Coupon system',
+              'Subscription billing',
+              'Mobile payments',
+=======
               "Multiple payment gateways",
               "Secure checkout process",
               "Tax calculation",
@@ -40,11 +65,21 @@ export default function EcommercePlatformPage() {
               "Coupon system",
               "Subscription billing",
               "Mobile payments",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
             ]}
           />
           <Item
             title="Customer Features"
             details={[
+<<<<<<< HEAD
+              'User accounts',
+              'Order history',
+              'Wishlist functionality',
+              'Customer support',
+              'Loyalty programs',
+              'Personalization',
+              'Mobile app',
+=======
               "User accounts",
               "Order history",
               "Wishlist functionality",
@@ -52,6 +87,7 @@ export default function EcommercePlatformPage() {
               "Loyalty programs",
               "Personalization",
               "Mobile app",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
             ]}
           />
         </div>
@@ -298,6 +334,15 @@ function Pricing() {
           price="$25k–$50k"
           duration="8–12 weeks"
           features={[
+<<<<<<< HEAD
+            'Basic product catalog',
+            'Payment processing',
+            'Order management',
+            'Customer accounts',
+            'Mobile responsive',
+            'Basic analytics',
+            'Standard support',
+=======
             "Basic product catalog",
             "Payment processing",
             "Order management",
@@ -305,6 +350,7 @@ function Pricing() {
             "Mobile responsive",
             "Basic analytics",
             "Standard support",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
         />
         <Plan
@@ -312,6 +358,15 @@ function Pricing() {
           price="$50k–$100k"
           duration="12–20 weeks"
           features={[
+<<<<<<< HEAD
+            'Everything in Starter',
+            'Advanced inventory',
+            'Multi-channel selling',
+            'Advanced analytics',
+            'API integrations',
+            'White-label options',
+            'Priority support',
+=======
             "Everything in Starter",
             "Advanced inventory",
             "Multi-channel selling",
@@ -319,6 +374,7 @@ function Pricing() {
             "API integrations",
             "White-label options",
             "Priority support",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
         />
         <Plan
@@ -326,6 +382,21 @@ function Pricing() {
           price="$100k+"
           duration="16–28 weeks"
           features={[
+<<<<<<< HEAD
+            'Everything in Professional',
+            'Custom development',
+            'Advanced security',
+            'Multi-tenant architecture',
+            'Dedicated support',
+            'SLA guarantees',
+            'On-premise deployment',
+          ]}
+        />
+      </div>
+
+      <div className="mt-12 text-center">
+        <h3 className="text-2xl font-bold text-gray-900 mb-4">Ready to Build Your E-commerce Platform?</h3>
+=======
             "Everything in Professional",
             "Custom development",
             "Advanced security",
@@ -343,6 +414,7 @@ function Pricing() {
         <h3 className="text-2xl font-bold text-gray-900 mb-4">
           Ready to Build Your E-commerce Platform?
         </h3>"
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
         <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
           Let's create a powerful e-commerce platform that drives sales and;
           provides an exceptional shopping experience.
@@ -390,6 +462,9 @@ function Pricing() {
 }
 
 <<<<<<< HEAD
+function Plan({ name, price, duration, features }: {
+=======
+<<<<<<< HEAD
 function Plan({}
 =======
 function Plan({
@@ -403,10 +478,13 @@ function Plan({
 =======
 }: {
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
   name: string;
   price: string;
   duration: string;
   features: string[];
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 }) {}
   return ("
@@ -419,6 +497,7 @@ function Plan({
           <li key={index} className="flex items-start">"
             <span className="text-green-500 mr-2 mt-1">✓</span>"
 =======
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
 }) {
   return (
     <div className="border border-gray-200 rounded-xl p-6 bg-white hover:shadow-lg transition-shadow">
@@ -435,6 +514,8 @@ function Plan({
         ))}
       </ul>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
       <a"
         href="mailto:kleber@ziontechgroup.com?subject=E-commerce Platform Development Inquiry""
         className="block w-full mt-6 bg-red-600 text-white text-center py-3 rounded-lg font-semibold hover:bg-red-700 transition-colors"
@@ -447,6 +528,7 @@ function Plan({
 }
 '"
 =======
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
       <a
         href="mailto:kleber@ziontechgroup.com?subject=E-commerce Platform Development Inquiry"
         className="block w-full mt-6 bg-red-600 text-white text-center py-3 rounded-lg font-semibold hover:bg-red-700 transition-colors"
@@ -456,4 +538,7 @@ function Plan({
     </div>
   );
 }
+<<<<<<< HEAD
+=======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172

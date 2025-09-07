@@ -40,6 +40,22 @@ const ParticleBackground: React.FC = () => {
     const particles: Particle[] = [];,
     const particleCount = 50;
 
+<<<<<<< HEAD
+    const createParticle = (id: number): Particle => ({
+      id,
+      x: Math.random() * canvas.width,
+      y: Math.random() * canvas.height,
+      size: Math.random() * 3 + 1,
+      speedX: (Math.random() - 0.5) * 0.5,
+      speedY: (Math.random() - 0.5) * 0.5,
+      opacity: Math.random() * 0.5 + 0.1,
+    });
+
+    const initParticles = () => {
+      particlesRef.current = Array.from({ length: particleCount }, (_, i) =>
+        createParticle(i),
+      );
+=======
     const createParticles = () => {
       const particles: Particle[] = [];
       const particleCount = Math.floor((canvas.width * canvas.height) / 10000);
@@ -56,6 +72,7 @@ const ParticleBackground: React.FC = () => {
       }
 
       particlesRef.current = particles;
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
     };
 <<<<<<< HEAD
 
@@ -110,8 +127,18 @@ particles.forEach((particle) => {
         if (particle.x > canvas.width) particle.x = 0;
         if (particle.y < 0) particle.y = canvas.height;
         if (particle.y > canvas.height) particle.y = 0;
+<<<<<<< HEAD
+      });
+    };
+
+    const drawParticles = () => {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      particlesRef.current.forEach(particle => {
+=======
         // Draw particle
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
         ctx.beginPath();
         ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
         ctx.fillStyle = `rgba(59, 130, 246, ${particle.opacity})`;`

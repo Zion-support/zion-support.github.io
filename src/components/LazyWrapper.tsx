@@ -4,11 +4,7 @@ interface LazyWrapperProps {
   children: React.ReactNode;
 }
 const LazyWrapper: React.FC<LazyWrapperProps> = ({ children }) => {
-  return (
-    <Suspense fallback={<Loading />}>
-      {children}
-    </Suspense>
-  );
+  return <Suspense fallback={<Loading />}>{children}</Suspense>;
 };
 
 export default LazyWrapper;

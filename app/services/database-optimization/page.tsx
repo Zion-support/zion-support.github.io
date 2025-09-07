@@ -1,13 +1,23 @@
 <<<<<<< HEAD
 export const metadata = {
+  title: 'Database Optimization | Zion Tech Group',
+  description: 'Maximize your database performance with expert optimization services, query tuning, and performance monitoring.',
+=======
+<<<<<<< HEAD
+export const metadata = {
   title: "Database Optimization | Zion Tech Group",
   description:
     "Maximize your database performance with expert optimization services, query tuning, and performance monitoring.",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
 };
 
 export default function DatabaseOptimizationPage() {
   return (
     <section className="max-w-6xl mx-auto px-4 py-16">
+<<<<<<< HEAD
+      <h1 className="text-4xl font-bold text-gray-900 mb-6">Database Optimization</h1>
+      <p className="text-xl text-gray-600 mb-12">Maximize your database performance with expert optimization services, query tuning, and performance monitoring.</p>
+=======
       <h1 className="text-4xl font-bold text-gray-900 mb-6">
         Database Optimization
       </h1>
@@ -15,33 +25,55 @@ export default function DatabaseOptimizationPage() {
         Maximize your database performance with expert optimization services,
         query tuning, and performance monitoring.
       </p>
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
         <FeatureCard
           title="Performance Tuning"
           features={[
+<<<<<<< HEAD
+            'Query optimization',
+            'Index optimization',
+            'Schema design',
+            'Connection pooling',
+=======
             "Query optimization",
             "Index optimization",
             "Schema design",
             "Connection pooling",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
         />
         <FeatureCard
           title="Database Platforms"
           features={[
+<<<<<<< HEAD
+            'MySQL optimization',
+            'PostgreSQL tuning',
+            'MongoDB optimization',
+            'SQL Server tuning',
+=======
             "MySQL optimization",
             "PostgreSQL tuning",
             "MongoDB optimization",
             "SQL Server tuning",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
         />
         <FeatureCard
           title="Monitoring & Maintenance"
           features={[
+<<<<<<< HEAD
+            'Performance monitoring',
+            'Automated backups',
+            'Health checks',
+            'Capacity planning',
+=======
             "Performance monitoring",
             "Automated backups",
             "Health checks",
             "Capacity planning",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
         />
       </div>
@@ -91,6 +123,10 @@ export default function DatabaseOptimizationPage() {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
+
+      <Pricing />
+=======
 <<<<<<< HEAD
 =======
 export const metadata = {}
@@ -210,6 +246,7 @@ export default function DatabaseOptimizationPage() {}
 =======
 
       <Pricing />
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
 
       <div className="mt-16 text-center">
         <h2 className="text-2xl font-bold text-gray-900 mb-4">
@@ -312,16 +349,32 @@ function Pricing() {
           name="Audit"
           price="$1,999"
           features={[
+<<<<<<< HEAD
+            'Performance analysis',
+            'Optimization report',
+            'Recommendations',
+            'Implementation guide',
+=======
             "Performance analysis",
             "Optimization report",
             "Recommendations",
             "Implementation guide",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
         />
         <Plan
           name="Optimization"
           price="$4,999"
           features={[
+<<<<<<< HEAD
+            'Query tuning',
+            'Index optimization',
+            'Schema improvements',
+            '2 weeks support',
+          ]}
+          popular={true}
+        />
+=======
             "Query tuning",
             "Index optimization",
             "Schema improvements",
@@ -339,15 +392,23 @@ function Pricing() {
             "Regular optimization","
             "24/7 support","
 =======
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
         <Plan
           name="Managed"
           price="$2,999/mo"
           features={[
+<<<<<<< HEAD
+            'Continuous monitoring',
+            'Regular optimization',
+            '24/7 support',
+            'Performance reports',
+=======
             "Continuous monitoring",
             "Regular optimization",
             "24/7 support",
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             "Performance reports",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
         />
       </div>
@@ -411,6 +472,8 @@ function Plan({
         ))}
       </ul>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
       <a"
         href="tel:+13024640950"`
         className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors text-center block ${}
@@ -427,12 +490,18 @@ function Plan({
 }
 "`
 =======
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
       <a
         href="tel:+13024640950"
         className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors text-center block ${
           popular
+<<<<<<< HEAD
+            ? 'bg-lime-600 text-white hover:bg-lime-700'
+            : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
+=======
             ? "bg-lime-600 text-white hover:bg-lime-700"
             : "bg-gray-100 text-gray-900 hover:bg-gray-200"
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
         }`}
       >
         Get Started
@@ -440,4 +509,7 @@ function Plan({
     </div>
   );
 }
+<<<<<<< HEAD
+=======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172

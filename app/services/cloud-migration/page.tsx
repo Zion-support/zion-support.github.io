@@ -1,8 +1,8 @@
 <<<<<<< HEAD
 export const metadata = {
-  title: "Cloud Migration & Infrastructure | Zion Tech Group",
+  title: 'Cloud Migration & Infrastructure | Zion Tech Group',
   description:
-    "Seamlessly migrate to the cloud with zero downtime. Expert cloud migration services for AWS, Azure, and GCP with cost optimization and security.",
+    'Seamlessly migrate to the cloud with zero downtime. Expert cloud migration services for AWS, Azure, and GCP with cost optimization and security.',
 };
 
 export default function CloudMigrationPage() {
@@ -131,72 +131,80 @@ export default function CloudMigrationPage() {}
       <h1 style={{ fontSize: 26, fontWeight: 800 }}>
         Cloud Migration & Infrastructure Services
       </h1>
-      <p style={{ marginTop: 8, color: "#374151" }}>
+      <p style={{ marginTop: 8, color: '#374151' }}>
         Migrate to the cloud with confidence. Our expert team ensures
         zero-downtime migrations, cost optimization, and enhanced security while
         reducing infrastructure costs by up to 40%.
       </p>
 
-      <div style={{ display: "grid", gap: 12, marginTop: 16 }}>
+      <div style={{ display: 'grid', gap: 12, marginTop: 16 }}>
         <Item
           title="Cloud Strategy & Planning"
           details={[
-            "Cloud readiness assessment",
-            "Migration roadmap development",
-            "Cost-benefit analysis",
-            "Security and compliance planning",
-            "Multi-cloud architecture design",
+            'Cloud readiness assessment',
+            'Migration roadmap development',
+            'Cost-benefit analysis',
+            'Security and compliance planning',
+            'Multi-cloud architecture design',
           ]}
         />
         <Item
           title="AWS Migration Services"
           details={[
-            "Lift and shift migrations",
-            "Replatforming and refactoring",
-            "Serverless architecture implementation",
-            "Database migration (RDS, DynamoDB)",
-            "Cost optimization and monitoring",
+            'Lift and shift migrations',
+            'Replatforming and refactoring',
+            'Serverless architecture implementation',
+            'Database migration (RDS, DynamoDB)',
+            'Cost optimization and monitoring',
           ]}
         />
         <Item
           title="Azure Migration Services"
           details={[
-            "Azure Resource Manager deployment",
-            "Azure SQL and Cosmos DB migration",
-            "Azure Kubernetes Service setup",
-            "Azure Active Directory integration",
-            "Azure Cost Management optimization",
+            'Azure Resource Manager deployment',
+            'Azure SQL and Cosmos DB migration',
+            'Azure Kubernetes Service setup',
+            'Azure Active Directory integration',
+            'Azure Cost Management optimization',
           ]}
         />
         <Item
           title="Google Cloud Migration"
           details={[
-            "GCP infrastructure setup",
-            "BigQuery data warehouse migration",
-            "Cloud Run and App Engine deployment",
-            "Cloud SQL and Firestore migration",
-            "Google Workspace integration",
+            'GCP infrastructure setup',
+            'BigQuery data warehouse migration',
+            'Cloud Run and App Engine deployment',
+            'Cloud SQL and Firestore migration',
+            'Google Workspace integration',
           ]}
         />
         <Item
           title="Hybrid Cloud Solutions"
           details={[
-            "On-premise to cloud hybrid setup",
-            "Multi-cloud management",
-            "Cloud-to-cloud migrations",
-            "Edge computing implementation",
-            "Disaster recovery planning",
+            'On-premise to cloud hybrid setup',
+            'Multi-cloud management',
+            'Cloud-to-cloud migrations',
+            'Edge computing implementation',
+            'Disaster recovery planning',
           ]}
         />
         <Item
           title="Post-Migration Support"
           details={[
+<<<<<<< HEAD
+            'Performance optimization',
+            'Cost monitoring and optimization',
+            'Security hardening',
+            '24/7 cloud monitoring',
+            'Staff training and documentation',
+=======
             "Performance optimization",
             "Cost monitoring and optimization",
             "Security hardening",
             "24/7 cloud monitoring",
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             "Staff training and documentation",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
         />
       </div>
@@ -221,9 +229,9 @@ export default function CloudMigrationPage() {}
         style={{
           marginTop: 24,
           padding: 20,
-          backgroundColor: "#fefce8",
+          backgroundColor: '#fefce8',
           borderRadius: 12,
-          border: "1px solid #fde047",
+          border: '1px solid #fde047',
         }}
       >
         <h3
@@ -231,8 +239,12 @@ export default function CloudMigrationPage() {}
             fontSize: 18,
             fontWeight: 700,
             marginBottom: 12,
+<<<<<<< HEAD
+            color: '#713f12',
+=======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             color: "#713f12",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           }}
         >
           Why Choose Our Cloud Migration Services?
@@ -260,7 +272,7 @@ export default function CloudMigrationPage() {}
             completed;
 =======
         </h3>
-        <ul style={{ color: "#a16207", lineHeight: 1.6 }}>
+        <ul style={{ color: '#a16207', lineHeight: 1.6 }}>
           <li>
             • <strong>Zero-Downtime Migrations:</strong> 99.9% uptime guarantee
             during migration
@@ -311,19 +323,25 @@ function Item({ title, details }: { title: string; details: string[] }) {
   return (
     <div
       style={{
-        border: "1px solid #e5e7eb",
+        border: '1px solid #e5e7eb',
         borderRadius: 12,
         padding: 16,
-        backgroundColor: "#ffffff",
+        backgroundColor: '#ffffff',
       }}
     >
-      <h3 style={{ fontWeight: 700, color: "#1f2937", marginBottom: 8 }}>
+      <h3 style={{ fontWeight: 700, color: '#1f2937', marginBottom: 8 }}>
         {title}
       </h3>
+<<<<<<< HEAD
+      <ul style={{ paddingLeft: 18, color: '#4b5563', margin: 0 }}>
+        {details.map(d => (
+          <li key={d} style={{ listStyle: 'disc', marginBottom: 4 }}>
+=======
       <ul style={{ paddingLeft: 18, color: "#4b5563", margin: 0 }}>
         {details.map((d) => (
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           <li key={d} style={{ listStyle: "disc", marginBottom: 4 }}>
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
             {d}
           </li>
         ))}
@@ -392,50 +410,58 @@ function Pricing() {
           fontSize: 24,
           fontWeight: 700,
           marginBottom: 20,
-          color: "#1f2937",
+          color: '#1f2937',
         }}
       >
         Cloud Migration Pricing
       </h2>
       <div
         style={{
-          display: "grid",
+          display: 'grid',
           gap: 16,
-          gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+          gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
         }}
       >
         <Plan
           name="Cloud Assessment"
           price="$2,500–$7,500"
           features={[
-            "1-2 weeks assessment",
-            "Current infrastructure audit",
-            "Cloud readiness evaluation",
-            "Migration strategy & roadmap",
-            "Cost optimization recommendations",
+            '1-2 weeks assessment',
+            'Current infrastructure audit',
+            'Cloud readiness evaluation',
+            'Migration strategy & roadmap',
+            'Cost optimization recommendations',
           ]}
         />
         <Plan
           name="Standard Migration"
           price="$15,000–$50,000"
           features={[
-            "4-12 weeks migration",
-            "Single cloud provider",
-            "Zero-downtime migration",
-            "Basic monitoring setup",
-            "Post-migration support (30 days)",
+            '4-12 weeks migration',
+            'Single cloud provider',
+            'Zero-downtime migration',
+            'Basic monitoring setup',
+            'Post-migration support (30 days)',
           ]}
         />
         <Plan
           name="Enterprise Migration"
           price="$50,000+"
           features={[
+<<<<<<< HEAD
+            'Multi-cloud migration',
+            'Custom architecture design',
+            'Advanced security implementation',
+            'Dedicated migration team',
+            '12-month support & optimization',
+=======
             "Multi-cloud migration",
             "Custom architecture design",
             "Advanced security implementation",
             "Dedicated migration team",
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             "12-month support & optimization",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
         />
       </div>
@@ -485,11 +511,11 @@ function Pricing() {
       <div
         style={{
           marginTop: 24,
-          textAlign: "center",
+          textAlign: 'center',
           padding: 20,
-          backgroundColor: "#ecfdf5",
+          backgroundColor: '#ecfdf5',
           borderRadius: 12,
-          border: "1px solid #a7f3d0",
+          border: '1px solid #a7f3d0',
         }}
       >
         <h3
@@ -497,33 +523,41 @@ function Pricing() {
             fontSize: 18,
             fontWeight: 600,
             marginBottom: 8,
-            color: "#065f46",
+            color: '#065f46',
           }}
         >
           Free Cloud Readiness Assessment
         </h3>
-        <p style={{ color: "#047857", marginBottom: 16 }}>
+        <p style={{ color: '#047857', marginBottom: 16 }}>
           Get a comprehensive evaluation of your current infrastructure and
           discover the best cloud migration strategy for your business. Includes
           cost projections and timeline.
         </p>
         <div
           style={{
-            display: "flex",
+            display: 'flex',
             gap: 12,
-            justifyContent: "center",
-            flexWrap: "wrap",
+            justifyContent: 'center',
+            flexWrap: 'wrap',
           }}
         >
           <a
             href="tel:+13024640950"
             style={{
+<<<<<<< HEAD
+              display: 'inline-block',
+              padding: '12px 24px',
+              backgroundColor: '#059669',
+              color: 'white',
+              textDecoration: 'none',
+=======
               display: "inline-block",
               padding: "12px 24px",
               backgroundColor: "#059669",
               color: "white",
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               textDecoration: "none",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
               borderRadius: 8,
               fontWeight: 600,
             }}
@@ -546,14 +580,18 @@ function Pricing() {
           <a
             href="mailto:kleber@ziontechgroup.com"
             style={{
-              display: "inline-block",
-              padding: "12px 24px",
-              backgroundColor: "transparent",
-              color: "#059669",
-              textDecoration: "none",
+              display: 'inline-block',
+              padding: '12px 24px',
+              backgroundColor: 'transparent',
+              color: '#059669',
+              textDecoration: 'none',
               borderRadius: 8,
+<<<<<<< HEAD
+              border: '2px solid #059669',
+=======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               border: "2px solid #059669",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
               fontWeight: 600,
             }}
           >
@@ -613,19 +651,23 @@ function Plan({
   return (
     <div
       style={{
-        border: "2px solid #e5e7eb",
+        border: '2px solid #e5e7eb',
         borderRadius: 12,
         padding: 20,
-        backgroundColor: "#ffffff",
-        position: "relative",
+        backgroundColor: '#ffffff',
+        position: 'relative',
       }}
     >
       <h4
         style={{
           fontWeight: 700,
           fontSize: 18,
+<<<<<<< HEAD
+          color: '#1f2937',
+=======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           color: "#1f2937",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           marginBottom: 8,
         }}
       >
@@ -637,8 +679,12 @@ function Plan({
 =======
       <div
         style={{
+<<<<<<< HEAD
+          color: '#111827',
+=======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           color: "#111827",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           fontWeight: 800,
           fontSize: 24,
           marginBottom: 16,
@@ -651,10 +697,16 @@ function Plan({
         {features.map((f) => ("
 =======
       </div>
+<<<<<<< HEAD
+      <ul style={{ paddingLeft: 18, color: '#4b5563', marginBottom: 20 }}>
+        {features.map(f => (
+          <li key={f} style={{ listStyle: 'disc', marginBottom: 6 }}>
+=======
       <ul style={{ paddingLeft: 18, color: "#4b5563", marginBottom: 20 }}>
         {features.map((f) => (
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           <li key={f} style={{ listStyle: "disc", marginBottom: 6 }}>
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
             {f}
           </li>
         ))}
@@ -673,6 +725,15 @@ function Plan({
       <a
         href="mailto:kleber@ziontechgroup.com?subject=Cloud Migration Services Inquiry"
         style={{
+<<<<<<< HEAD
+          display: 'inline-block',
+          width: '100%',
+          textAlign: 'center',
+          padding: '12px 16px',
+          backgroundColor: '#3b82f6',
+          color: 'white',
+          textDecoration: 'none',
+=======
           display: "inline-block",
           width: "100%",
           textAlign: "center",
@@ -681,6 +742,7 @@ function Plan({
           color: "white",
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           textDecoration: "none",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           borderRadius: 8,
           fontWeight: 600,
         }}

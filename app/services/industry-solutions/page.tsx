@@ -1,8 +1,8 @@
 <<<<<<< HEAD
 export const metadata = {
-  title: "Industry-Specific Solutions | Zion Tech Group",
+  title: 'Industry-Specific Solutions | Zion Tech Group',
   description:
-    "Specialized micro SAAS solutions tailored for specific industries including healthcare, finance, real estate, e-commerce, and more. Industry-focused tools that understand your unique challenges.",
+    'Specialized micro SAAS solutions tailored for specific industries including healthcare, finance, real estate, e-commerce, and more. Industry-focused tools that understand your unique challenges.',
 };
 
 export default function IndustrySolutionsPage() {
@@ -27,12 +27,12 @@ export default function IndustrySolutionsPage() {
             icon="🏥"
             description="HIPAA-compliant solutions for healthcare providers"
             solutions={[
-              "Patient Management System",
-              "Telemedicine Platform",
-              "Medical Billing Automation",
-              "Appointment Scheduling AI",
-              "Prescription Management",
-              "Health Records Analytics",
+              'Patient Management System',
+              'Telemedicine Platform',
+              'Medical Billing Automation',
+              'Appointment Scheduling AI',
+              'Prescription Management',
+              'Health Records Analytics',
             ]}
           />
           <IndustryCategory
@@ -40,12 +40,12 @@ export default function IndustrySolutionsPage() {
             icon="🏦"
             description="Secure financial tools with compliance focus"
             solutions={[
-              "Loan Processing Automation",
-              "Risk Assessment Engine",
-              "Compliance Monitoring",
-              "Fraud Detection System",
-              "Investment Analytics",
-              "Regulatory Reporting",
+              'Loan Processing Automation',
+              'Risk Assessment Engine',
+              'Compliance Monitoring',
+              'Fraud Detection System',
+              'Investment Analytics',
+              'Regulatory Reporting',
             ]}
           />
           <IndustryCategory
@@ -53,12 +53,12 @@ export default function IndustrySolutionsPage() {
             icon="🏠"
             description="Property management and transaction tools"
             solutions={[
-              "Property Management Suite",
-              "Lead Generation System",
-              "Virtual Tour Platform",
-              "Transaction Management",
-              "Market Analysis Tool",
-              "Commission Tracker",
+              'Property Management Suite',
+              'Lead Generation System',
+              'Virtual Tour Platform',
+              'Transaction Management',
+              'Market Analysis Tool',
+              'Commission Tracker',
             ]}
           />
         </div>
@@ -74,12 +74,12 @@ export default function IndustrySolutionsPage() {
               description="Complete healthcare practice management with HIPAA compliance"
               industry="Healthcare"
               features={[
-                "Patient portal & scheduling",
-                "Electronic health records",
-                "Insurance verification",
-                "Billing & claims processing",
-                "Telemedicine integration",
-                "Compliance reporting",
+                'Patient portal & scheduling',
+                'Electronic health records',
+                'Insurance verification',
+                'Billing & claims processing',
+                'Telemedicine integration',
+                'Compliance reporting',
               ]}
               price="$199-599/month"
               compliance="HIPAA, HITECH, SOC 2"
@@ -91,12 +91,12 @@ export default function IndustrySolutionsPage() {
               description="Comprehensive financial services automation platform"
               industry="Financial Services"
               features={[
-                "Loan origination system",
-                "Credit risk assessment",
-                "Anti-money laundering",
-                "Regulatory compliance",
-                "Customer onboarding",
-                "Fraud detection",
+                'Loan origination system',
+                'Credit risk assessment',
+                'Anti-money laundering',
+                'Regulatory compliance',
+                'Customer onboarding',
+                'Fraud detection',
               ]}
               price="$299-999/month"
               compliance="PCI DSS, SOX, GDPR, CCPA"
@@ -108,12 +108,12 @@ export default function IndustrySolutionsPage() {
               description="Advanced real estate management and marketing platform"
               industry="Real Estate"
               features={[
-                "Property listing management",
-                "Lead capture & nurturing",
-                "Virtual tour creation",
-                "Transaction tracking",
-                "Market analysis tools",
-                "Commission management",
+                'Property listing management',
+                'Lead capture & nurturing',
+                'Virtual tour creation',
+                'Transaction tracking',
+                'Market analysis tools',
+                'Commission management',
               ]}
               price="$149-449/month"
               compliance="GDPR, CCPA, Fair Housing"
@@ -125,12 +125,12 @@ export default function IndustrySolutionsPage() {
               description="Comprehensive educational management and learning platform"
               industry="Education"
               features={[
-                "Student information system",
-                "Learning management system",
-                "Grade management",
-                "Parent communication",
-                "Curriculum planning",
-                "Assessment tools",
+                'Student information system',
+                'Learning management system',
+                'Grade management',
+                'Parent communication',
+                'Curriculum planning',
+                'Assessment tools',
               ]}
               price="$99-299/month"
               compliance="FERPA, COPPA, GDPR"
@@ -142,12 +142,12 @@ export default function IndustrySolutionsPage() {
               description="Complete retail management and analytics platform"
               industry="Retail & E-commerce"
               features={[
-                "Inventory management",
-                "Point of sale system",
-                "Customer analytics",
-                "Marketing automation",
-                "Supply chain tracking",
-                "Performance analytics",
+                'Inventory management',
+                'Point of sale system',
+                'Customer analytics',
+                'Marketing automation',
+                'Supply chain tracking',
+                'Performance analytics',
               ]}
               price="$179-579/month"
               compliance="PCI DSS, GDPR, CCPA"
@@ -159,12 +159,12 @@ export default function IndustrySolutionsPage() {
               description="Comprehensive legal practice management system"
               industry="Legal Services"
               features={[
-                "Case management",
-                "Client intake automation",
-                "Document management",
-                "Time tracking & billing",
-                "Court calendar integration",
-                "Compliance tracking",
+                'Case management',
+                'Client intake automation',
+                'Document management',
+                'Time tracking & billing',
+                'Court calendar integration',
+                'Compliance tracking',
               ]}
               price="$249-749/month"
               compliance="Attorney-Client Privilege, GDPR, SOX"
@@ -182,22 +182,22 @@ export default function IndustrySolutionsPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <ComplianceStandard
               title="Healthcare"
-              standards={["HIPAA", "HITECH", "SOC 2", "HITRUST"]}
+              standards={['HIPAA', 'HITECH', 'SOC 2', 'HITRUST']}
               icon="🏥"
             />
             <ComplianceStandard
               title="Financial"
-              standards={["PCI DSS", "SOX", "GDPR", "CCPA"]}
+              standards={['PCI DSS', 'SOX', 'GDPR', 'CCPA']}
               icon="🏦"
             />
             <ComplianceStandard
               title="Education"
-              standards={["FERPA", "COPPA", "GDPR", "CIPA"]}
+              standards={['FERPA', 'COPPA', 'GDPR', 'CIPA']}
               icon="🎓"
             />
             <ComplianceStandard
               title="General"
-              standards={["SOC 2", "ISO 27001", "GDPR", "CCPA"]}
+              standards={['SOC 2', 'ISO 27001', 'GDPR', 'CCPA']}
               icon="🔒"
             />
           </div>
@@ -468,30 +468,38 @@ export default function IndustrySolutionsPage() {}
               title="Healthcare Features"
               icon="🏥"
               features={[
-                "HIPAA-compliant data storage",
-                "Patient consent management",
-                "Medical coding automation",
-                "Insurance eligibility verification",
-                "Prescription drug monitoring",
-                "Telehealth integration",
+                'HIPAA-compliant data storage',
+                'Patient consent management',
+                'Medical coding automation',
+                'Insurance eligibility verification',
+                'Prescription drug monitoring',
+                'Telehealth integration',
               ]}
             />
             <FeatureCategory
               title="Financial Features"
               icon="💰"
               features={[
-                "Real-time fraud detection",
-                "Credit scoring algorithms",
-                "Regulatory reporting automation",
-                "Anti-money laundering checks",
-                "Customer due diligence",
-                "Risk assessment models",
+                'Real-time fraud detection',
+                'Credit scoring algorithms',
+                'Regulatory reporting automation',
+                'Anti-money laundering checks',
+                'Customer due diligence',
+                'Risk assessment models',
               ]}
             />
             <FeatureCategory
               title="Real Estate Features"
               icon="🏠"
               features={[
+<<<<<<< HEAD
+                'MLS integration',
+                'Property valuation models',
+                'Lead scoring algorithms',
+                'Market trend analysis',
+                'Virtual tour creation',
+                'Commission calculations',
+=======
                 "MLS integration",
                 "Property valuation models",
                 "Lead scoring algorithms",
@@ -499,6 +507,7 @@ export default function IndustrySolutionsPage() {}
                 "Virtual tour creation",
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 "Commission calculations",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
               ]}
             />
           </div>
@@ -546,27 +555,27 @@ export default function IndustrySolutionsPage() {}
             <IntegrationCategory
               title="Healthcare Integrations"
               platforms={[
-                "Epic",
-                "Cerner",
-                "Allscripts",
-                "NextGen",
-                "athenahealth",
+                'Epic',
+                'Cerner',
+                'Allscripts',
+                'NextGen',
+                'athenahealth',
               ]}
               icon="🏥"
             />
             <IntegrationCategory
               title="Financial Integrations"
-              platforms={["Fiserv", "FIS", "Jack Henry", "Temenos", "Mambu"]}
+              platforms={['Fiserv', 'FIS', 'Jack Henry', 'Temenos', 'Mambu']}
               icon="🏦"
             />
             <IntegrationCategory
               title="Real Estate Integrations"
               platforms={[
-                "MLS",
-                "Zillow",
-                "Realtor.com",
-                "ShowingTime",
-                "DocuSign",
+                'MLS',
+                'Zillow',
+                'Realtor.com',
+                'ShowingTime',
+                'DocuSign',
               ]}
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               icon="🏠"
@@ -634,11 +643,11 @@ export default function IndustrySolutionsPage() {}
               professionalPrice="$499/month"
               enterprisePrice="$999/month"
               features={[
-                "HIPAA compliance included",
-                "Medical coding automation",
-                "Insurance verification",
-                "Telemedicine integration",
-                "24/7 support",
+                'HIPAA compliance included',
+                'Medical coding automation',
+                'Insurance verification',
+                'Telemedicine integration',
+                '24/7 support',
               ]}
               icon="🏥"
             />
@@ -648,11 +657,11 @@ export default function IndustrySolutionsPage() {}
               professionalPrice="$699/month"
               enterprisePrice="$1,499/month"
               features={[
-                "PCI DSS compliance",
-                "Fraud detection",
-                "Risk assessment",
-                "Regulatory reporting",
-                "Dedicated support",
+                'PCI DSS compliance',
+                'Fraud detection',
+                'Risk assessment',
+                'Regulatory reporting',
+                'Dedicated support',
               ]}
               icon="🏦"
             />
@@ -662,11 +671,11 @@ export default function IndustrySolutionsPage() {}
               professionalPrice="$399/month"
               enterprisePrice="$799/month"
               features={[
-                "MLS integration",
-                "Lead management",
-                "Virtual tours",
-                "Market analytics",
-                "Commission tracking",
+                'MLS integration',
+                'Lead management',
+                'Virtual tours',
+                'Market analytics',
+                'Commission tracking',
               ]}
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               icon="🏠"

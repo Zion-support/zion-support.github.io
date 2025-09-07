@@ -1,45 +1,76 @@
 <<<<<<< HEAD
 export const metadata = {
+  title: 'API Development | Zion Tech Group',
+  description: 'Build robust, scalable APIs with our expert development services. RESTful, GraphQL, and microservices architecture solutions.',
+=======
+<<<<<<< HEAD
+export const metadata = {
   title: "API Development | Zion Tech Group",
   description:
     "Build robust, scalable APIs with our expert development services. RESTful, GraphQL, and microservices architecture solutions.",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
 };
 
 export default function APIDevelopmentPage() {
   return (
     <section className="max-w-6xl mx-auto px-4 py-16">
       <h1 className="text-4xl font-bold text-gray-900 mb-6">API Development</h1>
+<<<<<<< HEAD
+      <p className="text-xl text-gray-600 mb-12">Build robust, scalable APIs with our expert development services. RESTful, GraphQL, and microservices architecture solutions.</p>
+=======
       <p className="text-xl text-gray-600 mb-12">
         Build robust, scalable APIs with our expert development services.
         RESTful, GraphQL, and microservices architecture solutions.
       </p>
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
         <FeatureCard
           title="API Design & Development"
           features={[
+<<<<<<< HEAD
+            'RESTful API design',
+            'GraphQL implementation',
+            'Microservices architecture',
+            'API documentation',
+=======
             "RESTful API design",
             "GraphQL implementation",
             "Microservices architecture",
             "API documentation",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
         />
         <FeatureCard
           title="Integration & Testing"
           features={[
+<<<<<<< HEAD
+            'Third-party integrations',
+            'API testing & validation',
+            'Performance optimization',
+            'Security implementation',
+=======
             "Third-party integrations",
             "API testing & validation",
             "Performance optimization",
             "Security implementation",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
         />
         <FeatureCard
           title="API Management"
           features={[
+<<<<<<< HEAD
+            'Rate limiting',
+            'Authentication & authorization',
+            'Monitoring & analytics',
+            'Version control',
+=======
             "Rate limiting",
             "Authentication & authorization",
             "Monitoring & analytics",
             "Version control",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
         />
       </div>
@@ -96,6 +127,10 @@ export default function APIDevelopmentPage() {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
+
+      <Pricing />
+=======
 <<<<<<< HEAD
 =======
 export const metadata = {}
@@ -221,6 +256,7 @@ export default function APIDevelopmentPage() {}
 =======
 
       <Pricing />
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
 
       <div className="mt-16 text-center">
         <h2 className="text-2xl font-bold text-gray-900 mb-4">
@@ -325,16 +361,33 @@ function Pricing() {
           name="Basic API"
           price="$7,999"
           features={[
+<<<<<<< HEAD
+            'Simple REST API',
+            'Basic authentication',
+            'API documentation',
+            '2 weeks support',
+=======
             "Simple REST API",
             "Basic authentication",
             "API documentation",
             "2 weeks support",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
         />
         <Plan
           name="Advanced API"
           price="$19,999"
           features={[
+<<<<<<< HEAD
+            'Complex API architecture',
+            'Advanced security',
+            'Performance optimization',
+            '1 month support',
+            'Testing & validation',
+          ]}
+          popular={true}
+        />
+=======
             "Complex API architecture",
             "Advanced security",
             "Performance optimization",
@@ -354,16 +407,25 @@ function Pricing() {
             "Dedicated team","
             "3 months support","
 =======
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
         <Plan
           name="Enterprise API"
           price="$49,999+"
           features={[
+<<<<<<< HEAD
+            'Microservices architecture',
+            'Custom integrations',
+            'Dedicated team',
+            '3 months support',
+            'White-label solution',
+=======
             "Microservices architecture",
             "Custom integrations",
             "Dedicated team",
             "3 months support",
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             "White-label solution",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
         />
       </div>
@@ -427,6 +489,8 @@ function Plan({
         ))}
       </ul>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
       <a"
         href="tel:+13024640950"`
         className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors text-center block ${}
@@ -443,12 +507,18 @@ function Plan({
 }
 "`
 =======
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
       <a
         href="tel:+13024640950"
         className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors text-center block ${
           popular
+<<<<<<< HEAD
+            ? 'bg-fuchsia-600 text-white hover:bg-fuchsia-700'
+            : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
+=======
             ? "bg-fuchsia-600 text-white hover:bg-fuchsia-700"
             : "bg-gray-100 text-gray-900 hover:bg-gray-200"
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
         }`}
       >
         Get Started
@@ -456,4 +526,7 @@ function Plan({
     </div>
   );
 }
+<<<<<<< HEAD
+=======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172

@@ -1,5 +1,9 @@
 export const metadata = {
 <<<<<<< HEAD
+  title: 'Smart Invoice Generator | Zion Tech Group',
+  description: 'Automate your invoicing process with AI-powered smart invoice generation, payment tracking, and financial analytics.',
+=======
+<<<<<<< HEAD
   title: 'Smart Invoice Generator - Zion Tech Group',
   description: 'Professional smart invoice generator solutions for your business needs.',
 <<<<<<< HEAD
@@ -11,11 +15,16 @@ export const metadata = {
   description:
     "Automate your invoicing process with AI-powered smart invoice generation, payment tracking, and financial analytics.",
 >>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
 };
 
 export default function SmartInvoiceGeneratorPage() {
   return (
     <section className="max-w-6xl mx-auto px-4 py-16">
+<<<<<<< HEAD
+      <h1 className="text-4xl font-bold text-gray-900 mb-6">Smart Invoice Generator</h1>
+      <p className="text-xl text-gray-600 mb-12">Automate your invoicing process with AI-powered generation, intelligent payment tracking, and comprehensive financial analytics.</p>
+=======
       <h1 className="text-4xl font-bold text-gray-900 mb-6">
         Smart Invoice Generator
       </h1>
@@ -23,33 +32,55 @@ export default function SmartInvoiceGeneratorPage() {
         Automate your invoicing process with AI-powered generation, intelligent
         payment tracking, and comprehensive financial analytics.
       </p>
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
         <FeatureCard
           title="AI-Powered Generation"
           features={[
+<<<<<<< HEAD
+            'Auto-populate from contracts',
+            'Smart line item suggestions',
+            'Tax calculation automation',
+            'Multi-currency support',
+=======
             "Auto-populate from contracts",
             "Smart line item suggestions",
             "Tax calculation automation",
             "Multi-currency support",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
         />
         <FeatureCard
           title="Payment Management"
           features={[
+<<<<<<< HEAD
+            'Automated payment reminders',
+            'Online payment processing',
+            'Late fee calculations',
+            'Payment status tracking',
+=======
             "Automated payment reminders",
             "Online payment processing",
             "Late fee calculations",
             "Payment status tracking",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
         />
         <FeatureCard
           title="Financial Analytics"
           features={[
+<<<<<<< HEAD
+            'Revenue forecasting',
+            'Cash flow analysis',
+            'Client payment patterns',
+            'Tax reporting',
+=======
             "Revenue forecasting",
             "Cash flow analysis",
             "Client payment patterns",
             "Tax reporting",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
         />
       </div>
@@ -167,21 +198,36 @@ function Pricing() {
           name="Solo"
           price="$29/mo"
           features={[
+<<<<<<< HEAD
+            'Up to 50 invoices/month',
+            'Basic templates',
+            'Payment tracking',
+            'Email support',
+=======
             "Up to 50 invoices/month",
             "Basic templates",
             "Payment tracking",
             "Email support",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
         />
         <Plan
           name="Business"
           price="$79/mo"
           features={[
+<<<<<<< HEAD
+            'Unlimited invoices',
+            'Custom branding',
+            'Advanced analytics',
+            'Priority support',
+            'API access',
+=======
             "Unlimited invoices",
             "Custom branding",
             "Advanced analytics",
             "Priority support",
             "API access",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
           popular={true}
         />
@@ -189,11 +235,19 @@ function Pricing() {
           name="Enterprise"
           price="$199/mo"
           features={[
+<<<<<<< HEAD
+            'Multi-user access',
+            'Custom integrations',
+            'Dedicated support',
+            'Advanced reporting',
+            'White-label solution',
+=======
             "Multi-user access",
             "Custom integrations",
             "Dedicated support",
             "Advanced reporting",
             "White-label solution",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
         />
       </div>
@@ -234,8 +288,13 @@ function Plan({
         href="tel:+13024640950"
         className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors text-center block ${
           popular
+<<<<<<< HEAD
+            ? 'bg-green-600 text-white hover:bg-green-700'
+            : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
+=======
             ? "bg-green-600 text-white hover:bg-green-700"
             : "bg-gray-100 text-gray-900 hover:bg-gray-200"
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
         }`}
       >
         Get Started

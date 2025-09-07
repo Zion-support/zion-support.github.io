@@ -1,8 +1,14 @@
 <<<<<<< HEAD
 export const metadata = {
+  title: 'Analytics Dashboard Platform | Zion Tech Group',
+  description: 'Build powerful analytics dashboards with real-time data visualization, custom metrics, and business intelligence. Professional analytics solutions starting at $16k.',
+=======
+<<<<<<< HEAD
+export const metadata = {
   title: "Analytics Dashboard Platform | Zion Tech Group",
   description:
     "Build powerful analytics dashboards with real-time data visualization, custom metrics, and business intelligence. Professional analytics solutions starting at $16k.",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
 };
 
 export default function AnalyticsDashboardPage() {
@@ -21,6 +27,15 @@ export default function AnalyticsDashboardPage() {
           <Item
             title="Data Visualization"
             details={[
+<<<<<<< HEAD
+              'Interactive charts & graphs',
+              'Real-time data updates',
+              'Custom dashboard builder',
+              'Drag-and-drop interface',
+              'Multiple chart types',
+              'Responsive design',
+              'Export capabilities',
+=======
               "Interactive charts & graphs",
               "Real-time data updates",
               "Custom dashboard builder",
@@ -28,11 +43,21 @@ export default function AnalyticsDashboardPage() {
               "Multiple chart types",
               "Responsive design",
               "Export capabilities",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
             ]}
           />
           <Item
             title="Data Integration"
             details={[
+<<<<<<< HEAD
+              'API connections',
+              'Database integration',
+              'CSV/Excel import',
+              'Real-time streaming',
+              'Data transformation',
+              'ETL pipelines',
+              'Data validation',
+=======
               "API connections",
               "Database integration",
               "CSV/Excel import",
@@ -40,11 +65,21 @@ export default function AnalyticsDashboardPage() {
               "Data transformation",
               "ETL pipelines",
               "Data validation",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
             ]}
           />
           <Item
             title="Business Intelligence"
             details={[
+<<<<<<< HEAD
+              'Custom KPI tracking',
+              'Automated alerts',
+              'Trend analysis',
+              'Predictive analytics',
+              'Cohort analysis',
+              'A/B testing insights',
+              'ROI calculations',
+=======
               "Custom KPI tracking",
               "Automated alerts",
               "Trend analysis",
@@ -52,6 +87,7 @@ export default function AnalyticsDashboardPage() {
               "Cohort analysis",
               "A/B testing insights",
               "ROI calculations",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
             ]}
           />
         </div>
@@ -298,6 +334,15 @@ function Pricing() {
           price="$16k–$32k"
           duration="6–10 weeks"
           features={[
+<<<<<<< HEAD
+            'Basic dashboard builder',
+            '5 data sources',
+            'Standard chart types',
+            'Export functionality',
+            'User management',
+            'Mobile responsive',
+            'Basic support',
+=======
             "Basic dashboard builder",
             "5 data sources",
             "Standard chart types",
@@ -305,6 +350,7 @@ function Pricing() {
             "User management",
             "Mobile responsive",
             "Basic support",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
         />
         <Plan
@@ -312,6 +358,15 @@ function Pricing() {
           price="$32k–$65k"
           duration="10–16 weeks"
           features={[
+<<<<<<< HEAD
+            'Everything in Basic',
+            'Advanced visualizations',
+            'Real-time data',
+            'Custom metrics',
+            'API integrations',
+            'White-label options',
+            'Priority support',
+=======
             "Everything in Basic",
             "Advanced visualizations",
             "Real-time data",
@@ -319,6 +374,7 @@ function Pricing() {
             "API integrations",
             "White-label options",
             "Priority support",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
         />
         <Plan
@@ -326,6 +382,21 @@ function Pricing() {
           price="$65k+"
           duration="14–22 weeks"
           features={[
+<<<<<<< HEAD
+            'Everything in Professional',
+            'Custom development',
+            'Advanced security',
+            'Multi-tenant architecture',
+            'Dedicated support',
+            'SLA guarantees',
+            'On-premise deployment',
+          ]}
+        />
+      </div>
+
+      <div className="mt-12 text-center">
+        <h3 className="text-2xl font-bold text-gray-900 mb-4">Ready to Build Your Analytics Platform?</h3>
+=======
             "Everything in Professional",
             "Custom development",
             "Advanced security",
@@ -343,6 +414,7 @@ function Pricing() {
         <h3 className="text-2xl font-bold text-gray-900 mb-4">
           Ready to Build Your Analytics Platform?
         </h3>"
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
         <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
           Let's create a powerful analytics platform that transforms your data;
           into actionable business insights.
@@ -390,6 +462,9 @@ function Pricing() {
 }
 
 <<<<<<< HEAD
+function Plan({ name, price, duration, features }: {
+=======
+<<<<<<< HEAD
 function Plan({}
 =======
 function Plan({
@@ -403,10 +478,13 @@ function Plan({
 =======
 }: {
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
   name: string;
   price: string;
   duration: string;
   features: string[];
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 }) {}
   return ("
@@ -419,6 +497,7 @@ function Plan({
           <li key={index} className="flex items-start">"
             <span className="text-green-500 mr-2 mt-1">✓</span>"
 =======
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
 }) {
   return (
     <div className="border border-gray-200 rounded-xl p-6 bg-white hover:shadow-lg transition-shadow">
@@ -435,6 +514,8 @@ function Plan({
         ))}
       </ul>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
       <a"
         href="mailto:kleber@ziontechgroup.com?subject=Analytics Dashboard Platform Inquiry""
         className="block w-full mt-6 bg-teal-600 text-white text-center py-3 rounded-lg font-semibold hover:bg-teal-700 transition-colors"
@@ -447,6 +528,7 @@ function Plan({
 }
 '"
 =======
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
       <a
         href="mailto:kleber@ziontechgroup.com?subject=Analytics Dashboard Platform Inquiry"
         className="block w-full mt-6 bg-teal-600 text-white text-center py-3 rounded-lg font-semibold hover:bg-teal-700 transition-colors"
@@ -456,4 +538,7 @@ function Plan({
     </div>
   );
 }
+<<<<<<< HEAD
+=======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172

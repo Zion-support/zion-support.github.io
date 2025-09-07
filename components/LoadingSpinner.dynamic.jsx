@@ -1,4 +1,7 @@
 import React from 'react';
+<<<<<<< HEAD
+export default LoadingSpinner.dynamic;
+=======
 
 <<<<<<< HEAD
 pr-12243
@@ -30,3 +33,4 @@ export default LoadingSpinner.dynamic;
 
 export default LoadingSpinner.dynamic;'"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172

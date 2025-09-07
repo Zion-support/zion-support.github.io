@@ -1,13 +1,23 @@
 <<<<<<< HEAD
 export const metadata = {
+  title: 'Web Application Development | Zion Tech Group',
+  description: 'Build powerful web applications with modern technologies. Responsive, scalable, and secure solutions for all business needs.',
+=======
+<<<<<<< HEAD
+export const metadata = {
   title: "Web Application Development | Zion Tech Group",
   description:
     "Build powerful web applications with modern technologies. Responsive, scalable, and secure solutions for all business needs.",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
 };
 
 export default function WebApplicationDevelopmentPage() {
   return (
     <section className="max-w-6xl mx-auto px-4 py-16">
+<<<<<<< HEAD
+      <h1 className="text-4xl font-bold text-gray-900 mb-6">Web Application Development</h1>
+      <p className="text-xl text-gray-600 mb-12">Build powerful web applications with modern technologies. Responsive, scalable, and secure solutions for all business needs.</p>
+=======
       <h1 className="text-4xl font-bold text-gray-900 mb-6">
         Web Application Development
       </h1>
@@ -15,33 +25,55 @@ export default function WebApplicationDevelopmentPage() {
         Build powerful web applications with modern technologies. Responsive,
         scalable, and secure solutions for all business needs.
       </p>
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
         <FeatureCard
           title="Frontend Development"
           features={[
+<<<<<<< HEAD
+            'React/Vue.js/Angular',
+            'Responsive design',
+            'Progressive Web Apps',
+            'Performance optimization',
+=======
             "React/Vue.js/Angular",
             "Responsive design",
             "Progressive Web Apps",
             "Performance optimization",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
         />
         <FeatureCard
           title="Backend Development"
           features={[
+<<<<<<< HEAD
+            'Node.js/Python/Java',
+            'RESTful APIs',
+            'Database design',
+            'Cloud deployment',
+=======
             "Node.js/Python/Java",
             "RESTful APIs",
             "Database design",
             "Cloud deployment",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
         />
         <FeatureCard
           title="Full-Stack Solutions"
           features={[
+<<<<<<< HEAD
+            'End-to-end development',
+            'Database integration',
+            'Third-party APIs',
+            'Maintenance & support',
+=======
             "End-to-end development",
             "Database integration",
             "Third-party APIs",
             "Maintenance & support",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
         />
       </div>
@@ -91,6 +123,10 @@ export default function WebApplicationDevelopmentPage() {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
+
+      <Pricing />
+=======
 <<<<<<< HEAD
 =======
 export const metadata = {}
@@ -211,6 +247,7 @@ export default function WebApplicationDevelopmentPage() {}
 =======
 
       <Pricing />
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
 
       <div className="mt-16 text-center">
         <h2 className="text-2xl font-bold text-gray-900 mb-4">
@@ -315,16 +352,33 @@ function Pricing() {
           name="Basic Website"
           price="$9,999"
           features={[
+<<<<<<< HEAD
+            'Simple web application',
+            'Basic functionality',
+            'Responsive design',
+            '2 months development',
+=======
             "Simple web application",
             "Basic functionality",
             "Responsive design",
             "2 months development",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
         />
         <Plan
           name="Professional App"
           price="$24,999"
           features={[
+<<<<<<< HEAD
+            'Advanced features',
+            'Custom design',
+            'Database integration',
+            '4 months development',
+            '3 months support',
+          ]}
+          popular={true}
+        />
+=======
             "Advanced features",
             "Custom design",
             "Database integration",
@@ -344,16 +398,25 @@ function Pricing() {
             "Advanced integrations","
             "Dedicated team","
 =======
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
         <Plan
           name="Enterprise Solution"
           price="$59,999+"
           features={[
+<<<<<<< HEAD
+            'Complex functionality',
+            'Custom backend',
+            'Advanced integrations',
+            'Dedicated team',
+            '6+ months development',
+=======
             "Complex functionality",
             "Custom backend",
             "Advanced integrations",
             "Dedicated team",
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             "6+ months development",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
         />
       </div>
@@ -417,6 +480,8 @@ function Plan({
         ))}
       </ul>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
       <a"
         href="tel:+13024640950"`
         className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors text-center block ${}
@@ -433,12 +498,18 @@ function Plan({
 }
 "`
 =======
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
       <a
         href="tel:+13024640950"
         className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors text-center block ${
           popular
+<<<<<<< HEAD
+            ? 'bg-emerald-600 text-white hover:bg-emerald-700'
+            : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
+=======
             ? "bg-emerald-600 text-white hover:bg-emerald-700"
             : "bg-gray-100 text-gray-900 hover:bg-gray-200"
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
         }`}
       >
         Get Started
@@ -446,4 +517,7 @@ function Plan({
     </div>
   );
 }
+<<<<<<< HEAD
+=======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172

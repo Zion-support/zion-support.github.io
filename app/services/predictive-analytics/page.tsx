@@ -1,13 +1,23 @@
 <<<<<<< HEAD
 export const metadata = {
+  title: 'Predictive Analytics | Zion Tech Group',
+  description: 'Forecast the future with AI-powered predictive analytics. Make data-driven decisions with accurate predictions and trend analysis.',
+=======
+<<<<<<< HEAD
+export const metadata = {
   title: "Predictive Analytics | Zion Tech Group",
   description:
     "Forecast the future with AI-powered predictive analytics. Make data-driven decisions with accurate predictions and trend analysis.",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
 };
 
 export default function PredictiveAnalyticsPage() {
   return (
     <section className="max-w-6xl mx-auto px-4 py-16">
+<<<<<<< HEAD
+      <h1 className="text-4xl font-bold text-gray-900 mb-6">Predictive Analytics</h1>
+      <p className="text-xl text-gray-600 mb-12">Forecast the future with AI-powered predictive analytics. Make data-driven decisions with accurate predictions and trend analysis.</p>
+=======
       <h1 className="text-4xl font-bold text-gray-900 mb-6">
         Predictive Analytics
       </h1>
@@ -15,33 +25,55 @@ export default function PredictiveAnalyticsPage() {
         Forecast the future with AI-powered predictive analytics. Make
         data-driven decisions with accurate predictions and trend analysis.
       </p>
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
         <FeatureCard
           title="Forecasting & Predictions"
           features={[
+<<<<<<< HEAD
+            'Sales forecasting',
+            'Demand prediction',
+            'Risk assessment',
+            'Trend analysis',
+=======
             "Sales forecasting",
             "Demand prediction",
             "Risk assessment",
             "Trend analysis",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
         />
         <FeatureCard
           title="Machine Learning Models"
           features={[
+<<<<<<< HEAD
+            'Custom model development',
+            'Model training & validation',
+            'Automated retraining',
+            'Performance monitoring',
+=======
             "Custom model development",
             "Model training & validation",
             "Automated retraining",
             "Performance monitoring",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
         />
         <FeatureCard
           title="Business Intelligence"
           features={[
+<<<<<<< HEAD
+            'Interactive dashboards',
+            'Automated reporting',
+            'Alert systems',
+            'ROI tracking',
+=======
             "Interactive dashboards",
             "Automated reporting",
             "Alert systems",
             "ROI tracking",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
         />
       </div>
@@ -92,6 +124,10 @@ export default function PredictiveAnalyticsPage() {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
+
+      <Pricing />
+=======
 <<<<<<< HEAD
 =======
 export const metadata = {}
@@ -213,6 +249,7 @@ export default function PredictiveAnalyticsPage() {}
 =======
 
       <Pricing />
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
 
       <div className="mt-16 text-center">
         <h2 className="text-2xl font-bold text-gray-900 mb-4">
@@ -317,16 +354,33 @@ function Pricing() {
           name="Starter"
           price="$3,999/mo"
           features={[
+<<<<<<< HEAD
+            'Basic forecasting models',
+            'Up to 1M data points',
+            'Standard support',
+            'Cloud deployment',
+=======
             "Basic forecasting models",
             "Up to 1M data points",
             "Standard support",
             "Cloud deployment",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
         />
         <Plan
           name="Professional"
           price="$9,999/mo"
           features={[
+<<<<<<< HEAD
+            'Advanced ML models',
+            'Up to 10M data points',
+            'Custom model development',
+            'Priority support',
+            'API access',
+          ]}
+          popular={true}
+        />
+=======
             "Advanced ML models",
             "Up to 10M data points",
             "Custom model development",
@@ -346,16 +400,25 @@ function Pricing() {
             "On-premise deployment","
             "Dedicated support","
 =======
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
         <Plan
           name="Enterprise"
           price="$24,999/mo"
           features={[
+<<<<<<< HEAD
+            'Unlimited data points',
+            'Custom model development',
+            'On-premise deployment',
+            'Dedicated support',
+            'White-label solution',
+=======
             "Unlimited data points",
             "Custom model development",
             "On-premise deployment",
             "Dedicated support",
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             "White-label solution",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
         />
       </div>
@@ -419,6 +482,8 @@ function Plan({
         ))}
       </ul>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
       <a"
         href="tel:+13024640950"`
         className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors text-center block ${}
@@ -435,12 +500,18 @@ function Plan({
 }
 "`
 =======
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
       <a
         href="tel:+13024640950"
         className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors text-center block ${
           popular
+<<<<<<< HEAD
+            ? 'bg-violet-600 text-white hover:bg-violet-700'
+            : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
+=======
             ? "bg-violet-600 text-white hover:bg-violet-700"
             : "bg-gray-100 text-gray-900 hover:bg-gray-200"
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
         }`}
       >
         Get Started
@@ -448,4 +519,7 @@ function Plan({
     </div>
   );
 }
+<<<<<<< HEAD
+=======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172

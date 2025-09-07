@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+import { ResumeBasicInfo } from '@/types/resume';
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -173,6 +176,7 @@ export function ResumeBasicInfoSection({
 <<<<<<< HEAD
 =======
 import { ResumeBasicInfo } from "@/types/resume";
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
 interface ResumeBasicInfoSectionProps {
   basicInfo: ResumeBasicInfo;
 }
@@ -190,6 +194,8 @@ export function ResumeBasicInfoSection({
   );
 }
 ;
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -222,3 +228,4 @@ export function ResumeBasicInfoSection({
 pr-12325
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172

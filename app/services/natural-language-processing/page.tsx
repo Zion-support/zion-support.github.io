@@ -1,13 +1,23 @@
 <<<<<<< HEAD
 export const metadata = {
+  title: 'Natural Language Processing | Zion Tech Group',
+  description: 'Unlock the power of text with advanced NLP solutions including sentiment analysis, text classification, and language understanding.',
+=======
+<<<<<<< HEAD
+export const metadata = {
   title: "Natural Language Processing | Zion Tech Group",
   description:
     "Unlock the power of text with advanced NLP solutions including sentiment analysis, text classification, and language understanding.",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
 };
 
 export default function NaturalLanguageProcessingPage() {
   return (
     <section className="max-w-6xl mx-auto px-4 py-16">
+<<<<<<< HEAD
+      <h1 className="text-4xl font-bold text-gray-900 mb-6">Natural Language Processing</h1>
+      <p className="text-xl text-gray-600 mb-12">Unlock the power of text with advanced NLP solutions including sentiment analysis, text classification, and language understanding.</p>
+=======
       <h1 className="text-4xl font-bold text-gray-900 mb-6">
         Natural Language Processing
       </h1>
@@ -15,33 +25,55 @@ export default function NaturalLanguageProcessingPage() {
         Unlock the power of text with advanced NLP solutions including sentiment
         analysis, text classification, and language understanding.
       </p>
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
         <FeatureCard
           title="Text Analysis & Understanding"
           features={[
+<<<<<<< HEAD
+            'Sentiment analysis',
+            'Text classification',
+            'Named entity recognition',
+            'Language detection',
+=======
             "Sentiment analysis",
             "Text classification",
             "Named entity recognition",
             "Language detection",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
         />
         <FeatureCard
           title="Content Processing"
           features={[
+<<<<<<< HEAD
+            'Document summarization',
+            'Keyword extraction',
+            'Topic modeling',
+            'Content moderation',
+=======
             "Document summarization",
             "Keyword extraction",
             "Topic modeling",
             "Content moderation",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
         />
         <FeatureCard
           title="Language Generation"
           features={[
+<<<<<<< HEAD
+            'Text generation',
+            'Translation services',
+            'Content creation',
+            'Chatbot responses',
+=======
             "Text generation",
             "Translation services",
             "Content creation",
             "Chatbot responses",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
         />
       </div>
@@ -101,6 +133,10 @@ export default function NaturalLanguageProcessingPage() {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
+
+      <Pricing />
+=======
 <<<<<<< HEAD
 =======
 export const metadata = {}
@@ -231,6 +267,7 @@ export default function NaturalLanguageProcessingPage() {}
 =======
 
       <Pricing />
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
 
       <div className="mt-16 text-center">
         <h2 className="text-2xl font-bold text-gray-900 mb-4">
@@ -335,16 +372,33 @@ function Pricing() {
           name="Starter"
           price="$1,999/mo"
           features={[
+<<<<<<< HEAD
+            'Basic text analysis',
+            'Up to 50,000 documents/month',
+            'Standard support',
+            'Cloud deployment',
+=======
             "Basic text analysis",
             "Up to 50,000 documents/month",
             "Standard support",
             "Cloud deployment",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
         />
         <Plan
           name="Professional"
           price="$4,999/mo"
           features={[
+<<<<<<< HEAD
+            'Advanced NLP models',
+            'Up to 500,000 documents/month',
+            'Custom model training',
+            'Priority support',
+            'API access',
+          ]}
+          popular={true}
+        />
+=======
             "Advanced NLP models",
             "Up to 500,000 documents/month",
             "Custom model training",
@@ -364,16 +418,25 @@ function Pricing() {
             "On-premise deployment","
             "Dedicated support","
 =======
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
         <Plan
           name="Enterprise"
           price="$12,999/mo"
           features={[
+<<<<<<< HEAD
+            'Unlimited processing',
+            'Custom model development',
+            'On-premise deployment',
+            'Dedicated support',
+            'White-label solution',
+=======
             "Unlimited processing",
             "Custom model development",
             "On-premise deployment",
             "Dedicated support",
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             "White-label solution",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
         />
       </div>
@@ -437,6 +500,8 @@ function Plan({
         ))}
       </ul>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
       <a"
         href="tel:+13024640950"`
         className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors text-center block ${}
@@ -453,12 +518,18 @@ function Plan({
 }
 "`
 =======
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
       <a
         href="tel:+13024640950"
         className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors text-center block ${
           popular
+<<<<<<< HEAD
+            ? 'bg-teal-600 text-white hover:bg-teal-700'
+            : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
+=======
             ? "bg-teal-600 text-white hover:bg-teal-700"
             : "bg-gray-100 text-gray-900 hover:bg-gray-200"
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
         }`}
       >
         Get Started
@@ -466,4 +537,7 @@ function Plan({
     </div>
   );
 }
+<<<<<<< HEAD
+=======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172

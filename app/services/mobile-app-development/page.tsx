@@ -1,13 +1,23 @@
 <<<<<<< HEAD
 export const metadata = {
+  title: 'Mobile App Development | Zion Tech Group',
+  description: 'Create stunning mobile apps for iOS and Android with our expert development team. Native, cross-platform, and hybrid solutions.',
+=======
+<<<<<<< HEAD
+export const metadata = {
   title: "Mobile App Development | Zion Tech Group",
   description:
     "Create stunning mobile apps for iOS and Android with our expert development team. Native, cross-platform, and hybrid solutions.",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
 };
 
 export default function MobileAppDevelopmentPage() {
   return (
     <section className="max-w-6xl mx-auto px-4 py-16">
+<<<<<<< HEAD
+      <h1 className="text-4xl font-bold text-gray-900 mb-6">Mobile App Development</h1>
+      <p className="text-xl text-gray-600 mb-12">Create stunning mobile apps for iOS and Android with our expert development team. Native, cross-platform, and hybrid solutions.</p>
+=======
       <h1 className="text-4xl font-bold text-gray-900 mb-6">
         Mobile App Development
       </h1>
@@ -15,33 +25,55 @@ export default function MobileAppDevelopmentPage() {
         Create stunning mobile apps for iOS and Android with our expert
         development team. Native, cross-platform, and hybrid solutions.
       </p>
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
         <FeatureCard
           title="Native Development"
           features={[
+<<<<<<< HEAD
+            'iOS Swift/Objective-C',
+            'Android Kotlin/Java',
+            'Platform-specific features',
+            'Optimal performance',
+=======
             "iOS Swift/Objective-C",
             "Android Kotlin/Java",
             "Platform-specific features",
             "Optimal performance",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
         />
         <FeatureCard
           title="Cross-Platform"
           features={[
+<<<<<<< HEAD
+            'React Native',
+            'Flutter development',
+            'Xamarin solutions',
+            'Code sharing',
+=======
             "React Native",
             "Flutter development",
             "Xamarin solutions",
             "Code sharing",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
         />
         <FeatureCard
           title="App Services"
           features={[
+<<<<<<< HEAD
+            'UI/UX design',
+            'Backend integration',
+            'App store deployment',
+            'Maintenance & updates',
+=======
             "UI/UX design",
             "Backend integration",
             "App store deployment",
             "Maintenance & updates",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
         />
       </div>
@@ -96,6 +128,10 @@ export default function MobileAppDevelopmentPage() {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
+
+      <Pricing />
+=======
 <<<<<<< HEAD
 =======
 export const metadata = {}
@@ -221,6 +257,7 @@ export default function MobileAppDevelopmentPage() {}
 =======
 
       <Pricing />
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
 
       <div className="mt-16 text-center">
         <h2 className="text-2xl font-bold text-gray-900 mb-4">
@@ -325,16 +362,33 @@ function Pricing() {
           name="MVP App"
           price="$19,999"
           features={[
+<<<<<<< HEAD
+            'Basic functionality',
+            'Simple UI/UX',
+            '1 platform (iOS or Android)',
+            '2 months development',
+=======
             "Basic functionality",
             "Simple UI/UX",
             "1 platform (iOS or Android)",
             "2 months development",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
         />
         <Plan
           name="Professional App"
           price="$49,999"
           features={[
+<<<<<<< HEAD
+            'Advanced features',
+            'Custom UI/UX design',
+            'Both platforms',
+            'Backend integration',
+            '4 months development',
+          ]}
+          popular={true}
+        />
+=======
             "Advanced features",
             "Custom UI/UX design",
             "Both platforms",
@@ -354,16 +408,25 @@ function Pricing() {
             "Advanced integrations","
             "Dedicated team","
 =======
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
         <Plan
           name="Enterprise App"
           price="$99,999+"
           features={[
+<<<<<<< HEAD
+            'Complex functionality',
+            'Custom backend',
+            'Advanced integrations',
+            'Dedicated team',
+            '6+ months development',
+=======
             "Complex functionality",
             "Custom backend",
             "Advanced integrations",
             "Dedicated team",
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             "6+ months development",
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           ]}
         />
       </div>
@@ -427,6 +490,8 @@ function Plan({
         ))}
       </ul>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
       <a"
         href="tel:+13024640950"`
         className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors text-center block ${}
@@ -443,12 +508,18 @@ function Plan({
 }
 "`
 =======
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
       <a
         href="tel:+13024640950"
         className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors text-center block ${
           popular
+<<<<<<< HEAD
+            ? 'bg-rose-600 text-white hover:bg-rose-700'
+            : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
+=======
             ? "bg-rose-600 text-white hover:bg-rose-700"
             : "bg-gray-100 text-gray-900 hover:bg-gray-200"
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
         }`}
       >
         Get Started
@@ -456,4 +527,7 @@ function Plan({
     </div>
   );
 }
+<<<<<<< HEAD
+=======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
