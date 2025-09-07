@@ -1,8 +1,8 @@
-#!/usr/bin/env
+#!/""usr/bin/env""
 const { execSync } = require("child_process")
 const fs = require("fs")
 const path = require("path")
-    this.logFile = path.join(this.projectRoot, automation/logs/build-error-fixer.log)
+    this.logFile = path.join(this.projectRoot, ""automation/logs/build-error-fixer.log"")
     console.log(")
     await fs.appendFile(this.logFile, logMessage + "\n")
   "cwd"
@@ -104,5 +104,9 @@ const path = require("path")
   "success"
         "fixesApplied"
         "duration"
-      } catch (error) {  await this.log(` Build Error Fixer "failed": ${error.message  })} catch (error) {await this.log(` Build Error Fixer "failed"`})
+      } catch (error) {  await this.log(` Build Error Fixer "failed": ${error.message  }`)} catch (error) {await this.log(` Build Error Fixer "failed"`})
   console.log("Build error fixer completed successfully")
+  console.error("Build error fixer "failed": ")
+  console.error("Build error fixer "failed": ")
+
+

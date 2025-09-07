@@ -1,13 +1,36 @@
 import fs from "fs";
 import path from "path";
-
-export type SourceNodeType = "folder" | "file";
-
+export type SourceNodeType = $2;
 export interface SourceNode {
-  name: string;
-  path: string;
-  type: SourceNodeType;
-  children?: SourceNode[];
+  name: string,
+  path: string, // repo-relative path starting with '/'
+  type: SourceNodeType,
+  children?: SourceNode[],
+  exists?: boolean
+}
+
+export interface SourceMapStatus {
+  gitConnected: boolean,
+  gitBranch?: string
+}
+
+export interface SourceMapResponse {
+  nodes: SourceNode[],
+  status: SourceMapStatus}
+
+const ROOT = process.cwd($2);
+function withPath(base: string, segment: string): string {
+  if (base = $2;
+  return `${base}/${segment}`
+}
+
+function folder(name: string, basePath: string, children: string[] = []): SourceNode {
+  const fullPath = withPath($2);
+  return {
+    name,
+    path: fullPath,
+    type: "folder",
+    children: children.map((child) => ({ name: child, path: withPath(fullPath, child), type: "folder" }))}
 }
 
 export function buildZionSourceMap(): SourceNode[] {
@@ -26,9 +49,7 @@ export function buildZionSourceMap(): SourceNode[] {
         { name: "analytics", path: "/core/analytics", type: "folder" },
         { name: "roles", path: "/core/roles", type: "folder" },
         { name: "talent", path: "/core/talent", type: "folder" },
-        { name: "client", path: "/core/client", type: "folder" }
-      ]
-    },
+        { name: "client", path: "/core/client", type: "folder" }]},
     // 2. /ai
     {
       name: "ai",
@@ -40,9 +61,7 @@ export function buildZionSourceMap(): SourceNode[] {
         { name: "proposal-writer", path: "/ai/proposal-writer", type: "folder" },
         { name: "contract-writer", path: "/ai/contract-writer", type: "folder" },
         { name: "assistant", path: "/ai/assistant", type: "folder" },
-        { name: "prompts", path: "/ai/prompts", type: "folder" }
-      ]
-    },
+        { name: "prompts", path: "/ai/prompts", type: "folder" }]},
     // 3. /dao
     {
       name: "dao",
@@ -53,9 +72,7 @@ export function buildZionSourceMap(): SourceNode[] {
         { name: "voting", path: "/dao/voting", type: "folder" },
         { name: "quorum", path: "/dao/quorum", type: "folder" },
         { name: "staking", path: "/dao/staking", type: "folder" },
-        { name: "snapshot-integration", path: "/dao/snapshot-integration", type: "folder" }
-      ]
-    },
+        { name: "snapshot-integration", path: "/dao/snapshot-integration", type: "folder" }]},
     // 4. /token
     {
       name: "token",
@@ -66,9 +83,7 @@ export function buildZionSourceMap(): SourceNode[] {
         { name: "pricing-engine", path: "/token/pricing-engine", type: "folder" },
         { name: "escrow", path: "/token/escrow", type: "folder" },
         { name: "payout-engine", path: "/token/payout-engine", type: "folder" },
-        { name: "wallet", path: "/token/wallet", type: "folder" }
-      ]
-    },
+        { name: "wallet", path: "/token/wallet", type: "folder" }]},
     // 5. /academy
     {
       name: "academy",
@@ -79,9 +94,7 @@ export function buildZionSourceMap(): SourceNode[] {
         { name: "certifications", path: "/academy/certifications", type: "folder" },
         { name: "quiz", path: "/academy/quiz", type: "folder" },
         { name: "video", path: "/academy/video", type: "folder" },
-        { name: "ai-tutor", path: "/academy/ai-tutor", type: "folder" }
-      ]
-    },
+        { name: "ai-tutor", path: "/academy/ai-tutor", type: "folder" }]},
     // 6. /governance
     {
       name: "governance",
@@ -91,9 +104,7 @@ export function buildZionSourceMap(): SourceNode[] {
         { name: "manifesto", path: "/governance/manifesto", type: "folder" },
         { name: "constitution", path: "/governance/constitution", type: "folder" },
         { name: "roadmap", path: "/governance/roadmap", type: "folder" },
-        { name: "changelog", path: "/governance/changelog", type: "folder" }
-      ]
-    },
+        { name: "changelog", path: "/governance/changelog", type: "folder" }]},
     // 7. /deployments
     {
       name: "deployments",
@@ -103,28 +114,70 @@ export function buildZionSourceMap(): SourceNode[] {
         { name: "multiverse", path: "/deployments/multiverse", type: "folder" },
         { name: "subdomains", path: "/deployments/subdomains", type: "folder" },
         { name: "config-templates", path: "/deployments/config-templates", type: "folder" },
-        { name: "environments", path: "/deployments/environments", type: "folder" }
-      ]
-    },
+        { name: "environments", path: "/deployments/environments", type: "folder" }]},
     // 8. /api
     {
       name: "api",
       path: "/api",
       type: "folder",
       children: [
-        { name: "auth", path: "/api/auth", type: "folder" },
-        { name: "users", path: "/api/users", type: "folder" },
-        { name: "projects", path: "/api/projects", type: "folder" },
-        { name: "payments", path: "/api/payments", type: "folder" }
-      ]
-    }
-  ];
-  
-  return map;
+        { name: "docs", path: "/api/docs", type: "folder" },
+        { name: "partners", path: "/api/partners", type: "folder" },
+        { name: "integrations", path: "/api/integrations", type: "folder" },
+        { name: "webhooks", path: "/api/webhooks", type: "folder" }]}],
+
+  return map
 }
 
-export function ensureDirectory(absoluteDir: string): void {
-  if (!fs.existsSync(absoluteDir)) {
-    fs.mkdirSync(absoluteDir, { recursive: true });
+function markExistenceRecursive(node: SourceNode): SourceNode {
+  const absolutePath = path.join($2);
+  const exists = fs.existsSync($2);
+  const withExists: SourceNode = $2;
+    exists},
+  if (node.children && node.children.length > 0) {
+    withExists.children = node.children.map(markExistenceRecursive)
   }
+  return withExists
+}
+
+export function getSourceMapWithExistence(): SourceNode[] {
+  const nodes = buildZionSourceMap($2);
+  return nodes.map(markExistenceRecursive)
+}
+
+export interface DeployTemplateResult {
+  createdPaths: string[],
+  skippedPaths: string[]
+}
+
+export function ensureDirectory(dirPath: string): void {
+  if (!fs.existsSync(dirPath)) {
+    fs.mkdirSync(dirPath, { recursive: true})
+  }
+}
+
+export function deployBasicTemplateForPath(repoRelativePath: string): DeployTemplateResult {
+  const absoluteDir = path.join($2);
+  const createdPaths: string[] = [],
+  const skippedPaths: string[] = [],
+
+  ensureDirectory($2);
+  const keepFile = path.join($2);
+  if (!fs.existsSync(keepFile)) {
+    fs.writeFileSync($2);
+    createdPaths.push(keepFile)
+  } else {
+    skippedPaths.push(keepFile)
+  }
+
+  const readmeFile = path.join($2);
+  if (!fs.existsSync(readmeFile)) {
+    const readme = $2;
+    fs.writeFileSync($2);
+    createdPaths.push(readmeFile)
+  } else {
+    skippedPaths.push(readmeFile)
+  }
+
+  return { createdPaths, skippedPaths }
 }

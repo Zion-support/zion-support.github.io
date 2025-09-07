@@ -1,4 +1,3 @@
-
 ;
 import type { NextPage } from 'next';
 import Head from 'next/head';
@@ -37,6 +36,20 @@ const NetworkSecurityChat: NextPage = () => {
       <Head />;
         <title />NetworkSecurityChat - Zion Tech Solutions</title>;
 
+import type { NextPage } from "next";""
+import Head from "next/head";""
+import Link from "next/link";""
+const NetworkSecurityChat: NextPage = () => {
+  return (
+    <div>
+</div>
+      <Head>
+
+    <div>;
+      <Head>;
+
+        <title>NetworkSecurityChat - Zion Tech Solutions</title>;
+
 const NetworkSecurityChat: NextPage = () => {
   return (
     <div />
@@ -44,13 +57,11 @@ const NetworkSecurityChat: NextPage = () => {
 
       </Head>;
 
-      </Head>;
+      <main>
+        <h1>NetworkSecurityChat</h1>
+        <p>Service details coming soon...</p>
+        <a href="/services">Back to Services</a>
 
-const NetworkSecurityChat: NextPage = () => {
-      <main />
-        <h1 />NetworkSecurityChat</h1>
-        <p />Service details coming soon...</p>
-        <a href=\"/services\" />Back to Services</a>
       </main>
     </div>
       </Head>;
@@ -171,4 +182,3 @@ const NetworkSecurityChat: NextPage = () => {
 }
 
 export default NetworkSecurityChat;
-

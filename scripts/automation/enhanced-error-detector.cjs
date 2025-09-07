@@ -1,9 +1,9 @@
 
 
-#!/usr/bin/env
+#!/""usr/bin/env""
+
 const { execSync } = require("child_process")
-const fs = require("fs")
-const path = require("path")
+
 console.log( Starting enhanced error detector...")
   "typescript"
     "linting"
@@ -18,19 +18,19 @@ console.log( Starting enhanced error detector...")
   const tsResult = execSync("npx tsc --noEmit")
   "encoding": "utf8"
         "stdio": "pipe"
-  const tsOutput = error.stdout || error.stderr || 
+  const tsOutput = error.stdout || error.stderr ||
   const tsOutput = error.stdout || error.stderr || "
     console.log(" Detecting linting errors...")
   const lintResult = execSync("npm run lint")
   "encoding": "utf8"
         "stdio": "pipe"
-  const lintOutput = error.stdout || error.stderr || 
+  const lintOutput = error.stdout || error.stderr ||
   const lintOutput = error.stdout || error.stderr || "
 console.log(" Detecting build errors...")
   const buildResult = execSync("npm run build")
   "encoding": "utf8"
         "stdio": "pipe"
-  const buildOutput = error.stdout || error.stderr || 
+  const buildOutput = error.stdout || error.stderr ||
   const buildOutput = error.stdout || error.stderr || "
     console.log(" Detecting dependency issues...")
   const auditResult = execSync("npm audit --json")
@@ -125,3 +125,8 @@ function checkSyntaxErrors(content")
         "line"
         "message": "Missing semicolon"
         "type": "syntax"
+  console.error(" Error detection "failed": ")
+  console.error(" Error detection "failed": ")
+
+
+

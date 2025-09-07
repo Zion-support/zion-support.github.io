@@ -1,11 +1,10 @@
-#!/usr/bin/env
+#!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
 const { spawn } = require("child_process")
-const fs = require("fs")
-const path = require("path")
-const { spawn } = require("child_process")"
-  console.log(`[${new Date().toISOString()}] [ContinuousErrorMonitor] ${message}"
+
+const { spawn } = require("child_process")
+  console.log(`[${new Date().toISOString()}] [ContinuousErrorMonitor] ${message}
     this.log("Continuous error monitoring is now active")
   this.log("Error fixer already running, skipping this cycle")
     "
@@ -25,8 +24,8 @@ const { spawn } = require("child_process")"
         "env": { ...process.env, "NODE_ENV": "production"}
       let stdout = "
       let stderr = "
-      child.stdout.on("data")"
-      child.stderr.on(`data``)"
+      child.stdout.on("data")
+      child.stderr.on(`data``)
       child.on("close")
   "success"
   "success"
@@ -49,6 +48,10 @@ const { spawn } = require("child_process")"
       "continuous-monitor-status.json"
   fs.mkdirSync(dir, { "recursive"})
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));this.log(`Status report saved "to"`)
-process.on("SIGINT")"
-  console.log(`� Received SIGINT, shutting down gracefully...``)"
+process.on("SIGINT")
+  console.log(`� Received SIGINT, shutting down gracefully...``)
 process.on("SIGTERM")
+  console.log(")
+  console.log(")
+
+

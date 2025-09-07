@@ -1,56 +1,103 @@
-export interface ApiResponse<T = any> {
-  data: T;
-  success: boolean;
-  message?: string;
+interface ApiResponse<T = unknown> {
+  data?: T;
   error?: string;
+  success: boolean;
 }
 
-export interface RequestOptions {
-  method?: 'GET' | 'POST' | 'PUT' | 'DELETE';
+interface RequestOptions extends RequestInit {
+  timeout?: number;
+}
+
+// Add global type definitions for Node.js environment
+interface RequestInit {
+  method?: string;
   headers?: Record<string, string>;
-  body?: any;
+  body?: string;
+  signal?: AbortSignal;
+  timeout?: number;
+}
+
+interface AbortSignal {
+  aborted: boolean;
+  addEventListener(type: string, listener: () => void): void;
+  removeEventListener(type: string, listener: () => void): void;
+}
+
+class AbortController {
+  signal: AbortSignal;
+  abort(): void;
 }
 
 class ApiClient {
   private baseUrl: string;
+  private defaultTimeout: number;
 
-  constructor(baseUrl: string = '/api') {
+  constructor(baseUrl: string = '', defaultTimeout: number = 10000) {
     this.baseUrl = baseUrl;
+    this.defaultTimeout = defaultTimeout;
   }
 
-  async request<T>(endpoint: string, options: RequestOptions = {}): Promise<ApiResponse<T>> {
+  private async request<T>(
+    endpoint: string;
+    options: RequestOptions = {}
+  ): Promise<ApiResponse<T>> {
+    const { timeout = this.defaultTimeout, ...fetchOptions } = options;
+    
     try {
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), timeout);
+
       const response = await fetch(`${this.baseUrl}${endpoint}`, {
-        method: options.method || 'GET',
+        ...fetchOptions;
+        signal: controller.signal;
         headers: {
-          'Content-Type': 'application/json',
-          ...options.headers,
-        },
-        body: options.body ? JSON.stringify(options.body) : undefined,
+          'Content-Type': 'application/json';
+          ...fetchOptions.headers;
+        };
       });
 
-      const data = await response.json();
+      clearTimeout(timeoutId);
 
       if (!response.ok) {
-        return {
-          data: null,
-          success: false,
-          error: data.message || 'Request failed',
-        };
+        throw new Error(`HTTP error! status: ${response.status}`);
       }
 
-      return {
-        data,
-        success: true,
-      };
+      const data = await response.json();
+      return { data, success: true };
     } catch (error) {
+      // eslint-disable-next-line no-console
+      console.error('API request failed:', error);
       return {
-        data: null,
-        success: false,
-        error: error instanceof Error ? error.message : 'Unknown error',
+        error: error instanceof Error ? error.message : 'Unknown error occurred';
+        success: false;
       };
     }
+  }
+
+  async get<T>(endpoint: string, options?: RequestOptions): Promise<ApiResponse<T>> {
+    return this.request<T>(endpoint, { ...options, method: 'GET' });
+  }
+
+  async post<T>(endpoint: string, data?: unknown, options?: RequestOptions): Promise<ApiResponse<T>> {
+    return this.request<T>(endpoint, {
+      ...options;
+      method: 'POST';
+      body: data ? JSON.stringify(data) : undefined;
+    });
+  }
+
+  async put<T>(endpoint: string, data?: unknown, options?: RequestOptions): Promise<ApiResponse<T>> {
+    return this.request<T>(endpoint, {
+      ...options;
+      method: 'PUT';
+      body: data ? JSON.stringify(data) : undefined;
+    });
+  }
+
+  async delete<T>(endpoint: string, options?: RequestOptions): Promise<ApiResponse<T>> {
+    return this.request<T>(endpoint, { ...options, method: 'DELETE' });
   }
 }
 
 export const apiClient = new ApiClient();
+export type { ApiResponse, RequestOptions };

@@ -1,20 +1,37 @@
+export default function Home() {;
+
+  return (
+
+    </div>;
 
     <div>;
-</div>
       <main>;
-</main>
         <h1>Welcome to Zion Tech Group</h1>;
         <p>Advanced IT Solutions & AI Services</p>;
-        <Link href="/services">View Our Services</Link>;"
+        <Link href="/services">View Our Services</Link>;
       </main>;
+    <div>
+      <main>
+        <h1>Welcome to Zion Tech Group</h1>
+        <p>Advanced IT Solutions & AI Services</p>
+        <Link href="/services">View Our Services</Link>
+      </main>
     </div>;
-    <div>;
-</div>
-      <main>;
-</main>
-        <h1 > Welcome to Zion Tech Group</h1>;
-        <p > Advanced IT Solutions & AI Services</p>;"
-        <Link href="/services">View Our Services</Link>;"
-      </main>;
-    </div>);"
 
+  );
+
+import Link from './next / link';
+;
+export default /**;
+ * Home - Function description;
+ */
+function Home() {}
+  return (
+    <div>;
+      <main>;
+        <h1 > Welcome to Zion Tech Group</h1>;
+        <p > Advanced IT Solutions & AI Services</p>;
+        <Link href="/services">View Our Services</Link>;
+      </main>;
+    </div>);
+}

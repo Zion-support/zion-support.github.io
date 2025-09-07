@@ -1,29 +1,44 @@
 import React from 'react';
-import Link from 'next/link';
 
-interface NextLinkShimProps {
-  href: string;
+// Define HTMLAnchorElement type if not available
+interface HTMLElement {
   className?: string;
-  children: React.ReactNode;
-  [key: string]: any;
 }
 
-export function NextLinkShim({ href, className, children, ...rest }: NextLinkShimProps) {
-  // Check if it's an external link
-  const isExternal = href.startsWith('http') || href.startsWith('//');
-  
-  if (isExternal) {
-    return (
-      <a href={href} className={className} {...rest}>
-        {children}
-      </a>
-    );
+interface HTMLAnchorElement extends HTMLElement {
+  href: string,
+  className?: string;
+}
+
+type Href = string | { pathname?: string; href?: string };
+
+type LinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
+  href: Href,
+  children: React.ReactNode,
+};
+
+function resolveHref(href: Href): string {
+  if (typeof href === 'string') return href;
+  return href?.pathname || (href as { href?: string })?.href || '#';
+}
+
+export default function Link({ href, children, className, ...rest }: LinkProps) {
+  const resolved = resolveHref(href);
+
+  if (React.isValidElement(children)) {
+    const existingClass = (children.props as { className?: string })?.className || '';
+    const mergedClassName = [existingClass, className].filter(Boolean).join(' ');
+    
+    return React.cloneElement(children as React.ReactElement<{ href?: string; className?: string }>, {
+      href: resolved,
+      className: mergedClassName,
+      ...rest,
+    });
   }
-  
-  // Internal link - use Next.js Link
+
   return (
-    <Link href={href} className={className} {...rest}>
+    <a href={resolved} className={className} {...rest}>
       {children}
-    </Link>
+    </a>
   );
 }

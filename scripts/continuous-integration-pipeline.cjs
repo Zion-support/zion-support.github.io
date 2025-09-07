@@ -1,3 +1,6 @@
+#!/usr/bin/env node;
+#!/usr/bin/env node;
+
 
 
 const { execSync } = require("$1")
@@ -77,3 +80,7 @@ const path = require("path")
       this.log(` Fatal error in CI "pipeline"`)
     console.log(" Continuous Integration Pipeline completed successfully!")
       ` Final "Summary"
+    console.error(" CI pipeline "failed": ")
+    console.error(" CI pipeline "failed": ")
+
+

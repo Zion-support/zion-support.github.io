@@ -1,62 +1,25 @@
+import fs from 'fs';
+import path from 'path';
+const dataRoot = path.join(process.cwd(), 'data'),
 
-import { promises as fs } from "fs";""
-import path from "path";""
-const DATA_DIR = path.join(process.cwd(), "data");"
-  read: (path: string) => null;,
-  write: (path: string, data: any) => null;,
-  exists: (path: string) => false;,
-  delete: (path: string) => null;,
-  read: (path: string) => null,
-
-  write: (path: string, data: any) => null,
-  exists: (path: string) => false,
-  delete: (path: string) => null;
-};
-
-
-  read: (path: string) => null,
-  write: (path: string, data: any) => null,
-  exists: (path: string) => false,
-  delete: (path: string) => null;
-};
-
-
-
-
-
-
-  read: (path: string) => null,
-  write: (path: string, data: any) => null,
-  exists: (path: string) => false,
-  delete: (path: string) => null;
-};"
-import { promises as fs } from 'fs';''
-import path from 'path';''
-const DATA_DIR = path.join(process.cwd(), 'data');'
-  try {
-
-  // TODO: Implement
-}
-    const fullPath = path.join(DATA_DIR, filePath);'
-    const data = fs.readFileSync(fullPath, "utf8");"
-    return JSON.parse(data);
-  } catch (error) {
-    return defaultValue;
-
+function ensureDir(dirPath: string) {
+  if (!fs.existsSync(dirPath)) {
+    fs.mkdirSync(dirPath, { recursive: true})
   }
 }
 
+export function readJson<T>(relativePath: string, fallback: T): T {
+  const full = path.join($2);
+  try {
+    const raw = fs.readFileSync($2);
+    return JSON.parse(raw) as T
+  } catch (_) {
+    return fallback
+  }
+}
 
-
-
-export function writeJson<T>(filePath: string, data: T): void {
-</T>
-export async function readJsonAsync<T>(
-</T>)
-): Promise<T> {
-</T>
-export async function writeJsonAsync<T>(
-</T>)
-): Promise<void> {
-</void>"
-
+export function writeJson<T>(relativePath: string, value: T): void {
+  const full = path.join($2);
+  ensureDir(path.dirname(full)),
+  fs.writeFileSync(full, JSON.stringify(value, null, 2), 'utf-8')
+}

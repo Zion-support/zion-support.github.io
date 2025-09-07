@@ -1,10 +1,10 @@
-import React from 'react';
+import React from 'react'
+import { Metadata } from 'next'
 
-// eslint-disable-next-line react-refresh/only-export-components
-export const metadata = {
+export const metadata: Metadata = {
   title: "Research | Zion Tech Group",
   description: "Explore our cutting-edge research in AI, quantum computing, and autonomous systems."
-};
+}
 
 export default function ResearchPage() {
   return (
@@ -20,7 +20,7 @@ export default function ResearchPage() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          <div className="bg-gray-800 rounded-lg p-6">
+          <div className="bg-gray-800 rounded-lg p-6 hover:bg-gray-700 transition-colors duration-200">
             <h3 className="text-xl font-bold text-white mb-4">AI Research</h3>
             <p className="text-gray-300 mb-4">
               Advanced machine learning algorithms and neural network architectures.
@@ -28,7 +28,7 @@ export default function ResearchPage() {
             <div className="text-blue-400 font-semibold">25+ Patents Filed</div>
           </div>
 
-          <div className="bg-gray-800 rounded-lg p-6">
+          <div className="bg-gray-800 rounded-lg p-6 hover:bg-gray-700 transition-colors duration-200">
             <h3 className="text-xl font-bold text-white mb-4">Quantum Computing</h3>
             <p className="text-gray-300 mb-4">
               Breakthrough research in quantum algorithms and quantum machine learning.
@@ -36,7 +36,7 @@ export default function ResearchPage() {
             <div className="text-blue-400 font-semibold">15+ Publications</div>
           </div>
 
-          <div className="bg-gray-800 rounded-lg p-6">
+          <div className="bg-gray-800 rounded-lg p-6 hover:bg-gray-700 transition-colors duration-200">
             <h3 className="text-xl font-bold text-white mb-4">Autonomous Systems</h3>
             <p className="text-gray-300 mb-4">
               Self-learning systems and autonomous decision-making frameworks.
@@ -68,5 +68,5 @@ export default function ResearchPage() {
         </div>
       </div>
     </div>
-  );
+  )
 }

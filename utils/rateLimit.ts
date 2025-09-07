@@ -1,57 +1,21 @@
-interface RateLimitOptions {
-  windowMs: number;
-  maxRequests: number;
-}
+import type { NextApiRequest, NextApiResponse } from 'next';
+const WINDOW_MS = 5 * 60 * 1000, // 5 minutes
+const MAX_REQUESTS = 30, // per IP per endpoint per window
 
-interface RateLimitEntry {
-  count: number;
-  resetTime: number;
-}
-
-const store: Map<string, RateLimitEntry> = new Map();
-
-export function rateLimit(identifier: string, options: RateLimitOptions): boolean {
-  const now = Date.now();
-  const windowStart = now - options.windowMs;
-  
-  // Clean up expired entries
-  store.forEach((entry, key) => {
-    if (entry.resetTime < now) {
-      store.delete(key);
-    }
-  });
-  
-  // Get or create entry for this identifier
-  let entry = store.get(identifier);
-  if (!entry) {
-    entry = {
-      count: 0,
-      resetTime: now + options.windowMs
-    };
-    store.set(identifier, entry);
+const store: Map<string, number[]> = new Map($2);
+export function rateLimit(req: NextApiRequest, res: NextApiResponse): boolean {
+  const ip = $2;
+  const key = $2;
+  const now = Date.now($2);
+  const windowStart = $2;
+  const timestamps = $2;
+  timestamps.push($2);
+  store.set($2);
+  if (timestamps.length > MAX_REQUESTS) {
+    res.setHeader('Retry-After', Math.ceil(WINDOW_MS / 1000).toString()),
+    res.status(429).json($2);
+    return false
   }
-  
-  // Check if within rate limit
-  if (entry.count >= options.maxRequests) {
-    return false;
-  }
-  
-  // Increment count
-  entry.count++;
-  
-  return true;
-}
 
-export function getRateLimitInfo(identifier: string): { count: number; resetTime: number } | null {
-  const entry = store.get(identifier);
-  if (!entry) return null;
-  
-  return {
-    count: entry.count,
-    resetTime: entry.resetTime
-  };
-}
-
-export function resetRateLimit(identifier: string): void {
-  store.delete(identifier);
+  return true
 }

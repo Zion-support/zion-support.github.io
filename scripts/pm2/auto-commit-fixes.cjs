@@ -1,6 +1,8 @@
+
+
 #!/usr/bin/env node,"}),"
 ,"}),"
-const fs = require(,"}),"
+,"
         "encoding"
             "file"
         "encoding"
@@ -26,3 +28,6 @@ const fs = require(,"}),"
         "encoding"
         "stdio"
       const commitMessage = ` ${message}\n\nFiles "changed": \n${files.map(f => `- ${f}``)
+
+        "stdio"
+

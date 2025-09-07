@@ -1,219 +1,112 @@
 {
-
-  "timestamp": "2025-09-07T05:59:02.167Z",
-  "duration": "1s",
-  "summary": {
-    "totalFiles": 39,
-    "totalConflicts": 89,
-    "errors": 0,
-    "strategies": {
-      "ours": 34,
-      "theirs": 4,
-      "smart": 1
-    }
-  },
-  "resolvedFiles": [
-    {
-      "file": "App.tsx",
-      "conflicts": 2,
-      "strategy": "smart"
-    },
-    {
-      "file": "automation/ai-intelligent-code-analyzer.cjs",
-      "conflicts": 1,
-      "strategy": "ours"
-    },
-    {
-      "file": "automation/automated-test-runner.cjs",
-      "conflicts": 1,
-      "strategy": "ours"
-    },
-    {
-      "file": "automation/comprehensive-health-check.cjs",
-      "conflicts": 1,
-      "strategy": "ours"
-    },
-    {
-      "file": "automation/comprehensive-improvements.cjs",
-      "conflicts": 1,
-      "strategy": "ours"
-    },
-    {
-      "file": "automation/intelligent-code-analyzer.cjs",
-      "conflicts": 1,
-      "strategy": "ours"
-    },
-    {
-      "file": "automation/intelligent-git-workflow.cjs",
-      "conflicts": 1,
-      "strategy": "ours"
-    },
-    {
-      "file": "automation/master-automation-clean.cjs",
-      "conflicts": 1,
-      "strategy": "ours"
-    },
-    {
-      "file": "automation/mega-pr-merger.cjs",
-      "conflicts": 1,
-      "strategy": "ours"
-    },
-    {
-      "file": "automation/pr-management.cjs",
-      "conflicts": 1,
-      "strategy": "ours"
-    },
-    {
-      "file": "automation/security-auditor.cjs",
-      "conflicts": 3,
-      "strategy": "ours"
-    },
-    {
-      "file": "automation/smart-merge-resolver.cjs",
-      "conflicts": 1,
-      "strategy": "ours"
-    },
-    {
-      "file": "automation/ultimate-improvements.cjs",
-      "conflicts": 1,
-      "strategy": "ours"
-    },
-    {
-      "file": "automation/ultimate-pr-merger.cjs",
-      "conflicts": 1,
-      "strategy": "ours"
-    },
-    {
-      "file": "browserstack.config.ts",
-      "conflicts": 2,
-      "strategy": "theirs"
-    },
-    {
-      "file": "comprehensive-conflict-resolver.js",
-      "conflicts": 1,
-      "strategy": "ours"
-    },
-    {
-      "file": "deployment-automation.cjs",
-      "conflicts": 1,
-      "strategy": "ours"
-    },
-    {
-      "file": "eslint.config.cjs",
-      "conflicts": 1,
-      "strategy": "theirs"
-    },
-    {
-      "file": "execute-all.cjs",
-      "conflicts": 2,
-      "strategy": "ours"
-    },
-    {
-      "file": "final-automation-suite.cjs",
-      "conflicts": 26,
-      "strategy": "ours"
-    },
-    {
-      "file": "fix-all-conflicts.cjs",
-      "conflicts": 1,
-      "strategy": "ours"
-    },
-    {
-      "file": "fix-all-remaining.js",
-      "conflicts": 1,
-      "strategy": "ours"
-    },
-    {
-      "file": "fix-merge-conflicts.mjs",
-      "conflicts": 1,
-      "strategy": "ours"
-    },
-    {
-      "file": "fix-remaining-issues.js",
-      "conflicts": 1,
-      "strategy": "ours"
-    },
-    {
-      "file": "jest.config.smoke.cjs",
-      "conflicts": 3,
-      "strategy": "theirs"
-    },
-    {
-      "file": "jest.setup.js",
-      "conflicts": 4,
-      "strategy": "theirs"
-    },
-    {
-      "file": "quick-conflict-resolver.js",
-      "conflicts": 2,
-      "strategy": "ours"
-    },
-    {
-      "file": "scripts/automation/component-error-fixer.cjs",
-      "conflicts": 1,
-      "strategy": "ours"
-    },
-    {
-      "file": "scripts/automation/dependency-fixer.cjs",
-      "conflicts": 1,
-      "strategy": "ours"
-    },
-    {
-      "file": "scripts/automation/file-extension-fixer.cjs",
-      "conflicts": 1,
-      "strategy": "ours"
-    },
-    {
-      "file": "scripts/optimize-file-sizes.cjs",
-      "conflicts": 1,
-      "strategy": "ours"
-    },
-    {
-      "file": "scripts/performance-optimizer.cjs",
-      "conflicts": 5,
-      "strategy": "ours"
-    },
-    {
-      "file": "scripts/security-enhancer.cjs",
-      "conflicts": 4,
-      "strategy": "ours"
-    },
-    {
-      "file": "syntax-fixer.js",
-      "conflicts": 1,
-      "strategy": "ours"
-    },
-    {
-      "file": "system-monitor.cjs",
-      "conflicts": 5,
-      "strategy": "ours"
-    },
-    {
-      "file": "targeted-conflict-resolver.js",
-      "conflicts": 2,
-      "strategy": "ours"
-    },
-    {
-      "file": "ultimate-merge-resolver.js",
-      "conflicts": 1,
-      "strategy": "ours"
-    },
-    {
-      "file": "utils/performance.ts",
-      "conflicts": 2,
-      "strategy": "ours"
-    },
-    {
-      "file": "utils/supabase/client.ts",
-      "conflicts": 2,
-      "strategy": "ours"
-    }
+  "timestamp": "2025-09-05T22:30:28.954Z",
+  "totalFiles": 423,
+  "filesWithConflicts": 107,
+  "resolvedFiles": 102,
+  "failedFiles": 0,
+  "fixedFiles": [
+    ".eslintrc.js",
+    "App.smoke.test.tsx",
+    "automation/automation-factory.js",
+    "automation/code-quality-monitor.js",
+    "automation/comprehensive-automation-runner.js",
+    "automation/health-check.cjs",
+    "automation/security-scanner.js",
+    "automation/syntax-fixer.js",
+    "automation/ultimate-automation-factory-system.js",
+    "backup-merge-conflicts/build-optimizer.js",
+    "backup-merge-conflicts/health-monitor.js",
+    "backup-merge-conflicts/security-scanner.js",
+    "batch-syntax-fixer.cjs",
+    "bundle-analyzer.config.js",
+    "clean-all-conflicts.cjs",
+    "clean-merge-conflicts.cjs",
+    "complete-improvement-suite.cjs",
+    "components/layout/Layout.tsx",
+    "components/ui/EnhancedMarketplaceCard.tsx",
+    "ecosystem.error-automation.config.cjs",
+    "eslint.config.js",
+    "fix-all-merge-conflicts.cjs",
+    "fix-all-typescript.js",
+    "fix-critical-files.js",
+    "fix-links-and-remaining.js",
+    "fix-lint-errors.cjs",
+    "fix-lint-errors.js",
+    "fix-merge-conflicts.cjs",
+    "fix-merge-conflicts.js",
+    "fix-remaining-errors.js",
+    "fix-remaining-lint-errors.js",
+    "fix-remaining-syntax.js",
+    "fix-syntax-errors.js",
+    "fix-typescript-modules.js",
+    "fix-variable-names.js",
+    "git-ops.js",
+    "jest.setup.js",
+    "lib/analytics.ts",
+    "next-env.d.ts",
+    "next.config.analyze.js",
+    "next.config.analyzer.js",
+    "next.config.js",
+    "next.config.minimal.js",
+    "next.config.original.js",
+    "next.config.simple.js",
+    "pages/index.tsx",
+    "public/sw-enhanced.js",
+    "quick-syntax-fixer.cjs",
+    "resolve-merge-conflicts-comprehensive.js",
+    "scripts/generate-sitemap.js",
+    "scripts/performance-optimizer.cjs",
+    "scripts/pm2/auto-commit-fixes.js",
+    "scripts/pm2/build-optimizer.js",
+    "scripts/pm2/code-quality-monitor.js",
+    "scripts/pm2/dependency-monitor.js",
+    "scripts/pm2/docs-generator.js",
+    "scripts/pm2/git-workflow-automator.js",
+    "scripts/pm2/git-workflow.js",
+    "scripts/pm2/health-monitor.js",
+    "scripts/pm2/security-scanner.js",
+    "scripts/pm2/seo-accessibility.js",
+    "scripts/pm2/test-automation.js",
+    "services/page.tsx",
+    "src/App.tsx",
+    "src/components/ErrorBoundary.tsx",
+    "src/components/FuturisticFooter.tsx",
+    "src/components/Header.tsx",
+    "src/components/PerformanceMonitor.tsx",
+    "src/components/PerformanceOptimized.tsx",
+    "src/components/layout/Header.tsx",
+    "src/components/layout/MainLayout.tsx",
+    "src/components/layout/Sidebar.tsx",
+    "src/data/advancedMicroSaaS2026.ts",
+    "src/data/enhancedServices.ts",
+    "src/main.tsx",
+    "src/utils/accessibility-checker.ts",
+    "src/utils/monitoring.ts",
+    "src/utils/performance-optimizer.ts",
+    "src/utils/performance.ts",
+    "src/utils/seo-optimizer.ts",
+    "structural-fix.js",
+    "supabase/functions/stripe-webhook/index.ts",
+    "test-utils.jsx",
+    "types/empty.ts",
+    "types/index.ts",
+    "ultimate-fix.js",
+    "utils/accessibility-utils.js",
+    "utils/accessibility.ts",
+    "utils/api.ts",
+    "utils/csrf-protection.js",
+    "utils/dynamic-imports.js",
+    "utils/env-security.js",
+    "utils/messageChannelHandler.ts",
+    "utils/next-link-shim.tsx",
+    "utils/performance.ts",
+    "utils/rate-limiting.js",
+    "utils/sanitizeHtml.ts",
+    "utils/security-headers.js",
+    "utils/seo-utils.js",
+    "utils/testing-system.tsx",
+    "utils/validation.ts",
+    "vite.config.js"
   ],
-  "errors": [],
-  "recommendations": [
-    "Review resolved files for any manual adjustments needed",
-    "Run tests to ensure functionality is preserved",
-    "Consider setting up automated conflict resolution for future merges"
-  ]
+  "failedFilesDetails": []
 }
-

@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/usr/bin/env node;
 const { execSync, spawn } = require("child_process")
 const fs = require("child_process")
 const path = require("path")
@@ -17,7 +17,7 @@ const path = require("path")
       this.log(` "Completed"`)
       return { "success": true, "output": result, "duration"}
       step.status = "failed"
-      this.log(` "Failed": ${description} - ${error.message}, "error"`)
+      this.log(` "Failed": ${description} - ${error.message}`, "error"`)
       return { "success": false, "error": error.message, "duration"}
     this.log(" Running linting checks...")
     return await this.runCommand("npm run lint", "ESLint Check")
@@ -47,4 +47,8 @@ const path = require("path")
       this.log(" Starting Enhanced Build & Test Automation")
       this.log("� Enhanced Build & Test Automation completed successfully")
       return { "success": true, "results"}
-      this.log(`� Build automation "failed": ${error.message}, "error"`)
+      this.log(`� Build automation "failed": ${error.message}`, "error"`)
+      return { "success": false, "error"}
+      return { "success": false, "error"}
+
+

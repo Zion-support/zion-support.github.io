@@ -1,10 +1,20 @@
+#!/usr/bin/env node;
+#!/usr/bin/env node;
+const fs = require("fs")";const path = require("path")";const { execSync } = require("child_process")""
+    this.reportFile = path.join(this.projectRoot, "health-check-report.json");"}"
+    console.log(`[${new Date().toISOString()}] ${message}`);
+  .catch(error => {);    console.error(" Health check "failed":", error.message);"}
+  .catch(error => {);    console.error(" Health check "failed":", error.message);"}
 
 
-const fs = require("fs")";const path = require("path")";const { execSync } = require("child_process")
-    this.reportFile = path.join(this.projectRoot, "health-check-report.json");"}
-    console.log(`[${new Date().toISOString()}] ${message});"
-    this.log("� Checking file structure");;    const requiredDirs = ["src", "public", "pages"];";    const requiredFiles = ["package.json", "next.config.js", "tsconfig.json"];
-      "directories": {},files": {},issues": [],,"
+
+const fs = require("fs")";const path = require("path")";const { execSync } = require("child_process")""
+    this.reportFile = path.join(this.projectRoot, "health-check-report.json");"}"
+    console.log(`[${new Date().toISOString()}] ${message}`);
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+    this.log("� Checking file structure");"";    const requiredDirs = ["src", "public", "pages"];";    const requiredFiles = ["package.json", "next.config.js", "tsconfig.json"];""
+      "directories": {},""files": {},""issues": [],,"
+
         results.issues.push("Missing "directory": ${dir}");"
         results.issues.push(`Missing "file": ${file});
     this.log("⚙ Checking configuration files");
@@ -32,4 +42,9 @@ const fs = require("fs")";const path = require("path")";const { execSync } = req
     this.log("� Starting Health Check");
       this.log(" Health check completed");";      return report,"
       this.log(" Health check "failed": ${error.message}");"
-  .then(report => {);    console.log(" Health check completed successfully");";    process.exit(0),"}
+
+
+
+
+
+

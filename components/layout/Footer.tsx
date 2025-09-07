@@ -1,39 +1,43 @@
+<<<<<<< HEAD
 import React from 'react';
 import Link from 'next/link';
-import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
+import { Mail, Phone, MapPin, Linkedin, Twitter, Github } from 'lucide-react';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
   const services = [
-    { name: 'AI Services', href: '/ai-services' },
-    { name: 'IT Services', href: '/it-services' },
-    { name: 'Micro SaaS', href: '/micro-saas' },
-    { name: 'Cloud Migration', href: '/solutions/cloud-migration' },
-    { name: 'Cybersecurity', href: '/solutions/cybersecurity' }
+    { name: 'AI Development', href: '/services/ai-development' },
+    { name: 'Cloud Solutions', href: '/services/cloud-solutions' },
+    { name: 'Web Development', href: '/services/web-development' },
+    { name: 'Mobile Apps', href: '/services/mobile-development' },
+    { name: 'Blockchain Solutions', href: '/services/blockchain' },
+    { name: 'IoT Platforms', href: '/services/iot-platforms' },
+    { name: 'Data Analytics', href: '/services/data-analytics' },
+    { name: 'Cybersecurity', href: '/services/cybersecurity' },
   ];
 
   const company = [
     { name: 'About Us', href: '/about' },
-    { name: 'Our Team', href: '/team' },
+    { name: 'Our Team', href: '/about#team' },
     { name: 'Careers', href: '/careers' },
-    { name: 'News', href: '/news' },
-    { name: 'Contact', href: '/contact' }
+    { name: 'News & Updates', href: '/blog' },
+    { name: 'Privacy Policy', href: '/privacy' },
+    { name: 'Terms of Service', href: '/terms' },
   ];
 
   const resources = [
-    { name: 'Documentation', href: '/docs' },
-    { name: 'API Reference', href: '/api' },
     { name: 'Blog', href: '/blog' },
     { name: 'Case Studies', href: '/case-studies' },
-    { name: 'White Papers', href: '/white-papers' }
+    { name: 'Documentation', href: '/docs' },
+    { name: 'Support', href: '/support' },
+    { name: 'FAQ', href: '/faq' },
   ];
 
   const socialLinks = [
-    { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin },
+    { name: 'LinkedIn', href: 'https://linkedin.com/company/zion-tech-group', icon: Linkedin },
     { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter },
-    { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Instagram },
-    { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook }
+    { name: 'GitHub', href: 'https://github.com/zion-tech-group', icon: Github },
   ];
 
   return (
@@ -44,7 +48,8 @@ const Footer: React.FC = () => {
           <div className="lg:col-span-1">
             <div className="text-2xl font-bold text-blue-400 mb-4">Zion Tech Group</div>
             <p className="text-gray-300 mb-6">
-              Leading technology solutions provider helping businesses transform their digital presence with cutting-edge AI, cloud architecture, and innovative development services.
+              Leading technology solutions provider helping businesses transform their digital presence;
+              with cutting-edge AI, cloud architecture, and innovative development services.
             </p>
             <div className="flex space-x-4">
               {socialLinks.map((social) => (
@@ -61,7 +66,6 @@ const Footer: React.FC = () => {
               ))}
             </div>
           </div>
-
           {/* Services */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Services</h3>
@@ -78,7 +82,6 @@ const Footer: React.FC = () => {
               ))}
             </ul>
           </div>
-
           {/* Company */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Company</h3>
@@ -95,7 +98,6 @@ const Footer: React.FC = () => {
               ))}
             </ul>
           </div>
-
           {/* Resources & Contact */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Resources</h3>
@@ -115,42 +117,41 @@ const Footer: React.FC = () => {
             <div className="space-y-2">
               <div className="flex items-center text-gray-300">
                 <Mail className="h-4 w-4 mr-2" />
-                <a href="mailto:kleber@ziontechgroup.com" className="hover:text-blue-400">
-                  kleber@ziontechgroup.com
+                <a href="mailto:info@ziontechgroup.com" className="hover:text-blue-400">
+                  info@ziontechgroup.com
                 </a>
               </div>
               <div className="flex items-center text-gray-300">
                 <Phone className="h-4 w-4 mr-2" />
-                <a href="tel:+13024640950" className="hover:text-blue-400">
-                  +1 302 464 0950
+                <a href="tel:+1-555-123-4567" className="hover:text-blue-400">
+                  +1 (555) 123-4567
                 </a>
               </div>
               <div className="flex items-start text-gray-300">
                 <MapPin className="h-4 w-4 mr-2 mt-0.5" />
                 <span>
-                  364 E Main St STE 1008<br />
-                  Middletown DE 19709
+                  123 Tech Street<br />
+                  San Francisco, CA 94105
                 </span>
               </div>
             </div>
           </div>
         </div>
-
         {/* Bottom Section */}
         <div className="border-t border-gray-700 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-300 text-sm">
-              © {currentYear} Zion Tech Group. All rights reserved.
+              &copy; {currentYear} Zion Tech Group. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
-              <Link href="/privacy" className="text-gray-300 hover:text-blue-400 text-sm transition-colors">
+              <Link href="/privacy" className="text-gray-300 hover:text-blue-400 text-sm">
                 Privacy Policy
               </Link>
-              <Link href="/terms" className="text-gray-300 hover:text-blue-400 text-sm transition-colors">
+              <Link href="/terms" className="text-gray-300 hover:text-blue-400 text-sm">
                 Terms of Service
               </Link>
-              <Link href="/cookies" className="text-gray-300 hover:text-blue-400 text-sm transition-colors">
-                Cookie Policy
+              <Link href="/sitemap" className="text-gray-300 hover:text-blue-400 text-sm">
+                Sitemap
               </Link>
             </div>
           </div>
@@ -161,3 +162,79 @@ const Footer: React.FC = () => {
 };
 
 export default Footer;
+=======
+                  key = $2;
+                  href = $2;
+                  target = $2;
+                  rel = $2;
+                  className = $2;
+                  aria-label = $2;
+                >,
+                  <social.icon className = $2;
+                </a>))},
+            </div>,
+          </div>,
+          {/* Services */},
+          <div>,
+            <h3 className = $2;
+            <ul className = $2;
+              {services.map((service) => (,
+                <li key = $2;
+                  <Link,
+                    href = $2;
+                    {service.name},
+                  </Link>,
+                </li>))},
+            </ul>,
+          </div>,
+          {/* Company */},
+          <div>,
+            <h3 className = $2;
+            <ul className = $2;
+              {company.map((item) => (,
+                <li key = $2;
+                  <Link,
+                    href = $2;
+                    {item.name},
+                  </Link>,
+                </li>))},
+            </ul>,
+          </div>,
+          {/* Resources & Contact */},
+          <div>,
+            <h3 className = $2;
+            <ul className = $2;
+              {resources.map((resource) => (,
+                <li key = $2;
+                  <Link,
+                    href = $2;
+                    {resource.name},
+                  </Link>,
+                </li>))},
+            </ul>,
+            <h3 className = $2;
+            <div className = $2;
+              <div className = $2;
+                <Mail className = $2;
+                <a href = $2;
+                  info@ziontechgroup.com,
+                </a>,
+              </div>,
+              <div className = $2;
+                <Phone className = $2;
+                <a href = $2;
+                  +1 (555) 123-4567,
+                </a>,
+              </div>,
+              <div className = $2;
+                <MapPin className = $2;
+                <span>,
+                  123 Tech Street<br />,
+                  San Francisco, CA 94105,
+                </span>,
+              </div>,
+            </div>,
+          </div>,
+        </div>,
+        {/* Bottom Section */},
+>>>>>>> origin/merge-automation-changes

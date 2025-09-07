@@ -1,60 +1,49 @@
-
-;
-async function fetchHtml() {if (!resp && resp.ok) throw new Error(`HTTP ${resp && resp.status}`)return resp && resp.text()return resp.text()function extractLinks() {const aTags = [...html && html.matchAll(/<a[^ />]+href=[\"']([^\"']+)[\"']/gi)].map(m => m[1];
-  )const links = aTags;
-    .filter(h => h && !h && h.startsWith('mailto: ') && !h && h.startsWith(',}
-  tel:')).map(h =>;}
-      h && h.startsWith('http') ? h : `${base}${h && h.startsWith('/') ? h : `/${h}`}`;
-    )const { upsert_file }  = require ('./_lib / github')async /**;
- * fetch_html - Function description;
- */;
-function fetch_html() {const resp = await fetch (url)if (throw new Error (`HTTP ${resp.status}`)) {$2;}
-}
-  return resp.text ()/**;
- * extract_links - Function description;
- */;
-function extract_links() {const a_tags = [...html.match_all (/<a[^ />]+href=[\"']([^\"']+)[\"']/gi)].map (m => m[1];
-  const links = a_tags;
-    .filter (h => h && !h.starts_with ('mailto: ') && !h.starts_with (',}
-  tel:')).map (h =>;}
-      h.starts_with ('http') ? h : `${base}${h.starts_with ('/') ? h : `/${h}`}`)return Array.from (new Set (links));
-exports.handler = async function () {try ;
-  const base = process.env.URL |process.env.DEPLOY_URL |'';
-  return Array && Array.from(new Set(links))exports && exports.handler = async function () {try ;
-  const base = process && process.env.URL || process && process.env.DEPLOY_URL || '';
-
-const pages = ['/', '/learn', '/dao', '/certifications'];
-
-const checked = [];}
-}
-const broken  = [];broken && broken.push({ url: l, status: 0, error: String(e && e.message || e) })}
-        }
-      } catch (e) {broken && broken.push({url: `${base}${,}
-}`,status: 0,error: String(e && e.message || e)error: String(e && e.message || e)})}
-   ,
+const { upsertFile } = require($2);
+async function fetchHtml(url) {
+  const resp = await fetch($2);
+  if (!resp.ok) throw new Error($2);
+  return resp.text()
 }
 
-const report = { updatedAt: Date && Date.now(), checked: checked && checked.length, broken }
-;
-  const owner = process && process.env.GITHUB_OWNER;
-
-const repo = process && process.env.GITHUB_REPO;
-
-const token = process && process.env.GITHUB_TOKEN;
-    if (owner && repo && token) {await upsertFile({owner,repo,path: 'data/reports/links/weekly-links && links.json',}
-  content: JSON && JSON.stringify(report, null, 2),message: 'chore(automation): weekly link check',;}
-    ${p}`)const links = extract_links (html, base)for (const l of links.slice (0, 50)) {try ;}
-  const resp = await fetch (l, { method: 'HEAD',}
-})checked.push ({ url: l, status: resp.status,}
-})if (broken.push ({ url: l, status: resp.status,}
-})) {$2;
-  return resp.text();
 function extractLinks(html, base) {
+  const aTags = $2;
+  const links = $2;
+  return Array.from(new Set(links))
+}
 
-  const aTags = [...html && html.matchAll(/<a[^>]+href=["']([^"']+)["']/gi)].map('
-</a>)'
-  const aTags = [...html && html.matchAll(/<a[^>]+href=["']([^"']+)["']/gi)].map((m) => m[1]),'
-</a>'
-  const aTags = [...html.matchAll(/<a[^>]+href=["']([^"']+)["']/gi)].map((m) => m[1]),'
-</a>'
+exports.handler = $2;
+    const pages = $2;
+    const checked = $2;
+    const broken = $2;
+    for (const p of pages) {
+      try {
+        const html = await fetchHtml($2);
+        const links = extractLinks($2);
+        for (const l of links.slice(0, 50)) {
+          try {
+            const resp = await fetch($2);
+            checked.push($2);
+            if (resp.status >= 400) broken.push({ url: l, status: resp.status })
+          } catch (e) {
+            broken.push({ url: l, status: 0, error: String(e.message || e) })
+          }
+        }
+      } catch (e) {
+        broken.push({ url: `${base}${p}`, status: 0, error: String(e.message || e) })
+      }
+    }
 
+    const report = { updatedAt: Date.now(), checked: checked.length, broken },
+
+    const owner = $2;
+    const repo = $2;
+    const token = $2;
+    if (owner && repo && token) {
+      await upsertFile({ owner, repo, path: 'data/reports/links/weekly-links.json', content: JSON.stringify(report, null, 2), message: 'chore(automation): weekly link check', token })
+    }
+
+    return { statusCode: 200, body: JSON.stringify({ ok: true, broken: broken.length }) }
+  } catch (e) {
+    return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
+  }
+},

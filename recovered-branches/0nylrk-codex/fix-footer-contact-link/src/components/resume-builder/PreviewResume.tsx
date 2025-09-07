@@ -1,66 +1,45 @@
-
-import { Resume } from "@/types/resume";"
-
+import { Resume } from "@/types/resume";
 import {
-  // TODO: Implement
-}
-  PreviewHeader,
-  ResumeBasicInfoSection,
-  WorkExperienceSection,
-  EducationSection,
+  PreviewHeader
+  ResumeBasicInfoSection
+  WorkExperienceSection
+  EducationSection
+  SkillsSection
+  CertificationsSection
+} from "./preview";
 
-  SkillsSection,
-  CertificationsSection,"
-} from "./preview";"
 interface PreviewResumeProps {
-  // TODO: Implement
+  resume: Resume;
+  onBack: () => void
 }
-  resume: Resume;,
-  onBack: () => void;
-}
-"
-import { Resume } from "@/types/resume";"
+import { Resume } from "@/types/resume";
 import {
-  // TODO: Implement
-}
   PreviewHeader,
   ResumeBasicInfoSection,
   WorkExperienceSection,
   EducationSection,
   SkillsSection,
-  CertificationsSection,"
-} from "./preview";"
-interface PreviewResumeProps {
-  // TODO: Implement
-}
-  resume: Resume;,
-  onBack: () => void;
-}
+  CertificationsSection
+} from './preview',
 
+interface PreviewResumeProps {
+  resume: Resume,
+  onBack: () => void
 }
 
 export function PreviewResume({ resume, onBack }: PreviewResumeProps) {
-  return ("
-    <div className="space-y-6">"
-</div>
+  return (
+    <div className="space-y-6">
       <PreviewHeader resume={resume} onBack={onBack} />
-</PreviewHeader>"
-      <div className="bg-white text-black p-8 rounded-lg shadow-lg print-section">"
-</div>
 
+      {/* Resume Preview */}
+      <div className="bg-white text-black p-8 rounded-lg shadow-lg print-section">
         <ResumeBasicInfoSection basicInfo={resume.basic_info} />
-</ResumeBasicInfoSection>
         <WorkExperienceSection workExperience={resume.work_experience} />
-</WorkExperienceSection>
         <EducationSection education={resume.education} />
-</EducationSection>
         <SkillsSection skills={resume.skills} />
-</SkillsSection>
         <CertificationsSection certifications={resume.certifications} />
-</CertificationsSection>
       </div>
     </div>
-
-    </div>;)
- </div> </div>) "
-
+  )
+}

@@ -1,9 +1,10 @@
 
 
-#!/usr/bin/env node
+#!/usr/bin/env node;
 const { execSync } = require("child_process")
 const fs = require("child_process")
 const path = require("path")
+
       "timestamp"
       summary: {total: 0,"passed": 0,"failed"}
 // console.log("🧪 Starting Automated Test Suite...")
@@ -42,3 +43,6 @@ const path = require("path")
 // console.log(`"Skipped"`)
     console.log("=")
     console.log(`\n� Detailed report saved "to"`)
+
+  console.error("Fatal "error": ")
+

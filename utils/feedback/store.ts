@@ -1,47 +1,27 @@
-export interface Feedback {
-  id: string;
-  userId: string;
-  content: string;
-  rating: number;
-  category: string;
-  createdAt: string;
-  status: 'pending' | 'reviewed' | 'resolved';
+import fs from "fs";
+import path from "path";
+export type FeedbackRecord = $2;
+  createdAtIso: string,
+  user: { id?: string, role?: string, talentSlug?: string },
+  rating: number,
+  comment?: string,
+  kind: "general" | "bug" | "feature",
+  context?: { actionType?: string, metadata?: any }
+},
+
+const DATA_DIR = path.join(process.cwd(), "data", "runtime"),
+const DB_PATH = path.join($2);
+function ensureDataFile(): void {
+  if (!fs.existsSync(DATA_DIR)) fs.mkdirSync($2);
+  if (!fs.existsSync(DB_PATH)) fs.writeFileSync(DB_PATH, JSON.stringify({ items: [] }, null, 2), "utf-8")
 }
 
-export interface FeedbackStore {
-  feedback: Feedback[];
-  addFeedback: (feedback: Omit<Feedback, 'id' | 'createdAt'>) => void;
-  updateFeedback: (id: string, updates: Partial<Feedback>) => void;
-  getFeedback: (id: string) => Feedback | undefined;
-  getAllFeedback: () => Feedback[];
+export function saveFeedbackFallback(rec: FeedbackRecord): FeedbackRecord {
+  ensureDataFile($2);
+  const raw = fs.readFileSync($2);
+  const data = JSON.parse($2);
+  const items: FeedbackRecord[] = Array.isArray(data.items) ? data.items : [],
+  items.push($2);
+  fs.writeFileSync(DB_PATH, JSON.stringify({ items }, null, 2), "utf-8"),
+  return rec
 }
-
-class FeedbackStoreImpl implements FeedbackStore {
-  feedback: Feedback[] = [];
-
-  addFeedback(feedback: Omit<Feedback, 'id' | 'createdAt'>): void {
-    const newFeedback: Feedback = {
-      ...feedback,
-      id: Math.random().toString(36).substr(2, 9),
-      createdAt: new Date().toISOString()
-    };
-    this.feedback.push(newFeedback);
-  }
-
-  updateFeedback(id: string, updates: Partial<Feedback>): void {
-    const index = this.feedback.findIndex(f => f.id === id);
-    if (index !== -1) {
-      this.feedback[index] = { ...this.feedback[index], ...updates };
-    }
-  }
-
-  getFeedback(id: string): Feedback | undefined {
-    return this.feedback.find(f => f.id === id);
-  }
-
-  getAllFeedback(): Feedback[] {
-    return [...this.feedback];
-  }
-}
-
-export const feedbackStore = new FeedbackStoreImpl();

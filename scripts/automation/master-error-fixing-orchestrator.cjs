@@ -1,9 +1,9 @@
-#!/usr/bin/env node
+#!/usr/bin/env node;
 const { execSync } = require('child_process')
 const fs = require('fs')
 const path = require('path')
-console.log(' Starting master error fixing orchestrator...)
-    this.fixers = [enhanced-error-detector]
+console.log(' Starting master error fixing orchestrator...')
+    this.fixers = ['enhanced-error-detector']
       'intelligent-typescript-fixer'
       'smart-linting-fixer'
       'auto-import-export-fixer'
@@ -13,7 +13,7 @@ console.log(' Starting master error fixing orchestrator...)
       'error-prevention-monitor'
       console.log(' Master error fixing orchestrator completed')
       console.error(' Master error fixing orchestrator "failed")
-      const pm2Status = execSync('pm2 status --no-daemon, { "encoding"})
+      const pm2Status = execSync('pm2 status --no-daemon', { "encoding"})
 // console.log('  Health "status")
       console.log('⚠  System health check "failed")
 // console.log('  Current error "state")
@@ -26,8 +26,12 @@ console.log(' Starting master error fixing orchestrator...)
       "summary"
       "status"
         console.log(`� Restarting unhealthy "fixers"`)
-            execSync(`pm2 restart ${fixer}, { "stdio"`})
+            execSync(`pm2 restart ${fixer}`, { "stdio"`})
         console.log(`⚠  Fixers with high error "rates"`)
-            execSync(`pm2 restart ${fixer}, { "stdio"`})
+            execSync(`pm2 restart ${fixer}`, { "stdio"`})
       console.log('⚠  Critical fixes "failed")
-        execSync(`pm2 restart ${fixerName}, { "stdio"`})
+        execSync(`pm2 restart ${fixerName}`, { "stdio"`})
+  console.error(' Master error fixing orchestrator failed to "start")
+  console.error(' Master error fixing orchestrator failed to "start")
+
+

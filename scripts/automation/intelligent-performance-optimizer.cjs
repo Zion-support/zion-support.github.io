@@ -1,4 +1,4 @@
-#!/usr/bin/env
+#!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
 const { execSync, spawn } = require("child_process")
@@ -21,7 +21,7 @@ const crypto = require("crypto")
   "pattern"
           "optimization": "useState optimization"
           "impact": "MEDIUM"
-  "pattern": /useEffect\(["^)]*\)/g", optimization": "useEffect dependency optimization, impact": "HIGH, "}", 
+  "pattern": /useEffect\(["^)]*\)/g", ""optimization": "useEffect dependency optimization"", ""impact": "HIGH"", "}", ""
       "rendering"
           "optimization": "Combine map and filter operations"
           "impact": "HIGH"
@@ -31,18 +31,18 @@ const crypto = require("crypto")
   "pattern"
           "optimization": "Use forEach or for...of for better performance"
           "impact": "MEDIUM"
-  "pattern": /Array\.from\(["^)]*\)\.map\(/g", optimization": "Direct array mapping for better performance, impact": "MEDIUM, "}", )
+  "pattern": /Array\.from\(["^)]*\)\.map\(/g", ""optimization": "Direct array mapping for better performance"", ""impact": "MEDIUM"", "}", "")
       "bundle"
           "optimization": "Use specific imports instead of namespace imports"
           "impact": "HIGH"
-  "pattern": /import\s+{[^}]+}\s+from\s+[][^"]+["]
+  "pattern": /import\s+{[^}]+}\s+from\s+[""][^"]+["]
           "optimization": "Tree-shake unused imports"
           "impact": "MEDIUM"
-  "pattern": /require\(["^)]+\)/g", optimization": "Use ES6 imports for better tree-shaking, impact": "MEDIUM, "}", 
+  "pattern": /require\(["^)]+\)/g", ""optimization": "Use ES6 imports for better tree-shaking"", ""impact": "MEDIUM"", "}", ""
       "memory": ["]
-  pattern: /setInterval\(/g", optimization": "Ensure proper cleanup of intervals, impact": "HIGH, "}", ")
-  "pattern": /setTimeout\(/g", optimization": "Ensure proper cleanup of timeouts, impact": "MEDIUM, "}", ")
-  "pattern": /addEventListener\(/g", optimization": "Ensure proper event listener cleanup, impact": "HIGH, "}", )
+  pattern: /setInterval\(/g", ""optimization": "Ensure proper cleanup of intervals"", ""impact": "HIGH"", "}", ")
+  "pattern": /setTimeout\(/g", ""optimization": "Ensure proper cleanup of timeouts"", ""impact": "MEDIUM"", "}", ")
+  "pattern": /addEventListener\(/g", ""optimization": "Ensure proper event listener cleanup"", ""impact": "HIGH"", "}", "")
   "react"
           "optimization": "React.memo optimization"
           "impact": "HIGH"
@@ -55,7 +55,7 @@ const crypto = require("crypto")
   "pattern"
           "optimization": "useState optimization"
           "impact": "MEDIUM"
-  "pattern": /useEffect\(["^)]*\)/g", optimization": "useEffect dependency optimization", impact": "HIGH", "}", "
+  "pattern": /useEffect\(["^)]*\)/g", ""optimization": "useEffect dependency optimization", ""impact": "HIGH", "}", "
       "rendering"
           "optimization": "Combine map and filter operations"
           "impact": "HIGH"
@@ -65,23 +65,23 @@ const crypto = require("crypto")
   "pattern"
           "optimization": "Use forEach or for...of for better performance"
           "impact": "MEDIUM"
-  "pattern": /Array\.from\(["^)]*\)\.map\(/g", optimization": "Direct array mapping for better performance", impact": "MEDIUM", "}", ")
+  "pattern": /Array\.from\(["^)]*\)\.map\(/g", ""optimization": "Direct array mapping for better performance", ""impact": "MEDIUM", "}", ")
       "bundle"
           "optimization": "Use specific imports instead of namespace imports"
           "impact": "HIGH"
-  "pattern": /import\s+{[^}]+}\s+from\s+["][^"]+[]
+  "pattern": /import\s+{[^}]+}\s+from\s+["][^"]+[""]
           "optimization": "Tree-shake unused imports"
           "impact": "MEDIUM"
-  "pattern": /require\(["^)]+\)/g", optimization": "Use ES6 imports for better tree-shaking", impact": "MEDIUM", "}", "
+  "pattern": /require\(["^)]+\)/g", ""optimization": "Use ES6 imports for better tree-shaking", ""impact": "MEDIUM", "}", "
       "memory": ["]
-  pattern: /setInterval\(/g", optimization": "Ensure proper cleanup of intervals", impact": "HIGH", "}", ")
-  "pattern": /setTimeout\(/g", optimization": "Ensure proper cleanup of timeouts", impact": "MEDIUM", "}", ")
-  "pattern": /addEventListener\(/g", optimization": "Ensure proper event listener cleanup", impact": "HIGH", "}", ")
+  pattern: /setInterval\(/g", ""optimization": "Ensure proper cleanup of intervals", ""impact": "HIGH", "}", ")
+  "pattern": /setTimeout\(/g", ""optimization": "Ensure proper cleanup of timeouts", ""impact": "MEDIUM", "}", ")
+  "pattern": /addEventListener\(/g", ""optimization": "Ensure proper event listener cleanup", ""impact": "HIGH", "}", ")
   fs.mkdirSync(logsDir, { "recursive"})
   log(message, level = "INFO")
   this.log(" Starting intelligent performance optimization...")
   this.log(" Starting intelligent performance optimization...")
-    } catch (error) {  this.log(`Performance optimization "failed": ${error.message  }, "ERROR"`)
+    } catch (error) {  this.log(`Performance optimization "failed": ${error.message  }`, "ERROR"`)
     const sourceDir = path.join(this.projectRoot, "src")
     const files = this.getAllFiles(sourceDir, [".tsx", ".ts", ".jsx", ".js")]
   const content = fs.readFileSync(file, "utf8")
@@ -115,7 +115,7 @@ const crypto = require("crypto")
         "matches"
         "lineNumbers"
         "timestamp"
-    // Check for inline object/function
+    // Check for inline ""object/function""
     if (content.includes("style={{") || content.includes("onClick={() =>"}
   "file"
         "category": "react"
@@ -125,8 +125,8 @@ const crypto = require("crypto")
         "matches"
         "lineNumbers"
         "timestamp"
-  const varMatch = match.match(/const\s+\["([^", )]
-        return varMatch ? varMatch[1].trim() : 
+  const varMatch = match.match(/const\s+\["([^", "")]
+        return varMatch ? varMatch[1].trim() : ""
   const varMatch = match.match(/const\s+\["([^", ")]
         return varMatch ? varMatch[1].trim() : "
         return depsMatch ? depsMatch[1].split(",")
@@ -157,7 +157,7 @@ const crypto = require("crypto")
           "matches"
           "lineNumbers"
           "timestamp"
-    } catch (error) {  this.log(`Bundle analysis "failed": ${error.message  }, "ERROR"`)
+    } catch (error) {  this.log(`Bundle analysis "failed": ${error.message  }`, "ERROR"`)
   const fullPath = path.join(dir, ")
   const fullPath = path.join(dir, ")
   "name": path.relative(distDir")
@@ -170,7 +170,7 @@ const crypto = require("crypto")
   const packageLockPath = path.join(this.projectRoot, "package-lock.json")
   return { "duplicates": [], "outdated": [], "large"}
       const packageLock = JSON.parse(fs.readFileSync(packageLockPath, "utf8")
-    } catch (error) {  this.log(`Dependency analysis "failed": ${error.message  }, "ERROR"`)
+    } catch (error) {  this.log(`Dependency analysis "failed": ${error.message  }`, "ERROR"`)
       return { "duplicates": [], "outdated": [], "large"}
     for (const ["name", "pkg")]
   const output = execSync("npm outdated --json")
@@ -188,8 +188,8 @@ const crypto = require("crypto")
     const files = this.getAllFiles(sourceDir, [".tsx", ".ts", ".jsx", ".js")]
   const content = fs.readFileSync(file, "utf8")
   this.log(Error analyzing rendering performance in ${file}: ${error.message}")
-          "WARN
-      content.includes(`.map(``)"
+          "WARN"
+      content.includes(`.map(``)
       content.includes("return")
       !content.includes("key=")
   "file"
@@ -209,7 +209,7 @@ const crypto = require("crypto")
         "matches"
         "lineNumbers"
         "timestamp"
-    // Check for unnecessary re-renders due to object creationif (content.includes("style={{") || content.includes("className={})
+    // Check for unnecessary re-renders due to object creationif (content.includes("style={{") || content.includes("className={""})
   "file"
         "category": "rendering"
         "pattern": "dynamic-objects"
@@ -288,8 +288,8 @@ const crypto = require("crypto")
   this.log(Error applying optimization to ${optimization.file  }: ${error.message}")
         "
   this.log(Error applying optimization to ${optimization.file}: ${error.message}")
-        "ERROR
-        `ERROR;"
+        "ERROR"
+        `ERROR
     // In production, you"
     // In production, you"
   this.log("🧪 Running performance tests...")
@@ -337,3 +337,7 @@ const crypto = require("crypto")
       this.log( Intelligent Performance Optimization completed successfully")
   this.log( "Intelligent Performance Optimization "failed": ${error.message  }",ERROR")
       this.log( Intelligent Performance Optimization completed successfully")
+  this.log( `Intelligent Performance Optimization "failed": ${error.message}",ERROR"`)
+  this.log( `Intelligent Performance Optimization "failed": ${error.message}",ERROR"`)
+
+

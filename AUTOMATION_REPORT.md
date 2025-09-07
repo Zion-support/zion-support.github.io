@@ -1,15 +1,18 @@
 # Automation Report
 
-**Timestamp:** 2025-09-07T02:51:20.034Z
-**Duration:** 9764ms
+**Timestamp:** 2025-09-07T05:23:29.906Z
+**Duration:** NaNms
 
 ## Summary
-- ✅ Successful: 1
-- ❌ Errors: 8
+- ✅ Successful: 4
+- ❌ Errors: 4
 - ⚠️ Warnings: 0
 
 ## Successful Operations
 - Operation
+- scripts/advanced-build-optimizer.js
+- scripts/performance-monitor-enhanced.js
+- scripts/auto-fixer.js
 
 ## Errors
 - scripts/comprehensive-error-fixer.cjs: Command failed: node scripts/comprehensive-error-fixer.cjs
@@ -30,197 +33,253 @@ Error fixing failed: Error: ENOENT: no such file or directory, stat '/workspace/
   path: '/workspace/media/docu-script/requirements.txt'
 }
 
-- scripts/auto-fixer.js: Command failed: node scripts/auto-fixer.js
-file:///workspace/scripts/auto-fixer.js:3
-#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { execSync } from 'child_process'; import { fileURLToPath } from 'url';
-^
-
-SyntaxError: Invalid or unexpected token
-    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)
-    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)
-    at #translate (node:internal/modules/esm/loader:534:12)
-    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)
-    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)
-
-Node.js v22.16.0
-
-- scripts/advanced-build-optimizer.js: Command failed: node scripts/advanced-build-optimizer.js
-file:///workspace/scripts/advanced-build-optimizer.js:3
-ursor/integrate-build-improve-and-re-verify-8f7d;
-                                            ^
-
-SyntaxError: Invalid or unexpected token
-    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)
-    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)
-    at #translate (node:internal/modules/esm/loader:534:12)
-    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)
-    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)
-
-Node.js v22.16.0
-
-- scripts/performance-monitor-enhanced.js: Command failed: node scripts/performance-monitor-enhanced.js
-file:///workspace/scripts/performance-monitor-enhanced.js:3
-ursor/fix-syntax-push-and-merge-to-main-40de;
-                                        ^^
-
-SyntaxError: Invalid or unexpected token
-    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)
-    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)
-    at #translate (node:internal/modules/esm/loader:534:12)
-    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)
-    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)
-
-Node.js v22.16.0
-
-- scripts/performance-optimizer.js: Command failed: node scripts/performance-optimizer.js
-file:///workspace/scripts/performance-optimizer.js:2
-const fs = require('fs');
-           ^
-
-ReferenceError: require is not defined in ES module scope, you can use import instead
-This file is being treated as an ES module because it has a '.js' file extension and '/workspace/package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.
-    at file:///workspace/scripts/performance-optimizer.js:2:12
-    at ModuleJob.run (node:internal/modules/esm/module_job:274:25)
-    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26)
-    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:117:5)
-
-Node.js v22.16.0
-
 - ESLint: Command failed: npm run lint
 npm warn config optional Use `--omit=optional` to exclude optional dependencies, or
 npm warn config `--include=optional` to include them.
 npm warn config
 npm warn config       Default value does install optional deps unless otherwise omitted.
+(node:3185) ESLintIgnoreWarning: The ".eslintignore" file is no longer supported. Switch to using the "ignores" property in "eslint.config.js": https://eslint.org/docs/latest/use/configure/migration-guide#ignoring-files
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:3185) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///workspace/eslint.config.js?mtime=1757222491864 is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /workspace/package.json.
 
-- TypeScript: spawnSync /bin/sh ENOBUFS
+- TypeScript: Command failed: npm run type-check
+npm warn config optional Use `--omit=optional` to exclude optional dependencies, or
+npm warn config `--include=optional` to include them.
+npm warn config
+npm warn config       Default value does install optional deps unless otherwise omitted.
+
 - Build: Command failed: npm run build
 npm warn config optional Use `--omit=optional` to exclude optional dependencies, or
 npm warn config `--include=optional` to include them.
 npm warn config
 npm warn config       Default value does install optional deps unless otherwise omitted.
+ ⚠ Invalid next.config.js options detected: 
+ ⚠     Unrecognized key(s) in object: 'swcMinify'
+ ⚠ See more info here: https://nextjs.org/docs/messages/invalid-next-config
 Failed to compile.
 
-app/layout.tsx
-An error occurred in `next/font`.
-
-SyntaxError: Unexpected token ','
-    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)
-    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)
-    at #translate (node:internal/modules/esm/loader:534:12)
-    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)
-    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)
-
-./components/Layout.tsx
-Error:   [31mx[0m Expression expected
-   ,-[[36;1;4m/workspace/components/Layout.tsx[0m:2:1]
- [2m1[0m | 
- [2m2[0m | }export default function Layout() {class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}
-   : [35;1m^[0m
- [2m3[0m |   static getDerivedStateFromError(error) {return { hasError: true }}
- [2m4[0m |   componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}
- [2m5[0m |   render() {if (this.state.hasError) {return <div />Something went wrong.</div>;}
-   `----
+./app/layout.tsx
+Error:   [31mx[0m Merge conflict marker encountered.
+    ,-[[36;1;4m/workspace/app/layout.tsx[0m:12:1]
+ [2m 9[0m | export const metadata: Metadata = {
+ [2m10[0m |   title: 'Zion Tech Group - Leading AI and Technology Solutions',
+ [2m11[0m |   description: 'Zion Tech Group is a leading technology company specializing in AI, autonomous systems, quantum computing, and innovative business solutions.',
+ [2m12[0m | <<<<<<< HEAD
+    : [35;1m^^^^^^^[0m
+ [2m13[0m |   keywords: 'AI, artificial intelligence, technology solutions, cloud computing, cybersecurity, data analytics, digital transformation',
+ [2m14[0m | =======
+ [2m15[0m |   keywords: ['AI', 'artificial intelligence', 'blockchain', 'technology', 'innovation', 'automation'],
+    `----
+  [31mx[0m Merge conflict marker encountered.
+    ,-[[36;1;4m/workspace/app/layout.tsx[0m:14:1]
+ [2m11[0m |   description: 'Zion Tech Group is a leading technology company specializing in AI, autonomous systems, quantum computing, and innovative business solutions.',
+ [2m12[0m | <<<<<<< HEAD
+ [2m13[0m |   keywords: 'AI, artificial intelligence, technology solutions, cloud computing, cybersecurity, data analytics, digital transformation',
+ [2m14[0m | =======
+    : [35;1m^^^^^^^[0m
+ [2m15[0m |   keywords: ['AI', 'artificial intelligence', 'blockchain', 'technology', 'innovation', 'automation'],
+ [2m16[0m | >>>>>>> cursor/automate-test-improve-and-merge-code-3e92
+ [2m17[0m |   authors: [{ name: 'Zion Tech Group' }],
+    `----
+  [31mx[0m Merge conflict marker encountered.
+    ,-[[36;1;4m/workspace/app/layout.tsx[0m:16:1]
+ [2m13[0m |   keywords: 'AI, artificial intelligence, technology solutions, cloud computing, cybersecurity, data analytics, digital transformation',
+ [2m14[0m | =======
+ [2m15[0m |   keywords: ['AI', 'artificial intelligence', 'blockchain', 'technology', 'innovation', 'automation'],
+ [2m16[0m | >>>>>>> cursor/automate-test-improve-and-merge-code-3e92
+    : [35;1m^^^^^^^[0m
+ [2m17[0m |   authors: [{ name: 'Zion Tech Group' }],
+ [2m18[0m |   viewport: 'width=device-width, initial-scale=1',
+ [2m19[0m |   robots: 'index, follow',
+    `----
+  [31mx[0m Merge conflict marker encountered.
+    ,-[[36;1;4m/workspace/app/layout.tsx[0m:22:1]
+ [2m19[0m |   robots: 'index, follow',
+ [2m20[0m |   openGraph: {
+ [2m21[0m |     title: 'Zion Tech Group - Leading AI and Technology Solutions',
+ [2m22[0m | <<<<<<< HEAD
+    : [35;1m^^^^^^^[0m
+ [2m23[0m |     description: 'Leading technology company specializing in AI, autonomous systems, quantum computing, and innovative business solutions.',
+ [2m24[0m | =======
+ [2m25[0m |     description: 'Leading the future of AI, autonomous systems, and innovative technology solutions.',
+    `----
+  [31mx[0m Merge conflict marker encountered.
+    ,-[[36;1;4m/workspace/app/layout.tsx[0m:24:1]
+ [2m21[0m |     title: 'Zion Tech Group - Leading AI and Technology Solutions',
+ [2m22[0m | <<<<<<< HEAD
+ [2m23[0m |     description: 'Leading technology company specializing in AI, autonomous systems, quantum computing, and innovative business solutions.',
+ [2m24[0m | =======
+    : [35;1m^^^^^^^[0m
+ [2m25[0m |     description: 'Leading the future of AI, autonomous systems, and innovative technology solutions.',
+ [2m26[0m | >>>>>>> cursor/automate-test-improve-and-merge-code-3e92
+ [2m27[0m |     type: 'website',
+    `----
+  [31mx[0m Merge conflict marker encountered.
+    ,-[[36;1;4m/workspace/app/layout.tsx[0m:26:1]
+ [2m23[0m |     description: 'Leading technology company specializing in AI, autonomous systems, quantum computing, and innovative business solutions.',
+ [2m24[0m | =======
+ [2m25[0m |     description: 'Leading the future of AI, autonomous systems, and innovative technology solutions.',
+ [2m26[0m | >>>>>>> cursor/automate-test-improve-and-merge-code-3e92
+    : [35;1m^^^^^^^[0m
+ [2m27[0m |     type: 'website',
+ [2m28[0m |     locale: 'en_US',
+ [2m29[0m |   },
+    `----
+  [31mx[0m Merge conflict marker encountered.
+    ,-[[36;1;4m/workspace/app/layout.tsx[0m:33:1]
+ [2m30[0m |   twitter: {
+ [2m31[0m |     card: 'summary_large_image',
+ [2m32[0m |     title: 'Zion Tech Group - Leading AI and Technology Solutions',
+ [2m33[0m | <<<<<<< HEAD
+    : [35;1m^^^^^^^[0m
+ [2m34[0m |     description: 'Leading technology company specializing in AI, autonomous systems, quantum computing, and innovative business solutions.',
+ [2m35[0m | =======
+ [2m36[0m |     description: 'Leading the future of AI, autonomous systems, and innovative technology solutions.',
+    `----
+  [31mx[0m Merge conflict marker encountered.
+    ,-[[36;1;4m/workspace/app/layout.tsx[0m:35:1]
+ [2m32[0m |     title: 'Zion Tech Group - Leading AI and Technology Solutions',
+ [2m33[0m | <<<<<<< HEAD
+ [2m34[0m |     description: 'Leading technology company specializing in AI, autonomous systems, quantum computing, and innovative business solutions.',
+ [2m35[0m | =======
+    : [35;1m^^^^^^^[0m
+ [2m36[0m |     description: 'Leading the future of AI, autonomous systems, and innovative technology solutions.',
+ [2m37[0m | >>>>>>> cursor/automate-test-improve-and-merge-code-3e92
+ [2m38[0m |   },
+    `----
+  [31mx[0m Merge conflict marker encountered.
+    ,-[[36;1;4m/workspace/app/layout.tsx[0m:37:1]
+ [2m34[0m |     description: 'Leading technology company specializing in AI, autonomous systems, quantum computing, and innovative business solutions.',
+ [2m35[0m | =======
+ [2m36[0m |     description: 'Leading the future of AI, autonomous systems, and innovative technology solutions.',
+ [2m37[0m | >>>>>>> cursor/automate-test-improve-and-merge-code-3e92
+    : [35;1m^^^^^^^[0m
+ [2m38[0m |   },
+ [2m39[0m | };
+    `----
+  [31mx[0m Merge conflict marker encountered.
+    ,-[[36;1;4m/workspace/app/layout.tsx[0m:47:1]
+ [2m44[0m |   children: React.ReactNode;
+ [2m45[0m | }) {
+ [2m46[0m |   return (
+ [2m47[0m | <<<<<<< HEAD
+    : [35;1m^^^^^^^[0m
+ [2m48[0m |     <html lang="en" className={inter.className}>
+ [2m49[0m |       <body className="antialiased">
+ [2m50[0m |         <div className="min-h-screen flex flex-col">
+    `----
+  [31mx[0m Unexpected token. Did you mean `{'>'}` or `&gt;`?
+    ,-[[36;1;4m/workspace/app/layout.tsx[0m:70:1]
+ [2m67[0m |       <body className="font-sans antialiased">
+ [2m68[0m |         {children}
+ [2m69[0m |         <PerformanceMonitor />
+ [2m70[0m | >>>>>>> cursor/automate-test-improve-and-merge-code-3e92
+    : [35;1m^[0m
+ [2m71[0m |       </body>
+ [2m72[0m |     </html>
+ [2m73[0m |   );
+    `----
+  [31mx[0m Unexpected token. Did you mean `{'>'}` or `&gt;`?
+    ,-[[36;1;4m/workspace/app/layout.tsx[0m:70:1]
+ [2m67[0m |       <body className="font-sans antialiased">
+ [2m68[0m |         {children}
+ [2m69[0m |         <PerformanceMonitor />
+ [2m70[0m | >>>>>>> cursor/automate-test-improve-and-merge-code-3e92
+    : [35;1m ^[0m
+ [2m71[0m |       </body>
+ [2m72[0m |     </html>
+ [2m73[0m |   );
+    `----
+  [31mx[0m Unexpected token. Did you mean `{'>'}` or `&gt;`?
+    ,-[[36;1;4m/workspace/app/layout.tsx[0m:70:1]
+ [2m67[0m |       <body className="font-sans antialiased">
+ [2m68[0m |         {children}
+ [2m69[0m |         <PerformanceMonitor />
+ [2m70[0m | >>>>>>> cursor/automate-test-improve-and-merge-code-3e92
+    : [35;1m  ^[0m
+ [2m71[0m |       </body>
+ [2m72[0m |     </html>
+ [2m73[0m |   );
+    `----
+  [31mx[0m Unexpected token. Did you mean `{'>'}` or `&gt;`?
+    ,-[[36;1;4m/workspace/app/layout.tsx[0m:70:1]
+ [2m67[0m |       <body className="font-sans antialiased">
+ [2m68[0m |         {children}
+ [2m69[0m |         <PerformanceMonitor />
+ [2m70[0m | >>>>>>> cursor/automate-test-improve-and-merge-code-3e92
+    : [35;1m   ^[0m
+ [2m71[0m |       </body>
+ [2m72[0m |     </html>
+ [2m73[0m |   );
+    `----
+  [31mx[0m Unexpected token. Did you mean `{'>'}` or `&gt;`?
+    ,-[[36;1;4m/workspace/app/layout.tsx[0m:70:1]
+ [2m67[0m |       <body className="font-sans antialiased">
+ [2m68[0m |         {children}
+ [2m69[0m |         <PerformanceMonitor />
+ [2m70[0m | >>>>>>> cursor/automate-test-improve-and-merge-code-3e92
+    : [35;1m    ^[0m
+ [2m71[0m |       </body>
+ [2m72[0m |     </html>
+ [2m73[0m |   );
+    `----
+  [31mx[0m Unexpected token. Did you mean `{'>'}` or `&gt;`?
+    ,-[[36;1;4m/workspace/app/layout.tsx[0m:70:1]
+ [2m67[0m |       <body className="font-sans antialiased">
+ [2m68[0m |         {children}
+ [2m69[0m |         <PerformanceMonitor />
+ [2m70[0m | >>>>>>> cursor/automate-test-improve-and-merge-code-3e92
+    : [35;1m     ^[0m
+ [2m71[0m |       </body>
+ [2m72[0m |     </html>
+ [2m73[0m |   );
+    `----
+  [31mx[0m Unexpected token. Did you mean `{'>'}` or `&gt;`?
+    ,-[[36;1;4m/workspace/app/layout.tsx[0m:70:1]
+ [2m67[0m |       <body className="font-sans antialiased">
+ [2m68[0m |         {children}
+ [2m69[0m |         <PerformanceMonitor />
+ [2m70[0m | >>>>>>> cursor/automate-test-improve-and-merge-code-3e92
+    : [35;1m      ^[0m
+ [2m71[0m |       </body>
+ [2m72[0m |     </html>
+ [2m73[0m |   );
+    `----
+  [31mx[0m Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+    ,-[[36;1;4m/workspace/app/layout.tsx[0m:74:1]
+ [2m71[0m |       </body>
+ [2m72[0m |     </html>
+ [2m73[0m |   );
+ [2m74[0m | }
+    : [35;1m^[0m
+    `----
+  [31mx[0m Unexpected eof
+    ,-[[36;1;4m/workspace/app/layout.tsx[0m:74:1]
+ [2m71[0m |       </body>
+ [2m72[0m |     </html>
+ [2m73[0m |   );
+ [2m74[0m | }
+    `----
 
 Caused by:
     Syntax Error
 
 Import trace for requested module:
-./components/Layout.tsx
-./pages/summit.tsx
-
-./pages/ai-services.tsx
-Error:   [31mx[0m Unterminated string constant
-   ,-[[36;1;4m/workspace/pages/ai-services.tsx[0m:1:1]
- [2m1[0m | import React from \"react\";
-   : [35;1m                   ^^^^^^^^^[0m
- [2m2[0m | import Layout from \"../components/Layout\";
- [2m3[0m | export default function AIServices() {
- [2m4[0m |   return (
-   `----
-  [31mx[0m Expected unicode escape
-   ,-[[36;1;4m/workspace/pages/ai-services.tsx[0m:1:1]
- [2m1[0m | import React from \"react\";
-   : [35;1m                  ^[0m
- [2m2[0m | import Layout from \"../components/Layout\";
- [2m3[0m | export default function AIServices() {
- [2m4[0m |   return (
-   `----
-  [31mx[0m Unexpected token `<lexing error: Error { error: (19..19, ExpectedUnicodeEscape) }>`. Expected a string literal
-   ,-[[36;1;4m/workspace/pages/ai-services.tsx[0m:1:1]
- [2m1[0m | import React from \"react\";
-   : [35;1m                  ^[0m
- [2m2[0m | import Layout from \"../components/Layout\";
- [2m3[0m | export default function AIServices() {
- [2m4[0m |   return (
-   `----
-
-Caused by:
-    Syntax Error
-
-Import trace for requested module:
-./pages/ai-services.tsx
-
-./pages/deploy/genesis.tsx
-Error:   [31mx[0m Expected unicode escape
-   ,-[[36;1;4m/workspace/pages/deploy/genesis.tsx[0m:1:1]
- [2m1[0m | export { default } from \"../zion/init\";"
-   : [35;1m                        ^[0m
- [2m2[0m | "
-   `----
-  [31mx[0m Unexpected token `<lexing error: Error { error: (25..25, ExpectedUnicodeEscape) }>`. Expected a string literal
-   ,-[[36;1;4m/workspace/pages/deploy/genesis.tsx[0m:1:1]
- [2m1[0m | export { default } from \"../zion/init\";"
-   : [35;1m                        ^[0m
- [2m2[0m | "
-   `----
-
-Caused by:
-    Syntax Error
-
-Import trace for requested module:
-./pages/deploy/genesis.tsx
-
-./pages/design-map.tsx
-Error:   [31mx[0m Unterminated string constant
-   ,-[[36;1;4m/workspace/pages/design-map.tsx[0m:1:1]
- [2m1[0m | import React, { useMemo, useState } from \"react\";
-   : [35;1m                                          ^^^^^^^^^[0m
- [2m2[0m | import Head from \"next/head\";
- [2m3[0m | import { getZionDesignMap } from \"../utils/design-map\";
- [2m4[0m | export default function DesignMapPage() {
-   `----
-  [31mx[0m Expected unicode escape
-   ,-[[36;1;4m/workspace/pages/design-map.tsx[0m:1:1]
- [2m1[0m | import React, { useMemo, useState } from \"react\";
-   : [35;1m                                         ^[0m
- [2m2[0m | import Head from \"next/head\";
- [2m3[0m | import { getZionDesignMap } from \"../utils/design-map\";
- [2m4[0m | export default function DesignMapPage() {
-   `----
-  [31mx[0m Unexpected token `<lexing error: Error { error: (42..42, ExpectedUnicodeEscape) }>`. Expected a string literal
-   ,-[[36;1;4m/workspace/pages/design-map.tsx[0m:1:1]
- [2m1[0m | import React, { useMemo, useState } from \"react\";
-   : [35;1m                                         ^[0m
- [2m2[0m | import Head from \"next/head\";
- [2m3[0m | import { getZionDesignMap } from \"../utils/design-map\";
- [2m4[0m | export default function DesignMapPage() {
-   `----
-
-Caused by:
-    Syntax Error
-
-Import trace for requested module:
-./pages/design-map.tsx
+./app/layout.tsx
 
 
 > Build failed because of webpack errors
 
 
 ## Warnings
-
+- ESLint had issues
+- TypeScript had issues
 
 ## Recommendations
 - Address all errors before deployment
+- Review and address warnings for better code quality
 - Implement continuous integration for automated testing
 - Set up automated deployment pipeline
 - Monitor performance metrics in production
@@ -233,3 +292,5 @@ Import trace for requested module:
 - Set up monitoring for production environment
 - Schedule regular automation runs
 - Document any custom automation workflows
+
+*Generated on 2025-09-07T09:42:29.025Z*

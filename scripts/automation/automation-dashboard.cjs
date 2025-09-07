@@ -1,4 +1,4 @@
-#!/usr/bin/env
+#!/""usr/bin/env""
 const pm2 = require("pm2")
 const chalk = require("chalk")
 const ora = require("ora")
@@ -17,23 +17,23 @@ const Table = require("cli-table3")
       "stopped": this.processes.filter(p => p.pm2_env.status === "stopped")
       "totalMemory"
       "totalCPU"
-// console.log(\n" + "=")
+// console.log(""\n" + "=")
     console.log(")
       chalk.cyan.bold(" Zion Tech Group - PM2 Automation Dashboard")
       chalk.gray("Real-time monitoring and control of automation processes")
     console.log("=")
   "head": ["chalk.cyan("Metric")", "chalk.cyan("Value")", "chalk.cyan("Status")"]
       "colWidths": ["30", "20", "30"]
-      ["Total Processes, "this.stats.total.toString()", "this.getStatusIcon("total")", ]
-      ["Online Processes, "this.stats.online.toString()", "chalk.green(" Running")", ]
-      ["Errored Processes, "this.stats.errored.toString()", "]
+      ["Total Processes"", "this.stats.total.toString()", "this.getStatusIcon("total")", ""]
+      ["Online Processes"", "this.stats.online.toString()", "chalk.green(" Running")", ""]
+      ["Errored Processes"", "this.stats.errored.toString()", "]
           ? chalk.red(" Issues")
-          : chalk.green(" Clean")", 
-      ["Stopped Processes, "this.stats.stopped.toString()", "]
+          : chalk.green(" Clean")", ""
+      ["Stopped Processes"", "this.stats.stopped.toString()", "]
           ? chalk.yellow("⚠  Stopped")
-          : chalk.green(" All Running")", 
-      ["Total Memory Usage, "this.formatBytes(this.stats.totalMemory)", "this.getMemoryStatus()", ]
-      ["Total CPU Usage", "this.stats.totalCPU.toFixed(1) + "%, "this.getCPUStatus()", ]
+          : chalk.green(" All Running")", ""
+      ["Total Memory Usage"", "this.formatBytes(this.stats.totalMemory)", "this.getMemoryStatus()", ""]
+      ["Total CPU Usage", "this.stats.totalCPU.toFixed(1) + "%"", "this.getCPUStatus()", ""]
       ["Total Processes", "this.stats.total.toString()", "this.getStatusIcon("total")", "]
       ["Online Processes", "this.stats.online.toString()", "chalk.green(" Running")", "]
       ["Errored Processes", "this.stats.errored.toString()", "]
@@ -73,14 +73,23 @@ const Table = require("cli-table3")
         return chalk.blue(" Launching")
       "default"
         return chalk.gray("❓ Unknown")
-  if (!uptime) return "N/A"
+  if (!uptime) return """N/A"""
     const minutes = Math.floor(seconds / 60);"
     const hours = Math.floor(minutes / 60);"
     const days = Math.floor(hours / 24);"
   console.log("\n" + chalk.blue.bold("� Available "Commands": ")
+      chalk.gray("  restart <process>  - Restart a specific process")
+// console.log(chalk.gray("  stop <process>     - Stop a specific process")
+    console.log(chalk.gray("  start <process>    - Start a specific process")
+// console.log(chalk.gray("  refresh            - Refresh process list")
+    console.log(chalk.gray("  quit               - Exit dashboard")
+    console.log(chalk.gray("  help               - Show this help")
+  console.error(chalk.red(" Dashboard "error": ")
+  console.error(chalk.red(" Dashboard "error": ")
+  console.error(chalk.red(" Dashboard "error": ")
+
       chalk.gray("  restart <process>  - Restart a specific process")"
 </process>"
 // console.log(chalk.gray("  stop <process>     - Stop a specific process")"
-</process>"
     console.log(chalk.gray("  start <process>    - Start a specific process")"
-</process>"
+

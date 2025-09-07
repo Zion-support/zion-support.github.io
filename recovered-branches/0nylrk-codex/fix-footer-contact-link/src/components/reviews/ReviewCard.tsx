@@ -1,325 +1,265 @@
 
-import { useState } from "react";""
-import { formatDistanceToNow } from "date-fns";""
-import { Star, Flag, User } from "lucide-react";""
-import { Review } from "@/types/reviews";""
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";""
-import { Button } from "@/components/ui/button";""
-import { Badge } from "@/components/ui/badge";"
-
+import {useState} from "react";
+import {formatDistanceToNow} from "date-fns";
+import {Star, Flag, User} from "lucide-react";
+import {Review} from "@/types/reviews";
+import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
+import {Button} from "@/components/ui/button";
+import {Badge} from "@/components/ui/badge";
+import {Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger} from "@/components/ui/dialog";
+import {Textarea} from "@/components/ui/textarea";
 import {
-  // TODO: Implement
-}
   Dialog,
   DialogContent,
   DialogDescription,
   DialogFooter,
   DialogHeader,
-
   DialogTitle,
-  DialogTrigger,"
-} from "@/components/ui/dialog";""
-import { Textarea } from "@/components/ui/textarea";"
+  DialogTrigger} from "@/components/ui/dialog",
+import { Textarea } from "@/components/ui/textarea";
 interface ReviewCardProps {
-  // TODO: Implement
+  review: Review,
+  onReport: (reviewId: string, reason: string) => Promise<boolean>
 }
-  review: Review;,
-  onReport: (reviewId: string, reason: string) => Promise<boolean>;
-</boolean>"
-      <div className="flex">;"
-</div>
-          <Star;
-            key={star}"
-            className={`h-4 w-4 ${star <= rating ? "fill-yellow-400 text-yellow-400" : "text-gray-300"}`}"
-          />;
-</Star>
-      </div>"
-      <div className="flex">;"
-</div>
-          <Star;
-            key={star}"
-            className={`h-4 w-4 ${star <= rating ? "fill-yellow-400 text-yellow-400" : "text-gray-300"}`}"
-          />
-</Star>
-      </div>"
-    <div className="border rounded-lg p-4 bg-card">"
-</div>"
-      <div className="flex justify-between items-start mb-3">"
-</div>"
-        <div className="flex items-center gap-3">"
-</div>
+export function ReviewCard({ review, onReport }: ReviewCardProps) {
+  const [reportReason, setReportReason] = useState($2);
+  const [isReporting, setIsReporting] = useState($2);
+  const [isReportDialogOpen, setIsReportDialogOpen] = useState($2);
+  const handleReport = $2;
+    setIsReporting($2);
+    const success = await onReport($2);
+    setIsReporting($2);
+    if (success) {
+      setReportReason($2);
+      setIsReportDialogOpen(false)
+    }
+  },
+  
+  const renderStars = $2;
+    return (
+      <div className="flex">
+        {[1, 2, 3, 4, 5].map((star) => (
+          <Star
+            key = $2;
+  const getInitials = (name: string) => {
+    return name
+      .split(" ")
+      .map((n) => n[0])
+      .join("")
+      .toUpperCase()
+      .substring(0, 2)
+  },
+  
+  return (
+    <div className="border rounded-lg p-4 bg-card">
+      <div className="flex justify-between items-start mb-3">
+        <div className="flex items-center gap-3">
+          {review.is_anonymous ? (
             <Avatar>
-</Avatar>"
-              <AvatarFallback className="bg-muted">"
-</AvatarFallback>"
-                <User className="h-4 w-4" />"
-</User>
+              <AvatarFallback className="bg-muted">
+                <User className="h-4 w-4" />
               </AvatarFallback>
             </Avatar>
+          ) : (
             <Avatar>
-</Avatar>
-                <AvatarImage;
+              {review.reviewer_profile?.avatar_url ? (
+                <AvatarImage
                   src={review.reviewer_profile.avatar_url}
                   alt={review.reviewer_profile.display_name}
                 />
-</AvatarImage>
+              ) : (
                 <AvatarFallback>
-</AvatarFallback>
+                  {review.reviewer_profile?.display_name
+                    ? getInitials(review.reviewer_profile.display_name)
+                    : "??"}
                 </AvatarFallback>
+import { useState } from "react",;
+import { formatDistanceToNow } from "date-fns",;
+import { Star, Flag, User } from "lucide-react",;
+import { Review } from "@/types/reviews",;
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
+import { Button } from "@/components/ui/button",;
+import { Badge } from "@/components/ui/badge",;
+import {;
+  Dialog,;
+  DialogContent,;
+  DialogDescription,;
+  DialogFooter,;
+  DialogHeader,;
+  DialogTitle,;
+  DialogTrigger} from "@/components/ui/dialog",;
+import { Textarea } from "@/components/ui/textarea",;
+interface ReviewCardProps {;
+  review: Review,;
+  onReport: (reviewId: string, reason: string) => Promise<boolean>;
+}
+;
+export function ReviewCard({ review, onReport }: ReviewCardProps) {;
+  const [reportReason, setReportReason] = useState(""),;
+  const [isReporting, setIsReporting] = useState(false),;
+  const [isReportDialogOpen, setIsReportDialogOpen] = useState(false),;
+  const handleReport = async () => {;
+    if (!reportReason.trim()) return,;
+    setIsReporting(true),;
+    const success = await onReport(review.id, reportReason),;
+    setIsReporting(false),;
+    if (success) {;
+      setReportReason(""),;
+      setIsReportDialogOpen(false);
+    }
+  },;
+  const renderStars = (rating?: number) => {;
+    if (!rating) return null,;
+    return (;
+      <div className="flex">;
+        {[1, 2, 3, 4, 5].map((star) => (;
+          <Star;
+            key={star}
+            className={`h-4 w-4 ${star <= rating ? "fill-yellow-400 text-yellow-400" : "text-gray-300"}`}
+          />;
+        ))}
+      </div>;
+    );
+  };
+  const getInitials = (name: string) => {;
+    return name;
+      .split(" ");
+      .map((n) => n[0]);
+      .join("");
+      .toUpperCase();
+      .substring(0, 2);
+  };
+  return (;
+    <div className="border rounded-lg p-4 bg-card">;
+      <div className="flex justify-between items-start mb-3">;
+        <div className="flex items-center gap-3">;
+          {review.is_anonymous ? (;
+            <Avatar>;
+              <AvatarFallback className="bg-muted">;
+                <User className="h-4 w-4" />;
+              </AvatarFallback>;
             </Avatar>;
+          ) : (;
+            <Avatar>;
+              {review.reviewer_profile?.avatar_url ? (;
+                <AvatarImage src={review.reviewer_profile.avatar_url} alt={review.reviewer_profile.display_name} />;
+              ) : (;
+                <AvatarFallback>;
+                  {review.reviewer_profile?.display_name ?;
+                    getInitials(review.reviewer_profile.display_name) : "??"}
+                </AvatarFallback>;
+              )}
+            </Avatar>
+          )}
+                </AvatarFallback>
+              )}
+            </Avatar>
+          )}
+
           <div>
-</div>"
-            <div className="font-medium">"
-</div>
-            </div>"
-            <div className="text-sm text-muted-foreground">"
-</div>
+            <div className="font-medium">
+              {review.is_anonymous
+                ? "Anonymous"
+                : review.reviewer_profile?.display_name |"User"}
+            </div>
+            <div className="text-sm text-muted-foreground">
+              {formatDistanceToNow(new Date(review.created_at), { addSuffix: true})}
             </div>
           </div>
+          {renderStars(review.rating)}
         </div>
-"
-        <div className="flex">{renderStars(review.rating)}</div>"
+        <div className="flex">{renderStars(review.rating)}</div>
       </div>
-"
-      <div className="mb-4">"
-</div>"
-        <p className="text-sm whitespace-pre-wrap">{review.review_text}</p>"
-      </div>"
-        <div className="border-t pt-3 mt-3">"
-</div>"
-          <div className="flex flex-wrap gap-2">"
-</div>"
-              <Badge variant="outline" className="flex gap-1 items-center">"
-</Badge>"
-                <span className="ml-1 text-yellow-500">"
-</span>
-                </span>
-              </Badge>"
-              <Badge variant="outline" className="flex gap-1 items-center">"
-</Badge>"
-                <span className="ml-1 text-yellow-500">"
-</span>
-                </span>
-              </Badge>"
-              <Badge variant="outline" className="flex gap-1 items-center">"
-</Badge>"
-                <span className="ml-1 text-yellow-500">"
-</span>
+      <div className="mb-4">
+        <p className="text-sm whitespace-pre-wrap">{review.review_text}</p>
+      </div>
+      {(review.communication_rating |
+        review.quality_rating |
+        review.timeliness_rating |
+        review.would_work_again !== undefined) && (
+        <div className="border-t pt-3 mt-3">
+          <div className="flex flex-wrap gap-2">
+            {review.communication_rating && (
+              <Badge variant="outline" className="flex gap-1 items-center">
+                Communication
+                <span className="ml-1 text-yellow-500">
+                  {review.communication_rating}/5
                 </span>
               </Badge>
-              <Badge;"
-                variant={review.would_work_again ? "default" : "secondary"}""
-                className={`${review.would_work_again ? "bg-green-100 text-green-800 hover:bg-green-200" : "bg-gray-100 text-gray-800 hover:bg-gray-200"}`}"
+            )}
+
+            {review.quality_rating && (
+              <Badge variant="outline" className="flex gap-1 items-center">
+                Quality
+                <span className="ml-1 text-yellow-500">
+                  {review.quality_rating}/5
+                </span>
+              </Badge>
+            )}
+            {review.timeliness_rating && (
+              <Badge variant="outline" className="flex gap-1 items-center">
+                Timeliness
+                <span className="ml-1 text-yellow-500">
+                  {review.timeliness_rating}/5
+                </span>
+              </Badge>
+            )}
+
+            {review.would_work_again !== undefined && (
+              <Badge
+                variant={review.would_work_again ? "default" : "secondary"}
+                className={`${review.would_work_again ? "bg-green-100 text-green-800 hover:bg-green-200" : "bg-gray-100 text-gray-800 hover:bg-gray-200"}`}
               >
-</Badge>
-              </Badge>"
-              <Badge variant="outline" className="flex gap-1 items-center">"
-</Badge>"
-                <span className="ml-1 text-yellow-500">"
-</span>
-                </span>
-              </Badge>"
-              <Badge variant="outline" className="flex gap-1 items-center">"
-</Badge>"
-                <span className="ml-1 text-yellow-500">"
-</span>
-                </span>
-              </Badge>"
-              <Badge variant="outline" className="flex gap-1 items-center">"
-</Badge>"
-                <span className="ml-1 text-yellow-500">"
-</span>
-                </span>
+                {review.would_work_again
+                  ? "Would work again"
+                  : "Would not work again"}
               </Badge>
-              <Badge;"
-                variant={review.would_work_again ? "default" : "secondary"}""
-                className={`${review.would_work_again ? "bg-green-100 text-green-800 hover:bg-green-200" : "bg-gray-100 text-gray-800 hover:bg-gray-200"}`}"
-              >
-</Badge>
-              </Badge>"
-        <div className="border-t pt-3 mt-3">"
-</div>"
-          <div className="flex flex-wrap gap-2">"
-</div>"
-              <Badge variant="outline" className="flex gap-1 items-center">"
-</Badge>"
-                <span className="ml-1 text-yellow-500">"
-</span>
-                </span>
-              </Badge>"
-              <Badge variant="outline" className="flex gap-1 items-center">"
-</Badge>"
-                <span className="ml-1 text-yellow-500">"
-</span>
-                </span>
-              </Badge>"
-              <Badge variant="outline" className="flex gap-1 items-center">"
-</Badge>"
-                <span className="ml-1 text-yellow-500">"
-</span>
-                </span>
-              </Badge>
-              <Badge;"
-                variant={review.would_work_again ? "default" : "secondary"}""
-                className={`${review.would_work_again ? "bg - green - 100 text - green - 800 hover:bg - green - 200" : "bg - gray - 100 text - gray - 800 hover:bg - gray - 200"}`}"
-              >;
-</Badge>
-          </div>;"
-      <div className="mt-3 flex justify-end">"
-</div>
+            )}
+          </div>
+        </div>
+      )}
+      )}
+
+      <div className="mt-3 flex justify-end">
         <Dialog open={isReportDialogOpen} onOpenChange={setIsReportDialogOpen}>
-</Dialog>
           <DialogTrigger asChild>
-</DialogTrigger>"
-            <Button variant="ghost" size="sm" className="text-muted-foreground">"
-</Button>"
-              <Flag className="h-3 w-3 mr-1" />"
-</Flag>
+            <Button variant="ghost" size="sm" className="text-muted-foreground">
+              <Flag className="h-3 w-3 mr-1" />
+              Report
             </Button>
           </DialogTrigger>
           <DialogContent>
-</DialogContent>
             <DialogHeader>
-</DialogHeader>
               <DialogTitle>Report Review</DialogTitle>
               <DialogDescription>
-</DialogDescription>
+                If you believe this review violates our community guidelines
+                please provide details below.
               </DialogDescription>
             </DialogHeader>
-            <Textarea;"
-              placeholder="Why are you reporting this review?""
+
+            <Textarea
+              placeholder="Why are you reporting this review?"
               value={reportReason}
               onChange={(e) => setReportReason(e.target.value)}
-</Textarea>
+              className="min-h-[100px]"
+            />
             <DialogFooter>
-</DialogFooter>
-              <Button;"
-                variant="outline""
+              <Button
+                variant="outline"
                 onClick={() => setIsReportDialogOpen(false)}
-</Button>
+              >
+                Cancel
               </Button>
-              <Button;
+              <Button
                 onClick={handleReport}
                 disabled={!reportReason.trim() |isReporting}
               >
-</Button>
+                {isReporting ? "Submitting..." : "Submit Report"}
               </Button>
             </DialogFooter>
           </DialogContent>
         </Dialog>
       </div>
-    </div>"
-              <Badge variant="outline" className="flex gap-1 items-center">;"
-</Badge>"
-                <span className="ml-1 text-yellow-500">{review && review.quality_rating}/5</span>;"
-              </Badge>;"
-              <Badge variant="outline" className="flex gap-1 items-center">;"
-</Badge>"
-                <span className="ml-1 text-yellow-500">{review && review.timeliness_rating}/5</span>;"
-              </Badge>;
-              <Badge;"
-                variant={review && review.would_work_again ? "default" : "secondary"}""
-                className={`${review && review.would_work_again ? "bg-green-100 text-green-800 hover:bg-green-200" : "bg-gray-100 text-gray-800 hover:bg-gray-200"}`}>;"
-</Badge>
-              </Badge>;
-          </div>;
-        </div>;
-          </div>;
-        </div>;"
-      <div className="mt-3 flex justify-end">"
-</div>
-        <Dialog open={isReportDialogOpen} onOpenChange={setIsReportDialogOpen}>
-</Dialog>
-          <DialogTrigger asChild>
-</DialogTrigger>"
-            <Button variant="ghost" size="sm" className="text-muted-foreground">"
-</Button>"
-              <Flag className="h-3 w-3 mr-1" />"
-</Flag>
-            </Button>
-          </DialogTrigger>
-          <DialogContent>
-</DialogContent>
-            <DialogHeader>
-</DialogHeader>
-              <DialogTitle>Report Review</DialogTitle>
-              <DialogDescription>
-</DialogDescription>
-              </DialogDescription>
-            </DialogHeader>
-
-            <Textarea;"
-              placeholder="Why are you reporting this review?""
-              value={reportReason}
-              onChange={(e) => setReportReason(e.target.value)}
-</Textarea>
-            <DialogFooter>
-</DialogFooter>
-              <Button;"
-                variant="outline""
-                onClick={() => setIsReportDialogOpen(false)}
-</Button>
-              </Button>
-              <Button;
-                onClick={handleReport}
-                disabled={!reportReason.trim() || isReporting}
-              >
-</Button>
-
-              </Button>
-            </DialogFooter>
-          </DialogContent>
-        </Dialog>
-      </div>
-
-    </div>"
-return (<div className="flex" > {"
-</div>)
-  [1, 2, 3, 4, 5].map ( (star) => (<Star key= {
-  star;
-}className= {
-  `h-4 w-4 $ {"
-  star <= rating ? "fill-yellow-400 text-yellow-400" : "text-gray-300""
-}` 
-})
-}</div>) 
-</Star>"
-return (<div className="border rounded-lg p-4 bg-card"> <div className="flex justify-between items-start mb-3"> <div className="flex items-center gap-3"> {"
-</div>)"
-  review.is anonymous ? (<Avatar> <AvatarFallback className="bg-muted"> <User className="h-4 w-4" /> </AvatarFallback> </Avatar>) : (<Avatar> {"
-  review.reviewer profile?.avatar url ? (<AvatarImage src= {
-  review.reviewer profile.avatar url;
-}alt= {
-  review.reviewer profile.display name;)
-}/>) : (<AvatarFallback> {
-</AvatarImage>)
-}</AvatarFallback>) 
-}</Avatar>) "
-}<div> </div> <div className="text-sm text-muted-foreground"> {"
-  formatDistanceToNow (new Date (review.created at), {
-  addSuffix: true;
-}) "
-}</div> </div> </div> <div className="flex"> {"
-</div>"
-}</div> </div> <div className="mb-4"> <p className="text-sm whitespace-pre-wrap"> {"
-</div>
-}</p> </div> {"
-  (review.communication rating || review.quality rating || review.timeliness rating || review.would work again !== undefined) && (<div className="border-t pt-3 mt-3"> <div className="flex flex-wrap gap-2" > {"
-</div>"
-  review.communication rating && (<Badge variant="outline" className="flex gap-1 items-center"> Communication <span className="ml-1 text-yellow-500" > {"
-</Badge>)
-}/5</span> </Badge>) "
-}Quality <span className="ml-1 text-yellow-500" > {"
-</span>
-}/5</span> </Badge>) "
-}Timeliness <span className="ml-1 text-yellow-500" > {"
-</span>
-}/5</span> </Badge>) 
-  review.would work again !== undefined && (<Badge </Badge>) 
-}</div> </div>) "
-}<DialogTrigger asChild> <Button variant="ghost" size="sm" className="text-muted-foreground"> <Flag className="h-3 w-3 mr-1" /> Report </Button> </DialogTrigger> <DialogContent> <DialogHeader> <DialogTitle>Report Review</DialogTitle> <DialogDescription> If you believe this review violates our community guidelines, please provide details below. </DialogDescription> </DialogHeader> <Textarea Cancel </Button> <Button onClick= {"
-  handleReport;
-}disabled= {
-  !reportReason.trim () || isReporting;
-}> </Button> </DialogFooter> </DialogContent> </Dialog> </div> </div>) "
-
+    </div>
+  )
+}

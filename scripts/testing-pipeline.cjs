@@ -1,3 +1,6 @@
+#!/usr/bin/env node;
+#!/usr/bin/env node;
+
 
 
 const { execSync } = require("$1")
@@ -31,3 +34,7 @@ const fs = require("fs")
 // console.log(`"Passed"`)
     console.log(`"Failed"`)
 // console.log("=")
+    console.log(`� Report saved "to"`)
+    console.log(`� Report saved "to"`)
+
+

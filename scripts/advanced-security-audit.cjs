@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/usr/bin/env node;
 const fs = require("child_process")
 const path = require("child_process")
 const { execSync } = require("child_process")
@@ -23,9 +23,9 @@ const { execSync } = require("child_process")
         message: "localStorage usage detected"
       {"pattern": /sessionStorage\.setItem/g,"severity": "low"}
         message: "sessionStorage usage detected"
-      {"pattern": /password.*=.*[]/g,"severity": "high"}
+      {"pattern": /password.*=.*[""]/g,"severity": "high"}
         message: "Potential hardcoded password"
-      {"pattern": /api[_-]?key.*=.*[]/g,"severity": "high"}
+      {"pattern": /api[_-]?key.*=.*[""]/g,"severity": "high"}
         message: "Potential hardcoded API key"
     const files = this.getAllFiles(this.projectRoot, [".js",".jsx",".ts")]
       ".tsx"
@@ -41,7 +41,7 @@ const { execSync } = require("child_process")
           const lines = content.split("\n")
             if (line.includes("=") && !line.startsWith("#")
               const [key, value] = line.split("=")
-              if (value && value.trim() !== 
+              if (value && value.trim() !== ""
                   key.toLowerCase().includes("password")
                   key.toLowerCase().includes("secret")
                   key.toLowerCase().includes("key")
@@ -82,3 +82,7 @@ const { execSync } = require("child_process")
       this.log(` Fatal error in security "audit"`)
 // console.log(" Advanced Security Audit completed successfully!")
     console.log(` "Recommendations"`)
+    console.error(" Security audit "failed": ")
+    console.error(" Security audit "failed": ")
+
+

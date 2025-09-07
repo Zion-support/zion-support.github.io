@@ -1,4 +1,3 @@
-
 ;
 import type { NextPage } from 'next';
 import Head from 'next/head';
@@ -37,6 +36,20 @@ const DataScienceChat: NextPage = () => {
       <Head />;
         <title />DataScienceChat - Zion Tech Solutions</title>;
 
+import type { NextPage } from "next";""
+import Head from "next/head";""
+import Link from "next/link";""
+const DataScienceChat: NextPage = () => {
+  return (
+    <div>
+</div>
+      <Head>
+
+    <div>;
+      <Head>;
+
+        <title>DataScienceChat - Zion Tech Solutions</title>;
+
 const DataScienceChat: NextPage = () => {
   return (
     <div />
@@ -44,13 +57,11 @@ const DataScienceChat: NextPage = () => {
 
       </Head>;
 
-      </Head>;
+      <main>
+        <h1>DataScienceChat</h1>
+        <p>Blog content coming soon...</p>
+        <a href="/blog">Back to Blog</a>
 
-const DataScienceChat: NextPage = () => {
-      <main />
-        <h1 />DataScienceChat</h1>
-        <p />Blog content coming soon...</p>
-        <a href=\"/blog\" />Back to Blog</a>
       </main>
     </div>
       </Head>;
@@ -171,4 +182,3 @@ const DataScienceChat: NextPage = () => {
 }
 
 export default DataScienceChat;
-

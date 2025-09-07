@@ -1,38 +1,26 @@
-// Mock Supabase server client implementation
-interface SupabaseClient {
-  auth: any;
-  from: (table: string) => any;
+import { createClient, SupabaseClient } from '@supabase/supabase-js';
+const supabaseUrl = $2;
+const serviceRoleKey = $2;
+let cachedClient: SupabaseClient | null = $2;
+export function getServerSupabase(): SupabaseClient {
+  if (cachedClient) return cachedClient,
+  cachedClient = createClient($2);
+  return cachedClient
 }
 
-let cachedClient: SupabaseClient | null = null;
+if (!supabaseServiceKey) {
+  throw new Error('Missing SUPABASE_SERVICE_ROLE_KEY environment variable');
+}
 
-export function createServerClient(): SupabaseClient {
-  if (cachedClient) {
-    return cachedClient;
-  }
-
-  cachedClient = {
+export function getServerSupabase() {
+  return createClient(supabaseUrl, supabaseServiceKey, {
     auth: {
-      getUser: () => Promise.resolve({ data: { user: null }, error: null }),
-      signOut: () => Promise.resolve({ error: null })
-    },
-    from: (table: string) => ({
-      select: (columns?: string) => ({
-        eq: (column: string, value: any) => ({
-          eq: (column2: string, value2: any) => ({
-            maybeSingle: () => Promise.resolve({ data: null, error: null })
-          })
-        })
-      }),
-      insert: (data: any) => Promise.resolve({ data: null, error: null }),
-      update: (data: any) => ({
-        eq: (column: string, value: any) => ({
-          eq: (column2: string, value2: any) => Promise.resolve({ data: null, error: null })
-        })
-      }),
-      delete: () => Promise.resolve({ data: null, error: null })
-    })
-  };
+      autoRefreshToken: false,
+      persistSession: false
+    }
+  });
+}
 
-  return cachedClient;
+export function getClientSupabase() {
+  return createClient(supabaseUrl, process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '');
 }

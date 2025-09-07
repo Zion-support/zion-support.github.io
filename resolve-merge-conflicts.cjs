@@ -4,71 +4,69 @@ const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
-console.log('🔧 Resolving merge conflicts by accepting automation branch changes...');
+console.log('🔧 Resolving merge conflicts...');
 
-try {
-  // Get list of conflicted files
-  const conflictedFiles = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' })
-    .trim()
-    .split('\n')
-    .filter(file => file.length > 0);
+// Get list of conflicted files
+const conflictedFiles = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' })
+  .trim()
+  .split('\n')
+  .filter(file => file.length > 0);
 
-  console.log(`Found ${conflictedFiles.length} conflicted files`);
+console.log(`Found ${conflictedFiles.length} conflicted files`);
 
-  // Accept the automation branch version (which cleaned up the codebase)
-  for (const file of conflictedFiles) {
-    try {
-      console.log(`Resolving conflict for: ${file}`);
+// Strategy: For modify/delete conflicts, accept the deletion (main branch)
+// For content conflicts, we'll need to resolve manually
+
+let resolvedCount = 0;
+let manualCount = 0;
+
+for (const file of conflictedFiles) {
+  try {
+    // Check if it's a modify/delete conflict (backup files)
+    if (file.includes('.backup') || file.includes('backup-merge-conflicts/')) {
+      console.log(`🗑️  Removing backup file: ${file}`);
+      execSync(`git rm "${file}"`);
+      resolvedCount++;
+    } else {
+      // For content conflicts, we'll accept the current branch version (HEAD)
+      console.log(`📝 Resolving content conflict: ${file}`);
       
-      // Use git checkout to accept the automation branch version
-      execSync(`git checkout --theirs "${file}"`, { stdio: 'pipe' });
-      
-      // Add the resolved file
-      execSync(`git add "${file}"`, { stdio: 'pipe' });
-      
-    } catch (error) {
-      console.log(`Warning: Could not resolve ${file}: ${error.message}`);
-      
-      // If file doesn't exist in automation branch, remove it
-      try {
-        execSync(`git rm "${file}"`, { stdio: 'pipe' });
-        console.log(`Removed ${file} (not in automation branch)`);
-      } catch (rmError) {
-        console.log(`Could not remove ${file}: ${rmError.message}`);
+      // Check if file exists and has conflict markers
+      if (fs.existsSync(file)) {
+        const content = fs.readFileSync(file, 'utf8');
+        if (content.includes('')) {
+          // Accept HEAD version (current branch)
+          execSync(`git checkout --ours "${file}"`);
+          execSync(`git add "${file}"`);
+          resolvedCount++;
+        } else {
+          // No conflict markers, just add the file
+          execSync(`git add "${file}"`);
+          resolvedCount++;
+        }
+      } else {
+        // File doesn't exist, remove it
+        execSync(`git rm "${file}"`);
+        resolvedCount++;
       }
     }
-  }
-
-  // Handle the tsconfig.tsbuildinfo conflict
-  try {
-    execSync('git checkout --theirs tsconfig.tsbuildinfo', { stdio: 'pipe' });
-    execSync('git add tsconfig.tsbuildinfo', { stdio: 'pipe' });
-    console.log('Resolved tsconfig.tsbuildinfo conflict');
   } catch (error) {
-    console.log('Could not resolve tsconfig.tsbuildinfo, will regenerate it');
+    console.log(`⚠️  Manual resolution needed for: ${file}`);
+    manualCount++;
   }
+}
 
-  // Check if there are any remaining conflicts
+console.log(`\n✅ Resolved ${resolvedCount} files automatically`);
+console.log(`⚠️  ${manualCount} files need manual resolution`);
+
+if (manualCount > 0) {
+  console.log('\nFiles needing manual resolution:');
   const remainingConflicts = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' })
     .trim()
     .split('\n')
     .filter(file => file.length > 0);
-
-  if (remainingConflicts.length === 0) {
-    console.log('✅ All conflicts resolved!');
-    
-    // Commit the merge
-    try {
-      execSync('git commit -m "Merge automation branch: resolved conflicts by accepting cleaned codebase"', { stdio: 'inherit' });
-      console.log('✅ Merge committed successfully!');
-    } catch (commitError) {
-      console.log('Error committing merge:', commitError.message);
-    }
-  } else {
-    console.log(`⚠️  ${remainingConflicts.length} conflicts still remain:`, remainingConflicts);
-  }
-
-} catch (error) {
-  console.error('Error resolving merge conflicts:', error.message);
-  process.exit(1);
+  
+  remainingConflicts.forEach(file => console.log(`  - ${file}`));
 }
+
+console.log('\n🎯 Merge conflict resolution complete!');

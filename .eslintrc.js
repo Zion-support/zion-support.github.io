@@ -1,18 +1,19 @@
 module.exports = {
-  extends: [
-    'next/core-web-vitals'
-  ],
-  rules: {
-    '@typescript-eslint/no-unused-vars': 'warn',
-    'react/no-unescaped-entities': 'off'
+  env: {
+    node: true,
+    es2021: true,
+    browser: true
   },
-  ignorePatterns: [
-    'node_modules/',
-    '.next/',
-    'out/',
-    'dist/',
-    '*.config.js',
-    '*.config.cjs',
-    '*.config.ts'
-  ]
+  extends: ["next/core-web-vitals", "plugin:@typescript-eslint/recommended"],
+  parser: "@typescript-eslint/parser",
+  plugins: ["@typescript-eslint"],
+  rules: {
+    "@typescript-eslint/no-unused-vars": "warn",
+    "@typescript-eslint/no-explicit-any": "warn",
+    "react-hooks/exhaustive-deps": "warn",
+    "react/react-in-jsx-scope": "off",
+    "no-undef": "off",
+    "no-console": "off",
+    "react/no-unescaped-entities": "warn"
+  }
 };

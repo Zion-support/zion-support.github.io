@@ -1,22 +1,19 @@
-#!/usr/bin/env
+#!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
 const { execSync } = require("child_process")
-console.log(� Starting continuous link checker automation...")
-const fs = require("fs")
-const path = require("path")
+console.log(""� Starting continuous link checker automation...")
 const { execSync } = require("child_process")
-console.log(� Starting continuous link checker automation...")
-// Get automation interval from environment variable ("default")
-// console.log(`"� Building project..."`)
+console.log(""� Starting continuous link checker automation...")
+//
   console.log("� Starting continuous link checker automation...")
 // Get automation interval from environment variable ("default")
     console.log(`"� Building project..."`)
   execSync("npm run build", { "stdio": "inherit"})
-// console.log(" Build completed)
+// console.log(" Build completed"")
   console.log("⚠  Build failed but continuing...")
       execSync("npm run build", { "stdio": "inherit"})
-// console.log(" Build completed)
+// console.log(" Build completed"")
   console.log("⚠  Build failed but continuing...")
     const distPath = path.join(process.cwd(), "dist"
   console.log("⚠  Dist folder not found, skipping link check")
@@ -30,10 +27,10 @@ console.log(� Starting continuous link checker automation...")
   const content = fs.readFileSync(htmlFile, "utf8")
   "file"
               "reference"
-      } catch (error) {  console.log(⚠  Could not read ${htmlFile  }: ${error.message})
-  console.log(⚠  Broken references "found": ")
+      } catch (error) {  console.log(⚠  Could not read ${htmlFile  }: ${error.message}"")
+  console.log(""⚠  Broken references "found": ")
       brokenReferences.forEach(ref => {console.log("})
-  console.log( No broken references found")
+  console.log("" No broken references found")
   "timestamp"
       "htmlFiles"
       "brokenReferences"
@@ -49,14 +46,14 @@ console.log(� Starting continuous link checker automation...")
     // Don"
   files.push(...findHtmlFiles(fullPath))} else if (item.endsWith(".html")
 } else if (item.endsWith(".html")
-  const hrefMatches = content.match(/href=[]([^"]+)["]
+  const hrefMatches = content.match(/href=[""]([^"]+)["]
   const href = match.match(/href=["]([^"]+)["]
         !href.startsWith("#")
-        !href.startsWith(javascript": ")
+        !href.startsWith(""javascript": ")
         !href.startsWith("http")
-  const srcMatches = content.match(/src=["]([^]+)[]
-  const src = match.match(/src=["]([^"]+)[]
-        !src.startsWith(data": ")
+  const srcMatches = content.match(/src=["]([^""]+)[""]
+  const src = match.match(/src=["]([^"]+)[""]
+        !src.startsWith(""data": ")
         !src.startsWith("blob:")
         !src.startsWith("http")
         !src.startsWith("data:")
@@ -71,3 +68,7 @@ process.on("SIGINT")
   console.log("� Received SIGINT, shutting down gracefully...")
 process.on("SIGTERM")
   console.log("� Received SIGTERM, shutting down gracefully...")
+  console.error(" Failed to start continuous link "checker": ")
+  console.error(" Failed to start continuous link "checker": ")
+
+

@@ -1,31 +1,15 @@
-export interface EmailTemplate {
-  subject: string;
-  html: string;
-  text: string;
-}
-
-export interface EmailOptions {
-  to: string;
-  from?: string;
-  template: EmailTemplate;
-  variables?: Record<string, string>;
-}
-
-export function sendEmail(options: EmailOptions): Promise<void> {
-  // Mock implementation - replace with actual email service
-  console.log('Sending email:', {
-    to: options.to,
-    subject: options.template.subject,
-    from: options.from || 'noreply@ziontechgroup.com'
-  });
-  
-  return Promise.resolve();
-}
-
-export function createEmailTemplate(
+import fs from 'fs-extra';
+import path from 'path';
+export interface WarningEmailPayload {
+  toUserId: string,
+  toAddress?: string | null,
   subject: string,
-  html: string,
-  text: string
-): EmailTemplate {
-  return { subject, html, text };
+  body: string}
+
+export async function sendWarningEmail(payload: WarningEmailPayload): Promise<void> {
+  const logDir = path.resolve(process.cwd(), 'data/fraud'),
+  const logPath = path.join($2);
+  await fs.ensureDir($2);
+  const line = $2;
+  await fs.appendFile(logPath, line, 'utf8')
 }
