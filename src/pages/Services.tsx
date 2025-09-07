@@ -175,7 +175,7 @@ const services = [
 
 export default function Services() {
   return (
-    <>
+    <div className="min-h-screen bg-futuristic">
       <SEO 
         title="Services - Zion Tech Group"
         description="Comprehensive technology services including AI, cybersecurity, cloud solutions, and emerging technologies. Transform your business with Zion Tech Group."
