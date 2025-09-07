@@ -318,7 +318,7 @@ export default function ServicesOverview() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <>
       <SEO 
         title="Services Overview - Zion Tech Group"
         description="Comprehensive overview of all our AI-powered services, IT solutions, and micro SAAS offerings. Discover how we can transform your business with cutting-edge technology."

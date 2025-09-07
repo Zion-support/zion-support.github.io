@@ -152,6 +152,19 @@ export const EnhancedFuturisticFooter: React.FC = () => {
         { name: 'API Reference', href: '/api' },
         { name: 'Status Page', href: '/status' }
       ]
+    },
+    {
+      title: 'Specialized AI Services',
+      icon: Brain,
+      color: 'from-emerald-600 to-teal-600',
+      links: [
+        { name: 'AI Healthcare Analytics', href: '/services/ai-healthcare-analytics' },
+        { name: 'AI Financial Analytics', href: '/services/ai-financial-analytics' },
+        { name: 'AI Cybersecurity Platform', href: '/services/ai-cybersecurity-platform' },
+        { name: 'AI Project Management', href: '/services/ai-project-management' },
+        { name: 'AI Workflow Orchestrator', href: '/services/ai-workflow-orchestrator' },
+        { name: 'AI Data Governance', href: '/services/ai-data-governance' }
+      ]
     }
   ];
 

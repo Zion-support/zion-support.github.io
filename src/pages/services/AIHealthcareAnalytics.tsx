@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { SEO } from '@/components/SEO';
 import { 
   Heart, 
+  Activity, 
   Brain, 
   Activity, 
   Shield, 
@@ -83,6 +84,7 @@ export default function AIHealthcareAnalytics() {
         'Email support',
         'Basic compliance tools'
       ],
+      cta: 'Start Free Trial',
       popular: false
     },
     {
@@ -99,6 +101,7 @@ export default function AIHealthcareAnalytics() {
         'Advanced compliance',
         'Real-time monitoring'
       ],
+      cta: 'Start Free Trial',
       popular: true
     },
     {
@@ -115,6 +118,7 @@ export default function AIHealthcareAnalytics() {
         'API access',
         'Advanced security'
       ],
+      cta: 'Contact Sales',
       popular: false
     }
   ];
