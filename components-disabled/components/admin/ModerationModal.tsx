@@ -13,8 +13,6 @@ export default function ModerationModal(): any ({;
   onAction,;}
 }: ModerationModalProps) {;
 
-
-
   flag,
   onClose,}
   onAction,}
@@ -218,7 +216,6 @@ export default function ModerationModal() {const [adminNotes, setAdminNotes] = u
   ))))}
   );
 
-
   );
 }        <div className=\"p-4 border-t flex items-center justify-end gap-2\" />
           <button onClick={() = /> onAction('approve', adminNotes)} className=\"px-3 py-2 rounded bg-green-600 text-white\">Approve</button>
@@ -360,8 +357,6 @@ export default function ModerationModal() {flag,onClose,onAction;}
           <button;
     </div />);
 }
-
-
 
   );
 

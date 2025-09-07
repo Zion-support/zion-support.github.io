@@ -68,5 +68,4 @@ const vendors = listVendors();
 return { props: { vendors } }
 };
 
-
 "

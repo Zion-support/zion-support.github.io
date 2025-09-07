@@ -66,7 +66,6 @@ const SEOHead: React.FC<SEOHeadProps /> = ({ title = 'Zion Tech Group - Technolo
   nofollow = false}
    }) => {
 
-
 }
  ;}
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
@@ -176,7 +175,6 @@ type=\"application/ld+json\"
     </Head>
   )
 };
-
 
 export default SEOHead;
     </Head>);

@@ -14,8 +14,6 @@ const UltraFuturisticBackground2034: React.FC<
 > = ({ intensity = 1   }
 }) => {
 
-
-
  ;
   const canvasRef = useRef<HTMLCanvasElement />(null);
 
@@ -39,7 +37,6 @@ canvas.height = window.innerHeight) => {
   return $3;}
 }
 };
-
 
     resizeCanvas();
     window && window.addEventListener('resize', resizeCanvas);
@@ -111,7 +108,6 @@ for (let j = 0; j < numConnections; j++) {
         }
       })
 };
-
 
     // Initialize entanglement lines;
 const initEntanglementLines = (
@@ -300,7 +296,6 @@ entanglementLines.push({
       animationRef.current = requestAnimationFrame(animate)
 };
 
-
     animate();
     return () => {
       if (animationRef.current) {}
@@ -320,7 +315,6 @@ useEffect(() => {
 setMousePosition({ x: e.clientX, y: e.clientY })
 };
 
-
     window.addEventListener('mousemove', handleMouseMove);
     return () => window.removeEventListener('mousemove', handleMouseMove);
       window && window.removeEventListener('resize', resizeCanvas);
@@ -335,7 +329,6 @@ const handleMouseMove = (;) => {
 }
       setMousePosition({ x: e && e.clientX, y: e && e.clientY })
 };
-
 
     window && window.addEventListener('mousemove', handleMouseMove);
     return () => window && window.removeEventListener('mousemove', handleMouseMove);
@@ -430,7 +423,6 @@ ease: 'linear'}
             duration: 20,repeat: -1,/>;
       </div>;
 
-
       {/* Holographic matrix effect */}
 
 <div className='absolute inset-0' />
@@ -498,8 +490,6 @@ export default UltraFuturisticBackground2034;}}
   )
 };
 
-
-
           }}
           transition={{
             duration: 4,
@@ -512,7 +502,6 @@ export default UltraFuturisticBackground2034;}}
 
 )
 };
-
 
 export default UltraFuturisticBackground2034;
 

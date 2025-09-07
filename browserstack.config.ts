@@ -15,8 +15,6 @@ export default defineConfig({;
     baseURL:process.env.PLAYWRIGHT_BASE_URL |'http://localhost:3000';}
     trace:'on-first-retry'}
 
-
-
 export default defineConfig({;
   testDir:'tests/e2e',;
   use:{;}
@@ -301,7 +299,6 @@ import { define_config, devices } from '@playwright / test',export default defin
 
       use: {
 
-
 }
         browserName: 'chromium';}
         channel: 'chrome'}
@@ -330,11 +327,6 @@ import { define_config, devices } from '@playwright / test',export default defin
   open: 'never' }]],
 
       use: {
-
-
-
-
-
 
         browser_name: 'firefox';}
         browser_name: 'firefox';}
@@ -365,11 +357,6 @@ import { define_config, devices } from '@playwright / test',export default defin
 
         browser_name: 'webkit',
         ...devices['i_phone 12'];
-
-
-
-
-
 
     ['list'];}
 }
@@ -446,7 +433,6 @@ ursor/fix-website-loading-errors-and-merge-6662;
 ];
   ]
   reporter: [
-
 
     ['html', { outputFolder: 'playwright-logs/html-report',}
   open: 'never' }]]

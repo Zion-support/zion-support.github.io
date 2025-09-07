@@ -5,11 +5,7 @@ const Footer = dynamic(() => import(\"./Footer\"),{'; \"loading\": () => <p />Lo
 </p>'
 </p>'
 
-
-
-
 </p>'
-
 
 </p>'
 

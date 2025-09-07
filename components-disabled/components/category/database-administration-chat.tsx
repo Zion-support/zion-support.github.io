@@ -152,7 +152,6 @@ export default DatabaseAdministrationChat;<title />DatabaseAdministrationChat - 
     </div>)
 };
 
-
       </main>;
     </div>);
 

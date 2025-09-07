@@ -1,6 +1,5 @@
 
 
-
 import React, { useState, useMemo } from 'react';
 import { motion, AnimatePresence  } from 'framer-motion';
 import { Star, Users, TrendingUp, DollarSign, Clock;
@@ -769,7 +768,6 @@ href='/contact'
     </section>
 )
 };
-
 
 export default EnhancedServiceShowcase;
 

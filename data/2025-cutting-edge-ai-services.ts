@@ -425,7 +425,6 @@ period: 'month',
 export const cuttingEdgeAIServices2025 = [
   {
 
-
     ];
     integrations: ['Creative software_design tools_marketing platforms_content management systems_collaboration tools'];}
     compliance: ['SOC2ISO 27001GDPRCCPAIntellectual property protection'];}

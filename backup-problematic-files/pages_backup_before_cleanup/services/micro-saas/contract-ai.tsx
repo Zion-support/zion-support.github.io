@@ -13,7 +13,7 @@ interface ContractaiProps  {// Add props here as needed;}
   ):backup-problematic-files/pages.bak/services/micro-saas/contract-ai.tsx;
 }
 }
-}ursor/automate-test-improve-and-merge-code-646c;
+};
 :backup-problematic-files/pages_backup_before_cleanup/services/micro-saas/contract-ai.tsx;
 :backup-problematic-files/pages_backup_before_cleanup/services/micro-saas/contract-ai.tsx;
 }

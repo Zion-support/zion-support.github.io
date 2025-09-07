@@ -34,7 +34,6 @@ implementationDetails: 'Enterprise-grade sales intelligence platform with AI-pow
 reviews: 950;
   }
 
-
 export const innovative2026AIServices: Innovative2026AIService[] = [
   // AI-Powered Business Intelligence;
   {

@@ -67,7 +67,6 @@ const contact  = null;description:;
 export const new2025Services: EnhancedRealMicroSaasService[] = [
   {
 
-
       'Jailbreak and injection detection',
       'PII redaction and audit trail',
       'Hallucination and grounding score',
@@ -2180,7 +2179,6 @@ reviews: 6}
   },;
 ];
     reviews: 6;
-
 
   }
 ];

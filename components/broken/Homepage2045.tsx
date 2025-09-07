@@ -74,7 +74,6 @@ const getColorClasses = (index: number) => ;
     return colors[index % colors.length]
 };
 
-
   if (isLoading) {
     return (
 <div className='min-h-screen bg-black flex items-center justify-center' />

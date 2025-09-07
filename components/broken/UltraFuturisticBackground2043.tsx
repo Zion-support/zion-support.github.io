@@ -73,7 +73,6 @@ maxLife: Math.random() * 100 + 50,) => {
       }
 };
 
-
     // Initialize particles;
 for (let i = 0; i < 100; i++) {}
       particles.push(createParticle());}
@@ -126,7 +125,6 @@ const distance = Math.sqrt(dx * dx + dy * dy)if (distance < 100) {ctx.globalAlph
 
 requestAnimationFrame(animate)
 };
-
 
     animate();
     return () => {}
@@ -421,7 +419,6 @@ ease: 'easeInOut'          }}
     </div>
 )
 };
-
 
 export default UltraFuturisticBackground2043;
 

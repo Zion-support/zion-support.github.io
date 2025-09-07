@@ -122,7 +122,6 @@ export type InnovativeMicroSaas = {'Multi-speaker diarization',launch_date?: str
 		| 'Customer Support';
 export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [
 
-
   {
 
     id: 'local - seo - reviews - booster',
@@ -570,7 +569,6 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [
 
 	}
 ];
-
 
 name: string;
 description: string;

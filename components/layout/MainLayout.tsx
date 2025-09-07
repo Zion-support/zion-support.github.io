@@ -6,7 +6,6 @@
 const MainLayout: React.FC<MainLayoutProps /> = ({ children,title,description,keywords,image,url,type = 'website',noindex = false,nofollow = false,canonical;}
    }) => {
 
-
 return (<>;}
       <Head />;}
         <title />{title || 'Zion Tech Group'}</title>;
@@ -36,7 +35,7 @@ const MainLayout: React.FC<MainLayoutProps /> = ({children;
 type = 'website';
   image = '/og-image.jpg';
   url;
-ursor/automate-test-improve-and-merge-code-646c;
+;
 
 import React from 'react';
 import Head from 'next/head';
@@ -49,7 +48,7 @@ interface MainLayoutProps {
 }
 }
 
-export default function MainLayout() {ursor/automate-test-improve-and-merge-code-646c;
+export default function MainLayout() {;
   return (<>;}
       <Head />;}
         <title />{title}</title>;"
@@ -177,7 +176,7 @@ export default MainLayout;
     </>)}
 
 export default MainLayout;
-ursor/automate-test-improve-and-merge-code-646c;"
+;"
         <meta name=\"keywords\" content={keywords} />;"
         {canonical && <link rel=\"canonical\" href={canonical} />}"
         <link rel=\"icon\" href=\"/favicon.ico\" />;
@@ -208,7 +207,7 @@ return (<>;}
     </>;
   )}}
 
-export default MainLayout;ursor/automate-test-improve-and-merge-code-646c;
+export default MainLayout;;
 }
 
 export default function MainLayout({ 
@@ -244,7 +243,6 @@ export default function MainLayout({
   image = '/og - image.jpg',
   url;
   return (
-
 
 "
         {image && <meta property=\"og: image\" content={image} />}"
@@ -384,7 +382,6 @@ export default MainLayout;"
         {canonical && <link rel=\"canonical\" href={canonical} />}"
         <link rel=\"icon\" href=\"/favicon.ico\" />
       </Head>
-      
 
 interface MainLayoutProps {
   children: ReactNode;
@@ -394,8 +391,6 @@ interface MainLayoutProps {
 }
 
 const MainLayout: React.FC<MainLayoutProps /> = ({ children, title, description    }) => {
-
-
 
   return (}
     <>}

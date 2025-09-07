@@ -35,7 +35,6 @@ targetAudience: 'Medium to large businesses, Data-driven companies, Consulting f
     category: 'AI Business Intelligence';
     realService: true;
 
-
 technology: ['Machine learning, Predictive analytics, Data processing, Business intelligence, Real-time analytics'];
     integrations: ['ERP systems, CRM platforms, Financial systems, Marketing tools, Social media platforms'];
     useCases: ['Business analytics, Performance tracking, Market analysis, Financial planning, Strategic decision making'];
@@ -1525,7 +1524,6 @@ export const getPracticalBusinessSolutions2029ByCategory = (
   return $3;}
 }
 };
-
 
 };
 export const getPracticalBusinessSolutions2029ByCategory = (

@@ -96,7 +96,6 @@ className='inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm borde
             </span>
           </motion.div>
 
-
           {/* Main Heading *}
 }
           <motion.h1;
@@ -132,7 +131,6 @@ className='text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-rel
 revolutionize their digital presence and achieve sustainable growth;
 in the modern technology landscape.
           </motion.p>
-
 
           {/* CTA Buttons */}
           <motion.div;
@@ -193,7 +191,6 @@ className='text-center group'
                 <div className='text-gray-400 font-medium' />{stat.label}</div>
               </motion.div>
 
-
             )
 }
           </motion.div>;
@@ -236,7 +233,6 @@ className='w-1 h-3 bg-white/60 rounded-full mt-2'
     </section>
 )
 };
-
 
 export default HeroSection;
 

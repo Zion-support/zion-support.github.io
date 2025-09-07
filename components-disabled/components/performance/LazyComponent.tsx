@@ -5,8 +5,6 @@ const LazyComponent: React.FC<LazyComponentProps /> = ({ fallback = <div classNa
   children }
    }) => {
 
-
-
  ;}
   return (}
     <Suspense fallback={fallback} />
@@ -14,7 +12,6 @@ const LazyComponent: React.FC<LazyComponentProps /> = ({ fallback = <div classNa
     </Suspense>
   )
 };
-
 
 export default LazyComponent;
 
@@ -28,15 +25,12 @@ const LazyComponent: React.FC<LazyComponentProps /> = ({ children, }
   fallback = <LoadingSpinner /> }
    }) => {
 
-
-
  ;}
   return (}
     <Suspense fallback={fallback} />;
       <Component {...props} />;
     </Suspense>)
 };
-
 
     </Suspense>);
 
@@ -50,7 +44,6 @@ import React from 'react';
   )
 };
 
-
 export default LazyComponent;
 import React from 'react';
 }
@@ -61,7 +54,6 @@ interface LazyComponentProps {
   return (}
     </Suspense>)}
 };
-
 
     </Suspense>);
 

@@ -297,7 +297,6 @@ setIsScrolled(window.scrollY > 20)) => {
 }
 };
 
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, [isClient]);
@@ -620,7 +619,6 @@ className='w-12 h-12 bg-gradient-to-br from-cyan-500 via-purple-500 to-pink-500 
             </div>
           </Link>
 
-
           {/* Desktop Navigation *}
 }
 <nav className='hidden xl:flex items-center space-x-1' />;
@@ -642,7 +640,6 @@ className='w-12 h-12 bg-gradient-to-br from-cyan-500 via-purple-500 to-pink-500 
                   <span className='font-medium' />{item.name}</span>
                   <ChevronDown className='w-4 h-4 group-hover: rotate-180 transition-transform duration-300' />
                 </motion.button>
-
 
                 {/* Dropdown Menu *}
 }
@@ -860,7 +857,6 @@ className='xl:hidden bg-gray-900/95 backdrop-blur-xl border-t border-gray-700/50
 
                           <div className={`p - 2 rounded - lg bg - gradient - to - br ${item.color}`} />
 
-
                             {item.icon}
 
                           </div>
@@ -915,7 +911,6 @@ className='xl:hidden bg-gray-900/95 backdrop-blur-xl border-t border-gray-700/50
                           key={link.name}
                           href={link.href}"
                           className=\"flex items - center space - x-3 p - 3 rounded - xl hover: bg - gray - 800 / 50 transition - all duration - 200\">
-
 
                           {link.icon}
 

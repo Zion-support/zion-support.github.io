@@ -503,7 +503,6 @@ mobile: '+1 302 464 0950',
 ;
 export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [;
 
-
   {  mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: \"address\",}
@@ -541,7 +540,6 @@ icon: '🤖',
       'Real-time optimization algorithms',
       'Cross-departmental coordination',
 
-
       'Autonomous process discovery and mapping',
       'Real - time optimization algorithms',
       'Cross - departmental coordination',
@@ -550,7 +548,6 @@ icon: '🤖',
       'Cross - departmental coordination',
 export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
   {
-
 
       'Autonomous process discovery and mapping',
       'Real-time optimization algorithms',
@@ -767,7 +764,6 @@ implementationDetails: 'Multi-tenant SaaS with AI sales intelligence, lead scori
     customers: 198;
   }
 ];
-
 
 ];      'Automatic lead scoring_behavioral analysis_predictive lead qualification_personalized nurturing sequences_sales forecasting AIPipeline optimization_competitor intelligence_market opportunity detection';
       'ROI trackingCRM integration';

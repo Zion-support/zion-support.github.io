@@ -1413,7 +1413,6 @@ export const getEmergingTechServicesByCategory = (
 }
 };
 
-
 export const getEmergingTechServicesByPriceRange = (
   return innovative2026EmergingTechServices && innovative2026EmergingTechServices.filter(service => {
     const price = parseInt(service && service.price.replace('$', '').replace(, ''));
@@ -1464,7 +1463,6 @@ export interface Innovative2026EmergingTechService {;
 
 };
 
-
 reviews: 30;
 }];
 export const getEmergingTechServicesByCategory = (category: string) =>: any {
@@ -1485,9 +1483,6 @@ export const getEmergingTechServicesByPriceRange = (min_price: number, max_price
     const price = parse_int (service.price.replace ('$', '').replace (, ''));}
     return price >= min_price && price <= max_price;}
   });
-
-
-
 
 };
 reviews: 30;

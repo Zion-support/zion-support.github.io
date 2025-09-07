@@ -18,5 +18,4 @@ function handler() {const vendor_id = String (req.query.vendor_id || \"\")if ;}"
 })) {$2;}
 }
 
-
 "

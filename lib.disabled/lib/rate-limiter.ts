@@ -1,6 +1,6 @@
 
 import { NextApiRequest, NextApiResponse  } from 'next';
-ursor/automate-test-improve-and-merge-code-646c;
+;
 
 interface RateLimitConfig  {\"windowMs\": number;
   maxRequests: number;}
@@ -97,7 +97,7 @@ export const apiRateLimiter = new RateLimiter({ windowMs: '15 * 60 * 1000',}
   return} next()}
 :lib.disabled/lib/rate-limiter.ts;
 :corrupted_backup/rate-limiter.ts;
-ursor/automate-test-improve-and-merge-code-646c;
+;
 import { NextApiRequest,NextApiResponse } from 'next';
 
 interface RateLimitConfig { windowMs: number; maxRequests: number; message?: string;' }

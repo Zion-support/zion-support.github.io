@@ -45,7 +45,6 @@ canvas.height = window.innerHeight) => {
 }
 };
 
-
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
     // Initialize particles;
@@ -54,7 +53,6 @@ const initParticles = (
   const particles: Particle[] = [];
 
 const particleCount = Math.floor((canvas.width * canvas.height) / 20000);
-
 
 for (let i = 0; i < particleCount; i++) {
         const type = ['quantum', 'holographic', 'neural', 'cyberpunk'][
@@ -84,7 +82,6 @@ type}
 
       particlesRef.current = particles;
 };
-
 
     initParticles();
     // Animation loop;

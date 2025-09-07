@@ -17,12 +17,8 @@ return (
       <p className=\"mt-2 text-gray-600 dark: text-gray-300\" />Article coming soon.</p>;
     </div>;
 
-
-
   );
 import React from 'react';
-
-
 
   );
 import React from 'react';
@@ -93,7 +89,6 @@ export default function TechnologyImplementationStrategiesPage() {return (<div c
   )
     </div>);
 }
-
 
 export default function TechnologyImplementationStrategiesPage() {
   return (

@@ -123,7 +123,7 @@ const nextConfig = { reactStrictMode: 'true',
   value: 'nosniff' },{ key: 'X-Frame-Options',}
   value: 'DENY' },{ key: 'X-XSS-Protection',}
   value: '1; mode=block' },{ key: 'Referrer-Policy',}
-  value: 'origin-when-cross-origin' } ] } ]} }export default nextConfig;ursor/automate-test-improve-and-merge-code-646c;
+  value: 'origin-when-cross-origin' } ] } ]} }export default nextConfig;;
 const nextConfig = { reactStrictMode: 'true',
   compress: 'true',poweredByHeader: 'false',}
   eslint: { ignoreDuringBuilds: true },typescript: { ignoreBuildErrors: true },trailingSlash: 'true',

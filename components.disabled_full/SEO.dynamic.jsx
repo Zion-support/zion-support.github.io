@@ -4,7 +4,7 @@ const SEO = dynamic(() => import(\"./SEO\"),{'; \"loading\": () => <p />Loading.
 </p>';
 </p>';
 </p>';
-ursor/automate-test-improve-and-merge-code-646c;
+;
 const SEO = dynamic(() => import(\"./SEO\"),{'; \"loading\": () => <p />Loading...</p,>}) \"export\": 'default SEO' ,';
 </p>';
 </p>';
@@ -32,7 +32,7 @@ const SEO = dynamic(() => import(\"./SEO\"),{'; \"loading\": () => <p />Loading.
 </p>';
 </p>';
 </p>';
-ursor/automate-test-improve-and-merge-code-646c;
+;
 </p>';
 </p>';
 </p>';
@@ -43,11 +43,7 @@ const SEO = dynamic(() => import(\"./SEO\"),{'; \"loading\": () => <p />Loading.
 </p>'
 </p>'
 
-
-
-
 </p>'
-
 
 </p>'
 

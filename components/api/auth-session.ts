@@ -4,12 +4,7 @@ import { getSessionFromReq, isInternalAgentRequest  } from '../../../utils/admin
 
 export default function handler() {const session = null;
 
-
-
 import {
-
-
-
 
   getSessionFromReq,;
   isInternalAgentRequest,;
@@ -22,7 +17,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 const internal = isInternalAgentRequest(req)
   if (!session && !internal) {
-
 
    ;
   return;
@@ -87,9 +81,7 @@ res.status (200).json ({ message: 'OK',}
 
 }
 
-
 }
-
 
   getSessionFromReq;
 isInternalAgentRequest;

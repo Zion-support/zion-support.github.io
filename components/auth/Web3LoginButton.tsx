@@ -10,7 +10,6 @@ class ErrorBoundary extends React.Component {constructor(props) {super(props)thi
 }
 import React, { useEffect, useState } from 'react';
 
-
 import dynamic from 'next/dynamic';
 
 const Web3LoginModal = dynamic(() => import('./Web3LoginModal'), {}
@@ -68,7 +67,6 @@ const onLoggedIn = (
   return $3;}
 }
 };
-
 
 const disconnect = async () => {
     window.localStorage.removeItem('zion-web3-user');

@@ -126,7 +126,6 @@ if (&&) {$2;}
 console.log(`\nTotal files fixed: ${totalFixed}`);
   }
 
-
 #!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');

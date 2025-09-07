@@ -364,7 +364,6 @@ reviews: 16}
       'Define goals, attach metrics, and get auto - generated weekly summaries. Import from spreadsheets or data warehouses and share scorecards with stakeholders.',
     features: [;
 
-
       'Goal trees and KPI ownership',
       'Weekly executive summaries',
       'Alerting on thresholds and trends',
@@ -912,7 +911,6 @@ implementationDetails: 'Shared inbox connectors, rules engine, and prompt templa
 ;
 	}
 ];
-
 
 id: 'ai - email - triage - copilot';
   name: 'AI Email Triage Copilot',

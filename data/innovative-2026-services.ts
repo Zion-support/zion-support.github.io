@@ -50,6 +50,5 @@ export const innovative2026Services: Innovative2026Service[] = [
   mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
 
-
     reviews: 234;  }
 }

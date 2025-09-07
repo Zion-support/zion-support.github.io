@@ -4,7 +4,7 @@ const InteractiveElements = dynamic(() => import(\"./InteractiveElements\"),{'; 
 </p>';
 </p>';
 </p>';
-ursor/automate-test-improve-and-merge-code-646c;
+;
 const InteractiveElements = dynamic(() => import(\"./InteractiveElements\"),{'; \"loading\": () => <p />Loading...</p,>}) \"export\": 'default InteractiveElements' ,';
 </p>';
 </p>';
@@ -32,7 +32,7 @@ const InteractiveElements = dynamic(() => import(\"./InteractiveElements\"),{'; 
 </p>';
 </p>';
 </p>';
-ursor/automate-test-improve-and-merge-code-646c;
+;
 </p>';
 </p>';
 </p>';
@@ -43,11 +43,7 @@ const InteractiveElements = dynamic(() => import(\"./InteractiveElements\"),{'; 
 </p>'
 </p>'
 
-
-
-
 </p>'
-
 
 </p>'
 

@@ -40,7 +40,6 @@
     popular: true,
     icon: '⚡',
 
-
       'Advanced space energy harvesting platform with multi-source collection, AI optimization, energy storage, and power distribution. Includes monitoring systems and backup power capabilities.',
     launchDate: '2029-03-01',
   customers: 18,
@@ -281,7 +280,6 @@ technology: [
   growthRate: '350% annual growth'
     variant: 'space-futuristic',
   contactInfo: {
-
 
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';

@@ -1942,7 +1942,6 @@ reviews: 45;
       email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
 
-
 website: 'https://ziontechgroup.com';
     }
     real_implementation: true;
@@ -2633,7 +2632,6 @@ technology: [
     implementationDetails: 'AI-powered cloud migration platform with intelligent planning and automated execution capabilities.';
     launchDate: '2024-10-01';
     customers: 89;
-
 
     rating: 4 && 4.8,
     reviews: 45;

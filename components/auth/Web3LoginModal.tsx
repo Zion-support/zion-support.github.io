@@ -9,13 +9,11 @@ class ErrorBoundary extends React.Component {constructor(props) {super(props)thi
 }
 import React, { useCallback, useEffect, useState } from 'react';
 
-
 import dynamic from 'next/dynamic';
 
 const isClient = typeof window !== 'undefined';
   }) => void;
 };
-
 
 function ModalInner({ isOpen, onClose, onLoggedIn }: Web3LoginModalProps) {
   const [loading, setLoading] = useState(false);
@@ -174,7 +172,6 @@ body: JSON.stringify({
             {error}
           </div>
 
-        
 }
         <div className=\"space-y-3\" />;"
           <button onClick={handleEvmConnect} disabled={loading} className=\"w-full rounded-lg bg-black text-white py-2.5 dark:bg-white dark:text-black\" />;

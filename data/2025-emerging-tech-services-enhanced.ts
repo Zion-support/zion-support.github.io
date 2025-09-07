@@ -10,7 +10,6 @@ export interface EmergingTechService {
 export interface EmergingTechService {;
 export interface EmergingTechService {
 
-
 export interface EmergingTechService {;
   id: string;
   name: string;

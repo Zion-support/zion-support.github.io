@@ -193,8 +193,6 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps /> = ({ className = \
   }
 }) => {
 
-
-
  ;
   const [isOpen, setIsOpen] = useState(false);
 

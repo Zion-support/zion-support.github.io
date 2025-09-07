@@ -1,4 +1,4 @@
-ursor/automate-test-improve-and-merge-code-646c;
+;
 const Component = (import _React from \"react\"; \"class\": ErrorBoundary extends _React.Component { constructor(props) { super(props),this.state = { \"hasError\": 'fals',e,\"error\": 'null') => {
   return $3;}
 } } \"static\": getDerivedStateFromError(error) { return { hasError tru,e,\"error\": ''} } componentDidCatch(error,errorInfo) {\" } render() { if (this.state.hasError) { return (\" <div className=\"error-boundary\" /> <h2 />Something went wrong.</h2> <details />{this.state.error && this.state.error.toString()}</details> </div> )} return this.props.children} } export default ErrorBoundary}const Component = (import _React from \"react\"; \"class\": ErrorBoundary extends _React.Component { constructor(props) { super(props),this.state = { \"hasError\": 'fals',e,\"error\": 'null') => {
@@ -23,7 +23,7 @@ const Component = (import _React from \"react\"; \"class\": ErrorBoundary extend
 } } \"static\": getDerivedStateFromError(error) { return { hasError tru,e,\"error\": ''} } componentDidCatch(error,errorInfo) {\" } render() { if (this.state.hasError) { return (\" <div className=\"error-boundary\" /> <h2 />Something went wrong.</h2> <details />{this.state.error && this.state.error.toString()}</details> </div> )} return this.props.children} } export default ErrorBoundary}
 const Component = (import _React from \"react\"; \"class\": ErrorBoundary extends _React.Component { constructor(props) { super(props),this.state = { \"hasError\": 'fals',e,\"error\": 'null') => {
   return $3;}
-} } \"static\": getDerivedStateFromError(error) { return { hasError tru,e,\"error\": ''} } componentDidCatch(error,errorInfo) {\" } render() { if (this.state.hasError) { return (\" <div className=\"error-boundary\" /> <h2 />Something went wrong.</h2> <details />{this.state.error && this.state.error.toString()}</details> </div> )} return this.props.children} } export default ErrorBoundary}ursor/automate-test-improve-and-merge-code-646c;
+} } \"static\": getDerivedStateFromError(error) { return { hasError tru,e,\"error\": ''} } componentDidCatch(error,errorInfo) {\" } render() { if (this.state.hasError) { return (\" <div className=\"error-boundary\" /> <h2 />Something went wrong.</h2> <details />{this.state.error && this.state.error.toString()}</details> </div> )} return this.props.children} } export default ErrorBoundary};
 const Component = (import _React from \"react\"; \"class\": ErrorBoundary extends _React.Component { constructor(props) { super(props),this.state = { \"hasError\": 'fals',e,\"error\": 'null') => {
   return $3;}
 } } \"static\": getDerivedStateFromError(error) { return { hasError tru,e,\"error\": ''} } componentDidCatch(error,errorInfo) {\" } render() { if (this.state.hasError) { return (\" <div className=\"error-boundary\" /> <h2 />Something went wrong.</h2> <details />{this.state.error && this.state.error.toString()}</details> </div> )} return this.props.children} } export default ErrorBoundary}
@@ -32,7 +32,6 @@ const Component = (import _React from \"react\"; \"class\": ErrorBoundary extend
 } } \"static\": getDerivedStateFromError(error) { return { hasError tru,e,\"error\": ''} } componentDidCatch(error,errorInfo) {\" } render() { if (this.state.hasError) { return (\" <div className=\"error-boundary\" /> <h2 />Something went wrong.</h2> <details />{this.state.error && this.state.error.toString()}</details> </div> )} return this.props.children} } export default ErrorBoundary}const Component = (import _React from \"react\"; \"class\": ErrorBoundary extends _React.Component { constructor(props) { super(props),this.state = { \"hasError\": 'fals',e,\"error\": 'null') => {
   return $3;}
 } } \"static\": getDerivedStateFromError(error) { return { hasError tru,e,\"error\": ''} } componentDidCatch(error,errorInfo) {\" } render() { if (this.state.hasError) { return (\" <div className=\"error-boundary\" /> <h2 />Something went wrong.</h2> <details />{this.state.error && this.state.error.toString()}</details> </div> )} return this.props.children} } export default ErrorBoundary}
-
 
 const Component = (; import _React from \"react\"; \"class\": ErrorBoundary extends _React.Component { constructor(props) { super(props),this.state = { \"hasError\": 'fals',e,\"error\": 'null') => {
   return $3;}

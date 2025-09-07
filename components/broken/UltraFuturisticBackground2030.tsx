@@ -20,7 +20,6 @@ interface UltraFuturisticBackground2030Props {
 const UltraFuturisticBackground2030: React.FC<UltraFuturisticBackground2030Props /> = ({ children   }
 }) => {
 
-
 const canvasRef = null;
   useEffect(() => {
 const canvas = canvasRef.current;
@@ -55,7 +54,6 @@ interface UltraFuturisticBackground2030Props {
 
 const UltraFuturisticBackground2030: React.FC < UltraFuturisticBackground2030Props> = ({ children   }
 }) => {
-
 
 useEffect (() => {const canvas = canvas_ref.current;
     // Check condition;}
@@ -129,7 +127,6 @@ ctx.globalAlpha = ((100 - distance) / 100) * 0.3;
       animationId = requestAnimationFrame(animate)
 };
 
-
     initParticles();
     animate();
 
@@ -140,7 +137,6 @@ initParticles()) => {
   return $3;}
 }
 };
-
 
     window.addEventListener('resize', handleResize);
     return () => {

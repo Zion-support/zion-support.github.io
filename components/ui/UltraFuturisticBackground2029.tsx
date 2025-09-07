@@ -53,7 +53,6 @@ canvas.height = window.innerHeight) => {
 }
 };
 
-
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
     // Mouse move handler for interactive effects;
@@ -63,7 +62,6 @@ const handleMouseMove = (
 }
 setMousePosition({ x: e.clientX, y: e.clientY })
 };
-
 
     window.addEventListener('mousemove', handleMouseMove);
     // Initialize particles with different types;
@@ -102,7 +100,6 @@ type,
       particlesRef.current = particles;
 };
 
-
     // Initialize energy fields;
 const initEnergyFields = (
      ;
@@ -131,7 +128,6 @@ pulse: Math.random() * Math.PI * 2,) => {
 
       energyFieldsRef.current = fields;
 };
-
 
     initParticles();
     initEnergyFields();
@@ -208,7 +204,6 @@ if (distance < 200) {
 
         // Draw particle with type-specific effects;
 ctx.save();
-
 
         switch (particle.type) {
           case 'energy':
@@ -318,7 +313,6 @@ ctx.beginPath();
       animationRef.current = requestAnimationFrame(animate)
 };
 
-
     animate();
     return () => {
       window.removeEventListener('resize', resizeCanvas);
@@ -399,10 +393,8 @@ className='absolute bottom-20 right-20 w-28 h-28 border border-yellow-400 opacit
 ease: 'easeInOut'}
           }}
 
-
             duration: 10,
             repeat: Infinity,
-
 
         />
       </div>

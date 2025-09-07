@@ -2893,7 +2893,7 @@ export const advancedCybersecurityServices: AdvancedCybersecurityService[] = [//
 ;
 :corrupted_backup/advanced-cybersecurity-services.ts;
 :data_backup/advanced-cybersecurity-services.ts;
-ursor/automate-test-improve-and-merge-code-646c;
+;
 
 export interface AdvancedCybersecurityService  {\"id\": string;
   name: string;
@@ -3778,7 +3778,7 @@ export const advancedCybersecurityServices: AdvancedCybersecurityService[] = [ {
   variant: 'cyberpunk-futuristic,contactInfo: { mobile:,+1 302 464 0950',email: 'kleber@ziontechgroup.com,address:,364 E Main St STE 1008 Middletown DE 19709',}
   website: 'https:,}
 },realImplementation: true,implementationDetails:,Advanced IoT security platform with device discovery,security monitoring,and threat detection. Includes device management and compliance management.',launchDate: '2024-04-01,customers: 130,rating: 4.6,reviews: 78 ],
-}ursor/automate-test-improve-and-merge-code-646c;
+};
 
 export interface AdvancedCybersecurityService { id: string; name: string; tagline: string; price: string; period: string; description: string; features: string[]; popular: boolean; icon: string; color: string; textColor: string; link: string; marketPosition: string; targetAudience: string; trialDays: number; setupTime: string; category: string; realService: boolean; technology: string[]; integrations: string[]; useCases: string[]; roi: string; competitors: string[]; marketSize: string; growthRate: string; variant: string; contactInfo: { mobile: string; email: string; address: string; website: strin,}
 }realImplementation: boolean; implementationDetails: string; launchDate: string; customers: number; rating: number; reviews: number;
@@ -4032,7 +4032,7 @@ export const advancedCybersecurityServices: AdvancedCybersecurityService[] = [ {
   website: 'https:,}
 },realImplementation: true,implementationDetails:,Advanced IoT security platform with device discovery,security monitoring,and threat detection. Includes device management and compliance management.',launchDate: '2024-04-01,customers: 130,rating: 4.6,reviews: 78 ],
 }ursor/fix-syntax-push-and-merge-to-main-40de;
-ursor/automate-test-improve-and-merge-code-646c;
+;
 
 export interface AdvancedCybersecurityService { id: string; name: string; tagline: string; price: string; period: string; description: string; features: string[]; popular: boolean; icon: string; color: string; textColor: string; link: string; marketPosition: string; targetAudience: string; trialDays: number; setupTime: string; category: string; realService: boolean; technology: string[]; integrations: string[]; useCases: string[]; roi: string; competitors: string[]; marketSize: string; growthRate: string; variant: string; contactInfo: { mobile: string; email: string; address: string; website: strin,}
 }realImplementation: boolean; implementationDetails: string; launchDate: string; customers: number; rating: number; reviews: number;

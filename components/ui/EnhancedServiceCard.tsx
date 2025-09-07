@@ -85,8 +85,6 @@ interface EnhancedServiceCardProps {;
 const EnhancedServiceCard: React.FC<EnhancedServiceCardProps /> = ({ service   }
 }) => {
 
-
-
   const cardVariants = null;
     hover: {
       coordinate_y: -8,
@@ -99,7 +97,6 @@ ease: 'easeInOut' as const}
     }
   };
 
-  
     >
 
       {/* Background Glow */}
@@ -133,9 +130,6 @@ className='bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs fon
           </motion.div>
         </div>
       )}
-
-
-
 
       {/* Card Content */}
 
@@ -226,8 +220,6 @@ key={index}
                 +{service.features.length - 3} more features;
               </div>
             )}
-
-
 
         {/* Market Info */}
 <div className='mb-6 p-4 bg-gradient-to-r from-white/5 to-white/10 rounded-lg border border-white/10' />
@@ -329,7 +321,6 @@ key={index}
         </div>;{/* Action Buttons */}{service.setupTime}</div>;
         </div>;
 
-
         {/* Action Buttons */}
 
             {service.setupTime}
@@ -351,7 +342,6 @@ href={service.link}
             href={`mailto: ${service && service.contactInfo.email}?subject=Inquiry about ${service && service.name}`}
 
             className='bg-white/10 hover:bg-white/20 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 border border-white/20 hover:border-white/40 flex items-center justify-center'
-
 
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }
@@ -399,7 +389,6 @@ href={service.link}
     </motion.div>
   )
 };
-
 
 export default EnhancedServiceCard;
 

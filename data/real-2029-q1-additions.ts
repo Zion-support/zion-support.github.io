@@ -211,7 +211,6 @@ reviews: 9;
 	}
 ];
 
-
 id: 'ai - redteam - evaluator';
   name: 'AI Red‑Team Evaluator';
   tagline: 'Continuous LLM red‑teaming and safety scoring';

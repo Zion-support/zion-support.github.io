@@ -27,7 +27,6 @@ setIsScrolled(window.scrollY > 50)) => {
 }
 };
 
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -233,7 +232,6 @@ className='flex items-center space-x-2 text-gray-300 hover: text-white transitio
                       <span className='font-medium' />{item.name}</span>
                     </Link>
 
-                  
 }
                 </div>;
               ))}
@@ -289,9 +287,6 @@ className='absolute inset-0 bg-black/50 backdrop-blur-sm'
               onClick={() = /> setIsOpen(false)}
 
             />
-            
-
-
 
             {/* Mobile Menu *}
 }
@@ -373,10 +368,6 @@ className='flex items-center space-x-3 p-3 rounded-lg hover: bg-cyan-500/10 tran
                     </div>;
                   ))}
 
-
-
-
-
                 {/* Contact Information */}
 <div className='mt-8 p-4 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-xl border border-cyan-500/20' />
                   <h3 className='text-cyan-400 font-semibold mb-3' />
@@ -421,7 +412,6 @@ className='flex items-center space-x-3 p-3 rounded-lg hover: bg-cyan-500/10 tran
     </>
 )
 };
-
 
 export default Navigation;
 

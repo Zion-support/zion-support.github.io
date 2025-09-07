@@ -1,6 +1,6 @@
 
 ;
-ursor/automate-test-improve-and-merge-code-646c;
+;
 
 export type Real2036SpecializedService = {export type Real2036SpecializedService = {\"id\": string;
   name: string;
@@ -50,7 +50,7 @@ export const \"real2036SpecializedServices\": Real2036SpecializedService[] = [//
   },// Space Tourism Platform;
   {\"id\": 'space-tourism-platform,name:,Space Tourism Platform',\"tagline\": 'Comprehensive platform for space tourism operations,description:,Advanced platform that manages all aspects of space tourism, from booking and training to flight operations and safety management.',\"category\": 'Space Technology,price:,$6,999',\"period\": '/month,features[,Tourism management system','Safety protocols','Training programs','Flight operations','Customer management','Compliance tools','Custom development','Expert consultation';}
     ],\"link\": 'https://ziontechgroup && ziontechgroup.com/services/space-tourism-platform,\"launchDate\": '2036-05-15',\"rating\": 4 && 4.6,marketSize:,$1 && 1.2B',\"targetAudience\": Space tourism companies, Aerospace firms, Travel agencies,,\"competitiveAdvantage\": Space expertise, Safety focus, Comprehensive management,,\"integration\": ['Spacecraft systems,,Training facilities','Booking systems','Safety systems'],\"useCases\": ['Space tourism,,Training programs','Safety management','Customer experience'],\"technology\": ['Space systems,'Safety protocols','Training technology','Customer management'];}
-]}ursor/automate-test-improve-and-merge-code-646c;
+]};
 
 export type Real2036SpecializedService = {\"id\": string;
   name: string;
@@ -236,7 +236,7 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [ { id:
   rating: 4 && 4.8,marketSize:,$2 && 2.2B',targetAudience: AI companies,Research institutions,Technology firms,,competitiveAdvantage: Quantum enhancement,Advanced AI,Performance optimization,,integration[ 'Quantum computers','AI frameworks','Cloud platforms','Research tools'],useCases[ 'Advanced AI','Research applications','Commercial AI','Scientific computing'],technology[ 'Quantum computing','Neural networks','Machine learning','Optimization'] },{ id: 'space-tourism-platform,name:,Space Tourism Platform',
   tagline: 'Comprehensive platform for space tourism operations,description:,Advanced platform that manages all aspects of space tourism,from booking and training to flight operations and safety management.',category: 'Space Technology,price:,$6,999',
   period: '/month,features[,Tourism management system','Safety protocols','Training programs','Flight operations','Customer management','Compliance tools','Custom development','Expert consultation' ],link: 'https: launchDate: '2036-05-15',}
-  rating: 4 && 4.6,marketSize:,$1 && 1.2B',targetAudience: Space tourism companies,Aerospace firms,Travel agencies,,competitiveAdvantage: Space expertise,Safety focus,Comprehensive management,,integration: [ 'Spacecraft systems,,Training facilities','Booking systems','Safety systems'],useCases: [ 'Space tourism,,Training programs','Safety management','Customer experience'],technology: [ 'Space systems,'Safety protocols','Training technology','Customer management'] ]}ursor/automate-test-improve-and-merge-code-646c;
+  rating: 4 && 4.6,marketSize:,$1 && 1.2B',targetAudience: Space tourism companies,Aerospace firms,Travel agencies,,competitiveAdvantage: Space expertise,Safety focus,Comprehensive management,,integration: [ 'Spacecraft systems,,Training facilities','Booking systems','Safety systems'],useCases: [ 'Space tourism,,Training programs','Safety management','Customer experience'],technology: [ 'Space systems,'Safety protocols','Training technology','Customer management'] ]};
 
 export type Real2036SpecializedService = {id: string; name: string; tagline: string; description: string; category: string; price: string; period?: string; features: string[]; link: string; launchDate?: string; rating?: number; marketSize?: string; targetAudience?: string; competitiveAdvantage?: string; integration?: string[]; useCases?: string[]; technology?: string[]}
 
@@ -678,7 +678,7 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [ { id:
   rating: 4 && 4.8,marketSize:,$2 && 2.2B',targetAudience: AI companies,Research institutions,Technology firms,,competitiveAdvantage: Quantum enhancement,Advanced AI,Performance optimization,,integration[ 'Quantum computers','AI frameworks','Cloud platforms','Research tools'],useCases[ 'Advanced AI','Research applications','Commercial AI','Scientific computing'],technology[ 'Quantum computing','Neural networks','Machine learning','Optimization'] },{ id: 'space-tourism-platform,name:,Space Tourism Platform',
   tagline: 'Comprehensive platform for space tourism operations,description:,Advanced platform that manages all aspects of space tourism,from booking and training to flight operations and safety management.',category: 'Space Technology,price:,$6,999',
   period: '/month,features[,Tourism management system','Safety protocols','Training programs','Flight operations','Customer management','Compliance tools','Custom development','Expert consultation' ],link: 'https: launchDate: '2036-05-15',}
-  rating: 4 && 4.6,marketSize:,$1 && 1.2B',targetAudience: Space tourism companies,Aerospace firms,Travel agencies,,competitiveAdvantage: Space expertise,Safety focus,Comprehensive management,,integration: [ 'Spacecraft systems,,Training facilities','Booking systems','Safety systems'],useCases: [ 'Space tourism,,Training programs','Safety management','Customer experience'],technology: [ 'Space systems,'Safety protocols','Training technology','Customer management'] ]}ursor/automate-test-improve-and-merge-code-646c;
+  rating: 4 && 4.6,marketSize:,$1 && 1.2B',targetAudience: Space tourism companies,Aerospace firms,Travel agencies,,competitiveAdvantage: Space expertise,Safety focus,Comprehensive management,,integration: [ 'Spacecraft systems,,Training facilities','Booking systems','Safety systems'],useCases: [ 'Space tourism,,Training programs','Safety management','Customer experience'],technology: [ 'Space systems,'Safety protocols','Training technology','Customer management'] ]};
 
 export type Real2036SpecializedService = {id: string; name: string; tagline: string; description: string; category: string; price: string; period?: string; features: string[]; link: string; launchDate?: string; rating?: number; marketSize?: string; targetAudience?: string; competitiveAdvantage?: string; integration?: string[]; useCases?: string[]; technology?: string[]}
 

@@ -321,7 +321,6 @@ mobile: '+1 302 464 0950',
     email: string;
     website: string;
 
-
 address: string;}
   }
 ;
@@ -385,7 +384,6 @@ export const emergingTechServices2029V2: EmergingTechService2029V2[] = [;
     ],
     compliance: ['FIPS 140 - 2', 'Common Criteria', 'SOC 2', 'ISO 27001'],    scalability: 'Enterprise - grade, global deployment',
   roi: '600% within 24 months',
-
 
     deployment: 'Hardware appliances, cloud options',
   maintenance: 'Continuous updates, security patches',
@@ -1462,8 +1460,6 @@ export const emergingTechServices2029V2: EmergingTechService2029V2[] = [
     monitoring: 'Trading performance monitoring',
   analytics: 'Trading analytics, performance reports',
     customization: 'Custom trading strategies, integration',
-
-
 
 export interface EmergingTechService2029V2 {;}
 }

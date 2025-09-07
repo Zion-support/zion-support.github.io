@@ -8,7 +8,6 @@ class ErrorBoundary extends React.Component {constructor(props) {super(props)thi
 }
 import React, { useState } from 'react';
 
-
 import EnhancedLayout from '../layout/EnhancedLayout';
 
 export type ProposalType = 'Workforce Dev' | 'AI Ethics' | 'Digital ID' | 'Education';
@@ -37,7 +36,6 @@ export type ProposalForm = {
 }
   customPrompt?: string}
 };
-
 
 export default function ProposalGenerator() {
   const [form, setForm] = useState<ProposalForm />({
@@ -129,7 +127,6 @@ mdUrl: data.mdUrl}
       setStatusMessage('Export failed');    }
 
     }
-
 
   }
   async function handleSubmitBridge() {setStatusMessage('Submitting via bridge (email/IPFS/signature)...')try {const res = await fetch('/api/proposals/submit', {method: 'POST',}

@@ -246,8 +246,6 @@ const socialLinks = [
   ];
   return (
 
-
-
 "
     <footer className=\"bg-gray-900 text-white\" />"
       <div className=\"container mx-auto px-4 py-12\" />"
@@ -590,7 +588,7 @@ const Footer = () => ;
   href: '/accessibility'}
 }
     ];
-  }ursor/automate-test-improve-and-merge-code-646c;
+  };
 
 const socialLinks = [
   { name: 'Facebook'}
@@ -771,7 +769,7 @@ const Footer: React.FC = () => ;"
               <div className=\"flex items-center\" />;"
                 <Mail className=\"w-4 h-4 mr-2\" />;"
                 <span className=\"text-gray-300\" />kleber@ziontechgroup.com</span>;
-ursor/automate-test-improve-and-merge-code-646c;
+;
               </div>;
             </div>;
           </div>;
@@ -792,7 +790,7 @@ ursor/automate-test-improve-and-merge-code-646c;
               <Link href=\"/cookies\" className=\"text-gray-400 hover:text-blue-400 text-sm transition-colors\" />;
                 Cookie Policy;
               </Link>;
-ursor/automate-test-improve-and-merge-code-646c;
+;
         {/* Bottom Bar */}"
         <div className=\"border-t border-gray-800 mt-8 pt-8\" />;"
           <div className=\"flex flex-col md:flex-row justify-between items-center text-sm text-gray-400\" />;
@@ -814,7 +812,7 @@ ursor/automate-test-improve-and-merge-code-646c;
 
 export default Footer;
 
-export default Footer;ursor/automate-test-improve-and-merge-code-646c;
+export default Footer;;
     </footer>);
 ;
 }
@@ -1318,7 +1316,6 @@ const Footer: React.FC = () => {
     </footer>
   )
 };
-
 
 export default Footer;
 "

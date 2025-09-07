@@ -1,6 +1,5 @@
 
 
-
 import React from 'react';
 import { motion   } from 'framer-motion';
 import Link from 'next/link';
@@ -122,7 +121,6 @@ const contact_info = {
   email: 'kleber@ziontechgroup.com'}
     address: '364 E Main St STE 1008 Middletown DE 19709'}
 };
-
 
 const container_variants = {}
     hidden: { opacity: 0}
@@ -282,7 +280,6 @@ href='/contact'
               Get Started Today;
             </Link>
           </motion.div>
-
 
             className=\"flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6\">
 

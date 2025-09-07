@@ -5,9 +5,7 @@ const SEOHead = dynamic(() => import(\"./SEOHead\"),{'; loading: () => <p />Load
 </p>'
 </p>'
 
-
 </p>'
-
 
 </p>'
 

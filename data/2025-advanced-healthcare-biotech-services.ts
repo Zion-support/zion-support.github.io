@@ -1483,10 +1483,7 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
     reviews: 19;
 ];
 
-
   }
-
-
 
 export interface AdvancedHealthcareBiotechService {;
   id: string,;

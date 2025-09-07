@@ -268,8 +268,6 @@ const data = null;
   res.status (200).json (data);
 }
 
-
-
 }
 
 }
