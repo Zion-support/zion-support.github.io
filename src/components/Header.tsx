@@ -220,7 +220,7 @@ export function Header() {
             transition={{ duration: 0.3 }}
             className="lg:hidden bg-background/95 backdrop-blur-md border-t border-white/10"
           >
-            <div className="px-4 py-6 space-y-4">
+            <div className="px-4 py-6 space-y-6">
               {navigation.map((item) => (
                 <div key={item.name}>
                   {item.children ? (
@@ -238,6 +238,7 @@ export function Header() {
                           activeDropdown === item.name ? 'rotate-180' : ''
                         }`} />
                       </button>
+                      
                       {activeDropdown === item.name && (
                         <motion.div
                           initial={{ opacity: 0, y: -10 }}
