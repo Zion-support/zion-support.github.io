@@ -46,8 +46,6 @@ export default function SolutionsPage() {
       icon: '📊',
       features: ['Data pipelines', 'Real-time analytics', 'Custom dashboards', 'Machine learning insights']
     }
-  ];
-
   ]
   return (
     <div className="min-h-screen bg-white">

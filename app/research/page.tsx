@@ -82,6 +82,72 @@ const researchStats = [
 ];
 
 export default function ResearchPage() {
+  const researchAreas = [
+    {
+      title: 'Artificial Intelligence',
+      description: 'Advanced AI algorithms and machine learning models for enterprise applications',
+      icon: '🤖',
+      metrics: [
+        { metric: 'AI Models Deployed', value: '50+', description: 'Production-ready AI solutions' },
+        { metric: 'Accuracy Rate', value: '99.2%', description: 'Average model performance' },
+        { metric: 'Processing Speed', value: '10x', description: 'Faster than traditional methods' }
+      ]
+    },
+    {
+      title: 'Machine Learning',
+      description: 'Cutting-edge ML techniques for predictive analytics and automation',
+      icon: '🧠',
+      metrics: [
+        { metric: 'Data Points Processed', value: '1B+', description: 'Daily data processing capacity' },
+        { metric: 'Prediction Accuracy', value: '98.5%', description: 'Average prediction accuracy' },
+        { metric: 'Model Training Time', value: '50%', description: 'Reduced training time' }
+      ]
+    },
+    {
+      title: 'Blockchain Technology',
+      description: 'Decentralized solutions and smart contract development',
+      icon: '⛓️',
+      metrics: [
+        { metric: 'Transactions/sec', value: '10K+', description: 'High-throughput processing' },
+        { metric: 'Security Score', value: '100%', description: 'Zero security breaches' },
+        { metric: 'Energy Efficiency', value: '75%', description: 'Reduced energy consumption' }
+      ]
+    },
+    {
+      title: 'Cloud Computing',
+      description: 'Scalable cloud infrastructure and microservices architecture',
+      icon: '☁️',
+      metrics: [
+        { metric: 'Uptime', value: '99.9%', description: 'Service availability' },
+        { metric: 'Scalability', value: '100x', description: 'Auto-scaling capability' },
+        { metric: 'Cost Reduction', value: '40%', description: 'Infrastructure cost savings' }
+      ]
+    }
+  ];
+  
+  const publications = [
+    {
+      title: 'Advanced Neural Networks for Enterprise Applications',
+      authors: 'Zion Tech Research Team',
+      journal: 'Journal of AI Engineering',
+      year: '2024',
+      impact: 'High'
+    },
+    {
+      title: 'Scalable Microservices Architecture Patterns',
+      authors: 'Zion Tech Research Team',
+      journal: 'IEEE Software',
+      year: '2024',
+      impact: 'Medium'
+    },
+    {
+      title: 'Blockchain Security in Enterprise Environments',
+      authors: 'Zion Tech Research Team',
+      journal: 'Computer Security Review',
+      year: '2023',
+      impact: 'High'
+    }
+  ]
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}

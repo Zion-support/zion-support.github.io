@@ -56,8 +56,8 @@ export default function ContactPage() {
               <h2 className="text-3xl font-bold text-gray-900 mb-8">Send us a Message</h2>
               
               {submitStatus === 'success' && (
-                <div className="mb-6 p-4 bg-green-100 border border-green-400 text-green-700 rounded-lg">
-                  Thank you for your message! We'll get back to you within 24 hours.
+                <div className="text-green-400 text-center">
+                  Message sent successfully! We&apos;ll get back to you soon.
                 </div>
               )}
 
