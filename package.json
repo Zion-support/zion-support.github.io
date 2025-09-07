@@ -27,7 +27,9 @@
     "security:audit": "npm audit",
     "perf:monitor": "node scripts/performance-monitor.js",
     "automation:seo": "node scripts/seo-optimizer.js",
-    "automation:health": "node scripts/health-checker.js"
+    "automation:health": "node scripts/health-checker.js",
+    "build:optimized": "next build && next export",
+    "build:analyze": "ANALYZE=true next build"
   },
   "pm2": {
     "ecosystem": "ecosystem.maintenance.cjs"
@@ -148,5 +150,10 @@
     "zion-tech-group"
   ],
   "author": "Zion Tech Group",
-  "license": "MIT"
+  "license": "MIT",
+  "nextConfig": {
+    "compress": true,
+    "poweredByHeader": false,
+    "generateEtags": false
+  }
 }
