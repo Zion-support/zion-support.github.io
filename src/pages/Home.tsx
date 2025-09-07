@@ -84,8 +84,8 @@ const itemVariants = {
 // Enhanced service categories with better descriptions
 const serviceCategories = [
   {
-    name: "AI Solutions",
-    description: "Cutting-edge artificial intelligence services for business transformation",
+    name: "AI & Analytics",
+    description: "Cutting-edge artificial intelligence and data analytics solutions",
     icon: "🤖",
     href: "/ai-solutions",
     count: 15,
