@@ -16,81 +16,11 @@ console.log ('🔧 Starting Merge Conflict Resolution'),
 function fixMergeConflicts() {
 >>>>>>> origin/chore/fix-lint-and-merge
   try {
-
-    let content = fs.readFileSync (file_path, 'utf8'),
-    const original_content = content,
-    // Remove merge conflict markers and keep HEAD version;
-    content = content.replace (/[\s\S]*?;
-    content = content.replace (/;
-    // Check condition
-if ( {) {
-  $2
-}
-
-const fs = require ('fs'),
-const path = require ('path'),
-console.log ('🔧 Starting Merge Conflict Resolution'),
-// Function to fix merge conflicts in a file;
-/**
- * fixMergeConflicts - Function description
- */
-function fixMergeConflicts() {
-  try {
-
-    content = content.replace(/
-const fs = require('fs'),;
-const path = require('path'),;
-const fs = require('fs');
-const path = require('path');
-
-      fs.writeFileSync (file_path, content, 'utf8'),
-      console.log (`✅ Fixed merge conflicts in: ${path.relative (process.cwd (), file_path)}`),
-
-console.log('🔧 Starting Merge Conflict Resolution'),;
-// Function to fix merge conflicts in a file;
-function fixMergeConflicts(filePath) {;
-  try {;
-    let content = fs.readFileSync(filePath, 'utf8'),;
-
-    if (content !== originalContent) {;
-      fs.writeFileSync(filePath, content, 'utf8'),;
-      console.log(`✅ Fixed merge conflicts in: ${path.relative(process.cwd(), filePath)}`),;
-
-      return true;
-    }
-    return false;
-  } catch (error) {
-    console.log (`❌ Error fixing ${file_path}: ${error.message}`),
-
-    // Remove merge conflict markers and keep HEAD version;
-    const originalContent = content;
-    // Remove merge conflict markers and keep HEAD version;
-    content = content.replace(/[\s\S]*?[\s\S]*?[a-f0-9]+/g, ''),;
-    content = content.replace(/[\s\S]*?[a-f0-9]+/g, ''),;
-
-    const originalContent = content;
-    // Remove merge conflict markers and keep HEAD version;
-    if (content !== originalContent) {;
-      fs.writeFileSync(filePath, content, 'utf8'),;
-      console.log(`✅ Fixed merge conflicts in: ${path.relative(process.cwd(), filePath)}`),;
-      return true;
-    }
-    return false;
-  } catch (error) {;
-    console.log(`❌ Error fixing ${filePath}: ${error.message}`),;
-
-const fs = require('fs');
-const path = require('path');
-console.log('🔧 Starting Merge Conflict Resolution'),;
-// Function to fix merge conflicts in a file;
-function fixMergeConflicts(filePath) {;
-  try {;
-    let content = fs.readFileSync(filePath, 'utf8'),;
-    // Remove merge conflict markers and keep HEAD version;
-    const originalContent = content;
-    
-    // Remove merge conflict markers and keep HEAD version
-
+    let content = fs.readFileSync($2);
+    const originalContent = $2;
+    // Remove merge conflict markers and keep HEAD version,
+  content = content.replace($2);
+    content = content.replace($2);
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content, 'utf8');
       console.log(`✅ Fixed merge conflicts in: ${path.relative(process.cwd(), filePath)}`);
@@ -123,17 +53,8 @@ function fixMergeConflicts(filePath) {;
   }
   return files
 }
-async function main() {console.log(🔍 Scanning for merge conflicts...)const files = getAllFiles(process.cwd(), ['.tsx.ts.jsx.js', .json.md])let fixedCount = 0;
-  for (const file of files) {try {const content = fs.readFileSync(file, 'utf8')if (content.includes() |content.includes(';
-      } else if (extensions.some(ext => item.endsWith(ext))) {}
-    } catch (error) {// Skip files that can't be read;
-    }
-  }
-}let fixedCount = 0;
-  for (const file of files) {try {const content = fs.readFileSync(file, utf8),if (fixMergeConflicts(file)) {if (content.includes('        if (fixMergeConflicts(file)) {fixedCount++;
-
-// Main execution
-async function main() {
+// Main execution,
+  async function main() {
   console.log($2);
   const files = getAllFiles(process.cwd(), ['.tsx.ts.jsx.js.json.md]),
   let fixedCount = $2;
@@ -206,29 +127,7 @@ function main() {
 >>>>>>> origin/chore/fix-lint-and-merge
   for (const file of files) {
     try {
-      const content = fs.readFileSync (file, 'utf8'),
-      // Check condition
-if (|| content.includes (') {
-  $2
-}
-
-      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-        files = files.concat(getAllFiles(fullPath, extensions));
-      } else if (extensions.some(ext => item.endsWith(ext))) {
-        files.push(fullPath);
-  } catch (error) {
-    // Skip directories that can't be read;
-  return files;
-
-// Main execution;
-
-async function main() {;
-
-  console.log('🔍 Scanning for merge conflicts...');
-  const files = getAllFiles(process.cwd(), ['.tsx.ts.jsx.js', '.json.md']);
-  let fixedCount = 0;
-<<<<<<< HEAD
-
+      const content = fs.readFileSync($2);
         if (fixMergeConflicts(file)) {
           fixedCount++;
 
@@ -237,64 +136,4 @@ async function main() {;
   console.log($2);
   console.log('🎉 Merge conflict resolution completed!')
 }
-
-main().catch(console.error);
 main().catch($2);
-=======
-  for (const file of files) {;
-      const content = fs.readFileSync(file, 'utf8');
-      if (content.includes('') || content.includes('') || content.includes('>>>>>>>')) {;
-      if (content.includes() |content.includes()
-      } else if (extensions.some(ext => item.endsWith(ext))) {;
-    } catch (error) {;
-      // Skip files that can't be read;
-
-        if (fixMergeConflicts(file)) {;
-          fixedCount++;        }
-  let fixedCount = 0,;
-
-      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {;
-        files = files.concat(getAllFiles(fullPath, extensions));
-
-      } else if (extensions.some(ext => item.endsWith(ext))) {;
-      }
-    } catch (error) {;
-      // Skip files that can't be read;
-    }
-  }
-}
-;
-
-  console.log('🔍 Scanning for merge conflicts...');
-  const files = getAllFiles(process.cwd(), ['.tsx.ts.jsx.js', '.json.md']);
-
-      const content = fs.readFileSync(file, 'utf8'),;
-      if (content.includes('') || content.includes('
-}
-}
-}
-
-  let fixedCount = 0;
-
-}
-;  let fixedCount = 0;
-
-  let fixedCount = 0;
-
-  for (const file of files) {;
-    try {;'
-      const content = fs.readFileSync(file, 'utf8'),;
-        if (fixMergeConflicts(file)) {;
-
-          fixedCount++;
-        }
-      }
-    } catch (error) {'
-      // Skip files that can't be read;
-    }
-  }
-  
-  console.log(`✅ Fixed merge conflicts in ${fixedCount} files`);'
-  console.log('🎉 Merge conflict resolution completed!');
-}
->>>>>>> origin/chore/fix-lint-and-merge

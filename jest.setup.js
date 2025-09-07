@@ -11,19 +11,6 @@ jest.mock("next/router", () => ({
       pathname: "/",
       query: {},"
       asPath: "/",
-
-// Jest setup file
-
-// Mock Next.js router
-jest.mock('next/router', () => ({
-  useRouter() {
-    return {
-      route: '/';,
-      pathname: '/';,
-      query: {;},
-      asPath: '/';,
-origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
-
       push: jest.fn(),
       pop: jest.fn(),
       reload: jest.fn(),
@@ -36,7 +23,6 @@ origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
       events: {}
         on: jest.fn(),
         off: jest.fn(),
-<<<<<<< HEAD
         emit: jest.fn()
 =======
         emit: jest.fn(),
@@ -54,6 +40,13 @@ jest.mock('next/image', () => ({
     return <img {...props} />;
   }
 }));
+
+// Mock Next.js Image component
+jest.mock("next/image", () => {
+  return function MockImage({ src, alt, ...props }) {
+    return <img src={src} alt={alt} {...props} />;
+  };
+});
 
 // Mock Next.js Link component
 jest.mock('next/link', () => ({
@@ -151,17 +144,3 @@ import '@testing-library/jest-dom'; global.IntersectionObserver = class Intersec
 beforeEach(() => {
   jest.clearAllMocks();
 });
-<<<<<<< HEAD
-=======
-
-});
-main
-// Mock Next.js Image component
-jest.mock('next/image', () => ({
-  __esModule: true;,
-  default: (props) => {
-    return <img {...props} />;
-  },
-}));
-origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
->>>>>>> origin/chore/fix-lint-and-merge

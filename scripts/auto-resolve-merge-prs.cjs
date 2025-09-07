@@ -27,86 +27,15 @@ const fs = require(fs');
 function sh(cmd, opts = {}) {}
 <<<<<<< HEAD
   return execSync(cmd, { "stdio": 'pipe', "encoding": 'utf8', ...opts }).trim()};
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
-
-
-
-
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-f954
-=======
-  return execSync(cmd, { "stdio: 'pipe, encoding": utf8', ...opts }).trim()}
-
-
->>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
-=======
-=======
-
-
-
-
-
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> origin/chore/fix-lint-and-merge
 function getRepoFromGit() {}
   const remoteUrl = sh('git remote get-url origin);
   const m = remoteUrl.match(/github\.com[:/](.+?)\/(.+?)(?:\.git)?$/);
   if (!m) throw new Error(Unable to parse owner/repo from origin');
   return { "owner: m[1], repo": m[2] }}"
 function getToken() {}
-<<<<<<< HEAD
-<<<<<<< HEAD
   if (process.env.GITHUB_TOKEN && process.env.GITHUB_TOKEN.trim()) return process.env.GITHUB_TOKEN.trim();"
-=======
-  if (process.env.GITHUB_TOKEN && process.env.GITHUB_TOKEN.trim()) return process.env.GITHUB_TOKEN.trim();
-<<<<<<< HEAD
-  const remoteUrl = sh('git remote get-url origin');
-  const tokenMatch = remoteUrl.match(/^"https": \/\/x-access-token:([^@]+)@github\.com\//);
-  if (!tokenMatch) throw new Error('No GitHub token available');
-  return tokenMatch[1]};
-async function gh(path, method = 'GET', body) {}
-  const token = getToken();
-  const base = '"https": //api.github.com';
-const res = await fetch(`${base}${path}`, {`});
-    method,
-    "headers": {}
-      Authorization: `token ${token}`,`
-      "Accept": 'application/vnd.github.v3+json',
-      'User-Agent': 'auto-resolve-merge-prs',
-      'Content-Type': 'application/json'
->>>>>>> bcac19d12791e22762b61b5dda2306d7f19fe60c
-=======
-  if (process.env.GITHUB_TOKEN && process.env.GITHUB_TOKEN.trim()) return process.env.GITHUB_TOKEN.trim();"
-
->>>>>>> origin/chore/fix-lint-and-merge
     },
     "body": body ? JSON.stringify(body) : undefined;"
-<<<<<<< HEAD
-=======
-
-    },
-    body": body ? JSON.stringify(body) : undefined;"
->>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
-  }
-});
-  const text = await res.text();
-
-  return data}
-async function listOpenPRs(owner, repo) {}`;
-  const prs = await gh(`/repos/${owner}/${repo}/pulls?state=open&per_page=100`);
-  return prs}
-function resolveConflictsFiles() {}
-<<<<<<< HEAD
-
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-=======
 })
   const text = await res.text();"
   return data}
@@ -114,7 +43,6 @@ async function listOpenPRs(owner, repo) {}`
   const prs = await gh(`/repos/${owner}/${repo}/pulls?state=open&per_page=100`)
   return prs}
 function resolveConflictsFiles() {}
->>>>>>> cursor/integrate-build-improve-and-re-verify-f954
   // list conflicted files;
   const output = sh('git diff --name-only --diff-filter=U || true);
   const files = output.split(\n').filter(Boolean);
