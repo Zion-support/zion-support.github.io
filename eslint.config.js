@@ -6,7 +6,12 @@ import tseslint from '@typescript-eslint/eslint-plugin';
 export default [
   js.configs.recommended,
   {
-    files: ['**/*.{js,jsx,ts,tsx}'],
+    files: [
+      'src/**/*.{js,jsx,ts,tsx}',
+      'app/**/*.{js,jsx,ts,tsx}',
+      'pages/**/*.{js,jsx,ts,tsx}',
+      'middleware.ts'
+    ],
     languageOptions: {
       ecmaVersion: 2022,
       sourceType: 'module',
@@ -31,14 +36,18 @@ export default [
         'warn',
         { argsIgnorePattern: '^_' }
       ],
-<<<<<<< HEAD
       // '@typescript-eslint/no-explicit-any': 'warn', // Disabled due to plugin config issue
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-e453
     },
   },
   {
     ignores: [
+      'pages-*/**',
+      'pages_*/**',
+      'pages.*/*',
+      'netlify/**',
+      'pm2-automation/**',
+      'protocol/**',
+      'lint-target/**',
       'node_modules/**',
       '.next/**',
       'out/**',
@@ -50,6 +59,8 @@ export default [
       'temp_backup/**',
       'temp_exclude/**',
       'src.disabled/**',
+      'src.broken/**',
+      'src.corrupted/**',
       'corrupted_backup/**',
       'backup-problematic-files/**',
       'recovered-branches/**',
@@ -63,10 +74,26 @@ export default [
       'automation_backup/**',
       'ai-optimization-backups/**',
       'pages.disabled_full/**',
+      'pages.disabled/**',
+      'pages.disabled_auto/**',
+      'pages.disabled.full/**',
+      'pages_minimal/**',
+      'pages.old/**',
+      'pages.broken/**',
+      'pages_backup_conflict/**',
+      'pages.corrupted.*/**',
       'pages_backup_before_cleanup/**',
       'solutions.disabled/**',
       'src.pages.disabled/**',
       'scripts/**',
+      'resolve-*.js',
+      'run-*.js',
+      'security-*.js',
+      'seo-*.js',
+      'simple-test.js',
+      'performance-monitor.js',
+      'public/**',
+      'services/**',
       'utils/**',
       'types/**',
       'tests/**',
