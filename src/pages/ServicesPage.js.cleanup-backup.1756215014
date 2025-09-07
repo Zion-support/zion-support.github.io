@@ -13,7 +13,8 @@ const SERVICE_LISTINGS = [
         category: "AI & ML",
         price: 29,
         currency: "$",
-        tags: ["AI Content", "Text Generation", "Code Generation", "Creative Writing"],
+
+                  tags: ["AI Content", "Text Generation", "Code Generation", "Creative Writing"],
         author: {
             name: "Zion AI Labs",
             id: "zion-ai-labs",
