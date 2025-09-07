@@ -49,7 +49,7 @@ export default function ContactPage() {
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Ready to transform your business with cutting-edge AI, Micro SaaS, and IT solutions? 
-            Let's discuss how we can help you achieve your goals.
+            Let&apos;s discuss how we can help you achieve your goals.
           </p>
         </div>
 
@@ -61,7 +61,7 @@ export default function ContactPage() {
             {submitStatus === 'success' && (
               <div className="mb-6 p-4 bg-green-500/20 border border-green-500/50 rounded-lg flex items-center">
                 <CheckCircleIcon className="h-5 w-5 text-green-400 mr-3" />
-                <span className="text-green-300">Message sent successfully! We'll get back to you soon.</span>
+                <span className="text-green-300">Message sent successfully! We&apos;ll get back to you soon.</span>
               </div>
             )}
 
@@ -183,7 +183,7 @@ export default function ContactPage() {
                   <div>
                     <h3 className="text-lg font-semibold text-white mb-1">Email</h3>
                     <p className="text-gray-300">kleber@ziontechgroup.com</p>
-                    <p className="text-sm text-gray-400">We'll respond within 24 hours</p>
+                    <p className="text-sm text-gray-400">We&apos;ll respond within 24 hours</p>
                   </div>
                 </div>
 
@@ -242,7 +242,7 @@ export default function ContactPage() {
             Ready to Transform Your Business?
           </h2>
           <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-            Let's discuss how Zion Tech Group can help you achieve your goals.
+            Let&apos;s discuss how Zion Tech Group can help you achieve your goals.
           </p>
           <Link
             href="/services"

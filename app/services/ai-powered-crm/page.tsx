@@ -72,40 +72,6 @@ function PricingTier({
   );
 }
 
-function TestimonialCard({ 
-  quote, 
-  author, 
-  company, 
-  industry, 
-  metrics 
-}: { 
-  quote: string; 
-  author: string; 
-  company: string; 
-  industry: string; 
-  metrics: string[]; 
-}) {
-  return (
-    <div className="p-6 bg-white/10 backdrop-blur-sm rounded-lg border border-white/20">
-      <div className="flex items-center justify-between mb-4">
-        <h3 className="text-xl font-semibold text-white">{company}</h3>
-        <span className="text-sm bg-blue-100 text-blue-800 px-2 py-1 rounded">{industry}</span>
-      </div>
-      <blockquote className="text-gray-300 mb-4 italic">"{quote}"</blockquote>
-      <div className="flex items-center justify-between">
-        <div>
-          <p className="font-semibold text-white">{author}</p>
-          <p className="text-sm text-gray-400">{company}</p>
-        </div>
-        <div className="text-right">
-          {metrics.map((metric, index) => (
-            <p key={index} className="text-sm text-blue-400 font-semibold">{metric}</p>
-          ))}
-        </div>
-      </div>
-    </div>
-  );
-}
 
 export default function AIPoweredCRMPage() {
   return (

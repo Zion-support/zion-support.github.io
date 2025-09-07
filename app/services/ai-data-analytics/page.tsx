@@ -148,7 +148,7 @@ export default function AIDataAnalyticsPage() {
         </div>
 
         <div className="text-center">
-          <h2 className="text-3xl font-bold text-white mb-8">Ready to Unlock Your Data's Potential?</h2>
+          <h2 className="text-3xl font-bold text-white mb-8">Ready to Unlock Your Data&apos;s Potential?</h2>
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
             Join leading companies who trust our AI Data Analytics platform to make data-driven decisions and drive business growth.
           </p>

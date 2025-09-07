@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import Link from "next/link";
 
 export const metadata: Metadata = {
   title: 'Data Analytics Solutions - Advanced Analytics & BI | Zion Tech Group',

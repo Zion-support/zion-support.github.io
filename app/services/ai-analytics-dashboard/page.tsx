@@ -194,7 +194,7 @@ export default function ServicePage() {
         {/* CTA Section */}
         <div className="text-center">
           <h2 className="text-3xl font-bold text-white mb-6">
-            Ready to Unlock Your Data's Potential?
+            Ready to Unlock Your Data&apos;s Potential?
           </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Join 200+ companies using our AI analytics platform to make data-driven decisions. 
