@@ -1,14 +1,10 @@
-<<<<<<< HEAD
 import React from 'react';
-=======
 import Link from 'next/link';
-import { ArrowRightIcon } from '@heroicons/react/24/outline';
 
 export const metadata = {
   title: 'Solutions - Zion Tech Group',
   description: 'Comprehensive technology solutions for businesses of all sizes.',
 };
->>>>>>> d886c61d6064773a1db6057f2a6c4edcabf807d6
 
 export default function SolutionsPage() {
   const solutions = [
@@ -51,55 +47,6 @@ export default function SolutionsPage() {
   ];
 
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-white">
-      <main className="container mx-auto px-4 py-8">
-        <h1 className="text-4xl font-bold text-gray-900 mb-8">
-          Our Solutions
-        </h1>
-        <p className="text-lg text-gray-600 mb-8">
-          Comprehensive technology solutions designed to meet your business needs.
-        </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <div className="bg-gray-50 p-6 rounded-lg">
-            <h2 className="text-xl font-semibold mb-4">AI & Machine Learning</h2>
-            <p className="text-gray-600 mb-4">
-              Advanced AI solutions including chatbots, predictive analytics, and automation tools.
-            </p>
-            <ul className="text-sm text-gray-500 space-y-1">
-              <li>• Natural Language Processing</li>
-              <li>• Computer Vision</li>
-              <li>• Predictive Analytics</li>
-              <li>• AI Automation</li>
-            </ul>
-          </div>
-          <div className="bg-gray-50 p-6 rounded-lg">
-            <h2 className="text-xl font-semibold mb-4">Micro SaaS Development</h2>
-            <p className="text-gray-600 mb-4">
-              Scalable micro SaaS applications built with modern technologies.
-            </p>
-            <ul className="text-sm text-gray-500 space-y-1">
-              <li>• Web Applications</li>
-              <li>• Mobile Apps</li>
-              <li>• API Development</li>
-              <li>• Cloud Integration</li>
-            </ul>
-          </div>
-          <div className="bg-gray-50 p-6 rounded-lg">
-            <h2 className="text-xl font-semibold mb-4">Enterprise IT Services</h2>
-            <p className="text-gray-600 mb-4">
-              Complete IT infrastructure and support services for enterprises.
-            </p>
-            <ul className="text-sm text-gray-500 space-y-1">
-              <li>• Cloud Migration</li>
-              <li>• DevOps & SRE</li>
-              <li>• Cybersecurity</li>
-              <li>• System Administration</li>
-            </ul>
-          </div>
-        </div>
-      </main>
-=======
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
       <div className="container mx-auto px-4 py-20">
         <div className="text-center mb-16">
@@ -211,7 +158,9 @@ export default function SolutionsPage() {
                 className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-flex items-center"
               >
                 Get Started
-                <ArrowRightIcon className="h-5 w-5 ml-2" />
+                <svg className="h-5 w-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
               </Link>
               <Link
                 href="/services"
@@ -223,7 +172,6 @@ export default function SolutionsPage() {
           </div>
         </div>
       </div>
->>>>>>> d886c61d6064773a1db6057f2a6c4edcabf807d6
     </div>
   );
 }

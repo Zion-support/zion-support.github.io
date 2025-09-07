@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 import React from 'react';
-=======
->>>>>>> d886c61d6064773a1db6057f2a6c4edcabf807d6
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
@@ -9,7 +6,6 @@ import './globals.css';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-<<<<<<< HEAD
   title: {
     default: 'Zion Tech Group - AI, Micro SaaS & Enterprise IT Solutions',
     template: '%s | Zion Tech Group'
@@ -51,8 +47,6 @@ export const metadata: Metadata = {
     images: ['/og-image.jpg'],
     creator: '@ziontechgroup',
   },
-=======
->>>>>>> d886c61d6064773a1db6057f2a6c4edcabf807d6
   robots: {
     index: true,
     follow: true,
@@ -72,11 +66,6 @@ export const metadata: Metadata = {
   referrer: 'origin-when-cross-origin',
   colorScheme: 'light',
   themeColor: '#000000',
-<<<<<<< HEAD
-=======
-  title: 'Zion Tech Group - AI, Micro SaaS & Enterprise IT Solutions',
-  description: 'Leading provider of AI solutions, micro SaaS development, and enterprise IT services.'
->>>>>>> d886c61d6064773a1db6057f2a6c4edcabf807d6
 };
 
 export default function RootLayout({
@@ -86,11 +75,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-<<<<<<< HEAD
       <body className={inter.className}>
-=======
-      <body>
->>>>>>> d886c61d6064773a1db6057f2a6c4edcabf807d6
         <div className="min-h-screen bg-white">
           {children}
         </div>

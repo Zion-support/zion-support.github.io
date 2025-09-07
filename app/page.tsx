@@ -1,52 +1,5 @@
-<<<<<<< HEAD
 import React from 'react';
-=======
-
 import Link from 'next/link';
-
-interface CardProps {
-  title: string;
-  href: string;
-  description: string;
-  bullets?: string[];
-  icon?: string;
-}
-
-function ServiceCard({
-  title,
-  href,
-  description,
-  bullets = [],
-  icon,
-}: CardProps) {
-  return (
-    <Link
-      href={href}
-      className="group block p-6 bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 border border-gray-200 hover:border-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transform hover:-translate-y-2 hover:scale-105"
-      aria-label={`Learn more about ${title} services`}
-    >
-      <div className="flex items-center mb-4">
-        {icon && <span className="text-3xl mr-4 group-hover:scale-110 transition-transform duration-300" aria-hidden="true">{icon}</span>}
-        <h3 className="text-xl font-semibold text-gray-900 group-hover:text-blue-600 transition-colors duration-300">{title}</h3>
-      </div>
-      <p className="text-gray-600 leading-relaxed mb-4 group-hover:text-gray-700 transition-colors duration-300">{description}</p>
-      {bullets.length > 0 && (
-        <ul className="space-y-2" role="list">
-          {bullets.map((bullet, index) => (
-            <li key={index} className="text-sm text-gray-600 flex items-center group-hover:text-gray-700 transition-colors duration-300">
-              <span className="w-2 h-2 bg-blue-500 rounded-full mr-3 flex-shrink-0 group-hover:bg-blue-600 transition-colors duration-300" aria-hidden="true"></span>
-              {bullet}
-            </li>
-          ))}
-        </ul>
-      )}
-      <div className="mt-4 text-blue-600 font-medium text-sm group-hover:text-blue-700 transition-colors duration-300">
-        Learn more →
-      </div>
-    </Link>
-  );
-}
->>>>>>> d886c61d6064773a1db6057f2a6c4edcabf807d6
 
 export default function HomePage() {
   return (
@@ -78,10 +31,7 @@ export default function HomePage() {
             </p>
           </div>
         </div>
-<<<<<<< HEAD
       </main>
-=======
-      </section>
 
       {/* CTA Section */}
       <section className="text-center py-20 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-700 rounded-lg relative overflow-hidden" role="complementary" aria-labelledby="cta-heading">
@@ -119,7 +69,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
->>>>>>> d886c61d6064773a1db6057f2a6c4edcabf807d6
     </div>
   );
 }
