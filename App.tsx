@@ -12,6 +12,7 @@ import ScrollToTop from './src/components/ScrollToTop';
 import ParticleBackground from './src/components/ParticleBackground';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function App() {
   const services = [
     {
@@ -85,10 +86,50 @@ export default function App() {
       features: ['Process Automation', 'Workflow Optimization', 'Digital Strategy', 'Change Management'],
       pricing: 'Custom pricing',
       link: '/services/digital-transformation'
+=======
+export default function App(): React.JSX.Element {
+  const services = [
+    {
+      title: 'AI Solutions',
+      description: 'Cutting-edge artificial intelligence solutions for your business needs. From machine learning to natural language processing.',
+      icon: '🤖',
+      features: ['Machine Learning', 'NLP', 'Computer Vision', 'Predictive Analytics'],
+    },
+    {
+      title: 'IT Services',
+      description: 'Comprehensive IT services and infrastructure management. Keep your systems running smoothly and securely.',
+      icon: '💻',
+      features: ['System Administration', 'Network Security', 'Cloud Migration', '24/7 Support'],
+    },
+    {
+      title: 'Cloud Solutions',
+      description: 'Scalable cloud infrastructure and migration services. Modernize your infrastructure with our cloud expertise.',
+      icon: '☁️',
+      features: ['AWS/Azure/GCP', 'DevOps', 'Containerization', 'Auto-scaling'],
+    },
+    {
+      title: 'Cybersecurity',
+      description: 'Advanced security solutions to protect your business from evolving threats and ensure compliance.',
+      icon: '🔒',
+      features: ['Threat Detection', 'Compliance', 'Penetration Testing', 'Security Audits'],
+    },
+    {
+      title: 'Data Analytics',
+      description: 'Transform your data into actionable insights with our advanced analytics and business intelligence solutions.',
+      icon: '📊',
+      features: ['Data Visualization', 'Business Intelligence', 'Real-time Analytics', 'Custom Dashboards'],
+    },
+    {
+      title: 'Digital Transformation',
+      description: 'Complete digital transformation services to modernize your business processes and improve efficiency.',
+      icon: '🚀',
+      features: ['Process Automation', 'Workflow Optimization', 'Digital Strategy', 'Change Management'],
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
     },
   ];
 
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
       <ParticleBackground />
       <Header />
@@ -167,5 +208,10 @@ export default function App(): React.JSX.Element {
       <h1>Hello App</h1>
     </main>
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
+=======
+    <main>
+      <h1>Hello App</h1>
+    </main>
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
   );
 }

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Link from 'next/link';
 import { ArrowRightIcon } from '@heroicons/react/24/outline';
 =======
@@ -8,12 +9,17 @@ import React from 'react';
 
 
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
+=======
+import Link from 'next/link';
+import { ArrowRightIcon } from '@heroicons/react/24/outline';
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
 
 export const metadata = {
   title: 'AI Email Optimizer - Zion Tech Group',
   description: 'AI-powered email optimization tool that analyzes, improves, and A/B tests your email campaigns for maximum engagement and conversion rates.',
 };
 
+<<<<<<< HEAD
 interface FeatureProps {
   title: string;
   description: string;
@@ -115,6 +121,10 @@ function PricingTier({
 export default function AIEmailOptimizerPage() {
   return (
 <<<<<<< HEAD
+=======
+export default function AIEmailOptimizerPage() {
+  return (
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
       <div className="container mx-auto px-4 py-20">
         <div className="text-center mb-16">
@@ -217,6 +227,7 @@ export default function AIEmailOptimizerPage() {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
 =======
     <div className="space-y-16">
       {/* Hero Section */}
@@ -465,6 +476,8 @@ export default function AIEmailOptimizerPage() {
         </div>
       </section>
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
+=======
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
     </div>
   );
 }

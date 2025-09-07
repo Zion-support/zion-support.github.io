@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
 
@@ -80,6 +81,8 @@ export default AccessibilityEnhancer;</div>;
   )}
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
 import React, { useEffect, useState } from 'react';
 
 interface AccessibilityEnhancerProps {
@@ -247,7 +250,6 @@ const toggleSetting = (setting: keyof AccessibilitySettings) => ;
   );
 };
 
->>>>>>> origin/chore/fix-automation-and-build
 export default AccessibilityEnhancer;
 export default AccessibilityEnhancer;
 ursor/automate-test-improve-and-merge-code-646c;

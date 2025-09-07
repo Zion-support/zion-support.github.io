@@ -1,11 +1,14 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
 <<<<<<< HEAD
+=======
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
 <<<<<<< HEAD
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -23,10 +26,14 @@ const nextConfig = {
 /** @type {import('next').NextConfig} */
 const nextConfig = {
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b
 =======
 >>>>>>> 470476d15542c973cf650505a68f6472f0b68c9f
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
+=======
+>>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
   reactStrictMode: true,
   eslint: {
     ignoreDuringBuilds: true
@@ -141,6 +148,9 @@ export default nextConfig;
 >>>>>>> 91fec3a61bf105731881304ea8d3824dd093e739
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
 >>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b
 =======
   images: {
@@ -169,7 +179,10 @@ export default nextConfig;
 
 module.exports = nextConfig;
 >>>>>>> origin/chore/fix-automation-and-build
+<<<<<<< HEAD
 =======
 >>>>>>> 470476d15542c973cf650505a68f6472f0b68c9f
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-2a0c
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
+=======
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0

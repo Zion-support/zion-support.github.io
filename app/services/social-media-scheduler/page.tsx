@@ -1,6 +1,9 @@
 import Link from 'next/link';
 import { ArrowRightIcon } from '@heroicons/react/24/outline';
+<<<<<<< HEAD
 
+=======
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
 
 export const metadata = {
   title: 'Social Media Scheduler - Zion Tech Group',
@@ -81,6 +84,7 @@ export default function SocialMediaSchedulerPage() {
               </Link>
             </div>
           </div>
+<<<<<<< HEAD
 =======
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -116,10 +120,13 @@ export default function SocialMediaSchedulerPage() {
 
 
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
+=======
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
         </div>
       </div>
     </div>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 =======
@@ -129,3 +136,6 @@ export default function SocialMediaSchedulerPage() {
 
 
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
+=======
+}
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0

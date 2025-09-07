@@ -1,6 +1,9 @@
 import Link from 'next/link';
 import { ArrowRightIcon } from '@heroicons/react/24/outline';
+<<<<<<< HEAD
 
+=======
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
 
 export const metadata = {
   title: 'Ai Fintech Solutions - Zion Tech Group',
@@ -119,6 +122,7 @@ export default function AiFintechSolutionsPage() {
     </div>
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 }
@@ -126,3 +130,6 @@ export default function AiFintechSolutionsPage() {
 
 
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
+=======
+}
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0

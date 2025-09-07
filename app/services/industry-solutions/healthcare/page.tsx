@@ -5,12 +5,15 @@ import { ArrowRightIcon } from '@heroicons/react/24/outline';
 export const metadata = {
   title: 'Healthcare Solutions - Zion Tech Group',
   description: 'Specialized technology solutions for the healthcare industry.',
+<<<<<<< HEAD
 =======
 
   title: 'Healthcare | Zion Tech Group',
   description: 'Professional healthcare services for your business needs.',
   keywords: 'healthcare, services, business, technology'
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
+=======
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
 };
 
 export default function HealthcareSolutionsPage() {
@@ -166,6 +169,7 @@ export default function HealthcareSolutionsPage() {
     </div>
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 }
@@ -173,3 +177,6 @@ export default function HealthcareSolutionsPage() {
 
 
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
+=======
+}
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Link from 'next/link';
 import { ArrowRightIcon } from '@heroicons/react/24/outline';
 
@@ -269,3 +270,11 @@ function CTA() {
     </div>
   );
 }
+=======
+
+export const metadata = {
+  title: "Data Analytics & BI | Zion Tech Group",
+  description: "Advanced data analytics, business intelligence, and machine learning solutions to transform raw data into actionable insights.",
+  keywords: 'data-analytics, services, business, technology'
+};
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0

@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
 
   "timestamp": "2025-09-06T08:36:47.152Z",
   "totalFilesProcessed": 2367,
@@ -2375,3 +2376,16 @@
   ],
   "errorList": []
 }
+=======
+  "timestamp": "2025-09-06T23:47:16.060Z",
+  "summary": {
+    "totalFiles": 0,
+    "resolved": 0,
+    "failed": 0,
+    "skipped": 0
+  },
+  "resolvedFiles": [],
+  "failedFiles": [],
+  "skippedFiles": []
+}
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0

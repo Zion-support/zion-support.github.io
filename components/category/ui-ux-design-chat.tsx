@@ -155,6 +155,7 @@ export default UiUxDesignChat
 
 
 
+<<<<<<< HEAD
 const UiUxDesignChat: NextPage = () => {
  ;
   return (
@@ -173,6 +174,8 @@ const UiUxDesignChat: NextPage = () => {
 }
 
 export default UiUxDesignChat;
+=======
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
 
         <title>UiUxDesignChat - Zion Tech Solutions</title>
         <title>UiUxDesignChat - Zion Tech Solutions</title>

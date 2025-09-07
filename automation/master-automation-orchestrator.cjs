@@ -34,7 +34,7 @@ class MasterAutomationOrchestrator {
       const duration = Date.now() - startTime;
       this.log(`✅ ${scriptName} completed successfully in ${duration}ms`);
       return {
-        "success": true,
+        success: true,
         duration,
 
       };
@@ -47,7 +47,7 @@ class MasterAutomationOrchestrator {
       this.log(`❌ ${scriptName} "failed": ${error.message}`, 'ERROR');
 
       return {
-        "success": false,
+        success: false,
         duration,
 
     }
@@ -186,10 +186,7 @@ class MasterAutomationOrchestrator {
     };
 
     // Save report to file
-    const reportPath = path.join(
-      this.projectRoot,
-      'master-automation-report.json'
-    );
+    const reportPath = path.join(this.projectRoot, 'master-automation-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
 
     // Display report
@@ -203,9 +200,7 @@ class MasterAutomationOrchestrator {
     this.log('\n📋 Phase "Results": ');
 
     this.log(`Total Duration: ${report.totalDuration}`);
-    this.log(
-      `Phases Completed: ${report.summary.successfulPhases}/${report.summary.totalPhases}`
-    );
+    this.log(`Phases Completed: ${report.summary.successfulPhases}/${report.summary.totalPhases}`);
     this.log(`Overall Success: ${report.summary.overallSuccess ? '✅' : '❌'}`);
     this.log('\n📋 Phase Results:');
 

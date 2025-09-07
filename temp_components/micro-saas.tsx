@@ -6765,9 +6765,6 @@ function MicroSaasPage() {const [selected_category, setSelectedCategory]  = useS
             </div>;
           </div>;
 
-          </div>;
-        </div>;
-      </section>;
 
       {/* Competitive Advantages */}
       <section className="py-20 bg-gray-800">;
@@ -6786,8 +6783,6 @@ function MicroSaasPage() {const [selected_category, setSelectedCategory]  = useS
             {competitiveAdvantages && competitiveAdvantages.map((advantage, index) => (<Card;
           </div>;
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
-            {competitiveAdvantages && competitiveAdvantages.map((advantage, index) => (;
 
               <Card
                 key={index}
@@ -6891,9 +6886,6 @@ function MicroSaasPage() {const [selected_category, setSelectedCategory]  = useS
                   <div className={`w - 20 h - 20 rounded - 2xl flex items - center justify - center text - 4xl bg - gradient - to - br ${service.color}`}>;
                     {service.icon}
 
-          </div>;
-        </div>;
-      </section>;
 
       {/* Detailed Services */}
       <section className="py-20 bg-gray-900">;
@@ -6981,9 +6973,6 @@ function MicroSaasPage() {const [selected_category, setSelectedCategory]  = useS
                 </div>;{/* Market Data */}
                       ))}
 
-                    </div>;
-                  </div>;
-                </div>;
 
                 {/* Market Data */}
                 <div className="mt-8 bg-blue-900/20 border border-blue-500/20 rounded-lg p-6">;

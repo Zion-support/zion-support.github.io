@@ -397,7 +397,6 @@ export default function ModerationModal() {flag,onClose,onAction;
     </div>);
 }
 
-  );
 
 
   );

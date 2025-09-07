@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Link from 'next/link';
 import { ArrowRightIcon } from '@heroicons/react/24/outline';
 =======
@@ -91,6 +92,44 @@ export default function ItServicesPage() {
   );
 =======
 
+=======
+
+export const metadata = {
+  title: "IT Services | Zion Tech Group",
+  description: "Comprehensive IT services including cloud migration, DevOps, cybersecurity, and infrastructure management for enterprise-scale solutions.",
+};
+
+function FeatureItem({ icon, title, description, benefits }: { icon: string; title: string; description: string; benefits: string[] }) {
+  return (
+    <div className="p-6 bg-white rounded-lg shadow-md border border-gray-200 hover:shadow-lg transition-shadow">
+      <div className="text-4xl mb-4">{icon}</div>
+      <h3 className="text-xl font-semibold text-gray-900 mb-3">{title}</h3>
+      <p className="text-gray-600 mb-4">{description}</p>
+      <ul className="space-y-2">
+        {benefits.map((benefit, index) => (
+          <li key={index} className="text-sm text-gray-600 flex items-center">
+            <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
+            {benefit}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+function BenefitCard({ icon, title, description }: { icon: string; title: string; description: string }) {
+  return (
+    <div className="p-6 bg-white rounded-lg shadow-md border border-gray-200 hover:shadow-lg transition-shadow">
+      <div className="text-4xl mb-4 text-blue-600">{icon}</div>
+      <h3 className="text-xl font-semibold text-gray-900 mb-3">{title}</h3>
+      <p className="text-gray-600">{description}</p>
+    </div>
+  );
+}
+
+export default function ITServicesPage() {
+  return (
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
     <div className="animate-fade-in">
       <div className="text-center mb-16">
         <h1 className="text-4xl font-bold text-gray-900 mb-6">
@@ -162,6 +201,7 @@ export default function ItServicesPage() {
               description="Bank-grade security measures and compliance with industry standards and regulations."
             />
           </div>
+<<<<<<< HEAD
 
         </div>
       </div>
@@ -267,3 +307,10 @@ function CTA() {
 
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
 }
+=======
+        </div>
+      </div>
+    </div>
+  );
+}
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0

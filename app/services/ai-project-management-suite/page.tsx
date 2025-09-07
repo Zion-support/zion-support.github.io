@@ -1,7 +1,10 @@
-import Link from 'next/link';
-import { ArrowRightIcon } from '@heroicons/react/24/outline';
+import React from 'react';
 
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
 
 export const metadata = {
 <<<<<<< HEAD
@@ -11,11 +14,21 @@ export const metadata = {
   title: 'AI Project Management Suite | Zion Tech Group',
   description: 'Intelligent project management with AI-powered task automation, resource optimization, risk prediction, and smart scheduling for enhanced team productivity.',
   keywords: 'AI project management, task automation, resource optimization, risk prediction, team productivity, project planning AI',
+<<<<<<< HEAD
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
+=======
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
 };
 
-export default function AiProjectManagementSuitePage() {
+interface FeatureProps {
+  title: string;
+  description: string;
+  icon: string;
+}
+
+function Feature({ title, description, icon }: FeatureProps) {
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
       <div className="container mx-auto px-4 py-20">
@@ -91,6 +104,8 @@ export default function AiProjectManagementSuitePage() {
         </div>
       </div>
 =======
+=======
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
     <div className="p-6 bg-white rounded-lg shadow-md border border-gray-200 hover:shadow-lg transition-shadow">
       <div className="text-3xl mb-4">{icon}</div>
       <h3 className="text-xl font-semibold text-gray-900 mb-3">{title}</h3>
@@ -110,7 +125,10 @@ interface PricingTierProps {
 }
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
 function PricingTier({
   name,
   price,
@@ -125,7 +143,10 @@ function PricingTier({
       className={`relative p-8 rounded-lg border-2 ${popular ? "border-blue-500 bg-blue-50" : "border-gray-200 bg-white"} shadow-lg`}
     >
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
       {popular && (
         <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
           <span className="bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
@@ -145,7 +166,10 @@ function PricingTier({
         {features.map((feature, index) => (
           <li key={index} className="flex items-center">
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
             <svg
               className="w-5 h-5 text-green-500 mr-3"
               fill="currentColor"
@@ -157,7 +181,10 @@ function PricingTier({
                 clipRule="evenodd"
               />
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
             </svg>
             <span className="text-gray-700">{feature}</span>
           </li>
@@ -168,11 +195,17 @@ function PricingTier({
         className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
           popular
 
+<<<<<<< HEAD
 
             ? "bg-blue-600 text-white hover:bg-blue-700"
             : "bg-gray-900 text-white hover:bg-gray-800"
 
 
+=======
+            ? "bg-blue-600 text-white hover:bg-blue-700"
+            : "bg-gray-900 text-white hover:bg-gray-800"
+
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
         }`}
       >
         {cta}
@@ -212,12 +245,18 @@ export default function AIProjectManagementSuitePage() {
       <section className="py-12">
         <div className="text-center mb-12">
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
           <h2 className="text-3xl font-bold text-gray-900 mb-4">
             AI-Powered Project Features
           </h2>
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Comprehensive AI solutions to optimize your project management and team collaboration.
           </p>
@@ -288,12 +327,18 @@ export default function AIProjectManagementSuitePage() {
       <section className="py-12">
         <div className="text-center mb-12">
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
           <h2 className="text-3xl font-bold text-gray-900 mb-4">
             How It Works
           </h2>
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Simple 4-step process to implement AI-powered project management.
           </p>
@@ -312,10 +357,15 @@ export default function AIProjectManagementSuitePage() {
             </div>
             <h3 className="text-lg font-semibold text-gray-900 mb-3">AI Learning</h3>
 
+<<<<<<< HEAD
 
             <p className="text-gray-600">AI analyzes your team&apos;s work patterns and project history to optimize recommendations</p>
 
 
+=======
+            <p className="text-gray-600">AI analyzes your team&apos;s work patterns and project history to optimize recommendations</p>
+
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
           </div>
           <div className="text-center">
             <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
@@ -338,12 +388,18 @@ export default function AIProjectManagementSuitePage() {
       <section className="py-12 bg-gray-50 rounded-lg">
         <div className="text-center mb-12">
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
           <h2 className="text-3xl font-bold text-gray-900 mb-4">
             Pricing Plans
           </h2>
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Choose the plan that fits your team size and project management needs.
           </p>
@@ -445,12 +501,18 @@ export default function AIProjectManagementSuitePage() {
       {/* Contact CTA */}
       <section className="py-12 bg-blue-600 rounded-lg text-white text-center">
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
         <h2 className="text-3xl font-bold mb-4">
           Ready to Transform Your Project Management?
         </h2>
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
         <p className="text-xl mb-8 max-w-2xl mx-auto">
           Start your free trial today and see how AI can revolutionize your project management processes.
         </p>
@@ -473,7 +535,10 @@ export default function AIProjectManagementSuitePage() {
           <p>Email: kleber@ziontechgroup.com</p>
         </div>
       </section>
+<<<<<<< HEAD
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
+=======
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
     </div>
   );
 }

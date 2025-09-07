@@ -1,9 +1,14 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Link from 'next/link';
 import { ArrowRightIcon } from '@heroicons/react/24/outline';
 =======
 import React from 'react';
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
+=======
+import Link from 'next/link';
+import { ArrowRightIcon } from '@heroicons/react/24/outline';
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
 
 export const metadata = {
   title: 'Ai Customer Support Automation - Zion Tech Group',
@@ -11,6 +16,9 @@ export const metadata = {
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
 export default function AiCustomerSupportAutomationPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
@@ -86,6 +94,7 @@ export default function AiCustomerSupportAutomationPage() {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
 =======
 interface FeatureProps {
   title: string;
@@ -469,6 +478,8 @@ export default function AICustomerSupportAutomationPage() {
         </div>
       </section>
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
+=======
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
     </div>
   );
 }

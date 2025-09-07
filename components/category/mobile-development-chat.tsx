@@ -148,6 +148,7 @@ export default MobileDevelopmentChat
 
 
 
+<<<<<<< HEAD
 const MobileDevelopmentChat: NextPage = () => {
  ;
   return (
@@ -169,6 +170,8 @@ const MobileDevelopmentChat: NextPage = () => {
 }
 
 export default MobileDevelopmentChat;
+=======
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
 
         <title>MobileDevelopmentChat - Zion Tech Solutions</title>
         <title>MobileDevelopmentChat - Zion Tech Solutions</title>

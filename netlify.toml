@@ -1,10 +1,15 @@
 [build]
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
 command = "npm ci && npm run build"
 publish = ".next"
 
 [build.environment]
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
   NODE_VERSION = "20"
@@ -15,12 +20,16 @@ NODE_OPTIONS = "--max-old-space-size=4096"
 >>>>>>> main
   command = "npm install --legacy-peer-deps && npm run build"
   publish = ".next"
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
+=======
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
 command = "npm ci && npm run build"
 publish = ".next"
 
 [build.environment]
+>>>>>>> 2bbbac51cb394a4b194a2ff75bed1e7dbe99ed55
 NODE_VERSION = "20"
 NODE_OPTIONS = "--max-old-space-size=4096"
 <<<<<<< HEAD
@@ -40,6 +49,10 @@ directory = "netlify/functions"
 [[redirects]]
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+=======
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
+<<<<<<< HEAD
   from = "/api/*"
   to = "/.netlify/functions/:splat"
   status = 200
@@ -50,8 +63,12 @@ status = 200
 
 =======
 >>>>>>> 5d0bfd029486ab7d4285b084fd1f13e833405bec
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
+=======
+>>>>>>> 2bbbac51cb394a4b194a2ff75bed1e7dbe99ed55
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
 from = "/api/*"
 to = "/.netlify/functions/:splat"
 status = 200
@@ -81,9 +98,17 @@ Cross-Origin-Opener-Policy = "same-origin"
 Cross-Origin-Resource-Policy = "same-origin"
 X-Permitted-Cross-Domain-Policies = "none"
 Origin-Agent-Cluster = "?1"
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 2bbbac51cb394a4b194a2ff75bed1e7dbe99ed55
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
 
 =======
 >>>>>>> 5d0bfd029486ab7d4285b084fd1f13e833405bec
@@ -95,17 +120,26 @@ status = 200
 
 # Static redirects for specific routes
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
+<<<<<<< HEAD
 
 # Static redirects for exported site
 ursor/automate-test-improve-and-merge-code-646c
 # Static redirects for exported site
 =======
 >>>>>>> 5d0bfd029486ab7d4285b084fd1f13e833405bec
+<<<<<<< HEAD
 =======
 
 
 
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
+=======
+>>>>>>> 2bbbac51cb394a4b194a2ff75bed1e7dbe99ed55
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
 [[redirects]]
 from = "/ai-customer-success-platform"
 to = "/services/ai-customer-success-platform/"
@@ -143,6 +177,14 @@ status = 301
 
 [[redirects]]
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+from = "/affiliate-attribution-suite"
+to = "/services/affiliate-attribution-suite/"
+status = 301
+=======
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 from = "/affiliate-attribution-suite"
@@ -169,5 +211,9 @@ from = "/affiliate-attribution-suite"
 to = "/services/affiliate-attribution-suite/"
 status = 301
 >>>>>>> 5d0bfd029486ab7d4285b084fd1f13e833405bec
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
+=======
+>>>>>>> 2bbbac51cb394a4b194a2ff75bed1e7dbe99ed55
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0

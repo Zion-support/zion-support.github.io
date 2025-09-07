@@ -148,6 +148,7 @@ export default QualityAssuranceChat
 
 
 
+<<<<<<< HEAD
 const QualityAssuranceChat: NextPage = () => {
  ;
   return (
@@ -169,6 +170,8 @@ const QualityAssuranceChat: NextPage = () => {
 }
 
 export default QualityAssuranceChat;
+=======
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
 
         <title>QualityAssuranceChat - Zion Tech Solutions</title>
         <title>QualityAssuranceChat - Zion Tech Solutions</title>

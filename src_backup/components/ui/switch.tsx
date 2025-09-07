@@ -15,6 +15,7 @@
   DATA_ANALYTICS_SERVICES,;
   CLOUD_SOLUTIONS,;} from '@/data/servicesData';import { ;
 
+<<<<<<< HEAD
 ;
   SERVICE_CATEGORIES;
   ALL_SERVICES;
@@ -35,6 +36,20 @@ import { SERVICE_CATEGORIES;
   ALL_SERVICES
   AI_SERVICES
   IT_SERVICES
+=======
+
+  SERVICE_CATEGORIES;
+  ALL_SERVICES
+  AI_SERVICES
+  IT_SERVICES
+
+import React, { useState } from 'react';
+import { SERVICE_CATEGORIES;
+  ALL_SERVICES;
+  AI_SERVICES;
+  IT_SERVICES;
+
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
   MICRO_SAAS_SERVICES;
   CYBERSECURITY_SERVICES;
   DATA_ANALYTICS_SERVICES;
@@ -46,13 +61,66 @@ import { ServiceCategory, ServiceSolution } from '@/types/services';
 
 export function ServicesPage() {
 
+<<<<<<< HEAD
 export function ServicesPage() {;
+=======
+
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
 
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [searchTerm, setSearchTerm] = useState('');
   const filteredServices = ALL_SERVICES.filter(service => {
 
 
+<<<<<<< HEAD
+=======
+        return AI_SERVICES;
+      case 'it-services':
+        return IT_SERVICES;
+      case 'micro-saas':
+        return MICRO_SAAS_SERVICES;
+      case 'cybersecurity':
+        return CYBERSECURITY_SERVICES;
+      case 'data-analytics':
+        return DATA_ANALYTICS_SERVICES;
+      case 'cloud-solutions':
+        return CLOUD_SOLUTIONS;
+      default:
+        return ALL_SERVICES;
+    }
+  }
+  const selectedServices =
+    selectedCategory === 'all'
+      ? filteredServices
+      : getServicesByCategory(selectedCategory);
+  return (
+    <div className='min-h-screen bg-gradient-to-br from-gray-50 to-gray-100'>
+      {/* Hero Section */}
+      <div className='bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 text-white'>
+        <div className='container mx-auto px-4 py-20'>
+          <div className='text-center max-w-4xl mx-auto'>
+            <h1 className='text-5xl font-bold mb-6'>
+              Zion Tech Group Services
+            </h1>
+            <p className='text-xl mb-8 text-blue-100'>
+              Comprehensive IT, AI, and Micro SAAS solutions to transform your
+              business. From cutting-edge artificial intelligence to robust
+              infrastructure support.
+            </p>
+            <div className='flex flex-wrap justify-center gap-4'>
+              <a
+                href='tel:+13024640950'
+                className='bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors'
+              >
+                📞 Call Now: +1 302 464 0950
+              </a>
+              <a
+                href='mailto:kleber@ziontechgroup.com'
+                className='bg-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-600 transition-colors'              >    }
+  }
+  const selectedServices = selectedCategory === 'all' ? filteredServices : getServicesByCategory(selectedCategory);
+
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
@@ -79,7 +147,14 @@ export function ServicesPage() {;
                 className="bg-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-600 transition-colors"
               >
 
+<<<<<<< HEAD
 import React, { useState } from 'react',;
+=======
+
+import React, { useState } from 'react',;
+
+
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
 import {;
   SERVICE_CATEGORIES,;
   ALL_SERVICES,;
@@ -97,6 +172,7 @@ import {;
   CYBERSECURITY_SERVICES;
   DATA_ANALYTICS_SERVICES;
   CLOUD_SOLUTIONS;
+<<<<<<< HEAD
  } from '@/data/servicesData';
 import { ServiceCategory, ServiceSolution  } from '@/types/services';
 export function ServicesPage() {export function ServicesPage() {const [selectedCategory, setSelectedCategory] = useState<string>('all')const [searchTerm, setSearchTerm] = useState('')const filteredServices = ALL_SERVICES.filter(service => {export function ServicesPage() {ursor/fix-website-loading-errors-and-merge-6662;
@@ -181,15 +257,32 @@ import {SERVICE_CATEGORIES,ALL_SERVICES,AI_SERVICES,IT_SERVICES,MICRO_SAAS_SERVI
   DATA_ANALYTICS_SERVICES;
   CLOUD_SOLUTIONS;
   const filteredServices = ALL_SERVICES && ALL_SERVICES.filter(service => {const matchesCategory =;
+=======
+import { ServiceCategory, ServiceSolution } from '@/types/services';
+  const filteredServices = ALL_SERVICES && ALL_SERVICES.filter(service => {;
+    const matchesCategory =;
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
       selectedCategory === 'all' || service && service.category === selectedCategory;
     const matchesSearch =;
       service && service.title.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
       service && service.description.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
       service && service.tags.some(tag =>;
+<<<<<<< HEAD
         tag && tag.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()))return matchesCategory && matchesSearch;  })const getServicesByCategory = (categoryId: string) => {switch (categoryId) {    const matchesCategory = selectedCategory === 'all' || service && service.category === selectedCategory;
     const matchesSearch = service && service.title.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
                          service && service.description.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
                          service && service.tags.some(tag => tag && tag.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()))return matchesCategory && matchesSearch;
+=======
+        tag && tag.toLowerCase().includes(searchTerm && searchTerm.toLowerCase());
+      );
+    return matchesCategory && matchesSearch;  });
+  const getServicesByCategory = (categoryId: string) => {;
+    switch (categoryId) {    const matchesCategory = selectedCategory === 'all' || service && service.category === selectedCategory;
+    const matchesSearch = service && service.title.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
+                         service && service.description.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
+                         service && service.tags.some(tag => tag && tag.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()));
+    return matchesCategory && matchesSearch;
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
         return AI_SERVICES;
       case 'it-services':;
         return IT_SERVICES;
@@ -203,6 +296,7 @@ import {SERVICE_CATEGORIES,ALL_SERVICES,AI_SERVICES,IT_SERVICES,MICRO_SAAS_SERVI
         return CLOUD_SOLUTIONS;
       default:;
         return ALL_SERVICES;
+<<<<<<< HEAD
     }const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
@@ -345,6 +439,12 @@ function ServicesPage() {const [selected_category, setSelectedCategory] = useSta
                 className='bg - blue - 500 text - white px - 6 py - 3 rounded - lg font - semibold hover:bg - blue - 600 transition - colors'              >    }
   }return (<div className="min - h-screen bg - gradient - to - br from - gray - 50 to - gray - 100">;
       {/* Hero Section */}const selected_services  = selected_category === 'all' ? filtered_services : getServicesByCategory (selected_category)const selectedServices  = selectedCategory === 'all' ? filteredServices : getServicesByCategory(selectedCategory)return (<div className="min - h-screen bg - gradient - to - br from - gray - 50 to - gray - 100">;
+=======
+    }
+
+
+
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
 
 
 
@@ -357,9 +457,12 @@ function ServicesPage() {const [selected_category, setSelectedCategory] = useSta
   return (
     <div className="min - h-screen bg - gradient - to - br from - gray - 50 to - gray - 100">;
       {/* Hero Section */}
+<<<<<<< HEAD
 ;
   const selected_services = selected_category === 'all' ? filtered_services : getServicesByCategory (selected_category);
 ;
+=======
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
   return (
     <div className="min - h-screen bg - gradient - to - br from - gray - 50 to - gray - 100">;
       {/* Hero Section */}
@@ -383,14 +486,21 @@ function ServicesPage() {const [selected_category, setSelectedCategory] = useSta
               <a;
                 href="mailto:kleber@ziontechgroup.com";
                 className="bg - blue - 500 text - white px - 6 py - 3 rounded - lg font - semibold hover:bg - blue - 600 transition - colors";
+<<<<<<< HEAD
               >;✉️ Email Us;
               >;
 
+=======
+              >;
+
+
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
                 ✉️ Email Us;
               </a>;
             </div>;
           </div>;
         </div>;
+<<<<<<< HEAD
       </div>;{/* Contact Info Banner */}
       {/* Contact Info Banner */}<div className="bg-white border-b">;
         <div className="container mx-auto px-4 py-4">;
@@ -446,6 +556,10 @@ ursor/fix-website-loading-errors-and-merge-6662;
         </div>;
       </div>;
                 href='https://ziontechgroup && ziontechgroup.com';
+=======
+      </div>;
+
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
               <span>364 E Main St STE 1008, Middletown DE 19709</span>
             </div>
             <div className="flex items-center gap-2">
@@ -460,10 +574,44 @@ ursor/fix-website-loading-errors-and-merge-6662;
 
 
 
+<<<<<<< HEAD
             <div className="flex items-center gap-2">
               <span className="text-blue-600">🌐</span>
               <a href="https://ziontechgroup.com" className="text-blue-600 hover:underline">
                 ziontechgroup.com
+=======
+
+
+            <div className="flex items-center gap-2">
+              <span className="text-blue-600">🌐</span>
+              <a href="https://ziontechgroup.com" className="text-blue-600 hover:underline">
+
+      {/* Contact Info Banner */}
+<div className='bg-white border-b'>
+        <div className='container mx-auto px-4 py-4'>
+          <div className='flex flex-wrap justify-center items-center gap-8 text-gray-600'>
+            <div className='flex items-center gap-2'>
+              <span className='text-blue-600'>📍</span>
+              <span>364 E Main St STE 1008, Middletown DE 19709</span>
+            </div>
+            <div className='flex items-center gap-2'>
+              <span className='text-blue-600'>📱</span>
+              <span>+1 302 464 0950</span>
+            </div>
+            <div className='flex items-center gap-2'>
+              <span className='text-blue-600'>✉️</span>
+              <span>kleber@ziontechgroup.com</span>
+            </div>
+            <div className='flex items-center gap-2'>
+              <span className='text-blue-600'>🌐</span>
+              <a
+                href='https://ziontechgroup.com'
+                className='text-blue-600 hover:underline'
+              >
+                ziontechgroup.com
+
+
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
             </div>
           </div>
         </div>
@@ -522,6 +670,7 @@ ursor/fix-website-loading-errors-and-merge-6662;
             </div>;
           </div>;
         </div>;
+<<<<<<< HEAD
       </div>;<div className="container mx-auto px-4 py-8">;
         <div className="bg-white rounded-xl shadow-lg p-6 mb-8">;
           <div className="flex flex-col md:flex-row gap-4">;
@@ -554,6 +703,12 @@ ursor/fix-website-loading-errors-and-merge-6662;
       </div>;
 
 
+=======
+      </div>;
+
+
+
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
                 type="text"
                 placeholder="Search services..."
                 value={searchTerm}
@@ -563,16 +718,44 @@ ursor/fix-website-loading-errors-and-merge-6662;
             </div>
             <div className="flex gap-2">
               {SERVICE_CATEGORIES.map((category) => (
+<<<<<<< HEAD
                 <button
                   key={category && category.id}
                   onClick={() => setSelectedCategory(category && category.id)}
                   className={`px-4 py-2 rounded-lg font-medium transition-colors ${selectedCategory === category && category.id;
+=======
+
+
+
+      {/* Search and Filter Section */}
+<div className='container mx-auto px-4 py-8'>
+        <div className='bg-white rounded-xl shadow-lg p-6 mb-8'>
+          <div className='flex flex-col md:flex-row gap-4'>
+            <div className='flex-1'>
+              <input
+                type='text'
+                placeholder='Search services...'
+                value={searchTerm}
+                onChange={e => setSearchTerm(e.target.value)}
+                className='w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent'
+              />
+            </div>
+            <div className='flex gap-2'>
+              {SERVICE_CATEGORIES.map(category => (
+
+                <button
+                  key={category && category.id}
+                  onClick={() => setSelectedCategory(category && category.id)}
+                  className={`px-4 py-2 rounded-lg font-medium transition-colors ${;
+                    selectedCategory === category && category.id;
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
                       ? 'bg-blue-600 text-white';
                       : 'bg-gray-100 text-gray-700 hover:bg-gray-200';
                   }`}
                 >;
                   {category && category.icon} {category && category.name}
                 </button>;
+<<<<<<< HEAD
               ))}{selectedServices.map((service) => (</div>;
           </div>;
         </div>;
@@ -724,6 +907,28 @@ ursor/fix-website-loading-errors-and-merge-6662;
               ))}
           {selectedServices.map((service) => (
             <ServiceCard key={service.id} service={service} />
+=======
+              ))}
+            <ServiceCard key={service.id} service={service} />
+
+
+            </div>;
+          </div>;
+        </div>;
+
+
+        {/* Services Grid */}
+
+
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
+
+
+          {selectedServices.map((service) => (
+            <ServiceCard key={service.id} service={service} />
+
+
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
           ))}
 
 
@@ -742,35 +947,81 @@ ursor/fix-website-loading-errors-and-merge-6662;
           <div className="text-center py-12">
 
 
+<<<<<<< HEAD
           <div className="text-center py-12">
 
             <h3 className="text-xl text-gray-600 mb-4">No services found</h3>
             <p className="text-gray-500">Try adjusting your search or filter criteria</p>
+=======
+
+          <div className="text-center py-12">
+
+          <div className="text-center py-12">
+
+
+            <h3 className="text-xl text-gray-600 mb-4">No services found</h3>
+            <p className="text-gray-500">Try adjusting your search or filter criteria</p>
+
+<div className='text-center py-12'>
+            <h3 className='text-xl text-gray-600 mb-4'>No services found</h3>
+            <p className='text-gray-500'>
+              Try adjusting your search or filter criteria
+            </p>
+
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
           </div>
         )}
       </div>
       {/* Why Choose Zion Tech Group */}
               Why Choose Zion Tech Group?
             </h2>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
               Why Choose Zion Tech Group?
             </h2>
               Why Choose Zion Tech Group?
             </h2>
+<<<<<<< HEAD
+=======
+
+
+
+              Why Choose Zion Tech Group?
+            </h2>
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               We deliver innovative, reliable, and cost-effective solutions that drive real business results
             </p>
           </div>
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">🚀</span>
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
               </div>
               <h3 className='text-xl font-semibold mb-2'>Innovation First</h3>
               <p className='text-gray-600'>
                 Cutting-edge AI and technology solutions
               </p>
             </div>
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
               </div>
               <h3 className='text-xl font-semibold mb-2'>
                 Enterprise Security
@@ -779,12 +1030,21 @@ ursor/fix-website-loading-errors-and-merge-6662;
                 SOC 2, HIPAA, GDPR compliant solutions
               </p>
             </div>
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
               </div>
               <h3 className='text-xl font-semibold mb-2'>Fast Deployment</h3>
               <p className='text-gray-600'>Quick setup and implementation</p>
             </div>
             </h2>
             </h2>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               We deliver innovative, reliable, and cost-effective solutions that drive real business results
             </p>
@@ -811,12 +1071,32 @@ ursor/fix-website-loading-errors-and-merge-6662;
               <h3 className="text-xl font-semibold mb-2">Fast Deployment</h3>
               <p className="text-gray-600">Quick setup and implementation</p>
             </div>
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
             <div className="text-center">
               <div className="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">🎯</span>
               </div>
+<<<<<<< HEAD
               <h3 className="text-xl font-semibold mb-2">Proven Results</h3>
               <p className="text-gray-600">Trusted by businesses nationwide</p>
+=======
+
+
+              <h3 className="text-xl font-semibold mb-2">Proven Results</h3>
+              <p className="text-gray-600">Trusted by businesses nationwide</p>
+
+            <div className='text-center'>
+              <div className='bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4'>
+                <span className='text-2xl'>🎯</span>
+              </div>
+              <h3 className='text-xl font-semibold mb-2'>Proven Results</h3>
+              <p className='text-gray-600'>Trusted by businesses nationwide</p>
+
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
             </div>
           </div>
         </div>
@@ -836,6 +1116,7 @@ ursor/fix-website-loading-errors-and-merge-6662;
       <div className='bg-white py-16'>;
         <div className='container mx-auto px-4'>;
           <div className='text-center mb-12'>;
+<<<<<<< HEAD
             <h2 className='text-4xl font-bold text-gray-900 mb-4'>;{/* CTA Section */}<div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16">;
         <div className="container mx-auto px-4 text-center">;
           <h2 className="text-4xl font-bold mb-6">;
@@ -877,6 +1158,10 @@ ursor/fix-website-loading-errors-and-merge-6662;
             <h2 className="text-4xl font-bold text-gray-900 mb-4">;
 ursor/fix-website-loading-errors-and-merge-6662;
             <h2 className='text-4xl font-bold text-gray-900 mb-4'>;
+=======
+            <h2 className='text-4xl font-bold text-gray-900 mb-4'>;
+
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
             Ready to Transform Your Business?
           </h2>
           <p className="text-xl mb-8 text-blue-100 max-w-2xl mx-auto">
@@ -895,10 +1180,20 @@ ursor/fix-website-loading-errors-and-merge-6662;
             >
               ✉️ Get Free Consultation
             </Link>
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
             </Link>
             <a 
 
             <a 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
               href="https://ziontechgroup.com"
               className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition-colors"
             >
@@ -909,11 +1204,16 @@ ursor/fix-website-loading-errors-and-merge-6662;
       </div>
     </div>
 
+<<<<<<< HEAD
   )
       <div className="bg-white py-16">;
         <div className="container mx-auto px-4">;
           <div className="text-center mb-12">;
             <h2 className="text-4xl font-bold text-gray-900 mb-4">;
+=======
+
+
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
               Why Choose Zion Tech Group?;
             </h2>;
             <p className='text-xl text-gray-600 max-w-3xl mx-auto'>;
@@ -1011,10 +1311,19 @@ ursor/fix-website-loading-errors-and-merge-6662;
               />;
             </div>;
             <div className="flex gap - 2">;
+<<<<<<< HEAD
               {SERVICE_CATEGORIES.map ((category) => (<button;
                   key={category.id}
                   on_click={() => setSelectedCategory (category.id)}
                   className={`px - 4 py - 2 rounded - lg font - medium transition - colors ${selected_category === category.id;
+=======
+              {SERVICE_CATEGORIES.map ((category) => (
+                <button;
+                  key={category.id}
+                  on_click={() => setSelectedCategory (category.id)}
+                  className={`px - 4 py - 2 rounded - lg font - medium transition - colors ${
+                    selected_category === category.id;
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
                       ? 'bg - blue - 600 text - white';
                       : 'bg - gray - 100 text - gray - 700 hover:bg - gray - 200';
                   }`}
@@ -1027,9 +1336,17 @@ ursor/fix-website-loading-errors-and-merge-6662;
         {/* Services Grid */}
         <div className='grid grid - cols - 1 lg:grid - cols - 2 xl:grid - cols - 3 gap - 8'>;
           {selected_services.map (service => (            <ServiceCard key={service.id} service={service} />        <div className="grid grid - cols - 1 lg:grid - cols - 2 xl:grid - cols - 3 gap - 8">;
+<<<<<<< HEAD
           {selected_services.map ((service) => (<ServiceCard key={service.id} service={service} />))}
         </div>;
         {selected_services.length === 0 && (<div className='text - center py - 12'>;
+=======
+          {selected_services.map ((service) => (
+            <ServiceCard key={service.id} service={service} />))}
+        </div>;
+        {selected_services.length === 0 && (
+          <div className='text - center py - 12'>;
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
             <h3 className='text - xl text - gray - 600 mb - 4'>No services found</h3>;
             <p className='text - gray - 500'>;
               Try adjusting your search or filter criteria;
@@ -1120,6 +1437,7 @@ ursor/fix-website-loading-errors-and-merge-6662;
             </div>;
           </div>;
         </div>;
+<<<<<<< HEAD
       </div>;</p>;
           </p>;{/* CTA Section */}
       <div className='bg - gradient - to - r from - blue - 600 to - purple - 600 text - white py - 16'>;
@@ -1212,6 +1530,20 @@ interface ServiceCardProps  {service: ServiceSolution;
       <div className='bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16'>
         <div className='container mx-auto px-4 text-center'>
           <h2 className='text-4xl font-bold mb-6'>
+=======
+      </div>;
+          </p>;
+          </h2>
+
+      <div className='bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16'>
+        <div className='container mx-auto px-4 text-center'>
+          <h2 className='text-4xl font-bold mb-6'>
+
+      <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-4xl font-bold mb-6">
+
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
             Ready to Transform Your Business?
           </h2>
           <p className="text-xl mb-8 text-blue-100 max-w-2xl mx-auto">
@@ -1234,6 +1566,10 @@ interface ServiceCardProps  {service: ServiceSolution;
               href='https://ziontechgroup.com'
               className='bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition-colors'            >            Ready to Transform Your Business?
           </h2>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
           <p className="text-xl mb-8 text-blue-100 max-w-2xl mx-auto">
             Get started with Zion Tech Group today and discover how our innovative solutions can drive growth, efficiency, and success for your organization.
           </p>
@@ -1252,10 +1588,24 @@ interface ServiceCardProps  {service: ServiceSolution;
             <a 
             <a
             <a
+<<<<<<< HEAD
             <a
             <a 
               href="https://ziontechgroup.com"
               className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition-colors"
+=======
+
+            </a>
+            <a
+            <a 
+
+
+              href="https://ziontechgroup.com"
+              className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition-colors"
+
+              className='bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition-colors'
+
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
             >
               🌐 Visit Website
           </div>
@@ -1326,6 +1676,7 @@ interface ServiceCardProps {
             <a;
               href="tel: +13024640950";
               className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-50 transition-colors";
+<<<<<<< HEAD
             >;📞 Call +1 302 464 0950;
             >;
               📞 Call +1 302 464 0950;
@@ -1337,6 +1688,19 @@ interface ServiceCardProps {
             </a>;
             <a;
               href="https://ziontechgroup && ziontechgroup.com";
+=======
+            >;
+
+              📞 Call +1 302 464 0950;
+            </a>;
+            <a
+              href="mailto:kleber@ziontechgroup && ziontechgroup.com"
+              className="bg-blue-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-600 transition-colors">;
+              ✉️ Get Free Consultation;
+            </a>;
+            <a
+              href="https://ziontechgroup && ziontechgroup.com"
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
               className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition-colors">;
               🌐 Visit Website;
             </a>;
@@ -1344,20 +1708,35 @@ interface ServiceCardProps {
         </div>;
       </div>;
     </div>;
+<<<<<<< HEAD
   )interface ServiceCardProps  {service: ServiceSolution;  )}
 interface ServiceCardProps  {service: ServiceSolution;}
 function ServiceCard(): any ({ service }: ServiceCardProps) {const [showDetails, setShowDetails]  = useState(false)ursor/fix-website-loading-errors-and-merge-6662;
 }
 function ServiceCard(): any ({ service }: ServiceCardProps) {)interface ServiceCardProps  {service: ServiceSolution;function ServiceCard() {const [showDetails, setShowDetails]  = useState(false)const getPopularPlan = () => {if (service.pricing.professional.popular) return service.pricing.professional;if (service.pricing.basic.popular) return service.pricing.basic;
+=======
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
   );
 
 
 
 
+<<<<<<< HEAD
+=======
+
+
+
+
+
+
+
+
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
 }
 function ServiceCard(): any ({ service }: ServiceCardProps) {;
   const [showDetails, setShowDetails] = useState(false);
 
+<<<<<<< HEAD
     if (service.pricing.basic.popular) return service.pricing.basic;
     if (service.pricing.enterprise.popular) return service.pricing.enterprise;
     return service.pricing.professional;
@@ -1375,6 +1754,27 @@ if (service.pricing.professional.popular)return service.pricing.professional;
     if (service.pricing.enterprise.popular) return service.pricing.enterprise;
     return service.pricing.professional;
   }const popularPlan = getPopularPlan()return (<div className='bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow'>;
+=======
+
+
+    if (service.pricing.basic.popular) return service.pricing.basic;
+    if (service.pricing.enterprise.popular) return service.pricing.enterprise;
+    return service.pricing.professional
+  };
+
+
+  const getPopularPlan = () => {;
+    if (service && service.pricing.professional && professional.popular);
+      return service && service.pricing.professional;
+    if (service && service.pricing.basic && basic.popular) return service && service.pricing.basic;
+    if (service && service.pricing.enterprise && enterprise.popular) return service && service.pricing.enterprise;
+    return service && service.pricing.professional;  };    if (service && service.pricing.professional && professional.popular) return service && service.pricing.professional;
+    if (service && service.pricing.basic && basic.popular) return service && service.pricing.basic;
+    if (service && service.pricing.enterprise && enterprise.popular) return service && service.pricing.enterprise;
+    return service && service.pricing.professional;
+
+
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
     if (service.pricing.professional.popular) return service.pricing.professional,
     if (service.pricing.basic.popular) return service.pricing.basic,
     if (service.pricing.enterprise.popular) return service.pricing.enterprise,
@@ -1383,11 +1783,17 @@ if (service.pricing.professional.popular)return service.pricing.professional;
     <div className='bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow'>;
       {/* Service Image */}
       <div className='h-48 bg-gradient-to-br from-blue-500 to-purple-600 relative overflow-hidden'>;
+<<<<<<< HEAD
         <img;
           src={service && service.images[0]}
           alt={service && service.title}
           className='w-full h-full object-cover';
           className="w-full h-full object-cover";
+=======
+        <img
+          src={service && service.images[0]}
+          alt={service && service.title}
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
           className='w-full h-full object-cover'
           className="w-full h-full object-cover"
         />;
@@ -1396,7 +1802,12 @@ if (service.pricing.professional.popular)return service.pricing.professional;
             {service && service.category}
           </span>;
         </div>;
+<<<<<<< HEAD
         {service && service.aiScore && (<div className='absolute bottom-4 left-4'>;
+=======
+        {service && service.aiScore && (;
+          <div className='absolute bottom-4 left-4'>;
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
             <span className='bg-green-500 text-white px-3 py-1 rounded-full text-sm font-semibold'>          <div className="absolute bottom-4 left-4">;
             <span className="bg-green-500 text-white px-3 py-1 rounded-full text-sm font-semibold">;
               AI Score: {service && service.aiScore}
@@ -1413,7 +1824,13 @@ if (service.pricing.professional.popular)return service.pricing.professional;
             <span className='text - yellow - 500'>⭐</span>;
             <span className='text - sm font - medium'>;
               {service.provider.rating}
+<<<<<<< HEAD
       </div>;{/* Service Content */}
+=======
+      </div>;
+
+      {/* Service Content */}
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
       <div className='p-6'>;
         <div className='flex items-start justify-between mb-3'>;
           <h3 className='text-xl font-bold text-gray-900 mb-2'>;
@@ -1425,15 +1842,31 @@ if (service.pricing.professional.popular)return service.pricing.professional;
               {service && service.provider.rating}
             </span>;
             <span className='text-gray-500 text-sm'>;
+<<<<<<< HEAD
               ({service && service.provider.reviewCount})</span>;
           </div>;
         </div>;<p className='text-gray-600 mb-4 line-clamp-3'>{service && service.description}</p>;{/* Provider Info */}
+=======
+              ({service && service.provider.reviewCount});
+            </span>;
+          </div>;
+        </div>;
+
+        <p className='text-gray-600 mb-4 line-clamp-3'>{service && service.description}</p>;
+
+        {/* Provider Info */}
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
         <div className='flex items-center gap-3 mb-4'>;
           <div className='w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center'>;
             <span className='text-blue-600 font-semibold text-sm'>              {service && service.provider.name && name.charAt(0)}
             </span>;
             <span className='text - gray - 500 text - sm'>;
+<<<<<<< HEAD
               ({service.provider.review_count})</span>;
+=======
+              ({service.provider.review_count});
+            </span>;
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
           </div>;
         </div>;
         <p className='text - gray - 600 mb - 4 line - clamp - 3'>{service.description}</p>;
@@ -1441,6 +1874,7 @@ if (service.pricing.professional.popular)return service.pricing.professional;
         <div className='flex items - center gap - 3 mb - 4'>;
           <div className='w - 8 h - 8 bg - blue - 100 rounded - full flex items - center justify - center'>;
             <span className='text - blue - 600 font - semibold text - sm'>              {service.provider.name.char_at (0)}
+<<<<<<< HEAD
   const popularPlan = getPopularPlan()return (</span>;
           </div>;
           <div>          </div>;
@@ -1487,10 +1921,18 @@ if (service.pricing.professional.popular)return service.pricing.professional;
           </div>;
           <div className="absolute bottom-4 left-4">;
             <span className="bg-green-500 text-white px-3 py-1 rounded-full text-sm font-semibold">;
+=======
+
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
             </span>;
           </div>;
           <div>          </div>;
         </div>;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
       {/* Service Image */}
       <div className="h-48 bg-gradient-to-br from-blue-500 to-purple-600 relative overflow-hidden">
         <img 
@@ -1498,12 +1940,58 @@ if (service.pricing.professional.popular)return service.pricing.professional;
           alt={service.title}
           className="w-full h-full object-cover"
         />
+<<<<<<< HEAD
+=======
+
+
+        <div className="absolute top-4 right-4">
+          <span className="bg-white text-blue-600 px-3 py-1 rounded-full text-sm font-semibold">
+
+        />
+        <div className='absolute top-4 right-4'>
+          <span className='bg-white text-blue-600 px-3 py-1 rounded-full text-sm font-semibold'>
+
+            {service.category}
+          </span>
+        </div>
+        {service.aiScore && (
+
+            <span className="bg-green-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+
+<div className='absolute bottom-4 left-4'>
+            <span className='bg-green-500 text-white px-3 py-1 rounded-full text-sm font-semibold'>
+
+              AI Score: {service.aiScore}
+            </span>
+          </div>
+
+
+
+
+
+        )}
+      </div>
+      {/* Service Content */}
+
+
+
+
+      {/* Service Image */}
+      <div className="h-48 bg-gradient-to-br from-blue-500 to-purple-600 relative overflow-hidden">
+        <img 
+          src={service.images[0]} 
+          alt={service.title}
+          className="w-full h-full object-cover"
+        />
+
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
         <div className="absolute top-4 right-4">
           <span className="bg-white text-blue-600 px-3 py-1 rounded-full text-sm font-semibold">
             {service.category}
           </span>
         </div>
         {service.aiScore && (
+<<<<<<< HEAD
           <div className="absolute bottom-4 left-4">
           <div className='absolute bottom-4 left-4'>
             <span className='bg-green-500 text-white px-3 py-1 rounded-full text-sm font-semibold'>          <div className="absolute bottom-4 left-4">
@@ -1511,6 +1999,9 @@ if (service.pricing.professional.popular)return service.pricing.professional;
               AI Score: {service.aiScore}
             </span>
           </div>
+=======
+
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
           <div className="absolute bottom-4 left-4">
             <span className="bg-green-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
               AI Score: {service.aiScore}
@@ -1519,6 +2010,7 @@ if (service.pricing.professional.popular)return service.pricing.professional;
         )}
       </div>
       {/* Service Content */}
+<<<<<<< HEAD
 
 
       {/* Service Image */}
@@ -1667,6 +2159,28 @@ ursor/fix-website-loading-errors-and-merge-6662;
           {service.provider.verified && (<span className="text-blue-600 text-sm">✓ Verified</span>;
         <div className='flex items-center gap-3 mb-4'>
           <div className='w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center'>
+=======
+<div className='p-6'>
+        <div className='flex items-start justify-between mb-3'>
+          <h3 className='text-xl font-bold text-gray-900 mb-2'>
+            {service.title}
+          </h3>
+          <div className='flex items-center gap-1'>
+            <span className='text-yellow-500'>⭐</span>
+            <span className='text-sm font-medium'>
+              {service.provider.rating}
+            </span>
+            <span className='text-gray-500 text-sm'>
+              ({service.provider.reviewCount})
+            </span>
+          </div>
+        </div>
+        <p className='text-gray-600 mb-4 line-clamp-3'>{service.description}</p>
+        {/* Provider Info */}
+        <div className='flex items-center gap-3 mb-4'>
+          <div className='w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center'>
+
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
             <span className='text-blue-600 font-semibold text-sm'>              {service.provider.name.charAt(0)}
             </span>
           </div>
@@ -1674,10 +2188,19 @@ ursor/fix-website-loading-errors-and-merge-6662;
         </div>
         <p className="text-gray-600 mb-4 line-clamp-3">{service.description}</p>
         {/* Provider Info */}
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
         )}
       </div>
       {/* Service Content */}
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
       <div className="p-6">
         <div className="flex items-start justify-between mb-3">
           <h3 className="text-xl font-bold text-gray-900 mb-2">{service.title}</h3>
@@ -1694,13 +2217,27 @@ ursor/fix-website-loading-errors-and-merge-6662;
 
 
 
+<<<<<<< HEAD
         <div className="flex items-center gap-3 mb-4">
           <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
             <span className="text-blue-600 font-semibold text-sm">
+=======
+
+
+        <div className="flex items-center gap-3 mb-4">
+          <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
+            <span className="text-blue-600 font-semibold text-sm">
+
+            <span className='text-blue-600 font-semibold text-sm'>
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
               {service.provider.name.charAt(0)}
             </span>
           </div>
           <div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
             <p className='font-medium text-gray-900'>{service.provider.name}</p>
             <p className='text-sm text-gray-500'>{service.provider.location}</p>
           </div>
@@ -1708,10 +2245,19 @@ ursor/fix-website-loading-errors-and-merge-6662;
             <span className='text-blue-600 text-sm'>✓ Verified</span>          )}
         </div>
         {/* Pricing */}            <p className="font-medium text-gray-900">{service.provider.name}</p>
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
             <p className="text-sm text-gray-500">{service.provider.location}</p>
           </div>
           {service.provider.verified && (
             <span className="text-blue-600 text-sm">✓ Verified</span>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
         </div>
         {/* Pricing */}
         <div className='bg-gray-50 rounded-lg p-4 mb-4'>
@@ -1719,7 +2265,12 @@ ursor/fix-website-loading-errors-and-merge-6662;
             <div className='text-2xl font-bold text-gray-900'>
               {popularPlan.currency}
               {popularPlan.price}
+<<<<<<< HEAD
               <span className='text-sm font-normal text-gray-500'>                /{popularPlan.period}
+=======
+              <span className='text-sm font-normal text-gray-500'>
+                /{popularPlan.period}
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
               </span>
             </div>
             {popularPlan.popular && (
@@ -1732,6 +2283,10 @@ ursor/fix-website-loading-errors-and-merge-6662;
             </div>
             {popularPlan.popular && (
               <span className='bg-blue-600 text-white px-2 py-1 rounded-full text-xs font-medium'>              <span className="bg-blue-600 text-white px-2 py-1 rounded-full text-xs font-medium">
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
             <p className="font-medium text-gray-900">{service.provider.name}</p>
             <p className="text-sm text-gray-500">{service.provider.location}</p>
           </div>
@@ -1740,6 +2295,7 @@ ursor/fix-website-loading-errors-and-merge-6662;
         {/* Pricing */}            <p className="font-medium text-gray-900">{service && service.provider.name}</p>;
             <p className="text-sm text-gray-500">{service && service.provider.location}</p>;
           </div>;
+<<<<<<< HEAD
           {service && service.provider.verified && (<span className="text-blue-600 text-sm">✓ Verified</span>;
         </div>;
               </span>;
@@ -1765,10 +2321,18 @@ ursor/fix-website-loading-errors-and-merge-6662;
               {popularPlan.currency}{popularPlan.price}
               <span className="text-sm font-normal text-gray-500">;
                 /{popularPlan.period}
+=======
+          {service && service.provider.verified && (;
+            <span className="text-blue-600 text-sm">✓ Verified</span>;
+        </div>;
+
+
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
                 Most Popular
               </span>
             )}
         {/* Features Preview */}
+<<<<<<< HEAD
             {service.features.slice(0, 3).map((feature, index) => (
               <span 
                 key={index}
@@ -1776,12 +2340,27 @@ ursor/fix-website-loading-errors-and-merge-6662;
               <span
                 key={index}
                 className="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs"
+=======
+
+<div className='mb-4'>
+          <h4 className='font-semibold text-gray-900 mb-2'>Key Features:</h4>
+          <div className='flex flex-wrap gap-2'>
+
+            {service.features.slice(0, 3).map((feature, index) => (
+              <span 
+                key={index}
+                className='bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs'
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
               >
                 {feature}
               </span>
             ))}
             {service.features.length > 3 && (
+<<<<<<< HEAD
               <span className='text-gray-500 text-xs'>                +{service.features.length - 3} more              <span className="text-gray-500 text-xs">
+=======
+<span className='text-gray-500 text-xs'>
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
                 +{service.features.length - 3} more
               </span>
                 className="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs"
@@ -1789,6 +2368,7 @@ ursor/fix-website-loading-errors-and-merge-6662;
                 {feature}
 
 
+<<<<<<< HEAD
               </span>;
             </div>;
             {popularPlan.popular && (<span className="bg-blue-600 text-white px-2 py-1 rounded-full text-xs font-medium">;
@@ -1803,13 +2383,29 @@ ursor/fix-website-loading-errors-and-merge-6662;
                 {feature}{/* Features Preview */}</span>;
             </div>;
             {popular_plan.popular && (<span className='bg - blue - 600 text - white px - 2 py - 1 rounded - full text - xs font - medium'>                Most Popular        <div className="bg - gray - 50 rounded - lg p - 4 mb - 4">;
+=======
+
+        {/* Features Preview */}
+
+
+
+              </span>;
+            </div>;
+            {popular_plan.popular && (
+              <span className='bg - blue - 600 text - white px - 2 py - 1 rounded - full text - xs font - medium'>                Most Popular        <div className="bg - gray - 50 rounded - lg p - 4 mb - 4">;
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
           <div className="text - center">;
             <div className="text - 2xl font - bold text - gray - 900">;
               {popular_plan.currency}{popular_plan.price}
               <span className="text - sm font - normal text - gray - 500">;
               </span>;
             </div>;
+<<<<<<< HEAD
             {popular_plan.popular && (<span className='bg - blue - 600 text - white px - 2 py - 1 rounded - full text - xs font - medium'>              <span className="bg - blue - 600 text - white px - 2 py - 1 rounded - full text - xs font - medium">;
+=======
+            {popular_plan.popular && (
+              <span className='bg - blue - 600 text - white px - 2 py - 1 rounded - full text - xs font - medium'>              <span className="bg - blue - 600 text - white px - 2 py - 1 rounded - full text - xs font - medium">;
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
                 Most Popular;
               </span>)}
           </div>;
@@ -1818,17 +2414,28 @@ ursor/fix-website-loading-errors-and-merge-6662;
         <div className='mb - 4'>;
           <h4 className='font - semibold text - gray - 900 mb - 2'>Key Features:</h4>;
           <div className='flex flex - wrap gap - 2'>;
+<<<<<<< HEAD
             {service.features.slice (0, 3).map ((feature, index) => (<span;
         <div className='mb-4'>;
           <h4 className='font-semibold text-gray-900 mb-2'>Key Features:</h4>;
           <div className='flex flex-wrap gap-2'>;
             {service && service.features.slice(0, 3).map((feature, index) => (<span;
+=======
+            {service.features.slice (0, 3).map ((feature, index) => (
+              <span;
+        <div className='mb-4'>;
+          <h4 className='font-semibold text-gray-900 mb-2'>Key Features:</h4>;
+          <div className='flex flex-wrap gap-2'>;
+            {service && service.features.slice(0, 3).map((feature, index) => (;
+              <span
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
                 key={index}
                 key={index}
                 className="bg - blue - 100 text - blue - 800 px - 2 py - 1 rounded text - xs";
               >;
                 {feature}
               </span>))}
+<<<<<<< HEAD
             {service.features.length > 3 && ()}
         {/* Action Buttons */}
             )}
@@ -1840,6 +2447,12 @@ ursor/fix-website-loading-errors-and-merge-6662;
             {service.features.length > 3 && (
             )}
         {/* Action Buttons */}
+=======
+            {service.features.length > 3 && (
+            )}
+        {/* Action Buttons */}
+
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
             )}
 
           </div>;
@@ -1848,6 +2461,7 @@ ursor/fix-website-loading-errors-and-merge-6662;
 
         {/* Action Buttons */}
         <div className='flex gap-2'>
+<<<<<<< HEAD
           <button
             onClick={() => setShowDetails(!showDetails)}
             className='flex-1 bg-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:bg-blue-700 transition-colors'          >        <div className="flex gap-2">;
@@ -1878,10 +2492,35 @@ className='bg-green-600 text-white py-2 px-4 rounded-lg font-medium hover:bg-gre
 
 
 
+=======
+
+
+          <button
+            onClick={() => setShowDetails(!showDetails)}
+            className='flex-1 bg-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:bg-blue-700 transition-colors'          >        <div className="flex gap-2">;
+          <button
+            onClick={() => setShowDetails(!showDetails)}
+            className="flex-1 bg-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:bg-blue-700 transition-colors";
+
+
+<div className='flex gap-2'>
+          <button
+            onClick={() => setShowDetails(!showDetails)}
+            className='flex-1 bg-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:bg-blue-700 transition-colors'
+          >
+
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
             {showDetails ? 'Hide Details' : 'View Details'}
           </button>;
           <a
             href={`tel:+13024640950`}
+<<<<<<< HEAD
+=======
+
+
+className='bg-green-600 text-white py-2 px-4 rounded-lg font-medium hover:bg-green-700 transition-colors'
+
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
           >
             Call Now
           </a>
@@ -1910,6 +2549,7 @@ className='bg-green-600 text-white py-2 px-4 rounded-lg font-medium hover:bg-gre
           >;
             Call Now;
           </a>;
+<<<<<<< HEAD
         </div>;<div>;
         {/* Detailed Information */}
         {showDetails && (<div className="mt-6 pt-6 border-t border-gray-200">;
@@ -1952,6 +2592,15 @@ className='bg-green-600 text-white py-2 px-4 rounded-lg font-medium hover:bg-gre
           <div className="mt-6 pt-6 border-t border-gray-200">
                 <h4 className='font-semibold text-gray-900 mb-2'>Benefits:</h4>
                 <ul className='list-disc list-inside text-sm text-gray-600 space-y-1'>                  {service.benefits.slice(0, 3).map((benefit, index) => (          <div className="mt-6 pt-6 border-t border-gray-200">
+=======
+        </div>;
+
+
+
+        {/* Detailed Information */}
+        {showDetails && (
+          <div className="mt-6 pt-6 border-t border-gray-200">
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
             <div className="space-y-4">
               {/* Benefits */}
               <div>
@@ -1972,21 +2621,34 @@ className='bg-green-600 text-white py-2 px-4 rounded-lg font-medium hover:bg-gre
               <div>;
                 <h4 className='font-semibold text-gray-900 mb-2'>Use Cases:</h4>;
                 <div className='flex flex-wrap gap-2'>;
+<<<<<<< HEAD
                   {service && service.useCases.slice(0, 3).map((useCase, index) => (<span;
                       key={index}
                     <span;
+=======
+                  {service && service.useCases.slice(0, 3).map((useCase, index) => (;
+                    <span
+                      key={index}
+                    <span
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
                       key={index}
                       className="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">;
                       {useCase}
                     </span>;
                   ))}
               {/* Technologies */}
+<<<<<<< HEAD
                   {service.technologies.slice(0, 4).map((tech, index) => (<span;
                       key={index}
                       className='bg-purple-100 text-purple-800 px-2 py-1 rounded text-xs'                    >                  {service.technologies.slice(0, 4).map((tech, index) => (<span;
                       key={index}className="bg-purple-100 text-purple-800 px-2 py-1 rounded text-xs";
                       className='bg-green-100 text-green-800 px-2 py-1 rounded text-xs';
                     >;
+=======
+                  {service.technologies.slice(0, 4).map((tech, index) => (
+                    <span 
+                      key={index}
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
                       className='bg-purple-100 text-purple-800 px-2 py-1 rounded text-xs'                    >                  {service.technologies.slice(0, 4).map((tech, index) => (
                     <span
                       key={index}
@@ -2009,6 +2671,7 @@ className='bg-green-600 text-white py-2 px-4 rounded-lg font-medium hover:bg-gre
 
                       className="bg-green-100 text-green-800 px-2 py-1 rounded text-xs"
                     >
+<<<<<<< HEAD
                       {useCase}
                     </span>;
                   ))}
@@ -2057,10 +2720,29 @@ ursor/fix-website-loading-errors-and-merge-6662;
                 <div>;
                 <div>;
                 <div>;
+=======
+
+
+                      {useCase}
+                    </span>;
+                  ))}
+
+                </div>;
+              </div>;
+
+
+              {/* Technologies */}
+
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
 
 
                       className="bg-purple-100 text-purple-800 px-2 py-1 rounded text-xs"
                     >
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
                       {tech}
                     </span>;
                   ))}
@@ -2069,6 +2751,17 @@ ursor/fix-website-loading-errors-and-merge-6662;
               <div className="grid grid-cols-2 gap-4 text-sm">
 
 
+<<<<<<< HEAD
+=======
+
+
+
+                </div>
+              </div>
+              {/* Deployment & Support */}
+<div className='grid grid-cols-2 gap-4 text-sm'>
+
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
                 <div>
                   <span className='font-medium text-gray-900'>Deployment:</span>
                   <p className='text-gray-600'>{service.deploymentTime}</p>
@@ -2081,13 +2774,21 @@ ursor/fix-website-loading-errors-and-merge-6662;
                   Technologies:;
                 </h4>;
                 <div className='flex flex-wrap gap-2'>;
+<<<<<<< HEAD
                   {service && service.technologies.slice(0, 4).map((tech, index) => (<span;
                       key={index}
                     <span;
+=======
+                  {service && service.technologies.slice(0, 4).map((tech, index) => (;
+                    <span
+                      key={index}
+                    <span
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
                       key={index}
                       className="bg-purple-100 text-purple-800 px-2 py-1 rounded text-xs">;
                       {tech}
                     </span>;
+<<<<<<< HEAD
                   ))}<div className="grid grid-cols-2 gap-4 text-sm">;
                 <div>;
                   <span className="font-medium text-gray-900">Deployment:</span>;
@@ -2102,10 +2803,26 @@ ursor/fix-website-loading-errors-and-merge-6662;
                   ))}
                 <div>
 
+=======
+                  ))}
+
+
+
+                <div>
+
+
+
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
                   <span className="font-medium text-gray-900">Deployment:</span>
                   <p className="text-gray-600">{service.deploymentTime}</p>
                 </div>
                 <div>
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
                   <span className="font-medium text-gray-900">Support:</span>
                   <p className="text-gray-600">{service.support.slice(0, 2).join(', ')}</p>
                 </div>
@@ -2128,6 +2845,7 @@ ursor/fix-website-loading-errors-and-merge-6662;
                   <span className="font-medium text-gray-900">Support:</span>;
                   <p className="text-gray-600">{service && service.support.slice(0, 2).join(', ')}</p>;
                 </div>;
+<<<<<<< HEAD
               </div>;{/* All Pricing Plans */}
                   <span className='font-medium text-gray-900'>Support:</span>;
                   <p className='text-gray-600'>;
@@ -2187,6 +2905,26 @@ className='bg-green-600 text-white px-4 py-2 rounded text-sm font-medium hover:b
               </div>;
                   ))}
               {/* Contact CTA */}
+=======
+              </div>;
+
+                  ))}
+              {/* Contact CTA */}
+
+              {/* All Pricing Plans */}
+
+                  ))}
+
+                </div>;
+              </div>;
+
+
+              {/* Contact CTA */}
+
+
+
+
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
                   Ready to get started with {service.title}?
                 </p>
                 <div className="flex gap-2 justify-center">
@@ -2196,12 +2934,34 @@ className='bg-green-600 text-white px-4 py-2 rounded text-sm font-medium hover:b
 
 
 
+<<<<<<< HEAD
                     className="bg-blue-600 text-white px-4 py-2 rounded text-sm font-medium hover:bg-blue-700 transition-colors"
+=======
+
+                    className="bg-blue-600 text-white px-4 py-2 rounded text-sm font-medium hover:bg-blue-700 transition-colors"
+
+<div className='bg-blue-50 rounded-lg p-4 text-center'>
+                <p className='text-sm text-blue-800 mb-2'>
+                  Ready to get started with {service.title}?
+                </p>
+                <div className='flex gap-2 justify-center'>
+                  <a
+                    href={`tel:+13024640950`}
+                    className='bg-blue-600 text-white px-4 py-2 rounded text-sm font-medium hover:bg-blue-700 transition-colors'
+
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
                   >
                     📞 Call +1 302 464 0950
                   </a>
                   <a
                     href={`mailto:kleber@ziontechgroup.com?subject=Inquiry about ${service.title}`}
+<<<<<<< HEAD
+=======
+
+
+className='bg-green-600 text-white px-4 py-2 rounded text-sm font-medium hover:bg-green-700 transition-colors'
+
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
                   >
                     ✉️ Email Inquiry
                   </Link>
@@ -2223,16 +2983,28 @@ className='bg-green-600 text-white px-4 py-2 rounded text-sm font-medium hover:b
                   Ready to get started with {service && service.title}?;
                 </p>;
                 <div className='flex gap-2 justify-center'>;
+<<<<<<< HEAD
                   <a;
+=======
+                  <a
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
                     href={`tel:+13024640950`}
                     className='bg-blue-600 text-white px-4 py-2 rounded text-sm font-medium hover:bg-blue-700 transition-colors'>                  Ready to get started with {service && service.title}?;
                 </p>;
                 <div className="flex gap-2 justify-center">;
+<<<<<<< HEAD
                   <a;
                     href={`tel:+13024640950`}
                     className="bg-blue-600 text-white px-4 py-2 rounded text-sm font-medium hover:bg-blue-700 transition-colors">;
                   </a>;
                   <a;
+=======
+                  <a
+                    href={`tel:+13024640950`}
+                    className="bg-blue-600 text-white px-4 py-2 rounded text-sm font-medium hover:bg-blue-700 transition-colors">;
+                  </a>;
+                  <a
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
                     href={`mailto:kleber@ziontechgroup && ziontechgroup.com?subject=Inquiry about ${service && service.title}`}
                     className='bg-green-600 text-white px-4 py-2 rounded text-sm font-medium hover:bg-green-700 transition-colors'>                    className="bg-green-600 text-white px-4 py-2 rounded text-sm font-medium hover:bg-green-700 transition-colors";
                   >;
@@ -2241,6 +3013,7 @@ className='bg-green-600 text-white px-4 py-2 rounded text-sm font-medium hover:b
               </div>;
             </div>;
           </div>;
+<<<<<<< HEAD
         )}}
 }
 }
@@ -2257,6 +3030,10 @@ className='bg-green-600 text-white px-4 py-2 rounded text-sm font-medium hover:b
   )})}{/* Detailed Information */}
         {show_details && (<div className='mt - 6 pt - 6 border - t border - gray - 200'>;
         )}
+=======
+        )}
+
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
       </div>;
     </div>;
   );  );
@@ -2283,9 +3060,17 @@ className='bg-green-600 text-white px-4 py-2 rounded text-sm font-medium hover:b
               <div>;
                 <h4 className='font - semibold text - gray - 900 mb - 2'>Use Cases:</h4>;
                 <div className='flex flex - wrap gap - 2'>;
+<<<<<<< HEAD
                   {service.use_cases.slice (0, 3).map ((use_case, index) => (<span;
                       key={index}
                       className='bg - green - 100 text - green - 800 px - 2 py - 1 rounded text - xs'                    >                  {service.use_cases.slice (0, 3).map ((use_case, index) => (<span;
+=======
+                  {service.use_cases.slice (0, 3).map ((use_case, index) => (
+                    <span;
+                      key={index}
+                      className='bg - green - 100 text - green - 800 px - 2 py - 1 rounded text - xs'                    >                  {service.use_cases.slice (0, 3).map ((use_case, index) => (
+                    <span;
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
                       key={index}
                       className="bg - green - 100 text - green - 800 px - 2 py - 1 rounded text - xs";
                     >;
@@ -2299,9 +3084,17 @@ className='bg-green-600 text-white px-4 py-2 rounded text-sm font-medium hover:b
                   Technologies:;
                 </h4>;
                 <div className='flex flex - wrap gap - 2'>;
+<<<<<<< HEAD
                   {service.technologies.slice (0, 4).map ((tech, index) => (<span;
                       key={index}
                       className='bg - purple - 100 text - purple - 800 px - 2 py - 1 rounded text - xs'                    >                  {service.technologies.slice (0, 4).map ((tech, index) => (<span;
+=======
+                  {service.technologies.slice (0, 4).map ((tech, index) => (
+                    <span;
+                      key={index}
+                      className='bg - purple - 100 text - purple - 800 px - 2 py - 1 rounded text - xs'                    >                  {service.technologies.slice (0, 4).map ((tech, index) => (
+                    <span;
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
                       key={index}
                       className="bg - purple - 100 text - purple - 800 px - 2 py - 1 rounded text - xs";
                     >;
@@ -2334,7 +3127,12 @@ className='bg-green-600 text-white px-4 py-2 rounded text-sm font-medium hover:b
                   Pricing Plans:;
                 </h4>;
                 <div className='space - y-2'>;
+<<<<<<< HEAD
                   {Object.entries (service.pricing).map (([plan, details]) => (<div;
+=======
+                  {Object.entries (service.pricing).map (([plan, details]) => (
+                    <div;
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
                       key={plan}
                       className='flex justify - between items - center text - sm';
                     >;
@@ -2376,13 +3174,29 @@ className='bg-green-600 text-white px-4 py-2 rounded text-sm font-medium hover:b
             </div>;
           </div>)}
       </div>;
+<<<<<<< HEAD
     </div>))}ursor/fix-website-loading-errors-and-merge-6662;
       </div>;
     </div>;
 )
+=======
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
     </div>));
 }
 
 
 
 
+<<<<<<< HEAD
+=======
+
+
+
+
+
+
+      </div>
+    </div>
+);
+
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0

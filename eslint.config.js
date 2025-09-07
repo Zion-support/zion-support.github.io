@@ -1,14 +1,16 @@
 import { FlatCompat } from '@eslint/eslintrc';
 import js from '@eslint/js';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
 import typescript from '@typescript-eslint/eslint-plugin';
 import typescriptParser from '@typescript-eslint/parser';
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
-<<<<<<< HEAD
-import nextPlugin from '@next/eslint-plugin-next';
+import globals from 'globals';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -16,6 +18,7 @@ const __dirname = dirname(__filename);
 const compat = new FlatCompat({
   baseDirectory: __dirname,
   recommendedConfig: js.configs.recommended,
+<<<<<<< HEAD
 =======
 // import nextPlugin from '@next/eslint-plugin-next'; // Not needed for Vite project
 import globals from 'globals';
@@ -569,11 +572,31 @@ export default [
         afterEach: 'readonly',
         beforeAll: 'readonly',
         afterAll: 'readonly'
+=======
+  allConfig: js.configs.all
+});
+
+export default [
+  js.configs.recommended,
+  ...compat.extends(
+    'next/core-web-vitals',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:react/recommended',
+    'plugin:react-hooks/recommended'
+  ),
+  {
+    files: ['app/**/*.{js,jsx,ts,tsx}'],
+    languageOptions: {
+      ecmaVersion: 'latest',
+      sourceType: 'module',
+      globals: {
+        ...globals.browser,
+        ...globals.node,
+        ...globals.es2021
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
       },
       parser: typescriptParser,
       parserOptions: {
-        ecmaVersion: 'latest',
-        sourceType: 'module',
         ecmaFeatures: {
           jsx: true
         }
@@ -582,16 +605,11 @@ export default [
     plugins: {
       '@typescript-eslint': typescript,
       'react': react,
-      'react-hooks': reactHooks,
-      '@next/next': nextPlugin
-      // '@next/next': nextPlugin, // Not needed for Vite project
+      'react-hooks': reactHooks
     },
     rules: {
-      ...typescript.configs.recommended.rules,
-      ...react.configs.recommended.rules,
-      ...reactHooks.configs.recommended.rules,
-      'react/prop-types': 'off',
       'react/react-in-jsx-scope': 'off',
+<<<<<<< HEAD
       'react/display-name': 'off',
       '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
       '@typescript-eslint/no-explicit-any': 'warn',
@@ -619,6 +637,14 @@ export default [
       'react-hooks/exhaustive-deps': 'warn',
 
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
+=======
+      'react/prop-types': 'off',
+      '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
+      '@typescript-eslint/no-explicit-any': 'warn',
+      'no-console': 'warn',
+      'prefer-const': 'error',
+      'no-var': 'error'
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
     },
     settings: {
       react: {
@@ -628,19 +654,13 @@ export default [
  ,
 },
   {
-    files: ['**/*.js'],
+    files: ['**/*.js', '**/*.jsx'],
     languageOptions: {
       globals: {
-        console: 'readonly',
-        process: 'readonly',
-        Buffer: 'readonly',
-        __dirname: 'readonly',
-        __filename: 'readonly',
-        global: 'readonly',
-        module: 'readonly',
-        require: 'readonly',
-        exports: 'readonly'
+        ...globals.browser,
+        ...globals.node
       }
+<<<<<<< HEAD
    ,
 },
     rules: {
@@ -659,4 +679,8 @@ export default [
 
 
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
+=======
+    }
+  }
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
 ];

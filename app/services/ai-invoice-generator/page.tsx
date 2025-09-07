@@ -1,10 +1,14 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
 import Link from 'next/link';
 import { ArrowRightIcon } from '@heroicons/react/24/outline';
 
 export const metadata = {
   title: 'AI Invoice Generator - Zion Tech Group',
   description: 'Intelligent invoice generation with AI-powered data extraction, automated billing, payment tracking, and smart expense categorization.',
+<<<<<<< HEAD
 =======
 import React from 'react';
 
@@ -120,6 +124,12 @@ function PricingTier({
 export default function AIInvoiceGeneratorPage() {
   return (
 <<<<<<< HEAD
+=======
+};
+
+export default function AIInvoiceGeneratorPage() {
+  return (
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
       <div className="container mx-auto px-4 py-20">
         <div className="text-center mb-16">
@@ -222,6 +232,7 @@ export default function AIInvoiceGeneratorPage() {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
 =======
     <div className="space-y-16">
       {/* Hero Section */}
@@ -510,6 +521,8 @@ export default function AIInvoiceGeneratorPage() {
         </div>
       </section>
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
+=======
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
     </div>
   );
 }

@@ -107,9 +107,12 @@ function resolveConflicts(filePath) {
     const content = fs.readFileSync(filePath, 'utf8');
     
     // Check if file has merge conflict markers
+<<<<<<< HEAD
 
     if (!content.includes('') || !content.includes('      console.log(`✅ No conflicts in: ${filePath}`);
 
+=======
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
       console.log(`✅ No conflicts in: ${filePath}`);
 
       return true;
@@ -131,7 +134,11 @@ function resolveConflicts(filePath) {
 
         conflictType = 'main';
         continue;
+<<<<<<< HEAD
       } else if (line.startsWith('        inConflict = false;
+=======
+        inConflict = false;
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
         conflictType = null;
         continue;
       }

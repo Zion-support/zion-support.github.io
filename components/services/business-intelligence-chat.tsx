@@ -148,6 +148,7 @@ export default BusinessIntelligenceChat
 
 
 
+<<<<<<< HEAD
 const BusinessIntelligenceChat: NextPage = () => {
  ;
   return (
@@ -169,6 +170,8 @@ const BusinessIntelligenceChat: NextPage = () => {
 }
 
 export default BusinessIntelligenceChat;
+=======
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
 
         <title>BusinessIntelligenceChat - Zion Tech Solutions</title>
         <title>BusinessIntelligenceChat - Zion Tech Solutions</title>

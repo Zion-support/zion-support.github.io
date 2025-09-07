@@ -1,7 +1,7 @@
-import Link from 'next/link';
-import { ArrowRightIcon } from '@heroicons/react/24/outline';
+import React from 'react';
 
 export const metadata = {
+<<<<<<< HEAD
 <<<<<<< HEAD
   title: 'Ai Powered Crm - Zion Tech Group',
   description: 'Professional ai powered crm solutions for your business needs.',
@@ -10,10 +10,16 @@ export const metadata = {
   description: 'Revolutionary CRM with AI-powered lead scoring, automated follow-ups, predictive analytics, and intelligent sales insights. Boost conversion rates by 40% with our smart CRM solution.',
   keywords: 'AI CRM, customer relationship management, lead scoring, sales automation, predictive analytics, sales intelligence'
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
+=======
+  title: 'Ai Powered Crm | Zion Tech Group',
+  description: 'Professional ai powered crm services for your business needs.',
+  keywords: 'ai-powered-crm, services, business, technology'
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
 };
 
-export default function AiPoweredCrmPage() {
+export default function ServicePage() {
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
       <div className="container mx-auto px-4 py-20">
@@ -495,6 +501,40 @@ function CaseStudy({ company, industry, result, description, metrics }: {
             </div>
           ))}
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
+=======
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            Ai Powered Crm
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Professional ai powered crm services for your business needs.
+          </p>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="bg-gray-800 rounded-lg p-6">
+            <h3 className="text-xl font-bold text-white mb-4">Expert Solutions</h3>
+            <p className="text-gray-300">
+              Tailored ai powered crm solutions designed for your specific business requirements.
+            </p>
+          </div>
+          
+          <div className="bg-gray-800 rounded-lg p-6">
+            <h3 className="text-xl font-bold text-white mb-4">Advanced Technology</h3>
+            <p className="text-gray-300">
+              Cutting-edge technology and best practices to deliver exceptional results.
+            </p>
+          </div>
+          
+          <div className="bg-gray-800 rounded-lg p-6">
+            <h3 className="text-xl font-bold text-white mb-4">24/7 Support</h3>
+            <p className="text-gray-300">
+              Round-the-clock support to ensure your ai powered crm solutions run smoothly.
+            </p>
+          </div>
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
         </div>
       </div>
     </div>

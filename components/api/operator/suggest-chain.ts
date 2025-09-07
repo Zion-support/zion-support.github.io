@@ -41,6 +41,7 @@ export default async function handler(
     return res.status(405).json({ error: 'Method not allowed',
 });
 
+<<<<<<< HEAD
 const { region, stakeUsd } = req.body |{};
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -59,6 +60,8 @@ const { region, stakeUsd } = req.body |{}
 const stake = Number(stakeUsd |0);
 
 const stake = Number(stakeUsd || 0);
+=======
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
 
   // Simple heuristics
   // - Low stake: prefer low fees (Polygon, BNB, Avalanche)

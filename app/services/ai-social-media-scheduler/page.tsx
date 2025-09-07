@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
 import Link from 'next/link';
 import { ArrowRightIcon } from '@heroicons/react/24/outline';
 
@@ -18,6 +21,7 @@ export default function AiSocialMediaSchedulerPage() {
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Professional ai social media scheduler solutions designed to meet your business requirements 
             and drive growth. Our expert team delivers high-quality, scalable solutions.
+<<<<<<< HEAD
 =======
 import React from 'react';
 
@@ -169,43 +173,15 @@ export default function AISocialMediaSchedulerPage() {
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Leverage artificial intelligence to maximize your social media impact and engagement.
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
+=======
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <Feature
-            icon="🤖"
-            title="AI Content Generation"
-            description="Generate engaging posts, captions, and hashtags tailored to your brand voice and audience"
-          />
-          <Feature
-            icon="⏰"
-            title="Optimal Timing AI"
-            description="AI analyzes your audience behavior to determine the best posting times for maximum engagement"
-          />
-          <Feature
-            icon="📊"
-            title="Performance Analytics"
-            description="Comprehensive analytics with AI insights to track performance and optimize your strategy"
-          />
-          <Feature
-            icon="🎯"
-            title="Hashtag Optimization"
-            description="AI suggests trending and relevant hashtags to increase reach and discoverability"
-          />
-          <Feature
-            icon="📱"
-            title="Multi-Platform Support"
-            description="Schedule and manage content across Instagram, Facebook, Twitter, LinkedIn, and TikTok"
-          />
-          <Feature
-            icon="🔄"
-            title="Content Recycling"
-            description="Intelligent content recycling to repurpose high-performing posts and maximize reach"
-          />
-        </div>
-      </section>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
         <div className="max-w-6xl mx-auto">
           {/* Features Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
@@ -263,6 +239,7 @@ export default function AISocialMediaSchedulerPage() {
               >
                 View All Services
               </Link>
+<<<<<<< HEAD
 =======
       {/* Supported Platforms */}
       <section className="py-12 bg-gray-50 rounded-lg">
@@ -325,25 +302,12 @@ export default function AISocialMediaSchedulerPage() {
             <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
               2
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
+=======
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
             </div>
-            <h3 className="text-lg font-semibold text-gray-900 mb-3">AI Content Creation</h3>
-            <p className="text-gray-600">Let AI generate engaging content or upload your own for optimization</p>
-          </div>
-          <div className="text-center">
-            <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
-              3
-            </div>
-            <h3 className="text-lg font-semibold text-gray-900 mb-3">Smart Scheduling</h3>
-            <p className="text-gray-600">AI determines optimal posting times and schedules your content automatically</p>
-          </div>
-          <div className="text-center">
-            <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
-              4
-            </div>
-            <h3 className="text-lg font-semibold text-gray-900 mb-3">Analyze & Optimize</h3>
-            <p className="text-gray-600">Track performance and let AI continuously optimize your strategy</p>
           </div>
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
       </div>
 =======
@@ -491,6 +455,9 @@ export default function AISocialMediaSchedulerPage() {
         </div>
       </section>
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
+=======
+      </div>
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
     </div>
   );
 }

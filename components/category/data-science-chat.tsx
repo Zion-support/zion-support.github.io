@@ -155,6 +155,7 @@ export default DataScienceChat
 
 
 
+<<<<<<< HEAD
 const DataScienceChat: NextPage = () => {
  ;
   return (
@@ -173,6 +174,8 @@ const DataScienceChat: NextPage = () => {
 }
 
 export default DataScienceChat;
+=======
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
 
         <title>DataScienceChat - Zion Tech Solutions</title>
         <title>DataScienceChat - Zion Tech Solutions</title>

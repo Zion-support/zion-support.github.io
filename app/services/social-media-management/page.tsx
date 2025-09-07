@@ -5,12 +5,15 @@ import { ArrowRightIcon } from '@heroicons/react/24/outline';
 export const metadata = {
   title: 'Social Media Management - Zion Tech Group',
   description: 'Professional social media management solutions for your business needs.',
+<<<<<<< HEAD
 =======
 
   title: 'Social Media Management | Zion Tech Group',
   description: 'Professional social media management services for your business needs.',
   keywords: 'social-media-management, services, business, technology'
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
+=======
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
 };
 
 export default function SocialMediaManagementPage() {
@@ -125,6 +128,7 @@ export default function SocialMediaManagementPage() {
     </div>
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 }
@@ -132,3 +136,6 @@ export default function SocialMediaManagementPage() {
 
 
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
+=======
+}
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0

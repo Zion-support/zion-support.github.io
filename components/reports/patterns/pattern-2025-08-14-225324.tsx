@@ -143,7 +143,6 @@ function Page() {
 export default function Page() {return (}
       </Head>;
 
-}
 
       <main className="container mx - auto px - 6 py - 12 prose prose - invert">;
         <h1 className="text - 3xl font - extrabold">Pattern — Cloud Improving Continuously</h1>;

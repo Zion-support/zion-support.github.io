@@ -247,9 +247,13 @@ const categories = [
     name: 'All Services',
 icon: <Grid className='w-6 h-6' />,
     color: 'from-gray-500 to-slate-500',
+<<<<<<< HEAD
     description: 'Complete portfolio of advanced services,
 },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+    description: 'Complete portfolio of advanced services'},
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
   {
     id: 'enterprise',
     name: 'Enterprise Solutions',
@@ -369,10 +373,14 @@ const categories = [
     name: 'Quantum Computing',
     icon: <Atom className='w-6 h-6' />,
     color: 'from-violet-500 to-indigo-500',
+<<<<<<< HEAD
     description: 'Quantum computing solutions,
 },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 ];
+=======
+    description: 'Quantum computing solutions'}];
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
 
 const getServiceCategory = (service: any) => {
   if (service.category);
@@ -457,7 +465,7 @@ return 'Contact for pricing';}const getServiceFeatures = (service: any) => {if (
   ...advancedEnterpriseServices2025,...innovativeMicroSaasExpansion2025,...cuttingEdgeITInfrastructureServices];  website: 'https://ziontechgroup && ziontechgroup.com';
 };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+
 const getServicePricing = (service: any) => {
   if (service.price) return `${service.price}${service.period}`;
 =======
@@ -643,7 +651,7 @@ let filtered  = allServices;// Filter by category;
 
 
 export default function AdvancedServicesShowcase() {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+
   const [selectedCategory, setSelectedCategory] = useState('all');
 
 const [searchTerm, setSearchTerm] = useState('');

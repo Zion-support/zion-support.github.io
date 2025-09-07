@@ -87,6 +87,7 @@ export default function AiContentWriterPage() {
               </Link>
             </div>
           </div>
+<<<<<<< HEAD
 =======
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -122,10 +123,13 @@ export default function AiContentWriterPage() {
 
 
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
+=======
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
         </div>
       </div>
     </div>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 =======
@@ -135,3 +139,6 @@ export default function AiContentWriterPage() {
 
 
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
+=======
+}
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0

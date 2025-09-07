@@ -148,6 +148,7 @@ export default WebApplicationDevelopmentChat
 
 
 
+<<<<<<< HEAD
 const WebApplicationDevelopmentChat: NextPage = () => {
  ;
   return (
@@ -169,6 +170,8 @@ const WebApplicationDevelopmentChat: NextPage = () => {
 }
 
 export default WebApplicationDevelopmentChat;
+=======
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
 
         <title>WebApplicationDevelopmentChat - Zion Tech Solutions</title>
         <title>WebApplicationDevelopmentChat - Zion Tech Solutions</title>

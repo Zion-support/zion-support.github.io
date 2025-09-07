@@ -1,4 +1,5 @@
-/** @type {import('next').NextConfig} */
+
+// Memory optimization settings
 const nextConfig = {
   reactStrictMode: true,
 <<<<<<< HEAD

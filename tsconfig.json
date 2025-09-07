@@ -1,29 +1,30 @@
 {
   "compilerOptions": {
+<<<<<<< HEAD
     "target": "ES2020",
+=======
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
     "lib": [
       "dom",
       "dom.iterable",
-      "es6",
-      "es2017",
-      "es2018",
-      "es2019",
-      "es2020",
-      "es2021",
-      "es2022"
+      "esnext"
     ],
     "allowJs": true,
     "skipLibCheck": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
+    "strict": false,
     "noEmit": true,
+<<<<<<< HEAD
     "esModuleInterop": true,
     "module": "ESNext",
+=======
+    "incremental": true,
+    "module": "esnext",
+    "esModuleInterop": true,
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "incremental": true,
     "plugins": [
       {
         "name": "next"
@@ -40,7 +41,9 @@
       "@/styles/*": ["./src/styles/*"],
       "@/assets/*": ["./src/assets/*"]
     },
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
+    "target": "ES2017",
+    "strictNullChecks": true
   },
   "include": [
     "next-env.d.ts",
@@ -50,20 +53,28 @@
   ],
   "exclude": [
     "node_modules",
-    "apps",
-    "temp_conflicts",
-    "pages_backup*",
-    "pages.*",
-    "pages-*",
-    "pages_disabled*",
-    "pages.disabled*",
-    "pages.broken*",
-    "pages.corrupted*",
-    "pages.old*",
-    "pages._*",
-    "pages.__*",
+    ".next",
+    "out",
+    "dist",
+    "api-backup",
+    "pages.disabled",
     "backup-pages",
+    "automation/backups",
+    "automation_backup",
+    "broken_files_backup",
+    "contracts",
+    "cypress",
+    "temp_working",
+    "supabase/functions",
+    "**/*.test.ts",
+    "**/*.test.tsx",
+    "**/*.spec.ts",
+    "**/*.spec.tsx",
+    "**/*.backup",
+    "**/*.disabled",
+    "src",
     "src.pages.disabled",
+<<<<<<< HEAD
     "lib_backup*",
     "src_backup*",
     "corrupted-files-backup*",
@@ -77,3 +88,11 @@
     "automation/backup*"
   ]
 }
+=======
+    "src.pages.disabled.auto",
+    "components.disabled",
+    "src.disabled",
+    "src.pages.disabled"
+  ]
+}
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0

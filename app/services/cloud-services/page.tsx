@@ -5,11 +5,14 @@ import { ArrowRightIcon } from '@heroicons/react/24/outline';
 export const metadata = {
   title: 'Cloud Services - Zion Tech Group',
   description: 'Professional cloud services solutions for your business needs.',
+<<<<<<< HEAD
 =======
 
   description: 'Professional cloud services services for your business needs.',
   keywords: 'cloud-services, services, business, technology'
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
+=======
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
 };
 
 export default function CloudServicesPage() {
@@ -124,6 +127,7 @@ export default function CloudServicesPage() {
     </div>
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 }
@@ -131,3 +135,6 @@ export default function CloudServicesPage() {
 
 
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
+=======
+}
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0

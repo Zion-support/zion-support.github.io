@@ -1,7 +1,29 @@
 #!/bin/bash
 
+<<<<<<< HEAD
 
 =======
+=======
+# Script to automatically resolve merge conflicts by choosing main branch version
+echo "Resolving merge conflicts by choosing main branch version..."
+
+# Get list of conflicted files
+git status --porcelain | grep "^UU" | cut -c4- | while read file; do
+    echo "Resolving conflict in: $file"
+    # Choose the main branch version (ours)
+    git checkout --ours "$file"
+    git add "$file"
+done
+
+# Handle modify/delete conflicts by removing the files
+git status --porcelain | grep "^DU" | cut -c4- | while read file; do
+    echo "Removing deleted file: $file"
+    git rm "$file"
+done
+
+echo "All conflicts resolved. Committing merge..."
+git commit -m "Merge PR #11903: Expand services advertise and build project - Resolved conflicts by choosing main branch version"
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
 echo "Starting conflict resolution..."
 
 # First, let's merge main into our branch
@@ -34,6 +56,7 @@ git add .
 
 echo "Conflict resolution completed. Checking status..."
 git status
+<<<<<<< HEAD
 
 =======
 # Script to automatically resolve merge conflicts by choosing main branch version
@@ -55,3 +78,6 @@ done
 
 echo "All conflicts resolved. Committing merge..."
 git commit -m "Merge PR #11903: Expand services advertise and build project - Resolved conflicts by choosing main branch version"
+=======
+
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0

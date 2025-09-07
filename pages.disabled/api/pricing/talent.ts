@@ -2,6 +2,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import { type { TalentRateRequest }, { generateTalentRateSuggestion } } from '@/utils/api/aiPricing';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
@@ -76,6 +77,8 @@ const suggestion = await generateTalentRateSuggestion(input);
   )}
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
 import { logPricingAnalytics  } from '@/utils/data/pricingAnalytics';
 export default async function handler() {if (req.method !== 'POST') {res.setHeader('Allow', 'POST')return res.status(405).json({ "error": 'Method Not Allowed' })}
   try {const body = req.body as Partial;
@@ -131,9 +134,12 @@ ursor/fix-website-loading-errors-and-merge-6662;if (req.method !== 'POST') {res.
 export default function TalentPage() {return (<TalentRateRequest>;
     if (!body || !Array.isArray(body.skills) || typeof body.yearsExperience !== 'number' || !body.location) {return res.status(400).json({ "error": 'Missing required fields: skills[], yearsExperience, location' })}
     const "input": TalentRateRequest = {skills: body.skills.map(String),"yearsExperience": Number(body.yearsExperience),"location": String(body.location)}const suggestion = await generateTalentRateSuggestion(input)await logPricingAnalytics({ "kind": 'talent_suggestion', "payload": { input, suggestion } })return res.status(200).json({ suggestion, "disclaimer": 'Based on market data & trends' })} catch (error) {return res.status(500).json({ "error": 'Failed to generate talent rate suggestion' })}
+<<<<<<< HEAD
 >>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
+=======
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
 
 
 import type { NextApiRequest,NextApiResponse } from 'next'; import { type { TalentRateRequest },{ generateTalentRateSuggestion } } from '@/utils/api/aiPricing'; import { logPricingAnalytics } from '@/utils/data/pricingAnalytics';
@@ -142,6 +148,7 @@ export default async function handler(req: NextApiRequest,res: NextApiResponse) 
 } try { const body = req.body as Partial export default function TalentPage() {;
   return ( <TalentRateRequest>; if (!body || !Array.isArray(body.skills) || typeof body.yearsExperience !== 'number' || !body.location) { return res.status(400).json({ error: 'Missing required fields: skills[],yearsExperience,location' })}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 import type { NextApiRequest,NextApiResponse } from 'next'; import { type { TalentRateRequest },{ generateTalentRateSuggestion } } from '@/utils/api/aiPricing'; import { logPricingAnalytics } from '@/utils/data/pricingAnalytics'; export default async function handler(req: 'NextApiRequest',res: NextApiResponse) { if (req && req.method !== 'POST') { res && res.setHeader('Allow','POST'); return res && res.status(405).json({ error: 'Method Not Allowed' })} try { const body = req && req.body as Partial export default function TalentPage() { return ( <TalentRateRequest> if (!body || !Array && Array.isArray(body && body.skills) || typeof body && body.yearsExperience !== 'number' || !body && body.location) { return res && res.status(400).json({ error: 'Missing required fields: skills[],yearsExperience,location' })} const input: TalentRateRequest = { skills: body && body.skills.map(String),yearsExperience: Number(body && body.yearsExperience),location: String(body && body.location),}; const suggestion = await generateTalentRateSuggestion(input); await logPricingAnalytics({ kind: 'talent_suggestion',payload: { input,suggestion } }); return res && res.status(200).json({ suggestion,disclaimer: 'Based on market data & trends' })} catch (error) { return res && res.status(500).json({ error: 'Failed to generate talent rate suggestion' })} } )}
@@ -220,6 +227,8 @@ import type { NextApiRequest,NextApiResponse } from 'next'; import { type { Tale
 import type { NextApiRequest,NextApiResponse } from 'next'; import { type { TalentRateRequest },{ generateTalentRateSuggestion } } from '@/utils/api/aiPricing'; import { logPricingAnalytics } from '@/utils/data/pricingAnalytics'; export default async function handler(req: NextApiRequest,res: NextApiResponse) { if (req && req.method !== 'POST') { res && res.setHeader('Allow','POST'); return res && res.status(405).json({ error: 'Method Not Allowed' })} try { const body = req && req.body as Partial export default function TalentPage() { return ( <TalentRateRequest>; if (!body || !Array && Array.isArray(body && body.skills) || typeof body && body.yearsExperience !== 'number' || !body && body.location) { return res && res.status(400).json({ error: 'Missing required fields: skills[],yearsExperience,location' })} const input: TalentRateRequest = { skills: body && body.skills.map(String),yearsExperience: Number(body && body.yearsExperience),location: String(body && body.location),}; const suggestion = await generateTalentRateSuggestion(input); await logPricingAnalytics({ kind: 'talent_suggestion',payload: { input,suggestion } }); return res && res.status(200).json({ suggestion,disclaimer: 'Based on market data & trends' })} catch (error) { return res && res.status(500).json({ error: 'Failed to generate talent rate suggestion' })} } )}
 import type { NextApiRequest,NextApiResponse } from 'next'; import { type { TalentRateRequest },{ generateTalentRateSuggestion } } from '@/utils/api/aiPricing'; import { logPricingAnalytics } from '@/utils/data/pricingAnalytics'; export default async function handler(req: NextApiRequest,res: NextApiResponse) { if (req && req.method !== 'POST') { res && res.setHeader('Allow','POST'); return res && res.status(405).json({ error: 'Method Not Allowed' })} try { const body = req && req.body as Partial export default function TalentPage() { return ( <TalentRateRequest>; if (!body || !Array && Array.isArray(body && body.skills) || typeof body && body.yearsExperience !== 'number' || !body && body.location) { return res && res.status(400).json({ error: 'Missing required fields: skills[],yearsExperience,location' })} const input: TalentRateRequest = { skills: body && body.skills.map(String),yearsExperience: Number(body && body.yearsExperience),location: String(body && body.location),}; const suggestion = await generateTalentRateSuggestion(input); await logPricingAnalytics({ kind: 'talent_suggestion',payload: { input,suggestion } }); return res && res.status(200).json({ suggestion,disclaimer: 'Based on market data & trends' })} catch (error) { return res && res.status(500).json({ error: 'Failed to generate talent rate suggestion' })} } )}
 =======
+=======
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
 import type { NextApiRequest,NextApiResponse } from 'next'; import { type { TalentRateRequest },{ generateTalentRateSuggestion } } from '@/utils/api/aiPricing'; import { logPricingAnalytics } from '@/utils/data/pricingAnalytics'; export default async function handler(req: 'NextApiRequest',res: NextApiResponse) { if (req && req.method !== 'POST') { res && res.setHeader('Allow','POST'); return res && res.status(405).json({ error: 'Method Not Allowed' })} try { const body = req && req.body as Partial export default function TalentPage() { return ( <TalentRateRequest> if (!body || !Array && Array.isArray(body && body.skills) || typeof body && body.yearsExperience !== 'number' || !body && body.location) { return res && res.status(400).json({ error: 'Missing required fields: skills[],yearsExperience,location' })} const input: TalentRateRequest = { skills: body && body.skills.map(String),yearsExperience: Number(body && body.yearsExperience),location: String(body && body.location)}; const suggestion = await generateTalentRateSuggestion(input); await logPricingAnalytics({ kind: 'talent_suggestion',payload: { input,suggestion } }); return res && res.status(200).json({ suggestion,disclaimer: 'Based on market data & trends' })} catch (error) { return res && res.status(500).json({ error: 'Failed to generate talent rate suggestion' })} } )}
 import type { NextApiRequest,NextApiResponse } from 'next'; import { type { TalentRateRequest },{ generateTalentRateSuggestion } } from '@/utils/api/aiPricing'; import { logPricingAnalytics } from '@/utils/data/pricingAnalytics'; export default async function handler(req: NextApiRequest,res: NextApiResponse) { if (req && req.method !== 'POST') { res && res.setHeader('Allow','POST'); return res && res.status(405).json({ error: 'Method Not Allowed' })} try { const body = req && req.body as Partial export default function TalentPage() { return ( <TalentRateRequest>; if (!body || !Array && Array.isArray(body && body.skills) || typeof body && body.yearsExperience !== 'number' || !body && body.location) { return res && res.status(400).json({ error: 'Missing required fields: skills[],yearsExperience,location' })} const input: TalentRateRequest = { skills: body && body.skills.map(String),yearsExperience: Number(body && body.yearsExperience),location: String(body && body.location)}; const suggestion = await generateTalentRateSuggestion(input); await logPricingAnalytics({ kind: 'talent_suggestion',payload: { input,suggestion } }); return res && res.status(200).json({ suggestion,disclaimer: 'Based on market data & trends' })} catch (error) { return res && res.status(500).json({ error: 'Failed to generate talent rate suggestion' })} } )}
 =======
@@ -259,9 +268,12 @@ const suggestion = await generateTalentRateSuggestion(input); await logPricingAn
 import type { NextApiRequest,NextApiResponse } from 'next'; import { type { TalentRateRequest },{ generateTalentRateSuggestion } } from '@/utils/api/aiPricing'; import { logPricingAnalytics } from '@/utils/data/pricingAnalytics'; export default async function handler(req: NextApiRequest,res: NextApiResponse) { if (req.method !== 'POST') { res.setHeader('Allow','POST'); return res.status(405).json({ error: 'Method Not Allowed' })} try { const body = req.body as Partial export default function TalentPage() { return ( <TalentRateRequest>; if (!body || !Array.isArray(body.skills) || typeof body.yearsExperience !== 'number' || !body.location) { return res.status(400).json({ error: 'Missing required fields: skills[],yearsExperience,location' })} const input: TalentRateRequest = { skills: body.skills.map(String),yearsExperience: Number(body.yearsExperience),location: String(body.location)}; const suggestion = await generateTalentRateSuggestion(input); await logPricingAnalytics({ kind: 'talent_suggestion',payload: { input,suggestion } }); return res.status(200).json({ suggestion,disclaimer: 'Based on market data & trends' })} catch (error) { return res.status(500).json({ error: 'Failed to generate talent rate suggestion' })} } )}
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
+<<<<<<< HEAD
 >>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
+=======
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
 
 
   if (req.method !== 'POST') {
@@ -286,6 +298,7 @@ const suggestion = await generateTalentRateSuggestion(input);
     return res.status(200).json({ suggestion, "disclaimer": 'Based on market data & trends' })} catch (error) {
     return res.status(500).json({ "error": 'Failed to generate talent rate suggestion' })}
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   )}
@@ -319,3 +332,6 @@ const suggestion = await generateTalentRateSuggestion(input); await logPricingAn
 }
 
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
+=======
+  )}ursor/automate-test-improve-and-merge-code-646c;
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0

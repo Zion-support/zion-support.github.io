@@ -9,6 +9,7 @@ const { execSync } = require('child_process');
 console.log('🔧 Starting comprehensive merge conflict resolution...');
 
 // Function to resolve merge conflicts in a file
+<<<<<<< HEAD
 function resolveConflicts(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
@@ -17,6 +18,37 @@ function resolveConflicts(filePath) {
     // Skip if no conflicts
     if (!content.includes('')) {
       return false;
+=======
+function resolveMergeConflicts(filePath) {
+    try {
+        console.log(`🔧 Processing: ${filePath}`);
+        let content = fs.readFileSync(filePath, 'utf8');
+        
+        // Check if file has merge conflicts
+        if (!content.includes('<<<<<<<') && !content.includes('') && !content.includes('>>>>>>>')) {
+            return false; // No conflicts to resolve
+        }
+        
+        // Strategy: Keep HEAD version (current branch) for most conflicts
+        // Remove merge conflict markers and keep the HEAD version
+        
+        // Remove any remaining conflict markers
+        
+        // Remove any remaining conflict markers
+        content = content.replace(/<<<<<<< [^\n]+\n?/g, '');
+        content = content.replace(/\n?/g, '');
+        
+        // Clean up any duplicate content
+        content = content.replace(/\n\n\n+/g, '\n\n');
+        
+        // Write the resolved content back
+        fs.writeFileSync(filePath, content, 'utf8');
+        console.log(`✅ Resolved conflicts in: ${filePath}`);
+        return true;
+    } catch (error) {
+        console.error(`❌ Error processing ${filePath}:`, error.message);
+        return false;
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
     }
     
     console.log(`📝 Resolving conflicts in: ${filePat,

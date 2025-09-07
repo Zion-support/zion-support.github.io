@@ -85,6 +85,10 @@ class IntelligentGitWorkflow {
     if (!statusResult.success) return false;
 
     return statusResult.output.includes('') || 
+<<<<<<< HEAD
+=======
+           statusResult.output.includes('') || 
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
            statusResult.output.includes('>>>>>>>');
   }
 
@@ -125,6 +129,28 @@ class IntelligentGitWorkflow {
       const content = fs.readFileSync(filePath, 'utf8');
       
       if (!content.includes('')) {
+<<<<<<< HEAD
+=======
+        return false; // No conflicts in this file
+      }
+
+      // Simple conflict resolution strategy
+      const lines = content.split('\n');
+      const resolvedLines = [];
+      let inConflict = false;
+      let conflictType = '';
+
+      for (let i = 0; i < lines.length; i++) {
+        const line = lines[i];
+        
+        if (line.includes('')) {
+          inConflict = true;
+          conflictType = 'head';
+          continue;
+        }
+        
+        if (line.includes('')) {
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
           conflictType = 'main';
           continue;
         }

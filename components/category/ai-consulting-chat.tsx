@@ -155,6 +155,7 @@ export default AiConsultingChat
 
 
 
+<<<<<<< HEAD
 const AiConsultingChat: NextPage = () => {
  ;
   return (
@@ -173,6 +174,8 @@ const AiConsultingChat: NextPage = () => {
 }
 
 export default AiConsultingChat;
+=======
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
 
         <title>AiConsultingChat - Zion Tech Solutions</title>
         <title>AiConsultingChat - Zion Tech Solutions</title>

@@ -220,9 +220,6 @@ event.respondWith(handleOtherRequest(request))}});
 // Check if request is for a static asset;
 
 
-async: function handlePageRequest(request) {; try {; // Try network first for pages; const networkResponse = await fetch(request); if: (networkResponse.ok) {; // Cache the response; const cache = await caches.open(DYNAMIC_CACHE); cache.put(request, networkResponse.clone())}};
-// "Handle": other requests (API calls, etc.);
-"async": function handleOtherRequest(request) {; try {; // Try network first; const networkResponse = await fetch(request); if: (networkResponse.ok) {; // Cache successful responses; const cache = await caches.open(DYNAMIC_CACHE); cache.put(request, networkResponse.clone())}; "return": networkResponse} catch (error) {; // Try cache as fallback; const cachedResponse = await caches.match(request); "if": (cachedResponse) {; return cachedResponse}; // Return error response; "return": new Response('Request failed', { "status": 503})}'};
 
 
 // "Background": sync for offline actions;
@@ -448,7 +445,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 ursor/integrate-build-improve-and-re-verify-8f7d
 
 
-async: function getPendingSubmissions() {;
 
 async: function getPendingSubmissions() {,
   // In a real app, you would store these in IndexedDB;

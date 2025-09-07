@@ -148,6 +148,7 @@ export default DevopsAutomationChat
 
 
 
+<<<<<<< HEAD
 const DevopsAutomationChat: NextPage = () => {
  ;
   return (
@@ -169,6 +170,8 @@ const DevopsAutomationChat: NextPage = () => {
 }
 
 export default DevopsAutomationChat;
+=======
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
 
         <title>DevopsAutomationChat - Zion Tech Solutions</title>
         <title>DevopsAutomationChat - Zion Tech Solutions</title>

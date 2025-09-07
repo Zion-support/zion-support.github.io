@@ -148,6 +148,7 @@ export default TechnicalDocumentationChat
 
 
 
+<<<<<<< HEAD
 const TechnicalDocumentationChat: NextPage = () => {
  ;
   return (
@@ -169,6 +170,8 @@ const TechnicalDocumentationChat: NextPage = () => {
 }
 
 export default TechnicalDocumentationChat;
+=======
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
 
         <title>TechnicalDocumentationChat - Zion Tech Solutions</title>
         <title>TechnicalDocumentationChat - Zion Tech Solutions</title>

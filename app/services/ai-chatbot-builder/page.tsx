@@ -1,7 +1,10 @@
 import Link from 'next/link';
 import { ArrowRightIcon } from '@heroicons/react/24/outline';
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
 export const metadata = {
   title: 'Ai Chatbot Builder - Zion Tech Group',
   description: 'Professional ai chatbot builder solutions for your business needs.',
@@ -81,6 +84,7 @@ export default function AiChatbotBuilderPage() {
               </Link>
             </div>
           </div>
+<<<<<<< HEAD
 =======
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -116,6 +120,8 @@ export default function AiChatbotBuilderPage() {
 
 
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
+=======
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
         </div>
       </div>
     </div>

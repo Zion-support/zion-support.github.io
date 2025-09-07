@@ -148,6 +148,7 @@ export default DatabaseAdministrationChat
 
 
 
+<<<<<<< HEAD
 const DatabaseAdministrationChat: NextPage = () => {
  ;
   return (
@@ -169,6 +170,8 @@ const DatabaseAdministrationChat: NextPage = () => {
 }
 
 export default DatabaseAdministrationChat;
+=======
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
 
         <title>DatabaseAdministrationChat - Zion Tech Solutions</title>
         <title>DatabaseAdministrationChat - Zion Tech Solutions</title>

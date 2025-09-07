@@ -1,17 +1,22 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Link from 'next/link';
 import { ArrowRightIcon } from '@heroicons/react/24/outline';
 =======
 
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
 
+=======
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
 export const metadata = {
-  title: 'Ai Data Analytics - Zion Tech Group',
-  description: 'Professional ai data analytics solutions for your business needs.',
+  title: 'Ai Data Analytics | Zion Tech Group',
+  description: 'Professional ai data analytics services for your business needs.',
+  keywords: 'ai-data-analytics, services, business, technology'
 };
 
-export default function AiDataAnalyticsPage() {
+export default function ServicePage() {
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
       <div className="container mx-auto px-4 py-20">
@@ -206,25 +211,43 @@ export default function AiDataAnalyticsPage() {
               Optimize operations and reduce costs with data-driven process
               improvements
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
+=======
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            Ai Data Analytics
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Professional ai data analytics services for your business needs.
+          </p>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="bg-gray-800 rounded-lg p-6">
+            <h3 className="text-xl font-bold text-white mb-4">Expert Solutions</h3>
+            <p className="text-gray-300">
+              Tailored ai data analytics solutions designed for your specific business requirements.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/contact"
-                className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-flex items-center"
-              >
-                Get Started
-                <ArrowRightIcon className="h-5 w-5 ml-2" />
-              </Link>
-              <Link
-                href="/services"
-                className="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-lg font-semibold hover:border-blue-400 hover:text-blue-600 transition-colors"
-              >
-                View All Services
-              </Link>
-            </div>
+          </div>
+          
+          <div className="bg-gray-800 rounded-lg p-6">
+            <h3 className="text-xl font-bold text-white mb-4">Advanced Technology</h3>
+            <p className="text-gray-300">
+              Cutting-edge technology and best practices to deliver exceptional results.
+            </p>
+          </div>
+          
+          <div className="bg-gray-800 rounded-lg p-6">
+            <h3 className="text-xl font-bold text-white mb-4">24/7 Support</h3>
+            <p className="text-gray-300">
+              Round-the-clock support to ensure your ai data analytics solutions run smoothly.
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
+            </p>
           </div>
         </div>
       </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
     </div>
   );
@@ -326,3 +349,8 @@ function PricingCard({
   );
 }
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
+=======
+    </div>
+  );
+}
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0

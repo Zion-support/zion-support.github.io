@@ -5,12 +5,15 @@ import { ArrowRightIcon } from '@heroicons/react/24/outline';
 export const metadata = {
   title: 'Helpdesk Platform - Zion Tech Group',
   description: 'Professional helpdesk platform solutions for your business needs.',
+<<<<<<< HEAD
 =======
 
   title: 'Helpdesk Platform | Zion Tech Group',
   description: 'Professional helpdesk platform services for your business needs.',
   keywords: 'helpdesk-platform, services, business, technology'
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
+=======
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
 };
 
 export default function HelpdeskPlatformPage() {
@@ -125,6 +128,7 @@ export default function HelpdeskPlatformPage() {
     </div>
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 }
@@ -132,3 +136,6 @@ export default function HelpdeskPlatformPage() {
 
 
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
+=======
+}
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0

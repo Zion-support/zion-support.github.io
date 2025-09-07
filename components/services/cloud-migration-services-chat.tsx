@@ -148,6 +148,7 @@ export default CloudMigrationServicesChat
 
 
 
+<<<<<<< HEAD
 const CloudMigrationServicesChat: NextPage = () => {
  ;
   return (
@@ -169,6 +170,8 @@ const CloudMigrationServicesChat: NextPage = () => {
 }
 
 export default CloudMigrationServicesChat;
+=======
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
 
         <title>CloudMigrationServicesChat - Zion Tech Solutions</title>
         <title>CloudMigrationServicesChat - Zion Tech Solutions</title>

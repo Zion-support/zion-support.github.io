@@ -155,6 +155,7 @@ export default DatabaseDesignChat
 
 
 
+<<<<<<< HEAD
 const DatabaseDesignChat: NextPage = () => {
  ;
   return (
@@ -173,6 +174,8 @@ const DatabaseDesignChat: NextPage = () => {
 }
 
 export default DatabaseDesignChat;
+=======
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
 
         <title>DatabaseDesignChat - Zion Tech Solutions</title>
         <title>DatabaseDesignChat - Zion Tech Solutions</title>

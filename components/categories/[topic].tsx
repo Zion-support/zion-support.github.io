@@ -94,7 +94,6 @@ const TopicPage: NextPage<Props> = ({ topic, posts    }) => {
         <meta property='og: description' content={`Articles about ${topic},
 } />;
 
-        <meta property='og:image' content='/images / og / topic - default.jpg' />;
 
         <meta property='og:type' content='website' />;
         <meta name='twitter:card' content='summary_large_image' />;

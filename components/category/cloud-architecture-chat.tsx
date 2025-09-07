@@ -148,6 +148,7 @@ export default CloudArchitectureChat
 
 
 
+<<<<<<< HEAD
 const CloudArchitectureChat: NextPage = () => {
  ;
   return (
@@ -169,6 +170,8 @@ const CloudArchitectureChat: NextPage = () => {
 }
 
 export default CloudArchitectureChat;
+=======
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
 
         <title>CloudArchitectureChat - Zion Tech Solutions</title>
         <title>CloudArchitectureChat - Zion Tech Solutions</title>

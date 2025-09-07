@@ -148,6 +148,7 @@ export default DataPipelineEngineeringChat
 
 
 
+<<<<<<< HEAD
 const DataPipelineEngineeringChat: NextPage = () => {
  ;
   return (
@@ -169,6 +170,8 @@ const DataPipelineEngineeringChat: NextPage = () => {
 }
 
 export default DataPipelineEngineeringChat;
+=======
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
 
         <title>DataPipelineEngineeringChat - Zion Tech Solutions</title>
         <title>DataPipelineEngineeringChat - Zion Tech Solutions</title>

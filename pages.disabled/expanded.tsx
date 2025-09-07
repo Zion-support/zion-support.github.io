@@ -1,13 +1,18 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b
+=======
+=======
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
 import React from 'react';
 import type { NextPage } from 'next';
 import Link from 'next/link';
 import MainLayout from '../../components/layout/MainLayout';
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { services, getServicesByCategory } from '../../data/services';
 import { motion } from 'framer-motion';
@@ -313,6 +318,8 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
 export default ExpandedServicesPage;
 >>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 =======
+=======
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
 import { services, getServicesByCategory  } from '../../data/services';
 import { motion  } from 'framer-motion';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin  } from 'lucide-react';
@@ -595,6 +602,9 @@ const ExpandedServicesPage: NextPage = () => {const micro = getServicesByCategor
       </section>;
     </MainLayout>;
   )}export default ExpandedServicesPage;
+<<<<<<< HEAD
 >>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
+=======
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0

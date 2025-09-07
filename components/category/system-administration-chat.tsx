@@ -148,6 +148,7 @@ export default SystemAdministrationChat
 
 
 
+<<<<<<< HEAD
 const SystemAdministrationChat: NextPage = () => {
  ;
   return (
@@ -169,6 +170,8 @@ const SystemAdministrationChat: NextPage = () => {
 }
 
 export default SystemAdministrationChat;
+=======
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
 
         <title>SystemAdministrationChat - Zion Tech Solutions</title>
         <title>SystemAdministrationChat - Zion Tech Solutions</title>

@@ -1,21 +1,63 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
 'use client';
 
 import React, { useState } from 'react';
 import { EnvelopeIcon, PhoneIcon, MapPinIcon, ArrowRightIcon, CheckCircleIcon } from '@heroicons/react/24/outline';
+<<<<<<< HEAD
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
+=======
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
 import Link from 'next/link';
-import { ArrowRightIcon } from '@heroicons/react/24/outline';
+
 
 export default function ContactPage() {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    company: '',
+    service: '',
+    message: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    
+    // Simulate form submission
+    await new Promise(resolve => setTimeout(resolve, 1000));
+    
+    setSubmitStatus('success');
+    setIsSubmitting(false);
+    setFormData({
+      name: '',
+      email: '',
+      company: '',
+      service: '',
+      message: ''
+    });
+  };
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
-      <div className="container mx-auto px-4 py-20">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-gray-900 mb-6">
-            Get In Touch
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            Contact Us
           </h1>
+<<<<<<< HEAD
 <<<<<<< HEAD
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Ready to transform your business with our AI solutions and enterprise services? 
@@ -24,45 +66,19 @@ export default function ContactPage() {
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Ready to transform your business? Let&apos;s discuss your project and discover how our solutions can accelerate your growth.
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
+=======
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Ready to transform your business? Let&apos;s discuss your project and discover how our solutions can accelerate your growth.
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
           </p>
         </div>
-        
-        <div className="max-w-4xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Contact Information */}
-            <div className="space-y-8">
-              <div>
-                <h2 className="text-2xl font-semibold text-gray-900 mb-6">Contact Information</h2>
-                <div className="space-y-4">
-                  <div className="flex items-center">
-                    <span className="text-blue-600 mr-3">📧</span>
-                    <span className="text-gray-700">contact@ziontechgroup.com</span>
-                  </div>
-                  <div className="flex items-center">
-                    <span className="text-blue-600 mr-3">📞</span>
-                    <span className="text-gray-700">+1 (302) 464-0950</span>
-                  </div>
-                  <div className="flex items-center">
-                    <span className="text-blue-600 mr-3">🌐</span>
-                    <a href="https://ziontechgroup.com" className="text-gray-700 hover:text-blue-600">
-                      ziontechgroup.com
-                    </a>
-                  </div>
-                </div>
-              </div>
-              
-              <div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Why Choose Us?</h3>
-                <ul className="space-y-2 text-gray-600">
-                  <li>• 1000+ successful projects delivered</li>
-                  <li>• 24/7 technical support</li>
-                  <li>• Enterprise-grade security</li>
-                  <li>• Custom AI solutions</li>
-                  <li>• Rapid development cycles</li>
-                </ul>
-              </div>
-            </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          {/* Contact Form */}
+          <div className="bg-gray-800 rounded-lg p-8">
+            <h2 className="text-2xl font-bold text-white mb-6">Send us a message</h2>
             
+<<<<<<< HEAD
 <<<<<<< HEAD
             {/* CTA Section */}
             <div className="bg-white rounded-xl shadow-lg p-8">
@@ -86,6 +102,8 @@ export default function ContactPage() {
                   Call Now
                 </a>
 =======
+=======
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
             {submitStatus === 'success' && (
               <div className="mb-6 p-4 bg-green-900 border border-green-700 rounded-lg flex items-center">
                 <CheckCircleIcon className="w-5 h-5 text-green-400 mr-3" />
@@ -227,13 +245,19 @@ export default function ContactPage() {
                   <p className="text-gray-300">364 E Main St STE 1008<br />Middletown, DE 19709</p>
                   <p className="text-gray-400 text-sm">Visit us by appointment</p>
                 </div>
+<<<<<<< HEAD
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
+=======
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
               </div>
             </div>
           </div>
         </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
 
         {/* Map Section (Placeholder) */}
         <div className="py-20 bg-white">
@@ -251,12 +275,22 @@ export default function ContactPage() {
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Ready to Transform Your Business?
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We're here to help you succeed. Reach out to us through any of these channels.
+            <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+              Let&apos;s discuss how Zion Tech Group can help you achieve your goals.
             </p>
+            <Link
+              href="/services"
+              className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-1 inline-flex items-center"
+            >
+              View Our Services
+              <ArrowRightIcon className="h-5 w-5 ml-2" />
+            </Link>
           </div>
         </div>
+<<<<<<< HEAD
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
+=======
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
       </div>
     </div>
   );

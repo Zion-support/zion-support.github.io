@@ -5,12 +5,15 @@ import { ArrowRightIcon } from '@heroicons/react/24/outline';
 export const metadata = {
   title: 'Ai Chatbot - Zion Tech Group',
   description: 'Professional ai chatbot solutions for your business needs.',
+<<<<<<< HEAD
 =======
 
   title: 'Ai Chatbot | Zion Tech Group',
   description: 'Professional ai chatbot services for your business needs.',
   keywords: 'ai-chatbot, services, business, technology'
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
+=======
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
 };
 
 export default function AiChatbotPage() {
@@ -125,6 +128,7 @@ export default function AiChatbotPage() {
     </div>
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 }
@@ -132,3 +136,6 @@ export default function AiChatbotPage() {
 
 
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
+=======
+}
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0

@@ -155,6 +155,7 @@ export default ApiDevelopmentChat
 
 
 
+<<<<<<< HEAD
 const ApiDevelopmentChat: NextPage = () => {
  ;
   return (
@@ -173,6 +174,8 @@ const ApiDevelopmentChat: NextPage = () => {
 }
 
 export default ApiDevelopmentChat;
+=======
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
 
         <title>ApiDevelopmentChat - Zion Tech Solutions</title>
         <title>ApiDevelopmentChat - Zion Tech Solutions</title>

@@ -148,6 +148,7 @@ export default PerformanceOptimizationChat
 
 
 
+<<<<<<< HEAD
 const PerformanceOptimizationChat: NextPage = () => {
  ;
   return (
@@ -169,6 +170,8 @@ const PerformanceOptimizationChat: NextPage = () => {
 }
 
 export default PerformanceOptimizationChat;
+=======
+>>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
 
         <title>PerformanceOptimizationChat - Zion Tech Solutions</title>
         <title>PerformanceOptimizationChat - Zion Tech Solutions</title>
