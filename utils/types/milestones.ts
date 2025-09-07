@@ -1,77 +1,46 @@
+export type MilestoneStatus = | 'Pending' | 'In Progress' | 'Submitted' | 'Approved' | 'Paid';
+export type ProjectParticipantRole = 'client' | 'talent';
 export type ProjectParticipants = {
-
-export type ProjectParticipants = {;
-
-
-  clientUserId: string;,
+  clientUserId: string;
   talentUserId: string;
 }
-export type Project = {  id: string;,
+export type Project = {  id: string;
   title: string;
   description?: string;
-  title: string;
-  description?: string;
-  due_date: string;,
-  amount_usd: number;
-  status: 'pending' | 'completed' | 'cancelled';'
+  dueDate: string;
+  amountUsd: number;
+  status: 'pending' | 'completed' | 'cancelled';
   attachments?: MilestoneAttachment[];
-
-  updatedAt: string;
+  createdAt: string;
+  updatedAt: string
 }
 export function isMilestoneStatus(value: string): value is MilestoneStatus {
-  // TODO: Implement
-}
   return (
-)
+    value === 'Pending' |
+    value === 'In Progress' |
+    value === 'Submitted' |
+    value === 'Approved' |
+    value === 'Paid'
   );export interface MilestoneAttachment {
-  // TODO: Implement
-}'
-    value === 'Pending' ||''
-    value === 'In Progress' ||''
-    value === 'Submitted' ||''
-    value === 'Approved' ||;''
-    value === 'Paid';'
-  );export interface MilestoneAttachment {;
-  id: string;,
+  id: string;
   name: string;
-  url: string;,
+  url: string;
   type: string;
   size: number;
-export interface CreateMilestoneRequest {
-  // TODO: Implement
+  uploadedAt: string
 }
-export interface CreateMilestoneRequest {;
-
+export interface CreateMilestoneRequest {
   title: string;
   description?: string;
+  dueDate: string;
+  amountUsd: number;
+  attachments?: MilestoneAttachment[]
 }
 export interface UpdateMilestoneRequest {
-  // TODO: Implement
-}
-export interface UpdateMilestoneRequest {;
-
-export interface UpdateMilestoneRequest {
-  // TODO: Implement
-}
   title?: string;
   description?: string;
-  due_date?: string;
-  amount_usd?: number;'
-  status?: 'pending' | 'completed' | 'cancelled';'
+  dueDate?: string;
+  amountUsd?: number;
+  status?: 'pending' | 'completed' | 'cancelled';
   attachments?: MilestoneAttachment[];
 }
-
-
-export function getDaysUntilDue(milestone: Milestone): number | null {
-  // TODO: Implement
-}
-  if (!milestone.dueDate) return null;
-  const dueDate = new Date(milestone.dueDate);
-  const now = new Date();
-  const diffTime = dueDate.getTime() - now.getTime();
-  return Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-}
-
-}
-}
-'

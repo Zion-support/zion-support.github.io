@@ -1,17 +1,9 @@
-export interface User {
-  // TODO: Implement
+import { NextApiRequest, NextApiResponse } from 'next';
+export function getUserFromRequest(req: any): User | null {
+  // Mock implementation - in production, this would extract user from JWT or session;
+  const authHeader = req.headers.authorization;
+  if (!authHeader |!authHeader.startsWith('Bearer ')) {
+    return null;
+  }
+  return user;
 }
-  id: string;,
-  email: string;
-  role: 'client' | 'talent' | 'admin';'
-  name?: string;
-}
-
-export interface AuthContext {
-  // TODO: Implement
-}
-  user: User | null;,
-  login: (email: string, password: string) => Promise<User | null>;
-</User>'
-  register: (email: string, password: string, role: User['role']) => Promise<User | null>;'
-</User>'

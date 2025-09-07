@@ -1,8 +1,8 @@
 export default {
-  // TODO: Implement
-}
-  plugins: {,
-  tailwindcss: {},
-    autoprefixer: {},
+
+  plugin: s: {
+    tailwindcs: s: {},
+    autoprefixe: r: {},
   },
+
 };

@@ -1,116 +1,159 @@
-import React from 'react';''
-import MainLayout from '../components/layout/MainLayout';'
-const Page = () => {
-  return (
-    <MainLayout;'
-      title="404 - Page Not Found"""
-      description="Page not found""
-    >
-</MainLayout>"
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center">"
-</div>"
-        <div className="text-center">"
-</div>"
-          <h1 className="text-6xl font-bold text-gray-900 mb-4">404</h1>""
-          <p className="text-xl text-gray-600 mb-8">Page not found</p>""
-          <a href="/" className="text-blue-600 hover:text-blue-800">"
-</a>
-          </a>
-        </div>
-      </div>
-    </MainLayout>
-          </Link>
-        </main>
-      </div>
-    </>)
-  );
-"
-import Head from 'next / head';''
-import Link from 'next / link';'
-;
-export default /**
- * Custom404 - Function description;
- */
-function Custom404() {
+import React from "react";
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { Home, ArrowLeft, Search, HelpCircle } from 'lucide-react;
+}
 
-  } catch (error) {'
-    console.error("Error:", error);""
-    return res.status(500).json({ error: "Internal server error" });""
-import type { NextPage } from 'next';''
-import Head from 'next/head';'
-const NotFoundPage: NextPage = () => {
-
-  return (
-    <>;
-      <Head>;
+export default function Custom404() {},";
+  {'
+  return (')
+    <div className="min-h-screen bg-gray-50">
+</div>
+      <Head>
 </Head>
-          </Link>;
-        </div>;
-        <title>404 - Page Not Found</title>
-      </Head>'
-      <div className="min-h-screen bg-slate-950 text-white flex flex-col items-center justify-center py-12">"
-</div>"
-        <main className="text-center max-w-2xl px-4">"
-</main>"
-          <h1 className="text-6xl font-bold mb-4 gradient-text">404</h1>""
-          <h2 className="text-3xl font-semibold text-gray-200 mb-6">Page Not Found</h2>""
-          <p className="text-lg text-gray-400 mb-8">"
-</p>
-          </p>"
-          <Link href="/" className="btn-primary">"
-</Link>"
-      <div className="min-h-screen flex items-center justify-center bg-gray-50">"
-</div>"
-        <div className="text-center">"
-</div>"
-          <h1 className="text-6xl font-bold text-gray-900 mb-4">404</h1>""
-          <p className="text-xl text-gray-600 mb-8">Page not found</p>""
-          <Link href="/" className="text-blue-600 hover:text-blue-800">"
-</Link>
-          </Link>
-        </main>
-      </div>
-    </>)
-  );
-;
-export default /**
- * Custom404 - Function description;
- */
-function Custom404() {
-
-  } catch (error) {"
-    console.error("Error:", error);""
-    return res.status(500).json({ error: "Internal server error" });"
-const NotFoundPage: NextPage = () => {
-  return (
-    <>;
-      <Head>;
-</Head>
-        <title>404 - Page Not Found | Zion Tech Group</title>;"
-        <meta name="description" content="The page you're looking for doesn't exist." />;"
-</meta>"
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />;"
+        <title>404 - Page Not Found | Zion Tech Group
+        <meta name="description" content="The page you&apos;re looking for doesn&apos;t exist. Return to our homepage or explore our services." />"
 </meta>
-      </Head>;"
-      <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white flex items-center justify-center">;"
-</main>"
-        <div className="text-center">;"
-</div>"
-          <h1 className="text-6xl font-bold mb-4">404</h1>;""
-          <h2 className="text-2xl font-semibold mb-4">Page Not Found</h2>;""
-          <p className="text-slate-300 mb-8">;"
+      </Head>
+"
+      <div className="min-h-screen bg-gray-50">
+</div>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }},
+  {
+          animate={{ opacity: 1, y: 0 }},
+  {
+          transition={{ duration: 0.6 }},
+  {
+        >
+
+          <div className="min-h-screen bg-gray-50">
+</div>
+            <motion.div
+              className="text-9xl font-bold text-blue-600 mb-4"
+              animate={{ },
+  {
+                scale: ["1", "1.1", "1"],
+                rotate: ["0", "5", "-5", "0"]
+  }},
+  {
+              transition={{ },
+  {
+                duration: 2,
+                repeat: Infinity,
+                repeatType: "reverse"
+              }},
+  {
+            >
+</motion>
+            
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">"
+</h1>
+            
+            <p className="text-xl text-gray-600 mb-8">"
 </p>
-          </p>;
-          <Link;"
-            href="/";""
-            className="px-6 py-3 bg-blue-600: hover:bg-blue-700 rounded-lg font-semibold transition-colors";"
-          >;
+            </p>
+          
+          <div className="min-h-screen bg-gray-50">
+</div>
+            <Link
+              href="/"
+              className="inline-flex items-center gap-2 bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors"
+            >
+
+              <Home className="w-5 h-5" />"
+</Home>
+            </Link>
+            <button);
+              onClick={() => window.history.back()},
+  {
+
+              <ArrowLeft className="w-5 h-5" />"
+</ArrowLeft>
+            </button>
+          
+          <div className="min-h-screen bg-gray-50">
+
+            <h2 className="text-2xl font-bold text-gray-900 mb-6">"
+</h2>
+            
+            <div className="min-h-screen bg-gray-50">
+</div>
+              <Link
+                href="/services"
+                className="p-4 rounded-lg border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors group"
+              >
+
+                <div className="min-h-screen bg-gray-50">
+
+                  <div className="min-h-screen bg-gray-50">
+
+                    <Search className="w-6 h-6 text-blue-600" />"
+</Search>
+                  
+                  <h3 className="font-semibold text-gray-900 group-hover:text-blue-600">"
+</h3>
+                  
+                  <p className="text-sm text-gray-600">"
+</p>
+                  </p>
+                </div>
+              </Link>
+
+              <Link
+                href="/about"
+                className="p-4 rounded-lg border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors group"
+              >
+
+                <div className="min-h-screen bg-gray-50">
+
+                  <div className="min-h-screen bg-gray-50">
+
+                    <HelpCircle className="w-6 h-6 text-blue-600" />"
+</HelpCircle>
+                  
+                  <h3 className="font-semibold text-gray-900 group-hover:text-blue-600">"
+</h3>
+                  
+                  <p className="text-sm text-gray-600">"
+</p>
+                  </p>
+                </div>
+              </Link>
+
+              <Link
+                href="/contact"
+                className="p-4 rounded-lg border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors group"
+              >
+
+                <div className="min-h-screen bg-gray-50">
+
+                  <div className="min-h-screen bg-gray-50">
+
+                    <HelpCircle className="w-6 h-6 text-blue-600" />"
+</HelpCircle>
+                  
+                  <h3 className="font-semibold text-gray-900 group-hover:text-blue-600">"
+</h3>
+                  
+                  <p className="text-sm text-gray-600">"
+</p>
+                  </p>
+                </div>
+              </Link>
+            </div>
+          
+          <div className="min-h-screen bg-gray-50">
+
+            <p className="text-gray-600">"
+
+              <Link href="/contact" className="text-blue-600 hover:text-blue-800 font-medium">"
 </Link>
-          </Link>;
-        </div>;
-      </main>;
-    </>;)
+              </Link>
+            </p>
+          </div>
+        </motion.div>
+      </div>
+    </div>
   );
-  } catch (error) {"
-    console.error("Error:", error);""
-    return res.status(500).json({ error: "Internal server error" });""

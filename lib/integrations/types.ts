@@ -1,66 +1,73 @@
-export type IntegrationCategory = 'crm' | 'ats' | 'email' | 'analytics';
-export type IntegrationProviderId = 
-  | 'salesforce' 
-  | 'hubspot' 
-  | 'zoho' 
-  | 'pipedrive' 
-  | 'greenhouse' 
-  | 'lever' 
-  | 'workable' 
-  | 'bamboohr'
-  | 'mailchimp'
-  | 'sendgrid'
-  | 'google_analytics'
-  | 'mixpanel';
+export type IntegrationCategory = any;
+  events: ZapierEvent[]
+}
+export type IntegrationCategory = 'crm' | 'ats';
 
-export type SyncStatus = 'connected' | 'warning' | 'disconnected';
+export type IntegrationProviderId = | 'salesforce' | 'hubspot' | 'zoho' | 'pipedrive' | 'greenhouse' | 'lever' | 'workable' | 'bamboohr';export type SyncStatus = 'connected' | 'warning' | 'disconnected';
+export type IntegrationProviderId ='
+  | 'salesforce''
+  | 'hubspot''
+  | 'zoho''
+  | 'pipedrive''
+  | 'greenhouse''
+  | 'lever'
 
+  | 'workable';
+'
+  | 'bamboohr';
 export interface IntegrationProviderMeta {
-  id: IntegrationProviderId;
-  name: string;
-  category: IntegrationCategory;
-  description?: string;
-  icon?: string;
-  oauthScopes?: string[];
+  id: IntegrationProviderId, name: string
+  category: IntegrationCategory, description?: string,  oauthScopes?: string[];
+  icon?: string
 }
-
+export interface SyncRules {
+  // CRM rules;
+  autoCreateContacts?: boolean;
+  pushNotesMode?: 'auto' | 'manual';
+  // ATS rules
+  autoSyncApplicants?: boolean;
+  autoUploadResumes?: boolean;
 export interface ProviderConnection {
-  id: string;
   providerId: IntegrationProviderId;
-  name: string;
-  status: SyncStatus;
-  lastSync?: string;
-  config: Record<string, any>;
-  createdAt: string;
-  updatedAt: string;
-}
+  status: SyncStatus;  accessToken?: string;  refreshToken?: string;
+  expiresAt?: number;
+  connectedAt?: number;
+  syncRules?: SyncRules;
+  lastSyncAt?: number;
 
-export interface SyncLogEntry {
   id: string;
-  timestamp: string;
-  connectionId: string;
+  timestamp: number;
+  provider_id: IntegrationProviderId;'
+  level: 'info' | 'warn' | 'error';
   action: string;
-  status: 'success' | 'error' | 'warning';
-  details?: string;
-  result?: string;
-  error?: string;
-}
 
+export interface ManualOverride {
+
+  job_id: string;
+  disableCrmSync?: boolean;
+  disableAtsSync?: boolean;
+export interface ZapierEvent {
+  id: string;
+
+  type: 'zion && zion.job.posted' | 'zion && zion.talent.matched';
+  timestamp: number;
+
+  payload: Record < string, any>;
+;
+
+export interface ManualOverride {;
+  jobId: string;
+  disableCrmSync?: boolean;
+  disableAtsSync?: boolean;
+
+export interface ZapierEvent {;
+  id: string;'
+  type: 'zion.job.posted' | 'zion.talent.matched';
+  timestamp: number;
+  payload: Record<string, any>;
 export interface IntegrationsState {
   connections: ProviderConnection[];
-  syncLogs: SyncLogEntry[];
-  lastSync: string | null;
-}
-
-export interface SyncResult {
-  success: boolean;
   logs: SyncLogEntry[];
-  error?: string;
-}
-
-export interface IntegrationConfig {
-  apiKey?: string;
-  secretKey?: string;
-  webhookUrl?: string;
-  customFields?: Record<string, any>;
+  overrides: ManualOverride[];
+  events: ZapierEvent[];  events: ZapierEvent[]
 }

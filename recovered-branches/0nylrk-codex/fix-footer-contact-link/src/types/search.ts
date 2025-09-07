@@ -1,94 +1,58 @@
 export interface SearchSuggestion {
-  // TODO: Implement
-}
-  text: string;,
-  type: "product" | "category" | "tag" | "skill" | "person" | "recent";"
-  iconUrl?: string;
+  text: string;
+
+  type: 'product' | 'category' | 'tag' | 'skill' | 'person' | 'recent'
+
+  iconUrl?: string
 }
 export interface SearchHighlight {
-  // TODO: Implement
-}
-  before: string;,
-  match: string;
-  after: string;
+  before: string;
+
+  match: string
+
+  after: string
 }
 export interface FilterOptions {
-  // TODO: Implement
-}
-  productTypes: {,
-  label: string;
-    value: string;
+  productTypes: {
+
+    label: string
+    value: string
   }[];
-  locations: {,
-  label: string;
-    value: string;
+  locations: {
+    label: string
+    value: string
   }[];
-  availabilityOptions: {,
-  label: string;
-    value: string;
+  availabilityOptions: {
+    label: string
+
+    value: string
   }[];
-  ratingOptions: number[];
+  ratingOptions: number[]
 }
-
-
-export interface SearchSuggestion {;
-
-}
-;
-}
-
-export interface SearchSuggestion {;
-  text:string,;"
-  type:'product' | 'category' | 'tag' | 'skill' | 'person' | 'recent',;'
-  iconUrl?:string;
+  text: string,;
+  type: 'product' | 'category' | 'tag' | 'skill' | 'person' | 'recent',;
+  iconUrl?: string;
 }
 ;
 export interface SearchHighlight {;
-  before:string,;
-  match:string,;
-  after:string;
-}
-;
-export interface FilterOptions {;
-  productTypes: {;,
-  label:string,;
-    value:string;
-  }[],;
-  locations: {;,
-  label:string,;
-    value:string;
-  }[],;
-  availabilityOptions: {;,
-  label:string,;
-    value:string;
-  }[],;
-  ratingOptions:number[];
-} 
-}
+  before: string,;
+  match: string,;
   after: string;
 }
 ;
 export interface FilterOptions {;
-  productTypes: {;,
-  label: string,;
+  productTypes: {;
+    label: string,;
     value: string;
   }[],;
-  locations: {;,
-  label: string,;
+  locations: {;
+    label: string,;
     value: string;
   }[],;
-  availabilityOptions: {;,
-  label: string,;
+  availabilityOptions: {;
+    label: string,;
     value: string;
   }[];
   ratingOptions: number[];
 }
 ;
-}
-;
-export interface SearchSuggestion {
-  // TODO: Implement
-}
-  text: string;
-}
-'

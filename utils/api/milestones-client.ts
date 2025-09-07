@@ -1,29 +1,57 @@
-export interface Milestone {
-  // TODO: Implement
+export async function fetchMilestones() {
+  const res = await fetch(`/api/projects/${projectId}/milestones`, {headers: { 'Content-Type': 'application/json' }
+    credentials: 'include'});
+  if (!res.ok) throw new Error('Failed to load milestones');
+  return res.json();
 }
-  id: string;,
-  title: string;
-  description: string;,
-  status: 'pending' | 'in-progress' | 'completed';'
-  dueDate: string;,
-  projectId: string;
+export async function createMilestone() {
+  const res = await fetch(`/api/projects/${projectId}/milestones`, {method: 'POST';
+    headers: { 'Content-Type': 'application/json' }
+    credentials: 'include';
+    body: JSON.stringify(payload)});
+  if (!res.ok) throw new Error(await res.text());
+  return res.json();
 }
-
-export interface CreateMilestonePayload {
-  // TODO: Implement
+export async function updateMilestoneStatus() {
+  const res = await fetch(`/api/projects/${projectId}/milestones/${milestoneId}`, {method: 'PATCH';
+    headers: { 'Content-Type': 'application/json' }
+    credentials: 'include';
+    body: JSON.stringify(body)});
+  if (!res.ok) throw new Error(await res.text());
+  return res.json();
+    credentials: 'include'});
+  if (!res.ok) throw new Error('Failed to load milestones');
+  return res.json();
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
-  title: string;,
-  description: string;
-  dueDate: string;
+;
+export async function createMilestone(projectId: string, payload: any) {;
+  const res = await fetch(`/api/projects/${projectId}/milestones`, {;
+    method: 'POST',;
+    headers: { 'Content-Type': 'application/json' },;
+    credentials: 'include',;
+    body: JSON.stringify(payload)}),;
+  if (!res.ok) throw new Error(await res.text()),;
+  return res.json();
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
-
-export interface UpdateMilestoneStatusPayload {
-  // TODO: Implement
-}'
-  status: Milestone['status'];'
+;
+export async function updateMilestoneStatus(projectId: string, milestoneId: string, body: any) {;
+  const res = await fetch(`/api/projects/${projectId}/milestones/${milestoneId}`, {;
+    method: 'PATCH',;
+    headers: { 'Content-Type': 'application/json' },;
+    credentials: 'include',;
+    body: JSON.stringify(body)}),;
+  if (!res.ok) throw new Error(await res.text());
+  return res.json();
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
-
-export async function createMilestone(projectId: string, payload: CreateMilestonePayload): Promise<Milestone> {
-</Milestone>
-): Promise<Milestone> {
-</Milestone>'
