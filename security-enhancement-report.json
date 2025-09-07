@@ -1,37 +1,21 @@
 {
-  "timestamp": "2025-09-07T09:15:57.078Z",
-  "totalDuration": "4837ms",
-  "securityChecks": [
-    "NPM security audit completed",
-    "Dependency security check completed"
+  "timestamp": "2025-09-07T05:28:40.090Z",
+  "duration": 1926,
+  "securityImprovements": [
+    "Fixed npm vulnerabilities automatically",
+    "No known vulnerable packages detected",
+    "Created .env.example template",
+    "Content Security Policy configuration prepared",
+    "Implemented rate limiting utility",
+    "Implemented input validation schemas"
   ],
   "vulnerabilities": [],
-  "fixes": [
-    "Security vulnerabilities fixed",
-    "Security headers configuration created",
-    "Security configuration created"
-  ],
-  "errors": [
-    {
-      "command": "npm outdated",
-      "description": "Checking for outdated packages",
-      "error": "Command failed: npm outdated\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n"
-    }
-  ],
-  "metrics": {
-    "totalChecks": 2,
-    "totalFixes": 3,
-    "totalErrors": 1,
-    "securityScore": 80
-  },
-  "recommendations": [
-    "Regularly update dependencies",
-    "Implement Content Security Policy",
-    "Use HTTPS in production",
-    "Enable rate limiting",
-    "Implement proper authentication",
-    "Regular security audits",
-    "Monitor for vulnerabilities",
-    "Use security headers"
-  ]
+  "errors": [],
+  "summary": {
+    "totalImprovements": 6,
+    "totalVulnerabilities": 0,
+    "totalErrors": 0,
+    "securityScore": 100,
+    "success": true
+  }
 }

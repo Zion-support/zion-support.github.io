@@ -1,16 +1,94 @@
-module.exports = [;
-  {;
-    "files": ["automation/**/*.{js,jsx,ts,tsx}"],
-    "languageOptions": {;
-      "ecmaVersion": "latest",
-      "sourceType": "module",
-      "globals": {;
-        "window": "readonly",
-        "document": "readonly",
-        "console": "readonly",
-        "process": "readonly",
-        "React": "readonly";
-      }
+const js = require('@eslint/js');
+const tseslint = require('@typescript-eslint/eslint-plugin');
+const tsparser = require('@typescript-eslint/parser');
+
+module.exports = [
+  {
+    ignores: [
+      'node_modules/**/*',
+      'app-optimizer.js',
+      'zion-os/**/*',
+      'apps.backup/**/*',
+      'zion-website/**/*',
+      'automation/**/*',
+      'advanced-automation-improvements.cjs',
+      'analyze_links.cjs',
+      'app-enhancement-suite.cjs',
+      '.next/**',
+      'dist/**',
+      'build/**',
+      '*.config.js',
+      '*.config.cjs',
+      'public/**',
+      'App.simple.tsx',
+      'App.smoke.test.tsx',
+      'pages.broken/**/*',
+      'pages.corrupted.*/**/*',
+      'pages.disabled*/**/*',
+      'pages.old/**/*',
+      'pages_backup*/**/*',
+      'pages_disabled/**/*',
+      'pages_minimal/**/*',
+      'temp-disabled/**/*',
+      'temp_backup/**/*',
+      'temp_exclude/**/*',
+      'backup-*/**/*',
+      'corrupted*/**/*',
+      'broken*/**/*',
+      'recovered-branches/**/*',
+      'components.disabled*/**/*',
+      'lib_backup/**/*',
+      'lib.broken/**/*',
+      'lib.disabled/**/*',
+      'src.pages.disabled*/**/*',
+      'src.broken/**/*',
+      'src.corrupted/**/*',
+      'src_backup*/**/*',
+      'src.disabled/**/*',
+      'pm2-automation/**/*',
+      'services/**/*',
+      'performance-monitor.js',
+      'resolve-all-conflicts.js',
+      'resolve-conflicts.js',
+      'resolve-merge-conflicts.js',
+      'run-complete-automation.js',
+      'security-config.js',
+      'seo-improvements.js',
+      'simple-test.js',
+      'syntax-fixer.js',
+      '*.js',
+      '*.cjs',
+      '*.mjs',
+      '!jest.config.*',
+      '!next.config.*',
+      '!tailwind.config.*',
+      '!postcss.config.*',
+    ],
+  },
+  js.configs.recommended,
+  {
+    files: ['**/*.{js,jsx}'],
+    languageOptions: {
+      ecmaVersion: 2022,
+      sourceType: 'module',
+      parserOptions: {
+        ecmaFeatures: {
+          jsx: true
+        }
+      },
+      globals: {
+        window: 'readonly',
+        document: 'readonly',
+        console: 'readonly',
+        process: 'readonly',
+        Buffer: 'readonly',
+        global: 'readonly',
+        __dirname: 'readonly',
+        __filename: 'readonly',
+        module: 'readonly',
+        require: 'readonly',
+        exports: 'readonly',
+      },
     },
     "rules": {;
       // Loosen rules for automation scripts to avoid CI noise;

@@ -1,18 +1,15 @@
+import type { Metadata } from 'next';
 import React from 'react';
-import './globals.css';
-import { Inter } from 'next/font/google';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import './globals.css';
+import PerformanceMonitor from './components/PerformanceMonitor';
 
-const inter = Inter({ subsets: ['latin'] });
-
-export const metadata = {
-  title: {
-    default: 'Zion Tech Group - Enterprise AI & IT Solutions',
-    template: '%s | Zion Tech Group'
-  },
-  description: 'Leading provider of micro SaaS products, AI services, and IT solutions. 67+ innovative services including cloud optimization, AI automation, quantum computing, and enterprise technology solutions.',
-  keywords: 'micro SaaS, AI services, IT solutions, cloud computing, automation, machine learning, DevOps, cybersecurity, blockchain, quantum computing, enterprise solutions',
+// eslint-disable-next-line react-refresh/only-export-components
+export const metadata: Metadata = {
+  title: 'Zion Tech Group - Leading AI and Technology Solutions',
+  description: 'Zion Tech Group is a leading technology company specializing in AI, autonomous systems, quantum computing, and innovative business solutions.',
+  keywords: ['AI', 'artificial intelligence', 'blockchain', 'technology', 'innovation', 'automation', 'cloud computing', 'cybersecurity', 'data analytics', 'digital transformation'],
   authors: [{ name: 'Zion Tech Group' }],
   creator: 'Zion Tech Group',
   publisher: 'Zion Tech Group',
@@ -28,6 +25,8 @@ export const metadata = {
     },
   },
   openGraph: {
+    title: 'Zion Tech Group - Leading AI and Technology Solutions',
+    description: 'Leading the future of AI, autonomous systems, and innovative technology solutions.',
     type: 'website',
     locale: 'en_US',
     url: 'https://ziontechgroup.com',
@@ -45,12 +44,8 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Zion Tech Group - Enterprise AI & IT Solutions',
-    description: 'Leading provider of micro SaaS products, AI services, and IT solutions.',
-    images: ['/og-image.jpg'],
-  },
-  verification: {
-    google: 'your-google-verification-code',
+    title: 'Zion Tech Group - Leading AI and Technology Solutions',
+    description: 'Leading the future of AI, autonomous systems, and innovative technology solutions.',
   },
 };
 
@@ -60,13 +55,24 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={inter.className}>
-      <body className="min-h-screen bg-white text-gray-900 antialiased">
-        <Header />
-        <main className="flex-1">
-          {children}
-        </main>
-        <Footer />
+    <html lang="en">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link 
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" 
+          rel="stylesheet" 
+        />
+      </head>
+      <body className="font-sans antialiased">
+        <div className="min-h-screen flex flex-col">
+          <Header />
+          <main className="flex-1">
+            {children}
+          </main>
+          <Footer />
+        </div>
+        <PerformanceMonitor />
       </body>
     </html>
   );

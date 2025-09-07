@@ -1,19 +1,20 @@
 import { render, screen } from '@testing-library/react';
-import { describe, it, expect } from 'vitest';
-import App from './App';
-import React from 'react';
+import '@testing-library/jest-dom';
+import HomePage from './app/page';
+
 describe('App', () => {
   it('renders without crashing', () => {
-    render(<App />);
+    render(<HomePage />);
     expect(screen.getByRole('main')).toBeInTheDocument();
   });
+
   it('displays correct content', () => {
-    render(<App />);
+    render(<HomePage />);
     expect(screen.getByText('Welcome to Zion Tech Group')).toBeInTheDocument();
   });
 
   it('handles user interactions', () => {
-    render(<App />);
+    render(<HomePage />);
     expect(screen.getByText(/Welcome to Zion Tech/i)).toBeInTheDocument();
   });
 });
