@@ -122,14 +122,14 @@ export default function InnovativeMicroSAASServices2025() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="Innovative Micro SAAS Services 2025 | Zion Tech Group"
         description="Discover cutting-edge micro SAAS solutions powered by AI, quantum computing, and emerging technologies. Transform your business with our innovative services."
         keywords="micro SAAS, AI services, quantum computing, IoT, blockchain, cybersecurity, digital twin, space technology, sustainable tech"
         url="https://ziontechgroup.com/innovative-micro-saas-services-2025"
       />
-
+      
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20"></div>
