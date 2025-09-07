@@ -436,10 +436,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     history: {
       marketplace: marketplace.map(m => m.trend || generateSeries(14, m.value)),
       dao: dao.map(m => m.trend || generateSeries(14, m.value)),
-      token: token.map(m => m.trend || generateSeries(14, m.value)),
-      multiverse: multiverse.map(m => m.trend || generateSeries(14, m.value)),
-    },
-  };
+      token: token.map(m => m.trend || generateSeries(14, m.value)),}
+      multiverse: multiverse.map(m => m.trend || generateSeries(14, m.value)),}
+    } }
 
 origin/cursor/automate-test-improve-and-merge-code-2533
   if (req.query.compare === 'quarter') {

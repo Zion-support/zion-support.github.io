@@ -26,7 +26,7 @@ type InsightResponse = {
 =======
 type RequestBody = any;
 
-  return res.status(200).json(response)
+  return res.status(200).json({ ok: true });
 }
 <<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533

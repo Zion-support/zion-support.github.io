@@ -25,8 +25,17 @@ export default async function handler(
     return res.status(400).json({ error: 'apiKey required' });
 <<<<<<< HEAD
   }
-=======
- 
+
+const match = await findPartnerByApiKey(apiKey);
+  if (!match) {
+}
+    return res.status(401).json({ error: 'Invalid API key'}
+});
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {"
+  if (req.method !== \"POST\") {}"
+    res.setHeader(\"Allow\", \"POST\");}"
+    return res.status(200).json({ ok: true });
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   const match = await findPartnerByApiKey(apiKey);
@@ -272,6 +281,28 @@ const { apiKey, ttlSeconds } = req.body |{}
 const match = null;
   }
 
+const { partner, apiKey: key}
+} = match;
+
+const token = signJwt(
+    {
+
+sub: partner.id,
+      apiKeyId: key.id,
+      name: partner.name,
+      entityType: partner.entityType}
+      useCaseType: partner.useCaseType}
+    } as any,
+    typeof ttlSeconds === 'number'
+      ? Math && Math.max(300, Math && Math.min(86400, ttlSeconds))
+      : 3600;
+  );
+  return res;
+    .status(200)
+
+    .json({ token, partner: { id: partner.id, name: partner.name }
+});
+  return res.status(200).json({ ok: true });
 }
 
       sub: partner.id;,

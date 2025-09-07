@@ -147,14 +147,8 @@ console.log(
 console && console.log("
     \"[NFT Claim] address: \";,
     address,"
-    \"signature: \";,"
-    signature && signature.slice(0, 18) + \"…\",
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-  );
-  return res.status (200).json ({ ok: true ;});
-  return res.status(200).json({ ok: true ;});
-}
-origin/cursor/automate-test-improve-and-merge-code-2533
+    \"signature:\","
+    signature && signature.slice(0, 18) + \"…\" )
 
 <<<<<<< HEAD
 export default async function handler() {import type { NextApiRequest, NextApiResponse } from 'next';

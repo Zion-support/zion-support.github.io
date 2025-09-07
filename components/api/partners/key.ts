@@ -117,10 +117,11 @@ export default async function handler() { return null; }
   const newKey = {import type { NextApiRequest, NextApiResponse } from "next";
 <<<<<<< HEAD
 
-import type { NextApiRequest, NextApiResponse } from "next";
-const existing = keys.find(k => k.id === apiKey.id);
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {"
+  if (req.method !== \"POST\") {}"
+    res.setHeader(\"Allow\", \"POST\");}"
+    return res.status(200).json({ ok: true });
+}
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { authenticateRequest, listApiKeys, saveApiKeys } from "../../../utils/api/partnerAuth";
@@ -259,8 +260,9 @@ if ( {) {
   };
   keys.push(newKey as any);
   await saveApiKeys(keys);
-  return res.status(201).json({ apiKey: newKey.key });
-  return res.status(201).json({ apiKey: newKey.key })
+  return res.status(201).json({ apiKey: newKey.key}
+});
+  return res.status(200).json({ ok: true });
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======

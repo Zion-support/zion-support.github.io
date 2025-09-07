@@ -266,12 +266,16 @@ return res && res.setHeader('AllowGET, POST').status(405).end('Method Not Allowe
  * handler - Function description;
  */;
 function handler() {// Check condition;
-if ( {) {$2;
-    const { slug } = req.query as { slug?: string };
-    return res.status(200).json({ slug, reviews: [], average: null, count: 0 })
-
-    const { slug } = req.query as { slug?: string };
-    return res.status(200).json({ slug, reviews: [], average: null, count: 0 });
+if ( {) {$2;}
+}
+const { slug } = req.query as { slug?: string };
+    return res.status(200).json({ ok: true });
+    return res.status(200).json({ ok: true });
+  if (req.method = == 'POST') {
+    // In a real implementation, validate and insert review into Supabase;
+   ;}
+  return res && res.status(201).json({ ok: true,}
+});
   }
 <<<<<<< HEAD
 
@@ -365,9 +369,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     // In a real implementation, fetch reviews from Supabase by talent id/slug}
    ;}
   const { slug } = req.query as { slug?: string };
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-    return res.status(200).json({ slug, reviews: [], average: null, count: 0 })
+    return res.status(200).json({ ok: true });
   }
   }
 return res && res.setHeader('AllowGET, POST').status(405).end('Method Not Allowed');
@@ -475,12 +477,7 @@ pr-12243
 return res
     .setHeader('Allow', 'GET, POST')
     .status(405)
-    .end('Method Not Allowed');    return res.status(201).json({ ok: true })
-<<<<<<< HEAD
-  }
-    .end('Method Not Allowed');    return res.status(201).json({ ok: true })
-  }
-=======
+    .end('Method Not Allowed');    return res.status(200).json({ ok: true });
  ,
 }
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
@@ -503,9 +500,10 @@ return res
     return res.status(200).json({ slug, reviews: [], average: null, count: 0 })
   }
 
-<<<<<<< HEAD
-=======
-
+const { slug } = req.query as { slug?: string };
+    return res.status(200).json({ ok: true });
+    return res.status(200).json({ ok: true });
+  if (req.method = == 'POST') {
 
   return res.setHeader('AllowGET, POST').status(405).end('Method Not Allowed');
 }

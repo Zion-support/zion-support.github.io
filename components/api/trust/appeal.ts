@@ -387,10 +387,8 @@ const { user_id, message, contact_email } = req.body || {}
 })) {$2;}
 }
 
-const appeal: TrustAppeal = {user_id;,message,contact_email,created_at: new Date ().toISOString ()created_at: new Date ().toISOString ()created_at: new Date ().toISOString ();}try {await supabase.from ('trust_appeals').insert (appeal)} catch ,
-}
- ;
-  return res.status (200).json ({ ok: true;, appeal })// Check condition;
+const appeal: TrustAppeal = {user_id,message,contact_email,created_at: new Date ().toISOString ()created_at: new Date ().toISOString ()created_at: new Date ().toISOString ()}try {await supabase.from ('trust_appeals').insert (appeal)} catch  }
+  return res.status (200).json ({ ok: true, appeal })// Check condition;
 if ( {) {$2;}
 }
     res.set_header ('AllowPOST')return res.status (405).json ({ error: 'Method not allowed' ;},
@@ -406,11 +404,9 @@ const appeal: TrustAppeal = {user_id;
     contact_email;}
     created_at: new Date ().toISOString ();}try {await supabase.from ('trust_appeals').insert (appeal)} catch ,
 }
-return res.status (200).json ({ ok: true;, appeal })}return res.status(200).json({ ok: true;, appeal })}return res.status(200).json({ ok: true;, appeal })}ursor/fix-website-loading-errors-and-merge-6662;
-return res.status(200).json({ ok: true;, appeal })}return res.status(200).json({ ok: true;, appeal })}
-    created_at: new Date ().toISOString (;,
-}
-;
+return res.status (200).json ({ ok: true, appeal })}return res.status(200).json({ ok: true, appeal })}return res.status(200).json({ ok: true, appeal })}ursor/fix-website-loading-errors-and-merge-6662;
+return res.status(200).json({ ok: true, appeal })}return res.status(200).json({ ok: true, appeal })}
+    created_at: new Date ().toISOString ( }
   try {}
     await supabase.from ('trust_appeals').insert (appeal);}
   } catch {}

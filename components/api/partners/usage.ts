@@ -208,22 +208,15 @@ export default async function handler(
 }
   const summary = await calculateUsageSummary(auth.partner.id);
   return res.status(200).json({ summary });
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== "GET") {;
-=======
-<<<<<<< HEAD
-  const summary = await calculateUsageSummary(auth.partner.id);
-  return res.status(200).json({ summary });
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== "GET") {
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-    res.setHeader("Allow", "GET");
-    return res.status(405).json({ error: "Method Not Allowed" })
-  }
-  const auth = null;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-  return res.status(200).json({ summary })
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {"
+  if (req.method !== \"GET\") {}"
+    res.setHeader(\"Allow\", \"GET\");}"
+    return res.status(200).json({ ok: true });
+}
+
+const auth = null;
+  return res.status(200).json({ ok: true });
 }
 =======
   return res.status(200).json({ summary })

@@ -214,35 +214,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
       reasonSummary: `Analysis unavailable: ${e?.message |'unknown error'}`
     }
-  }
-export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
-) {
-      temperature: 0.2,
-<<<<<<< HEAD
-      max_tokens: 200});
-
-    const content = resp.choices?.[0]?.message?.content || '';
-  if (req.method === 'GET') {
-    try {
-      const analyze = req.query.analyze === 'true';
-    else if (lower.includes('moderate trust')) level = 'Moderate Trust';
-    return { riskLevel: level, reasonSummary: content.trim() }} catch (e: any) {return {riskLevel: 'Moderate Trust';
-      reasonSummary: `Analysis unavailable: ${e?.message |'unknown error'}`;
-    }
-  }
-export default async function handler() {temperature: 0.2,max_tokens: 200})const content  = resp.choices?.[0]?.message?.content || '';const { userId } = req.query;
-  if (!userId || Array.isArray(userId))return res.status(400).json({ error: 'Invalid userId' })if (req.method === 'GET') {try {const analyze = req.query.analyze === 'true';
-    const { OpenAI } = await import($2);
-    const client = new OpenAI($2);
-    const prompt = `Based on user activity logs and sentiment of reviews/messages, classify this user’s behavior as: High Trust / Moderate Trust / Risk Alert. Include a reason summary.\n\nUser: ${userId}\nInputs: ${JSON.stringify(inputs, null, 2)}`,
->>>>>>> origin/main
-
-    return { riskLevel: level, reasonSummary: content.trim() }
-  } catch (e: any) {
-    return { riskLevel: 'Moderate Trust', reasonSummary: `Analysis unavailable: ${e?.message || 'unknown error'}` }
-  }
 }
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -517,7 +488,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     } catch (e: any) {'
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       return res && res.status(500).json({ error: e?.message || 'Failed to compute trust score' })
-    };
+    }
   }
 '
   if (req && req.method === 'POST') {}

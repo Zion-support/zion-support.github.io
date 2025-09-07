@@ -366,9 +366,9 @@ pr-12243
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {appendAuditLog, resolveDataPath} from '../../../../utils / api / storage';
 ;
-<<<<<<< HEAD
+
 export const config = { api: { body_parser: false } }
-;
+
 export default /**
  * handler - Function description
  */

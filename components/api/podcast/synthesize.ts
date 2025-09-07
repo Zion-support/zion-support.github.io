@@ -34,8 +34,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 =======
 const EPISODES_PATH = null;
-    return res.status(500).json({ error: error?.message || 'Synthesis failed' })
-};
+    return res.status(500).json({ error: error?.message || 'Synthesis failed' }) }
+
 const EPISODES_PATH = path.join(
   process.cwd()
   'data'

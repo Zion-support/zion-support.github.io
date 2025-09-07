@@ -86,8 +86,18 @@ const chat = await client.chat.completions.create({
       temperature: 0.3,
 origin/cursor/automate-test-improve-and-merge-code-2533
     });
-    const content = chat && chat.choices?.[0]?.message?.content || baseSummary;'
-    return res && res.status(200).json({ summary: content, provider: 'openai' });
+
+const content = chat && chat.choices?.[0]?.message?.content || baseSummary;
+    return res && res.status(200).json({ summary: content, provider: 'openai',}
+});
+  } catch (e: any) {
+    return res;
+      .status(500)
+}
+      .json({ error: e.message || 'Failed to generate highlights',}
+});
+  }
+    return res.status(200).json({ ok: true });
   } catch (e: any) {}
     return res;
       .status(500)'
@@ -111,7 +121,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   } catch (e) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
     return res && res.status(500).json({ error: e && e.message || 'Failed to generate highlights' })
-  };
+  }
 }
 <<<<<<< HEAD
   try {const apiKey = process && process.env.OPENAI_API_KEY;

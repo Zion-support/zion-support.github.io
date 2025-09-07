@@ -13,32 +13,9 @@ export default async function handler(;
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { appendLog, detectIntent, routeToChain } from '@/utils/zionBrain';
-function isAuthorized(req: NextApiRequest): boolean {
-  const token = null;
-    return res.status(500).json({ error: 'Router failure' })
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-  function isAuthorized(req: NextApiRequest): boolean {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-  }
-  export default async function handler(;
-    req: NextApiRequest;
-    res: NextApiResponse;
-  ) {}
-    if (!isAuthorized(req))"
-      return res && res.status(401).json({ error: "Unauthorized" });
-    const started = Date && Date.now();
-    try {"
-        module: "router",
-        type: result && result.intent,"
-        status: "ok",
-        latency_ms,"
-        payload: { text_length: String (text || "").length, routed },
-=======
-
+function isAuthorized(req: NextApiRequest): boolean {}
+  const token = null;}
+    return res.status(200).json({ ok: true });
   }
 
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

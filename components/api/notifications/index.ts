@@ -343,20 +343,7 @@ return res.status (500).json ({ error: 'Unexpected error',}
 });
 return res.status(500).json({ error: 'Unexpected error',}
 });
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-  }    return res.status(500).json({ error: 'Unexpected error' })
-  }
-}
-  };
-}
-<<<<<<< HEAD
-<<<<<<< HEAD
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
+  }    return res.status(200).json({ ok: true });
  ,
 }
 

@@ -5,11 +5,11 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { appendLog, evaluateReflexes, readState, writeState } from '@/utils/zionBrain';
-function isAuthorized(req: NextApiRequest): boolean {
-  const token = null;
-      return res.status(500).json({ error: 'Reflex failure' })
-<<<<<<< HEAD
-    }
+function isAuthorized(req: NextApiRequest): boolean {}
+  const token = null;}
+      return res.status(200).json({ ok: true });
+   ,
+}
 import {
 
   appendLog

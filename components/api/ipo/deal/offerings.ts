@@ -94,8 +94,7 @@ return res.status (405).json ({ error: 'Method not allowed' });
 
   return res.status(405).json({ error: 'Method not allowed',}
 });
-    return res.status(200).json(offerings)
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+    return res.status(200).json({ ok: true });
   }
     return res.status (200).json (offerings);
   }

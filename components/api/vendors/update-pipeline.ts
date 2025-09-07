@@ -124,8 +124,8 @@ const { itemId, status } = req.body || {},
     updatePipelineItemStatus(String(itemId), String(status) as any);}
     res.status(200).json({ ok: true;,}
 });
-  } catch (e: any) {;}
-    res.status(500).json({ error: e.message;,}
+  } catch (e: any) {
+  res.status(500).json({ error: e.message,}
 });
 
 }

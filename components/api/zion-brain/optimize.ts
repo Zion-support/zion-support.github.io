@@ -59,10 +59,9 @@ export default async function handler() { return null; }
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { appendLog, optimizePrompt } from '@/utils/zionBrain';
-function isAuthorized(req: NextApiRequest): boolean {
-  const token = null;
-    return res.status(500).json({ error: 'Optimization failure' })
-origin/cursor/automate-test-improve-and-merge-code-2533
+function isAuthorized(req: NextApiRequest): boolean {}
+  const token = null;}
+    return res.status(200).json({ ok: true });
   }
   export default async function handler(;
     req: NextApiRequest;

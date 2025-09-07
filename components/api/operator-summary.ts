@@ -161,8 +161,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
     res.status(200).json({ summary, timestamp: new Date().toISOString(),}
 });
-  } catch (e) {}
-    res.status (200).json ({ summary: [], error: 'Failed to compute summary',}
+  } catch (e) {
+  res.status (200).json ({ summary: [], error: 'Failed to compute summary',}
 });
   }
 
