@@ -1,6 +1,5 @@
 import React from 'react';
 import Link from 'next/link';
-import { Metadata } from 'next';
 
 export const metadata = {
   title: 'Zion Tech Group - AI, Micro SaaS & IT Solutions',
@@ -137,7 +136,7 @@ export default function HomePage() {
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-              Let's discuss how our AI, micro SaaS, and IT solutions can drive your business forward.
+              Let&apos;s discuss how our AI, micro SaaS, and IT solutions can drive your business forward.
             </p>
             <Link
               href="/contact"

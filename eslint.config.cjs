@@ -1,6 +1,7 @@
 const js = require('@eslint/js');
 const tseslint = require('@typescript-eslint/eslint-plugin');
 const tsparser = require('@typescript-eslint/parser');
+const jsxA11y = require('eslint-plugin-jsx-a11y');
 
 module.exports = [
   {
@@ -33,10 +34,16 @@ module.exports = [
         exports: 'readonly',
       },
     },
+    plugins: {
+      'jsx-a11y': jsxA11y,
+    },
     rules: {
       'no-unused-vars': 'warn',
       'no-console': 'warn',
       'prefer-const': 'warn',
+      'jsx-a11y/alt-text': 'warn',
+      'jsx-a11y/aria-role': 'warn',
+      'jsx-a11y/tabindex-no-positive': 'warn',
     }
   },
   {
@@ -89,12 +96,16 @@ module.exports = [
     },
     plugins: {
       '@typescript-eslint': tseslint,
+      'jsx-a11y': jsxA11y,
     },
     rules: {
       'no-unused-vars': 'off',
       '@typescript-eslint/no-unused-vars': 'warn',
       'no-console': 'warn',
       'prefer-const': 'warn',
+      'jsx-a11y/alt-text': 'warn',
+      'jsx-a11y/aria-role': 'warn',
+      'jsx-a11y/tabindex-no-positive': 'warn',
     }
   },
   {
