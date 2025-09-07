@@ -14,7 +14,6 @@ export default function ConsultingPage() {
           architecture design, and digital innovation. Get expert guidance for your technology journey.
         </p>
       </section>
-
       {/* Consulting Solutions Showcase */}
       <section className="py-12">
         <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Our Consulting Services</h2>
@@ -63,7 +62,6 @@ export default function ConsultingPage() {
           />
         </div>
       </section>
-
       {/* Core Consulting Services */}
       <section className="py-12 bg-gray-50 rounded-lg">
         <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Core Consulting Services</h2>
@@ -103,7 +101,6 @@ export default function ConsultingPage() {
           />
         </div>
       </section>
-
       {/* Industry Expertise */}
       <section className="py-12">
         <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Industry Expertise</h2>
@@ -130,7 +127,6 @@ export default function ConsultingPage() {
           />
         </div>
       </section>
-
       {/* Consulting Process */}
       <section className="py-12 bg-gray-50 rounded-lg">
         <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Our Consulting Process</h2>
@@ -161,7 +157,6 @@ export default function ConsultingPage() {
           />
         </div>
       </section>
-
       {/* Pricing Plans */}
       <section className="py-12">
         <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Pricing Plans</h2>
@@ -207,19 +202,21 @@ export default function ConsultingPage() {
           />
         </div>
       </section>
-
       {/* Contact CTA */}
       <ContactCTA />
     </div>
   );
+<<<<<<< HEAD
 }
+=======
+>>>>>>> 9e52e46f57e53278f6e8f46f78a33c4d92654ea6
 function ConsultingSolution({ title, description, features, pricing, icon }: {
   title: string
   description: string
   features: string[]
   pricing: string
-  icon: string
-}) {
+  icon: string;
+}) {;
   return (
     <div className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
       <div className="text-4xl mb-4">{icon}</div>
@@ -235,11 +232,11 @@ function ConsultingSolution({ title, description, features, pricing, icon }: {
       </ul>
       <div className="text-lg font-bold text-blue-600">{pricing}</div>
     </div>
-  )
+  );
 function ConsultingServiceItem({ title, details }: {
   title: string
-  details: string[]
-}) {
+  details: string[];
+}) {;
   return (
     <div className="bg-white border border-gray-200 rounded-xl p-6">
       <h3 className="text-xl font-bold text-gray-900 mb-4">{title}</h3>
@@ -252,25 +249,25 @@ function ConsultingServiceItem({ title, details }: {
         ))}
       </ul>
     </div>
-  )
+  );
 function IndustryCard({ title, description, icon }: {
   title: string
   description: string
-  icon: string
-}) {
+  icon: string;
+}) {;
   return (
     <div className="text-center p-6 bg-white rounded-xl border border-gray-200">
       <div className="text-3xl mb-3">{icon}</div>
       <h3 className="text-lg font-semibold text-gray-900 mb-2">{title}</h3>
       <p className="text-gray-600 text-sm">{description}</p>
     </div>
-  )
+  );
 function ProcessStep({ step, title, description, icon }: {
   step: string
   title: string
   description: string
-  icon: string
-}) {
+  icon: string;
+}) {;
   return (
     <div className="text-center p-6 bg-white rounded-xl border border-gray-200">
       <div className="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
@@ -280,14 +277,14 @@ function ProcessStep({ step, title, description, icon }: {
       <h3 className="text-lg font-semibold text-gray-900 mb-2">{title}</h3>
       <p className="text-gray-600 text-sm">{description}</p>
     </div>
-  )
+  );
 function ConsultingPricingPlan({ name, price, duration, features, popular }: {
   name: string
   price: string
   duration: string
   features: string[]
-  popular: boolean
-}) {
+  popular: boolean;
+}) {;
   return (
     <div className={`bg-white border-2 rounded-xl p-6 ${popular ? 'border-blue-500 relative' : 'border-gray-200'}`}>
       {popular && (
@@ -307,6 +304,7 @@ function ConsultingPricingPlan({ name, price, duration, features, popular }: {
             <span className="text-gray-600">{feature}</span>
           </li>
         ))}
+<<<<<<< HEAD
       </ul>
       <a
         href="tel:+13024640950"
@@ -352,3 +350,6 @@ function ContactCTA() {
     </div>
   );
 }
+=======
+      </ul>
+>>>>>>> 9e52e46f57e53278f6e8f46f78a33c4d92654ea6

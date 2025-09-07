@@ -1,15 +1,15 @@
-#!/usr/bin/env node
-const { execSync } = require($2);
+#!/usr/bin/env node,
+  const { execSync } = require($2);
 const fs = require($2);
 const path = require($2);
 console.log($2);
-// Function to fix merge conflicts in a file
-function fixMergeConflicts(filePath) {
+// Function to fix merge conflicts in a file,
+  function fixMergeConflicts(filePath) {
   try {
     let content = fs.readFileSync($2);
     const originalContent = $2;
-    // Remove merge conflict markers and keep HEAD version
-    content = content.replace($2);
+    // Remove merge conflict markers and keep HEAD version,
+  content = content.replace($2);
     content = content.replace($2);
     if (content !== originalContent) {
       fs.writeFileSync($2);
@@ -22,9 +22,8 @@ function fixMergeConflicts(filePath) {
     return false
   }
 }
-
-// Function to get all files recursively
-function getAllFiles(dir, extensions) {
+// Function to get all files recursively,
+  function getAllFiles(dir, extensions) {
   let files = $2;
   try {
     const items = fs.readdirSync($2);
@@ -41,45 +40,41 @@ function getAllFiles(dir, extensions) {
   }
   return files
 }
-
-// Main execution
-async function main() {
+// Main execution,
+  async function main() {
   try {
-    // Check if we're in a git repository
-    execSync($2);
+    // Check if we're in a git repository,
+  execSync($2);
     console.log('✅ Git repository detected')
   } catch (error) {
     console.error($2);
     process.exit(1)
   }
-
   try {
-    // Ensure clean working directory
-    const status = execSync($2);
+    // Ensure clean working directory,
+  const status = execSync($2);
     if (status.trim()) {
       console.log($2);
       execSync('git stash push -m "Auto-stash before merge process"')
     }
-
-    // Fetch latest changes
-    console.log($2);
+    // Fetch latest changes,
+  console.log($2);
     execSync($2);
-    // Switch to main branch
-    console.log($2);
+    // Switch to main branch,
+  console.log($2);
     execSync($2);
-    // Pull latest changes
-    console.log($2);
+    // Pull latest changes,
+  console.log($2);
     try {
       execSync('git pull origin main')
     } catch (error) {
       console.log($2);
-      // Find files with merge conflicts
-      const conflictFiles = execSync($2);
+      // Find files with merge conflicts,
+  const conflictFiles = execSync($2);
       if (conflictFiles.trim()) {
         console.log('Found merge conflicts in:', conflictFiles.trim()),
-        
-        // Resolve conflicts by accepting our version
-        const files = conflictFiles.trim().split($2);
+        // Resolve conflicts by accepting our version,
+  const files = conflictFiles.trim().split($2);
         for (const file of files) {
           if (file.trim()) {
             console.log($2);
@@ -91,20 +86,18 @@ async function main() {
             execSync(`git add "${file}"`)
           }
         }
-        
-        // Commit the merge
-        execSync('git commit -m "feat: resolve merge conflicts automatically\n\n- Resolved merge conflicts by accepting appropriate versions\n- Integrated latest changes from main branch\n- All services and improvements preserved"')
+        // Commit the merge,
+  execSync('git commit -m "feat: resolve merge conflicts automatically\n\n- Resolved merge conflicts by accepting appropriate versions\n- Integrated latest changes from main branch\n- All services and improvements preserved"')
       }
     }
-
-    // Now scan for and fix any remaining merge conflicts in files
-    console.log($2);
+    // Now scan for and fix any remaining merge conflicts in files,
+  console.log($2);
     const files = getAllFiles(process.cwd(), ['.tsx.ts.jsx.js.json.md.css']),
     let fixedCount = $2;
     for (const file of files) {
       try {
         const content = fs.readFileSync($2);
-        if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>>')) {
+        if (content.includes('') || content.includes('>>>>>>>')) {
           if (fixMergeConflicts(file)) {
             fixedCount++
           }
@@ -113,28 +106,26 @@ async function main() {
         // Skip files that can't be read;
       }
     }
-
     if (fixedCount > 0) {
       console.log($2);
       execSync($2);
       execSync('git commit -m "fix: resolve remaining merge conflicts in files\n\n- Fixed merge conflict markers in source files\n- Ensured clean codebase without conflicts"')
     }
-
-    // Get all branches
-    console.log($2);
+    // Get all branches,
+  console.log($2);
     const branches = execSync($2);
     const branchList = $2;
     console.log($2);
     branchList.forEach(branch = $2;
-    // Merge each branch
-    for (const branch of branchList) {
+    // Merge each branch,
+  for (const branch of branchList) {
       try {
         const branchName = branch.replace($2);
         console.log($2);
-        // Checkout the branch
-        execSync($2);
-        // Merge into main
-        execSync($2);
+        // Checkout the branch,
+  execSync($2);
+        // Merge into main,
+  execSync($2);
         execSync($2);
         console.log(`✅ Successfully merged ${branchName}`)
       } catch (error) {
@@ -142,19 +133,16 @@ async function main() {
         // Continue with other branches
       }
     }
-
-    // Push all changes
-    console.log($2);
+    // Push all changes,
+  console.log($2);
     execSync($2);
     console.log($2);
     console.log($2);
     console.log($2);
     console.log('✅ Repository is now clean and up to date')
-
   } catch (error) {
     console.error($2);
     process.exit(1)
   }
 }
-
 main().catch($2);

@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+<<<<<<< HEAD
 import { ArrowRightIcon } from '@heroicons/react/24/outline';
 import { Metadata } from 'next';
 
@@ -84,3 +85,6 @@ export default function AboutPage() {
     </div>
   );
 }
+=======
+import { ArrowRightIcon } from '@heroicons/react/24/outline';
+>>>>>>> 9e52e46f57e53278f6e8f46f78a33c4d92654ea6

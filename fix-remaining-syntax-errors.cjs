@@ -2,105 +2,90 @@
 
 const fs = require('fs');
 const path = require('path');
-;
-function fixSyntaxErrors(filePath) {;
-  try {;
+
+console.log('🔧 Fixing remaining syntax errors...');
+
+// List of files with known syntax errors
+const filesToFix = [
+  '/workspace/app/about/page.tsx',
+  '/workspace/app/services/automation/page.tsx',
+  '/workspace/app/services/consulting/page.tsx',
+  '/workspace/pages/api/admin/partners/fraud-flags.ts',
+  '/workspace/pages/api/admin/partners/update.ts'
+];
+
+function fixFile(filePath) {
+  try {
+    if (!fs.existsSync(filePath)) {
+      console.log(`⚠️ File not found: ${filePath}`);
+      return false;
+    }
+
     let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
-;
-    // Fix common syntax errors;
-    // Fix unnecessary escape characters;
-    content = content.replace(/\\:/g, ':');
-    content = content.replace(/\\,/g, ',');
-    content = content.replace(/\\;/g, ';');
-    content = content.replace(/\\}/g, '}');
-    content = content.replace(/\\{/g, '{');
-    content = content.replace(/\\\[/g, '[');
-    content = content.replace(/\\\]/g, ']');
-    content = content.replace(/\\\(/g, '(');
-    content = content.replace(/\\\)/g, ')');
-;
-    // Fix missing semicolons;
-    content = content.replace(/([^;])\s*$/gm, '$1;');
-;
-    // Fix missing commas in objects;
-    content = content.replace(/(\w+):\s*([^,}]+)\s*}/g, '$"1": $2,}');
-;
-    // Fix missing closing braces;
+    let fixed = false;
+
+    // Fix missing closing braces
     const openBraces = (content.match(/\{/g) || []).length;
     const closeBraces = (content.match(/\}/g) || []).length;
-;
-    if (openBraces > closeBraces) {;
+    
+    if (openBraces > closeBraces) {
       const missingBraces = openBraces - closeBraces;
       content += '\n' + '}'.repeat(missingBraces);
-      modified = true;
+      fixed = true;
     }
-;
-    // Fix missing closing parentheses;
-    const openParens = (content.match(/\(/g) || []).length;
-    const closeParens = (content.match(/\)/g) || []).length;
-;
-    if (openParens > closeParens) {;
-      const missingParens = openParens - closeParens;
-      content += ')'.repeat(missingParens);
-      modified = true;
-    }
-;
-    // Fix missing closing brackets;
-    const openBrackets = (content.match(/\[/g) || []).length;
-    const closeBrackets = (content.match(/\]/g) || []).length;
-;
-    if (openBrackets > closeBrackets) {;
-      const missingBrackets = openBrackets - closeBrackets;
-      content += ']'.repeat(missingBrackets);
-      modified = true;
-    }
-;
-    // Fix duplicate imports;
-    const importLines = content.split('\n').filter(line => line.trim().startsWith('import'));
-    const uniqueImports = [...new Set(importLines)];
-    if (importLines.length !== uniqueImports.length) {;
-      const nonImportLines = content.split('\n').filter(line => !line.trim().startsWith('import'));
-      content = uniqueImports.join('\n') + '\n' + nonImportLines.join('\n');
-      modified = true;
-    }
-;
-    // Fix missing React import;
-    if (content.includes('React') && !content.includes("import React")) {;
-      content = "import React from 'react';\n" + content;
-      modified = true;
-    }
-;
-    if (content !== fs.readFileSync(filePath, 'utf8')) {;
+
+    // Fix missing semicolons
+    content = content.replace(/([^;}])\n(\s*)(return|if|const|let|var|function|export|import)/g, '$1;\n$2$3');
+    content = content.replace(/([^;}])\n(\s*)(})/g, '$1;\n$2$3');
+
+    // Fix incomplete function calls
+    content = content.replace(/(\w+)\s*\(\s*\)\s*$/g, '$1();');
+
+    // Fix incomplete object literals
+    content = content.replace(/\{\s*$/g, '{}');
+
+    // Fix incomplete array literals
+    content = content.replace(/\[\s*$/g, '[]');
+
+    // Fix incomplete strings
+    content = content.replace(/"[^"]*$/g, '""');
+    content = content.replace(/'[^']*$/g, "''");
+
+    // Fix incomplete template literals
+    content = content.replace(/`[^`]*$/g, '``');
+
+    // Fix incomplete comments
+    content = content.replace(/\/\*[^*]*$/g, '');
+    content = content.replace(/\/\/[^\n]*$/g, '');
+
+    // Fix incomplete regex
+    content = content.replace(/\/[^/]*$/g, '//');
+
+    // Clean up extra whitespace
+    content = content
+      .replace(/\n\s*\n\s*\n/g, '\n\n')
+      .replace(/^\s*\n/gm, '')
+      .trim();
+
+    if (fixed || content !== fs.readFileSync(filePath, 'utf8')) {
       fs.writeFileSync(filePath, content, 'utf8');
-      modified = true;
+      console.log(`✅ Fixed: ${filePath}`);
+      return true;
     }
-;
-    return modified;
-  } catch (error) {;
-    console.error(`Error processing ${filePath}:`, error.message);
+
+    return false;
+  } catch (error) {
+    console.log(`❌ Error fixing ${filePath}: ${error.message}`);
     return false;
   }
 }
-;
-function processDirectory(dirPath) {;
-  const files = fs.readdirSync(dirPath);
-  let fixedCount = 0;
-;
-  for (const file of files) {;
-    const filePath = path.join(dirPath, file);
-    const stat = fs.statSync(filePath);
-;
-    if (stat.isDirectory()) {;
-      fixedCount += processDirectory(filePath);
-    } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.jsx') || file.endsWith('.js')) {;
-      if (fixSyntaxErrors(filePath)) fixedCount++;
-    }
+
+// Fix all files
+let fixedCount = 0;
+for (const file of filesToFix) {
+  if (fixFile(file)) {
+    fixedCount++;
   }
-;
-  return fixedCount;
 }
-;
-console.log('Starting syntax error fixes...');
-const fixedCount = processDirectory('.');
-console.log(`Fixed ${fixedCount} files`);
+
+console.log(`🎉 Fixed ${fixedCount} files`);

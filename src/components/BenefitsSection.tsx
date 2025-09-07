@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import { GradientHeading } from "./GradientHeading";
 import { FeatureCard } from "./FeatureCard";
@@ -56,3 +57,5 @@ export function BenefitsSection({ className, style }: BenefitsSectionProps) {
     </section>
   )
 }
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-6d57

@@ -14,7 +14,6 @@ export default function AutomationPage() {
           and business process optimization. Streamline operations, reduce costs, and boost efficiency with intelligent automation.
         </p>
       </section>
-
       {/* Automation Solutions Showcase */}
       <section className="py-12">
         <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Our Automation Solutions</h2>
@@ -63,7 +62,6 @@ export default function AutomationPage() {
           />
         </div>
       </section>
-
       {/* Core Automation Services */}
       <section className="py-12 bg-gray-50 rounded-lg">
         <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Core Automation Services</h2>
@@ -103,7 +101,6 @@ export default function AutomationPage() {
           />
         </div>
       </section>
-
       {/* Industry Applications */}
       <section className="py-12">
         <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Industry Applications</h2>
@@ -130,7 +127,6 @@ export default function AutomationPage() {
           />
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className="py-12 bg-gray-50 rounded-lg">
         <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Automation Benefits</h2>
@@ -157,7 +153,6 @@ export default function AutomationPage() {
           />
         </div>
       </section>
-
       {/* Pricing Plans */}
       <section className="py-12">
         <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Pricing Plans</h2>
@@ -203,19 +198,21 @@ export default function AutomationPage() {
           />
         </div>
       </section>
-
       {/* Contact CTA */}
       <ContactCTA />
     </div>
   );
+<<<<<<< HEAD
 }
+=======
+>>>>>>> 9e52e46f57e53278f6e8f46f78a33c4d92654ea6
 function AutomationSolution({ title, description, features, pricing, icon }: {
   title: string
   description: string
   features: string[]
   pricing: string
-  icon: string
-}) {
+  icon: string;
+}) {;
   return (
     <div className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
       <div className="text-4xl mb-4">{icon}</div>
@@ -231,11 +228,11 @@ function AutomationSolution({ title, description, features, pricing, icon }: {
       </ul>
       <div className="text-lg font-bold text-blue-600">{pricing}</div>
     </div>
-  )
+  );
 function AutomationServiceItem({ title, details }: {
   title: string
-  details: string[]
-}) {
+  details: string[];
+}) {;
   return (
     <div className="bg-white border border-gray-200 rounded-xl p-6">
       <h3 className="text-xl font-bold text-gray-900 mb-4">{title}</h3>
@@ -248,38 +245,38 @@ function AutomationServiceItem({ title, details }: {
         ))}
       </ul>
     </div>
-  )
+  );
 function IndustryCard({ title, description, icon }: {
   title: string
   description: string
-  icon: string
-}) {
+  icon: string;
+}) {;
   return (
     <div className="text-center p-6 bg-white rounded-xl border border-gray-200">
       <div className="text-3xl mb-3">{icon}</div>
       <h3 className="text-lg font-semibold text-gray-900 mb-2">{title}</h3>
       <p className="text-gray-600 text-sm">{description}</p>
     </div>
-  )
+  );
 function BenefitCard({ title, description, icon }: {
   title: string
   description: string
-  icon: string
-}) {
+  icon: string;
+}) {;
   return (
     <div className="text-center p-6 bg-white rounded-xl border border-gray-200">
       <div className="text-3xl mb-3">{icon}</div>
       <h3 className="text-lg font-semibold text-gray-900 mb-2">{title}</h3>
       <p className="text-gray-600 text-sm">{description}</p>
     </div>
-  )
+  );
 function AutomationPricingPlan({ name, price, duration, features, popular }: {
   name: string
   price: string
   duration: string
   features: string[]
-  popular: boolean
-}) {
+  popular: boolean;
+}) {;
   return (
     <div className={`bg-white border-2 rounded-xl p-6 ${popular ? 'border-blue-500 relative' : 'border-gray-200'}`}>
       {popular && (
@@ -299,6 +296,7 @@ function AutomationPricingPlan({ name, price, duration, features, popular }: {
             <span className="text-gray-600">{feature}</span>
           </li>
         ))}
+<<<<<<< HEAD
       </ul>
       <a
         href="tel:+13024640950"
@@ -344,3 +342,6 @@ function ContactCTA() {
     </div>
   );
 }
+=======
+      </ul>
+>>>>>>> 9e52e46f57e53278f6e8f46f78a33c4d92654ea6
