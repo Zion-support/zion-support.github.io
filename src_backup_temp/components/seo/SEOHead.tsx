@@ -1,10 +1,20 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 ;
+export function SEOHead(props: any) {
+  const fullTitle = `${title} | Zion Tech Group - AI & Technology Solutions`;';
+  const defaultKeywords = [';';
+    'AI services',';';
+    'technology solutions',';';
+    'enterprise automation',';';
+    'cybersecurity',';';
+    'quantum computing',';';
+    'blockchain solutions',';';
+    'cloud services',';';
+    'digital transformation',';';
 interface SEOHeadProps {
-  title: string;
+  title: string,
   description: string;
-=======
 interface SEOHeadProps {;
   "title": "string;
   "description": string;
@@ -15,6 +25,29 @@ interface SEOHeadProps {;
   ogType?: string;
   ogImage?: string;
   structuredData?: any;
+}
+export function SEOHead({ 
+  title, 
+  description, 
+  keywords = [], 
+  canonicalUrl, 
+  noIndex = false, 
+  noFollow = false, 
+  ogType = 'website', 
+  ogImage = 'https://ziontechgroup.com/images/og-image.png',
+  structuredData 
+}: SEOHeadProps) {
+  const fullTitle = `${title} | Zion Tech Group - AI & Technology Solutions`;
+  const defaultKeywords = [
+    'AI services',
+    'technology solutions',
+    'enterprise automation',
+    'cybersecurity',
+    'quantum computing',
+    'blockchain solutions',
+    'cloud services',
+    'digital transformation',
+    'Zion Tech Group'
 "}
 ;
 export function SEOHead({ ;
@@ -100,11 +133,13 @@ export function SEOHead({ ;
             "addressCountry": "US";
           }
         })}
+      </script>
+    </Helmet>
+  );'
+};';;';
   );
 }
-
 export default SEOHead;
-=======
       </script>;
     </Helmet>;
   );

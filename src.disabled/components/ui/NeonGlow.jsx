@@ -1,13 +1,31 @@
-<<<<<<< HEAD
-import { cn } from @/lib/utils\'; \"export\": function NeonGlow({ children,color =\';\';zion-cyan\',intensity =\';\';medium\',\"className\": = \'';\';,\"customColor\": \''}) {} const getGlowStyles = () => {}\''; const baseColor = customColor || (color === \'zion-cyan\';\'; ? \'#00d4ff\';\';: \''\'';\'; \"color\": === \'zion-purple\';\'; ? \'#a855f7\';\'; : \''\'';\'; color: === \'zion-blue\';\'; ? \'#3b82f6\';\'; : \'#00d4ff) const intensityMap = {} \"low\": {} \"textShadow\": `0: 0 5px ${baseColo,r},0 0 10px ${baseColor}`,\"" \"filter\": `drop-shadow(0: 0 2px ${baseColo,r})` },\"medium\": {}\";\";\";\" \"textShadow\": `0: 0 10px ${baseColo,r},0 0 20px ${baseColor},0 0 30px ${baseColor}`,\""\"" \"filter\": `drop-shadow(0: 0 5px ${baseColo,r}) drop-shadow(0 0 10px ${baseColor})` },\"high\": {}\";\";\"" \"textShadow\": `0: 0 15px ${baseColo,r},0 0 30px ${baseColor},0 0 45px ${baseColor},0 0 60px ${baseColor}`,\""\"" \"filter\": `drop-shadow(0: 0 8px ${baseColo,r}) drop-shadow(0 0 15px ${baseColor}) drop-shadow(0 0 25px ${baseColor})` } return intensityMap[intensity]} const glowStyles = getGlowStyles() return (<span className = {}\''; cn(\'transition-\"all\": duration-300\';\';,className) } style={glowStyles}> {children} </span>)}\'"\'"\';\"';\"
-=======
-<<<<<<< HEAD
-const { cn } from @/lib/utils"; export: function NeonGlow({ children,color =";";zion-cyan",intensity =";";medium",className: = "";";,customColor: ""}) {} const getGlowStyles = () => {}""; const baseColor = customColor | (color === "zion-cyan";"; ? "#00d4ff";";: """";"; color: === "zion-purple";"; ? "#a855f7";"; : """";"; color: === "zion-blue";"; ? "#3b82f6";"; : "#00d4ff) const intensityMap = {} low: {} textShadow: `0: 0 5px ${baseColo,r},0 0 10px ${baseColor}`,"" filter: `drop-shadow(0: 0 2px ${baseColo,r})` },medium: {}";";";" textShadow: `0: 0 10px ${baseColo,r},0 0 20px ${baseColor},0 0 30px ${baseColor}`,"""" filter: `drop-shadow(0: 0 5px ${baseColo,r}) drop-shadow(0 0 10px ${baseColor})` },high: {}";";"" textShadow: `0: 0 15px ${baseColo,r},0 0 30px ${baseColor},0 0 45px ${baseColor},0 0 60px ${baseColor}`,"""" filter: `drop-shadow(0: 0 8px ${baseColo,r}) drop-shadow(0 0 15px ${baseColor}) drop-shadow(0 0 25px ${baseColor})` } return intensityMap[intensity]} const glowStyles = getGlowStyles() return (<span className = {}""; cn("transition-all: duration-300";";,className) } style={glowStyles}> {children} </span>)}""""";"";"'"`'"`
-=======
-import React from 'react';
 
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React from 'react';
 interface NeonGlowProps {
   // Add props here as needed
+
+
 }
 
 export default function NeonGlow({ }: NeonGlowProps) {
@@ -17,6 +35,13 @@ export default function NeonGlow({ }: NeonGlowProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+
 }
->>>>>>> main
->>>>>>> main
+:src.disabled/components/ui/NeonGlow.jsx
+}
+}
+ursor/add-new-services-and-deploy-updates-0462
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+}
+:temp_exclude/src.disabled/components/ui/NeonGlow.jsx
+}

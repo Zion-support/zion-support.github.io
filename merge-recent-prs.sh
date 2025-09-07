@@ -56,7 +56,7 @@ while IFS='|' read -r pr_number pr_title branch_name; do
                 if [[ -f "$file" ]]; then
                     # Remove conflict markers and keep the second version
                     sed -i '//,//d' "$file"
-                    sed -i '/>>>>>>> /d' "$file"
+                    sed -i '/
                 fi
             done
             

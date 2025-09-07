@@ -6,149 +6,11 @@ const { execSync } = require('child_process');
 
 class IntelligentErrorDetector {
   constructor() {
+
     this.projectRoot = process.cwd();
     this.errors = [];
     this.fixes = [];
     this.patterns = {
-      mergeConflicts: /<<<<<<< HEAD[\s\S]*?>>>>>>>/g,
-      syntaxErrors: /SyntaxError|ParseError|Unexpected token/g,
-      typeErrors: /TypeError|Cannot read property|is not defined/g,
-      importErrors: /Cannot resolve module|Module not found/g,
-      lintingErrors: /warning|error.*eslint/g,
-      consoleStatements: /console\.(log|warn|error|info)/g,
-      unusedImports: /import.*from.*['"][^'"]*['"];?\s*$/gm,
-      unescapedEntities: /[^\\]'|[^\\]"/g
-    };
-  }
-
-  log(message, type = 'INFO') {
-    const timestamp = new Date().toISOString();
-    
-  }
-
-  async scanFile(filePath) {
-    try {
-      const content = fs.readFileSync(filePath, 'utf8');
-      const issues = [];
-      
-      // Check for merge conflicts
-      if (this.patterns.mergeConflicts.test(content)) {
-        issues.push({
-          type: 'merge_conflict',
-          severity: 'error',
-          message: 'Merge conflict markers found',
-          line: this.getLineNumber(content, '<<<<<<< HEAD')
-        });
-      }
-      
-      // Check for console statements
-      const consoleMatches = content.match(this.patterns.consoleStatements);
-      if (consoleMatches) {
-        issues.push({
-          type: 'console_statement',
-          severity: 'warning',
-          message: `Found ${consoleMatches.length} console statements`,
-          count: consoleMatches.length
-        });
-      }
-      
-      // Check for unescaped entities
-      const entityMatches = content.match(this.patterns.unescapedEntities);
-      if (entityMatches) {
-        issues.push({
-          type: 'unescaped_entities',
-          severity: 'error',
-          message: `Found ${entityMatches.length} unescaped entities`,
-          count: entityMatches.length
-        });
-      }
-      
-      // Check for unused imports (basic detection)
-      const importLines = content.split('\n').filter(line => line.includes('import'));
-      const usedImports = new Set();
-      
-      // Simple heuristic: check if import names are used in the file
-      for (const line of importLines) {
-        const importMatch = line.match(/import\s*{([^}]+)}\s*from/);
-        if (importMatch) {
-          const imports = importMatch[1].split(',').map(imp => imp.trim());
-          for (const imp of imports) {
-            if (content.includes(imp) && !line.includes(imp)) {
-              usedImports.add(imp);
-            }
-          }
-        }
-      }
-      
-      if (importLines.length > 0) {
-        const unusedCount = importLines.length - usedImports.size;
-        if (unusedCount > 0) {
-          issues.push({
-            type: 'unused_imports',
-            severity: 'warning',
-            message: `Found ${unusedCount} potentially unused imports`,
-            count: unusedCount
-          });
-        }
-      }
-      
-      return issues;
-    } catch (error) {
-      this.log(`Error scanning file ${filePath}: ${error.message}`, 'ERROR');
-      return [];
-    }
-  }
-
-  getLineNumber(content, searchString) {
-    const lines = content.split('\n');
-    for (let i = 0; i < lines.length; i++) {
-      if (lines[i].includes(searchString)) {
-        return i + 1;
-      }
-    }
-    return 0;
-  }
-
-  async scanDirectory(dirPath) {
-    const files = [];
-    const entries = fs.readdirSync(dirPath, { withFileTypes: true });
-    
-    for (const entry of entries) {
-      const fullPath = path.join(dirPath, entry.name);
-      
-      if (entry.isDirectory() && !entry.name.startsWith('.') && !entry.name.includes('node_modules')) {
-        files.push(...await this.scanDirectory(fullPath));
-      } else if (entry.isFile() && this.isRelevantFile(entry.name)) {
-        files.push(fullPath);
-      }
-    }
-    
-    return files;
-  }
-
-  isRelevantFile(filename) {
-    const extensions = ['.tsx', '.ts', '.jsx', '.js', '.cjs', '.mjs'];
-    return extensions.some(ext => filename.endsWith(ext));
-  }
-
-  async fixMergeConflicts(filePath) {
-    try {
-      const content = fs.readFileSync(filePath, 'utf8');
-      const lines = content.split('\n');
-      const fixedLines = [];
-      let inConflict = false;
-      let conflictType = null;
-      let headContent = [];
-      let branchContent = [];
-      
-      for (let i = 0; i < lines.length; i++) {
-        const line = lines[i];
-        
-        if (line.includes('<<<<<<< HEAD')) {
-          inConflict = true;
-          conflictType = 'head';
-          continue;
-        } else if (line.includes('=======')) {
           conflictType = 'branch';
           continue;
         } else if (line.includes('>>>>>>>')) {
@@ -303,36 +165,7 @@ class IntelligentErrorDetector {
     
     // Generate report
     this.log('\n📊 INTELLIGENT ERROR DETECTION REPORT');
-    this.log('=====================================');
-    this.log(`Files scanned: ${allFiles.length}`);
-    this.log(`Files with issues: ${this.errors.length}`);
-    this.log(`Fixes applied: ${this.fixes.length}`);
-    
-    if (this.fixes.length > 0) {
-      this.log('\n✅ Fixes applied:');
-      this.fixes.forEach(fix => {
-        this.log(`  - ${fix.file}: ${fix.message}`);
-      });
-    }
-    
-    if (this.errors.length > 0) {
-      this.log('\n⚠️ Remaining issues:');
-      this.errors.forEach(error => {
-        this.log(`  - ${error.file}:`);
-        error.issues.forEach(issue => {
-          this.log(`    * ${issue.type}: ${issue.message}`);
-        });
-      });
-    }
-    
-    this.log('\n🎉 Intelligent error detection completed!');
-    
-    return {
-      filesScanned: allFiles.length,
-      filesWithIssues: this.errors.length,
-      fixesApplied: this.fixes.length,
-      errors: this.errors,
-      fixes: this.fixes
+    this.log('
     };
   }
 }
@@ -343,3 +176,4 @@ if (require.main === module) {
 }
 
 module.exports = IntelligentErrorDetector;
+

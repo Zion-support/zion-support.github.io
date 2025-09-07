@@ -1,5 +1,8 @@
-import React from 'react';
-import Link from 'next/link';';
+import { motion } from 'framer-motion';
+import Link from 'next/link';
+import Layout from '../../components/Layout';
+import { Heart, CreditCard, Globe, GraduationCap, Factory, Home } from 'lucide-react';
+import React from 'react';import Link from 'next/link';';
 import { motion } from 'framer-motion';
 import { BarChart3, Shield, Users, Globe, ArrowRight, CheckCircle, Building, Heart, GraduationCap, Factory, Home, CreditCard } from 'lucide-react';
 import Layout from "../../components/Layout";";
@@ -118,11 +121,6 @@ export default function IndustrySolutionsPage() {
         {/* Stats Section */}
         <section className="py-16 bg-white">"
           <div className="container mx-auto px-4">";
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">";
-              {stats.map((stat, index) => (,
-                <motion.div}),
-                  key={stat.label}
-                  initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   className="text-center""
@@ -158,13 +156,6 @@ export default function IndustrySolutionsPage() {
                   key={industry.name}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  className="bg-white rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-shadow duration-300""
-                >;
-                  <div className="flex items-center mb-6">";
-                    <div className={`w-16 h-16 bg-gradient-to-r ${industry.color} rounded-xl flex items-center justify-center mr-4`}>,
-                      <industry.icon className="w-8 h-8 text-white" />";
-                    </div>;
                     <div>;
                       <h3 className="text-2xl font-bold text-gray-900">{industry.name}</h3>"
                       <p className="text-gray-600">{industry.description}</p>"
@@ -208,13 +199,6 @@ export default function IndustrySolutionsPage() {
                   key={capability.title}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  className="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-xl p-6 hover:shadow-lg transition-shadow duration-300""
-                >;
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">{capability.title}</h3>"
-                  <p className="text-gray-600">{capability.description}</p>"
-                </motion.div>;
-              ))}
             </div>,
           </div>;
         </section>;
@@ -233,19 +217,6 @@ export default function IndustrySolutionsPage() {
               <p className="text-xl text-indigo-100 mb-8 max-w-3xl mx-auto">";
                 Let's discuss how our industry expertise can help you build solutions that meet your specific regulatory and business requirements';
               </p>;
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">";
-                <Link;
-                  href="/contact"";
-                  className="px-8 py-4 bg-white text-indigo-600 hover:bg-gray-100 rounded-lg font-semibold transition-colors inline-flex items-center justify-center"";
-                >;
-                  Schedule Industry Consultation;
-                  <ArrowRight className="ml-2 w-5 h-5" />";
-                </Link>;
-                <Link;
-                  href="/solutions"";
-                  className="px-8 py-4 border border-white text-white hover:bg-white hover:text-indigo-600 rounded-lg font-semibold transition-colors"";
-                >;
-                  View All Solutions;
                 </Link>;
               </div>;
             </motion.div>;

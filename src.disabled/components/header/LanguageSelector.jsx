@@ -1,13 +1,31 @@
-<<<<<<< HEAD
-import { ChevronDown,Globe export const LanguageSelector = () => { const [isOpen,setIsOpen] = useState(false) const [currentLanguage,setCurrentLanguage] = useState(\'EN\') const languages = [\' { \"code\": \'EN,\',\"name\": \'English,\',\"flag\": \'},{ \"code\": \'ES,\',\"name\": \'Espaol,\',\"flag\": \'},{ \"code\": \'FR,\',\"name\": \'Franais,\',\"flag\": \'},{ \"code\": \'DE,\',\"name\": \'Deutsch,\',\"flag\": \'},{ \"code\": \'IT,\',\"name\": \'Italiano,\',\"flag\": \'},{ \"code\": \'PT,\',\"name\": \'Portugus,\',\"flag\": \'},{ \"code\": \'RU,\',\"name\": \',\"flag\": \''},{ \"code\": \'ZH,\',\"name\": \',\"flag\": \''},{ \"code\": \'JA,\',\"name\": \',\"flag\": \''},{ \"code\": \'KO,\',\"name\": \',\"flag\": \''} ] const handleLanguageChange = (languageCode) => { setCurrentLanguage(languageCode) setIsOpen(false)\'';\"";
-=======
-<<<<<<< HEAD
-const { ChevronDown,Globe export const LanguageSelector = () => { const [isOpen,setIsOpen] = useState(false) const [currentLanguage,setCurrentLanguage] = useState("EN") const languages = [" { code: "EN,",name: "English,",flag: "},{ code: "ES,",name: "Espaol,",flag: "},{ code: "FR,",name: "Franais,",flag: "},{ code: "DE,",name: "Deutsch,",flag: "},{ code: "IT,",name: "Italiano,",flag: "},{ code: "PT,",name: "Portugus,",flag: "},{ code: "RU,",name: ",flag: ""},{ code: "ZH,",name: ",flag: ""},{ code: "JA,",name: ",flag: ""},{ code: "KO,",name: ",flag: ""} ] const handleLanguageChange = (languageCode) => { setCurrentLanguage(languageCode) setIsOpen(false)"";"";"""
-=======
-import React from 'react';
 
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React from 'react';
 interface LanguageSelectorProps {
   // Add props here as needed
+
+
 }
 
 export default function LanguageSelector({ }: LanguageSelectorProps) {
@@ -17,6 +35,13 @@ export default function LanguageSelector({ }: LanguageSelectorProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+
 }
->>>>>>> main
->>>>>>> main
+:src.disabled/components/header/LanguageSelector.jsx
+}
+}
+ursor/add-new-services-and-deploy-updates-0462
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+}
+:temp_exclude/src.disabled/components/header/LanguageSelector.jsx
+}

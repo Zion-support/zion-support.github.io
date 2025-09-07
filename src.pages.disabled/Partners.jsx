@@ -1,10 +1,31 @@
-<<<<<<< HEAD
-const partnershipTypes = [{ \"title\": \'Technology: Partners,\',\"description\": \'Collaborate: with leading tech companies to deliver cutting - edge solutions,\',\"icon\": \',\"benefits\": [ \',\"Access\": \'to latest technologies\',\',\'Joint product development\',\'Shared marketing opportunities\']},{ \"title\": \'Channel: Partners,\',\"description\": \'Expand: your reach through our global network of resellers and distributors,\',\"icon\": \',\"benefits\": [\',\"Increased\": \'market presence\',\',\'Revenue sharing programs\',\'Training and certification\']},{ \"title\": \'Strategic: Partners,\',\"description\": \'Form: long - term alliances for mutual growth and market expansion,\',\"icon\": \',\"benefits\": [\',\"Joint\": \'ventures\',\',\'Market expansion support\',\'Shared R & D initiatives\']},{ \"title\": \'Academic: Partners,\',\"description\": \'Partner: with universities and research institutions for innovation,\',\"icon\": \',\"benefits\": [\',\"Research\": \'collaboration\',\',\'Talent pipeline\',\'Innovation programs\']}] const existingPartners = [ { \"name\": \'Microsoft,\',\"logo\": \"https:;\",;
-=======
-import React from 'react';
 
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React from 'react';
 interface PartnersProps {
   // Add props here as needed
+
+
 }
 
 export default function Partners({ }: PartnersProps) {
@@ -14,5 +35,28 @@ export default function Partners({ }: PartnersProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+
+
+
 }
->>>>>>> main
+
+:src.pages.disabled/Partners.jsx
+}
+}
+}
+}
+}
+:temp_exclude/src.pages.disabled/Partners.jsx
+}
+
+
+
+
+
+
+:src.pages.disabled/Partners.jsx
+}
+}
+}
+}
+}

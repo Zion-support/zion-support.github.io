@@ -1,6 +1,5 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
+
+
 export interface Service {
   id: string;
   name: string;
@@ -9,7 +8,6 @@ export interface Service {
   price?: number;
   features: string[];
 }
-
 export const findService = (query: string, services: Service[]): Service[] => {
   const searchTerm = query.toLowerCase();
   return services.filter(service => 
@@ -18,26 +16,29 @@ export const findService = (query: string, services: Service[]): Service[] => {
     service.category.toLowerCase().includes(searchTerm)
   );
 };
-
 export const getServicesByCategory = (category: string, services: Service[]): Service[] => {
   return services.filter(service => 
     service.category.toLowerCase() === category.toLowerCase()
   );
 };
-
 export default {
   findService,
   getServicesByCategory
 };
-=======
-<<<<<<< HEAD
-=======
 // Service finder utility
 export const findService = ("_serviceName": string) => {
   // Implementation placeholder
   return null;
 };
->>>>>>> main
->>>>>>> main
+
+
+
 export const findService = (_serviceName: string) => { return null};
->>>>>>> main
+export const findService = (_serviceName: string) => { return null};
+export const findService = (_serviceName: string) => { return null};
+export const findService = (_serviceName: string) => { return null};
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/cursor/integrate-build-improve-and-re-verify-c7b5

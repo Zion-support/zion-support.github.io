@@ -1,6 +1,5 @@
-import React from 'react';
+import * as React from 'react';
 import MainLayout from '../components/layout/MainLayout';
-import { motion } from 'framer-motion';
 import {
   Eye, 
   Ear, 
@@ -431,15 +430,6 @@ export default function AccessibilityPage() {
                   <p className="text-gray-600 mb-6">
                     If you encounter any accessibility barriers or have suggestions for improvement, we want to hear from you. Your feedback helps us create better experiences for everyone.
                   </p>
-<:pages_disabled/accessibility.tsx
-<:pages-disabled/accessibility.tsx.disabled
-                </div>
-=
-                  <span className="inline-block px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">
-                    {standard.level}
-                  </span>
-                </motion.div>
->=
                 </div>
 >:pages-disabled/accessibility.tsx.disabled
               </motion.div>

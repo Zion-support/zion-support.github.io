@@ -1,10 +1,14 @@
-<<<<<<< HEAD
-const ContactFormEnhanced = dynamic(() => import(\"./ContactFormEnhanced\"),{\'; \"loading\": () => <p>Loading...</p,>}) \"export\": \'default ContactFormEnhanced\' ,
-=======
-<<<<<<< HEAD
-const ContactFormEnhanced = dynamic(() => import("./ContactFormEnhanced"),{"; loading: () => <p>Loading.</p,>}) export: "default ContactFormEnhanced" ,"""
-=======
 const ContactFormEnhanced = dynamic(() => import("./ContactFormEnhanced"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default ContactFormEnhanced' ,'
 </p>'
->>>>>>> main
->>>>>>> main
+</p>'
+</p>'
+
+
+</p>'
+
+
+</p>'
+
+</p>'
+</p>'
+</p>'

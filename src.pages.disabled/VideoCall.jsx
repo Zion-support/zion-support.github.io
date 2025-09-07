@@ -1,10 +1,31 @@
-<<<<<<< HEAD
-const { roomId } = useParams () const navigate = useNavigate () const [isJoining,setIsJoining] = useState (false) const [hasJoined,setHasJoined] = useState (false) const [isVideoEnabled,setIsVideoEnabled] = useState (true) const [isMuted,setIsMuted] = useState (false) const [isScreenSharing,setIsScreenSharing] = useState (false) const [participants,setParticipants] = useState ([{ \"id\": \'user: - 1,\',\"name\": \'You,\',\"isVideoEnabled\": \'tru\',e,\"isMuted\": \'fals\',e,\"isScreenSharing\": \'fals\',e}]) const handleJoinCall = () => { setIsJoining (true) \';\"";
-=======
-import React from 'react';
 
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React from 'react';
 interface VideoCallProps {
   // Add props here as needed
+
+
 }
 
 export default function VideoCall({ }: VideoCallProps) {
@@ -14,5 +35,28 @@ export default function VideoCall({ }: VideoCallProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+
+
+
 }
->>>>>>> main
+
+:src.pages.disabled/VideoCall.jsx
+}
+}
+}
+}
+}
+:temp_exclude/src.pages.disabled/VideoCall.jsx
+}
+
+
+
+
+
+
+:src.pages.disabled/VideoCall.jsx
+}
+}
+}
+}
+}

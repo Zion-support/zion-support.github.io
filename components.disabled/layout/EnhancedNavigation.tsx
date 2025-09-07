@@ -1,4 +1,6 @@
   );
 };,
 export default EnhancedNavigation;
->>>>>>> main
+  );
+};,
+export default EnhancedNavigation;

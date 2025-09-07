@@ -1,13 +1,31 @@
-<<<<<<< HEAD
-"export\": function DisputeDashboard () { return () <div className=\'bg - zion - blue - dark border border - zion - blue - light rounded - xl p - 6\'>\' <h3 className=\'text - xl font - bold text - white mb - 4\'>Dispute Overview</h3>\' <div className=\'grid grid - cols - 1 md: grid: - cols - 2 gap - 4\'>\' <div className=\'text - center\'>\' <div className=\'text - 2xl font - bold text - zion - cyan\'>8</div>\' <div className=\'text - zion - slate - light text - sm\'>Active Disputes</div> </div>\' <div className=\'text - center\'>\' <div className=\'text - 2xl font - bold text - green - 400\'>16</div>\' <div className=\'text - zion - slate - light text - sm\'> Resolved This Month </div> </div> </div>\' <div className=\'mt - 4 text - center\'>\' <div className=\'text - lg font - semibold text - white\'> Average Resolution Time </div>\' <div className=\'text - 2xl font - bold text - zion - purple\'>3.2 days</div> </div> </div>) } \''\';\'"\";
-=======
-<<<<<<< HEAD
-export: function DisputeDashboard () { return () <div className="bg - zion - blue - dark border border - zion - blue - light rounded - xl p - 6">" <h3 className="text - xl font - bold text - white mb - 4">Dispute Overview</h3>" <div className="grid grid - cols - 1 md: grid: - cols - 2 gap - 4">" <div className="text - center">" <div className="text - 2xl font - bold text - zion - cyan">8</div>" <div className="text - zion - slate - light text - sm">Active Disputes</div> </div>" <div className="text - center">" <div className="text - 2xl font - bold text - green - 400">16</div>" <div className="text - zion - slate - light text - sm"> Resolved This Month </div> </div> </div>" <div className="mt - 4 text - center">" <div className="text - lg font - semibold text - white"> Average Resolution Time </div>" <div className="text - 2xl font - bold text - zion - purple">3.2 days</div> </div> </div>) } """;""";"""
-=======
-import React from 'react';
 
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React from 'react';
 interface DisputeDashboardProps {
   // Add props here as needed
+
+
 }
 
 export default function DisputeDashboard({ }: DisputeDashboardProps) {
@@ -17,6 +35,13 @@ export default function DisputeDashboard({ }: DisputeDashboardProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+
 }
->>>>>>> main
->>>>>>> main
+:src.disabled/components/DisputeDashboard.jsx
+}
+}
+ursor/add-new-services-and-deploy-updates-0462
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+}
+:temp_exclude/src.disabled/components/DisputeDashboard.jsx
+}

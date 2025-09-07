@@ -1,1 +1,10 @@
-module.exports = {};
+
+export default {};
+
+export default {};
+
+export default {}
+export default {};
+
+export default {};
+

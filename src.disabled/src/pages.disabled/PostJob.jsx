@@ -1,15 +1,38 @@
-<<<<<<< HEAD
-import { JobPostingForm } from \'@/components/jobs\'; import {} Card,; CardContent,\'; CardDescription,\''; CardHeader,\''\'; CardTitle} from \'@/components/ui/card\';\''\'; import SEO from \'@/components/SEO\';\''\'; import { useAuth } from \'@/hooks/useAuth\';\''\'; import { useIsMobile } from \'@/hooks/use-mobile\'; export {}; return null} const { isAuthenticated,isLoading } = useAuth(); const isMobile = useIsMobile(); if (isLoading) {} return(); <div className=\"flex items-center justify-center min-h-screen\"> <div className=\"animate-pulse\">Loading...></div> ></div> );} return(); <>\"; <div>Broken JSX</div> /> \'; <div>Broken JSX</div> className={`container mx-auto px-${isMobile ? \'2\' : \'4\'} py-${isMobile ? \'6\' : \'12\'} max-w-4xl`}\"> <Card className=\"border shadow-md\">\'"; <CardHeader>\'"\'"; <CardTitle className={\"text-${isMobile ? \'2xl\' : \'3xl\'} font-bold`}> Post a Job; ></div> <CardDescription> {\' \'} Fill out the form below to post your job and find the perfect; talent.></div> ></div> <CardContent> <JobPostingForm /> ></div> ></div> ></div> \"; {}; {isMobile && <div className=\"h-16\"></div>} </>)} ; export { PostJob }; export { PostJob }; export { PostJob }; export { PostJob }; export { PostJob };
-=======
-<<<<<<< HEAD
-const { JobPostingForm } from "@/components/jobs"; import {} Card,; CardContent,"; CardDescription,""; CardHeader,"""; CardTitle} from "@/components/ui/card";"""; import SEO from "@/components/SEO";"""; import { useAuth } from "@/hooks/useAuth";"""; import { useIsMobile } from "@/hooks/use-mobile"; export {}; return null} const { isAuthenticated,isLoading } = useAuth(); const isMobile = useIsMobile(); if (isLoading) {} return(); <div className="flex items-center justify-center min-h-screen"> <div className="animate-pulse">Loading.></div> ></div> );} return(); <>"; <div>Broken JSX</div> /> "; <div>Broken JSX</div> className={`container mx-auto px-${isMobile ? "2" : "4"} py-${isMobile ? "6" : "12"} max-w-4xl`}"> <Card className="border shadow-md">""; <CardHeader>""""; <CardTitle className={"text-${isMobile ? "2xl" : "3xl"} font-bold`}> Post a Job; ></div> <CardDescription> {" "} Fill out the form below to post your job and find the perfect; talent.></div> ></div> <CardContent> <JobPostingForm /> ></div> ></div> ></div> "; {}; {isMobile && <div className="h-16"></div>} </>)} ; export { PostJob }; export { PostJob }; export { PostJob }; export { PostJob }; export { PostJob };""`"`
-=======
-import React from 'react';
 
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React from 'react';
+interface PostJobProps {
+  // Add props here as needed
+
+
+}
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+import React from 'react';
 interface PostJobProps {
   // Add props here as needed
 }
-
 export default function PostJob({ }: PostJobProps) {
   return (
     <div>
@@ -17,6 +40,41 @@ export default function PostJob({ }: PostJobProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+
 }
->>>>>>> main
->>>>>>> main
+:src.disabled/src/pages.disabled/PostJob.jsx
+}
+}
+ursor/add-new-services-and-deploy-updates-0462
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+}
+:temp_exclude/src.disabled/src/pages.disabled/PostJob.jsx
+}
+
+
+
+}
+
+:src.pages.disabled/PostJob.jsx
+}
+}
+}
+}
+}
+:temp_exclude/src.pages.disabled/PostJob.jsx
+}
+
+}
+
+
+
+
+
+
+:src.pages.disabled/PostJob.jsx
+}
+}
+}
+}
+}
+}

@@ -1,13 +1,31 @@
-<<<<<<< HEAD
-import { jsx as _jsx,jsxs as _jsxs,Fragment as _Fragment } from \"react/jsx-runtime\"; import { Footer } from \'@/components/Footer\';\''\'; import SEO from \'@/components/SEO\';\''\'; import { GradientHeading } from \'@/components/GradientHeading\'; export default function Analytics() {}; return null} return (_jsxs(_Fragment,{ children[_jsx(SEO,{ \"title\": \"Analytics - Zion Tech Group\",\"description\": \"View platform analytics and insights.\",\"canonical\": \"https: ; export { Analytics }; export { Analytics }; export { Analytics }; export { Analytics }; export { Analytics };
-=======
-<<<<<<< HEAD
-const { jsx as _jsx,jsxs as _jsxs,Fragment as _Fragment } from "react/jsx-runtime"; import { Footer } from "@/components/Footer";"""; import SEO from "@/components/SEO";"""; import { GradientHeading } from "@/components/GradientHeading"; export default function Analytics() { return; }; return null} return (_jsxs(_Fragment,{ children[_jsx(SEO,{ title: "Analytics - Zion Tech Group",description: "View platform analytics and insights.",canonical: "https: export { Analytics }; export { Analytics }; export { Analytics }; export { Analytics }; export { Analytics };'"'"
-=======
-import React from 'react';
 
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React from 'react';
 interface AnalyticsProps {
   // Add props here as needed
+
+
 }
 
 export default function Analytics({ }: AnalyticsProps) {
@@ -17,6 +35,13 @@ export default function Analytics({ }: AnalyticsProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+
 }
->>>>>>> main
->>>>>>> main
+:src.disabled/src/pages.disabled/Analytics.jsx
+}
+}
+ursor/add-new-services-and-deploy-updates-0462
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+}
+:temp_exclude/src.disabled/src/pages.disabled/Analytics.jsx
+}

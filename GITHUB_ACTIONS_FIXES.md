@@ -1,4 +1,4 @@
-# GitHub Actions Fixes and Improvements
+# GitHub Actions Fixes & Improvements
 
 ## Overview
 
@@ -162,7 +162,7 @@ This document summarizes all the fixes and improvements made to the GitHub Actio
 | `deploy.yml`                 | ✅ New     | Production Deployment    | On push to main     |
 | `security.yml`               | ✅ New     | Security Scanning        | Weekly + on push/PR |
 
-## Next Steps
+### 2. Test Workflow (`test.yml`)
 
 1. **Test Workflows**: All workflows are now syntactically correct and should run without errors
 2. **Monitor Performance**: Watch for any runtime issues during actual GitHub Actions execution

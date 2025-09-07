@@ -8,6 +8,7 @@ class AutomationRunner {
   constructor() {
     this.projectRoot = process.cwd();
     this.results = [];
+    this.startTime = Date.now();
   }
 
   log(message) {
@@ -38,6 +39,34 @@ class AutomationRunner {
     }
   }
 
+  async runCommand(command, description) {
+    this.log(`🚀 ${description}`);
+    try {
+      const result = execSync(command, {
+        cwd: this.projectRoot,
+        encoding: 'utf8',
+        timeout: 120000,
+      });
+      this.log(`✅ ${description} - Success`);
+      this.results.push({
+        command,
+        description,
+        success: true,
+        output: result,
+      });
+      return { success: true, output: result };
+    } catch (error) {
+      this.log(`❌ ${description} - Failed: ${error.message}`);
+      this.results.push({
+        command,
+        description,
+        success: false,
+        error: error.message,
+      });
+      return { success: false, error: error.message };
+    }
+  }
+
   async runAllAutomations() {
     this.log('🎯 Starting Comprehensive Automation Suite');
     
@@ -46,7 +75,6 @@ class AutomationRunner {
       { path: 'final-automation-orchestrator.cjs', desc: 'Final Automation Orchestrator' },
       { path: 'final-automation-suite.cjs', desc: 'Final Automation Suite' },
       { path: 'automation/master-orchestrator.cjs', desc: 'Master Automation Orchestrator' },
-      { path: 'automation/master-orchestrator.cjs', desc: 'Master Orchestrator' },
       
       // Syntax and code fixes
       { path: 'automation/typescript-fixer.cjs', desc: 'TypeScript Fixer' },
@@ -86,29 +114,59 @@ class AutomationRunner {
       { path: 'scripts/ultimate-automation-orchestrator.cjs', desc: 'Ultimate Automation Orchestrator' }
     ];
 
+    // Also run npm commands
+    const npmCommands = [
+      { cmd: 'npm run test:smoke', desc: 'Smoke Tests' },
+      { cmd: 'npm run build', desc: 'Build Application' },
+      { cmd: 'npm run performance:analyze', desc: 'Performance Analysis' },
+      { cmd: 'npm run quality:analyze', desc: 'Code Quality Analysis' },
+      { cmd: 'npm run security:scan', desc: 'Security Scan' },
+    ];
+
+    // Run scripts
     for (const script of automationScripts) {
       await this.runScript(script.path, script.desc);
     }
 
+    // Run npm commands
+    for (const cmd of npmCommands) {
+      await this.runCommand(cmd.cmd, cmd.desc);
+    }
+
     // Generate report
+    const endTime = Date.now();
+    const duration = endTime - this.startTime;
+    const successful = this.results.filter(r => r.success).length;
+    const failed = this.results.filter(r => !r.success).length;
+
     const report = {
       timestamp: new Date().toISOString(),
-      totalScripts: automationScripts.length,
-      successfulScripts: this.results.filter(r => r.success).length,
-      failedScripts: this.results.filter(r => !r.success).length,
+      duration: `${Math.round(duration / 1000)}s`,
+      summary: {
+        total: this.results.length,
+        successful,
+        failed,
+        successRate: Math.round((successful / this.results.length) * 100),
+      },
       results: this.results
     };
 
+    // Ensure reports directory exists
+    const reportsDir = path.join(this.projectRoot, 'automation-reports');
+    if (!fs.existsSync(reportsDir)) {
+      fs.mkdirSync(reportsDir, { recursive: true });
+    }
+
     fs.writeFileSync(
-      path.join(this.projectRoot, 'automation-results.json'),
+      path.join(reportsDir, 'all-automations-report.json'),
       JSON.stringify(report, null, 2)
     );
 
     this.log('🎉 Automation Suite Completed');
-    this.log(`📊 Summary: ${report.successfulScripts}/${report.totalScripts} scripts successful`);
+    this.log(`📊 Summary: ${successful}/${this.results.length} scripts successful (${report.summary.successRate}%)`);
     
-    if (report.failedScripts > 0) {
-      this.log(`⚠️ ${report.failedScripts} scripts failed`);
+    if (failed > 0) {
+      this.log(`⚠️ ${failed} scripts failed`);
       this.results.filter(r => !r.success).forEach(result => {
         this.log(`   - ${result.description}: ${result.error}`);
       });
@@ -119,5 +177,12 @@ class AutomationRunner {
 }
 
 // Run the automation suite
-const runner = new AutomationRunner();
-runner.runAllAutomations().catch(console.error);
+if (require.main === module) {
+  const runner = new AutomationRunner();
+  runner.runAllAutomations().catch(error => {
+    console.error('❌ Error:', error);
+    process.exit(1);
+  });
+}
+
+module.exports = AutomationRunner;

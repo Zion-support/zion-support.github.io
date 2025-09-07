@@ -4,6 +4,19 @@ const path = // // require('path');
 class PerformanceMonitor {
   constructor() {
     this.metrics = {
+      bundleSize: 0,
+      memoryUsage: 0,
+      timestamp: new Date().toISOString()
+    };
+  }
+const performanceChecks = {
+  buildSize: false,
+  bundleAnalysis: false,
+  lighthouseScore: false,
+  loadTime: false,
+  memoryUsage: false;
+};
+    this.metrics = {
       "bundleSize": 0,
       "memoryUsage": 0,
       "timestamp": new Date().toISOString()
@@ -32,6 +45,15 @@ try {
   console.log('📋 Analyzing bundle...');
   const bundleInfo = execSync('npx next-bundle-analyzer .next/static/chunks', { "encoding": 'utf8' });
   console.log('✅ Bundle analysis completed');
+  performanceChecks.bundleAnalysis = true;
+} catch (error) {
+  console.log('⚠️  Bundle analysis not available (install @next/bundle-analyzer)');
+}
+  performanceChecks.bundleAnalysis = true;
+} catch (error) {
+  console.log('⚠️  Bundle analysis not available (install @next/bundle-analyzer)');
+
+  console.log('✅ Bundle analysis completed');
   performanceChecks.bundleAnalysis = true} catch (error) {
   console.log('⚠️  Bundle analysis not available (install @next/bundle-analyzer)')}
 try {
@@ -43,6 +65,12 @@ try {
     const responseTime = execSync('curl -s -o /dev/null -w "%{time_total}" "http": //localhost:3000', { "encoding": 'utf8' });
     console.log(`✅ Response "time": ${parseFloat(responseTime) * 1000}ms`);
     if (parseFloat(responseTime) < 1) {
+      console.log('✅ Response time is good');
+    } else {
+      console.log('⚠️  Response time could be improved');
+    }
+    performanceChecks.loadTime = true;
+  } else {
       console.log('✅ Response time is good')} else {
       console.log('⚠️  Response time could be improved')}
     performanceChecks.loadTime = true} else {
@@ -63,6 +91,13 @@ try {
   generateRecommendations() {
     const recommendations = [];
     if (this.metrics.bundleSize > 1000000) {
+      recommendations.push('Consider code splitting to reduce bundle size');
+    }
+    if (this.metrics.memoryUsage > 100) {
+      recommendations.push('High memory usage detected, consider optimization');
+    }
+    return recommendations;
+  }
       recommendations.push('Consider code splitting to reduce bundle size')}
     if (this.metrics.memoryUsage > 100) {
       recommendations.push('High memory usage detected, consider optimization')}
@@ -75,6 +110,14 @@ const performanceScore = Math.round((passedChecks / totalChecks) * 100);
 console.log(`\n📊 Performance "Score": ${performanceScore}% (${passedChecks}/${totalChecks})`);
 // Save performance report
 const report = {
+  timestamp: new Date().toISOString(),
+  score: performanceScore,
+  checks: performanceChecks,
+  recommendations: [];
+};
+if (performanceScore < 80) {
+
+module.exports = PerformanceMonitor;
   "timestamp": new Date().toISOString(),
   "score": performanceScore,
   "checks": performanceChecks,

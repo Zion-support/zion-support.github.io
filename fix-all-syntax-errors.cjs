@@ -1,98 +1,104 @@
-<<<<<<< HEAD
 #!/usr/bin/env node
 
-const fs = require('fs')
-const path = require('path')
-
-function fixSyntaxErrors(content) {
-	let next = content
-	next = next.replace(/,\s*;/g, ',')
-	next = next.replace(/;\s*,/g, ',')
-	next = next.replace(/;\s*\]/g, ']')
-	next = next.replace(/;\s*\}/g, '}')
-	return next
-}
-
-function processFile(filePath) {
-	try {
-		const content = fs.readFileSync(filePath, 'utf8')
-		const fixed = fixSyntaxErrors(content)
-		if (fixed !== content) {
-			fs.writeFileSync(filePath, fixed, 'utf8')
-			return true
-		}
-		return false
-	} catch (e) {
-		console.error(`Error processing ${filePath}:`, e.message)
-		return false
-	}
-}
-
-function findFiles(dir, exts) {
-	const files = []
-	for (const entry of fs.readdirSync(dir)) {
-		const full = path.join(dir, entry)
-		const st = fs.statSync(full)
-		if (st.isDirectory()) {
-			if (entry === 'node_modules' || entry.startsWith('.')) continue
-			files.push(...findFiles(full, exts))
-		} else if (exts.some(ext => full.endsWith(ext))) {
-			files.push(full)
-		}
-	}
-	return files
-}
-
-const files = findFiles('.', ['.js', '.ts', '.cjs', '.mjs'])
-let count = 0
-for (const f of files) if (processFile(f)) count++
-=======
-<<<<<<< HEAD
-#!/usr/bin/env node/usr/bin/env nodeconst fs = require("fs")"const path = require("path")function fixSyntaxErrors(content) {let next = content"next = next.replace(/,\s*;/g, ",")"next = next.replace(/;\s*,/g, ",")"next = next.replace(/;\s*\]/g, "]")"next = next.replace(/;\s*\}/g, "}")return next}function processFile(filePath) {try {"const content = fs.readFileSync(filePath, "utf8")const fixed = fixSyntaxErrors(content)if (fixed !== content) {"fs.writeFileSync(filePath, fixed, "utf8")console.log(`Fixed syntax errors in: ${filePath}`)return true}return false} catch (e) {`console.error(`Error processing ${filePath}:`, e.message)return false}}function findFiles(dir, exts) {const files = []for (const entry of fs.readdirSync(dir)) {const full = path.join(dir, entry)const st = fs.statSync(full)if (st.isDirectory()) {"if (entry === "node_modules" | entry.startsWith(".")) continuefiles.push(.findFiles(full, exts))} else if (exts.some(ext => full.endsWith(ext))) {files.push(full)}}return files}"const files = findFiles(".", [".js", ".ts", ".cjs", ".mjs"])let count = 0for (const f of files) if (processFile(f)) count++`console.log(`Fixed syntax errors in ${count} files.`)""`"`
-=======
-#!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
-function fixSyntaxErrors(content) {}
-	let next = content;
-	next = next.replace(/,\s*;/g, ',');
-	next = next.replace(/;\s*,/g, ',');
-	next = next.replace(/;\s*\]/g, ']');
-	next = next.replace(/;\s*\}/g, '}');
-	return next;
-};
-function processFile(filePath) {}
-	try {}
-		const content = fs.readFileSync(filePath, 'utf8');
-		const fixed = fixSyntaxErrors(content);
-		if (fixed !== content) {}
-			fs.writeFileSync(filePath, fixed, 'utf8');
-			console.log(`Fixed syntax errors "in": ${filePath}`);
-			return true;
-		};
-		return false;
-	} catch (e) {}
-		console.error(`Error processing ${filePath}:`, e.message);
-		return false;
-	};
-};
-function findFiles(dir, exts) {}
-	const files = [];
-	for (const entry of fs.readdirSync(dir)) {}
-		const full = path.join(dir, entry);
-		const st = fs.statSync(full);
-		if (st.isDirectory()) {}
-			if (entry === 'node_modules' || entry.startsWith('.')) continue;
-			files.push(...findFiles(full, exts));
-		} else if (exts.some(ext => full.endsWith(ext))) {}
-			files.push(full);
-		};
-	};
-	return files;
-};
-const files = findFiles('.', ['.js', '.ts', '.cjs', '.mjs']);
-let count = 0;
-for (const f of files) if (processFile(f)) count++
-console.log(`Fixed syntax errors in ${count} files.`);
->>>>>>> main
->>>>>>> main
+
+/**
+ * Comprehensive syntax error fixer
+ */
+class ComprehensiveSyntaxFixer {
+  constructor() {
+    this.projectRoot = process.cwd();
+    this.fixedFiles = [];
+  }
+
+  log(message, type = 'INFO') {
+    const timestamp = new Date().toISOString();
+    const prefix = type === 'ERROR' ? '❌' : type === 'SUCCESS' ? '✅' : 'ℹ️';
+    console.log(`${prefix} [${timestamp}] ${message}`);
+  }
+
+  fixFile(filePath) {
+    try {
+      this.log(`Fixing: ${filePath}`);
+      
+      let content = fs.readFileSync(filePath, 'utf8');
+      let modified = false;
+      
+      // Count opening and closing braces
+      const openBraces = (content.match(/\{/g) || []).length;
+      const closeBraces = (content.match(/\}/g) || []).length;
+      
+      if (openBraces > closeBraces) {
+        const missingBraces = openBraces - closeBraces;
+        content += '\n' + '}'.repeat(missingBraces);
+        modified = true;
+        this.log(`Added ${missingBraces} missing closing braces`);
+      }
+      
+      // Fix common patterns
+      content = content.replace(/(\s+return res\.status\([^)]+\);\s*)(\n\s*)(\w)/g, '$1\n  }\n\n  $3');
+      content = content.replace(/(\s+} catch \([^)]+\) \{\s*\n\s*return res\.status\([^)]+\);\s*\n\s*\}\s*)(\n\s*)(\w)/g, '$1\n}\n\n$3');
+      
+      if (modified) {
+        fs.writeFileSync(filePath, content);
+        this.fixedFiles.push(filePath);
+        this.log(`✅ Fixed: ${filePath}`, 'SUCCESS');
+        return true;
+      }
+      
+      return false;
+    } catch (error) {
+      this.log(`❌ Error fixing ${filePath}: ${error.message}`, 'ERROR');
+      return false;
+    }
+  }
+
+  async fixAllFiles() {
+    this.log('🔧 Starting comprehensive syntax error fixing...');
+    
+    // Find all TypeScript files in pages/api
+    const apiDir = path.join(this.projectRoot, 'pages', 'api');
+    const files = this.findTsFiles(apiDir);
+    
+    let fixedCount = 0;
+    
+    for (const file of files) {
+      if (this.fixFile(file)) {
+        fixedCount++;
+      }
+    }
+    
+    this.log(`🎉 Comprehensive syntax error fixing completed!`, 'SUCCESS');
+    this.log(`📊 Summary: ${fixedCount}/${files.length} files fixed`);
+  }
+
+  findTsFiles(dir) {
+    const files = [];
+    
+    if (!fs.existsSync(dir)) return files;
+    
+    const items = fs.readdirSync(dir);
+    
+    for (const item of items) {
+      const fullPath = path.join(dir, item);
+      const stat = fs.statSync(fullPath);
+      
+      if (stat.isDirectory()) {
+        files.push(...this.findTsFiles(fullPath));
+      } else if (item.endsWith('.ts') || item.endsWith('.tsx')) {
+        files.push(fullPath);
+      }
+    }
+    
+    return files;
+  }
+}
+
+// Run the fixer
+if (require.main === module) {
+  const fixer = new ComprehensiveSyntaxFixer();
+  fixer.fixAllFiles().catch(console.error);
+}
+
+module.exports = ComprehensiveSyntaxFixer;

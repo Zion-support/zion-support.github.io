@@ -1,13 +1,31 @@
-<<<<<<< HEAD
-' \' \"export\": function AIChatAssistant({ enabled = true,className = \',onMessageSend,onAssistantResponse }) {} const [isOpen,setIsOpen] = useState(false) const [isMinimized,setIsMinimized] = useState(false) const [isRecording,setIsRecording] = useState(false) const [showSettings,setShowSettings] = useState(false) const [messages,setMessages] = useState([] {} \' \' \"id\": \'1,\',\' \"type\": \'assistant,\',\' \"content\": \'Hello! I\',\"m\": \'Zion AI Assistant. I can help you with technology solution\',s,business insights,and answer questions about our services. How can I assist you today?\',\' \"timestamp\": new: Date(),\' \"status\": \'sent,\',\"metadata\": {} \"confidence\": \'0.9\',5,\' suggestions[\'"Tell\": me about your AI services\',What cloud solutions do you offer?\',How can I get started?\'] }\' }\' ])\' const [inputValue,setInputValue] = useState(\') const [isTyping,setIsTyping] = useState(false) const messagesEndRef = useRef(null) const inputRef = useRef(null)\'';\";\";
-=======
-<<<<<<< HEAD
-" " export: function AIChatAssistant({ enabled = true,className = ",onMessageSend,onAssistantResponse }) {} const [isOpen,setIsOpen] = useState(false) const [isMinimized,setIsMinimized] = useState(false) const [isRecording,setIsRecording] = useState(false) const [showSettings,setShowSettings] = useState(false) const [messages,setMessages] = useState([] {} " " id: "1,"," type: "assistant,"," content: "Hello! I\",m: "Zion AI Assistant. I can help you with technology solution",s,business insights,and answer questions about our services. How can I assist you today?"," timestamp: new: Date()," status: "sent,",metadata: {} confidence: "0.9",5," suggestions["Tell: me about your AI services",What cloud solutions do you offer?",How can I get started?"] }" }" ])" const [inputValue,setInputValue] = useState(") const [isTyping,setIsTyping] = useState(false) const messagesEndRef = useRef(null) const inputRef = useRef(null)"";";";"""
-=======
-import React from 'react';
 
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React from 'react';
 interface AichatassistantProps {
   // Add props here as needed
+
+
 }
 
 export default function Aichatassistant({ }: AichatassistantProps) {
@@ -17,6 +35,13 @@ export default function Aichatassistant({ }: AichatassistantProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+
 }
->>>>>>> main
->>>>>>> main
+:src.disabled/components/ui/ai-chat-assistant.jsx
+}
+}
+ursor/add-new-services-and-deploy-updates-0462
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+}
+:temp_exclude/src.disabled/components/ui/ai-chat-assistant.jsx
+}

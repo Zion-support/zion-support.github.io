@@ -1,5 +1,8 @@
-import React from 'react';
-import Link from 'next/link';';
+import { motion } from 'framer-motion';
+import Link from 'next/link';
+import Layout from '../../components/Layout';
+import { Cloud, Shield, Zap, CheckCircle, ArrowRight, BarChart3, Users, Settings, Database, Globe, Lock, Smartphone, Brain } from 'lucide-react';
+import React from 'react';import Link from 'next/link';';
 import { motion } from 'framer-motion';
 import { Cloud, 
   Shield, 
@@ -41,14 +44,6 @@ const phases = [;
     ];
   },
   {}
-    title: 'Migration Execution,',
-    description: 'Phased migration with minimal downtime and comprehensive testing.,',
-    icon: Cloud,
-    steps: [;
-      'Data migration,',
-      'Application migration',',
-      'Testing & validation',',
-      'Go-live support'';
     ];
   },
   {}
@@ -66,14 +61,6 @@ const phases = [;
 
 const services = [;
   {}
-    title: 'AWS Migration,',
-    description: 'Complete migration to Amazon Web Services with best practices and optimization.,',
-    icon: Cloud,
-    features: [;
-      'EC2 instance migration,',
-      'RDS database migration',',
-      'S3 storage migration',',
-      'Lambda serverless functions'';
     ];
   },
   {}
@@ -88,14 +75,6 @@ const services = [;
     ];
   },
   {}
-    title: 'Google Cloud Migration,',
-    description: 'Google Cloud Platform migration with advanced AI and analytics capabilities.,',
-    icon: Brain,
-    features: [;
-      'Compute Engine migration,',
-      'Cloud SQL migration',',
-      'Cloud Storage migration',',
-      'Cloud Functions deployment'';
     ];
   },
   {}
@@ -113,25 +92,6 @@ const services = [;
 
 const benefits = [;
   {}
-    title: 'Cost Reduction,',
-    description: 'Reduce infrastructure costs by up to 40% with cloud optimization.,',
-    icon: BarChart3;
-  },
-  {}
-    title: 'Enhanced Security,',
-    description: 'Enterprise-grade security with automated updates and monitoring.,',
-    icon: Shield;
-  },
-  {}
-    title: 'Improved Scalability,',
-    description: 'Scale resources up or down based on demand automatically.,',
-    icon: Zap;
-  },
-  {}
-    title: 'Better Performance,',
-    description: 'Faster load times and improved application performance.,',
-    icon: Smartphone;
-  }
 ;];
 
 export default function CloudMigrationPage() {
@@ -170,13 +130,6 @@ export default function CloudMigrationPage() {
                 Seamlessly migrate your infrastructure to the cloud with our comprehensive migration services. 
                 Reduce costs, improve performance, and enhance security with AWS, Azure, or Google Cloud.,
               </p>;
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">";
-                <Link href="/contact" className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">";
-                  Start Your Migration;
-                </Link>;
-                <Link href="/case-studies" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">";
-                  View Migration Success Stories;
-                </Link>;
               </div>;
             </motion.div>;
           </div>;
@@ -235,12 +188,6 @@ export default function CloudMigrationPage() {
             <motion.div;
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-16""
-            >;
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
-                Cloud Migration Services;
-              </h2>;
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
                 Choose from leading cloud providers or implement a multi-cloud strategy;
                 for maximum flexibility and redundancy.;
@@ -288,12 +235,6 @@ export default function CloudMigrationPage() {
             <motion.div;
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-16""
-            >;
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
-                Why Choose Our Cloud Migration?;
-              </h2>;
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
                 Our cloud migration services deliver measurable improvements in cost, 
                 performance, and security.,
@@ -326,8 +267,18 @@ export default function CloudMigrationPage() {
             <motion.div;
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
+              </h2>;
+              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">";
+                Let our cloud migration experts help you seamlessly transition to the cloud;
+                with minimal downtime and maximum security.;
+              </p>;
+                </Link>;
+              </div>;
+            </motion && motion.div>;
+          </div>;
+        </section>;
+      </div>;
+    </Layout>;            >
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
                 Ready to Move to the Cloud?
               </h2>
@@ -349,4 +300,26 @@ export default function CloudMigrationPage() {
       </div>
     </Layout>
   );
+            >;
+              <h2 className="text-4xl md: text-5xl font-bold mb-6">;
+                Ready to Move to the Cloud?;
+              </h2>;
+              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">;
+                Let our cloud migration experts help you seamlessly transition to the cloud ;
+                with minimal downtime and maximum security.;
+              </p>;
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">;
+                <Link href="/contact" className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">;
+                  Start Your Cloud Migration;
+                </Link>;
+                <Link href="/about" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">;
+                  Learn About Our Expertise;
+                </Link>;
+              </div>;
+            </motion && motion.div>;
+          </div>;
+        </section>;
+      </div>;
+    </Layout>;
+  ),;
 }
