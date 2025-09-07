@@ -1,13 +1,46 @@
-<<<<<<< HEAD
-import Link from "next/link";
-=======
 import React from 'react';
->>>>>>> 470476d15542c973cf650505a68f6472f0b68c9f
+import Link from 'next/link';
+import {
+  CpuChipIcon,
+  ShieldCheckIcon,
+  ChartBarIcon,
+  RocketLaunchIcon,
+  ArrowRightIcon,
+  CheckCircleIcon
+} from '@heroicons/react/24/outline';
 
 export const metadata = {
-  title: "Solutions | Zion Tech Group",
-  description: "Comprehensive AI and technology solutions designed to transform your business operations.",
+  title: 'Solutions | Zion Tech Group',
+  description: 'Comprehensive technology solutions for modern businesses.',
+  keywords: 'AI solutions, micro SaaS, IT solutions, digital transformation'
 };
+
+const solutions = [
+  {
+    name: 'AI-Powered Automation',
+    description: 'Streamline your operations with intelligent automation solutions.',
+    icon: CpuChipIcon,
+    features: ['Process Automation', 'Intelligent Workflows', 'Predictive Analytics', 'Natural Language Processing']
+  },
+  {
+    name: 'Micro SaaS Platforms',
+    description: 'Build and scale focused software solutions for specific business needs.',
+    icon: RocketLaunchIcon,
+    features: ['Custom Applications', 'API Development', 'User Management', 'Scalable Architecture']
+  },
+  {
+    name: 'Enterprise Security',
+    description: 'Comprehensive security solutions to protect your digital assets.',
+    icon: ShieldCheckIcon,
+    features: ['Security Audits', 'Threat Detection', 'Compliance Management', 'Incident Response']
+  },
+  {
+    name: 'Data Intelligence',
+    description: 'Transform raw data into actionable business insights.',
+    icon: ChartBarIcon,
+    features: ['Business Intelligence', 'Real-time Analytics', 'Custom Dashboards', 'Data Visualization']
+  }
+];
 
 export default function SolutionsPage() {
   return (
@@ -18,124 +51,51 @@ export default function SolutionsPage() {
             Our Solutions
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Comprehensive AI and technology solutions designed to transform your business operations and drive growth.
+            Comprehensive technology solutions designed to accelerate your business growth and digital transformation.
           </p>
         </div>
 
-<<<<<<< HEAD
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          <SolutionCard
-            title="AI-Powered Solutions"
-            description="Leverage artificial intelligence to automate processes, gain insights, and enhance decision-making."
-            icon="🤖"
-            features={["Machine Learning", "Natural Language Processing", "Computer Vision", "Predictive Analytics"]}
-            href="/services/ai-services"
-          />
-          <SolutionCard
-            title="Micro SaaS Development"
-            description="Build scalable, revenue-generating software products that solve specific business problems."
-            icon="🚀"
-            features={["Full-Stack Development", "Payment Integration", "User Management", "Analytics"]}
-            href="/services/micro-saas"
-          />
-          <SolutionCard
-            title="IT Infrastructure"
-            description="Modernize your IT infrastructure with cloud migration, DevOps, and security solutions."
-            icon="⚙️"
-            features={["Cloud Migration", "DevOps & SRE", "Cybersecurity", "Infrastructure Management"]}
-            href="/services/it-services"
-          />
-          <SolutionCard
-            title="Blockchain Solutions"
-            description="Implement decentralized solutions including DeFi, NFTs, and Web3 applications."
-            icon="⛓️"
-            features={["Smart Contracts", "DeFi Protocols", "NFT Marketplaces", "Web3 Apps"]}
-            href="/services/blockchain-solutions"
-          />
-          <SolutionCard
-            title="AI Automation"
-            description="Automate business processes with intelligent workflows and robotic process automation."
-            icon="⚡"
-            features={["RPA", "Workflow Automation", "Process Mining", "Cognitive Automation"]}
-            href="/services/ai-automation-suite"
-          />
-          <SolutionCard
-            title="Data Analytics"
-            description="Transform raw data into actionable insights with advanced analytics and business intelligence."
-            icon="📊"
-            features={["Business Intelligence", "Predictive Analytics", "Data Warehousing", "Real-time Dashboards"]}
-            href="/services/data-analytics"
-          />
-        </div>
-
-        <div className="text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">
-            Ready to Transform Your Business?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            Let&apos;s discuss how our solutions can help you achieve your business goals and drive growth.
-          </p>
-          <Link
-            href="/contact"
-            className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-flex items-center"
-          >
-            Get Started Today
-          </Link>
-=======
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-          <div className="bg-gray-800 rounded-lg p-6 text-center">
-            <div className="text-4xl font-bold text-blue-400 mb-2">01</div>
-            <h3 className="text-xl font-bold text-white mb-4">Discovery & Assessment</h3>
-            <p className="text-gray-300">
-              We analyze your current systems, identify opportunities, and develop a comprehensive AI strategy.
-            </p>
-          </div>
-
-          <div className="bg-gray-800 rounded-lg p-6 text-center">
-            <div className="text-4xl font-bold text-blue-400 mb-2">02</div>
-            <h3 className="text-xl font-bold text-white mb-4">Solution Design</h3>
-            <p className="text-gray-300">
-              Our experts design custom AI solutions tailored to your specific business needs and objectives.
-            </p>
-          </div>
-
-          <div className="bg-gray-800 rounded-lg p-6 text-center">
-            <div className="text-4xl font-bold text-blue-400 mb-2">03</div>
-            <h3 className="text-xl font-bold text-white mb-4">Development & Testing</h3>
-            <p className="text-gray-300">
-              We develop and rigorously test your AI solution to ensure optimal performance and reliability.
-            </p>
-          </div>
-
-          <div className="bg-gray-800 rounded-lg p-6 text-center">
-            <div className="text-4xl font-bold text-blue-400 mb-2">04</div>
-            <h3 className="text-xl font-bold text-white mb-4">Deployment & Training</h3>
-            <p className="text-gray-300">
-              Seamless deployment with comprehensive training for your team to maximize solution adoption.
-            </p>
-          </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+          {solutions.map((solution) => (
+            <div key={solution.name} className="bg-slate-800 rounded-xl p-8 hover:bg-slate-700 transition-colors">
+              <div className="flex items-center mb-6">
+                <div className="p-3 bg-blue-600 rounded-lg mr-4">
+                  <solution.icon className="h-8 w-8 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-white">{solution.name}</h3>
+              </div>
+              <p className="text-gray-300 mb-6">{solution.description}</p>
+              <ul className="space-y-2 mb-6">
+                {solution.features.map((feature) => (
+                  <li key={feature} className="flex items-center text-gray-300">
+                    <CheckCircleIcon className="h-5 w-5 text-green-400 mr-3" />
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+              <Link
+                href="/contact"
+                className="inline-flex items-center text-blue-400 hover:text-blue-300 font-semibold"
+              >
+                Learn More
+                <ArrowRightIcon className="ml-2 h-4 w-4" />
+              </Link>
+            </div>
+          ))}
         </div>
 
         <div className="text-center">
           <h2 className="text-3xl font-bold text-white mb-6">Ready to Get Started?</h2>
           <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-            Let's discuss your project and discover how our solutions can accelerate your business growth.
+            Let's discuss your project and find the perfect solution for your business needs.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="/contact"
-              className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-            >
-              Get Started
-            </a>
-            <a
-              href="/services"
-              className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-colors"
-            >
-              View Services
-            </a>
-          </div>
->>>>>>> 470476d15542c973cf650505a68f6472f0b68c9f
+          <Link
+            href="/contact"
+            className="inline-flex items-center px-8 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
+          >
+            Contact Us Today
+            <ArrowRightIcon className="ml-2 h-5 w-5" />
+          </Link>
         </div>
       </div>
     </div>
