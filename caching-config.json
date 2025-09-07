@@ -1,0 +1,10 @@
+
+  "static"
+    "maxAge"
+    "immutable"
+  "dynamic"
+    "maxAge"
+    "staleWhileRevalidate"
+  "api"
+    "maxAge"
+    "staleWhileRevalidate"

@@ -1,1 +1,2 @@
-module.exports = type __Empty = unknown,;
+// Empty TypeScript file;
+export {};
