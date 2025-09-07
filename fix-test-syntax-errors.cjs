@@ -22,7 +22,7 @@ class TestSyntaxFixer {
       }
 
       let content = fs.readFileSync(filePath, 'utf8');
-      const originalContent = content;
+      let originalContent = content;
 
       // Fix trailing commas in import statements
       content = content.replace(/import\s+([^;]+),\s*;/g, 'import $1;');
@@ -57,7 +57,7 @@ class TestSyntaxFixer {
     const testFiles = [];
     
     // Find test files in various directories
-    const searchPaths = [
+const searchPaths = [;
       '__tests__',
       'src_backup',
       'recovered-branches',

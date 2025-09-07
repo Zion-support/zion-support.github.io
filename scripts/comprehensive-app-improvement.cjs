@@ -1,11 +1,10 @@
-
 #!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
-const { execSync } = require('child_process')
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
 console.log(' Starting Comprehensive App Improvement...')
     execSync(command, { "stdio"})
-  const success = runCommand('npm run "lint")
+const success = runCommand('npm run "lint");
 console.log('Code quality improvements "applied")
     "key"
     "value"
@@ -23,3 +22,16 @@ console.log('Code quality improvements "applied")
 console.log('SEO improvements "applied")
 
   console.log('\n Comprehensive App Improvement "Summary")
+
+  console.log('\n Comprehensive App Improvement "Summary")
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+
+
+
+const { execSync } = require('child_process')
+  console.log('\n Comprehensive App Improvement "Summary")
+
+
+

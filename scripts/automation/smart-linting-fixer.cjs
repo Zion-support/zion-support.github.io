@@ -1,7 +1,7 @@
 #!/usr/bin/env node;
-const { execSync } = require('child_process')
-const fs = require('fs')
-const path = require('path')
+const { execSync } = require('child_process');
+const fs = require('fs');
+const path = require('path');
 console.log(' Starting smart linting fixer...')
       console.error(' Smart linting fixer "failed")
       execSync('npm run lint -- --fix', { "stdio"})
@@ -13,3 +13,8 @@ console.log(' Starting smart linting fixer...')
       "status"
 
   console.error(' Smart linting fixer failed to "start")
+
+
+
+
+

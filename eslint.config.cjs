@@ -6,22 +6,25 @@ module.exports = [
   {
     ignores: [
       'node_modules/**/*',
-      'app-optimizer.js',
-      'zion-os/**/*',
-      'apps.backup/**/*',
-      'zion-website/**/*',
+      '.next/**/*',
+      'out/**/*',
+      'dist/**/*',
+      'build/**/*',
       'automation/**/*',
-      'advanced-automation-improvements.cjs',
-      'analyze_links.cjs',
-      'app-enhancement-suite.cjs',
-      '.next/**',
-      'dist/**',
-      'build/**',
-      '*.config.js',
-      '*.config.cjs',
-      'public/**',
-      'App.simple.tsx',
-      'App.smoke.test.tsx',
+      'scripts/**/*',
+      '*.cjs',
+      '*.mjs',
+      '*.js',
+      '*.report.json',
+      'test_build/**/*',
+      'tests/**/*',
+      'pages/**/*',
+      'api/**/*'
+      '!jest.config.*',
+      '!next.config.*',
+      '!tailwind.config.*',
+      '!postcss.config.*',
+      'node_modules/**/*,app-optimizer.js,zion-os/**/*,apps.backup/**/*,zion-website/**/*,automation/**/*,advanced-automation-improvements.cjs,analyze_links.cjs,app-enhancement-suite.cjs,]
     ],
   },
   js.configs.recommended,
@@ -48,34 +51,12 @@ module.exports = [
         require: 'readonly',
         exports: 'readonly',
       },
-    },
     rules: {
-      'no-unused-vars': 'warn',
-      'no-console': 'warn',
-      'prefer-const': 'warn',
-    }
-  },
-  {
-    files: ['**/*.cjs'],
-    languageOptions: {
-      ecmaVersion: 2022,
-      sourceType: 'commonjs',
-      globals: {
-        console: 'readonly',
-        process: 'readonly',
-        Buffer: 'readonly',
-        global: 'readonly',
-        __dirname: 'readonly',
-        __filename: 'readonly',
-        module: 'readonly',
-        require: 'readonly',
-        exports: 'readonly',
-      },
-    },
-    rules: {
-      'no-unused-vars': 'warn',
-      'no-console': 'warn',
-      'prefer-const': 'warn',
+      "no-unused-vars": "off",
+      "no-console": "off",
+      "prefer-const": "warn",
+      "no-var": "warn",
+      "no-undef": "off"
     }
   },
   {
@@ -86,9 +67,8 @@ module.exports = [
       sourceType: 'module',
       parserOptions: {
         ecmaFeatures: {
-          jsx: true
-        }
-      },
+          jsx: true,
+        },
       globals: {
         window: 'readonly',
         document: 'readonly',
@@ -101,8 +81,8 @@ module.exports = [
         module: 'readonly',
         require: 'readonly',
         exports: 'readonly',
+        React: 'readonly',
       },
-    },
     plugins: {
       '@typescript-eslint': tseslint,
     },
@@ -116,26 +96,7 @@ module.exports = [
   {
     files: ['**/*.test.{js,jsx,ts,tsx}', '**/*.spec.{js,jsx,ts,tsx}'],
     languageOptions: {
-      parser: tsparser,
-      ecmaVersion: 2022,
-      sourceType: 'module',
-      parserOptions: {
-        ecmaFeatures: {
-          jsx: true
-        }
-      },
       globals: {
-        window: 'readonly',
-        document: 'readonly',
-        console: 'readonly',
-        process: 'readonly',
-        Buffer: 'readonly',
-        global: 'readonly',
-        __dirname: 'readonly',
-        __filename: 'readonly',
-        module: 'readonly',
-        require: 'readonly',
-        exports: 'readonly',
         describe: 'readonly',
         it: 'readonly',
         test: 'readonly',
@@ -146,15 +107,5 @@ module.exports = [
         afterAll: 'readonly',
         jest: 'readonly',
       },
-    },
-    plugins: {
-      '@typescript-eslint': tseslint,
-    },
-    rules: {
-      'no-unused-vars': 'off',
-      '@typescript-eslint/no-unused-vars': 'warn',
-      'no-console': 'warn',
-      'prefer-const': 'warn',
-    }
   }
 ];

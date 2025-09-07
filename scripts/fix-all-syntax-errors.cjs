@@ -1,11 +1,10 @@
 #!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
+const fs = require('fs');
+const path = require('path');
 console.log(' Starting comprehensive syntax error fixing...')
     "file"
         search: "
         "replace": "
-    "file"
     "file"
         search: "
         "replace": "clients: '50+', "solutions"
@@ -29,3 +28,8 @@ console.log(' Starting comprehensive syntax error fixing...')
         "replace": "
 
 console.log(")
+
+
+
+
+

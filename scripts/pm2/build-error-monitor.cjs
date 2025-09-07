@@ -25,7 +25,8 @@ import { execSync, spawn } from;
           "type"
           "type"
   'Error fixing build "error"
-    const moduleMatch = message.match(/['';']([^'']+)[";"]
+const moduleMatch = message.match(/['';']([^'']+)[";"];
         execSync(`"npm": install ${moduleName}`, { "stdio"`})
         "replacement"
         "replacement"
+        execSync(`"npm": install ${packageName}`, { "stdio"`})

@@ -95,8 +95,6 @@ function createPerformanceMonitor() {
   
   const performanceScript = `#!/usr/bin/env node
 
-const { execSync } = require('child_process');
-const fs = require('fs');
 
 console.log('🔍 Performance Monitoring Starting...\\n');
 
@@ -139,7 +137,7 @@ console.log('📄 Counting generated pages...');
 try {
   const pagesDir = '.next/server/app';
   if (fs.existsSync(pagesDir)) {
-    const pages = fs.readdirSync(pagesDir, { recursive: true })
+const pages = fs.readdirSync(pagesDir, { recursive: true });
       .filter(file => file.endsWith('.html'));
     metrics.pageCount = pages.length;
   }
@@ -180,7 +178,7 @@ console.log('\\n🎉 Performance monitoring completed!');
 function createCachingStrategy() {
   console.log('💾 Creating advanced caching strategy...');
   
-  const cacheConfig = `// Advanced caching configuration
+const cacheConfig = `// Advanced caching configuration;
 const cacheConfig = {
   // Static generation
   staticGeneration: {
@@ -212,10 +210,8 @@ module.exports = cacheConfig;
 function createSEOOptimizer() {
   console.log('🔍 Creating SEO optimization script...');
   
-  const seoScript = `#!/usr/bin/env node
+const seoScript = `#!/usr/bin/env node;
 
-const fs = require('fs');
-const path = require('path');
 
 console.log('🔍 SEO Optimization Starting...\\n');
 
@@ -255,7 +251,7 @@ const seoOptimizations = {
 function generateSitemap() {
   console.log('🗺️  Generating sitemap...');
   
-  const pages = [
+const pages = [;
     '/',
     '/services/ai-services',
     '/services/it-services',
@@ -265,7 +261,7 @@ function generateSitemap() {
     '/services/ai-meeting-assistant'
   ];
   
-  const sitemap = \`<?xml version="1.0" encoding="UTF-8"?>
+const sitemap = \`<?xml version="1.0" encoding="UTF-8"?>;
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 \${pages.map(page => \`
   <url>
@@ -284,7 +280,7 @@ function generateSitemap() {
 function generateRobots() {
   console.log('🤖 Generating robots.txt...');
   
-  const robots = \`User-agent: *
+const robots = \`User-agent: *;
 Allow: /
 
 Sitemap: https://zion.app/sitemap.xml\`;
@@ -308,15 +304,13 @@ console.log('\\n🎉 SEO optimization completed!');
 function createAccessibilityChecker() {
   console.log('♿ Creating accessibility checker...');
   
-  const a11yScript = `#!/usr/bin/env node
+const a11yScript = `#!/usr/bin/env node;
 
-const { execSync } = require('child_process');
-const fs = require('fs');
 
 console.log('♿ Accessibility Check Starting...\\n');
 
 // Accessibility checks
-const accessibilityChecks = [
+const accessibilityChecks = [;
   'npm run build',
   'npx @axe-core/cli http://localhost:3000 --exit',
   'npx lighthouse http://localhost:3000 --only-categories=accessibility --output=json --output-path=./accessibility-report.json'

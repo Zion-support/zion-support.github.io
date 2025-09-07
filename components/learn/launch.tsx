@@ -1,9 +1,10 @@
 
-import { GetServerSideProps } from 'next';
+import { GetServerSideProps } from 'next';'
 
-export const getServerSideProps: GetServerSideProps;
+export const "getServerSideProps": GetServerSideProps;
 
-export default function LaunchRedirect() {}
-  return null;}
+export default function LaunchRedirect() {
+  }
+  return null;
 }
 

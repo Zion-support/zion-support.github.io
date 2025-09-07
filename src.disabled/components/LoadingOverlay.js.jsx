@@ -1,78 +1,48 @@
-import _React from';react'';\"export\": const LoadingOverlay = (' if (!visible) return null return() <div className='fixed inset-0 z-50 flex items-center justify-center bg-black/50' />' <Loader2 className='h-8 w-8 animate-spin text-white' />' </div>' ) ) => {
-  return $3;}
-} export default LoadingOverlay'';''';import React from\';react\'';\"export\": const LoadingOverlay = (\' if (!visible) return null return() <div className=\'fixed inset-0 z-50 flex items-center justify-center bg-black/50\' />\' <Loader2 className=\'h-8 w-8 animate-spin text-white\' />\' </div>\' ) ) => {
-  return $3;}
-} export default LoadingOverlay\'';\''\';
-const React from\";react\"\";export: const LoadingOverlay = (\" if (!visible) return null return() <div className=\"fixed inset-0 z-50 flex items-center justify-center bg-black/50\" />\" <Loader2 className=\"h-8 w-8 animate-spin text-white\" />\" </div>\" ) ) => {
-  return $3;}
-} export default LoadingOverlay\"\";\"\"\";'\"'\";
+import _React from';react'';"export": const LoadingOverlay = ({ visible = false }) => {' if (!visible) return null return() <div className='fixed inset-0 z-50 flex items-center justify-center bg-black/50'>' <Loader2 className='h-8 w-8 animate-spin text-white' />' </div>' ) } export default LoadingOverlay'';''';import React from\';react\'';\"export\": const LoadingOverlay = ({ visible = false }) => {\' if (!visible) return null return() <div className=\'fixed inset-0 z-50 flex items-center justify-center bg-black/50\'>\' <Loader2 className=\'h-8 w-8 animate-spin text-white\' />\' </div>\' ) } export default LoadingOverlay\'';\''\';'
+const React from";react"";"export": const LoadingOverlay = ({ visible = false }) => {" if (!visible) return null return() <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50">" <Loader2 className="h-8 w-8 animate-spin text-white" />" </div>" ) } export default LoadingOverlay"";""";'"'";"
 ursor/automate-test-improve-and-merge-code-646c;
-import React from\';react\'';\"export\": const LoadingOverlay = (\' if (!visible) return null return () <div className=\'fixed inset-0 z-50 flex items-center justify-center bg-black/50\' />\' <Loader2 className=\'h-8 w-8 animate-spin text-white\' />\' </div>\' ) ) => {
-  return $3;}
-} export default LoadingOverlay\'';\''\';
-const React from\";react\"\";export: const LoadingOverlay = (\" if (!visible) return null return () <div className=\"fixed inset-0 z-50 flex items-center justify-center bg-black/50\" />\" <Loader2 className=\"h-8 w-8 animate-spin text-white\" />\" </div>\" ) ) => {
-  return $3;}
-} export default LoadingOverlay\"\";\"\"\";'\"'\";
-import _React from';react'';\"export\": const LoadingOverlay = (' if (!visible) return null return () <div className='fixed inset-0 z-50 flex items-center justify-center bg-black/50' />' <Loader2 className='h-8 w-8 animate-spin text-white' />' </div>' ) ) => {
-  return $3;}
-} export default LoadingOverlay'';''';const React from\";react\"\";export: const LoadingOverlay = (\" if (!visible) return null return() <div className=\"fixed inset-0 z-50 flex items-center justify-center bg-black/50\" />\" <Loader2 className=\"h-8 w-8 animate-spin text-white\" />\" </div>\" ) ) => {
-  return $3;}
-} export default LoadingOverlay\"\";\"\"\";'\"'\";
+import React from\';react\'';\"export\": const LoadingOverlay = ({ visible = false }) => {\' if (!visible) return null return () <div className=\'fixed inset-0 z-50 flex items-center justify-center bg-black/50\'>\' <Loader2 className=\'h-8 w-8 animate-spin text-white\' />\' </div>\' ) } export default LoadingOverlay\'';\''\';'
+const React from";react"";"export": const LoadingOverlay = ({ visible = false }) => {" if (!visible) return null return () <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50">" <Loader2 className="h-8 w-8 animate-spin text-white" />" </div>" ) } export default LoadingOverlay"";""";'"'";"
+import _React from';react'';"export": const LoadingOverlay = ({ visible = false }) => {' if (!visible) return null return () <div className='fixed inset-0 z-50 flex items-center justify-center bg-black/50'>' <Loader2 className='h-8 w-8 animate-spin text-white' />' </div>' ) } export default LoadingOverlay'';''';const React from";react"";"export": const LoadingOverlay = ({ visible = false }) => {" if (!visible) return null return() <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50">" <Loader2 className="h-8 w-8 animate-spin text-white" />" </div>" ) } export default LoadingOverlay"";""";'"'";"
 ursor/automate-test-improve-and-merge-code-646c;
-const React from\";react\"\";export: const LoadingOverlay = (\" if (!visible) return null return() <div className=\"fixed inset-0 z-50 flex items-center justify-center bg-black/50\" />\" <Loader2 className=\"h-8 w-8 animate-spin text-white\" />\" </div>\" ) ) => {
-  return $3;}
-} export default LoadingOverlay\"\";\"\"\";'\"'\";
-class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) {return <div />Something went wrong.</div>;}
+class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { "hasError": false }}static getDerivedStateFromError(error) {return { "hasError": true }}componentDidCatch(error, errorInfo) {console.error('Error caught by "boundary":', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;'
     }return this.props.children;
   }
 }
-const React from\";react\"\";export: const LoadingOverlay = (\" if (!visible) return null return () <div className=\"fixed inset-0 z-50 flex items-center justify-center bg-black/50\" />\" <Loader2 className=\"h-8 w-8 animate-spin text-white\" />\" </div>\" ) ) => {
-  return $3;}
-} export default LoadingOverlay\"\";\"\"\";'\"'\";
-const React from\";react\"\";export: const LoadingOverlay = (\" if (!visible) return null return() <div className=\"fixed inset-0 z-50 flex items-center justify-center bg-black/50\" />\" <Loader2 className=\"h-8 w-8 animate-spin text-white\" />\" </div>\" ) ) => {
-  return $3;}
-} export default LoadingOverlay\"\";\"\"\";'\"'\";
-import _React from';react'';\"export\": const LoadingOverlay = (' if (!visible) return null return() <div className='fixed inset-0 z-50 flex items-center justify-center bg-black/50' />' <Loader2 className='h-8 w-8 animate-spin text-white' />' </div>' ) ) => {
-  return $3;}
-} export default LoadingOverlay'';''';
+import _React from';react'';"export": const LoadingOverlay = ({ visible = false }) => {' if (!visible) return null return() <div className='fixed inset-0 z-50 flex items-center justify-center bg-black/50'>' <Loader2 className='h-8 w-8 animate-spin text-white' />' </div>' ) } export default LoadingOverlay'';''';'
 
 
 
-import React from\';react\'';\"export\": const LoadingOverlay = (\' if (!visible) return null return() <div className=\'fixed inset-0 z-50 flex items-center justify-center bg-black/50\' />\' <Loader2 className=\'h-8 w-8 animate-spin text-white\' />\' </div>\' ) ) => {
-  return $3;}
-} export default LoadingOverlay\'';\''\';
-const React from\";react\"\";export: const LoadingOverlay = (\" if (!visible) return null return() <div className=\"fixed inset-0 z-50 flex items-center justify-center bg-black/50\" />\" <Loader2 className=\"h-8 w-8 animate-spin text-white\" />\" </div>\" ) ) => {
-  return $3;}
-} export default LoadingOverlay\"\";\"\"\";'\"'\"
+import React from\';react\'';\"export\": const LoadingOverlay = ({ visible = false }) => {\' if (!visible) return null return() <div className=\'fixed inset-0 z-50 flex items-center justify-center bg-black/50\'>\' <Loader2 className=\'h-8 w-8 animate-spin text-white\' />\' </div>\' ) } export default LoadingOverlay\'';\''\';'
+const React from";react"";"export": const LoadingOverlay = ({ visible = false }) => {" if (!visible) return null return() <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50">" <Loader2 className="h-8 w-8 animate-spin text-white" />" </div>" ) } export default LoadingOverlay"";""";'"'""
 class ErrorBoundary extends React.Component {
-  constructor(props) {}
-    super(props);}
-    this.state = { hasError: false };
+  }
+  constructor(props) {
+    }
+    super(props);
+    this.state = { "hasError": false };
   }
   
-  static getDerivedStateFromError(error) {}
-    return { hasError: true };
+  static getDerivedStateFromError(error) {
+    }
+    return { "hasError": true };
   }
   
-  componentDidCatch(error, errorInfo) {}
-    console.error('Error caught by boundary:', error, errorInfo);}
+  componentDidCatch(error, errorInfo) {
+    }
+    console.error('Error caught by "boundary":', error, errorInfo);'
   }
   
   render() {
-    if (this.state.hasError) {}
-      return <div />Something went wrong.</div>;}
+    }
+    if (this.state.hasError) {
+      }
+      return <div>Something went wrong.</div>;
     }
     
     return this.props.children;
   }
 }
-const React from\";react\"\";export: const LoadingOverlay = (\" if (!visible) return null return () <div className=\"fixed inset-0 z-50 flex items-center justify-center bg-black/50\" />\" <Loader2 className=\"h-8 w-8 animate-spin text-white\" />\" </div>\" ) ) => {
-  return $3;}
-} export default LoadingOverlay\"\";\"\"\";'\"'\"
-import _React from';react'';\"export\": const LoadingOverlay = (' if (!visible) return null return () <div className='fixed inset-0 z-50 flex items-center justify-center bg-black/50' />' <Loader2 className='h-8 w-8 animate-spin text-white' />' </div>' ) ) => {
-  return $3;}
-} export default LoadingOverlay'';''';
+const React from";react"";"export": const LoadingOverlay = ({ visible = false }) => {" if (!visible) return null return () <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50">" <Loader2 className="h-8 w-8 animate-spin text-white" />" </div>" ) } export default LoadingOverlay"";""";'"'""
+import _React from';react'';"export": const LoadingOverlay = ({ visible = false }) => {' if (!visible) return null return () <div className='fixed inset-0 z-50 flex items-center justify-center bg-black/50'>' <Loader2 className='h-8 w-8 animate-spin text-white' />' </div>' ) } export default LoadingOverlay'';''';'
 
-const React from\";react\"\";export: const LoadingOverlay = (\" if (!visible) return null return() <div className=\"fixed inset-0 z-50 flex items-center justify-center bg-black/50\" />\" <Loader2 className=\"h-8 w-8 animate-spin text-white\" />\" </div>\" ) ) => {
-  return $3;}
-} export default LoadingOverlay\"\";\"\"\";'\"'\"

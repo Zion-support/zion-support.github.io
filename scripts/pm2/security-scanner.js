@@ -1,484 +1,410 @@
- ;
-ursor/automate-test-improve-and-merge-code-646c;
-
-const fs = require('fs')const path = require('path')const { execSync } = require('child_process')class SecurityScanner {constructor() {this.projectRoot = process.cwd()this.logFile = path.join(this.projectRoot, 'logs/pm2/security-scanner.log')this.reportFile = path.join(this.projectRoot, 'logs/pm2/security-report.json')this.startTime = Date.now()}log(message) {const timestamp = new Date().toISOString(;}
-  const logMessage = `[${timestamp}] ${message}\n`; try {fs.appendFileSync(this.logFile, logMessage)} catch (error) {console.error('Error writing to log file: ', error.message)}}async scanDependencies() {try {this.log('🔒 Scanning dependencies for vulnerabilities...')const auditResult = execSync('npm audit --json', {cwd: this.projectRoot, stdio: 'pipe',}
-  encoding: 'utf8,}
-};
-  const audit = JSON.parse(auditResult;
-  return {success: true;}
-    vulnerabilities: audit.vulnerabilities |{}summary: audit.metadata |{},
-} catch (error) {// npm audit might fail if there are vulnerabilities; try {const output = error.stdout?.toString() |error.stderr?.toString() |''; if (output.includes('npm ERR!')) {return {success: false, error: 'Vulnerabilities found',}
-  output: output}}} catch (parseError) {this.log(`Error parsing npm audit output: ${parseError.message}`,
-}return {success: false, error: error.message, output: error.stdout |error.stderr |''},
-}async scanCode() {try {this.log('🔍 Scanning code for security issues...')// Check for common security issues in code;
-
-const securityIssues = [];
-}
-const files = this.getSourceFiles()files.forEach(file = > {const content = fs.readFileSync(file, 'utf8')const lines = content.split('\n')lines.forEach((line, index) = > ;}
-  const lineNum = index + 1; // Check for hardcoded secrets; if (line.match(/password\s* = \s*[\"'][^\"']+[\"']/i)) {securityIssues.push({file: file, line: lineNum, type: 'hardcoded-password',}
-  severity: 'high', message: 'Hardcoded password detected'})}}}scanDirectory(this.projectRoot)return file,
-}async scanConfigs() {try {this.log('⚙️ Scanning configuration files...')const configIssues = [];
-
-const configFiles = [
-  'package.json'; 'next.config.js'; 'tsconfig.json'; '.env'; '.env.local';
-    '.env.production'
-];
- configFiles.forEach(configFile = > {const filePath = path.join(this.projectRoot, configFile)if (fs.existsSync(filePath)) ;
-  const content = fs.readFileSync(filePath, 'utf8')// Check for exposed secrets in config files; if (content.match(/password\s* = \s*[\"'][^\"']+[\"']/i)) {configIssues.push({file: configFile, type: 'exposed-secret',}
-  severity: 'high';}
-    message: 'Potential secret exposed in configuration file'},
-}// Check for debug mode in production configs; if (configFile.includes('production') && content.includes('debug: true')) {, configIssues.push({, file: configFile, type: 'debug-mode',}
-  severity: 'medium';}
-    message: 'Debug mode enabled in production configuration'})},
-})return {success: true;}
-    issues: configIssues,}
-} catch (error) {return {success: false, error: error.message, issues: []},
-}async generateReport(depResults, codeResults, configResults) {const report = {timestamp: new Date().toISOString(), summary: {, dependencies: depResults.success ? 'secure': 'vulnerable', code: codeResults.issues.length = = = 0 ? 'secure': 'issues-found', configs: configResults.issues.length = = = 0 ? 'secure': 'issues-found';}
-    overall: (depResults.success && codeResults.issues.length = = = 0 && configResults.issues.length = = = 0) ? 'secure': 'issues-found';}
-    }
-    details: {, dependencies: depResults, code: codeResults;}
-    configs: configResults}recommendations: [,
-}// Generate recommendations; if (!depResults.success) {report.recommendations.push({priority: 'critical',}
-  message: 'Dependency vulnerabilities found', action: 'Run npm audit fix to resolve vulnerabilities'},
-}if (codeResults.issues.length > 0) {const highSeverity = codeResults.issues.filter(issue = > issue.severity = = = 'high').length; if (highSeverity > 0) {report.recommendations.push({priority: 'high';}
-    message: `${highSeverit,}
-} high-severity security issues found in code`; action: 'Review and fix high-severity security issues'}),
-}if (configResults.issues.length > 0) {report.recommendations.push({priority: 'medium',}
-  message: 'Configuration security issues found', action: 'Review configuration files for security issues'})}return repor,
-}async saveReport(report) {try {const reportDir = path.dirname(this.reportFile)if (!fs.existsSync(reportDir)) {fs.mkdirSync(reportDir, { recursive: true },
-}fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2))this.log(`Report saved to: ${this.reportFile}`)} catch (error) {this.log(`Error saving report: ${error.message}`)}}async run() {this.log('🛡️ Starting Security Scanner...')this.log(`Project root: ${this.projectRoo,}
-}`)try {// Create logs directory if it doesn't exist;}
-}
-const logsDir = path.dirname(this.logFile)if (!fs.existsSync(logsDir)) {fs.mkdirSync(logsDir, { recursive: true },
-}// Run all security scans;
-
-const depResults = await this.scanDependencies()const codeResults = await this.scanCode(;
-  const configResults = await this.scanConfigs()// Generate report; this.log('📊 Generating security report...')const report = await this.generateReport(depResults, codeResults, configResults)// Save report; await this.saveReport(report)const duration = Date.now() - this.startTime; // Log summary; this.log('\n📊 Security Scanner Summary: ')this.log(`Dependencies: ${report.summary.dependencies}`)this.log(`Code: ${report.summary.code}`)this.log(`Configs: ${report.summary.configs}`)this.log(`Overall: ${report.summary.overall}`)this.log(`Duration: ${duratio,}
-}ms`)if (report.recommendations.length > 0) {this.log('\n💡 Recommendations: '), report.recommendations.forEach(rec = > {, this.log(` [${rec.priority.toUpperCase()}] ${rec.message}`)this.log(` Action: ${rec.action}`)})} else {this.log('\n✨ No security issues found!')}
-} catch (error) {this.log(`❌ Error running security scanner: ${error.message}`)process.exit(1)},
-}
-// Run the security scanner;
-
-const scanner = new SecurityScanner()scanner.run().catch(error = > {process.exit(1)}))}),)}),)ursor/integrate-build-improve-and-re-verify-8f7d;
-ursor/fix-syntax-push-and-merge-to-main-40de;
-#!/usr/bin/env node/usr/bin/env node/usr/bin/env nodeconst { execSync } = require(\"child_process\")\"const fs = require(\"fs\");
-  const path = require(\"path\")class SecurityScanner { constructor() {\" this.processName = process.env.PM2_PROCESS_NAME | \"security-scanner\";\" this.scanDependencies = process.env.SCAN_DEPENDENCIES === \"true\";\" this.scanCode = process.env.SCAN_CODE === \"true\";\" this.scanConfigs = process.env.SCAN_CONFIGS === \"true\";\" this.alertOnCritical = process.env.ALERT_ON_CRITICAL === \"true\";\" this.logFile = \"logs/pm2/security-scanner.log\";\" this.errorFile = \"logs/pm2/security-scanner-error.log\"; this.ensureLogDirectory()} ensureLogDirectory() { const logDir = path.dirname(this.logFile)if (!fs.existsSync(logDir)) { fs.mkdirSync(logDir, { recursive: true })},
-}\" log(message, level = \"INFO\") { const timestamp = new Date().toISOString(;}
-  const logMessage = `[${timestamp}] [${level}] ${message}\n`; console.log(logMessage.trim())try { fs.appendFileSync(this.logFile, logMessage)} catch (error) {\" console.error(\"Failed to write to log file:\", error.message)} } error(message) {\" this.log(message, \"ERROR\")try {` fs.appendFileSync(this.errorFile, `[${new Date().toISOString()}] ERROR: ${message}\n`,
-} catch (err) {\" console.error(\"Failed to write to error file:\", err.message)} } async scanDependencies() {\" this.log(\"Scanning dependencies for security vulnerabilities.\")try { / Run npm audit\" const auditResult = execSync(\"npm audit --json\", { \" encoding: \"utf8\", cwd: process.cwd(),\" stdio: \"pipe\" })const auditData = JSON.parse(auditResult)if (auditData.vulnerabilities) { const vulnerabilities = Object.keys(auditData.vulnerabilities)const criticalVulns = vulnerabilities.filter(vuln => \" auditData.vulnerabilities[vuln].severity === \"critical\" )const highVulns = vulnerabilities.filter(vuln => \" auditData.vulnerabilities[vuln].severity === \"high\" )` this.log(`Found ${vulnerabilities.length} vulnerabilities:`)` this.log(` - Critical: ${criticalVulns.length}`)` this.log(` - High: ${highVulns.lengt,}
-}`)if (criticalVulns.length > 0 && this.alertOnCritical) {\"` this.error(`CRITICAL VULNERABILITIES DETECTED: ${criticalVulns.join(\", \")}`)} return { success: true, vulnerabilities: auditData.vulnerabilities, critical: criticalVulns.length, high: highVulns.length, total: vulnerabilities.length ,}
-} else {\" this.log(\"No vulnerabilities found in dependencies\")return { success: true, vulnerabilities:  ,}
-}, critical: 0, high: 0, total: 0 }} } catch (error) {` this.error(`Dependency scan failed: ${error.messag,}
-}`;
-  return { success: false, error: error.message }},
-} async scanCode() {\" this.log(\"Scanning code for security issues.\")try {;}
-  const securityIssues = []; / Check for common security patterns const patterns = [\" { pattern: /eval\s*\(/, severity: \"high\", message: \"Use of eval() detected\",}
-},\" { pattern: /innerHTML\s*=/, severity: \"medium\", message: \"Direct innerHTML assignment detected\",}
-},\" { pattern: /document\.write\s*\(/, severity: \"medium\", message: \"Use of document.write() detected\",}
-},\" { pattern: /localStorage\.setItem\s*\([^]+,\s*[^)]*\+/, severity: \"low\", message: \"Potential XSS in localStorage\",}
-},\" { pattern: /console\.log\s*\([^)]*process\.env/, severity: \"high\", message: \"Environment variables in console.log\",}
-},\" { pattern: /password\s*=\s*[\"\"][^\"\"]*[\"\"]/, severity: \"high\", message: \"Hardcoded password detected\",}
-},\"\" { pattern: /api[_-]?key\s*=\s*[\"\"][^\"\"]*[\"\"]/, severity: \"high\", message: \"Hardcoded API key detected\",}
-},\"\" { pattern: /secret\s*=\s*[\"\"][^\"\"]*[\"\"]/, severity: \"high\", message: \"Hardcoded secret detected\",}
-} ]; / Scan JavaScript/TypeScript files\" const filesToScan = this.getFilesToScan([\".js\", \".ts\", \".jsx\", \".tsx\"])for (const file of filesToScan) { try {\" const content = fs.readFileSync(file, \"utf8\")for (const { pattern, severity, message } of patterns) {\" const matches = content.match(new RegExp(pattern.source, \"g\"))if (matches) { securityIssues.push({ file, severity, message, matches: matches.length })} } } catch (error) {\"` this.log(`Failed to scan file ${file}: ${error.messag,}
-}`, \"WARNING\")} } \" const criticalIssues = securityIssues.filter(issue => issue.severity === \"high\")\" const highIssues = securityIssues.filter(issue => issue.severity === \"high\")\" const mediumIssues = securityIssues.filter(issue => issue.severity === \"medium\")` this.log(`Code scan completed: `)` this.log(` - Critical issues: ${criticalIssues.length}`)` this.log(` - High issues: ${highIssues.length}`)` this.log(` - Medium issues: ${mediumIssues.length}`)if (criticalIssues.length > 0 && this.alertOnCritical) {` this.error(`CRITICAL SECURITY ISSUES DETECTED: ${criticalIssues.length} issues found`,
-} return { success: true, issues: securityIssues, critical: criticalIssues.length, high: highIssues.length, medium: mediumIssues.length, total: securityIssues.length }} catch (error) {` this.error(`Code scan failed: ${error.messag,}
-}`;
-  return { success: false, error: error.message }},
-} async scanConfigs() {\" this.log(\"Scanning configuration files for security issues.\")try {;
-  const configIssues = [];
-
-const configFiles = [\" \"package.json\",\" \"next.config.js\",\" \"vite.config.js\",\" \"webpack.config.js\",\" \".env\",\" \".env.local\",\" \".env.production\",\" \"nginx.conf\",\" \"docker-compose.yml\",\" \"Dockerfile\" ]; for (const configFile of configFiles) { if (fs.existsSync(configFile)) { try {\" const content = fs.readFileSync(configFile, \"utf8\")/ Check for sensitive data in configs;}
-  const sensitivePatterns = [\"\" { pattern: /password\s*[:=]\s*[\"\"][^\"\"]*[\"\"]/, severity: \"high\", message: \"Password in config file\",}
-},\"\" { pattern: /secret\s*[:=]\s*[\"\"][^\"\"]*[\"\"]/, severity: \"high\", message: \"Secret in config file\",}
-},\"\" { pattern: /api[_-]?key\s*[:=]\s*[\"\"][^\"\"]*[\"\"]/, severity: \"high\", message: \"API key in config file\",}
-},\"\" { pattern: /token\s*[:=]\s*[\"\"][^\"\"]*[\"\"]/, severity: \"high\", message: \"Token in config file\",}
-},\" { pattern: /debug\s*[:=]\s*true/, severity: \"medium\", message: \"Debug mode enabled in production config\",}
-} ]; for (const { pattern, severity, message } of sensitivePatterns) {\" const matches = content.match(new RegExp(pattern.source, \"g\"))if (matches) { configIssues.push({ file: configFile, severity, message, matches: matches.length })} } } catch (error) {\"` this.log(`Failed to scan config file ${configFile}: ${error.messag,}
-}`, \"WARNING\")} } } \" const criticalConfigIssues = configIssues.filter(issue => issue.severity === \"high\")` this.log(`Config scan completed: ${configIssues.length} issues found`)` this.log(` - Critical config issues: ${criticalConfigIssues.length}`)if (criticalConfigIssues.length > 0 && this.alertOnCritical) {` this.error(`CRITICAL CONFIG ISSUES DETECTED: ${criticalConfigIssues.length} issues found`,
-} return { success: true, issues: configIssues, critical: criticalConfigIssues.length, total: configIssues.length }} catch (error) {` this.error(`Config scan failed: ${error.messag,}
-}`;
-  return { success: false, error: error.message }},
-} getFilesToScan(extensions) {;}
-  const files = []; function scanDirectory(dir) { try { const items = fs.readdirSync(dir)for (const item of items) { const fullPath = path.join(dir, item)const stat = fs.statSync(fullPath)if (stat.isDirectory()) { / Skip node_modules, .git, dist, build directories\" if (![\"node_modules\", \".git\", \"dist\", \"build\", \"coverage\", \"logs\"].includes(item)) { scanDirectory(fullPath)} } else if (stat.isFile()) {;}
-  const ext = path.extname(item)if (extensions.includes(ext)) { files.push(fullPath)} } } } catch (error) {\" / Skip directories we can\"t read } } scanDirectory(process.cwd();
-  return files; } async generateSecurityReport() {\" this.log(\"Generating security report.\")try { const report = { timestamp: new Date().toISOString(), processName: this.processName, dependencyScan: this.scanDependencies ? await this.scanDependencies() : null, codeScan: this.scanCode ? await this.scanCode() : null, configScan: this.scanConfigs ? await this.scanConfigs() : null, environment: { nodeVersion: process.version, platform: process.platform, cwd: process.cwd() },
-}/ Calculate overall security score let totalIssues = 0; let criticalIssues = 0; if (report.dependencyScan?.success) { totalIssues += report.dependencyScan.total; criticalIssues += report.dependencyScan.critical; } if (report.codeScan?.success) { totalIssues += report.codeScan.total; criticalIssues += report.codeScan.critical; } if (report.configScan?.success) { totalIssues += report.configScan.total; criticalIssues += report.configScan.critical; } report.summary = { totalIssues, criticalIssues, securityScore: Math.max(0, 100 - (criticalIssues * 20) - (totalIssues * 2)) }`;
-  const reportFile = `security-reports/security-report-${Date.now()}.json`;
-
-const reportDir = path.dirname(reportFile)if (!fs.existsSync(reportDir)) { fs.mkdirSync(reportDir, { recursive: true },
-} fs.writeFileSync(reportFile, JSON.stringify(report, null, 2))` this.log(`Security report saved to: ${reportFile}`)` this.log(`Security score: ${report.summary.securityScor,}
-}/100`;
-  return report; } catch (error) {` this.error(`Failed to generate security report: ${error.messag,}
-}`)return null; } } async start() {` this.log(`Starting ${this.processName}.`)/ Run initial security scan await this.generateSecurityReport()/ Set up periodic scanning const interval = 12 * 60 * 60 * 1000; / 12 hours setInterval(async () => {\" this.log(\"Running scheduled security scan.\")await this.generateSecurityReport()}, interval)` this.log(`${this.processName} started successfully`)}}/ Start the automation if this script is run directlyif (require.main = == module) {;}
-  const scanner = new SecurityScanner()scanner.start().catch(error => {\" console.error(\"Security scanner failed to start:\", error)process.exit(1)})}module.exports = SecurityScanner;'\"`'\"`;
-#!/usr/bin/env node/usr/bin/env node/usr/bin/env nodeconst { execSync } = require(\"child_process\")\"const fs = require(\"fs\");
-  const path = require(\"path\")class SecurityScanner { constructor() {\" this.processName = process.env.PM2_PROCESS_NAME | \"security-scanner\";\" this.scanDependencies = process.env.SCAN_DEPENDENCIES === \"true\";\" this.scanCode = process.env.SCAN_CODE === \"true\";\" this.scanConfigs = process.env.SCAN_CONFIGS === \"true\";\" this.alertOnCritical = process.env.ALERT_ON_CRITICAL === \"true\";\" this.logFile = \"logs/pm2/security-scanner.log\";\" this.errorFile = \"logs/pm2/security-scanner-error.log\"; this.ensureLogDirectory()} ensureLogDirectory() { const logDir = path.dirname(this.logFile)if (!fs.existsSync(logDir)) { fs.mkdirSync(logDir, { recursive: true })},
-}\" log(message, level = \"INFO\") { const timestamp = new Date().toISOString(;}
-  const logMessage = `[${timestamp}] [${level}] ${message}\n`; console.log(logMessage.trim())try { fs.appendFileSync(this.logFile, logMessage)} catch (error) {\" console.error(\"Failed to write to log file:\", error.message)} } error(message) {\" this.log(message, \"ERROR\")try {` fs.appendFileSync(this.errorFile, `[${new Date().toISOString()}] ERROR: ${message}\n`,
-} catch (err) {\" console.error(\"Failed to write to error file:\", err.message)} } async scanDependencies() {\" this.log(\"Scanning dependencies for security vulnerabilities.\")try { / Run npm audit\" const auditResult = execSync(\"npm audit --json\", { \" encoding: \"utf8\", cwd: process.cwd(),\" stdio: \"pipe\" })const auditData = JSON.parse(auditResult)if (auditData.vulnerabilities) { const vulnerabilities = Object.keys(auditData.vulnerabilities)const criticalVulns = vulnerabilities.filter(vuln => \" auditData.vulnerabilities[vuln].severity === \"critical\" )const highVulns = vulnerabilities.filter(vuln => \" auditData.vulnerabilities[vuln].severity === \"high\" )` this.log(`Found ${vulnerabilities.length} vulnerabilities:`)` this.log(` - Critical: ${criticalVulns.length}`)` this.log(` - High: ${highVulns.lengt,}
-}`)if (criticalVulns.length > 0 && this.alertOnCritical) {\"` this.error(`CRITICAL VULNERABILITIES DETECTED: ${criticalVulns.join(\", \")}`)} return { success: true, vulnerabilities: auditData.vulnerabilities, critical: criticalVulns.length, high: highVulns.length, total: vulnerabilities.length ,}
-} else {\" this.log(\"No vulnerabilities found in dependencies\")return { success: true, vulnerabilities:  ,}
-}, critical: 0, high: 0, total: 0 }} } catch (error) {` this.error(`Dependency scan failed: ${error.messag,}
-}`;
-  return { success: false, error: error.message }},
-} async scanCode() {\" this.log(\"Scanning code for security issues.\")try {;}
-  const securityIssues = []; / Check for common security patterns const patterns = [\" { pattern: /eval\s*\(/, severity: \"high\", message: \"Use of eval() detected\",}
-},\" { pattern: /innerHTML\s*=/, severity: \"medium\", message: \"Direct innerHTML assignment detected\",}
-},\" { pattern: /document\.write\s*\(/, severity: \"medium\", message: \"Use of document.write() detected\",}
-},\" { pattern: /localStorage\.setItem\s*\([^]+,\s*[^)]*\+/, severity: \"low\", message: \"Potential XSS in localStorage\",}
-},\" { pattern: /console\.log\s*\([^)]*process\.env/, severity: \"high\", message: \"Environment variables in console.log\",}
-},\" { pattern: /password\s*=\s*[\"\"][^\"\"]*[\"\"]/, severity: \"high\", message: \"Hardcoded password detected\",}
-},\"\" { pattern: /api[_-]?key\s*=\s*[\"\"][^\"\"]*[\"\"]/, severity: \"high\", message: \"Hardcoded API key detected\",}
-},\"\" { pattern: /secret\s*=\s*[\"\"][^\"\"]*[\"\"]/, severity: \"high\", message: \"Hardcoded secret detected\",}
-} ]; / Scan JavaScript/TypeScript files\" const filesToScan = this.getFilesToScan([\".js\", \".ts\", \".jsx\", \".tsx\"])for (const file of filesToScan) { try {\" const content = fs.readFileSync(file, \"utf8\")for (const { pattern, severity, message } of patterns) {\" const matches = content.match(new RegExp(pattern.source, \"g\"))if (matches) { securityIssues.push({ file, severity, message, matches: matches.length })} } } catch (error) {\"` this.log(`Failed to scan file ${file}: ${error.messag,}
-}`, \"WARNING\")} } \" const criticalIssues = securityIssues.filter(issue => issue.severity === \"high\")\" const highIssues = securityIssues.filter(issue => issue.severity === \"high\")\" const mediumIssues = securityIssues.filter(issue => issue.severity === \"medium\")` this.log(`Code scan completed: `)` this.log(` - Critical issues: ${criticalIssues.length}`)` this.log(` - High issues: ${highIssues.length}`)` this.log(` - Medium issues: ${mediumIssues.length}`)if (criticalIssues.length > 0 && this.alertOnCritical) {` this.error(`CRITICAL SECURITY ISSUES DETECTED: ${criticalIssues.length} issues found`,
-} return { success: true, issues: securityIssues, critical: criticalIssues.length, high: highIssues.length, medium: mediumIssues.length, total: securityIssues.length }} catch (error) {` this.error(`Code scan failed: ${error.messag,}
-}`;
-  return { success: false, error: error.message }},
-} async scanConfigs() {\" this.log(\"Scanning configuration files for security issues.\")try {;
-  const configIssues = [];
-
-const configFiles = [\" \"package.json\",\" \"next.config.js\",\" \"vite.config.js\",\" \"webpack.config.js\",\" \".env\",\" \".env.local\",\" \".env.production\",\" \"nginx.conf\",\" \"docker-compose.yml\",\" \"Dockerfile\" ]; for (const configFile of configFiles) { if (fs.existsSync(configFile)) { try {\" const content = fs.readFileSync(configFile, \"utf8\")/ Check for sensitive data in configs;}
-  const sensitivePatterns = [\"\" { pattern: /password\s*[:=]\s*[\"\"][^\"\"]*[\"\"]/, severity: \"high\", message: \"Password in config file\",}
-},\"\" { pattern: /secret\s*[:=]\s*[\"\"][^\"\"]*[\"\"]/, severity: \"high\", message: \"Secret in config file\",}
-},\"\" { pattern: /api[_-]?key\s*[:=]\s*[\"\"][^\"\"]*[\"\"]/, severity: \"high\", message: \"API key in config file\",}
-},\"\" { pattern: /token\s*[:=]\s*[\"\"][^\"\"]*[\"\"]/, severity: \"high\", message: \"Token in config file\",}
-},\" { pattern: /debug\s*[:=]\s*true/, severity: \"medium\", message: \"Debug mode enabled in production config\",}
-} ]; for (const { pattern, severity, message } of sensitivePatterns) {\" const matches = content.match(new RegExp(pattern.source, \"g\"))if (matches) { configIssues.push({ file: configFile, severity, message, matches: matches.length })} } } catch (error) {\"` this.log(`Failed to scan config file ${configFile}: ${error.messag,}
-}`, \"WARNING\")} } } \" const criticalConfigIssues = configIssues.filter(issue => issue.severity === \"high\")` this.log(`Config scan completed: ${configIssues.length} issues found`)` this.log(` - Critical config issues: ${criticalConfigIssues.length}`)if (criticalConfigIssues.length > 0 && this.alertOnCritical) {` this.error(`CRITICAL CONFIG ISSUES DETECTED: ${criticalConfigIssues.length} issues found`,
-} return { success: true, issues: configIssues, critical: criticalConfigIssues.length, total: configIssues.length }} catch (error) {` this.error(`Config scan failed: ${error.messag,}
-}`;
-  return { success: false, error: error.message }},
-} getFilesToScan(extensions) {;}
-  const files = []; function scanDirectory(dir) { try { const items = fs.readdirSync(dir)for (const item of items) { const fullPath = path.join(dir, item)const stat = fs.statSync(fullPath)if (stat.isDirectory()) { / Skip node_modules, .git, dist, build directories\" if (![\"node_modules\", \".git\", \"dist\", \"build\", \"coverage\", \"logs\"].includes(item)) { scanDirectory(fullPath)} } else if (stat.isFile()) {;}
-  const ext = path.extname(item)if (extensions.includes(ext)) { files.push(fullPath)} } } } catch (error) {\" / Skip directories we can\"t read } } scanDirectory(process.cwd();
-  return files; } async generateSecurityReport() {\" this.log(\"Generating security report.\")try { const report = { timestamp: new Date().toISOString(), processName: this.processName, dependencyScan: this.scanDependencies ? await this.scanDependencies() : null, codeScan: this.scanCode ? await this.scanCode() : null, configScan: this.scanConfigs ? await this.scanConfigs() : null, environment: { nodeVersion: process.version, platform: process.platform, cwd: process.cwd() },
-}/ Calculate overall security score let totalIssues = 0; let criticalIssues = 0; if (report.dependencyScan?.success) { totalIssues += report.dependencyScan.total; criticalIssues += report.dependencyScan.critical; } if (report.codeScan?.success) { totalIssues += report.codeScan.total; criticalIssues += report.codeScan.critical; } if (report.configScan?.success) { totalIssues += report.configScan.total; criticalIssues += report.configScan.critical; } report.summary = { totalIssues, criticalIssues, securityScore: Math.max(0, 100 - (criticalIssues * 20) - (totalIssues * 2)) }`;
-  const reportFile = `security-reports/security-report-${Date.now()}.json`;
-
-const reportDir = path.dirname(reportFile)if (!fs.existsSync(reportDir)) { fs.mkdirSync(reportDir, { recursive: true },
-} fs.writeFileSync(reportFile, JSON.stringify(report, null, 2))` this.log(`Security report saved to: ${reportFile}`)` this.log(`Security score: ${report.summary.securityScor,}
-}/100`;
-  return report; } catch (error) {` this.error(`Failed to generate security report: ${error.messag,}
-}`)return null; } } async start() {` this.log(`Starting ${this.processName}.`)/ Run initial security scan await this.generateSecurityReport()/ Set up periodic scanning const interval = 12 * 60 * 60 * 1000; / 12 hours setInterval(async () => {\" this.log(\"Running scheduled security scan.\")await this.generateSecurityReport()}, interval)` this.log(`${this.processName} started successfully`)}}/ Start the automation if this script is run directlyif (require.main = == module) {;}
-  const scanner = new SecurityScanner()scanner.start().catch(error => {\" console.error(\"Security scanner failed to start:\", error)process.exit(1)})}module.exports = SecurityScanner;'\"`'\"`;
-#!/usr/bin/env node/usr/bin/env node/usr/bin/env nodeconst { execSync } = require(\"child_process\")\"const fs = require(\"fs\");
-  const path = require(\"path\")class SecurityScanner { constructor() {\" this.processName = process.env.PM2_PROCESS_NAME | \"security-scanner\";\" this.scanDependencies = process.env.SCAN_DEPENDENCIES === \"true\";\" this.scanCode = process.env.SCAN_CODE === \"true\";\" this.scanConfigs = process.env.SCAN_CONFIGS === \"true\";\" this.alertOnCritical = process.env.ALERT_ON_CRITICAL === \"true\";\" this.logFile = \"logs/pm2/security-scanner.log\";\" this.errorFile = \"logs/pm2/security-scanner-error.log\"; this.ensureLogDirectory()} ensureLogDirectory() { const logDir = path.dirname(this.logFile)if (!fs.existsSync(logDir)) { fs.mkdirSync(logDir, { recursive: true })},
-}\" log(message, level = \"INFO\") { const timestamp = new Date().toISOString(;}
-  const logMessage = `[${timestamp}] [${level}] ${message}\n`; console.log(logMessage.trim())try { fs.appendFileSync(this.logFile, logMessage)} catch (error) {\" console.error(\"Failed to write to log file:\", error.message)} } error(message) {\" this.log(message, \"ERROR\")try {` fs.appendFileSync(this.errorFile, `[${new Date().toISOString()}] ERROR: ${message}\n`,
-} catch (err) {\" console.error(\"Failed to write to error file:\", err.message)} } async scanDependencies() {\" this.log(\"Scanning dependencies for security vulnerabilities.\")try { / Run npm audit\" const auditResult = execSync(\"npm audit --json\", { \" encoding: \"utf8\", cwd: process.cwd(),\" stdio: \"pipe\" })const auditData = JSON.parse(auditResult)if (auditData.vulnerabilities) { const vulnerabilities = Object.keys(auditData.vulnerabilities)const criticalVulns = vulnerabilities.filter(vuln => \" auditData.vulnerabilities[vuln].severity === \"critical\" )const highVulns = vulnerabilities.filter(vuln => \" auditData.vulnerabilities[vuln].severity === \"high\" )` this.log(`Found ${vulnerabilities.length} vulnerabilities:`)` this.log(` - Critical: ${criticalVulns.length}`)` this.log(` - High: ${highVulns.lengt,}
-}`)if (criticalVulns.length > 0 && this.alertOnCritical) {\"` this.error(`CRITICAL VULNERABILITIES DETECTED: ${criticalVulns.join(\", \")}`)} return { success: true, vulnerabilities: auditData.vulnerabilities, critical: criticalVulns.length, high: highVulns.length, total: vulnerabilities.length ,}
-} else {\" this.log(\"No vulnerabilities found in dependencies\")return { success: true, vulnerabilities:  ,}
-}, critical: 0, high: 0, total: 0 }} } catch (error) {` this.error(`Dependency scan failed: ${error.messag,}
-}`;
-  return { success: false, error: error.message }},
-} async scanCode() {\" this.log(\"Scanning code for security issues.\")try {;}
-  const securityIssues = []; / Check for common security patterns const patterns = [\" { pattern: /eval\s*\(/, severity: \"high\", message: \"Use of eval() detected\",}
-},\" { pattern: /innerHTML\s*=/, severity: \"medium\", message: \"Direct innerHTML assignment detected\",}
-},\" { pattern: /document\.write\s*\(/, severity: \"medium\", message: \"Use of document.write() detected\",}
-},\" { pattern: /localStorage\.setItem\s*\([^]+,\s*[^)]*\+/, severity: \"low\", message: \"Potential XSS in localStorage\",}
-},\" { pattern: /console\.log\s*\([^)]*process\.env/, severity: \"high\", message: \"Environment variables in console.log\",}
-},\" { pattern: /password\s*=\s*[\"\"][^\"\"]*[\"\"]/, severity: \"high\", message: \"Hardcoded password detected\",}
-},\"\" { pattern: /api[_-]?key\s*=\s*[\"\"][^\"\"]*[\"\"]/, severity: \"high\", message: \"Hardcoded API key detected\",}
-},\"\" { pattern: /secret\s*=\s*[\"\"][^\"\"]*[\"\"]/, severity: \"high\", message: \"Hardcoded secret detected\",}
-} ]; / Scan JavaScript/TypeScript files\" const filesToScan = this.getFilesToScan([\".js\", \".ts\", \".jsx\", \".tsx\"])for (const file of filesToScan) { try {\" const content = fs.readFileSync(file, \"utf8\")for (const { pattern, severity, message } of patterns) {\" const matches = content.match(new RegExp(pattern.source, \"g\"))if (matches) { securityIssues.push({ file, severity, message, matches: matches.length })} } } catch (error) {\"` this.log(`Failed to scan file ${file}: ${error.messag,}
-}`, \"WARNING\")} } \" const criticalIssues = securityIssues.filter(issue => issue.severity === \"high\")\" const highIssues = securityIssues.filter(issue => issue.severity === \"high\")\" const mediumIssues = securityIssues.filter(issue => issue.severity === \"medium\")` this.log(`Code scan completed: `)` this.log(` - Critical issues: ${criticalIssues.length}`)` this.log(` - High issues: ${highIssues.length}`)` this.log(` - Medium issues: ${mediumIssues.length}`)if (criticalIssues.length > 0 && this.alertOnCritical) {` this.error(`CRITICAL SECURITY ISSUES DETECTED: ${criticalIssues.length} issues found`,
-} return { success: true, issues: securityIssues, critical: criticalIssues.length, high: highIssues.length, medium: mediumIssues.length, total: securityIssues.length }} catch (error) {` this.error(`Code scan failed: ${error.messag,}
-}`;
-  return { success: false, error: error.message }},
-} async scanConfigs() {\" this.log(\"Scanning configuration files for security issues.\")try {;
-  const configIssues = [];
-
-const configFiles = [\" \"package.json\",\" \"next.config.js\",\" \"vite.config.js\",\" \"webpack.config.js\",\" \".env\",\" \".env.local\",\" \".env.production\",\" \"nginx.conf\",\" \"docker-compose.yml\",\" \"Dockerfile\" ]; for (const configFile of configFiles) { if (fs.existsSync(configFile)) { try {\" const content = fs.readFileSync(configFile, \"utf8\")/ Check for sensitive data in configs;}
-  const sensitivePatterns = [\"\" { pattern: /password\s*[:=]\s*[\"\"][^\"\"]*[\"\"]/, severity: \"high\", message: \"Password in config file\",}
-},\"\" { pattern: /secret\s*[:=]\s*[\"\"][^\"\"]*[\"\"]/, severity: \"high\", message: \"Secret in config file\",}
-},\"\" { pattern: /api[_-]?key\s*[:=]\s*[\"\"][^\"\"]*[\"\"]/, severity: \"high\", message: \"API key in config file\",}
-},\"\" { pattern: /token\s*[:=]\s*[\"\"][^\"\"]*[\"\"]/, severity: \"high\", message: \"Token in config file\",}
-},\" { pattern: /debug\s*[:=]\s*true/, severity: \"medium\", message: \"Debug mode enabled in production config\",}
-} ]; for (const { pattern, severity, message } of sensitivePatterns) {\" const matches = content.match(new RegExp(pattern.source, \"g\"))if (matches) { configIssues.push({ file: configFile, severity, message, matches: matches.length })} } } catch (error) {\"` this.log(`Failed to scan config file ${configFile}: ${error.messag,}
-}`, \"WARNING\")} } } \" const criticalConfigIssues = configIssues.filter(issue => issue.severity === \"high\")` this.log(`Config scan completed: ${configIssues.length} issues found`)` this.log(` - Critical config issues: ${criticalConfigIssues.length}`)if (criticalConfigIssues.length > 0 && this.alertOnCritical) {` this.error(`CRITICAL CONFIG ISSUES DETECTED: ${criticalConfigIssues.length} issues found`,
-} return { success: true, issues: configIssues, critical: criticalConfigIssues.length, total: configIssues.length }} catch (error) {` this.error(`Config scan failed: ${error.messag,}
-}`;
-  return { success: false, error: error.message }},
-} getFilesToScan(extensions) {;}
-  const files = []; function scanDirectory(dir) { try { const items = fs.readdirSync(dir)for (const item of items) { const fullPath = path.join(dir, item)const stat = fs.statSync(fullPath)if (stat.isDirectory()) { / Skip node_modules, .git, dist, build directories\" if (![\"node_modules\", \".git\", \"dist\", \"build\", \"coverage\", \"logs\"].includes(item)) { scanDirectory(fullPath)} } else if (stat.isFile()) {;}
-  const ext = path.extname(item)if (extensions.includes(ext)) { files.push(fullPath)} } } } catch (error) {\" / Skip directories we can\"t read } } scanDirectory(process.cwd();
-  return files; } async generateSecurityReport() {\" this.log(\"Generating security report.\")try { const report = { timestamp: new Date().toISOString(), processName: this.processName, dependencyScan: this.scanDependencies ? await this.scanDependencies() : null, codeScan: this.scanCode ? await this.scanCode() : null, configScan: this.scanConfigs ? await this.scanConfigs() : null, environment: { nodeVersion: process.version, platform: process.platform, cwd: process.cwd() },
-}/ Calculate overall security score let totalIssues = 0; let criticalIssues = 0; if (report.dependencyScan?.success) { totalIssues += report.dependencyScan.total; criticalIssues += report.dependencyScan.critical; } if (report.codeScan?.success) { totalIssues += report.codeScan.total; criticalIssues += report.codeScan.critical; } if (report.configScan?.success) { totalIssues += report.configScan.total; criticalIssues += report.configScan.critical; } report.summary = { totalIssues, criticalIssues, securityScore: Math.max(0, 100 - (criticalIssues * 20) - (totalIssues * 2)) }`;
-  const reportFile = `security-reports/security-report-${Date.now()}.json`;
-
-const reportDir = path.dirname(reportFile)if (!fs.existsSync(reportDir)) { fs.mkdirSync(reportDir, { recursive: true },
-} fs.writeFileSync(reportFile, JSON.stringify(report, null, 2))` this.log(`Security report saved to: ${reportFile}`)` this.log(`Security score: ${report.summary.securityScor,}
-}/100`;
-  return report; } catch (error) {` this.error(`Failed to generate security report: ${error.messag,}
-}`)return null; } } async start() {` this.log(`Starting ${this.processName}.`)/ Run initial security scan await this.generateSecurityReport()/ Set up periodic scanning const interval = 12 * 60 * 60 * 1000; / 12 hours setInterval(async () => {\" this.log(\"Running scheduled security scan.\")await this.generateSecurityReport()}, interval)` this.log(`${this.processName} started successfully`)}}/ Start the automation if this script is run directlyif (require.main = == module) {;}
-  const scanner = new SecurityScanner()scanner.start().catch(error => {\" console.error(\"Security scanner failed to start:\", error)process.exit(1)})}module.exports = SecurityScanner;'\"`'\"`;
-#!/usr/bin/env node,/**;
     
 
 
-#!/usr/bin/env node/usr/bin/env node/usr/bin/env nodeconst { execSync } = require(\"child_process\");\"const fs = require(\"fs\");\"const path = require(\"path\");class SecurityScanner { constructor() {\" this.processName = process.env.PM2_PROCESS_NAME | \"security-scanner\";\" this.scanDependencies = process.env.SCAN_DEPENDENCIES === \"true\";\" this.scanCode = process.env.SCAN_CODE === \"true\";\" this.scanConfigs = process.env.SCAN_CONFIGS === \"true\";\" this.alertOnCritical = process.env.ALERT_ON_CRITICAL === \"true\";\" this.logFile = \"logs/pm2/security-scanner.log\";\" this.errorFile = \"logs/pm2/security-scanner-error.log\"; this.ensureLogDirectory(); } ensureLogDirectory() { const logDir = path.dirname(this.logFile); if (!fs.existsSync(logDir)) { fs.mkdirSync(logDir, { recursive: true,}
-}); } }\" log(message, level = \"INFO\") {;
-  const timestamp = new Date().toISOString();}
-}
-const logMessage = `[${timestamp}] [${level}] ${message}\n`; console.log(logMessage.trim()); try { fs.appendFileSync(this.logFile, logMessage); } catch (error) {\" console.error(\"Failed to write to log file:\", error.message); } } error(message) {\" this.log(message, \"ERROR\"); try {` fs.appendFileSync(this.errorFile, `[${new Date().toISOString()}] ERROR: ${messag,}
-}\n`); } catch (err) {\" console.error(\"Failed to write to error file:\", err.message); } } async scanDependencies() {\" this.log(\"Scanning dependencies for security vulnerabilities.\"); try { / Run npm audit\" const auditResult = execSync(\"npm audit --json\", { \" encoding: \"utf8\", cwd: process.cwd(),\" stdio: \"pipe\",}
-});
 
-const auditData = JSON.parse(auditResult); if (auditData.vulnerabilities) { const vulnerabilities = Object.keys(auditData.vulnerabilities);
+ ;
+ursor/automate-test-improve-and-merge-code-646c;
 
-const criticalVulns = vulnerabilities.filter(vuln => \" auditData.vulnerabilities[vuln].severity === \"critical\" );}
-}
-const highVulns = vulnerabilities.filter(vuln => \" auditData.vulnerabilities[vuln].severity === \"high\" );` this.log(`Found ${vulnerabilities.length} vulnerabilities:`);` this.log(` - Critical: ${criticalVulns.lengt,}
-}`);` this.log(` - High: ${highVulns.lengt,}
-}`); if (criticalVulns.length > 0 && this.alertOnCritical) {\"` this.error(`CRITICAL VULNERABILITIES DETECTED: ${criticalVulns.join(\", \")}`); } return { success: true, vulnerabilities: auditData.vulnerabilities, critical: criticalVulns.length, high: highVulns.length, total: vulnerabilities.length,}
-}; } else {\" this.log(\"No vulnerabilities found in dependencies\"); return { success: true, vulnerabilities:  ,}
-}, critical: 0, high: 0, total: 0,
-}; } } catch (error) {` this.error(`Dependency scan failed: ${error.messag,}
-}`); return { success: false, error: error.message,}
-}; } } async scanCode() {\" this.log(\"Scanning code for security issues.\"); try { const securityIssues = []; / Check for common security patterns const patterns = [\" { pattern: /eval\s*\(/, severity: \"high\", message: \"Use of eval() detected\",}
-},\" { pattern: /innerHTML\s*=/, severity: \"medium\", message: \"Direct innerHTML assignment detected\",}
-},\" { pattern: /document\.write\s*\(/, severity: \"medium\", message: \"Use of document.write() detected\",}
-},\" { pattern: /localStorage\.setItem\s*\([^]+,\s*[^)]*\+/, severity: \"low\", message: \"Potential XSS in localStorage\",}
-},\" { pattern: /console\.log\s*\([^)]*process\.env/, severity: \"high\", message: \"Environment variables in console.log\",}
-},\" { pattern: /password\s*=\s*[\"\"][^\"\"]*[\"\"]/, severity: \"high\", message: \"Hardcoded password detected\",}
-},\"\" { pattern: /api[_-]?key\s*=\s*[\"\"][^\"\"]*[\"\"]/, severity: \"high\", message: \"Hardcoded API key detected\",}
-},\"\" { pattern: /secret\s*=\s*[\"\"][^\"\"]*[\"\"]/, severity: \"high\", message: \"Hardcoded secret detected\",}
-} ]; / Scan JavaScript/TypeScript files\" const filesToScan = this.getFilesToScan([\".js\", \".ts\", \".jsx\", \".tsx\"]); for (const file of filesToScan) { try {\" const content = fs.readFileSync(file, \"utf8\"); for (const { pattern, severity, message } of patterns) {\" const matches = content.match(new RegExp(pattern.source, \"g\")); if (matches) { securityIssues.push({ file, severity, message, matches: matches.length,}
-}); } } } catch (error) {\"` this.log(`Failed to scan file ${file}: ${error.message}`, \"WARNING\"); } } \" const criticalIssues = securityIssues.filter(issue => issue.severity === \"high\");\" const highIssues = securityIssues.filter(issue => issue.severity === \"high\");\" const mediumIssues = securityIssues.filter(issue => issue.severity === \"medium\");` this.log(`Code scan completed:`);` this.log(` - Critical issues: ${criticalIssues.lengt,}
-}`);` this.log(` - High issues: ${highIssues.lengt,}
-}`);` this.log(` - Medium issues: ${mediumIssues.lengt,}
-}`); if (criticalIssues.length > 0 && this.alertOnCritical) {` this.error(`CRITICAL SECURITY ISSUES DETECTED: ${criticalIssues.lengt,}
-} issues found`); } return { success: true, issues: securityIssues, critical: criticalIssues.length, high: highIssues.length, medium: mediumIssues.length, total: securityIssues.length,}
-}; } catch (error) {` this.error(`Code scan failed: ${error.messag,}
-}`); return { success: false, error: error.message,}
-}; } } async scanConfigs() {\" this.log(\"Scanning configuration files for security issues.\"); try { const configIssues = [];
-}
-const configFiles = [\" \"package.json\",\" \"next.config.js\",\" \"vite.config.js\",\" \"webpack.config.js\",\" \".env\",\" \".env.local\",\" \".env.production\",\" \"nginx.conf\",\" \"docker-compose.yml\",\" \"Dockerfile\" ]; for (const configFile of configFiles) { if (fs.existsSync(configFile)) { try {\" const content = fs.readFileSync(configFile, \"utf8\"); / Check for sensitive data in configs const sensitivePatterns = [\"\" { pattern: /password\s*[:=]\s*[\"\"][^\"\"]*[\"\"]/, severity: \"high\", message: \"Password in config file\",}
-},\"\" { pattern: /secret\s*[:=]\s*[\"\"][^\"\"]*[\"\"]/, severity: \"high\", message: \"Secret in config file\",}
-},\"\" { pattern: /api[_-]?key\s*[:=]\s*[\"\"][^\"\"]*[\"\"]/, severity: \"high\", message: \"API key in config file\",}
-},\"\" { pattern: /token\s*[:=]\s*[\"\"][^\"\"]*[\"\"]/, severity: \"high\", message: \"Token in config file\",}
-},\" { pattern: /debug\s*[:=]\s*true/, severity: \"medium\", message: \"Debug mode enabled in production config\",}
-} ]; for (const { pattern, severity, message } of sensitivePatterns) {\" const matches = content.match(new RegExp(pattern.source, \"g\")); if (matches) { configIssues.push({ file: configFile, severity, message, matches: matches.length,}
-}); } } } catch (error) {\"` this.log(`Failed to scan config file ${configFile}: ${error.message}`, \"WARNING\"); } } } \" const criticalConfigIssues = configIssues.filter(issue => issue.severity === \"high\");` this.log(`Config scan completed: ${configIssues.lengt,}
-} issues found`);` this.log(` - Critical config issues: ${criticalConfigIssues.lengt,}
-}`); if (criticalConfigIssues.length > 0 && this.alertOnCritical) {` this.error(`CRITICAL CONFIG ISSUES DETECTED: ${criticalConfigIssues.lengt,}
-} issues found`); } return { success: true, issues: configIssues, critical: criticalConfigIssues.length, total: configIssues.length,}
-}; } catch (error) {` this.error(`Config scan failed: ${error.messag,}
-}`); return { success: false, error: error.message,}
-}; } } getFilesToScan(extensions) { const files = []; function scanDirectory(dir) { try { const items = fs.readdirSync(dir); for (const item of items) { const fullPath = path.join(dir, item);}
-}
-const stat = fs.statSync(fullPath); if (stat.isDirectory()) { / Skip node_modules, .git, dist, build directories\" if (![\"node_modules\", \".git\", \"dist\", \"build\", \"coverage\", \"logs\"].includes(item)) { scanDirectory(fullPath); } } else if (stat.isFile()) { const ext = path.extname(item); if (extensions.includes(ext)) { files.push(fullPath); } } } } catch (error) {\" / Skip directories we can\"t read } } scanDirectory(process.cwd()); return files; } async generateSecurityReport() {\" this.log(\"Generating security report.\"); try { const report = { timestamp: new Date().toISOString(), processName: this.processName, dependencyScan: this.scanDependencies ? await this.scanDependencies() : null, codeScan: this.scanCode ? await this.scanCode() : null, configScan: this.scanConfigs ? await this.scanConfigs() : null, environment: { nodeVersion: process.version, platform: process.platform, cwd: process.cwd() },
-}; / Calculate overall security score let totalIssues = 0; let criticalIssues = 0; if (report.dependencyScan?.success) { totalIssues += report.dependencyScan.total; criticalIssues += report.dependencyScan.critical; } if (report.codeScan?.success) { totalIssues += report.codeScan.total; criticalIssues += report.codeScan.critical; } if (report.configScan?.success) { totalIssues += report.configScan.total; criticalIssues += report.configScan.critical; } report.summary = { totalIssues, criticalIssues, securityScore: Math.max(0, 100 - (criticalIssues * 20) - (totalIssues * 2)) };` const reportFile = `security-reports/security-report-${Date.now()}.json`;
+const fs = require('fs')const path = require('path')const { execSync } = require('child_process')class SecurityScanner {constructor() {this.projectRoot = process.cwd()this.logFile = path.join(this.projectRoot, 'logs/pm2/security-scanner.log')this.reportFile = path.join(this.projectRoot, 'logs/pm2/security-report.json')this.startTime = Date.now()}log(message) {const timestamp = new Date().toISOString(;'
+  }
+  const logMessage = `[${timestamp}] ${message}\n`; try {fs.appendFileSync(this.logFile, logMessage)} catch (error) {console.error('Error writing to log "file": ', error.message)}}async scanDependencies() {try {this.log('🔒 Scanning dependencies for vulnerabilities...')const audit = JSON.parse(auditResult;
+  return {"success": true;
+    }
+    "vulnerabilities": audit.vulnerabilities |{}"summary": audit.metadata |{}
+} catch (error) {// npm audit might fail if there are vulnerabilities; try {const output = error.stdout?.toString() |error.stderr?.toString() |''; if (output.includes('npm ERR!')) {return {"success": false, "error": 'Vulnerabilities found', "output": output}}} catch (parseError) {this.log(`Error parsing npm audit "output": ${parseError.message}`,`}return {"success": false, "error": error.message, "output": error.stdout |error.stderr |''},'
+}async scanCode() {try {this.log('🔍 Scanning code for security issues...')// Check for common security issues in code;'
 
-const reportDir = path.dirname(reportFile); if (!fs.existsSync(reportDir)) { fs.mkdirSync(reportDir, { recursive: true,}
-}); } fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));` this.log(`Security report saved to: ${reportFil,}
-}`);` this.log(`Security score: ${report.summary.securityScor,}
-}/100`); return report; } catch (error) {` this.error(`Failed to generate security report: ${error.messag,}
-}`); return null; } } async start() {` this.log(`Starting ${this.processName}.`); / Run initial security scan await this.generateSecurityReport(); / Set up periodic scanning const interval = 12 * 60 * 60 * 1000; / 12 hours setInterval(async () => {\" this.log(\"Running scheduled security scan.\"); await this.generateSecurityReport(); }, interval);` this.log(`${this.processName} started successfully`); }}/ Start the automation if this script is run directlyif (require.main = == module) {;}
-  const scanner = new SecurityScanner(); scanner.start().catch(error => {\" console.error(\"Security scanner failed to start:\", error); process.exit(1); });}module.exports = SecurityScanner;'\"`'\"`
-#!/usr/bin/env node,
+}
+
+const securityIssues = [];
+
+const files = this.getSourceFiles()files.forEach(file = > {const content = fs.readFileSync(file, 'utf8')const lines = content.split('\n')lines.forEach((line, index) = > ;'
+  }
+  const lineNum = index + 1; // Check for hardcoded secrets; if (line.match(/password\s* = \s*["'][^"']+["']/i)) {securityIssues.push({"file": file, "line": lineNum, "type": 'hardcoded-password', "severity": 'high', "message": 'Hardcoded password detected'})}}}scanDirectory(this.projectRoot)return file,'
+}async scanConfigs() {try {this.log('⚙️ Scanning configuration files...')const configIssues = [];'
+
+}
+
+const configFiles = [;
+  'package.json'; 'next.config.js'; 'tsconfig.json'; '.env'; '.env.local';'
+    '.env.production''
+];
+ configFiles.forEach(configFile = > {const filePath = path.join(this.projectRoot, configFile)if (fs.existsSync(filePath)) ;
+  }
+  const content = fs.readFileSync(filePath, 'utf8')// Check for exposed secrets in config files; if (content.match(/password\s* = \s*["'][^"']+["']/i)) {configIssues.push({"file": configFile, "type": 'exposed-secret', "severity": 'high';'
+    }
+    "message": 'Potential secret exposed in configuration file'},'
+}// Check for debug mode in production configs; if (configFile.includes('production') && content.includes('"debug": true')) {, configIssues.push({, "file": configFile, "type": 'debug-mode', "severity": 'medium';'
+    }
+    "message": 'Debug mode enabled in production configuration'})},'
+})return {"success": true;
+    }
+    "issues": configIssues
+} catch (error) {return {"success": false, "error": error.message, "issues": []}
+}async generateReport(depResults, codeResults, configResults) {const report = {"timestamp": new Date().toISOString(), "summary": {, "dependencies": depResults.success ? 'secure': 'vulnerable', "code": codeResults.issues.length = = = 0 ? 'secure': 'issues-found', "configs": configResults.issues.length = = = 0 ? 'secure': 'issues-found';'
+    }
+    "overall": (depResults.success && codeResults.issues.length = = = 0 && configResults.issues.length = = = 0) ? 'secure': 'issues-found';'
+    }
+    "details": {, "dependencies": depResults, "code": codeResults;
+    }
+    "configs": configResults}"recommendations": [
+}// Generate recommendations; if (!depResults.success) {report.recommendations.push({"priority": 'critical', "message": 'Dependency vulnerabilities found', "action": 'Run npm audit fix to resolve vulnerabilities'},'
+}if (codeResults.issues.length > 0) {const highSeverity = codeResults.issues.filter(issue = > issue.severity = = = 'high').length; if (highSeverity > 0) {report.recommendations.push({"priority": 'high';'
+    }
+    "message": `${highSeverit,`} high-severity security issues found in code`; "action": 'Review and fix high-severity security issues'}),'
+}if (configResults.issues.length > 0) {report.recommendations.push({"priority": 'medium', "message": 'Configuration security issues found', "action": 'Review configuration files for security issues'})}return repor,'
+}async saveReport(report) {try {const reportDir = path.dirname(this.reportFile)if (!fs.existsSync(reportDir)) {fs.mkdirSync(reportDir, { "recursive": true }
+}fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2))this.log(`Report saved "to": ${this.reportFile}`)} catch (error) {this.log(`Error saving "report": ${error.message}`)}}async run() {this.log('🛡️ Starting Security Scanner...')this.log(`Project "root": ${this.projectRoo,`}`)try {// Create logs directory if it doesn't exist;'
+
+}
+
+const logsDir = path.dirname(this.logFile)if (!fs.existsSync(logsDir)) {fs.mkdirSync(logsDir, { "recursive": true }
+}// Run all security scans;
+
+const depResults = await this.scanDependencies()const configResults = await this.scanConfigs()// Generate report; this.log('📊 Generating security report...')const report = await this.generateReport(depResults, codeResults, configResults)// Save report; await this.saveReport(report)const duration = Date.now() - this.startTime; // Log summary; this.log('\n📊 Security Scanner "Summary": ')this.log(`"Dependencies": ${report.summary.dependencies}`)this.log(`"Code": ${report.summary.code}`)this.log(`"Configs": ${report.summary.configs}`)this.log(`"Overall": ${report.summary.overall}`)this.log(`"Duration": ${duratio,;`}ms`)if (report.recommendations.length > 0) {this.log('\n💡 "Recommendations": '), report.recommendations.forEach(rec = > {, this.log(` [${rec.priority.toUpperCase()}] ${rec.message}`)this.log(` "Action": ${rec.action}`)})} else {this.log('\n✨ No security issues found!')}'} catch (error) {this.log(`❌ Error running security "scanner": ${error.message}`)process.exit(1)},`}
+// Run the security scanner;
+const scanner = new SecurityScanner()scanner.run().catch(error = > {process.exit(1)}))}),)}),)ursor/integrate-build-improve-and-re-verify-8f7d;
+ursor/fix-syntax-push-and-merge-to-main-40de;
+#!/usr/bin/env node/usr/bin/env node/usr/bin/env nodeconst { execSync } = require("child_process")"const fs = require("fs");"
+  const path = require("path")class SecurityScanner { constructor() {" this.processName = process.env.PM2_PROCESS_NAME | "security-scanner";" this.scanDependencies = process.env.SCAN_DEPENDENCIES === "true";" this.scanCode = process.env.SCAN_CODE === "true";" this.scanConfigs = process.env.SCAN_CONFIGS === "true";" this.alertOnCritical = process.env.ALERT_ON_CRITICAL === "true";" this.logFile = "logs/pm2/security-scanner.log";" this.errorFile = "logs/pm2/security-scanner-error.log"; this.ensureLogDirectory()} ensureLogDirectory() { const logDir = path.dirname(this.logFile)if (!fs.existsSync(logDir)) { fs.mkdirSync(logDir, { "recursive": true })},"
+}" log(message, level = "INFO") { const timestamp = new Date().toISOString(;"
+  }
+  const logMessage = `[${timestamp}] [${level}] ${message}\n`; console.log(logMessage.trim())try { fs.appendFileSync(this.logFile, logMessage)} catch (error) {" console.error("Failed to write to log "file":", error.message)} } error(message) {" this.log(message, "ERROR")try {` fs.appendFileSync(this.errorFile, `[${new Date().toISOString()}] "ERROR": ${message}\n`,`} catch (err) {" console.error("Failed to write to error "file":", err.message)} } async scanDependencies() {" this.log("Scanning dependencies for security vulnerabilities.")try { / Run npm audit" const auditResult = execSync("npm audit --json", { " "encoding": "utf8", "cwd": process.cwd()," "stdio": "pipe" })const auditData = JSON.parse(auditResult)if (auditData.vulnerabilities) { const vulnerabilities = Object.keys(auditData.vulnerabilities)const criticalVulns = vulnerabilities.filter(vuln => " auditData.vulnerabilities[vuln].severity === "critical" )const highVulns = vulnerabilities.filter(vuln => " auditData.vulnerabilities[vuln].severity === "high" )` this.log(`Found ${vulnerabilities.length} "vulnerabilities":`)` this.log(` - "Critical": ${criticalVulns.length}`)` this.log(` - "High": ${highVulns.lengt,`}`)if (criticalVulns.length > 0 && this.alertOnCritical) {"` this.error(`CRITICAL VULNERABILITIES "DETECTED": ${criticalVulns.join(", ")}`)} return { "success": true, "vulnerabilities": auditData.vulnerabilities, "critical": criticalVulns.length, "high": highVulns.length, "total": vulnerabilities.length ,`} else {" this.log("No vulnerabilities found in dependencies")return { "success": true, "vulnerabilities":  ,"
+}, "critical": 0, "high": 0, "total": 0 }} } catch (error) {` this.error(`Dependency scan "failed": ${error.messag,`}`;`return { "success": false, "error": error.message }},;
+} async scanCode() {" this.log("Scanning code for security issues.")try {;"
+  }
+  const securityIssues = []; / Check for common security patterns const patterns = [" { "pattern": /eval\s*\(/, "severity": "high", "message": "Use of eval() detected","
+}," { "pattern": /innerHTML\s*=/, "severity": "medium", "message": "Direct innerHTML assignment detected","
+}," { "pattern": /document\.write\s*\(/, "severity": "medium", "message": "Use of document.write() detected","
+}," { "pattern": /localStorage\.setItem\s*\([^]+,\s*[^)]*\+/, "severity": "low", "message": "Potential XSS in localStorage","
+}," { "pattern": /console\.log\s*\([^)]*process\.env/, "severity": "high", "message": "Environment variables in console.log","
+}," { "pattern": /password\s*=\s*[""][^""]*[""]/, "severity": "high", "message": "Hardcoded password detected","
+},"" { "pattern": /api[_-]?key\s*=\s*[""][^""]*[""]/, "severity": "high", "message": "Hardcoded API key detected","
+},"" { "pattern": /secret\s*=\s*[""][^""]*[""]/, "severity": "high", "message": "Hardcoded secret detected","
+} ]; / Scan JavaScript/TypeScript files" const filesToScan = this.getFilesToScan([".js", ".ts", ".jsx", ".tsx"])for (const file of filesToScan) { try {" const content = fs.readFileSync(file, "utf8")for (const { pattern, severity, message } of patterns) {" const matches = content.match(new RegExp(pattern.source, "g"))if (matches) { securityIssues.push({ file, severity, message, "matches": matches.length })} } } catch (error) {"` this.log(`Failed to scan file ${file}: ${error.messag,`}`, "WARNING")} } " const criticalIssues = securityIssues.filter(issue => issue.severity === "high")" const highIssues = securityIssues.filter(issue => issue.severity === "high")" const mediumIssues = securityIssues.filter(issue => issue.severity === "medium")` this.log(`Code scan "completed": `)` this.log(` - Critical "issues": ${criticalIssues.length}`)` this.log(` - High "issues": ${highIssues.length}`)` this.log(` - Medium "issues": ${mediumIssues.length}`)if (criticalIssues.length > 0 && this.alertOnCritical) {` this.error(`CRITICAL SECURITY ISSUES "DETECTED": ${criticalIssues.length} issues found`,`} return { "success": true, "issues": securityIssues, "critical": criticalIssues.length, "high": highIssues.length, "medium": mediumIssues.length, "total": securityIssues.length }} catch (error) {` this.error(`Code scan "failed": ${error.messag,`}`;`return { "success": false, "error": error.message }},;
+} async scanConfigs() {" this.log("Scanning configuration files for security issues.")try {;"
+  }
+  const configFiles = [" "package.json"," "next.config.js"," "vite.config.js"," "webpack.config.js"," ".env"," ".env.local"," ".env.production"," "nginx.conf"," "docker-compose.yml"," "Dockerfile" ]; for (const configFile of configFiles) { if (fs.existsSync(configFile)) { try {" const content = fs.readFileSync(configFile, "utf8")/ Check for sensitive data in configs;"
+}
+const sensitivePatterns = ["" { "pattern": /password\s*[:=]\s*[""][^""]*[""]/, "severity": "high", "message": "Password in config file",;"
+},"" { "pattern": /secret\s*[:=]\s*[""][^""]*[""]/, "severity": "high", "message": "Secret in config file","
+},"" { "pattern": /api[_-]?key\s*[:=]\s*[""][^""]*[""]/, "severity": "high", "message": "API key in config file","
+},"" { "pattern": /token\s*[:=]\s*[""][^""]*[""]/, "severity": "high", "message": "Token in config file","
+}," { "pattern": /debug\s*[:=]\s*true/, "severity": "medium", "message": "Debug mode enabled in production config","
+} ]; for (const { pattern, severity, message } of sensitivePatterns) {" const matches = content.match(new RegExp(pattern.source, "g"))if (matches) { configIssues.push({ "file": configFile, severity, message, "matches": matches.length })} } } catch (error) {"` this.log(`Failed to scan config file ${configFile}: ${error.messag,`}`, "WARNING")} } } " const criticalConfigIssues = configIssues.filter(issue => issue.severity === "high")` this.log(`Config scan "completed": ${configIssues.length} issues found`)` this.log(` - Critical config "issues": ${criticalConfigIssues.length}`)if (criticalConfigIssues.length > 0 && this.alertOnCritical) {` this.error(`CRITICAL CONFIG ISSUES "DETECTED": ${criticalConfigIssues.length} issues found`,`} return { "success": true, "issues": configIssues, "critical": criticalConfigIssues.length, "total": configIssues.length }} catch (error) {` this.error(`Config scan "failed": ${error.messag,`}`;`return { "success": false, "error": error.message }},;
+} getFilesToScan(extensions) {;
+  }
+  const files = []; function scanDirectory() { try { const items = fs.readdirSync(dir)for (const item of items) { const fullPath = path.join(dir, item)const stat = fs.statSync(fullPath)if (stat.isDirectory()) { / Skip node_modules, .git, dist, build directories" if (!["node_modules", ".git", "dist", "build", "coverage", "logs"].includes(item)) { scanDirectory(fullPath)} } else if (stat.isFile()) {;"
+  }
+  const ext = path.extname(item)if (extensions.includes(ext)) { files.push(fullPath)} } } } catch (error) {" / Skip directories we can"t read } } scanDirectory(process.cwd();"
+  return files; } async generateSecurityReport() {" this.log("Generating security report.")try { const report = { "timestamp": new Date().toISOString(), "processName": this.processName, "dependencyScan": this.scanDependencies ? await this.scanDependencies() : null, "codeScan": this.scanCode ? await this.scanCode() : null, "configScan": this.scanConfigs ? await this.scanConfigs() : null, "environment": { "nodeVersion": process.version, "platform": process.platform, "cwd": process.cwd() },"
+}/ Calculate overall security score let totalIssues = 0; let criticalIssues = 0; if (report.dependencyScan?.success) { totalIssues += report.dependencyScan.total; criticalIssues += report.dependencyScan.critical; } if (report.codeScan?.success) { totalIssues += report.codeScan.total; criticalIssues += report.codeScan.critical; } if (report.configScan?.success) { totalIssues += report.configScan.total; criticalIssues += report.configScan.critical; } report.summary = { totalIssues, criticalIssues, "securityScore": Math.max(0, 100 - (criticalIssues * 20) - (totalIssues * 2)) }`;`  const reportFile = `security-reports/security-report-${Date.now()}.json`;`
+const reportDir = path.dirname(reportFile)if (!fs.existsSync(reportDir)) { fs.mkdirSync(reportDir, { "recursive": true }
+} fs.writeFileSync(reportFile, JSON.stringify(report, null, 2))` this.log(`Security report saved "to": ${reportFile}`)` this.log(`Security "score": ${report.summary.securityScor,`}/100`;`  return report; } catch (error) {` this.error(`Failed to generate security "report": ${error.messag,`}`)return null; } } async start() {` this.log(`Starting ${this.processName}.`)/ Run initial security scan await this.generateSecurityReport()/ Set up periodic scanning const interval = 12 * 60 * 60 * 1000; / 12 hours setInterval(async () => {" this.log("Running scheduled security scan.")await this.generateSecurityReport()}, interval)` this.log(`${this.processName} started successfully`)}}/ Start the automation if this script is run directlyif (require.main = == module) {;`  }
+  const scanner = new SecurityScanner()scanner.start().catch((error) => {" console.error("Security scanner failed to "start":", error)process.exit(1)})}module.exports = SecurityScanner;'"`'"`;`#!/usr/bin/env node/usr/bin/env node/usr/bin/env nodeconst { execSync } = require("child_process")"const fs = require("fs");"
+}" log(message, level = "INFO") { const timestamp = new Date().toISOString(;"
+  }
+}, "critical": 0, "high": 0, "total": 0 }} } catch (error) {` this.error(`Dependency scan "failed": ${error.messag,`}`;`return { "success": false, "error": error.message }},;
+} async scanCode() {" this.log("Scanning code for security issues.")try {;"
+  }
+}," { "pattern": /innerHTML\s*=/, "severity": "medium", "message": "Direct innerHTML assignment detected","
+}," { "pattern": /document\.write\s*\(/, "severity": "medium", "message": "Use of document.write() detected","
+}," { "pattern": /localStorage\.setItem\s*\([^]+,\s*[^)]*\+/, "severity": "low", "message": "Potential XSS in localStorage","
+}," { "pattern": /console\.log\s*\([^)]*process\.env/, "severity": "high", "message": "Environment variables in console.log","
+}," { "pattern": /password\s*=\s*[""][^""]*[""]/, "severity": "high", "message": "Hardcoded password detected","
+},"" { "pattern": /api[_-]?key\s*=\s*[""][^""]*[""]/, "severity": "high", "message": "Hardcoded API key detected","
+},"" { "pattern": /secret\s*=\s*[""][^""]*[""]/, "severity": "high", "message": "Hardcoded secret detected","
+} ]; / Scan JavaScript/TypeScript files" const filesToScan = this.getFilesToScan([".js", ".ts", ".jsx", ".tsx"])for (const file of filesToScan) { try {" const content = fs.readFileSync(file, "utf8")for (const { pattern, severity, message } of patterns) {" const matches = content.match(new RegExp(pattern.source, "g"))if (matches) { securityIssues.push({ file, severity, message, "matches": matches.length })} } } catch (error) {"` this.log(`Failed to scan file ${file}: ${error.messag,`}`, "WARNING")} } " const criticalIssues = securityIssues.filter(issue => issue.severity === "high")" const highIssues = securityIssues.filter(issue => issue.severity === "high")" const mediumIssues = securityIssues.filter(issue => issue.severity === "medium")` this.log(`Code scan "completed": `)` this.log(` - Critical "issues": ${criticalIssues.length}`)` this.log(` - High "issues": ${highIssues.length}`)` this.log(` - Medium "issues": ${mediumIssues.length}`)if (criticalIssues.length > 0 && this.alertOnCritical) {` this.error(`CRITICAL SECURITY ISSUES "DETECTED": ${criticalIssues.length} issues found`,`} return { "success": true, "issues": securityIssues, "critical": criticalIssues.length, "high": highIssues.length, "medium": mediumIssues.length, "total": securityIssues.length }} catch (error) {` this.error(`Code scan "failed": ${error.messag,`}`;`return { "success": false, "error": error.message }},;
+} async scanConfigs() {" this.log("Scanning configuration files for security issues.")try {;"
+  }
+}
+},"" { "pattern": /secret\s*[:=]\s*[""][^""]*[""]/, "severity": "high", "message": "Secret in config file","
+},"" { "pattern": /api[_-]?key\s*[:=]\s*[""][^""]*[""]/, "severity": "high", "message": "API key in config file","
+},"" { "pattern": /token\s*[:=]\s*[""][^""]*[""]/, "severity": "high", "message": "Token in config file","
+}," { "pattern": /debug\s*[:=]\s*true/, "severity": "medium", "message": "Debug mode enabled in production config","
+} ]; for (const { pattern, severity, message } of sensitivePatterns) {" const matches = content.match(new RegExp(pattern.source, "g"))if (matches) { configIssues.push({ "file": configFile, severity, message, "matches": matches.length })} } } catch (error) {"` this.log(`Failed to scan config file ${configFile}: ${error.messag,`}`, "WARNING")} } } " const criticalConfigIssues = configIssues.filter(issue => issue.severity === "high")` this.log(`Config scan "completed": ${configIssues.length} issues found`)` this.log(` - Critical config "issues": ${criticalConfigIssues.length}`)if (criticalConfigIssues.length > 0 && this.alertOnCritical) {` this.error(`CRITICAL CONFIG ISSUES "DETECTED": ${criticalConfigIssues.length} issues found`,`} return { "success": true, "issues": configIssues, "critical": criticalConfigIssues.length, "total": configIssues.length }} catch (error) {` this.error(`Config scan "failed": ${error.messag,`}`;`return { "success": false, "error": error.message }},;
+} getFilesToScan(extensions) {;
+  }
+  }
+  return files; } async generateSecurityReport() {" this.log("Generating security report.")try { const report = { "timestamp": new Date().toISOString(), "processName": this.processName, "dependencyScan": this.scanDependencies ? await this.scanDependencies() : null, "codeScan": this.scanCode ? await this.scanCode() : null, "configScan": this.scanConfigs ? await this.scanConfigs() : null, "environment": { "nodeVersion": process.version, "platform": process.platform, "cwd": process.cwd() },"
+}/ Calculate overall security score let totalIssues = 0; let criticalIssues = 0; if (report.dependencyScan?.success) { totalIssues += report.dependencyScan.total; criticalIssues += report.dependencyScan.critical; } if (report.codeScan?.success) { totalIssues += report.codeScan.total; criticalIssues += report.codeScan.critical; } if (report.configScan?.success) { totalIssues += report.configScan.total; criticalIssues += report.configScan.critical; } report.summary = { totalIssues, criticalIssues, "securityScore": Math.max(0, 100 - (criticalIssues * 20) - (totalIssues * 2)) }`;`  const reportFile = `security-reports/security-report-${Date.now()}.json`;`
+} fs.writeFileSync(reportFile, JSON.stringify(report, null, 2))` this.log(`Security report saved "to": ${reportFile}`)` this.log(`Security "score": ${report.summary.securityScor,`}/100`;`  return report; } catch (error) {` this.error(`Failed to generate security "report": ${error.messag,`}`)return null; } } async start() {` this.log(`Starting ${this.processName}.`)/ Run initial security scan await this.generateSecurityReport()/ Set up periodic scanning const interval = 12 * 60 * 60 * 1000; / 12 hours setInterval(async () => {" this.log("Running scheduled security scan.")await this.generateSecurityReport()}, interval)` this.log(`${this.processName} started successfully`)}}/ Start the automation if this script is run directlyif (require.main = == module) {;`  }
+}" log(message, level = "INFO") { const timestamp = new Date().toISOString(;"
+  }
+}, "critical": 0, "high": 0, "total": 0 }} } catch (error) {` this.error(`Dependency scan "failed": ${error.messag,`}`;`return { "success": false, "error": error.message }},;
+} async scanCode() {" this.log("Scanning code for security issues.")try {;"
+  }
+}," { "pattern": /innerHTML\s*=/, "severity": "medium", "message": "Direct innerHTML assignment detected","
+}," { "pattern": /document\.write\s*\(/, "severity": "medium", "message": "Use of document.write() detected","
+}," { "pattern": /localStorage\.setItem\s*\([^]+,\s*[^)]*\+/, "severity": "low", "message": "Potential XSS in localStorage","
+}," { "pattern": /console\.log\s*\([^)]*process\.env/, "severity": "high", "message": "Environment variables in console.log","
+}," { "pattern": /password\s*=\s*[""][^""]*[""]/, "severity": "high", "message": "Hardcoded password detected","
+},"" { "pattern": /api[_-]?key\s*=\s*[""][^""]*[""]/, "severity": "high", "message": "Hardcoded API key detected","
+},"" { "pattern": /secret\s*=\s*[""][^""]*[""]/, "severity": "high", "message": "Hardcoded secret detected","
+} ]; / Scan JavaScript/TypeScript files" const filesToScan = this.getFilesToScan([".js", ".ts", ".jsx", ".tsx"])for (const file of filesToScan) { try {" const content = fs.readFileSync(file, "utf8")for (const { pattern, severity, message } of patterns) {" const matches = content.match(new RegExp(pattern.source, "g"))if (matches) { securityIssues.push({ file, severity, message, "matches": matches.length })} } } catch (error) {"` this.log(`Failed to scan file ${file}: ${error.messag,`}`, "WARNING")} } " const criticalIssues = securityIssues.filter(issue => issue.severity === "high")" const highIssues = securityIssues.filter(issue => issue.severity === "high")" const mediumIssues = securityIssues.filter(issue => issue.severity === "medium")` this.log(`Code scan "completed": `)` this.log(` - Critical "issues": ${criticalIssues.length}`)` this.log(` - High "issues": ${highIssues.length}`)` this.log(` - Medium "issues": ${mediumIssues.length}`)if (criticalIssues.length > 0 && this.alertOnCritical) {` this.error(`CRITICAL SECURITY ISSUES "DETECTED": ${criticalIssues.length} issues found`,`} return { "success": true, "issues": securityIssues, "critical": criticalIssues.length, "high": highIssues.length, "medium": mediumIssues.length, "total": securityIssues.length }} catch (error) {` this.error(`Code scan "failed": ${error.messag,`}`;`return { "success": false, "error": error.message }},;
+} async scanConfigs() {" this.log("Scanning configuration files for security issues.")try {;"
+  }
+}
+},"" { "pattern": /secret\s*[:=]\s*[""][^""]*[""]/, "severity": "high", "message": "Secret in config file","
+},"" { "pattern": /api[_-]?key\s*[:=]\s*[""][^""]*[""]/, "severity": "high", "message": "API key in config file","
+},"" { "pattern": /token\s*[:=]\s*[""][^""]*[""]/, "severity": "high", "message": "Token in config file","
+}," { "pattern": /debug\s*[:=]\s*true/, "severity": "medium", "message": "Debug mode enabled in production config","
+} ]; for (const { pattern, severity, message } of sensitivePatterns) {" const matches = content.match(new RegExp(pattern.source, "g"))if (matches) { configIssues.push({ "file": configFile, severity, message, "matches": matches.length })} } } catch (error) {"` this.log(`Failed to scan config file ${configFile}: ${error.messag,`}`, "WARNING")} } } " const criticalConfigIssues = configIssues.filter(issue => issue.severity === "high")` this.log(`Config scan "completed": ${configIssues.length} issues found`)` this.log(` - Critical config "issues": ${criticalConfigIssues.length}`)if (criticalConfigIssues.length > 0 && this.alertOnCritical) {` this.error(`CRITICAL CONFIG ISSUES "DETECTED": ${criticalConfigIssues.length} issues found`,`} return { "success": true, "issues": configIssues, "critical": criticalConfigIssues.length, "total": configIssues.length }} catch (error) {` this.error(`Config scan "failed": ${error.messag,`}`;`return { "success": false, "error": error.message }},;
+} getFilesToScan(extensions) {;
+  }
+  }
+  return files; } async generateSecurityReport() {" this.log("Generating security report.")try { const report = { "timestamp": new Date().toISOString(), "processName": this.processName, "dependencyScan": this.scanDependencies ? await this.scanDependencies() : null, "codeScan": this.scanCode ? await this.scanCode() : null, "configScan": this.scanConfigs ? await this.scanConfigs() : null, "environment": { "nodeVersion": process.version, "platform": process.platform, "cwd": process.cwd() },"
+}/ Calculate overall security score let totalIssues = 0; let criticalIssues = 0; if (report.dependencyScan?.success) { totalIssues += report.dependencyScan.total; criticalIssues += report.dependencyScan.critical; } if (report.codeScan?.success) { totalIssues += report.codeScan.total; criticalIssues += report.codeScan.critical; } if (report.configScan?.success) { totalIssues += report.configScan.total; criticalIssues += report.configScan.critical; } report.summary = { totalIssues, criticalIssues, "securityScore": Math.max(0, 100 - (criticalIssues * 20) - (totalIssues * 2)) }`;`  const reportFile = `security-reports/security-report-${Date.now()}.json`;`
+} fs.writeFileSync(reportFile, JSON.stringify(report, null, 2))` this.log(`Security report saved "to": ${reportFile}`)` this.log(`Security "score": ${report.summary.securityScor,`}/100`;`  return report; } catch (error) {` this.error(`Failed to generate security "report": ${error.messag,`}`)return null; } } async start() {` this.log(`Starting ${this.processName}.`)/ Run initial security scan await this.generateSecurityReport()/ Set up periodic scanning const interval = 12 * 60 * 60 * 1000; / 12 hours setInterval(async () => {" this.log("Running scheduled security scan.")await this.generateSecurityReport()}, interval)` this.log(`${this.processName} started successfully`)}}/ Start the automation if this script is run directlyif (require.main = == module) {;`  }
+  const scanner = new SecurityScanner()scanner.start().catch((error) => {" console.error("Security scanner failed to "start":", error)process.exit(1)})}module.exports = SecurityScanner;'"`'"`;`#!/usr/bin/env node,/**;
+    
+
+
+#!/usr/bin/env node/usr/bin/env node/usr/bin/env nodeconst { execSync } = require("child_process");"const fs = require("fs");"const path = require("path");class SecurityScanner { constructor() {" this.processName = process.env.PM2_PROCESS_NAME | "security-scanner";" this.scanDependencies = process.env.SCAN_DEPENDENCIES === "true";" this.scanCode = process.env.SCAN_CODE === "true";" this.scanConfigs = process.env.SCAN_CONFIGS === "true";" this.alertOnCritical = process.env.ALERT_ON_CRITICAL === "true";" this.logFile = "logs/pm2/security-scanner.log";" this.errorFile = "logs/pm2/security-scanner-error.log"; this.ensureLogDirectory(); } ensureLogDirectory() { const logDir = path.dirname(this.logFile); if (!fs.existsSync(logDir)) { fs.mkdirSync(logDir, { "recursive": true,"
+}); } }" log(message, level = "INFO") {;"
+  }
+  const timestamp = new Date().toISOString();
+
+const logMessage = `[${timestamp}] [${level}] ${message}\n`; console.log(logMessage.trim()); try { fs.appendFileSync(this.logFile, logMessage); } catch (error) {" console.error("Failed to write to log "file":", error.message); } } error(message) {" this.log(message, "ERROR"); try {` fs.appendFileSync(this.errorFile, `[${new Date().toISOString()}] "ERROR": ${messag,`}\n`); } catch (err) {" console.error("Failed to write to error "file":", err.message); } } async scanDependencies() {" this.log("Scanning dependencies for security vulnerabilities."); try { / Run npm audit" const auditData = JSON.parse(auditResult); if (auditData.vulnerabilities) { const vulnerabilities = Object.keys(auditData.vulnerabilities);
+
+}
+
+const criticalVulns = vulnerabilities.filter(vuln => { return " auditData.vulnerabilities[vuln].severity === "critical" ); }"
+
+const highVulns = vulnerabilities.filter(vuln => { return " auditData.vulnerabilities[vuln].severity === "high" ); }` this.log(`Found ${vulnerabilities.length} "vulnerabilities":`);` this.log(` - "Critical": ${criticalVulns.lengt,`}`);` this.log(` - "High": ${highVulns.lengt,`}`); if (criticalVulns.length > 0 && this.alertOnCritical) {"` this.error(`CRITICAL VULNERABILITIES "DETECTED": ${criticalVulns.join(", ")}`); } return { "success": true, "vulnerabilities": auditData.vulnerabilities, "critical": criticalVulns.length, "high": highVulns.length, "total": vulnerabilities.length,`}; } else {" this.log("No vulnerabilities found in dependencies"); return { "success": true, "vulnerabilities":  ,"
+}, "critical": 0, "high": 0, "total": 0
+}; } } catch (error) {` this.error(`Dependency scan "failed": ${error.messag,`}`); return { "success": false, "error": error.message,`}; } } async scanCode() {" this.log("Scanning code for security issues."); try { const securityIssues = []; / Check for common security patterns const patterns = [" { "pattern": /eval\s*\(/, "severity": "high", "message": "Use of eval() detected","
+}," { "pattern": /innerHTML\s*=/, "severity": "medium", "message": "Direct innerHTML assignment detected","
+}," { "pattern": /document\.write\s*\(/, "severity": "medium", "message": "Use of document.write() detected","
+}," { "pattern": /localStorage\.setItem\s*\([^]+,\s*[^)]*\+/, "severity": "low", "message": "Potential XSS in localStorage","
+}," { "pattern": /console\.log\s*\([^)]*process\.env/, "severity": "high", "message": "Environment variables in console.log","
+}," { "pattern": /password\s*=\s*[""][^""]*[""]/, "severity": "high", "message": "Hardcoded password detected","
+},"" { "pattern": /api[_-]?key\s*=\s*[""][^""]*[""]/, "severity": "high", "message": "Hardcoded API key detected","
+},"" { "pattern": /secret\s*=\s*[""][^""]*[""]/, "severity": "high", "message": "Hardcoded secret detected","
+} ]; / Scan JavaScript/TypeScript files" const filesToScan = this.getFilesToScan([".js", ".ts", ".jsx", ".tsx"]); for (const file of filesToScan) { try {" const content = fs.readFileSync(file, "utf8"); for (const { pattern, severity, message } of patterns) {" const matches = content.match(new RegExp(pattern.source, "g")); if (matches) { securityIssues.push({ file, severity, message, "matches": matches.length,"
+}); } } } catch (error) {"` this.log(`Failed to scan file ${file}: ${error.message}`, "WARNING"); } } " const criticalIssues = securityIssues.filter(issue => { return issue.severity === "high"); }" const highIssues = securityIssues.filter(issue => { return issue.severity === "high"); }" const mediumIssues = securityIssues.filter(issue => { return issue.severity === "medium"); }` this.log(`Code scan "completed":`);` this.log(` - Critical "issues": ${criticalIssues.lengt,`}`);` this.log(` - High "issues": ${highIssues.lengt,`}`);` this.log(` - Medium "issues": ${mediumIssues.lengt,`}`); if (criticalIssues.length > 0 && this.alertOnCritical) {` this.error(`CRITICAL SECURITY ISSUES "DETECTED": ${criticalIssues.lengt,`} issues found`); } return { "success": true, "issues": securityIssues, "critical": criticalIssues.length, "high": highIssues.length, "medium": mediumIssues.length, "total": securityIssues.length,`}; } catch (error) {` this.error(`Code scan "failed": ${error.messag,`}`); return { "success": false, "error": error.message,`}; } } async scanConfigs() {" this.log("Scanning configuration files for security issues."); try { const configIssues = [];"
+
+}
+
+const configFiles = [" "package.json"," "next.config.js"," "vite.config.js"," "webpack.config.js"," ".env"," ".env.local"," ".env.production"," "nginx.conf"," "docker-compose.yml"," "Dockerfile" ]; for (const configFile of configFiles) { if (fs.existsSync(configFile)) { try {" const content = fs.readFileSync(configFile, "utf8"); / Check for sensitive data in configs const sensitivePatterns = ["" { "pattern": /password\s*[:=]\s*[""][^""]*[""]/, "severity": "high", "message": "Password in config file","
+},"" { "pattern": /secret\s*[:=]\s*[""][^""]*[""]/, "severity": "high", "message": "Secret in config file","
+},"" { "pattern": /api[_-]?key\s*[:=]\s*[""][^""]*[""]/, "severity": "high", "message": "API key in config file","
+},"" { "pattern": /token\s*[:=]\s*[""][^""]*[""]/, "severity": "high", "message": "Token in config file","
+}," { "pattern": /debug\s*[:=]\s*true/, "severity": "medium", "message": "Debug mode enabled in production config","
+} ]; for (const { pattern, severity, message } of sensitivePatterns) {" const matches = content.match(new RegExp(pattern.source, "g")); if (matches) { configIssues.push({ "file": configFile, severity, message, "matches": matches.length,"
+}); } } } catch (error) {"` this.log(`Failed to scan config file ${configFile}: ${error.message}`, "WARNING"); } } } " const criticalConfigIssues = configIssues.filter(issue => { return issue.severity === "high"); }` this.log(`Config scan "completed": ${configIssues.lengt,`} issues found`);` this.log(` - Critical config "issues": ${criticalConfigIssues.lengt,`}`); if (criticalConfigIssues.length > 0 && this.alertOnCritical) {` this.error(`CRITICAL CONFIG ISSUES "DETECTED": ${criticalConfigIssues.lengt,`} issues found`); } return { "success": true, "issues": configIssues, "critical": criticalConfigIssues.length, "total": configIssues.length,`}; } catch (error) {` this.error(`Config scan "failed": ${error.messag,`}`); return { "success": false, "error": error.message,`}; } } getFilesToScan(extensions) { const files = []; function scanDirectory() { try { const items = fs.readdirSync(dir); for (const item of items) { const fullPath = path.join(dir, item);
+
+}
+
+const stat = fs.statSync(fullPath); if (stat.isDirectory()) { / Skip node_modules, .git, dist, build directories" if (!["node_modules", ".git", "dist", "build", "coverage", "logs"].includes(item)) { scanDirectory(fullPath); } } else if (stat.isFile()) { const ext = path.extname(item); if (extensions.includes(ext)) { files.push(fullPath); } } } } catch (error) {" / Skip directories we can"t read } } scanDirectory(process.cwd()); return files; } async generateSecurityReport() {" this.log("Generating security report."); try { const report = { "timestamp": new Date().toISOString(), "processName": this.processName, "dependencyScan": this.scanDependencies ? await this.scanDependencies() : null, "codeScan": this.scanCode ? await this.scanCode() : null, "configScan": this.scanConfigs ? await this.scanConfigs() : null, "environment": { "nodeVersion": process.version, "platform": process.platform, "cwd": process.cwd() },"
+}; / Calculate overall security score let totalIssues = 0; let criticalIssues = 0; if (report.dependencyScan?.success) { totalIssues += report.dependencyScan.total; criticalIssues += report.dependencyScan.critical; } if (report.codeScan?.success) { totalIssues += report.codeScan.total; criticalIssues += report.codeScan.critical; } if (report.configScan?.success) { totalIssues += report.configScan.total; criticalIssues += report.configScan.critical; } report.summary = { totalIssues, criticalIssues, "securityScore": Math.max(0, 100 - (criticalIssues * 20) - (totalIssues * 2)) };` const reportFile = `security-reports/security-report-${Date.now()}.json`;`
+const reportDir = path.dirname(reportFile); if (!fs.existsSync(reportDir)) { fs.mkdirSync(reportDir, { "recursive": true
+}); } fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));` this.log(`Security report saved "to": ${reportFil,`}`);` this.log(`Security "score": ${report.summary.securityScor,`}/100`); return report; } catch (error) {` this.error(`Failed to generate security "report": ${error.messag,`}`); return null; } } async start() {` this.log(`Starting ${this.processName}.`); / Run initial security scan await this.generateSecurityReport(); / Set up periodic scanning const interval = 12 * 60 * 60 * 1000; / 12 hours setInterval(async () => {" this.log("Running scheduled security scan."); await this.generateSecurityReport(); }, interval);` this.log(`${this.processName} started successfully`); }}/ Start the automation if this script is run directlyif (require.main = == module) {;`  }
+  const scanner = new SecurityScanner(); scanner.start().catch((error) => {" console.error("Security scanner failed to "start":", error); process.exit(1); });}module.exports = SecurityScanner;'"`'"``#!/usr/bin/env node,
 /**;
  * PM2 Security Scanner Script;
  * Scans for security vulnerabilities in dependencies and code;
  */;
 
-const { execSync } = require('child_process')',const fs = require('fs')';,const path = require('path')';
+const { execSync } = require('child_process')',const fs = require('fs')';,const path = require('path')';'
 class SecurityScanner {}
   constructor() {}
-    this.processName = process.env.PM2_PROCESS_NAME || 'security-scanner';',this.scanDependencies = process.env.SCAN_DEPENDENCIES === 'true';';,this.scanCode = process.env.SCAN_CODE === 'true';';
-    this.scanConfigs = process.env.SCAN_CONFIGS === 'true';';
-    this.alertOnCritical = process.env.ALERT_ON_CRITICAL === 'true';';
-    this.logFile = 'logs/pm2/security-scanner.log';';
-    this.errorFile = 'logs/pm2/security-scanner-error.log';';
+    this.processName = process.env.PM2_PROCESS_NAME || 'security-scanner';',this.scanDependencies = process.env.SCAN_DEPENDENCIES === 'true';';,this.scanCode = process.env.SCAN_CODE === 'true';';'
+    this.scanConfigs = process.env.SCAN_CONFIGS === 'true';';'
+    this.alertOnCritical = process.env.ALERT_ON_CRITICAL === 'true';';'
+    this.logFile = 'logs/pm2/security-scanner.log';';'
+    this.errorFile = 'logs/pm2/security-scanner-error.log';';'
     this.ensureLogDirectory()}
   ensureLogDirectory() {}
 
 const logDir = path.dirname(this.logFile),if (!fs.existsSync(logDir)) {}
-      fs.mkdirSync(logDir, { recursive: true,}
-}),const fs = require('fs')const path = require('path')const { execSync }  = require('child_process')class SecurityScanner {constructor() {this.projectRoot = process.cwd()this.logFile = path.join(this.projectRoot, 'logs/pm2/security-scanner.log')this.reportFile = path.join(this.projectRoot, 'logs/pm2/security-report.json')this.startTime = Date.now()}log(message) {const timestamp = new Date().toISOString(;}
-  const logMessage  = `[${timestamp}] ${message}\n`;try {fs.appendFileSync(this.logFile, logMessage)} catch (error) {console.error('Error writing to log file: ', error.message)}}async scanDependencies() {try {this.log('🔒 Scanning dependencies for vulnerabilities...')const auditResult = execSync('npm audit --json', {cwd: this.projectRoot; stdio: 'pipe'; encoding: 'utf8,}
-})const audit = JSON.parse(auditResult;
-  return {success: true; vulnerabilities: audit.vulnerabilities || {}summary: audit.metadata || {},
-} catch (error) {// npm audit might fail if there are vulnerabilities; try {const output = error.stdout?.toString() || error.stderr?.toString() || ''; if (output.includes('npm ERR!')) {return {success: false; error: 'Vulnerabilities found'; output: output}}} catch (parseError) {this.log(`Error parsing npm audit output: ${parseError.message}`,
-}return {success: false; error: error.message; output: error.stdout || error.stderr || ''},
-}async scanCode() {try {this.log('🔍 Scanning code for security issues...')// Check for common security issues in code;
+      fs.mkdirSync(logDir, { "recursive": true
+}),const fs = require('fs')const path = require('path')const { execSync }  = require('child_process')class SecurityScanner {constructor() {this.projectRoot = process.cwd()this.logFile = path.join(this.projectRoot, 'logs/pm2/security-scanner.log')this.reportFile = path.join(this.projectRoot, 'logs/pm2/security-report.json')this.startTime = Date.now()}log(message) {const timestamp = new Date().toISOString(;'
+  }
+  const logMessage  = `[${timestamp}] ${message}\n`;try {fs.appendFileSync(this.logFile, logMessage)} catch (error) {console.error('Error writing to log "file": ', error.message)}}async scanDependencies() {try {this.log('🔒 Scanning dependencies for vulnerabilities...')const auditResult = execSync('npm audit --json', {"cwd": this.projectRoot; "stdio": 'pipe'; "encoding": 'utf8,'})const audit = JSON.parse(auditResult;
+return {"success": true; "vulnerabilities": audit.vulnerabilities || {}"summary": audit.metadata || {},;
+} catch (error) {// npm audit might fail if there are vulnerabilities; try {const output = error.stdout?.toString() || error.stderr?.toString() || ''; if (output.includes('npm ERR!')) {return {"success": false; "error": 'Vulnerabilities found'; "output": output}}} catch (parseError) {this.log(`Error parsing npm audit "output": ${parseError.message}`,`}return {"success": false; "error": error.message; "output": error.stdout || error.stderr || ''},'
+}async scanCode() {try {this.log('🔍 Scanning code for security issues...')// Check for common security issues in code;'
 
-const securityIssues = [];
 }
-const files = this.getSourceFiles()files.forEach(file = > {const content = fs.readFileSync(file, 'utf8')const lines  = content.split('\n')lines.forEach((line, index) = > ;}
-  const lineNum  = index + 1;// Check for hardcoded secrets; if (line.match(/password\s* = \s*[\"'][^\"']+[\"']/i)) {securityIssues.push({file: file; line: lineNum; type: 'hardcoded-password'; severity: 'high'; message: 'Hardcoded password detected'})}}}scanDirectory(this.projectRoot)return file,
-}async scanConfigs() {try {this.log('⚙️ Scanning configuration files...')const configIssues = [];
 
-const configFiles = [
-  'package.json'; 'next.config.js'; 'tsconfig.json'; '.env'; '.env.local'; '.env.production'
-];}
-configFiles.forEach(configFile = > {const filePath = path.join(this.projectRoot, configFile)if (fs.existsSync(filePath)) ;}
-  const content  = fs.readFileSync(filePath, 'utf8')// Check for exposed secrets in config files; if (content.match(/password\s* = \s*[\"'][^\"']+[\"']/i)) {configIssues.push({file: configFile; type: 'exposed-secret'; severity: 'high'; message: 'Potential secret exposed in configuration file'},
-}// Check for debug mode in production configs; if (configFile.includes('production') && content.includes('debug: true')) {configIssues.push({file: configFile; type: 'debug-mode'; severity: 'medium'; message: 'Debug mode enabled in production configuration'})},
-})return {success: true; issues: configIssues,}
-} catch (error) {return {success: false; error: error.message; issues: []},
-}async generateReport(depResults, codeResults, configResults) {const report = {timestamp: new Date().toISOString()summary: {dependencies: depResults.success ? 'secure': 'vulnerable'; code: codeResults.issues.length = = = 0 ? 'secure': 'issues-found'; configs: configResults.issues.length = = = 0 ? 'secure': 'issues-found'; overall: (depResults.success && codeResults.issues.length = = = 0 && configResults.issues.length = = = 0) ? 'secure': 'issues-found,}
-}details: {dependencies: depResults; code: codeResults; configs: configResults}recommendations: [,
-}// Generate recommendations; if (!depResults.success) {report.recommendations.push({priority: 'critical'; message: 'Dependency vulnerabilities found'; action: 'Run npm audit fix to resolve vulnerabilities'},
-}if (codeResults.issues.length > 0) {const highSeverity = codeResults.issues.filter(issue = > issue.severity = = = 'high').length; if (highSeverity > 0) {report.recommendations.push({priority: 'high'; message: `${highSeverit,}
-} high-severity security issues found in code`; action: 'Review and fix high-severity security issues'}),
-}if (configResults.issues.length > 0) {report.recommendations.push({priority: 'medium'; message: 'Configuration security issues found'; action: 'Review configuration files for security issues'})}return repor,
-}async saveReport(report) {try {const reportDir = path.dirname(this.reportFile)if (!fs.existsSync(reportDir)) {fs.mkdirSync(reportDir, { recursive: true },
-}fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2))this.log(`Report saved to: ${this.reportFile}`)} catch (error) {this.log(`Error saving report: ${error.message}`)}}async run() {this.log('🛡️ Starting Security Scanner...')this.log(`Project root: ${this.projectRoo,}
-}`)try {// Create logs directory if it doesn't exist;}
+
+const files = this.getSourceFiles()files.forEach(file = > {const content = fs.readFileSync(file, 'utf8')const lines  = content.split('\n')lines.forEach((line, index) = > ;'
+  }
+  const lineNum  = index + 1;// Check for hardcoded secrets; if (line.match(/password\s* = \s*["'][^"']+["']/i)) {securityIssues.push({"file": file; "line": lineNum; "type": 'hardcoded-password'; "severity": 'high'; "message": 'Hardcoded password detected'})}}}scanDirectory(this.projectRoot)return file,'
+}async scanConfigs() {try {this.log('⚙️ Scanning configuration files...')const configIssues = [];'
+
 }
-const logsDir = path.dirname(this.logFile)if (!fs.existsSync(logsDir)) {fs.mkdirSync(logsDir, { recursive: true },
+
+  'package.json'; 'next.config.js'; 'tsconfig.json'; '.env'; '.env.local'; '.env.production''
+];
+configFiles.forEach(configFile = > {const filePath = path.join(this.projectRoot, configFile)if (fs.existsSync(filePath)) ;
+  }
+  const content  = fs.readFileSync(filePath, 'utf8')// Check for exposed secrets in config files; if (content.match(/password\s* = \s*["'][^"']+["']/i)) {configIssues.push({"file": configFile; "type": 'exposed-secret'; "severity": 'high'; "message": 'Potential secret exposed in configuration file'},'
+}// Check for debug mode in production configs; if (configFile.includes('production') && content.includes('"debug": true')) {configIssues.push({"file": configFile; "type": 'debug-mode'; "severity": 'medium'; "message": 'Debug mode enabled in production configuration'})},'
+})return {"success": true; "issues": configIssues
+} catch (error) {return {"success": false; "error": error.message; "issues": []}
+}async generateReport(depResults, codeResults, configResults) {const report = {"timestamp": new Date().toISOString()"summary": {"dependencies": depResults.success ? 'secure': 'vulnerable'; "code": codeResults.issues.length = = = 0 ? 'secure': 'issues-found'; "configs": configResults.issues.length = = = 0 ? 'secure': 'issues-found'; "overall": (depResults.success && codeResults.issues.length = = = 0 && configResults.issues.length = = = 0) ? 'secure': 'issues-found,'
+}"details": {"dependencies": depResults; "code": codeResults; "configs": configResults}"recommendations": [
+}// Generate recommendations; if (!depResults.success) {report.recommendations.push({"priority": 'critical'; "message": 'Dependency vulnerabilities found'; "action": 'Run npm audit fix to resolve vulnerabilities'},'
+}if (codeResults.issues.length > 0) {const highSeverity = codeResults.issues.filter(issue = > issue.severity = = = 'high').length; if (highSeverity > 0) {report.recommendations.push({"priority": 'high'; "message": `${highSeverit,`} high-severity security issues found in code`; "action": 'Review and fix high-severity security issues'}),'
+}if (configResults.issues.length > 0) {report.recommendations.push({"priority": 'medium'; "message": 'Configuration security issues found'; "action": 'Review configuration files for security issues'})}return repor,'
+}async saveReport(report) {try {const reportDir = path.dirname(this.reportFile)if (!fs.existsSync(reportDir)) {fs.mkdirSync(reportDir, { "recursive": true }
+}fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2))this.log(`Report saved "to": ${this.reportFile}`)} catch (error) {this.log(`Error saving "report": ${error.message}`)}}async run() {this.log('🛡️ Starting Security Scanner...')this.log(`Project "root": ${this.projectRoo,`}`)try {// Create logs directory if it doesn't exist;'
+
+}
+
 }// Run all security scans;
 
-const depResults = await this.scanDependencies()const codeResults = await this.scanCode(;
-  const configResults  = await this.scanConfigs()// Generate report; this.log('📊 Generating security report...')const report  = await this.generateReport(depResults, codeResults, configResults)// Save report; await this.saveReport(report)const duration  = Date.now() - this.startTime;// Log summary; this.log('\n📊 Security Scanner Summary: ')this.log(`Dependencies: ${report.summary.dependencies}`)this.log(`Code: ${report.summary.code}`)this.log(`Configs: ${report.summary.configs}`)this.log(`Overall: ${report.summary.overall}`)this.log(`Duration: ${duration}ms`)if (report.recommendations.length > 0) {this.log('\n💡 Recommendations: ')report.recommendations.forEach(rec = > {this.log(` [${rec.priority.toUpperCase()}] ${rec.message}`)this.log(` Action: ${rec.action}`)})} else {this.log('\n✨ No security issues found!')}} catch (error) {this.log(`❌ Error running security scanner: ${error.message}`)process.exit(1)},
-}// Run the security scanner;
+const depResults = await this.scanDependencies()const configResults  = await this.scanConfigs()// Generate report; this.log('📊 Generating security report...')const report  = await this.generateReport(depResults, codeResults, configResults)// Save report; await this.saveReport(report)const duration  = Date.now() - this.startTime;// Log summary; this.log('\n📊 Security Scanner "Summary": ')this.log(`"Dependencies": ${report.summary.dependencies}`)this.log(`"Code": ${report.summary.code}`)this.log(`"Configs": ${report.summary.configs}`)this.log(`"Overall": ${report.summary.overall}`)this.log(`"Duration": ${duration}ms`)if (report.recommendations.length > 0) {this.log('\n💡 "Recommendations": ')report.recommendations.forEach(rec = > {this.log(` [${rec.priority.toUpperCase()}] ${rec.message}`)this.log(` "Action": ${rec.action}`)})} else {this.log('\n✨ No security issues found!')}} catch (error) {this.log(`❌ Error running security "scanner": ${error.message}`)process.exit(1)},`}// Run the security scanner;
 
-const scanner = new SecurityScanner()scanner.run().catch(error = > {process.exit(1)}))}),)#!/usr/bin/env node,const fs = require('fs')const path = require('path')const { execSync } = require('child_process'),,class SecurityScanner {,constructor() {,this.projectRoot = process.cwd(),this.logFile = path.join(this.projectRoot, 'logs/pm2/security-scanner.log'),this.reportFile = path.join(this.projectRoot, 'logs/pm2/security-report.json'),this.startTime = Date.now()},,log(message) {,const timestamp = new Date().toISOString(;}
-  const logMessage = `[${timestamp}] ${message}\n`;
-,try {,fs.appendFileSync(this.logFile, logMessage)} catch (error) {,console.error('Error writing to log: file:', error.message)}
-},,async scanDependencies() {,try {,this.log('🔒 Scanning dependencies for vulnerabilities...'),,const auditResult = execSync('npm audit --json', {,cw: d: this.projectRoot,stdi: o: 'pipe',}
-  encodin: g: 'utf8';}
+const scanner = new SecurityScanner()scanner.run().catch(error = > {process.exit(1)}))}),)#!/usr/bin/env node,const fs = require('fs')const path = require('path')const { execSync } = require('child_process'),,class SecurityScanner {,constructor() {,this.projectRoot = process.cwd(),this.logFile = path.join(this.projectRoot, 'logs/pm2/security-scanner.log'),this.reportFile = path.join(this.projectRoot, 'logs/pm2/security-report.json'),this.startTime = Date.now()},,log(message) {,const timestamp = new Date().toISOString(;'
+  }
+  const logMessage = `[${timestamp}] ${message}\n`;`,try {,fs.appendFileSync(this.logFile, logMessage)} catch (error) {,console.error('Error writing to "log": "file":', error.message)}'
+},,async scanDependencies() {,try {,this.log('🔒 Scanning dependencies for vulnerabilities...'),,const auditResult = execSync('npm audit --json', {,"cw": "d": this.projectRoot,"stdi": "o": 'pipe',"encodin": "g": 'utf8';'
       }),,const audit = JSON.parse(auditResult);
-  return {,succes: s: true,vulnerabilitie: s: audit.vulnerabilities || {,summar: y: audit.metadata || {}
-   ,
+  return {,"succes": "s": true,"vulnerabilitie": "s": audit.vulnerabilities || {,"summar": "y": audit.metadata || {}
+   
 } catch (error) {,// npm audit might fail if there are vulnerabilities,try {;
-  const output = error.stdout?.toString() || error.stderr?.toString() || '',if (output.includes('npm ERR!')) {;
-  return {,succes: s: false,erro: r: 'Vulnerabilities found',
-  outpu: t: output;
+  }
+  const output = error.stdout?.toString() || error.stderr?.toString() || '',if (output.includes('npm ERR!')) {;'
+  }
+  return {,"succes": "s": false,"erro": "r": 'Vulnerabilities found',"outpu": "t": output;'
+
 }
-const logDir = path.dirname(this.logFile);,}
+
+const logDir = path.dirname(this.logFile);,;
     if (!fs.existsSync(logDir)) {}
-      fs.mkdirSync(logDir, { recursive: true,}
+      fs.mkdirSync(logDir, { "recursive": true
 });,
 
-const fs = require('fs');
+const fs = require('fs');'
 
-const path = require('path');
+const path = require('path');'
 
-const { execSync } = require('child_process');
+const { execSync } = require('child_process');'
 ;
-class SecurityScanner {; constructor() {; this.projectRoot = process.cwd(); this.logFile = path.join(this.projectRoot, 'logs/pm2/security-scanner.log'); this.reportFile = path.join(this.projectRoot, 'logs/pm2/security-report.json'); this.startTime = Date.now()};
+class SecurityScanner {; constructor() {; this.projectRoot = process.cwd(); this.logFile = path.join(this.projectRoot, 'logs/pm2/security-scanner.log'); this.reportFile = path.join(this.projectRoot, 'logs/pm2/security-report.json'); this.startTime = Date.now()};'
 ; log(message) {;
 
-const timestamp = new Date().toISOString();}
 }
-const logMessage = `[${timestamp}] ${message}\n`;
-; try {; fs.appendFileSync(this.logFile, logMessage)} catch (error) {; console.error('Error writing to log file: ', error.message)}};
-; async scanDependencies() {; try {; this.log('🔒 Scanning dependencies for vulnerabilities...');
+
+
+const logMessage = `[${timestamp}] ${message}\n`;`; try {; fs.appendFileSync(this.logFile, logMessage)} catch (error) {; console.error('Error writing to log "file": ', error.message)}};'
+; async scanDependencies() {; try {; this.log('🔒 Scanning dependencies for vulnerabilities...');'
 ;
+
 }
-const auditResult = execSync('npm audit --json', {; cwd: this.projectRoot; stdio: 'pipe'; encoding: 'utf8,}
+
+const auditResult = execSync('npm audit --json', {; "cwd": this.projectRoot; "stdio": 'pipe'; "encoding": 'utf8,;'
 });
 ;
 
-const audit = JSON.parse(auditResult); return {; success: true; vulnerabilities: audit.vulnerabilities || ,}
-}; summary: audit.metadata || {},
-} catch (error) {; // npm audit might fail if there are vulnerabilities; try {;}
+const audit = JSON.parse(auditResult); return {; "success": true; "vulnerabilities": audit.vulnerabilities || ,;
+}; "summary": audit.metadata || {}
+} catch (error) {; // npm audit might fail if there are vulnerabilities; try {;
+
 }
-const output = error.stdout?.toString() || error.stderr?.toString() || ''; if (output.includes('npm ERR!')) {; return {; success: false; error: 'Vulnerabilities found'; output: output},
-} catch (parseError) {; this.log(`Error parsing npm audit output: ${parseError.message}`,
+
+const output = error.stdout?.toString() || error.stderr?.toString() || ''; if (output.includes('npm ERR!')) {; return {; "success": false; "error": 'Vulnerabilities found'; "output": output},'
+} catch (parseError) {; this.log(`Error parsing npm audit "output": ${parseError.message}`,`};
+; return {; "success": false; "error": error.message; "output": error.stdout || error.stderr || ''},'
 };
-; return {; success: false; error: error.message; output: error.stdout || error.stderr || ''},
-};
-; async scanCode() {; try {; this.log('🔍 Scanning code for security issues...');
+; async scanCode() {; try {; this.log('🔍 Scanning code for security issues...');'
 ; // Check for common security issues in code;
 
-const securityIssues = [];
+}
+
 
 const files = this.getSourceFiles();
 ; files.forEach(file = > {;
 
-const content = fs.readFileSync(file, 'utf8');
-
-const lines = content.split('\n');
-; lines.forEach((line, index) = > {;
 }
-const lineNum = index + 1;}
-; // Check for hardcoded secrets; if (line.match(/password\s* = \s*[\"'][^\"']+[\"']/i)) {; securityIssues.push({; file: file; line: lineNum; type: 'hardcoded-password'; severity: 'high'; message: 'Hardcoded password detected'})},
+
+const content = fs.readFileSync(file, 'utf8');'
+
+const lines = content.split('\n');'
+; lines.forEach((line, index) = > {;
+
+}
+
+const lineNum = index + 1;
+; // Check for hardcoded secrets; if (line.match(/password\s* = \s*["'][^"']+["']/i)) {; securityIssues.push({; "file": file; "line": lineNum; "type": 'hardcoded-password'; "severity": 'high'; "message": 'Hardcoded password detected'})},'
 };
 ; scanDirectory(this.projectRoot); return files};
-; async scanConfigs() {; try {; this.log('⚙️ Scanning configuration files...');
+; async scanConfigs() {; try {; this.log('⚙️ Scanning configuration files...');'
 ;
 
-const configIssues = [];
+}
 
-const configFiles = [
-  'package.json'; 'next.config.js'; 'tsconfig.json'; '.env'; '.env.local'; '.env.production'
+  'package.json'; 'next.config.js'; 'tsconfig.json'; '.env'; '.env.local'; '.env.production''
 ];
 
 ; configFiles.forEach(configFile = > {;
 
-const filePath = path.join(this.projectRoot, configFile); if (fs.existsSync(filePath)) {;
 }
-const content = fs.readFileSync(filePath, 'utf8');}
-; // Check for exposed secrets in config files; if (content.match(/password\s* = \s*[\"'][^\"']+[\"']/i)) {; configIssues.push({; file: configFile; type: 'exposed-secret'; severity: 'high'; message: 'Potential secret exposed in configuration file'},
+
+const filePath = path.join(this.projectRoot, configFile); if (fs.existsSync(filePath)) {;
+
+}
+
+const content = fs.readFileSync(filePath, 'utf8');'
+; // Check for exposed secrets in config files; if (content.match(/password\s* = \s*["'][^"']+["']/i)) {; configIssues.push({; "file": configFile; "type": 'exposed-secret'; "severity": 'high'; "message": 'Potential secret exposed in configuration file'},'
 };
-; // Check for debug mode in production configs; if (configFile.includes('production') && content.includes('debug: true')) {; configIssues.push({; file: configFile; type: 'debug-mode'; severity: 'medium'; message: 'Debug mode enabled in production configuration'})},
+; // Check for debug mode in production configs; if (configFile.includes('production') && content.includes('"debug": true')) {; configIssues.push({; "file": configFile; "type": 'debug-mode'; "severity": 'medium'; "message": 'Debug mode enabled in production configuration'})},'
 });
-; return {; success: true; issues: configIssues,}
-} catch (error) {; return {; success: false; error: error.message; issues: []},
+; return {; "success": true; "issues": configIssues
+} catch (error) {; return {; "success": false; "error": error.message; "issues": []}
 };
 ; async generateReport(depResults, codeResults, configResults) {;
 
-const report = {}
-  timestamp: new Date().toISOString(); summary: {; dependencies: depResults.success ? 'secure': 'vulnerable'; code: codeResults.issues.length = = = 0 ? 'secure': 'issues-found'; configs: configResults.issues.length = = = 0 ? 'secure': 'issues-found'; overall: (depResults.success && codeResults.issues.length = = = 0 && configResults.issues.length = = = 0) ? 'secure': 'issues-found,}
-}; details: {; dependencies: depResults; code: codeResults; configs: configResult,}
-}; recommendations: [,
+}
+
+const report = {
+  }
+  "timestamp": new Date().toISOString(); "summary": {; "dependencies": depResults.success ? 'secure': 'vulnerable'; "code": codeResults.issues.length = = = 0 ? 'secure': 'issues-found'; "configs": configResults.issues.length = = = 0 ? 'secure': 'issues-found'; "overall": (depResults.success && codeResults.issues.length = = = 0 && configResults.issues.length = = = 0) ? 'secure': 'issues-found,'
+}; "details": {; "dependencies": depResults; "code": codeResults; "configs": configResult
+}; "recommendations": [
 };
-; // Generate recommendations; if (!depResults.success) {; report.recommendations.push({; priority: 'critical'; message: 'Dependency vulnerabilities found'; action: 'Run npm audit fix to resolve vulnerabilities'},
+; // Generate recommendations; if (!depResults.success) {; report.recommendations.push({; "priority": 'critical'; "message": 'Dependency vulnerabilities found'; "action": 'Run npm audit fix to resolve vulnerabilities'},'
 };
 ; if (codeResults.issues.length > 0) {;
+
 }
-const highSeverity = codeResults.issues.filter(issue = > issue.severity = = = 'high').length; if (highSeverity > 0) {; report.recommendations.push({; priority: 'high'; message: `${highSeverit,}
-} high-severity security issues found in code`; action: 'Review and fix high-severity security issues'}),
+
+const highSeverity = codeResults.issues.filter(issue = > issue.severity = = = 'high').length; if (highSeverity > 0) {; report.recommendations.push({; "priority": 'high'; "message": `${highSeverit,`} high-severity security issues found in code`; "action": 'Review and fix high-severity security issues'}),'
 };
-; if (configResults.issues.length > 0) {; report.recommendations.push({; priority: 'medium'; message: 'Configuration security issues found'; action: 'Review configuration files for security issues'},
+; if (configResults.issues.length > 0) {; report.recommendations.push({; "priority": 'medium'; "message": 'Configuration security issues found'; "action": 'Review configuration files for security issues'},'
 };
 ; return report};
-; async saveReport(report) {; try {;}
+; async saveReport(report) {; try {;
+
 }
-const reportDir = path.dirname(this.reportFile); if (!fs.existsSync(reportDir)) {; fs.mkdirSync(reportDir, { recursive: true },
+
+const reportDir = path.dirname(this.reportFile); if (!fs.existsSync(reportDir)) {; fs.mkdirSync(reportDir, { "recursive": true }
 };
-; fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2)); this.log(`Report saved to: ${this.reportFile}`,
-} catch (error) {; this.log(`Error saving report: ${error.message}`),
-};
-; async run() {; this.log('🛡️ Starting Security Scanner...'); this.log(`Project root: ${this.projectRoo,}
-}`);
-; try {; // Create logs directory if it doesn't exist;}
+; fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2)); this.log(`Report saved "to": ${this.reportFile}`,`} catch (error) {; this.log(`Error saving "report": ${error.message}`),`};
+; async run() {; this.log('🛡️ Starting Security Scanner...'); this.log(`Project "root": ${this.projectRoo,`}`);`; try {; // Create logs directory if it doesn't exist;'
+
 }
-const logsDir = path.dirname(this.logFile); if (!fs.existsSync(logsDir)) {; fs.mkdirSync(logsDir, { recursive: true },
+
+const logsDir = path.dirname(this.logFile); if (!fs.existsSync(logsDir)) {; fs.mkdirSync(logsDir, { "recursive": true }
 };
 ; // Run all security scans;
 
 const depResults = await this.scanDependencies();
 
-const codeResults = await this.scanCode();
-
 const configResults = await this.scanConfigs();
-; // Generate report; this.log('📊 Generating security report...');
+; // Generate report; this.log('📊 Generating security report...');'
 
 const report = await this.generateReport(depResults, codeResults, configResults);
 ; // Save report; await this.saveReport(report);
 ;
 
 const duration = Date.now() - this.startTime;
-; // Log summary; this.log('\n📊 Security Scanner Summary: '); this.log(`Dependencies: ${report.summary.dependencie,}
-}`); this.log(`Code: ${report.summary.cod,}
-}`); this.log(`Configs: ${report.summary.config,}
-}`); this.log(`Overall: ${report.summary.overal,}
-}`); this.log(`Duration: ${duratio,}
-}ms`);
-; if (report.recommendations.length > 0) {; this.log('\n💡 Recommendations: '); report.recommendations.forEach(rec = > {; this.log(` [${rec.priority.toUpperCase()}] ${rec.message}`); this.log(` Action: ${rec.action}`)},
-} else {; this.log('\n✨ No security issues found!')};
-} catch (error) {; this.log(`❌ Error running security scanner: ${error.messag,}
-}`); process.exit(1)}}};
-;
+; // Log summary; this.log('\n📊 Security Scanner "Summary": '); this.log(`"Dependencies": ${report.summary.dependencie,`}`); this.log(`"Code": ${report.summary.cod,`}`); this.log(`"Configs": ${report.summary.config,`}`); this.log(`"Overall": ${report.summary.overal,`}`); this.log(`"Duration": ${duratio,`}ms`);`; if (report.recommendations.length > 0) {; this.log('\n💡 "Recommendations": '); report.recommendations.forEach(rec = > {; this.log(` [${rec.priority.toUpperCase()}] ${rec.message}`); this.log(` "Action": ${rec.action}`)},`} else {; this.log('\n✨ No security issues found!')};'
+} catch (error) {; this.log(`❌ Error running security "scanner": ${error.messag,`}`); process.exit(1)}}};`;
 // Run the security scanner;
-
 const scanner = new SecurityScanner();
 scanner.run().catch(error = > {; process.exit(1)}));
 }),);
@@ -487,188 +413,154 @@ scanner.run().catch(error = > {; process.exit(1)}));
 
 #!/usr/bin/env node,;
 
-const fs = require('fs');
 
-const path = require('path'),;
+const path = require('path'),;'
 
-const { execSync } = require('child_process'),;
+const { execSync } = require('child_process'),;'
 ,;
 class SecurityScanner {,;
+  }
   constructor() {,;
+    }
     this.projectRoot = process.cwd(),;
-    this.logFile = path.join(this.projectRoot, 'logs/pm2/security-scanner.log'),;
-    this.reportFile = path.join(this.projectRoot, 'logs/pm2/security-report.json'),;}
-    this.startTime = Date.now();}
+    this.logFile = path.join(this.projectRoot, 'logs/pm2/security-scanner.log'),;'
+    this.reportFile = path.join(this.projectRoot, 'logs/pm2/security-report.json'),;'
+    this.startTime = Date.now();
 },;
 ,;
   log(message) {,;
 
-const timestamp = new Date().toISOString(),;}
 }
-const logMessage = `[${timestamp}] ${message}\n`,;
-,;
-    try {,;}
-      fs.appendFileSync(this.logFile, logMessage);}
-    } catch (error) {,;}
-      console.error('Error writing to log: file:', error.message);}
+
+const timestamp = new Date().toISOString(),;
+
+const logMessage = `[${timestamp}] ${message}\n`,;`,;
+    try {,;
+      }
+      fs.appendFileSync(this.logFile, logMessage);
+    } catch (error) {,;
+      }
+      console.error('Error writing to "log": "file":', error.message);'
 }
 },;
 ,;
   async scanDependencies() {,;
+    }
     try {,;
-      this.log('🔒 Scanning dependencies for vulnerabilities...'),;
+      }
+      this.log('🔒 Scanning dependencies for vulnerabilities...'),;'
 ,;
 
-const auditResult = execSync('npm audit --json', {,;
-        cw: d: this.projectRoot,;
-        stdi: o: 'pipe',;}
-        encodin: g: 'utf8';}
+const auditResult = execSync('npm audit --json', {,;'
+        }
+        "cw": "d": this.projectRoot,;
+        "stdi": "o": 'pipe',;'
+        "encodin": "g": 'utf8';'
       }),;
 ,;
-
-const audit = JSON.parse(auditResult),;
+      const audit = JSON.parse(auditResult),;
       return {,;
-        succes: s: true,;
-        vulnerabilitie: s: audit.vulnerabilities || {,;}
-        summar: y: audit.metadata || {;}
+        }
+        "succes": "s": true,;
+        "vulnerabilitie": "s": audit.vulnerabilities || {,;
+        }
+        "summar": "y": audit.metadata || {;
       }
     } catch (error) {,;
       // npm audit might fail if there are vulnerabilities,;
+      }
       try {,;
 
-const output = error.stdout?.toString() || error.stderr?.toString() || '',;
-        if (output.includes('npm ERR!')) {,;
-          return {,;
-            succes: s: false,;
-            erro: r: 'Vulnerabilities found',;}
-            outpu: t: output;}
-        }
-      } catch (parseError) {,this.log(`Error parsing npm audit: output: ${parseError.message}`,
-},,return {,succes: s: false,erro: r: error.message,outpu: t: error.stdout || error.stderr || '';}
 }
-},,async scanCode() {,try {,this.log('🔍 Scanning code for security issues...'),,// Check for common security issues in code,const securityIssues = [],const files = this.getSourceFiles(),,files.forEach(file => {,const content = fs.readFileSync(file, 'utf8'),const lines = content.split('\n'),,lines.forEach((line, index) => {;
-  const lineNum = index + 1,,// Check for hardcoded secrets,if (line.match(/password\s*=\s*[\"'][^\"']+[\"']/i)) {,securityIssues.push({,fil: e: file,lin: e: lineNum,typ: e: 'hardcoded-password',
-  severit: y: 'high',}
-  messag: e: 'Hardcoded password detected';}
+
+const output = error.stdout?.toString() || error.stderr?.toString() || '',;'
+        if (output.includes('npm ERR!')) {,;'
+          }
+          return {,;
+            }
+            "succes": "s": false,;
+            "erro": "r": 'Vulnerabilities found',;'
+            "outpu": "t": output;
+        }
+      } catch (parseError) {,this.log(`Error parsing npm "audit": "output": ${parseError.message}`,`},,return {,"succes": "s": false,"erro": "r": error.message,"outpu": "t": error.stdout || error.stderr || '';'
+}
+},,async scanCode() {,try {,this.log('🔍 Scanning code for security issues...'),,// Check for common security issues in code,const securityIssues = [],const files = this.getSourceFiles(),,files.forEach((file) => {,const content = fs.readFileSync(file, 'utf8'),const lines = content.split('\n'),,lines.forEach((line, index) => {;'
+  }
+  const lineNum = index + 1,,// Check for hardcoded secrets,if (line.match(/password\s*=\s*["'][^"']+["']/i)) {,securityIssues.push({,"fil": "e": file,"lin": "e": lineNum,"typ": "e": 'hardcoded-password',"severit": "y": 'high',"messag": "e": 'Hardcoded password detected';'
             })}
       }
 },,scanDirectory(this.projectRoot),return files;
-},,async scanConfigs() {,try {,this.log('⚙️  Scanning configuration files...'),,const configIssues = [];
-  const configFiles = [,'package.jsonnext.config.jstsconfig.json.env','.env.local.env.production';
+},,async scanConfigs() {,try {,this.log('⚙️  Scanning configuration files...'),,const configIssues = [];'
+  }
+  const configFiles = [,'package.jsonnext.config.jstsconfig.json.env','.env.local.env.production';'
       ],,configFiles.forEach(configFile = > {,const filePath = path.join(this.projectRoot, configFile),if (fs.existsSync(filePath)) {;
-  const content = fs.readFileSync(filePath, 'utf8'),,// Check for exposed secrets in config files,if (content.match(/password\s*=\s*[\"'][^\"']+[\"']/i)) {,configIssues.push({,fil: e: configFile,typ: e: 'exposed-secret',
-  severit: y: 'high',}
-  messag: e: 'Potential secret exposed in configuration file';}
-            })},,// Check for debug mode in production configs,if (configFile.includes('production') && content.includes('debu: g: true')) {,configIssues.push({,fil: e: configFile,typ: e: 'debug-mode',
-  severit: y: 'medium',}
-  messag: e: 'Debug mode enabled in production configuration';}
+  }
+  const content = fs.readFileSync(filePath, 'utf8'),,// Check for exposed secrets in config files,if (content.match(/password\s*=\s*["'][^"']+["']/i)) {,configIssues.push({,"fil": "e": configFile,"typ": "e": 'exposed-secret',"severit": "y": 'high',"messag": "e": 'Potential secret exposed in configuration file';'
+            })},,// Check for debug mode in production configs,if (configFile.includes('production') && content.includes('"debu": "g": true')) {,configIssues.push({,"fil": "e": configFile,"typ": "e": 'debug-mode',"severit": "y": 'medium',"messag": "e": 'Debug mode enabled in production configuration';'
             })}
         }
-      }),,return {,succes: s: true,issue: s: configIssues;}
-    } catch (error) {,return {,succes: s: false,erro: r: error.message,issue: s: [];}
+      }),,return {,"succes": "s": true,"issue": "s": configIssues;
+    } catch (error) {,return {,"succes": "s": false,"erro": "r": error.message,"issue": "s": [];
 }
-},,async generateReport(depResults, codeResults, configResults) {,const report = {,timestam: p: new Date().toISOString(),summar: y: {,dependencie: s: depResults.success ? 'secure' : 'vulnerable',cod: e: codeResults.issues.length === 0 ? 'secure' : 'issues-found',config: s: configResults.issues.length === 0 ? 'secure' : 'issues-found',overal: l: (depResults.success && codeResults.issues.length === 0 && configResults.issues.length === 0) ? 'secure' : 'issues-found',,detail: s: {,dependencie: s: depResults,cod: e: codeResults,config: s: configResults,,recommendation: s: [],,,// Generate recommendations,if (!depResults.success) {,report.recommendations.push({,priorit: y: 'critical',
-  messag: e: 'Dependency vulnerabilities found',}
-  actio: n: 'Run npm audit fix to resolve vulnerabilities';}
-      })},,if (codeResults.issues.length > 0) {,const highSeverity = codeResults.issues.filter(issue => issue.severity === 'high').length,if (highSeverity > 0) {,report.recommendations.push({,priorit: y: 'high',}
-  messag: e: `${highSeverit,}
-} high-severity security issues found in code`,actio: n: 'Review and fix high-severity security issues';
+},,async generateReport(depResults, codeResults, configResults) {,const report = {,"timestam": "p": new Date().toISOString(),"summar": "y": {,"dependencie": "s": depResults.success ? 'secure' : 'vulnerable',"cod": "e": codeResults.issues.length === 0 ? 'secure' : 'issues-found',"config": "s": configResults.issues.length === 0 ? 'secure' : 'issues-found',"overal": "l": (depResults.success && codeResults.issues.length === 0 && configResults.issues.length === 0) ? 'secure' : 'issues-found',,"detail": "s": {,"dependencie": "s": depResults,"cod": "e": codeResults,"config": "s": configResults,,"recommendation": "s": [],,,// Generate recommendations,if (!depResults.success) {,report.recommendations.push({,"priorit": "y": 'critical',"messag": "e": 'Dependency vulnerabilities found',"actio": "n": 'Run npm audit fix to resolve vulnerabilities';'
+      })},,if (codeResults.issues.length > 0) {,const highSeverity = codeResults.issues.filter(issue => issue.severity === 'high').length,if (highSeverity > 0) {,report.recommendations.push({,"priorit": "y": 'high',"messag": "e": `${highSeverit,`} high-severity security issues found in code`,"actio": "n": 'Review and fix high-severity security issues';'
         })}
-},,if (configResults.issues.length > 0) {,report.recommendations.push({,priorit: y: 'medium',
-  messag: e: 'Configuration security issues found',}
-  actio: n: 'Review configuration files for security issues';}
+},,if (configResults.issues.length > 0) {,report.recommendations.push({,"priorit": "y": 'medium',"messag": "e": 'Configuration security issues found',"actio": "n": 'Review configuration files for security issues';'
       })},,return report;
-},,async saveReport(report) {,try {,const reportDir = path.dirname(this.reportFile),if (!fs.existsSync(reportDir)) {,fs.mkdirSync(reportDir, { recursiv: e: true },
-},,fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2)),this.log(`Report saved: to: ${this.reportFile}`,
-} catch (error) {,this.log(`Error saving: report: ${error.message}`)},
-},,async run() {,this.log('🛡️  Starting Security Scanner...'),this.log(`Project: root: ${this.projectRoo,}
-}`),,try {,// Create logs directory if it doesn't exist,const logsDir = path.dirname(this.logFile),if (!fs.existsSync(logsDir)) {,fs.mkdirSync(logsDir, { recursiv: e: true },
-},,// Run all security scans,const depResults = await this.scanDependencies(),const codeResults = await this.scanCode(),const configResults = await this.scanConfigs(),,// Generate report,this.log('📊 Generating security report...'),const report = await this.generateReport(depResults, codeResults, configResults),,// Save report,await this.saveReport(report),,const duration = Date.now() - this.startTime,,// Log summary,this.log('\n📊 Security Scanner: Summary: '),this.log(`Dependencie: s: ${report.summary.dependencie,}
-}`),this.log(`Cod: e: ${report.summary.cod,}
-}`),this.log(`Config: s: ${report.summary.config,}
-}`),this.log(`Overal: l: ${report.summary.overal,}
-}`),this.log(`Duratio: n: ${duratio,}
-}ms`),,if (report.recommendations.length > 0) {,this.log('\n💡 Recommendation: s: '),report.recommendations.forEach(rec => {,this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`),this.log(`    Actio: n: ${rec.action}`)},
-} else {,this.log('\n✨ No security issues found!')}} catch (error) {,this.log(`❌ Error running security: scanner: ${error.messag,}
-}`),process.exit(1)}
-}
-},,// Run the security scanner,const scanner = new SecurityScanner(),scanner.run().catch(error => {,process.exit(1),#!/usr/bin/env node,const fs = require('fs'),const path = require('path'),const { execSync } = require('child_process'),,class SecurityScanner {,constructor() {,this.projectRoot = process.cwd(),this.logFile = path.join(this.projectRoot, 'logs/pm2/security-scanner.log'),this.reportFile = path.join(this.projectRoot, 'logs/pm2/security-report.json'),this.startTime = Date.now()},,log(message) {,const timestamp = new Date().toISOString(),const logMessage = `[${timestamp}] ${message}\n`,,try {,fs.appendFileSync(this.logFile, logMessage)} catch (error) {,console.error('Error writing to log: file:', error.message)}
-  },,async scanDependencies() {,try {,this.log('🔒 Scanning dependencies for vulnerabilities...'),;
-  const auditResult = execSync('npm audit --json', {,cw: d: this.projectRoot,stdi: o: 'pipe',}
-  encodin: g: 'utf8';}
+},,async saveReport(report) {,try {,const reportDir = path.dirname(this.reportFile),if (!fs.existsSync(reportDir)) {,fs.mkdirSync(reportDir, { "recursiv": "e": true }
+},,fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2)),this.log(`Report "saved": "to": ${this.reportFile}`,`} catch (error) {,this.log(`Error "saving": "report": ${error.message}`)},`},,async run() {,this.log('🛡️  Starting Security Scanner...'),this.log(`"Project": "root": ${this.projectRoo,`}`),,try {,// Create logs directory if it doesn't exist,const logsDir = path.dirname(this.logFile),if (!fs.existsSync(logsDir)) {,fs.mkdirSync(logsDir, { "recursiv": "e": true },'
+},,// Run all security scans,const depResults = await this.scanDependencies(),const codeResults = await this.scanCode(),const configResults = await this.scanConfigs(),,// Generate report,this.log('📊 Generating security report...'),const report = await this.generateReport(depResults, codeResults, configResults),,// Save report,await this.saveReport(report),,const duration = Date.now() - this.startTime,,// Log summary,this.log('\n📊 Security "Scanner": "Summary": '),this.log(`"Dependencie": "s": ${report.summary.dependencie,`}`),this.log(`"Cod": "e": ${report.summary.cod,`}`),this.log(`"Config": "s": ${report.summary.config,`}`),this.log(`"Overal": "l": ${report.summary.overal,`}`),this.log(`"Duratio": "n": ${duratio,`}ms`),,if (report.recommendations.length > 0) {,this.log('\n💡 "Recommendation": "s": '),report.recommendations.forEach((rec) => {,this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`),this.log(`    "Actio": "n": ${rec.action}`)},`} else {,this.log('\n✨ No security issues found!')}} catch (error) {,this.log(`❌ Error running "security": "scanner": ${error.messag,`}`),process.exit(1)}`}
+},,// Run the security scanner,const scanner = new SecurityScanner(),scanner.run().catch((error) => {,process.exit(1),#!/usr/bin/env node,const fs = require('fs'),const path = require('path'),const { execSync } = require('child_process'),,class SecurityScanner {,constructor() {,this.projectRoot = process.cwd(),this.logFile = path.join(this.projectRoot, 'logs/pm2/security-scanner.log'),this.reportFile = path.join(this.projectRoot, 'logs/pm2/security-report.json'),this.startTime = Date.now()},,log(message) {,const timestamp = new Date().toISOString(),const logMessage = `[${timestamp}] ${message}\n`,,try {,fs.appendFileSync(this.logFile, logMessage)} catch (error) {,console.error('Error writing to "log": "file":', error.message)}'  },,async scanDependencies() {,try {,this.log('🔒 Scanning dependencies for vulnerabilities...'),;'
+  }
+  const auditResult = execSync('npm audit --json', {,"cw": "d": this.projectRoot,"stdi": "o": 'pipe',"encodin": "g": 'utf8';'
       }),,const audit = JSON.parse(auditResult);
-  return {,succes: s: true,vulnerabilitie: s: audit.vulnerabilities || ,}
-},summar: y: audit.metadata || {}
+return {,"succes": "s": true,"vulnerabilitie": "s": audit.vulnerabilities || ,;
+},"summar": "y": audit.metadata || {}
       }
-   ,
+   
 } catch (error) {,// npm audit might fail if there are vulnerabilities,try {;
-  const output = error.stdout?.toString() || error.stderr?.toString() || '',if (output.includes('npm ERR!')) {;
-  return {,succes: s: false,erro: r: 'Vulnerabilities found',}
-  outpu: t: output;}
+  }
+  }
+  return {,"succes": "s": false,"erro": "r": 'Vulnerabilities found',"outpu": "t": output;'
           }
         }
-      } catch (parseError) {,this.log(`Error parsing npm audit: output: ${parseError.message}`,
-},,return {,succes: s: false,erro: r: error.message,outpu: t: error.stdout || error.stderr || '';}
+      } catch (parseError) {,this.log(`Error parsing npm "audit": "output": ${parseError.message}`,`},,return {,"succes": "s": false,"erro": "r": error.message,"outpu": "t": error.stdout || error.stderr || '';'
       }
     }
-  },,async scanCode() {,try {,this.log('🔍 Scanning code for security issues...'),,// Check for common security issues in code,const securityIssues = [],const files = this.getSourceFiles(),,files.forEach(file => {,const content = fs.readFileSync(file, 'utf8'),const lines = content.split('\n'),,lines.forEach((line, index) => {;
-  const lineNum = index + 1,,// Check for hardcoded secrets,if (line.match(/password\s*=\s*[\"'][^\"']+[\"']/i)) {,securityIssues.push({,fil: e: file,lin: e: lineNum,typ: e: 'hardcoded-password',
-  severit: y: 'high',}
-  messag: e: 'Hardcoded password detected';}
+  },,async scanCode() {,try {,this.log('🔍 Scanning code for security issues...'),,// Check for common security issues in code,const securityIssues = [],const files = this.getSourceFiles(),,files.forEach((file) => {,const content = fs.readFileSync(file, 'utf8'),const lines = content.split('\n'),,lines.forEach((line, index) => {;'
+  }
             })}
       }
     },,scanDirectory(this.projectRoot),return files;
-  },,async scanConfigs() {,try {,this.log('⚙️  Scanning configuration files...'),,const configIssues = [];
-  const configFiles = [,'package.jsonnext.config.jstsconfig.json.env.env.local.env.production';
+  },,async scanConfigs() {,try {,this.log('⚙️  Scanning configuration files...'),,const configIssues = [];'
+  }
+  const configFiles = [,'package.jsonnext.config.jstsconfig.json.env.env.local.env.production';'
       ],,configFiles.forEach(configFile = > {,const filePath = path.join(this.projectRoot, configFile),if (fs.existsSync(filePath)) {;
-  const content = fs.readFileSync(filePath, 'utf8'),,// Check for exposed secrets in config files,if (content.match(/password\s*=\s*[\"'][^\"']+[\"']/i)) {,configIssues.push({,fil: e: configFile,typ: e: 'exposed-secret',
-  severit: y: 'high',}
-  messag: e: 'Potential secret exposed in configuration file';}
-            })},,// Check for debug mode in production configs,if (configFile.includes('production') && content.includes('debu: g: true')) {,configIssues.push({,fil: e: configFile,typ: e: 'debug-mode',
-  severit: y: 'medium',}
-  messag: e: 'Debug mode enabled in production configuration';}
+  }
+            })},,// Check for debug mode in production configs,if (configFile.includes('production') && content.includes('"debu": "g": true')) {,configIssues.push({,"fil": "e": configFile,"typ": "e": 'debug-mode',"severit": "y": 'medium',"messag": "e": 'Debug mode enabled in production configuration';'
             })}
         }
-      }),,return {,succes: s: true,issue: s: configIssues;}
+      }),,return {,"succes": "s": true,"issue": "s": configIssues;
       }
-    } catch (error) {,return {,succes: s: false,erro: r: error.message,issue: s: [];}
+    } catch (error) {,return {,"succes": "s": false,"erro": "r": error.message,"issue": "s": [];
       }
     }
-  },,async generateReport(depResults, codeResults, configResults) {,const report = {,timestam: p: new Date().toISOString(),summar: y: {,dependencie: s: depResults.success ? 'secure' : 'vulnerable',cod: e: codeResults.issues.length === 0 ? 'secure' : 'issues-found',config: s: configResults.issues.length === 0 ? 'secure' : 'issues-found',overal: l: (depResults.success && codeResults.issues.length === 0 && configResults.issues.length === 0) ? 'secure' : 'issues-found';}
-      },detail: s: {,dependencie: s: depResults,cod: e: codeResults,config: s: configResults;}
-      },recommendation: s: [];
-    },,// Generate recommendations,if (!depResults.success) {,report.recommendations.push({,priorit: y: 'critical',
-  messag: e: 'Dependency vulnerabilities found',}
-  actio: n: 'Run npm audit fix to resolve vulnerabilities';}
-      })},,if (codeResults.issues.length > 0) {,const highSeverity = codeResults.issues.filter(issue => issue.severity === 'high').length,if (highSeverity > 0) {,report.recommendations.push({,priorit: y: 'high',}
-  messag: e: `${highSeverit,}
-} high-severity security issues found in code`,actio: n: 'Review and fix high-severity security issues';
+  },,async generateReport(depResults, codeResults, configResults) {,const report = {,"timestam": "p": new Date().toISOString(),"summar": "y": {,"dependencie": "s": depResults.success ? 'secure' : 'vulnerable',"cod": "e": codeResults.issues.length === 0 ? 'secure' : 'issues-found',"config": "s": configResults.issues.length === 0 ? 'secure' : 'issues-found',"overal": "l": (depResults.success && codeResults.issues.length === 0 && configResults.issues.length === 0) ? 'secure' : 'issues-found';'
+      },"detail": "s": {,"dependencie": "s": depResults,"cod": "e": codeResults,"config": "s": configResults;
+      },"recommendation": "s": [];
+    },,// Generate recommendations,if (!depResults.success) {,report.recommendations.push({,"priorit": "y": 'critical',"messag": "e": 'Dependency vulnerabilities found',"actio": "n": 'Run npm audit fix to resolve vulnerabilities';'
+      })},,if (codeResults.issues.length > 0) {,const highSeverity = codeResults.issues.filter(issue => issue.severity === 'high').length,if (highSeverity > 0) {,report.recommendations.push({,"priorit": "y": 'high',"messag": "e": `${highSeverit,`} high-severity security issues found in code`,"actio": "n": 'Review and fix high-severity security issues';'
         })}
-    },,if (configResults.issues.length > 0) {,report.recommendations.push({,priorit: y: 'medium',
-  messag: e: 'Configuration security issues found',}
-  actio: n: 'Review configuration files for security issues';}
+    },,if (configResults.issues.length > 0) {,report.recommendations.push({,"priorit": "y": 'medium',"messag": "e": 'Configuration security issues found',"actio": "n": 'Review configuration files for security issues';'
       })},,return report;
-  },,async saveReport(report) {,try {,const reportDir = path.dirname(this.reportFile),if (!fs.existsSync(reportDir)) {,fs.mkdirSync(reportDir, { recursiv: e: true },
-},,fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2)),this.log(`Report saved: to: ${this.reportFile}`,
-} catch (error) {,this.log(`Error saving: report: ${error.message}`)}
- ,
-},,async run() {,this.log('🛡️  Starting Security Scanner...'),this.log(`Project: root: ${this.projectRoo,}
-}`),,try {,// Create logs directory if it doesn't exist,const logsDir = path.dirname(this.logFile),if (!fs.existsSync(logsDir)) {,fs.mkdirSync(logsDir, { recursiv: e: true },
-},,// Run all security scans,const depResults = await this.scanDependencies(),const codeResults = await this.scanCode(),const configResults = await this.scanConfigs(),,// Generate report,this.log('📊 Generating security report...'),const report = await this.generateReport(depResults, codeResults, configResults),,// Save report,await this.saveReport(report),,const duration = Date.now() - this.startTime,,// Log summary,this.log('\n📊 Security Scanner: Summary: '),this.log(`Dependencie: s: ${report.summary.dependencie,}
-}`),this.log(`Cod: e: ${report.summary.cod,}
-}`),this.log(`Config: s: ${report.summary.config,}
-}`),this.log(`Overal: l: ${report.summary.overal,}
-}`),this.log(`Duratio: n: ${duratio,}
-}ms`),,if (report.recommendations.length > 0) {,this.log('\n💡 Recommendation: s: '),report.recommendations.forEach(rec => {,this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`),this.log(`    Actio: n: ${rec.action}`)},
-} else {,this.log('\n✨ No security issues found!')}} catch (error) {,this.log(`❌ Error running security: scanner: ${error.messag,}
-}`),process.exit(1)}
-  }
-  log(message, level = 'INFO') {;}
+  },,async saveReport(report) {,try {,const reportDir = path.dirname(this.reportFile),if (!fs.existsSync(reportDir)) {,fs.mkdirSync(reportDir, { "recursiv": "e": true }
+},,fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2)),this.log(`Report "saved": "to": ${this.reportFile}`,`} catch (error) {,this.log(`Error "saving": "report": ${error.message}`)}` 
+},,async run() {,this.log('🛡️  Starting Security Scanner...'),this.log(`"Project": "root": ${this.projectRoo,`}`),,try {,// Create logs directory if it doesn't exist,const logsDir = path.dirname(this.logFile),if (!fs.existsSync(logsDir)) {,fs.mkdirSync(logsDir, { "recursiv": "e": true },'
+},,// Run all security scans,const depResults = await this.scanDependencies(),const codeResults = await this.scanCode(),const configResults = await this.scanConfigs(),,// Generate report,this.log('📊 Generating security report...'),const report = await this.generateReport(depResults, codeResults, configResults),,// Save report,await this.saveReport(report),,const duration = Date.now() - this.startTime,,// Log summary,this.log('\n📊 Security "Scanner": "Summary": '),this.log(`"Dependencie": "s": ${report.summary.dependencie,`}`),this.log(`"Cod": "e": ${report.summary.cod,`}`),this.log(`"Config": "s": ${report.summary.config,`}`),this.log(`"Overal": "l": ${report.summary.overal,`}`),this.log(`"Duratio": "n": ${duratio,`}ms`),,if (report.recommendations.length > 0) {,this.log('\n💡 "Recommendation": "s": '),report.recommendations.forEach((rec) => {,this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`),this.log(`    "Actio": "n": ${rec.action}`)},`} else {,this.log('\n✨ No security issues found!')}} catch (error) {,this.log(`❌ Error running "security": "scanner": ${error.messag,`}`),process.exit(1)}`  }
+  log(message, level = 'INFO') {;'
 }
 
-const timestamp = new Date().toISOString();
-  const logMessage = `[${timestamp}] [${level}] ${message}\n`;,)_console.log(logMessage.trim())ursor/fix-syntax-push-and-merge-to-main-40de;
-ursor/add-new-services-and-deploy-updates-0462;
+  const logMessage = `[${timestamp}] [${level}] ${message}\n`;,)_console.log(logMessage.trim())ursor/fix-syntax-push-and-merge-to-main-40de;`ursor/add-new-services-and-deploy-updates-0462;
 ursor/fix-syntax-push-and-merge-to-main-40de;
 ursor/automate-test-improve-and-merge-code-646c;
 ursor/add-new-services-and-deploy-updates-0462;
@@ -676,33 +568,39 @@ ursor/fix-syntax-push-and-merge-to-main-40de;
   },;
 ,;
   async scanCode() {,;
+    }
     try {,;
-      this.log('🔍 Scanning code for security issues...'),;
+      }
+      this.log('🔍 Scanning code for security issues...'),;'
 ,;
       // Check for common security issues in code,;
-
-const securityIssues = [],;
-
-const files = this.getSourceFiles(),;
+      const securityIssues = [],;
+      const files = this.getSourceFiles(),;
 ,;
-      files.forEach(file => {,;
+      files.forEach((file) => {,;
 
-const content = fs.readFileSync(file, 'utf8'),;
+}
 
-const lines = content.split('\n'),;
+const content = fs.readFileSync(file, 'utf8'),;'
+
+const lines = content.split('\n'),;'
 ,;
         lines.forEach((line, index) => {,;
+
+}
 
 const lineNum = index + 1,;
 ,;
           // Check for hardcoded secrets,;
-          if (line.match(/password\s*=\s*[\"'][^\"']+[\"']/i)) {,;
+          if (line.match(/password\s*=\s*["'][^"']+["']/i)) {,;'
+            }
             securityIssues.push({,;
-              fil: e: file,;
-              lin: e: lineNum,;
-              typ: e: 'hardcoded-password',;
-              severit: y: 'high',;}
-              messag: e: 'Hardcoded password detected';}
+              }
+              "fil": "e": file,;
+              "lin": "e": lineNum,;
+              "typ": "e": 'hardcoded-password',;'
+              "severit": "y": 'high',;'
+              "messag": "e": 'Hardcoded password detected';'
             });
           }
       }
@@ -713,103 +611,125 @@ const lineNum = index + 1,;
   },;
 ,;
   async scanConfigs() {,;
+    }
     try {,;
-      this.log('⚙️  Scanning configuration files...'),;
+      }
+      this.log('⚙️  Scanning configuration files...'),;'
 ,;
-
-const configIssues = [],;
 
 const configFiles = [,;
-        'package.jsonnext.config.jstsconfig.json.env.env.local.env.production';
+        'package.jsonnext.config.jstsconfig.json.env.env.local.env.production';'
       ],;
 ,;
-      configFiles.forEach(configFile => {,;
+      configFiles.forEach((configFile) => {,;
+
+}
 
 const filePath = path.join(this.projectRoot, configFile),;
         if (fs.existsSync(filePath)) {,;
 
-const content = fs.readFileSync(filePath, 'utf8'),;
+}
+
+const content = fs.readFileSync(filePath, 'utf8'),;'
 ,;
           // Check for exposed secrets in config files,;
-          if (content.match(/password\s*=\s*[\"'][^\"']+[\"']/i)) {,;
+          if (content.match(/password\s*=\s*["'][^"']+["']/i)) {,;'
+            }
             configIssues.push({,;
-              fil: e: configFile,;
-              typ: e: 'exposed-secret',;
-              severit: y: 'high',;}
-              messag: e: 'Potential secret exposed in configuration file';}
+              }
+              "fil": "e": configFile,;
+              "typ": "e": 'exposed-secret',;'
+              "severit": "y": 'high',;'
+              "messag": "e": 'Potential secret exposed in configuration file';'
             });
           },;
 ,;
           // Check for debug mode in production configs,;
-          if (configFile.includes('production') && content.includes('debu: g: true')) {,;
+          if (configFile.includes('production') && content.includes('"debu": "g": true')) {,;'
+            }
             configIssues.push({,;
-              fil: e: configFile,;
-              typ: e: 'debug-mode',;
-              severit: y: 'medium',;}
-              messag: e: 'Debug mode enabled in production configuration';}
+              }
+              "fil": "e": configFile,;
+              "typ": "e": 'debug-mode',;'
+              "severit": "y": 'medium',;'
+              "messag": "e": 'Debug mode enabled in production configuration';'
             });
           }
         }
       }),;
 ,;
       return {,;
-        succes: s: true,;}
-        issue: s: configIssues;}
+        }
+        "succes": "s": true,;
+        "issue": "s": configIssues;
       }
     } catch (error) {,;
+      }
       return {,;
-        succes: s: false,;
-        erro: r: error.message,;}
-        issue: s: [];}
+        }
+        "succes": "s": false,;
+        "erro": "r": error.message,;
+        "issue": "s": [];
       }
     }
   },;
 ,;
   async generateReport(depResults, codeResults, configResults) {,;
 
+}
+
 const report = {,;
-      timestam: p: new Date().toISOString(),;
-      summar: y: {,;
-        dependencie: s: depResults.success ? 'secure' : 'vulnerable',;
-        cod: e: codeResults.issues.length === 0 ? 'secure' : 'issues-found',;
-        config: s: configResults.issues.length === 0 ? 'secure' : 'issues-found',;}
-        overal: l: (depResults.success && codeResults.issues.length === 0 && configResults.issues.length === 0) ? 'secure' : 'issues-found';}
+      }
+      "timestam": "p": new Date().toISOString(),;
+      "summar": "y": {,;
+        }
+        "dependencie": "s": depResults.success ? 'secure' : 'vulnerable',;'
+        "cod": "e": codeResults.issues.length === 0 ? 'secure' : 'issues-found',;'
+        "config": "s": configResults.issues.length === 0 ? 'secure' : 'issues-found',;'
+        "overal": "l": (depResults.success && codeResults.issues.length === 0 && configResults.issues.length === 0) ? 'secure' : 'issues-found';'
       },;
-      detail: s: {,;
-        dependencie: s: depResults,;
-        cod: e: codeResults,;}
-        config: s: configResults;}
+      "detail": "s": {,;
+        }
+        "dependencie": "s": depResults,;
+        "cod": "e": codeResults,;
+        "config": "s": configResults;
       },;
-      recommendation: s: [];
+      "recommendation": "s": [];
     },;
 ,;
     // Generate recommendations,;
     if (!depResults.success) {,;
+      }
       report.recommendations.push({,;
-        priorit: y: 'critical',;
-        messag: e: 'Dependency vulnerabilities found',;}
-        actio: n: 'Run npm audit fix to resolve vulnerabilities';}
+        }
+        "priorit": "y": 'critical',;'
+        "messag": "e": 'Dependency vulnerabilities found',;'
+        "actio": "n": 'Run npm audit fix to resolve vulnerabilities';'
       });
     },;
 ,;
     if (codeResults.issues.length > 0) {,;
 
-const highSeverity = codeResults.issues.filter(issue => issue.severity === 'high').length,;
+}
+
+const highSeverity = codeResults.issues.filter(issue => { return issue.severity === 'high').length,; }'
       if (highSeverity > 0) {,;
+        }
         report.recommendations.push({,;
-          priorit: y: 'high',;}
-          messag: e: `${highSeverit,}
-} high-severity security issues found in code`,;
-          actio: n: 'Review and fix high-severity security issues';
+          }
+          "priorit": "y": 'high',;'
+          "messag": "e": `${highSeverit,`} high-severity security issues found in code`,;`          "actio": "n": 'Review and fix high-severity security issues';'
         });
       }
     },;
 ,;
     if (configResults.issues.length > 0) {,;
+      }
       report.recommendations.push({,;
-        priorit: y: 'medium',;
-        messag: e: 'Configuration security issues found',;}
-        actio: n: 'Review configuration files for security issues';}
+        }
+        "priorit": "y": 'medium',;'
+        "messag": "e": 'Configuration security issues found',;'
+        "actio": "n": 'Review configuration files for security issues';'
       });
     },;
 ,;
@@ -817,34 +737,37 @@ const highSeverity = codeResults.issues.filter(issue => issue.severity === 'high
   },;
 ,;
   async saveReport(report) {,;
+    }
     try {,;
 
+}
+
 const reportDir = path.dirname(this.reportFile),;
-      if (!fs.existsSync(reportDir)) {,;}
-        fs.mkdirSync(reportDir, { recursiv: e: true,}
+      if (!fs.existsSync(reportDir)) {,;
+        }
+        fs.mkdirSync(reportDir, { "recursiv": "e": true
 });
       },;
 ,;
       fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2)),;
-      this.log(`Report saved: to: ${this.reportFil,}
-}`);
-    } catch (error) {,;}
-      this.log(`Error saving: report: ${error.messag,}
-}`);
-    }
+      this.log(`Report "saved": "to": ${this.reportFil,`}`);`    } catch (error) {,;
+      }
+      this.log(`Error "saving": "report": ${error.messag,`}`);`    }
   },;
 ,;
   async run() {,;
-    this.log('🛡️  Starting Security Scanner...'),;}
-    this.log(`Project: root: ${this.projectRoo,}
-}`),;
-,;
+    }
+    this.log('🛡️  Starting Security Scanner...'),;'
+    this.log(`"Project": "root": ${this.projectRoo,`}`),;`,;
     try {,;
-      // Create logs directory if it doesn't exist,;
+      // Create logs directory if it doesn't exist,;'
+
+}
 
 const logsDir = path.dirname(this.logFile),;
-      if (!fs.existsSync(logsDir)) {,;}
-        fs.mkdirSync(logsDir, { recursiv: e: true,}
+      if (!fs.existsSync(logsDir)) {,;
+        }
+        fs.mkdirSync(logsDir, { "recursiv": "e": true
 });
       },;
 ,;
@@ -852,220 +775,180 @@ const logsDir = path.dirname(this.logFile),;
 
 const depResults = await this.scanDependencies(),;
 
-const codeResults = await this.scanCode(),;
-
 const configResults = await this.scanConfigs(),;
 ,;
       // Generate report,;
-      this.log('📊 Generating security report...'),;
+      this.log('📊 Generating security report...'),;'
 
 const report = await this.generateReport(depResults, codeResults, configResults),;
 ,;
       // Save report,;
       await this.saveReport(report),;
 ,;
-
-const duration = Date.now() - this.startTime,;
+      const duration = Date.now() - this.startTime,;
 ,;
       // Log summary,;
-      this.log('\n📊 Security Scanner: Summary: '),;
-      this.log(`Dependencie: s: ${report.summary.dependencie,}
-}`),;
-      this.log(`Cod: e: ${report.summary.cod,}
-}`),;
-      this.log(`Config: s: ${report.summary.config,}
-}`),;
-      this.log(`Overal: l: ${report.summary.overal,}
-}`),;
-      this.log(`Duratio: n: ${duratio,}
-}ms`),;
-,;
+      this.log('\n📊 Security "Scanner": "Summary": '),;'
+      this.log(`"Dependencie": "s": ${report.summary.dependencie,`}`),;`      this.log(`"Cod": "e": ${report.summary.cod,`}`),;`      this.log(`"Config": "s": ${report.summary.config,`}`),;`      this.log(`"Overal": "l": ${report.summary.overal,`}`),;`      this.log(`"Duratio": "n": ${duratio,`}ms`),;`,;
       if (report.recommendations.length > 0) {,;
-        this.log('\n💡 Recommendation: s: '),;}
-        report.recommendations.forEach(rec => {,;}
-          this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`),;
-          this.log(`    Actio: n: ${rec.actio,}
-}`);
-        });
-      } else {,;}
-        this.log('\n✨ No security issues found!')}
+        }
+        this.log('\n💡 "Recommendation": "s": '),;'
+        report.recommendations.forEach((rec) => {,;
+          }
+          this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`),;`          this.log(`    "Actio": "n": ${rec.actio,`}`);`        });
+      } else {,;
+        }
+        this.log('\n✨ No security issues found!')'
 };
 
-    } catch (error) {,;}
-      this.log(`❌ Error running security: scanner: ${error.messag,}
-}`),;
-      process.exit(1);
+    } catch (error) {,;
+      }
+      this.log(`❌ Error running "security": "scanner": ${error.messag,`}`),;`      process.exit(1);
 
 
     }
   }
-  log(message, level = 'INFO') {'}
+  log(message, level = 'INFO') {'}'
 ;
-  const timestamp = new Date().toISOString();,
-    const logMessage = `[${timestamp}] [${level}] ${message}\n`;,
-    );
+const timestamp = new Date().toISOString();,;
+const logMessage = `[${timestamp}] [${level}] ${message}\n`;,;`    );
     _console.log(logMessage.trim());
 
 
-ursor/add-new-services-and-deploy-updates-0462;
-ursor/fix-syntax-push-and-merge-to-main-40de;
+ursor/add-new-services-and-deploy-updates-0462,
+ursor/fix-syntax-push-and-merge-to-main-40de,
 try {}
       fs.appendFileSync(this.logFile, logMessage)} catch (error) {}
-      _console.error('Failed to write to log file:', error.message)';
+      _console.error('Failed to write to log "file":', error.message)';'
     }
   }
   error(message) {}
-    this.log(message, 'ERROR')',try {}
-      fs.appendFileSync(this.errorFile, `[${new Date().toISOString()}] ERROR: ${message}\n`)} catch (err) ,
-}
-      _console.error('Failed to write to error file:', err.message)';
+    this.log(message, 'ERROR')',try {}'
+      fs.appendFileSync(this.errorFile, `[${new Date().toISOString()}] "ERROR": ${message}\n`)} catch (err) ,`}
+      _console.error('Failed to write to error "file":', err.message)';'
     }
   }
   async scanDependencies() {}
-    this.log('Scanning dependencies for security vulnerabilities...')',try {// Run npm audit}
+    this.log('Scanning dependencies for security vulnerabilities...')',try {// Run npm audit}'
 
-const auditResult = execSync('npm audit --json', { '}),encoding: 'utf8,',
-  cwd: process.cwd(),stdio: 'pipe,
+const auditResult = execSync('npm audit --json', { '}),"encoding": 'utf8,',"cwd": process.cwd(),"stdio": 'pipe,;'
 }),const auditData = JSON.parse(auditResult)if (auditData.vulnerabilities) ;
 }
 
-const vulnerabilities = Object.keys(auditData.vulnerabilities),const criticalVulns = vulnerabilities.filter(vuln => ),auditData.vulnerabilities[vuln].severity === 'critical',);
-  const highVulns = vulnerabilities.filter(vuln => )auditData.vulnerabilities[vuln].severity === 'high',),this.log(`Found ${vulnerabilities.length} vulnerabilities:`),this.log(`  - Critical: ${criticalVulns.lengt,}
-}`),this.log(`  - High: ${highVulns.lengt,}
-}`),if (criticalVulns.length > 0 && this.alertOnCritical) {}
-          this.error(`CRITICAL VULNERABILITIES DETECTED: ${criticalVulns.join(, ')}`)';
-        }
+const vulnerabilities = Object.keys(auditData.vulnerabilities),const criticalVulns = vulnerabilities.filter(vuln => { return ),auditData.vulnerabilities[vuln].severity === 'critical',); }'
+  const highVulns = vulnerabilities.filter(vuln => )auditData.vulnerabilities[vuln].severity === 'high',),this.log(`Found ${vulnerabilities.length} "vulnerabilities":`),this.log(`  - "Critical": ${criticalVulns.lengt,`}`),this.log(`  - "High": ${highVulns.lengt,`}`),if (criticalVulns.length > 0 && this.alertOnCritical) {}`          this.error(`CRITICAL VULNERABILITIES "DETECTED": ${criticalVulns.join(, ')}`)';'        }
         return {}
-          success: true,vulnerabilities: auditData.vulnerabilities,critical: criticalVulns.length,high: highVulns.length,total: vulnerabilities.length;
+          "success": true,"vulnerabilities": auditData.vulnerabilities,"critical": criticalVulns.length,"high": highVulns.length,"total": vulnerabilities.length;
         }} else {}
-        this.log('No vulnerabilities found in dependencies')',return { success: true, vulnerabilities:  ,}
-}, critical: 0, high: 0, total: 0 }}
+        this.log('No vulnerabilities found in dependencies')',return { "success": true, "vulnerabilities":  ,'
+}, "critical": 0, "high": 0, "total": 0 }}
     } catch (error) {}
-      this.error(`Dependency scan failed: ${error.messag,}
-}`),return { success: false, error: error.message }}
-  }
-  async scanCode() ,
+      this.error(`Dependency scan "failed": ${error.messag,`}`),return { "success": false, "error": error.message }}`  }
+  async scanCode() 
 }
-    this.log('Scanning code for security issues...')',try {}
+    this.log('Scanning code for security issues...')',try {}'
 
 const securityIssues = [];,// Check for common security patterns;
 
-const patterns = [
-  { pattern: /eval\s*\(/, severity: 'high, message: 'Use of eval() detected',}
-},',{ pattern: /innerHTML\s*=/, severity: 'medium, message: 'Direct innerHTML assignment detected',}
-},',{ pattern: /document\.write\s*\(/, severity: 'medium, message: 'Use of document.write() detected',}
-},',{ pattern: /localStorage\.setItem\s*\([^]+,\s*[^)]*\+/, severity: 'low, message: 'Potential XSS in localStorage',}
-},',{ pattern: /_console\.log\s*\([^)]*process\.env/, severity: 'high, message: 'Environment variables in _console.log',}
-},',{ pattern: /password\s*=\s*[\"'][^\"']*[\"']/, severity: 'high, message: 'Hardcoded password detected',}
-},',{ pattern: /api[_-]?key\s*=\s*[\"'][^\"']*[\"']/, severity: 'high, message: 'Hardcoded API key detected',}
-},',{ pattern: /secret\s*=\s*[\"'][^\"']*[\"']/, severity: 'high, message: 'Hardcoded secret detected',}
-}'];,// Scan JavaScript/TypeScript files;
+const patterns = [;
+  { "pattern": /eval\s*\(/, "severity": 'high, "message": 'Use of eval() detected','
+},',{ "pattern": /innerHTML\s*=/, "severity": 'medium, "message": 'Direct innerHTML assignment detected','
+},',{ "pattern": /document\.write\s*\(/, "severity": 'medium, "message": 'Use of document.write() detected','
+},',{ "pattern": /localStorage\.setItem\s*\([^]+,\s*[^)]*\+/, "severity": 'low, "message": 'Potential XSS in localStorage','
+},',{ "pattern": /_console\.log\s*\([^)]*process\.env/, "severity": 'high, "message": 'Environment variables in _console.log','
+},',{ "pattern": /password\s*=\s*["'][^"']*["']/, "severity": 'high, "message": 'Hardcoded password detected','
+},',{ "pattern": /api[_-]?key\s*=\s*["'][^"']*["']/, "severity": 'high, "message": 'Hardcoded API key detected','
+},',{ "pattern": /secret\s*=\s*["'][^"']*["']/, "severity": 'high, "message": 'Hardcoded secret detected','
+}'];,// Scan JavaScript/TypeScript files;'
 
-const filesToScan = this.getFilesToScan(['.js', '.ts', '.jsx', '.tsx'])',for (const file of, filesToScan) {}
+const filesToScan = this.getFilesToScan(['.js', '.ts', '.jsx', '.tsx'])',for (const file of, filesToScan) {}'
         try ;
 }
 
-const content = fs.readFileSync(file, 'utf8')',for (const { pattern, severity, message } of, patterns) {}
+const content = fs.readFileSync(file, 'utf8')',for (const { pattern, severity, message } of, patterns) {}'
 ;
-  const matches = content.match(new RegExp(pattern.source, 'g'))',if (matches) {}
-              securityIssues.push({}),file,severity,message,matches: matches.length;
+  const matches = content.match(new RegExp(pattern.source, 'g'))',if (matches) {}'
+              securityIssues.push({}),file,severity,message,"matches": matches.length;
               })}
           }
         } catch (error) {}
-          this.log(`Failed to scan file ${file}: ${error.message}`, 'WARNING')';
-        }
+          this.log(`Failed to scan file ${file}: ${error.message}`, 'WARNING')';'        }
       }
 
-const criticalIssues = securityIssues.filter(issue => issue.severity === 'high')';
+const criticalIssues = securityIssues.filter(issue => { return issue.severity === 'high')'; }'
 
-const highIssues = securityIssues.filter(issue => issue.severity === 'high')';
+const highIssues = securityIssues.filter(issue => { return issue.severity === 'high')'; }'
 
-const mediumIssues = securityIssues.filter(issue => issue.severity === 'medium')';
-      this.log(`Code scan completed: `)this.log(`  - Critical issues: ${criticalIssues.lengt,}
-}`),this.log(`  - High issues: ${highIssues.lengt,}
-}`),this.log(`  - Medium issues: ${mediumIssues.lengt,}
-}`),if (criticalIssues.length > 0 && this.alertOnCritical) {}
-        this.error(`CRITICAL SECURITY ISSUES DETECTED: ${criticalIssues.length} issues found`)}
-      return ,
+const mediumIssues = securityIssues.filter(issue => { return issue.severity === 'medium')'; }'
+      this.log(`Code scan "completed": `)this.log(`  - Critical "issues": ${criticalIssues.lengt,`}`),this.log(`  - High "issues": ${highIssues.lengt,`}`),this.log(`  - Medium "issues": ${mediumIssues.lengt,`}`),if (criticalIssues.length > 0 && this.alertOnCritical) {}`        this.error(`CRITICAL SECURITY ISSUES "DETECTED": ${criticalIssues.length} issues found`)}`return ,;
 }
-        success: true,issues: securityIssues,critical: criticalIssues.length,high: highIssues.length,medium: mediumIssues.length,total: securityIssues.length;
+        "success": true,"issues": securityIssues,"critical": criticalIssues.length,"high": highIssues.length,"medium": mediumIssues.length,"total": securityIssues.length;
       }} catch (error) {}
-      this.error(`Code scan failed: ${error.messag,}
-}`),return { success: false, error: error.message }}
-  }
-  async scanConfigs() ,
+      this.error(`Code scan "failed": ${error.messag,`}`),return { "success": false, "error": error.message }}`  }
+  async scanConfigs() 
 }
-    this.log('Scanning configuration files for security issues...')',try {}
+    this.log('Scanning configuration files for security issues...')',try {}'
 
-const configIssues = [];,const configFiles = [
-  ,'package.json',','next.config.js',','vite.config.js',','webpack.config.js',','.env',','.env.local',','.env.production',','nginx.conf',','docker-compose.yml',','Dockerfile''
+const configIssues = [];,const configFiles = [;
+  ,'package.json',','next.config.js',','vite.config.js',','webpack.config.js',','.env',','.env.local',','.env.production',','nginx.conf',','docker-compose.yml',','Dockerfile'''
 ];
 ,for (const configFile of, configFiles) {}
         if (fs.existsSync(configFile)) {}
           try {}
 
-const content = fs.readFileSync(configFile, 'utf8')',// Check for sensitive data in configs;
+const content = fs.readFileSync(configFile, 'utf8')',// Check for sensitive data in configs;'
 
-const sensitivePatterns = [
-  { pattern: /password\s*[:=]\s*[\"'][^\"']*[\"']/, severity: 'high, message: 'Password in config file',}
-},',{ pattern: /secret\s*[:=]\s*[\"'][^\"']*[\"']/, severity: 'high, message: 'Secret in config file',}
-},',{ pattern: /api[_-]?key\s*[:=]\s*[\"'][^\"']*[\"']/, severity: 'high, message: 'API key in config file',}
-},',{ pattern: /token\s*[:=]\s*[\"'][^\"']*[\"']/, severity: 'high, message: 'Token in config file',}
-},',{ pattern: /debug\s*[:=]\s*true/, severity: 'medium, message: 'Debug mode enabled in production config',}
-}'];,for (const { pattern, severity, message } of, sensitivePatterns) {}
+const sensitivePatterns = [;
+  { "pattern": /password\s*[:=]\s*["'][^"']*["']/, "severity": 'high, "message": 'Password in config file','
+},',{ "pattern": /secret\s*[:=]\s*["'][^"']*["']/, "severity": 'high, "message": 'Secret in config file','
+},',{ "pattern": /api[_-]?key\s*[:=]\s*["'][^"']*["']/, "severity": 'high, "message": 'API key in config file','
+},',{ "pattern": /token\s*[:=]\s*["'][^"']*["']/, "severity": 'high, "message": 'Token in config file','
+},',{ "pattern": /debug\s*[:=]\s*true/, "severity": 'medium, "message": 'Debug mode enabled in production config','
+}'];,for (const { pattern, severity, message } of, sensitivePatterns) {}'
 
-const matches = content.match(new RegExp(pattern.source, 'g'))',if (matches) {}
-                configIssues.push({}),file: configFile,severity,message,matches: matches.length;
+                configIssues.push({}),"file": configFile,severity,message,"matches": matches.length;
                 })}
             }
           } catch (error) {}
-            this.log(`Failed to scan config file ${configFile}: ${error.message}`, 'WARNING')';
-          }
+            this.log(`Failed to scan config file ${configFile}: ${error.message}`, 'WARNING')';'          }
         }
       }
 
-const criticalConfigIssues = configIssues.filter(issue => issue.severity === 'high')';
-      this.log(`Config scan completed: ${configIssues.lengt,}
-} issues found`),this.log(`  - Critical config issues: ${criticalConfigIssues.lengt,}
-}`),if (criticalConfigIssues.length > 0 && this.alertOnCritical) {}
-        this.error(`CRITICAL CONFIG ISSUES DETECTED: ${criticalConfigIssues.length} issues found`)}
-      return ,
+const criticalConfigIssues = configIssues.filter(issue => { return issue.severity === 'high')'; }'
+      this.log(`Config scan "completed": ${configIssues.lengt,`} issues found`),this.log(`  - Critical config "issues": ${criticalConfigIssues.lengt,`}`),if (criticalConfigIssues.length > 0 && this.alertOnCritical) {}`        this.error(`CRITICAL CONFIG ISSUES "DETECTED": ${criticalConfigIssues.length} issues found`)}`return ,;
 }
-        success: true,issues: configIssues,critical: criticalConfigIssues.length,total: configIssues.length;
+        "success": true,"issues": configIssues,"critical": criticalConfigIssues.length,"total": configIssues.length;
       }} catch (error) {}
-      this.error(`Config scan failed: ${error.messag,}
-}`),return { success: false, error: error.message }}
-  }
-  getFilesToScan(extensions) ,
+      this.error(`Config scan "failed": ${error.messag,`}`),return { "success": false, "error": error.message }}`  }
+  getFilesToScan(extensions) 
 }
 
-const files = [];,function scanDirectory(dir) {}
+const files = [];,function scanDirectory() {}
       try {}
 
 const items = fs.readdirSync(dir),for (const item of, items) ;
 }
 
 const fullPath = path.join(dir, item),const stat = fs.statSync(fullPath),if (stat.isDirectory()) {// Skip node_modules, .git, dist, build directories}
-            if (!['node_modules', '.git', 'dist', 'build', 'coverage', 'logs'].includes(item)) {'}
+            if (!['node_modules', '.git', 'dist', 'build', 'coverage', 'logs'].includes(item)) {'}'
               scanDirectory(fullPath)}
           } else if (stat.isFile()) {}
-;
-  const ext = path.extname(item),if (extensions.includes(ext)) {}
+            const ext = path.extname(item),if (extensions.includes(ext)) {}
               files.push(fullPath)}
           }
         }
-      } catch (error) {// Skip directories we can't read';}
+      } catch (error) {// Skip directories we can't read';'
       }
     }
     scanDirectory(process.cwd())return files;
   }
   async generateSecurityReport() {}
-    this.log('Generating security report...')',try {}
+    this.log('Generating security report...')',try {}'
 
 const report = {}
-        timestamp: new Date().toISOString(),processName: this.processName,dependencyScan: this.scanDependencies ? await this.scanDependencies() : null,codeScan: this.scanCode ? await this.scanCode() : null,configScan: this.scanConfigs ? await this.scanConfigs() : null,environment:  ,
+        "timestamp": new Date().toISOString(),"processName": this.processName,"dependencyScan": this.scanDependencies ? await this.scanDependencies() : null,"codeScan": this.scanCode ? await this.scanCode() : null,"configScan": this.scanConfigs ? await this.scanConfigs() : null,"environment":  
 }
-          nodeVersion: process.version,platform: process.platform,cwd: process.cwd(),
+          "nodeVersion": process.version,"platform": process.platform,"cwd": process.cwd()
 },// Calculate overall security score;
       let totalIssues = 0;
       let criticalIssues = 0;
@@ -1079,109 +962,93 @@ const report = {}
         totalIssues += report.configScan.total;,criticalIssues += report.configScan.critical;
       }
       report.summary = {}
-        totalIssues,criticalIssues,securityScore: Math.max(0, 100 - (criticalIssues * 20) - (totalIssues * 2))};
-  const reportFile = `security-reports/security-report-${Date.now()}.json`;,const reportDir = path.dirname(reportFile),if (!fs.existsSync(reportDir)) {}
-        fs.mkdirSync(reportDir, { recursive: true },
+        totalIssues,criticalIssues,"securityScore": Math.max(0, 100 - (criticalIssues * 20) - (totalIssues * 2))};
+  const reportFile = `security-reports/security-report-${Date.now()}.json`;,const reportDir = path.dirname(reportFile),if (!fs.existsSync(reportDir)) {}`        fs.mkdirSync(reportDir, { "recursive": true }
 }
-      fs.writeFileSync(reportFile, JSON.stringify(report, null, 2)),this.log(`Security report saved to: ${reportFil,}
-}`),this.log(`Security score: ${report.summary.securityScor,}
-}/100`);
-  return report;
+      fs.writeFileSync(reportFile, JSON.stringify(report, null, 2)),this.log(`Security report saved "to": ${reportFil,`}`),this.log(`Security "score": ${report.summary.securityScor,`}/100`);`  return report;
     } catch (error) {}
-      this.error(`Failed to generate security report: ${error.messag,}
-}`),return null;
-    }
+      this.error(`Failed to generate security "report": ${error.messag,`}`),return null;`    }
   }
   async start() {}
-    this.log(`Starting ${this.processName}...`),// Run initial security scan;
-    await this.generateSecurityReport()// Set up periodic scanning;
+    this.log(`Starting ${this.processName}...`),// Run initial security scan;`    await this.generateSecurityReport()// Set up periodic scanning;
 
 const interval = 12 * 60 * 60 * 1000; // 12 hours;
     setInterval(async () => {}
-      this.log('Running scheduled security scan...')',await this.generateSecurityReport()}, interval),this.log(`${this.processName} started successfully`)}
-}
+      this.log('Running scheduled security scan...')',await this.generateSecurityReport()}, interval),this.log(`${this.processName} started successfully`)}`}
 // Start the automation if this script is run directly;
 if (require.main = == module) {}
 ;
-  const scanner = new SecurityScanner(),scanner.start().catch(error => {}),_console.error('Security scanner failed to start:', error)',process.exit(1)})}module.exports = SecurityScanner;
+  const scanner = new SecurityScanner(),scanner.start().catch((error) => {}),_console.error('Security scanner failed to "start":', error)',process.exit(1)})}module.exports = SecurityScanner;'
 ursor/automate-test-improve-and-merge-code-646c;
 module.exports = SecurityScanner;module.exports = SecurityScanner;#!/usr/bin/env node;
 
-const fs = require('fs')const path = require('path')const { execSync }  = require('child_process')class SecurityScanner {constructor() {this && this.projectRoot = process && process.cwd()this && this.logFile = path && path.join(this && this.projectRoot, 'logs/pm2/security-scanner && scanner.log')this && this.reportFile = path && path.join(this && this.projectRoot, 'logs/pm2/security-report && report.json')this && this.startTime = Date && Date.now()}log(message) {const timestamp = new Date().toISOString(;}
-  const logMessage  = `[${timestamp}] ${message}\n`;try {fs && fs.appendFileSync(this && this.logFile, logMessage)} catch (error) {console && console.error('Error writing to log file: ', error && error.message)}}async scanDependencies() {try {this && this.log('🔒 Scanning dependencies for vulnerabilities...')const auditResult = execSync('npm audit --json', {cwd: this && this.projectRoot, stdio: 'pipe',}
-  encoding: 'utf8,}
-};
-  const audit = JSON && JSON.parse(auditResult;
-  return {success: true,vulnerabilities: audit && audit.vulnerabilities || {}summary: audit && audit.metadata || {},
-} catch (error) {// npm audit might fail if there are vulnerabilities; try {const output = error && error.stdout?.toString() || error && error.stderr?.toString() || ''; if (output && output.includes('npm ERR!')) {return {success: false, error: 'Vulnerabilities found',}
-  output: output}}} catch (parseError) {this && this.log(`Error parsing npm audit output: ${parseError && parseError.message}`,
-}return {success: false, error: error && error.message, output: error && error.stdout || error && error.stderr || ''},
-}async scanCode() {try {this && this.log('🔍 Scanning code for security issues...')// Check for common security issues in code;
+const fs = require('fs')const path = require('path')const { execSync }  = require('child_process')class SecurityScanner {constructor() {this && this.projectRoot = process && process.cwd()this && this.logFile = path && path.join(this && this.projectRoot, 'logs/pm2/security-scanner && scanner.log')this && this.reportFile = path && path.join(this && this.projectRoot, 'logs/pm2/security-report && report.json')this && this.startTime = Date && Date.now()}log(message) {const timestamp = new Date().toISOString(;'
+  }
+  const logMessage  = `[${timestamp}] ${message}\n`;try {fs && fs.appendFileSync(this && this.logFile, logMessage)} catch (error) {console && console.error('Error writing to log "file": ', error && error.message)}}async scanDependencies() {try {this && this.log('🔒 Scanning dependencies for vulnerabilities...')const audit = JSON && JSON.parse(auditResult;
+return {"success": true,"vulnerabilities": audit && audit.vulnerabilities || {}"summary": audit && audit.metadata || {},;
+} catch (error) {// npm audit might fail if there are vulnerabilities; try {const output = error && error.stdout?.toString() || error && error.stderr?.toString() || ''; if (output && output.includes('npm ERR!')) {return {"success": false, "error": 'Vulnerabilities found', "output": output}}} catch (parseError) {this && this.log(`Error parsing npm audit "output": ${parseError && parseError.message}`,`}return {"success": false, "error": error && error.message, "output": error && error.stdout || error && error.stderr || ''},'
+}async scanCode() {try {this && this.log('🔍 Scanning code for security issues...')// Check for common security issues in code;'
 
-const securityIssues = [];
 }
-const files = this && this.getSourceFiles()files && files.forEach(file = > {const content = fs && fs.readFileSync(file, 'utf8')const lines  = content && content.split('\n')lines && lines.forEach((line, index) = > ;}
-  const lineNum  = index + 1;// Check for hardcoded secrets; if (line && line.match(/password\s* = \s*[\"'][^\"']+[\"']/i)) {securityIssues && securityIssues.push({file: file, line: lineNum, type: 'hardcoded-password',}
-  severity: 'high', message: 'Hardcoded password detected'})}}}scanDirectory(this && this.projectRoot)return file,
-}async scanConfigs() {try {this && this.log('⚙️ Scanning configuration files...')const configIssues = [];
 
-const configFiles = [
-  'package && package.json'; 'next && next.config.js'; 'tsconfig && tsconfig.json'; '.env'; '.env && env.local','.env && env.production'
-];}
-configFiles && configFiles.forEach(configFile = > {const filePath = path && path.join(this && this.projectRoot, configFile)if (fs && fs.existsSync(filePath)) ;}
-  const content  = fs && fs.readFileSync(filePath, 'utf8')// Check for exposed secrets in config files; if (content && content.match(/password\s* = \s*[\"'][^\"']+[\"']/i)) {configIssues && configIssues.push({file: configFile, type: 'exposed-secret',}
-  severity: 'high',message: 'Potential secret exposed in configuration file'},
-}// Check for debug mode in production configs; if (configFile && configFile.includes('production') && content && content.includes('debug: true')) {, configIssues && configIssues.push({, file: configFile, type: 'debug-mode',}
-  severity: 'medium',message: 'Debug mode enabled in production configuration'})},
-})return {success: true,issues: configIssues,}
-} catch (error) {return {success: false, error: error && error.message, issues: []},
-}async generateReport(depResults, codeResults, configResults) {const report = {timestamp: new Date().toISOString(), summary: {, dependencies: depResults && depResults.success ? 'secure': 'vulnerable', code: codeResults && codeResults.issues.length = = = 0 ? 'secure': 'issues-found', configs: configResults && configResults.issues.length = = = 0 ? 'secure': 'issues-found',overall: (depResults && depResults.success && codeResults && codeResults.issues.length = = = 0 && configResults && configResults.issues.length = = = 0) ? 'secure': 'issues-found';}
-    },details: {, dependencies: depResults, code: codeResults,configs: configResults}recommendations: [,
-}// Generate recommendations; if (!depResults && depResults.success) {report && report.recommendations.push({priority: 'critical',}
-  message: 'Dependency vulnerabilities found', action: 'Run npm audit fix to resolve vulnerabilities'},
-}if (codeResults && codeResults.issues.length > 0) {const highSeverity = codeResults && codeResults.issues.filter(issue = > issue && issue.severity = = = 'high').length; if (highSeverity > 0) {report && report.recommendations.push({priority: 'high',}
-  message: `${highSeverit,}
-} high-severity security issues found in code`; action: 'Review and fix high-severity security issues'}),
-}if (configResults && configResults.issues.length > 0) {report && report.recommendations.push({priority: 'medium',}
-  message: 'Configuration security issues found', action: 'Review configuration files for security issues'})}return repor,
-}async saveReport(report) {try {const reportDir = path && path.dirname(this && this.reportFile)if (!fs && fs.existsSync(reportDir)) {fs && fs.mkdirSync(reportDir, { recursive: true },
-}fs && fs.writeFileSync(this && this.reportFile, JSON && JSON.stringify(report, null, 2))this && this.log(`Report saved to: ${this && this.reportFile}`)} catch (error) {this && this.log(`Error saving report: ${error && error.message}`)}}async run() {this && this.log('🛡️ Starting Security Scanner...')this && this.log(`Project root: ${this && this.projectRoo,}
-}`)try {// Create logs directory if it doesn't exist;}
+
+const files = this && this.getSourceFiles()files && files.forEach(file = > {const content = fs && fs.readFileSync(file, 'utf8')const lines  = content && content.split('\n')lines && lines.forEach((line, index) = > ;'
+  }
+  const lineNum  = index + 1;// Check for hardcoded secrets; if (line && line.match(/password\s* = \s*["'][^"']+["']/i)) {securityIssues && securityIssues.push({"file": file, "line": lineNum, "type": 'hardcoded-password', "severity": 'high', "message": 'Hardcoded password detected'})}}}scanDirectory(this && this.projectRoot)return file,'
+}async scanConfigs() {try {this && this.log('⚙️ Scanning configuration files...')const configIssues = [];'
+
 }
-const logsDir = path && path.dirname(this && this.logFile)if (!fs && fs.existsSync(logsDir)) {fs && fs.mkdirSync(logsDir, { recursive: true },
+
+  'package && package.json'; 'next && next.config.js'; 'tsconfig && tsconfig.json'; '.env'; '.env && env.local','.env && env.production''
+];
+configFiles && configFiles.forEach(configFile = > {const filePath = path && path.join(this && this.projectRoot, configFile)if (fs && fs.existsSync(filePath)) ;
+  }
+  const content  = fs && fs.readFileSync(filePath, 'utf8')// Check for exposed secrets in config files; if (content && content.match(/password\s* = \s*["'][^"']+["']/i)) {configIssues && configIssues.push({"file": configFile, "type": 'exposed-secret', "severity": 'high',"message": 'Potential secret exposed in configuration file'},'
+}// Check for debug mode in production configs; if (configFile && configFile.includes('production') && content && content.includes('"debug": true')) {, configIssues && configIssues.push({, "file": configFile, "type": 'debug-mode', "severity": 'medium',"message": 'Debug mode enabled in production configuration'})},'
+})return {"success": true,"issues": configIssues
+} catch (error) {return {"success": false, "error": error && error.message, "issues": []}
+}async generateReport(depResults, codeResults, configResults) {const report = {"timestamp": new Date().toISOString(), "summary": {, "dependencies": depResults && depResults.success ? 'secure': 'vulnerable', "code": codeResults && codeResults.issues.length = = = 0 ? 'secure': 'issues-found', "configs": configResults && configResults.issues.length = = = 0 ? 'secure': 'issues-found',"overall": (depResults && depResults.success && codeResults && codeResults.issues.length = = = 0 && configResults && configResults.issues.length = = = 0) ? 'secure': 'issues-found';'
+    },"details": {, "dependencies": depResults, "code": codeResults,"configs": configResults}"recommendations": [
+}// Generate recommendations; if (!depResults && depResults.success) {report && report.recommendations.push({"priority": 'critical', "message": 'Dependency vulnerabilities found', "action": 'Run npm audit fix to resolve vulnerabilities'},'
+}if (codeResults && codeResults.issues.length > 0) {const highSeverity = codeResults && codeResults.issues.filter(issue = > issue && issue.severity = = = 'high').length; if (highSeverity > 0) {report && report.recommendations.push({"priority": 'high',"message": `${highSeverit,`} high-severity security issues found in code`; "action": 'Review and fix high-severity security issues'}),'
+}if (configResults && configResults.issues.length > 0) {report && report.recommendations.push({"priority": 'medium', "message": 'Configuration security issues found', "action": 'Review configuration files for security issues'})}return repor,'
+}async saveReport(report) {try {const reportDir = path && path.dirname(this && this.reportFile)if (!fs && fs.existsSync(reportDir)) {fs && fs.mkdirSync(reportDir, { "recursive": true }
+}fs && fs.writeFileSync(this && this.reportFile, JSON && JSON.stringify(report, null, 2))this && this.log(`Report saved "to": ${this && this.reportFile}`)} catch (error) {this && this.log(`Error saving "report": ${error && error.message}`)}}async run() {this && this.log('🛡️ Starting Security Scanner...')this && this.log(`Project "root": ${this && this.projectRoo,`}`)try {// Create logs directory if it doesn't exist;'
+
+}
+
+const logsDir = path && path.dirname(this && this.logFile)if (!fs && fs.existsSync(logsDir)) {fs && fs.mkdirSync(logsDir, { "recursive": true }
 }// Run all security scans;
 
-const depResults = await this && this.scanDependencies()const codeResults = await this && this.scanCode(;
-  const configResults  = await this && this.scanConfigs()// Generate report; this && this.log('📊 Generating security report...')const report  = await this && this.generateReport(depResults, codeResults, configResults)// Save report; await this && this.saveReport(report)const duration  = Date && Date.now() - this && this.startTime;// Log summary; this && this.log('\n📊 Security Scanner Summary: ')this && this.log(`Dependencies: ${report && report.summary.dependencies}`)this && this.log(`Code: ${report && report.summary.code}`)this && this.log(`Configs: ${report && report.summary.configs}`)this && this.log(`Overall: ${report && report.summary.overall}`)this && this.log(`Duration: ${duratio,}
-}ms`)if (report && report.recommendations.length > 0) {this && this.log('\n💡 Recommendations: '), report && report.recommendations.forEach(rec = > {, this && this.log(` [${rec && rec.priority.toUpperCase()}] ${rec && rec.message}`)this && this.log(` Action: ${rec && rec.action}`)})} else {this && this.log('\n✨ No security issues found!')}} catch (error) {this && this.log(`❌ Error running security scanner: ${error && error.message}`)process && process.exit(1)},
-}// Run the security scanner;
+const depResults = await this && this.scanDependencies()const configResults  = await this && this.scanConfigs()// Generate report; this && this.log('📊 Generating security report...')const report  = await this && this.generateReport(depResults, codeResults, configResults)// Save report; await this && this.saveReport(report)const duration  = Date && Date.now() - this && this.startTime;// Log summary; this && this.log('\n📊 Security Scanner "Summary": ')this && this.log(`"Dependencies": ${report && report.summary.dependencies}`)this && this.log(`"Code": ${report && report.summary.code}`)this && this.log(`"Configs": ${report && report.summary.configs}`)this && this.log(`"Overall": ${report && report.summary.overall}`)this && this.log(`"Duration": ${duratio,;`}ms`)if (report && report.recommendations.length > 0) {this && this.log('\n💡 "Recommendations": '), report && report.recommendations.forEach(rec = > {, this && this.log(` [${rec && rec.priority.toUpperCase()}] ${rec && rec.message}`)this && this.log(` "Action": ${rec && rec.action}`)})} else {this && this.log('\n✨ No security issues found!')}} catch (error) {this && this.log(`❌ Error running security "scanner": ${error && error.message}`)process && process.exit(1)},`}// Run the security scanner;
 
 const scanner = new SecurityScanner()scanner && scanner.run().catch(error = > {process && process.exit(1)}))}),)scanner.run().catch(error = > {process.exit(1)}))}),)}),)#!/usr/bin/env node;
 
-const fs = require('fs')const path = require('path';
-  const { execSync } = require('child_process')scanner.run().catch(error = > {process.exit(1)}))}),)}),)}),)scanner.run().catch(error = > {process.exit(1)}))}),)}),)ursor/add-new-services-and-deploy-updates-0462;
+const fs = require('fs')const path = require('path';'
+  const { execSync } = require('child_process')scanner.run().catch(error = > {process.exit(1)}))}),)}),)}),)scanner.run().catch(error = > {process.exit(1)}))}),)}),)ursor/add-new-services-and-deploy-updates-0462;'
 ursor/integrate-build-improve-and-re-verify-8f7d;
 origin/cursor/fix-syntax-push-and-merge-to-main-ba45;
 origin/cursor/integrate-build-improve-and-re-verify-242d;
-class SecurityScanner {constructor() {this.projectRoot = process.cwd()this.logFile = path.join(this.projectRoot, 'logs/pm2/security-scanner.log')this.reportFile = path.join(this.projectRoot, 'logs/pm2/security-report.json')this.startTime = Date.now(;}
+class SecurityScanner {constructor() {this.projectRoot = process.cwd()this.logFile = path.join(this.projectRoot, 'logs/pm2/security-scanner.log')this.reportFile = path.join(this.projectRoot, 'logs/pm2/security-report.json')this.startTime = Date.now(;'
 }
 
-const fs = require('fs')const path = require('path')const { execSync }  = require('child_process')log(message) {const timestamp = new Date().toISOString(;}
-  const logMessage  = `[${timestamp}] ${message}\n`;try {fs.appendFileSync(this.logFile, logMessage)} catch (error) {console.error('Error writing to log file:', error.message)}}async scanDependencies() {try {this.log('🔒 Scanning dependencies for vulnerabilities...')const auditResult = execSync('npm audit --json', {cwd: this.projectRoot, stdio: 'pipe',}
-  encoding: 'utf8';}
-      })const audit = JSON.parse(auditResult;
-  return {success: true, vulnerabilities: audit.vulnerabilities || {,summary: audit.metadata || {,}
+const fs = require('fs')const path = require('path')const { execSync }  = require('child_process')log(message) {const timestamp = new Date().toISOString(;'
+  }
+  const logMessage  = `[${timestamp}] ${message}\n`;try {fs.appendFileSync(this.logFile, logMessage)} catch (error) {console.error('Error writing to log "file":', error.message)}}async scanDependencies() {try {this.log('🔒 Scanning dependencies for vulnerabilities...')const auditResult = execSync('npm audit --json', {"cwd": this.projectRoot, "stdio": 'pipe',"encoding": 'utf8';'      })const audit = JSON.parse(auditResult;
+return {"success": true, "vulnerabilities": audit.vulnerabilities || {,"summary": audit.metadata || {,;
 } catch (error) {// npm audit might fail if there are vulnerabilities;
-      try {const output = error.stdout?.toString() || error.stderr?.toString() || '';
-        if (output.includes('npm ERR!')) {return {success: false, error: 'Vulnerabilities found',}
-  output: output;}
-        }} catch (parseError) {this.log(`Error parsing npm audit output: ${parseError.message}`,
-}return {success: false, error: error.message,output: error.stdout || error.stderr || '';}
-}}async scanCode() {try {this.log('🔍 Scanning code for security issues...')// Check for common security issues in code;
+      }
+      try {const output = error.stdout?.toString() || error.stderr?.toString() || '';'
+        }
+        if (output.includes('npm ERR!')) {return {"success": false, "error": 'Vulnerabilities found',"output": output;'
+        }} catch (parseError) {this.log(`Error parsing npm audit "output": ${parseError.message}`,`}return {"success": false, "error": error.message,"output": error.stdout || error.stderr || '';'
+}}async scanCode() {try {this.log('🔍 Scanning code for security issues...')// Check for common security issues in code;'
+
 }
-const scanner = new SecurityScanner();,}
-  scanner.start().catch(error => {}),
-    _console.error('Security scanner failed to start:', error);',
+
+const scanner = new SecurityScanner();,;
+  scanner.start().catch((error) => {}),
+    _console.error('Security scanner failed to "start":', error);','
     process.exit(1);
   });
 }
@@ -1192,149 +1059,146 @@ module.exports = SecurityScanner;
 
 #!/usr/bin/env node;
 
-const fs = require('fs');
-
-const path = require('path');
-
-const { execSync } = require('child_process');
 
 
-class SecurityScanner {; constructor() {; this && this.projectRoot = process && process.cwd(); this && this.logFile = path && path.join(this && this.projectRoot, 'logs/pm2/security-scanner && scanner.log'); this && this.reportFile = path && path.join(this && this.projectRoot, 'logs/pm2/security-report && report.json'); this && this.startTime = Date && Date.now()};
+
+
+class SecurityScanner {; constructor() {; this && this.projectRoot = process && process.cwd(); this && this.logFile = path && path.join(this && this.projectRoot, 'logs/pm2/security-scanner && scanner.log'); this && this.reportFile = path && path.join(this && this.projectRoot, 'logs/pm2/security-report && report.json'); this && this.startTime = Date && Date.now()};'
 ; log(message) {;
 
-const timestamp = new Date().toISOString();}
 }
-const logMessage = `[${timestamp}] ${message}\n`;
-; try {; fs && fs.appendFileSync(this && this.logFile, logMessage)} catch (error) {; console && console.error('Error writing to log file: ', error && error.message)}};
-; async scanDependencies() {; try {; this && this.log('🔒 Scanning dependencies for vulnerabilities...');
+
+
+const logMessage = `[${timestamp}] ${message}\n`;`; try {; fs && fs.appendFileSync(this && this.logFile, logMessage)} catch (error) {; console && console.error('Error writing to log "file": ', error && error.message)}};'
+; async scanDependencies() {; try {; this && this.log('🔒 Scanning dependencies for vulnerabilities...');'
 ;
 
-const auditResult = execSync('npm audit --json', {; cwd: this && this.projectRoot, stdio: 'pipe',}
-  encoding: 'utf8,}
+}
+
+const auditResult = execSync('npm audit --json', {; "cwd": this && this.projectRoot, "stdio": 'pipe', "encoding": 'utf8,;'
 });
 ;
 
-const audit = JSON && JSON.parse(auditResult); return {; success: true,}
-    vulnerabilities: audit && audit.vulnerabilities || ,}
-}; summary: audit && audit.metadata || {},
-} catch (error) {; // npm audit might fail if there are vulnerabilities; try {;}
+const audit = JSON && JSON.parse(auditResult); return {; "success": true,;
+    }
+    "vulnerabilities": audit && audit.vulnerabilities || 
+}; "summary": audit && audit.metadata || {}
+} catch (error) {; // npm audit might fail if there are vulnerabilities; try {;
+
 }
-const output = error && error.stdout?.toString() || error && error.stderr?.toString() || ''; if (output && output.includes('npm ERR!')) {; return {; success: false, error: 'Vulnerabilities found',}
-  output: output},
-} catch (parseError) {; this && this.log(`Error parsing npm audit output: ${parseError && parseError.message}`,
+
+const output = error && error.stdout?.toString() || error && error.stderr?.toString() || ''; if (output && output.includes('npm ERR!')) {; return {; "success": false, "error": 'Vulnerabilities found', "output": output},'
+} catch (parseError) {; this && this.log(`Error parsing npm audit "output": ${parseError && parseError.message}`,`};
+; return {; "success": false, "error": error && error.message, "output": error && error.stdout || error && error.stderr || ''},'
 };
-; return {; success: false, error: error && error.message, output: error && error.stdout || error && error.stderr || ''},
-};
-; async scanCode() {; try {; this && this.log('🔍 Scanning code for security issues...');
+; async scanCode() {; try {; this && this.log('🔍 Scanning code for security issues...');'
 ; // Check for common security issues in code;
 
-const securityIssues = [];
+}
+
 
 const files = this && this.getSourceFiles();
 ; files && files.forEach(file = > {;
 
-const content = fs && fs.readFileSync(file, 'utf8');
-
-const lines = content && content.split('\n');
-; lines && lines.forEach((line, index) = > {;
 }
-const lineNum = index + 1;}
-; // Check for hardcoded secrets; if (line && line.match(/password\s* = \s*[\"'][^\"']+[\"']/i)) {; securityIssues && securityIssues.push({; file: file, line: lineNum, type: 'hardcoded-password',}
-  severity: 'high', message: 'Hardcoded password detected'})},
+
+const content = fs && fs.readFileSync(file, 'utf8');'
+
+const lines = content && content.split('\n');'
+; lines && lines.forEach((line, index) = > {;
+
+}
+
+; // Check for hardcoded secrets; if (line && line.match(/password\s* = \s*["'][^"']+["']/i)) {; securityIssues && securityIssues.push({; "file": file, "line": lineNum, "type": 'hardcoded-password', "severity": 'high', "message": 'Hardcoded password detected'})},'
 };
 ; scanDirectory(this && this.projectRoot); return files};
-; async scanConfigs() {; try {; this && this.log('⚙️ Scanning configuration files...');
+; async scanConfigs() {; try {; this && this.log('⚙️ Scanning configuration files...');'
 ;
 
-const configIssues = [];
+}
 
-const configFiles = [
-  'package && package.json'; 'next && next.config.js'; 'tsconfig && tsconfig.json'; '.env'; '.env && env.local',
-    '.env && env.production'
+  'package && package.json'; 'next && next.config.js'; 'tsconfig && tsconfig.json'; '.env'; '.env && env.local','
+    '.env && env.production''
   ];
 ; configFiles && configFiles.forEach(configFile = > {;
 
+}
+
 const filePath = path && path.join(this && this.projectRoot, configFile); if (fs && fs.existsSync(filePath)) {;
 
-const content = fs && fs.readFileSync(filePath, 'utf8');
-; // Check for exposed secrets in config files; if (content && content.match(/password\s* = \s*[\"'][^\"']+[\"']/i)) {; configIssues && configIssues.push({; file: configFile, type: 'exposed-secret',}
-  severity: 'high',}
-    message: 'Potential secret exposed in configuration file'},
+}
+
+const content = fs && fs.readFileSync(filePath, 'utf8');'
+; // Check for exposed secrets in config files; if (content && content.match(/password\s* = \s*["'][^"']+["']/i)) {; configIssues && configIssues.push({; "file": configFile, "type": 'exposed-secret', "severity": 'high','
+    }
+    "message": 'Potential secret exposed in configuration file'},'
 };
-; // Check for debug mode in production configs; if (configFile && configFile.includes('production') && content && content.includes('debug: true')) {, configIssues && configIssues.push({, file: configFile, type: 'debug-mode',}
-  severity: 'medium',}
-    message: 'Debug mode enabled in production configuration'})},
+; // Check for debug mode in production configs; if (configFile && configFile.includes('production') && content && content.includes('"debug": true')) {, configIssues && configIssues.push({, "file": configFile, "type": 'debug-mode', "severity": 'medium','
+    }
+    "message": 'Debug mode enabled in production configuration'})},'
 });
-; return {; success: true,}
-    issues: configIssues,}
-} catch (error) {; return {; success: false, error: error && error.message, issues: []},
+; return {; "success": true
+    }
+    "issues": configIssues
+} catch (error) {; return {; "success": false, "error": error && error.message, "issues": []}
 };
 ; async generateReport(depResults, codeResults, configResults) {;
 
-const report = {
-  timestamp: new Date().toISOString(), summary: {
-      , dependencies: depResults && depResults.success ? 'secure': 'vulnerable', code: codeResults && codeResults.issues.length = = = 0 ? 'secure': 'issues-found', configs: configResults && configResults.issues.length = = = 0 ? 'secure': 'issues-found',
-    overall: (depResults && depResults.success && codeResults && codeResults.issues.length = = = 0 && configResults && configResults.issues.length = = = 0) ? 'secure': 'issues-found'}
-   ,}
+}
+
+  }
+  "timestamp": new Date().toISOString(), "summary": {
+      , "dependencies": depResults && depResults.success ? 'secure': 'vulnerable', "code": codeResults && codeResults.issues.length = = = 0 ? 'secure': 'issues-found', "configs": configResults && configResults.issues.length = = = 0 ? 'secure': 'issues-found','
+    }
+    "overall": (depResults && depResults.success && codeResults && codeResults.issues.length = = = 0 && configResults && configResults.issues.length = = = 0) ? 'secure': 'issues-found''
+   
 },
-    details: {, dependencies: depResults, code: codeResults,}
-    configs: configResult,}
-}; recommendations: [,
+    "details": {, "dependencies": depResults, "code": codeResults
+    }
+    "configs": configResult
+}; "recommendations": [
 };
-; // Generate recommendations; if (!depResults && depResults.success) {; report && report.recommendations.push({; priority: 'critical',}
-  message: 'Dependency vulnerabilities found', action: 'Run npm audit fix to resolve vulnerabilities'},
+; // Generate recommendations; if (!depResults && depResults.success) {; report && report.recommendations.push({; "priority": 'critical', "message": 'Dependency vulnerabilities found', "action": 'Run npm audit fix to resolve vulnerabilities'},'
 };
 ; if (codeResults && codeResults.issues.length > 0) {;
 
-const highSeverity = codeResults && codeResults.issues.filter(issue = > issue && issue.severity = = = 'high').length; if (highSeverity > 0) {; report && report.recommendations.push({; priority: 'high',}
-  message: `${highSeverit,}
-} high-severity security issues found in code`; action: 'Review and fix high-severity security issues'}),
+}
+
+const highSeverity = codeResults && codeResults.issues.filter(issue = > issue && issue.severity = = = 'high').length; if (highSeverity > 0) {; report && report.recommendations.push({; "priority": 'high','
+    }
+    "message": `${highSeverit,`} high-severity security issues found in code`; "action": 'Review and fix high-severity security issues'}),'
 };
-; if (configResults && configResults.issues.length > 0) {; report && report.recommendations.push({; priority: 'medium',}
-  message: 'Configuration security issues found', action: 'Review configuration files for security issues'},
+; if (configResults && configResults.issues.length > 0) {; report && report.recommendations.push({; "priority": 'medium', "message": 'Configuration security issues found', "action": 'Review configuration files for security issues'},'
 };
 ; return report};
-; async saveReport(report) {; try {;}
+; async saveReport(report) {; try {;
+
 }
-const reportDir = path && path.dirname(this && this.reportFile); if (!fs && fs.existsSync(reportDir)) {; fs && fs.mkdirSync(reportDir, { recursive: true },
+
+const reportDir = path && path.dirname(this && this.reportFile); if (!fs && fs.existsSync(reportDir)) {; fs && fs.mkdirSync(reportDir, { "recursive": true }
 };
-; fs && fs.writeFileSync(this && this.reportFile, JSON && JSON.stringify(report, null, 2)); this && this.log(`Report saved to: ${this && this.reportFile}`,
-} catch (error) {; this && this.log(`Error saving report: ${error && error.message}`),
-};
-; async run() {; this && this.log('🛡️ Starting Security Scanner...'); this && this.log(`Project root: ${this && this.projectRoo,}
-}`);
-; try {; // Create logs directory if it doesn't exist;}
+; fs && fs.writeFileSync(this && this.reportFile, JSON && JSON.stringify(report, null, 2)); this && this.log(`Report saved "to": ${this && this.reportFile}`,`} catch (error) {; this && this.log(`Error saving "report": ${error && error.message}`),`};
+; async run() {; this && this.log('🛡️ Starting Security Scanner...'); this && this.log(`Project "root": ${this && this.projectRoo,`}`);`; try {; // Create logs directory if it doesn't exist;'
+
 }
-const logsDir = path && path.dirname(this && this.logFile); if (!fs && fs.existsSync(logsDir)) {; fs && fs.mkdirSync(logsDir, { recursive: true },
+
+const logsDir = path && path.dirname(this && this.logFile); if (!fs && fs.existsSync(logsDir)) {; fs && fs.mkdirSync(logsDir, { "recursive": true }
 };
 ; // Run all security scans;
 
 const depResults = await this && this.scanDependencies();
 
-const codeResults = await this && this.scanCode();
-
 const configResults = await this && this.scanConfigs();
-; // Generate report; this && this.log('📊 Generating security report...');
+; // Generate report; this && this.log('📊 Generating security report...');'
 
 const report = await this && this.generateReport(depResults, codeResults, configResults);
 ; // Save report; await this && this.saveReport(report);
 ;
 
 const duration = Date && Date.now() - this && this.startTime;
-; // Log summary; this && this.log('\n📊 Security Scanner Summary: '); this && this.log(`Dependencies: ${report && report.summary.dependencie,}
-}`); this && this.log(`Code: ${report && report.summary.cod,}
-}`); this && this.log(`Configs: ${report && report.summary.config,}
-}`); this && this.log(`Overall: ${report && report.summary.overal,}
-}`); this && this.log(`Duration: ${duratio,}
-}ms`);
-; if (report && report.recommendations.length > 0) {; this && this.log('\n💡 Recommendations: '), report && report.recommendations.forEach(rec = > {, this && this.log(` [${rec && rec.priority.toUpperCase()}] ${rec && rec.message}`); this && this.log(` Action: ${rec && rec.action}`)},
-} else {; this && this.log('\n✨ No security issues found!')};
-} catch (error) {; this && this.log(`❌ Error running security scanner: ${error && error.messag,}
-}`); process && process.exit(1)}}};
-
+; // Log summary; this && this.log('\n📊 Security Scanner "Summary": '); this && this.log(`"Dependencies": ${report && report.summary.dependencie,`}`); this && this.log(`"Code": ${report && report.summary.cod,`}`); this && this.log(`"Configs": ${report && report.summary.config,`}`); this && this.log(`"Overall": ${report && report.summary.overal,`}`); this && this.log(`"Duration": ${duratio,`}ms`);`; if (report && report.recommendations.length > 0) {; this && this.log('\n💡 "Recommendations": '), report && report.recommendations.forEach(rec = > {, this && this.log(` [${rec && rec.priority.toUpperCase()}] ${rec && rec.message}`); this && this.log(` "Action": ${rec && rec.action}`)},`} else {; this && this.log('\n✨ No security issues found!')};'
+} catch (error) {; this && this.log(`❌ Error running security "scanner": ${error && error.messag,`}`); process && process.exit(1)}}};`
 // Run the security scanner;
-
-const scanner = new SecurityScanner();
 scanner && scanner.run().catch(error = > {; process && process.exit(1)}));}),);
 
 scanner.run().catch(error = > {process.exit(1)}));}),);
@@ -1346,11 +1210,8 @@ scanner.run().catch(error = > {process.exit(1)}));}),);
 
 #!/usr/bin/env node;
 
-const fs = require('fs');
 
-const path = require('path');
 
-const { execSync } = require('child_process');
 scanner.run().catch(error = > {process.exit(1)}));}),);
 }),);
 
@@ -1361,1324 +1222,1263 @@ scanner.run().catch(error = > {process.exit(1)}));}),);
 }),);
 scanner.run().catch(error = > {process.exit(1)}));}),);
 }),);
-ursor/add-new-services-and-deploy-updates-0462;
-ursor/integrate-build-improve-and-re-verify-8f7d;
-origin/cursor/fix-syntax-push-and-merge-to-main-ba45;
-origin/cursor/integrate-build-improve-and-re-verify-242d;
+ursor/add-new-services-and-deploy-updates-0462,
+ursor/integrate-build-improve-and-re-verify-8f7d,
+origin/cursor/fix-syntax-push-and-merge-to-main-ba45,
+origin/cursor/integrate-build-improve-and-re-verify-242d,
 class SecurityScanner {;
+  }
   constructor() {;
+    }
     this.projectRoot = process.cwd();
-    this.logFile = path.join(this.projectRoot, 'logs/pm2/security-scanner.log');
-    this.reportFile = path.join(this.projectRoot, 'logs/pm2/security-report.json');}
-    this.startTime = Date.now()}
+    this.logFile = path.join(this.projectRoot, 'logs/pm2/security-scanner.log');'
+    this.reportFile = path.join(this.projectRoot, 'logs/pm2/security-report.json');'
+    this.startTime = Date.now()
 };
 
 
-const fs = require('fs');
 
-const path = require('path');
 
-const { execSync } = require('child_process');
 ;
   log(message) {;
 
-const timestamp = new Date().toISOString();}
 }
-const logMessage = `[${timestamp}] ${message}\n`;
-;
-    try {;}
-      fs.appendFileSync(this.logFile, logMessage);}
-    } catch (error) {;}
-      console.error('Error writing to log file:', error.message)}
-};
 
+
+const logMessage = `[${timestamp}] ${message}\n`;`;
+    try {;
+      }
+      fs.appendFileSync(this.logFile, logMessage);
+    } catch (error) {;
+      }
+      console.error('Error writing to log "file":', error.message)'
+};
 };
 ;
   async scanDependencies() {;
+    }
     try {;
-      this.log('🔒 Scanning dependencies for vulnerabilities...');
+      }
+      this.log('🔒 Scanning dependencies for vulnerabilities...');'
 ;
 
-const auditResult = execSync('npm audit --json', {;
-        cwd: this.projectRoot, stdio: 'pipe',
-  encoding: 'utf8'}
-     ,}
+const auditResult = execSync('npm audit --json', {;'
+        }
+        "cwd": this.projectRoot, "stdio": 'pipe','
+        "encoding": 'utf8''
+     
 });
 ;
-
-const audit = JSON.parse(auditResult);
+      const audit = JSON.parse(auditResult);
       return {;
-        success: true, vulnerabilities: audit.vulnerabilities || {,
-        summary: audit.metadata || {}
-     ,}
+        }
+        "success": true, "vulnerabilities": audit.vulnerabilities || {
+        }
+        "summary": audit.metadata || {
+     
 };
     } catch (error) {;
       // npm audit might fail if there are vulnerabilities;
+      }
       try {;
 
-const output = error.stdout?.toString() || error.stderr?.toString() || '';
-        if (output.includes('npm ERR!')) {;
+}
+
+const output = error.stdout?.toString() || error.stderr?.toString() || '';'
+        if (output.includes('npm ERR!')) {;'
+          }
           return {;
-            success: false, error: 'Vulnerabilities found',}
-  output: output, }
+            }
+            "success": false, "error": 'Vulnerabilities found','
+            "output": output 
         };
-      } catch (parseError) {;}
-        this.log(`Error parsing npm audit output: ${parseError.message}`),
-};
+      } catch (parseError) {;
+        }
+        this.log(`Error parsing npm audit "output": ${parseError.message}`),`};
 
 ;
       return {;
-        success: false, error: error.message,}
-        output: error.stdout || error.stderr || '', }
+        }
+        "success": false, "error": error.message,
+        "output": error.stdout || error.stderr || '', '
 }
 };
-
+};
 ;
   async scanCode() {;
+    }
     try {;
-      this.log('🔍 Scanning code for security issues...');
+      }
+      this.log('🔍 Scanning code for security issues...');'
 ;
       // Check for common security issues in code;
 
-const securityIssues = [];
 
-const files = this.getSourceFiles()files.forEach(file => {const content = fs.readFileSync(file, 'utf8')const lines  = content.split('\n')lines.forEach((line, index) => ;
+const files = this.getSourceFiles()files.forEach((file) => {const content = fs.readFileSync(file, 'utf8')const lines  = content.split('\n')lines.forEach((line, index) => ;'
+  }
   const lineNum  = index + 1;// Check for hardcoded secrets;
-          if (line.match(/password\s*=\s*[\"'][^\"']+[\"']/i)) {securityIssues.push({file: file, line: lineNum,type: 'hardcoded-password',}
-  severity: 'high',message: 'Hardcoded password detected';}
+          if (line.match(/password\s*=\s*["'][^"']+["']/i)) {securityIssues.push({"file": file, "line": lineNum,"type": 'hardcoded-password', "severity": 'high',"message": 'Hardcoded password detected';'
             })}}}scanDirectory(this.projectRoot)return files;
-}async scanConfigs() {try {this.log('⚙️  Scanning configuration files...')const configIssues = [];
+}async scanConfigs() {try {this.log('⚙️  Scanning configuration files...')const configIssues = [];'
 
-const configFiles = [
-  'package.json';
-        'next.config.js';
-        'tsconfig.json';
-        '.env';
-        '.env.local','.env.production'
+}
+
+  'package.json';'
+        'next.config.js';'
+        'tsconfig.json';'
+        '.env';'
+        '.env.local','.env.production''
 ];
 configFiles.forEach(configFile = > {const filePath = path.join(this.projectRoot, configFile)if (fs.existsSync(filePath)) ;
-  const content  = fs.readFileSync(filePath, 'utf8')// Check for exposed secrets in config files;
-          if (content.match(/password\s*=\s*[\"'][^\"']+[\"']/i)) {configIssues.push({file: configFile, type: 'exposed-secret',}
-  severity: 'high', message: 'Potential secret exposed in configuration file';}
+  }
+  const content  = fs.readFileSync(filePath, 'utf8')// Check for exposed secrets in config files;'
+          if (content.match(/password\s*=\s*["'][^"']+["']/i)) {configIssues.push({"file": configFile, "type": 'exposed-secret',"severity": 'high', "message": 'Potential secret exposed in configuration file';'
             })}// Check for debug mode in production configs;
-          if (configFile.includes('production') && content.includes('debug: true')) {, configIssues.push({,file: configFile, type: 'debug-mode',}
-  severity: 'medium', message: 'Debug mode enabled in production configuration';}
-            })}}})return {success: true, issues: configIssue,}
-} catch (error) {return {success: false, error: error.message,issues: [];}
-}}async generateReport(depResults, codeResults, configResults) {const report = {timestamp: new Date().toISOString(), summary: {,dependencies: depResults.success ? 'secure' : 'vulnerable', code: codeResults.issues.length === 0 ? 'secure' : 'issues-found',configs: configResults.issues.length === 0 ? 'secure' : 'issues-found', overall: (depResults.success && codeResults.issues.length === 0 && configResults.issues.length === 0) ? 'secure' : 'issues-found',details: {, dependencies: depResults,code: codeResults, configs: configResults,recommendations: [], ,// Generate recommendations;
-    if (!depResults.success) {report.recommendations.push({priority: 'critical',}
-  message: 'Dependency vulnerabilities found',action: 'Run npm audit fix to resolve vulnerabilities';}
-      })}if (codeResults.issues.length > 0) {const highSeverity = codeResults.issues.filter(issue => issue.severity === 'high').length;
-      if (highSeverity > 0) {report.recommendations.push({priority: 'high',}
-  message: `${highSeverit,}
-} high-severity security issues found in code`;
-          action: 'Review and fix high-severity security issues';
-        })}}if (configResults.issues.length > 0) {report.recommendations.push({priority: 'medium',}
-  message: 'Configuration security issues found',action: 'Review configuration files for security issues';}
+          if (configFile.includes('production') && content.includes('"debug": true')) {, configIssues.push({,"file": configFile, "type": 'debug-mode',"severity": 'medium', "message": 'Debug mode enabled in production configuration';'
+            })}}})return {"success": true, "issues": configIssue
+} catch (error) {return {"success": false, "error": error.message,"issues": [];
+}}async generateReport(depResults, codeResults, configResults) {const report = {"timestamp": new Date().toISOString(), "summary": {,"dependencies": depResults.success ? 'secure' : 'vulnerable', "code": codeResults.issues.length === 0 ? 'secure' : 'issues-found',"configs": configResults.issues.length === 0 ? 'secure' : 'issues-found', "overall": (depResults.success && codeResults.issues.length === 0 && configResults.issues.length === 0) ? 'secure' : 'issues-found',"details": {, "dependencies": depResults,"code": codeResults, "configs": configResults,"recommendations": [], ,// Generate recommendations;'
+    }
+    if (!depResults.success) {report.recommendations.push({"priority": 'critical', "message": 'Dependency vulnerabilities found',"action": 'Run npm audit fix to resolve vulnerabilities';'
+      })}if (codeResults.issues.length > 0) {const highSeverity = codeResults.issues.filter(issue => { return issue.severity === 'high').length; }'
+      }
+      if (highSeverity > 0) {report.recommendations.push({"priority": 'high',"message": `${highSeverit,`} high-severity security issues found in code`;`          "action": 'Review and fix high-severity security issues';'
+        })}}if (configResults.issues.length > 0) {report.recommendations.push({"priority": 'medium', "message": 'Configuration security issues found',"action": 'Review configuration files for security issues';'
       })}return report;
-}async saveReport(report) {try {const reportDir = path.dirname(this.reportFile)if (!fs.existsSync(reportDir)) {fs.mkdirSync(reportDir, { recursive: true },
-}fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2))this.log(`Report saved to: ${this.reportFile}`)} catch (error) {this.log(`Error saving report: ${error.message}`)}}async run() {this.log('🛡️  Starting Security Scanner...')this.log(`Project root: ${this.projectRoo,}
-}`)try {// Create logs directory if it doesn't exist;}
+}async saveReport(report) {try {const reportDir = path.dirname(this.reportFile)if (!fs.existsSync(reportDir)) {fs.mkdirSync(reportDir, { "recursive": true }
+}fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2))this.log(`Report saved "to": ${this.reportFile}`)} catch (error) {this.log(`Error saving "report": ${error.message}`)}}async run() {this.log('🛡️  Starting Security Scanner...')this.log(`Project "root": ${this.projectRoo,`}`)try {// Create logs directory if it doesn't exist;'
+
 }
-const logsDir = path.dirname(this.logFile)if (!fs.existsSync(logsDir)) {fs.mkdirSync(logsDir, { recursive: true },
+
 }// Run all security scans;
 
-const depResults = await this.scanDependencies()const codeResults = await this.scanCode(;
-  const configResults  = await this.scanConfigs()// Generate report;
-      this.log('📊 Generating security report...')const report  = await this.generateReport(depResults, codeResults, configResults)// Save report;
+const depResults = await this.scanDependencies()const configResults  = await this.scanConfigs()// Generate report;
+      this.log('📊 Generating security report...')const report  = await this.generateReport(depResults, codeResults, configResults)// Save report;'
       await this.saveReport(report)const duration  = Date.now() - this.startTime;// Log summary;
-      this.log('\n📊 Security Scanner Summary: '),this.log(`Dependencies: ${report.summary.dependencies}`)this.log(`Code: ${report.summary.code}`)this.log(`Configs: ${report.summary.configs}`)this.log(`Overall: ${report.summary.overall}`)this.log(`Duration: ${duratio,}
-}ms`)if (report.recommendations.length > 0) {this.log('\n💡 Recommendations: '), report.recommendations.forEach(rec => {,this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`)this.log(`    Action: ${rec.action}`)})} else {this.log('\n✨ No security issues found!')}} catch (error) {this.log(`❌ Error running security scanner: ${error.message}`)process.exit(1)},
-}// Run the security scanner;
+      this.log('\n📊 Security Scanner "Summary": '),this.log(`"Dependencies": ${report.summary.dependencies}`)this.log(`"Code": ${report.summary.code}`)this.log(`"Configs": ${report.summary.configs}`)this.log(`"Overall": ${report.summary.overall}`)this.log(`"Duration": ${duratio,`}ms`)if (report.recommendations.length > 0) {this.log('\n💡 "Recommendations": '), report.recommendations.forEach((rec) => {,this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`)this.log(`    "Action": ${rec.action}`)})} else {this.log('\n✨ No security issues found!')}} catch (error) {this.log(`❌ Error running security "scanner": ${error.message}`)process.exit(1)},`}// Run the security scanner;
 
-const scanner = new SecurityScanner()scanner.run().catch(error => {process.exit(1)#!/usr/bin/env node,const fs = require('fs'),const path = require('path'),const { execSync } = require('child_process'),,class SecurityScanner {,constructor() {,this.projectRoot = process.cwd(),this.logFile = path.join(this.projectRoot, 'logs/pm2/security-scanner.log'),this.reportFile = path.join(this.projectRoot, 'logs/pm2/security-report.json'),this.startTime = Date.now()this.startTime = Date.now()},log(message) {,const timestamp = new Date().toISOString(),const logMessage = `[${timestamp}] ${message}\n`,,try {,fs.appendFileSync(this.logFile, logMessage)} catch (error) {,console.error('Error writing to log file:', error.message)fs.appendFileSync(this.logFile, logMessage)} catch (error) {,console.error('Error writing to log file:', error.message)}},async scanDependencies() {,try {,this.log('🔒 Scanning dependencies for vulnerabilities...'),;
-  const auditResult = execSync('npm audit --json', {,cwd: this.projectRoot,stdio: 'pipe',
-  encoding: 'utf8';}
-        encoding: 'utf8';}
+const scanner = new SecurityScanner()scanner.run().catch((error) => {process.exit(1)#!/usr/bin/env node,const fs = require('fs'),const path = require('path'),const { execSync } = require('child_process'),,class SecurityScanner {,constructor() {,this.projectRoot = process.cwd(),this.logFile = path.join(this.projectRoot, 'logs/pm2/security-scanner.log'),this.reportFile = path.join(this.projectRoot, 'logs/pm2/security-report.json'),this.startTime = Date.now()this.startTime = Date.now()},log(message) {,const timestamp = new Date().toISOString(),const logMessage = `[${timestamp}] ${message}\n`,,try {,fs.appendFileSync(this.logFile, logMessage)} catch (error) {,console.error('Error writing to log "file":', error.message)fs.appendFileSync(this.logFile, logMessage)} catch (error) {,console.error('Error writing to log "file":', error.message)}},async scanDependencies() {,try {,this.log('🔒 Scanning dependencies for vulnerabilities...'),;'  }
+  const auditResult = execSync('npm audit --json', {,"cwd": this.projectRoot,"stdio": 'pipe',"encoding": 'utf8';'
+        }
+        "encoding": 'utf8';'
       }),,const audit = JSON.parse(auditResult);
-  return {,success: true,vulnerabilities: audit.vulnerabilities || ,}
-},summary: audit.metadata || {},
+return {,"success": true,"vulnerabilities": audit.vulnerabilities || ,;
+},"summary": audit.metadata || {}
 } catch (error) {,// npm audit might fail if there are vulnerabilities,try {;
-  const output = error.stdout?.toString() || error.stderr?.toString() || '',if (output.includes('npm ERR!')) {;
-  return {,success: false,error: 'Vulnerabilities found',}
-  output: output;}
-          }}} catch (parseError) {,this.log(`Error parsing npm audit output: ${parseError.messag,}
-}`)output: output;
-          }}} catch (parseError) {,this.log(`Error parsing npm audit output: ${parseError.message}`,
-},return {,success: false,error: error.message,output: error.stdout || error.stderr || '';}
-        output: error.stdout || error.stderr || '';}
-      }}},async scanCode() {,try {,this.log('🔍 Scanning code for security issues...'),,// Check for common security issues in code,const securityIssues = [],const files = this.getSourceFiles(),,files.forEach(file => {,const content = fs.readFileSync(file, 'utf8'),const lines = content.split('\n'),,lines.forEach((line, index) => {;
-  const lineNum = index + 1,,// Check for hardcoded secrets,if (line.match(/password\s*=\s*[\"'][^\"']+[\"']/i)) {,securityIssues.push({,file: file,line: lineNum,type: 'hardcoded-password',}
-  severity: 'high',message: 'Hardcoded password detected';}
-            })message: 'Hardcoded password detected';
+  }
+  }
+  return {,"success": false,"error": 'Vulnerabilities found',"output": output;'
+          }}} catch (parseError) {,this.log(`Error parsing npm audit "output": ${parseError.messag,`}`)"output": output;`          }}} catch (parseError) {,this.log(`Error parsing npm audit "output": ${parseError.message}`,`},return {,"success": false,"error": error.message,"output": error.stdout || error.stderr || '';'
+        }
+        "output": error.stdout || error.stderr || '';'
+      }}},async scanCode() {,try {,this.log('🔍 Scanning code for security issues...'),,// Check for common security issues in code,const securityIssues = [],const files = this.getSourceFiles(),,files.forEach((file) => {,const content = fs.readFileSync(file, 'utf8'),const lines = content.split('\n'),,lines.forEach((line, index) => {;'
+  }
+  const lineNum = index + 1,,// Check for hardcoded secrets,if (line.match(/password\s*=\s*["'][^"']+["']/i)) {,securityIssues.push({,"file": file,"line": lineNum,"type": 'hardcoded-password',"severity": 'high',"message": 'Hardcoded password detected';'
+            })"message": 'Hardcoded password detected';'
             })}}},scanDirectory(this.projectRoot),return files;
     return files;
-  },async scanConfigs() {,try {,this.log('⚙️  Scanning configuration files...'),,const configIssues = [];
-  const configFiles = [,'package.jsonnext.config.js','tsconfig.json.env','.env.local.env.production';
-        '.env.local.env.production';
+  },async scanConfigs() {,try {,this.log('⚙️  Scanning configuration files...'),,const configIssues = [];'
+  }
+  const configFiles = [,'package.jsonnext.config.js','tsconfig.json.env','.env.local.env.production';'
+        '.env.local.env.production';'
       ],,configFiles.forEach(configFile = > {,const filePath = path.join(this.projectRoot, configFile),if (fs.existsSync(filePath)) {;
-  const content = fs.readFileSync(filePath, 'utf8'),,// Check for exposed secrets in config files,if (content.match(/password\s*=\s*[\"'][^\"']+[\"']/i)) {,configIssues.push({,file: configFile,type: 'exposed-secret',}
-  severity: 'high',message: 'Potential secret exposed in configuration file';}
-            })message: 'Potential secret exposed in configuration file';
-            })},// Check for debug mode in production configs,if (configFile.includes('production') && content.includes('debug: true')) {,configIssues.push({,file: configFile,type: 'debug-mode',}
-  severity: 'medium',message: 'Debug mode enabled in production configuration';}
-            })message: 'Debug mode enabled in production configuration';
-            })}}}),,return {,success: true,issues: configIssues;}
-        issues: configIssues;}
-      }} catch (error) {,return {,success: false,error: error.message,issues: [];}
-        issues: [];}
-      }}},async generateReport(depResults, codeResults, configResults) {,const report = {,timestamp: new Date().toISOString(),summary: {,dependencies: depResults.success ? 'secure' : 'vulnerable',code: codeResults.issues.length === 0 ? 'secure' : 'issues-found',configs: configResults.issues.length === 0 ? 'secure' : 'issues-found',overall: (depResults.success && codeResults.issues.length === 0 && configResults.issues.length === 0) ? 'secure' : 'issues-found';}
-        overall: (depResults.success && codeResults.issues.length === 0 && configResults.issues.length === 0) ? 'secure' : 'issues-found';}
-      },details: {,dependencies: depResults,code: codeResults,configs: configResults;}
-      },recommendations: [];
-        configs: configResults;
-      },recommendations: [];
-    },// Generate recommendations,if (!depResults.success) {,report.recommendations.push({,priority: 'critical',}
-  message: 'Dependency vulnerabilities found',action: 'Run npm audit fix to resolve vulnerabilities';}
-      })action: 'Run npm audit fix to resolve vulnerabilities';
-      })},if (codeResults.issues.length > 0) {,const highSeverity = codeResults.issues.filter(issue => issue.severity === 'high').length,if (highSeverity > 0) {,report.recommendations.push({,priority: 'high',}
-  message: `${highSeverit,}
-} high-severity security issues found in code`,action: 'Review and fix high-severity security issues';
-        })action: 'Review and fix high-severity security issues';
-        })}},if (configResults.issues.length > 0) {,report.recommendations.push({,priority: 'medium',}
-  message: 'Configuration security issues found',action: 'Review configuration files for security issues';}
+  }
+  const content = fs.readFileSync(filePath, 'utf8'),,// Check for exposed secrets in config files,if (content.match(/password\s*=\s*["'][^"']+["']/i)) {,configIssues.push({,"file": configFile,"type": 'exposed-secret',"severity": 'high',"message": 'Potential secret exposed in configuration file';'
+            })"message": 'Potential secret exposed in configuration file';'
+            })},// Check for debug mode in production configs,if (configFile.includes('production') && content.includes('"debug": true')) {,configIssues.push({,"file": configFile,"type": 'debug-mode',"severity": 'medium',"message": 'Debug mode enabled in production configuration';'
+            })"message": 'Debug mode enabled in production configuration';'
+            })}}}),,return {,"success": true,"issues": configIssues;
+        }
+        "issues": configIssues;
+      }} catch (error) {,return {,"success": false,"error": error.message,"issues": [];
+        }
+        "issues": [];
+      }}},async generateReport(depResults, codeResults, configResults) {,const report = {,"timestamp": new Date().toISOString(),"summary": {,"dependencies": depResults.success ? 'secure' : 'vulnerable',"code": codeResults.issues.length === 0 ? 'secure' : 'issues-found',"configs": configResults.issues.length === 0 ? 'secure' : 'issues-found',"overall": (depResults.success && codeResults.issues.length === 0 && configResults.issues.length === 0) ? 'secure' : 'issues-found';'
+        }
+        "overall": (depResults.success && codeResults.issues.length === 0 && configResults.issues.length === 0) ? 'secure' : 'issues-found';'
+      },"details": {,"dependencies": depResults,"code": codeResults,"configs": configResults;
+      },"recommendations": [];
+        "configs": configResults;
+      },"recommendations": [];
+    },// Generate recommendations,if (!depResults.success) {,report.recommendations.push({,"priority": 'critical',"message": 'Dependency vulnerabilities found',"action": 'Run npm audit fix to resolve vulnerabilities';'
+      })"action": 'Run npm audit fix to resolve vulnerabilities';'
+      })},if (codeResults.issues.length > 0) {,const highSeverity = codeResults.issues.filter(issue => issue.severity === 'high').length,if (highSeverity > 0) {,report.recommendations.push({,"priority": 'high',"message": `${highSeverit,`} high-severity security issues found in code`,"action": 'Review and fix high-severity security issues';'
+        })"action": 'Review and fix high-severity security issues';'
+        })}},if (configResults.issues.length > 0) {,report.recommendations.push({,"priority": 'medium',"message": 'Configuration security issues found',"action": 'Review configuration files for security issues';'
       })},return report;
-        action: 'Review configuration files for security issues';
+        "action": 'Review configuration files for security issues';'
       })},return report;
-  },async saveReport(report) {,try {,const reportDir = path.dirname(this.reportFile),if (!fs.existsSync(reportDir)) {,fs.mkdirSync(reportDir, { recursive: true },
-},fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2)),this.log(`Report saved to: ${this.reportFile}`,
-} catch (error) {,this.log(`Error saving report: ${error.messag,}
-}`)fs.mkdirSync(reportDir, { recursive: true },
-},fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2)),this.log(`Report saved to: ${this.reportFile}`,
-} catch (error) {,this.log(`Error saving report: ${error.message}`),
-},async run() {,this.log('🛡️  Starting Security Scanner...'),this.log(`Project root: ${this.projectRoo,}
-}`),,try {,// Create logs directory if it doesn't exist,const logsDir = path.dirname(this.logFile),if (!fs.existsSync(logsDir)) {,fs.mkdirSync(logsDir, { recursive: true,}
-})fs.mkdirSync(logsDir, { recursive: true },
-},// Run all security scans,const depResults = await this.scanDependencies(),const codeResults = await this.scanCode(),const configResults = await this.scanConfigs(),,// Generate report,this.log('📊 Generating security report...'),const report = await this.generateReport(depResults, codeResults, configResults),,// Save report,await this.saveReport(report),,const duration = Date.now() - this.startTime,,// Log summary,this.log('\n📊 Security Scanner Summary: '),this.log(`Dependencies: ${report.summary.dependencie,}
-}`),this.log(`Code: ${report.summary.cod,}
-}`),this.log(`Configs: ${report.summary.config,}
-}`),this.log(`Overall: ${report.summary.overal,}
-}`),this.log(`Duration: ${duratio,}
-}ms`),,if (report.recommendations.length > 0) {,this.log('\n💡 Recommendations: '),report.recommendations.forEach(rec => {,this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`),this.log(`    Action: ${rec.action}`)},
-} else {,this.log('\n✨ No security issues found!')}} catch (error) {,this.log(`❌ Error running security scanner: ${error.messag,}
-}`),process.exit(1)this.log(`    Action: ${rec.action}`)},
-} else {,this.log('\n✨ No security issues found!')}} catch (error) {,this.log(`❌ Error running security scanner: ${error.messag,}
-}`),process.exit(1)}}},// Run the security scanner,const scanner = new SecurityScanner(),scanner.run().catch(error => {,process.exit(1),const fs = require ('fs')const path = require ('path')const { exec_sync }  = require ('child_process')class SecurityScanner { constructor () { this.project_root = process.cwd ()this.log_file = path.join (this.project_root, 'logs / pm2 / security - scanner.log')this.report_file = path.join (this.project_root, 'logs / pm2 / security - report.json')this.start_time = Date.now ()}log (message) { const timestamp = new Date ().toISOString (;}
-  const log_message  = `[${timestamp}] ${message}\n`;try { fs.appendFileSync (this.log_file, log_message)} catch (error) { console.error ('Error writing to log file: ', error.message)}}async scan_dependencies () { try { this.log ('🔒 Scanning dependencies for vulnerabilities...')const audit_result = exec_sync ('npm audit --json', { cwd: this.project_root, stdio: 'pipe',}
-  encoding: 'utf8,}
-};
-  const audit = JSON.parse (audit_result;
-  return { success: true,vulnerabilities: audit.vulnerabilities || {} summary: audit.metadata || {},
-} catch (error) { // npm audit might fail if there are vulnerabilities; try { const output = error.stdout?.to_string () || error.stderr?.to_string () || ''; if () {) {$2;}
-} return { success: false, error: 'Vulnerabilities found',}
-  output: output}}} catch (parse_error) { this.log (`Error parsing npm audit output: ${parse_error.message}`,
-}return { success: false, error: error.message, output: error.stdout || error.stderr || ''},
-}async scan_code () { try { this.log ('🔍 Scanning code for security issues...')// Check for common security issues in code;
+  },async saveReport(report) {,try {,const reportDir = path.dirname(this.reportFile),if (!fs.existsSync(reportDir)) {,fs.mkdirSync(reportDir, { "recursive": true }
+},fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2)),this.log(`Report saved "to": ${this.reportFile}`,`} catch (error) {,this.log(`Error saving "report": ${error.messag,`}`)fs.mkdirSync(reportDir, { "recursive": true },`},fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2)),this.log(`Report saved "to": ${this.reportFile}`,`} catch (error) {,this.log(`Error saving "report": ${error.message}`),`},async run() {,this.log('🛡️  Starting Security Scanner...'),this.log(`Project "root": ${this.projectRoo,`}`),,try {,// Create logs directory if it doesn't exist,const logsDir = path.dirname(this.logFile),if (!fs.existsSync(logsDir)) {,fs.mkdirSync(logsDir, { "recursive": true,'
+})fs.mkdirSync(logsDir, { "recursive": true }
+},// Run all security scans,const depResults = await this.scanDependencies(),const codeResults = await this.scanCode(),const configResults = await this.scanConfigs(),,// Generate report,this.log('📊 Generating security report...'),const report = await this.generateReport(depResults, codeResults, configResults),,// Save report,await this.saveReport(report),,const duration = Date.now() - this.startTime,,// Log summary,this.log('\n📊 Security Scanner "Summary": '),this.log(`"Dependencies": ${report.summary.dependencie,`}`),this.log(`"Code": ${report.summary.cod,`}`),this.log(`"Configs": ${report.summary.config,`}`),this.log(`"Overall": ${report.summary.overal,`}`),this.log(`"Duration": ${duratio,`}ms`),,if (report.recommendations.length > 0) {,this.log('\n💡 "Recommendations": '),report.recommendations.forEach((rec) => {,this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`),this.log(`    "Action": ${rec.action}`)},`} else {,this.log('\n✨ No security issues found!')}} catch (error) {,this.log(`❌ Error running security "scanner": ${error.messag,`}`),process.exit(1)this.log(`    "Action": ${rec.action}`)},`} else {,this.log('\n✨ No security issues found!')}} catch (error) {,this.log(`❌ Error running security "scanner": ${error.messag,`}`),process.exit(1)}}},// Run the security scanner,const scanner = new SecurityScanner(),scanner.run().catch((error) => {,process.exit(1),const fs = require ('fs')const path = require ('path')const { exec_sync }  = require ('child_process')class SecurityScanner { constructor () { this.project_root = process.cwd ()this.log_file = path.join (this.project_root, 'logs / pm2 / security - scanner.log')this.report_file = path.join (this.project_root, 'logs / pm2 / security - report.json')this.start_time = Date.now ()}log (message) { const timestamp = new Date ().toISOString (;'
+  }
+  const log_message  = `[${timestamp}] ${message}\n`;try { fs.appendFileSync (this.log_file, log_message)} catch (error) { console.error ('Error writing to log "file": ', error.message)}}async scan_dependencies () { try { this.log ('🔒 Scanning dependencies for vulnerabilities...')const audit = JSON.parse (audit_result;
+return { "success": true,"vulnerabilities": audit.vulnerabilities || {} "summary": audit.metadata || {},;
+} catch (error) { // npm audit might fail if there are vulnerabilities; try { const output = error.stdout?.to_string () || error.stderr?.to_string () || ''; if () {) {$2;'
+} return { "success": false, "error": 'Vulnerabilities found', "output": output}}} catch (parse_error) { this.log (`Error parsing npm audit "output": ${parse_error.message}`,`}return { "success": false, "error": error.message, "output": error.stdout || error.stderr || ''},'
+}async scan_code () { try { this.log ('🔍 Scanning code for security issues...')// Check for common security issues in code;'
+
+}
 
 const security_issues = [];
 
-const files = this.getSourceFiles ()files.for_each (file = > { const content = fs.readFileSync (file, 'utf8')const lines  = content.split ('\n')lines.for_each ((line, index) = > {;}
-  const line_num  = index + 1;// Check for hardcoded secrets; if () {) {$2;}
-} security_issues.push ({ file: file, line: line_num, type: 'hardcoded - password',}
-  severity: 'high', message: 'Hardcoded password detected'})}}}scan_directory (this.project_root)return file,
-}async scan_configs () { try { this.log ('⚙️ Scanning configuration files...')const config_issues = [];
+const files = this.getSourceFiles ()files.for_each (file = > { const content = fs.readFileSync (file, 'utf8')const lines  = content.split ('\n')lines.for_each ((line, index) = > {;'
+  }
+  const line_num  = index + 1;// Check for hardcoded secrets; if () {) {$2;
+} security_issues.push ({ "file": file, "line": line_num, "type": 'hardcoded - password', "severity": 'high', "message": 'Hardcoded password detected'})}}}scan_directory (this.project_root)return file,'
+}async scan_configs () { try { this.log ('⚙️ Scanning configuration files...')const config_issues = [];'
 
-const config_files = [
-  'package.json'; 'next.config.js'; 'tsconfig.json'; '.env'; '.env.local','.env.production'
-];
-config_files.for_each (config_file = > {;}
-  const file_path = path.join (this.project_root, config_file)if () {) {$2;}
 }
 
-const content  = fs.readFileSync (file_path, 'utf8')// Check for exposed secrets in config files; if () {) {$2;}
-} config_issues.push ({ file: config_file, type: 'exposed - secret',}
-  severity: 'high',message: 'Potential secret exposed in configuration file'},
-}// Check for debug mode in production configs; if (&& content.includes ('debug: true')) {, config_issues.push ({, file: config_file, type: 'debug - mode',
-  severity: 'medium', ) {$2;
-        '.env.local',
-    '.env.production'
+const config_files = [;
+  'package.json'; 'next.config.js'; 'tsconfig.json'; '.env'; '.env.local','.env.production''
+];
+config_files.for_each (config_file = > {;
+  }
+  const file_path = path.join (this.project_root, config_file)if () {) {$2;
+}
+
+const content  = fs.readFileSync (file_path, 'utf8')// Check for exposed secrets in config files; if () {) {$2;'
+} config_issues.push ({ "file": config_file, "type": 'exposed - secret', "severity": 'high',"message": 'Potential secret exposed in configuration file'},'
+}// Check for debug mode in production configs; if (&& content.includes ('"debug": true')) {, config_issues.push ({, "file": config_file, "type": 'debug - mode', "severity": 'medium', ) {$2;'
+        '.env.local','
+    '.env.production''
   ];
 ;
-      configFiles.forEach(configFile => {;
+      }
+      configFiles.forEach((configFile) => {;
+
+}
 
 const filePath = path.join(this.projectRoot, configFile);
         if (fs.existsSync(filePath)) {;
 
-const content = fs.readFileSync(filePath, 'utf8');
+}
+
 ;
           // Check for exposed secrets in config files;
-          if (content.match(/password\s*=\s*[\"'][^\"']+[\"']/i)) {;
+          if (content.match(/password\s*=\s*["'][^"']+["']/i)) {;'
+            }
             configIssues.push({;
-              file: configFile, type: 'exposed-secret',}
-  severity: 'high', message: 'Potential secret exposed in configuration file'}
-            }),
+              }
+              "file": configFile, "type": 'exposed-secret','
+              "severity": 'high', "message": 'Potential secret exposed in configuration file''
+            })
 };
 
 ;
           // Check for debug mode in production configs;
-          if (configFile.includes('production') && content.includes('debug: true')) {, configIssues.push({,
-              file: configFile, type: 'debug-mode',}
-  severity: 'medium', message: 'Debug mode enabled in production configuration'}
-            }),
+          if (configFile.includes('production') && content.includes('"debug": true')) {, configIssues.push({,'
+              }
+              "file": configFile, "type": 'debug-mode','
+              "severity": 'medium', "message": 'Debug mode enabled in production configuration''
+            })
 };
 
         };
       });
 ;
       return {;
-        success: true, issues: configIssues,}
-      ;}
+        }
+        "success": true, "issues": configIssues,
+      ;
     } catch (error) {;
+      }
       return {;
-        success: false, error: error.message,}
-        issues: [], }
+        }
+        "success": false, "error": error.message,
+        "issues": [] 
 }
 };
-
+};
 ;
   async generateReport(depResults, codeResults, configResults) {;
 
-const report = {
-  timestamp: new Date().toISOString(), summary: {,
-        dependencies: depResults.success ? 'secure' : 'vulnerable', code: codeResults.issues.length === 0 ? 'secure' : 'issues-found',
-        configs: configResults.issues.length === 0 ? 'secure' : 'issues-found', overall: (depResults.success && codeResults.issues.length === 0 && configResults.issues.length === 0) ? 'secure' : 'issues-found',
+}
+
+  }
+  "timestamp": new Date().toISOString(), "summary": {
+        }
+        "dependencies": depResults.success ? 'secure' : 'vulnerable', "code": codeResults.issues.length === 0 ? 'secure' : 'issues-found','
+        "configs": configResults.issues.length === 0 ? 'secure' : 'issues-found', "overall": (depResults.success && codeResults.issues.length === 0 && configResults.issues.length === 0) ? 'secure' : 'issues-found','
       ;
-      details: {, dependencies: depResults,
-        code: codeResults, configs: configResults,
+      "details": {, "dependencies": depResults
+        }
+        "code": codeResults, "configs": configResults,
       ;
-      recommendations: [], ,
+      "recommendations": [], ,
 ;
     // Generate recommendations;
     if (!depResults.success) {;
+      }
       report.recommendations.push({;
-        priority: 'critical',
-  message: 'Dependency vulnerabilities found',}
-        action: 'Run npm audit fix to resolve vulnerabilities'}
-      }),
+        }
+        "priority": 'critical', "message": 'Dependency vulnerabilities found','
+        "action": 'Run npm audit fix to resolve vulnerabilities''
+      })
 };
-
 ;
     if (codeResults.issues.length > 0) {;
 
-const highSeverity = codeResults.issues.filter(issue => issue.severity === 'high').length;
+}
+
+const highSeverity = codeResults.issues.filter(issue => { return issue.severity === 'high').length; }'
       if (highSeverity > 0) {;
+        }
         report.recommendations.push({;
-          priority: 'high',}
-  message: `${highSeverit,}
-} high-severity security issues found in code`;
-          action: 'Review and fix high-severity security issues'
-        }),
+          }
+          "priority": 'high','
+          "message": `${highSeverit,`} high-severity security issues found in code`;`          "action": 'Review and fix high-severity security issues''
+        })
 };
 
 };
 ;
     if (configResults.issues.length > 0) {;
+      }
       report.recommendations.push({;
-        priority: 'medium',
-  message: 'Configuration security issues found',}
-        action: 'Review configuration files for security issues'}
-      }),
+        }
+        "priority": 'medium', "message": 'Configuration security issues found','
+        "action": 'Review configuration files for security issues''
+      })
 };
-
 ;
-    return report;
+return report;
 };
-
 ;
   async saveReport(report) {;
+    }
     try {;
 
-const reportDir = path.dirname(this.reportFile);}
-      if (!fs.existsSync(reportDir)) {;}
-        fs.mkdirSync(reportDir, { recursive: true }),
+}
+
+const reportDir = path.dirname(this.reportFile);
+      if (!fs.existsSync(reportDir)) {;
+        }
+        fs.mkdirSync(reportDir, { "recursive": true })
 };
 
 ;
       fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
-      this.log(`Report saved to: ${this.reportFil,}
-}`);
-    } catch (error) {;}
-      this.log(`Error saving report: ${error.message}`),
-};
+      this.log(`Report saved "to": ${this.reportFil,`}`);`    } catch (error) {;
+      }
+      this.log(`Error saving "report": ${error.message}`),`};
 
 };
 ;
   async run() {;
-    this.log('🛡️  Starting Security Scanner...');}
-    this.log(`Project root: ${this.projectRoo,}
-}`);
-;
+    }
+    this.log('🛡️  Starting Security Scanner...');'
+    this.log(`Project "root": ${this.projectRoo,`}`);`;
     try {;
-      // Create logs directory if it doesn't exist;
+      // Create logs directory if it doesn't exist;'
 
-const logsDir = path.dirname(this.logFile);}
-      if (!fs.existsSync(logsDir)) {;}
-        fs.mkdirSync(logsDir, { recursive: true }),
+}
+
+const logsDir = path.dirname(this.logFile);
+      if (!fs.existsSync(logsDir)) {;
+        }
+        fs.mkdirSync(logsDir, { "recursive": true })
 };
 
 ;
       // Run all security scans;
 
-const depResults = await this.scanDependencies();
 
-const codeResults = await this.scanCode();
-
-const configResults = await this.scanConfigs();
 ;
       // Generate report;
-      this.log('📊 Generating security report...');
+      this.log('📊 Generating security report...');'
 
-const report = await this.generateReport(depResults, codeResults, configResults);
 ;
       // Save report;
       await this.saveReport(report);
 ;
-
-const duration = Date.now() - this.startTime;
 ;
       // Log summary;
-      this.log('\n📊 Security Scanner Summary: '),
-      this.log(`Dependencies: ${report.summary.dependencie,}
-}`);
-      this.log(`Code: ${report.summary.cod,}
-}`);
-      this.log(`Configs: ${report.summary.config,}
-}`);
-      this.log(`Overall: ${report.summary.overal,}
-}`);
-      this.log(`Duration: ${duratio,}
-}ms`);
-;
-      if (report.recommendations.length > 0) {;}
-        this.log('\n💡 Recommendations: '), report.recommendations.forEach(rec => {,}
-          this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`);
-          this.log(`    Action: ${rec.actio,}
-}`);
-        });
-      } else {;}
-        this.log('\n✨ No security issues found!')}
+      this.log('\n📊 Security Scanner "Summary": '),'
+      this.log(`"Dependencies": ${report.summary.dependencie,`}`);`      this.log(`"Code": ${report.summary.cod,`}`);`      this.log(`"Configs": ${report.summary.config,`}`);`      this.log(`"Overall": ${report.summary.overal,`}`);`      this.log(`"Duration": ${duratio,`}ms`);`;
+      if (report.recommendations.length > 0) {;
+        }
+        this.log('\n💡 "Recommendations": '), report.recommendations.forEach((rec) => {,'
+          }
+          this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`);`          this.log(`    "Action": ${rec.actio,`}`);`        });
+      } else {;
+        }
+        this.log('\n✨ No security issues found!')'
 };
 
 ;
-    } catch (error) {;}
-      this.log(`❌ Error running security scanner: ${error.messag,}
-}`);
-      process.exit(1)
+    } catch (error) {;
+      }
+      this.log(`❌ Error running security "scanner": ${error.messag,`}`);`      process.exit(1)
 };
-
-}
 };
-
 ;
 // Run the security scanner;
-
-const scanner = new SecurityScanner();
-scanner.run().catch(error => {;
+scanner.run().catch((error) => {;
+  }
   process.exit(1);
 
 
 
 #!/usr/bin/env node,
-const fs = require('fs'),}
-const path = require('path'),;}
-  const { execSync } = require('child_process'),
+const fs = require('fs'),;'
 ,
-class SecurityScanner {,
-  constructor() {,
+class SecurityScanner {
+}
+constructor() {,;
+    }
     this.projectRoot = process.cwd(),
-    this.logFile = path.join(this.projectRoot, 'logs/pm2/security-scanner.log'),
-    this.reportFile = path.join(this.projectRoot, 'logs/pm2/security-report.json'),}
-    this.startTime = Date.now()}
+    this.logFile = path.join(this.projectRoot, 'logs/pm2/security-scanner.log'),'
+    this.reportFile = path.join(this.projectRoot, 'logs/pm2/security-report.json'),'
+    this.startTime = Date.now()
   };
 ,
-  log(message) {,
-    const timestamp = new Date().toISOString(),}
-   ;}
-  const logMessage = `[${timestamp}] ${message}\n`,
-,
-    try {,}
-      fs.appendFileSync(this.logFile, logMessage)}
-    } catch (error) {,}
-      console.error('Error writing to log file:', error.message)}
+  log(message) {
+}
+   ;
+const logMessage = `[${timestamp}] ${message}\n`,;`,
+    try {
+      }
+      fs.appendFileSync(this.logFile, logMessage)
+    } catch (error) {
+      }
+      console.error('Error writing to log "file":', error.message)'
     }
 };
 
 ,
-  async scanDependencies() {,
-    try {,
-      this.log('🔒 Scanning dependencies for vulnerabilities...'),
+  async scanDependencies() {
+    }
+    try {
+      }
+      this.log('🔒 Scanning dependencies for vulnerabilities...'),'
 ,
-      const auditResult = execSync('npm audit --json', {,
-        cwd: this.projectRoot,
-        stdio: 'pipe',
-  encoding: 'utf8'}
-     ,}
+        }
+        "cwd": this.projectRoot,
+        "stdio": 'pipe','
+        "encoding": 'utf8''
+     
 }),
 ,
      ;
-  const audit = JSON.parse(auditResult),
      ;
-  return {,
-        success: true,}
-        vulnerabilities: audit.vulnerabilities || ,}
+return {,;
+        }
+        "success": true,
+        "vulnerabilities": audit.vulnerabilities || 
 },
-        summary: audit.metadata || {},
+        "summary": audit.metadata || {}
 };
 
     } catch (error) {,
-      // npm audit might fail if there are vulnerabilities,
-      try {,
-        const output = error.stdout?.toString() || error.stderr?.toString() || '',
-        if (output.includes('npm ERR!')) {,
+      // npm audit might fail if there are vulnerabilities
+      }
+      try {
+}
+        if (output.includes('npm ERR!')) {,'
          ;
-  return {,
-            success: false,
-            error: 'Vulnerabilities found',}
-  output: output}
-          },
+}
+return {,;
+            }
+            "success": false,
+            "error": 'Vulnerabilities found','
+            "output": output
+          }
 };
 
-      } catch (parseError) {,}
-        this.log(`Error parsing npm audit output: ${parseError.message}`)
-     ,
+      } catch (parseError) {
+        }
+        this.log(`Error parsing npm audit "output": ${parseError.message}`)`     
 };
 ,
-      return {,
-        success: false,
-        error: error.message,}
-        output: error.stdout || error.stderr || ''}
-      },
+return {,;
+        }
+        "success": false,
+        "error": error.message,
+        "output": error.stdout || error.stderr || '''
+      }
 };
 
   };
 ,
-  async scanCode() {,
-    try {,
-      this.log('🔍 Scanning code for security issues...'),
+  async scanCode() {
+    }
+    try {
+      }
+      this.log('🔍 Scanning code for security issues...'),'
 ,
       // Check for common security issues in code,
-      const securityIssues = [],
-      const files = this.getSourceFiles(),
 ,
-      files.forEach(file => {,
-        const content = fs.readFileSync(file, 'utf8'),
-        const lines = content.split('\n'),
+      files.forEach((file) => {
+}
 ,
         lines.forEach((line, index) => {,
          ;
-  const lineNum = index + 1,
+}
 ,
           // Check for hardcoded secrets,
-          if (line.match(/password\s*=\s*[\"'][^\"']+[\"']/i)) {,
-            securityIssues.push({,
-              file: file,
-              line: lineNum,
-              type: 'hardcoded-password',
-  severity: 'high',}
-              message: 'Hardcoded password detected'}
+          if (line.match(/password\s*=\s*["'][^"']+["']/i)) {,'
+            }
+            securityIssues.push({
+              }
+              "file": file,
+              "line": lineNum,
+              "type": 'hardcoded-password','
+              "severity": 'high','
+              "message": 'Hardcoded password detected''
             })
-          },
+          }
 };
 
     };
 ,
     scanDirectory(this.projectRoot),
-    return files;
+return files;
   };
 ,
-  async scanConfigs() {,
-    try {,
-      this.log('⚙️  Scanning configuration files...'),
+  async scanConfigs() {
+    }
+    try {
+      }
+      this.log('⚙️  Scanning configuration files...'),'
 ,
-      const configIssues = [],
-      const configFiles = [,
-        'package.jsonnext.config.js',
-        'tsconfig.json.env',
-        '.env.local.env.production'
+        'package.jsonnext.config.js','
+        'tsconfig.json.env','
+        '.env.local.env.production''
       ],
 ,
-      configFiles.forEach(configFile => {,
-        const filePath = path.join(this.projectRoot, configFile),
+      configFiles.forEach((configFile) => {
+}
         if (fs.existsSync(filePath)) {,
          ;
-  const content = fs.readFileSync(filePath, 'utf8'),
+}
 ,
           // Check for exposed secrets in config files,
-          if (content.match(/password\s*=\s*[\"'][^\"']+[\"']/i)) {,
-            configIssues.push({,
-              file: configFile,
-              type: 'exposed-secret',
-  severity: 'high',}
-              message: 'Potential secret exposed in configuration file'}
+          if (content.match(/password\s*=\s*["'][^"']+["']/i)) {,'
+            }
+            configIssues.push({
+              }
+              "file": configFile,
+              "type": 'exposed-secret','
+              "severity": 'high','
+              "message": 'Potential secret exposed in configuration file''
             })
-         ,
+         
 };
 ,
           // Check for debug mode in production configs,
-          if (configFile.includes('production') && content.includes('debug: true')) {,
-            configIssues.push({,
-              file: configFile,
-              type: 'debug-mode',
-  severity: 'medium',}
-              message: 'Debug mode enabled in production configuration'}
+          if (configFile.includes('production') && content.includes('"debug": true')) {,'
+            }
+            configIssues.push({
+              }
+              "file": configFile,
+              "type": 'debug-mode','
+              "severity": 'medium','
+              "message": 'Debug mode enabled in production configuration''
             })
-          },
+          }
 };
 
       }),
 ,
-      return {,
-        success: true,
-        issues: configIssues}
-     ,}
+return {,;
+        }
+        "success": true,
+        "issues": configIssues
+     
 };
-    } catch (error) {,
-      return {,
-        success: false,
-        error: error.message,}
-        issues: []}
-      },
+    } catch (error) {
+}
+return {,;
+        }
+        "success": false,
+        "error": error.message,
+        "issues": []
+      }
 };
 
   };
 ,
-  async generateReport(depResults, codeResults, configResults) {,
-    const report = {,
-      timestamp: new Date().toISOString(),
-      summary: {,
-        dependencies: depResults.success ? 'secure' : 'vulnerable',
-        code: codeResults.issues.length === 0 ? 'secure' : 'issues-found',
-        configs: configResults.issues.length === 0 ? 'secure' : 'issues-found',
-        overall: (depResults.success && codeResults.issues.length === 0 && configResults.issues.length === 0) ? 'secure' : 'issues-found'}
-     ,}
+  async generateReport(depResults, codeResults, configResults) {
+}
+      }
+      "timestamp": new Date().toISOString(),
+      "summary": {
+        }
+        "dependencies": depResults.success ? 'secure' : 'vulnerable','
+        "code": codeResults.issues.length === 0 ? 'secure' : 'issues-found','
+        "configs": configResults.issues.length === 0 ? 'secure' : 'issues-found','
+        "overall": (depResults.success && codeResults.issues.length === 0 && configResults.issues.length === 0) ? 'secure' : 'issues-found''
+     
 },
-      details: {,
-        dependencies: depResults,
-        code: codeResults,
-        configs: configResults}
-     ,}
+      "details": {
+        }
+        "dependencies": depResults,
+        "code": codeResults,
+        "configs": configResults
+     
 },
-      recommendations: []
-   ,
+      "recommendations": []
+   
 };
 ,
     // Generate recommendations,
-    if (!depResults.success) {,
-      report.recommendations.push({,
-        priority: 'critical',
-  message: 'Dependency vulnerabilities found',}
-        action: 'Run npm audit fix to resolve vulnerabilities'}
+    if (!depResults.success) {
+      }
+      report.recommendations.push({
+        }
+        "priority": 'critical','
+        "message": 'Dependency vulnerabilities found','
+        "action": 'Run npm audit fix to resolve vulnerabilities''
       })
-   ,
+   
 };
 ,
-    if (codeResults.issues.length > 0) {,
-      const highSeverity = codeResults.issues.filter(issue => issue.severity === 'high').length,
-      if (highSeverity > 0) {,
-        report.recommendations.push({,
-          priority: 'high',}
-  message: `${highSeverit,}
-} high-severity security issues found in code`,
-          action: 'Review and fix high-severity security issues'
+    if (codeResults.issues.length > 0) {
+      }
+      const highSeverity = codeResults.issues.filter(issue => issue.severity === 'high').length,'
+      if (highSeverity > 0) {
+        }
+        report.recommendations.push({
+          }
+          "priority": 'high','
+          "message": `${highSeverit,`} high-severity security issues found in code`,`          "action": 'Review and fix high-severity security issues''
         })
-      },
+      }
 };
 
 ,
-    if (configResults.issues.length > 0) {,
-      report.recommendations.push({,
-        priority: 'medium',
-  message: 'Configuration security issues found',}
-        action: 'Review configuration files for security issues'}
+    if (configResults.issues.length > 0) {
+      }
+      report.recommendations.push({
+        }
+        "priority": 'medium','
+        "message": 'Configuration security issues found','
+        "action": 'Review configuration files for security issues''
       })
-   ,
+   
 };
 ,
-    return report;
+return report;
   };
 ,
-  async saveReport(report) {,
-    try {,
-      const reportDir = path.dirname(this.reportFile),}
-      if (!fs.existsSync(reportDir)) {,}
-        fs.mkdirSync(reportDir, { recursive: true })
-     ,
+  async saveReport(report) {
+    }
+    try {
+}
+      if (!fs.existsSync(reportDir)) {
+        }
+        fs.mkdirSync(reportDir, { "recursive": true })
+     
 };
 ,
       fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2)),
-      this.log(`Report saved to: ${this.reportFile}`)
-   ,
-} catch (error) {,}
-      this.log(`Error saving report: ${error.message}`)
-    },
+      this.log(`Report saved "to": ${this.reportFile}`)`   
+} catch (error) {
+      }
+      this.log(`Error saving "report": ${error.message}`)`    }
 };
 
 ,
-  async run() {,
-    this.log('🛡️  Starting Security Scanner...'),}
-    this.log(`Project root: ${this.projectRoo,}
-}`),
-,
+  async run() {
+    }
+    this.log('🛡️  Starting Security Scanner...'),'
+    this.log(`Project "root": ${this.projectRoo,`}`),`,
     try {,
-      // Create logs directory if it doesn't exist,
-      const logsDir = path.dirname(this.logFile),}
-      if (!fs.existsSync(logsDir)) {,}
-        fs.mkdirSync(logsDir, { recursive: true })
-     ,
+      // Create logs directory if it doesn't exist,'
+}
+      if (!fs.existsSync(logsDir)) {
+        }
+        fs.mkdirSync(logsDir, { "recursive": true })
+     
 };
 ,
       // Run all security scans,
-      const depResults = await this.scanDependencies(),
-      const codeResults = await this.scanCode(),
-      const configResults = await this.scanConfigs(),
 ,
       // Generate report,
-      this.log('📊 Generating security report...'),
-      const report = await this.generateReport(depResults, codeResults, configResults),
+      this.log('📊 Generating security report...'),'
 ,
       // Save report,
-      await this.saveReport(report),
+      await this.saveReport($2);
 ,
      ;
-  const duration = Date.now() - this.startTime,
 ,
       // Log summary,
-      this.log('\n📊 Security Scanner Summary: '),
-      this.log(`Dependencies: ${report.summary.dependencie,}
-}`),
-      this.log(`Code: ${report.summary.cod,}
-}`),
-      this.log(`Configs: ${report.summary.config,}
-}`),
-      this.log(`Overall: ${report.summary.overal,}
-}`),
-      this.log(`Duration: ${duratio,}
-}ms`),
-,
-      if (report.recommendations.length > 0) {,
-        this.log('\n💡 Recommendations: '),}
-        report.recommendations.forEach(rec => {,}
-          this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`),
-          this.log(`    Action: ${rec.action}`)
-        })
-     ,
-} else {,}
-        this.log('\n✨ No security issues found!')}
+      this.log('\n📊 Security Scanner "Summary": '),'
+      this.log(`"Dependencies": ${report.summary.dependencie,`}`),`      this.log(`"Code": ${report.summary.cod,`}`),`      this.log(`"Configs": ${report.summary.config,`}`),`      this.log(`"Overall": ${report.summary.overal,`}`),`      this.log(`"Duration": ${duratio,`}ms`),`,
+      if (report.recommendations.length > 0) {
+        }
+        this.log('\n💡 "Recommendations": '),'
+        report.recommendations.forEach((rec) => {
+          }
+          this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`),`          this.log(`    "Action": ${rec.action}`)`        })
+     
+} else {
+        }
+        this.log('\n✨ No security issues found!')'
       };
 
-    } catch (error) {,}
-      this.log(`❌ Error running security scanner: ${error.messag,}
-}`),
-      process.exit(1)
+    } catch (error) {
+      }
+      this.log(`❌ Error running security "scanner": ${error.messag,`}`),`      process.exit(1)
     }
 };
 
 };
 ,
 // Run the security scanner,
-const scanner = new SecurityScanner(),
-scanner.run().catch(error => {,
+const scanner = new SecurityScanner(),;
+scanner.run().catch((error) => {
+  }
   process.exit(1),
 
 
 ;
-  const fs = require ('fs');
+  const fs = require ('fs');'
 
-const path = require ('path');}
-}
-const { exec_sync } = require ('child_process');
+const path = require ('path');'
+
+const { exec_sync } = require ('child_process');'
 ;
-class SecurityScanner { constructor () { this.project_root = process.cwd (); this.log_file = path.join (this.project_root, 'logs / pm2 / security - scanner.log'); this.report_file = path.join (this.project_root, 'logs / pm2 / security - report.json'); this.start_time = Date.now ()}
-; log (message) { const timestamp = new Date ().toISOString ();}
+class SecurityScanner { constructor () { this.project_root = process.cwd (); this.log_file = path.join (this.project_root, 'logs / pm2 / security - scanner.log'); this.report_file = path.join (this.project_root, 'logs / pm2 / security - report.json'); this.start_time = Date.now ()}'
+; log (message) { const timestamp = new Date ().toISOString ();
+
 }
-const log_message = `[${timestamp}] ${message}\n`;
-; try { fs.appendFileSync (this.log_file, log_message)} catch (error) { console.error ('Error writing to log file: ', error.message)}}
-; async scan_dependencies () { try { this.log ('🔒 Scanning dependencies for vulnerabilities...');
+
+const log_message = `[${timestamp}] ${message}\n`;`; try { fs.appendFileSync (this.log_file, log_message)} catch (error) { console.error ('Error writing to log "file": ', error.message)}}'
+; async scan_dependencies () { try { this.log ('🔒 Scanning dependencies for vulnerabilities...');'
 ;
 
-const audit_result = exec_sync ('npm audit --json', { cwd: this.project_root, stdio: 'pipe',}
-  encoding: 'utf8,}
+}
+
+const audit_result = exec_sync ('npm audit --json', { "cwd": this.project_root, "stdio": 'pipe', "encoding": 'utf8,;'
 });
 ;
 
-const audit = JSON.parse (audit_result); return { success: true,}
-    vulnerabilities: audit.vulnerabilities || {} summary: audit.metadata || {},
-} catch (error) { // npm audit might fail if there are vulnerabilities; try { const output = error.stdout?.to_string () || error.stderr?.to_string () || ''; if () {) {}
-  $2}
-} return { success: false, error: 'Vulnerabilities found',}
-  output: output}}} catch (parse_error) { this.log (`Error parsing npm audit output: ${parse_error.message}`,
+const audit = JSON.parse (audit_result); return { "success": true,;
+    }
+    "vulnerabilities": audit.vulnerabilities || {} "summary": audit.metadata || {}
+} catch (error) { // npm audit might fail if there are vulnerabilities; try { const output = error.stdout?.to_string () || error.stderr?.to_string () || ''; if () {) {'
+  $2
+} return { "success": false, "error": 'Vulnerabilities found', "output": output}}} catch (parse_error) { this.log (`Error parsing npm audit "output": ${parse_error.message}`,`}
+; return { "success": false, "error": error.message, "output": error.stdout || error.stderr || ''},'
 }
-; return { success: false, error: error.message, output: error.stdout || error.stderr || ''},
-}
-; async scan_code () { try { this.log ('🔍 Scanning code for security issues...');
+; async scan_code () { try { this.log ('🔍 Scanning code for security issues...');'
 ; // Check for common security issues in code;
 
-const security_issues = [];
+}
+
 
 const files = this.getSourceFiles ();
 ; files.for_each (file = > {;
-  const content = fs.readFileSync (file, 'utf8');
+  }
+  const content = fs.readFileSync (file, 'utf8');'
 
-const lines = content.split ('\n');
+const lines = content.split ('\n');'
 ; lines.for_each ((line, index) = > { const line_num = index + 1;
-; // Check for hardcoded secrets; if () {) {}
-  $2}
-} security_issues.push ({ file: file, line: line_num, type: 'hardcoded - password',}
-  severity: 'high', message: 'Hardcoded password detected'})},
+; // Check for hardcoded secrets; if () {) {
+  $2
+} security_issues.push ({ "file": file, "line": line_num, "type": 'hardcoded - password', "severity": 'high', "message": 'Hardcoded password detected'})},'
 }
 ; scan_directory (this.project_root); return files}
-; async scan_configs () { try { this.log ('⚙️ Scanning configuration files...');
+; async scan_configs () { try { this.log ('⚙️ Scanning configuration files...');'
 ;
 
-const config_issues = [];
+}
 
-const config_files = [
-  ; 'package.json'; 'next.config.js'; 'tsconfig.json'; '.env'; '.env.local',
-    '.env.production'
+  ; 'package.json'; 'next.config.js'; 'tsconfig.json'; '.env'; '.env.local','
+    '.env.production''
 ];
 
 ; config_files.for_each (config_file = > {;
-  const file_path = path.join (this.project_root, config_file); if () {) {}
-  $2}
+  }
+  const file_path = path.join (this.project_root, config_file); if () {) {
+  $2
 }
 
-const content = fs.readFileSync (file_path, 'utf8');
-; // Check for exposed secrets in config files; if () {) {}
-  $2}
-} config_issues.push ({ file: config_file, type: 'exposed - secret',}
-  severity: 'high',}
-    message: 'Potential secret exposed in configuration file'},
+const content = fs.readFileSync (file_path, 'utf8');'
+; // Check for exposed secrets in config files; if () {) {
+  $2
+} config_issues.push ({ "file": config_file, "type": 'exposed - secret', "severity": 'high','
+    }
+    "message": 'Potential secret exposed in configuration file'},'
 }
-; // Check for debug mode in production configs; if (&& content.includes ('debug: true')) {, config_issues.push ({, file: config_file, type: 'debug - mode',
-  severity: 'medium', ) {}
-  $2}
+; // Check for debug mode in production configs; if (&& content.includes ('"debug": true')) {, config_issues.push ({, "file": config_file, "type": 'debug - mode', "severity": 'medium', ) {'
+  $2
 }
-    message: 'Debug mode enabled in production configuration'})},
-})return { success: true,issues: config_issues,}
-} catch (error) { return { success: false, error: error.message, issues: []},
-}async generate_report (dep_results, code_results, config_results) { const report = { timestamp: new Date ().toISOString (), summary: {, dependencies: dep_results.success ? 'secure': 'vulnerable', code: code_results.issues.length = = = 0 ? 'secure': 'issues - found', configs: config_results.issues.length = = = 0 ? 'secure': 'issues - found',overall: (dep_results.success && code_results.issues.length = = = 0 && config_results.issues.length = = = 0) ? 'secure': 'issues - found';}
-    },details: {, dependencies: dep_results, code: code_results,configs: config_results} recommendations: [,
+    "message": 'Debug mode enabled in production configuration'})},'
+})return { "success": true,"issues": config_issues
+} catch (error) { return { "success": false, "error": error.message, "issues": []}
+}async generate_report (dep_results, code_results, config_results) { const report = { "timestamp": new Date ().toISOString (), "summary": {, "dependencies": dep_results.success ? 'secure': 'vulnerable', "code": code_results.issues.length = = = 0 ? 'secure': 'issues - found', "configs": config_results.issues.length = = = 0 ? 'secure': 'issues - found',"overall": (dep_results.success && code_results.issues.length = = = 0 && config_results.issues.length = = = 0) ? 'secure': 'issues - found';'
+    },"details": {, "dependencies": dep_results, "code": code_results,"configs": config_results} "recommendations": [
 }// Generate recommendations; // Check condition;
-if ( {) {$2;}
-} report.recommendations.push ({ priority: 'critical',}
-  message: 'Dependency vulnerabilities found', action: 'Run npm audit fix to resolve vulnerabilities'},
+if ( {) {$2;
+} report.recommendations.push ({ "priority": 'critical', "message": 'Dependency vulnerabilities found', "action": 'Run npm audit fix to resolve vulnerabilities'},'
 }// Check condition;
-if ( {) {$2;}
+if ( {) {$2;
 }
 
-const high_severity = code_results.issues.filter (issue = > issue.severity = = = 'high').length; // Check condition;
-if ( {) {$2;}
-} report.recommendations.push ({ priority: 'high',}
-  message: `${high_severit,}
-} high - severity security issues found in code`; action: 'Review and fix high - severity security issues'}),
+const high_severity = code_results.issues.filter (issue = > issue.severity = = = 'high').length; // Check condition;'
+if ( {) {$2;
+} report.recommendations.push ({ "priority": 'high',"message": `${high_severit,`} high - severity security issues found in code`; "action": 'Review and fix high - severity security issues'}),'
 }// Check condition;
-if ( {) {$2;}
-} report.recommendations.push ({ priority: 'medium',}
-  message: 'Configuration security issues found', action: 'Review configuration files for security issues'})}return repor,
-}async save_report (report) { try { const report_dir = path.dirname (this.report_file)if () {) {$2;}
-} fs.mkdir_sync (report_dir, { recursive: true },
-}fs.writeFileSync (this.report_file, JSON.stringify (report, null, 2))this.log (`Report saved to: ${this.report_file}`)} catch (error) { this.log (`Error saving report: ${error.message}`)}}async run () { this.log ('🛡️ Starting Security Scanner...')this.log (`Project root: ${this.project_roo,}
-}`)try { // Create logs directory if it doesn't exist;
+if ( {) {$2;
+} report.recommendations.push ({ "priority": 'medium', "message": 'Configuration security issues found', "action": 'Review configuration files for security issues'})}return repor,'
+}async save_report (report) { try { const report_dir = path.dirname (this.report_file)if () {) {$2;
+} fs.mkdir_sync (report_dir, { "recursive": true }
+}fs.writeFileSync (this.report_file, JSON.stringify (report, null, 2))this.log (`Report saved "to": ${this.report_file}`)} catch (error) { this.log (`Error saving "report": ${error.message}`)}}async run () { this.log ('🛡️ Starting Security Scanner...')this.log (`Project "root": ${this.project_roo,`}`)try { // Create logs directory if it doesn't exist;'
+
 }
-const logs_dir = path.dirname (this.log_file)if () {) {$2;}
-} fs.mkdir_sync (logs_dir, { recursive: true },
+
+const logs_dir = path.dirname (this.log_file)if () {) {$2;
+} fs.mkdir_sync (logs_dir, { "recursive": true }
 }// Run all security scans;
 
-const dep_results = await this.scan_dependencies ()const code_results = await this.scan_code (;
-  const config_results  = await this.scan_configs ()// Generate report; this.log ('📊 Generating security report...')const report  = await this.generate_report (dep_results, code_results, config_results)// Save report; await this.save_report (report)const duration  = Date.now () - this.start_time;// Log summary; this.log ('\n📊 Security Scanner Summary: ')this.log (`Dependencies: ${report.summary.dependencies}`)this.log (`Code: ${report.summary.code}`)this.log (`Configs: ${report.summary.configs}`)this.log (`Overall: ${report.summary.overall}`)this.log (`Duration: ${duratio,}
-}ms`)// Check condition;
-if ( {) {$2;}
-} this.log ('\n💡 Recommendations: '), report.recommendations.for_each (rec = > {, this.log (` [${rec.priority.toUpperCase ()}] ${rec.message}`)this.log (` Action: ${rec.action}`)})} else { this.log ('\n✨ No security issues found!')}
-} catch (error) { this.log (`❌ Error running security scanner: ${error.message}`)process.exit (1)},
-}// Run the security scanner;
+const dep_results = await this.scan_dependencies ()const config_results  = await this.scan_configs ()// Generate report; this.log ('📊 Generating security report...')const report  = await this.generate_report (dep_results, code_results, config_results)// Save report; await this.save_report (report)const duration  = Date.now () - this.start_time;// Log summary; this.log ('\n📊 Security Scanner "Summary": ')this.log (`"Dependencies": ${report.summary.dependencies}`)this.log (`"Code": ${report.summary.code}`)this.log (`"Configs": ${report.summary.configs}`)this.log (`"Overall": ${report.summary.overall}`)this.log (`"Duration": ${duratio,;`}ms`)// Check condition;`if ( {) {$2;
+} this.log ('\n💡 "Recommendations": '), report.recommendations.for_each (rec = > {, this.log (` [${rec.priority.toUpperCase ()}] ${rec.message}`)this.log (` "Action": ${rec.action}`)})} else { this.log ('\n✨ No security issues found!')}'} catch (error) { this.log (`❌ Error running security "scanner": ${error.message}`)process.exit (1)},`}// Run the security scanner;
 
 const scanner  = new SecurityScanner()scanner.run().catch(error = > {process.exit(1)}))}),)}),)scanner.run().catch(error = > {process.exit(1)}))}),)}),)scanner.run().catch(error = > {process.exit(1)}))}),)}),)}),),scanner.run().catch(error = > {process.exit(1)}))}),)}),)ursor/automate-test-improve-and-merge-code-8ee2;
 #!/usr/bin/env node;
 origin/automation-improvements-final;
 #!/usr/bin/env node;
 
-const fs = require('fs')const path = require('path')const { execSync }  = require('child_process')class SecurityScanner {constructor() {this.projectRoot = process.cwd()this.logFile = path.join(this.projectRoot, 'logs/pm2/security-scanner.log')this.reportFile = path.join(this.projectRoot, 'logs/pm2/security-report.json')this.startTime = Date.now()}log(message) {const timestamp = new Date().toISOString(;}
-  const logMessage  = `[${timestamp}] ${message}\n`;try {fs.appendFileSync(this.logFile, logMessage)} catch (error) {console.error('Error writing to log file: ', error.message)}}async scanDependencies() {try {this.log('🔒 Scanning dependencies for vulnerabilities...')const auditResult = execSync('npm audit --json', {cwd: this.projectRoot, stdio: 'pipe',}
-  encoding: 'utf8,}
-};
-  const audit = JSON.parse(auditResult;
-  return {success: true,vulnerabilities: audit.vulnerabilities || {}summary: audit.metadata || {},
-} catch (error) {// npm audit might fail if there are vulnerabilities; try {const output = error.stdout?.toString() || error.stderr?.toString() || ''; if (output.includes('npm ERR!')) {return {success: false, error: 'Vulnerabilities found',}
-  output: output}}} catch (parseError) {this.log(`Error parsing npm audit output: ${parseError.message}`,
-}return {success: false, error: error.message, output: error.stdout || error.stderr || ''},
-}async scanCode() {try {this.log('🔍 Scanning code for security issues...')// Check for common security issues in code;
+const fs = require('fs')const path = require('path')const { execSync }  = require('child_process')class SecurityScanner {constructor() {this.projectRoot = process.cwd()this.logFile = path.join(this.projectRoot, 'logs/pm2/security-scanner.log')this.reportFile = path.join(this.projectRoot, 'logs/pm2/security-report.json')this.startTime = Date.now()}log(message) {const timestamp = new Date().toISOString(;'
+  }
+  const logMessage  = `[${timestamp}] ${message}\n`;try {fs.appendFileSync(this.logFile, logMessage)} catch (error) {console.error('Error writing to log "file": ', error.message)}}async scanDependencies() {try {this.log('🔒 Scanning dependencies for vulnerabilities...')const audit = JSON.parse(auditResult;
+return {"success": true,"vulnerabilities": audit.vulnerabilities || {}"summary": audit.metadata || {},;
+} catch (error) {// npm audit might fail if there are vulnerabilities; try {const output = error.stdout?.toString() || error.stderr?.toString() || ''; if (output.includes('npm ERR!')) {return {"success": false, "error": 'Vulnerabilities found', "output": output}}} catch (parseError) {this.log(`Error parsing npm audit "output": ${parseError.message}`,`}return {"success": false, "error": error.message, "output": error.stdout || error.stderr || ''},'
+}async scanCode() {try {this.log('🔍 Scanning code for security issues...')// Check for common security issues in code;'
 
-const securityIssues = [];
 }
-const files = this.getSourceFiles()files.forEach(file = > {const content = fs.readFileSync(file, 'utf8')const lines  = content.split('\n')lines.forEach((line, index) = > ;}
-  const lineNum  = index + 1;// Check for hardcoded secrets; if (line.match(/password\s* = \s*[\"'][^\"']+[\"']/i)) {securityIssues.push({file: file, line: lineNum, type: 'hardcoded-password',}
-  severity: 'high', message: 'Hardcoded password detected'})}}}scanDirectory(this.projectRoot)return file,
-}async scanConfigs() {try {this.log('⚙️ Scanning configuration files...')const configIssues = [];
 
-const configFiles = [
-  'package.json'; 'next.config.js'; 'tsconfig.json'; '.env'; '.env.local','.env.production'
+#!/usr/bin/env node;
+origin/cursor/automate-test-improve-and-merge-code-2533
+
+  }
+  const lineNum  = index + 1;// Check for hardcoded secrets; if (line.match(/password\s* = \s*["'][^"']+["']/i)) {securityIssues.push({"file": file, "line": lineNum, "type": 'hardcoded-password', "severity": 'high', "message": 'Hardcoded password detected'})}}}scanDirectory(this.projectRoot)return file,'
+}async scanConfigs() {try {this.log('⚙️ Scanning configuration files...')const configIssues = [];'
+
+}
+
+  'package.json'; 'next.config.js'; 'tsconfig.json'; '.env'; '.env.local','.env.production''
 ];
  configFiles.forEach(configFile = > {const filePath = path.join(this.projectRoot, configFile)if (fs.existsSync(filePath)) ;
-  const content = fs.readFileSync(filePath, 'utf8')// Check for exposed secrets in config files; if (content.match(/password\s* = \s*[\"'][^\"']+[\"']/i)) {configIssues.push({file: configFile, type: 'exposed-secret',}
-  severity: 'high';}
-    message: 'Potential secret exposed in configuration file'},
-}// Check for debug mode in production configs; if (configFile.includes('production') && content.includes('debug: true')) {, configIssues.push({, file: configFile, type: 'debug-mode',}
-  severity: 'medium';}
-    message: 'Debug mode enabled in production configuration'})},
-})return {success: true;}
-    issues: configIssues,}
-} catch (error) {return {success: false, error: error.message, issues: []},
-}async generateReport(depResults, codeResults, configResults) {const report = {timestamp: new Date().toISOString(), summary: {, dependencies: depResults.success ? 'secure': 'vulnerable', code: codeResults.issues.length = = = 0 ? 'secure': 'issues-found', configs: configResults.issues.length = = = 0 ? 'secure': 'issues-found';
-    overall: (depResults.success && codeResults.issues.length = = = 0 && configResults.issues.length = = = 0) ? 'secure': 'issues-found';
-origin/automation-improvements-final;
-const fs = require('fs');
+  }
+    }
+    "message": 'Potential secret exposed in configuration file'},'
+}// Check for debug mode in production configs; if (configFile.includes('production') && content.includes('"debug": true')) {, configIssues.push({, "file": configFile, "type": 'debug-mode', "severity": 'medium';'
+    }
+    "message": 'Debug mode enabled in production configuration'})},'
+})return {"success": true;
+    }
+    "issues": configIssues
+} catch (error) {return {"success": false, "error": error.message, "issues": []}
+}async generateReport(depResults, codeResults, configResults) {const report = {"timestamp": new Date().toISOString(), "summary": {, "dependencies": depResults.success ? 'secure': 'vulnerable', "code": codeResults.issues.length = = = 0 ? 'secure': 'issues-found', "configs": configResults.issues.length = = = 0 ? 'secure': 'issues-found';'
+    }
+    "overall": (depResults.success && codeResults.issues.length = = = 0 && configResults.issues.length = = = 0) ? 'secure': 'issues-found';'
+origin/automation-improvements-final,
 
-const path = require('path');}
-}
-const { execSync } = require('child_process');
-class SecurityScanner {constructor() {; this.projectRoot = process.cwd(); this.logFile = path.join(this.projectRoot, 'logs/pm2/security-scanner.log'); this.reportFile = path.join(this.projectRoot, 'logs/pm2/security-report.json'); this.startTime = Date.now()}; log(message) {const timestamp = new Date().toISOString();}
-}
-const logMessage = `[${timestamp}] ${message}\n`; try {fs.appendFileSync(this.logFile, logMessage)} catch (error) {console.error('Error writing to log file: ', error.message)}}; async scanDependencies() {try {; this.log('🔒 Scanning dependencies for vulnerabilities...');
 
-const auditResult = execSync('npm audit --json', {; cwd: this.projectRoot, stdio: 'pipe',}
-  encoding: 'utf8,}
+class SecurityScanner {constructor() {; this.projectRoot = process.cwd(); this.logFile = path.join(this.projectRoot, 'logs/pm2/security-scanner.log'); this.reportFile = path.join(this.projectRoot, 'logs/pm2/security-report.json'); this.startTime = Date.now()}; log(message) {const timestamp = new Date().toISOString();'
+
+}
+
+const logMessage = `[${timestamp}] ${message}\n`; try {fs.appendFileSync(this.logFile, logMessage)} catch (error) {console.error('Error writing to log "file": ', error.message)}}; async scanDependencies() {try {; this.log('🔒 Scanning dependencies for vulnerabilities...');'
+}
+
+const auditResult = execSync('npm audit --json', {; "cwd": this.projectRoot, "stdio": 'pipe', "encoding": 'utf8,;'
 });
 
-const audit = JSON.parse(auditResult); return {success: true;}
-vulnerabilities: audit.vulnerabilities |,}
-}; summary: audit.metadata |{},
-} catch (error) {// npm audit might fail if there are vulnerabilities; try {;}
-}
-const output = error.stdout?.toString() |error.stderr?.toString() |''; if (output.includes('npm ERR!')) {; return {; success: false, error: 'Vulnerabilities found',}
-  output: output}}} catch (parseError) {this.log(`Error parsing npm audit output: ${parseError.message}`,
-}; return {success: false, error: error.message, output: error.stdout |error.stderr |''},
-}; async scanCode() {try {; this.log('🔍 Scanning code for security issues...'); // Check for common security issues in code;
+const audit = JSON.parse(auditResult); return {"success": true;
+    }
+    "vulnerabilities": audit.vulnerabilities |
+}; "summary": audit.metadata |{}
+} catch (error) {// npm audit might fail if there are vulnerabilities; try {;
 
-const securityIssues = [];
+}
+
+const output = error.stdout?.toString() |error.stderr?.toString() |''; if (output.includes('npm ERR!')) {; return {; "success": false, "error": 'Vulnerabilities found', "output": output}}} catch (parseError) {this.log(`Error parsing npm audit "output": ${parseError.message}`,`}; return {"success": false, "error": error.message, "output": error.stdout |error.stderr |''},'
+}; async scanCode() {try {; this.log('🔍 Scanning code for security issues...'); // Check for common security issues in code;'
+
+}
+
 
 const files = this.getSourceFiles(); files.forEach(file = > {;
 
-const content = fs.readFileSync(file, 'utf8');
-
-const lines = content.split('\n'); lines.forEach((line, index) = > {;}
 }
-const lineNum = index + 1; // Check for hardcoded secrets; if (line.match(/password\s* = \s*[\"'][^\"']+[\"']/i)) {; securityIssues.push({; file: file, line: lineNum, type: 'hardcoded-password',}
-  severity: 'high', message: 'Hardcoded password detected'})},
-}; scanDirectory(this.projectRoot); return files}; async scanConfigs() {try {; this.log('⚙️ Scanning configuration files...');
 
-const configIssues = [];
 
-const configFiles = [
-  'package.json'; 'next.config.js'; 'tsconfig.json'; '.env'; '.env.local'
-    '.env.production'
+const lines = content.split('\n'); lines.forEach((line, index) = > {;'
+
+}
+
+const lineNum = index + 1; // Check for hardcoded secrets; if (line.match(/password\s* = \s*["'][^"']+["']/i)) {; securityIssues.push({; "file": file, "line": lineNum, "type": 'hardcoded-password', "severity": 'high', "message": 'Hardcoded password detected'})},'
+}; scanDirectory(this.projectRoot); return files}; async scanConfigs() {try {; this.log('⚙️ Scanning configuration files...');'
+
+}
+
+  'package.json'; 'next.config.js'; 'tsconfig.json'; '.env'; '.env.local''
+    '.env.production''
   ]; configFiles.forEach(configFile = > {;
 
-const filePath = path.join(this.projectRoot, configFile); if (fs.existsSync(filePath)) {;
+}
 
-const content = fs.readFileSync(filePath, 'utf8'); // Check for exposed secrets in config files; if (content.match(/password\s* = \s*[\"'][^\"']+[\"']/i)) {; configIssues.push({; file: configFile, type: 'exposed-secret',}
-  severity: 'high'}
-    message: 'Potential secret exposed in configuration file'},
-}; // Check for debug mode in production configs; if (configFile.includes('production') && content.includes('debug: true')) {, configIssues.push({, file: configFile, type: 'debug-mode',}
-  severity: 'medium'}
-    message: 'Debug mode enabled in production configuration'})},
-}); return {success: true;}
-issues: configIssues,}
-} catch (error) {return {; success: false, error: error.message, issues: []},
+
+}
+
+const content = fs.readFileSync(filePath, 'utf8'); // Check for exposed secrets in config files; if (content.match(/password\s* = \s*["'][^"']+["']/i)) {; configIssues.push({; "file": configFile, "type": 'exposed-secret', "severity": 'high''
+    }
+    "message": 'Potential secret exposed in configuration file'},'
+}; // Check for debug mode in production configs; if (configFile.includes('production') && content.includes('"debug": true')) {, configIssues.push({, "file": configFile, "type": 'debug-mode', "severity": 'medium''
+    }
+    "message": 'Debug mode enabled in production configuration'})},'
+}); return {"success": true
+}
+"issues": configIssues
+} catch (error) {return {; "success": false, "error": error.message, "issues": []}
 }; async generateReport(depResults, codeResults, configResults) {const report = {
-  timestamp: new Date().toISOString(), summary: {
-      , dependencies: depResults.success ? 'secure': 'vulnerable', code: codeResults.issues.length = = = 0 ? 'secure': 'issues-found', configs: configResults.issues.length = = = 0 ? 'secure': 'issues-found'
-    overall: (depResults.success && codeResults.issues.length = = = 0 && configResults.issues.length = = = 0) ? 'secure': 'issues-found'}
-   ,}
+  }
+  "timestamp": new Date().toISOString(), "summary": {
+      , "dependencies": depResults.success ? 'secure': 'vulnerable', "code": codeResults.issues.length = = = 0 ? 'secure': 'issues-found', "configs": configResults.issues.length = = = 0 ? 'secure': 'issues-found''
+    }
+    "overall": (depResults.success && codeResults.issues.length = = = 0 && configResults.issues.length = = = 0) ? 'secure': 'issues-found''
+   
 }
-    details: {, dependencies: depResults, code: codeResults;}
-    configs: configResults}recommendations: [,
-}// Generate recommendations; if (!depResults.success) {report.recommendations.push({priority: 'critical',}
-  message: 'Dependency vulnerabilities found', action: 'Run npm audit fix to resolve vulnerabilities'},
-}if (codeResults.issues.length > 0) {const highSeverity = codeResults.issues.filter(issue = > issue.severity = = = 'high').length; if (highSeverity > 0) {report.recommendations.push({priority: 'high';}
-    message: `${highSeverit,}
-} high-severity security issues found in code`; action: 'Review and fix high-severity security issues'}),
-}if (configResults.issues.length > 0) {report.recommendations.push({priority: 'medium',}
-  message: 'Configuration security issues found', action: 'Review configuration files for security issues'})}return repor,
-}async saveReport(report) {try {const reportDir = path.dirname(this.reportFile)if (!fs.existsSync(reportDir)) {fs.mkdirSync(reportDir, { recursive: true },
-}fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2))this.log(`Report saved to: ${this.reportFile}`)} catch (error) {this.log(`Error saving report: ${error.message}`)}}async run() {this.log('🛡️ Starting Security Scanner...')this.log(`Project root: ${this.projectRoo,}
-}`)try {// Create logs directory if it doesn't exist;}
+    "details": {, "dependencies": depResults, "code": codeResults;
+    }
+    "configs": configResults}"recommendations": [
+}// Generate recommendations; if (!depResults.success) {report.recommendations.push({"priority": 'critical', "message": 'Dependency vulnerabilities found', "action": 'Run npm audit fix to resolve vulnerabilities'},'
+}if (codeResults.issues.length > 0) {const highSeverity = codeResults.issues.filter(issue = > issue.severity = = = 'high').length; if (highSeverity > 0) {report.recommendations.push({"priority": 'high';'
+    }
+    "message": `${highSeverit,`} high-severity security issues found in code`; "action": 'Review and fix high-severity security issues'}),'
+}if (configResults.issues.length > 0) {report.recommendations.push({"priority": 'medium', "message": 'Configuration security issues found', "action": 'Review configuration files for security issues'})}return repor,'
+}async saveReport(report) {try {const reportDir = path.dirname(this.reportFile)if (!fs.existsSync(reportDir)) {fs.mkdirSync(reportDir, { "recursive": true }
+}fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2))this.log(`Report saved "to": ${this.reportFile}`)} catch (error) {this.log(`Error saving "report": ${error.message}`)}}async run() {this.log('🛡️ Starting Security Scanner...')this.log(`Project "root": ${this.projectRoo,`}`)try {// Create logs directory if it doesn't exist;'
+
 }
-const logsDir = path.dirname(this.logFile)if (!fs.existsSync(logsDir)) {fs.mkdirSync(logsDir, { recursive: true },
+
 }// Run all security scans;
 
-const depResults = await this.scanDependencies()const codeResults = await this.scanCode(;
-  const configResults = await this.scanConfigs()// Generate report; this.log('📊 Generating security report...')const report = await this.generateReport(depResults, codeResults, configResults)// Save report; await this.saveReport(report)const duration = Date.now() - this.startTime; // Log summary; this.log('\n📊 Security Scanner Summary: ')this.log(`Dependencies: ${report.summary.dependencies}`)this.log(`Code: ${report.summary.code}`)this.log(`Configs: ${report.summary.configs}`)this.log(`Overall: ${report.summary.overall}`)this.log(`Duration: ${duratio,}
-}ms`)if (report.recommendations.length > 0) {this.log('\n💡 Recommendations: '), report.recommendations.forEach(rec = > {, this.log(` [${rec.priority.toUpperCase()}] ${rec.message}`)this.log(` Action: ${rec.action}`)})} else {this.log('\n✨ No security issues found!')}
-} catch (error) {this.log(`❌ Error running security scanner: ${error.message}`)process.exit(1)},
-}
 // Run the security scanner;
 
-const scanner = new SecurityScanner()scanner.run().catch(error = > {process.exit(1)}))}),)}),)scanner.run().catch(error = > {process.exit(1)}))}),)}),)}),);
-  const scanner = new SecurityScanner ()scanner.run ().catch (error = > { process.exit (1)}))}), )}), );
-}}async scanDependencies() {try {this.log('🔒 Scanning dependencies for vulnerabilities...')const auditResult = execSync('npm audit --json', {cw:d:this.projectRoot;
+const scanner = new SecurityScanner ()scanner.run ().catch (error = > { process.exit (1)}))}), )}), );
+}}async scanDependencies() {try {this.log('🔒 Scanning dependencies for vulnerabilities...')const auditResult = execSync('npm audit --json', {"cw":"d":this.projectRoot;'
+
 }
-const scanner = new SecurityScanner();}
+
 scanner.run().catch(error = > {process.exit(1)}));}),);
 }),);
 scanner.run().catch(error = > {process.exit(1)}));}),);
 }),);
 }),),;
-
 const scanner = new SecurityScanner ();
 scanner.run ().catch (error = > { process.exit (1)}));}), );
 }), );
 ;
-
+;
 };
-
 };
 ;
   async scanDependencies() {;
+    }
     try {;
-      this.log('🔒 Scanning dependencies for vulnerabilities...');
+      }
+      this.log('🔒 Scanning dependencies for vulnerabilities...');'
 ;
 
-const auditResult = execSync('npm audit --json', {;
-        cw:d:this.projectRoot;}
-        stdi:o:'pipe';}
-        encodin:g:'utf8';      })const audit = JSON.parse(auditResult;
-  return {succes:s:true;}
-        vulnerabilitie: s:audit.vulnerabilities || {summar:y:audit.metadata || {,}
+        }
+        "cw":"d":this.projectRoot;
+        "stdi":"o":'pipe';'
+        "encodin":"g":'utf8';      })const audit = JSON.parse(auditResult;'
+  return {"succes":"s":true;
+        }
+        "vulnerabilitie": "s":audit.vulnerabilities || {"summar":"y":audit.metadata || {
 } catch (error) {// npm audit might fail if there are vulnerabilities;
-      try {const output = error.stdout?.toString() || error.stderr?.toString() || '';
-        if (output.includes('npm ERR!')) {return {succes:s:false;}
-            erro:r:'Vulnerabilities found';}
-            outpu:t:output;}} catch (parseError) {this.log(`Error parsing npm audit: output:${parseError.message}`,
-}return {succes:s:false;}
-        erro:r:error.message;}
-        outpu:t:error.stdout || error.stderr || '';}}async scanCode() {try {this.log('🔍 Scanning code for security issues...')// Check for common security issues in code;
+      }
+      try {const output = error.stdout?.toString() || error.stderr?.toString() || '';'
+        }
+        if (output.includes('npm ERR!')) {return {"succes":"s":false;'
+            }
+            "erro":"r":'Vulnerabilities found';'
+            "outpu":"t":output;}} catch (parseError) {this.log(`Error parsing npm "audit": "output":${parseError.message}`,`}return {"succes":"s":false;
+        }
+        "erro":"r":error.message;
+        "outpu":"t":error.stdout || error.stderr || '';}}async scanCode() {try {this.log('🔍 Scanning code for security issues...')// Check for common security issues in code;'
 
-const securityIssues = [];
+}
 
-const files = this.getSourceFiles()files.forEach(file => {const content = fs.readFileSync(file, 'utf8')const lines  = content.split('\n')lines.forEach((line, index) => ;
-  const lineNum  = index + 1;// Check for hardcoded secrets;
-          if (line.match(/password\s*=\s*[\"'][^\"']+[\"']/i)) {securityIssues.push({fil:e:file;
-              lin:e:lineNum;
-              typ:e:'hardcoded-password';}
-              severit:y:'high';}
-              messag:e:'Hardcoded password detected';            })}}}scanDirectory(this.projectRoot)return files;
-}async scanConfigs() {try {this.log('⚙️  Scanning configuration files...')const configIssues = [];
 
-const configFiles = [
-  'package.json';
-        'next.config.js';
-        'tsconfig.json';
-        '.env';
-        '.env.local';
-        '.env.production'
+  }
+          if (line.match(/password\s*=\s*["'][^"']+["']/i)) {securityIssues.push({"fil":"e":file;'
+              }
+              "lin":"e":lineNum;
+              "typ":"e":'hardcoded-password';'
+              "severit":"y":'high';'
+              "messag":"e":'Hardcoded password detected';            })}}}scanDirectory(this.projectRoot)return files;'
+}async scanConfigs() {try {this.log('⚙️  Scanning configuration files...')const configIssues = [];'
+
+}
+
+  'package.json';'
+        'next.config.js';'
+        'tsconfig.json';'
+        '.env';'
+        '.env.local';'
+        '.env.production''
 ];
 configFiles.forEach(configFile = > {const filePath = path.join(this.projectRoot, configFile)if (fs.existsSync(filePath)) ;
-  const content  = fs.readFileSync(filePath, 'utf8')// Check for exposed secrets in config files;
-          if (content.match(/password\s*=\s*[\"'][^\"']+[\"']/i)) {configIssues.push({fil:e:configFile;
-              typ:e:'exposed-secret';}
-              severit:y:'high';}
-              messag:e:'Potential secret exposed in configuration file';            })}// Check for debug mode in production configs;
-          if (configFile.includes('production') && content.includes('debu:g:true')) {configIssues.push({fil:e:configFile;
-              typ:e:'debug-mode';}
-              severit:y:'medium';}
-              messag:e:'Debug mode enabled in production configuration';            })}}})return {succes:s:true;}
-        issue:s:configIssues;} catch (error) {return {succes:s:false;}
-        erro:r:error.message;}
-        issue:s:[];}}async generateReport(depResults, codeResults, configResults) {const report = {timestam:p:new Date().toISOString()summar:y:{dependencie:s:depResults.success ? 'secure' :'vulnerable';
-        cod:e:codeResults.issues.length === 0 ? 'secure' :'issues-found';
-        config:s:configResults.issues.length === 0 ? 'secure' :'issues-found';
-        overal:l:(depResults.success && codeResults.issues.length === 0 && configResults.issues.length === 0) ? 'secure' :'issues-found';detail:s:{dependencie:s:depResults;
-        cod:e:codeResults;
-        config:s:configResults;recommendation:s:[];
+  }
+          if (content.match(/password\s*=\s*["'][^"']+["']/i)) {configIssues.push({"fil":"e":configFile;'
+              }
+              "typ":"e":'exposed-secret';'
+              "severit":"y":'high';'
+              "messag":"e":'Potential secret exposed in configuration file';            })}// Check for debug mode in production configs;'
+          if (configFile.includes('production') && content.includes('"debu":"g":true')) {configIssues.push({"fil":"e":configFile;'
+              }
+              "typ":"e":'debug-mode';'
+              "severit":"y":'medium';'
+              "messag":"e":'Debug mode enabled in production configuration';            })}}})return {"succes":"s":true;'
+        }
+        "issue":"s":configIssues;} catch (error) {return {"succes":"s":false;
+        }
+        "erro":"r":error.message;
+        "issue":"s":[];}}async generateReport(depResults, codeResults, configResults) {const report = {"timestam":"p":new Date().toISOString()"summar":"y":{"dependencie":"s":depResults.success ? 'secure' :'vulnerable';'
+        }
+        "cod":"e":codeResults.issues.length === 0 ? 'secure' :'issues-found';'
+        "config":"s":configResults.issues.length === 0 ? 'secure' :'issues-found';'
+        "overal":"l":(depResults.success && codeResults.issues.length === 0 && configResults.issues.length === 0) ? 'secure' :'issues-found';"detail":"s":{"dependencie":"s":depResults;'
+        }
+        "cod":"e":codeResults;
+        "config":"s":configResults;"recommendation":"s":[];
     // Generate recommendations;
-    if (!depResults.success) {report.recommendations.push({priorit:y:'critical';}
-        messag:e:'Dependency vulnerabilities found';}
-        actio:n:'Run npm audit fix to resolve vulnerabilities';      })}if (codeResults.issues.length > 0) {const highSeverity = codeResults.issues.filter(issue => issue.severity === 'high').length;
-      if (highSeverity > 0) {report.recommendations.push({priorit:y:'high';}
-          messag: e:`${highSeverit,}
-} high-severity security issues found in code`;
-          actio:n:'Review and fix high-severity security issues';        })}}if (configResults.issues.length > 0) {report.recommendations.push({priorit:y:'medium';}
-        messag:e:'Configuration security issues found';}
-        actio:n:'Review configuration files for security issues';      })}return report;
-}async saveReport(report) {try {const reportDir = path.dirname(this.reportFile)if (!fs.existsSync(reportDir)) {fs.mkdirSync(reportDir, { recursiv: e:true },
-}fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2))this.log(`Report saved: to:${this.reportFile}`)} catch (error) {this.log(`Error saving:report:${error.message}`)}}async run() {this.log('🛡️  Starting Security Scanner...')this.log(`Project:root:${this.projectRoo,}
-}`)try {// Create logs directory if it doesn't exist;}
+    if (!depResults.success) {report.recommendations.push({"priorit":"y":'critical';'
+        }
+        "messag":"e":'Dependency vulnerabilities found';'
+        "actio":"n":'Run npm audit fix to resolve vulnerabilities';      })}if (codeResults.issues.length > 0) {const highSeverity = codeResults.issues.filter(issue => { return issue.severity === 'high').length; }'
+      }
+      if (highSeverity > 0) {report.recommendations.push({"priorit":"y":'high';'
+          }
+          "messag": "e":`${highSeverit,`} high-severity security issues found in code`;`          "actio":"n":'Review and fix high-severity security issues';        })}}if (configResults.issues.length > 0) {report.recommendations.push({"priorit":"y":'medium';'
+        }
+        "messag":"e":'Configuration security issues found';'
+        "actio":"n":'Review configuration files for security issues';      })}return report;'
+}async saveReport(report) {try {const reportDir = path.dirname(this.reportFile)if (!fs.existsSync(reportDir)) {fs.mkdirSync(reportDir, { "recursiv": "e":true }
+}fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2))this.log(`Report "saved": "to":${this.reportFile}`)} catch (error) {this.log(`Error "saving":"report":${error.message}`)}}async run() {this.log('🛡️  Starting Security Scanner...')this.log(`"Project":"root":${this.projectRoo,`}`)try {// Create logs directory if it doesn't exist;'
+
 }
-const logsDir = path.dirname(this.logFile)if (!fs.existsSync(logsDir)) {fs.mkdirSync(logsDir, { recursiv: e:true },
+
+const logsDir = path.dirname(this.logFile)if (!fs.existsSync(logsDir)) {fs.mkdirSync(logsDir, { "recursiv": "e":true }
 }// Run all security scans;
 
-const depResults = await this.scanDependencies()const codeResults = await this.scanCode(;
-  const configResults  = await this.scanConfigs()// Generate report;
-      this.log('📊 Generating security report...')const report  = await this.generateReport(depResults, codeResults, configResults)// Save report;
+      this.log('📊 Generating security report...')const report  = await this.generateReport(depResults, codeResults, configResults)// Save report;'
       await this.saveReport(report)const duration  = Date.now() - this.startTime;// Log summary;
-      this.log('\n📊 Security Scanner: Summary:')this.log(`Dependencie:s:${report.summary.dependencies}`)this.log(`Cod:e:${report.summary.code}`)this.log(`Config:s:${report.summary.configs}`)this.log(`Overal:l:${report.summary.overall}`)this.log(`Duratio:n:${duration}ms`)if (report.recommendations.length > 0) {this.log('\n💡 Recommendation:s:')report.recommendations.forEach(rec => {this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`)this.log(`    Actio:n:${rec.action}`)})} else {this.log('\n✨ No security issues found!')}} catch (error) {this.log(`❌ Error running security:scanner:${error.message}`)process.exit(1)},
-}// Run the security scanner;
+      this.log('\n📊 Security "Scanner": "Summary":')this.log(`"Dependencie":"s":${report.summary.dependencies}`)this.log(`"Cod":"e":${report.summary.code}`)this.log(`"Config":"s":${report.summary.configs}`)this.log(`"Overal":"l":${report.summary.overall}`)this.log(`"Duratio":"n":${duration}ms`)if (report.recommendations.length > 0) {this.log('\n💡 "Recommendation":"s":')report.recommendations.forEach((rec) => {this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`)this.log(`    "Actio":"n":${rec.action}`)})} else {this.log('\n✨ No security issues found!')}} catch (error) {this.log(`❌ Error running "security":"scanner":${error.message}`)process.exit(1)},`}// Run the security scanner;
 
-const scanner = new SecurityScanner()scanner.run().catch(error => {process.exit(1)#!/usr/bin/env node,const fs = require('fs'),const path = require('path'),const { execSync } = require('child_process'),,class SecurityScanner {,constructor() {,this.projectRoot = process.cwd(),this.logFile = path.join(this.projectRoot, 'logs/pm2/security-scanner.log'),this.reportFile = path.join(this.projectRoot, 'logs/pm2/security-report.json'),this.startTime = Date.now()},log(message) {,const timestamp = new Date().toISOString(),const logMessage = `[${timestamp}] ${message}\n`,,try {,fs.appendFileSync(this.logFile, logMessage)} catch (error) {,console.error('Error writing to log:file:', error.message)}},async scanDependencies() {,try {,this.log('🔒 Scanning dependencies for vulnerabilities...'),,const auditResult = execSync('npm audit --json', {,cw:d:this.projectRoot,stdi:o: 'pipe',}
-  encodin: g:'utf8,}
-}),,const audit = JSON.parse(auditResult),return {,succes:s:true,vulnerabilitie: s:audit.vulnerabilities || ,}
-},summar: y:audit.metadata || {},
-} catch (error) {,// npm audit might fail if there are vulnerabilities,try {,const output = error.stdout?.toString() || error.stderr?.toString() || '',if (output.includes('npm ERR!')) {,return {,succes:s:false,erro:r: 'Vulnerabilities found',}
-  outpu: t:output},
-} catch (parseError) {,this.log(`Error parsing npm audit: output:${parseError.message}`,
-},return {,succes:s:false,erro:r:error.message,outpu: t:error.stdout || error.stderr || ''},
-},async scanCode() {,try {,this.log('🔍 Scanning code for security issues...'),,// Check for common security issues in code,const securityIssues = [],const files = this.getSourceFiles(),,files.forEach(file => {,const content = fs.readFileSync(file, 'utf8'),const lines = content.split('\n'),,lines.forEach((line, index) => {,const lineNum = index + 1,,// Check for hardcoded secrets,if (line.match(/password\s*=\s*[\"'][^\"']+[\"']/i)) {,securityIssues.push({,fil:e:file,lin:e:lineNum,typ:e: 'hardcoded-password',
-  severit:y: 'high',}
-  messag: e:'Hardcoded password detected'})},
-},scanDirectory(this.projectRoot),return files},async scanConfigs() {,try {,this.log('⚙️  Scanning configuration files...'),,const configIssues = [],const configFiles = [,'package.jsonnext.config.js','tsconfig.json.env','.env.local.env.production'],,configFiles.forEach(configFile => {,const filePath = path.join(this.projectRoot, configFile),if (fs.existsSync(filePath)) {,const content = fs.readFileSync(filePath, 'utf8'),,// Check for exposed secrets in config files,if (content.match(/password\s*=\s*[\"'][^\"']+[\"']/i)) {,configIssues.push({,fil:e:configFile,typ:e: 'exposed-secret',
-  severit:y: 'high',}
-  messag: e:'Potential secret exposed in configuration file'},
-},// Check for debug mode in production configs,if (configFile.includes('production') && content.includes('debu:g:true')) {,configIssues.push({,fil:e:configFile,typ:e: 'debug-mode',
-  severit:y: 'medium',}
-  messag: e:'Debug mode enabled in production configuration'})},
-}),,return {,succes:s:true,issue: s:configIssues,}
-} catch (error) {,return {,succes:s:false,erro:r:error.message,issue: s:[]},
-},async generateReport(depResults, codeResults, configResults) {,const report = {,timestam:p:new Date().toISOString(),summar:y:{,dependencie:s:depResults.success ? 'secure' :'vulnerable',cod:e:codeResults.issues.length === 0 ? 'secure' :'issues-found',config:s:configResults.issues.length === 0 ? 'secure' :'issues-found',overal: l:(depResults.success && codeResults.issues.length === 0 && configResults.issues.length === 0) ? 'secure' :'issues-found,}
-},detail:s:{,dependencie:s:depResults,cod:e:codeResults,config: s:configResult,}
-},recommendation: s:[,
-},// Generate recommendations,if (!depResults.success) {,report.recommendations.push({,priorit:y: 'critical',
-  messag:e: 'Dependency vulnerabilities found',}
-  actio: n:'Run npm audit fix to resolve vulnerabilities'},
-},if (codeResults.issues.length > 0) {,const highSeverity = codeResults.issues.filter(issue => issue.severity === 'high').length,if (highSeverity > 0) {,report.recommendations.push({,priorit:y: 'high',}
-  messag: e:`${highSeverit,}
-} high-severity security issues found in code`,actio: n:'Review and fix high-severity security issues'}),
-},if (configResults.issues.length > 0) {,report.recommendations.push({,priorit:y: 'medium',
-  messag:e: 'Configuration security issues found',}
-  actio: n:'Review configuration files for security issues'},
+const scanner = new SecurityScanner()scanner.run().catch((error) => {process.exit(1)#!/usr/bin/env node,const fs = require('fs'),const path = require('path'),const { execSync } = require('child_process'),,class SecurityScanner {,constructor() {,this.projectRoot = process.cwd(),this.logFile = path.join(this.projectRoot, 'logs/pm2/security-scanner.log'),this.reportFile = path.join(this.projectRoot, 'logs/pm2/security-report.json'),this.startTime = Date.now()},log(message) {,const timestamp = new Date().toISOString(),const logMessage = `[${timestamp}] ${message}\n`,,try {,fs.appendFileSync(this.logFile, logMessage)} catch (error) {,console.error('Error writing to "log":"file":', error.message)}},async scanDependencies() {,try {,this.log('🔒 Scanning dependencies for vulnerabilities...'),,const auditResult = execSync('npm audit --json', {,"cw":"d":this.projectRoot,"stdi":"o":'pipe',"encodin": "g":'utf8,'}),,const audit = JSON.parse(auditResult),return {,"succes":"s":true,"vulnerabilitie": "s":audit.vulnerabilities || 
+},"summar": "y":audit.metadata || {}
+} catch (error) {,// npm audit might fail if there are vulnerabilities,try {,const output = error.stdout?.toString() || error.stderr?.toString() || '',if (output.includes('npm ERR!')) {,return {,"succes":"s":false,"erro":"r":'Vulnerabilities found',"outpu": "t":output},'
+} catch (parseError) {,this.log(`Error parsing npm "audit": "output":${parseError.message}`,`},return {,"succes":"s":false,"erro":"r":error.message,"outpu": "t":error.stdout || error.stderr || ''},'
+},async scanCode() {,try {,this.log('🔍 Scanning code for security issues...'),,// Check for common security issues in code,const securityIssues = [],const files = this.getSourceFiles(),,files.forEach((file) => {,const content = fs.readFileSync(file, 'utf8'),const lines = content.split('\n'),,lines.forEach((line, index) => {,const lineNum = index + 1,,// Check for hardcoded secrets,if (line.match(/password\s*=\s*["'][^"']+["']/i)) {,securityIssues.push({,"fil":"e":file,"lin":"e":lineNum,"typ":"e":'hardcoded-password',"severit":"y":'high',"messag": "e":'Hardcoded password detected'})},'
+},scanDirectory(this.projectRoot),return files},async scanConfigs() {,try {,this.log('⚙️  Scanning configuration files...'),,const configIssues = [],const configFiles = [,'package.jsonnext.config.js','tsconfig.json.env','.env.local.env.production'],,configFiles.forEach((configFile) => {,const filePath = path.join(this.projectRoot, configFile),if (fs.existsSync(filePath)) {,const content = fs.readFileSync(filePath, 'utf8'),,// Check for exposed secrets in config files,if (content.match(/password\s*=\s*["'][^"']+["']/i)) {,configIssues.push({,"fil":"e":configFile,"typ":"e":'exposed-secret',"severit":"y":'high',"messag": "e":'Potential secret exposed in configuration file'},'
+},// Check for debug mode in production configs,if (configFile.includes('production') && content.includes('"debu":"g":true')) {,configIssues.push({,"fil":"e":configFile,"typ":"e":'debug-mode',"severit":"y":'medium',"messag": "e":'Debug mode enabled in production configuration'})},'
+}),,return {,"succes":"s":true,"issue": "s":configIssues
+} catch (error) {,return {,"succes":"s":false,"erro":"r":error.message,"issue": "s":[]}
+},async generateReport(depResults, codeResults, configResults) {,const report = {,"timestam":"p":new Date().toISOString(),"summar":"y":{,"dependencie":"s":depResults.success ? 'secure' :'vulnerable',"cod":"e":codeResults.issues.length === 0 ? 'secure' :'issues-found',"config":"s":configResults.issues.length === 0 ? 'secure' :'issues-found',"overal": "l":(depResults.success && codeResults.issues.length === 0 && configResults.issues.length === 0) ? 'secure' :'issues-found,'
+},"detail":"s":{,"dependencie":"s":depResults,"cod":"e":codeResults,"config": "s":configResult
+},"recommendation": "s":[
+},// Generate recommendations,if (!depResults.success) {,report.recommendations.push({,"priorit":"y":'critical',"messag":"e":'Dependency vulnerabilities found',"actio": "n":'Run npm audit fix to resolve vulnerabilities'},'
+},if (codeResults.issues.length > 0) {,const highSeverity = codeResults.issues.filter(issue => issue.severity === 'high').length,if (highSeverity > 0) {,report.recommendations.push({,"priorit":"y":'high',"messag": "e":`${highSeverit,`} high-severity security issues found in code`,"actio": "n":'Review and fix high-severity security issues'}),'
+},if (configResults.issues.length > 0) {,report.recommendations.push({,"priorit":"y":'medium',"messag":"e":'Configuration security issues found',"actio": "n":'Review configuration files for security issues'},'
 };
-  return report},async saveReport(report) {,try {,const reportDir = path.dirname(this.reportFile),if (!fs.existsSync(reportDir)) {,fs.mkdirSync(reportDir, { recursiv: e:true },
-},fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2)),this.log(`Report saved: to:${this.reportFile}`,
-} catch (error) {,this.log(`Error saving: report:${error.message}`),
-},async run() {,this.log('🛡️  Starting Security Scanner...'),this.log(`Project: root:${this.projectRoo,}
-}`),,try {,// Create logs directory if it doesn't exist,const logsDir = path.dirname(this.logFile),if (!fs.existsSync(logsDir)) {,fs.mkdirSync(logsDir, { recursiv: e:true },
-},// Run all security scans,const depResults = await this.scanDependencies(),const codeResults = await this.scanCode(),const configResults = await this.scanConfigs(),,// Generate report,this.log('📊 Generating security report...'),const report = await this.generateReport(depResults, codeResults, configResults),,// Save report,await this.saveReport(report),,const duration = Date.now() - this.startTime,,// Log summary,this.log('\n📊 Security Scanner:Summary:'),this.log(`Dependencie: s:${report.summary.dependencie,}
-}`),this.log(`Cod: e:${report.summary.cod,}
-}`),this.log(`Config: s:${report.summary.config,}
-}`),this.log(`Overal: l:${report.summary.overal,}
-}`),this.log(`Duratio: n:${duratio,}
-}ms`),,if (report.recommendations.length > 0) {,this.log('\n💡 Recommendation:s:'),report.recommendations.forEach(rec => {,this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`),this.log(`    Actio: n:${rec.action}`)},
-} else {,this.log('\n✨ No security issues found!')}} catch (error) {,this.log(`❌ Error running security: scanner:${error.messag,}
-}`),process.exit(1)}}},// Run the security scanner,const scanner = new SecurityScanner(),scanner.run().catch(error => {,process.exit(1)}),)}),)#!/usr/bin/env node,const fs = require('fs'),const path = require('path'),const { execSync } = require('child_process'),,class SecurityScanner {,constructor() {,this.projectRoot = process.cwd(),this.logFile = path.join(this.projectRoot, 'logs/pm2/security-scanner.log'),this.reportFile = path.join(this.projectRoot, 'logs/pm2/security-report.json'),this.startTime = Date.now()},log(message) {,const timestamp = new Date().toISOString(),const logMessage = `[${timestamp}] ${message}\n`,,try {,fs.appendFileSync(this.logFile, logMessage)} catch (error) {,console.error('Error writing to log file:', error.message)}},async scanDependencies() {,try {,this.log('🔒 Scanning dependencies for vulnerabilities...'),;
-  const auditResult = execSync('npm audit --json', {,cwd: this.projectRoot,stdio: 'pipe',}
-  encoding: 'utf8';}
+  return report},async saveReport(report) {,try {,const reportDir = path.dirname(this.reportFile),if (!fs.existsSync(reportDir)) {,fs.mkdirSync(reportDir, { "recursiv": "e":true }
+},fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2)),this.log(`Report "saved": "to":${this.reportFile}`,`} catch (error) {,this.log(`Error "saving": "report":${error.message}`),`},async run() {,this.log('🛡️  Starting Security Scanner...'),this.log(`"Project": "root":${this.projectRoo,`}`),,try {,// Create logs directory if it doesn't exist,const logsDir = path.dirname(this.logFile),if (!fs.existsSync(logsDir)) {,fs.mkdirSync(logsDir, { "recursiv": "e":true },'
+},// Run all security scans,const depResults = await this.scanDependencies(),const codeResults = await this.scanCode(),const configResults = await this.scanConfigs(),,// Generate report,this.log('📊 Generating security report...'),const report = await this.generateReport(depResults, codeResults, configResults),,// Save report,await this.saveReport(report),,const duration = Date.now() - this.startTime,,// Log summary,this.log('\n📊 Security "Scanner":"Summary":'),this.log(`"Dependencie": "s":${report.summary.dependencie,`}`),this.log(`"Cod": "e":${report.summary.cod,`}`),this.log(`"Config": "s":${report.summary.config,`}`),this.log(`"Overal": "l":${report.summary.overal,`}`),this.log(`"Duratio": "n":${duratio,`}ms`),,if (report.recommendations.length > 0) {,this.log('\n💡 "Recommendation":"s":'),report.recommendations.forEach((rec) => {,this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`),this.log(`    "Actio": "n":${rec.action}`)},`} else {,this.log('\n✨ No security issues found!')}} catch (error) {,this.log(`❌ Error running "security": "scanner":${error.messag,`}`),process.exit(1)}}},// Run the security scanner,const scanner = new SecurityScanner(),scanner.run().catch((error) => {,process.exit(1)}),)}),)#!/usr/bin/env node,const fs = require('fs'),const path = require('path'),const { execSync } = require('child_process'),,class SecurityScanner {,constructor() {,this.projectRoot = process.cwd(),this.logFile = path.join(this.projectRoot, 'logs/pm2/security-scanner.log'),this.reportFile = path.join(this.projectRoot, 'logs/pm2/security-report.json'),this.startTime = Date.now()},log(message) {,const timestamp = new Date().toISOString(),const logMessage = `[${timestamp}] ${message}\n`,,try {,fs.appendFileSync(this.logFile, logMessage)} catch (error) {,console.error('Error writing to log "file":', error.message)}},async scanDependencies() {,try {,this.log('🔒 Scanning dependencies for vulnerabilities...'),;'  }
       }),,const audit = JSON.parse(auditResult);
-  return {,success: true,vulnerabilities: audit.vulnerabilities || ,}
-},summary: audit.metadata || {},
+return {,"success": true,"vulnerabilities": audit.vulnerabilities || ,;
+},"summary": audit.metadata || {}
 } catch (error) {,// npm audit might fail if there are vulnerabilities,try {;
-  const output = error.stdout?.toString() || error.stderr?.toString() || '',if (output.includes('npm ERR!')) {;
-  return {,success: false,error: 'Vulnerabilities found',}
-  output: output;}
-          }}} catch (parseError) {,this.log(`Error parsing npm audit output: ${parseError.message}`,
-},return {,success: false,error: error.message,output: error.stdout || error.stderr || '';}
-      }}},async scanCode() {,try {,this.log('🔍 Scanning code for security issues...'),,// Check for common security issues in code,const securityIssues = [],const files = this.getSourceFiles(),,files.forEach(file => {,const content = fs.readFileSync(file, 'utf8'),const lines = content.split('\n'),,lines.forEach((line, index) => {;
-  const lineNum = index + 1,,// Check for hardcoded secrets,if (line.match(/password\s*=\s*[\"'][^\"']+[\"']/i)) {,securityIssues.push({,file: file,line: lineNum,type: 'hardcoded-password',}
-  severity: 'high',message: 'Hardcoded password detected';}
+  }
+  }
+  return {,"success": false,"error": 'Vulnerabilities found',"output": output;'
+          }}} catch (parseError) {,this.log(`Error parsing npm audit "output": ${parseError.message}`,`},return {,"success": false,"error": error.message,"output": error.stdout || error.stderr || '';'
+      }}},async scanCode() {,try {,this.log('🔍 Scanning code for security issues...'),,// Check for common security issues in code,const securityIssues = [],const files = this.getSourceFiles(),,files.forEach((file) => {,const content = fs.readFileSync(file, 'utf8'),const lines = content.split('\n'),,lines.forEach((line, index) => {;'
+  }
             })}}},scanDirectory(this.projectRoot),return files;
-  },async scanConfigs() {,try {,this.log('⚙️  Scanning configuration files...'),,const configIssues = [];
-  const configFiles = [,'package.jsonnext.config.jstsconfig.json.env','.env.local.env.production';
+  },async scanConfigs() {,try {,this.log('⚙️  Scanning configuration files...'),,const configIssues = [];'
+  }
       ],,configFiles.forEach(configFile = > {,const filePath = path.join(this.projectRoot, configFile),if (fs.existsSync(filePath)) {;
-  const content = fs.readFileSync(filePath, 'utf8'),,// Check for exposed secrets in config files,if (content.match(/password\s*=\s*[\"'][^\"']+[\"']/i)) {,configIssues.push({,file: configFile,type: 'exposed-secret',}
-  severity: 'high',message: 'Potential secret exposed in configuration file';}
-            })},// Check for debug mode in production configs,if (configFile.includes('production') && content.includes('debug: true')) {,configIssues.push({,file: configFile,type: 'debug-mode',}
-  severity: 'medium',message: 'Debug mode enabled in production configuration';}
-            })}}}),,return {,success: true,issues: configIssues;}
-      }} catch (error) {,return {,success: false,error: error.message,issues: [];}
-      }}},async generateReport(depResults, codeResults, configResults) {,const report = {,timestamp: new Date().toISOString(),summary: {,dependencies: depResults.success ? 'secure' : 'vulnerable',code: codeResults.issues.length === 0 ? 'secure' : 'issues-found',configs: configResults.issues.length === 0 ? 'secure' : 'issues-found',overall: (depResults.success && codeResults.issues.length === 0 && configResults.issues.length === 0) ? 'secure' : 'issues-found';}
-      },details: {,dependencies: depResults,code: codeResults,configs: configResults;}
-      },recommendations: [];
-    },// Generate recommendations,if (!depResults.success) {,report.recommendations.push({,priority: 'critical',}
-  message: 'Dependency vulnerabilities found',action: 'Run npm audit fix to resolve vulnerabilities';}
-      })},if (codeResults.issues.length > 0) {,const highSeverity = codeResults.issues.filter(issue => issue.severity === 'high').length,if (highSeverity > 0) {,report.recommendations.push({,priority: 'high',}
-  message: `${highSeverit,}
-} high-severity security issues found in code`,action: 'Review and fix high-severity security issues';
-        })}},if (configResults.issues.length > 0) {,report.recommendations.push({,priority: 'medium',}
-  message: 'Configuration security issues found',action: 'Review configuration files for security issues';}
+  }
+            })},// Check for debug mode in production configs,if (configFile.includes('production') && content.includes('"debug": true')) {,configIssues.push({,"file": configFile,"type": 'debug-mode',"severity": 'medium',"message": 'Debug mode enabled in production configuration';'
+            })}}}),,return {,"success": true,"issues": configIssues;
+      }} catch (error) {,return {,"success": false,"error": error.message,"issues": [];
+      }}},async generateReport(depResults, codeResults, configResults) {,const report = {,"timestamp": new Date().toISOString(),"summary": {,"dependencies": depResults.success ? 'secure' : 'vulnerable',"code": codeResults.issues.length === 0 ? 'secure' : 'issues-found',"configs": configResults.issues.length === 0 ? 'secure' : 'issues-found',"overall": (depResults.success && codeResults.issues.length === 0 && configResults.issues.length === 0) ? 'secure' : 'issues-found';'
+      },"details": {,"dependencies": depResults,"code": codeResults,"configs": configResults;
+      },"recommendations": [];
+    },// Generate recommendations,if (!depResults.success) {,report.recommendations.push({,"priority": 'critical',"message": 'Dependency vulnerabilities found',"action": 'Run npm audit fix to resolve vulnerabilities';'
+      })},if (codeResults.issues.length > 0) {,const highSeverity = codeResults.issues.filter(issue => issue.severity === 'high').length,if (highSeverity > 0) {,report.recommendations.push({,"priority": 'high',"message": `${highSeverit,`} high-severity security issues found in code`,"action": 'Review and fix high-severity security issues';'
+        })}},if (configResults.issues.length > 0) {,report.recommendations.push({,"priority": 'medium',"message": 'Configuration security issues found',"action": 'Review configuration files for security issues';'
       })},return report;
-  },async saveReport(report) {,try {,const reportDir = path.dirname(this.reportFile),if (!fs.existsSync(reportDir)) {,fs.mkdirSync(reportDir, { recursive: true },
-},fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2)),this.log(`Report saved to: ${this.reportFile}`,
-} catch (error) {,this.log(`Error saving report: ${error.message}`),
-},async run() {,this.log('🛡️  Starting Security Scanner...'),this.log(`Project root: ${this.projectRoo,}
-}`),,try {,// Create logs directory if it doesn't exist,const logsDir = path.dirname(this.logFile),if (!fs.existsSync(logsDir)) {,fs.mkdirSync(logsDir, { recursive: true },
-},// Run all security scans,const depResults = await this.scanDependencies(),const codeResults = await this.scanCode(),const configResults = await this.scanConfigs(),,// Generate report,this.log('📊 Generating security report...'),const report = await this.generateReport(depResults, codeResults, configResults),,// Save report,await this.saveReport(report),,const duration = Date.now() - this.startTime,,// Log summary,this.log('\n📊 Security Scanner Summary: '),this.log(`Dependencies: ${report.summary.dependencie,}
-}`),this.log(`Code: ${report.summary.cod,}
-}`),this.log(`Configs: ${report.summary.config,}
-}`),this.log(`Overall: ${report.summary.overal,}
-}`),this.log(`Duration: ${duratio,}
-}ms`),,if (report.recommendations.length > 0) {,this.log('\n💡 Recommendations: '),report.recommendations.forEach(rec => {,this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`),this.log(`    Action: ${rec.action}`)},
-} else {,this.log('\n✨ No security issues found!')}} catch (error) {,this.log(`❌ Error running security scanner: ${error.messag,}
-}`),process.exit(1)}}},// Run the security scanner;
-  const scanner = new SecurityScanner(),scanner.run().catch(error => {,process.exit(1)}),)module.exports = SecurityScanner;ursor/automate-test-improve-and-merge-code-646c;
+  },async saveReport(report) {,try {,const reportDir = path.dirname(this.reportFile),if (!fs.existsSync(reportDir)) {,fs.mkdirSync(reportDir, { "recursive": true }
+},fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2)),this.log(`Report saved "to": ${this.reportFile}`,`} catch (error) {,this.log(`Error saving "report": ${error.message}`),`},async run() {,this.log('🛡️  Starting Security Scanner...'),this.log(`Project "root": ${this.projectRoo,`}`),,try {,// Create logs directory if it doesn't exist,const logsDir = path.dirname(this.logFile),if (!fs.existsSync(logsDir)) {,fs.mkdirSync(logsDir, { "recursive": true },'
+},// Run all security scans,const depResults = await this.scanDependencies(),const codeResults = await this.scanCode(),const configResults = await this.scanConfigs(),,// Generate report,this.log('📊 Generating security report...'),const report = await this.generateReport(depResults, codeResults, configResults),,// Save report,await this.saveReport(report),,const duration = Date.now() - this.startTime,,// Log summary,this.log('\n📊 Security Scanner "Summary": '),this.log(`"Dependencies": ${report.summary.dependencie,`}`),this.log(`"Code": ${report.summary.cod,`}`),this.log(`"Configs": ${report.summary.config,`}`),this.log(`"Overall": ${report.summary.overal,`}`),this.log(`"Duration": ${duratio,`}ms`),,if (report.recommendations.length > 0) {,this.log('\n💡 "Recommendations": '),report.recommendations.forEach((rec) => {,this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`),this.log(`    "Action": ${rec.action}`)},`} else {,this.log('\n✨ No security issues found!')}} catch (error) {,this.log(`❌ Error running security "scanner": ${error.messag,`}`),process.exit(1)}}},// Run the security scanner;`  const scanner = new SecurityScanner(),scanner.run().catch((error) => {,process.exit(1)}),)module.exports = SecurityScanner;ursor/automate-test-improve-and-merge-code-646c;
 module.exports = SecurityScanner;module.exports = SecurityScanner;scanner.run().catch(error = > {process.exit(1)}))}),)
-        actio:n:'Review configuration files for security issues';      })
+        "actio":"n":'Review configuration files for security issues';      })'
 };
-
 ;
-    return report;
+return report;
 };
-
 ;
   async saveReport(report) {;
+    }
     try {;
 
-const reportDir = path.dirname(this.reportFile);}
-      if (!fs.existsSync(reportDir)) {;}
-        fs.mkdirSync(reportDir, { recursiv: e:true }),
+}
+
+      if (!fs.existsSync(reportDir)) {;
+        }
+        fs.mkdirSync(reportDir, { "recursiv": "e":true })
 };
 
 ;
       fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
-      this.log(`Report saved: to:${this.reportFil,}
-}`);
-    } catch (error) {;}
-      this.log(`Error saving: report:${error.message}`),
-};
+      this.log(`Report "saved": "to":${this.reportFil,`}`);`    } catch (error) {;
+      }
+      this.log(`Error "saving": "report":${error.message}`),`};
 
 };
 ;
   async run() {;
-    this.log('🛡️  Starting Security Scanner...');}
-    this.log(`Project: root:${this.projectRoo,}
-}`);;
-    try {;
-      // Create logs directory if it doesn't exist;
+    }
+    this.log('🛡️  Starting Security Scanner...');'
+    this.log(`"Project": "root":${this.projectRoo,`}`);;`    try {;
+      // Create logs directory if it doesn't exist;'
 
-const logsDir = path.dirname(this.logFile);}
-      if (!fs.existsSync(logsDir)) {;}
-        fs.mkdirSync(logsDir, { recursiv: e:true }),
+}
+
+      if (!fs.existsSync(logsDir)) {;
+        }
+        fs.mkdirSync(logsDir, { "recursiv": "e":true })
 };
 
 ;
       // Run all security scans;
 
-const depResults = await this.scanDependencies();
 
-const codeResults = await this.scanCode();
-
-const configResults = await this.scanConfigs();
 ;
       // Generate report;
-      this.log('📊 Generating security report...');
+      this.log('📊 Generating security report...');'
 
-const report = await this.generateReport(depResults, codeResults, configResults);
 ;
       // Save report;
       await this.saveReport(report);
 ;
-
-const duration = Date.now() - this.startTime;
 ;
       // Log summary;
-      this.log('\n📊 Security Scanner:Summary:');
-      this.log(`Dependencie: s:${report.summary.dependencie,}
-}`);
-      this.log(`Cod: e:${report.summary.cod,}
-}`);
-      this.log(`Config: s:${report.summary.config,}
-}`);
-      this.log(`Overal: l:${report.summary.overal,}
-}`);
-      this.log(`Duratio: n:${duratio,}
-}ms`);
-;
+      this.log('\n📊 Security "Scanner":"Summary":');'
+      this.log(`"Dependencie": "s":${report.summary.dependencie,`}`);`      this.log(`"Cod": "e":${report.summary.cod,`}`);`      this.log(`"Config": "s":${report.summary.config,`}`);`      this.log(`"Overal": "l":${report.summary.overal,`}`);`      this.log(`"Duratio": "n":${duratio,`}ms`);`;
       if (report.recommendations.length > 0) {;
-        this.log('\n💡 Recommendation:s:');}
-        report.recommendations.forEach(rec => {;}
-          this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`);
-          this.log(`    Actio: n:${rec.actio,}
-}`);        });
-      } else {;}
-        this.log('\n✨ No security issues found!')}
+        }
+        this.log('\n💡 "Recommendation":"s":');'
+        report.recommendations.forEach((rec) => {;
+          }
+          this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`);`          this.log(`    "Actio": "n":${rec.actio,`}`);        });`      } else {;
+        }
+        this.log('\n✨ No security issues found!')'
 };
 
 ;
-    } catch (error) {;}
-      this.log(`❌ Error running security: scanner:${error.messag,}
-}`);      process.exit(1)
-};
+    } catch (error) {;
+      }
+      this.log(`❌ Error running "security": "scanner":${error.messag,`}`);      process.exit(1)`};
 
 }
 };
-
 ;
 // Run the security scanner;
-
-const scanner = new SecurityScanner();
-scanner.run().catch(error => {;
+scanner.run().catch((error) => {;
+  }
   process.exit(1);
 #!/usr/bin/env node,;
 
-const fs = require('fs'),;
 
-const path = require('path'),;}
-}
-const { execSync } = require('child_process'),;
+
 ,;
 class SecurityScanner {,;
+  }
   constructor() {,;
+    }
     this.projectRoot = process.cwd(),;
-    this.logFile = path.join(this.projectRoot, 'logs/pm2/security-scanner.log'),;
-    this.reportFile = path.join(this.projectRoot, 'logs/pm2/security-report.json'),;}
-    this.startTime = Date.now(),}
+    this.logFile = path.join(this.projectRoot, 'logs/pm2/security-scanner.log'),;'
+    this.reportFile = path.join(this.projectRoot, 'logs/pm2/security-report.json'),;'
+    this.startTime = Date.now()
 };
 
 ,;
   log(message) {,;
 
-const timestamp = new Date().toISOString(),;}
 }
-const logMessage = `[${timestamp}] ${message}\n`,;
-,;
-    try {,;}
-      fs.appendFileSync(this.logFile, logMessage),;}
-    } catch (error) {,;}
-      console.error('Error writing to log:file:', error.message),}
+
+
+    try {,;
+      }
+      fs.appendFileSync(this.logFile, logMessage),;
+    } catch (error) {,;
+      }
+      console.error('Error writing to "log":"file":', error.message),'
 };
 
   };
 ,;
   async scanDependencies() {,;
+    }
     try {,;
-      this.log('🔒 Scanning dependencies for vulnerabilities...'),;
+      }
+      this.log('🔒 Scanning dependencies for vulnerabilities...'),;'
 ,;
 
-const auditResult = execSync('npm audit --json', {,;
-        cw:d:this.projectRoot,;
-        stdi:o:'pipe',;}
-        encodin:g:'utf8',;}
+        }
+        "cw":"d":this.projectRoot,;
+        "stdi":"o":'pipe',;'
+        "encodin":"g":'utf8',;'
       }),;
 ,;
-
-const audit = JSON.parse(auditResult),;
       return {,;
-        succes:s:true,;}
-        vulnerabilitie: s:audit.vulnerabilities || ,}
+        }
+        "succes":"s":true,;
+        "vulnerabilitie": "s":audit.vulnerabilities || 
 },;
-        summar: y:audit.metadata || {},
+        "summar": "y":audit.metadata || {}
 };
 
     } catch (error) {,;
       // npm audit might fail if there are vulnerabilities,;
+      }
       try {,;
 
-const output = error.stdout?.toString() || error.stderr?.toString() || '',;
-        if (output.includes('npm ERR!')) {,;
+}
+
+        if (output.includes('npm ERR!')) {,;'
+          }
           return {,;
-            succes:s:false,;
-            erro:r:'Vulnerabilities found',;}
-            outpu:t:output,}
+            }
+            "succes":"s":false,;
+            "erro":"r":'Vulnerabilities found',;'
+            "outpu":"t":output
 };
 
         };
-      } catch (parseError) {,;}
-        this.log(`Error parsing npm audit: output:${parseError.messag,}
-}`),
-};
+      } catch (parseError) {,;
+        }
+        this.log(`Error parsing npm "audit": "output":${parseError.messag,`}`),`};
 
 ,;
       return {,;
-        succes:s:false,;
-        erro:r:error.message,;}
-        outpu:t:error.stdout || error.stderr || '',}
+        }
+        "succes":"s":false,;
+        "erro":"r":error.message,;
+        "outpu":"t":error.stdout || error.stderr || '','
 };
 
     }
@@ -2686,34 +2486,35 @@ const output = error.stdout?.toString() || error.stderr?.toString() || '',;
 
 ,;
   async scanCode() {,;
+    }
     try {,;
-      this.log('🔍 Scanning code for security issues...'),;
+      }
+      this.log('🔍 Scanning code for security issues...'),;'
 ,;
       // Check for common security issues in code,;
-
-const securityIssues = [],;
-
-const files = this.getSourceFiles(),;
 ,;
-      files.forEach(file => {,;
+      files.forEach((file) => {,;
 
-const content = fs.readFileSync(file, 'utf8'),;
+}
 
-const lines = content.split('\n'),;
+
 ,;
         lines.forEach((line, index) => {,;
 
-const lineNum = index + 1,;
+}
+
 ,;
           // Check for hardcoded secrets,;
-          if (line.match(/password\s*=\s*[\"'][^\"']+[\"']/i)) {,;
+          if (line.match(/password\s*=\s*["'][^"']+["']/i)) {,;'
+            }
             securityIssues.push({,;
-              fil:e:file,;
-              lin:e:lineNum,;
-              typ:e:'hardcoded-password',;
-              severit:y:'high',;}
-              messag:e:'Hardcoded password detected',;}
-            }),
+              }
+              "fil":"e":file,;
+              "lin":"e":lineNum,;
+              "typ":"e":'hardcoded-password',;'
+              "severit":"y":'high',;'
+              "messag":"e":'Hardcoded password detected',;'
+            })
 };
 
       }
@@ -2721,64 +2522,72 @@ const lineNum = index + 1,;
 
 ,;
     scanDirectory(this.projectRoot),;
-    return files,
+return files,;
 };
 
 ,;
   async scanConfigs() {,;
+    }
     try {,;
-      this.log('⚙️  Scanning configuration files...'),;
+      }
+      this.log('⚙️  Scanning configuration files...'),;'
 ,;
 
-const configIssues = [],;
-
-const configFiles = [,;
-        'package.jsonnext.config.js',;
-        'tsconfig.json.env',;
-        '.env.local.env.production',;
+        'package.jsonnext.config.js',;'
+        'tsconfig.json.env',;'
+        '.env.local.env.production',;'
       ],;
 ,;
-      configFiles.forEach(configFile => {,;
+      configFiles.forEach((configFile) => {,;
 
-const filePath = path.join(this.projectRoot, configFile),;
+}
+
         if (fs.existsSync(filePath)) {,;
 
-const content = fs.readFileSync(filePath, 'utf8'),;
+}
+
 ,;
           // Check for exposed secrets in config files,;
-          if (content.match(/password\s*=\s*[\"'][^\"']+[\"']/i)) {,;
+          if (content.match(/password\s*=\s*["'][^"']+["']/i)) {,;'
+            }
             configIssues.push({,;
-              fil:e:configFile,;
-              typ:e:'exposed-secret',;
-              severit:y:'high',;}
-              messag:e:'Potential secret exposed in configuration file',;}
-            }),
+              }
+              "fil":"e":configFile,;
+              "typ":"e":'exposed-secret',;'
+              "severit":"y":'high',;'
+              "messag":"e":'Potential secret exposed in configuration file',;'
+            })
 };
 
 ,;
           // Check for debug mode in production configs,;
-          if (configFile.includes('production') && content.includes('debu:g:true')) {,;
+          if (configFile.includes('production') && content.includes('"debu":"g":true')) {,;'
+            }
             configIssues.push({,;
-              fil:e:configFile,;
-              typ:e:'debug-mode',;
-              severit:y:'medium',;}
-              messag:e:'Debug mode enabled in production configuration',;}
-            }),
+              }
+              "fil":"e":configFile,;
+              "typ":"e":'debug-mode',;'
+              "severit":"y":'medium',;'
+              "messag":"e":'Debug mode enabled in production configuration',;'
+            })
 };
 
         };
       }),;
 ,;
       return {,;
-        succes:s:true,;}
-        issue:s:configIssues,}
+        }
+        "succes":"s":true,;
+        "issue":"s":configIssues
 };
 
     } catch (error) {,;
+      }
       return {,;
-        succes:s:false,;
-        erro:r:error.message,;}
-        issue:s:[],}
+        }
+        "succes":"s":false,;
+        "erro":"r":error.message,;
+        "issue":"s":[]
 };
 
     }
@@ -2787,456 +2596,451 @@ const content = fs.readFileSync(filePath, 'utf8'),;
 ,;
   async generateReport(depResults, codeResults, configResults) {,;
 
-const report = {,;
-      timestam:p:new Date().toISOString(),;
-      summar:y:{,;
-        dependencie:s:depResults.success ? 'secure' :'vulnerable',;
-        cod:e:codeResults.issues.length === 0 ? 'secure' :'issues-found',;
-        config:s:configResults.issues.length === 0 ? 'secure' :'issues-found',;}
-        overal:l:(depResults.success && codeResults.issues.length === 0 && configResults.issues.length === 0) ? 'secure' :'issues-found',;}
+}
+
+      }
+      "timestam":"p":new Date().toISOString(),;
+      "summar":"y":{,;
+        }
+        "dependencie":"s":depResults.success ? 'secure' :'vulnerable',;'
+        "cod":"e":codeResults.issues.length === 0 ? 'secure' :'issues-found',;'
+        "config":"s":configResults.issues.length === 0 ? 'secure' :'issues-found',;'
+        "overal":"l":(depResults.success && codeResults.issues.length === 0 && configResults.issues.length === 0) ? 'secure' :'issues-found',;'
       },;
-      detail:s:{,;
-        dependencie:s:depResults,;
-        cod:e:codeResults,;}
-        config:s:configResults,;}
+      "detail":"s":{,;
+        }
+        "dependencie":"s":depResults,;
+        "cod":"e":codeResults,;
+        "config":"s":configResults,;
       },;
-      recommendation:s:[],
+      "recommendation":"s":[]
 };
 
 ,;
     // Generate recommendations,;
     if (!depResults.success) {,;
+      }
       report.recommendations.push({,;
-        priorit:y:'critical',;
-        messag:e:'Dependency vulnerabilities found',;}
-        actio:n:'Run npm audit fix to resolve vulnerabilities',;}
-      }),
+        }
+        "priorit":"y":'critical',;'
+        "messag":"e":'Dependency vulnerabilities found',;'
+        "actio":"n":'Run npm audit fix to resolve vulnerabilities',;'
+      })
 };
 
 ,;
     if (codeResults.issues.length > 0) {,;
 
-const highSeverity = codeResults.issues.filter(issue => issue.severity === 'high').length,;
+}
+
       if (highSeverity > 0) {,;
+        }
         report.recommendations.push({,;
-          priorit:y:'high',;}
-          messag: e:`${highSeverit,}
-} high-severity security issues found in code`,;
-          actio:n:'Review and fix high-severity security issues',;
-        }),
+          }
+          "priorit":"y":'high',;'
+          "messag": "e":`${highSeverit,`} high-severity security issues found in code`,;`          "actio":"n":'Review and fix high-severity security issues',;'
+        })
 };
 
     };
 ,;
     if (configResults.issues.length > 0) {,;
+      }
       report.recommendations.push({,;
-        priorit:y:'medium',;
-        messag:e:'Configuration security issues found',;}
-        actio:n:'Review configuration files for security issues',;}
-      }),
+        }
+        "priorit":"y":'medium',;'
+        "messag":"e":'Configuration security issues found',;'
+        "actio":"n":'Review configuration files for security issues',;'
+      })
 };
 
 ,;
-    return report,
+return report,;
 };
 
 ,;
   async saveReport(report) {,;
+    }
     try {,;
 
-const reportDir = path.dirname(this.reportFile),;
-      if (!fs.existsSync(reportDir)) {,;}
-        fs.mkdirSync(reportDir, { recursiv: e:true,}
-}),
+}
+
+      if (!fs.existsSync(reportDir)) {,;
+        }
+        fs.mkdirSync(reportDir, { "recursiv": "e":true
+})
 };
 
 ,;
       fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2)),;
-      this.log(`Report saved: to:${this.reportFil,}
-}`),;
-    } catch (error) {,;}
-      this.log(`Error saving: report:${error.messag,}
-}`),
-};
+      this.log(`Report "saved": "to":${this.reportFil,`}`),;`    } catch (error) {,;
+      }
+      this.log(`Error "saving": "report":${error.messag,`}`),`};
 
   };
 ,;
   async run() {,;
-    this.log('🛡️  Starting Security Scanner...'),;}
-    this.log(`Project: root:${this.projectRoo,}
-}`),;
-,;
+    }
+    this.log('🛡️  Starting Security Scanner...'),;'
+    this.log(`"Project": "root":${this.projectRoo,`}`),;`,;
     try {,;
-      // Create logs directory if it doesn't exist,;
+      // Create logs directory if it doesn't exist,;'
 
-const logsDir = path.dirname(this.logFile),;
-      if (!fs.existsSync(logsDir)) {,;}
-        fs.mkdirSync(logsDir, { recursiv: e:true,}
-}),
+}
+
+      if (!fs.existsSync(logsDir)) {,;
+        }
+        fs.mkdirSync(logsDir, { "recursiv": "e":true
+})
 };
 
 ,;
       // Run all security scans,;
 
-const depResults = await this.scanDependencies(),;
 
-const codeResults = await this.scanCode(),;
-
-const configResults = await this.scanConfigs(),;
 ,;
       // Generate report,;
-      this.log('📊 Generating security report...'),;
+      this.log('📊 Generating security report...'),;'
 
-const report = await this.generateReport(depResults, codeResults, configResults),;
 ,;
       // Save report,;
       await this.saveReport(report),;
 ,;
-
-const duration = Date.now() - this.startTime,;
 ,;
       // Log summary,;
-      this.log('\n📊 Security Scanner:Summary:'),;
-      this.log(`Dependencie: s:${report.summary.dependencie,}
-}`),;
-      this.log(`Cod: e:${report.summary.cod,}
-}`),;
-      this.log(`Config: s:${report.summary.config,}
-}`),;
-      this.log(`Overal: l:${report.summary.overal,}
-}`),;
-      this.log(`Duratio: n:${duratio,}
-}ms`),;
-,;
+      this.log('\n📊 Security "Scanner":"Summary":'),;'
+      this.log(`"Dependencie": "s":${report.summary.dependencie,`}`),;`      this.log(`"Cod": "e":${report.summary.cod,`}`),;`      this.log(`"Config": "s":${report.summary.config,`}`),;`      this.log(`"Overal": "l":${report.summary.overal,`}`),;`      this.log(`"Duratio": "n":${duratio,`}ms`),;`,;
       if (report.recommendations.length > 0) {,;
-        this.log('\n💡 Recommendation:s:'),;}
-        report.recommendations.forEach(rec => {,;}
-          this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`),;
-          this.log(`    Actio: n:${rec.actio,}
-}`),;
-        }),;
-      } else {,;}
-        this.log('\n✨ No security issues found!'),}
+        }
+        this.log('\n💡 "Recommendation":"s":'),;'
+        report.recommendations.forEach((rec) => {,;
+          }
+          this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`),;`          this.log(`    "Actio": "n":${rec.actio,`}`),;`        }),;
+      } else {,;
+        }
+        this.log('\n✨ No security issues found!'),'
 };
 
 ,;
-    } catch (error) {,;}
-      this.log(`❌ Error running security: scanner:${error.messag,}
-}`),;
-      process.exit(1),
+    } catch (error) {,;
+      }
+      this.log(`❌ Error running "security": "scanner":${error.messag,`}`),;`      process.exit(1)
 };
-
-  }
-};
-
 ,;
 // Run the security scanner,;
-
-const scanner = new SecurityScanner(),;
-scanner.run().catch(error => {,;}
+scanner.run().catch((error) => {,;
+  }
   process.exit(1),;}),);
 }),);
+const scanner = new SecurityScanner($2);
+scanner.run().catch($2);
 #!/usr/bin/env node,
-const fs = require('fs'),
-const path = require('path'),;
-  const { execSync } = require('child_process'),
 ,
-class SecurityScanner {,
-  constructor() {,
+class SecurityScanner {
+}
+constructor() {,;
+    }
     this.projectRoot = process.cwd(),
-    this.logFile = path.join(this.projectRoot, 'logs/pm2/security-scanner.log'),
-    this.reportFile = path.join(this.projectRoot, 'logs/pm2/security-report.json'),}
-    this.startTime = Date.now()}
+    this.logFile = path.join(this.projectRoot, 'logs/pm2/security-scanner.log'),'
+    this.reportFile = path.join(this.projectRoot, 'logs/pm2/security-report.json'),'
+    this.startTime = Date.now()
   };
 ,
-  log(message) {,
-    const timestamp = new Date().toISOString(),}
-   ;}
-  const logMessage = `[${timestamp}] ${message}\n`,
-,
-    try {,}
-      fs.appendFileSync(this.logFile, logMessage)}
-    } catch (error) {,}
-      console.error('Error writing to log file:', error.message)}
+  log(message) {
+}
+   ;
+    try {
+      }
+      fs.appendFileSync(this.logFile, logMessage)
+    } catch (error) {
+      }
+      console.error('Error writing to log "file":', error.message)'
     }
-};
-
+  },
 ,
-  async scanDependencies() {,
-    try {,
-      this.log('🔒 Scanning dependencies for vulnerabilities...'),
+  async scanDependencies() {
+    }
+    try {
+      }
+      this.log('🔒 Scanning dependencies for vulnerabilities...'),'
 ,
-      const auditResult = execSync('npm audit --json', {,
-        cwd: this.projectRoot,
-        stdio: 'pipe',
-  encoding: 'utf8'}
-     ,}
+        }
+        "cwd": this.projectRoot,
+        "stdio": 'pipe','
+        "encoding": 'utf8''
+     
 }),
 ,
      ;
-  const audit = JSON.parse(auditResult),
      ;
-  return {,
-        success: true,}
-        vulnerabilities: audit.vulnerabilities || ,}
+return {,;
+        }
+        "success": true,
+        "vulnerabilities": audit.vulnerabilities || 
 },
-        summary: audit.metadata || {},
+        "summary": audit.metadata || {}
 };
 
     } catch (error) {,
-      // npm audit might fail if there are vulnerabilities,
-      try {,
-        const output = error.stdout?.toString() || error.stderr?.toString() || '',
-        if (output.includes('npm ERR!')) {,
+      // npm audit might fail if there are vulnerabilities
+      }
+      try {
+}
+        if (output.includes('npm ERR!')) {,'
          ;
-  return {,
-            success: false,
-            error: 'Vulnerabilities found',}
-  output: output}
-          },
+}
+return {,;
+            }
+            "success": false,
+            "error": 'Vulnerabilities found','
+            "output": output
+          }
 };
 
-      } catch (parseError) {,}
-        this.log(`Error parsing npm audit output: ${parseError.message}`)
-     ,
+      } catch (parseError) {
+        }
+        this.log(`Error parsing npm audit "output": ${parseError.message}`)`     
 };
 ,
-      return {,
-        success: false,
-        error: error.message,}
-        output: error.stdout || error.stderr || ''}
-      },
+return {,;
+        }
+        "success": false,
+        "error": error.message,
+        "output": error.stdout || error.stderr || '''
+      }
 };
 
   };
 ,
-  async scanCode() {,
-    try {,
-      this.log('🔍 Scanning code for security issues...'),
+  async scanCode() {
+    }
+    try {
+      }
+      this.log('🔍 Scanning code for security issues...'),'
 ,
       // Check for common security issues in code,
-      const securityIssues = [],
-      const files = this.getSourceFiles(),
 ,
-      files.forEach(file => {,
-        const content = fs.readFileSync(file, 'utf8'),
-        const lines = content.split('\n'),
+      files.forEach((file) => {
+}
 ,
         lines.forEach((line, index) => {,
          ;
-  const lineNum = index + 1,
+}
 ,
           // Check for hardcoded secrets,
-          if (line.match(/password\s*=\s*[\"'][^\"']+[\"']/i)) {,
-            securityIssues.push({,
-              file: file,
-              line: lineNum,
-              type: 'hardcoded-password',
-  severity: 'high',}
-              message: 'Hardcoded password detected'}
+          if (line.match(/password\s*=\s*["'][^"']+["']/i)) {,'
+            }
+            securityIssues.push({
+              }
+              "file": file,
+              "line": lineNum,
+              "type": 'hardcoded-password','
+              "severity": 'high','
+              "message": 'Hardcoded password detected''
             })
-          },
+          }
 };
 
     };
 ,
     scanDirectory(this.projectRoot),
-    return files;
+return files;
   };
 ,
-  async scanConfigs() {,
-    try {,
-      this.log('⚙️  Scanning configuration files...'),
+  async scanConfigs() {
+    }
+    try {
+      }
+      this.log('⚙️  Scanning configuration files...'),'
 ,
-      const configIssues = [],
-      const configFiles = [,
-        'package.jsonnext.config.jstsconfig.json.env',
-        '.env.local.env.production'
+        'package.jsonnext.config.jstsconfig.json.env','
+        '.env.local.env.production''
       ],
 ,
-      configFiles.forEach(configFile => {,
-        const filePath = path.join(this.projectRoot, configFile),
+      configFiles.forEach((configFile) => {
+}
         if (fs.existsSync(filePath)) {,
          ;
-  const content = fs.readFileSync(filePath, 'utf8'),
+}
 ,
           // Check for exposed secrets in config files,
-          if (content.match(/password\s*=\s*[\"'][^\"']+[\"']/i)) {,
-            configIssues.push({,
-              file: configFile,
-              type: 'exposed-secret',
-  severity: 'high',}
-              message: 'Potential secret exposed in configuration file'}
+          if (content.match(/password\s*=\s*["'][^"']+["']/i)) {,'
+            }
+            configIssues.push({
+              }
+              "file": configFile,
+              "type": 'exposed-secret','
+              "severity": 'high','
+              "message": 'Potential secret exposed in configuration file''
             })
-         ,
+         
 };
 ,
           // Check for debug mode in production configs,
-          if (configFile.includes('production') && content.includes('debug: true')) {,
-            configIssues.push({,
-              file: configFile,
-              type: 'debug-mode',
-  severity: 'medium',}
-              message: 'Debug mode enabled in production configuration'}
+          if (configFile.includes('production') && content.includes('"debug": true')) {,'
+            }
+            configIssues.push({
+              }
+              "file": configFile,
+              "type": 'debug-mode','
+              "severity": 'medium','
+              "message": 'Debug mode enabled in production configuration''
             })
-          },
+          }
 };
 
       }),
 ,
-      return {,
-        success: true,
-        issues: configIssues}
-     ,}
+return {,;
+        }
+        "success": true,
+        "issues": configIssues
+     
 };
-    } catch (error) {,
-      return {,
-        success: false,
-        error: error.message,}
-        issues: []}
-      },
+    } catch (error) {
+}
+return {,;
+        }
+        "success": false,
+        "error": error.message,
+        "issues": []
+      }
 };
 
   };
 ,
-  async generateReport(depResults, codeResults, configResults) {,
-    const report = {,
-      timestamp: new Date().toISOString(),
-      summary: {,
-        dependencies: depResults.success ? 'secure' : 'vulnerable',
-        code: codeResults.issues.length === 0 ? 'secure' : 'issues-found',
-        configs: configResults.issues.length === 0 ? 'secure' : 'issues-found',
-        overall: (depResults.success && codeResults.issues.length === 0 && configResults.issues.length === 0) ? 'secure' : 'issues-found'}
-     ,}
+  async generateReport(depResults, codeResults, configResults) {
+}
+      }
+      "timestamp": new Date().toISOString(),
+      "summary": {
+        }
+        "dependencies": depResults.success ? 'secure' : 'vulnerable','
+        "code": codeResults.issues.length === 0 ? 'secure' : 'issues-found','
+        "configs": configResults.issues.length === 0 ? 'secure' : 'issues-found','
+        "overall": (depResults.success && codeResults.issues.length === 0 && configResults.issues.length === 0) ? 'secure' : 'issues-found''
+     
 },
-      details: {,
-        dependencies: depResults,
-        code: codeResults,
-        configs: configResults}
-     ,}
+      "details": {
+        }
+        "dependencies": depResults,
+        "code": codeResults,
+        "configs": configResults
+     
 },
-      recommendations: []
-   ,
+      "recommendations": []
+   
 };
 ,
     // Generate recommendations,
-    if (!depResults.success) {,
-      report.recommendations.push({,
-        priority: 'critical',
-  message: 'Dependency vulnerabilities found',}
-        action: 'Run npm audit fix to resolve vulnerabilities'}
+    if (!depResults.success) {
+      }
+      report.recommendations.push({
+        }
+        "priority": 'critical','
+        "message": 'Dependency vulnerabilities found','
+        "action": 'Run npm audit fix to resolve vulnerabilities''
       })
-   ,
+   
 };
 ,
-    if (codeResults.issues.length > 0) {,
-      const highSeverity = codeResults.issues.filter(issue => issue.severity === 'high').length,
-      if (highSeverity > 0) {,
-        report.recommendations.push({,
-          priority: 'high',}
-  message: `${highSeverit,}
-} high-severity security issues found in code`,
-          action: 'Review and fix high-severity security issues'
+    if (codeResults.issues.length > 0) {
+      }
+      if (highSeverity > 0) {
+        }
+        report.recommendations.push({
+          }
+          "priority": 'high','
+          "message": `${highSeverit,`} high-severity security issues found in code`,`          "action": 'Review and fix high-severity security issues''
         })
-      },
+      }
 };
 
 ,
-    if (configResults.issues.length > 0) {,
-      report.recommendations.push({,
-        priority: 'medium',
-  message: 'Configuration security issues found',}
-        action: 'Review configuration files for security issues'}
+    if (configResults.issues.length > 0) {
+      }
+      report.recommendations.push({
+        }
+        "priority": 'medium','
+        "message": 'Configuration security issues found','
+        "action": 'Review configuration files for security issues''
       })
-   ,
+   
 };
 ,
-    return report;
+return report;
   };
 ,
-  async saveReport(report) {,
-    try {,
-      const reportDir = path.dirname(this.reportFile),}
-      if (!fs.existsSync(reportDir)) {,}
-        fs.mkdirSync(reportDir, { recursive: true })
-     ,
+  async saveReport(report) {
+    }
+    try {
+}
+      if (!fs.existsSync(reportDir)) {
+        }
+        fs.mkdirSync(reportDir, { "recursive": true })
+     
 };
 ,
       fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2)),
-      this.log(`Report saved to: ${this.reportFile}`)
-   ,
-} catch (error) {,}
-      this.log(`Error saving report: ${error.message}`)
-    },
+      this.log(`Report saved "to": ${this.reportFile}`)`   
+} catch (error) {
+      }
+      this.log(`Error saving "report": ${error.message}`)`    }
 };
 
 ,
-  async run() {,
-    this.log('🛡️  Starting Security Scanner...'),}
-    this.log(`Project root: ${this.projectRoo,}
-}`),
-,
+  async run() {
+    }
+    this.log('🛡️  Starting Security Scanner...'),'
+    this.log(`Project "root": ${this.projectRoo,`}`),`,
     try {,
-      // Create logs directory if it doesn't exist,
-      const logsDir = path.dirname(this.logFile),}
-      if (!fs.existsSync(logsDir)) {,}
-        fs.mkdirSync(logsDir, { recursive: true })
-     ,
+      // Create logs directory if it doesn't exist,'
+}
+      if (!fs.existsSync(logsDir)) {
+        }
+        fs.mkdirSync(logsDir, { "recursive": true })
+     
 };
 ,
       // Run all security scans,
-      const depResults = await this.scanDependencies(),
-      const codeResults = await this.scanCode(),
-      const configResults = await this.scanConfigs(),
 ,
       // Generate report,
-      this.log('📊 Generating security report...'),
-      const report = await this.generateReport(depResults, codeResults, configResults),
+      this.log('📊 Generating security report...'),'
 ,
       // Save report,
-      await this.saveReport(report),
+      await this.saveReport($2);
 ,
      ;
-  const duration = Date.now() - this.startTime,
 ,
       // Log summary,
-      this.log('\n📊 Security Scanner Summary: '),
-      this.log(`Dependencies: ${report.summary.dependencie,}
-}`),
-      this.log(`Code: ${report.summary.cod,}
-}`),
-      this.log(`Configs: ${report.summary.config,}
-}`),
-      this.log(`Overall: ${report.summary.overal,}
-}`),
-      this.log(`Duration: ${duratio,}
-}ms`),
-,
-      if (report.recommendations.length > 0) {,
-        this.log('\n💡 Recommendations: '),}
-        report.recommendations.forEach(rec => {,}
-          this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`),
-          this.log(`    Action: ${rec.action}`)
-        })
-     ,
-} else {,}
-        this.log('\n✨ No security issues found!')}
+      this.log('\n📊 Security Scanner "Summary": '),'
+      this.log(`"Dependencies": ${report.summary.dependencie,`}`),`      this.log(`"Code": ${report.summary.cod,`}`),`      this.log(`"Configs": ${report.summary.config,`}`),`      this.log(`"Overall": ${report.summary.overal,`}`),`      this.log(`"Duration": ${duratio,`}ms`),`,
+      if (report.recommendations.length > 0) {
+        }
+        this.log('\n💡 "Recommendations": '),'
+        report.recommendations.forEach((rec) => {
+          }
+          this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`),`          this.log(`    "Action": ${rec.action}`)`        })
+     
+} else {
+        }
+        this.log('\n✨ No security issues found!')'
       };
 
-    } catch (error) {,}
-      this.log(`❌ Error running security scanner: ${error.messag,}
-}`),
+    } catch (error) {
+      }
+      this.log(`❌ Error running security "scanner": ${error.messag,`}`),`
       process.exit(1)
     }
-};
-
-};
+  }
+},
 ,
 // Run the security scanner,
-const scanner = new SecurityScanner(),
-scanner.run().catch(error => {,}
-  process.exit(1)}
+scanner.run().catch((error) => {
+  }
+  process.exit(1)
+scanner.run().catch(error = > {; process.exit(1)}));
 }),);
 
-module.exports = SecurityScanner;
 
+module.exports = SecurityScanner;

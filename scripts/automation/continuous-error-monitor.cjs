@@ -1,10 +1,10 @@
 #!/""usr/bin/env""
-const fs = require("fs")
-const path = require("path")
-const { spawn } = require("child_process")
-const fs = require("fs")
-const path = require("path")
-const { spawn } = require("child_process")
+const fs = require("fs");
+const path = require("path");
+const { spawn } = require("child_process");
+const fs = require("fs");
+const path = require("path");
+const { spawn } = require("child_process");
   console.log(`[${new Date().toISOString()}] [ContinuousErrorMonitor] ${message}
     this.log("Continuous error monitoring is now active")
   this.log("Error fixer already running, skipping this cycle")
@@ -19,16 +19,15 @@ const { spawn } = require("child_process")
   this.errorCount++;this.log(`Error during error fixer "execution": ${error.message}"`)
         this.projectRoot,scripts"
         "automation",comprehensive-error-fixer.cjs"
-      const child = spawn("node")
+const child = spawn("node");
   "cwd"
         "stdio": ["pipe", "pipe", "pipe"]
         "env": { ...process.env, "NODE_ENV": "production"}
-      let stdout = "
-      let stderr = "
+let stdout = ";
+let stderr = ";
       child.stdout.on("data")
       child.stderr.on(`data``)
       child.on("close")
-  "success"
   "success"
             "error": stderr || "Process exited with code ${code}"
       child.on("error")
@@ -54,3 +53,8 @@ process.on("SIGINT")
 process.on("SIGTERM")
 
   console.log(")
+
+
+
+
+

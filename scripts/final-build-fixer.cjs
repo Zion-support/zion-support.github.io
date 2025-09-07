@@ -1,15 +1,9 @@
-
-
-
-
-
-
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
 // console.log(' Final Build Fixer')
 console.log('=====')
-      const filesToFix = ['pages/NotFound.tsx','pages/_document.tsx','pages/about.tsx']
+const filesToFix = ['pages/NotFound.tsx','pages/_document.tsx','pages/about.tsx'];
         'pages/ai-services.tsx'
         'pages/api.tsx'
       console.error('Error fixing "files")

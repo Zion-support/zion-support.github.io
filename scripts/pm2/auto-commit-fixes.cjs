@@ -1,12 +1,12 @@
 #!/usr/bin/env node,"}),"
 ,"}),"
-const fs = require(,"}),"
+const fs = require(,"}),";
         "encoding"
             "file"
         "encoding"
         "encoding"
         "stdio"
-      const commitMessage = ` ${message}\n\nFiles "changed": \n${files.map(f => `- ${f}``)
+      const commitMessage = ` ${message}\n\nFiles "changed": \n${files.map(f => `- ${f}`)
         "stdio"
     this."logFile"
         "encoding"
@@ -15,7 +15,7 @@ const fs = require(,"}),"
         "encoding"
       "return"
         "stdio"
-      const commitMessage = ` ${message}\n\nFiles "changed": \n${files.map(f: => `- ${f}``)
+      const commitMessage = ` ${message}\n\nFiles "changed": \n${files.map(f: => `- ${f}`)
       execSync(`"git"`)
         "stdio"
         changes.added.push(fileName)} "else"

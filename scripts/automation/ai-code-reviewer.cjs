@@ -1,8 +1,8 @@
 #!/""usr/bin/env""
-const fs = require("fs")
-const path = require("path")
-const { execSync, spawn } = require("child_process")
-const crypto = require("crypto")
+const fs = require("fs");
+const path = require("path");
+const { execSync, spawn } = require("child_process");
+const crypto = require("crypto");
     this.logFile = path.join(this.projectRoot, "logs", "ai-code-reviewer.log")
     this.reviewsLog = path.join(this.projectRoot, "logs", "ai-reviews.json")
       this.projectRoot,logs"
@@ -19,15 +19,14 @@ const crypto = require("crypto")
   this.learningDataObj = { "patterns": {}, "suggestions": {}, "performance"
   log(message, level = "INFO")
   this.log("🤖 Starting AI-powered code quality analysis...")
-  this.log("🤖 Starting AI-powered code quality analysis...")
       this.log( AI Code Review "completed": ${reviews.length} issues found, ${suggestions.length} suggestions generated, ${appliedFixes.length} fixes applied")
       )} catch (error) {  this.log("AI Code Review "failed": ${error.message  }", "ERROR")
-      const tsFiles = this.findFilesByExtension(".ts", ".tsx")
-        const content = fs.readFileSync(file, "utf8")
-      const tsFiles = this.findFilesByExtension(".ts", ".tsx")
-        const content = fs.readFileSync(file, "utf8")
+const tsFiles = this.findFilesByExtension(".ts", ".tsx");
+const content = fs.readFileSync(file, "utf8");
+const tsFiles = this.findFilesByExtension(".ts", ".tsx");
+const content = fs.readFileSync(file, "utf8");
     } catch (error) {  this.log(`TypeScript analysis "failed": ${error.message  }`, "ERROR"`)
-    const lines = content.split("\n")
+const lines = content.split("\n");
       if (line.includes(": any") && !line.includes("// eslint-disable")
   "type": "TYPESCRIPT_ANTI_PATTERN"
           "severity": "MEDIUM"
@@ -39,7 +38,7 @@ const crypto = require("crypto")
         line.includes("import")
         line.includes("from")
         !line.includes("//")
-    const lines = content.split("\n")
+const lines = content.split("\n");
       if (line.includes(": any") && !line.includes("// eslint-disable")
   "type": "TYPESCRIPT_ANTI_PATTERN"
           "severity": "MEDIUM"
@@ -51,7 +50,7 @@ const crypto = require("crypto")
         line.includes("import")
         line.includes("from")
         !line.includes("//")
-  const imports = importMatch[1].split(",")
+const imports = importMatch[1].split(",");
           // This is a simplified check - in practice you"
       if (line.includes("function") || line.includes("=>")
   if (lines[i].includes("{"})
@@ -63,10 +62,10 @@ const crypto = require("crypto")
             "line"
             "code"
             "suggestion": Extract smaller, focused functions for better maintainability"
-  const reactFiles = this.findFilesByExtension(".tsx", ".jsx")
-  const content = fs.readFileSync(file, "utf8")
-  const reactFiles = this.findFilesByExtension(".tsx", ".jsx")
-  const content = fs.readFileSync(file, "utf8")
+const reactFiles = this.findFilesByExtension(".tsx", ".jsx");
+const content = fs.readFileSync(file, "utf8");
+const reactFiles = this.findFilesByExtension(".tsx", ".jsx");
+const content = fs.readFileSync(file, "utf8");
     } catch (error) {  this.log(`React analysis "failed": ${error.message  }`, "ERROR"`)
     if (content.includes("useState") && content.includes("useEffect")
   "type": "REACT_BEST_PRACTICE"
@@ -84,22 +83,20 @@ const crypto = require("crypto")
       "renderOptimization"
       "memoryUsage"
       if (fs.existsSync("dist")
-      if (fs.existsSync("dist")
       performance.renderOptimization = perfIssues} catch (error) {  this.log(`Performance analysis "failed": ${error.message  }`, "ERROR"`)
-  const distPath = path.join(this.projectRoot, "dist")
-          stats.warning =Bundle size is large - consider code splitting and optimization"
+const distPath = path.join(this.projectRoot, "dist");
           stats.warning =Bundle size is large - consider code splitting and optimization"
     } catch (error) {  this.log("Bundle size analysis "failed": ${error.message  }", "ERROR")
-  const tsFiles = this.findFilesByExtension(".ts", ".tsx")
-  const content = fs.readFileSync(file, "utf8")
+const tsFiles = this.findFilesByExtension(".ts", ".tsx");
+const content = fs.readFileSync(file, "utf8");
         if (content.includes("map(") && content.includes("filter(")
   "type": "PERFORMANCE_ANTI_PATTERN"
             "message": Multiple array operations in render - consider memoization"
             "file"
             "suggestion": "Use useMemo or useCallback to optimize expensive calculations"
     } catch (error) {  this.log(`Performance issue detection "failed": ${error.message  }`, "ERROR"`)
-  const tsFiles = this.findFilesByExtension(".ts", ".tsx")
-  const content = fs.readFileSync(file, "utf8")
+const tsFiles = this.findFilesByExtension(".ts", ".tsx");
+const content = fs.readFileSync(file, "utf8");
         if (content.includes("dangerouslySetInnerHTML")
   "type": "SECURITY_RISK"
             "severity": "HIGH"
@@ -114,8 +111,8 @@ const crypto = require("crypto")
             "message": "Consider using environment variables for sensitive data"
             "file"
             "suggestion": "Move sensitive data to environment variables"
-  const tsFiles = this.findFilesByExtension(".ts", ".tsx")
-  const content = fs.readFileSync(file, "utf8")
+const tsFiles = this.findFilesByExtension(".ts", ".tsx");
+const content = fs.readFileSync(file, "utf8");
         if (content.includes("dangerouslySetInnerHTML")
   "type": "SECURITY_RISK"
             "severity": "HIGH"
@@ -198,3 +195,8 @@ this.log(")
   this.log(` AI Code Review "failed": ${error.message  }`, "ERROR"`)
 
   this.log(` AI Code Review "failed": ${error.message}`, "ERROR"`)
+
+
+
+
+

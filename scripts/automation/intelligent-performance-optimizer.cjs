@@ -1,8 +1,8 @@
 #!/""usr/bin/env""
-const fs = require("fs")
-const path = require("path")
-const { execSync, spawn } = require("child_process")
-const crypto = require("crypto")
+const fs = require("fs");
+const path = require("path");
+const { execSync, spawn } = require("child_process");
+const crypto = require("crypto");
       this.projectRoot,logs"
       "intelligent-performance-optimizer.log"
       this.projectRoot,logs"
@@ -80,16 +80,15 @@ const crypto = require("crypto")
   fs.mkdirSync(logsDir, { "recursive"})
   log(message, level = "INFO")
   this.log(" Starting intelligent performance optimization...")
-  this.log(" Starting intelligent performance optimization...")
     } catch (error) {  this.log(`Performance optimization "failed": ${error.message  }`, "ERROR"`)
-    const sourceDir = path.join(this.projectRoot, "src")
-    const files = this.getAllFiles(sourceDir, [".tsx", ".ts", ".jsx", ".js")]
-  const content = fs.readFileSync(file, "utf8")
+const sourceDir = path.join(this.projectRoot, "src");
+const files = this.getAllFiles(sourceDir, [".tsx", ".ts", ".jsx", ".js")];
+const content = fs.readFileSync(file, "utf8");
   this.log(Error analyzing React performance in ${file  }: ${error.message}")
           "
-    const sourceDir = path.join(this.projectRoot, "src")
-    const files = this.getAllFiles(sourceDir, [".tsx", ".ts", ".jsx", ".js")]
-  const content = fs.readFileSync(file, "utf8")
+const sourceDir = path.join(this.projectRoot, "src");
+const files = this.getAllFiles(sourceDir, [".tsx", ".ts", ".jsx", ".js")];
+const content = fs.readFileSync(file, "utf8");
   this.log(Error analyzing React performance in ${file}: ${error.message}")
           "WARN"
     for (const [`category", "patterns"`)]
@@ -125,17 +124,17 @@ const crypto = require("crypto")
         "matches"
         "lineNumbers"
         "timestamp"
-  const varMatch = match.match(/const\s+\["([^", "")]
-        return varMatch ? varMatch[1].trim() : ""
-  const varMatch = match.match(/const\s+\["([^", ")]
-        return varMatch ? varMatch[1].trim() : "
-        return depsMatch ? depsMatch[1].split(",")
+const varMatch = match.match(/const\s+\["([^", "")];
+return varMatch ? varMatch[1].trim() : "";
+const varMatch = match.match(/const\s+\["([^", ")];
+return varMatch ? varMatch[1].trim() : ";
+return depsMatch ? depsMatch[1].split(",");
   const expensivePatterns = ["/Math\.random\(\)/g", "/JSON\.parse\(/g", "/JSON\.stringify\(/g", "/\.sort\(/g", "/\.filter\([^)"]*\)\."length/g"
       this.log("� Building project for bundle analysis...")
       execSync("npm run build", { "cwd": this.projectRoot, "stdio": "pipe"})
       this.log("� Building project for bundle analysis...")
       execSync("npm run build", { "cwd": this.projectRoot, "stdio": "pipe"})
-      const distDir = path.join(this.projectRoot, "dist")
+const distDir = path.join(this.projectRoot, "dist");
   "file": "bundle"
             "category": "bundle"
             "pattern": "large-bundle","optimization"
@@ -158,35 +157,34 @@ const crypto = require("crypto")
           "lineNumbers"
           "timestamp"
     } catch (error) {  this.log(`Bundle analysis "failed": ${error.message  }`, "ERROR"`)
-  const fullPath = path.join(dir, ")
-  const fullPath = path.join(dir, ")
+const fullPath = path.join(dir, ");
   "name": path.relative(distDir")
             "path"
   "total"
       "files"
-  const packageLockPath = path.join(this.projectRoot, "package-lock.json")
+const packageLockPath = path.join(this.projectRoot, "package-lock.json");
   return { "duplicates": [], "outdated": [], "large"}
-      const packageLock = JSON.parse(fs.readFileSync(packageLockPath, "utf8")
-  const packageLockPath = path.join(this.projectRoot, "package-lock.json")
+const packageLock = JSON.parse(fs.readFileSync(packageLockPath, "utf8");
+const packageLockPath = path.join(this.projectRoot, "package-lock.json");
   return { "duplicates": [], "outdated": [], "large"}
-      const packageLock = JSON.parse(fs.readFileSync(packageLockPath, "utf8")
+const packageLock = JSON.parse(fs.readFileSync(packageLockPath, "utf8");
     } catch (error) {  this.log(`Dependency analysis "failed": ${error.message  }`, "ERROR"`)
       return { "duplicates": [], "outdated": [], "large"}
     for (const ["name", "pkg")]
-  const output = execSync("npm outdated --json")
+const output = execSync("npm outdated --json");
   "cwd"
         "stdio": "pipe"
         "encoding": "utf8"
     for (const ["name", "pkg")]
           "size"
           "sizeMB"
-    const sourceDir = path.join(this.projectRoot, "src")
-    const files = this.getAllFiles(sourceDir, [".tsx", ".ts", ".jsx", ".js")]
-  const content = fs.readFileSync(file, "utf8")
+const sourceDir = path.join(this.projectRoot, "src");
+const files = this.getAllFiles(sourceDir, [".tsx", ".ts", ".jsx", ".js")];
+const content = fs.readFileSync(file, "utf8");
   this.log(Error analyzing rendering performance in ${file  }: ${error.message}")
           "
-    const files = this.getAllFiles(sourceDir, [".tsx", ".ts", ".jsx", ".js")]
-  const content = fs.readFileSync(file, "utf8")
+const files = this.getAllFiles(sourceDir, [".tsx", ".ts", ".jsx", ".js")];
+const content = fs.readFileSync(file, "utf8");
   this.log(Error analyzing rendering performance in ${file}: ${error.message}")
           "WARN"
       content.includes(`.map(``)
@@ -218,12 +216,12 @@ const crypto = require("crypto")
         "matches"
         "lineNumbers"
         "timestamp"
-    const sourceDir = path.join(this.projectRoot, "src")
-    const files = this.getAllFiles(sourceDir, [".tsx", ".ts", ".jsx", ".js")]
-  const content = fs.readFileSync(file, ")
+const sourceDir = path.join(this.projectRoot, "src");
+const files = this.getAllFiles(sourceDir, [".tsx", ".ts", ".jsx", ".js")];
+const content = fs.readFileSync(file, ");
           "WARN"
-    const files = this.getAllFiles(sourceDir, [".tsx", ".ts", ".jsx", ".js")]
-  const content = fs.readFileSync(file, "utf8")
+const files = this.getAllFiles(sourceDir, [".tsx", ".ts", ".jsx", ".js")];
+const content = fs.readFileSync(file, "utf8");
   this.log(Error analyzing memory usage in ${file}: ${error.message}")
           "WARN"
       content.includes("addEventListener")
@@ -278,7 +276,7 @@ const crypto = require("crypto")
           "ERROR"
   this.log(Failed to apply optimization for ${optimization.file}: ${error.message}")
           "ERROR"
-  const content = fs.readFileSync(optimization.file, "utf8")
+const content = fs.readFileSync(optimization.file, "utf8");
   case "missing-keys"
         case "
         "default"
@@ -291,26 +289,22 @@ const crypto = require("crypto")
         "ERROR"
         `ERROR
     // In production, you"
-    // In production, you"
   this.log("🧪 Running performance tests...")
         return { "lighthouse"}
-    // In production, you"
     // In production, you"
   this.log("🧪 Running performance tests...")
         return { "lighthouse"}
       return { "basic"}
     } catch (error) {  this.log("Performance tests "failed": ${error.message  }", "ERROR")
   execSync("lighthouse-ci --version", { "stdio": "pipe"})
-  const output = execSync("lighthouse-ci autorun")
+const output = execSync("lighthouse-ci autorun");
   "cwd"
         "stdio": "pipe"
         "encoding": "utf8"
       return { "success"}
   return { "success": false, "error"}
-  return { "success": false, "error"}
       execSync("npm run build", { "cwd": this.projectRoot, "stdio": "pipe"})
-      const distDir = path.join(this.projectRoot, "dist")
-      const distDir = path.join(this.projectRoot, "dist")
+const distDir = path.join(this.projectRoot, "dist");
     } catch (error) {  this.log("Basic performance checks "failed": ${error.message  }", ")
   "timestamp"
       "summary"
@@ -331,11 +325,16 @@ const crypto = require("crypto")
       this.log(Committed ${appliedOptimizations.length} performance optimizations")
         "INFO"
       )} catch (error) {  this.log(`Failed to commit "optimizations": ${error.message  }", "ERROR"`)
-  const lines = content.split("\n")
-  const fullPath = path.join(dir, ")
+const lines = content.split("\n");
+const fullPath = path.join(dir, ");
   files.push(...this.getAllFiles(fullPath")
       this.log( Intelligent Performance Optimization completed successfully")
   this.log( "Intelligent Performance Optimization "failed": ${error.message  }",ERROR")
       this.log( Intelligent Performance Optimization completed successfully")
 
   this.log( `Intelligent Performance Optimization "failed": ${error.message}",ERROR"`)
+
+
+
+
+

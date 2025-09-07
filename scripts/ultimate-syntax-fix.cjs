@@ -1,7 +1,33 @@
+#!/usr/bin/env node
+
+console.log('🔧 Ultimate Syntax Fix');
+
+
+#!/usr/bin/env node
+
+#!/usr/bin/env node
+const fs = require('fs');
+const { execSync } = require('child_process');
+
+
+#!/usr/bin/env node
+
+
+const fs = require('fs');
+const { execSync } = require('child_process');
+console.log('🔧 Ultimate Syntax Fix');
+console.log('=');
+
+
+
+
+
+
+
 
 // Function to fix all remaining syntax errors
 function fixAllSyntax(content) {
-  return content
+return content;
     // Fix malformed JSX tags
     .replace(/<h3([^>]*)>([^<]+)><\/h3>/gm, '<h3$1>$2</h3>')
     .replace(/<h2([^>]*)>([^<]+)><\/h2>/gm, '<h2$1>$2</h2>')
@@ -51,7 +77,7 @@ function fixAllSyntax(content) {
 }
 
 // Files to fix
-const filesToFix = [
+const filesToFix = [;
   'pages/about.tsx',
   'pages/blog.tsx',
   'pages/ai-services.tsx',
@@ -89,7 +115,6 @@ for (const file of filesToFix) {
   } catch (error) {
     console.log(`❌ Error fixing ${file}: ${error.message}`);
   }
-}
 
 console.log(`\n✅ Fixed ${totalFixed} files`);
 
@@ -125,6 +150,18 @@ try {
 } catch (error) {
   console.log('⚠️  Failed to push syntax fixes:', error.message);
 }
+function fixAllSyntax(content) {
+  return content;
+    // Fix malformed JSX tags;
+
 
 
 console.log('\n🎉 Ultimate syntax fix completed!');
+
+console.log('\n🎉 Ultimate syntax fix completed!');
+
+
+
+console.log('\n🎉 Ultimate syntax fix completed!');
+
+

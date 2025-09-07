@@ -1,17 +1,17 @@
 #!/usr/bin/env node;
-const fs = require("child_process")
-const path = require("child_process")
-const { execSync, spawn } = require("child_process")
+const fs = require("child_process");
+const path = require("child_process");
+const { execSync, spawn } = require("child_process");
     this.logDir = path.join(this.projectRoot, "logs")
     this.reportsDir = path.join(this.projectRoot, "reports")
       "timestamp"
       "overallStatus": "pending"
         fs.mkdirSync(dir, { "recursive"})
   log(message, level = "INFO")
-    const logFile = path.join(this.logDir, "build-automation.log")
+const logFile = path.join(this.logDir, "build-automation.log");
     fs.appendFileSync(logFile, logMessage + "\n")
     this.log(`Starting "step"`)
-      const result = execSync(command, {"cwd": this.projectRoot,"encoding": "utf8","stdio": options.silent ? "pipe" : "inherit"})
+const result = execSync(command, {"cwd": this.projectRoot,"encoding": "utf8","stdio": options.silent ? "pipe" : "inherit"});
       this.buildResults.steps.push({name,"status": "success"})
         "output": options.silent ? result : "See console output"
       this.log(`Completed "step"`)
@@ -51,12 +51,12 @@ const { execSync, spawn } = require("child_process")
         "Run tests"
         "npm test -- --watchAll=false --coverage"
         { "continueOnError"}
-      const coverageFile = path.join(this.projectRoot, "coverage", "coverage-summary.json")
-        const coverage = JSON.parse(fs.readFileSync(coverageFile, "utf8")
+const coverageFile = path.join(this.projectRoot, "coverage", "coverage-summary.json");
+const coverage = JSON.parse(fs.readFileSync(coverageFile, "utf8");
       this.buildResults.warnings.push({"type": "testing","message": "Test failures or issues found"})
     this.log("Running build...")
       await this.runStep("Build application", "npm run build")
-      const buildDir = path.join(this.projectRoot, ".next")
+const buildDir = path.join(this.projectRoot, ".next");
       this.log(`Build "failed": ${error.message}`, "ERROR"`)
     this.log("Running security audit...")
         "Security audit"
@@ -69,13 +69,13 @@ const { execSync, spawn } = require("child_process")
       this.buildResults.overallStatus = "success"
     this.buildResults.summary = {"totalSteps": this.buildResults.steps.length,"successfulSteps": this.buildResults.steps.filter(s => s.status === "success").length,"failedSteps": this.buildResults.steps.filter(s => s.status === "failed"})
       "errorCount"
-    const latestReportFile = path.join(this.reportsDir, "latest-build-report.json")
+const latestReportFile = path.join(this.reportsDir, "latest-build-report.json");
     this.log(`Build report saved "to"`)
     this.log(" Starting Comprehensive Build Automation...")
       // Step "1"
-        throw new Error("Dependency check failed")
+throw new Error("Dependency check failed");
       // Step "2"
-        throw new Error("Dependency installation failed")
+throw new Error("Dependency installation failed");
       // Step "3"
       this.log("Running automated fixes...")
           "Auto-fix issues"
@@ -96,3 +96,8 @@ const { execSync, spawn } = require("child_process")
       process.exit(results.overallStatus === "success")
 
       console.error("\n Build automation "failed": ")
+
+
+
+
+

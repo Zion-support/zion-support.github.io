@@ -1,4 +1,3 @@
-
 #!/usr/bin/env node
 
 const fs = require('fs');
@@ -22,17 +21,14 @@ class AutomationScriptFixer {
       const content = fs.readFileSync(filePath, 'utf8');
 
       if (
-        content.includes('') ||
+        content.includes('>>>>>>>')
       ) {
         this.log(`Fixing merge conflicts in: ${filePath}`);
 
         // Simple merge conflict resolution - take the HEAD version
-        let fixedContent = content
+let fixedContent = content;
           .replace(
-            /\n([\s\S]*?)\n            '$1'
-          )
-          .replace(
-            /\n([\s\S]*?)\n            '$1'
+            '$1'
           );
 
         fs.writeFileSync(filePath, fixedContent);
@@ -44,7 +40,6 @@ class AutomationScriptFixer {
       this.errors.push({ file: filePath, error: error.message });
       return false;
     }
-  }
 
   fixSyntaxErrors(filePath) {
     try {
@@ -69,7 +64,6 @@ class AutomationScriptFixer {
       this.errors.push({ file: filePath, error: error.message });
       return false;
     }
-  }
 
   getAllScriptFiles(dir) {
     let scriptFiles = [];
@@ -88,7 +82,6 @@ class AutomationScriptFixer {
       ) {
         scriptFiles.push(fullPath);
       }
-    }
 
     return scriptFiles;
   }
@@ -107,7 +100,6 @@ class AutomationScriptFixer {
       this.log(`❌ Failed to run: ${scriptPath} - ${error.message}`);
       return { success: false, error: error.message };
     }
-  }
 
   async run() {
     this.log('🎯 Starting Automation Script Fixer and Runner');
@@ -125,7 +117,7 @@ class AutomationScriptFixer {
       this.log(`✅ Fixed ${this.fixedCount} script files`);
 
       // Run some key automation scripts
-      const keyScripts = [
+const keyScripts = [;
         'scripts/performance-monitor.js',
         'scripts/health-checker.js',
         'scripts/seo-optimizer.js',
@@ -144,7 +136,6 @@ class AutomationScriptFixer {
           const result = await this.runScript(scriptPath);
           results.push({ script, ...result });
         }
-      }
 
       // Create a comprehensive automation report
       const report = {
@@ -160,7 +151,7 @@ class AutomationScriptFixer {
         errors: this.errors,
       };
 
-      const reportFile = path.join(
+const reportFile = path.join(;
         this.projectRoot,
         'automation-scripts-report.json'
       );
@@ -179,8 +170,6 @@ class AutomationScriptFixer {
       );
       throw error;
     }
-  }
-}
 
 // Run the automation script fixer and runner
 const fixer = new AutomationScriptFixer();
@@ -197,46 +186,4 @@ fixer
     );
     process.exit(1);
   });
-#!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
-const { execSync } = require('child_process')
-    this.scriptsDir = path.join(this.projectRoot, 'scripts')
-      const content = fs.readFileSync(filePath, 'utf8')
-        content.includes('')
-        content.includes('')
-            '$1'
-            '$1'
-      const content = fs.readFileSync(filePath, 'utf8')
-      if (content.includes("console.log(`"Checking"`)
-          "console.log(`"Checking"`)
-          'console.log(`"Checking"`)
-        "encoding"
-      ' Automation Script Fixer and Runner "failed"
-cursor/fix-lint-push-and-merge-to-main-f3c1;
-
-#!/usr/bin/env node
-
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
-
-class AutomationScriptFixer {
-  constructor() {
-    this.projectRoot = process.cwd();
-    this.scriptsDir = path.join(this.projectRoot, 'scripts');
-    this.fixedCount = 0;
-    this.errors = [];
-  }
-
-  log(message) {
-    console.log(`[${new Date().toISOString()}] ${message}`);
-  }
-
-  fixMergeConflicts(filePath) {
-    try {
-      const content = fs.readFileSync(filePath, 'utf8');
-
-      if (
-        content.includes('') ||
-
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0

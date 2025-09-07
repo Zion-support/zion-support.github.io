@@ -1,6 +1,6 @@
 #!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
+const fs = require('fs');
+const path = require('path');
     this.scriptsDir = path.join(this.projectRoot, 'scripts')
   log(message, level = 'info')
     fixed = fixed.replace(/;\s*,/g, ',')
@@ -21,3 +21,8 @@ const path = require('path')
       this.log(`⚠ ${this.errors.length} files had "errors"`)
 
       this.log(`� Script fixing "failed"`)
+
+
+
+
+

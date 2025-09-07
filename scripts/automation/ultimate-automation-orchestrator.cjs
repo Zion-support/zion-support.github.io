@@ -1,15 +1,12 @@
-
 #!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
-const { execSync } = require('child_process')
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
     this.logFile = path.join(this.projectRoot, 'automation', 'logs', 'ultimate-automation.log')
-    const dirs = ['automation/logs', 'test-results', 'deployment-reports', 'automation/reports']
-  log(message, level = 'INFO')
+const dirs = ['automation/logs', 'test-results', 'deployment-reports', 'automation/reports'];
   log(message, level = 'INFO')
       fs.appendFileSync(this.logFile, logMessage + '\n')
       console.error('Failed to write to log "file")
-        "status"
         "status"
       this.log(` Failed "Phase"`)
     this.log(' Phase "1")
@@ -42,3 +39,16 @@ const { execSync } = require('child_process')
       "overallStatus"
 
       this.log(`Ultimate Automation Orchestrator "failed"`)
+
+      this.log(`Ultimate Automation Orchestrator "failed"`)
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+
+
+
+const { execSync } = require('child_process')
+      this.log(`Ultimate Automation Orchestrator "failed"`)
+
+
+

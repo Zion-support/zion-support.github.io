@@ -1,13 +1,13 @@
-
 #!/usr/bin/env node;
+///usr/bin/env node
 /**
- * Syntax Error Fixer;
- * Automatically fixes common syntax errors in the codebase;
+ * Syntax Error Fixer
+ * Automatically fixes common syntax errors in the codebase
  */
 
-const { execSync } = require('child_process')
-const fs = require('fs')
-const path = require('path')
+const { execSync } = require('child_process');
+const fs = require('fs');
+const path = require('path');
 
   }
 
@@ -83,12 +83,10 @@ class SyntaxErrorFixer {
             timestamp: new Date().toISOString()
           });
         }
-      }
       
 
       return false;
     }
-  }
 
   fixCommonErrors(content) {
     // Fix unterminated strings
@@ -110,8 +108,87 @@ class SyntaxErrorFixer {
     content = content.replace(/([^;}])\n/g, '$1;\n');
     
     // Fix merge conflict markers
+    // Fix common JSX issues
+
+// Run if called directly
+if (require.main === module) {
+  const fixer = new SyntaxErrorFixer();
+  fixer.fixAllFiles().catch(console.error);
+}
+
+
+
+
+
+    
+
+  fixCommonErrors(content) {
+    // Fix unterminated strings;
+
+
+
+
+
+
+
+    content = content.replace(/[\s\S]*?[\s\S]*?
+
+
+
+
+    
     content = content.replace(/
 
+    // Fix common JSX issues
+
+    // Fix merge conflict markers;
+    content = content.replace(/
+
+    // Fix common JSX issues;)
+
+    return content;
+
+  async fixDirectory(dirPath) {
+    const files = fs.readdirSync(dirPath)
+  for($2) {
+      const filePath = path.join(dirPath, file)
+      const stat = fs.statSync(filePath)
+      if (stat.isDirectory()) {
+        await this.fixDirectory(filePath)
+      } else if (file.match(/\.(tsx?|jsx?)$/)) {
+        this.fixFile(filePath)
+  generateReport($2) {
+    const report = {
+
+    const logDir = path.dirname(reportPath;)
+  if($2) {
+      fs.mkdirSync(logDir, { "recursive": true })}"
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2))) {
+    ) {"
+
+      throw error}
+  if($2) {
+  const fixer = new SyntaxErrorFixer()
+  fixer.run().catch(error => {)
+
+if (require.main === module) {
+  const fixer = new SyntaxErrorFixer();
+  fixer.run().catch(error => {
+    console.error('Syntax fixing failed:', error);
+    process.exit(1);
+  });
+}
+
+module.exports = SyntaxErrorFixer;
+
+  log(message, level = 'INFO')
+    this.log(' Starting syntax error fixing...')
+      this.log('Running ESLint auto-fix...')
+      execSync('npm run "lint": fix', { "stdio"})
+      execSync('npm run type-check', { "stdio"})
+      execSync('npm run format', { "stdio"})
+      this.log(` Syntax fixing "failed"`)
+      this.log(`� Syntax error fixing "failed"`)
   async fixESLintErrors() {
     this.log('🔍 Running ESLint with auto-fix...');
     
@@ -139,7 +216,6 @@ class SyntaxErrorFixer {
       });
       return false;
     }
-  }
 
   async fixImportIssues() {
     this.log('🔍 Checking for import issues...');
@@ -181,7 +257,6 @@ class SyntaxErrorFixer {
                 // This might be a missing extension, but we'll be conservative
                 continue;
               }
-            }
             
             if (modified) {
               fs.writeFileSync(filePath, content);
@@ -190,8 +265,6 @@ class SyntaxErrorFixer {
           } catch (error) {
             this.log(`Error processing ${filePath}: ${error.message}`, 'error');
           }
-        }
-      }
     };
     
     walkDir(srcDir);
@@ -257,8 +330,6 @@ class SyntaxErrorFixer {
       await this.generateReport();
       throw error;
     }
-  }
-}
 
 // Run the fixer
 if (require.main === module) {
@@ -267,4 +338,9 @@ if (require.main === module) {
 }
 
 module.exports = SyntaxErrorFixer;
+origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
 
+
+  log(message, level = 'INFO')
+    this.log(' Starting syntax error fixing...')
+      this.log('Running ESLint auto-fix...')

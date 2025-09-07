@@ -1,10 +1,8 @@
-
 #!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
-const { execSync } = require('child_process')
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
       "status"
-        "status"
         "message"
         "status"
       return { "status"}
@@ -38,8 +36,20 @@ const { execSync } = require('child_process')
       "status"
       "message"
       recommendations.push(`Focus on "fixing"`)
-      recommendations.push(`Focus on "fixing"`)
 // console.log('\n "RECOMMENDATIONS")
     console.log('\n� Final report saved "to")
 
     console.error('Ultimate automation orchestrator "failed")
+
+    console.error('Ultimate automation orchestrator "failed")
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+
+
+
+const { execSync } = require('child_process')
+    console.error('Ultimate automation orchestrator "failed")
+
+
+

@@ -1,52 +1,25 @@
-import bundleAnalyzer from '@next/bundle-analyzer';
-
-const withBundleAnalyzer = bundleAnalyzer({
-  enabled: process.env.ANALYZE === 'true',
-});
-
+/** @type {import('next').NextConfig} */
 const nextConfig = {
+  reactStrictMode: true,
+  eslint: { ignoreDuringBuilds: true },
+  typescript: { ignoreBuildErrors: true },
+  images: {
+    domains: ['images.unsplash.com', 'via.placeholder.com', 'ziontechgroup.com'],
+    formats: ['image/webp', 'image/avif'],
+    minimumCacheTTL: 60,
+    dangerouslyAllowSVG: true,
+    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
+  },
   compress: true,
   poweredByHeader: false,
-  generateEtags: true,
-  
-  // Disable linting during build
-  eslint: {
-    ignoreDuringBuilds: true,
+  generateEtags: false,
+  experimental: {
+    optimizeCss: true,
+    optimizePackageImports: ['lucide-react', '@radix-ui/react-icons'],
   },
-  
-  // Disable type checking during build
-  typescript: {
-    ignoreBuildErrors: true,
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production',
   },
-  
-  // Webpack configuration to handle TypeScript and JSX
-  webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
-    // Handle TypeScript files
-    config.module.rules.push({
-      test: /\.tsx?$/,
-      use: [
-        {
-          loader: 'ts-loader',
-          options: {
-            transpileOnly: true,
-            compilerOptions: {
-              jsx: 'preserve',
-            },
-          },
-        },
-      ],
-    });
-    
-    return config;
-  },
-  
-  // Image optimization
-  images: {
-    domains: ['localhost'],
-    formats: ['image/webp', 'image/avif'],
-  },
-  
-  // Security headers
   async headers() {
     return [
       {
@@ -62,40 +35,28 @@ const nextConfig = {
           },
           {
             key: 'Referrer-Policy',
-            value: 'origin-when-cross-origin',
+            value: 'strict-origin-when-cross-origin',
+          },
+          {
+            key: 'X-DNS-Prefetch-Control',
+            value: 'on',
+          },
+          {
+            key: 'Strict-Transport-Security',
+            value: 'max-age=31536000; includeSubDomains',
+          },
+        ],
+      },
+      {
+        source: '/static/(.*)',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
           },
         ],
       },
     ];
   },
-  
-  // Redirects
-  async redirects() {
-    return [
-      {
-        source: '/home',
-        destination: '/',
-        permanent: true,
-      },
-    ];
-  },
-  
-  
-  // Experimental features
-  experimental: {
-    optimizeCss: true,
-  },
-  
-  // Output configuration
-  output: 'standalone',
-  
-  // Trailing slash
-  trailingSlash: false,
-  
-  // Environment variables
-  env: {
-    CUSTOM_KEY: process.env.CUSTOM_KEY,
-  },
 };
-
-export default withBundleAnalyzer(nextConfig);
+export default nextConfig;

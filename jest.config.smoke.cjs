@@ -1,57 +1,120 @@
 const nextJest = require('next/jest');
 
 const createJestConfig = nextJest({
-  // Provide the path to your Next.js app to load next.config.js and .env files
-  dir: './',
+  dir: './'
 });
 
-// Add any custom config to be passed to Jest
-const customJestConfig = {
+const config = {
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
   testEnvironment: 'jsdom',
-  testMatch: [
-    '**/__tests__/**/*.(js|jsx|ts|tsx)',
-    '**/*.(test|spec).(js|jsx|ts|tsx)'
-  ],
-  testPathIgnorePatterns: [
-    '/node_modules/',
-    '/src_backup/',
-    '/src_backup_temp/',
-    '/backup-problematic-files/',
-    '/src.disabled/',
-    '/pages_backup/',
-    '/corrupted-files-backup/',
-    '/lib_backup/',
-    '/components.disabled/',
-    '/components.disabled_full/',
-    '/pages.disabled/',
-    '/src.pages.disabled/',
-    '/recovered-branches/',
-    '/temp_backup/',
-    '/api.disabled/',
-    '/src.broken/',
-    '/src.corrupted/',
-    '/pages.broken/',
-    '/pages.corrupted/',
-    '/components.broken/',
-    '/components.corrupted/'
-  ],
-  collectCoverageFrom: [
-    'src/**/*.{js,jsx,ts,tsx}',
-    '!src/**/*.d.ts',
-    '!src/**/*.stories.{js,jsx,ts,tsx}',
-  ],
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
+  testMatch: ['**/*.smoke.test.*'],
   moduleNameMapping: {
-    '^@/(.*)$': '<rootDir>/src/$1',
+    '^@/(.*)$': '<rootDir>/$1',
   },
   transform: {
-    '^.+\\.(js|jsx|ts|tsx)$': ['babel-jest', { presets: ['next/babel'] }],
+    '^.+\\.(ts|tsx)$': 'ts-jest',
   },
-  transformIgnorePatterns: [
-    '/node_modules/',
-    '^.+\\.module\\.(css|sass|scss)$',
+  collectCoverageFrom: [
+    '**/*.{ts,tsx}',
+    '!**/*.d.ts',
+    '!**/node_modules/**',
+    '!**/.next/**',
   ],
+  testPathIgnorePatterns: [
+    '<rootDir>/node_modules/',
+    '<rootDir>/dist/',
+    '<rootDir>/build/',
+    '<rootDir>/backup-problematic-files/',
+    '<rootDir>/temp_exclude/',
+    '<rootDir>/src_backup/',
+    '<rootDir>/temp_backup/',
+    '<rootDir>/temp_components/',
+    '<rootDir>/temp_conflicts/',
+    '<rootDir>/temp_working/',
+    '<rootDir>/backup*/',
+    '<rootDir>/corrupted_backup/',
+    '<rootDir>/temp_*/',
+    '<rootDir>/zion-os/',
+    '<rootDir>/zion-website/',
+    '<rootDir>/zion-ai-assistant/',
+    '<rootDir>/zion_academy/',
+    '<rootDir>/apps/',
+    '<rootDir>/pages_backup*/',
+    '<rootDir>/pages.*/',
+    '<rootDir>/pages-*/',
+    '<rootDir>/pages_disabled*/',
+    '<rootDir>/pages.disabled*/',
+    '<rootDir>/pages.broken*/',
+    '<rootDir>/pages.corrupted*/',
+    '<rootDir>/pages.old*/',
+    '<rootDir>/pages._*/',
+    '<rootDir>/pages.__*/',
+    '<rootDir>/backup-pages/',
+    '<rootDir>/src.pages.disabled/',
+    '<rootDir>/lib_backup*/',
+    '<rootDir>/corrupted-files-backup*/',
+    '<rootDir>/performance-reports*/',
+    '<rootDir>/log-analysis-reports*/',
+    '<rootDir>/link-reports*/',
+    '<rootDir>/lint-target*/',
+    '<rootDir>/monitoring*/',
+    '<rootDir>/pm2-automation*/',
+    '<rootDir>/automation/logs*/',
+    '<rootDir>/automation/backup*/'
+  ],
+  modulePathIgnorePatterns: [
+    '<rootDir>/backup-problematic-files/',
+    '<rootDir>/temp_exclude/',
+    '<rootDir>/src_backup/',
+    '<rootDir>/temp_backup/',
+    '<rootDir>/temp_components/',
+    '<rootDir>/temp_conflicts/',
+    '<rootDir>/temp_working/',
+    '<rootDir>/backup*/',
+    '<rootDir>/corrupted_backup/',
+    '<rootDir>/temp_*/',
+    '<rootDir>/zion-os/',
+    '<rootDir>/zion-website/',
+    '<rootDir>/zion-ai-assistant/',
+    '<rootDir>/zion_academy/',
+    '<rootDir>/apps/',
+    '<rootDir>/pages_backup*/',
+    '<rootDir>/pages.*/',
+    '<rootDir>/pages-*/',
+    '<rootDir>/pages_disabled*/',
+    '<rootDir>/pages.disabled*/',
+    '<rootDir>/pages.broken*/',
+    '<rootDir>/pages.corrupted*/',
+    '<rootDir>/pages.old*/',
+    '<rootDir>/pages._*/',
+    '<rootDir>/pages.__*/',
+    '<rootDir>/backup-pages/',
+    '<rootDir>/src.pages.disabled/',
+    '<rootDir>/lib_backup*/',
+    '<rootDir>/corrupted-files-backup*/',
+    '<rootDir>/performance-reports*/',
+    '<rootDir>/log-analysis-reports*/',
+    '<rootDir>/link-reports*/',
+    '<rootDir>/lint-target*/',
+    '<rootDir>/monitoring*/',
+    '<rootDir>/pm2-automation*/',
+    '<rootDir>/automation/logs*/',
+    '<rootDir>/automation/backup*/'
+  ],
+  coverageThreshold: {
+    global: {
+      branches: 70,
+      functions: 70,
+      lines: 70,
+      statements: 70
+    }
+  },
+  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
+  verbose: true,
+  collectCoverage: false,
+  testTimeout: 30000
 };
 
-// createJestConfig is exported this way to ensure that next/jest can load the Next.js config which is async
-module.exports = createJestConfig(customJestConfig);
+module.exports = createJestConfig(config);
+

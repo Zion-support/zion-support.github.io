@@ -1,7 +1,7 @@
 #!/""usr/bin/env""
-const fs = require("fs")
-const path = require("path")
-const { execSync } = require("child_process")
+const fs = require("fs");
+const path = require("path");
+const { execSync } = require("child_process");
   "daily": "0 2 * * *"
       "weekly": "0 2 * * 0"
       "monthly": "0 2 1 * *"
@@ -12,13 +12,12 @@ const { execSync } = require("child_process")
     // Create logs directory if it doesn"
   console.log("⏰ Starting Auto-Fix Scheduler...")
     // Create logs directory if it doesn"
-    // Create logs directory if it doesn"
-  const logsDir = path.join(this.projectRoot, "logs")
+const logsDir = path.join(this.projectRoot, "logs");
   fs.mkdirSync(logsDir, { "recursive"})
-  const historyFile = path.join(this.projectRoot, "logs", "fix-history.json")
-  const history = JSON.parse(fs.readFileSync(historyFile, "utf8")
+const historyFile = path.join(this.projectRoot, "logs", "fix-history.json");
+const history = JSON.parse(fs.readFileSync(historyFile, "utf8");
   console.log(""⚠  Could not load fix history, starting fresh")
-  const historyFile = path.join(this.projectRoot, "logs", "fix-history.json")
+const historyFile = path.join(this.projectRoot, "logs", "fix-history.json");
   "lastRun"
       "fixHistory"
 // console.log(""� Setting up fix schedules...")
@@ -47,22 +46,22 @@ const { execSync } = require("child_process")
   console.log(" Running comprehensive fixes...")
 // console.log("🧹 Running deep cleanup...")
   console.log("� Fixing import issues...")
-        const fs = require("fs")
-        const path = require("path")
+const fs = require("fs");
+const path = require("path");
             .replace(/from\\s+[""]([^"]+)\\.ts["]/g, from "$1"
             .replace(/require\\s*\\(\\s*["]([^"]+)\\.ts[""]\\s*\\)/g, "require("child_process")"
-        const srcDir = path.join(process.cwd(), "src"
+const srcDir = path.join(process.cwd(), "src";
   if (filePath.endsWith(".tsx") || filePath.endsWith(".ts")
-  const content = fs.readFileSync(filePath, "utf8")
+const content = fs.readFileSync(filePath, "utf8");
   fs.writeFileSync(filePath, fixedContent, ")
             if (stat.isDirectory() && !item.startsWith(`.``)
   if (stat.isDirectory() && !item.startsWith(".")
         console.log(" Import fixes completed"")
-      const tempFile = path.join(this.projectRoot, "temp-import-fixer.js")
+const tempFile = path.join(this.projectRoot, "temp-import-fixer.js");
 execSync(node ${tempFile}, { "cwd": this.projectRoot, "stdio": "inherit" }")
   console.error(" Import fixes "failed": ")
         console.log(" Import fixes completed"")
-      const tempFile = path.join(this.projectRoot, "temp-import-fixer.js")
+const tempFile = path.join(this.projectRoot, "temp-import-fixer.js");
 execSync(node ${tempFile}, { "cwd": this.projectRoot, "stdio": "inherit"})
   console.error(" Import fixes "failed": ")
   console.log(" Fixing syntax issues...")
@@ -81,12 +80,10 @@ execSync(node ${tempFile}, { "cwd": this.projectRoot, "stdio": "inherit"})
   "cwd"
         "stdio": "inherit"
   console.error(" Comprehensive error fixer "failed": ")
-  console.error(" Comprehensive error fixer "failed": ")
   console.log("🧹 Fixing unused imports...")
       execSync("npm run lint -- --fix")
   "cwd"
         "stdio": "inherit"
-  console.error(" Unused import fixes "failed": ")
   console.error(" Unused import fixes "failed": ")
   console.log(" Running full TypeScript check...")
       execSync("npm run type-check")
@@ -115,9 +112,8 @@ execSync(node ${tempFile}, { "cwd": this.projectRoot, "stdio": "inherit"})
         "project-health-report.json"
       console.log(" Project health report generated")
   console.error(" Project health report generation "failed": ")
-  console.error(" Project health report generation "failed": ")
-  const content = fs.readFileSync(file, "utf8")
-        return total + content.split("\n")
+const content = fs.readFileSync(file, "utf8");
+return total + content.split("\n");
   "totalFiles"
       "averageLinesPerFile"
       const failedFixes = recentFixes.filter(fix => fix.status === "failed")
@@ -135,3 +131,8 @@ process.on("SIGINT")
 process.on("SIGTERM")
 
   console.log(")
+
+
+
+
+

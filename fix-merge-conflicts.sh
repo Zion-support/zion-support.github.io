@@ -1,83 +1,36 @@
 #!/bin/bash
 
-# Script to automatically resolve merge conflicts by choosing the main branch version
+# Script to automatically resolve merge conflicts by choosing the newer version
+# This script removes merge conflict markers and keeps the content after =======
 
-        # Remove any remaining conflict markers
-        sed -i '/^<<<<<<< /d' "$file"
-    fi
-done
-
-echo "Merge conflicts fixed!"
-
-# Script to fix merge conflicts by keeping HEAD version
-echo "Fixing merge conflicts in all files..."
+echo "Starting merge conflict resolution..."
 
 # Find all files with merge conflicts
-files_with_conflicts=$(find /workspace/app -name "*.tsx" -o -name "*.ts" | xargs grep -l "" 2>/dev/null)
+files_with_conflicts=$(find . -name "*.js" -o -name "*.ts" -o -name "*.jsx" -o -name "*.tsx" -o -name "*.json" -o -name "*.css" -o -name "*.md" | grep -v node_modules | grep -v .git | xargs grep -l "<<<<<<< HEAD" 2>/dev/null)
 
+if [ -z "$files_with_conflicts" ]; then
+    echo "No merge conflicts found."
+    exit 0
+fi
+
+echo "Found merge conflicts in $(echo "$files_with_conflicts" | wc -l) files"
+
+# Process each file
 for file in $files_with_conflicts; do
-    echo "Fixing merge conflicts in: $file"
+    echo "Processing: $file"
     
-    # Create a temporary file
-    temp_file=$(mktemp)
+    # Create a backup
+    cp "$file" "$file.backup"
     
-    # Process the file to resolve conflicts
-    awk '
-    /^/ { in_head = 0; in_other = 1; next }
-    /^    in_other { next }
-    /^/ { in_head = 1; next }
-    /^/ { in_head = 0; in_other = 1; next }
-    /^
-    in_other { next }
-    { print }
-    ' "$file" > "$temp_file"
+    # Use sed to resolve conflicts by keeping the newer version (after =======)
+    # This removes everything from <<<<<<< HEAD to ======= and the >>>>>>> line
+    sed -i '/<<<<<<< HEAD/,/=======/d; />>>>>>> /d' "$file"
     
-    # Replace the original file
-    mv "$temp_file" "$file"
+    # Remove any remaining conflict markers
+    sed -i '/^<<<<<<< /d; /^=======$/d; /^>>>>>>> /d' "$file"
     
     echo "Fixed: $file"
 done
 
-echo "Merge conflicts fixed. Backups saved to /workspace/backup-merge-conflicts/"
-echo "Please review the changes and test the build."
-echo "Merge conflicts fixed!"
-echo "Merge conflicts fixed. Backups saved to /workspace/backup-merge-conflicts/"
-echo "Please review the changes and test the build."
-echo "Merge conflicts fixed!"
-echo "Merge conflicts fixed!"
-echo "Merge conflicts fixed. Backups saved to /workspace/backup-merge-conflicts/"
-echo "Please review the changes and test the build."
-echo "Merge conflicts fixed!"
-
-
-echo "Merge conflicts fixed!"
-
-
-echo "Merge conflicts fixed!"
-
-echo "Merge conflicts fixed!"
-
-
-
-echo "Fixing merge conflicts..."
-
-# Find all files with merge conflicts
-files_with_conflicts=$(grep -r "/d' "$file"
-        sed -i '/^
-        # Remove any remaining conflict markers
-        sed -i '/^<<<<<<< /d' "$file"
-        sed -i '/^    fi
-done
-
-echo "Merge conflicts fixed!"
-echo "All merge conflicts have been resolved!"
-echo "Merge conflicts resolved in all files."
-
-        # Remove any remaining conflict markers
-        sed -i '/^<<<<<<< /d' "$file"
-    fi
-done
-
-echo "Merge conflicts fixed!"
-echo "All merge conflicts have been resolved!"
-
+echo "Merge conflict resolution completed."
+echo "Backup files created with .backup extension"

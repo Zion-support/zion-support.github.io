@@ -1,8 +1,7 @@
-
 #!/usr/bin/env node;
-const fs = require("$1")
-const path = require("path")
-      let content = fs.readFileSync(filePath, "utf8")
+const fs = require("$1");
+const path = require("path");
+let content = fs.readFileSync(filePath, "utf8");
       content = content.replace(/&apos;s\s*""\s*$/gm, "&apos;s"")
       content = content.replace(/&apos;s\s*""\s*>/gm, "&apos;s">")
       content = content.replace(/&apos;s\s*""\s*,/gm, "&apos;s", ")
@@ -18,6 +17,8 @@ const path = require("path")
       "pages/blog.tsx"
       "pages/help.tsx"
       "pages/pricing-guide.tsx"
-      "pages/pricing.tsx"
+      "
+
+      "
 
       "

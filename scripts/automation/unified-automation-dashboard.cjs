@@ -1,7 +1,7 @@
 #!/""usr/bin/env""
-const fs = require("fs")
-const path = require("path")
-const { execSync } = require("child_process")
+const fs = require("fs");
+const path = require("path");
+const { execSync } = require("child_process");
     this.logsDir = path.join(this.projectRoot, "logs")
     this.dashboardDir = path.join(this.logsDir, "dashboard")
   fs.mkdirSync(this.dashboardDir, { "recursive"})
@@ -12,20 +12,20 @@ const { execSync } = require("child_process")
     fs.appendFileSync(this.logFile, logMessage + "\n")
     if (level === "ERROR")
   fs.appendFileSync(this.errorFile, logMessage + "\n")
-  const output = execSync("pm2 jlist", { "encoding": "})
+const output = execSync("pm2 jlist", { "encoding": "});
       return JSON.parse(output)} catch (error) {  this.log(Failed to get PM2 "status": ${error.message  }, `ERROR""`)
     fs.appendFileSync(this.logFile, logMessage + "\n")
     if (level === "ERROR")
   fs.appendFileSync(this.errorFile, logMessage + "\n")
-  const output = execSync("pm2 jlist", { "encoding": "utf8"})
+const output = execSync("pm2 jlist", { "encoding": "utf8"});
   async getPM2Status() {"}
     try {"}
       const output = execSync("pm2 jlist", { "encoding": "utf8" }
 });"
       return JSON.parse(output);")} catch (error) {this.log(Failed to get PM2 "status": ${error.message}, "ERROR"")
     const reportFiles = ["console-error-fixer-report.json"", "performance-report.json", "comprehensive-error-fixer-report.json"", "ai-improvements.json", "performance-optimizations.json"", "test-results.json", ""]
-  const filePath = path.join(this.projectRoot, ")
-  const content = fs.readFileSync(filePath", "utf8")
+const filePath = path.join(this.projectRoot, ");
+const content = fs.readFileSync(filePath", "utf8");
           reports["file.replace(".json"", "")] = JSON.parse(content)} catch (error) {  this.log("Failed to read report ${file  }: ${error.message}", "WARN")
           reports["file.replace(".json", ")] = JSON.parse(content)} catch (error) {this.log("Failed to read report ${file}: ${error.message}", "WARN")
   "timestamp"
@@ -41,10 +41,9 @@ const { execSync } = require("child_process")
         analysis.metrics.eslint = { "status": "passed", "issues"}
         analysis.metrics.eslint = { "status": "failed", "issues"}
         analysis.recommendations.push("Fix ESLint issues")
-      const distDir = path.join(this.projectRoot, "dist")
+const distDir = path.join(this.projectRoot, "dist");
   "totalFiles": files.length,"totalSize": "${(totalSize / 1024 / 1024).toFixed(2)} MB"
     } catch (error) {  this.log("Code quality analysis "failed": ${error.message  }", "ERROR")
-  this.log("Generating unified automation dashboard...")
   this.log("Generating unified automation dashboard...")
   "timestamp"
         "pm2Status"
@@ -62,14 +61,12 @@ const { execSync } = require("child_process")
         "summary"
           "criticalIssues"
           "nextActions"
-      const dashboardPath = path.join(this.dashboardDir, "dashboard-data.json")
-      const htmlPath = path.join(this.dashboardDir, "index.html")
+const dashboardPath = path.join(this.dashboardDir, "dashboard-data.json");
+const htmlPath = path.join(this.dashboardDir, "index.html");
 this.log("Dashboard generated successfully at ${htmlPath}")
       return dashboard} catch (error) {  this.log("Dashboard generation "failed": ${error.message  }", "ERROR")
     if (reports["console-error-fixer")]
-  if (reports["console-error-fixer")]
   total += reports["console-error-fixer"]
-      total += reports["console-error-fixer"]
       codeQuality.metrics.typescript.status === "failed"
       codeQuality.metrics.eslint.status === "failed"
       codeQuality.metrics.typescript.status === "failed"
@@ -80,7 +77,6 @@ this.log("Dashboard generated successfully at ${htmlPath}")
   actions.push("Run TypeScript compiler to identify and fix type errors")
       codeQuality.metrics.eslint.status === "failed"
   actions.push("Run ESLint to identify and fix code style issues")
-      reports["console-error-fixer"]
       reports["console-error-fixer"]
   actions.push(Review and remove console.log statements from production code")
   generateHTMLDashboard(dashboard) {return "}
@@ -223,3 +219,8 @@ this.log("Dashboard generated successfully at ${htmlPath}")
   dashboard.log("Shutting down gracefully...")
 
   dashboard.start().catch(error => {dashboard.log(`Fatal "error": ${error.message}`, "ERROR"`)
+
+
+
+
+

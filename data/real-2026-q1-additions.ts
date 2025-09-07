@@ -1,284 +1,1866 @@
+  {
 
-{      'Multichannel ingestion',
 
+  {
+  {
+
+  {{{'Multichannel ingestion','LLM clustering and themes','Impact scoring','Roadmap export';
+    ],popular: true,id: 'customer - feedback - intelligence',name: 'Customer Feedback Intelligence',tagline: 'Summarize NPS / CSAT and reviews into prioritized insights',price: '$149',period: '/month',description:;
+      'Aggregate surveys, tickets and reviews, cluster themes with LLMs, and generate prioritized roadmaps with impact scores.',features: [;'Multichannel ingestion','LLM clustering and themes','Impact scoring','Roadmap export';
+    ],popular: true,icon: '💬',color: 'from - cyan - 600 to - blue - 700',text_color: 'text - cyan - 300',link: 'https://ziontechgroup.com / services / customer - feedback - intelligence',category: 'AI & Data',real_service: true,market_position: 'Actionable product feedback without heavy BI',target_audience: 'Product and CX teams',trial_days: 14,setup_time: '1 hour',technology: ['Embeddings, Vector DB, Next.js'],integrations: ['Zendesk', 'Intercom', 'G2', 'Capterra'],use_cases: ['Prioritize roadmap', 'Reduce churn'],roi: 'Ship high - impact features faster',competitors: ['UnitQ', 'EnjoyHQ'],market_size: '$2B+',growth_rate: '18% CAGR',variant: 'ai - futuristic',contact_info: contact,real_implementation: true,implementation_details: 'Connectors, clustering, scoring models',launch_date: '2026 - 01 - 12',customers: 9,rating: 4 && 4.7,reviews: 5;
+  },{'OpenAPI scanning','Auth / rate limit tests','OWASP API checks','PR annotations and diffs';
+    ],popular: true,reviews: 5;
+  },{id: 'api - security - posture - monitor',name: 'API Security Posture Monitor',tagline: 'Detect OWASP API risks and auth gaps with CI annotations',price: '$199',period: '/month',description:;
+      'Continuously scan OpenAPI specs and staging endpoints for auth gaps, rate - limits, and common vulnerabilities with pull request annotations.',features: [;'OpenAPI scanning','Auth / rate limit tests','OWASP API checks','PR annotations and diffs';
+    ],popular: true,icon: '🛡️',color: 'from - rose - 600 to - pink - 700',text_color: 'text - rose - 300',link: 'https://ziontechgroup.com / services / api - security - posture - monitor',category: 'Quality & Monitoring',real_service: true,market_position: 'Developer - first API security posture',target_audience: 'Platform and security teams',trial_days: 14,setup_time: '30 minutes',technology: ['OpenAPI, Node, CI'],integrations: ['GitHub', 'GitLab', 'Jenkins'],use_cases: ['Pre - deploy API checks', 'Security posture'],roi: 'Reduce security escapes by 60%',competitors: ['StackHawk', '42Crunch'],market_size: '$4B',growth_rate: '20% CAGR',variant: 'quantum - cyberpunk',contact_info: contact,real_implementation: true,implementation_details: 'Spec analyzers, runners, annotations',launch_date: '2026 - 01 - 14',customers: 11,rating: 4 && 4.5,reviews: 6;
+  },{'Idempotency and retries','Run history','Alerting and webhooks';
+    ],popular: false,reviews: 6;
+  },{'Flexible cron/rate',id: 'edge - cron - orchestrator',name: 'Edge Cron Orchestrator',tagline: 'Reliable schedules with retries, jitter and DLQs',price: '$59',period: '/month',description:;
+      'Define schedules across providers with idempotency, exponential backoff, and run history with alerting.',features: [;
+      'Flexible cron / rate','Idempotency and retries','Run history','Alerting and webhooks';
+    ],popular: false,icon: '⏰',color: 'from - amber - 500 to - orange - 600',text_color: 'text - amber - 300',link: 'https://ziontechgroup.com / services / edge - cron - orchestrator',category: 'Developer Tools',real_service: true,market_position: 'Unified schedules across clouds',target_audience: 'SaaS and platform teams',trial_days: 14,setup_time: '2 hours',technology: ['Workers / Lambda', 'Webhooks'],integrations: ['AWS', 'Cloudflare', 'GCP'],use_cases: ['Billing cycles', 'Data syncs'],roi: 'Fewer missed jobs and incidents',competitors: ['Temporal (overkill)', 'DIY'],market_size: '$1B+',growth_rate: '15% CAGR',variant: 'holographic - matrix',contact_info: contact,real_implementation: true,implementation_details: 'Scheduler API, dashboard, webhooks',launch_date: '2026 - 01 - 18',customers: 7,rating: 4 && 4.5,reviews: 4;
+  },{'Signature stripping','Attachment handling','Webhook retries / DLQ','Inspector UI';
+    ],popular: false,reviews: 4;
+  },{id: 'email - parsing - routing - api',name: 'Email Parsing & Routing API',tagline: 'Inbound email to structured events with attachments',price: '$39',period: '/month',description:;
+      'Parse inbound email, normalize signatures, extract attachments, and deliver to your webhooks with retries and dead - letter queues.',features: [;'Signature stripping','Attachment handling','Webhook retries / DLQ','Inspector UI';
+    ],popular: false,icon: '📨',color: 'from - indigo - 600 to - blue - 700',text_color: 'text - indigo - 300',link: 'https://ziontechgroup.com / services / email - parsing - routing - api',category: 'Developer Tools',real_service: true,market_position: 'Developer - friendly email ingestion',target_audience: 'Developers and platform',trial_days: 14,setup_time: '30 minutes',technology: ['SMTP / Webhooks', 'Virus scan'],integrations: ['SES', 'SendGrid', 'Mailgun'],use_cases: ['Ticket intake', 'CRM capture'],roi: 'Automate manual email triage',competitors: ['Mailparser', 'Integromat'],customers: 8,rating: 4 && 4.6,reviews: 5;
+  },{'Templates and briefs','Compliance checks','Multi - channel export';
+    ],popular: true,market_size: '$0.8B',growth_rate: '10% CAGR',variant: 'neural - quantum',contact_info: contact,real_implementation: true,implementation_details: 'Inbound parsers, queueing, UI',launch_date: '2026 - 01 - 20',customers: 8,rating: 4 && 4.6,reviews: 5;
+  },{'Brand/tone controls',id: 'ai - marketing - content - studio',name: 'AI Marketing Content Studio',tagline: 'Campaign - ready blogs, emails and ads with brand guardrails',price: '$119',period: '/month',description:;
+      'Generate on - brand content with templates, tone control, compliance checks, and multi - channel export.',features: [;
+      'Brand / tone controls','Templates and briefs','Compliance checks','Multi - channel export';
+    ],popular: true,icon: '📝',color: 'from - fuchsia - 600 to - pink - 700',text_color: 'text - fuchsia - 300',link: 'https://ziontechgroup.com / services / ai - marketing - content - studio',category: 'AI & Data',real_service: true,market_position: 'On - brand AI content for teams',target_audience: 'Marketing and growth teams',trial_days: 14,setup_time: '30 minutes',technology: ['LLMs, Style prompts'],integrations: ['HubSpot', 'Mailchimp', 'Webflow'],use_cases: ['Blog, email, ads'],roi: 'Scale content 5× faster',competitors: ['Jasper', 'Writer'],market_size: '$3B+',growth_rate: '22% CAGR',variant: 'ai - futuristic',contact_info: contact,real_implementation: true,implementation_details: 'Template engine, tone guardrails',launch_date: '2026 - 01 - 22',customers: 15,rating: 4 && 4.6,reviews: 9;
+  },{'Cookie flags','PR annotations','Weekly reports';
+    ],popular: false,reviews: 9;
+  },{'CSP/HSTS checks',id: 'security - headers - scanner',name: 'Security Headers Scanner',tagline: 'Continuous CSP / HSTS / cookie flag auditing with diffs',price: '$19',period: '/month',description:;
+      'Audit security headers across environments and get pull request annotations, weekly reports and diffs.',features: [;
+      'CSP / HSTS checks','Cookie flags','PR annotations','Weekly reports';
+    ],popular: false,icon: '🔐',color: 'from - sky - 600 to - blue - 700',text_color: 'text - sky - 300',link: 'https://ziontechgroup.com / services / security - headers - scanner',category: 'Quality & Monitoring',real_service: true,market_position: 'Simple posture checks for web apps',target_audience: 'Developers and security',trial_days: 14,setup_time: '15 minutes',technology: ['Node', 'Playwright'],integrations: ['GitHub', 'GitLab'],use_cases: ['Header hardening', 'Compliance reports'],roi: 'Reduce risk and review toil',competitors: ['Mozilla Observatory'],market_size: '$0.5B',growth_rate: '8% CAGR',variant: 'holographic',contact_info: contact,real_implementation: true,implementation_details: 'Scanners, CI annotations, reports',launch_date: '2026 - 01 - 25',customers: 20,rating: 4 && 4.5,reviews: 10;
+  },{'Feature versioning','Validation rules','Lineage tracking','Online serving API';
+    ],popular: false,reviews: 10;
+  },{id: 'ml - feature - store - starter',name: 'ML Feature Store Starter',tagline: 'Versioned features, validation and online serving',price: '$149',period: '/month',description:;
+      'Ship ML features faster with versioning, validation rules, lineage, and low - latency serving APIs.',features: [;'Feature versioning','Validation rules','Lineage tracking','Online serving API';
+    ],popular: false,icon: '📦',color: 'from - emerald - 600 to - teal - 700',text_color: 'text - emerald - 300',link: 'https://ziontechgroup.com / services / ml - feature - store - starter',category: 'AI & Data',real_service: true,market_position: 'Lean feature store for teams',target_audience: 'Data / ML teams',trial_days: 14,setup_time: '1 day',technology: ['DB, Vector / Key - Value'],integrations: ['Databricks', 'dbt', 'Airflow'],use_cases: ['Faster model delivery'],roi: 'Shorter time - to - prod models',competitors: ['Tecton', 'Feast'],market_size: '$1B+',growth_rate: '20% CAGR',variant: 'neural - quantum',contact_info: contact,real_implementation: true,implementation_details: 'Schemas, validators, API',launch_date: '2026 - 01 - 28',customers: 6,rating: 4 && 4.5,reviews: 3;
+  },{'SLO editor','Burn - rate alerts','Runbook hints','Integrations and webhooks';
+    ],popular: false,reviews: 3;
+  },{id: 'slo - burn - rate - coach',name: 'SLO Burn Rate Coach',tagline: 'Compute SLOs and coach on burn - rate risks',price: '$49',period: '/month',description:;
+      'Define SLOs, compute error budgets and get proactive coaching with burn - rate alerts tied to runbooks.',features: [;'SLO editor','Burn - rate alerts','Runbook hints','Integrations and webhooks';
+    ],popular: false,icon: '📈',color: 'from - lime - 500 to - emerald - 600',text_color: 'text - lime - 300',link: 'https://ziontechgroup.com / services / slo - burn - rate - coach',category: 'Observability',real_service: true,market_position: 'SLOs without the complexity',target_audience: 'SRE and platform',trial_days: 14,setup_time: '1 hour',technology: ['Prom / OTEL'],integrations: ['PagerDuty', 'Slack'],use_cases: ['Error budgets', 'Coaching'],roi: 'Fewer incidents',competitors: ['Nobl9'],customers: 10,rating: 4 && 4.5,reviews: 6;
+  },{'RUM + synthetic','Budgets and alerts','Bundle diff and PR notes','Edge hints';
+    ],popular: false,market_size: '$0.8B',growth_rate: '14% CAGR',variant: 'holographic - matrix',contact_info: contact,real_implementation: true,implementation_details: 'SLO calc, alerting, UI',launch_date: '2026 - 02 - 01',customers: 10,rating: 4 && 4.5,reviews: 6;
+  },{id: 'browser - performance - optimizer',name: 'Browser Performance Optimizer',tagline: 'Budget - driven CWV with hints and PR annotations',price: '$69',period: '/month',description:;
+      'Improve Core Web Vitals with RUM / synthetic insights, performance budgets, and PR annotations for bundle changes.',features: [;'RUM + synthetic','Budgets and alerts','Bundle diff and PR notes','Edge hints';
+    ],popular: false,icon: '⚡',color: 'from - cyan - 600 to - purple - 700',text_color: 'text - cyan - 300',link: 'https://ziontechgroup.com / services / browser - performance - optimizer',category: 'Quality & Monitoring',real_service: true,market_position: 'Developer - first CWV improvements',target_audience: 'Web and platform teams',trial_days: 14,setup_time: '2 hours',technology: ['Lighthouse, RUM'],integrations: ['GitHub', 'Vercel', 'Netlify'],use_cases: ['CWV, bundle size'],roi: '+20 LCP, fewer regressions',competitors: ['SpeedCurve', 'Calibre'],customers: 5,rating: 4 && 4.5,reviews: 3;
+  },{'Budgets and owners','Anomaly detection','Policy guardrails','IaC recommendation exports';
+    ],popular: true,market_size: '$0.5B',growth_rate: '12% CAGR',variant: 'neural - quantum - cyberpunk',contact_info: contact,real_implementation: true,implementation_details: 'RUM SDK, CI checks, UI',launch_date: '2026 - 02 - 05',customers: 5,rating: 4 && 4.5,reviews: 3;
+  },{id: 'cloud - cost - governance - suite',name: 'Cloud Cost Governance Suite',tagline: 'Budgets, owners, and policy guardrails across clouds',price: '$499',period: '/month',description:;
+      'Enforce budgets with owners, detect anomalies and apply policy guardrails with IaC exports for approvals.',features: [;'Budgets and owners','Anomaly detection','Policy guardrails','IaC recommendation exports';
+    ],popular: true,icon: '💸',color: 'from - amber - 600 to - orange - 700',text_color: 'text - amber - 300',link: 'https://ziontechgroup.com / services / cloud - cost - governance - suite',category: 'Cloud & FinOps',real_service: true,market_position: 'Governance overlay for FinOps',target_audience: 'Finance and platform',trial_days: 14,setup_time: '3 days',technology: ['AWS / GCP / Azure APIs'],integrations: ['Datadog', 'Slack', 'Jira'],use_cases: ['Spend control', 'Chargeback'],roi: 'Reduce overspend by 10–30%',competitors: ['CloudZero', 'Finout'],market_size: '$12B',growth_rate: '25% YoY',variant: 'quantum - holographic',contact_info: contact,real_implementation: true,implementation_details: 'Connectors, policies, exporters',launch_date: '2026 - 02 - 08',customers: 6,rating: 4 && 4.6,reviews: 4;
+  },{'Docs from schemas','SDK generation','Changelogs','Searchable portal';
+    ],popular: false,reviews: 4;
+  },{id: 'api - changelog - sdk - publisher',name: 'API Changelog & SDK Publisher',tagline: 'Generate docs, changelogs and SDKs from schemas',price: '$59',period: '/month',description:;
+      'Turn OpenAPI / GraphQL schemas into versioned docs, changelogs and typed SDKs with a searchable portal.',features: [;'Docs from schemas','SDK generation','Changelogs','Searchable portal';
+    ],popular: false,icon: '📘',color: 'from - cyan - 600 to - blue - 700',text_color: 'text - cyan - 300',link: 'https://ziontechgroup.com / services / api - changelog - sdk - publisher',category: 'Developer Tools',real_service: true,market_position: 'Ship API portals faster',target_audience: 'API and platform teams',trial_days: 14,setup_time: '30 minutes',technology: ['OpenAPI, GraphQL, MDX'],integrations: ['GitHub', 'GitLab'],use_cases: ['Dev portals', 'SDKs'],roi: 'Docs / SDKs 5× faster',competitors: ['ReadMe', 'Redocly'],customers: 9,rating: 4 && 4.7,reviews: 6;
+  }
+];	{"market_size": '$1.5B',"growth_rate": '18% CAGR',"variant": 'neural - quantum',"contact_info": contact,"real_implementation": true,"implementation_details": 'Schema importers, generators, UI',"launch_date": '2026 - 02 - 12',"customers": 9,"rating": 4 && 4.7,"reviews": 6;'
+  }
+];	{integrations: ['StripePayPalGoogle Analytics'];
+  {
+  {
+
+
+  {
+
+    id: 'customer - feedback - intelligence',
+    name: 'Customer Feedback Intelligence',
+    tagline: 'Summarize NPS / CSAT and reviews into prioritized insights',
+    price: '$149',
+    period: '/month',
+    description:;
+      'Aggregate surveys, tickets and reviews, cluster themes with LLMs, and generate prioritized roadmaps with impact scores.',
+    features: [;
+
+  {
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+  {{{'Multichannel ingestion','LLM clustering and themes','Impact scoring','Roadmap export';
+    ],popular: true,id: 'customer - feedback - intelligence',name: 'Customer Feedback Intelligence',tagline: 'Summarize NPS / CSAT and reviews into prioritized insights',price: '$149',period: '/month',description:;
+      'Aggregate surveys, tickets and reviews, cluster themes with LLMs, and generate prioritized roadmaps with impact scores.',features: [;'Multichannel ingestion','LLM clustering and themes','Impact scoring','Roadmap export';
+    ],popular: true,icon: '💬',color: 'from - cyan - 600 to - blue - 700',text_color: 'text - cyan - 300',link: 'https://ziontechgroup.com / services / customer - feedback - intelligence',category: 'AI & Data',real_service: true,market_position: 'Actionable product feedback without heavy BI',target_audience: 'Product and CX teams',trial_days: 14,setup_time: '1 hour',technology: ['Embeddings, Vector DB, Next.js'],integrations: ['Zendesk', 'Intercom', 'G2', 'Capterra'],use_cases: ['Prioritize roadmap', 'Reduce churn'],roi: 'Ship high - impact features faster',competitors: ['UnitQ', 'EnjoyHQ'],market_size: '$2B+',growth_rate: '18% CAGR',variant: 'ai - futuristic',contact_info: contact,real_implementation: true,implementation_details: 'Connectors, clustering, scoring models',launch_date: '2026 - 01 - 12',customers: 9,rating: 4 && 4.7,reviews: 5;
+  },{'OpenAPI scanning','Auth / rate limit tests','OWASP API checks','PR annotations and diffs';
+    ],popular: true,reviews: 5;
+  },{id: 'api - security - posture - monitor',name: 'API Security Posture Monitor',tagline: 'Detect OWASP API risks and auth gaps with CI annotations',price: '$199',period: '/month',description:;
+      'Continuously scan OpenAPI specs and staging endpoints for auth gaps, rate - limits, and common vulnerabilities with pull request annotations.',features: [;'OpenAPI scanning','Auth / rate limit tests','OWASP API checks','PR annotations and diffs';
+    ],popular: true,icon: '🛡️',color: 'from - rose - 600 to - pink - 700',text_color: 'text - rose - 300',link: 'https://ziontechgroup.com / services / api - security - posture - monitor',category: 'Quality & Monitoring',real_service: true,market_position: 'Developer - first API security posture',target_audience: 'Platform and security teams',trial_days: 14,setup_time: '30 minutes',technology: ['OpenAPI, Node, CI'],integrations: ['GitHub', 'GitLab', 'Jenkins'],use_cases: ['Pre - deploy API checks', 'Security posture'],roi: 'Reduce security escapes by 60%',competitors: ['StackHawk', '42Crunch'],market_size: '$4B',growth_rate: '20% CAGR',variant: 'quantum - cyberpunk',contact_info: contact,real_implementation: true,implementation_details: 'Spec analyzers, runners, annotations',launch_date: '2026 - 01 - 14',customers: 11,rating: 4 && 4.5,reviews: 6;
+  },{'Idempotency and retries','Run history','Alerting and webhooks';
+    ],popular: false,reviews: 6;
+  },{'Flexible cron/rate',id: 'edge - cron - orchestrator',name: 'Edge Cron Orchestrator',tagline: 'Reliable schedules with retries, jitter and DLQs',price: '$59',period: '/month',description:;
+      'Define schedules across providers with idempotency, exponential backoff, and run history with alerting.',features: [;
+      'Flexible cron / rate','Idempotency and retries','Run history','Alerting and webhooks';
+    ],popular: false,icon: '⏰',color: 'from - amber - 500 to - orange - 600',text_color: 'text - amber - 300',link: 'https://ziontechgroup.com / services / edge - cron - orchestrator',category: 'Developer Tools',real_service: true,market_position: 'Unified schedules across clouds',target_audience: 'SaaS and platform teams',trial_days: 14,setup_time: '2 hours',technology: ['Workers / Lambda', 'Webhooks'],integrations: ['AWS', 'Cloudflare', 'GCP'],use_cases: ['Billing cycles', 'Data syncs'],roi: 'Fewer missed jobs and incidents',competitors: ['Temporal (overkill)', 'DIY'],market_size: '$1B+',growth_rate: '15% CAGR',variant: 'holographic - matrix',contact_info: contact,real_implementation: true,implementation_details: 'Scheduler API, dashboard, webhooks',launch_date: '2026 - 01 - 18',customers: 7,rating: 4 && 4.5,reviews: 4;
+  },{'Signature stripping','Attachment handling','Webhook retries / DLQ','Inspector UI';
+    ],popular: false,reviews: 4;
+  },{id: 'email - parsing - routing - api',name: 'Email Parsing & Routing API',tagline: 'Inbound email to structured events with attachments',price: '$39',period: '/month',description:;
+      'Parse inbound email, normalize signatures, extract attachments, and deliver to your webhooks with retries and dead - letter queues.',features: [;'Signature stripping','Attachment handling','Webhook retries / DLQ','Inspector UI';
+    ],popular: false,icon: '📨',color: 'from - indigo - 600 to - blue - 700',text_color: 'text - indigo - 300',link: 'https://ziontechgroup.com / services / email - parsing - routing - api',category: 'Developer Tools',real_service: true,market_position: 'Developer - friendly email ingestion',target_audience: 'Developers and platform',trial_days: 14,setup_time: '30 minutes',technology: ['SMTP / Webhooks', 'Virus scan'],integrations: ['SES', 'SendGrid', 'Mailgun'],use_cases: ['Ticket intake', 'CRM capture'],roi: 'Automate manual email triage',competitors: ['Mailparser', 'Integromat'],customers: 8,rating: 4 && 4.6,reviews: 5;
+  },{'Templates and briefs','Compliance checks','Multi - channel export';
+    ],popular: true,market_size: '$0.8B',growth_rate: '10% CAGR',variant: 'neural - quantum',contact_info: contact,real_implementation: true,implementation_details: 'Inbound parsers, queueing, UI',launch_date: '2026 - 01 - 20',customers: 8,rating: 4 && 4.6,reviews: 5;
+  },{'Brand/tone controls',id: 'ai - marketing - content - studio',name: 'AI Marketing Content Studio',tagline: 'Campaign - ready blogs, emails and ads with brand guardrails',price: '$119',period: '/month',description:;
+      'Generate on - brand content with templates, tone control, compliance checks, and multi - channel export.',features: [;
+      'Brand / tone controls','Templates and briefs','Compliance checks','Multi - channel export';
+    ],popular: true,icon: '📝',color: 'from - fuchsia - 600 to - pink - 700',text_color: 'text - fuchsia - 300',link: 'https://ziontechgroup.com / services / ai - marketing - content - studio',category: 'AI & Data',real_service: true,market_position: 'On - brand AI content for teams',target_audience: 'Marketing and growth teams',trial_days: 14,setup_time: '30 minutes',technology: ['LLMs, Style prompts'],integrations: ['HubSpot', 'Mailchimp', 'Webflow'],use_cases: ['Blog, email, ads'],roi: 'Scale content 5× faster',competitors: ['Jasper', 'Writer'],market_size: '$3B+',growth_rate: '22% CAGR',variant: 'ai - futuristic',contact_info: contact,real_implementation: true,implementation_details: 'Template engine, tone guardrails',launch_date: '2026 - 01 - 22',customers: 15,rating: 4 && 4.6,reviews: 9;
+  },{'Cookie flags','PR annotations','Weekly reports';
+    ],popular: false,reviews: 9;
+  },{'CSP/HSTS checks',id: 'security - headers - scanner',name: 'Security Headers Scanner',tagline: 'Continuous CSP / HSTS / cookie flag auditing with diffs',price: '$19',period: '/month',description:;
+      'Audit security headers across environments and get pull request annotations, weekly reports and diffs.',features: [;
+      'CSP / HSTS checks','Cookie flags','PR annotations','Weekly reports';
+    ],popular: false,icon: '🔐',color: 'from - sky - 600 to - blue - 700',text_color: 'text - sky - 300',link: 'https://ziontechgroup.com / services / security - headers - scanner',category: 'Quality & Monitoring',real_service: true,market_position: 'Simple posture checks for web apps',target_audience: 'Developers and security',trial_days: 14,setup_time: '15 minutes',technology: ['Node', 'Playwright'],integrations: ['GitHub', 'GitLab'],use_cases: ['Header hardening', 'Compliance reports'],roi: 'Reduce risk and review toil',competitors: ['Mozilla Observatory'],market_size: '$0.5B',growth_rate: '8% CAGR',variant: 'holographic',contact_info: contact,real_implementation: true,implementation_details: 'Scanners, CI annotations, reports',launch_date: '2026 - 01 - 25',customers: 20,rating: 4 && 4.5,reviews: 10;
+  },{'Feature versioning','Validation rules','Lineage tracking','Online serving API';
+    ],popular: false,reviews: 10;
+  },{id: 'ml - feature - store - starter',name: 'ML Feature Store Starter',tagline: 'Versioned features, validation and online serving',price: '$149',period: '/month',description:;
+      'Ship ML features faster with versioning, validation rules, lineage, and low - latency serving APIs.',features: [;'Feature versioning','Validation rules','Lineage tracking','Online serving API';
+    ],popular: false,icon: '📦',color: 'from - emerald - 600 to - teal - 700',text_color: 'text - emerald - 300',link: 'https://ziontechgroup.com / services / ml - feature - store - starter',category: 'AI & Data',real_service: true,market_position: 'Lean feature store for teams',target_audience: 'Data / ML teams',trial_days: 14,setup_time: '1 day',technology: ['DB, Vector / Key - Value'],integrations: ['Databricks', 'dbt', 'Airflow'],use_cases: ['Faster model delivery'],roi: 'Shorter time - to - prod models',competitors: ['Tecton', 'Feast'],market_size: '$1B+',growth_rate: '20% CAGR',variant: 'neural - quantum',contact_info: contact,real_implementation: true,implementation_details: 'Schemas, validators, API',launch_date: '2026 - 01 - 28',customers: 6,rating: 4 && 4.5,reviews: 3;
+  },{'SLO editor','Burn - rate alerts','Runbook hints','Integrations and webhooks';
+    ],popular: false,reviews: 3;
+  },{id: 'slo - burn - rate - coach',name: 'SLO Burn Rate Coach',tagline: 'Compute SLOs and coach on burn - rate risks',price: '$49',period: '/month',description:;
+      'Define SLOs, compute error budgets and get proactive coaching with burn - rate alerts tied to runbooks.',features: [;'SLO editor','Burn - rate alerts','Runbook hints','Integrations and webhooks';
+    ],popular: false,icon: '📈',color: 'from - lime - 500 to - emerald - 600',text_color: 'text - lime - 300',link: 'https://ziontechgroup.com / services / slo - burn - rate - coach',category: 'Observability',real_service: true,market_position: 'SLOs without the complexity',target_audience: 'SRE and platform',trial_days: 14,setup_time: '1 hour',technology: ['Prom / OTEL'],integrations: ['PagerDuty', 'Slack'],use_cases: ['Error budgets', 'Coaching'],roi: 'Fewer incidents',competitors: ['Nobl9'],customers: 10,rating: 4 && 4.5,reviews: 6;
+  },{'RUM + synthetic','Budgets and alerts','Bundle diff and PR notes','Edge hints';
+    ],popular: false,market_size: '$0.8B',growth_rate: '14% CAGR',variant: 'holographic - matrix',contact_info: contact,real_implementation: true,implementation_details: 'SLO calc, alerting, UI',launch_date: '2026 - 02 - 01',customers: 10,rating: 4 && 4.5,reviews: 6;
+  },{id: 'browser - performance - optimizer',name: 'Browser Performance Optimizer',tagline: 'Budget - driven CWV with hints and PR annotations',price: '$69',period: '/month',description:;
+      'Improve Core Web Vitals with RUM / synthetic insights, performance budgets, and PR annotations for bundle changes.',features: [;'RUM + synthetic','Budgets and alerts','Bundle diff and PR notes','Edge hints';
+    ],popular: false,icon: '⚡',color: 'from - cyan - 600 to - purple - 700',text_color: 'text - cyan - 300',link: 'https://ziontechgroup.com / services / browser - performance - optimizer',category: 'Quality & Monitoring',real_service: true,market_position: 'Developer - first CWV improvements',target_audience: 'Web and platform teams',trial_days: 14,setup_time: '2 hours',technology: ['Lighthouse, RUM'],integrations: ['GitHub', 'Vercel', 'Netlify'],use_cases: ['CWV, bundle size'],roi: '+20 LCP, fewer regressions',competitors: ['SpeedCurve', 'Calibre'],customers: 5,rating: 4 && 4.5,reviews: 3;
+  },{'Budgets and owners','Anomaly detection','Policy guardrails','IaC recommendation exports';
+    ],popular: true,market_size: '$0.5B',growth_rate: '12% CAGR',variant: 'neural - quantum - cyberpunk',contact_info: contact,real_implementation: true,implementation_details: 'RUM SDK, CI checks, UI',launch_date: '2026 - 02 - 05',customers: 5,rating: 4 && 4.5,reviews: 3;
+  },{id: 'cloud - cost - governance - suite',name: 'Cloud Cost Governance Suite',tagline: 'Budgets, owners, and policy guardrails across clouds',price: '$499',period: '/month',description:;
+      'Enforce budgets with owners, detect anomalies and apply policy guardrails with IaC exports for approvals.',features: [;'Budgets and owners','Anomaly detection','Policy guardrails','IaC recommendation exports';
+    ],popular: true,icon: '💸',color: 'from - amber - 600 to - orange - 700',text_color: 'text - amber - 300',link: 'https://ziontechgroup.com / services / cloud - cost - governance - suite',category: 'Cloud & FinOps',real_service: true,market_position: 'Governance overlay for FinOps',target_audience: 'Finance and platform',trial_days: 14,setup_time: '3 days',technology: ['AWS / GCP / Azure APIs'],integrations: ['Datadog', 'Slack', 'Jira'],use_cases: ['Spend control', 'Chargeback'],roi: 'Reduce overspend by 10–30%',competitors: ['CloudZero', 'Finout'],market_size: '$12B',growth_rate: '25% YoY',variant: 'quantum - holographic',contact_info: contact,real_implementation: true,implementation_details: 'Connectors, policies, exporters',launch_date: '2026 - 02 - 08',customers: 6,rating: 4 && 4.6,reviews: 4;
+  },{'Docs from schemas','SDK generation','Changelogs','Searchable portal';
+    ],popular: false,reviews: 4;
+  },{id: 'api - changelog - sdk - publisher',name: 'API Changelog & SDK Publisher',tagline: 'Generate docs, changelogs and SDKs from schemas',price: '$59',period: '/month',description:;
+      'Turn OpenAPI / GraphQL schemas into versioned docs, changelogs and typed SDKs with a searchable portal.',features: [;'Docs from schemas','SDK generation','Changelogs','Searchable portal';
+    ],popular: false,icon: '📘',color: 'from - cyan - 600 to - blue - 700',text_color: 'text - cyan - 300',link: 'https://ziontechgroup.com / services / api - changelog - sdk - publisher',category: 'Developer Tools',real_service: true,market_position: 'Ship API portals faster',target_audience: 'API and platform teams',trial_days: 14,setup_time: '30 minutes',technology: ['OpenAPI, GraphQL, MDX'],integrations: ['GitHub', 'GitLab'],use_cases: ['Dev portals', 'SDKs'],roi: 'Docs / SDKs 5× faster',competitors: ['ReadMe', 'Redocly'],customers: 9,rating: 4 && 4.7,reviews: 6;
+  }
+];	{market_size: '$1.5B',growth_rate: '18% CAGR',variant: 'neural - quantum',contact_info: contact,real_implementation: true,implementation_details: 'Schema importers, generators, UI',launch_date: '2026 - 02 - 12',customers: 9,rating: 4 && 4.7,reviews: 6;
+  }
+];	{integrations: ['StripePayPalGoogle Analytics'];
+  {
+  {
+pr-12325
+      'Multichannel ingestion',
       'LLM clustering and themes',
       'Impact scoring',
-      'Roadmap export'
+      'Roadmap export',
     ],
     popular: true,
+    icon: '💬',
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+    icon: '💬',
+
+    color: 'from - cyan - 600 to - blue - 700',
+    text_color: 'text - cyan - 300',
+    link: 'https://ziontechgroup.com / services / customer - feedback - intelligence',
+    category: 'AI & Data',
+    real_service: true,
+    market_position: 'Actionable product feedback without heavy BI',
+    target_audience: 'Product and CX teams',
+    trial_days: 14,
+    setup_time: '1 hour',
+    technology: ['Embeddings, Vector DB, Next.js'],
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+pr-12325
     integrations: ['Zendesk', 'Intercom', 'G2', 'Capterra'],
     use_cases: ['Prioritize roadmap', 'Reduce churn'],
     roi: 'Ship high - impact features faster',
-  competitors: ['UnitQ', 'EnjoyHQ'],
+    competitors: ['UnitQ', 'EnjoyHQ'],
     market_size: '$2B+',
-  growth_rate: '18% CAGR',
+    growth_rate: '18% CAGR',
     variant: 'ai - futuristic',
-  contact_info: contact,
+    contact_info: contact,
     real_implementation: true,
     implementation_details: 'Connectors, clustering, scoring models',
-  launch_date: '2026 - 01 - 12',
+    launch_date: '2026 - 01 - 12',
+    variant: 'ai - futuristic',
+    contact_info: contact,
+    real_implementation: true,'
+    implementation_details: 'Connectors, clustering, scoring models','
+    launch_date: '2026 - 01 - 12',
     customers: 9,
-    rating: 4 && 4.7,}
-    reviews: 5}
+    rating: 4 && 4.7,
+    reviews: 5,
   },
   {
+    customers: 9,
+    rating: 4 && 4.7,
+    reviews: 5
+  },
+  {
+
+    id: 'api - security - posture - monitor',
+    name: 'API Security Posture Monitor',
+    tagline: 'Detect OWASP API risks and auth gaps with CI annotations',
+    price: '$199',
+    period: '/month',
+    description:;
+      'Continuously scan OpenAPI specs and staging endpoints for auth gaps, rate - limits, and common vulnerabilities with pull request annotations.',
+    features: [;
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+
+pr-12325
       'OpenAPI scanning',
       'Auth / rate limit tests',
       'OWASP API checks',
-      'PR annotations and diffs'
+      'PR annotations and diffs',
     ],
     popular: true,
+    icon: '🛡️',
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
     category: 'Quality & Monitoring',
-  real_service: true,
+    icon: '🛡️',
+
+    color: 'from - rose - 600 to - pink - 700',
+    text_color: 'text - rose - 300',
+    link: 'https://ziontechgroup.com / services / api - security - posture - monitor',
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+    category: 'Quality & Monitoring',
+    real_service: true,'
+    market_position: 'Developer - first API security posture','
+    target_audience: 'Platform and security teams',
+    trial_days: 14,'
+    setup_time: '30 minutes','
+    technology: ['OpenAPI, Node, CI'],'
+    integrations: ['GitHub', 'GitLab', 'Jenkins'],'
+    use_cases: ['Pre - deploy API checks', 'Security posture'],'
+    roi: 'Reduce security escapes by 60%','
+    competitors: ['StackHawk', '42Crunch'],'
+    market_size: '$4B','
+    growth_rate: '20% CAGR','
+    variant: 'quantum - cyberpunk',
+    contact_info: contact,
+    real_implementation: true,'
+    implementation_details: 'Spec analyzers, runners, annotations','
+    launch_date: '2026 - 01 - 14',
+    customers: 11,
+    rating: 4 && 4.5,
+    reviews: 6,
+  },
+  {
+    real_service: true,
     market_position: 'Developer - first API security posture',
-  target_audience: 'Platform and security teams',
+    target_audience: 'Platform and security teams',
     trial_days: 14,
     setup_time: '30 minutes',
-  technology: ['OpenAPI, Node, CI'],
+    technology: ['OpenAPI, Node, CI'],
     integrations: ['GitHub', 'GitLab', 'Jenkins'],
     use_cases: ['Pre - deploy API checks', 'Security posture'],
     roi: 'Reduce security escapes by 60%',
-  competitors: ['StackHawk', '42Crunch'],
+    competitors: ['StackHawk', '42Crunch'],
     market_size: '$4B',
-  growth_rate: '20% CAGR',
+    growth_rate: '20% CAGR',
     variant: 'quantum - cyberpunk',
-  contact_info: contact,
+    contact_info: contact,
     real_implementation: true,
+pr-12325
     implementation_details: 'Spec analyzers, runners, annotations',
-  launch_date: '2026 - 01 - 14',
+    launch_date: '2026 - 01 - 14',
     customers: 11,
-    rating: 4 && 4.5,}
-    reviews: 6}
+    rating: 4 && 4.5,
+    reviews: 6
+  {
+  {
+
+
+  {
+
+    id: customer - feedback - intelligence',
+    name: 'Customer Feedback Intelligence,
+    tagline: Summarize NPS / CSAT and reviews into prioritized insights',
+    price: '$149,
+    period: /month',
+    description:;
+      'Aggregate surveys, tickets and reviews, cluster themes with LLMs, and generate prioritized roadmaps with impact scores.,
+    features: [;
+
+
+pr-12325
+      Multichannel ingestion',
+      'LLM clustering and themes,
+      Impact scoring',
+      'Roadmap export],
+    popular: true,
+
+    icon: 💬',
+
+    color: 'from - cyan - 600 to - blue - 700,
+    text_color: text - cyan - 300',
+    link: 'https://ziontechgroup.com / services / customer - feedback - intelligence,
+    category: AI & Data',
+    real_service: true,
+    market_position: 'Actionable product feedback without heavy BI,
+    target_audience: Product and CX teams',
+    trial_days: 14,
+    setup_time: '1 hour,
+    technology: [Embeddings, Vector DB, Next.js'],
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+pr-12325
+    integrations: ['Zendesk, Intercom', 'G2, Capterra'],
+    use_cases: ['Prioritize roadmap, Reduce churn'],
+    roi: 'Ship high - impact features faster,
+    competitors: [UnitQ', 'EnjoyHQ],
+    market_size: $2B+',
+    growth_rate: '18% CAGR,
+
+    variant: ai - futuristic',
+    contact_info: contact,
+    real_implementation: true,'
+    implementation_details: Connectors, clustering, scoring models,'
+    launch_date: '2026 - 01 - 12,
+    customers: 9,
+    rating: 4 && 4.7,
+    reviews: 5},
+
+    customers: 9,
+    rating: 4 && 4.7,
+    reviews: 5
   },
   {
+
+
+    id: api - security - posture - monitor',
+    name: 'API Security Posture Monitor,
+    tagline: Detect OWASP API risks and auth gaps with CI annotations',
+    price: '$199,
+    period: /month',
+    description:;
+      'Continuously scan OpenAPI specs and staging endpoints for auth gaps, rate - limits, and common vulnerabilities with pull request annotations.,
+    features: [;
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+pr-12325
+      OpenAPI scanning',
+      'Auth / rate limit tests,
+      OWASP API checks',
+      'PR annotations and diffs],
+    popular: true,
+
+    icon: 🛡️',
+
+    color: 'from - rose - 600 to - pink - 700,
+    text_color: text - rose - 300',
+    link: 'https://ziontechgroup.com / services / api - security - posture - monitor,
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+    category: Quality & Monitoring',
+    real_service: true,'
+    market_position: Developer - first API security posture,'
+    target_audience: 'Platform and security teams,
+    trial_days: 14,
+    setup_time: '30 minutes',
+    technology: [OpenAPI, Node, CI'],'
+    integrations: [GitHub, 'GitLab', Jenkins],'
+    use_cases: ['Pre - deploy API checks, Security posture'],'
+    roi: Reduce security escapes by 60%,'
+    competitors: ['StackHawk, 42Crunch'],'
+    market_size: $4B,'
+    growth_rate: '20% CAGR,
+    variant: 'quantum - cyberpunk',
+    contact_info: contact,
+    real_implementation: true,
+    implementation_details: Spec analyzers, runners, annotations','
+    launch_date: 2026 - 01 - 14,
+    customers: 11,
+    rating: 4 && 4.5,
+    reviews: 6},
+
+    real_service: true,
+    market_position: 'Developer - first API security posture',
+    target_audience: Platform and security teams,
+    trial_days: 14,
+    setup_time: '30 minutes',
+    technology: [OpenAPI, Node, CI],
+    integrations: ['GitHub', GitLab, 'Jenkins'],
+    use_cases: [Pre - deploy API checks, 'Security posture'],
+    roi: Reduce security escapes by 60%,
+    competitors: ['StackHawk', 42Crunch],
+    market_size: '$4B',
+    growth_rate: 20% CAGR,
+    variant: 'quantum - cyberpunk',
+    contact_info: contact,
+    real_implementation: true,
+pr-12325
+    implementation_details: Spec analyzers, runners, annotations,
+    launch_date: '2026 - 01 - 14',
+
+    customers: 11,
+    rating: 4 && 4.5,
+    reviews: 6
+  },
+  {
+
+
+      Flexible cron/rate,
+    id: 'edge - cron - orchestrator',
+    name: Edge Cron Orchestrator,
+    tagline: 'Reliable schedules with retries, jitter and DLQs',
+    price: $59,
+    period: '/month',
+    description:;
+      Define schedules across providers with idempotency, exponential backoff, and run history with alerting.,
+    features: [;
+      'Flexible cron / rate',
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+      Idempotency and retries,
+      'Run history',
+      Alerting and webhooks],
+    popular: false,
+
+    icon: '⏰',
+
+    color: from - amber - 500 to - orange - 600,
+    text_color: 'text - amber - 300',
+    link: https://ziontechgroup.com / services / edge - cron - orchestrator,
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+    category: 'Developer Tools',
+    real_service: true,
+    market_position: Unified schedules across clouds','
+    target_audience: SaaS and platform teams,
+    trial_days: 14,'
+    setup_time: '2 hours,
+    technology: ['Workers / Lambda', Webhooks],'
+    integrations: ['AWS, Cloudflare', 'GCP],
+    use_cases: ['Billing cycles', Data syncs],'
+    roi: 'Fewer missed jobs and incidents,
+    competitors: ['Temporal (overkill)', DIY],'
+    market_size: '$1B+,
+    growth_rate: '15% CAGR',
+    variant: holographic - matrix',
+    contact_info: contact,
+    real_implementation: true,'
+    implementation_details: Scheduler API, dashboard, webhooks,'
+    launch_date: '2026 - 01 - 18,
+    customers: 7,
+    rating: 4 && 4.5,
+    reviews: 4},
+
+    real_service: true,
+    market_position: Unified schedules across clouds',
+    target_audience: 'SaaS and platform teams,
+    trial_days: 14,
+      Idempotency and retries',
+      'Run history,
+      Alerting and webhooks',
+    popular: false,
+    category: 'Developer Tools,
+    market_position: Unified schedules across clouds',
+    target_audience: 'SaaS and platform teams,
+pr-12325
+    setup_time: 2 hours',
+    technology: ['Workers / Lambda, Webhooks'],
+    integrations: ['AWS, Cloudflare', 'GCP],
+    use_cases: [Billing cycles', 'Data syncs],
+    roi: Fewer missed jobs and incidents',
+    competitors: ['Temporal (overkill), DIY'],
+    market_size: '$1B+,
+    growth_rate: 15% CAGR',
+    variant: 'holographic - matrix,
+    contact_info: contact,
+    real_implementation: true,
+    implementation_details: Scheduler API, dashboard, webhooks',
+    launch_date: '2026 - 01 - 18,
+
+    customers: 7,
+    rating: 4 && 4.5,
+    reviews: 4
+  },
+  {
+
+
+    id: email - parsing - routing - api',
+    name: 'Email Parsing & Routing API,
+    tagline: Inbound email to structured events with attachments',
+    price: '$39,
+    period: /month',
+    description:;
+      'Parse inbound email, normalize signatures, extract attachments, and deliver to your webhooks with retries and dead - letter queues.,
+    features: [;
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+    implementation_details: Scheduler API, dashboard, webhooks',
+    launch_date: '2026 - 01 - 18,
+    customers: 7,
+    reviews: 4,
+pr-12325
+      Signature stripping',
+      'Attachment handling,
+      Webhook retries / DLQ',
+      'Inspector UI],
+    popular: false,
+
+    icon: 📨',
+
+    color: 'from - indigo - 600 to - blue - 700,
+    text_color: text - indigo - 300',
+    link: 'https://ziontechgroup.com / services / email - parsing - routing - api,
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+    category: Developer Tools',
+    real_service: true,'
+    market_position: Developer - friendly email ingestion,'
+    target_audience: 'Developers and platform,
+    trial_days: 14,
+    setup_time: '30 minutes',
+    technology: [SMTP / Webhooks', 'Virus scan],
+    integrations: ['SES', SendGrid, 'Mailgun'],
+    use_cases: [Ticket intake', 'CRM capture],
+    roi: 'Automate manual email triage',
+    competitors: [Mailparser', 'Integromat],
+
+    real_service: true,
+    market_position: Developer - friendly email ingestion',
+    target_audience: 'Developers and platform,
+    trial_days: 14,
+    setup_time: 30 minutes',
+
+    technology: ['SMTP / Webhooks, Virus scan'],
+    integrations: ['SES, SendGrid', 'Mailgun],
+    use_cases: [Ticket intake', 'CRM capture],
+    roi: Automate manual email triage',
+    competitors: ['Mailparser, Integromat'],
+
+
+    market_size: '$0.8B,
+    growth_rate: 10% CAGR',
+    variant: 'neural - quantum,
+    contact_info: contact,
+    real_implementation: true,
+    implementation_details: Inbound parsers, queueing, UI',
+    launch_date: '2026 - 01 - 20,
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+    customers: 8,
+    rating: 4 && 4.6,
+    reviews: 5},
+
+
+    customers: 8,
+    rating: 4 && 4.6,
+    reviews: 5
+  },
+  {
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+      'Flexible cron/rate',
+    id: 'edge - cron - orchestrator',
+    name: 'Edge Cron Orchestrator',
+    tagline: 'Reliable schedules with retries, jitter and DLQs',
+    price: '$59',
+    period: '/month',
+    description:;
+      'Define schedules across providers with idempotency, exponential backoff, and run history with alerting.',
+    features: [;
+      'Flexible cron / rate',
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
       'Idempotency and retries',
       'Run history',
-      'Alerting and webhooks'
+      'Alerting and webhooks',
     ],
     popular: false,
+    icon: '⏰',
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
     category: 'Developer Tools',
-  real_service: true,
+    icon: '⏰',
+
+    color: 'from - amber - 500 to - orange - 600',
+    text_color: 'text - amber - 300',
+    link: 'https://ziontechgroup.com / services / edge - cron - orchestrator',
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+    category: 'Developer Tools',
+    real_service: true,'
+    market_position: 'Unified schedules across clouds','
+    target_audience: 'SaaS and platform teams',
+    trial_days: 14,'
+    setup_time: '2 hours','
+    technology: ['Workers / Lambda', 'Webhooks'],'
+    integrations: ['AWS', 'Cloudflare', 'GCP'],'
+    use_cases: ['Billing cycles', 'Data syncs'],'
+    roi: 'Fewer missed jobs and incidents','
+    competitors: ['Temporal (overkill)', 'DIY'],'
+    market_size: '$1B+','
+    growth_rate: '15% CAGR','
+    variant: 'holographic - matrix',
+    contact_info: contact,
+    real_implementation: true,'
+    implementation_details: 'Scheduler API, dashboard, webhooks','
+    launch_date: '2026 - 01 - 18',
+    customers: 7,
+    rating: 4 && 4.5,
+    reviews: 4,
+  },
+  {
+    real_service: true,
     market_position: 'Unified schedules across clouds',
-  target_audience: 'SaaS and platform teams',
+    target_audience: 'SaaS and platform teams',
     trial_days: 14,
+      'Idempotency and retries',
+      'Run history',
+      'Alerting and webhooks',
+    popular: false,
+    category: 'Developer Tools',
+    market_position: 'Unified schedules across clouds',
+    target_audience: 'SaaS and platform teams',
+pr-12325
     setup_time: '2 hours',
-  technology: ['Workers / Lambda', 'Webhooks'],
+    technology: ['Workers / Lambda', 'Webhooks'],
     integrations: ['AWS', 'Cloudflare', 'GCP'],
     use_cases: ['Billing cycles', 'Data syncs'],
     roi: 'Fewer missed jobs and incidents',
-  competitors: ['Temporal (overkill)', 'DIY'],
+    competitors: ['Temporal (overkill)', 'DIY'],
     market_size: '$1B+',
-  growth_rate: '15% CAGR',
+    growth_rate: '15% CAGR',
     variant: 'holographic - matrix',
-  contact_info: contact,
+    contact_info: contact,
     real_implementation: true,
     implementation_details: 'Scheduler API, dashboard, webhooks',
-  launch_date: '2026 - 01 - 18',
+    launch_date: '2026 - 01 - 18',
     customers: 7,
-    rating: 4 && 4.5,}
-    reviews: 4}
+    rating: 4 && 4.5,
+    reviews: 4
   },
   {
+
+    id: 'email - parsing - routing - api',
+    name: 'Email Parsing & Routing API',
+    tagline: 'Inbound email to structured events with attachments',
+    price: '$39',
+    period: '/month',
+    description:;
+      'Parse inbound email, normalize signatures, extract attachments, and deliver to your webhooks with retries and dead - letter queues.',
+      Templates and briefs',
+      'Compliance checks,
+      Multi - channel export'],
+    popular: true,
+
+    icon: '📝,
+
+    color: from - fuchsia - 600 to - pink - 700',
+    text_color: 'text - fuchsia - 300,
+    link: https://ziontechgroup.com / services / ai - marketing - content - studio',
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+    category: 'AI & Data,
+    real_service: true,
+    market_position: 'On - brand AI content for teams',
+    target_audience: Marketing and growth teams',
+    trial_days: 14,'
+    setup_time: 30 minutes,'
+    technology: ['LLMs, Style prompts],
+    integrations: ['HubSpot', Mailchimp, 'Webflow'],
+    use_cases: [Blog, email, ads'],'
+    roi: Scale content 5× faster,'
+    competitors: ['Jasper, Writer'],'
+    market_size: $3B+,'
+    growth_rate: '22% CAGR,
+    variant: 'ai - futuristic',
+    contact_info: contact,
+    real_implementation: true,
+    implementation_details: Template engine, tone guardrails','
+    launch_date: 2026 - 01 - 22,
+    customers: 15,
+    rating: 4 && 4.6,
+    reviews: 9},
+
+    real_service: true,
+    market_position: 'On - brand AI content for teams',
+    target_audience: Marketing and growth teams,
+    trial_days: 14,
+    setup_time: '30 minutes',
+
+    technology: [LLMs, Style prompts],
+    integrations: ['HubSpot', Mailchimp, 'Webflow'],
+    use_cases: [Blog, email, ads],
+    roi: 'Scale content 5× faster',
+    competitors: [Jasper, 'Writer'],
+    market_size: $3B+,
+    growth_rate: '22% CAGR',
+    variant: ai - futuristic,
+    contact_info: contact,
+    real_implementation: true,
+    implementation_details: 'Template engine, tone guardrails',
+    launch_date: 2026 - 01 - 22,
+
+    customers: 15,
+    rating: 4 && 4.6,
+    reviews: 9
+  },
+  {
+
+
+      'CSP/HSTS checks',
+    id: security - headers - scanner,
+    name: 'Security Headers Scanner',
+    tagline: Continuous CSP / HSTS / cookie flag auditing with diffs,
+    price: '$19',
+    period: /month,
+    description:;
+      'Audit security headers across environments and get pull request annotations, weekly reports and diffs.',
+    features: [;
+      CSP / HSTS checks,
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+      'Cookie flags',
+      PR annotations,
+      'Weekly reports'],
+    popular: false,
+
+    icon: 🔐,
+
+    color: 'from - sky - 600 to - blue - 700',
+    text_color: text - sky - 300,
+    link: 'https://ziontechgroup.com / services / security - headers - scanner',
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+    category: Quality & Monitoring,
+    real_service: true,'
+    market_position: 'Simple posture checks for web apps,
+    target_audience: 'Developers and security',
+    trial_days: 14,
+    setup_time: 15 minutes','
+    technology: [Node, 'Playwright'],
+    integrations: [GitHub', 'GitLab],
+    use_cases: ['Header hardening', Compliance reports],'
+    roi: 'Reduce risk and review toil,
+    competitors: ['Mozilla Observatory'],
+
+    real_service: true,
+    market_position: Simple posture checks for web apps,
+    target_audience: 'Developers and security',
+    trial_days: 14,
+    implementation_details: Template engine, tone guardrails,
+    launch_date: '2026 - 01 - 22',
+    customers: 15,
+    reviews: 9,
+      Cookie flags,
+      'PR annotations',
+      Weekly reports,
+    market_position: 'Simple posture checks for web apps',
+    target_audience: Developers and security,
+pr-12325
+    setup_time: '15 minutes',
+    technology: [Node, 'Playwright'],
+    integrations: [GitHub, 'GitLab'],
+    use_cases: [Header hardening, 'Compliance reports'],
+    roi: Reduce risk and review toil,
+    competitors: ['Mozilla Observatory'],
+
+
+    market_size: $0.5B,
+    growth_rate: '8% CAGR',
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+    variant: holographic,
+    contact_info: contact,
+    real_implementation: true,'
+    implementation_details: 'Scanners, CI annotations, reports,
+    launch_date: '2026 - 01 - 25',
+    customers: 20,
+    rating: 4 && 4.5,
+    reviews: 10},
+
+    customers: 20,
+    rating: 4 && 4.5,
+    reviews: 10
+  },
+  {
+
+
+    id: ml - feature - store - starter,
+    name: 'ML Feature Store Starter',
+    tagline: Versioned features, validation and online serving,
+    price: '$149',
+    period: /month,
+    description:;
+      'Ship ML features faster with versioning, validation rules, lineage, and low - latency serving APIs.',
+    features: [;
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+
+    implementation_details: 'Scheduler API, dashboard, webhooks',
+    launch_date: '2026 - 01 - 18',
+    customers: 7,
+    reviews: 4,
+pr-12325
       'Signature stripping',
       'Attachment handling',
       'Webhook retries / DLQ',
-      'Inspector UI'
+      'Inspector UI',
     ],
     popular: false,
+    icon: '📨',
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
     category: 'Developer Tools',
-  real_service: true,
+    icon: '📨',
+
+    color: 'from - indigo - 600 to - blue - 700',
+    text_color: 'text - indigo - 300',
+    link: 'https://ziontechgroup.com / services / email - parsing - routing - api',
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+    category: 'Developer Tools',
+    real_service: true,'
+    market_position: 'Developer - friendly email ingestion','
+    target_audience: 'Developers and platform',
+    trial_days: 14,'
+    setup_time: '30 minutes','
+    technology: ['SMTP / Webhooks', 'Virus scan'],'
+    integrations: ['SES', 'SendGrid', 'Mailgun'],'
+    use_cases: ['Ticket intake', 'CRM capture'],'
+    roi: 'Automate manual email triage','
+    competitors: ['Mailparser', 'Integromat'],
+
+    real_service: true,
     market_position: 'Developer - friendly email ingestion',
-  target_audience: 'Developers and platform',
+    target_audience: 'Developers and platform',
     trial_days: 14,
     setup_time: '30 minutes',
-  technology: ['SMTP / Webhooks', 'Virus scan'],
+    technology: ['SMTP / Webhooks', 'Virus scan'],
     integrations: ['SES', 'SendGrid', 'Mailgun'],
     use_cases: ['Ticket intake', 'CRM capture'],
     roi: 'Automate manual email triage',
-  competitors: ['Mailparser', 'Integromat'],
+    competitors: ['Mailparser', 'Integromat'],
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+    market_size: '$0.8B',
+    growth_rate: '10% CAGR',
+    variant: 'neural - quantum',
+    contact_info: contact,
+    real_implementation: true,
+    implementation_details: 'Inbound parsers, queueing, UI',
+    launch_date: '2026 - 01 - 20',
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
     customers: 8,
-    rating: 4 && 4.6,}
-    reviews: 5}
+    rating: 4 && 4.6,
+    reviews: 5,
   },
   {
+
+    customers: 8,
+    rating: 4 && 4.6,
+    reviews: 5
+  },
+  {
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+      'Brand/tone controls',
+    id: 'ai - marketing - content - studio',
+    name: 'AI Marketing Content Studio',
+    tagline: 'Campaign - ready blogs, emails and ads with brand guardrails',
+    price: '$119',
+    period: '/month',
+    description:;
+      'Generate on - brand content with templates, tone control, compliance checks, and multi - channel export.',
+    features: [;
+      'Brand / tone controls',
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
       'Templates and briefs',
       'Compliance checks',
-      'Multi - channel export'
+      'Multi - channel export',
     ],
     popular: true,
+    icon: '📝',
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
     category: 'AI & Data',
-  real_service: true,
+    icon: '📝',
+
+    color: 'from - fuchsia - 600 to - pink - 700',
+    text_color: 'text - fuchsia - 300',
+    link: 'https://ziontechgroup.com / services / ai - marketing - content - studio',
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+    category: 'AI & Data',
+    real_service: true,'
+    market_position: 'On - brand AI content for teams','
+    target_audience: 'Marketing and growth teams',
+    trial_days: 14,'
+    setup_time: '30 minutes','
+    technology: ['LLMs, Style prompts'],'
+    integrations: ['HubSpot', 'Mailchimp', 'Webflow'],'
+    use_cases: ['Blog, email, ads'],'
+    roi: 'Scale content 5× faster','
+    competitors: ['Jasper', 'Writer'],'
+    market_size: '$3B+','
+    growth_rate: '22% CAGR','
+    variant: 'ai - futuristic',
+    contact_info: contact,
+    real_implementation: true,'
+    implementation_details: 'Template engine, tone guardrails','
+    launch_date: '2026 - 01 - 22',
+    customers: 15,
+    rating: 4 && 4.6,
+    reviews: 9,
+  },
+  {
+    real_service: true,
     market_position: 'On - brand AI content for teams',
-  target_audience: 'Marketing and growth teams',
+    target_audience: 'Marketing and growth teams',
     trial_days: 14,
     setup_time: '30 minutes',
-  technology: ['LLMs, Style prompts'],
+    technology: ['LLMs, Style prompts'],
     integrations: ['HubSpot', 'Mailchimp', 'Webflow'],
     use_cases: ['Blog, email, ads'],
     roi: 'Scale content 5× faster',
-  competitors: ['Jasper', 'Writer'],
+    competitors: ['Jasper', 'Writer'],
     market_size: '$3B+',
-  growth_rate: '22% CAGR',
+    growth_rate: '22% CAGR',
     variant: 'ai - futuristic',
-  contact_info: contact,
+    contact_info: contact,
     real_implementation: true,
     implementation_details: 'Template engine, tone guardrails',
-  launch_date: '2026 - 01 - 22',
+    launch_date: '2026 - 01 - 22',
     customers: 15,
-    rating: 4 && 4.6,}
-    reviews: 9}
+    rating: 4 && 4.6,
+    reviews: 9
   },
   {
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+      'CSP/HSTS checks',
+    id: 'security - headers - scanner',
+    name: 'Security Headers Scanner',
+    tagline: 'Continuous CSP / HSTS / cookie flag auditing with diffs',
+    price: '$19',
+    period: '/month',
+    description:;
+      'Audit security headers across environments and get pull request annotations, weekly reports and diffs.',
+    features: [;
+      'CSP / HSTS checks',
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
       'Cookie flags',
       'PR annotations',
-      'Weekly reports'
+      'Weekly reports',
     ],
     popular: false,
+    icon: '🔐',
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
     category: 'Quality & Monitoring',
-  real_service: true,
+    icon: '🔐',
+
+    color: 'from - sky - 600 to - blue - 700',
+    text_color: 'text - sky - 300',
+    link: 'https://ziontechgroup.com / services / security - headers - scanner',
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+    category: 'Quality & Monitoring',
+    real_service: true,'
+    market_position: 'Simple posture checks for web apps','
+    target_audience: 'Developers and security',
+    trial_days: 14,'
+    setup_time: '15 minutes','
+    technology: ['Node', 'Playwright'],'
+    integrations: ['GitHub', 'GitLab'],'
+    use_cases: ['Header hardening', 'Compliance reports'],'
+    roi: 'Reduce risk and review toil','
+    competitors: ['Mozilla Observatory'],
+    real_service: true,
     market_position: 'Simple posture checks for web apps',
-  target_audience: 'Developers and security',
+    target_audience: 'Developers and security',
     trial_days: 14,
+    implementation_details: 'Template engine, tone guardrails',
+    launch_date: '2026 - 01 - 22',
+    customers: 15,
+    reviews: 9,
+      'Cookie flags',
+      'PR annotations',
+      'Weekly reports',
+    market_position: 'Simple posture checks for web apps',
+    target_audience: 'Developers and security',
+pr-12325
     setup_time: '15 minutes',
-  technology: ['Node', 'Playwright'],
+    technology: ['Node', 'Playwright'],
     integrations: ['GitHub', 'GitLab'],
     use_cases: ['Header hardening', 'Compliance reports'],
     roi: 'Reduce risk and review toil',
-  competitors: ['Mozilla Observatory'],
+    competitors: ['Mozilla Observatory'],
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
     variant: 'holographic',
-  contact_info: contact,
+    contact_info: contact,
     real_implementation: true,
     implementation_details: 'Scanners, CI annotations, reports',
-  launch_date: '2026 - 01 - 25',
+    launch_date: '2026 - 01 - 25',
+
+    market_size: '$0.5B',
+    growth_rate: '8% CAGR',
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+    variant: 'holographic',
+    contact_info: contact,
+    real_implementation: true,'
+    implementation_details: 'Scanners, CI annotations, reports','
+    launch_date: '2026 - 01 - 25',
     customers: 20,
-    rating: 4 && 4.5,}
-    reviews: 10}
+    rating: 4 && 4.5,
+    reviews: 10,
   },
   {
+    customers: 20,
+    rating: 4 && 4.5,
+    reviews: 10
+  },
+  {
+
+    id: 'ml - feature - store - starter',
+    name: 'ML Feature Store Starter',
+    tagline: 'Versioned features, validation and online serving',
+    price: '$149',
+    period: '/month',
+    description:;
+      'Ship ML features faster with versioning, validation rules, lineage, and low - latency serving APIs.',
+    features: [;
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+
+    variant: 'holographic',
+    implementation_details: 'Scanners, CI annotations, reports',
+    launch_date: '2026 - 01 - 25',
+    customers: 20,
+    reviews: 10,
+pr-12325
       'Feature versioning',
       'Validation rules',
       'Lineage tracking',
-      'Online serving API'
+      'Online serving API',
     ],
     popular: false,
+    icon: '📦',
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
     category: 'AI & Data',
-  real_service: true,
+    icon: '📦',
+
+    color: 'from - emerald - 600 to - teal - 700',
+    text_color: 'text - emerald - 300',
+    link: 'https://ziontechgroup.com / services / ml - feature - store - starter',
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+    category: 'AI & Data',
+    real_service: true,'
+    market_position: 'Lean feature store for teams','
+    target_audience: 'Data / ML teams',
+    trial_days: 14,'
+    setup_time: '1 day','
+    technology: ['DB, Vector / Key - Value'],'
+    integrations: ['Databricks', 'dbt', 'Airflow'],'
+    use_cases: ['Faster model delivery'],'
+    roi: 'Shorter time - to - prod models','
+    competitors: ['Tecton', 'Feast'],'
+    market_size: '$1B+','
+    growth_rate: '20% CAGR','
+    variant: 'neural - quantum',
+    contact_info: contact,
+    real_implementation: true,'
+    implementation_details: 'Schemas, validators, API','
+    launch_date: '2026 - 01 - 28',
+    customers: 6,
+    rating: 4 && 4.5,
+    reviews: 3,
+  },
+  {
+    real_service: true,
     market_position: 'Lean feature store for teams',
-  target_audience: 'Data / ML teams',
+    target_audience: 'Data / ML teams',
     trial_days: 14,
+    market_position: 'Lean feature store for teams',
+    target_audience: 'Data / ML teams',
+pr-12325
     setup_time: '1 day',
-  technology: ['DB, Vector / Key - Value'],
+    technology: ['DB, Vector / Key - Value'],
     integrations: ['Databricks', 'dbt', 'Airflow'],
     use_cases: ['Faster model delivery'],
     roi: 'Shorter time - to - prod models',
-  competitors: ['Tecton', 'Feast'],
+    competitors: ['Tecton', 'Feast'],
     market_size: '$1B+',
-  growth_rate: '20% CAGR',
+    growth_rate: '20% CAGR',
     variant: 'neural - quantum',
-  contact_info: contact,
+    contact_info: contact,
     real_implementation: true,
     implementation_details: 'Schemas, validators, API',
-  launch_date: '2026 - 01 - 28',
+    launch_date: '2026 - 01 - 28',
     customers: 6,
-    rating: 4 && 4.5,}
-    reviews: 3}
+    rating: 4 && 4.5,
+    reviews: 3
   },
   {
+
+    id: 'slo - burn - rate - coach',
+    name: 'SLO Burn Rate Coach',
+    tagline: 'Compute SLOs and coach on burn - rate risks',
+    price: '$49',
+    period: '/month',
+    description:;
+      'Define SLOs, compute error budgets and get proactive coaching with burn - rate alerts tied to runbooks.',
+    features: [;
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+
+    variant: 'neural - quantum',
+    implementation_details: 'Schemas, validators, API',
+    launch_date: '2026 - 01 - 28',
+    customers: 6,
+    reviews: 3,
+pr-12325
       'SLO editor',
       'Burn - rate alerts',
       'Runbook hints',
-      'Integrations and webhooks'
+      'Integrations and webhooks',
     ],
     popular: false,
+    icon: '📈',
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
     category: 'Observability',
-  real_service: true,
+    icon: '📈',
+
+    color: 'from - lime - 500 to - emerald - 600',
+    text_color: 'text - lime - 300',
+    link: 'https://ziontechgroup.com / services / slo - burn - rate - coach',
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+    category: 'Observability',
+    real_service: true,'
+    market_position: 'SLOs without the complexity','
+    target_audience: 'SRE and platform',
+    trial_days: 14,'
+    setup_time: '1 hour','
+    technology: ['Prom / OTEL'],'
+    integrations: ['PagerDuty', 'Slack'],'
+    use_cases: ['Error budgets', 'Coaching'],'
+    roi: 'Fewer incidents','
+    competitors: ['Nobl9'],
+
+    real_service: true,
     market_position: 'SLOs without the complexity',
-  target_audience: 'SRE and platform',
+    target_audience: 'SRE and platform',
     trial_days: 14,
+    category: 'Observability',
+    market_position: 'SLOs without the complexity',
+    target_audience: 'SRE and platform',
+pr-12325
     setup_time: '1 hour',
-  technology: ['Prom / OTEL'],
+    technology: ['Prom / OTEL'],
     integrations: ['PagerDuty', 'Slack'],
     use_cases: ['Error budgets', 'Coaching'],
     roi: 'Fewer incidents',
-  competitors: ['Nobl9'],
+    competitors: ['Nobl9'],
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+    market_size: '$0.8B',
+    growth_rate: '14% CAGR',
+    variant: 'holographic - matrix',
+    contact_info: contact,
+    real_implementation: true,
+    implementation_details: 'SLO calc, alerting, UI',
+    launch_date: '2026 - 02 - 01',
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
     customers: 10,
-    rating: 4 && 4.5,}
-    reviews: 6}
+    rating: 4 && 4.5,
+    reviews: 6,
   },
   {
+
+    customers: 10,
+    rating: 4 && 4.5,
+    reviews: 6
+  },
+  {
+
+    id: 'browser - performance - optimizer',
+    name: 'Browser Performance Optimizer',
+    tagline: 'Budget - driven CWV with hints and PR annotations',
+    price: '$69',
+    period: '/month',
+    description:;
+      'Improve Core Web Vitals with RUM / synthetic insights, performance budgets, and PR annotations for bundle changes.',
+    features: [;
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+
+    customers: 10,
+pr-12325
       'RUM + synthetic',
       'Budgets and alerts',
       'Bundle diff and PR notes',
-      'Edge hints'
+      'Edge hints',
     ],
     popular: false,
+    icon: '⚡',
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
     category: 'Quality & Monitoring',
-  real_service: true,
+    icon: '⚡',
+
+    color: 'from - cyan - 600 to - purple - 700',
+    text_color: 'text - cyan - 300',
+    link: 'https://ziontechgroup.com / services / browser - performance - optimizer',
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+    category: 'Quality & Monitoring',
+    real_service: true,'
+    market_position: 'Developer - first CWV improvements','
+    target_audience: 'Web and platform teams',
+    trial_days: 14,'
+    setup_time: '2 hours','
+    technology: ['Lighthouse, RUM'],'
+    integrations: ['GitHub', 'Vercel', 'Netlify'],'
+    use_cases: ['CWV, bundle size'],'
+    roi: '+20 LCP, fewer regressions','
+    competitors: ['SpeedCurve', 'Calibre'],
+
+    real_service: true,
     market_position: 'Developer - first CWV improvements',
-  target_audience: 'Web and platform teams',
+    target_audience: 'Web and platform teams',
     trial_days: 14,
     setup_time: '2 hours',
-  technology: ['Lighthouse, RUM'],
+    technology: ['Lighthouse, RUM'],
     integrations: ['GitHub', 'Vercel', 'Netlify'],
     use_cases: ['CWV, bundle size'],
     roi: '+20 LCP, fewer regressions',
-  competitors: ['SpeedCurve', 'Calibre'],
+    competitors: ['SpeedCurve', 'Calibre'],
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+    market_size: '$0.5B',
+    growth_rate: '12% CAGR',
+    variant: 'neural - quantum - cyberpunk',
+    contact_info: contact,
+    real_implementation: true,
+    implementation_details: 'RUM SDK, CI checks, UI',
+    launch_date: '2026 - 02 - 05',
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
     customers: 5,
-    rating: 4 && 4.5,}
-    reviews: 3}
+    rating: 4 && 4.5,
+    reviews: 3,
   },
   {
+
+    customers: 5,
+    rating: 4 && 4.5,
+    reviews: 3
+  },
+  {
+
+    id: 'cloud - cost - governance - suite',
+    name: 'Cloud Cost Governance Suite',
+    tagline: 'Budgets, owners, and policy guardrails across clouds',
+    price: '$499',
+    period: '/month',
+    description:;
+      'Enforce budgets with owners, detect anomalies and apply policy guardrails with IaC exports for approvals.',
+    features: [;
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+
+    customers: 5,
+pr-12325
       'Budgets and owners',
       'Anomaly detection',
       'Policy guardrails',
-      'IaC recommendation exports'
+      'IaC recommendation exports',
     ],
     popular: true,
+    icon: '💸',
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
     category: 'Cloud & FinOps',
-  real_service: true,
+    icon: '💸',
+
+    color: 'from - amber - 600 to - orange - 700',
+    text_color: 'text - amber - 300',
+    link: 'https://ziontechgroup.com / services / cloud - cost - governance - suite',
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+    category: 'Cloud & FinOps',
+    real_service: true,'
+    market_position: 'Governance overlay for FinOps','
+    target_audience: 'Finance and platform',
+    trial_days: 14,'
+    setup_time: '3 days','
+    technology: ['AWS / GCP / Azure APIs'],'
+    integrations: ['Datadog', 'Slack', 'Jira'],'
+    use_cases: ['Spend control', 'Chargeback'],'
+    roi: 'Reduce overspend by 10–30%','
+    competitors: ['CloudZero', 'Finout'],'
+    market_size: '$12B','
+    growth_rate: '25% YoY','
+    variant: 'quantum - holographic',
+    contact_info: contact,
+    real_implementation: true,'
+    implementation_details: 'Connectors, policies, exporters','
+    launch_date: '2026 - 02 - 08',
+    customers: 6,
+    rating: 4 && 4.6,
+    reviews: 4,
+  },
+  {
+    real_service: true,
     market_position: 'Governance overlay for FinOps',
-  target_audience: 'Finance and platform',
+    target_audience: 'Finance and platform',
     trial_days: 14,
+    category: 'Cloud & FinOps',
+    market_position: 'Governance overlay for FinOps',
+    target_audience: 'Finance and platform',
+pr-12325
     setup_time: '3 days',
-  technology: ['AWS / GCP / Azure APIs'],
+    technology: ['AWS / GCP / Azure APIs'],
     integrations: ['Datadog', 'Slack', 'Jira'],
     use_cases: ['Spend control', 'Chargeback'],
     roi: 'Reduce overspend by 10–30%',
-  competitors: ['CloudZero', 'Finout'],
+    competitors: ['CloudZero', 'Finout'],
     market_size: '$12B',
-  growth_rate: '25% YoY',
+    growth_rate: '25% YoY',
     variant: 'quantum - holographic',
-  contact_info: contact,
+    contact_info: contact,
     real_implementation: true,
     implementation_details: 'Connectors, policies, exporters',
-  launch_date: '2026 - 02 - 08',
+    launch_date: '2026 - 02 - 08',
     customers: 6,
-    rating: 4 && 4.6,}
-    reviews: 4}
+    rating: 4 && 4.6,
+    reviews: 4
   },
   {
+
+    id: 'api - changelog - sdk - publisher',
+    name: 'API Changelog & SDK Publisher',
+    tagline: 'Generate docs, changelogs and SDKs from schemas',
+    price: '$59',
+    period: '/month',
+    description:;
+      'Turn OpenAPI / GraphQL schemas into versioned docs, changelogs and typed SDKs with a searchable portal.',
+    variant: holographic,
+    implementation_details: 'Scanners, CI annotations, reports',
+    launch_date: 2026 - 01 - 25,
+    customers: 20,
+    reviews: 10,
+pr-12325
+      'Feature versioning',
+      Validation rules,
+      'Lineage tracking',
+      Online serving API],
+    popular: false,
+
+    icon: '📦',
+
+    color: from - emerald - 600 to - teal - 700,
+    text_color: 'text - emerald - 300',
+    link: https://ziontechgroup.com / services / ml - feature - store - starter,
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+    category: 'AI & Data',
+    real_service: true,
+    market_position: Lean feature store for teams','
+    target_audience: Data / ML teams,
+    trial_days: 14,'
+    setup_time: '1 day,
+    technology: ['DB, Vector / Key - Value'],
+    integrations: [Databricks', 'dbt, Airflow'],'
+    use_cases: [Faster model delivery],'
+    roi: 'Shorter time - to - prod models,
+    competitors: ['Tecton', Feast],'
+    market_size: '$1B+,
+    growth_rate: '20% CAGR',
+    variant: neural - quantum',
+    contact_info: contact,
+    real_implementation: true,'
+    implementation_details: Schemas, validators, API,'
+    launch_date: '2026 - 01 - 28,
+    customers: 6,
+    rating: 4 && 4.5,
+    reviews: 3},
+
+    real_service: true,
+    market_position: Lean feature store for teams',
+    target_audience: 'Data / ML teams,
+    trial_days: 14,
+    market_position: Lean feature store for teams',
+    target_audience: 'Data / ML teams,
+pr-12325
+    setup_time: 1 day',
+    technology: ['DB, Vector / Key - Value],
+    integrations: [Databricks', 'dbt, Airflow'],
+    use_cases: ['Faster model delivery],
+    roi: Shorter time - to - prod models',
+    competitors: ['Tecton, Feast'],
+    market_size: '$1B+,
+    growth_rate: 20% CAGR',
+    variant: 'neural - quantum,
+    contact_info: contact,
+    real_implementation: true,
+    implementation_details: Schemas, validators, API',
+    launch_date: '2026 - 01 - 28,
+
+    customers: 6,
+    rating: 4 && 4.5,
+    reviews: 3
+  },
+  {
+
+
+    id: slo - burn - rate - coach',
+    name: 'SLO Burn Rate Coach,
+    tagline: Compute SLOs and coach on burn - rate risks',
+    price: '$49,
+    period: /month',
+    description:;
+      'Define SLOs, compute error budgets and get proactive coaching with burn - rate alerts tied to runbooks.,
+    features: [;
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+    variant: neural - quantum',
+    implementation_details: 'Schemas, validators, API,
+    launch_date: 2026 - 01 - 28',
+    customers: 6,
+    reviews: 3,
+pr-12325
+      'SLO editor,
+      Burn - rate alerts',
+      'Runbook hints,
+      Integrations and webhooks'],
+    popular: false,
+
+    icon: '📈,
+
+    color: from - lime - 500 to - emerald - 600',
+    text_color: 'text - lime - 300,
+    link: https://ziontechgroup.com / services / slo - burn - rate - coach',
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+    category: 'Observability,
+    real_service: true,
+    market_position: 'SLOs without the complexity',
+    target_audience: SRE and platform',
+    trial_days: 14,'
+    setup_time: 1 hour,'
+    technology: ['Prom / OTEL],
+    integrations: ['PagerDuty', Slack],'
+    use_cases: ['Error budgets, Coaching'],'
+    roi: Fewer incidents,'
+    competitors: ['Nobl9],
+
+    real_service: true,
+    market_position: SLOs without the complexity',
+    target_audience: 'SRE and platform,
+    trial_days: 14,
+    category: Observability',
+    market_position: 'SLOs without the complexity,
+    target_audience: SRE and platform',
+pr-12325
+    setup_time: '1 hour,
+    technology: [Prom / OTEL'],
+    integrations: ['PagerDuty, Slack'],
+    use_cases: ['Error budgets, Coaching'],
+    roi: 'Fewer incidents,
+    competitors: [Nobl9'],
+
+
+    market_size: '$0.8B,
+    growth_rate: 14% CAGR',
+    variant: 'holographic - matrix,
+    contact_info: contact,
+    real_implementation: true,
+    implementation_details: SLO calc, alerting, UI',
+    launch_date: '2026 - 02 - 01,
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+    customers: 10,
+    rating: 4 && 4.5,
+    reviews: 6},
+
+
+    customers: 10,
+    rating: 4 && 4.5,
+    reviews: 6
+  },
+  {
+
+
+    id: browser - performance - optimizer',
+    name: 'Browser Performance Optimizer,
+    tagline: Budget - driven CWV with hints and PR annotations',
+    price: '$69,
+    period: /month',
+    description:;
+      'Improve Core Web Vitals with RUM / synthetic insights, performance budgets, and PR annotations for bundle changes.,
+    features: [;
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+    customers: 10,
+pr-12325
+      RUM + synthetic',
+      'Budgets and alerts,
+      Bundle diff and PR notes',
+      'Edge hints],
+    popular: false,
+
+    icon: ⚡',
+
+    color: 'from - cyan - 600 to - purple - 700,
+    text_color: text - cyan - 300',
+    link: 'https://ziontechgroup.com / services / browser - performance - optimizer,
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+    category: Quality & Monitoring',
+    real_service: true,'
+    market_position: Developer - first CWV improvements,'
+    target_audience: 'Web and platform teams,
+    trial_days: 14,
+    setup_time: '2 hours',
+    technology: [Lighthouse, RUM'],'
+    integrations: [GitHub, 'Vercel', Netlify],'
+    use_cases: ['CWV, bundle size],
+    roi: '+20 LCP, fewer regressions',
+    competitors: [SpeedCurve', 'Calibre],
+
+    real_service: true,
+    market_position: Developer - first CWV improvements',
+    target_audience: 'Web and platform teams,
+    trial_days: 14,
+    setup_time: 2 hours',
+
+    technology: ['Lighthouse, RUM],
+    integrations: [GitHub', 'Vercel, Netlify'],
+    use_cases: ['CWV, bundle size],
+    roi: +20 LCP, fewer regressions',
+    competitors: ['SpeedCurve, Calibre'],
+
+
+    market_size: '$0.5B,
+    growth_rate: 12% CAGR',
+    variant: 'neural - quantum - cyberpunk,
+    contact_info: contact,
+    real_implementation: true,
+    implementation_details: RUM SDK, CI checks, UI',
+    launch_date: '2026 - 02 - 05,
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+    customers: 5,
+    rating: 4 && 4.5,
+    reviews: 3},
+
+
+    customers: 5,
+    rating: 4 && 4.5,
+    reviews: 3
+  },
+  {
+
+
+    id: cloud - cost - governance - suite',
+    name: 'Cloud Cost Governance Suite,
+    tagline: Budgets, owners, and policy guardrails across clouds',
+    price: '$499,
+    period: /month',
+    description:;
+      'Enforce budgets with owners, detect anomalies and apply policy guardrails with IaC exports for approvals.,
+    features: [;
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+    customers: 5,
+pr-12325
+      Budgets and owners',
+      'Anomaly detection,
+      Policy guardrails',
+      'IaC recommendation exports],
+    popular: true,
+
+    icon: 💸',
+
+    color: 'from - amber - 600 to - orange - 700,
+    text_color: text - amber - 300',
+    link: 'https://ziontechgroup.com / services / cloud - cost - governance - suite,
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+    category: Cloud & FinOps',
+    real_service: true,'
+    market_position: Governance overlay for FinOps,'
+    target_audience: 'Finance and platform,
+    trial_days: 14,
+    setup_time: '3 days',
+    technology: [AWS / GCP / Azure APIs'],'
+    integrations: [Datadog, 'Slack', Jira],'
+    use_cases: ['Spend control, Chargeback'],'
+    roi: Reduce overspend by 10–30%,'
+    competitors: ['CloudZero, Finout'],'
+    market_size: $12B,'
+    growth_rate: '25% YoY,
+    variant: 'quantum - holographic',
+    contact_info: contact,
+    real_implementation: true,
+    implementation_details: Connectors, policies, exporters','
+    launch_date: 2026 - 02 - 08,
+    customers: 6,
+    rating: 4 && 4.6,
+    reviews: 4},
+
+    real_service: true,
+    market_position: 'Governance overlay for FinOps',
+    target_audience: Finance and platform,
+    trial_days: 14,
+    category: 'Cloud & FinOps',
+    market_position: Governance overlay for FinOps,
+    target_audience: 'Finance and platform',
+pr-12325
+    setup_time: 3 days,
+    technology: ['AWS / GCP / Azure APIs'],
+    integrations: [Datadog, 'Slack', Jira],
+    use_cases: ['Spend control', Chargeback],
+    roi: 'Reduce overspend by 10–30%',
+    competitors: [CloudZero, 'Finout'],
+    market_size: $12B,
+    growth_rate: '25% YoY',
+    variant: quantum - holographic,
+    contact_info: contact,
+    real_implementation: true,
+    implementation_details: 'Connectors, policies, exporters',
+    launch_date: 2026 - 02 - 08,
+
+    customers: 6,
+    rating: 4 && 4.6,
+    reviews: 4
+  },
+  {
+
+
+    id: 'api - changelog - sdk - publisher',
+    name: API Changelog & SDK Publisher,
+    tagline: 'Generate docs, changelogs and SDKs from schemas',
+    price: $59,
+    period: '/month',
+    description:;
+      Turn OpenAPI / GraphQL schemas into versioned docs, changelogs and typed SDKs with a searchable portal.,
+    features: [;
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+
+    implementation_details: 'Connectors, policies, exporters',
+    launch_date: '2026 - 02 - 08',
+pr-12325
       'Docs from schemas',
       'SDK generation',
       'Changelogs',
-      'Searchable portal'
+      'Searchable portal',
     ],
     popular: false,
+    icon: '📘',
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
     category: 'Developer Tools',
-  real_service: true,
+    icon: '📘',
+
+    color: 'from - cyan - 600 to - blue - 700',
+    text_color: 'text - cyan - 300',
+    link: 'https://ziontechgroup.com / services / api - changelog - sdk - publisher',
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+    category: 'Developer Tools',
+    real_service: true,'
+    market_position: 'Ship API portals faster','
+    target_audience: 'API and platform teams',
+    trial_days: 14,'
+    setup_time: '30 minutes','
+    technology: ['OpenAPI, GraphQL, MDX'],'
+    integrations: ['GitHub', 'GitLab'],'
+    use_cases: ['Dev portals', 'SDKs'],'
+    roi: 'Docs / SDKs 5× faster','
+    competitors: ['ReadMe', 'Redocly'],
+
+    real_service: true,
     market_position: 'Ship API portals faster',
-  target_audience: 'API and platform teams',
+    target_audience: 'API and platform teams',
     trial_days: 14,
     setup_time: '30 minutes',
-  technology: ['OpenAPI, GraphQL, MDX'],
+    technology: ['OpenAPI, GraphQL, MDX'],
     integrations: ['GitHub', 'GitLab'],
     use_cases: ['Dev portals', 'SDKs'],
     roi: 'Docs / SDKs 5× faster',
-  competitors: ['ReadMe', 'Redocly'],
+    competitors: ['ReadMe', 'Redocly'],
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
     customers: 9,
-    rating: 4 && 4.7,}
-    reviews: 6}
+    rating: 4 && 4.7,
+    reviews: 6
   }
 ];	{
+
+
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+
+    market_size: '$1.5B',
+    growth_rate: '18% CAGR',
+    variant: 'neural - quantum',
+    contact_info: contact,
+    real_implementation: true,
+    implementation_details: 'Schema importers, generators, UI',
+    launch_date: '2026 - 02 - 12',
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+    implementation_details: 'Schema importers, generators, UI',;
+    launch_date: '2026 - 02 - 12',
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+  {'
+      'Docs from schemas',''
+      'SDK generation',''
+      'Changelogs',''
+      'Searchable portal','
+    ],
+    popular: false,'
+    category: 'Developer Tools','
+    real_service: true,'
+    market_position: 'Ship API portals faster',''
+    target_audience: 'API and platform teams','
+    trial_days: 14,'
+    setup_time: '30 minutes',''
+    technology: ['OpenAPI, GraphQL, MDX'],''
+    integrations: ['GitHub', 'GitLab'],''
+    use_cases: ['Dev portals', 'SDKs'],''
+    roi: 'Docs / SDKs 5× faster',''
+    competitors: ['ReadMe', 'Redocly'],'
+    customers: 9,
+    rating: 4 && 4.7,
+    reviews: 6,
+  },
+];	{
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+];	{
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
 		integrations: ['StripePayPalGoogle Analytics'];
 		useCases: ['Partner growthAutomated payouts'];
 		roi: 'Grow partner revenue by 10–25%';
@@ -286,26 +1868,59 @@
 		marketSize: '$5B+';
 		growthRate: '12% YoY';
 		variant: 'neural-quantum';
-		contactInfo: contact;
-		implementationDetails: 'Event ingestion, attribution, payout jobs';
-		launchDate: '2026-01-10';}
-		customers: 12;rating: 4 && 4.6,reviews: 7;}
+		contactInfo: contact;'
+		implementationDetails: 'Event ingestion, attribution, payout jobs';'
+		launchDate: '2026-01-10';
+		customers: 12;
+
+		rating: 4 && 4.6,
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+		reviews: 7
+		reviews: 7;
+	}
+	{'
+		id: 'customer-feedback-intelligence';'
+		name: 'Customer Feedback Intelligence';'
+		tagline: 'Summarize NPS/CSAT and reviews into prioritized insights';'
+		price: '$149';'
+		period: '/month''
+		description: 'Aggregate surveys, tickets and reviews, cluster themes with LLMs, and generate prioritized roadmaps with impact scores.';'
+		features: ['Multichannel ingestionLLM clustering and themesImpact scoringRoadmap export'];
+		popular: true;'
+		icon: '💬';'
+		color: 'from-cyan-600 to-blue-700';'
+		textColor: 'text-cyan-300';'
+		link: 'https://ziontechgroup && ziontechgroup.com/services/customer-feedback-intelligence';'
+		category: 'AI & Data';
+		realService: true;'
+		marketPosition: 'Actionable product feedback without heavy BI';'
+		targetAudience: 'Product and CX teams';
+		trialDays: 14;
+		customers: 12;rating: 4 && 4.6,reviews: 7;
 	}
 	{id: 'customer-feedback-intelligence';
 		name: 'Customer Feedback Intelligence';
 		tagline: 'Summarize NPS/CSAT and reviews into prioritized insights';
 		price: '$149';
 		period: '/month';
-		customers: 12;}
-		reviews: 7}
+		customers: 12;
+
+
+
+		rating: 4 && 4.6,
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+		reviews: 7
 	}
 	{
 		id: 'customer-feedback-intelligence';
 		name: 'Customer Feedback Intelligence';
 		tagline: 'Summarize NPS/CSAT and reviews into prioritized insights';
 		price: '$149';
-		period: \"period\",
-    description: 'Aggregate surveys, tickets and reviews, cluster themes with LLMs, and generate prioritized roadmaps with impact scores.';
+		period: '/month'
+		description: 'Aggregate surveys, tickets and reviews, cluster themes with LLMs, and generate prioritized roadmaps with impact scores.';
 		features: ['Multichannel ingestionLLM clustering and themesImpact scoringRoadmap export'];
 		popular: true;
 		icon: '💬';
@@ -316,9 +1931,17 @@
 		realService: true;
 		marketPosition: 'Actionable product feedback without heavy BI';
 		targetAudience: 'Product and CX teams';
-		trialDays: 14;setupTime: '1 hour',
-  technology: ['Embeddings, Vector DB, Next && Next.js'];integrations: ['ZendeskIntercomG2Capterra'];
+		trialDays: 14;setupTime: '1 hour',technology: ['Embeddings, Vector DB, Next && Next.js'];integrations: ['ZendeskIntercomG2Capterra'];
 		trialDays: 14;
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+		setupTime: '1 hour',
+		technology: ['Embeddings, Vector DB, Next && Next.js'];
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
 		integrations: ['ZendeskIntercomG2Capterra'];
 		useCases: ['Prioritize roadmapReduce churn'];
 		roi: 'Ship high-impact features faster';
@@ -327,21 +1950,430 @@
 		growthRate: '18% CAGR';
 		variant: 'ai-futuristic';
 		contactInfo: contact;
+		realImplementation: true'
+		implementationDetails: 'Connectors, clustering, scoring models';'
+		launchDate: '2026-01-12';
+		customers: 9;
+
+		rating: 4 && 4.7,
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+		reviews: 5
+		reviews: 5;
+	}
+	{'
+		id: 'api-security-posture-monitor';'
+		name: 'API Security Posture Monitor';'
+		tagline: 'Detect OWASP API risks and auth gaps with CI annotations';'
+		price: '$199';'
+		period: '/month''
+		description: 'Continuously scan OpenAPI specs and staging endpoints for auth gaps, rate-limits, and common vulnerabilities with pull request annotations.';'
+		features: ['OpenAPI scanningAuth/rate limit testsOWASP API checksPR annotations and diffs'];
+		popular: true;'
+		icon: '🛡️';'
+		color: 'from-rose-600 to-pink-700';'
+		textColor: 'text-rose-300';'
+		link: 'https://ziontechgroup && ziontechgroup.com/services/api-security-posture-monitor';'
+		category: 'Quality & Monitoring';
+		realService: true;'
+		marketPosition: 'Developer-first API security posture';'
+		targetAudience: 'Platform and security teams';
+		trialDays: 14;'
+		setupTime: '30 minutes''
+		technology: ['OpenAPI, Node, CI'];'
+		integrations: ['GitHubGitLabJenkins'];'
+		useCases: ['Pre-deploy API checksSecurity posture'];'
+		roi: 'Reduce security escapes by 60%';'
+		competitors: ['StackHawk42Crunch'];'
+		marketSize: '$4B';'
+		growthRate: '20% CAGR';'
+		variant: 'quantum-cyberpunk';
+		contactInfo: contact;
+		realImplementation: true'
+		implementationDetails: 'Spec analyzers, runners, annotations';'
+		launchDate: '2026-01-14';
+		customers: 11;
+
+		rating: 4 && 4.5,
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+		reviews: 6
+		reviews: 6;
+	}
+	{'
+		id: 'edge-cron-orchestrator';'
+		name: 'Edge Cron Orchestrator''
+		tagline: 'Reliable schedules with retries, jitter and DLQs';'
+		price: '$59';'
+		period: '/month''
+		description: 'Define schedules across providers with idempotency, exponential backoff, and run history with alerting.';'
+		features: ['Flexible cron/rateIdempotency and retriesRun historyAlerting and webhooks'];
+		popular: false;'
+		icon: '⏰';'
+		color: 'from-amber-500 to-orange-600';'
+		textColor: 'text-amber-300';'
+		link: 'https://ziontechgroup && ziontechgroup.com/services/edge-cron-orchestrator';'
+		category: 'Developer Tools';
+		realService: true;'
+		marketPosition: 'Unified schedules across clouds';'
+		targetAudience: 'SaaS and platform teams';
+		trialDays: 14;'
+		setupTime: '2 hours';'
+		technology: ['Workers/LambdaWebhooks'];'
+		integrations: ['AWSCloudflareGCP'];'
+		useCases: ['Billing cyclesData syncs'];'
+		roi: 'Fewer missed jobs and incidents';'
+		competitors: ['Temporal (overkill)DIY'];'
+		marketSize: '$1B+';'
+		growthRate: '15% CAGR';'
+		variant: 'holographic-matrix';
+		contactInfo: contact;
+		realImplementation: true'
+		implementationDetails: 'Scheduler API, dashboard, webhooks';'
+		launchDate: '2026-01-18';
+		customers: 7;
+
+		rating: 4 && 4.5,
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+		reviews: 4
+		reviews: 4;
+	}
+	{'
+		id: 'email-parsing-routing-api';'
+		name: 'Email Parsing & Routing API';'
+		tagline: 'Inbound email to structured events with attachments';'
+		price: '$39';'
+		period: '/month''
+		description: 'Parse inbound email, normalize signatures, extract attachments, and deliver to your webhooks with retries and dead-letter queues.';'
+		features: ['Signature strippingAttachment handlingWebhook retries/DLQInspector UI'];
+		popular: false;'
+		icon: '📨';'
+		color: 'from-indigo-600 to-blue-700';'
+		textColor: 'text-indigo-300';'
+		link: 'https://ziontechgroup && ziontechgroup.com/services/email-parsing-routing-api';'
+		category: 'Developer Tools';
+		realService: true;'
+		marketPosition: 'Developer-friendly email ingestion';'
+		targetAudience: 'Developers and platform';
+		trialDays: 14;'
+		setupTime: '30 minutes';'
+		technology: ['SMTP/WebhooksVirus scan'];'
+		integrations: ['SESSendGridMailgun'];'
+		useCases: ['Ticket intakeCRM capture'];'
+		roi: 'Automate manual email triage';'
+		competitors: ['MailparserIntegromat'];'
+		marketSize: '$0 && 0.8B';'
+		growthRate: '10% CAGR';'
+		variant: 'neural-quantum';
+		contactInfo: contact;
+		realImplementation: true'
+		implementationDetails: 'Inbound parsers, queueing, UI';'
+		launchDate: '2026-01-20';
+		customers: 8;
+
+		rating: 4 && 4.6,
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+		reviews: 5
+		reviews: 5;
+	}
+	{'
+		id: 'ai-marketing-content-studio';'
+		name: 'AI Marketing Content Studio''
+		tagline: 'Campaign-ready blogs, emails and ads with brand guardrails';'
+		price: '$119';'
+		period: '/month''
+		description: 'Generate on-brand content with templates, tone control, compliance checks, and multi-channel export.';'
+		features: ['Brand/tone controlsTemplates and briefsCompliance checksMulti-channel export'];
+		popular: true;'
+		icon: '📝';'
+		color: 'from-fuchsia-600 to-pink-700';'
+		textColor: 'text-fuchsia-300';'
+		link: 'https://ziontechgroup && ziontechgroup.com/services/ai-marketing-content-studio';'
+		category: 'AI & Data';
+		realService: true;'
+		marketPosition: 'On-brand AI content for teams';'
+		targetAudience: 'Marketing and growth teams';
+		trialDays: 14;'
+		setupTime: '30 minutes''
+		technology: ['LLMs, Style prompts'];'
+		integrations: ['HubSpotMailchimpWebflow']'
+		useCases: ['Blog, email, ads'];'
+		roi: 'Scale content 5× faster';'
+		competitors: ['JasperWriter'];'
+		marketSize: '$3B+';'
+		growthRate: '22% CAGR';'
+		variant: 'ai-futuristic';
+		contactInfo: contact;
+		realImplementation: true'
+		implementationDetails: 'Template engine, tone guardrails';'
+		launchDate: '2026-01-22';
+		customers: 15;
+
+		rating: 4 && 4.6,
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+		reviews: 9
+		reviews: 9;
+	}
+	{'
+		id: 'security-headers-scanner';'
+		name: 'Security Headers Scanner';'
+		tagline: 'Continuous CSP/HSTS/cookie flag auditing with diffs';'
+		price: '$19';'
+		period: '/month''
+		description: 'Audit security headers across environments and get pull request annotations, weekly reports and diffs.';'
+		features: ['CSP/HSTS checksCookie flagsPR annotationsWeekly reports'];
+		popular: false;'
+		icon: '🔐';'
+		color: 'from-sky-600 to-blue-700';'
+		textColor: 'text-sky-300';'
+		link: 'https://ziontechgroup && ziontechgroup.com/services/security-headers-scanner';'
+		category: 'Quality & Monitoring';
+		realService: true;'
+		marketPosition: 'Simple posture checks for web apps';'
+		targetAudience: 'Developers and security';
+		trialDays: 14;'
+		setupTime: '15 minutes';'
+		technology: ['NodePlaywright'];'
+		integrations: ['GitHubGitLab'];'
+		useCases: ['Header hardeningCompliance reports'];'
+		roi: 'Reduce risk and review toil';'
+		competitors: ['Mozilla Observatory'];'
+		marketSize: '$0 && 0.5B';'
+		growthRate: '8% CAGR';'
+		variant: 'holographic';
+		contactInfo: contact;
+		realImplementation: true'
+		implementationDetails: 'Scanners, CI annotations, reports';'
+		launchDate: '2026-01-25';
+		customers: 20;
+
+		rating: 4 && 4.5,
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+		reviews: 10
+		reviews: 10;
+	}
+	{'
+		id: 'ml-feature-store-starter';'
+		name: 'ML Feature Store Starter''
+		tagline: 'Versioned features, validation and online serving';'
+		price: '$149';'
+		period: '/month''
+		description: 'Ship ML features faster with versioning, validation rules, lineage, and low-latency serving APIs.';'
+		features: ['Feature versioningValidation rulesLineage trackingOnline serving API'];
+		popular: false;'
+		icon: '📦';'
+		color: 'from-emerald-600 to-teal-700';'
+		textColor: 'text-emerald-300';'
+		link: 'https://ziontechgroup && ziontechgroup.com/services/ml-feature-store-starter';'
+		category: 'AI & Data';
+		realService: true;'
+		marketPosition: 'Lean feature store for teams';'
+		targetAudience: 'Data/ML teams';
+		trialDays: 14;'
+		setupTime: '1 day''
+		technology: ['DB, Vector/Key-Value'];'
+		integrations: ['DatabricksdbtAirflow'];'
+		useCases: ['Faster model delivery'];'
+		roi: 'Shorter time-to-prod models';'
+		competitors: ['TectonFeast'];'
+		marketSize: '$1B+';'
+		growthRate: '20% CAGR';'
+		variant: 'neural-quantum';
+		contactInfo: contact;
+		realImplementation: true'
+		implementationDetails: 'Schemas, validators, API';'
+		launchDate: '2026-01-28';
+		customers: 6;
+
+		rating: 4 && 4.5,
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+		reviews: 3
+		reviews: 3;
+	}
+	{'
+		id: 'slo-burn-rate-coach';'
+		name: 'SLO Burn Rate Coach';'
+		tagline: 'Compute SLOs and coach on burn-rate risks';'
+		price: '$49';'
+		period: '/month''
+		description: 'Define SLOs, compute error budgets and get proactive coaching with burn-rate alerts tied to runbooks.';'
+		features: ['SLO editorBurn-rate alertsRunbook hintsIntegrations and webhooks'];
+		popular: false;'
+		icon: '📈';'
+		color: 'from-lime-500 to-emerald-600';'
+		textColor: 'text-lime-300';'
+		link: 'https://ziontechgroup && ziontechgroup.com/services/slo-burn-rate-coach';'
+		category: 'Observability';
+		realService: true;'
+		marketPosition: 'SLOs without the complexity';'
+		targetAudience: 'SRE and platform';
+		trialDays: 14;'
+		setupTime: '1 hour';'
+		technology: ['Prom/OTEL'];'
+		integrations: ['PagerDutySlack'];'
+		useCases: ['Error budgetsCoaching'];'
+		roi: 'Fewer incidents';'
+		competitors: ['Nobl9'];'
+		marketSize: '$0 && 0.8B';'
+		growthRate: '14% CAGR';'
+		variant: 'holographic-matrix';
+		contactInfo: contact;
+		realImplementation: true'
+		implementationDetails: 'SLO calc, alerting, UI';'
+		launchDate: '2026-02-01';
+		customers: 10;
+
+		rating: 4 && 4.5,
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+		reviews: 6
+		reviews: 6;
+	}
+	{'
+		id: 'browser-performance-optimizer';'
+		name: 'Browser Performance Optimizer';'
+		tagline: 'Budget-driven CWV with hints and PR annotations';'
+		price: '$69';'
+		period: '/month''
+		description: 'Improve Core Web Vitals with RUM/synthetic insights, performance budgets, and PR annotations for bundle changes.';'
+		features: ['RUM + syntheticBudgets and alertsBundle diff and PR notesEdge hints'];
+		popular: false;'
+		icon: '⚡';'
+		color: 'from-cyan-600 to-purple-700';'
+		textColor: 'text-cyan-300';'
+		link: 'https://ziontechgroup && ziontechgroup.com/services/browser-performance-optimizer';'
+		category: 'Quality & Monitoring';
+		realService: true;'
+		marketPosition: 'Developer-first CWV improvements';'
+		targetAudience: 'Web and platform teams';
+		trialDays: 14;'
+		setupTime: '2 hours''
+		technology: ['Lighthouse, RUM'];'
+		integrations: ['GitHubVercelNetlify']'
+		useCases: ['CWV, bundle size'];'
+		roi: '+20 LCP, fewer regressions';'
+		competitors: ['SpeedCurveCalibre'];'
+		marketSize: '$0 && 0.5B';'
+		growthRate: '12% CAGR';'
+		variant: 'neural-quantum-cyberpunk';
+		contactInfo: contact;
+		realImplementation: true'
+		implementationDetails: 'RUM SDK, CI checks, UI';'
+		launchDate: '2026-02-05';
+		customers: 5;
+
+		rating: 4 && 4.5,
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+		reviews: 3
+		reviews: 3;
+	}
+	{'
+		id: 'cloud-cost-governance-suite';'
+		name: 'Cloud Cost Governance Suite''
+		tagline: 'Budgets, owners, and policy guardrails across clouds';'
+		price: '$499';'
+		period: '/month''
+		description: 'Enforce budgets with owners, detect anomalies and apply policy guardrails with IaC exports for approvals.';'
+		features: ['Budgets and ownersAnomaly detectionPolicy guardrailsIaC recommendation exports'];
+		popular: true;'
+		icon: '💸';'
+		color: 'from-amber-600 to-orange-700';'
+		textColor: 'text-amber-300';'
+		link: 'https://ziontechgroup && ziontechgroup.com/services/cloud-cost-governance-suite';'
+		category: 'Cloud & FinOps';
+		realService: true;'
+		marketPosition: 'Governance overlay for FinOps';'
+		targetAudience: 'Finance and platform';
+		trialDays: 14;'
+		setupTime: '3 days';'
+		technology: ['AWS/GCP/Azure APIs'];'
+		integrations: ['DatadogSlackJira'];'
+		useCases: ['Spend controlChargeback'];'
+		roi: 'Reduce overspend by 10–30%';'
+		competitors: ['CloudZeroFinout'];'
+		marketSize: '$12B';'
+		growthRate: '25% YoY';'
+		variant: 'quantum-holographic';
+		contactInfo: contact;
+		realImplementation: true'
+		implementationDetails: 'Connectors, policies, exporters';'
+		launchDate: '2026-02-08';
+		customers: 6;
+
+		rating: 4 && 4.6,
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+		reviews: 4
+		reviews: 4;
+	}
+	{'
+		id: 'api-changelog-sdk-publisher';'
+		name: 'API Changelog & SDK Publisher''
+		tagline: 'Generate docs, changelogs and SDKs from schemas';'
+		price: '$59';'
+		period: '/month''
+		description: 'Turn OpenAPI/GraphQL schemas into versioned docs, changelogs and typed SDKs with a searchable portal.';'
+		features: ['Docs from schemasSDK generationChangelogsSearchable portal'];
+		popular: false;'
+		icon: '📘';'
+		color: 'from-cyan-600 to-blue-700';'
+		textColor: 'text-cyan-300';'
+		link: 'https://ziontechgroup && ziontechgroup.com/services/api-changelog-sdk-publisher';'
+		category: 'Developer Tools';
+		realService: true;'
+		marketPosition: 'Ship API portals faster';'
+		targetAudience: 'API and platform teams';
+		trialDays: 14;'
+		setupTime: '30 minutes''
+		technology: ['OpenAPI, GraphQL, MDX'];'
+		integrations: ['GitHubGitLab'];'
+		useCases: ['Dev portalsSDKs'];'
+		roi: 'Docs/SDKs 5× faster';'
+		competitors: ['ReadMeRedocly'];'
+		marketSize: '$1 && 1.5B';'
+		growthRate: '18% CAGR';'
+		variant: 'neural-quantum';
+		contactInfo: contact;
+		realImplementation: true'
+		implementationDetails: 'Schema importers, generators, UI';'
+		launchDate: '2026-02-12';
+		customers: 9;
 		realImplementation: true;
+		implementationDetails: 'Connectors, clustering, scoring models';
+		launchDate: '2026-01-12';
+		customers: 9;rating: 4 && 4.7,reviews: 5;
+	}
+	{id: 'api-security-posture-monitor';
+		name: 'API Security Posture Monitor';
+		tagline: 'Detect OWASP API risks and auth gaps with CI annotations';
+		price: '$199';
+		period: '/month';
+		realImplementation: true
+		implementationDetails: 'Connectors, clustering, scoring models';
+		launchDate: '2026-01-12';
+		customers: 9;
 
-    implementationDetails: 'Connectors, clustering, scoring models';
 
-launchDate: '2026-01-12';
-		customers: 9;}
-		reviews: 5}
+
+		rating: 4 && 4.7,
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+		reviews: 5
 	}
 	{
 		id: 'api-security-posture-monitor';
 		name: 'API Security Posture Monitor';
 		tagline: 'Detect OWASP API risks and auth gaps with CI annotations';
 		price: '$199';
-		period: '/month',
-  description: 'Continuously scan OpenAPI specs and staging endpoints for auth gaps, rate-limits, and common vulnerabilities with pull request annotations.';
+		period: '/month'
+		description: 'Continuously scan OpenAPI specs and staging endpoints for auth gaps, rate-limits, and common vulnerabilities with pull request annotations.';
 		features: ['OpenAPI scanningAuth/rate limit testsOWASP API checksPR annotations and diffs'];
 		popular: true;
 		icon: '🛡️';
@@ -354,8 +2386,8 @@ launchDate: '2026-01-12';
 		targetAudience: 'Platform and security teams';
 		trialDays: 14;
 		setupTime: '30 minutes';
-		setupTime: '30 minutes',
-  technology: ['OpenAPI, Node, CI'];
+		setupTime: '30 minutes'
+		technology: ['OpenAPI, Node, CI'];
 		integrations: ['GitHubGitLabJenkins'];
 		useCases: ['Pre-deploy API checksSecurity posture'];
 		roi: 'Reduce security escapes by 60%';
@@ -364,29 +2396,36 @@ launchDate: '2026-01-12';
 		growthRate: '20% CAGR';
 		variant: 'quantum-cyberpunk';
 		contactInfo: contact;
-		realImplementation: true;
+		realImplementation: true
 		implementationDetails: 'Spec analyzers, runners, annotations';
-		launchDate: '2026-01-14';}
-		customers: 11;rating: 4 && 4.5,reviews: 6;}
+		launchDate: '2026-01-14';
+		customers: 11;rating: 4 && 4.5,reviews: 6;
 	}
 	{id: 'edge-cron-orchestrator';
 		name: 'Edge Cron Orchestrator';
 		tagline: 'Reliable schedules with retries, jitter and DLQs';
 		price: '$59';
 		period: '/month';
-		realImplementation: true;
-implementationDetails: 'Spec analyzers, runners, annotations';
+		realImplementation: true
+		implementationDetails: 'Spec analyzers, runners, annotations';
 		launchDate: '2026-01-14';
-		customers: 11;}
-		reviews: 6}
+		customers: 11;
+
+
+
+		rating: 4 && 4.5,
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+		reviews: 6
 	}
 	{
 		id: 'edge-cron-orchestrator';
-		name: 'Edge Cron Orchestrator',
-  tagline: 'Reliable schedules with retries, jitter and DLQs';
+		name: 'Edge Cron Orchestrator'
+		tagline: 'Reliable schedules with retries, jitter and DLQs';
 		price: '$59';
-		period: '/month',
-  description: 'Define schedules across providers with idempotency, exponential backoff, and run history with alerting.';
+		period: '/month'
+		description: 'Define schedules across providers with idempotency, exponential backoff, and run history with alerting.';
 		features: ['Flexible cron/rateIdempotency and retriesRun historyAlerting and webhooks'];
 		popular: false;
 		icon: '⏰';
@@ -408,29 +2447,36 @@ implementationDetails: 'Spec analyzers, runners, annotations';
 		growthRate: '15% CAGR';
 		variant: 'holographic-matrix';
 		contactInfo: contact;
-		realImplementation: true;
+		realImplementation: true
 		implementationDetails: 'Scheduler API, dashboard, webhooks';
-		launchDate: '2026-01-18';}
-		customers: 7;rating: 4 && 4.5,reviews: 4;}
+		launchDate: '2026-01-18';
+		customers: 7;rating: 4 && 4.5,reviews: 4;
 	}
 	{id: 'email-parsing-routing-api';
 		name: 'Email Parsing & Routing API';
 		tagline: 'Inbound email to structured events with attachments';
 		price: '$39';
 		period: '/month';
-		realImplementation: true;
-implementationDetails: 'Scheduler API, dashboard, webhooks';
+		realImplementation: true
+		implementationDetails: 'Scheduler API, dashboard, webhooks';
 		launchDate: '2026-01-18';
-		customers: 7;}
-		reviews: 4}
+		customers: 7;
+
+
+
+		rating: 4 && 4.5,
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+		reviews: 4
 	}
 	{
 		id: 'email-parsing-routing-api';
 		name: 'Email Parsing & Routing API';
 		tagline: 'Inbound email to structured events with attachments';
 		price: '$39';
-		period: '/month',
-  description: 'Parse inbound email, normalize signatures, extract attachments, and deliver to your webhooks with retries and dead-letter queues.';
+		period: '/month'
+		description: 'Parse inbound email, normalize signatures, extract attachments, and deliver to your webhooks with retries and dead-letter queues.';
 		features: ['Signature strippingAttachment handlingWebhook retries/DLQInspector UI'];
 		popular: false;
 		icon: '📨';
@@ -452,29 +2498,36 @@ implementationDetails: 'Scheduler API, dashboard, webhooks';
 		growthRate: '10% CAGR';
 		variant: 'neural-quantum';
 		contactInfo: contact;
-		realImplementation: true;
+		realImplementation: true
 		implementationDetails: 'Inbound parsers, queueing, UI';
-		launchDate: '2026-01-20';}
-		customers: 8;rating: 4 && 4.6,reviews: 5;}
+		launchDate: '2026-01-20';
+		customers: 8;rating: 4 && 4.6,reviews: 5;
 	}
 	{id: 'ai-marketing-content-studio';
 		name: 'AI Marketing Content Studio';
 		tagline: 'Campaign-ready blogs, emails and ads with brand guardrails';
 		price: '$119';
 		period: '/month';
-		realImplementation: true;
-implementationDetails: 'Inbound parsers, queueing, UI';
+		realImplementation: true
+		implementationDetails: 'Inbound parsers, queueing, UI';
 		launchDate: '2026-01-20';
-		customers: 8;}
-		reviews: 5}
+		customers: 8;
+
+
+
+		rating: 4 && 4.6,
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+		reviews: 5
 	}
 	{
 		id: 'ai-marketing-content-studio';
-		name: 'AI Marketing Content Studio',
-  tagline: 'Campaign-ready blogs, emails and ads with brand guardrails';
+		name: 'AI Marketing Content Studio'
+		tagline: 'Campaign-ready blogs, emails and ads with brand guardrails';
 		price: '$119';
-		period: '/month',
-  description: 'Generate on-brand content with templates, tone control, compliance checks, and multi-channel export.';
+		period: '/month'
+		description: 'Generate on-brand content with templates, tone control, compliance checks, and multi-channel export.';
 		features: ['Brand/tone controlsTemplates and briefsCompliance checksMulti-channel export'];
 		popular: true;
 		icon: '📝';
@@ -486,11 +2539,11 @@ implementationDetails: 'Inbound parsers, queueing, UI';
 		marketPosition: 'On-brand AI content for teams';
 		targetAudience: 'Marketing and growth teams';
 		trialDays: 14;
-		setupTime: '30 minutes';
+		setupTime: '30 minutes'
 		technology: ['LLMs, Style prompts'];
 		integrations: ['HubSpotMailchimpWebflow'];
-		setupTime: '30 minutes',
-  technology: ['LLMs, Style prompts'];
+		setupTime: '30 minutes'
+		technology: ['LLMs, Style prompts'];
 		integrations: ['HubSpotMailchimpWebflow']
 		useCases: ['Blog, email, ads'];
 		roi: 'Scale content 5× faster';
@@ -499,29 +2552,36 @@ implementationDetails: 'Inbound parsers, queueing, UI';
 		growthRate: '22% CAGR';
 		variant: 'ai-futuristic';
 		contactInfo: contact;
-		realImplementation: true;
+		realImplementation: true
 		implementationDetails: 'Template engine, tone guardrails';
-		launchDate: '2026-01-22';}
-		customers: 15;rating: 4 && 4.6,reviews: 9;}
+		launchDate: '2026-01-22';
+		customers: 15;rating: 4 && 4.6,reviews: 9;
 	}
 	{id: 'security-headers-scanner';
 		name: 'Security Headers Scanner';
 		tagline: 'Continuous CSP/HSTS/cookie flag auditing with diffs';
 		price: '$19';
 		period: '/month';
-		realImplementation: true;
-implementationDetails: 'Template engine, tone guardrails';
+		realImplementation: true
+		implementationDetails: 'Template engine, tone guardrails';
 		launchDate: '2026-01-22';
-		customers: 15;}
-		reviews: 9}
+		customers: 15;
+
+
+
+		rating: 4 && 4.6,
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+		reviews: 9
 	}
 	{
 		id: 'security-headers-scanner';
 		name: 'Security Headers Scanner';
 		tagline: 'Continuous CSP/HSTS/cookie flag auditing with diffs';
 		price: '$19';
-		period: '/month',
-  description: 'Audit security headers across environments and get pull request annotations, weekly reports and diffs.';
+		period: '/month'
+		description: 'Audit security headers across environments and get pull request annotations, weekly reports and diffs.';
 		features: ['CSP/HSTS checksCookie flagsPR annotationsWeekly reports'];
 		popular: false;
 		icon: '🔐';
@@ -543,29 +2603,36 @@ implementationDetails: 'Template engine, tone guardrails';
 		growthRate: '8% CAGR';
 		variant: 'holographic';
 		contactInfo: contact;
-		realImplementation: true;
+		realImplementation: true
 		implementationDetails: 'Scanners, CI annotations, reports';
-		launchDate: '2026-01-25';}
-		customers: 20;rating: 4 && 4.5,reviews: 10;}
+		launchDate: '2026-01-25';
+		customers: 20;rating: 4 && 4.5,reviews: 10;
 	}
 	{id: 'ml-feature-store-starter';
 		name: 'ML Feature Store Starter';
 		tagline: 'Versioned features, validation and online serving';
 		price: '$149';
 		period: '/month';
-		realImplementation: true;
-implementationDetails: 'Scanners, CI annotations, reports';
+		realImplementation: true
+		implementationDetails: 'Scanners, CI annotations, reports';
 		launchDate: '2026-01-25';
-		customers: 20;}
-		reviews: 10}
+		customers: 20;
+
+
+
+		rating: 4 && 4.5,
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+		reviews: 10
 	}
 	{
 		id: 'ml-feature-store-starter';
-		name: 'ML Feature Store Starter',
-  tagline: 'Versioned features, validation and online serving';
+		name: 'ML Feature Store Starter'
+		tagline: 'Versioned features, validation and online serving';
 		price: '$149';
-		period: '/month',
-  description: 'Ship ML features faster with versioning, validation rules, lineage, and low-latency serving APIs.';
+		period: '/month'
+		description: 'Ship ML features faster with versioning, validation rules, lineage, and low-latency serving APIs.';
 		features: ['Feature versioningValidation rulesLineage trackingOnline serving API'];
 		popular: false;
 		icon: '📦';
@@ -578,8 +2645,8 @@ implementationDetails: 'Scanners, CI annotations, reports';
 		targetAudience: 'Data/ML teams';
 		trialDays: 14;
 		setupTime: '1 day';
-		setupTime: '1 day',
-  technology: ['DB, Vector/Key-Value'];
+		setupTime: '1 day'
+		technology: ['DB, Vector/Key-Value'];
 		integrations: ['DatabricksdbtAirflow'];
 		useCases: ['Faster model delivery'];
 		roi: 'Shorter time-to-prod models';
@@ -588,29 +2655,36 @@ implementationDetails: 'Scanners, CI annotations, reports';
 		growthRate: '20% CAGR';
 		variant: 'neural-quantum';
 		contactInfo: contact;
-		realImplementation: true;
+		realImplementation: true
 		implementationDetails: 'Schemas, validators, API';
-		launchDate: '2026-01-28';}
-		customers: 6;rating: 4 && 4.5,reviews: 3;}
+		launchDate: '2026-01-28';
+		customers: 6;rating: 4 && 4.5,reviews: 3;
 	}
 	{id: 'slo-burn-rate-coach';
 		name: 'SLO Burn Rate Coach';
 		tagline: 'Compute SLOs and coach on burn-rate risks';
 		price: '$49';
 		period: '/month';
-		realImplementation: true;
-implementationDetails: 'Schemas, validators, API';
+		realImplementation: true
+		implementationDetails: 'Schemas, validators, API';
 		launchDate: '2026-01-28';
-		customers: 6;}
-		reviews: 3}
+		customers: 6;
+
+
+
+		rating: 4 && 4.5,
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+		reviews: 3
 	}
 	{
 		id: 'slo-burn-rate-coach';
 		name: 'SLO Burn Rate Coach';
 		tagline: 'Compute SLOs and coach on burn-rate risks';
 		price: '$49';
-		period: '/month',
-  description: 'Define SLOs, compute error budgets and get proactive coaching with burn-rate alerts tied to runbooks.';
+		period: '/month'
+		description: 'Define SLOs, compute error budgets and get proactive coaching with burn-rate alerts tied to runbooks.';
 		features: ['SLO editorBurn-rate alertsRunbook hintsIntegrations and webhooks'];
 		popular: false;
 		icon: '📈';
@@ -632,29 +2706,600 @@ implementationDetails: 'Schemas, validators, API';
 		growthRate: '14% CAGR';
 		variant: 'holographic-matrix';
 		contactInfo: contact;
-		realImplementation: true;
+		realImplementation: true
 		implementationDetails: 'SLO calc, alerting, UI';
-		launchDate: '2026-02-01';}
-		customers: 10;rating: 4 && 4.5,reviews: 6;}
+		launchDate: '2026-02-01';
+		customers: 10;rating: 4 && 4.5,reviews: 6;
 	}
 	{id: 'browser-performance-optimizer';
 		name: 'Browser Performance Optimizer';
 		tagline: 'Budget-driven CWV with hints and PR annotations';
 		price: '$69';
 		period: '/month';
-		realImplementation: true;
-implementationDetails: 'SLO calc, alerting, UI';
+		realImplementation: true
+		implementationDetails: 'SLO calc, alerting, UI';
 		launchDate: '2026-02-01';
-		customers: 10;}
-		reviews: 6}
+		customers: 10;
+
+
+
+		rating: 4 && 4.5,
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+    implementation_details: 'Connectors, policies, exporters',
+    launch_date: 2026 - 02 - 08,
+pr-12325
+      'Docs from schemas',
+      SDK generation,
+      'Changelogs',
+      Searchable portal],
+    popular: false,
+
+    icon: '📘',
+
+    color: from - cyan - 600 to - blue - 700,
+    text_color: 'text - cyan - 300',
+    link: https://ziontechgroup.com / services / api - changelog - sdk - publisher,
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+    category: 'Developer Tools',
+    real_service: true,
+    market_position: Ship API portals faster','
+    target_audience: API and platform teams,
+    trial_days: 14,'
+    setup_time: '30 minutes,
+    technology: ['OpenAPI, GraphQL, MDX'],
+    integrations: [GitHub', 'GitLab],
+    use_cases: ['Dev portals', SDKs],'
+    roi: 'Docs / SDKs 5× faster,
+    competitors: ['ReadMe', Redocly],
+
+    real_service: true,
+    market_position: 'Ship API portals faster',
+    target_audience: API and platform teams,
+    trial_days: 14,
+    setup_time: '30 minutes',
+    technology: [OpenAPI, GraphQL, MDX],
+    integrations: ['GitHub', GitLab],
+    use_cases: ['Dev portals', SDKs],
+    roi: 'Docs / SDKs 5× faster',
+    competitors: [ReadMe, 'Redocly'],
+
+
+    market_size: $1.5B,
+    growth_rate: '18% CAGR',
+    variant: neural - quantum,
+    contact_info: contact,
+    real_implementation: true,
+
+
+    implementation_details: 'Schema importers, generators, UI',
+    launch_date: 2026 - 02 - 12,
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+  {'
+      'Docs from schemas,'
+      'SDK generation,'
+      'Changelogs,'
+      'Searchable portal,
+    ],
+    popular: false,'
+    category: 'Developer Tools,
+    real_service: true,'
+    market_position: 'Ship API portals faster,'
+    target_audience: 'API and platform teams,
+    trial_days: 14,'
+    setup_time: '30 minutes,'
+    technology: ['OpenAPI, GraphQL, MDX],'
+    integrations: ['GitHub, GitLab'],'
+    use_cases: [Dev portals', 'SDKs],'
+    roi: 'Docs / SDKs 5× faster,'
+    competitors: ['ReadMe, Redocly'],'
+    customers: 9,
+    rating: 4 && 4.7,
+    reviews: 6},
+
+];	{
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+		integrations: [StripePayPalGoogle Analytics];
+		useCases: ['Partner growthAutomated payouts'];
+		roi: Grow partner revenue by 10–25%;
+		competitors: ['ImpactPartnerStack'];
+		marketSize: $5B+;
+		growthRate: '12% YoY';
+
+		variant: neural-quantum;
+		contactInfo: contact;'
+		implementationDetails: 'Event ingestion, attribution, payout jobs;
+		launchDate: '2026-01-10';
+		customers: 12;
+
+		reviews: 7
+		reviews: 7;
+	}
+	{
+		id: customer-feedback-intelligence';'
+		name: Customer Feedback Intelligence;'
+		tagline: 'Summarize NPS/CSAT and reviews into prioritized insights;
+		price: '$149';
+		period: /month''
+		description: Aggregate surveys, tickets and reviews, cluster themes with LLMs, and generate prioritized roadmaps with impact scores.;'
+		features: ['Multichannel ingestionLLM clustering and themesImpact scoringRoadmap export];
+		popular: true;
+		icon: '💬';
+		color: from-cyan-600 to-blue-700';'
+		textColor: text-cyan-300;'
+		link: 'https://ziontechgroup && ziontechgroup.com/services/customer-feedback-intelligence;
+		category: 'AI & Data';
+		realService: true;
+		marketPosition: Actionable product feedback without heavy BI';'
+		targetAudience: Product and CX teams;
+		trialDays: 14;
+
+		reviews: 7
+	}
+	{
+		id: 'customer-feedback-intelligence';
+		name: Customer Feedback Intelligence;
+		tagline: 'Summarize NPS/CSAT and reviews into prioritized insights';
+		price: $149;
+		period: '/month'
+		description: Aggregate surveys, tickets and reviews, cluster themes with LLMs, and generate prioritized roadmaps with impact scores.;
+		features: ['Multichannel ingestionLLM clustering and themesImpact scoringRoadmap export'];
+		popular: true;
+		icon: 💬;
+		color: 'from-cyan-600 to-blue-700';
+		textColor: text-cyan-300;
+		link: 'https://ziontechgroup && ziontechgroup.com/services/customer-feedback-intelligence';
+		category: AI & Data;
+		realService: true;
+		marketPosition: 'Actionable product feedback without heavy BI';
+		targetAudience: Product and CX teams;
+
+
+		setupTime: '1 hour',
+		technology: [Embeddings, Vector DB, Next && Next.js];
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+		integrations: ['ZendeskIntercomG2Capterra'];
+		useCases: [Prioritize roadmapReduce churn];
+		roi: 'Ship high-impact features faster';
+		competitors: [UnitQEnjoyHQ];
+		marketSize: '$2B+';
+		growthRate: 18% CAGR;
+
+		variant: 'ai-futuristic';
+		contactInfo: contact;
+		realImplementation: true
+		implementationDetails: Connectors, clustering, scoring models';'
+		launchDate: 2026-01-12;
+		customers: 9;
+
+		reviews: 5
+		reviews: 5;
+	}
+	{'
+		id: 'api-security-posture-monitor;
+		name: 'API Security Posture Monitor';
+		tagline: Detect OWASP API risks and auth gaps with CI annotations';'
+		price: $199;'
+		period: '/month
+		description: 'Continuously scan OpenAPI specs and staging endpoints for auth gaps, rate-limits, and common vulnerabilities with pull request annotations.';
+		features: [OpenAPI scanningAuth/rate limit testsOWASP API checksPR annotations and diffs'];
+		popular: true;'
+		icon: 🛡️;'
+		color: 'from-rose-600 to-pink-700;
+		textColor: 'text-rose-300';
+		link: https://ziontechgroup && ziontechgroup.com/services/api-security-posture-monitor';'
+		category: Quality & Monitoring;
+		realService: true;'
+		marketPosition: 'Developer-first API security posture;
+		targetAudience: 'Platform and security teams';
+		trialDays: 14;
+		setupTime: 30 minutes''
+		technology: [OpenAPI, Node, CI];'
+		integrations: ['GitHubGitLabJenkins];
+		useCases: ['Pre-deploy API checksSecurity posture'];
+		roi: Reduce security escapes by 60%';'
+		competitors: [StackHawk42Crunch];'
+		marketSize: '$4B;
+		growthRate: '20% CAGR';
+		variant: quantum-cyberpunk';
+		contactInfo: contact;
+		realImplementation: true'
+		implementationDetails: Spec analyzers, runners, annotations;'
+		launchDate: '2026-01-14;
+		customers: 11;
+
+		reviews: 6
+		reviews: 6;
+	}
+	{
+		id: 'edge-cron-orchestrator';
+		name: Edge Cron Orchestrator''
+		tagline: Reliable schedules with retries, jitter and DLQs;'
+		price: '$59;
+		period: '/month'
+		description: Define schedules across providers with idempotency, exponential backoff, and run history with alerting.';'
+		features: [Flexible cron/rateIdempotency and retriesRun historyAlerting and webhooks];
+		popular: false;'
+		icon: '⏰;
+		color: 'from-amber-500 to-orange-600';
+		textColor: text-amber-300';'
+		link: https://ziontechgroup && ziontechgroup.com/services/edge-cron-orchestrator;'
+		category: 'Developer Tools;
+		realService: true;
+		marketPosition: 'Unified schedules across clouds';
+		targetAudience: SaaS and platform teams';
+		trialDays: 14;'
+		setupTime: 2 hours;'
+		technology: ['Workers/LambdaWebhooks];
+		integrations: ['AWSCloudflareGCP'];
+		useCases: [Billing cyclesData syncs'];'
+		roi: Fewer missed jobs and incidents;'
+		competitors: ['Temporal (overkill)DIY];
+		marketSize: '$1B+';
+		growthRate: 15% CAGR';'
+		variant: holographic-matrix;
+		contactInfo: contact;
+		realImplementation: true'
+		implementationDetails: 'Scheduler API, dashboard, webhooks;
+		launchDate: '2026-01-18';
+		customers: 7;
+
+		reviews: 4
+		reviews: 4;
+	}
+	{
+		id: email-parsing-routing-api';'
+		name: Email Parsing & Routing API;'
+		tagline: 'Inbound email to structured events with attachments;
+		price: '$39';
+		period: /month''
+		description: Parse inbound email, normalize signatures, extract attachments, and deliver to your webhooks with retries and dead-letter queues.;'
+		features: ['Signature strippingAttachment handlingWebhook retries/DLQInspector UI];
+		popular: false;
+		icon: '📨';
+		color: from-indigo-600 to-blue-700';'
+		textColor: text-indigo-300;'
+		link: 'https://ziontechgroup && ziontechgroup.com/services/email-parsing-routing-api;
+		category: 'Developer Tools';
+		realService: true;
+		marketPosition: Developer-friendly email ingestion';'
+		targetAudience: Developers and platform;
+		trialDays: 14;'
+		setupTime: '30 minutes;
+		technology: ['SMTP/WebhooksVirus scan'];
+		integrations: [SESSendGridMailgun'];'
+		useCases: [Ticket intakeCRM capture];'
+		roi: 'Automate manual email triage;
+		competitors: ['MailparserIntegromat'];
+		marketSize: $0 && 0.8B';'
+		growthRate: 10% CAGR;'
+		variant: 'neural-quantum;
+		contactInfo: contact;
+		realImplementation: true
+		implementationDetails: 'Inbound parsers, queueing, UI';
+		launchDate: 2026-01-20';
+		customers: 8;
+
+		reviews: 5
+		reviews: 5;
+	}
+	{'
+		id: ai-marketing-content-studio;'
+		name: 'AI Marketing Content Studio
+		tagline: 'Campaign-ready blogs, emails and ads with brand guardrails';
+		price: $119';'
+		period: /month'
+		description: 'Generate on-brand content with templates, tone control, compliance checks, and multi-channel export.;
+		features: ['Brand/tone controlsTemplates and briefsCompliance checksMulti-channel export'];
+		popular: true;
+		icon: 📝';'
+		color: from-fuchsia-600 to-pink-700;'
+		textColor: 'text-fuchsia-300;
+		link: 'https://ziontechgroup && ziontechgroup.com/services/ai-marketing-content-studio';
+		category: AI & Data';
+		realService: true;'
+		marketPosition: On-brand AI content for teams;'
+		targetAudience: 'Marketing and growth teams;
+		trialDays: 14;
+		setupTime: '30 minutes'
+		technology: [LLMs, Style prompts'];'
+		integrations: [HubSpotMailchimpWebflow]'
+		useCases: ['Blog, email, ads];
+		roi: 'Scale content 5× faster';
+		competitors: [JasperWriter'];'
+		marketSize: $3B+;'
+		growthRate: '22% CAGR;
+		variant: 'ai-futuristic';
+		contactInfo: contact;
+		realImplementation: true
+		implementationDetails: Template engine, tone guardrails';'
+		launchDate: 2026-01-22;
+		customers: 15;
+
+		reviews: 9
+		reviews: 9;
+	}
+	{'
+		id: 'security-headers-scanner;
+		name: 'Security Headers Scanner';
+		tagline: Continuous CSP/HSTS/cookie flag auditing with diffs';'
+		price: $19;'
+		period: '/month
+		description: 'Audit security headers across environments and get pull request annotations, weekly reports and diffs.';
+		features: [CSP/HSTS checksCookie flagsPR annotationsWeekly reports'];
+		popular: false;'
+		icon: 🔐;'
+		color: 'from-sky-600 to-blue-700;
+		textColor: 'text-sky-300';
+		link: https://ziontechgroup && ziontechgroup.com/services/security-headers-scanner';'
+		category: Quality & Monitoring;
+		realService: true;'
+		marketPosition: 'Simple posture checks for web apps;
+		targetAudience: 'Developers and security';
+		trialDays: 14;
+		setupTime: 15 minutes';'
+		technology: [NodePlaywright];'
+		integrations: ['GitHubGitLab];
+		useCases: ['Header hardeningCompliance reports'];
+		roi: Reduce risk and review toil';'
+		competitors: [Mozilla Observatory];'
+		marketSize: '$0 && 0.5B;
+		growthRate: '8% CAGR';
+		variant: holographic';
+		contactInfo: contact;
+		realImplementation: true'
+		implementationDetails: Scanners, CI annotations, reports;'
+		launchDate: '2026-01-25;
+		customers: 20;
+
+		reviews: 10
+		reviews: 10;
+	}
+	{
+		id: 'ml-feature-store-starter';
+		name: ML Feature Store Starter''
+		tagline: Versioned features, validation and online serving;'
+		price: '$149;
+		period: '/month'
+		description: Ship ML features faster with versioning, validation rules, lineage, and low-latency serving APIs.';'
+		features: [Feature versioningValidation rulesLineage trackingOnline serving API];
+		popular: false;'
+		icon: '📦;
+		color: 'from-emerald-600 to-teal-700';
+		textColor: text-emerald-300';'
+		link: https://ziontechgroup && ziontechgroup.com/services/ml-feature-store-starter;'
+		category: 'AI & Data;
+		realService: true;
+		marketPosition: 'Lean feature store for teams';
+		targetAudience: Data/ML teams';
+		trialDays: 14;'
+		setupTime: 1 day'
+		technology: ['DB, Vector/Key-Value];
+		integrations: ['DatabricksdbtAirflow'];
+		useCases: [Faster model delivery'];'
+		roi: Shorter time-to-prod models;'
+		competitors: ['TectonFeast];
+		marketSize: '$1B+';
+		growthRate: 20% CAGR';'
+		variant: neural-quantum;
+		contactInfo: contact;
+		realImplementation: true'
+		implementationDetails: 'Schemas, validators, API;
+		launchDate: '2026-01-28';
+		customers: 6;
+
+		reviews: 3
+		reviews: 3;
+	}
+	{
+		id: slo-burn-rate-coach';'
+		name: SLO Burn Rate Coach;'
+		tagline: 'Compute SLOs and coach on burn-rate risks;
+		price: '$49';
+		period: /month''
+		description: Define SLOs, compute error budgets and get proactive coaching with burn-rate alerts tied to runbooks.;'
+		features: ['SLO editorBurn-rate alertsRunbook hintsIntegrations and webhooks];
+		popular: false;
+		icon: '📈';
+		color: from-lime-500 to-emerald-600';'
+		textColor: text-lime-300;'
+		link: 'https://ziontechgroup && ziontechgroup.com/services/slo-burn-rate-coach;
+		category: 'Observability';
+		realService: true;
+		marketPosition: SLOs without the complexity';'
+		targetAudience: SRE and platform;
+		trialDays: 14;'
+		setupTime: '1 hour;
+		technology: ['Prom/OTEL'];
+		integrations: [PagerDutySlack'];'
+		useCases: [Error budgetsCoaching];'
+		roi: 'Fewer incidents;
+		competitors: ['Nobl9'];
+		marketSize: $0 && 0.8B';'
+		growthRate: 14% CAGR;'
+		variant: 'holographic-matrix;
+		contactInfo: contact;
+		realImplementation: true
+		implementationDetails: 'SLO calc, alerting, UI';
+		launchDate: 2026-02-01';
+		customers: 10;
+
+		reviews: 6
+		reviews: 6;
+	}
+	{'
+		id: browser-performance-optimizer;'
+		name: 'Browser Performance Optimizer;
+		tagline: 'Budget-driven CWV with hints and PR annotations';
+		price: $69';'
+		period: /month'
+		description: 'Improve Core Web Vitals with RUM/synthetic insights, performance budgets, and PR annotations for bundle changes.;
+		features: ['RUM + syntheticBudgets and alertsBundle diff and PR notesEdge hints'];
+		popular: false;
+		icon: ⚡';'
+		color: from-cyan-600 to-purple-700;'
+		textColor: 'text-cyan-300;
+		link: 'https://ziontechgroup && ziontechgroup.com/services/browser-performance-optimizer';
+		category: Quality & Monitoring';
+		realService: true;'
+		marketPosition: Developer-first CWV improvements;'
+		targetAudience: 'Web and platform teams;
+		trialDays: 14;
+		setupTime: '2 hours'
+		technology: [Lighthouse, RUM'];'
+		integrations: [GitHubVercelNetlify]'
+		useCases: ['CWV, bundle size];
+		roi: '+20 LCP, fewer regressions';
+		competitors: [SpeedCurveCalibre'];'
+		marketSize: $0 && 0.5B;'
+		growthRate: '12% CAGR;
+		variant: 'neural-quantum-cyberpunk';
+		contactInfo: contact;
+		realImplementation: true
+		implementationDetails: RUM SDK, CI checks, UI';'
+		launchDate: 2026-02-05;
+		customers: 5;
+
+		reviews: 3
+		reviews: 3;
+	}
+	{'
+		id: 'cloud-cost-governance-suite;
+		name: 'Cloud Cost Governance Suite'
+		tagline: Budgets, owners, and policy guardrails across clouds';'
+		price: $499;'
+		period: '/month
+		description: 'Enforce budgets with owners, detect anomalies and apply policy guardrails with IaC exports for approvals.';
+		features: [Budgets and ownersAnomaly detectionPolicy guardrailsIaC recommendation exports'];
+		popular: true;'
+		icon: 💸;'
+		color: 'from-amber-600 to-orange-700;
+		textColor: 'text-amber-300';
+		link: https://ziontechgroup && ziontechgroup.com/services/cloud-cost-governance-suite';'
+		category: Cloud & FinOps;
+		realService: true;'
+		marketPosition: 'Governance overlay for FinOps;
+		targetAudience: 'Finance and platform';
+		trialDays: 14;
+		setupTime: 3 days';'
+		technology: [AWS/GCP/Azure APIs];'
+		integrations: ['DatadogSlackJira];
+		useCases: ['Spend controlChargeback'];
+		roi: Reduce overspend by 10–30%';'
+		competitors: [CloudZeroFinout];'
+		marketSize: '$12B;
+		growthRate: '25% YoY';
+		variant: quantum-holographic';
+		contactInfo: contact;
+		realImplementation: true'
+		implementationDetails: Connectors, policies, exporters;'
+		launchDate: '2026-02-08;
+		customers: 6;
+
+		reviews: 4
+		reviews: 4;
+	}
+	{
+		id: 'api-changelog-sdk-publisher';
+		name: API Changelog & SDK Publisher''
+		tagline: Generate docs, changelogs and SDKs from schemas;'
+		price: '$59;
+		period: '/month'
+		description: Turn OpenAPI/GraphQL schemas into versioned docs, changelogs and typed SDKs with a searchable portal.';'
+		features: [Docs from schemasSDK generationChangelogsSearchable portal];
+		popular: false;'
+		icon: '📘;
+		color: 'from-cyan-600 to-blue-700';
+		textColor: text-cyan-300';'
+		link: https://ziontechgroup && ziontechgroup.com/services/api-changelog-sdk-publisher;'
+		category: 'Developer Tools;
+		realService: true;
+		marketPosition: 'Ship API portals faster';
+		targetAudience: API and platform teams';
+		trialDays: 14;'
+		setupTime: 30 minutes'
+		technology: ['OpenAPI, GraphQL, MDX];
+		integrations: ['GitHubGitLab'];
+		useCases: [Dev portalsSDKs'];'
+		roi: Docs/SDKs 5× faster;'
+		competitors: ['ReadMeRedocly];
+		marketSize: '$1 && 1.5B';
+		growthRate: 18% CAGR';'
+		variant: neural-quantum;
+		contactInfo: contact;
+		realImplementation: true'
+		implementationDetails: 'Schema importers, generators, UI;
+		launchDate: '2026-02-12';
+		customers: 9;
+
+		implementationDetails: Connectors, clustering, scoring models;
+		launchDate: '2026-01-12';
+		customers: 9;rating: 4 && 4.7,reviews: 5;
+	}
+	{id: api-security-posture-monitor;
+		name: 'API Security Posture Monitor';
+		tagline: Detect OWASP API risks and auth gaps with CI annotations;
+		price: '$199';
+		period: /month;
+
+		realImplementation: true
+		implementationDetails: 'Connectors, clustering, scoring models';
+		launchDate: 2026-01-12;
+		customers: 9;
+
+
+		reviews: 5
+	}
+	{
+		id: 'api-security-posture-monitor';
+		name: API Security Posture Monitor;
+		tagline: 'Detect OWASP API risks and auth gaps with CI annotations';
+		price: $199;
+		period: '/month'
+		description: Continuously scan OpenAPI specs and staging endpoints for auth gaps, rate-limits, and common vulnerabilities with pull request annotations.;
+		features: ['OpenAPI scanningAuth/rate limit testsOWASP API checksPR annotations and diffs'];
+		popular: true;
+		icon: 🛡️;
+		color: 'from-rose-600 to-pink-700';
+		textColor: text-rose-300;
+		link: 'https://ziontechgroup && ziontechgroup.com/services/api-security-posture-monitor';
+		category: Quality & Monitoring;
+		realService: true;
+		marketPosition: 'Developer-first API security posture';
+		targetAudience: Platform and security teams;
+		trialDays: 14;
+
+		setupTime: '30 minutes'
+		technology: [OpenAPI, Node, CI];
+		integrations: ['GitHubGitLabJenkins'];
+		useCases: [Pre-deploy API checksSecurity posture];
+		roi: 'Reduce security escapes by 60%';
+		competitors: [StackHawk42Crunch];
+		marketSize: '$4B';
+		growthRate: 20% CAGR;
+		variant: 'quantum-cyberpunk';
+		contactInfo: contact;
+		realImplementation: true
+		implementationDetails: Spec analyzers, runners, annotations;
+
+		reviews: 6
 	}
 	{
 		id: 'browser-performance-optimizer';
 		name: 'Browser Performance Optimizer';
 		tagline: 'Budget-driven CWV with hints and PR annotations';
 		price: '$69';
-		period: '/month',
-  description: 'Improve Core Web Vitals with RUM/synthetic insights, performance budgets, and PR annotations for bundle changes.';
+		period: '/month'
+		description: 'Improve Core Web Vitals with RUM/synthetic insights, performance budgets, and PR annotations for bundle changes.';
 		features: ['RUM + syntheticBudgets and alertsBundle diff and PR notesEdge hints'];
 		popular: false;
 		icon: '⚡';
@@ -666,11 +3311,11 @@ implementationDetails: 'SLO calc, alerting, UI';
 		marketPosition: 'Developer-first CWV improvements';
 		targetAudience: 'Web and platform teams';
 		trialDays: 14;
-		setupTime: '2 hours';
+		setupTime: '2 hours'
 		technology: ['Lighthouse, RUM'];
 		integrations: ['GitHubVercelNetlify'];
-		setupTime: '2 hours',
-  technology: ['Lighthouse, RUM'];
+		setupTime: '2 hours'
+		technology: ['Lighthouse, RUM'];
 		integrations: ['GitHubVercelNetlify']
 		useCases: ['CWV, bundle size'];
 		roi: '+20 LCP, fewer regressions';
@@ -679,29 +3324,36 @@ implementationDetails: 'SLO calc, alerting, UI';
 		growthRate: '12% CAGR';
 		variant: 'neural-quantum-cyberpunk';
 		contactInfo: contact;
-		realImplementation: true;
+		realImplementation: true
 		implementationDetails: 'RUM SDK, CI checks, UI';
-		launchDate: '2026-02-05';}
-		customers: 5;rating: 4 && 4.5,reviews: 3;}
+		launchDate: '2026-02-05';
+		customers: 5;rating: 4 && 4.5,reviews: 3;
 	}
 	{id: 'cloud-cost-governance-suite';
 		name: 'Cloud Cost Governance Suite';
 		tagline: 'Budgets, owners, and policy guardrails across clouds';
 		price: '$499';
 		period: '/month';
-		realImplementation: true;
-implementationDetails: 'RUM SDK, CI checks, UI';
+		realImplementation: true
+		implementationDetails: 'RUM SDK, CI checks, UI';
 		launchDate: '2026-02-05';
-		customers: 5;}
-		reviews: 3}
+		customers: 5;
+
+
+
+		rating: 4 && 4.5,
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+		reviews: 3
 	}
 	{
 		id: 'cloud-cost-governance-suite';
-		name: 'Cloud Cost Governance Suite',
-  tagline: 'Budgets, owners, and policy guardrails across clouds';
+		name: 'Cloud Cost Governance Suite'
+		tagline: 'Budgets, owners, and policy guardrails across clouds';
 		price: '$499';
-		period: '/month',
-  description: 'Enforce budgets with owners, detect anomalies and apply policy guardrails with IaC exports for approvals.';
+		period: '/month'
+		description: 'Enforce budgets with owners, detect anomalies and apply policy guardrails with IaC exports for approvals.';
 		features: ['Budgets and ownersAnomaly detectionPolicy guardrailsIaC recommendation exports'];
 		popular: true;
 		icon: '💸';
@@ -723,29 +3375,36 @@ implementationDetails: 'RUM SDK, CI checks, UI';
 		growthRate: '25% YoY';
 		variant: 'quantum-holographic';
 		contactInfo: contact;
-		realImplementation: true;
+		realImplementation: true
 		implementationDetails: 'Connectors, policies, exporters';
-		launchDate: '2026-02-08';}
-		customers: 6;rating: 4 && 4.6,reviews: 4;}
+		launchDate: '2026-02-08';
+		customers: 6;rating: 4 && 4.6,reviews: 4;
 	}
 	{id: 'api-changelog-sdk-publisher';
 		name: 'API Changelog & SDK Publisher';
 		tagline: 'Generate docs, changelogs and SDKs from schemas';
 		price: '$59';
 		period: '/month';
-		realImplementation: true;
-implementationDetails: 'Connectors, policies, exporters';
+		realImplementation: true
+		implementationDetails: 'Connectors, policies, exporters';
 		launchDate: '2026-02-08';
-		customers: 6;}
-		reviews: 4}
+		customers: 6;
+
+
+
+		rating: 4 && 4.6,
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+		reviews: 4
 	}
 	{
 		id: 'api-changelog-sdk-publisher';
-		name: 'API Changelog & SDK Publisher',
-  tagline: 'Generate docs, changelogs and SDKs from schemas';
+		name: 'API Changelog & SDK Publisher'
+		tagline: 'Generate docs, changelogs and SDKs from schemas';
 		price: '$59';
-		period: '/month',
-  description: 'Turn OpenAPI/GraphQL schemas into versioned docs, changelogs and typed SDKs with a searchable portal.';
+		period: '/month'
+		description: 'Turn OpenAPI/GraphQL schemas into versioned docs, changelogs and typed SDKs with a searchable portal.';
 		features: ['Docs from schemasSDK generationChangelogsSearchable portal'];
 		popular: false;
 		icon: '📘';
@@ -758,8 +3417,8 @@ implementationDetails: 'Connectors, policies, exporters';
 		targetAudience: 'API and platform teams';
 		trialDays: 14;
 		setupTime: '30 minutes';
-		setupTime: '30 minutes',
-  technology: ['OpenAPI, GraphQL, MDX'];
+		setupTime: '30 minutes'
+		technology: ['OpenAPI, GraphQL, MDX'];
 		integrations: ['GitHubGitLab'];
 		useCases: ['Dev portalsSDKs'];
 		roi: 'Docs/SDKs 5× faster';
@@ -768,17 +3427,41 @@ implementationDetails: 'Connectors, policies, exporters';
 		growthRate: '18% CAGR';
 		variant: 'neural-quantum';
 		contactInfo: contact;
-		realImplementation: true;
+		realImplementation: true
 		implementationDetails: 'Schema importers, generators, UI';
-		launchDate: '2026-02-12';}
-		customers: 9;reviews: 6;}
+		launchDate: '2026-02-12';
+		reviews: 6
 	}
 ];
-		reviews: 6;
+
+		rating: 4 && 4.7,
+
+		reviews: 6
 	}
-];rating: 4 && 4.7,reviews: 6;
+];
+
+
+		rating: 4 && 4.7,
+
+
+		rating: 4 && 4.7,
+
+		reviews: 6
 	}
-];id: 'affiliate - analytics - starter';
+];
+
+		rating: 4 && 4.7,
+
+
+		rating: 4 && 4.7,
+
+		reviews: 6
+	}
+];
+
+		customers: 9;reviews: 6;
+
+  id: 'affiliate - analytics - starter';
   name: 'Affiliate Analytics Starter',
   tagline: 'Attribution, fraud detection and automated payouts for SMBs';
   price: '$129';
@@ -805,330 +3488,365 @@ implementationDetails: 'Connectors, policies, exporters';
   growth_rate: '12% YoY';
   variant: 'neural - quantum';
   contact_info: contact;
-  real_implementation: true,implementation_details: 'Event ingestion, attribution, payout jobs';
+  real_implementation: true,
+  implementation_details: 'Event ingestion, attribution, payout jobs';
   launch_date: '2026 - 01 - 10';
   customers: 12;
-  rating: 4.6,reviews: 7;
+  rating: 4.6,
+  reviews: 7;
 }
-{id: 'customer - feedback - intelligence';
-  name: 'Customer Feedback Intelligence';
+{
+  id: 'customer - feedback - intelligence';
+  name: Customer Feedback Intelligence;
   tagline: 'Summarize NPS / CSAT and reviews into prioritized insights';
-  price: '$149';
+  price: $149;
   period: '/month',
-  description: 'Aggregate surveys, tickets and reviews, cluster themes with LLMs, and generate prioritized roadmaps with impact scores.';
+  description: Aggregate surveys, tickets and reviews, cluster themes with LLMs, and generate prioritized roadmaps with impact scores.;
   features: ['Multichannel ingestionLLM clustering and themes_impact scoring_roadmap export'];
   popular: true;
-  icon: '💬';
+  icon: 💬;
   color: 'from - cyan - 600 to - blue - 700';
-  text_color: 'text - cyan - 300';
+  text_color: text - cyan - 300;
   link: 'https://ziontechgroup.com / services / customer - feedback - intelligence';
-  category: 'AI & Data';
+  category: AI & Data;
   real_service: true;
   market_position: 'Actionable product feedback without heavy BI';
-  target_audience: 'Product and CX teams';
+  target_audience: Product and CX teams;
   trial_days: 14;
   setup_time: '1 hour',
-  technology: ['Embeddings, Vector DB, Next.js'];
+  technology: [Embeddings, Vector DB, Next.js];
   integrations: ['ZendeskIntercomG2Capterra'];
-  use_cases: ['Prioritize roadmap_reduce churn'];
+  use_cases: [Prioritize roadmap_reduce churn];
   roi: 'Ship high - impact features faster';
-  competitors: ['UnitQEnjoyHQ'];
+  competitors: [UnitQEnjoyHQ];
   market_size: '$2B+';
-  growth_rate: '18% CAGR';
+  growth_rate: 18% CAGR;
   variant: 'ai - futuristic';
   contact_info: contact;
-  real_implementation: true,implementation_details: 'Connectors, clustering, scoring models';
+  real_implementation: true,
+  implementation_details: Connectors, clustering, scoring models;
   launch_date: '2026 - 01 - 12';
-  customers: 9;}
-  rating: 4.7,reviews: 5;}
+  customers: 9;
+  rating: 4.7,
+  reviews: 5;
 }
-{id: 'api - security - posture - monitor';
+{
+  id: api - security - posture - monitor;
   name: 'API Security Posture Monitor';
-  tagline: 'Detect OWASP API risks and auth gaps with CI annotations';
+  tagline: Detect OWASP API risks and auth gaps with CI annotations;
   price: '$199';
-  period: '/month',
+  period: /month,
   description: 'Continuously scan OpenAPI specs and staging endpoints for auth gaps, rate - limits, and common vulnerabilities with pull request annotations.';
-  features: ['OpenAPI scanning_auth / rate limit testsOWASP API checksPR annotations and diffs'];
+  features: [OpenAPI scanning_auth / rate limit testsOWASP API checksPR annotations and diffs];
   popular: true;
   icon: '🛡️';
-  color: 'from - rose - 600 to - pink - 700';
+  color: from - rose - 600 to - pink - 700;
   text_color: 'text - rose - 300';
-  link: 'https://ziontechgroup.com / services / api - security - posture - monitor';
+  link: https://ziontechgroup.com / services / api - security - posture - monitor;
   category: 'Quality & Monitoring';
   real_service: true;
-  market_position: 'Developer - first API security posture';
+  market_position: Developer - first API security posture;
   target_audience: 'Platform and security teams';
   trial_days: 14;
-  setup_time: '30 minutes',
+  setup_time: 30 minutes,
   technology: ['OpenAPI, Node, CI'];
-  integrations: ['GitHubGitLabJenkins'];
+  integrations: [GitHubGitLabJenkins];
   use_cases: ['Pre - deploy API checks_security posture'];
-  roi: 'Reduce security escapes by 60%';
+  roi: Reduce security escapes by 60%;
   competitors: ['StackHawk42Crunch'];
-  market_size: '$4B';
+  market_size: $4B;
   growth_rate: '20% CAGR';
-  variant: 'quantum - cyberpunk';
+  variant: quantum - cyberpunk;
   contact_info: contact;
-  real_implementation: true,implementation_details: 'Spec analyzers, runners, annotations';
-  launch_date: '2026 - 01 - 14';
-  customers: 11;}
-  rating: 4.5,reviews: 6;}
+  real_implementation: true,
+  implementation_details: 'Spec analyzers, runners, annotations';
+  launch_date: 2026 - 01 - 14;
+  customers: 11;
+  rating: 4.5,
+  reviews: 6;
 }
-{id: 'edge - cron - orchestrator';
-  name: 'Edge Cron Orchestrator',
+{
+  id: 'edge - cron - orchestrator';
+  name: Edge Cron Orchestrator,
   tagline: 'Reliable schedules with retries, jitter and DLQs';
-  price: '$59';
+  price: $59;
   period: '/month',
-  description: 'Define schedules across providers with idempotency, exponential backoff, and run history with alerting.';
+  description: Define schedules across providers with idempotency, exponential backoff, and run history with alerting.;
   features: ['Flexible cron / rate_idempotency and retries_run history_alerting and webhooks'];
   popular: false;
-  icon: '⏰';
+  icon: ⏰;
   color: 'from - amber - 500 to - orange - 600';
-  text_color: 'text - amber - 300';
+  text_color: text - amber - 300;
   link: 'https://ziontechgroup.com / services / edge - cron - orchestrator';
-  category: 'Developer Tools';
+  category: Developer Tools;
   real_service: true;
   market_position: 'Unified schedules across clouds';
-  target_audience: 'SaaS and platform teams';
+  target_audience: SaaS and platform teams;
   trial_days: 14;
   setup_time: '2 hours';
-  technology: ['Workers / LambdaWebhooks'];
+  technology: [Workers / LambdaWebhooks];
   integrations: ['AWSCloudflareGCP'];
-  use_cases: ['Billing cycles_data syncs'];
+  use_cases: [Billing cycles_data syncs];
   roi: 'Fewer missed jobs and incidents';
-  competitors: ['Temporal (overkill)DIY'];
+  competitors: [Temporal (overkill)DIY];
   market_size: '$1B+';
-  growth_rate: '15% CAGR';
+  growth_rate: 15% CAGR;
   variant: 'holographic - matrix';
   contact_info: contact;
-  real_implementation: true,implementation_details: 'Scheduler API, dashboard, webhooks';
+  real_implementation: true,
+  implementation_details: Scheduler API, dashboard, webhooks;
   launch_date: '2026 - 01 - 18';
-  customers: 7;}
-  rating: 4.5,reviews: 4;}
+  customers: 7;
+  rating: 4.5,
+  reviews: 4;
 }
-{id: 'email - parsing - routing - api';
+{
+  id: email - parsing - routing - api;
   name: 'Email Parsing & Routing API';
-  tagline: 'Inbound email to structured events with attachments';
+  tagline: Inbound email to structured events with attachments;
   price: '$39';
-  period: '/month',
+  period: /month,
   description: 'Parse inbound email, normalize signatures, extract attachments, and deliver to your webhooks with retries and dead - letter queues.';
-  features: ['Signature stripping_attachment handling_webhook retries / DLQInspector UI'];
+  features: [Signature stripping_attachment handling_webhook retries / DLQInspector UI];
   popular: false;
   icon: '📨';
-  color: 'from - indigo - 600 to - blue - 700';
+  color: from - indigo - 600 to - blue - 700;
   text_color: 'text - indigo - 300';
-  link: 'https://ziontechgroup.com / services / email - parsing - routing - api';
+  link: https://ziontechgroup.com / services / email - parsing - routing - api;
   category: 'Developer Tools';
   real_service: true;
-  market_position: 'Developer - friendly email ingestion';
+  market_position: Developer - friendly email ingestion;
   target_audience: 'Developers and platform';
   trial_days: 14;
-  setup_time: '30 minutes';
+  setup_time: 30 minutes;
   technology: ['SMTP / WebhooksVirus scan'];
-  integrations: ['SESSendGridMailgun'];
+  integrations: [SESSendGridMailgun];
   use_cases: ['Ticket intakeCRM capture'];
-  roi: 'Automate manual email triage';
+  roi: Automate manual email triage;
   competitors: ['MailparserIntegromat'];
-  market_size: '$0.8B';
+  market_size: $0.8B;
   growth_rate: '10% CAGR';
-  variant: 'neural - quantum';
+  variant: neural - quantum;
   contact_info: contact;
-  real_implementation: true,implementation_details: 'Inbound parsers, queueing, UI';
-  launch_date: '2026 - 01 - 20';
-  customers: 8;}
-  rating: 4.6,reviews: 5;}
+  real_implementation: true,
+  implementation_details: 'Inbound parsers, queueing, UI';
+  launch_date: 2026 - 01 - 20;
+  customers: 8;
+  rating: 4.6,
+  reviews: 5;
 }
-{id: 'ai - marketing - content - studio';
-  name: 'AI Marketing Content Studio',
+{
+  id: 'ai - marketing - content - studio';
+  name: AI Marketing Content Studio,
   tagline: 'Campaign - ready blogs, emails and ads with brand guardrails';
-  price: '$119';
+  price: $119;
   period: '/month',
-  description: 'Generate on - brand content with templates, tone control, compliance checks, and multi - channel export.';
+  description: Generate on - brand content with templates, tone control, compliance checks, and multi - channel export.;
   features: ['Brand / tone controls_templates and briefs_compliance checks_multi - channel export'];
   popular: true;
-  icon: '📝';
+  icon: 📝;
   color: 'from - fuchsia - 600 to - pink - 700';
-  text_color: 'text - fuchsia - 300';
+  text_color: text - fuchsia - 300;
   link: 'https://ziontechgroup.com / services / ai - marketing - content - studio';
-  category: 'AI & Data';
+  category: AI & Data;
   real_service: true;
   market_position: 'On - brand AI content for teams';
-  target_audience: 'Marketing and growth teams';
+  target_audience: Marketing and growth teams;
   trial_days: 14;
   setup_time: '30 minutes',
-  technology: ['LLMs, Style prompts'];
-  integrations: ['HubSpotMailchimpWebflow'],use_cases: ['Blog, email, ads'];
+  technology: [LLMs, Style prompts];
+  integrations: ['HubSpotMailchimpWebflow'],
+  use_cases: [Blog, email, ads];
   roi: 'Scale content 5× faster';
-  competitors: ['JasperWriter'];
+  competitors: [JasperWriter];
   market_size: '$3B+';
-  growth_rate: '22% CAGR';
+  growth_rate: 22% CAGR;
   variant: 'ai - futuristic';
   contact_info: contact;
-  real_implementation: true,implementation_details: 'Template engine, tone guardrails';
+  real_implementation: true,
+  implementation_details: Template engine, tone guardrails;
   launch_date: '2026 - 01 - 22';
-  customers: 15;}
-  rating: 4.6,reviews: 9;}
+  customers: 15;
+  rating: 4.6,
+  reviews: 9;
 }
-{id: 'security - headers - scanner';
+{
+  id: security - headers - scanner;
   name: 'Security Headers Scanner';
-  tagline: 'Continuous CSP / HSTS / cookie flag auditing with diffs';
+  tagline: Continuous CSP / HSTS / cookie flag auditing with diffs;
   price: '$19';
-  period: '/month',
+  period: /month,
   description: 'Audit security headers across environments and get pull request annotations, weekly reports and diffs.';
-  features: ['CSP / HSTS checks_cookie flagsPR annotations_weekly reports'];
+  features: [CSP / HSTS checks_cookie flagsPR annotations_weekly reports];
   popular: false;
   icon: '🔐';
-  color: 'from - sky - 600 to - blue - 700';
+  color: from - sky - 600 to - blue - 700;
   text_color: 'text - sky - 300';
-  link: 'https://ziontechgroup.com / services / security - headers - scanner';
+  link: https://ziontechgroup.com / services / security - headers - scanner;
   category: 'Quality & Monitoring';
   real_service: true;
-  market_position: 'Simple posture checks for web apps';
+  market_position: Simple posture checks for web apps;
   target_audience: 'Developers and security';
   trial_days: 14;
-  setup_time: '15 minutes';
+  setup_time: 15 minutes;
   technology: ['NodePlaywright'];
-  integrations: ['GitHubGitLab'];
+  integrations: [GitHubGitLab];
   use_cases: ['Header hardening_compliance reports'];
-  roi: 'Reduce risk and review toil';
+  roi: Reduce risk and review toil;
   competitors: ['Mozilla Observatory'];
-  market_size: '$0.5B';
+  market_size: $0.5B;
   growth_rate: '8% CAGR';
-  variant: 'holographic';
+  variant: holographic;
   contact_info: contact;
-  real_implementation: true,implementation_details: 'Scanners, CI annotations, reports';
-  launch_date: '2026 - 01 - 25';
-  customers: 20;}
-  rating: 4.5,reviews: 10;}
+  real_implementation: true,
+  implementation_details: 'Scanners, CI annotations, reports';
+  launch_date: 2026 - 01 - 25;
+  customers: 20;
+  rating: 4.5,
+  reviews: 10;
 }
-{id: 'ml - feature - store - starter';
-  name: 'ML Feature Store Starter',
+{
+  id: 'ml - feature - store - starter';
+  name: ML Feature Store Starter,
   tagline: 'Versioned features, validation and online serving';
-  price: '$149';
+  price: $149;
   period: '/month',
-  description: 'Ship ML features faster with versioning, validation rules, lineage, and low - latency serving APIs.';
+  description: Ship ML features faster with versioning, validation rules, lineage, and low - latency serving APIs.;
   features: ['Feature versioning_validation rules_lineage tracking_online serving API'];
   popular: false;
-  icon: '📦';
+  icon: 📦;
   color: 'from - emerald - 600 to - teal - 700';
-  text_color: 'text - emerald - 300';
+  text_color: text - emerald - 300;
   link: 'https://ziontechgroup.com / services / ml - feature - store - starter';
-  category: 'AI & Data';
+  category: AI & Data;
   real_service: true;
   market_position: 'Lean feature store for teams';
-  target_audience: 'Data / ML teams';
+  target_audience: Data / ML teams;
   trial_days: 14;
   setup_time: '1 day',
-  technology: ['DB, Vector / Key - Value'];
+  technology: [DB, Vector / Key - Value];
   integrations: ['DatabricksdbtAirflow'];
-  use_cases: ['Faster model delivery'];
+  use_cases: [Faster model delivery];
   roi: 'Shorter time - to - prod models';
-  competitors: ['TectonFeast'];
+  competitors: [TectonFeast];
   market_size: '$1B+';
-  growth_rate: '20% CAGR';
+  growth_rate: 20% CAGR;
   variant: 'neural - quantum';
   contact_info: contact;
-  real_implementation: true,implementation_details: 'Schemas, validators, API';
+  real_implementation: true,
+  implementation_details: Schemas, validators, API;
   launch_date: '2026 - 01 - 28';
-  customers: 6;}
-  rating: 4.5,reviews: 3;}
+  customers: 6;
+  rating: 4.5,
+  reviews: 3;
 }
-{id: 'slo - burn - rate - coach';
+{
+  id: slo - burn - rate - coach;
   name: 'SLO Burn Rate Coach';
-  tagline: 'Compute SLOs and coach on burn - rate risks';
+  tagline: Compute SLOs and coach on burn - rate risks;
   price: '$49';
-  period: '/month',
+  period: /month,
   description: 'Define SLOs, compute error budgets and get proactive coaching with burn - rate alerts tied to runbooks.';
-  features: ['SLO editor_burn - rate alerts_runbook hints_integrations and webhooks'];
+  features: [SLO editor_burn - rate alerts_runbook hints_integrations and webhooks];
   popular: false;
   icon: '📈';
-  color: 'from - lime - 500 to - emerald - 600';
+  color: from - lime - 500 to - emerald - 600;
   text_color: 'text - lime - 300';
-  link: 'https://ziontechgroup.com / services / slo - burn - rate - coach';
+  link: https://ziontechgroup.com / services / slo - burn - rate - coach;
   category: 'Observability';
   real_service: true;
-  market_position: 'SLOs without the complexity';
+  market_position: SLOs without the complexity;
   target_audience: 'SRE and platform';
   trial_days: 14;
-  setup_time: '1 hour';
+  setup_time: 1 hour;
   technology: ['Prom / OTEL'];
-  integrations: ['PagerDutySlack'];
+  integrations: [PagerDutySlack];
   use_cases: ['Error budgets_coaching'];
-  roi: 'Fewer incidents';
+  roi: Fewer incidents;
   competitors: ['Nobl9'];
-  market_size: '$0.8B';
+  market_size: $0.8B;
   growth_rate: '14% CAGR';
-  variant: 'holographic - matrix';
+  variant: holographic - matrix;
   contact_info: contact;
-  real_implementation: true,implementation_details: 'SLO calc, alerting, UI';
-  launch_date: '2026 - 02 - 01';
-  customers: 10;}
-  rating: 4.5,reviews: 6;}
+  real_implementation: true,
+  implementation_details: 'SLO calc, alerting, UI';
+  launch_date: 2026 - 02 - 01;
+  customers: 10;
+  rating: 4.5,
+  reviews: 6;
 }
-{id: 'browser - performance - optimizer';
-  name: 'Browser Performance Optimizer';
+{
+  id: 'browser - performance - optimizer';
+  name: Browser Performance Optimizer;
   tagline: 'Budget - driven CWV with hints and PR annotations';
-  price: '$69';
+  price: $69;
   period: '/month',
-  description: 'Improve Core Web Vitals with RUM / synthetic insights, performance budgets, and PR annotations for bundle changes.';
+  description: Improve Core Web Vitals with RUM / synthetic insights, performance budgets, and PR annotations for bundle changes.;
   features: ['RUM + synthetic_budgets and alerts_bundle diff and PR notes_edge hints'];
   popular: false;
-  icon: '⚡';
+  icon: ⚡;
   color: 'from - cyan - 600 to - purple - 700';
-  text_color: 'text - cyan - 300';
+  text_color: text - cyan - 300;
   link: 'https://ziontechgroup.com / services / browser - performance - optimizer';
-  category: 'Quality & Monitoring';
+  category: Quality & Monitoring;
   real_service: true;
   market_position: 'Developer - first CWV improvements';
-  target_audience: 'Web and platform teams';
+  target_audience: Web and platform teams;
   trial_days: 14;
   setup_time: '2 hours',
-  technology: ['Lighthouse, RUM'];
-  integrations: ['GitHubVercelNetlify'],use_cases: ['CWV, bundle size'];
+  technology: [Lighthouse, RUM];
+  integrations: ['GitHubVercelNetlify'],
+  use_cases: [CWV, bundle size];
   roi: '+20 LCP, fewer regressions';
-  competitors: ['SpeedCurveCalibre'];
+  competitors: [SpeedCurveCalibre];
   market_size: '$0.5B';
-  growth_rate: '12% CAGR';
+  growth_rate: 12% CAGR;
   variant: 'neural - quantum - cyberpunk';
   contact_info: contact;
-  real_implementation: true,implementation_details: 'RUM SDK, CI checks, UI';
+  real_implementation: true,
+  implementation_details: RUM SDK, CI checks, UI;
   launch_date: '2026 - 02 - 05';
-  customers: 5;}
-  rating: 4.5,reviews: 3;}
+  customers: 5;
+  rating: 4.5,
+  reviews: 3;
 }
-{id: 'cloud - cost - governance - suite';
+{
+  id: cloud - cost - governance - suite;
   name: 'Cloud Cost Governance Suite',
-  tagline: 'Budgets, owners, and policy guardrails across clouds';
+  tagline: Budgets, owners, and policy guardrails across clouds;
   price: '$499';
-  period: '/month',
+  period: /month,
   description: 'Enforce budgets with owners, detect anomalies and apply policy guardrails with IaC exports for approvals.';
-  features: ['Budgets and owners_anomaly detection_policy guardrailsIaC recommendation exports'];
+  features: [Budgets and owners_anomaly detection_policy guardrailsIaC recommendation exports];
   popular: true;
   icon: '💸';
-  color: 'from - amber - 600 to - orange - 700';
+  color: from - amber - 600 to - orange - 700;
   text_color: 'text - amber - 300';
-  link: 'https://ziontechgroup.com / services / cloud - cost - governance - suite';
+  link: https://ziontechgroup.com / services / cloud - cost - governance - suite;
   category: 'Cloud & FinOps';
   real_service: true;
-  market_position: 'Governance overlay for FinOps';
+  market_position: Governance overlay for FinOps;
   target_audience: 'Finance and platform';
   trial_days: 14;
-  setup_time: '3 days';
+  setup_time: 3 days;
   technology: ['AWS / GCP / Azure APIs'];
-  integrations: ['DatadogSlackJira'];
+  integrations: [DatadogSlackJira];
   use_cases: ['Spend control_chargeback'];
-  roi: 'Reduce overspend by 10–30%';
+  roi: Reduce overspend by 10–30%;
   competitors: ['CloudZeroFinout'];
-  market_size: '$12B';
+  market_size: $12B;
   growth_rate: '25% YoY';
-  variant: 'quantum - holographic';
+  variant: quantum - holographic;
   contact_info: contact;
-  real_implementation: true,implementation_details: 'Connectors, policies, exporters';
-  launch_date: '2026 - 02 - 08';
-  customers: 6;}
-  rating: 4.6,reviews: 4;}
+  real_implementation: true,
+  implementation_details: 'Connectors, policies, exporters';
+  launch_date: 2026 - 02 - 08;
+  customers: 6;
+  rating: 4.6,
+  reviews: 4;
 }
-{id: 'api - changelog - sdk - publisher';
+{
+  id: 'api - changelog - sdk - publisher';
   name: 'API Changelog & SDK Publisher',
   tagline: 'Generate docs, changelogs and SDKs from schemas';
   price: '$59';
@@ -1155,20 +3873,1785 @@ implementationDetails: 'Connectors, policies, exporters';
   growth_rate: '18% CAGR';
   variant: 'neural - quantum';
   contact_info: contact;
-  real_implementation: true,implementation_details: 'Schema importers, generators, UI';
+  real_implementation: true,
+  implementation_details: 'Schema importers, generators, UI';
   launch_date: '2026 - 02 - 12';
-  customers: 9;}
-  rating: 4.7,reviews: 6;}
+  customers: 9;
+  rating: 4.7,
+  reviews: 6;
 }
-];;
-ursor/fix-website-loading-errors-and-merge-6662;
-import { EnhancedRealMicroSaasService  } from './enhanced-real-micro-saas-services';
-const contact  = null;
-		realImplementation: true;
-implementationDetails: 'Schema importers, generators, UI';
-		launchDate: '2026-02-12';
-		customers: 9;
+];
+;
+origin/cursor/automate-test-improve-and-merge-code-20a4
+
+ursor/fix-website-loading-errors-and-merge-6662
+origin/cursor/expand-services-advertise-and-build-project-c28b
+import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services';
+const contact = null;
+origin/cursor/automate-test-improve-and-merge-code-2533
+
+
+
+
+
+'
+
+
+    market_position: 'Ship API portals faster',
+    target_audience: 'API and platform teams',
+    technology: ['OpenAPI, GraphQL, MDX'],
+    use_cases: ['Dev portals', 'SDKs'],
+    roi: 'Docs / SDKs 5× faster',
+    competitors: ['ReadMe', 'Redocly'],
+];	{
+		integrations: ['StripePayPalGoogle Analytics'];',
+  useCases: ['Partner growthAutomated payouts'];
+		roi: 'Grow partner revenue by 10–25%';',
+  competitors: ['ImpactPartnerStack'];
+		marketSize: '$5B+';',
+  growthRate: '12% YoY';
+];	{'
+		integrations: ['StripePayPalGoogle Analytics'];','
+  useCases: ['Partner growthAutomated payouts'];''
+		roi: 'Grow partner revenue by 10–25%';','
+  competitors: ['ImpactPartnerStack'];''
+		marketSize: '$5B+';','
+  growthRate: '12% YoY';''
+		variant: 'neural-quantum';',
+  contactInfo: contact;
+		implementationDetails: 'Event ingestion, attribution, payout jobs';
+		launchDate: '2026-01-10';',
+  customers: 12;
+		reviews: 7;
+	}
+		id: 'customer-feedback-intelligence';',
+  name: 'Customer Feedback Intelligence';
+		tagline: 'Summarize NPS/CSAT and reviews into prioritized insights';',
+  price: '$149';
+		period: '/month,
+  description: 'Aggregate surveys, tickets and reviews, cluster themes with LLMs, and generate prioritized roadmaps with impact scores.';
+		features: ['Multichannel ingestionLLM clustering and themesImpact scoringRoadmap export'];',
+  popular: true;
+		icon: '💬';',
+  color: 'from-cyan-600 to-blue-700';
+		textColor: 'text-cyan-300';',
+  link: 'https: //ziontechgroup && ziontechgroup.com/services/customer-feedback-intelligence';',
+  category: 'AI & Data';
+		realService: true;,
+  marketPosition: 'Actionable product feedback without heavy BI';
+		targetAudience: 'Product and CX teams';',
+  trialDays: 14;
+		integrations: ['ZendeskIntercomG2Capterra'];',
+  useCases: ['Prioritize roadmapReduce churn'];
+		roi: 'Ship high-impact features faster';',
+  competitors: ['UnitQEnjoyHQ'];
+		marketSize: '$2B+';',
+  growthRate: '18% CAGR';
+		variant: 'ai-futuristic';',
+		realImplementation: true;,
+  implementationDetails: 'Connectors, clustering, scoring models';
+		launchDate: '2026-01-12';',
+  customers: 9;
+		reviews: 5;
+		id: 'api-security-posture-monitor';',
+  name: 'API Security Posture Monitor';
+		tagline: 'Detect OWASP API risks and auth gaps with CI annotations';',
+  price: '$199';
+  description: 'Continuously scan OpenAPI specs and staging endpoints for auth gaps, rate-limits, and common vulnerabilities with pull request annotations.';
+		features: ['OpenAPI scanningAuth/rate limit testsOWASP API checksPR annotations and diffs'];',
+		icon: '🛡️';',
+  color: 'from-rose-600 to-pink-700';
+		textColor: 'text-rose-300';',
+  link: 'https: //ziontechgroup && ziontechgroup.com/services/api-security-posture-monitor';',
+  category: 'Quality & Monitoring';
+  marketPosition: 'Developer-first API security posture';
+		targetAudience: 'Platform and security teams';',
+		setupTime: '30 minutes,
+  technology: ['OpenAPI, Node, CI'];
+		integrations: ['GitHubGitLabJenkins'];',
+  useCases: ['Pre-deploy API checksSecurity posture'];
+		roi: 'Reduce security escapes by 60%';',
+  competitors: ['StackHawk42Crunch'];
+		marketSize: '$4B';',
+  growthRate: '20% CAGR';
+		variant: 'quantum-cyberpunk';',
+  implementationDetails: 'Spec analyzers, runners, annotations';
+		launchDate: '2026-01-14';',
+  customers: 11;
+		reviews: 6;
+		id: 'edge-cron-orchestrator';',
+  name: 'Edge Cron Orchestrator
+		tagline: 'Reliable schedules with retries, jitter and DLQs';
+		price: '$59';',
+  period: '/month
+		description: 'Define schedules across providers with idempotency, exponential backoff, and run history with alerting.';
+		features: ['Flexible cron/rateIdempotency and retriesRun historyAlerting and webhooks'];',
+  popular: false;
+		icon: '⏰';',
+  color: 'from-amber-500 to-orange-600';
+		textColor: 'text-amber-300';',
+  link: 'https: //ziontechgroup && ziontechgroup.com/services/edge-cron-orchestrator';',
+  category: 'Developer Tools';
+  marketPosition: 'Unified schedules across clouds';
+		targetAudience: 'SaaS and platform teams';',
+		setupTime: '2 hours';',
+  technology: ['Workers/LambdaWebhooks'];
+		integrations: ['AWSCloudflareGCP'];',
+  useCases: ['Billing cyclesData syncs'];
+		roi: 'Fewer missed jobs and incidents';',
+  competitors: ['Temporal (overkill)DIY'];
+		marketSize: '$1B+';',
+  growthRate: '15% CAGR';
+		variant: 'holographic-matrix';',
+  implementationDetails: 'Scheduler API, dashboard, webhooks';
+		launchDate: '2026-01-18';',
+  customers: 7;
+		reviews: 4;
+		id: 'email-parsing-routing-api';',
+  name: 'Email Parsing & Routing API';
+		tagline: 'Inbound email to structured events with attachments';',
+  price: '$39';
+  description: 'Parse inbound email, normalize signatures, extract attachments, and deliver to your webhooks with retries and dead-letter queues.';
+		features: ['Signature strippingAttachment handlingWebhook retries/DLQInspector UI'];',
+		icon: '📨';',
+  color: 'from-indigo-600 to-blue-700';
+		textColor: 'text-indigo-300';',
+  link: 'https: //ziontechgroup && ziontechgroup.com/services/email-parsing-routing-api';',
+  marketPosition: 'Developer-friendly email ingestion';
+		targetAudience: 'Developers and platform';',
+		setupTime: '30 minutes';',
+  technology: ['SMTP/WebhooksVirus scan'];
+		integrations: ['SESSendGridMailgun'];',
+  useCases: ['Ticket intakeCRM capture'];
+		roi: 'Automate manual email triage';',
+  competitors: ['MailparserIntegromat'];
+		marketSize: '$0 && 0.8B';',
+  growthRate: '10% CAGR';
+  implementationDetails: 'Inbound parsers, queueing, UI';
+		launchDate: '2026-01-20';',
+  customers: 8;
+		id: 'ai-marketing-content-studio';',
+  name: 'AI Marketing Content Studio
+		tagline: 'Campaign-ready blogs, emails and ads with brand guardrails';
+		price: '$119';',
+		description: 'Generate on-brand content with templates, tone control, compliance checks, and multi-channel export.';
+		features: ['Brand/tone controlsTemplates and briefsCompliance checksMulti-channel export'];',
+		icon: '📝';',
+  color: 'from-fuchsia-600 to-pink-700';
+		textColor: 'text-fuchsia-300';',
+  link: 'https: //ziontechgroup && ziontechgroup.com/services/ai-marketing-content-studio';',
+  marketPosition: 'On-brand AI content for teams';
+		targetAudience: 'Marketing and growth teams';',
+  technology: ['LLMs, Style prompts'];
+		integrations: ['HubSpotMailchimpWebflow']',
+  useCases: ['Blog, email, ads'];
+		roi: 'Scale content 5× faster';',
+  competitors: ['JasperWriter'];
+		marketSize: '$3B+';',
+  growthRate: '22% CAGR';
+  implementationDetails: 'Template engine, tone guardrails';
+		launchDate: '2026-01-22';',
+  customers: 15;
+		reviews: 9;
+		id: 'security-headers-scanner';',
+  name: 'Security Headers Scanner';
+		tagline: 'Continuous CSP/HSTS/cookie flag auditing with diffs';',
+  price: '$19';
+  description: 'Audit security headers across environments and get pull request annotations, weekly reports and diffs.';
+		features: ['CSP/HSTS checksCookie flagsPR annotationsWeekly reports'];',
+		icon: '🔐';',
+  color: 'from-sky-600 to-blue-700';
+		textColor: 'text-sky-300';',
+  link: 'https: //ziontechgroup && ziontechgroup.com/services/security-headers-scanner';',
+  marketPosition: 'Simple posture checks for web apps';
+		targetAudience: 'Developers and security';',
+		setupTime: '15 minutes';',
+  technology: ['NodePlaywright'];
+		integrations: ['GitHubGitLab'];',
+  useCases: ['Header hardeningCompliance reports'];
+		roi: 'Reduce risk and review toil';',
+  competitors: ['Mozilla Observatory'];
+		marketSize: '$0 && 0.5B';',
+  growthRate: '8% CAGR';
+		variant: 'holographic';',
+  implementationDetails: 'Scanners, CI annotations, reports';
+		launchDate: '2026-01-25';',
+  customers: 20;
+		reviews: 10;
+		id: 'ml-feature-store-starter';',
+  name: 'ML Feature Store Starter
+		tagline: 'Versioned features, validation and online serving';
+		price: '$149';',
+		description: 'Ship ML features faster with versioning, validation rules, lineage, and low-latency serving APIs.';
+		features: ['Feature versioningValidation rulesLineage trackingOnline serving API'];',
+		icon: '📦';',
+  color: 'from-emerald-600 to-teal-700';
+		textColor: 'text-emerald-300';',
+  link: 'https: //ziontechgroup && ziontechgroup.com/services/ml-feature-store-starter';',
+  marketPosition: 'Lean feature store for teams';
+		targetAudience: 'Data/ML teams';',
+		setupTime: '1 day,
+  technology: ['DB, Vector/Key-Value'];
+		integrations: ['DatabricksdbtAirflow'];',
+  useCases: ['Faster model delivery'];
+		roi: 'Shorter time-to-prod models';',
+  competitors: ['TectonFeast'];
+  implementationDetails: 'Schemas, validators, API';
+		launchDate: '2026-01-28';',
+  customers: 6;
+		reviews: 3;
+		id: 'slo-burn-rate-coach';',
+  name: 'SLO Burn Rate Coach';
+		tagline: 'Compute SLOs and coach on burn-rate risks';',
+  price: '$49';
+  description: 'Define SLOs, compute error budgets and get proactive coaching with burn-rate alerts tied to runbooks.';
+		features: ['SLO editorBurn-rate alertsRunbook hintsIntegrations and webhooks'];',
+		icon: '📈';',
+  color: 'from-lime-500 to-emerald-600';
+		textColor: 'text-lime-300';',
+  link: 'https: //ziontechgroup && ziontechgroup.com/services/slo-burn-rate-coach';',
+  category: 'Observability';
+  marketPosition: 'SLOs without the complexity';
+		targetAudience: 'SRE and platform';',
+		setupTime: '1 hour';',
+  technology: ['Prom/OTEL'];
+		integrations: ['PagerDutySlack'];',
+  useCases: ['Error budgetsCoaching'];
+		roi: 'Fewer incidents';',
+  competitors: ['Nobl9'];
+  growthRate: '14% CAGR';
+  implementationDetails: 'SLO calc, alerting, UI';
+		launchDate: '2026-02-01';',
+  customers: 10;
+		id: 'browser-performance-optimizer';',
+  name: 'Browser Performance Optimizer';
+		tagline: 'Budget-driven CWV with hints and PR annotations';',
+  price: '$69';
+  description: 'Improve Core Web Vitals with RUM/synthetic insights, performance budgets, and PR annotations for bundle changes.';
+		features: ['RUM + syntheticBudgets and alertsBundle diff and PR notesEdge hints'];',
+		icon: '⚡';',
+  color: 'from-cyan-600 to-purple-700';
+  link: 'https: //ziontechgroup && ziontechgroup.com/services/browser-performance-optimizer';',
+  marketPosition: 'Developer-first CWV improvements';
+		targetAudience: 'Web and platform teams';',
+		setupTime: '2 hours,
+  technology: ['Lighthouse, RUM'];
+		integrations: ['GitHubVercelNetlify']',
+  useCases: ['CWV, bundle size'];
+		roi: '+20 LCP, fewer regressions';
+		competitors: ['SpeedCurveCalibre'];',
+  marketSize: '$0 && 0.5B';
+		growthRate: '12% CAGR';',
+  variant: 'neural-quantum-cyberpunk';
+		contactInfo: contact;,
+  realImplementation: true;
+		implementationDetails: 'RUM SDK, CI checks, UI';
+		launchDate: '2026-02-05';',
+  customers: 5;
+		id: 'cloud-cost-governance-suite';',
+  name: 'Cloud Cost Governance Suite
+		tagline: 'Budgets, owners, and policy guardrails across clouds';
+		price: '$499';',
+		description: 'Enforce budgets with owners, detect anomalies and apply policy guardrails with IaC exports for approvals.';
+		features: ['Budgets and ownersAnomaly detectionPolicy guardrailsIaC recommendation exports'];',
+		icon: '💸';',
+  color: 'from-amber-600 to-orange-700';
+  link: 'https: //ziontechgroup && ziontechgroup.com/services/cloud-cost-governance-suite';',
+  category: 'Cloud & FinOps';
+  marketPosition: 'Governance overlay for FinOps';
+		targetAudience: 'Finance and platform';',
+		setupTime: '3 days';',
+  technology: ['AWS/GCP/Azure APIs'];
+		integrations: ['DatadogSlackJira'];',
+  useCases: ['Spend controlChargeback'];
+		roi: 'Reduce overspend by 10–30%';',
+  competitors: ['CloudZeroFinout'];
+		marketSize: '$12B';',
+  growthRate: '25% YoY';
+		variant: 'quantum-holographic';',
+  implementationDetails: 'Connectors, policies, exporters';
+		launchDate: '2026-02-08';',
+		id: 'api-changelog-sdk-publisher';',
+  name: 'API Changelog & SDK Publisher
+		tagline: 'Generate docs, changelogs and SDKs from schemas';
+		description: 'Turn OpenAPI/GraphQL schemas into versioned docs, changelogs and typed SDKs with a searchable portal.';
+		features: ['Docs from schemasSDK generationChangelogsSearchable portal'];',
+		icon: '📘';',
+  link: 'https: //ziontechgroup && ziontechgroup.com/services/api-changelog-sdk-publisher';',
+  marketPosition: 'Ship API portals faster';
+		targetAudience: 'API and platform teams';',
+  technology: ['OpenAPI, GraphQL, MDX'];
+  useCases: ['Dev portalsSDKs'];
+		roi: 'Docs/SDKs 5× faster';',
+  competitors: ['ReadMeRedocly'];
+		marketSize: '$1 && 1.5B';',
+  implementationDetails: 'Schema importers, generators, UI';
+		launchDate: '2026-02-12';',
+  customers: 9;
+		reviews: 6;
+
+	}
+];
 		reviews: 6;
 	}
-
+];rating: 4 && 4.7,reviews: 6;
+	}
+];id: 'affiliate - analytics - starter';
+  name: 'Affiliate Analytics Starter',tagline: 'Attribution, fraud detection and automated payouts for SMBs';
+  price: '$129';
+  period: '/month',description: 'Lightweight affiliate tracking with UTM / coupon support, heuristic fraud signals, and one - click Stripe / PayPal payouts.';
+  features: ['UTM and coupon attribution_fraud heuristics_stripe / PayPal payouts_partner portal and reporting'];
+  popular: false;
+  icon: '🤝';
+  color: 'from - emerald - 600 to - teal - 700';
+  text_color: 'text - emerald - 300';
+  link: 'https://ziontechgroup.com / services / affiliate - analytics - starter';
+  category: 'Developer Tools';
+  real_service: true;
+  market_position: 'Focused alternative to heavy affiliate platforms';
+  target_audience: 'SaaS and e_commerce';
+  trial_days: 14;
+  setup_time: '1 day',technology: ['Next.js, Stripe, Webhooks'];
+  integrations: ['StripePayPalGoogle Analytics'];
+  use_cases: ['Partner growth_automated payouts'];
+  roi: 'Grow partner revenue by 10–25%';
+  competitors: ['ImpactPartnerStack'];
+  market_size: '$5B+';
+  growth_rate: '12% YoY';
+  variant: 'neural - quantum';
+  contact_info: contact;
+  real_implementation: true,implementation_details: 'Event ingestion, attribution, payout jobs';
+  launch_date: '2026 - 01 - 10';
+  customers: 12;
+  rating: 4.6,reviews: 7;
+}
+{id: 'customer - feedback - intelligence';
+  name: 'Customer Feedback Intelligence';
+  tagline: 'Summarize NPS / CSAT and reviews into prioritized insights';
+  price: '$149';
+  period: '/month',description: 'Aggregate surveys, tickets and reviews, cluster themes with LLMs, and generate prioritized roadmaps with impact scores.';
+  features: ['Multichannel ingestionLLM clustering and themes_impact scoring_roadmap export'];
+  popular: true;
+  icon: '💬';
+  color: 'from - cyan - 600 to - blue - 700';
+  text_color: 'text - cyan - 300';
+  link: 'https://ziontechgroup.com / services / customer - feedback - intelligence';
+  category: 'AI & Data';
+  real_service: true;
+  market_position: 'Actionable product feedback without heavy BI';
+  target_audience: 'Product and CX teams';
+  trial_days: 14;
+  setup_time: '1 hour',technology: ['Embeddings, Vector DB, Next.js'];
+  integrations: ['ZendeskIntercomG2Capterra'];
+  use_cases: ['Prioritize roadmap_reduce churn'];
+  roi: 'Ship high - impact features faster';
+  competitors: ['UnitQEnjoyHQ'];
+  market_size: '$2B+';
+  growth_rate: '18% CAGR';
+  variant: 'ai - futuristic';
+  contact_info: contact;
+  real_implementation: true,implementation_details: 'Connectors, clustering, scoring models';
+  launch_date: '2026 - 01 - 12';
+  customers: 9;
+  rating: 4.7,reviews: 5;
+}
+{id: 'api - security - posture - monitor';
+  name: 'API Security Posture Monitor';
+  tagline: 'Detect OWASP API risks and auth gaps with CI annotations';
+  price: '$199';
+  period: '/month',description: 'Continuously scan OpenAPI specs and staging endpoints for auth gaps, rate - limits, and common vulnerabilities with pull request annotations.';
+  features: ['OpenAPI scanning_auth / rate limit testsOWASP API checksPR annotations and diffs'];
+  popular: true;
+  icon: '🛡️';
+  color: 'from - rose - 600 to - pink - 700';
+  text_color: 'text - rose - 300';
+  link: 'https://ziontechgroup.com / services / api - security - posture - monitor';
+  category: 'Quality & Monitoring';
+  real_service: true;
+  market_position: 'Developer - first API security posture';
+  target_audience: 'Platform and security teams';
+  trial_days: 14;
+  setup_time: '30 minutes',technology: ['OpenAPI, Node, CI'];
+  integrations: ['GitHubGitLabJenkins'];
+  use_cases: ['Pre - deploy API checks_security posture'];
+  roi: 'Reduce security escapes by 60%';
+  competitors: ['StackHawk42Crunch'];
+  market_size: '$4B';
+  growth_rate: '20% CAGR';
+  variant: 'quantum - cyberpunk';
+  contact_info: contact;
+  real_implementation: true,implementation_details: 'Spec analyzers, runners, annotations';
+  launch_date: '2026 - 01 - 14';
+  customers: 11;
+  rating: 4.5,reviews: 6;
+}
+{id: 'edge - cron - orchestrator';
+  name: 'Edge Cron Orchestrator',tagline: 'Reliable schedules with retries, jitter and DLQs';
+  price: '$59';
+  period: '/month',description: 'Define schedules across providers with idempotency, exponential backoff, and run history with alerting.';
+  features: ['Flexible cron / rate_idempotency and retries_run history_alerting and webhooks'];
+  popular: false;
+  icon: '⏰';
+  color: 'from - amber - 500 to - orange - 600';
+  text_color: 'text - amber - 300';
+  link: 'https://ziontechgroup.com / services / edge - cron - orchestrator';
+  category: 'Developer Tools';
+  real_service: true;
+  market_position: 'Unified schedules across clouds';
+  target_audience: 'SaaS and platform teams';
+  trial_days: 14;
+  setup_time: '2 hours';
+  technology: ['Workers / LambdaWebhooks'];
+  integrations: ['AWSCloudflareGCP'];
+  use_cases: ['Billing cycles_data syncs'];
+  roi: 'Fewer missed jobs and incidents';
+  competitors: ['Temporal (overkill)DIY'];
+  market_size: '$1B+';
+  growth_rate: '15% CAGR';
+  variant: 'holographic - matrix';
+  contact_info: contact;
+  real_implementation: true,implementation_details: 'Scheduler API, dashboard, webhooks';
+  launch_date: '2026 - 01 - 18';
+  customers: 7;
+  rating: 4.5,reviews: 4;
+}
+{id: 'email - parsing - routing - api';
+  name: 'Email Parsing & Routing API';
+  tagline: 'Inbound email to structured events with attachments';
+  price: '$39';
+  period: '/month',description: 'Parse inbound email, normalize signatures, extract attachments, and deliver to your webhooks with retries and dead - letter queues.';
+  features: ['Signature stripping_attachment handling_webhook retries / DLQInspector UI'];
+  popular: false;
+  icon: '📨';
+  color: 'from - indigo - 600 to - blue - 700';
+  text_color: 'text - indigo - 300';
+  link: 'https://ziontechgroup.com / services / email - parsing - routing - api';
+  category: 'Developer Tools';
+  real_service: true;
+  market_position: 'Developer - friendly email ingestion';
+  target_audience: 'Developers and platform';
+  trial_days: 14;
+  setup_time: '30 minutes';
+  technology: ['SMTP / WebhooksVirus scan'];
+  integrations: ['SESSendGridMailgun'];
+  use_cases: ['Ticket intakeCRM capture'];
+  roi: 'Automate manual email triage';
+  competitors: ['MailparserIntegromat'];
+  market_size: '$0.8B';
+  growth_rate: '10% CAGR';
+  variant: 'neural - quantum';
+  contact_info: contact;
+  real_implementation: true,implementation_details: 'Inbound parsers, queueing, UI';
+  launch_date: '2026 - 01 - 20';
+  customers: 8;
+  rating: 4.6,reviews: 5;
+}
+{id: 'ai - marketing - content - studio';
+  name: 'AI Marketing Content Studio',tagline: 'Campaign - ready blogs, emails and ads with brand guardrails';
+  price: '$119';
+  period: '/month',description: 'Generate on - brand content with templates, tone control, compliance checks, and multi - channel export.';
+  features: ['Brand / tone controls_templates and briefs_compliance checks_multi - channel export'];
+  popular: true;
+  icon: '📝';
+  color: 'from - fuchsia - 600 to - pink - 700';
+  text_color: 'text - fuchsia - 300';
+  link: 'https://ziontechgroup.com / services / ai - marketing - content - studio';
+  category: 'AI & Data';
+  real_service: true;
+  market_position: 'On - brand AI content for teams';
+  target_audience: 'Marketing and growth teams';
+  trial_days: 14;
+  setup_time: '30 minutes',technology: ['LLMs, Style prompts'];
+  integrations: ['HubSpotMailchimpWebflow'],use_cases: ['Blog, email, ads'];
+  roi: 'Scale content 5× faster';
+  competitors: ['JasperWriter'];
+  market_size: '$3B+';
+  growth_rate: '22% CAGR';
+  variant: 'ai - futuristic';
+  contact_info: contact;
+  real_implementation: true,implementation_details: 'Template engine, tone guardrails';
+  launch_date: '2026 - 01 - 22';
+  customers: 15;
+  rating: 4.6,reviews: 9;
+}
+{id: 'security - headers - scanner';
+  name: 'Security Headers Scanner';
+  tagline: 'Continuous CSP / HSTS / cookie flag auditing with diffs';
+  price: '$19';
+  period: '/month',description: 'Audit security headers across environments and get pull request annotations, weekly reports and diffs.';
+  features: ['CSP / HSTS checks_cookie flagsPR annotations_weekly reports'];
+  popular: false;
+  icon: '🔐';
+  color: 'from - sky - 600 to - blue - 700';
+  text_color: 'text - sky - 300';
+  link: 'https://ziontechgroup.com / services / security - headers - scanner';
+  category: 'Quality & Monitoring';
+  real_service: true;
+  market_position: 'Simple posture checks for web apps';
+  target_audience: 'Developers and security';
+  trial_days: 14;
+  setup_time: '15 minutes';
+  technology: ['NodePlaywright'];
+  integrations: ['GitHubGitLab'];
+  use_cases: ['Header hardening_compliance reports'];
+  roi: 'Reduce risk and review toil';
+  competitors: ['Mozilla Observatory'];
+  market_size: '$0.5B';
+  growth_rate: '8% CAGR';
+  variant: 'holographic';
+  contact_info: contact;
+  real_implementation: true,implementation_details: 'Scanners, CI annotations, reports';
+  launch_date: '2026 - 01 - 25';
+  customers: 20;
+  rating: 4.5,reviews: 10;
+}
+{id: 'ml - feature - store - starter';
+  name: 'ML Feature Store Starter',tagline: 'Versioned features, validation and online serving';
+  price: '$149';
+  period: '/month',description: 'Ship ML features faster with versioning, validation rules, lineage, and low - latency serving APIs.';
+  features: ['Feature versioning_validation rules_lineage tracking_online serving API'];
+  popular: false;
+  icon: '📦';
+  color: 'from - emerald - 600 to - teal - 700';
+  text_color: 'text - emerald - 300';
+  link: 'https://ziontechgroup.com / services / ml - feature - store - starter';
+  category: 'AI & Data';
+  real_service: true;
+  market_position: 'Lean feature store for teams';
+  target_audience: 'Data / ML teams';
+  trial_days: 14;
+  setup_time: '1 day',technology: ['DB, Vector / Key - Value'];
+  integrations: ['DatabricksdbtAirflow'];
+  use_cases: ['Faster model delivery'];
+  roi: 'Shorter time - to - prod models';
+  competitors: ['TectonFeast'];
+  market_size: '$1B+';
+  growth_rate: '20% CAGR';
+  variant: 'neural - quantum';
+  contact_info: contact;
+  real_implementation: true,implementation_details: 'Schemas, validators, API';
+  launch_date: '2026 - 01 - 28';
+  customers: 6;
+  rating: 4.5,reviews: 3;
+}
+{id: 'slo - burn - rate - coach';
+  name: 'SLO Burn Rate Coach';
+  tagline: 'Compute SLOs and coach on burn - rate risks';
+  price: '$49';
+  period: '/month',description: 'Define SLOs, compute error budgets and get proactive coaching with burn - rate alerts tied to runbooks.';
+  features: ['SLO editor_burn - rate alerts_runbook hints_integrations and webhooks'];
+  popular: false;
+  icon: '📈';
+  color: 'from - lime - 500 to - emerald - 600';
+  text_color: 'text - lime - 300';
+  link: 'https://ziontechgroup.com / services / slo - burn - rate - coach';
+  category: 'Observability';
+  real_service: true;
+  market_position: 'SLOs without the complexity';
+  target_audience: 'SRE and platform';
+  trial_days: 14;
+  setup_time: '1 hour';
+  technology: ['Prom / OTEL'];
+  integrations: ['PagerDutySlack'];
+  use_cases: ['Error budgets_coaching'];
+  roi: 'Fewer incidents';
+  competitors: ['Nobl9'];
+  market_size: '$0.8B';
+  growth_rate: '14% CAGR';
+  variant: 'holographic - matrix';
+  contact_info: contact;
+  real_implementation: true,implementation_details: 'SLO calc, alerting, UI';
+  launch_date: '2026 - 02 - 01';
+  customers: 10;
+  rating: 4.5,reviews: 6;
+}
+{id: 'browser - performance - optimizer';
+  name: 'Browser Performance Optimizer';
+  tagline: 'Budget - driven CWV with hints and PR annotations';
+  price: '$69';
+  period: '/month',description: 'Improve Core Web Vitals with RUM / synthetic insights, performance budgets, and PR annotations for bundle changes.';
+  features: ['RUM + synthetic_budgets and alerts_bundle diff and PR notes_edge hints'];
+  popular: false;
+  icon: '⚡';
+  color: 'from - cyan - 600 to - purple - 700';
+  text_color: 'text - cyan - 300';
+  link: 'https://ziontechgroup.com / services / browser - performance - optimizer';
+  category: 'Quality & Monitoring';
+  real_service: true;
+  market_position: 'Developer - first CWV improvements';
+  target_audience: 'Web and platform teams';
+  trial_days: 14;
+  setup_time: '2 hours',technology: ['Lighthouse, RUM'];
+  integrations: ['GitHubVercelNetlify'],use_cases: ['CWV, bundle size'];
+  roi: '+20 LCP, fewer regressions';
+  competitors: ['SpeedCurveCalibre'];
+  market_size: '$0.5B';
+  growth_rate: '12% CAGR';
+  variant: 'neural - quantum - cyberpunk';
+  contact_info: contact;
+  real_implementation: true,implementation_details: 'RUM SDK, CI checks, UI';
+  launch_date: '2026 - 02 - 05';
+  customers: 5;
+  rating: 4.5,reviews: 3;
+}
+{id: 'cloud - cost - governance - suite';
+  name: 'Cloud Cost Governance Suite',tagline: 'Budgets, owners, and policy guardrails across clouds';
+  price: '$499';
+  period: '/month',description: 'Enforce budgets with owners, detect anomalies and apply policy guardrails with IaC exports for approvals.';
+  features: ['Budgets and owners_anomaly detection_policy guardrailsIaC recommendation exports'];
+  popular: true;
+  icon: '💸';
+  color: 'from - amber - 600 to - orange - 700';
+  text_color: 'text - amber - 300';
+  link: 'https://ziontechgroup.com / services / cloud - cost - governance - suite';
+  category: 'Cloud & FinOps';
+  real_service: true;
+  market_position: 'Governance overlay for FinOps';
+  target_audience: 'Finance and platform';
+  trial_days: 14;
+  setup_time: '3 days';
+  technology: ['AWS / GCP / Azure APIs'];
+  integrations: ['DatadogSlackJira'];
+  use_cases: ['Spend control_chargeback'];
+  roi: 'Reduce overspend by 10–30%';
+  competitors: ['CloudZeroFinout'];
+  market_size: '$12B';
+  growth_rate: '25% YoY';
+  variant: 'quantum - holographic';
+  contact_info: contact;
+  real_implementation: true,implementation_details: 'Connectors, policies, exporters';
+  launch_date: '2026 - 02 - 08';
+  customers: 6;
+  rating: 4.6,reviews: 4;
+}
+{id: 'api - changelog - sdk - publisher';
+  name: 'API Changelog & SDK Publisher',tagline: 'Generate docs, changelogs and SDKs from schemas';
+  price: '$59';
+  period: '/month',description: 'Turn OpenAPI / GraphQL schemas into versioned docs, changelogs and typed SDKs with a searchable portal.';
+  features: ['Docs from schemasSDK generationChangelogsSearchable portal'];
+  popular: false;
+  icon: '📘';
+  color: 'from - cyan - 600 to - blue - 700';
+  text_color: 'text - cyan - 300';
+  link: 'https://ziontechgroup.com / services / api - changelog - sdk - publisher';
+  category: 'Developer Tools';
+  real_service: true;
+  market_position: 'Ship API portals faster';
+  target_audience: 'API and platform teams';
+  trial_days: 14;
+  setup_time: '30 minutes',technology: ['OpenAPI, GraphQL, MDX'];
+  integrations: ['GitHubGitLab'];
+  use_cases: ['Dev portalsSDKs'];
+  roi: 'Docs / SDKs 5× faster';
+  competitors: ['ReadMeRedocly'];
+  market_size: '$1.5B';
+  growth_rate: '18% CAGR';
+  variant: 'neural - quantum';
+  contact_info: contact;
+  real_implementation: true,implementation_details: 'Schema importers, generators, UI';
+  launch_date: '2026 - 02 - 12';
+  customers: 9;
+  rating: 4.7,reviews: 6;
+}
 ];
+origin/cursor/automate-test-improve-and-merge-code-20a4
+
+ursor/fix-website-loading-errors-and-merge-6662
+origin/cursor/expand-services-advertise-and-build-project-c28b
+import { EnhancedRealMicroSaasService } from ./enhanced-real-micro-saas-services;
+const contact = null;
+origin/cursor/automate-test-improve-and-merge-code-2533
+
+
+
+    market_position: 'Ship API portals faster',
+    target_audience: API and platform teams,
+    technology: ['OpenAPI, GraphQL, MDX'],
+    use_cases: [Dev portals, 'SDKs'],
+    roi: Docs / SDKs 5× faster,
+    competitors: ['ReadMe', Redocly]];	{
+		integrations: ['StripePayPalGoogle Analytics'];,
+  useCases: [Partner growthAutomated payouts'];
+		roi: 'Grow partner revenue by 10–25%;,
+  competitors: ['ImpactPartnerStack'];
+		marketSize: $5B+;',
+  growthRate: '12% YoY;
+];	{
+		integrations: ['StripePayPalGoogle Analytics'];,
+  useCases: ['Partner growthAutomated payouts'];
+		roi: 'Grow partner revenue by 10–25%';,
+  competitors: ['ImpactPartnerStack'];
+		marketSize: '$5B+';,
+  growthRate: '12% YoY';
+		variant: 'neural-quantum';,
+  contactInfo: contact;
+		implementationDetails: Event ingestion, attribution, payout jobs';
+		launchDate: '2026-01-10;,
+  customers: 12;
+		reviews: 7;
+	}
+		id: 'customer-feedback-intelligence';,
+  name: Customer Feedback Intelligence';
+		tagline: 'Summarize NPS/CSAT and reviews into prioritized insights;,
+  price: '$149';
+		period: /month,
+  description: Aggregate surveys, tickets and reviews, cluster themes with LLMs, and generate prioritized roadmaps with impact scores.';
+		features: ['Multichannel ingestionLLM clustering and themesImpact scoringRoadmap export];,
+  popular: true;
+		icon: '💬';,
+  color: from-cyan-600 to-blue-700';
+		textColor: 'text-cyan-300;,
+  link: 'https: //ziontechgroup && ziontechgroup.com/services/customer-feedback-intelligence';,
+  category: AI & Data';
+		realService: true;,
+  marketPosition: 'Actionable product feedback without heavy BI;
+		targetAudience: Product and CX teams';',
+  trialDays: 14;
+		integrations: [ZendeskIntercomG2Capterra];',
+  useCases: ['Prioritize roadmapReduce churn];
+		roi: Ship high-impact features faster';',
+  competitors: [UnitQEnjoyHQ];
+		marketSize: '$2B+';,
+  growthRate: 18% CAGR';
+		variant: 'ai-futuristic;,
+		realImplementation: true;,
+  implementationDetails: 'Connectors, clustering, scoring models';
+		launchDate: 2026-01-12;',
+  customers: 9;
+		reviews: 5;
+		id: 'api-security-posture-monitor;,
+  name: 'API Security Posture Monitor';
+		tagline: Detect OWASP API risks and auth gaps with CI annotations;',
+  price: '$199;
+  description: Continuously scan OpenAPI specs and staging endpoints for auth gaps, rate-limits, and common vulnerabilities with pull request annotations.';
+		features: ['OpenAPI scanningAuth/rate limit testsOWASP API checksPR annotations and diffs];,
+		icon: '🛡️';,
+  color: from-rose-600 to-pink-700';
+		textColor: 'text-rose-300;,
+  link: 'https: //ziontechgroup && ziontechgroup.com/services/api-security-posture-monitor';,
+  category: Quality & Monitoring';
+  marketPosition: 'Developer-first API security posture;
+		targetAudience: Platform and security teams';',
+		setupTime: 30 minutes,
+  technology: [OpenAPI, Node, CI'];
+		integrations: ['GitHubGitLabJenkins];,
+  useCases: ['Pre-deploy API checksSecurity posture'];
+		roi: Reduce security escapes by 60%;',
+  competitors: ['StackHawk42Crunch];
+		marketSize: $4B';',
+  growthRate: 20% CAGR;
+		variant: 'quantum-cyberpunk';,
+  implementationDetails: Spec analyzers, runners, annotations';
+		launchDate: '2026-01-14;,
+  customers: 11;
+		reviews: 6;
+		id: 'edge-cron-orchestrator';,
+  name: Edge Cron Orchestrator
+		tagline: 'Reliable schedules with retries, jitter and DLQs';
+		price: $59;',
+  period: '/month
+		description: Define schedules across providers with idempotency, exponential backoff, and run history with alerting.;
+		features: ['Flexible cron/rateIdempotency and retriesRun historyAlerting and webhooks'];,
+  popular: false;
+		icon: ⏰';',
+  color: from-amber-500 to-orange-600;
+		textColor: 'text-amber-300';,
+  link: https: //ziontechgroup && ziontechgroup.com/services/edge-cron-orchestrator';',
+  category: Developer Tools;
+  marketPosition: 'Unified schedules across clouds';
+		targetAudience: SaaS and platform teams;',
+		setupTime: '2 hours;,
+  technology: ['Workers/LambdaWebhooks'];
+		integrations: [AWSCloudflareGCP];',
+  useCases: ['Billing cyclesData syncs];
+		roi: Fewer missed jobs and incidents';',
+  competitors: [Temporal (overkill)DIY];
+		marketSize: '$1B+';,
+  growthRate: 15% CAGR';
+		variant: 'holographic-matrix;,
+  implementationDetails: 'Scheduler API, dashboard, webhooks';
+		launchDate: 2026-01-18;',
+  customers: 7;
+		reviews: 4;
+		id: 'email-parsing-routing-api;,
+  name: 'Email Parsing & Routing API';
+		tagline: Inbound email to structured events with attachments;',
+  price: '$39;
+  description: Parse inbound email, normalize signatures, extract attachments, and deliver to your webhooks with retries and dead-letter queues.';
+		features: ['Signature strippingAttachment handlingWebhook retries/DLQInspector UI];,
+		icon: '📨';,
+  color: from-indigo-600 to-blue-700';
+		textColor: 'text-indigo-300;,
+  link: 'https: //ziontechgroup && ziontechgroup.com/services/email-parsing-routing-api';,
+  marketPosition: Developer-friendly email ingestion';
+		targetAudience: 'Developers and platform;,
+		setupTime: '30 minutes';,
+  technology: [SMTP/WebhooksVirus scan'];
+		integrations: ['SESSendGridMailgun];,
+  useCases: ['Ticket intakeCRM capture'];
+		roi: Automate manual email triage;',
+  competitors: ['MailparserIntegromat];
+		marketSize: $0 && 0.8B';',
+  growthRate: 10% CAGR;
+  implementationDetails: 'Inbound parsers, queueing, UI';
+		launchDate: 2026-01-20;',
+  customers: 8;
+		id: 'ai-marketing-content-studio;,
+  name: 'AI Marketing Content Studio
+		tagline: 'Campaign-ready blogs, emails and ads with brand guardrails;
+		price: $119';',
+		description: Generate on-brand content with templates, tone control, compliance checks, and multi-channel export.;
+		features: ['Brand/tone controlsTemplates and briefsCompliance checksMulti-channel export'];,
+		icon: 📝';',
+  color: from-fuchsia-600 to-pink-700;
+		textColor: 'text-fuchsia-300';,
+  link: https: //ziontechgroup && ziontechgroup.com/services/ai-marketing-content-studio';',
+  marketPosition: On-brand AI content for teams;
+		targetAudience: 'Marketing and growth teams';,
+  technology: [LLMs, Style prompts'];
+		integrations: ['HubSpotMailchimpWebflow],
+  useCases: ['Blog, email, ads'];
+		roi: Scale content 5× faster;',
+  competitors: ['JasperWriter];
+		marketSize: $3B+';',
+  growthRate: 22% CAGR;
+  implementationDetails: 'Template engine, tone guardrails';
+		launchDate: 2026-01-22;',
+  customers: 15;
+		reviews: 9;
+		id: 'security-headers-scanner;,
+  name: 'Security Headers Scanner';
+		tagline: Continuous CSP/HSTS/cookie flag auditing with diffs;',
+  price: '$19;
+  description: Audit security headers across environments and get pull request annotations, weekly reports and diffs.';
+		features: ['CSP/HSTS checksCookie flagsPR annotationsWeekly reports];,
+		icon: '🔐';,
+  color: from-sky-600 to-blue-700';
+		textColor: 'text-sky-300;,
+  link: 'https: //ziontechgroup && ziontechgroup.com/services/security-headers-scanner';,
+  marketPosition: Simple posture checks for web apps';
+		targetAudience: 'Developers and security;,
+		setupTime: '15 minutes';,
+  technology: [NodePlaywright'];
+		integrations: ['GitHubGitLab];,
+  useCases: ['Header hardeningCompliance reports'];
+		roi: Reduce risk and review toil;',
+  competitors: ['Mozilla Observatory];
+		marketSize: $0 && 0.5B';',
+  growthRate: 8% CAGR;
+		variant: 'holographic';,
+  implementationDetails: Scanners, CI annotations, reports';
+		launchDate: '2026-01-25;,
+  customers: 20;
+		reviews: 10;
+		id: 'ml-feature-store-starter';,
+  name: ML Feature Store Starter
+		tagline: 'Versioned features, validation and online serving';
+		price: $149;',
+		description: 'Ship ML features faster with versioning, validation rules, lineage, and low-latency serving APIs.;
+		features: [Feature versioningValidation rulesLineage trackingOnline serving API'];',
+		icon: 📦;',
+  color: 'from-emerald-600 to-teal-700;
+		textColor: text-emerald-300';',
+  link: https: //ziontechgroup && ziontechgroup.com/services/ml-feature-store-starter;',
+  marketPosition: 'Lean feature store for teams;
+		targetAudience: Data/ML teams';',
+		setupTime: 1 day,
+  technology: [DB, Vector/Key-Value'];
+		integrations: ['DatabricksdbtAirflow];,
+  useCases: ['Faster model delivery'];
+		roi: Shorter time-to-prod models;',
+  competitors: ['TectonFeast];
+  implementationDetails: Schemas, validators, API';
+		launchDate: '2026-01-28;,
+  customers: 6;
+		reviews: 3;
+		id: 'slo-burn-rate-coach';,
+  name: SLO Burn Rate Coach';
+		tagline: 'Compute SLOs and coach on burn-rate risks;,
+  price: '$49';
+  description: Define SLOs, compute error budgets and get proactive coaching with burn-rate alerts tied to runbooks.;
+		features: ['SLO editorBurn-rate alertsRunbook hintsIntegrations and webhooks'];,
+		icon: 📈';',
+  color: from-lime-500 to-emerald-600;
+		textColor: 'text-lime-300';,
+  link: https: //ziontechgroup && ziontechgroup.com/services/slo-burn-rate-coach';',
+  category: Observability;
+  marketPosition: 'SLOs without the complexity';
+		targetAudience: SRE and platform;',
+		setupTime: '1 hour;,
+  technology: ['Prom/OTEL'];
+		integrations: [PagerDutySlack];',
+  useCases: ['Error budgetsCoaching];
+		roi: Fewer incidents';',
+  competitors: [Nobl9];
+  growthRate: '14% CAGR';
+  implementationDetails: SLO calc, alerting, UI;
+		launchDate: '2026-02-01';,
+  customers: 10;
+		id: browser-performance-optimizer';',
+  name: Browser Performance Optimizer;
+		tagline: 'Budget-driven CWV with hints and PR annotations';,
+  price: $69';
+  description: 'Improve Core Web Vitals with RUM/synthetic insights, performance budgets, and PR annotations for bundle changes.;
+		features: [RUM + syntheticBudgets and alertsBundle diff and PR notesEdge hints'];',
+		icon: ⚡;',
+  color: 'from-cyan-600 to-purple-700;
+  link: https: //ziontechgroup && ziontechgroup.com/services/browser-performance-optimizer';',
+  marketPosition: Developer-first CWV improvements;
+		targetAudience: 'Web and platform teams';,
+		setupTime: 2 hours,
+  technology: ['Lighthouse, RUM'];
+		integrations: [GitHubVercelNetlify]',
+  useCases: ['CWV, bundle size];
+		roi: +20 LCP, fewer regressions';
+		competitors: ['SpeedCurveCalibre];,
+  marketSize: '$0 && 0.5B';
+		growthRate: 12% CAGR;',
+  variant: 'neural-quantum-cyberpunk;
+		contactInfo: contact;,
+  realImplementation: true;
+		implementationDetails: RUM SDK, CI checks, UI';
+		launchDate: '2026-02-05;,
+  customers: 5;
+		id: 'cloud-cost-governance-suite';,
+  name: Cloud Cost Governance Suite
+		tagline: 'Budgets, owners, and policy guardrails across clouds';
+		price: $499;',
+		description: 'Enforce budgets with owners, detect anomalies and apply policy guardrails with IaC exports for approvals.;
+		features: [Budgets and ownersAnomaly detectionPolicy guardrailsIaC recommendation exports'];',
+		icon: 💸;',
+  color: 'from-amber-600 to-orange-700;
+  link: https: //ziontechgroup && ziontechgroup.com/services/cloud-cost-governance-suite';',
+  category: Cloud & FinOps;
+  marketPosition: 'Governance overlay for FinOps';
+		targetAudience: Finance and platform;',
+		setupTime: '3 days;,
+  technology: ['AWS/GCP/Azure APIs'];
+		integrations: [DatadogSlackJira];',
+  useCases: ['Spend controlChargeback];
+		roi: Reduce overspend by 10–30%';',
+  competitors: [CloudZeroFinout];
+		marketSize: '$12B';,
+  growthRate: 25% YoY';
+		variant: 'quantum-holographic;,
+  implementationDetails: 'Connectors, policies, exporters';
+		launchDate: 2026-02-08;',
+		id: 'api-changelog-sdk-publisher;,
+  name: 'API Changelog & SDK Publisher
+		tagline: 'Generate docs, changelogs and SDKs from schemas;
+		description: Turn OpenAPI/GraphQL schemas into versioned docs, changelogs and typed SDKs with a searchable portal.';
+		features: ['Docs from schemasSDK generationChangelogsSearchable portal];,
+		icon: '📘';,
+  link: https: //ziontechgroup && ziontechgroup.com/services/api-changelog-sdk-publisher';',
+  marketPosition: Ship API portals faster;
+		targetAudience: 'API and platform teams';,
+  technology: [OpenAPI, GraphQL, MDX'];
+  useCases: ['Dev portalsSDKs];
+		roi: Docs/SDKs 5× faster';',
+  competitors: [ReadMeRedocly];
+		marketSize: '$1 && 1.5B';,
+  implementationDetails: Schema importers, generators, UI';
+		launchDate: '2026-02-12;,
+  customers: 9;
+		reviews: 6;
+
+	}
+];
+		reviews: 6;
+	}
+];rating: 4 && 4.7,reviews: 6;
+	}
+];id: 'affiliate - analytics - starter';
+  name: Affiliate Analytics Starter,tagline: 'Attribution, fraud detection and automated payouts for SMBs';
+  price: $129;
+  period: '/month',description: Lightweight affiliate tracking with UTM / coupon support, heuristic fraud signals, and one - click Stripe / PayPal payouts.;
+  features: ['UTM and coupon attribution_fraud heuristics_stripe / PayPal payouts_partner portal and reporting'];
+  popular: false;
+  icon: 🤝;
+  color: 'from - emerald - 600 to - teal - 700';
+  text_color: text - emerald - 300;
+  link: 'https://ziontechgroup.com / services / affiliate - analytics - starter';
+  category: Developer Tools;
+  real_service: true;
+  market_position: 'Focused alternative to heavy affiliate platforms';
+  target_audience: SaaS and e_commerce;
+  trial_days: 14;
+  setup_time: '1 day',technology: [Next.js, Stripe, Webhooks];
+  integrations: ['StripePayPalGoogle Analytics'];
+  use_cases: [Partner growth_automated payouts];
+  roi: 'Grow partner revenue by 10–25%';
+  competitors: [ImpactPartnerStack];
+  market_size: '$5B+';
+  growth_rate: 12% YoY;
+  variant: 'neural - quantum';
+  contact_info: contact;
+  real_implementation: true,implementation_details: Event ingestion, attribution, payout jobs;
+  launch_date: '2026 - 01 - 10';
+  customers: 12;
+  rating: 4.6,reviews: 7;
+}
+{id: customer - feedback - intelligence;
+  name: 'Customer Feedback Intelligence';
+  tagline: Summarize NPS / CSAT and reviews into prioritized insights;
+  price: '$149';
+  period: /month,description: 'Aggregate surveys, tickets and reviews, cluster themes with LLMs, and generate prioritized roadmaps with impact scores.';
+  features: [Multichannel ingestionLLM clustering and themes_impact scoring_roadmap export];
+  popular: true;
+  icon: '💬';
+  color: from - cyan - 600 to - blue - 700;
+  text_color: 'text - cyan - 300';
+  link: https://ziontechgroup.com / services / customer - feedback - intelligence;
+  category: 'AI & Data';
+  real_service: true;
+  market_position: Actionable product feedback without heavy BI;
+  target_audience: 'Product and CX teams';
+  trial_days: 14;
+  setup_time: 1 hour,technology: ['Embeddings, Vector DB, Next.js'];
+  integrations: [ZendeskIntercomG2Capterra];
+  use_cases: ['Prioritize roadmap_reduce churn'];
+  roi: Ship high - impact features faster;
+  competitors: ['UnitQEnjoyHQ'];
+  market_size: $2B+;
+  growth_rate: '18% CAGR';
+  variant: ai - futuristic;
+  contact_info: contact;
+  real_implementation: true,implementation_details: 'Connectors, clustering, scoring models';
+  launch_date: 2026 - 01 - 12;
+  customers: 9;
+  rating: 4.7,reviews: 5;
+}
+{id: 'api - security - posture - monitor';
+  name: API Security Posture Monitor;
+  tagline: 'Detect OWASP API risks and auth gaps with CI annotations';
+  price: $199;
+  period: '/month',description: Continuously scan OpenAPI specs and staging endpoints for auth gaps, rate - limits, and common vulnerabilities with pull request annotations.;
+  features: ['OpenAPI scanning_auth / rate limit testsOWASP API checksPR annotations and diffs'];
+  popular: true;
+  icon: 🛡️;
+  color: 'from - rose - 600 to - pink - 700';
+  text_color: text - rose - 300;
+  link: 'https://ziontechgroup.com / services / api - security - posture - monitor';
+  category: Quality & Monitoring;
+  real_service: true;
+  market_position: 'Developer - first API security posture';
+  target_audience: Platform and security teams;
+  trial_days: 14;
+  setup_time: '30 minutes',technology: [OpenAPI, Node, CI];
+  integrations: ['GitHubGitLabJenkins'];
+  use_cases: [Pre - deploy API checks_security posture];
+  roi: 'Reduce security escapes by 60%';
+  competitors: [StackHawk42Crunch];
+  market_size: '$4B';
+  growth_rate: 20% CAGR;
+  variant: 'quantum - cyberpunk';
+  contact_info: contact;
+  real_implementation: true,implementation_details: Spec analyzers, runners, annotations;
+  launch_date: '2026 - 01 - 14';
+  customers: 11;
+  rating: 4.5,reviews: 6;
+}
+{id: edge - cron - orchestrator;
+  name: 'Edge Cron Orchestrator',tagline: Reliable schedules with retries, jitter and DLQs;
+  price: '$59';
+  period: /month,description: 'Define schedules across providers with idempotency, exponential backoff, and run history with alerting.';
+  features: [Flexible cron / rate_idempotency and retries_run history_alerting and webhooks];
+  popular: false;
+  icon: '⏰';
+  color: from - amber - 500 to - orange - 600;
+  text_color: 'text - amber - 300';
+  link: https://ziontechgroup.com / services / edge - cron - orchestrator;
+  category: 'Developer Tools';
+  real_service: true;
+  market_position: Unified schedules across clouds;
+  target_audience: 'SaaS and platform teams';
+  trial_days: 14;
+  setup_time: 2 hours;
+  technology: ['Workers / LambdaWebhooks'];
+  integrations: [AWSCloudflareGCP];
+  use_cases: ['Billing cycles_data syncs'];
+  roi: Fewer missed jobs and incidents;
+  competitors: ['Temporal (overkill)DIY'];
+  market_size: $1B+;
+  growth_rate: '15% CAGR';
+  variant: holographic - matrix;
+  contact_info: contact;
+  real_implementation: true,implementation_details: 'Scheduler API, dashboard, webhooks';
+  launch_date: 2026 - 01 - 18;
+  customers: 7;
+  rating: 4.5,reviews: 4;
+}
+{id: 'email - parsing - routing - api';
+  name: Email Parsing & Routing API;
+  tagline: 'Inbound email to structured events with attachments';
+  price: $39;
+  period: '/month',description: Parse inbound email, normalize signatures, extract attachments, and deliver to your webhooks with retries and dead - letter queues.;
+  features: ['Signature stripping_attachment handling_webhook retries / DLQInspector UI'];
+  popular: false;
+  icon: 📨;
+  color: 'from - indigo - 600 to - blue - 700';
+  text_color: text - indigo - 300;
+  link: 'https://ziontechgroup.com / services / email - parsing - routing - api';
+  category: Developer Tools;
+  real_service: true;
+  market_position: 'Developer - friendly email ingestion';
+  target_audience: Developers and platform;
+  trial_days: 14;
+  setup_time: '30 minutes';
+  technology: [SMTP / WebhooksVirus scan];
+  integrations: ['SESSendGridMailgun'];
+  use_cases: [Ticket intakeCRM capture];
+  roi: 'Automate manual email triage';
+  competitors: [MailparserIntegromat];
+  market_size: '$0.8B';
+  growth_rate: 10% CAGR;
+  variant: 'neural - quantum';
+  contact_info: contact;
+  real_implementation: true,implementation_details: Inbound parsers, queueing, UI;
+  launch_date: '2026 - 01 - 20';
+  customers: 8;
+  rating: 4.6,reviews: 5;
+}
+{id: ai - marketing - content - studio;
+  name: 'AI Marketing Content Studio',tagline: Campaign - ready blogs, emails and ads with brand guardrails;
+  price: '$119';
+  period: /month,description: 'Generate on - brand content with templates, tone control, compliance checks, and multi - channel export.';
+  features: [Brand / tone controls_templates and briefs_compliance checks_multi - channel export];
+  popular: true;
+  icon: '📝';
+  color: from - fuchsia - 600 to - pink - 700;
+  text_color: 'text - fuchsia - 300';
+  link: https://ziontechgroup.com / services / ai - marketing - content - studio;
+  category: 'AI & Data';
+  real_service: true;
+  market_position: On - brand AI content for teams;
+  target_audience: 'Marketing and growth teams';
+  trial_days: 14;
+  setup_time: 30 minutes,technology: ['LLMs, Style prompts'];
+  integrations: [HubSpotMailchimpWebflow],use_cases: ['Blog, email, ads'];
+  roi: Scale content 5× faster;
+  competitors: ['JasperWriter'];
+  market_size: $3B+;
+  growth_rate: '22% CAGR';
+  variant: ai - futuristic;
+  contact_info: contact;
+  real_implementation: true,implementation_details: 'Template engine, tone guardrails';
+  launch_date: 2026 - 01 - 22;
+  customers: 15;
+  rating: 4.6,reviews: 9;
+}
+{id: 'security - headers - scanner';
+  name: Security Headers Scanner;
+  tagline: 'Continuous CSP / HSTS / cookie flag auditing with diffs';
+  price: $19;
+  period: '/month',description: Audit security headers across environments and get pull request annotations, weekly reports and diffs.;
+  features: ['CSP / HSTS checks_cookie flagsPR annotations_weekly reports'];
+  popular: false;
+  icon: 🔐;
+  color: 'from - sky - 600 to - blue - 700';
+  text_color: text - sky - 300;
+  link: 'https://ziontechgroup.com / services / security - headers - scanner';
+  category: Quality & Monitoring;
+  real_service: true;
+  market_position: 'Simple posture checks for web apps';
+  target_audience: Developers and security;
+  trial_days: 14;
+  setup_time: '15 minutes';
+  technology: [NodePlaywright];
+  integrations: ['GitHubGitLab'];
+  use_cases: [Header hardening_compliance reports];
+  roi: 'Reduce risk and review toil';
+  competitors: [Mozilla Observatory];
+  market_size: '$0.5B';
+  growth_rate: 8% CAGR;
+  variant: 'holographic';
+  contact_info: contact;
+  real_implementation: true,implementation_details: Scanners, CI annotations, reports;
+  launch_date: '2026 - 01 - 25';
+  customers: 20;
+  rating: 4.5,reviews: 10;
+}
+{id: ml - feature - store - starter;
+  name: 'ML Feature Store Starter',tagline: Versioned features, validation and online serving;
+  price: '$149';
+  period: /month,description: 'Ship ML features faster with versioning, validation rules, lineage, and low - latency serving APIs.';
+  features: [Feature versioning_validation rules_lineage tracking_online serving API];
+  popular: false;
+  icon: '📦';
+  color: from - emerald - 600 to - teal - 700;
+  text_color: 'text - emerald - 300';
+  link: https://ziontechgroup.com / services / ml - feature - store - starter;
+  category: 'AI & Data';
+  real_service: true;
+  market_position: Lean feature store for teams;
+  target_audience: 'Data / ML teams';
+  trial_days: 14;
+  setup_time: 1 day,technology: ['DB, Vector / Key - Value'];
+  integrations: [DatabricksdbtAirflow];
+  use_cases: ['Faster model delivery'];
+  roi: Shorter time - to - prod models;
+  competitors: ['TectonFeast'];
+  market_size: $1B+;
+  growth_rate: '20% CAGR';
+  variant: neural - quantum;
+  contact_info: contact;
+  real_implementation: true,implementation_details: 'Schemas, validators, API';
+  launch_date: 2026 - 01 - 28;
+  customers: 6;
+  rating: 4.5,reviews: 3;
+}
+{id: 'slo - burn - rate - coach';
+  name: SLO Burn Rate Coach;
+  tagline: 'Compute SLOs and coach on burn - rate risks';
+  price: $49;
+  period: '/month',description: Define SLOs, compute error budgets and get proactive coaching with burn - rate alerts tied to runbooks.;
+  features: ['SLO editor_burn - rate alerts_runbook hints_integrations and webhooks'];
+  popular: false;
+  icon: 📈;
+  color: 'from - lime - 500 to - emerald - 600';
+  text_color: text - lime - 300;
+  link: 'https://ziontechgroup.com / services / slo - burn - rate - coach';
+  category: Observability;
+  real_service: true;
+  market_position: 'SLOs without the complexity';
+  target_audience: SRE and platform;
+  trial_days: 14;
+  setup_time: '1 hour';
+  technology: [Prom / OTEL];
+  integrations: ['PagerDutySlack'];
+  use_cases: [Error budgets_coaching];
+  roi: 'Fewer incidents';
+  competitors: [Nobl9];
+  market_size: '$0.8B';
+  growth_rate: 14% CAGR;
+  variant: 'holographic - matrix';
+  contact_info: contact;
+  real_implementation: true,implementation_details: SLO calc, alerting, UI;
+  launch_date: '2026 - 02 - 01';
+  customers: 10;
+  rating: 4.5,reviews: 6;
+}
+{id: browser - performance - optimizer;
+  name: 'Browser Performance Optimizer';
+  tagline: Budget - driven CWV with hints and PR annotations;
+  price: '$69';
+  period: /month,description: 'Improve Core Web Vitals with RUM / synthetic insights, performance budgets, and PR annotations for bundle changes.';
+  features: [RUM + synthetic_budgets and alerts_bundle diff and PR notes_edge hints];
+  popular: false;
+  icon: '⚡';
+  color: from - cyan - 600 to - purple - 700;
+  text_color: 'text - cyan - 300';
+  link: https://ziontechgroup.com / services / browser - performance - optimizer;
+  category: 'Quality & Monitoring';
+  real_service: true;
+  market_position: Developer - first CWV improvements;
+  target_audience: 'Web and platform teams';
+  trial_days: 14;
+  setup_time: 2 hours,technology: ['Lighthouse, RUM'];
+  integrations: [GitHubVercelNetlify],use_cases: ['CWV, bundle size'];
+  roi: +20 LCP, fewer regressions;
+  competitors: ['SpeedCurveCalibre'];
+  market_size: $0.5B;
+  growth_rate: '12% CAGR';
+  variant: neural - quantum - cyberpunk;
+  contact_info: contact;
+  real_implementation: true,implementation_details: 'RUM SDK, CI checks, UI';
+  launch_date: 2026 - 02 - 05;
+  customers: 5;
+  rating: 4.5,reviews: 3;
+}
+{id: 'cloud - cost - governance - suite';
+  name: Cloud Cost Governance Suite,tagline: 'Budgets, owners, and policy guardrails across clouds';
+  price: $499;
+  period: '/month',description: Enforce budgets with owners, detect anomalies and apply policy guardrails with IaC exports for approvals.;
+  features: ['Budgets and owners_anomaly detection_policy guardrailsIaC recommendation exports'];
+  popular: true;
+  icon: 💸;
+  color: 'from - amber - 600 to - orange - 700';
+  text_color: text - amber - 300;
+  link: 'https://ziontechgroup.com / services / cloud - cost - governance - suite';
+  category: Cloud & FinOps;
+  real_service: true;
+  market_position: 'Governance overlay for FinOps';
+  target_audience: Finance and platform;
+  trial_days: 14;
+  setup_time: '3 days';
+  technology: [AWS / GCP / Azure APIs];
+  integrations: ['DatadogSlackJira'];
+  use_cases: [Spend control_chargeback];
+  roi: 'Reduce overspend by 10–30%';
+  competitors: [CloudZeroFinout];
+  market_size: '$12B';
+  growth_rate: 25% YoY;
+  variant: 'quantum - holographic';
+  contact_info: contact;
+  real_implementation: true,implementation_details: Connectors, policies, exporters;
+  launch_date: '2026 - 02 - 08';
+  customers: 6;
+  rating: 4.6,reviews: 4;
+}
+{id: api - changelog - sdk - publisher;
+  name: 'API Changelog & SDK Publisher',tagline: Generate docs, changelogs and SDKs from schemas;
+  price: '$59';
+  period: /month,description: 'Turn OpenAPI / GraphQL schemas into versioned docs, changelogs and typed SDKs with a searchable portal.';
+  features: [Docs from schemasSDK generationChangelogsSearchable portal];
+  popular: false;
+  icon: '📘';
+  color: from - cyan - 600 to - blue - 700;
+  text_color: 'text - cyan - 300';
+  link: https://ziontechgroup.com / services / api - changelog - sdk - publisher;
+  category: 'Developer Tools';
+  real_service: true;
+  market_position: Ship API portals faster;
+  target_audience: 'API and platform teams';
+  trial_days: 14;
+  setup_time: 30 minutes,technology: ['OpenAPI, GraphQL, MDX'];
+  integrations: [GitHubGitLab];
+  use_cases: ['Dev portalsSDKs'];
+  roi: Docs / SDKs 5× faster;
+  competitors: ['ReadMeRedocly'];
+  market_size: $1.5B;
+  growth_rate: '18% CAGR';
+  variant: neural - quantum;
+  contact_info: contact;
+  real_implementation: true,implementation_details: 'Schema importers, generators, UI';
+  launch_date: 2026 - 02 - 12;
+  customers: 9;
+  rating: 4.7,reviews: 6;
+}
+];
+ursor/fix-website-loading-errors-and-merge-6662;
+import { EnhancedRealMicroSaasService  } from './enhanced-real-micro-saas-services';'
+const contact  = null;
+		"realImplementation": true,
+"implementationDetails": 'Schema importers, generators, UI';'
+		"launchDate": '2026-02-12';'
+		"customers": 9;
+		"reviews": 6
+	}
+];
+origin/cursor/automate-test-improve-and-merge-code-2533
+
+
+
+
+import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services';
+const contact = null;
+
+import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services';
+const contact = $2;
+	email: 'kleber@ziontechgroup.com',
+	address: '364 E Main St STE 1008 Middletown DE 19709',
+	website: 'https://ziontechgroup.com'
+},
+
+export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
+	{
+		id: 'affiliate-analytics-starter',
+		name: 'Affiliate Analytics Starter',
+		tagline: 'Attribution, fraud detection and automated payouts for SMBs',
+		price: '$129',
+		period: '/month',
+		description: 'Lightweight affiliate tracking with UTM/coupon support, heuristic fraud signals, and one-click Stripe/PayPal payouts.',
+		features: ['UTM and coupon attributionFraud heuristicsStripe/PayPal payoutsPartner portal and reporting'],
+		popular: false,
+		icon: '🤝',
+		color: 'from-emerald-600 to-teal-700',
+		textColor: 'text-emerald-300',
+		link: 'https://ziontechgroup.com/services/affiliate-analytics-starter',
+		category: 'Developer Tools',
+		realService: true,
+		marketPosition: 'Focused alternative to heavy affiliate platforms',
+		targetAudience: 'SaaS and eCommerce',
+		trialDays: 14,
+		setupTime: '1 day',
+		technology: ['Next.js, Stripe, Webhooks'],
+		integrations: ['StripePayPalGoogle Analytics'],
+		useCases: ['Partner growthAutomated payouts'],
+		roi: 'Grow partner revenue by 10–25%',
+		competitors: ['ImpactPartnerStack'],
+		marketSize: '$5B+',
+		growthRate: '12% YoY',
+		variant: 'neural-quantum',
+		contactInfo: contact,
+		realImplementation: true,
+		implementationDetails: 'Event ingestion, attribution, payout jobs',
+		launchDate: '2026-01-10',
+		customers: 12,
+		rating: 4.6,
+		reviews: 7},
+	{
+		id: 'customer-feedback-intelligence',
+		name: 'Customer Feedback Intelligence',
+		tagline: 'Summarize NPS/CSAT and reviews into prioritized insights',
+		price: '$149',
+		period: '/month',
+		description: 'Aggregate surveys, tickets and reviews, cluster themes with LLMs, and generate prioritized roadmaps with impact scores.',
+		features: ['Multichannel ingestionLLM clustering and themesImpact scoringRoadmap export'],
+		popular: true,
+		icon: '💬',
+		color: 'from-cyan-600 to-blue-700',
+		textColor: 'text-cyan-300',
+		link: 'https://ziontechgroup.com/services/customer-feedback-intelligence',
+		category: 'AI & Data',
+		realService: true,
+		marketPosition: 'Actionable product feedback without heavy BI',
+		targetAudience: 'Product and CX teams',
+		trialDays: 14,
+		setupTime: '1 hour',
+		technology: ['Embeddings, Vector DB, Next.js'],
+		integrations: ['ZendeskIntercomG2Capterra'],
+		useCases: ['Prioritize roadmapReduce churn'],
+		roi: 'Ship high-impact features faster',
+		competitors: ['UnitQEnjoyHQ'],
+		marketSize: '$2B+',
+		growthRate: '18% CAGR',
+		variant: 'ai-futuristic',
+		contactInfo: contact,
+		realImplementation: true,
+		implementationDetails: 'Connectors, clustering, scoring models',
+		launchDate: '2026-01-12',
+		customers: 9,
+		rating: 4.7,
+		reviews: 5},
+	{
+		id: 'api-security-posture-monitor',
+		name: 'API Security Posture Monitor',
+		tagline: 'Detect OWASP API risks and auth gaps with CI annotations',
+		price: '$199',
+		period: '/month',
+		description: 'Continuously scan OpenAPI specs and staging endpoints for auth gaps, rate-limits, and common vulnerabilities with pull request annotations.',
+		features: ['OpenAPI scanningAuth/rate limit testsOWASP API checksPR annotations and diffs'],
+		popular: true,
+		icon: '🛡️',
+		color: 'from-rose-600 to-pink-700',
+		textColor: 'text-rose-300',
+		link: 'https://ziontechgroup.com/services/api-security-posture-monitor',
+		category: 'Quality & Monitoring',
+		realService: true,
+		marketPosition: 'Developer-first API security posture',
+		targetAudience: 'Platform and security teams',
+		trialDays: 14,
+		setupTime: '30 minutes',
+		technology: ['OpenAPI, Node, CI'],
+		integrations: ['GitHubGitLabJenkins'],
+		useCases: ['Pre-deploy API checksSecurity posture'],
+		roi: 'Reduce security escapes by 60%',
+		competitors: ['StackHawk42Crunch'],
+		marketSize: '$4B',
+		growthRate: '20% CAGR',
+		variant: 'quantum-cyberpunk',
+		contactInfo: contact,
+		realImplementation: true,
+		implementationDetails: 'Spec analyzers, runners, annotations',
+		launchDate: '2026-01-14',
+		customers: 11,
+		rating: 4.5,
+		reviews: 6},
+	{
+		id: 'edge-cron-orchestrator',
+		name: 'Edge Cron Orchestrator',
+		tagline: 'Reliable schedules with retries, jitter and DLQs',
+		price: '$59',
+		period: '/month',
+		description: 'Define schedules across providers with idempotency, exponential backoff, and run history with alerting.',
+		features: ['Flexible cron/rateIdempotency and retriesRun historyAlerting and webhooks'],
+		popular: false,
+		icon: '⏰',
+		color: 'from-amber-500 to-orange-600',
+		textColor: 'text-amber-300',
+		link: 'https://ziontechgroup.com/services/edge-cron-orchestrator',
+		category: 'Developer Tools',
+		realService: true,
+		marketPosition: 'Unified schedules across clouds',
+		targetAudience: 'SaaS and platform teams',
+		trialDays: 14,
+		setupTime: '2 hours',
+		technology: ['Workers/LambdaWebhooks'],
+		integrations: ['AWSCloudflareGCP'],
+		useCases: ['Billing cyclesData syncs'],
+		roi: 'Fewer missed jobs and incidents',
+		competitors: ['Temporal (overkill)DIY'],
+		marketSize: '$1B+',
+		growthRate: '15% CAGR',
+		variant: 'holographic-matrix',
+		contactInfo: contact,
+		realImplementation: true,
+		implementationDetails: 'Scheduler API, dashboard, webhooks',
+		launchDate: '2026-01-18',
+		customers: 7,
+		rating: 4.5,
+		reviews: 4},
+	{
+		id: 'email-parsing-routing-api',
+		name: 'Email Parsing & Routing API',
+		tagline: 'Inbound email to structured events with attachments',
+		price: '$39',
+		period: '/month',
+		description: 'Parse inbound email, normalize signatures, extract attachments, and deliver to your webhooks with retries and dead-letter queues.',
+		features: ['Signature strippingAttachment handlingWebhook retries/DLQInspector UI'],
+		popular: false,
+		icon: '📨',
+		color: 'from-indigo-600 to-blue-700',
+		textColor: 'text-indigo-300',
+		link: 'https://ziontechgroup.com/services/email-parsing-routing-api',
+		category: 'Developer Tools',
+		realService: true,
+		marketPosition: 'Developer-friendly email ingestion',
+		targetAudience: 'Developers and platform',
+		trialDays: 14,
+		setupTime: '30 minutes',
+		technology: ['SMTP/WebhooksVirus scan'],
+		integrations: ['SESSendGridMailgun'],
+		useCases: ['Ticket intakeCRM capture'],
+		roi: 'Automate manual email triage',
+		competitors: ['MailparserIntegromat'],
+		marketSize: '$0.8B',
+		growthRate: '10% CAGR',
+		variant: 'neural-quantum',
+		contactInfo: contact,
+		realImplementation: true,
+		implementationDetails: 'Inbound parsers, queueing, UI',
+		launchDate: '2026-01-20',
+		customers: 8,
+		rating: 4.6,
+		reviews: 5},
+	{
+		id: 'ai-marketing-content-studio',
+		name: 'AI Marketing Content Studio',
+		tagline: 'Campaign-ready blogs, emails and ads with brand guardrails',
+		price: '$119',
+		period: '/month',
+		description: 'Generate on-brand content with templates, tone control, compliance checks, and multi-channel export.',
+		features: ['Brand/tone controlsTemplates and briefsCompliance checksMulti-channel export'],
+		popular: true,
+		icon: '📝',
+		color: 'from-fuchsia-600 to-pink-700',
+		textColor: 'text-fuchsia-300',
+		link: 'https://ziontechgroup.com/services/ai-marketing-content-studio',
+		category: 'AI & Data',
+		realService: true,
+		marketPosition: 'On-brand AI content for teams',
+		targetAudience: 'Marketing and growth teams',
+		trialDays: 14,
+		setupTime: '30 minutes',
+		technology: ['LLMs, Style prompts'],
+		integrations: ['HubSpotMailchimpWebflow'],
+		useCases: ['Blog, email, ads'],
+		roi: 'Scale content 5× faster',
+		competitors: ['JasperWriter'],
+		marketSize: '$3B+',
+		growthRate: '22% CAGR',
+		variant: 'ai-futuristic',
+		contactInfo: contact,
+		realImplementation: true,
+		implementationDetails: 'Template engine, tone guardrails',
+		launchDate: '2026-01-22',
+		customers: 15,
+		rating: 4.6,
+		reviews: 9},
+	{
+		id: 'security-headers-scanner',
+		name: 'Security Headers Scanner',
+		tagline: 'Continuous CSP/HSTS/cookie flag auditing with diffs',
+		price: '$19',
+		period: '/month',
+		description: 'Audit security headers across environments and get pull request annotations, weekly reports and diffs.',
+		features: ['CSP/HSTS checksCookie flagsPR annotationsWeekly reports'],
+		popular: false,
+		icon: '🔐',
+		color: 'from-sky-600 to-blue-700',
+		textColor: 'text-sky-300',
+		link: 'https://ziontechgroup.com/services/security-headers-scanner',
+		category: 'Quality & Monitoring',
+		realService: true,
+		marketPosition: 'Simple posture checks for web apps',
+		targetAudience: 'Developers and security',
+		trialDays: 14,
+		setupTime: '15 minutes',
+		technology: ['NodePlaywright'],
+		integrations: ['GitHubGitLab'],
+		useCases: ['Header hardeningCompliance reports'],
+		roi: 'Reduce risk and review toil',
+		competitors: ['Mozilla Observatory'],
+		marketSize: '$0.5B',
+		growthRate: '8% CAGR',
+		variant: 'holographic',
+		contactInfo: contact,
+		realImplementation: true,
+		implementationDetails: 'Scanners, CI annotations, reports',
+		launchDate: '2026-01-25',
+		customers: 20,
+		rating: 4.5,
+		reviews: 10},
+	{
+		id: 'ml-feature-store-starter',
+		name: 'ML Feature Store Starter',
+		tagline: 'Versioned features, validation and online serving',
+		price: '$149',
+		period: '/month',
+		description: 'Ship ML features faster with versioning, validation rules, lineage, and low-latency serving APIs.',
+		features: ['Feature versioningValidation rulesLineage trackingOnline serving API'],
+		popular: false,
+		icon: '📦',
+		color: 'from-emerald-600 to-teal-700',
+		textColor: 'text-emerald-300',
+		link: 'https://ziontechgroup.com/services/ml-feature-store-starter',
+		category: 'AI & Data',
+		realService: true,
+		marketPosition: 'Lean feature store for teams',
+		targetAudience: 'Data/ML teams',
+		trialDays: 14,
+		setupTime: '1 day',
+		technology: ['DB, Vector/Key-Value'],
+		integrations: ['DatabricksdbtAirflow'],
+		useCases: ['Faster model delivery'],
+		roi: 'Shorter time-to-prod models',
+		competitors: ['TectonFeast'],
+		marketSize: '$1B+',
+		growthRate: '20% CAGR',
+		variant: 'neural-quantum',
+		contactInfo: contact,
+		realImplementation: true,
+		implementationDetails: 'Schemas, validators, API',
+		launchDate: '2026-01-28',
+		customers: 6,
+		rating: 4.5,
+		reviews: 3},
+	{
+		id: 'slo-burn-rate-coach',
+		name: 'SLO Burn Rate Coach',
+		tagline: 'Compute SLOs and coach on burn-rate risks',
+		price: '$49',
+		period: '/month',
+		description: 'Define SLOs, compute error budgets and get proactive coaching with burn-rate alerts tied to runbooks.',
+		features: ['SLO editorBurn-rate alertsRunbook hintsIntegrations and webhooks'],
+		popular: false,
+		icon: '📈',
+		color: 'from-lime-500 to-emerald-600',
+		textColor: 'text-lime-300',
+		link: 'https://ziontechgroup.com/services/slo-burn-rate-coach',
+		category: 'Observability',
+		realService: true,
+		marketPosition: 'SLOs without the complexity',
+		targetAudience: 'SRE and platform',
+		trialDays: 14,
+		setupTime: '1 hour',
+		technology: ['Prom/OTEL'],
+		integrations: ['PagerDutySlack'],
+		useCases: ['Error budgetsCoaching'],
+		roi: 'Fewer incidents',
+		competitors: ['Nobl9'],
+		marketSize: '$0.8B',
+		growthRate: '14% CAGR',
+		variant: 'holographic-matrix',
+		contactInfo: contact,
+		realImplementation: true,
+		implementationDetails: 'SLO calc, alerting, UI',
+		launchDate: '2026-02-01',
+		customers: 10,
+		rating: 4.5,
+		reviews: 6},
+	{
+		id: 'browser-performance-optimizer',
+		name: 'Browser Performance Optimizer',
+		tagline: 'Budget-driven CWV with hints and PR annotations',
+		price: '$69',
+		period: '/month',
+		description: 'Improve Core Web Vitals with RUM/synthetic insights, performance budgets, and PR annotations for bundle changes.',
+		features: ['RUM + syntheticBudgets and alertsBundle diff and PR notesEdge hints'],
+		popular: false,
+		icon: '⚡',
+		color: 'from-cyan-600 to-purple-700',
+		textColor: 'text-cyan-300',
+		link: 'https://ziontechgroup.com/services/browser-performance-optimizer',
+		category: 'Quality & Monitoring',
+		realService: true,
+		marketPosition: 'Developer-first CWV improvements',
+		targetAudience: 'Web and platform teams',
+		trialDays: 14,
+		setupTime: '2 hours',
+		technology: ['Lighthouse, RUM'],
+		integrations: ['GitHubVercelNetlify'],
+		useCases: ['CWV, bundle size'],
+		roi: '+20 LCP, fewer regressions',
+		competitors: ['SpeedCurveCalibre'],
+		marketSize: '$0.5B',
+		growthRate: '12% CAGR',
+		variant: 'neural-quantum-cyberpunk',
+		contactInfo: contact,
+		realImplementation: true,
+		implementationDetails: 'RUM SDK, CI checks, UI',
+		launchDate: '2026-02-05',
+		customers: 5,
+		rating: 4.5,
+		reviews: 3},
+	{
+		id: 'cloud-cost-governance-suite',
+		name: 'Cloud Cost Governance Suite',
+		tagline: 'Budgets, owners, and policy guardrails across clouds',
+		price: '$499',
+		period: '/month',
+		description: 'Enforce budgets with owners, detect anomalies and apply policy guardrails with IaC exports for approvals.',
+		features: ['Budgets and ownersAnomaly detectionPolicy guardrailsIaC recommendation exports'],
+		popular: true,
+		icon: '💸',
+		color: 'from-amber-600 to-orange-700',
+		textColor: 'text-amber-300',
+		link: 'https://ziontechgroup.com/services/cloud-cost-governance-suite',
+		category: 'Cloud & FinOps',
+		realService: true,
+		marketPosition: 'Governance overlay for FinOps',
+		targetAudience: 'Finance and platform',
+		trialDays: 14,
+		setupTime: '3 days',
+		technology: ['AWS/GCP/Azure APIs'],
+		integrations: ['DatadogSlackJira'],
+		useCases: ['Spend controlChargeback'],
+		roi: 'Reduce overspend by 10–30%',
+		competitors: ['CloudZeroFinout'],
+		marketSize: '$12B',
+		growthRate: '25% YoY',
+		variant: 'quantum-holographic',
+		contactInfo: contact,
+		realImplementation: true,
+		implementationDetails: 'Connectors, policies, exporters',
+		launchDate: '2026-02-08',
+		customers: 6,
+		rating: 4.6,
+		reviews: 4},
+	{
+		id: 'api-changelog-sdk-publisher',
+		name: 'API Changelog & SDK Publisher',
+		tagline: 'Generate docs, changelogs and SDKs from schemas',
+		price: '$59',
+		period: '/month',
+		description: 'Turn OpenAPI/GraphQL schemas into versioned docs, changelogs and typed SDKs with a searchable portal.',
+		features: ['Docs from schemasSDK generationChangelogsSearchable portal'],
+		popular: false,
+		icon: '📘',
+		color: 'from-cyan-600 to-blue-700',
+		textColor: 'text-cyan-300',
+		link: 'https://ziontechgroup.com/services/api-changelog-sdk-publisher',
+		category: 'Developer Tools',
+		realService: true,
+		marketPosition: 'Ship API portals faster',
+		targetAudience: 'API and platform teams',
+		trialDays: 14,
+		setupTime: '30 minutes',
+		technology: ['OpenAPI, GraphQL, MDX'],
+		integrations: ['GitHubGitLab'],
+		useCases: ['Dev portalsSDKs'],
+		roi: 'Docs/SDKs 5× faster',
+		competitors: ['ReadMeRedocly'],
+		marketSize: '$1.5B',
+		growthRate: '18% CAGR',
+		variant: 'neural-quantum',
+		contactInfo: contact,
+		realImplementation: true,
+		implementationDetails: 'Schema importers, generators, UI',
+		launchDate: '2026-02-12',
+		customers: 9,
+		rating: 4.7,
+		reviews: 6}
+],

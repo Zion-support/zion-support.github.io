@@ -1,20 +1,14 @@
-
-
-
-
-
-
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
 // console.log(' Fixing All Remaining Syntax Issues...')
 console.log('=====')
-const problematicFiles = ['pages/docs/integration-examples.tsx']
+const problematicFiles = ['pages/docs/integration-examples.tsx'];
   'pages/security.tsx'
   'pages/services-catalog.tsx'
   'pages/services-comparison.tsx'
   'pages/services-overview.tsx'
-    let content = ''
+let content = '';
     if (filePath === 'pages/docs/integration-examples.tsx')
       content = "
     "phone"

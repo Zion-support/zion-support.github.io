@@ -1,4 +1,3 @@
-
 #!/usr/bin/env node
 
 const fs = require('fs');
@@ -33,14 +32,13 @@ class TestFileFixer {
       ) {
         testFiles.push(fullPath);
       }
-    }
 
     return testFiles;
   }
 
   isTestFileCorrupted(content) {
     // Check for common corruption patterns
-    const corruptionPatterns = [
+const corruptionPatterns = [;
       /describe\([^)]*\)\s*\{\}\s*'/, // describe followed by {} and quote
       /it\([^)]*\)\s*\{\}\s*render/, // it followed by {} and render
       /expect\([^)]*\)\s*\.toBeInTheDocument\s*\(\)\s*\}\)\s*'/, // expect followed by quote
@@ -52,7 +50,7 @@ class TestFileFixer {
 
   generateValidTestFile(filePath) {
     const fileName = path.basename(filePath);
-    const componentName = fileName
+const componentName = fileName;
       .replace('.test.tsx', '')
       .replace('.test.ts', '')
       .replace('.test.jsx', '')
@@ -73,7 +71,6 @@ describe('${componentName}', () => {
     render(<${componentName} />);
     // Add more specific tests here
   });
-});
 `;
   }
 
@@ -95,7 +92,6 @@ describe('${componentName}', () => {
       this.log(`Error fixing ${filePath}: ${error.message}`);
       return false;
     }
-  }
 
   async run() {
     this.log('🔧 Starting Test File Fixer');
@@ -122,7 +118,6 @@ describe('${componentName}', () => {
       errors: this.errors,
     };
   }
-}
 
 // Run the fixer
 const fixer = new TestFileFixer();
@@ -139,30 +134,4 @@ fixer
     console.error('❌ Test file fixing failed:', error.message);
     process.exit(1);
   });
-#!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
-        item.endsWith('.test.tsx')
-        item.endsWith('.test.ts')
-        item.endsWith('.test.jsx')
-        item.endsWith('.test.js')
-    const corruptionPatterns = [/describe\([^)]*\)\s*\{\}\s*'
-      /expect\([^)]*\)\s*\.toBeInTheDocument\s*\(\)\s*\}\)\s*'
-      /render\(<[^>]*>\s*\)\s*'
-      .replace('.test.tsx', '')
-      .replace('.test.ts', '')
-      .replace('.test.jsx', '')
-      .replace('.test.js', '')
-    return `import React from 'react'
-import { render, screen } from '@testing-library/react'
-import '@testing-library/jest-dom'
-import ${componentName} from './${componentName}'
-describe('${componentName}')
-  it('renders without crashing')
-    expect(screen.getByRole('main')
-  it('displays expected content')
-      const content = fs.readFileSync(filePath, 'utf8')
-    this.log(' Starting Test File Fixer')
-    console.log(' Test file fixing completed')
-    console.error(' Test file fixing "failed")
-
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0

@@ -1,0 +1,58 @@
+const fs = require($2);
+const path = require($2);
+console.log($2);
+// Check if we're in a valid Next.js project,
+  console.log('📁 Current directory:', process.cwd()),
+console.log('📄 Package.json exists:', fs.existsSync('package.json')),
+console.log('📄 Next.config.js exists:', fs.existsSync('next.config.js')),
+console.log('📁 Pages directory exists:', fs.existsSync('pages')),
+console.log('📁 Components directory exists:', fs.existsSync('components')),
+// Check package.json,
+  if (fs.existsSync('package.json')) {
+  const packageJson = $2;
+  console.log($2);
+  console.log('📦 React version:', packageJson.dependencies?.react || 'Not found')
+}
+// Check pages directory structure,
+  if (fs.existsSync('pages')) {
+  const pages = fs.readdirSync($2);
+  console.log($2);
+  console.log('📄 Main pages:', pages.filter(p => p.includes('index') || p.includes('_app')))
+}
+// Check for any problematic files,
+  console.log($2);
+const problematicFiles = $2;
+const allFiles = getAllFiles($2);
+for (const file of allFiles) {
+  try {
+    const content = fs.readFileSync($2);
+      problematicFiles.push(file)
+    }
+  } catch (error) {;
+    // Skip files that can't be read;
+  }
+}
+console.log($2);
+if (problematicFiles.length > 0) {
+  console.log('Files:', problematicFiles.slice(0, 10))
+}
+// Function to get all files recursively,
+  function getAllFiles(dir, extensions) {
+  let files = $2;
+  try {
+    const items = fs.readdirSync($2);
+    for (const item of items) {
+      const fullPath = path.join($2);
+      const stat = fs.statSync($2);
+      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+        files = files.concat(getAllFiles(fullPath, extensions))
+      } else if (extensions.some(ext => item.endsWith(ext))) {
+        files.push(fullPath)
+      }
+    }
+  } catch (error) {;
+    // Skip directories that can't be read;
+  }
+  return files
+}
+console.log($2);

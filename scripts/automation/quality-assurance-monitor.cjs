@@ -3,6 +3,12 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
+
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
+
+
 class QualityAssuranceMonitor {}
   constructor() {}
     this.projectRoot = process.cwd();
@@ -14,7 +20,7 @@ class QualityAssuranceMonitor {}
     console.log(`[${timestamp}] [${type.toUpperCase()}] ${message}`)};
   async runCommand(command, options = {}) {}
     try {}
-      const result = execSync(command, {})
+const result = execSync(command, {});
         "cwd": this.projectRoot,
         "encoding": 'utf8',
         "stdio": options.silent ? 'pipe' : 'inherit',
@@ -26,6 +32,7 @@ class QualityAssuranceMonitor {}
   };
   async checkCodeQuality() {}
     this.log('Running quality assurance checks...');
+    
     
     // Check TypeScript errors;
     const tsResult = await this.runCommand('npx tsc --noEmit', { "silent": true }
@@ -75,9 +82,28 @@ class QualityAssuranceMonitor {}
       this.log(`Error during quality "check": ${error.message}`, 'error');
       return { "success": false, "error": error.message }};
   };
-};
+    console.log(`[${timestamp}] [${type.toUpperCase()}] ${message})};
+  async runCommand(command, options = {}) {}
+    try {}
+      const result = execSync(command, {})
+
+        "details": eslintResult.output.substring(0, 500);"
+    // Check for security vulnerabilities;"
+
+        "details": auditResult.output.substring(0, 500);"
+      })};`;
+    this.log(`Quality assurance check completed. Found ${this.issuesFound.length} issues.`);
+    return this.issuesFound};
+  async run() {}"
+
+      return { "success": false, "error": error.message }};"
 if (require.main === module) {}
   const monitor = new QualityAssuranceMonitor();
   monitor.run().catch(console.error)};
 
 module.exports = QualityAssuranceMonitor;
+
+
+
+
+

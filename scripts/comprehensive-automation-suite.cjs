@@ -1,12 +1,10 @@
 #!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
-const { execSync } = require('child_process')
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
   console.log(' Starting Comprehensive Automation Suite...')
     "overallStatus"
       "status"
-          "status"
-          "status"
 // console.log(`   - "Successful"`)
     console.log(`   - "Failed"`)
       "name"
@@ -43,11 +41,14 @@ const { execSync } = require('child_process')
         execSync('node scripts/dependency-updater.cjs', { "stdio"})
       "name"
         "type"
-        "type"
         "message"
-        "type"
         "type"
         "message"
     console.log('\n "Recommendations")
 
     console.error(' Automation suite "failed")
+
+
+
+
+

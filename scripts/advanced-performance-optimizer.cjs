@@ -1,65 +1,43 @@
-#!/usr/bin/env node
+#!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
+const { execSync } = require('child_process');
+      "status"
+        "message"
+        "status"
+      return { "status"}
+      return { "status": 'skipped', "message"}
+      return { status: 'skipped', "message"}
+      return { "status": 'skipped', "message"}
+      return { status: 'skipped', "message"}
+      "status"
+        "stdio"
+            "status"
+      return { "status": 'success', "message"}
+      return { "status"}
+      return { "status": 'skipped', "message"}
+      return { status: 'skipped', "message"}
+      "status"
+      return { "status": 'skipped', "message"}
+      "status"
+      "message"
+      return { "status": 'skipped', "message"}
+      return { status: 'skipped', "message"}
+          "missing"
+      "status"
+    console.log('\n Performance Optimization "Summary")
 
-console.log('⚡ Performance Optimizer Starting...');
+    console.error('Performance optimization "failed")
 
-class PerformanceOptimizer {
-  constructor() {
-    this.optimizations = [];
-  }
+    console.error('Performance optimization "failed")
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
 
-  async optimizeImages() {
-    try {
-      console.log('🖼️  Optimizing images...');
-      const publicDir = path.join(process.cwd(), 'public');
-      if (fs.existsSync(publicDir)) {
-        const files = fs.readdirSync(publicDir, { recursive: true });
-        const imageFiles = files.filter(file => 
-          /\.(jpg|jpeg|png|gif|webp)$/i.test(file)
-        );
-        console.log(`Found ${imageFiles.length} images to optimize`);
-        this.optimizations.push({
-          type: 'images',
-          count: imageFiles.length,
-          status: 'completed'
-        });
-      }
-    } catch (error) {
-      console.error('❌ Image optimization failed:', error.message);
-    }
-  }
 
-  async generateReport() {
-    const report = {
-      timestamp: new Date().toISOString(),
-      optimizations: this.optimizations,
-      summary: {
-        totalOptimizations: this.optimizations.length,
-        completed: this.optimizations.filter(opt => opt.status === 'completed').length
-      }
-    };
 
-    const reportPath = path.join(process.cwd(), 'performance-reports', 'optimization-report.json');
-    fs.mkdirSync(path.dirname(reportPath), { recursive: true });
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    
-    console.log('📊 Optimization report generated:', reportPath);
-    return report;
-  }
+const { execSync } = require('child_process')
+    console.error('Performance optimization "failed")
 
-  async run() {
-    console.log('🚀 Starting performance optimization...');
-    await this.optimizeImages();
-    const report = await this.generateReport();
-    
-    console.log('\n⚡ Optimization Summary:');
-    console.log('  - Total Optimizations:', report.summary.totalOptimizations);
-    console.log('  - Completed:', report.summary.completed);
-    
-    return report;
-  }
-}
 
-const optimizer = new PerformanceOptimizer();
-optimizer.run().catch(console.error);
+

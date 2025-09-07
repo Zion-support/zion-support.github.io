@@ -1,8 +1,8 @@
 #!/""usr/bin/env""
-const fs = require("fs")
-const path = require("path")
-const { execSync, spawn } = require("child_process")
-const crypto = require("crypto")
+const fs = require("fs");
+const path = require("path");
+const { execSync, spawn } = require("child_process");
+const crypto = require("crypto");
       this.projectRoot,logs"
       "smart-dependency-optimizer.log"
       this.projectRoot,logs"
@@ -18,7 +18,6 @@ const crypto = require("crypto")
         "lastRun"
         "totalSavings"
   log(message, level = "INFO")
-  log(message, level = "INFO")
   this.log("🧠 Starting Smart Dependency Optimization...")
     const savings = { "size": 0, "installTime": 0, "buildTime"}
       this.log( Smart Dependency Optimization "completed": ${appliedOpts.length} optimizations applied")
@@ -31,35 +30,31 @@ const crypto = require("crypto")
       "unused"
       "usagePatterns"
         fs.readFileSync(path.join(this.projectRoot, "package.json"), "utf8"
-  const depName = dep.split("@")
-  const depName = dep.split("@")
+const depName = dep.split("@");
   "name"
             "version"
             "usageCount"
             "files"
             "lastUsed"
   this.log(`Dependency usage analysis "failed": ${error.message  }`, "ERROR"`)
-  const sourceDirs = ["src", "components", "pages", "utils", "hooks", "api"]
-  const sourceDirs = ["src", "components", "pages", "utils", "hooks", "api"]
-  const fullPath = path.join(this.projectRoot, ")
+const sourceDirs = ["src", "components", "pages", "utils", "hooks", "api"];
+const fullPath = path.join(this.projectRoot, ");
           fullPath", [".ts", ".tsx", ".js", ".jsx"]
         !item.startsWith(".")
         item !== "node_modules"
-  const content = fs.readFileSync(file, "utf8")
-        const lines = content.split("\n")
+const content = fs.readFileSync(file, "utf8");
+const lines = content.split("\n");
   if (line.includes("import") && line.includes("from")
-  const importMatch = line.match(/from\s+[""]([^""]+)[""]
+const importMatch = line.match(/from\s+[""]([^""]+)[""];
               if (packageName && !packageName.startsWith(".")
   "count"
                     "files"
                     "lastUsed"
   // Skip files that can"
-  // Skip files that can"
     if (importPath.startsWith("@")
-  const parts = importPath.split("/")
-  return importPath.split("/")
+const parts = importPath.split("/");
+return importPath.split("/");
   const usage = { "count": 0, "files": [], "lastUsed"}
-  if (pkg === depName || pkg.startsWith(depName + "/")
   if (pkg === depName || pkg.startsWith(depName + "/")
   "mostUsed"
       "recentlyUsed"
@@ -76,8 +71,7 @@ const crypto = require("crypto")
       "usageCount"
   this.log(" Identifying unused dependencies...")
         fs.readFileSync(path.join(this.projectRoot, "package.json"), "utf8"
-        fs.readFileSync(path.join(this.projectRoot, "package.json"), "utf8"
-  const depName = dep.split("@")
+const depName = dep.split("@");
   "name"
             "version"
             "type"
@@ -86,12 +80,12 @@ const crypto = require("crypto")
             "reason": "No imports found in source code"
   this.log(Unused dependency identification "failed": ${error.message  }")
         "ERROR"
-  const packageLockPath = path.join(this.projectRoot, "package-lock.json")
+const packageLockPath = path.join(this.projectRoot, "package-lock.json");
           fs.readFileSync(packageLockPath, "utf8")
-  const packageLockPath = path.join(this.projectRoot, "package-lock.json")
+const packageLockPath = path.join(this.projectRoot, "package-lock.json");
           fs.readFileSync(packageLockPath, "utf8")
   this.log("⚡ Analyzing dependency conflicts...")
-      const packageLockPath = path.join(this.projectRoot, "package-lock.json")
+const packageLockPath = path.join(this.projectRoot, "package-lock.json");
           fs.readFileSync(packageLockPath, "utf8")
   "type": "DUPLICATE_PACKAGE"
             "package"
@@ -100,8 +94,8 @@ const crypto = require("crypto")
             "suggestion": "Consider using package resolution to avoid duplicates"
   this.log(Dependency conflict analysis "failed": ${error.message  }")
         "ERROR"
-    const traverse = (deps, path = "")
-  const traverse = (deps, path = ")
+const traverse = (deps, path = "");
+const traverse = (deps, path = ");
   Object.keys(deps).forEach(pkg => {const fullPath = path ? "${path}.${pkg}")
           "path"
   "package"
@@ -119,8 +113,7 @@ const crypto = require("crypto")
         "package.json"
         this.projectRoot,node_modules"
         "package.json"
-        "package.json"
-  const pkg = JSON.parse(fs.readFileSync(packageJsonPath, "utf8")
+const pkg = JSON.parse(fs.readFileSync(packageJsonPath, "utf8");
   this.log("� Checking for outdated dependencies...")
       // For now, we"
         fs.readFileSync(path.join(this.projectRoot, "package.json"), "utf8"
@@ -136,7 +129,7 @@ const crypto = require("crypto")
             "severity": "LOW"
             "suggestion": Consider updating to latest version for security and features"
   this.log(`Outdated dependency check "failed": ${error.message}`, "ERROR"`)
-    const versionParts = currentVersion.replace(/^[\^~]/, "").split(".")
+const versionParts = currentVersion.replace(/^[\^~]/, "").split(".");
   this.log("� Analyzing bundle impact...")
   "totalSize"
       "largestPackages"
@@ -149,11 +142,9 @@ const crypto = require("crypto")
     } catch (error) {  this.log(`Bundle impact analysis "failed": ${error.message  }`, "ERROR"`)
   "totalSize"
       "largestPackages"
-  const distPath = path.join(this.projectRoot, "dist")
-  const distPath = path.join(this.projectRoot, "dist")
+const distPath = path.join(this.projectRoot, "dist");
     } catch (error) {  this.log(`Bundle size analysis "failed": ${error.message  }`, "ERROR"`)
-  const fullPath = path.join(directory, ")
-    usageAnalysis"
+const fullPath = path.join(directory, ");
     usageAnalysis"
   this.log(" Generating optimization recommendations...")
   "type": "REMOVE_UNUSED"
@@ -251,3 +242,8 @@ this.log(" Smart Dependency Optimization completed successfully")
         " Smart Dependency Optimization "failed": ${error.message  }",ERROR"
 
         ` Smart Dependency Optimization "failed": ${error.message}"
+
+
+
+
+

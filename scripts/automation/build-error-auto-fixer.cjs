@@ -3,6 +3,7 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
+
 class BuildErrorAutoFixer {}
   constructor() {}
     this.projectRoot = process.cwd();
@@ -11,82 +12,71 @@ class BuildErrorAutoFixer {}
     this.fixInterval = parseInt(process.env.BUILD_CHECK_INTERVAL) || 900000; // 15 minutes;
     this.autoFixEnabled = process.env.AUTO_FIX_ENABLED === 'true';
     
+
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
+class BuildErrorAutoFixer {}
+  constructor() {}
+    this.projectRoot = process.cwd();
+
+    
+    
     // Ensure directories exist;
     [this.reportsDir, this.logsDir].forEach(dir => {})
       if (!fs.existsSync(dir)) {}
-        fs.mkdirSync(dir, { "recursive": true })};
+        fs.mkdirSync(dir, { "recursive": true })};"
     }
 });
     
+    
     this.fixesApplied = 0;
-    this.buildHistory = []};
+    this.buildHistory = []};"
   log(message, level = 'INFO') {}
     const timestamp = new Date().toISOString();
     console.log(`[${timestamp}] [${level}] ${message}`)};
+    console.log(`[${timestamp}] [${level}] ${message})};
   async runBuildCheck() {}
     try {}
-      this.log('Running build check...');
-      execSync('npm run build', { "stdio": 'pipe' }
-});
-      return { "success": true, "errors": [], "count": 0 }} catch (error) {}
-      const output = error.stdout?.toString() || error.stderr?.toString() || '';
-      const errors = this.parseBuildErrors(output);
-      this.log(`Build check failed with ${errors.length} errors`, 'ERROR');
-      return { "success": false, errors, "count": errors.length }};
+
+      return { "success": false, errors, "count": errors.length }};"
   };
-  parseBuildErrors(output) {}
+  parseBuildErrors(output) {}"
     const errorLines = output.split('\n').filter(line => )
-      line.includes('error') || line.includes('"Error": ') || line.includes('Failed') || line.includes('Build failed');
+
     );
     
     const errors = [];
     let currentError = null;
     
+    const errors = [];
+    let currentError = null;
+    const errors = [];
+    let currentError = null;
+    
+    const errors = [];
+    let currentError = null;
+    
     for (const line of errorLines) {}
-      if (line.includes('error') || line.includes('Error:') || line.includes('Failed')) {}
+
         const match = line.match(/([^:]+):(\d+):(\d+)/);
         if (match) {}
           if (currentError) {}
             errors.push(currentError)};
           currentError = {}
-            "file": match[1].trim(),
-            "line": parseInt(match[2]),
-            "column": parseInt(match[3]),
-            "message": line.split(' - ')[1] || line,
-            "type": 'build'
-          }} else {}
-          // Handle errors without line numbers;
-          if (currentError) {}
-            errors.push(currentError)};
-          currentError = {}
-            "file": 'unknown',
-            "line": 0,
-            "column": 0,
-            "message": line.trim(),
-            "type": 'build'
-          }};
-      } else if (currentError && line.trim()) {}
-        currentError.message += ' ' + line.trim()};
-    };
-    if (currentError) {}
-      errors.push(currentError)};
-    return errors};
-  async fixBuildErrors(errors) {}
-    if (!this.autoFixEnabled) {}
-      this.log('Auto-fix is disabled', 'INFO');
+
       return 0};
     let fixesApplied = 0;
     
+    
     for (const error of errors) {}
-      try {}
         if (await this.fixSingleBuildError(error)) {}
           fixesApplied++};
-      } catch (error) {}
-        this.log(`Failed to fix build "error": ${error.message}`, 'ERROR')};
-    };
+
     return fixesApplied};
   async fixSingleBuildError(error) {}
     const message = error.message.toLowerCase();
+    
     
     // Fix common build errors;
     if (message.includes('module not found') || message.includes('cannot find module')) {}
@@ -101,7 +91,8 @@ class BuildErrorAutoFixer {}
       return await this.fixDependencyError(error)};
     return false};
   async fixModuleNotFoundError(error) {}
-    this.log('Attempting to fix module not found error...', 'INFO');
+    
+    
     
     try {}
       // Try to install missing dependencies;
@@ -127,13 +118,20 @@ class BuildErrorAutoFixer {}
   async fixSyntaxError(error) {}
     this.log('Attempting to fix syntax error...', 'INFO');
     
+    
     try {}
       if (error.file && error.file !== 'unknown') {}
         const content = fs.readFileSync(error.file, 'utf8');
         const lines = content.split('\n');
         
+
+        const lines = content.split('\n');
+
+        const lines = content.split('\n');
+        
+        
         // Basic syntax fixes;
-        const fixes = [this.fixMissingSemicolons.bind(this),]
+const fixes = [this.fixMissingSemicolons.bind(this),];
           this.fixUnclosedBrackets.bind(this),
           this.fixUnclosedQuotes.bind(this),
           this.fixTrailingCommas.bind(this);
@@ -142,8 +140,19 @@ class BuildErrorAutoFixer {}
         let originalContent = content;
         let modifiedContent = content;
         
+        let originalContent = content;
+        let modifiedContent = content;
         for (const fix of fixes) {}
-          try {}
+            const result = fix(lines, error);
+            if (result.modified) {}
+    
+        let originalContent = content;
+        let modifiedContent = content;
+        
+        let originalContent = content;
+        let modifiedContent = content;
+        
+        for (const fix of fixes) {}
             const result = fix(lines, error);
             if (result.modified) {}
               modifiedContent = result.content;
@@ -162,10 +171,12 @@ class BuildErrorAutoFixer {}
   async fixMemoryError(error) {}
     this.log('Attempting to fix memory error...', 'INFO');
     
+    
     try {}
       // Clean build artifacts;
       execSync('rm -rf .next out dist build', { "stdio": 'pipe' }
 });
+      
       
       // Increase Node.js memory limit for build;
       const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
@@ -181,6 +192,7 @@ class BuildErrorAutoFixer {}
   async fixPermissionError(error) {}
     this.log('Attempting to fix permission error...', 'INFO');
     
+    
     try {}
       // Fix file permissions;
       execSync('chmod -R 755 .', { "stdio": 'pipe' }
@@ -194,6 +206,7 @@ class BuildErrorAutoFixer {}
   };
   async fixDependencyError(error) {}
     this.log('Attempting to fix dependency error...', 'INFO');
+    
     
     try {}
       // Try to fix peer dependency issues;
@@ -212,22 +225,19 @@ class BuildErrorAutoFixer {}
   fixMissingSemicolons(lines, error) {}
     const lineIndex = error.line - 1;
     if (lineIndex >= 0 && lineIndex < lines.length) {}
+
       const line = lines[lineIndex];
       if (!line.trim().endsWith(';') && !line.trim().endsWith('{') && !line.trim().endsWith('}')) {}
         lines[lineIndex] = line + ';';
         return {}
-          "modified": true,
+          "modified": true,""
           "content": lines.join('\n'),
-          "description": 'Added missing semicolon'
-        }};
-    };
+          "description": 'Added missing semicolon
     return { "modified": false, "content": lines.join('\n') }};
   fixUnclosedBrackets(lines, error) {}
-    const lineIndex = error.line - 1;
-    if (lineIndex >= 0 && lineIndex < lines.length) {}
-      const line = lines[lineIndex];
       const openBrackets = (line.match(/[\(\[\{]/g) || []).length;}
       const closeBrackets = (line.match(/[\)\]\}]/g) || []).length;
+      
       
       if (openBrackets > closeBrackets) {}
         const missingBrackets = openBrackets - closeBrackets;
@@ -246,6 +256,7 @@ class BuildErrorAutoFixer {}
       const line = lines[lineIndex];
       const singleQuotes = (line.match(/'/g) || []).length;
       const doubleQuotes = (line.match(/"/g) || []).length;
+      
       
       if (singleQuotes % 2 !== 0) {}
         lines[lineIndex] = line + "'";
@@ -296,13 +307,35 @@ class BuildErrorAutoFixer {}
       // Run build check again to see if fixes worked;
       const postCheckResult = await this.runBuildCheck();
       
+      
+      // Apply fixes;
+      const fixesApplied = await this.fixBuildErrors(checkResult.errors);
+      
+      this.log(`Applied ${fixesApplied} fixes out of ${checkResult.errors.length} errors`, 'INFO');
+      
+      // Run build check again to see if fixes worked;
+      const postCheckResult = await this.runBuildCheck();
+      
+      if (openBrackets > closeBrackets) {}
+        const missingBrackets = openBrackets - closeBrackets;
+
+      const doubleQuotes = (line.match(/"/g) || []).length;"
+      if (singleQuotes % 2 !== 0) {}"
+        lines[lineIndex] = line + "";"
+        return {}"
+
+      // Get current build errors;
+      const checkResult = await this.runBuildCheck();
+      if (checkResult.success) {}
+
+      // Run build check again to see if fixes worked;
+      const postCheckResult = await this.runBuildCheck();
+      
       const report = {}
-        "timestamp": new Date().toISOString(),
-        "initialErrors": checkResult.errors.length,
-        fixesApplied,
+
+        "initialErrors": checkResult.errors.length,"
+        fixesApplied,"
         "remainingErrors": postCheckResult.errors.length,
-        "success": postCheckResult.success;
-      };
       
       // Save report;
       const reportPath = path.join(this.reportsDir, `build-fix-report-${Date.now()}.json`);
@@ -328,18 +361,30 @@ class BuildErrorAutoFixer {}
         this.log(`Error in periodic "fix": ${error.message}`, 'ERROR')};
     }, this.fixInterval);
 
+        "success": postCheckResult.success;"
+      // Save report;`;
+      const reportPath = path.join(this.reportsDir, `build-fix-report-${Date.now()}.json`);
+      fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+      // Update build history;
+      this.buildHistory.push(report);
+      if (this.buildHistory.length > 50) {}
+
+    // Run initial fix;
+    await this.runAutoFix();
+    // Set up periodic fixing;
+    setInterval(async () => {}
+
+    }, this.fixInterval);
+
+
     this.log(`Build error auto-fixer started. Running every ${this.fixInterval / 1000} seconds.`)};
   getStatus() {}
-    return {}
-      "running": true,
-      "buildHistory": this.buildHistory.length,
-      "fixInterval": this.fixInterval,
-      "autoFixEnabled": this.autoFixEnabled;
-    }};
-};
+
+      "autoFixEnabled": this.autoFixEnabled;"
 // Main execution;
 if (require.main === module) {}
   const fixer = new BuildErrorAutoFixer();
+  
   
   // Handle graceful shutdown;
   process.on('SIGINT', () => {}
@@ -347,14 +392,24 @@ if (require.main === module) {}
     process.exit(0)}
 });
 
+
   process.on('SIGTERM', () => {}
     fixer.log('Shutting down build error auto-fixer...');
     process.exit(0)}
 });
 
+
   // Start auto-fixer;
   fixer.startAutoFixer().catch(error => {})
     fixer.log(`Failed to start auto-"fixer": ${error.message}`, 'ERROR');
+  // Handle graceful shutdown;"
+
     process.exit(1)})};
+module.exports = BuildErrorAutoFixer;
 
 module.exports = BuildErrorAutoFixer;
+
+module.exports = BuildErrorAutoFixer;
+
+module.exports = BuildErrorAutoFixer;
+

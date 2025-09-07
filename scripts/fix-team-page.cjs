@@ -1,14 +1,15 @@
 #!/usr/bin/env node;
+#!/usr/bin/env node
 /**
  * Fix Team Page - Targeted fix for team.tsx;
  */
 
 
-const fs = require('fs')
-  const filePath = './pages/team.tsx'
+const fs = require('fs');
+const filePath = './pages/team.tsx';
     console.log(' Team page not found')
-  let content = fs.readFileSync(filePath, 'utf8')
-  const fixedContent = "
+let content = fs.readFileSync(filePath, 'utf8');
+const fixedContent = ";
     "phone"
     "email"
     "address"
@@ -86,3 +87,9 @@ const fs = require('fs')
               "border"
 
               "transition"
+
+              "transition"
+
+const fs = require('fs')
+
+

@@ -1,20 +1,25 @@
 import { render, screen } from '@testing-library/react';
+<<<<<<< HEAD
+import App from './App';
+=======
 import { describe, it, expect } from 'vitest';
 import App from './App';
 
 describe('App', () => {
   it('renders without crashing', () => {
-    render(<App />);}
-    expect(screen.getByRole('main')).toBeInTheDocument();}
+    render(<App />);
+    expect(screen.getByRole('main')).toBeInTheDocument();
   });
 
   it('displays correct content', () => {
-    render(<App />);}
-    expect(screen.getByText('Zion Tech Group')).toBeInTheDocument();}
+    render(<App />);
+    expect(screen.getByText('Welcome to Zion Tech Group')).toBeInTheDocument();
   });
 
   it('handles user interactions', () => {
-    render(<App />);}
-    expect(screen.getByText(/Welcome to Zion Tech/i)).toBeInTheDocument();}
+    render(<App />);
+    // Add interaction tests here
+    expect(screen.getByText(/Welcome to Zion Tech/i)).toBeInTheDocument();
   });
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-a8e3
 });

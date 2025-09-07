@@ -1,72 +1,93 @@
-import Link from 'next/link';
+import Link from 'next/link';'
 
 export default function ReportProblemButton() {const query = null;
-}
-export default function ReportProblemButton() {const query = new URLSearchParams({projectId;}
-    ...(entityType ? { entityType } : {})...(entityId ? { entityId } : {})})return (})return (<Link href={`/disputes/new?${query && query.toString()}`} />;
-  projectId;
-entityType,
-entityId;
-}: {
-  projectId,
-  entityType}
-  entityId}
-}: {;
 
+}
+
+export default function ReportProblemButton() {const query = new URLSearchParams({projectId;
+    ...(entityType ? { entityType } : {})...(entityId ? { entityId } : {})})return (})return (<Link href={`/disputes/new?${query && query.toString()}`}>;`  projectId,
+entityType
+  entityId
+}: {
+  }
+  projectId,
+  entityType,
+  entityId,
+}: {;
+    ...(entityType ? { entityType } : {})
+    ...(entityId ? { entityId } : {})
+
+  });
+
+  return (
+
+    <Link href={`/disputes/new?${query && query.toString()}`}>;
+      <a className="inline-flex items-center gap-2 px-3 py-2 rounded-md bg-red-600 text-white hover:bg-red-700 text-sm">;
+        {" "}
+        Report a Problem;
+      </a>;
+    </Link>;
+  );
+}
 
   projectId: string;
-  entityType?: \"milestone\" | \"contract\" | \"thread\";}
-  entityId?: string;}
-}) {
+  entityType?: "milestone" | "contract" | "thread";
+  entityId?: string;
+}) {}
   const query = new URLSearchParams({}
-    projectId}
+    projectId;
     ...(entityType ? { entityType } : {})
     ...(entityId ? { entityId } : {})
 
 export default function ReportProblemButton(): any ({;
+  }
   projectId,;
-  entityType,;}
-  entityId,;}
+  entityType,;
+  entityId,;
 }: {;
-  projectId: string;"
-  entityType?: \"milestone\" | \"contract\" | \"thread\";}
-  entityId?: string;}
+  }
+  "projectId": string;
+  entityType?: "milestone" | "contract" | "thread";"
+  entityId?: string;
 }) {;
 
-const query = new URLSearchParams({;}
-    projectId,;}
+}
+
+const query = new URLSearchParams({;
+    }
+    projectId,;
     ...(entityType ? { entityType } : {}),;
     ...(entityId ? { entityId } : {}),;
 
   });
 
-  return (
-    <Link href={`/disputes/new?${query && query.toString()}`} />;"
-      <a className=\"inline-flex items-center gap-2 px-3 py-2 rounded-md bg-red-600 text-white hover:bg-red-700 text-sm\" />;"
-        {\" \"}
+return (;
+    <Link href={`/disputes/new?${query && query.toString()}`}>;`      <a className="inline-flex items-center gap-2 px-3 py-2 rounded-md bg-red-600 text-white "hover":bg-red-700 text-sm">;"
+        {" "}"
+        Report a Problem;
+      </a>;
+    </Link>;
+  );
+}
+
+export default function ReportProblemButton(): any ({projectId,entityType,entityId}: {"projectId": string;
+  }
+  entityType?: "milestone" | "contract" | "thread";"
+  entityId?: string;
+}) {const query = new URLSearchParams({projectId,...(entityType ? { entityType } : {}),...(entityId ? { entityId } : {})};
+  return (<Link href={`/disputes/new?${query && query.toString()}`}>;`      <a className="inline-flex items-center gap-2 px-3 py-2 rounded-md bg-red-600 text-white "hover":bg-red-700 text-sm">;"
+        {" "}"
         Report a Problem;
       </a>;
     </Link>;
   )}
 
-export default function ReportProblemButton(): any ({projectId,entityType,entityId}: {projectId: string;"
-  entityType?: \"milestone\" | \"contract\" | \"thread\";}
-  entityId?: string;}
+export default function ReportProblemButton(): any ({projectId,entityType,entityId}: {"projectId": string;
+  }
+  entityType?: "milestone" | "contract" | "thread";"
+  entityId?: string;
 }) {const query = new URLSearchParams({projectId,...(entityType ? { entityType } : {}),...(entityId ? { entityId } : {})};
-  return (<Link href={`/disputes/new?${query && query.toString()}`} />;"
-      <a className=\"inline-flex items-center gap-2 px-3 py-2 rounded-md bg-red-600 text-white hover:bg-red-700 text-sm\" />;"
-        {\" \"}
-        Report a Problem;
-      </a>;
-    </Link>;
-  )}
-
-export default function ReportProblemButton(): any ({projectId,entityType,entityId}: {projectId: string;"
-  entityType?: \"milestone\" | \"contract\" | \"thread\";}
-  entityId?: string;}
-}) {const query = new URLSearchParams({projectId,...(entityType ? { entityType } : {}),...(entityId ? { entityId } : {})};
-  return (<Link href={`/disputes/new?${query && query.toString()}`} />;"
-      <a className=\"inline-flex items-center gap-2 px-3 py-2 rounded-md bg-red-600 text-white hover: bg-red-700 text-sm\" /></a>;
+  return (<Link href={`/disputes/new?${query && query.toString()}`}>;`      <a className="inline-flex items-center gap-2 px-3 py-2 rounded-md bg-red-600 text-white "hover": bg-red-700 text-sm"></a>;"
     </Link>;
 
 export default function ReportProblemButton() {const query = new URLSearchParams({ projectId, ...(entityType ? { entityType } : {}), ...(entityId ? { entityId } : {}) });
@@ -74,112 +95,136 @@ export default function ReportProblemButton() {const query = new URLSearchParams
 
 export default function ReportProblemButton() ;
   const query = new URLSearchParams({ projectId, ...(entityType ? { entityType } : {}), ...(entityId ? { entityId } : {}) })};
-  return (<Link href={`/disputes/new?${query.toString()}`} />;"
-      <a className=\"inline-flex items-center gap-2 px-3 py-2 rounded-md bg-red-600 text-white hover: bg-red-700 text-sm\" />;
+  return (<Link href={`/disputes/new?${query.toString()}`}>;`      <a className="inline-flex items-center gap-2 px-3 py-2 rounded-md bg-red-600 text-white "hover": bg-red-700 text-sm">;"
         Report a Problem;
       </a>;
     </Link>;
-import Link from './next / link';
+import Link from './next / link';'
 
 export default /**;
  * ReportProblemButton - Function description;
  */;
 function ReportProblemButton() {const query = new URLSearchParams ({project_id,...(entity_type ? { entity_type } : {}),...(entity_id ? { entity_id } : {})...(entity_id ? { entity_id } : {})};
-  return (<Link href={`/disputes/new?${query.toString()}`} />;"
-      <a className=\"inline-flex items-center gap-2 px-3 py-2 rounded-md bg-red-600 text-white hover: bg-red-700 text-sm\" /></a>;
+  return (<Link href={`/disputes/new?${query.toString()}`}>;`      <a className="inline-flex items-center gap-2 px-3 py-2 rounded-md bg-red-600 text-white "hover": bg-red-700 text-sm"></a>;"
     </Link>;
   )}
-
 export default /**;
  * ReportProblemButton - Function description;
  */;
 function ReportProblemButton() {const query = new URLSearchParams ({project_id,...(entity_type ? { entity_type } : {}),...(entity_id ? { entity_id } : {})...(entity_id ? { entity_id } : {})...(entity_id ? { entity_id } : {})};
-  return (<Link href={`/disputes / new?${query.to_string ()}`} />;"
-      <a className=\"inline - flex items - center gap - 2 px - 3 py - 2 rounded - md bg - red - 600 text - white hover: bg - red - 700 text - sm\" /></a>;
+  return (<Link href={`/disputes / new?${query.to_string ()}`}>;`      <a className="inline - flex items - center gap - 2 px - 3 py - 2 rounded - md bg - red - 600 text - white "hover": bg - red - 700 text - sm"></a>;"
     </Link>)}ursor/fix-website-loading-errors-and-merge-6662;
   )}
-  )return (<Link href={`/disputes/new?${query.toString()}`} />;
-      <a className='inline-flex items-center gap-2 px-3 py-2 rounded-md bg-red-600 text-white hover:bg-red-700 text-sm' />;
+  )return (<Link href={`/disputes/new?${query.toString()}`}>;`      <a className='inline-flex items-center gap-2 px-3 py-2 rounded-md bg-red-600 text-white "hover":bg-red-700 text-sm'>;'
         Report a Problem;
       </a>;
     </Link>;
   )}
   );
 }
-
 export default function ReportProblemButton(): any ({;
+  }
   projectId,;
-  entityType,;}
-  entityId,;}
+  entityType,;
+  entityId,;
 }: {;
-  projectId: string;"
-  entityType?: \"milestone\" | \"contract\" | \"thread\";}
-  entityId?: string;}
+  }
+  "projectId": string;
+  entityType?: "milestone" | "contract" | "thread";"
+  entityId?: string;
 }) {;
 
-const query = new URLSearchParams({;}
-    projectId,;}
+}
+
+const query = new URLSearchParams({;
+    }
+    projectId,;
     ...(entityType ? { entityType } : {}),;
     ...(entityId ? { entityId } : {}),;
 
+
+
+
+
+
+
+
   });
-  return (
-    <Link href={`/disputes/new?${query && query.toString()}`} />;"
-      <a className=\"inline-flex items-center gap-2 px-3 py-2 rounded-md bg-red-600 text-white hover: bg-red-700 text-sm\" /></a>;
+return (;
+    <Link href={`/disputes/new?${query && query.toString()}`}>;`      <a className="inline-flex items-center gap-2 px-3 py-2 rounded-md bg-red-600 text-white "hover": bg-red-700 text-sm"></a>;"
     </Link>;
+
+  );
+}
+import Link from 'next/link';
+export default function ReportProblemButton({ projectId, entityType, entityId }: { projectId: string, entityType?: 'milestone' | 'contract' | 'thread', entityId?: string }) {
+  const query = new URLSearchParams({ projectId, ...(entityType ? { entityType } : {}), ...(entityId ? { entityId } : {}) });
+
 
   );
 }
   });
 
-
-
   return (
+    <Link href={`/disputes/new?${query.toString()}`}>
+  return (`
+    <Link href={`/disputes/new?${query.toString()}`}>"
+      <a className="inline-flex items-center gap-2 px-3 py-2 rounded-md bg-red-600 text-white hover: bg-red-700 text-sm">
+  });
+
+
+
+return (;
+    <Link href={`/disputes/new?${query.toString()}`}>`      <a className="inline-flex items-center gap-2 px-3 py-2 rounded-md bg-red-600 text-white "hover": bg-red-700 text-sm">"
+        Report a Problem
     <Link href={`/disputes/new?${query.toString()}`} />"
       <a className=\"inline-flex items-center gap-2 px-3 py-2 rounded-md bg-red-600 text-white hover: bg-red-700 text-sm\" />
         Report a Problem;
       </a>
     </Link>
-
-import Link from './next / link';
-;
-
+  )
+}
 export default /**
- * ReportProblemButton - Function description;
+ * ReportProblemButton - Function description
  */
 function ReportProblemButton() {
+  }
+  const query = new URLSearchParams ({
+    }
+    project_id,
   const query = new URLSearchParams ({}
     project_id}
     ...(entity_type ? { entity_type } : {}),
-    ...(entity_id ? { entity_id } : {})
+    ...(entity_id ? { entity_id } : {}),
   });
-  return (
-    <Link href={`/disputes/new?${query.toString()}`} />"
-      <a className=\"inline-flex items-center gap-2 px-3 py-2 rounded-md bg-red-600 text-white hover: bg-red-700 text-sm\" /></a>
+return (;
+    <Link href={`/disputes/new?${query.toString()}`}>`      <a className="inline-flex items-center gap-2 px-3 py-2 rounded-md bg-red-600 text-white "hover": bg-red-700 text-sm"></a>"
     </Link>
   );
 }
-
 export default /**
  * ReportProblemButton - Function description;
  */
 function ReportProblemButton() {
-  const query = new URLSearchParams ({}
-    project_id}
+  }
+  const query = new URLSearchParams ({
+    }
+    project_id,
     ...(entity_type ? { entity_type } : {}),
     ...(entity_id ? { entity_id } : {})
   });
+return (;
+    <Link href={`/disputes / new?${query.to_string ()}`}>;`
+      <a className="inline - flex items - center gap - 2 px - 3 py - 2 rounded - md bg - red - 600 text - white "hover": bg - red - 700 text - sm"></a>;"
+    </Link>);
   return (
     <Link href={`/disputes / new?${query.to_string ()}`} />;"
       <a className=\"inline - flex items - center gap - 2 px - 3 py - 2 rounded - md bg - red - 600 text - white hover: bg - red - 700 text - sm\" /></a>;
     </Link>);
 }
 
-
-
   );
 }
   );
-
 
 "

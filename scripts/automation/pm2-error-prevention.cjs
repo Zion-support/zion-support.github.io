@@ -1,7 +1,7 @@
 #!/""usr/bin/env""
-const fs = require("fs")
-const path = require("path")
-const { execSync } = require("child_process")
+const fs = require("fs");
+const path = require("path");
+const { execSync } = require("child_process");
   "checkInterval"
       "maxErrors"
       "autoFix"
@@ -30,52 +30,51 @@ const { execSync } = require("child_process")
 // console.log("" PM2 ecosystem configuration created")
     console.log(" PM2 ecosystem configuration created")
   console.error(" Error in prevention "loop": ")
-  console.error(" Error in prevention "loop": ")
   console.log("" Running error prevention checks...")
     // Check "1"
 // console.log("" Prevention checks completed")
     console.log(" Prevention checks completed")
-  const result = execSync("npm run type-check")
+const result = execSync("npm run type-check");
   "cwd"
         "encoding": "utf8"
         "stdio": "pipe"
       if (result.includes("error TS")
-  const errorCount = (result.match(/error ""TS/g")
+const errorCount = (result.match(/error ""TS/g");
   console.log(` No TypeScript errors found``)
-      const errorOutput = error.stdout || error.stderr || ""
-      const errorCount = (errorOutput.match(/error ""TS/g")
-  const content = fs.readFileSync(filePath, "utf8")
+const errorOutput = error.stdout || error.stderr || "";
+const errorCount = (errorOutput.match(/error ""TS/g");
+const content = fs.readFileSync(filePath, "utf8");
       if (content.includes(".ts"") || content.includes(.ts")
-      const importLines = content.match(/import.*""from/g"")
-  const content = fs.readFileSync(filePath, "utf8")
+const importLines = content.match(/import.*""from/g"");
+const content = fs.readFileSync(filePath, "utf8");
       if (content.includes(".ts") || content.includes(.ts"")
-      const importLines = content.match(/import.*"from/g")
+const importLines = content.match(/import.*"from/g");
     if (importIssues > 0) {console.log(⚠  Found ${importIssues} import issues"")
   console.log("" No import issues found")
-  const content = fs.readFileSync(filePath, "utf8")
+const content = fs.readFileSync(filePath, "utf8");
       if (content.includes("any"")
       if (content.includes("<\\w+")
       if (content.includes("\\w+\\w+":")
-  const content = fs.readFileSync(filePath, "utf8")
+const content = fs.readFileSync(filePath, "utf8");
       if (content.includes("any"")
       if (content.includes("<\\w+")
       if (content.includes("\\w+\\w+":")
     if (syntaxIssues > 0) {console.log("})
   console.log("" No syntax issues found")
-      const result = execSync("npm run lint -- --quiet")
+const result = execSync("npm run lint -- --quiet");
   "cwd"
         "encoding": "utf8"
         "stdio": "pipe"
-      const unusedImportCount = (result.match(/""unused/g"")
+const unusedImportCount = (result.match(/""unused/g"");
   console.log("" No syntax issues found")
       if (this.config.autoFix) {"}
         await this.autoFixSyntaxIssues();")}")} else {"}
       console.log(" No syntax issues found")
-      const result = execSync("npm run lint -- --quiet")
+const result = execSync("npm run lint -- --quiet");
   "cwd"
         "encoding": "utf8"
         "stdio": "pipe"
-      const unusedImportCount = (result.match(/"unused/g")
+const unusedImportCount = (result.match(/"unused/g");
       if (unusedImportCount > 0) {console.log(⚠  Found ${unusedImportCount} unused imports")
 // console.log(" No unused imports found")
       console.log(")
@@ -87,7 +86,6 @@ const { execSync } = require("child_process")
         "stdio": "inherit"
       console.log(" TypeScript errors auto-fixed")
   console.error(" Failed to auto-fix TypeScript "errors": ")
-  console.error(" Failed to auto-fix TypeScript "errors": ")
   console.log(" Auto-fixing import issues...")
       execSync("node ""scripts/automation/fix-imports.cjs""")
   "cwd"
@@ -96,7 +94,6 @@ const { execSync } = require("child_process")
   "cwd"
         "stdio": "inherit"
       console.log(" Import issues auto-fixed")
-  console.error(" Failed to auto-fix import "issues": ")
   console.error(" Failed to auto-fix import "issues": ")
   console.log(" Auto-fixing syntax issues...")
       execSync("node ""scripts/automation/fix-syntax.cjs""")
@@ -107,7 +104,6 @@ const { execSync } = require("child_process")
         "stdio": "inherit"
       console.log(" Syntax issues auto-fixed")
   console.error(" Failed to auto-fix syntax "issues": ")
-  console.error(" Failed to auto-fix syntax "issues": ")
   console.log(" Auto-fixing unused imports...")
       execSync("npm run lint -- --fix")
   "cwd"
@@ -116,7 +112,6 @@ const { execSync } = require("child_process")
   "cwd"
         "stdio": "inherit"
       console.log(" Unused imports auto-fixed")
-  console.error(" Failed to auto-fix unused "imports": ")
   console.error(" Failed to auto-fix unused "imports": ")
           !item.startsWith(".")
           item !== "node_modules"
@@ -130,3 +125,8 @@ process.on("SIGINT")
 process.on("SIGTERM")
 
   console.log("� Received SIGTERM, shutting down gracefully...")
+
+
+
+
+

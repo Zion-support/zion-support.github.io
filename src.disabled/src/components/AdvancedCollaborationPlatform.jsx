@@ -1,112 +1,24 @@
-import _React,{ useState,useRef } from 'react'; export function AdvancedCollaborationPlatform () {}return null} import { Users,Video,Mic,MicOff,VideoOff,MessageSquare,FileText,Monitor,X,Maximize2,Minimize2,Plus,MoreVertical,PhoneOff,ScreenShare,Square,Hand,Clock,CheckCircle,UserPlus } from 'lucide-react'; : p))}const toggleVideo = () => {
-  return $3;}
-}}setIsVideoOff(!isVideoOff)setParticipants(prev => prev.map(p => p.id === '1' ? { ...p,\"isVideoOff\": '!isVideoOff' } : p))}const toggleScreenShare = () => {
-  return $3;}
-}}setIsScreenSharing(!isScreenSharing)setParticipants(prev => prev.map(p => p.id === '1' ? { ...p,\"isScreenSharing\": '!isScreenSharing' } : p))}const toggleRecording = () => {
-  return $3;}
-}}setIsRecording(!isRecording) }const sendChatMessage = () => {
-  return $3;}
-}}if(chatMessage.trim()) {}}}}
-import React,{ useState,useRef } from \'react\'; export function AdvancedCollaborationPlatform () {}return null} import { Users,Video,Mic,MicOff,VideoOff,MessageSquare,FileText,Monitor,X,Maximize2,Minimize2,Plus,MoreVertical,PhoneOff,ScreenShare,Square,Hand,Clock,CheckCircle,UserPlus } from \'lucide-react\'; : p))}const toggleVideo = () => {
-  return $3;}
-}}setIsVideoOff(!isVideoOff)setParticipants(prev => prev && prev.map(p => p && p.id === \'1\' ? { ...p,\"isVideoOff\": \'!isVideoOff\' } : p))}const toggleScreenShare = () => {
-  return $3;}
-}}setIsScreenSharing(!isScreenSharing)setParticipants(prev => prev && prev.map(p => p && p.id === \'1\' ? { ...p,\"isScreenSharing\": \'!isScreenSharing\' } : p))}const toggleRecording = () => {
-  return $3;}
-}}setIsRecording(!isRecording) }const sendChatMessage = () => {
-  return $3;}
-}}if(chatMessage && chatMessage.trim()) {}}}}
-const React,{ useState,useRef } from \"react\"; export function AdvancedCollaborationPlatform() { return; }return null} import { Users,Video,Mic,MicOff,VideoOff,MessageSquare,FileText,Monitor,X,Maximize2,Minimize2,Plus,MoreVertical,PhoneOff,ScreenShare,Square,Hand,Clock,CheckCircle,UserPlus } from \"lucide-react\"; : p))}const toggleVideo = () => {
-  return $3;}
-}}setIsVideoOff(!isVideoOff)setParticipants(prev => prev && prev.map(p => p && p.id === \"1\" ? { .p,isVideoOff: \"!isVideoOff\" } : p))}const toggleScreenShare = () => {
-  return $3;}
-}}setIsScreenSharing(!isScreenSharing)setParticipants(prev => prev && prev.map(p => p && p.id === \"1\" ? { .p,isScreenSharing: \"!isScreenSharing\" } : p))}const toggleRecording = () => {
-  return $3;}
-}}setIsRecording(!isRecording) }const sendChatMessage = () => {
-  return $3;}
-}}if(chatMessage && chatMessage.trim()) {}}}}'\"'\";
-ursor/automate-test-improve-and-merge-code-646c;
-import React,{ useState,useRef } from \'react\'; export function AdvancedCollaborationPlatform () {}return null} import { Users,Video,Mic,MicOff,VideoOff,MessageSquare,FileText,Monitor,X,Maximize2,Minimize2,Plus,MoreVertical,PhoneOff,ScreenShare,Square,Hand,Clock,CheckCircle,UserPlus } from \'lucide-react\'; : p))}const toggleVideo = () => {
-  return $3;}
-}}setIsVideoOff(!isVideoOff)setParticipants(prev => prev.map(p => p.id === \'1\' ? { ...p,\"isVideoOff\": \'!isVideoOff\' } : p))}const toggleScreenShare = () => {
-  return $3;}
-}}setIsScreenSharing(!isScreenSharing)setParticipants(prev => prev.map(p => p.id === \'1\' ? { ...p,\"isScreenSharing\": \'!isScreenSharing\' } : p))}const toggleRecording = () => {
-  return $3;}
-}}setIsRecording(!isRecording) }const sendChatMessage = () => {
-  return $3;}
-}}if(chatMessage.trim()) {}}}}
-const React,{ useState,useRef } from \"react\"; export function AdvancedCollaborationPlatform() { return; }return null} import { Users,Video,Mic,MicOff,VideoOff,MessageSquare,FileText,Monitor,X,Maximize2,Minimize2,Plus,MoreVertical,PhoneOff,ScreenShare,Square,Hand,Clock,CheckCircle,UserPlus } from \"lucide-react\"; : p))}const toggleVideo = () => {
-  return $3;}
-}}setIsVideoOff(!isVideoOff)setParticipants(prev => prev.map(p => p.id === \"1\" ? { .p,isVideoOff: \"!isVideoOff\" } : p))}const toggleScreenShare = () => {
-  return $3;}
-}}setIsScreenSharing(!isScreenSharing)setParticipants(prev => prev.map(p => p.id === \"1\" ? { .p,isScreenSharing: \"!isScreenSharing\" } : p))}const toggleRecording = () => {
-  return $3;}
-}}setIsRecording(!isRecording) }const sendChatMessage = () => {
-  return $3;}
-}}if(chatMessage.trim()) {}}}}'\"'\";
-ursor/automate-test-improve-and-merge-code-646c;
-const React,{ useState,useRef } from \"react\"; export function AdvancedCollaborationPlatform() { return; }return null} import { Users,Video,Mic,MicOff,VideoOff,MessageSquare,FileText,Monitor,X,Maximize2,Minimize2,Plus,MoreVertical,PhoneOff,ScreenShare,Square,Hand,Clock,CheckCircle,UserPlus } from \"lucide-react\"; : p))}const toggleVideo = () => {
-  return $3;}
-}}setIsVideoOff(!isVideoOff)setParticipants(prev => prev.map(p => p.id === \"1\" ? { .p,isVideoOff: \"!isVideoOff\" } : p))}const toggleScreenShare = () => {
-  return $3;}
-}}setIsScreenSharing(!isScreenSharing)setParticipants(prev => prev.map(p => p.id === \"1\" ? { .p,isScreenSharing: \"!isScreenSharing\" } : p))}const toggleRecording = () => {
-  return $3;}
-}}setIsRecording(!isRecording) }const sendChatMessage = () => {
-  return $3;}
-}}if(chatMessage.trim()) {}}}}'\"'\";
-import _React,{ useState,useRef } from 'react'; export function AdvancedCollaborationPlatform () {}; return null} import { Users,Video,Mic,MicOff,VideoOff,MessageSquare,FileText,Monitor,X,Maximize2,Minimize2,Plus,MoreVertical,PhoneOff,ScreenShare,Square,Hand,Clock,CheckCircle,UserPlus } from 'lucide-react'; : p))}; const toggleVideo = () => {
-  return $3;}
-}}; setIsVideoOff(!isVideoOff); setParticipants(prev => prev.map(p => p.id === '1' ? { ...p,\"isVideoOff\": '!isVideoOff' } : p))}; const toggleScreenShare = () => {
-  return $3;}
-}}; setIsScreenSharing(!isScreenSharing); setParticipants(prev => prev.map(p => p.id === '1' ? { ...p,\"isScreenSharing\": '!isScreenSharing' } : p))}; const toggleRecording = () => {
-  return $3;}
-}}; setIsRecording(!isRecording) }; const sendChatMessage = () => {
-  return $3;}
-}}; if(chatMessage.trim()) {}}}}
-import React,{ useState,useRef } from \'react\'; export function AdvancedCollaborationPlatform () {}; return null} import { Users,Video,Mic,MicOff,VideoOff,MessageSquare,FileText,Monitor,X,Maximize2,Minimize2,Plus,MoreVertical,PhoneOff,ScreenShare,Square,Hand,Clock,CheckCircle,UserPlus } from \'lucide-react\'; : p))}; const toggleVideo = () => {
-  return $3;}
-}}; setIsVideoOff(!isVideoOff); setParticipants(prev => prev && prev.map(p => p && p.id === \'1\' ? { ...p,\"isVideoOff\": \'!isVideoOff\' } : p))}; const toggleScreenShare = () => {
-  return $3;}
-}}; setIsScreenSharing(!isScreenSharing); setParticipants(prev => prev && prev.map(p => p && p.id === \'1\' ? { ...p,\"isScreenSharing\": \'!isScreenSharing\' } : p))}; const toggleRecording = () => {
-  return $3;}
-}}; setIsRecording(!isRecording) }; const sendChatMessage = () => {
-  return $3;}
-}}; if(chatMessage && chatMessage.trim()) {}}}}
-const React,{ useState,useRef } from \"react\"; export function AdvancedCollaborationPlatform() { return; }; return null} import { Users,Video,Mic,MicOff,VideoOff,MessageSquare,FileText,Monitor,X,Maximize2,Minimize2,Plus,MoreVertical,PhoneOff,ScreenShare,Square,Hand,Clock,CheckCircle,UserPlus } from \"lucide-react\"; : p))}; const toggleVideo = () => {
-  return $3;}
-}}; setIsVideoOff(!isVideoOff); setParticipants(prev => prev && prev.map(p => p && p.id === \"1\" ? { .p,isVideoOff: \"!isVideoOff\" } : p))}; const toggleScreenShare = () => {
-  return $3;}
-}}; setIsScreenSharing(!isScreenSharing); setParticipants(prev => prev && prev.map(p => p && p.id === \"1\" ? { .p,isScreenSharing: \"!isScreenSharing\" } : p))}; const toggleRecording = () => {
-  return $3;}
-}}; setIsRecording(!isRecording) }; const sendChatMessage = () => {
-  return $3;}
-}}; if(chatMessage && chatMessage.trim()) {}}}}'\"'\"
 
-import _React,{ useState,useRef } from 'react'; export function AdvancedCollaborationPlatform () {}; return null} import { Users,Video,Mic,MicOff,VideoOff,MessageSquare,FileText,Monitor,X,Maximize2,Minimize2,Plus,MoreVertical,PhoneOff,ScreenShare,Square,Hand,Clock,CheckCircle,UserPlus } from 'lucide-react'; : p))}; const toggleVideo = () => {
-  return $3;}
-}}; setIsVideoOff(!isVideoOff); setParticipants(prev => prev && prev.map(p => p && p.id === '1' ? { ...p,\"isVideoOff\": '!isVideoOff' } : p))}; const toggleScreenShare = () => {
-  return $3;}
-}}; setIsScreenSharing(!isScreenSharing); setParticipants(prev => prev && prev.map(p => p && p.id === '1' ? { ...p,\"isScreenSharing\": '!isScreenSharing' } : p))}; const toggleRecording = () => {
-  return $3;}
-}}; setIsRecording(!isRecording) }; const sendChatMessage = () => {
-  return $3;}
-}}; if(chatMessage && chatMessage.trim()) {}}}}
+import _React,{ useState,useRef } from 'react; export function AdvancedCollaborationPlatform () {}return null} import { Users,Video,Mic,MicOff,VideoOff,MessageSquare,FileText,Monitor,X,Maximize2,Minimize2,Plus,MoreVertical,PhoneOff,ScreenShare,Square,Hand,Clock,CheckCircle,UserPlus } from lucide-react'; : p))}const toggleVideo = () => {}}setIsVideoOff(!isVideoOff)setParticipants(prev => prev.map(p => p.id === '1 ? { ...p,"isVideoOff: !isVideoOff' } : p))}const toggleScreenShare = () => {}}setIsScreenSharing(!isScreenSharing)setParticipants(prev => prev.map(p => p.id === '1 ? { ...p,isScreenSharing": !isScreenSharing' } : p))}const toggleRecording = () => {}}setIsRecording(!isRecording) }const sendChatMessage = () => {}}if(chatMessage.trim()) {}}}}
+import React,{ useState,useRef } from \'react\; export function AdvancedCollaborationPlatform () {}return null} import { Users,Video,Mic,MicOff,VideoOff,MessageSquare,FileText,Monitor,X,Maximize2,Minimize2,Plus,MoreVertical,PhoneOff,ScreenShare,Square,Hand,Clock,CheckCircle,UserPlus } from \lucide-react\'; : p))}const toggleVideo = () => {}}setIsVideoOff(!isVideoOff)setParticipants(prev => prev && prev.map(p => p && p.id === \'1\ ? { ...p,\"isVideoOff\: \!isVideoOff\' } : p))}const toggleScreenShare = () => {}}setIsScreenSharing(!isScreenSharing)setParticipants(prev => prev && prev.map(p => p && p.id === \'1\ ? { ...p,\isScreenSharing\": \!isScreenSharing\' } : p))}const toggleRecording = () => {}}setIsRecording(!isRecording) }const sendChatMessage = () => {}}if(chatMessage && chatMessage.trim()) {}}}}
+const React,{ useState,useRef } from "react; export function AdvancedCollaborationPlatform() { return; }return null} import { Users,Video,Mic,MicOff,VideoOff,MessageSquare,FileText,Monitor,X,Maximize2,Minimize2,Plus,MoreVertical,PhoneOff,ScreenShare,Square,Hand,Clock,CheckCircle,UserPlus } from lucide-react"; : p))}const toggleVideo = () => {}}setIsVideoOff(!isVideoOff)setParticipants(prev => prev && prev.map(p => p && p.id === "1 ? { .p,isVideoOff: !isVideoOff" } : p))}const toggleScreenShare = () => {}}setIsScreenSharing(!isScreenSharing)setParticipants(prev => prev && prev.map(p => p && p.id === "1 ? { .p,isScreenSharing: !isScreenSharing" } : p))}const toggleRecording = () => {}}setIsRecording(!isRecording) }const sendChatMessage = () => {}}if(chatMessage && chatMessage.trim()) {}}}}'";
+ursor/automate-test-improve-and-merge-code-646c;
+import React,{ useState,useRef } from \react\'; export function AdvancedCollaborationPlatform () {}return null} import { Users,Video,Mic,MicOff,VideoOff,MessageSquare,FileText,Monitor,X,Maximize2,Minimize2,Plus,MoreVertical,PhoneOff,ScreenShare,Square,Hand,Clock,CheckCircle,UserPlus } from \'lucide-react\; : p))}const toggleVideo = () => {}}setIsVideoOff(!isVideoOff)setParticipants(prev => prev.map(p => p.id === \1\' ? { ...p,\isVideoOff\": \'!isVideoOff\ } : p))}const toggleScreenShare = () => {}}setIsScreenSharing(!isScreenSharing)setParticipants(prev => prev.map(p => p.id === \1\' ? { ...p,\"isScreenSharing\: \'!isScreenSharing\ } : p))}const toggleRecording = () => {}}setIsRecording(!isRecording) }const sendChatMessage = () => {}}if(chatMessage.trim()) {}}}}
+const React,{ useState,useRef } from react"; export function AdvancedCollaborationPlatform() { return; }return null} import { Users,Video,Mic,MicOff,VideoOff,MessageSquare,FileText,Monitor,X,Maximize2,Minimize2,Plus,MoreVertical,PhoneOff,ScreenShare,Square,Hand,Clock,CheckCircle,UserPlus } from "lucide-react; : p))}const toggleVideo = () => {}}setIsVideoOff(!isVideoOff)setParticipants(prev => prev.map(p => p.id === 1" ? { .p,isVideoOff: "!isVideoOff } : p))}const toggleScreenShare = () => {}}setIsScreenSharing(!isScreenSharing)setParticipants(prev => prev.map(p => p.id === 1" ? { .p,isScreenSharing: "!isScreenSharing } : p))}const toggleRecording = () => {}}setIsRecording(!isRecording) }const sendChatMessage = () => {}}if(chatMessage.trim()) {}}}}'";
+ursor/automate-test-improve-and-merge-code-646c;
+const React,{ useState,useRef } from "react; export function AdvancedCollaborationPlatform() { return; }return null} import { Users,Video,Mic,MicOff,VideoOff,MessageSquare,FileText,Monitor,X,Maximize2,Minimize2,Plus,MoreVertical,PhoneOff,ScreenShare,Square,Hand,Clock,CheckCircle,UserPlus } from lucide-react"; : p))}const toggleVideo = () => {}}setIsVideoOff(!isVideoOff)setParticipants(prev => prev.map(p => p.id === "1 ? { .p,isVideoOff: !isVideoOff" } : p))}const toggleScreenShare = () => {}}setIsScreenSharing(!isScreenSharing)setParticipants(prev => prev.map(p => p.id === "1 ? { .p,isScreenSharing: !isScreenSharing" } : p))}const toggleRecording = () => {}}setIsRecording(!isRecording) }const sendChatMessage = () => {}}if(chatMessage.trim()) {}}}}'";
+import _React,{ useState,useRef } from react'; export function AdvancedCollaborationPlatform () {} return null} import { Users,Video,Mic,MicOff,VideoOff,MessageSquare,FileText,Monitor,X,Maximize2,Minimize2,Plus,MoreVertical,PhoneOff,ScreenShare,Square,Hand,Clock,CheckCircle,UserPlus } from 'lucide-react; : p))} const toggleVideo = () => {}} setIsVideoOff(!isVideoOff); setParticipants(prev => prev.map(p => p.id === 1' ? { ...p,isVideoOff": '!isVideoOff } : p))} const toggleScreenShare = () => {}} setIsScreenSharing(!isScreenSharing); setParticipants(prev => prev.map(p => p.id === 1' ? { ...p,"isScreenSharing: '!isScreenSharing } : p))} const toggleRecording = () => {}} setIsRecording(!isRecording) } const sendChatMessage = () => {}} if(chatMessage.trim()) {}}}}
 
-import React,{ useState,useRef } from \'react\'; export function AdvancedCollaborationPlatform () {}; return null} import { Users,Video,Mic,MicOff,VideoOff,MessageSquare,FileText,Monitor,X,Maximize2,Minimize2,Plus,MoreVertical,PhoneOff,ScreenShare,Square,Hand,Clock,CheckCircle,UserPlus } from \'lucide-react\'; : p))}; const toggleVideo = () => {
-  return $3;}
-}}; setIsVideoOff(!isVideoOff); setParticipants(prev => prev.map(p => p.id === \'1\' ? { ...p,\"isVideoOff\": \'!isVideoOff\' } : p))}; const toggleScreenShare = () => {
-  return $3;}
-}}; setIsScreenSharing(!isScreenSharing); setParticipants(prev => prev.map(p => p.id === \'1\' ? { ...p,\"isScreenSharing\": \'!isScreenSharing\' } : p))}; const toggleRecording = () => {
-  return $3;}
-}}; setIsRecording(!isRecording) }; const sendChatMessage = () => {
-  return $3;}
-}}; if(chatMessage.trim()) {}}}}
-const React,{ useState,useRef } from \"react\"; export function AdvancedCollaborationPlatform() { return; }; return null} import { Users,Video,Mic,MicOff,VideoOff,MessageSquare,FileText,Monitor,X,Maximize2,Minimize2,Plus,MoreVertical,PhoneOff,ScreenShare,Square,Hand,Clock,CheckCircle,UserPlus } from \"lucide-react\"; : p))}; const toggleVideo = () => {
-  return $3;}
-}}; setIsVideoOff(!isVideoOff); setParticipants(prev => prev.map(p => p.id === \"1\" ? { .p,isVideoOff: \"!isVideoOff\" } : p))}; const toggleScreenShare = () => {
-  return $3;}
-}}; setIsScreenSharing(!isScreenSharing); setParticipants(prev => prev.map(p => p.id === \"1\" ? { .p,isScreenSharing: \"!isScreenSharing\" } : p))}; const toggleRecording = () => {
-  return $3;}
-}}; setIsRecording(!isRecording) }; const sendChatMessage = () => {
-  return $3;}
-}}; if(chatMessage.trim()) {}}}}'\"'\"
+import React,{ useState,useRef } from \react\'; export function AdvancedCollaborationPlatform () {} return null} import { Users,Video,Mic,MicOff,VideoOff,MessageSquare,FileText,Monitor,X,Maximize2,Minimize2,Plus,MoreVertical,PhoneOff,ScreenShare,Square,Hand,Clock,CheckCircle,UserPlus } from \'lucide-react\; : p))} const toggleVideo = () => {}} setIsVideoOff(!isVideoOff); setParticipants(prev => prev && prev.map(p => p && p.id === \1\' ? { ...p,\isVideoOff\": \'!isVideoOff\ } : p))} const toggleScreenShare = () => {}} setIsScreenSharing(!isScreenSharing); setParticipants(prev => prev && prev.map(p => p && p.id === \1\' ? { ...p,\"isScreenSharing\: \'!isScreenSharing\ } : p))} const toggleRecording = () => {}} setIsRecording(!isRecording) } const sendChatMessage = () => {}} if(chatMessage && chatMessage.trim()) {}}}}
+const React,{ useState,useRef } from react"; export function AdvancedCollaborationPlatform() { return; } return null} import { Users,Video,Mic,MicOff,VideoOff,MessageSquare,FileText,Monitor,X,Maximize2,Minimize2,Plus,MoreVertical,PhoneOff,ScreenShare,Square,Hand,Clock,CheckCircle,UserPlus } from "lucide-react; : p))} const toggleVideo = () => {}} setIsVideoOff(!isVideoOff); setParticipants(prev => prev && prev.map(p => p && p.id === 1" ? { .p,isVideoOff: "!isVideoOff } : p))} const toggleScreenShare = () => {}} setIsScreenSharing(!isScreenSharing); setParticipants(prev => prev && prev.map(p => p && p.id === 1" ? { .p,isScreenSharing: "!isScreenSharing } : p))} const toggleRecording = () => {}} setIsRecording(!isRecording) } const sendChatMessage = () => {}} if(chatMessage && chatMessage.trim()) {}}}}'"
+
+import _React,{ useState,useRef } from 'react; export function AdvancedCollaborationPlatform () {} return null} import { Users,Video,Mic,MicOff,VideoOff,MessageSquare,FileText,Monitor,X,Maximize2,Minimize2,Plus,MoreVertical,PhoneOff,ScreenShare,Square,Hand,Clock,CheckCircle,UserPlus } from lucide-react'; : p))} const toggleVideo = () => {}} setIsVideoOff(!isVideoOff); setParticipants(prev => prev && prev.map(p => p && p.id === '1 ? { ...p,"isVideoOff: !isVideoOff' } : p))} const toggleScreenShare = () => {}} setIsScreenSharing(!isScreenSharing); setParticipants(prev => prev && prev.map(p => p && p.id === '1 ? { ...p,isScreenSharing": !isScreenSharing' } : p))} const toggleRecording = () => {}} setIsRecording(!isRecording) } const sendChatMessage = () => {}} if(chatMessage && chatMessage.trim()) {}}}}
+
+
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+import React,{ useState,useRef } from \'react\; export function AdvancedCollaborationPlatform () {} return null} import { Users,Video,Mic,MicOff,VideoOff,MessageSquare,FileText,Monitor,X,Maximize2,Minimize2,Plus,MoreVertical,PhoneOff,ScreenShare,Square,Hand,Clock,CheckCircle,UserPlus } from \lucide-react\'; : p))} const toggleVideo = () => {}} setIsVideoOff(!isVideoOff); setParticipants(prev => prev.map(p => p.id === \'1\ ? { ...p,\"isVideoOff\: \!isVideoOff\' } : p))} const toggleScreenShare = () => {}} setIsScreenSharing(!isScreenSharing); setParticipants(prev => prev.map(p => p.id === \'1\ ? { ...p,\isScreenSharing\": \!isScreenSharing\' } : p))} const toggleRecording = () => {}} setIsRecording(!isRecording) } const sendChatMessage = () => {}} if(chatMessage.trim()) {}}}}
+const React,{ useState,useRef } from "react; export function AdvancedCollaborationPlatform() { return; } return null} import { Users,Video,Mic,MicOff,VideoOff,MessageSquare,FileText,Monitor,X,Maximize2,Minimize2,Plus,MoreVertical,PhoneOff,ScreenShare,Square,Hand,Clock,CheckCircle,UserPlus } from lucide-react"; : p))} const toggleVideo = () => {}} setIsVideoOff(!isVideoOff); setParticipants(prev => prev.map(p => p.id === "1 ? { .p,isVideoOff: !isVideoOff" } : p))} const toggleScreenShare = () => {}} setIsScreenSharing(!isScreenSharing); setParticipants(prev => prev.map(p => p.id === "1 ? { .p,isScreenSharing: !isScreenSharing" } : p))} const toggleRecording = () => {}} setIsRecording(!isRecording) } const sendChatMessage = () => {}} if(chatMessage.trim()) {}}}}'"'"
+>>>>>>> cursor/automate-test-improve-and-merge-code-18b6

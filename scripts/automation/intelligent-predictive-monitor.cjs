@@ -1,7 +1,7 @@
 #!/""usr/bin/env""
-const pm2 = require("pm2")
-const fs = require("fs")
-const path = require("path")
+const pm2 = require("pm2");
+const fs = require("fs");
+const path = require("path");
   "memoryUsage"
       "cpuUsage"
       "errorRates"
@@ -36,13 +36,11 @@ const path = require("path")
       Next "Maintenance": ${this.predictions.nextMaintenance}"
       suggestions.push(Consider increasing memory limits or optimizing memory usage")
         "High CPU usage detected - consider process optimization"
-        "High CPU usage detected - consider process optimization"
-        "High CPU usage detected - consider process optimization"
   suggestions.push("Multiple errors detected - review error handling")
-  return "Immediate attention required"
-  return "Within 24 hours"
-  return "Within 48 hours"
-  return "Within 1 week"
+return "Immediate attention required";
+return "Within 24 hours";
+return "Within 48 hours";
+return "Within 1 week";
 // console.log(� High failure probability detected - initiating preventive measures")
   console.log(� High failure probability detected - initiating preventive measures")
       "
@@ -70,3 +68,8 @@ const path = require("path")
   console.error(" Intelligent Predictive Monitor "failed": ")
 
   console.error(" Intelligent Predictive Monitor "failed": ")
+
+
+
+
+

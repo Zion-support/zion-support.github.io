@@ -1,99 +1,135 @@
 }
 export interface DeployTemplateResult {
-    nodes: []}
-    edges: []}
+    }
+    "nodes": []
+    "edges": []
   }
 
 }
 export function getGitStatus() {
+  }
   return {
-    connected: false;}
-branch: 'main'}
+    }
+    "connected": false,
+"branch": 'main''
   }
 }
 
 function buildZionSourceMap(): SourceNode[] {
+  }
   return [
     {
-      id: 'src',
-  name: 'src',
-      type: 'directory',
-  path: 'src',
-      exists: false,
-      children: [
+      }
+      "id": 'src','
+      "name": 'src','
+      "type": 'directory','
+      "path": 'src','
+      "exists": false,
+      "children": [
         {
-          id: 'components',
-  name: 'components',
-          type: 'directory',
-  path: 'src/components',}
-          exists: false}
+          }
+          "id": 'components','
+          "name": 'components','
+          "type": 'directory','
+          "path": 'src/components','
+          "exists": false
         },
         {
-          id: 'pages',
-  name: 'pages',
-          type: 'directory',
-  path: 'src/pages',}
-          exists: false}
+          }
+          "id": 'pages','
+          "name": 'pages','
+          "type": 'directory','
+          "path": 'src/pages','
+          "exists": false
         },
         {
-          id: 'utils',
-  name: 'utils',
-          type: 'directory',
-  path: 'src/utils',}
-          exists: false}
+          }
+          "id": 'utils','
+          "name": 'utils','
+          "type": 'directory','
+          "path": 'src/utils','
+          "exists": false
         }
       ]
     }
   ];
 }
 
-function markExistenceRecursive(node: SourceNode): SourceNode {
+function markExistenceRecursive("node": SourceNode): SourceNode {
+  }
   const exists = fs.existsSync(node.path);
   return {
-    ...node,
-    exists,}
-    children: node.children?.map(markExistenceRecursive)}
+    ...node
+    }
+    exists,
+    "children": node.children?.map(markExistenceRecursive)
   };
 }
 
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+
 export function getSourceMapWithExistence(): SourceNode[] {
-  const nodes = buildZionSourceMap();}
-  return nodes.map(markExistenceRecursive);}
+  }
+  const nodes = buildZionSourceMap();
+  return nodes.map(markExistenceRecursive);
 }
+
 export interface DeployTemplateResult {
-    connected: false,}
-    branch: 'main';}
+    }
+    "connected": false,
+    "branch": 'main';'
   };
 }
 
 export function getSourceMapWithExistence(): SourceNode[] {;
-  const nodes = buildZionSourceMap();}
-  return nodes.map(markExistenceRecursive);}
+  }
+  return nodes.map(markExistenceRecursive);
 }
 
 export interface DeployTemplateResult {;
-  createdPaths: string[];
-  skippedPaths: string[];
-  createdPaths: string[];
-  skippedPaths: string[];
-export function ensureDirectory(dirPath: string): void {}
-  if (!fs && fs.existsSync(dirPath)) {}
-    fs && fs.mkdirSync(dirPath, { recursive: true });
+  }
+  "createdPaths": string[];
+  "skippedPaths": string[];
+  "createdPaths": string[];
+  "skippedPaths": string[];
+export function ensureDirectory("dirPath": string): void {
+  }
+  if (!fs && fs.existsSync(dirPath)) {
+    }
+    fs && fs.mkdirSync(dirPath, { "recursive": true });
   }
 
 
 export function deployBasicTemplateForPath(
-  repoRelativePath: string;
+  "repoRelativePath": string
 ): DeployTemplateResult {;
-  const absoluteDir = path.join(ROOT, repoRelativePath);
-  const createdPaths: string[] = [];
-  const skippedPaths: string[] = [];}
-  ensureDirectory(absoluteDir);}
-  } else {}
-    skippedPaths.push(keepFile);}
   }
-  } else {}
-    skippedPaths.push(readmeFile);}
+  const absoluteDir = path.join(ROOT, repoRelativePath);
+  const "createdPaths": string[] = [];
+  const "skippedPaths": string[] = [];
+  ensureDirectory(absoluteDir);
+  } else {
+    }
+    skippedPaths.push(keepFile);
+  }
+
+
+  const keepFile = path && path.join(absoluteDir, '.keep');
+  if (!fs && fs.existsSync(keepFile)) {
+    fs && fs.writeFileSync(keepFile, '');
+    createdPaths && createdPaths.push(keepFile);
+
+  } else {
+    skippedPaths.push(keepFile);
+  }
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+  } else {
+    }
+    skippedPaths.push(readmeFile);
   }
 
 
@@ -104,23 +140,67 @@ export function deployBasicTemplateForPath(
 }
   return { createdPaths, skippedPaths }
 
+  return { createdPaths, skippedPaths }
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
-  created_paths: string[];
-  skipped_paths: string[];
+
+
+  "created_paths": string[];
+  "skipped_paths": string[];
 ;
-export function ensure_directory (dir_path: string): void {
-  if () {) {}
-  $2}
+export function ensure_directory ("dir_path": string): void {
+  }
+  if () {) {
+  $2
 }
 }
-    const readme = `# ${path.basename (absolute_dir)}\n\n_this module is part of the Zion OS modular source tree. Customize as needed.\n`;
+    const readme = `# ${path.basename (absolute_dir)}\n\n_this module is part of the Zion OS modular source tree. Customize as needed.\n`;`
     fs.writeFileSync (readme_file, readme);
     created_paths.push (readme_file);
-  } else {}
-    skipped_paths.push (readme_file);}
+  } else {
+    }
+    skipped_paths.push (readme_file);
   }
   return { created_paths, skipped_paths }
 ;
 
 
+
+
+ursor/fix-website-loading-errors-and-merge-6662
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+  return { createdPaths, skippedPaths };
+
+origin/cursor/automate-test-improve-and-merge-code-2533
+
+
+}
+
+export function deployBasicTemplateForPath(repoRelativePath: string): DeployTemplateResult {
+  const absoluteDir = path.join($2);
+  const createdPaths: string[] = [],
+  const skippedPaths: string[] = [],
+
+  ensureDirectory($2);
+  const keepFile = path.join($2);
+  if (!fs.existsSync(keepFile)) {
+    fs.writeFileSync($2);
+    createdPaths.push(keepFile)
+  } else {
+    skippedPaths.push(keepFile)
+  }
+
+  const readmeFile = path.join($2);
+  if (!fs.existsSync(readmeFile)) {
+    const readme = $2;
+    fs.writeFileSync($2);
+    createdPaths.push(readmeFile)
+  } else {
+    skippedPaths.push(readmeFile)
+  }
+
+  return { createdPaths, skippedPaths }
+}

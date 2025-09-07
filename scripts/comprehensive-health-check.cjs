@@ -1,5 +1,5 @@
-const fs = require('fs')
-const path = require('path')
+const fs = require('fs');
+const path = require('path');
 console.log(' Comprehensive Health Check Starting...')
         "name"
         "check"
@@ -12,3 +12,9 @@ console.log(' Comprehensive Health Check Starting...')
         "name"
 
         "check"
+
+        "check"
+
+        "check"
+
+

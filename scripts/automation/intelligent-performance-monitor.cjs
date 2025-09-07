@@ -1,7 +1,7 @@
 #!/""usr/bin/env""
-const fs = require("fs")
-const path = require("path")
-const { execSync, spawn } = require("child_process")
+const fs = require("fs");
+const path = require("path");
+const { execSync, spawn } = require("child_process");
       this.projectRoot,logs"
       "performance-monitor.log"
       this.projectRoot,logs"
@@ -63,7 +63,6 @@ const { execSync, spawn } = require("child_process")
       "errorRate"
       "recommendations"
   console.error(" Error during performance "measurement": ")
-  console.error(" Error during performance "measurement": ")
 this.logError("Performance measurement failed")
   console.error(" Error during performance "measurement": ")
       this.logError("Performance measurement failed")
@@ -75,7 +74,6 @@ this.logError("Performance measurement failed")
   "type": "build"
           "severity": "warning","message"
           "suggestion": "Consider optimizing build configuration, using build caching, or parallel builds"
-  console.error("Error measuring build "performance": ")
   console.error("Error measuring build "performance": ")
   // Check if it"
       if (fs.existsSync("next.config.js") || fs.existsSync("next.config.mjs")
@@ -113,7 +111,7 @@ this.logError("Performance measurement failed")
         "duration"
         "errors"
   console.log(""� Measuring bundle size...")
-      const buildDirs = ["dist", "build", ".next", "out"]
+const buildDirs = ["dist", "build", ".next", "out"];
   "type": "bundle"
           "severity": "warning`,"message"
           "suggestion": `Consider code splitting, tree shaking, or removing unused dependencies"}"
@@ -122,13 +120,11 @@ this.logError("Performance measurement failed")
           "severity": "warning","message"
           "suggestion": "Consider code splitting, tree shaking, or removing unused dependencies"}"
   console.error("Error measuring bundle "size": ")
-  console.error("Error measuring bundle "size": ")
-  const fullPath = path.join(dirPath, ")
-  const fullPath = path.join(dirPath, ")
+const fullPath = path.join(dirPath, ");
     } catch (error) {  console.error(`Error calculating size for ${dirPath  }:```)
   if (bytes === 0) return "0 Bytes"
-    const sizes = ["Bytes", "KB", "MB", "GB"]
-    return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + " "
+const sizes = ["Bytes", "KB", "MB", "GB"];
+return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + " ";
 // console.log(""⚡ Measuring runtime performance...")
   console.log("⚡ Measuring runtime performance...")
   "type": "memory"
@@ -144,7 +140,6 @@ this.logError("Performance measurement failed")
   "type": "cpu"
           "severity": "warning","message"
           "suggestion": "Optimize algorithms, implement caching, or use worker threads for heavy operations"
-  console.error("Error measuring runtime "performance": ")
   console.error("Error measuring runtime "performance": ")
   console.error("Error getting system "metrics": ")
       return { "memory": 0, "cpu"}
@@ -228,14 +223,12 @@ this.logError("Performance measurement failed")
       "optimizations"
   fs.appendFileSync(this.logFile, JSON.stringify(logEntry) + "\n"
   console.error("Error logging performance "results": ")
-  console.error("Error logging performance "results": ")
   "timestamp"
       "error"
   "timestamp"
       "error"
       "stack"
   fs.appendFileSync(this.logFile, JSON.stringify(errorEntry) + "\n"
-  console.error("Error logging "error": ")
   console.error("Error logging "error": ")
   console.log("� Setting up build monitoring...")
     process.on("message")
@@ -253,3 +246,8 @@ this.logError("Performance measurement failed")
   console.error("� Unhandled "rejection": ")
 
     this.logError("Unhandled rejection")
+
+
+
+
+

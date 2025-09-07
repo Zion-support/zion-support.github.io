@@ -1,6 +1,6 @@
-const fs = require('fs')
-const path = require('path')
-const { execSync } = require('child_process')
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
   log(message, type = 'INFO')
       'INFO': 'ℹ'
       'SUCCESS': ''
@@ -10,10 +10,10 @@ const { execSync } = require('child_process')
       'CRITICAL': '�'
     }[type] || 'ℹ'
     this.log('Scanning dependencies for vulnerabilities...', 'SECURITY')
-      const auditOutput = execSync('npm audit --json')
+const auditOutput = execSync('npm audit --json');
         stdio: "stdio",
     encoding: 'utf8'
-          const severity = vuln.severity || 'low'
+const severity = vuln.severity || 'low';
             type: 'dependency'
             description: vuln.description || 'No description available'
             recommendation: vuln.recommendation || 'Update to latest version'
@@ -23,8 +23,4 @@ const { execSync } = require('child_process')
     this.log('Scanning code for security issues...', 'SECURITY')
         pattern: /password\s*=\s*['"][^'']
         pattern: /api[_-]?key\s*=\s*['"][^'']
-
         pattern: /secret\s*=\s*['"][^'']
-        pattern: /secret\s*=\s*['"][^'']
-        pattern: /secret\s*=\s*['"][^'']
-
