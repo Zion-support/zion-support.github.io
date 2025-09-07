@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import { SEO } from '../components/SEO';
 import { Link } from 'react-router-dom';
 import { SEO } from '../components/SEO';
 import { 
@@ -645,6 +646,49 @@ export default function ComprehensiveServicesShowcase2025() {
         </div>
       </section>
 
+      {/* Pricing Comparison Section */}
+      <section className="py-20 bg-slate-800/50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Service Tiers Comparison
+            </h2>
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+              Choose the service tier that best fits your business needs and budget requirements.
+            </p>
+          </motion.div>
+
+          <div className="overflow-x-auto">
+            <table className="w-full border-collapse">
+              <thead>
+                <tr className="border-b border-slate-600">
+                  <th className="text-left text-white font-semibold p-4">Feature</th>
+                  <th className="text-center text-white font-semibold p-4">Starter</th>
+                  <th className="text-center text-white font-semibold p-4">Professional</th>
+                  <th className="text-center text-white font-semibold p-4">Enterprise</th>
+                </tr>
+              </thead>
+              <tbody>
+                {pricingComparison.map((row, index) => (
+                  <tr key={index} className="border-b border-slate-600/30">
+                    <td className="text-gray-300 p-4">{row.feature}</td>
+                    <td className="text-center text-gray-400 p-4">{row.starter}</td>
+                    <td className="text-center text-gray-400 p-4">{row.professional}</td>
+                    <td className="text-center text-gray-400 p-4">{row.enterprise}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -696,4 +740,6 @@ export default function ComprehensiveServicesShowcase2025() {
       </section>
     </div>
   );
-}
+};
+
+export default ComprehensiveServicesShowcase2025;
