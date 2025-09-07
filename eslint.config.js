@@ -172,7 +172,6 @@ export default [
       '*.spec.js',
       '*.spec.ts',
       '*.spec.tsx',
-<<<<<<< HEAD
       'pm2-automation/**',
       'services/**',
 
@@ -205,7 +204,7 @@ export default [
       '*.ts',
       'public/sw*.js',
       'resolve-*.js',
-=======
+
       // Ignore all backup and broken directories
       'pages.broken/**',
       'pages.corrupted.*/**',
