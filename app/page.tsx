@@ -165,6 +165,7 @@ export default function HomePage() {
       </div>
 
       {/* Why Choose Us */}
+<<<<<<< HEAD
       <div className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -239,6 +240,68 @@ export default function HomePage() {
           </div>
         </div>
       </div>
+=======
+      <section className="py-16 bg-gradient-to-r from-gray-50 to-blue-50 rounded-lg" aria-labelledby="why-choose-heading">
+        <div className="text-center mb-16">
+          <h2 id="why-choose-heading" className="text-4xl font-bold text-gray-900 mb-6 animate-fade-in">
+            Why Choose Zion Tech Group?
+          </h2>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto animate-slide-up">
+            We combine technical expertise with business acumen to deliver
+            solutions that drive real results.
+          </p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" role="list" aria-label="Key advantages and benefits">
+          <div className="text-center p-8 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group">
+            <div className="w-20 h-20 bg-gradient-to-br from-blue-100 to-blue-200 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+              <span className="text-3xl">⚡</span>
+            </div>
+            <h3 className="text-xl font-semibold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors duration-300">
+              Fast Delivery
+            </h3>
+            <p className="text-gray-600 group-hover:text-gray-700 transition-colors duration-300">
+              Rapid development and deployment with agile methodologies
+            </p>
+          </div>
+
+          <div className="text-center p-8 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group">
+            <div className="w-20 h-20 bg-gradient-to-br from-green-100 to-green-200 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+              <span className="text-3xl">🔒</span>
+            </div>
+            <h3 className="text-xl font-semibold text-gray-900 mb-4 group-hover:text-green-600 transition-colors duration-300">
+              Secure & Reliable
+            </h3>
+            <p className="text-gray-600 group-hover:text-gray-700 transition-colors duration-300">
+              Enterprise-grade security and 99.9% uptime guarantee
+            </p>
+          </div>
+
+          <div className="text-center p-8 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group">
+            <div className="w-20 h-20 bg-gradient-to-br from-purple-100 to-purple-200 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+              <span className="text-3xl">🎯</span>
+            </div>
+            <h3 className="text-xl font-semibold text-gray-900 mb-4 group-hover:text-purple-600 transition-colors duration-300">
+              Custom Solutions
+            </h3>
+            <p className="text-gray-600 group-hover:text-gray-700 transition-colors duration-300">
+              Tailored solutions that fit your specific business needs
+            </p>
+          </div>
+
+          <div className="text-center p-8 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group">
+            <div className="w-20 h-20 bg-gradient-to-br from-orange-100 to-orange-200 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+              <span className="text-3xl">📞</span>
+            </div>
+            <h3 className="text-xl font-semibold text-gray-900 mb-4 group-hover:text-orange-600 transition-colors duration-300">
+              24/7 Support
+            </h3>
+            <p className="text-gray-600 group-hover:text-gray-700 transition-colors duration-300">
+              Round-the-clock technical support and maintenance
+            </p>
+          </div>
+        </div>
+      </section>
+>>>>>>> 5e681e2219508d3428abd320b27556dbdc787262
 
       {/* CTA Section */}
       <div className="py-20 bg-blue-600">
@@ -246,9 +309,16 @@ export default function HomePage() {
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Ready to Transform Your Business?
           </h2>
+<<<<<<< HEAD
           <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
             Join hundreds of companies already using our AI-powered solutions to drive innovation and growth.
             Let's build something amazing together.
+=======
+          <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto animate-slide-up">
+            Let&apos;s discuss your project and create a custom solution that drives
+            real business value. Our team has delivered 1000+ successful
+            projects across various industries.
+>>>>>>> 5e681e2219508d3428abd320b27556dbdc787262
           </p>
           <Link
             href="/contact"
@@ -257,7 +327,11 @@ export default function HomePage() {
             Get Started Today
           </Link>
         </div>
+<<<<<<< HEAD
       </div>
+=======
+      </section>
+>>>>>>> 5e681e2219508d3428abd320b27556dbdc787262
     </div>
   );
 }
