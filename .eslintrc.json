@@ -29,6 +29,7 @@
     "no-undef": "error"
   },
   "ignorePatterns": [
+    "**/*",
     "node_modules/",
     ".next/",
     "out/",

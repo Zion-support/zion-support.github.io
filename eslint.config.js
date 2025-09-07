@@ -10,6 +10,7 @@ import jsxA11y from 'eslint-plugin-jsx-a11y';
 export default [
   {
     ignores: [
+      '**/*',
       'node_modules/',
       '.next/',
       'out/',
