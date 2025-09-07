@@ -1,65 +1,23 @@
-import _React from 'react';  import '@testing-library/jest-dom'; import InteractiveElementsdynamic from '../components/InteractiveElements.dynamic'; describe('InteractiveElementsdynamic',() => { test('renders without crashing',() => { render(<InteractiveElementsdynamic />); expect( screen.getByTestId('interactiveelements.dynamic') ).toBeInTheDocument()}); test('displays correct content',() => { render(<InteractiveElementsdynamic />)}); test('handles user interactions',() => { render(<InteractiveElementsdynamic />)}); test('applies correct styling',() => { render(<InteractiveElementsdynamic />)})});
-
-ursor/fix-syntax-push-and-merge-to-main-40de
-origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 import React from 'react';
-import { render, screen, fireEvent } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import InteractiveElementsdynamic from '../components/InteractiveElements.dynamic';
+import InteractiveElements from '../components/InteractiveElements';
 
-origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
-describe('InteractiveElementsdynamic', () => {
+describe('InteractiveElements', () => {
   test('renders without crashing', () => {
-    render(<InteractiveElementsdynamic />);
-    expect(
-      screen.getByTestId('interactiveelements.dynamic')
-    ).toBeInTheDocument();
+    render(<InteractiveElements />);
+    expect(screen.getByTestId('interactiveelements')).toBeInTheDocument();
   });
   test('displays correct content', () => {
-    render(<InteractiveElementsdynamic />);
-  });
-  test('handles user interactions', () => {
-    render(<InteractiveElementsdynamic />);
-  });
-  test('applies correct styling', () => {
-    render(<InteractiveElementsdynamic />);
-  });
-});
-const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import InteractiveElementsdynamic from "./components/InteractiveElements.dynamic"; describe("InteractiveElementsdynamic",() => { test("renders without crashing",() => { render(<InteractiveElementsdynamic />); expect( screen.getByTestId("interactiveelements.dynamic") ).toBeInTheDocument()}); test("displays correct content",() => { render(<InteractiveElementsdynamic />)}); test("handles user interactions",() => { render(<InteractiveElementsdynamic />)}); test("applies correct styling",() => { render(<InteractiveElementsdynamic />)})});''"
-
-import _React from 'react';  import '@testing-library/jest-dom'; import InteractiveElementsdynamic from '../components/InteractiveElements.dynamic'; describe('InteractiveElementsdynamic',() => { test('renders without crashing',() => { render(<InteractiveElementsdynamic />); expect( screen.getByTestId('interactiveelements.dynamic') ).toBeInTheDocument()}); test('displays correct content',() => { render(<InteractiveElementsdynamic />)}); test('handles user interactions',() => { render(<InteractiveElementsdynamic />)}); test('applies correct styling',() => { render(<InteractiveElementsdynamic />)})});
-import _React from 'react';  import '@testing-library/jest-dom'; import InteractiveElementsdynamic from '../components/InteractiveElements.dynamic'; describe('InteractiveElementsdynamic',() => { test('renders without crashing',() => { render(<InteractiveElementsdynamic />); expect( screen.getByTestId('interactiveelements.dynamic') ).toBeInTheDocument()}); test('displays correct content',() => { render(<InteractiveElementsdynamic />)}); test('handles user interactions',() => { render(<InteractiveElementsdynamic />)}); test('applies correct styling',() => { render(<InteractiveElementsdynamic />)})});
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-
-import React from 'react'
-import { render, screen, fireEvent } from '@testing-library/react'
-import '@testing-library/jest-dom'
-import InteractiveElementsdynamic from '../components/InteractiveElements.dynamic'
-describe('InteractiveElementsdynamic'
-  test('renders without crashing'
-      screen.getByTestId('interactiveelements.dynamic'
-  test('displays correct content'
-  test('handles user interactions'
-  test('applies correct styling'
-
-import _React from 'react';  import '@testing-library/jest-dom'; import InteractiveElementsdynamic from '../components/InteractiveElements.dynamic'; describe('InteractiveElementsdynamic',() => { test('renders without crashing',() => { render(<InteractiveElementsdynamic />); expect( screen.getByTestId('interactiveelements.dynamic') ).toBeInTheDocument()}); test('displays correct content',() => { render(<InteractiveElementsdynamic />)}); test('handles user interactions',() => { render(<InteractiveElementsdynamic />)}); test('applies correct styling',() => { render(<InteractiveElementsdynamic />)})});
-
-import _React from 'react';  import '@testing-library/jest-dom'; import InteractiveElementsdynamic from '../components/InteractiveElements.dynamic'; describe('InteractiveElementsdynamic',() => { test('renders without crashing',() => { render(<InteractiveElementsdynamic />); expect( screen.getByTestId('interactiveelements.dynamic') ).toBeInTheDocument()}); test('displays correct content',() => { render(<InteractiveElementsdynamic />)}); test('handles user interactions',() => { render(<InteractiveElementsdynamic />)}); test('applies correct styling',() => { render(<InteractiveElementsdynamic />)})});
-
-  test('displays correct content', () => {
-    render(<InteractiveElementsdynamic />);
+    render(<InteractiveElements />);
     // Add specific content tests based on component
   });
-
   test('handles user interactions', () => {
-    render(<InteractiveElementsdynamic />);
+    render(<InteractiveElements />);
     // Add interaction tests based on component functionality
   });
-
   test('applies correct styling', () => {
-    render(<InteractiveElementsdynamic />);
+    render(<InteractiveElements />);
     // Add styling tests if needed
   });
 });
-origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
