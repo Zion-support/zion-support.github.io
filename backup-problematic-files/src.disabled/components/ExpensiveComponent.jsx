@@ -1,15 +1,19 @@
 import React from 'react';
-const ExpensiveComponent = ({ className }) => {return (<div className={className || ''}>;
-      <h1>ExpensiveComponent</h1>;
-      <p>This component is under development.</p>;
+const ExpensiveComponent = (return (<div className={className || '') = /> {
+  return $3;}
+} />;
+      <h1 />ExpensiveComponent</h1>;
+      <p />This component is under development.</p>;
     </div>;
   )}
 
-const ExpensiveComponent = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>ExpensiveComponent</h1>
-      <p>This component is under development.</p>
+const ExpensiveComponent = (
+  return () => {
+  return $3;}
+}
+    <div className={className || ''} />
+      <h1 />ExpensiveComponent</h1>
+      <p />This component is under development.</p>
     </div>
   )
 }

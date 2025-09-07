@@ -20,13 +20,13 @@ export type JobCategory =
   | 'business' ;
   | 'other';
 export interface JobBudget {;  min: number;
-  max: number;
-  currency: string;
+  max: number;}
+  currency: string;}
 }
-export interface Job {;
+export interface Job {;}
 }
-export interface Job {export interface Job {
-export interface Job {;
+export interface Job {export interface Job {}
+export interface Job {;}
 }
 export interface Job {
   id: string;
@@ -38,12 +38,12 @@ export interface Job {
   budget: JobBudget;
   deadline: string;
   status: JobStatus;
-  created_at: string;
-  updated_at: string;
+  created_at: string;}
+  updated_at: string;}
 }
 export interface JobFormData {;
-  created_at: string;
-    updated_at: string
+  created_at: string;}
+    updated_at: string}
 }
 export interface JobFormData {
 export interface JobFormData {;
@@ -55,24 +55,24 @@ export interface ResumeAttachment {;
 export interface ResumeAttachment {export interface ResumeAttachment {
   id: string;
   title: string;
-  type: "ai_resume" | "custom_upload";
+  type: \"ai_resume\" | \"custom_upload\";
   file_url?: string;
   resume_id?: string;
-  summary?: string;
-  skills?: string[];
+  summary?: string;}
+  skills?: string[];}
 }
 export type ApplicationStatus =
-  | "new"
-  | "viewed"
-  | "shortlisted"
-  | "interview"
-  | "hired"
-  | "rejected";
+  | \"new\"
+  | \"viewed\"
+  | \"shortlisted\"
+  | \"interview\"
+  | \"hired\"
+  | \"rejected\";
 export interface JobApplication {
 export interface JobApplication {
 export interface JobApplication {;
-export interface JobApplication {  summary?: string
-  skills?: string[]
+export interface JobApplication {  summary?: string;}
+skills?: string[]}
 }
 export type ApplicationStatus = 'new' | 'viewed' | 'shortlisted' | 'interview' | 'hired' | 'rejected';
 export interface JobApplication {
@@ -94,8 +94,8 @@ export interface JobApplication {
     full_name: string;
     professional_title: string;
     profile_picture_url?: string;
-    bio: string;
-    skills: string[]
+    bio: string;}
+    skills: string[]}
 };
   resume?: ResumeAttachment;
   // New fields for resume scoring;  }
@@ -117,8 +117,8 @@ export type JobCategory =;
   | 'other',;
 export interface JobBudget {;
   min: number,;
-  max: number,;
-  currency: string;
+  max: number,;}
+  currency: string;}
 }
 ;
 export interface Job {;
@@ -131,8 +131,8 @@ export interface Job {;
   budget: JobBudget,;
   deadline: string,;
   status: JobStatus,;
-  created_at: string,;
-  updated_at: string;
+  created_at: string,;}
+  updated_at: string;}
 }
 ;
 export interface JobFormData {;
@@ -141,8 +141,8 @@ export interface JobFormData {;
   category: JobCategory,;
   skills: string,;
   budgetMin: number,;
-  budgetMax: number,;
-  deadline: Date;
+  budgetMax: number,;}
+  deadline: Date;}
 }
 ;
 // Add JobMatch interface to be shared across components;
@@ -168,8 +168,8 @@ export interface JobMatch {;
     key_projects: any[],;
     skills: string[],;
     location?: string,;
-    category?: string,;
-    company_name?: string;
+    category?: string,;}
+    company_name?: string;}
   }
 }
 ;
@@ -179,8 +179,8 @@ export interface ResumeAttachment {;
   type: 'ai_resume' | 'custom_upload',;
   file_url?: string,;
   resume_id?: string,;
-  summary?: string,;
-  skills?: string[];
+  summary?: string,;}
+  skills?: string[];}
 }
 ;
 export type ApplicationStatus = 'new' | 'viewed' | 'shortlisted' | 'interview' | 'hired' | 'rejected',;
@@ -201,8 +201,8 @@ export interface JobApplication {;
     full_name: string,;
     professional_title: string,;
     profile_picture_url?: string,;
-    bio: string,;
-    skills: string[];
+    bio: string,;}
+    skills: string[];}
   },;
   resume?: ResumeAttachment,;
   // New fields for resume scoring;
@@ -211,16 +211,16 @@ export interface JobApplication {;
   match_breakdown?: {;
     skills_match?: {;
       score: number,;
-      matching: string[],;
-      missing: string[];
+      matching: string[],;}
+      missing: string[];}
     },;
     experience_match?: {;
-      score: number,;
-      analysis: string;
+      score: number,;}
+      analysis: string;}
     },;
     education_match?: {;
-      score: number,;
-      analysis: string;
+      score: number,;}
+      analysis: string;}
     }
   },;
   match_suggestion?: string,;

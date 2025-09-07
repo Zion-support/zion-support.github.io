@@ -1,88 +1,88 @@
-import React, { useState } from "react";
-import {useForm} from "react-hook-form";
-import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
-import {MetadataForm} from "./MetadataForm";
-import {ScreenshotManager} from "./ScreenshotManager";
-import {ChangelogManager} from "./ChangelogManager";
-import {ExportPanel} from "./ExportPanel";
-import {Button} from "@/components/ui/button";
-import {toast} from "sonner";
-export type AppPlatform = "ios" | "android";
+import React, { useState } from \"react\";
+import {useForm} from \"react-hook-form\";
+import {Tabs, TabsContent, TabsList, TabsTrigger} from \"@/components/ui/tabs\";
+import {MetadataForm} from \"./MetadataForm\";
+import {ScreenshotManager} from \"./ScreenshotManager\";
+import {ChangelogManager} from \"./ChangelogManager\";
+import {ExportPanel} from \"./ExportPanel\";
+import {Button} from \"@/components/ui/button\";
+import {toast} from \"sonner\";
+export type AppPlatform = \"ios\" | \"android\";
 }
 const defaultValues: AppMetadataValues = {
-  appTitle: "appTitle",
-    shortDescription: "Hire top AI talent or find global IT jobs on the go."
-  longDescription: "Zion AI Marketplace is your one-stop solution for connecting with top AI and tech talent worldwide. Whether you're a business looking to hire specialized talent or a professional seeking your next opportunity, our app simplifies the process with AI-powered matching, secure messaging, and streamlined hiring.",
-  keywords: ["AI freelancer", "tech jobs", "hire developers", "IT marketplace", "artificial intelligence jobs"];
-  version: "1.0.0"
-  platform: "ios"
+  appTitle: \"appTitle\",
+    shortDescription: \"Hire top AI talent or find global IT jobs on the go.\"
+  longDescription: \"Zion AI Marketplace is your one-stop solution for connecting with top AI and tech talent worldwide. Whether you're a business looking to hire specialized talent or a professional seeking your next opportunity, our app simplifies the process with AI-powered matching, secure messaging, and streamlined hiring.\",
+  keywords: [\"AI freelancer\", \"tech jobs\", \"hire developers\", \"IT marketplace\", \"artificial intelligence jobs\"];
+  version: \"1.0.0\"}
+  platform: \"ios\"}
 }
 export const MetadataManager: React.FC = () => {
-  const [currentPlatform, setCurrentPlatform] = useState<AppPlatform>("ios");
-  const [isSaving, setIsSaving] = useState(false);
-  // Separate form instances for each platform
-  const iosForm = useForm<AppMetadataValues>({ defaultValues: { ...defaultValues, platform: "ios" } })
-  const androidForm = useForm<AppMetadataValues>({ defaultValues: { ...defaultValues, platform: "android" } })
-  const currentForm = currentPlatform === "ios" ? iosForm : androidForm;
+  const [currentPlatform, setCurrentPlatform] = useState<AppPlatform />(\"ios\");
+  const [isSaving, setIsSaving] = useState(false);}
+  // Separate form instances for each platform;}
+const iosForm = useForm<AppMetadataValues />({ defaultValues: { ...defaultValues, platform: \"ios\" } })
+  const androidForm = useForm<AppMetadataValues />({ defaultValues: { ...defaultValues, platform: \"android\" } })
+  const currentForm = currentPlatform === \"ios\" ? iosForm : androidForm;
 },
 const defaultValues: AppMetadataValues = {
-  appTitle: "Zion AI Marketplace",
-  shortDescription: "Hire top AI talent or find global IT jobs on the go.",
-  longDescription: "Zion AI Marketplace is your one-stop solution for connecting with top AI and tech talent worldwide. Whether you're a business looking to hire specialized talent or a professional seeking your next opportunity, our app simplifies the process with AI-powered matching, secure messaging, and streamlined hiring.",
-  keywords: ["AI freelancer", "tech jobs", "hire developers", "IT marketplace", "artificial intelligence jobs"],
-  version: "1.0.0",
-  platform: "ios"
+  appTitle: \"Zion AI Marketplace\",
+  shortDescription: \"Hire top AI talent or find global IT jobs on the go.\",
+  longDescription: \"Zion AI Marketplace is your one-stop solution for connecting with top AI and tech talent worldwide. Whether you're a business looking to hire specialized talent or a professional seeking your next opportunity, our app simplifies the process with AI-powered matching, secure messaging, and streamlined hiring.\",
+  keywords: [\"AI freelancer\", \"tech jobs\", \"hire developers\", \"IT marketplace\", \"artificial intelligence jobs\"],
+  version: \"1.0.0\",}
+  platform: \"ios\"}
 },
 export const MetadataManager: React.FC = () => {;
-  const [currentPlatform, setCurrentPlatform] = useState<AppPlatform>("ios");
+  const [currentPlatform, setCurrentPlatform] = useState<AppPlatform />(\"ios\");
   const [isSaving, setIsSaving] = useState(false);
 export const MetadataManager: React.FC = () => {
-  const [currentPlatform, setCurrentPlatform] = useState<AppPlatform>("ios"),
-  const [isSaving, setIsSaving] = useState(false),
-  // Separate form instances for each platform
-  const iosForm = useForm<AppMetadataValues>({ defaultValues: { ...defaultValues, platform: "ios" } }),
-  const androidForm = useForm<AppMetadataValues>({ defaultValues: { ...defaultValues, platform: "android" } }),
-  const currentForm = currentPlatform === "ios" ? iosForm : androidForm,
+  const [currentPlatform, setCurrentPlatform] = useState<AppPlatform />(\"ios\"),
+  const [isSaving, setIsSaving] = useState(false),}
+  // Separate form instances for each platform;}
+const iosForm = useForm<AppMetadataValues />({ defaultValues: { ...defaultValues, platform: \"ios\" } }),
+  const androidForm = useForm<AppMetadataValues />({ defaultValues: { ...defaultValues, platform: \"android\" } }),
+  const currentForm = currentPlatform === \"ios\" ? iosForm : androidForm,
     setIsSaving(true)
     try {
-      // This would be implemented with actual API calls in production    <div className="bg-zion-blue-dark rounded-lg p-6">
-      <Tabs defaultValue="ios" className="w-full">
-        <div className="flex justify-between items-center mb-6">
-          <TabsList className="bg-zion-blue">
-            <TabsTrigger value="ios" onClick={() => setCurrentPlatform("ios")}>
+      // This would be implemented with actual API calls in production    <div className=\"bg-zion-blue-dark rounded-lg p-6\" />
+      <Tabs defaultValue=\"ios\" className=\"w-full\" />
+        <div className=\"flex justify-between items-center mb-6\" />}
+          <TabsList className=\"bg-zion-blue\" />}
+            <TabsTrigger value=\"ios\" onClick={() = /> setCurrentPlatform(\"ios\")}>
               App Store (iOS)
             </TabsTrigger>
-            <TabsTrigger value="android" onClick={() => setCurrentPlatform("android")}>
+            <TabsTrigger value=\"android\" onClick={() = /> setCurrentPlatform(\"android\")}>
               Google Play (Android)
             </TabsTrigger>
           </TabsList>
             onClick={currentForm.handleSubmit(handleSaveMetadata)}
             disabled={isSaving}
           >
-            {isSaving ? "Saving..." : "Save Metadata"}
+            {isSaving ? \"Saving...\" : \"Save Metadata\"}
           </Button>
         </div>
-        <TabsContent value="ios" className="mt-0">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-            <div className="lg:col-span-2 space-y-6">
+        <TabsContent value=\"ios\" className=\"mt-0\" />
+          <div className=\"grid grid-cols-1 lg:grid-cols-3 gap-6\" />
+            <div className=\"lg:col-span-2 space-y-6\" />
               <MetadataForm form={iosForm} />
-              <ChangelogManager platform="ios" />
+              <ChangelogManager platform=\"ios\" />
             </div>
-            <div className="space-y-6">
-              <ScreenshotManager platform="ios" />
-              <ExportPanel platform="ios" metadata={iosForm.getValues()} />
+            <div className=\"space-y-6\" />
+              <ScreenshotManager platform=\"ios\" />
+              <ExportPanel platform=\"ios\" metadata={iosForm.getValues()} />
             </div>
           </div>
         </TabsContent>
-        <TabsContent value="android" className="mt-0">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-            <div className="lg:col-span-2 space-y-6">
+        <TabsContent value=\"android\" className=\"mt-0\" />
+          <div className=\"grid grid-cols-1 lg:grid-cols-3 gap-6\" />
+            <div className=\"lg:col-span-2 space-y-6\" />
               <MetadataForm form={androidForm} />
-              <ChangelogManager platform="android" />
+              <ChangelogManager platform=\"android\" />
             </div>
-            <div className="space-y-6">
-              <ScreenshotManager platform="android" />
-              <ExportPanel platform="android" metadata={androidForm.getValues()} />
+            <div className=\"space-y-6\" />
+              <ScreenshotManager platform=\"android\" />
+              <ExportPanel platform=\"android\" metadata={androidForm.getValues()} />
             </div>
           </div>
         </TabsContent>
@@ -90,39 +90,39 @@ export const MetadataManager: React.FC = () => {
     </div>
   )
 },
-import React, { useState } from "react";
-import { useForm } from "react-hook-form";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
-import { MetadataForm } from "./MetadataForm",;
-import { ScreenshotManager } from "./ScreenshotManager",;
-import { ChangelogManager } from "./ChangelogManager",;
-import { ExportPanel } from "./ExportPanel",;
-import { Button } from "@/components/ui/button",;
-import { toast } from "sonner",;
-export type AppPlatform = "ios" | "android",;    } finally {;
-      setIsSaving(false);
+import React, { useState } from \"react\";
+import { useForm } from \"react-hook-form\";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from \"@/components/ui/tabs\",;
+import { MetadataForm } from \"./MetadataForm\",;
+import { ScreenshotManager } from \"./ScreenshotManager\",;
+import { ChangelogManager } from \"./ChangelogManager\",;
+import { ExportPanel } from \"./ExportPanel\",;
+import { Button } from \"@/components/ui/button\",;
+import { toast } from \"sonner\",;
+export type AppPlatform = \"ios\" | \"android\",;    } finally {;}
+      setIsSaving(false);}
     }
   };
-  return (    <div className="bg-zion-blue-dark rounded-lg p-6">;
-      <Tabs defaultValue="ios" className="w-full">;
-        <div className="flex justify-between items-center mb-6">;
-          <TabsList className="bg-zion-blue">;
-            <TabsTrigger value="ios" onClick={() => setCurrentPlatform("ios")}>;
+  return (    <div className=\"bg-zion-blue-dark rounded-lg p-6\" />;
+      <Tabs defaultValue=\"ios\" className=\"w-full\" />;
+        <div className=\"flex justify-between items-center mb-6\" />;
+          <TabsList className=\"bg-zion-blue\" />;
+            <TabsTrigger value=\"ios\" onClick={() = /> setCurrentPlatform(\"ios\")}>;
               App Store (iOS);
             </TabsTrigger>;
-            <TabsTrigger value="android" onClick={() => setCurrentPlatform("android")}>;
+            <TabsTrigger value=\"android\" onClick={() = /> setCurrentPlatform(\"android\")}>;
               Google Play (Android);
             </TabsTrigger>;
-          </TabsList>;        <TabsContent value="ios" className="mt-0">;
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">;
-            <div className="lg:col-span-2 space-y-6">;
+          </TabsList>;        <TabsContent value=\"ios\" className=\"mt-0\" />;
+          <div className=\"grid grid-cols-1 lg:grid-cols-3 gap-6\" />;
+            <div className=\"lg:col-span-2 space-y-6\" />;
               <MetadataForm form={iosForm} />;
-              <ChangelogManager platform="ios" />;
+              <ChangelogManager platform=\"ios\" />;
             </div>;    } catch (error) {
-      toast.error ("Failed to save metadata");
-      console.error (error);
-    } finally {
-      setIsSaving (false);
+      toast.error (\"Failed to save metadata\");}
+      console.error (error);}
+    } finally {}
+      setIsSaving (false);}
     }
   }
             </div>;
@@ -141,24 +141,24 @@ export type AppPlatform = "ios" | "android",;    } finally {;
 ;
     </div>;
   ),;
-},; export type AppPlatform = "ios" | "android";
+},; export type AppPlatform = \"ios\" | \"android\";
   setIsSaving (true);
-try {
-  //This would be implemented with actual API calls in production //Simulate API call await new Promise (resolve => setTimeout (resolve, 1000) );
-}finally {
-  setIsSaving (false) 
+try {}
+  //This would be implemented with actual API calls in production //Simulate API call await new Promise (resolve => setTimeout (resolve, 1000) );}
+}finally {}
+  setIsSaving (false) }
 }
 };
-return (<div className="bg-zion-blue-dark rounded-lg p-6" > <Tabs defaultValue="ios" className="w-full" > <div className="flex justify-between items-center mb-6" > <TabsList className="bg-zion-blue" > <TabsTrigger value="ios" onClick= {
-  () => setCurrentPlatform ("ios") 
-}> App Store (iOS) </TabsTrigger> <TabsTrigger value="android" onClick= {
-  () => setCurrentPlatform ("android") 
+return (<div className=\"bg-zion-blue-dark rounded-lg p-6\"  /> <Tabs defaultValue=\"ios\" className=\"w-full\"  /> <div className=\"flex justify-between items-center mb-6\"  /> <TabsList className=\"bg-zion-blue\"  /> <TabsTrigger value=\"ios\" onClick= {}
+  () = /> setCurrentPlatform (\"ios\") }
+}> App Store (iOS) </TabsTrigger> <TabsTrigger value=\"android\" onClick= {}
+  () = /> setCurrentPlatform (\"android\") }
 }> currentForm.handleSubmit (handleSaveMetadata) 
-}disabled= {
-  isSaving 
+}disabled= {}
+  isSaving }
 }> </div> </div> </TabsContent> </div> </div> </TabsContent> </Tabs> </div>) 
 };
     </div>;
   )
 };
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df;

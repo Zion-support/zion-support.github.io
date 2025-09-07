@@ -1,31 +1,31 @@
-export type ServiceType = "service" | "talent" | "equipment" | "";
+export type ServiceType = \"service\" | \"talent\" | \"equipment\" | \"\";
 export type ServiceCategory = string;
-export type TimelineType = "fixed" | "flexible";
-export type BudgetType = "fixed" | "hourly" | "range";
+export type TimelineType = \"fixed\" | \"flexible\";
+export type BudgetType = \"fixed\" | \"hourly\" | \"range\";
 export interface ListingItem {
   id: string;
   title: string;
-  category: string
-  image?: string
+  category: string;}
+image?: string}
 }
 export interface ContactInfo {
 export interface ListingItem {;
   id: string;
   title: string;
-  category: string,
-  image?: string
+  category: string,}
+  image?: string}
 }
 export interface ContactInfo {;
   name: string;
   email: string;
-  phone: string;
-    company: string
+  phone: string;}
+    company: string}
 }
 ;
 export interface ListingItem {
   amount: number;
-  maxAmount?: number;
-  type: BudgetType;
+  maxAmount?: number;}
+  type: BudgetType;}
 }
 export interface QuoteFormData {;
   serviceType: ServiceType;
@@ -52,5 +52,5 @@ export interface QuoteRequest {;
   start_date?: string;
   status: QuoteStatus;
   is_archived: boolean;
-  viewed_at?: string;
-  replied_at?: string;
+  viewed_at?: string;}
+  replied_at?: string;}

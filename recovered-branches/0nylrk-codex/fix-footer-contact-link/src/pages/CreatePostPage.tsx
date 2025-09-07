@@ -1,47 +1,47 @@
-import { useState, useEffect } from "react",
-import { Link, useNavigate, useSearchParams } from "react-router-dom",
-import { AppLayout } from "@/layout/AppLayout",
-import { SEO } from "@/components/SEO",
-import { Button } from "@/components/ui/button",
-import PostForm from "@/components/community/PostForm",
-import { useToast } from "@/hooks/use-toast";
-import { ForumCategory } from "@/types/community";
-import { useToast } from "@/hooks/use-toast",
-import { ForumCategory } from "@/types/community",
+import { useState, useEffect } from \"react\",
+import { Link, useNavigate, useSearchParams } from \"react-router-dom\",
+import { AppLayout } from \"@/layout/AppLayout\",
+import { SEO } from \"@/components/SEO\",
+import { Button } from \"@/components/ui/button\",
+import PostForm from \"@/components/community/PostForm\",
+import { useToast } from \"@/hooks/use-toast\";
+import { ForumCategory } from \"@/types/community\";
+import { useToast } from \"@/hooks/use-toast\",
+import { ForumCategory } from \"@/types/community\",
 interface PostFormValues {
   title: string;
-    content: string
-  categoryId: ForumCategory
-  tags: string}
-export default function CreatePostPage() {;
-  const navigate = useNavigate();
+    content: string;}
+categoryId: ForumCategory;}
+tags: string}
+export default function CreatePostPage() {;}
+  const navigate = useNavigate();}
   const { toast } = useToast();
   const [searchParams] = useSearchParams();
-export default function CreatePostPage() {
-  const navigate = useNavigate();
+export default function CreatePostPage() {}
+  const navigate = useNavigate();}
   const { toast } = useToast();
-  const [searchParams] = useSearchParams();  // Get category from URL query params if available
-  const initialCategory = searchParams.get("category") as ForumCategory | null;
-  const initialValues: Partial<PostFormValues> = {
-    categoryId: initialCategory || "project-help",
+  const [searchParams] = useSearchParams();  // Get category from URL query params if available;
+const initialCategory = searchParams.get(\"category\") as ForumCategory | null;
+  const initialValues: Partial<PostFormValues /> = {}
+    categoryId: initialCategory || \"project-help\",}
   };
   const handleSubmit = async (values: PostFormValues) => {
     try {
-      // Here we would normally save to the database
-      // For now, we'll just simulate a successful post creation
-      // Parse tags into an array
-      const tagsArray = values.tags.split(",").map((tag) => tag.trim());
+      // Here we would normally save to the database;
+      // For now, we'll just simulate a successful post creation;
+      // Parse tags into an array;
+const tagsArray = values.tags.split(\",\").map((tag) => tag.trim());
       toast({
-        title: "Post created",
-        description: "Your post has been published successfully",
+        title: \"Post created\",}
+        description: \"Your post has been published successfully\",}
       });
-      // Redirect to the forum category
-      navigate(`/community/category/${values.categoryId}`);
+      // Redirect to the forum category;
+navigate(`/community/category/${values.categoryId}`);
     } catch (error) {
       toast({
-        title: "Error",
-        description: "There was a problem creating your post",
-        variant: "destructive",
+        title: \"Error\",
+        description: \"There was a problem creating your post\",}
+        variant: \"destructive\",}
       });
     }
   }
@@ -50,45 +50,45 @@ export default function CreatePostPage() {
     }
   },
   return (
-    <AppLayout>
-      <SEO
-        title="Create New Post | Community Forum | Zion AI Marketplace"
-        description="Create a new discussion post in the Zion AI Marketplace community forum."
-        keywords="community, forum, discussion, create post, new thread"
-        <div className="flex items-center gap-3 mb-6">;
-          <Link to="/community" className="text-sm text-muted-foreground hover:text-foreground">;
+    <AppLayout />
+      <SEO;
+title=\"Create New Post | Community Forum | Zion AI Marketplace\"
+        description=\"Create a new discussion post in the Zion AI Marketplace community forum.\"
+        keywords=\"community, forum, discussion, create post, new thread\"
+        <div className=\"flex items-center gap-3 mb-6\" />;
+          <Link to=\"/community\" className=\"text-sm text-muted-foreground hover:text-foreground\" />;
             Forum;
           </Link>;
-          <span className="text-muted-foreground">/</span>;
-          <span className="text-sm font-medium">Create Post</span>;
+          <span className=\"text-muted-foreground\" />/</span>;
+          <span className=\"text-sm font-medium\" />Create Post</span>;
         </div>;
 import { useState, useEffect } from './react';
 import { Link, use_navigate, useSearchParams } from './react-router-dom';
 import { AppLayout } from '@/layout / AppLayout';
 import { SEO } from '@/components / SEO';
 import { Button } from '@/components / ui / button';
-import PostForm from "@/components / community / PostForm";
+import PostForm from \"@/components / community / PostForm\";
 import { use_toast } from '@/hooks / use - toast';
 import { ForumCategory } from '@/types / community';
 interface PostFormValues {
   title: string,
   content: string,
-  category_id: ForumCategory,
-  tags: string;
+  category_id: ForumCategory,}
+  tags: string;}
 }
 export default /**
- * CreatePostPage - Function description
+ * CreatePostPage - Function description;
  */
-function CreatePostPage() {
-  const navigate = use_navigate ();
+function CreatePostPage() {}
+  const navigate = use_navigate ();}
   const { toast } = use_toast ();
   const [search_params] = useSearchParams ();
 ;
   // Get category from URL query params if available;
-  const initial_category = search_params.get ("category") as ForumCategory | null;
+  const initial_category = search_params.get (\"category\") as ForumCategory | null;
 ;
-  const initial_values: Partial < PostFormValues> = {
-    category_id: initial_category || "project - help";
+  const initial_values: Partial < PostFormValues> = {}
+    category_id: initial_category || \"project - help\";}
   }
 ;
   const handle_submit = async (values: PostFormValues) => {
@@ -96,42 +96,42 @@ function CreatePostPage() {
       // Here we would normally save to the database;
       // For now, we'll just simulate a successful post creation;
       // Parse tags into an array;
-      const tags_array = values.tags.split (", ").map (tag => tag.trim ());
+      const tags_array = values.tags.split (\", \").map (tag => tag.trim ());
 ;
       toast ({
-        title: "Post created",
-        description: "Your post has been published successfully";
+        title: \"Post created\",}
+        description: \"Your post has been published successfully\";}
       });
 ;
       // Redirect to the forum category;
       navigate (`/community / category/${values.category_id}`);
     } catch (error) {
       toast ({
-        title: "Error",
-        description: "There was a problem creating your post",
-        variant: "destructive";
+        title: \"Error\",
+        description: \"There was a problem creating your post\",}
+        variant: \"destructive\";}
       });
     }
   }
 ;
   return (
-    <AppLayout>;
+    <AppLayout />;
       <SEO;
-        title="Create New Post | Community Forum | Zion AI Marketplace";
-        description="Create a new discussion post in the Zion AI Marketplace community forum.";
-        keywords="community, forum, discussion, create post, new thread";
+        title=\"Create New Post | Community Forum | Zion AI Marketplace\";
+        description=\"Create a new discussion post in the Zion AI Marketplace community forum.\";
+        keywords=\"community, forum, discussion, create post, new thread\";
       />;
-      <div className="container py-8">;
-        <div className="flex items - center gap - 3 mb-6">;
-          <Link to="/community" className="text - sm text - muted - foreground hover:text-foreground">;
+      <div className=\"container py-8\" />;
+        <div className=\"flex items - center gap - 3 mb-6\" />;
+          <Link to=\"/community\" className=\"text - sm text - muted - foreground hover:text-foreground\" />;
             Forum;
           </Link>;
-          <span className="text - muted-foreground">/</span>;
-          <span className="text - sm font-medium">Create Post</span>;
+          <span className=\"text - muted-foreground\" />/</span>;
+          <span className=\"text - sm font-medium\" />Create Post</span>;
         </div>;
-        <h1 className="text - 3xl font - bold mb-8">Create New Post</h1>;
+        <h1 className=\"text - 3xl font - bold mb-8\" />Create New Post</h1>;
         <PostForm initial_values={initial_values} on_submit={handle_submit} />;
       </div>;
     </AppLayout>);
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662;

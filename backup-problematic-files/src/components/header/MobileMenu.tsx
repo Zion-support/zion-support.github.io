@@ -9,8 +9,8 @@ import { useTranslation } from 'react-i18next',;
 ;
 export interface MobileMenuProps {;
   unreadCount?:number,;
-  onClose:() => void,;
-  openLoginModal:(returnToPath:string) => void, // Added from plan;
+  onClose:() => void,;}
+  openLoginModal:(returnToPath:string) => void, // Added from plan;}
 }
 ;
 // Define protected routes - consistent with ResponsiveNavigation.tsx and middleware.ts;
@@ -26,12 +26,12 @@ const protectedRoutes = [;
 ],;
 ;
 function isProtectedRoute(href:string):boolean {;
-  // Also check against the item's own authRequired flag if present;
-  return protectedRoutes.some(route => href.startsWith(route));
+  // Also check against the item's own authRequired flag if present;}
+  return protectedRoutes.some(route => href.startsWith(route));}
 }
 ;
-export function MobileMenu({ unreadCount = 0, onClose, openLoginModal } MobileMenuProps) {;
-  const router = useRouter(),;
+export function MobileMenu({ unreadCount = 0, onClose, openLoginModal } MobileMenuProps) {;}
+  const router = useRouter(),;}
   const { user } = useAuth(),;
   const isAuthenticated = !!user,;
   const { t } = useTranslation(),;
@@ -39,46 +39,46 @@ export function MobileMenu({ unreadCount = 0, onClose, openLoginModal } MobileMe
   const baseItems = [;
     {;
       key:'home',;
-      href:'/',;
-      icon:Home,;
+      href:'/',;}
+      icon:Home,;}
       matches:(path:string) => path === '/'},;
     {;
       key:'explore',;
       href:'/talent',;
       icon:Search,;
       matches:(path:string) =>;
-        path.startsWith('/talent') ||;
-        path.startsWith('/categories') ||;
+        path.startsWith('/talent') ||;}
+        path.startsWith('/categories') ||;}
         path.startsWith('/marketplace')},;
     {;
       key:'community',;
       href:'/community',;
-      icon:MessageCircle,;
-      matches:(path:string) =>;
+      icon:MessageCircle,;}
+      matches:(path:string) =>;}
         path.startsWith('/community') || path.startsWith('/forum')},;
     {;
       key:'post_job',;
       href:'/post-job',;
-      icon:BriefcaseIcon,;
-      matches:(path:string) => path.startsWith('/post-job'),;
+      icon:BriefcaseIcon,;}
+      matches:(path:string) => path.startsWith('/post-job'),;}
       authRequired:true},;
     {;
       key:'messages',;
       href:'/messages',;
       icon:MessageSquare,;
       matches:(path:string) =>;
-        path.startsWith('/messages') || path.startsWith('/inbox'),;
-      badge:unreadCount,;
+        path.startsWith('/messages') || path.startsWith('/inbox'),;}
+      badge:unreadCount,;}
       authRequired:true},;
     {;
       key:'dashboard',;
       href:'/dashboard',;
-      icon:User,;
-      matches:(path:string) => path.startsWith('/dashboard'),;
+      icon:User,;}
+      matches:(path:string) => path.startsWith('/dashboard'),;}
       authRequired:true}],;
 ;
-  const navItems = baseItems.map((item) => ({;
-    ...item,;
+  const navItems = baseItems.map((item) => ({;}
+    ...item,;}
     name:item.key === 'explore' ? t('general.explore') :t(`nav.${item.key}`)})),;
 ;
   // Filter items based on auth status;
@@ -86,47 +86,48 @@ export function MobileMenu({ unreadCount = 0, onClose, openLoginModal } MobileMe
     (item) => !item.authRequired || (item.authRequired && isAuthenticated)),;
 ;
   return (;
-    <div className="py-6">;
-      <div className="flex justify-between items-center px-6 mb-6">;
-        <h2 className="text-xl font-bold text-foreground">Menu</h2>;
+    <div className=\"py-6\" />;
+      <div className=\"flex justify-between items-center px-6 mb-6\" />;
+        <h2 className=\"text-xl font-bold text-foreground\" />Menu</h2>;
         <Button;
-          variant="ghost";
-          size="icon";
+          variant=\"ghost\";
+          size=\"icon\";
           onClick={onClose}
-          aria-label="Close menu";
-          title="Close menu";
-        >;
-          <X className="h-5 w-5" />;
+          aria-label=\"Close menu\";
+          title=\"Close menu\";
+         />;
+          <X className=\"h-5 w-5\" />;
         </Button>;
       </div>;
 ;
-      <nav className="space-y-1">;
-        {visibleItems.map((item) => (;
-          <Link;
+      <nav className=\"space-y-1\" />;
+        {visibleItems.map((item) => (;}
+          <Link;}
             key={item.name}
             href={item.href}
             aria-label={item.name}
             className={cn(;
               'flex items-center px-6 py-3 text-base font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary',;
-              item.matches(router.pathname);
-                ? 'bg-primary/20 text-primary border-l-4 border-primary';
+              item.matches(router.pathname);}
+                ? 'bg-primary/20 text-primary border-l-4 border-primary';}
                 :'text-foreground hover:bg-primary/10 hover:text-primary')}
-            onClick={(e) => {;
+            onClick={(e) = /> {;
               const routeIsProtected = item.authRequired || isProtectedRoute(item.href),;
               if (!isAuthenticated && routeIsProtected) {;
-                e.preventDefault(),;
-                // Update URL to include returnTo, then open modal;
-                router.push({ pathname:'/auth/login', query:{ returnTo:item.href } }, undefined, { shallow:true }),;
+                e.preventDefault(),;}
+                // Update URL to include returnTo, then open modal;}
+                router.push({ pathname: '/auth/login',}
+  query:{ returnTo:item.href } }, undefined, { shallow:true }),;
                 openLoginModal(item.href),;
                 // It's important to call onClose AFTER openLoginModal if the modal might be part of the same parent that controls menu visibility.;
                 // Or ensure modal is rendered at a higher level. Given AppHeader structure, this should be okay.;              }
               onClose(), // Close mobile menu on any click;
             }}
           >;
-            <div className="relative mr-4">;
-              <item.icon className="h-5 w-5" aria-hidden="true" />;
-              {item.badge && item.badge > 0 && (;
-                <span className="absolute -top-2 -right-2 bg-primary text-primary-foreground text-xs rounded-full h-4 w-4 flex items-center justify-center">;
+            <div className=\"relative mr-4\" />;
+              <item.icon className=\"h-5 w-5\" aria-hidden=\"true\" />;
+              {item.badge && item.badge > 0 && (;}
+                <span className=\"absolute -top-2 -right-2 bg-primary text-primary-foreground text-xs rounded-full h-4 w-4 flex items-center justify-center\" />;}
                   {item.badge > 9 ? '9+' :item.badge}
                 </span>;
               )}
@@ -135,40 +136,46 @@ export function MobileMenu({ unreadCount = 0, onClose, openLoginModal } MobileMe
           </Link>;
         ))}
       </nav>;
-      <div className="mt-6 px-6">;
+      <div className=\"mt-6 px-6\" />;
         <ModeToggle />;
       </div>;
     </div>;
   ),; '/messages', //Already marked as authRequired '/dashboard', //Already marked as authRequired //Add any specific sub-routes if necessary ];
 const baseItems = [ {';
-  key: 'home', href: '/',  icon: Home, matches: (path: string) => path === '/';
-}{';
-  key: 'explore', href: '/talent',  icon: Search, matches: (path: string) => path.startsWith ('/talent') || path.startsWith ('/categories') || path.startsWith ('/marketplace')}{';
-  key: 'community', href: '/community',  icon: MessageCircle, matches: (path: string) => path.startsWith ('/community') || path.startsWith ('/forum')}> <X className="h-5 w-5" /> </Button> </div> <Link key= {item.name ;
-}href= {item.href ;
+  key: 'home',}
+  href: '/',  icon: Home, matches: (path: string) => path === '/';}
+}{';}
+  key: 'explore',
+  href: '/talent',  icon: Search, matches: (path: string) => path.startsWith ('/talent') || path.startsWith ('/categories') || path.startsWith ('/marketplace')}{';}
+  key: 'community',
+  href: '/community',  icon: MessageCircle, matches: (path: string) => path.startsWith ('/community') || path.startsWith ('/forum')}> <X className=\"h-5 w-5\" /> </Button> </div> <Link key= {item.name ;}
+}href= {item.href ;}
 }aria-label= {item.name ;
-  key: 'home', href: '/',  icon: Home, matches: (path: string) => path === '/' 
+  key: 'home',}
+  href: '/',  icon: Home, matches: (path: string) = /> path === '/' }
 };
 {';
-  key: 'explore', href: '/talent',  icon: Search, matches: (path: string) => path.startsWith ('/talent') || path.startsWith ('/categories') || path.startsWith ('/marketplace') 
+  key: 'explore',}
+  href: '/talent',  icon: Search, matches: (path: string) => path.startsWith ('/talent') || path.startsWith ('/categories') || path.startsWith ('/marketplace') }
 };
 {';
-  key: 'community', href: '/community',  icon: MessageCircle, matches: (path: string) => path.startsWith ('/community') || path.startsWith ('/forum') 
+  key: 'community',}
+  href: '/community',  icon: MessageCircle, matches: (path: string) => path.startsWith ('/community') || path.startsWith ('/forum') }
 };
-> <X className="h-5 w-5" /> </Button> </div> <Link key= {;
-  item.name ;
-}href= {;
-  item.href ;
-}aria-label= {;
-  item.name ;
-}className= {';
-  cn ('flex items-center px-6 py-3 text-base font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary',  item.matches (router.pathname) ? 'bg-primary/20 text-primary border-l-4 border-primary' //It's important to call onClose AFTER openLoginModal if the modal might be part of the same parent that controls menu visibility. //Or ensure modal is rendered at a higher level. Given AppHeader structure, this should be okay. ;
+> <X className=\"h-5 w-5\" /> </Button> </div> <Link key= {;}
+  item.name ;}
+}href= {;}
+  item.href ;}
+}aria-label= {;}
+  item.name ;}
+}className= {';}
+  cn ('flex items-center px-6 py-3 text-base font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary',  item.matches (router.pathname) ? 'bg-primary/20 text-primary border-l-4 border-primary' //It's important to call onClose AFTER openLoginModal if the modal might be part of the same parent that controls menu visibility. //Or ensure modal is rendered at a higher level. Given AppHeader structure, this should be okay. ;}
 }onClose (), //Close mobile menu on any click ;
 }
-}> {';
-  item.badge > 9 ? '9+' : item.badge ;
+} /> {';}
+  item.badge > 9 ? '9+' : item.badge ;}
 }</span>) ;
-}</div> {;
-  item.name ;
-}</Link>) ) ";
-}</nav> <div className="mt-6 px-6" > <ModeToggle /> </div> </div>) ;
+}</div> {;}
+  item.name ;}
+}</Link>) ) \";
+}</nav> <div className=\"mt-6 px-6\"  /> <ModeToggle /> </div> </div>) ;

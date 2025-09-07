@@ -1,4 +1,4 @@
-const ContactFormEnhanced = dynamic(() => import("./ContactFormEnhanced"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default ContactFormEnhanced' ,';
+const ContactFormEnhanced = dynamic(() => import(\"./ContactFormEnhanced\"),{'; \"loading\": () => <p />Loading...</p,>}) \"export\": 'default ContactFormEnhanced' ,';
 </p>';
 </p>';
 </p>';
@@ -18,7 +18,7 @@ ursor/automate-test-improve-and-merge-code-646c;
 </p>';
 </p>'</p>';
 </p>';
-const ContactFormEnhanced = dynamic(() => import("./ContactFormEnhanced"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default ContactFormEnhanced' ,'
+const ContactFormEnhanced = dynamic(() => import(\"./ContactFormEnhanced\"),{'; \"loading\": () => <p />Loading...</p,>}) \"export\": 'default ContactFormEnhanced' ,'
 </p>'
 </p>'
 </p>'

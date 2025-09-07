@@ -1,6 +1,6 @@
 import { useFetchResume  } from './useFetchResume';
 import { useResumeActions } from './useResumeActions';
-export function useResumeBasic() {
+export function useResumeBasic() {}
 import {useFetchResume} from './useFetchResume';
 import {useResumeActions} from './useResumeActions';
 export function useResumeBasic() {;
@@ -11,14 +11,14 @@ export function useResumeBasic() {;
     resume: fetchResumeOperations && fetchResumeOperations.resume;
     fetchResume: fetchResumeOperations && fetchResumeOperations.fetchResume;
     // From useResumeActions;
-    createResume: resumeActions && resumeActions.createResume;
-    updateBasicInfo: resumeActions && resumeActions.updateBasicInfo,
+    createResume: resumeActions && resumeActions.createResume;}
+    updateBasicInfo: resumeActions && resumeActions.updateBasicInfo,}
     setActiveResume: resumeActions && resumeActions.setActiveResume}
 }
 import {useFetchResume} from './useFetchResume';
 import {useResumeActions} from './useResumeActions';
 export /**
- * useResumeBasic - Function description
+ * useResumeBasic - Function description;
  */
 function useResumeBasic() {
   const fetchResumeOperations = useFetchResume ();
@@ -32,8 +32,8 @@ function useResumeBasic() {
     fetch_resume: fetchResumeOperations.fetch_resume;
 ;
     // From useResumeActions;
-    create_resume: resume_actions.create_resume;
-    updateBasicInfo: resume_actions.updateBasicInfo,
+    create_resume: resume_actions.create_resume;}
+    updateBasicInfo: resume_actions.updateBasicInfo,}
     setActiveResume: resume_actions.setActiveResume}
 }
 import { useFetchResume } from './useFetchResume';
@@ -51,8 +51,8 @@ export function useResumeBasic() {;
     fetchResume:fetchResumeOperations.fetchResume,;
     ;
     // From useResumeActions;
-    createResume:resumeActions.createResume,;
-    updateBasicInfo:resumeActions.updateBasicInfo,;
+    createResume:resumeActions.createResume,;}
+    updateBasicInfo:resumeActions.updateBasicInfo,;}
     setActiveResume:resumeActions.setActiveResume},;
 } 
 }

@@ -1,5 +1,8 @@
 import type { Metadata } from 'next';
+<<<<<<< HEAD
 import React from 'react';
+=======
+>>>>>>> f9d0b57ad6193b4163a8aad07a352af6ffdf5ac9
 import { Inter } from 'next/font/google';
 import './globals.css';
 
@@ -7,6 +10,7 @@ const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'Zion Tech Group - Leading AI and Technology Solutions',
+<<<<<<< HEAD
   description: 'Zion Tech Group is a leading technology company specializing in AI, autonomous systems, quantum computing, and innovative business solutions. Transform your business with cutting-edge technology.',
   keywords: ['AI', 'artificial intelligence', 'technology', 'innovation', 'quantum computing', 'autonomous systems', 'business solutions', 'zion tech'],
   authors: [{ name: 'Zion Tech Group' }],
@@ -37,6 +41,9 @@ export const metadata: Metadata = {
   },
   viewport: 'width=device-width, initial-scale=1',
   themeColor: '#000000'
+=======
+  description: 'Zion Tech Group is a leading technology company specializing in AI, autonomous systems, quantum computing, and innovative business solutions.',
+>>>>>>> f9d0b57ad6193b4163a8aad07a352af6ffdf5ac9
 };
 
 export default function RootLayout({
@@ -45,12 +52,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
+<<<<<<< HEAD
     <html lang="en" className="scroll-smooth">
       <body className={`${inter.className} bg-black text-white antialiased`}>
         <main className="min-h-screen">
           {children}
         </main>
       </body>
+=======
+    <html lang="en">
+      <body className={inter.className}>{children}</body>
+>>>>>>> f9d0b57ad6193b4163a8aad07a352af6ffdf5ac9
     </html>
   );
 }

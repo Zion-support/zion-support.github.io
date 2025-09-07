@@ -1,79 +1,72 @@
 import React from "react";
 import Head from "next/head";
 import Layout from "../components/layout/Layout";
-import { Satellite, CheckCircle, Globe2 } from "@heroicons/react/24/outline";
+import { Satellite, Rocket, Globe, Shield } from "lucide-react";
 
-const features = [
-  "Mission Control Systems",
-  "Satellite Operations",
-  "Secure Communications",
-  "Earth Observation",
-  "Space Data Analytics",
-  "Mission Planning"
-];
-
-export default function SpaceTech() {
+export default function SpaceTechPage() {
   return (
-  <Layout>
-    <Head>
-      <title>Space Technology | Zion Tech Group</title>
-      <meta
-        name="description"
-        content="Space mission control, satellite operations, and secure communications consulting."
-      />
-      <link rel="canonical" href="https://ziontechgroup.com/space-tech" />
-    </Head>
-    <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto space-y-12">
-        <header className="text-center">
-          <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-r from-cyan-500 to-purple-600 mb-4">
-            <Satellite className="w-8 h-8 text-white" />
-          </div>
-          <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-4">
-            Space Technology
-          </h1>
-          <p className="text-gray-300 text-lg max-w-3xl mx-auto">
-            Secure, reliable operations for space and earth observation
-            missions.
-          </p>
-          <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a href="/contact" className="px-8 py-4">
-              Discuss a Mission
-            </a>
-            <a href="/market-pricing" className="px-8 py-4">
-              See Market Pricing
-            </a>{" "}
-          </div>
-        </header>
+    <Layout>
+      <Head>
+        <title>Space Technology | Zion Tech Group</title>
+        <meta
+          name="description"
+          content="Space mission control, satellite operations, and secure communications consulting."
+        />
+        <link rel="canonical" href="https://ziontechgroup.com/space-tech" />
+      </Head>
+      <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto space-y-12">
+          <header className="text-center">
+            <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-r from-cyan-500 to-purple-600 mb-4">
+              <Satellite className="w-8 h-8 text-white" />
+            </div>
+            <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-4">
+              Space Technology
+            </h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Advanced space mission control, satellite operations, and secure communications consulting for the next generation of space exploration.
+            </p>
+          </header>
 
-        <section>
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">
-            Capabilities
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {features.map((f) => (
-              <div
-                key={f}
-                className="flex items-start gap-3 p-4 rounded-xl bg-black/40 border border-gray-700/60"
-              >
-                <CheckCircle className="w-5 h-5 text-emerald-400 mt-0.5" />
-                <span className="text-gray-200">{f}</span>{" "}
-              </div>
-            ))}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-white p-6 rounded-lg shadow-lg">
+              <div className="text-4xl mb-4">🛰️</div>
+              <h3 className="text-xl font-semibold mb-2">Satellite Operations</h3>
+              <p className="text-gray-600">
+                Comprehensive satellite management and operations services for commercial and government missions.
+              </p>
+            </div>
+            
+            <div className="bg-white p-6 rounded-lg shadow-lg">
+              <div className="text-4xl mb-4">🚀</div>
+              <h3 className="text-xl font-semibold mb-2">Mission Control</h3>
+              <p className="text-gray-600">
+                Advanced mission control systems and real-time monitoring for space operations.
+              </p>
+            </div>
+            
+            <div className="bg-white p-6 rounded-lg shadow-lg">
+              <div className="text-4xl mb-4">🌐</div>
+              <h3 className="text-xl font-semibold mb-2">Secure Communications</h3>
+              <p className="text-gray-600">
+                Encrypted communication systems for space-based operations and data transmission.
+              </p>
+            </div>
           </div>
-        </section>
 
-        <section className="text-center">
-          <a
-            href="/space-technology"
-            className="inline-flex items-center gap-2 text-cyan-300 hover: text-cyan-200"
-          >
-            <Globe2 className="w-4 h-4" />{" "}
-            <span>Explore detailed Space Technology offerings</span>
-          </a>
-        </section>
+          <div className="text-center">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              Ready to Launch Your Space Mission?
+            </h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-8">
+              Contact us to discuss your space technology needs and how we can help you achieve your mission objectives.
+            </p>
+            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+              Contact Us
+            </button>
+          </div>
+        </div>
       </div>
-    </div>
-  </Layout>
+    </Layout>
   );
 }

@@ -1,17 +1,21 @@
-export const useRecordActivity = () => {;
+export const useRecordActivity = (;) => {
+  return $3;}
+}
   const { user } = useAuth();import { useAuth } from '@/hooks/useAuth',
 import { supabase } from '@/integrations/supabase/client',
 import { MilestoneActivity } from './types',
-export const useRecordActivity = () => {
+export const useRecordActivity = (
     milestoneId: string,
     action: string, 
     previousStatus: string | null, 
     newStatus: string,
-    comment?: string
+    comment?: string;
   ) => {
-    if (!user) return null
-    try {
-      const { data, error } = await supabase
+    if (!user) return null;
+try {) => {
+  return $3;}
+}
+      const { data, error } = await supabase;
         .from('milestone_activities')
         .insert({          comment})
         .select(`
@@ -19,11 +23,13 @@ export const useRecordActivity = () => {
           created_by_profile:profiles!user_id(display_name, avatar_url)
         `)    }
   };
-  return {
-    recordMilestoneActivity
+  return {}
+    recordMilestoneActivity;}
 import { supabase } from '@/integrations/supabase/client';
 import { MilestoneActivity } from './types';
-export const useRecordActivity = () => {;
+export const useRecordActivity = (;) => {
+  return $3;}
+}
   const { user } = useAuth(),;
   const recordMilestoneActivity = async (;
     milestoneId: string,;
@@ -32,16 +38,16 @@ export const useRecordActivity = () => {;
     newStatus: string,;
     comment?: string;
   ) => {;
-    if (!user) return null,;
-    try {;
+    if (!user) return null,;}
+    try {;}
       const { data, error } = await supabase;
         .from('milestone_activities');
         .insert({;
           milestone_id: milestoneId,;
           user_id: user.id,;
           action,;
-          previous_status: previousStatus,;
-          new_status: newStatus,;
+          previous_status: previousStatus,;}
+          new_status: newStatus,;}
           comment});
         .select(`;
           *,;
@@ -51,21 +57,21 @@ export const useRecordActivity = () => {;
       if (error) throw error,;
       return data;
     } catch (err: any) {;
-      console.error("Error recording activity:", err),;
-      return null;
+      console.error(\"Error recording activity:\", err),;}
+      return null;}
   }
 }
 };
-  return {;
-    recordMilestoneActivity;
+  return {;}
+    recordMilestoneActivity;}
   }
-  return {
-    recordMilestoneActivity
+  return {}
+    recordMilestoneActivity}
   }
 }
   };
-  return {;
-    recordMilestoneActivity;
+  return {;}
+    recordMilestoneActivity;}
   }
 };
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df;

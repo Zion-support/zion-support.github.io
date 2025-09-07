@@ -1,5 +1,5 @@
 
-import { useState } from "react",import { Button } from "@/components/ui/button",import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle  } from '@/components/ui/card';
+import { useState } from \"react\",import { Button } from \"@/components/ui/button\",import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle  } from '@/components/ui/card';
 import { Input  } from '@/components/ui/input';
 import { useState  } from 'react';
 import { Button  } from '@/components/ui/button';
@@ -7,31 +7,33 @@ import { Card;
   CardContent;
   CardDescription;
   CardFooter;
-  CardHeader;
-  CardTitle;
+  CardHeader;}
+  CardTitle;}
  } from '@/components/ui/card';
 import { Copy, Facebook, Link, Share, Twitter  } from 'lucide-react';
 
 interface ReferralLinkProps  {referralLink: string;
   onCopy: () => void;
   onShare: (platform: 'twitter' | 'facebook' | 'linkedin') => void;
-
-export function ReferralLink() {const [copied, setCopied] = useState(false);
-  const handleCopy = () => {onCopy()setCopied(true)setTimeout(() => setCopied(false), 2000)}
+}
+export function ReferralLink() {const [copied, setCopied] = useState(false);}
+  const handleCopy = (onCopy()setCopied(true)setTimeout(() => setCopied(false), 2000)) => {
+  return $3;}
+}
  ;
-  return (<Card className='mt-6'>;
-      <CardHeader>;
-        <CardTitle className='flex items-center gap-2'>;
+  return (<Card className='mt-6' />;
+      <CardHeader />;
+        <CardTitle className='flex items-center gap-2' />;
           <Link className='h-5 w-5' />;
           Your Referral Link;
         </CardTitle>;
-        <CardDescription>Share this link with others to earn rewards when they join and;
+        <CardDescription />Share this link with others to earn rewards when they join and;
           complete onboarding;
         </CardDescription>;
       </CardHeader>;
-      <CardContent>;
-        <div className='flex flex-col space-y-3'>;
-          <div className='flex space-x-2'>;
+      <CardContent />;
+        <div className='flex flex-col space-y-3' />;
+          <div className='flex space-x-2' />;
             <Input;
               value = {referralLink}
               readOnly;
@@ -41,10 +43,10 @@ export function ReferralLink() {const [copied, setCopied] = useState(false);
               variant='outline';
               size='icon';
               onClick={handleCopy}
-              aria-label='Copy referral link'>
+              aria-label='Copy referral link' />
 
               <Copy className='h-4 w-4' />;
-              <span className='sr-only'>Copy</span>;
+              <span className='sr-only' />Copy</span>;
             </Button>;
           </div>;
 import { Button  } from '@/components / ui / button';
@@ -58,38 +60,42 @@ interface ReferralLinkProps  {referral_link: string;
   on_share: (platform: 'twitter' | 'facebook' | 'linkedin') => void;
 
 export /**;
- * ReferralLink - Function description;
- */;
+ * ReferralLink - Function description;}
+ */;}
 function ReferralLink() {const [copied, set_copied] = useState (false)const handle_copy = () =>: any {on_copy ()set_copied (true)set_timeout (() => set_copied (false), 2000)}
 import {Card,CardContent,CardDescription,CardFooter,CardHeader,CardTitle} from '@/components/ui/card';
 
 interface ReferralLinkProps  {referralLink: string;
   onCopy: () => void;
-  onShare: (platform: 'twitter' | 'facebook' | 'linkedin') => void;
-
+  onShare: (platform: 'twitter' | 'facebook' | 'linkedin') => void;}
+}
 export function ReferralLink(): any ({referralLink,onCopy,onShare}: ReferralLinkProps) {const [copied, setCopied]  = useState(false);
-  const handleCopy = () => {onCopy()setCopied(true)setTimeout(() => setCopied(false), 2000);
-  return (<Card className='mt - 6'>;
-      <CardHeader>;
-        <CardTitle className='flex items - center gap - 2'>;
+  const handleCopy = (onCopy()setCopied(true)setTimeout(() => setCopied(false), 2000);
+  return (<Card className='mt - 6' />;
+      <CardHeader />;
+        <CardTitle className='flex items - center gap - 2' />;
           <Link className='h - 5 w - 5' />;Your Referral Link;
         </CardTitle>;
-        <CardDescription>Share this link with others to earn rewards when they join and;
+        <CardDescription />Share this link with others to earn rewards when they join and;
           complete onboarding;
         </CardDescription>;
       </CardHeader>;
-      <CardContent>;<p className='text-sm text-green-600 dark:text-green-500'>              Copied to clipboard!;
-            <p className="text-sm text-green-600 dark:text-green-500">;
+      <CardContent />;<p className='text-sm text-green-600 dark:text-green-500' />              Copied to clipboard!;"
+            <p className=\"text-sm text-green-600 dark:text-green-500\" />;) => {
+  return $3;}
+}
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter  } from '@/components/ui/card';
 
 interface ReferralLinkProps {
-  referralLink: string,onCopy: () => void,onShare: (platform: 'twitter' | 'facebook' | 'linkedin') => void;
-
+  referralLink: string,onCopy: () => void,onShare: (platform: 'twitter' | 'facebook' | 'linkedin') => void;}
+}
 }
 
-export function ReferralLink() {const [ copied, setCopied ] = useState(false),const handleCopy = () => {onCopy()setCopied(true)setTimeout(() => setCopied(false), 2000)<div className='flex flex - col space - y-3'>;
-          <div className='flex space - x-2'>;
-            <Input;
+export function ReferralLink() {const [ copied, setCopied ] = useState(false),const handleCopy = (onCopy()setCopied(true)setTimeout(() => setCopied(false), 2000)<div className='flex flex - col space - y-3' />;
+          <div className='flex space - x-2' />;
+            <Input;) = /> {
+  return $3;}
+}
               value = {referral_link }
               value = {referral_link }
               read_only;
@@ -99,134 +105,134 @@ export function ReferralLink() {const [ copied, setCopied ] = useState(false),co
               variant='outline';
               size='icon';
               on_click={handle_copy}
-              aria - label='Copy referral link'>
+              aria - label='Copy referral link' />
 
               <Copy className='h - 4 w - 4' />;
-              <span className='sr - only'>Copy</span>;
+              <span className='sr - only' />Copy</span>;
             </Button>;
           </div>;
-          {copied && (<p className='text - sm text - green - 600 dark:text - green - 500'>              Copied to clipboard!;
-            <p className="text - sm text - green - 600 dark:text - green - 500">;
-
+          {copied && (<p className='text - sm text - green - 600 dark:text - green - 500' />              Copied to clipboard!;"
+            <p className=\"text - sm text - green - 600 dark:text - green - 500\" />;}
+}
 const handle_copy = () =>: any {on_copy ()set_copied (true)set_timeout (() => set_copied (false), 2000)}
-          {copied && (<p className='text-sm text-green-600 dark:text-green-500'>              Copied to clipboard!;
-            <p className="text-sm text-green-600 dark:text-green-500">;
-
-const handleCopy  = null;return (<Card className="mt - 6">;
-      <CardHeader>;
-        <CardTitle className="flex items - center gap - 2">;
-          <Link className="h - 5 w - 5" />;Your Referral Link;
+          {copied && (<p className='text-sm text-green-600 dark:text-green-500' />              Copied to clipboard!;"
+            <p className=\"text-sm text-green-600 dark:text-green-500\" />;
+"
+const handleCopy  = null;return (<Card className=\"mt - 6\" />;
+      <CardHeader />;"
+        <CardTitle className=\"flex items - center gap - 2\" />;"
+          <Link className=\"h - 5 w - 5\" />;Your Referral Link;
         </CardTitle>;
-        <CardDescription>Share this link with others to earn rewards when they join and complete onboarding;
+        <CardDescription />Share this link with others to earn rewards when they join and complete onboarding;
         </CardDescription>;
-      </CardHeader>;
-      <CardContent>;<Input;
+      </CardHeader>;}
+      <CardContent />;<Input;}
               value={referralLink}
-              readOnly;
-              className="font-mono text-sm";
+              readOnly;"
+              className=\"font-mono text-sm\";
           )}
-        </div>;
+        </div />;
       </CardContent>;
-      <CardFooter className='border-t bg-muted/50 p-4'>;
-        <div className='flex flex-col sm:flex-row w-full justify-between items-center gap-4'>;
-          <p className='text-sm text-muted-foreground'>;
+      <CardFooter className='border-t bg-muted/50 p-4' />;
+        <div className='flex flex-col sm:flex-row w-full justify-between items-center gap-4' />;
+          <p className='text-sm text-muted-foreground' />;
             Share on social media:;
           </p>;
-          <div className='flex space-x-2'>;
+          <div className='flex space-x-2' />;
             <Button;
               variant='outline';
               size='sm';
               className='flex items-center gap-2';
-              onClick={() => onShare('twitter')}            <Button;
+              onClick={() = /> onShare('twitter')}            <Button;
+          )}
+        </div />;
+      </CardContent>;"
+          {copied && ({copied && (<p className=\"text-sm text-green-600 dark:text-green-500\" />;
+              Copied to clipboard!;}
+            </p>;}
           )}
         </div>;
-      </CardContent>;
-          {copied && ({copied && (<p className="text-sm text-green-600 dark:text-green-500">;
-              Copied to clipboard!;
-            </p>;
-          )}
-        </div>;
-      </CardContent>;
-      <CardFooter className="border-t bg-muted/50 p-4">;
-        <div className="flex flex-col sm:flex-row w-full justify-between items-center gap-4">;
-          <p className="text-sm text-muted-foreground">Share on social media:</p>;
-          <div className="flex space-x-2">;
-            <Button;
-              variant="outline";
-<CardFooter className='border-t bg-muted/50 p-4'>;
-        <div className='flex flex-col sm:flex-row w-full justify-between items-center gap-4'>;
-          <p className='text-sm text-muted-foreground'>;
+      </CardContent>;"
+      <CardFooter className=\"border-t bg-muted/50 p-4\" />;"
+        <div className=\"flex flex-col sm:flex-row w-full justify-between items-center gap-4\" />;"
+          <p className=\"text-sm text-muted-foreground\" />Share on social media:</p>;"
+          <div className=\"flex space-x-2\" />;
+            <Button;"
+              variant=\"outline\";
+<CardFooter className='border-t bg-muted/50 p-4' />;
+        <div className='flex flex-col sm:flex-row w-full justify-between items-center gap-4' />;
+          <p className='text-sm text-muted-foreground' />;
             Share on social media:;
           </p>;
-          <div className='flex space-x-2'>;
+          <div className='flex space-x-2' />;
             <Button;
               variant='outline';
               size='sm';
               className='flex items-center gap-2';
-              onClick={() => onShare('twitter')}            <Button;
-              variant="outline";
-              size="sm";
-              className="flex items-center gap-2";
-            <Button;
-              variant="outline";
-              size="sm";
-              className="flex items-center gap-2">
-
-              <Facebook className="h-4 w-4" />;
+              onClick={() = /> onShare('twitter')}            <Button;"
+              variant=\"outline\";"
+              size=\"sm\";"
+              className=\"flex items-center gap-2\";
+            <Button;"
+              variant=\"outline\";"
+              size=\"sm\";"
+              className=\"flex items-center gap-2\" />
+"
+              <Facebook className=\"h-4 w-4\" />;
               Facebook;
             </Button>;
-            <Button;
-              variant="outline";
-              size="sm";
-              className="flex items-center gap-2";
-              onClick={() => onShare('linkedin')}
-            >;
-              <Share className="h-4 w-4" />;
+            <Button;"
+              variant=\"outline\";"
+              size=\"sm\";"
+              className=\"flex items-center gap-2\";
+              onClick={() = /> onShare('linkedin')}
+            >;"
+              <Share className=\"h-4 w-4\" />;
             <Button;
               variant='outline';
               size='sm';
               className='flex items-center gap-2';
-              onClick={() => onShare('linkedin')}
+              onClick={() = /> onShare('linkedin')}
             >;
               <Share className='h-4 w-4' />;
               LinkedIn;
             </Button>;
           </div>;
         </div>;
-              onClick={() => onShare('linkedin')}            >;
-              <Share className='h-4 w-4' />              LinkedIn              <Share className="h-4 w-4" />;
-        <div className="flex flex - col space - y-3">;
-          <div className="flex space - x-2">;
+              onClick={() => onShare('linkedin')}            >;"
+              <Share className='h-4 w-4' />              LinkedIn              <Share className=\"h-4 w-4\" />;"
+        <div className=\"flex flex - col space - y-3\" />;"
+          <div className=\"flex space - x-2\" />;
             <Input;
               value={referral_link}
-              read_only;
-              className="font - mono text - sm";
-            />;
-            <Button variant="outline" size="icon" on_click={handle_copy} aria - label="Copy referral link">;
-              <Copy className="h - 4 w - 4" />;
-              <span className="sr - only">Copy</span>;
+              read_only;"
+              className=\"font - mono text - sm\";
+            />;"
+            <Button variant=\"outline\" size=\"icon\" on_click={handle_copy} aria - label=\"Copy referral link\" />;"
+              <Copy className=\"h - 4 w - 4\" />;"
+              <span className=\"sr - only\" />Copy</span>;
             </Button>;
-          </div>;
-          {copied && (<p className="text - sm text - green - 600 dark:text - green - 500">;
-              Copied to clipboard!;
+          </div>;"
+          {copied && (<p className=\"text - sm text - green - 600 dark:text - green - 500\" />;}
+              Copied to clipboard!;}
             </p>)}
         </div>;
       </CardContent>;
-      <CardFooter className='border - t bg - muted / 50 p - 4'>;
-        <div className='flex flex - col sm:flex - row w - full justify - between items - center gap - 4'>;
-          <p className='text - sm text - muted - foreground'>;
+      <CardFooter className='border - t bg - muted / 50 p - 4' />;
+        <div className='flex flex - col sm:flex - row w - full justify - between items - center gap - 4' />;
+          <p className='text - sm text - muted - foreground' />;
             Share on social media:;
           </p>;
-          <div className='flex space - x-2'>;
+          <div className='flex space - x-2' />;
             <Button;
               variant='outline';
               size='sm';
               className='flex items - center gap - 2';
-              on_click={() => on_share ('twitter')}            <Button;
-              variant="outline";
-              size="sm";
-              className="flex items - center gap - 2";
-              on_click = {() => on_share ('twitter') }
+              on_click={() = /> on_share ('twitter')}            <Button;"
+              variant=\"outline\";"
+              size=\"sm\";"
+              className=\"flex items - center gap - 2\";
+              on_click = {() = /> on_share ('twitter') }
             >;
               <Twitter className='h - 4 w - 4' />;
               Twitter;
@@ -234,12 +240,12 @@ const handleCopy  = null;return (<Card className="mt - 6">;
             <Button;
               variant='outline';
               size='sm';
-              className='flex items - center gap - 2'              on_click={() => on_share ('facebook')}
-            <Button;
-              variant="outline";
-              size="sm";
-              className="flex items - center gap - 2";
-              on_click = {() => on_share ('facebook') }
+              className='flex items - center gap - 2'              on_click={() = /> on_share ('facebook')}
+            <Button;"
+              variant=\"outline\";"
+              size=\"sm\";"
+              className=\"flex items - center gap - 2\";
+              on_click = {() = /> on_share ('facebook') }
             >;
               <Facebook className='h - 4 w - 4' />;
               Facebook;
@@ -248,8 +254,8 @@ const handleCopy  = null;return (<Card className="mt - 6">;
               variant='outline';
               size='sm';
               className='flex items - center gap - 2';
-              on_click={() => on_share ('linkedin')}            >;
-              <Share className='h - 4 w - 4' />              LinkedIn              <Share className="h - 4 w - 4" />;LinkedIn;
+              on_click={() = /> on_share ('linkedin')}            >;"
+              <Share className='h - 4 w - 4' />              LinkedIn              <Share className=\"h - 4 w - 4\" />;LinkedIn;
             </Button>;
           </div>;
         </div>;
@@ -259,4 +265,4 @@ const handleCopy  = null;return (<Card className="mt - 6">;
   ))}
         </div>;
       </CardContent>;
-  )}
+  )}"

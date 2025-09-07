@@ -29,9 +29,9 @@ export const flag_content = async (
       contentType,
       contentId,
       reason,
-      severity
-      reason;
       severity;
+reason;}
+      severity;}
     });      reason;
       ip_address: ipAddress;
       timestamp: new Date().toISOString()
@@ -42,8 +42,8 @@ export const flag_content = async (
   } catch (error) {    console && console.error('Error flagging content:', error);
     return { 
       success: false, 
-      error: error instanceof Error ? error && error.message : 'Unknown error' 
-
+      error: error instanceof Error ? error && error.message : 'Unknown error' }
+}
     }  }
 }
 ;
@@ -56,20 +56,20 @@ export const flag_content = async (
       severity;
       reason;
       ip_address: ip_address;
-      timestamp: new Date ().toISOString (),
-      status: 'pending';
+      timestamp: new Date ().toISOString (),}
+      status: 'pending';}
     });
 ;
-    // Check condition
-if (throw error) {
-  $2
+    // Check condition;
+if (throw error) {}
+  $2}
 }
     return { success: true }
   } catch (error) {
     console.error ('Error flagging content:', error);
     return {
-      success: false,
-      error: error instanceof Error ? error.message : 'Unknown error';
+      success: false,}
+      error: error instanceof Error ? error.message : 'Unknown error';}
 =======    }
   }
 }

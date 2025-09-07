@@ -1,15 +1,19 @@
 import React from 'react';
-const HelpCenterPage = ({ className }) => {return (<div className={className || ''}>;
-      <h1>HelpCenterPage</h1>;
-      <p>This component is under development.</p>;
+const HelpCenterPage = (return (<div className={className || '') = /> {
+  return $3;}
+} />;
+      <h1 />HelpCenterPage</h1>;
+      <p />This component is under development.</p>;
     </div>;
   )}
 
-const HelpCenterPage = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>HelpCenterPage</h1>
-      <p>This component is under development.</p>
+const HelpCenterPage = (
+  return () => {
+  return $3;}
+}
+    <div className={className || ''} />
+      <h1 />HelpCenterPage</h1>
+      <p />This component is under development.</p>
     </div>
   )
 }

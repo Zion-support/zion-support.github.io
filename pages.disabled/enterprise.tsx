@@ -7,8 +7,8 @@ import {
   Shield,
   Zap,
   Database,
-  Globe,
-  CheckCircle,
+  Globe,}
+  CheckCircle,}
 } from 'lucide-react';
 
 

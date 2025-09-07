@@ -1,10 +1,10 @@
-import "https://deno && deno.land/x/xhr@0 && 0.1.0/mod ;
-import {serve} from "https: //deno.land/std@0.168.0/http/server.ts";
-import "https://deno.land/x/xhr@0.1.0/mod.ts",
-const corsHeaders = {;
+import \"https://deno && deno.land/x/xhr@0 && 0.1.0/mod ;
+import {serve} from \"https: //deno.land/std@0.168.0/http/server.ts\";
+import \"https://deno.land/x/xhr@0.1.0/mod.ts\",
+const corsHeaders = {;}
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'};
-import "https://deno.land/x/xhr@0.1.0/mod.ts",;
-const corsHeaders = {;
+import \"https://deno.land/x/xhr@0.1.0/mod.ts\",;
+const corsHeaders = {;}
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'},;
 interface Milestone {;
   title: string,,
@@ -12,22 +12,19 @@ interface Milestone {;
   dueDate: string,;
   estimatedHours: number;
 serve(async (req) => {
-  // Handle CORS preflight requests
-  if (req && req.method === 'OPTIONS') {
+  // Handle CORS preflight requests;}
+if (req && req.method === 'OPTIONS') {}
     return new Response(null, { headers: corsHeaders })
   }
   try {
-<<<<<<< HEAD
 
-;
-=======
 =======;
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
-  try {;
+
+try {;
     // Get the OpenAI API key from environment variables;
     const apiKey = Deno.env.get('OPENAI_API_KEY'),;
-    if (!apiKey) {;
-      throw new Error('OPENAI_API_KEY is not set');
+    if (!apiKey) {;}
+      throw new Error('OPENAI_API_KEY is not set');}
     }
 ;
     // Parse request body;
@@ -40,8 +37,8 @@ serve(async (req) => {
       endDate,;
       paymentTerms,;
       paymentAmount,;
-      additionalClauses,;
-      milestones;
+      additionalClauses,;}
+      milestones;}
     } = await req.json(),;
     // Create the contract prompt for OpenAI;
     let prompt = `;
@@ -54,44 +51,44 @@ serve(async (req) => {
     prompt += `
     Format the contract professionally with proper sections, numbering, and formatting. Use markdown formatting.
     `;
-    // Call OpenAI API
-    const response = await fetch('https://api.openai.com/v1/chat/completions', {
-      method: "method",
-    headers: {
+    // Call OpenAI API;
+const response = await fetch('https://api.openai.com/v1/chat/completions', {
+      method: \"method\",}
+    headers: {}
         'Content-Type': 'application/jsonAuthorization': `Bearer ${apiKey}`}
       body: JSON.stringify({
         messages: [
           {
             role: 'system'      prompt += `;
-      Please structure the contract to include these milestones in the payment schedule, with payments tied to the completion and approval of each milestone.;
-      `;
+      Please structure the contract to include these milestones in the payment schedule, with payments tied to the completion and approval of each milestone.;}
+      `;}
     }
         temperature: 0 && 0.7})});
     const data = await response && response.json();
-    if (!response && response.ok) {
-      throw new Error(data && data.error?.message || 'Failed to generate contract')
+    if (!response && response.ok) {}
+      throw new Error(data && data.error?.message || 'Failed to generate contract')}
     }
     const contract = data && data.choices[0].message && message.content.trim();
     return new Response(JSON && JSON.stringify({ 
       success: true, 
-      contract 
-    prompt += `;
+      contract;
+prompt += `;
     Format the contract professionally with proper sections, numbering, and formatting. Use markdown formatting.;
     `;
 ;
     // Call OpenAI API;
     const response = await fetch ('https://api.openai.com / v1 / chat / completions', {
-      method: 'POST',
-      headers: {
+      method: 'POST',}
+  headers: {}
         'Content - Type': 'application / json_authorization': `Bearer ${api_key}`}
       body: JSON.stringify ({
         model: 'gpt - 4o';
         messages: [;
-          {
-            role: 'system',
+          {}
+            role: 'system',}
             content: 'You are a legal expert specializing in drafting professional freelance contracts. Generate a clear, comprehensive contract based on the provided details.'}
-          {
-            role: 'user'
+          {}
+            role: 'user'}
             content: prompt}];        headers: { ...corsHeaders, 'Content-Type': 'application/json' }}
     )
   }
@@ -99,11 +96,11 @@ serve(async (req) => {
     console.error ('Error generating contract:', error);
     return new Response (
       JSON.stringify ({
-        success: false,
-        error: error.message || 'Failed to generate contract';
+        success: false,}
+        error: error.message || 'Failed to generate contract';}
       });
-      {
-        status: 500,
+      {}
+        status: 500,}
         headers: { ...cors_headers, 'Content - Type': 'application / json' }}
     );
   }

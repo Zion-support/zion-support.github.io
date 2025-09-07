@@ -1,1 +1,19 @@
+<<<<<<< HEAD
 {"/_document":"pages/_document.js","/":"pages/index.html","/_app":"pages/_app.js","/_error":"pages/_error.js","/404":"pages/404.html"}
+=======
+{
+  "/_app": "pages/_app.js",
+  "/_error": "pages/_error.js",
+  "/ai-services": "pages/ai-services.js",
+  "/deploy/genesis": "pages/deploy/genesis.js",
+  "/design-map": "pages/design-map.js",
+  "/governance/global-outreach": "pages/governance/global-outreach.js",
+  "/privacy": "pages/privacy.js",
+  "/pricing": "pages/pricing.js",
+  "/space-tech": "pages/space-tech.js",
+  "/summit": "pages/summit.js",
+  "/team": "pages/team.js",
+  "/zion-global-2025": "pages/zion-global-2025.js",
+  "/_document": "pages/_document.js"
+}
+>>>>>>> f9d0b57ad6193b4163a8aad07a352af6ffdf5ac9

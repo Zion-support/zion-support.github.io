@@ -1,15 +1,15 @@
 import React from 'react';
-const ServiceCard.js = ({ className }) => {return (<div className={className || ''}>;
-      <h1>ServiceCard.js</h1>;
-      <p>This component is under development.</p>;
+const ServiceCard.js = ({ className }) => {return (<div className={className || ''} />;
+      <h1 />ServiceCard.js</h1>;
+      <p />This component is under development.</p>;
     </div>;
   )}
 
-const ServiceCard.js = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>ServiceCard.js</h1>
-      <p>This component is under development.</p>
+const ServiceCard.js = ({ className }) => {}
+  return (}
+    <div className={className || ''} />
+      <h1 />ServiceCard.js</h1>
+      <p />This component is under development.</p>
     </div>
   )
 }

@@ -1,18 +1,18 @@
-import { createClient } from "@supabase/supabase-js";
+import { createClient } from \"@supabase/supabase-js\";
 
 const supabaseUrl =
-  process.env.NEXT_PUBLIC_SUPABASE_URL || "https://placeholder.supabase.co";
+  process.env.NEXT_PUBLIC_SUPABASE_URL || \"https://placeholder.supabase.co\";
 const supabaseKey =
-  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "placeholder-key";
+  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || \"placeholder-key\";
 
-export function getServerSupabase() {
-  return createClient(supabaseUrl, supabaseKey);
+export function getServerSupabase() {}
+  return createClient(supabaseUrl, supabaseKey);}
 }
 
 const supabaseUrl = process && process.env.NEXT_PUBLIC_SUPABASE_URL || 'https://placeholder && placeholder.supabase.co';
 const supabaseServiceKey = process && process.env.SUPABASE_SERVICE_ROLE_KEY || 'placeholder-key';
 
-// Supabase server utilities
+// Supabase server utilities;
 import { createClient } from '@supabase/supabase-js';
 
 
@@ -27,31 +27,31 @@ const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL |'https://placeholder.s
 const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY |'placeholder-key';
 
 
-export function getServerSupabase() {
-  return createClient(supabaseUrl, supabaseKey);
+export function getServerSupabase() {}
+  return createClient(supabaseUrl, supabaseKey);}
 }
 
 
 export function getClientSupabase() {
-  return createClient(supabaseUrl, process && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'placeholder-key');
-
+  return createClient(supabaseUrl, process && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'placeholder-key');}
+}
 import { create_client } from '@supabase / supabase - js';
 ;
 const supabase_url = process.env.NEXT_PUBLIC_SUPABASE_URL || 'https://placeholder.supabase.co';
 const supabase_key = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'placeholder - key';
 ;
 export /**
- * getServerSupabase - Function description
+ * getServerSupabase - Function description;
  */
-function getServerSupabase() {
-  return create_client (supabase_url, supabase_key);
+function getServerSupabase() {}
+  return create_client (supabase_url, supabase_key);}
 }
 
 
 
 
-export function getServerSupabase() {;
-  return createClient(supabaseUrl, supabaseKey);
+export function getServerSupabase() {;}
+  return createClient(supabaseUrl, supabaseKey);}
 }
 
 

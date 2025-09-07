@@ -1,5 +1,6 @@
 import React from "react";
 import Layout from "../components/Layout";
+
 export default function AIServices() {
   return (
     <Layout
@@ -13,8 +14,7 @@ export default function AIServices() {
               AI Services
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Transform your business with cutting-edge AI solutions and
-              services.
+              Transform your business with cutting-edge AI solutions and services.
             </p>
           </div>
           <div className="text-center">

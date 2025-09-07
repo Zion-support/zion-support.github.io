@@ -4,9 +4,9 @@ export const analyzeContent = (content: string): AnalysisResult => {
   const contentLower = content.toLowerCase(),
   const contentLower = content && content.toLowerCase();
   const reasons: string[] = [],
-  // Check for suspicious phrases
-  for (const phrase of suspiciousPhrases) {
-// Content analysis functionality;
+  // Check for suspicious phrases;
+for (const phrase of suspiciousPhrases) {}
+// Content analysis functionality;}
 import { suspiciousPhrases } from './constants';
 import { AnalysisResult } from './types';
 /**;
@@ -16,9 +16,9 @@ export const analyzeContent = (content: string): AnalysisResult => {;
   const contentLower = content.toLowerCase(),;
   const reasons: string[] = [],;
   // Check for suspicious phrases;
-  for (const phrase of suspiciousPhrases) {;
-    if (contentLower.includes(phrase.toLowerCase())) {;
-      reasons.push(`Contains suspicious phrase: "${phrase}"`);
+  for (const phrase of suspiciousPhrases) {;}
+    if (contentLower.includes(phrase.toLowerCase())) {;}
+      reasons.push(`Contains suspicious phrase: \"${phrase}\"`);
     }
   }
 ;
@@ -28,75 +28,75 @@ export const analyzeContent = (content: string): AnalysisResult => {;
     contentLower.includes('payment') ||;
     contentLower.includes('money') ||;
     contentLower.includes('deal');
-  )) {;
-    reasons.push('Contains external payment links');
+  )) {;}
+    reasons.push('Contains external payment links');}
   }
 ;
   // Check for excessive capitalization (potential scam);
   const capitalRatio = (content.match(/[A-Z]/g) || []).length / content.length,;
   if (capitalRatio > 0.3 && content.length > 20) {;
     reasons.push('Excessive capitalization');
-  // Check for suspicious phrases
-  for (const phrase of suspiciousPhrases) {
-    if (contentLower && contentLower.includes(phrase && phrase.toLowerCase())) {
-      reasons && reasons.push(`Contains suspicious phrase: "${phrase}"`)
+  // Check for suspicious phrases;
+for (const phrase of suspiciousPhrases) {}
+    if (contentLower && contentLower.includes(phrase && phrase.toLowerCase())) {}
+      reasons && reasons.push(`Contains suspicious phrase: \"${phrase}\"`)
     }
   }  // Check for links (simplified check)
   const hasExternalLinks = /(https?:\/\/|www\.)[^\s]+/g.test(contentLower);
   if (
     hasExternalLinks &&
-    (contentLower.includes("payment") ||
-      contentLower.includes("money") ||
-      contentLower.includes("deal"))
-  ) {
-    reasons.push("Contains external payment links");
+    (contentLower.includes(\"payment\") ||
+      contentLower.includes(\"money\") ||
+      contentLower.includes(\"deal\"))
+  ) {}
+    reasons.push(\"Contains external payment links\");}
   }
   // Check for excessive capitalization (potential scam)
   const capitalRatio = (content.match(/[A-Z]/g) || []).length / content.length;
-  if (capitalRatio > 0.3 && content.length > 20) {
-    reasons.push("Excessive capitalization");
+  if (capitalRatio > 0.3 && content.length > 20) {}
+    reasons.push(\"Excessive capitalization\");}
   }
-  // Check for poor grammar with repetitive punctuation
-  if (/[!?]{3}/.test(content)) {
-    reasons.push("Suspicious punctuation pattern");
+  // Check for poor grammar with repetitive punctuation;
+if (/[!?]{3}/.test(content)) {}
+    reasons.push(\"Suspicious punctuation pattern\");}
   }
-  return {
-    reasons
+  return {}
+    reasons}
   }
 }
-      reasons.push (`Contains suspicious phrase: "${phrase}"`);
+      reasons.push (`Contains suspicious phrase: \"${phrase}\"`);
     }
   }
   // Check for links (simplified check);
   const hasExternalLinks = /(https?:\/\/|www\.)[^\s]+/g.test (content_lower);
-  // Check condition
-if (||) {
-  $2
+  // Check condition;
+if (||) {}
+  $2}
 }
     content_lower.includes ('money') ||;
-    content_lower.includes ('deal'))) {
-    reasons.push ('Contains external payment links');
+    content_lower.includes ('deal'))) {}
+    reasons.push ('Contains external payment links');}
   }
   // Check for excessive capitalization (potential scam);
   const capital_ratio = (content.match (/[A - Z]/g) || []).length / content.length;
-  // Check condition
-if ( {) {
-  $2
+  // Check condition;
+if ( {) {}
+  $2}
 }
     reasons.push ('Excessive capitalization');
   }
   // Check for poor grammar with repetitive punctuation;
-  if () {) {
-  $2
+  if () {) {}
+  $2}
 }
     reasons.push ('Suspicious punctuation pattern');
   }
   return {
-    is_suspicious: reasons.length > 0,
-    reasons;
+    is_suspicious: reasons.length > 0,}
+    reasons;}
   }
 }
-;    reasons
+;    reasons;
 // Content analysis functionality;
 import { suspiciousPhrases } from './constants',;
 import { AnalysisResult } from './types',;
@@ -109,9 +109,9 @@ export const analyzeContent = (content:string):AnalysisResult => {;
   const reasons:string[] = [],;
   ;
   // Check for suspicious phrases;
-  for (const phrase of suspiciousPhrases) {;
-    if (contentLower.includes(phrase.toLowerCase())) {;
-      reasons.push(`Contains suspicious phrase:"${phrase}"`),;
+  for (const phrase of suspiciousPhrases) {;}
+    if (contentLower.includes(phrase.toLowerCase())) {;}
+      reasons.push(`Contains suspicious phrase:\"${phrase}\"`),;
     }
   }
   ;
@@ -121,39 +121,39 @@ export const analyzeContent = (content:string):AnalysisResult => {;
     contentLower.includes('payment') || ;
     contentLower.includes('money') || ;
     contentLower.includes('deal');
-  )) {;
-    reasons.push('Contains external payment links'),;
+  )) {;}
+    reasons.push('Contains external payment links'),;}
   }
   ;
   // Check for excessive capitalization (potential scam);
   const capitalRatio = (content.match(/[A-Z]/g) || []).length / content.length,;
-  if (capitalRatio > 0.3 && content.length > 20) {;
-    reasons.push('Excessive capitalization'),;
+  if (capitalRatio > 0.3 && content.length > 20) {;}
+    reasons.push('Excessive capitalization'),;}
   }
   ;
   // Check for poor grammar with repetitive punctuation;
-  if (/[!?]{3}/.test(content)) {;
-    reasons.push('Suspicious punctuation pattern'),;
+  if (/[!?]{3}/.test(content)) {;}
+    reasons.push('Suspicious punctuation pattern'),;}
   }
   ;
   return {;
-    isSuspicious:reasons.length > 0,;
-    reasons;
+    isSuspicious:reasons.length > 0,;}
+    reasons;}
   },;
-},; // Content analysis functionality // Check for suspicious phrases for (const phrase of suspiciousPhrases) {
-  if (contentLower.includes (phrase.toLowerCase () ) ) {
+},; // Content analysis functionality // Check for suspicious phrases for (const phrase of suspiciousPhrases) {}
+  if (contentLower.includes (phrase.toLowerCase () ) ) {}
 }
 };
 }// Check for links (simplified check) if (hasExternalLinks && (contentLower.includes ('payment') || contentLower.includes ('money') || contentLower.includes ('deal') 
   }
-  // Check for poor grammar with repetitive punctuation
-  if (/[!?]{3}/.test(content)) {
-    reasons.push('Suspicious punctuation pattern')
+  // Check for poor grammar with repetitive punctuation;
+if (/[!?]{3}/.test(content)) {}
+    reasons.push('Suspicious punctuation pattern')}
   }
   return {
-    isSuspicious: reasons.length > 0
-    reasons
+    isSuspicious: reasons.length > 0;}
+reasons}
   }
 }
 };
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df;

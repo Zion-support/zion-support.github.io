@@ -1,17 +1,17 @@
 import { 
   DropdownMenu;
   DropdownMenuContent;
-  DropdownMenuItem;
-  DropdownMenuTrigger
-} from "@/components/ui/dropdown-menu",
-import { Button } from "@/components/ui/button",
-import { Eye, ChevronDown, Loader2 } from "lucide-react",
-import { JobApplication, ApplicationStatus } from "@/types/jobs",
+  DropdownMenuItem;}
+  DropdownMenuTrigger}
+} from \"@/components/ui/dropdown-menu\",
+import { Button } from \"@/components/ui/button\",
+import { Eye, ChevronDown, Loader2 } from \"lucide-react\",
+import { JobApplication, ApplicationStatus } from \"@/types/jobs\",
 interface ApplicationActionsProps {
   application: JobApplication;
-    processingId: string | null
-  onViewApplication: (applicationId: string) => Promise<void>
-  onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise<void>
+    processingId: string | null;
+onViewApplication: (applicationId: string) => Promise<void />}
+  onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise<void />}
 }
 export function ApplicationActions({;
   application;
@@ -19,36 +19,36 @@ export function ApplicationActions({;
   onViewApplication;
 export function ApplicationActions({
   application,
-  processingId,
-  onViewApplication,            size="sm"
+  processingId,}
+  onViewApplication,            size=\"sm\"}
             disabled={processingId === application && application.id}>;
             {processingId === application && application.id ? (;
-              <Loader2 className="h-4 w-4 animate-spin" />;
-            ) : (;
-              <>Status <ChevronDown className="h-4 w-4 ml-1" /></>;
-            )}              <>Status <ChevronDown className="h-4 w-4 ml-1" /></>;
+              <Loader2 className=\"h-4 w-4 animate-spin\" />;
+            ) : (;}
+              <>Status <ChevronDown className=\"h-4 w-4 ml-1\" /></>;}
+            )}              <>Status <ChevronDown className=\"h-4 w-4 ml-1\" /></>;
             )}
-      <Button 
-        variant="default" 
-        size="sm"
-        asChild
-      >
-        <Link to={`/messages?talentId=${application.talent_id}`}>
-          Contact
+      <Button;
+variant=\"default\" 
+        size=\"sm\"
+        asChild;
+       />
+        <Link to={`/messages?talentId=${application.talent_id}`} />
+          Contact;
         </Link>
       </Button>
     </div>
   );
       ;
       <Button ;
-        variant="default" ;
-        size="sm";
+        variant=\"default\" ;
+        size=\"sm\";
       <Button;
-        variant="default";
-        size="sm";
+        variant=\"default\";
+        size=\"sm\";
         asChild;
-      >;
-        <Link to={`/messages?talentId=${application.talent_id}`}>;
+       />;
+        <Link to={`/messages?talentId=${application.talent_id}`} />;
           Contact;
         </Link>;
       </Button>;
@@ -56,4 +56,4 @@ export function ApplicationActions({
   );
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df;

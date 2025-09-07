@@ -1,189 +1,70 @@
 {
-
-
-
-  "timestamp": "2025-09-06T17:31:43.872Z",
-  "duration": "46s",
+  "timestamp": "2025-09-07T02:51:20.034Z",
+  "duration": 9764,
+  "summary": {
+    "successful": 1,
+    "errors": 8,
+    "warnings": 0
+  },
   "results": {
-    "syntaxFixes": 0,
-    "buildSuccess": true,
-    "testsPassed": 0,
-    "optimizations": 0,
+    "success": [
+      "Pre-automation checks passed"
+    ],
     "errors": [
       {
-        "command": "npm run lint:fix",
-        "description": "ESLint Auto-fix",
-        "error": "spawnSync /bin/sh ETIMEDOUT"
+        "script": "scripts/comprehensive-error-fixer.cjs",
+        "category": "error-fixing",
+        "error": "Command failed: node scripts/comprehensive-error-fixer.cjs\nError fixing failed: Error: ENOENT: no such file or directory, stat '/workspace/media/docu-script/requirements.txt'\n    at Object.statSync (node:fs:1740:25)\n    at scanDirectory (/workspace/scripts/comprehensive-error-fixer.cjs:86:25)\n    at scanDirectory (/workspace/scripts/comprehensive-error-fixer.cjs:91:13)\n    at scanDirectory (/workspace/scripts/comprehensive-error-fixer.cjs:91:13)\n    at ComprehensiveErrorFixer.getAllJSFiles (/workspace/scripts/comprehensive-error-fixer.cjs:99:5)\n    at ComprehensiveErrorFixer.fixSyntaxErrors (/workspace/scripts/comprehensive-error-fixer.cjs:26:24)\n    at ComprehensiveErrorFixer.run (/workspace/scripts/comprehensive-error-fixer.cjs:157:18)\n    at Object.<anonymous> (/workspace/scripts/comprehensive-error-fixer.cjs:177:9)\n    at Module._compile (node:internal/modules/cjs/loader:1730:14)\n    at Object..js (node:internal/modules/cjs/loader:1895:10) {\n  errno: -2,\n  code: 'ENOENT',\n  syscall: 'stat',\n  path: '/workspace/media/docu-script/requirements.txt'\n}\n"
       },
       {
-        "command": "npm run format",
-        "description": "Prettier Code Formatting",
+        "script": "scripts/auto-fixer.js",
+        "category": "error-fixing",
+        "error": "Command failed: node scripts/auto-fixer.js\nfile:///workspace/scripts/auto-fixer.js:3\n#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { execSync } from 'child_process'; import { fileURLToPath } from 'url';\n^\n\nSyntaxError: Invalid or unexpected token\n    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)\n    at #translate (node:internal/modules/esm/loader:534:12)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)\n    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)\n\nNode.js v22.16.0\n"
+      },
+      {
+        "script": "scripts/advanced-build-optimizer.js",
+        "category": "build-optimization",
+        "error": "Command failed: node scripts/advanced-build-optimizer.js\nfile:///workspace/scripts/advanced-build-optimizer.js:3\nursor/integrate-build-improve-and-re-verify-8f7d;\n                                            ^\n\nSyntaxError: Invalid or unexpected token\n    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)\n    at #translate (node:internal/modules/esm/loader:534:12)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)\n    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)\n\nNode.js v22.16.0\n"
+      },
+      {
+        "script": "scripts/performance-monitor-enhanced.js",
+        "category": "performance-monitoring",
+        "error": "Command failed: node scripts/performance-monitor-enhanced.js\nfile:///workspace/scripts/performance-monitor-enhanced.js:3\nursor/fix-syntax-push-and-merge-to-main-40de;\n                                        ^^\n\nSyntaxError: Invalid or unexpected token\n    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)\n    at #translate (node:internal/modules/esm/loader:534:12)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)\n    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)\n\nNode.js v22.16.0\n"
+      },
+      {
+        "script": "scripts/performance-optimizer.js",
+        "category": "performance-monitoring",
+        "error": "Command failed: node scripts/performance-optimizer.js\nfile:///workspace/scripts/performance-optimizer.js:2\nconst fs = require('fs');\n           ^\n\nReferenceError: require is not defined in ES module scope, you can use import instead\nThis file is being treated as an ES module because it has a '.js' file extension and '/workspace/package.json' contains \"type\": \"module\". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.\n    at file:///workspace/scripts/performance-optimizer.js:2:12\n    at ModuleJob.run (node:internal/modules/esm/module_job:274:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:117:5)\n\nNode.js v22.16.0\n"
+      },
+      {
+        "check": "ESLint",
+        "error": "Command failed: npm run lint\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n"
+      },
+      {
+        "check": "TypeScript",
         "error": "spawnSync /bin/sh ENOBUFS"
       },
       {
-        "command": "npm run type-check",
-        "description": "TypeScript Type Checking",
-        "error": "spawnSync /bin/sh ENOBUFS"
-      },
-      {
-        "command": "npm run test:smoke",
-        "description": "Smoke Tests",
-        "error": "Command failed: npm run test:smoke\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nSyntaxError: Unexpected token '}'\n    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)\n    at #translate (node:internal/modules/esm/loader:534:12)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)\n    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)\n"
-      },
-      {
-        "command": "npm test -- --passWithNoTests",
-        "description": "Jest Tests",
-        "error": "Command failed: npm test -- --passWithNoTests\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nSyntaxError: Unexpected token '}'\n    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)\n    at #translate (node:internal/modules/esm/loader:534:12)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)\n    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)\n"
+        "check": "Build",
+        "error": "Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nFailed to compile.\n\napp/layout.tsx\nAn error occurred in `next/font`.\n\nSyntaxError: Unexpected token ','\n    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)\n    at #translate (node:internal/modules/esm/loader:534:12)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)\n    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)\n\n./components/Layout.tsx\nError:   \u001b[31mx\u001b[0m Expression expected\n   ,-[\u001b[36;1;4m/workspace/components/Layout.tsx\u001b[0m:2:1]\n \u001b[2m1\u001b[0m | \n \u001b[2m2\u001b[0m | }export default function Layout() {class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}\n   : \u001b[35;1m^\u001b[0m\n \u001b[2m3\u001b[0m |   static getDerivedStateFromError(error) {return { hasError: true }}\n \u001b[2m4\u001b[0m |   componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}\n \u001b[2m5\u001b[0m |   render() {if (this.state.hasError) {return <div />Something went wrong.</div>;}\n   `----\n\nCaused by:\n    Syntax Error\n\nImport trace for requested module:\n./components/Layout.tsx\n./pages/summit.tsx\n\n./pages/ai-services.tsx\nError:   \u001b[31mx\u001b[0m Unterminated string constant\n   ,-[\u001b[36;1;4m/workspace/pages/ai-services.tsx\u001b[0m:1:1]\n \u001b[2m1\u001b[0m | import React from \\\"react\\\";\n   : \u001b[35;1m                   ^^^^^^^^^\u001b[0m\n \u001b[2m2\u001b[0m | import Layout from \\\"../components/Layout\\\";\n \u001b[2m3\u001b[0m | export default function AIServices() {\n \u001b[2m4\u001b[0m |   return (\n   `----\n  \u001b[31mx\u001b[0m Expected unicode escape\n   ,-[\u001b[36;1;4m/workspace/pages/ai-services.tsx\u001b[0m:1:1]\n \u001b[2m1\u001b[0m | import React from \\\"react\\\";\n   : \u001b[35;1m                  ^\u001b[0m\n \u001b[2m2\u001b[0m | import Layout from \\\"../components/Layout\\\";\n \u001b[2m3\u001b[0m | export default function AIServices() {\n \u001b[2m4\u001b[0m |   return (\n   `----\n  \u001b[31mx\u001b[0m Unexpected token `<lexing error: Error { error: (19..19, ExpectedUnicodeEscape) }>`. Expected a string literal\n   ,-[\u001b[36;1;4m/workspace/pages/ai-services.tsx\u001b[0m:1:1]\n \u001b[2m1\u001b[0m | import React from \\\"react\\\";\n   : \u001b[35;1m                  ^\u001b[0m\n \u001b[2m2\u001b[0m | import Layout from \\\"../components/Layout\\\";\n \u001b[2m3\u001b[0m | export default function AIServices() {\n \u001b[2m4\u001b[0m |   return (\n   `----\n\nCaused by:\n    Syntax Error\n\nImport trace for requested module:\n./pages/ai-services.tsx\n\n./pages/deploy/genesis.tsx\nError:   \u001b[31mx\u001b[0m Expected unicode escape\n   ,-[\u001b[36;1;4m/workspace/pages/deploy/genesis.tsx\u001b[0m:1:1]\n \u001b[2m1\u001b[0m | export { default } from \\\"../zion/init\\\";\"\n   : \u001b[35;1m                        ^\u001b[0m\n \u001b[2m2\u001b[0m | \"\n   `----\n  \u001b[31mx\u001b[0m Unexpected token `<lexing error: Error { error: (25..25, ExpectedUnicodeEscape) }>`. Expected a string literal\n   ,-[\u001b[36;1;4m/workspace/pages/deploy/genesis.tsx\u001b[0m:1:1]\n \u001b[2m1\u001b[0m | export { default } from \\\"../zion/init\\\";\"\n   : \u001b[35;1m                        ^\u001b[0m\n \u001b[2m2\u001b[0m | \"\n   `----\n\nCaused by:\n    Syntax Error\n\nImport trace for requested module:\n./pages/deploy/genesis.tsx\n\n./pages/design-map.tsx\nError:   \u001b[31mx\u001b[0m Unterminated string constant\n   ,-[\u001b[36;1;4m/workspace/pages/design-map.tsx\u001b[0m:1:1]\n \u001b[2m1\u001b[0m | import React, { useMemo, useState } from \\\"react\\\";\n   : \u001b[35;1m                                          ^^^^^^^^^\u001b[0m\n \u001b[2m2\u001b[0m | import Head from \\\"next/head\\\";\n \u001b[2m3\u001b[0m | import { getZionDesignMap } from \\\"../utils/design-map\\\";\n \u001b[2m4\u001b[0m | export default function DesignMapPage() {\n   `----\n  \u001b[31mx\u001b[0m Expected unicode escape\n   ,-[\u001b[36;1;4m/workspace/pages/design-map.tsx\u001b[0m:1:1]\n \u001b[2m1\u001b[0m | import React, { useMemo, useState } from \\\"react\\\";\n   : \u001b[35;1m                                         ^\u001b[0m\n \u001b[2m2\u001b[0m | import Head from \\\"next/head\\\";\n \u001b[2m3\u001b[0m | import { getZionDesignMap } from \\\"../utils/design-map\\\";\n \u001b[2m4\u001b[0m | export default function DesignMapPage() {\n   `----\n  \u001b[31mx\u001b[0m Unexpected token `<lexing error: Error { error: (42..42, ExpectedUnicodeEscape) }>`. Expected a string literal\n   ,-[\u001b[36;1;4m/workspace/pages/design-map.tsx\u001b[0m:1:1]\n \u001b[2m1\u001b[0m | import React, { useMemo, useState } from \\\"react\\\";\n   : \u001b[35;1m                                         ^\u001b[0m\n \u001b[2m2\u001b[0m | import Head from \\\"next/head\\\";\n \u001b[2m3\u001b[0m | import { getZionDesignMap } from \\\"../utils/design-map\\\";\n \u001b[2m4\u001b[0m | export default function DesignMapPage() {\n   `----\n\nCaused by:\n    Syntax Error\n\nImport trace for requested module:\n./pages/design-map.tsx\n\n\n> Build failed because of webpack errors\n"
       }
-    ]
+    ],
+    "warnings": [],
+    "metrics": {}
   },
-  "summary": {
-    "syntaxFixes": 0,
-    "buildSuccess": true,
-    "testsPassed": 0,
-    "totalErrors": 5
-  "timestamp": "2025-09-06T10:42:27.266Z",
-  "totalDuration": 60241,
-
-  "successfulTasks": 6,
-  "totalTasks": 8,
-  "results": {
-    "dependencyFix": {
-      "success": true,
-      "duration": 7037,
-
-      "duration": 22421,
-ursor/automate-test-improve-and-merge-code-e883
-  "timestamp": "2025-09-06T08:34:04.724Z",
-  "duration": 397290,
-  "results": {
-    "dependencyFix": {
-      "success": true,
-      "duration": 84429,
-
-      "errors": [],
-      "warnings": []
-    },
-    "codeQuality": {
-      "success": false,
-      "duration": 27333,
-
-      "duration": 27631,
-ursor/automate-test-improve-and-merge-code-e883
-      "success": true,
-      "duration": 56422,
-
-      "errors": [],
-      "warnings": []
-    },
-    "securityAudit": {
-      "success": true,
-      "duration": 1719,
-
-      "duration": 1683,
-ursor/automate-test-improve-and-merge-code-e883
-      "duration": 1450,
-
-      "duration": 1719,
-      "errors": [],
-      "warnings": []
-    },
-    "buildOptimization": {
-      "success": true,
-      "duration": 6250,
-
-      "duration": 6198,
-ursor/automate-test-improve-and-merge-code-e883
-      "duration": 11039,
-
-      "duration": 6250,
-      "errors": [],
-      "warnings": []
-    },
-    "seoOptimization": {
-      "success": false,
-      "duration": 39,
-"errors": [],
-
-      "success": true,
-      "duration": 46,
-      "errors": [],
-ursor/automate-test-improve-and-merge-code-e883
-      "success": false,
-      "duration": 0,
-      "errors": [],
-
-      "warnings": []
-    },
-    "accessibilityImprovement": {
-      "success": false,
-      "duration": 9508,
-
-      "duration": 9692,
-ursor/automate-test-improve-and-merge-code-e883
-      "duration": 0,
-
-      "duration": 9508,
-      "errors": [],
-      "warnings": []
-    },
-    "performanceOptimization": {
-      "success": true,
-      "duration": 6736,
-
-      "duration": 7154,
-ursor/automate-test-improve-and-merge-code-e883
-      "success": false,
-      "duration": 0,
-
-      "errors": [],
-      "warnings": []
-    },
-    "deployment": {
-      "success": true,
-      "duration": 1612,
-      "errors": [],
-      "warnings": []
-    }
-
-    "totalErrors": 6
-ursor/automate-test-improve-and-merge-code-646c
-
-      "errors": [],
-      "warnings": []
-    }
-
-  }
-}
-      "success": false,
-      "duration": 0,
-      "errors": [],
-      "warnings": []
-    }
-  },
-  "summary": {
-    "totalTasks": 8,
-    "successfulTasks": 4,
-    "failedTasks": 4
-  }
-}
-
-  }
-
-  "timestamp": "2025-09-06T22:31:53.549Z",
-  "totalDuration": 106111,
-  "successfulTasks": 3,
-  "totalTasks": 3,
-  "results": {
-    "Comprehensive Automation Suite": true,
-    "Final Automation Suite": true,
-    "Execute All Scripts": true
-  },
-  "errors": [],
-  "fixes": [
-    "Fixed memory issues with Node.js heap size",
-    "Created missing automation scripts",
-    "Fixed ESLint configuration",
-    "Added comprehensive error handling"
+  "recommendations": [
+    "Address all errors before deployment",
+    "Implement continuous integration for automated testing",
+    "Set up automated deployment pipeline",
+    "Monitor performance metrics in production",
+    "Regular security audits and dependency updates"
+  ],
+  "nextSteps": [
+    "Review the comprehensive automation report",
+    "Address any critical errors identified",
+    "Implement recommended optimizations",
+    "Set up monitoring for production environment",
+    "Schedule regular automation runs",
+    "Document any custom automation workflows"
   ]
 }

@@ -1,4 +1,4 @@
-* Custom hook to manage auth state
+* Custom hook to manage auth state;
  */
 export function useAuthState() {
   return {
@@ -6,39 +6,39 @@ export function useAuthState() {
     setUser,
     isLoading,
     setIsLoading,
-    onboardingStep,
-    setOnboardingStep
-import React, { useState } from "react";
-import type { UserProfile } from "@/types/auth";
+    onboardingStep,}
+    setOnboardingStep;}
+import React, { useState } from \"react\";
+import type { UserProfile } from \"@/types/auth\";
   }
 }
-import React, { useState } from "react",;
-import type { UserProfile } from "@/types/auth",;
+import React, { useState } from \"react\",;
+import type { UserProfile } from \"@/types/auth\",;
 /**;
  * Custom hook to manage auth state;
  */;
-export function useAuthState() {;
+export function useAuthState() {;}
 import React, { useState } from './react';
-import type { UserProfile } from "@/types / auth";
+import type { UserProfile } from \"@/types / auth\";
 /**;
 * Custom hook to manage auth state;
 */;
 export /**
- * useAuthState - Function description
+ * useAuthState - Function description;
  */
 function useAuthState() {
   const [user, set_user] = useState < UserProfile | null>(null);
   const [is_loading, setIsLoading] = useState < boolean>(true);
-  const [onboarding_step, setOnboardingStep] = useState < string | null>(null);  const [user, setUser] = useState<UserProfile | null>(null),;
-  const [isLoading, setIsLoading] = useState<boolean>(true),;
-  const [onboardingStep, setOnboardingStep] = useState<string | null>(null),;
+  const [onboarding_step, setOnboardingStep] = useState < string | null>(null);  const [user, setUser] = useState<UserProfile | null />(null),;
+  const [isLoading, setIsLoading] = useState<boolean />(true),;
+  const [onboardingStep, setOnboardingStep] = useState<string | null />(null),;
   return {;
     user,;
     setUser,;
     isLoading,;
     setIsLoading;
-    onboardingStep;
-    setOnboardingStep;
+    onboardingStep;}
+    setOnboardingStep;}
   }
 }
 ;
@@ -46,5 +46,5 @@ function useAuthState() {
   return {;
     user;
     set_user;
-    is_loading;
-    setIsLoading;
+    is_loading;}
+    setIsLoading;}

@@ -1,94 +1,94 @@
-import {supabase} from "@/integrations/supabase/client";
-import type { QuoteRequest, QuoteStatus } from "@/types/quotes";
+import {supabase} from \"@/integrations/supabase/client\";
+import type { QuoteRequest, QuoteStatus } from \"@/types/quotes\";
 import { supabase } from '@/integrations / supabase / client';
-import type { QuoteRequest, QuoteStatus } from "@/types / quotes";
-import { supabase } from "@/integrations/supabase/client";
-import {supabase} from "@/integrations/supabase/client";
-import type { QuoteRequest, QuoteStatus } from "@/types/quotes";
-import { supabase } from "@/integrations/supabase/client",
-import type { QuoteRequest, QuoteStatus } from "@/types/quotes",
+import type { QuoteRequest, QuoteStatus } from \"@/types / quotes\";
+import { supabase } from \"@/integrations/supabase/client\";
+import {supabase} from \"@/integrations/supabase/client\";
+import type { QuoteRequest, QuoteStatus } from \"@/types/quotes\";
+import { supabase } from \"@/integrations/supabase/client\",
+import type { QuoteRequest, QuoteStatus } from \"@/types/quotes\",
     return data && data.map((item: any) => ({
       .select(`;
         *;
       .select(`
         *,
         talent:talent_id (
-          display_name
+          display_name;
         )
       `)
       .select(`
         *,
         talent:talent_id (
-        talent:talent_id (
-    return data && data.map((item: any) => ({
+        talent:talent_id (}
+    return data && data.map((item: any) => ({}
       .order('created_at', { ascending: false });
     if (error) throw error;
-    // Format the data to include talent_name
-    return data.map((item: any) => ({
-      ...item;
+    // Format the data to include talent_name;
+return data.map((item: any) => ({}
+      ...item;}
     talent_name: item.talent?.display_name |'Unknown Talent'})) as QuoteRequest[]
   }
       ...item,
       talent_name: item && item.talent?.display_name || 'Unknown Talent'})) as QuoteRequest[]
   };
-  // Update quote request status
-  updateStatus: async (id: string, status: QuoteStatus) => {
+  // Update quote request status;
+updateStatus: async (id: string, status: QuoteStatus) => {}
     const updates: any = { status }
-    // If marking as responded, set replied_at
-    if (status === 'responded') {
+    // If marking as responded, set replied_at;
+if (status === 'responded') {}
       updates && updates.replied_at = new Date().toISOString()    }
-    // If marking as in_review and viewed_at is null, set viewed_at
-    if (status === 'in_review') {
-      const { data } = await supabase
+    // If marking as in_review and viewed_at is null, set viewed_at;
+if (status === 'in_review') {}
+      const { data } = await supabase;
         .from('quote_requests')
         .select('viewed_at')
         .eq('id', id)
         .single();      }
     }
-    const { data, error } = await supabase
+    const { data, error } = await supabase;
       .from('quote_requests')
       .update(updates)
       .eq('id', id)
       .select();
     if (error) throw error;
-    return data[0] as QuoteRequest
+    return data[0] as QuoteRequest;
   }
-  // Archive/Unarchive a quote request
-  toggleArchive: async (id: string, isArchived: boolean) => {
-    const { data, error } = await supabase
+  // Archive/Unarchive a quote request;
+toggleArchive: async (id: string, isArchived: boolean) => {}
+    const { data, error } = await supabase;
       .from('quote_requests')
       .update({ is_archived: isArchived })
       .eq('id', id)
       .select();
     if (error) throw error;
-    return data[0] as QuoteRequest
+    return data[0] as QuoteRequest;
   }
-  // Delete a quote request
-  delete: async (id: string) => {
-    const { error } = await supabase
+  // Delete a quote request;
+delete: async (id: string) => {}
+    const { error } = await supabase;
       .from('quote_requests')
       .delete()
       .eq('id', id);
     if (error) throw error;
-    return true
+    return true;
   }
 }
       .single(),
     if (error) throw error,
-    return {
-      ...data,
-      talent_name: data.talent?.display_name || 'Unknown Talent'} as QuoteRequest
+    return {}
+      ...data,}
+      talent_name: data.talent?.display_name || 'Unknown Talent'} as QuoteRequest;
   },
-  // Update quote request status
-  updateStatus: async (id: string, status: QuoteStatus) => {
+  // Update quote request status;
+updateStatus: async (id: string, status: QuoteStatus) => {}
     const updates: any = { status },
-    // If marking as responded, set replied_at
-    if (status === 'responded') {
-      updates.replied_at = new Date().toISOString()
-import type { QuoteRequest, QuoteStatus } from "@/types/quotes";
+    // If marking as responded, set replied_at;
+if (status === 'responded') {}
+      updates.replied_at = new Date().toISOString()}
+import type { QuoteRequest, QuoteStatus } from \"@/types/quotes\";
 export const quoteRequestService = {;
-  // Get all quote requests (for admin);
-  getAll: async () => {;
+  // Get all quote requests (for admin);}
+  getAll: async () => {;}
     const { data, error } = await supabase;
       .from('quote_requests');
       .select(`;
@@ -100,12 +100,12 @@ export const quoteRequestService = {;
       .order('created_at', { ascending: false }),;
     if (error) throw error,;
     // Format the data to include talent_name;
-    return data.map((item: any) => ({;
-      ...item,;
+    return data.map((item: any) => ({;}
+      ...item,;}
       talent_name: item.talent?.display_name || 'Unknown Talent'})) as QuoteRequest[];
   },;
   // Get quote requests for a specific talent;
-  getByTalentId: async (talentId: string) => {;
+  getByTalentId: async (talentId: string) => {;}
     const { data, error } = await supabase;
       .from('quote_requests');
       .select('*');
@@ -115,7 +115,7 @@ export const quoteRequestService = {;
     return data as QuoteRequest[];
   },;
   // Get a single quote request by id;
-  getById: async (id: string) => {;
+  getById: async (id: string) => {;}
     const { data, error } = await supabase;
       .from('quote_requests');
       .select(`;
@@ -127,27 +127,27 @@ export const quoteRequestService = {;
       .eq('id', id);
       .single(),;
     if (error) throw error,;
-    return {;
-      ...data,;
+    return {;}
+      ...data,;}
       talent_name: data.talent?.display_name || 'Unknown Talent'} as QuoteRequest;
   },;
   // Update quote request status;
-  updateStatus: async (id: string, status: QuoteStatus) => {;
+  updateStatus: async (id: string, status: QuoteStatus) => {;}
     const updates: any = { status },;
     // If marking as responded, set replied_at;
-    if (status === 'responded') {;
-      updates.replied_at = new Date().toISOString();
+    if (status === 'responded') {;}
+      updates.replied_at = new Date().toISOString();}
     }
 ;
     // If marking as in_review and viewed_at is null, set viewed_at;
-    if (status === 'in_review') {;
+    if (status === 'in_review') {;}
       const { data } = await supabase;
         .from('quote_requests');
         .select('viewed_at');
         .eq('id', id);
         .single(),;
-      if (!data.viewed_at) {;
-        updates.viewed_at = new Date().toISOString();
+      if (!data.viewed_at) {;}
+        updates.viewed_at = new Date().toISOString();}
       }
     }
 ;
@@ -160,7 +160,7 @@ export const quoteRequestService = {;
     return data[0] as QuoteRequest;
   },;
   // Archive/Unarchive a quote request;
-  toggleArchive: async (id: string, isArchived: boolean) => {;
+  toggleArchive: async (id: string, isArchived: boolean) => {;}
     const { data, error } = await supabase;
       .from('quote_requests');
       .update({ is_archived: isArchived });
@@ -170,7 +170,7 @@ export const quoteRequestService = {;
     return data[0] as QuoteRequest;
   },;
   // Delete a quote request;
-  delete: async (id: string) => {;
+  delete: async (id: string) => {;}
     const { error } = await supabase;
       .from('quote_requests');
       .delete();

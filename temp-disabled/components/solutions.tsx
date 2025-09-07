@@ -7,8 +7,8 @@ import { motion } from 'framer-motion';
 
 import { Heart, DollarSign, Factory, ShoppingCart, Building2;
 
-  GraduationCap, Leaf, Shield, ArrowRight, Star, CheckCircle;
-  Users, Globe, Cpu, Database, Network, Target;
+  GraduationCap, Leaf, Shield, ArrowRight, Star, CheckCircle;}
+  Users, Globe, Cpu, Database, Network, Target;}
   } from 'lucide-react';
 
 const SolutionsPage: React.FC;

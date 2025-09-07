@@ -1,15 +1,15 @@
 import React from 'react';
   return (
-    <ThemeProvider attribute="class" default_theme="light">;
+    <ThemeProvider attribute=\"class\" default_theme=\"light\" />;
       {children}
   }
-  isFallback: false
-  isLocale: false
-  isReady: true
-  defaultLocale: 'en'
+  isFallback: false;
+isLocale: false;
+isReady: true;
+defaultLocale: 'en',
   domainLocales: []
-  isPreview: false
-    on: jest.fn (),
+  isPreview: false;
+on: jest.fn (),
     off: jest.fn (),
     emit: jest.fn ();
   },
@@ -32,12 +32,12 @@ import React from 'react';
 export const createMockProps = (overrides = {}) => ({
 
 
-    </ThemeProvider>;
-  );
+    </ThemeProvider>;}
+  );}
 },;
 const customRender = (;
   ui: React.ReactElement,;
-  options?: Omit<RenderOptions, 'wrapper'>;
+  options?: Omit<RenderOptions, 'wrapper' />;
 ) => render(ui, { wrapper: AllTheProviders, ...options }),;
 export * from '@testing-library/react',;
 export { customRender as render },;
@@ -49,8 +49,8 @@ export const mockNextRouter = () => ({;
   beforePopState: jest.fn(),;
   events: {;
     on: jest.fn(),;
-    off: jest.fn(),;
-    emit: jest.fn();
+    off: jest.fn(),;}
+    emit: jest.fn();}
   },;
   isFallback: false,;
   isLocale: false,;
@@ -64,6 +64,6 @@ export const createMockProps = (overrides = {}) => ({;
   ...overrides;
 
 
-
-
+}
+}
 });

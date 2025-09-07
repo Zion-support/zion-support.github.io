@@ -1,15 +1,19 @@
 import React from 'react';
-const AccessibilityPanel = ({ className }) => {return (<div className={className || ''}>;
-      <h1>AccessibilityPanel</h1>;
-      <p>This component is under development.</p>;
+const AccessibilityPanel = (return (<div className={className || '') = /> {
+  return $3;}
+} />;
+      <h1 />AccessibilityPanel</h1>;
+      <p />This component is under development.</p>;
     </div>;
   )}
 
-const AccessibilityPanel = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>AccessibilityPanel</h1>
-      <p>This component is under development.</p>
+const AccessibilityPanel = (
+  return () => {
+  return $3;}
+}
+    <div className={className || ''} />
+      <h1 />AccessibilityPanel</h1>
+      <p />This component is under development.</p>
     </div>
   )
 }

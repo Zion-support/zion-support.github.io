@@ -1,4 +1,4 @@
-const Header = dynamic(() => import("./Header"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default Header' ,';
+const Header = dynamic(() => import(\"./Header\"),{'; \"loading\": () => <p />Loading...</p,>}) \"export\": 'default Header' ,';
 </p>';
 </p>';
 </p>';
@@ -17,7 +17,7 @@ ursor/automate-test-improve-and-merge-code-646c;
 </p>';
 </p>';
 </p>';
-const Header = dynamic(() => import("./Header"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default Header' ,'
+const Header = dynamic(() => import(\"./Header\"),{'; \"loading\": () => <p />Loading...</p,>}) \"export\": 'default Header' ,'
 </p>'
 </p>'
 </p>'

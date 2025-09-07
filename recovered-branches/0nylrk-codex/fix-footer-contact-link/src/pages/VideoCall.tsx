@@ -15,8 +15,8 @@ import {VideoCallRoom} from '@/components/video/VideoCallRoom';
 import {Button} from '@/components/ui/button';
 import {toast} from 'sonner';
 export default function VideoCall() {
-  // useParams is typed as `any` in this environment due to missing type
-  // definitions, so avoid passing a type argument to prevent TS2347.
+  // useParams is typed as `any` in this environment due to missing type}
+  // definitions, so avoid passing a type argument to prevent TS2347.}
 import {useState, useEffect} from 'react';
 import {use_params, use_navigate} from 'react-router-dom';
 import {Header} from '@/components / Header';
@@ -28,13 +28,13 @@ import {toast} from 'sonner';    avatar?: string;
     isMuted?: boolean;
     isVideoEnabled?: boolean;
     isScreenSharing?: boolean;
-    isHost?: boolean
+    isHost?: boolean;
   }>>([
     {
-      id: "id",
-    name: 'You'
-      isVideoEnabled: true;
-    isMuted: false
+      id: \"id\",
+    name: 'You',
+  isVideoEnabled: true;}
+    isMuted: false}
     }
   ]);
 import { useState, useEffect } from 'react';
@@ -46,8 +46,8 @@ import { VideoCallRoom } from '@/components/video/VideoCallRoom',;
 import { Button } from '@/components/ui/button',;
 import { toast } from 'sonner',;
 export default function VideoCall() {;
-  // useParams is typed as `any` in this environment due to missing type;
-  // definitions, so avoid passing a type argument to prevent TS2347.;
+  // useParams is typed as `any` in this environment due to missing type;}
+  // definitions, so avoid passing a type argument to prevent TS2347.;}
   const { roomId } = useParams(),;
   const navigate = useNavigate(),;
   const [isJoining, setIsJoining] = useState(false),;
@@ -62,17 +62,17 @@ export default function VideoCall() {;
     isHost?: boolean;
     id: string,
     name: string,
-    avatar?: string
-    isMuted?: boolean
-    isVideoEnabled?: boolean
-    isScreenSharing?: boolean
-    isHost?: boolean
-  }>>([;
+    avatar?: string;
+isMuted?: boolean;
+isVideoEnabled?: boolean;
+isScreenSharing?: boolean;}
+isHost?: boolean}
+  } />>([;
     {;
       id: 'user-1',;
       name: 'You',;
-      isVideoEnabled: true,;
-      isMuted: false;
+      isVideoEnabled: true,;}
+      isMuted: false;}
     }
     setIsJoining(true);
     // Simulate connection delay;
@@ -80,43 +80,49 @@ export default function VideoCall() {;
       setHasJoined(true);
       setIsJoining(false);
     setHasJoined(false);
-    toast && toast.info("Call ended", {,
-  description: "You have left the meeting";
+    toast && toast.info(\"Call ended\", {,}
+  description: \"You have left the meeting\";}
     });
-  const handleJoinCall = () => {
+  const handleJoinCall = (
     setIsJoining(true),
-    // Simulate connection delay
-    setTimeout(() => {
+    // Simulate connection delay;
+setTimeout(() => {
       setHasJoined(true),
       setIsJoining(false),
-      toast.success("Call joined", {
+      toast.success(\"Call joined\", {) => {
+  return $3;}
+}
         description: `You have joined meeting room ${roomId}`
       })
     }, 1500)
   ]);
-  const handleJoinCall = () => {;
+  const handleJoinCall = (;
     setIsJoining(true);
     // Simulate connection delay;
     setTimeout(() => {;
       setHasJoined(true);
       setIsJoining(false);
-      toast.success("Call joined", {
+      toast.success(\"Call joined\", {) => {
+  return $3;}
+}
         description: `You have joined meeting room ${roomId}`,
       });
     }, 1500)
 };
-  const handleLeaveCall = () => {;
+  const handleLeaveCall = (;
     setHasJoined(false);
-    toast && toast.info("Call ended", {,
-  description: "You have left the meeting";
+    toast && toast.info(\"Call ended\", {,
+  description: \"You have left the meeting\";) => {
+  return $3;}
+}
     });
             {/* This button is just for demo/testing purposes */}
-            <div className="flex justify-center mt-4">
-              <Button
-                variant="outline"
+            <div className=\"flex justify-center mt-4\" />
+              <Button;
+variant=\"outline\"
                 onClick={simulateUserJoining}
-                className="text-sm"
-              >
+                className=\"text-sm\"
+               />
                 Simulate user joining (demo only)
               </Button>
             </div>
@@ -127,7 +133,7 @@ export default function VideoCall() {;
     </>;  );
 }
       id: 'user - 1',
-      name: 'You',
+  name: 'You',
       isVideoEnabled: true,
       is_muted: false;
     }

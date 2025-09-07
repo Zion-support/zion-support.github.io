@@ -1,25 +1,20 @@
-<<<<<<< HEAD
-import {SkillCategoryProps} from './types';
-import {SkillItem} from './SkillItem';
-export const SkillCategory = ({ category, skills, onDelete }: SkillCategoryProps) => {;  if (!skills || skills.length === 0) return null;
-=======
-import { SkillCategoryProps } from "./types";
-import { SkillItem } from "./SkillItem";
-export const SkillCategory = ({
-  category,
-  skills,
-  onDelete,
-}: SkillCategoryProps) => {
+) => {
+  return $3;}
+}
+import { SkillCategoryProps } from \"./types\";
+import { SkillItem } from \"./SkillItem\";
+export const SkillCategory = (
   if (!skills || skills.length === 0) return null;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
 
-  return (
-    <div className="space-y-2">
-      <h4 className="text-sm font-medium text-muted-foreground">{category}</h4>
-      <div className="flex flex-wrap gap-2">
-        {skills.map((skill) => (
-          <SkillItem
-            key={skill.id}
+return (
+    <div className=\"space-y-2\" />) => {
+  return $3;}
+}
+      <h4 className=\"text-sm font-medium text-muted-foreground\" />{category}</h4>
+      <div className=\"flex flex-wrap gap-2\" />
+        {skills.map((skill) => (}
+          <SkillItem;}
+key={skill.id}
             skill={skill}
             category={category}
             onDelete={onDelete}
@@ -27,11 +22,6 @@ export const SkillCategory = ({
         ))}
       </div>
     </div>
-<<<<<<< HEAD
-  )
-}
-}
-=======
+
   );
 };
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1

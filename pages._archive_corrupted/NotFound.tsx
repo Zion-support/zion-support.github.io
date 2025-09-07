@@ -1,28 +1,28 @@
 
 ;
-class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
+class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) {return <div />Something went wrong.</div>;}
     }return this.props.children;
   }
 }ursor/fix-website-loading-errors-and-merge-6662;
 ursor/automate-test-improve-and-merge-code-646c;
 
 class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
+  constructor(props) {}
+    super(props);}
     this.state = { hasError: false };
   }
   
-  static getDerivedStateFromError(error) {
+  static getDerivedStateFromError(error) {}
     return { hasError: true };
   }
   
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
+  componentDidCatch(error, errorInfo) {}
+    console.error('Error caught by boundary:', error, errorInfo);}
   }
   
   render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
+    if (this.state.hasError) {}
+      return <div />Something went wrong.</div>;}
     }
     
     return this.props.children;
@@ -35,13 +35,13 @@ import Head from 'next/head';
 import Link from 'next/link';
 import Button from '../components/ui/Button';
 import { Card  } from '../components/ui/Card';
-import { Home,ArrowLeft,Phone,Mail,FileText,Briefcase,Users,BookOpen,DollarSign,Calendar,Award,Shield;
+import { Home,ArrowLeft,Phone,Mail,FileText,Briefcase,Users,BookOpen,DollarSign,Calendar,Award,Shield;}
  } from 'lucide-react';
   Shield} from 'lucide-react';
-const "NotFound": React.FC = () => {const quickLinks = [{ name: 'Home', "url": '/', "icon": Home },{ "name": 'Services', "url": '/services', "icon": Briefcase },{ "name": 'About', "url": '/about', "icon": Users },{ "name": 'Contact', "url": '/contact', "icon": Phone },{ "name": 'Blog', "url": '/blog', "icon": BookOpen },{ "name": 'Pricing', "url": '/pricing', "icon": DollarSign },{ "name": 'Team', "url": '/team', "icon": Award },{ "name": 'Webinars', "url": '/webinars', "icon": Calendar },{ "name": 'White Papers', "url": '/whitepapers', "icon": FileText },ursor/automate-test-improve-and-merge-code-646c;
+const \"NotFound\": React.FC = () => {const quickLinks = [{ name: 'Home', \"url\": '/', \"icon\": Home },{ \"name\": 'Services', \"url\": '/services', \"icon\": Briefcase },{ \"name\": 'About', \"url\": '/about', \"icon\": Users },{ \"name\": 'Contact', \"url\": '/contact', \"icon\": Phone },{ \"name\": 'Blog', \"url\": '/blog', \"icon\": BookOpen },{ \"name\": 'Pricing', \"url\": '/pricing', \"icon\": DollarSign },{ \"name\": 'Team', \"url\": '/team', \"icon\": Award },{ \"name\": 'Webinars', \"url\": '/webinars', \"icon\": Calendar },{ \"name\": 'White Papers', \"url\": '/whitepapers', \"icon\": FileText },ursor/automate-test-improve-and-merge-code-646c;
 import { Card } from '../components/ui/Card';
 import { Home,, ArrowLeft,, Phone,, Mail,, FileText,, Briefcase,, Users,, BookOpen,, DollarSign,, Calendar,, Award,, Shield } from 'lucide-react';
-const "NotFound": React.FC = () => {const quickLinks = [{ name: 'Home', "url": '/', "icon": Home }const quickLinks = [{ name: 'Home', "url": '/', "icon": Home }{ "name": 'Services', "url": '/services', "icon": Briefcase },{ "name": 'About', "url": '/about', "icon": Users },{ "name": 'Contact', "url": '/contact', "icon": Phone },{ "name": 'Blog', "url": '/blog', "icon": BookOpen },{ "name": 'Pricing', "url": '/pricing', "icon": DollarSign },{ "name": 'Team', "url": '/team', "icon": Award },{ "name": 'Webinars', "url": '/webinars', "icon": Calendar },{ "name": 'White Papers', "url": '/whitepapers', "icon": FileText },{ "name": 'Privacy Policy', "url": '/privacy', "icon": Shield }
+const \"NotFound\": React.FC = () => {const quickLinks = [{ name: 'Home', \"url\": '/', \"icon\": Home }const quickLinks = [{ name: 'Home', \"url\": '/', \"icon\": Home }{ \"name\": 'Services', \"url\": '/services', \"icon\": Briefcase },{ \"name\": 'About', \"url\": '/about', \"icon\": Users },{ \"name\": 'Contact', \"url\": '/contact', \"icon\": Phone },{ \"name\": 'Blog', \"url\": '/blog', \"icon\": BookOpen },{ \"name\": 'Pricing', \"url\": '/pricing', \"icon\": DollarSign },{ \"name\": 'Team', \"url\": '/team', \"icon\": Award },{ \"name\": 'Webinars', \"url\": '/webinars', \"icon\": Calendar },{ \"name\": 'White Papers', \"url\": '/whitepapers', \"icon\": FileText },{ \"name\": 'Privacy Policy', \"url\": '/privacy', \"icon\": Shield }
 import { 
   Home,
   ArrowLeft,
@@ -53,93 +53,93 @@ import {
   BookOpen,
   DollarSign,
   Calendar,
-  Award,
-  Shield
+  Award,}
+  Shield}
 } from 'lucide-react';
-const "NotFound": React.FC = () => {
-  const quickLinks = [{ name: 'Home', "url": '/', "icon": Home },
-    { "name": 'Services', "url": '/services', "icon": Briefcase },
-    { "name": 'About', "url": '/about', "icon": Users },
-    { "name": 'Contact', "url": '/contact', "icon": Phone },
-    { "name": 'Blog', "url": '/blog', "icon": BookOpen },
-    { "name": 'Pricing', "url": '/pricing', "icon": DollarSign },
-    { "name": 'Team', "url": '/team', "icon": Award },
-    { "name": 'Webinars', "url": '/webinars', "icon": Calendar },
-    { "name": 'White Papers', "url": '/whitepapers', "icon": FileText },
+const \"NotFound\": React.FC = () => {}
+  const quickLinks = [{ name: 'Home', \"url\": '/', \"icon\": Home },
+    { \"name\": 'Services', \"url\": '/services', \"icon\": Briefcase },
+    { \"name\": 'About', \"url\": '/about', \"icon\": Users },
+    { \"name\": 'Contact', \"url\": '/contact', \"icon\": Phone },
+    { \"name\": 'Blog', \"url\": '/blog', \"icon\": BookOpen },
+    { \"name\": 'Pricing', \"url\": '/pricing', \"icon\": DollarSign },
+    { \"name\": 'Team', \"url\": '/team', \"icon\": Award },
+    { \"name\": 'Webinars', \"url\": '/webinars', \"icon\": Calendar },
+    { \"name\": 'White Papers', \"url\": '/whitepapers', \"icon\": FileText },
 
 import {Card} from '../components/ui/Card';
 import {Home,, ArrowLeft,, Phone,, Mail,, FileText,, Briefcase,, Users,, BookOpen,, DollarSign,, Calendar,, Award,, Shield} from 'lucide-react';
-const "NotFound": React.FC = () => {;
-  const quickLinks = [{ name: 'Home', "url": '/', "icon": Home };
-    { "name": 'Services', "url": '/services', "icon": Briefcase },;
-    { "name": 'About', "url": '/about', "icon": Users },;
-    { "name": 'Contact', "url": '/contact', "icon": Phone },;
-    { "name": 'Blog', "url": '/blog', "icon": BookOpen },;
-    { "name": 'Pricing', "url": '/pricing', "icon": DollarSign },;
-    { "name": 'Team', "url": '/team', "icon": Award },;
-    { "name": 'Webinars', "url": '/webinars', "icon": Calendar },;
-    { "name": 'White Papers', "url": '/whitepapers', "icon": FileText },;
+const \"NotFound\": React.FC = () => {;}
+  const quickLinks = [{ name: 'Home', \"url\": '/', \"icon\": Home };
+    { \"name\": 'Services', \"url\": '/services', \"icon\": Briefcase },;
+    { \"name\": 'About', \"url\": '/about', \"icon\": Users },;
+    { \"name\": 'Contact', \"url\": '/contact', \"icon\": Phone },;
+    { \"name\": 'Blog', \"url\": '/blog', \"icon\": BookOpen },;
+    { \"name\": 'Pricing', \"url\": '/pricing', \"icon\": DollarSign },;
+    { \"name\": 'Team', \"url\": '/team', \"icon\": Award },;
+    { \"name\": 'Webinars', \"url\": '/webinars', \"icon\": Calendar },;
+    { \"name\": 'White Papers', \"url\": '/whitepapers', \"icon\": FileText },;
 
-    { "name": 'Privacy Policy', "url": '/privacy', "icon": Shield }
+    { \"name\": 'Privacy Policy', \"url\": '/privacy', \"icon\": Shield }
   ];
-  return ({ "name": 'Privacy Policy', "url": '/privacy', "icon": Shield }
-    { "name": 'Privacy Policy', "url": '/privacy', "icon": Shield }
+  return ({ \"name\": 'Privacy Policy', \"url\": '/privacy', \"icon\": Shield }
+    { \"name\": 'Privacy Policy', \"url\": '/privacy', \"icon\": Shield }
   ];
   return (<>;
-      <Head>;
-        <title>Page Not Found - Zion Tech Group</title>;
-        <meta name="description" content="The page you are looking for does not exist. Find what you need with our helpful navigation and search options." />;
+      <Head />;
+        <title />Page Not Found - Zion Tech Group</title>;
+        <meta name=\"description\" content=\"The page you are looking for does not exist. Find what you need with our helpful navigation and search options.\" />;
       </Head>;
-      <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center px-4'>;
-        <div className='max-w-4xl mx-auto text-center'>;
-          <div>;
+      <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center px-4' />;
+        <div className='max-w-4xl mx-auto text-center' />;
+          <div />;
             {/* 404 Error */}
-            <div className="mb-8">;
-              <h1 className="text-9xl font-bold text-transparent bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text">;
+            <div className=\"mb-8\" />;
+              <h1 className=\"text-9xl font-bold text-transparent bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text\" />;
                 404;
               </h1>;
             </div>;
             {/* Error Message */}
-            <div className="mb-8">;
-              <h2 className="text-4xl font-bold text-white mb-4">Page Not Found</h2>;
-              <p className="text-xl text-gray-300 mb-6">;
+            <div className=\"mb-8\" />;
+              <h2 className=\"text-4xl font-bold text-white mb-4\" />Page Not Found</h2>;
+              <p className=\"text-xl text-gray-300 mb-6\" />;
                 Sorry, the page you are looking for doesn&apos;t exist or has been moved.;
               </p>;
-              <p className="text-gray-400">;
+              <p className=\"text-gray-400\" />;
                 Don&apos;t worry, we&apos;ll help you find what you are looking for.;
               </p>;
             </div>;
             {/* Action Buttons */}
-            <div className="flex flex-col "sm": flex-row gap-4 justify-center mb-12">;
+            <div className=\"flex flex-col \"sm\": flex-row gap-4 justify-center mb-12\" />;
               <Button;
-                variant="solid";
-                onClick={() => window.history.back()}
+                variant=\"solid\";
+                onClick={() = /> window.history.back()}
               >;
-                <ArrowLeft className="w-5 h-5 mr-2" />;
+                <ArrowLeft className=\"w-5 h-5 mr-2\" />;
                 Go Back;
               </Button>;
               <Button;
-                variant="outline";
-                onClick={() => (window.location.href = '/')}
+                variant=\"outline\";
+                onClick={() = /> (window.location.href = '/')}
               >;
-                <Home className="w-5 h-5 mr-2" />;
+                <Home className=\"w-5 h-5 mr-2\" />;
                 Go Home;
               </Button>;
             </div>;
             {/* Quick Links */}
-            <div>;
-              <Card className="p-8">;
-                <h3 className="text-2xl font-bold text-white mb-6">;
+            <div />;
+              <Card className=\"p-8\" />;
+                <h3 className=\"text-2xl font-bold text-white mb-6\" />;
                   Popular Pages;
                 </h3>;
-                <div className="grid grid-cols-2 "md": grid-cols-5 gap-4">;
-                  {quickLinks.map((link, index) => (<Link;
+                <div className=\"grid grid-cols-2 \"md\": grid-cols-5 gap-4\" />;
+                  {quickLinks.map((link, index) => (<Link;}
                       key={link.url}
                       href={link.url}
-                      className="flex flex-col items-center p-4 rounded-lg bg-slate-700 "hover": bg-slate-600 transition-colors group";
-                    >;
-                      <link.icon className="w-6 h-6 text-blue-400 group-hover:text-blue-300 mb-2" />;
-                      <span className="text-gray-300 group-hover:text-white text-sm text-center">;
+                      className=\"flex flex-col items-center p-4 rounded-lg bg-slate-700 \"hover\": bg-slate-600 transition-colors group\";
+                     />;
+                      <link.icon className=\"w-6 h-6 text-blue-400 group-hover:text-blue-300 mb-2\" />;
+                      <span className=\"text-gray-300 group-hover:text-white text-sm text-center\" />;
                         {link.name}
                       </span>;
                     </Link>;
@@ -148,28 +148,28 @@ const "NotFound": React.FC = () => {;
               </Card>;
             </div>;
             {/* Help Section */}
-            <div className="mt-12">
-              <div className="bg-slate-800/50 rounded-lg p-8">
-                <h3 className="text-2xl font-bold text-white mb-4">
+            <div className=\"mt-12\" />
+              <div className=\"bg-slate-800/50 rounded-lg p-8\" />
+                <h3 className=\"text-2xl font-bold text-white mb-4\" />
                   Still Need Help?
                 </h3>
-                <p className="text-gray-300 mb-6">
+                <p className=\"text-gray-300 mb-6\" />
                   If you can&apos;t find what you&apos;re looking for, our team is here to help.
                 </p>
-                <div className="flex flex-col "sm": flex-row gap-4 justify-center">
-                  <Link
-                    href="/contact"
-                    className="inline-flex items-center px-6 py-3 rounded-lg bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:opacity-90 transition-opacity"
-                  >
-                    <Phone className="w-5 h-5 mr-2" />
-                    Contact Support
+                <div className=\"flex flex-col \"sm\": flex-row gap-4 justify-center\" />
+                  <Link;
+href=\"/contact\"
+                    className=\"inline-flex items-center px-6 py-3 rounded-lg bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:opacity-90 transition-opacity\"
+                   />
+                    <Phone className=\"w-5 h-5 mr-2\" />
+                    Contact Support;
                   </Link>
-                  <a
-                    href="mailto:kleber@ziontechgroup.com"
-                    className="inline-flex items-center px-6 py-3 rounded-lg border border-slate-600 text-gray-300 hover:bg-slate-700 transition-colors"
-                  >
-                    <Mail className="w-5 h-5 mr-2" />
-                    Email Us
+                  <a;
+href=\"mailto:kleber@ziontechgroup.com\"
+                    className=\"inline-flex items-center px-6 py-3 rounded-lg border border-slate-600 text-gray-300 hover:bg-slate-700 transition-colors\"
+                   />
+                    <Mail className=\"w-5 h-5 mr-2\" />
+                    Email Us;
                   </a>
                 </div>
               </div>
@@ -181,62 +181,72 @@ const "NotFound": React.FC = () => {;
   );
 };
 export default NotFound;
-import React from 'react'; import Head from 'next/head'; import Link from 'next/link'; import Button from '../components/ui/Button'; import { Card } from '../components/ui/Card'; import { Home,ArrowLeft,Phone,Mail,FileText,Briefcase,Users,BookOpen,DollarSign,Calendar,Award,Shield } from 'lucide-react'; const NotFound: React.FC = () => { const quickLinks = [ { name: 'Home',url: '/',icon: Home },{ name: 'Services',url: '/services',icon: Briefcase },{ name: 'About',url: '/about',icon: Users },{ name: 'Contact',url: '/contact',icon: Phone },{ name: 'Blog',url: '/blog',icon: BookOpen },{ name: 'Pricing',url: '/pricing',icon: DollarSign },{ name: 'Team',url: '/team',icon: Award },{ name: 'Webinars',url: '/webinars',icon: Calendar },{ name: 'White Papers',url: '/whitepapers',icon: FileText },{ name: 'Privacy Policy',url: '/privacy',icon: Shield } ]; return ( <> <Head> <title>Page Not Found - Zion Tech Group</title> <meta name="description" content="The page you are looking for does not exist. Find what you need with our helpful navigation and search options." /> </Head> <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center px-4'> <div className='max-w-4xl mx-auto text-center'> <div> {} <div className="mb-8"> <h1 className="text-9xl font-bold text-transparent bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text"> 404 </h1> </div> {} <div className="mb-8"> <h2 className="text-4xl font-bold text-white mb-4">Page Not Found</h2> <p className="text-xl text-gray-300 mb-6"> Sorry,the page you are looking for doesn&apos;t exist or has been moved. </p> <p className="text-gray-400"> Don&apos;t worry,we&apos;ll help you find what you are looking for. </p> </div> {} <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12"> <Button variant="solid" onClick={() => window.history.back()} > <ArrowLeft className="w-5 h-5 mr-2" /> Go Back </Button> <Button variant="outline" onClick={() => (window.location.href = '/')} > <Home className="w-5 h-5 mr-2" /> Go Home </Button> </div> {} <div> <Card className="p-8"> <h3 className="text-2xl font-bold text-white mb-6"> Popular Pages </h3> <div className="grid grid-cols-2 md:grid-cols-5 gap-4"> {quickLinks.map((link,index) => ( <Link key={link.url} href={link.url} className="flex flex-col items-center p-4 rounded-lg bg-slate-700 hover:bg-slate-600 transition-colors group" > <link.icon className="w-6 h-6 text-blue-400 group-hover:text-blue-300 mb-2" /> <span className="text-gray-300 group-hover:text-white text-sm text-center"> {link.name} </span> </Link> ))} </div> </Card> </div> {} <div className="mt-12"> <div className="bg-slate-800/50 rounded-lg p-8"> <h3 className="text-2xl font-bold text-white mb-4"> Still Need Help? </h3> <p className="text-gray-300 mb-6"> If you can&apos;t find what you&apos;re looking for,our team is here to help. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center"> <Link href="/contact" className="inline-flex items-center px-6 py-3 rounded-lg bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:opacity-90 transition-opacity" > <Phone className="w-5 h-5 mr-2" /> Contact Support </Link> <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-6 py-3 rounded-lg border border-slate-600 text-gray-300 hover:bg-slate-700 transition-colors" > <Mail className="w-5 h-5 mr-2" /> Email Us </a> </div> </div> </div> </div> </div> </div> </> )}; export default NotFound;
+import React from 'react'; import Head from 'next/head'; import Link from 'next/link'; import Button from '../components/ui/Button'; import { Card } from '../components/ui/Card'; import { Home,ArrowLeft,Phone,Mail,FileText,Briefcase,Users,BookOpen,DollarSign,Calendar,Award,Shield } from 'lucide-react'; const NotFound: React.FC = () => { const quickLinks = [ { name: 'Home',}
+  url: '/',icon: Home },{ name: 'Services',}
+  url: '/services',icon: Briefcase },{ name: 'About',}
+  url: '/about',icon: Users },{ name: 'Contact',}
+  url: '/contact',icon: Phone },{ name: 'Blog',}
+  url: '/blog',icon: BookOpen },{ name: 'Pricing',}
+  url: '/pricing',icon: DollarSign },{ name: 'Team',}
+  url: '/team',icon: Award },{ name: 'Webinars',}
+  url: '/webinars',icon: Calendar },{ name: 'White Papers',}
+  url: '/whitepapers',icon: FileText },{ name: 'Privacy Policy',}
+  url: '/privacy',icon: Shield } ]; return ( <> <Head /> <title />Page Not Found - Zion Tech Group</title> <meta name=\"description\" content=\"The page you are looking for does not exist. Find what you need with our helpful navigation and search options.\" /> </Head> <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center px-4' /> <div className='max-w-4xl mx-auto text-center' /> <div /> {} <div className=\"mb-8\" /> <h1 className=\"text-9xl font-bold text-transparent bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text\" /> 404 </h1> </div> {} <div className=\"mb-8\" /> <h2 className=\"text-4xl font-bold text-white mb-4\" />Page Not Found</h2> <p className=\"text-xl text-gray-300 mb-6\" /> Sorry,the page you are looking for doesn&apos;t exist or has been moved. </p> <p className=\"text-gray-400\" /> Don&apos;t worry,we&apos;ll help you find what you are looking for. </p> </div> {} <div className=\"flex flex-col sm:flex-row gap-4 justify-center mb-12\" /> <Button variant=\"solid\" onClick={() = /> window.history.back()} > <ArrowLeft className=\"w-5 h-5 mr-2\" /> Go Back </Button> <Button variant=\"outline\" onClick={() = /> (window.location.href = '/')} > <Home className=\"w-5 h-5 mr-2\" /> Go Home </Button> </div> {} <div /> <Card className=\"p-8\" /> <h3 className=\"text-2xl font-bold text-white mb-6\" /> Popular Pages </h3> <div className=\"grid grid-cols-2 md:grid-cols-5 gap-4\" /> {quickLinks.map((link,index) => ( <Link key={link.url} href={link.url} className=\"flex flex-col items-center p-4 rounded-lg bg-slate-700 hover:bg-slate-600 transition-colors group\"  /> <link.icon className=\"w-6 h-6 text-blue-400 group-hover:text-blue-300 mb-2\" /> <span className=\"text-gray-300 group-hover:text-white text-sm text-center\" /> {link.name} </span> </Link> ))} </div> </Card> </div> {} <div className=\"mt-12\" /> <div className=\"bg-slate-800/50 rounded-lg p-8\" /> <h3 className=\"text-2xl font-bold text-white mb-4\" /> Still Need Help? </h3> <p className=\"text-gray-300 mb-6\" /> If you can&apos;t find what you&apos;re looking for,our team is here to help. </p> <div className=\"flex flex-col sm:flex-row gap-4 justify-center\" /> <Link href=\"/contact\" className=\"inline-flex items-center px-6 py-3 rounded-lg bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:opacity-90 transition-opacity\"  /> <Phone className=\"w-5 h-5 mr-2\" /> Contact Support </Link> <a href=\"mailto:kleber@ziontechgroup.com\" className=\"inline-flex items-center px-6 py-3 rounded-lg border border-slate-600 text-gray-300 hover:bg-slate-700 transition-colors\"  /> <Mail className=\"w-5 h-5 mr-2\" /> Email Us </a> </div> </div> </div> </div> </div> </div> </> )}; export default NotFound;
     <>;
-      <Head>;
-        <title>Page Not Found - Zion Tech Group</title>;
-        <meta name="description" content="The page you are looking for does not exist. Find what you need with our helpful navigation and search options." />;
+      <Head />;
+        <title />Page Not Found - Zion Tech Group</title>;
+        <meta name=\"description\" content=\"The page you are looking for does not exist. Find what you need with our helpful navigation and search options.\" />;
       </Head>;
-      <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center px-4'>;
-        <div className='max-w-4xl mx-auto text-center'>;
-          <div>;
+      <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center px-4' />;
+        <div className='max-w-4xl mx-auto text-center' />;
+          <div />;
             {/* 404 Error */}
-            <div className="mb-8">;
-              <h1 className="text-9xl font-bold text-transparent bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text">;
+            <div className=\"mb-8\" />;
+              <h1 className=\"text-9xl font-bold text-transparent bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text\" />;
                 404;
               </h1>;
             </div>;
             {/* Error Message */}
-            <div className="mb-8">;
-              <h2 className="text-4xl font-bold text-white mb-4">Page Not Found</h2>;
-              <p className="text-xl text-gray-300 mb-6">;
+            <div className=\"mb-8\" />;
+              <h2 className=\"text-4xl font-bold text-white mb-4\" />Page Not Found</h2>;
+              <p className=\"text-xl text-gray-300 mb-6\" />;
                 Sorry, the page you are looking for doesn&apos;t exist or has been moved.;
               </p>;
-              <p className="text-gray-400">;
+              <p className=\"text-gray-400\" />;
                 Don&apos;t worry, we&apos;ll help you find what you are looking for.;
               </p>;
             </div>;
             {/* Action Buttons */}
-            <div className="flex flex-col "sm": flex-row gap-4 justify-center mb-12">;
-              <Button
-                variant="solid"
-                onClick={() => window && window.history.back()}
+            <div className=\"flex flex-col \"sm\": flex-row gap-4 justify-center mb-12\" />;
+              <Button;
+variant=\"solid\"
+                onClick={() = /> window && window.history.back()}
               >;
-                <ArrowLeft className="w-5 h-5 mr-2" />;
+                <ArrowLeft className=\"w-5 h-5 mr-2\" />;
                 Go Back;
               </Button>;
-              <Button
-                variant="outline"
-                onClick={() => (window && window.location.href = '/')}
+              <Button;
+variant=\"outline\"
+                onClick={() = /> (window && window.location.href = '/')}
               >;
-                <Home className="w-5 h-5 mr-2" />;
+                <Home className=\"w-5 h-5 mr-2\" />;
                 Go Home;
               </Button>;
             </div>;
             {/* Quick Links */}
-            <div>;
-              <Card className="p-8">;
-                <h3 className="text-2xl font-bold text-white mb-6">;
+            <div />;
+              <Card className=\"p-8\" />;
+                <h3 className=\"text-2xl font-bold text-white mb-6\" />;
                   Popular Pages;
                 </h3>;
-                <div className="grid grid-cols-2 "md": grid-cols-5 gap-4">;
-                  {quickLinks && quickLinks.map((link, index) => (;
-                    <Link
-                      key={link && link.url}
+                <div className=\"grid grid-cols-2 \"md\": grid-cols-5 gap-4\" />;
+                  {quickLinks && quickLinks.map((link, index) => (;}
+                    <Link;}
+key={link && link.url}
                       href={link && link.url}
-                      className="flex flex-col items-center p-4 rounded-lg bg-slate-700 "hover": bg-slate-600 transition-colors group">;
-                      <link && link.icon className="w-6 h-6 text-blue-400 group-hover:text-blue-300 mb-2" />;
-                      <span className="text-gray-300 group-hover:text-white text-sm text-center">;
+                      className=\"flex flex-col items-center p-4 rounded-lg bg-slate-700 \"hover\": bg-slate-600 transition-colors group\" />;
+                      <link && link.icon className=\"w-6 h-6 text-blue-400 group-hover:text-blue-300 mb-2\" />;
+                      <span className=\"text-gray-300 group-hover:text-white text-sm text-center\" />;
                         {link && link.name}
                       </span>;
                     </Link>;
@@ -245,32 +255,32 @@ import React from 'react'; import Head from 'next/head'; import Link from 'next/
               </Card>;
             </div>;
             {/* Help Section */}
-            <div className="mt-12">;
-              <div className="bg-slate-800/50 rounded-lg p-8">;
-                <h3 className="text-2xl font-bold text-white mb-4">;
+            <div className=\"mt-12\" />;
+              <div className=\"bg-slate-800/50 rounded-lg p-8\" />;
+                <h3 className=\"text-2xl font-bold text-white mb-4\" />;
                   Still Need Help?;
                 </h3>;
-                <p className="text-gray-300 mb-6">;
+                <p className=\"text-gray-300 mb-6\" />;
                   If you can&apos;t find what you&apos;re looking for, our team is here to help.;
                 </p>;
-                <div className="flex flex-col "sm": flex-row gap-4 justify-center">;
+                <div className=\"flex flex-col \"sm\": flex-row gap-4 justify-center\" />;
                   <Link;
-                    href="/contact";
-                    className="inline-flex items-center px-6 py-3 rounded-lg bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:opacity-90 transition-opacity";
-                  >;
-                  <Link
-                    href="/contact"
+                    href=\"/contact\";
+                    className=\"inline-flex items-center px-6 py-3 rounded-lg bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:opacity-90 transition-opacity\";
+                   />;
+                  <Link;
+href=\"/contact\"
 
 
-                    className="inline-flex items-center px-6 py-3 rounded-lg bg-gradient-to-r from-blue-500 to-purple-600 text-white hover: opacity-90 transition-opacity">;
-                    <Phone className="w-5 h-5 mr-2" />;
+                    className=\"inline-flex items-center px-6 py-3 rounded-lg bg-gradient-to-r from-blue-500 to-purple-600 text-white hover: opacity-90 transition-opacity\" />;
+                    <Phone className=\"w-5 h-5 mr-2\" />;
                     Contact Support;
                   </Link>;
                   <a;
-                    href="mailto:kleber@ziontechgroup.com";
-                    className="inline-flex items-center px-6 py-3 rounded-lg border border-slate-600 text-gray-300 hover:bg-slate-700 transition-colors";
-                  >;
-                    <Mail className="w-5 h-5 mr-2" />;
+                    href=\"mailto:kleber@ziontechgroup.com\";
+                    className=\"inline-flex items-center px-6 py-3 rounded-lg border border-slate-600 text-gray-300 hover:bg-slate-700 transition-colors\";
+                   />;
+                    <Mail className=\"w-5 h-5 mr-2\" />;
                     Email Us;
                   </a>;
                 </div>;
@@ -281,63 +291,73 @@ import React from 'react'; import Head from 'next/head'; import Link from 'next/
       </div>;
     </>;
   )}export default NotFound;
-import React from 'react'; import Head from 'next/head'; import Link from 'next/link'; import Button from '../components/ui/Button'; import { Card } from '../components/ui/Card'; import { Home,ArrowLeft,Phone,Mail,FileText,Briefcase,Users,BookOpen,DollarSign,Calendar,Award,Shield } from 'lucide-react'; const NotFound: React.FC = () => { const quickLinks = [ { name: 'Home',url: '/',icon: Home },{ name: 'Services',url: '/services',icon: Briefcase },{ name: 'About',url: '/about',icon: Users },{ name: 'Contact',url: '/contact',icon: Phone },{ name: 'Blog',url: '/blog',icon: BookOpen },{ name: 'Pricing',url: '/pricing',icon: DollarSign },{ name: 'Team',url: '/team',icon: Award },{ name: 'Webinars',url: '/webinars',icon: Calendar },{ name: 'White Papers',url: '/whitepapers',icon: FileText },{ name: 'Privacy Policy',url: '/privacy',icon: Shield } ]; return ( <> <Head> <title>Page Not Found - Zion Tech Group</title> <meta name="description" content="The page you are looking for does not exist. Find what you need with our helpful navigation and search options." /> </Head> <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center px-4'> <div className='max-w-4xl mx-auto text-center'> <div> {} <div className="mb-8"> <h1 className="text-9xl font-bold text-transparent bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text"> 404 </h1> </div> {} <div className="mb-8"> <h2 className="text-4xl font-bold text-white mb-4">Page Not Found</h2> <p className="text-xl text-gray-300 mb-6"> Sorry,the page you are looking for doesn&apos;t exist or has been moved. </p> <p className="text-gray-400"> Don&apos;t worry,we&apos;ll help you find what you are looking for. </p> </div> {} <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12"> <Button variant="solid" onClick={() => window.history.back()} > <ArrowLeft className="w-5 h-5 mr-2" /> Go Back </Button> <Button variant="outline" onClick={() => (window.location.href = '/')} > <Home className="w-5 h-5 mr-2" /> Go Home </Button> </div> {} <div> <Card className="p-8"> <h3 className="text-2xl font-bold text-white mb-6"> Popular Pages </h3> <div className="grid grid-cols-2 md:grid-cols-5 gap-4"> {quickLinks.map((link,index) => ( <Link key={link.url} href={link.url} className="flex flex-col items-center p-4 rounded-lg bg-slate-700 hover:bg-slate-600 transition-colors group" > <link.icon className="w-6 h-6 text-blue-400 group-hover:text-blue-300 mb-2" /> <span className="text-gray-300 group-hover:text-white text-sm text-center"> {link.name} </span> </Link> ))} </div> </Card> </div> {} <div className="mt-12"> <div className="bg-slate-800/50 rounded-lg p-8"> <h3 className="text-2xl font-bold text-white mb-4"> Still Need Help? </h3> <p className="text-gray-300 mb-6"> If you can&apos;t find what you&apos;re looking for,our team is here to help. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center"> <Link href="/contact" className="inline-flex items-center px-6 py-3 rounded-lg bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:opacity-90 transition-opacity" > <Phone className="w-5 h-5 mr-2" /> Contact Support </Link> <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-6 py-3 rounded-lg border border-slate-600 text-gray-300 hover:bg-slate-700 transition-colors" > <Mail className="w-5 h-5 mr-2" /> Email Us </a> </div> </div> </div> </div> </div> </div> </> )}export default NotFound;ursor/automate-test-improve-and-merge-code-646c;
-    { "name": 'Privacy Policy', "url": '/privacy', "icon": Shield }
+import React from 'react'; import Head from 'next/head'; import Link from 'next/link'; import Button from '../components/ui/Button'; import { Card } from '../components/ui/Card'; import { Home,ArrowLeft,Phone,Mail,FileText,Briefcase,Users,BookOpen,DollarSign,Calendar,Award,Shield } from 'lucide-react'; const NotFound: React.FC = () => { const quickLinks = [ { name: 'Home',}
+  url: '/',icon: Home },{ name: 'Services',}
+  url: '/services',icon: Briefcase },{ name: 'About',}
+  url: '/about',icon: Users },{ name: 'Contact',}
+  url: '/contact',icon: Phone },{ name: 'Blog',}
+  url: '/blog',icon: BookOpen },{ name: 'Pricing',}
+  url: '/pricing',icon: DollarSign },{ name: 'Team',}
+  url: '/team',icon: Award },{ name: 'Webinars',}
+  url: '/webinars',icon: Calendar },{ name: 'White Papers',}
+  url: '/whitepapers',icon: FileText },{ name: 'Privacy Policy',}
+  url: '/privacy',icon: Shield } ]; return ( <> <Head /> <title />Page Not Found - Zion Tech Group</title> <meta name=\"description\" content=\"The page you are looking for does not exist. Find what you need with our helpful navigation and search options.\" /> </Head> <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center px-4' /> <div className='max-w-4xl mx-auto text-center' /> <div /> {} <div className=\"mb-8\" /> <h1 className=\"text-9xl font-bold text-transparent bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text\" /> 404 </h1> </div> {} <div className=\"mb-8\" /> <h2 className=\"text-4xl font-bold text-white mb-4\" />Page Not Found</h2> <p className=\"text-xl text-gray-300 mb-6\" /> Sorry,the page you are looking for doesn&apos;t exist or has been moved. </p> <p className=\"text-gray-400\" /> Don&apos;t worry,we&apos;ll help you find what you are looking for. </p> </div> {} <div className=\"flex flex-col sm:flex-row gap-4 justify-center mb-12\" /> <Button variant=\"solid\" onClick={() = /> window.history.back()} > <ArrowLeft className=\"w-5 h-5 mr-2\" /> Go Back </Button> <Button variant=\"outline\" onClick={() = /> (window.location.href = '/')} > <Home className=\"w-5 h-5 mr-2\" /> Go Home </Button> </div> {} <div /> <Card className=\"p-8\" /> <h3 className=\"text-2xl font-bold text-white mb-6\" /> Popular Pages </h3> <div className=\"grid grid-cols-2 md:grid-cols-5 gap-4\" /> {quickLinks.map((link,index) => ( <Link key={link.url} href={link.url} className=\"flex flex-col items-center p-4 rounded-lg bg-slate-700 hover:bg-slate-600 transition-colors group\"  /> <link.icon className=\"w-6 h-6 text-blue-400 group-hover:text-blue-300 mb-2\" /> <span className=\"text-gray-300 group-hover:text-white text-sm text-center\" /> {link.name} </span> </Link> ))} </div> </Card> </div> {} <div className=\"mt-12\" /> <div className=\"bg-slate-800/50 rounded-lg p-8\" /> <h3 className=\"text-2xl font-bold text-white mb-4\" /> Still Need Help? </h3> <p className=\"text-gray-300 mb-6\" /> If you can&apos;t find what you&apos;re looking for,our team is here to help. </p> <div className=\"flex flex-col sm:flex-row gap-4 justify-center\" /> <Link href=\"/contact\" className=\"inline-flex items-center px-6 py-3 rounded-lg bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:opacity-90 transition-opacity\"  /> <Phone className=\"w-5 h-5 mr-2\" /> Contact Support </Link> <a href=\"mailto:kleber@ziontechgroup.com\" className=\"inline-flex items-center px-6 py-3 rounded-lg border border-slate-600 text-gray-300 hover:bg-slate-700 transition-colors\"  /> <Mail className=\"w-5 h-5 mr-2\" /> Email Us </a> </div> </div> </div> </div> </div> </div> </> )}export default NotFound;ursor/automate-test-improve-and-merge-code-646c;
+    { \"name\": 'Privacy Policy', \"url\": '/privacy', \"icon\": Shield }
   ];
   return (<>;
-      <Head>;
-        <title>Page Not Found - Zion Tech Group</title>;
-        <meta name="description" content="The page you are looking for does not exist. Find what you need with our helpful navigation and search options." />;
+      <Head />;
+        <title />Page Not Found - Zion Tech Group</title>;
+        <meta name=\"description\" content=\"The page you are looking for does not exist. Find what you need with our helpful navigation and search options.\" />;
       </Head>;
-      <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center px-4'>;
-        <div className='max-w-4xl mx-auto text-center'>;
-          <div>;
+      <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center px-4' />;
+        <div className='max-w-4xl mx-auto text-center' />;
+          <div />;
             {/* 404 Error */}
-            <div className="mb-8">;
-              <h1 className="text-9xl font-bold text-transparent bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text">;
+            <div className=\"mb-8\" />;
+              <h1 className=\"text-9xl font-bold text-transparent bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text\" />;
                 404;
               </h1>;
             </div>;
             {/* Error Message */}
-            <div className="mb-8">;
-              <h2 className="text-4xl font-bold text-white mb-4">Page Not Found</h2>;
-              <p className="text-xl text-gray-300 mb-6">;
+            <div className=\"mb-8\" />;
+              <h2 className=\"text-4xl font-bold text-white mb-4\" />Page Not Found</h2>;
+              <p className=\"text-xl text-gray-300 mb-6\" />;
                 Sorry, the page you are looking for doesn&apos;t exist or has been moved.;
               </p>;
-              <p className="text-gray-400">;
+              <p className=\"text-gray-400\" />;
                 Don&apos;t worry, we&apos;ll help you find what you are looking for.;
               </p>;
             </div>;
             {/* Action Buttons */}
-            <div className="flex flex-col "sm": flex-row gap-4 justify-center mb-12">;
+            <div className=\"flex flex-col \"sm\": flex-row gap-4 justify-center mb-12\" />;
               <Button;
-                variant="solid";
-                onClick={() => window && window.history.back()}
+                variant=\"solid\";
+                onClick={() = /> window && window.history.back()}
               >;
-                <ArrowLeft className="w-5 h-5 mr-2" />;
+                <ArrowLeft className=\"w-5 h-5 mr-2\" />;
                 Go Back;
               </Button>;
               <Button;
-                variant="outline";
-                onClick={() => (window && window.location.href = '/')}
+                variant=\"outline\";
+                onClick={() = /> (window && window.location.href = '/')}
               >;
-                <Home className="w-5 h-5 mr-2" />;
+                <Home className=\"w-5 h-5 mr-2\" />;
                 Go Home;
               </Button>;
             </div>;
             {/* Quick Links */}
-            <div>;
-              <Card className="p-8">;
-                <h3 className="text-2xl font-bold text-white mb-6">;
+            <div />;
+              <Card className=\"p-8\" />;
+                <h3 className=\"text-2xl font-bold text-white mb-6\" />;
                   Popular Pages;
                 </h3>;
-                <div className="grid grid-cols-2 "md": grid-cols-5 gap-4">;
-                  {quickLinks && quickLinks.map((link, index) => (<Link;
+                <div className=\"grid grid-cols-2 \"md\": grid-cols-5 gap-4\" />;
+                  {quickLinks && quickLinks.map((link, index) => (<Link;}
                       key={link && link.url}
                       href={link && link.url}
-                      className="flex flex-col items-center p-4 rounded-lg bg-slate-700 "hover": bg-slate-600 transition-colors group">;
-                      <link && link.icon className="w-6 h-6 text-blue-400 group-hover:text-blue-300 mb-2" />;
-                      <span className="text-gray-300 group-hover:text-white text-sm text-center">;
+                      className=\"flex flex-col items-center p-4 rounded-lg bg-slate-700 \"hover\": bg-slate-600 transition-colors group\" />;
+                      <link && link.icon className=\"w-6 h-6 text-blue-400 group-hover:text-blue-300 mb-2\" />;
+                      <span className=\"text-gray-300 group-hover:text-white text-sm text-center\" />;
                         {link && link.name}
                       </span>;
                     </Link>;
@@ -346,25 +366,25 @@ import React from 'react'; import Head from 'next/head'; import Link from 'next/
               </Card>;
             </div>;
             {/* Help Section */}
-            <div className="mt-12">;
-              <div className="bg-slate-800/50 rounded-lg p-8">;
-                <h3 className="text-2xl font-bold text-white mb-4">;
+            <div className=\"mt-12\" />;
+              <div className=\"bg-slate-800/50 rounded-lg p-8\" />;
+                <h3 className=\"text-2xl font-bold text-white mb-4\" />;
                   Still Need Help?;
                 </h3>;
-                <p className="text-gray-300 mb-6">;
+                <p className=\"text-gray-300 mb-6\" />;
                   If you can&apos;t find what you&apos;re looking for, our team is here to help.;
                 </p>;
-                <div className="flex flex-col "sm": flex-row gap-4 justify-center">;
+                <div className=\"flex flex-col \"sm\": flex-row gap-4 justify-center\" />;
                   <Link;
-                    href="/contact";
-  )}export default NotFound;className="inline-flex items-center px-6 py-3 rounded-lg bg-gradient-to-r from-blue-500 to-purple-600 text-white hover: opacity-90 transition-opacity">;
-                    <Phone className="w-5 h-5 mr-2" />;
+                    href=\"/contact\";
+  )}export default NotFound;className=\"inline-flex items-center px-6 py-3 rounded-lg bg-gradient-to-r from-blue-500 to-purple-600 text-white hover: opacity-90 transition-opacity\" />;
+                    <Phone className=\"w-5 h-5 mr-2\" />;
                     Contact Support;
                   </Link>;
                   <a;
-                    href="mailto:kleber@ziontechgroup && ziontechgroup.com";
-                    className="inline-flex items-center px-6 py-3 rounded-lg border border-slate-600 text-gray-300 hover:bg-slate-700 transition-colors">;
-                    <Mail className="w-5 h-5 mr-2" />;
+                    href=\"mailto:kleber@ziontechgroup && ziontechgroup.com\";
+                    className=\"inline-flex items-center px-6 py-3 rounded-lg border border-slate-600 text-gray-300 hover:bg-slate-700 transition-colors\" />;
+                    <Mail className=\"w-5 h-5 mr-2\" />;
                     Email Us;
                   </a>;
                 </div>;
@@ -375,9 +395,29 @@ import React from 'react'; import Head from 'next/head'; import Link from 'next/
       </div>;
     </>;
   )}export default NotFound;
-import React from 'react'; import Head from 'next/head'; import Link from 'next/link'; import Button from '../components/ui/Button'; import { Card } from '../components/ui/Card'; import { Home,ArrowLeft,Phone,Mail,FileText,Briefcase,Users,BookOpen,DollarSign,Calendar,Award,Shield } from 'lucide-react'; const NotFound: React.FC = () => { const quickLinks = [ { name: 'Home',url: '/',icon: Home },{ name: 'Services',url: '/services',icon: Briefcase },{ name: 'About',url: '/about',icon: Users },{ name: 'Contact',url: '/contact',icon: Phone },{ name: 'Blog',url: '/blog',icon: BookOpen },{ name: 'Pricing',url: '/pricing',icon: DollarSign },{ name: 'Team',url: '/team',icon: Award },{ name: 'Webinars',url: '/webinars',icon: Calendar },{ name: 'White Papers',url: '/whitepapers',icon: FileText },{ name: 'Privacy Policy',url: '/privacy',icon: Shield } ]; return ( <> <Head> <title>Page Not Found - Zion Tech Group</title> <meta name="description" content="The page you are looking for does not exist. Find what you need with our helpful navigation and search options." /> </Head> <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center px-4'> <div className='max-w-4xl mx-auto text-center'> <div> {} <div className="mb-8"> <h1 className="text-9xl font-bold text-transparent bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text"> 404 </h1> </div> {} <div className="mb-8"> <h2 className="text-4xl font-bold text-white mb-4">Page Not Found</h2> <p className="text-xl text-gray-300 mb-6"> Sorry,the page you are looking for doesn&apos;t exist or has been moved. </p> <p className="text-gray-400"> Don&apos;t worry,we&apos;ll help you find what you are looking for. </p> </div> {} <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12"> <Button variant="solid" onClick={() => window && window.history.back()} > <ArrowLeft className="w-5 h-5 mr-2" /> Go Back </Button> <Button variant="outline" onClick={() => (window && window.location.href = '/')} > <Home className="w-5 h-5 mr-2" /> Go Home </Button> </div> {} <div> <Card className="p-8"> <h3 className="text-2xl font-bold text-white mb-6"> Popular Pages </h3> <div className="grid grid-cols-2 md:grid-cols-5 gap-4"> {quickLinks && quickLinks.map((link,index) => ( <Link key={link && link.url} href={link && link.url} className="flex flex-col items-center p-4 rounded-lg bg-slate-700 hover:bg-slate-600 transition-colors group" > <link && link.icon className="w-6 h-6 text-blue-400 group-hover:text-blue-300 mb-2" /> <span className="text-gray-300 group-hover:text-white text-sm text-center"> {link && link.name} </span> </Link> ))} </div> </Card> </div> {} <div className="mt-12"> <div className="bg-slate-800/50 rounded-lg p-8"> <h3 className="text-2xl font-bold text-white mb-4"> Still Need Help? </h3> <p className="text-gray-300 mb-6"> If you can&apos;t find what you&apos;re looking for,our team is here to help. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center"> <Link href="/contact" className="inline-flex items-center px-6 py-3 rounded-lg bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:opacity-90 transition-opacity" > <Phone className="w-5 h-5 mr-2" /> Contact Support </Link> <a href="mailto:kleber@ziontechgroup && ziontechgroup.com" className="inline-flex items-center px-6 py-3 rounded-lg border border-slate-600 text-gray-300 hover:bg-slate-700 transition-colors" > <Mail className="w-5 h-5 mr-2" /> Email Us </a> </div> </div> </div> </div> </div> </div> </> )}export default NotFound;ursor/automate-test-improve-and-merge-code-646c;
+import React from 'react'; import Head from 'next/head'; import Link from 'next/link'; import Button from '../components/ui/Button'; import { Card } from '../components/ui/Card'; import { Home,ArrowLeft,Phone,Mail,FileText,Briefcase,Users,BookOpen,DollarSign,Calendar,Award,Shield } from 'lucide-react'; const NotFound: React.FC = () => { const quickLinks = [ { name: 'Home',}
+  url: '/',icon: Home },{ name: 'Services',}
+  url: '/services',icon: Briefcase },{ name: 'About',}
+  url: '/about',icon: Users },{ name: 'Contact',}
+  url: '/contact',icon: Phone },{ name: 'Blog',}
+  url: '/blog',icon: BookOpen },{ name: 'Pricing',}
+  url: '/pricing',icon: DollarSign },{ name: 'Team',}
+  url: '/team',icon: Award },{ name: 'Webinars',}
+  url: '/webinars',icon: Calendar },{ name: 'White Papers',}
+  url: '/whitepapers',icon: FileText },{ name: 'Privacy Policy',}
+  url: '/privacy',icon: Shield } ]; return ( <> <Head /> <title />Page Not Found - Zion Tech Group</title> <meta name=\"description\" content=\"The page you are looking for does not exist. Find what you need with our helpful navigation and search options.\" /> </Head> <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center px-4' /> <div className='max-w-4xl mx-auto text-center' /> <div /> {} <div className=\"mb-8\" /> <h1 className=\"text-9xl font-bold text-transparent bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text\" /> 404 </h1> </div> {} <div className=\"mb-8\" /> <h2 className=\"text-4xl font-bold text-white mb-4\" />Page Not Found</h2> <p className=\"text-xl text-gray-300 mb-6\" /> Sorry,the page you are looking for doesn&apos;t exist or has been moved. </p> <p className=\"text-gray-400\" /> Don&apos;t worry,we&apos;ll help you find what you are looking for. </p> </div> {} <div className=\"flex flex-col sm:flex-row gap-4 justify-center mb-12\" /> <Button variant=\"solid\" onClick={() = /> window && window.history.back()} > <ArrowLeft className=\"w-5 h-5 mr-2\" /> Go Back </Button> <Button variant=\"outline\" onClick={() = /> (window && window.location.href = '/')} > <Home className=\"w-5 h-5 mr-2\" /> Go Home </Button> </div> {} <div /> <Card className=\"p-8\" /> <h3 className=\"text-2xl font-bold text-white mb-6\" /> Popular Pages </h3> <div className=\"grid grid-cols-2 md:grid-cols-5 gap-4\" /> {quickLinks && quickLinks.map((link,index) => ( <Link key={link && link.url} href={link && link.url} className=\"flex flex-col items-center p-4 rounded-lg bg-slate-700 hover:bg-slate-600 transition-colors group\"  /> <link && link.icon className=\"w-6 h-6 text-blue-400 group-hover:text-blue-300 mb-2\" /> <span className=\"text-gray-300 group-hover:text-white text-sm text-center\" /> {link && link.name} </span> </Link> ))} </div> </Card> </div> {} <div className=\"mt-12\" /> <div className=\"bg-slate-800/50 rounded-lg p-8\" /> <h3 className=\"text-2xl font-bold text-white mb-4\" /> Still Need Help? </h3> <p className=\"text-gray-300 mb-6\" /> If you can&apos;t find what you&apos;re looking for,our team is here to help. </p> <div className=\"flex flex-col sm:flex-row gap-4 justify-center\" /> <Link href=\"/contact\" className=\"inline-flex items-center px-6 py-3 rounded-lg bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:opacity-90 transition-opacity\"  /> <Phone className=\"w-5 h-5 mr-2\" /> Contact Support </Link> <a href=\"mailto:kleber@ziontechgroup && ziontechgroup.com\" className=\"inline-flex items-center px-6 py-3 rounded-lg border border-slate-600 text-gray-300 hover:bg-slate-700 transition-colors\"  /> <Mail className=\"w-5 h-5 mr-2\" /> Email Us </a> </div> </div> </div> </div> </div> </div> </> )}export default NotFound;ursor/automate-test-improve-and-merge-code-646c;
   )}export default NotFound;
   ),;
 };
 export default NotFound;
-import React from 'react'; import Head from 'next/head'; import Link from 'next/link'; import Button from '../components/ui/Button'; import { Card } from '../components/ui/Card'; import { Home,ArrowLeft,Phone,Mail,FileText,Briefcase,Users,BookOpen,DollarSign,Calendar,Award,Shield } from 'lucide-react'; const NotFound: React.FC = () => { const quickLinks = [ { name: 'Home',url: '/',icon: Home },{ name: 'Services',url: '/services',icon: Briefcase },{ name: 'About',url: '/about',icon: Users },{ name: 'Contact',url: '/contact',icon: Phone },{ name: 'Blog',url: '/blog',icon: BookOpen },{ name: 'Pricing',url: '/pricing',icon: DollarSign },{ name: 'Team',url: '/team',icon: Award },{ name: 'Webinars',url: '/webinars',icon: Calendar },{ name: 'White Papers',url: '/whitepapers',icon: FileText },{ name: 'Privacy Policy',url: '/privacy',icon: Shield } ]; return ( <> <Head> <title>Page Not Found - Zion Tech Group</title> <meta name="description" content="The page you are looking for does not exist. Find what you need with our helpful navigation and search options." /> </Head> <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center px-4'> <div className='max-w-4xl mx-auto text-center'> <div> {} <div className="mb-8"> <h1 className="text-9xl font-bold text-transparent bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text"> 404 </h1> </div> {} <div className="mb-8"> <h2 className="text-4xl font-bold text-white mb-4">Page Not Found</h2> <p className="text-xl text-gray-300 mb-6"> Sorry,the page you are looking for doesn&apos;t exist or has been moved. </p> <p className="text-gray-400"> Don&apos;t worry,we&apos;ll help you find what you are looking for. </p> </div> {} <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12"> <Button variant="solid" onClick={() => window && window.history.back()} > <ArrowLeft className="w-5 h-5 mr-2" /> Go Back </Button> <Button variant="outline" onClick={() => (window && window.location.href = '/')} > <Home className="w-5 h-5 mr-2" /> Go Home </Button> </div> {} <div> <Card className="p-8"> <h3 className="text-2xl font-bold text-white mb-6"> Popular Pages </h3> <div className="grid grid-cols-2 md:grid-cols-5 gap-4"> {quickLinks && quickLinks.map((link,index) => ( <Link key={link && link.url} href={link && link.url} className="flex flex-col items-center p-4 rounded-lg bg-slate-700 hover:bg-slate-600 transition-colors group" > <link && link.icon className="w-6 h-6 text-blue-400 group-hover:text-blue-300 mb-2" /> <span className="text-gray-300 group-hover:text-white text-sm text-center"> {link && link.name} </span> </Link> ))} </div> </Card> </div> {} <div className="mt-12"> <div className="bg-slate-800/50 rounded-lg p-8"> <h3 className="text-2xl font-bold text-white mb-4"> Still Need Help? </h3> <p className="text-gray-300 mb-6"> If you can&apos;t find what you&apos;re looking for,our team is here to help. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center"> <Link href="/contact" className="inline-flex items-center px-6 py-3 rounded-lg bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:opacity-90 transition-opacity" > <Phone className="w-5 h-5 mr-2" /> Contact Support </Link> <a href="mailto:kleber@ziontechgroup && ziontechgroup.com" className="inline-flex items-center px-6 py-3 rounded-lg border border-slate-600 text-gray-300 hover:bg-slate-700 transition-colors" > <Mail className="w-5 h-5 mr-2" /> Email Us </a> </div> </div> </div> </div> </div> </div> </> )}; export default NotFound;
+import React from 'react'; import Head from 'next/head'; import Link from 'next/link'; import Button from '../components/ui/Button'; import { Card } from '../components/ui/Card'; import { Home,ArrowLeft,Phone,Mail,FileText,Briefcase,Users,BookOpen,DollarSign,Calendar,Award,Shield } from 'lucide-react'; const NotFound: React.FC = () => { const quickLinks = [ { name: 'Home',}
+  url: '/',icon: Home },{ name: 'Services',}
+  url: '/services',icon: Briefcase },{ name: 'About',}
+  url: '/about',icon: Users },{ name: 'Contact',}
+  url: '/contact',icon: Phone },{ name: 'Blog',}
+  url: '/blog',icon: BookOpen },{ name: 'Pricing',}
+  url: '/pricing',icon: DollarSign },{ name: 'Team',}
+  url: '/team',icon: Award },{ name: 'Webinars',}
+  url: '/webinars',icon: Calendar },{ name: 'White Papers',}
+  url: '/whitepapers',icon: FileText },{ name: 'Privacy Policy',}
+  url: '/privacy',icon: Shield } ]; return ( <> <Head /> <title />Page Not Found - Zion Tech Group</title> <meta name=\"description\" content=\"The page you are looking for does not exist. Find what you need with our helpful navigation and search options.\" /> </Head> <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center px-4' /> <div className='max-w-4xl mx-auto text-center' /> <div /> {} <div className=\"mb-8\" /> <h1 className=\"text-9xl font-bold text-transparent bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text\" /> 404 </h1> </div> {} <div className=\"mb-8\" /> <h2 className=\"text-4xl font-bold text-white mb-4\" />Page Not Found</h2> <p className=\"text-xl text-gray-300 mb-6\" /> Sorry,the page you are looking for doesn&apos;t exist or has been moved. </p> <p className=\"text-gray-400\" /> Don&apos;t worry,we&apos;ll help you find what you are looking for. </p> </div> {} <div className=\"flex flex-col sm:flex-row gap-4 justify-center mb-12\" /> <Button variant=\"solid\" onClick={() = /> window && window.history.back()} > <ArrowLeft className=\"w-5 h-5 mr-2\" /> Go Back </Button> <Button variant=\"outline\" onClick={() = /> (window && window.location.href = '/')} > <Home className=\"w-5 h-5 mr-2\" /> Go Home </Button> </div> {} <div /> <Card className=\"p-8\" /> <h3 className=\"text-2xl font-bold text-white mb-6\" /> Popular Pages </h3> <div className=\"grid grid-cols-2 md:grid-cols-5 gap-4\" /> {quickLinks && quickLinks.map((link,index) => ( <Link key={link && link.url} href={link && link.url} className=\"flex flex-col items-center p-4 rounded-lg bg-slate-700 hover:bg-slate-600 transition-colors group\"  /> <link && link.icon className=\"w-6 h-6 text-blue-400 group-hover:text-blue-300 mb-2\" /> <span className=\"text-gray-300 group-hover:text-white text-sm text-center\" /> {link && link.name} </span> </Link> ))} </div> </Card> </div> {} <div className=\"mt-12\" /> <div className=\"bg-slate-800/50 rounded-lg p-8\" /> <h3 className=\"text-2xl font-bold text-white mb-4\" /> Still Need Help? </h3> <p className=\"text-gray-300 mb-6\" /> If you can&apos;t find what you&apos;re looking for,our team is here to help. </p> <div className=\"flex flex-col sm:flex-row gap-4 justify-center\" /> <Link href=\"/contact\" className=\"inline-flex items-center px-6 py-3 rounded-lg bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:opacity-90 transition-opacity\"  /> <Phone className=\"w-5 h-5 mr-2\" /> Contact Support </Link> <a href=\"mailto:kleber@ziontechgroup && ziontechgroup.com\" className=\"inline-flex items-center px-6 py-3 rounded-lg border border-slate-600 text-gray-300 hover:bg-slate-700 transition-colors\"  /> <Mail className=\"w-5 h-5 mr-2\" /> Email Us </a> </div> </div> </div> </div> </div> </div> </> )}; export default NotFound;
