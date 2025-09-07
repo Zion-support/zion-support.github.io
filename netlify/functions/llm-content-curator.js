@@ -1,9 +1,7 @@
-const abs = path && path.resolve(__dirname, '..', '..', relPath);
-
-
 function runNode(relPath, args = []) {
 
 
+<<<<<<< HEAD
 ursor/expand-services-advertise-and-build-project-4b36
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
@@ -30,60 +28,89 @@ exports && exports.config = { "schedule": '0 */3 * * *','
 exports && exports.handler = async () => {
  ;
   }
-  const logs = [];
-
-const step = (name, fn) => {
-    }
-    logs && logs.push(`\n=== ${name} ===`);`
-const { status, stdout, stderr } = fn();
-    if (stdout) logs && logs.push(stdout);
-    if (stderr) logs && logs.push(stderr);
-    logs && logs.push(`exit=${status}`);`return status;
-};
-
-  step('"content":curate', () => runNode('automation/llm-content-curator && curator.cjs'));'
-  step('"git":sync', () => runNode('automation/advanced-git-sync && sync.cjs'));'
+=======
+  const res = spawnSync('node', [abs, ...args], {
+    stdio: 'pipe'
+    encoding: 'utf8'
+  });
   return {
-    }
-    "statusCode": 200,
-    "headers": { 'content-type': 'text/plain','
-},
-    "body": logs && logs.join('\n')'
-  }
+
+ursor/expand-services-advertise-and-build-project-4b36
+
+    status: res && res.status || 0,
+
+    stdout: res && res.stdout || '',
+
+  const res = spawnSync('node', [abs, ...args], {'
+    stdio: 'pipe''
+    encoding: 'utf8'
+  });
+  return {}
+    status: res && res.status || 0,'
+    stdout: res && res.stdout || '','
+
+    stderr: res && res.stderr || '',
+  };'
+exports && exports.config = { schedule: '0 */3 * * *' };
+
+ursor/expand-services-advertise-and-build-project-4b36
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> origin/chore/fix-lint-and-merge
+  const logs = [];
+  const step = (name, fn) => {}
+    logs && logs.push(`\n=== ${name} ===`);
+    const { status, stdout, stderr } = fn();
+
+ursor/expand-services-advertise-and-build-project-4b36
+
+    if (stdout) logs && logs.push(stdout);
+
+    if (stderr) logs && logs.push(stderr);
+    logs && logs.push(`exit=${status}`);
+    return status
 };
-function runNode() {
-}
-const abs = path && path.resolve(__dirname, '....', relPath),;'
-const abs = path.resolve(__dirname, '....', relPath),;'
-const res = spawnSync('node', [abs, ...args], { "stdio": 'pipe', "encoding": 'utf8',;'
-}),
-  return { "status": res && res.status || 0, "stdout": res && res.stdout || '', "stderr": res && res.stderr || '' }'
-}
+  step('content:curate', () => runNode('automation/llm-content-curator && curator.cjs'));
 
-exports && exports.config = { "schedule": '0 */3 * * *','
-},
+  step('git:sync', () => runNode('automation/advanced-git-sync && sync.cjs'));
+  return {}
+    statusCode: 200,'
+    headers: { 'content-type': 'text/plain' },'
+    body: logs && logs.join('\n'),
 
-exports && exports.config = { "schedule": '0 */3 * * *' },'
-exports && exports.handler = async () => {
+ursor/expand-services-advertise-and-build-project-4b36
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+  const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' }),
+
+  return { status: res && res.status || 0, stdout: res && res.stdout || '', stderr: res && res.stderr || '' }
 }
+<<<<<<< HEAD
 const logs = [],;
     }
     logs && logs.push(`\n=== ${name} ===`),`const { status, stdout, stderr } = fn(),;
+=======
+'
+exports && exports.config = { schedule: '0 */3 * * *' },
+
+exports && exports.handler = async () => {}
+  const logs = [],
+  const step = (name, fn) => {}`
+    logs && logs.push(`\n=== ${name} ===`),
+    const { status, stdout, stderr } = fn(),
+>>>>>>> origin/chore/fix-lint-and-merge
     if (stdout) logs && logs.push(stdout),
-    if (stderr) logs && logs.push(stderr),
-    logs && logs.push(`exit=${status}`),`return status;
+    if (stderr) logs && logs.push(stderr),`
+    logs && logs.push(`exit=${status}`),
+    return status;
   },
-  step('"content":curate', () => runNode('automation/llm-content-curator && curator.cjs')),'
-  step('"git":sync', () => runNode('automation/advanced-git-sync && sync.cjs')),'
-
- ;
-return { "statusCode": 200, "headers": { 'content-type': 'text/plain',;'
-}, "body": logs && logs.join('\n') },'
-},;
-  const path = require ('path');'
-
-  return { "statusCode": 200, "headers": { 'content-type': 'text/plain' }, "body": logs && logs.join('\n') }'
+'
+  step('content:curate', () => runNode('automation/llm-content-curator && curator.cjs')),'
+  step('git:sync', () => runNode('automation/advanced-git-sync && sync.cjs')),
+'
+  return { statusCode: 200, headers: { 'content-type': 'text/plain' }, body: logs && logs.join('\n') }
 },
+<<<<<<< HEAD
 const { spawn_sync } = require ('child_process');'
 ;
 
@@ -125,10 +152,27 @@ const step = (name, fn) => {logs && logs.push(`\n=== ${name} ===`;`  const { sta
 
 const path = require ('path';'
   const { spawn_sync }  = require ('child_process')/**;'
+=======
+
+ursor/expand-services-advertise-and-build-project-4b36
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+const path = require ('path');
+
+const { spawn_sync } = require ('child_process');
+;
+/**
+>>>>>>> origin/chore/fix-lint-and-merge
  * run_node - Function description;
- */;
-function run_node() {const abs = path.resolve (__dirname, '..', '..', rel_path;'
+ */
+function run_node() { return null; }
+  });
+  return {}
+    status: res.status || 0,'
+    stdout: res.stdout || '','
+    stderr: res.stderr || '',
   }
+<<<<<<< HEAD
   const res = spawn_sync ('node', [abs, ...args], {"stdio": 'pipe',"encoding": 'utf8';'
     }
     "encoding": 'utf8';'
@@ -141,41 +185,64 @@ function run_node() {const abs = path.resolve (__dirname, '..', '..', rel_path;'
 }exports.handler = async () => ;
 
 const step = (name, fn) =>: any {logs.push (`\number=== ${name} ===`;`  const { status, stdout, stderr } = fn ()if (logs.push (stdout)) {$2;
+=======
+;'
+exports.config = { schedule: '0 */3 * * *' }
+;
+exports.handler = async () => {}
+  const logs = [];
+  const step = (name, fn) =>: any {}`
+    logs.push (`\number=== ${name} ===`);
+    const { status, stdout, stderr } = fn ();
+    if (logs.push (stdout)) {}
+  $2;
+>>>>>>> origin/chore/fix-lint-and-merge
 }
-    if (logs.push (stderr)) {$2;
-}
-    logs.push (`exit = ${status}`;`  return status;
-  }step ('"content":curate', () => run_node ('automation / llm - content - curator.cjs'))step ('"git":sync', () => run_node ('automation / advanced - git - sync.cjs'))return {"status_code": 200,"headers": { 'content - type': 'text / plain','
-},"body": logs.join ('\n')"body": logs.join ('\n')"body": logs.join ('\n')},'
-}/**;
+    if (logs.push (stderr)) {}
+  $2;
+}`
+    logs.push (`exit=${status}`);
+    return status;
+  }
+;'
+  step ('content:curate', () => run_node ('automation / llm - content - curator.cjs'));'
+  step ('git:sync', () => run_node ('automation / advanced - git - sync.cjs'));
+;
+  return {}
+    status_code: 200,'
+    headers: { 'content - type': 'text / plain' },'
+    body: logs.join ('\n'),
+  }
+}/**
  * run_node - Function description;
- */;
-function run_node() {const abs = path.resolve (__dirname, '....', rel_path),const res = spawn_sync ('node', [abs, ...args], { "stdio": 'pipe', "encoding": 'utf8','
-});
-  return { "status": res.status || 0, "stdout": res.stdout || '', "stderr": res.stderr || '' }'
+ */
+function run_node() { return null; }
+  const res = spawn_sync ('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' }),'
+
+const abs = path && path.resolve(__dirname, '..', '..', relPath);
+
+function runNode(relPath, args = []) {
+
+  return { status: res.status || 0, stdout: res.stdout || '', stderr: res.stderr || '' }
+}'
+exports.config = { schedule: '0 */3 * * *' },
+exports.handler = async () => {}
+  const logs = [],
+  const step = (name, fn) =>: any {}`
+    logs.push (`\number=== ${name} ===`),
+    const { status, stdout, stderr } = fn (),
+    if (logs.push (stdout), ) {}
+  $2;
 }
-exports.config = { "schedule": '0 */3 * * *','
-},exports.handler = async () => {const logs = [],const step = (name, fn) =>: any {logs.push (`\number=== ${name} ===`);`  const { status, stdout, stderr } = fn (),if (logs.push (stdout), ) {$2;
-}
-    if (logs.push (stderr), ) {$2;
-}
-    logs.push (`exit = ${status}`);`  return status;
-  },step ('"content":curate', () => run_node ('automation / llm - content - curator.cjs')),step ('"git":sync', () => run_node ('automation / advanced - git - sync.cjs')),return { "status_code": 200, "headers": { 'content - type': 'text / plain','
-}, "body": logs.join ('\n') }'
-    if (stdout) logs.push(stdout)if (stderr) logs.push(stderr)logs.push(`exit = ${statu,`}`;`  return status;
-  },step('"content":curate', () => runNode('automation/llm-content-curator.cjs'))step('"git":sync', () => runNode('automation/advanced-git-sync.cjs'))return { "statusCode": 200, "headers": { 'content-type': 'text/plain','
-}, "body": logs.join('\n') }'
-}
-    logs.push (`exit = ${statu,`}`),`
-   ;
-  return status;
-  },
-  step ('"content":curate', () => run_node ('automation / llm - content - curator.cjs')),'
-  step ('"git":sync', () => run_node ('automation / advanced - git - sync.cjs')),'
-return { "status_code": 200, "headers": { 'content - type': 'text / plain',;'
-}, "body": logs.join ('\n'),'
-}
-  return { "status_code": 200, "headers": { 'content - type': 'text / plain' }, "body": logs.join ('\n') }'
+    if (logs.push (stderr), ) {}
+  $2;
+}`
+    logs.push (`exit=${status}`),
+    return status;
+  },'
+  step ('content:curate', () => run_node ('automation / llm - content - curator.cjs')),'
+  step ('git:sync', () => run_node ('automation / advanced - git - sync.cjs')),'
+  return { status_code: 200, headers: { 'content - type': 'text / plain' }, body: logs.join ('\n') }
 
     if (stdout) logs.push(stdout);
     if (stderr) logs.push(stderr);
@@ -186,7 +253,3 @@ return { "status_code": 200, "headers": { 'content - type': 'text / plain',;'
   step('content:curate', () => runNode('automation/llm-content-curator.cjs'));
   step('git:sync', () => runNode('automation/advanced-git-sync.cjs'));
   return { statusCode: 200, headers: { 'content-type': 'text/plain' }, body: logs.join('\n') }
-};
-
-  return { statusCode: 200, headers: { 'content-type': 'text/plain' }, body: logs.join('\n') }
-},

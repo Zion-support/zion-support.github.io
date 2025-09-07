@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :src/components/mobile-app/AppTestimonials.tsx
 import React from "react;
 import { Star } from 'lucide-react
@@ -15,6 +16,8 @@ const testimonials = [
     avatar: '/placeholder.svg'
   }
   {
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 {
     name: Alex Johnson",
     role: "AI Developer,
@@ -22,6 +25,7 @@ const testimonials = [
     rating: 5,
     avatar: "/placeholder.svg
   },
+<<<<<<< HEAD
 :src/components/mobile-app/AppTestimonials.tsx
   {
     name: Sarah Williams'
@@ -122,6 +126,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <Star
                       key={i}
                       className={`h-5 w-5 ${i < testimonial.rating ? 'text-yellow-400 fill-yellow-400 : text-gray-400'}`}                    />
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
   {
     name: "Sarah Williams,
     role: Tech Recruiter",
@@ -196,7 +202,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>
               </CardFooter>
             </Card>
-:src/components/mobile-app/AppTestimonials.tsx
 
 }</div> </div> </section>) 
 }
@@ -222,6 +227,7 @@ const testimonials = [;
     text: As a recruiter, this app has saved me countless hours. The talent quality is exceptional and the mobile interface is intuitive.,
     rating: 5,
     avatar: "/placeholder.svg";
+<<<<<<< HEAD
   },
   {
     name: Michael Chen,
@@ -232,6 +238,20 @@ const testimonials = [;
     avatar: "/placeholder.svg";
   }
 ],export const AppTestimonials: React.FC = () => {return (<section className=py-16 bg-zion-blue>;
+=======
+  },;
+  {;
+    name: "Michael Chen",;
+    role: "Full Stack Developer",;
+    text: "I love being able to check job matches and respond to clients while on the go. The notification system is particularly useful.",;
+    rating: 4,;
+    avatar: "/placeholder.svg";
+  }
+],;
+export const AppTestimonials: React.FC = () => {;
+  return (;
+    <section className="py-16 bg-zion-blue">;
+>>>>>>> origin/chore/fix-lint-and-merge
       <div className="container mx-auto px-4">;
         <div className=text-center mb-12>;
           <h2 className="text-3xl md:text-4xl font-bold mb-4">What Our Users Say</h2>;
@@ -240,6 +260,7 @@ const testimonials = [;
           </p>;
         </div>;
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
+<<<<<<< HEAD
           {testimonials.map((testimonial, index) => (<Card key={index} className=bg-zion-blue-dark border-zion-purple/30>;
               <CardContent className="pt-6">;
                 <div className=flex mb-4>;
@@ -298,6 +319,14 @@ import { Card, CardContent, CardFooter } from @/components/ui/card",const testim
               <CardContent className=pt-6">;
                 <div className="flex mb-4>;
                   {Array.from({ length: 5 }).map((_, i) => (<Star;
+=======
+          {testimonials.map((testimonial, index) => (;
+            <Card key={index} className="bg-zion-blue-dark border-zion-purple/30">;
+              <CardContent className="pt-6">;
+                <div className="flex mb-4">;
+                  {Array.from({ length: 5 }).map((_, i) => (;
+                    <Star;
+>>>>>>> origin/chore/fix-lint-and-merge
                       key={i}
                       className={`h-5 w-5 ${i < testimonial.rating ? text-yellow-400 fill-yellow-400" : "text-gray-400}`}
                     />;
@@ -318,6 +347,7 @@ import { Card, CardContent, CardFooter } from @/components/ui/card",const testim
               </CardFooter>;
             </Card>;
           ))}
+<<<<<<< HEAD
         </div>;
       </div>;
     </section>;
@@ -411,9 +441,15 @@ export const AppTestimonials: React.FC = () => {
 '"}
   )
 }
+=======
+        </div>
+      </div>
+    </section>
+>>>>>>> origin/chore/fix-lint-and-merge
 );
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
 {;
   name: Sarah Williams";";
 role: Tech Recruiter;";
@@ -431,6 +467,19 @@ avatar: /placeholder.svg" ;
 }{";
   name: Michael Chen;";
 role: "Full Stack Developer;;
+=======
+{";
+  name: "Sarah Williams";";
+role: "Tech Recruiter";";
+text: "As a recruiter, this app has saved me countless hours. The talent quality is exceptional and the mobile interface is intuitive.";
+rating: 5;";
+avatar: "/placeholder.svg" ;
+};
+origin/cursor/automate-test-improve-and-merge-code-2533
+{";
+  name: "Michael Chen";";
+role: "Full Stack Developer";";
+>>>>>>> origin/chore/fix-lint-and-merge
 text: "I love being able to check job matches and respond to clients while on the go. The notification system is particularly useful.";
 rating: 4;;
 
@@ -439,6 +488,7 @@ rating: 4;;
     text: I love being able to check job matches and respond to clients while on the go. The notification system is particularly useful.,
     rating: 4,
 
+<<<<<<< HEAD
 avatar: /placeholder.svg";
 }];
 export const AppTestimonials: React.FC = () => {";
@@ -469,6 +519,32 @@ import { Card, CardContent, CardFooter } from @/components/ui/card",
     text: "I love being able to check job matches and respond to clients while on the go. The notification system is particularly useful.,
     rating: 4,
     avatar: /placeholder.svg";
+=======
+import React from "react",;
+import { Star } from 'lucide-react';
+import { Card, CardContent, CardFooter } from "@/components/ui/card",;
+const testimonials = [;
+  {;
+    name: "Alex Johnson",;
+    role: "AI Developer",;
+    text: "The Zion app has completely changed how I find work. The AI matching is spot on and I've landed 3 contracts in my first month!",;
+    rating: 5,;
+    avatar: "/placeholder.svg";
+  },;
+  {;
+    name: "Sarah Williams",;
+    role: "Tech Recruiter",;
+    text: "As a recruiter, this app has saved me countless hours. The talent quality is exceptional and the mobile interface is intuitive.",;
+    rating: 5,;
+    avatar: "/placeholder.svg";
+  },;
+  {;
+    name: "Michael Chen",;
+    role: "Full Stack Developer",;
+    text: "I love being able to check job matches and respond to clients while on the go. The notification system is particularly useful.",;
+    rating: 4,;
+    avatar: "/placeholder.svg";
+>>>>>>> origin/chore/fix-lint-and-merge
   }
 ],
 export const AppTestimonials: React.FC = () => {
@@ -519,6 +595,7 @@ export const AppTestimonials: React.FC = () => {;
   return (<section className="py-16 bg-zion-blue" > <div className=container mx-auto px-4 > <div className="text-center mb-12" > <h2 className=text-3xl md:text-4xl font-bold mb-4 >What Our Users Say</h2> <p className="text-lg text-gray-300 max-w-2xl mx-auto" > ;
 }</div> </div> </section>) ;
 };
+<<<<<<< HEAD
 '"
 origin/cursor/automate-test-improve-and-merge-code-2533
 avatar: /placeholder.svg";
@@ -531,3 +608,6 @@ export const AppTestimonials: React.FC = () => {";
 export const AppTestimonials: React.FC = () => {;
   return (<section className="py-16 bg-zion-blue" > <div className=container mx-auto px-4 > <div className="text-center mb-12" > <h2 className=text-3xl md:text-4xl font-bold mb-4 >What Our Users Say</h2> <p className="text-lg text-gray-300 max-w-2xl mx-auto" > ;
 }</div> </div> </section>)}'";
+=======
+'"
+>>>>>>> origin/chore/fix-lint-and-merge

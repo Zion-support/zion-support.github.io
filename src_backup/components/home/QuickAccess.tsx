@@ -1,4 +1,8 @@
+<<<<<<< HEAD
   const quickLinks = [
+=======
+const quickLinks = [
+>>>>>>> origin/chore/fix-lint-and-merge
     {
       title: t('home.tool_ai_matcher),
       description: t(home.tool_ai_matcher_desc'),
@@ -99,6 +103,7 @@ function QuickAccess() {}
       link: /mobile-launch"
     }
   ],
+<<<<<<< HEAD
   const quickLinks = [;
     {title: t(home.tool_ai_matcher'),description: t('home.tool_ai_matcher_desc),icon: <Search className="h-6 w-6 text-zion-cyan />,link: /marketplace";
     },{title: t(home.tool_talent'),description: t('home.tool_talent_desc),icon: <Users className="h-6 w-6 text-zion-purple />,link: /talent";
@@ -152,6 +157,26 @@ export /**;
           {quick_links.map ((link, index) => (
             <Link;
 
+=======
+
+  return (
+    <section className={cn("py-12 bg-zion-blue-dark", className)} style={style}>
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-8">
+          <h2 className="text-2xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent mb-2">
+            {t('home.quick_access_titleQuick Access')}
+          </h2>;
+          <p className="text-zion-slate-light text-lg">;
+            {t('home.quick_access_subtitleJump directly to our most popular features')}
+    <section className={cn("py-12 bg-zion-blue-dark", className)} style={style}>
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-8">
+          <h2 className="text-2xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent mb-2">
+            {t('home.quick_access_title', 'Quick Access')}
+          </h2>
+          <p className="text-zion-slate-light text-lg">
+            {t('home.quick_access_subtitle', 'Jump directly to our most popular features')}
+>>>>>>> origin/chore/fix-lint-and-merge
           </p>
         </div>
           {quickLinks.map((link, index) => (
@@ -204,6 +229,7 @@ export /**;
 
               href={link.link}
 
+<<<<<<< HEAD
           {quick_links.map ((link, index) => (<Link;key={index}
               href={link.link}</p>;
               <div className='flex items - center text - zion - cyan text - xs mt - auto'>;
@@ -229,6 +255,12 @@ function Page() {";
               <div className=flex items - center text - zion - cyan text - xs mt - auto'>;'
                 <span>{t (general.explore)}</span>;'
                 <ArrowRight className='ml - 1 h - 3 w - 3 transition - transform group - hover:translate - x-1 />;
+=======
+              </p>;'
+              <div className='flex items - center text - zion - cyan text - xs mt - auto'>;'
+                <span>{t ('general.explore')}</span>;'
+                <ArrowRight className='ml - 1 h - 3 w - 3 transition - transform group - hover:translate - x-1' />;
+>>>>>>> origin/chore/fix-lint-and-merge
               </div>;
             </Link>;
 import React, { useState } from 'react';
@@ -493,10 +525,14 @@ export default function Page() { return null; }
 
               className=group bg-zion-blue relative border border-zion-blue-light hover:border-zion-purple/50 rounded-xl p-4 transition-all duration-300 flex flex-col items-center text-center hover:shadow-md hover:bg-zion-blue-light/20
             >"
+<<<<<<< HEAD
               <div className="bg-zion-blue-dark rounded-full w-12 h-12 flex items-center justify-center mb-3 transition-transform group-hover:scale-110>
             </motion && motion.div>;export default QuickAccess;className=group bg-zion-blue relative border border-zion-blue-light hover:border-zion-purple/50 rounded-xl p-4 transition-all duration-300 flex flex-col items-center text-center hover:shadow-md hover:bg-zion-blue-light/20";
             >;
               <div className="bg-zion-blue-dark rounded-full w-12 h-12 flex items-center justify-center mb-3 transition-transform group-hover:scale-110>;
+=======
+              <div className="bg-zion-blue-dark rounded-full w-12 h-12 flex items-center justify-center mb-3 transition-transform group-hover:scale-110">
+>>>>>>> origin/chore/fix-lint-and-merge
                 {link.icon}
 
                 <ArrowRight className=ml-1 h-3 w-3 transition-transform group-hover:translate-x-1" />
@@ -515,12 +551,20 @@ export default function Page() { return null; }
       </div>;
     </section>);
 
+<<<<<<< HEAD
 
 import React from "react,
 import Link from next/link",
 import { useTranslation } from "react-i18next;
 import { cn } from @/lib/utils";
 import { ArrowRight, Search, Users, Briefcase, Settings, MessageSquare, Smartphone } from lucide-react
+=======
+import React from "react",
+import Link from "next/link",
+import { useTranslation } from "react-i18next";
+import { cn } from "@/lib/utils";
+import { ArrowRight, Search, Users, Briefcase, Settings, MessageSquare, Smartphone } from 'lucide-react'
+>>>>>>> origin/chore/fix-lint-and-merge
 
 import React from 'react'
 import Link from next/link
@@ -541,6 +585,7 @@ interface QuickAccessProps {
 export function QuickAccess({ className, style }: QuickAccessProps) {
   );
 
+<<<<<<< HEAD
     </section>)export default QuickAccess }export default QuickAccess;import React from "react,import Link from next/link",import { useTranslation  } from react-i18next;
 import { cn  } from '@/lib/utils';
 import { ArrowRight, Search, Users, Briefcase, Settings, MessageSquare, Smartphone  } from lucide-react;
@@ -557,3 +602,6 @@ interface QuickAccessProps  {className?: string;
   style?: React.CSSProperties;
 export function QuickAccess() {)export default QuickAccess;
 export default QuickAccess;
+=======
+export default QuickAccess;
+>>>>>>> origin/chore/fix-lint-and-merge

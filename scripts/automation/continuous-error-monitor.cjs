@@ -1,5 +1,23 @@
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+#!/""usr/bin/env""
+const fs = require("fs")
+const path = require("path")
+const { spawn } = require("child_process")
+const fs = require("fs")
+const path = require("path")
+const { spawn } = require("child_process")
+>>>>>>> origin/chore/fix-lint-and-merge
   console.log(`[${new Date().toISOString()}] [ContinuousErrorMonitor] ${message}
     this.log(Continuous error monitoring is now active")
   this.log("Error fixer already running, skipping this cycle)
@@ -13,7 +31,17 @@
         automation,comprehensive-error-fixer.cjs"
   this.errorCount++;this.log(`Error during error fixer "execution: ${error.message}`)
         this.projectRoot,scripts"
+<<<<<<< HEAD
 
+=======
+        "automation",comprehensive-error-fixer.cjs"
+      const child = spawn("node")
+  "cwd"
+        "stdio": ["pipe", "pipe", "pipe"]
+        "env": { ...process.env, "NODE_ENV": "production"}
+      let stdout = "
+      let stderr = "
+>>>>>>> origin/chore/fix-lint-and-merge
       child.stdout.on("data")
       child.stderr.on(`data``)
       child.on(close)
@@ -40,17 +68,35 @@
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));this.log(`Status report saved to"`)
 process.on("SIGINT)
   console.log(`� Received SIGINT, shutting down gracefully...``)
+<<<<<<< HEAD
 process.on(SIGTERM")
 
+=======
+process.on("SIGTERM")
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
 
+=======
   console.log(")
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
   console.log(")
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
   console.log(")
+<<<<<<< HEAD
 
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 =======
@@ -58,7 +104,3 @@ process.on(SIGTERM")
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

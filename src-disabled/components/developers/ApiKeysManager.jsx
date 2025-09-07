@@ -5,15 +5,15 @@ export default function ApiKeysManager() { const { apiKeys, loading, newApiKey, 
   const [selectedScopes, setSelectedScopes] = useState([]);
   const [showRegenerateConfirm, setShowRegenerateConfirm] = useState(null);
   const [showDeleteConfirm, setShowDeleteConfirm] = useState(null);
-  const scopeOptions = [' {value: 'jobs:read'}
+  const scopeOptions = [' { value: 'jobs:read',}
   label: 'Read Jobs', description: 'Access to view job listings',}
-}, {value: 'jobs:write'}
+}, { value: 'jobs:write',}
   label: 'Write Jobs', description: 'Create and manage job listings',}
-}, {value: 'talent:read'}
+}, { value: 'talent:read',}
   label: 'Read Talent', description: 'Access to view talent profiles',}
-}, {value: 'quotes:write'}
+}, { value: 'quotes:write',}
   label: 'Write Quotes', description: 'Create and manage quotes',}
-}, {value: 'webhooks:manage'}
+}, { value: 'webhooks:manage',}
   label: 'Manage Webhooks', description: 'Set up and manage webhook endpoints',}
 } ] const handleCreateKey = async () => { if (!newKeyName.trim() || selectedScopes.length === 0);}
   return await createApiKey(newKeyName.trim(), selectedScopes) setNewKeyName(') setSelectedScopes([]) setShowCreateDialog(false;}
@@ -24,20 +24,28 @@ const handleScopeToggle = ( setSelectedScopes(prev => prev.includes(scope) ? pre
 }
 ;
   const getExampleCode = ( ';
-  return `curl -X GET 'https: '''`";'";) => {
+  return `curl -X GET 'https: '''`\";'\";) => {
   return $3;}
 }
 ' ' ' ' ' export { function }
 
 export default function ApiKeysManager() { const { apiKeys, loading, newApiKey, fetchApiKeys, createApiKey, deleteApiKey, toggleApiKey, updateApiKeyScopes, regenerateApiKey, revokeApiKey, clearNewApiKey } = useApiKeys() const [showCreateDialog, setShowCreateDialog] = useState(false);
+<<<<<<< HEAD
+=======
+  const [newKeyName, setNewKeyName] = useState(');
+  const [selectedScopes, setSelectedScopes] = useState([]);
+  const [showRegenerateConfirm, setShowRegenerateConfirm] = useState(null);
+  const [showDeleteConfirm, setShowDeleteConfirm] = useState(null);
+  const scopeOptions = [' { value: 'jobs:read',}
+>>>>>>> origin/chore/fix-lint-and-merge
   label: 'Read Jobs', description: 'Access to view job listings',}
-}, {value: 'jobs:write'}
+}, { value: 'jobs:write',}
   label: 'Write Jobs', description: 'Create and manage job listings',}
-}, {value: 'talent:read'}
+}, { value: 'talent:read',}
   label: 'Read Talent', description: 'Access to view talent profiles',}
-}, {value: 'quotes:write'}
+}, { value: 'quotes:write',}
   label: 'Write Quotes', description: 'Create and manage quotes',}
-}, {value: 'webhooks:manage'}
+}, { value: 'webhooks:manage',}
   label: 'Manage Webhooks', description: 'Set up and manage webhook endpoints',}
 } ] const handleCreateKey = async () => { if (!newKeyName.trim() || selectedScopes.length === 0);}
   return await createApiKey(newKeyName.trim(), selectedScopes) setNewKeyName(') setSelectedScopes([]) setShowCreateDialog(false;}
@@ -46,6 +54,11 @@ export default function ApiKeysManager() { const { apiKeys, loading, newApiKey, 
   return $3;}
 }
 ;
+<<<<<<< HEAD
   return `curl -X GET 'https:'''`"'";) => {
+=======
+  const getExampleCode = ( ';
+  return `curl -X GET 'https:'''`\"'\";) => {
+>>>>>>> origin/chore/fix-lint-and-merge
   return $3;}
 }

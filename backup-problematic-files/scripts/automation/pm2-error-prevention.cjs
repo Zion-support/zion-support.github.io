@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/"usr/bin/env"
 const fs = require("fs)
 const path = require(path")
@@ -10,6 +11,21 @@ const { execSync } = require("child_process)
   console.log( Starting PM2 Error Prevention Automation...)
   "name": error-prevention
       "script": "scripts/automation/pm2-error-prevention.cjs"
+=======
+<<<<<<< HEAD
+#!/""usr/bin/env""
+const fs = require("fs")
+const path = require("path")
+const { execSync } = require("child_process")
+  "checkInterval"
+      "maxErrors"
+      "autoFix"
+      "backupBeforeFix"
+// console.log("" Starting PM2 Error Prevention Automation...")
+  console.log(" Starting PM2 Error Prevention Automation...")
+  "name": "error-prevention"
+      "script": """scripts/automation/pm2-error-prevention.cjs"""
+>>>>>>> origin/chore/fix-lint-and-merge
       "instances"
       autorestart
       "watch"
@@ -127,4 +143,20 @@ const { execSync } = require("child_process)
 process.on(SIGINT)
   console.log("� Received SIGINT, shutting down gracefully...")
 process.on("SIGTERM")
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+  console.log("� Received SIGTERM, shutting down gracefully...")
+  console.log("� Received SIGTERM, shutting down gracefully...")
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+>>>>>>> origin/chore/fix-lint-and-merge

@@ -1,14 +1,3 @@
-:src/components/MarketplaceErrorBoundary.tsx
-import React from 'react';
-import { ErrorBoundary, FallbackProps  } from 'react-error-boundary';
-import * as Sentry from '@sentry/nextjs';
-import { mutate  } from 'swr';
-import { Button  } from '@/components/ui/button';
-import { Alert, AlertDescription, AlertTitle  } from '@/components/ui/alert';
-import { RefreshCcw, AlertCircle } from 'lucide-react'
-import {logErrorToProduction} from '@/utils/productionLogger';
-interface MarketplaceErrorFallbackProps extends FallbackProps {
-  // Additional props if needed
 
     >
       {children}
@@ -40,6 +29,7 @@ export function MarketplaceErrorBoundary({ children }:,  MarketplaceErrorBoundar
     })
   };
   return (
+<<<<<<< HEAD
 :src/components/MarketplaceErrorBoundary.tsx
     <div className='flex items-center justify-center min-h-[400px] p-6'>
       <div className='max-w-md w-full space-y-4'>
@@ -67,6 +57,8 @@ import {ErrorBoundary, FallbackProps} from 'react-error-boundary';
 import { mutate } from 'swr';
 import { Button } from '@/components/ui/button';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
     <ErrorBoundary
     <ErrorBoundary;
       FallbackComponent={MarketplaceErrorFallback}
@@ -128,17 +120,6 @@ function MarketplaceErrorFallback({ error, resetErrorBoundary }: MarketplaceErro
             Reload Page
           </Button>
         </div>
-:src/components/MarketplaceErrorBoundary.tsx
-        <div className='text-center text-sm text-muted-foreground'>
-          If the problem persists, please{' '}
-          <a
-            href='mailto:support@example.com'
-            className='text-primary hover:underline'          >
-        <div className="text-center text-sm text-muted-foreground">
-          If the problem persists, please{' '}
-          <a
-            href="mailto: support@example.com"
-            className="text-primary hover:underline"
         <div className="text-center text-sm text-muted-foreground">
           If the problem persists, please{' '}
           <a 
@@ -151,6 +132,7 @@ function MarketplaceErrorFallback({ error, resetErrorBoundary }: MarketplaceErro
       </div>
     </div>
   )
+<<<<<<< HEAD
 :src/components/MarketplaceErrorBoundary.tsx
 interface MarketplaceErrorBoundaryProps {
   children: React.ReactNode
@@ -184,6 +166,8 @@ export function MarketplaceErrorBoundary({
     </ErrorBoundary>
   )
 }
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
   },;
   return (;
     <div className="flex items-center justify-center min-h-[400px] p-6">;
@@ -242,19 +226,14 @@ export function MarketplaceErrorBoundary({ children }: MarketplaceErrorBoundaryP
       Sentry.captureException(error);
     });
   };
-
-    >
-      {children}
-    </ErrorBoundary>
-  );
+  return (;
+    <ErrorBoundary;
       FallbackComponent={MarketplaceErrorFallback}
       onError={handleError}
     >;
       {children}
     </ErrorBoundary>;
   );
-:src/components/MarketplaceErrorBoundary.tsx
-} ;
 } ;
     </ErrorBoundary>
   )

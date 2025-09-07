@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import React from 'react;
 import { Button } from @/components/ui/button';
@@ -14,6 +15,8 @@ export function EnterpriseCTA() {
       <div className='container mx-auto max-w-6xl>
         <div className=rounded-xl bg-gradient-to-r from-zion-cyan/20 via-zion-purple/20 to-zion-purple-light/20 p-1'>
           <div className='bg-card rounded-lg shadow-sm p-8 md:p-12>
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 return (
     <section id=contact' className='py-20 px-4 md:px-6>
       <div className='container mx-auto max-w-6xl'>
@@ -67,11 +70,18 @@ return (
                       </span>
                     </div>
                     <p>Q&A with our enterprise solution experts</p>
+<<<<<<< HEAD
                   </li>
                   <li className=flex gap-3'>'
                     <div className=h-6 w-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0>'
                       <span className='text-primary text-sm font-medium>
                       </span>                    </div>
+=======
+                  </li>'
+                  <li className='flex gap-3'>'
+                    <div className='h-6 w-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0'>'
+                      <span className='text-primary text-sm font-medium'>
+>>>>>>> origin/chore/fix-lint-and-merge
 
 import { Calendar } from lucide-react';
 
@@ -127,11 +137,17 @@ export function EnterpriseCTA() {
                     </div>
                     <p>Q&A with our enterprise solution experts</p>
                   </li>"
+<<<<<<< HEAD
                   <li className="flex gap-3>
                     <div className="h-6 w-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
                       <span className=text-primary text-sm font-medium">4</span>
 
                       </span>
+=======
+                  <li className="flex gap-3">"
+                    <div className="h-6 w-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">"
+                      <span className="text-primary text-sm font-medium">4</span>
+>>>>>>> origin/chore/fix-lint-and-merge
                       </span>
 origin/cursor/automate-test-improve-and-merge-code-2533
                     </div>
@@ -144,6 +160,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
       </div>
 
+<<<<<<< HEAD
 ;
 import React from react';
 import { Button  } from '@/components/ui/button;
@@ -331,6 +348,8 @@ export function EnterpriseCTA() {
   return (;
     <section id="contact className=py-20 px-4 md: px-6">;
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
     </section>
 
     <section id="contact className=py-20 px-4 md: px-6">;
@@ -382,7 +401,6 @@ export function EnterpriseCTA() {
                     <div className=h-6 w-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">;
                       <span className="text-primary text-sm font-medium>4</span>;
                     </div>;
-                    <p>Free consultation on implementation</p>;
 
 export /**;
  * EnterpriseCTA - Function description;
@@ -505,13 +523,13 @@ export /**;
                     <p > Free consultation on implementation</p>;
 
                   </li>;
-                    <p > Free consultation on implementation</p>;</li>;
 
                 </ul>;
               </div>;
             </div>;
           </div>;
         </div>;
+<<<<<<< HEAD
       </div>;</section>)})}</section>)})}
     </section>);
 }
@@ -519,3 +537,6 @@ export /**;
   );
 }
       </div>;
+=======
+      </div>;
+>>>>>>> origin/chore/fix-lint-and-merge

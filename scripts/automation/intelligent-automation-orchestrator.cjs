@@ -1,12 +1,73 @@
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+#!/""usr/bin/env""
+const { execSync } = require("child_process")
+const fs = require("fs")
+const path = require("path")
+console.log("🧠 Starting intelligent automation orchestrator...")
+>>>>>>> origin/chore/fix-lint-and-merge
 // Get automation interval from environment variable ("default")
 console.log(🧠 Starting intelligent automation orchestrator...)
     "automations": [enhanced-error-fixer, "console-error-fixer"]
   medium
     "automations": [code-quality-automation, "link-checker", security-audit]
   "low"
+<<<<<<< HEAD
 
+=======
+    "automations": ["performance-monitor", "dependency-updates", "quality-checks"]
+  "maintenance"
+    "automations": ["smart-documentation-generator", "ai-code-analyzer"]
+const { execSync } = require("child_process")
+const fs = require("fs")
+const path = require("path")
+console.log(""🧠 Starting intelligent automation orchestrator...")
+// Get automation interval from environment variable ("default")
+console.log("🧠 Starting intelligent automation orchestrator...")
+    "automations": ["enhanced-error-fixer", "console-error-fixer"]
+  "medium"
+    "automations": ["code-quality-automation", "link-checker", "security-audit"]
+  "low"
+    "automations": ["performance-monitor", "dependency-updates", "quality-checks", "]
+  "maintenance"
+    "automations": ["smart-documentation-generator", "ai-code-analyzer"]
+  console.log("🧠 Running intelligent automation orchestrator at ${new Date().toISOString()}"
+       Project state "analysis"
+    const automationsToRun = determineAutomationsToRun(projectState);console.log( Automations to "run": ${automationsToRun.join(", "})
+  "timestamp"
+      "automationsExecuted"
+      insights,"summary"
+      "status": "completed"
+      "nextRun"
+      process.cwd(),intelligent-automation-orchestrator-report.json"
+// console.log(`  Intelligent automation orchestrator report saved to ${reportPath}``)
+    console.log( Intelligent automation orchestrator completed successfully")
+      " Intelligent automation orchestrator "failed": "
+  "hasErrors"
+    "errorCount"
+    "warningCount"
+    "buildStatus": "unknown"
+    "testStatus": "unknown"
+    "lastBuildTime"
+    "lastTestTime"
+    "fileCount"
+    "dependencyStatus": "unknown"
+    "securityStatus": "unknown"
+    "performanceStatus": "unknown"
+  const lintResult = execSync("npm run lint", { "stdio": "pipe"})
+      state.errorCount = (lintResult.match(/"error/g")
+      state.warningCount = (lintResult.match(/"warning/g")
+>>>>>>> origin/chore/fix-lint-and-merge
         error.message.match(/(\d+)\s+errors?/)?.[1] || "0"
         error.message.match(/(\d+)\s+warnings?/)?.[1] || 0
   execSync("npm run build", { stdio: "pipe"})
@@ -16,7 +77,13 @@ console.log(🧠 Starting intelligent automation orchestrator...)
       state.testStatus = "success"
   state.testStatus = failed
     state.fileCount = countFiles("src")
+<<<<<<< HEAD
 
+=======
+  const auditResult = execSync("npm audit --json")
+  "stdio": "pipe"
+        audit.metadata.vulnerabilities.total > 0 ? "vulnerable" : "secure"
+>>>>>>> origin/chore/fix-lint-and-merge
   state.dependencyStatus = "unknown"
   execSync(npm run build, { "stdio": pipe})
       state.buildStatus = "success"
@@ -24,13 +91,59 @@ console.log(🧠 Starting intelligent automation orchestrator...)
   execSync("npm test", { stdio: "pipe"})
       state.testStatus = success
   state.testStatus = "failed"
+<<<<<<< HEAD
 
+=======
+    state.fileCount = countFiles("src")
+  const auditResult = execSync("npm audit --json")
+  "stdio": "pipe"
+        audit.metadata.vulnerabilities.total > 0 ? "vulnerable" : "secure"
+  state.dependencyStatus = "unknown"
+  console.log(  ⚠  Project state analysis "failed": ${error.message}"")
+  // Skip directories that can"
+    const secretPatterns = [/password\s*[:=]\s*[""][^"]+["]
+      /api_key\s*[:=]\s*[""][^""]+["]
+      /secret\s*[:=]\s*["][^""]+[""]
+      /token\s*[:=]\s*["][^"]+[""]/gi, ""
+  /password\s*[:=]\s*[""][^"]+["]
+      /api_key\s*[:=]\s*["][^"]+["]
+      /secret\s*[:=]\s*["][^""]+[""]
+      /token\s*[:=]\s*["][^"]+["]/gi, ""
+  // Skip directories that can"
+    const secretPatterns = [/password\s*[:=]\s*["][^""]+[""]
+      /api_key\s*[:=]\s*["][^"]+[""]
+      /secret\s*[:=]\s*[""][^"]+["]
+      /token\s*[:=]\s*[""][^""]+[""]/gi, "
+    const filesToCheck = ["src", "config", "scripts"]
+  return "vulnerable"
+    return "secure"
+  return "unknown"
+  return "unknown"
+    if (fs.existsSync("dist")
+  const distSize = getDirectorySize("dist")
+    if (fs.existsSync("dist")
+  const distSize = getDirectorySize("dist")
+        performanceIssues.push("large-bundle")
+    const antiPatterns = ["useEffect(() => {}", "["])"
+      "setInterval(", // Potential memory leakssetTimeout(")
+      "document.querySelector", // Direct DOM manipulationwindow.addEventListener"
+    const filesToCheck = ["src"]
+  return "poor"
+  return "fair"
+    return "good"
+  return "unknown"
+  const fullPath = path.join(dir, ")
+>>>>>>> origin/chore/fix-lint-and-merge
   files.push(...findFilesWithPattern(fullPath")
         item.endsWith(.ts)
         item.endsWith(".tsx")
         item.endsWith(.js)
         item.endsWith(".jsx")
+<<<<<<< HEAD
 
+=======
+  const content = fs.readFileSync(fullPath, "utf8")
+>>>>>>> origin/chore/fix-lint-and-merge
   // Skip files that can"
   // Skip directories that can"
   // Skip files that can
@@ -140,16 +253,32 @@ process.on(SIGINT)
   console.log("� Received SIGINT, shutting down gracefully...")
 process.on(SIGTERM)
   console.log("� Received SIGTERM, shutting down gracefully...")
+<<<<<<< HEAD
 
 
   console.error( Failed to start intelligent automation orchestrator)
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+  console.error( Failed to start intelligent automation "orchestrator")
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
   console.error( Failed to start intelligent automation "orchestrator")
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
   console.error( Failed to start intelligent automation "orchestrator")
+<<<<<<< HEAD
 
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 =======
@@ -157,7 +286,3 @@ process.on(SIGTERM)
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

@@ -1,13 +1,22 @@
 
 const fs = require('fs');
+<<<<<<< HEAD
 const { execSync } = require(child_process');
 console.log('🔧 Resolving New Merge Conflicts);
 console.log(=================================');
+=======
+const { execSync } = require('child_process');
+console.log('🔧 Resolving New Merge Conflicts');
+<<<<<<< HEAD
+<<<<<<< HEAD
+console.log('=================================');
+>>>>>>> origin/chore/fix-lint-and-merge
 
 :scripts/resolve-new-merge-conflicts.cjs
 // Function to resolve merge conflicts by keeping the first version
 function resolveMergeConflicts(content) {
   return content
+<<<<<<< HEAD
     .replace(/[a-f0-9]+/g, ');
 console.log(
 console.log('=====');
@@ -26,17 +35,29 @@ console.log(
   return content
     .replace(/[a-f0-9]+/g, ');
 console.log('
+=======
+    .replace(/[a-f0-9]+/g, '');
+=======
+console.log('
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
 
 // Function to fix common syntax errors;)
 function fixSyntaxErrors(content) {
+<<<<<<< HEAD
+<<<<<<< HEAD
 // Function to fix all remaining critical syntax errors
 function fixCriticalSyntax(content) {
 :backup-problematic-files/scripts/final-critical-fix.cjs
 :scripts/resolve-new-merge-conflicts.cjs
+=======
 
+<<<<<<< HEAD
 :backup-problematic-files/scripts/final-critical-fix.cjs
 
 // Function to fix all remaining critical syntax errors
@@ -44,10 +65,19 @@ function fixCriticalSyntax(content) {
 
 
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> origin/chore/fix-lint-and-merge
   return content
     // Fix malformed JSX tags
+=======
 
+<<<<<<< HEAD
     .replace(/<h3([^>]*)>([^<]+)><\/h3>/gm, <h3$1>$2</h3>)
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+    .replace(/<h3([^>]*)>([^<]+)><\/h3>/gm, '<h3$1>$2</h3>')
+>>>>>>> origin/chore/fix-lint-and-merge
     .replace(/<h2([^>]*)>([^<]+)><\/h2>/gm, '<h2$1>$2</h2>')
     .replace(/<h1([^>]*)>([^<]+)><\/h1>/gm, <h1$1>$2</h1>)
     .replace(/<p([^>]*)>([^<]+)><\/p>/gm, '<p$1>$2</p>')
@@ -57,13 +87,30 @@ function fixCriticalSyntax(content) {
 </motion>
     .replace(/<meta([^>]+) \/ \/>/gm, '<meta$1 />')
 </meta>
+<<<<<<< HEAD
     .replace(/<meta([^>]+) \/>/gm, <meta$1 />)
 :backup-problematic-files/scripts/final-critical-fix.cjs
 :scripts/resolve-new-merge-conflicts.cjs
     let modified = false;
+=======
+    .replace(/<meta([^>]+) \/>/gm, '<meta$1 />')
+>>>>>>> origin/chore/fix-lint-and-merge
 
-    // Check for merge conflict markers
 
+<<<<<<< HEAD
+let totalFixed = 0;
+
+console.log('🔍 Resolving merge conflicts in files...');
+
+for (const file of conflictFiles) {
+  try {
+    if (!fs.existsSync(file)) {
+      console.log(`⚠️  File not found: ${file}`);
+      continue;
+    }
+
+    let content = fs.readFileSync(file, 'utf8');
+<<<<<<< HEAD
     const originalContent = content;
     
     content = fixCriticalSyntax(content);
@@ -114,8 +161,13 @@ try {
 }
 
 console.log('\n🎉 Final critical fix completed!');
+:backup-problematic-files/scripts/final-critical-fix.cjs
+    let modified = false;
 
+    // Check for merge conflict markers
+:scripts/resolve-new-merge-conflicts.cjs
+=======
 
-
-
-
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

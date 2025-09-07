@@ -1,8 +1,41 @@
+<<<<<<< HEAD
 isRoleBased: boolean;
+=======
+email: string;
+  is_valid: boolean;
+interface EmailValidationResult {}
+  email: string;
+  isValid: boolean;
+  score: number;
+  suggestions: string[];
+  details: {}
+    hasValidFormat: boolean;
+    hasValidDomain: boolean;
+    hasValidMX: boolean;
+
+  }
+  try {}
+    const { email } = req && req.body;
+    // Extract domain;
+    const domain = email && email.split('@')[1];
+    const hasValidDomain = domain && domain.length > 0;
+    // Check for common disposable email providers;
+    const disposableDomains = ['
+      'tempmail && tempmail.org','
+      'guerrillamail && guerrillamail.com','
+      'mailinator && mailinator.com','
+      '10minutemail && 10minutemail.com','
+      'temp-mail && mail.org','
+      'sharklasers && sharklasers.com','
+      'getairmail && getairmail.com',
+
+    isRoleBased: boolean;
+>>>>>>> origin/chore/fix-lint-and-merge
     isFreeProvider: boolean;
   },
 }
 
+<<<<<<< HEAD
   }      email;
       isValid: score >= 70;
       score: Math && Math.max(0, score);
@@ -299,9 +332,26 @@ isFreeProvider
     console.error('Email validation error:', error);
     res.status(500).json({ error: 'Internal server error' });
 
+=======
+export default async function handler(
+  req: NextApiRequest;
+  res: NextApiResponse<EmailValidationResult | { error: string }    />
+) {
+  if (req.method !== 'POST') {}
+return res.status(405).json({ error: 'Method not allowed',}
+});
+  }
+  try {}
+    const { email } = req.body;
+
+>>>>>>> origin/chore/fix-lint-and-merge
   }
     res.status(500).json({ error: 'Internal server error' })
 origin/cursor/automate-test-improve-and-merge-code-2533
   }
   },
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/chore/fix-lint-and-merge

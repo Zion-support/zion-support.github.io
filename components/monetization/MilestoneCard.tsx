@@ -1,36 +1,69 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
 class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}
   static getDerivedStateFromError(error) {return { hasError: true }
 }componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}static getDerivedStateFromError(error) {return { hasError: true }
 }componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) ;}
+<<<<<<< HEAD
   return <div />Something went wrong.</div>;}
+=======
+  return <div    />Something went wrong.</div>;}
+>>>>>>> origin/chore/fix-lint-and-merge
     }
     return this.props.children;
   }
 }
 import React, { useState } from 'react';
+<<<<<<< HEAD
 import { Milestone } from '../../utils/types/milestones';
 import React, { useState } from 'react;
 import { Milestone } from ../../utils/types/milestones';
+=======
+
+
+import { Milestone } from '../../utils/types/milestones';
+>>>>>>> origin/chore/fix-lint-and-merge
 
 type Props = any;
 
 type Props = {
+<<<<<<< HEAD
 
   ) => Promise<void> | void;
 }
 
 const statusSteps = [;
+=======
+  milestone: Milestone;
 
-export default function MilestoneCard() {"milestone": Milestone;
-  }
-  "project_id": string;
-  "role": 'client' | 'talent' | 'admin';'
-    milestone.status === 'In Progress';'
+  project_id: string;
+  role: 'client' | 'talent' | 'admin';
+  onAction: (action: 'in_progress' | 'submitted' | 'approved' | 'paid';
+    milestoneId: string;}
+  ) => Promise<void    /> | void;}
+}
+
+const statusSteps = [
+  'Pending';
+  'In Progress';
+  'Submitted';
+  'Approved';
+  'Paid';
+] as const;
+>>>>>>> origin/chore/fix-lint-and-merge
+
+export default function MilestoneCard() {milestone: Milestone;
+  project_id: string;
+  role: 'client' | 'talent' | 'admin';
+    milestone.status === 'In Progress';
 
 const canClientApprove =;
-    role !== 'talent' && milestone.status === 'Submitted';'
+    role !== 'talent' && milestone.status === 'Submitted';
 
 const canClientMarkPaid =;
+<<<<<<< HEAD
     role !== 'talent' && milestone.status === 'Approved';'
   return (<div className='border rounded-lg p-4 bg-white shadow-sm'>;'
       <div className='flex items-start justify-between'>;'
@@ -55,6 +88,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   ) => Promise<void> | void;
 }
 
+=======
+    role !== 'talent' && milestone.status === 'Approved';
+  return (<div className='border rounded-lg p-4 bg-white shadow-sm'    />;
+      <div className='flex items-start justify-between'    />;}
+        <div    />;}
+          <h3 className='text-lg font-semibold'    />{milestone && milestone.title}</h3>;
+          <p className='text-sm text-gray-600'    />;
+            Due: {new Date(milestone && milestone.dueDate).toLocaleDateString(}
+}
+>>>>>>> origin/chore/fix-lint-and-merge
           </p>;
         </div>;
         <button;
@@ -62,6 +105,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           onClick={() => setExpanded(v => !v)}>          {expanded ? Hide' : 'Details}type Props = {return (<div className=border rounded - lg p - 4 bg - white shadow - sm'>;
         >          {expanded ? 'Hide : Details'}
 
+<<<<<<< HEAD
 
           {expanded ? 'Hide : Details'}
         </button>;
@@ -86,11 +130,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   const canClientApprove = role !== 'talent' && milestone && milestone.status === 'Submitted';'
   const canClientMarkPaid = role !== 'talent' && milestone && milestone.status === 'Approved';
 
-        >
-          {expanded ? 'Hide' : 'Details'}
-        </button>
-      </div>
+=======
+        <button;
+className='text-sm text-blue-600'
+          onClick={() =    /> setExpanded(v => !v)}
 
+>>>>>>> origin/chore/fix-lint-and-merge
+        >
+
+<<<<<<< HEAD
 <div className='mt-3'>
   return (
     <div className="border rounded-lg p-4 bg-white shadow-sm">
@@ -267,36 +315,60 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           {statusSteps.map((step, idx) => (<div key={step} className='flex items-center'>;
               <div;
 on_action: (action: 'in_progress' | 'submitted' | 'approved' | 'paid', milestone_id: string) = /> Promise < void> | void;
+=======
+          {expanded ? 'Hide' : 'Details'}
+        </button>;
+      </div>;
+<div className='mt-3'    />;
+  return (<div className=\"border rounded-lg p-4 bg-white shadow-sm\"    />;"
+      <div className=\"flex items-start justify-between\"    />;
+        <div    />;"
+          <h3 className=\"text-lg font-semibold\"    />{milestone.title}</h3>;"
+          <p className=\"text-sm text-gray-600\"    />Due: {new Date(milestone.dueDate).toLocaleDateString(}
+}</p>;
+        </div>;"
+        <button className=\"text-sm text-blue-600\" onClick={() =    /> setExpanded((v) => !v)}>;
+          {expanded ? 'Hide' : 'Details'}
+
+        </button>
+      </div>
+      <div className='mt-3'    />
+        <div className='flex items-center gap-2'    />
+          {statusSteps.map((step, idx) => (}
+            <div key={step} className='flex items-center'    />
+              <div;
+on_action: (action: 'in_progress' | 'submitted' | 'approved' | 'paid', milestone_id: string) =    /> Promise < void> | void;
+>>>>>>> origin/chore/fix-lint-and-merge
 }
 
-const status_steps  = ['PendingIn ProgressSubmittedApprovedPaid'] as const;'
+const status_steps  = ['PendingIn ProgressSubmittedApprovedPaid'] as const;
 
 export default /**;
  * MilestoneCard - Function description;
  */;
 function MilestoneCard() {const [expanded, set_expanded]  = useState (false)const current_index = status_steps.find_index ((s) => string === milestone.status;
-  }
-  const canClientMarkInProgress = role !== 'talent' && milestone.status === 'Pending';'
+  const canClientMarkInProgress = role !== 'talent' && milestone.status === 'Pending';
 
-const canTalentSubmit = (role === 'talent' || role === 'admin') && milestone.status === 'In Progress';'
+const canTalentSubmit = (role === 'talent' || role === 'admin') && milestone.status === 'In Progress';
 
-const canClientApprove = role !== 'talent' && milestone.status === 'Submitted';'
-
-const canClientMarkPaid  = role !== 'talent' && milestone.status === 'Approved';return (<div className="border rounded - lg p - 4 bg - white shadow - sm">;"
-      <div className="flex items - start justify - between">;"
-        <div>;
-          <h3 className="text - lg font - semibold">{milestone.title}</h3>;"
-          <p className="text - sm text - gray - 600">"Due": {new Date (milestone.due_date).toLocaleDateString (,"
+const canClientApprove = role !== 'talent' && milestone.status === 'Submitted';
+"
+const canClientMarkPaid  = role !== 'talent' && milestone.status === 'Approved';return (<div className=\"border rounded - lg p - 4 bg - white shadow - sm\"    />;"
+      <div className=\"flex items - start justify - between\"    />;}
+        <div    />;}"
+          <h3 className=\"text - lg font - semibold\"    />{milestone.title}</h3>;"
+          <p className=\"text - sm text - gray - 600\"    />Due: {new Date (milestone.due_date).toLocaleDateString (}
 }</p>;
-        </div>;
-        <button className="text - sm text - blue - 600" on_click={() => set_expanded ((v) => !v)}>;"
-          {expanded ? 'Hide' : 'Details'}'
+        </div>;"
+        <button className=\"text - sm text - blue - 600\" on_click={() =    /> set_expanded ((v) => !v)}>;
+          {expanded ? 'Hide' : 'Details'}
         </button>;
       </div>;
-      <div className='mt - 3'>;'
-        <div className='flex items - center gap - 2'>;'
-          {status_steps.map ((step, idx) => (<div key={step} className='flex items - center'>;'
+      <div className='mt - 3'    />;
+        <div className='flex items - center gap - 2'    />;
+          {status_steps.map ((step, idx) => (<div key={step} className='flex items - center'    />;
               <div;
+<<<<<<< HEAD
 
                   (idx <= current_index ? bg - green - 600 : 'bg - gray - 300')                }
                 title={step}
@@ -310,10 +382,29 @@ const canClientMarkPaid  = role !== 'talent' && milestone.status === 'Approved';
                 title={step}
               />
               {idx < statusSteps.length - 1 && (
+=======
+
+                className={
+
+                  'h-2 w-2 rounded-full ' +}
+                  (idx <= currentIndex ? 'bg-green-600' : 'bg-gray-300')}
+                }
+                title={step}
+                 />
+              {idx < statusSteps.length - 1 && (
+<div;
+className={
+                    'h - 0.5 w - 8 ' +;}
+                    (idx < current_index ? 'bg - green - 600' : 'bg - gray - 300');}
+                  }
+
+                   />
+>>>>>>> origin/chore/fix-lint-and-merge
 
               )}
             </div>;
           ))}
+<<<<<<< HEAD
         </div>                <div className={'h-0.5 w-8 ' + (idx < currentIndex ? 'bg-green-600' : 'bg-gray-300')} />;
                   'h - 2 w - 2 rounded - full ' + (idx <= current_index ? 'bg - green - 600' : 'bg - gray - 300')}
                 title={step}
@@ -351,14 +442,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
 
                       className=text-blue-600 underline'
+=======
 
-          "Status": {milestone.statu
+        </div>
+
+<div className='mt-2 text-xs text-gray-700'    />
+>>>>>>> origin/chore/fix-lint-and-merge
+
+          Status: {milestone.statu}
 }
         </div>;
       </div>;
-      {expanded && (<div className='mt-4 space-y-2 text-sm text-gray-800'>;'
-          {milestone.description && <p>{milestone.description}</p>}
+      {expanded && (<div className='mt-4 space-y-2 text-sm text-gray-800'    />;}
+          {milestone.description && <p    />{milestone.description}</p>}
 
+<<<<<<< HEAD
                     <a
                       className='text-blue-600 underline'
                       className='text-blue-600 underline'
@@ -416,15 +514,40 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
                       rel=noreferrer'
                      />
+=======
+          <div    />Amount: ${milestone.amountUsd.toFixed(2)}</div>
+          {milestone.attachments && milestone.attachments.length > 0 && (
+            <div    />
+<div className='font-medium'    />Attachments</div>
+              <ul className='list-disc ml-5'    />}
+                {milestone.attachments.map(a => (}
+                  <li key={a.id}    />
+                    <a;
+className='text-blue-600 underline'
+                      href={a && a.url}
+                      target='_blank'
+
+                      rel='noreferrer'
+                        />
+>>>>>>> origin/chore/fix-lint-and-merge
                       {a.label || a.url}
-origin/cursor/automate-test-improve-and-merge-code-2533
                     </a>
+<<<<<<< HEAD
                   </li>'"
                       rel='noreferrer'>                      {a && a.label || a && a.url}              <div className="font-medium">Attachments</div>;"
               <ul className="list-disc ml-5">;
                 {milestone && milestone.attachments.map((a) => (;
                   <li key={a && a.id}>;"
                     <a className="text-blue-600 underline" href={a && a.url} target="_blank" rel="noreferrer">;
+=======
+                  </li>
+
+                      rel='noreferrer'>                      {a && a.label || a && a.ur}"
+}              <div className=\"font-medium\"    />Attachments</div>;"
+              <ul className=\"list-disc ml-5\"    />;
+                {milestone && milestone.attachments.map((a) => (<li key={a && a.id}    />;"
+                    <a className=\"text-blue-600 underline\" href={a && a.url} target=\"_blank\" rel=\"noreferrer\"    />;
+>>>>>>> origin/chore/fix-lint-and-merge
                     </a>;
                   </li>;
                 ))}
@@ -434,6 +557,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>;
       )}
           <button;
+<<<<<<< HEAD
           <button"
             className="px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700"
 '
@@ -446,11 +570,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
                     </a>
                   </li>
+=======
+          <button;"
+            className=\'px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700\';
+      <div className='mt-4 flex flex-wrap gap-2'    />;
+        {canClientMarkInProgress && (<button;}
+            className='px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700'            onClick={() =    /> onAction('in_progress', milestone.id)}onClick={() => onAction('in_progress', milestone.id)}</a>;
+                  </li>;
+>>>>>>> origin/chore/fix-lint-and-merge
                 ))}
               </ul>;
             </div>;
           )}
 
+<<<<<<< HEAD
                       className='text-blue-600 underline
 
 <div className=mt-4 flex flex-wrap gap-2' />
@@ -490,10 +623,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 
+=======
+        </div>
+      )}
+
+
+<div className='mt-4 flex flex-wrap gap-2'    />
+        {canClientMarkInProgress && (
+          <button;}
+className='px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700'}
+            onClick={() =    /> onAction('in_progress', milestone.id)}
+>>>>>>> origin/chore/fix-lint-and-merge
           >
-            Mark In Progress
+            Mark In Progress;
           </button>
         )}
+<<<<<<< HEAD
 
 className='px-3 py-1 text-sm rounded bg-amber-600 text-white hover:bg-amber-700'
             onClick={() => onAction('submitted', milestone.id)}
@@ -580,11 +725,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <button;}
 className='px-3 py-1 text-sm rounded bg-amber-600 text-white hover:bg-amber-700'}
             onClick={() = /> onAction('submitted', milestone.id)}
+=======
+        {canTalentSubmit && (;
+          <button;}
+className='px-3 py-1 text-sm rounded bg-amber-600 text-white hover:bg-amber-700'}
+            onClick={() =    /> onAction('submitted', milestone.id)}
+>>>>>>> origin/chore/fix-lint-and-merge
           >
-            Submit Work
+            Submit Work;
           </button>
         )}
         {canClientApprove && (
+<<<<<<< HEAD
           <button
 }
 className='px-3 py-1 text-sm rounded bg-green-600 text-white "hover":bg-green-700''
@@ -604,10 +756,17 @@ className='px-3 py-1 text-sm rounded bg-slate-700 text-white "hover":bg-slate-80
             className='px - 3 py - 1 text - sm rounded bg - green - 600 text - white hover:bg - green - 700'            on_click={() => on_action ('approved', milestone.id)}            className="px - 3 py - 1 text - sm rounded bg - green - 600 text - white hover:bg - green - 700";'
             on_click={() => on_action ('approved', milestone.id)}
           >;
+=======
+          <button;}
+className='px-3 py-1 text-sm rounded bg-green-600 text-white hover:bg-green-700'}
+            onClick={() =    /> onAction('approved', milestone.id)}
+          >
+>>>>>>> origin/chore/fix-lint-and-merge
             Approve;
           </button>
         )}
         {canClientMarkPaid && (
+<<<<<<< HEAD
           <button;'"
             className='px - 3 py - 1 text - sm rounded bg - slate - 700 text - white hover:bg - slate - 800'            on_click={() => on_action ('paid', milestone.id)}            className="px - 3 py - 1 text - sm rounded bg - slate - 700 text - white hover:bg - slate - 800";'
             on_click={() => on_action ('paid', milestone.id)}
@@ -620,18 +779,21 @@ className='px-3 py-1 text-sm rounded bg-slate-700 text-white "hover":bg-slate-80
   );
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+          <button;}
+className='px-3 py-1 text-sm rounded bg-slate-700 text-white hover:bg-slate-800'}
+            onClick={() =    /> onAction('paid', milestone.id)}
+          >
+            Mark as Paid;
+>>>>>>> origin/chore/fix-lint-and-merge
           </button>
         )}
       </div>
     </div>
 
-
-
-        )}
-      </div>
-    </div>
   );
 }
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
         </div>;
       )}className='px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700'            onClick={() => onAction('in_progress', milestone.id)}      <div className="mt-4 flex flex-wrap gap-2">;
@@ -731,3 +893,7 @@ className='px-3 py-1 text-sm rounded bg-slate-700 text-white hover:bg-slate-800'
 }
 
 "
+=======
+
+"
+>>>>>>> origin/chore/fix-lint-and-merge

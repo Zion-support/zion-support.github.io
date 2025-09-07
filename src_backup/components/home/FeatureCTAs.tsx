@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 ;
 interface FeatureCTAsProps  {className?: string;
@@ -65,6 +66,9 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) { const { t 
     {
 
 interface FeatureCTAsProps {
+=======
+interface FeatureCTAsProps {;
+>>>>>>> origin/chore/fix-lint-and-merge
   className?: string;
   style?: React && React.CSSProperties;
 
@@ -214,11 +218,14 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) { const { t 
 
   ];
 
+<<<<<<< HEAD
     }{key: 'zion_hire_ai',descriptionKey: zion_hire_ai_desc,detailsKey: 'zion_hire_ai_details',icon: <Clock className = h-10 w-10 p-2 rounded-md bg-violet-100 text-violet-700 />,link: /zion-hire-ai,badge: 'premium';
     }];>;
       <div className=container mx-auto px-4>;
         <div className='mb-12 text-center'>;
           <h2 className=text-3xl font-bold tracking-tight mb-3>;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
       >;'
       <div className='container mx-auto px-4>;
         <div className='mb-12 text-center'>;
@@ -259,6 +266,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <p className=text-lg text-muted-foreground max-w-3xl mx-auto>;'
             {t('home && home.features_subheading)}
           </p>;
+<<<<<<< HEAD
                   {feature && feature.badge && (<Badge;
                       variant=secondary';
                       className='bg-primary/20 text-primary>                      {t(`badges.${feature && feature.badge}`)}
@@ -311,6 +319,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 {feature.descriptionKey && (
                   <CardDescription className=line-clamp-2'>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
         </div>;
 
         <div className=grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6>;
@@ -362,6 +372,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 }
 
+<<<<<<< HEAD
                   {feature && feature.badge && (<Badge variant="secondary className=bg-primary/20 text-primary">;<CardTitle className="mt-4>{t(`features.${feature.key}`)}</CardTitle>;
                 {feature.descriptionKey && (<CardDescription className=line-clamp-2">;
 <CardTitle className='mt-4>;
@@ -405,6 +416,8 @@ import { Card,CardContent,CardDescription,CardFooter,CardHeader,CardTitle} from 
 import { Button  } from '@/components / ui / button';
 import { Badge  } from '@/components / ui / badge';
 import Link from 'next / link';
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
         </div>;
       </div>;
     </section>;
@@ -440,10 +453,13 @@ import { use_translation } from 'react - i18next';
 import { cn } from @/lib / utils;
 interface FeatureCTAsProps {}
   class_name?: string;
+<<<<<<< HEAD
 import { use_translation  } from 'react - i18next';
   ArrowRight,Users,Zap,Settings,Search,MessageSquare,Smartphone,Calendar,BookOpen,Code,Building,Clock} from lucide-react;
 import { cn  } from '@/lib / utils';
 interface FeatureCTAsProps  {class_name?: string;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
   style?: React.CSSProperties;
 export /**;
  * FeatureCTAs - Function description;
@@ -603,8 +619,4 @@ export /**;
         </div>
       </div>
     </section>
-    </section>))}</div>;
-      </div>;
-    </section>;
-)
 );

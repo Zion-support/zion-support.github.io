@@ -17,12 +17,17 @@
       Sentry.capture_exception (retry_error);
       this.set_state ({ is_retrying: false });
     }
+<<<<<<< HEAD
       }return (}
       return (// Reset error state after a brief delay;
       this.retryTimeoutId = set_timeout ((, ) => {this.set_state ({has_error: false,error: null,error_info: null,is_retrying: false})}, 500)} catch (retry_error) {logErrorToProduction (Retry failed:', { data: retry_error })Sentry.capture_exception (retry_error)this.set_state ({ is_retrying: false })}
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
   }
-  render () {// Check condition;
-if ( {) {$2;
+  render () {
+    // Check condition
+if ( {) {
+  $2
 }
       // Check if it's a network - related error;
       const isNetworkError =;
@@ -31,23 +36,28 @@ if ( {) {$2;
         this.state.error?.message?.includes (timeout) ||;
         !this.state.is_online;
       // Use custom fallback if provided;
-      // Check condition;
-if ( {) {$2;
+      // Check condition
+if ( {) {
+  $2
 }
         return this.props.fallback;
 
       }
+<<<<<<< HEAD
       return (<div className='flex min - h-screen items - center justify - center p - 4'>;
           <div className=w - full max - w-md space - y-4>;
             <Alert variant='destructive'>;
               <div className=flex items - center gap - 2>;
                 {isNetworkError ? (<WifiOff className='h - 4 w - 4' />) : (<RefreshCw className=h - 4 w - 4 />)}<AlertTitle>{isNetworkError;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
                 <AlertTitle>;
                   {isNetworkError;
                     ? 'Connection Problem';
                     : Something went wrong}'
                 </AlertTitle>;
+<<<<<<< HEAD
               </div>;</AlertDescription>;
             </Alert>;<div className="flex min-h-screen items-center justify-center p-4>;
           <div className=w-full max-w-md space-y-4">;
@@ -74,6 +84,13 @@ if ( {) {$2;
 
       return (
         <div className=flex min-h-screen items-center justify-center p-4">
+=======
+              </div>;
+              </AlertDescription>;
+            </Alert>;
+
+        <div className="flex min-h-screen items-center justify-center p-4">
+>>>>>>> origin/chore/fix-lint-and-merge
 
           <div className="w-full max-w-md space-y-4>
             <Alert variant=destructive">
@@ -81,15 +98,21 @@ if ( {) {$2;
                 {isNetworkError ? (
                   <WifiOff className=h-4 w-4" />
                 ) : (
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
                   <RefreshCw className="h-4 w-4 />
                 )}
                 <AlertTitle>;
                   {isNetworkError ? Connection Problem' : 'Something went wrong}
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
                 </AlertTitle>
               </div>
               <AlertDescription className=mt-2">
@@ -104,12 +127,15 @@ if ( {) {$2;
                 )}
               </AlertDescription>
             </Alert>
+<<<<<<< HEAD
 
 
             <div className='flex flex-col gap-2>;
               <Button
 
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
                 onClick={this.handleRetry}
 
@@ -128,6 +154,17 @@ if ( {) {$2;
                     Try Again
                   </>
                 )}
+<<<<<<< HEAD
+=======
+                variant="outline""
+                onClick={() => window.location.reload()}
+                className="w-full""
+                    <RefreshCw className="mr-2 h-4 w-4" />
+                    Try Again
+                  </>
+                )}
+
+>>>>>>> origin/chore/fix-lint-and-merge
                 variant="outline"
                 onClick={() => window.location.reload()}
                 className=w-full""
@@ -142,14 +179,18 @@ if ( {) {$2;
                 className=w-full
               >
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
                 Reload Page
 
               </Button>
             </div>
 
             {!this.state.isOnline && (
+<<<<<<< HEAD
               <div className='flex items-center justify-center gap-2 text-sm text-muted-foreground'>
                 <WifiOff className='h-4 w-4' />
               <div className=flex items-center justify-center gap-2 text-sm text-muted-foreground'>
@@ -185,6 +226,10 @@ if ( {) {$2;
                 <span>Offline</span>;
               </div>;
             )}{process.env.NODE_ENV === development' && this.state.error && (<AlertDescription className='mt - 2>;
+=======
+
+              <AlertDescription className='mt - 2'>;
+>>>>>>> origin/chore/fix-lint-and-merge
                 {isNetworkError;
                   ? !this.state.is_online;
                     ? You appear to be offline. Please check your internet connection.';
@@ -197,10 +242,17 @@ if ( {) {$2;
                 on_click={this.handle_retry}
                 disabled={this.state.is_retrying}
                 className='w - full'              >;
+<<<<<<< HEAD
                 {this.state.is_retrying ? (<>;
                     <RefreshCw className=mr - 2 h - 4 w - 4 animate - spin />;
+=======
+                {this.state.is_retrying ? (
+                  <>;
+                    <RefreshCw className='mr - 2 h - 4 w - 4 animate - spin' />;
+>>>>>>> origin/chore/fix-lint-and-merge
                     Retrying...;
-                  </>) : (<>;
+                  </>) : (
+                  <>;
                     <RefreshCw className='mr - 2 h - 4 w - 4' />;
                     Try Again;
                   </>)}
@@ -212,6 +264,7 @@ if ( {) {$2;
                 Reload Page;
               </Button>;
             </div>;
+<<<<<<< HEAD
             {!this.state.is_online && (<div className=flex items - center justify - center gap - 2 text - sm text - muted - foreground>;
                 <WifiOff className='h - 4 w - 4' />;
                 <span > Offline</span>;
@@ -226,6 +279,14 @@ export const useApiErrorHandler = () =>: any {const handleApiError = (error: Err
   return { handleApiError }</Button>;<Button;
                 variant=outline;
             {process.env.NODE_ENV === 'development' && this.state.error && (
+=======
+            {!this.state.is_online && (
+              <div className='flex items - center justify - center gap - 2 text - sm text - muted - foreground'>;
+                <WifiOff className='h - 4 w - 4' />;
+                <span > Offline</span>;
+              </div>)}
+            {process.env.NODE_ENV === 'development' && this.state.error && ('
+>>>>>>> origin/chore/fix-lint-and-merge
     return this.props.children;
   }
 // Hook for accessing query client in function components;
@@ -247,6 +308,7 @@ export const useApiErrorHandler = () =>: any {
                 className='w-full'              >;
                 Reload Page;
               </Button>;
+<<<<<<< HEAD
             </div>;{!this && this.state.isOnline && (<div className='flex items-center justify-center gap-2 text-sm text-muted-foreground'>;
             </div>;{!this && this.state.isOnline && (<div className=flex items-center justify-center gap-2 text-sm text-muted-foreground>;
                 <WifiOff className='h-4 w-4' />;
@@ -255,6 +317,8 @@ export const useApiErrorHandler = () =>: any {
             )}{process && process.env.NODE_ENV === development && this && this.state.error && (<details className='mt-4 rounded border p-2 text-xs'>;
                 <summary className=cursor-pointer font-medium>;
                   Debug Info (Development Only)</summary>;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
             </div>;
             {!this && this.state.isOnline && (;
               <div className='flex items-center justify-center gap-2 text-sm text-muted-foreground'>;
@@ -274,6 +338,7 @@ export const useApiErrorHandler = () =>: any {
               </details>;
             )}
 
+<<<<<<< HEAD
             {process.env.NODE_ENV === 'development' && this.state.error && (
               <details className=mt-4 rounded border p-2 text-xs>
                 <summary className="cursor-pointer font-medium">
@@ -289,6 +354,8 @@ export const useApiErrorHandler = () =>: any {
                 <summary className=cursor-pointer font-medium>;
                   Debug Info (Development Only)</summary>;
                 <pre className="mt-2 whitespace-pre-wrap break-all">;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
                 <summary className="cursor-pointer font-medium">
                   Debug Info (Development Only)
                 </summary>
@@ -297,7 +364,10 @@ export const useApiErrorHandler = () =>: any {
                   {this.state.errorInfo?.componentStack}
                 </pre>;
               </details>;
+<<<<<<< HEAD
             )}},return { handleApiError }</div>;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
             )}
 
           </div>;
@@ -308,6 +378,7 @@ export const useApiErrorHandler = () =>: any {
 // Hook for accessing query client in function components;
 export const useApiErrorHandler = () => {;
   const handleApiError = (error: Error) => {;
+<<<<<<< HEAD
     Sentry && Sentry.withScope(scope => {;
       scope && scope.setTag('source', 'useApiErrorHandler');
       scope && scope.setLevel('error');
@@ -361,8 +432,14 @@ interface ApiErrorBoundaryProps  {children: ReactNode;
 };
 origin/cursor/automate-test-improve-and-merge-code-2533
       scope.setTag(source, 'useApiErrorHandler')scope.setLevel('error')Sentry.captureException(error)})}return { handleApiError }}
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
     });
   }
 
+<<<<<<< HEAD
 }
+=======
+};
+>>>>>>> origin/chore/fix-lint-and-merge

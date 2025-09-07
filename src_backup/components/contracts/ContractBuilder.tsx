@@ -1,4 +1,9 @@
+isOpen;
+  onClose;
+  talent;
+  clientName;
 
+<<<<<<< HEAD
   const handleLoadTemplate = (templateData: ContractFormValues,) => {;
   const handleLoadTemplate = (templateData: ContractFormValues,) => {
     setFormValues(templateData);
@@ -18,6 +23,17 @@
         onClose={() => {
           setShowSmartContractBuilder(false);          onClose();
 
+=======
+  onContractGenerated;
+}: ContractBuilderProps) {;
+  const [activeTab, setActiveTab] = useState<string>("form");
+  const [generatedContract, setGeneratedContract] = useState<string | null>(null);
+  const [formValues, setFormValues] = useState<ContractFormValues | undefined>(;
+    undefined;
+  );
+  const [templateManagerOpen, setTemplateManagerOpen] = useState(false);
+  const [showSmartContractBuilder, setShowSmartContractBuilder] = useState(false);
+>>>>>>> origin/chore/fix-lint-and-merge
 
 import { useState } from 'react;
 import {
@@ -36,6 +52,7 @@ import { SmartContractBuilder } from ./SmartContractBuilder';
 
 interface ContractBuilderProps {
   isOpen: boolean;
+<<<<<<< HEAD
 isOpen;
   onClose;
   talent;
@@ -55,10 +72,12 @@ import { ContractPreview  } from ./components/ContractPreview';
 import { TemplateManager  } from './templates/TemplateManager;
 import { SmartContractBuilder  } from ./SmartContractBuilder';
 interface ContractBuilderProps  {isOpen: boolean;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
   onClose: () => void;
   talent: TalentProfile;
   clientName: string;
-  onContractGenerated?: (contractContent: string) => void;
+  onContractGenerated?: (contractContent: string) => void
 }
 export function ContractBuilder({
   isOpen;
@@ -120,6 +139,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 Templates
 
     <Dialog open={isOpen} onOpenChange={onClose}>;
+<<<<<<< HEAD
 export function ContractBuilder() {const [activeTab, setActiveTab] = useState<string>("form)const [generatedContract, setGeneratedContract] = useState<string | null>(null)const [formValues, setFormValues] = useState<ContractFormValues | undefined>(undefined;
   ),const [templateManagerOpen, setTemplateManagerOpen] = useState(false)const [showSmartContractBuilder, setShowSmartContractBuilder] = useState(false)const handleLoadTemplate = null;
           onClose()}}
@@ -128,6 +148,9 @@ export function ContractBuilder() {const [activeTab, setActiveTab] = useState<st
         onContractGenerated = {onContractGenerated}import { useState } from react",import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog,import { Tabs, TabsList, TabsTrigger, TabsContent } from @/components/ui/tabs",import { Button } from "@/components/ui/button,import { TalentProfile } from @/types/talent",import { ContractForm, ContractFormValues } from "./components/ContractForm,import { ContractPreview } from ./components/ContractPreview",/>;
     )}return (<Dialog open={isOpen} onOpenChange={onClose}>;
       <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto>;
+=======
+      <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">;
+>>>>>>> origin/chore/fix-lint-and-merge
         <DialogHeader>;
           <DialogTitle>Contract Builder</DialogTitle>;
         </DialogHeader>;
@@ -143,6 +166,7 @@ export function ContractBuilder() {const [activeTab, setActiveTab] = useState<st
 
                 variant=outline" 
 
+<<<<<<< HEAD
                 size="sm
                 onClick = {(,) => setTemplateManagerOpen(true)}
       />;
@@ -152,10 +176,16 @@ export function ContractBuilder() {const [activeTab, setActiveTab] = useState<st
                 size=sm";
                 onClick = {(,) => setTemplateManagerOpen(true)}
                 className="flex gap-1;
+=======
+                size="sm"
+                onClick = {(,) => setTemplateManagerOpen(true),}
+                className="flex gap-1";
+>>>>>>> origin/chore/fix-lint-and-merge
               >;
                 <Save className=h-4 w-4" />;
                 Templates;
               </Button>;
+<<<<<<< HEAD
 
     <Dialog open={isOpen} onOpenChange={onClose}>;
       <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto>;
@@ -195,9 +225,12 @@ export function ContractBuilder() {const [activeTab, setActiveTab] = useState<st
 
             <ContractForm 
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
               talent = {talent}
 
+<<<<<<< HEAD
               clientName = {clientName}
               initialValues = {formValues}
               onFormValuesChange = {setFormValues}
@@ -309,3 +342,21 @@ export function ContractBuilder() {const [activeTab, setActiveTab] = useState<st
 }currentValues= {formValues ;
 }/> </DialogContent> </Dialog>)}";
           currentValues = {formValues}
+=======
+              clientName = {clientName,}
+              initialValues = {formValues,}
+              onFormValuesChange = {setFormValues,}
+              onContractGenerated = {handleContractGenerated,}
+
+                contractContent = {generatedContract,}
+                talent = {talent,}
+                onClose = {onClose,}
+                status="ready"
+
+        <TemplateManager
+
+          isOpen = {templateManagerOpen,}
+          onClose = {() => setTemplateManagerOpen(false),}
+          onSelectTemplate = {handleLoadTemplate,}
+          currentValues = {formValues,}
+>>>>>>> origin/chore/fix-lint-and-merge

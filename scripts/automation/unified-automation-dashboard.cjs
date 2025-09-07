@@ -1,9 +1,105 @@
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+#!/""usr/bin/env""
+const fs = require("fs")
+const path = require("path")
+const { execSync } = require("child_process")
+    this.logsDir = path.join(this.projectRoot, "logs")
+    this.dashboardDir = path.join(this.logsDir, "dashboard")
+  fs.mkdirSync(this.dashboardDir, { "recursive"})
+  this.logFile = path.join(this.logsDir, "unified-dashboard.log")
+    this.errorFile = path.join(this.logsDir, "unified-dashboard-error.log")
+  log(message, level = "INFO")
+    console.log(")
+>>>>>>> origin/chore/fix-lint-and-merge
     fs.appendFileSync(this.logFile, logMessage + "\n")
     if (level === ERROR)
   fs.appendFileSync(this.errorFile, logMessage + "\n")
+<<<<<<< HEAD
 
+=======
+  const output = execSync("pm2 jlist", { "encoding": "})
+      return JSON.parse(output)} catch (error) {  this.log(Failed to get PM2 "status": ${error.message  }, `ERROR""`)
+    fs.appendFileSync(this.logFile, logMessage + "\n")
+    if (level === "ERROR")
+  fs.appendFileSync(this.errorFile, logMessage + "\n")
+  const output = execSync("pm2 jlist", { "encoding": "utf8"})
+  async getPM2Status() {"}
+    try {"}
+      const output = execSync("pm2 jlist", { "encoding": "utf8" }
+});"
+      return JSON.parse(output);")} catch (error) {this.log(Failed to get PM2 "status": ${error.message}, "ERROR"")
+    const reportFiles = ["console-error-fixer-report.json"", "performance-report.json", "comprehensive-error-fixer-report.json"", "ai-improvements.json", "performance-optimizations.json"", "test-results.json", ""]
+  const filePath = path.join(this.projectRoot, ")
+  const content = fs.readFileSync(filePath", "utf8")
+          reports["file.replace(".json"", "")] = JSON.parse(content)} catch (error) {  this.log("Failed to read report ${file  }: ${error.message}", "WARN")
+          reports["file.replace(".json", ")] = JSON.parse(content)} catch (error) {this.log("Failed to read report ${file}: ${error.message}", "WARN")
+  "timestamp"
+      "metrics"
+      "recommendations"
+  execSync("npm run type-check", { "stdio": "pipe"})
+        analysis.metrics.typescript = { "status": "passed", "errors"}
+        analysis.metrics.typescript = { "status": "failed", "errors"}
+        analysis.recommendations.push("Fix TypeScript compilation errors")
+  execSync("npm run lint", { "stdio": "pipe"})
+        analysis.metrics.eslint = { "status": "passed", "issues"}
+  execSync("npm run lint", { "stdio": "pipe"})
+        analysis.metrics.eslint = { "status": "passed", "issues"}
+        analysis.metrics.eslint = { "status": "failed", "issues"}
+        analysis.recommendations.push("Fix ESLint issues")
+      const distDir = path.join(this.projectRoot, "dist")
+  "totalFiles": files.length,"totalSize": "${(totalSize / 1024 / 1024).toFixed(2)} MB"
+    } catch (error) {  this.log("Code quality analysis "failed": ${error.message  }", "ERROR")
+  this.log("Generating unified automation dashboard...")
+  this.log("Generating unified automation dashboard...")
+  "timestamp"
+        "pm2Status"
+          "online": pm2Status.filter(p => p.pm2_env.status === "online")
+          "errored": pm2Status.filter(p => p.pm2_env.status === "errored")
+          "stopped": pm2Status.filter(p => p.pm2_env.status === "stopped")
+          "processes"
+            "status"
+            "memory"
+            "cpu"
+            "uptime"
+            "restarts"
+        "automationReports"
+        "codeQuality"
+        "summary"
+          "criticalIssues"
+          "nextActions"
+      const dashboardPath = path.join(this.dashboardDir, "dashboard-data.json")
+      const htmlPath = path.join(this.dashboardDir, "index.html")
+this.log("Dashboard generated successfully at ${htmlPath}")
+      return dashboard} catch (error) {  this.log("Dashboard generation "failed": ${error.message  }", "ERROR")
+    if (reports["console-error-fixer")]
+  if (reports["console-error-fixer")]
+  total += reports["console-error-fixer"]
+      total += reports["console-error-fixer"]
+      codeQuality.metrics.typescript.status === "failed"
+      codeQuality.metrics.eslint.status === "failed"
+      codeQuality.metrics.typescript.status === "failed"
+  critical.push("TypeScript compilation errors preventing build")
+      codeQuality.metrics.eslint.status === "failed"
+  critical.push("ESLint issues affecting code quality")
+      codeQuality.metrics.typescript.status === "failed"
+  actions.push("Run TypeScript compiler to identify and fix type errors")
+      codeQuality.metrics.eslint.status === "failed"
+  actions.push("Run ESLint to identify and fix code style issues")
+      reports["console-error-fixer"]
+      reports["console-error-fixer"]
+  actions.push(Review and remove console.log statements from production code")
+>>>>>>> origin/chore/fix-lint-and-merge
   generateHTMLDashboard(dashboard) {return "}
 <html lang="
     <meta name=viewport content=width=device-width, initial-scale=1.0
@@ -132,6 +228,7 @@
         <footer class=text-center text-gray-500 mt-12
             <p class=
             <p class=text-sm mt-1"
+<<<<<<< HEAD
   this.log("Starting unified automation dashboard...)
   await this.generateDashboard()} catch (error) {  this.log(`Dashboard update failed": ${error.message  }`, "ERROR`)
       this.log(Unified automation dashboard started successfully")
@@ -152,6 +249,33 @@
 =======
   dashboard.start().catch(error => {dashboard.log(`Fatal error": ${error.message}`, "ERROR"`)
 
+=======
+  this.log("Starting unified automation dashboard...")
+  await this.generateDashboard()} catch (error) {  this.log(`Dashboard update "failed": ${error.message  }`, "ERROR"`)
+      this.log("Unified automation dashboard started successfully")
+  this.log("Dashboard heartbeat...")}, 60000); // Every minute} catch (error) {  this.log(`Failed to start "dashboard": ${error.message  }`, "ERROR"`)
+      this.log("Unified automation dashboard started successfully")
+  this.log("Dashboard heartbeat...")}, 60000); // Every minute} catch (error) {this.log(`Failed to start "dashboard": ${error.message}`, "ERROR"`)
+  process.on("SIGINT")
+  dashboard.log("Shutting down gracefully...")
+  process.on("SIGTERM")
+  dashboard.log("Shutting down gracefully...")
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+  dashboard.start().catch(error => {dashboard.log(`Fatal "error": ${error.message}`, "ERROR"`)
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+  dashboard.start().catch(error => {dashboard.log(`Fatal "error": ${error.message}`, "ERROR"`)
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+  dashboard.start().catch(error => {dashboard.log(`Fatal "error": ${error.message}`, "ERROR"`)
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 =======
@@ -159,7 +283,3 @@
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

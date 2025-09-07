@@ -35,6 +35,7 @@ export function AIMatchmaker({ serviceType = ", onMatchSelect, className }: AIMa
         title: "Please enter a description,
         description: Tell us what you're looking for so we can find matches.",
 
+<<<<<<< HEAD
 
 import { Sparkles, Search  } from lucide-react;
 import React from 'react';
@@ -130,6 +131,9 @@ function AIMatchmaker() {const [query, set_query] = useState (')const [is_matchm
       const results = await find_matches (query, service_type, 3)log_info (AI matching results:', { data: results })set_matches (results)toast ({title: 'Matches Found,description: `Found ${results.length} matches based on your description.`})} catch (error) {logErrorToProduction (Error during AI matching:', { data: error })toast ({title: 'Matching Error,description:;
           "We couldnt find matches for your request. Please try again.,variant: 'destructive'})// Set empty matches to show no results found UI;
       set_matches ([])} finally {setIsMatchmaking(false)<Sparkles className=h-5 w-5 mr-2 text-zion-cyan />;
+=======
+          <Sparkles className='h-5 w-5 mr-2 text-zion-cyan' />;
+>>>>>>> origin/chore/fix-lint-and-merge
           AI Matchmaker;
         </CardTitle>;
         <p className='text-sm text-zion-slate-light'>;
@@ -164,6 +168,7 @@ interface AIMatchmakerProps {
         variant: destructive"}),
       return;
     }
+<<<<<<< HEAD
 
     setIsMatchmaking(true);
     setHasSearched(true);
@@ -178,6 +183,22 @@ interface AIMatchmakerProps {
       setMatches(results);
 
       toast({
+=======
+;
+    setIsMatchmaking(true),;
+    setHasSearched(true),;
+    try {;
+      logInfo("Starting AI matching", { data: { query, serviceType } }),;
+      // Get AI matches;
+      const results = await findMatches(;
+        query,;
+        serviceType,;
+        3;
+      ),;
+      logInfo('AI matching results:', { data: results }),;
+      setMatches(results),;
+      toast({;
+>>>>>>> origin/chore/fix-lint-and-merge
 
       // Set empty matches to show no results found UI;
 
@@ -191,6 +212,7 @@ interface AIMatchmakerProps {
       }
     }
 
+<<<<<<< HEAD
 }if (!query && query.trim () ) {toast ({return;
 }setIsMatchmaking (true)setHasSearched (true)serviceType;
 3)}catch (error) {;
@@ -245,6 +267,8 @@ if ( {) {$2;
       <CardContent>;
 
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
   },
   
   // Extract just the items from each MatchResult
@@ -263,9 +287,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <CardTitle className="flex items-center text-white>
           <Sparkles className=h-5 w-5 mr-2 text-zion-cyan" />
 
-
-
-origin/cursor/automate-test-improve-and-merge-code-2533
           AI Matchmaker
         </CardTitle>
         <p className="text-sm text-zion-slate-light>
@@ -278,6 +299,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <div className=space-y-4">
           <div className="space-y-2>
             <Textarea
+<<<<<<< HEAD
         <div className=space-y-4">;
           <div className="space-y-2>;
             <Textarea;
@@ -287,6 +309,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 setQuery(e && e.target.value)}
               className='min-h-24 bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white';
               placeholder="Describe what you need... (e.g., I need a senior machine learning engineer with expertise in computer vision for a 3-month project)
+=======
+              placeholder="Describe what you need... (e.g., 'I need a senior machine learning engineer with expertise in computer vision for a 3-month project')"
+>>>>>>> origin/chore/fix-lint-and-merge
               value={query}
               onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => setQuery(e.target.value)}
               className=min-h-24 bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white";
@@ -298,6 +323,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white;
             >;
 
+<<<<<<< HEAD
               disabled={isMatchmaking}className=w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white";
             >;{isMatchmaking ? (<>Analyzing your needs...</>;
               ) : (<>;<Search className='h-4 w-4 mr-2' />;
@@ -316,6 +342,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </CardContent>;
     </Card>;
   )}<div className=space - y-4>;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
       </CardContent>;
     </Card>;
   );
@@ -327,7 +355,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               placeholder="Describe what you need... (e.g., 'I need a senior machine learning engineer with expertise in computer vision for a 3 - month project')";
               value={query}
               on_change={(e: React.ChangeEvent < HTMLTextAreaElement>) =>;
-                set_query (e.target.value)}
+                set_query (e.target.value);
+              }
               className='min - h-24 bg - zion - blue border border - zion - blue - light focus:border - zion - purple text - white';
 
             />;
@@ -340,8 +369,4 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
       </CardContent>
     </Card>
-    </Card>)}</div>;
-      </CardContent>;
-    </Card>;
-  )
   );

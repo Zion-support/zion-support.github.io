@@ -20,12 +20,31 @@ method
   $2
 
 }
-        try {const json_data = await res.json ()response_text = JSON.stringify (json_data, null, 2)} catch {response_text = await res.text ()}
-      } else {response_text = await res.text ()}// Format the response with status information;
+        try {
+          const json_data = await res.json ();
+          response_text = JSON.stringify (json_data, null, 2);
+        } catch {
+          response_text = await res.text ();
+        }
+      } else {
+        response_text = await res.text ();
+      }
+
+      // Format the response with status information;
       const status_info = `HTTP ${res.status} ${res.status_text}\n\n`;
+<<<<<<< HEAD
       set_response (status_info + response_text)} catch (err: any) {let error_message = Request failed';
       // Check condition;
 if ( {) {$2;
+=======
+      set_response (status_info + response_text);
+
+    } catch (err: any) {
+      let error_message = 'Request failed';
+      // Check condition
+if ( {) {
+  $2
+>>>>>>> origin/chore/fix-lint-and-merge
 }
 
 import { useState } from 'react;
@@ -34,6 +53,7 @@ import { Textarea } from '@/components/ui/textarea;
 import { Button } from @/components/ui/button';
 import CodeBlock from './CodeBlock;
 
+<<<<<<< HEAD
       } else {import { useState  } from react';
 import { Input  } from '@/components/ui/input;
 import { Textarea  } from @/components/ui/textarea';
@@ -93,6 +113,8 @@ required?: boolean ;
 
 
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
   name: string;
 type: string;
 required?: boolean ;
@@ -139,6 +161,7 @@ export function ApiPlayground({ method, path, params = [] }: ApiPlaygroundProps)
 
           value={paramValues[p.name] || '}
 
+<<<<<<< HEAD
       } else {errorMessage = err && err.message || 'Unknown error occurred;
       }setResponse(`Error: ${errorMessage}\n\nAttempted URL: ${url}\n\nTroubleshooting:\n- Ensure the API endpoint exists\n- Check CORS configuration\n- Verify API key is valid\n- Check network connectivity`;
       )} finally {setLoading(false)}},return (<div className=space-y-4'>;
@@ -219,26 +242,39 @@ if (contentType?.includes ('application/json) ) {try {/> {params && params.map (
         />;
       ))}
       {method !== GET" && method !== "DELETE && (<Textarea;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
       ))}
       {method !== GET" && method !== "DELETE && (
 
         <Textarea
           value={body}
           onChange={(e) => setBody(e.target.value)}
+<<<<<<< HEAD
           className=font-mono";
         />;
       )}
       <Button onClick={sendRequest} disabled={loading}>;
         {loading ? "Sending... : Send Request"}
       </Button>;
+=======
+          className="font-mono"
+        />
+      )}
+      <Button onClick={sendRequest} disabled={loading}>
+        {loading ? "Sending..." : "Send Request"}
+      </Button>
+>>>>>>> origin/chore/fix-lint-and-merge
       {response && <CodeBlock code={response} language="json" />}
     </div>
   )
 }
-export default ApiPlayground;
+<<<<<<< HEAD
+=======
 
-    </div>;
-  )}export default ApiPlayground;interface Param  {
+;
+
+>>>>>>> origin/chore/fix-lint-and-merge
 export default ApiPlayground;
 
 interface Param {

@@ -1,4 +1,3 @@
-:src/components/services/CountryServiceCard.tsx
 // Get region flag based on country name (for demo,  purposes)
   const getRegionEmoji = (countryName: string |,  undefined): string => {,
     if (!countryName) return "🌐","
@@ -33,11 +32,6 @@ export function CountryServiceCard({
   onQuote
   isPopular
 }: CountryServiceCardProps) {
-:src/components/services/CountryServiceCard.tsx
-  isPopular?: boolean
-}
-
-export function CountryServiceCard({ country, onSelect, onQuote, isPopular }: CountryServiceCardProps) {
   // Get region flag based on country name (for demo purposes)
 
   const getRegionEmoji = null;
@@ -54,7 +48,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <span className="text-2xl" aria-hidden="true">{getRegionEmoji(country.country)}</span>
             <h3 className="text-lg font-semibold text-white truncate">{country.country || 'Unknown Country'}</h3>
 
-:src/components/services/CountryServiceCard.tsx
     if (!countryName) return "🌐",
     
     const emojiMap: Record<string string> = {
@@ -119,13 +112,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <p className='text-3xl font-bold text-zion-cyan mb-4'>
           ${country.pricePerIncident.toFixed(2)}
         </p>
-:src/components/services/CountryServiceCard.tsx
-        <div className='space-y-2 text-zion-slate-light'>
-          <div className='flex items-start'>
-            <Clock className='h-4 w-4 mr-2 text-zion-purple mt-1' />
-            <span>
-              Typical response time: {getResponseTime(country.country)}
-            </span>
 
         <div className="space-y-2 text-zion-slate-light">
           <div className="flex items-start">
@@ -147,40 +133,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
         </div>
       </CardContent>
-:src/components/services/CountryServiceCard.tsx
-      <CardFooter className="flex flex-col space-y-2">
-        <Button
-          onClick={() => onSelect(country)}
-          className={`w-full ${
-            isPopular
-              ? "bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
-              : "bg-zion-blue hover:bg-zion-blue-light border border-zion-blue-light"
-          }`}
-        >
-          Select Service
-        </Button>
-        <Button
-          variant='outline'
-          className='w-full border-zion-purple text-zion-purple hover:bg-zion-purple/10'
-          onClick={() => onQuote?.(country)}        >
-          Get Quote
-        </Button>
-        <Button
-          asChild
-          variant="ghost"
-          className="w-full text-zion-cyan hover: text-zion-purple"
-        >
-          <Link href="/contact">Contact Sales</Link>
-        </Button>
-      </CardFooter>;
-    </Card>;
-  );
-};
-}
-import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",;
-import { Button } from "@/components/ui/button",;
-import Link from 'next/link',;
-import { Badge } from "@/components/ui/badge",;
 
 import {;
   Card,;
@@ -370,8 +322,6 @@ export function CountryServiceCard({ country, onSelect, onQuote, isPopular }: Co
     </Card>;
   );
 }
-:src/components/services/CountryServiceCard.tsx
-;
 
         <Button;
           variant='outline';

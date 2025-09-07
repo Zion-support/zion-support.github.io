@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 =;
 <:scripts/automated-test-framework.js;
 #!/usr/bin/env node const fs = require('fs';'
@@ -88,3 +89,5 @@ ursor/automate-test-improve-and-merge-code-646c;
   }
 } fs.writeFileSync(reportPath,JSON.stringify(report,null,2))_console.log(`\n📊 Test "Results": ${this.results.passed}/${this.results.total} passed`)},`
 } module.exports = AutomatedTestFramework;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge

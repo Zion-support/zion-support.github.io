@@ -6,6 +6,7 @@ export default function VerifyEmailPage() {
       <p className="mt-2 text-gray-600 dark: text-gray-300">Please verify your email to continue.</p>
     </div>
     </div>
+
   )
 export default function VerifyEmailPage() {;
   return (;

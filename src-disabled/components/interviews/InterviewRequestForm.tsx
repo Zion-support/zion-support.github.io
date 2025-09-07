@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 ;
 import React, { useState } from 'react';
@@ -18,6 +19,8 @@ import { format, addDays } from 'date-fns';
 import { CalendarIcon } from 'lucide-react';
 import { toast } from '@/components/ui/use-toast';
 import { useInterviews } from '@/hooks/useInterviews';
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 import { Button } from '@/components/ui/button';
 import {;
   Form,;
@@ -81,12 +84,15 @@ interface InterviewRequestFormProps {
 
   talent: TalentProfile;
   onClose: () => void;
+<<<<<<< HEAD
   userDetails?: UserProfile
 origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 import React, { useState } from react;
 import { Button } from '@/components/ui/ button';
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
 import { Button } from @/components / ui / button;
 import {}
@@ -95,6 +101,7 @@ import {}
   FormItem,
   FormLabel,
   FormControl,
+<<<<<<< HEAD
   FormMessage,
 } from '@/components/ui/ form';
 import { Input } from '@/components/ui/ input';
@@ -105,10 +112,17 @@ import { Textarea } from '@/components/ui/ textarea';
 } from @/components / ui / form';'
 import { Input } from @/components / ui / input;'
 import { Textarea } from '@/components / ui / textarea;
+=======
+  FormMessage,';
+} from '@/components / ui / form';'
+import { Input } from '@/components / ui / input';'
+import { Textarea } from '@/components / ui / textarea';
+>>>>>>> origin/chore/fix-lint-and-merge
   Select,
   SelectTrigger,
   SelectValue,
   SelectContent,
+<<<<<<< HEAD
   SelectItem,
 } from '@/components/ui/ select';
 import { Calendar } from '@/components/ui/ calendar';
@@ -130,6 +144,11 @@ interface InterviewRequestFormProps {
   SelectItem,
 } from '@/components / ui / select';
 import { Calendar } from @/components / ui / calendar';
+=======
+  SelectItem,'
+} from '@/components / ui / select';'
+import { Calendar } from '@/components / ui / calendar';
+>>>>>>> origin/chore/fix-lint-and-merge
   Popover,
   PopoverTrigger,
   PopoverContent,'
@@ -146,6 +165,7 @@ import { use_interviews } from '@/hooks / use_interviews';
 import { logErrorToProduction } from @/utils / production_logger';
 interface InterviewRequestFormProps {}
   talent: TalentProfile;
+<<<<<<< HEAD
 import { cn  } from '@/lib/utils;
 import { zodResolver  } from @hookform/resolvers/zod';
 import { useForm, ControllerRenderProps  } from 'react-hook-form;
@@ -190,6 +210,10 @@ if ( {) {$2;
       toast ({title: Authentication required',description: 'Please log in to schedule an interview,variant: destructive'})return;
     }
     setIsSubmitting (true)try {// Combine date and time;
+=======
+  on_close: () => void;
+  user_details?: UserProfile;
+>>>>>>> origin/chore/fix-lint-and-merge
 const form_schema = z.object ({}
   date: z;
     .date ({'
@@ -236,6 +260,7 @@ if ( {) {}
       // Calculate end time based on duration;
       const duration_minutes = parse_int (values.duration);
 
+<<<<<<< HEAD
 import { Button } from "@/components/ui/button,
 import { Form, FormField, FormItem, FormLabel, FormControl, FormMessage } from @/components/ui/form",
 import { Input } from "@/components/ui/input,
@@ -283,6 +308,25 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 import { CalendarIcon } from 'lucide-react
 import { toast } from "@/components/ui/use-toast,
 import { useInterviews } from @/hooks/useInterviews",
+=======
+import { Button } from "@/components/ui/button",
+import { Form, FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",
+import { Input } from "@/components/ui/input",
+import { Textarea } from "@/components/ui/textarea",
+import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "@/components/ui/select",
+import { Calendar } from "@/components/ui/calendar",
+import { Popover, PopoverTrigger, PopoverContent } from "@/components/ui/popover",
+import { TalentProfile } from "@/types/talent",
+import type { UserProfile } from "@/types/auth",
+import { cn } from "@/lib/utils",
+import { zodResolver } from "@hookform/resolvers/zod",
+import { useForm, ControllerRenderProps } from "react-hook-form",
+import { z } from "zod",
+import { format, addDays } from "date-fns",
+import { CalendarIcon } from 'lucide-react'
+import { toast } from "@/components/ui/use-toast",
+import { useInterviews } from "@/hooks/useInterviews",
+>>>>>>> origin/chore/fix-lint-and-merge
 
 import {logErrorToProduction} from @/utils/productionLogger',
 interface InterviewRequestFormProps {}
@@ -291,6 +335,7 @@ interface InterviewRequestFormProps {}
   userDetails?: UserProfile;
 }
 
+<<<<<<< HEAD
       const scheduled_date = new Date (dateTimeString)// Calculate end time based on duration;
       const duration_minutes = parse_int (values.duration)await request_interview ({import React, { useState } from "react,import { Button } from @/components/ui/button",import { Form, FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form,import { Input } from @/components/ui/input",import { Textarea } from "@/components/ui/textarea,import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from @/components/ui/select",import { Calendar } from "@/components/ui/calendar,import { Popover, PopoverTrigger, PopoverContent } from @/components/ui/popover",import { TalentProfile } from "@/types/talent,import type { UserProfile } from @/types/auth",import { cn } from "@/lib/utils,import { zodResolver } from @hookform/resolvers/zod",import { useForm, ControllerRenderProps } from "react-hook-form,import { z } from zod",import { format, addDays } from "date-fns,import { Form;
   FormField;
@@ -374,6 +419,8 @@ import { toast } from @/components/ui/use-toast",import { useInterviews } from "
               </FormControl>;
               <FormMessage />;
             </FormItem>;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 const formSchema = z.object({
   date: z.date({
     required_error: Please select a date for the interview."}).refine(date => date > new Date(), {
@@ -544,12 +591,19 @@ export function InterviewRequestForm(): any ({
               <FormMessage />
             </FormItem>
           )}
+<<<<<<< HEAD
         />;
             field: ControllerRenderProps<z && z.infer<typeof formSchema>, 'title>;
+=======
+        />
+
+            field: ControllerRenderProps<z && z.infer<typeof formSchema>, 'title'>;
+>>>>>>> origin/chore/fix-lint-and-merge
           }) => (            <FormItem>;
               <FormLabel>Interview Title</FormLabel>;
             field: ControllerRenderProps < z.infer < typeof form_schema>, 'title'>;
           }) => (            <FormItem>;
+<<<<<<< HEAD
               <FormLabel > Interview Title</FormLabel>;<FormControl>;
                 <Input placeholder=Brief title for the interview {...field} />;
               </FormControl>;
@@ -565,6 +619,8 @@ export function InterviewRequestForm(): any ({
                       <Button;
                         variant=outline";
                         className={cn("w-full pl-3 text-left font-normal,!field.value && text-muted-foreground";
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
               <FormLabel > Interview Title</FormLabel>;
 
               <FormControl>;'
@@ -589,6 +645,7 @@ export function InterviewRequestForm(): any ({
                           "w-full pl-3 text-left font-normal",
                           !field.value && text-muted-foreground"
                         )}
+<<<<<<< HEAD
                       >;
 const formSchema = null;
                           !field.value && "text-muted-foreground;
@@ -625,6 +682,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       initialFocus
                       className="p-3 pointer-events-auto
 
+=======
+                      >
+>>>>>>> origin/chore/fix-lint-and-merge
 
               field: ControllerRenderProps<z && z.infer<typeof formSchema>, date'>;
             }) => (;'
@@ -656,6 +716,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <FormMessage />
               </FormItem>
 
+<<<<<<< HEAD
                       initialFocus;
                       className="p-3 pointer-events-auto;
                     />;
@@ -682,6 +743,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   return (<Form {...form}>;
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-5>;
         <div className=flex items-center mb-6">;
+=======
+                      selected={field && field.value}
+                      onSelect={field && field.onChange}
+                      disabled={date =>;
+>>>>>>> origin/chore/fix-lint-and-merge
                         date < new Date() || date > addDays(new Date(), 90);
                       }                      initialFocus;'
                       className='p-3 pointer-events-auto;
@@ -796,9 +862,12 @@ interface InterviewRequestFormProps {
           </div>;
         </div>;
         <FormField;
+<<<<<<< HEAD
           control={form.control}
           name="title;
           render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, title"> }) => (<FormItem>;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
           control={form.control}"
           name=title;"
           render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "title> }) => (;
@@ -813,6 +882,7 @@ interface InterviewRequestFormProps {
         />;
         <div className=grid grid-cols-1 md:grid-cols-2 gap-4">;
           <FormField;
+<<<<<<< HEAD
             control={form.control}
             name="date;
             render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, date"> }) => (<FormItem className="flex flex-col>;
@@ -828,6 +898,12 @@ interface InterviewRequestFormProps {
             name="date";
             render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, date"> }) => (;"
               <FormItem className=flex flex-col>;
+=======
+            control={form.control}"
+            name="date";"
+            render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "date"> }) => (;"
+              <FormItem className="flex flex-col">;
+>>>>>>> origin/chore/fix-lint-and-merge
                 <FormLabel>Date</FormLabel>;
                 <Popover>;
                   <PopoverTrigger asChild>;
@@ -840,6 +916,7 @@ interface InterviewRequestFormProps {
                     <Calendar;
                       mode="single";
                       selected={field.value}
+<<<<<<< HEAD
                       on_select={field.on_change}
                       disabled={date =>;
                         date < new Date () || date > add_days (new Date (), 90)}                      initial_focus;
@@ -887,6 +964,8 @@ interface InterviewRequestFormProps {
                         {time}
                       </SelectItem>;
                     ))}
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
                       onSelect={field.onChange}
                       disabled={(date) => date < new Date() || date > addDays(new Date(), 90)}
                       initialFocus;
@@ -907,6 +986,7 @@ interface InterviewRequestFormProps {
                 </Select>;
                 <FormMessage />;
               </FormItem>;
+<<<<<<< HEAD
             )}
           />;
         </div>;
@@ -915,6 +995,8 @@ interface InterviewRequestFormProps {
             control={form.control}
             name="duration"
             name=duration
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <FormField;
@@ -930,6 +1012,7 @@ interface InterviewRequestFormProps {
             render={({}
               field}: {}
               field: ControllerRenderProps<
+<<<<<<< HEAD
                 z.infer<typeof formSchema>,
                 'duration'
               >
@@ -970,6 +1053,8 @@ interface InterviewRequestFormProps {
                   defaultValue={field && field.value}>;
               field: ControllerRenderProps<;
                 z.infer < typeof form_schema>,duration;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
                 'duration'
               >
@@ -1014,6 +1099,7 @@ interface InterviewRequestFormProps {
                     <SelectItem value=60'>60 minutes</SelectItem>;
                   </SelectContent>;
                 </Select>;
+<<<<<<< HEAD
                 <FormMessage />;/>;<FormField;
             control={form && form.control}
             name='platform;
@@ -1021,6 +1107,8 @@ interface InterviewRequestFormProps {
           />;
           <FormField;
             control={form.control}
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
                 <FormMessage />;
           />;
 
@@ -1042,11 +1130,15 @@ interface InterviewRequestFormProps {
             render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "platform> }) => (
               <FormItem>
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
                 <FormLabel>Platform</FormLabel>
                 z && z.infer<typeof formSchema>,
                 'platform';
+<<<<<<< HEAD
             name=platform;render={({field;
             }: {/>;
           <FormField;
@@ -1055,14 +1147,19 @@ interface InterviewRequestFormProps {
             render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "platform> }) => (<FormItem>;
                 <FormLabel>Platform</FormLabel>;
                 z && z.infer<typeof formSchema>,'platform';
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
               >;
             }) => (              <FormItem>;
                 <FormLabel>Platform</FormLabel>;
                 <Select;
                   onValueChange={field && field.onChange}
                   defaultValue={field && field.value}>;
+<<<<<<< HEAD
               field: ControllerRenderProps<;
                 z.infer < typeof form_schema>,platform;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
                 'platform';
               >;
@@ -1077,6 +1174,7 @@ interface InterviewRequestFormProps {
                       <SelectValue placeholder=Select platform' />;
                     </SelectTrigger>;
                   </FormControl>;
+<<<<<<< HEAD
                   <SelectContent>;
                     <SelectItem value='zoom>Zoom</SelectItem>;<SelectItem value=google - meet'>Google Meet</SelectItem>;<SelectItem value='teams>Microsoft Teams</SelectItem>;
                     <SelectItem value=other'>Other</SelectItem>;
@@ -1091,6 +1189,8 @@ interface InterviewRequestFormProps {
         </div>;
         {form.watch (platform') !== 'in - app && (<FormField;
             control={form.control}
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
                   <SelectContent>;'
                   <SelectContent>;
                     <SelectItem value='zoom'>Zoom</SelectItem>;
@@ -1109,6 +1209,7 @@ interface InterviewRequestFormProps {
             render={({
               field
             }: {
+<<<<<<< HEAD
 
                 z && z.infer<typeof formSchema>,
                 meetingLink';
@@ -1127,6 +1228,9 @@ interface InterviewRequestFormProps {
               field: ControllerRenderProps<;
                 z.infer < typeof form_schema>,'meeting_link;
                 z && z.infer<typeof formSchema>,
+=======
+                z && z.infer<typeof formSchema>,;
+>>>>>>> origin/chore/fix-lint-and-merge
 
                 meetingLink';
               >;
@@ -1139,6 +1243,7 @@ interface InterviewRequestFormProps {
             }) => (              <FormItem>;
                 <FormLabel > Meeting Link (Optional)</FormLabel>;
                 <FormControl>;
+<<<<<<< HEAD
                   <Input;
                     placeholder={`Add your ${form.watch (platform')} link here`}
                     {...field}
@@ -1154,6 +1259,8 @@ interface InterviewRequestFormProps {
                 <FormControl>;
                   <Input;
                     placeholder={`Add your ${form.watch('platform)} link here`}
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
                     {...field}
                   />;
@@ -1171,6 +1278,7 @@ interface InterviewRequestFormProps {
                 <FormMessage />;
               </FormItem>;
             )}
+<<<<<<< HEAD
           />
         )}
 
@@ -1192,6 +1300,8 @@ interface InterviewRequestFormProps {
           render={({
             field
           }: {
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
           />;
         )}
 
@@ -1210,6 +1320,7 @@ interface InterviewRequestFormProps {
               <FormControl>;
 
         <FormField;
+<<<<<<< HEAD
           name='notes';render={({field;
           }: {field: ControllerRenderProps<z && z.infer<typeof formSchema>, notes>;
           }) => (            <FormItem>;
@@ -1225,6 +1336,8 @@ interface InterviewRequestFormProps {
                 <Textarea;
                   placeholder="Share what youd like to discuss in this interview;
                   className=h-20";
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
           control={form.control}"
           name=notes"
           render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "notes> }) => (
@@ -1243,12 +1356,16 @@ interface InterviewRequestFormProps {
           )}
         />
 
+<<<<<<< HEAD
 
         <div className="flex justify-end gap-4 pt-4>
           <Button variant=outline" onClick={onClose} type="button>
 
 
         <div className=flex justify-end gap-4 pt-4">
+=======
+        <div className="flex justify-end gap-4 pt-4">
+>>>>>>> origin/chore/fix-lint-and-merge
 
           <Button variant="outline onClick={onClose} type=button">
 
@@ -1262,8 +1379,11 @@ interface InterviewRequestFormProps {
         </div>
       </form>
     </Form>
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
 toast ({}finally {
   setIsSubmitting (false) ;
@@ -1276,6 +1396,7 @@ toast ({}finally {
 }/> <div className=grid grid-cols-1 md:grid-cols-2 gap-4" > <FormField <FormLabel>Date</FormLabel> <Popover> <PopoverTrigger asChild> <FormControl> <Button) : (<span>Pick a date</span>) "
 
             </FormItem>)}
+<<<<<<< HEAD
         />;
         <div className=flex justify-end gap-4 pt-4">;
           <Button variant="outline onClick={onClose} type=button">;
@@ -1355,6 +1476,8 @@ toast ({}finally {
 }/> </Button> </div> </form> </Form>);
 }}
 }
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
         />;'
         <div className='flex justify - end gap - 4 pt - 4>;
           <Button variant='outline' on_click={on_close} type=button>;
@@ -1397,6 +1520,7 @@ toast ({}finally {
 });
 toast ({}finally {
   setIsSubmitting (false) ;
+<<<<<<< HEAD
 };
 }<CalendarIcon className=ml - auto h - 4 w - 4 opacity - 50" /> </Button> </FormControl> </PopoverTrigger> <PopoverContent className="w - auto p - 0 align=start" > <Calendar initial_focus className="p - 3 pointer - events - auto /> </PopoverContent> </Popover> <FormMessage /> </FormItem>)}/> <FormField <FormLabel > Time</FormLabel> <Select onValueChange= {field.on_change;
 }default_value= {field.value ;
@@ -1413,6 +1537,9 @@ toast ({}finally {
 }/> </FormControl> <FormMessage /> </FormItem>)}/>)}<FormField <FormItem> <FormLabel > Notes (Optional) </FormLabel> <FormControl> <Textarea /> </FormControl> <FormMessage /> </FormItem>)}/> </Button> </div> </form> </Form>)}}
 })}setIsSubmitting (true)}catch (error) {logErrorToProduction (Failed to schedule interview:', {data: error ;
 })toast ({}finally {setIsSubmitting (false)}";
+=======
+}";
+>>>>>>> origin/chore/fix-lint-and-merge
 }const timeSlots = [ "09:00", "09:30", "10:00", "10:30", "11:00", "11:30";";
 "12:00", "12:30", "13:00", "13:30", "14:00", "14:30";";
 "15:00", "15:30", "16:00", "16:30", "17:00", "17:30";";
@@ -1450,6 +1577,7 @@ toast ({}finally {
 }/>) ;
 }<FormField <FormItem> <FormLabel>Notes (Optional) </FormLabel> <FormControl> <Textarea /> </FormControl> <FormMessage /> </FormItem>) ;
 }/> </Button> </div> </form> </Form>) ;
+<<<<<<< HEAD
 }'"
 }'
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -1467,3 +1595,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }{...field ;
 }/> </FormControl> <FormMessage /> </FormItem>)}/>)}<FormField <FormItem> <FormLabel>Notes (Optional) </FormLabel> <FormControl> <Textarea /> </FormControl> <FormMessage /> </FormItem>)}/> </Button> </div> </form> </Form>)}';
 }'"
+=======
+}'"
+>>>>>>> origin/chore/fix-lint-and-merge

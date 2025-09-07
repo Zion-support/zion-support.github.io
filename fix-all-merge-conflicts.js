@@ -46,6 +46,7 @@ console.log('🔧 Starting comprehensive merge conflict resolution...');
     return modified;
   } catch (error) {
     console.error(`❌ Error processing ${filePath}:`, error.message);
+<<<<<<< HEAD
 const fs = require('fs');
 const path = require(path');
 const { execSync } = require('child_process');
@@ -66,6 +67,8 @@ console.log('Starting comprehensive merge conflict resolution...');
     return true;
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
     return false;
   }
 }
@@ -97,6 +100,7 @@ function findFilesWithConflicts(dir) {
       }
     } catch (error) {
       // Skip directories that can't be read
+<<<<<<< HEAD
 function findConflictedFiles(dir) {
       // Skip directories that can't be read,
   function findConflictedFiles(dir) {
@@ -122,11 +126,16 @@ function findConflictedFiles(dir) {
           // Skip files that can't be read
         }
       }
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
     }
   }
   scanDirectory(dir);
   return files;
+<<<<<<< HEAD
   return conflictedFiles;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 }
 
 // Main execution
@@ -158,6 +167,7 @@ try {
   console.error('❌ Fatal error:', error.message);
   process.exit(1);
 }
+<<<<<<< HEAD
 console.log('🎯 Merge conflict resolution completed!');
   const conflictedFiles = findConflictedFiles('.');
   console.log(`Found ${conflictedFiles.length} files with merge conflicts`);
@@ -182,3 +192,7 @@ console.log('🎯 Merge conflict resolution completed!');
   process.exit(1);
 }
 }
+=======
+
+console.log('🎯 Merge conflict resolution completed!');
+>>>>>>> origin/chore/fix-lint-and-merge

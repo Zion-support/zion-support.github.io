@@ -1,11 +1,81 @@
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+#!/""usr/bin/env""
+const { execSync } = require("child_process")
+const fs = require("fs")
+const path = require("path")
+console.log(""� Starting smart dependency fixer automation...")
+const { execSync } = require("child_process")
+const fs = require("fs")
+const path = require("path")
+console.log(""� Starting smart dependency fixer automation...")
+// Get automation interval from environment variable ("default")
+  console.log(`� Running smart dependency fixer at ${new Date().toISOString()}
+console.log(`� Starting smart dependency fixer automation...``)
+// Get automation interval from environment variable ("default")
+  console.log("� Running smart dependency fixer at ${new Date().toISOString()}"
+  "outdated"
+      "vulnerabilities"
+      "conflicts"
+      "missing"
+      "fixed"
+    // Step "1"
+    console.log("" Step 1: Checking for outdated packages...")
+  const outdatedOutput = execSync("npm outdated --json")
+  "stdio": "pipe"
+>>>>>>> origin/chore/fix-lint-and-merge
   "name"
         current
         "latest"
         wanted
   console.log(" No outdated packages found")
+<<<<<<< HEAD
 
+=======
+    // Step "2"
+    console.log(" Step 2: Checking for security vulnerabilities..."")
+  const auditOutput = execSync("npm audit --json")
+  "stdio": "pipe"
+  "name"
+            "severity"
+            "title"
+            "via"
+  console.log(" No security vulnerabilities found")
+    // Step "3"
+    console.log(" Step 3: Checking for dependency conflicts...")
+  const lsOutput = execSync("npm ls --json", { "stdio": "pipe"})
+            problem.includes("conflict")
+            problem.includes("missing")
+            problem.includes(")
+  console.log(` No dependency conflicts found``)
+    // Step "4"
+    console.log(" Step 4: Checking for missing packages..."")
+  const checkOutput = execSync("npm check --json")
+  "stdio": "pipe"
+// console.log(` Found ${issues.vulnerabilities.length} vulnerable packages``)
+  console.log(" No security vulnerabilities found")
+    // Step "3"
+    console.log(" Step 3: Checking for dependency conflicts...")
+  const lsOutput = execSync("npm ls --json", { "stdio": "pipe"})
+            problem.includes("conflict")
+            problem.includes("missing")
+            problem.includes("peer")
+  console.log(" No dependency conflicts found")
+    // Step "4"
+    console.log(" Step 4: Checking for missing packages...")
+  const checkOutput = execSync("npm check --json")
+  "stdio": "pipe"
+>>>>>>> origin/chore/fix-lint-and-merge
   console.log(` No missing packages found``)
     // Step 5"
 // console.log(" Step 5: Attempting to fix issues automatically...)
@@ -47,7 +117,15 @@
   console.log("⚠  Could not automatically fix all vulnerabilities")
 // console.log(⚠  Could not automatically fix all vulnerabilities)
   console.log(" Attempting to update outdated packages...")
+<<<<<<< HEAD
 
+=======
+  const current = pkg.current.split(".")
+      const latest = pkg.latest.split(".")
+      // Only update if it"
+  const packages = safeUpdates.map(pkg => pkg.name).join(" ");execSync(npm update ${packages}, { "stdio": "inherit"})
+  "type": "outdated","message": Updated ${safeUpdates.length} packages safely}"
+>>>>>>> origin/chore/fix-lint-and-merge
 // console.log("⚠  Could not update all outdated packages")
   console.log( Attempting to install missing packages...)
   execSync("npm install", { stdio: "inherit"})
@@ -61,16 +139,43 @@
         message: "Fixed peer dependency issues with legacy flag"
 // console.log(⚠  Could not fix peer dependency issues)
   console.log(" Verifying that dependency issues have been resolved...")
+<<<<<<< HEAD
 
+=======
+  const auditOutput = execSync("npm audit --json")
+  "stdio": "pipe"
+>>>>>>> origin/chore/fix-lint-and-merge
 // console.log(" Security vulnerabilities resolved")
   console.log(⚠  Some security vulnerabilities remain)
 // console.log(" No security vulnerabilities found")
+<<<<<<< HEAD
 
   console.log("⚠  Some missing packages remain")
 // console.log( No missing packages found)
 
 
 
+=======
+  console.log(" No security vulnerabilities found")
+  const lsOutput = execSync("npm ls --json", { "stdio": "pipe"})
+// console.log(" Dependency conflicts resolved")
+  console.log("⚠  Some dependency conflicts remain")
+  console.log(" No dependency conflicts found")
+  const checkOutput = execSync("npm check --json")
+  "stdio": "pipe"
+// console.log(" Missing packages resolved")
+  console.log("⚠  Some missing packages remain")
+// console.log(" No missing packages found")
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+  console.log(" No missing packages found")
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
   console.log(" No missing packages found")
 
   console.log( No missing packages found)
@@ -83,11 +188,13 @@
 =======
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
 // Get automation interval from environment variable (default)"
   console.log(`� Running smart dependency fixer at ${new Date().toISOString()}`;
 console.log(`� Starting smart dependency fixer automation...``)"
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> origin/chore/fix-lint-and-merge

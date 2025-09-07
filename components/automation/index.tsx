@@ -1,21 +1,44 @@
 
+<<<<<<< HEAD
     </div>;
 "
 export default function AutomationPage() {return (<div className=\container mx-auto px-4 py-10\ />;"
       <h1 className=\"text-2xl font-semibold\ />Automation</h1>;
       <p className=\"mt-2 text-gray-600 dark: text-gray-300\" />Automation tools overview coming soon.</p>;}
+=======
+import React from 'react';
+ursor/fix-website-loading-errors-and-merge-6662;
+
+export default function AutomationPage() {return (<div className=\"container mx-auto px-4 py-10\"    />;"
+      <h1 className=\"text-2xl font-semibold\"    />Automation</h1>;"
+      <p className=\"mt-2 text-gray-600 dark: text-gray-300\"    />Automation tools overview coming soon.</p>;
+    </div>;
+"
+export default function AutomationPage() {return (<div className=\"container mx-auto px-4 py-10\"    />;"
+      <h1 className=\"text-2xl font-semibold\"    />Automation</h1>;"
+      <p className=\"mt-2 text-gray-600 dark: text-gray-300\"    />Automation tools overview coming soon.</p>;}
+>>>>>>> origin/chore/fix-lint-and-merge
     </div>;}
   )}
+
 export default /**;
  * AutomationPage - Function description;
+<<<<<<< HEAD
  */;
 function AutomationPage() {return (<div className="container mx - auto px - 4 py - 10">;
       <h1 className="text - 2xl font - semibold">Automation</h1>;
       <p className="mt - 2 text - gray - 600 dark: text - gray - 300">Automation tools overview coming soon.</p>;
+=======
+ */;"
+function AutomationPage() {return (<div className=\"container mx - auto px - 4 py - 10\"    />;"
+      <h1 className=\"text - 2xl font - semibold\"    />Automation</h1>;}"
+      <p className=\"mt - 2 text - gray - 600 dark: text - gray - 300\"    />Automation tools overview coming soon.</p>;}
+>>>>>>> origin/chore/fix-lint-and-merge
     </div>)</div>)})}
   )</div>)})}ursor/fix-website-loading-errors-and-merge-6662;
   )})})})})}
   )})}
+<<<<<<< HEAD
   )}
 <div className="container mx-auto px-4 py-10"> <h1 className="text-2xl font-semibold">Automation</h1> <p className="mt-2 text-gray-600 "dark": text-gray-300">Automation tools overview coming soon.</p>;"
 
@@ -42,11 +65,33 @@ return (;
     </div>
   )
 }
+=======
+  )}"
+<div className=\"container mx-auto px-4 py-10\"    /> <h1 className=\"text-2xl font-semibold\"    />Automation</h1> <p className=\"mt-2 text-gray-600 dark: text-gray-300\"    />Automation tools overview coming soon.</p>;
+
+export default function AutomationPage() {
+  return ("
+    <div className=\"container mx-auto px-4 py-10\"    />"
+      <h1 className=\"text-2xl font-semibold\"    />Automation</h1>"
+      <p className=\"mt-2 text-gray-600 dark: text-gray-300\"    />Automation tools overview coming soon.</p>
+    </div>
+
+
+export default function AutomationPage() {;
+  return ("
+    <div className=\"container mx-auto px-4 py-10\"    />;"
+      <h1 className=\"text-2xl font-semibold\"    />Automation</h1>;"
+      <p className=\"mt-2 text-gray-600 dark: text-gray-300\"    />Automation tools overview coming soon.</p>;
+    </div>;}
+  ),;}
+>>>>>>> origin/chore/fix-lint-and-merge
 }
+
 export default /**
- * AutomationPage - Function description
+ * AutomationPage - Function description;
  */
 function AutomationPage() {
+<<<<<<< HEAD
   return (
     <div className="container mx - auto px - 4 py - 10">;
       <h1 className="text - 2xl font - semibold">Automation</h1>;
@@ -81,12 +126,23 @@ pr-12243
     <div className=\container mx - auto px - 4 py - 10\ />;"
       <h1 className=\"text - 2xl font - semibold\ />Automation</h1>;
       <p className=\"mt - 2 text - gray - 600 dark: text - gray - 300\" />Automation tools overview coming soon.</p>
+=======
+  return ("
+    <div className=\"container mx - auto px - 4 py - 10\"    />;"
+      <h1 className=\"text - 2xl font - semibold\"    />Automation</h1>;"
+      <p className=\"mt - 2 text - gray - 600 dark: text - gray - 300\"    />Automation tools overview coming soon.</p>
+>>>>>>> origin/chore/fix-lint-and-merge
     </div>}
   );}
 }
 
+<<<<<<< HEAD
   ),
     </div>)
+=======
+
+  )
+>>>>>>> origin/chore/fix-lint-and-merge
 }
 
   )
@@ -94,6 +150,7 @@ pr-12243
 
   )
 }
+<<<<<<< HEAD
 <div className="container mx-auto px-4 py-10"> <h1 className="text-2xl font-semibold">Automation</h1> <p className="mt-2 text-gray-600 dark: text-gray-300">Automation tools overview coming soon.</p>
 origin/cursor/automate-test-improve-and-merge-code-2533
 pr-12243
@@ -125,3 +182,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 import React from 'react';
 "
+=======
+  )
+}
+"
+>>>>>>> origin/chore/fix-lint-and-merge

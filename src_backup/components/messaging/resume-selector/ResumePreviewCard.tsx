@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 import React from 'react;
 import { Card, CardContent } from @/components/ui/card';
@@ -36,6 +37,13 @@ interface ResumePreviewCardProps  {resume: Resume;
     }
   };
   }
+=======
+import React from 'react';
+import { Card, CardContent } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
+import { Download } from 'lucide-react';
+>>>>>>> origin/chore/fix-lint-and-merge
 
 import React from 'react,
 import { Card, CardContent } from "@/components/ui/card,
@@ -50,6 +58,7 @@ interface ResumePreviewCardProps {
 }
 
   return (
+<<<<<<< HEAD
     <Card className="mt-3 bg-zion-blue-dark/30 border-zion-purple/20>
       <CardContent className=p-4">
   }return (<Card;
@@ -85,12 +94,16 @@ interface ResumePreviewCardProps {
                 className=bg-zion-blue-dark/50 text-zion-cyan border-zion-purple/20 text-xs";
                 className=bg-zion-blue-dark/50 text-zion-cyan border-zion-purple/20 text-xs';
               >;
+=======
+    <Card className="mt-3 bg-zion-blue-dark/30 border-zion-purple/20">
+      <CardContent className="p-4">
+>>>>>>> origin/chore/fix-lint-and-merge
 
                 className='bg-zion-blue-dark/50 text-zion-cyan border-zion-purple/20 text-xs
               >
 origin/cursor/automate-test-improve-and-merge-code-2533
                 {skill.name}
-              </Badge>;
+              </Badge>
             ))}
             {resume.skills.length > 5 && (
 <Badge
@@ -100,6 +113,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               >
                 +{resume.skills.length - 5} more
               </Badge>
+<<<<<<< HEAD
             {resume.skills.length > 5 && (className=bg-zion-blue-dark/50 text-zion-slate border-zion-purple/20 text-xs'              >              <Badge;
               <Badge;
                 variant="outline;
@@ -110,13 +124,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               >;
                 +{resume.skills.length - 5} more;
               </Badge>;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
             )}
-          </div>;
+          </div>
         )}
       </CardContent>;
     </Card>;
   );
 }
+<<<<<<< HEAD
 }
   )}}<div className="flex items-start justify-between mb-3>;
           <div className=flex-1">;
@@ -128,17 +145,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </p>;
           </div>;
           {resume.status && (<Badge className={getStatusColor(resume.status)}>;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
           {resume.status && (
             <Badge className={getStatusColor(resume.status)}>
               {resume.status}
-            </Badge>;
+            </Badge>
           )}
-          </Button>;
-        </div>;
-      </CardContent>;
-    </Card>;
-  )}}
         </div>
 
         <div className="flex items-center justify-between text-sm text-gray-500 mb-3>

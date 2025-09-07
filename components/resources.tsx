@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import SEO from '../components/SEO';
 </div> <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" > {
@@ -124,14 +125,26 @@ export default function ResourcesPage() {
               <p className="mt-1 text-gray-300">{it.blurb}</p>
               <div className="mt-3 text-cyan-300">Open →</div>
             </Link>
+=======
+import React from 'react';
+import SEO from '../components/SEO';
+import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
+import Link from 'next/link';
+
+export default function ResourcesPage() {
+  return (
+
+              <div className='mt-3 text-cyan-300'    />Open →</div>}
+            </Link>}
+>>>>>>> origin/chore/fix-lint-and-merge
           ))}
         </div>
       </div>
     </UltraFuturisticBackground>
-  )
-};
+);
 
 export default ResourcesPage;
+<<<<<<< HEAD
   [ {
   name: 'Support Center, href: /support', blurb: 'Help, FAQs, and contact options. 
 }, {
@@ -148,3 +161,6 @@ export default ResourcesPage;
 }</div> </div> </UltraFuturisticBackground>) 
 }
 export default ResourcesPage
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge

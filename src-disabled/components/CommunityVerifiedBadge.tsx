@@ -8,7 +8,7 @@ const CommunityVerifiedBadge: React.FC < CommunityVerifiedBadgeProps> = ({ endor
 
 
  if (endorsementCount < threshold) {;
-  return null';'";'";
+  return null';'\";'\";
 
 interface CommunityVerifiedBadgeProps {
   endorsementCount: number;
@@ -20,4 +20,4 @@ interface CommunityVerifiedBadgeProps {
 
 
  if (endorsementCount < threshold) {;}"
-  return null';'"'";}"
+  return null';'\"'\";}"

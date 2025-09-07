@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :src/components/AuthButtons.tsx
 import { useState  } from 'react;
 import { Button  } from @/components/ui/button';
@@ -5,6 +6,9 @@ import { Facebook } from 'lucide-react
 import { signIn } from next-auth/react';
 type Provider = any;
 
+=======
+import { signIn } from 'next-auth/react';
+>>>>>>> origin/chore/fix-lint-and-merge
 type Provider = any;
 import { signIn } from 'next-auth/react
 type Provider = google' | 'github | facebook' | 'credentials
@@ -19,6 +23,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     setLoadingProvider(provider)
     await signIn(provider)
   }
+<<<<<<< HEAD
 import { signIn  } from next-auth/react';
 type Provider = any;
 type Provider = 'google | github' | 'facebook | credentials';
@@ -230,6 +235,13 @@ import { useState } from react';
 import { Button } from '@/components / ui / button;
 import { Facebook } from lucide-react';
 import { sign_in } from 'next - auth / react;
+=======
+
+import { useState } from 'react';
+import { Button } from '@/components / ui / button';
+import { Facebook } from 'lucide-react';
+import { sign_in } from 'next - auth / react';
+>>>>>>> origin/chore/fix-lint-and-merge
 
 type Provider = google' | 'github | facebook' | 'credentials;
 interface AuthButtonsProps {}
@@ -382,7 +394,6 @@ interface AuthButtonsProps {
 
             <>Email Login</>
           )}
-:src/components/AuthButtons.tsx
         </Button>
       )}
     </div>;
@@ -390,6 +401,7 @@ interface AuthButtonsProps {
 }
 }
 
+<<<<<<< HEAD
             </svg>
           )}
         </Button>
@@ -410,6 +422,11 @@ interface AuthButtonsProps {
           type="button
           variant=outline"
           className="col-span-2 border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan
+=======
+          type="button"
+          variant="outline"
+          className="col-span-2 border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
+>>>>>>> origin/chore/fix-lint-and-merge
 
           onClick={() => handleSignIn(credentials)}
           disabled={loadingProvider !== null}
@@ -426,6 +443,7 @@ interface AuthButtonsProps {
 
     </div>;
   );
+<<<<<<< HEAD
 :src/components/AuthButtons.tsx
 }
     </div>)}) : (<>Email Login</>;
@@ -461,3 +479,6 @@ interface AuthButtonsProps {
   )
 ;
 }
+=======
+}
+>>>>>>> origin/chore/fix-lint-and-merge

@@ -1,11 +1,11 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 /**
  * Link Checker Script for PM2;
  * Replaces GitHub Actions link checking workflows;
  * Runs every 6 hours to check for broken links;
  */
-
 const { execSync } = require('child_process');
+<<<<<<< HEAD
 const fs = require(fs');
 
 const log = (message) => {}
@@ -13,12 +13,29 @@ const log = (message) => {}
   
 }
 
+=======
+const fs = require('fs');
+const log = (message) => {}
+  const timestamp = new Date().toISOString();
+};
+>>>>>>> origin/chore/fix-lint-and-merge
 const runCommand = (command, description) => {}
   try {}
+<<<<<<< HEAD
     log(`Starting: ${description}`);
+<<<<<<< HEAD
     const output = execSync(command, {})
       encoding: 'utf8, 
       stdio: pipe',
+=======
+    const output = execSync(command, { })
+<<<<<<< HEAD
+      encoding: 'utf8',
+=======
+      encoding: 'utf8', 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+      stdio: 'pipe',
+>>>>>>> origin/chore/fix-lint-and-merge
       cwd: process.cwd();
     }
 });
@@ -26,6 +43,7 @@ const runCommand = (command, description) => {}
     return { success: true, output }
   } catch (error) {}
     log(`Failed: ${description} - ${error.message}`);
+<<<<<<< HEAD
     return { success: false, error: error.message }
   }
 }
@@ -49,19 +67,34 @@ const checkLinks = () => {}
       }
     }
   }
+=======
+    return { success: false, error: error.message };
+  };
+};
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+      if (result.success) {}
+        linksChecked = true;
+>>>>>>> origin/chore/fix-lint-and-merge
 });
-  
   if (!linksChecked) {}
+<<<<<<< HEAD
     log('No link checking tools available);
   }
   return { success: linksChecked }
 }
+=======
+    log('No link checking tools available');
+>>>>>>> origin/chore/fix-lint-and-merge
 
+  return { success: linksChecked };
 const generateLinkReport = (results) => {}
   const report = {}
     timestamp: new Date().toISOString(),
     linkCheck: results.linkCheck,
     overall: {}
+<<<<<<< HEAD
       status: results.linkCheck.success ? PASS' : 'FAIL
     }
   }
@@ -77,11 +110,16 @@ const generateLinkReport = (results) => {}
 const main = async () => {}
   log('Starting Link Checker Process);
   
+=======
+
+const main = async () => {}
+  log('Starting Link Checker Process');
+>>>>>>> origin/chore/fix-lint-and-merge
   // Run link checks;
   const linkCheckResults = checkLinks();
-  
   // Generate comprehensive report;
   const results = {}
+<<<<<<< HEAD
     linkCheck: linkCheckResults;
   }
   
@@ -111,6 +149,28 @@ process.on(SIGTERM', () => {}
 // Run the main function;
 main().catch(error => {})
   log(`Link Checker Process failed: ${error.message}`);
-  process.exit(1);
-}
+=======
+    linkCheck: linkCheckResults,
 
+>>>>>>> origin/chore/fix-lint-and-merge
+  process.exit(1);
+<<<<<<< HEAD
+}
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+});
+});
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+`;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge

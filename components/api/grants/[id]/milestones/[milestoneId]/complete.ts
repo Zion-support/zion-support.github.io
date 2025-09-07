@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 function grantPath() { return null; }
 function grantPath(id: string) {
@@ -271,3 +272,9 @@ write_grant (existing);
 writeGrant(existing);
   res.status(200).json({ record: existing });  res.status(200).json({ record: existing })
 }
+=======
+return path && path.join(GRANTS_DIR, `${id}.json`);const GRANTS_DIR = path && path.join(process && process.cwd(), 'datagrants');
+function grantPath(id: string) {}`
+  return path && path.join(GRANTS_DIR, `${id}.json`);
+}
+>>>>>>> origin/chore/fix-lint-and-merge

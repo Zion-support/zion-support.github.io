@@ -1,15 +1,18 @@
+<<<<<<< HEAD
 #!/usr/bin/env node;
 main();#!/usr/bin/env node;
 <<<<<<< HEAD
 main();
+=======
 
-#!/usr/bin/env node;
 
-main();#!/usr/bin/env node;
-main();#!/usr/bin/env node
-main()
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
+
+<<<<<<< HEAD
 main
 
+<<<<<<< HEAD
     log('info, `Total "checks: ${securityReport.summary.totalChecks}`);
     log(info', `Vulnerabilities found": ${securityReport.summary.vulnerabilities}`);
     log('info, `High "severity: ${securityReport.summary.high}`);
@@ -19,6 +22,21 @@ main
     
     if (securityReport.vulnerabilities.length > 0) {
       log('warn, Vulnerabilities "found: ');
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+    log('info', `Total "checks": ${securityReport.summary.totalChecks}`);
+    log('info', `Vulnerabilities "found": ${securityReport.summary.vulnerabilities}`);
+    log('info', `High "severity": ${securityReport.summary.high}`);
+    log('info', `Medium "severity": ${securityReport.summary.medium}`);
+    log('info', `Low "severity": ${securityReport.summary.low}`);
+    log('info', `Security "score": ${securityReport.summary.securityScore}/100`);
+    if (securityReport.vulnerabilities.length > 0) {
+<<<<<<< HEAD
+      log('warn', 'Vulnerabilities "found": ');
+>>>>>>> origin/chore/fix-lint-and-merge
       securityReport.vulnerabilities.forEach(vuln => {
         log('warn, `- [${vuln.severity.toUpperCase()}] ${vuln.description}`)})}
     
@@ -48,6 +66,7 @@ main
     process.exit(1)}
 }
 
+<<<<<<< HEAD
 
 main();#!/usr/bin/env node;
 
@@ -57,15 +76,30 @@ main();
 #!/usr/bin/env node;
 main();#!/usr/bin/env node;
 
+=======
+<<<<<<< HEAD
+main();#!/usr/bin/env node;
+
+main();
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+
+
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
 main
+=======
 
-main();
+
 
 
 
 
 #!/usr/bin/env node;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
+<<<<<<< HEAD
 main();#!/usr/bin/env node;
 
 <<<<<<< HEAD
@@ -95,12 +129,17 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 >>>>>>> bcac19d12791e22762b61b5dda2306d7f19fe60c
+=======
+const fs = require('fs')
+const path = require('path')
+const { execSync } = require('child_process')
+>>>>>>> origin/chore/fix-lint-and-merge
 // console.log('� Enhanced Security Scanner v2.0')
 console.log('======')
   log('info', 'Checking dependencies for vulnerabilities')
-const output = execSync('npm audit --json', { "encoding"});
+    const output = execSync('npm audit --json', { "encoding"})
           "type"
-const secretPatterns = [/password\s*=\s*['"][^''];
+  const secretPatterns = [/password\s*=\s*['"][^'']
     /api[_-]?key\s*=\s*['"][^'']
     /secret\s*=\s*['"][^'']
     /token\s*=\s*['"][^'']
@@ -123,6 +162,7 @@ const secretPatterns = [/password\s*=\s*['"][^''];
       log('warn', 'Vulnerabilities "found")
 <<<<<<< HEAD
       log('info', 'Security "Recommendations")
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -179,3 +219,7 @@ console.log('======)
 =======
       log('info', 'Security "Recommendations")
 >>>>>>> cursor/integrate-build-improve-and-re-verify-f954
+=======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState, useEffect } from "react";
 import { useRouter  } from 'next/router';
 import { useState, useEffect } from "react;
@@ -50,6 +51,11 @@ import {logErrorToProduction} from '@/utils/productionLogger,
 import { BLOG_POSTS } from @/data/blog-posts";
 import { useSkeletonTimeout } from @/hooks/useSkeletonTimeout';
 import { fetchWithRetry } from '@/utils/fetchWithRetry;
+=======
+import { BLOG_POSTS } from "@/data/blog-posts";
+import { useSkeletonTimeout } from '@/hooks/useSkeletonTimeout';
+import { fetchWithRetry } from '@/utils/fetchWithRetry';
+>>>>>>> origin/chore/fix-lint-and-merge
 export default function BlogPost() {
         return `https://www.facebook.com/sharer/sharer.php?u=${url}`;
       case twitter':
@@ -61,6 +67,7 @@ default:
     }
   }
 
+<<<<<<< HEAD
   const articleLd = {
     '@context: https://schema.org'
     '@type: BlogPosting'
@@ -75,6 +82,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     }
   }
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
   return (
     <>
       <SEO
@@ -467,5 +476,9 @@ outline"className= border-zion-blue-light text-zion-slate-light hover:bg-zion-bl
 }</div> </div>) ;
 }<Button asChild > <Link href=" /blog"> <ChevronLeft className= mr-2 h-4 w-4 /> All Articles </Link> </Button> </div> </div> </div> </div> </>) ;
 }'"
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/chore/fix-lint-and-merge

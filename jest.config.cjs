@@ -1,14 +1,16 @@
-const nextJest = require('next/jest')
-
+const nextJest = require('next/jest');
 const createJestConfig = nextJest({
-  // Provide the path to your Next.js app to load next.config.js and .env files
   dir: './',
-})
+});
 
+<<<<<<< HEAD
 // Add any custom config to be passed to Jest
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 const customJestConfig = {
-  setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
   testEnvironment: 'jsdom',
+<<<<<<< HEAD
   testPathIgnorePatterns: [
     '<rootDir>/.next/',
     '<rootDir>/node_modules/',
@@ -102,21 +104,29 @@ const customJestConfig = {
     '!**/jest.setup.js',
     '!**/next-env.d.ts',
   ],
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
   testMatch: [
-    '<rootDir>/**/__tests__/**/*.{js,jsx,ts,tsx}',
-    '<rootDir>/**/*.{test,spec}.{js,jsx,ts,tsx}',
+    '**/__tests__/**/*.(js|jsx|ts|tsx)',
+    '**/*.(test|spec).(js|jsx|ts|tsx)'
   ],
-  transform: {
-    '^.+\\.(js|jsx|ts|tsx)$': ['babel-jest', { presets: ['next/babel'] }],
-  },
-  transformIgnorePatterns: [
+  testPathIgnorePatterns: [
     '/node_modules/',
-    '^.+\\.module\\.(css|sass|scss)$',
+    '/.next/',
+    '/dist/',
+    '/build/',
+    '/out/'
   ],
-  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
-  verbose: true,
-  passWithNoTests: true,
-}
+  moduleNameMapping: {
+    '^@/(.*)$': '<rootDir>/src/$1',
+  },
+  testTimeout: 30000,
+  passWithNoTests: true
+};
 
+<<<<<<< HEAD
 // createJestConfig is exported this way to ensure that next/jest can load the Next.js config which is async
 module.exports = createJestConfig(customJestConfig)
+=======
+module.exports = createJestConfig(customJestConfig);
+>>>>>>> origin/chore/fix-lint-and-merge

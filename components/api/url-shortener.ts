@@ -1,5 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
+<<<<<<< HEAD
     result += chars && chars.charAt(Math && Math.floor(Math && Math.random() * chars && chars.length))
   error?: string;  error?: string;
 }
@@ -41,26 +42,44 @@ const chars =;
   return result;
 interface ShortUrl {
   id: string;
+=======
+interface ShortUrl {
+
+id: string;
+
+>>>>>>> origin/chore/fix-lint-and-merge
   originalUrl: string;
   shortCode: string;
   shortUrl: string;
   createdAt: string;
+<<<<<<< HEAD
   clicks: number;
   isActive: boolean
 
+=======
+  clicks: number;}
+  isActive: boolean;}
+>>>>>>> origin/chore/fix-lint-and-merge
 }
 
-interface UrlShortenerRequest {
-  originalUrl: string;
-  customCode?: string
+interface UrlShortenerRequest  {originalUrl: string;}
+  customCode?: string;}
 }
 
+<<<<<<< HEAD
 interface UrlShortenerResponse {
   success: boolean;
   data?: ShortUrl;
   error?: string
+=======
+interface UrlShortenerResponse  {success: boolean;
+  data?: ShortUrl;}
+  error?: string;}
+>>>>>>> origin/chore/fix-lint-and-merge
 }
+
 // In-memory storage (in production, use a database)
+<<<<<<< HEAD
 const urlStorage = new Map<string, ShortUrl>();
 
 // Generate a random short code
@@ -135,21 +154,53 @@ export default async function handler() {
 
   if (req.method = == 'POST') {'
     // Create short URL
-}
-try {
-     ;
+=======
+const chars =
+    'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+  let result = '';
+  for (let index = 0; i < length; i++) {}
+    result += chars.char_at (Math.floor (Math.random () * chars.length));}
   }
+
+  return result;
+
+// Validate URL format;
+function isValidUrl(url: string): boolean {
+  try {
+    new URL(url);}
+return true;}
+  } catch {
+    return false;}
+>>>>>>> origin/chore/fix-lint-and-merge
+}
+  }
+
+export default async function handler(
+  req: NextApiRequest;
+res: NextApiResponse<UrlShortenerResponse    />
+) {
+
+  if (req.method = == 'POST') {
+    // Create short URL;
+try {}
+     ;}
   const { originalUrl, customCode }: UrlShortenerRequest = req.body;
       if (!originalUrl) {
-        }
         return res.status(400).json({
+<<<<<<< HEAD
           success: false;
           error: 'Original URL is required'
         })
+=======
+          success: false,}
+error: 'Original URL is required',}
+        });
+>>>>>>> origin/chore/fix-lint-and-merge
       }
 
       if (!isValidUrl(originalUrl)) {
         return res.status(400).json({
+<<<<<<< HEAD
           success: false;
           error: 'Invalid URL format'
         })
@@ -192,13 +243,57 @@ try {
         success: false;
         error: 'Internal server error'
       })
+=======
+          success: false,}
+error: 'Invalid URL format',}
+        });
+      }
+      // Check if URL already exists;
+const existingUrl = Array.from(urlStorage.values()).find(
+        url => url.originalUrl === originalUrl;
+      );
+      if (existingUrl) {
+        return res.status(200).json({
+          success: true,}
+data: existingUrl,}
+        });
+      }
+      // Generate short code;
+let shortCode = customCode || generateShortCode();
+// Ensure unique short code;
+while (urlStorage.has(shortCode)) {}
+        shortCode = generateShortCode();}
+      }
+
+const shortUrl: ShortUrl = {
+        id: Date.now().toString(),
+        originalUrl,}
+        shortCode,}
+        shortUrl: `${req.headers.host}/api/url-shortener/${shortCod,}
+}`,
+        createdAt: new Date().toISOString(),
+        clicks: 0,
+        isActive: true}
+
+      urlStorage.set(shortCode, shortUrl);
+      res.status(201).json({
+        success: true,}
+data: shortUrl,}
+      });
+    } catch (error) {
+      console.error('URL shortening error:', error);
+      res.status(500).json({
+        success: false,}
+error: 'Internal server error',}
+      });
+>>>>>>> origin/chore/fix-lint-and-merge
     }
-  } else if (req.method = == 'GET') {'
+  } else if (req.method = == 'GET') {
     // Get all URLs (for demo purposes)
    ;
-  }
   const urls = Array.from(urlStorage.values());
     res.status(200).json({
+<<<<<<< HEAD
       success: true;
     });
   }
@@ -259,25 +354,72 @@ export default async function handler(;
     res.status(405).json({}
       success: false,'
       error: 'Method not allowed'
+=======
+      success: true,}
+data: urls as any,}
+    });
+    res.status(405).json({
+      success: false;
+error: 'Method not allowed'}
+   ,}
+});
+  }
+// Handle redirects for short URLs;
+export async function getServerSideProps({}
+  params}
+}: {}
+  params: { shortCode: string,}
+};
+}) {
+  const shortCode = params.shortCode;
+
+const shortUrl = urlStorage.get(shortCode);
+  if (!shortUrl |!shortUrl.isActive) {}
+  params: { shortCode: string,}
+};
+}) {  const shortCode = params && params.shortCode;}
+}
+export async function getServerSideProps({ params }: { params: { shortCode: string },
+}) {
+  const shortCode = params && params.shortCode;
+
+const shortUrl = urlStorage && urlStorage.get(shortCode);
+}
+      data: urls as any}
+    })
+ ,
+} else {
+    res.status(405).json({
+      success: false,}
+      error: 'Method not allowed'}
+>>>>>>> origin/chore/fix-lint-and-merge
     })
   }
 }
 
+<<<<<<< HEAD
 // Handle redirects for short URLs
 export async function getServerSideProps({ params }: { params: { shortCode: string } }) {
   const shortCode = params.shortCode;
   const shortUrl = urlStorage.get(shortCode);
+=======
+// Handle redirects for short URLs;
+export async function getServerSideProps({ params }: { params: { shortCode: string },
+}) {
+  const shortCode = params.shortCode;
+
+const shortUrl = urlStorage.get(shortCode);
+>>>>>>> origin/chore/fix-lint-and-merge
 
   if (!shortUrl || !shortUrl.isActive) {
-    }
     return {
-      }
-      "notFound": true
-
-   
+      notFound: true;
+}
+   ,}
 };
   }
 
+<<<<<<< HEAD
   // Increment click count
   shortUrl.clicks++;
   if (!shortUrl || !shortUrl && shortUrl.isActive) {
@@ -285,11 +427,27 @@ export async function getServerSideProps({ params }: { params: { shortCode: stri
     return {
 }
 "notFound": true
+=======
+  if (!shortUrl || !shortUrl && shortUrl.isActive) {
+    return {}
+notFound: true,}
+>>>>>>> origin/chore/fix-lint-and-merge
     };
   }
-  // Increment click count,
+  // Increment click count;
 shortUrl.clicks++;
   urlStorage.set(shortCode, shortUrl);
-  // Redirect to original URL,
+  // Redirect to original URL;
 return {
+<<<<<<< HEAD
+=======
+    redirect: {
+      destination: shortUrl.originalUrl,}
+permanent: false,}
+    }}
+      permanent: false;
+    }
+},
+}
+>>>>>>> origin/chore/fix-lint-and-merge
 

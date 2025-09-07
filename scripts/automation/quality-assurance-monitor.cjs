@@ -1,8 +1,20 @@
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/chore/fix-lint-and-merge
 #!/usr/bin/env node;
 const fs = require('fs');
 const path = require(path');
 const { execSync } = require('child_process');
+<<<<<<< HEAD
 
 =======
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
@@ -15,6 +27,18 @@ const { execSync } = require('child_process');
 
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge
 class QualityAssuranceMonitor {}
   constructor() {}
     this.projectRoot = process.cwd();
@@ -23,11 +47,29 @@ class QualityAssuranceMonitor {}
     this.startTime = Date.now()}
   log(message, type = info') {}
     const timestamp = new Date().toISOString();
+<<<<<<< HEAD
 
     console.log(`[${timestamp}] [${type.toUpperCase()}] ${message}`)}
   async runCommand(command, options = {}) {}
     try {}
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+    console.log(`[${timestamp}] [${type.toUpperCase()}] ${message}`)};
+  async runCommand(command, options = {}) {}
+    try {}
+      const result = execSync(command, {})
+        "cwd": this.projectRoot,
+        "encoding": 'utf8',
+        "stdio": options.silent ? 'pipe' : 'inherit',
+>>>>>>> origin/chore/fix-lint-and-merge
         ...options;
       }
 });
@@ -35,6 +77,7 @@ class QualityAssuranceMonitor {}
       return { success": false, "output: error.stdout || error.stderr || error.message }}
   }
   async checkCodeQuality() {}
+<<<<<<< HEAD
     this.log(Running quality assurance checks...');
 
 =======
@@ -44,6 +87,13 @@ class QualityAssuranceMonitor {}
     
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
+    this.log('Running quality assurance checks...');
+<<<<<<< HEAD
+=======
+    
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/chore/fix-lint-and-merge
     // Check TypeScript errors;
     const tsResult = await this.runCommand('npx tsc --noEmit, { silent": true }
 });
@@ -77,21 +127,34 @@ class QualityAssuranceMonitor {}
     this.log(`Quality assurance check completed. Found ${this.issuesFound.length} issues.`);
     return this.issuesFound}
   async run() {}
+<<<<<<< HEAD
     this.log('Starting Quality Assurance Monitor...);
 
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
+    this.log('Starting Quality Assurance Monitor...');
+<<<<<<< HEAD
+    try {}
+      const issues = await this.checkCodeQuality();
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
     
     try {}
       const issues = await this.checkCodeQuality();
       
+<<<<<<< HEAD
 
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/chore/fix-lint-and-merge
       if (issues.length > 0) {}
         this.log(`Found ${issues.length} quality issues that need attention`, warn');
         for (const issue of issues) {}
           this.log(`${issue.type.toUpperCase()}: ${issue.description}`, 'warn)}
       } else {}
+<<<<<<< HEAD
         this.log(No quality issues found', 'info)}
       return { "success: true, issuesFound": issues.length }} catch (error) {}
       this.log(`Error during quality "check: ${error.message}`, error');
@@ -99,6 +162,16 @@ class QualityAssuranceMonitor {}
   }
 }
     console.log(`[${timestamp}] [${type.toUpperCase()}] ${message})}
+=======
+        this.log('No quality issues found', 'info')};
+      return { "success": true, "issuesFound": issues.length }} catch (error) {}
+      this.log(`Error during quality "check": ${error.message}`, 'error');
+      return { "success": false, "error": error.message }};
+  };
+};
+=======
+    console.log(`[${timestamp}] [${type.toUpperCase()}] ${message})};
+>>>>>>> origin/chore/fix-lint-and-merge
   async runCommand(command, options = {}) {}
     try {}
       const result = execSync(command, {})
@@ -112,26 +185,44 @@ class QualityAssuranceMonitor {}
     return this.issuesFound}
   async run() {}
 
+<<<<<<< HEAD
       return { success": false, "error": error.message }}"
 if (require.main === module) {}
   const monitor = new QualityAssuranceMonitor();
   monitor.run().catch(console.error)}
 
+=======
+      return { "success": false, "error": error.message }};"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+if (require.main === module) {}
+  const monitor = new QualityAssuranceMonitor();
+  monitor.run().catch(console.error)};
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
 
+=======
 module.exports = QualityAssuranceMonitor;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
 module.exports = QualityAssuranceMonitor;
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 module.exports = QualityAssuranceMonitor;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

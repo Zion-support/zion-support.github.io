@@ -1,14 +1,29 @@
+import { motion } from 'framer-motion';
+import Link from 'next/link';
+import Layout from '../../components/Layout';
+import { Heart, CreditCard, Globe, GraduationCap, Factory, Home } from 'lucide-react';
 
+<<<<<<< HEAD
 =======
 import React from 'react;
 import Link from next/link';';
+=======
+import Link from 'next/link';';
+>>>>>>> origin/chore/fix-lint-and-merge
 
 import { motion } from framer-motion;
 
 import { BarChart3, Shield, Users, Globe, ArrowRight, CheckCircle, Building, Heart, GraduationCap, Factory, Home, CreditCard } from 'lucide-react';
 import Layout from "../../components/Layout;;
 
+const capabilities = [;
+  { title: 'Regulatory Compliance, description: 'Ensure compliance with industry-specific regulations' },',
+  { title: 'Custom Workflows, description: 'Tailored business processes for your industry' },',
+  { title: 'Integration Expertise, description: 'Seamless integration with existing industry systems' },',
+  { title: 'Security Standards, description: 'Industry-specific security and data protection' },',
+  { title: 'Performance Optimization, description: 'Optimized for industry-specific performance requirements' },',
 
+<<<<<<< HEAD
 =======
 
 const industries = [;
@@ -54,7 +69,18 @@ const industries = [;
     features: ['Property Management, Virtual Tours, 'Market Analytics', Transaction Management],',
     color: 'from-yellow-500 to-orange-500;
   }];
+=======
+  { title: 'Ongoing Support, description: 'Dedicated support team familiar with your industry' }',
+;];
+>>>>>>> origin/chore/fix-lint-and-merge
 
+const stats = [;
+  { number: '15+, label: 'Industries Served' },',
+  { number: '10+, label: 'Years Experience' },',
+  { number: '100%, label: 'Compliance Rate' },',
+
+  { number: '500+, label: 'Industry Projects' }',
+;];
 
 export default function IndustrySolutionsPage() {
 
@@ -107,10 +133,14 @@ export default function IndustrySolutionsPage() {
           </div>;
         </section>;
 
+<<<<<<< HEAD
         {/* Stats Section */}
         <section className="py-16 bg-white>
           <div className="container mx-auto px-4">;
             <div className=grid grid-cols-2 md:grid-cols-4 gap-8">";
+=======
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">";
+>>>>>>> origin/chore/fix-lint-and-merge
               {stats.map((stat, index) => (,
                 <motion.div}),
                   key={stat.label}

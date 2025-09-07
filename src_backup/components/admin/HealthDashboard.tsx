@@ -29,6 +29,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from @/components/ui/tabs';
 import { AlertTriangle, CheckCircle, XCircle, Clock, TrendingUp, Activity } from 'lucide-react
 
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
   constructor(props) {
     super(props);
     this.state = { hasError: false }
@@ -55,6 +56,13 @@ import { Card, CardContent, CardHeader, CardTitle } from @/components/ui/card'
 import { Badge } from '@/components/ui/badge
 import { Button } from @/components/ui/button'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs
+=======
+import React, { useState, useEffect } from 'react'
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { Badge } from '@/components/ui/badge'
+import { Button } from '@/components/ui/button'
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
+>>>>>>> origin/chore/fix-lint-and-merge
 import {
   AlertTriangle
   CheckCircle
@@ -74,9 +82,6 @@ import {}
   Activity,;
 } from 'lucide-react';
 
-
-
-
 interface HealthData {
 
   status: healthy | 'warning' | critical;
@@ -84,9 +89,6 @@ interface HealthData {
   uptime: number;
   version: string;
   environment: string;
-
-
-  metrics: {
 
     error_rate: number;
     critical_errors: number;
@@ -106,6 +108,7 @@ interface HealthData {
       high: number;
       medium: number;
 
+<<<<<<< HEAD
 
       low: number;
     }
@@ -113,6 +116,8 @@ interface HealthData {
 
 
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
       patternId: string;
       description: string;
 
@@ -123,6 +128,7 @@ interface HealthData {
     byCategory: { [category: string]: number }
 
       low: number;
+<<<<<<< HEAD
 
     }return this.props.children;
   }
@@ -172,6 +178,8 @@ interface HealthData  {status: healthy | 'warning' | critical;
       solution?: string;
     }>;
     byCategory: { [category: string]: number }low: number;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
     }
     top_errors: Array<{}
       pattern_id: string;
@@ -181,6 +189,7 @@ interface HealthData  {status: healthy | 'warning' | critical;
       solution?: string;
     }>;
     by_category: { [category: string]: number }
+<<<<<<< HEAD
   }import React, { useState, useEffect } from 'react',import { Card, CardContent, CardHeader, CardTitle } from @/components/ui/card,import { Badge } from '@/components/ui/badge',import { Button } from @/components/ui/button,import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs',interface HealthData  {status: healthy | 'warning' | critical,timestamp: string,uptime: number,version: string,environment: string,metrics: {errorRate: number,criticalErrors: number,responseTime: number,memoryUsage: number;
   },health: {status: string,score: number,issues: string[],recommendations: string[];
   },errors: {summary: {total: number,critical: number,high: number,medium: number,low: number;
@@ -262,6 +271,21 @@ interface HealthData {'
     errorRate: number,
     criticalErrors: number,
     responseTime: number,
+=======
+  }
+
+import { AlertTriangle, CheckCircle, XCircle, Clock, TrendingUp, Activity } from 'lucide-react';
+interface HealthData {;'
+  status: 'healthy' | 'warning' | 'critical',;
+  timestamp: string,;
+  uptime: number,;
+  version: string,;
+  environment: string,;
+  metrics: {;
+    errorRate: number,;
+    criticalErrors: number,;
+    responseTime: number,;
+>>>>>>> origin/chore/fix-lint-and-merge
     memoryUsage: number;
   },
   health: {
@@ -358,11 +382,16 @@ interface HealthData {'
         </div>"
         <div className="flex items-center space-x-2>
 
+<<<<<<< HEAD
   if (!healthData) return null
   if (!healthData) return null,
 
             variant=outline"
             size="sm
+=======
+            variant="outline"
+            size="sm"
+>>>>>>> origin/chore/fix-lint-and-merge
             onClick={() => setAutoRefresh(!autoRefresh)}
           >
 
@@ -415,13 +444,16 @@ interface HealthData {'
           <TabsTrigger value=recommendations>Recommendations</TabsTrigger>
         </TabsList>
 
+<<<<<<< HEAD
 
 
         <TabsContent value="overview" className=space-y-4>
+=======
+        <TabsContent value="overview" className="space-y-4">
+>>>>>>> origin/chore/fix-lint-and-merge
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
 
-            <Card>
               <CardHeader>
                 <CardTitle>System Information</CardTitle>
               </CardHeader>
@@ -478,6 +510,7 @@ interface HealthData {'
         return <Activity className=w-5 h-5 text-gray-500" />;
 
     }
+<<<<<<< HEAD
   },
   const getStatusBadge = (status: string) => {
       </Badge>;
@@ -494,6 +527,10 @@ interface HealthData {'
             <span>Failed to load health data: {error}</span>;
           </div>;
           <Button onClick={fetchHealthData} className='mt-4'>;
+=======
+  },;
+  const getStatusBadge = (status: string) => {;
+>>>>>>> origin/chore/fix-lint-and-merge
 
       </Badge>;
 
@@ -511,6 +548,7 @@ interface HealthData {'
           </Button>;
         </CardContent>;
       </Card>;
+<<<<<<< HEAD
           <Button;
             variant=outline;
             size='sm';
@@ -583,6 +621,8 @@ interface HealthData {'
                 <p className='text-2xl font-bold'>;
                   {healthData && healthData.metrics.responseTime && responseTime.toFixed(0)}ms;
                 </p>;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
     );
   }
 
@@ -625,12 +665,15 @@ interface HealthData {'
                   </div>;
                 </div>;
               </CardContent>;
+<<<<<<< HEAD
                       </li>
                     ))}
                   </ul>
                 ) : (
                   <p className=text-green-600 text-sm">No issues detected</p>
                 )}
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
             </Card>;
             <Card>;
 
@@ -654,6 +697,7 @@ interface HealthData {'
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4>
 
+<<<<<<< HEAD
                 ) : (<p className='text-green-600 text-sm'>No issues detected</p>;
                 )}<TabsContent value=errors" className="space-y-4>;
           <div className=grid grid-cols-1 lg:grid-cols-2 gap-4">;
@@ -756,8 +800,9 @@ interface HealthData {'
                       .map((error, index) => (;
 
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
                         <div
-                      .slice(0, 5).map((error, index) => (<div;
                           key={index}
                           className='border-l-4 border-red-400 pl-3 py-1'>;
 
@@ -772,6 +817,7 @@ interface HealthData {'
                 ) : (;
                   <p className='text-gray-600 text-sm'>No recurring errors</p>;
 
+<<<<<<< HEAD
                   <div className="space-y-2>
                     {healthData.errors.topErrors.slice(0, 5).map((error, index) => (
                       <div key={index} className="border-l-4 border-red-400 pl-3 py-1">
@@ -781,6 +827,13 @@ interface HealthData {'
                     {healthData.errors.topErrors.slice(0, 5).map((error, index) => (<div key={index} className=border-l-4 border-red-400 pl-3 py-1>;
                         <p className="text-sm font-medium">{error.description}</p>;
                         <p className=text-xs text-gray-600>;
+=======
+                  <div className="space-y-2">
+                    {healthData.errors.topErrors.slice(0, 5).map((error, index) => ("
+                      <div key={index} className="border-l-4 border-red-400 pl-3 py-1">"
+                        <p className="text-sm font-medium">{error.description}</p>"
+                        <p className="text-xs text-gray-600">
+>>>>>>> origin/chore/fix-lint-and-merge
                           {error.occurrences} occurrences • {error.severity}
                         </p>;
                       </div>;
@@ -858,6 +911,7 @@ interface HealthData {'
                 <CardTitle className=text-sm>Critical Errors</CardTitle>
               </CardHeader>
               <CardContent>'
+<<<<<<< HEAD
                 <p className='text-2xl font-bold text-red-600>
                   </div>;
                 ) : (<p className=text-gray-600 text-sm>No recurring errors</p>;
@@ -880,6 +934,9 @@ interface HealthData {'
               </CardHeader>;
               <CardContent>;
                 <p className=text-2xl font-bold text-red-600'>;
+=======
+                <p className='text-2xl font-bold text-red-600'>
+>>>>>>> origin/chore/fix-lint-and-merge
                   {healthData.metrics.criticalErrors}
                 </p>'
                 <p className=text-xs text-gray-600>In last hour</p>
@@ -911,9 +968,12 @@ interface HealthData {'
           </div>
         </TabsContent>
 
+<<<<<<< HEAD
                 ) : (
                   <p className=text-gray-600 text-sm>No recurring errors</p>
                 )}
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
           <Card>
 
             <CardHeader>
@@ -921,6 +981,7 @@ interface HealthData {'
             </CardHeader>
             <CardContent>
 
+<<<<<<< HEAD
 
                 </p>;
                 <p className='text-xs text-gray-600'>JavaScript heap</p>;
@@ -963,6 +1024,8 @@ interface HealthData {'
               <CardContent>;
                 <p className=text-2xl font-bold>{formatBytes(healthData.metrics.memoryUsage)}</p>;
                 <p className="text-xs text-gray-600">JavaScript heap</p>;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
               </CardContent>;
             </Card>;
           </div>;
@@ -1026,6 +1089,7 @@ interface HealthData {'
               <CardTitle>Improvement Recommendations</CardTitle>;
             </CardHeader>;
             <CardContent>;
+<<<<<<< HEAD
                   ))}
                       <span className=text-sm'>{rec}</span>                    </li>;))}
                 </ul>;
@@ -1034,6 +1098,9 @@ interface HealthData {'
                 </p>;
               )}
               {healthData && healthData.health.recommendations && recommendations.length > 0 ? (;
+=======
+              {healthData && healthData.health.recommendations && recommendations.length > 0 ? (;'
+>>>>>>> origin/chore/fix-lint-and-merge
                 <ul className='space-y-3'>;
                   {healthData && healthData.health.recommendations && recommendations.map((rec, index) => (;
                     <li key={index} className=flex items-start'>;'
@@ -1062,11 +1129,14 @@ export default HealthDashboard;
     } finally {}
       set_loading (false);
     }
+<<<<<<< HEAD
               )}export default HealthDashboard,export default HealthDashboard;
 }const response = await fetch (/api / admin / health)// Check condition;
 if ( {) {$2;
 }throw new Error (`HTTP ${response.status}`)}
       const data = await response.json ()setHealthData (data)set_error (null)} catch (err) {set_error (err instanceof Error ? err.message : 'Failed to fetch health data')} finally {set_loading (false)}
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
   }
   useEffect (() => {}
     fetchHealthData ();
@@ -1074,8 +1144,9 @@ if ( {) {$2;
 if ( {) {}
   $2;
 }
-      const interval = set_interval (fetchHealthData, 30000)// Refresh every 30 seconds;
-      return () => clear_interval (interval)}
+      const interval = set_interval (fetchHealthData, 30000); // Refresh every 30 seconds;
+      return () => clear_interval (interval);
+    }
     return undefined;
   }, [auto_refresh]);
   const getStatusIcon = (status: string, ) =>: any {}
@@ -1099,8 +1170,7 @@ if ( {) {}
           : 'destructive'; return (
       <Badge variant={variant} className=ml - 2'>;
         {status.toUpperCase ()}
-      </Badge>)}
-  const format_uptime = (seconds: number) =>: any {const hours = Math.floor (seconds / 3600)const minutes = Math.floor ((seconds % 3600) / 60)return `${hours}h ${minutes}m`;
+      </Badge>);
   }
   const format_uptime = (seconds: number) =>: any {}
     const hours = Math.floor (seconds / 3600);
@@ -1261,10 +1331,18 @@ if (return null) {}
               </CardContent>;
             </Card>;
             <Card>;
+<<<<<<< HEAD
               <CardHeader>;
                 <CardTitle className='flex items - center'>;
                   <AlertTriangle className=w - 4 h - 4 mr - 2' />;
                   Current Issues ({health_data.health.issues.length})</CardTitle>;
+=======
+              <CardHeader>;'
+                <CardTitle className='flex items - center'>;'
+                  <AlertTriangle className='w - 4 h - 4 mr - 2' />;
+                  Current Issues ({health_data.health.issues.length});
+                </CardTitle>;
+>>>>>>> origin/chore/fix-lint-and-merge
               </CardHeader>;
               <CardContent>;
                 {health_data.health.issues.length > 0 ? ('
@@ -1418,6 +1496,7 @@ if (return null) {}
 export default HealthDashboard;
 export default HealthDashboard,
 
+<<<<<<< HEAD
 export default HealthDashboard;
 
   }
@@ -1433,6 +1512,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 export default HealthDashboard;
 export default HealthDashboard,export default HealthDashboard}
   )}export default HealthDashboard;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
   });
 }
 

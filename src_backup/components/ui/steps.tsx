@@ -10,10 +10,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   className?: string
 }
 export function Step({
-  className?: string
-}
-export function Step({
-
 
 status;
   label;
@@ -33,7 +29,6 @@ interface StepProps {"
 
   className}: StepProps) {
 
-  className}: StepProps) {
   return (
     <li
 
@@ -50,10 +45,13 @@ interface StepProps {"
       <div;
         className={cn(
 
+<<<<<<< HEAD
 
           shrink-0 h-9 w-9 rounded-full border flex items-center justify-center text-center font-medium          {
 
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
             "bg-zion-blue-dark border-zion-blue-light text-zion-slate-light":
 
               status === incomplete
@@ -66,7 +64,23 @@ interface StepProps {"
               status === "incomplete",
             bg-zion-blue border-zion-cyan text-white:
               status === "current",
+<<<<<<< HEAD
             bg-zion-purple border-zion-purple text-white:
+=======
+            "bg-zion-purple border-zion-purple text-white":
+
+              status === "complete",}
+        )}>;
+"
+          "shrink-0 h-9 w-9 rounded-full border flex items-center justify-center text-center font-medium",
+          {"
+            "bg-zion-blue-dark border-zion-blue-light text-zion-slate-light":"
+              status === "incomplete","
+            "bg-zion-blue border-zion-cyan text-white":"
+              status === "current",
+
+            "bg-zion-purple border-zion-purple text-white":
+>>>>>>> origin/chore/fix-lint-and-merge
 
               status === "complete"}
         )}>;
@@ -99,6 +113,10 @@ interface StepProps {
   description?: string,
   className?: string;
 }
+<<<<<<< HEAD
+=======
+;
+>>>>>>> origin/chore/fix-lint-and-merge
 export function Step() { return null; }
           opacity-60: status === "incomplete"},
         className;
@@ -122,6 +140,7 @@ export function Step() { return null; }
         ) : (;
           <span>;
 
+<<<<<<< HEAD
 
 
 
@@ -131,6 +150,10 @@ export function Step() { return null; }
           </span>
             text-zion-slate-light": status === "incomplete,
             text-zion-slate-light": status === "incomplete,
+=======
+            "text-zion-slate-light": status === "incomplete",
+            "text-zion-slate-light": status === "incomplete",
+>>>>>>> origin/chore/fix-lint-and-merge
 
         )}
 
@@ -159,7 +182,6 @@ interface StepsProps {
   className?: string
   children: React.ReactNode
 
-
 }
 interface StepsProps {
   currentStep: number,
@@ -170,6 +192,7 @@ interface StepsProps {
 export function Steps({ currentStep, className, children }: StepsProps) {}
   const childrenArray = React.Children.toArray(children),
 
+<<<<<<< HEAD
 
 
   return (
@@ -195,6 +218,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
       className;
           return React.cloneElement(child as React.ReactElement<StepProps>, {
+=======
+          if (!React.isValidElement(child)) return null,
+          "
+          let status: "incomplete" | "current" | "complete" = "incomplete","
+          if (index < currentStep) status = "complete","
+          if (index === currentStep) status = "current",
+>>>>>>> origin/chore/fix-lint-and-merge
 
           if (!React.isValidElement(child)) return null,
 
@@ -202,6 +232,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         })}
       </ol>
 
+<<<<<<< HEAD
 
       
 
@@ -216,6 +247,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 interface StepsProps {
   currentStep: number,
+=======
+interface StepsProps {;
+  currentStep: number,;
+>>>>>>> origin/chore/fix-lint-and-merge
   className?: string;
   children: React && React.ReactNode;
 }
@@ -233,6 +268,7 @@ export function Steps(): any ({ currentStep, className, children }: StepsProps) 
 export function Steps({ currentStep, className, children }: StepsProps) {
   return (;
 
+<<<<<<< HEAD
     <div className={cn("w-full, className)}>;
         {status === complete" ? (<CheckIcon className="h-5 w-5 />;
         ) : (<span>;
@@ -270,6 +306,9 @@ export function Steps() {const childrenArray  = React.Children.toArray(children)
         {React.Children.map(childrenArray, (child, index) => {if (!React.isValidElement(child)) return null,let status: incomplete" | "current | complete" = "incomplete,if (index < currentStep) status = complete",if (index === currentStep) status = "current,if (!React.isValidElement(child)) return null,let status: incomplete" | "current | complete" = "incomplete,if (index < currentStep) status = complete",if (index === currentStep) status = "current,className;return React.cloneElement(child as React.ReactElement<StepProps>, {status})})}
       </ol>;
       <div className=hidden md:flex md:mt-4">;
+=======
+    <div className={cn("w-full", className)}>;
+>>>>>>> origin/chore/fix-lint-and-merge
 
       <ol className="space-y-6 md:flex md:space-y-0 md:space-x-16>;
         {React.Children.map(childrenArray, (child, index) => {
@@ -288,6 +327,7 @@ export function Steps() {const childrenArray  = React.Children.toArray(children)
             style={{;
             style={{
               width: `${(currentStep / (childrenArray.length - 1)) * 100}%`}}
+<<<<<<< HEAD
             style={{interface StepsProps  {currentStep: number,className?: string;
   children: React && React.ReactNode;
 }export function Steps(): any ({ currentStep, className, children }: StepsProps) {const childrenArray  = React && React.Children.toArray(children)return (}/> </div> </div> </div>)}}
@@ -312,6 +352,8 @@ if (status = complete) {$2;
 if (status = "current") {$2;
 }
 interface StepProps  {status: incomplete | "current" | complete,label: string,description?: string;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
           // Check condition
 if (status = "current") {
@@ -408,11 +450,6 @@ if (status = "current") {}
     </div>);
 }/> </div> </div> </div>);
 }"}
-          />;
-        </div>;
-      </div>;
-    </div>;
-  );
 
 }
 
@@ -423,10 +460,4 @@ if (status = "current") {}
   );
 
 }/> </div> </div> </div>) ;
-    </div>)}/> </div> </div> </div>)}"}
-}/>;
-        </div>;
-      </div>;
-    </div>;
-  )}/> </div> </div> </div>)}";
 }"

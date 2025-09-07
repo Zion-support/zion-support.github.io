@@ -591,6 +591,7 @@ key={action.name}
           <div className=\"flex flex-col md:flex-row items-center justify-between gap-4\" />
             <div className=\"flex items-center space-x-6 text-sm text-gray-400\" />
               <span />&copy; {currentYear} Zion Tech Group. All rights reserved.</span>
+
             </div>
             
             <div className=\"flex items-center space-x-4\" />

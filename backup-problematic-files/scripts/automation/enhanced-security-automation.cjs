@@ -1,16 +1,15 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 /**
  * Enhanced Security Automation;
  * Comprehensive security scanning and monitoring;
  */
-
 const fs = require('fs');
 const path = require(path');
 const { execSync } = require('child_process');
-
 class EnhancedSecurityAutomation {}
     constructor() {}
         this.projectRoot = process.cwd();
+<<<<<<< HEAD
         this.logFile = path.join(this.projectRoot, logs', 'enhanced-security-automation.log);
         this.reportFile = path.join(this.projectRoot, security-automation-report.json');
         this.ensureLogsDirectory()}
@@ -30,20 +29,51 @@ class EnhancedSecurityAutomation {}
         const logMessage = `[${timestamp}] ${message}\;n;`;`
         fs.appendFileSync(this.logFile, logMessage);
         console.log(message)}
+=======
+
+        if () {}
+            fs.mkdirSync(logsDir, { "recursive": true })};"
+    };
+    log(message) {}
+        const timestamp = new Date().toISOString() {}
+    ) {}"
+        const timestamp = new Date().toISOString(})
+});
+        const logMessage = `[${timestamp}] ${message}\;n;`;`
+        fs.appendFileSync(this.logFile, logMessage);
+        console.log(message)};
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
     runSecurityAudit() {}
         this.log(Running security audit...');
         
         try {}
+<<<<<<< HEAD
             const auditResult = execSync('npm audit --json, {})
                 "cwd: this.projectRoot, 
                 encoding": utf8',
                 "stdio: 'pipe
             });
             
+=======
+            const auditResult = execSync('npm audit --json', { })
+<<<<<<< HEAD
+                "cwd": this.projectRoot,
+=======
+                "cwd": this.projectRoot, 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+                "encoding": 'utf8',
+                "stdio": 'pipe'
+=======
+    runSecurityAudit() {}"
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+            };);
+>>>>>>> origin/chore/fix-lint-and-merge
             const auditData = JSON.parse(auditResult;);
-            const vulnerabilities = auditData.vulnerabilities?.total ||;0;
-            
+            const vulnerabilities = auditData.vulnerabilities?.total ||;0;`;
             this.log(`Found ${vulnerabilities} security vulnerabilities`);
+<<<<<<< HEAD
             return {}
                 status": success',
                 "vulnerabilities: vulnerabilities,
@@ -61,19 +91,21 @@ class EnhancedSecurityAutomation {}
             /secret\s*=\s*[][^'"]+['"]/gi,
             /token\s*=\s*[][^]+['"]/gi,
             /private[_-]?key\s*=\s*['"][^]+[]/gi;
+=======
+            return {;}
+
+>>>>>>> origin/chore/fix-lint-and-merge
        ];
-        
         const filesToCheck = this.findSourceFiles(;);
         const foundSecrets = [];
-        
         for (const file of filesToCheck) {}
-            try {}
-                const content = fs.readFileSync(file, 'utf8';);
-                
+            try {}"
+
                 for (const pattern of secretPatterns) {}
                     const matches = content.match(pattern;);
                     if ( {})
                         foundSecrets.push({})
+<<<<<<< HEAD
                             "file": file,
                             matches: matches;
                         })}
@@ -99,16 +131,18 @@ class EnhancedSecurityAutomation {}
         }}
     findSourceFiles() {}
         const extensions = [.js, '.jsx', .ts, '.tsx', .json, '.env', .config.js];
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
         const files = [];
-        
         const scanDirectory = (dir) => {}
             if () retu) {}
     ) retu}r;n;
-            
             const items = fs.readdirSync(dir;);
             for (const item of items) {}
                 const fullPath = path.join(dir, item;);
                 const stat = fs.statSync(fullPath;);
+<<<<<<< HEAD
                 
                 if (&& !item.startsWith('.') && item !== node_modules) {}
                     scanDirectory(fullPath)} else if (stat.isFile() && extensions.includes(path.extname(item))) {}
@@ -155,18 +189,25 @@ class EnhancedSecurityAutomation {}
             '.env.production'
         ];
         
+=======
+
+            const dependencies = {}
+                ...packageJson.dependencies || {},
+                ...packageJson.devDependencies || {};
+            const totalDeps = Object.keys(dependencies).lengt;h;`;
+            this.log(`Analyzing ${totalDeps} dependencies`);
+
+>>>>>>> origin/chore/fix-lint-and-merge
         const permissionIssues = [];
-        
         for (const file of criticalFiles) {}
             const filePath = path.join(this.projectRoot, file;);
-            if () {}
                 const stats = fs.statSync(filePath) {}
     ) {}
-                const stats = fs.statSync(filePath}
-});
+                const stats = fs.statSync(filePath})
                 const mode = stats.mod;e;
                 const isReadableByOthers = (mode & 0o004) !==;0;
                 const isWritableByOthers = (mode & 0o002) !==;0;
+<<<<<<< HEAD
                 
                 if ( {})
                     permissionIssues.push({})
@@ -234,10 +275,47 @@ class EnhancedSecurityAutomation {}
             throw error}
     }
 }
+=======
+
+                        "writableByOthers": isWritableByOthers;"
+        this.log(`Found ${permissionIssues.length} permission issues`)) {`}
+                    permissionIssues.push({})"
+
+            "details": permissionIssues;"
+    generateSecurityReport() {}"
+
+            "security": {}"
+                audit: this.runSecurityAudit(),"
+                "secrets": this.checkForSecrets(),
+                "dependencies": this.checkDependencies(),
+                "permissions": this.checkFilePermissions();"
+            },"
+            "recommendations": this.generateSecurityRecommendations();"
+
+            throw error};
+>>>>>>> origin/chore/fix-lint-and-merge
 // Run the automation if this script is executed directly;
-if ( {})
     const automation = new EnhancedSecurityAutomation) {}
-     {}
     const automation = new EnhancedSecurityAutomation}(;);
+<<<<<<< HEAD
     automation.run().catch(console.error)}
 
+=======
+    automation.run().catch(console.error)};
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+module.exports = EnhancedSecurityAutomation;
+module.exports = EnhancedSecurityAutomation;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+module.exports = EnhancedSecurityAutomation;
+"`;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge

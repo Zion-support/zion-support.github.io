@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import Image from 'next/image';
 import { Star, Heart, ShoppingCart } from 'lucide-react';
@@ -13,6 +14,8 @@ pr-12243
       <div className="mt-auto flex items-center justify-between">;
         {price && <span className="text-sm font-medium text-blue-600">{price}</span>}
 import React from 'react';
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 import Link from 'next/link';
 import Link from next/link';
 
@@ -20,10 +23,14 @@ interface EnhancedMarketplaceCardProps {
   title: string;
   description: string;
   price?: string;
+<<<<<<< HEAD
   href: string, image?: string
 import React from 'react';
 import { Star, Heart, ShoppingCart } from 'lucide-react';
 pr-12243
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
   image?: string;
   href: string;
   category?: string;
@@ -33,7 +40,20 @@ pr-12243
   isNew?: boolean;
   isPopular?: boolean;
 }
-export default function EnhancedMarketplaceCard({ title, description, price, image }: EnhancedMarketplaceCardProps) {
+
+const EnhancedMarketplaceCard: React.FC<EnhancedMarketplaceCardProps> = ({
+  title,
+  description,
+  price,
+  image,
+  href,
+  category,
+  rating,
+  reviews,
+  features = [],
+  isNew = false,
+  isPopular = false,
+}) => {
   return (
     <Link href={href} className="group block>
       <div className=bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
@@ -137,6 +157,7 @@ export default function EnhancedMarketplaceCard({ title, description, price, ima
 }
 
 export default EnhancedMarketplaceCard;
+<<<<<<< HEAD
 
 pr-12243
         <h3 className="text-lg font-semibold text-gray-900">{title}</h3>;
@@ -152,11 +173,15 @@ interface EnhancedMarketplaceCardProps {
   href: string, image?: string
 import { Star, Heart, ShoppingCart } from lucide-react';
 pr-12243
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
 interface MarketplaceCardProps {
 interface EnhancedMarketplaceCardProps {
-  title: string, description: string
+  title: string;
+  description: string;
   price?: string;
+<<<<<<< HEAD
 
         <h3 className=text-lg font-semibold text-gray-900">{title}</h3>;
       </div>;
@@ -186,6 +211,11 @@ const EnhancedMarketplaceCard: React.FC<MarketplaceCardProps> = ({
   rating;
   image;
   onAddToCart;
+=======
+  image?: string;
+}
+
+>>>>>>> origin/chore/fix-lint-and-merge
 const EnhancedMarketplaceCard: React.FC<MarketplaceCardProps> = ({
   title,
   description,
@@ -193,8 +223,11 @@ const EnhancedMarketplaceCard: React.FC<MarketplaceCardProps> = ({
   rating,
   image,
   onAddToCart,
+<<<<<<< HEAD
   onFavorite
 }) => {
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
   onFavorite
 }) => {
   return (
@@ -228,4 +261,10 @@ const EnhancedMarketplaceCard: React.FC<MarketplaceCardProps> = ({
       </div>
     </div>
   );
+<<<<<<< HEAD
 }
+=======
+};
+
+export default EnhancedMarketplaceCard;
+>>>>>>> origin/chore/fix-lint-and-merge

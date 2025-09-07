@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readJsonFile, writeJsonFile } from '../../../../utils/api/storage';
 import { requireSuperadminApi } from '../../../../utils/api/auth';
@@ -24,3 +25,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   res.status(200).json(record)
 }
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+>>>>>>> origin/chore/fix-lint-and-merge

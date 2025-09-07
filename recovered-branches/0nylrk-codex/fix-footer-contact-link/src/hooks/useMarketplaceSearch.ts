@@ -1,79 +1,131 @@
-import { useState, useMemo } from "react","
-import { ProductListing } from "@/types/listings","
-import { SearchSuggestion, FilterOptions } from "@/types/search";"
-import { generateSearchSuggestions, generateFilterOptions, MARKETPLACE_LISTINGS } from "@/data/marketplaceData";"
+import {useState, useMemo} from "react";
+import {ProductListing} from "@/types/listings";
+import {SearchSuggestion, FilterOptions} from "@/types/search";
+import {generateSearchSuggestions, generateFilterOptions, MARKETPLACE_LISTINGS} from "@/data/marketplaceData";
 export function useMarketplaceSearch() {
-  // Search state
-}
-const [searchQuery, setSearchQuery] = useState("");"
-  // Filter states,
-const [selectedProductTypes, setSelectedProductTypes] = useState<string[]>([]);
+  // Search state;
+  const [searchQuery, setSearchQuery] = useState("");
+
+import { useState, useMemo } from "react",
+import { ProductListing } from "@/types/listings",
+
+import { SearchSuggestion, FilterOptions } from "@/types/search";
+
+import { generateSearchSuggestions, generateFilterOptions, MARKETPLACE_LISTINGS } from "@/data/marketplaceData";
+export function useMarketplaceSearch() {}
+  // Search state";
+  const [searchQuery, setSearchQuery] = useState("");
+
+  const [selectedProductTypes, setSelectedProductTypes] = useState<string[]>([]);
   const [selectedLocations, setSelectedLocations] = useState<string[]>([]);
   const [selectedAvailability, setSelectedAvailability] = useState<string[]>([]);
   const [selectedRating, setSelectedRating] = useState<number | null>(null);
-  // Generate search suggestions and filter options,
-const "searchSuggestions": SearchSuggestion[] = useMemo(;
+  // Generate search suggestions and filter options;
+  const searchSuggestions: SearchSuggestion[] = useMemo(
     () => generateSearchSuggestions();
     [];
   );
-const "filterOptions": FilterOptions = useMemo(;
-    () => generateFilterOptions();
-    [];
-  );      const matchesSearch = !searchQuery ||
+
+export function useMarketplaceSearch() {
+  // Search state
+  const [searchQuery, setSearchQuery] = useState(""),
+  
+  // Filter states
+  const [selectedProductTypes, setSelectedProductTypes] = useState<string[]>([]),
+  const [selectedLocations, setSelectedLocations] = useState<string[]>([]),
+  const [selectedAvailability, setSelectedAvailability] = useState<string[]>([]),
+  const [selectedRating, setSelectedRating] = useState<number | null>(null),
+  
+  // Generate search suggestions and filter options
+  const searchSuggestions: SearchSuggestion[] = useMemo(
+    () => generateSearchSuggestions(),
+    []),
+  const filterOptions: FilterOptions = useMemo(
+    () => generateFilterOptions(),
+    []),
+
+  // Filter listings based on current search query and filters
+  const filteredListings = useMemo(() => {
+    return MARKETPLACE_LISTINGS && MARKETPLACE_LISTINGS.filter(listing => {
+      // Search query filter
+
+      // Product type filter
+
+      const matchesProductType = selectedProductTypes.length === 0 |
+        selectedProductTypes.includes(listing.category);
+      // Location filter;
+      const matchesLocation = selectedLocations.length === 0 |
+        (listing.location && selectedLocations.includes(listing.location));
+
         listing.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
         listing.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        listing.tags.some(tag => { return tag.toLowerCase().includes(searchQuery.toLowerCase())),
-      // Product type filter,
-const matchesProductType = selectedProductTypes.length === 0 ||; }
+        listing.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase())),
+      
+      // Product type filter
+      const matchesProductType = selectedProductTypes.length === 0 || 
         selectedProductTypes.includes(listing.category),
-      // Location filter,
-const matchesLocation = selectedLocations.length === 0 ||;
+      
+      // Location filter
+      const matchesLocation = selectedLocations.length === 0 || 
         (listing.location && selectedLocations.includes(listing.location)),
-      // Availability filter,
-const matchesAvailability = selectedAvailability.length === 0 ||;
+      
+      // Availability filter
+      const matchesAvailability = selectedAvailability.length === 0 || 
         (listing.availability && selectedAvailability.includes(listing.availability)),
-      // Rating filter,
-const matchesRating = selectedRating === null |;
+
+      // Rating filter
+
+      const matchesRating = selectedRating === null |
         (listing.rating !== undefined && listing.rating >= selectedRating)
-return matchesSearch &&;
+      return matchesSearch &&
         matchesProductType &&
         matchesLocation &&
-        matchesAvailability &&        listing && listing.title.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||
+
         listing && listing.description.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||
-        listing && listing.tags.some(tag => { return tag && tag.toLowerCase().includes(searchQuery && searchQuery.toLowerCase())); }
-      // Product type filter,
-const matchesProductType = selectedProductTypes && selectedProductTypes.length === 0 ||;
+        listing && listing.tags.some(tag => tag && tag.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()));
+      // Product type filter;
+      const matchesProductType = selectedProductTypes && selectedProductTypes.length === 0 || 
         selectedProductTypes && selectedProductTypes.includes(listing && listing.category);
-      // Location filter,
-const matchesLocation = selectedLocations && selectedLocations.length === 0 ||;
+      // Location filter;
+      const matchesLocation = selectedLocations && selectedLocations.length === 0 || 
         (listing && listing.location && selectedLocations && selectedLocations.includes(listing && listing.location));
-      // Availability filter,
-const matchesAvailability = selectedAvailability && selectedAvailability.length === 0 ||;
+      // Availability filter;
+      const matchesAvailability = selectedAvailability && selectedAvailability.length === 0 || 
         (listing && listing.availability && selectedAvailability && selectedAvailability.includes(listing && listing.availability));
-return matchesSearch &&;
-        matchesProductType &&
-        matchesLocation &&
-        matchesAvailability &&
-        matchesRating
+      return matchesSearch && 
+        matchesProductType && 
+        matchesLocation && 
+        matchesAvailability && 
+        matchesRating;
     })
-  }, [searchQuery, selectedProductTypes, selectedLocations, selectedAvailability, selectedRating]),
-  // Handle filter changes,
-const handleFilterChange = ("filterType": string, "value": string) => {
-    }
+
+  // Handle filter changes
+  const handleFilterChange = (filterType: string, value: string) => {
     switch (filterType) {
-      }
-      case 'productTypes':'
-        setSelectedProductTypes(("prev": string[]) =>import { useState, useMemo } from './react';'
-import { ProductListing } from '@/types / listings';'
-import { SearchSuggestion, FilterOptions } from '@/types / search';'
-import { generateSearchSuggestions, generateFilterOptions, MARKETPLACE_LISTINGS } from '@/data / marketplace_data';'
-export /**
- * useMarketplaceSearch - Function description
+      case 'productTypes':
+        setSelectedProductTypes((prev: string[]) =>
+          prev && prev.includes(value) ? prev && prev.filter(t => t !== value) : [...prev, value]
+        );
+        break;
+      case 'locations':
+        setSelectedLocations((prev: string[]) =>
+          prev && prev.includes(value) ? prev && prev.filter(l => l !== value) : [...prev, value]
+        );
+        break;
+      case 'availability':
+        setSelectedAvailability((prev: string[]) =>
+
+import { useState, useMemo } from './react';
+import { ProductListing } from '@/types / listings';
+import { SearchSuggestion, FilterOptions } from '@/types / search';
+
+import { generateSearchSuggestions, generateFilterOptions, MARKETPLACE_LISTINGS } from '@/data / marketplace_data';
+export /**;
+ * useMarketplaceSearch - Function description;
  */
-function useMarketplaceSearch() {
-  // Search state;
-  }
-  const [search_query, setSearchQuery] = useState ("");"
+function useMarketplaceSearch() {}
+  // Search state;"
+  const [search_query, setSearchQuery] = useState ("");
 ;
   // Filter states;
   const [selectedProductTypes, setSelectedProductTypes] = useState < string[]>([]);
@@ -82,23 +134,21 @@ function useMarketplaceSearch() {
   const [selected_rating, setSelectedRating] = useState < number | null>(null);
 ;
   // Generate search suggestions and filter options;
-const "search_suggestions": SearchSuggestion[] = useMemo (;
+  const search_suggestions: SearchSuggestion[] = useMemo (
     () => generateSearchSuggestions ();
     []);
-const "filter_options": FilterOptions = useMemo (;
+  const filter_options: FilterOptions = useMemo (
     () => generateFilterOptions ();
     []);
 ;
   // Filter listings based on current search query and filters;
-  const filtered_listings = useMemo (() => {
-    }
-    return MARKETPLACE_LISTINGS.filter ((listing) => {
+  const filtered_listings = useMemo (() => {}
+    return MARKETPLACE_LISTINGS.filter (listing => {}
       // Search query filter;
-      }
       const matches_search = !search_query ||;
         listing.title.toLowerCase ().includes (search_query.toLowerCase ()) ||;
         listing.description.toLowerCase ().includes (search_query.toLowerCase ()) ||;
-        listing.tags.some (tag => { return tag.toLowerCase ().includes (search_query.toLowerCase ())); }
+        listing.tags.some (tag => tag.toLowerCase ().includes (search_query.toLowerCase ()));
 ;
       // Product type filter;
       const matchesProductType = selectedProductTypes.length === 0 ||;
@@ -124,26 +174,33 @@ const "filter_options": FilterOptions = useMemo (;
   }, [search_query, selectedProductTypes, selected_locations, selected_availability, selected_rating]);
 ;
   // Handle filter changes;
-  const handleFilterChange = ("filter_type": string, "value": string) =>: any {
-    }
-    switch (filter_type) {
-      }
-      case 'product_types':;'
-        setSelectedProductTypes (("prev": string[]) =>;
-          prev.includes (value) ? prev.filter (t => { return t !== value) : [...prev, value]); }
-        break;
-      case 'locations':;'
-        setSelectedLocations (("prev": string[]) =>;
-          prev.includes (value) ? prev.filter (l => { return l !== value) : [...prev, value]); }
-        break;
-      case 'availability':;'
-        setSelectedAvailability (("prev": string[]) =>;
-          prev.includes (value) ? prev.filter (array => { return a !== value) : [...prev, value]); }
-        break;
-      "default": break;
-    }
-  }  return {
-    }
+  const handleFilterChange = (filter_type: string, value: string) =>: any {}
+    switch (filter_type) {'
+      case 'product_types':;
+        setSelectedProductTypes ((prev: string[]) =>;
+          prev.includes (value) ? prev.filter (t => t !== value) : [...prev, value]);
+        break;'
+      case 'locations':;
+        setSelectedLocations ((prev: string[]) =>;
+          prev.includes (value) ? prev.filter (l => l !== value) : [...prev, value]);
+        break;'
+      case 'availability':;
+        setSelectedAvailability ((prev: string[]) =>;
+          prev.includes (value) ? prev.filter (array => a !== value) : [...prev, value]);
+
+  }
+
+;
+  // Clear all filters;
+
+    setSearchQuery ("");
+    setSelectedProductTypes ([]);
+    setSelectedLocations ([]);
+    setSelectedAvailability ([]);
+    setSelectedRating (null);
+  }
+;
+
     search_query;
     setSearchQuery;
     search_suggestions;
@@ -156,26 +213,24 @@ const "filter_options": FilterOptions = useMemo (;
     handleFilterChange;
     clearAllFilters;
 
-    filter_options;
-          prev.includes(value) ? prev.filter(a => { return a !== value) : [...prev, value]
+          prev.includes(value) ? prev.filter(a => a !== value) : [...prev, value]
         ),
-break,; }
-      "default": break;
+        break,
+      default: break;
     }
 
-  },
-  // Clear all filters,
-const clearAllFilters = () => {
-    }
-    setSearchQuery(""),"
+  // Clear all filters
+  const clearAllFilters = () => {
+
+    setSearchQuery(""),
     setSelectedProductTypes([]),
     setSelectedLocations([]),
     setSelectedAvailability([]),
     setSelectedRating(null)
+
   },
   
-  return {
-    }
+  return {}
     searchQuery,
     setSearchQuery,
     searchSuggestions,
@@ -187,8 +242,11 @@ const clearAllFilters = () => {
     filteredListings,
     handleFilterChange,
     clearAllFilters,
+
     filterOptions
+
   }
+<<<<<<< HEAD
 }import { useState, useMemo } from "react";"
 import { ProductListing } from "@/types/listings";"
 import { SearchSuggestion, FilterOptions } from "@/types/search",;"
@@ -241,32 +299,43 @@ export function useMarketplaceSearch() {;
       case 'productTypes':;'
         setSelectedProductTypes(("prev": string[]) =>;
           prev.includes(value) ? prev.filter(t => { return t !== value) : [...prev, value]; }
+=======
+
+import { useState, useMemo } from "react",;
+
+import { generateSearchSuggestions, generateFilterOptions, MARKETPLACE_LISTINGS } from "@/data/marketplaceData",;
+
+      case 'productTypes':;
+        setSelectedProductTypes((prev: string[]) =>;
+          prev.includes(value) ? prev.filter(t => t !== value) : [...prev, value];
+        ),;
+        break,;'
+      case 'locations':;
+        setSelectedLocations((prev: string[]) =>;
+          prev.includes(value) ? prev.filter(l => l !== value) : [...prev, value];
+        ),;
+        break,;'
+      case 'availability':;
+        setSelectedAvailability((prev: string[]) =>;
+          prev.includes(value) ? prev.filter(a => a !== value) : [...prev, value];
+>>>>>>> origin/chore/fix-lint-and-merge
         ),;
         break,;
-      case 'locations':;'
-        setSelectedLocations(("prev": string[]) =>;
-          prev.includes(value) ? prev.filter(l => { return l !== value) : [...prev, value]; }
-        ),;
-        break,;
-      case 'availability':;'
-        setSelectedAvailability(("prev": string[]) =>;
-          prev.includes(value) ? prev.filter(a => { return a !== value) : [...prev, value]; }
-        ),;
-        break,;
-      "default": break;
+      default: break;) => {
+  return $3;}
+}
     }
   },;
   // Clear all filters;
-  const clearAllFilters = () => {;
-    }
-    setSearchQuery(""),;"
+
     setSelectedProductTypes([]),;
     setSelectedLocations([]),;
     setSelectedAvailability([]),;
-    setSelectedRating(null);
+    setSelectedRating(null);) => {
+  return $3;}
+}
   },;
   return {;
-    }
     searchQuery,;
     setSearchQuery,;
     searchSuggestions,;
@@ -277,8 +346,7 @@ export function useMarketplaceSearch() {;
     setSelectedRating,;
     filteredListings,;
     handleFilterChange;
-    clearAllFilters;
-    filterOptions;
+
   }
 }
 ;

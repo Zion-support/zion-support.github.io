@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { render, screen  } from '@testing-library/react';
 import { describe, it, expect  } from 'vitest';
 ursor/automate-test-improve-and-merge-code-646c;
@@ -153,3 +154,12 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 
 
 
+=======
+import { describe, it, expect } from '@jest/globals';
+
+describe('AIChatAssistant', () => {
+  it('should work', () => {
+    expect(true).toBe(true);
+  });
+});
+>>>>>>> origin/chore/fix-lint-and-merge

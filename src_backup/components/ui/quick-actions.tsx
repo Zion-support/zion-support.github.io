@@ -28,6 +28,7 @@ import { logErrorToProduction } from '@/utils/productionLogger'
 } from lucide-react
 
   id: string;
+<<<<<<< HEAD
 import { useAuth  } from '@/hooks/useAuth';
 import { Button  } from @/components/ui/button;
 import { Card, CardContent, CardHeader, CardTitle  } from '@/components/ui/card';
@@ -65,6 +66,8 @@ interface QuickAction  {id: string;
 
 
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
   label: string,
   description: string;
   icon: React.ReactNode;
@@ -77,11 +80,20 @@ interface QuickAction  {id: string;
       logErrorToProduction(`Failed to execute action ${actionId}:`, {
         data: error
       })
+<<<<<<< HEAD
 import React, { useState } from 'react;
 import { use_auth } from @/hooks / use_auth';
 import { Button } from '@/components / ui / button;
 import { Card, CardContent, CardHeader, CardTitle } from @/components / ui / card';
 import { Badge } from '@/components / ui / badge;
+=======
+
+import React, { useState } from 'react';
+import { use_auth } from '@/hooks / use_auth';
+import { Button } from '@/components / ui / button';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
+import { Badge } from '@/components / ui / badge';
+>>>>>>> origin/chore/fix-lint-and-merge
 
 import { logErrorToProduction } from @/utils / production_logger';
 import {}
@@ -93,6 +105,7 @@ import {}
   Activity,
   Package,
   Monitor,';
+<<<<<<< HEAD
 } from lucide-react;
   category: 'performance' | development | 'maintenance';dangerous?: boolean;
 export function QuickActions() {const { user } = useAuth()const isAdmin = user?.userType === admin |user?.role === 'admin';
@@ -115,6 +128,9 @@ interface QuickAction  {id: string;
 
 
 
+=======
+} from 'lucide-react';
+>>>>>>> origin/chore/fix-lint-and-merge
 
   id: string;
   label: string,
@@ -230,9 +246,6 @@ export function QuickActions() { return null; }
           link.href = font,
           document.head.appendChild(link)
         }),
-
-  dangerous?: boolean;
-
 
         // Preload critical images
         const criticalImages = [
@@ -377,11 +390,6 @@ export function QuickActions() { return null; }
 
   if (!isVisible) {
 
-  dangerous?: boolean
-export function QuickActions() {
-  const { user } = useAuth();
-  const isAdmin = null;
-origin/cursor/automate-test-improve-and-merge-code-2533
   if (!isVisible) {
 
     return (
@@ -400,6 +408,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </Button>
       </div>
     )
+<<<<<<< HEAD
   category: 'performance' | development | 'maintenance';dangerous?: boolean;
 export /**;
  * QuickActions - Function description;
@@ -450,6 +459,8 @@ export function QuickActions() {const { user } = useAuth()const isAdmin  = null;
         </Button>;
       </div>;
     )className='bg-background/80 backdrop-blur-sm'        >;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
           <Settings className='w-4 h-4 mr-2' />;
           Quick Actions;
@@ -480,6 +491,7 @@ export function QuickActions() {const { user } = useAuth()const isAdmin  = null;
                 <Badge className={categoryColors[category as keyof typeof categoryColors]} variant="outline">
                   {category}
                 </Badge>
+<<<<<<< HEAD
               className=h-6 w-6 p-0;
             >;
               ✕;
@@ -511,6 +523,8 @@ export function QuickActions() {const { user } = useAuth()const isAdmin  = null;
                         <div className="flex-1 text-left">;
                           <div className=font-medium text-sm>{action.label}</div>;
                           <div className="text-xs opacity-70 mt-1">;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
               <div className=space-y-2>
                 {categoryActions.map((action) => ("
@@ -540,8 +554,9 @@ export function QuickActions() {const { user } = useAuth()const isAdmin  = null;
                     </Button>;
                   </div>;
                 ))}
-              </div>;</div>;
-          ))}</CardContent>;
+              </div>;
+
+        </CardContent>;
       </Card>;
     </div>;
   );
@@ -551,10 +566,4 @@ export function QuickActions() {const { user } = useAuth()const isAdmin  = null;
         </CardContent>
       </Card>
     </div>
-    </div>)}
-}}))}
-        </CardContent>;
-      </Card>;
-    </div>;
-  )
   );

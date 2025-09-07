@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/"usr/bin/env"
 const fs = require("fs)
 const path = require(path")
@@ -8,6 +9,19 @@ const { execSync } = require("child_process)
   fs.mkdirSync(dir, { recursive"})
   log(message, level = "INFO)
     console.log()
+=======
+<<<<<<< HEAD
+#!/""usr/bin/env""
+const fs = require("fs")
+const path = require("path")
+const { execSync } = require("child_process")
+    this.logsPath = path.join(this.workspacePath, "logs")
+    this.reportsPath = path.join(this.workspacePath, "automation-reports")
+  ["this.logsPath", "this.reportsPath"]
+  fs.mkdirSync(dir, { "recursive"})
+  log(message, level = "INFO")
+    console.log(")
+>>>>>>> origin/chore/fix-lint-and-merge
     const logFile = path.join(this.logsPath, "auto-recovery-manager.log")
     fs.appendFileSync(logFile, logMessage + \n)
   log(message, level = "INFO")
@@ -237,4 +251,27 @@ this.log( Unreadable file "recovered)
         "recoveredIssues"
         recoveryRate
       "recoveryResults"
+<<<<<<< HEAD
 
+=======
+      "recommendations": ["Review recovered files to ensure they meet your requirements"", "Consider implementing backup strategies for critical files", "Monitor system resources regularly"", "Implement automated testing to catch issues early", ""]
+      this.reportsPath,auto-recovery-manager-report.json"
+  "timestamp"
+      "summary"
+        "recoveredIssues"
+        "recoveryRate"
+      "recoveryResults"
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+      "recommendations": ["Review recovered files to ensure they meet your requirements", "Consider implementing backup strategies for critical files", "Monitor system resources regularly", "Implement automated testing to catch issues early", "]
+      "recommendations": ["Review recovered files to ensure they meet your requirements", "Consider implementing backup strategies for critical files", "Monitor system resources regularly", "Implement automated testing to catch issues early", "]
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+>>>>>>> origin/chore/fix-lint-and-merge

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 =======
 import React from 'react;
@@ -11,6 +12,11 @@ interface AidevelopmentProps {
   // Add props here as needed
 }
 export default function Aidevelopment({}: AidevelopmentProps) {
+=======
+import React from 'react';
+
+export default function Aidevelopment({ }: AidevelopmentProps) {
+>>>>>>> origin/chore/fix-lint-and-merge
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -43,8 +49,5 @@ export default function Aidevelopment(): any ({}: AidevelopmentProps) {  return 
     <div>
       <h1>Aidevelopment</h1>
       <p>This component is currently under development.</p>
-    </div>
+    </div>;
   );
-
-}
-}

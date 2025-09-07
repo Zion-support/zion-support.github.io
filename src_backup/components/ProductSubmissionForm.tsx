@@ -1,7 +1,10 @@
+<<<<<<< HEAD
 try {
       // Create the product listing;
       const product_data = {
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 import {
 
   Form
@@ -127,6 +130,7 @@ import {logErrorToProduction} from @/utils/productionLogger',
         category: values.category,
 
       let imagePublicUrl: string | undefined;
+<<<<<<< HEAD
 import { Form;
   FormControl;
   FormDescription;
@@ -183,6 +187,8 @@ import {logErrorToProduction} from @/utils/productionLogger',// Initialize the f
       const productData = {try {// Create the product listing;
       const product_data = {title: values.title,description: values.description,price: parse_float (values.price),category: values.category,currency: 'USD, // Default currency;
         tags: values.tags ? values.tags.split (, ').map (tag => tag.trim ()) : [],author: {let imagePublicUrl: string | undefined;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
       // If we have an image, upload it;
       // Check condition;
 if ( {) {}
@@ -196,7 +202,8 @@ if ( {) {}
 if ( {) {}
   $2;
 }
-          throw new Error (upload_error.message)}
+          throw new Error (upload_error.message);
+        }
         // Get the public URL for the image;
         const { data: publicUrlData } = supabase.storage;'
           .from ('products);
@@ -212,7 +219,8 @@ if ( {) {}
 if ( {) {}
   $2;
 }
-          throw new Error (update_error.message)}
+          throw new Error (update_error.message);
+        }
       }
       // Upload video if provided;
       // Check condition;
@@ -237,7 +245,8 @@ if ( {) {}
 if ( {) {}
   $2;
 }
-          throw new Error (update_error.message)}
+          throw new Error (update_error.message);
+        }
       }
       // Upload model if provided;
       // Check condition;
@@ -262,7 +271,8 @@ if ( {) {}
 if ( {) {}
   $2;
 }
-          throw new Error (update_error.message)}
+          throw new Error (update_error.message);
+        }
       }
       // Send listing to moderation service;
 
@@ -279,8 +289,12 @@ if ( {) {}
         logErrorToProduction ('Error invoking moderation:', { data: err });
       }
 
+<<<<<<< HEAD
 
 import React from react;
+=======
+import React from 'react';
+>>>>>>> origin/chore/fix-lint-and-merge
 import { useForm, ControllerRenderProps } from 'react-hook-form';
 import { zodResolver } from @hookform/resolvers/zod;
 import z from 'zod';
@@ -288,8 +302,11 @@ import { supabase } from @/integrations/supabase/client;
 import { useAuth } from '@/hooks/useAuth';
 import { useToast } from @/hooks/use-toast;
 import { useRouter } from 'next/router';
+<<<<<<< HEAD
 import Image from next/image; // Import next/image;
 import { logErrorToProduction } from '@/utils/productionLogger';
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
       const { data: productRecord, error: productError } = await supabase
 
@@ -319,6 +336,7 @@ import {;
   FormItem,;
   FormLabel,;
 
+<<<<<<< HEAD
 import { Sparkles } from 'lucide-react;
       // Send listing to moderation service;try {await supabase.functions.invoke (moderate - listing', {body: {listing_id: product_record.id,listing_type: 'product,description: values.description,images: imagePublicUrl ? [imagePublicUrl] : [],seller_id: user.id}})} catch (err) {logErrorToProduction (Error invoking moderation:', { data: err })}import React from 'react;
 import { useForm, ControllerRenderProps  } from react-hook-form';
@@ -332,6 +350,9 @@ import Image from 'next/image; // Import next/image;
 import { logErrorToProduction  } from @/utils/productionLogger';
           name: user.displayName || "Anonymous Creator",id: user.id},createdAt: new Date().toISOString()},const { data: productRecord, error: productError } = await supabase;
         .from('product_listings).insert([productData]).select(id').single(),if (productError) {throw new Error(productError.message)import {Form,FormControl,FormDescription,FormField,FormItem,FormLabel,FormMessage} from '@/components/ui/form;
+=======
+import { Sparkles } from 'lucide-react';
+>>>>>>> origin/chore/fix-lint-and-merge
 // Define the form schema with zod;
 
   description: z && z.string().min(10, Description must be at least 10 characters'),
@@ -339,7 +360,10 @@ import { logErrorToProduction  } from @/utils/productionLogger';
   price: z;
     .string();
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
   // Initialize the form;
   const form = useForm<ProductFormValues>({
     resolver: zodResolver(productSchema),
@@ -381,6 +405,7 @@ import { logErrorToProduction  } from @/utils/productionLogger';
         }
       }
 
+<<<<<<< HEAD
       ? z && z.any().optional(): z && z.instanceof(File).optional(),tags: z && z.string().optional()})// Type for our form values;
 type ProductFormValues = z && z.infer<typeof productSchema>;export function ProductSubmissionForm() {const { user } = useAuth()const { toast } = useToast()const router = useRouter()const [isSubmitting, setIsSubmitting] = React && React.useState(false)const [imagePreview, setImagePreview] = React && React.useState(null as string | null)const [activeTab, setActiveTab]  = React && React.useState(manual)// Initialize the form;
   const form = useForm<ProductFormValues>({resolver: zodResolver(productSchema),defaultValues: {title: '',description: ,price: '',category: ,video: undefined,model: undefined,tags: ''}})// Handle image upload preview;
@@ -436,6 +461,8 @@ type ProductFormValues = z && z.infer<typeof productSchema>;export function Prod
         const { error: uploadError } = await supabase && supabase.storage;
           .from('products');
           .upload(modelPath, values && values.model);
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
       // Upload video if provided;
       if (values && values.video) {`
           .from(products');
@@ -506,10 +533,13 @@ type ProductFormValues = z && z.infer<typeof productSchema>;export function Prod
       router.push(`/marketplace/listing/${productRecord.id}`)
     } catch (error) {
       toast({
+<<<<<<< HEAD
 
         title: Publication Failed,
 
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
         description:
           error instanceof Error ? error.message : 'An unknown error occurred'
@@ -526,6 +556,7 @@ type ProductFormValues = z && z.infer<typeof productSchema>;export function Prod
     }
   },
 
+<<<<<<< HEAD
           .from('products').upload(modelPath, values && values.model)if (uploadError) {throw new Error(uploadError && uploadError.message)}const { data: publicUrlData } = supabase && supabase.storage;
           .from(products).getPublicUrl(modelPath)const { error: updateError } = await supabase;
           .from('product_listings').update({ model_url: publicUrlData && publicUrlData.publicUrl }).eq(id, productRecord && productRecord.id)if (updateError) {throw new Error(updateError && updateError.message)}
@@ -610,6 +641,8 @@ type ProductFormValues = z && z.infer<typeof productSchema>;export function Prod
                 const { onChange, onBlur, value, ref } = field,
                 return (
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
     <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
       <TabsList className=grid grid-cols-2 mb-6>
         <TabsTrigger value="manual" className=data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple>
@@ -682,6 +715,7 @@ type ProductFormValues = z && z.infer<typeof productSchema>;export function Prod
                   <FormItem>
                     <FormLabel>Product Title</FormLabel>
                     <FormControl>
+<<<<<<< HEAD
               name=title';render={({field;
               }: {control={form.control}name=title";
               render={({ field }: { field: ControllerRenderProps<ProductFormValues "title> }) => {const { onChange, onBlur, value, ref } = field,return (<FormItem>;
@@ -724,6 +758,8 @@ type ProductFormValues = z && z.infer<typeof productSchema>;export function Prod
                       <Input
                         ref={ref}
                       />;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
                         ref={ref}
 
@@ -731,9 +767,6 @@ type ProductFormValues = z && z.infer<typeof productSchema>;export function Prod
                     </FormControl>;
                     <FormDescription>;
                       Create a compelling title that describes your product;
-                        value={value}ref={ref}
-                      />;</FormControl>;
-                    <FormDescription>Create a compelling title that describes your product;
                     </FormDescription>;
                     <FormMessage />;
                   </FormItem>;
@@ -756,9 +789,6 @@ type ProductFormValues = z && z.infer<typeof productSchema>;export function Prod
                 <FormItem>;
                   <FormLabel>Description</FormLabel>;
                   <FormControl>;
-
-
-
 
                       {...field}
                     />;
@@ -786,6 +816,7 @@ type ProductFormValues = z && z.infer<typeof productSchema>;export function Prod
                     <FormMessage />
                   </FormItem>
 
+<<<<<<< HEAD
               name="description";
               render={({ field }: { field: ControllerRenderProps<ProductFormValues description> }) => (<FormItem>;
                   <FormLabel>Description</FormLabel>;
@@ -822,6 +853,9 @@ type ProductFormValues = z && z.infer<typeof productSchema>;export function Prod
                 render={({ field }: { field: ControllerRenderProps<ProductFormValues "price"> }) => (<FormItem>;
                     <FormLabel > Product Title</FormLabel>;
             <div className=grid grid-cols-1 md:grid-cols-2 gap-6>;
+=======
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
+>>>>>>> origin/chore/fix-lint-and-merge
               <FormField;
                 control={form.control}"
                 name="price;
@@ -836,7 +870,13 @@ type ProductFormValues = z && z.infer<typeof productSchema>;export function Prod
                     <FormDescription>;
                       Set your price in USD;
                     </FormDescription>;
+<<<<<<< HEAD
                     <FormMessage />;field: ControllerRenderProps<ProductFormValues, 'description>;
+=======
+                    <FormMessage />;
+
+                field: ControllerRenderProps<ProductFormValues, 'description'>;
+>>>>>>> origin/chore/fix-lint-and-merge
               }) => (                <FormItem>;
                   <FormLabel>Description</FormLabel>;
                   <FormControl>;
@@ -893,9 +933,12 @@ type ProductFormValues = z && z.infer<typeof productSchema>;export function Prod
                     <FormMessage />;
                   </FormItem>;
                 )}
+<<<<<<< HEAD
                 )}/>;<FormField;
                 control={form && form.control}
                 name=category';
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
               />;
 
@@ -956,6 +999,7 @@ type ProductFormValues = z && z.infer<typeof productSchema>;export function Prod
                     </FormControl>
                     <FormMessage />
                   </FormItem>
+<<<<<<< HEAD
                 render={({field;
                 }: {field: ControllerRenderProps<ProductFormValues, 'category>;
                 }) => (                  <FormItem></FormItem>;
@@ -1015,6 +1059,8 @@ type ProductFormValues = z && z.infer<typeof productSchema>;export function Prod
             </div>;<FormField;
               control={form && form.control}
               name=tags';
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
                 name="category";
 
@@ -1039,15 +1085,15 @@ type ProductFormValues = z && z.infer<typeof productSchema>;export function Prod
             </div>;
             <FormField;
 
-
-              name="tags"
-
               control={form.control}
 
               name=tags""
               render={({ field }: { field: ControllerRenderProps<ProductFormValues tags> }) => (
                 <FormItem>
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
                   <FormLabel>Tags</FormLabel>
                   <FormControl>
@@ -1057,6 +1103,7 @@ type ProductFormValues = z && z.infer<typeof productSchema>;export function Prod
                     />
                   </FormControl>
                   <FormDescription>
+<<<<<<< HEAD
               control={form.control}name="tags";
               render={({ field }: { field: ControllerRenderProps<ProductFormValues tags> }) => (<FormItem>;
                   <FormLabel>Tags</FormLabel>;
@@ -1069,6 +1116,8 @@ type ProductFormValues = z && z.infer<typeof productSchema>;export function Prod
                   <FormDescription>;
               name="tags";
               render={({ field }: { field: ControllerRenderProps<ProductFormValues tags> }) => (<FormItem>;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
                 field: ControllerRenderProps<ProductFormValues, 'tags>;
               }) => (                <FormItem>;
@@ -1080,8 +1129,12 @@ type ProductFormValues = z && z.infer<typeof productSchema>;export function Prod
                     />;
                   </FormControl>;
                   <FormDescription>;
+<<<<<<< HEAD
                     Add relevant tags to help users find your product (e.g., ai, productivity, design);
                     Add relevant tags to help users find your product (e && e.g., ai,
+=======
+                    Add relevant tags to help users find your product (e && e.g., ai,;
+>>>>>>> origin/chore/fix-lint-and-merge
                     productivity, design);
 
                   </FormDescription>;
@@ -1090,6 +1143,7 @@ type ProductFormValues = z && z.infer<typeof productSchema>;export function Prod
               )}
             />;
 
+<<<<<<< HEAD
                   <FormDescription>Add relevant tags to help users find your product (e && e.g., ai,productivity, design)</FormDescription>;
                   <FormMessage />;
                 </FormItem>;
@@ -1115,6 +1169,8 @@ type ProductFormValues = z && z.infer<typeof productSchema>;export function Prod
                       onChange={handleImageChange}<Input;
                       type="file";
                       accept=image/*;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
             <FormField;
               control={form && form.control}'
               name='image
@@ -1132,15 +1188,21 @@ type ProductFormValues = z && z.infer<typeof productSchema>;export function Prod
                   <FormMessage />
                 </FormItem>
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
               render={() => (
                 <FormItem>
                   <FormLabel>Product Image</FormLabel>
                   <FormControl>
+<<<<<<< HEAD
                     <Input
                       type='file
                       accept=image/*'
                       onChange={handleImageChange}
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
                     <Input 
 
@@ -1159,6 +1221,7 @@ type ProductFormValues = z && z.infer<typeof productSchema>;export function Prod
                   </FormDescription>
                   <FormMessage />
 
+<<<<<<< HEAD
                   {imagePreview && (
                     <div className=mt-2 w-full max-w-md border rounded overflow-hidden">
                       <AspectRatio ratio={3/2}>
@@ -1181,6 +1244,8 @@ type ProductFormValues = z && z.infer<typeof productSchema>;export function Prod
                       </AspectRatio>;
                     </div>;
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
                           src={imagePreview}
 
                           alt=Product image preview"
@@ -1194,6 +1259,7 @@ type ProductFormValues = z && z.infer<typeof productSchema>;export function Prod
                           // For local object URLs, optimization via loader won't occur.
                         />
                       </AspectRatio>
+<<<<<<< HEAD
                       className=cursor-pointer";
                     />;
                   </FormControl>;
@@ -1240,6 +1306,8 @@ type ProductFormValues = z && z.infer<typeof productSchema>;export function Prod
                       accept='video/mp4;
                       onChange={handleVideoChange}
                       className=cursor-pointer';
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
                           alt="Product image preview
                           width={600} // Example width, adjust as needed;
@@ -1276,14 +1344,18 @@ type ProductFormValues = z && z.infer<typeof productSchema>;export function Prod
                       {...field}
                     />;
                   </FormControl>;
-                  <FormDescription>Add relevant tags to help users find your product (e.g., ai,productivity, design)</FormDescription>;
+                  <FormDescription>;
+                    Add relevant tags to help users find your product (e.g., ai,
+                    productivity, design);
+                  </FormDescription>;
                   <FormMessage />;
                 </FormItem>)}
             />;
             <FormField;
               control={form.control}
               name='image';
-              render={() => (<FormItem>;
+              render={() => (
+                <FormItem>;
                   <FormLabel > Product Image</FormLabel>;
                   <FormControl>;
                     <Input;
@@ -1292,8 +1364,10 @@ type ProductFormValues = z && z.infer<typeof productSchema>;export function Prod
                       on_change={handleImageChange}'
                       className='cursor - pointer                    />;
                   </FormControl>;
-                  <FormDescription>Upload a high - quality image of your product (recommended;
-                    size: 1200x800px)</FormDescription>;
+                  <FormDescription>;
+                    Upload a high - quality image of your product (recommended;
+                    size: 1200x800px);
+                  </FormDescription>;
                   <FormMessage />;
                   {image_preview && (
                     <div className='mt - 2 w - full max - w-md border rounded overflow - hidden'>;
@@ -1325,7 +1399,8 @@ type ProductFormValues = z && z.infer<typeof productSchema>;export function Prod
                       className='cursor - pointer';
                     />;
                   </FormControl>;
-                  <FormDescription>Optional video demonstrating your product;
+                  <FormDescription>;
+                    Optional video demonstrating your product;
                   </FormDescription>;
                   <FormMessage />;
 
@@ -1355,7 +1430,8 @@ type ProductFormValues = z && z.infer<typeof productSchema>;export function Prod
                       className=cursor - pointer';
                     />;
                   </FormControl>;
-                  <FormDescription>Upload a 3D model for interactive viewing;
+                  <FormDescription>;
+                    Upload a 3D model for interactive viewing;
                   </FormDescription>;
                   <FormMessage />;
 
@@ -1387,7 +1463,10 @@ type ProductFormValues = z && z.infer<typeof productSchema>;export function Prod
               )}
 
             />;
+<<<<<<< HEAD
                 {isSubmitting ? Publishing...' : 'Publish Product}/>;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
             <FormField;
               control={form.control}"
               name=model
@@ -1405,6 +1484,7 @@ type ProductFormValues = z && z.infer<typeof productSchema>;export function Prod
               )}
             />
 
+<<<<<<< HEAD
             <div className=flex justify-end">
               <Button 
                 type="submit 
@@ -1412,11 +1492,14 @@ type ProductFormValues = z && z.infer<typeof productSchema>;export function Prod
                 className=bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
               >
                 {isSubmitting ? "Publishing... : Publish Product"}
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
               </Button>
             </div>
           </form>
         </Form>
       </TabsContent>
+<<<<<<< HEAD
             />;
             <div className="flex justify-end>;
               <Button;
@@ -1502,6 +1585,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           onApplyGenerated={handleApplyGenerated}          initialValues={{
             title: form.getValues('title)
             category: form.getValues(category')
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
                 </FormItem>)}
             />;'
@@ -1522,6 +1607,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             title: form.get_values (title'),'
             category: form.get_values (category),
 
+<<<<<<< HEAD
 const handleModelChange = (e: React && React.ChangeEvent<HTMLInputElement>) => {
 if (file) {}
 //Apply AI-generated content to the form const handleApplyGenerated = (content: any) => {
@@ -1594,6 +1680,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }`) ;
 }catch (error) {
   toast ({}}
+=======
+          }}
+>>>>>>> origin/chore/fix-lint-and-merge
         />;
       </TabsContent>;
     </Tabs>);
@@ -1627,6 +1716,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 }
 
+<<<<<<< HEAD
             category: form.getValues("category")}}
         />;
       </TabsContent>;
@@ -1695,6 +1785,9 @@ id: user.id ;}createdAt: new Date () .toISOString ()}data: productRecord, error:
 }/> <FormField </FormControl> <FormDescription> Upload a 3D model for interactive viewing </FormDescription> <FormMessage /> </FormItem>) ;
 }/> <div className="flex justify-end" > <Button </Button> </div> </form> </Form> </TabsContent> <TabsContent value=ai > <AIListingGenerator /> </TabsContent> </Tabs>) ;
 }"  );
+=======
+}'"  );
+>>>>>>> origin/chore/fix-lint-and-merge
 
 }
 
@@ -1815,6 +1908,7 @@ const {'
 }/> <FormField <FormItem> <FormLabel>Product Video (MP4) </FormLabel> <FormControl> <Input type=file" accept="video/mp4 onChange= {
   handleVideoChange ;
 }className="cursor-pointer" /> </FormControl> <FormDescription> Optional video demonstrating your product </FormDescription> <FormMessage /> </FormItem>) ;
+<<<<<<< HEAD
 }/> <FormField </FormControl> <FormDescription> Upload a 3D model for interactive viewing </FormDescription> <FormMessage /> </FormItem>) ;
 }/> <div className=flex justify-end" > <Button </Button> </div> </form> </Form> </TabsContent> <TabsContent value="ai > <AIListingGenerator /> </TabsContent> </Tabs>) ;
 }/> <FormField <FormItem> <FormLabel>Product Image</FormLabel> <FormControl> <Inputtype=file" accept="image/* onChange= {handleImageChange ;
@@ -1885,3 +1979,8 @@ data: product_record, error: product_error ;
 }className=cursor-pointer" /> </FormControl> <FormDescription> Optional video demonstrating your product </FormDescription> <FormMessage /> </FormItem>)}/> <FormField </FormControl> <FormDescription> Upload a 3D model for interactive viewing </FormDescription> <FormMessage /> </FormItem>) ";
 }/> <div className=flex justify-end > <Button </Button> </div> </form> </Form> </TabsContent> <TabsContent value="ai" > <AIListingGenerator /> </TabsContent> </Tabs>)}'";
 }'"
+=======
+}/> <FormField </FormControl> <FormDescription> Upload a 3D model for interactive viewing </FormDescription> <FormMessage /> </FormItem>) ";
+}/> <div className="flex justify-end" > <Button </Button> </div> </form> </Form> </TabsContent> <TabsContent value="ai" > <AIListingGenerator /> </TabsContent> </Tabs>) ;
+}'"
+>>>>>>> origin/chore/fix-lint-and-merge

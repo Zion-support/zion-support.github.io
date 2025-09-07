@@ -1,10 +1,11 @@
 
 
-import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';'
+import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';
 
 export type UserRole = any;
   return ctx;
 }
+<<<<<<< HEAD
 export type UserRole = 'client' | 'talent';
 type RoleContextValue = {role: UserRole;
   setRole: (role: UserRole) => void;
@@ -128,38 +129,34 @@ role: UserRole;
 };
 
 const RoleContext = createContext<RoleContextValue | undefined />(undefined);
+=======
+
+export type UserRole = 'client' | 'talent';
+
+type RoleContextValue = {role: UserRole;}
+  setRole: (role: UserRole) => void,}
+};
+
+
+const RoleContext = createContext<RoleContextValue | undefined    />(undefined);
+
+>>>>>>> origin/chore/fix-lint-and-merge
 export const RoleProvider: React.FC<{ children: React.ReactNode,}
 }> = ({ children,}
    }) => {
 
 
 
-  }
-
-
-
-  const [role, setRole] = useState<UserRole>('client');'
+  const [role, setRole] = useState<UserRole    />('client');
   useEffect(() => {
-
-    }
 
     try {
 const saved =
         typeof window !== 'undefined'
           ? window.localStorage.getItem('zion_user_role')
           : null;
-      if (saved === 'client' |saved === 'talent') {
-        setRole(saved);      }      const saved = typeof window !== 'undefined' ? window.localStorage.getItem('zion_user_role') : null;
-      if (saved === 'client' |saved === 'talent') {
-        setRole(saved)
-  children
-}) => {export const RoleProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';
-export type UserRole = $2;
-type RoleContextValue = $2;
-  setRole: (role: UserRole) => void
-},
 
+<<<<<<< HEAD
       if (saved === 'client' || saved === 'talent') {'
         }
         setRole(saved);
@@ -241,20 +238,29 @@ if ( {) {
   $2
 }
         set_role (saved);
+=======
+      if (saved === 'client' || saved === 'talent') {}
+        setRole(saved);}
+>>>>>>> origin/chore/fix-lint-and-merge
       }
     } catch {}
   }, []);
+
+  useEffect(() => {
 ;
-  useEffect (() => {
+    try {;}
+      if (typeof window !== 'undefined') {;}
+        window && window.localStorage.setItem('zion_user_role', role);      }        window && window.localStorage.setItem('zion_user_role', role);
+  useEffect(() => {
+
     try {
-      // Check condition
-if ( {) {
-  $2
+      if (typeof window !== 'undefined') {
 }
-        window.local_storage.set_item ('zion_user_role', role);      }        window.local_storage.set_item ('zion_user_role', role);
+window.localStorage.setItem('zion_user_role', role);}
       }
     } catch {}
   }, [role]);
+<<<<<<< HEAD
 ;
   const value = useMemo (() => ({ role, set_role }), [role]);
 ;
@@ -278,3 +284,19 @@ return ctx;
 origin/cursor/automate-test-improve-and-merge-code-2533
 '
 
+=======
+
+const value = useMemo(() => ({ role, setRole }), [role]);
+
+
+return <RoleContext.Provider value={value}    />{children}</RoleContext.Provider>
+};
+
+
+export function useRole(): RoleContextValue {
+  const ctx = useContext(RoleContext);
+  if (!ctx) throw new Error('useRole must be used within RoleProvider');
+return ctx;
+}
+}
+>>>>>>> origin/chore/fix-lint-and-merge

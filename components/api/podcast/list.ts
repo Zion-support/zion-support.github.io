@@ -1,6 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';'
 import fs from 'fs';'
 import path from 'path';
+<<<<<<< HEAD
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 const EPISODES_PATH = null;
@@ -82,6 +83,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {}
     createdAt: e.createdAt'
     summary: e.bestQuote |''
     audio: e.audio |{}
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
   }));
   return res.status (200).json ({ episodes: simplified });  const simplified = episodes.map ((e) => ({}
     id: e.id;
@@ -100,6 +104,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {}
     summary: e.best_quote || '',
     audio: e.audio || {}}));
   return res.status (200).json ({ episodes: simplified });
+<<<<<<< HEAD
   return res.status(200).json({ episodes: simplified });
   return res.status(200).json({ episodes: simplified })
 }
@@ -127,3 +132,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   return res.status(200).json({ episodes: simplified}
 });
   return res.status(200).json({ episodes: simplified })}
+=======
+
+  return res.status(200).json({ episodes: simplified });
+  return res.status(200).json({ episodes: simplified })
+}
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/chore/fix-lint-and-merge

@@ -746,3 +746,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <UltraFuturisticFooter2028 />;
 
 
+<<<<<<< HEAD
+=======
+import UltraFuturisticNavigation2028 from '../components/layout/UltraFuturisticNavigation2028';
+import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFooter2028';
+import { futuristic2028Services } from '../data/2028-futuristic-innovations';
+import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
+>>>>>>> origin/chore/fix-lint-and-merge

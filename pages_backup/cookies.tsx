@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react;
 import { motion } from framer-motion';
 import MainLayout from '../components/layout/MainLayout;
@@ -18,6 +19,11 @@ export default function CookiesPage() {
 
 import React, { useState } from react';
 import MainLayout from '../src / components / layout / MainLayout;
+=======
+import React, { useState } from 'react';
+import MainLayout from '../src / components / layout / MainLayout';
+import { motion } from 'framer-motion';
+>>>>>>> origin/chore/fix-lint-and-merge
 import {
   Shield,
   Settings,
@@ -338,7 +344,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </>
 ursor/integrate-build-improve-and-re-verify-8f7d
 
-
   );
       </Layout>
     </>;
@@ -346,4 +351,8 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 
   );
 
+<<<<<<< HEAD
  <li>Purpose: performance and security</li> <li>Retention: session or short‑term</li> <li>Opt‑out: browser settings and extensions</li> </ul> <p className=text-gray-400 text-sm" >Questions? <a className="text-cyan-400 href=mailto:kleber@ziontechgroup.com" >kleber@ziontechgroup.com</Link></p> </div> </div> </UltraAdvancedFuturisticBackground>
+=======
+ <li>Purpose: performance and security</li> <li>Retention: session or short‑term</li> <li>Opt‑out: browser settings and extensions</li> </ul> <p className="text-gray-400 text-sm" >Questions? <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com" >kleber@ziontechgroup.com</Link></p> </div> </div> </UltraAdvancedFuturisticBackground>
+>>>>>>> origin/chore/fix-lint-and-merge

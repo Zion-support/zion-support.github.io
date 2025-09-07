@@ -7,7 +7,7 @@ const iconSizes = ,
 export function EnhancedLoading({ size = 'md', variant = 'default', text = 'Loading...', showIcons = true, className = '' }) ;
 }
 
-const containerVariants = {} hidden: {opacity: 0}
+const containerVariants = {} hidden: { opacity: 0,}
 }, visible:  ,
 } opacity: 1, transition:  ,
 } staggerChildren: 0.1, delayChildren: 0.2,
@@ -29,6 +29,10 @@ const containerVariants = {} hidden: {opacity: 0}
 export function EnhancedLoading({ size = 'md', variant = 'default', text = 'Loading...', showIcons = true, className = '' }) ;
 }
 
+<<<<<<< HEAD
+=======
+const containerVariants = {} hidden: { opacity: 0,}
+>>>>>>> origin/chore/fix-lint-and-merge
 }, visible:  ,
 } opacity: 1, transition:  ,
 } staggerChildren: 0.1, delayChildren: 0.2,

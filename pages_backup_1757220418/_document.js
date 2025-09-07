@@ -1,4 +1,8 @@
 import { Html, Head, Main, NextScript } from 'next/document';
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
 export default function Document() {
   return (
     <Html lang="en">

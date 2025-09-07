@@ -1,8 +1,15 @@
+<<<<<<< HEAD
 :src/components/admin/fraud-detection/FraudStatsCards.tsx
 import React from "react,
 import { Card, CardHeader, CardTitle, CardDescription } from @/components/ui/card",
 import { AlertTriangle, AlertCircle, ShieldAlert } from 'lucide-react
 import { FraudStats } from "@/types/fraud,
+=======
+import React from "react",
+import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",
+import { AlertTriangle, AlertCircle, ShieldAlert } from 'lucide-react'
+import { FraudStats } from "@/types/fraud",
+>>>>>>> origin/chore/fix-lint-and-merge
 
 import React from react';
 import {
@@ -13,6 +20,7 @@ import {
 import { AlertTriangle, AlertCircle, ShieldAlert } from lucide-react';
 import { FraudStats } from '@/types/fraud;
 
+<<<<<<< HEAD
 import React from react",
 import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card;
 import { AlertTriangle, AlertCircle, ShieldAlert } from lucide-react'
@@ -24,6 +32,12 @@ interface FraudStatsCardsProps {
 export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats },) => {
   return (
     <div className;
+=======
+import React from "react",
+import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+import { AlertTriangle, AlertCircle, ShieldAlert } from 'lucide-react'
+import { FraudStats } from "@/types/fraud";
+>>>>>>> origin/chore/fix-lint-and-merge
 
 interface FraudStatsCardsProps {
   stats: FraudStats
@@ -31,8 +45,11 @@ interface FraudStatsCardsProps {
 
 export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats }) => {
   return (
+<<<<<<< HEAD
 return (
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4 mb-8>
       <Card>
@@ -41,11 +58,14 @@ return (
           <CardDescription>Total Flags</CardDescription>
         </CardHeader>
       </Card>
+<<<<<<< HEAD
 :src/components/admin/fraud-detection/FraudStatsCards.tsx
 
       
 
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
       <Card>
         <CardHeader className=pb-2 flex flex-row items-center justify-between">
@@ -57,10 +77,6 @@ return (
         </CardHeader>
       </Card>
 
-      
-
-:src/components/admin/fraud-detection/FraudStatsCards.tsx
-
       <Card>
 
         <CardHeader className="pb-2 flex flex-row items-center justify-between>
@@ -71,11 +87,14 @@ return (
           <AlertTriangle className="h-5 w-5 text-amber-500 />
         </CardHeader>
       </Card>
+<<<<<<< HEAD
 :src/components/admin/fraud-detection/FraudStatsCards.tsx
 
       
 
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
       <Card>
         <CardHeader className=pb-2 flex flex-row items-center justify-between">
@@ -87,10 +106,6 @@ return (
         </CardHeader>
       </Card>
 
-      
-
-:src/components/admin/fraud-detection/FraudStatsCards.tsx
-
       <Card>
 
         <CardHeader className="pb-2>
@@ -98,11 +113,14 @@ return (
           <CardDescription>Actions Taken</CardDescription>
         </CardHeader>
       </Card>
+<<<<<<< HEAD
 :src/components/admin/fraud-detection/FraudStatsCards.tsx
 
       
 
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
       <Card>
         <CardHeader className="pb-2>
@@ -111,10 +129,13 @@ return (
         </CardHeader>
       </Card>
     </div>
+<<<<<<< HEAD
 :src/components/admin/fraud-detection/FraudStatsCards.tsx
   );
 }
 ";
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
 },
 import React from react,
@@ -125,6 +146,7 @@ import { FraudStats } from @/types/fraud,
 interface FraudStatsCardsProps {
   stats: FraudStats;
 }
+<<<<<<< HEAD
 
 export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats },) => {
   return (
@@ -183,6 +205,12 @@ interface FraudStatsCardsProps  {stats: FraudStats;
     </div>;
 },import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",import { FraudStats } from @/types/fraud,interface FraudStatsCardsProps  {stats: FraudStats;
 }export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats }) => {return (<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4 mb-8">;
+=======
+;
+export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats }) => {;
+  return (;
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4 mb-8">;
+>>>>>>> origin/chore/fix-lint-and-merge
       <Card>;
         <CardHeader className=pb-2>;
           <CardTitle className="text-2xl font-bold">{stats.total_flags}</CardTitle>;
@@ -196,6 +224,7 @@ interface FraudStatsCardsProps  {stats: FraudStats;
       </Card>;
       <Card>;
         <CardHeader className="pb-2 flex flex-row items-center justify-between">;
+<<<<<<< HEAD
           <div>;import { AlertTriangle, AlertCircle, ShieldAlert } from 'lucide-react'import { FraudStats  } from '@/types/fraud';
           <div>;import { AlertTriangle, AlertCircle, ShieldAlert } from 'lucide-reactimport { FraudStats  } from @/types/fraud';
 interface FraudStatsCardsProps  {stats: FraudStats;
@@ -208,6 +237,8 @@ interface FraudStatsCardsProps  {stats: FraudStats;
       </Card>;<Card>;
         <CardHeader className="pb-2 flex flex-row items-center justify-between">;
           <div>;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
           <div>;
 export const FraudStatsCards: React.FC < FraudStatsCardsProps> = ({ stats }, ) => {
 
@@ -215,8 +246,12 @@ export const FraudStatsCards: React.FC < FraudStatsCardsProps> = ({ stats }, ) =
 
 export const FraudStatsCards: React.FC < FraudStatsCardsProps> = ({ stats }, ) => {
   return (
+<<<<<<< HEAD
     <div className=grid grid - cols - 1 sm:grid - cols - 2 lg:grid - cols - 3 xl:grid - cols - 6 gap - 4 mb - 8>;
   )}export const FraudStatsCards: React.FC < FraudStatsCardsProps> = ({ stats }, ) => {return (<div className="grid grid - cols - 1 sm:grid - cols - 2 lg:grid - cols - 3 xl:grid - cols - 6 gap - 4 mb - 8">;
+=======
+    <div className="grid grid - cols - 1 sm:grid - cols - 2 lg:grid - cols - 3 xl:grid - cols - 6 gap - 4 mb - 8">;
+>>>>>>> origin/chore/fix-lint-and-merge
       <Card>;
         <CardHeader className=pb - 2>;
           <CardTitle className="text - 2xl font - bold">{stats.total_flags}</CardTitle>;
@@ -261,6 +296,7 @@ export const FraudStatsCards: React.FC < FraudStatsCardsProps> = ({ stats }, ) =
         <CardHeader className=pb-2>;
 
         </CardHeader>;
+<<<<<<< HEAD
 :src/components/admin/fraud-detection/FraudStatsCards.tsx
       </Card>;
     </div>;
@@ -275,3 +311,6 @@ export const FraudStatsCards: React.FC < FraudStatsCardsProps> = ({ stats }, ) =
   )
 
 
+=======
+      </Card>;
+>>>>>>> origin/chore/fix-lint-and-merge

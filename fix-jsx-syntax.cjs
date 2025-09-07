@@ -1,4 +1,5 @@
 const fs = require('fs');
+<<<<<<< HEAD
 const path = require(path');
 
       .replace(/^
@@ -14,17 +15,29 @@ const path = require(path');
     fs.writeFileSync(filePath, content);
     console.log(`Fixed JSX: ${filePath}`);
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-  } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
-  }
+=======
+const path = require('path');
+function fixJSXSyntax(filePath) {
+  try {
+  // TODO: Implement
 }
 
-function walkDir(dir) {
-  const files = fs.readdirSync(dir);
-  
+      modified = true;
+
+    return modified;
+>>>>>>> origin/chore/fix-lint-and-merge
+  } catch (error) {
+    console.error(`Error processing ${filePath}:`, error.message);
+    return false;
+
+function processDirectory(dirPath) {
+  const files = fs.readdirSync(dirPath);
+  let fixedCount = 0;
+
   for (const file of files) {
-    const filePath = path.join(dir, file);
+    const filePath = path.join(dirPath, file);
     const stat = fs.statSync(filePath);
+<<<<<<< HEAD
     
     if (stat.isDirectory()) {
       walkDir(filePath);
@@ -35,3 +48,15 @@ function walkDir(dir) {
 }
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+=======
+
+    if (stat.isDirectory()) {
+      fixedCount += processDirectory(filePath);
+    } else if (file.endsWith('.tsx') || file.endsWith('.jsx')) {
+      if (fixJSXSyntax(filePath)) fixedCount++;
+
+  return fixedCount;
+
+console.log(`Fixed ${fixedCount} files`);
+`;
+>>>>>>> origin/chore/fix-lint-and-merge

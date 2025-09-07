@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 }
 export /**;
@@ -12,19 +13,44 @@ function DisputesList() {const [status_filter, setStatusFilter] = useState < Dis
         return 'secondary;
       case resolved':;
         return 'outline; // Changed from ./success'; to "outline;
+=======
+}
+export /**
+ * DisputesList - Function description
+ */
+function DisputesList() {
+  const [status_filter, setStatusFilter] = useState < DisputeStatus | 'all'>(
+    'all');
+  const filtered_disputes =;
+    status_filter === 'all';
+      ? disputes;
+      : disputes.filter (dispute => dispute.status === status_filter);
+  const getStatusBadgeVariant = (status: DisputeStatus, ) =>: any {
+    switch (status) {
+      case 'open':;
+        return 'default';
+      case 'under_review':;
+        return 'secondary';
+      case 'resolved':;
+        return 'outline'; // Changed from './success'; to "outline";
+>>>>>>> origin/chore/fix-lint-and-merge
 
       case 'closed:;
         return outline';
       default:;
 import React, { useState } from './react';
+<<<<<<< HEAD
 import { Dispute, DisputeStatus  } from '@/types / disputes';
 import { Button  } from '@/components / ui / button';
 import { Badge  } from '@/components / ui / badge';
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
 import React, { useState } from "react",
 import { Dispute, DisputeStatus } from "@/types/disputes",
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+<<<<<<< HEAD
 import { Dispute, DisputeStatus  } from '@/types/ disputes';
 import { Button  } from '@/components/ui/ button';
 import { Badge  } from '@/components/ui/ badge';
@@ -40,6 +66,8 @@ import { Dispute, DisputeStatus  } from '@/types/ disputes;
 import { Button  } from @/components/ui/ button';
 import { Badge  } from '@/components/ui/ badge;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 origin/cursor/automate-test-improve-and-merge-code-2533
 
 import {
@@ -50,6 +78,7 @@ pr-12325
   TableCell;
   TableHead;
   TableHeader;
+<<<<<<< HEAD
   TableRow } from '@/components / ui / table';
 import Skeleton from "@/components / ui / skeleton";
   TableRow } from '@/components/ui/ table';
@@ -86,11 +115,14 @@ import {  Table,  Table,;
   TableCell,;
   TableHead,;
   TableHeader,;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
   TableRow} from @/components/ui/table",
 import { ShieldAlert } from 'lucide-react
 type DisputesListProps = any;
 
+<<<<<<< HEAD
   TableRow} from @/components/ui/table';
 import Skeleton from '@/components/ui/skeleton;
 import { formatDistanceToNow } from date-fns';
@@ -123,6 +155,15 @@ isLoading: boolean ;
 }export function DisputesList(): any ({ disputes, isLoading }: DisputesListProps) {const [statusFilter, setStatusFilter] = useState<DisputeStatus | all'>('all;
   )const filteredDisputes =;
 type DisputesListProps = {
+=======
+  TableRow,;
+} from '@/components/ui/table';
+import Skeleton from '@/components/ui/skeleton';
+import { formatDistanceToNow } from 'date-fns';
+import { ShieldAlert } from 'lucide-react';
+import Link from 'next/link';
+type DisputesListProps = {;
+>>>>>>> origin/chore/fix-lint-and-merge
   disputes: Dispute[];
 isLoading: boolean 
 }
@@ -145,6 +186,7 @@ export function DisputesList(): any ({ disputes, isLoading }: DisputesListProps)
       case 'under_review':;
         return 'secondary';
       case 'resolved':;
+<<<<<<< HEAD
         return 'outline'; // Changed from "success" to "outline";
       : disputes && disputes.filter(dispute => dispute && dispute.status === statusFilter)const getStatusBadgeVariant = (status: DisputeStatus,) => {switch (status) {case 'open':;return 'default';
       case 'under_review':;
@@ -194,6 +236,8 @@ TableBody,
 
 import { Button } from @/components/ui/button",
 import { Badge } from "@/components/ui/badge,
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
   Table,
 
@@ -207,6 +251,7 @@ import { Badge } from "@/components/ui/badge,
   TableCell;
   TableHead;
   TableHeader;
+<<<<<<< HEAD
   TableRow } from @/components/ui/table';
 TableBody,TableCell,TableHead,TableHeader,import { Button } from @/components/ui/button",import { Badge } from "@/components/ui/badge,import { return 'outline; // Changed from success" to "outline;
       case closed':;
@@ -221,17 +266,51 @@ import {Table,TableBody,TableCell,TableHead,TableHeader,TableRow} from @/compone
   TableRow } from @/components/ui/table';
 type DisputesListProps = {disputes: Dispute[],isLoading: boolean;
 }export function DisputesList(): any ({ disputes, isLoading }: DisputesListProps) {const [statusFilter, setStatusFilter]  = useState<DisputeStatus | "all>(all")const filteredDisputes = statusFilter === "all ;
+=======
+  TableRow} from "@/components/ui/table";
+import Skeleton from "@/components/ui/skeleton";
+import { formatDistanceToNow } from "date-fns";
+import { ShieldAlert } from 'lucide-react';
+import Link from "next/link";
+type DisputesListProps = {;
+  disputes: Dispute[],;
+  isLoading: boolean;
+};
+
+export function DisputesList(): any ({ disputes, isLoading }: DisputesListProps) {;
+  const [statusFilter, setStatusFilter] = useState<DisputeStatus | "all">("all");
+
+  const filteredDisputes = statusFilter === "all" ;
+>>>>>>> origin/chore/fix-lint-and-merge
     ? disputes ;
-    : disputes && disputes.filter(dispute => dispute && dispute.status === statusFilter)const getStatusBadgeVariant = (status: DisputeStatus) => {switch (status) {disputes: Dispute[],is_loading: boolean;
+    : disputes && disputes.filter(dispute => dispute && dispute.status === statusFilter);
+
+  const getStatusBadgeVariant = (status: DisputeStatus) => {;
+    switch (status) {;
+  disputes: Dispute[],
+  is_loading: boolean;
 }
+<<<<<<< HEAD
 export /**;
  * DisputesList - Function description;
  */;
+=======
+export /**
+ * DisputesList - Function description
+ */
+function DisputesList() {
+  const [status_filter, setStatusFilter] = useState < DisputeStatus | "all">("all");
+  const filtered_disputes = status_filter === "all";
+>>>>>>> origin/chore/fix-lint-and-merge
     ? disputes;
-    : disputes.filter (dispute => dispute.status === status_filter)const getStatusBadgeVariant = (status: DisputeStatus) =>: any {switch (status) {case "open": return "default";
+    : disputes.filter (dispute => dispute.status === status_filter);
+  const getStatusBadgeVariant = (status: DisputeStatus) =>: any {
+    switch (status) {
+      case "open": return "default";
       case "under_review":;
         return "secondary";
       case "resolved":;
+<<<<<<< HEAD
       case resolved":;
 
         return "outline, // Changed from './success; to outline";
@@ -252,6 +331,8 @@ type DisputesListProps = {
 
         <div className=border rounded-md">
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
         <div className="border rounded-md>
 }
@@ -282,7 +363,10 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {
             <Skeleton key={status} className=h-10 w-24' />          ))}
         </div>
         <div className='border rounded-md'>
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 origin/cursor/automate-test-improve-and-merge-code-2533
           <Table>
             <TableHeader>
@@ -292,8 +376,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <TableHead>Parties</TableHead>
                 <TableHead>Created</TableHead>
                 <TableHead>Status</TableHead>
+<<<<<<< HEAD
                 <TableHead className="text-right">Actions</TableHead>
                 <TableHead className=text-right">Actions</TableHead>
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
                 <TableHead className="text-right>Actions</TableHead>
 
@@ -301,10 +388,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 <TableHead className=text-right'>Actions</TableHead>
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
 
 
 
 <TableHead className='text-right>Actions</TableHead>
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
               </TableRow>
 
@@ -320,6 +410,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <TableCell><Skeleton className="h-6 w-20 /></TableCell>
                   <TableCell className=text-right"><Skeleton className="h-9 w-20 ml-auto /></TableCell>
 
+<<<<<<< HEAD
       case "resolved":;import { formatDistanceToNow } from "date-fns",import Link from "next/link",type DisputesListProps = {disputes: Dispute[];
       case resolved":;import { formatDistanceToNow } from "date-fns,import Link from next/link",type DisputesListProps = {disputes: Dispute[];
   isLoading: boolean;
@@ -329,6 +420,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         return "default;<div className=border rounded-md">;
 }
 export function DisputesList() {const [statusFilter, setStatusFilter] = useState<DisputeStatus | "all>(all")const filteredDisputes = statusFilter === "all;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
                 </TableRow>
   Table,
   TableBody,
@@ -350,6 +443,7 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {
   const [statusFilter, setStatusFilter] = useState<DisputeStatus | "all>(all"),
   const filteredDisputes = statusFilter === "all;
     ? disputes;
+<<<<<<< HEAD
     : disputes.filter(dispute => dispute.status === statusFilter)const getStatusBadgeVariant = (status: DisputeStatus) => {switch (status) {case open": return "default;
       case under_review":;
         return "secondary;
@@ -357,10 +451,23 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {
         return "outline, // Changed from success" to "outline;
       case closed":;
         return "outline;
+=======
+    : disputes.filter(dispute => dispute.status === statusFilter),;
+  const getStatusBadgeVariant = (status: DisputeStatus) => {;
+    switch (status) {;
+      case "open": return "default",;
+      case "under_review":;
+        return "secondary",;
+      case "resolved":;
+        return "outline", // Changed from "success" to "outline";
+      case "closed":;
+        return "outline";
+>>>>>>> origin/chore/fix-lint-and-merge
       default:;,
       default:;
         return default";
     }
+<<<<<<< HEAD
   }
   if (isLoading) {return (<div className=space-y-4'>;
         <div className='flex gap-2 mb-4>;
@@ -407,6 +514,16 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {
         <div className=flex gap-2 mb-4">;,
         <div className="flex gap-2 mb-4>;
           {[All", "Open, Under Review", "Resolved, Closed"].map((status) => (<Skeleton key={status} className="h-10 w-24 />;
+=======
+  };
+  if (isLoading) {;
+    return (;
+      <div className="space-y-4">;
+        <div className="flex gap-2 mb-4">;,
+        <div className="flex gap-2 mb-4">;
+          {["All", "Open", "Under Review", "Resolved", "Closed"].map((status) => (;
+            <Skeleton key={status} className="h-10 w-24" />;
+>>>>>>> origin/chore/fix-lint-and-merge
           ))}
         </div>;
         <div className=border rounded-md">;
@@ -423,6 +540,7 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {
             </TableHeader>;
             <TableBody>;,
             <TableBody>;
+<<<<<<< HEAD
               {[...Array(5)].map((_, i) => (<TableRow key={i}>;
                   <TableCell><Skeleton className=h-4 w-24" /></TableCell>;
                   <TableCell><Skeleton className="h-4 w-40 /></TableCell>;
@@ -464,12 +582,24 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {
                     <Skeleton className=h-9 w-20 ml-auto' />;
                   </TableCell>;
                 </TableRow>;
+=======
+              {[...Array(5)].map((_, i) => (;
+                <TableRow key={i}>;
+                  <TableCell><Skeleton className="h-4 w-24" /></TableCell>;
+                  <TableCell><Skeleton className="h-4 w-40" /></TableCell>;
+                  <TableCell><Skeleton className="h-4 w-32" /></TableCell>;
+                  <TableCell><Skeleton className="h-4 w-24" /></TableCell>;
+                  <TableCell><Skeleton className="h-6 w-20" /></TableCell>;
+                  <TableCell className="text-right"><Skeleton className="h-9 w-20 ml-auto" /></TableCell>;
+                </TableRow>;
+>>>>>>> origin/chore/fix-lint-and-merge
               ))}
 
             </TableBody>;
           </Table>;
         </div>;
       </div>;
+<<<<<<< HEAD
 
     );
 
@@ -480,6 +610,8 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {
   if (disputes && disputes.length === 0) {
 
               ))}
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
     );
 
@@ -496,6 +628,7 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {
   }
   if (disputes && disputes.length === 0) {
     return (
+<<<<<<< HEAD
       <div className='text-center py-12 border rounded-md bg-muted/20'>;
         <ShieldAlert className='mx-auto h-12 w-12 text-muted-foreground mb-4' />;
         <h3 className='text-xl font-medium'>No disputes found</h3>;
@@ -515,6 +648,8 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {
 
   if (disputes.length === 0) {
     return (
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
       <div className="text-center py-12 border rounded-md bg-muted/20>
 
@@ -541,9 +676,12 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {
         <p className="text-muted-foreground mt-2>
           No active disputes match the selected filter
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 <TableCell>
                     <Skeleton className='h-4 w-24 />
                   </TableCell>
@@ -578,6 +716,7 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {
         <h3 className=text-xl font-medium'>No disputes found</h3>
         <p className='text-muted-foreground mt-2>
           No active disputes match the selected filter
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
         </p>
       </div>
@@ -590,6 +729,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     )
   }
     <div className='space-y-4>
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
   }
 
@@ -598,6 +739,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
       <div className='flex gap-2 mb-4 overflow-x-auto pb-2>
         <Button
+<<<<<<< HEAD
 )}if (disputes.length === 0) {return (<div className=text-center py-12 border rounded-md bg-muted/20'>;
         <ShieldAlert className='mx-auto h-12 w-12 text-muted-foreground mb-4 />;
         <h3 className=text-xl font-medium'>No disputes found</h3>;
@@ -640,14 +782,49 @@ variant={statusFilter === resolved' ? 'default : outline'}
 variant={statusFilter === 'closed' ? 'default' : 'outline'}
           onClick={() => setStatusFilter('closed')}
           onClick={() => setStatusFilter(closed')}
+=======
+          variant={statusFilter === 'all' ? 'default' : 'outline'}
+          onClick={() => setStatusFilter('all')}
+          size='sm'
+        >
+          All
+        </Button>
+        <Button
+variant={statusFilter === 'open' ? 'default' : 'outline'}
+          onClick={() => setStatusFilter('open')}
+          size='sm'
+        >
+          Open
+        </Button>
+        <Button
+variant={statusFilter === 'under_review' ? 'default' : 'outline'}
+          onClick={() => setStatusFilter('under_review')}
+          size='sm'
+        >
+          Under Review
+        </Button>
+        <Button
+variant={statusFilter === 'resolved' ? 'default' : 'outline'}
+          onClick={() => setStatusFilter('resolved')}
+          size='sm'
+        >
+          Resolved
+        </Button>
+        <Button
+variant={statusFilter === 'closed' ? 'default' : 'outline'}
+          onClick={() => setStatusFilter('closed')}
+>>>>>>> origin/chore/fix-lint-and-merge
 
   if (disputes && disputes.length === 0) {
     return (
       <div className='text-center py-12 border rounded-md bg-muted/20'>;
+<<<<<<< HEAD
           onClick={() => setStatusFilter('closed')}size='sm'        >    <div className="space-y-4">;
     <div className="space-y-4">;
     <div className="space-y-4">;
   if (disputes && disputes.length === 0) {return (<div className='text-center py-12 border rounded-md bg-muted/20'>;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
         <ShieldAlert className='mx-auto h-12 w-12 text-muted-foreground mb-4' />;
         <h3 className='text-xl font-medium'>No disputes found</h3>;
         <p className='text-muted-foreground mt-2'>      <div className="text-center py-12 border rounded-md bg-muted/20">;
@@ -656,6 +833,7 @@ variant={statusFilter === 'closed' ? 'default' : 'outline'}
         <p className="text-muted-foreground mt-2">;
         </p>;
       </div>;
+<<<<<<< HEAD
     )}size="sm";
           onClick={() => setStatusFilter(closed')}size='sm        >    <div className=space-y-4">;
     <div className="space-y-4>;
@@ -695,6 +873,8 @@ variant={statusFilter === 'closed' ? 'default' : 'outline'}
         <Button;
           variant={statusFilter === all" ? "default : outline"}
           onClick={() => setStatusFilter("all)}
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
     );
   }
           size=sm";
@@ -702,8 +882,11 @@ variant={statusFilter === 'closed' ? 'default' : 'outline'}
           All;
         </Button>;
         <Button;
+<<<<<<< HEAD
           variant={statusFilter === "open" ? "default" : "outline"}
           onClick={() => setStatusFilter("open")}size="sm";
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
           variant={status_filter === "open" ? "default" : "outline"}"
           on_click={() => setStatusFilter ("open")}"
           size="sm";
@@ -718,8 +901,11 @@ variant={statusFilter === 'closed' ? 'default' : 'outline'}
           Open;
         </Button>;
         <Button;
+<<<<<<< HEAD
           variant={statusFilter === "under_review" ? "default" : "outline"}
           onClick={() => setStatusFilter("under_review")}size="sm";
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
           variant={status_filter === "under_review" ? "default" : "outline"}"
           on_click={() => setStatusFilter ("under_review")}"
           size="sm";
@@ -734,6 +920,7 @@ variant={statusFilter === 'closed' ? 'default' : 'outline'}
           Under Review;
         </Button>;
         <Button;
+<<<<<<< HEAD
           variant={statusFilter === "resolved" ? "default" : "outline"}
           onClick={() => setStatusFilter("resolved")}size="sm";
           variant={statusFilter === "resolved ? default" : "outline}
@@ -754,6 +941,12 @@ variant={statusFilter === 'closed' ? 'default' : 'outline'}
           on_click={() => setStatusFilter (resolved)}"
           size="sm;
           size=sm";
+=======
+          variant={status_filter === "resolved" ? "default" : "outline"}"
+          on_click={() => setStatusFilter ("resolved")}"
+          size="sm";
+          size="sm";
+>>>>>>> origin/chore/fix-lint-and-merge
         >;
           Resolved;
         </Button>;
@@ -819,6 +1012,7 @@ variant={statusFilter === 'closed' ? 'default' : 'outline'}
 
           size="sm"
           size='sm'
+<<<<<<< HEAD
           size='sm
 origin/cursor/automate-test-improve-and-merge-code-2533
 
@@ -849,6 +1043,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <TableHead className=text-right'>Actions</TableHead>
 origin/cursor/automate-test-improve-and-merge-code-2533
           size='sm
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 origin/cursor/automate-test-improve-and-merge-code-2533
         >
           Closed
@@ -863,20 +1059,26 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </TableHeader>
           <TableBody>
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
             {filteredDisputes.map((dispute) => (
               <TableRow key={dispute.id}>
                 <TableCell className='font-mono text-xs>,
                   {dispute.id.split('-')[0]}
                 </TableCell>
                 <TableCell>
+<<<<<<< HEAD
 
 
 
                   {dispute.project?.title || Unknown Project'}
 
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
                 </TableCell>
 
@@ -887,11 +1089,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       {dispute.client_profile?.display_name |Unknown Client'}'
                     </span>
                     <span>
+<<<<<<< HEAD
                       Talent:{' '}
                       Talent:{ }
                       {dispute.talent_profile?.display_name || 'Unknown Talent'}
 origin/cursor/automate-test-improve-and-merge-code-2533
                       {dispute.talent_profile?.display_name |Unknown Talent}                    </span>
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
                   </div>
                 </TableCell>
@@ -932,14 +1137,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <span>
                       Talent: {dispute.talent_profile?.display_name || "Unknown Talent"}
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
                     </span>
                   </div>
                 </TableCell>
                 <TableCell>
 
+<<<<<<< HEAD
         <Button;
           variant={statusFilter === closed ? "default" : outline}
           onClick={() => setStatusFilter("closed")}size=sm;
@@ -1042,6 +1251,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           variant={status_filter === closed ? "default" : outline}
           on_click={() => setStatusFilter ("closed")}
           size=sm;
+=======
+          size="sm";
+>>>>>>> origin/chore/fix-lint-and-merge
           size="sm";
         >;
           Closed;
@@ -1111,10 +1323,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             {filtered_disputes.map (dispute => (            </TableRow>;
           </TableHeader>;
           <TableBody>;
-            {filtered_disputes.map ((dispute) => (<TableRow key={dispute.id}>;
+            {filtered_disputes.map ((dispute) => (
+              <TableRow key={dispute.id}>;
                 <TableCell className='font - mono text - xs'>;
                   {dispute.id.split (-)[0]}',
                 </TableCell>;
+<<<<<<< HEAD
                 <TableCell>{dispute.project?.title || 'Unknown Project'}
                 <TableCell>{dispute.project?.title || 'Unknown Project}
                 </TableCell>;
@@ -1124,6 +1338,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       {dispute.client_profile?.display_name || Unknown Client'}
                     </span>;
                     <span>Talent:{' }
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
                 <TableCell>;
                   {dispute.project?.title || Unknown Project'}'
                 </TableCell>;
@@ -1139,21 +1355,25 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>;
                 </TableCell>;
                 <TableCell>;
+<<<<<<< HEAD
                   {formatDistanceToNow (new Date (dispute.created_at), {add_suffix: true})}                      Talent: {dispute.talent_profile?.display_name || "Unknown Talent"}
                   {formatDistanceToNow (new Date (dispute.created_at), {add_suffix: true})}                      Talent: {dispute.talent_profile?.display_name || Unknown Talent"}
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
                   {formatDistanceToNow (new Date (dispute.created_at), {
                     add_suffix: true})}                      Talent: {dispute.talent_profile?.display_name || "Unknown Talent}
                     </span>;
                   </div>;
                 </TableCell>;
-                <TableCell>{formatDistanceToNow(new Date(dispute.created_at), { addSuffix: true })}
-                </TableCell>;
                 <TableCell>;
+<<<<<<< HEAD
                   <Badge variant={getStatusBadgeVariant(dispute.status)}>;
                     {dispute.status.replace('_ ')}
                   </Badge>
                 </TableCell>
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
                   {formatDistanceToNow(new Date(dispute.created_at), { addSuffix: true })}
                 </TableCell>
                 <TableCell>
@@ -1184,6 +1404,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   {formatDistanceToNow (new Date (dispute.created_at), {
                     add_suffix: true,
                   })}
+<<<<<<< HEAD
                   </Badge>;
                 </TableCell>;
                 <TableCell className="text-right">;
@@ -1209,6 +1430,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <TableCell>;
                   <Badge variant={getStatusBadgeVariant (dispute.status)}>;
                     {dispute.status.replace ('_,  ')}
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
                 </TableCell>;
                 <TableCell>;
                   <Badge variant={getStatusBadgeVariant (dispute.status)}>;
@@ -1217,20 +1440,29 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </TableCell>;
                 <TableCell className=text - right>;
                   <Button as_child size='sm'>;
+<<<<<<< HEAD
                     <Link href={`/dashboard / disputes/${dispute.id}`}>;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
                     <Link href={`/dashboard / disputes/${dispute.id}`} />;`
                       View Details;
                     </Link>                  </Button>                </TableCell>;
                 <TableCell>;
                   <Badge variant={getStatusBadgeVariant (dispute.status)}>;
+<<<<<<< HEAD
                     {dispute.status.replace ('_ ')}
                     {dispute.status.replace (_ )}
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
                     {dispute.status.replace ('_ ')}'
                   </Badge>;
                 </TableCell>;
                 <TableCell className="text - right">;
                   <Button as_child size="sm">;
+<<<<<<< HEAD
                     <Link href={`/dashboard / disputes/${dispute.id}`}>View Details</Link>;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
                     <Link href={`/dashboard / disputes/${dispute.id}`} />View Details</Link>;`
                   </Button>;
                 </TableCell>;
@@ -1238,9 +1470,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </TableBody>;
         </Table>;
       </div>;
+<<<<<<< HEAD
     </div>);
 
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
     </div>);
 
 }
@@ -1248,6 +1483,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 // Check condition
 if ( {") {"
   $2
+<<<<<<< HEAD
     </div>)}
 // Check condition;
 if ( {) {$2;
@@ -1263,24 +1499,33 @@ if ( {) {$2;
   [...Array (5) ].map ( (, i) => (<TableRow key= {
 
 
+=======
+}
+>>>>>>> origin/chore/fix-lint-and-merge
 
   addSuffix: true 
 }) 
 
 }</TableCell> <TableCell> </Button> </TableCell> </TableRow>) ) ;
 }</TableBody> </Table> </div> </div>) ;
+<<<<<<< HEAD
 }"};
 }}
 }
 }
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
           </TableBody>;
         </Table>;
       </div>;
     </div>;
   );
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
 
   i ;
@@ -1308,6 +1553,7 @@ if ( {) {$2;
   );
 };
 if (isLoading) {";
+<<<<<<< HEAD
 }</div> <div className="border rounded - md" > <Table> <TableHeader> <TableRow> <TableHead > Case ID</TableHead> <TableHead > Project</TableHead> <TableHead > Parties</TableHead> <TableHead > Created</TableHead> <TableHead > Status</TableHead> <TableHead className="text - right" >Actions</TableHead> </TableRow> </TableHeader> <TableBody> {[...Array (5) ].map ( (, i) => (<TableRow key= {addSuffix: true;
 })}</TableCell> <TableCell> </Button> </TableCell> </TableRow>) )}</TableBody> </Table> </div> </div>)}"}}
 }</div> <div className=border rounded - md" > <Table> <TableHeader> <TableRow> <TableHead > Case ID</TableHead> <TableHead > Project</TableHead> <TableHead > Parties</TableHead> <TableHead > Created</TableHead> <TableHead > Status</TableHead> <TableHead className="text - right >Actions</TableHead> </TableRow> </TableHeader> <TableBody> {[...Array (5) ].map ( (, i) => (<TableRow key= {addSuffix: true;
@@ -1329,6 +1575,8 @@ if (isLoading) {";
   return (<div className="space-y-4" > <div className="flex gap-2 mb-4" > {";
   ["All", "Open", "Under Review",  "Resolved", "Closed" ].map ( (status) => (<Skeleton key= {status ";
 }className="h-10 w-24" /> ";
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
   return (<div className="space-y-4" > <div className="flex gap-2 mb-4" > {";
   ["All", "Open", "Under Review",  "Resolved", "Closed" ].map ( (status) => (<Skeleton key= {;
   status ";
@@ -1358,6 +1606,7 @@ if (isLoading) {";
 }> </TableCell> <TableCell> <div className="flex flex-col text-sm" > <span> </span> </div> </TableCell> <TableCell> {
   formatDistanceToNow (new Date (dispute.created at), {
   addSuffix: true ;
+<<<<<<< HEAD
 }) ;
 }</TableCell> <TableCell> </Button> </TableCell> </TableRow>) ) ;
 }</TableBody> </Table> </div> </div>) ;
@@ -1368,6 +1617,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }> All </Button> <Button > Open </Button> <Button > Under Review </Button> <Button > Resolved </Button> <Button > Closed </Button> </div> <div className=border rounded-md overflow-hidden" > <Table> <TableHeader> <TableRow> <TableHead>Case ID</TableHead> <TableHead>Project</TableHead> <TableHead>Parties</TableHead> <TableHead>Created</TableHead> <TableHead>Status</TableHead> <TableHead className="text-right >Actions</TableHead> </TableRow> </TableHeader> <TableBody> {filteredDisputes.map ( (dispute) => (<TableRow key= {dispute.id ;
 }> </TableCell> <TableCell> <div className="flex flex-col text-sm" > <span> </span> </div> </TableCell> <TableCell> {formatDistanceToNow (new Date (dispute.created at), {addSuffix: true ;
 })}</TableCell> <TableCell> </Button> </TableCell> </TableRow>) )}</TableBody> </Table> </div> </div>)}";
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 });
 }</TableCell> <TableCell> </Button> </TableCell> </TableRow>) ) ;
 }</TableBody> </Table> </div> </div>) ;

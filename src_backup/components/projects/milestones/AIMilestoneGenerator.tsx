@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 interface AIMilestoneGeneratorProps  {import React, { useState } from 'react;
 import { Button   } from @/components/ui/button';
@@ -42,6 +43,9 @@ import { Badge } from '@/components/ui/badge
 interface AIMilestoneGeneratorProps {
 origin/cursor/automate-test-improve-and-merge-code-2533
 interface AIMilestoneGeneratorProps {
+=======
+interface AIMilestoneGeneratorProps {;
+>>>>>>> origin/chore/fix-lint-and-merge
 
 import React, { useState } from react';
 import { Card, CardContent } from @/components/ui/card';
@@ -64,14 +68,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   endDate: string | null;
   projectType: string;
   onAddMilestones: (milestones: GeneratedMilestone[]) => void;
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
     if (!scope || !startDate || !projectType) {
 
       return;
-
 
     }
     const input: MilestoneInput = {}
@@ -97,6 +103,7 @@ import { format, parseISO } from date - fns;
 import { Badge } from '@/components / ui / badge';
 interface AIMilestoneGeneratorProps {}
   scope: string;
+<<<<<<< HEAD
   MilestoneInput;
   GeneratedMilestone;
   useMilestoneGenerator;
@@ -117,6 +124,8 @@ import { format, parseISO  } from date - fns;
   MilestoneInput,GeneratedMilestone,useMilestoneGenerator} from '@/hooks / useMilestoneGenerator';
 import { Badge  } from @/components / ui / badge;
 interface AIMilestoneGeneratorProps  {scope: string;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
   start_date: string;
   end_date: string | null;
   project_type: string;
@@ -179,10 +188,15 @@ if ( {) {}
     }
   }
 
+<<<<<<< HEAD
 
 
 import React, { useState } from react',
 import { Button } from '@/components/ui/button,
+=======
+import React, { useState } from 'react',;
+import { Button } from '@/components/ui/button',;
+>>>>>>> origin/chore/fix-lint-and-merge
 
 import { Card, CardContent } from @/components/ui/card',
   Accordion,
@@ -200,6 +214,7 @@ interface AIMilestoneGeneratorProps {
   projectType: string,
   onAddMilestones: (milestones: GeneratedMilestone[]) => void,
   onAddMilestone: (milestone: GeneratedMilestone) => void;
+<<<<<<< HEAD
 }
 export function AIMilestoneGenerator({
   scope,
@@ -207,6 +222,8 @@ export function AIMilestoneGenerator({
   endDate,
   projectType,
   onAddMilestones,
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
   const handleGenerateMilestones = async () => {
     if (!scope || !startDate || !projectType) {
@@ -269,12 +286,16 @@ export function AIMilestoneGenerator({
 
           disabled={isGenerating || !scope || !startDate || !projectType}        >
 
+<<<<<<< HEAD
           variant="outline
   }import React, { useState } from react,import { Button } from '@/components/ui/button',import { Card, CardContent } from @/components/ui/card,import {Accordion,AccordionContent,AccordionItem,AccordionTrigger} from '@/components/ui/accordion',import { format, parseISO } from date-fns,import { MilestoneInput, GeneratedMilestone, useMilestoneGenerator } from '@/hooks/useMilestoneGenerator',import { Badge } from @/components/ui/badge,interface AIMilestoneGeneratorProps  {scope: string,startDate: string,endDate: string | null,projectType: string,onAddMilestones: (milestones: GeneratedMilestone[]) => void,onAddMilestone: (milestone: GeneratedMilestone) => void;scope,startDate,endDate,projectType,onAddMilestones,const handleGenerateMilestones = async () => {if (!scope || !startDate || !projectType) {return;
     }const input: MilestoneInput = {scope,startDate,endDate,try {return format(parseISO(dateString), 'MMM dd, yyyy')} catch (error) {return dateString;
     }},return (<Button;
           disabled={isGenerating || !scope || !startDate || !projectType}        >;
           variant=outline";
+=======
+          variant="outline"
+>>>>>>> origin/chore/fix-lint-and-merge
           onClick={handleGenerateMilestones}
           disabled={isGenerating || !scope || !startDate || !projectType}
         >
@@ -351,6 +372,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         handleAddSingleMilestone(milestone)
                       }}
                       className="mr-2"
+<<<<<<< HEAD
                         className=mr-2 w-4 h-4 rounded text-primary;
                       />;
                       <AccordionTrigger className="hover:no-underline flex-1 text-left">;
@@ -410,6 +432,8 @@ export function AIMilestoneGenerator() {const { generateMilestones, generatedMil
                   </AccordionContent>;
                 </AccordionItem>;))}
               ))}</Accordion>;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
                       </div>
                     </div>
@@ -421,6 +445,7 @@ export function AIMilestoneGenerator() {const { generateMilestones, generatedMil
           </CardContent>;
         </Card>;
       )}
+<<<<<<< HEAD
     </div>
 
     </div>;
@@ -430,6 +455,11 @@ export function AIMilestoneGenerator() {const { generateMilestones, generatedMil
                       variant='ghost';
                       size=sm;
                       on_click={e => {e.stop_propagation ()handleAddSingleMilestone (milestone) }}
+=======
+
+    </div>;
+  );
+>>>>>>> origin/chore/fix-lint-and-merge
 }
 
                     <Button;'
@@ -459,6 +489,4 @@ export function AIMilestoneGenerator() {const { generateMilestones, generatedMil
             </Accordion>;
           </CardContent>;
         </Card>)}
-    </div>);
-}
     </div>);

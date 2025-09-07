@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 ;
 import React, { useState } from 'react;
@@ -14,6 +15,8 @@ import { DisputeForm } from ./DisputeForm";
 import { useRouter } from 'next/router;
 origin/cursor/automate-test-improve-and-merge-code-2533
 :src/components/disputes/RaiseDisputeButton.tsx
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 projectId: string,
 
 import React, { useState } from "react;
@@ -35,6 +38,7 @@ import {  Dialog
   DialogDescription
 } from '@/components/ui/dialog'
 import { DisputeForm } from './DisputeForm'
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 import { ShieldAlert } from 'lucide-react
   DialogDescription} from "@/components/ui/dialog
@@ -49,6 +53,8 @@ interface RaiseDisputeButtonProps {
 return (
     <>;
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 Dialog,
   DialogContent,
   DialogHeader,
@@ -62,9 +68,9 @@ interface RaiseDisputeButtonProps {
   variant?: "default | outline" | "secondary | destructive" | "ghost | link";
   size?: "default | sm" | "lg | icon";
   className?: string
-}
 
 export function RaiseDisputeButton({
+<<<<<<< HEAD
 :src/components/disputes/RaiseDisputeButton.tsx
   projectId
   milestoneId
@@ -111,6 +117,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     router.push(`/dashboard/disputes/${disputeId}`)
   },
   
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 Dialog,
   DialogContent,
   DialogHeader,
@@ -155,20 +163,6 @@ export function RaiseDisputeButton({
         <ShieldAlert className=h-4 w-4 mr-2 />
         Raise Dispute
       </Button>
-:src/components/disputes/RaiseDisputeButton.tsx
-      
-      <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
-        <DialogContent className="sm:max-w-[550px]">
-          <DialogHeader>
-            <DialogTitle>Raise a Dispute</DialogTitle>
-            <DialogDescription>
-              Please provide details about the issue you're experiencing with this project.
-            </DialogDescription>
-          </DialogHeader>
-          <DisputeForm
-            projectId={projectId}
-            milestoneId={milestoneId}
-            onDisputeCreated={handleDisputeCreated}
 
       <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
         <DialogContent className=sm:max-w-[550px]>',
@@ -179,6 +173,7 @@ export function RaiseDisputeButton({
               this project.
             </DialogDescription>
           </DialogHeader>
+<<<<<<< HEAD
 
   DialogDescription} from @/components/ui/dialog,import { DisputeForm  } from ./DisputeForm';
 import { useRouter  } from 'next/router;
@@ -216,6 +211,8 @@ export function RaiseDisputeButton() {const [isDialogOpen, setIsDialogOpen] = us
         <ShieldAlert className=h-4 w-4 mr-2 />;
         Raise Dispute;
       </Button>;<Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
         onClick={() => setIsDialogOpen(true)}      >;
         <ShieldAlert className='h-4 w-4 mr-2' />;
         Raise Dispute;
@@ -235,6 +232,7 @@ export function RaiseDisputeButton() {const [isDialogOpen, setIsDialogOpen] = us
       <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>;
         <DialogContent className=sm:max - w-[550px]>;,
           <DialogHeader>;
+<<<<<<< HEAD
             <DialogTitle > Raise a Dispute</DialogTitle>;<DialogDescription>Please provide details about the issue you're experiencing with;
               this project.;
             </DialogDescription>;
@@ -243,6 +241,8 @@ export function RaiseDisputeButton() {const [isDialogOpen, setIsDialogOpen] = us
       </Dialog>;
     </>;
   )}<DisputeForm;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
             <DialogTitle > Raise a Dispute</DialogTitle>;
             <DialogDescription>;
               Please provide details about the issue you're experiencing with;
@@ -259,6 +259,7 @@ export function RaiseDisputeButton() {const [isDialogOpen, setIsDialogOpen] = us
             project_id={project_id}
             milestone_id={milestone_id}
             onDisputeCreated={handleDisputeCreated}
+<<<<<<< HEAD
             on_cancel={() => setIsDialogOpen (false)}          />;
         </DialogContent>;
       </Dialog>;
@@ -267,15 +268,20 @@ export function RaiseDisputeButton() {const [isDialogOpen, setIsDialogOpen] = us
 
 
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
             onCancel={() => setIsDialogOpen(false)}          />
         </DialogContent>
       </Dialog>
     </>
+<<<<<<< HEAD
 :src/components/disputes/RaiseDisputeButton.tsx
   )
 }
           
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
             on_cancel={() => setIsDialogOpen (false)}          />;
         </DialogContent>;
@@ -325,6 +331,7 @@ export function RaiseDisputeButton({
 }
   return (;
     <>;
+<<<<<<< HEAD
             onDisputeCreated={handleDisputeCreated}onCancel={() => setIsDialogOpen(false)}          />;
         </DialogContent>;
       </Dialog>;
@@ -335,8 +342,13 @@ export function RaiseDisputeButton({
     </>)}<DisputeForm;
   Dialog,DialogContent,DialogHeader,DialogTitle,DialogDescription} from @/components/ui/dialog,interface RaiseDisputeButtonProps  {projectId: string,milestoneId?: string,variant?: "default" | outline | "secondary" | destructive | "ghost" | link,size?: "default" | sm | "lg" | icon,className?: string;
 }export function RaiseDisputeButton() {const [isDialogOpen, setIsDialogOpen] = useState(false),const router = useRouter(),const handleDisputeCreated = (disputeId: string) => {setIsDialogOpen(false)router.push(`/dashboard/disputes/${disputeId}`)}return (<>;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
       <Button;
-        variant={variant}size={size}className={className}onClick={() => setIsDialogOpen(true)}
+        variant={variant} ;
+        size={size} ;
+        className={className} ;
+        onClick={() => setIsDialogOpen(true)}
       >;
         <ShieldAlert className="h-4 w-4 mr-2" />;
         Raise Dispute;
@@ -346,14 +358,18 @@ export function RaiseDisputeButton({
         <DialogContent className="sm:max-w-[550px]">;
           <DialogHeader>;
             <DialogTitle>Raise a Dispute</DialogTitle>;
-            <DialogDescription>Please provide details about the issue you're experiencing with this project.;
+            <DialogDescription>;
+              Please provide details about the issue you're experiencing with this project.;
             </DialogDescription>;
           </DialogHeader>;
           <DisputeForm;
             projectId={projectId}
             milestoneId={milestoneId}
             onDisputeCreated={handleDisputeCreated}
+<<<<<<< HEAD
             onCancel={() => setIsDialogOpen(false)}          />;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
             onCancel={() => setIsDialogOpen(false)}
           />;
@@ -365,6 +381,7 @@ export function RaiseDisputeButton({
 }
 
   );
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
   )})
 
@@ -377,3 +394,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/chore/fix-lint-and-merge

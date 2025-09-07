@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Review } from "@/types/reviews",
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 import { Button } from "@/components/ui/button";
@@ -44,6 +45,8 @@ setIsReporting (true)const success = await onReport (review.id, reportReason)set
       <div className=flex'>
         {[1, 2, 3, 4, 5].map(star => (
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 return (
       <div className='flex>;
         {[1, 2, 3, 4, 5].map(star => (;
@@ -110,6 +113,7 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {
         {[1, 2, 3, 4, 5].map(star => (
 origin/cursor/automate-test-improve-and-merge-code-2533
           <Star
+<<<<<<< HEAD
   const renderStars = (rating?: number) => {if (!rating) return null;
     return (<div className='flex>;
         {[1, 2, 3, 4, 5].map(star => (<Star;
@@ -122,6 +126,11 @@ import { Button } from @/components/ui/button",import { Badge } from "@/componen
     )}
   const getInitials = (name: string) => {return name;
       .split(' ).map(n => n[0]).join(')            className={`h-4 w-4 ${star <= rating ? fill-yellow-400 text-yellow-400" : "text-gray-300}`}
+=======
+            key={star}
+
+            className={`h-4 w-4 ${star <= rating ? 'fill-yellow-400 text-yellow-400' : 'text-gray-300'}`}
+>>>>>>> origin/chore/fix-lint-and-merge
           />;
 
 import {  Dialog,  Dialog,
@@ -150,6 +159,7 @@ import { Badge } from "@/components/ui/badge",
   DialogTitle,
           />
         ))}
+<<<<<<< HEAD
       </div>
     )
   }
@@ -176,6 +186,8 @@ import { Badge } from "@/components/ui/badge",
           {review.is_anonymous ? (
             <Avatar>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
       </div>
     )
@@ -220,14 +232,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           ) : (
             <Avatar>
               {review.reviewer_profile?.avatar_url ? (
-                <AvatarImage src={review.reviewer_profile.avatar_url} alt={review.reviewer_profile.display_name} />
-              ) : (
-                <AvatarFallback>
 
                   {review.reviewer_profile?.display_name ? 
 import { useState } from react,
 import { formatDistanceToNow } from "date-fns",
 import { Star, Flag, User } from 'lucide-react';
+<<<<<<< HEAD
       </div>;
     )}
   const getInitials = (name: string,) => {return name;
@@ -312,6 +322,8 @@ if (return null) {$2;
                   {review && review.reviewer_profile?.display_name ? ;
                     getInitials(review && review.reviewer_profile.display_name) : "??"}
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 import { Review } from "@/types/reviews",;
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
 import { Button } from "@/components/ui/button",;
@@ -410,6 +422,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               )}
             </Avatar>
           )}
+<<<<<<< HEAD
 <div>
             <div className='font-medium'>
               {review.is_anonymous
@@ -443,6 +456,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         review.quality_rating |
         review.timeliness_rating |
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
 <div>
             <div className='font-medium'>
@@ -491,6 +506,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   {review.timeliness_rating}/5;
                 </span>
               </Badge>
+<<<<<<< HEAD
             </div>;
           </div>;
         </div>;
@@ -518,6 +534,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </span>;
               </Badge>;
             )}
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
             )}'
               <Badge variant='outline className=flex gap - 1 items - center'>;
                 Communication;'
@@ -540,6 +558,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </span>;
               </Badge>)}
             {review.would_work_again !== undefined && (
+<<<<<<< HEAD
               <Badge;
                 variant={review.would_work_again ? 'default' : secondary}
                 className={`${review.would_work_again ? 'bg - green - 100 text - green - 800 hover:bg - green - 200' : bg - gray - 100 text - gray - 800 hover:bg - gray - 200}`}              >;
@@ -607,6 +626,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </Badge>)}
             {review.timeliness_rating && (<Badge variant="outline className=flex gap - 1 items - center">;
                 Timeliness;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
               <Badge
                 variant={review.would_work_again ? 'default' : secondary}
@@ -639,7 +660,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 Timeliness;"
                 <span className=ml - 1 text - yellow - 500>{review.timeliness_rating}/5</span>;
               </Badge>)}
-            {review.would_work_again !== undefined && (<Badge;</Badge>;
+            {review.would_work_again !== undefined && (
+              <Badge;
+
+              </Badge>
             )}
             {review.quality_rating && (
 "
@@ -749,6 +773,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>;
         </div>;
       )}
+<<<<<<< HEAD
 <div className='mt-3 flex justify-end'>
         <Dialog open={isReportDialogOpen} onOpenChange={setIsReportDialogOpen}>
           <DialogTrigger asChild>
@@ -756,6 +781,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <Flag className='h-3 w-3 mr-1' />
               Report
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
       <div className=mt-3 flex justify-end>
         <Dialog open={isReportDialogOpen} onOpenChange={setIsReportDialogOpen}>
@@ -783,6 +810,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <DialogHeader>
               <DialogTitle>Report Review</DialogTitle>
               <DialogDescription>
+<<<<<<< HEAD
 If you believe this review violates our community guidelines,
 origin/cursor/automate-test-improve-and-merge-code-2533
 
@@ -812,6 +840,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <DialogDescription>If you believe this review violates our community guidelines,If you believe this review violates our community guidelines,please provide details below.;
               </DialogDescription>;
             </DialogHeader>;
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
                 please provide details below.
               </DialogDescription>
             </DialogHeader>
@@ -858,10 +889,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </Button>;
               <Button;
                 onClick={handleReport}
+<<<<<<< HEAD
                 disabled={!reportReason.trim() || isReporting}
               >
                 {isReporting ? Submitting...' : 'Submit Report}
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
                 If you believe this review violates our community guidelines, please provide details below.
               </DialogDescription>
@@ -892,6 +926,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </DialogFooter>
           </DialogContent>
         </Dialog>
+<<<<<<< HEAD
       </div>
     </div>
   );
@@ -919,6 +954,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </DialogFooter>;
           </DialogContent>;
         </Dialog>;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
                 disabled={!reportReason && reportReason.trim() || isReporting}>;"
                 {isReporting ? 'Submitting...' : Submit Report}              </Button>                {isReporting ? Submitting... : "Submit Report"}
@@ -928,8 +965,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </Dialog>;
       </div>;
     </div>;
-  )<DialogTitle > Report Review</DialogTitle>;
-              <DialogDescription>If you believe this review violates our community guidelines,please provide details below.;
+  );
+
+              <DialogTitle > Report Review</DialogTitle>;
+              <DialogDescription>;
+                If you believe this review violates our community guidelines,
+                please provide details below.;
               </DialogDescription>;
             </DialogHeader>;
             <Textarea;'
@@ -957,12 +998,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </DialogContent>;
         </Dialog>;
       </div>;
+<<<<<<< HEAD
 }Timeliness <span className="ml-1 text-yellow-500 > {review.timeliness rating ;
 }/5</span> </Badge>)}{review.would work again !== undefined && (<Badge </Badge>)}</div> </div>) ;
 }<DialogTrigger asChild> <Button variant="ghost" size=sm className="text-muted-foreground"> <Flag className=h-3 w-3 mr-1 /> Report </Button> </DialogTrigger> <DialogContent> <DialogHeader> <DialogTitle>Report Review</DialogTitle> <DialogDescription> If you believe this review violates our community guidelines, please provide details below. </DialogDescription> </DialogHeader> <Textarea Cancel </Button> <Button onClick={handleReport ;
 }disabled= {!reportReason.trim () || isReporting ;
 }> </Button> </DialogFooter> </DialogContent> </Dialog> </div> </div>)}";
 }Timeliness <span className="ml - 1 text - yellow - 500 > {
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
     </div>);
 }</div>);
 }";"

@@ -1,43 +1,56 @@
+<<<<<<< HEAD
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+>>>>>>> origin/chore/fix-lint-and-merge
 
 
-import { supabase as supabaseClient  } from '@/utils/supabase/client';'
-import { TALENT_PROFILES as LOCAL } from '@/data/talent';'
+import { supabase as supabaseClient  } from '@/utils/supabase/client';
+import { TALENT_PROFILES as LOCAL } from '@/data/talent';
 
-import type { TalentProfile } from '@/utils/types/talent';'
+import type { TalentProfile } from '@/utils/types/talent';
 
 const hasSupabase = null;
+<<<<<<< HEAD
 function applyTranslations() {if (!lang |!item.translations) return { item, translated: false }
   const t = item.translations;
   const translated: Partial<TalentProfile> = {}
+=======
+function applyTranslations() {if (!lang |!item.translations) return { item, translated: false,}
+}
+
+const t = item.translations;
+
+const translated: Partial<TalentProfile    /> = ,
+}
+>>>>>>> origin/chore/fix-lint-and-merge
   if (t.title?.[lang]) translated.title = t.title[lang];
   if (t.summary?.[lang]) translated.summary = t.summary[lang];
   if (t.bio?.[lang]) translated.bio = t.bio[lang];
   if (t.category?.[lang]) translated.category = t.category[lang];
-return {"item": { ...item, ...translated },"translated": Object.keys(translated).length > 0}
+return {item: { ...item, ...translated },translated: Object.keys(translated).length > 0,}
 
-export default async function handler() {if (req.method !== 'GET') {return res.setHeader('Allow', 'GET').status(405).end('Method Not Allowed')}'
+export default async function handler() {if (req.method !== 'GET') {return res.setHeader('Allow', 'GET').status(405).end('Method Not Allowed')}
 
-const { slug, lang } = req.query as { "slug": string; lang?: string }
+const { slug, lang } = req.query as { slug: string; lang?: string }
   try {if (hasSupabase) {const { data, error } = await supabaseClient;
-        .from('talent_profiles').select('*').eq('slug', slug).single()if (error) throw error;'
+        .from('talent_profiles').select('*').eq('slug', slug).single()if (error) throw error;
 
 const { item, translated } = applyTranslations(data as unknown as TalentProfile;
         lang;
       )return res.status(200).json({ item, translated })}
-    const base = LOCAL.find(t => t.slug === slug) |null;
 
-const base = LOCAL.find(t => { return t.slug === slug) |null; }
+const base = LOCAL.find(t => t.slug === slug) |null;
 
-    if (!base) return res.status(404).json({ "error": 'Not found','
+    if (!base) return res.status(404).json({ error: 'Not found',}
 });
 
 const { item, translated } = applyTranslations(base, lang);
     return res && res.status(200).json({ item, translated });
-  } catch ("e": any) {
-}
-return res && res.status(500).json({ "error": e && e.message,;
+  } catch (e) {
+    return res && res.status(500).json({ error: e && e.message,}
 });
   }
+<<<<<<< HEAD
 import { supabase as supabaseClient } from '@/utils/supabase/client';
 import { TALENT_PROFILES as LOCAL } from '@/data/talent';
 import type { TalentProfile } from '@/utils/types/talent';
@@ -109,39 +122,97 @@ function apply_translations() {}
   // Check condition;
 if (return { item, translated: false }) {}
   $2;
+=======
+
+    return res.status(200).json({ item, translated })
+  } catch (e) {
+import {supabase, as, supabase_client} from '@/utils / supabase / client';
+import {TALENT_PROFILES, as, LOCAL} from '@/data / talent';
+import type { TalentProfile } from '@/utils / types / talent';
+;
+
+const has_supabase =;
+
+  !!process.env.NEXT_PUBLIC_SUPABASE_URL &&;
+  !!process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+
+const has_supabase  = !!process.env.NEXT_PUBLIC_SUPABASE_URL && !!process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;/**;
+>>>>>>> origin/chore/fix-lint-and-merge
  * apply_translations - Function description;
  */;
-function apply_translations() {// Check condition;
-}
-if (return { item, "translated": false
-}) {$2;
+function apply_translations() {// Check condition;}
+if (return { item, translated: false,}
+}) {$2;}
 }
   }}
+<<<<<<< HEAD
 
+=======
+    return res.set_header ('Allow', 'GET').status (405).end ('Method Not Allowed')}
+
+const { slug, lang } = req.query as { slug: string; lang?: string }try {// Check condition;}
+if ( {) {$2;}
+}
+
+const { data, error } = await supabase_client;
+        .from ('talent_profiles').select ('*').eq ('slug', slug).single ()// Check condition;
+if (throw error) {$2;}
+}
+
+const { item, translated } = apply_translations (data as unknown as TalentProfile,lang)return res.status (200).json ({ item, translated })}
+
+const base = LOCAL.find (t => t.slug === slug) || null;
+    if (return res.status (404).json ({ error: 'Not found',}
+})) {$2;}
+}
+
+const { item, translated } = apply_translations (base, lang)return res.status (200).json ({ item, translated })} catch (e: any) {return res.status (500).json ({ error: e.message },
+}
+
+>>>>>>> origin/chore/fix-lint-and-merge
 export default async /**;
  * handler - Function description;
  */;
-function handler() {// Check condition;
+function handler() {// Check condition;}
+if ( {) {$2;}
 }
+<<<<<<< HEAD
 if ( {) {$2;
 }
 
 if (throw error) {$2;
+=======
+    return res.set_header ('AllowGET').status (405).end ('Method Not Allowed')}
+
+const { slug, lang } = req.query as { slug: string, lang?: string }try {// Check condition;}
+if ( {) {$2;}
+}
+
+const { data, error } = await supabase_client.from ('talent_profiles').select ('*').eq ('slug', slug).single ()// Check condition;
+if (throw error) {$2;}
+>>>>>>> origin/chore/fix-lint-and-merge
 }
 
 const { item, translated } = apply_translations (data as unknown as TalentProfile, lang)return res.status (200).json ({ item, translated })}
 
 const base = LOCAL.find ((t) => t.slug === slug) || null;
-    if (return res.status (404).json ({ "error": 'Not found','
-})) {$2;
+    if (return res.status (404).json ({ error: 'Not found',}
+})) {$2;}
 }
-    const { item, translated } = apply_translations (base, lang)return res.status (200).json ({ item, translated })} catch (e: any) {return res.status (500).json ({ error: e.message })}}
 
+<<<<<<< HEAD
 
 const { item, translated } = apply_translations (base, lang);
     return res.status (200).json ({ item, translated });
 
+=======
+const { item, translated } = apply_translations (base, lang);
+    return res.status (200).json ({ item, translated });
+  } catch (e) {
+    return res.status (500).json ({ error: e.message,}
+>>>>>>> origin/chore/fix-lint-and-merge
 });
 }
 
 }
+

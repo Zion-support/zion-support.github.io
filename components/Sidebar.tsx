@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+import React, { useState } from 'react';
+import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
+=======
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -38,10 +44,17 @@ const navigation = {'Services': [;
     return () => {document.body.style.overflow = 'unset';
     }}, [isOpen])const handleDropdownToggle = (item: string) => {setActiveDropdown(activeDropdown === item ? null : item)}return (<AnimatePresence>;
       {isOpen && (<>;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 import React, { useState } from 'react';
+import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Building2, ChevronDown, ChevronRight } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
 import { useRouter } from 'next/router';
+<<<<<<< HEAD
 {/* Backdrop */}
           <motion.div
             initial={{ opacity: 0 }}
@@ -51,6 +64,8 @@ import { useRouter } from 'next/router';
             onClick={onClose}
           />
           {/* Sidebar */}
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 import {
   X,
   ChevronDown,
@@ -72,7 +87,11 @@ import {
   Phone,
   Mail,
   MapPin,
+<<<<<<< HEAD
   Building2
+=======
+  Building2,
+>>>>>>> origin/chore/fix-lint-and-merge
 } from 'lucide-react';
 const navigation = {
   'Services': [
@@ -83,6 +102,7 @@ const navigation = {
     { name: 'Cybersecurity', href: '/cybersecurity' },
     { name: 'Quantum Computing', href: '/quantum-computing' },
     { name: 'Blockchain', href: '/blockchain' },
+<<<<<<< HEAD
 } from 'lucide-react;
 const navigation = {
   Services': [
@@ -163,6 +183,92 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
 
   const handleDropdownToggle = (item: string) => {
     setActiveDropdown(activeDropdown === item ? null : item);
+=======
+    { name: 'IoT Solutions', href: '/iot-solutions' },
+  ],
+  'Solutions': [
+    { name: 'Enterprise Solutions', href: '/solutions/enterprise' },
+    { name: 'Startup Solutions', href: '/solutions/startup' },
+    { name: 'Digital Transformation', href: '/solutions/digital-transformation' },
+    { name: 'Custom Development', href: '/solutions/custom' },
+  ],
+  'Industries': [
+    { name: 'Healthcare', href: '/industries/healthcare' },
+    { name: 'Finance', href: '/industries/finance' },
+    { name: 'Education', href: '/industries/education' },
+    { name: 'Government', href: '/industries/government' },
+    { name: 'Manufacturing', href: '/industries/manufacturing' },
+    { name: 'Retail', href: '/industries/retail' },
+    { name: 'Agriculture', href: '/industries/agriculture' },
+    { name: 'Energy', href: '/industries/energy' },
+  ],
+  'Resources': [
+    { name: 'Blog', href: '/blog' },
+    { name: 'Documentation', href: '/docs' },
+    { name: 'API Documentation', href: '/docs/api' },
+    { name: 'Tutorials', href: '/tutorials' },
+    { name: 'White Papers', href: '/white-papers' },
+    { name: 'Webinars', href: '/webinars' },
+    { name: 'Training', href: '/training' },
+    { name: 'FAQ', href: '/faq' },
+  ],
+  'Company': [
+    { name: 'About Us', href: '/about' },
+    { name: 'Our Team', href: '/team' },
+    { name: 'Careers', href: '/careers' },
+    { name: 'Case Studies', href: '/case-studies' },
+    { name: 'News', href: '/news' },
+    { name: 'Partners', href: '/partners' },
+    { name: 'Contact', href: '/contact' },
+    { name: 'Privacy Policy', href: '/privacy' },
+  ],
+};
+const quickLinks = [
+  { name: 'Free Consultation', href: '/consultation' },
+  { name: 'Get Quote', href: '/quote' },
+  { name: 'Support', href: '/support' },
+];
+
+interface SidebarProps {}
+  isOpen: boolean;
+  onClose: () => void;
+}
+
+const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
+  const [openDropdowns, setOpenDropdowns] = useState<string[]>([]);
+
+  const navigation = {
+    'Services': [
+      { name: 'AI Services', href: '/ai-services' },
+      { name: 'IT Services', href: '/it-services' },
+      { name: 'Micro SaaS', href: '/micro-saas' },
+    ],
+    'Solutions': [
+      { name: 'Cloud Migration', href: '/solutions/cloud-migration' },
+      { name: 'Cybersecurity', href: '/solutions/cybersecurity' },
+      { name: 'Data Analytics', href: '/solutions/data-analytics' },
+    ],
+    'Industries': [
+      { name: 'Healthcare', href: '/industries/healthcare' },
+      { name: 'Finance', href: '/industries/finance' },
+      { name: 'Manufacturing', href: '/industries/manufacturing' },
+    ],
+  };
+
+  const quickLinks = [
+    { name: 'About Us', href: '/about' },
+    { name: 'Contact', href: '/contact' },
+    { name: 'Pricing', href: '/pricing' },
+    { name: 'Blog', href: '/blog' },
+  ];
+
+  const handleDropdownToggle = (title: string) => {
+    setOpenDropdowns(prev => 
+      prev.includes(title) 
+        ? prev.filter(item => item !== title)
+        : [...prev, title]
+    );
+>>>>>>> origin/chore/fix-lint-and-merge
   };
 
   return (
@@ -170,20 +276,23 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
       {isOpen && (
         <>
           {/* Backdrop */}
+<<<<<<< HEAD
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
             className="fixed inset-0 bg-black bg-opacity-50 z-40"
             onClick={onClose}
           />
-
-          
           {/* Sidebar */}
-          <motion.div
-            initial={{ x: -300 }}
-            animate={{ x: 0 }}
+          <motion.div;
+            initial={{ x: '-100%' }}
+            animate={{ x: 0 }}'
             exit={{ x: '-100%' }}
+<<<<<<< HEAD
             transition={{ type: 'tween', duration: 0.3 }}
             className="fixed top-0 left-0 h-full w-80 bg-white shadow-xl z-50 overflow-y-auto"
           >
@@ -204,21 +313,55 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                     <Building2 className=w-8 h-8 text-white" />
                   </div>
                   <span className="text-xl font-bold text-gray-900>Zion Tech Group</span>
+=======
+
+            transition={{ type: 'tween', duration: 0.3 }}
+            className="fixed top-0 left-0 h-full w-80 bg-white shadow-xl z-50 overflow-y-auto"
+            initial={{ x: '-100%' ;}}
+            animate={{ x: 0 ;}}
+            exit={{ x: '-100%' ;}}
+            transition={{ type: 'tween';, duration: 0.3 ;}}
+            className="fixed top-0 left-0 h-full w-80 bg-white shadow-xl z-50 overflow-y-auto"
+
+pr-12243
+
+          >
+
+            <div className="p-6">
+              {/* Header */}"
+              <div className="flex items-center justify-between mb-8">"
+                <div className="flex items-center space-x-2">"
+                  <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-2 rounded-lg">"
+                    <Building2 className="w-8 h-8 text-white" />
+                  </div>"
+                  <span className="text-xl font-bold text-gray-900">Zion Tech Group</span>
+>>>>>>> origin/chore/fix-lint-and-merge
                 </div>
-                <button
+                <button;
                   onClick={onClose}
+<<<<<<< HEAD
                   className="p-2 text-gray-500 hover:text-gray-700 transition-colors"
                 >
                   <X className=w-6 h-6" />
+=======
+
+                >
+
+                  <X className="w-6 h-6" />
+>>>>>>> origin/chore/fix-lint-and-merge
                 </button>
               </div>
-              {/* Navigation */}
+
               <nav className="space-y-4">
+<<<<<<< HEAD
                 {Object.entries(navigation).map(([title, links]) => (
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
                 {Object.entries(navigation).map(([title, links]) => (
                   <div key={title}>
-                    <button
+                    <button;
                       onClick={() => handleDropdownToggle(title)}
+<<<<<<< HEAD
                       className="flex items-center justify-between w-full text-left text-lg font-semibold text-gray-900 py-2 hover:text-blue-600 transition-colors"
                   <div key={title}>
                     <button
@@ -250,6 +393,10 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                 ))}
               </nav>;
                       className="flex items-center justify-between w-full text-left py-2 px-3 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-lg transition-colors
+=======
+
+                      className="flex items-center justify-between w-full text-left py-2 px-3 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-lg transition-colors"
+>>>>>>> origin/chore/fix-lint-and-merge
                     >
                       <span className=font-medium">{title}</span>
                       {openDropdowns.includes(title) ? (
@@ -279,10 +426,12 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                         </motion.div>
                       )}
                     </AnimatePresence>
+
                   </div>
                 ))}
               </nav>
 
+<<<<<<< HEAD
                     >;
 
                       <span>{title}</span>
@@ -316,11 +465,24 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
               <div className="mt-8 pt-8 border-t border-gray-200>
                 <h3 className=text-lg font-semibold text-gray-900 mb-4">Quick Links</h3>
                 <div className="space-y-2>
+=======
+pr-12243
+              {/* Quick Links */}
+              <div className="mt-8 pt-8 border-t border-gray-200">
+                <h3 className="text-lg font-semibold text-gray-900 mb-4">Quick Links</h3>
+
+                <div className="space-y-2">
+>>>>>>> origin/chore/fix-lint-and-merge
                   {quickLinks.map((link) => (
-                    <Link
+                    <Link;
                       key={link.name}
+<<<<<<< HEAD
                       href={link.href}
                       className=block text-gray-600 hover:text-blue-600 transition-colors py-1"
+=======
+                      href={link.href}"
+                      className="block text-gray-600 hover:text-blue-600 transition-colors py-1"
+>>>>>>> origin/chore/fix-lint-and-merge
                       onClick={onClose}
                     >
                       {link.name}
@@ -328,6 +490,10 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                   ))}
                 </div>
               </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
               {/* Contact Info */}
               <div className="mt-8 pt-8 border-t border-gray-200">
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">Contact Info</h3>
@@ -349,6 +515,10 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                   <LogOut className="h-5 w-5" />
                   <span className="font-medium">Sign Out</span>
                 </button>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
               </div>
             </div>
           </motion.div>
@@ -356,32 +526,51 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
       )}
     </AnimatePresence>
   );
+<<<<<<< HEAD
 }
+=======
+
+};
+>>>>>>> origin/chore/fix-lint-and-merge
 
 export default Sidebar;
+}
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
+<<<<<<< HEAD
     this.state = { hasError: false }
+=======
+    this.state = { hasError: false ;};
+>>>>>>> origin/chore/fix-lint-and-merge
   }
-  
   static getDerivedStateFromError(error) {
+<<<<<<< HEAD
     return { hasError: true }
+=======
+    return { hasError: true ;};
+>>>>>>> origin/chore/fix-lint-and-merge
   }
-  
   componentDidCatch(error, errorInfo) {
+<<<<<<< HEAD
     console.error('Error caught by boundary:, error, errorInfo);
+=======
+    console.error('Error caught by boundary: ';, error, errorInfo);
+>>>>>>> origin/chore/fix-lint-and-merge
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
+import React, { useState } from 'react';
+import Link from 'next / link';
+import { motion, AnimatePresence } from 'framer-motion';
+>>>>>>> 09b7f5b76b3a513eae3b15ab3d3ff5712b092513
+import { 
   X, 
   Building2, 
   Code, 
@@ -395,16 +584,23 @@ class ErrorBoundary extends React.Component {
   Factory,
   Truck,
   CreditCard,
+<<<<<<< HEAD
+  Phone,
+  Mail,
+  ExternalLink
+} from 'lucide-react';
+
+=======
+  LogOut,
   Phone,
   Mail,
   ExternalLink;
 } from lucide-react';
 interface SidebarProps {
-  isOpen: boolean, onClose: () => void
+  isOpen: boolean;, onClose: () => void;
 }
         : [...prev, title];
     );
-
 
   ];
   return (
@@ -413,6 +609,7 @@ interface SidebarProps {
         <>;
           {/* Backdrop */}
           <motion&& motion.div
+<<<<<<< HEAD
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -421,6 +618,16 @@ interface SidebarProps {
             exit={{ x: -300 }}
             transition={{ type: 'spring, damping: 25, stiffness: 200 }}
             className="fixed left-0 top-0 h-full w-80 bg-white shadow-xl z-50
+=======
+            initial={{ opacity: 0 ;}}
+            animate={{ opacity: 1 ;}}
+            exit={{ opacity: 0 ;}}
+            initial={{ x: -300 ;}}
+            animate={{ x: 0 ;}}
+            exit={{ x: -300 ;}}
+            transition={{ type: 'spring';, damping: 25;, stiffness: 200 ;}}
+            className="fixed left-0 top-0 h-full w-80 bg-white shadow-xl z-50"
+>>>>>>> origin/chore/fix-lint-and-merge
               {/* Header */}
               <div className=flex items-center justify-between mb-8">;
                 <div className="flex items-center space-x-2>;
@@ -460,10 +667,15 @@ interface SidebarProps {
                 </div>;
                 <div className=mt-4">;
                   <Link
+<<<<<<< HEAD
                     href="/contact
                     className=inline-flex items-center space-x-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+=======
+                    href="/contact"
+                    className="inline-flex items-center space-x-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover: bg-blue-700 transition-colors";
+>>>>>>> origin/chore/fix-lint-and-merge
 }
-const Sidebar: React.FC < SidebarProps> = ({ is_open, on_close }) => {
+const Sidebar: React.FC < SidebarProps> = ({ is_open;, on_close }) => {
   const [open_dropdowns, setOpenDropdowns] = useState < string[]>([]);
   const handleDropdownToggle = (title: string) =>: any {
     setOpenDropdowns (prev =>;
@@ -471,6 +683,7 @@ const Sidebar: React.FC < SidebarProps> = ({ is_open, on_close }) => {
         ? prev.filter (item => item !== title);
         : [...prev, title]);
   }
+<<<<<<< HEAD
     Services': [;
       { name: 'Web Development, href: /services / web - development', icon: Code },
       { name: 'Mobile Development, href: /services / mobile - development', icon: Smartphone },
@@ -491,14 +704,47 @@ const Sidebar: React.FC < SidebarProps> = ({ is_open, on_close }) => {
       { name: 'Healthcare, href: /industries / healthcare', icon: Heart },
       { name: 'Education, href: /industries / education', icon: GraduationCap }
     ]
+=======
+;
+  const navigation = {
+    'Services': [;
+      { name: 'Web Development';, href: '/services / web - development';, icon: Code ;},
+      { name: 'Mobile Development';, href: '/services / mobile - development';, icon: Smartphone ;},
+      { name: 'Cloud Solutions';, href: '/services / cloud - solutions';, icon: Cloud ;},
+      { name: 'Cybersecurity';, href: '/services / cybersecurity';, icon: Shield ;},
+      { name: 'Performance Optimization';, href: '/services / performance';, icon: Zap ;},
+    ],
+    'Solutions': [;
+      { name: 'Enterprise Solutions';, href: '/solutions / enterprise';, icon: Building2 ;},
+      { name: 'E - commerce Platforms';, href: '/solutions / ecommerce';, icon: ShoppingCart ;},
+      { name: 'Healthcare Technology';, href: '/solutions / healthcare';, icon: Heart ;},
+      { name: 'Educational Platforms';, href: '/solutions / education';, icon: GraduationCap ;},
+    ],
+    'Industries': [;
+      { name: 'Manufacturing';, href: '/industries / manufacturing';, icon: Factory ;},
+      { name: 'Logistics';, href: '/industries / logistics';, icon: Truck ;},
+      { name: 'Finance';, href: '/industries / finance';, icon: CreditCard ;},
+      { name: 'Healthcare';, href: '/industries / healthcare';, icon: Heart ;},
+      { name: 'Education';, href: '/industries / education';, icon: GraduationCap ;},
+    ],
+>>>>>>> origin/chore/fix-lint-and-merge
   }
   const quick_links = [;
+<<<<<<< HEAD
     { name: 'About Us, href: /about' },
     { name: 'Our Team, href: /team' },
     { name: 'Case Studies, href: /case - studies' },
     { name: 'Blog, href: /blog' },
     { name: 'Careers, href: /careers' },
     { name: 'Contact, href: /contact' }
+=======
+    { name: 'About Us';, href: '/about' ;},
+    { name: 'Our Team';, href: '/team' ;},
+    { name: 'Case Studies';, href: '/case - studies' ;},
+    { name: 'Blog';, href: '/blog' ;},
+    { name: 'Careers';, href: '/careers' ;},
+    { name: 'Contact';, href: '/contact' ;},
+>>>>>>> origin/chore/fix-lint-and-merge
   ];
   return (
     <AnimatePresence>;
@@ -506,6 +752,7 @@ const Sidebar: React.FC < SidebarProps> = ({ is_open, on_close }) => {
         <>;
           {/* Backdrop */}
           <motion.div;
+<<<<<<< HEAD
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -519,6 +766,21 @@ const Sidebar: React.FC < SidebarProps> = ({ is_open, on_close }) => {
             transition={{ type: 'spring, damping: 25, stiffness: 200 }}
             className=fixed left - 0 top - 0 h - full w - 80 bg - white shadow - xl z - 50";
             <div className="p - 6>;
+=======
+            initial={{ opacity: 0 ;}}
+            animate={{ opacity: 1 ;}}
+            exit={{ opacity: 0 ;}}
+            className="fixed inset - 0 bg - black bg - opacity - 50 z - 40";
+            on_click={on_close}
+          />;
+          <motion.div;
+            initial={{ coordinate_x: -300 ;}}
+            animate={{ coordinate_x: 0 ;}}
+            exit={{ coordinate_x: -300 ;}}
+            transition={{ type: 'spring';, damping: 25;, stiffness: 200 ;}}
+            className="fixed left - 0 top - 0 h - full w - 80 bg - white shadow - xl z - 50";
+            <div className="p - 6">;
+>>>>>>> origin/chore/fix-lint-and-merge
               {/* Header */}
               <div className=flex items - center justify - between mb - 8">;
                 <div className="flex items - center space - x-2>;
@@ -554,12 +816,15 @@ const Sidebar: React.FC < SidebarProps> = ({ is_open, on_close }) => {
                     </Link>))}
                 </div>;
               </div>;
+<<<<<<< HEAD
                     >
                       {link.name}
                     </Link>))}
                 </div>
               </div>
               {/* Contact Info */}
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
               {/* Contact Info */}
               <div className="mt - 8 pt - 8 border - t border - gray - 200">;
                 <h3 className="text - lg font - semibold text - gray - 900 mb - 4">Contact Us</h3>;
@@ -590,17 +855,103 @@ const Sidebar: React.FC < SidebarProps> = ({ is_open, on_close }) => {
 }
 export default Sidebar;
 
+import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
+  X, 
+  ChevronDown, 
+  Home, 
+  Users, 
+  Briefcase, 
+  Phone, 
+  Mail, 
+  MapPin,
+  Building2,
+  User,
+  LogOut,
+  Search
+} from 'lucide-react';
 
+<<<<<<< HEAD
 }
 import React from react';
 import { Home, Settings, User, LogOut } from 'lucide-react;
 
+=======
+const navigation = {
+  'Services': [
+    { name: 'AI Services';, href: '/ai-services' ;},
+    { name: 'IT Services';, href: '/it-services' ;},
+    { name: 'Micro SaaS';, href: '/micro-saas' ;},
+    { name: 'Consulting';, href: '/consulting' ;}
+  ],
+  'Solutions': [
+    { name: 'Enterprise';, href: '/enterprise' ;},
+    { name: 'Startup';, href: '/startup' ;},
+    { name: 'Industry';, href: '/industries' ;}
+  ],
+  'Company': [
+    { name: 'About';, href: '/about' ;},
+    { name: 'Team';, href: '/team' ;},
+    { name: 'Careers';, href: '/careers' ;},
+    { name: 'Contact';, href: '/contact' ;}
+  ]
+};
 
+import React from 'react';
+import { Home, Settings, User, LogOut } from 'lucide-react';
+>>>>>>> origin/chore/fix-lint-and-merge
+
+>>>>>>> 09b7f5b76b3a513eae3b15ab3d3ff5712b092513
 interface SidebarProps {
   isOpen: boolean;
   onClose: () => void;
 }
 
+<<<<<<< HEAD
+const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
+  const [openDropdowns, setOpenDropdowns] = useState<string[]>([]);
+
+  const handleDropdownToggle = (title: string) => {
+    setOpenDropdowns(prev =>
+      prev.includes(title)
+        ? prev.filter(item => item !== title)
+        : [...prev, title]
+    );
+  };
+
+  const navigation = {
+    'Services': [
+      { name: 'Web Development', href: '/services/web-development', icon: Code },
+      { name: 'Mobile Development', href: '/services/mobile-development', icon: Smartphone },
+      { name: 'Cloud Solutions', href: '/services/cloud-solutions', icon: Cloud },
+      { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield },
+      { name: 'Performance Optimization', href: '/services/performance', icon: Zap },
+    ],
+    'Solutions': [
+      { name: 'Enterprise Solutions', href: '/solutions/enterprise', icon: Building2 },
+      { name: 'E-commerce Platforms', href: '/solutions/ecommerce', icon: ShoppingCart },
+      { name: 'Healthcare Technology', href: '/solutions/healthcare', icon: Heart },
+      { name: 'Educational Platforms', href: '/solutions/education', icon: GraduationCap },
+    ],
+    'Industries': [
+      { name: 'Manufacturing', href: '/industries/manufacturing', icon: Factory },
+      { name: 'Logistics', href: '/industries/logistics', icon: Truck },
+      { name: 'Finance', href: '/industries/finance', icon: CreditCard },
+      { name: 'Healthcare', href: '/industries/healthcare', icon: Heart },
+      { name: 'Education', href: '/industries/education', icon: GraduationCap },
+    ],
+  };
+
+  const quickLinks = [
+    { name: 'About Us', href: '/about' },
+    { name: 'Our Team', href: '/team' },
+    { name: 'Case Studies', href: '/case-studies' },
+    { name: 'Blog', href: '/blog' },
+    { name: 'Careers', href: '/careers' },
+    { name: 'Contact', href: '/contact' },
+  ];
+=======
+<<<<<<< HEAD
 const navigationItems = [
   {
     label: Home',
@@ -651,19 +1002,99 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
         : [...prev, label]
     );
   }
+=======
+const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 09b7f5b76b3a513eae3b15ab3d3ff5712b092513
 
   return (
     <AnimatePresence>
       {isOpen && (
         <>
+<<<<<<< HEAD
+          {/* Backdrop */}
+=======
+>>>>>>> 09b7f5b76b3a513eae3b15ab3d3ff5712b092513
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
+<<<<<<< HEAD
+            className="fixed inset-0 bg-black bg-opacity-50 z-40"
+            onClick={onClose}
+          />
+          {/* Sidebar */}
+          <motion.div
+            initial={{ x: '-100%' }}
+            animate={{ x: 0 }}
+            exit={{ x: '-100%' }}
+            className="fixed left-0 top-0 h-full w-80 bg-white shadow-xl z-50 overflow-y-auto"
+          >
+            <div className="p-6">
+              {/* Header */}
+              <div className="flex items-center justify-between mb-8">
+                <div className="flex items-center space-x-2">
+                  <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-2 rounded-lg">
+                    <Building2 className="w-8 h-8 text-white" />
+                  </div>
+                  <span className="text-xl font-bold text-gray-900">Zion Tech Group</span>
+                </div>
+                <button
+                  onClick={onClose}
+                  className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
+                >
+                  <X className="w-6 h-6" />
+                </button>
+              </div>
+
+              {/* Navigation */}
+              <nav className="space-y-4">
+                {Object.entries(navigation).map(([title, links]) => (
+                  <div key={title}>
+                    <button
+                      onClick={() => handleDropdownToggle(title)}
+                      className="flex items-center justify-between w-full text-left text-lg font-semibold text-gray-900 hover:text-blue-600 transition-colors py-2"
+                    >
+                      {title}
+                      <motion.div
+                        animate={{ rotate: openDropdowns.includes(title) ? 180 : 0 }}
+                        transition={{ duration: 0.2 }}
+                      >
+                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                        </svg>
+                      </motion.div>
+                    </button>
+                    <AnimatePresence>
+                      {openDropdowns.includes(title) && (
+                        <motion.div
+                          initial={{ height: 0, opacity: 0 }}
+                          animate={{ height: 'auto', opacity: 1 }}
+                          exit={{ height: 0, opacity: 0 }}
+                          className="overflow-hidden"
+                        >
+                          <div className="ml-4 space-y-2 mt-2">
+                            {links.map((link) => (
+                              <Link
+                                key={link.name}
+                                href={link.href}
+                                className="flex items-center space-x-3 text-gray-600 hover:text-blue-600 transition-colors py-1"
+                                onClick={onClose}
+                              >
+                                <link.icon className="w-4 h-4" />
+                                <span>{link.name}</span>
+                              </Link>
+                            ))}
+                          </div>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+=======
             className=fixed inset-0 bg-black bg-opacity-50 z-40"
             onClick={onClose}
           />
           
+          {/* Sidebar */}
           <motion.div
             initial={{ x: '-100% }}
             animate={{ x: 0 }}
@@ -671,6 +1102,7 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
             transition={{ type: 'tween, duration: 0.3 }}
             className="fixed left-0 top-0 h-full w-80 bg-white shadow-xl z-50 overflow-y-auto
           >
+<<<<<<< HEAD
             <div className=p-6">
               <div className="flex items-center justify-between mb-8>
                 <h2 className=text-xl font-bold text-gray-900">Menu</h2>
@@ -723,10 +1155,53 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
                         ))}
                       </div>
                     )}
+>>>>>>> 09b7f5b76b3a513eae3b15ab3d3ff5712b092513
                   </div>
                 ))}
               </nav>
 
+<<<<<<< HEAD
+              {/* Quick Links */}
+              <div className="mt-8 pt-8 border-t border-gray-200">
+                <h3 className="text-lg font-semibold text-gray-900 mb-4">Quick Links</h3>
+                <div className="space-y-2">
+                  {quickLinks.map((link) => (
+                    <Link
+                      key={link.name}
+                      href={link.href}
+                      className="block text-gray-600 hover:text-blue-600 transition-colors py-1"
+                      onClick={onClose}
+                    >
+                      {link.name}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+
+              {/* Contact Info */}
+              <div className="mt-8 pt-8 border-t border-gray-200">
+                <h3 className="text-lg font-semibold text-gray-900 mb-4">Contact Us</h3>
+                <div className="space-y-3">
+                  <div className="flex items-center space-x-3 text-gray-600">
+                    <Phone className="w-4 h-4" />
+                    <span>+1 302 464 0950</span>
+                  </div>
+                  <div className="flex items-center space-x-3 text-gray-600">
+                    <Mail className="w-4 h-4" />
+                    <span>kleber@ziontechgroup.com</span>
+                  </div>
+                </div>
+                <div className="mt-4">
+                  <Link
+                    href="/contact"
+                    className="inline-flex items-center space-x-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                    onClick={onClose}
+                  >
+                    <span>Get Started</span>
+                    <ExternalLink className="w-4 h-4" />
+                  </Link>
+                </div>
+=======
               <div className="mt-8 pt-8 border-t border-gray-200>
                 <div className=space-y-2 text-sm text-gray-600">
                   <div className="flex items-center>
@@ -740,13 +1215,34 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
                   <div className="flex items-center>
                     <Mail className=h-4 w-4 mr-2" />
                     <span>kleber@ziontechgroup.com</span>
+=======
+            <div className="p-6">
+              <div className="flex items-center justify-between mb-8">
+
+              </nav>
+
+              <div className="mt-8 pt-8 border-t border-gray-200">
+
+>>>>>>> origin/chore/fix-lint-and-merge
                   </div>
                 </div>
+>>>>>>> 09b7f5b76b3a513eae3b15ab3d3ff5712b092513
               </div>
             </div>
           </motion.div>
         </>
       )}
     </AnimatePresence>
+<<<<<<< HEAD
+  );
+};
+
+export default Sidebar;
+=======
+<<<<<<< HEAD
   );
 }
+=======
+  );
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 09b7f5b76b3a513eae3b15ab3d3ff5712b092513

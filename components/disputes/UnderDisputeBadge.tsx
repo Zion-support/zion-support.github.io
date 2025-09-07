@@ -1,4 +1,5 @@
 import useSWR from 'swr';
+<<<<<<< HEAD
 const fetcher = (url: string) => fetch(url).then(r => r.json()),
 
 export function useProjectDisputeStatus(projectId: string): { hasActiveDispute: boolean, isLoading: boolean } {
@@ -14,8 +15,21 @@ export function useProjectDisputeStatus(projectId: string): { hasActiveDispute: 
   const { data, error } = useSWR($2);
   const hasActiveDispute = $2;
   return { hasActiveDispute, isLoading: !data && !error }
-}
+=======
 
+const fetcher = null;
+
+const fetcher = (url: string) => fetch(url).then(r => r.json());
+
+export function useProjectDisputeStatus(projectId: string): {
+  hasActiveDispute: boolean;
+>>>>>>> origin/chore/fix-lint-and-merge
+}
+  isLoading: boolean;}
+} {const { data, error }  = useSWR(projectId ? `/api/disputes` : null, fetcher)const hasActiveDispute = !!data?.disputes?.some((d: any) =>;
+      d && d.projectId === projectId &&;
+
+<<<<<<< HEAD
 export default function UnderDisputeBadge({ projectId }: { projectId: string }) {
   const { hasActiveDispute } = useProjectDisputeStatus(projectId);
   if (!hasActiveDispute) return null;
@@ -75,15 +89,17 @@ if (return null) {$2;
   const hasActiveDispute = !!data?.disputes?.some(;
     (d: any) =>;
       d && d.projectId === projectId &&;'
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
       (d && d.status === 'Open' || d && d.status === 'Under Review');
   );
-return { hasActiveDispute, "isLoading": !data && !error,;
+  return { hasActiveDispute, isLoading: !data && !error}
 };
 
-export default function UnderDisputeBadge(): any ({;
-  }
-  projectId,;
+export default function UnderDisputeBadge(): any ({;}
+  projectId,;}
 }: {;
+<<<<<<< HEAD
 
   }
 
@@ -148,9 +164,19 @@ if (return null) {$2;
 
 export default function UnderDisputeBadge(): any ({ projectId }: { projectId: string }) {;
   const { hasActiveDispute } = useProjectDisputeStatus(projectId);
+=======
+}
+  projectId}
+}: {;}
+  projectId: string;}
+}) {;}
+}
+const { hasActiveDispute } = useProjectDisputeStatus(projectId);
+>>>>>>> origin/chore/fix-lint-and-merge
   if (!hasActiveDispute) return null;
-return (;
+  return (
 
+<<<<<<< HEAD
 }
   );
     <span className='inline-flex items-center gap-1 px-2 py-1 rounded bg-yellow-100 text-yellow-800 border border-yellow-300 text-xs'>
@@ -214,3 +240,17 @@ if (return null) {
 
 "
 "
+=======
+    <span className='inline-flex items-center gap-1 px-2 py-1 rounded bg-yellow-100 text-yellow-800 border border-yellow-300 text-xs'    />
+      Under Dispute;
+    </span>
+  );
+  return (
+    <span className=\"inline-flex items-center gap-1 px-2 py-1 rounded bg-yellow-100 text-yellow-800 border border-yellow-300 text-xs\"    />
+      Under Dispute;
+    </span>
+);
+}
+
+"
+>>>>>>> origin/chore/fix-lint-and-merge

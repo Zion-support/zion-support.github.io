@@ -71,14 +71,16 @@
   },
   {
     "route": "/_document",
+<<<<<<< HEAD
+<<<<<<< HEAD
+    "title": "Zion Tech Group - Pioneering Autonomous Business Operations",
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
     "title": "Zion Tech Group - Pioneering Autonomous Business Operations",
     "h1": ""
     "title": "Zion Tech Group - Pioneering Autonomous Business Operations",    "h1": ""
     "title": "Zion Tech Group - Pioneering Autonomous Business Operations",    "h1": ""
-    "title": "Zion Tech Group - Pioneering Autonomous Business Operations",
-    "h1": ""
-    "title": "Zion Tech Group - Pioneering Autonomous Business Operations",    "h1": ""
-    "title": "Zion Tech Group - Pioneering Autonomous Business Operations",    "h1": ""
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   },
   {
     "route": "/about",
@@ -417,8 +419,12 @@
   },
   {
     "route": "/",
+<<<<<<< HEAD
+<<<<<<< HEAD
     "title": "",
     "h1": ""
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
     "title": "",
     "h1": ""
   },
@@ -426,6 +432,7 @@
     "h1": ""  },
     "title": "",
     "h1": ""  },
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   {
     "route": "/innovative-services-showcase-2025",
     "title": "Innovative Services Showcase 2025 | Zion Tech Group",
@@ -617,11 +624,23 @@
     "h1": "Resources"
   },
   {
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     "route": "/revolutionary-2025-services-showcase",
     "title": "Revolutionary 2025 Services Showcase | Zion Tech Group",
     "h1": "Revolutionary 2025 Services"
   },
   {
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-25a3
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     "route": "/revolutionary-2028-pricing",
     "title": "2028 Revolutionary Pricing - Zion Tech Group",
     "h1": ""
@@ -3961,4 +3980,8 @@
     "title": "",
     "h1": "Founder Course: Launch Your Zion Instance"
   }
+<<<<<<< HEAD
 ]
+=======
+]
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

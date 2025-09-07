@@ -1,17 +1,51 @@
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/chore/fix-lint-and-merge
 #!/usr/bin/env node;
 const fs = require('fs');
 const path = require(path');
 const { execSync } = require('child_process');
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge
 class EnhancedAppOptimizer {}
   constructor() {}
     this.projectRoot = process.cwd();
 
     dirs.forEach(dir => {})
       const dirPath = path.join(this.projectRoot, dir;);
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/chore/fix-lint-and-merge
       if () {}
         fs.mkdirSync(dirPath, { "recursive: true })}
     })}"
@@ -21,11 +55,40 @@ class EnhancedAppOptimizer {}
 
     const timestamp = new Date().toISOString(})
 });
+<<<<<<< HEAD
 
     console.log(logMessage);
     try {}
 
 
+=======
+    const logMessage = `[${timestamp}] [${level}] ${message};;`
+    console.log(logMessage);
+    try {}
+<<<<<<< HEAD
+      fs.appendFileSync(this.logFile, logMessage + '\n')} catch(error) {}
+      console.error('Failed to write to log "file": ', error.message)};
+  };
+  async optimizePerformance() {}
+    this.log('Starting performance optimization...');
+    const optimizations = [];
+<<<<<<< HEAD
+    try {}
+      // Analyze bundle size;
+      const bundleAnalysis = execSync('npm run "build": analyze', { })
+        "cwd": this.projectRoot,
+=======
+
+    try {}
+      // Analyze bundle size;
+      const bundleAnalysis = execSync('npm run "build": analyze', { })
+        "cwd": this.projectRoot, 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+        "stdio": 'pipe',
+        "timeout": 120000;
+      };);
+      optimizations.push({ "type": 'bundle-analysis', "status": 'completed' }
+>>>>>>> origin/chore/fix-lint-and-merge
 });
       this.log(Bundle analysis completed')} catch(error) {}
       this.log(`Bundle analysis "failed: ${error.message}`, 'WARN)}
@@ -60,7 +123,14 @@ class EnhancedAppOptimizer {}
   async optimizeSEO() {}
     this.log('Starting SEO optimization...);
     const seoOptimizations = [];
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/chore/fix-lint-and-merge
     // Generate sitemap;
     try {}
       const sitemapContent = this.generateSitemap(;);
@@ -95,9 +165,26 @@ class EnhancedAppOptimizer {}
   async optimizeSecurity() {}
     this.log(Starting security optimization...');
     const securityOptimizations = [];
+<<<<<<< HEAD
 
         "stdio: 'pipe,
         timeout": 60000;
+=======
+<<<<<<< HEAD
+    // Run security audit;
+    try {}
+      execSync('npm audit --audit-level=moderate', { })
+        "cwd": this.projectRoot,
+=======
+
+    // Run security audit;
+    try {}
+      execSync('npm audit --audit-level=moderate', { })
+        "cwd": this.projectRoot, 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+        "stdio": 'pipe',
+        "timeout": 60000;
+>>>>>>> origin/chore/fix-lint-and-merge
       }
 });
       securityOptimizations.push({ "type: security-audit', status": 'completed }
@@ -131,17 +218,31 @@ class EnhancedAppOptimizer {}
   async optimizeAccessibility() {}
     this.log('Starting accessibility optimization...);
     const accessibilityOptimizations = [];
+<<<<<<< HEAD
 
     // Check for alt text in images;
     try {}
       const componentsDir = path.join(this.projectRoot, 'components;);
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+    // Check for alt text in images;
+    try {}
+      const pagesDir = path.join(this.projectRoot, 'pages';);
+      const componentsDir = path.join(this.projectRoot, 'components';);
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
         const imageFiles = this.findImageFiles(publicDir})
 
         const pages = this.findPageFiles(pagesDir})
 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       let imageCount = ;0;
       let altTextCount = ;0;
+<<<<<<< HEAD
 
         altTexts": altTextCount,
         "coverage: imageCount > 0 ? Math.round((altTextCount / imageCount) * 100) : 100;
@@ -155,6 +256,60 @@ class EnhancedAppOptimizer {}
     const files = [];
     const items = fs.readdirSync(dir;);
 
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+      [pagesDir, componentsDir].forEach(dir => {})
+          const files = this.findReactFiles(dir) {}
+<<<<<<< HEAD
+    ) {}
+          const files = this.findReactFiles(dir}
+});
+          files.forEach(file => {})
+            const content = fs.readFileSync(file, 'utf8';);
+            const images = content.match(/<img[^>]*>/g) || [];
+            imageCount += images.length;
+            const altTexts = content.match(/alt\s*=\s*["'][^"']*["']/g) || [];
+            altTextCount += altTexts.length})};
+      }
+});
+<<<<<<< HEAD
+      accessibilityOptimizations.push({ })
+        "type": 'alt-text-check',
+        "status": 'completed',
+        "images": imageCount,
+=======
+
+      accessibilityOptimizations.push({ })
+        "type": 'alt-text-check', 
+        "status": 'completed', 
+        "images": imageCount, 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+        "altTexts": altTextCount,
+        "coverage": imageCount > 0 ? Math.round((altTextCount / imageCount) * 100) : 100;
+      }
+});
+      this.log(`Alt text "coverage": ${altTextCount}/${imageCount} images`)} catch(error) {`}
+      this.log(`Accessibility check "failed": ${error.message}`, 'WARN')};
+    this.results.accessibility = { "optimizations": accessibilityOptimizations };
+    return accessibilityOptimizations};
+  findImageFiles(dir) {}
+    const files = [];
+    const items = fs.readdirSync(dir;);
+<<<<<<< HEAD
+    items.forEach(item => {})
+      const fullPath = path.join(dir, item;);
+      const stat = fs.statSync(fullPath;);
+=======
+    
+    items.forEach(item => {})
+      const fullPath = path.join(dir, item;);
+      const stat = fs.statSync(fullPath;);
+      
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/chore/fix-lint-and-merge
       if () {}
         files.push(...this.findImageFiles(fullPath))} else if (/\.(jpg|jpeg|png|gif|webp|svg)$/i.test(item)) {}
         files.push(fullPath)}
@@ -165,7 +320,23 @@ class EnhancedAppOptimizer {}
     })}
     return files}
   findPageFiles(dir) {}
+<<<<<<< HEAD
 
+=======
+    const files = [];
+    const items = fs.readdirSync(dir;);
+<<<<<<< HEAD
+    items.forEach(item => {})
+      const fullPath = path.join(dir, item;);
+      const stat = fs.statSync(fullPath;);
+=======
+    
+    items.forEach(item => {})
+      const fullPath = path.join(dir, item;);
+      const stat = fs.statSync(fullPath;);
+      
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/chore/fix-lint-and-merge
       if () {}
         files.push(...this.findPageFiles(fullPath))} else if (item.endsWith('.tsx) || item.endsWith(.jsx')) {}
         files.push(fullPath)}
@@ -176,7 +347,23 @@ class EnhancedAppOptimizer {}
     })}
     return files}
   findReactFiles(dir) {}
+<<<<<<< HEAD
 
+=======
+    const files = [];
+    const items = fs.readdirSync(dir;);
+<<<<<<< HEAD
+    items.forEach(item => {})
+      const fullPath = path.join(dir, item;);
+      const stat = fs.statSync(fullPath;);
+=======
+    
+    items.forEach(item => {})
+      const fullPath = path.join(dir, item;);
+      const stat = fs.statSync(fullPath;);
+      
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/chore/fix-lint-and-merge
       if () {}
         files.push(...this.findReactFiles(fullPath))} else if (item.endsWith('.tsx) || item.endsWith(.jsx') || item.endsWith('.ts) || item.endsWith(.js')) {}
         files.push(fullPath)}
@@ -187,9 +374,42 @@ class EnhancedAppOptimizer {}
     })}
     return files}
   generateSitemap() {}
+<<<<<<< HEAD
 
     ];
 
+=======
+    const pages = ['/',]
+      '/about',
+      '/services',
+      '/ai-services',
+      '/it-services',
+      '/micro-saas',
+      '/cloud-devops',
+      '/cybersecurity',
+      '/contact',
+      '/pricing',
+      '/careers',
+      '/blog',
+      '/faq',
+      '/privacy',
+      '/terms'
+    ];
+<<<<<<< HEAD
+    const baseUrl = '"https": //ziontechgroup.com;';
+    const currentDate = new Date().toISOString(;);
+    let sitemap = '<?xml version="1.0" encoding="UTF-8"?>\;n;';
+    sitemap += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
+=======
+
+    const baseUrl = '"https": //ziontechgroup.com;';
+    const currentDate = new Date().toISOString(;);
+
+    let sitemap = '<?xml version="1.0" encoding="UTF-8"?>\;n;';
+    sitemap += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/chore/fix-lint-and-merge
     pages.forEach(page => {})
       sitemap +=   <url>\n';
       sitemap += `    <loc>${baseUrl}${page}</loc>\n`;`
@@ -198,13 +418,29 @@ class EnhancedAppOptimizer {}
       sitemap +=     <priority>0.8</priority>\n';
       sitemap += '  </url>\n}
 });
+<<<<<<< HEAD
 
     sitemap += </urlset>';
     return sitemap}
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+    sitemap += '</urlset>';
+    return sitemap};
+>>>>>>> origin/chore/fix-lint-and-merge
   generateRobotsTxt() {}
     return "User-agent: *;
 Allow: /
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/chore/fix-lint-and-merge
 Sitemap: https://ziontechgroup.com/sitemap.xml;
 # Crawl-delay for respectful crawling;
 Crawl-delay: 1;
@@ -220,13 +456,28 @@ Disallow: /private/"}
       await this.optimizeSEO();
       await this.optimizeSecurity();
       await this.optimizeAccessibility();
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/chore/fix-lint-and-merge
       // Save results;
       const reportFile = path.join(this.projectRoot, automation', 'logs, enhanced-app-optimizer-report.json';);
       fs.writeFileSync(reportFile, JSON.stringify(this.results, null, 2));
       this.log(`Optimization report saved to ${reportFile}`);
+<<<<<<< HEAD
 
       this.log('Enhanced App Optimizer completed successfully!);
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+      this.log('Enhanced App Optimizer completed successfully!');
+>>>>>>> origin/chore/fix-lint-and-merge
       return this.results} catch(error) {}
       this.log(`Enhanced App Optimizer "failed": ${error.message}`, ERROR');
       throw error}
@@ -236,12 +487,25 @@ if ( {})
   const optimizer = new EnhancedAppOptimizer) {}
      {}
   const optimizer = new EnhancedAppOptimizer}(;);
+<<<<<<< HEAD
   optimizer.run().catch(console.error)}
 
 module.exports = EnhancedAppOptimizer;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 
+=======
+  optimizer.run().catch(console.error)};
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+module.exports = EnhancedAppOptimizer;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
 module.exports = EnhancedAppOptimizer;
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
@@ -250,13 +514,15 @@ module.exports = EnhancedAppOptimizer;
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
+
+module.exports = EnhancedAppOptimizer;
 =======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
-
-module.exports = EnhancedAppOptimizer;
-
-module.exports = EnhancedAppOptimizer;
-module.exports = EnhancedAppOptimizer;
           const files = this.findReactFiles(dir})
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> origin/chore/fix-lint-and-merge

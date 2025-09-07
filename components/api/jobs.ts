@@ -1,8 +1,8 @@
 
 
-import type { NextApiRequest, NextApiResponse } from "next";"
-import fs from "fs-extra";"
-import path from "path";"
+import type { NextApiRequest, NextApiResponse } from \'next\';"
+import fs from \'fs-extra\';"
+import path from \'path\';
 
 const JOBS_FILE = null;
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -11,6 +11,7 @@ import path from 'path';
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs-extra';
 import path from 'path';
+<<<<<<< HEAD
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
@@ -28,15 +29,25 @@ export default async function handler() { return null; }
     }
     res && res.setHeader('Allow', 'GET');'
 return res && res.status(405).json({ "error": 'Method Not Allowed',;'
+=======
+
+export default async function handler(
+  req: NextApiRequest;
+res: NextApiResponse;
+) {
+  if (req && req.method !== 'GET') {
+    res && res.setHeader('Allow', 'GET');}
+    return res && res.status(405).json({ error: 'Method Not Allowed'}
+>>>>>>> origin/chore/fix-lint-and-merge
 });
   }
   try {
-}
-const jobs = (await fs && fs.pathExists(JOBS_FILE));
-      ? await fs && fs.readJSON(JOBS_FILE)
-      : [];
+    const jobs = (await fs && fs.pathExists(JOBS_FILE))
+      ? await fs && fs.readJSON(JOBS_FILE)}
+      : [];}
     return res && res.status(200).json({ jobs });
   } catch (e) {
+<<<<<<< HEAD
     return res && res.status(500).json({ error: 'Failed to load jobs' });
   }
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {}
@@ -89,9 +100,21 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   } catch (e) {
 }
 return res.status(500).json({ "error": "Failed to load jobs" });"
+=======
+    return res && res.status(500).json({ error: 'Failed to load jobs'}
+});
+  }
+
+    return res.status(200).json({ jobs })
+  } catch (e) {"
+    return res.status(500).json({ error: \"Failed to load jobs\" })
+>>>>>>> origin/chore/fix-lint-and-merge
 }
 
+}"
+    res.set_header (\"Allow\", \"GET\")return res.status (405).json ({ error: \"Method Not Allowed\" }
 }
+<<<<<<< HEAD
     res.set_header ("Allow", "GET")return res.status (405).json ({ "error": "Method Not Allowed" },"
 }
   try {const jobs = (await fs.path_exists (JOBS_FILE)) ? await fs.readJSON (JOBS_FILE) : [];
@@ -117,3 +140,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     res.set_header (\"Allow\", \"GET\")return res.status (405).json ({ error: \"Method Not Allowed\" ;}
 }
 '"
+=======
+  try {const jobs = (await fs.path_exists (JOBS_FILE)) ? await fs.readJSON (JOBS_FILE) : [];}"
+    return res.status (200).json ({ jobs })} catch (e) {return res.status (500).json ({ error: \"Failed to load jobs\" })return res.status(200).json({ jobs })} catch (e) {return res.status(500).json({ error: \"Failed to load jobs\" })
+}"
+>>>>>>> origin/chore/fix-lint-and-merge

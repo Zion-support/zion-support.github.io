@@ -26,10 +26,8 @@ pr-12325
   }
 }
 import React from 'react';
-
 interface OnsiteSupportProps {
   // Add props here as needed
-
 
 }
 
@@ -41,10 +39,15 @@ export default function OnsiteSupport({ }: OnsiteSupportProps) {
     </div>
   );
 
-
 }
 
+:src.pages.disabled/OnsiteSupport.jsx
 }
+}
+ursor/add-new-services-and-deploy-updates-0462
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
 :src.pages.disabled/OnsiteSupport.jsx
 }
 }
@@ -52,10 +55,7 @@ export default function OnsiteSupport({ }: OnsiteSupportProps) {
 }
 }
 
-
-
-
-
+}
 
 :src.pages.disabled/OnsiteSupport.jsx
 }
@@ -63,4 +63,3 @@ export default function OnsiteSupport({ }: OnsiteSupportProps) {
 }
 }
 }
-:temp_exclude/src.pages.disabled/OnsiteSupport.jsx;

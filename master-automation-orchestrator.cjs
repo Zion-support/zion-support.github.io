@@ -3,6 +3,7 @@
  * Master Automation Orchestrator
  * Orchestrates all automation scripts, tests, improvements, and git operations
  */
+<<<<<<< HEAD
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -183,3 +184,6 @@ const orchestrator = new MasterAutomationOrchestrator();
 orchestrator.run().catch(console.error);
 
 module.exports = MasterAutomationOrchestrator;
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge

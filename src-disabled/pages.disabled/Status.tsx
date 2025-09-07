@@ -189,6 +189,7 @@ import React, { useState, useEffect } from react'; import { motion  } from 'fram
 }
   const formatUptime = (seconds:,  number) => {,
 
+<<<<<<< HEAD
   )
 import { SEO } from '@/components/SEO';
 import { useState, useEffect } from react;
@@ -203,6 +204,8 @@ import {
   CardTitle} from @/components/ui/card;
 import { logWarn } from '@/utils/productionLogger';
 interface ServiceStatus {
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
   );
 
 }
@@ -227,5 +230,9 @@ default: return (<> <SEO title=API Status description="View real-time service av
 }'"
   )
 }
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/chore/fix-lint-and-merge

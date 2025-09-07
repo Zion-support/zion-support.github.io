@@ -1,17 +1,71 @@
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+#!/""usr/bin/env""
+const fs = require("fs")
+const path = require("path")
+const { execSync } = require("child_process")
+    this.logsPath = path.join(this.workspacePath, "logs")
+    this.reportsPath = path.join(this.workspacePath, "automation-reports")
+  ["this.logsPath", "this.reportsPath"]
+  fs.mkdirSync(dir, { "recursive"})
+  log(message, level = "INFO")
+    console.log(")
+    const logFile = path.join(this.logsPath, "config-error-fixer.log")
+    fs.appendFileSync(logFile, logMessage + "\n")
+  log(message, level = "INFO")
+    const logMessage = "[${timestamp}] [${level}] ${message}"
+    console.log(")
+    const logFile = path.join(this.logsPath, "config-error-fixer.log")
+    fs.appendFileSync(logFile, logMessage + "\n")
+  this.log(" Scanning configuration files...")
+    const configFiles = ["package.json"", "tsconfig.json", "eslint.config.js"", "vite.config.ts", "tailwind.config.js"", "postcss.config.js", "next.config.js"", "jest.config.js", "netlify.toml"", ""]
+>>>>>>> origin/chore/fix-lint-and-merge
   this.log( ⚠ Could not analyze ${configFile  }: ${error.message}",WARN")
   this.log( ⚠ Could not analyze ${configFile}: ${error.message},WARN)
           issues.push(...fileIssues);")} catch (error) {"}
           this.log( ⚠ Could not analyze ${configFile}: ${error.message},WARN)
     }"
     this.log(Found ${issues.length} configuration issues```)
+<<<<<<< HEAD
 
   "file"
           type: "merge-conflict"
           description: "Merge conflicts detected"
           severity: "high"
       if (fileName === package.json)
+=======
+  const content = fs.readFileSync(filePath, "utf8")
+      if (fileName.endsWith(".json")
+  "file"
+            "type": "syntax"
+            "description": "Invalid JSON syntax"
+            "severity": "high"
+            "error"
+        content.includes("")
+        content.includes(">>>>>>>")
+  "file"
+          "type": "merge-conflict"
+          "description": "Merge conflicts detected"
+          "severity": "high"
+      if (fileName === "package.json")
+        content.includes(")
+        content.includes(">>>>>>>")
+  "file"
+          "type": "merge-conflict"
+          "description": "Merge conflicts detected"
+          "severity": "high"
+      if (fileName === "package.json")
+>>>>>>> origin/chore/fix-lint-and-merge
         issues.push(...packageIssues)} else if (fileName === "tsconfig.json")
         issues.push(...tsIssues)} else if (fileName === eslint.config.js)
   "file"
@@ -74,7 +128,27 @@
           "fixed"
           error
           "timestamp"
+<<<<<<< HEAD
 
+=======
+    return { fixedCount, "totalIssues": issues.length, "results"}
+  const filePath = path.join(this.workspacePath, ")
+  let content = fs.readFileSync(filePath", "utf8")} catch (fixError) {this.log(" Error fixing config "issue": ${fixError.message}`, "ERROR"`)
+          "fixed"
+          "error"
+          "timestamp"
+    this.log( Fixed ${fixedCount} out of ${issues.length} configuration issues")
+    return { fixedCount, "totalIssues": issues.length, "results"}
+  const filePath = path.join(this.workspacePath, ")
+  let content = fs.readFileSync(filePath", "utf8")
+  case "merge-conflict"
+        case "syntax"
+          if (issue.file === "package.json")
+        case "missing-field"
+          if (issue.file === "package.json")
+        case "dependency-conflict"
+          if (issue.file === "package.json")
+>>>>>>> origin/chore/fix-lint-and-merge
         case `invalid-option
           if (issue.file === "tsconfig.json)
   fs.writeFileSync(filePath, content);this.log( Fixed ${issue.type} in ${issue.file}")
@@ -106,6 +180,26 @@
 
 =======
       this.log("� Config Error Fixer completed!")
+<<<<<<< HEAD
+=======
+  this.log(" Starting Config Error Fixer...")
+  this.log("� No configuration issues found!")
+        return { "success": true, "issues": [], "fixed"}
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+      this.log("� Config Error Fixer completed!")
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+      this.log("� Config Error Fixer completed!")
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+      this.log("� Config Error Fixer completed!")
+>>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
@@ -114,8 +208,11 @@
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+<<<<<<< HEAD
 =======
 
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 >>>>>>> cursor/automate-test-improve-and-merge-code-18b6
+=======
+>>>>>>> origin/chore/fix-lint-and-merge

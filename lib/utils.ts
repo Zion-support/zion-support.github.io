@@ -1,24 +1,32 @@
+<<<<<<< HEAD
 import { type ClassValue, clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
+=======
+import { type ClassValue, clsx } from 'clsx';
+import { twMerge } from 'tailwind-merge';
+>>>>>>> origin/chore/fix-lint-and-merge
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
 export function formatDate(date: Date | string | number): string {
+<<<<<<< HEAD
   return new Intl.DateTimeFormat("en-US", {
     month: "long";
     day: "numeric";
     year: "numeric";
   }).format(new Date(date));
 }
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
-export function formatCurrency(amount: number, currency = "USD"): string {
-  return new Intl.NumberFormat("en-US", {
-    style: "currency";
-    currency;
+}
+pr-12325
+
   }).format(amount);
 }
+<<<<<<< HEAD
 
 export function slugify(text: string): string {
   return text
@@ -35,11 +43,18 @@ export function truncateText(text: string, maxLength: number): string {
 
 export function debounce<T extends (...args: any[]) => any>(
   func: T;
+=======
+pr-12325
+
+export function debounce<T extends (...args: any[]) => any>(
+  func: T;,
+>>>>>>> origin/chore/fix-lint-and-merge
   wait: number
 ): (...args: Parameters<T>) => void {
   let timeout: ReturnType<typeof setTimeout>;
   return (..._args: Parameters<T>) => {
     clearTimeout(timeout);
+<<<<<<< HEAD
     timeout = setTimeout(() => func(..._args), wait);
   };
 }
@@ -54,6 +69,14 @@ export function throttle<T extends (...args: any[]) => any>(
 
 export function throttle<T extends (...args: any[]) => any>(
   func: T,
+=======
+    timeout = setTimeout(() => func(..._args), wait)
+};
+}
+
+export function throttle<T extends (...args: any[]) => any>(
+  func: T;,
+>>>>>>> origin/chore/fix-lint-and-merge
   limit: number
 ): (...args: Parameters<T>) => void {
   let inThrottle: boolean;
@@ -66,6 +89,7 @@ export function throttle<T extends (...args: any[]) => any>(
   }
 }
 
+<<<<<<< HEAD
 export function generateId(): string {
   return Math.random().toString(36).substr(2, 9);
 }
@@ -171,7 +195,32 @@ import { twMerge } from 'tailwind-merge;,
 export function cn(...inputs: ClassValue[]) {}
   return twMerge(clsx(inputs));
 
+=======
+},
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+origin/automation-improvements-final
+    month: "long";, day: "numeric"
+    year: "numeric";
 }
+const { type ClassValue, clsx } from "clsx";"const { twMerge } from "tailwind-merge";module.exports = function cn(.inputs: ClassValue[]) { return twMerge(clsx(inputs));}""
+
+>>>>>>> origin/chore/fix-lint-and-merge
+}
+
+export function cn(...inputs: ClassValue[]) {;
+  return twMerge(clsx(inputs));,
+}
+const { type ClassValue, clsx } from "clsx";"const { twMerge } from "tailwind-merge";module.exports = function cn(.inputs: ClassValue[]) { return twMerge(clsx(inputs));}""
+
+import { type ClassValue, clsx } from 'clsx';,
+import { twMerge } from 'tailwind-merge';,
+const { type ClassValue, clsx } from "clsx";"const { twMerge } from "tailwind-merge";module.exports = function cn(.inputs: ClassValue[]) { return twMerge(clsx(inputs));}""import { type ClassValue, clsx } from 'clsx';
+import { twMerge } from 'tailwind-merge';
+
+export function cn(...inputs: ClassValue[]) {;}
+  return twMerge(clsx(inputs));
+
 ursor/integrate-build-improve-and-re-verify-8f7d
 export function formatCurrency(amount: number, currency = "USD"): string {
   return new Intl.NumberFormat(en-US, {
@@ -184,7 +233,15 @@ export function formatDate(date: Date | string | number): string {
   }).format(amount);
 }
 }
+
+export function cn(...inputs: ClassValue[]) {;
+
+  return twMerge(clsx(inputs));}
+
+  return twMerge(clsx(inputs));
+
 export function formatDate(date: Date | string | number): string {
+<<<<<<< HEAD
 
   return new Intl && Intl.DateTimeFormat("en-US", {
     month: long, day: "numeric",
@@ -201,13 +258,15 @@ export function formatDate(date: Date | string | number): string {
 
 
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
     month: "long", day: "numeric"
     year: "numeric"
 }
 
   return new Intl && Intl.NumberFormat("en-US", {
-    style: "currency", currency
+    style: "currency", currency,
 
   }).format(amount);
 }
@@ -220,18 +279,28 @@ export /**
  */
   return tw_merge (clsx (inputs));}
 export function format_date (date: Date | string | number): string {
+<<<<<<< HEAD
   return new Intl.DateTimeFormat (en - US, {
     month: "long", day: numeric,
     year: "numeric"
+=======
+  return new Intl.DateTimeFormat ("en - US", {
+    month: "long", day: "numeric",
+    year: "numeric",
+>>>>>>> origin/chore/fix-lint-and-merge
 }
 export function format_currency (amount: number, currency = USD): string {
   return new Intl.NumberFormat ("en - US", {
-    style: "currency", currency
+    style: "currency", currency,
   }).format (amount);
 }
 
+<<<<<<< HEAD
 
 }
+=======
+};
+>>>>>>> origin/chore/fix-lint-and-merge
 
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
@@ -239,11 +308,15 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 
 origin/main
 
-
-
-
-
+}
+;
+},
 
 }
 
 }
+<<<<<<< HEAD
+=======
+
+};
+>>>>>>> origin/chore/fix-lint-and-merge

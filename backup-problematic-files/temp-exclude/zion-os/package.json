@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "name": "clean-build",
   "version": "0.1.0",
   "private": true,
@@ -21,6 +22,9 @@
     "eslint-config-next": "15.5.2"
   }
 }
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
   "name": "zion-tech-group-website",
   "version": "1.0.0",
   "private": true,
@@ -55,6 +59,10 @@
     "typescript": "5.4.5"
   }
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
   "name": "clean-build",
   "version": "0.1.0",
   "private": true,
@@ -77,4 +85,8 @@
     "eslint-config-next": "15.5.2"
   }
 }
+<<<<<<< HEAD
 ursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge

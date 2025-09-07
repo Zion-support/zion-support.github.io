@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 ;
 import type { NextPage } from 'next';
@@ -18,8 +19,16 @@ const SecurityAuditingChat: NextPage = () => {return (<div>;
 <div> <Head> <title>SecurityAuditingChat - Zion Tech Solutions</title> <meta name="description" content="SecurityAuditingChat service" /> </Head> <main> <h1>SecurityAuditingChat</h1> <p>Service details coming soon...</p> <a href="/services" >Back to Services</a> </main> </div> export default SecurityAuditingChat
 import type { NextPage } from "next";
 import Head from "next/head";
+=======
+import type { NextPage } from "next";"
+import Head from "next/head";"
+>>>>>>> origin/chore/fix-lint-and-merge
 import Link from "next/link";
+import type { NextPage } from 'next';'
+import Head from 'next/head';'
+import Link from 'next/link';
 
+<<<<<<< HEAD
 
 
 
@@ -40,6 +49,9 @@ import Link from "next/link;
 
 
 const SecurityAuditingChat: NextPage = () => {
+=======
+const SecurityAuditingChat: NextPage = () => {}
+>>>>>>> origin/chore/fix-lint-and-merge
   return (
     <div>;
       <Head>;
@@ -56,81 +68,83 @@ const SecurityAuditingChat: NextPage = () => {
     <div>
       <Head>
 
-      </Head>;
+import type { NextPage } from "next";
+import Head from "next/head";
 
+import Link from "next/link";
+const SecurityAuditingChat: NextPage = () => {;
+  return (
+    <div>;
+      <Head>;
+        <title>SecurityAuditingChat - Zion Tech Solutions</title>;"
+        <meta name="description" content="SecurityAuditingChat service" />{" "}
+
+      </Head>;
 
         <meta name="description content=SecurityAuditingChat service" />
       </Head>
-
-      </Head>;
+pr-12243
 
       <main>
         <h1>SecurityAuditingChat</h1>
+<<<<<<< HEAD
         <p>Service details coming soon...</p>
         <a href="/services>Back to Services</a>
+=======
+        <p>Service details coming soon...</p>"
+        <a href="/services">Back to Services</a>
+>>>>>>> origin/chore/fix-lint-and-merge
       </main>
     </div>
       </Head>;
 
-
-
-
       <main>;
         <h1>SecurityAuditingChat</h1>;
+<<<<<<< HEAD
         <p>Service details coming soon...</p>;
         <a href=/services">Back to Services</a>;
+=======
+        <p>Service details coming soon...</p>;"
+        <a href="/services">Back to Services</a>;
+>>>>>>> origin/chore/fix-lint-and-merge
       </main>;
     </div>;
   );
 }
 export default SecurityAuditingChat;
+<<<<<<< HEAD
 
 
 
 
 
 
-
-        <title>SecurityAuditingChat - Zion Tech Solutions</title>
-
-
-
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
         <title>SecurityAuditingChat - Zion Tech Solutions</title>
-
-ursor/fix-website-loading-errors-and-merge-6662
-
-        <title>SecurityAuditingChat - Zion Tech Solutions</title>
-
-
-
-
-
-
-
-
-        <title>SecurityAuditingChat - Zion Tech Solutions</title>
-
 
 import type { NextPage } from './next';
 import Head from './next / head';
+
 import Link from './next / link';
-const SecurityAuditingChat: NextPage = () => {
+const SecurityAuditingChat: NextPage = () => {}
   return (
     <div>;
       <Head>;
-        <title > SecurityAuditingChat - Zion Tech Solutions</title>;
+        <title > SecurityAuditingChat - Zion Tech Solutions</title>;"
         <meta name="description" content="SecurityAuditingChat service" />{" "}
       </Head>;
       <main>;
         <h1 > SecurityAuditingChat</h1>;
-        <p > Service details coming soon...</p>;
+        <p > Service details coming soon...</p>;"
         <a href="/services">Back to Services</a>;
       </main>;
     </div>);
 }
 ;
 export default SecurityAuditingChat;
+<<<<<<< HEAD
 ;
     <div>
       <Head>
@@ -165,3 +179,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <title>SecurityAuditingChat - Zion Tech Solutions</title>
         <title>SecurityAuditingChat - Zion Tech Solutions</title>
 
+=======
+;
+>>>>>>> origin/chore/fix-lint-and-merge

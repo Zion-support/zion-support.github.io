@@ -1,4 +1,10 @@
 <<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> origin/chore/fix-lint-and-merge
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -7,13 +13,13 @@
 
 #!/usr/bin/env node;
 =======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 
 
 
 
 
 
+<<<<<<< HEAD
 
 
 
@@ -52,10 +58,18 @@ const { execSync } = require('child_process');
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+const fs = require('fs')
+const path = require('path')
+const { execSync } = require('child_process')
+// console.log(' Comprehensive Code Fixer')
+>>>>>>> origin/chore/fix-lint-and-merge
 console.log()
 =======
 >>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
 
+<<<<<<< HEAD
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 <<<<<<< HEAD
 =======
@@ -130,3 +144,5 @@ const { execSync } = require('child_process')
 =======
     console.error(' Comprehensive Code Fixer "failed")
 >>>>>>> cursor/integrate-build-improve-and-re-verify-f954
+=======
+>>>>>>> origin/chore/fix-lint-and-merge

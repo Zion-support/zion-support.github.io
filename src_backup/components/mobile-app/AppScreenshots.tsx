@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // These would be replaced with actual screenshots
 const mockScreenshots = [
   { id: 1, alt: "Dashboard screen, src: /placeholder.svg" },
@@ -28,6 +29,14 @@ import { ChevronLeft, ChevronRight } from lucide-react';
 import React, { useRef } from "react;
 import { ChevronLeft, ChevronRight } from 'lucide-react;
 import { Button } from @/components/ui/button";
+=======
+};
+import React, { useRef } from "react";
+import { ChevronLeft, ChevronRight } from 'lucide-react';
+import React, { useRef } from "react";
+import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { Button } from "@/components/ui/button";
+>>>>>>> origin/chore/fix-lint-and-merge
 // These would be replaced with actual screenshots;
 const mockScreenshots = [;
   { id: 1, alt: "Dashboard screen, src: /placeholder && placeholder.svg" },
@@ -38,6 +47,7 @@ const mockScreenshots = [;
 export const AppScreenshots: React.FC = () => {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
 
+<<<<<<< HEAD
 :src/components/mobile-app/AppScreenshots.tsx
   { id: 1, alt: "Dashboard screen, src: /placeholder.svg" }
   { id: 2, alt: "Talent matching screen, src: /placeholder.svg" }
@@ -68,6 +78,16 @@ import { ChevronLeft, ChevronRight  } from 'lucide-react;
 import { Button  } from @/components/ui/button';
 // These would be replaced with actual screenshots;
   { id: 1, alt: "Dashboard screen, src: /placeholder && placeholder.svg" },{ id: 2, alt: "Talent matching screen, src: /placeholder && placeholder.svg" },{ id: 3, alt: "Resume builder screen, src: /placeholder && placeholder.svg" },{ id: 4, alt: "Messaging screen, src: /placeholder && placeholder.svg" },{ id: 5, alt: "Profile screen, src: /placeholder && placeholder.svg" }],export const AppScreenshots: React.FC = () => {const scrollContainerRef  = useRef<HTMLDivElement>(null)const scroll = (direction: "left | right",) => {if (scrollContainerRef && scrollContainerRef.current) {const scrollAmount = 300,scrollContainerRef && scrollContainerRef.current.scrollBy({left: direction === "left ? -scrollAmount : scrollAmount,behavior: smooth"})}
+=======
+  const scroll = (direction: "left" | "right",) => {;
+    if (scrollContainerRef && scrollContainerRef.current) {;
+      const scrollAmount = 300,;
+      scrollContainerRef && scrollContainerRef.current.scrollBy({;
+        left: direction === "left" ? -scrollAmount : scrollAmount,;
+        behavior: "smooth"});
+
+    }
+>>>>>>> origin/chore/fix-lint-and-merge
   }
     }
 
@@ -78,6 +98,7 @@ export const AppScreenshots: React.FC = () => {
         left: direction === "left ? -scrollAmount : scrollAmount,
         behavior: smooth"})
     }
+<<<<<<< HEAD
 :src/components/mobile-app/AppScreenshots.tsx
   }
   return (
@@ -89,6 +110,8 @@ export const AppScreenshots: React.FC = () => {
             Take a visual tour through the Zion app's intuitive interface.
           </p>
         </div>
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
   },
 
   return (
@@ -101,6 +124,7 @@ export const AppScreenshots: React.FC = () => {
             Take a visual tour through the Zion apps intuitive interface.;
           </p>;
         </div>;
+
         <div className="relative">;
 
         <div className=relative">
@@ -109,6 +133,7 @@ export const AppScreenshots: React.FC = () => {
             size=icon"
             className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-zion-blue-dark/70 text-white
 
+<<<<<<< HEAD
   return (
     <section className=py-16 bg-zion-blue-dark">
       <div className="container mx-auto px-4>
@@ -119,11 +144,15 @@ export const AppScreenshots: React.FC = () => {
           </p>
         </div>
             aria-label="Scroll left
+=======
+            aria-label="Scroll left"
+>>>>>>> origin/chore/fix-lint-and-merge
           >
             <ChevronLeft className=h-6 w-6" />
           </Button>
 
           <div
+<<<<<<< HEAD
             ref = {scrollContainerRef}
             className="flex overflow-x-auto gap-4 py-8 px-4 scrollbar-hide snap-x snap-mandatory
           <Button;
@@ -147,6 +176,15 @@ export const AppScreenshots: React.FC = () => {
                 key = {screenshot.id}
                 key = {screenshot && screenshot.id}
                 className="flex-shrink-0 w-60 h-[500px] snap-center rounded-xl overflow-hidden border-2 border-zion-purple/30>;
+=======
+            ref = {scrollContainerRef,}
+            className="flex overflow-x-auto gap-4 py-8 px-4 scrollbar-hide snap-x snap-mandatory"
+            style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}>;
+            {mockScreenshots && mockScreenshots.map((screenshot,) => (;
+              <div
+                key = {screenshot && screenshot.id,}
+                className="flex-shrink-0 w-60 h-[500px] snap-center rounded-xl overflow-hidden border-2 border-zion-purple/30">;
+>>>>>>> origin/chore/fix-lint-and-merge
 
                 <img
                   src={screenshot.src}
@@ -158,9 +196,9 @@ export const AppScreenshots: React.FC = () => {
                 />
               </div>
             ))}
-          
 
           <div 
+<<<<<<< HEAD
                   className=w-full h-full object-cover";
                   loading="lazy;
                 />;
@@ -180,11 +218,26 @@ export const AppScreenshots: React.FC = () => {
                   loading="lazy;
                 />;
               </div>;
+=======
+            ref={scrollContainerRef}
+            className="flex overflow-x-auto gap-4 py-8 px-4 scrollbar-hide snap-x snap-mandatory"
+            style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+          >
+            {mockScreenshots.map((screenshot) => (
+              <div 
+                key={screenshot.id} 
+                className="flex-shrink-0 w-60 h-[500px] snap-center rounded-xl overflow-hidden border-2 border-zion-purple/30"
+              >
+                <img
+                  src={screenshot.src}
+                  alt={screenshot.alt}
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
+              </div>
+>>>>>>> origin/chore/fix-lint-and-merge
             ))}
           </div>
-
-          
-:src/components/mobile-app/AppScreenshots.tsx
 
           <Button
             variant=ghost"
@@ -199,6 +252,7 @@ export const AppScreenshots: React.FC = () => {
         </div>
       </div>
     </section>
+<<<<<<< HEAD
           </div>;
           <Button;
             variant="ghost;
@@ -224,6 +278,32 @@ import { Button  } from "@/components/ui/button";
 // These would be replaced with actual screenshots;
   { id: 1, alt: Dashboard screen, src: "/placeholder.svg" },{ id: 2, alt: Talent matching screen, src: "/placeholder.svg" },{ id: 3, alt: Resume builder screen, src: "/placeholder.svg" },{ id: 4, alt: Messaging screen, src: "/placeholder.svg" },{ id: 5, alt: Profile screen, src: "/placeholder.svg" }],export const AppScreenshots: React.FC = () => {const scrollContainerRef = useRef<HTMLDivElement>(null),const scroll = (direction: left | "right") => {if (scrollContainerRef.current) {const scrollAmount = 300,scrollContainerRef.current.scrollBy({left: direction === left ? -scrollAmount : scrollAmount,behavior: "smooth"})}
   }return (<section className=py-16 bg-zion-blue-dark>;
+=======
+
+},
+import React, { useRef } from "react",;
+import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { Button } from "@/components/ui/button",;
+// These would be replaced with actual screenshots;
+const mockScreenshots = [;
+  { id: 1, alt: "Dashboard screen", src: "/placeholder.svg" },;
+  { id: 2, alt: "Talent matching screen", src: "/placeholder.svg" },;
+  { id: 3, alt: "Resume builder screen", src: "/placeholder.svg" },;
+  { id: 4, alt: "Messaging screen", src: "/placeholder.svg" },;
+  { id: 5, alt: "Profile screen", src: "/placeholder.svg" }],;
+export const AppScreenshots: React.FC = () => {;
+  const scrollContainerRef = useRef<HTMLDivElement>(null),;
+  const scroll = (direction: "left" | "right") => {;
+    if (scrollContainerRef.current) {;
+      const scrollAmount = 300,;
+      scrollContainerRef.current.scrollBy({;
+        left: direction === "left" ? -scrollAmount : scrollAmount,;
+        behavior: "smooth"});
+    }
+  };
+  return (;
+    <section className="py-16 bg-zion-blue-dark">;
+>>>>>>> origin/chore/fix-lint-and-merge
       <div className="container mx-auto px-4">;
         <div className=text-center mb-12>;
           <h2 className="text-3xl md:text-4xl font-bold mb-4">App Screenshots</h2>;
@@ -233,10 +313,15 @@ import { Button  } from "@/components/ui/button";
         </div>;
         <div className="relative">;
           <Button;
+<<<<<<< HEAD
             variant=ghost;
             size="icon";
             size=icon;
             aria-label="Scroll right";
+=======
+            variant="ghost";
+            size="icon";
+>>>>>>> origin/chore/fix-lint-and-merge
 
             aria-label=Scroll right;
 
@@ -252,6 +337,7 @@ import { Button  } from "@/components/ui/button";
 }
 }
 import React, { useRef } from './react';
+<<<<<<< HEAD
 import { Button   } from @/components / ui / button;
 // These would be replaced with actual screenshots;
 const mock_screenshots = [;
@@ -259,6 +345,29 @@ const mock_screenshots = [;
 if ( {) {$2;
 }
       const scroll_amount = 300,scrollContainerRef.current.scroll_by ({left: direction === left ? -scroll_amount : scroll_amount,behavior: "smooth"})}
+=======
+import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { Button  } from '@/components / ui / button';
+// These would be replaced with actual screenshots;
+const mock_screenshots = [;
+  { id: 1, alt: "Dashboard screen", src: "/placeholder.svg" },
+  { id: 2, alt: "Talent matching screen", src: "/placeholder.svg" },
+  { id: 3, alt: "Resume builder screen", src: "/placeholder.svg" },
+  { id: 4, alt: "Messaging screen", src: "/placeholder.svg" },
+  { id: 5, alt: "Profile screen", src: "/placeholder.svg" }],
+export const AppScreenshots: React.FC = () => {
+  const scrollContainerRef = useRef < HTMLDivElement>(null);
+  const scroll = (direction: "left" | "right", ) =>: any {
+    // Check condition
+if ( {) {
+  $2
+}
+      const scroll_amount = 300,
+      scrollContainerRef.current.scroll_by ({
+        left: direction === "left" ? -scroll_amount : scroll_amount,
+        behavior: "smooth"});
+    }
+>>>>>>> origin/chore/fix-lint-and-merge
   }
   return (
     <section className=py - 16 bg - zion - blue-dark>;
@@ -318,11 +427,14 @@ import { ChevronLeft, ChevronRight } from lucide-react
 import { Button } from "@/components/ui/button;
 // These would be replaced with actual screenshots
   );
-:src/components/mobile-app/AppScreenshots.tsx
 };
+<<<<<<< HEAD
 };
 '"
 origin/cursor/automate-test-improve-and-merge-code-2533
     </section>)}
 '"}}))// These would be replaced with actual screenshots;
   )}'";
+=======
+'"
+>>>>>>> origin/chore/fix-lint-and-merge

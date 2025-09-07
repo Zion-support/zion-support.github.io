@@ -11,4 +11,3 @@ export function getServerSupabase(): SupabaseClient {
   cachedClient = createClient(supabaseUrl, serviceRoleKey, {
     auth: { persistSession: false, autoRefreshToken: false }}),
   return cachedClient
-}

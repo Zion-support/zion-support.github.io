@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import Image from 'next/image';
 
 import React from 'react';
@@ -74,32 +75,51 @@ import React from \"react\";"
 
 import React from \"react\;
 import Image from \"next/image\";
+=======
+
+interface OptimizedImageProps {;
+  src: string, alt: string,;
+
+export default OptimizedImage;
+
+  );
+};
+
+export default OptimizedImage;
+>>>>>>> origin/chore/fix-lint-and-merge
 
 interface OptimizedImageProps {
-  }
-  "src": string;
-  "alt": string;
-  "width": number;
-  "height": number;
+  src: string;
+  alt: string;
+  width: number;
+  height: number;
   className?: string;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
   priority?: boolean;
   quality?: number;
   sizes?: string;
 }
 
+<<<<<<< HEAD
 
 const OptimizedImage: React.FC<OptimizedImageProps> = ({
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
   src,
-const "OptimizedImage": React.FC<OptimizedImageProps> = ({ src,;
-  }
   alt,
   width,
   height,
+<<<<<<< HEAD
   className = "",
   priority = false,
   quality = 75,
   sizes = "100vw","
 }) => {
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
 }
   height}
@@ -113,6 +133,7 @@ const "OptimizedImage": React.FC<OptimizedImageProps> = ({ src,;
         sizes={sizes}
         quality={quality}
         style={style}
+<<<<<<< HEAD
   return (
     <Image
       src={src}
@@ -138,11 +159,17 @@ const "OptimizedImage": React.FC<OptimizedImageProps> = ({ src,;
     <Image;}
 src={src}
 
+=======
+
+      src={src}
+
+>>>>>>> origin/chore/fix-lint-and-merge
       alt={alt}
       width={width}
       height={height}
       className={className}
       priority={priority}
+<<<<<<< HEAD
       className={className}
       sizes={sizes}
       quality={85}
@@ -165,10 +192,17 @@ export default OptimizedImage;
 export default OptimizedImage;
       sizes={sizes}
       quality={quality}
+=======
+
+      sizes={sizes}
+      quality={quality}
+
+>>>>>>> origin/chore/fix-lint-and-merge
     />
   );
 };
 
+<<<<<<< HEAD
 export default OptimizedImage;
 "
 export default OptimizedImage;
@@ -189,3 +223,6 @@ export default OptimizedImage;
 export default OptimizedImage;
 "
 export default OptimizedImage;
+=======
+export default OptimizedImage;
+>>>>>>> origin/chore/fix-lint-and-merge

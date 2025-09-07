@@ -1,18 +1,11 @@
-"await";"
-import React from 'react';'
-import { render, screen  } from '@testing-library/react';'
-describe('Basic Test', () => {it('should work', () => {expect(true).toBe(true)})})"await";"
+import { describe, it, expect } from '@jest/globals';
 
-const { describe, it, expect, vi, beforeEach } = require('vitest')';'
-import { render, screen } from '@testing-library/react';'
-
-describe('Basic Test', () => {'
-  }
-  it('should work', () => {'
-    }
+describe('authController', () => {
+  it('should work', () => {
     expect(true).toBe(true);
   });
 });
+<<<<<<< HEAD
 const { describe, it, expect, vi, beforeEach } = require(
 
 
@@ -210,3 +203,5 @@ const res = createResponse(); await forgotPassword(req,res); expect(mockedSend).
 
 
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge

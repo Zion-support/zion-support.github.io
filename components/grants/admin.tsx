@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export default function GrantsAdminPage() {
   const [token, setToken] = useState('');
   const [items, setItems] = useState<GrantApplication[]>([]),
@@ -41,13 +42,37 @@ export default function GrantsAdminPage() {
 
   const load = () => {
     fetch(/api/grants?status=Submitted').then((r) => r.json()).then((d) => setItems(d.items |[]))
+=======
+
+
+export default function GrantsAdminPage() {
+  const [token, setToken] = useState('');
+
+const headers = useMemo(
+    () =>
+      token}
+        ? {}
+            Authorization: `Bearer ${token}`
+            'Content-Type': 'application/json'
+          }
+        : { 'Content-Type': 'application/json',}
+}
+    [token]
+  );
+
+const load = (
+    fetch('/api/grants?status=Submitted')
+      .then(r => r.json())
+      .then(d => setItems(d.items |[]));) => {
+  return $3;}
+}
+>>>>>>> origin/chore/fix-lint-and-merge
   }
   useEffect(() => {
-
-    }
-
-    load();
+}
+    load();}
   }, []);
+<<<<<<< HEAD
   const setStatus = async (id: string, status: 'Under Review | Approved' | 'Rejected) => {
     await fetch(`/api/grants/${id}/status`, { method: POST', headers, body: JSON.stringify({ status }) })
     load()
@@ -69,6 +94,20 @@ export default function GrantsAdminPage() {};
     fetch('/api/grants?status=Submitted').then((r) => r.json()).then((d) => setItems(d.items |[]))
   }
   useEffect(() => {}
+=======
+
+const setStatus = async (
+    id: string;
+status: 'Under Review' | 'Approved' | 'Rejected'
+  ) => {}
+    await fetch(`/api/grants/${i,}
+}/status`, {
+      method: 'POST'}
+      headers;}
+body: JSON.stringify({ status })
+   ,
+});
+>>>>>>> origin/chore/fix-lint-and-merge
     load()
   }, []);'
   const setStatus = async (id: string, status: 'Under Review' | 'Approved' | 'Rejected') => {'`
@@ -86,22 +125,19 @@ export default function GrantsAdminPage() {};
     load()
 }
 
+
 const saveMilestones = async () => {
-    }
-    if (!selected);
-  return;
-await fetch(`/api/grants/${selected.id}/milestones`, {`      }
-      "method": 'POST','
-      headers,
-      "body": JSON.stringify({ milestones
-})
+    if (!selected);}
+  return;}
+await fetch(`/api/grants/${selected.id}/milestones`, {
+      method: 'POST',
+      headers,}
+      body: JSON.stringify({ milestones,}
+}),
     });
-    alert('Milestones saved')'
-};
-  const markComplete = async (milestoneId: string) => {;
-    if (!selected) return;    await fetch(`/api/grants/${selected && selected.id}/milestones`, { method: 'POST', headers, body: JSON && JSON.stringify({ milestones }) }),;
     alert('Milestones saved')
 };
+<<<<<<< HEAD
   const markComplete = async (milestoneId: string) => {;
     if (!selected) return;
     await fetch(;
@@ -324,24 +360,29 @@ if (return) {}
     const r = await fetch (`/api / grants/${selected.id}`).then (coordinate_x => x.json ());
     set_selected (r.record);  }
 ;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
-const markComplete = async ("milestoneId": string) => {
-    }
+
+const markComplete = async (milestoneId: string) => {
     if (!selected);
-  return;
-await fetch(
-      `/api/grants/${selected.id}/milestones/${milestoneId}/complete`,`      { "method": 'POST', headers }'
+  return;}
+await fetch(}
+      `/api/grants/${selected.id}/milestones/${milestoneId}/complete`,
+      { method: 'POST', headers }
     );
 
-const r = await fetch(`/api/grants/${selected.id}`).then(x => { return x.json()); }`    setSelected(r.record)
+const r = await fetch(`/api/grants/${selected.id}`).then(x => x.json());
+    setSelected(r.record)
 };
 
 
-return (;
-    <EnhancedLayout>
-<h1 className = 'text-2xl font-semibold mb-4'>Grants Admin</h1>'
+  return (
+    <EnhancedLayout    />
+<h1 className = 'text-2xl font-semibold mb-4'    />Grants Admin</h1>
  ;
   return (
+<<<<<<< HEAD
     <EnhancedLayout>    await fetch (`/api / grants/${selected.id}/milestones/${milestone_id}/complete`, { method: 'POST', headers });
     const r = await fetch (`/api / grants/${selected.id}`).then ((x) => x.json ());
     set_selected (r.record);
@@ -356,22 +397,33 @@ return (;
             <input;'
               className='border rounded p - 2';'
     <EnhancedLayout />    await fetch (`/api / grants/${selected.id}/milestones/${milestone_id}/complete`, { method: 'POST', headers });
+=======
+    <EnhancedLayout    />    await fetch (`/api / grants/${selected.id}/milestones/${milestone_id}/complete`, { method: 'POST', headers });
+>>>>>>> origin/chore/fix-lint-and-merge
 
 const r = await fetch (`/api / grants/${selected.id}`).then ((x) => x.json ());
     set_selected (r.record)
 };
 
-return (;
-    <EnhancedLayout>;
+  return (
+    <EnhancedLayout    />;
 
+<<<<<<< HEAD
       <h1 className='text - 2xl font - semibold mb - 4' />Grants Admin</h1>;
       <div className='grid md:grid - cols - 3 gap - 6' />;
         <div className='md:col - span - 2' />;
           <div className='mb - 3 flex items - center gap - 2' />;
+=======
+      <h1 className='text - 2xl font - semibold mb - 4'    />Grants Admin</h1>;
+      <div className='grid md:grid - cols - 3 gap - 6'    />;
+        <div className='md:col - span - 2'    />;
+          <div className='mb - 3 flex items - center gap - 2'    />;
+>>>>>>> origin/chore/fix-lint-and-merge
             <input;
               className='border rounded p - 2';
               placeholder='Admin Token';
               value={token}
+<<<<<<< HEAD
               on_change={e => set_token (e.target.value)}
             />;
           </div>;'
@@ -427,24 +479,63 @@ return (;
                     <button;
                       className='px - 2 py - 1 border rounded';
                       on_click={() => set_status (g.id, 'Under Review')}
+=======
+              on_change={e =    /> set_token (e.target.value)}
+            />;
+          </div>;
+          <div className='grid gap - 3'    />;
+            {items.map (g => (<div;}
+                key={g.id}
+                className={`border rounded p - 3 ${selected?.id === g.id ? 'ring - 2 ring - blue - 500' : ''}`}    />
+
+                <div className='flex items - center justify - between'    />;
+                  <div    />;
+                    <div className='font - medium'    />{g.project_name}</div>;
+                    <div className='text - xs text - gray - 600'    />;
+
+                      {g.sector} • {g.region} • {g.program}
+
+                    </div>
+                  </div>
+                  <div className='flex gap-2'    />
+                    <button;
+className='px-2 py-1 border rounded'
+
+                      onClick={() =    /> setStatus(g.id, 'Under Review')}
+>>>>>>> origin/chore/fix-lint-and-merge
                     >;
                       Under Review;
                     </button>;
                     <button;
+<<<<<<< HEAD
                       className=px-2 py-1 bg-emerald-600 text-white rounded;
                       onClick={() => setStatus(g.id, 'Approved')}
+=======
+                      className='px-2 py-1 bg-emerald-600 text-white rounded';
+                      onClick={() =    /> setStatus(g.id, 'Approved')}
+>>>>>>> origin/chore/fix-lint-and-merge
                     >;
                       Approve;
                     </button>;
                     <button;
+<<<<<<< HEAD
                       className=px-2 py-1 bg-red-600 text-white rounded;
                       onClick={() => setStatus(g.id, 'Rejected')}
+=======
+                      className='px-2 py-1 bg-red-600 text-white rounded';
+                      onClick={() =    /> setStatus(g.id, 'Rejected')}
+>>>>>>> origin/chore/fix-lint-and-merge
                     >;
                       Reject;
                     </button>;
                     <button;
+<<<<<<< HEAD
                       className='px - 2 py - 1 border rounded';
                       on_click={() => set_selected (g)}
+=======
+                      className='px-2 py-1 border rounded';
+                      onClick={() =    /> setSelected(g)}
+>>>>>>> origin/chore/fix-lint-and-merge
                     >;
                       Milestones;
                     </button>                  </div>;
@@ -492,6 +583,7 @@ return (;
                     </button>;
                   </div>;
                 </div>;
+<<<<<<< HEAD
               </div>))}                  <div className="flex gap-2">;
                     <button className="px-2 py-1 border rounded" on_click={() => set_status (g.id, 'Under Review')}>Under Review</button>;
                     <button className="px - 2 py - 1 bg - emerald-600 text-white rounded" on_click={() => set_status (g.id, 'Approved')}>Approve</button>;
@@ -579,14 +671,42 @@ return (;
                       value={m.title}
                       on_change={e =>;
                         set_milestones (ms => {const copy = ms.length;
+=======
+              </div>;
+            ))}
+{items.length === 0 && (<div className='text-sm text-gray-600'    />;
+                No submitted applications.;}
+              </div>;}
+            )}
+
+          </div>
+        </div>
+        <div    />
+          <div className='border rounded p-3'    />
+            <h2 className='font-medium mb-2'    />Milestone Planner</h2>
+            {selected ? (
+              <div className='space - y-2'    />;
+
+                {(milestones.length === 0;}
+                  ? selected.milestones || [];}
+                  : milestones).map ((m, idx) => (<div key={m.id || idx} className='border rounded p - 2'    />;
+                    <input;
+                      className='w - full border rounded p - 2 mb - 2';
+                      placeholder='Title';
+                      value={m.title}
+                      on_change={e =    />;
+                        set_milestones (ms = > ;
+  const copy = ms.length;
+>>>>>>> origin/chore/fix-lint-and-merge
                             ? [...ms];
-                            : [...(selected.milestones || [])];
-                          copy[idx] = { ...copy[idx], "title": e.target.value
+                            : [...(selected.milestones || [])];}
+                          copy[idx] = { ...copy[idx], title: e.target.value,}
 }
                           return copy;
                         })}
                     />;
                     <textarea;
+<<<<<<< HEAD
                       className='w - full border rounded p - 2 mb - 2';'
                       placeholder='Description';'
                       value={m.description || ''}
@@ -621,30 +741,45 @@ return (;
                               ...copy[idx],
                               due_date: e.target.value,
                             }
+=======
+                      className='w - full border rounded p - 2 mb - 2';
+                      placeholder='Description';
+                      value={m.description || ''}
+                      on_change={e =    />;
+                        set_milestones (ms = > ;
+  const copy = ms.length;
+                            ? [...ms];}
+                            : [...(selected.milestones || [])];}
+>>>>>>> origin/chore/fix-lint-and-merge
                           copy[idx] = {...copy[idx],description: e.target.value,}
                           return copy;
                         })}
                     />;
-                    <div className='grid grid - cols - 2 gap - 2'>;'
+                    <div className='grid grid - cols - 2 gap - 2'    />;
                       <input;
-                        className='border rounded p - 2';'
-                        placeholder='Due date (YYYY - MM - DD)';'
-                        value={m.due_date || ''}'
-                        on_change={e =>;
-                          }
+                        className='border rounded p - 2';
+                        placeholder='Due date (YYYY - MM - DD)';
+                        value={m.due_date || ''}
+                        on_change={e =    />;
                           set_milestones (ms = > ;
   const copy = ms.length;
+<<<<<<< HEAD
                               ? [...ms];
                               : [...(selected.milestones || [])];
+=======
+                              ? [...ms];}
+                              : [...(selected.milestones || [])];}
+>>>>>>> origin/chore/fix-lint-and-merge
                             copy[idx] = {...copy[idx],due_date: e.target.value,}
                             return copy;
                           })}
                       />;
                       <input;
-                        className='border rounded p - 2';'
-                        placeholder='Tranche (amount)';'
-                        type='number';'
+                        className='border rounded p - 2';
+                        placeholder='Tranche (amount)';
+                        type='number';
                         value={m.tranche_amount || 0}
+<<<<<<< HEAD
                         on_change={e =>;
                           set_milestones (ms => {const copy = ms.length;
                               ? [...ms];
@@ -658,15 +793,23 @@ return (;
                               ...copy[idx],
                               tranche_amount: Number (e.target.value),
                             }
+=======
+                        on_change={e =    />;
+                          set_milestones (ms = > ;
+  const copy = ms.length;
+                              ? [...ms];}
+                              : [...(selected.milestones || [])];}
+>>>>>>> origin/chore/fix-lint-and-merge
                             copy[idx] = {...copy[idx],tranche_amount: Number (e.target.value),}
                             return copy;
                           })}
                       />;
-                    </div>;
-                      >;
+                    </div>>
+
                         Mark Complete;
                       </button>;
                     </div>;
+<<<<<<< HEAD
                   </div>))}'
                 <div className='flex gap - 2 mt - 2'>;
                   <button;'
@@ -679,10 +822,26 @@ return (;
                           id: `${Date.now ()}-${Math.random ()}`,'
                           title: '',
                           tranche_amount: 0,'
+=======
+                  </div>))}
+                <div className='flex gap - 2 mt - 2'    />;
+                  <button;
+                    className='px - 2 py - 1 border rounded';
+                    on_click={() =    />;
+                      set_milestones (ms => [;
+
+                        ...(ms.length ? ms : selected.milestones || []),}
+                        {}
+                          id: `${Date.now ()}-${Math.random (,}
+}`,
+                          title: '',
+  tranche_amount: 0,
+>>>>>>> origin/chore/fix-lint-and-merge
                           tranche_currency: 'USDC',
                         } as any,
                       ]);
                     }
+<<<<<<< HEAD
                   >;
                     Add Milestone;
                   </button>;
@@ -709,12 +868,16 @@ return (;
                   <button className=px-2 py-1 border rounded onClick={() => setMilestones((ms) => [...(ms.length ? ms : (selected.milestones |[])), { id: `${Date.now()}-${Math.random()}`, title: ', trancheAmount: 0, trancheCurrency: 'USDC } as any])}>Add Milestone</button>"
                   <button className="px-2 py-1 bg-blue-600 text-white rounded onClick={saveMilestones}>Save Milestones</button>
                 </div>
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
                   >
-                    Add Milestone
+                    Add Milestone;
                   </button>
-                  <button,
-className='px-2 py-1 bg-blue-600 text-white rounded''
+                  <button;
+className='px-2 py-1 bg-blue-600 text-white rounded'
                     onClick={saveMilestones}
+<<<<<<< HEAD
                   >
                     Add Milestone;
                   </button>;
@@ -744,11 +907,23 @@ className='px-2 py-1 bg-blue-600 text-white rounded''
               </div>
             ) : (
               <div className="text-sm text-gray-600">Select a grant to plan milestones.</div>
+=======
+                      />
+                    Save Milestones;
+                  </button>
+                </div>
+              </div>
+            ) : (
+              <div className='text-sm text-gray-600'    />
+                Select a grant to plan milestones.
+              </div>
+>>>>>>> origin/chore/fix-lint-and-merge
             )}
           </div>
         </div>
       </div>
     </EnhancedLayout>
+<<<<<<< HEAD
                         ...(ms.length ? ms : selected.milestones || []),{id: `${Date.now ()}-${Math.random ()}`,title: '',tranche_amount: 0,tranche_currency: 'USDC',} as any,])}>;
                     Add Milestone;
                   </button>;
@@ -830,3 +1005,9 @@ className='px-2 py-1 bg-blue-600 text-white rounded''
       </div>;
     </EnhancedLayout>;
   ))}
+=======
+
+  );
+}
+
+>>>>>>> origin/chore/fix-lint-and-merge

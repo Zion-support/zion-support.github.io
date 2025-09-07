@@ -1,12 +1,10 @@
-:src/components/talent/filters/SkillsFilter.tsx
-import { ChevronDown, ChevronUp } from 'lucide-react'
-import { Button } from "@/components/ui/button",
 import { ChevronDown, ChevronUp } from 'lucide-react''
 import { Button } from "@/components/ui/button","
 import { Checkbox } from "@/components/ui/checkbox";
 import { SkillsFilterProps } from "@/types/filters";
 // Common skills in AI and tech
 
+<<<<<<< HEAD
 :src/components/talent/filters/SkillsFilter.tsx
 const POPULAR_SKILLS = [
   'Machine Learning'
@@ -33,6 +31,10 @@ export function SkillsFilter({
   toggleSection
   isMobileFilterOpen
 }: SkillsFilterProps) {
+=======
+import { ChevronDown, ChevronUp } from 'lucide-react'
+import { Button } from "@/components/ui/button",
+>>>>>>> origin/chore/fix-lint-and-merge
 import { Checkbox } from "@/components/ui/checkbox",
 import { SkillsFilterProps } from "@/types/filters",
 // Common skills in AI and tech
@@ -59,8 +61,6 @@ export function SkillsFilter({ selectedSkills, toggleSkill, expanded, toggleSect
     <div className="mb-6 border-b border-zion-blue-light pb-6">
       <button
         onClick={toggleSection}
-:src/components/talent/filters/SkillsFilter.tsx
-        className='flex w-full items-center justify-between text-white font-medium'      >
         className="flex w-full items-center justify-between text-white font-medium"
       >
         <span>Skills</span>
@@ -70,13 +70,16 @@ export function SkillsFilter({ selectedSkills, toggleSkill, expanded, toggleSect
           <ChevronDown className="h-4 w-4 text-zion-slate-light" />
         )}
       </button>
+      
       {expanded && (
         <div className="mt-4 space-y-2">
           {POPULAR_SKILLS.map(skill => (
-            <div key={skill} className='flex items-center'>              <Checkbox
+            <div key={skill} className="flex items-center">
+              <Checkbox
                 id={`skill-${skill}`}
                 checked={selectedSkills.includes(skill)}
                 onCheckedChange={() => toggleSkill(skill)}
+<<<<<<< HEAD
 :src/components/talent/filters/SkillsFilter.tsx
             <div key={skill} className="flex items-center">
 import { Button } from "@/components/ui/button"
@@ -105,6 +108,8 @@ export function SkillsFilter({ selectedSkills, toggleSkill, expanded, toggleSect
   return (
     <div className="mb-6 border-b border-zion-blue-light pb-6">
       <button
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
                 className="border-zion-slate-light data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple"
               />
               <label
@@ -181,9 +186,6 @@ className='border-zion-slate-light data-[state=checked]:bg-zion-purple data-[sta
               <label
                 htmlFor={`skill-${skill}`}
                 className='ml-2 text-sm text-zion-slate-light cursor-pointer'
-:src/components/talent/filters/SkillsFilter.tsx
-              >                {skill}                className="ml-2 text-sm text-zion-slate-light cursor-pointer"
-               htmlFor="input-
               >
                 {skill}
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -194,7 +196,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </div>;
   );
 }
-:src/components/talent/filters/SkillsFilter.tsx
 }
 }
 
@@ -256,9 +257,6 @@ function SkillsFilter() {
     </div>;
   );
 };
-}
-:src/components/talent/filters/SkillsFilter.tsx
-}
 }
 
 ;

@@ -1,10 +1,16 @@
 return (
+<<<<<<< HEAD
 
 return (<div className='space-y-3>;
       <div className=flex justify-between items-center px-4'>;
     <div className='space-y-3>;
       <div className='flex justify-between items-center px-4'>;
         <div className=flex items-center gap-2 overflow-x-auto py-1 hide-scrollbar'>;
+=======
+    <div className='space-y-3'>;'
+      <div className='flex justify-between items-center px-4'>;'
+        <div className='flex items-center gap-2 overflow-x-auto py-1 hide-scrollbar'>;
+>>>>>>> origin/chore/fix-lint-and-merge
           <Sheet>;
             <SheetTrigger asChild>;'
               <Button variant=outline size='sm' className=gap-1>;'
@@ -78,7 +84,8 @@ function BrowseFilters() {}
   const add_filter = (filter: string) =>: any {    if () {) {}
   $2;
 }
-      setActiveFilters ([...active_filters, filter])}
+      setActiveFilters ([...active_filters, filter]);
+    }
   }
   const remove_filter = (filter: string) =>: any {}
     setActiveFilters (active_filters.filter (function => f !== filter));
@@ -124,10 +131,19 @@ function BrowseFilters() {}
                         >;
                           Contract;
                         </Badge>;
+<<<<<<< HEAD
                         <Badge;
                           variant='outline';
                           className=cursor - pointer hover:bg - primary / 5';
                         >;Freelance;
+=======
+                        <Badge;'
+                          variant='outline';'
+                          className='cursor - pointer hover:bg - primary / 5';
+                        >;
+
+                          Freelance;
+>>>>>>> origin/chore/fix-lint-and-merge
                         </Badge>;
                       </div>;
                     </div>;
@@ -147,10 +163,19 @@ function BrowseFilters() {}
                         >;
                           Mid Level;
                         </Badge>;
+<<<<<<< HEAD
                         <Badge;
                           variant='outline';
                           className=cursor - pointer hover:bg - primary / 5';
                         >;Senior;
+=======
+                        <Badge;'
+                          variant='outline';'
+                          className='cursor - pointer hover:bg - primary / 5';
+                        >;
+
+                          Senior;
+>>>>>>> origin/chore/fix-lint-and-merge
                         </Badge>;
                       </div>;
                     </div>;
@@ -182,9 +207,12 @@ function BrowseFilters() {}
                         <Badge;'
                           variant='outline;
                           className='cursor - pointer hover:bg - primary / 5';
-                        >;Content;
+                        >;
+
+                          Content;
                         </Badge>;
                       </div>;
+<<<<<<< HEAD
                     </div>;import React, { useState } from "react,import { Button } from @/components/ui/button",import { Slider } from "@/components/ui/slider,import { Switch } from @/components/ui/switch",import { Input } from "@/components/ui/input,import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from @/components/ui/select",import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetFooter, SheetTrigger } from "@/components/ui/sheet,import { Badge } from @/components/ui/badge",import { Label } from "@/components/ui/label,import { Label  } from @/components/ui/label;
 interface BrowseFiltersProps  {return (<div className=space-y-3">;
       <div className="flex justify-between items-center px-4>;
@@ -210,16 +238,21 @@ interface BrowseFiltersProps  {return (<div className=space-y-3">;
                         <Badge variant=outline" className="cursor-pointer hover:bg-primary/5>Contract</Badge>;
                         <Badge variant=outline" className="cursor-pointer hover:bg-primary/5>Freelance</Badge>;
                       </div>;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
                     </div>;
 
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetFooter, SheetTrigger } from @/components/ui/sheet",
 import { Badge } from "@/components/ui/badge,
 import { Label } from @/components/ui/label";
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetFooter, SheetTrigger } from "@/components/ui/sheet,
 import { Badge } from @/components/ui/badge",
 import { Label } from "@/components/ui/label;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 interface BrowseFiltersProps {
 
   return (
@@ -278,6 +311,7 @@ interface BrowseFiltersProps {
                     <div className=space-y-2>
                       <Label>Experience (years)</Label>
                       <Slider"
+<<<<<<< HEAD
                         aria-label="Years of experience
                     <div className=space-y-2">;
                       <Label>Experience Level</Label>;
@@ -302,6 +336,9 @@ interface BrowseFiltersProps {
                       <Label>Experience (years)</Label>;
                       <Slider;
                         aria-label="Years of experience;
+=======
+                        aria-label="Years of experience"
+>>>>>>> origin/chore/fix-lint-and-merge
                         defaultValue={[0, 10]}
                         max={20}
                         step={1}
@@ -471,7 +508,9 @@ interface BrowseFiltersProps {
               <SelectItem value=relevance>Best Match</SelectItem>;'
               <SelectItem value='salary>Highest Pay</SelectItem>;
             </SelectContent>;
-          </Select>;</div>;
+          </Select>;
+
+      </div>;
     </div>;
   )
 }
@@ -489,6 +528,7 @@ interface BrowseFiltersProps {
               />
             </Badge>
           ))}
+<<<<<<< HEAD
         </div>
       </div>
     </div>
@@ -499,6 +539,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 onClick={() => removeFilter(filter)}/>;
             </Badge>;
           ))}</div>;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
         </div>;
       </div>;
@@ -519,10 +561,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </Badge>))}
         </div>;
       </div>;
+<<<<<<< HEAD
     </div>)}</div>;
       </div>;
     </div>;
   )
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
     </div>);
 }
 

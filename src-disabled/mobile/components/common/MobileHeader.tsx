@@ -1,6 +1,9 @@
+<<<<<<< HEAD
 
 title: string;  showBack?: boolean;  title: string;
   title: string;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 title: string;  showBack?: boolean;  title: string
 
   title: string;
@@ -10,6 +13,7 @@ title: string;  showBack?: boolean;  title: string
   showSettings?: boolean;
   className?: string;
   onNotificationsClick?: () => void;
+<<<<<<< HEAD
 onSettingsClick?: () => void;export function MobileHeader({title;
   showBack;
   title: string;  showBack?: boolean;  title: string
@@ -20,13 +24,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   className?: string
   onNotificationsClick?: () => void
 interface MobileHeaderProps {
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
 export function MobileHeader({
   title;
   showBack;
 
   title: string,
-  title: string;  showBack?: boolean;  title: string;
   showBack?: boolean;
   showNotifications?: boolean;
   showSettings?: boolean;
@@ -69,6 +74,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
               <span className="sr-only>Back</span>
             </Button>
+<<<<<<< HEAD
 interface MobileHeaderProps {;
   title: string;  showBack?: boolean;  title: string,;
 interface MobileHeaderProps {
@@ -183,6 +189,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               size=icon';
               className='mr-2;
               onClick={() => router && router.back()}
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
               onClick = {(,) => router && router.back()}
             >;"
@@ -234,6 +242,7 @@ interface MobileHeaderProps {
               <ChevronLeft className="h-5 w-5 />;
               <span className=sr-only">Back</span>;
             </Button>;
+<<<<<<< HEAD
             <Button;
               <span className=sr-only'>Settings</span>            </Button>            <Button;
             <Button;
@@ -244,6 +253,8 @@ interface MobileHeaderProps {
               <Settings className="h-5 w-5 />;
               <span className=sr-only">Settings</span>;
             </Button>;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
               size="icon
               onClick={onSettingsClick}
@@ -257,6 +268,7 @@ interface MobileHeaderProps {
             {title}
           </h1>;
         </div>;
+<<<<<<< HEAD
         <div className='flex items-center space-x-2'>;
           {showNotifications && (<Button variant='ghost' size='icon' onClick={onNotificationsClick}>;
               <Bell className='h-5 w-5' />;
@@ -298,6 +310,9 @@ interface MobileHeaderProps {
     </header>;
 )
         <div className=flex items-center space-x-2">;
+=======
+        <div className="flex items-center space-x-2">;
+>>>>>>> origin/chore/fix-lint-and-merge
           {showNotifications && (;
             <Button;
               variant="ghost;

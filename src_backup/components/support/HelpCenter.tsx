@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
@@ -70,6 +71,9 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
+=======
+import { Search } from 'lucide-react'
+>>>>>>> origin/chore/fix-lint-and-merge
 
 import React, { useState } from react';
 import { Input } from '@/components/ui/input;
@@ -193,6 +197,7 @@ export default function HelpCenter() {
 origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <>;
+<<<<<<< HEAD
 
 import { Search  } from 'lucide-react';
 import React, { useState } from react;
@@ -235,6 +240,8 @@ export default /**;
             <TabsContent value=articles>;
               {!selectedCategory && !selectedArticle && (<HelpCategoryList;
                   categories={HELP_CATEGORIES}import React, { useState } from "react",import { Input } from @/components/ui/input,import { Button } from "@/components/ui/button",import { Tabs, TabsContent, TabsList, TabsTrigger } from @/components/ui/tabs,import { HelpCategoryList } from "./HelpCategoryList",import { HelpArticleList } from ./HelpArticleList,import { HelpArticleView } from "./HelpArticleView",import { HELP_CATEGORIES } from ./help-content,export default function HelpCenter() {const [selectedCategory, setSelectedCategory] = useState<string | null>(null)const [selectedArticle, setSelectedArticle] = useState<string | null>(null)const [searchQuery, setSearchQuery]  = useState()const handleCategorySelect = (categoryId: string) => {setSelectedCategory(categoryId)setSelectedArticle(null)}const handleArticleSelect = (articleId: string) => {setSelectedArticle(articleId)}export default function HelpCenter() {const [selectedCategory, setSelectedCategory] = useState<string | null>(null),const [selectedArticle, setSelectedArticle] = useState<string | null>(null),const [searchQuery, setSearchQuery]  = useState(""),const handleCategorySelect = (categoryId: string,) => {setSelectedCategory(categoryId),setSelectedArticle(null)},const handleArticleSelect = (articleId: string,) => {setSelectedArticle(articleId)},const handleBackToCategories = () => {setSelectedCategory(null)setSelectedArticle(null)}const handleBackToArticles = () => {setSelectedArticle(null)}export default function HelpCenter() {const [selectedCategory, setSelectedCategory] = useState<string | null>(null)const [selectedArticle, setSelectedArticle] = useState<string | null>(null)const [searchQuery, setSearchQuery] = useState()const handleCategorySelect  = null;return (<>;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
       <div className='container mx-auto px-4 py-8'>;
         <div className=max-w-4xl mx-auto>;
           <h1 className='text-3xl font-bold mb-2 bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent'>;
@@ -243,9 +250,14 @@ export default /**;
           <p className=text-zion-slate-light mb-6>;
             Find answers to common questions or get in touch with our support;
             team.;
+<<<<<<< HEAD
 
   const handleCategorySelect = (categoryId: string) => {
     setSelectedCategory(categoryId),
+=======
+  const handleCategorySelect = (categoryId: string) => {;
+    setSelectedCategory(categoryId),;
+>>>>>>> origin/chore/fix-lint-and-merge
     setSelectedArticle(null);
 
   },
@@ -261,9 +273,12 @@ export default /**;
     setSelectedArticle(null);
   }
   return (;
+<<<<<<< HEAD
             team.;const handleCategorySelect = (categoryId: string) => {setSelectedCategory(categoryId),setSelectedArticle(null)},const handleArticleSelect = (articleId: string) => {setSelectedArticle(articleId)},const handleBackToCategories = () => {setSelectedCategory(null),setSelectedArticle(null)}const handleBackToArticles = () => {setSelectedArticle(null)}return (<>;
       <div className="container mx-auto px-4 py-8">;
         <div className=max-w-4xl mx-auto>;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
     <>;"
       <div className="container mx-auto px-4 py-8>;
         <div className="max-w-4xl mx-auto">;
@@ -276,11 +291,16 @@ export default /**;
           </p>;
 
           <div className='relative mb-8'>;
+<<<<<<< HEAD
             <Input
               placeholder=Search for help articles...'
             Find answers to common questions or get in touch with our support team.;</p>;<div className='relative mb-8>;
             <Input;
               placeholder=Search for help articles...';
+=======
+            <Input'
+              placeholder='Search for help articles...'
+>>>>>>> origin/chore/fix-lint-and-merge
               value={searchQuery}
               onChange={e => setSearchQuery(e && e.target.value)}'
               className=pl-10            />;'
@@ -375,6 +395,7 @@ export default /**;
                 <h2 className="text-xl font-semibold mb-4>Frequently Asked Questions</h2>
                 
                 <div className="space-y-6">
+<<<<<<< HEAD
                     <h3 className=font-medium text-zion-cyan mb-2>
                       How do I hire someone on Zion?
                     </h3>
@@ -383,6 +404,8 @@ export default /**;
                       matches or applications, interview candidates through our
                       platform, and extend an offer. Our secure payment system
                       protects both parties throughout the engagement.
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
                     <p className=text-zion-slate-light>
                       Our AI matching algorithm analyzes your requirements and preferences to match you with the most compatible talent or services. The process takes into account skills, experience, availability, and past performance to ensure optimal results.
@@ -392,11 +415,15 @@ export default /**;
                   </div>
 
                   <div>
+<<<<<<< HEAD
                     <h3 className="font-medium text-zion-cyan mb-2">How do I hire someone on Zion?</h3>
                     <p className=text-zion-slate-light>
                       To hire talent on Zion, post a job or project, review matches or applications, interview candidates through our platform, and extend an offer. Our secure payment system protects both parties throughout the engagement.
 
                     <h3 className=font-medium text-zion-cyan mb-2>
+=======
+                    <h3 className='font-medium text-zion-cyan mb-2'>
+>>>>>>> origin/chore/fix-lint-and-merge
                       What are the payment terms?
                     </h3>
                     <p className='text-zion-slate-light'>
@@ -415,6 +442,7 @@ export default /**;
               </div>
             </TabsContent>
 
+<<<<<<< HEAD
             </TabsContent>;
             <TabsContent value=faq>;
               <div className="bg-zion-blue-light/20 rounded-lg p-6">;
@@ -554,6 +582,9 @@ export default /**;
 
             
             <TabsContent value=contact>
+=======
+            <TabsContent value="contact">
+>>>>>>> origin/chore/fix-lint-and-merge
               <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
                 <div className=bg-zion-blue-light/20 rounded-lg p-6>
                   <h2 className="text-xl font-semibold mb-4">Contact Support</h2>
@@ -571,6 +602,7 @@ export default /**;
 
                         </svg>
                       </div>"
+<<<<<<< HEAD
                       <a href="mailto:support@ziontechgroup.com className=text-zion-cyan hover:underline">
                       </a>
                     </div>
@@ -597,6 +629,9 @@ export default /**;
                       </Link>;
                     </div>;
                         href=mailto:support@ziontechgroup && ziontechgroup.com;
+=======
+                      <a href="mailto:support@ziontechgroup.com" className="text-zion-cyan hover:underline">
+>>>>>>> origin/chore/fix-lint-and-merge
 
                       </Link>
 
@@ -607,6 +642,7 @@ export default /**;
                         className=text-zion-cyan hover:underline>;
                         support@ziontechgroup && ziontechgroup.com;
                       </a>;
+<<<<<<< HEAD
                     </div>;<div className='flex items-center'>;
                       <div className=bg-zion-purple/10 p-2 rounded-full mr-3>;<svg;
                           xmlns='http://www.w3.org/2000/svg';
@@ -621,11 +657,9 @@ export default /**;
                       <span className=text-zion-slate-light>;
                         +1 302 464 0950;
                       </span>;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
                     </div>;
-      </div>;</>)}</div>;
-    </>;
-  ))
-  )
 '
                     <div className='flex items-center>;
                       <div className='bg-zion-purple/10 p-2 rounded-full mr-3'>;

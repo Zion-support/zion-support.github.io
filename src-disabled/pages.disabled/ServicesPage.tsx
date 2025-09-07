@@ -328,5 +328,9 @@ const ServicesPage: React.FC = () => {
 }> <ArrowUp className="h-5 w-5 text-primary-foreground" /> </motion.button>) ;
 }</AnimatePresence> </div>) ;
 }'"
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/chore/fix-lint-and-merge

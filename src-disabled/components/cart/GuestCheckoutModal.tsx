@@ -10,8 +10,32 @@ import { Label } from @/components/ui/label',
 try {
       on_submit ({ email, address });
     } finally {
+<<<<<<< HEAD
 import { useState } from 'react,import { Button } from @/components/ui/button',import { Input } from '@/components/ui/input,import { Label } from @/components/ui/label',import { Textarea } from '@/components/ui/textarea,try {on_submit ({ email, address })} finally {class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }}componentDidCatch(error, errorInfo) {console.error(Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
     }return this.props.children;
+=======
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+>>>>>>> origin/chore/fix-lint-and-merge
   }
 }
 import React from 'react';
@@ -21,11 +45,14 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 
+<<<<<<< HEAD
 import { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
 import { Input } from '@/components/ui/input',;
 import { Label } from '@/components/ui/label',;
 import { Textarea } from '@/components/ui/textarea',;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 import {;
 import { useState } from react';
 import { Button } from '@/components/ui/button;
@@ -44,6 +71,7 @@ import {
   DialogTitle} from @/components/ui/dialog',
 import { User, Mail, MapPin, CreditCard } from 'lucide-react;
 
+<<<<<<< HEAD
 interface GuestCheckoutModalProps {;
 interface GuestCheckoutModalProps {
 
@@ -59,6 +87,13 @@ interface GuestCheckoutModalProps  {import { useState   } from react';
 import { Button   } from '@/components/ui/button;
 import { Input   } from @/components/ui/input';
 import { Label   } from '@/components/ui/label;
+=======
+import { useState  } from 'react';
+import { Button  } from '@/components/ui/button';
+import { Input  } from '@/components/ui/input';
+import { Label  } from '@/components/ui/label';
+import { Textarea } from '@/components/ui/textarea';
+>>>>>>> origin/chore/fix-lint-and-merge
 import { Dialog;
   DialogContent;
   DialogDescription;
@@ -87,6 +122,7 @@ import { Textarea } from '@/components/ui/textarea
 import { User, Mail, MapPin, CreditCard } from 'lucide-react
 import { isProdDomain } from @/utils/getStripe';
 interface GuestCheckoutModalProps {
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
   open: boolean;
   onOpenChange: (open: boolean) => void;
@@ -186,6 +222,8 @@ export default function GuestCheckoutModal(): any ({open,onOpenChange,onSubmit}:
             Enter your details to complete your purchase as a guest.
           </DialogDescription>
         </DialogHeader>
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
     }
   },
@@ -196,11 +234,14 @@ export default function GuestCheckoutModal(): any ({open,onOpenChange,onSubmit}:
           <div className=rounded-md bg-amber-500/20 p-2 text-center text-amber-400">
             Pay with test data – use card 4242 4242 4242 4242 and any future date.
           </div>
+<<<<<<< HEAD
         )}
               htmlFor=guest-email'
         )}<form onSubmit={handleSubmit} className='space-y-4>;
           <div className=space-y-2'>;<Label;
               htmlFor='guest-email;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
         <form onSubmit={handleSubmit} className=space-y-4'>;
           <div className='space-y-2>;
@@ -212,9 +253,12 @@ export default function GuestCheckoutModal(): any ({open,onOpenChange,onSubmit}:
               <Mail className=h-4 w-4 text-zion-cyan' />;
               Email Address;
             </Label>;
+<<<<<<< HEAD
             <Input
               id='guest-email'
               type='email'
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
             <Input id='guest-email''
               type='email''
               value={email || ''}'
@@ -237,6 +281,7 @@ export default function GuestCheckoutModal(): any ({open,onOpenChange,onSubmit}:
             />
           </div>
 
+<<<<<<< HEAD
             <Input;
               id='guest-email;
               type=email';
@@ -283,6 +328,13 @@ export default function GuestCheckoutModal(): any ({open,onOpenChange,onSubmit}:
               htmlFor='guest-address';
           </div>;<div className='space-y-2>;<Label;
               htmlFor=guest-address';
+=======
+              value={email || ''}
+              onChange={e => setEmail(e && e.target.value || '')}
+              placeholder='your && your.email@example && example.com'              required;
+              className='bg-zion-blue-light border-zion-cyan/30 text-white placeholder:text-zion-slate-light';
+            />;
+>>>>>>> origin/chore/fix-lint-and-merge
           </div>;
 
           <div className='space-y-2>;
@@ -292,10 +344,13 @@ export default function GuestCheckoutModal(): any ({open,onOpenChange,onSubmit}:
               <MapPin className='h-4 w-4 text-zion-cyan' />;
               Shipping Address;
             </Label>;
+<<<<<<< HEAD
             <Textarea;
               id=guest-address;
               value={address || ''}
               onChange={e => setAddress(e && e.target.value || )}
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
             <Textarea
               id='guest-address'
               value={address || '}'
@@ -303,8 +358,11 @@ export default function GuestCheckoutModal(): any ({open,onOpenChange,onSubmit}:
               placeholder='Enter your full shipping address...              required;
               className=bg-zion-blue-light border-zion-cyan/30 text-white placeholder:text-zion-slate-light min-h-[80px]';,
             />;
+<<<<<<< HEAD
           </div>;<div className='bg-yellow-500/10 border border-yellow-500/30 rounded-lg p-3'>;
           </div>;<div className='bg-yellow-500/10 border border-yellow-500/30 rounded-lg p-3>;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
           </div>;
           <div className=bg-yellow-500/10 border border-yellow-500/30 rounded-lg p-3'>;
             <p className='text-yellow-400 text-sm>;
@@ -319,7 +377,12 @@ export default function GuestCheckoutModal(): any ({open,onOpenChange,onSubmit}:
             Enter your details to complete your purchase as a guest.;
           </DialogDescription>;
         </DialogHeader>;
+<<<<<<< HEAD
         {!isProdDomain () && (<div className=rounded - md bg - amber - 500 / 20 p - 2 text - center text - amber - 400'>;
+=======
+        {!isProdDomain () && (
+          <div className='rounded - md bg - amber - 500 / 20 p - 2 text - center text - amber - 400'>;
+>>>>>>> origin/chore/fix-lint-and-merge
             Pay with test data – use card 4242 4242 4242 4242 and any future;
             date.;
           </div>)}
@@ -358,7 +421,10 @@ export default function GuestCheckoutModal(): any ({open,onOpenChange,onSubmit}:
             />;
           </div>;
           <div className='bg - yellow - 500 / 10 border border - yellow - 500 / 30 rounded - lg p - 3'>;
+<<<<<<< HEAD
             <p className='text - yellow - 400 text - sm'>;💡 Creating an account allows you to track your order and checkout;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
             <p className='text - yellow - 400 text - sm'>;
             <p className=text - yellow - 400 text - sm'>;💡 Creating an account allows you to track your order and checkout;
             <p className='text - yellow - 400 text - sm>;
@@ -427,12 +493,18 @@ export default function GuestCheckoutModal(): any ({open,onOpenChange,onSubmit}:
 
         <form onSubmit={handleSubmit} className=space-y-4">
 
+<<<<<<< HEAD
               className="bg-zion-cyan hover:bg-zion-cyan/90 text-zion-blue"
               className="bg-zion-cyan hover:bg-zion-cyan/90 text-zion-blue
             >
           <div className=space-y-2">
             <Label htmlFor="guest-address className=text-white flex items-center gap-2">
               <MapPin className="h-4 w-4 text-zion-cyan />
+=======
+          <div className="space-y-2">
+            <Label htmlFor="guest-address" className="text-white flex items-center gap-2">
+              <MapPin className="h-4 w-4 text-zion-cyan" />
+>>>>>>> origin/chore/fix-lint-and-merge
               Shipping Address
             </Label>
 
@@ -498,6 +570,7 @@ export default function GuestCheckoutModal(): any ({open,onOpenChange,onSubmit}:
                 </>
               )}
 
+<<<<<<< HEAD
 
           <DialogFooter className=space - x-2'>;
           </div>;<form onSubmit={handleSubmit} className=space-y-4">;
@@ -536,6 +609,8 @@ export default function GuestCheckoutModal(): any ({open,onOpenChange,onSubmit}:
                   Continue to Payment;
                 </>)}
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
               disabled={isSubmitting || !email || !address}
               className=bg-zion-cyan hover:bg-zion-cyan/90 text-zion-blue'>;
               {isSubmitting ? (;
@@ -547,14 +622,18 @@ export default function GuestCheckoutModal(): any ({open,onOpenChange,onSubmit}:
                 </>;
               )}
 
+<<<<<<< HEAD
 };
 };
 }
 }
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
             </Button>;
           </DialogFooter>;
         </form>;
       </DialogContent>;
+<<<<<<< HEAD
 
 }
 
@@ -588,3 +667,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </Dialog>;
   );
 }
+=======
+    </Dialog>;
+  );
+}
+;
+>>>>>>> origin/chore/fix-lint-and-merge

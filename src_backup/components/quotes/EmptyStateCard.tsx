@@ -7,6 +7,7 @@ import { MessageSquare, ArchiveIcon } from 'lucide-react;
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components / ui / card';
 type EmptyStateCardProps = {}
 
+<<<<<<< HEAD
 import { MessageSquare, ArchiveIcon } from lucide-react';'
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from @/components/ui/card;'
 
@@ -51,8 +52,12 @@ type EmptyStateCardProps = {type EmptyStateCardProps = {type: active' | 'archive
           {isActive;
             ? You haven't received any hire requests yet. Promote your profile and services to attract potential clients.";
             : "You havent archived any hire requests yet. Archive requests to keep your active list organized.;
+=======
+  type: 'active' | 'archived';
+
+>>>>>>> origin/chore/fix-lint-and-merge
           }
-        </p>;
+        </p>
       </CardContent>;
     </Card>;
   );
@@ -77,5 +82,4 @@ type EmptyStateCardProps = {type EmptyStateCardProps = {type: active' | 'archive
         </p>;
       </CardContent>;
     </Card>);
-    </Card>)}}type EmptyStateCardProps = any;
 }

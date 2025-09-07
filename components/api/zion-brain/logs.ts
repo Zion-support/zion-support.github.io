@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+>>>>>>> origin/chore/fix-lint-and-merge
 
   return res && res.status(200).json({}
     entries: entries && entries.slice(-200),
@@ -37,9 +41,16 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 return res.status (200).json ({ entries: entries.slice (-200), by_module, by_type, total: entries.length });
 
+<<<<<<< HEAD
 }
   const byType: Record<string, number> = {};
 }
+=======
+import { readLogs } from '@/utils/zionBrain';
+function isAuthorized(req: NextApiRequest): boolean {}
+    return res.status(401).json({ error: 'Unauthorized',}
+});
+>>>>>>> origin/chore/fix-lint-and-merge
 
   const byModule: Record<string, number> = {};
 
@@ -49,20 +60,27 @@ return res.status (200).json ({ entries: entries.slice (-200), by_module, by_typ
       ),
 const { entries } = readLogs();
 
+<<<<<<< HEAD
 
+=======
+const stuckOnly = req.query.stuck === '1' |req.query.stuck === 'true';
+  if (stuckOnly) {
+return res.status(200).json({
+      entries: entries.filter(
+>>>>>>> origin/chore/fix-lint-and-merge
 
-        e => { return e.status === 'stuck' || e.status === 'laggy''
-      )
-    }); }
+        e => e.status === 'stuck' || e.status === 'laggy'}
+      ),}
+    });
   }
 
-const "byModule": Record<string, number> = {};
+const byModule: Record<string, number    /> = {};
 
-const "byType": Record<string, number> = {};
+const byType: Record<string, number    /> = {};
 return res.status(200).json({
-    }
-    "entries": entries.slice(-200),
+    entries: entries.slice(-200),
     byModule,
+<<<<<<< HEAD
     byType,
     total: entries && entries.length,
   });  for (const e of entries) {
@@ -178,5 +196,13 @@ return res.status(200).json({
   });
   }
 return res.status(200).json({ entries: entries.slice(-200), byModule, byType, total: entries.length}
+=======
+    byType,}
+    total: entries.length,}
+  });
+  }
+return res.status(200).json({ entries: entries.slice(-200), byModule, byType, total: entries.length,}
+>>>>>>> origin/chore/fix-lint-and-merge
 });
 }
+

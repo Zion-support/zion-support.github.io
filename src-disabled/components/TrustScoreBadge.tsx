@@ -13,7 +13,7 @@ const TrustScoreBadge: React.FC < TrustScoreBadgeProps> = ({ score, tooltipText 
   const getScoreColor = ( if (score === null || score === undefined) return 'text - gray - 500' if (score > 85) return 'text - green - 600' if (score > 70) return 'text - yellow - 600' return 'text - red - 600' ) => {
   return $3;}
 };
-  return (<div className='trust - score - badge p - 2 border rounded - md shadow - sm bg - white inline - block' title={tooltipText || defaultTooltip}''`";";
+  return (<div className='trust - score - badge p - 2 border rounded - md shadow - sm bg - white inline - block' title={tooltipText || defaultTooltip}''`\";\";
 
 interface TrustScoreBadgeProps {
   score: number | null | undefined;
@@ -27,4 +27,4 @@ const TrustScoreBadge: React.FC < TrustScoreBadgeProps /> = ({ score, tooltipTex
 }` : 'Trust score not yet calculated.';
   return $3;}
 };"
-  return (<div className='trust - score - badge p - 2 border rounded - md shadow - sm bg - white inline - block' title={tooltipText || defaultTooltip}''`"";"
+  return (<div className='trust - score - badge p - 2 border rounded - md shadow - sm bg - white inline - block' title={tooltipText || defaultTooltip}''`\"\";"

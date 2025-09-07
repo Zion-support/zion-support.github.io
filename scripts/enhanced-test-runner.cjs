@@ -3,6 +3,7 @@
 
 
 
+<<<<<<< HEAD
 
 
 
@@ -33,6 +34,26 @@ const { execSync, spawn } = require('child_process')
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-f954
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+#!/usr/bin/env node;
+const fs = require('fs');
+const path = require('path');
+const { execSync, spawn } = require('child_process');
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+
+
+
+
+
+>>>>>>> origin/chore/fix-lint-and-merge
   "summary": {}"
 =======
 
@@ -52,15 +73,17 @@ function log(level, message) {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
   const timestamp = new Date().toISOString();
-<<<<<<< HEAD
-<<<<<<< HEAD
   console.log(`[${timestamp}] [${level.toUpperCase()}] ${message})};
 async function runJestTests() {}"
 =======
 >>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
 
+<<<<<<< HEAD
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 <<<<<<< HEAD
 =======
@@ -77,11 +100,14 @@ async function runJestTests() {}
   try {}
     const startTime = Date.now();
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
     }
 });
     const endTime = Date.now();
     const result = JSON.parse(output);
     testReport.tests.push({})
+<<<<<<< HEAD
       "framework": 'jest,
       duration: endTime - startTime,
       "result": result;
@@ -91,12 +117,17 @@ async function runJestTests() {}
     
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-f954
+=======
+
+      "result": result;"
+>>>>>>> origin/chore/fix-lint-and-merge
     testReport.summary.total += result.numTotalTests;
     testReport.summary.passed += result.numPassedTests;
     testReport.summary.failed += result.numFailedTests;
     testReport.summary.skipped += result.numPendingTests;
     testReport.summary.duration += endTime - startTime;
     if (result.coverageMap) {}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -124,6 +155,8 @@ async function runJestTests() {}"
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
 
     testReport.summary.total += result.total;
@@ -133,12 +166,16 @@ async function runJestTests() {}"
 
       "result": { passed: true, output };"
     testReport.summary.passed++;
+<<<<<<< HEAD
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-f954
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
     "
       "result": { passed: false, "error": error.message };"
     testReport.summary.failed++;"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -323,13 +360,16 @@ async function runTypeTests() {}
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
 function generateRecommendations() {}
   const recommendations = [];
   const { total, passed, failed, coverage } = testReport.summary;
-  
   if (total === 0) {}
     recommendations.push({})
 
+<<<<<<< HEAD
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 <<<<<<< HEAD
 =======
@@ -389,6 +429,8 @@ async function main() {}
     
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-f954
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
     await runJestTests();
     await runPlaywrightTests();
     await runCypressTests();
@@ -397,6 +439,7 @@ async function main() {}
     testReport.summary.total = testReport.tests.reduce((sum, test) => sum + (test.result.total || 1), 0);
     testReport.recommendations = generateRecommendations();
     // Display summary;
+<<<<<<< HEAD
 <<<<<<< HEAD
     log('info', 'Enhanced Test Runner Summary');
     log('info', '');
@@ -467,3 +510,9 @@ main();
 =======
 main();
 >>>>>>> cursor/integrate-build-improve-and-re-verify-f954
+=======
+
+    process.exit(1)};
+main();
+`;
+>>>>>>> origin/chore/fix-lint-and-merge

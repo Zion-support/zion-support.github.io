@@ -1,33 +1,11 @@
 import { Trophy, Award, BadgeCheck, Star, MessageSquare } from 'lucide-react'
-import { Badge } from "@/types/community";
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
-interface UserBadgesProps {
-  badges: Badge[]
-}
-
-const iconMap = null;
+import { Badge } from "@/types/community",
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip",
 
   Trophy,
 
 interface UserBadgesProps {
   badges: Badge[]
-:src/components/community/UserBadges.tsx
-}
-const iconMap = {
-  Trophy
-  Award
-  BadgeCheck
-  Star
-  MessageSquare
-}
-export const UserBadges = ({ badges }: UserBadgesProps) => {
-  if (!badges?.length) return null
-  return (
-    <div className="flex flex-wrap gap-2">
-      {badges.map((badge) => {
-        // Get the correct icon component based on the badge's icon name
-        const IconComponent = iconMap[badge.icon as keyof typeof iconMap] |Trophy
-export default UserBadges
 
 },
 
@@ -44,25 +22,10 @@ export default UserBadges;
           <TooltipProvider key={badge.id}>
             <Tooltip>
               <TooltipTrigger asChild>
-:src/components/community/UserBadges.tsx
-                <div
 
                   style={{ backgroundColor: badge.color + '20' }}
-                  className='w-8 h-8 rounded-full flex items-center justify-center cursor-pointer'
+                  className="w-8 h-8 rounded-full flex items-center justify-center cursor-pointer"
                 >
-:src/components/community/UserBadges.tsx
-                  <IconComponent
-                    style={{ color: badge.color }}
-                    className='w-4 h-4'
-                  />
-                </div>
-              </TooltipTrigger>
-              <TooltipContent>
-                <div className='text-center'>
-                  <div className='font-medium'>{badge.name}</div>
-                  <div className='text-xs text-gray-500'>
-                    {badge.description}
-                  </div>
                   <IconComponent;
                     style={{ color: badge.color }} "
                     className="w-4 h-4" 
@@ -77,7 +40,6 @@ export default UserBadges;
               </TooltipContent>
             </Tooltip>
           </TooltipProvider>
-:src/components/community/UserBadges.tsx
 
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip",;
 interface UserBadgesProps {;
@@ -117,14 +79,9 @@ const iconMap = {;
           </TooltipProvider>;
         );
       })}
-    </div>
+    </div>;
   );
 };
-:src/components/community/UserBadges.tsx
-}
-
-export default UserBadges;
-'"
 
 export const UserBadges = ({ badges }: UserBadgesProps) => {;
   if (!badges?.length) return null,;

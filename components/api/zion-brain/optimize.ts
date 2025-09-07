@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { appendLog, optimizePrompt } from '@/utils/zionBrain';
 function isAuthorized(req: NextApiRequest): boolean {}
@@ -130,6 +131,10 @@ export default async function handler(
   export default async /**
  * handler - Function description
  */
+=======
+*/
+function handler() {}
+>>>>>>> origin/chore/fix-lint-and-merge
     if ("
       return res.status (405).json ({ error: Method not allowed })) {}
   $2;
@@ -174,8 +179,13 @@ export default async function handler(
 origin/cursor/automate-test-improve-and-merge-code-2533
 
 }
+<<<<<<< HEAD
           : "laggy";append_log ({module: "optimizer",type: "optimize",status: status as any,latency_ms,payload: {user_intent,original_length: String (prompt || "").length,optimized_length: result.optimized.length,},})return res.status (200).json (result)} catch (e: any) {append_log ({module: "optimizer",type: "optimize",status: "error",payload: { error: e?.message || "unknown" },})return res.status (500).json ({ error: "Optimization failure" })}
     append_log ({module: "optimizer",type: "optimize",status: "error",payload: { error: e?.message || "unknown" },})}}
   }
 }
 "
+=======
+
+"
+>>>>>>> origin/chore/fix-lint-and-merge

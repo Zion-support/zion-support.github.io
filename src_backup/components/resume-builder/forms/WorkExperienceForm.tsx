@@ -1,3 +1,15 @@
+<<<<<<< HEAD
+=======
+}
+      // Check condition
+if ( {) {
+  $2
+}
+        success = await updateWorkExperience (editing_id, experience_data);
+      } else {
+        success = await addWorkExperience(resumeId, experienceData)
+      }
+>>>>>>> origin/chore/fix-lint-and-merge
 
   }
   const handleEdit = (work: WorkExperience) => {
@@ -44,7 +56,10 @@ import { AIEnhancementButton } from '@/components/resume-builder/forms/AIEnhance
   }
 
 
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
     setEditingId(work.id!);    form.reset({
       ...work
     setEditingId(work.id!)
@@ -162,11 +177,37 @@ interface WorkExperienceFormProps {
   resumeId: string;
   workExperiences: WorkExperience[];
   onComplete: () => void;
+<<<<<<< HEAD
   onBack: () => void;export function WorkExperienceForm(): any ({resumeId,workExperiences,onComplete,onBack}: WorkExperienceFormProps) {const {addWorkExperience,updateWorkExperience,deleteWorkExperience,isLoading} = useResume()const [editingId, setEditingId] = useState<string | null>(null)const [error, setError]  = useState<string | null>(null)// Helper function to format dates to string;
   const formatDateValue = (dateValue: string | Date | undefined): string => {if (!dateValue) return ';
     if (typeof dateValue === 'string) return dateValue;
     return format(dateValue, yyyy-MM-dd')
 }
+=======
+  onBack: () => void;
+
+export function WorkExperienceForm(): any ({;
+  resumeId,;
+  workExperiences,;
+  onComplete,;
+  onBack,;
+}: WorkExperienceFormProps) {;
+  const {;
+    addWorkExperience,;
+    updateWorkExperience,;
+    deleteWorkExperience,;
+    isLoading,;
+  } = useResume();
+  const [editingId, setEditingId] = useState<string | null>(null);
+  const [error, setError] = useState<string | null>(null);
+
+  // Helper function to format dates to string;
+  const formatDateValue = (dateValue: string | Date | undefined): string => {;
+    if (!dateValue) return '';
+    if (typeof dateValue === 'string') return dateValue;
+    return format(dateValue, 'yyyy-MM-dd')
+};
+>>>>>>> origin/chore/fix-lint-and-merge
 
     resolver: zodResolver(workExperienceSchema),
     defaultValues: {
@@ -237,6 +278,7 @@ interface WorkExperienceFormProps {
         <p className=text-muted-foreground'>;
           Add your work history to showcase your professional experience.;
         </p>;
+<<<<<<< HEAD
       </div>;{workExperiences && workExperiences.length > 0 && (<div className='space-y-4>;
           <h3 className=text-md font-medium'>Added Experience</h3>;
           {workExperiences && workExperiences.map(work => (<Card key={work && work.id} className='bg-muted/40>;
@@ -244,6 +286,19 @@ interface WorkExperienceFormProps {
                 <div className='flex justify-between>                  <div>;
                     <h4 className=font-medium'>{work && work.role_title}</h4>;
                     <p className='text-sm text-muted-foreground>;
+=======
+      </div>;
+
+      {workExperiences && workExperiences.length > 0 && (;
+        <div className='space-y-4'>;
+          <h3 className='text-md font-medium'>Added Experience</h3>;
+          {workExperiences && workExperiences.map(work => (;
+            <Card key={work && work.id} className='bg-muted/40'>;
+              <CardContent className='pt-6'>;
+                <div className='flex justify-between'>                  <div>;
+                    <h4 className='font-medium'>{work && work.role_title}</h4>;
+                    <p className='text-sm text-muted-foreground'>;
+>>>>>>> origin/chore/fix-lint-and-merge
                       {work && work.company_name}
                     </p>;
                     <p className=text-xs text-muted-foreground mt-1'>;
@@ -328,14 +383,8 @@ interface WorkExperienceFormProps {
                     Next
                   </Button>
                 )}
-              </div>
-            </div>
-          </form>
-        </Form>
-      </div>
-    </div>
-  );
 
+<<<<<<< HEAD
 }> {;
   editingId ? 'Cancel': Back ;
 }</Button> Next </Button>) ;
@@ -369,33 +418,85 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}{editingId ? 'Update : Add'} Experience;
                 </Button>;
                 {!editingId && workExperiences.length > 0 && (<Button type='button onClick={onComplete}>;
+=======
+              </Button>;
+
+              <div className='flex gap-2'>;
+                <Button type='submit' disabled={isLoading}>;
+                  {isLoading && (;
+                    <Loader2 className='mr-2 h-4 w-4 animate-spin' />;
+                  )}
+                  {editingId ? 'Update' : 'Add'} Experience;
+                </Button>;
+
+                {!editingId && workExperiences && workExperiences.length > 0 && (;
+                  <Button type='button' onClick={onComplete}>;
+>>>>>>> origin/chore/fix-lint-and-merge
                     Next;
                   </Button>;
                 )}
 
                 </FormItem>)}
             />;
+<<<<<<< HEAD
             {error && (<Alert variant=destructive'>;
+=======
+            {error && (
+              <Alert variant='destructive'>;
+>>>>>>> origin/chore/fix-lint-and-merge
                 <AlertDescription>{error}</AlertDescription>;
               </Alert>)}
             <div className='flex justify - between pt - 2>;
               <Button;
+<<<<<<< HEAD
                 type=button';
                 variant='outline;
                 on_click={() => {// Check condition;
 if ( {) {$2;
 }
                     setEditingId (null)form.reset ({company_name: ',role_title: ',start_date: format (new Date (), yyyy - MM - dd'),is_current: false,description: ',location: '})} else {on_back ()}
+=======
+                type='button';
+                variant='outline';
+                on_click={() => {
+                  // Check condition
+if ( {) {
+  $2
+}
+                    setEditingId (null);
+                    form.reset ({
+                      company_name: '',
+                      role_title: '',
+                      start_date: format (new Date (), 'yyyy - MM - dd'),
+                      is_current: false,
+                      description: '',
+                      location: '',
+                    });
+                  } else {
+                    on_back ();
+                  }
+>>>>>>> origin/chore/fix-lint-and-merge
                 }}
               >;
                 {editing_id ? 'Cancel : Back'}
               </Button>;
+<<<<<<< HEAD
               <div className='flex gap - 2>;
                 <Button type=submit' disabled={is_loading}>;
                   {is_loading && (<Loader2 className='mr - 2 h - 4 w - 4 animate - spin />)}
                   {editing_id ? Update' : 'Add} Experience;
                 </Button>;
                 {!editing_id && work_experiences.length > 0 && (<Button type=button' on_click={on_complete}>;
+=======
+              <div className='flex gap - 2'>;
+                <Button type='submit' disabled={is_loading}>;
+                  {is_loading && (
+                    <Loader2 className='mr - 2 h - 4 w - 4 animate - spin' />)}
+                  {editing_id ? 'Update' : 'Add'} Experience;
+                </Button>;
+                {!editing_id && work_experiences.length > 0 && (
+                  <Button type='button' on_click={on_complete}>;
+>>>>>>> origin/chore/fix-lint-and-merge
                     Next;
                   </Button>)}
               </div>;

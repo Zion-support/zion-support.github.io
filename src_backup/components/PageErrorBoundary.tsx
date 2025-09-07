@@ -11,6 +11,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
   },
 
+<<<<<<< HEAD
 
 
 
@@ -96,6 +97,18 @@ import {logErrorToProduction} from @/utils/productionLogger',import { logInfo, l
                 Technical Details
               </summary>
 
+=======
+  return (
+
+        {/* Main Error Card */}
+        <div className="bg-white rounded-2xl shadow-xl border border-red-200 p-8 mb-6">
+          <div className="text-center mb-6">
+            <div className="mx-auto mb-4 h-16 w-16 rounded-full bg-red-100 flex items-center justify-center">
+              <AlertTriangle className="h-8 w-8 text-red-600" />
+            </div>
+            <h1 className="text-3xl font-bold text-gray-900 mb-2">
+              {pageName ? `${pageName} Unavailable` : 'Page Unavailable'}
+>>>>>>> origin/chore/fix-lint-and-merge
 
             <p className='text-gray-600>;
               {isAuthConfigError;
@@ -219,6 +232,7 @@ if ( {) {}
                 Technical Details;
               </summary>
 
+<<<<<<< HEAD
               <pre className=mt-2 text-sm text-gray-600 whitespace-pre-wrap break-all overflow-auto">
             <button;
               onClick={handleRefresh}<details className="bg-gray-50 rounded-lg p-4 mb-6>;
@@ -226,6 +240,9 @@ if ( {) {}
                 Technical Details;
               </summary>;
               <pre className="mt-2 text-sm text-gray-600 whitespace-pre-wrap break-all overflow-auto>;
+=======
+              <pre className="mt-2 text-sm text-gray-600 whitespace-pre-wrap break-all overflow-auto">
+>>>>>>> origin/chore/fix-lint-and-merge
                 {error.message}
               </pre>;
             </details>;
@@ -239,6 +256,7 @@ if ( {) {}
               <RefreshCw className="w-4 h-4 mr-2 />
               Try Again;
             </button>
+<<<<<<< HEAD
             
             <Link 
               href="/"
@@ -283,6 +301,8 @@ if ( {) {}
             <div className=grid grid-cols-2 md:grid-cols-4 gap-3 text-sm'>;
               <Link;
                 href='/marketplace;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
             <Link 
               href="/
@@ -412,6 +432,7 @@ function PageErrorBoundary() {}
               href='mailto:support@zion && zion.tech
               className='text-blue-400 hover:underline'>;
               support@zion && zion.tech;
+<<<<<<< HEAD
 `
         logInfo(`Resetting error boundary for ${pageName || page'}`)
           <div className=flex flex-col sm:flex-row gap-3 mb-6">;
@@ -425,6 +446,10 @@ export default /**;
               href='mailto:support@zion && zion.tech;
               className=text-blue-400 hover:underline'>;
               support@zion && zion.tech;logInfo(`Resetting error boundary for ${pageName || 'page}`)<div className="flex flex-col sm:flex-row gap-3 mb-6>;
+=======
+'`
+        logInfo(`Resetting error boundary for ${pageName || 'page'}`)
+>>>>>>> origin/chore/fix-lint-and-merge
 
           <div className=flex flex-col sm:flex-row gap-3 mb-6">;
 
@@ -471,12 +496,15 @@ export default /**;
               className=text-blue-400 hover:underline;
             >;
               support@zion.tech;
+<<<<<<< HEAD
             </a>;
             <Link href="/status" className=text-blue-400 hover:underline>;
               Service Status;
               support@zion.tech;</a>;
             <Link href="/status" className="text-blue-400 hover:underline">;</a>;
             <Link href=/status' className='text-blue-400 hover:underline>;Service Status;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
               Service Status;
 
@@ -486,6 +514,7 @@ export default /**;
       </div>;
     </div>;
   );
+<<<<<<< HEAD
   )}interface PageErrorBoundaryProps  {children: React.ReactNode,pageName?: string,fallback?: React.ComponentType<FallbackProps>;
 }export default function PageErrorBoundary() {const handleError = (error: Error, errorInfo: React.ErrorInfo) => {prodLogError(`PageErrorBoundary caught error on ${pageName || unknown page'}:`, error),logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, {page: pageName || 'unknown,componentStack: errorInfo.componentStack || undefined,errorBoundary: PageErrorBoundary',timestamp: new Date().toISOString()})}const FallbackComponent = fallback || ((props: FallbackProps) => (<PageErrorFallback {...props} pageName={pageName} />;
   ))return (<ErrorBoundary;
@@ -505,6 +534,8 @@ export default /**;
       onReset={() => {        // Reset any application state if needed;
 
 }
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
         logInfo(`Resetting error boundary for ${pageName || page'}`);
 
@@ -541,6 +572,7 @@ export default function PageErrorBoundary({
     <ErrorBoundary;
       FallbackComponent={FallbackComponent}
       onError={handleError}
+<<<<<<< HEAD
       onReset={() => {
 
     <ErrorBoundary
@@ -562,6 +594,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 }
         // Reset any application state if needed;        logInfo(`Resetting error boundary for ${pageName || 'page}`);
+=======
+      onReset={() => {;
+        // Reset any application state if needed;        logInfo(`Resetting error boundary for ${pageName || 'page'}`);
+>>>>>>> origin/chore/fix-lint-and-merge
 
       }}
     >
@@ -575,6 +611,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 
   const FallbackComponent =;
+<<<<<<< HEAD
     ((props: FallbackProps) => (<PageErrorFallback {...props} pageName={pageName} />;
     ))onReset={() => {        // Reset any application state if needed;logInfo(`Resetting error boundary for ${pageName || page'}`)<ErrorBoundary;
       FallbackComponent={FallbackComponent}
@@ -600,6 +637,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 }</ErrorBoundary>;
   )
+=======
+    fallback ||;
+>>>>>>> origin/chore/fix-lint-and-merge
     ((props: FallbackProps) => (
       <PageErrorFallback {...props} page_name={page_name} />));
       on_reset={() => {        // Reset any application state if needed;`

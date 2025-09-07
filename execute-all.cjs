@@ -4,6 +4,7 @@ const { execSync } = require('child_process');
 class ExecuteAllScripts {
   constructor() {
     this.projectRoot = process.cwd();
+<<<<<<< HEAD
   }
 
 <<<<<<< HEAD
@@ -60,14 +61,13 @@ async function runAll() {;
   console.log('3. "Run": git add . && git commit -m ""feat": Comprehensive automation improvements"');
   console.log('4. "Run": git push origin main');
 }
+=======
+  }
+
+>>>>>>> origin/chore/fix-lint-and-merge
   async run() {
     console.log('🚀 Executing all automation scripts...');
-    
-    const scripts = [
-      'comprehensive-automation-suite.cjs',
-      'final-automation-suite-fixed.cjs',
-      'ultimate-automation-orchestrator.cjs'
-    ];
+    const scripts = ['comprehensive-automation-suite.cjs', 'final-automation-suite-fixed.cjs', 'ultimate-automation-orchestrator.cjs'];
 
     for (const script of scripts) {
       try {
@@ -82,6 +82,7 @@ async function runAll() {;
 }
 
 const executor = new ExecuteAllScripts();
+<<<<<<< HEAD
 executor.run().catch(console.error);
 ;
 runAll().catch(console.error);
@@ -157,3 +158,6 @@ executor.run().catch(console.error);
 =======
 
 >>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
+=======
+executor.run().catch(console.error);
+>>>>>>> origin/chore/fix-lint-and-merge

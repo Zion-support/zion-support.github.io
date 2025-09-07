@@ -7,13 +7,7 @@ on:
 
 permissions:
   contents: write
-:.github/workflows/backups/actionlint.yml.backup
-:.github/workflows/backups/actionlint.yml.backup
-  pull-requests: write
-:.github/workflows/backups/actionlint.yml.backup
-  pull-requests: write
-:.github/workflows/backups/actionlint.yml.backup
-  pull-requests: write
+
   actions: read
 
 jobs:

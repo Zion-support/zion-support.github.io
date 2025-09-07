@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 
+<<<<<<< HEAD
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
@@ -74,3 +75,5 @@ function resolveConflicts() {
 }
 
 console.log('🎉 PR conflict resolution complete!');
+=======
+>>>>>>> origin/chore/fix-lint-and-merge

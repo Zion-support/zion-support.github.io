@@ -1,10 +1,11 @@
 
 
-import React from 'react';'
-import { motion } from 'framer-motion';'
-  rounded?: string
+import React from 'react';
+import { motion } from 'framer-motion';
+  rounded?: string;
 }
 
+<<<<<<< HEAD
 const Skeleton: React.FC<SkeletonProps> = ({ 
 
 ;
@@ -140,3 +141,18 @@ export const StatsSkeleton: React.FC<StatsSkeletonProps> = ({ className = '' }) 
           {[...Array(4)].map((_, index) => (
             <div key = $2;
 export default Skeleton,
+=======
+const Skeleton: React.FC<SkeletonProps    /> = ({ }
+  className;}
+          ))}
+        </div>
+      </div>
+    </div>
+
+)
+};
+
+
+export default Skeleton;
+
+>>>>>>> origin/chore/fix-lint-and-merge

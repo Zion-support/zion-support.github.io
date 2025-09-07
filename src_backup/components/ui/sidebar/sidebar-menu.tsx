@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :src/components/ui/sidebar/sidebar-menu.tsx
 import React, { forwardRef } from "react,
 import { ChevronDown } from 'lucide-react
@@ -24,6 +25,8 @@ const SidebarMenuItem = forwardRef<HTMLButtonElement, SidebarMenuItemProps>(
   ({ icon, active, children, href, target, badge, className, ...props }, ref,) => {
     if (href) {
       return(<a
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 return (<a;
           href={href}
     return(<button;
@@ -33,8 +36,12 @@ export { SidebarMenuItem, SidebarMenuGroup }
 export { SidebarMenuItem, SidebarMenuGroup }
 }
 export { SidebarMenuItem, SidebarMenuGroup }
+<<<<<<< HEAD
 :src/components/ui/sidebar/sidebar-menu.tsx
 ;
+=======
+";
+>>>>>>> origin/chore/fix-lint-and-merge
 SidebarMenuItem && SidebarMenuItem.displayName = "SidebarMenuItem";
 
 export { SidebarMenuItem, SidebarMenuGroup }
@@ -68,6 +75,7 @@ const SidebarMenuItem = forwardRef<HTMLButtonElement SidebarMenuItemProps>(;
     if (href) {
       return (;
         <a;
+<<<<<<< HEAD
 return (<a;
           href={href}
     return(<button;
@@ -78,6 +86,8 @@ export { SidebarMenuItem, SidebarMenuGroup }SidebarMenuItem && SidebarMenuItem.d
 interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLButtonElement>  {icon?: React.ReactNode,active?: boolean,href?: string,target?: string,badge?: React.ReactNode;
 interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLButtonElement>  {icon?: React.ReactNode,active?: boolean,href?: string,target?: string,badge?: React.ReactNode;
 }const SidebarMenuItem = forwardRef<HTMLButtonElement SidebarMenuItemProps>(({ icon, active, children, href, target, badge, className, ...props }, ref) => {if (href) {return (<a;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
           href={href}
           target={target}
           rel={target === _blank" ? "noopener noreferrer : undefined}
@@ -93,6 +103,7 @@ interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLButtonElement>  
           </div>
           {badge && <span>{badge}</span>}
         </a>
+<<<<<<< HEAD
 :src/components/ui/sidebar/sidebar-menu.tsx
       );
     }
@@ -102,6 +113,10 @@ interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLButtonElement>  
           {icon && <span className=text-muted-foreground'>{icon}</span>}
       )
           rel={target === "_blank" ? noopener noreferrer : undefined}
+=======
+      )"
+          rel={target === "_blank" ? "noopener noreferrer" : undefined}
+>>>>>>> origin/chore/fix-lint-and-merge
           className={cn(;"
             "flex w-full items-center justify-between rounded-md px-3 py-2 text-sm hover:bg-accent,
             active && "bg-accent font-medium text-accent-foreground",
@@ -127,14 +142,22 @@ interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLButtonElement>  
         )}
         {...props}
       >"
+<<<<<<< HEAD
         <div className=flex items-center gap-2>"
           {icon && <span className="text-muted-foreground>{icon}</span>}
           <span>{children}</span>;
         </div>;
+=======
+        <div className="flex items-center gap-2">"
+          {icon && <span className="text-muted-foreground">{icon}</span>}
+          <span>{children}</span>
+        </div>
+>>>>>>> origin/chore/fix-lint-and-merge
         {badge && <span>{badge}</span>}
-      </button>
+      </button>;
     );
   }
+<<<<<<< HEAD
 :src/components/ui/sidebar/sidebar-menu.tsx
 );
 
@@ -157,6 +180,8 @@ const SidebarMenuGroup: React.FC<SidebarMenuGroupProps> = ({
   );
 }
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 ),
 "
 SidebarMenuItem.displayName = "SidebarMenuItem,
@@ -189,8 +214,12 @@ const SidebarMenuGroup: React.FC<SidebarMenuGroupProps> = ({ title, children, ..
       <div className=pl-2>{children}</div>;
     </div>;
   );
+<<<<<<< HEAD
 },
 export { SidebarMenuItem, SidebarMenuGroup }
+=======
+},;
+>>>>>>> origin/chore/fix-lint-and-merge
 
 import React, { forwardRef } from 'react;
 import { ChevronDown } from lucide-react';
@@ -206,6 +235,7 @@ interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLButtonElement> {
   href?: string;
   target?: string;
 
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
   )},export { SidebarMenuItem, SidebarMenuGroup },),SidebarMenuItem.displayName = SidebarMenuItem,interface SidebarMenuGroupProps extends React.HTMLAttributes<HTMLDivElement>  {title: string,children: React.ReactNode;
 }const SidebarMenuGroup: React.FC<SidebarMenuGroupProps> = ({ title, children, ...props }) => {return (<div className="space-y-1" {...props}>;
@@ -219,3 +249,6 @@ interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLButtonElement>  
   active?: boolean;
   href?: string;
   target?: string;const SidebarMenuItem  = null;
+=======
+const SidebarMenuItem = null;
+>>>>>>> origin/chore/fix-lint-and-merge

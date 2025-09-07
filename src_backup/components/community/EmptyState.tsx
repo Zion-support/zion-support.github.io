@@ -3,15 +3,15 @@ import Link from next/link'
 
 import { MessageSquare } from 'lucide-react
 
+<<<<<<< HEAD
 import { Button } from @/components/ui/button'
 
 
+=======
+import { Button } from '@/components/ui/button'
+>>>>>>> origin/chore/fix-lint-and-merge
 import React from 'react',
-
-;
-import React from 'react';
 import Link from 'next/link';
-import { MessageSquare  } from 'lucide-react';
 import { Button  } from '@/components/ui/button';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from @/components/ui/tooltip';
@@ -49,6 +49,7 @@ class ErrorBoundary extends React.Component {
   }
 }
 
+<<<<<<< HEAD
   title: string;
   subtitle: string;
   cta: string;
@@ -143,6 +144,12 @@ import { MessageSquare } from 'lucide-react;
 import { Button } from @/components/ui/button',
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip,
 interface EmptyStateProps {
+=======
+import { MessageSquare } from 'lucide-react';
+import { Button } from '@/components/ui/button',;
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip',;
+interface EmptyStateProps {;
+>>>>>>> origin/chore/fix-lint-and-merge
 
   title: string;
 
@@ -190,6 +197,7 @@ const EmptyState: React.FC < EmptyStateProps> = ({
   subtitle,
   cta,
   href,
+<<<<<<< HEAD
   has_session}) => {  return (
     <div className='text - center py - 16>;
             ) : (<Button disabled>{cta}</Button>;const EmptyState: React.FC<EmptyStateProps> = ({ title, subtitle, cta, href, hasSession }) => {return (<div className=text-center py-16">;
@@ -215,6 +223,13 @@ const EmptyState: React.FC < EmptyStateProps> = ({
 const EmptyState: React.FC < EmptyStateProps> = ({title,subtitle,cta,href,has_session}) => {  return (<div className='text - center py - 16>;
       <div className=bg - zion - blue / 30 p - 6 rounded - full mb - 6 inline - flex'>;
         <MessageSquare className='h - 10 w - 10 text - zion - purple />;
+=======
+  has_session,
+}) => {  return (
+    <div className='text - center py - 16'>;
+      <div className='bg - zion - blue / 30 p - 6 rounded - full mb - 6 inline - flex'>;
+        <MessageSquare className='h - 10 w - 10 text - zion - purple' />;
+>>>>>>> origin/chore/fix-lint-and-merge
       </div>;
       <h2 className=text - xl font - medium mb - 2'>{title}</h2>;
       <p className='text - muted - foreground mb - 6'>{subtitle}</p>      <TooltipProvider>      <h2 className="text - xl font - medium mb - 2>{title}</h2>;
@@ -222,16 +237,20 @@ const EmptyState: React.FC < EmptyStateProps> = ({title,subtitle,cta,href,has_se
       <TooltipProvider>;
         <Tooltip>;
           <TooltipTrigger as_child>;
-            {has_session ? (<Button as_child>;
+            {has_session ? (
+              <Button as_child>;
                 <Link href={href}>{cta}</Link>;
-              </Button>) : (<Button disabled>{cta}</Button>)}
+              </Button>) : (
+              <Button disabled>{cta}</Button>)}
           </TooltipTrigger>;
           {!has_session && <TooltipContent > Login required</TooltipContent>}
         </Tooltip>;
       </TooltipProvider>;
-    </div>)}
+    </div>);
+}
 export default EmptyState;
 
+<<<<<<< HEAD
           </TooltipTrigger>;
           {!hasSession && <TooltipContent>Login required</TooltipContent>}
 
@@ -245,15 +264,23 @@ export default EmptyState;
 
 
 },
+=======
+},;
+>>>>>>> origin/chore/fix-lint-and-merge
 export default EmptyState;
 
         </Tooltip>
       </TooltipProvider>
     </div>
 );
+<<<<<<< HEAD
 }
 },export default EmptyState;</Tooltip>;
       </TooltipProvider>;
     </div>;
 )}export default EmptyState;
 export default EmptyState;
+=======
+};
+export default EmptyState;
+>>>>>>> origin/chore/fix-lint-and-merge

@@ -1,4 +1,4 @@
-#!/usr/bin/env node;
+
 const fs = require('fs').promises;
 const path = require(path');
 const { exec } = require('child_process');
@@ -6,17 +6,26 @@ const util = require(util');
 const execAsync = util.promisify(exec);
 class ComprehensiveMergeConflictResolver {}
   constructor() {}
+<<<<<<< HEAD
     this.projectRoot = path.join(__dirname, '..);
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
     this.fixedFiles = [];
     this.errors = [];
     this.totalFiles = 0}
   async log(message, level = INFO') {}
     const timestamp = new Date().toISOString();
+<<<<<<< HEAD
     console.log(`[${timestamp}] [${level}] ${message}`)}
+=======
+    console.log(`[${timestamp}] [${level}] ${message})};
+>>>>>>> origin/chore/fix-lint-and-merge
   async findFilesWithConflicts() {}
     const filesWithConflicts = [];
     try {}
       // Use git to find files with merge conflicts;
+<<<<<<< HEAD
       const { stdout } = await execAsync('git diff --name-only --diff-filter=U, { "cwd: this.projectRoot }
 });
       const conflictedFiles = stdout.trim().split(\n').filter(file => file);
@@ -44,16 +53,33 @@ class ComprehensiveMergeConflictResolver {}
     const files = [];
     try {}
       const entries = await fs.readdir(dir, { "withFileTypes: true }
+=======
+
+});"
+      const conflictedFiles = stdout.trim().split('\n').filter(file => file);
+      for (const file of conflictedFiles) {}
+        if (file) {}
+          filesWithConflicts.push(path.join(this.projectRoot, file))};
+      };
+
+      const entries = await fs.readdir(dir, { "withFileTypes": true }")
+>>>>>>> origin/chore/fix-lint-and-merge
 });
       for (const entry of entries) {}
         const fullPath = path.join(dir, entry.name);
         if (entry.isDirectory()) {}
+<<<<<<< HEAD
           // Skip certain directories;
           if (!['node_modules', .git, '.next', dist, 'build', coverage].includes(entry.name)) {}
+=======
+          // Skip certain directories;"
+
+>>>>>>> origin/chore/fix-lint-and-merge
             const subFiles = await this.getAllFiles(fullPath);
             files.push(...subFiles)}
         } else if (entry.isFile()) {}
           // Only process certain file types;
+<<<<<<< HEAD
           if (['.ts', .tsx, '.js', .jsx, '.json', .md, '.cjs', .mjs].includes(path.extname(entry.name))) {}
             files.push(fullPath)}
         }
@@ -65,10 +91,14 @@ class ComprehensiveMergeConflictResolver {}
   async resolveMergeConflicts(filePath) {}
     try {}
       const content = await fs.readFile(filePath, 'utf8);
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
       let resolvedContent = content;
       // Remove merge conflict markers and keep the HEAD version (first part);
       const conflictPattern = /\s*\n([\s\S]*?)\n\s*\n([\s\S]*?)\nresolvedContent = resolvedContent.replace(conflictPattern, (match, headContent, otherContent) => {}
         // Keep the HEAD version (first part before );
+<<<<<<< HEAD
         return headContent.trim() + \n'}
 });
       // Clean up any remaining conflict markers;
@@ -130,3 +160,45 @@ if (require.main === module) {}
   const resolver = new ComprehensiveMergeConflictResolver();
   resolver.run().catch(console.error)}
 
+=======
+
+          "timestamp": new Date().toISOString();"
+        }
+        return true};
+
+      return false};
+  async run() {}"
+
+      "summary": {}"
+        totalFiles: this.totalFiles,"
+        "resolvedFiles": resolvedCount,
+        "errors": this.errors.length;"
+      },"
+      "resolvedFiles": this.fixedFiles,
+      "errors": this.errors;"
+    };"
+
+    await fs.mkdir(path.dirname(reportPath), { "recursive": true }"
+    await fs.writeFile(reportPath, JSON.stringify(report, null, 2));
+    return report};
+// Run the resolver;
+if (require.main === module) {}
+  const resolver = new ComprehensiveMergeConflictResolver();
+  resolver.run().catch(console.error)};
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+module.exports = ComprehensiveMergeConflictResolver;
+module.exports = ComprehensiveMergeConflictResolver;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+module.exports = ComprehensiveMergeConflictResolver;
+"`;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge

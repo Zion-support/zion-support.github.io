@@ -1,29 +1,38 @@
 ;
-import type { NextPage } from 'next';'
-import Head from 'next/head';'
-import Link from 'next/link';'
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
 
-const "AiModelDevelopmentChat": NextPage = () => ;
-  return (<div>;
+const AiModelDevelopmentChat: NextPage = () => ;
+  return (<div />;
 
 ;
 
+<<<<<<< HEAD
   return (<div>;
 import type { NextPage } from "next";"
 import Head from "next/head";"
 import Link from "next/link";"
+=======
+const AiModelDevelopmentChat: NextPage = () => ;
+  return (<div />;
+import type { NextPage } from \"next\";
+import Head from \"next/head\";
+import Link from \"next/link\";
+>>>>>>> origin/chore/fix-lint-and-merge
 
-const "AiModelDevelopmentChat": NextPage = () => {;
-}
-return (;
+const AiModelDevelopmentChat: NextPage = () => {;
+  return (
     <div>;
 </div>
       <Head>;
 
         <title>AiModelDevelopmentChat - Zion Tech Solutions</title>;
-        <meta,
-name="description""
-          content="AiModelDevelopmentChat service"" />{" "}"
+        <meta;"
+          name="description"""
+          content="AiModelDevelopmentChat service"""
+        />{" "}"
+</meta>
       <main>
 </main>
         <h1>AiModelDevelopmentChat</h1>
@@ -55,33 +64,57 @@ name="description""
       
       
         <p>Service details coming soon...</p>
-        <a href="/services">Back to Services</a>"
+        <a href=&quot;/services&quot;>Back to Services</a>
+
+      
+"
+    <div />;
+      <Head />;
+        <title />AiModelDevelopmentChat - Zion Tech Solutions</title>;
+        <meta;
+name=\"description\"}
+          content=\"AiModelDevelopmentChat service\"}
+        />{\" \"}
+      <main />
+        <h1 />AiModelDevelopmentChat</h1>
+        <p />Service details coming soon...</p>
+        <a href=\"/services\" />Back to Services</a>
       </main>
     </div>
       </Head>;
 
-      <main>;
-        <h1>AiModelDevelopmentChat</h1>;
-        <p>Service details coming soon...</p>;
-        <a href="/services">Back to Services</a>;"
+      <main />;
+        <h1 />AiModelDevelopmentChat</h1>;
+        <p />Service details coming soon...</p>;
+        <a href=\"/services\" />Back to Services</a>;
       </main>;
     </div>;
-      </Head>;<main>;
-        <h1>AiModelDevelopmentChat</h1>;
-        <p>Service details coming soon...</p>;
-        <a href="/services">Back to Services</a>;"
+      </Head>;<main />;
+        <h1 />AiModelDevelopmentChat</h1>;
+        <p />Service details coming soon...</p>;
+        <a href=\"/services\" />Back to Services</a>;
       </main>;
     </div>;
   )}
 
 export default AiModelDevelopmentChat;
 
+<<<<<<< HEAD
   return (<div>;
       <Head>;
         <title>AiModelDevelopmentChat - Zion Tech Solutions</title>;
         <title>AiModelDevelopmentChat - Zion Tech Solutions</title>;
         <title>AiModelDevelopmentChat - Zion Tech Solutions</title>;
         <title>AiModelDevelopmentChat - Zion Tech Solutions</title>;
+=======
+const AiModelDevelopmentChat: NextPage = () => ;
+  return (<div />;
+      <Head />;
+        <title />AiModelDevelopmentChat - Zion Tech Solutions</title>;
+        <title />AiModelDevelopmentChat - Zion Tech Solutions</title>;
+        <title />AiModelDevelopmentChat - Zion Tech Solutions</title>;
+        <title />AiModelDevelopmentChat - Zion Tech Solutions</title>;
+>>>>>>> origin/chore/fix-lint-and-merge
 ursor/fix-website-loading-errors-and-merge-6662;
   );
 }
@@ -90,34 +123,48 @@ ursor/fix-website-loading-errors-and-merge-6662;
 export default AiModelDevelopmentChat;
 
 
+<<<<<<< HEAD
 const "AiModelDevelopmentChat": NextPage = () => {
+=======
+const AiModelDevelopmentChat: NextPage = () => {
+>>>>>>> origin/chore/fix-lint-and-merge
  ;
-}
-return (;
-    <div>
-      <Head>
-        <title>AiModelDevelopmentChat - Zion Tech Solutions</title>
-        <title>AiModelDevelopmentChat - Zion Tech Solutions</title>
-        <title>AiModelDevelopmentChat - Zion Tech Solutions</title>
-        <title>AiModelDevelopmentChat - Zion Tech Solutions</title>
-import type { NextPage } from './next';'
-import Head from './next / head';'
-import Link from './next / link';'
+  return (
+    <div />
+      <Head />
+        <title />AiModelDevelopmentChat - Zion Tech Solutions</title>
+        <title />AiModelDevelopmentChat - Zion Tech Solutions</title>
+        <title />AiModelDevelopmentChat - Zion Tech Solutions</title>}
+        <title />AiModelDevelopmentChat - Zion Tech Solutions</title>}
+import type { NextPage } from './next';
+import Head from './next / head';
+import Link from './next / link';
 
+<<<<<<< HEAD
   return (<div>;
 }
 return (;
     <div>;
       <Head>;
         <title > AiModelDevelopmentChat - Zion Tech Solutions</title>;
+=======
+const AiModelDevelopmentChat: NextPage = () => ;
+  return (<div />;
+const AiModelDevelopmentChat: NextPage = () => {
+  return (
+    <div />;
+      <Head />;
+        <title  /> AiModelDevelopmentChat - Zion Tech Solutions</title>;
+>>>>>>> origin/chore/fix-lint-and-merge
         <meta;
-          name="description";"
-          content="AiModelDevelopmentChat service";" />{" "}"
+          name=\"description\";}
+          content=\"AiModelDevelopmentChat service\";}
+        />{\" \"}
       </Head>;
-      <main>;
-        <h1 > AiModelDevelopmentChat</h1>;
-        <p > Service details coming soon...</p>;
-        <a href="/services">Back to Services</a>;"
+      <main />;
+        <h1  /> AiModelDevelopmentChat</h1>;
+        <p  /> Service details coming soon...</p>;
+        <a href=\"/services\" />Back to Services</a>;
       </main>
     </div>
   );
@@ -136,17 +183,25 @@ export default AiModelDevelopmentChat;<div />;
     </div>;
   )},export default AiModelDevelopmentChat;
 
+<<<<<<< HEAD
   return (<div>;
       <Head>;
         <title>AiModelDevelopmentChat - Zion Tech Solutions</title>;
+=======
+const AiModelDevelopmentChat: NextPage = () => ;
+  return (<div />;
+      <Head />;
+        <title />AiModelDevelopmentChat - Zion Tech Solutions</title>;
+>>>>>>> origin/chore/fix-lint-and-merge
         <meta;
-          name="description";"
-          content="AiModelDevelopmentChat service";" />{" "}"
+          name=\"description\";
+          content=\"AiModelDevelopmentChat service\";
+        />{\" \"}
       </Head>;
-      <main>;
-        <h1>AiModelDevelopmentChat</h1>;
-        <p>Service details coming soon...</p>;
-        <a href="/services">Back to Services</a>;"
+      <main />;
+        <h1 />AiModelDevelopmentChat</h1>;
+        <p />Service details coming soon...</p>;
+        <a href=\"/services\" />Back to Services</a>;
       </main>;
     </div>;
   )}
@@ -161,20 +216,24 @@ export default AiModelDevelopmentChat;<title />AiModelDevelopmentChat - Zion Tec
 
 ;
 export default AiModelDevelopmentChat;
+<<<<<<< HEAD
+=======
+const AiModelDevelopmentChat: NextPage = () => {
+>>>>>>> origin/chore/fix-lint-and-merge
  ;
-}
-return (;
-    <div>
-      <Head>
-        <title>AiModelDevelopmentChat - Zion Tech Solutions</title>
-        <meta,
-name="description""
-          content="AiModelDevelopmentChat service"" />{" "}"
+  return (
+    <div />
+      <Head />
+        <title />AiModelDevelopmentChat - Zion Tech Solutions</title>
+        <meta;
+name=\"description\"}
+          content=\"AiModelDevelopmentChat service\"}
+        />{\" \"}
       </Head>
-      <main>
-        <h1>AiModelDevelopmentChat</h1>
-        <p>Service details coming soon...</p>
-        <a href="/services">Back to Services</a>"
+      <main />
+        <h1 />AiModelDevelopmentChat</h1>
+        <p />Service details coming soon...</p>
+        <a href=\"/services\" />Back to Services</a>
       </main>
     </div>
   );
@@ -182,20 +241,24 @@ name="description""
 
 export default AiModelDevelopmentChat;
 export default AiModelDevelopmentChat;
+<<<<<<< HEAD
+=======
+const AiModelDevelopmentChat: NextPage = () => {
+>>>>>>> origin/chore/fix-lint-and-merge
  ;
-}
-return (;
-    <div>
-      <Head>
-        <title>AiModelDevelopmentChat - Zion Tech Solutions</title>
-        <meta,
-name="description""
-          content="AiModelDevelopmentChat service"" />{" "}"
+  return (
+    <div />
+      <Head />
+        <title />AiModelDevelopmentChat - Zion Tech Solutions</title>
+        <meta;
+name=\"description\"}
+          content=\"AiModelDevelopmentChat service\"}
+        />{\" \"}
       </Head>
-      <main>
-        <h1>AiModelDevelopmentChat</h1>
-        <p>Service details coming soon...</p>
-        <a href="/services">Back to Services</a>"
+      <main />
+        <h1 />AiModelDevelopmentChat</h1>
+        <p />Service details coming soon...</p>
+        <a href=\"/services\" />Back to Services</a>
       </main>
     </div>
   );
@@ -206,20 +269,24 @@ export default AiModelDevelopmentChat;
         <title />AiModelDevelopmentChat - Zion Tech Solutions</title>
         <title />AiModelDevelopmentChat - Zion Tech Solutions</title>
 ;
+<<<<<<< HEAD
+=======
+const AiModelDevelopmentChat: NextPage = () => {
+>>>>>>> origin/chore/fix-lint-and-merge
  ;
-}
-return (;
-    <div>
-      <Head>
-        <title>AiModelDevelopmentChat - Zion Tech Solutions</title>
-        <meta,
-name="description""
-          content="AiModelDevelopmentChat service"" />{" "}"
+  return (
+    <div />
+      <Head />
+        <title />AiModelDevelopmentChat - Zion Tech Solutions</title>
+        <meta;
+name=\"description\"}
+          content=\"AiModelDevelopmentChat service\"}
+        />{\" \"}
       </Head>
-      <main>
-        <h1>AiModelDevelopmentChat</h1>
-        <p>Service details coming soon...</p>
-        <a href="/services">Back to Services</a>"
+      <main />
+        <h1 />AiModelDevelopmentChat</h1>
+        <p />Service details coming soon...</p>
+        <a href=\"/services\" />Back to Services</a>
       </main>
     </div>
   );

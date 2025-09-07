@@ -12,10 +12,7 @@ permissions:
 
 concurrency:
   group: homepage-updater
-:.github/workflows/homepage-updater.yml
 
-concurrency:
-  group: homepage-updater
   pull-requests: write
   actions: read
 concurrency:

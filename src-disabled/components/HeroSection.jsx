@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :src/components/HeroSection.jsx
 import { Button } from "@/components/ui/button";";
 import { GradientHeading } from "@/components/GradientHeading";";
@@ -304,6 +305,8 @@ export const HeroSection = () => {;
     </section>);
 };
 '"
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 " \" \" \" export function HeroSection() { const { t } = useTranslation() const containerRef = useRef(null) const { scrollYProgress } = useScroll({ target: containerRef, \" offset[\"start start\", \"end start\"] })\" const y = useTransform(scrollYProgress, [0, 1], [\"0%\", \"50%\"]) const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]) const containerVariants = { hidden: { opacity: 0,}
 }, visible: { opacity: 1, transition: { staggerChildren: 0.2, delayChildren: 0.1 } },
 }

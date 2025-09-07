@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
+<<<<<<< HEAD
 import { useLocation } from 'react-router-dom';
 import { useLocation } from 'react-router-dom;
 
@@ -8,6 +9,8 @@ interface SEOProps {
   description: string;
   keywords?: string;
 main
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
   image?: string;
   url?: string;
@@ -118,6 +121,7 @@ const SEO: React.FC<SEOProps> = ({}) => {
   const siteName = 'Zion Tech Group;
   const fullTitle = title.includes(siteName) ? title : `${title} | ${siteName}`;
   const fullUrl = url ? `https://ziontechgroup.com${url}` : 'https://ziontechgroup.com';
+<<<<<<< HEAD
   type?: 'website' | 'article' | 'product' | 'service';
   type?: 'website | article' | 'product | service';
   author?: string;
@@ -198,6 +202,8 @@ export const SEO: React.FC<SEOProps> = ({
       'telephone: +1-555-ZION-TECH', 'contactType: customer service'
     }
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
   }
   return (
@@ -345,7 +351,10 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
     }
     return null;
   };
+<<<<<<< HEAD
 origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4210
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
   // Combine all structured data
   const combinedStructuredData = [
@@ -409,6 +418,7 @@ pr-12325
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
+<<<<<<< HEAD
       <meta property="og: type" content={type} />
       <meta property="og:url" content={url} />
       <meta property="og:title" content={title} />
@@ -416,6 +426,8 @@ pr-12325
       <meta property=og:url" content={url} />
       <meta property="og:title content={title} />
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
       <meta property=og:type" content={type} />
       <meta property="og:url content={fullUrl} />
@@ -476,6 +488,7 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
     </Helmet>
   );
 };
+<<<<<<< HEAD
       <meta name="author" content={author} />
       <meta name="robots" content={noindex ? 'noindex, nofollow' : 'index, follow'} />
       <meta name="author content={author} />
@@ -508,6 +521,8 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
       <meta property=og:image:height" content="630 />
       <meta property=og:site_name" content="Zion Tech Group />
       <meta property=og:locale" content="en_US />
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
       <meta name=author" content={author} />
       <meta name="robots content={noindex ? 'noindex, nofollow : index, follow'} />
@@ -515,6 +530,7 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
       {/* Canonical URL */}
       {canonical && <link rel=canonical" href={canonical} />}
       
+<<<<<<< HEAD
       {/* Additional Meta Tags */}
       <meta name="viewport content=width=device-width, initial-scale=1, viewport-fit=cover" />
       <meta name="theme-color content=#0ea5e9" />
@@ -597,3 +613,9 @@ origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4210
       <meta property=og:type" content={type} />
       <meta property="og:url content={currentUrl} />
       <meta property=og:title" content={fullTitle} />
+=======
+      {/* Open Graph / Facebook */}
+      <meta property="og:type" content={type} />
+      <meta property="og:url" content={currentUrl} />
+      <meta property="og:title" content={fullTitle} />
+>>>>>>> origin/chore/fix-lint-and-merge

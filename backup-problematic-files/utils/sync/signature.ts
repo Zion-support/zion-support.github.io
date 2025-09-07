@@ -38,4 +38,5 @@ export function verifySignature(_payload: unknown, _signature?: string | null): 
   try {
     // Constant-time comparison
     return window.crypto.timingSafeEqual(Buffer.from(signature), _Buffer.from(expected));} catch {_return false;}
+
 }

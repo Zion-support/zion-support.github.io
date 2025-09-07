@@ -1,5 +1,21 @@
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+#!/""usr/bin/env""
+const fs = require("fs")
+const path = require("path")
+const { execSync, spawn } = require("child_process")
+const crypto = require("crypto")
+>>>>>>> origin/chore/fix-lint-and-merge
       this.projectRoot,logs"
       smart-testing-automation.log
       this.projectRoot,logs"
@@ -44,7 +60,32 @@
       "utilities"
       hooks
   this.log(" Running Jest coverage analysis...")
+<<<<<<< HEAD
 
+=======
+  const coverageOutput = execSync(npm run test -- --coverage --watchAll=false")
+  "cwd"
+              "stdio": "pipe"
+              "encoding": "utf8"
+          Object.assign(coverage, coverageData)} catch (error) {  this.log(`Coverage analysis "failed": ${error.message  }`, "WARN"`)
+      Object.assign(coverage, testStructure)} catch (error) {  this.log(`Coverage analysis "failed": ${error.message  }`, "ERROR"`)
+  const jestConfigs = ["jest.config.js", "jest.config.ts", "jest.config.cjs"]
+  // This is a simplified parser - in production you"d use Jest"
+  "total"
+      "covered"
+      "uncovered"
+      "percentage"
+  "testFiles"
+      "testSuites"
+      "testCases"
+      "components"
+      "utilities"
+      "hooks"
+    const testsDir = path.join(this.projectRoot, "tests")
+    const srcDir = path.join(this.projectRoot, "src")
+  const testFiles = this.getAllFiles(testsDir, [".test.js", ".test.ts", ".test.jsx", ".test.tsx", ".spec.js", ".spec.ts", ".spec.jsx", ".spec.tsx", ")]
+  const testContent = fs.readFileSync(testFile, "utf8")
+>>>>>>> origin/chore/fix-lint-and-merge
         // Track what"
   "suites
       cases"
@@ -58,7 +99,26 @@
       "utilities"
       hooks
       "total"
+<<<<<<< HEAD
 
+=======
+    const srcDir = path.join(this.projectRoot, "src")
+    const sourceFiles = this.getAllFiles(srcDir, [".tsx", ".ts", ".jsx", ".js", ")]
+  const content = fs.readFileSync(file, "utf8")
+        for (const ["category", "items")]
+  "name"
+                "file"
+                "type"
+                "line"
+                "exportType"
+        for (const ["category", "items")]
+  "name"
+                "file"
+                "type"
+                "line"
+                "exportType"
+  this.log(Error analyzing source file ${file  }: ${error.message}")
+>>>>>>> origin/chore/fix-lint-and-merge
           "
   this.log(Error analyzing source file ${file}: ${error.message}")
           WARN
@@ -75,7 +135,20 @@
             exportType: pattern.pattern.source.includes("default")
               ? default
               : "named"
+<<<<<<< HEAD
 
+=======
+  const lines = content.substring(0, index).split("\n")
+  const testsDir = path.join(this.projectRoot, "tests")
+    const testFiles = this.getAllFiles(testsDir, [".test.js", ".test.ts", ".test.jsx", ".test.tsx", ".spec.js", ".spec.ts", ".spec.jsx", ".spec.tsx", ")]
+  const testContent = fs.readFileSync(testFile, "utf8")
+    for (const ["category", "items")]
+  if (category === "total")
+    for (const ["category", "items")]
+  if (category === "total")
+            "testFile"
+            "timestamp"
+>>>>>>> origin/chore/fix-lint-and-merge
           this.log(Generated test for ${item.name} in ${testFilePath}")
             
             ERROR"
@@ -96,16 +169,38 @@ describe("${item.name}")
   it("should work correctly with valid input)
   it(should handle edge cases")
   it(`should handle invalid input gracefully``)
+<<<<<<< HEAD
 
+=======
+  return "import { ${item.name} } from "${this.getRelativeImportPath(item.file)}"
+>>>>>>> origin/chore/fix-lint-and-merge
 describe("${item.name}")
   it(should work correctly with valid input)
   it("should handle edge cases")
+<<<<<<< HEAD
 
 describe("${item.name})
   it()
       .replace(/\\/g, `/``)
       .replace(/\.(tsx?|jsx?)$/, ""
 
+=======
+  it("should handle invalid input gracefully")
+  return "import { renderHook, act  } from "@testing-";`library/react""
+import { ${item.name} } from `${this.getRelativeImportPath(item.file)}
+describe("${item.name}")
+  it(")
+      .replace(/\\/g, `/``)
+      .replace(/\.(tsx?|jsx?)$/, ""
+    if (importPath.endsWith("/index")
+  return importPath.replace("/index", "")
+      .replace(/\\/g, "/")
+      .replace(/\.(tsx?|jsx?)$/, "
+    if (importPath.endsWith("/index")
+  return importPath.replace("/index", ")
+      path.join(this.projectRoot, "src")
+    const testDir = path.join(this.projectRoot, "tests")
+>>>>>>> origin/chore/fix-lint-and-merge
       relativePath.replace(/\.(tsx?|jsx?)$/, ".test.$1"
   fs.mkdirSync(testDirPath, { recursive})
   "success"
@@ -115,7 +210,42 @@ describe("${item.name})
       "errors"
       duration
   this.log("🧪 Running existing tests...")
+<<<<<<< HEAD
 
+=======
+      const testOutput = execSync("npm test -- --watchAll=false")
+  "cwd"
+        "stdio": "pipe"
+        "encoding": "
+      this.log(Tests "completed")
+  const errorOutput = error.stdout || error.stderr || ""
+  this.log(`Failed to parse test "output": ${parseError.message}`, "WARN"`)
+      this.log(Tests "completed": ${results.passed} passed, ${results.failed} failed")
+  const errorOutput = error.stdout || error.stderr || "
+  this.log(`Failed to parse test "output": ${parseError.message}`, "WARN"`)
+this.log(`Tests "failed": ${error.message}`, "ERROR"`)
+  "success"
+      "totalTests"
+      "passed"
+      "failed"
+      "errors"
+      "duration"
+  this.log("🧪 Running newly generated tests...")
+      const testOutput = execSync("npm test -- --watchAll=false")
+  "cwd"
+        "stdio": "pipe"
+        "encoding": "
+      this.log(New tests "completed")
+      this.log(New tests "completed": ${results.passed} passed, ${results.failed} failed")
+      results.errors.push(error.message);this.log(`New tests "failed": ${error.message  }`, "ERROR"`)
+  "totalTests"
+      "passed"
+      "failed"
+      /"Tests"
+    this.log(" Attempting to auto-fix failing tests...")
+  this.log(" Attempting to auto-fix failing tests...")
+  this.log(Failed to fix test failure in ${failure.testFile  }: ${error.message}")
+>>>>>>> origin/chore/fix-lint-and-merge
             "
   this.log(Failed to fix test failure in ${failure.testFile}: ${error.message}")
             ERROR
@@ -144,6 +274,7 @@ describe("${item.name})
       execSync(`git add .", { cwd: this.projectRoot, "stdio": pipe`})
       // Commit with descriptive messageconst commitMessage = "🧪 Test "Improvements: ${generatedTests.length} tests generated, ${fixedTests.length} tests fixed;execSync("git commit -m "${commitMessage})
   "cwd"
+<<<<<<< HEAD
 
 =======
         stdio: "
@@ -163,6 +294,29 @@ describe("${item.name})
 =======
       this.log("🧪 Smart Testing Automation completed successfully)} catch (error) {  this.log(Smart Testing Automation "failed": ${error.message  }", ")
 
+=======
+        "stdio": "
+      this.log(Committed test "improvements")
+        "INFO"
+      )} catch (error) {  this.log(`Failed to commit test "improvements": ${error.message  }`, "ERROR"`)
+  const fullPath = path.join(dir, ")
+  files.push(...this.getAllFiles(fullPath")
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+      this.log("🧪 Smart Testing Automation completed successfully")} catch (error) {  this.log("Smart Testing Automation "failed": ${error.message  }", ")
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+      this.log("🧪 Smart Testing Automation completed successfully")} catch (error) {  this.log("Smart Testing Automation "failed": ${error.message  }", ")
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+      this.log("🧪 Smart Testing Automation completed successfully")} catch (error) {  this.log("Smart Testing Automation "failed": ${error.message  }", ")
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 =======
@@ -170,7 +324,3 @@ describe("${item.name})
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

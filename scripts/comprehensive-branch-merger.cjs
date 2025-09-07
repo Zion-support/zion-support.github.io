@@ -1,4 +1,10 @@
 <<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> origin/chore/fix-lint-and-merge
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -7,13 +13,13 @@
 
 #!/usr/bin/env node;
 =======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 
 
 
 
 
 
+<<<<<<< HEAD
 
 
 
@@ -63,3 +69,11 @@ const mergedBranches = execSync('git branch -r --merged main', { "encoding"});
 =======
     console.error(' Comprehensive branch merger "failed")
 >>>>>>> cursor/integrate-build-improve-and-re-verify-f954
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+const fs = require('fs')
+const path = require('path')
+const { execSync } = require('child_process')
+// console.log('� Comprehensive Branch Merger')
+
+>>>>>>> origin/chore/fix-lint-and-merge

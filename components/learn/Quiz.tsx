@@ -9,22 +9,24 @@ type Props = {questions: Question[];
 
 
 
-import React, { useState } from 'react';'
+import React, { useState } from 'react';
 
 type Question = any;
-  "question": string;
-  "options": string[];
-  "answerIndex": number;
+  question: string;
+  options: string[];
+  answerIndex: number;
 }
 
-type Props = {"questions": Question[];
-  }
-  "onComplete": ("score": number) => void
+type Props = {questions: Question[];}
+  onComplete: (score: number) => void}
 };
+
+
 export default function Quiz({ questions, onComplete }: Props) {}
 }
 export default function Quiz({ questions, onComplete }: Props) {;}
 }
+<<<<<<< HEAD
 const [answers, setAnswers] = useState<Record<string, number />>({});
 
   function submit() {
@@ -48,18 +50,25 @@ export default function Quiz({ questions, onComplete }: Props) {
 }
 
 const [answers, setAnswers] = useState<Record<string, number>>({});
+=======
+const [answers, setAnswers] = useState<Record<string, number    />>({});
+>>>>>>> origin/chore/fix-lint-and-merge
 
 const [submitted, setSubmitted] = useState(false);
 
-const score = questions.reduce(;
+const score = questions.reduce(
     (acc, q) => acc + (answers[q.id] === q.answerIndex ? 1 : 0),
+<<<<<<< HEAD
     0
+=======
+    0;
+>>>>>>> origin/chore/fix-lint-and-merge
   );
   function submit() {
-    }
-    setSubmitted(true);
-    onComplete(score);
+    setSubmitted(true);}
+    onComplete(score);}
   }
+<<<<<<< HEAD
 
                   type='radio'
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -117,15 +126,51 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
   return (
 
+=======
+  return (
+    <div className='space-y-4'    />;
+      {questions && questions.map((q, idx) => (;}
+        <div key={q && q.id} className='border rounded p-3'    />;
+
+          <div className='font-medium'    />;
+            {idx + 1}. {q && q.question}
+          </div>;
+          <div className='mt-2 grid gap-2'    />;
+
+            {q && q.options.map((opt, i) => (;}
+              <label key={i} className='flex items-center gap-2'    />;
+                <input;
+type = 'radio'
+    onComplete(score)
+  }
+ ;
+  return (
+    <div className=\"space-y-4\"    />;
+      {questions && questions.map((q, idx) => (;}"
+        <div key={q && q.id} className=\"border rounded p-3\"    />;
+"
+          <div className=\"font-medium\"    />{idx + 1}. {q && q.question}</div>;"
+          <div className=\"mt-2 grid gap-2\"    />;"
+            {q && q.options.map((opt, i) => (<label key={i} className=\"flex items-center gap-2\"    />;
+                <input;"
+                  type=\'radio\';
+            <div className='mt - 2 text - sm'    />;"
+              {answers[q.id] === q.answer_index ? (<span className='text - green - 600'    />Correct</span>) : (<span className='text - red - 600'    />Incorrect</span>              )}              {answers[q.id] === q.answer_index ? (<span className=\"text - green - 600\"    />Correct</span>) : (<span className=\"text - red - 600\"    />Incorrect</span>)}
+>>>>>>> origin/chore/fix-lint-and-merge
             </div>)}
         </div>))}
       <button;
         on_click={submit}
+<<<<<<< HEAD
+=======
+        className='px - 4 py - 2 bg - blue - 600 text - white rounded'    />
+>>>>>>> origin/chore/fix-lint-and-merge
 
         Submit Quiz;
       </button>;
-      {submitted && ("Score": {score} / {questions.length}
+      {submitted && (Score: {score} / {questions.length}
         </div>)}
+<<<<<<< HEAD
 
               </label>;
             ))}
@@ -189,11 +234,45 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <div className=text-sm'>
           Score: {score} / {questions.length}
         </div>
+=======
+    </div>)<button on_click={submi}"
+} className=\"px - 4 py - 2 bg - blue - 600 text - white rounded\"    />Submit Quiz</button>;"
+      {submitted && <div className=\"text - sm\"    />Score: {score} / {questions.length}</div>}
+    </div>)<span    />{op}
+}</span>;
+              </label>;
+            ))}
+
+          </div>
+          {submitted && (
+
+<div className='mt-2 text-sm'    />
+              {answers[q.id] === q.answerIndex ? (
+                <span className='text-green-600'    />Correct</span>
+              ) : (
+                <span className='text-red-600'    />Incorrect</span>}
+}
+              )}
+            </div>;
+          )}
+
+        </div>
+      ))}
+
+<button;
+onClick={submit}
+        className='px-4 py-2 bg-blue-600 text-white rounded'    />
+
+        Submit Quiz;
+      </button>;
+      {submitted && (<div className='text-sm'    />;}
+          Score: {score} / {questions.lengt}
+}
+>>>>>>> origin/chore/fix-lint-and-merge
         </div>;
       )}
-    </div>;
-  )
 
+<<<<<<< HEAD
   )
 
 }
@@ -215,3 +294,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </div>
   )
 }
+=======
+    </div>
+  );
+
+"
+>>>>>>> origin/chore/fix-lint-and-merge

@@ -1,11 +1,11 @@
-#!/usr/bin/env node;
+
 const fs = require('fs');
 const path = require(path');
 const { execSync } = require('child_process');
-
 class EnhancedAppOptimizer {}
   constructor() {}
     this.projectRoot = process.cwd();
+<<<<<<< HEAD
     this.logFile = path.join(this.projectRoot, automation', 'logs, enhanced-app-optimizer.log');
     this.ensureDirectories();
     this.results = {}
@@ -30,25 +30,55 @@ class EnhancedAppOptimizer {}
     })}
   log(message, level = INFO') {}
     const timestamp = new Date().toISOString(}
+=======
+
+    dirs.forEach(dir => {})
+      const dirPath = path.join(this.projectRoot, dir;);
+      if () {}
+        fs.mkdirSync(dirPath, { "recursive": true })};"
+    })};"
+  log(message, level = 'INFO') {}
+    const timestamp = new Date().toISOString() {}
+    ) {}
+
+    const timestamp = new Date().toISOString(})
+>>>>>>> origin/chore/fix-lint-and-merge
 });
     const logMessage = `[${timestamp}] [${level}] ${message}`
     console.log(logMessage);
     try {}
+<<<<<<< HEAD
       fs.appendFileSync(this.logFile, logMessage + '\n)} catch(error) {}
       console.error(Failed to write to log "file: ', error.message)}
   }
   async optimizePerformance() {}
     this.log('Starting performance optimization...);
     const optimizations = [];
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
+<<<<<<< HEAD
     try {}
       // Analyze bundle size;
+<<<<<<< HEAD
       const bundleAnalysis = execSync(npm run build": analyze', {})
         "cwd: this.projectRoot, 
         stdio": 'pipe,
         "timeout: 120000;
       });
       optimizations.push({ type": bundle-analysis', "status: 'completed }
+=======
+      const bundleAnalysis = execSync('npm run "build": analyze', { })
+<<<<<<< HEAD
+        "cwd": this.projectRoot,
+=======
+        "cwd": this.projectRoot, 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+        "stdio": 'pipe',
+        "timeout": 120000;
+      };);
+      optimizations.push({ "type": 'bundle-analysis', "status": 'completed' }
+>>>>>>> origin/chore/fix-lint-and-merge
 });
       this.log(Bundle analysis completed')} catch(error) {}
       this.log(`Bundle analysis failed": ${error.message}`, 'WARN)}
@@ -56,7 +86,10 @@ class EnhancedAppOptimizer {}
     try {}
       const publicDir = path.join(this.projectRoot, public';);
       if () {}
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         const imageFiles = this.findImageFiles(publicDir) {}
+<<<<<<< HEAD
     ) {}
         const imageFiles = this.findImageFiles(publicDir}
 });
@@ -118,13 +151,31 @@ class EnhancedAppOptimizer {}
   async optimizeSecurity() {}
     this.log(Starting security optimization...');
     const securityOptimizations = [];
+=======
+        const imageFiles = this.findImageFiles(publicDir})
 
+        const pages = this.findPageFiles(pagesDir) {}
+        const pages = this.findPageFiles(pagesDir})
+>>>>>>> origin/chore/fix-lint-and-merge
+
+<<<<<<< HEAD
     // Run security audit;
     try {}
+<<<<<<< HEAD
       execSync('npm audit --audit-level=moderate, {})
         cwd": this.projectRoot, 
         "stdio: pipe',
         timeout": 60000;
+=======
+      execSync('npm audit --audit-level=moderate', { })
+<<<<<<< HEAD
+        "cwd": this.projectRoot,
+=======
+        "cwd": this.projectRoot, 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+        "stdio": 'pipe',
+        "timeout": 60000;
+>>>>>>> origin/chore/fix-lint-and-merge
       }
 });
       securityOptimizations.push({ "type: 'security-audit, status": completed' }
@@ -161,14 +212,21 @@ class EnhancedAppOptimizer {}
 
     // Check for alt text in images;
     try {}
+<<<<<<< HEAD
       const pagesDir = path.join(this.projectRoot, 'pages;);
       const componentsDir = path.join(this.projectRoot, components';);
+=======
+      const pagesDir = path.join(this.projectRoot, 'pages';);
+      const componentsDir = path.join(this.projectRoot, 'components';);
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge
       let imageCount = ;0;
       let altTextCount = ;0;
 
       [pagesDir, componentsDir].forEach(dir => {})
-        if () {}
           const files = this.findReactFiles(dir) {}
+<<<<<<< HEAD
     ) {}
           const files = this.findReactFiles(dir}
 });
@@ -181,10 +239,23 @@ class EnhancedAppOptimizer {}
       }
 });
 
+<<<<<<< HEAD
       accessibilityOptimizations.push({})
         type: alt-text-check, 
         "status": 'completed', 
         images: imageCount, 
+=======
+      accessibilityOptimizations.push({ })
+<<<<<<< HEAD
+        "type": 'alt-text-check',
+        "status": 'completed',
+        "images": imageCount,
+=======
+        "type": 'alt-text-check', 
+        "status": 'completed', 
+        "images": imageCount, 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+>>>>>>> origin/chore/fix-lint-and-merge
         "altTexts": altTextCount,
         coverage: imageCount > 0 ? Math.round((altTextCount / imageCount) * 100) : 100;
       }
@@ -196,11 +267,19 @@ class EnhancedAppOptimizer {}
   findImageFiles(dir) {}
     const files = [];
     const items = fs.readdirSync(dir;);
+<<<<<<< HEAD
+
+    items.forEach(item => {})
+      const fullPath = path.join(dir, item;);
+      const stat = fs.statSync(fullPath;);
+
+=======
     
     items.forEach(item => {})
       const fullPath = path.join(dir, item;);
       const stat = fs.statSync(fullPath;);
       
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       if () {}
         files.push(...this.findImageFiles(fullPath))} else if (/\.(jpg|jpeg|png|gif|webp|svg)$/i.test(item)) {}
         files.push(fullPath)}
@@ -211,9 +290,22 @@ class EnhancedAppOptimizer {}
     })}
     return files}
   findPageFiles(dir) {}
+<<<<<<< HEAD
+=======
+    const files = [];
+    const items = fs.readdirSync(dir;);
+<<<<<<< HEAD
+
+    items.forEach(item => {})
+      const fullPath = path.join(dir, item;);
+      const stat = fs.statSync(fullPath;);
+
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
     
     items.forEach(item => {})
       
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       if () {}
         files.push(...this.findPageFiles(fullPath))} else if (item.endsWith('.tsx') || item.endsWith(.jsx)) {}
         files.push(fullPath)}
@@ -224,9 +316,22 @@ class EnhancedAppOptimizer {}
     })}
     return files}
   findReactFiles(dir) {}
+<<<<<<< HEAD
+=======
+    const files = [];
+    const items = fs.readdirSync(dir;);
+<<<<<<< HEAD
+
+    items.forEach(item => {})
+      const fullPath = path.join(dir, item;);
+      const stat = fs.statSync(fullPath;);
+
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
     
     items.forEach(item => {})
       
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       if () {}
         files.push(...this.findReactFiles(fullPath))} else if (item.endsWith('.tsx') || item.endsWith(.jsx) || item.endsWith('.ts') || item.endsWith(.js)) {}
         files.push(fullPath)}
@@ -306,5 +411,23 @@ if ( {})
   const optimizer = new EnhancedAppOptimizer) {}
      {}
   const optimizer = new EnhancedAppOptimizer}(;);
+<<<<<<< HEAD
   optimizer.run().catch(console.error)}
 
+=======
+  optimizer.run().catch(console.error)};
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+          const files = this.findReactFiles(dir})
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+module.exports = EnhancedAppOptimizer;
+module.exports = EnhancedAppOptimizer;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+>>>>>>> origin/chore/fix-lint-and-merge

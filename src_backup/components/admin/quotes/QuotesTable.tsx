@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :src/components/admin/quotes/QuotesTable.tsx
 import React from "react;
 import { Eye, MoreHorizontal, Archive, Trash2 } from 'lucide-react
@@ -73,6 +74,8 @@ interface QuotesTableProps {
   quotes: QuoteRequest[],
   isArchived?: boolean,
   isLoading: boolean,
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 isLoading: boolean,
   updateStatus: (id: string, status: QuoteStatus) => void,
   toggleArchive: (id: string, isArchived: boolean) => void,
@@ -88,8 +91,6 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({  quotes
   isLoading
   updateStatus
   toggleArchive
-:src/components/admin/quotes/QuotesTable.tsx
-  deleteQuote
 
   quotes,
   isArchived = false,
@@ -129,9 +130,12 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({  quotes
             </TableRow>
           ) : (
             quotes.map(quote => (
+<<<<<<< HEAD
 :src/components/admin/quotes/QuotesTable.tsx
               <TableRow
                 key = {quote.id}
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
                 className="border-zion-blue-light hover:bg-zion-blue
 
@@ -195,6 +199,7 @@ export const QuotesTable: React.FC < QuotesTableProps> = ({}
                   {quote.requester_name}
 
                     {quote.project_summary}
+<<<<<<< HEAD
 :src/components/admin/quotes/QuotesTable.tsx
                   </div>
                 </TableCell>
@@ -222,6 +227,8 @@ export const QuotesTable: React.FC < QuotesTableProps> = ({}
                       <Eye className="h-4 w-4" />
                       <span className=sr-only>View Details</span>
                     </Button>
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
                     <Button 
                       variant="ghost" 
@@ -232,16 +239,23 @@ export const QuotesTable: React.FC < QuotesTableProps> = ({}
                       <span className="sr-only">View Details</span>
                     </Button>
 
+<<<<<<< HEAD
                     
 
 
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
                     {isArchived ? (
 
                       <>
 
+<<<<<<< HEAD
 
                           variant=ghost
+=======
+                          variant="ghost"
+>>>>>>> origin/chore/fix-lint-and-merge
 
   quotes;
   isArchived = false;"
@@ -297,12 +311,15 @@ export const QuotesTable: React.FC < QuotesTableProps> = ({}
                             <Archive className=h-4 w-4 mr-2" />
                             Archive;
                           </DropdownMenuItem>
+<<<<<<< HEAD
 :src/components/admin/quotes/QuotesTable.tsx
                           <DropdownMenuItem
                             onClick = {() => {
                               if (window.confirm(Are you sure you want to delete this quote request? This action cannot be undone.')) {
                                 deleteQuote(quote.id)
                               } }}
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
                           <DropdownMenuItem 
 
@@ -317,6 +334,7 @@ export const QuotesTable: React.FC < QuotesTableProps> = ({}
                           </DropdownMenuItem>
                         </DropdownMenuContent>
                       </DropdownMenu>
+<<<<<<< HEAD
 :src/components/admin/quotes/QuotesTable.tsx
                     )}
                   </div>
@@ -329,6 +347,8 @@ export const QuotesTable: React.FC < QuotesTableProps> = ({}
     </div>
   )
 }
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
 
 import React from react",
@@ -357,6 +377,7 @@ interface QuotesTableProps {
   deleteQuote: (id: string) => void,
   onViewDetails: (quote: QuoteRequest) => void;
 }
+<<<<<<< HEAD
 export const QuotesTable: React.FC<QuotesTableProps> = ({
   isLoading: boolean,updateStatus: (id: string, status: QuoteStatus) => void,toggleArchive: (id: string, isArchived: boolean) => void,deleteQuote: (id: string) => void,onViewDetails: (quote: QuoteRequest) => void;
 }}
@@ -373,6 +394,15 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({quotes;
   isLoading,
   updateStatus,
   toggleArchive,
+=======
+;
+export const QuotesTable: React.FC<QuotesTableProps> = ({;
+  quotes,;
+  isArchived = false,;
+  isLoading,;
+  updateStatus,;
+  toggleArchive,;
+>>>>>>> origin/chore/fix-lint-and-merge
   deleteQuote;
   onViewDetails;
 
@@ -422,6 +452,7 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({quotes;
                       <span className="sr-only">View Details</span>;
                     </Button>;
 
+<<<<<<< HEAD
                         >;
                           <Archive className="h-4 w-4 />;
                           <span className=sr-only">Unarchive</span>;
@@ -478,6 +509,8 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({quotes;
                             Mark as Closed;
                           </DropdownMenuItem>;
                           <DropdownMenuItem onClick={() => toggleArchive(quote && quote.id, true)}>;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
                           }}
 
                           <span className="sr-only>Delete</span>;
@@ -502,6 +535,7 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({quotes;
                             Delete;
                           </DropdownMenuItem>;
                         </DropdownMenuContent>;
+<<<<<<< HEAD
                     )}
                       </DropdownMenu>;)}
                   </div>;
@@ -511,6 +545,8 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({quotes;
       </Table>;
     </div>;
   )}";
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
                       </DropdownMenu>;
 
                     )}
@@ -557,7 +593,8 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({quotes;
                           on_click = {(, ) => toggle_archive (quote.id, false)}
 
 }
-                              delete_quote (quote.id) }
+                              delete_quote (quote.id);
+                            , }
                           }}
 
                           </Button>;
@@ -598,6 +635,7 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({quotes;
 
         </TableBody>;
       </Table>;
+<<<<<<< HEAD
     </div>)}'";Table;
   TableBody;
   TableCell;
@@ -645,6 +683,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 export const QuotesTable: React.FC<QuotesTableProps> = ({
 
 ';
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
 import React from react";
   Table;

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 :recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/integrations/ZapierIntegration.tsx
 import React, { useState } from "react;
@@ -26,6 +27,8 @@ export function ZapierIntegration() {
 
 } from @/components/ui/card";
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 import React, { useState } from "react",
 import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",
@@ -35,6 +38,7 @@ import { Badge } from "@/components/ui/badge,
 import { Button } from @/components/ui/button",
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card,
 
+<<<<<<< HEAD
 import { Check, Copy, ExternalLink } from 'lucide-react
 export function ZapierIntegration() {
 
@@ -129,6 +133,9 @@ export /**;
                     {copied ? <Check className="h-4 w-4" /> : <Copy className="h-4 w-4" />}
 
                     {copied ? <Check className="h-4 w-4 /> : <Copy className=h-4 w-4" />}
+=======
+                    {copied ? <Check className="h-4 w-4" /> : <Copy className="h-4 w-4" />}
+>>>>>>> origin/chore/fix-lint-and-merge
 
   const handleCopyApiKey = null;
   return (
@@ -148,6 +155,7 @@ export /**;
               Connect Zion with 3,000+ apps via Zapier. Use your API key below
               to set up integrations.
             </p>
+<<<<<<< HEAD
 :recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/integrations/ZapierIntegration.tsx
             <div className="space-y-4>
               <div className=space-y-2">
@@ -181,6 +189,13 @@ export /**;
                     size=sm';
                     variant='outline;
                     onClick={handleCopyApiKey}
+=======
+            <div className='space-y-4'>
+              <div className='space-y-2'>
+                <label className='text-sm font-medium'>Your Zion API Key</label>
+                <div className='flex gap-2'>
+                  <Input
+>>>>>>> origin/chore/fix-lint-and-merge
                     value={apiKey}
                     readOnly
                     className=font-mono text-sm'                  />
@@ -201,6 +216,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>
           </CardContent>
 
+<<<<<<< HEAD
 
 
 
@@ -218,12 +234,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <CardFooter className='flex flex-col items-start>
             <Button variant=outline' className='gap-2>
               <ExternalLink className=h-4 w-4' />
+=======
+          <CardFooter className="flex flex-col items-start">
+            <Button variant="outline" className="gap-2">
+              <ExternalLink className="h-4 w-4" />
+<CardFooter className='flex flex-col items-start'>
+            <Button variant='outline' className='gap-2'>
+              <ExternalLink className='h-4 w-4' />
+>>>>>>> origin/chore/fix-lint-and-merge
 origin/cursor/automate-test-improve-and-merge-code-2533
               Open Zapier Dashboard
             </Button>
           </CardFooter>
         </Card>
-:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/integrations/ZapierIntegration.tsx
 
         <Card>
 
@@ -247,11 +270,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <Check className="h-4 w-4 text-green-500 />
                 <span>Sync completed projects to accounting</span>
               </li>
+<<<<<<< HEAD
               <li className=flex items-center gap-2">
 
 
 
                 <Check className="h-4 w-4 text-green-500 />
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
                 <span>Create calendar events for interviews</span>
 
@@ -259,12 +285,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </ul>
           </CardContent>
           <CardFooter>
+<<<<<<< HEAD
 
 
               <ExternalLink className=h-4 w-4" />
 <Button variant='outline className=w-full gap-1'>
               <ExternalLink className='h-4 w-4 />
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
             <Button variant="outline className=w-full gap-1">
 
@@ -277,13 +306,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </CardFooter>
         </Card>
       </div>
-
-
-      
-
-
-      <Card>
-:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/integrations/ZapierIntegration.tsx
 
       <Card>
 
@@ -306,7 +328,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <p className="text-sm text-muted-foreground mb-4>
             Use these webhook triggers to start Zaps when events happen in your Zion account.
           </p>
-:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/integrations/ZapierIntegration.tsx
 
           <div className=grid md: grid-cols-3 gap-4">
             <div className="border rounded-md p-4>
@@ -316,15 +337,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </p>
               <Button size=sm" variant="outline>Set Up Trigger</Button>
             </div>
+<<<<<<< HEAD
             <div className=border rounded-md p-4">
               <h4 className="font-medium mb-2>New Application</h4>
               <p className=text-xs text-muted-foreground mb-3">
+=======
+            
+            <div className="border rounded-md p-4">
+              <h4 className="font-medium mb-2">New Application</h4>
+              <p className="text-xs text-muted-foreground mb-3">
+>>>>>>> origin/chore/fix-lint-and-merge
 
                 Triggers when a talent applies to your job.
               </p>
               <Button size="sm variant=outline">Set Up Trigger</Button>
             </div>
-:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/integrations/ZapierIntegration.tsx
 
             </div>
           </div>
@@ -340,22 +367,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <p className="text-xs text-muted-foreground mb-3>
                 Triggers when a contract is signed by all parties.
               </p>
+<<<<<<< HEAD
               <Button size=sm" variant="outline>Set Up Trigger</Button>
 
 
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
             </div>
           </div>
         </CardContent>
       </Card>
     </div>
-:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/integrations/ZapierIntegration.tsx
-  );
-}
-  );
-}
 
+<<<<<<< HEAD
             </p>;
                   >;
                     {copied ? (<Check className='h-4 w-4 />;
@@ -465,6 +491,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </Card>;
     </div>;
             <p className=text - sm text - muted - foreground mb - 4'>;
+=======
+            <p className='text - sm text - muted - foreground mb - 4'>;
+>>>>>>> origin/chore/fix-lint-and-merge
               Connect Zion with 3, 000+ apps via Zapier. Use your API key below;
               to set up integrations.;
 
@@ -495,6 +524,7 @@ export function ZapierIntegration() {
           </CardHeader>;
           <CardContent>;
             <p className="text-sm text-muted-foreground mb-4">;
+<<<<<<< HEAD
               Connect Zion with 3,000+ apps via Zapier. Use your API key below to set up integrations.;</p>;
             <div className=space - y-4'>;
               <div className='space - y-2>;
@@ -529,6 +559,9 @@ export function ZapierIntegration() {
           <CardFooter className="flex flex - col items - start>;
             <Button variant=outline" className="gap - 2>;
               <ExternalLink className=h - 4 w - 4" />;Open Zapier Dashboard;
+=======
+              Connect Zion with 3,000+ apps via Zapier. Use your API key below to set up integrations.;
+>>>>>>> origin/chore/fix-lint-and-merge
 
                   </Button>;
 
@@ -543,7 +576,6 @@ export function ZapierIntegration() {
         </Card>;
 
         <Card>;
-        </Card>;<Card>;
           <CardHeader>;
             <h3 className="text-lg font-semibold>Popular Zaps</h3>;
           </CardHeader>;
@@ -562,9 +594,11 @@ export function ZapierIntegration() {
                 <span>Sync completed projects to accounting</span>;
               </li>;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
               </li>;
-                <span > Create calendar events for interviews</span>;</li>;
             </ul>;
           </CardContent>;
           <CardFooter>;
@@ -593,6 +627,10 @@ export function ZapierIntegration() {
         </CardContent>;
       </Card>;
 
+<<<<<<< HEAD
       </Card>;)}
   );
 }
+=======
+;
+>>>>>>> origin/chore/fix-lint-and-merge

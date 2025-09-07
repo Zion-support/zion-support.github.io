@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
@@ -44,12 +45,30 @@
     log('error, Fatal error in comprehensive code quality analysis', error.message);
     process.exit(1)}
 }
+=======
 
+
+
+    log('info', `Total "files": ${qualityReport.summary.totalFiles}`);
+    log('info', `Total "lines": ${qualityReport.summary.totalLines}`);
+    log('info', `Total "issues": ${qualityReport.summary.totalIssues}`);
+    log('info', `"Critical": ${qualityReport.summary.critical}`);
+    log('info', `"High": ${qualityReport.summary.high}`);
+    log('info', `"Medium": ${qualityReport.summary.medium}`);
+    log('info', `"Low": ${qualityReport.summary.low}`);
+    log('info', `Quality "score": ${qualityReport.summary.qualityScore}/100`);
+    if (qualityReport.issues.length > 0) {
+>>>>>>> origin/chore/fix-lint-and-merge
+
+<<<<<<< HEAD
 main();
 
 
+<<<<<<< HEAD
+=======
 
 
+<<<<<<< HEAD
 
 
 
@@ -62,13 +81,23 @@ main();
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+#!/usr/bin/env node;
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+const fs = require('fs')
+const path = require('path')
+const { execSync } = require('child_process')
+>>>>>>> origin/chore/fix-lint-and-merge
 // console.log(' Comprehensive Code Quality Analyzer v2.0')
-console.log('')
-const content = fs.readFileSync(filePath, 'utf8');
-const lines = content.split('\n');
+console.log()
+    const content = fs.readFileSync(filePath, 'utf8')
+    const lines = content.split('\n')
     const codeLines = lines.filter(line => line.trim() && !line.trim().startsWith('//')
     const commentLines = lines.filter(line => line.trim().startsWith('//')
     log('warn')
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 "severity"""
@@ -82,6 +111,9 @@ const lines = content.split('\n');
 =======
 
 >>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
+=======
+      "severity"""
+>>>>>>> origin/chore/fix-lint-and-merge
       "message"""
       "recommendation"""
       "pattern": /password\s*=\s*['"][^]
@@ -91,6 +123,7 @@ const lines = content.split('\n');
       "priority"""
       "action"""
       log('warn', 'Issues "found")""
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -301,3 +334,7 @@ console.log()
 =======
       log('info', 'Quality "Recommendations")
 >>>>>>> cursor/integrate-build-improve-and-re-verify-f954
+=======
+      log('info', 'Quality "Recommendations")""`;
+
+>>>>>>> origin/chore/fix-lint-and-merge

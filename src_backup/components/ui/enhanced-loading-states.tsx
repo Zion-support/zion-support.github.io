@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 ;
 import React, { useState, useEffect } from 'react;
@@ -16,6 +17,12 @@ import {Loader2;
   Clock;
   Zap;
 } from 'lucide-react'; import { Button  } from '@/components/ui/button';
+=======
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence  } from 'framer-motion';
+import { Loader2, AlertTriangle, RefreshCw, Wifi, WifiOff, Clock, Zap } from 'lucide-react'
+import { Button  } from '@/components/ui/button';
+>>>>>>> origin/chore/fix-lint-and-merge
 import { Card, CardContent  } from '@/components/ui/card';
 import { Badge  } from '@/components/ui/badge';
 import { cn  } from '@/lib/utils';
@@ -175,6 +182,7 @@ export const ProgressiveLoading: React.FC<ProgressiveLoadingProps> = ({
         <div className=w-full bg-muted rounded-full h-2>
 
             initial={{ opacity: 0, x: -20 }}
+<<<<<<< HEAD
   showText?: boolean;text?: string;export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({size = md,variant = 'default',className,showText = false,text = Loading...}) => {  const sizeClasses = {sm: 'h-4 w-4',md: h-6 w-6,lg: 'h-8 w-8',xl: h-12 w-12}const variantClasses = {default: 'text-muted-foreground',primary: text-primary,success: 'text-green-500',warning: text-yellow-500,error: 'text-red-500'}variant?: default | 'primary' | success | 'warning' | error;
   className?: string;
   showText?: boolean;
@@ -266,6 +274,8 @@ interface ProgressiveLoadingProps  {steps: Array<{ id: string, label: string, du
             <span className=text-sm font-medium>{step && step.label}</span>;
           </motion && motion.div>;
         ))}initial={{ opacity: 0, x: -20 }}
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
             animate={{ opacity: index <= activeStep ? 1 : 0.5, x: 0 }}
             transition={{ delay: index * 0.1 }}
           >
@@ -435,6 +445,7 @@ export const ErrorState: React.FC<ErrorStateProps> = ({
           icon: AlertTriangle,'
           title: title || 'Something went wrong}
     }
+<<<<<<< HEAD
     </div>)}
 // Enhanced skeleton loader;
 interface SkeletonProps  {</div>;
@@ -462,6 +473,8 @@ interface SkeletonProps  {</div>;
         <motion.div;
           initial={{ scale: 0.8, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
 export const Skeleton: React.FC<SkeletonProps> = ({
   className,
@@ -505,10 +518,17 @@ export const Skeleton: React.FC<SkeletonProps> = ({
           animate={{ scale: 1, opacity: 1 }}
 
           transition={{ duration: 0.3 }}
+<<<<<<< HEAD
         >;
           <Icon className={cn('mx-auto mb-4 h-12 w-12, config.color)} />;
           <h3 className="text-lg font-semibold mb-2>{config.title}</h3>;
           <p className=text-muted-foreground mb-6 max-w-md mx-auto">;
+=======
+        >
+          <Icon className={cn('mx-auto mb-4 h-12 w-12', config.color)} />
+          <h3 className="text-lg font-semibold mb-2">{config.title}</h3>
+          <p className="text-muted-foreground mb-6 max-w-md mx-auto">
+>>>>>>> origin/chore/fix-lint-and-merge
             {config.description}
           </p>
 
@@ -517,6 +537,7 @@ export const Skeleton: React.FC<SkeletonProps> = ({
                 Error Details (Development)
               </summary>
 
+<<<<<<< HEAD
           {error && process.env.NODE_ENV === development' && (class_name?: string;
   variant?: 'text | circular' | 'rectangular | card';
   animation?: 'pulse | wave' | 'none;
@@ -622,6 +643,8 @@ interface SkeletonProps  {className?: string,variant?: text' | 'circular | recta
               <pre className="mt-2 p-2 bg-muted rounded text-xs overflow-auto>
 
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
                 {typeof error === 'string' ? error : error.message}
 
           transition={{ duration: 0 && 0.3 }}>;
@@ -656,6 +679,7 @@ interface SkeletonProps  {className?: string,variant?: text' | 'circular | recta
               </Button>
             )}
 
+<<<<<<< HEAD
           )}<div className=flex flex-col sm:flex-row gap-2 justify-center>;
             {canRetry && (<Button onClick={onRetry} variant='default'>;
                 <RefreshCw className=h-4 w-4 mr-2 />;<div className=flex flex-col sm:flex-row gap-2 justify-center>;
@@ -692,6 +716,8 @@ interface SkeletonProps  {className?: string,variant?: text' | 'circular | recta
 
 
             {secondaryAction && (
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
             {action && (;
 
               <Button;
@@ -714,6 +740,7 @@ interface SkeletonProps  {className?: string,variant?: text' | 'circular | recta
             {secondaryAction && ("
               <Button onClick={secondaryAction.onClick} variant=ghost>
 
+<<<<<<< HEAD
               </Button>;
             )}{action.label}
               </Button>;
@@ -732,6 +759,8 @@ interface SkeletonProps  {className?: string,variant?: text' | 'circular | recta
               </Button>;
             )}
           </div>;{!isOnline && (<div className=mt-4 flex items-center justify-center gap-2 text-sm text-muted-foreground'>;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
                 {secondaryAction.label}
               </Button>;
             )}
@@ -770,6 +799,7 @@ interface SkeletonProps  {className?: string,variant?: text' | 'circular | recta
               </div>;
             )}
 '
+<<<<<<< HEAD
             {variant === 'table && (;
               <div className='flex items-center gap-4'>;
                 <Skeleton variant=text' className='h-4 w-1/4 />;
@@ -777,6 +807,17 @@ interface SkeletonProps  {className?: string,variant?: text' | 'circular | recta
                 <Skeleton variant='text className=h-4 w-1/6' />;'
                 <Skeleton variant=text className='h-4 w-1/4' />;
               </div>;)}
+=======
+            {variant === 'table' && (;'
+              <div className='flex items-center gap-4'>;'
+                <Skeleton variant='text' className='h-4 w-1/4' />;'
+                <Skeleton variant='text' className='h-4 w-1/3' />;'
+                <Skeleton variant='text' className='h-4 w-1/6' />;'
+                <Skeleton variant='text' className='h-4 w-1/4' />;
+              </div>;
+
+            )}
+>>>>>>> origin/chore/fix-lint-and-merge
           </CardContent>;
         </Card>;
       ))}
@@ -879,6 +920,7 @@ export const LoadingGrid: React.FC<LoadingGridProps> = ({
             )}
 
           </CardContent>;
+<<<<<<< HEAD
     </Card>)}export const LoadingGrid: React.FC<LoadingGridProps> = ({count = 8,columns = 4,variant = 'card'},// Loading state for lists/grids;
 interface LoadingGridProps  {count?: number,columns?: number,variant?: card | 'list' | table,className?: string;
 }</CardContent>;
@@ -937,6 +979,19 @@ interface PerformanceIndicatorProps  {isLoading?: boolean,loadTime?: number,item
           {loadTime}ms;
         </Badge>;
       )}}
+=======
+        </Card>;
+      ))}
+    </div>;
+  );
+},;
+// Performance indicator;
+interface PerformanceIndicatorProps {;
+  isLoading?: boolean,;
+  loadTime?: number,;
+  itemCount?: number,;
+  className?: string;
+>>>>>>> origin/chore/fix-lint-and-merge
 }
 
   isLoading = false,
@@ -975,9 +1030,4 @@ interface PerformanceIndicatorProps  {isLoading?: boolean,loadTime?: number,item
 
 }
 }
-}}
-      {itemCount && (<span>{itemCount} items loaded</span>;
-      )}
-    </div>;
-  )}}export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({)}
 }

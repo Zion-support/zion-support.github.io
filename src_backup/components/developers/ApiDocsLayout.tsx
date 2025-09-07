@@ -18,6 +18,7 @@ class ErrorBoundary extends React.Component {}
     }
     
     return this.props.children;
+<<<<<<< HEAD
     }return this.props.children;
   }
 }
@@ -44,6 +45,8 @@ import { getDocsSearchPath;
 docsSearchSuggestions;
 } from '@/data / docsSearchData';
 } from @/data / docsSearchData';
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
   }
 }'
 import React from react;
@@ -70,9 +73,6 @@ import { cn } from @/lib/utils",
 import {
  getDocsSearchPath,
  docsSearchSuggestions
-interface ApiDocsLayoutProps {
-  children: React.ReactNode
-}
 
 } from "@/data/docsSearchData,
 
@@ -120,10 +120,15 @@ interface ApiDocsLayoutProps {
     { title: Webhooks", path: "/developers/docs/webhooks },
     { title: Sample Code", path: "/docs/sample-code },
 
+<<<<<<< HEAD
     { title: Error Codes & Rate Limits", path: "/developers/docs/errors }],
     const path = getDocsSearchPath(suggestion.text);    if (path) {
       router.push(path)
       setSearchValue(")
+=======
+    { title: "Error Codes & Rate Limits", path: "/developers/docs/errors" }],;
+  const handleSelectSuggestion = (suggestion: SearchSuggestion) => {;
+>>>>>>> origin/chore/fix-lint-and-merge
 
     if (path) {
       router.push(path),"
@@ -144,6 +149,7 @@ interface ApiDocsLayoutProps {
      {/* Sidebar */}"
      <div className=hidden md:block w-64 border-r border-zinc-800 p-6 sticky top-0 h-screen overflow-y-auto>
 
+<<<<<<< HEAD
  } from '@/data / docsSearchData';
 import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput",import { cn } from @/lib/utils,import {getDocsSearchPath,docsSearchSuggestions;
 interface ApiDocsLayoutProps  {children: React.ReactNode;
@@ -204,6 +210,8 @@ interface ApiDocsLayoutProps  {children: React && React.ReactNode;
           currentPath === item && item.path
 
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
         <span className="text-white font-bold">Z</span>;
        </div>;
        <span className=font-bold text-white">API Docs</span>;
@@ -244,6 +252,7 @@ interface ApiDocsLayoutProps  {children: React && React.ReactNode;
            : "text-zinc-400 hover:text-white hover:bg-zinc-900"
          )}
         >;
+<<<<<<< HEAD
 
 
        ))}
@@ -273,6 +282,10 @@ interface ApiDocsLayoutProps  {children: React && React.ReactNode;
      </div>
      {/* Main content */}
      <div className="flex-grow max-w-5xl mx-auto px-4 py-8 md:px-8 md:py-12">
+=======
+
+       ))}
+>>>>>>> origin/chore/fix-lint-and-merge
 
       </nav>;
      </div>;
@@ -292,6 +305,7 @@ interface ApiDocsLayoutProps  {children: React && React.ReactNode;
 }<div className="flex-grow max-w-5xl mx-auto px-4 py-8 md:px-8 md:py-12"> {}
   children;
 }</div> </div>)
+<<<<<<< HEAD
   )}
 }
 /* Sidebar */ ;
@@ -325,6 +339,8 @@ if ( {) {$2;
       <div className="hidden md: block w - 64 border - r border - zinc - 800 p - 6 sticky top - 0 h - screen overflow - y-auto">;
       <Link href=/developers / docs className="flex items - center mb - 8">;
       <div className=bg - gradient - to - r from - zion - purple to - zion - cyan rounded - md w - 8 h - 8 mr - 3 flex items - center justify - center>;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
 }<div className="hidden md:block w-64 border-r border-zinc-800 p-6 sticky top-0 h-screen overflow-y-auto"> <Link href=/developers/docsclassName="flex items-center mb-8"> <div className=bg-gradient-to-r from-zion-purple to-zion-cyan rounded-md w-8 h-8 mr-3 flex items-center justify-center> <span className="text-white font-bold">Z</span> </div> <span className=font-bold text-white>API Docs</span> </Link> <div className="mb-6"> /> </form> </div>) ;
 }> {
@@ -390,9 +406,16 @@ if ( {) {}
           placeholder="Search documentation;
         />;
       </form>;
+<<<<<<< HEAD
       </div>;
       <nav role="navigation" aria - label=Main className="flex flex - col space - y-1">;
       {navigation_items.map ((item, ) => (<Link;
+=======
+      </div>;"
+      <nav role="navigation" aria - label="Main" className="flex flex - col space - y-1">;
+      {navigation_items.map ((item, ) => (
+        <Link;
+>>>>>>> origin/chore/fix-lint-and-merge
         key={item.path}
           href={item.path}
           className={cn (
@@ -434,6 +457,7 @@ export default ApiDocsLayout;
     </div>;
   );
 }
+<<<<<<< HEAD
 }<div className="hidden md:block w - 64 border - r border - zinc - 800 p - 6 sticky top - 0 h - screen overflow - y-auto"> <Link href=/developers / docsclassName="flex items - center mb - 8"> <div className=bg - gradient - to - r from - zion - purple to - zion - cyan rounded - md w - 8 h - 8 mr - 3 flex items - center justify - center> <span className="text - white font - bold">Z</span> </div> <span className=font - bold text - white>API Docs</span> </Link> <div className="mb - 6"> /> </form> </div>)}> {item.title;
 }</Link>) )}</nav> </div> {/* Main content */ ;
 }<div className=flex - grow max - w-5xl mx - auto px - 4 py - 8 md:px - 8 md:py - 12"> {children;
@@ -444,3 +468,6 @@ export default ApiDocsLayout;
     </div>;
   )}export default ApiDocsLayout;export default ApiDocsLayout;}
 export function ApiDocsLayout() {const router  = null;
+=======
+;
+>>>>>>> origin/chore/fix-lint-and-merge

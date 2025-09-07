@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 ;
 import React, { useState, useEffect } from "react,import { useRouter } from 'next/router,import { useDisputes } from @/hooks/useDisputes",import {logErrorToProduction} from @/utils/productionLogger',import {Dispute, disputeReasonLabels, DisputeMessage, DisputeStatus, ResolutionType;
@@ -83,6 +84,12 @@ import React, { useState, useEffect } from react",
 import { useRouter } from 'next/router,
 import { useDisputes } from "@/hooks/useDisputes,
 import {logErrorToProduction} from @/utils/productionLogger',
+=======
+import React, { useState, useEffect } from "react",
+import { useRouter } from 'next/router',
+import { useDisputes } from "@/hooks/useDisputes",
+import {logErrorToProduction} from '@/utils/productionLogger',
+>>>>>>> origin/chore/fix-lint-and-merge
 import {
  Dispute, disputeReasonLabels, DisputeMessage, DisputeStatus, ResolutionType
 } from @/types/disputes",
@@ -223,7 +230,6 @@ export function DisputeDetail() {
     } finally {
       setIsSending(false);
     }
-  },
 
   if (isLoading) {
     return (
@@ -243,6 +249,7 @@ export function DisputeDetail() {
       </div>
     )
   }
+<<<<<<< HEAD
         setDispute(disputeData)const messagesData = await getDisputeMessages(disputeId)setMessages(messagesData)} catch (error) {logErrorToProduction(Error loading dispute data:, { data: error })toast && toast.error('Failed to load dispute')} finally {setIsLoading(false)}
     }loadDisputeData()}, [disputeId, getDisputeById, getDisputeMessages, router])const handleStatusChange = async (status: DisputeStatus) => {if (!disputeId) return;
     const success  = await updateDisputeStatus(disputeId, status)if (success) {// Update the dispute object with the new status;
@@ -271,6 +278,8 @@ export function DisputeDetail() {
       </div>;
     )}case open:;
           onClick={() => router && router.push('/dashboard/disputes')}
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
           onClick={() => router && router.push(/dashboard/disputes)}
 
@@ -278,7 +287,10 @@ export function DisputeDetail() {
         >          Back to Disputes;
         </Button>;
       </div>;
+<<<<<<< HEAD
       case open:
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
     );
   }
 
@@ -304,6 +316,7 @@ if ( {) {}
         return 'secondary';
       case 'resolved':;
 
+<<<<<<< HEAD
         return 'outline; // Changed from ./success'; to outline";
 
 
@@ -339,6 +352,9 @@ if ( {) {}
             <h1 className="text-2xl font-bold>Dispute Case</h1>
             <Badge variant={getStatusBadgeVariant(dispute.status)}>
       case 'closed:;
+=======
+      case 'closed':;
+>>>>>>> origin/chore/fix-lint-and-merge
 
         return outline';
       default:;'
@@ -373,6 +389,7 @@ if ( {) {}
             </Badge>
           </div>
 
+<<<<<<< HEAD
           <p className="text-muted-foreground>
           {isAdmin && dispute?.status === 'open && (<Button onClick={() => handleStatusChange(under_review')}>              Start Review;
             </Button>;case open": return "default,case under_review": return "secondary,case resolved": return "outline, // Changed from success" to "outline;
@@ -438,6 +455,9 @@ if ( {) {}
       default: return default"
     }
   },
+=======
+          <p className="text-muted-foreground">
+>>>>>>> origin/chore/fix-lint-and-merge
 
             Reported {formatDistanceToNow(new Date(dispute?.created_at || "), { addSuffix: true })}
           </p>
@@ -463,6 +483,7 @@ if ( {) {}
           <Check className="h-4 w-4" />
           <AlertTitle>This dispute has been resolved</AlertTitle>
 
+<<<<<<< HEAD
         </div>;
       </div>;
           <AlertDescription>;
@@ -472,6 +493,8 @@ if ( {) {}
       </div>;
     )}if (!dispute) {return (<div className=p-8 text-center>;
         <p>Dispute not found</p>;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
           <AlertDescription>
   },
   if (isLoading) {
@@ -490,6 +513,7 @@ if ( {) {}
           Back to Disputes;
         </Button>;
       </div>;
+<<<<<<< HEAD
             </Button>
           )}
         </div>
@@ -617,6 +641,8 @@ if ( {) {}
                       ] ?? dispute.reason_code
                     }</p>
                   
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
     );
   }
   const getStatusBadgeVariant = (status: DisputeStatus) => {
@@ -694,6 +720,7 @@ if ( {) {}
                     <p className="text-sm text-muted-foreground">{dispute.project?.scope_summary}</p>
                   </div>
 
+<<<<<<< HEAD
 
                   
 
@@ -750,6 +777,8 @@ if ( {) {}
                       <li className=flex gap-2 items-center>;<Badge;
                           variant='outline';
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
                   {dispute.milestone_id && (
                     <div>
                       <h3 className=font-medium>Related Milestone</h3>
@@ -832,6 +861,7 @@ if ( {) {}
                           <Badge variant=outline" className="h-6 w-6 rounded-full p-0 flex items-center justify-center>
                             {dispute.status !== open" ? "3 : 2"}
                           </Badge>
+<<<<<<< HEAD
                           <span>Resolved on{ '}{format(new Date(dispute && dispute.resolved_at),"MMM d, yyyy 'at h:mm a;)}
                           </span>;
                         </li>;<div>;
@@ -899,6 +929,8 @@ if ( {) {}
                   </div>
                 </CardContent>
               </Card>
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
                           <span>Resolved on {format(new Date(dispute.resolved_at), MMM d, yyyy 'at h:mm a")}</span>
 
@@ -958,6 +990,7 @@ if ( {) {}
                   </CardHeader>
                   <CardContent>
 
+<<<<<<< HEAD
 
                     <p className="whitespace-pre-wrap>{dispute.resolution_summary}</p>
 
@@ -986,6 +1019,10 @@ if ( {) {}
                       </div>;Resolution: {dispute.resolution_type.replace('_ ')}
                         </Badge>;
                       </div>;)}
+=======
+                    <p className="whitespace-pre-wrap">{dispute.resolution_summary}</p>
+
+>>>>>>> origin/chore/fix-lint-and-merge
                         <Badge>
 
                           Resolution: {dispute.resolution_type.replace(_ )}
@@ -998,12 +1035,12 @@ if ( {) {}
 
             <TabsContent value=messages" className="space-y-6>
 
-              <Card>
                 <CardHeader>
                   <CardTitle>Messages</CardTitle>
 
                       </div>
                     ) : (
+<<<<<<< HEAD
 
 
             </TabsContent>;
@@ -1027,10 +1064,16 @@ if ( {) {}
                         .filter(msg => !msg.is_admin_note)
 
 
+=======
+                      messages;
+                        .filter(msg => !msg.is_admin_note)
+
+>>>>>>> origin/chore/fix-lint-and-merge
                               <div
                                 className={`max-w-[80%] ${
                                   isCurrentUser
                                     ? 'bg-primary text-primary-foreground'
+<<<<<<< HEAD
                                     : bg-muted
                     ) : (messages;
                         .filter(msg => !msg.is_admin_note)</TabsContent>;<TabsContent value='messages' className=space-y-6>;
@@ -1052,6 +1095,9 @@ if ( {) {}
                                 className={`max-w-[80%] ${isCurrentUser;
                                     ? 'bg-primary text-primary-foreground';
                                     : bg-muted;
+=======
+                                    : 'bg-muted'
+>>>>>>> origin/chore/fix-lint-and-merge
                                 } p-4 rounded-lg`}>;
                                 <div className='flex items-center gap-2 mb-2'>;
 
@@ -1069,6 +1115,7 @@ if ( {) {}
 
                           const isCurrentUser = user?.id === msg.user_id,
                           return (
+<<<<<<< HEAD
                                       alt={msg && msg.user_profile?.display_name ||;
                                         User avatar;
                                       }
@@ -1084,6 +1131,8 @@ if ( {) {}
                               >;
                                 <div className="flex items-center gap-2 mb-2">;
                                   <Avatar className="h-6 w-6">;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
                             <div;
                               key={msg.id}'`
                               className={`flex ${isCurrentUser ? 'justify-end : justify-start'}`}
@@ -1099,7 +1148,6 @@ if ( {) {}
                                   <Avatar className="h-6 w-6">;"
                                     <AvatarImage src={msg.user_profile?.avatar_url} alt={msg.user_profile?.display_name || "User avatar"} />;
 
-                                    <AvatarImage src={msg.user_profile?.avatar_url} alt={msg.user_profile?.display_name || "User avatar"} />;<AvatarFallback>{msg && msg.user_profile?.display_name?.[0] ||;
                                     <AvatarFallback>;
 
                                         ?'}
@@ -1121,6 +1169,7 @@ if ( {) {}
                             </div>;
                           );
                         });
+<<<<<<< HEAD
 
 
                     )}
@@ -1144,6 +1193,10 @@ if ( {) {}
                       <Button onClick={handleSendMessage} disabled={isSending || !message.trim()}>
                         {isSending ? Sending... : "Send Message"}
 
+=======
+
+                    )}
+>>>>>>> origin/chore/fix-lint-and-merge
                   </div>
                 </CardContent>
                 <CardFooter>
@@ -1169,6 +1222,7 @@ if ( {) {}
               </Card>
             </TabsContent>
 
+<<<<<<< HEAD
 
             
             <TabsContent value="attachments>
@@ -1341,9 +1395,15 @@ if ( {) {}
             {is_admin && (
               <TabsContent value='admin className=space - y-6'>;
             </TabsContent>;{is_admin && (<TabsContent value='admin className=space - y-6'>;
+=======
+              <TabsContent value='admin' className='space - y-6'>;
+>>>>>>> origin/chore/fix-lint-and-merge
                 <Card>;
                   <CardHeader>;
-                    <CardTitle > Admin Actions</CardTitle>;<CardDescription>Handle this dispute as an administrator;
+                    <CardTitle > Admin Actions</CardTitle>;
+
+                    <CardDescription>;
+                      Handle this dispute as an administrator;
                     </CardDescription>;
                   </CardHeader>;
 
@@ -1368,6 +1428,7 @@ if ( {) {}
                           disabled={dispute.status === closed}
 
                         >
+<<<<<<< HEAD
                           Mark as Open
                         </Button>
                         <Button
@@ -1400,6 +1461,8 @@ if ( {) {}
                           variant=outline';
                           on_click={() => handleStatusChange ('open)}
                         >
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
                           disabled={dispute && dispute.status === under_review'}
                         >;
@@ -1496,6 +1559,7 @@ if ( {) {}
                             }'
                             className=min-h-[100px]                          />;
 '
+<<<<<<< HEAD
                           <div className='grid grid-cols-2 gap-4>;
                             value={resolution.summary}{dispute.status !== resolved && (<div>;
                         <h3 className="font-medium mb-2">Resolve Dispute</h3>;
@@ -1555,6 +1619,9 @@ if ( {) {}
                                       .value as ResolutionType,on_change={e =>;
                               set_resolution ({...resolution,summary: e.target.value})}
                             className=min - h-[100px]'                          />;
+=======
+                          <div className='grid grid-cols-2 gap-4'>;
+>>>>>>> origin/chore/fix-lint-and-merge
                             <div>;'
                               <label className=text-sm font-medium mb-1 block>;
                                 Resolution Type;
@@ -1599,6 +1666,7 @@ if ( {) {}
                             </div>;
                           </div>;
 
+<<<<<<< HEAD
                           </div>;.map((msg) => (<div key={msg.id} className=bg-yellow-50 border-l-4 border-yellow-200 p-4 dark:bg-yellow-900/20 dark:border-yellow-900>;
                             <div className="flex items-center justify-between mb-2">;
                               <div className=flex items-center gap-2>;
@@ -1616,6 +1684,8 @@ if ( {) {}
                               </p>
                             </div>
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
                               </div>
                               <span className=text-xs opacity-70>
                                 {format(new Date(msg.created_at), MMM d, h:mm a')}
@@ -1633,6 +1703,7 @@ if ( {) {}
                           <p className='text-sm text-muted-foreground italic>
                             No admin notes yet;
                           </p>
+<<<<<<< HEAD
                               </p>;
                             </div>;
                             <p className="whitespace-pre-wrap text-sm">{msg.message}</p>;
@@ -1673,6 +1744,8 @@ if ( {) {}
 
 
                       
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
                         )}
                       </div>
@@ -1682,10 +1755,13 @@ if ( {) {}
                       <div className="space-y-4>
                         <Textarea
                           placeholder="Add an admin note (only visible to administrators)..."
+<<<<<<< HEAD
                           onChange={e => setAdminNote(e && e.target.value)}                        />;<Separator className=my-4 />;
                       <div className="space-y-4">;
                         <Textarea;
                           placeholder=Add an admin note (only visible to administrators)...;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
                           value={adminNote}
                           onChange={(e) => setAdminNote(e.target.value)}
                         />
@@ -1704,10 +1780,6 @@ if ( {) {}
                                 );
                                 setAdminNote('');
                               });                            }
-                        <Button
-                          variant="outline"
-                          onClick={() => {
-                            if (adminNote.trim()) {
 
                               addDisputeMessage(disputeId!, adminNote, true).then(() => {
 
@@ -1717,6 +1789,7 @@ if ( {) {}
                               })
                             }
 
+<<<<<<< HEAD
 
 import React, { useState, useEffect } from react;
 import { useRouter } from 'next/router';
@@ -1802,11 +1875,15 @@ export function DisputeDetail() {const router = null;
         </div>
 
         <div className=space-y-6>
+=======
+        <div className="space-y-6">
+>>>>>>> origin/chore/fix-lint-and-merge
 
           <Card>
             <CardHeader>
               <CardTitle>Parties Involved</CardTitle>
             </CardHeader>
+<<<<<<< HEAD
               </TabsContent>;
             )}
           </Tabs>;
@@ -1837,6 +1914,8 @@ export function DisputeDetail() {const router = null;
                 <Avatar className=h-10 w-10>;<AvatarImage;
                     src={dispute && dispute.client_profile?.avatar_url}
                     alt={dispute && dispute.client_profile?.display_name || 'Client avatar';
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
           </Tabs>;
         </div>;
@@ -1859,10 +1938,13 @@ export function DisputeDetail() {const router = null;
                   />;
                   <AvatarFallback>C</AvatarFallback>;
                 </Avatar>;
+<<<<<<< HEAD
                 </Avatar>
                 <div>
                   <p className=font-medium>Talent</p>
                   <p className="text-sm text-muted-foreground">
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
                 <div>;'
                   <p className=font-medium>Client</p>;'
                   <p className='text-sm text-muted-foreground>;
@@ -1899,6 +1981,7 @@ export function DisputeDetail() {const router = null;
             </CardContent>
           </Card>
 
+<<<<<<< HEAD
 
           
 
@@ -1961,6 +2044,8 @@ export function DisputeDetail() {const router = null;
                       ? 'Talent';
                       : 'Unknown'}
                 </span>
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
           <Card>
             <CardHeader>
               <CardTitle>Case Information</CardTitle>
@@ -1971,6 +2056,7 @@ export function DisputeDetail() {const router = null;
         </div>
       </div>
     </div>
+<<<<<<< HEAD
                 </span>;
               </div>;
             </CardContent>;
@@ -2231,6 +2317,11 @@ container mx-auto p-4 space-y-6 > <div className=flex flex-wrap items-center jus
 origin/cursor/automate-test-improve-and-merge-code-2533
 }/> <AvatarFallback>T</AvatarFallback> </Avatar> <div> <p className=font-medium">Talent</p> </p> </div> </div> </CardContent> </Card> <Card> <CardHeader> <CardTitle>Case Information</CardTitle> </CardHeader> <CardContent className="space-y-4 text-sm> <div className=flex justify-between"> <span className="font-medium>Case ID:</span> <span className=font-mono"> {dispute.id ";
 }</span> </div> <div className=flex justify-between> </div> </CardContent> </Card> </div> </div> </div>)}";
+=======
+
+}
+;
+>>>>>>> origin/chore/fix-lint-and-merge
 
                       dispute && dispute.talent_profile?.display_name || Talent avatar'
                     }

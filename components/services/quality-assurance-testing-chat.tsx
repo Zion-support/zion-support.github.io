@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 ;
 import type { NextPage } from 'next';
@@ -7,14 +8,18 @@ const QualityAssuranceTestingChat: NextPage = () => {return (<div>;
 
 
 <div> <Head> <title>QualityAssuranceTestingChat - Zion Tech Solutions</title> <meta name="description" content="QualityAssuranceTestingChat service" /> </Head> <main> <h1>QualityAssuranceTestingChat</h1> <p>Service details coming soon...</p> <a href="/services" >Back to Services</a> </main> </div> export default QualityAssuranceTestingChat
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 import type { NextPage } from "next";
 import Head from "next/head";
+
 import Link from "next/link";
 const QualityAssuranceTestingChat: NextPage = () => {;
   return (
     <div>;
       <Head>;
         <title>QualityAssuranceTestingChat - Zion Tech Solutions</title>;
+<<<<<<< HEAD
         <meta
           name=description"
           content="QualityAssuranceTestingChat service
@@ -23,34 +28,39 @@ const QualityAssuranceTestingChat: NextPage = () => {;
         <h1>QualityAssuranceTestingChat</h1>
         <p>Service details coming soon...</p>
         <a href="/services>Back to Services</a>
+=======
+
+        <a href="/services">Back to Services</a>
+>>>>>>> origin/chore/fix-lint-and-merge
       </main>
     </div>
       </Head>;
 
       <main>;
         <h1>QualityAssuranceTestingChat</h1>;
+<<<<<<< HEAD
         <p>Service details coming soon...</p>;
         <a href=/services">Back to Services</a>;
+=======
+        <p>Service details coming soon...</p>;"
+        <a href="/services">Back to Services</a>;
+>>>>>>> origin/chore/fix-lint-and-merge
       </main>;
     </div>;
   );
 }
 export default QualityAssuranceTestingChat;
 
-
-
-
-
-
-
-import type { NextPage } from "next";
-import Head from "next/head";
+"
+import type { NextPage } from "next";"
+import Head from "next/head";"
 import Link from "next/link";
-import type { NextPage } from 'next';
-import Head from 'next/head';
+import type { NextPage } from 'next';'
+import Head from 'next/head';'
+
 import Link from 'next/link';
 
-const QualityAssuranceTestingChat: NextPage = () => {
+const QualityAssuranceTestingChat: NextPage = () => {}
   return (
     <div>
       <Head>
@@ -61,30 +71,23 @@ const QualityAssuranceTestingChat: NextPage = () => {
 
         <title>QualityAssuranceTestingChat - Zion Tech Solutions</title>
 
-
-
-
-
-
-
-
-
 import type { NextPage } from './next';
 import Head from './next / head';
+
 import Link from './next / link';
-const QualityAssuranceTestingChat: NextPage = () => {
+const QualityAssuranceTestingChat: NextPage = () => {}
   return (
     <div>;
       <Head>;
         <title > QualityAssuranceTestingChat - Zion Tech Solutions</title>;
-        <meta;
-          name="description";
-          content="QualityAssuranceTestingChat service";
+        <meta;"
+          name="description";"
+          content="QualityAssuranceTestingChat service";"
         />{" "}
       </Head>;
       <main>;
         <h1 > QualityAssuranceTestingChat</h1>;
-        <p > Service details coming soon...</p>;
+        <p > Service details coming soon...</p>;"
         <a href="/services">Back to Services</a>;
       </main>;
     </div>);
@@ -92,12 +95,14 @@ const QualityAssuranceTestingChat: NextPage = () => {
 ;
 export default QualityAssuranceTestingChat;
 ;
+
+origin/cursor/automate-test-improve-and-merge-code-20a4
+pr-12243
     <div>
       <Head>
         <title>QualityAssuranceTestingChat - Zion Tech Solutions</title>
         <meta name=&quot;description&quot; content=&quot;QualityAssuranceTestingChat service&quot; />
       </Head>
-      
       <main>
         <h1>QualityAssuranceTestingChat</h1>
         <p>Service details coming soon...</p>
@@ -109,16 +114,30 @@ export default QualityAssuranceTestingChat;
 
 export default QualityAssuranceTestingChat
 
-
-
-
-
-
-
-origin/cursor/automate-test-improve-and-merge-code-2533
-
-
+const QualityAssuranceTestingChat: NextPage = () => {
+  return (
+    <div>
+      <Head>
+        <title>QualityAssuranceTestingChat - Zion Tech Solutions</title>
+        <meta
+          name="description"
+          content="QualityAssuranceTestingChat service"
+        />{" "}
+      </Head>
+      <main>
+        <h1>QualityAssuranceTestingChat</h1>
+        <p>Service details coming soon...</p>
+        <a href="/services">Back to Services</a>
+      </main>
+    </div>
+  );
+}
+export default QualityAssuranceTestingChat;
 
         <title>QualityAssuranceTestingChat - Zion Tech Solutions</title>
+<<<<<<< HEAD
         <title>QualityAssuranceTestingChat - Zion Tech Solutions</title>
 
+=======
+        <title>QualityAssuranceTestingChat - Zion Tech Solutions</title>
+>>>>>>> origin/chore/fix-lint-and-merge

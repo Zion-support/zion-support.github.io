@@ -13,6 +13,7 @@ class ComprehensiveAutomationOrchestrator {
 
   log(message, type = 'INFO') {
     const timestamp = new Date().toISOString();
+<<<<<<< HEAD
     const prefix = {
       'INFO': 'ℹ️',
       'SUCCESS': '✅',
@@ -20,6 +21,9 @@ class ComprehensiveAutomationOrchestrator {
       'WARNING': '⚠️',
       'PROGRESS': '🔄'
     }[type] || 'ℹ️';
+=======
+    const prefix = {INFO: 'ℹ️',SUCCESS: '✅',ERROR: '❌',WARNING: '⚠️',PROGRESS: '🔄'}[type] || 'ℹ️';
+>>>>>>> origin/chore/fix-lint-and-merge
     console.log(`${prefix} [${timestamp}] ${message}`);
   }
 
@@ -127,7 +131,11 @@ const suite = new ComprehensiveAutomationSuite();
 suite.run().catch(console.error);`;
 
     fs.writeFileSync('comprehensive-automation-suite.cjs', comprehensiveSuite);
+<<<<<<< HEAD
     fs.chmodSync('comprehensive-automation-suite.cjs', '755');
+=======
+    fs.chmodSync('comprehensive-automation-suite.cjs', 0o755);
+>>>>>>> origin/chore/fix-lint-and-merge
     
     // Create execute-all.cjs
     const executeAll = `#!/usr/bin/env node
@@ -140,11 +148,15 @@ class ExecuteAllScripts {
 
   async run() {
     console.log('🚀 Executing all automation scripts...');
+<<<<<<< HEAD
     const scripts = [
       'comprehensive-automation-suite.cjs',
       'final-automation-suite-fixed.cjs',
       'ultimate-automation-orchestrator.cjs'
     ];
+=======
+    const scripts = ['comprehensive-automation-suite.cjs', 'final-automation-suite-fixed.cjs', 'ultimate-automation-orchestrator.cjs'];
+>>>>>>> origin/chore/fix-lint-and-merge
 
     for (const script of scripts) {
       try {
@@ -162,7 +174,11 @@ const executor = new ExecuteAllScripts();
 executor.run().catch(console.error);`;
 
     fs.writeFileSync('execute-all.cjs', executeAll);
+<<<<<<< HEAD
     fs.chmodSync('execute-all.cjs', '755');
+=======
+    fs.chmodSync('execute-all.cjs', 0o755);
+>>>>>>> origin/chore/fix-lint-and-merge
     this.log('✅ Created missing automation scripts', 'SUCCESS');
   }
 
@@ -222,7 +238,11 @@ runner.runTests().catch(console.error);
 `;
 
     fs.writeFileSync('comprehensive-test-runner.cjs', testRunner);
+<<<<<<< HEAD
     fs.chmodSync('comprehensive-test-runner.cjs', '755');
+=======
+    fs.chmodSync('comprehensive-test-runner.cjs', 0o755);
+>>>>>>> origin/chore/fix-lint-and-merge
     
     // Create a deployment automation script
     const deploymentScript = `#!/usr/bin/env node
@@ -257,7 +277,11 @@ deployment.deploy().catch(console.error);
 `;
 
     fs.writeFileSync('deployment-automation.cjs', deploymentScript);
+<<<<<<< HEAD
     fs.chmodSync('deployment-automation.cjs', '755');
+=======
+    fs.chmodSync('deployment-automation.cjs', 0o755);
+>>>>>>> origin/chore/fix-lint-and-merge
     
     // Create a monitoring script
     const monitoringScript = `#!/usr/bin/env node
@@ -306,7 +330,11 @@ monitor.generateReport().catch(console.error);
 `;
 
     fs.writeFileSync('system-monitor.cjs', monitoringScript);
+<<<<<<< HEAD
     fs.chmodSync('system-monitor.cjs', '755');
+=======
+    fs.chmodSync('system-monitor.cjs', 0o755);
+>>>>>>> origin/chore/fix-lint-and-merge
     this.log('✅ Additional automation scripts created', 'SUCCESS');
   }
 
@@ -326,7 +354,11 @@ monitor.generateReport().catch(console.error);
     });
 
     if (this.errors.length > 0) {
+<<<<<<< HEAD
       this.log('\n❌ Errors encountered:');
+=======
+      this.log('\n❌ Errors encountered: ');
+>>>>>>> origin/chore/fix-lint-and-merge
       this.errors.forEach(error => {
         this.log(`  - ${error.description}: ${error.error}`);
       });
@@ -339,12 +371,16 @@ monitor.generateReport().catch(console.error);
       totalTasks,
       results: this.results,
       errors: this.errors,
+<<<<<<< HEAD
       fixes: [
         'Fixed memory issues with Node.js heap size',
         'Created missing automation scripts',
         'Fixed ESLint configuration',
         'Added comprehensive error handling'
       ]
+=======
+      fixes: ['Fixed memory issues with Node.js heap size', 'Created missing automation scripts', 'Fixed ESLint configuration', 'Added comprehensive error handling']
+>>>>>>> origin/chore/fix-lint-and-merge
     };
 
     fs.writeFileSync('comprehensive-automation-report.json', JSON.stringify(reportData, null, 2));

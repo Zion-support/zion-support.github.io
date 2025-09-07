@@ -1,8 +1,9 @@
-
-import {Select;
+import {;
+  Select;
   SelectContent;
   SelectItem;
   SelectTrigger;
+<<<<<<< HEAD
   SelectValue } from '@/components/ui/select;
 import { Label  } from @/components/ui/label';
 import { ChevronRight, Plus, Zap, Trash2  } from 'lucide-react;
@@ -87,6 +88,48 @@ export function MobileResumeBuilder() {
         return <SkillsStep />,
       default:
         return <BasicsStep />}
+=======
+  SelectValue} from "@/components/ui/select";
+import { Label } from "@/components/ui/label";
+import { ChevronRight, Plus, Zap, Trash2 } from 'lucide-react';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
+import { ChevronRight, Zap, Star } from 'lucide-react';
+
+type ResumeStep = "basics" | "experience" | "education" | "skills";
+
+import React, { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import {;
+  Select,;
+  SelectContent,;
+  SelectItem,;
+  SelectTrigger,;
+  SelectValue} from "@/components/ui/select",;
+import { Label } from "@/components/ui/label";
+import { ChevronRight, Plus, Zap, Trash2 } from 'lucide-react';
+type ResumeStep = "basics" | "experience" | "education" | "skills",;
+
+export function MobileResumeBuilder() {;
+  const [currentStep, setCurrentStep] = useState<ResumeStep>("basics"),;
+
+  const renderStepContent = () => {;
+    switch (currentStep) {;
+      case "basics": return <BasicsStep />,;
+      case "experience":;
+        return <ExperienceStep />,;
+      case "education":;
+        return <EducationStep />,;
+      case "skills":;
+        return <SkillsStep />,;
+      default:;
+        return <BasicsStep />;
+
+    }
+>>>>>>> origin/chore/fix-lint-and-merge
   },
   
   return (
@@ -163,6 +206,7 @@ export function MobileResumeBuilder() {
           <Label htmlFor=location">Location</Label>
           <Input id="location name=location" placeholder="City, Country autoComplete=address-level2" />
         </div>
+<<<<<<< HEAD
         <div className="space-y-2>
           <Label htmlFor=summary">Professional Summary</Label>
           <Textarea 
@@ -181,6 +225,27 @@ export function MobileResumeBuilder() {
       <CardContent className="p-4 space-y-4>;
         <div className=space-y-2">;
           <Label htmlFor="title>Resume Title</Label>;
+=======
+        <div className="space-y-2">
+          <Label htmlFor="summary">Professional Summary</Label>
+
+        >;
+          Skills;
+        </Button>;
+      </div>;
+
+      <Button variant="default" className="w-full" size="lg">;
+        Save & Preview;
+      </Button>;
+    </div>;
+  );
+}
+
+    <Card>;
+      <CardContent className="p-4 space-y-4">;
+        <div className="space-y-2">;
+          <Label htmlFor="title">Resume Title</Label>;
+>>>>>>> origin/chore/fix-lint-and-merge
 
         </div>;
 
@@ -219,16 +284,21 @@ export function MobileResumeBuilder() {
             placeholder="Write a brief summary about yourself 
 
 function ExperienceStep() {
-  const [experiences, setExperiences] = useState($2);
+  const [experiences, setExperiences] = useState([{ id: '1' }]),
+  
   const addExperience = () => {
     const newId = (experiences.length + 1).toString(),
     setExperiences([...experiences, { id: newId }])
   },
   
   const removeExperience = (id: string) => {
+<<<<<<< HEAD
     setExperiences(experiences.filter(exp => exp.id !== id))},
+=======
+    setExperiences(experiences.filter(exp => exp.id !== id))
+  },
+>>>>>>> origin/chore/fix-lint-and-merge
   
-  const removeExperience = $2;
   return (
     <div className=space-y-4">
       {experiences.map((exp, index) => (
@@ -289,6 +359,7 @@ function ExperienceStep() {
   )
 }
 
+<<<<<<< HEAD
 function EducationStep() {
   const [educations, setEducations] = useState($2);
   const addEducation = () => {
@@ -311,6 +382,34 @@ function EducationStep() {
                 <Button
                   variant="ghost
                   size=icon"
+=======
+  };
+};
+
+  );
+}
+;
+function EducationStep() {;
+  const [educations, setEducations] = useState([{ id: '1' }]),;
+  const addEducation = () => {;
+    const newId = (educations.length + 1).toString(),;
+    setEducations([...educations, { id: newId }]);
+  },;
+  const removeEducation = (id: string) => {;
+    setEducations(educations.filter(edu => edu.id !== id));
+  },;
+  return (;
+    <div className="space-y-4">;
+      {educations.map((edu, index) => (;
+        <Card key={edu.id}>;
+          <CardContent className="p-4 space-y-4">;
+            <div className="flex justify-between items-center">;
+              <h3 className="font-medium">Education {index + 1}</h3>;
+              {educations.length > 1 && (;
+                <Button;
+                  variant="ghost";
+                  size="icon";
+>>>>>>> origin/chore/fix-lint-and-merge
                   onClick={() => removeEducation(edu.id)}
                   aria-label="Remove education;
                 >;
@@ -343,6 +442,7 @@ function EducationStep() {
           </CardContent>;
         </Card>;
       ))}
+<<<<<<< HEAD
     </Card>)}
 /**;
  * ExperienceStep - Function description;
@@ -352,10 +452,14 @@ function EducationStep() {
   () => removeSkill (skill.id) ;
 }aria-label=Remove skill" > <Trash2 className="h-4 w-4 text-destructive /> </Button>)}</div>) ) ;
 }<Button > <Plus className="h-4 w-4" /> Add Another Skill </Button> </div> </CardContent> </Card> <Card> <CardContent className=p-4 > <div className="space-y-2" > <Label>Skill Categories</Label> <div className=grid grid-cols-2 gap-2 > <Button variant="outline" className=justify-start >Development</Button> <Button variant="outline" className=justify-start >Design</Button> <Button variant="outline" className=justify-start >Marketing</Button> <Button variant="outline" className=justify-start >Business</Button> <Button variant="outline" className=justify-start >Data Analysis</Button> <Button variant="outline" className=justify-start >Languages</Button> </div> </div> </CardContent> </Card> </div>)}";
+=======
+;
+>>>>>>> origin/chore/fix-lint-and-merge
       <Button;
         variant="outline;
         className=w-full gap-2";
         onClick={addEducation}
+<<<<<<< HEAD
       >
         <Plus className="h-4 w-4 /> Add Another Education
       </Button>
@@ -448,3 +552,27 @@ function SkillsStep() {
     </div>
   )
 }
+=======
+      >;
+        <Plus className="h-4 w-4" /> Add Another Education;
+      </Button>;
+    </div>;
+
+;
+
+;
+import React, { useState } from 'react';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent } from '@/components/ui/card';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
+import {
+  );
+
+};";
+  () => removeSkill (skill.id) ";
+}aria-label="Remove skill" > <Trash2 className="h-4 w-4 text-destructive" /> </Button>) ;
+}</div>) ) ";
+}<Button > <Plus className="h-4 w-4" /> Add Another Skill </Button> </div> </CardContent> </Card> <Card> <CardContent className="p-4" > <div className="space-y-2" > <Label>Skill Categories</Label> <div className="grid grid-cols-2 gap-2" > <Button variant="outline" className="justify-start" >Development</Button> <Button variant="outline" className="justify-start" >Design</Button> <Button variant="outline" className="justify-start" >Marketing</Button> <Button variant="outline" className="justify-start" >Business</Button> <Button variant="outline" className="justify-start" >Data Analysis</Button> <Button variant="outline" className="justify-start" >Languages</Button> </div> </div> </CardContent> </Card> </div>) ;
+}"
+>>>>>>> origin/chore/fix-lint-and-merge

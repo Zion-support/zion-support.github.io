@@ -1,6 +1,20 @@
+<<<<<<< HEAD
 
 #!/"usr/bin/env" node;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+#!/""usr/bin/env"" node;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 #!/usr/bin/env node;"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 /**;
  * PM2 Sync Monitor System;
  * Health check and status monitoring for the PM2 sync automation system;
@@ -17,19 +31,24 @@
  *;
  * Features:;
  */;
+<<<<<<< HEAD
 
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
+<<<<<<< HEAD
+#!/usr/bin/env node;
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 /**;
  * Uses remote-first strategy for conflict resolution;
  * - Automated issue resolution with remote-first strategy;
+<<<<<<< HEAD
 
 =======
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
@@ -39,9 +58,21 @@
 
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 const fs = require(fs);
+=======
+<<<<<<< HEAD
+ * - Status dashboard;
+ * - Alert system;
+ */;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+const fs = require("fs");
+>>>>>>> origin/chore/fix-lint-and-merge
 const path = require("path");
 const { execSync } = require(child_process);
 const http = require("http");
+<<<<<<< HEAD
 
 =======
 
@@ -53,6 +84,19 @@ const http = require("http");
 
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+"
+const fs = require("fs");
+const path = require("path");
+const { execSync } = require("child_process");
+const http = require("http");"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge
 class $1 {}
   constructor() {}
   this.config = {}
@@ -88,15 +132,30 @@ class $1 {}
   fs.mkdirSync(logDir, { "recursive: true })}
     this.log = (message, level = "INFO") => {}
   const timestamp = new Date().toISOString();
+<<<<<<< HEAD
 
 
       const logMessage = `[${timestamp}] [${level}] ${message}`;`
       console.log(logMessage);
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+      const logMessage = `[${timestamp}] [${level}] ${message}`;`
+      console.log("logMessage);
+=======
+      const logMessage = `[${timestamp}] [${level}] ${message}`;`
+      console.log("logMessage);
+>>>>>>> origin/chore/fix-lint-and-merge
 
 =======
       const logMessage = `[${timestamp}] [${level}] ${message}`"
       console.log("logMessage);
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+<<<<<<< HEAD
 =======
 
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
@@ -105,6 +164,8 @@ class $1 {}
 
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
       try {}
   console.log(logMessage);
       try {}"
@@ -112,19 +173,47 @@ class $1 {}
   console.error(Failed to write to log "file": , error.message)}
     }
   async initialize() {}
+<<<<<<< HEAD
   this.log("Initializing PM2 Sync Monitor System...");
 
 =======
 
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
+  this.log("Initializing PM2 Sync Monitor System...");"
       // Start monitoring loops;
       this.startMonitoringLoops();
       // Start health check server;
       this.startHealthCheckServer();
       // Initial health check;
+<<<<<<< HEAD
+      await this.performHealthCheck();
+      this.log("PM2 Sync Monitor System initialized successfully`)} catch (error) {  this.log(Initialization "failed": ${error.message  }, `ERROR"");
+        fs.appendFileSync(this.config.logFile, logMessage + "\n")} catch (error) {}
+  console.error("Failed to write to log "file": ", error.message)};
+    };
+  };
+;
+  async initialize() {}
+  try {}
+  this.log("Initializing PM2 Sync Monitor System...");
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
+      // Start monitoring loops;
+      this.startMonitoringLoops();
+      // Start health check server;
+      this.startHealthCheckServer();
+      // Initial health check;
+<<<<<<< HEAD
 
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
+      await this.performHealthCheck();
+=======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge
 
       // Start monitoring loops;
 
@@ -135,6 +224,7 @@ class $1 {}
       this.log(PM2 Sync Monitor System initialized successfully");"
 
 
+<<<<<<< HEAD
 =======
 
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
@@ -145,23 +235,36 @@ class $1 {}
       this.isRunning = true} catch (error) {}
   this.log(`Initialization "failed": ${error.message}`, ERROR);
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+      this.log("PM2 Sync Monitor System initialized successfully");
+      this.isRunning = true} catch (error) {}
+  this.log(`Initialization "failed": ${error.message}`, "ERROR");
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge
       this.recordError(error);
       this.restartAfterDelay()}
   startMonitoringLoops() {}
   // Health check loop;
     setInterval(async () => {}
   await this.performHealthCheck()}, this.config.monitorInterval);
+<<<<<<< HEAD
 
 =======
 
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
     // Metrics collection loop;
     setInterval(async () => {}
   await this.collectMetrics()}, this.config.monitorInterval * 2);
-
     // Performance monitoring loop;
     setInterval(async () => {}
   await this.monitorPerformance()}, this.config.monitorInterval * 3);
+<<<<<<< HEAD
 
 =======
 
@@ -170,10 +273,22 @@ class $1 {}
 
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
+=======
+
+    // Metrics collection loop;
+  await this.collectMetrics()}, this.config.monitorInterval * 2);
+
+    // Performance monitoring loop;
+  await this.monitorPerformance()}, this.config.monitorInterval * 3);
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/chore/fix-lint-and-merge
     // Cleanup loop;
   await this.cleanupOldData()}, this.config.monitorInterval * 10);
     // Cleanup loop;
   if (this.isRunning) {}
+<<<<<<< HEAD
   await this.cleanup()}
     }, 300000); // 5 minutes}
 
@@ -203,6 +318,32 @@ class $1 {}
 
 
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+  await this.cleanup()};
+    }, 300000); // 5 minutes};
+  async performHealthCheck() {}
+<<<<<<< HEAD
+  try {}
+  this.log("Performing health check...");
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+  async performHealthCheck() {}
+  try {}
+  this.log("Performing health check...");
+=======
+  this.log("Performing health check...");"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+      this.metrics.healthChecks++;
+<<<<<<< HEAD
+      const healthStatus = await this.checkSystemHealth();
+=======
+
+      const healthStatus = await this.checkSystemHealth();
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/chore/fix-lint-and-merge
       if (healthStatus.isHealthy) {}
   this.metrics.successfulChecks++;
         this.metrics.systemStatus = "healthy";
@@ -211,6 +352,7 @@ class $1 {}
         this.metrics.systemStatus = unhealthy;
         this.log(Health check "failed": ${healthStatus.issues.join(, )}",WARN";
         );
+<<<<<<< HEAD
 
 =======
 
@@ -219,6 +361,12 @@ class $1 {}
 
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/chore/fix-lint-and-merge
         // Attempt to fix issues;
         await this.attemptIssueResolution(healthStatus.issues);
       this.metrics.totalChecks++;
@@ -227,6 +375,7 @@ class $1 {}
       this.metrics.failedChecks++}
   async checkSystemHealth() {}
   const issues = [];
+<<<<<<< HEAD
 
 =======
 
@@ -234,23 +383,34 @@ class $1 {}
 =======
 
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/chore/fix-lint-and-merge
     try {}
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   // Check PM2 processes;
       const pm2Status = await this.checkPM2Status();
       if (!pm2Status.isHealthy) {}
   issues.push(...pm2Status.issues);
+<<<<<<< HEAD
         isHealthy = false}
 
+=======
+        isHealthy = false};
+<<<<<<< HEAD
+;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       // Check file system;
       const fsStatus = await this.checkFileSystem();
       if (!fsStatus.isHealthy) {}
@@ -259,16 +419,19 @@ class $1 {}
       const gitStatus = await this.checkGitRepository();
       if (!gitStatus.isHealthy) {}
   issues.push(...gitStatus.issues);
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+        isHealthy = false};
+;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       // Check build status;
       const buildStatus = await this.checkBuildStatus();
       if (!buildStatus.isHealthy) {}
@@ -277,13 +440,17 @@ class $1 {}
       const depsStatus = await this.checkDependencies();
       if (!depsStatus.isHealthy) {}
   issues.push(...depsStatus.issues);
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
       return {}"
 
         "issues: issues}}
   async checkPM2Status() {}
   const output = execSync("pm2 jlist", { encoding: "utf8" })
 });
+<<<<<<< HEAD
 
 
 =======
@@ -308,25 +475,38 @@ class $1 {}
 =======
 
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
-      let isHealthy = true;
+=======
+<<<<<<< HEAD
+=======
 
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+  async checkPM2Status() {}
+  try {}
+  const output = execSync("pm2 jlist", { "encoding": "utf8" }
+});
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+      const processes = JSON.parse(output);
+<<<<<<< HEAD
+      const issues = [];
+>>>>>>> origin/chore/fix-lint-and-merge
+      let isHealthy = true;
       // Check if all required processes are running;
+<<<<<<< HEAD
       const requiredProcesses = [pm2-sync-automation", "pm2-sync-monitor, zion-app", "];
 
 =======
+      const requiredProcesses = ["pm2-sync-automation", "pm2-sync-monitor", "zion-app", "];
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
       // Check if all required processes are running;
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-=======
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
       requiredProcesses.forEach(processName => {})
   const process = processes.find(p => p.name === processName);`;
         if (!process || process.pm2_env.status !== "online") {issues.push(`Process ${processName} is not running`);          isHealthy = false}
       }
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
@@ -338,6 +518,17 @@ class $1 {}
 
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       return { isHealthy, issues }
+=======
+<<<<<<< HEAD
+});
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+      return { isHealthy, issues };
+>>>>>>> origin/chore/fix-lint-and-merge
     } catch (error) {}
 
   async checkFileSystem() {}
@@ -350,6 +541,7 @@ class $1 {}
       const logDir = "logs;
       // Check disk space;
 
+<<<<<<< HEAD
 =======
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 
@@ -357,12 +549,41 @@ class $1 {}
 =======
 
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+      // Check disk space;
+      // Check disk space;
+      const diskUsage = await this.getDiskUsage();
+<<<<<<< HEAD
+      if (diskUsage.usagePercent > 90) {}
+  issues.push(`Disk usage "high": ${diskUsage.usagePercent}%`);
+        isHealthy = false};
+;
+      return { isHealthy, issues };
+    } catch (error) {}
+  return {}
+  "isHealthy": false,"issues": [`File system check failed: ${error.message  }`]}};
+  };
+;
+  async checkGitRepository() {}
+  try {}
+  const issues = [];
+      let isHealthy = true;
       // Check if git repository exists;
+      if (!fs.existsSync(".git")) {}
+  issues.push("Git repository not found");
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/chore/fix-lint-and-merge
+      // Check if git repository exists;
+=======
       if (diskUsage.usagePercent > 90) {}"`;
   issues.push(`Disk usage "high: ${diskUsage.usagePercent}%`);
 
   async checkGitRepository() {}
       // Check if git repository exists;"
+<<<<<<< HEAD
       if (!fs.existsSync(".git)) {}
   issues.push(Git repository not found");"
       // Check if git repository exists;
@@ -377,6 +598,24 @@ class $1 {}
 
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+      if (!fs.existsSync(".git")) {}
+  issues.push("Git repository not found");"
+      // Check if git repository exists;"
+
+        isHealthy = false;
+      // Check git status;"
+      const status = execSync("git status --porcelain", {})
+  "cwd": this.config.projectRoot,
+<<<<<<< HEAD
+        "encoding": "utf8"}
+});
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/chore/fix-lint-and-merge
       if (status.trim()) {}
   issues.push("Uncommitted changes detected");
         isHealthy = false}
@@ -395,13 +634,25 @@ class $1 {}
   async checkBuildStatus() {}
   try {}
       // Check if build artifacts exist;
+<<<<<<< HEAD
       const buildDirs = [".next", dist, "build"];
+=======
+      const buildDirs = [".next", "dist", "build"];
+<<<<<<< HEAD
+      // Check if build artifacts exist;
+      const buildDirs = [".next", "dist", "build"];
+      const hasBuildArtifacts = buildDirs.some(dir => fs.existsSync(dir));
+=======
+=======
+        "encoding": "utf8"}"
+>>>>>>> origin/chore/fix-lint-and-merge
 
         encoding: "utf8"}
 
       if (status.trim()) {}
   issues.push("Uncommitted changes detected");
       // Check remote connection;
+<<<<<<< HEAD
 
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 
@@ -415,6 +666,18 @@ class $1 {}
 
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+  async checkBuildStatus() {}
+      // Check if build artifacts exist;"
+      const buildDirs = [".next", "dist", "build"];"
+      // Check if build artifacts exist;"
+      const hasBuildArtifacts = buildDirs.some(dir => fs.existsSync(dir));
+
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/chore/fix-lint-and-merge
       if (!hasBuildArtifacts) {}
   issues.push("No build artifacts found");
         isHealthy = false}
@@ -444,6 +707,7 @@ class $1 {}
   try {}
       // Check if node_modules exists;
       if (!fs.existsSync("node_modules")) {}
+<<<<<<< HEAD
   issues.push(Dependencies not installed);
 
 =======
@@ -453,7 +717,15 @@ class $1 {}
 
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
+  issues.push("Dependencies not installed");
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/chore/fix-lint-and-merge
       // Check if node_modules exists;
+=======
       if (!hasBuildArtifacts) {}"
   issues.push("No build artifacts found);
       // Check package.json scripts;"
@@ -466,6 +738,13 @@ class $1 {}
 
   async checkDependencies() {}
       // Check if node_modules exists;"
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+      if (!fs.existsSync("node_modules")) {}
+  issues.push("Dependencies not installed");"
+      // Check if node_modules exists;"
+>>>>>>> origin/chore/fix-lint-and-merge
 
           const outdatedDeps = JSON.parse(outdated);
           if (Object.keys(outdatedDeps).length > 0) {}`;
@@ -522,6 +801,7 @@ class $1 {}
   async collectMetrics() {}
   // Collect system metrics;
       this.metrics.performance = await this.getSystemPerformance();
+<<<<<<< HEAD
 
 =======
 
@@ -530,12 +810,19 @@ class $1 {}
 
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/chore/fix-lint-and-merge
       // Calculate success rate;
       if (this.metrics.healthChecks > 0) {}
   this.metrics.successRate =;
           (this.metrics.successfulChecks / this.metrics.healthChecks) * 100}
       // Calculate uptime;
       this.metrics.uptime = Date.now() - this.metrics.startTime;
+<<<<<<< HEAD
 
 =======
 
@@ -543,8 +830,17 @@ class $1 {}
 =======
 
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/chore/fix-lint-and-merge
   async collectMetrics() {}
   try {}
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   // Collect system metrics;
       // Calculate success rate;
       // Calculate uptime;
@@ -552,11 +848,11 @@ class $1 {}
       // Collect performance metrics;
       await this.collectPerformanceMetrics();
 
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
   async getSystemPerformance() {}
   // Get CPU usage (simplified);
       const cpuUsage = process.cpuUsage();
       const cpuPercent = (cpuUsage.user + cpuUsage.system) / 1000000;
+<<<<<<< HEAD
 
 =======
 
@@ -565,11 +861,18 @@ class $1 {}
 
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/chore/fix-lint-and-merge
       // Get memory usage;
       const memoryUsage = process.memoryUsage();
       const memoryPercent =;
         (memoryUsage.heapUsed / memoryUsage.heapTotal) * 100;
       // Get disk usage;
+<<<<<<< HEAD
 
 =======
 
@@ -578,11 +881,20 @@ class $1 {}
 
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
+<<<<<<< HEAD
+      const diskUsage = await this.getDiskUsage();
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/chore/fix-lint-and-merge
       return {}
   cpu: Math.round(cpuPercent * 100) / 100,
         "memory": Math.round(memoryPercent * 100) / 100,
         disk: diskUsage.usagePercent}
     } catch (error) {}
+<<<<<<< HEAD
   return { "cpu": 0, memory: 0, "disk": 0 }
 
 
@@ -590,6 +902,20 @@ class $1 {}
   return { "cpu: 0, memory": 0, "disk: 0 }
   async collectPerformanceMetrics() {}
 
+=======
+  return { "cpu": 0, "memory": 0, "disk": 0 };
+=======
+
+
+        "disk": diskUsage.usagePercent};"
+  return { "cpu": 0, "memory": 0, "disk": 0 };"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+  async collectPerformanceMetrics() {}
+  // Get system performance data;"
+      const output = execSync("pm2 monit --no-daemon", {})
+  "encoding": "utf8",
+        "timeout": 5000 }"
+>>>>>>> origin/chore/fix-lint-and-merge
       // Parse performance data (simplified);
       this.metrics.performance = {}
   cpu": Math.random() * 100, // Placeholder;
@@ -597,13 +923,41 @@ class $1 {}
         disk": await this.getDiskUsage()}} catch (error) {}
   return { "cpu: 0, memory": 0, "disk: 0   }
   async getDiskUsage() {}
+<<<<<<< HEAD
 
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
+<<<<<<< HEAD
+  try {}
+  const output = execSync("df .", { "encoding": "utf8" })} catch (error) {}
+  // Ignore timeout errors from pm2 monit;
+      if (!error.message.includes("timeout")) {}
+  this.log(`Performance monitoring "failed": ${error.message}`, "ERROR")};
+    };
+  };
+;
+  async getDiskUsage() {}
+  try {}
+  const output = execSync("df .", { "encoding": "utf8" }
+});
+      const lines = output.trim().split("\n");
+      const [", "usageLine"] = lines;
+      const [", "used", "available"] = usageLine.split(/\s+/);
+<<<<<<< HEAD
+      const total = parseInt(used) + parseInt(available);
+      const usagePercent = Math.round((parseInt(used) / total) * 100);
+=======
+=======
+  const output = execSync("df .", { "encoding": "utf8" })} catch (error) {}"
+  // Ignore timeout errors from pm2 monit;"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge
 
       const [", "used, available"] = usageLine.split(/\s+/);"
       const total = parseInt(used) + parseInt(available);
       const usagePercent = Math.round((parseInt(used) / total) * 100);
 
+<<<<<<< HEAD
 
 =======
 =======
@@ -649,6 +1003,25 @@ class $1 {}
 =======
   
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+      return { usagePercent };
+  return { "usagePercent": 0   };"
+  async monitorPerformance() {}
+<<<<<<< HEAD
+  try {}
+  // Check if any process is using too much memory;
+      const output = execSync("pm2 monit --no-daemon", {})
+  "encoding": "utf8",
+        "timeout": 5000}
+});
+      // Parse memory usage and restart if necessary;
+      if (output.includes("Memory usage high")) {}
+<<<<<<< HEAD
+=======
+  
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/chore/fix-lint-and-merge
 } catch (error) {}
   return { "usagePercent": 0 };
     };
@@ -657,10 +1030,11 @@ class $1 {}
   async monitorPerformance() {}
   try {}
   // Check if any process is using too much memory;
-const output = execSync("pm2 monit --no-daemon", {});
+      const output = execSync("pm2 monit --no-daemon", {})
   "encoding": "utf8",
         "timeout": 5000}
 });
+<<<<<<< HEAD
 
 =======
 =======
@@ -670,6 +1044,12 @@ const output = execSync("pm2 monit --no-daemon", {});
 =======
 
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/chore/fix-lint-and-merge
       // Parse memory usage and restart if necessary;
       if (output.includes("Memory usage high)) {}
   this.log(High memory usage detected, restarting processes...", "WARN);
@@ -678,9 +1058,17 @@ const output = execSync("pm2 monit --no-daemon", {});
 execSync("pm2 restart all, { stdio": "pipe })}
     } catch (error) {}
   // Ignore timeout errors from pm2 monit;
+<<<<<<< HEAD
       if (!error.message.includes(timeout")) {this.log(`Performance monitoring "failed: ${error.message  }`, ERROR")}
     }
   }
+=======
+      if (!error.message.includes("timeout")) {this.log(`Performance monitoring "failed": ${error.message  }`, "ERROR")};
+    };
+  };
+;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
   // Check if any process is using too much memory;"
 
         timeout: 5000}"
@@ -689,6 +1077,7 @@ execSync("pm2 restart all, { stdio": "pipe })}
   return { "usagePercent: 0 }
   // Check if any process is using too much memory;"
 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   async cleanupOldData() {}
   // Clean up old log files;"
       if (fs.existsSync(logDir)) {}
@@ -702,6 +1091,7 @@ execSync("pm2 restart all, { stdio": "pipe })}
   // Clean up old log files;
   const filePath = path.join(logDir, "file);"
           const stats = fs.statSync(filePath);
+<<<<<<< HEAD
 
 =======
 
@@ -714,6 +1104,19 @@ execSync("pm2 restart all, { stdio": "pipe })}
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
           if (now - stats.mtime.getTime() > maxAge) {}
   fs.unlinkSync(filePath);this.log(Cleaned up old log "file": ${file});
+=======
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+          if (now - stats.mtime.getTime() > maxAge) {}
+  fs.unlinkSync(filePath);this.log("Cleaned up old log "file": ${file}");
+=======
+          if (now - stats.mtime.getTime() > maxAge) {}"
+  fs.unlinkSync(filePath);this.log("Cleaned up old log "file": ${file}");"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge
       const [, usageLine] = lines;
       const [, used, available] = usageLine.split(/\s+/);
 
@@ -731,6 +1134,7 @@ execSync("pm2 restart all, { stdio": "pipe })}
   this.metrics.errors = this.metrics.errors.slice(-this.config.maxErrors)}"
 
         res.end(;)
+<<<<<<< HEAD
           JSON.stringify({})
   status": this.metrics.systemStatus,
             "timestamp: new Date().toISOString(),
@@ -749,6 +1153,34 @@ execSync("pm2 restart all, { stdio": "pipe })}
     server.listen(this.config.healthCheckPort, () => {}
   this.log(Health check server listening on port ${this.config.healthCheckPort};)
             "restarts": this.metrics.restarts}
+=======
+          JSON.stringify({})"
+  "status": this.metrics.systemStatus,
+            "timestamp": new Date().toISOString(),
+            "uptime": this.metrics.uptime,
+            "healthChecks": this.metrics.healthChecks,
+            "successRate": this.metrics.successRate || 0,
+            "errors": this.metrics.errors.length,
+<<<<<<< HEAD
+            "restarts": this.metrics.restarts}
+});
+        )} else if (req.url === "/metrics") {}
+  res.writeHead(200, { "Content-Type": ""application/json"" }
+});
+        res.end(JSON.stringify(this.metrics))} else {}
+  res.writeHead(404);
+        res.end("Not Found")};
+    }
+});
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+    server.listen(this.config.healthCheckPort, () => {}
+  this.log(Health check server listening on port ${this.config.healthCheckPort}";)
+=======
+            "restarts": this.metrics.restarts}"
+>>>>>>> origin/chore/fix-lint-and-merge
 
         res.end(JSON.stringify(this.metrics))} else {}
   res.writeHead(404);
@@ -756,6 +1188,7 @@ execSync("pm2 restart all, { stdio": "pipe })}
 
     server.listen(this.config.healthCheckPort, () => {}
   this.log(Health check server listening on port ${this.config.healthCheckPort}";)"
+<<<<<<< HEAD
       )})}
   recordError(error) {}
   this.metrics.errors.push({})
@@ -773,6 +1206,27 @@ execSync("pm2 restart all, { stdio": "pipe })}
       timestamp": Date.now()}"
 
   this.metrics.errors = this.metrics.errors.slice(-this.config.maxErrors)}
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+      )})};
+  recordError(error) {}
+  this.metrics.errors.push({})"
+  "message": error.message,
+      "stack": error.stack,
+<<<<<<< HEAD
+      "timestamp": Date.now()}
+});
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+    if (this.metrics.errors.length > this.config.maxErrors) {}
+=======
+      "timestamp": Date.now()}"
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+  this.metrics.errors = this.metrics.errors.slice(-this.config.maxErrors)};
+>>>>>>> origin/chore/fix-lint-and-merge
   async saveMetrics() {}
   const metricsDir = path.dirname(this.config.metricsFile);
       if (!fs.existsSync(metricsDir)) {}
@@ -801,6 +1255,7 @@ execSync("pm2 restart all, { stdio": "pipe })}
     setTimeout(() => {}
   this.initialize()}, delay)}
   getStatus() {}
+<<<<<<< HEAD
 
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 process.on(SIGINT, async () => {}
@@ -814,6 +1269,33 @@ process.on(SIGINT, async () => {}
   console.log("\nReceived SIGINT, shutting down gracefully...");
 
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+<<<<<<< HEAD
+  return {}
+  "isRunning": true,
+      "systemStatus": this.metrics.systemStatus,
+      "healthChecks": this.metrics.healthChecks,
+      "successRate": this.metrics.successRate || 0,
+      "errors": this.metrics.errors.length,
+      "restarts": this.metrics.restarts,
+      "uptime": this.metrics.uptime,
+      "performance": this.metrics.performance}};
+};
+;
+// Handle process signals;
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+process.on("SIGINT", async () => {}
+  console.log("\nReceived SIGINT, shutting down gracefully...");
+=======
+process.on("SIGINT", async () => {}
+  console.log("\nReceived SIGINT, shutting down gracefully...");
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/chore/fix-lint-and-merge
 // Handle process signals;
 process.on(SIGINT, async () => {}
   console.log("\nReceived SIGINT, shutting down gracefully...");
@@ -821,6 +1303,7 @@ process.on(SIGINT, async () => {}
   await global.pm2SyncMonitor.stop()}
   process.exit(0)}
 });
+<<<<<<< HEAD
 
 =======
 
@@ -837,24 +1320,60 @@ process.on(SIGTERM, async () => {}
 
 
       performance: this.metrics.performance}}"
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+process.on("SIGTERM", async () => {}
+  console.log("\nReceived SIGTERM, shutting down gracefully...");
+  if (global.pm2SyncMonitor) {}
+  await global.pm2SyncMonitor.stop()};
+  process.exit(0)}
+});
+=======
+
+      "performance": this.metrics.performance}};"
+// Handle process signals;"
+process.on("SIGINT", async () => {}
+  console.log("\nReceived SIGINT, shutting down gracefully...");"
+>>>>>>> origin/chore/fix-lint-and-merge
 // Handle process signals;"
 process.on(SIGINT, async () => {}
   console.log("\nReceived SIGINT, shutting down gracefully...");
 // Handle process signals;
 
   console.log("\nReceived SIGTERM, shutting down gracefully...");"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 // Start the monitor system;
 if (require.main === module) {}
   global.pm2SyncMonitor = new PM2SyncMonitor();
   // Keep the process alive;
   setInterval(() => {}
   if (global.pm2SyncMonitor && global.pm2SyncMonitor.isRunning) {}
+<<<<<<< HEAD
   // Process is healthy}
   }, 60000)}
 module.exports = PM2SyncMonitor;
 
 =======
 
+=======
+  // Process is healthy};
+  }, 60000)};
+<<<<<<< HEAD
+;
+module.exports = PM2SyncMonitor;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+module.exports = PM2SyncMonitor;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
 module.exports = PM2SyncMonitor;
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
@@ -863,10 +1382,15 @@ module.exports = PM2SyncMonitor;
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
+
+module.exports = PM2SyncMonitor;
+<<<<<<< HEAD
+
+module.exports = PM2SyncMonitor;
+
 =======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
-module.exports = PM2SyncMonitor;
-
-module.exports = PM2SyncMonitor;
-
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> origin/chore/fix-lint-and-merge

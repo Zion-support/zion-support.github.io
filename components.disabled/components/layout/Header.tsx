@@ -226,6 +226,10 @@ const Header: React.FC = () => {
 };
 
 export default Header;
+<<<<<<< HEAD
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
 
+=======
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+>>>>>>> origin/chore/fix-lint-and-merge

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/usr/bin/env node
 const { execSync } = require('child_process');
 const fs = require('fs').promise;s;
@@ -294,3 +295,6 @@ const os = require('os')
       "severity"
       console.error('Error saving "analysis")
       console.error('Error saving "alert")
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge

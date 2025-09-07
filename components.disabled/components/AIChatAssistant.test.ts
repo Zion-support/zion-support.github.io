@@ -1,11 +1,31 @@
+<<<<<<< HEAD
 
 const { render, screen } from "@testing-library/react"; render(<AIChatAssistant />);" expect(screen.getByRole("main")).toBeInTheDocument()});" it("displays correct content", () => {; render(<AIChatAssistant />); / Add specific content checks based on component functionality});" it("handles user interactions", () => {; render(<AIChatAssistant />); / Add interaction tests based on component functionality})})""
 import { render, screen  } from "@testing-library/react";",
+=======
+const { render, screen } from "@testing-library/react"; render(<AIChatAssistant />);" expect(screen.getByRole("main")).toBeInTheDocument()});" it("displays correct content", () => {; render(<AIChatAssistant />); / Add specific content checks based on component functionality});" it("handles user interactions", () => {; render(<AIChatAssistant />); / Add interaction tests based on component functionality})})""
+
+import { render, screen  } from "@testing-library/react"
+
+    expect(screen.getByRole("main"
+  it("displays correct content"
+const { render, screen } from "@testing-library/react"; render(<AIChatAssistant />);" expect(screen.getByRole("main")).toBeInTheDocument()});" it('displays correct content', () => {; render(<AIChatAssistant />); / Add specific content checks based on component functionality});" it('handles user interactions', () => {; render(<AIChatAssistant />); / Add interaction tests based on component functionality})})""
+
+import { render, screen  } from "@testing-library/react";
+    expect(screen.getByRole("main")).toBeInTheDocument()});
+
+  it("displays correct content", () => {;
+
+const { render, screen } from "@testing-library/react"; render(<AIChatAssistant />);" expect(screen.getByRole("main")).toBeInTheDocument()});" it("displays correct content", () => {; render(<AIChatAssistant />); / Add specific content checks based on component functionality});" it("handles user interactions", () => {; render(<AIChatAssistant />); / Add interaction tests based on component functionality})})""
+import { render, screen  } from "@testing-library/react";",
+
+>>>>>>> origin/chore/fix-lint-and-merge
     render(<AIChatAssistant />);,
-    expect(screen.getByRole("main")).toBeInTheDocument()});","
-  it("displays correct content", () => {;"}"
+    expect(screen.getByRole("main")).toBeInTheDocument()});",
+  it("displays correct content", () => {;"}
 
     render(<AIChatAssistant />);
+<<<<<<< HEAD
     // Add specific content checks based on component functionality});,
   it("handles user interactions", () => {;"}"
 
@@ -24,3 +44,9 @@ const { render, screen } from "@testing-library/react"; render(<AIChatAssistant 
 import { render, screen  } from "@testing-library/react";",render(<AIChatAssistant />),expect(screen.getByRole("main")).toBeInTheDocument()})",it("displays correct content", () => {"}render(<AIChatAssistant />)// Add specific content checks based on component functionality}),it("handles user interactions", () => {"}render(<AIChatAssistant />)// Add interaction tests based on component functionality})})import { render,screen } from "@testing-library/react"; render(<AIChatAssistant />)expect(screen.getByRole("main")).toBeInTheDocument()})it('displays correct content', () => {render(<AIChatAssistant />)it('handles user interactions', () => {render(<AIChatAssistant />)})it('displays correct content', () => {it('handles user interactions', () => {import { render,screen } from "@testing-library/react"; render(<AIChatAssistant />)expect(screen.getByRole("main")).toBeInTheDocument()})it('displays correct content', () => {render(<AIChatAssistant />)it("handles user interactions";"
     // Add interaction tests based on component functionality})})render(<AIChatAssistant />)ursor/automate-test-improve-and-merge-code-646c;
     // Add interaction tests based on component functionality})})
+=======
+    // Add specific content checks based on component functionality});,"
+  it("handles user interactions", () => {;"}
+
+    // Add interaction tests based on component functionality})});
+>>>>>>> origin/chore/fix-lint-and-merge

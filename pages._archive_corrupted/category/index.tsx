@@ -1,49 +1,31 @@
+import type { NextPage } from 'next';
+import EnhancedLayout from '../../components/EnhancedLayout';
+import Link from 'next/link';
+const "CategoryIndexPage": NextPage = () => {;
+  return (
 
-;
-import type { NextPage } from 'next';'
-import EnhancedLayout from '../../components/EnhancedLayout';'
-import Link from 'next/link';'
-const "CategoryIndexPage": NextPage = () => {return (<EnhancedLayout>;"
-      <section>;
-        <h1 className="text-3xl font-bold mb-4">Categories</h1>;"
-        <p className="text-gray-700 mb-6">Explore our knowledge base by topic.</p>;"
-        <ul className="list-disc pl-6 space-y-2">;"
-          <li>;
-            <Link href="/category/web-development-chat" className="text-blue-700 "hover":underline">Web Development</Link>;"
-          </li>;
-          <li>;
-            <Link href="/category/cloud-architecture-chat" className="text-blue-700 "hover":underline">Cloud Architecture</Link>;"
-          </li>;
-          <li>;
-            <Link href="/category/ai-consulting-chat" className="text-blue-700 "hover":underline">AI Consulting</Link>;"
-          </li>;
-          <li>;
-            <Link href="/category/cybersecurity-chat" className="text-blue-700 "hover":underline">Cybersecurity</Link>;"
-          </li>;
-        </ul>;
-      </section>;
-    </EnhancedLayout>;
-  )}export default CategoryIndexPage;
-import type { NextPage } from 'next'; import EnhancedLayout from '../../components/EnhancedLayout'; import Link from 'next/link'; const "CategoryIndexPage": NextPage = () => { return ( <EnhancedLayout> <section> <h1 className="text-3xl font-bold mb-4">Categories</h1> <p className="text-gray-700 mb-6">Explore our knowledge base by topic.</p> <ul className="list-disc pl-6 space-y-2"> <li> <Link href="/category/web-development-chat" className="text-blue-700 "hover":underline">Web Development</Link> </li> <li> <Link href="/category/cloud-architecture-chat" className="text-blue-700 "hover":underline">Cloud Architecture</Link> </li> <li> <Link href="/category/ai-consulting-chat" className="text-blue-700 "hover":underline">AI Consulting</Link> </li> <li> <Link href="/category/cybersecurity-chat" className="text-blue-700 "hover":underline">Cybersecurity</Link> </li> </ul> </section> </EnhancedLayout> )}export default CategoryIndexPage;<EnhancedLayout>;"
-const "CategoryIndexPage": NextPage = () => {"
-}
-return (;
+import type { NextPage } from 'next';
+import EnhancedLayout from '../../components/EnhancedLayout';
+import Link from 'next/link';
+const "CategoryIndexPage": NextPage = () => {
+  return (
+
     <EnhancedLayout>
       <section>
-        <h1 className="text-3xl font-bold mb-4">Categories</h1>"
-        <p className="text-gray-700 mb-6">Explore our knowledge base by topic.</p>"
-        <ul className="list-disc pl-6 space-y-2">"
+        <h1 className="text-3xl font-bold mb-4">Categories</h1>
+        <p className="text-gray-700 mb-6">Explore our knowledge base by topic.</p>
+        <ul className="list-disc pl-6 space-y-2">
           <li>
-            <Link href="/category/web-development-chat" className="text-blue-700 "hover":underline">Web Development</Link>"
+            <Link href="/category/web-development-chat" className="text-blue-700 hover:underline">Web Development</Link>
           </li>
           <li>
-            <Link href="/category/cloud-architecture-chat" className="text-blue-700 "hover":underline">Cloud Architecture</Link>"
+            <Link href="/category/cloud-architecture-chat" className="text-blue-700 hover:underline">Cloud Architecture</Link>
           </li>
           <li>
-            <Link href="/category/ai-consulting-chat" className="text-blue-700 "hover":underline">AI Consulting</Link>"
+            <Link href="/category/ai-consulting-chat" className="text-blue-700 hover:underline">AI Consulting</Link>
           </li>
           <li>
-            <Link href="/category/cybersecurity-chat" className="text-blue-700 "hover":underline">Cybersecurity</Link>"
+            <Link href="/category/cybersecurity-chat" className="text-blue-700 hover:underline">Cybersecurity</Link>
           </li>
         </ul>
       </section>
@@ -51,37 +33,62 @@ return (;
   );
 };
 export default CategoryIndexPage;
-import type { NextPage } from 'next'; import EnhancedLayout from '../../components/EnhancedLayout'; import Link from 'next/link'; const "CategoryIndexPage": NextPage = () => { return ( <EnhancedLayout> <section> <h1 className="text-3xl font-bold mb-4">Categories</h1> <p className="text-gray-700 mb-6">Explore our knowledge base by topic.</p> <ul className="list-disc pl-6 space-y-2"> <li> <Link href="/category/web-development-chat" className="text-blue-700 "hover":underline">Web Development</Link> </li> <li> <Link href="/category/cloud-architecture-chat" className="text-blue-700 "hover":underline">Cloud Architecture</Link> </li> <li> <Link href="/category/ai-consulting-chat" className="text-blue-700 "hover":underline">AI Consulting</Link> </li> <li> <Link href="/category/cybersecurity-chat" className="text-blue-700 "hover":underline">Cybersecurity</Link> </li> </ul> </section> </EnhancedLayout> )}; export default CategoryIndexPage;"
 
+import type { NextPage } from 'next'; import EnhancedLayout from '../../components/EnhancedLayout'; import Link from 'next/link'; const CategoryIndexPage: NextPage = () => { return ( <EnhancedLayout> <section> <h1 className="text-3xl font-bold mb-4">Categories</h1> <p className="text-gray-700 mb-6">Explore our knowledge base by topic.</p> <ul className="list-disc pl-6 space-y-2"> <li> <Link href="/category/web-development-chat" className="text-blue-700 hover:underline">Web Development</Link> </li> <li> <Link href="/category/cloud-architecture-chat" className="text-blue-700 hover:underline">Cloud Architecture</Link> </li> <li> <Link href="/category/ai-consulting-chat" className="text-blue-700 hover:underline">AI Consulting</Link> </li> <li> <Link href="/category/cybersecurity-chat" className="text-blue-700 hover:underline">Cybersecurity</Link> </li> </ul> </section> </EnhancedLayout> )}; export default CategoryIndexPage;
+
+import type { NextPage } from 'next'; import EnhancedLayout from '../../components/EnhancedLayout'; import Link from 'next/link'; const CategoryIndexPage: NextPage = () => { return ( <EnhancedLayout> <section> <h1 className="text-3xl font-bold mb-4">Categories</h1> <p className="text-gray-700 mb-6">Explore our knowledge base by topic.</p> <ul className="list-disc pl-6 space-y-2"> <li> <Link href="/category/web-development-chat" className="text-blue-700 hover:underline">Web Development</Link> </li> <li> <Link href="/category/cloud-architecture-chat" className="text-blue-700 hover:underline">Cloud Architecture</Link> </li> <li> <Link href="/category/ai-consulting-chat" className="text-blue-700 hover:underline">AI Consulting</Link> </li> <li> <Link href="/category/cybersecurity-chat" className="text-blue-700 hover:underline">Cybersecurity</Link> </li> </ul> </section> </EnhancedLayout> )}; export default CategoryIndexPage;
+
+import type { NextPage } from 'next'; import EnhancedLayout from '../../components/EnhancedLayout'; import Link from 'next/link'; const CategoryIndexPage: NextPage = () => { return ( <EnhancedLayout> <section> <h1 className="text-3xl font-bold mb-4">Categories</h1> <p className="text-gray-700 mb-6">Explore our knowledge base by topic.</p> <ul className="list-disc pl-6 space-y-2"> <li> <Link href="/category/web-development-chat" className="text-blue-700 hover:underline">Web Development</Link> </li> <li> <Link href="/category/cloud-architecture-chat" className="text-blue-700 hover:underline">Cloud Architecture</Link> </li> <li> <Link href="/category/ai-consulting-chat" className="text-blue-700 hover:underline">AI Consulting</Link> </li> <li> <Link href="/category/cybersecurity-chat" className="text-blue-700 hover:underline">Cybersecurity</Link> </li> </ul> </section> </EnhancedLayout> )}; export default CategoryIndexPage;import type { NextPage } from 'next'; import EnhancedLayout from '../../components/EnhancedLayout'; import Link from 'next/link'; const CategoryIndexPage: NextPage = () => { return ( <EnhancedLayout> <section> <h1 className="text-3xl font-bold mb-4">Categories</h1> <p className="text-gray-700 mb-6">Explore our knowledge base by topic.</p> <ul className="list-disc pl-6 space-y-2"> <li> <Link href="/category/web-development-chat" className="text-blue-700 hover:underline">Web Development</Link> </li> <li> <Link href="/category/cloud-architecture-chat" className="text-blue-700 hover:underline">Cloud Architecture</Link> </li> <li> <Link href="/category/ai-consulting-chat" className="text-blue-700 hover:underline">AI Consulting</Link> </li> <li> <Link href="/category/cybersecurity-chat" className="text-blue-700 hover:underline">Cybersecurity</Link> </li> </ul> </section> </EnhancedLayout> )}; export default CategoryIndexPage;
+import type { NextPage } from 'next';
+import EnhancedLayout from '../../components/EnhancedLayout';
+import Link from 'next/link';
+const "CategoryIndexPage": NextPage = () => {;
+  return (
+import type { NextPage } from 'next'; import EnhancedLayout from '../../components/EnhancedLayout'; import Link from 'next/link'; const CategoryIndexPage: NextPage = () => { return ( <EnhancedLayout> <section> <h1 className="text-3xl font-bold mb-4">Categories</h1> <p className="text-gray-700 mb-6">Explore our knowledge base by topic.</p> <ul className="list-disc pl-6 space-y-2"> <li> <Link href="/category/web-development-chat" className="text-blue-700 hover:underline">Web Development</Link> </li> <li> <Link href="/category/cloud-architecture-chat" className="text-blue-700 hover:underline">Cloud Architecture</Link> </li> <li> <Link href="/category/ai-consulting-chat" className="text-blue-700 hover:underline">AI Consulting</Link> </li> <li> <Link href="/category/cybersecurity-chat" className="text-blue-700 hover:underline">Cybersecurity</Link> </li> </ul> </section> </EnhancedLayout> )}; export default CategoryIndexPage;
+import type { NextPage } from 'next'; import EnhancedLayout from '../../components/EnhancedLayout'; import Link from 'next/link'; const CategoryIndexPage: NextPage = () => { return ( <EnhancedLayout> <section> <h1 className="text-3xl font-bold mb-4">Categories</h1> <p className="text-gray-700 mb-6">Explore our knowledge base by topic.</p> <ul className="list-disc pl-6 space-y-2"> <li> <Link href="/category/web-development-chat" className="text-blue-700 hover:underline">Web Development</Link> </li> <li> <Link href="/category/cloud-architecture-chat" className="text-blue-700 hover:underline">Cloud Architecture</Link> </li> <li> <Link href="/category/ai-consulting-chat" className="text-blue-700 hover:underline">AI Consulting</Link> </li> <li> <Link href="/category/cybersecurity-chat" className="text-blue-700 hover:underline">Cybersecurity</Link> </li> </ul> </section> </EnhancedLayout> )}; export default CategoryIndexPage;
+
+const "CategoryIndexPage": NextPage = () => {"
+  return (
+    <EnhancedLayout>
+
+      <section>
+</section>"
+        <h1 className="text-3xl font-bold mb-4">Categories</h1>""
+        <p className="text-gray-700 mb-6">Explore our knowledge base by topic.</p>""
+        <ul className="list-disc pl-6 space-y-2">"
+</ul>
+          <li>
+</li>"
+            <Link href="/category/web-development-chat" className="text-blue-700 hover:underline">Web Development"
+          </li>
+            <Link href="/category/cloud-architecture-chat" className="text-blue-700 hover:underline">Cloud Architecture"
+            <Link href="/category/ai-consulting-chat" className="text-blue-700 hover:underline">AI Consulting"
+            <Link href="/category/cybersecurity-chat" className="text-blue-700 hover:underline">Cybersecurity"
+      </section>
+    )"
+import type { NextPage } from 'next'; import EnhancedLayout from '../../components/EnhancedLayout'; import Link from 'next/link'; const CategoryIndexPage: NextPage = () => { return ( <EnhancedLayout> <section> <h1 className="text-3xl font-bold mb-4">Categories</h1> <p className="text-gray-700 mb-6">Explore our knowledge base by topic.</p> <ul className="list-disc pl-6 space-y-2"> <li> <Link href="/category/web-development-chat" className="text-blue-700 hover:underline">Web Development </li> <li> <Link href="/category/cloud-architecture-chat" className="text-blue-700 hover:underline">Cloud Architecture </li> <li> <Link href="/category/ai-consulting-chat" className="text-blue-700 hover:underline">AI Consulting </li> <li> <Link href="/category/cybersecurity-chat" className="text-blue-700 hover:underline">Cybersecurity </li> </ul> </section>  )}; export default CategoryIndexPage;""
+import type { NextPage } from 'next'; import EnhancedLayout from '../../components/EnhancedLayout'; import Link from 'next/link'; const CategoryIndexPage: NextPage = () => { return ( <EnhancedLayout> <section> <h1 className="text-3xl font-bold mb-4">Categories</h1> <p className="text-gray-700 mb-6">Explore our knowledge base by topic.</p> <ul className="list-disc pl-6 space-y-2"> <li> <Link href="/category/web-development-chat" className="text-blue-700 hover:underline">Web Development </li> <li> <Link href="/category/cloud-architecture-chat" className="text-blue-700 hover:underline">Cloud Architecture </li> <li> <Link href="/category/ai-consulting-chat" className="text-blue-700 hover:underline">AI Consulting </li> <li> <Link href="/category/cybersecurity-chat" className="text-blue-700 hover:underline">Cybersecurity </li> </ul> </section>  )}; export default CategoryIndexPage;"
     <EnhancedLayout>;
+
       <section>;
-        <h1 className="text-3xl font-bold mb-4">Categories</h1>;"
-        <p className="text-gray-700 mb-6">Explore our knowledge base by topic.</p>;"
+        <h1 className="text-3xl font-bold mb-4">Categories</h1>;""
+        <p className="text-gray-700 mb-6">Explore our knowledge base by topic.</p>;""
         <ul className="list-disc pl-6 space-y-2">;"
           <li>;
-            <Link href="/category/web-development-chat" className="text-blue-700 "hover": underline">Web Development</Link>;"
+            <Link href="/category/web-development-chat" className="text-blue-700 hover: underline">Web Development;"
           </li>;
-          <li>;
-            <Link href="/category/cloud-architecture-chat" className="text-blue-700 "hover":underline">Cloud Architecture</Link>;"
-          </li>;
-          <li>;
-            <Link href="/category/ai-consulting-chat" className="text-blue-700 "hover":underline">AI Consulting</Link>;"
-          </li>;
-          <li>;
-            <Link href="/category/cybersecurity-chat" className="text-blue-700 "hover":underline">Cybersecurity</Link>;"
-          </li>;
+            <Link href="/category/cloud-architecture-chat" className="text-blue-700 hover:underline">Cloud Architecture;"
+            <Link href="/category/ai-consulting-chat" className="text-blue-700 hover:underline">AI Consulting;"
+            <Link href="/category/cybersecurity-chat" className="text-blue-700 hover:underline">Cybersecurity;"
         </ul>;
       </section>;
-    </EnhancedLayout>;
-  )}export default CategoryIndexPage;ursor/fix-syntax-push-and-merge-to-main-40de;
-ursor/automate-test-improve-and-merge-code-646c;
-const "CategoryIndexPage": NextPage = () => {return (ursor/automate-test-improve-and-merge-code-646c;"
-}
-import type { NextPage } from 'next'; import EnhancedLayout from '../../components/EnhancedLayout'; import Link from 'next/link'; const "CategoryIndexPage": NextPage = () => { return ( <EnhancedLayout> <section> <h1 className="text-3xl font-bold mb-4">Categories</h1> <p className="text-gray-700 mb-6">Explore our knowledge base by topic.</p> <ul className="list-disc pl-6 space-y-2"> <li> <Link href="/category/web-development-chat" className="text-blue-700 "hover":underline">Web Development</Link> </li> <li> <Link href="/category/cloud-architecture-chat" className="text-blue-700 "hover":underline">Cloud Architecture</Link> </li> <li> <Link href="/category/ai-consulting-chat" className="text-blue-700 "hover":underline">AI Consulting</Link> </li> <li> <Link href="/category/cybersecurity-chat" className="text-blue-700 "hover":underline">Cybersecurity</Link> </li> </ul> </section> </EnhancedLayout> )}export default CategoryIndexPage;import type { NextPage } from 'next'; import EnhancedLayout from '../../components/EnhancedLayout'; import Link from 'next/link'; const "CategoryIndexPage": NextPage = () => { return ( <EnhancedLayout> <section> <h1 className="text-3xl font-bold mb-4">Categories</h1> <p className="text-gray-700 mb-6">Explore our knowledge base by topic.</p> <ul className="list-disc pl-6 space-y-2"> <li> <Link href="/category/web-development-chat" className="text-blue-700 "hover":underline">Web Development</Link> </li> <li> <Link href="/category/cloud-architecture-chat" className="text-blue-700 "hover":underline">Cloud Architecture</Link> </li> <li> <Link href="/category/ai-consulting-chat" className="text-blue-700 "hover":underline">AI Consulting</Link> </li> <li> <Link href="/category/cybersecurity-chat" className="text-blue-700 "hover":underline">Cybersecurity</Link> </li> </ul> </section> </EnhancedLayout> )}export default CategoryIndexPage;"
-const "CategoryIndexPage": NextPage = () => {return ("
-  ),;
 
-};
-export default CategoryIndexPage;
+import type { NextPage } from 'next'; import EnhancedLayout from '../../components/EnhancedLayout'; import Link from 'next/link'; const CategoryIndexPage: NextPage = () => { return ( <EnhancedLayout> <section> <h1 className="text-3xl font-bold mb-4">Categories</h1> <p className="text-gray-700 mb-6">Explore our knowledge base by topic.</p> <ul className="list-disc pl-6 space-y-2"> <li> <Link href="/category/web-development-chat" className="text-blue-700 hover:underline">Web Development</Link> </li> <li> <Link href="/category/cloud-architecture-chat" className="text-blue-700 hover:underline">Cloud Architecture</Link> </li> <li> <Link href="/category/ai-consulting-chat" className="text-blue-700 hover:underline">AI Consulting</Link> </li> <li> <Link href="/category/cybersecurity-chat" className="text-blue-700 hover:underline">Cybersecurity</Link> </li> </ul> </section> </EnhancedLayout> )}; export default CategoryIndexPage;
 
-
+import type { NextPage } from 'next';
+import EnhancedLayout from '../../components/EnhancedLayout';
+import Link from 'next/link';
+const "CategoryIndexPage": NextPage = () => {;
+  return (
+import type { NextPage } from 'next'; import EnhancedLayout from '../../components/EnhancedLayout'; import Link from 'next/link'; const CategoryIndexPage: NextPage = () => { return ( <EnhancedLayout> <section> <h1 className="text-3xl font-bold mb-4">Categories</h1> <p className="text-gray-700 mb-6">Explore our knowledge base by topic.</p> <ul className="list-disc pl-6 space-y-2"> <li> <Link href="/category/web-development-chat" className="text-blue-700 hover:underline">Web Development</Link> </li> <li> <Link href="/category/cloud-architecture-chat" className="text-blue-700 hover:underline">Cloud Architecture</Link> </li> <li> <Link href="/category/ai-consulting-chat" className="text-blue-700 hover:underline">AI Consulting</Link> </li> <li> <Link href="/category/cybersecurity-chat" className="text-blue-700 hover:underline">Cybersecurity</Link> </li> </ul> </section> </EnhancedLayout> )}; export default CategoryIndexPage;
+import type { NextPage } from 'next'; import EnhancedLayout from '../../components/EnhancedLayout'; import Link from 'next/link'; const CategoryIndexPage: NextPage = () => { return ( <EnhancedLayout> <section> <h1 className="text-3xl font-bold mb-4">Categories</h1> <p className="text-gray-700 mb-6">Explore our knowledge base by topic.</p> <ul className="list-disc pl-6 space-y-2"> <li> <Link href="/category/web-development-chat" className="text-blue-700 hover:underline">Web Development</Link> </li> <li> <Link href="/category/cloud-architecture-chat" className="text-blue-700 hover:underline">Cloud Architecture</Link> </li> <li> <Link href="/category/ai-consulting-chat" className="text-blue-700 hover:underline">AI Consulting</Link> </li> <li> <Link href="/category/cybersecurity-chat" className="text-blue-700 hover:underline">Cybersecurity</Link> </li> </ul> </section> </EnhancedLayout> )}; export default CategoryIndexPage;

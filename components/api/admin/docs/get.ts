@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';'
 import fs from 'fs';'
 import path from 'path';'
@@ -8,23 +9,26 @@ import path from 'path';'
   try {'
     const data = fs && fs.readFileSync(CONTENT_PATH, 'utf8');
     res && res.status(200).json(JSON && JSON.parse(data));
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+import fs from 'fs';
+import path from 'path';
+
+>>>>>>> origin/chore/fix-lint-and-merge
 const CONTENT_PATH = null;
     res.status(200).json(JSON.parse(data))
-export default function handler() {
-}
-const token = req.headers['x-admin-token'] as string | undefined;'
-  if (process.env.DOCS_ADMIN_TOKEN && token !== process.env.DOCS_ADMIN_TOKEN) {
-   ;
-}
-return res.status(403).json({ "error": 'Forbidden',;'
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  const token = req.headers['x-admin-token'] as string | undefined;
+if (process.env.DOCS_ADMIN_TOKEN && token !== process.env.DOCS_ADMIN_TOKEN) {
+   ;}
+  return res.status(403).json({ error: 'Forbidden',}
 });
   }
   try {
-    }
-    const data = fs.readFileSync(CONTENT_PATH, 'utf8');'
-res.status(200).json(JSON.parse(data));
-origin/cursor/automate-test-improve-and-merge-code-2533
+    const data = fs.readFileSync(CONTENT_PATH, 'utf8');}
+res.status(200).json(JSON.parse(data));}
   } catch (e) {
+<<<<<<< HEAD
     res && res.status(500).json({ error: 'Failed to read content' });
   }
 ;'
@@ -49,10 +53,24 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const token = $2;
   if (process.env.DOCS_ADMIN_TOKEN && token !== process.env.DOCS_ADMIN_TOKEN) {
     return res.status(403).json({ error: 'Forbidden' })
+=======
+    res && res.status(500).json({ error: 'Failed to read content',}
+});
+>>>>>>> origin/chore/fix-lint-and-merge
   }
 
-  try {
-    const data = fs.readFileSync($2);
-    res.status(200).json(JSON.parse(data))
   } catch (e) {
+<<<<<<< HEAD
+=======
+    res.status (500).json ({ error: 'Failed to read content',}
+});
+  }
+  } catch (e) {
+    res.status (500).json ({ error: 'Failed to read content',}
+});
+  }  } catch (e) {
+    res.status(500).json({ error: 'Failed to read content' })
+  },
+}
+>>>>>>> origin/chore/fix-lint-and-merge
 

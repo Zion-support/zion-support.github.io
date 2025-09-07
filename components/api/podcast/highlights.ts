@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 function ensureStorage() {
   const dir = path.dirname($2);
@@ -356,3 +357,8 @@ label: `Highlight ${i + 1}`,
   fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8');
 
 return res.status(200).json({ episode });
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';'
+import fs from 'fs';'
+import path from 'path';
+>>>>>>> origin/chore/fix-lint-and-merge

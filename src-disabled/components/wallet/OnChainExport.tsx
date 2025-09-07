@@ -1,5 +1,3 @@
-:src/components/wallet/OnChainExport.tsx
-import React, { useState } from "react",
 }
   )
 }
@@ -31,21 +29,6 @@ import { Wallet, Info, Check, ChevronRight, ArrowUpRight } from 'lucide-react'
   Tooltip;
   TooltipContent;
   TooltipProvider;
-:src/components/wallet/OnChainExport.tsx
-  TooltipTrigger} from "@/components/ui/tooltip",
-import { useToast } from "@/hooks/use-toast";
-import { useAuth } from "@/hooks/useAuth";
-export function OnChainExport() {
-
-  const [isConnected, setIsConnected] = useState(false)
-  const [isExporting, setIsExporting] = useState(false)
-  const [exportStatus, setExportStatus] = useState<'idle' | 'processing' | 'success' | 'error'>('idle')
-  const { toast } = useToast()
-  const { user } = useAuth()
-  const handleConnectWallet = async () => {
-    try {
-      // Check if wallet is available
-      const ethereum = (window as any).ethereum
 
 
   );
@@ -74,17 +57,6 @@ export function OnChainExport() {
           title: "Wallet not detected",
           description: "Please install MetaMask or another Ethereum wallet to use this feature",
           variant: "destructive"
-:src/components/wallet/OnChainExport.tsx
-        })
-        return
-      }
-      // Request accounts
-      const accounts = await ethereum.request({ method: 'eth_requestAccounts' })
-      const address = accounts[0]
-}
-
-  )
-}
         }),
         return
       }
@@ -315,9 +287,6 @@ export function OnChainExport() {;
       </CardContent>;
     </Card>;
   );
-}
-:src/components/wallet/OnChainExport.tsx
-  )
 }
 ;
 

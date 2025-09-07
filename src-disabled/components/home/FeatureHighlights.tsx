@@ -19,6 +19,7 @@ interface FeatureHighlightsProps {
 
 export function FeatureHighlights({ className, style }: FeatureHighlightsProps) {
   const highlightsData = null;
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
   return (
 
@@ -37,6 +38,8 @@ function FeatureHighlights() {
 
 
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
   const highlightsData = [
 
@@ -73,6 +76,7 @@ function FeatureHighlights() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6>
           {highlightsData.map((category, index) => (
+<<<<<<< HEAD
             <Card
             <Card key={index} className=bg-zion-blue-dark border-zion-blue-light">
               <CardContent className="p-6>
@@ -176,6 +180,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </li>;
                     </li>;
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
                 <ul className="space-y-3">
                   {category.features.map((feature, idx) => (
@@ -261,11 +267,15 @@ interface FeatureHighlightsProps {
 </div>
 pr-12325
             <Card;
+<<<<<<< HEAD
           ))}<div className='grid grid - cols - 1 md:grid - cols - 3 gap - 6'>;
           ))}<div className='grid grid - cols - 1 md:grid - cols - 3 gap - 6>;
           {highlights_data.map ((category, index) => (<Card;
               key={index}
               key={index}
+=======
+              key={index}'
+>>>>>>> origin/chore/fix-lint-and-merge
               className='bg - zion - blue - dark border - zion - blue - light';
             >;
               <CardContent className=p - 6'>;'
@@ -273,6 +283,7 @@ pr-12325
                   {category.title}
                 </h3>;'
                 <ul className='space - y-3'>;
+<<<<<<< HEAD
                   {category.features.map ((feature, idx) => (<li key={idx} className='flex items - start'>;
                       <Check className='h - 5 w - 5 text - zion - cyan mr - 2 mt - 0.5 flex - shrink - 0' />;
                       <span className='text - zion - slate - light'>{feature}</span>                    </li>            <Card key={index} className="bg - zion - blue - dark border - zion - blue - light">;
@@ -291,6 +302,8 @@ pr-12325
                   {category.features.map ((feature, idx, ) => (<li key={idx} className="flex items - start>;
                       <Check className=h - 5 w - 5 text - zion - cyan mr - 2 mt - 0.5 flex - shrink - 0" />;
                       <span className="text - zion - slate - light>{feature}</span>))}
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
                   {category.features.map ((feature, idx) => ('
                     <li key={idx} className=flex items - start>;'
                       <Check className='h - 5 w - 5 text - zion - cyan mr - 2 mt - 0.5 flex - shrink - 0 />;
@@ -304,6 +317,7 @@ pr-12325
             </Card>))}
         </div>;
       </div>;
+<<<<<<< HEAD
     </section>)}
 import { motion   } from framer-motion;
   {icon: ⚡",title: "Lightning Fast Performance,description: Optimized solutions that deliver exceptional speed and efficiency for your business needs";
@@ -326,6 +340,8 @@ import { motion   } from framer-motion;
 }
 }const tech_variants = {hidden: { opacity: 0,coordinate_x: -20;
 },visible: {opacity: 1,coordinate_x: 0,transition: { duration: 0.5 }
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
     </section>);
 
     icon: ⚡","
@@ -373,6 +389,7 @@ import { motion   } from framer-motion;
 }
 export /**;
  * FeatureHighlights - Function description;
+<<<<<<< HEAD
  */;
     <section className="py - 20 bg - gradient - to - br from - slate - 900 via - slate - 800 to - slate - 900>;
       <div className="max - w-7xl mx - auto px - 6">;
@@ -380,6 +397,8 @@ export /**;
           initial = {{ opacity: 0,coordinate_y: 20;
 }}
           whileInView = {{ opacity: 1,coordinate_y: 0;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
  */
 
   { opacity: 0,
@@ -394,6 +413,7 @@ export /**;
         >";"
           <div className="inline - flex items - center gap - 2 px - 4 py - 2 bg - zion - purple / 10 border border - zion - purple / 20 rounded - full text - zion - purple text - sm font - medium mb - 6">";"
             <Award className="w - 4 h - 4"  />            <span > Why Choose Zion</span>;
+<<<<<<< HEAD
           </div>;
 ";
           <h2 className=text - 3xl md:text - 4xl lg:text - 5xl font - bold text - white mb - 6>;
@@ -404,13 +424,22 @@ export /**;
             Experience the next generation of talent marketplace with cutting - edge AI,global reach, and enterprise - grade security.</p>;
         </motion.div>;
 ;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
             Experience the next generation of talent marketplace with cutting - edge AI,
             global reach, and enterprise - grade security.</p>;
         </motion.div>;"
+<<<<<<< HEAD
 ";
         <div className=grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">;
           {features.map ((feature, index (<motion.div;
+=======
+";"
+        <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">;
+          {features.map ((feature, index (
+            <motion.div;
+>>>>>>> origin/chore/fix-lint-and-merge
               key={index}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}"
@@ -430,6 +459,7 @@ export /**;
             <motion.div;
 pr-12325
               variants={item_variants}
+<<<<<<< HEAD
               while_hover={{coordinate_y: -5,scale: 1.02,transition: { duration: 0.3 }
               }};
               className=group";
@@ -439,6 +469,8 @@ pr-12325
                   <feature.icon className={`w - 6 h - 6 ${feature.icon_color}`} />;
                 </div>;
 ";
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
               while_hover={{}
                 coordinate_y: -5,
                 scale: 1.02,
@@ -455,9 +487,12 @@ pr-12325
                 {feature.title}
               </h3>;
               <p className="text - gray - 400 text - sm leading - relaxed">;
-                {feature.description}</div>;
+                {feature.description}
+
+        </div>;
       </div>;
     </section>;
+<<<<<<< HEAD
   )}
   {icon: ⚡,title: "Lightning Fast Performance",description: Optimized solutions that deliver exceptional speed and efficiency for your business needs;
 },{icon: "🔒",title: Enterprise Security,description: "Bank-level security protocols and compliance standards to protect your valuable data";
@@ -476,6 +511,8 @@ pr-12325
           initial = {{ opacity: 0,y: 20;
 }}
           whileInView = {{ opacity: 1,y: 0;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
   );
 
 import { motion  } from 'framer-motion';
@@ -553,6 +590,7 @@ import { motion  } from 'framer-motion';
           transition={{ duration: 0 && 0.6 }}>;
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-zion-purple/10 border border-zion-purple/20 rounded-full text-zion-purple text-sm font-medium mb-6">;
             <Award className="w-4 h-4"  />            <span>Why Choose Zion</span>;
+<<<<<<< HEAD
           </div>;
 ;
           <h2 className=text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">;
@@ -576,6 +614,8 @@ import { motion  } from 'framer-motion';
                   <feature && feature.icon className={`w-6 h-6 ${feature && feature.iconColor}`} />;
                 </div>;
 ";
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
             Experience the next generation of talent marketplace with cutting-edge AI,
             global reach, and enterprise-grade security.</p>;
@@ -628,7 +668,13 @@ pr-12325
                 <p className=text-gray-400 group-hover:text-gray-300 transition-colors duration-300">;
                   {feature && feature.description}
                 </p>;
+<<<<<<< HEAD
               </div>;<h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors duration-200>;
+=======
+              </div>;
+
+              <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors duration-200">;
+>>>>>>> origin/chore/fix-lint-and-merge
                 {feature && feature.title}
               </h3>;
               <p className="text-gray-400 text-sm leading-relaxed">;
@@ -636,6 +682,7 @@ pr-12325
               </p>;
             </motion && motion.div>;
           ))}
+<<<<<<< HEAD
         </div>;<motion&& motion.div          className="mt-16 text-center";
         </div>;<motion&& motion.div          className=mt-16 text-center;
           initial={{ opacity: 0, y: 20 }}
@@ -652,6 +699,8 @@ pr-12325
     </section>;
   )}`;
 ))}</p>;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
         </div>;
 
   { duration: 0 && 0.6,
@@ -675,11 +724,14 @@ pr-12325
           initial={{ opacity: 0, coordinate_y: 20 }}
           whileInView={{ opacity: 1, coordinate_y: 0 }}
           viewport={{ once: true }}
+<<<<<<< HEAD
           transition = {{ duration: 0.6,delay: 0.4;
 }}
         >";
           <div className="inline - flex items - center gap - 4 px - 8 py - 4 bg - gradient - to - r from - blue - 600 to - purple - 600 rounded - full text - white font - semibold>;
             <span > Experience the difference</span>;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
           transition = {}
   { duration: 0.6,
   delay: 0.4;
@@ -691,12 +743,15 @@ pr-12325
           </div>;
         </motion.div>;
       </div>;
+<<<<<<< HEAD
     </section>)}
 '"`);
 
 ;
 `);
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
 '`);
 
@@ -704,6 +759,7 @@ pr-12325
       </div>
     </section>
   );
+<<<<<<< HEAD
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
 '"`);</div>;
@@ -711,3 +767,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </section>;
   )}
 }
+=======
+}
+>>>>>>> origin/chore/fix-lint-and-merge

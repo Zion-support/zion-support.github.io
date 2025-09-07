@@ -1,23 +1,37 @@
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { ReferralReward } from "@/types/referrals";
 import { formatDate } from "@/utils/referralUtils";
 import { BadgeDollarSign, Badge } from 'lucide-react'
+<<<<<<< HEAD
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card,
 import { ReferralReward } from @/types/referrals";
 import { formatDate } from "@/utils/referralUtils;
 import { BadgeDollarSign, Badge } from 'lucide-react
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 origin/cursor/automate-test-improve-and-merge-code-2533
 interface RewardsCardProps {
   rewards: ReferralReward[];
   is_loading: boolean;
+<<<<<<< HEAD
 import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from @/components/ui/ card';
 import { ReferralReward  } from '@/types/ referrals;
 import { format_date  } from @/utils/ referral_utils';
 import { Badge } from '@/components/ui/ badge;
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from @/components/ui/ card';
+=======
+import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/components / ui / card';
+import { ReferralReward  } from '@/types / referrals';
+import { format_date  } from '@/utils / referral_utils';
+import { Badge } from '@/components / ui / badge';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components / ui / card';
+>>>>>>> origin/chore/fix-lint-and-merge
 interface RewardsCardProps {
 
 import {
@@ -46,13 +60,17 @@ import { Badge } from @/components/ui/badge';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card;
 
 interface RewardsCardProps {
+<<<<<<< HEAD
   rewards: ReferralReward[];
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
   isLoading: boolean
 }
 
     return (
+<<<<<<< HEAD
       <Card>
         <CardHeader>
 <CardTitle className=flex items-center gap-2'>
@@ -71,6 +89,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </Card>
     );
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
           <CardTitle className=flex items-center gap-2">
             <BadgeDollarSign className="h-5 w-5 />
@@ -91,6 +111,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
     )
 
+<<<<<<< HEAD
 
           <CardTitle className=flex items-center gap-2">
             <BadgeDollarSign className="h-5 w-5 />
@@ -98,6 +119,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
           <CardTitle className=flex items-center gap-2">
             <BadgeDollarSign className="h-5 w-5 />
+=======
+          <CardTitle className="flex items-center gap-2">
+            <BadgeDollarSign className="h-5 w-5" />
+>>>>>>> origin/chore/fix-lint-and-merge
 
       <Card>
         <CardHeader>
@@ -124,8 +149,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
         </CardContent>
       </Card>
+<<<<<<< HEAD
 );
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
     )
 
@@ -134,11 +162,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <Card>
       <CardHeader>
+<<<<<<< HEAD
 <CardTitle className='flex items-center gap-2'>
           <BadgeDollarSign className='h-5 w-5' />
 <CardTitle className='flex items-center gap-2>
           <BadgeDollarSign className=h-5 w-5' />
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
         <CardTitle className="flex items-center gap-2>
           <BadgeDollarSign className=h-5 w-5" />
@@ -150,6 +181,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <CardContent>
 
 ;
+<<<<<<< HEAD
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card,import { ReferralReward  } from '@/types/referrals;
 import { formatDate  } from @/utils/referralUtils';
 import { BadgeDollarSign, Badge  } from 'lucide-react;
@@ -257,8 +289,17 @@ import { ReferralReward } from @/types/referrals",import { formatDate } from "@/
           <CardTitle className=flex items-center gap-2">;
             <BadgeDollarSign className="h-5 w-5 />;
             Your Rewards;
+=======
+export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {;
+  if (isLoading) {;
+    return (;
+      <Card>;
+        <CardHeader>;
+>>>>>>> origin/chore/fix-lint-and-merge
 
+  }
 
+<<<<<<< HEAD
         <CardContent>;)}if (rewards && rewards.length === 0) {return (<Card>;
         <CardHeader>;
           <CardTitle className=flex items-center gap-2'>;
@@ -277,6 +318,8 @@ import { ReferralReward } from @/types/referrals",import { formatDate } from "@/
           <CardTitle className=flex items-center gap-2">;
             <BadgeDollarSign className="h-5 w-5 />;
             Your Rewards;</CardTitle>;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
           </CardTitle>;
 
           <CardDescription>Rewards earned from successful referrals</CardDescription>;
@@ -299,7 +342,8 @@ import { ReferralReward } from @/types/referrals",import { formatDate } from "@/
           <BadgeDollarSign className=h-5 w-5" />;
           Your Rewards;
         </CardTitle>;
-        <CardDescription>Rewards earned from successful referrals;
+        <CardDescription>;
+          Rewards earned from successful referrals;
         </CardDescription>;
       </CardHeader>;
       <CardContent>;
@@ -312,9 +356,17 @@ import { ReferralReward } from @/types/referrals",import { formatDate } from "@/
               }`}
             >;
               <div>;
+<<<<<<< HEAD
                 <div className='flex items-center gap-2>;
                   {reward && reward.reward_type === credit' ? (<BadgeDollarSign className='h-4 w-4 text-green-600 />;
                   ) : (<Badge className=h-4 w-4 text-blue-600' />;
+=======
+                <div className='flex items-center gap-2'>;
+                  {reward && reward.reward_type === 'credit' ? (;
+                    <BadgeDollarSign className='h-4 w-4 text-green-600' />;
+                  ) : (;
+                    <Badge className='h-4 w-4 text-blue-600' />;
+>>>>>>> origin/chore/fix-lint-and-merge
                   )}
                   <p className='font-medium>                    {reward && reward.reward_type === credit'                  <p className=font-medium">;
                     {reward && reward.reward_type === 'credit;
@@ -322,6 +374,7 @@ import { ReferralReward } from @/types/referrals",import { formatDate } from "@/
                       : Visibility Boost'}
                   </p>;
                 </div>;
+<<<<<<< HEAD
                   <p className="font-medium>
                     {reward.reward_type === 'credit
                       ? `$${reward.amount?.toFixed(2)} Credit`
@@ -338,6 +391,8 @@ import { ReferralReward } from @/types/referrals",import { formatDate } from "@/
                 {reward.expires_at && (
                   <p className=text-xs text-muted-foreground">
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
                   Earned on {formatDate(reward.created_at)}
 
@@ -345,6 +400,7 @@ import { ReferralReward } from @/types/referrals",import { formatDate } from "@/
                   Earned on {formatDate(reward.created_at)}
                 </p>
                 {reward.expires_at && (
+<<<<<<< HEAD
                   <p className=text-xs text-muted-foreground'>
             >;
               <div>;
@@ -368,6 +424,9 @@ import { ReferralReward } from @/types/referrals",import { formatDate } from "@/
                 {reward.expires_at && (<p className=text-xs text-muted-foreground'>;
                     Expires on {formatDate(reward.expires_at)}
                   </p>;
+=======
+                  <p className='text-xs text-muted-foreground'>
+>>>>>>> origin/chore/fix-lint-and-merge
 
                     Expires on {formatDate(reward.expires_at)}
 
@@ -377,15 +436,19 @@ import { ReferralReward } from @/types/referrals",import { formatDate } from "@/
               </div>;
             </div>;
           ))}
+<<<<<<< HEAD
         </div>
       </CardContent>
     </Card>
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
         </div>;
       </CardContent>;
     </Card>;
   );
 }
+<<<<<<< HEAD
           ))}</div>;
       </CardContent>;
     </Card>;
@@ -424,6 +487,10 @@ import { ReferralReward } from @/types/referrals",import { formatDate } from "@/
   )}
     </Card>);
 }
+=======
+
+;
+>>>>>>> origin/chore/fix-lint-and-merge
 
         </div>
       </CardContent>

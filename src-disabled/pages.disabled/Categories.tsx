@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :src/pages/Categories.tsx
 import useSWR from 'swr,
 import { CategoryCard } from "@/components/CategoryCard,
@@ -17,6 +18,17 @@ import { Folder } from lucide-react';
 import { CATEGORIES } from '@/data/categories;
 import { NextSeo } from @/components/NextSeo';
 import { logErrorToProduction } from '@/utils/productionLogger;
+=======
+import useSWR from 'swr';
+import { CategoryCard } from '@/components/CategoryCard';
+import { GradientHeading } from '@/components/GradientHeading';
+import { SkeletonCard } from '@/components/ui';
+import ErrorBoundary from '@/components/GlobalErrorBoundary';
+import { Folder } from 'lucide-react';
+import { CATEGORIES } from '@/data/categories';
+import { NextSeo } from '@/components/NextSeo';
+import { logErrorToProduction } from '@/utils/productionLogger';
+>>>>>>> origin/chore/fix-lint-and-merge
 
 origin/cursor/automate-test-improve-and-merge-code-2533
 interface CategoryType {
@@ -40,6 +52,7 @@ return (<> <NextSeo title=Browse Categories" description="Explore AI service and
 }</ErrorBoundary> </div> </div> </>) ;
 }'
 }
+<<<<<<< HEAD
 :src/pages/Categories.tsx
 
 const fetcher = null;
@@ -111,6 +124,10 @@ const fetcher = null;
 import React from "react";
 import React from react
 import { Brain, Cloud, Shield, Code, Database, Network } from "lucide-react";});})
+=======
+import React from "react"
+import { Brain, Cloud, Shield, Code, Database, Network } from "lucide-react";"});"})
+>>>>>>> origin/chore/fix-lint-and-merge
 origin/cursor/automate-test-improve-and-merge-code-2533
 }
 const Categories: React.FC: = () => {,"
@@ -253,6 +270,7 @@ export: default Categories
 export default Categories, ]
 export default Categories")))))))))
 }
+<<<<<<< HEAD
 :src/pages/Categories.tsx
 import { GradientHeading } from @/components/GradientHeading",
 import { SkeletonCard } from @/components/ui',
@@ -352,3 +370,8 @@ export default function Categories({ categories: initialCategories = [] }: Categ
 origin/cursor/automate-test-improve-and-merge-code-2533
 export default Categories`"
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+export default Categories"`"
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+>>>>>>> origin/chore/fix-lint-and-merge

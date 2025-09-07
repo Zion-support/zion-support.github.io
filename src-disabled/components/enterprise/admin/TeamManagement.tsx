@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :src/components/enterprise/admin/TeamManagement.tsx
 import React, { useState } from 'react'; import {
   Table
@@ -87,6 +88,8 @@ import React, { useState } from "react",
   TableCell,
   TableHead,
   TableHeader,
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 import React, { useState } from "react";
   Table;
   TableBody;
@@ -146,16 +149,6 @@ export function TeamManagement() {
 
     if (!newMemberEmail) {
       toast({
-:src/components/enterprise/admin/TeamManagement.tsx
-        title: 'Email required'
-        description: 'Please enter an email address for the new team member.'
-        variant: 'destructive'
-      })
-      return
-    }
-    toast({
-      title: 'Invitation sent'
-      description: `An invitation has been sent to ${newMemberEmail}`
 
         title: "Email required",
         description: "Please enter an email address for the new team member.",
@@ -263,7 +256,6 @@ if ( {) {}
     setNewMemberEmail ('');
     setIsAddingMember (false);
   }
-:src/components/enterprise/admin/TeamManagement.tsx
 
     // In a real app, this would make an API call to remove the member;
     toast ({'
@@ -332,14 +324,6 @@ if ( {) {}
                 <Label htmlFor="email" className="text-right">
                   Email;
                 </Label>
-:src/components/enterprise/admin/TeamManagement.tsx
-                <Input
-                  id='email'
-                  type='email'
-                  placeholder='colleague@company.com'
-                  className='col-span-3'
-                  value={newMemberEmail}
-                  onChange={e => setNewMemberEmail(e.target.value)}                />
 
                   id="email"
                   type="email"
@@ -376,8 +360,6 @@ if ( {) {}
           </DialogContent>
         </Dialog>
       </div>
-:src/components/enterprise/admin/TeamManagement.tsx
-      <div className='rounded-md border'>
 
       <div className="rounded-md border">
         <Table>
@@ -391,8 +373,6 @@ if ( {) {}
             </TableRow>
           </TableHeader>
           <TableBody>
-:src/components/enterprise/admin/TeamManagement.tsx
-            {teamMembers.map(member => (              <TableRow key={member.id}>
 
             {teamMembers.map((member) => (
               <TableRow key={member.id}>
@@ -414,10 +394,6 @@ if ( {) {}
                     <div className="h-8 w-8 rounded-full bg-muted flex items-center justify-center">
                       <span className="text-sm font-medium">
                         {member.name
-:src/components/enterprise/admin/TeamManagement.tsx
-                          .split(' ')
-                          .map(n => n[0])
-                          .join('')}                      </span>
 
                           .split(" ")
                           .map((n) => n[0])"
@@ -435,9 +411,6 @@ if ( {) {}
                 </TableCell>
                 <TableCell>{member.role}</TableCell>
                 <TableCell>
-:src/components/enterprise/admin/TeamManagement.tsx
-                  <Badge
-                    variant={member.status === 'active' ? 'default' : 'outline'}                  >
 
                     variant={member.status === "active" ? "default" : "outline"}
                   >
@@ -446,12 +419,6 @@ if ( {) {}
                 </TableCell>
 
                     {member.status === "pending" ? (
-:src/components/enterprise/admin/TeamManagement.tsx
-                      <Button
-                        variant='ghost'
-                        size='sm'
-                        onClick={() => handleResendInvite(member.email)}                      >
-                        <Mail className='h-4 w-4 mr-1' />
 
                         variant="ghost"
 
@@ -464,13 +431,6 @@ if ( {) {}
                       </Button>
                     ) : (
                       <Button
-:src/components/enterprise/admin/TeamManagement.tsx
-                        variant='ghost'
-                        size='sm'
-                        className='text-destructive hover:text-destructive'
-                        onClick={() => handleRemoveMember(member.id)}                      >
-                        <Trash className='h-4 w-4' />
-                      </Button>
 
                         variant="ghost"
                         size="sm"
@@ -820,7 +780,6 @@ export function TeamManagement() {;
                 </TableCell>;
               </TableRow>;
             ))}
-:src/components/enterprise/admin/TeamManagement.tsx
 
           </TableBody>;
         </Table>;
@@ -866,31 +825,6 @@ export function TeamManagement() {;
         </Table>
       </div>
     </div>
-:src/components/enterprise/admin/TeamManagement.tsx
-  )
-  //In a real app, this would make an API call to remove the member toast ({
-}
-  //In a real app, this would make an API call to resend the invitation toast ({
-};"
-  handleAddMember "
-}>Send Invitation</Button> </DialogFooter> </DialogContent> </Dialog> </div> <div className=" rounded-md border"> <Table> <TableHeader> <TableRow> <TableHead>Name</TableHead> <TableHead>Role</TableHead> <TableHead>Status</TableHead> <TableHead>Last Active</TableHead> <TableHead className=" text-right">Actions</TableHead> </TableRow> </TableHeader> <TableBody> {
-  teamMembers.map ( (member) => (<TableRow key= {
-  member.id "
-}> <TableCell> .join ("")
-}</span> </div> <div> </div> </div> </div> </TableCell> <TableCell> {
-  member.role
-}</TableCell> <TableCell> <Badge > {
-  member.status
-}</Badge> </TableCell> <TableCell> {
-  member.lastActive "
-}</TableCell> <TableCell className="text-right"> onClick={
-  () => handleResendInvite (member.email) "
-}> <Mail className="h-4 w-4 mr-1"/> Resend </Button> className="text-destructive hover:text-destructive"onClick={
-  () => handleRemoveMember (member.id) "
-}> <Trash className="h-4 w-4" /> </Button>)
-}</div> </TableCell> </TableRow>) )
-}</TableBody> </Table> </div> </div>)
-}'"}
   );
 
   //In a real app, this would make an API call to remove the member toast ({;

@@ -25,6 +25,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
  * Image component that falls back to a placeholder and offers a retry button when the image fails to load.
  */
 export function ImageWithRetry({
+<<<<<<< HEAD
 import React, { useState } from react';
 import Image, { type ImageProps } from 'next/image;
 import { cn  } from @/lib/utils';
@@ -153,6 +154,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 export default ImageWithRetry;
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
 }: ImageWithRetryProps) {
   const [currentSrc, setCurrentSrc] = useState(src),
@@ -192,6 +195,7 @@ export default ImageWithRetry;
   return (
     <div className="relative inline-block>
       <Image
+<<<<<<< HEAD
 export function ImageWithRetry(): any ({src,alt = ',fallbackSrc = /images/image-placeholder && placeholder.svg',className,retryClassName}: ImageWithRetryProps) {const [currentSrc, setCurrentSrc] = useState(src)const [failed, setFailed]  = useState(false)const handleError = () => {setFailed(true)setCurrentSrc(fallbackSrc)}const handleRetry = () => {setFailed(false)setCurrentSrc(src)}setCurrentSrc(fallbackSrc)}const handleRetry = () => {setFailed(false)}const fill  = !('width in props) && !(height' in props)return (src;
   alt;<Image;
         {...props}
@@ -206,6 +210,8 @@ export function ImageWithRetry(): any ({src,alt = ',fallbackSrc = /images/image-
     </div>;
   )}export default ImageWithRetry;const fill = !('width in props) && !(height' in props)return (<div className=relative inline-block">;
       <Image;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
         {...props}
         src={currentSrc}
         alt={alt}
@@ -214,6 +220,7 @@ export function ImageWithRetry(): any ({src,alt = ',fallbackSrc = /images/image-
         fill={fill}
       />
       {failed && (
+<<<<<<< HEAD
       />;
       {failed && (<button;
           type="button;
@@ -260,3 +267,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </div>;
   )export default ImageWithRetry;
         <button
+=======
+        <button
+>>>>>>> origin/chore/fix-lint-and-merge

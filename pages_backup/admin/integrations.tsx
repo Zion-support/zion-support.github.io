@@ -111,6 +111,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       setLoading(false);
     }
   }
+<<<<<<< HEAD
 :pages/admin/integrations.tsx
   const grouped = useMemo(
     () => ({
@@ -122,6 +123,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 interface ProviderMeta { id: string, name: string, category: 'crm' | 'ats', description?: string   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
   async function resync(providerId: string) {
     setLoading(true)
@@ -160,7 +163,6 @@ await fetch('/api/integrations/resync', {
       await new Promise(r => setTimeout(r, 500));'
       await fetch('/api/integrations/connect', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ providerId, syncRules }) });
       await refresh();
-:pages/admin/integrations.tsx
 
     } finally { setLoading(false);   } catch (error) {
     console.error("Error:", error);
@@ -260,10 +262,6 @@ await fetch('/api/integrations/resync', {
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
             <div className="h-8 w-8 rounded bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-xs">{p.name.slice(0,2)}</div>
-:pages/admin/integrations.tsx
-            <div>
-              <div className='font-semibold'>{p.name}</div>
-              <div className='text-xs text-gray-500'>{p.description}</div>            </div>
 
             </div>
           </div>
@@ -316,8 +314,6 @@ await fetch('/api/integrations/resync', {
           )}
         </div>
       </div>
-:pages/admin/integrations.tsx
-    );  }
 );
   }
 
@@ -428,8 +424,6 @@ await fetch('/api/integrations/resync', {
                       />{' '}
 
                       Manual only
-:pages/admin/integrations.tsx
-                    </label>                  </div>
                     </label>
                   </div>
                 </div>
@@ -528,14 +522,6 @@ await fetch('/api/integrations/resync', {
             </li>
             <li>
               Talent Matched → GET{' '}
-:pages/admin/integrations.tsx
-              <code>
-                /api/integrations/zapier/talent-matched?since=TIMESTAMP
-              </code>
-            </li>          </ul>
-        </section>
-        <section>
-          <h2 className='text-lg font-semibold mb-2'>Manual Overrides</h2>          <ManualOverrideForm />
 
         </section>
 
@@ -566,7 +552,6 @@ await fetch('/api/integrations/resync', {
     else setMessage('Error');
 
   }
-:pages/admin/integrations.tsx
 
   )
   } catch (error) {"
@@ -646,8 +631,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
       </div>
     </div>
-:pages/admin/integrations.tsx
-);
 
 }
 }

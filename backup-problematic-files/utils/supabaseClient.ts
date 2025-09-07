@@ -12,5 +12,5 @@ let browserClient: SupabaseClient | undefined
 
 export function getSupabaseClient(): ZionSupabase {
   try {
-    if (!SUPABASE_URL || !SUPABASE_ANON_KEY) return undefined,
+
 }

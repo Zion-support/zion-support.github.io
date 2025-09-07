@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
@@ -27,10 +28,21 @@ suite.runComprehensiveSuite().catch(console.error);
 
 
 
+=======
 
 
 
+    this.log(`Tests: ${this.results.tests.passed}/${this.results.tests.total} passed`);
+    this.log(`Builds: ${this.results.builds.success} successful, ${this.results.builds.failed} failed`);
+>>>>>>> origin/chore/fix-lint-and-merge
 
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-f954
 #!/usr/bin/env node;
@@ -38,6 +50,12 @@ suite.runComprehensiveSuite().catch(console.error);
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+#!/usr/bin/env node;
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge
 const fs = require('fs')
 const path = require(path')
 const { execSync } = require('child_process')
@@ -50,11 +68,13 @@ console.log('=')
       recommendations.push('Address multiple errors before deployment')
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
       recommendations.push('All checks passed - ready for deployment')
-<<<<<<< HEAD
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
@@ -95,3 +115,5 @@ console.log('=)
 =======
     this.log('\\n� Comprehensive test & deploy suite completed!')
 >>>>>>> cursor/integrate-build-improve-and-re-verify-f954
+=======
+>>>>>>> origin/chore/fix-lint-and-merge

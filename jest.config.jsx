@@ -1,15 +1,11 @@
-}
+import { defineConfig } from 'vitest/config';
+import react from '@vitejs/plugin-react';
 
-export default function Jest.config({ }: Jest.configProps) {
-  return (
-    <div>
-      <h1>Jest.config</h1>
-      <p>This component is currently under development.</p>
-    </div>
-  );
-}
-}
-}
-}
-}
-}
+export default defineConfig({
+  plugins: [react()],
+  test: {
+    environment: 'jsdom',
+    setupFiles: ['./jest.setup.jsx'],
+    globals: true,
+  },
+});

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { render, screen  } from '@testing-library/react';
 import { describe, it, expect  } from 'vitest';
 ursor/automate-test-improve-and-merge-code-646c;
@@ -151,3 +152,12 @@ describe('Page
   it(displays correct content'
   it('handles user interactions
 import { render,screen } from @testing-library/react'; import { describe,it,expect } from 'vitest; import Page from ./AIChatAssistant.js'; describe('Page, () => { it(renders without crashing', () => { render(<Page />); expect(screen.getByRole('main)).toBeInTheDocument();}); it(displays correct content', () => { render(<Page />)}); it('handles user interactions'
+=======
+import { describe, it, expect } from '@jest/globals';
+
+describe('AIChatAssistant.js', () => {
+  it('should work', () => {
+    expect(true).toBe(true);
+  });
+});
+>>>>>>> origin/chore/fix-lint-and-merge

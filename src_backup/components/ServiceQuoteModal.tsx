@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 :src/components/ServiceQuoteModal.tsx
 import { useState  } from 'react;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 ...formData;            startDate: startDate?.toISOString(),
 
             endDate: endDate?.toISOString()}
@@ -8,7 +11,6 @@ import { useState  } from 'react;
 
 }
 }
-:src/components/ServiceQuoteModal.tsx
 
 ...form_data;            start_date: start_date?.toISOString (),
             end_date: end_date?.toISOString ()}
@@ -17,14 +19,15 @@ import { useState  } from 'react;
 }
 }
 
-
-
-
 ;
 
+<<<<<<< HEAD
 
 import { useState } from react',
 import { useState } from 'react,
+=======
+import { useState } from 'react',
+>>>>>>> origin/chore/fix-lint-and-merge
 
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog,
 import { Button } from @/components/ui/button",
@@ -235,7 +238,10 @@ const TIMELINE_OPTIONS = [;"
             ...formData,
             startDate: startDate?.toISOString(),
             endDate: endDate?.toISOString()}
+<<<<<<< HEAD
 ...formData;            startDate: startDate?.toISOString(),endDate: endDate?.toISOString()}
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
         }
       }),
       if (error) throw error,
@@ -478,13 +484,13 @@ const TIMELINE_OPTIONS = [;"
                   {isSubmitting ? "Submitting..." : "Submit Request"}
                 </Button>
               )}
-:src/components/ServiceQuoteModal.tsx
 
             </div>
           </DialogFooter>
         </form>
       </DialogContent>
     </Dialog>
+<<<<<<< HEAD
                 </Button>;
               )}</div>;
           </DialogFooter>;
@@ -534,6 +540,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </Dialog>;
 :src/components/ServiceQuoteModal.tsx
   )
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
   );
 
 });

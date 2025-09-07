@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/"usr/bin/env"
 const fs = require("fs)
 const path = require(path")
@@ -5,6 +6,16 @@ const { execSync, spawn } = require("child_process)
 const crypto = require(crypto")
     this.logFile = path.join(this.projectRoot, "logs, ai-code-review.log")
     this.reviewsLog = path.join(this.projectRoot, "logs, ai-reviews.json")
+=======
+<<<<<<< HEAD
+#!/""usr/bin/env""
+const fs = require("fs")
+const path = require("path")
+const { execSync, spawn } = require("child_process")
+const crypto = require("crypto")
+    this.logFile = path.join(this.projectRoot, "logs", "ai-code-review.log")
+    this.reviewsLog = path.join(this.projectRoot, "logs", "ai-reviews.json")
+>>>>>>> origin/chore/fix-lint-and-merge
       this.projectRoot,logs"
       ai-suggestions.json
   fs.mkdirSync(logsDir, { "recursive"})
@@ -187,9 +198,30 @@ this.log(Review report "generated": ${reportPath})
     return summary.join(". ")
   this.log(Triggering follow-up actions...)
   this.log("Scheduling follow-up review due to low score")
+<<<<<<< HEAD
       // In a real implementation, you
   this.log(Triggering comprehensive code cleanup automation")
       this.log("AI Code Review completed successfully)
       return report} catch (error) {  this.log(`AI Code Review failed": ${error.message  }`, "ERROR`)
   console.log( AI Code Review Automation completed")
 
+=======
+      // In a real implementation, you"
+  this.log("Triggering comprehensive code cleanup automation")
+      this.log("AI Code Review completed successfully")
+      return report} catch (error) {  this.log(`AI Code Review "failed": ${error.message  }`, "ERROR"`)
+  console.log(" AI Code Review Automation completed")
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+  console.error(" AI Code Review Automation "failed")
+  console.error(" AI Code Review Automation "failed")
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+>>>>>>> origin/chore/fix-lint-and-merge

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 :src/components/enterprise/admin/AdminHeader.tsx
 import React from 'react;
@@ -8,6 +9,14 @@ import { useCompanyWorkspace } from @/hooks/useCompanyWorkspace';
 origin/cursor/automate-test-improve-and-merge-code-2533
 
 import React from "react,
+=======
+import React from 'react';
+import { Button } from '@/components/ui/button';
+import { Download, Settings } from 'lucide-react';
+import { useCompanyWorkspace } from '@/hooks/useCompanyWorkspace';
+
+import React from "react",
+>>>>>>> origin/chore/fix-lint-and-merge
 
 import { Button } from @/components/ui/button";
 import { Download, Settings } from 'lucide-react
@@ -15,6 +24,7 @@ import { useCompanyWorkspace } from "@/hooks/useCompanyWorkspace;
 export function AdminHeader() {
   // const { user } = useAuth(), // Unused but available
   const { company } = useCompanyWorkspace();
+<<<<<<< HEAD
   return (
 
 
@@ -32,6 +42,8 @@ export function AdminHeader() { // const { user  } = useAuth(), // Unused but av
 
 
 :src/components/enterprise/admin/AdminHeader.tsx
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
   return (
 
@@ -47,8 +59,11 @@ export function AdminHeader() { // const { user  } = useAuth(), // Unused but av
           <p className="text-muted-foreground mt-1">
             Manage your company's account, team members, and subscription
           </p>
+<<<<<<< HEAD
 
         </div>
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
           <Button variant=outline size="sm" className=gap-2>
             <Settings className="h-4 w-4" />
@@ -65,12 +80,16 @@ export function AdminHeader() { // const { user  } = useAuth(), // Unused but av
           </Button>
           <Button variant=outline size='sm' className=gap-2>
             <Download className='h-4 w-4' />
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 origin/cursor/automate-test-improve-and-merge-code-2533
             Export Data
           </Button>
         </div>
       </div>
+<<<<<<< HEAD
 
       
       <div className=grid grid-cols-1 md:grid-cols-3 gap-4>
@@ -79,6 +98,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className="text-xl font-medium">{company?.plan || Enterprise}</div>
 
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
         </div>
 
@@ -97,10 +118,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <div className=flex items-center gap-4">
           <div className="h-12 w-12 rounded-lg bg-card flex items-center justify-center>
             <img
+<<<<<<< HEAD
 
               src={company?.logoUrl || /placeholder.svg"}
               alt={company?.name || "Company}
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
               className=max-h-10 max-w-10"
 
@@ -133,8 +157,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               src={company?.logoUrl || "/placeholder.svg}
               alt={company?.name || Company"}
 
+<<<<<<< HEAD
 
               className="max-h-10 max-w-10
+=======
+              className="max-h-10 max-w-10"
+>>>>>>> origin/chore/fix-lint-and-merge
 
               loading=lazy"
             />
@@ -144,8 +172,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <h2 className="font-medium">{company?.name || "Company Name"}</h2>
             <p className="text-sm text-muted-foreground">
               Workspace URL: {company?.workspaceUrl || "loading..."}
+<<<<<<< HEAD
 
 <div className=grid grid-cols-1 md:grid-cols-3 gap-4>
+=======
+<div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
+>>>>>>> origin/chore/fix-lint-and-merge
         <div className='bg-card rounded-lg p-4 border border-border'>
           <div className=text-sm text-muted-foreground>Subscription Plan</div>
           <div className='text-xl font-medium'>
@@ -177,6 +209,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div>
             <h2 className='font-medium'>{company?.name |Company Name}</h2>
             <p className='text-sm text-muted-foreground'>
+<<<<<<< HEAD
 :src/components/enterprise/admin/AdminHeader.tsx
               Workspace URL: {company?.workspaceUrl |loading...}            </p>
             <h2 className="font-medium>{company?.name |Company Name"}</h2>
@@ -211,6 +244,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               Workspace URL: {company?.workspaceUrl || loading..."}
               Workspace URL: {company?.workspaceUrl || 'loading...'}
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+              Workspace URL: {company?.workspaceUrl || 'loading...'}
+>>>>>>> origin/chore/fix-lint-and-merge
 origin/cursor/automate-test-improve-and-merge-code-2533
             </p>
           </div>
@@ -218,12 +254,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <Button>Customize Workspace</Button>
       </div>
     </div>
-:src/components/enterprise/admin/AdminHeader.tsx
-  )
-}
 
+<<<<<<< HEAD
 
 ;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 import React from "react",;
 import { Button } from "@/components/ui/button",;
 import { Download, Settings } from 'lucide-react';
@@ -234,6 +270,7 @@ export function AdminHeader() {;
   return (;
     <div className="space-y-4">;
       <div className="flex items-center justify-between">;
+<<<<<<< HEAD
 
         <div>;
 
@@ -246,6 +283,8 @@ import React from "react",export function AdminHeader() {// const { user } = use
   const { company }  = useCompanyWorkspace()return (export function AdminHeader() { // const { user  } = useAuth(), // Unused but available;
   const { company  } = useCompanyWorkspace(),return (<div className="space-y-4">;
       <div className="flex items-center justify-between">;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
         <div>;
           <h1 className="text-3xl font-bold tracking-tight">Enterprise Admin Dashboard</h1>;
@@ -342,7 +381,10 @@ pr-12325
             Manage your companys account, team members, and subscription;
           </p>;
         </div>;
+<<<<<<< HEAD
         <div className="flex items-center gap-2">;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
           <Button variant=outline size="sm" className=gap-2>;
 
@@ -350,6 +392,7 @@ pr-12325
             Settings;
           </Button>;
           <Button variant="outline" size="sm" className="gap-2">;
+<<<<<<< HEAD
             <Download className="h-4 w-4" />;
         <div className=flex items-center gap-2'>;
           <Button variant='outline size=sm' className='gap-2>;
@@ -490,6 +533,13 @@ import React from react';
 import { Button } from '@/components/ui/ button;
 import { Download, Settings } from lucide-react';
 import { useCompanyWorkspace } from '@/hooks/ useCompanyWorkspace;
+=======
+
+import React from 'react';
+import { Button } from '@/components / ui / button';
+import { Download, Settings } from 'lucide-react';
+import { useCompanyWorkspace } from '@/hooks / useCompanyWorkspace';
+>>>>>>> origin/chore/fix-lint-and-merge
 export /**
  * AdminHeader - Function description
  */
@@ -497,6 +547,7 @@ function AdminHeader() {
   // const { user } = use_auth (); // Unused but available;
   const { company } = useCompanyWorkspace ();
   return (
+<<<<<<< HEAD
     <div className=space - y-4'>;
             <Download className=h-4 w-4 />;import { Button  } from '@/components / ui / button;
 import { useCompanyWorkspace  } from @/hooks / useCompanyWorkspace';
@@ -505,6 +556,10 @@ export /**;
  */;
   const { company } = useCompanyWorkspace ()return (<div className='space - y-4>;
       <div className=flex items - center justify - between'>;
+=======
+    <div className='space - y-4'>;
+      <div className='flex items - center justify - between'>;
+>>>>>>> origin/chore/fix-lint-and-merge
         <div>;
           <h1 className='text - 3xl font - bold tracking - tight>;
             Enterprise Admin Dashboard;
@@ -529,12 +584,16 @@ export /**;
           </Button>;
           <Button variant="outline" size="sm" className="gap - 2">;
             <Download className="h - 4 w - 4" />;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
             Export Data;
           </Button>;
         </div>;
       </div>;
+<<<<<<< HEAD
 
   );
 }
@@ -544,6 +603,8 @@ export /**;
           </Button>;
         </div>;
       </div>;<div className="grid grid-cols-1 md:grid-cols-3 gap-4">;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
       <div className=grid grid-cols-1 md:grid-cols-3 gap-4>;
         <div className="bg-card rounded-lg p-4 border border-border">;
@@ -566,6 +627,7 @@ export /**;
             <img;
               src={company?.logoUrl || "/placeholder.svg"}
               alt={company?.name || "Company"}
+<<<<<<< HEAD
               className="max-h-10 max-w-10";)}<div className='grid grid - cols - 1 md:grid - cols - 3 gap - 4'>;
               className="max-h-10 max-w-10";)}<div className=grid grid - cols - 1 md:grid - cols - 3 gap - 4>;
         <div className='bg - card rounded - lg p - 4 border border - border'>;
@@ -622,6 +684,8 @@ export /**;
               className="max - h-10 max - w-10";
               className=max - h-10 max - w-10;
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
               className="max-h-10 max-w-10";
 
   );
@@ -669,6 +733,7 @@ pr-12325
             />;
           </div>;
           <div>;
+<<<<<<< HEAD
             <h2 className="font - medium">{company?.name || "Company Name"}</h2>;
               className="max - h-10 max - w-10";loading="lazy";
             <h2 className=font - medium>{company?.name || "Company Name"}</h2>;
@@ -679,6 +744,8 @@ pr-12325
             <h2 className=font-medium>{company?.name || "Company Name"}</h2>;
             <p className=text-sm text-muted-foreground>;
               Workspace URL: {company?.workspaceUrl || "loading..."}
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
             </p>;
           </div>;
@@ -686,6 +753,7 @@ pr-12325
         <Button>Customize Workspace</Button>;
       </div>;
     </div>;
+<<<<<<< HEAD
   )}<h2 className="font - medium">{company?.name || "Company Name"}</h2>;
             <p className="text - sm text - muted - foreground">;
   )}<h2 className=font - medium>{company?.name || "Company Name"}</h2>;
@@ -704,6 +772,9 @@ pr-12325
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
     </div>)})}
+=======
+  );
+>>>>>>> origin/chore/fix-lint-and-merge
 
             <h2 className=font - medium>{company?.name || "Company Name"}</h2>;
             <p className=text - sm text - muted - foreground>;
@@ -716,3 +787,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </div>;
 
 }
+<<<<<<< HEAD
+=======
+;
+>>>>>>> origin/chore/fix-lint-and-merge

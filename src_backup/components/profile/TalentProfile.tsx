@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 import React from 'react;
 import { Handshake, MessageSquare, Star } from lucide-react';
@@ -40,6 +41,18 @@ import { ProfileProjects } from "./ProfileProjects",
 import { ProfileAvailability } from ./ProfileAvailability","
 import { ProfileContact } from ./ProfileContact,"
 import { ProfileRatings } from "./ProfileRatings,
+=======
+import { Handshake, MessageSquare, Star } from 'lucide-react'
+import { Button } from "@/components/ui/button","
+import { HireNowCTA } from "./HireNowCTA","
+import { ProfileHero } from "./ProfileHero","
+import { ProfileSkills } from "./ProfileSkills","
+import { ProfileExperience } from "./ProfileExperience","
+import { ProfileProjects } from "./ProfileProjects","
+import { ProfileAvailability } from "./ProfileAvailability","
+import { ProfileContact } from "./ProfileContact","
+import { ProfileRatings } from "./ProfileRatings","
+>>>>>>> origin/chore/fix-lint-and-merge
 import { TalentProfile as TalentProfileType } from "@/types/talent",
 
 import React from react';
@@ -102,6 +115,7 @@ export function TalentProfile({
 origin/cursor/automate-test-improve-and-merge-code-2533
   return (
 
+<<<<<<< HEAD
     <div className='container mx-auto px-4 py-8>
 
 import { Handshake, MessageSquare, Star  } from lucide-react';
@@ -136,6 +150,9 @@ export function TalentProfile(): any ({profile,onRequestHire,onMessageTalent}: T
   onMessageTalent?: () => void;
 }export function TalentProfile() {const { isAuthenticated } = useAuth()// Create proper availability object from talent profile;
   const availability: Availability;return (<div className=container mx-auto px-4 py-8'>;
+=======
+    <div className='container mx-auto px-4 py-8'>
+>>>>>>> origin/chore/fix-lint-and-merge
       {/* Profile Header */}
       <ProfileHero;
         name={profile.full_name}
@@ -154,6 +171,7 @@ export function TalentProfile(): any ({profile,onRequestHire,onMessageTalent}: T
           <ProfileContact;
             email={profile && profile.user_id}
             profileName={profile && profile.full_name}'
+<<<<<<< HEAD
             profileType=talent          />;
     status:;
       profile.availability_type === 'full_time';
@@ -162,6 +180,9 @@ export function TalentProfile(): any ({profile,onRequestHire,onMessageTalent}: T
           ? limited;
           : 'unavailable',
     message: `${profile.professional_title} with ${profile.years_experience} years of experience`}
+=======
+            profileType='talent'          />;
+>>>>>>> origin/chore/fix-lint-and-merge
         </div>;
 
         <div className=lg:col-span-2 space-y-8>;
@@ -230,6 +251,7 @@ export function TalentProfile() { return null; }
       <ProfileHero;
         name={profile.full_name}
         title={profile.professional_title}
+<<<<<<< HEAD
         avatar_url={profile.profile_picture_url}
         profile_type=talent';
         rating={profile.average_rating}
@@ -279,6 +301,8 @@ import React from "react,import { useAuth } from @/hooks/useAuth",import { Avail
         rating={profile.average_rating}
         reviewCount={profile.rating_count}
       />;{/* Main content area */}
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
         profileType=talent"
         rating={profile.average_rating}
@@ -468,6 +492,7 @@ export function TalentProfile({}
               </div>;
             </div>;
           )}
+<<<<<<< HEAD
         </div>
       </div>
     </div>
@@ -477,12 +502,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </div>;
             </div>;
           )}</div>;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
         </div>;
       </div>;
     </div>;
+<<<<<<< HEAD
     </div>);
 }
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
   );
 }
 

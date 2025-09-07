@@ -1,47 +1,82 @@
 interface QuickReplyButtonProps {
-  }
-  "text": string;
-  "onClick": () => void
+  text: string;
+  onClick: () => void
 }
-import React from "react";"
-import { Button } from "@/components/ui/button";"
-import { cn } from "@/lib/utils";"
+
+import React from "react";
+import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
+
 interface QuickReplyButtonProps {
-  }
-  "text": string;
-  "onClick": () => void;
+  text: string;
+  onClick: () => void;
 }
-export function QuickReplyButton() {  return (
+
+export function QuickReplyButton(): any ({ text, onClick }: QuickReplyButtonProps) {;
+  return (
+export function QuickReplyButton({ text, onClick }: QuickReplyButtonProps) {  return (
     <Button
+
+import React from "react";
+import { Button } from "@/components/ui/button";
+
+import { cn } from "@/lib/utils";
+interface QuickReplyButtonProps {}
+  text: string;
+  onClick: () => void;
 }
-variant="outline";"
-      size="sm""
+
+  return (
+    <Button;
+"
+      variant="outline""
+      size="sm"
       className={cn(
-        "border-zion-purple/30 "hover": bg-zion-purple "hover":text-white","
-        "transition-colors duration-200","
+
+        "transition-colors duration-200"
+        "border-zion-purple/30 hover:bg-zion-purple hover:text-white",
+        "transition-colors duration-200"
+import React from "react",;
+import { Button } from "@/components/ui/button",;
+import { cn } from "@/lib/utils",;
+interface QuickReplyButtonProps {;
+  text: string,;
+  onClick: () => void;
+}
+;
+export function QuickReplyButton({ text, onClick }: QuickReplyButtonProps) {;
+  return (;
+    <Button;
+      variant="outline";
+      size="sm";
+      className={cn(;
+        "border-zion-purple/30 hover:bg-zion-purple hover:text-white";
+        "transition-colors duration-200";
+
+        "transition-colors duration-200",
       )}
       onClick={onClick}>;
       {text}
+
     </Button>;
   );
 }
-return (;
-    <Button,
-import React from './react';'
-import { Button  } from '@/components / ui / button';'
-import { cn  } from '@/lib / utils';'
-interface QuickReplyButtonProps {
-  }
-  "text": string;
-  "on_click": () => void;
+  return (
+
+import { cn  } from '@/lib / utils';
+interface QuickReplyButtonProps {}
+  text: string;
+  on_click: () => void;
 }
-export /**
- * QuickReplyButton - Function description
- */
-function QuickReplyButton() {
+
+  text: string;
+  onClick: () => void;
+
 }
-return (;
+export function QuickReplyButton({ text, onClick }: QuickReplyButtonProps) {}
+  return (;
     <Button;
+<<<<<<< HEAD
       variant="outline";"
       size="sm";"
       className={cn (
@@ -72,6 +107,18 @@ variant="outline";"
 "border-zion-purple/30 "hover": bg-zion-purple "hover":text-white""
         "transition-colors duration-200""
         "transition-colors duration-200","
+=======
+"
+      variant="outline""
+      size="sm"
+      className={cn("
+"border-zion-purple/30 hover: bg-zion-purple hover:text-white""
+
+        "transition-colors duration-200"
+"
+        "transition-colors duration-200",
+
+>>>>>>> origin/chore/fix-lint-and-merge
       )}
       onClick={onClick}
     >
@@ -81,4 +128,4 @@ variant="outline";"
 }
   )
 }
-}
+;

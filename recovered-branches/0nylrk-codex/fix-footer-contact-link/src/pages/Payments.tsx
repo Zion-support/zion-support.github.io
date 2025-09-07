@@ -1,14 +1,36 @@
+<<<<<<< HEAD
 import React from "react,
 import { Header } from @/components/Header",
 import { Footer } from "@/components/Footer,
 import { TransactionHistory } from @/components/transactions/TransactionHistory",
 import { GradientHeading } from "@/components/GradientHeading;
 import { Tabs, TabsContent, TabsList, TabsTrigger } from @/components/ui/tabs";
+=======
+import React from "react";
+import {Header} from "@/components/Header";
+import {Footer} from "@/components/Footer";
+import {TransactionHistory} from "@/components/transactions/TransactionHistory";
+import {GradientHeading} from "@/components/GradientHeading";
+import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
+
+import React from "react",
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+import { TransactionHistory } from "@/components/transactions/TransactionHistory",
+
+import { GradientHeading } from "@/components/GradientHeading";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { GradientHeading } from "@/components/GradientHeading",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+
+>>>>>>> origin/chore/fix-lint-and-merge
 export default function Payments() {
+
   return (
     <>
       <Header />
 
+<<<<<<< HEAD
       <div className="min-h-screen bg-zion-blue py-12 px-4>
         <div className=container mx-auto">
           <div className="mb-12 text-center>
@@ -106,6 +128,23 @@ import {Checkbox} from "@/components/ui/checkbox;
                         <label
                           htmlFor=notify-push"
                           className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-white>;
+=======
+import {Switch} from "@/components/ui/switch";
+import {Label} from "@/components/ui/label";
+import {Checkbox} from "@/components/ui/checkbox";
+
+                          htmlFor="notify-email"
+                          className="text-sm font-medium leading-none peer-disabled: cursor-not-allowed peer-disabled:opacity-70 text-white">;
+
+                          Email notifications;
+                        </label>;
+                      </div>;"
+                      <div className="flex items-center space-x-2">;"
+                        <Checkbox id="notify-push" defaultChecked />;
+                        <label"
+                          htmlFor="notify-push""
+                          className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-white">;
+>>>>>>> origin/chore/fix-lint-and-merge
                           Push notifications;
                         </label>;
                       </div>;
@@ -121,6 +160,7 @@ import {Checkbox} from "@/components/ui/checkbox;
     </>;
   );
 }
+<<<<<<< HEAD
 import React from ./react';
 import { Header } from '@/components / Header;
 import { Footer } from @/components / Footer';
@@ -129,10 +169,24 @@ import { GradientHeading } from @/components / GradientHeading';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / tabs;
 export default /**
  * Payments - Function description
+=======
+
+import React from './react';
+import { Header } from '@/components / Header';
+import { Footer } from '@/components / Footer';
+import { TransactionHistory } from '@/components / transactions / TransactionHistory';
+import { GradientHeading } from '@/components / GradientHeading';
+
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / tabs';
+export default /**;
+ * Payments - Function description;
+>>>>>>> origin/chore/fix-lint-and-merge
  */
-function Payments() {
+function Payments() {}
   return (
+
     <>;
+<<<<<<< HEAD
       <Header />;
       <div className=min - h-screen bg - zion - blue py - 12 px-4">;
         <div className="container mx-auto>;
@@ -176,10 +230,19 @@ function Payments() {
                     <div className="flex items - center space-x-2>;
                       <Switch id=escrow - default" />;
                       <Label html_for="escrow - default className=text-white">;
+=======
+
+              <TabsTrigger value="settings">Payment Settings</TabsTrigger>;
+            </TabsList>;"
+            <TabsContent value="history">;
+              <TransactionHistory />;
+
+>>>>>>> origin/chore/fix-lint-and-merge
                         Use escrow by default;
                       </Label>;
                     </div>;
                   </div>;
+<<<<<<< HEAD
                   <div>;
                     <h3 className="text - lg font - medium text - white mb-3>Payment Notifications</h3>;
                     <p className=text - zion - slate - light mb-4">;
@@ -200,6 +263,9 @@ function Payments() {
                         <label;
                           html_for=notify - push";
                           className="text - sm font - medium leading - none peer - disabled:cursor - not - allowed peer - disabled:opacity - 70 text-white;
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
                         >;
                           Push notifications;
                         </label>;
@@ -215,6 +281,7 @@ function Payments() {
       <Footer />;
     </>);
 }
+<<<<<<< HEAD
 // Import UI components for Payment Settings tab;
 import { Button } from '@/components / ui / button;
 import { Switch } from @/components / ui / switch';
@@ -227,3 +294,11 @@ import { Button } from @/components/ui/button",
 import { Switch } from "@/components/ui/switch,
 import { Label } from @/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
+=======
+
+import { Checkbox } from '@/components / ui / checkbox';
+
+;
+
+;
+>>>>>>> origin/chore/fix-lint-and-merge

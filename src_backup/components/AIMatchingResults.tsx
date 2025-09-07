@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 interface AIMatchingResultsProps  {matches: MatchResultItem[];
   onSelectMatch?: (match: MatchResultItem) => void;
   isLoading?: boolean;
@@ -139,10 +140,16 @@ import { cn } from @/lib/utils";
 interface AIMatchingResultsProps {
   matches: MatchResultItem[];
   onSelectMatch?: (match: MatchResultItem) => void;
+=======
+interface AIMatchingResultsProps {
+  matches: MatchResultItem[],
+  onSelectMatch?: (match: MatchResultItem) => void,
+>>>>>>> origin/chore/fix-lint-and-merge
   isLoading?: boolean,
   projectDescription?: string,
   serviceType?: string
 }
+<<<<<<< HEAD
 :recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/AIMatchingResults.tsx
   matches;
   onSelectMatch;
@@ -160,9 +167,18 @@ export function AIMatchingResults({
     talent: matches.filter(match => match.category.toLowerCase().includes(talent"));
     services: matches.filter(match => match.category.toLowerCase().includes("service));
     equipment: matches.filter(match => match.category.toLowerCase().includes(equipment"))},
+=======
+
+  const categories = {
+    all: matches,
+    talent: matches.filter(match => match.category.toLowerCase().includes("talent")),
+    services: matches.filter(match => match.category.toLowerCase().includes("service")),
+    equipment: matches.filter(match => match.category.toLowerCase().includes("equipment"))
+  },
+>>>>>>> origin/chore/fix-lint-and-merge
   
   // Get the icon for a category
-  const getCategoryIcon = (category: string) => {,
+  const getCategoryIcon = (category: string) => {
     const lowerCategory = category.toLowerCase(),
     if (lowerCategory.includes("talent)) return User,
     if (lowerCategory.includes(equipment")) return Monitor,
@@ -181,6 +197,7 @@ export function AIMatchingResults({
       </div>
     )
   }
+<<<<<<< HEAD
 :recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/AIMatchingResults.tsx
   if (matches.length === 0) {
     return (
@@ -200,6 +217,53 @@ export function AIMatchingResults({
         </CardContent>
       </Card>
     )
+=======
+
+import { BarChart3, BriefcaseIcon, Monitor, User } from 'lucide-react';
+import Skeleton from "@/components/ui/skeleton",;
+import { cn } from "@/lib/utils",;
+interface AIMatchingResultsProps {;
+  matches: MatchResultItem[],;
+  onSelectMatch?: (match: MatchResultItem) => void,;
+  isLoading?: boolean,;
+  projectDescription?: string,;
+  serviceType?: string;
+}
+;
+export function AIMatchingResults({;
+  matches,;
+  onSelectMatch,;
+  isLoading = false,;
+  projectDescription = "",;
+  serviceType: _serviceType = "";
+}: AIMatchingResultsProps) {;
+  const [activeTab, setActiveTab] = useState("all"),;
+  // Group matches by category;
+  const categories = {;
+    all: matches,;
+    talent: matches.filter(match => match.category.toLowerCase().includes("talent")),;
+    services: matches.filter(match => match.category.toLowerCase().includes("service")),;
+    equipment: matches.filter(match => match.category.toLowerCase().includes("equipment"));
+  },;
+  // Get the icon for a category;
+  const getCategoryIcon = (category: string) => {;
+    const lowerCategory = category.toLowerCase(),;
+    if (lowerCategory.includes("talent")) return User,;
+    if (lowerCategory.includes("equipment")) return Monitor,;
+    return BriefcaseIcon;
+  },;
+  if (isLoading) {;
+    return (;
+      <div className="space-y-4">;
+        <Skeleton className="h-10 w-full" />;
+        <div className="space-y-3">;
+          <Skeleton className="h-[120px] w-full" />;
+          <Skeleton className="h-[120px] w-full" />;
+          <Skeleton className="h-[120px] w-full" />;
+        </div>;
+      </div>;
+    );
+>>>>>>> origin/chore/fix-lint-and-merge
   }
   if (matches.length === 0) {
     return (;
@@ -220,9 +284,9 @@ export function AIMatchingResults({
       </Card>;
     );
   }
-:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/AIMatchingResults.tsx
 
   return (
+<<<<<<< HEAD
     )}
   return (<div className=space-y-4'>;
       <Tabs;
@@ -290,6 +354,8 @@ interface AIMatchingResultsProps {
 export function AIMatchingResults({matches;
   onSelectMatch;
   isLoading;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
     <div className="space-y-4">
       <Tabs defaultValue="all" value={activeTab} onValueChange={setActiveTab} className="w-full">
         <TabsList className="bg-zion-blue-dark border border-zion-blue-light grid grid-cols-4 w-full">
@@ -315,11 +381,15 @@ export function AIMatchingResults({matches;
           <TabsContent key={tab} value={tab} className="mt-4 space-y-3>
             {items.length > 0 ? (
               items.map((match) => {
-                const CategoryIcon = getCategoryIcon($2);
+                const CategoryIcon = getCategoryIcon(match.category),
                 return (
                   <Card 
                     key={match.id}
+<<<<<<< HEAD
                     className=bg-zion-blue-dark border-zion-blue-light overflow-hidden transition-all hover:border-zion-purple/50 cursor-pointer",
+=======
+                    className="bg-zion-blue-dark border-zion-blue-light overflow-hidden transition-all hover:border-zion-purple/50 cursor-pointer"
+>>>>>>> origin/chore/fix-lint-and-merge
                     onClick={() => onSelectMatch && onSelectMatch(match)}
                   >
                     <div className="flex>
@@ -333,6 +403,7 @@ export function AIMatchingResults({matches;
                         <div className="flex items-start gap-4>
                           <Avatar className=h-12 w-12 border border-zion-blue-light">
                             {match.image ? (
+<<<<<<< HEAD
                               <AvatarImage
                         match.category.toLowerCase().includes("talent) ? bg-zion-cyan" :;
                         match.category.toLowerCase().includes("service) ? bg-zion-purple" :;
@@ -451,12 +522,15 @@ if ( {) {$2;
 
 
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
                                   </div>
                                 </div>
                               )}
                             </div>
 
+<<<<<<< HEAD
                             <div className="mt-2 flex flex-wrap gap-1>
                               <Badge variant=outline">
                             </div>;
@@ -521,3 +595,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </div>
   )
 }
+=======
+                            <div className="mt-2 flex flex-wrap gap-1">
+                              <Badge variant="outline">
+                                {match.category}
+                              </Badge>
+                              {match.skills && match.skills.slice(0, 3).map((skill: string, i: number) => (
+                                <Badge key={i} variant="outline">
+                                  {skill}
+                                </Badge>;
+                              ))}
+                            </div>;
+
+};
+;
+>>>>>>> origin/chore/fix-lint-and-merge

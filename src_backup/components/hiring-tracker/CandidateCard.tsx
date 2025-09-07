@@ -1,5 +1,6 @@
 const handleSaveNotes = () => {
 
+<<<<<<< HEAD
 :src/components/hiring-tracker/CandidateCard.tsx
 import { Draggable } from '@/lib/dnd-stub
 import { formatDistanceToNow } from date-fns'
@@ -59,6 +60,8 @@ export function CandidateCard({ application, index }: CandidateCardProps) {
     toast({
       title: Notes saved'
       description: 'Your notes have been saved
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
     // Here you would save the notes to the database
     // For now, well just show a toast
     toast({
@@ -77,13 +80,21 @@ export function CandidateCard({ application, index }: CandidateCardProps) {
       description: Offer has been sent to the talent.'
     })
   }
+<<<<<<< HEAD
 :src/components/hiring-tracker/CandidateCard.tsx
   const candidateName = application.talent_profile?.full_name |'Candidate
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
 import { useState } from react';
 
+<<<<<<< HEAD
   const candidateName = application.talent_profile?.full_name || 'Candidate
 
+=======
+  const candidateName = application.talent_profile?.full_name || 'Candidate'
+import { useState } from 'react';
+>>>>>>> origin/chore/fix-lint-and-merge
 // Local stub is used in place of the @hello-pangea/dnd package which isn't
 // available in this environment.
 import { Draggable } from "@/lib/dnd-stub,
@@ -138,14 +149,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <>
       <Draggable draggableId={application.id} index={index}>
-:src/components/hiring-tracker/CandidateCard.tsx
-        {provided => (
-          <Card
-            className='mb-2 p-0 shadow-sm border'
-            ref={provided.innerRef}            {...provided.draggableProps}
 
         {(provided) => (
           <Card 
+<<<<<<< HEAD
             className="mb-2 p-0 shadow-sm border
 import { useState } from react",
   const handleSaveNotes = () => {const handleSaveNotes = () => {// Here you would save the notes to the database;
@@ -157,6 +164,11 @@ import { useState } from react",
     })}import { useState  } from react';
   const candidateName = application.talent_profile?.full_name || 'Candidate;
 // Local stub is used in place of the @hello-pangea/dnd package which isnt;
+=======
+            className="mb-2 p-0 shadow-sm border"
+import { useState } from "react",;
+// Local stub is used in place of the @hello-pangea/dnd package which isn't;
+>>>>>>> origin/chore/fix-lint-and-merge
 // available in this environment.;
 import { Avatar as AvatarPrimitive } from @/components/ui/avatar", // Renamed to avoid conflict;
 import { Button } from "@/components/ui/button,
@@ -198,6 +210,7 @@ export function CandidateCard({ application, index }: CandidateCardProps) {
           >;
             <CardContent className="p-3>;
               {/* Candidate Header */}
+<<<<<<< HEAD
 :src/components/hiring-tracker/CandidateCard.tsx
               <div className='flex justify-between items-start mb-2>
                 <div className=flex items-center gap-2'>
@@ -232,20 +245,35 @@ export function CandidateCard({ application, index }: CandidateCardProps) {
                   <AvatarPrimitive className=h-8 w-8"> {/* Using renamed AvatarPrimitive */}
                     {application.talent_profile?.profile_picture_url && !avatarError ? (<Image;
                         src={application.talent_profile.profile_picture_url}alt={candidateName}
+=======
+
+              <div className="flex justify-between items-start mb-2">;
+                <div className="flex items-center gap-2">;
+                  <AvatarPrimitive className="h-8 w-8"> {/* Using renamed AvatarPrimitive */}
+                    {application.talent_profile?.profile_picture_url && !avatarError ? (;
+                      <Image;
+                        src={application.talent_profile.profile_picture_url} ;
+                        alt={candidateName}
+>>>>>>> origin/chore/fix-lint-and-merge
                         width={32} // Match h-8 w-8;
                         height={32} // Match h-8 w-8;
                         className="rounded-full object-cover // Ensure rounded and object-cover;
                         onError={() => setAvatarError(true)}
                         priority={false} // Avatars are usually not LCP;
                       />;
+<<<<<<< HEAD
                     ) : (<User className=h-4 w-4" />;
+=======
+                    ) : (;
+                      <User className="h-4 w-4" />;
+>>>>>>> origin/chore/fix-lint-and-merge
                     )}
                   </AvatarPrimitive>;
                   <div>;
                     <h4 className="font-medium text-sm>;
                       {candidateName}
-                    </h4>;
-                    <p className="text-xs text-muted-foreground">;
+                    </h4>
+                    <p className="text-xs text-muted-foreground">
                       {application.talent_profile?.professional_title || "Applicant"}
                     </p>
                   </div>
@@ -259,6 +287,7 @@ export function CandidateCard({ application, index }: CandidateCardProps) {
                   </DropdownMenuTrigger>
                   <DropdownMenuContent align="end>
                     <DropdownMenuItem onClick={() => setShowNotes(!showNotes)}>
+<<<<<<< HEAD
                     </p>;
                   </div>;
                 </div>;
@@ -270,6 +299,8 @@ export function CandidateCard({ application, index }: CandidateCardProps) {
                   </DropdownMenuTrigger>;
                   <DropdownMenuContent align='end>;
                     <DropdownMenuItem onClick={() => setShowNotes(!showNotes)}>;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
                   </AvatarPrimitive>;
                   <div>;
@@ -279,7 +310,9 @@ export function CandidateCard({ application, index }: CandidateCardProps) {
                         Applicant'}
                     </p>;
                   </div>;
-                </div>;<DropdownMenu>;
+                </div>;
+
+                <DropdownMenu>;
                   <DropdownMenuTrigger asChild>;
                     <Button variant='ghost className=h-8 w-8 p-0'>;
                       <MoreVertical className='h-4 w-4 />;
@@ -290,28 +323,42 @@ export function CandidateCard({ application, index }: CandidateCardProps) {
                       {showNotes ? 'Hide notes : Add notes'}
                     </DropdownMenuItem>;
                     <DropdownMenuItem onClick={() => setShowHireModal(true)}>;
+<<<<<<< HEAD
                       <BriefcaseIcon;
                         className='h-4 w-4 mr-2;
                         aria-hidden=true';
                       />{' }
+=======
+                      <BriefcaseIcon
+                        className='h-4 w-4 mr-2'
+                        aria-hidden='true'
+                      />{' '}
+>>>>>>> origin/chore/fix-lint-and-merge
                       Hire Candidate;
                     </DropdownMenuItem>;
                     <DropdownMenuItem asChild>;
-                      <Link;
+                      <Link
                         href={`/messages?talentId=${application && application.talent_id}`}>;
                         Message;
                       </Link>;
                     </DropdownMenuItem>;
-                    {application && application.resume?.file_url && (<DropdownMenuItem asChild>;
-                        <a;
+                    {application && application.resume?.file_url && (;
+                      <DropdownMenuItem asChild>;
+                        <a
                           href={application && application.resume.file_url}
+<<<<<<< HEAD
                           target=_blank';
                           rel='noopener noreferrer>;
+=======
+                          target='_blank'
+                          rel='noopener noreferrer'>;
+>>>>>>> origin/chore/fix-lint-and-merge
                           View Resume;
                         </a>;
                       </DropdownMenuItem>;
 
                     )}
+<<<<<<< HEAD
 :src/components/hiring-tracker/CandidateCard.tsx
                   </DropdownMenuContent>
                 </DropdownMenu>
@@ -341,6 +388,8 @@ export function CandidateCard({ application, index }: CandidateCardProps) {
               {/* Notes Section */}
               {showNotes && (
                 <div className=mt-2'>
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
                   </DropdownMenuContent>;
                 </DropdownMenu>;
@@ -352,8 +401,8 @@ export function CandidateCard({ application, index }: CandidateCardProps) {
               </div>;
 
                 )}
-                  </div>;)}
               {/* Notes Section */}
+<<<<<<< HEAD
               {showNotes && (<div className='mt-2>;
                   <Textarea;
                     placeholder=Add private notes about this candidate...';
@@ -371,6 +420,14 @@ export function CandidateCard({ application, index }: CandidateCardProps) {
               {/* Action Buttons */}
               <div className=flex justify-between mt-2 gap-1'>
                 <Button variant='outline size=sm' className='flex-1 asChild>
+=======
+              {showNotes && (;
+                <div className='mt-2'>;
+                  <Textarea
+                    placeholder='Add private notes about this candidate...'
+                    className='text-xs min-h-[60px]'
+                    value={notes}
+>>>>>>> origin/chore/fix-lint-and-merge
                     onChange={e => setNotes(e && e.target.value)}                  />;
                   <div className=flex justify-end mt-2'>;
                     <Button size='sm onClick={handleSaveNotes}>;
@@ -393,8 +450,11 @@ export function CandidateCard({ application, index }: CandidateCardProps) {
                     <MessageSquare className=h-3 w-3 mr-1" /> Message
                   </Link>
                 </Button>
+<<<<<<< HEAD
 :src/components/hiring-tracker/CandidateCard.tsx
                 <Button variant=outline' size='sm className=flex-1' asChild>
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
                 <Button 
                   variant="outline 
@@ -412,6 +472,7 @@ export function CandidateCard({ application, index }: CandidateCardProps) {
                       <FileText className="h-3 w-3 mr-1 /> No Resume
                     </span>
                   )}
+<<<<<<< HEAD
 :src/components/hiring-tracker/CandidateCard.tsx
                 </Button>
                 <Button
@@ -426,6 +487,8 @@ export function CandidateCard({ application, index }: CandidateCardProps) {
           </Card>
         )}
       </Draggable>
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
                 <Button 
                   variant=default" 
@@ -444,6 +507,7 @@ export function CandidateCard({ application, index }: CandidateCardProps) {
 
       {/* Hire Confirmation Modal */}
       <HireConfirmationModal
+<<<<<<< HEAD
         isOpen = {showHireModal}
         onClose = {() => setShowHireModal(false)}
         application = {application}
@@ -732,10 +796,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }/> </>)
 }}
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+        isOpen = {showHireModal,}
+        onClose = {() => setShowHireModal(false),}
+        application = {application,}
+        onConfirm = {handleHireConfirmed,}
+      />
+    </>
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/chore/fix-lint-and-merge
   );
 
   //Here you would save the notes to the database //For now, well just show a toast toast ({
   setShowNotes (false);
+<<<<<<< HEAD
 }
   //Hiring process completed via the modal toast ({
   application && application.id ;
@@ -748,6 +822,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   ...provided && provided.draggableProps 
 }{
   ...provided && provided.dragHandleProps 
+=======
+};
+  //Hiring process completed via the modal toast ({;
+>>>>>>> origin/chore/fix-lint-and-merge
   application.id ;
 }index= {
   index ;
@@ -774,6 +852,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   32 ;
 }//Match h-8 w-8 className="rounded-full object-cover" //Ensure rounded and object-cover onError= {
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
   application && application.talent profile?.profile picture url && !avatarError ? (<Imagesrc= {
   application && application.talent profile && profile.profile picture url 
 }alt= {
@@ -783,6 +862,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }//Match h-8 w-8 height= {
   32 
 }//Match h-8 w-8 className=rounded-full object-cover" //Ensure rounded and object-cover onError= {
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
   () => setAvatarError (true) ;
 }priority= {
   false ";
@@ -793,6 +874,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   `/messages?talentId=$ {
   application.talent id ;
 }` ;
+<<<<<<< HEAD
 }</h4> </p> </div> </div> <DropdownMenu> <DropdownMenuTrigger asChild> <Button variant=ghost className="h-8 w-8 p-0"> <MoreVertical className=h-4 w-4 /> </Button> </DropdownMenuTrigger> </DropdownMenuItem> <DropdownMenuItem asChild> <Linkhref= {
   `/messages?talentId=$ {
   application && application.talent id 
@@ -810,6 +892,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }<div className=flex flex-wrap gap-2 items-center text-xs text-muted-foreground mb-2"> <div className="flex items-center> <Calendar className=h-3 w-3 mr-1" /> {
   formatDistanceToNow (new Date (application && application.created at), {
   formatDistanceToNow (new Date (application.created at), {
+=======
+}> Message </Link> </DropdownMenuItem> {;
+  application.resume?.file url && (<DropdownMenuItem asChild> <a href= {;
+  application.resume.file url ";
+origin/cursor/automate-test-improve-and-merge-code-2533
+}target="blank" rel="noopener noreferrer"> View Resume </Link> </DropdownMenuItem>) ;
+}</DropdownMenuContent> </DropdownMenu> </div> {;
+  /* Application Info */ ";
+}<div className="flex flex-wrap gap-2 items-center text-xs text-muted-foreground mb-2"> <div className="flex items-center"> <Calendar className="h-3 w-3 mr-1" /> {;
+  formatDistanceToNow (new Date (application.created at), {;
+>>>>>>> origin/chore/fix-lint-and-merge
 origin/cursor/automate-test-improve-and-merge-code-2533
   addSuffix: true ;
 });
@@ -817,6 +910,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   isStalled && (<div className=flex items-center text-amber-500> <AlertTriangle className="h-3 w-3 mr-1" /> Stalled </div>) ;
 }</div> {
   /* Match Score */ ;
+<<<<<<< HEAD
 }{;
   )//Here you would save the notes to the database //For now, we'll just show a toast toast ({setShowNotes (false)}//Hiring process completed via the modal toast ({application && application.id ;
 }index= {index ;
@@ -864,6 +958,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   application && application.match score !== null && application && application.match score !== undefined && (<div className="mb-2"> <ScoreBadgeapplication= {
   application 
   application.match score !== null && application.match score !== undefined && (<div className=mb-2> <ScoreBadge application= {
+=======
+}{";
+  application.match score !== null && application.match score !== undefined && (<div className="mb-2"> <ScoreBadge application= {;
+>>>>>>> origin/chore/fix-lint-and-merge
   application ;
 }/> </div>) ";
 }<Textarea placeholder="Add private notes about this candidate... className=text-xs min-h-[60px]" value= {
@@ -882,15 +980,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   showHireModal ;
 }onClose= {
 origin/cursor/automate-test-improve-and-merge-code-2533
-}<HireConfirmationModalisOpen= {
-  showHireModal 
-}onClose= {
   () => setShowHireModal (false) ;
 }application= {
   application ;
 }onConfirm= {
   handleHireConfirmed ;
 }/> </>) ;
+<<<<<<< HEAD
 }'"}
 
 }"
@@ -933,6 +1029,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }/> </>);
 }'"}
       </Draggable>;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
       {/* Hire Confirmation Modal */}
       <HireConfirmationModal;
@@ -942,6 +1040,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         onConfirm={handleHireConfirmed}
       />;
     </>;
+<<<<<<< HEAD
   )}}'";
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
   );
 }
