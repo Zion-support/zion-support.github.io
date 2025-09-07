@@ -25,5 +25,4 @@ ${pages.map(page => `  <url>
   fs.writeFileSync(path.join(__dirname, '..', 'public', 'sitemap.xml'), sitemap);
   console.log('Sitemap generated successfully');
 };
-,
-generateSitemap(),
+generateSitemap();

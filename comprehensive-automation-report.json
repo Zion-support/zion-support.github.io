@@ -1,63 +1,51 @@
 {
-
-  "successfulTasks": 4,
-  "totalTasks": 8,
+  "timestamp": "2025-09-05T21:53:00.635Z",
+  "totalDuration": 53790,
+  "successfulTasks": 6,  "totalTasks": 8,
   "results": {
     "dependencyFix": {
       "success": true,
-      "duration": 4789,
-      "errors": [],
+      "duration": 19668,      "errors": [],
       "warnings": []
     },
     "codeQuality": {
       "success": false,
-      "duration": 1996,
+      "duration": 4836,
       "errors": [
         "Command failed: npx tsc --noEmit --skipLibCheck\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n",
-
-      ],
+        "Command failed: npx eslint . --max-warnings 1000\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n(node:2970) ESLintIgnoreWarning: The \".eslintignore\" file is no longer supported. Switch to using the \"ignores\" property in \"eslint.config.js\": https://eslint.org/docs/latest/use/configure/migration-guide#ignoring-files\n(Use `node --trace-warnings ...` to show where the warning was created)\n"      ],
       "warnings": []
     },
     "securityAudit": {
       "success": true,
-      "duration": 1462,
-      "errors": [],
+      "duration": 1518,      "errors": [],
       "warnings": []
     },
     "buildOptimization": {
-      "success": false,
-      "duration": 518,
-      "errors": [
-        "Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n ⨯ Failed to load next.config.js, see more info here https://nextjs.org/docs/messages/next-config-error\n\n> Build error occurred\nSyntaxError: Unexpected token '<<'\n    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)\n    at #translate (node:internal/modules/esm/loader:534:12)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)\n    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)\n"
-      ],
-      "warnings": []
+      "success": true,
+      "duration": 13063,
+      "errors": [],      "warnings": []
     },
     "seoOptimization": {
       "success": true,
-      "duration": 41,
-      "errors": [],
+      "duration": 54,      "errors": [],
       "warnings": []
     },
     "accessibilityImprovements": {
       "success": false,
-      "duration": 568,
+      "duration": 2240,
       "errors": [
-
-      ],
+        "Command failed: npx eslint . --rule \"jsx-a11y/alt-text: warn\" --rule \"jsx-a11y/aria-role: warn\"\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n(node:3337) ESLintIgnoreWarning: The \".eslintignore\" file is no longer supported. Switch to using the \"ignores\" property in \"eslint.config.js\": https://eslint.org/docs/latest/use/configure/migration-guide#ignoring-files\n(Use `node --trace-warnings ...` to show where the warning was created)\n\nOops! Something went wrong! :(\n\nESLint: 9.35.0\n\nA configuration object specifies rule \"jsx-a11y/alt-text\", but could not find plugin \"jsx-a11y\".\n\nCommon causes of this problem include:\n\n1. The \"jsx-a11y\" plugin is not defined in your configuration file.\n2. The \"jsx-a11y\" plugin is not defined within the same configuration object in which the \"jsx-a11y/alt-text\" rule is applied.\n\n"      ],
       "warnings": []
     },
     "performanceOptimization": {
-      "success": false,
-      "duration": 891,
-      "errors": [
-        "Command failed: npm run build:analyze\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n ⨯ Failed to load next.config.js, see more info here https://nextjs.org/docs/messages/next-config-error\n\n> Build error occurred\nSyntaxError: Unexpected token '<<'\n    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)\n    at #translate (node:internal/modules/esm/loader:534:12)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)\n    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)\n"
-      ],
-      "warnings": []
+      "success": true,
+      "duration": 10980,
+      "errors": [],      "warnings": []
     },
     "deployment": {
       "success": true,
-      "duration": 1366,
-      "errors": [],
+      "duration": 1426,      "errors": [],
       "warnings": []
     }
   },

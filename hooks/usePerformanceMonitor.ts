@@ -130,5 +130,4 @@ if ( {) {
     return () => {
       window.removeEventListener('load', updateMetrics)
 };
-,
-export default usePerformanceMonitor,
+export default usePerformanceMonitor;

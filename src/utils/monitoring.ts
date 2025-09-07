@@ -20,25 +20,25 @@ export const trackPerformance = () => {;
     window.addEventListener('load', () => {;
       const perfData = window.window.performance.getEntriesByType('navigation')[0];
       const loadTime = perfData.loadEventEnd - perfData.loadEventStart;
-;
-      // Send to analytics;
-      if (typeof gtag !== 'undefined') {;
-        gtag('eventpage_load_time', {;
-          "value": Math.round(loadTime),
-          "event_category": 'Performance';
+      
+      // Send to analytics
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'page_load_time', {
+          value: Math.round(loadTime)
+          event_category: 'Performance'
         });
       }
     });
   }
 };
-;
-export const trackErrors = () => {;
-  window.addEventListener('error', (event) => {;
-    if (typeof gtag !== 'undefined') {;
-      gtag('eventjavascript_error', {;
-        "event_category": 'Error',
-        "event_label": event.message,
-        "value": 1;
+
+export const trackErrors = () => {
+  window.addEventListener('error', (event) => {
+    if (typeof gtag !== 'undefined') {
+      gtag('event', 'javascript_error', {
+        event_category: 'Error'
+        event_label: event.message;
+        value: 1
       });
     }
   });

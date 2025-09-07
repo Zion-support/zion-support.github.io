@@ -1,5 +1,6 @@
 {
-  "pages": [
+  "version": "1.0",
+  "generated": "2025-09-05T21:52:45.982Z",  "pages": [
     {
       "url": "/",
       "title": "Home",

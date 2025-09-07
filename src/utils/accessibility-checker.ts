@@ -5,13 +5,13 @@ export const checkAccessibility = () => {;
 ;
   // Check for missing alt text;
   const images = document.querySelectorAll('img');
-  images.forEach((img, index) => {;
-    if (!img.alt) {;
-      issues.push({;
-        "type": 'missing-alt',
-        "element": img,
-        "message": 'Image missing alt text',
-        "severity": 'error';
+  images.forEach((img, index) => {
+    if (!img.alt) {
+      issues.push({
+        type: 'missing-alt'
+        element: img
+        message: 'Image missing alt text'
+        severity: 'error'
       });
     }
   });
@@ -21,12 +21,12 @@ export const checkAccessibility = () => {;
   let lastLevel = 0;
   headings.forEach((heading, index) => {;
     const level = parseInt(heading.tagName[1]);
-    if (level > lastLevel + 1) {;
-      issues.push({;
-        "type": 'heading-hierarchy',
-        "element": heading,
-        "message": 'Heading level skipped',
-        "severity": 'warning';
+    if (level > lastLevel + 1) {
+      issues.push({
+        type: 'heading-hierarchy'
+        element: heading
+        message: 'Heading level skipped'
+        severity: 'warning'
       });
     }
     lastLevel = level;
