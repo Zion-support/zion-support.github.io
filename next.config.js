@@ -1,6 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-<<<<<<< HEAD
   compress: true,
   poweredByHeader: false,
   generateEtags: true,
@@ -14,20 +13,24 @@ const nextConfig = {
     minimumCacheTTL: 60,
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-    domains: ['images.unsplash.com', 'via.placeholder.com'],
+    domains: ['images.unsplash.com', 'via.placeholder.com', 'ziontechgroup.com'],
     remotePatterns: [
-=======
-  reactStrictMode: true,
-  images: {
-    domains: ['ziontechgroup.com'],
-    formats: ['image/webp', 'image/avif'],
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'via.placeholder.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'ziontechgroup.com',
+      },
+    ],
   },
-  compress: true,
-  poweredByHeader: false,
-  generateEtags: false,
   async headers() {
     return [
->>>>>>> 9e52e46f57e53278f6e8f46f78a33c4d92654ea6
       {
         source: '/(.*)',
         headers: [
@@ -43,9 +46,18 @@ const nextConfig = {
             key: 'Referrer-Policy',
             value: 'strict-origin-when-cross-origin',
           },
+          {
+            key: 'X-XSS-Protection',
+            value: '1; mode=block',
+          },
+          {
+            key: 'Strict-Transport-Security',
+            value: 'max-age=31536000; includeSubDomains',
+          },
         ],
       },
-    ],
+    ];
   },
 };
+
 export default nextConfig;

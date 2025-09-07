@@ -1,9 +1,12 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { ensureAdmin, parseUserFromRequest } from '../../../../../utils/auth';
+import { ensureAdminFromApi } from '../../../../../utils/auth';
 import { createFlag, readAllFlags } from '../../../../../utils/moderationDb';
+
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  const user = parseUserFromRequest(req)
-  try { ensureAdmin(user) } catch (e: any) { return res.status(e.statusCode || 403).json({ error: 'Forbidden' }) }
+  const { allowed } = await ensureAdminFromApi(req);
+  if (!allowed) {
+    return res.status(403).json({ error: 'Forbidden' });
+  }
 
   if (req.method === 'GET') {
     const { status, reason, userEmail, contentType } = req.query as Record<string, string | undefined>
