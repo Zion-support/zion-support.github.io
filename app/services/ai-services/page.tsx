@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import Link from "next/link";
 
@@ -114,16 +115,24 @@ export default function AIServicesPage() {
   );
 }
 
+=======
+export const metadata = {
+  title: 'AI Services | Zion Tech Group',
+  description: 'Comprehensive AI solutions including machine learning, natural language processing, computer vision, and intelligent automation.',
+  keywords: 'AI services, machine learning, NLP, computer vision, automation, artificial intelligence'
+};
+
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-2a0c
 function FeatureItem({ icon, title, description, benefits }: { icon: string; title: string; description: string; benefits: string[] }) {
   return (
-    <div className="p-6 bg-white rounded-lg shadow-md border border-gray-200 hover:shadow-lg transition-shadow">
+    <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow">
       <div className="text-4xl mb-4">{icon}</div>
-      <h3 className="text-xl font-semibold text-gray-900 mb-3">{title}</h3>
-      <p className="text-gray-600 mb-4">{description}</p>
+      <h3 className="text-2xl font-bold text-gray-900 mb-4">{title}</h3>
+      <p className="text-gray-600 mb-6">{description}</p>
       <ul className="space-y-2">
         {benefits.map((benefit, index) => (
-          <li key={index} className="text-sm text-gray-600 flex items-center">
-            <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
+          <li key={index} className="flex items-center text-gray-600">
+            <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
             {benefit}
           </li>
         ))}
@@ -132,85 +141,156 @@ function FeatureItem({ icon, title, description, benefits }: { icon: string; tit
   );
 }
 
-function BenefitCard({ icon, title, description }: { icon: string; title: string; description: string }) {
-  return (
-    <div className="p-6 bg-white rounded-lg shadow-md border border-gray-200">
-      <div className="text-4xl mb-4 text-blue-600">{icon}</div>
-      <h3 className="text-xl font-semibold text-gray-900 mb-3">{title}</h3>
-      <p className="text-gray-600">{description}</p>
-    </div>
-  );
-}
-
-function ProcessStep({ step, title, description }: { step: string; title: string; description: string }) {
-  return (
-    <div className="text-center p-6 bg-white rounded-lg shadow-md border border-gray-200">
-      <div className="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
-        {step}
-      </div>
-      <h3 className="text-lg font-semibold text-gray-900 mb-2">{title}</h3>
-      <p className="text-gray-600">{description}</p>
-    </div>
-  );
-}
-
 function CTA() {
   return (
-    <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-xl p-8 text-center">
-      <h3 className="text-2xl font-bold text-gray-900 mb-4">
-        Ready to Harness the Power of AI?
-      </h3>
-      <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-        Contact us today for a free AI consultation and discover how artificial intelligence can transform your business.
+    <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-center text-white">
+      <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Business with AI?</h2>
+      <p className="text-xl mb-8 max-w-2xl mx-auto">
+        Let our AI experts help you implement cutting-edge solutions that drive real business value.
       </p>
       <div className="flex flex-col sm:flex-row gap-4 justify-center">
         <a
-          href="tel:+13024640950"
-          className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+          href="/contact"
+          className="bg-white text-blue-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-colors"
         >
-          Call +1 302 464 0950
+          Get Started Today
         </a>
         <a
-          href="mailto:kleber@ziontechgroup.com"
-          className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
+          href="/services"
+          className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-blue-600 transition-colors"
         >
-          Email Us
+          View All Services
         </a>
-      </div>
-      <div className="mt-6 text-sm text-gray-600">
-        <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
       </div>
     </div>
   );
 }
 
-function AIServiceCard({ icon, title, description, features, price }: {
-  icon: string;
-  title: string;
-  description: string;
-  features: string[];
-  price: string;
-}) {
+export default function ServicePage() {
   return (
-    <div className="p-6 bg-white rounded-lg shadow-md border border-gray-200 hover:shadow-lg transition-shadow">
-      <div className="text-4xl mb-4">{icon}</div>
-      <h3 className="text-xl font-semibold text-gray-900 mb-3">{title}</h3>
-      <p className="text-gray-600 mb-4">{description}</p>
-      <ul className="space-y-2 mb-6">
-        {features.map((feature, index) => (
-          <li key={index} className="text-sm text-gray-600 flex items-center">
-            <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
-            {feature}
-          </li>
-        ))}
-      </ul>
-      <div className="text-lg font-semibold text-blue-600 mb-4">{price}</div>
-      <a
-        href="mailto:kleber@ziontechgroup.com?subject=AI Service: {title}"
-        className="w-full block text-center py-2 px-4 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-      >
-        Get Quote
-      </a>
+    <div className="min-h-screen bg-gray-50">
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-5xl font-bold text-gray-900 mb-6">AI Services</h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Comprehensive AI solutions to transform your business. From machine learning to intelligent automation, 
+            we deliver cutting-edge AI technologies that drive real results.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <FeatureItem
+            icon="🤖"
+            title="Machine Learning"
+            description="Custom ML models that learn from your data to make predictions and automate decisions."
+            benefits={[
+              "Predictive analytics",
+              "Pattern recognition",
+              "Automated decision making",
+              "Continuous learning"
+            ]}
+          />
+          <FeatureItem
+            icon="💬"
+            title="Natural Language Processing"
+            description="AI that understands and processes human language for chatbots, analysis, and automation."
+            benefits={[
+              "Chatbot development",
+              "Sentiment analysis",
+              "Text summarization",
+              "Language translation"
+            ]}
+          />
+          <FeatureItem
+            icon="👁️"
+            title="Computer Vision"
+            description="AI that can see and interpret visual data for image recognition and analysis."
+            benefits={[
+              "Image classification",
+              "Object detection",
+              "Facial recognition",
+              "Quality inspection"
+            ]}
+          />
+          <FeatureItem
+            icon="⚡"
+            title="Process Automation"
+            description="Intelligent automation that streamlines workflows and reduces manual work."
+            benefits={[
+              "Workflow optimization",
+              "Task automation",
+              "Data processing",
+              "System integration"
+            ]}
+          />
+          <FeatureItem
+            icon="📊"
+            title="Data Analytics"
+            description="AI-powered analytics that extract insights from complex datasets."
+            benefits={[
+              "Pattern discovery",
+              "Trend analysis",
+              "Anomaly detection",
+              "Business intelligence"
+            ]}
+          />
+          <FeatureItem
+            icon="🔮"
+            title="Predictive Modeling"
+            description="Advanced models that forecast future trends and outcomes for better planning."
+            benefits={[
+              "Demand forecasting",
+              "Risk assessment",
+              "Market prediction",
+              "Resource optimization"
+            ]}
+          />
+        </div>
+
+        <div className="bg-white rounded-2xl p-12 mb-16">
+          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Why Choose Our AI Services?</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Expert Team</h3>
+              <p className="text-gray-600">
+                Our AI specialists have years of experience in machine learning, deep learning, and AI implementation across various industries.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Custom Solutions</h3>
+              <p className="text-gray-600">
+                Every AI solution is tailored to your specific business needs, ensuring maximum impact and ROI.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Proven Results</h3>
+              <p className="text-gray-600">
+                We've helped hundreds of companies implement AI solutions that deliver measurable business value.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Ongoing Support</h3>
+              <p className="text-gray-600">
+                Continuous monitoring, optimization, and support to ensure your AI solutions perform at their best.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="text-center mb-16">
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">Get in Touch</h2>
+          <p className="text-lg text-gray-600 mb-8">
+            Ready to implement AI in your business? Let's discuss your project.
+          </p>
+          <div className="bg-gray-100 rounded-lg p-6 max-w-md mx-auto">
+            <p>📞 +1-302-464-0950</p>
+            <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
+            <p>📧 kleber@ziontechgroup.com</p>
+          </div>
+        </div>
+
+        <CTA />
+      </div>
     </div>
   );
 }

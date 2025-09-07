@@ -1,4 +1,5 @@
 #!/bin/bash
+<<<<<<< HEAD
 
 
 
@@ -35,6 +36,17 @@ echo "Fixing merge conflicts in all files..."
 
 # Find all files with merge conflicts
 files_with_conflicts=$(find /workspace/app -name "*.tsx" -o -name "*.ts" | xargs grep -l "
+=======
+
+# Script to automatically resolve merge conflicts by choosing HEAD version
+echo "Fixing merge conflicts in all files..."
+
+# Find all files with merge conflicts
+files_with_conflicts=$(find ./app -name "*.tsx" -o -name "*.ts" | xargs grep -l "<<<<<<< HEAD")
+
+for file in $files_with_conflicts; do
+    echo "Fixing merge conflicts in: $file"
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-2a0c
     
     # Create a temporary file
     temp_file=$(mktemp)
@@ -48,10 +60,9 @@ files_with_conflicts=$(find /workspace/app -name "*.tsx" -o -name "*.ts" | xargs
     
     # Replace the original file
     mv "$temp_file" "$file"
-    
-    echo "Fixed: $file"
 done
 
+<<<<<<< HEAD
 
 
 echo "Merge conflicts fixed!"
@@ -80,3 +91,6 @@ echo "Merge conflicts fixed!"
 =======
 =======
 echo "All merge conflicts have been resolved!"
+=======
+echo "Merge conflicts resolved in all files."
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-2a0c

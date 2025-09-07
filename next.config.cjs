@@ -1,5 +1,41 @@
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  output: 'export',
+  images: {
+    unoptimized: true,
+  },
+=======
+<<<<<<< HEAD
+/** @type {import(
+  'next').NextConfig} */
+const nextConfig = {
+<<<<<<< HEAD
+=======
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+>>>>>>> 470476d15542c973cf650505a68f6472f0b68c9f
+  reactStrictMode: true,
+  eslint: {
+    ignoreDuringBuilds: true
+  },
+  typescript: {
+    ignoreBuildErrors: true
+  },
+  experimental: {
+    esmExternals: false
+  },
+  images: {
+    domains: ['ziontechgroup.com', 'localhost', 'images.unsplash.com', 'via.placeholder.com'],
+    unoptimized: true
+  },
+    ignoreDuringBuilds: true,
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-2a0c
   reactStrictMode: false,
   swcMinify: false,
   compress: true,
@@ -31,7 +67,7 @@
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production'},
   webpack: (config, { dev, isServer }) => {
-    // Completely exclude problematic directories from the build
+    // Exclude problematic directories from the build
     config.module.rules.push({
       test: /\.(ts|tsx)$/,
       exclude: [
@@ -45,7 +81,9 @@
         /automation_backup/,
         /broken_files_backup/,
         /contracts/,
-        /hardhat/,
+        /hardhat/
+      ]
+    });
         /^components\//, // Exclude root components directory
       ]});
 
@@ -58,8 +96,8 @@
 
     return config;
   },
-  // Try to exclude problematic directories at the Next.js level
-  pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
+  pageExtensions: ['tsx', 'ts', 'jsx', 'js']
+};
   pageExtensions: ['tsxtsjsx', 'js'],
   onDemandEntries: {
     // period (in ms) where the server will keep pages in the buffer
@@ -68,6 +106,7 @@
     pagesBufferLength: 2}};
 
 module.exports = nextConfig;
+<<<<<<< HEAD
 =======
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -82,3 +121,10 @@ const nextConfig = {
 };
 
 export default nextConfig;
+<<<<<<< HEAD
+=======
+>>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
+>>>>>>> 91fec3a61bf105731881304ea8d3824dd093e739
+=======
+>>>>>>> 470476d15542c973cf650505a68f6472f0b68c9f
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-2a0c
