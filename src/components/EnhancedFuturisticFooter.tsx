@@ -390,6 +390,22 @@ export const EnhancedFuturisticFooter: React.FC = () => {
           </motion.div>
         </div>
       </div>
+
+      {/* Floating Contact Button */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.5, delay: 1 }}
+        className="fixed bottom-6 right-6 z-50"
+      >
+        <a
+          href="/contact"
+          className="flex items-center space-x-2 px-4 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white rounded-full shadow-lg hover:shadow-cyan-500/25 transition-all duration-300 transform hover:scale-105"
+        >
+          <MessageCircle className="w-5 h-5" />
+          <span className="font-medium">Contact Us</span>
+        </a>
+      </motion.div>
     </footer>
   );
 }
